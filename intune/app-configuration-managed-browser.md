@@ -1,42 +1,40 @@
 ---
-title: Správa webového přístupu pomocí aplikace Managed Browser
+title: Správa webového přístupu v prohlížeči chráněném zásadami
 titlesuffix: Microsoft Intune
-description: Nasazením aplikace Managed Browser můžete omezit procházení webu a přenos dat z webu do jiných aplikací.
+description: Pomocí prohlížeče chráněného zásadami omezte procházení webů a webový přenos dat.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/10/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
-ms.reviewer: maxles
+ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb4a80a9de03844c6fffa5e56f09c375645f9188
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
+ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864537"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863157"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune
+# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune  
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Mezi chráněné prohlížeče patří Microsoft Edge a Intune Managed Browser. Edge a Managed Browser jsou aplikace k procházení webu, které můžete po stažení z některého z veřejných obchodů s aplikacemi využívat ve své organizaci. Po nakonfigurování se službou Intune můžete v chráněných prohlížečích:
-- Přistupovat k firemním webům a aplikacím SaaS jednotným přihlašováním prostřednictvím služby MyApps. Data webů přitom zůstávají chráněná.
-- Předem nakonfigurovat seznam adres URL a domén a určit tak, na jaké weby smí uživatel ve firemním prostředí přejít.
-- Předem nakonfigurovat domovskou stránku a záložky.
+Pomocí prohlížeče chráněného zásadami Intune (Microsoft Edge nebo Intune Managed Browser) můžete zajistit, že se při přístupu k podnikovým webům vždy uplatní ochranná opatření.  Po nakonfigurování se službou Intune můžete využít následujících výhod chráněných prohlížečů:
 
-Aplikace Edge a Managed Browser jsou integrované se sadou Intune SDK, takže v nich můžete používat také zásady ochrany aplikací, včetně:
-- Řízení použití operací vyjmutí, kopírování a vložení
-- Prevence pořizování snímků obrazovky
-- Zajištění, že odkazy na obsah, na které uživatelé klikají, se otevřou jedině v ostatních spravovaných aplikacích.
+- Zásady ochrany aplikace
+- Podmíněný přístup.
+- Jednotné přihlašování
+- Nastavení konfigurace aplikace
+- Integrace s proxy aplikací Azure
 
-Podrobnosti najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
+## <a name="getting-started"></a>Začínáme
 
 Tato nastavení můžete použít na:
 
@@ -57,9 +55,7 @@ Zásady chráněného prohlížeče můžete vytvořit pro následující typy z
 
 >[!IMPORTANT]
 >Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
-
-
-Microsoft Edge a Intune Managed Browser podporují otevírání webového obsahu od [partnerů nabízejících aplikace pro Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Podmíněný přístup pro chráněné prohlížeče
 
@@ -94,11 +90,11 @@ Jakmile nakonfigurujete výše uvedenou zásadu, budou uživatelé pro přístup
 
 Managed Browser nepodporuje zásady podmíněného přístupu na portálu Classic. Další informace najdete v článku [Migrace zásad z portálu Classic na portálu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration).
 
-##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-the-intune-managed-browser"></a>Jednotné přihlašování k webovým aplikacím připojeným ke službě Azure AD v aplikaci Intune Managed Browser
+##  <a name="single-sign-on-to-azure-ad-connected-web-apps-in-policy-protected-browsers"></a>Jednotné přihlašování k webovým aplikacím připojeným ke službě Azure AD v prohlížečích chráněných zásadami
 
-Aplikace Intune Managed Browser v iOSu a Androidu může nově využít výhod jednotného přihlašování ke všem webovým aplikacím (SaaS i místním), které jsou připojeny ke službě Azure AD. Když se v iOSu nebo na Portálu společnosti Intune v Androidu nachází aplikace Microsoft Authenticator, uživatelé aplikace Intune Managed Browser budou mít přístup k webovým aplikacím připojeným ke službě Azure AD bez nutnosti opakovaně zadávat svoje přihlašovací údaje.
+Microsoft Edge a Intune Managed Browser v iOSu a Androidu mohou využít výhod jednotného přihlašování ke všem webovým aplikacím (SaaS i místním), které jsou připojeny ke službě Azure AD. Když se v iOSu nebo na Portálu společnosti Intune v Androidu nachází aplikace Microsoft Authenticator, uživatelé prohlížeče chráněného zásadami budou mít přístup k webovým aplikacím připojeným ke službě Azure AD bez nutnosti opakovaně zadávat svoje přihlašovací údaje.
 
-Jednotné přihlašování v aplikaci Intune Managed Browser vyžaduje, aby bylo vaše zařízení zaregistrováno aplikací Microsoft Authenticator v iOSu nebo na Portálu společnosti Intune v Androidu. Uživatelům s aplikací Authenticator nebo Portálem společnosti Intune se zobrazí výzva, aby si zařízení zaregistrovali, když přejdou do webové aplikace připojené ke službě Azure AD v aplikaci Intune Managed Browser, pokud už nemají zařízení zaregistrováno jinou aplikací. Jakmile se zařízení zaregistruje pomocí účtu spravovaného přes Intune, bude mít tento účet povoleno jednotné přihlašování u webových aplikací připojených ke službě Azure AD. 
+Jednotné přihlašování vyžaduje, aby bylo vaše zařízení zaregistrováno aplikací Microsoft Authenticator v iOSu nebo na Portálu společnosti Intune v Androidu. Uživatelům s aplikací Authenticator nebo Portálem společnosti Intune se zobrazí výzva, aby si zařízení zaregistrovali, když přejdou do webové aplikace připojené ke službě Azure AD v prohlížeči chráněném zásadami, pokud už nemají zařízení zaregistrováno jinou aplikací. Jakmile se zařízení zaregistruje pomocí účtu spravovaného přes Intune, bude mít tento účet povoleno jednotné přihlašování u webových aplikací připojených ke službě Azure AD. 
 
 > [!NOTE]
 > Registrace zařízení představuje jednoduché vrácení se změnami pomocí služby Azure AD. Nevyžaduje úplnou registraci zařízení a nedává pracovníkům IT žádná další oprávnění k zařízení.

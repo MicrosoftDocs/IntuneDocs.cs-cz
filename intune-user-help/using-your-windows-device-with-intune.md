@@ -1,11 +1,11 @@
 ---
-title: Použití zařízení s Windows v Intune | Dokumentace Microsoftu
+title: Použití zařízení s Windows na Portálu společnosti Intune | Microsoft Docs
 description: Odkazy pro řešení potíží nebo správu zařízení s Windows na Portálu společnosti
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2018
+ms.date: 10/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,41 +17,61 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: c4018c73c2160a3db5d5c8b8843e803b56f2caa3
-ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
+ms.openlocfilehash: a28f12bc57fdf134554a65518f24a79287058eeb
+ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168960"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866333"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
-Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro Windows. Může vám pomoct při řešení potíží a správě zařízení s Windows. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky.  
+Tento oddíl popisuje úlohy a informace týkající se Portálu společnosti pro Windows. Může vám pomoct při řešení potíží a správě zařízení s Windows z aplikace Portál společnosti. Kliknutím na jednotlivé odkazy uvedené níže zobrazíte další podrobnosti, postupy a snímky obrazovky.  
+
+## <a name="how-to-get-company-portal"></a>Získání Portálu společnosti
+Portál společnosti je dostupný ve webové verzi i jako aplikace ke stažení. [Přístup na web Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) získáte po přihlášení pomocí pracovních nebo školních přihlašovacích údajů.  
+
+Přečtěte si téma [Přihlášení k Portálu společnosti](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal), kde najdete podrobný postup a snímky obrazovek.
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Portál společnosti aktuálně podporuje následující verze Windows.
+Portál společnosti aktuálně podporuje zařízení, na kterých běží následující verze Windows:
 
-* Windows 10 (verze Home, Pro, Education, S a Enterprise)
+* Windows 10 (verze Home, Pro, Education, s režimem S a Enterprise)
 * Windows Phone 8.1 nebo novější
 * Windows 8.1 RT
 * Windows 8.1
 
-Na Portálu společnosti se podporují i jiné verze Windows, například [Windows 10 Holographic](https://www.microsoft.com/hololens). Těmito verzemi se v tomto článku nezabýváme, protože jsou určené k velmi specifickým účelům.
+Na Portálu společnosti se podporují i jiné verze Windows, například [Windows 10 Holographic](https://www.microsoft.com/hololens). Těmito verzemi se v tomto článku ale nezabýváme, protože jsou určené k velmi specifickým účelům.
 
-## <a name="enrolling-your-device-and-installing-the-company-portal"></a>Registrace zařízení a instalace Portálu společnosti
-
-- [Registrace zařízení s Windows v Intune](enroll-your-device-in-intune-windows.md)
-- [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
-- [Jaké informace vaše společnost uvidí při registraci zařízení v Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
-- [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
+## <a name="set-up-your-device-in-the-company-portal"></a>Nastavení zařízení na Portálu společnosti
+- [Přidání zařízení s Windows do správy na Portálu společnosti](enroll-your-device-in-intune-windows.md)
+- [Co znamená, že je moje zařízení *spravované*?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md)
+- [Které informace moje společnosti uvidí na mém zařízení?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
+- [Šifrování zařízení](encrypt-your-device-windows.md)
+- [Nastavení nebo změna hesla k zařízení](set-or-change-your-password-windows.md)
 
 ## <a name="things-you-can-do-after-your-device-is-enrolled-in-management"></a>Kroky, které můžete provést po registraci zařízení pro správu
-
-- [Zašifrování zařízení](encrypt-your-device-windows.md)
-- [Nastavení nebo změna hesla](set-or-change-your-password-windows.md)
-- [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-windows.md)
-- [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
-- [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
-- [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
 - [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
+- [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
+- [Vymazání dat ze ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
+- [Co se stane po resetování zařízení na Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
+- [Odebrání zařízení ze správy](unenroll-your-device-from-intune-windows.md)
+- [Co se stane po odebrání zařízení z Portálu společnosti?](what-happens-if-you-unenroll-your-device-from-intune-windows.md)
+
+## <a name="troubleshoot-and-maintain-your-device"></a>Řešení potíží a údržba zařízení
+* [Řešení omezení přístupového bodu](resolve-access-point-restrictions.md)
+* [Moje zařízení s Windows 10 se nedá zaregistrovat](troubleshoot-your-windows-10-device-windows.md)
+* [Moje verze Windows není podporovaná](your-windows-version-isnt-yet-supported.md)
+* [Aktualizace mého zařízení s Windows](you-need-to-update-your-windows-device.md)
+* [Odeslání protokolů z aplikace Portál společnosti](send-logs-to-your-it-admin-cp-windows.md)
+* [Odeslání protokolů z aplikace Nastavení zařízení](send-logs-to-your-it-admin-settings-windows.md)
+* [Instalace Office 365 na moje zařízení s Windows 10](install-office-windows.md)
+* [Moje zařízení je třeba zašifrovat](you-need-to-enable-windows-encryption.md)
+* [Získání antimalwarového softwaru](your-device-needs-antimalware-software.md)
+* [Povolení zabezpečeného spuštění](you-need-to-enable-secure-boot-windows.md)
+* [Povolení integrity kódu](you-need-to-enable-code-integrity.md)
+* [Zapnutí brány Windows Firewall](you-need-to-enable-defender-firewall-windows.md)
+* [Povolení řízení přístupu uživatele](you-need-to-enable-uac-windows.md)
+* [Aktualizace verzí sestavení operačního systému](you-need-to-update-os-build-version-windows.md)
+* [Zapnutí programu Windows Defender](turn-on-defender-windows.md)

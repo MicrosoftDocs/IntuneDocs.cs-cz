@@ -2,10 +2,10 @@
 title: Vytvoření zásad dodržování předpisů pro pracovní profil Androidu v Microsoft Intune – Azure | Microsoft Docs
 description: Vytvářejte nebo konfigurujte zásady dodržování předpisů zařízením služby Microsoft Intune pro zařízení s pracovním profilem Androidu. Rozhodněte se povolit zařízení s jailbreakem, nastavte přijatelnou úroveň hrozby, zkontrolujte Google Play, zadejte minimální a maximální verzi operačního systému, zvolte si požadavky na heslo a povolte bokem instalované aplikace.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 9da89713-6306-4468-b211-57cfb4b51cc6
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dcd5dcc05470d8052e49354fe5d6516386ea4214
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 0c7f1c7c47f2fa4c950cbffeaf8fe274fe239a63
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905083"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828155"
 ---
 # <a name="add-a-device-compliance-policy-for-android-work-profile-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s pracovním profilem Androidu v Intune
 
@@ -113,7 +113,11 @@ Pokud vaše společnost používá pracovní profily Androidu, můžete nastaven
 - **Blokovat aplikace z neznámých zdrojů**: Toto nastavení nemusíte konfigurovat, protože v zařízeních s pracovním profilem Androidu je instalace z neznámých zdrojů trvale zakázaná.
 - **Integrita modulu runtime aplikace Portál společnosti**: Zkontroluje, jestli má aplikace Portál společnosti nainstalované výchozí prostředí modulu runtime, je správně podepsaná, není v režimu ladění a je nainstalovaná ze známého zdroje.
 - **Blokovat u zařízení ladění USB**: Toto nastavení nemusíte konfigurovat, protože v zařízeních s pracovním profilem Androidu je ladění USB už zakázané.
-- **Minimální úroveň opravy zabezpečení**: Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
+- **Minimální úroveň opravy zabezpečení**: Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nejsou alespoň na této úrovni oprav, nebudou kompatibilní. Datum musí být zadáno ve formátu *RRRR-MM-DD*.
+- **Omezené aplikace**: Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud si uživatel aplikaci nainstaluje na zařízení, označí se toto zařízení jako nevyhovující předpisům. 
+   - **Název aplikace**: Zadejte popisný název, který vám pomůže dané ID sady prostředků identifikovat. 
+   - **ID sady prostředků aplikace**: Zadejte jedinečný identifikátor sady prostředků pro poskytovatele aplikace. Pro Android se ID sady prostředků aplikace získává z adresy URL obchodu pro aplikaci. Pokud je například adresa URL pro aplikaci v obchodě *https://play.google.com/store/apps/details?id=com.Slack*, ID sady prostředků aplikace = *com.Slack*.
+
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

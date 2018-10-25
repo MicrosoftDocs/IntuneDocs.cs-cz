@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: a4bdb394407155be8716cf8039f997f3905f3998
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 86cd3f37215ec42cc89c865136e6ecd5dc3b9c11
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863004"
 ---
 # <a name="resolve-a-threat-found-by-symantec-endpoint-protection-mobile"></a>Vyřešení hrozby, kterou zjistila aplikace Symantec Endpoint Protection Mobile
 
@@ -32,9 +32,9 @@ Symantec Endpoint Protection (SEP) Mobile je mobilní služba ochrany před hroz
 * Synchronizace firemních souborů s OneDrivem
 * Přístup k firemním aplikacím
 
-V tomto článku se dozvíte, jak rozpoznat upozornění aplikace SEP Mobile na hrozby a jak je řešit. 
+Tento článek popisuje, jak znovu získat přístup k firemním prostředkům poté, co služba SEP Mobile odhalila bezpečnostní hrozbu nebo hrozbu od aplikace.  
 
-## <a name="resolve-virus-or-security-threat"></a>Řešení virových a bezpečnostních hrozeb  
+## <a name="troubleshoot-a-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb
 
 1. Když se pokusíte o přístup k firemnímu e-mailu nebo webu, zobrazí se zpráva podobná té na snímku níže. Klepnutím na odkaz **portálu pro správu zařízení** přejděte na [web Portál společnosti](https://portal.manage.microsoft.com/devices).
 
@@ -43,11 +43,13 @@ V tomto článku se dozvíte, jak rozpoznat upozornění aplikace SEP Mobile na 
 2. Vyberte své zařízení.  
 3. Přečtěte si upozornění zobrazené pod zařízením. Vyzve vás, abyste otevřeli aplikaci SEP Mobile a virovou nebo bezpečnostní hrozbu vyřešili.    
 
-## <a name="resolve-an-app-threat"></a>Řešení hrozeb od aplikací  
+    ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace SEP Mobile.](./media/CP-lookout-virus-banner-1808.png)
+
+## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací
 
 Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zařízení, zobrazí se v aplikaci SEP Mobile oznámení. V případě, že takovou aplikaci na zařízení ponecháte, nebudete mít přístup k firemním prostředkům.  
 
 Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace SEP Mobile. Potom ji odeberte a odinstalujte pomocí zobrazených pokynů.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). 
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
 

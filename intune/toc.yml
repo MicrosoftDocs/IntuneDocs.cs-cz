@@ -6,13 +6,6 @@ items:
     href: what-is-intune.md
   - name: Co je Intune for Education?
     href: introduction-intune-education.md
-  - name: Funkce Intune v Azure
-    href: ui-changes.md
-    items:
-    - name: Změny v rámci skupin
-      href: groups-get-started.md
-    - name: Starší verze počítačového klienta Intune
-      href: intune-legacy-pc-client.md
   - name: Registrace bezplatné zkušební verze
     href: free-trial-sign-up.md
   - name: Co je nového
@@ -20,10 +13,6 @@ items:
     items:
     - name: Co je nového v uživatelském rozhraní aplikace
       href: whats-new-app-ui.md
-    - name: Archiv novinek (Azure Portal)
-      href: whats-new-archive.md
-    - name: Archiv novinek (klasický portál)
-      href: whats-new-archive-classic.md
   - name: Popis služby
     href: microsoft-intune-service-description.md
   - name: Známé problémy
@@ -34,18 +23,20 @@ items:
 - name: Rychlý start
   href: get-started-evaluation.md
   items:
-  - name: Navigace na portálu Azure Portal
-    href: get-started-azure.md
+  - name: Vyzkoušejte si Intune zdarma
+    href: free-trial-sign-up.md
   - name: Umožňuje vytvořit uživatele.
-    href: get-started-users.md
+    href: quickstart-create-user.md
   - name: Vytvoření skupiny
-    href: get-started-groups.md
-  - name: Přiřazení zásad
-    href: get-started-policies.md
-  - name: Registrovat zařízení
-    href: get-started-enroll.md
-  - name: Přiřazení aplikací
-    href: get-started-apps.md
+    href: quickstart-create-group.md
+  - name: Vytvoření zásady
+    href: quickstart-create-policy.md
+  - name: Nastavení automatické registrace
+    href: quickstart-setup-auto-enrollment.md
+  - name: Vytvořit a přiřadit vlastní roli
+    href: quickstart-create-custom-role.md
+  - name: Vytvoření e-mailového profilu zařízení
+    href: quickstart-email-profile.md
 - name: Příručky k implementaci scénářů
   items:
   - name: Ochrana Exchange Online
@@ -60,6 +51,10 @@ items:
     href: byod-technology-decisions.md
 - name: Koncepty
   items:
+  - name: Co je správa zařízení?
+    href: what-is-device-management.md
+  - name: Navigace na Azure Portalu
+    href: get-started-azure.md
   - name: Architektura z širší perspektivy
     href: high-level-architecture.md
   - name: Životní cyklus zařízení a aplikací
@@ -169,6 +164,8 @@ items:
         href: device-group-mapping.md
     - name: Nastavení registrace zařízení s Windows
       items:
+      - name: Možnosti metody registrace
+        href: enrollment-method-capab.md
       - name: Registrace zařízení s Windows
         href: windows-enroll.md
       - name: Hromadná registrace
@@ -273,6 +270,8 @@ items:
           href: apps-add-office365-macos.md
       - name: Vytvoření aplikace (obchodní)
         items:
+        - name: Správa aplikací Win32
+          href: apps-win32-app-management.md
         - name: Obchodní aplikace pro Android
           href: lob-apps-android.md
         - name: Obchodní aplikace pro iOS
@@ -322,6 +321,8 @@ items:
         href: company-portal-app.md
       - name: Konfigurace Managed Browseru
         href: app-configuration-managed-browser.md
+      - name: Konfigurace Outlooku
+        href: app-configuration-policies-outlook.md
     - name: Ochrana aplikací
       items:
       - name: Selektivní vymazání aplikací
@@ -377,6 +378,8 @@ items:
       items:
       - name: Android
         href: device-restrictions-android.md
+      - name: Android Enterprise
+        href: device-restrictions-android-for-work.md
       - name: iOS
         href: device-restrictions-ios.md
       - name: macOS
@@ -391,8 +394,6 @@ items:
         href: device-restrictions-windows-10-teams.md
       - name: Windows Holographic for Business
         href: device-restrictions-windows-holographic.md
-      - name: Pracovní profil Androidu
-        href: device-restrictions-android-for-work.md
     - name: Konfigurace služby Endpoint Protection
       href: endpoint-protection-configure.md
       items:
@@ -491,7 +492,7 @@ items:
     items:
     - name: Vytvoření zásad pro Android
       href: compliance-policy-create-android.md
-    - name: Vytvoření zásady pracovního profilu Androidu
+    - name: Vytvoření zásady profilu Androidu Enterprise
       href: compliance-policy-create-android-for-work.md
     - name: Vytvoření zásady pro povolení služeb Google Play Protect
       href: compliance-policy-create-google-play-protect.md
@@ -703,7 +704,7 @@ items:
         href: custom-settings-windows-10.md
       - name: Windows Holographic for Business
         href: custom-settings-windows-holographic.md
-      - name: Pracovní profil Androidu
+      - name: Android Enterprise
         href: custom-settings-android-for-work.md
 - name: Informace pro vývojáře
   items:
@@ -780,6 +781,8 @@ items:
       href: https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview
 - name: Prostředky
   items:
+  - name: Průvodce dokumentací k Microsoft Intune
+    href: intune-documentation.md
   - name: Řešení problémů
     items:
     - name: Pomoc uživatelům s řešením problémů
@@ -804,11 +807,25 @@ items:
       href: troubleshoot-conditional-access.md
     - name: Řešení problémů s konektorem Exchange
       href: troubleshoot-exchange-connector.md
+  - name: Archivovat
+    items:
+    - name: Archiv Co je nového
+      items:
+      - name: Archiv novinek (Azure Portal)
+        href: whats-new-archive.md
+      - name: Archiv novinek (klasický portál)
+        href: whats-new-archive-classic.md
+    - name: Klasické funkce Intune v Azure
+      href: ui-changes.md
+    - name: Klasické skupiny Intune
+      href: groups-get-started.md
+    - name: Starší verze počítačového klienta Intune
+      href: intune-legacy-pc-client.md
   - name: Glosář
     href: intune-glossary.md
-ms.openlocfilehash: 8926b2cb409f59bab9b4af8398dac146abeec3d2
-ms.sourcegitcommit: 443b4cb3390da47bf1e497b1f0c0137a5ddda7bd
+ms.openlocfilehash: a2820903d6a3609df50290af18843200ef076158
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43821112"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828053"

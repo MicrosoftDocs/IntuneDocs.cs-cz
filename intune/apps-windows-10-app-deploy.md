@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/31/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7508f2c2eca06ceacf203103ab2cad53abc39a65
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
+ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347428"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866350"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 
 Microsoft Intune aktuálně na zařízeních s Windows 10 podporuje různé typy aplikací a scénářů nasazení. Po přidání aplikace do Intune ji můžete přiřadit uživatelům a zařízením. Následující informace poskytují další podrobnosti týkající se podporovaných scénářů pro Windows 10. Kromě toho také poskytují klíčové podrobnosti, které byste při nasazování aplikací do systému Windows neměli opomenout. 
 
-Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované.
+Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů aplikací pro Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
 
 > [!Note]
 > Minimální potřebnou aktualizací Windows 10 pro nasazování aplikací v kontextu zařízení je [KB4100403 z 23. května 2018 (Číslo sestavení operačního systému 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
@@ -46,9 +46,6 @@ V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 ins
     - V kontextu uživatele je možné nasadit moderní obchodní aplikace a aplikace pro Microsoft Store pro firmy (online i offline) s podporou záměru Povinné i K dispozici.
 - **Kontext zařízení**: když se aplikace nasadí v kontextu zařízení, spravovaná aplikace se pomocí Intune nainstaluje do zařízení přímo.
     - V kontextu zařízení je možné nasadit jen moderní obchodní aplikace a online licencované aplikace pro Microsoft Store pro firmy s podporou pouze záměru Povinné.
-
-> [!Note]
-> Nasazení MSI prostřednictvím správy mobilních zařízení ještě není na zařízeních s Windows 10 podporované.
 
 Když se aplikace nasadí v kontextu zařízení, instalace proběhne úspěšně pouze v případě, že zařízení kontext zařízení podporuje. Kromě toho nasazení v kontextu zařízení obsahuje následující podmínky:
 - Pokud se aplikace nasadí v kontextu zařízení a cílí na uživatele, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:

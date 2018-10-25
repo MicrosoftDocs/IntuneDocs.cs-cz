@@ -1,11 +1,11 @@
 ---
-title: Registrace zařízení s Windows 10 v Intune | Dokumentace Microsoftu
-description: Popisuje registraci mobilních nebo desktopových zařízení s Windows 10 v Intune.
+title: Registrace zařízení s Windows 10 v systému správy Intune | Microsoft Docs
+description: Popisuje, jak spravovat mobilní nebo desktopová zařízení s Windows 10 v Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/10/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 6395dc0d14b8947093d53865eb1d97f6ef56db25
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 35a345cd70c9c7e8e0e6d482d933d91f9a6f5f18
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147108"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828223"
 ---
 # <a name="enroll-your-windows-10-devices-in-intune"></a>Registrace zařízení s Windows 10 v Intune
 

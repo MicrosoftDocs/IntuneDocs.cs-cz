@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: f4725b76517bc9d3a27f07d7289f178c54a31bce
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 5eba9f6f920b4bf868e26b47e4043babe62a8945
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148027"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828036"
 ---
 # <a name="resolve-a-threat-found-by-sandblast-mobile-protect"></a>Vyřešení hrozby, kterou objevila aplikace SandBlast Mobile Protect
 
@@ -37,7 +37,12 @@ V tomto článku se dozvíte, jak rozpoznat upozornění aplikace Sandblast Mobi
 ## <a name="troubleshoot-virus-or-security-threat"></a>Odstraňování virových a bezpečnostních hrozeb  
 Když aplikace SandBlast Mobile Protect detekuje virovou nebo bezpečnostní hrozbu, provede kroky na základě zásad přístupu vaší organizace. Tyto zásady vám mohou zabránit v přístupu k pracovní síti, aplikacím a e-mailu.  
 
-Aplikace SandBlast Mobile Protect vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.  
+![Ukázkový snímek obrazovky s upozorněním aplikace SEP Mobile](./media/skycure-list-of-potential-issues-android.png)  
+Aplikace SandBlast Mobile Protect vás vyzve, abyste podnikli opatření pro opětovné získání ztraceného přístupu. Vyberte hrozbu a pomocí pokynů v aplikaci ji vyřešte.
+
+Vzhledem k tomu, že je aplikace integrovaná s poskytovatelem řešení MDM vaší společnosti, zobrazí se také upozornění o omezeném přístupu k aplikaci Portál společnosti. To vás vyzve k otevření aplikace Sandblast Mobile Protect a odstranění virové nebo bezpečnostní hrozby.  
+
+  ![Ukázkový snímek obrazovky se stránkou zařízení na webu Portál společnosti zobrazující upozornění aplikace Sandblast Mobile Protect](./media/CP-lookout-virus-banner-1808.png)  
 
 ## <a name="troubleshoot-an-app-threat"></a>Odstraňování hrozeb od aplikací  
 
@@ -45,4 +50,4 @@ Pokud si nainstalujete aplikaci, která je považována za hrozbu pro vaše zař
 
 Pokud chcete problém vyřešit, vyberete aplikaci ze seznamu hrozeb aplikace SandBlast Mobile Protect. Potom ji podle pokynů odeberte a odinstalujte.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

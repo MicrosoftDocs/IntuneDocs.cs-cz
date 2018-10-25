@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2018
+ms.date: 10/1/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 80b860810800ca887ac55de6fbfc41b2fded3b12
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
+ms.openlocfilehash: 48bf2e6daf05dba6baebbd49be45a17a5a56e820
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028728"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828291"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek popisuje, jak pomocí Intune nakonfigurovat infrastrukturu a pak vytvořit a přiřadit profily certifikátů SCEP (Simple Certificate Enrollment Protocol).
 
@@ -350,6 +348,113 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 5. V rozevíracím seznamu **Typ profilu** zvolte **Certifikát SCEP**.
 6. V podokně **Certifikát SCEP** nakonfigurujte tato nastavení:
 
+   - **Typ certifikátu**: Pro uživatelské certifikáty vyberte **Uživatel**. Pro zařízení bez uživatele, jako jsou například veřejné terminály, vyberte **Zařízení**. Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
+     - iOS
+     - Windows 8.1 a vyšší
+     - Windows 10 a novější
+
+   - **Formát názvu subjektu**: Vyberte způsob, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
+
+        **Typ uživatelského certifikátu**  
+
+        Do názvu subjektu můžete zahrnout e-mailovou adresu uživatele. Vybírejte z těchto možností:
+
+        - **Není nakonfigurováno**
+        - **Běžný název**
+        - **Běžný název včetně e-mailové adresy**
+        - **Běžný název jako e-mail**
+        - **IMEI (International Mobile Equipment Identity)**
+        - **Sériové číslo**
+        - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
+
+            - **CN={{UserName}}**: Hlavní název uživatele, například janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
+            - **CN={{SERIALNUMBER}}**: Jedinečné sériové číslo (SN), které obvykle používá výrobce k identifikaci zařízení
+            - **CN={{IMEINumber}}**: Jedinečné číslo IMEI (International Mobile Equipment Identity), které slouží k identifikaci mobilního telefonu
+            - **CN={{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+
+                Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
+
+            - **CN={{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName z Active Directory do Azure AD pomocí Azure AD Connect do atributu zvaného `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
+
+                Pokud chcete použít proměnnou `{{onPremisesSamAccountName}}`, nezapomeňte synchronizovat atribut uživatele `onPremisesSamAccountName` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
+
+            Kombinací jedné nebo několika těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako třeba:  
+
+            **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
+
+            V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
+
+        **Typ certifikátu zařízení**  
+
+        Když použijete typ certifikátu **Zařízení**, můžete také použít následující proměnné certifikátu zařízení pro hodnotu:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Tyto proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky **{ }**, středníky **;** ani svislé čáry **|**. 
+        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }**.
+        >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
+        >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
+
+
+   - **Alternativní název subjektu**: Zadejte způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
+
+        **Typ uživatelského certifikátu**  
+
+        K dispozici jsou následující atributy:
+
+        - E-mailová adresa
+        - Hlavní název uživatele (UPN)
+
+            Pokud vyberete třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud slouží klientský certifikát k ověřování na serveru NPS (Network Policy Server), nastavte pro alternativní název subjektu hodnotu UPN. 
+
+        **Typ certifikátu zařízení**  
+
+        Textové pole ve formátu tabulky, které můžete upravit. K dispozici jsou následující atributy:
+
+        - DNS
+        - E-mailová adresa
+        - Hlavní název uživatele (UPN)
+
+        S typem certifikátu **Zařízení** můžete použít následující proměnné certifikátu zařízení pro hodnotu:  
+
+        ```
+        "{{AAD_Device_ID}}",
+        "{{Device_Serial}}",
+        "{{Device_IMEI}}",
+        "{{SerialNumber}}",
+        "{{IMEINumber}}",
+        "{{AzureADDeviceId}}",
+        "{{WiFiMacAddress}}",
+        "{{IMEI}}",
+        "{{DeviceName}}",
+        "{{FullyQualifiedDomainName}}",
+        "{{MEID}}",
+        ```
+
+        Tyto proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
+
+        > [!IMPORTANT]
+        >  - Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky **{ }**, středníky **;** ani svislé čáry **|**. 
+        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }**.
+        >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
+        >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
+
    - **Období platnosti certifikátu**: Pokud jste spustili příkaz `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` na vydávající CA, která umožňuje nastavit vlastní období platnosti certifikátu, můžete zadat dobu zbývající do vypršení platnosti certifikátu.<br>Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA. 
    - **Zprostředkovatel úložiště klíčů (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): Zadejte, kam se má uložit klíč k certifikátu. Vyberte jednu z těchto hodnot:
      - **Zapsat do KSP na čipu TPM (Trusted Platform Module), pokud existuje, jinak zapsat do softwarového KSP**
@@ -357,40 +462,17 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
      - **Zapsat do služby Passport, jinak chyba (Windows 10 a novější)**
      - **Zapsat do softwarového KSP**
 
-   - **Formát názvu subjektu**: Ze seznamu vyberte způsob, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Pokud je certifikát určený pro uživatele, můžete do názvu subjektu zahrnout taky e-mailovou adresu uživatele. Vybírejte z těchto možností:
-     - **Není nakonfigurováno**
-     - **Běžný název**
-     - **Běžný název včetně e-mailové adresy**
-     - **Běžný název jako e-mail**
-     - **IMEI (International Mobile Equipment Identity)**
-     - **Sériové číslo**
-     - **Vlastní**: Když vyberete tuto možnost, zobrazí se další pole rozevíracího seznamu. V tomto poli můžete zadat vlastní formát názvu subjektu. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
-       - **CN={{UserName}}**: Hlavní název uživatele, například janedoe@contoso.com
-       - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
-       - **CN={{SERIALNUMBER}}**: Jedinečné sériové číslo (SN), které obvykle používá výrobce k identifikaci zařízení
-       - **CN={{IMEINumber}}**: Jedinečné číslo IMEI (International Mobile Equipment Identity), které slouží k identifikaci mobilního telefonu
-       - **CN={{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
-
-          Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
-
-       - **CN={{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName z Active Directory do Azure AD pomocí Azure AD Connect do atributu zvaného `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
-
-          Pokud chcete použít proměnnou `{{onPremisesSamAccountName}}`, nezapomeňte synchronizovat atribut uživatele `onPremisesSamAccountName` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
-
-       Použitím kombinace jedné či více těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, například: **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**. <br/> V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
-
-- **Alternativní název subjektu**: Zadejte způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Pokud vyberete třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud klientský certifikát slouží k ověřování na server NPS (Network Policy Server), musíte alternativní název subjektu nastavit na UPN.
-- **Použití klíče**: Zadejte možnosti použití klíče pro certifikát. Možnosti:
-  - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
-  - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že se k ochraně klíče využívá digitální podpis.
-- **Velikost klíče (bity)**: Vyberte počet bitů, které klíč obsahuje.
-- **Hashovací algoritmus** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
-- **Kořenový certifikát**: Zvolte profil certifikátu kořenové CA, který jste už nakonfigurovali a přiřadili pro uživatele nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu.
-- **Rozšířené použití klíče**: **Přidejte** hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
-- **Nastavení registrace**
-  - **Prahová hodnota obnovení (%)**: Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
-  - **Serverové adresy URL pro SCEP**: Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP.
-  - Vyberte **OK** a **vytvořte** profil.
+   - **Použití klíče**: Zadejte možnosti použití klíče pro certifikát. Možnosti:
+     - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
+     - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že se k ochraně klíče využívá digitální podpis.
+   - **Velikost klíče (bity)**: Vyberte počet bitů, které klíč obsahuje.
+   - **Hashovací algoritmus** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
+   - **Kořenový certifikát**: Zvolte profil certifikátu kořenové CA, který jste už nakonfigurovali a přiřadili pro uživatele nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu.
+   - **Rozšířené použití klíče**: **Přidejte** hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
+   - **Nastavení registrace**
+     - **Prahová hodnota obnovení (%)**: Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
+     - **Serverové adresy URL pro SCEP**: Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP.
+     - Vyberte **OK** a **vytvořte** profil.
 
 Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 

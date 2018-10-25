@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 0ea421c63cbb6c2228ea94bf82d795ece01f46ac
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: fd58fae2f48791e8c63b9391a825838040b1202f
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150320"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863106"
 ---
 # <a name="remove-your-device-from-the-company-portal"></a>Odebrat zařízení z portálu společnosti
 
@@ -30,18 +30,19 @@ Pokud už nechcete, aby vaše zařízení spravovala vaše společnost nebo orga
 
 Odebrání zařízení:
 
-1. Na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) klepněte na tlačítko __nabídky__ ![Malý obrázek tlačítka nabídky, tři vodorovné pruhy nad sebou](/Intune/whats-new/media/CP_hamburger_menu.png) a potom vyberte __Moje zařízení__.
+1. Na [webu Portál společnosti](https://portal.manage.microsoft.com) vyberte tlačítko __nabídky__ > __Zařízení__.  
 
-   ![Obrázek webu Portál společnosti s rozbalenou boční nabídkou na levé straně obrazovky, s tlačítky Domů, Všechny aplikace, Moje zařízení, Helpdesk a Odhlásit se](/media/iwp-expanded-sidebar.png)
+2. Vyberte zařízení, které chcete odebrat.  
 
-2. Na stránce __Moje zařízení__ vyberte název zařízení, které chcete odebrat.
+    ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-    ![Snímek obrazovky se stránkou Moje zařízení s několika neidentifikovanými zařízeními zobrazenými nad výzvou k registraci zařízení, která nejsou v seznamu, nebo k identifikaci neidentifikovaných zařízení](./media/macOS_enroll_002_tap_here_banner.png)
+3. Vyberte **Odebrat**. Pokud se v horní části stránky možnost Odebrat nezobrazuje, vyberte **Více (…)** > **Odebrat**.  
 
-3. Zařízení se otevře v místním okně. Klepněte na tlačítko **Odebrat**.
+   ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
+  
 
-   ![Všechny možnosti pro vybrané zařízení na webu Portál společnosti, včetně možnosti Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení ](./media/iwp-screen-with-all-options.png)
+    ![Přiblížená ikona Více zvýrazněná červenou šipkou](./media/rename-reset-device-step3-more-1808.png)   
 
-4. Přečtěte si zprávu s upozorněním a klepnutím na **Odebrat** zařízení odeberte z portálu společnosti.
+4. Zobrazí se zpráva, která vás upozorní, že se chystáte odebrat zařízení. Volbu potvrďte výběrem možnosti **Odebrat**.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

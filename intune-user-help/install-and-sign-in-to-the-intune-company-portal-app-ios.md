@@ -1,11 +1,11 @@
 ---
-title: Instalace a přihlášení do aplikace Portál společnosti | Dokumentace Microsoftu
+title: Instalace a přihlášení do aplikace Portál společnosti pro iOS| Microsoft Docs
 description: ''
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/02/2018
+ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 984c9212a4aa3221a4de5e02d96f912d800e9490
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: f8ca89168e46e038b57fba9cc2e159416795e112
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146371"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260194"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalace a přihlášení do aplikace Portál společnosti
 
-Portál společnosti je aplikace, která po instalaci do vašeho zařízení s iOSem umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a síti. Napřed si musíte nainstalovat aplikaci Portál společnosti, abyste získali přístup, a pak v ní zaregistrovat zařízení do Microsoft Intune. Další informace najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
+Nainstalujte aplikaci Portál společnosti na zařízení s iOSem, abyste získali přístup k pracovním a školním aplikacím, e-mailu a síti. Pomocí aplikace zaregistrujte zařízení v Microsoft Intune a zabezpečte jeho přístup k vašim pracovním nebo školním prostředkům. Další informace najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení do služby Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md).
 
 1.  Otevřete **App Store** a vyhledejte **portál společnosti intune**.
 

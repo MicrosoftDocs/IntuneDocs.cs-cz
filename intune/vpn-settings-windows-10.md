@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/26/2018
+ms.date: 9/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 ms.reviewer: tycast
 ms.custom: intune-azure
-ms.openlocfilehash: 0b064c6f0eaa67157c5c50ddad3a8fd863295b8b
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: faf07b58c4480689d5f6f44bf09d6100a2eae9db
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312846"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48827849"
 ---
 # <a name="windows-10-vpn-settings-in-intune"></a>Nastavení sítě VPN Windows 10 v Intune
 
@@ -43,7 +43,7 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **Importovat**: vyhledejte soubor, který obsahuje seznam serverů oddělených čárkami ve formátu popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
   - **Exportovat**: exportuje seznam serverů do textového souboru s oddělovači (CSV).
 
-- **Registrovat IP adresy v interní službě DNS**: výběrem možnosti **Povolit** nakonfigurujete profil sítě VPN s Windows 10 tak, aby dynamicky registroval IP adresy přiřazené k rozhraní sítě VPN pomocí interní služby DNS. Pokud vyberete možnost **Zakázat**, IP adresy se nebudou dynamicky registrovat.
+- **Zaregistrovat IP adresy v interní službě DNS**: výběrem možnosti **Povolit** nakonfigurujete profil sítě VPN s Windows 10 tak, aby dynamicky registroval IP adresy přiřazené k rozhraní sítě VPN pomocí interní služby DNS. Pokud vyberete možnost **Zakázat**, IP adresy se nebudou dynamicky registrovat.
 
 - **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 
@@ -59,12 +59,12 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **PPTP**
 
   Když zvolíte typ připojení VPN, můžete být také vyzváni k zadání těchto nastavení:  
-    - **Stálé připojení**: pokud tuto možnost povolíte, automaticky se naváže připojení k síti VPN v těchto situacích: 
+    - **Stálé připojení**: pokud tuto možnost povolíte, automaticky se naváže připojení k síti VPN při těchto událostech: 
       - Při přihlášení uživatelů do zařízení
       - Při změně sítě na zařízení
       - Při opětovném zapnutí obrazovky na zařízení po vypnutí 
 
-    - **Metoda ověřování**: vyberte, jak chcete, aby se uživatelé vůči serveru VPN ověřovali. Používání **certifikátů** nabízí rozšířené možnosti, třeba bezobslužné prostředí, VPN na vyžádání a VPN pro aplikaci.
+    - **Metoda ověřování**: vyberte, jak chcete, aby se uživatelé vůči serveru VPN ověřovali. Používání **certifikátů** nabízí rozšířené funkce, třeba bezobslužné prostředí, VPN na vyžádání a VPN pro aplikaci.
     - **Zapamatovat si přihlašovací údaje při každém přihlášení**: při zvolení této možnosti se přihlašovací údaje uloží do mezipaměti.
     - **Vlastní XML**: zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
     - **EAP XML**: zadejte příkazy EAP XML pro konfiguraci připojení VPN.
@@ -114,7 +114,7 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
 ## <a name="conditional-access"></a>Podmíněný přístup
 
-- **Podmíněný přístup pro toto připojení k síti VPN**: umožňuje, aby se dodržování předpisů zařízením přenášelo směrem od klienta. Když je tato funkce povolená, pokusí se klient sítě VPN komunikovat se službou Azure Active Directory (AD) a získat certifikát pro účely ověření. U sítě VPN by mělo být nastavené ověřování certifikátem a server VPN musí důvěřovat serveru, který mu vrátí služba Azure AD.
+- **Podmíněný přístup pro toto připojení k síti VPN**: umožňuje, aby se dodržování předpisů zařízením přenášelo směrem od klienta. Když je tato funkce povolená, komunikuje klient sítě VPN se službou Azure Active Directory (AD), aby získal certifikát pro účely ověření. U sítě VPN by mělo být nastavené ověřování certifikátem a server VPN musí důvěřovat serveru, který mu vrátí služba Azure AD.
 
 - **Jednotné přihlašování s alternativním certifikátem**: pro dodržování předpisů zařízením použijte pro ověřování protokolem Kerberos certifikát, který je odlišný od ověřovacího certifikátu sítě VPN. Tento certifikát zadejte pomocí těchto nastavení:
 
@@ -124,7 +124,17 @@ Další informace o vytváření vlastních dat XML protokolu EAP najdete v tém
 
 ## <a name="dns-settings"></a>Nastavení DNS
 
-**Domény a servery pro toto připojení VPN**: přidejte doménu a server DNS, které má síť VPN používat. Vybrat, které servery DNS bude připojení VPN používat, můžete po vytvoření připojení. Pro každý server zadejte:
+- **Seznam hledání přípon DNS**: do pole **Přípony DNS** zadejte příponu DNS a vyberte **Přidat**. Můžete přidat více přípon.
+
+  Pokud použijete přípony DNS, můžete k vyhledání síťového prostředku použít jeho krátký název místo plně kvalifikovaného názvu domény (FQDN). Při hledání s použitím krátkého názvu se přípona automaticky určí serverem DNS. Například `utah.contoso.com` je v seznamu přípon DNS. Na `DEV-comp` použijte příkaz ping. V tomto scénáři se přeloží na `DEV-comp.utah.contoso.com`.
+
+  Přípony DNS se překládají v uvedeném pořadí a toto pořadí lze měnit. Například `colorado.contoso.com` a `utah.contoso.com` jsou v seznamu přípon DNS a obě mají prostředek s názvem `DEV-comp`. Vzhledem k tomu, že `colorado.contoso.com` je v seznamu první, přeloží se jako `DEV-comp.colorado.contoso.com`.
+  
+  Pokud chcete pořadí změnit, klikněte na tečky vlevo od přípony DNS a pak přetáhněte příponu nahoru:
+
+  ![Výběr tří teček a kliknutí a přetažení za účelem přesunutí přípony DNS](./media/vpn-settings-windows10-move-dns-suffix.png)
+
+- **Domény a servery pro toto připojení VPN**: přidejte doménu a server DNS, které má síť VPN používat. Vybrat, které servery DNS bude připojení VPN používat, můžete po vytvoření připojení. Pro každý server zadejte:
 - **Doména**
 - **Server DNS**
 - **Proxy**

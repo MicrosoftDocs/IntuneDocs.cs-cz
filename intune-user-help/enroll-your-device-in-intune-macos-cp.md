@@ -5,7 +5,7 @@ keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: af5c7492563c8df0168eff3250ae1bbad2cc323e
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
+ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147713"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48260245"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -80,8 +80,17 @@ V této části najdete postup registrace zařízení s macOS verze OS X El Capi
 
 9. První stránka, která se v aplikaci Portál společnosti zobrazí, vás vyzve k **přihlášení**. Přihlaste se stejným pracovním nebo školním účtem, jako jste použili k přihlášení na web Portál společnosti.
 
-10. Portál společnosti potvrdí informace o vašem účtu a zobrazí stav **registrace zařízení** a **dodržování předpisů zařízením**. Žlutými trojúhelníky jsou zvýrazněny akce, které je potřeba provést k zabezpečení zařízení s macOS pro školní nebo pracovní účely. Kliknutím na **Začít** spusťte registraci. Přečtěte si, [jaké informace vaše organizace uvidí](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md), když si zaregistrujete zařízení.
+10. Portál společnosti potvrdí informace o vašem účtu a zobrazí stav **registrace zařízení** a **dodržování předpisů zařízením**. Žlutými trojúhelníky jsou zvýrazněny akce, které je potřeba provést k zabezpečení zařízení s macOS pro školní nebo pracovní účely. Kliknutím na **Začít** spusťte registraci. 
 
-11. Může se stát, že vás stránka vyzve k zadání přihlašovacích údajů počítače. Registrace zařízení do správy také může trvat několik minut. Během toho ale můžete se zařízením pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.  
+11. Pokud se zobrazí výzva, zadejte přihlašovací údaje počítače.  
+
+Registrace zařízení do správy může trvat několik minut. Během toho ale můžete se zařízením pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.  
+
+## <a name="unverified-profiles"></a>Neověřené profily
+Když zobrazíte nainstalované profily správy mobilních zařízení (MDM) pro zařízení s macOS, můžou některé profily ukazovat stav **Neověřeno**. Pokud **Profil správy** ukazuje stav **Ověřeno**, nemusíte mít obavy.  
+
+Právě profil správy definuje připojení kanálu MDM. Pokud je profil správy ověřený, všechny ostatní profily doručené do počítače přes tento kanál dědí vlastnosti zabezpečení profilu správy.
+
+Navíc vzhledem k tomu, že tyto ostatní profily nevyžadují jednotlivé ověřování, rychleji se generují a do zařízení doručují. 
 
 Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/17/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,14 +15,14 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 0f6447f4a5cfb2638278a59414e83f744adb8c81
-ms.sourcegitcommit: ed97b68f08c1a8469f0b45bc1c839a0b5f5c71e0
+ms.openlocfilehash: e37a45122ab4950e2a85cc1c6f6696759d429a3f
+ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45978259"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48828274"
 ---
-# <a name="the-early-edition-for-microsoft-intune---september-2018"></a>Časná edice Microsoft Intune – září 2018
+# <a name="the-early-edition-for-microsoft-intune---october-2018"></a>Časná edice Microsoft Intune – říjen 2018
 
 > [!Note]
 > Upozornění na dohodu o mlčenlivosti (NDA): Následující změny v Intune jsou ve vývoji. Tyto informace jsou sdíleny ve velmi omezeném rozsahu a platí pro ně dohoda o mlčenlivosti (NDA). Nepublikujte žádné z těchto informací na sociálních sítích nebo veřejných webech, jako jsou Twitter, UserVoice, Reddit apod. 
@@ -39,35 +39,63 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
  
 ## <a name="intune-in-the-azure-portal"></a>Intune na portálu Azure Portal
 
-<!-- 1809 start -->
+<!-- 1810 start -->
 
-### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices-----1248496----"></a>Přístup uživatelského účtu k aplikacím Intune na spravovaných zařízeních s Androidem a iOSem <!-- ! 1248496  -->
+### <a name="use-microsoft-recommended-settings-with-security-baselines----2055484---"></a>Použití Microsoftem doporučených nastavení se standardními hodnotami zabezpečení <!-- 2055484 -->
+Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně Ochrany ATP v programu Windows Defender a Ochrany ATP v Office 365. Zákazníci požadují ve službách Microsoft 365 společnou strategii a soudržnější sadu ucelených bezpečnostních pracovních postupů. Naším cílem je srovnat strategie tak, abychom mohli vytvářet řešení přemosťující operace zabezpečení a běžné úlohy správy. V Intune se snažíme tohoto cíle dosáhnout prostřednictvím publikování sady Standardních hodnot zabezpečení doporučených Microsoftem (**Intune** > **Standardní hodnoty zabezpečení**).  Správce bude moct vytvářet zásady zabezpečení přímo z těchto standardních hodnot a potom je nasazovat svým uživatelům. Doporučení osvědčených postupů může upravit tak, aby vyhovovala potřebám jeho organizace. Intune zajišťuje, že zařízení zůstávají v souladu s těmito standardními hodnotami, a upozorní správce, pokud uživatelé nebo zařízení tyto hodnoty nedodržují.
 
-Jako správce Microsoft Intune můžete řídit, jaké uživatelské účty budou přidané do aplikací Microsoft Office na spravovaných zařízeních. Budete moct omezit přístup jenom na uživatelské účty povolené organizace a zablokovat osobní účty zaregistrovaných zařízení. 
+### <a name="remove-ability-for-admins-to-wipe-personal-devices-and-reset-passcodes----2934699---"></a>Odebrání možnosti správců vymazat osobní zařízení a resetovat hesla <!-- 2934699 -->
+Abychom uživatele zbavili strachu, že jim podnikoví správci mohou vymazat jejich osobní zařízení, nebudou se už vzdálené akce [vymazání](devices-wipe.md#wipe) a [resetování hesla](device-passcode-reset.md) týkat osobních zařízení. Pokud chcete tyto akce povolit pro zařízení vlastněná vaší organizací, přepněte typ vlastnictví zařízení na podnikové.
 
-### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10----1333668---"></a>Vytvoření přípon DNS v konfiguračních profilech sítě VPN na zařízeních s Windows 10 <!-- 1333668 -->
-Při vytváření profilu konfigurace zařízení v síti VPN (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Windows 10 a novější** Platforma > **VPN** pro typ profilu), zadáváte nastavení DNS. V Intune můžete zadat více **přípon DNS**. Pokud použijete přípony DNS, můžete k vyhledání síťového prostředku použít jeho krátký název místo plně kvalifikovaného názvu domény (FQDN). V této aktualizaci můžete v Intune změnit pořadí přípon DNS.
-Seznam aktuálních nastavení DNS je v [nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md#dns-settings).
-Platí pro: zařízení s Windows 10
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices----1048100---"></a>Podpora Autopilotu pro zařízení připojená k hybridní službě Azure Active Directory <!-- 1048100 -->
+Zařízení připojená k hybridní službě Azure Active Directory si budete moct nastavit pomocí Autopilotu. Zařízení musí být připojená do vaší podnikové sítě, aby mohla použít hybridní funkci Autopilotu.
 
-### <a name="support-for-always-on-vpn-for-android-enterprise-work-profiles----1333705---"></a>Podpora neustále aktivních pracovních profilů sítě VPN pro Android Enterprise <!-- 1333705 -->
-Neustále aktivní připojení VPN můžete použít na zařízeních s Androidem Enterprise, která používají spravované pracovní profily. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned znovu připojí, jakmile uživatel odemkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Připojení také můžete přepnout do „zamčeného“ režimu, který blokuje veškerý síťový provoz, dokud není připojení VPN zase aktivní.
-Nastavení neustále aktivního připojení VPN najdete tady: **Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Android Enterprise** pro danou platformu > **Omezení zařízení** v části **Jen pracovní profil** pro typ profilu > **Možnosti připojení**. 
+### <a name="scope-tags-for-apps---1081941---"></a>Značky oboru pro aplikace <!--1081941 -->
+Budete moct vytvářet značky oboru a omezovat s jejich pomocí přístup k prostředkům Intune. Přidejte značku oboru k přiřazení role a poté přidejte značku oboru ke konfiguračnímu profilu. Daná role bude mít přístup pouze k prostředkům s konfiguračními profily, které mají odpovídající značky oboru (nebo žádnou značku oboru).
+Pokud chcete vytvořit značku oboru, vyberte **Role Intune** > **Obor (značky)** > **Vytvořit**.
+Značku oboru přidáte k přiřazení role tak, že zvolíte **Role Intune** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
+Ke konfiguračnímu profilu přidáte značku oboru tak, zvolíte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnosti** > **Obor (značky)**.
 
-### <a name="outlook-for-ios-and-android-app-configuration-policy---1828527---"></a>Zásada konfigurace aplikace Outlook pro iOS a Android <!--1828527 -->
-Můžete také vytvořit zásadu konfigurace pro aplikaci Outlook pro iOS a Android. Další nastavení konfigurace budou přidána, jakmile je povolíte Outlooku pro iOS a Android.
+## <a name="tenant-health-dashboard----1124854---"></a>Řídicí panel Stav tenanta <!-- 1124854 -->
+Stránka Stav tenanta v Intune vám poskytne informace o stavu tenanta na jednom místě. Stránka je rozdělená do 4 částí:  
+- **Podrobnosti o tenantovi**: obsahuje informace, jako je například autorita MDM, celkový počet zařízení zaregistrovaných ve vašem tenantovi a počet vašich licencí. Tato část také obsahuje aktuální vydanou verzi služby pro vašeho tenanta.
+- **Stav konektoru**: obsahuje informace pro nakonfigurované konektory, jako je třeba Apple VPP, Windows Store pro firmy a konektory Certificate Connectors. Na základě jejich aktuálního stavu jsou konektory označené jako *V pořádku*, *Upozornění* nebo *Není v pořádku*.
+- **Stav služby Intune**: obsahuje aktivní incidenty nebo výpadky vašeho tenanta. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
+- **Novinky v Intune**: obsahuje aktivní zprávy pro vašeho tenanta, které zahrnují například oznámení, že váš tenant obdržel nejnovější funkce Intune. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
 
-###  <a name="windows-line-of-business-lob-app-file-extensions----1884873---"></a>Přípony souborů obchodní aplikace pro Windows <!-- 1884873 -->
-K příponám souborů obchodních aplikací pro Windows patří *.msi*, *.appx*, *.appxbundle*, *.msix* a *.msixbundle*. V Microsoft Intune můžete aplikaci přidat, když vyberete **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, ve kterém můžete vybrat **typ aplikace**. V případě obchodních aplikací pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
+### <a name="enrollment-abandonment-report----1382924---"></a>Sestava opuštění registrace <!-- 1382924 -->
+Nová sestava, která poskytuje podrobné informace o opuštěných registracích, bude k dispozici v části **Registrace zařízení** > **Monitorování**.
 
-### <a name="remotely-lock-noncompliant-devices----2064495---"></a>Vzdálené zamčení nevyhovujících zařízení <!-- 2064495 -->
-Pokud zařízení nevyhovuje, můžete vytvořit akci, která vychází ze zásady dodržování předpisů a která zařízení vzdáleně zamkne. V Intune vyberte **Dodržování předpisů zařízením** a vytvořte novou nebo vyberte některou ze stávajících zásad. Vyberte **Akce při nedodržení předpisů** > **Přidat** a zvolte, že chcete zařízení vzdáleně zamknout.
-Podporované platformy: 
-- Android
-- iOS
-- macOS
-- Windows 10 Mobile 
-- Windows Phone 8.1 nebo novější 
+### <a name="deployed-wip-policies-without-user-enrollment----1434452---"></a>Nasazené zásady WIP bez registrace uživatele <!-- 1434452 -->
+Zásady Windows Information Protection (WIP) budou k dispozici pro nasazení, aniž by se vyžadovalo, aby si uživatelé MDM zaregistrovali svá zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Jakmile jsou dokumenty chráněny zásadami WIP, mohou být chráněná data selektivně vymazána správcem služby Intune. Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. V Intune na portálu Azure Portal vyberte **Mobilní aplikace** > **Selektivní vymazání aplikace**.
+
+
+### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Přidání vlastní firemní image pro aplikaci Portál společnosti <!-- 1916266 -->
+Jako správce služby Microsoft Intune budete mít možnost nahrát vlastní firemní image, která se bude zobrazovat jako obrázek pozadí na stránce profilu uživatele v aplikaci Portál společnosti. Další informace o konfiguraci aplikace Portál společnosti najdete v tématu [Konfigurace aplikace Portál společnosti služby Microsoft Intune](company-portal-app.md).
+
+### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Seskupení zařízení zaregistrovaných ve Windows Autopilotu podle ID korelátoru <!-- 2075110 -->
+Intune bude podporovat seskupování zařízení s Windows podle ID korelátoru, pokud budou zaregistrovaná s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. Intune automaticky nastaví [atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) tak, aby odpovídal nastavení OfflineAutopilotprofile-\<ID korelátoru\>. Umožní se tím, aby se pro offline registrace Autopilotu vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru prostřednictvím atributu enrollmentprofileName. 
+
+
+### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Podpora iOS 12 OAuth v e-mailových profilech systému iOS <!--2155106 -->
+E-mailové profily iOS služby Intune budou podporovat iOS 12 OAuth. Pokud chcete tuto funkci zobrazit, vyberte **Intune** > **Konfigurace zařízení** > **Profily** > **Vytvořit profil**  > **OAuth**. Pokud je toto nastavení zapnuté, stanou se dvě věci:
+1. Zařízením, která už jsou zacílená, se vystaví nový profil.
+2. Koncovým uživatelům se znovu zobrazí výzva k zadání přihlašovacích údajů.
+
+### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nové výchozí nastavení Požadovaný typ hesla pro Android, Android Enterprise <!-- 2649963 -->
+Když vytvoříte nové zásady dodržování předpisů (**Intune** > **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Android** nebo **Android Enterprise** pro Platforma > Zabezpečení systému), výchozí hodnota pro **Požadovaný typ hesla** se změní: Aktuální výchozí nastavení: Výchozí ze zařízení Nová výchozí hodnota: Aspoň číslice Platí pro: Android, Android Enterprise
+
+### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Přiřazení profilů Autopilotu virtuální skupině Všechna zařízení <!--2715522 -->
+Profily Autopilotu budete moct přiřadit virtuální skupině Všechna zařízení. Uděláte to tak, že vyberete **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil > **Přiřazení** > v části **Přiřadit k** vyberte **Všechna zařízení**.
+
+### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nová funkce podmínek použití služby Azure Active Directory <!-- 2870393 -->
+Azure Active Directory bude mít funkci podmínek použití, kterou budete moct využít místo stávajících podmínek a ujednání služby Intune. Funkce podmínek použití služby Azure AD poskytuje větší flexibilitu ohledně toho, které podmínky a kdy se mají zobrazovat, lepší podporu lokalizace, větší kontrolu nad tím, jak se podmínky vykreslují, a vylepšené generování sestav. Funkce podmínek použití služby Azure AD vyžaduje Azure Active Directory Premium P1, která je také součástí sady Enterprise Mobility + Security E3.
+
+
+### <a name="intune-will-maintain-the-office-localized-language-when-updating-office-on-end-users-machines----2971030---"></a>Intune bude udržovat lokalizovaný jazyk Office při aktualizaci Office na počítačích koncových uživatelů <!-- 2971030 -->
+Když Intune nainstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. 
+
+<!-- 1809 start -->  
 
 ### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices----2244713---"></a>Nastavení Intune APP pro přenos dat na zařízeních s iOS zaregistrovaných v MDM <!-- 2244713 -->
 Ovládání nastavení Intune APP pro přenos dat na zařízeních s iOS zaregistrovaných v MDM můžete oddělit od zadání identity registrovaného uživatele. Správci, kteří nepoužívají aplikaci IntuneMAMUPN, nezaznamenají změnu chování. Pokud je tato funkce k dispozici, musí správci, kteří k řízení chování při přenosech dat na registrovaných zařízeních používají Intune MAMUPN, zkontrolovat nové nastavení a podle potřeby aktualizovat nastavení APP.
@@ -76,56 +104,17 @@ Ovládání nastavení Intune APP pro přenos dat na zařízeních s iOS zaregis
 K ověření konfiguračního profilu sítě Wi-Fi pro Windows 10 můžete použít předsdílený klíč (PSK) s protokolem zabezpečení WPA/WPA2-osobní.
 Pokud chcete použít předsdílený klíč, musíte v současnosti importovat profil Wi-Fi nebo vytvořit vlastní profil. Seznam aktuálních nastavení je v [nastavení sítě Wi-Fi pro Windows 10](wi-fi-settings-windows.md). 
 
-### <a name="app-protection-policy-app-settings-for-web-data----2662995-eeready---"></a>Nastavení zásady ochrany aplikací (APP) pro webová data <!-- 2662995 eeready -->
+### <a name="app-protection-policy-app-settings-for-web-data----2662995---"></a>Nastavení zásady ochrany aplikací (APP) pro webová data <!-- 2662995 -->
 Nastavení zásad ochrany aplikací (APP) pro webový obsah na zařízeních s Androidem a iOS bude aktualizované, aby lépe pracovalo s webovými odkazy http a https a také s přenosy dat prostřednictvím univerzálních odkazů iOS a odkazů aplikací pro Android.  
 
 ### <a name="autopilot-device-sync-frequency-increasing-to-every-12-hours----2753673---"></a>Frekvence synchronizace zařízení Autopilot zkrácená na 12 hodin <!-- 2753673 -->
 Zařízení Autopilot se budou synchronizovat každých 12 hodin místo původních 24 hodin.
 
-### <a name="apply-autopilot-profile-to-enrolled-win-10-devices-not-already-registered-for-autopilot----1558983---"></a>Použití profilu Autopilotu u zaregistrovaných zařízení s Windows 10, která nejsou zaregistrovaná v Autopilotu <!-- 1558983 -->
-Profily Autopilotu můžete použít u zaregistrovaných zařízení s Windows 10, která nejsou zaregistrovaná do Autopilotu. V profilu Autopilotu zvolte možnost **Převést všechna cílová zařízení na AutoPilot**, abyste mohli k automatické registraci zařízení bez Autopilotu použít službu nasazení Autopilotu. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot zajistí registraci. 
-
-### <a name="create-and-assign-multiple-enrollment-status--page-profiles-to-azure-ad-groups----2526564--"></a>Vytvoření více profilů stránky o stavu registrace a jejich přiřazení skupinám Azure AD <!-- 2526564-->
-Pro skupiny uživatelů Azure AAD můžete vytvořit více profilů stránky o stavu registrace, které jim můžete přiřadit.
-
 ### <a name="intune-landing-page-updates-and-node-rename---2867309---"></a>Aktualizace vstupní stránky Intune a přejmenování uzlu <!--2867309 -->
 K aktualizacím vstupní stránky Intune patří i nové a změněné monitorovací dlaždice a grafy pro lepší znázornění dat. Uzel **Mobilní aplikace** se mění na **Klientské aplikace**.
 
 ### <a name="increased-end-user-access-using-the-company-portal-app----772203---"></a>Větší přístup koncových uživatelů v aplikaci Portál společnosti <!-- 772203 -->
-Koncoví uživatelé budou mít přístup ke klíčovým akcím účtu, jako je resetování hesla nebo profil AAD, z aplikace Portál společnosti.
-
-### <a name="issue-scep-certificates-to-user-less-devices----1744554---"></a>Vydání certifikátů SCEP zařízením bez uživatele <!-- 1744554 -->
-Certifikáty se v současnosti vydávají jenom uživatelům. Certifikáty SCEP budete moct vydat i zařízením, včetně zařízení bez uživatelů, jako jsou terminály (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Windows 10 a novější** pro platformu > **Certifikát SCEP** pro profil). Další aktualizace:
-- Vlastnost **Subjekt** v profilu SCEP je nyní vlastní textové pole, které může obsahovat nové proměnné. 
-- Vlastnost **Alternativní název subjektu (SAN)** v profilu SCEP má nyní formát tabulky a může obsahovat nové proměnné. Správce může do tabulky přidat atribut a vyplnit hodnotu vlastního textového pole. Alternativní název subjektu (SAN) podporuje následující atributy: 
-  - DNS
-  - E-mailová adresa
-  - Hlavní název uživatele (UPN) Tyto nové proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
-  > [!NOTE]
-  > Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky, středníky ani svislé čáry (|). Do složených závorek můžete uzavřít jenom jednu z nových proměnných certifikátu zařízení, aby mohla být přijata jako `Subject` nebo `Subject alternative name`. Nové proměnné certifikátu zařízení:  
-```
-"{{AAD_Device_ID}}",
-"{{Device_Serial}}",
-"{{Device_IMEI}}",
-"{{SerialNumber}}",
-"{{IMEINumber}}",
-"{{AzureADDeviceId}}",
-"{{WiFiMacAddress}}",
-"{{IMEI}}",
-"{{DeviceName}}",
-"{{FullyQualifiedDomainName}}",
-"{{MEID}}",
-```
-
-> [!NOTE]
->  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
->  -  Když do subjektu nebo alternativního názvu subjektu (SAN) pro certifikát zařízení zadáváte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat. 
-
-V části [Vytvoření profilu certifikátu SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) je seznam aktuálních proměnných při vytvoření konfiguračního profilu SCEP. 
-
-Platí pro: Windows 10 a novější a iOS, podporuje síť Wi-Fi
-
-
+Koncoví uživatelé budou mít přístup ke klíčovým akcím účtu, jako je resetování hesla nebo profil AAD, z aplikace Portál společnosti.  
 
 <!-- 1808 start -->
 
@@ -143,13 +132,6 @@ V budoucí aktualizaci se z řídicího panelu Dodržování předpisů zaříze
 ### <a name="change-in-the-update-process-for-on-premises-connectors----2277554---"></a>Změna v procesu aktualizace pro místní konektory <!-- 2277554 -->
 Na základě zpětné vazby od zákazníků se změní způsob, jak se aktualizují místní konektory. Po prvotní instalaci místního konektoru budou aktualizace probíhat automaticky. Tato změna začne s novým konektor certifikátu PFX pro Microsoft Intune a následně bude zavedena u dalších typů místních konektorů. 
 
-### <a name="windows-10-and-later-kiosk-profile-improvements-in-the-azure-portal----2748224-eeready---"></a>Vylepšení profilu zařízení s beznabídkovým režimem se systémem Windows 10 a novějším na webu Azure Portal <!-- 2748224 eeready -->
-Vylepšení konfiguračního profilu zařízení s beznabídkovým režimem s Windows 10 (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Windows 10 a novější** pro platformu > **Beznabídkový režim (Preview)** pro typ profilu): 
-- V současnosti můžete na stejném zařízení vytvářet více profilů beznabídkového režimu. Po této aktualizaci bude Intune u každého zařízení podporovat jenom jeden profil. Pokud přesto potřebujete více profilů beznabídkového režimu, můžete použít vlastní identifikátor URI.
-V profilu **Beznabídkový režim s více aplikacemi** můžete vybrat velikost dlaždice aplikace a určit pořadí **rozložení nabídky Start** v mřížce aplikace. Pokud chcete provádět vlastní úpravy většího rozsahu, pokračujte k odeslání souboru XML.
-- Nastavení aplikace Kiosk Browser se přesouvají do nastavení **Veřejný terminál**. V současnosti má nastavení **Kiosk Web Browser** na webu Azure Portal vlastní kategorii.
-Platí pro: Windows 10 a novější
-
 <!-- 1807 start -->
 
 ### <a name="improved-company-portal-app-experience-for-device-enrollment-manager-users----675800---"></a>Vylepšené prostředí aplikace Portál společnosti pro správce registrace zařízení <!-- 675800 -->
@@ -165,16 +147,10 @@ Platí pro Windows 10 a novější.
 ### <a name="alerts-for-expiring-vpp-token-or-company-portal-license-running-low----2237572---"></a>Upozornění na vypršení platnosti tokenu VPP nebo docházející licence pro aplikaci Portál společnosti <!-- 2237572 -->
 Jestliže pomocí programu VPP (Volume Purchase Program) předběžně zřizujete portál společnosti během registrace do programu DEP, Intune vás upozorní, pokud se bude blížit konec platnosti tokenu VPP nebo pokud bude docházet počet licencí pro aplikaci Portál společnosti.
 
-### <a name="additional-security-settings-for-windows-installer----2282430---"></a>Nastavení dalšího zabezpečení pro Instalační službu systému Windows <!-- 2282430 -->
-Uživatelům budete moct povolit, aby ovládali instalaci aplikací. Pokud je tato možnost povolená, instalace, které by se jinak kvůli narušení zabezpečení zastavily, budou moct pokračovat. Instalační službu systému Windows budete moct nastavit tak, aby při instalaci libovolné aplikace do systému používala zvýšenou úroveň oprávnění. Dále budete moct povolit, aby se položky WIP (Windows Information Protection) indexovaly a metadata o nich se ukládala do nešifrovaného umístění. Pokud je tato zásada zakázaná, chráněné položky WIP se nebudou indexovat a ve výsledcích v Cortaně nebo v Průzkumníkovi souborů se nezobrazí. Funkčnost těchto možností bude ve výchozím nastavení zakázaná. 
-
 <!-- 1806 start -->
 
 ### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>Nastavením zásad ochrany aplikací v iOSu se dají zablokovat klávesnice jiných výrobců <!-- 1248481 -->
 Na zařízeních s iOSem budou moct správci Intune zablokovat použití klávesnic jiných výrobců pro přístup k datům organizace z aplikací chráněných zásadami. Když budou nastavené Zásady ochrany aplikací (APP) k blokování klávesnic jiných výrobců, uživatelům zařízení se při první interakci s firemními daty pomocí klávesnice jiného výrobce zobrazí zpráva. Všechny jiné možnosti než nativní klávesnice budou zablokované a uživatelům zařízení se nezobrazí. Uživatelům se dialog se zprávou zobrazí jenom jednou. 
-
-### <a name="office-365-pro-plus-language-packs----1833450---"></a>Jazykové sady Office 365 Pro Plus <!-- 1833450 -->
-Jako správce Intune budete moct nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Mobilní aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**.
 
 <!-- 1805 start -->
 

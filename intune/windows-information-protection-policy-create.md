@@ -3,10 +3,10 @@ title: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Informatio
 titlesuffix: Microsoft Intune
 description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Microsoft Intune
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2018
+ms.date: 10/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 4e3627bd-a9fd-49bc-b95e-9b7532f0ed55
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 425dce514d9cf0288a5e84ef5fa89790e6cee8be
-ms.sourcegitcommit: 2d1e89fa5fa721e79648e41fde147a035e7b047d
+ms.openlocfilehash: c1d530059d7c5b5f759516e86d4ee3dbf8512aa5
+ms.sourcegitcommit: 28262384ec94e43970cc7a33e5d9063972bdf468
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43347303"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48799621"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -46,19 +46,27 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 ## <a name="prerequisites"></a>Požadavky
 
-Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).
+Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfigurovat poskytovatele MAM. Přečtěte si další informace o tom, [jak nakonfigurovat poskytovatele MAM u Intune](app-protection-policies-configure-windows-10.md).  
+
+> [!IMPORTANT]
+> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita.
 
 Navíc musíte mít následující licenci a aktualizaci:
 
 -   Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
 -   [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
-> [!IMPORTANT]
-> WIP nepodporuje víc identit. Vždy může existovat jenom jedna spravovaná identita.
+
+
+
 
 ## <a name="to-add-a-wip-app-protection-policy"></a>Přidání zásady ochrany aplikací WIP
 
 Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zásadu specifickou pro WIP.
+
+> [!TIP]  
+> Související informace o vytváření zásad WIP pro Intune, včetně dostupných nastavení a postupů jejich konfigurace, najdete v tématu o [vytvoření zásad WIP (Windows Information Protection) s MAM pomocí webu Azure Portal pro Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) v knihovně dokumentace k zabezpečení systému Windows. 
+
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.
@@ -123,7 +131,7 @@ Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v r�
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
 #### <a name="block"></a>Blokování
-WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K takovým postupům může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
+WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K blokovaným akcím může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
 
 #### <a name="allow-overrides"></a>Povolit potlačení
 WIP hledá nepatřičné sdílení dat, a pokud uživatelé udělají něco potenciálně nebezpečného, upozorní je na to. Uživatel ale může v tomto režimu zásady potlačit a data sdílet. Akce se v takovém případě zaznamená do protokolu auditu.

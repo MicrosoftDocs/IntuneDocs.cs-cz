@@ -1,7 +1,7 @@
 
 
 ### <a name="apple"></a>Apple
-- Apple iOS 9.0 a novější
+- Apple iOS 10.0 a novější
 - Mac OS X 10.11 a novější
 
 ### <a name="google"></a>Google

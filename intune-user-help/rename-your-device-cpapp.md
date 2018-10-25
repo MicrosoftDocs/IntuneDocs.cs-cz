@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/4/2018
+ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,46 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 9060c2e573003e480319dba6715cb14a2a13e906
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: ce673ab5206d5024da1cb6822beb523aa155325f
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150002"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863021"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Přejmenování zařízení z aplikace Portál společnosti pro Windows
-Přejmenujte zařízení, aby bylo snazší ho na ostatních zařízeních rozpoznat. Aplikace Portál společnosti pro Windows vám umožňuje přejmenovat připojená zařízení se systémy Windows, iOS a Android. 
+Přejmenujte zařízení, aby bylo snazší ho na ostatních zařízeních rozpoznat. Aplikace Portál společnosti pro Windows vám umožňuje přejmenovat následující typy připojených zařízení:  
+* Windows 10
+* iOS
+* Android  
 
-Přejmenování zařízení:
-1. Otevřete aplikaci Portál společnosti.
-2. Na stránce **Moje zařízení** vyberte zařízení, které chcete přejmenovat.
-3. V pravém horním rohu stránky vyberte ikonu **Přejmenovat**. 
-4. Zadejte nový název a klikněte na **Přejmenovat**. Aktualizace názvu zařízení se v aplikaci zobrazí okamžitě. 
+## <a name="rename-device-from-device-details-page"></a>Přejmenování zařízení ze stránky **Detaily zařízení**  
+Pomocí následujícího postupu odeberte zařízení ze stránky **Detaily zařízení** Portálu společnosti. 
+
+1. Otevřete aplikaci Portál společnosti a přejděte na **Moje zařízení**.  
+
+    ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, domovská stránka, zvýrazněná část Moje zařízení](./media/1809_CheckAccess_Context_Select_Device.png)  
+2. Vyberte zařízení, které chcete přejmenovat.
+3. Na stránce **Detaily zařízení** přejděte do horního pravého rohu a vyberte ikonu tužky **Přejmenovat**.  
+
+     ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, stránka Detaily zařízení, zvýrazněná ikona tužky Přejmenovat](./media/1809_Rename_CPapp_Windows_icon.png) 
+4. Zadejte nový název a klikněte na **Přejmenovat**. Název zařízení se v aplikaci okamžitě aktualizuje.  
+
+     ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, stránka Detaily zařízení, pole místní nabídky Přejmenovat](./media/1808_RenameApp_Popup.png)  
+
+## <a name="rename-device-from-device-context-menu"></a>Přejmenování zařízení z místní nabídky zařízení  
+Pomocí následujícího postupu odeberte zařízení prostřednictvím akcí [místní nabídky](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
+
+1. Na **domovské stránce** aplikace Portál společnosti přejděte na **Moje zařízení**.
+
+    ![Příklad snímku obrazovky aplikace Portál společnosti pro Windows, domovská stránka, zvýrazněná část Moje zařízení](./media/1809_CheckAccess_Context_Select_Device.png)  
+2. Klikněte pravým tlačítkem myši nebo stiskněte a podržte zařízení, aby se otevřela jeho místní nabídka.  
+
+    ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows, domovská stránka Místní nabídka zařízení se zobrazuje na stránce v části Moje zařízení a zobrazuje akce Přejmenovat, Odebrat a Zkontrolovat přístup.](./media/1809_DeviceContextMenu_Windows_CP.png)    
+3. Vyberte **Přejmenovat**.  
+4. Zadejte nový název a vyberte **Přejmenovat**. Název zařízení se v aplikaci okamžitě aktualizuje.  
+
+     ![Příklad snímku obrazovky s aplikací Portál společnosti pro Windows, domovská stránka Nad zařízením se zobrazí pole místní nabídky Přejmenovat, do kterého uživatel může napsat nový název a může kliknout na Přejmenovat nebo Zrušit.](./media/1808_RenameApp_Popup.png)  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+

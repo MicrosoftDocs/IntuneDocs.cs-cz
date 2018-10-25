@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/18/2018
+ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 4c26d9914173c07096caad428afcbd9174625ef7
-ms.sourcegitcommit: a474a6496209ff3b60e014a91526f3d163a45438
+ms.openlocfilehash: 4a588af375ef690d45e067dfc4261fbeb551755c
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031299"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863208"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -31,18 +31,21 @@ Sada Microsoft Intune App SDK pro Android umožňuje začlenit do vaší nativn�
 
 ## <a name="whats-in-the-sdk"></a>Co je v sadě SDK
 
-Sada Intune App SDK obsahuje tyto soubory:  
+Sada Intune App SDK obsahuje tyto soubory:
 
-* **Microsoft.Intune.MAM.SDK.aar**: Komponenty SDK kromě souborů JAT Support.V4 a Support.V7.
-* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: Rozhraní nutná pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v4. Aplikace, které vyžadují tuto podporu, musí na soubor JAR odkazovat přímo.
-* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: Rozhraní nutná pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v7. Aplikace, které vyžadují tuto podporu, musí na soubor JAR odkazovat přímo.
-* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Tento soubor JAR obsahuje zástupné procedury pro systémové třídy Androidu, které jsou k dispozici jenom na novějších zařízeních, ale odkazují na ně metody v MAMActivity. Novější zařízení budou tyto zástupné třídy ignorovat. Tento soubor JAR je nutný jenom v případě, že aplikace provádí reflexi u tříd odvozených z MAMActivity. U většiny aplikací není nutné ho používat. Pokud chcete tento soubor JAR použít, musíte při vylučování všech jeho tříd z ProGuard postupovat opatrně. Všechny třídy budou v kořenovém balíčku „android“.
+* **Microsoft.Intune.MAM.SDK.aar**: Komponenty sady SDK kromě souborů JAR knihovny podpory
+* **Microsoft.Intune.MAM.SDK.Support.v4.jar**: Třídy nutné pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v4
+* **Microsoft.Intune.MAM.SDK.Support.v7.jar**: Třídy nutné pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v7
+* **Microsoft.Intune.MAM.SDK.Support.v17.jar**: Třídy nutné pro povolení MAM v aplikacích, které využívají knihovnu podpory Android v17 
+* **Microsoft.Intune.MAM.SDK.Support.Text.jar**: Třídy nutné pro povolení MAM v aplikacích, které využívají třídy knihovny podpory Android v balíčku `android.support.text`
+* **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Tento soubor JAR obsahuje zástupné procedury pro systémové třídy Androidu, které jsou k dispozici jenom na novějších zařízeních, ale na které odkazují metody v MAMActivity. Novější zařízení budou tyto zástupné třídy ignorovat. Tento soubor JAR je nutný jenom v případě, že aplikace provádí reflexi u tříd odvozených z MAMActivity. U většiny aplikací není nutné ho používat. Pokud chcete tento soubor JAR použít, musíte při vylučování všech jeho tříd z ProGuard postupovat opatrně. Všechny třídy budou v kořenovém balíčku „android“.
+* **com.microsoft.intune.mam.build.jar**: Modul plug-in Gradle, který [usnadňuje integraci v sadě SDK](#build-tooling)
 * **CHANGELOG.txt**: Obsahuje záznam změn provedených v každé verzi sady SDK.
 * **THIRDPARTYNOTICES.TXT**: Označení autorství kódu OSS nebo kódu třetí strany, který se zkompiluje do vaší aplikace
 
 ## <a name="requirements"></a>požadavky
 
-Intune App SDK je zkompilovaný projekt pro Android. Proto je do značné míry lhostejné, kterou verzi Androidu aplikace využívá jako minimální nebo cílovou verzi API. SDK podporuje Android API 19 (Android 4.4+) až Android API 26 (Android 8.0).
+Sada SDK podporuje Android API 19 (Android 4.4+) až Android API 28 (Android 8.0).
 
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
@@ -55,32 +58,168 @@ U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrov
 
 ## <a name="sdk-integration"></a>Integrace sady SDK
 
-### <a name="build-integration"></a>Integrace buildu
+### <a name="referencing-intune-app-libraries"></a>Odkazování na knihovny Intune App
 
 Intune App SDK je standardní knihovna pro Android, která nemá žádné externí závislosti. Soubor **Microsoft.Intune.MAM.SDK.aar** obsahuje jak rozhraní nutná pro povolení zásad ochrany aplikací, tak kód, který je podmínkou interoperability s Portálem společnosti Microsoft Intune.
 
-Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. Pokud chcete soubor **Microsoft.Intune.MAM.SDK.aar** uvést jako odkaz na knihovnu pro Android, otevřete projekt aplikace v nástroji Android Studio a přejděte na **File (Soubor) > New (Nový) > New module (Nový modul)** a vyberte možnost **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)**. Potom vyberte balíček archivu pro Android s názvem **Microsoft.Intune.MAM.SDK.aar** a vytvořte modul pro *.AAR*. Pravým tlačítkem myši klikněte na modul nebo moduly, které obsahují kód aplikace, a přejděte na **Module Settings (Nastavení modulu)** > **karta Dependencies (Závislosti)** > **ikona +** > **Module dependency (Závislost modulu)** > vyberte modul MAM SDK AAR, který jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
+Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. To provede otevřením projektu aplikace v nástroji Android Studio, kliknutím na **File (Soubor) > New (Nový) > New module (Nový modul)** a výběrem možnosti **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)**. Vyberte balíček archivu pro Android s názvem Microsoft.Intune.MAM.SDK.aar a vytvořte modul pro .AAR. Pravým tlačítkem myši klikněte na modul nebo moduly, které obsahují kód aplikace, a přejděte na **Module Settings (Nastavení modulu)** > **karta Dependencies (Závislosti)** > **ikona +** > **Module dependency (Závislost modulu)** > vyberte modul MAM SDK AAR, který jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
 
-Soubory **Microsoft.Intune.MAM.SDK.Support.v4** a **Microsoft.Intune.MAM.SDK.Support.v7** dále obsahují varianty Intune pro `android.support.v4`, respektive `android.support.v7`. Nejsou součástí souboru Microsoft.Intune.MAM.SDK.aar pro případ, že by aplikace nechtěla zahrnout knihovny podpory. Jedná se o standardní soubory JAR, nikoliv o projekty knihovny pro Android.
+Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty Intune odpovídajících knihoven `android.support.XXX`. Nejsou součástí souboru Microsoft.Intune.MAM.SDK.aar pro případ, že není nutné, aby aplikace závisela na knihovnách podpory.
 
 #### <a name="proguard"></a>ProGuard
 
-Pokud používáte [ProGuard](http://proguard.sourceforge.net/) (nebo jiný zmenšovací/obfuskační mechanismus) jako krok při vytváření buildu, je nutné vyloučit třídy Intune SDK. Při zahrnutí souboru *.AAR* do sestavení se naše pravidla automaticky integrují do kroku ProGuard a potřebné soubory třídy se zachovají. 
+Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí souboru .aar do sestavení se naše pravidla automaticky integrují do kroku ProGuard a potřebné soubory třídy se zachovají.
 
 Knihovna ADAL (Azure Active Directory Authentication Libraries) může mít vlastní omezení pro ProGuard. Pokud je součástí vaší aplikace, informujte se o těchto omezeních v dokumentaci pro ADAL.
 
-### <a name="entry-points"></a>Vstupní body
+### <a name="build-tooling"></a>Nástroje sestavení
+Sada Intune App SDK je knihovna Androidu, která umožňuje vaší aplikaci podporovat zásady Intune a podílet se na jejich vynucení. Některé zásady vyžadují [pro vynucení explicitní účast vaší aplikace](#enable-features-that-require-app-participation), ale většina z nich se vynucuje poloautomaticky. Toto automatické vynucení vyžaduje, aby aplikace nahradily dědičnost z několika tříd Androidu dědičností z ekvivalentů MAM a obdobně nahradily volání určitých tříd systémové služby Androidu voláními ekvivalentů MAM. Konkrétní nutná nahrazení jsou podrobně uvedená [níže](#class-and-method-replacements).
 
-Sada Intune App SDK vyžaduje pro povolení zásad ochrany aplikací Intune změny ve zdrojovém kódu aplikace. Udělají se tak, že se základní třídy Androidu nahradí ekvivalentními základními třídami Intune, jejichž názvy mají předponu **MAM**. Třídy SDK se pohybují mezi základní třídou Androidu a vlastní odvozenou verzí této třídy v aplikaci. Když jako příklad použijeme aktivitu, výsledná hierarchie dědičnosti bude vypadat takto: `Activity` > `MAMActivity` > `AppSpecificActivity`.
+Provádění těchto nahrazení ručně může být zdlouhavé. Místo toho sada SDK poskytuje nástroje sestavení (modul plug-in pro sestavení Gradle a nástroj příkazového řádku pro ostatní sestavení), které provedou nahrazení automaticky. Tyto nástroje transformují soubory tříd vygenerované při kompilaci Java a nezmění původní zdrojový kód.
 
-Když třeba `AppSpecificActivity` komunikuje se svou nadřazenou položkou (například voláním `super.onCreate()`), je `MAMActivity` supertřída.
+Nástroj provede pouze [přímé nahrazení](#class-and-method-replacements)). Nástroje neprovádí žádné složitější integrace SDK, jako jsou [zásady uložení jako](#enable-features-that-require-app-participation), [použití více identit](#multi-identity-optional), [registrace App-WE](#app-protection-policy-without-device-enrollment), [změny souboru AndroidManifest](#manifest-replacements) nebo [konfigurace ADAL](#configure-azure-active-directory-authentication-library-adal), a proto je třeba tyto kroky provést dříve, než u aplikace povolíte plnou podporu Intune. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
 
-Běžné aplikace pro Android mají jeden režim a můžou přistupovat do systému přes svůj objekt [**Context**](https://developer.android.com/reference/android/content/Context.html). Aplikace s integrovanou sadou Intune App SDK mají oproti tomu dva režimy. Tyto aplikace dál k systému přistupují prostřednictvím objektu `Context`. V závislosti na základní použité položce `Activity` bude objekt `Context` poskytnutý Androidem nebo bude inteligentně multiplexní mezi omezeným zobrazením systému a položkou `Context` poskytnutou Androidem. Po odvození od některého ze vstupních bodů MAM jde bezpečně `Context` používat jako obvykle – například při zahajování tříd `Activity` a používání položky `PackageManager`.
+> [!NOTE]
+> Tyto nástroje můžete spustit u projektu, u kterého jste již provedli částečnou nebo úplnou integraci sady SDK MAM prostřednictvím ručních nahrazení. Váš projekt musí i nadále uvádět sadu SDK MAM jako závislost.
+
+### <a name="gradle-build-plugin"></a>Modul plug-in sestavení Gradle
+Pokud aplikace neprovádí sestavení pomocí nástroje Gradle, přejděte na část [Integrace s nástrojem příkazového řádku](#command-line-build-tool). 
+
+Modul plug-in App SDK se distribuuje v sadě SDK jako **GradlePlugin/com.microsoft.intune.mam.build.jar**. Aby Gradle mohl vyhledat modul plug-in, musíte ho přidat do cesty ke třídě skriptu sestavení. Modul plug-in závisí na nástroji [Javassist](http://jboss-javassist.github.io/javassist/), který také musíte přidat. Do cesty třídy je přidáte tak, že do kořene `build.gradle` přidáte následující kód.
+
+```groovy
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath "org.javassist:javassist:3.22.0-GA"
+        classpath files("$PATH_TO_MAM_SDK/GradlePlugin/com.microsoft.intune.mam.build.jar")
+    }
+}
+```
+
+Potom v souboru `build.gradle` projektu APK jednoduše použijte modul plug in jako
+```groovy
+apply plugin: 'com.microsoft.intune.mam'
+```
+
+Ve výchozím nastavení bude modul plug-in fungovat **pouze** u `project` závislostí.
+Na testovací kompilaci nebude mít vliv. Můžete přidat konfiguraci, která zobrazí seznam:
+*  projektů k vyloučení,
+*  [externích závislostí k zahrnutí](#usage-of-includeexternallibraries), 
+*  konkrétních tříd k vyloučení ze zpracování,
+*  variant k vyloučení ze zpracování. Může se jednat buď o úplný název varianty, nebo o jednu příchuť. Příklad:
+     * Pokud má vaše aplikace typy sestavení `debug` a `release` s příchutěmi {`savory`, `sweet`} a {`vanilla`, `chocolate`}, můžete zadat
+     * příchuť `savory` a vyloučit tak všechny varianty s příchutí „savory“, nebo zadat příchuť `savoryVanillaRelease` a vyloučit tak pouze tuto jednu přesnou variantu.
+
+#### <a name="example-partial-buildgradle"></a>Ukázkový částečný soubor build.gradle
+
+```groovy
+
+apply plugin: 'com.microsoft.intune.mam'
+
+dependencies {
+    implementation project(':product:FooLib')
+    implementation project(':product:foo-project')
+    implementation fileTree(dir: "libs", include: ["bar.jar"])
+    implementation fileTree(dir: "libs", include: ["zap.jar"])
+    implementation "com.contoso.foo:zap-artifact:1.0.0"
+    implementation "com.microsoft.bar:baz:1.0.0"
+
+    // Include the MAM SDK
+    implementation files("$PATH_TO_MAM_SDK/Microsoft.Intune.MAM.SDK.aar")
+}
+intunemam {
+    excludeProjects = [':product:FooLib']
+    includeExternalLibraries = ['bar.jar', "com.contoso.foo:zap-artifact", "com.microsoft.*"]
+    excludeClasses = ['com.contoso.SplashActivity']
+    excludeVariants=['savory']
+}
+
+```
+Toto by mělo následující důsledky:
+* `:product:FooLib` se nepřepíše, protože tato závislost je zahrnuta v `excludeProjects`.
+* `:product:foo-project` se přepíše s výjimkou závislosti `com.contoso.SplashActivity`, která se přeskočí, protože je v `excludeClasses`.
+* `bar.jar` se přepíše, protože tento soubor je zahrnut v `includeExternalLibraries`.
+* `zap.jar` se **nepřepíše**, protože se nejedná o projekt a není zahrnut v `includeExternalLibraries`.
+* `com.contoso.foo:zap-artifact:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries`.
+* `com.microsoft.bar:baz:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries` prostřednictvím zástupného znaku (`com.microsoft.*`).
+
+#### <a name="usage-of-includeexternallibraries"></a>Použití vlastnosti includeExternalLibraries
+
+Vzhledem k tomu, že ve výchozím nastavení modul plug-in funguje pouze u závislostí projektu (které obvykle poskytuje funkce `project()`), všechny závislosti zadané funkcí `fileTree(...)` nebo získané z Mavenu nebo jiných zdrojů balíčků (např. `com.contoso.bar:baz:1.2.0`) je třeba zadat do vlastnosti `includeExternalLibraries` v případě, že potřebujete, aby je služba MAM zpracovávala na základě kritérií vysvětlených níže. Zástupné znaky (*) se podporují.
+
+Při zadávání externích závislostí pomocí notace artefaktu doporučujeme vynechat komponentu verze v hodnotě `includeExternalLibraries`. Pokud verzi uvedete, musí se jednat o přesnou verzi. Dynamické specifikace verzí (např. `1.+`) se nepodporují.
+
+Obecné pravidlo, pomocí něhož byste měli určit to, zda potřebujete do `includeExternalLibraries` zahrnout knihovny, se zakládá na dvou otázkách:
+1. Má knihovna v sobě třídy, pro které existují ekvivalenty MAM? Příklady: `Activity`, `Fragment`, `ContentProvider`, `Service` atd.
+2. Pokud ano, využije aplikace tyto třídy?
+
+Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExternalLibraries` zahrnout. 
+
+| Scénář | Zahrnout ano či ne? |
+|--|--|
+| Do aplikace zahrnete prohlížeč PDF a když se uživatelé pokusí zobrazit PDF, použijete v aplikaci prohlížeč `Activity`. | Ano |
+| Do aplikace zahrnete knihovnu HTTP za účelem rozšířeného webového výkonu. | Ne |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
+| Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
+| Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
 
 
-## <a name="replace-classes-methods-and-activities-with-their-mam-equivalent"></a>Náhrada tříd, metod a aktivit odpovídajícím ekvivalentem MAM
+#### <a name="dependencies"></a>Závislosti
 
-Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM. Uděláte to tak, že vyhledáte všechny instance tříd uvedených v následující tabulce a nahradíte je ekvivalenty ze sady Intune App SDK. Většina z nich jsou třídy, ze kterých budou dědit třídy vaší aplikace, ale v některých případech se jedná o třídy (např. MediaPlayer), které vaše aplikace používá bez odvození.
+Modul plug-in Gradle má závislost na nástroji [Javassist](http://jboss-javassist.github.io/javassist/), který musí být dostupný pro zjištění závislostí Gradlu (jak jsme popsali výše). Javassist se používá výhradně v době sestavení při spuštění modulu plug-in. Do vaší aplikace se nepřidá žádný kód Javassist.
+
+> [!NOTE]
+> Musíte používat verzi 3.0 nebo novější modulu plug-in Android Gradle a Gradle 4.1 nebo novější.
+
+### <a name="command-line-build-tool"></a>Nástroj příkazového řádku
+Pokud sestavení používá Gradle, přejděte na [další oddíl](#class-and-method-replacements).
+
+Nástroj příkazového řádku je k dispozici ve složce `BuildTool` sady SDK. Má stejnou funkci jako modul plug-in Gradle podrobně popsaný výše, ale je možné ho integrovat do vlastních systémů sestavení nebo systémů sestavení, které Gradle nepoužívají. Je sice obecnější, ale současně je také složitější ho vyvolat, a proto byste měli používat modul plug-in Gradle všude tam, kde je to možné.
+
+#### <a name="using-the-command-line-tool"></a>Použití nástroje příkazového řádku
+
+Nástroj příkazového řádku lze vyvolat pomocí zadaných skriptů pomocných rutin, které se nacházejí v adresáři `BuildTool\bin`.
+
+Nástroj očekává následující parametry.
+| Parametr | Popis |
+| -- | -- |
+| `--input` | Seznam středníkem oddělených souborů JAR a adresářů souborů tříd, které se mají změnit. Seznam by měl obsahovat všechny soubory JAR a adresáře, které máte v úmyslu přepsat. |
+| `--output` | Seznam středníkem oddělených souborů JAR a adresářů, do kterých se budou ukládat změněné třídy. Pro jednu výstupní položku by měla existovat jedna vstupní položka a položky by měly být uvedeny v pořadí. |
+| `--classpath` | Cesta ke třídě sestavení. Může obsahovat jak soubory JAR, tak i adresáře tříd. |
+| `--excludeClasses`| Seznam středníkem oddělených názvů tříd, které chcete z přepsání vyloučit. |
+
+Všechny parametry jsou povinné s výjimkou parametru `--excludeClasses`, který je volitelný.
+
+#### <a name="example-command-line-tool-invocation"></a>Ukázka vyvolání nástroje příkazového řádku
+
+``` batch
+> BuildTool\bin\BuildTool.bat --input build\product-foo-project;libs\bar.jar --output mam-build\product-foo-project;mam-build\libs\bar.jar --classpath build\zap.jar;libs\Microsoft.Intune.MAM.SDK\classes.jar;%ANDROID_SDK_ROOT%\platforms\android-27\android.jar --excludeClasses com.contoso.SplashActivity
+```
+
+Toto by mělo následující důsledky:
+
+* Adresář `product-foo-project` se přepíše na `mam-build\product-foo-project`.
+* `bar.jar` se přepíše na `mam-build\libs\bar.jar`.
+* `zap.jar` se **nepřepíše**, protože je uveden pouze v `--classpath`.
+* Třída `com.contoso.SplashActivity` se **nepřepíše**, ani když je v `--input`.
+
+> [!NOTE] 
+> Nástroj sestavení v současné době nepodporuje soubory AAR. Pokud systém sestavení při zpracování souborů AAR ještě neextrahoval soubor `classes.jar`, musíte ho vyextrahovat dříve, než vyvoláte nástroj sestavení.
+
+
+## <a name="class-and-method-replacements"></a>Nahrazení tříd a metod
+
+Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM, aby bylo možné povolit správu Intune. Třídy SDK se pohybují mezi základní třídou Androidu a vlastní odvozenou verzí této třídy v aplikaci. Aktivita aplikace by například mohla mít výslednou hierarchii dědičnosti, která vypadá takto: `Activity` > `MAMActivity` >
+`AppSpecificActivity`. Filtry vrstvy MAM volají systémové operace, aby mohly vaší aplikaci bez problémů poskytovat spravované zobrazení.
+
+Kromě základních tříd mají povinné ekvivalenty MAM i některé třídy, které vaše aplikace používá bez odvození (např. `MediaPlayer`). [Je třeba nahradit i některé metody](#wrapped-system-services). Přesné podrobnosti jsou uvedeny níže.
+
+Všechna nahrazení popsaná v tomto oddílu lze provést automaticky pomocí [nástrojů sestavení](#build-tooling) sady SDK. 
+
+
 
 | Základní třída Android | Náhrada ze sady Intune App SDK |
 |--|--|
@@ -112,6 +251,12 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 | android.provider.DocumentsProvider | MAMDocumentsProvider |
 | android.preference.PreferenceActivity | MAMPreferenceActivity |
 | android.support.multidex.MultiDexApplication | MAMMultiDexApplication |
+| android.widget.TextView | MAMTextView |
+| android.widget.AutoCompleteTextView | MAMAutoCompleteTextView |
+| android.widget.CheckedTextView | MAMCheckedTextView |
+| android.widget.EditText | MAMEditText |
+| android.inputmethodservice.ExtractEditText | MAMExtractEditText |
+| android.widget.MultiAutoCompleteTextView | MAMMultiAutoCompleteTextView |
 
 > [!NOTE]
 > I když není nutné, aby vaše aplikace používala vlastní odvozenou třídu `Application`, [přečtěte si část `MAMApplication` níže](#mamapplication).
@@ -133,6 +278,24 @@ Základní třídy Androidu se musí nahradit odpovídajícími ekvivalenty MAM.
 |Třída Androidu | Náhrada ze sady Intune App SDK |
 |--|--|
 |android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
+| android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
+| android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
+| android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
+| android.support.v7.widget.AppCompatMultiAutoCompleteTextView | MAMAppCompatMultiAutoCompleteTextView |
+| android.support.v7.widget.AppCompatTextView | MAMAppCompatTextView |
+
+### <a name="microsoftintunemamsdksupportv17jar"></a>Microsoft.Intune.MAM.SDK.Support.v17.jar:
+|Třída Androidu | Náhrada ze sady Intune App SDK |
+|--|--|
+| android.support.v17.leanback.widget.SearchEditText | MAMSearchEditText |
+
+### <a name="microsoftintunemamsdksupporttextjar"></a>Microsoft.Intune.MAM.SDK.Support.Text.jar:
+|Třída Androidu | Náhrada ze sady Intune App SDK |
+|--|--|
+| android.support.text.emoji.widget.EmojiAppCompatEditText | MAMEmojiAppCompatEditText |
+| android.support.text.emoji.widget.EmojiAppCompatTextView | MAMEmojiAppCompatTextView |
+| android.support.text.emoji.widget.EmojiEditText | MAMEmojiEditText |
+| android.support.text.emoji.widget.EmojiTextView | MAMEmojiTextView |
 
 ### <a name="renamed-methods"></a>Přejmenované metody
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `onCreate()` a volání `super.onCreate()` přepsat `onMAMCreate()` a volat `super.onMAMCreate()`. Kompilátor Javy by měl vynutit finální omezení, která zabrání náhodnému přepsání původní metody místo jejího ekvivalentu MAM.
@@ -142,10 +305,22 @@ Pokud vaše aplikace vytváří podtřídu `android.app.Application`, **musíte*
 ### <a name="pendingintent"></a>PendingIntent
 Namísto metody `PendingIntent.get*` musíte použít metodu `MAMPendingIntent.get*`. Pak můžete výslednou třídu `PendingIntent` použít obvyklým způsobem.
 
+### <a name="wrapped-system-services"></a>Zabalené systémové služby
+U některých tříd systémové služby je třeba volat statickou metodu obálkové třídy MAM místo přímého vyvolání požadované metody u instance služby. Například volání `getSystemService(ClipboardManager.class).getPrimaryClip()` se musí stát voláním `MAMClipboardManager.getPrimaryClip(getSystemService(ClipboardManager.class)`. Nedoporučujeme tato nahrazení provádět ručně. Nechme raději nástroj BuildPlugin, aby to udělal za nás.
+
+| Třída Androidu | Náhrada ze sady Intune App SDK |
+|--|--|
+| android.content.ClipboardManager | MAMClipboard |
+| android.content.pm.PackageManager | MAMPackageManagement |
+| android.app.DownloadManager | MAMDownloadManagement |
 ### <a name="manifest-replacements"></a>Nahrazení manifestů
 Některá nahrazení tříd uvedená výše je potřeba provést jak v manifestu, v tak kódu v jazyce Java. Zejména:
 * Odkazy manifestu na `android.support.v4.content.FileProvider` je nutné vyměnit za `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
+## <a name="androidx-libraries"></a>Knihovny AndroidX
+S příchodem Androidu P Google oznámil novou (přejmenovanou) sadu podpůrných knihoven s názvem AndroidX. Verze 28 je nejnovější hlavní vydanou verzí stávajících podpůrných knihoven Androidu.
+
+Na rozdíl od podpůrných knihoven Androidu neposkytujeme varianty MAM knihoven AndroidX. Místo toho byste měli se sadou AndroidX nakládat jako s kteroukoli jinou externí knihovnou a měli byste ji nakonfigurovat tak, aby ji nástroj nebo modul plug-in sestavení přepsal. U sestavení Gradle toho lze dosáhnout tak, že do pole `includeExternalLibraries` konfigurace modulu plug-in vložíte `androidx.*`. Vyvolání nástroje příkazového řádku musí explicitně vypsat všechny soubory JAR.
 ## <a name="sdk-permissions"></a>Oprávnění sady SDK
 
 Intune App SDK vyžaduje tři [oprávnění pro systém Android](https://developer.android.com/guide/topics/security/permissions.html) u aplikací, které ji integrují:
@@ -206,7 +381,7 @@ public interface AppPolicy {
 
 /**
  * Restrict where an app can save personal data.
- * This function is now deprecated. Use getIsSaveToLocationAllowed(SaveLocation, String) instead
+ * This function is now deprecated. Please use getIsSaveToLocationAllowed(SaveLocation, String) instead
  * @return True if the app is allowed to save to personal data stores; false otherwise.
  */
 @Deprecated
@@ -410,7 +585,7 @@ Následující oznámení se odesílají do aplikace a některá z nich můžou 
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
-Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti ADAL na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
+Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti knihovny ADAL na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
 
@@ -448,7 +623,7 @@ Když chcete konfigurovat svoji aplikaci a povolit správné ověření, přidej
 
 ### <a name="common-adal-configurations"></a>Obvyklé konfigurace ADAL
 
-V této části najdete běžné způsoby konfigurace aplikace s knihovnou ADAL. Vyhledejte konfiguraci vaší aplikace a nastavte parametry metadat ADAL (viz výše) na požadované hodnoty. Ve všech případech je možné pole Authority zadat i pro nevýchozí prostředí, ale nutné to není.
+V této části najdete běžné způsoby konfigurace aplikace s knihovnou ADAL. Vyhledejte konfiguraci vaší aplikace a nastavte parametry metadat ADAL (viz výše) na požadované hodnoty. Ve všech případech je možné pole Authority zadat i pro nevýchozí prostředí, ale obecně to není nutné.
 
 1. **Aplikace neintegruje ADAL:**
 
@@ -475,8 +650,9 @@ Na webu Azure Portal:
 7.  V seznamu rozhraní API vyberte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu) a kliknutím proveďte výběr.
 8.  Vyberte **Read and Write the User’s App Management Data** (Čtení a zápis dat správy uživatelských aplikací).
 9.  Klikněte na **Hotovo**.
+10. Klikněte na **Udělit oprávnění** a potom na **Ano**. 
 
-Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications). 
+Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
 
 Podívejte se také na požadavky pro [podmíněný přístup](#conditional-access), které najdete níže.
 
@@ -491,9 +667,7 @@ Podívejte se také na požadavky pro [podmíněný přístup](#conditional-acce
 
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-
-Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD. [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
-
+Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD.  [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
 1. Postupujte podle [pokynů k integraci ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Zvláštní pozornost věnujte kroku 11, který se týká použití zprostředkovatele.
 
@@ -537,7 +711,7 @@ Pro implementaci integrace služby APP-WE musí aplikace zaregistrovat uživatel
 
 2. Po vytvoření uživatelského účtu a úspěšném přihlášení uživatele k ADAL _musí_ aplikace volat `registerAccountForMAM()`.
 
-3. Po odebrání uživatelského účtu by měla aplikace voláním `unregisterAccountForMAM()` odstranit účet ze správy Intune.
+3. Po úplném odebrání uživatelského účtu by měla aplikace voláním `unregisterAccountForMAM()` odstranit účet ze správy Intune.
 
     > [!NOTE]
     > Pokud se uživatel z aplikace dočasně odhlásí, není nutné, aby aplikace `unregisterAccountForMAM()` volala. Volání by mohlo inicializovat vymazání, které by uživateli odebralo veškerá podniková data.
@@ -584,7 +758,7 @@ public interface MAMEnrollmentManager {
 
     //Registration methods
     void registerAccountForMAM(String upn, String aadId, String tenantId);
-  void registerAccountForMAM(String upn, String aadId, String tenantId, String authority);
+    void registerAccountForMAM(String upn, String aadId, String tenantId, String authority);
     void unregisterAccountForMAM(String upn);
     Result getRegisteredAccountStatus(String upn);
 }
@@ -708,7 +882,9 @@ Po registraci se účet nachází ve stavu `PENDING`, který značí, že prvotn
 
 Při obdržení výsledku `COMPANY_PORTAL_REQUIRED` zablokuje sada SDK aktivity využívající identitu, pro kterou byla registrace žádána. Místo toho sada SDK zajistí, aby tyto aktivity zobrazily výzvu ke stažení aplikace Portál společnosti. Pokud nechcete, aby k takovému chování došlo, můžou aktivity implementovat metodu `MAMActivity.onMAMCompanyPortalRequired`.
 
-Tato metoda se volá ještě před tím, než sada SDK zobrazí svou výchozí zprávu o blokování. Pokud aplikace změní identitu aktivity nebo zruší registraci uživatele, který se pokusil o registraci, sada SDK tuto aktivitu nezablokuje. V takové situaci je na aplikaci, aby předešla úniku podnikových dat. Identitu aktivity budou moct změnit pouze aplikace s více identitami (popsané dále).
+Tato metoda se volá ještě před tím, než sada SDK zobrazí svou výchozí zprávu o blokování. Pokud aplikace změní identitu aktivity nebo zruší registraci uživatele, který se pokusil o registraci, sada SDK tuto aktivitu nezablokuje. V takové situaci je na aplikaci, aby předešla úniku podnikových dat. Všimněte si, že identitu aktivity budou moci změnit pouze aplikace s více identitami (popsané dále).
+
+Pokud explicitně nezdědíte `MAMActivity` (protože tuto změnu provedou nástroje sestavení), ale potřebujete toto oznámení zpracovat, můžete místo toho implementovat `MAMActivityBlockingListener`.
 
 ### <a name="notifications"></a>Oznámení
 
@@ -822,15 +998,12 @@ V části [Rozšíření třídy BackupAgent](https://developer.android.com/guid
 
 3. Při zobrazování entit zálohování se v konstruktoru `while(data.readNextHeader())`* nevracejte, protože automaticky zapsané entity budou ztraceny.
 
-* Kde `data` je název místní proměnné pro **BackupDataInput** předaný aplikaci při obnovení.
+* Kde `data` je název místní proměnné pro **MAMBackupDataInput** předaný aplikaci při obnovení.
 
 ## <a name="multi-identity-optional"></a>Více identit (volitelné)
 
 ### <a name="overview"></a>Přehled
-Intune App SDK ve výchozím nastavení uplatní zásady na aplikaci jako celek. Možnost používat více identit je volitelná funkce ochrany aplikací Intune, kterou můžete zapnout, pokud chcete zásady uplatňovat na úrovni jednotlivých identit. K tomu je od aplikace potřeba větší účast než u ostatních funkcí ochrany aplikací.
-
-Pokud chce aplikace změnit aktivní identitu, musí informovat sadu *SDK*. V některých případech SDK také upozorní aplikaci, že je nutná změna identity. Ve většině případů však správa MAM nemůže vědět, jaká data se zobrazují v uživatelském rozhraní nebo používají u vlákna v daném okamžiku, a spoléhá na to, že aplikace nastaví správnou identitu, která zabrání úniku dat. V následujících částech najdete některé konkrétní scénáře, které vyžadují akci aplikace.
-
+Intune App SDK ve výchozím nastavení uplatní zásady na aplikaci jako celek. Možnost používat více identit je volitelná funkce ochrany aplikací Intune, kterou můžete zapnout, pokud chcete zásady uplatňovat na úrovni jednotlivých identit. K tomu je od aplikace potřeba mnohem větší účast než u ostatních funkcí ochrany aplikací.
 > [!NOTE]
 >  V případě nesprávného zapojení aplikace může dojít k únikům dat a dalším potížím v souvislosti se zabezpečením.
 
@@ -839,8 +1012,9 @@ Jakmile uživatel zařízení nebo aplikaci zaregistruje, zaregistruje tuto iden
 > [!NOTE]
 > V současné době je podporována jen jedna spravovaná identita Intune pro každé zařízení.
 
-Identita se definuje jako řetězec. Identity **rozlišují malá a velká písmena**, ale žádosti odeslané sadě SDK je nemusí vrátit se stejnou velikostí písmen, s jakou byly nastaveny.
+Identita je definována jednoduše jako řetězec. Identity **rozlišují malá a velká písmena**, ale žádosti odeslané sadě SDK je nemusí vrátit se stejnou velikostí písmen, s jakou byly nastaveny.
 
+Pokud chce aplikace změnit aktivní identitu, musí informovat sadu *SDK*. V některých případech SDK také upozorní aplikaci, že je nutná změna identity. Ve většině případů však správa MAM nemůže vědět, jaká data se zobrazují v uživatelském rozhraní nebo používají u vlákna v daném okamžiku, a spoléhá na to, že aplikace nastaví správnou identitu, která zabrání úniku dat. V následujících částech najdete některé konkrétní scénáře, které vyžadují akci aplikace.
 ### <a name="enabling-multi-identity"></a>Povolení více identit
 
 Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou identitou. U aplikace můžete deklarovat, že dokáže rozpoznat více identit tím, že do souboru AndroidManifest.xml umístíte následující metadata.
@@ -1005,6 +1179,11 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
     > Aplikace s více identitami bude vždycky přijímat příchozí data ze spravovaných i nespravovaných aplikací. Aplikace musí zacházet s daty ze spravovaných identit řízeně.
 
   Pokud je požadovaná identita spravovaná (to si ověříte pomocí `MAMPolicyManager.getIsIdentityManaged`), ale aplikace nemůže tento účet používat (například kvůli tomu, že se v aplikaci musí nejprve nastavit e-mailové nebo jiné účty), mělo by se přepnutí identity odmítnout.
+#### <a name="build-plugin--tool-considerations"></a>Důležité informace týkající se nástroje nebo modulu plug-in sestavení
+Pokud explicitně nedědíte z `MAMActivity`, `MAMService` nebo `MAMContentProvider` (protože povolíte nástrojům sestavení, aby tuto změnu provedly za vás), ale potřebujete zpracovat přepnutí identit, můžete místo toho implementovat `MAMActivityIdentityRequirementListener` (pro Activities) nebo `MAMIdentityRequirementListener` (pro Services a ContentProviders). K výchozímu chování `MAMActivity.onMAMIdentitySwitchRequired` se dostanete tak, že zavoláte statickou metodu `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
+reason, callback)`.
+
+A pokud potřebujete přepsat `MAMActivity.onSwitchMAMIdentityComplete`, můžete implementovat `MAMActivityIdentitySwitchListener` bez explicitního dědění z `MAMActivity`.
 
 ### <a name="preserving-identity-in-async-operations"></a>Zachování identity v asynchronních operacích
 Operace vlákna uživatelského rozhraní běžně odesílají úlohy na pozadí do jiného vlákna. Aplikace s více identitami bude chtít zajistit, že tyto úlohy na pozadí probíhají pod správnou identitou. Často se jedná o stejnou identitu používanou aktivitou, která je odeslala. Z důvodu usnadnění a pomoci při zachování identity sada SDK MAM poskytuje `MAMAsyncTask` a `MAMIdentityExecutors`.
@@ -1135,7 +1314,7 @@ Adresáře je možné chránit pomocí stejné metody `protect`, která se použ
 
 Soubor se nedá označit jako soubor, který má více identit. Aplikace, které musí ukládat data různých uživatelů ve stejném souboru, to můžou provádět ručně díky funkcím, které poskytuje `MAMDataProtectionManager`. Aplikace tak můžou šifrovat data a spojit je s určitým uživatelem. Šifrovaná data se hodí k ukládání na disk v souboru. Na data, která souvisejí s identitou, můžete zadávat dotazy a později je dešifrovat.
 
-Aplikace využívající `MAMDataProtectionManager` by měly pro oznámení `MANAGEMENT_REMOVED` implementovat příjemce. Po dokončení tohoto oznámení už nebudou vyrovnávací paměti chráněné touto třídou čitelné, pokud bylo v době poskytování ochrany povoleno šifrování souborů. Aplikace může takovou situaci vyřešit voláním MAMDataProtectionManager.unprotect provedeným na všech vyrovnávacích pamětích v průběhu oznámení. Pokud chcete zachovat informace o identitě, je v této době také bezpečné volat metodu protect, protože při probíhajícím oznámení se zaručuje, že šifrování bude zakázané.
+Aplikace využívající `MAMDataProtectionManager` by měly pro oznámení `MANAGEMENT_REMOVED` implementovat příjemce. Po dokončení tohoto oznámení už nebudou vyrovnávací paměti chráněné touto třídou čitelné, pokud bylo v době poskytování ochrany povoleno šifrování souborů. Aplikace může takovou situaci vyřešit voláním MAMDataProtectionManager.unprotect provedeným na všech vyrovnávacích pamětích v průběhu oznámení. Pokud chcete zachovat informace o identitě, je v této době také bezpečné volat metodu protect, protože při probíhajícím oznámení se zaručuje, že šifrování bude zakázáno.
 
 ```java
 
@@ -1242,7 +1421,7 @@ Aplikace, která zaregistruje `WIPE_USER_DATA`, nezíská výhodu sady SDK vých
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Povolení konfigurace určené pro správu mobilních aplikací pro Android (nepovinné)
-V konzole Intune je možné nakonfigurovat páry klíč-hodnota specifické pro aplikace. Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale předávají se do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
+V konzole Intune je možné nakonfigurovat páry klíč-hodnota specifické pro aplikace. Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale jednoduše se předávají do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
 
 ### <a name="example"></a>Příklad
 ```
@@ -1431,7 +1610,7 @@ Následující část obsahuje postup pro vyžadování výzvy uživateli při s
 > Mezi výhody **výchozí registrace** patří zjednodušený způsob získání zásad ze služby APP-WE pro aplikaci na daném zařízení.
 
 ### <a name="general-requirements"></a>Obecné požadavky
-* Pomocí postupu v [běžných konfiguracích ADAL #2](https://docs.microsoft.com/en-us/intune/app-sdk-android#common-adal-configurations) zkontrolujte, jestli je vaše aplikace zaregistrovaná ve službě Správa mobilních aplikací Intune.
+* Pomocí postupu v [běžných konfiguracích ADAL #2](https://docs.microsoft.com/intune/app-sdk-android#common-adal-configurations) zkontrolujte, jestli je vaše aplikace zaregistrovaná ve službě Správa mobilních aplikací Intune.
 
 ### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
 Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kteří chtějí při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
@@ -1448,6 +1627,17 @@ Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kte
 4. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
+
+> [!NOTE]
+    > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, dojde ke konfliktům.
+
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
+```xml
+<meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+```
+
+> [!NOTE] 
+> Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 
 ## <a name="limitations"></a>Omezení
 
@@ -1480,8 +1670,9 @@ Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáh
 
 ### <a name="reflection-limitations"></a>Omezení reflexe
 Některé základní třídy (například MAMActivity, MAMDocumentsProvider) obsahují metody (založené na původních základních třídách Androidu), které používají typy parametrů nebo návratové typy nacházející se nad určitými úrovněmi rozhraní API. Z tohoto důvodu nemusí být vždycky možné používat reflexi k výčtu všech metod součástí aplikací. Toto omezení se nevztahuje jenom na MAM. Jedná se o stejné omezení, které by se použilo v případě, že by aplikace samotná implementovala tyto metody ze základních tříd Androidu.
-### <a name="roboelectric"></a>Roboelectric
-Testování chování sady SDK MAM v rozhraní Roboelectic se nepodporuje. Při použití sady SDK MAM v rozhraní Robelectric existují známé problémy vznikající v důsledku chování v rozhraní Roboelectric, která nenapodobují přesně chování na skutečných zařízení nebo emulátorech.
+
+### <a name="robolectric"></a>Robolectric
+Testování chování sady SDK MAM v rozhraní Robolectric se nepodporuje. Při použití sady SDK MAM v rozhraní Robelectric existují známé problémy vznikající v důsledku chování v rozhraní Roboelectric, která nenapodobují přesně chování na skutečných zařízení nebo emulátorech.
 
 Pokud potřebujete otestovat aplikaci v rozhraní Roboelectric, doporučujeme přesunout logiku třídy aplikace do pomocné rutiny a vytvořit balíček aplikace pro Android pro testování částí s třídou aplikace, která nedědí z aplikace MAMApplication.
 ## <a name="expectations-of-the-sdk-consumer"></a>Očekávání uživatele sady SDK
