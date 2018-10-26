@@ -6,21 +6,21 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2018
+ms.date: 10/3/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
-ms.reviewer: mghadial
+ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a7822e9e5a0e2bc5b054ccc3e93b9aa51bca5b79
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: f96ca3075bab5c8bacaea62bb4fc04bd957cf01e
+ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329406"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863174"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -61,7 +61,7 @@ Pro iOS budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigurovat
 -  Modely zařízení
 
 Pokud chcete použít nastavení **Modely zařízení**, zadejte seznam identifikátorů modelů iOS a oddělte je středníkem. Identifikátor modelu iOS najdete ve sloupci Device Type (Typ zařízení) v [ dokumentaci podpory aplikace HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
-Příklad zadání: *iPhone5,2; iPhone5,3*
+Příklad zadání: *iPhone5,2;iPhone5,3*
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 
@@ -69,7 +69,7 @@ Nastavte jednu z následujících akcí:
 - Povolit zadané (vymazat nezadané)
 
 **Co se stane, když správce zadá seznam identifikátorů modelů iOS, který se v různých zásadách pro stejné aplikace pro stejného uživatele Intune liší?**<br>
-Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Výsledná zásada odeslaná do cílové aplikace, kterou otevírá cílový uživatel Intune, by tedy byla průsečík identifikátorů modelů iOS uvedených v seznamu v *Zásadě A* a *Zásadě B*, které cílí na stejnou kombinaci aplikace a uživatele. *Zásada A* například určuje iPhone5,2; iPhone5,3 a *Zásada B* určuje iPhone5,3. Výsledná zásada, která se uplatní u příslušného uživatele Intune, na kterého cílí současně *Zásada A* i *Zásada B*, bude iPhone5,3. 
+Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Výsledná zásada odeslaná do cílové aplikace, kterou otevírá cílový uživatel Intune, by tedy byla průsečík identifikátorů modelů iOS uvedených v seznamu v *Zásadě A* a *Zásadě B*, které cílí na stejnou kombinaci aplikace a uživatele. *Zásada A* například určuje iPhone5,2;iPhone5,3 a *Zásada B* určuje iPhone5,3. Výsledná zásada, která se uplatní u příslušného uživatele, na kterého cílí současně *Zásada A* i *Zásada B*, bude iPhone5,3. 
 
 ### <a name="android-policy-settings"></a>Nastavení zásad pro Android
 
@@ -83,10 +83,10 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 -  Výrobci zařízení
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
-Příklad zadání: *Výrobce A; Výrobce B* 
+Příklad zadání: *Výrobce A;Výrobce B* 
 
 >[!NOTE]
-> Toto je několik obvyklých výrobců hlášených ze zařízení používajících Intune, které lze použít pro zadání: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk
+> Toto je několik obvyklých výrobců hlášených ze zařízení používajících Intune, které lze použít pro zadání: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk.
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 
@@ -94,7 +94,7 @@ Nastavte jednu z následujících akcí:
 - Povolit zadané (vymazat nezadané)
 
 **Co se stane, když správce zadá seznam výrobců zařízení s Androidem, který se v různých zásadách pro stejné aplikace pro stejného uživatele Intune liší?**<br>
-Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Výsledná zásada odeslaná do cílové aplikace, kterou otevírá cílový uživatel Intune, by tedy byla průsečíkem výrobců zařízení s Androidem uvedených v seznamu v *Zásadě A* a *Zásadě B*, které cílí na stejnou kombinaci aplikace a uživatele. *Zásada A* například určuje Google, Samsung a *Zásada B* určuje Google. Výsledná zásada, která se uplatní u příslušného uživatele Intune, na kterého cílí současně *Zásada A* i *Zásada B*, bude Google. 
+Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovaných hodnot, Intune obvykle zvolí nejvíce omezující přístup. Výsledná zásada odeslaná do cílové aplikace, kterou otevírá cílový uživatel Intune, by tedy byla průsečíkem výrobců zařízení s Androidem uvedených v seznamu v *Zásadě A* a *Zásadě B*, které cílí na stejnou kombinaci aplikace a uživatele. *Zásada A* například určuje Google;Samsung a *Zásada B* určuje Google. Výsledná zásada, která se uplatní u příslušného uživatele Intune, na kterého cílí současně *Zásada A* i *Zásada B*, bude Google. 
 
 ### <a name="additional-settings-and-actions"></a>Další nastavení a akce 
 
@@ -119,5 +119,3 @@ Další informace o zásadách ochrany aplikací v Intune zjistíte zde:
 - [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md)
 - [Nastavení zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md)
 - [Nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md) 
-
-
