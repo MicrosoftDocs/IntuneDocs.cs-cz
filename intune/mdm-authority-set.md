@@ -15,12 +15,12 @@ ms.assetid: 8deff871-5dff-4767-9484-647428998d82
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0f4687b3a2b1064fbfe3a9c8aa9da6cc7d336d78
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 41296e2c5fd1bddfc65bb343d86f4891fff9452d
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37906035"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425185"
 ---
 # <a name="set-the-mobile-device-management-authority"></a>Nastavení autority pro správu mobilních zařízení
 
@@ -32,7 +32,10 @@ Možné konfigurace:
 
 - **Intune Standalone** – jedná se o pouze cloudovou správu, kterou můžete nakonfigurovat pomocí portálu Azure Portal. Zahrnuje celou sadu možností, které Intune nabízí. [Nastavte autoritu MDM v konzole Intune](#set-mdm-authority-to-intune).
 
-- **Intune Hybrid** – jedná se o integraci cloudového řešení Intune se System Center Configuration Managerem. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Nastavte autoritu MDM v nástroji Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-intune-subscription).
+- **Intune Hybrid** – jedná se o integraci cloudového řešení Intune se System Center Configuration Managerem. Intune můžete konfigurovat pomocí konzoly Configuration Manager. [Nastavte autoritu MDM v nástroji Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-intune-subscription). 
+
+    > [!Important]
+    >Připojení nových zákazníků hybridní správy MDM bude v nadcházející vydané verzi vypnuto. Další informace najdete na [blogu, který popisuje plán změny MC146431](https://blogs.technet.microsoft.com/intunesupport/2018/08/14/move-from-hybrid-mobile-device-management-to-intune-on-azure/).
 
 - **Správa mobilních zařízení pro Office 365** – jedná se o integraci Office 365 s cloudovým řešením Intune. Intune můžete konfigurovat z Centra pro správu Office 365. Zahrnuje dílčí sadu možností, které jsou dostupné s Intune Standalone. Nastavte autoritu MDM v Centru pro správu Office 365.
 
@@ -63,7 +66,7 @@ Mezi scénáře, pro které se přidává souhlas se sdílením dat, patří:
 - Povolení a nahrání certifikátů Apple MDM Push Certificate
 - Povolení některé ze služeb Apple, jako jsou například Program registrace zařízení, School Manager a Volume Purchase Program
 
-Souhlas se vždy týká výhradně používání služby pro správu mobilního zařízení, například potvrzení, že správce IT udělil zařízení Google nebo Apple oprávnění k registraci. Dokumentaci obsahující informace, které se po přechodu na nové pracovní postupy budou sdílet, najdete v následujících umístěních:
+V každém případě je vyjádření souhlasu omezeno výhradně na spouštění služby správy mobilního zařízení. Jedná se například o potvrzení, že správce IT má autorizaci k registraci zařízení Google nebo Apple. Dokumentaci obsahující informace, které se po přechodu na nové pracovní postupy budou sdílet, najdete v následujících umístěních:
 - [Data z Intune odesílaná Googlu](https://aka.ms/Data-intune-sends-to-google)
 - [Data z Intune odesílaná Applu](https://aka.ms/data-intune-sends-to-apple)
 
@@ -79,7 +82,7 @@ Po přechodu na novou autoritu MDM pravděpodobně nastane přechodná doba (až
 V rámci přípravy na změnu autority MDM zkontrolujte následující informace:
 - Aby byla možnost změnit autoritu MDM k dispozici, musíte mít Configuration Manager ve verzi 1610.
 - Může trvat až 8 hodin, než se zařízení po změně na novou autoritu MDM ke službě připojí.
-- Vytvořte kolekci uživatelů Configuration Manageru se všemi uživateli aktuálně spravovanými samostatným Intune, kterou použijete při zřizování předplatného Intune v konzole Configuration Manageru. Pomůže to zajistit, že uživatel se svými zařízeními bude mít po změně na autoritu MDM přiřazenou licenci Configuration Manageru a bude v hybridním prostředí spravován.
+- Vytvořte kolekci uživatelů Configuration Manageru se všemi uživateli aktuálně spravovanými samostatným Intune, kterou použijete při zřizování předplatného Intune v konzole Configuration Manageru. Tato kolekce pomůže zajistit, že uživatel se svými zařízeními bude mít po změně na autoritu MDM přiřazenou licenci Configuration Manageru a bude v hybridním prostředí spravován.
 - V této kolekci uživatelů musí být také uživatel s rolí správce IT.  
 - Před změnou se bude autorita MDM v konzole pro správu Intune zobrazovat jako **Nastavit na Microsoft Intune** (samostatně).
 - Autorita MDM by před změnou autority MDM měla v konzole pro správu Microsoft Intune zobrazovat **Nastavit na Microsoft Intune** (samostatný tenant).
@@ -88,8 +91,8 @@ V rámci přípravy na změnu autority MDM zkontrolujte následující informace
 
 - V [konzole pro správu Microsoft Intune](http://manage.microsoft.com) odeberte roli správce registrace zařízení. Podrobnosti najdete v sekci [Odstranění správce registrace zařízení ze služby Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune#delete-a-device-enrollment-manager-from-intune).
 - Vypněte všechna mapování skupin zařízení, která jsou nakonfigurovaná. Podrobnosti najdete v článku [Kategorizace zařízení pomocí mapování skupin zařízení v Microsoft Intune](/intune-classic/deploy-use/categorize-devices-with-device-group-mapping-in-microsoft-intune).
-- Během změny autority MDM by nemělo dojít k žádnému znatelnému dopadu na koncové uživatele. Změnu byste ale měli uživatelům oznámit, aby se zajistilo, že jejich zařízení budou brzy po provedení změny zapnutá a připojí se ke službě. To zajistí, že se ke službě co nejdříve přihlásí a prostřednictvím nové autority zaregistruje co nejvíce zařízení.
-- Pokud před změnou autority MDM používáte samostatné Intune ke správě zařízení s iOSem, musíte zajistit, aby se stejný certifikát služby Apple Push Notification (APNs), který se předtím používal v Intune, obnovil a znovu použil k nastavení tenanta v Configuration Manageru (hybridním).    
+- Během změny autority MDM by nemělo dojít k žádnému znatelnému dopadu na koncové uživatele. Změnu byste ale měli uživatelům oznámit, aby se zajistilo, že jejich zařízení budou brzy po provedení změny zapnutá a připojí se ke službě. Toto opatření zajistí, že se ke službě co nejdříve přihlásí a prostřednictvím nové autority zaregistruje co nejvíce zařízení.
+- Pokud před změnou autority MDM používáte samostatnou službu Intune ke správě zařízení s iOSem, musíte zajistit, aby se stejný certifikát služby Apple Push Notification Service (APNs), který se předtím používal v Intune, obnovil a znovu použil k nastavení tenanta v Configuration Manageru (hybridním).    
 
     > [!IMPORTANT]  
     > Pokud se pro hybridní autoritu používá jiný certifikát APNs, pak se registrace VŠECH dřív zaregistrovaných zařízení s iOSem zruší a budete muset projít procesem jejich opětovné registrace. Před provedením změny autority MDM se ujistěte, že přesně víte, jaký certifikát APNs se ke správě zařízení s iOSem v Intune používal. Najděte stejný certifikát uvedený na Apple Push Certificates Portalu (https://identity.apple.com) a ujistěte se, že v rámci změny na novou autoritu MDM je k obnovení stejného certifikátu APNs identifikován a dostupný stejný uživatel, jehož Apple ID se použilo k vytvoření původního certifikátu APNs.
@@ -102,7 +105,7 @@ V rámci přípravy na změnu autority MDM zkontrolujte následující informace
 4. Vyberte kolekci uživatelů, aby obsahovala všechny uživatele, kteří budou dál spravovaní novou hybridní autoritou MDM.
 5. Klikněte na tlačítko **Další** a dokončete průvodce. Autorita MDM je teď změněná na **Configuration Manager**.
 6. Přihlaste se pomocí stejného tenanta Intune do [konzoly pro správu Microsoft Intune](http://manage.microsoft.com) a zkontrolujte, jestli se autorita MDM změnila na **Nastavit na nástroj Configuration Manager**.
-7. Jakmile změníte autoritu MDM na Configuration Manager, můžete nastavit [registraci iOS](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/enroll-hybrid-ios-mac) a [registraci Androidu](https://docs.microsoft.com/en-us/sccm/mdm/deploy-use/enroll-hybrid-android).
+7. Jakmile změníte autoritu MDM na Configuration Manager, můžete nastavit [registraci iOS](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-ios-mac) a [registraci Androidu](https://docs.microsoft.com/sccm/mdm/deploy-use/enroll-hybrid-android).
 8. V konzole Configuration Manageru nakonfigurujte a nasaďte nová nastavení a aplikace z nové autority MDM (hybridní).
 
 Při příštím připojení ke službě se zařízení synchronizují a z nové autority MDM obdrží nová nastavení.
@@ -131,7 +134,7 @@ Autoritu MDM nemůžete změnit zpátky na neznámou. Servery Microsoftu použí
   > [!IMPORTANT]    
   > V době mezi změnou autority MDM a nahráním obnoveného certifikátu APNs do nové autority se nové registrace a ohlášení zařízení s iOSem nezdaří. Proto je důležité certifikát APNs zkontrolovat a do nové autority nahrát co nejdřív po změně autority MDM.
 
-- Uživatelé můžou na novou autoritu MDM rychle přejít ručním spuštěním registrace zařízení do služby. To uživatelé snadno udělají pomocí aplikace Portál společnosti a inicializováním kontroly dodržování předpisů zařízením.
+- Uživatelé můžou na novou autoritu MDM rychle přejít ručním spuštěním registrace zařízení do služby. Tuto změnu uživatelé snadno provedou pomocí aplikace Portál společnosti a inicializováním kontroly dodržování předpisů zařízením.
 - Pokud chcete zkontrolovat, jestli po ohlášení a synchronizaci zařízení se službou po změně autority MDM všechno správně funguje, vyhledejte zařízení v konzole Configuration Manageru. Zařízení, která byla dřív spravovaná pomocí Intune, se nyní zobrazují jako spravovaná zařízení v konzole Configuration Manageru.    
 - Během změny autority MDM a ohlašování zařízení do služby bude zařízení přechodně offline. Aby se zajistilo, že zařízení během tohoto přechodného období zůstane chráněné a funkční, zůstanou v zařízení po dobu až sedmi dnů (nebo dokud se zařízení nepřipojí k nové autoritě MDM a neobdrží nová nastavení, která přepíší ta stávající) následující profily:
     - E-mailový profil

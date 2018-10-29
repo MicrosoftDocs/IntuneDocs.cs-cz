@@ -13,13 +13,13 @@ ms.technology: ''
 ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
-ms.custom: intune-classic
-ms.openlocfilehash: 8e22c0caf7b99bcb7a81259829369b7671056abe
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.custom: intune
+ms.openlocfilehash: 5cb90b7f1dc72a67f48ba40db8a6ab4ffe598243
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058944"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425032"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -161,9 +161,9 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
 
     * Pokud vyvíjíte podnikovou aplikaci, kterou nebudete odesílat do Storu, předpokládá se, že máte přístup k Microsoft Intune prostřednictvím své organizace. Můžete si také v [Microsoft Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) zaregistrovat zkušební verzi na měsíc zdarma.
 
-* **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](/intune-classic/deploy-use/ios-mam-policy-settings) a [zásad ochrany aplikací pro Android](/intune-classic/deploy-use/android-mam-policy-settings).
+* **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md).
 
-* **Řešení potíží**: Pokud narazíte na problémy při ručním testování uživatelského prostředí vaší aplikace, podívejte se na [Řešení potíží se správou mobilních aplikací](/intune-classic/troubleshoot/troubleshoot-mam). Tento článek poskytuje nápovědu pro běžné problémy, dialogová okna a chybové zprávy, se kterými se můžete setkat v aplikacích spravovaných prostřednictvím Intune. 
+* **Řešení potíží**: Pokud při instalaci aplikace narazíte na problémy při ručním testování uživatelského prostředí, přečtěte si článek o [řešení potíží s instalací aplikace](troubleshoot-app-install.md). 
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 

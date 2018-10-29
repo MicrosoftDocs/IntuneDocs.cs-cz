@@ -1,6 +1,6 @@
 ---
 title: Vytvoření zásady dodržování předpisů pro zařízení s Windows v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte nebo nakonfigurujte zásady dodržování předpisů pro zařízení v Microsoft Intune pro Windows Phone 8.1, Windows 8.1 nebo novější a Windows 10 Mobile nebo novější. Kontrolujte dodržování minimální a maximální verze operačního systému, nastavte délku a další omezení hesel, vyžadujte nástroj BitLocker, zjistěte antivirová řešení jiných výrobců, nastavte přijatelnou úroveň hrozeb a povolte šifrování v úložišti dat, včetně Surface Hubu a Windows Holographic for Business.
+description: Vytvořte nebo nakonfigurujte zásady dodržování předpisů pro zařízení v Microsoft Intune pro Windows Phone 8.1, Windows 8.1 nebo novější a Windows 10 Mobile nebo novější. Kontrolujte dodržování minimální a maximální verze operačního systému, nastavte délku a další omezení hesel, vyžadujte nástroj BitLocker, vyhledejte antivirová řešení jiných výrobců, nastavte přijatelnou úroveň hrozeb a povolte šifrování v úložišti dat, včetně Surface Hubu a Windows Holographic for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 11ccace4ca8e43e09b8aebeb92530629cf50a472
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: e38e6f615220135e9c4c9c786ab260f5921890ea
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602312"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642870"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -119,8 +119,6 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 
 Podrobnosti o fungování služby pro ověření stavu najdete v tématu o [poskytovateli CSP služby pro ověření stavu](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
 
-Pokud chcete Ochranu ATP v programu Windows Defender (rozšířenou ochranu před internetovými útoky) nastavit jako službu ochrany před hrozbami, přečtěte si téma [Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem](advanced-threat-protection.md).
-
 ### <a name="device-properties"></a>Vlastnosti zařízení
 
 - **Minimální verze OS**: Zadejte minimální povolenou verzi ve formátu **hlavní verze.podverze.sestavení.číslo CU**. Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
@@ -183,6 +181,8 @@ Pokud chcete Ochranu ATP v programu Windows Defender (rozšířenou ochranu pře
   - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
   - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
   - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
+  
+  Pokud chcete Ochranu ATP v programu Windows Defender (rozšířenou ochranu před internetovými útoky) nastavit jako službu ochrany před hrozbami, přečtěte si téma [Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem](advanced-threat-protection.md).
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 

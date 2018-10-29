@@ -12,17 +12,20 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6aa2ade550a01a9e4758024213a67e6a7ddd8f03
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3a3fd4c57edba6f4d9abfdd4188c94627543cb43
+ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313849"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49652151"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
+
+> [!Note]
+> Některé možnosti nejsou v některých verzích Windows dostupné.
 
 ## <a name="general"></a>Obecné
 - **Snímek obrazovky (jenom mobilní verze)** – Umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
@@ -400,3 +403,6 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
 - **Synchronizace zpráv (jen mobilní zařízení)** – Zakáže Zasílání zpráv všude a zálohování a obnovování textových zpráv.
 - **MMS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv MMS.
 - **RCS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv RCS (Rich Communication Services).
+
+## <a name="more-information"></a>Další informace
+Další technické podrobnosti o jednotlivých nastaveních a podporovaných verzích Windows najdete v [referenčních informacích k poskytovateli konfiguračních služeb pro zásady (CPS) pro Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).

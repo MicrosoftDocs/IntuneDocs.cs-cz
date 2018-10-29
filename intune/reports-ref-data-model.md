@@ -15,12 +15,12 @@ ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 3ba8caa74b673127a17a431d5b821d52f9767c49
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
+ms.openlocfilehash: 5680e0c53a9decfa5b172e08c04fbfe4025f2d7c
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727454"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642856"
 ---
 # <a name="data-warehouse-data-model"></a>Datový model datového skladu
 
@@ -61,6 +61,6 @@ Sklad je podřízený datům Intune. Intune pořizuje denní snímek o půlnoci 
 
 ## <a name="next-steps"></a>Další kroky
 
- - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku věnovaném [reprezentaci doby života uživatele v datovém skladu Intune](reports-ref-user-timeline.md).
- - Další informace o práci s datovými sklady získáte v článku [Vytvoření prvního datového skladu](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
+ - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku [Znázornění životnosti uživatele v datovém skladu Microsoft Intune](reports-ref-user-timeline.md).
+ - Další informace o práci s datovými sklady získáte v článku, který se zabývá [vytvořením prvního datového skladu](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse).
  - Další informace o práci s Power BI a datovým skladem získáte v článku [Vytvoření nové sestavy Power BI importem sady dat](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

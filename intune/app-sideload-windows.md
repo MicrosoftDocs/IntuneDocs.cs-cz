@@ -5,19 +5,19 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 ms.custom: intune-classic
-ms.openlocfilehash: 1c0c197536cb6d6b452ff5e3607ad1af2d5a4ca8
-ms.sourcegitcommit: d047a692c798e1fb61ee43a487d6332bce344610
+ms.openlocfilehash: 0c1daa93ff38d1f76ab8c203bf2d989318ecdf62
+ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44058893"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49425219"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -77,7 +77,7 @@ Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadi
 
     -   WinPhoneCompanyPortal.ps1 – Powershellový skript, který můžete použít k podepsání aplikace Portál společnosti, aby se dala nasadit na zařízení s Windows Phone 8.1
 
-    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](http://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](/intune-classic/deploy-use/manage-apps-you-purchased-from-the-windows-store-for-business-with-microsoft-intune).
+    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](http://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 
 2.  **Stažení sady Windows Phone SDK** Stáhněte sadu Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) a nainstalujte ji na počítač. Potřebujete ji k vygenerování tokenu pro registraci aplikace.
 
@@ -119,7 +119,7 @@ Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadi
 
     -   `-EnterpriseId` – ID organizace Musí se zadat buď tento argument, nebo AetxPath. Pokud se tento argument nezadá, ID organizace se přečte ze souboru AETX. Například 1000000001.
 
-6.  Nasazení aplikace Portál společnosti Windows Phone 8.1 (SSP.appx) Pokyny najdete v tématu [Přidání obchodních aplikací pro Windows Phone](lob-apps-windows-phone.md) ([klasický portál](/intune-classic/deploy-use/deploy-apps-in-microsoft-intune)).
+6.  Nasazení aplikace Portál společnosti Windows Phone 8.1 (SSP.appx) Pokyny najdete v článku, který se zabývá [přidáním obchodních aplikací pro Windows Phone](lob-apps-windows-phone.md).
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Jak obnovit certifikát Symantec Enterprise pro podpis kódu
 

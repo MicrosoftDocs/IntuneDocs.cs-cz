@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/01/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,19 +15,20 @@ ms.assetid: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a6be3694a18cd0df09b52b535a0fcd2050bf7a98
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: 46d28ba8d9d8c6ec2adf2b41adbb9e7336676811
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231240"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642972"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
-
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
 
+S konektorem **Service to Service Connector** můžete spravovat protokol Exchange ActiveSync (EAS) a zařízení spravovaná v Intune z jediné konzoly pro správu.  K povolení podmíněného přístupu pro Exchange Online se tento konektor nevyžaduje.
+
 ## <a name="service-to-service-connector-requirements"></a>Požadavky na konektor Service to Service Connector
-**Konektor Service to Service Connector** podporuje jenom Exchange Online nebo Exchange Online Dedicated a nemá žádné požadavky na místní infrastrukturu.
+**Konektor Service to Service Connector** podporuje jenom Exchange Online nebo Exchange Online Dedicated a nemá žádné požadavky na místní infrastrukturu. 
 
 
 |              Požadavek               |                                                                                                            Další informace                                                                                                            |
@@ -68,5 +69,4 @@ Po úspěšné konfiguraci konektoru Service to Service Connector služby Exchan
 
 Můžete se taky podívat na **Stav připojení** a datum a čas posledního úspěšného pokusu o synchronizaci.
 
-## <a name="next-steps"></a>Další kroky
-[Monitorování podmíněného přístupu u Exchange v Microsoft Intune](conditional-access-exchange-monitor.md)
+ 

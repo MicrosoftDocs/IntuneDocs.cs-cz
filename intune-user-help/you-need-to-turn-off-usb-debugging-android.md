@@ -15,12 +15,12 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: c377c2a4e9640443eb38a85b2e1806c9d9e64a82
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
+ms.openlocfilehash: 88ceb6516857f34f56e59dd6ba377e045467f6bd
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147189"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642997"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
 
@@ -28,6 +28,6 @@ _Ladění USB_ je režim, ve kterém zařízení s Androidem můžou komunikovat
 
 Ladění USB můžete vypnout tak, že přejdete na **Nastavení** > **Možnosti pro vývojáře** a vypnete nastavení **Ladění USB**.
 
-Až nastavení **Ladění USB** vypnete, počkejte pár minut a potom můžete zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
+Po vypnutí **ladění USB** pár minut počkejte. Potom byste měli být schopni zařízení s Androidem používat pro přístup k datům společnosti nebo školy jako obvykle.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

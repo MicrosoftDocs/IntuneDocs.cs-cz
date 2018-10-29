@@ -5,23 +5,27 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/2/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9dd7608981da1454c1f3be29eb6ff40a5d7f3394
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: 59e2ab4635c8488b99781ac123aacd0854967dc8
+ms.sourcegitcommit: c3ac9e5f6240223cb5dfed8b44c7425066d6ea86
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562863"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49380027"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Nastavení veřejného terminálu pro Windows 10 a novější v Intune
 
-Profily veřejného terminálu se používají ke konfiguraci zařízení s Windows 10 pro spuštění jedné aplikace nebo několika aplikací. Když vytvoříte profil veřejného terminálu, vybíráte také, jestli se má zobrazit nabídka Start, jestli se nainstaluje webový prohlížeč a další.
+Zařízení s Windows 10 můžete pomocí Intune spouštět jako veřejný terminál. Veřejný terminál může spouštět jednu nebo mnoho aplikací. Můžete také zobrazit a přizpůsobit nabídku Start, přidat různé aplikace, včetně aplikací Win32, přidat konkrétní domovskou stránku do webového prohlížeče a další. 
+
+Pomocí postupu v tomto článku vytvořte v Intune veřejný terminál s jednou aplikací nebo veřejný terminál s více aplikacemi.
+
+Intune podporuje jeden profil beznabídkového režimu v jednom zařízení. Pokud potřebujete více profilů beznabídkového režimu, můžete použít [vlastní OMA-URI](custom-settings-windows-10.md).
 
 ## <a name="kiosk-settings"></a>Nastavení veřejného terminálu
 
@@ -30,100 +34,161 @@ Profily veřejného terminálu se používají ke konfiguraci zařízení s Wind
 3. Zadejte tyto vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
-   - **Popis**: Zadejte popis profilu. Není povinný, ale doporučujeme ho zadat.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: Vyberte **Windows 10 a novější**.
    - **Typ profilu**: Vyberte **Beznabídkový režim (Preview)**.
-   
-4. Vyberte **Veřejný terminál** > **Přidat**.
-5. Zadejte **Název konfigurace veřejného terminálu** pro váš veřejný terminál. Tento název identifikuje skupinu aplikací, rozložení těchto aplikací v nabídce Start a uživatele, kteří jsou této konfiguraci veřejného terminálu přiřazení.
-6. Vyberte **Beznabídkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
+
+4. Vyberte **beznabídkový režim**. **Beznabídkový režim** určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
 
     - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu.
-    - **Veřejný terminál s jednou aplikací v režimu na celou obrazovku**: Profil umožňuje, aby se zařízení spustilo jako účet jednoho uživatele, a uzamkne ho pro jednu aplikaci pro Univerzální platformu Windows (UPW). Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-    - **Beznabídkový režim s více aplikacemi**: Profil umožňuje, aby zařízení spustilo více aplikací pro UPW (Univerzální platformu Windows) nebo aplikací Win32. Můžete také přiřadit různé aplikace různým uživatelským účtům. Uživatelé mají k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje jim aplikace, které nepotřebují.
+    - **Beznabídkový režim na celou obrazovku s jednou aplikací**: Zařízení se spustí jako účet jednoho uživatele a uzamkne ho pro jednu aplikaci pro Store. Když se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+    - **Veřejný terminál s více aplikacemi**: Zařízení spustí více aplikací pro Store, aplikací Win32 nebo vnitřních aplikací pro Windows pomocí ID uživatele aplikace (AUMID). Na zařízení jsou dostupné pouze aplikace, které přidáte.
 
-#### <a name="single-full-screen-app-kiosks"></a>Veřejné terminály s jednou aplikací v režimu na celou obrazovku
-Zadejte následující nastavení:
+        Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje jim aplikace, které nepotřebují.
 
-- **Identifikátor aplikace pro Univerzální platformu Windows (UPW)**: Zadejte **ID modelu uživatele aplikace (AUMID)** aplikace veřejného terminálu. Nebo vyberte stávající spravovanou aplikaci, kterou jste přidali do [klientských aplikací](apps-add.md).
+## <a name="single-full-screen-app-kiosks"></a>Veřejné terminály s jednou aplikací v režimu na celou obrazovku
+Když zvolíte beznabídkový režim s jednou aplikací, zadejte následující nastavení:
 
-    Přečtěte si článek věnovaný [vyhledání ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Typ přihlášení uživatele**: Aplikace, které přidáte, se spustí jako zadaný uživatelský účet. Možnosti:
 
-- **Typ uživatelského účtu**: Toto jsou vaše možnosti:
+  - **Automatické přihlášení (Windows 10 verze 1803+)**: Používá se u veřejných terminálů ve veřejných prostředích, které nevyžadují přihlášení uživatele; jedná se o obdobu účtu hosta. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Účet místního uživatele**: Zadejte účet místního uživatele (v zařízení). Zadaný účet se používá pro přihlášení k veřejnému terminálu.
 
-  - **Automatické přihlášení**: U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `AzureAD\user@contoso.com`.
-  - **Účet místního uživatele**: Zadejte účet místního uživatele (v zařízení) nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu. U účtů připojených k doménám Azure AD zadejte účet ve tvaru `domain\username@tenant.org`.
+- **Typ aplikace**: Vyberte **aplikaci pro Store**.
 
-#### <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
-Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. 
+- **Aplikace, která se spustí v beznabídkovém režimu**: Zvolte **Přidat aplikaci pro Store** a vyberte aplikaci ze seznamu.
 
-[Veřejné terminály s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) používají konfiguraci veřejného terminálu, která zobrazuje povolené aplikace, a další nastavení.
+    Nejsou v seznamu žádné aplikace? Přidejte aplikace pomocí postupu v části [Klientské aplikace](apps-add.md).
 
-Zadejte následující nastavení:
+    Výběrem **OK** uložte změny.
 
-- **Přidat aplikaci Win32**: Aplikace Win32 je tradiční desktopová aplikace. Zadejte **Název aplikace** a **Identifikátor**. **Identifikátor** je plně kvalifikovaná cesta ke spustitelnému souboru, s ohledem na zařízení.
-- **Přidat spravované aplikace**: Vyberte stávající spravovanou aplikaci, kterou jste přidali do Intune jako [klientskou aplikaci](apps-add.md).
-- **Přidat aplikaci podle AUMID**: Zadejte [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
-- **Hlavní panel**: Zvolte buď **Povolit**, aby se hlavní panel zobrazoval, nebo ho ponechejte **nenakonfigurovaný** (skrytý) na veřejném terminálu.
-- **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start, včetně pořadí aplikací. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
+- **Nastavení Kiosk Browseru**: Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. Nezapomeňte získat [aplikaci Kiosk Browseru](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) ze Storu, přidat ji do Intune jako [klientskou aplikaci](apps-add.md) a potom ji přiřadit k zařízením s beznabídkovým režimem.
 
-  Článek [Vytvoření veřejného terminálu s Windows 10 umožňujícího použití více aplikací](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) poskytuje podrobnější informace o používání a vytváření souborů XML.
+  Zadejte následující nastavení:
 
-- **Typ uživatelského účtu**: Přidejte jeden či více uživatelských účtů, které mohou přidané aplikace používat. Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci. Účet může být místní v zařízení nebo přihlášení k účtu Azure AD přidružené k aplikaci veřejného terminálu.
+  - **Výchozí adresa URL domovské stránky**: Zadejte výchozí adresu URL, která se otevře, když se otevře Kiosk Browser nebo restartuje prohlížeč. Zadejte například `http://bing.com` nebo `http://www.contoso.com`.
 
-    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `domain\user@tenant.com`.
+  - **Tlačítko Domů**: **Zobrazí**  nebo **skryje** tlačítko Domů Kiosk Browseru. Ve výchozím nastavení se tlačítko nezobrazuje.
 
-## <a name="kiosk-web-browser-settings"></a>Nastavení webového prohlížeče Kiosk
+  - **Navigační tlačítka**: **Zobrazí** nebo **skryje** tlačítka pro přechod vpřed nebo vzad. Ve výchozím nastavení se navigační tlačítka nezobrazují.
 
-Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. K nasazení aplikace webového prohlížeče do zařízení s beznabídkovým režimem použijte [klientské aplikace](apps-add.md).
+  - **Tlačítko pro ukončení relace**: **Zobrazí** nebo **skryje** tlačítko pro ukončení relace. Když je zobrazené a uživatel tlačítko vybere, dojde k výzvě pro ukončení relace. Po potvrzení prohlížeč vymaže všechny údaje o procházení (soubory cookie, mezipaměť atd.) a otevře výchozí adresu URL. Ve výchozím nastavení se tlačítko nezobrazuje.
 
-1. Zadejte následující nastavení:
+  - **Aktualizovat prohlížeč po určité době nečinnosti**: Zadejte dobu nečinnosti (1 až 1 440 minut), než se Kiosk Browser restartuje a obnoví. Doba nečinnosti se udává v minutách a označuje dobu, která uplynula od poslední interakce uživatele. Ve výchozím nastavení je hodnota prázdná, což znamená, že neexistuje žádný časový limit nečinnosti.
 
-    - **Výchozí adresa URL domovské stránky**: Zadejte výchozí adresu URL, kterou prohlížeč Kiosk otevře při svém spuštění nebo restartování.
+  - **Povolené weby**: Toto nastavení použijte, pokud chcete povolit otevírání konkrétních webů. Jinými slovy, tuto funkci použijte k omezení nebo zabránění spouštění webů na zařízení. Můžete například povolit, aby se otevíraly všechny weby na `http://contoso.com*`. Ve výchozím nastavení jsou povolené všechny weby.
 
-    - **Tlačítko Domů**: Zobrazí (**Povolit**) nebo skryjte (**Není konfigurováno**) tlačítko Domů prohlížeče Kiosk. Ve výchozím nastavení tlačítko není nakonfigurováno.
+    Pokud chcete povolit konkrétní weby, nahrajte soubor CSV, který obsahuje seznam povolených webů. Pokud soubor CSV nepřidáte, budou povolené všechny weby. Intune podporuje hvězdičku (*) jako zástupný znak.
 
-    - **Navigační tlačítka**: Zobrazí (**Povolit**) nebo skryjte (**Není konfigurováno**) tlačítka Vpřed a Zpět. Ve výchozím nastavení nejsou navigační tlačítka nakonfigurovaná.
+  Výběrem **OK** uložte změny.
 
-    - **Tlačítko pro ukončení relace**: Zobrazí (**Povolit**) nebo skryjte (**Není konfigurováno**) tlačítko pro ukončení relace. Když je zobrazené a uživatel tlačítko vybere, dojde k výzvě pro ukončení relace. Po potvrzení prohlížeč vymaže všechny údaje o procházení (soubory, mezipaměť atd.) a přejde zpátky na výchozí adresu URL. Ve výchozím nastavení tlačítko není nakonfigurováno. 
+## <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
 
-    - **Když uživatel překročí časový limit nečinnosti, aktualizovat prohlížeč**: Zadejte dobu nečinnosti relace v minutách, než se prohlížeč Kiosk restartuje a obnoví. Hodnota může být v intervalu 1 až 1 440 minut. Ve výchozím nastavení je hodnota prázdná, což znamená, že neexistuje žádný časový limit nečinnosti.
+Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit.
 
-    - **Blokované weby**: Seznam adres URL blokovaných webů (podporuje zástupné znaky). Pomocí tohoto nastavení můžete prohlížeči zabránit v otevření konkrétních webů. Můžete také **Importovat** soubor .csv, který seznam obsahuje. Nebo můžete (**Exportovat**) vámi vytvořený soubor .csv, který obsahuje vámi přidané weby.
+Když zvolíte beznabídkový režim s více aplikacemi, zadejte následující nastavení:
 
-    - **Výjimky webů**: Seznam výjimek z adres URL blokovaných webů (podporuje zástupné znaky). Pomocí tohoto nastavení můžete prohlížeči povolit, aby otevřel konkrétní weby. Tyto výjimky jsou podmnožinou blokovaných adres URL. Pokud je adresa URL jak na seznamu blokovaných webů, tak i na seznamu výjimek, platí seznam výjimek.
+- **Cílit na zařízení s Windows 10 v režimu S**: Zvolte **Ano**, pokud v profilu veřejného terminálu chcete povolit aplikace pro Store a aplikace AUMID (kromě aplikací Win32). Možnost **Ne** zvolte, pokud chcete v profilu veřejného terminálu povolit aplikace pro Store, aplikace Win32 a aplikace AUMID. Když zvolíte **Ne**, profil veřejného terminálu se nenasadí na zařízení v režimu S.
 
-    Můžete také **Importovat** soubor .csv, který seznam obsahuje. Nebo můžete (**Exportovat**) vámi vytvořený soubor .csv, který obsahuje vámi přidané weby.
+- **Typ přihlášení uživatele**: Aplikace, které přidáte, se spustí jako zadaný uživatelský účet. Možnosti:
 
-2. Výběrem **OK** uložte změny.
+  - **Automatické přihlášení (Windows 10 verze 1803+)**: Používá se u veřejných terminálů ve veřejných prostředích, které nevyžadují přihlášení uživatele; jedná se o obdobu účtu hosta. Toto nastavení využívá [poskytovatele konfiguračních služeb AssignedAccess](https://docs.microsoft.com/windows/client-management/mdm/assignedaccess-csp).
+  - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Zadaný účet se používá pro přihlášení k veřejnému terminálu.
+  - **Uživatel nebo skupina Azure AD (Windows 10, verze 1803+)**: Vyberte **Přidat** a ze seznamu vyberte uživatele nebo skupiny Azure AD. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
+  - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
+
+- **Aplikace**: Přidejte aplikace, které se budou spouštět zařízení s beznabídkovým režimem. Nezapomeňte, že můžete přidat několik aplikací.
+
+  - **Přidat aplikaci pro Store**: Přidejte aplikaci z Microsoft Storu pro firmy. Pokud nejsou zobrazené žádné aplikace, můžete je získat a [přidat do Intune](store-apps-windows.md). Můžete například přidat Kiosk Browser, Excel, OneNote a další.
+
+  - **Přidat aplikaci Win32**: Aplikace Win32 je tradiční desktopová aplikace, jako je například Visual Studio Code nebo Google Chrome. Zadejte tyto vlastnosti:
+
+    - **Název aplikace**: Povinné. Zadejte název aplikace.
+    - **Místní cesta**: Povinné. Zadejte cestu ke spustitelnému souboru, například `C:\Program Files (x86)\Microsoft VS Code\Code.exe` nebo `C:\Program Files (x86)\Google\Chrome\Application\chrome.exe`.
+    - **ID modelu uživatele aplikace (AUMID)**: Nepovinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace Win32. Toto nastavení určuje rozložení nabídky Start na dlaždici na ploše. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Velikost dlaždice**: Povinné. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
+  
+  - **Přidat podle AUMID**: Tuto možnost použijte pro přidání aplikací pro Windows, například Poznámkového bloku nebo Kalkulačky. Zadejte tyto vlastnosti: 
+
+    - **Název aplikace**: Povinné. Zadejte název aplikace.
+    - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Velikost dlaždice**: Povinné. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
+
+  > [!TIP]
+  > Po přidání všech aplikací můžete změnit pořadí zobrazování tak, že na aplikace v seznamu kliknete a pomocí myši je přetáhnete, kam potřebujete.  
+
+  Výběrem **OK** uložte změny.
+
+- **Nastavení Kiosk Browseru**: Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. K nasazení aplikace webového prohlížeče do zařízení s beznabídkovým režimem použijte [klientské aplikace](apps-add.md).
+
+  Zadejte následující nastavení:
+
+  - **Výchozí adresa URL domovské stránky**: Zadejte výchozí adresu URL, která se otevře, když se otevře Kiosk Browser nebo restartuje prohlížeč. Zadejte například `http://bing.com` nebo `http://www.contoso.com`.
+
+  - **Tlačítko Domů**: **Zobrazí**  nebo **skryje** tlačítko Domů Kiosk Browseru. Ve výchozím nastavení se tlačítko nezobrazuje.
+
+  - **Navigační tlačítka**: **Zobrazí** nebo **skryje** tlačítka pro přechod vpřed nebo vzad. Ve výchozím nastavení se navigační tlačítka nezobrazují.
+
+  - **Tlačítko pro ukončení relace**: **Zobrazí** nebo **skryje** tlačítko pro ukončení relace. Když je zobrazené a uživatel tlačítko vybere, dojde k výzvě pro ukončení relace. Po potvrzení prohlížeč vymaže všechny údaje o procházení (soubory cookie, mezipaměť atd.) a otevře výchozí adresu URL. Ve výchozím nastavení se tlačítko nezobrazuje.
+
+  - **Aktualizovat prohlížeč po určité době nečinnosti**: Zadejte dobu nečinnosti (1 až 1 440 minut), než se Kiosk Browser restartuje a obnoví. Doba nečinnosti se udává v minutách a označuje dobu, která uplynula od poslední interakce uživatele. Ve výchozím nastavení je hodnota prázdná, což znamená, že neexistuje žádný časový limit nečinnosti.
+
+  - **Povolené weby**: Toto nastavení použijte, pokud chcete povolit otevírání konkrétních webů. Jinými slovy, tuto funkci použijte k omezení nebo zabránění spouštění webů na zařízení. Můžete například povolit, aby se otevíraly všechny weby na `contoso.com*`. Ve výchozím nastavení jsou povolené všechny weby.
+
+    Pokud chcete povolit konkrétní weby, nahrajte soubor CSV, který obsahuje seznam povolených webů. Pokud soubor CSV nepřidáte, budou povolené všechny weby.
+
+  Výběrem **OK** uložte změny.
+
+- **Použít alternativní rozložení nabídky Start**: Zvolte **Ano**, pokud chcete zadat soubor XML, který popisuje, jak se aplikace zobrazují v nabídce Start (včetně jejich pořadí). Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
+
+- **Hlavní panel Windows**: U hlavního panelu si můžete vybrat, zda se má **zobrazit** nebo **skrýt**. Ve výchozím nastavení se hlavní panel nezobrazuje.
 
 ## <a name="windows-holographic-for-business"></a>Windows Holographic for Business
 
-Zařízení s Windows Holographic for Business můžete nakonfigurovat tak, aby se spouštěla v režimu veřejného terminálu s jednou aplikací, nebo v režimu veřejného terminálu s více aplikacemi. 
+Zařízení s Windows Holographic for Business můžete nakonfigurovat tak, aby se spouštěla v režimu veřejného terminálu s jednou aplikací, nebo v režimu veřejného terminálu s více aplikacemi. Některé funkce nejsou na zařízení s Windows Holographic for Business podporované.
 
 #### <a name="single-full-screen-app-kiosks"></a>Veřejné terminály s jednou aplikací v režimu na celou obrazovku
-Zadejte následující nastavení:
+Když zvolíte beznabídkový režim s jednou aplikací, zadejte následující nastavení:
 
-- **Identifikátor aplikace pro Univerzální platformu Windows (UPW)**: Zadejte **ID modelu uživatele aplikace (AUMID)** aplikace veřejného terminálu. Nebo vyberte existující spravovanou aplikaci, kterou jste přidali pomocí [Mobile Apps](apps-add.md).
+- **Typ přihlášení uživatele**: Vyberte **Účet místního uživatele** a zadejte účet místního uživatele (v zařízení) nebo účet Microsoft (MSA) přidružený k aplikaci veřejného terminálu. Typy uživatelských účtů **Automatické přihlášení** nejsou na zařízení s Windows Holographic for Business podporované.
 
-    Pokud chcete ID získat, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace (AUMID)](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Typ aplikace**: Vyberte **aplikaci pro Store**.
 
-- **Typ uživatelského účtu**: Vyberte **Účet místního uživatele**, zadejte účet místního uživatele (v zařízení) nebo přihlášení k účtu Microsoft (MSA) přidružené k aplikaci veřejného terminálu. Typy uživatelských účtů **Automatické přihlášení** nejsou na zařízení s Windows Holographic for Business podporované.
+- **Aplikace, která se spustí v beznabídkovém režimu**: Zvolte **Přidat aplikaci pro Store** a vyberte aplikaci ze seznamu.
+
+    Nejsou v seznamu žádné aplikace? Přidejte aplikace pomocí postupu v části [Klientské aplikace](apps-add.md).
+
+    Výběrem **OK** uložte změny.
 
 #### <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
-Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit.
+Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Když zvolíte beznabídkový režim s více aplikacemi, zadejte následující nastavení:
 
-Zadejte následující nastavení:
+- **Cílit na zařízení s Windows 10 v režimu S**: Zvolte **Ne**. Režim S není na zařízení s Windows Holographic for Business podporovaný.
 
-- **Přidat spravované aplikace**: Vyberte stávající spravovanou aplikaci, kterou jste přidali do Intune jako [klientskou aplikaci](apps-add.md).
-- **Přidat aplikaci podle AUMID**: Zadejte [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
-- **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start, včetně pořadí aplikací. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
-- **Typ uživatelského účtu**: Přidejte jeden či více uživatelských účtů, které mohou přidané aplikace používat. Mezi podporované možnosti patří: 
+- **Typ přihlášení uživatele**: Přidejte jeden nebo více uživatelských účtů, které mohou přidané aplikace používat. Možnosti: 
+
+  - **Automatické přihlášení**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+  - **Účet místního uživatele**: **Přidejte** účet místního uživatele (v zařízení). Zadaný účet se používá pro přihlášení k veřejnému terminálu.
+  - **Uživatel nebo skupina Azure AD (Windows 10, verze 1803+)**: Vyžaduje zadání přihlašovacích údajů, aby se uživatel mohl k zařízení přihlásit. Vyberte **Přidat** a zvolte uživatele nebo skupiny Azure AD ze seznamu. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
   - **Návštěvník HoloLens**: Účet návštěvníka je účtem hosta, který nevyžaduje žádné přihlašovací údaje uživatele ani ověřování, viz článek o [konceptech režimu sdíleného počítače](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
-  - **Uživatelé Azure AD**: Pro přihlášení k zařízení vyžaduje přihlašovací údaje uživatele. Použijte formát `domain\user@tenant.com`.
-  - **Místní uživatelské účty**: Pro přihlášení k zařízení vyžaduje přihlašovací údaje uživatele. 
 
-Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci.
+- **Aplikace**: Přidejte aplikace, které se budou spouštět zařízení s beznabídkovým režimem. Nezapomeňte, že můžete přidat několik aplikací.
+
+  - **Přidat aplikaci pro Store**: Vyberte stávající aplikaci, kterou jste přidali do [klientských aplikací](apps-add.md). Pokud nejsou zobrazené žádné aplikace, můžete je získat a [přidat do Intune](store-apps-windows.md).
+  - **Přidat aplikaci Win32**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+  - **Přidat podle AUMID**: Tuto možnost použijte pro přidání vnitřních aplikací pro Windows. Zadejte tyto vlastnosti: 
+
+    - **Název aplikace**: Povinné. Zadejte název aplikace.
+    - **ID modelu uživatele aplikace (AUMID)**: Povinné. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Velikost dlaždice**: Povinné. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
+
+- **Nastavení Kiosk Browseru**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+
+- **Použít alternativní rozložení nabídky Start**: Zvolte **Ano**, pokud chcete zadat soubor XML, který popisuje, jak se aplikace zobrazují v nabídce Start (včetně jejich pořadí). Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku o [přizpůsobení a exportu rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-for-hololens) najdete pokyny a ukázkový soubor XML pro zařízení s Windows Holographic for Business.
+
+- **Hlavní panel Windows**: Na zařízeních s Windows Holographic for Business se nepodporuje.
+
+
 
 ## <a name="next-steps"></a>Další kroky
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

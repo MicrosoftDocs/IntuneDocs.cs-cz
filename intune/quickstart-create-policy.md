@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 10/17/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 1ac74ba5-7441-44ac-98b5-9d8bb8899747
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 73e1e0a27d128d567a924e6f2b343026b11f1a44
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 9d9169ab353da30e0f7b292cea4f5b9c93e316aa
+ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581578"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49391548"
 ---
 # <a name="quickstart-add-a-device-compliance-policy-for-a-windows-10-device"></a>Rychlý start: Přidání zásady dodržování předpisů pro zařízení s Windows 10
 Zásada dodržování předpisů Intune pro zařízení s Windows určuje pravidla a nastavení, které musí zařízení s Windows splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady [podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access) můžete použít k povolení nebo zablokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
@@ -53,4 +53,4 @@ Až tuto zásadu nebudete potřebovat, odstraňte ji. Uděláte to tak, že vybe
 V tomto rychlém startu jste vytvořili jednoduchou zásadu dodržování předpisů pro zařízení a přiřadili jste ji. Pokud chcete zaregistrovat zařízení s Windows 10, která budou příjemcem této zásady, pokračujte rychlým startem, ve kterém nastavíte automatickou registraci. 
  
 > [!div class="nextstepaction"]
-> [Nastavení automatické registrace](quickstart-setup-auto-enrollment.md)
+> [Nastavení délky hesla zařízení](quickstart-set-password-length-android.md)

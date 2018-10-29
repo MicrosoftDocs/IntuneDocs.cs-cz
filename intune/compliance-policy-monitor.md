@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0af5fb071c6abb01a2819a5d9c73f4e01bf7cb7a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
+ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312828"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410359"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -140,6 +140,9 @@ Sestava **Dodržování předpisů zařízením** > **Nastavení dodržování p
 ![Snímek seznamu všech nastavení v různých zásadách](./media/compliance-policy-monitor/idc-10.png)
 
 Když některé nastavení vyberete, zobrazí se pro každé zařízení cílené tímto nastavením **stav kompatibility**, **e-mailový alias uživatele**, **model zařízení** a **poloha**.
+
+> [!NOTE]
+> Na zařízeních s Windows 10 nepřipojených ke službě Azure AD se systémový účet může zobrazit jako uživatel nevyhovující předpisům. Jedná se o očekávané chování, které neovlivňuje celkový stav dodržování předpisů zařízením. 
 
 ## <a name="view-status-of-device-policies"></a>Zobrazení stavu zásad zařízení
 
