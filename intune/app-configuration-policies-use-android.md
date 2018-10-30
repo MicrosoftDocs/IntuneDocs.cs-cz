@@ -15,12 +15,12 @@ ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e7e740d03453a437572f8f960ed21927f4fcbace
-ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
+ms.openlocfilehash: f41c228e7b5dd4084e7ebb2fab1148913b76880f
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49102034"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49642939"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
@@ -31,7 +31,7 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 > [!Note]  
 > Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.<p></p>
 > Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
-> Pro Microsoft Word, Microsoft Excel a Microsoft PowerPoint je nutné použít Android 16.0.9327.1000 a novější.
+> Pro Microsoft Word, Microsoft Excel a Microsoft PowerPoint musíte použít verzi aplikace 16.0.9327.1000 a novější.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
