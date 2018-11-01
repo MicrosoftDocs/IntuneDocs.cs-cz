@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cb7eb4b3845b8b5f0eafed95fa081955b99f1af7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
+ms.openlocfilehash: c3edbf3663d3226f806bf36af97b97cdf4d169c1
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863157"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357083"
 ---
-# <a name="manage-internet-access-using-protected-browser-policies-with-microsoft-intune"></a>Správa přístupu k internetu pomocí zásad chráněného prohlížeče v Microsoft Intune  
+# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -36,26 +36,37 @@ Pomocí prohlížeče chráněného zásadami Intune (Microsoft Edge nebo Intune
 
 ## <a name="getting-started"></a>Začínáme
 
+Microsoft Edge a Intune Managed Browser jsou aplikace webového prohlížeče, které vy a vaši koncoví uživatelé můžete po stažení z některého z veřejných obchodů s aplikacemi využívat ve vaší organizaci. 
+
+Požadavky na operační systém pro zásady prohlížeče:
+- Android 4 a novější nebo
+- iOS 8.0 a novější
+
+Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
+
+>[!NOTE]
+>Aplikace Managed Browser nepodporuje kryptografický protokol Secure Sockets Layer ve verzi 3 (SSLv3).
+
+
+## <a name="application-protection-policies-for-protected-browsers"></a>Zásady ochrany aplikací pro chráněné prohlížeče
+
+Aplikace Edge a Managed Browser jsou integrované se sadou Intune SDK, takže v nich můžete používat také zásady ochrany aplikací, včetně:
+- Řízení použití operací vyjmutí, kopírování a vložení
+- Prevence pořizování snímků obrazovky
+- Možnost otevírání podnikových odkazů jenom ve spravovaných aplikacích a prohlížečích
+
+Podrobnosti najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
+
 Tato nastavení můžete použít na:
 
 - Zařízení, která jsou zaregistrovaná v Intune
 - Zaregistrovaná pomocí jiného produktu MDM
 - Nespravovaná zařízení
 
-Pokud si uživatelé nainstalují aplikaci Managed Browser z obchodu s aplikacemi a služba Intune ji nebude spravovat, mohou ji používat jako základní webový prohlížeč s podporou jednotného přihlašování přes web Microsoft MyApps. Uživatelé jsou přesměrováni přímo na web MyApps, kde uvidí všechny své zřízené aplikace SaaS.
+>[!NOTE]
+>Pokud si uživatelé nainstalují aplikaci Managed Browser z obchodu s aplikacemi a služba Intune ji nebude spravovat, mohou ji používat jako základní webový prohlížeč s podporou jednotného přihlašování přes web Microsoft MyApps. Uživatelé jsou přesměrováni přímo na web MyApps, kde uvidí všechny své zřízené aplikace SaaS.
 Pokud nejsou aplikace Managed Browser nebo Edge spravované službou Intune, nemají přístup k datům jiných takto spravovaných aplikací. 
 
-Aplikace Managed Browser nepodporuje kryptografický protokol Secure Sockets Layer ve verzi 3 (SSLv3).
-
-Zásady chráněného prohlížeče můžete vytvořit pro následující typy zařízení:
-
--   Zařízení se systémem Android 4 nebo novější verzí
-
--   Zařízení se systémem iOS 10.0 nebo novější verzí
-
->[!IMPORTANT]
->Starší verze systému Android a iOS budou moct Managed Browser dál používat, ale nepůjde do nich nainstalovat nové verze této aplikace a nebudou mít přístup ke všem jejím možnostem. Doporučujeme vám tato zařízení aktualizovat na podporovanou verzi operačního systému.
-    
 
 ## <a name="conditional-access-for-protected-browsers"></a>Podmíněný přístup pro chráněné prohlížeče
 
@@ -82,7 +93,7 @@ Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možno
 8. V části **Přiřazení** vyberte **Uživatelé a skupiny** a potom zvolte uživatele nebo skupiny, ke kterým chcete tuto zásadu přiřadit. 
 
     > [!NOTE]
-    > Na uživatele musí také cílit zásady Intune App Protection. Další informace o vytváření zásad Intune App Protection najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
+    > Aby uživatelé mohli přijímat zásady konfigurace aplikací, musí na ně cílit také zásady ochrany aplikací Intune. Další informace o vytváření zásad Intune App Protection najdete v článku [Co jsou zásady ochrany aplikací](app-protection-policy.md).
 
 9. V části **Přiřazení** vyberte **Cloudové aplikace** a zvolte, které aplikace chcete chránit pomocí této zásady.
 
@@ -101,6 +112,9 @@ Jednotné přihlašování vyžaduje, aby bylo vaše zařízení zaregistrováno
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Vytvoření konfigurace aplikace chráněného prohlížeče
 
+>[!IMPORTANT]
+>Aby se konfigurace aplikace použily, musí už na zařízení být chráněný prohlížeč nebo jiná aplikace uživatele spravovaná [zásadami ochrany aplikací Intune]( app-protection-policy.md).
+
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V okně **Klientské aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
@@ -114,8 +128,6 @@ Jednotné přihlašování vyžaduje, aby bylo vaše zařízení zaregistrováno
 11. V okně **Přidat zásady konfigurace** zvolte **Přidat**.
 12. Vytvoří se nová konfigurace, která se zobrazí v okně **Konfigurace aplikací**.
 
->[!IMPORTANT]
->V současné době aplikace Managed Browser spoléhá na automatickou registraci. Aby se konfigurace aplikace použily, musí už na zařízení být jiná aplikace spravovaná zásadami ochrany aplikací Intune.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Přiřazení vytvořeného nastavení aplikace
 
@@ -275,18 +287,7 @@ Seznam nastavení uložených v aplikačních protokolech najdete v tématu [Kon
 ### <a name="turn-off-usage-data"></a>Vypnutí dat o využití
 Microsoft automaticky shromažďuje anonymní informace o výkonu a využití aplikace Managed Browser za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu.
 
-
 -   V zařízeních se systémem iOS se nedají otevřít weby, u kterých vypršela platnost certifikátu nebo které mají nedůvěryhodný certifikát.
--   Aplikace Managed Browser nevyužívá nastavení, která uživatelé použijí pro prohlížeče integrované na jejich zařízeních. Aplikace Managed Browser nemá k těmto nastavením přístup.
-
--   Pokud v zásadách ochrany aplikací přidružených k prohlížeči Managed Browser nakonfigurujete možnost **Vyžadovat pro přístup jednoduchý PIN kód** nebo **Vyžadovat pro přístup podnikové přihlašovací údaje** a uživatel klikne na stránce ověřování na odkaz nápovědy, bude moct na internetu přejít na libovolný web, i když bude tento web v zásadách uvedený v seznamu blokovaných webů.
-
--   Aplikace Managed Browser může blokovat přístup k webům jen v případě, že se k nim přistupuje přímo. V případě, že se k webu přistupuje přes zprostředkující služby (třeba překladatelské služby), aplikace přístup neblokuje.
-
--   Kvůli povolení ověřování a přístupu k dokumentaci Intune adresa **&#42;.microsoft.com** v seznamech povolených a blokovaných webů nefiguruje. Je vždycky povolená.
-
-### <a name="turn-off-usage-data"></a>Vypnutí dat o využití
-Microsoft automaticky shromažďuje anonymní informace o výkonu a využití aplikace Managed Browser za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu.
 
 ## <a name="next-steps"></a>Další kroky
 

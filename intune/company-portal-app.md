@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2defc433ef39562750c4579f302a9c5367c6464a
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
+ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828240"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307402"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -61,7 +61,7 @@ Zadejte informace o podpoře vaší společnosti a poskytněte tak zaměstnanci 
 
 
 ## <a name="company-branding-customization"></a>Přizpůsobení obchodní značky       
-Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ.     
+Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ. Pokud chcete rychle zobrazit náhled konfigurace brandingu bez testovacího zařízení, přejděte na [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Všimněte si, že nahrané logo se použije pro e-mailové šablony.      
 
 ### <a name="theme-color"></a>Barva motivu
 Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu nebo zadejte šestimístný šestnáctkový kód pro vlastní barvu.
@@ -82,3 +82,30 @@ Nahrajte logo vaší společnosti, které bude viditelné během činnosti konco
 |**Vedle loga zobrazit název společnosti**| Když vyberete tuto možnost, zobrazí se vedle nahraného loga název společnosti, který jste zadali. |
 
 Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení na webovém portálu Intune**, abyste viděli, jak bude konfigurace vypadat.
+
+## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
+
+Koncoví uživatelé můžou aktivovat akce navigace, aplikací a zařízení v aplikaci Portál společnosti pro Windows pomocí klávesových zkratek (akcelerátorů).
+
+V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
+
+| Oblast | Popis | Klávesová zkratka |
+|:------------------:|:--------------:|:-----------------:|
+| Navigační nabídka | Navigace | Alt+M |
+|  | Domů | Alt+H |
+|  | Všechny aplikace | Alt+A |
+|  | Nainstalované aplikace | Alt+I |
+|  | Váš názor | Alt+F |
+|  | Můj profil | Alt+U |
+|  | Nastavení | Alt+T |
+| Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
+|  | Odebrat | Ctrl+D nebo Delete |
+|  | Zkontrolovat přístup | Ctrl+M nebo F9 |
+| Podrobnosti o zařízení | Přejmenovat | F2 |
+|  | Odebrat | Ctrl+D nebo Delete |
+|  | Zkontrolovat přístup | Ctrl+M nebo F9 |
+| Podrobnosti aplikace | Install | Ctrl+I |
+
+## <a name="next-steps"></a>Další kroky
+
+- [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](store-apps-company-portal-app.md)

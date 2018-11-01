@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 723e7584e1aaf22859b293a93ddbead56f6256e7
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 3165c29da5cc23e9f206dbe3e1dc0ba72c758d47
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866435"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643140"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -40,17 +40,30 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Monitor and troubleshoot
 ### Role-based access control
 
--->   
+-->     
+## <a name="week-of-october-15-2018"></a>Týden od 15. října 2018
+
+### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device-----2637704----"></a>Výzva k zadání kódu PIN po změnách otisků prstů nebo Face ID na zařízení s iOSem <!-- 2637704  -->
+Uživatelům se teď po provedení biometrických změn na zařízení s iOSem zobrazuje výzva k zadání kódu PIN. Týká se to i změn zaregistrovaných otisků prstů nebo Face ID. Načasování výzvy závisí na konfiguraci časového limitu *Překontrolovat požadavky na přístup za (minuty)*.  Pokud není kód PIN nastavený, zobrazí se uživateli výzva k jeho nastavení. 
+ 
+Tato funkce je dostupná jen pro iOS a vyžaduje zapojení aplikací, které integrují sadu Intune APP SDK pro iOS verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
+
 
 ## <a name="week-of-october-1-2018"></a>Týden od 1. října 2018
 
 ### <a name="app-management"></a>Správa aplikací
 
-#### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices----1248496---"></a>Přístup uživatelského účtu k aplikacím Intune na spravovaných zařízeních s Androidem a iOSem <!-- 1248496 -->
-Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. 
+#### <a name="access-to-key-profile-properties-using-the-company-portal-app----772203---"></a>Přístup ke klíčovým vlastnostem profilu pomocí aplikace Portál společnosti <!-- 772203 -->
+Koncoví uživatelé teď mají přístup ke klíčovým vlastnostem účtu a akcím, jako je například resetování hesla, z aplikace Portál společnosti. 
 
-#### <a name="outlook-mobile-app-configuration-policy---1828527---"></a>Zásady konfigurace aplikace Outlook Mobile <!--1828527 -->
-Nově můžete vytvořit zásady konfigurace pro aplikaci Outlook Mobile pro iOS a Android. Další nastavení konfigurace se přidají, jakmile je povolíte v aplikaci Outlook Mobile.
+#### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>Nastavením zásad ochrany aplikací v iOSu se dají zablokovat klávesnice jiných výrobců <!-- 1248481 -->
+Na zařízeních s iOSem můžou správci Intune zablokovat použití klávesnic jiných výrobců pro přístup k datům organizace z aplikací chráněných zásadami. Když budou nastavené Zásady ochrany aplikací (APP) k blokování klávesnic jiných výrobců, uživatelům zařízení se při první interakci s firemními daty pomocí klávesnice jiného výrobce zobrazí zpráva. Všechny jiné možnosti než nativní klávesnice budou zablokované a uživatelům zařízení se nezobrazí. Uživatelům se dialog se zprávou zobrazí jenom jednou. 
+
+#### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices----1248496---"></a>Přístup uživatelského účtu k aplikacím Intune na spravovaných zařízeních s Androidem a iOSem <!-- 1248496 -->
+Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. 
+
+#### <a name="outlook-ios-and-android-app-configuration-policy---1828527---"></a>Zásada konfigurace aplikace Outlook pro iOS a Android <!--1828527 -->
+Teď můžete vytvořit zásadu konfigurace aplikace Outlook pro iOS a Android pro místní uživatele, kteří využívají základní ověřování pomocí protokolu ActiveSync. Další nastavení konfigurace se přidají po jejich povolení pro Outlook pro iOS a Android.
 
 #### <a name="office-365-pro-plus-language-packs----1833450---"></a>Jazykové sady Office 365 Pro Plus <!-- 1833450 -->
 Jako správce Intune budete moct nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Klientské aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**.
@@ -61,6 +74,11 @@ Přípony souborů obchodních aplikací pro Windows teď budou zahrnovat *.msi*
 #### <a name="windows-10-app-deployment-using-intune----2309001---"></a>Nasazení aplikací pro Windows 10 pomocí Intune <!-- 2309001 -->
 S využitím stávající podpory obchodních aplikací a Microsoft Storu pro obchodní aplikace mohou správci prostřednictvím Intune nasadit většinu svých firemních aplikací koncovým uživatelům, kteří používají zařízení s Windows 10. Správci mohou přidávat, instalovat a odinstalovávat aplikace pro uživatele Windows 10 v různých formátech, jako jsou MSI, Setup.exe nebo MSP. Před stažením a instalací Intune vyhodnotí pravidla požadavků a prostřednictvím centra akcí Windows 10 upozorní koncové uživatele na stav nebo požadavky na restartování. Tato funkce účinně uvolňuje ruce organizacím, které chtějí přesunout tuto úlohu do Intune a do cloudu. Tato funkce je v tuto chvíli ve veřejné verzi Preview. Očekáváme, že během několik dalších měsíců přidáme k této funkci důležité nové schopnosti. 
 
+#### <a name="end-user-device-and-app-content-menu----2771453---"></a>Místní nabídka zařízení a aplikací koncových uživatelů <!-- 2771453 -->
+Koncoví uživatelé teď můžou pomocí místní nabídky zařízení a aplikací aktivovat běžné akce, jako jsou například přejmenování zařízení nebo kontrola dodržování předpisů. 
+
+#### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Klávesové zkratky v Portálu společnosti pro Windows <!-- 2771518 -->
+Koncoví uživatelé teď budou moct aktivovat akce aplikací a zařízení v aplikaci Portál společnosti pro Windows pomocí klávesových zkratek (akcelerátorů).
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -137,6 +155,12 @@ Profily Autopilotu můžete použít u zaregistrovaných zařízení s Windows 1
 #### <a name="create-and-assign-multiple-enrollment-status--page-profiles-to-azure-ad-groups----2526564---"></a>Vytvoření více profilů stránky o stavu registrace a jejich přiřazení skupinám Azure AD <!-- 2526564 -->
 Nově můžete [vytvořit a přiřadit](windows-enrollment-status.md) více profilů stránky o stavu registrace skupinám Azure ADD.
 
+#### <a name="migration-from-device-enrollment-program-to-apple-business-manager-in-intune---2748613--"></a>Migrace z Programu registrace zařízení na Apple Business Manager v Intune <!--2748613-->
+V Intune funguje Apple Business Manager (ABM), takže je možné upgradovat účet z Programu registrace zařízení (DEP) na ABM. Proces v Intune je stejný. Pokud chcete účet Apple upgradovat z DEP na ABM, přejděte na [ https://support.apple.com/en-us/HT208817]( https://support.apple.com/en-us/HT208817).
+
+### <a name="alert-and-enrollment-status-tabs-on-the-device-enrollment-overview-page---2748656--"></a>Karty pro upozornění a stav registrace na stránce s přehledem registrace zařízení <!--2748656-->
+Na stránce s přehledem registrace zařízení se teď zobrazují upozornění a chyby registrace na samostatných kartách.
+
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="restricts-apps-and-block-access-to-company-resources-on-android-devices----2451462----"></a>Omezení aplikací a blokování přístupu k prostředkům společnosti na zařízení s Androidem <!-- 2451462  -->  
@@ -153,7 +177,7 @@ Platí pro:
 Jedním z příslibů Microsoft 365 je zjednodušená správa a v průběhu let jsme integrovali back-endové služby Microsoft 365 tak, aby poskytovaly ucelený komplet, jako je podmíněný přístup Intune a Azure AD. Nové [centrum pro správu Microsoft 365](http://devicemanagement.microsoft.com) je místem, kde můžete konsolidovat, zjednodušovat a integrovat prostředí pro správu. Pracovní prostor pro specialisty na správu zařízení poskytuje snadný přístup ke všem úkolům a informacím o správě zařízení a aplikací a úloh, které vaše organizace potřebuje. Očekáváme, že se stane primárním pracovním prostorem na cloudu pro výpočetní týmy koncových uživatelů organizací.
 
 ### <a name="support-for-more-third-party-certification-authorities-ca----3093107---"></a>Podpora více externích certifikačních autorit <!-- 3093107 -->
-Když použijete protokol SCEP (Simple Certificate Enrollment Protocol), můžete teď vydat nové certifikáty a prodloužit platnost certifikátů na mobilních zařízeních s Windows, iOSem, Androidem a macOS.
+Když použijete protokol SCEP (Simple Certificate Enrollment Protocol), můžete teď vydat nové certifikáty a prodloužit platnost certifikátů na mobilních zařízeních s Windows, iOS, Androidem a macOS.
 
 ### <a name="intune-moves-to-support-ios-10-and-later----2454656---"></a>Intune přechází k podpoře iOSu 10 a novějších verzí <!-- 2454656 -->  
 Registrace Intune, Portál společnosti a spravovaný prohlížeč nyní podporují pouze zařízení s iOSem verze 10 a novějších. Pokud chcete zjistit, na která zařízení nebo uživatele ve vaší organizaci to bude mít vliv, přejděte do Intune na webu Azure Portal > **Zařízení** > **Všechna zařízení**. Podrobnosti o verzi operačního systému zobrazíte tak, že si vyfiltrujete operační systém a potom kliknete na **Sloupce**. Požádejte tyto uživatele, aby si upgradovali zařízení na podporovanou verzi operačního systému.  
@@ -221,7 +245,7 @@ Postup vytvoření profilu Wi-Fi najdete v článku [Nastavení Wi-Fi pro zaří
 #### <a name="control-s-mode-on-windows-10-and-later-devices---public-preview----1958649---"></a>Řízení režimu S v zařízeních se systémem Windows 10 a novějších – verze Public Preview <!-- 1958649 -->
 Od této aktualizace funkcí můžete vytvářet profil konfigurace zařízení, který přepne zařízení s Windows 10 z režimu S nebo uživatelům v přepnutí zařízení z režimu S zabrání. Funkci najdete v části Intune > **Konfigurace zařízení** > **Profily** >  **Windows 10 a novější** > **Upgrade edice a přepnutí režimu**.
 Článek [Introducing Windows 10 in S mode](https://www.microsoft.com/windows/s-mode) (Představení Windows 10 v režimu S) poskytuje o režimu S podrobnější informace.
-Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (v období verze Preview).
+Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 
 #### <a name="windows-defender-atp-configuration-package-automatically-added-to-configuration-profile----2144658---"></a>Automatické přidání konfiguračního balíčku Ochrany ATP v programu Windows Defender do konfiguračního profilu <!-- 2144658 -->
@@ -230,7 +254,7 @@ Platí pro Windows 10 a novější.
 
 #### <a name="require-users-to-connect-during-device-setup---2311457--"></a>Povinnost připojit se během nastavení zařízení <!--2311457-->
 Nyní můžete nastavit profily zařízení tak, aby se během instalace Windows 10 muselo zařízení ještě před opuštěním stránky Síť připojit k síti. Funkce je sice ve verzi Preview, ale ve Windows Insider sestavení 1809 nebo novějších je toto nastavení povinné.
-Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (v období verze Preview).
+Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 
 #### <a name="restricts-apps-and-block-access-to-company-resources-on-ios-and-android-enterprise-devices----2451462---"></a>Omezení přístupu k aplikacím a blokování přístupu k firemním prostředkům v zařízeních s iOSem a Androidem Enterprise <!-- 2451462 -->
@@ -263,7 +287,7 @@ Pokud během registrace DEP neověřujete uživatele pomocí Průvodce nastaven�
 
 #### <a name="assign-a-user-and-friendly-name-to-an-autopilot-device---1346521---"></a>Přiřazení uživatele a jednoduchého názvu zařízení Autopilot <!--1346521 -->
 Nově můžete [přiřadit uživatele k jedinému zařízení Autopilot](enrollment-autopilot.md). Správci budou také moct dávat zařízením v programu AutoPilot popisné názvy, které uživatele při nastavování přivítají.
-Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (v období verze Preview).
+Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 #### <a name="use-vpp-device-licenses-to-pre-provision-the-company-portal-during-dep-enrollment----1608345---"></a>Použití licencí zařízení z programu VPP k předběžnému zřízení portálu společnosti během registrace do programu DEP <!-- 1608345 -->
 Licence zařízení z programu VPP (Volume Purchase Program) můžete teď použít k předběžnému zřízení Portálu společnosti během registrace do programu DEP (Device Enrollment Program neboli Program registrace zařízení). Pokud to chcete udělat, zadejte při [vytváření nebo úpravě profilu registrace](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) token VPP, který chcete použít k instalaci aplikace Portál společnosti. Dbejte na to, aby tokenu nevypršela platnost a abyste měli dost licencí pro aplikaci Portál společnosti. V případech, kdy platnost tokenu vyprší nebo dojdou licence, nabídne Intune instalaci aplikace Portál společnost z App Storu (při které se zobrazí výzva k zadání Apple ID).
@@ -275,11 +299,11 @@ Vyžaduje se potvrzení odstranění tokenu VPP (Volume Purchase Program), pokud
 V Intune můžete [blokovat registraci osobních zařízení s Windows](enrollment-restrictions-set.md#set-device-type-restrictions) do [ správy mobilních zařízení](windows-enroll.md). Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](manage-windows-pcs-with-microsoft-intune.md). Tato funkce se bude vydávat v příštích několika týdnech, takže ji v uživatelském rozhraní nemusíte vidět hned.
 
 #### <a name="specify-machine-name-patterns-in-an-autopilot-profile---1849855--"></a>Zadání vzoru pro názvy počítačů v profilu Autopilot <!--1849855-->
-Můžete [zadat šablonu pro názvy počítačů](enrollment-autopilot.md#create-an-autopilot-deployment-profile), která se použije ke generování a nastavení [názvu počítače](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) při registraci do programu AutoPilot. Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (v období verze Preview).
+Můžete [zadat šablonu pro názvy počítačů](enrollment-autopilot.md#create-an-autopilot-deployment-profile), která se použije ke generování a nastavení [názvu počítače](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) při registraci do programu AutoPilot. Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 
 #### <a name="for-windows-autopilot-profiles-hide-the-change-account-options-on-the-company-sign-in-page-and-domain-error-page---1901669---"></a>Skrytí volby změny účtu v profilech Windows Autopilot na přihlašovací stránce společnosti a na chybové stránce domény <!--1901669 -->
-Nyní jsou k dispozici [nové možnosti profilu Windows AutoPilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile), které správcům umožňují na přihlašovací stránce společnosti a na chybové stránce domény skrýt volbu změny účtu. Předpokladem skrytí těchto možností je, aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti. Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/en-us/windows-insider/at-work-pro/) (v období verze Preview).
+Nyní jsou k dispozici [nové možnosti profilu Windows AutoPilot](enrollment-autopilot.md#create-an-autopilot-deployment-profile), které správcům umožňují na přihlašovací stránce společnosti a na chybové stránce domény skrýt volbu změny účtu. Předpokladem skrytí těchto možností je, aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti. Platí pro: nejnovější build [Windows Insider](https://docs.microsoft.com/windows-insider/at-work-pro/) (v období verze Preview).
 
 
 
@@ -310,7 +334,7 @@ Na základě názorů zákazníků jsme přidali na web Portál společnosti nov
 - Vylepšený výkon u velkých katalogů aplikací
 - Lepší přístupnost pro všechny uživatele  
 
-Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/en-us/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny. Pokud si chcete prohlédnout ukázku vylepšených aplikací, přejděte na článek [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).  
+Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny. Pokud si chcete prohlédnout ukázku vylepšených aplikací, přejděte na článek [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).  
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
@@ -469,7 +493,7 @@ Jako správce můžete uvolnit licenci aplikace VPP pro iOS přiřazenou uživat
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
 #### <a name="select-device-categories-by-using-the-access-work-or-school-settings----1058963-eenotready---"></a>Výběr kategorií zařízení pomocí nastavení Přístup do práce nebo do školy <!-- 1058963 eenotready --> 
-Pokud jste povolili [mapování skupin zařízení](https://docs.microsoft.com/en-us/intune/device-group-mapping), uživatelům s Windows 10 se teď po registraci prostřednictvím tlačítka **Připojit** v **Nastavení** > **Účty** > **Přístup do práce nebo do školy** zobrazí výzva k výběru kategorie zařízení. 
+Pokud jste povolili [mapování skupin zařízení](https://docs.microsoft.com/intune/device-group-mapping), uživatelům s Windows 10 se teď po registraci prostřednictvím tlačítka **Připojit** v **Nastavení** > **Účty** > **Přístup do práce nebo do školy** zobrazí výzva k výběru kategorie zařízení. 
 
 #### <a name="use-samaccountname-as-the-account-username-for-email-profiles----1500307---"></a>Použití atributu sAMAccountName jako uživatelského jména účtu pro e-mailové profily <!-- 1500307 -->
 Můžete používat místní **sAMAccountName** jako uživatelské jméno účtu pro e-mailové profily v Androidu, iOSu a Windows 10. Můžete také získat doménu z atributu `domain` nebo `ntdomain` v Azure Active Directory (Azure AD). Nebo budete moct zadat vlastní statickou doménu.
@@ -678,8 +702,8 @@ Správci Intune mohou nastavit požadavek, aby se při spuštění aplikace povi
 #### <a name="line-of-business-lob-app-support-for-macos----1473977---"></a>Podpora obchodních aplikací (LOB) pro macOS <!-- 1473977 -->
 Microsoft Intune bude poskytovat možnost instalace obchodních aplikací pro macOS z portálu Azure Portal. Do Intune budete moct přidat obchodní aplikaci pro masOS poté, co ji předběžně zpracoval nástroj dostupný v GitHubu. Na portálu Azure Portal v okně **Intune** zvolte **Klientské aplikace**. V okně **Klientské aplikace** zvolte **Aplikace** > **Přidat**. V okně **Přidat aplikaci** vyberte **Obchodní aplikace**. 
 
-#### <a name="built-in-all-users-and-all-devices-group-for-android-for-work-afw-app-assignment----1813073---"></a>Předdefinované skupiny Všichni uživatelé a Všechna zařízení pro přiřazení aplikace pro Android for Work (AFW)<!-- 1813073 -->
-K přiřazení aplikace AFW můžete použít integrované skupiny **Všichni uživatelé** a **Všechna zařízení**. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
+#### <a name="built-in-all-users-and-all-devices-group-for-android-enterprise-work-profile-app-assignment----1813073---"></a>Předdefinované skupiny Všichni uživatelé a Všechna zařízení pro přiřazení aplikace pracovního profilu Android Enterprise <!-- 1813073 -->
+K přiřazení aplikace pracovního profilu Android Enterprise můžete použít předdefinované skupiny **Všichni uživatelé** a **Všechna zařízení**. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
 
 #### <a name="intune-will-reinstall-required-apps-that-are-uninstalled-by-users----1947010---"></a>Intune přeinstaluje požadované aplikace, které odinstalovali uživatelé <!-- 1947010 -->
 Pokud koncový uživatel odinstaluje některou z povinných aplikací, Intune nečeká na sedmidenní cyklus vyhodnocení a během 24 hodin ji automaticky znovu nainstaluje.
@@ -707,10 +731,10 @@ Po této aktualizaci mohou správci přímo v Intune na webu Azure Portal povoli
 
 Ve vzdělávacích profilech je k dispozici nové nastavení v kategorii **Tiskárny**: **Tiskárny**, **Výchozí tiskárna**, **Přidat nové tiskárny**.
 
-#### <a name="show-caller-id-in-personal-profile---android-for-work---1098984---"></a>Zobrazení ID volajícího v osobním profilu – Android for Work <!--1098984 -->
+#### <a name="show-caller-id-in-personal-profile---android-enterprise-work-profile---1098984---"></a>Zobrazení ID volajícího v osobním profilu – pracovní profil Android Enterprise <!--1098984 -->
 Při použití osobního profilu na zařízení nemusí koncoví uživatelé vidět podrobnosti ID volajícího z pracovního kontaktu. 
 
-Od této aktualizace je v části **Android for Work** > **Omezení zařízení** > **Nastavení pracovního profilu** k dispozici nové nastavení:
+Od této aktualizace je v části **Android Enterprise** > **Omezení zařízení** > **Nastavení pracovního profilu** k dispozici nové nastavení:
 - Zobrazit v osobním profilu ID volajícího pracovního kontaktu
 
 Pokud je povoleno (nenakonfigurováno), podrobnosti volajícího pracovního kontaktu se v osobním profilu zobrazují. V případě blokování se číslo volajícího pracovního kontaktu v osobním profilu nezobrazuje. 
@@ -736,12 +760,12 @@ Následující související technologie se při konfiguraci ochrany přihlašov
 #### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Použití vlastního názvu subjektu u certifikátu SCEP <!-- 2064190 -->
 V profilu certifikátu SCEP můžete u vlastního subjektu použít běžný název **OnPremisesSamAccountName**. Můžete například použít `CN={OnPremisesSamAccountName})`.
 
-####  <a name="block-camera-and-screen-captures-on-android-for-work----1098977---"></a>Blokování kamery a snímků obrazovky na Androidu for Work <!-- 1098977 -->
+####  <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles----1098977---"></a>Blokování kamery a snímků obrazovky v pracovních profilech Android Enterprise <!-- 1098977 -->
 Při konfiguraci omezení zařízení s Androidem jsou k dispozici dvě nové vlastnosti umožňující blokování: 
 - Kamera: Blokování přístupu ke všem kamerám na zařízení
 - Snímek obrazovky: Blokování vytváření snímků obrazovky a tím také ochrana obsahu před zobrazením na zobrazovacích zařízení, která nemají zabezpečený výstup videa
 
-Platí pro Android for Work.
+Platí pro pracovní profily Android Enterprise.
 
 
 ### <a name="device-enrollment"></a>Registrace zařízení
@@ -807,7 +831,7 @@ Aktualizovali jsme aplikaci Portál společnosti pro zařízení s macOS a zlep�
 Další informace najdete v článku o [posílání chyb ze zařízení s macOS](/intune-user-help/send-errors-macos).
 
 #### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10----1195010-wnready---"></a>Aplikace Portál společnosti Intune pro Windows 10 používá systém návrhu FDS (Fluent Design System) <!-- 1195010 WNready -->
-Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](https://docs.microsoft.com/en-us/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md).
+Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md).
 
 ## <a name="week-of-april-16-2018"></a>Týden od 16. dubna 2018
 
@@ -816,7 +840,7 @@ Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navig
 Když vytváříte nový profil VPN pro iOS, jsou teď k dispozici dvě možnosti: **Cisco AnyConnect** a **Cisco Legacy AnyConnect**. Profily Cisco AnyConnect podporují verzi 4.0.7x a novější. Stávající profily VPN Cisco AnyConnect pro iOS jsou označené jako **Cisco Legacy AnyConnect** a budou dál fungovat s Cisco AnyConnect 4.0.5x stejně jako dnes.
 
 > [!NOTE]
-> Tato změna platí jen pro iOS. Pro platformy Android, Android for Work a macOS bude dál existovat jenom jedna možnost Cisco AnyConnect.
+> Tato změna platí jen pro iOS. Pro Android, pracovní profily Android Enterprise a macOS bude dál existovat jenom jedna možnost Cisco AnyConnect.
 
 #### <a name="jamf-enrolled-macos-devices-can-now-register-with-intune----2370684---"></a>Zařízení s macOSem zaregistrovaná do Jamf se teď registrují do Intune <!-- 2370684 -->
 
@@ -872,7 +896,7 @@ Nově můžete chránit přístup k místním datům systému Exchange z Outlook
 
 Apple právě vydal macOS 10.14. Následně Intune začne podporovat macOS 10.12 a vyšší v prosinci 2018. 
 
-### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 
 Od prosince koncoví uživatelé zařízení s macOS 10.11 a staršími nebudou moci používat portál společnosti k registraci do Intune. Budou muset upgradovat svoje zařízení s macOS 10.12 nebo vyšší a upgradovat aplikaci Portál společnosti na nejnovější verzi, aby mohli i nadále přijímat podporu a nové funkce. 
 
@@ -886,13 +910,14 @@ macOS verze 10.12 a vyšší se aktuálně podporuje na:
 
 Po prosinci nebudou mít koncoví uživatelé, kteří mají zařízení kromě těch, která jsou uvedená výše, přístup k nejnovější verzi aplikace Portál společnosti pro macOS. Stávající zaregistrovaná zařízení s nepodporovanými verzemi macOS staršími než 10.12 se budou spravovat a zobrazovat i nadále v konzole správce Intune.
 
-### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 
-Požádejte vaše koncové uživatele, aby si do prosince 2018 upgradovali zařízení na podporovanou verzi operačního systému. 
+- Požádejte vaše koncové uživatele, aby si do prosince 2018 upgradovali zařízení na podporovanou verzi operačního systému. 
 - Podívejte se do sestav Intune v konzole Intune v Azure a zkontrolujte, jakých zařízení nebo uživatelů se to může týkat. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat dodatečné sloupce, které vám pomůžou identifikovat, kdo ve vaší organizaci má zařízení s macOS 10.11. 
 - Pokud používáte hybridní správu mobilních zařízení (MDM), přejděte v konzole nástroje Configuration Manager na Prostředky a kompatibilita > Zařízení, klikněte pravým tlačítkem na sloupce, abyste mohli přidat sloupce Operační systém a Verze klienta, a seřaďte je podle operačního systému. Připomínáme, že hybridní MDM je už zastaralé a měli byste co nejdříve přejít na Intune v Azure. 
  
-Další informace [https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)
+#### <a name="additional-information"></a>Další informace
+Další informace najdete v tématu [Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
  
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: nové prostředí pro podporu Intune u zákazníků Premier 
@@ -901,7 +926,7 @@ Jako zákazník Microsoft Premier aktuálně můžete používat portál Microso
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 Po 3. prosinci nebudete moct vytvářet žádosti o podporu v MPO.  Když se o to pokusíte, zobrazí se vám výzva, kterou nebude možné zrušit, k přesměrování na Intune v Azure. Zde můžete vytvořit žádost o podporu, která se bude směrovat na podporu Microsoftu vyhrazenou pro Intune, k včasnému diagnostikování a vyřešení vašeho problému. Žádosti o podporu vytvořené v MPO nelze zobrazit na webu Azure Portal, takže byste měli vytváření žádosti o podporu v MPO zastavit.  
 
-Pokud používáte hybridní správu mobilních zařízení (hybridní MDM) nebo spolusprávu, můžete nadále používat MPO k vytváření žádostí o podporu pro nástroj ConfigMgr, ale žádosti o podporu pro Intune vytvářejte pomocí webu Azure Portal. Připomínáme, že hybridní MDM je zastaralé a měli byste si co nejdříve naplánovat přechod na Intune v Azure. Další informace najdete v tématu Přesun z hybridní správy mobilních zařízení na Intune v Azure.
+Pokud používáte hybridní správu mobilních zařízení (hybridní MDM) nebo spolusprávu, můžete nadále používat MPO k vytváření žádostí o podporu pro nástroj ConfigMgr, ale žádosti o podporu pro Intune vytvářejte pomocí webu Azure Portal. Připomínáme, že hybridní MDM je zastaralé a měli byste si co nejdříve naplánovat přechod na Intune v Azure. Další informace najdete v tématu o [přechodu z hybridní správy mobilních zařízení na Intune v Azure](https://aka.ms/hybrid_notification).
 
 Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služby Intune a Správce podpory služeb můžou vytvářet lístky podpory na webu Azure Portal.
 
@@ -912,7 +937,8 @@ Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služ
 - Další informace a užitečné odkazy získáte kliknutím na Další informace.
 
 #### <a name="additional-information"></a>Další informace
-[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+Další informace najdete v [blogovém příspěvku technické podpory pro Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
+
 
 ### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Provedení akce: Aktualizujte prosím v Intune nastavení hesla v zásadách omezení nebo dodržování předpisů u zařízení s Androidem
 Intune pro zařízení s Androidem 4.4 nebo vyšším odebere dostupný typ hesla Výchozí ze zařízení (Výchozí nastavení zařízení). Vzhledem k rozdílům v platformách Android a výchozích nastaveních zařízení nakládá zařízení s těmito zásadami často jako s volitelnými. Abychom odstranili nejasnost, kdy je toto nastavení v Androidu vynucované, v nadcházející verzi toto nastavení odebereme. 

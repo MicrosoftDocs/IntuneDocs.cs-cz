@@ -15,12 +15,12 @@ ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c2774a8172eb389742a3fdbf805717b6bc134b43
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: f11d1a0f51935e1bcb7318c7b0c7ba674ba2d54b
+ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866367"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49357100"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -32,7 +32,7 @@ Samostatné využití Intune vám poskytuje širší možnosti správy aplikací
 - Klient Windows 10 musí splňovat tyto předpoklady: 
     - musí být připojen ke službě Azure Active Directory (AAD) nebo hybridní službě Azure Active Directory, a
     - musí být zaregistrován v Intune (spravovaný přes MDM).
-- Ve veřejné verzi Preview je velikost aplikace Windows omezená na 8 GB na jednu aplikaci. 
+- Ve veřejné verzi Preview je velikost aplikace Windows omezená na 2 GB na jednu aplikaci. 
 
 > [!NOTE]
 > Momentálně testujeme edice Pro a Education verze 1607 systému Windows 10 a budeme rádi, když nám napíšete svůj názor.
@@ -51,7 +51,7 @@ K předběžnému zpracování aplikací Win32 použijte [nástroj pro příprav
 |    `-h`     |    Nápověda    |
 |    `-c <setup_folder>`     |    Instalační složka pro všechny instalační soubory    |
 |   ` -s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
-|    `-o <output_file>`     |    Výstupní složka pro vygenerovaný soubor *.intunewin*    |
+|    `-o <output_folder>`     |    Výstupní složka pro vygenerovaný soubor *.intunewin*    |
 |    `-q`       |    Tichý režim    |
 
 ### <a name="example-commands"></a>Příklady příkazů

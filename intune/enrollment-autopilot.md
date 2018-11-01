@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: b6381a7a5a8032340910d2c8ff2a0f7db91ef2dd
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: aa51cbea1ab1ea5f1bfc903a17638192aca59326
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828121"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075893"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows pomocí Windows Autopilotu  
 Windows Autopilot zjednodušuje registraci zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -152,6 +152,16 @@ Pokud nemáte zájem o správu mobilních zařízení, můžete Autopilot použ�
 - Zobrazit změny v přiřazeních profilu provedených na jiném portálu
 - Synchronizovat přiřazení profilu provedená na jiném portálu
 - Zobrazit změny v seznamu zařízení, které byly provedeny na jiném portálu
+
+## <a name="redeploying-windows-autopilot"></a>Opětovné nasazení Windows Autopilotu
+
+Zařízení s Windows můžete seskupit podle ID korelátoru, pokud se registrují s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. [Atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) se automaticky nastaví tak, aby odpovídal nastavení OfflineAutopilotprofile-<correlator ID>. Umožní se tím, aby se pro offline registrace Autopilotu vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru pomocí atributu enrollmentprofileName.
+
+Pokud upgradujete starší verze Windows, které nepodporují registraci Autopilotu, můžete použít offline profil Autopilot. Autopilot může pomoct při čisté instalaci systému Windows 10 1809 nebo novějšího. Jako součást offline profilu můžete zadat ID korelátoru. 
+
+UPOZORNĚNÍ: ID korelátoru není v Intune přednastavený, takže uživatelé můžou při registraci zvolit libovolný ID korelátoru. Pokud uživatel vytvoří ID korelátoru odpovídající názvu profilu Autopilot nebo Apple DEP, přidá se zařízení do libovolné dynamické skupiny Azure AD na základě atributu enrollmentProfileName. Pokud se chcete tomuto konfliktu vyhnout:
+- Vytvářejte pravidla dynamických skupin vždy tak, aby se porovnávala *celá* hodnota atributu enrollmentProfileName.
+- Nikdy nedávejte profilům Autopilot nebo Apple DEP název, který začíná textem „OfflineAutopilotprofile-“.
 
 ## <a name="next-steps"></a>Další kroky
 Po konfiguraci Windows Autopilotu pro registrovaná zařízení s Windows 10 zjistěte, jak taková zařízení spravovat. Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-management).

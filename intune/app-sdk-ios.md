@@ -14,12 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: b707fcae4af332b13d10e343a84ace801c88c2fd
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 4b7a759b574b44a07499597e89627f70b99e5496
+ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866418"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49643089"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -144,7 +144,9 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
 5. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
 
-6. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Nástroj má 3 parametry:
+6. Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že [klíč NSFaceIDUsageDescription v souboru Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
+
+7. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Tento nástroj má tři parametry:
 
    |Vlastnost|Jak ji použít|
    |---------------|--------------------------------|
@@ -153,9 +155,6 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    |- o |  (Volitelné) `<Path to the output plist>` |
 
 Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj je idempotentní a po provedení změn souboru Info.plist dané aplikace nebo nároků by se měl spustit znovu. Nejnovější verzi tohoto nástroje byste měli stáhnout a spustit také při aktualizaci Intune SDK, pokud se v nejnovější verzi změnily požadavky na konfiguraci souboru Info.plist.
-
-> [!NOTE]
-> Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že klíč `NSFaceIDUsageDescription` info.plist má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 

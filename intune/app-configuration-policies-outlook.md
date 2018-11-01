@@ -4,6 +4,7 @@ description: Vytvořte zásady konfigurace, které nastaví Microsoft Outlook pr
 keywords: ''
 author: Erikre
 ms.author: erikre
+ms.reviewer: smithre4
 manager: dougeby
 ms.date: 10/04/2018
 ms.topic: article
@@ -12,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 7fc9f34bbd3d14ac4291582247b1e45169c2cccc
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 24ed1a895dd3e4cad6111b40913b43fa9c6a3cec
+ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828726"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48903518"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Nastavení konfigurace Microsoft Outlooku 
 
@@ -29,27 +30,15 @@ Pokud chcete vytvořit zásady konfigurace aplikací pro spravovaná zařízení
 
 Při přidávání zásad konfigurace v Intune můžete nastavit konkrétní nastavení pro konfiguraci Microsoft Outlooku. V podokně **Nastavení konfigurace** můžete nastavit konfiguraci e-mailového účtu.
 
-### <a name="email-account-settings"></a>Nastavení e-mailového účtu
+### <a name="basic-authentication-email-account-settings"></a>Nastavení e-mailového účtu s využitím základního ověřování
+Outlook pro iOS a Android nabízí správcům Exchange možnost „odeslat“ konfigurace účtů svým místním uživatelům, kteří využívají základní ověřování pomocí protokolu ActiveSync. Další informace najdete v tématu o [nastavení účtu v Outlooku pro iOS a Android s využitím základního ověřování](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/account-setup). Pokud chcete povolit konfiguraci nastavení účtu, můžete nakonfigurovat následující nastavení:
 
-Následující nastavení konfigurace jsou specifická pro Microsoft Outlook.
-
-- **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru.
+- **E-mailový server**: Zadejte název hostitele místního Exchange Serveru (např. mail.contoso.com).
 - **Název e-mailového účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
-- **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá od služby Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+- **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Vaše možnosti jsou:
   - **Hlavní název uživatele**: Získá jméno, například `user1` nebo `user1@contoso.com`.
   - **Primární adresa SMTP**: Získá jméno ve formátu e-mailové adresy, například `user1@contoso.com`.
-  - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`.
-
-    Dále zadejte:  
-    - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
-
-      Pokud se rozhodnete získat atributy ze služby **AAD**, zadejte:
-      - **Atribut názvu domény uživatele z AAD**: Zvolte, jestli se má získat atribut **Úplný název domény** nebo **Název NetBIOS** uživatele.
-
-      Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Vlastní název domény, který se má použít**: Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
-
-- **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
+- **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`). Doporučuje se vybrat možnost **Primární adresa SMTP**.
 - **Doména účtu**: (volitelné) Doména účtu.
 
 ## <a name="next-steps"></a>Další kroky

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 10/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,21 +15,23 @@ ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 61e2ec9def6ecba265521cf801322d592dd4dac9
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
+ms.openlocfilehash: 61bb874fd914c69669197110ee5901ccfbc3f594
+ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866350"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49075606"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 
 Microsoft Intune aktuálně na zařízeních s Windows 10 podporuje různé typy aplikací a scénářů nasazení. Po přidání aplikace do Intune ji můžete přiřadit uživatelům a zařízením. Následující informace poskytují další podrobnosti týkající se podporovaných scénářů pro Windows 10. Kromě toho také poskytují klíčové podrobnosti, které byste při nasazování aplikací do systému Windows neměli opomenout. 
 
-Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů aplikací pro Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
+Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů aplikací pro Windows patří **.msi**, **.appx** a **.appxbundle**.  
 
 > [!Note]
-> Minimální potřebnou aktualizací Windows 10 pro nasazování aplikací v kontextu zařízení je [KB4100403 z 23. května 2018 (Číslo sestavení operačního systému 17134.81)](https://support.microsoft.com/en-us/help/4100403/windows-10-update-kb4100403).
+> Minimálními potřebnými aktualizacemi Windows 10 pro nasazování moderních aplikací jsou tyto:
+> - Pro Windows 10 1803: [KB4100403 z 23. května 2018 (číslo sestavení operačního systému 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403)
+> - Pro Windows 10 1709: [KB4284822 z 21. června 2018 (číslo sestavení operačního systému 16299.522)](https://support.microsoft.com/help/4284822)
 
 ## <a name="windows-10-line-of-business-apps"></a>Obchodní aplikace pro Windows 10
 
@@ -44,8 +46,13 @@ V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 ins
 
 - **Kontext uživatele**: když se aplikace nasadí v kontextu uživatele, spravovaná aplikace se nainstaluje konkrétnímu uživateli na zařízení, jakmile se k němu přihlásí. Instalace aplikace úspěšné neproběhne, dokud se uživatel k zařízení nepřihlásí. 
     - V kontextu uživatele je možné nasadit moderní obchodní aplikace a aplikace pro Microsoft Store pro firmy (online i offline) s podporou záměru Povinné i K dispozici.
+    - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **uživatelském režimu** nebo v **duálním režimu** s podporou záměru **Povinné** i **K dispozici**. 
 - **Kontext zařízení**: když se aplikace nasadí v kontextu zařízení, spravovaná aplikace se pomocí Intune nainstaluje do zařízení přímo.
     - V kontextu zařízení je možné nasadit jen moderní obchodní aplikace a online licencované aplikace pro Microsoft Store pro firmy s podporou pouze záměru Povinné.
+    - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **režimu počítače** nebo v **duálním režimu** jenom s podporou záměru **Povinné**.
+
+> [!NOTE]
+> U aplikací Win32 vytvořených jako aplikace **duálního režimu** budete muset vy (správce) vybrat, jestli bude příslušná aplikace pro všechna přiřazení spojená s danou instancí fungovat jako aplikace **uživatelského režimu** nebo **režimu počítače**. Kontext nasazení nelze změnit pro jednotlivé přiřazení.  
 
 Když se aplikace nasadí v kontextu zařízení, instalace proběhne úspěšně pouze v případě, že zařízení kontext zařízení podporuje. Kromě toho nasazení v kontextu zařízení obsahuje následující podmínky:
 - Pokud se aplikace nasadí v kontextu zařízení a cílí na uživatele, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:
