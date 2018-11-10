@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 1a70b6369bab130918bad472172995e6296ee4a6
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
+ms.openlocfilehash: 226713d893e05c2c2aeea49cde2ce92591d06391
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391565"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915695"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -153,7 +153,7 @@ Zásady dodržování předpisů zařízeními se dají používat také bez pod
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
 Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Zařízení s Windows 10 verze 1803 a novějšími je doporučeno nasadit do skupin zařízení, *pokud* primární uživatel zařízení nezaregistroval. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
 
-Výchozí možnost **Nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením) zahrnuje:
+Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Patří k nim:
 
 - **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
 
@@ -171,7 +171,7 @@ Výchozí možnost **Nastavení zásad dodržování předpisů** (Azure Portal 
 
 - **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní.
 
-Všechna zařízení mají **Výchozí zásadu dodržování předpisů zařízením** (Portal Azure > Dodržování předpisů zařízením > Dodržování zásad). K monitorování těchto nastavení použijte tuto výchozí zásadu.
+Všechna zařízení mají **integrované zásady dodržování předpisů zařízením** (Azure Portal > Dodržování předpisů zařízením > Dodržování zásad). Tyto integrované zásady můžete použít k monitorování nastavení.
 
 Další informace o tom, jak dlouho trvá, než mobilní zařízení načte zásady po jejich nasazení, najdete v článku [Řešení potíží s profily zařízení](device-profile-troubleshoot.md#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 

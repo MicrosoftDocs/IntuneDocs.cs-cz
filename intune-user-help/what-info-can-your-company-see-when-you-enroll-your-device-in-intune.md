@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: ad949cc9d20e0e46ab986b4646059af733018255
-ms.sourcegitcommit: ada99fefe9a612ed753420116f8c801ac4bf0934
+ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36232802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679249"
 ---
 # <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jaké informace moje společnost uvidí, když si zaregistruji zařízení?
 
@@ -50,5 +50,5 @@ Při registraci zařízení do Microsoft Intune společnost nevidí vaše osobn�
 
 -  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení.
 -  Poloha: Vaše společnost nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Inventář aplikací: Pokud vaše společnost používá ochranu před mobilními hrozbami, bude k dispozici více podrobností o aplikacích, které jsou na vašem zařízení s iOSem. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
+- Inventář aplikací: Pokud společnost používá ochranu před mobilními hrozbami, může si zobrazit podrobnější informace o aplikacích, které máte na svém zařízení s iOSem. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
 - Informace o síti: Některé informace o připojení k síti pro zařízení Android mohou být k dispozici u podpory vaší společnosti. Pokud vaše společnost například vyžaduje, aby zařízení zůstala v určité budově, určí zařízení síť, které je připojeno. 

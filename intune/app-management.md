@@ -15,12 +15,12 @@ ms.assetid: 1975a2dc-3a14-4cb9-9afb-e2ba01a1c51b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 99d217c2d1960a1ca163bf697bfbd28e5406b58f
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 25236453f0440978eda34e3a1a8b1b93daf4c6e1
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075842"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025164"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -94,7 +94,7 @@ Další informace o této části najdete v tématu [Správa aplikací](app-mana
 - **Licence aplikací**: Tady můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi. Více informací najdete v následujících tématech:
     - [Aplikace programu hromadných nákupů pro iOS](vpp-apps-ios.md)
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
-- **Zjištěné aplikace**: Tady můžete zobrazit všechny aplikace přiřazené přes Intune a nainstalované v zařízení. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Zjištěné aplikace:** Můžete zobrazit aplikace přiřazené z Intune nebo nainstalované v zařízení. Další informace najdete v tématu [Zobrazení podrobností o zařízení v Intune](device-inventory.md).
 - **Stav instalace aplikace**: Tady můžete zobrazit stav vytvořeného přiřazení aplikace. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
 - **Stav ochrany aplikací**: Tady můžete zobrazit stav zásad ochrany aplikací pro vámi vybraného uživatele.
 - **Protokoly auditu**: Tady můžete zobrazit aktivity všech správců IT související s aplikacemi v Intune.

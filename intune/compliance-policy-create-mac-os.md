@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 6bbb09944db602b4b5a70c89e8089b1692c45223
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
+ms.openlocfilehash: a0d9d0ac3c0cd8804ffc401cd3041d5b9a17e64f
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321437"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236403"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Přidání zásad dodržování předpisů pro zařízení s macOS v Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zásady dodržování předpisů Intune pro zařízení s macOS určují pravidla a nastavení, která musí zařízení s macOS splňovat, aby dodržovalo předpisy. Když používáte zásady dodržování předpisů zařízením s podmíněným přístupem, můžete povolit nebo blokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro každou platformu můžete vytvořit na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
 
@@ -90,6 +88,17 @@ Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomoc
 - **Firewall**: **Aktivací** umožníte ochranu zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. Nastavení **Nenakonfigurováno** (výchozí) ponechá firewall vypnutý a síťový provoz bude povolený (neblokovaný).
 - **Příchozí připojení**: **Blokuje** všechna příchozí síťová připojení s výjimkou připojení potřebných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Toto nastavení blokuje také všechny služby sdílení včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby iTunes a dalších. Nastavení **Nenakonfigurováno** (výchozí) povoluje příchozí připojení a služby sdílení. 
 - **Neviditelný režim**: **Aktivací** neviditelného režimu zakážete zařízení odpovídat na zjišťovací požadavky, které můžou provádět uživatelé se zlými úmysly. Při aktivaci této možnosti bude zařízení oprávněným aplikacím dále odpovídat na příchozí požadavky. Nastavení **Nenakonfigurováno** (výchozí) ponechá neviditelný režim vypnutý.
+
+### <a name="gatekeeper"></a>Gatekeeper
+
+**Povolit aplikace stažené z těchto míst**: Povolí instalaci podporovaných aplikací na vaše zařízení z různých umístění. Možnosti umístění:
+
+- **Nenakonfigurováno**: Toto je výchozí možnost. Možnost Gatekeeper nemá žádný vliv na dodržování nebo nedodržování předpisů. 
+- **Mac App Store**: Povolí instalaci aplikací pouze z Mac App Storu. Aplikace jiných výrobců ani identifikovaných vývojářů nelze nainstalovat. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo Mac App Store, považuje se zařízení za nevyhovující předpisům.
+- **Mac App Store a identifikovaní vývojáři**: Povolí instalaci aplikací z Mac App Storu a od identifikovaných vývojářů. macOS zkontroluje identitu vývojářů a provede několik dalších kontrol, aby ověřil integritu aplikace. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo tyto možnosti, považuje se zařízení za nevyhovující předpisům.
+- **Kdekoli**: Aplikace je možné instalovat odkudkoli a od kteréhokoli vývojáře. Jedná se o nejméně bezpečnou možnost.
+
+Další podrobnosti najdete v dokumentaci od společnosti Apple v tématu, které se věnuje [Gatekeeperu v systému macOS](https://support.apple.com/HT202491).
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

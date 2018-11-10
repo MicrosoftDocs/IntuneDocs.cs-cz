@@ -15,12 +15,12 @@ ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a4468f2e6919349095d934790740afc8c347282
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2b52265bb9b3df800c0e13450a2154e46098a933
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410816"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
 
@@ -37,21 +37,23 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo jako správce služby Intune. Intune najdete na webu Azure Portal, když zvolíte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo jako správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="create-a-group"></a>Vytvoření skupiny
+
+Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých startů.
+
 1. Po otevření podokna **Microsoft Intune** vyberte **Skupiny** > **Nová skupina**.
-2. V podokně **Skupina** vyberte **Typ skupiny** > **Zabezpečení**.
+2. V rozevíracím seznamu **Typ skupiny** vyberte **Zabezpečení**.
 3. V poli **Název** nastavte „Contoso Testers“ a přidejte **popis** skupiny.
-4. **Typ členství** nastavte na **Přiřazené**. 
-5. Klikněte na **Členové** a ze seznamu vyberte skupinu **Členové**.
+4. **Typ členství** nastavte na **Přiřazeno**. 
+5. Klikněte na **Členové** a ze seznamu vyberte pro skupinu alespoň jednoho člena.
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-use-groups-01.png)
 
-6. Klikněte na **Vybrat**.
-7. Klikněte na **Vytvořit**.
+6. Klikněte na **Vybrat** > **Vytvořit**.
 
-Pokud se vám podařilo skupinu vytvořit, zobrazí se v seznamu **Všechny skupiny**. 
+Po úspěšném vytvoření se skupina zobrazí v seznamu **Všechny skupiny**. 
 
 ## <a name="next-steps"></a>Další kroky
 

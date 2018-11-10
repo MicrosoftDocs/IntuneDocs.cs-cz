@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 11/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 0d1fe40b1cb5a496b3111b2630718a3dd17486ab
-ms.sourcegitcommit: 63b74a60aafa8d2d6af0594448ae0471fbd79194
+ms.openlocfilehash: c30d20592a95f7894bb040f9e8fe5a2e3ddd0166
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494009"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915746"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
 
@@ -89,4 +89,15 @@ Když přiřadíte aplikaci z Microsoft Storu pro firmy, využije licenci každ�
 * Omezit rozsah aktuálního přiřazení tak, aby jeho cílem byli jen uživatelé, pro které máte dost licencí.
 * Zakoupit v Microsoft Storu pro firmy další kopie příslušné aplikace.
 
+## <a name="remove-apps"></a>Odebrání aplikací
 
+Pokud chcete odebrat aplikaci, která se synchronizuje s Microsoft Storem pro firmy, musíte se k Microsoft Storu pro firmy přihlásit a aplikaci vrátit.
+
+![Snímek obrazovky s podrobnostmi o odebírané aplikaci](./media/microsoft-store-for-business-01.png)
+
+> [!NOTE]
+> Pouhé odebrání aplikace ze zobrazení v soukromém obchodu nezabrání Intune v její synchronizaci. Aplikaci musíte vrátit.
+
+## <a name="next-steps"></a>Další kroky
+
+- [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md)

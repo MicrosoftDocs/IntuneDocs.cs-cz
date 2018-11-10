@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/02/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 ms.custom: intune-azure
-ms.openlocfilehash: 239c8d5dc4143ba91c78b9b5c502c7a20b101417
-ms.sourcegitcommit: 7afa90264a2098453885be3d37655ae1a32ca67d
+ms.openlocfilehash: 90756da72ecdcbd049b14b45014433bb5843a5ed
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47229071"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236658"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -96,13 +96,14 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 | Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Vyhovuje Intune   | Název typu zařízení                                                                                                     |
 | Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
+| Instalace aplikace | Určuje, jestli byla instalace aplikace na konkrétním zařízení úspěšná nebo neúspěšná. |
 | Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
 | Verze operačního systému         | Číslo verze operačního systému zařízení.                                                                                  |
 | Poslední vrácení se změnami      | Název typu zařízení                                                                                                     |
 
 ### <a name="app-protection-status"></a>Stav ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility Solution (EMS), jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility Solution (EMS), jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -115,7 +116,7 @@ Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility 
 
 ## <a name="app-protection-policies-reference"></a>Informace o zásadách ochrany aplikací
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 ### <a name="properties"></a>Vlastnosti
 
@@ -148,7 +149,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ## <a name="compliance-policies-reference"></a>Informace o zásadách dodržování předpisů
 
-Tyto zásady zajišťují, že zařízení používaná k přístupu k firemním aplikacím a datům dodržují určitá pravidla, například že přístup k zařízení je chráněný kódem PIN a data ukládaná do zařízení jsou šifrována.
+Tyto zásady zajišťují, aby zařízení používaná pro přístup k firemním aplikacím a datům dodržovala určitá pravidla, třeba že pro přístup k zařízení je potřeba PIN nebo že data uložená v zařízení budou šifrovaná.
 
 ### <a name="properties"></a>Vlastnosti
 
@@ -180,7 +181,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -193,7 +194,7 @@ Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozic
 
 ## <a name="configuration-policies-reference"></a>Informace o zásadách konfigurace
 
-Pro mobilní aplikace se specifickou konfigurací podle dodavatele jsou k dispozici zásady konfigurace aplikací. 
+Pro mobilní aplikace se specifickou konfigurací podle dodavatele jsou k dispozici zásady konfigurace aplikací. 
 
 ### <a name="properties"></a>Vlastnosti
 
@@ -226,7 +227,7 @@ Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní
 
 ### <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|

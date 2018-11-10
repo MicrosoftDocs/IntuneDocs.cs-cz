@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 66426e9e22c2624b9828440906e3b1b947f4b60a
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
+ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581587"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50410765"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvoření a přiřazení vlastní role
 
@@ -47,7 +47,7 @@ Když vytvoříte vlastní roli, můžete nastavit oprávnění pro širokou šk
 
 Operátor zabezpečení může použít nová oprávnění až poté, co danou roli přiřadíte skupině obsahující uživatele zabezpečení.
 
-1. V Intune zvolte **Role** > **Všechny role** > **Helpdesk pro vzdálené zařízení**.
+1. V Intune zvolte **Role** > **Všechny role** > **Operace zabezpečení**.
 2. V části **Role Intune** zvolte **Přiřazení** > **Přiřadit**.
 3. Do pole **Název přiřazení** zadejte *Operace zabezpečení*.
 4. Zvolte **Členové (Skupiny)** > **Přidat**.

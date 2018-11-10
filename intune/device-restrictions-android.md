@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 731f6f5baaa150210765313ffc60133623e52923
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 2e3b356cc7c09b00916c24340dbbe1923540889b
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43313695"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915729"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Nastavení omezení pro zařízení se systémy Android a Samsung Knox Standard – Intune
 
@@ -39,7 +39,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Zeměpisná poloha (jenom Samsung Knox)** – povolí zařízení využívat informace o poloze.
 - **Vypnutí (jenom Samsung Knox)** – Povolí uživateli vypnout zařízení.<br>Pokud je tato možnost zakázaná, nepůjde nastavit ani možnost **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**.
 - **Snímek obrazovky (jenom Samsung Knox)** – umožňuje uživateli zachytit obsah obrazovky v podobě obrázku.
-- **Hlasový asistent (jenom Samsung Knox)** – povolí v zařízení používat software hlasového asistenta.
+- **Hlasový asistent (jenom Samsung KNOX)** – umožňuje na zařízení používat službu a aplikaci S Voice. Neplatí to pro virtuálního asistenta Bixby ani pro hlasového asistenta, který usnadňuje přístup tím, že nahlas čte obsah obrazovky.
 - **YouTube (jenom Samsung Knox)** – povolí v zařízení používat aplikaci YouTube.
 - **Sdílená zařízení (jenom Samsung Knox)** – umožňuje nakonfigurovat spravované zařízení se zabezpečením Samsung Knox Standard jako sdílené. V tomto režimu se koncoví uživatelé můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení zůstává spravované bez ohledu na to, jestli se používá.<br>Při použití ve spojení s profilem certifikátu SCEP umožňuje tato funkce koncovým uživatelům sdílet zařízení se stejnou skupinou aplikací pro všechny uživatele, ale s vlastním uživatelským certifikátem SCEP.  Po odhlášení uživatelů se všechna data aplikací vymažou.  Tato funkce je omezená jenom na obchodní aplikace.
 - **Zablokovat změny data a času (Samsung Knox)** – zakáže uživateli v zařízení měnit nastavení data a času. 

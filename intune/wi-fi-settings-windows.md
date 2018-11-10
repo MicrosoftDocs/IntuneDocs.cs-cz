@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/30/2018
+ms.date: 10/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,28 +13,66 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e15a7b034c9277fcd960e8c704f4318f0f5c1da2
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
+ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329643"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236471"
 ---
-# <a name="wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
+# <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
-Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje na zařízení s Windows 10 nebo novější verzí. Vaše možnosti jsou:
+Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na zařízení s Windows 10 a novějšími verzemi. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, použití předsdíleného klíče a další.
 
-- Základní
-- Enterprise
+Těmito nastaveními se zabývá tento článek.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 [Vytvořte profil zařízení v Microsoft Intune](device-profile-create.md).
 
-## <a name="settings-for-basic-and-enterprise-profiles"></a>Nastavení pro základní a podnikové profily
+## <a name="basic-profile"></a>Základní profil
+
+- **Typ Wi-Fi**: Zvolte **Základní**. 
 
 - **Název Wi-Fi (SSID):** zkratka pro Service Set Identifier. Tato hodnota je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Nakonfigurovaný **Název připojení** ale uživatelé uvidí jen při volbě připojení.
+
 - **Název připojení:** Zadejte popisný název připojení Wi-Fi. Zadaný text uživatelé uvidí na svém zařízení při procházení dostupných připojení.
+
+- **Připojit se automaticky, pokud je v dosahu:** Když nastavíte **Ano**, zařízení se budou k této síti připojovat automaticky, když budou v dosahu. Když nastavíte **Ne**, zařízení se automaticky připojovat nebudou.
+
+  - **Připojit k upřednostňovanější síti, pokud je k dispozici:** Pokud jsou zařízení v dosahu upřednostňovanější sítě, zvolte **Ano**, aby se k ní připojila. Pokud chcete použít síť Wi-Fi v tomto konfiguračním profilu, zvolte **Ne**.
+
+    Například můžete vytvořit síť Wi-Fi **ContosoCorp** a v rámci tohoto konfiguračního profilu **ContosoCorp** použít. V dosahu máte i Wi-Fi **ContosoGuest**. Když jsou v dosahu vaše podniková zařízení, budete chtít, aby se automaticky připojovala k síti **ContosoCorp**. V takové situaci vlastnost **Připojit k upřednostňovanější síti, pokud je k dispozici** nastavte na **Ne**.
+
+  - **Připojit se k této síti i v případě, že nevysílá svůj identifikátor SSID:** Pokud chcete, aby se konfigurační profil připojoval k vaší síti automaticky, i když je síť skrytá (její SSID se nevysílá veřejně), zvolte **Ano**. Pokud nechcete, aby se tento konfigurační profil připojoval ke skryté síti, zvolte **Ne**.
+
+- **Limit připojení účtovaného podle objemu dat**: Správce může zvolit způsob měření provozu v síti. Aplikace pak mohou na základě tohoto nastavení upravit svůj provoz v síti. Možnosti:
+
+  - **Neomezené**: Toto je výchozí možnost. Toto připojení se neměří a provoz není nijak omezen.
+  - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
+  - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech (cena za bajt).
+
+- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Možnosti:
+  - **Otevřené (bez zabezpečení):** tuto možnost použijte jenom v případě, že síť není zabezpečená.
+  - **WPA/WPA2-osobní**: Jedná se o možnost s vyšším zabezpečením, která se obvykle používá pro připojení Wi-Fi. Z důvodu dalšího zvýšení zabezpečení můžete zadat také heslo předsdíleného klíče nebo síťový klíč. 
+
+    - **Předsdílený klíč** (PSK): Volitelné. Tato možnost se zobrazí, pokud jako typ zabezpečení vyberete **WPA/WPA2-osobní**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK. Zadejte řetězec, jehož délka je 8 až 64 znaků. Pokud mají vaše heslo nebo síťový klíč 64 znaků, zadejte šestnáctkové znaky.
+
+- **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
+  - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
+  - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
+  - **Automaticky nakonfigurovat**: Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
+
+Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
+
+## <a name="enterprise-profile"></a>Profil Enterprise
+
+- **Typ Wi-Fi**: Zvolte **Enterprise**. 
+
+- **Název Wi-Fi (SSID):** zkratka pro Service Set Identifier. Tato hodnota je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Nakonfigurovaný **Název připojení** ale uživatelé uvidí jen při volbě připojení.
+
+- **Název připojení:** Zadejte popisný název připojení Wi-Fi. Zadaný text uživatelé uvidí na svém zařízení při procházení dostupných připojení.
+
 - **Připojit se automaticky, pokud je v dosahu:** Když nastavíte **Ano**, zařízení se budou k této síti připojovat automaticky, když budou v dosahu. Když nastavíte **Ne**, zařízení se automaticky připojovat nebudou.
   - **Připojit k upřednostňovanější síti, pokud je k dispozici:** Pokud jsou zařízení v dosahu upřednostňovanější sítě, zvolte **Ano**, aby se k ní připojila. Pokud chcete použít síť Wi-Fi v tomto konfiguračním profilu, zvolte **Ne**.
 
@@ -42,18 +80,11 @@ Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje n
 
   - **Připojit se k této síti i v případě, že nevysílá svůj identifikátor SSID:** Pokud chcete, aby se konfigurační profil připojoval k vaší síti automaticky, i když je síť skrytá (její SSID se nevysílá veřejně), zvolte **Ano**. Pokud nechcete, aby se tento konfigurační profil připojoval ke skryté síti, zvolte **Ne**.
 
-- **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
-  - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
-  - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
-  - **Automaticky nakonfigurovat:** Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
+- **Limit připojení účtovaného podle objemu dat**: Správce může zvolit způsob měření provozu v síti. Aplikace pak mohou na základě tohoto nastavení upravit svůj provoz v síti. Možnosti:
 
-## <a name="settings-for-basic-profiles-only"></a>Nastavení jenom pro základní profily
-
-- **Typ zabezpečení bezdrátové sítě**: Zadejte protokol zabezpečení, který bude ověřovat zařízení v síti. Možnosti:
-  - **Otevřené (bez zabezpečení):** tuto možnost použijte jenom v případě, že síť není zabezpečená.
-  - **WPA/WPA2-osobní**
-
-## <a name="settings-for-enterprise-profiles-only"></a>Nastavení jenom pro podnikové profily
+  - **Neomezené**: Toto je výchozí možnost. Toto připojení se neměří a provoz není nijak omezen.
+  - **Pevné**: Tuto možnost použijte, pokud je síť nakonfigurovaná s pevně stanoveným limitem síťového provozu. Po dosažení limitu se přístup k síti zakáže.
+  - **Proměnná**: Tuto možnost použijte, pokud se síťový provoz účtuje po bajtech.
 
 - **Jednotné přihlašování:** Umožňuje vám nakonfigurovat jednotné přihlašování (SSO), u kterého se přihlašovací údaje k počítači i síti Wi-Fi sdílejí. Možnosti:
   - **Zakázat:** Jednotné přihlašování se zakáže. Uživatel se musí v síti ověřit zvlášť.
@@ -107,11 +138,24 @@ Nastavení Wi-Fi se používají v konfiguračním profilu, který se vztahuje n
 
         **Ochrana identity (vnější identita)**: Použijte s typem **EAP-TTLS**. Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
+- **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
+  - **Žádné:** nenakonfiguruje se žádné nastavení proxy.
+  - **Nakonfigurovat ručně:** Zadejte **IP adresu proxy serveru** a **Číslo portu**.
+  - **Automaticky nakonfigurovat:** Zadejte adresu URL, která odkazuje na skript PAC (automatická konfigurace proxy). Zadejte například `http://proxy.contoso.com/proxy.pac`.
+
 - **Vynutit, aby profil Wi-Fi dodržoval standard FIPS**: Pokud chcete používat vyhodnocování proti standardu FIPS 140-2, vyberte možnost **Ano**. Tento standard se vyžaduje od všech agentur federální vlády USA, které chrání citlivé, ale ne tajné digitálně ukládané informace pomocí bezpečnostních systémů založených na kryptografii. Pokud se nemá standard FIPS dodržovat, zvolte **Ne**.
+
+Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="use-an-imported-settings-file"></a>Importování souboru nastavení
 
 Pro libovolné nastavení, které není v Intune k dispozici, můžete exportovat nastavení Wi-Fi z jiného zařízení s Windows. Tento export vytvoří soubor XML se všemi nastaveními. Potom tento soubor importujte do Intune a použijte ho jako profil Wi-Fi. Viz [Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější verzí v Microsoft Intune](wi-fi-settings-import-windows-8-1.md).
 
 ## <a name="next-steps"></a>Další kroky
-[Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune](wi-fi-settings-configure.md)
+
+Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
+
+## <a name="more-resources"></a>Další zdroje
+
+- Podívejte se na nastavení, která jsou dostupná pro [Windows 8.1](wi-fi-settings-import-windows-8-1.md).
+- [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem

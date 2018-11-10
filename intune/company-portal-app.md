@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 01de402a48362f04680c569c40a812b6a4b83cc6
-ms.sourcegitcommit: 38afcff149f9c86e92e5f1eccaa927859c395926
+ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307402"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236284"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -60,28 +60,48 @@ Zadejte informace o podpoře vaší společnosti a poskytněte tak zaměstnanci 
 | **Další informace**| 120 | Zobrazí se na stránce **Kontakt na IT**. |
 
 
-## <a name="company-branding-customization"></a>Přizpůsobení obchodní značky       
-Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ. Pokud chcete rychle zobrazit náhled konfigurace brandingu bez testovacího zařízení, přejděte na [portal.manage.microsoft.com](https://portal.manage.microsoft.com). Všimněte si, že nahrané logo se použije pro e-mailové šablony.      
+## <a name="company-identity-branding-customization"></a>Přizpůsobení brandingu firemní identity      
+Portál své společnosti si můžete přizpůsobit – můžete na něj umístit logo své společnosti, uvést na něm název své společnosti a použít na něm barevný motiv a pozadí podle svých představ.     
 
-### <a name="theme-color"></a>Barva motivu
+### <a name="theme-color-and-logo-in-the-company-portal"></a>Barva motivu a logo na Portálu společnosti
 Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu nebo zadejte šestimístný šestnáctkový kód pro vlastní barvu.
 
 |Název pole|Další informace|
 |---|---|
-|**Typ barvy**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
-|**Zvolte barvu** nebo **Šestnáctkový kód barvy**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. Tyto možnosti jsou dostupné na základě možnosti **Typ barvy**, kterou jste vybrali.  |
+|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte **Standardní**, pokud si chcete vybrat barvu vizuálně. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
+|**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
+|**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
+|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
-### <a name="company-logo"></a>Logo společnosti
-Nahrajte logo vaší společnosti, které bude viditelné během činnosti koncového uživatele Intune.
+Po nahrání loga se v oblasti náhledu zobrazí logo s barvou motivu. Pokud jste si zvolili zobrazení názvu firmy, zobrazí se název na Portálu společnosti v černé nebo bílé barvě. Barva se zvolí automaticky tak, aby byl zajištěn nejvyšší kontrast s ohledem na barvu motivu. V oblasti náhledu na obrazovce se název vaší firmy nezobrazí. 
+
+### <a name="logo-to-use-on-white-or-light-backgrounds"></a>Logo, které se použije na bílých nebo světlých pozadích
+Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 |Název pole|Další informace|
 |---|---|
-|**Zobrazit logo společnosti**|Povolení této možnosti vám umožní nahrát vlastní logo společnosti, které se bude zobrazovat v Portálu společnosti. Můžete nahrát dvě loga – jedno, které se zobrazí, když bude pozadí Portálu společnosti bílé, a druhé, které se zobrazí, když se bude pro pozadí Portálu společnosti používat vybraná barva motivu. |
-|**Nahrajte logo, které chcete použít na tmavém pozadí**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Logo musí být ve formátu .png nebo .jpg o maximálním rozlišení 400 × 400 pixelů a nesmí být větší než 750 kB. |
-|**Nahrajte logo, které chcete použít na světlém pozadí**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Logo musí být ve formátu .png nebo .jpg o maximálním rozlišení 400 × 400 pixelů a nesmí být větší než 750 kB. |
-|**Vedle loga zobrazit název společnosti**| Když vyberete tuto možnost, zobrazí se vedle nahraného loga název společnosti, který jste zadali. |
+|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
-Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení na webovém portálu Intune**, abyste viděli, jak bude konfigurace vypadat.
+### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
+
+Zobrazte si firemní logo, které odráží značku vaší společnosti. Do aplikací Portálu společnosti jsme přidali podporu firemního loga, ale na některých platformách nemusí být viditelné.
+
+|Název pole|Další informace|
+|---|---|
+|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p><ul><li>Doporučená šířka obrázku: větší než 1 125 px, ale minimálně 640 px</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+
+Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
+
+- Obraťte se na marketingové nebo kreativní oddělení. Je možné, že už mají připravenou schválenou sadu obrázků a log s firemní značkou. Mohli by vám také pomoci při optimalizaci obrázků. 
+
+- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Je možné, že budete muset obrázek různě oříznout podle velikosti a orientace zařízení. 
+
+- Nepoužívejte obecné obrázky převzaté z fotobanky. Obrázek by měl odrážet vaši firemní značku a měl by být pro uživatele srozumitelný. Pokud žádný obrázek nemáte, je lepší nepoužívat žádný, než použít obecný, který pro uživatele nemá žádný význam. 
+
+- Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru. 
+
+Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení** na webovém portálu Intune, abyste viděli, jak budou konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
+
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 

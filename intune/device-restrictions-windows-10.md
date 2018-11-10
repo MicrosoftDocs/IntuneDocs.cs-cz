@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3a3fd4c57edba6f4d9abfdd4188c94627543cb43
-ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
+ms.openlocfilehash: a95f68f0a9794047b8adb7f9ab729bb4905f2379
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49652151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679385"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
@@ -405,4 +405,4 @@ Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defende
 - **RCS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv RCS (Rich Communication Services).
 
 ## <a name="more-information"></a>Další informace
-Další technické podrobnosti o jednotlivých nastaveních a podporovaných verzích Windows najdete v [referenčních informacích k poskytovateli konfiguračních služeb pro zásady (CPS) pro Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).
+Další technické informace o jednotlivých nastaveních a podporované edice Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).

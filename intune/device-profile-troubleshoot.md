@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d013ad2aefbfee5eea8f240277b0f84c2c6bf05a
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
+ms.openlocfilehash: 05dfd1e756a7c05d29116cd9077182225f3b9fa5
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679300"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Běžné problémy a řešení u profilů zařízení v Microsoft Intune
 
@@ -130,9 +130,9 @@ Pokud odstraníte profil nebo odeberete zařízení ze skupiny, která má tento
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Změnil(a) jsem profil omezení zařízení, ale tyto změny se neprojevily
 Zařízení Windows Phone neumožňují zmírnění zásad zabezpečení nastavených s použitím MDM nebo EAS, když je jednou nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8, kterou se pak pokusíte snížit na 4. V zařízení se už používá více omezující profil.
 
-Pokud chcete profil změnit na méně zabezpečenou hodnotu, resetujte v závislosti na platformě zařízení zásady zabezpečení. Třeba v systému Windows potáhněte na ploše prstem zprava a vyberte **Nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** .
+Pokud chcete změnit profil na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Třeba v systému Windows 8.1 potáhněte na ploše prstem zprava a vyberte **Nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete (dole) odkaz **Resetovat zásady zabezpečení**. Vyberte ho a potom zvolte **Resetovat zásady**.
 
-V navigační nabídce vlevo najdete (dole) odkaz **Resetovat zásady zabezpečení**. Vyberte ho a potom zvolte **Resetovat zásady**. Jiná zařízení MDM, například zařízení se systémy Android, Windows Phone 8.1 (a novějšími) a iOS, může být potřeba vyřadit a potom do služby znovu zaregistrovat, aby se dal použít méně omezující profil.
+Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 a novější, iOS a Windows 10 možná bude potřeba ze služby vyřadit a znovu je do ní zaregistrovat, aby bylo možné použít méně omezující profil.
 
 ## <a name="next-steps"></a>Další kroky
 Potřebujete další pomoc? Přečtěte si téma [Jak získat podporu pro Microsoft Intune](get-support.md).

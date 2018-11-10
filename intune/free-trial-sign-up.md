@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 11/01/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 37445cb2536e02937cf3002dc1cb56ab4b78f12f
-ms.sourcegitcommit: 27eed5aba5c8bfafb079171081b68f75a6cbffaf
+ms.openlocfilehash: 2f150db2e1d5fbc8e08bb7f7fcee50f0eda23ca7
+ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581389"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50915678"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -70,20 +70,27 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
 Když si zaregistrujete zkušební verzi, přijde vám e-mailová zpráva s informacemi o vašem účtu a e-mailovou adresou, kterou jste zadali při registraci. Ta potvrzuje, že je vaše zkušební verze aktivní.
 
+> [!TIP]
+> Když v prohlížeči místo privátního režimu použijete normální režim, budete mít při práci na webu Azure Portal lepší výsledky.
+
 ## <a name="set-the-mdm-authority-to-intune"></a>Nastavení autority MDM na Intune
 
-Nastavení autority pro správu mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
+Po přihlášení na webu Azure Portal a výběru Intune se může zobrazit oranžová informační zpráva, že jste ještě nenastavili autoritu pro správu mobilních zařízení (MDM). Nastavení autority pro správu mobilních zařízení (MDM) určuje způsob správy zařízení. Napřed je potřeba nastavit autoritu pro správu mobilních zařízení, aby si uživatelé mohli zaregistrovat do správy zařízení.
 
 K nastavení autority MDM na Intune použijte následující postup:
 
 1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com**. 
 2. Zvolte **Všechny služby** > **Microsoft Intune**.
-3. Výběrem oranžové informační zprávy otevřete nastavení **Autorita pro správu mobilních zařízení**. 
+3. Vyberte informační zprávu, že nemáte aktivovanou správu zařízení. Pokud se nezobrazuje, vyberte **Registrace zařízení**. Pokud správa zařízení není aktivovaná, zobrazí se okno **Zvolte autoritu MDM**.
 
     > [!NOTE]
     > Oranžová informační zpráva se zobrazí jenom v případě, že jste autoritu MDM ještě nenastavili.
 
-4. V části **Autorita pro správu mobilních zařízení** nastavte autoritu MDM na **Autorita MDM Intune**.
+    ![Obrázek okna Zvolte autoritu MDM](./media/choose-mdm-authority.png) 
+
+4. V části **Zvolte autoritu MDM** nastavte autoritu MDM na **Autorita MDM Intune**.
+
+Další informace o autoritě MDM najdete v článku [Nastavení autority pro správu mobilních zařízení](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurace vlastního názvu domény (volitelné)
 
@@ -120,4 +127,4 @@ Existují dva portály, které můžete použít:
 V tomto rychlém startu jste vytvořili bezplatné předplatné, abyste si mohli Intune vyzkoušet v testovacím prostředí, případně jste také nakonfigurovali název vlastní domény. Další informace o Microsoft Intune se dozvíte v dalším rychlém startu, ve kterém přidáte uživatele a přiřadíte jim licence.
 
 > [!div class="nextstepaction"]
-> [Vytvoření uživatele](get-started-users.md)
+> [Vytvoření uživatele](quickstart-create-user.md)

@@ -1,27 +1,10 @@
 ---
-title: Přidání aplikací Win32 do Microsoft Intune
-titlesuffix: ''
-description: Přečtěte si, jak přidat aplikace Win32 do Microsoft Intune a jak je prostřednictvím této služby poskytovat a spravovat. Toto téma poskytuje přehled funkcí pro poskytování a správu aplikací Win32 přes Intune a informace o řešení potíží s těmito aplikacemi.
-keywords: ''
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 10/23/2018
-ms.topic: article
-ms.prod: ''
-ms.service: microsoft-intune
-ms.technology: ''
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-ms.reviewer: mghadial
-ms.suite: ems
-ms.custom: intune-azure
-ms.openlocfilehash: d5a678e76db516034c8b6d20d58855fd281f31f8
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959583"
+title: Přidání aplikací Win32 do Microsoft Intune titlesuffix: description: Přečtěte si, jak přidat aplikace Win32 do Microsoft Intune a jak je prostřednictvím této služby poskytovat a spravovat. Toto téma poskytuje přehled funkcí pro poskytování a správu aplikací Win32 přes Intune a informace o řešení potíží s těmito aplikacemi. keywords: author: Erikre ms.author: erikre manager: dougeby <<<<<<< HEAD ms.date: 10/23/2018 ======= ms.date: 10/19/2018
+>>>>>>> 14fdd9aac5e66324acfe83ae31b126d8216d7da4 ms.topic: article ms.prod: ms.service: microsoft-intune ms.technology: ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
+
+ms.reviewer: mghadial ms.suite: ems ms.custom: intune-azure
 ---
+
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
 Samostatné využití Intune vám poskytuje širší možnosti správy aplikací Win32. Přestože zákazníci připojení ke cloudu mohou pro správu aplikací Win32 používat nástroj Configuration Manager, zákazníci, kteří používají pouze Intune, mají širší možnosti správy svých obchodních aplikací Win32. Toto téma poskytuje přehled funkce správy aplikací Win32 v Intune a informace o řešení potíží.
@@ -32,7 +15,7 @@ Samostatné využití Intune vám poskytuje širší možnosti správy aplikací
 - Klient Windows 10 musí splňovat tyto předpoklady: 
     - musí být připojen ke službě Azure Active Directory (AAD) nebo hybridní službě Azure Active Directory, a
     - musí být zaregistrován v Intune (spravovaný přes MDM).
-- Ve veřejné verzi Preview je velikost aplikace Windows omezená na 2 GB na jednu aplikaci. 
+- Ve veřejné verzi Preview je velikost aplikace pro Windows omezená na 8 GB na jednu aplikaci. 
 
 > [!NOTE]
 > Momentálně testujeme edice Pro a Education verze 1607 systému Windows 10 a budeme rádi, když nám napíšete svůj názor.
@@ -109,6 +92,11 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 3.  Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
 
     Příklad: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+    > [!NOTE]
+    > Aplikaci Win32 můžete nakonfigurovat tak, aby se nainstalovala v kontextu **uživatele** nebo **systému**. Kontext **Uživatel** se vztahuje pouze k danému uživateli. Kontext **Systém** se vztahuje ke všem uživatelům zařízení s Windows 10.
+    >
+    > Koncoví uživatelé nemusí být kvůli instalaci aplikací Win32 přihlášení k zařízení.
 
 4.  Až to budete mít, vyberte **OK**.
 
@@ -233,7 +221,6 @@ Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\
 ### <a name="troubleshooting-areas-to-consider"></a>Oblasti řešení potíží, na které je třeba se zaměřit
 - Zkontroluje cílení, abyste měli jistotu, že je agent nainstalovaný na zařízení – aplikace Win32 zacílená na skupinu nebo powershellový skript zacílený na skupinu vytvoří zásady instalace agenta pro skupinu zabezpečení.
 - Zkontrolujte verzi operačního systému – Windows 10 1607 a novější.  
-- Je uživatel AAD přihlášený ke klientskému počítači?
 - Zkontrolujte skladovou položku Windows 10 – Windows 10 S nebo verze Windows s povoleným režimem S nepodporují instalaci pomocí instalační služby MSI.
 
 ## <a name="next-steps"></a>Další kroky

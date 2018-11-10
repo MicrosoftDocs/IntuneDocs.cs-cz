@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fae8faf54c7b41bb547912853285cf09ec9c46d5
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
+ms.openlocfilehash: 953b468337d3317027344573d147b65d765e3db3
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828104"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236437"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
 
@@ -71,7 +71,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
    ![Příklad oznámení o dodržování předpisů v Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. Po přidání informací vyberte **Vytvořit**. Šablona zprávy s oznámením je připravená k použití.
+4. Po přidání informací vyberte **Vytvořit**. Šablona zprávy s oznámením je připravená k použití. Všimněte si, že logo nahrané jako součást značky Portálu společnosti, se použije pro e-mailové šablony. Další informace o značce Portálu společnosti najdete v tématu o [přizpůsobení brandingu firemní identity](company-portal-app.md#company-identity-branding-customization).  
 
 > [!NOTE]
 > Můžete také upravit dříve vytvořenou šablonu oznámení.

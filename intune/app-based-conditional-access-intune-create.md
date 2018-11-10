@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2018
+ms.date: 10/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,25 +14,25 @@ ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d6d67454409cf8a8749d28cba6ac76f591da9e3
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
+ms.openlocfilehash: ba5035dfcbab4b938b1ed31786ad0f70dceb2d8c
+ms.sourcegitcommit: b165a38b5d6de396f2edab6411742cb50a9b8816
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50253466"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tento článek popisuje, jak pro aplikace, které jsou na seznamu schválených aplikací, nastavit zásady podmíněného přístupu na základě aplikace. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
+Pro aplikace, které jsou na seznamu schválených aplikací, nastavte zásady podmíněného přístupu. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
 
 > [!IMPORTANT]
-> Tento článek vás provede postupem přidání zásad podmíněného přístupu na základě aplikace. Všimněte si, že aplikace ze seznamu schválených aplikací, jako jsou SharePoint Online, Microsoft Teams a Microsoft Exchange Online, můžete přidat stejným postupem.
+> Tento článek vás provede postupem přidání zásad podmíněného přístupu na základě aplikace. Stejný postup použijte, když ze seznamu schválených aplikací přidáváte aplikace, jako je SharePoint Online, Microsoft Teams nebo Microsoft Exchange Online.
 
 ## <a name="create-app-based-conditional-access-policies-in-azure-ad-workload"></a>Vytvoření zásad podmíněného přístupu na základě aplikace v úloze Azure AD
 
-Správci IT můžou vytvářet zásady podmíněného přístupu na základě aplikace v úloze Azure AD. Má to tu výhodu, že není potřeba přepínat mezi úlohami Azure a Intune.
+Správci IT můžou vytvářet zásady podmíněného přístupu na základě aplikace v úloze Azure AD. Při tomto přístupu není potřeba přepínat mezi úlohami Azure a Intune.
 
 > [!IMPORTANT]
 > Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.
