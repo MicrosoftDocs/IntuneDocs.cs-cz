@@ -15,17 +15,17 @@ ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
 ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 16d57ee6a722e8d840b8e8a09ba583698fcb67be
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
+ms.openlocfilehash: e4c44552a0df369767bb91749351674af9eab4b3
+ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562897"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49959549"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete aktivovat tuto funkci, obsahuje Intune integrované řešení pro správu výdajů na telekomunikaci Datalert od externího vývojáře softwaru Saaswedo. Datalert je software pro správu telekomunikačních výdajů v reálném čase, který umožňuje spravovat využití telekomunikačních dat. Pomůže vám vyhnout se nákladným a neočekávaným překročením limitů dat a roamingu u vašich zařízení spravovaných pomocí Intune.
+Intune umožňuje spravovat výdaje za telekomunikační služby vzniklé v závislosti na používání dat na mobilních zařízeních vlastněných firmou. Pokud chcete tuto funkci aktivovat, má Intune integrované řešení [Datalert pro správu telekomunikačních výdajů](http://datalert.biz/get-started) od externího vývojáře softwaru Saaswedo. Datalert je software pro správu telekomunikačních výdajů v reálném čase, který umožňuje spravovat využití telekomunikačních dat. Pomůže vám vyhnout se nákladným a neočekávaným překročením limitů dat a roamingu u vašich zařízení spravovaných pomocí Intune.
 
 Integrace Intune s Datalertem umožňuje centrálně nastavit, monitorovat a vynutit limity využití roamingu a domácích dat. Automatické výstrahy se zobrazí, když limity překročí definované prahové hodnoty. Službu můžete nakonfigurovat tak, aby se použily různé akce u jednotlivců nebo skupin koncových uživatelů (třeba zákaz roamingu při překročení prahové hodnoty). Sestavy využití a monitorování dat jsou dostupné v konzole pro správu Datalertu.
 
@@ -61,19 +61,31 @@ Než začnete, musíte mít Intune a předplatné služby TEM Datalert.
 
 2. V konzole pro správu Datalert přejděte na kartu **Settings** (Nastavení) a pak na možnost **MDM configuration** (Konfigurace MDM).
 
-3. Vyberte **Unblock** (Zrušit blokování), abyste na stránce mohli zadat nastavení.
+3. Pokud chcete na stránce změnit nastavení, vyberte dole **Unblock** (Odblokovat).
 
-4. U položky **Server MDM** zvolte **Microsoft Intune**.
+4. V oddílu **Intune / Datalert Connection** (Připojení Intune/Datalert) vyberte jako **Server MDM** možnost **Microsoft Intune**.    
 
-5. Pro **Azure AD domain** (Doména Azure), zadejte svoje ID tenanta Azure a pak vyberte tlačítko **Connection** (Připojení).
+5. V poli **Azure AD domain** (Doména Azure AD) zadejte ID svého tenanta Azure a vyberte **Connection** (Připojení).
 
-    Když vyberete možnost **Připojení**, služba Datalert zkontroluje v Intune, že dosud neexistuje žádné připojení Datalert v Intune. Po několika sekundách se otevře přihlašovací stránka Microsoft a po ní ověření Azure pro Datalert.
+    Když vyberete **Connection** (Připojení), zkontroluje služba Datalert, jestli neexistuje nějaké starší připojení této služby k Intune. Po několika sekundách se otevře přihlašovací stránka Microsoft a po ní ověření Azure pro Datalert.
 
-6. Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s poděkováním, která se po pár sekundách zavře. Datalert ověří připojení a zobrazí zelenou značku zaškrtnutí vedle seznamu ověřených položek. Pokud se ověření nezdaří, zobrazí se červená zpráva a měli byste Datalert požádat o pomoc.
+6. Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s **poděkováním**, která se po pár sekundách zavře. Datalert ověří připojení. Vedle ověřených připojení se v seznamu zobrazí zelené zaškrtnutí. Pokud se ověření nezdaří, zobrazí se červená zpráva a měli byste Datalert požádat o pomoc.
 
     Na následujícím snímku obrazovky vidíte zelené značky zaškrtnutí, které označují úspěšné připojení.
 
-   ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-mdm-configuration-mdm-server-page.png)
+   ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-datalert-connection.png)
+
+7. V oddílu **Datalert App / ADAL Consent** (Souhlas s aplikací Datalert / ADAL) nastavte přepínač na **On** (Zapnuto). Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s **poděkováním**, která se po pár sekundách zavře. Datalert ověří připojení. Vedle ověřených připojení se v seznamu zobrazí zelené zaškrtnutí. Pokud se ověření nezdaří, zobrazí se červená zpráva a měli byste Datalert požádat o pomoc.    
+
+    Na následujícím snímku obrazovky vidíte zelené značky zaškrtnutí, které označují úspěšné připojení.
+
+   ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-datalert-adal-consent.png)
+
+8. V oddílu **MDM Profiles management (optional)** (Správa profilů MDM (volitelná)) nastavte přepínač do polohy **On** (Zapnuto), aby aplikace Datalert mohla číst profily, které jsou dostupné v Intune, a mohla vám pomoci s nastavením zásad. Na ověřovací stránce Microsoft vyberte **Přijmout**. Budete přesměrováni na stránku Datalert s **poděkováním**, která se po pár sekundách zavře. Datalert ověří připojení. Vedle ověřených připojení se v seznamu zobrazí zelené zaškrtnutí. Pokud se ověření nezdaří, zobrazí se červená zpráva a měli byste Datalert požádat o pomoc.    
+
+    Na následujícím snímku obrazovky vidíte zelené značky zaškrtnutí, které označují úspěšné připojení.
+
+   ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-datalert-mdm-profiles.png)
 
 ### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Krok 2: Zkontrolujte v Intune, že je aktivní funkce správy výdajů na telekomunikaci
 

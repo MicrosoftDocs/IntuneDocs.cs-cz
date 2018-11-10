@@ -1,12 +1,11 @@
 ---
-title: Nastavení vlastního profilu Intune pro pracovní profily Androidu
-titlesuffix: Microsoft Intune
-description: Zjistěte, jak vytvořit nastavení vlastního profilu Microsoft Intune pro zařízení s pracovním profilem Androidu.
+title: Přidání vlastních nastavení do zařízení s Androidem Enterprise v Microsoft Intune – Azure | Microsoft Docs
+description: Přidání nebo vytvoření vlastního profilu pro zařízení s Androidem Enterprise v Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/12/2017
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,42 +14,85 @@ ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 109c50acf194598017aa507a0979ad3b9298de9e
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: a622264ed7cc091849bacbd02f8ae7bdb33603fe
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905287"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983138"
 ---
-# <a name="create-intune-custom-profile-settings-for-android-work-profile-devices"></a>Vytvoření nastavení vlastního profilu Intune pro zařízení s pracovním profilem Androidu
+# <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s Androidem Enterprise v Microsoft Intune
 
-Pomocí vlastních zásad konfigurace pracovního profilu Androidu v Intune přiřaďte nastavení OMA-URI, která lze používat k ovládání funkcí na zařízeních s pracovním profilem Androidu. Jsou to standardní nastavení, která k ovládání funkcí zařízení používá spousta výrobců mobilních zařízení.
+V Microsoft Intune můžete vlastní profil použít k přidání nebo vytvoření vlastních nastavení pro zařízení s Androidem Enterprise. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
-Tato vlastnost umožňuje přiřadit nastavení Androidu, která nejdou konfigurovat pomocí zásad Intune. Intune v současnosti podporuje omezený počet vlastních zásad Androidu. Pokud chcete zjistit, které zásady můžete nakonfigurovat, podívejte se na příklady v tomto článku.
+Vlastní profily pro Android Enterprise používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) k ovládání funkcí zařízení s Androidem Enterprise. Nastavení většinou používají výrobci mobilních zařízení k ovládání těchto funkcí.
 
-## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
+Intune podporuje omezený počet vlastních profilů Androidu.
 
-1. Začněte podle pokynů v tématu [Konfigurace vlastního nastavení zařízení](custom-settings-configure.md). V poli **Platforma** zvolte **Android Enterprise** a jako **Typ profilu** zvolte **Vlastní**.
-2. V okně **Vlastní nastavení OMA-URI** pomocí **Přidat** přidejte nové nastavení.
-3. V okně **Přidat řádek** nakonfigurujte tyto údaje:
-    - **Název** – zadejte jedinečný název vlastního nastavení pracovního profilu Androidu, abyste ho mohli na Azure Portalu snadno identifikovat.
-    - **Popis** – zadejte popis, který bude shrnovat účel vlastní zásady pro Android, a uveďte jakékoli další důležité informace, které vám pomůžou zásadu najít.
-    - **OMA-URI** – zadejte OMA-URI, pro které chcete zadat nastavení.
-    - **Datový typ** – vyberte datový typ, ve kterém toto nastavení OMA-URI určíte. Vyberte z možností **Řetězec**, **Řetězec (soubor XML)**, **Datum a čas**, **Celé číslo**, **Plovoucí desetinná čárka**, **Logická hodnota** nebo **Base64 (soubor)**.
-    - **Hodnota** – zadejte hodnotu pro přidružení k dřív zadanému OMA-URI. Metoda zadání této hodnoty se bude lišit podle zvoleného datového typu. Pokud jste třeba zvolili **Datum a čas**, vyberete hodnotu z ovládacího prvku pro výběr data.
-4. Po dokončení se pomocí OK vraťte na **Vlastní nastavení OMA-URI** a pak přidejte další nastavení nebo pomocí **Vytvořit** vytvořte vlastní profil.
+V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s Androidem Enterprise. Najdete zde také příklad na vytvoření vlastního profilu, který blokuje kopírování a vložení.
 
+## <a name="create-the-profile"></a>Vytvoření profilu
+
+1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte následující nastavení:
+
+    - **Název:** Zadejte název profilu, třeba `android enterprise custom profile`.
+    - **Popis:** Zadejte popis profilu.
+    - **Platforma:** Zvolte **Android Enterprise**.
+    - **Typ profilu:** Zvolte **Vlastní**.
+
+4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
+
+    - **Název:** Zadejte jedinečný název pro nastavení OMA-URI, abyste ho snadno našli.
+    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+    - **OMA-URI:** Zadejte nastavení OMA-URI, které chcete použít.
+    - **Datový typ:** Zvolte datový typ, který pro toto nastavení OMA-URI použijete. Možnosti:
+
+      - Řetězec
+      - Řetězec (soubor XML)
+      - Datum a čas
+      - Celé číslo
+      - Číslo s plovoucí desetinnou čárkou
+      - Logická hodnota
+      - Base64 (soubor)
+
+    - **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
+
+    Po výběru nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
+
+5. Výběrem **OK** uložte změny. Podle potřeby přidejte další nastavení.
+6. Až to budete mít, zvolte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
 
 ## <a name="example"></a>Příklad
 
-V tomto příkladu vytvoříte vlastní profil, pomocí kterého můžete omezit, jestli jsou na zařízeních s pracovním profilem Androidu povolené akce Kopírovat a Vložit mezi pracovními a osobními aplikacemi.
+V tomto příkladu vytvoříte vlastní profil, který na zařízeních s Androidem Enterprise zakazuje kopírovat a vkládat obsah mezi pracovními a osobními aplikacemi.
 
-1. Pomocí postupu v tomto článku vytvořte vlastní profil pro zařízení s pracovním profilem Androidu s těmito hodnotami:
-    - **Název** –zadejte „Blokovat kopírování a vkládání“ nebo jiný vlastní text.
-    - **Popis** – zadejte „Blokuje kopírování/vkládání mezi pracovními a osobními aplikacemi“ nebo jiný vlastní text.
-    - **OMA-URI** – zadejte **./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste**.
-    - **Datový typ** – vyberte **Logická hodnota** k vyjádření, že hodnota pro OMA-URI je **Pravda** nebo **Nepravda**.
-    - **Hodnota** – vyberte **Pravda**.
-2. Vaše nastavení by nakonec mělo vypadat podobně jako na obrázku.
-![Blokování kopírování a vkládání v pracovním profilu Androidu](./media/custom-policy-afw-copy-paste.png)
-3. Když teď tento vlastní profil přiřadíte zařízením s pracovním profilem Androidu, která spravujete, bude mezi aplikacemi v osobním a pracovním profilu zakázáno kopírování a vkládání.
+1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte následující nastavení:
+
+    - **Název:** Zadejte název profilu, třeba `android ent block copy paste custom profile`.
+    - **Popis**: Zadejte popis profilu.
+    - **Platforma:** Zvolte **Android Enterprise**.
+    - **Typ profilu:** Zvolte **Vlastní**.
+
+4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
+
+    - **Název:** Zadejte třeba `Block copy and paste`.
+    - **Popis:** Zadejte třeba `Blocks copy/paste between work and personal apps`.
+    - **OMA-URI:** Zadejte `./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste`.
+    - **Datový typ**: Zvolte **Logická hodnota**, takže hodnota tohoto nastavení OMA-URI bude **Pravda** nebo **Nepravda**.
+    - **Hodnota**: Zvolte **Pravda**.
+
+5. Po zadání nastavení byste měli mít podobné prostředí jako na následujícím obrázku:
+
+    ![Blokování kopírování a vkládání v pracovním profilu Androidu](./media/custom-policy-afw-copy-paste.png)
+
+Když tento profil přiřadíte spravovaným zařízením s Androidem Enterprise, bude kopírování a vkládání mezi aplikacemi v pracovních a osobních profilech zablokované.
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
+
+Podívejte se, jak [vytvořit profil na zařízeních s Androidem](custom-settings-android.md).

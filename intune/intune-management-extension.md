@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/30/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: eb7d8b35cb88223a3fbfa45e0ad8e2f8d2852a96
-ms.sourcegitcommit: ab801d715aa26f6d97f1a0c42a07e55146a14e6f
+ms.openlocfilehash: ad8e874dda47b7c6deeb614b0f893f7c922241ce
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35289019"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236335"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
 Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune, aby je bylo možné spouštět v zařízeních s Windows 10. Rozšíření správy doplňuje funkce správy mobilních zařízení (MDM) s Windows 10 a usnadňuje přechod na moderní správu.
@@ -31,9 +31,9 @@ Služby správy mobilních zařízení, jako je třeba Microsoft Intune, mohou s
 
 Rozšíření správy Intune doplňuje integrované funkce správy mobilních zařízení pro Windows 10. Můžete si vytvořit powershellové skripty, které vám budou poskytovat požadované funkce, a spouštět je v zařízeních s Windows 10. Můžete si třeba vytvořit powershellový skript, který nainstaluje starší aplikaci Win32 do zařízení s Windows 10, nahrát ho do Intune, přiřadit ho ke skupině Azure AD (Active Directory) a spustit ho v zařízení s Windows 10. Potom můžete monitorovat stav spuštění skriptu na zařízení s Windows 10 od začátku až do konce.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 Rozšíření správy Intune vyžaduje splnění následujících požadavků:
-- Zařízení musí být připojená k Azure AD. (Nezahrnuje zařízení připojená k hybridní službě Azure AD.)
+- Zařízení musí být připojená k Azure AD. Rozšíření správy Intune podporuje připojení k Azure Active Directory, připojení k hybridní doméně a společnou správu registrovaných zařízení s Windows.
 - Zařízení musí používat Windows 10 verze 1607 nebo novější.
 - Automatická registrace MDM musí být [povolena ve službě Azure AD](https://docs.microsoft.com/intune/windows-enroll#enable-windows-10-automatic-enrollment) a zařízení musí být automaticky zaregistrována v Intune.
 
@@ -56,7 +56,8 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
 > [!NOTE]
 > - Skripty PowerShell se nedají použít u skupin počítačů.
-> - Skripty PowerShell se na zařízeních spustí, jenom když je k zařízení přihlášený uživatel Azure Active Directory (AD).
+> - Koncoví uživatelé nemusí být kvůli spouštění powershellových skriptů přihlášení k zařízení. 
+> - Cílem powershellových skriptů v Intune mohou být skupiny zabezpečení zařízení služby AAD.
 
 Rozšíření správy Intune se s Intune synchronizuje jednou za hodinu. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. 
  

@@ -107,11 +107,13 @@
 #### [Moje verze macOS ještě není podporovaná](your-macos-version-isnt-yet-supported.md)
 #### [Aktualizace zařízení s macOS](you-need-to-update-your-macos-device.md)
 #### [Odeslání chyb Portálu společnosti](send-errors-macos.md)
+#### [Přiřazení zařízení někomu jinému](unable-to-get-macOS-device-managed.md)
 #### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-macos.md)
 #### [Toto zařízení je trochu jiné](device-little-different-jamf.md)
 #### [Vyhledání sériového čísla](how-do-i-find-the-serial-number-on-my-device-macos.md)
 #### [Identifikace zařízení](you-are-asked-to-identify-your-device-when-trying-to-enroll-macos.md)
 #### [Bylo dosaženo limitu počtu zařízení](device-limit-wpj-macos.md)
+#### [Problémy se zajištěním správy virtuálních počítačů s macOS](unable-to-get-macOS-device-managed.md) 
 
 ## [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
 ### [Co se stane při registraci zařízení s Windows 10?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)

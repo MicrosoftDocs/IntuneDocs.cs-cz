@@ -14,12 +14,12 @@ ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f27baf7d40a6eb4d89769eeab7a6e035e3468825
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 57c69c1610168aa25d33c8124c38f585eb715251
+ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643021"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50225450"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -181,6 +181,15 @@ Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdíle
 Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uživatelů, která se pokusí o přístup k cílové aplikaci z firemního účtu, použijí v konkrétním pořadí. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze operačního systému iOS, které uživatele upozorňuje, aby svou verzi iOSu aktualizoval, se použije po nastavení minimální verze operačního systému, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.
 
 Při zpracování různých typů nastavení by měl přednost požadavek na verzi Intune App SDK. Následoval by požadavek na verzi aplikace a pak požadavek na verzi operačního systému iOS. Pak se ve stejném pořadí kontrolují všechna upozornění pro všechny typy nastavení. Doporučujeme nakonfigurovat verzi Intune App SDK jenom po pokynu od produktového týmu Intune pro základní scénáře blokování.
+
+## <a name="app-protection-policies---policy-refresh"></a>Zásady ochrany aplikací – aktualizace zásad
+- Aplikace kontrolují službu APP každých 30 minut.
+- Prahová hodnota 30 minut je založená na časovači.
+    - Pokud je aplikace ve 30. minutě aktivní, proběhne kontrola za 30 minut.
+    - Pokud je aplikace ve 30. minutě v režimu spánku, proběhne kontrola při dalším fokusu.
+- Pokud uživatel nemá přiřazenu zásadu, probíhá kontrola každých osm hodin.
+- Pokud není přiřazená licence Intune, probíhá kontrola každých 24 hodin.
+
 
 ## <a name="see-also"></a>Viz taky
 - [Implementace plánu Intune](planning-guide-onboarding.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/24/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 35c76db52db0f037427357eb5f3059a65908ae12
-ms.sourcegitcommit: 534efa7c5033098233b2549c2d7fc6cf33330e79
+ms.openlocfilehash: 6df3f16940a9478756cc1f268ad98b7c9d3f044e
+ms.sourcegitcommit: 7c80833b74a7203edc23c550d0d0b63229cda452
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50001554"
 ---
 # <a name="using-your-android-device-with-intune-company-portal"></a>Použití zařízení s Androidem na Portálu společnosti Intune
 
@@ -30,9 +30,9 @@ Tento článek obsahuje úlohy a informace týkající se Portálu společnosti 
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Portál společnosti aktuálně podporuje Android 4.4 a novější. Součástí je také podpora pro Samsung Knox 4.4 a novější zařízení.
+Portál společnosti aktuálně podporuje Android 4.4 a novější. Patří sem i zařízení Samsung Knox s Androidem 4.4 a novějšími verzemi.
 
-## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
+## <a name="enrolling-in-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace aplikace Portál společnosti
 
 - [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md)
 - [Vytvoření pracovního profilu a registrace zařízení v Intune](create-a-work-profile-and-enroll-your-device-in-intune-android.md)

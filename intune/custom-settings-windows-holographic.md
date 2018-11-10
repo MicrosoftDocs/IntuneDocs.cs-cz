@@ -1,11 +1,11 @@
 ---
 title: Vlastní nastavení pro zařízení s Windows Holographic for Business v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte si vlastní profil, abyste mohli použít nastavení OMA-URI pro zařízení s Windows Holographic for Business v Microsoft Intune. Můžete nakonfigurovat nastavení poskytovatele služeb konfigurace zásad (CSP) AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates a ApplicationLaunchRestrictions.
+description: Přidejte nebo vytvořte si vlastní profil, abyste mohli v Microsoft Intune použít nastavení OMA-URI pro zařízení s Windows Holographic for Business, včetně zařízení Microsoft Hololens. Můžete nakonfigurovat nastavení poskytovatele služeb konfigurace zásad (CSP) AllowFastReconnect, AllowVPN, AllowUpdateService, UpdateServiceURL, RequireUpdatesApproval, ApprovedUpdates a ApplicationLaunchRestrictions.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/26/2018
+ms.date: 10/24/2018
 ms.article: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,39 +13,57 @@ ms.topic: article
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b8ba5078d304c0e9d6b10e4efb868642323c901c
-ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
+ms.openlocfilehash: 863ef32d05fed601eaf38f749aa30e1c4b657cc9
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403574"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983155"
 ---
-# <a name="custom-device-settings-for-devices-running-windows-holographic-for-business-in-intune"></a>Vlastní nastavení zařízení s Windows Holographic for Business v Intune
+# <a name="use-custom-settings-for-windows-holographic-for-business-devices-in-intune"></a>Použití vlastního nastavení u zařízení s Windows Holographic for Business v Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+V Microsoft Intune můžete použít vlastní profily k přidání nebo vytvoření vlastního nastavení pro zařízení s Windows Holographic for Business. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
- **Vlastní** profil Microsoft Intune pro Windows Holographic for Business použijte, pokud chcete nasadit nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), s jehož pomocí se dají ovládat funkce na zařízeních. Windows Holographic for Business zpřístupňuje řadu nastavení poskytovatelů konfiguračních služeb (CSP). Základní informace o CSP najdete v [úvodu o poskytovatelích konfiguračních služeb (CSP) pro IT specialisty](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers). Konkrétní poskytovatele CSP, které podporuje Windows Holographic, najdete v části [Poskytovatelé CSP podporovaní ve Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens).
+Vlastní profily pro Windows Holographic for Business používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení.
 
-Pokud hledáte konkrétní nastavení, mějte na paměti, že [profil omezení zařízení s Windows Holographic for Business](device-restrictions-windows-holographic.md) obsahuje řadu integrovaných nastavení, která nevyžadují, abyste zadali vlastní hodnoty.
+Windows Holographic for Business zpřístupňuje řadu nastavení poskytovatelů konfiguračních služeb (CSP). Základní informace o CSP najdete v [úvodu o poskytovatelích konfiguračních služeb (CSP) pro IT specialisty](https://technet.microsoft.com/itpro/windows/manage/how-it-pros-can-use-configuration-service-providers). Konkrétní poskytovatele CSP, které podporuje Windows Holographic, najdete v části [Poskytovatelé CSP podporovaní ve Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens).
 
-## <a name="create-the-custom-oma-uri-profile"></a>Vytvoření vlastního profilu OMA-URI
+Pokud hledáte konkrétní nastavení, nezapomeňte, že řada integrovaných nastavení je v [restriktivním profilu zařízení s Windows Holographic for Business](device-restrictions-windows-holographic.md). Takže možná nebude potřeba zadávat vlastní hodnoty.
 
-1. Začněte podle pokynů v tématu [Konfigurace vlastního nastavení zařízení v Microsoft Intune](custom-settings-configure.md).
-2. Pokud chcete přidat jedno nebo více nastavení OMA-URI, v části **Vytvořit profil** zvolte **Nastavení**.
-3. V části **Vlastní nastavení OMA-URI** klikněte na **Přidat**, abyste mohli přidat novou hodnotu. Můžete také kliknout na **Exportovat** a vytvořit seznam všech hodnot, které jste nakonfigurovali v souboru hodnot oddělených čárkami (CSV).
-4. Ke každému nastavení OMA-URI, které chcete přidat, zadejte následující informace:
-  - **Název nastavení**: Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
-  - **Popis nastavení**: Volitelně zadejte popis nastavení.
-  - **Datový typ**: Vybírejte z těchto typů:
-    - **Řetězec**
-    - **Řetězec (XML)**
-    - **Datum a čas**
-    - **Celé číslo**
-    - **Číslo s plovoucí desetinnou čárkou**
-    - **Logická hodnota**
-  - **OMA-URI (rozlišuje velká a malá písmena)**: Zadejte, který OMA-URI chcete nastavit.
-  - **Hodnota**: Zadejte hodnotu, kterou chcete přidružit k zadanému OMA-URI.
-5. Až to budete mít, vraťte se do části **Vytvořit profil** a klikněte na **Vytvořit**. Profil se vytvoří a zobrazí se v seznamu profilů.
+V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s Windows Holographic for Business. Článek také obsahuje seznam doporučených nastavení OMA-URI.
+
+## <a name="create-the-profile"></a>Vytvoření profilu
+
+1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte následující nastavení:
+
+    - **Název:** Zadejte název profilu, třeba `hololens custom profile`.
+    - **Popis**: Zadejte popis profilu.
+    - **Platforma**: Zvolte **Windows 10 a novější**.
+    - **Typ profilu:** Zvolte **Vlastní**.
+
+4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
+
+    - **Název:** Zadejte jedinečný název nastavení OMA-URI, abyste ho v seznamu poznali.
+    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
+    - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
+    - **Datový typ:** Zvolte datový typ, který pro toto nastavení OMA-URI použijete. Možnosti:
+
+        - Řetězec
+        - Řetězec (soubor XML)
+        - Datum a čas
+        - Celé číslo
+        - Číslo s plovoucí desetinnou čárkou
+        - Logická hodnota
+        - Base64 (soubor)
+
+    - **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
+
+    Po výběru nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
+
+5. Výběrem **OK** uložte změny. Podle potřeby přidejte další nastavení.
+6. Až to budete mít, zvolte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
 
 ## <a name="recommended-custom-settings"></a>Doporučená vlastní nastavení
 
@@ -145,6 +163,12 @@ Následující nastavení jsou užitečná pro zařízení s Windows Holographic
 
 ## <a name="find-the-policies-you-can-configure"></a>Vyhledání zásad, které můžete nakonfigurovat
 
-Úplný seznam všech poskytovatelů konfiguračních služeb (CSP), které Windows Holographic podporuje, najdete v části [Poskytovatelé CSP podporovaní ve Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows Holographic. V tabulce v článku týkajícím se Windows zjistíte, které verze se pro jednotlivé CSP podporují.
+Úplný seznam všech poskytovatelů konfiguračních služeb (CSP), které Windows Holographic podporuje, najdete v části [Poskytovatelé CSP podporovaní ve Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows Holographic. V tabulce [poskytovatelů konfiguračních služeb podporovaných systémem Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens) je u každého poskytovatele konfiguračních služeb seznam podporovaných verzí.
 
-Intune navíc nepodporuje všechna nastavení uvedená v tomto článku. Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Jednotlivé stránky nastavení zobrazují podporované operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
+Intune navíc nepodporuje všechna nastavení, která jsou v tabulce [poskytovatelů konfiguračních služeb podporovaných systémem Windows Holographic](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference#hololens). Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Na každé stránce nastavení se zobrazuje podporovaná operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
+
+Podívejte se, jak na [zařízeních s Windows 10](custom-settings-windows-10.md) vytvořit vlastní profil.

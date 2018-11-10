@@ -1,39 +1,72 @@
 ---
-title: Vlastní nastavení Microsoft Intune pro zařízení s iOSem
+title: Přidání vlastního nastavení do zařízení s iOSem v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Podívejte se na nastavení, která je možné použít ve vlastním profilu iOS v Microsoft Intune.
+description: Exportujte nastavení iOSu z nástrojů Apple Configurator nebo Apple Profile Manager a pak ho naimportujte do Microsoft Intune. S těmito nastaveními můžete vytvářet, používat a ovládat vlastní nastavení a funkce zařízení s iOSem. Tento vlastní profil pak můžete v organizaci přiřadit zařízením s iOSem nebo ho mezi ně distribuovat, abyste vytvořili základní nebo standardní nastavení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 10/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e0ae4e757264465043ee6992033710c5a81d7157
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
+ms.openlocfilehash: 348a1dbf7b969956bc1ddcfb0f32a994a84e29d4
+ms.sourcegitcommit: c969b596ec0fec227484c50f210ba4e159e2e533
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31831296"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49983104"
 ---
-# <a name="microsoft-intune-custom-device-settings-for-devices-running-ios"></a>Vlastní nastavení Microsoft Intune pro zařízení s iOSem
+# <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s iOSem v Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+V Microsoft Intune můžete vlastní profily použít k přidání nebo vytvoření vlastního nastavení pro zařízení s iOSem. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
-Pomocí vlastního profilu iOS v Microsoft Intune přiřaďte zařízením se systémem iOS nastavení, která jste vytvořili nástrojem [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12). Pomocí tohoto nástroje se dá vytvořit spousta nastavení, která řídí provoz těchto zařízení, a exportovat je do konfiguračního profilu. Potom můžete tento konfigurační profil naimportovat do vlastního profilu iOSu v Intune a nastavení přiřadit uživatelům a zařízením v organizaci.
+U zařízení s iOSem existují dva způsoby, jak do Intune dostat vlastní nastavení:
 
-Tato funkce umožňuje přiřadit nastavení iOS, která nejdou konfigurovat pomocí jiných typů profilů Intune.
+- [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
+- [Apple Profile Manager](https://support.apple.com/profile-manager)
 
+Tyto nástroje můžete použít k exportu nastavení do konfiguračního profilu. Tento soubor naimportujete do Intune a pak profil přiřadíte uživatelům a zařízením s iOSem. Jakmile profil přiřadíte, nastavení se distribuuje a také se vytvoří základní nebo standardní iOS vaší organizace.
 
-1. Začněte podle pokynů v tématu [Jak nakonfigurovat vlastní nastavení zařízení v Microsoft Intune](custom-settings-configure.md).
-2. V podokně **Vlastní konfigurační profil** nakonfigurujte všechna tato nastavení:
+V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s iOSem. Článek také nabízí několik pokynů k používání Apple Configuratoru a Apple Profile Manageru.
 
-- **Název vlastního konfiguračního profilu** – zadejte název zásady tak, jak se zobrazí na zařízení a ve stavu Intune.
-- **Soubor konfiguračního profilu** – přejděte na konfigurační profil, který jste vytvořili pomocí Apple Configuratoru.
-Nastavení, která exportujete z nástroje Apple Configurator, musí být kompatibilní s verzí iOS na zařízeních, kterým přiřazujete vlastní zásady pro iOS. Informace o tom, jak se řeší nekompatibilní nastavení, najdete v **referenčních materiálech ke konfiguračnímu profil** a **referenčních materiálech k protokolu správy mobilního zařízení** na [webu pro vývojáře Apple](https://developer.apple.com/).
+## <a name="before-you-begin"></a>Před zahájením
 
-Importovaný soubor se zobrazí v oblasti podokna **Obsah souboru**.
+- Pokud k vytvoření konfiguračního profilu použijete **Apple Configurator**, ujistěte se, že je exportované nastavení kompatibilní s verzí iOSu na používaných zařízeních. Informace potřebné k řešení nekompatibilních nastavení najdete v **referenčních materiálech k profilu konfigurace** a **referenčních materiálech k protokolu správy mobilních zařízení** na webu pro [vývojáře Apple](https://developer.apple.com/).
+
+- Pokud používáte **Apple Profile Manager**, nezapomeňte:
+
+  - Povolit v Profile Manageru [správu mobilních zařízení](https://help.apple.com/serverapp/mac/5.7/#/apd05B9B761-D390-4A75-9251-E9AD29A61D0C).
+  - Přidat v Profile Manageru [zařízení s iOSem](https://help.apple.com/profilemanager/mac/5.7/#/pm9onzap1984).
+  - Po přidání zařízení v Profile Manageru přejděte na **Under the Library** (pod Knihovna)  > **Devices** (Zařízení) > vyberte zařízení > **Settings** (Nastavení). Zadejte obecné nastavení zařízení.
+
+    Stáhněte a uložte si tento soubor. Zadáte ho v profilu Intune.
+
+  - Nezapomeňte zkontrolovat, jestli je nastavení, které jste exportovali z Apple Profile Manageru, kompatibilní s verzí iOSu na používaných zařízeních. Informace potřebné k řešení nekompatibilních nastavení najdete v **referenčních materiálech k profilu konfigurace** a **referenčních materiálech k protokolu správy mobilních zařízení** na webu pro [vývojáře Apple](https://developer.apple.com/).
+
+## <a name="create-the-profile"></a>Vytvoření profilu
+
+1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte následující nastavení:
+
+    - **Název:** Zadejte název profilu, třeba `ios custom profile`.
+    - **Popis**: Zadejte popis profilu.
+    - **Platforma**: Zvolte **iOS**.
+    - **Typ profilu:** Zvolte **Vlastní**.
+
+4. V části **Vlastní konfigurace** zadejte následující nastavení:
+
+    - **Název vlastního konfiguračního profilu:** Zadejte název zásady. Tento název se zobrazí na zařízení a ve stavu Intune.
+    - **Soubor konfiguračního profilu:** Přejděte ke konfiguračnímu profilu vytvořenému v Apple Configuratoru nebo Apple Profile Manageru. Importovaný soubor se zobrazí v části **Obsah souboru**.
+
+5. Vyberte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
+
+Podívejte se, jak [vytvořit profil na zařízeních s macOS](custom-settings-macos.md). 

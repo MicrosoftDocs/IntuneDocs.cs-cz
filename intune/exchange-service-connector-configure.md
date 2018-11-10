@@ -15,17 +15,17 @@ ms.assetid: ''
 ms.reviewer: muhosabe
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 46d28ba8d9d8c6ec2adf2b41adbb9e7336676811
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: 6132e77c4f4a86a30a55d436219f0d7e2a49980c
+ms.sourcegitcommit: ff6db80cb3638e1eec0a4c8b185649363e9e552e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642972"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49806319"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
 
-S konektorem **Service to Service Connector** můžete spravovat protokol Exchange ActiveSync (EAS) a zařízení spravovaná v Intune z jediné konzoly pro správu.  K povolení podmíněného přístupu pro Exchange Online se tento konektor nevyžaduje.
+S konektorem **Service to Service Connector** můžete ke správě zařízení v Exchange ActiveSync (EAS) a zařízení v Intune použít jedinou konzolu pro správu.  K povolení podmíněného přístupu pro Exchange Online se tento konektor nevyžaduje.
 
 ## <a name="service-to-service-connector-requirements"></a>Požadavky na konektor Service to Service Connector
 **Konektor Service to Service Connector** podporuje jenom Exchange Online nebo Exchange Online Dedicated a nemá žádné požadavky na místní infrastrukturu. 

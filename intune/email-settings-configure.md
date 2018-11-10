@@ -1,34 +1,30 @@
 ---
-title: Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
+title: Konfigurace nastavení e-mailu v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Naučte se nakonfigurovat v Microsoft Intune připojení k podnikovému e-mailu na zařízeních, která spravujete.
+description: Vytvořte v Microsoft Intune e-mailový profil a nasaďte ho do zařízení s Androidem Enterprise, iOSem a Windows. Pomocí e-mailového profilu můžete na spravovaných zařízeních nakonfigurovat běžná nastavení e-mailu, například e-mailový server a metodu ověřování při připojení k firemnímu e-mailu.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/1/2018
+ms.date: 10/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 15710f6115bb23dfe9ba899dfa01b38f315d00f0
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
+ms.openlocfilehash: 41f16cf0dacc059546a09145a0c241f7c2a4a076
+ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905304"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236318"
 ---
-# <a name="how-to-configure-email-settings-in-microsoft-intune"></a>Jak nakonfigurovat nastavení e-mailu v Microsoft Intune
+# <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Microsoft Intune obsahuje různá nastavení e-mailu, která můžete nasadit do zařízení ve vaší organizaci. Správce IT může vytvořit e-mailové profily se specifickými nastaveními pro připojení k e-mailovému serveru, jako je Office 365 a Gmail. Uživatelé se pak připojí, ověří a synchronizují své e-mailové účty organizace na svých mobilních zařízeních. Vytvořením a nasazením e-mailového profilu můžete zajistit standardní nastavení na mnoha zařízeních. Zároveň vám to pomůže omezit žádosti o podporu od koncových uživatelů, kteří neznají správná nastavení e-mailu.
 
-Pomocí e-mailových profilů můžete na spravovaných zařízeních konfigurovat nastavení, která jsou potřebná pro připojení k podnikovému e-mailu a jeho synchronizaci. To může pomoct zajistit, abyste měli na všech zařízeních standardní nastavení, a také přispět ke snížení počtu volání podpory ze strany koncových uživatelů, kteří nevědí, jak si správně nastavit e-mail.
-
-Na většině platforem se podporuje integrovaný poštovní klient. Většina e-mailových aplikací třetích stran se v současné době nepodporuje.
-
-E-mailové profily můžete použít ke konfiguraci nativních e-mailových klientů na těchto typech zařízení:
+E-mailové profily umožňují nakonfigurovat nastavení integrovaného e-mailu na následujících zařízeních:
 
 - Android Samsung Knox Standard 4.0 a novější
 - Zařízení s pracovním profilem Androidu
@@ -36,17 +32,15 @@ E-mailové profily můžete použít ke konfiguraci nativních e-mailových klie
 - Windows Phone 8.1 a novější
 - Windows 10 (pro stolní počítače) a Windows 10 Mobile
 
-Informace v tomto článku vás seznámí se základy konfigurace e-mailového profilu. Pak si můžete přečíst další témata pro jednotlivé platformy, abyste zjistili zvláštnosti zařízení.
+V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune. Obsahuje také odkazy na různé platformy s podrobnějším nastavením.
 
-## <a name="create-a-device-profile-containing-email-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení e-mailu
+## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Konfigurace zařízení**.
-2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-3. V podokně profilů zvolte **Vytvořit profil**.
-4. V podokně **Vytvořit profil** zadejte **název** a **popis** e-mailového profilu.
-5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení e-mailu. V současné době můžete pro nastavení e-mailu na zařízení zvolit jednu z následujících platforem:
+1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte **Název** a **Popis** e-mailového profilu.
+4. V rozevíracím seznamu **Platforma** zvolte odpovídající možnost. Možnosti:
+
     - **Android** (jenom Samsung Android Knox Standard)
     - **Android Enterprise**
     - **iOS**
@@ -54,43 +48,50 @@ Informace v tomto článku vás seznámí se základy konfigurace e-mailového p
     - **Windows Phone 8.1**
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
-6. V rozevíracím seznamu **Typ profilu** zvolte **E-mail**.
-7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
+
+5. V rozevíracím seznamu **Typ profilu** zvolte **E-mail**.
+6. Nastavení, která můžete konfigurovat, se mohou pro jednotlivé platformy lišit. Pro konkrétní nastavení zvolte svou platformu:
+
     - [Nastavení pracovního profilu Androidu a Samsung Knox Standard](email-settings-android.md)
     - [Nastavení iOSu](email-settings-ios.md)
     - [Nastavení Windows Phone 8.1](email-settings-windows-phone-8-1.md)
     - [Nastavení Windows 10](email-settings-windows-10.md)
-8. Až to budete mít, vraťte se do podokna **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
-Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu profilů. Dále [tento profil přiřaďte některým skupinám](device-profile-assign.md).
 
-## <a name="further-information"></a>Další informace
+## <a name="remove-an-email-profile"></a>Odebrání e-mailového profilu
 
-### <a name="remove-an-email-profile"></a>Odebrání e-mailového profilu
+E-mailové profily se nepřiřazují skupinám uživatelů, ale skupinám zařízení. Existují různé způsoby, jak ze zařízení odebrat e-mailový profil, i když je v zařízení jenom jeden profil:
 
-Pokud byste chtěli e-mailový profil ze zařízení odebrat, upravte přiřazení a odeberte všechny skupiny, ve kterých je zařízení členem. Pokud se jedná o jediný e-mailový profil na zařízení, nemůžete tento profil takto odebrat.
+- **1. možnost:** Otevřete e-mailový profil (**Konfigurace zařízení** > **Profily**) a zvolte **Přiřazení**. Na kartě **Zahrnout** jsou skupiny, které jsou k profilu přiřazené. Klikněte na skupinu pravým tlačítkem > **Odebrat**. Nezapomeňte změny uložit kliknutím na **Uložit**.
 
-### <a name="securing-email-access"></a>Zabezpečení přístupu k e-mailu
+- **2. možnost:** [Vymažte zařízení nebo ho vyřaďte](devices-wipe.md). Tyto akce můžete použít k selektivnímu nebo úplnému odebrání dat a nastavení.
 
-E-mailové profily se dají zabezpečit jedním ze dvou způsobů:
+## <a name="secure-email-access"></a>Zabezpečení přístupu k e-mailu
 
-1. **Certifikáty** – Při vytváření e-mailového profilu zvolíte profil certifikátu, který jste předtím vytvořili v Intune. Ten se označuje jako certifikát identity a slouží k ověřování na základě důvěryhodného profilu certifikátu (neboli kořenového certifikátu), který potvrzuje, že má zařízení uživatele dovoleno připojovat se. Tento důvěryhodný certifikát se přiřadí počítači, který ověřuje e-mailové připojení. Zpravidla se jedná o nativní poštovní server.
-Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Intune](certificates-configure.md).
-2. **Uživatelské jméno a heslo** – Uživatel se ověřuje na nativním poštovním serveru zadáním uživatelského jména a hesla.
-Heslo není součástí e-mailového profilu, uživatel ho tedy musí zadat při připojování k e-mailu.
+E-mailové profily můžete zabezpečit pomocí následujících možností:
 
+- **Certifikáty:** Při vytváření e-mailového profilu zvolíte profil certifikátu dříve vytvořený v Intune. Tento certifikát se označuje jako certifikát identity. Provádí ověření vůči profilu důvěryhodného certifikátu nebo kořenovému certifikátu a potvrzuje, že se zařízení uživatele může připojit. Tento důvěryhodný certifikát je přiřazený počítači, který ověřuje připojení k e-mailu. Tímto počítačem je zpravidla nativní poštovní server.
 
-### <a name="how-intune-handles-existing-email-accounts"></a>Jak Intune nakládá s existujícími e-mailovými účty
+  Další informace o vytváření a používání profilů certifikátů v Intune najdete v tématu [Jak konfigurovat certifikáty pomocí Intune](certificates-configure.md).
 
-Pokud má už uživatel nakonfigurovaný e-mailový účet, pak výsledek přiřazení e-mailového profilu v Intune závisí na platformě zařízení:
+- **Uživatelské jméno a heslo:** Uživatel se ověřuje vůči nativnímu poštovnímu serveru zadáním uživatelského jména a hesla. Heslo v e-mailovém profilu neexistuje. Uživatel proto musí zadat heslo při připojování k e-mailu.
 
-- **iOS:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Duplicitní e-mailový profil zablokuje přiřazení profilu Intune. Portál společnosti v tomto případě informuje uživatele o tom, že nesplňuje požadavky, a vyzve ho k odebrání ručně nakonfigurovaného profilu. Pokud chcete tomuto problému zabránit, požádejte uživatele, aby se zaregistrovali před instalací e-mailového profilu, čímž se umožní, aby profil nastavila služba Intune.
+## <a name="how-intune-handles-existing-email-accounts"></a>Jak Intune nakládá s existujícími e-mailovými účty
+
+Pokud si už uživatel e-mailový účet nakonfiguroval, přiřadí se e-mailový profil jinak, a to v závislosti na platformě.
+
+- **iOS**: Je detekován existující duplicitní profil e-mailu na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil zablokuje přiřazení profilu Intune. V tomto případě aplikace Portál společnosti oznámí uživateli, že nedodržuje předpisy a vyzve ho k ručnímu odebrání nakonfigurovaného profilu. Pokud chcete této situaci zabránit, požádejte uživatele, aby se zaregistrovali *před* instalací e-mailového profilu, což službě Intune umožní nastavit tento profil.
+
 - **Windows:** Na základě názvu hostitele a e-mailové adresy se detekuje existující duplicitní e-mailový profil. Intune přepíše existující e-mailový profil vytvořený uživatelem.
-- **Android Samsung Knox Standard:** Na základě e-mailové adresy se zjistí přítomnost duplicitního e-mailového profilu, který se přepíše profilem Intune.
-Vzhledem k tomu, že Android nevyužívá k identifikaci profilu název hostitele, doporučujeme nevytvářet více e-mailových profilů pro použití se stejnou e-mailovou adresou na různých hostitelích, protože by se vzájemně přepisovaly.
-- **Pracovní profily Androidu:** Intune poskytuje dva e-mailové profily pro pracovní profily Androidu, a sice pro e-mailové aplikace Gmail a Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a můžete je nainstalovat do pracovního profilu zařízení, aby nedošlo k vytvoření duplicitních profilů. Obě aplikace podporují připojení k Exchangi. Pokud chcete umožnit připojení k e-mailu, nasaďte jednu z těchto e-mailových aplikací do zařízení uživatelů a pak vytvořte a nasaďte příslušný e-mailový profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
 
-### <a name="update-an-email-profile"></a>Aktualizace e-mailového profilu
+- **Android Samsung Knox Standard:** Na základě e-mailové adresy se zjistí přítomnost duplicitního e-mailového profilu, který se přepíše profilem Intune. Android nepoužívá k identifikaci profilu název hostitele. Nevytvářejte více e-mailových profilů se stejnou e-mailovou adresou na různých hostitelích. Tyto profily se vzájemně přepíšou.
 
-Pokud provedete změny e-mailového profilu, který jste předtím přiřadili, koncovým uživatelům se může zobrazit zpráva s požadavkem, aby schválili rekonfiguraci nastavení e-mailu.
+- **Pracovní profily Androidu:** Intune poskytuje dva pracovní e-mailové profily pro Android: jeden pro aplikaci Gmail a jeden pro aplikaci Nine Work. Tyto aplikace jsou dostupné v obchodě Google Play a instalují se v pracovním profilu zařízení. Tyto aplikace nevytvoří duplicitní profily. Obě aplikace podporují připojení k Exchangi. Pokud chcete zajistit připojení k e-mailu, nasaďte do zařízení uživatelů jednu z těchto e-mailových aplikací. Pak vytvořte a nasaďte příslušný e-mailový profil. E-mailové aplikace, jako je Nine Work, nemusí být bezplatné. Přečtěte si podrobné informace o licencování aplikace nebo se v případě dotazů obraťte na společnost, která aplikaci vytvořila.
+
+## <a name="changes-to-assigned-email-profiles"></a>Změny přiřazených e-mailových profilů
+
+Pokud provedete změny e-mailového profilu, který jste předtím přiřadili, může se koncovým uživatelům zobrazit zpráva s žádostí, aby schválili rekonfiguraci nastavení e-mailu.
+
+## <a name="next-steps"></a>Další kroky
+Když je profil vytvořený, není ještě aktivní. Jako další krok [tento profil přiřaďte některým zařízením](device-profile-assign.md).
