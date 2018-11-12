@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3397c10ae572a248507f15e5145fef68898d30c4
-ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
+ms.openlocfilehash: 822be56db10f4659ba9cd027c2612d7960e40e5b
+ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291440"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50679198"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-windows-phone-81"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s Windows Phone 8.1
 
@@ -93,7 +93,7 @@ Další informace o tom, jak psát vlastní příkazy XML, najdete v dokumentaci
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
 - **Automaticky zjišťovat nastavení proxy serveru** – pokud VPN server vyžaduje pro připojení proxy server, zadejte, jestli mají zařízení automaticky zjišťovat nastavení připojení. Další informace najdete v dokumentaci k Windows Serveru.
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (například **http://proxy.contoso.com**), na které se nachází konfigurační soubor.
+- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (třeba `** http://proxy.contoso.com**`), na které je konfigurační soubor.
 - **Použít proxy server** – tuto možnost povolte, pokud chcete zadat nastavení proxy serveru ručně.
     - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
     - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.

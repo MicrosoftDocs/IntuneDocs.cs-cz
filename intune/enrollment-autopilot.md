@@ -12,12 +12,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
-ms.openlocfilehash: aa51cbea1ab1ea5f1bfc903a17638192aca59326
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 5fa3079c994a2e0ea2d587185e12c52085133f9c
+ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075893"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51025181"
 ---
 # <a name="enroll-windows-devices-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows pomocí Windows Autopilotu  
 Windows Autopilot zjednodušuje registraci zařízení. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -26,6 +26,12 @@ Windows Autopilot zjednodušuje registraci zařízení. Vytváření a udržová
 ## <a name="prerequisites"></a>Požadavky
 - [Povolená automatická registrace pro Windows](https://docs.microsoft.com/intune-classic/deploy-use/set-up-windows-device-management-with-microsoft-intune#enable-windows-10-automatic-enrollment)
 - [Předplatné Azure Active Directory Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium) <!--&#40;[trial subscription](http://go.microsoft.com/fwlink/?LinkID=816845)&#41;-->
+
+## <a name="how-to-get-the-csv-for-import-in-intune"></a>Získání souboru CSV pro import v Intune
+
+Projděte si vysvětlující powershellovou rutinu, která vám poskytne další informace o tom, jak tuto funkci používat.
+
+- [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 
 ## <a name="add-devices"></a>Přidání zařízení
 
@@ -153,15 +159,14 @@ Pokud nemáte zájem o správu mobilních zařízení, můžete Autopilot použ�
 - Synchronizovat přiřazení profilu provedená na jiném portálu
 - Zobrazit změny v seznamu zařízení, které byly provedeny na jiném portálu
 
-## <a name="redeploying-windows-autopilot"></a>Opětovné nasazení Windows Autopilotu
+## <a name="windows-autopilot-for-existing-devices"></a>Windows Autopilot pro existující zařízení
 
-Zařízení s Windows můžete seskupit podle ID korelátoru, pokud se registrují s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. [Atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) se automaticky nastaví tak, aby odpovídal nastavení OfflineAutopilotprofile-<correlator ID>. Umožní se tím, aby se pro offline registrace Autopilotu vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru pomocí atributu enrollmentprofileName.
+Zařízení s Windows můžete seskupit podle ID korelátoru, pokud se registrují s použitím [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. [Atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) se automaticky nastaví tak, aby odpovídal nastavení OfflineAutopilotprofile-\<ID korelátoru\>. Umožní se tím, aby se vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru pomocí atributu enrollmentprofileName.
 
-Pokud upgradujete starší verze Windows, které nepodporují registraci Autopilotu, můžete použít offline profil Autopilot. Autopilot může pomoct při čisté instalaci systému Windows 10 1809 nebo novějšího. Jako součást offline profilu můžete zadat ID korelátoru. 
-
-UPOZORNĚNÍ: ID korelátoru není v Intune přednastavený, takže uživatelé můžou při registraci zvolit libovolný ID korelátoru. Pokud uživatel vytvoří ID korelátoru odpovídající názvu profilu Autopilot nebo Apple DEP, přidá se zařízení do libovolné dynamické skupiny Azure AD na základě atributu enrollmentProfileName. Pokud se chcete tomuto konfliktu vyhnout:
-- Vytvářejte pravidla dynamických skupin vždy tak, aby se porovnávala *celá* hodnota atributu enrollmentProfileName.
-- Nikdy nedávejte profilům Autopilot nebo Apple DEP název, který začíná textem „OfflineAutopilotprofile-“.
+>[!WARNING] 
+> ID korelátoru není v Intune přednastavené, takže zařízení může ohlásit libovolné ID korelátoru. Pokud uživatel vytvoří ID korelátoru odpovídající názvu profilu Autopilot nebo Apple DEP, přidá se zařízení do libovolné dynamické skupiny Azure AD na základě atributu enrollmentProfileName. Pokud se chcete tomuto konfliktu vyhnout:
+> - Vytvářejte pravidla dynamických skupin vždy tak, aby se porovnávala *celá* hodnota atributu enrollmentProfileName.
+> - Nikdy nedávejte profilům Autopilot nebo Apple DEP název, který začíná textem „OfflineAutopilotprofile-“.
 
 ## <a name="next-steps"></a>Další kroky
 Po konfiguraci Windows Autopilotu pro registrovaná zařízení s Windows 10 zjistěte, jak taková zařízení spravovat. Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-management).
