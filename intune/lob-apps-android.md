@@ -15,12 +15,12 @@ ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: f01ff78ed833e8c621783363a7d6ad1405df6f14
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: a57ae54787069f85798519a3a6bc051842db6c2b
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602227"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212321"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Android do Microsoft Intune
 
@@ -55,7 +55,6 @@ Obchodní aplikace (LOB) je aplikace, kterou do Intune přidáte z instalačníh
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
     - **Minimální operační systém**: V seznamu zvolte minimální verzi operačního systému, na kterou jde aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář.
     - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.

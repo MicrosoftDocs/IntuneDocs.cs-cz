@@ -15,12 +15,12 @@ ms.assetid: 099101e8-4b22-40ac-ba19-82ba5c71944c
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: bbf02fc9633cca5059a6c58c3ef021f05469be60
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
+ms.openlocfilehash: 43ca9d165bd44684a23f7e82eaed04f833b30449
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075589"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212338"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -55,7 +55,6 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
     - **Minimální operační systém**: V seznamu zvolte minimální verzi operačního systému, na kterou jde aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář.
     - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.

@@ -15,12 +15,12 @@ ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e86db15fb4c69b57a1dc572d5a7e4f06eee3b760
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
+ms.openlocfilehash: ff63e3cdf670156c66c156e3defe6d67e7c04044
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602108"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212355"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows Phone do Microsoft Intune
 
@@ -51,7 +51,6 @@ Informace v tomto článku vám pomůžou přidat obchodní aplikaci pro Windows
     - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář.
     - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.

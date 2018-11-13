@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/08/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: 4b7a759b574b44a07499597e89627f70b99e5496
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
+ms.openlocfilehash: c9920e914a80ec3bb02f5066e6d6e34b2236c860
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643089"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212491"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -34,7 +34,7 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 * Vaše aplikace musí být určena pro iOS 10 a vyšší verzi.
 
-* Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS%20.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
+* Přečtěte si [licenční podmínky Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Licenční podmínky si vytiskněte a uchovejte pro své záznamy. Stažením a použitím Intune App SDK pro iOS s licenčními podmínkami souhlasíte.  Pokud je nepřijímáte, software nepoužívejte.
 
 * Stáhněte soubory pro sadu Intune App SDK pro iOS z [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 

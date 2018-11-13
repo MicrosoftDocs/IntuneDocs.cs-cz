@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: e54b35d677d34067bfbd0ad6aad86e3dfe17fb90
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 5fb0de1af9c8336cb277572faf526f1471108591
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50971478"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225947"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -165,7 +165,7 @@ Entita **DeviceConfigurationProfileDeviceActivity** obsahuje počet zařízení 
 | Neúspěch    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2        |
 
 ## <a name="deviceconfigurationprofileuseractivities"></a>deviceConfigurationProfileUserActivities 
-Entita  **DeviceConfigurationProfileUserActivity**  obsahuje počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Pokud se například uživatel nachází v úspěšném stavu pro všechny své přiřazené zásady, posune čítač úspěšných uživatelů pro daný den o jedna nahoru. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu. Entita  **DeviceConfigurationProfileUserActivity**  uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní. 
+Entita **DeviceConfigurationProfileUserActivity** obsahuje počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Pokud se například uživatel nachází v úspěšném stavu pro všechny své přiřazené zásady, posune čítač úspěšných uživatelů pro daný den o jedna nahoru. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu. Entita **DeviceConfigurationProfileUserActivity** uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní. 
 
 | Vlastnost  | Popis  | Příklad  |
 |------------|----------------------------------------------------------------------------------------------|-----------|

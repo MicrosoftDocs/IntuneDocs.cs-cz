@@ -14,12 +14,12 @@ ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
 ms.reviewer: heenamac
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fa1a1b1085d196411a03a6228eefa808399397ea
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
+ms.openlocfilehash: 439c89f7b0158111f63d2d8327291c2b5a5c1e38
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31024800"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298067"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -48,9 +48,6 @@ Když například chcete přiřadit profil zařízení všem zařízením ve sv�
 Funkce vyloučení hledá jenom přímé členy skupin, nezahrnuje zařízení, která jsou přidružená k uživateli. Zařízení, která nemají uživatele, ale zásady nezískají. K tomu dochází, protože taková zařízení nemají žádný vztah ke skupině **Všichni uživatelé**.
 
 Pokud zahrnete **Všechna zařízení** a vyloučíte **Všechny uživatele**, získají zásady všechna zařízení. V tomto scénáři je cílem vyloučit ze zásad ta zařízení, která mají přidruženého uživatele. Tím se ale zařízení nevyloučí, protože funkce vyloučení porovnává jenom přímé členy skupiny.
-
->[!TIP]
->Vyloučení nejsou dostupná pro zásady dodržování předpisů a přiřazení aplikací. Pokud chcete vyloučit členy z přiřazení, můžete použít přiřazení **K dispozici** a **Neužívá se**. Například přiřadíte aplikaci skupině **Všichni firemní uživatelé** se záměrem **K dispozici** a skupině **Členové nejvyššího vedení firmy** se záměrem **Neužívá se**. Aplikace se přiřadí všem uživatelům *kromě* uživatelů ve skupině **Členové nejvyššího vedení firmy**. Pokud přiřadíte aplikaci skupině **Všichni firemní uživatelé** se záměrem **Povinné**, uživatelé skupiny **Členové nejvyššího vedení firmy** jsou také zahrnutí.
 
 ## <a name="next-steps"></a>Další kroky
 Pokyny k monitorování přiřazení profilů zařízení, najdete v článku [Sledování profilů zařízení](device-profile-monitor.md).
