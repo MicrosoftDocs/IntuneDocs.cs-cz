@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/09/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,17 +15,17 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7fd8c7f6f2c3dd5e6e8af323ccbb41a1ab779df
-ms.sourcegitcommit: 814d1d473de2de2e735efab826b1091de2b093f5
-ms.translationtype: HT
+ms.openlocfilehash: 1180e085c0584f3da535947cad60c41d06a8026a
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51025232"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576966"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také získat informace o [nadcházejících změnách](#whats-coming), [důležitá oznámení](#notices) o službě a informace o [minulých verzích](whats-new-archive.md). Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zde také chystané změny, [důležitá sdělení](#notices) a informace o [předchozích verzích](whats-new-archive.md). Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
 
 > [!Note]
 > Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce s novinkami pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
@@ -41,6 +41,21 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Role-based access control
 
 -->     
+## <a name="week-of-november-5-2018"></a>Týden od 5. listopadu 2018
+
+### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Podpora iOS 12 OAuth v e-mailových profilech systému iOS <!--2155106 -->
+
+E-mailové profily Intune pro iOS podporují OAuth (Open Authorization) v iOS 12. Pokud chcete tuto funkci zobrazit, vytvořte nový profil (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **iOS** jako platforma > **E-mail** jako typ profilu), nebo aktualizujte existující e-mailový profil iOS. Pokud OAuth povolíte v profilu, který už je nasazený uživatelům, jsou uživatelé vyzváni k opětovnému ověření a stažení svých e-mailů.
+
+[E-mailové profily pro iOS](email-settings-ios.md) obsahují více informací o použití OAuth.
+
+### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Podpora Autopilotu pro zařízení připojená k hybridní službě Azure Active Directory (Preview) <!-- 1048100-->
+Zařízení připojená k hybridní službě Azure Active Directory si teď můžete nastavit pomocí Autopilotu. Zařízení musí být připojená do vaší podnikové sítě, aby mohla použít hybridní funkci Autopilotu. Další informace najdete v článku o [nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu](windows-autopilot-hybrid.md).
+Tato funkce se bude zavádět pro uživatelskou základnu v průběhu několika dalších dnů. Následující postup bude možné provést až po jejím zavedení pro váš účet.
+
+### <a name="app-protection-policy-app-settings-for-web-data----2662995----"></a>Nastavení zásady ochrany aplikací (APP) pro webová data <!-- 2662995  -->
+Nastavení zásad ochrany aplikací (APP) pro webový obsah na zařízeních s Androidem a iOSem je aktualizované, aby lépe pracovalo s webovými odkazy http a https a také s přenosy dat prostřednictvím univerzálních odkazů iOS a odkazů na aplikace pro Android.  
+
 ## <a name="week-of-october-29-2018"></a>Týden od 29. října 2018
 
 
@@ -112,10 +127,6 @@ Profily Autopilotu budete moct přiřadit virtuální skupině Všechna zaříze
 #### <a name="new-azure-active-directory-terms-of-use-feature----2870393---"></a>Nová funkce podmínek použití služby Azure Active Directory <!-- 2870393 -->
 Azure Active Directory má funkci podmínek použití, kterou můžete využít místo stávajících podmínek a ujednání služby Intune. Funkce podmínek použití služby Azure AD poskytuje větší flexibilitu ohledně toho, které podmínky a kdy se mají zobrazovat, lepší podporu lokalizace, větší kontrolu nad tím, jak se podmínky vykreslují, a vylepšené generování sestav. Funkce podmínek použití služby Azure AD vyžaduje Azure Active Directory Premium P1, která je také součástí sady Enterprise Mobility + Security E3. Další informace najdete v článku [Správa firemních podmínek a ujednání pro přístup uživatelů](terms-and-conditions-create.md).
 
-### <a name="autopilot-support-for-hybrid-azure-active-directory-joined-devices-preview----1048100--"></a>Podpora Autopilotu pro zařízení připojená k hybridní službě Azure Active Directory (Preview) <!-- 1048100-->
-Zařízení připojená k hybridní službě Azure Active Directory si teď můžete nastavit pomocí Autopilotu. Zařízení musí být připojená do vaší podnikové sítě, aby mohla použít hybridní funkci Autopilotu. Další informace najdete v článku o [nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu](windows-autopilot-hybrid.md).
-Tato funkce se bude zavádět pro uživatelskou základnu v průběhu několika dalších dnů. Následující postup bude možné provést až po jejím zavedení pro váš účet.
-
 ### <a name="android-device-owner-mode-support---3188762--"></a>Podpora režimu vlastníka zařízení Android <!--3188762-->
 U registrace mobilního zařízení Samsung Knox teď Intune podporuje registraci zařízení do režimu správy Vlastník zařízení Android. Uživatelé připojení prostřednictvím Wi-Fi nebo mobilních sítí mohou svá zařízení při prvním zapnutí registrovat několika klepnutími. Další informace najdete v článku věnovaném [automatické registraci zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu](android-samsung-knox-mobile-enroll.md).
 
@@ -130,7 +141,10 @@ Zásady ochrany aplikací Intune umožňují pro aplikace chráněné přes Intu
 - **Požadavky na přístup** – tato skupina obsahuje možnosti kódu PIN pro jednotlivé aplikace, které určují, jak koncový uživatel získá přístup k aplikacím v pracovním kontextu.  
 - **Podmíněné spouštění** – tato skupina obsahuje nastavení, jako je minimální verze operačního systému, detekce zařízení s jailbreakem a rootem a období odkladu pro offline režim.  
   
-Funkčnost těchto nastavení se nemění, ale bude snazší je vyhledat při vytváření zásad. 
+Funkčnost těchto nastavení se nemění, ale bude snazší je vyhledat při vytváření zásad.
+
+### <a name="new-intune-device-subscription-sku---3312071--"></a>Nová skladová položka pro předplatné Intune na základě zařízení !--3312071-->
+Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je dostupná přes přímý kanál, smlouvu Enterprise (EA), program MPSA (Microsoft Products and Services) a programy Open a Cloud Solution Provider (CSP).
 
 ### <a name="intune-apps"></a>Aplikace Intune
 
@@ -675,7 +689,7 @@ Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat
 
 ## <a name="week-of-june-18-2018"></a>Týden od 18. června 2018
 
-### <a name="edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Podpora zásad Intune App Protection v mobilní verzi prohlížeče Edge <!-- 1817882 -->
+### <a name="microsoft-edge-mobile-support-for-intune-app-protection-policies----1817882---"></a>Podpora zásad ochrany aplikací Intune v mobilní verzi prohlížeče Microsoft Edge <!-- 1817882 -->
 
 Prohlížeč Microsoft Edge pro mobilní zařízení nyní podporuje zásady ochrany aplikací definované v Intune.
 
@@ -784,7 +798,7 @@ Když chcete identifikátor UDID (Unique Device Identifier) pro zařízení s iO
 U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k chybě instalace. Když k těmto chybám instalace dojde, může být obtížné pochopit, proč k nim došlo nebo je odstranit. Spouštíme verzi Public Preview našich funkcí řešení potíží s aplikacemi. U každého jednotlivého zařízení si všimnete nového uzlu **Spravované aplikace**. Jedná se o seznam aplikací, které byly dodány prostřednictvím MDM Intune. Uvnitř uzlu uvidíte seznam stavů instalací aplikací. Pokud vyberete konkrétní aplikaci, uvidíte zobrazení řešení potíží pro tuto konkrétní aplikaci. V zobrazení řešení potíží se zobrazí úplný životní cyklus aplikace, například kdy byla aplikace vytvořena, upravena, zacílena a dodána do zařízení. Pokud navíc nebyla instalace aplikace úspěšná, zobrazí se vám kód chyby a užitečná zpráva týkající se příčiny chyby. 
 
 #### <a name="intune-app-protection-policies-and-microsoft-edge----1818968---"></a>Zásady ochrany aplikací Intune a Microsoft Edge <!-- 1818968 -->
-Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) teď podporuje zásady ochrany aplikací Microsoft Intune. Uživatelé zařízení s iOSem a Androidem, kteří se přihlásí svými podnikovými účty Azure AD k aplikaci Edge, budou chráněni službou Intune. Na zařízeních s iOSem zásada **Vyžadovat spravovaný prohlížeč pro webový obsah** umožní uživatelům otevírat odkazy v Edgi, pokud je spravovaný.
+Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) teď podporuje zásady ochrany aplikací Microsoft Intune. Uživatelé zařízení s iOSem a Androidem, kteří se přihlásí svými podnikovými účty Azure AD k aplikaci Edge, budou chráněni službou Intune. Na zařízeních s iOSem umožní zásada **Vyžadovat spravovaný prohlížeč pro webový obsah** uživatelům otevírat odkazy v Microsoft Edgi, pokud je spravovaný.
 
 ## <a name="week-of-may-14-2018"></a>Týden od 14. května 2018
 
@@ -1010,6 +1024,21 @@ Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživa
 Nově můžete chránit přístup k místním datům systému Exchange z Outlooku Mobile prostřednictvím zásad ochrany aplikací Intune a podmíněného přístupu. Pokud chcete na portálu Azure Portal přidat nebo upravit zásady ochrany aplikací, vyberte **Microsoft Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
 
 ## <a name="notices"></a>Sdělení
+
+### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Plánovaná změna: Aktualizace výkonu pro Intune for Education <!--1750215-->
+Do Intune for Education přidáváme určité aktualizace, které zvyšují rychlost a spolehlivost při přiřazování nastavení uživatelům nebo zařízením. V rámci této změny přesuneme koncem listopadu přiřazení vašich zásad nebo nastavení do nových skupin.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+
+Jako zákazník Intune for Education máte dvě dynamické skupiny služby Azure Active Directory (Azure AD): „Všichni uživatelé“ a „Všechna zařízení“. S těmito aktualizacemi už skupiny služby Azure AD „Všichni uživatelé“ a „Všechna zařízení“ nebudou viditelné v konzole Intune for Education. Budou ale pořád viditelné v konzole Intune v Azure a přejmenují se na „Všichni uživatelé (zastaralé, nepoužívat)“ a „Všechna zařízení (zastaralé, nepoužívat)“.
+
+Po zavedení těchto aktualizací už nebudete muset k přiřazení aplikací a nastavení v Intune používat skupiny služby Azure AD. Místo toho přesuneme přiřazení vašich nastavení do nových skupin v konzole Intune for Education, které za vás vytvoříme a které se budou jmenovat „Všichni uživatelé“ a „Všechna zařízení“ jako dříve. Tyto změny se odehrávají v back-endu, takže si v konzole Intune for Education nevšimnete žádných odlišností. Neočekává se žádný vliv na vaše koncové uživatele a zaregistrovaná zařízení. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Během přesouvání přiřazení zásad nemusíte nic dělat. Pokud momentálně přiřazujete zásady v konzole Intune for Education, pokračujte v tom i nadále.
+
+Pokud momentálně přiřazujete zásady k výše uvedeným skupinám služby Azure AD v Intune v Azure, začněte je místo toho přiřazovat ke skupině Všichni uživatelé a Všechna zařízení v konzole Intune for Education. Až v konzole uvidíte tyto skupiny služby Azure AD přejmenované na zastaralé, přestaňte zásady přiřazovat ve službě Azure AD. Pokud v současnosti nepoužíváte přejmenované skupiny k žádnému jinému účelu, měli byste je odstranit.
+
 
 ### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Plánovaná změna: V Intune se začne podporovat macOS 10.12 a vyšší v prosinci <!--2970975--> 
 

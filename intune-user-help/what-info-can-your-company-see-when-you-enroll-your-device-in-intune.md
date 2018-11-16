@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 11/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
-ms.openlocfilehash: bdf08ccac21407bc2572f1133b2fe8d45548342f
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
-ms.translationtype: HT
+ms.openlocfilehash: 63295d7e05889f5a8beb44e399f36a4fbe27544d
+ms.sourcegitcommit: 76c7b315b83eb6cb5b996facf1d250fb3e22f1bc
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679249"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51276111"
 ---
-# <a name="what-information-can-my-company-see-when-i-enroll-my-device"></a>Jaké informace moje společnost uvidí, když si zaregistruji zařízení?
+# <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
-Při registraci zařízení do Microsoft Intune společnost nevidí vaše osobní údaje. Při registraci zařízení povolíte společnosti prohlížet na vašem zařízení určité části informací, například model zařízení a sériové číslo. Tyto informace pomáhají společnosti chránit firemní data na zařízení.
+Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní údaje. Při registraci zařízení dáváte organizaci svolení k zobrazení určitých informací o vašem zařízení, jako je model zařízení a sériové číslo. Tyto informace pomáhají vaší organizaci chránit firemní data v zařízení.
 
-**Co společnost nikdy neuvidí:**
+**Údaje, které vaše organizace nikdy neuvidí:**
 
 - Historie volání a procházení webu
 - Textové a e-mailové zprávy
@@ -35,20 +35,23 @@ Při registraci zařízení do Microsoft Intune společnost nevidí vaše osobn�
 - Kalendář
 -   Hesla
 - Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu
+- Soubory
 
-**Co společnost vidí vždy:**
+**Údaje, které vaše organizace uvidí vždy:**
 
 - Model zařízení, jako je Google Pixel
-- Výrobce, například Microsoft
-- Operační systém, například iOS
-- Názvy aplikací, například Microsoft Word
+- Výrobce zařízení, například Microsoft
+- Operační systém a jeho verzi, například iOS 12.0.1
+- Názvy aplikací, jako je Microsoft Word: na osobních zařízeních uvidí vaše organizace jen inventář spravovaných aplikací. Na zařízeních ve firemním vlastnictví uvidí vaše organizace inventář všech aplikací.
 - Vlastník zařízení
 - Název zařízení
-- Sériové číslo
+- Sériové číslo zařízení
+- IMEI
 
-**Co společnost může vidět:**
+**Údaje, které vaše organizace může vidět:**
 
--  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí společnost jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení.
--  Poloha: Vaše společnost nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)
-- Inventář aplikací: Pokud společnost používá ochranu před mobilními hrozbami, může si zobrazit podrobnější informace o aplikacích, které máte na svém zařízení s iOSem. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
-- Informace o síti: Některé informace o připojení k síti pro zařízení Android mohou být k dispozici u podpory vaší společnosti. Pokud vaše společnost například vyžaduje, aby zařízení zůstala v určité budově, určí zařízení síť, které je připojeno. 
+-  Telefonní číslo: U zařízení ve **firemním** vlastnictví může být viditelné celé telefonní číslo. U zařízení v **osobním** vlastnictví vidí organizace jen poslední čtyři číslice vašeho telefonního čísla. **Typ vlastnictví** jednotlivých zařízení zobrazíte tak, že otevřete stránku **Podrobnosti zařízení** určitého zařízení.
+- Úložné místo v zařízení: Pokud nemůžete nainstalovat požadovanou aplikaci, může organizace zjistit, jestli ve vašem zařízení není nedostatek úložného místa.  
+-  Poloha: Vaše organizace nikdy neuvidí polohu vašeho zařízení, pokud nemáte zařízení s iOS, které je pod dohledem a ztratilo se. [Jak to zjistím?](https://go.microsoft.com/fwlink/?linkid=853816)
+- Inventář aplikací: Pokud vaše organizace používá ochranu před mobilními hrozbami, uvidí více podrobností o aplikacích, které jsou na vašem zařízení s iOSem. Přečtěte si další informace o [ochraně před mobilním hrozbami](you-are-prompted-to-install-mtd-ios.md).
+- Informace o síti: Některé informace o připojení k síti na zařízeních s Androidem mohou být dostupné podpoře vaší organizace. Pokud vaše organizace například vyžaduje, aby zařízení zůstala v určité budově, identifikuje vaše zařízení síť, ke které je připojené. 

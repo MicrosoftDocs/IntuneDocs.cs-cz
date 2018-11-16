@@ -15,12 +15,12 @@ ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
 ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e12ab106b44d217d7e7b4b1a466fd5b12a9fb528
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: c24630dd3cc45b35e6313e9e66db74a548bb0851
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231827"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298101"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -43,7 +43,7 @@ V následující tabulce jsou uvedené požadavky na počítač, na který insta
 |            Požadavek             |                                                                                                                                                                                                        Další informace                                                                                                                                                                                                        |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |         operační systémy;          |                                                               Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporovaný v žádné instalaci jádra serveru.                                                                |
-|         Microsoft Exchange         |                                                                           Místní konektory vyžadují Microsoft Exchange 2010 SP1 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů.                                                                           |
+|         Microsoft Exchange         |                                                                           Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů.                                                                           |
 | Autorita pro správu mobilních zařízení |                                                                                                                              [Nastavte autoritu pro správu mobilních zařízení na Intune](https://docs.microsoft.com/intune-classic/deploy-use/prerequisites-for-enrollment#step-2-mdm-authority-set).                                                                                                                               |
 |              Hardware              |                                                                                                                                                     Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.                                                                                                                                                      |
 |  Synchronizace se službou Active Directory  |                                                                                      Než použijete konektor k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.                                                                                      |
@@ -70,7 +70,7 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude mí
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete web [Azure Portal](http://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
+1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [Azure Portal](http://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního serveru Exchange a který má licenci k používání Exchange Serveru.
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 

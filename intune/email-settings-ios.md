@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/21/2018
+ms.date: 11/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 2d27e90655e54051d73989202d2bc849a66208f5
-ms.sourcegitcommit: 488be75cbee88455b33c68a3ec2acb864d461bf8
-ms.translationtype: HT
+ms.openlocfilehash: a6fd10ab6a1e9dd7249e2ae1d4bf558d190276ed
+ms.sourcegitcommit: b0ee8626191961dc07f9f7f9d8e6a5fb09c63350
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "41910798"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51505874"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>Nastavení e-mailového profilu na zařízeních s iOSem – Intune
 
@@ -44,15 +44,32 @@ Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s iOSe
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
       - **Vlastní název domény, který se má použít**: Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
 
-- **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
+- **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchangi použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**. Vícefaktorové ověřování Azure není podporované.
   - Pokud jste vybrali **Certifikát**, vyberte profil klienta SCEP nebo PKCS, který jste dříve vytvořili a který se použije k ověření připojení Exchange.
-- **SSL**: Použijte možnost **Povolit**, aby se při posílání a přijímání e-mailů a při komunikaci se serverem Exchange použila komunikace SSL (Secure Sockets Layer).
+- **SSL**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace SSL (Secure Sockets Layer).
+- **OAuth**: Při volbě **Povolit** se při posílání a přijímání e-mailů a komunikaci se serverem Exchange používá komunikace OAuth (Open Authorization). Pokud server OAuth používá ověřování certifikátem, u možnosti **Metoda ověřování** zvolte **Certifikát** a zahrňte do profilu příslušný certifikát. V opačném případě u možnosti **Metoda ověřování** zvolte **Uživatelské jméno a heslo**. Při použití OAuth mějte na paměti tyto skutečnosti:
+
+  - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. U místního Exchange je možné nakonfigurovat moderní ověřování (viz příspěvek blogu s [oznámením hybridního moderního ověřování pro místní Exchange](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/)).
+
+    Pokud e-mailový profil používá Oauth a e-mailová služba ho nepodporuje, bude se možnost **Zadejte heslo znovu** jevit jako nefunkční. Když například uživatel vybere možnost **Zadejte heslo znovu** v nastavení zařízení Apple, nic se nestane.
+
+  - Při povoleném OAuth mají koncoví uživatelé jiné prostředí přihlašování k e-mailu s moderním ověřováním, které podporuje vícefaktorové ověřování. 
+
+  - Některé organizace zakazují koncovým uživatelům možnost [samoobslužného přístupu k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/manage-self-service-access). V této situaci může přihlášení s moderním ověřováním selhat, dokud správce nevytvoří podnikovou aplikaci „Účty iOS“ a neudělí uživatelům k této aplikaci přístup ve službě Azure AD.
+
+    Výchozí akcí je přidání aplikace pomocí funkce **Přidat aplikaci** na [přístupovém panelu aplikace](https://docs.microsoft.com/azure/active-directory/user-help/active-directory-saas-access-panel-introduction) **bez schválení organizací**. Další informace najdete v článku o [přiřazení uživatelů k aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/ways-users-get-assigned-to-applications).
+
+  > [!NOTE]
+  > Když povolíte OAuth, stane se následující:  
+  > 1. Zařízením, která už jsou zacílená, se vystaví nový profil.
+  > 2. Koncovým uživatelům se zobrazí výzva k opětovnému zadání přihlašovacích údajů.
+
 - **S/MIME**: Použijte možnost **Povolit S/MIME**, aby se odchozí e-maily odesílaly s podpisem S/MIME. Pokud je tato možnost povolená, můžete také šifrovat e-maily pro příjemce, kteří můžou přijímat zašifrované e-maily a dešifrovat přijaté e-maily od odesílatelů.
-  - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu PKCS, který jste dříve vytvořili za účelem ověřování připojení Exchange nebo šifrování e-mailové komunikace.
+  - Pokud vyberete **Certifikát**, zvolte pro ověření připojení k Exchangi a/nebo šifrování výměny e-mailů nějaký existující profil certifikátu PKCS.
 - **Počet e-mailů k synchronizaci**: Zvolte počet dní, za které se mají e-maily synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
 - **Povolit přesouvání zpráv do jiných e-mailových účtů**: Možnost **Povolit** umožňuje uživatelům přesouvat e-mailové zprávy mezi různými účty, které si na svých zařízeních nakonfigurovali.
-- **Umožnit posílání e-mailů z aplikací třetích stran**: Možnost **Povolit** umožňuje uživateli, aby tento profil vybral jako výchozí účet pro posílání e-mailů, a povolí aplikacím třetích stran otevírání e-mailů v nativních e-mailových aplikacích, například k připojování souborů k e-mailům.
+- **Umožnit posílání e-mailů z aplikací třetích stran**: Možnost **Povolit** umožňuje uživatelům vybrat tento profil jako výchozí účet pro odesílání e-mailů. Aplikacím třetích stran umožňuje otevírat e-maily v nativní e-mailové aplikaci, například při připojení souborů k e-mailu.
 - **Synchronizovat nedávno použité e-mailové adresy**: Možnost **Povolit** umožňuje uživatelům synchronizovat se serverem seznam e-mailových adres, které se na zařízení nedávno používaly.
 
 ## <a name="next-steps"></a>Další kroky

@@ -1,6 +1,6 @@
 ---
 title: Omezení zařízení s Windows Holographic for Business v Microsoft Intune – Azure | Microsoft Docs
-description: Seznamte se s nastaveními a konfigurací omezení zařízení s Windows Holographic for Business v Microsoft Intune, včetně zrušení registrace, zeměpisné polohy, hesel, instalace aplikací z obchodu App Store, souborů cookie a automaticky otevíraných oken v Edgi, programu Windows Defender, vyhledávání, cloudu a úložiště, možností připojení přes Bluetooth, systémového času a dat o používání v Azure.
+description: Seznamte se v Microsoft Intune s konfigurací nastavení pro omezení zařízení s Windows Holographic for Business, včetně zrušení registrace, geografické polohy, hesel, instalace aplikací z obchodu s aplikacemi, souborů cookie a automaticky otevíraných oken v Microsoft Edgi, programu Windows Defender, vyhledávání, cloudu a úložiště, připojení přes Bluetooth, systémového času a dat o používání v Azure.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 9d7f54ce0e288025a4a7f0f45bf5b10de5323021
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
-ms.translationtype: HT
+ms.openlocfilehash: f79985c9854af462fa9a456304a3184128283b9c
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321630"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576796"
 ---
 # <a name="device-restriction-settings-for-windows-holographic-for-business-in-intune"></a>Nastavení omezení zařízení s Windows Holographic for Business v Intune
 
@@ -41,17 +41,17 @@ Následující nastavení omezení zařízení se podporují na zařízeních s 
 -   **Instalace důvěryhodné aplikace** – Povolí, aby se aplikace podepsané důvěryhodným certifikátem instalovaly bokem.
 -   **Odemčení pro vývojáře** – Povolí nastavení pro vývojáře Windows, například možnost povolit koncovým uživatelům provádět změny aplikací nainstalovaných bokem.
 
-## <a name="edge-browser"></a>Prohlížeč Microsoft Edge
+## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
 -   **Soubory cookie** – Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
 -   **Automaticky otevíraná okna** – Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
 -   **Návrhy hledání** – Umožní, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
--   **Správce hesel** – Povolí nebo zakáže funkci Správce hesel v Edgi.
+-   **Správce hesel** – Povolí nebo zakáže funkci Správce hesel v Microsoft Edgi.
 - **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 
-- **SmartScreen pro Microsoft Edge** – Povolí filtr SmartScreen v prohlížeči Edge pro přístup k webu a stahování souborů.
+- **SmartScreen pro Microsoft Edge** – Povolí filtr SmartScreen v Microsoft Edgi pro přístup k webu a stahování souborů.
 
 ## <a name="search"></a>Hledat
 - **Poloha při hledání** – Určuje, jestli hledání může používat informace

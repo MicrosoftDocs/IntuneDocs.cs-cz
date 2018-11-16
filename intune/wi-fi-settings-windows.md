@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/8/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.reviewer: tycast
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 58a6681c22672b5aa2c8337708456b30361f741f
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 2252c81757b7745ed15ca86a4e7db310f03df19d
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236471"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298152"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -57,6 +57,9 @@ Těmito nastaveními se zabývá tento článek.
   - **WPA/WPA2-osobní**: Jedná se o možnost s vyšším zabezpečením, která se obvykle používá pro připojení Wi-Fi. Z důvodu dalšího zvýšení zabezpečení můžete zadat také heslo předsdíleného klíče nebo síťový klíč. 
 
     - **Předsdílený klíč** (PSK): Volitelné. Tato možnost se zobrazí, pokud jako typ zabezpečení vyberete **WPA/WPA2-osobní**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK. Zadejte řetězec, jehož délka je 8 až 64 znaků. Pokud mají vaše heslo nebo síťový klíč 64 znaků, zadejte šestnáctkové znaky.
+    
+      > [!NOTE]
+      > Při uložení profilu Wi-Fi se zadaná hodnota PSK z bezpečnostních důvodů nezobrazuje. Ve vodoznaku předsdíleného klíče se pořád zobrazuje **Nenakonfigurováno**, i když je hodnota PSK uložená v profilu. Pokud chcete hodnotu PSK změnit, zadejte nový klíč a uložte profil. Když hodnotu PSK uložíte, upravíte zásadu a necháte hodnotu PSK prázdnou, bude se pořád používat existující hodnota PSK.
 
 - **Nastavení firemního proxy:** Zvolte nastavení proxy v organizaci. Možnosti:
   - **Žádné:** nenakonfiguruje se žádné nastavení proxy.

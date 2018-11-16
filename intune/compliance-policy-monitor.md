@@ -5,19 +5,19 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 11/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 3c103049d22c9834ecb01065686e8678144c9cae
-ms.sourcegitcommit: 8a22afcc8c7479c437c8c66da9cb2117890f0ab0
-ms.translationtype: HT
+ms.openlocfilehash: 8711b4c71c3581bde9ed1de8a5cc02f6b1a07ca7
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410359"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576898"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -88,9 +88,7 @@ Zde vidíte podrobnosti o zařízeních ve zvoleném stavu včetně platformy op
 
 ![Snímek řídicího panelu s podrobnostmi o zařízeních v příslušném stavu](./media/compliance-policy-monitor/drill-down-details.png)
 
-Pokud chcete zobrazit všechna zařízení konkrétního uživatele, můžete sestavu grafu filtrovat zadáním e-mailové adresy uživatele.
-
-![Filtrování pomocí e-mailové adresy pro zobrazení všech zařízení konkrétního uživatele](./media/compliance-policy-monitor/idc-3.png)
+Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem, můžete sestavu grafu také filtrovat zadáním jeho e-mailové adresy.
 
 #### <a name="filter-and-columns"></a>Filtrování a sloupce
 

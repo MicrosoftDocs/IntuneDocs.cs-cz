@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 94280c73-c05c-4e72-b0dd-a7cb997782f9
 ROBOTS: ''
 ms.custom: intune-azure
-ms.openlocfilehash: 5b2c2bb6e76bd6b2da7ee7c12282c0ff22d7d3e3
-ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
-ms.translationtype: HT
+ms.openlocfilehash: 270f19b6f0babb347b04731ca270a3c5bea18217
+ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31617205"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51225661"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Vyžadování vícefaktorového ověřování pro registraci zařízení v Intune
 
@@ -48,24 +48,18 @@ K vynucení vícefaktorového ověřování při registraci zařízení slouží
 >Pro registraci v Microsoft Intune nekonfigurujte **pravidla přístupu na základě zařízení**.
 
 1. Přihlaste se pomocí svých přihlašovacích údajů na [Microsoft Azure Portal](https://portal.azure.com).
-2. Na tomto portálu zvolte **Azure Active Directory**.
-2. Ve službě **Azure Active Directory** zvolte **Spravovat** > **Podnikové aplikace**.
-3. V okně **Podnikové aplikace** zvolte **Spravovat** > **Všechny aplikace**. Uvidíte seznam všech aplikací Azure, které spravujete.
-3. V tomto seznamu zvolte **Registrace v Microsoft Intune**.
-4. V okně **Registrace v Microsoft Intune** zvolte **Zabezpečení** > **Podmíněný přístup**.
-5. Zvolte **Nové zásady**.
-6. V **nové zásadě** zadejte popisný název této zásady.
-7. V části **Přiřazení** zvolte **Uživatelé a skupiny**.
-8. V okně **Uživatelé a skupiny** zvolte uživatele nebo skupiny, které tuto zásadu dostanou, a pak zvolte **Hotovo**.
-9. V části **Přiřazení** zvolte **Cloudové aplikace**.
-10. Na kartě **Zahrnout** okna **Cloudové aplikace** zvolte **Vybrat aplikace**, pak zvolte **Vybrat** > **Registrace v Microsoft Intune** a nakonec zvolte **Hotovo**.
-11. V části **Přiřazení** zvolte **Podmínky**.
-12. V okně **Podmínky** nemusíte pro vícefaktorové ověřování konfigurovat žádná nastavení.
-13. V části **Ovládací prvky přístupu** zvolte **Udělení**.
-14. V okně **Udělení** zvolte **Udělit přístup** a pak vyberte **Vyžadovat vícefaktorové ověřování**.
-    Nevybírejte **Vyžadovat, aby zařízení bylo označené jako vyhovující**, protože dokud není zařízení zaregistrované, nelze vyhodnotit, nakolik vyhovuje.
-15. Zvolte **Vybrat**.
-16. V **nové zásadě** zvolte **Povolit zásadu** > **Zapnuto** a pak zvolte **Vytvořit**.
+2. Na portálu přejděte na **[Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)**.
+3. Ve službě **Azure Active Directory** v oblasti Zabezpečení zvolte **[Podmíněný přístup](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)**.
+4. Zvolte **Nové zásady**.
+5. V **nové zásadě** zadejte popisný název této zásady.
+6. V části **Přiřazení** zvolte **Uživatelé a skupiny**.
+7. V oblasti **Uživatelé a skupiny** zvolte **Vybrat uživatele nebo skupiny** a zaškrtněte políčko **Uživatelé a skupiny**. Pak vyberte uživatele a/nebo skupiny, které obdrží tyto zásady, a zvolte **Hotovo**.
+8. V části **Přiřazení** zvolte **Cloudové aplikace**.
+9. Na kartě **Zahrnout** okna **Cloudové aplikace** zvolte **Vybrat aplikace**, pak zvolte **Vybrat** > **Registrace v Microsoft Intune** a nakonec zvolte **Hotovo**.
+10. V oddílu **Přiřazení** nemusíte pro **Podmínky** konfigurovat žádné nastavení vícefaktorového ověřování.
+11. V části **Ovládací prvky přístupu** zvolte **Udělení**.
+12. V okně **Udělení** zvolte **Udělit přístup** a pak vyberte **Vyžadovat vícefaktorové ověřování**. Nevybírejte **Vyžadovat, aby zařízení bylo označené jako vyhovující**, protože dokud není zařízení zaregistrované, nelze vyhodnotit, nakolik vyhovuje. Pak zvolte **Vybrat**.
+13. V **nové zásadě** zvolte **Povolit zásadu** > **Zapnuto** a pak zvolte **Vytvořit**.
 
 
 

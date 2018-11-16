@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: d2412418-d91a-4767-a3d6-bc88bb29caa2
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 8ae7a15f623b82cabed5314c4770c2edef902414
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
-ms.translationtype: HT
+ms.openlocfilehash: 891b50b2280636c7a5df8ecc1a01bb10723122b5
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253557"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576719"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -37,7 +37,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
    - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
    - Část **Všechna zařízení** obsahuje seznam zaregistrovaných zařízení, která spravujete.
 
-     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu CSV, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
+     Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu .csv, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
 
      Když vyberete libovolné zařízení, můžete o něm [zobrazit další podrobnosti](device-inventory.md), včetně podrobných informací o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
 

@@ -15,12 +15,12 @@ ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 120478644743619dbcfc5e8e36806a1109924331
-ms.sourcegitcommit: 222881461a81a93b3843c2ac86a7c24a180158d5
+ms.openlocfilehash: 7ce54f3bc51735c763359b3e59832454d0a89fad
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50972770"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298084"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
@@ -30,7 +30,7 @@ Zařízení připojená k hybridní službě Azure Active Directory můžete nas
 
 ## <a name="prerequisites"></a>Požadavky
 
-- [Zařízení připojená k hybridní službě Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains) musí být úspěšně nakonfigurovaná.
+- [Zařízení připojená k hybridní službě Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) musí být úspěšně nakonfigurovaná.
     - Nezapomeňte [ověřit registraci pomocí rutiny Get-MsolDevice]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration).
 
 Zařízení, která chcete zaregistrovat, musí:
@@ -65,7 +65,7 @@ Zařízení, která chcete zaregistrovat, musí:
 
 ## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Zvýšení limitu pro účty počítačů v organizační jednotce
 
-Konektor Intune pro Active Directory vytváří počítače registrované pomocí Autopilotu v místní doméně Active Directory. Počítač hostující konektor Intune musí mít právo vytvářet objekty počítače v dané doméně. 
+Konektor Intune pro Active Directory vytváří počítače registrované pomocí Autopilotu v místní doméně služby Active Directory. Počítač hostující tento konektor Intune musí mít práva k vytváření objektů počítače v této doméně. 
 
 V některých doménách se počítačům práva k vytváření počítačů neudělují. Správci možná také nechtějí limit pro účty počítačů v doméně zvyšovat. V těchto situacích se dají tato práva delegovat na organizační jednotku, ve které se zařízení připojená k hybridní službě Azure AD vytvářejí.
 
@@ -108,10 +108,10 @@ Organizační jednotce, které se udělí právo k vytváření počítačů, mu
 
 ## <a name="install-the-intune-connector"></a>Instalace konektoru Intune
 
-Konektor Intune pro Active Directory je nutné nainstalovat do počítače s Windows Serverem 2016, který má přístup k internetu a službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme instalaci konektoru na server, na kterém neběží žádné další konektory Intune.
+Konektor Intune pro Active Directory je nutné nainstalovat do počítače s Windows Serverem 2016, který má přístup k internetu a službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Konektor doporučujeme nainstalovat na server, na kterém se neprovozují žádné jiné konektory Intune.
 
-1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Konektor Intune pro Active Directory (Preview)** > **Přidat konektor**. 
-2. Postupem podle pokynů si stáhněte konektor.
+1. V [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Konektor Intune pro Active Directory (Preview)** > **Přidat konektor**. 
+2. Podle pokynů tento konektor stáhněte.
 3. Otevřete instalační soubor staženého konektoru a nainstalujte konektor (ODJConnectorBootstrapper.exe).
 4. Na konci instalace zvolte **Konfigurovat**.
 5. Zvolte **Přihlásit se**.
@@ -124,7 +124,7 @@ Pokud máte v síťovém prostředí webový proxy server, zajistěte správné 
 
 
 ## <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Skupiny** > **Nová skupina**.
+1. V [Intune](https://aka.ms/intuneportal) zvolte **Skupiny** > **Nová skupina**.
 2. V okně **Skupina**:
     1. Pro **Typ skupiny** zvolte **Zabezpečení**.
     2. Zadejte **Název skupiny** a **Popis skupiny**.
@@ -175,7 +175,7 @@ Po registraci zařízení Autopilot se názvy těchto zařízení změní na ná
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
+1. V [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
 2. Zadejte **název** a volitelný **popis**.
 3. Jako **Režim nasazení** zvolte **Řízení uživatelem**.
 4. V poli **Připojit k Azure AD jako** zvolte **Připojeno k hybridní službě Azure AD (Preview)**.
@@ -188,21 +188,21 @@ Bude trvat přibližně 15 minut, než se stav profilu zařízení změní z **N
 
 ## <a name="turn-on-the-enrollment-status-page-optional"></a>Zapnutí stránky stavu registrace (volitelné)
 
-1.  V [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Stránka stavu registrace (Preview)**.
-2.  V okně **Stránka stavu registrace** zvolte **Výchozí** > **Nastavení**.
-3.  U možnosti **Zobrazit průběh instalace aplikací a profilů** zvolte **Ano**.
+1. V [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Stránka stavu registrace (Preview)**.
+2. V okně **Stránka stavu registrace** zvolte **Výchozí** > **Nastavení**.
+3. U možnosti **Zobrazit průběh instalace aplikací a profilů** zvolte **Ano**.
 4. Nakonfiguruje další možnosti podle potřeby.
-5.  Zvolte **Uložit**.
+5. Zvolte **Uložit**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
-1. V **Microsoft Intune** zvolte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. V [Intune](https://aka.ms/intuneportal) zvolte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 2. Zadejte tyto vlastnosti:
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: Zvolte **Windows 10 a novější**.
    - **Typ profilu**: Zvolte **Připojení k doméně (Preview)**.
-3.  Zvolte **Nastavení** a zadejte položky **Předpona názvu počítače**, **Název domény** a **Organizační jednotka** (volitelně). 
+3. Zvolte **Nastavení** a zadejte položky **Předpona názvu počítače**, **Název domény** a **Organizační jednotka** (volitelně). 
 4. Zvolte **OK** > **Vytvořit**. Profil se vytvoří a zobrazí se v seznamu.
 5. Pokud chcete profil přiřadit, postupujte podle kroků v části [Přiřazení profilu zařízení](device-profile-assign.md#assign-a-device-profile). 
 

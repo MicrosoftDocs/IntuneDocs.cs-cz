@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b3de4d79e6121505718a75ffe64102bb1bc18347
-ms.sourcegitcommit: 244456907e3ab4a4389d32d06060606a9591cfba
-ms.translationtype: HT
+ms.openlocfilehash: 0d749d51f0ae146b68be8abb3a59a0504aea1180
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751639"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298135"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Nastavení veřejného terminálu pro Windows 10 a novější v Intune
 
@@ -77,8 +77,15 @@ Když zvolíte beznabídkový režim s jednou aplikací, zadejte následující 
   - **Aktualizovat prohlížeč po určité době nečinnosti**: Zadejte dobu nečinnosti (1 až 1 440 minut), než se Kiosk Browser restartuje a obnoví. Doba nečinnosti se udává v minutách a označuje dobu, která uplynula od poslední interakce uživatele. Ve výchozím nastavení je hodnota prázdná, což znamená, že neexistuje žádný časový limit nečinnosti.
 
   - **Povolené weby**: Toto nastavení použijte, pokud chcete povolit otevírání konkrétních webů. Jinými slovy, tuto funkci použijte k omezení nebo zabránění spouštění webů na zařízení. Můžete například povolit, aby se otevíraly všechny weby na `http://contoso.com*`. Ve výchozím nastavení jsou povolené všechny weby.
+ 
+      Pokud chcete povolit konkrétní weby, nahrajte soubor, který obsahuje seznam povolených webů na samostatných řádcích. Pokud soubor nepřidáte, jsou povolené všechny weby. Intune podporuje hvězdičku (*) jako zástupný znak.
 
-    Pokud chcete povolit konkrétní weby, nahrajte soubor CSV, který obsahuje seznam povolených webů. Pokud soubor CSV nepřidáte, budou povolené všechny weby. Intune podporuje hvězdičku (*) jako zástupný znak.
+      Váš ukázkový soubor by se měl podobat následujícímu seznamu:
+
+      `http://bing.com`  
+      `https://bing.com`  
+      `http://contoso.com/*`  
+      `https://contoso.com/*`  
 
   Výběrem **OK** uložte změny.
 

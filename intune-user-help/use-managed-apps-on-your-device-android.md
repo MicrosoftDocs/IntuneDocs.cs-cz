@@ -19,7 +19,7 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
 ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/24/2018
 ms.locfileid: "49959498"
@@ -61,7 +61,7 @@ Následující seznam popisuje nastavení aplikace, které můžou pracovníci p
 
 * Přístup k určitým webům  
 
-* Přístup k interním webům společnosti pomocí Edge a proxy Azure Active Directory  
+* Přístup k interním webům společnosti pomocí Microsoft Edge a proxy Azure Active Directory  
 
 * Minimální verze aplikace, verze operačního systému
 

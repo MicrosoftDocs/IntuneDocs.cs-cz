@@ -7,12 +7,12 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 09/21/2018
 ms.author: erikje
-ms.openlocfilehash: 33c0d4f3ee3b29be47540c92425f76a3f1dcc044
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
-ms.translationtype: HT
+ms.openlocfilehash: 5c83af252b1c728b9e3d4015cdc8bb4fd3668ad1
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410765"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561920"
 ---
 # <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvoření a přiřazení vlastní role
 
@@ -64,7 +64,9 @@ Pokud už nechcete novou vlastní roli dále používat, můžete ji odstranit. 
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto rychlém startu jste vytvořili vlastní roli pro operace zabezpečení a přiřadili jste ji skupině. Další informace o záležitostech týkajících se zabezpečení najdete v následujícím článku.
+V tomto rychlém startu jste vytvořili vlastní roli pro operace zabezpečení a přiřadili jste ji skupině. Další informace o rolích v Intune najdete v článku [Řízení správy na základě role (RBAC) v Microsoft Intune](role-based-access-control.md).
+
+Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md)
+> [Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS](quickstart-email-profile.md)

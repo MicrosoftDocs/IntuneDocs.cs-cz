@@ -14,12 +14,12 @@ ms.assetid: 275d574b-3560-4992-877c-c6aa480717f4
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: 68cc4bb576f567787e702ccd88026579b6ed5b12
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
+ms.openlocfilehash: d2531cc203c5c2b255378e836099feb0a9216d45
+ms.sourcegitcommit: cfce9318b5b5a3005929be6eab632038a12379c3
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425304"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51298118"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -64,17 +64,22 @@ Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/
       ```csharp
       using Microsoft.Intune.MAM;
       ```
-4. Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud aplikace k ověřování uživatelů používá knihovnu Azure Active Directory Authentication Library (ADAL), měla by aplikace po úspěšném ověření předat hlavní název uživatele (UPN) metodě registerAndEnrollAccount instance IntuneMAMEnrollmentManager:
-      ```csharp
-      IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
-      ```
-      **Důležité:** Nezapomeňte přepsat výchozí nastavení knihovny ADAL sady Intune App SDK nastavením vaší aplikace. Můžete to udělat prostřednictvím slovníku IntuneMAMSettings v souboru Info.plist aplikace podle popisu v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk) nebo můžete použít vlastnosti přepisu AAD v instanci IntuneMAMPolicyManager. Způsob se souborem Info.plist se doporučuje použít u aplikací se statickým nastavením ADAL. Vlastnosti přepisu se doporučují použít u aplikací, které tyto hodnoty zjišťují za běhu. 
-      
-      Pokud aplikace knihovnu ADAL nepoužívá a chcete, aby ověřování prováděla sada Intune SDK, musí aplikace volat metodu loginAndEnrollAccount instance IntuneMAMEnrollmentManager.
+4. Aby aplikace mohly začít přijímat zásady ochrany, musíte je zaregistrovat do služby Intune MAM. Pokud vaše aplikace nepoužívá k ověřování uživatelů knihovnu [ADAL](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) (Azure Active Directory Authentication Library) ani [MSAL](https://www.nuget.org/packages/Microsoft.Identity.Client) (Microsoft Authentication Library) a chtěli byste ověřování svěřit sadě Intune SDK, měla by aplikace poskytovat metodě LoginAndEnrollAccount třídy IntuneMAMEnrollmentManager hlavní název uživatele (UPN):
       ```csharp
        IntuneMAMEnrollmentManager.Instance.LoginAndEnrollAccount([NullAllowed] string identity);
       ```
+      Aplikace mohou předat hodnotu null, pokud hlavní název uživatele není v době volání známý. V takovém případě budou uživatelé vyzváni k zadání e-mailové adresy a hesla.
       
+      Pokud vaše aplikace už k ověřování uživatelů používá knihovnu ADAL nebo MSAL, můžete mezi aplikací a sadou Intune SDK nakonfigurovat jednotné přihlašování. Nejprve budete muset nakonfigurovat knihovnu ADAL/MSAL tak, aby se tokeny ukládaly ve stejné přístupové skupině řetězce klíčů, kterou používají xamarinové vazby pro iOS (com.microsoft.adalcache). U knihovny ADAL to uděláte [nastavením vlastnosti KeychainSecurityGroup objektu AuthenticationContext](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/wiki/Token-cache-serialization#enable-token-cache-sharing-across-ios-applications). U knihovny MSAL budete muset [nastavit vlastnost KeychainSecurityGroup objektu PublicClientApplication](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki/msal-net-2-released#you-can-now-enable-sso-between-adal-and-msal-apps-on-xamarinios). Dále budete muset přepsat výchozí nastavení služby AAD používaná sadou Intune SDK těmi, která používá vaše aplikace. Můžete to udělat prostřednictvím slovníku IntuneMAMSettings v souboru Info.plist aplikace podle popisu v [příručce pro vývojáře k sadě Intune App SDK pro iOS](app-sdk-ios.md#configure-settings-for-the-intune-app-sdk) nebo můžete použít vlastnosti přepisu AAD v instanci IntuneMAMPolicyManager. Způsob se souborem Info.plist se doporučuje použít u aplikací se statickým nastavením ADAL. Vlastnosti přepisu se doporučují použít u aplikací, které tyto hodnoty zjišťují za běhu. Po konfiguraci všech nastavení jednotného přihlašování by vaše aplikace měla metodě RegisterAndEnrollAccount třídy IntuneMAMEnrollmentManager po úspěšném ověření poskytnout hlavní název uživatele (UPN):
+      ```csharp
+      IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
+      ```
+      Aplikace mohou určit výsledek pokusu o registraci implementací metody EnrollmentRequestWithStatus v podtřídě IntuneMAMEnrollmentDelegate a nastavením vlastnosti Delegate třídy IntuneMAMEnrollmentManager na instanci této třídy. Příklad najdete v naší [ukázkové aplikaci Xamarin.iOS](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
+
+      Po úspěšné registraci mohou aplikace určit hlavní název uživatele zaregistrovaného účtu (pokud předtím nebyl známý) dotazem na následující vlastnost: 
+      ```csharp
+       string enrolledAccount = IntuneMAMEnrollmentManager.Instance.EnrolledAccount;
+      ```      
 > [!NOTE] 
 > Pro iOS není k dispozici nástroj pro přemapování. Integrace do aplikace Xamarin.Forms by měla být stejná jako u normálního projektu Xamarin.iOS. 
 
@@ -129,7 +134,7 @@ Následující část obsahuje postup, který zajistí, aby obchodní aplikace p
 7.  V seznamu rozhraní API vyberte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu) a kliknutím proveďte výběr.
 8.  Vyberte **Read and Write the User’s App Management Data** (Čtení a zápis dat správy uživatelských aplikací).
 9.  Klikněte na **Hotovo**.
-10. Klikněte na **Udělit oprávnění** a pak na **Ano**. 
+10. Klikněte na **Udělit oprávnění** a potom na **Ano**. 
     
 ### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
 Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.

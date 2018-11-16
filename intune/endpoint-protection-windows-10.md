@@ -14,12 +14,12 @@ ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: cc378a4f484852d84943b4d1094b71df5b7a530d
-ms.sourcegitcommit: 006fa8dd4d605e2873fba6e3a965ef794d6f3764
-ms.translationtype: HT
+ms.openlocfilehash: 1a7c7ebca1c6472b58021a57b1b4a59fc42966b0
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36945476"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576949"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější v Intune
 
@@ -98,7 +98,7 @@ Tato nastavení platí pro určité typy sítě, například pro typy **Doménov
 
 ## <a name="windows-defender-smartscreen-settings"></a>Nastavení filtru SmartScreen v programu Windows Defender
 
-Podporovaná v následujících edicích Windows 10 s nainstalovaným prohlížečem Microsoft Edge:
+Podporováno v následujících edicích Windows 10 s nainstalovaným prohlížečem Microsoft Edge:
 - Domů
 - Professional
 - Do zaměstnání

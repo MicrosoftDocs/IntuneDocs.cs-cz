@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 11/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: 2a4b4a4b2b0df706504e76b418c5b87eb66b1111
-ms.sourcegitcommit: 23997b701365bb514347d75edc2357eff1f1443f
-ms.translationtype: HT
+ms.openlocfilehash: 87f49c9aafa8b6f9f281a00e4d7bd297c354f90b
+ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47237659"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51511025"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -281,7 +281,7 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 **Řešení:** Podělte se s koncovými uživateli o následující řešení, která jim pomůžou znovu získat přístup k podnikovým prostředkům.
 
-Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...**). message).
+Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...** ).
 
   ![Oznámení Probíhá pokus o synchronizaci](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 
@@ -391,6 +391,28 @@ Po odstranění problémů s tokenem VPP je nutné vymazat zařízení, která j
 
 #### <a name="tell-the-users-to-restart-the-enrollment-process"></a>Předání pokynu uživatelům, aby proces registrace znovu zahájili
 Po vymazání blokovaných zařízení můžete uživatelům předat pokyn, aby proces registrace znovu zahájili.
+
+## <a name="macos-issues"></a>Problémy s macOS
+
+### <a name="macos-enrollment-errors"></a>Chyby registrace zařízení s macOS
+**Chybová zpráva 1:** *Zdá se, že používáte virtuální počítač. Ověřte, že je virtuální počítač plně nakonfigurovaný, a to včetně sériového čísla a modelu hardwaru. Pokud nejde o virtuální počítač, kontaktujte prosím podporu.*  
+
+**Chybová zpráva 2:** *Máme problémy se správou vašeho zařízení. Tento problém může být způsobený tím, že používáte virtuální počítač, máte zakázané sériové číslo nebo toto zařízení už je přiřazené k někomu jinému. Zjistěte, jak tyto problémy můžete vyřešit, nebo se obraťte na firemní podporu.*
+
+**Problém:** Příčinou této zprávy může být některý z následujících důvodů:  
+* Virtuální počítač s macOS není správně nakonfigurovaný.  
+* Povolili jste omezení zařízení, která vyžadují, aby zařízení bylo ve firemním vlastnictví nebo mělo v Intune zaregistrované sériové číslo.  
+* Zařízení už je zaregistrované a je v Intune pořád přiřazené k někomu jinému.  
+
+**Řešení:** Napřed se obraťte na uživatele a zjistěte, které problémy ovlivňují jeho zařízení. Pak proveďte nejvhodnější z následujících řešení:
+* Pokud uživatel registruje virtuální počítač kvůli testování, ověřte, že je plně nakonfigurovaný, aby služba Intune dokázala rozpoznat jeho sériové číslo a model hardwaru. Přečtěte si další informace o tom, jak v Intune [nastavit virtuální počítače](macos-enroll.md#enroll-virtual-macos-machines-for-testing).  
+* Pokud má vaše organizace zapnuté omezení registrace, které blokuje osobní zařízení s macOS, musíte do Intune ručně [přidat sériové číslo osobního zařízení](corporate-identifiers-add.md#manually-enter-corporate-identifiers).  
+* Pokud je zařízení v Intune pořád přiřazené k jinému uživateli, nepoužil jeho předchozí vlastník aplikaci Portál společnosti, aby ho odebral nebo obnovil tovární nastavení. Záznam zastaralého zařízení vyčistíte v Intune takto:  
+
+    1. Přejděte na [Intune na webu Azure Portal](https://portal.manage.microsoft.com) a přihlaste se pomocí přihlašovacích údajů správce.
+    2. Přejděte na Intune > **Zařízení** > **Všechna zařízení**.  
+    3. Najděte zařízení s problematickou registrací. Výsledky můžete upřesnit hledáním podle názvu zařízení nebo adresy MAC/hardwaru.
+    4. Vyberte toto zařízení > **Odstranit**. Odstraňte všechny ostatní záznamy spojené s tímto zařízením.  
 
 ## <a name="issues-when-using-system-center-configuration-manager-with-intune"></a>Problémy při použití nástroje System Center Configuration Manager se službou Intune
 ### <a name="mobile-devices-disappear"></a>Mobilní zařízení zmizí

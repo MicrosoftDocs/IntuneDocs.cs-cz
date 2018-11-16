@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d4287322fd494c97cf24feb8cc16435a4405f2af
-ms.sourcegitcommit: 7a649a5995600fb91817643e20a5565caedbb8f2
-ms.translationtype: HT
+ms.openlocfilehash: a823ea2f04d8e3a8f1ca5a2f1364060840686501
+ms.sourcegitcommit: 2e6851a5c1f934dcdb3f854d8462a4d23cc0453b
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150099"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51561937"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
@@ -131,7 +131,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce odebere uživatele nebo skupinu z Azure AD.
   - Správce změní nebo aktualizuje profil PKCS.
 
-## <a name="android--android-enterprise-devices"></a>Zařízení se systémy Android a Android Enterprise
+## <a name="android-knox-devices"></a>Zařízení s Androidem KNOX
 
 #### <a name="scep-certificates"></a>Certifikáty SCEP
 
@@ -177,6 +177,10 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce změní nebo aktualizuje profil PKCS.
   - Z přiřazené skupiny je odebraný konfigurační profil.
   - Z přiřazené skupiny je odebraná zásada dodržování předpisů. 
+  
+  
+> [!NOTE]
+> Zařízení s Androidem for Work se ve výše uvedených situacích neověřují. Na starších zařízeních s Androidem (jakékoli zařízení od jiného výrobce než Samsung bez pracovního profilu) nelze certifikát odebrat. 
 
 ## <a name="macos-certificates"></a>Certifikáty macOS
 

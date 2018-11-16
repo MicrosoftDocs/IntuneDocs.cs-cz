@@ -15,12 +15,12 @@ ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d6880d3891891fe27a41d04a118e14ac9d4782b3
-ms.sourcegitcommit: d92caead1d96151fea529c155bdd7b554a2ca5ac
-ms.translationtype: HT
+ms.openlocfilehash: 04c9c6b184fac2082649e8be8e60e6ac3f5a5669
+ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48828172"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51212423"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -43,7 +43,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 2. V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou **.msi**, **.appx** nebo **.appxbundle**.
 
     > [!NOTE]
-    > Mezi přípony souborů aplikací Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
+    > Mezi přípony souborů aplikací pro Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
 
 1. Až to budete mít, vyberte **OK**.
 
@@ -55,7 +55,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
     - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář.
+    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář. Tato možnost platí jen pro mobilní aplikace .msi.
     - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
     - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.

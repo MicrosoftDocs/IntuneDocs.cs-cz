@@ -15,14 +15,14 @@ ms.assetid: 1feca24f-9212-4d5d-afa9-7c171c5e8525
 ms.reviewer: ilwu
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: c3edbf3663d3226f806bf36af97b97cdf4d169c1
-ms.sourcegitcommit: ca33179b8bef98092eedcc22b0e709a862e31dce
+ms.openlocfilehash: 0c2a4ff4654b937449f8e7a36778a67a978bd6db
+ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49357083"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51576864"
 ---
-# <a name="manage-internet-access-using-an-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
+# <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -50,7 +50,7 @@ Starší verze systému Android a iOS budou moct Managed Browser dál používat
 
 ## <a name="application-protection-policies-for-protected-browsers"></a>Zásady ochrany aplikací pro chráněné prohlížeče
 
-Aplikace Edge a Managed Browser jsou integrované se sadou Intune SDK, takže v nich můžete používat také zásady ochrany aplikací, včetně:
+Aplikace Microsoft Edge a Managed Browser jsou integrované se sadou Intune SDK, takže v nich můžete používat také zásady ochrany aplikací, včetně:
 - Řízení použití operací vyjmutí, kopírování a vložení
 - Prevence pořizování snímků obrazovky
 - Možnost otevírání podnikových odkazů jenom ve spravovaných aplikacích a prohlížečích
@@ -65,7 +65,7 @@ Tato nastavení můžete použít na:
 
 >[!NOTE]
 >Pokud si uživatelé nainstalují aplikaci Managed Browser z obchodu s aplikacemi a služba Intune ji nebude spravovat, mohou ji používat jako základní webový prohlížeč s podporou jednotného přihlašování přes web Microsoft MyApps. Uživatelé jsou přesměrováni přímo na web MyApps, kde uvidí všechny své zřízené aplikace SaaS.
-Pokud nejsou aplikace Managed Browser nebo Edge spravované službou Intune, nemají přístup k datům jiných takto spravovaných aplikací. 
+Pokud nejsou aplikace Managed Browser nebo Microsoft Edge spravované službou Intune, nemají přístup k datům jiných takto spravovaných aplikací. 
 
 
 ## <a name="conditional-access-for-protected-browsers"></a>Podmíněný přístup pro chráněné prohlížeče
@@ -151,30 +151,30 @@ Aplikace Microsoft Edge a Intune Managed Browser a [proxy aplikací Azure AD]( 
 - Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
     - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
 - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
-- Uživatelé aplikace Managed Browser nebo Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
+- Uživatelé aplikace Managed Browser nebo Microsoft Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
 
     > [!NOTE]
-    > Aktualizovaným datům přesměrování proxy aplikací může trvat až 24 hodin, než se projeví v aplikaci Managed Browser nebo Edge.
+    > Aktualizovaným datům přesměrování proxy aplikací může trvat až 24 hodin, než se projeví v aplikaci Managed Browser nebo Microsoft Edge.
 
 
 #### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>Krok 1: Zapněte automatické přesměrování z Outlooku do chráněného prohlížeče.
 Outlook musí být nakonfigurován zásadami ochrany aplikací, které povolují nastavení **Omezit webový obsah tak, aby se spouštěl v Managed Browseru**.
 
 #### <a name="step-2-assign-an-app-configuration-policy-assigned-for-the-protected-browser"></a>Krok 2: Přiřaďte zásady konfigurace aplikací pro chráněný prohlížeč.
-Tento postup nakonfiguruje aplikaci Managed Browser nebo Edge tak, aby používala přesměrování proxy aplikací. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
+Tento postup nakonfiguruje aplikaci Managed Browser nebo Microsoft Edge tak, aby používala přesměrování proxy aplikací. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
 | Klíč                                                             | Hodnota    |
 |-----------------------------------------------------------------|----------|
 | **com.microsoft.intune.mam.managedbrowser.AppProxyRedirection** | **true** |
 
-Další informace o tom, jak lze Managed Browser, Edge a proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
+Další informace o tom, jak lze Managed Browser, Microsoft Edge a proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
 
 > [!NOTE]
-> Edge používá stejné dvojice klíč-hodnota jako Managed Browser. 
+> Microsoft Edge používá stejné dvojice klíč-hodnota jako Managed Browser. 
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Postup konfigurace domovské stránky chráněného prohlížeče
 
-Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když chráněný prohlížeč spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
+Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když chráněný prohlížeč spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
 |                                Klíč                                |                                                           Hodnota                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -182,13 +182,13 @@ Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživa
 
 ## <a name="how-to-configure-bookmarks-for-a-protected-browser"></a>Postup konfigurace záložek chráněného prohlížeče
 
-Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou uživatelům aplikace Edge nebo Managed Browser k dispozici.
+Toto nastavení vám umožňuje nakonfigurovat sadu záložek, které budou dostupné uživatelům aplikace Microsoft Edge nebo Managed Browser.
 
 - Tyto záložky nemohou uživatelé odstranit ani upravit.
 - Tyto záložky se zobrazí v horní části seznamu. Všechny záložky vytvořené uživateli se zobrazí pod těmito záložkami.
 - Pokud jste povolili přesměrování Proxy aplikací, můžete přidat webové aplikace Proxy aplikací pomocí jejich interní nebo externí adresy URL.
 
-Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
+Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
 |                                Klíč                                 |                                                                                                                                                                                                                                                         Hodnota                                                                                                                                                                                                                                                          |
 |--------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -196,7 +196,7 @@ Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge z
 
 ## <a name="how-to-specify-allowed-and-blocked-urls-for-a-protected-browser"></a>Určení povolených a blokovaných adres URL v chráněném prohlížeči
 
-Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Edge zadejte následující dvojici klíč-hodnota:
+Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
 |Klíč|Hodnota|
 |-|-|
