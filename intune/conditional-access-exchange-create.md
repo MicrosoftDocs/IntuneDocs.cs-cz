@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d44b7483d65eeb7b2a39783fb113c444184db4f3
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: b1e07bd67d4bf8b776500be01571deddb1e5e58f
+ms.sourcegitcommit: 630dfe1413c1819f35aa941ffc888a7084771a55
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232218"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51709134"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -66,7 +66,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 - **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. Aby v pracovních profilech Androidu fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work for Android Enterprise a zároveň tyto aplikace nasadit jako povinnou instalaci.
 
 > [!NOTE]
-> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje. 
+> Aplikace Microsoft Outlook pro Android a iOS se nepodporuje prostřednictvím místního konektoru Exchange. Pokud chcete využít zásady Azure Active Directory podmíněného přístupu a zásady ochrany aplikací Intune s aplikací Outlook pro iOS a Android poštovních schránek v místním, najdete [hybridní použití moderního ověřování v aplikaci Outlook pro iOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
 
 ### <a name="support-for-pcs"></a>Podpora počítačů
 
@@ -77,11 +77,11 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 1. Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
 
-1. Po úspěšném přihlášení se zobrazí **řídicí panel Azure**.
+1. Po úspěšném jste přihlášení, zobrazí **řídicím panelu Azure**.
 
-1. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
+1. Zvolte **všechny služby** v levé nabídce zadejte **Intune** do filtru textového pole.
 
-1. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
+1. Zvolte **Intune**, uvidíte **řídicí panel Intune**.
 
 1. Vyberte **Místní přístup**. V podokně **Místní přístup** se zobrazí stav zásad podmíněného přístupu a zařízení, na která má vliv.
 
@@ -124,6 +124,6 @@ Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného příst
 
 2. V podokně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Viz také
 
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

@@ -15,12 +15,12 @@ ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: e5442b45ed180d10943dfd5d1a1ef1546d693b2b
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
-ms.translationtype: HT
+ms.openlocfilehash: f7b875d370880f28fa6a611bd5f66fb54b02955d
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903416"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610103"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -58,7 +58,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 6. V části nabídky **Spravovat** vyberte **Přiřazení**.
 7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
 8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
-   - **K dispozici zaregistrovaným zařízením**: Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.
+   - **K dispozici zaregistrovaným zařízením**: přiřadit aplikace do skupin uživatelů, kteří můžou aplikaci nainstalovat z aplikace portál společnosti nebo webu.
    - **K dispozici s registrací i bez ní**: Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Aplikace ze spravovaného obchodu Google Play tuto možnost nepodporují. 
    - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
    - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
@@ -119,6 +119,6 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 > Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
 > Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o sledování přiřazení aplikací najdete v článku o [monitorování aplikací](apps-monitor.md).

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: ce31832421ece9008e1526e54ba3e9aa2780c666
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 6a249962c4ac75e51be082112b884a5825d4ef2a
+ms.sourcegitcommit: 490f68479af814fbea1d9bd222011736fcbb1dd6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236284"
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51811508"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "50236284"
 Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé přístup k firemním datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu.        
 
 > [!Tip]        
-> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti.       
+> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít pro přístup k webu portál společnosti přiřazenou licenci Intune.
 
 Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Postup: V úloze **Klientské aplikace** zvolte **Nastavení** > **Značky Portálu společnosti** a nakonfigurujte požadovaná nastavení.  
 
@@ -48,7 +48,7 @@ Pole označená hvězdičkou (*) jsou povinná.
 | **Adresa URL prohlášení o zásadách ochrany osobních údajů** |     79     | Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Musíte zadat platnou adresu URL ve formátu `<https://www.contoso.com>`. |
 
 ## <a name="support-information"></a>Informace o podpoře      
-Zadejte informace o podpoře vaší společnosti a poskytněte tak zaměstnanci kontakt, na který se může obrátit s dotazy o Intune.       
+Zadejte informace o podpoře společnosti poskytnout vaši zaměstnanci mohli obrátit s dotazy související s Intune.          
 
 |Název pole|Maximální délka|Další informace|
 |---|---|---|
@@ -68,7 +68,7 @@ Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu neb
 
 |Název pole|Další informace|
 |---|---|
-|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte **Standardní**, pokud si chcete vybrat barvu vizuálně. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
+|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte **standardní** vizuálně výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
 |**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
 |**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
 |**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
@@ -84,32 +84,41 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 
-Zobrazte si firemní logo, které odráží značku vaší společnosti. Do aplikací Portálu společnosti jsme přidali podporu firemního loga, ale na některých platformách nemusí být viditelné.
+Zobrazte si firemní logo, které odráží značku vaší společnosti. Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení** na webovém portálu Intune, abyste viděli, jak budou konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p><ul><li>Doporučená šířka obrázku: větší než 1 125 px, ale minimálně 640 px</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p>*Poznámka:*: může být obrázek zobrazen odlišně pro různé platformy.<p><ul><li>Doporučená šířka obrázku: větší než 1 125 px, ale minimálně 640 px</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 
-- Obraťte se na marketingové nebo kreativní oddělení. Je možné, že už mají připravenou schválenou sadu obrázků a log s firemní značkou. Mohli by vám také pomoci při optimalizaci obrázků. 
+- Obraťte se na marketingové nebo kreativní oddělení. Možná už mají schválenou sadu značku Image. Mohli by vám také pomoci při optimalizaci obrázků. 
 
-- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Je možné, že budete muset obrázek různě oříznout podle velikosti a orientace zařízení. 
+- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Na obrázku může oříznutí různě v závislosti na velikosti zařízení, orientace a platformu. 
 
 - Nepoužívejte obecné obrázky převzaté z fotobanky. Obrázek by měl odrážet vaši firemní značku a měl by být pro uživatele srozumitelný. Pokud žádný obrázek nemáte, je lepší nepoužívat žádný, než použít obecný, který pro uživatele nemá žádný význam. 
 
 - Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru. 
 
-Po uložení změn můžete v horní části okna zvolit možnost **Podívejte se na náhled nastavení** na webovém portálu Intune, abyste viděli, jak budou konfigurace vypadat. Všimněte si, že náhled firemního loga uvidíte jenom na zařízení s iOSem, ale ne na webovém portálu Intune. 
+Po image značky je přidán nebo změnili v Intune, nezobrazí koncového uživatele na zařízeních s Iosem změnu, dokud rozpoznal změnit v nabídce start se portál společnosti a potom byl restartován, a zobrazte obrázek značky. 
 
+### <a name="brand-image-examples"></a>Příklady značky obrázku
+
+Obrázek přizpůsobení prostředí značce pro iPad příklad na následujícím obrázku:
+
+![Snímek obrazovky zařízení iPhone například obrázek přizpůsobení prostředí značce](media/company-portal-app/company-portal-app-03.png)
+
+Obrázek přizpůsobení prostředí značce pro iPhone příklad na následujícím obrázku:
+
+![Snímek obrazovky příklad iPad obrázek přizpůsobení prostředí značce](media/company-portal-app/company-portal-app-02.png)
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 
-Koncoví uživatelé můžou aktivovat akce navigace, aplikací a zařízení v aplikaci Portál společnosti pro Windows pomocí klávesových zkratek (akcelerátorů).
+Koncoví uživatelé může aktivovat akce navigace, aplikace a zařízení v aplikaci portál společnosti Windows pomocí klávesových zkratek (akcelerátory).
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Popis | Klávesová zkratka |
+| Oblast | Popis | Klávesové zkratky |
 |:------------------:|:--------------:|:-----------------:|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |
@@ -126,6 +135,10 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Install | Ctrl+I |
 
-## <a name="next-steps"></a>Další kroky
+Koncoví uživatelé budou také moct zobrazit dostupné klávesové zkratky v aplikaci portál společnosti pro Windows.
+
+![Snímek obrazovky k dispozici klávesových zkratek v aplikaci portál společnosti pro Windows](media/company-portal-app/company-portal-app-01.png)
+
+## <a name="next-steps"></a>Další postup
 
 - [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](store-apps-company-portal-app.md)

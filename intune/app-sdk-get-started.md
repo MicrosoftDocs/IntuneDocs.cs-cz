@@ -14,12 +14,12 @@ ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: a8cbe80154e5eac6a48c86101c76faed4602288a
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
-ms.translationtype: HT
+ms.openlocfilehash: 2c05912e62f9887ff7af0532dc759c2e852c1b29
+ms.sourcegitcommit: 4d5e811d451aeb6307e0f64818e182e471ae1ed4
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915712"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51619020"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -106,9 +106,6 @@ Microsoft Intune shromažďuje data statistik využití vaši aplikace.
 
     * Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 
 
-
- Je viditelné číslo verze obchodní aplikace pro iOS a Android <!-- 1380712 -->
-
 ## <a name="line-of-business-app-version-numbers"></a>Čísla verzí obchodních aplikací
 
 Obchodní aplikace v Intune teď zobrazují číslo verze aplikací pro iOS a Android. Číslo se zobrazuje na portálu Azure Portal v seznamu aplikací a v okně přehledu aplikace. Koncoví uživatelé uvidí číslo aplikace v aplikaci Portál společnosti a na webovém portálu.
@@ -134,7 +131,7 @@ Když vyvíjíte obchodní aplikaci pro použití v Intune, nezapomeňte použí
 Intune|iOS|Android|Popis|
 |---|---|---|---|
 Číslo verze|CFBundleShortVersionString|PackageVersionName |Toto číslo označuje konkrétní vydanou verzi aplikace pro koncové uživatele.|
-Číslo buildu|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|
+Číslo sestavení|CFBundleVersion|PackageVersionCode |Toto číslo slouží k označení iterace v kódu aplikace.|
 
 #### <a name="ios"></a>iOS
 
@@ -164,6 +161,23 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
 * **Zásady ochrany aplikací Intune**: Pokud chcete otestovat aplikaci se všemi zásadami ochrany aplikací Intune, měli byste vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md).
 
 * **Řešení potíží**: Pokud při instalaci aplikace narazíte na problémy při ručním testování uživatelského prostředí, přečtěte si článek o [řešení potíží s instalací aplikace](troubleshoot-app-install.md). 
+
+### <a name="give-your-app-access-to-the-intune-app-protection-service-optional"></a>Vaši aplikaci dáte přístup ke službě Intune app protection (nepovinné)
+
+Pokud vaše aplikace používá k ověřování vlastní vlastní nastavení Azure Active Directory (AAD), by měl následující kroky prováděné na jak veřejnými aplikacemi z obchodu, tak i interních obchodních aplikacích. Kroky **není nutné mají být provedeny, pokud vaše aplikace používá ID klienta výchozí sadu Intune SDK**. 
+
+Jakmile jste zaregistrovali aplikaci v rámci tenanta služby Azure a se objeví pod **všechny aplikace**, musíte poskytnout přístup k vaší aplikaci ke službě Intune app protection (dříve označovanou jako služba MAM). Na webu Azure Portal:
+
+1.  Přejděte do okna **Azure Active Directory**.
+2.  Vyberte pro danou aplikaci možnost **Registrace aplikace**.
+3.  V části **Nastavení** pod záhlavím **Přístup přes rozhraní API** vyberte **Požadovaná oprávnění**. 
+4.  Klikněte na **+ Přidat**.
+5.  Klikněte na **Vyberte rozhraní API**. 
+6.  Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
+7.  V seznamu rozhraní API vyberte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu) a kliknutím proveďte výběr.
+8.  Vyberte **Read and Write the User’s App Management Data** (Čtení a zápis dat správy uživatelských aplikací).
+9.  Klikněte na **Hotovo**.
+10. Klikněte na **Udělit oprávnění** a potom na **Ano**. 
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 

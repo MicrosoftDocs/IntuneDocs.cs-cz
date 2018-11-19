@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e71c6bdb-d75c-404f-8e38-24a663be81c2
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: a01bbf8e65c72b303d1474a92b93796051bfc02e
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
-ms.translationtype: HT
+ms.openlocfilehash: 2c47cd8ea136bcead14e70769f63df7b9b8f0e20
+ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187797"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51610086"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -45,23 +45,25 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
      - Spustit relaci vzdálené pomoci
    - Pomocí **vlastností** můžete zařízení přiřadit [kategorii, kterou vytvoříte](device-group-mapping.md), a upravit jeho vlastnictví na osobní nebo podnikové.
    - Část **Hardware** obsahuje řadu podrobnosti o zařízení, včetně jeho ID, operačního systému a verze, úložného prostoru, modelu a výrobce, nastavení podmíněného přístupu a další.
-   - V části **Zjištěné aplikace** se zobrazuje seznam všech nainstalovaných aplikací, které služba Intune v zařízení našla, včetně jejich verzí. Seznam aplikací můžete také **exportovat** do souboru CSV.
+   - V části **Zjištěné aplikace** se zobrazuje seznam všech nainstalovaných aplikací, které služba Intune v zařízení našla, včetně jejich verzí. Seznam aplikací můžete také **exportovat** do souboru CSV. Tento seznam se aktualizuje každých 7 dní.
    - V části **Dodržování předpisů zařízení** najdete všechny přiřazené zásady dodržování předpisů a informaci, jestli je zařízení splňuje.
    - Část **Konfigurace zařízení** obsahuje všechny zásady konfigurace přiřazené zařízení a informaci, jestli byly zásady úspěšné.
 
 Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných společností. Na osobních zařízeních se aplikace nekontrolují. V případě počítačů s Windows 10 se uvádí jenom moderní aplikace na zařízeních vlastněných společností. Intune neshromažďuje informace o aplikacích Win32 na zařízeních. V závislosti na operátorovi, kterého zařízení používají, se některé aplikace nemusí shromažďovat.
 
-|Platforma|Pro zařízení v osobním vlastnictví|Pro zařízení ve vlastnictví společnosti|  
+|Platforma|Pro zařízení v osobním vlastnictví|Pro zařízení vlastněná společností|  
 |--------------|---------------------------------|--------------------------------|  
-|Windows 10 (bez klienta Configuration Manageru)|Pouze spravované aplikace|Pouze spravované aplikace|
-|Windows 8.1 (bez klienta Configuration Manageru)|Pouze spravované aplikace|Pouze spravované aplikace|  
-|Windows Phone 8|Pouze spravované aplikace|Pouze spravované aplikace|  
-|Windows RT|Pouze spravované aplikace|Pouze spravované aplikace|  
-|iOS|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|
-|macOS|Všechny aplikace instalované na zařízení|Všechny aplikace instalované na zařízení|  
-|Android|Pouze spravované aplikace|Všechny aplikace instalované na zařízení|  
+|Windows 10 (bez klienta Configuration Manageru)|Jenom spravované aplikace|Jenom spravované aplikace|
+|Windows 8.1 (bez klienta Configuration Manageru)|Jenom spravované aplikace|Jenom spravované aplikace|  
+|Windows Phone 8|Jenom spravované aplikace|Jenom spravované aplikace|  
+|Windows RT|Jenom spravované aplikace|Jenom spravované aplikace|  
+|iOS|Jenom spravované aplikace|Všechny aplikace nainstalované v zařízení|
+|macOS|Všechny aplikace nainstalované v zařízení|Všechny aplikace nainstalované v zařízení|  
+|Android|Jenom spravované aplikace|Všechny aplikace nainstalované v zařízení|  
+|Android Enterprise|Jenom spravované aplikace|Jenom aplikace nainstalované v pracovním profilu|  
 
 ## <a name="hardware-device-details"></a>Podrobnosti o hardwarovém zařízení
+V závislosti na operátorovi zařízení používají mohou být shromažďovány všechny podrobnosti
 
 |Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
@@ -98,5 +100,5 @@ Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných spole
 
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.
