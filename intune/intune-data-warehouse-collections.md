@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2018
+ms.date: 11/19/2018
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune
-ms.openlocfilehash: 5fb0de1af9c8336cb277572faf526f1471108591
-ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
-ms.translationtype: HT
+ms.openlocfilehash: 89be4d6940910df4166ec9a485b78e066f94b755
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51225947"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167565"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -113,9 +113,9 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 
 |  complianceStatus  |                       Popis                      |
 |:------------------:|:------------------------------------------------------:|
-|    Neznámé         |    Neznámá                                                                        |
+|    Neznámé         |    Neznámý.                                                                        |
 |    Vyhovuje       |    Dodržuje předpisy.                                                                      |
-|    Nevyhovuje    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
+|    a nevyhovující    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
 |    Konflikt        |    Konflikt s jinými pravidly                                                      |
 |    Chyba           |       Chyba                                                                       |
 |    ConfigManager   |    Spravované nástrojem Configuration Manager                                                      |
@@ -408,7 +408,7 @@ Představuje stav instalace mobilní aplikace pomocí správy mobilních aplikac
 | AppKey             | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision.                                                          |
 | DeviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
 | AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
-| ErrorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
+| Kód chyby          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
 | Počet              | Celkový počet                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
@@ -495,7 +495,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    termsAndConditionsKey    |    Klíč odpovídající položce v kolekci userTermsAndConditionsAcceptances    |    123    |
 |    termsAndCondidionsId    |    ID této položky termsAndConditions    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    Verze této položky termsAndConditions    |    1    |
-|    Název    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
+|    Jméno    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
 |    description    |    Popis těchto podmínek a ujednání     |         |
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
@@ -559,7 +559,7 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 | 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Program VPP společnosti Apple     |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o datovém skladu Intune najdete v článku [Datový model datového skladu](https://docs.microsoft.com/intune/reports-ref-data-model).
 

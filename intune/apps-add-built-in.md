@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
 ms.reviewer: mghadial
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 62a7f2f45ccd98612e56e253945974a8eb193f25
-ms.sourcegitcommit: 23adbc50191f68c4b66ea845a044da19c659ac84
-ms.translationtype: HT
+ms.openlocfilehash: b12a1233daf2aeb673765342edc81fe32a28146a
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45562710"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167412"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -67,6 +67,6 @@ Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžo
 4. Vyberte **OK**.
 5. V podokně **Vlastnosti** vyberte **Uložit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Nyní můžete přiřadit aplikace do skupin podle vlastního výběru. Podrobnosti najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).

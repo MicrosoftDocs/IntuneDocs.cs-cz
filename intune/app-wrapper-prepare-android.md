@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/04/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: intune-classic
-ms.openlocfilehash: b4b10d3dfa83e3fcfda6ba34bebc1257b19d83ac
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
-ms.translationtype: HT
+ms.openlocfilehash: 32ce1a71911c7a902f2790fef584ab1c3b86a293
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642966"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167446"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -128,7 +128,7 @@ Mezi osvědčené postupy pro opětovné balení patří:
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Opětovné použití podpisových certifikátů a balení aplikací
 Android vyžaduje, že všechny aplikace musí být podepsané platným certifikátem, aby je bylo možné nainstalovat na zařízení s Androidem.
 
-Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny). Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
+Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny). Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
 
 Pokud předchozí podpisový certifikát nelze použít nebo aplikace zatím nebyla nasazena, můžete vytvořit nový podpisový certifikát podle pokynů v [Příručce pro vývojáře pro Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
@@ -174,7 +174,7 @@ Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcet
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Microsoft Intune App SDK pro Android – Příručka pro vývojáře](app-sdk-android.md)

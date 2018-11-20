@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/06/2018
+ms.date: 11/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: ee3ccbf9-82fc-4fbf-9d3d-8f05e431d090
 ms.reviewer: aanavath
 ms.suite: ems
 ms.custom: ''
-ms.openlocfilehash: b34bb7c3f3db9ebb3cdd89b429aaeb530d7ad796
-ms.sourcegitcommit: 8fdddb684ecf5eabf071907168413bcd89a2f702
-ms.translationtype: HT
+ms.openlocfilehash: e01164ce7fca74f4f630f43be48dd0b2e3656baf
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44141623"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167463"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí dat účtu datového skladu Intune 
 
@@ -77,7 +77,7 @@ Po přesunutí účtu datového skladu uvidíte v Intune, že datový sklad byl 
 
 Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpovědi na tento požadavek obdrží zákazník odkaz na dokumentaci s podrobnými kroky, které má podniknout, pokud si chce zazálohovat předchozí datový sklad. 1. 6. 2018 se datový sklad a grafy, které podporuje, resetují a data se začnou ukládat v novém datovém centru. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
  - Zjistěte, [jaké novinky každý týden přináší Intune](whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
  - Přečtěte si [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882).

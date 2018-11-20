@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: kmyrup
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: dfe8d8d7c7a534dd4a21104b0c7076c039d9f504
-ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
+ms.openlocfilehash: b0ee2b2ad8d25d1040577a7f8abff4377704d2d5
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51212525"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167531"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -321,7 +321,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
     > [!TIP]
     > Pokud průvodce zavřete před spuštěním uživatelského rozhraní konektoru Certificate Connector, můžete ho znovu otevřít spuštěním následujícího příkazu:
     >
-    > <instalační_cesta>\NDESConnectorUI\NDESConnectorUI.exe
+    > \NDESConnectorUI\NDESConnectorUI.exe < install_Path >
 
 7. V uživatelském rozhraní **Certificate Connectoru** :
 
@@ -351,7 +351,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-   - **Androidemem**
+   - **Android**
    - **Android Enterprise**
    - **iOS**
    - **macOS**
@@ -365,6 +365,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
      - iOS
      - Windows 8.1 a vyšší
      - Windows 10 a novější
+     - Android Enterprise
 
    - **Formát názvu subjektu**: Vyberte způsob, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
 
@@ -433,7 +434,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         K dispozici jsou následující atributy:
 
         - E-mailová adresa
-        - Hlavní název uživatele (UPN)
+        - hlavní název uživatele (UPN)
 
             Pokud vyberete třeba uživatelský typ certifikátu, můžete do alternativního názvu subjektu zahrnout hlavní název uživatele (UPN). Pokud slouží klientský certifikát k ověřování na serveru NPS (Network Policy Server), nastavte pro alternativní název subjektu hodnotu UPN. 
 
@@ -556,7 +557,7 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 | 0x00000411 | CRPSCEPChallenge_Expired  | Žádost se zamítla kvůli vypršení platnosti ověřovacího testu certifikátu. Po načtení nového ověřovacího testu ze serveru pro správu může klientské zařízení pokus opakovat. |
 | 0x0FFFFFFFF | Unknown_Error  | Vaši žádost nemůžeme dokončit, protože došlo k chybě na straně serveru. Zkuste to prosím znovu. |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Použití certifikátů SCEP](certficates-pfx-configure.md) nebo [vydání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md)
 - [Přidání certifikační autority třetí strany pro používání SCEP v Intune](certificate-authority-add-scep-overview.md)

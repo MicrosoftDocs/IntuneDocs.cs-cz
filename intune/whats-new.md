@@ -15,12 +15,12 @@ ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
 ms.suite: ems
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: c929fd8c01eda062d54b818996bebe02807e2f55
-ms.sourcegitcommit: dec09e9c91322ca347276785aca3c50036956f32
+ms.openlocfilehash: b96e9b79d70c538982aac52ca822b403d1c0e4f8
+ms.sourcegitcommit: 6ff5df63a2fff291d7ac5fed9c51417fe808650d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51859558"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52167582"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -41,6 +41,15 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-november-12-2018"></a>Týden od 12. listopadu 2018
+
+### <a name="network-access-control-nac-support-for-citrix-sso-for-ios----3259404---"></a>Sítě – podpora řízení přístupu (NAC) pro Citrix jednotného přihlašování pro iOS <!-- 3259404 -->
+
+Citrix vydali aktualizaci Citrix Gateway, která ovládací prvek přístupu k síti (NAC) pro Citrix jednotného přihlašování pro iOS v Intune. Můžete vyjádřit výslovný souhlas s zahrnují ID zařízení v rámci profilu sítě VPN v Intune a potom nasdílejte tento profil k zařízením s Iosem. Je potřeba nainstalovat nejnovější aktualizaci pro Citrix bráně pro použití této funkce.
+
+[Konfigurace nastavení sítě VPN na zařízeních s Iosem](vpn-settings-ios.md#base-vpn-settings) poskytuje další informace o používání NAC, včetně některých dalších požadavků. 
+
 ## <a name="week-of-november-5-2018"></a>Týden od 5. listopadu 2018
 
 ### <a name="support-for-ios-12-oauth-in-ios-email-profiles---2155106---"></a>Podpora iOS 12 OAuth v e-mailových profilech systému iOS <!--2155106 -->
@@ -53,11 +62,7 @@ E-mailové profily Intune pro iOS podporují OAuth (Open Authorization) v iOS 12
 Zařízení připojená k hybridní službě Azure Active Directory si teď můžete nastavit pomocí Autopilotu. Zařízení musí být připojená do vaší podnikové sítě, aby mohla použít hybridní funkci Autopilotu. Další informace najdete v článku o [nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu](windows-autopilot-hybrid.md).
 Tato funkce se bude zavádět pro uživatelskou základnu v průběhu několika dalších dnů. Následující postup bude možné provést až po jejím zavedení pro váš účet.
 
-### <a name="app-protection-policy-app-settings-for-web-data----2662995----"></a>Nastavení zásady ochrany aplikací (APP) pro webová data <!-- 2662995  -->
-Nastavení zásad ochrany aplikací (APP) pro webový obsah na zařízeních s Androidem a iOSem je aktualizované, aby lépe pracovalo s webovými odkazy http a https a také s přenosy dat prostřednictvím univerzálních odkazů iOS a odkazů na aplikace pro Android.  
-
 ## <a name="week-of-october-29-2018"></a>Týden od 29. října 2018
-
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -501,17 +506,6 @@ K dispozici je aktualizovaná verze sady Intune App SDK pro Android, která podp
 
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
-
-#### <a name="use-smime-to-encrypt-and-sign-a-users-multiple-devices-----1333642---"></a>Použití S/MIME k šifrování a podepsání více zařízení uživatele <!-- 1333642 -->
-Tato aktualizace zahrnuje šifrování S/MIME e-mailů pomocí nového profilu importovaného certifikátu (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > vyberte platformu > typ profilu **Importovaný certifikát PKCS**). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může doručit stejné certifikáty do více zařízení zaregistrovaných jedním uživatelem. To také zahrnuje:
-
-- Nativní e-mailový profil v iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
-- Nativní poštovní aplikace na zařízeních se systémem Windows Phone 10 automaticky použije certifikát S/MIME.
-- Privátní certifikáty je možné doručit na různé platformy. Některé e-mailové aplikace ale S/MIME nepodporují.
-- Na jiných platformách může být nutné ručně nakonfigurovat e-mailovou aplikaci a povolit S/MIME.  
-- E-mailové aplikace, které podporují šifrování S/MIME, můžou zpracovávat načítání certifikátů pro šifrování S/MIME e-mailů způsobem, který MDM nepodporuje (například ho načítají z úložiště certifikátů svého vydavatele).
-
-Podporováno v systémech: Windows, Windows Phone 10, macOS, iOS, Android
 
 #### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices----1497640---"></a>Vytváření zásad dodržování předpisů pro zařízení pomocí nastavení Firewall na zařízeních s macOSem <!-- 1497640 -->
 Při vytváření nových zásad dodržování předpisů systému macOS (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: macOS** > **Zabezpečení systému**) jsou dostupná některá nová nastavení pro **bránu firewall**: 

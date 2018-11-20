@@ -5,23 +5,45 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 11/6/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: b794ec40d05358ddd1aa3179c2f4060b2cd6fe1d
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 23e993f883b149e86ce83e0e028572f55468b84b
+ms.sourcegitcommit: be6f6b750635ebc7956dd2d60a0e131d124b2fc3
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236505"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51947305"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN na zařízeních s iOSem v Microsoft Intune
 
 Microsoft Intune obsahuje řadu nastavení sítě VPN, které můžete nasadit do zařízení s iOSem. Tato nastavení se používají k vytvoření a konfiguraci připojení sítě VPN k síti vaší organizace. Těmito nastaveními se zabývá tento článek. Některá nastavení jsou dostupná jen pro určité klienty VPN, jako je Citrix, Zscaler a další.
+
+## <a name="connection-type"></a>Typ připojení
+
+Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
+
+- **Check Point Capsule VPN**
+- **Cisco Legacy AnyConnect**: Určeno pro aplikaci [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) verze 4.0.5x a starší.
+- **Cisco AnyConnect**: Určeno pro aplikaci [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) verze 4.0.7x a novější.
+- **SonicWall Mobile Connect**
+- **Starší verze F5 Access**: Určeno pro aplikaci F5 Access verze 2.1 a starší.
+- **F5 Access**: Určeno pro aplikaci F5 Access verze 3.0 a novější.
+- **Palo Alto Networks GlobalProtect (starší verze)**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 4.1 a starší.
+- **Palo Alto Networks GlobalProtect**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 5.0 a novější.
+- **Pulse Secure**
+- **Cisco (IPSec)**
+- **Citrix VPN**
+- **Citrix SSO**
+- **Zscaler:** Vyžaduje integraci služby Zscaler Private Access (ZPA) do účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Vlastní VPN**
+
+> [!NOTE]
+> Společnosti Cisco, Citrix, F5 a Palo Alto oznámily, že v iOSu 12 nebudou starší klienti fungovat. Co nejdříve byste tak měli provést migraci do nových aplikací. Další informace najdete na [blogu technické podpory pro Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).
 
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
@@ -37,44 +59,28 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
     > [!NOTE]
     > Pokud se jako metoda ověřování pro Cicso IPsec VPN používá uživatelské jméno a heslo, musí prostřednictvím vlastního profilu Apple Configuratoru poskytovat tajný kód SharedSecret.
-  
-- **Typ připojení**: z následujícího seznamu dodavatelů vyberte typ připojení VPN:
-  - **Check Point Capsule VPN**
-  - **Cisco Legacy AnyConnect**: Určeno pro aplikaci [Cisco Legacy AnyConnect](https://itunes.apple.com/app/cisco-legacy-anyconnect/id392790924) verze 4.0.5x a starší.
-  - **Cisco AnyConnect**: Určeno pro aplikaci [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) verze 4.0.7x a novější.
-  - **SonicWall Mobile Connect**
-  - **Starší verze F5 Access**: Určeno pro aplikaci F5 Access verze 2.1 a starší.
-  - **F5 Access**: Určeno pro aplikaci F5 Access verze 3.0 a novější.
-  - **Palo Alto Networks GlobalProtect (starší verze)**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 4.1 a starší.
-  - **Palo Alto Networks GlobalProtect**: Určeno pro aplikaci Palo Alto Networks GlobalProtect verze 5.0 a novější.
-  - **Pulse Secure**
-  - **Cisco (IPSec)**
-  - **Citrix VPN**
-  - **Citrix SSO**
-  - **Zscaler:** Vyžaduje integraci služby Zscaler Private Access (ZPA) do účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
-  - **Vlastní VPN**    
 
-    > [!NOTE]
-    > Společnosti Cisco, Citrix, F5 a Palo Alto oznámily, že v iOSu 12 nebudou starší klienti fungovat. Co nejdříve byste tak měli provést migraci do nových aplikací. Další informace najdete na [blogu technické podpory pro Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).
-
-* **Vyloučené adresy URL** (jen Zscaler): Pokud jsou uvedené adresy URL připojené k síti VPN Zscaleru, jsou k dispozici i mimo cloud Zscaler. 
+- **Vyloučené adresy URL** (jen Zscaler): Pokud jsou uvedené adresy URL připojené k síti VPN Zscaleru, jsou k dispozici i mimo cloud Zscaler. 
 
 - **Rozdělit tunel**: tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
-- **Povolit řízení přístupu k síti (NAC):** Toto nastavení nahrazuje klienty VPN, jako je Citrix. Umožňuje, aby ID zařízení bylo v profilu sítě VPN a mohlo se použít při řízení přístupu k síti (NAC). Pokud zvolíte **Souhlasím**, zahrne se ID zařízení do profilu sítě VPN. V současnosti nejsou klienti VPN ani partnerská řešení pro řízení přístupu k síti, která by nové ID podporovala, takže se zařízení můžou připojit k síti VPN bez ohledu na to, jestli jejich stav vyhovuje. Jakmile partneři přidají podporu ID, budeme tento dokument aktualizovat.
+- **Identifikátor VPN** (vlastní VPN, Zscalerem a Citrix): identifikátor aplikace VPN používáte a získáte ho od poskytovatele připojení VPN.
+  - **Zadejte páry klíč-hodnota pro vlastní atributy VPN vaší organizace**: Přidejte nebo naimportujte **klíče** a **hodnoty**, pomocí nichž si přizpůsobíte připojení VPN. Nezapomeňte, že tyto hodnoty obvykle dodá poskytovatel připojení VPN.
+
+- **Povolit řízení přístupu k síti (NAC)** (pouze Citrix SSO): při výběru **souhlasím**, zařízení je ID zahrnutá v profilu sítě VPN. Toto ID můžete použít k ověření k síti VPN povolit nebo zakázat přístup k síti.
+
+  **Při použití Citrix SSO s bránou**, nezapomeňte:
+
+  - Potvrďte používáte bránu Citrix 12.0.59 nebo vyšší.
+  - Potvrďte uživatelům jednotné přihlašování Citrix 1.1.6 nainstalována nebo vyšší na svých zařízeních.
+  - Integrace Citrix brány s Intune pro NAC, jak je popsáno v [integraci Microsoft Intune nebo Enterprise Mobility Suite s NetScaler (LDAP + scénáře jednorázového HESLA)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Příručka pro nasazení Citrix.
+  - Povolte NAC v profilu sítě VPN.
 
   Důležité informace:  
 
-  - Pokud toto nastavení zapnete, síť VPN se každých 24 hodin odpojí.
-  - ID zařízení je součástí profilu, ale nejde zobrazit v Intune ani v profilu. Microsoft toto ID nikde neukládá, ani ho nesdílí. Jakmile ho budou partneři VPN toto ID podporovat, může ho získat klient VPN, jako je Citrix SSO, a požádat službu Intune o potvrzení registrace zařízení a vyhovujícího nebo nevyhovujícího profilu sítě VPN.
+  - Když je povolené NAC, síť VPN se odpojí každých 24 hodin.
+  - ID zařízení je součástí profilu, ale nebude zobrazen v Intune. Microsoft toto ID nikde neukládá, ani ho nesdílí. Jakmile ho budou partneři VPN toto ID podporovat, může ho získat klient VPN, jako je Citrix SSO, a požádat službu Intune o potvrzení registrace zařízení a vyhovujícího nebo nevyhovujícího profilu sítě VPN.
   - Pokud chcete toto nastavení odebrat, znovu profil vytvořte, ale nevybírejte při tom **Souhlasím**. Pak profil znovu přiřaďte.
-
-## <a name="custom-vpn-settings"></a>Vlastní nastavení sítě VPN
-
-Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte také následující nastavení. Tato nastavení jsou viditelná i pro připojení typu Zscaler a Citrix.
-
-- **Identifikátor VPN**: jedná se o identifikátor aplikace VPN, kterou používáte. Získáte ho od poskytovatele připojení VPN.
-- **Zadejte páry klíč-hodnota pro vlastní atributy VPN vaší organizace**: Přidejte nebo naimportujte **klíče** a **hodnoty**, pomocí nichž si přizpůsobíte připojení VPN. Nezapomeňte, že tyto hodnoty obvykle dodá poskytovatel připojení VPN.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
 
@@ -94,7 +100,7 @@ Pokud jste jako typ připojení vybrali **Vlastní VPN**, nakonfigurujte také n
     - Připojit
     - Vyhodnotit připojení
     - Přeskočit
-    - Odpojit
+    - Odpojení
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
