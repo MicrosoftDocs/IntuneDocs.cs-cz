@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c2983f2f7b7079f73c857bf7caafe4236373c5dc
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
-ms.translationtype: HT
+ms.openlocfilehash: be26522555766c6a3661857ba7722c2425cc984e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49431913"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180438"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Androidem Enterprise a s beznabídkovým režimem Androidu v Microsoft Intune
 
@@ -55,7 +56,7 @@ Výběrem **OK** uložte změny.
 - **Připojovat automaticky**: Zvolte **Povolit**, pokud se chcete automaticky připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 
-## <a name="enterprise-profile"></a>Podnikový profil
+## <a name="enterprise-profile"></a>Profil Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
 - **SSID**: Zkratka pro **Service Set Identifier**. Toto nastavení je reálným názvem bezdrátové sítě, ke které se zařízení připojí.
@@ -113,11 +114,11 @@ Výběrem **OK** uložte změny.
 
 Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další zdroje
+## <a name="more-resources"></a>Další materiály
 
 - Nastavení dostupná pro zařízení s Androidem najdete v článku, který se zabývá [nastaveními Wi-Fi pro zařízení s Androidem](wi-fi-settings-android.md).
 - [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších platforem

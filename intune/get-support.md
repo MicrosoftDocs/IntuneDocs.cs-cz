@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 7fc95d17-098e-4da5-8a09-a96476569dd9
 ms.reviewer: cacamp
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 47917943188b2b3d0448845b1e356d181ec8f3af
-ms.sourcegitcommit: 9d08545727543b434dd270371fa50233470f2bce
-ms.translationtype: HT
+ms.openlocfilehash: 103b509a562e777a28882f21aef2ca36354533f5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50410833"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183244"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -116,7 +117,7 @@ V tomto zobrazení můžete:
 4. [Zobrazit případy podpory](#view-support-cases), které jste dříve otevřeli pomocí tohoto nového pracovního postupu.  
 
 ### <a name="specify-details-about-an-issue"></a>Zadání podrobností o problému
-Když otevřete Nápovědu a podporu z umístění, které je podporováno novým prostředím, otevře se stránka **Potřebujete pomoct?**  . Na této stránce můžete zadat podrobnosti o problému. Po zadání podrobností vám konzola nabídne běžné dotazy na základě použitých klíčových slov. Můžete si vybrat z nabízených možností nebo zadat vlastní popis problému. Pokud zadáte vlastní popis, vyberte **Získat nápovědu** a dotaz odešlete. Po odeslání dotazu konzola vrátí kontextové informace, které vám mohou pomoci vyřešit problém.
+Při otevření nápovědy a podpory z umístění, které podporuje nové prostředí **potřebujete pomoc?**  Otevře se stránka. Na této stránce můžete zadat podrobnosti o problému. Po zadání podrobností vám konzola nabídne běžné dotazy na základě použitých klíčových slov. Můžete si vybrat z nabízených možností nebo zadat vlastní popis problému. Pokud zadáte vlastní popis, vyberte **Získat nápovědu** a dotaz odešlete. Po odeslání dotazu konzola vrátí kontextové informace, které vám mohou pomoci vyřešit problém.
 
 Tady jsou příklady dotazů, které můžete odeslat:
   
