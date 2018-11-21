@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a6fd10ab6a1e9dd7249e2ae1d4bf558d190276ed
-ms.sourcegitcommit: b0ee8626191961dc07f9f7f9d8e6a5fb09c63350
+ms.openlocfilehash: b3aa3e7a4cd79ab990afe7f02a1d6960bc66494a
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51505874"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180183"
 ---
 # <a name="email-profile-settings-for-ios-devices---intune"></a>Nastavení e-mailového profilu na zařízeních s iOSem – Intune
 
@@ -72,5 +73,5 @@ Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s iOSe
 - **Umožnit posílání e-mailů z aplikací třetích stran**: Možnost **Povolit** umožňuje uživatelům vybrat tento profil jako výchozí účet pro odesílání e-mailů. Aplikacím třetích stran umožňuje otevírat e-maily v nativní e-mailové aplikaci, například při připojení souborů k e-mailu.
 - **Synchronizovat nedávno použité e-mailové adresy**: Možnost **Povolit** umožňuje uživatelům synchronizovat se serverem seznam e-mailových adres, které se na zařízení nedávno používaly.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)

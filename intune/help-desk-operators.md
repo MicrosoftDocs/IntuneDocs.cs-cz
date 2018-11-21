@@ -13,13 +13,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 90756da72ecdcbd049b14b45014433bb5843a5ed
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 0c09a80f97056f7cb08d69d6a8deedc4e421a556
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236658"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190298"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -64,7 +65,7 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
+| 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
 ## <a name="client-apps-reference"></a>Informace o klientských aplikacích
@@ -82,7 +83,7 @@ Vlastnosti klientských aplikací
 | Název          | Název aplikace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Typ          | Můžete zvolit typ přiřazení pro každou aplikaci.  <br> **K dispozici** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.  <br> **Nelze použít** – Aplikace není nainstalovaná nebo se na Portálu společnosti nezobrazuje. <br> **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.  <br> **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. |
-| Datum poslední změny | Název typu zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Poslední změna | Název typu zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ### <a name="devices"></a>Zařízení
 
@@ -161,7 +162,7 @@ Vlastnosti zásad dodržování předpisů.
 | Název          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
 | Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
-| Datum poslední změny | Název typu zařízení                                                                                                     |
+| Poslední změna | Název typu zařízení                                                                                                     |
 
 ### <a name="devices"></a>Zařízení
 
@@ -206,7 +207,7 @@ Vlastnosti zásad konfigurace.
 | Název          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
 | Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Datum poslední změny | Název typu zařízení                                                                                                     |
+| Poslední změna | Název typu zařízení                                                                                                     |
 
 ### <a name="devices"></a>Zařízení
 
@@ -247,7 +248,7 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 | Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
 | Operační systém | Operační systém zařízení |
 | Verze operačního systému | Verze operačního systému zařízení |
-| Chyba | Důvod chyby |
+| selhání | Důvod chyby |
 
 ### <a name="failure-details"></a>Podrobnosti chyby
 
@@ -284,7 +285,7 @@ Pokud chcete shromažďovat data ze zařízení při řešení potíží se zař
   - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
   - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Můžete zjistit další informace o řízení správy na základě rolí (RBAC) k definování rolí v zařízení organizace, správě mobilních aplikací a úlohách ochrany dat. Další informace najdete v článku [Řízení správy na základě rolí (RBAC) s Intune](/intune/role-based-access-control).
 

@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: a7e3c742-295b-40bb-9afa-17f243062500
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 54e014adbdea3330028be0455fdcf7bd1ade6586
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 85b4764ef5797ad592744e3c519f82f3f1cdd1bb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231334"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190049"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Řešení potíží s místním Intune Exchange Connectorem
 
@@ -48,5 +49,5 @@ Zkontrolujte [nastavení místního Intune Exchange Connectoru](exchange-connect
 - K získání seznamu adres SMTP k poštovní schránce, použijte rutinu Get-Mailbox -Identity user | select emailaddresses | fl.
 - K získání podrobných informací o stavu přístupu k zařízení, použijte rutinu Get-CASMailbox <upn> | fl.
 
-### <a name="next-steps"></a>Další kroky
+### <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

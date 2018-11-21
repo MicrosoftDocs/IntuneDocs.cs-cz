@@ -13,13 +13,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 12d5d1f5-8452-4270-9975-f3a98e0eb746
 ms.suite: ems
+search.appverid: MET150
 ms.custom: get-started
-ms.openlocfilehash: 5bd37dbe6a24916bf3637999bd914c2e231c086e
-ms.sourcegitcommit: cd73ef164e0df79429b97c3090adbba49592c150
-ms.translationtype: HT
+ms.openlocfilehash: 9e16ec96e29ba10df6c0847de5051c2108e7af13
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448704"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179146"
 ---
 # <a name="microsoft-intune-documentation-guide"></a>Průvodce dokumentací k Microsoft Intune
 
@@ -46,6 +47,6 @@ Pomocí následující tabulky můžete rychle vyhledat hlavní oblasti Microsof
 | [Role Intune](role-based-access-control.md)                 | Přečtěte si, jak určovat, kdo může v Intune provádět různé akce a jak se tyto akce používají. Můžete buď použít předdefinované role, které vyhovují běžným situacím v Intune, nebo si vytvořit své vlastní role.                                                                                 |
 | [Aktualizace softwaru](windows-update-for-business-configure.md) | Přečtěte si informace o tom, jak nakonfigurovat aktualizace softwaru pro zařízení s Windows 10.                                                                                                                                                                                                                                  |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Vysvětlení základních principů Intune najdete v [úvodním článku s informacemi jak začít](introduction-intune.md).

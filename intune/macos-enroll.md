@@ -1,7 +1,7 @@
 ---
-title: Nastavení registrace pro zařízení s macOS
+title: Nastavení registrace pro zařízení s macOSem
 titlesuffix: Microsoft Intune
-description: Přečtěte si, jak nastavit registraci zařízení s macOS v Intune.
+description: Přečtěte si, jak nastavit registraci zařízení s macOSem v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -14,15 +14,16 @@ ms.technology: ''
 ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0d58cb3199405a8a32d169e74e4f0009841f5d09
-ms.sourcegitcommit: 0ac196d1d06f4f52f01610eb26060419d248168b
-ms.translationtype: HT
+ms.openlocfilehash: 85a05f4816692d3bccfe695c7e69f54d007f3b59
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251634"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187000"
 ---
-# <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOS v Intune
+# <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -80,6 +81,6 @@ Aby byla registrace schválená uživatelem, musí koncový uživatel po registr
 
 Pokud chcete zjistit, jestli je zařízení schválené uživatelem, přejděte na portál Intune a pak zvolte **Zařízení** > **Všechna zařízení**> vyberte zařízení > **Hardware**. Zaškrtněte políčko **User Approved** (Schválené uživatelem).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Až budou zařízení s macOS zaregistrovaná, můžete [pro zařízení s macOS vytvořit vlastní nastavení](custom-settings-macos.md).

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 932feb064552e05536821d0e75e27059387bcf56
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
-ms.translationtype: HT
+ms.openlocfilehash: 9a15c84ded066a26254737f75293b0d743fe5eab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31029804"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181220"
 ---
 # <a name="how-to-configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
@@ -183,7 +184,7 @@ Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento post
 5. V podokně profilů zvolte **Vytvořit profil**.
 6. V podokně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
 7. Zvolte **Vyberte třídy** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
-8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
+8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
 9. Zvolte **Vyberte košíky** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
 10. Zvolte skupiny, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**.
 11. V podokně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
@@ -198,7 +199,7 @@ Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 4. V podokně **Konfigurace zařízení** zvolte **Monitorovat** > **Stav přiřazení**.
 5. V podokně **Stav přiřazení** vyberte **Profil košíku**, který jste vytvořili.
 6. V podokně **Profil košíku** zvolte **Přiřazení** a pak v nabídce **Zahnout** zvolte **Vybrat skupiny, které se zahrnou**.
-7. Vyberte třídy, na které se má profil košíku uplatnit (nevybírejte skupinu), a potom zvolte **Vybrat**. 
+7. Vyberte třídy, na které se má profil košíku uplatnit (nevybírejte skupinu), a potom zvolte **Vybrat**. 
 8. Po dokončení zvolte **Uložit**.
 
 Přiřazení se dokončí a Intune použije profil učebny na cílová zařízení podle přiřazení učebny.

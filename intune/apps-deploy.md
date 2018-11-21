@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: dc349e22-9e1c-42ba-9e70-fb2ef980ef7a
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f7b875d370880f28fa6a611bd5f66fb54b02955d
-ms.sourcegitcommit: b96568a77d3cb6f602e7577446996fe7dde169bd
+ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
+ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51610103"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52267250"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -65,6 +66,8 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 
      > [!NOTE]
      > **Jenom pro aplikace pro iOS** : Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete profil VPN ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
+     >
+     > **Pro aplikace pro Android pouze**: Pokud nasadíte aplikaci pro Android jako **k dispozici s registrací i bez**, vytváření sestav stavu budou k dispozici pouze v zaregistrovaných zařízeních.
 
 9. Pokud chcete vybrat skupiny uživatelů, které toto přiřazení aplikace ovlivní, vyberte **Zahrnuté skupiny**.
 10. Po vybrání jedné nebo více skupin, které se mají zahrnout, zvolte **Vybrat**.

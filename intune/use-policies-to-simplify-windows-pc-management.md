@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: f0afda7e-f4c3-4bcd-b4bf-4304103cf73e
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 5d026ee3c9a6461e327c952a3d702936907d59b5
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
-ms.translationtype: HT
+ms.openlocfilehash: 56c81c04c4ee6ae319cb54f513b80738f2fbe5fb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310517"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188021"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Zjednodušení správy počítačů s Windows pomocí zásad
 
@@ -61,6 +62,6 @@ Informace o zásadách a nastaveních, které můžete konfigurovat pro počíta
 - [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) – Tyto zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích.
 
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

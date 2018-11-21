@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: ae8b6528-7979-47d8-abe0-58cea1905270
 ms.reviewer: dagerrit
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f0e4ba42559a068ebefb453aba18060803dc36e0
-ms.sourcegitcommit: f3974c810e172f345853dacd7f2ca0abc11b1a5b
-ms.translationtype: HT
+ms.openlocfilehash: eb44647e50e406b9ef5052c576660c9b7eebf6dd
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44389621"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189754"
 ---
 # <a name="use-a-configuration-profile-to-upgrade-windows-10-or-switch-from-s-mode-in-intune"></a>Použití konfiguračního profilu k upgradu Windows 10 nebo k přepnutí z režimu S v Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -157,7 +158,7 @@ Následující postup slouží k vytvoření profilu, který na zařízeních s 
 
 Profil se vytvoří a zobrazí se v seznamu profilů.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Přiřaďte profil](device-profile-assign.md) svým skupinám.
 

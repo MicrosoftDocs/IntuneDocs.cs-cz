@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3b7652c8c4f471a0a0c32da23d8ac1859e84eb13
-ms.sourcegitcommit: e8aaa0955d13fa6c9d5f35a730ad06509ce88d0b
-ms.translationtype: HT
+ms.openlocfilehash: 2b2b3ba5443cd95cd81bdca6d386ab95a2c831eb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400347"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190111"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -30,7 +31,7 @@ Jako správce Intune můžete spravovat následující zařízení s Androidem:
 - Zařízení s Androidem včetně zařízení Samsung Knox Standard
 - Zařízení s Androidem Enterprise včetně [zařízení s pracovním profilem Androidu](#enable-enrollment-of-android-for-work-devices) a zařízení s Androidem v beznabídkovém režimu
 
-U zařízení, která používají Samsung Knox Standard, se podporuje správa více uživatelů pomocí Intune. To znamená, že uživatelé se můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení je centrálně spravované bez ohledu na to, jestli se používá. Když se uživatelé přihlásí, mají přístup k aplikacím a také se na ně vztahují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
+U zařízení, která používají Samsung Knox Standard, se podporuje správa více uživatelů pomocí Intune. To znamená, že uživatelé se můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení je centrálně spravované bez ohledu na to, jestli se používá. Když se uživatelé přihlásí, mají přístup k aplikacím a také se na ně vztahují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
 
 ## <a name="prerequisite"></a>Předpoklad
 

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
 ms.reviewer: derriw
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7ff30ef609cf2ad742b55d80f418919bf4ab144a
-ms.sourcegitcommit: d40bfb6af66f2ce7026c0151ace98ec23f1cf76e
-ms.translationtype: HT
+ms.openlocfilehash: 40549d8fa9bead312f39ca9a782fb555e1022cd6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33927436"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180404"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
@@ -152,7 +153,7 @@ Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 Přiřaďte profil ke studentským zařízením ve skupinách učebny, které se vytvořily při synchronizaci školních dat se službou Azure AD (viz [Přiřazení profilů zařízení](device-profile-assign.md)).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Když teď učitel použije aplikaci Classroom, bude mít plnou kontrolu nad zařízeními studentů.
 

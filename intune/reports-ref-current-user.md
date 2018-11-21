@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: C10E6752-E925-40AD-ABBF-6B621FB7AFC4
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: da149ea2870880a35352e9d37a91c5c39f7a7438
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
-ms.translationtype: HT
+ms.openlocfilehash: b58f6f360cf034be11153a57227da42ed1e29388
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602074"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189771"
 ---
 # <a name="reference-for-current-user-entity"></a>Referenční informace o entitě aktuálního uživatele
 
@@ -42,6 +43,6 @@ Entita **Aktuální uživatel** obsahuje seznam všech uživatelů Azure Active 
 | StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tento uživatel v datovém skladu vytvořil |23.11.2016 12:00:00 |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento uživatel v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
  - Kolekci entit **Uživatelé** můžete použít k rozšíření uživatelských dat o uživatele, kteří momentálně nejsou aktivní. Další informace najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).
  - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku věnovaném [reprezentaci doby života uživatele v datovém skladu Intune](reports-ref-user-timeline.md).

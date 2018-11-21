@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 00d7f8da28a762b5acbca379d62e0e7880f025a8
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
-ms.translationtype: HT
+ms.openlocfilehash: 2782190f043a6d0c2d1af52d5a77fd3ce53b739f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727624"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181443"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -145,7 +146,7 @@ Entita **MdmStatuses** označuje stav kompatibility daného zařízení.
 |---------|------------|--------|
 | 0 |Neznámé |Stav dodržování předpisů zařízení je neznámý. |
 | 1 |Vyhovuje |Zařízení dodržuje předpisy. |
-| 2 |Nevyhovuje |Zařízení nedodržuje předpisy. |
+| 2 |a nevyhovující |Zařízení nedodržuje předpisy. |
 | 3 |Konflikt |Dodržování předpisů zařízení způsobilo konflikt. |
 | 4 |Chyba |Při čtení stavu dodržování předpisů zařízením došlo k chybě. |
 

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 359448d9-2384-42ac-a21c-a25148c20a7b
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 00ae29b831bebb770b70c38b5e76d7f19bab10ee
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: accd8dea2b997a6eb1cfec22a6e822e984ef710d
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231393"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180143"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -83,7 +84,7 @@ SEP Mobile podporuje dva způsoby integrace s Intune:
 
 Je potřeba přidat skupinu zabezpečení služby Azure AD, která obsahuje všechna zařízení s SEP Mobile.
 
--  Zadejte a vyberte všechny skupiny zabezpečení se zařízeními, na kterých běží SEP Mobile, a pak uložte změny.
+-  Zadejte a vyberte všechny skupiny zabezpečení zařízení, na kterých běží aplikace SEP Mobile a následně změny uložte.
 
     ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)   
 
@@ -147,6 +148,6 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 11.  SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **Full Integration** (Úplná integrace).
 
      ![Obrázek znázorňující dokončenou úplnou integraci SEP Mobile](media/symantec-portal-basic-status.PNG)
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Nastavení aplikací SEP Mobile](mtd-apps-ios-app-configuration-policy-add-assign.md)

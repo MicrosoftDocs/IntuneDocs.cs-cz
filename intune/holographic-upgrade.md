@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e6a71d48e81914808b9af037692a44e4f651bf55
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
-ms.translationtype: HT
+ms.openlocfilehash: 735cd658e78a68156957d54be02f32b41812495e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38224757"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179197"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení se softwarem Windows Holographic na Windows Holographic for Business
 
@@ -55,7 +56,7 @@ V dalším kroku přiřadíte profil Upgrade edice k vybraným skupinám nebo za
 
 Po registraci těchto uživatelů nebo zařízení do Intune se použije profil Upgrade edice. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o skupinách najdete v tématu [Začínáme se skupinami](get-started-groups.md).
 

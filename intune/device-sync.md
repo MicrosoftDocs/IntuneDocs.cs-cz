@@ -1,5 +1,5 @@
 ---
-title: Synchronizace zařízení pomocí Microsoft Intune – Azure | Micrososft Docs
+title: Synchronizace zařízení pomocí Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Můžete synchronizovat zařízení zaregistrovaná nebo spravovaná v Microsoft Intune, abyste získali nejnovější zásady a akce. Postup zahrnuje synchronizaci pomocí portálu Azure Portal a zobrazení kódů chyb, které umožňují opakovaný pokus.
 keywords: ''
 author: ErikjeMS
@@ -12,20 +12,21 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 02ad249e-f098-421f-861f-6b2ff733ac7c
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 30b4cf585edd7153ee01710ce8c572593056454f
-ms.sourcegitcommit: f5998019bbb4769fb50a7ea9bf424199516eb9ee
-ms.translationtype: HT
+ms.openlocfilehash: c408c19a630daff9ca1b238afcef9bb9193f5c98
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39117867"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179498"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě ohlásit ve službě Intune. Jakmile se zařízení ohlásí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct okamžitě ověřit přiřazené zásady nebo s těmito zásadami vyřešit potíže, aniž byste čekali na další naplánované vrácení se změnami.
+Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě ohlásit ve službě Intune. Jakmile se zařízení ohlásí, začne okamžitě přijímat veškeré čekající akce nebo zásady, které mu byly přiřazeny. Tato funkce vám může pomoct okamžitě ověřit přiřazené zásady nebo s těmito zásadami vyřešit potíže, aniž byste čekali na další naplánované vrácení se změnami.
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -64,7 +65,7 @@ Když správce spustí akci zařízení **Synchronizovat**, aplikace pro iOS a A
 | 2016330889 | Nepovedlo se navázat zabezpečené připojení. Resetujte připojení. | Ano|
 | 2016330888 | Nepovedlo se vyhodnotit důvěryhodnost serveru. | Ne|
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Můžete [zkontrolovat podrobnosti](device-inventory.md) zařízení.
  

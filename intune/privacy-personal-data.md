@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: dc5e9af9-8a3e-4b3c-ba49-e79142092e2e
 ms.reviewer: angerobe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c433fd8dc8994b94ea8a7028b6c7ff94f0274caf
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
-ms.translationtype: HT
+ms.openlocfilehash: 98debd35941cacd3b83bd47805cc70ccc9afb5cc
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474577"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181025"
 ---
 # <a name="privacy-and-personal-data-in-intune"></a>Ochrana soukromí a osobní údaje v Intune
 
@@ -35,6 +36,6 @@ Koncoví uživatelé mohou přijímat, přenášet a ukládat data na zařízen�
 
 Podmínky a ujednání společnosti lze zobrazit v aplikaci Portál společnosti Intune. Podmínky i prohlášení o zásadách ochrany osobních údajů si tak mohou uživatelé pročíst ještě před tím, než se zaregistrují do Intune a získají přístup k firemním prostředkům a datům.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtěte si další informace o tom, jak služba Intune [shromažďuje](privacy-data-collect.md), [ukládá a zpracovává](privacy-data-store-process.md) a [sdílí](privacy-data-secure-share.md) osobní údaje. 

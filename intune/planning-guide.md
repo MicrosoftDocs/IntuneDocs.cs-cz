@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a65efa6e-4a48-47f3-8f6e-34a85ca64ced
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 7990c559429f5963884565bef4f18c09d03746dd
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
-ms.translationtype: HT
+ms.openlocfilehash: b2ddf29157255feaa7d336913640a1cf434f921c
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38224839"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52185770"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Průvodce plánováním nasazení, návrhem a implementací Intune
 
@@ -60,6 +61,6 @@ Tento průvodce také obsahuje další technické informace a šablony tabulek, 
 
 -   Znáte službu Intune a její funkce.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Začněte prvním oddílem: [Vymezení cílů, úkolů a problémů při nasazení](planning-guide-deployment-goals.md).

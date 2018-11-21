@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 3c10f4c9-520b-4864-92fc-a45a9f640ad4
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: beba79e6f8e169fc7cb5852e1bafa7ae96270388
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
-ms.translationtype: HT
+ms.openlocfilehash: 4808c30b1d69191d9082ce42fe38b10110d74922
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310534"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188210"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Zobrazení inventáře hardwaru a softwaru u počítačů s Windows
 
@@ -66,6 +67,6 @@ Intune shromažďuje podrobné informace o hardwaru a softwaru počítačů, kte
 
     V dialogovém okně **Stav úlohy** se zobrazí aktuální vzdálené úlohy, stav úloh, název zařízení, všechny hlášené chyby a odkaz na informace o odstraňování problémů.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

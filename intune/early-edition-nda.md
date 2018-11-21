@@ -14,13 +14,14 @@ ms.assetid: f49650f4-31fa-406c-a4da-d8c9a4a8384d
 ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2f21df636ab429969429c6dbdf540daaa67a8f88
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: fbe8cc0fc3e835ee5807dfbe56ea1aa3c728547e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576762"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184722"
 ---
 # <a name="the-early-edition-for-microsoft-intune---november-2018"></a>Časná edice Microsoft Intune – listopad 2018
 
@@ -140,7 +141,7 @@ Jestliže pomocí programu VPP (Volume Purchase Program) předběžně zřizujet
 
 V současné době nejsou aktivní žádná sdělení.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).
 
 

@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ayesham
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 988407d6d736b669854ef8420b71a092765162b7
-ms.sourcegitcommit: 445fcf9e2a185e5c987334cad398bce71383be03
-ms.translationtype: HT
+ms.openlocfilehash: 619976887a7c523933a9e74233779d188baa2cc1
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34843119"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183668"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
@@ -27,7 +28,7 @@ Můžete chtít blokovat přístup k firemní síti v případě, že zařízen�
 
 Můžete vytvořit zásady dodržování předpisů založené na síťovém umístění, které se také označují jako ohraničení sítě. Tyto zásady zajišťují, že pokud mají zařízení vyhovovat, musí být připojená k pracovní síti. Tyto zásady se dají používat se zásadami podmíněného přístupu, aby zařízení měla přístup k pracovním prostředkům *jenom* v případě, že jsou připojená k pracovní síti. Když není zařízení připojené k pracovní síti, stane se nevyhovujícím a ztratí přístup k pracovním prostředkům.
 
-Uvažte následující příklady:
+Vezměte v úvahu následující scénář:
 
 Někteří zaměstnanci ve vašem výrobním závodě používají zařízení s Androidem. Zaměstnanci si odnášejí zařízení s Androidem mimo závod nebo továrnu. Abyste zabránili neoprávněnému přístupu, můžete:
 
@@ -51,7 +52,7 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 2. Zadejte tyto vlastnosti:  
 
-   - Požadováno. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
+   - Povinné. Zadejte **Název** umístění, například **Výrobní podlaží** nebo **Budova 44 – zabezpečená**.
    - Volitelný parametr. Zadejte **rozsah IPv4** s notací CIDR (Classless Interdomain Routing), například `aaa.bbb.ccc.ddd/n`.
    - Volitelný parametr. Zadejte adresu **brány IPv4**, například `aaa.bbb.ccc.ddd`.
    - Volitelný parametr. Zadejte adresu **serveru DHCP IPv4**, například `aaa.bbb.ccc.ddd`.
@@ -80,6 +81,6 @@ Některé pokyny najdete v tématu o [přidání akcí při nedodržení předpi
 
 Když je zařízení připojené k vašim umístěním, zobrazuje se v aplikaci Portál společnosti jako vyhovující. Pokud není zařízení připojené k některému z vašich umístění, zobrazuje se jako nevyhovující.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Monitorování zásad dodržování předpisů zařízením](compliance-policy-monitor.md)  
 [Začínáme se zásadami dodržování předpisů](device-compliance-get-started.md)

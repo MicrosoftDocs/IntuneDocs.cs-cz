@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 654c9af4d72ca5d07a9852ba4a653d9404ea16d2
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
-ms.translationtype: HT
+ms.openlocfilehash: ba60df2dcec51e1c45e6a84a8fc9831937f70aef
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642880"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190055"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
@@ -192,5 +193,5 @@ Profil eSIM se také odebere, když se zařízení [vyřadí](devices-wipe.md#re
   - **Nesprávný formát souboru:** Viz **Krok 1: Přidání mobilních aktivačních kódů** (v tomto článku) popisující správné formátování souboru.
   - **Chyba mobilní aktivace, kontaktujte mobilního operátora:** Aktivační kód pravděpodobně nebude v jeho síti aktivovaný. Mohlo také selhat stažení profilu a mobilní aktivace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Konfigurace profilů zařízení](device-profiles.md)

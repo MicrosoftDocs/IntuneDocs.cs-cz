@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/15/2017
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,17 +14,26 @@ ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 05502c901f01ba134475ec69df3c42aa6e0e7480
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: eedbc17147c6f9e2988d954308f2332de10d00ab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231733"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189839"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
-Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace. Přístup k protokolům získáte tak, že pro aplikaci v mobilním klientu povolíte režim Diagnostika Intune. Následující tabulka ukazuje názvy a vysvětlení nastavení zaznamenaných do protokolu.
+Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokolech ochrany aplikace. Přístup k protokolům získáte povolením diagnostiku Intune v mobilním klientovi. 
+
+Postup povolení a shromažďovat protokoly se liší podle platformy:
+- **Zařízení s androidem** – použití *portál společnosti*. Zobrazit [protokolů firemní podpoře e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
+- **iOS deices** -použít Managed Browser, nebo *Microsoft Edge* shromažďování protokolů. Podrobnosti najdete v tématu blog týmu podpory Intune [nové diagnostické konzoly Intune k odeslání protokolů v aplikaci Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser). 
+- **Zařízení s Windows 10** – použití *MDMDiag* a protokoly událostí. Zobrazit, [MDM diagnostikovat selhání ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) v obsahu správu klientů Windows a na blogu [řešení potíží s Windows 10 Intune zásady selhání](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
+
+
+V následující tabulce jsou uvedeny názvy a vysvětlení nastavení zaznamenaných do protokolu.
 
 ## <a name="app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací
 
@@ -59,7 +68,7 @@ Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokol
 | SimplePINAllowed            | 0 = ne<br>1 = ano                                                                                                                                                                                                                                                                                           | [Přístup] Povolí jednoduchý PIN.                                                                                                                                                               |
 | TouchIDEnabled              | 0 = ne<br>1 = ano                                                                                                                                                                                                                                                                                           | [Přístup] Povolí otisk prstu místo kódu PIN (iOS 8 +).                                                                                                                                      |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
  - Další informace o zásadách ochrany aplikací naleznete v tématu [Co jsou zásady ochrany aplikací?](app-protection-policy.md)
  - Intune nabízí řadu nástrojů, které pomáhají při odstraňování potíží ve vašem prostředí. Další informace najdete v tématu [Použití portálu pro řešení potíží k poskytování pomoci uživatelům](help-desk-operators.md).

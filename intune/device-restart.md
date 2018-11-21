@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6b68d7eda57d50c3a1cb55979590e8b07d9daf50
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
-ms.translationtype: HT
+ms.openlocfilehash: aa16e180b016ec142ecca5644b7f93fb088d15f5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37904944"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184299"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -46,6 +47,6 @@ Akce zařízení **Restartovat** způsobí, že se zvolené zařízení restartu
 3. Vyberte **Zařízení** > **Všechna zařízení**.
 4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte akci se vzdáleným zařízením **Restartovat**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Pokud chcete zobrazit stav akce **Restartovat**, vyberte **Zařízení** > **Akce zařízení**.

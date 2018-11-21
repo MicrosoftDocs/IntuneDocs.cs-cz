@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e3057009eb758e37a4b42cddc4673bd721d1bce
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: 2ae378550a75f756390053e44eb4fbd04f665612
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576628"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179067"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikací
 
@@ -76,7 +77,7 @@ Právě jste přiřadili zásadu ochrany aplikací.
 > [!NOTE]
 > Zásady ochrany aplikací je možné použít jen u skupin, které obsahují uživatele, nikoli u skupin, které obsahují zařízení.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste vytvořili a přiřadili zásadu ochrany aplikací. Uživatelé aplikace, ke které je přiřazená tato zásada, nebudou moci vyjímat, kopírovat ani vkládat žádný obsah mezi přiřazenou aplikací a jinými nespravovanými aplikacemi v zařízení. Tento typ ochrany vám pomůže chránit data organizace. Další informace o zásadách ochrany aplikací v Intune najdete v článku [Co jsou zásady ochrany aplikací?](app-protection-policy.md)
 

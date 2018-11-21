@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
 ms.reviewer: angerobe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b9efb60d169ba6f88b4765d3fc651f3a0596b230
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
-ms.translationtype: HT
+ms.openlocfilehash: 7f2ccccd76149c34f227ecc4d9eadec091ce93f1
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028575"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189254"
 ---
 # <a name="view-and-correct-personal-data"></a>Zobrazení a oprava osobních údajů
 
@@ -48,6 +49,6 @@ Další informace o tom, jak Microsoft pracuje s údaji, jsou k dispozici v Podm
 Správci nemohou aktualizovat informace specifické pro konkrétní zařízení nebo aplikaci. Pokud si koncový uživatel přeje opravit jakékoli osobní údaje (například název zařízení), musí to provést přímo na svém zařízení. Změny se synchronizují při příštím připojení ke službě Intune.
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtete si, jak [auditovat, exportovat nebo odstranit](privacy-data-audit-export-delete.md) osobní data evidovaná v Intune.

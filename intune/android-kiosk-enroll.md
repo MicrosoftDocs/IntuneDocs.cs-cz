@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c4b9b99a17e435b1d79d2e10565abbd262c89741
-ms.sourcegitcommit: 503d76e0b066d0db77bcc48e5116c861f6a6fb57
-ms.translationtype: HT
+ms.openlocfilehash: 5ea4d41477f2f0c6dc1314e47072d2c4cf862e23
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47187814"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184824"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-kiosk-devices"></a>Nastavení registrace zařízení s Androidem Enterprise v beznabídkovém režimu
 
@@ -49,7 +50,7 @@ Správu Androidu v beznabídkovém režimu nastavíte takto:
 4. [Vytvořte skupinu zařízení](#create-a-device-group).
 5. [Zaregistrujte zařízení v beznabídkovém režimu](#enroll-the-kiosk-devices).
 
-### <a name="create-an-enrollment-profile"></a>Vytvoření profilu zápisu
+### <a name="create-an-enrollment-profile"></a>Vytvoření profilu registrace
 
 Kvůli registraci zařízení v beznabídkovém režimu musíte vytvořit registrační profil. Po vytvoření poskytne tento profil registrační token (náhodný řetězec) a kód QR. V závislosti na operačním systému Android a verzi zařízení můžete k [registraci zařízení v beznabídkovém režimu](#enroll-the-kiosk-devices) použít buď token, nebo kód QR.
 
@@ -169,6 +170,6 @@ Pokud chcete ze zařízení s Androidem v beznabídkovém režimu odebrat aplika
 -   Vytvoření nasazení odinstalace pro tuto aplikaci
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - [Nasazení aplikací Androidu v beznabídkovém režimu](apps-deploy.md)
 - [Přidání zásad konfigurace Androidu v beznabídkovém režimu](device-profiles.md)

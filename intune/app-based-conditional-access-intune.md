@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
 ms.reviewer: chrisgre
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 95458642f60dfb8c7ba18078ef4bd238c53502aa
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 4f52d9dc39245a374fa7a6a9705a43c7cea95a35
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231300"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182070"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -81,7 +82,7 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 11. Firemní e-mail se doručí do uživatelovy poštovní schránky.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Vytvoření zásady podmíněného přístupu na základě aplikace](app-based-conditional-access-intune-create.md)
 
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)

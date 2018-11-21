@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 6bfab644-c1e2-4154-a254-e95b9a1d75f2
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 261d15a2731ef6b388eba0f0c6d5cd025e8c3509
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: 8adb038fbd5fa1b4ad2400a215eb228b81433bde
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576717"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186898"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jaké přínosy má Intune pro moji firmu?
 Microsoft Intune je cloudová služba pro správu mobility velkých organizací (EMM), která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data.
@@ -71,7 +72,7 @@ Intune je součást řešení Enterprise Mobility + Security (EMS), která slou�
 
 ![Diagram architektury vysoké úrovně pro Microsoft Intune](/intune/media/intunearchitecture.svg)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Začínáme s používáním Azure](get-started-azure.md) – pochopte principy Azure Portalu a zjistěte, jak můžete udělat změny na stránce, kterou vidíte.
 

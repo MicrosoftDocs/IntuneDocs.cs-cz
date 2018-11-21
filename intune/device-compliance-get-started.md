@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: joglocke
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 226713d893e05c2c2aeea49cde2ce92591d06391
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
-ms.translationtype: HT
+ms.openlocfilehash: 470c3b7ac273e051af047eba95012b36a8ea1deb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915695"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52185989"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -153,7 +154,7 @@ Zásady dodržování předpisů zařízeními se dají používat také bez pod
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
 Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Zařízení s Windows 10 verze 1803 a novějšími je doporučeno nasadit do skupin zařízení, *pokud* primární uživatel zařízení nezaregistroval. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
 
-Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Patří k nim:
+Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Patří sem:
 
 - **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
 
@@ -197,11 +198,11 @@ Zásady dodržování předpisů vytvořené na [portálu Classic](https://manag
 
 Pokud chcete využívat nové funkce související s dodržováním předpisů zařízeními na portálu Azure Portal, musíte vytvořit nové zásady dodržování předpisů zařízeními na portálu Azure Portal. Pokud přiřadíte zásady dodržování předpisů zařízením na Azure Portalu uživateli, kterému byly přiřazeny zásady dodržování předpisů zařízením také na klasickém portálu, budou mít zásady na Azure Portalu přednost před těmi, které byly vytvořeny na klasickém portálu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Vytvoření zásad dodržování předpisů zařízeními pro následující platformy:
 
-  - [Androidemem](compliance-policy-create-android.md)
+  - [Android](compliance-policy-create-android.md)
   - [Pracovní profil Androidu](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)

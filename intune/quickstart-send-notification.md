@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a1b89f2d-7937-46bb-926b-b05f6fa9c749
 ms.reviewer: joglocke
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e76e173bef7a370f89f60f6c9eb4588bb63aefdc
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.openlocfilehash: af24e1c56e43fe2edfc6a9241c31600b7cfe61a7
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51510903"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186252"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odeslání oznámení zařízením nedodržujícím předpisy
 
@@ -104,7 +105,7 @@ Zásadu dodržování předpisů můžete přiřadit určité skupině uživatel
 
 Pokud se vám podařilo zásadu vytvořit a uložit, zobrazí se v seznamu **Dodržování předpisů zařízením – Zásady**. V tomto seznamu si můžete všimnout, že **Přiřazeno** je nastavené na **Ano**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste Intune použili k vytvoření a přiřazení zásady dodržování předpisů pro firemní zařízení s Windows 10, která vyžaduje zadání hesla o minimální délce šesti znaků. Další informace o vytváření zásad dodržování předpisů pro zařízení s Windows najdete v článku [Přidání zásad dodržování předpisů pro zařízení s Windows v Intune](compliance-policy-create-windows.md).
 

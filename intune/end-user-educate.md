@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 48914533-f138-4dc0-8b93-4cea3ac61f7b
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: get-started
-ms.openlocfilehash: 2d95a238b3d582a9b03e9629504230349eef0638
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
-ms.translationtype: HT
+ms.openlocfilehash: c89a12b0c75f59b2a781ad77c88fe49c513c11a5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44254050"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182206"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Co říct koncovým uživatelům o Microsoft Intune
 
@@ -60,7 +61,7 @@ Přečtěte si následující seznam tipů, jak usnadnit nasazení Intune v orga
 
 * __Buďte vnímaví.__ Uživatelské prostředí Intune má dopad také na vaši produktivitu. Důkladná znalost uživatelského prostředí vám usnadní řešení problémů se zařízeními a uživateli. Můžete například zjistit a pochopit, jak uživatelé získávají svoje aplikace. Když tyto informace máte předem, usnadní a urychlí vám to diagnostiku a opravy problémů.
 
-* **Androidemem**
+* **Android**
   * [Používání zařízení s Androidem s Intune](/intune-user-help/using-your-android-device-with-intune)
   * [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 

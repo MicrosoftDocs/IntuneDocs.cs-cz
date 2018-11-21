@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: A7A174EC-109D-4BB8-B460-F53AA2D033E6
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d552ec61d148d0489dc263405eac52448c10f9ef
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
-ms.translationtype: HT
+ms.openlocfilehash: d819656b59f1f1ceffa1e19645bddc0e8427ad8c
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642868"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180591"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -75,11 +76,11 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 
 |                             Filtr                             |           Optimalizace výkonu           |                                          Popis                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
-|    `maxhistorydays=7`                                            |    Všechny                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
-|    `$filter=DateKey eq 20180214`                                 |    Všechny                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
-|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Všechny                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
+|    `maxhistorydays=7`                                            |    Full                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
+|    `$filter=DateKey eq 20180214`                                 |    Full                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
+|    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Full                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
 |    `maxhistorydays=7&$filter=Id gt 1`                            |    Částečná, Id gt 1 se neoptimalizuje    |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221 a Id větší než 1.             |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Všechny                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
+|    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Full                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
 |    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
 |    `$filter=DateKey ne 20180214`                                 |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde. `maxhistorydays` se ignoruje.    |

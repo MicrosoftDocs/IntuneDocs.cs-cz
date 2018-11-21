@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 000505df3c0898ed0939244dfe1b075c64097611
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
-ms.translationtype: HT
+ms.openlocfilehash: 080205e601b857d4765eb6b97eeeeeb8f4e6fc1b
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329423"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187153"
 ---
 # <a name="use-scope-tags-to-filter-policies"></a>Filtrování zásad pomocí značek oboru
 
@@ -38,7 +39,7 @@ Zvolte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnost
 
 Zvolte **Role** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Spravujte [role](role-based-access-control.md) a [profily](device-profile-assign.md).
 

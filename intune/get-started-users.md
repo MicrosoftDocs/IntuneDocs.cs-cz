@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 22a232de-ab93-44ab-b0b5-d2b3ccb007fe
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 292df171b613ada7a5f8e2cf666ba358ef26df9b
-ms.sourcegitcommit: e01945bff19157fa7acaa4f7975b0f2a8b3a73f0
-ms.translationtype: HT
+ms.openlocfilehash: fc5d2a6f17bdac8711348c136ee390a400fc21bd
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37949471"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182495"
 ---
 # <a name="get-started-managing-users"></a>Začínáme se správou uživatelů
 
@@ -52,6 +53,6 @@ Po vytvoření uživatele potřebujete použít [portál Office 365](http://go.m
 
 5. Vyberte **Uložit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Začínáme se skupinami](get-started-groups.md) – když uživatele uspořádáte do skupin, usnadníte si správu zásad a aplikací, ke kterým mají přístup.

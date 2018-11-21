@@ -13,13 +13,14 @@ ms.technology: ''
 ms.reviewer: ''
 ROBOTS: NOINDEX,NOFOLLOW
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 600c6a00910647983cc2329f9256b613560aaf14
-ms.sourcegitcommit: ca132d509e3c978d18e50eac89e1a1ed7ddb25c1
-ms.translationtype: HT
+ms.openlocfilehash: ec5127adcb12bc1196604d27ae2ac6501de03d08
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866316"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187102"
 ---
 # <a name="microsoft-intune-documentation-40ignite-special-edition41"></a>Dokumentace k Microsoft Intune – speciální edice Ignite
 Vítejte v Microsoft Ignite 2018! Jsme rádi, že jste se na nás přišli podívat. Když už jste tady na Microsoft Ignite 2018, podívejte se na některé z prostředků Intune, které jsme pro vás sestavili.
@@ -60,6 +61,6 @@ Aktualizovali jsme a vytvořili několik nových rychlých startů. Proveďte n�
 - [Blog podpory Intune](https://blogs.technet.microsoft.com/intunesupport/)
 - [Fóra komunity k Intune](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/ct-p/EMS)
 
-## <a name="developer-resources"></a>Zdroje pro vývojáře
+## <a name="developer-resources"></a>Materiály pro vývojáře
 - [Ukázky grafů Intune](https://github.com/microsoftgraph/powershell-intune-samples)
 - [Intune App SDK](app-sdk-get-started.md)

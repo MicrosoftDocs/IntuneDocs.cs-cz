@@ -11,12 +11,16 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
-ms.openlocfilehash: 18e724d83514bf0df7fcc4f4085f6204669a468f
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune
+ms.openlocfilehash: 13ffb9e7091b484c59f44802de675b1ab45b1c77
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51510938"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183464"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
 
@@ -95,7 +99,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
 Pokud chcete registraci zařízení s Windows zrušit, přečtěte si článek [Odebrání zařízení s Windows ze systému správy](/intune-user-help/unenroll-your-device-from-intune-windows.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste se naučili zaregistrovat zařízení s Windows 10 v Intune. Teď se naučíte další způsoby registrace zařízení na všech platformách. Další informace o používání zařízení s Intune najdete v článku [Práce pomocí spravovaných zařízení](/intune-user-help/use-managed-devices-to-get-work-done.md).
 

@@ -7,12 +7,16 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
-ms.openlocfilehash: ffc1f0140f98b17e060df3308af779ddcb77549e
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune
+ms.openlocfilehash: b5653c67766a3312cf7ce2872e8b0cd4301b0e8b
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51510920"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189485"
 ---
 # <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Rychlý start: Vytvoření uživatele a přiřazení licence tomuto uživateli
 
@@ -24,7 +28,7 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo jako správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
-## <a name="create-a-user"></a>Umožňuje vytvořit uživatele.
+## <a name="create-a-user"></a>Vytvoření uživatele
 
 Aby se uživatelé mohli zaregistrovat do správy zařízení Intune, musí mít uživatelský účet.
 
@@ -59,7 +63,7 @@ U nového aktivního uživatele Intune se nyní zobrazí, že používá licenci
 
 Pokud tohoto uživatele už nepotřebujete, můžete ho odstranit. Přejděte na [portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolte **Uživatelé** > **Aktivní uživatelé** > *vyberte uživatele ze seznamu* > **Odstranit uživatele** > **Odstranit uživatele** > **Potvrdit změny** > **Zavřít**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste vytvořili uživatele a přiřadili mu licenci. Další informace o přidání uživatelů do Intune najdete v článku [Přidání uživatelů a udělení oprávnění pro správu v Intune](users-add.md).
 

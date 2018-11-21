@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a5c3bec4-18ed-11e8-accf-0ed5f89f718b
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ed713e63b63b4eb4a2696e9fd53b39cb139b4115
-ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
-ms.translationtype: HT
+ms.openlocfilehash: bb205472c4407dab6ff990e33737a8bd8b24a010
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31617260"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188636"
 ---
 # <a name="data-intune-sends-to-google"></a>Data z Intune odesílaná Googlu
 
@@ -31,7 +32,7 @@ Pokud se na zařízení povolí správa zařízení s Androidem Enterprise, Micr
 Následující tabulka uvádí data, která Microsoft Intune odesílá do Googlu, když je na daném zařízení povolená správa zařízení:
 
 
-| Data odesílaná Googlu | Podrobnosti | Používáno pro | Příklad |
+| Data odesílaná Googlu | Podrobnosti | Používá pro | Příklad |
 |:---:|:---:|:---:|:---:|
 | EnterpriseId | Vytvoří se v Googlu po vytvoření vazby účtu Gmail s Intune. | Primární identifikátor používaný ke komunikaci mezi Intune a Googlem.  Tato komunikace zahrnuje nastavení zásad, správu zařízení a vytvoření nebo zrušení vazby Androidu s Intune. | Jedinečný identifikátor, příklad formátu: LC04eik8a6 |
 | Text zásad | Vytvoří se v Intune při ukládání nových zásad aplikací nebo konfigurace. | Přiřazení zásad pro zařízení | Jde o kolekci všech nakonfigurovaných nastavení pro zásady aplikace nebo konfigurace. Může obsahovat informace o zákaznících, pokud se poskytly v rámci zásad, například názvy sítí, názvy aplikací a nastavení pro konkrétní aplikace. |

@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 149def73-9d08-494b-97b7-4ba1572f0623
 ms.reviewer: erikre
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57c69c1610168aa25d33c8124c38f585eb715251
-ms.sourcegitcommit: 3d44c06045fa986fc9b9eb43b667caf8928dbaf0
-ms.translationtype: HT
+ms.openlocfilehash: 7cb6e5e603b353be5d3c0d3fdaca4f1d8af675ad
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50225450"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181186"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -191,7 +192,7 @@ Při zpracování různých typů nastavení by měl přednost požadavek na ver
 - Pokud není přiřazená licence Intune, probíhá kontrola každých 24 hodin.
 
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Viz také
 - [Implementace plánu Intune](planning-guide-onboarding.md)
 - [Testování a ověřování Intune](planning-guide-test-validation.md)
 - [Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md)

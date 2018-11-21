@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
 ms.reviewer: angerobe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4f02e7fc4dd414fc12135772bb3d3981e0fa49b7
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
-ms.translationtype: HT
+ms.openlocfilehash: 73cd8b4f0cf5bdfa02a301d476df31a01fc9691f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34474764"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186116"
 ---
 # <a name="data-collection-in-intune"></a>Shromažďování údajů v Intune
 
@@ -38,7 +39,7 @@ Většina osobních údajů shromážděných službou Intune představuje ident
 
 Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné: 
 
-- Údaje uživatele
+- Informace o uživateli
     - Jméno vlastníka / zobrazované jméno uživatele (jméno uživatele zaregistrované v Azure, které označuje ID uživatele služby Azure)
     - Hlavní název uživatele nebo e-mailová adresa
     - Identifikátory uživatele třetích stran (např. Apple ID)
@@ -57,7 +58,7 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
     - Create
     - Aktualizace (úpravy)
     - Odstranit
-    - Assign
+    - přiřazení
     - Vzdálené úlohy
 - Informace o podpoře
     - Kontaktní informace (jméno, telefonní číslo, e-mailová adresa)
@@ -131,6 +132,6 @@ Mezi agregované údaje shromažďované službou Intune patří mimo jiné:
     - notInstalledDeviceCount: Počet zařízení, na kterých se aplikace dá použít, ale není nainstalovaná
     - pendingInstallDeviceCount: Počet zařízení, na kterých se aplikace dá použít a instalace čeká na dokončení
     
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtěte si další informace o tom, jak služba Intune [ukládá a zpracovává](privacy-data-store-process.md) a [sdílí](privacy-data-secure-share.md) osobní údaje. 

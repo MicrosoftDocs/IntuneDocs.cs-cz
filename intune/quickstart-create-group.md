@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 723f4b4e-3090-4811-84ff-6af652abea5a
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e85a88b984aaa05423a35f222de9c56d7366d15a
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.openlocfilehash: d6c51a2823e95526b76e5e71e35420d1744b70f6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511005"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52178374"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
 
@@ -55,7 +56,7 @@ Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých start
 
 Po úspěšném vytvoření se skupina zobrazí v seznamu **Všechny skupiny**. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste použili Intune k vytvoření skupiny ze stávajících uživatelů. Další informace o přidávání skupin do Intune najdete v článku [Přidání skupin pro uspořádání uživatelů a zařízení](groups-add.md).
 

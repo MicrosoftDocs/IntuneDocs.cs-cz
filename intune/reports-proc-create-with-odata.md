@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: f4425f508164332295899a6132782833889aa830
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
-ms.translationtype: HT
+ms.openlocfilehash: 931aa360b82efcf4ef643fb40bc4982c05e589ee
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602261"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182988"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -67,7 +68,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Přihlašovací údaje pro účet organizace](media/reports-create-02-org-account.png)
 
-11. Vyberte **Připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+11. Vyberte **připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Navigátor](media/reports-create-02-loadentities.png)
 
@@ -117,7 +118,7 @@ Teď máte interaktivní filtr, pomocí kterého můžete přepínat mezi zaří
 1. Výběrem možnosti **Společnost** zobrazíte rozdělení zařízení ve vlastnictví společnosti.
 2. Výběrem možnosti **Osobní** zobrazíte zařízení v osobním vlastnictví.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
  - Další informace o [vytváření a správě relací](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) v Power BI Desktopu najdete v dokumentaci k Power BI.
  - Přečtěte si článek [Datový model datového skladu Intune](https://docs.microsoft.com/intune/reports-ref-data-model).

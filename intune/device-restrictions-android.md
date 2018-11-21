@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: ayesham, chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e3b356cc7c09b00916c24340dbbe1923540889b
-ms.sourcegitcommit: 1134ecd733356277b40eb1c7f2b318b36d387e00
-ms.translationtype: HT
+ms.openlocfilehash: 459b35e61b122e1377c4fcef61cf6f4527c44ab9
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50915729"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181798"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings---intune"></a>Nastavení omezení pro zařízení se systémy Android a Samsung Knox Standard – Intune
 
@@ -159,6 +160,6 @@ Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a 
 - **Tlačítka hlasitosti** – Povolí nebo zakáže použití tlačítek hlasitosti na zařízení.
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Pokračujte tím, že podle pokynů v části popisující [postup konfigurace nastavení omezení zařízení](device-restrictions-configure.md) vytvoříte a pak přiřadíte profil omezení zařízení.

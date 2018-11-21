@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a097b7b2-d01d-454b-954c-da4f3cd0ae86
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ff63e3cdf670156c66c156e3defe6d67e7c04044
-ms.sourcegitcommit: 5d5448f6c365aeb01d6f2488bf122024b9616bec
-ms.translationtype: HT
+ms.openlocfilehash: 9bce677f21967a79214a5cafbab4ce40b754b333
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51212355"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183022"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows Phone do Microsoft Intune
 
@@ -66,7 +67,7 @@ Informace v tomto článku vám pomůžou přidat obchodní aplikaci pro Windows
 1. V podokně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací.
 2. Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací. Teď ji můžete přiřadit do požadovaných skupin. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
 

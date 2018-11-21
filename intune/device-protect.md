@@ -12,12 +12,16 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: bb9606a8586e0dbdbb566def344c9c551cb09e52
-ms.sourcegitcommit: a8b544975156dd45c2bf215b57ac994415b568bc
-ms.translationtype: HT
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-classic
+ms.openlocfilehash: 06f14b0ba1edcde28c7f2c732ab286e80f186bf2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39164813"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188258"
 ---
 # <a name="protect-devices-with-microsoft-intune"></a>Ochrana zařízení pomocí Microsoft Intune
 
@@ -55,7 +59,7 @@ Intune umožňuje integraci se službou [Windows Hello pro firmy](windows-hello.
 ## <a name="bypass-activation-lock-on-ios-devices"></a>Obejití zámku aktivace na zařízeních s iOSem
 Zámek aktivace je funkce, která pomáhá chránit zařízení uživatelů. Tato funkce vyžaduje, aby uživatelé před vymazáním nebo opětovnou aktivací zařízení zadali své Apple ID a heslo. Tato funkce ale může vést k problémům, pokud třeba uživatel odejde ze společnosti, aniž by ze zařízení zámek odebral. Možnost [obejít zámek aktivace na zařízeních s iOSem]( device-activation-lock-bypass.md) může pomoct odebrat zámek ze zařízení s iOSem, která jsou pod dohledem, abyste je mohli přidělit jinému uživateli nebo z nich vymazat obsah.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtěte si další informace o [ochraně před mobilním hrozbami](mobile-threat-defense.md).
 

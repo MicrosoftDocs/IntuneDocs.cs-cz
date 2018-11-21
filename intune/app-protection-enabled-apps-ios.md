@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 586d9440-3813-4dec-b865-8bd319befde0
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 66179c38edcc01104f9293ec292943e9faa200eb
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 667d5df5d53a9248137274cf7abe5b7fde5bf8bb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231410"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181934"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
 
@@ -64,7 +65,7 @@ Pokud používáte zařízení s iOSem, může se při pokusu o přidání druh�
 
 ![Snímek obrazovky s dialogem obsahujícím zprávu o blokování a možnosti Ano a Ne](./media/ios-switch-user.PNG)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)

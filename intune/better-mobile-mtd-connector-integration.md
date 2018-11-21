@@ -12,12 +12,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.openlocfilehash: a677bab1f18fc0d0e0d159f2b40fae314b292e0f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: aa447721449b2b3733e20d9f65f0253e9123228b
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231107"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184196"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrace Better Mobile s Intune
 
@@ -71,6 +72,6 @@ Postup autorizace aplikace Better Mobile:
 8. Vyberte **Hotovo**.
 9. Znovu se zobrazí stránka **Přidat účet**. Stránku zavřete. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 -   [Nastavení klientských aplikací Better](mtd-apps-ios-app-configuration-policy-add-assign.md)

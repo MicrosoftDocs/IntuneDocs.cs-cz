@@ -5,20 +5,21 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 60d9398b80a30adee194470ac4e5c6c1efc0bd4c
-ms.sourcegitcommit: 97b9f966f23895495b4c8a685f1397b78cc01d57
-ms.translationtype: HT
+ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744631"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186176"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -58,7 +59,10 @@ Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Pos
 
 ![Vzdálená správa zařízení s Androidem pomocí TeamVieweru – příklad](./media/android-teamviewer.png)
 
-Když spustíte vzdálenou relaci, zobrazí se koncovému uživateli na zařízení na ikoně aplikace Portál společnosti příznak oznámení. Oznámení se zobrazí také při spuštění aplikace. Uživatel pak může přijmout žádost o vzdálenou pomoc.
+Při spuštění vzdálené relace uživatelé uvidí na svém zařízení u ikony aplikace portál společnosti příznak oznámení. Oznámení se zobrazí také při spuštění aplikace. Uživatelé pak může přijmout žádost o vzdálenou pomoc.
+
+> [!NOTE]
+> Zařízení Windows, která jsou zapsaná pomocí "neobdrží" metod, jako je například DEM a WCD, nezobrazovat TeamViewer oznámení v aplikaci portál společnosti. V těchto scénářích platí doporučuje se používat portál Teamvieweru ke generování relace.
 
 V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti s informacemi, co můžete dělat, najdete v tématu [Pokyny k TeamVieweru](https://www.teamviewer.com/support/documents/).
 

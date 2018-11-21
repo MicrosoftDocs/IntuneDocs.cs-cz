@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 136ccb6079b16c13098c1dbd6ca49e8254c14f89
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
-ms.translationtype: HT
+ms.openlocfilehash: b8ab8dfadb113d81922119a54aefcac43d15b5a1
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905763"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187425"
 ---
 # <a name="email-profile-settings-for-devices-running-android-and-android-enterprise---intune"></a>Nastavení e-mailového profilu v zařízeních s Androidem a Androidem Enterprise – Intune
 
@@ -53,7 +54,7 @@ Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro nás
 
 ### <a name="security-settings"></a>Nastavení zabezpečení
 
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace přes protokol SSL (Secure Sockets Layer).
+- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
 - **S/MIME**: Odchozí e-maily se budou posílat s využitím šifrování S/MIME.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
 
@@ -77,12 +78,12 @@ Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro nás
 - **Atribut e-mailové adresy z AAD**: Způsob generování e-mailové adresy pro uživatele na každém zařízení. Pokud chcete jako e-mailovou adresu nebo **uživatelské jméno** používat celý hlavní název, vyberte **Hlavní název uživatele**.
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
   - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace přes protokol SSL (Secure Sockets Layer).
+- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
 - **Počet e-mailů k synchronizaci**: Zvolte počet dní, za které se mají e-maily synchronizovat, nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
 - **Typ obsahu k synchronizaci** (jen Nine Work): Vyberte typy obsahu, které se mají na zařízeních synchronizovat:
   - **Kontakty**
   - **Kalendář**
   - **Úkoly**
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)

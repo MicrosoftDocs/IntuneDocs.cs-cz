@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 97bddc1a183e3a546e76b346f53f80aba6a81c50
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
-ms.translationtype: HT
+ms.openlocfilehash: cd605542a0711e27f87d68af51662fd318f3250e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312869"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184875"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Vytváření profilů sítě VPN v Intune
 
@@ -69,7 +70,7 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 4. Zadejte **název** a **popis** profilu VPN.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete použít nastavení VPN. V současné době můžete pro nastavení VPN na zařízení zvolit jednu z následujících platforem:
-   - **Androidemem**
+   - **Android**
    - **Android Enterprise**
    - **iOS**
    - **macOS**

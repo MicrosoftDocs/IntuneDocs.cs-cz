@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9c9027964648ad83c552f7dd7067598cacf560e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
-ms.translationtype: HT
+ms.openlocfilehash: cf5146946fef464d2d74271e0ad801dabbdce13e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31836521"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186864"
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Nastavení nástroje Intune Certificate Connector pro webovou službu správce infrastruktury veřejných klíčů Symantec
 
@@ -305,9 +306,9 @@ Po dokončení předchozích kroků vydá Intune Certificate Connector certifik�
 
 Protokoly služby Intune Certificate Connector jsou k dispozici ve složce `%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\Logs\Logs` v počítači NDES Connector. Otevřete protokoly v nástroji [SvcTraceViewer](https://docs.microsoft.com/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) a vyhledejte výjimky nebo chybové zprávy.
 
-| Problém nebo chybová zpráva | Kroky řešení |
+| Problém nebo chybová zpráva | Postup řešení |
 | --- | --- |
-| Nelze se přihlásit do uživatelského rozhraní NDES Connector pomocí účtu správce tenanta Intune. | Může se to stát v případě, že místní Certificate Connector není povolený v portálu pro správu Intune. Tento problém vyřešíte následujícím postupem: <br><br> Z uživatelského rozhraní Silverlight: <br> 1. Přihlaste se k [portálu pro správu Intune](https://admin.manage.microsoft.com). <br> 2. Klikněte na možnost Správce. <br> 3. Vyberte položku Správa mobilních zařízení > Certificate Connector <br> 4. Klikněte na možnost **Konfigurace místního Certificate Connectoru**. <br> 5. Zaškrtněte políčko **Zapnout Certificate Connector**. <br> 6. Klikněte na **OK**. <br><br>nebo <br><br> Z uživatelského rozhraní Azure: <br> 1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com). <br> 2. Přejděte do Microsoft Intune. <br> 3. Vyberte možnost **Konfigurace zařízení** > **Certifikační autorita**. <br> 4. Klikněte na **Povolit**. <br><br> Po dokončení předchozích kroků z rozhraní Silverlight nebo portálu Azure Portal se zkuste přihlásit pomocí stejného účtu správce tenanta Intune do uživatelského rozhraní NDES Connector. |
+| Nelze se přihlásit do uživatelského rozhraní NDES Connector pomocí účtu správce tenanta Intune. | Může se to stát v případě, že místní Certificate Connector není povolený v portálu pro správu Intune. Tento problém vyřešíte následujícím postupem: <br><br> Z uživatelského rozhraní Silverlight: <br> 1. Přihlaste se k [portálu pro správu Intune](https://admin.manage.microsoft.com). <br> 2. Klikněte na možnost Správce. <br> 3. Vyberte položku Správa mobilních zařízení > Certificate Connector <br> 4. Klikněte na možnost **Konfigurace místního Certificate Connectoru**. <br> 5. Zaškrtněte políčko **Zapnout Certificate Connector**. <br> 6. Klikněte na **OK**. <br><br>Nebo <br><br> Z uživatelského rozhraní Azure: <br> 1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com). <br> 2. Přejděte do Microsoft Intune. <br> 3. Vyberte možnost **Konfigurace zařízení** > **Certifikační autorita**. <br> 4. Klikněte na **Povolit**. <br><br> Po dokončení předchozích kroků z rozhraní Silverlight nebo portálu Azure Portal se zkuste přihlásit pomocí stejného účtu správce tenanta Intune do uživatelského rozhraní NDES Connector. |
 | Certifikát konektoru NDES Connector se nepodařilo nalézt. <br><br> System.ArgumentNullException: Hodnota nemůže být null. | Intune Certificate Connector zobrazuje tuto chybu, pokud se účet správce tenanta Intune nikdy nepřihlásil k uživatelskému rozhraní NDES Connector. <br><br> Pokud s tím budou dál problémy, restartujte Intune Service Connector. <br><br> 1. Otevřete konzolu services.msc. <br> 2. Vyberte službu **Intune Connector Service**. <br> 3. Klikněte pravým tlačítkem a vyberte možnost **Restartovat**.|
 | NDES Connector – IssuePfx – obecná výjimka: <br> System.NullReferenceException: Odkaz na objekt není nastavený na instanci objektu. | Tato chyba je přechodná. Restartujte službu Intune Connector Service. <br><br> 1. Otevřete konzolu services.msc. <br> 2. Vyberte službu **Intune Connector Service**. <br> 3. Klikněte pravým tlačítkem a vyberte možnost **Restartovat**. |
 | Poskytovatel Symantec – nepodařilo se získat zásady Symantec pro časový limit operace. | Intune Certificate Connector přijal při komunikaci s certifikační autoritou Symantec chybu časového limitu operace. Pokud tato chyba přetrvává, zvyšte hodnotu časového limitu připojení a zkuste to znovu. <br><br> Postup zvýšení časového limitu připojení: <br> 1. Přejděte do počítače konektoru NDES Connector. <br>2. Otevřete soubor `%ProgramFiles%\Microsoft Intune\NDESConnectorSvc\NDESConnector.exe.config` v aplikaci Poznámkový blok. <br> 3. Zvyšte časový limit u následujícího parametru: <br><br> `CloudCAConnTimeoutInMilliseconds` <br><br> 4. Restartujte službu Intune Connector Service. <br><br> Pokud potíže potrvají, obraťte se na zákaznickou podporu Symantec. |
@@ -318,7 +319,7 @@ Protokoly služby Intune Certificate Connector jsou k dispozici ve složce `%Pro
 | Některá zařízení uživatelů nedostávají certifikáty PKCS z certifikační autority Symantec. | Tento problém nastane, když hlavní název uživatele (UPN) obsahuje speciální znaky, jako je podtržítko (například `global_admin@intune.onmicrosoft.com`). <br><br> CA Symantec nepodporuje speciální znaky v polích mail_firstname a mail_lastname. <br><br> Tento problém vyřešíte následujícím postupem: <br><br> 1.   Přihlaste se k portálu správce CA Symantec. <br> 2. Přejděte na Manage Certificate Profiles (Spravovat profily certifikátů). <br> 3.   Klikněte na profil certifikátu použitý pro Intune. <br> 4.  Klikněte na odkaz Customize options (Upravit možnosti). <br> 5.   Klikněte na tlačítko Advanced options (Upřesnit). <br> 6.  V části polí certifikátu pro rozlišující název subjektu přidejte pole Běžný název (CN) a odstraňte existující pole Běžný název (CN). Přidání a odstranění je nutné provést najednou. <br> 7.    Klikněte na Uložit. <br><br> Na základě předchozí změny vyžádá profil certifikátu Symantec název CN=<upn> namísto mail_firstname a mail_lastname. |
 | Uživatel ručně odstranil již nasazený certifikát ze zařízení. | Intune znovu nasadí stejný certifikát při dalším ohlášení nebo vynucení zásad. V takovém případě NDES Connector neobdrží žádost o certifikát PKCS. |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Informace uvedené v tomto článku využijte spolu s informacemi v tématu [Co jsou profily zařízení Microsoft Intune?](device-profiles.md) ke správě zařízení organizace a jejich certifikátů.
 

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 39efa1b85bd06b7c1b5e553d0ff6058f6eeeb64e
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: 6d0a7485aa25dee74bf54192fa931d081be81cd8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576718"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184502"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 
@@ -95,7 +96,7 @@ Abyste mohli nainstalovat aplikaci **Úkoly Contoso** zpřístupněnou službou 
 
 Pokud potřeby vaší firmy vyžadují, abyste aplikaci Portál společnosti přiřadili zaměstnancům, můžete aplikaci Portál společnosti pro Windows 10 přiřadit ručně přímo z Intune. Další informace najdete v článku [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](store-apps-company-portal-app.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste do Intune přidali aplikace, přiřadili tyto aplikace ke skupině a nainstalovali je na zaregistrované zařízení s desktopovou verzí Windows 10. Další informace o správě aplikací v Intune najdete v článku [Co je správa aplikací v Microsoft Intune?](app-management.md)
 

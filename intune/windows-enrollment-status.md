@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
 ms.reviewer: damionw
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 08d76d6b76ee7838633435ae095c171e0a3cdf8e
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: ada9fee575824d27a6bfdd8f14d4845d228467db
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236488"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186069"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -86,19 +87,19 @@ U nastavení zařízení stránka stavu registrace sleduje následující polož
 ### <a name="account-setup"></a>Nastavení účtu
 U nastavení účtu stránka stavu registrace sleduje následující položky:
 - Zásady zabezpečení
-    - Jeden poskytovatel konfiguračních služeb pro všechny registrace
+    - Jeden poskytovatel konfiguračních služeb pro všechny registrace.
     - Skuteční poskytovatelé konfiguračních služeb nakonfigurovaných službou Intune se zde nesledují.
 - Aplikace
-    - Počet obchodních aplikací Instalační služby MSI na jednoho uživatele, které jsou přiřazeny ke všem zařízením, všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je
-    - Počet obchodních aplikací Instalační služby MSI na jeden počítač, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je
+    - Počet obchodních aplikací Instalační služby MSI na jednoho uživatele, které jsou přiřazeny ke všem zařízením, všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
+    - Počet obchodních aplikací Instalační služby MSI na jeden počítač, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
     - Obchodní aplikace pro Store, online aplikace pro Store a offline aplikace pro Store přiřazené jakékoli z následujících možností:
         - Všechna zařízení
         - Všichni uživatelé
-        - Skupina uživatelů, ve které je uživatel registrující zařízení členem, s kontextem instalace nastaveným na Uživatel
+        - Skupina uživatelů, ve které je uživatel registrující zařízení členem, s kontextem instalace nastaveným na Uživatel.
 - Profily připojení
-    - Profily VPN a Wi-Fi, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je
+    - Profily VPN a Wi-Fi, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
 - Certifikáty
-    - Profily certifikátů, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je
+    - Profily certifikátů, které jsou přiřazeny ke všem uživatelům nebo skupině uživatelů, jejímž členem uživatel provádějící registraci zařízení je.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Po nastavení stránek registrace zařízení s Windows se naučte spravovat zařízení s Windows. Další informace najdete v článku [Co je správa zařízení v Microsoft Intune](https://docs.microsoft.com/intune/device-management).

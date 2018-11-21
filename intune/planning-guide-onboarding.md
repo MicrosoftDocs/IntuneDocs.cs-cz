@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 8f95726cbad86544ebf717380708c8295f737530
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
-ms.translationtype: HT
+ms.openlocfilehash: d5c1fb2b6b20c9687418e14f8e35543c04833a25
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34475638"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186388"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -134,7 +135,7 @@ Intune podporuje tyto platformy zařízení: iOS, Mac OS, Android, Windows pro s
 -   Další informace o [registraci zařízení](device-enrollment.md).
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o procesu implementace Intune najdete v tomto [modulu relací Microsoft Virtual Academy](https://mva.microsoft.com/en-US/training-courses/deploying-microsoft-enterprise-mobility-suite-16408).
 

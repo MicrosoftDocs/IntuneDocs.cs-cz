@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: e471fed8-19f0-4b37-aaa2-65f28a6b4794
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5b322b9d2b6a7f0689df521ef1809c3616c02f3f
-ms.sourcegitcommit: 2198a39ae48beca5fc74316976bc3fc9db363659
-ms.translationtype: HT
+ms.openlocfilehash: 1fa409619d5c0fc0c0fc32573f9a7346350191e8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38225319"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188717"
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Jak uživatelé s Windows získávají svoje aplikace
 
@@ -35,6 +36,6 @@ Tyto informace vám dají představu o tom, jak a kde uživatelé získávají a
 
 **Nespravované aplikace** jsou aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune ani sestavené pomocí sady Intune App SDK. Na tyto aplikace nejdou použít zásady ochrany aplikací.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 [Jak uživatelé systému iOS získávají svoje aplikace](end-user-apps-android.md)

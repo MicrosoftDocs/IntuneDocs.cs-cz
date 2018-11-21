@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0b2a31a90dc0d88386a829756116edebd28990f9
-ms.sourcegitcommit: bea4a81d262607c6e9dd1e26f5cd1a2faf7d051b
-ms.translationtype: HT
+ms.openlocfilehash: 5cd16a351beefd851d51175717abd4400382c216
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45602176"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52185232"
 ---
 # <a name="kiosk-settings-for-android-devices-in-intune"></a>Nastavení beznabídkového režimu zařízení s Androidem v Intune
 
@@ -47,7 +48,7 @@ Pokud je profil omezení zařízení v beznabídkovém režimu nastavený na **B
 
 Následujícím postupem nastavíte u zařízení s Androidem v beznabídkovém režimu více aplikací:
 
-1. [Import a nasazení aplikace Managed Home Screen ze spravovaného obchodu Google Play](#import-and -deploy-the-managed-home-screen-app)
+1. [Import a nasazení aplikace Managed Home Screen ze spravovaného obchodu Google Play](#import-and-deploy-the-managed-home-screen-app)
 2. [Přidání a přiřazení aplikací, které lze používat v beznabídkovém režimu](#add-and-assign-apps-that-can-be-used-in-kiosk-mode)
 3. (Volitelné) [Přidání webových odkazů, které lze používat v beznabídkovém režimu](#add-web-links-that-can-be-used-in-kiosk-mode)
 
@@ -96,5 +97,5 @@ Ověřte, že jste do zařízení s beznabídkovým režimem nasadili webovou ap
 9. V oblasti **Přiřadit k** zvolte **Vybrané skupiny**.
 10. Zvolte **Vybrat skupiny, které se zahrnou** > zvolte skupinu zařízení, kterou jste vytvořili pro zařízení v beznabídkovém režimu > **Vybrat** > **Uložit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

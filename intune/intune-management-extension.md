@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 768b6f08-3eff-4551-b139-095b3cfd1f89
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad8e874dda47b7c6deeb614b0f893f7c922241ce
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 29a3f6c6e320f970ef7b2b086b8d25ab82453199
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236335"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179401"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
 Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune, aby je bylo možné spouštět v zařízeních s Windows 10. Rozšíření správy doplňuje funkce správy mobilních zařízení (MDM) s Windows 10 a usnadňuje přechod na moderní správu.
@@ -27,11 +28,11 @@ Rozšíření správy Intune umožňuje nahrát powershellové skripty do Intune
 ## <a name="moving-to-modern-management"></a>Přechod na moderní správu
 Prostředí IT pro koncové uživatele prochází digitální transformací. Klasické tradiční informační technologie se zaměřují na platformy pro jednotlivá zařízení, na zařízení vlastněná firmami, uživatele, kteří pracují z kanceláře, a celou řadu manuálních reaktivních IT procesů. Moderní pracoviště ale umožňuje používat platformy pro více zařízení vlastněná uživateli i firmami, uživatelům pracovat odkudkoli a zajistit automatické a proaktivní IT procesy. 
 
-Služby správy mobilních zařízení, jako je třeba Microsoft Intune, mohou spravovat zařízení s Windows 10 pomocí protokolu MDM. Integrovaný klient správy Windows 10 je schopen komunikovat s Intune a provádět úlohy podnikové správy. Pomůže vám při přechodu na moderní správu v zařízeních s Windows 10. V současné době ale ve správě mobilních zařízení pro Windows 10 nejsou dostupné určité funkce, které byste mohli potřebovat. Jedná se třeba o rozšířenou konfiguraci zařízení, řešení potíží nebo správu starších aplikací Win 32. Pro tyto funkce můžete v zařízení s Windows 10 používat softwarového klienta Intune. Nebudete ale moct používat nové funkce, které správa mobilních zařízení pro Windows 10 poskytuje. [Srovnání rozdílů mezi softwarovým klientem Intune a správou mobilních zařízení pro Windows 10](https://docs.microsoft.com/intune-classic/deploy-use/pc-management-comparison)
+Služby správy mobilních zařízení, jako je třeba Microsoft Intune, mohou spravovat zařízení s Windows 10 pomocí protokolu MDM. Integrovaný klient správy Windows 10 je schopen komunikovat s Intune a provádět úlohy podnikové správy. Pomůže vám při přechodu na moderní správu v zařízeních s Windows 10. Existují však některé funkce, které můžete potřebovat, jako je například rozšířenou konfiguraci zařízení, která není k dispozici ve Windows 10 integrované funkce MDM.
 
-Rozšíření správy Intune doplňuje integrované funkce správy mobilních zařízení pro Windows 10. Můžete si vytvořit powershellové skripty, které vám budou poskytovat požadované funkce, a spouštět je v zařízeních s Windows 10. Můžete si třeba vytvořit powershellový skript, který nainstaluje starší aplikaci Win32 do zařízení s Windows 10, nahrát ho do Intune, přiřadit ho ke skupině Azure AD (Active Directory) a spustit ho v zařízení s Windows 10. Potom můžete monitorovat stav spuštění skriptu na zařízení s Windows 10 od začátku až do konce.
+Rozšíření správy Intune doplňuje integrované funkce správy mobilních zařízení pro Windows 10. Můžete si vytvořit powershellové skripty, které vám budou poskytovat požadované funkce, a spouštět je v zařízeních s Windows 10. Můžete vytvořit Powershellový skript, který konfiguruje vaše vlastní nastavení, nahrát ho do Intune, přiřadit ho ke skupině Azure Active Directory (AD) a spuštění skriptu na zařízení s Windows 10. Skript je možné monitorovat zobrazíte stav spuštění skriptu na zařízení s Windows 10 od začátku do konce.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 - Zařízení musí být připojená k Azure AD. Rozšíření správy Intune podporuje připojení k Azure Active Directory, připojení k hybridní doméně a společnou správu registrovaných zařízení s Windows.
 - Zařízení musí používat Windows 10 verze 1607 nebo novější.
@@ -55,7 +56,6 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 3. Vyberte jednu nebo více skupin, které obsahují uživatele, jejichž zařízení skript obdrží. Kliknutím na **Vybrat** přiřaďte zásady k vybraným skupinám.
 
 > [!NOTE]
-> - Skripty PowerShell se nedají použít u skupin počítačů.
 > - Koncoví uživatelé nemusí být kvůli spouštění powershellových skriptů přihlášení k zařízení. 
 > - Cílem powershellových skriptů v Intune mohou být skupiny zabezpečení zařízení služby AAD.
 

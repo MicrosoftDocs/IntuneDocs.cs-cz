@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6deed5de94b72ec3dfb5e8336cc2a58678b4748f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231470"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187455"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
@@ -58,7 +59,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
-Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
+Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
 **Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:**
 
@@ -70,7 +71,7 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání 
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
-Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
+Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
 **Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:**
 
@@ -94,9 +95,9 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 -   Předplatné služby Zimperium Mobile Threat Defense
 
-    -   Další informace najdete na [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
+    -   Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips) Další informace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Integrace řešení Zimperium do Intune](zimperium-mtd-connector-integration.md)
 

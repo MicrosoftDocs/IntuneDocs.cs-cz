@@ -7,12 +7,16 @@ ms.service: microsoft-intune
 ms.topic: quickstart
 ms.date: 11/05/2018
 ms.author: erikje
-ms.openlocfilehash: c219629968fbd66ee14abf61786a791bf7f5e2e0
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.reviewer: angerobe
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-classic
+ms.openlocfilehash: 0d6f210d055d8395985b4fe64b5a061b2c8a0304
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51510784"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179649"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý start: Nastavení automatické registrace zařízení s Windows 10
 
@@ -63,7 +67,7 @@ V tomto příkladu použijete registraci MDM, aby byla možná automatická regi
 
 Pokud chcete automatickou registraci v Intune změnit, zaškrtněte, že chcete [nastavit registraci zařízení s Windows](windows-enroll.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste se naučili, jak nastavit automatickou registraci zařízení s Windows 10. Další informace o registraci zařízení najdete v článku [Co je registrace zařízení?](device-enrollment.md)
 

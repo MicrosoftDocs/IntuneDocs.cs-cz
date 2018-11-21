@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 6a88573a-aa60-455c-858c-74562798246b
 ms.reviewer: pchacon
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1fa717147d8c5fcc33f350cc16bd4af53a31efc7
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
-ms.translationtype: HT
+ms.openlocfilehash: d8ae737ee11f176c036382fbe77122ecebb722d2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31020516"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190009"
 ---
 # <a name="prevent-unauthorized-access-to-company-data-using-microsoft-intune"></a>Zabránění neoprávněnému přístupu k podnikovým datům v Microsoft Intune
 
@@ -43,7 +44,7 @@ Absolvujte [rychlý úvodní kurz pro Azure Information Protection](https://docs
 
 Můžete sdílet podrobnosti o tom, [jak a kdy chránit dokumenty a e-maily, které obsahují citlivé informace](https://docs.microsoft.com/information-protection/deploy-use/help-users).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 

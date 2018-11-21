@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 4a588af375ef690d45e067dfc4261fbeb551755c
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
-ms.translationtype: HT
+ms.openlocfilehash: 12c48a00e4b755409b698d5f2ee6182403802f23
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863208"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190400"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -43,7 +44,7 @@ Sada Intune App SDK obsahuje tyto soubory:
 * **CHANGELOG.txt**: Obsahuje záznam změn provedených v každé verzi sady SDK.
 * **THIRDPARTYNOTICES.TXT**: Označení autorství kódu OSS nebo kódu třetí strany, který se zkompiluje do vaší aplikace
 
-## <a name="requirements"></a>požadavky
+## <a name="requirements"></a>Požadavky
 
 Sada SDK podporuje Android API 19 (Android 4.4+) až Android API 28 (Android 8.0).
 

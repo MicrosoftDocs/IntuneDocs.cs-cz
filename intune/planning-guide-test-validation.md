@@ -14,12 +14,13 @@ ms.technology: ''
 ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
-ms.openlocfilehash: 1346c0f5b0e1665e49e09fc566b9ff3da17fc17a
-ms.sourcegitcommit: aafed032492c1b5861d7097a335f9bbb29ce3221
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: bbcf6e21b9f5dd0474461e88ff54d6dde97590aa
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2018
-ms.locfileid: "29720677"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179928"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 
@@ -75,7 +76,7 @@ Ověřovací testování koncového uživatele se provádí, aby se ověřilo, j
 
 ![9. část – tabulka 3](./media/section-9-image-3-table.PNG)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Jakmile jste otestovali a ověřili funkce a scénáře použití Intune, jste připraveni zahájit [ostrý provoz Intune](planning-guide-rollout-plan.md).
 

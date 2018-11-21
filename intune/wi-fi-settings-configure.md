@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 16273910220dae238e15910af0557dd8b73646b9
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
-ms.translationtype: HT
+ms.openlocfilehash: a338cce6249cc7c5214a9d69a897cad3eaa09e93
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425253"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188394"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -51,7 +52,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 3. Zadejte **Název** a **Popis** profilu Wi-Fi.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, na kterou chcete nastavení Wi-Fi použít. Možnosti:
 
-    - **Androidemem**
+    - **Android**
     - **Android Enterprise**
     - **iOS**
     - **macOS**
@@ -66,7 +67,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 6. Některá nastavení Wi-Fi se u jednotlivých platforem liší. Pokud se chcete podívat na nastavení pro konkrétní platformu, zvolte:
 
-    - [Androidemem](wi-fi-settings-android.md)
+    - [Android](wi-fi-settings-android.md)
     - [Android Enterprise a beznabídkový režim](wi-fi-settings-android-enterprise.md)
     - [iOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
@@ -77,6 +78,6 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 7. Až přidáte veškerá nastavení Wi-Fi, vyberte **Vytvořit profil** > **Vytvořit** a přidejte konfigurační profil. Profil se vytvoří a zobrazí se v seznamu profilů (**Konfigurace zařízení** > **Profily**).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).

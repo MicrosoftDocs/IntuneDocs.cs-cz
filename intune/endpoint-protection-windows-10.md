@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 ms.reviewer: ilwu
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1a7c7ebca1c6472b58021a57b1b4a59fc42966b0
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: fdfe822c9633e22e611acfe7f915068a4a183ae2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576949"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189992"
 ---
 # <a name="endpoint-protection-settings-for-windows-10-and-later-in-intune"></a>Nastavení ochrany koncového bodu pro Windows 10 a novější v Intune
 
@@ -54,7 +55,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 Podporováno v následujících edicích Windows 10:
 - Domů
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -101,7 +102,7 @@ Tato nastavení platí pro určité typy sítě, například pro typy **Doménov
 Podporováno v následujících edicích Windows 10 s nainstalovaným prohlížečem Microsoft Edge:
 - Domů
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -119,7 +120,7 @@ Podporováno v následujících edicích Windows 10 s nainstalovaným prohlíže
 Podporováno v následujících edicích Windows 10:
 
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -229,7 +230,7 @@ Podporováno v následujících edicích Windows 10:
 
 - Domů
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -304,7 +305,7 @@ Podporováno v následujících edicích Windows 10:
 
 **Správa mobilních zařízení (MDM)**: 
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -349,7 +350,7 @@ Podporováno v následujících edicích Windows 10:
 
 - Domů
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 - Mobilní
@@ -382,7 +383,7 @@ Podporováno v následujících edicích Windows 10:
  
 - Domů
 - Professional
-- Do zaměstnání
+- Firemní
 - Enterprise
 - Vzdělávání
 
@@ -491,6 +492,6 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 - **Digitálně podepisovat komunikaci (pokud klient souhlasí)**: Určuje, jestli server SMB vyjednává podepisování paketů SMB s klienty, kteří to požadují. Když je tato možnost **povolená**, server sítě Microsoft vyjedná podepisování paketů SMB podle požadavku klienta. To znamená, že pokud je v klientovi podepisování paketů povolené, podepisování paketů se vyjedná. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), klient SMB podepisování paketů nikdy vyjednávat nebude.
 - **Digitálně podepisovat komunikaci (vždy)**: Určuje, jestli komponenta serveru SMB požaduje podepisování paketů. Když je tato možnost **povolená**, nebude server sítě Microsoft s klientem sítě Microsoft komunikovat, pokud tento klient nesouhlasí s podepisováním paketů SMB. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), podepisování paketů SMB mezi klientem a serverem se vyjedná.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Pokud chcete tento profil přiřadit ke skupinám, přečtěte si článek [Přiřazení profilů zařízení](device-profile-assign.md).

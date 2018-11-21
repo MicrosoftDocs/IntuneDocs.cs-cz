@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
 ms.suite: ems
+search.appverid: MET150
 ms.custom: get-started
-ms.openlocfilehash: efdbf141d42be11a6ba3fd750dcd80f494445862
-ms.sourcegitcommit: 18f51ae8291b57562921e40fc364a5a60a59b139
-ms.translationtype: HT
+ms.openlocfilehash: d801d824cefb00ff197125588f840246b889844e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44254033"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187077"
 ---
 # <a name="what-is-intune"></a>Co je Intune?
 
@@ -112,7 +113,7 @@ Bez ohledu na postoj vaší organizace k zaregistrovaným a nezaregistrovaným m
 
 
 
-### <a name="next-steps"></a>Další kroky
+### <a name="next-steps"></a>Další postup
 * Přečtěte si o některých [běžných způsobech použití Intune](common-scenarios.md).
 * Seznamte se s tímto produktem [prostřednictvím 30denní zkušební verze Intune](free-trial-sign-up.md).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](supported-devices-browsers.md) služby Intune.

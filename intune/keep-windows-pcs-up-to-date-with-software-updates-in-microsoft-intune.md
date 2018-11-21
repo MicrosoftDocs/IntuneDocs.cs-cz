@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 48e9c41a-d2de-424e-9610-cfd1ad514210
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 6c20a54be851bba4343c383b722ca3e034e76a1c
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
-ms.translationtype: HT
+ms.openlocfilehash: 7c6bdbde87f6438696b5a262ba1890532dcfccdd
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310619"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180852"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune
 
@@ -53,7 +54,7 @@ Následující tabulka zobrazuje hodnoty, které můžete v zásadách konfiguro
   |Nastavení zásad|Podrobnosti|
     |------------------|--------------------|
     |**Četnost detekce aktualizací a aplikací (hodiny)** |Určuje, jak často (od 8 do 22 hodin) Intune kontroluje nové aktualizace a aplikace.<br /><br />Doporučená hodnota: **8** hodin.|
-    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br />**Používat automatickou údržbu pro počítače se systémem Windows** jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Každý den**<br /><br />**Naplánovaný čas: 3:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
+    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br /> **Používat automatickou údržbu pro počítače se systémem Windows** jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Každý den**<br /><br />**Naplánovaný čas: 3:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
     |**Umožnit okamžitou instalaci aktualizací, které nenaruší běh systému Windows** |Možnost **Povolit** umožňuje instalovat aktualizace hned po stažení s výjimkou aktualizací, které by přerušily nebo restartovaly Windows. Tyto aktualizace se instalují v závislosti na konfiguraci nastavení **Automatizovaná instalace aktualizací nebo instalace aktualizací s výzvami**.<br /><br />Možnost **Nepovolit** umožňuje instalovat aktualizace v závislosti na konfiguraci **Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami**.<br /><br />Doporučená hodnota: **Povolit** |
     |**Zpoždění restartu systému Windows po instalaci plánovaných aktualizací a aplikací (minuty)** |Určuje (1 až 30 minut) dobu čekání na restartování Windows po instalaci naplánovaných aktualizací a aplikací.<br /><br />Doporučená hodnota: **15 minut** |
     |**Zpoždění po restartu systému Windows při zahájení instalace dosud neprovedených plánovaných aktualizací nebo aplikací (minuty)** |Určuje (1 až 60 minut), jak dlouho se má čekat na spuštění instalace aktualizací a aplikací po restartování Windows, pokud nebyla nainstalovaná plánovaná aktualizace.<br /><br />Doporučená hodnota: **5 minut**|
@@ -255,5 +256,5 @@ Po výběru aktualizace ze seznamu budete moct použít další příkazy, kter�
 6.  Na panelu podrobností v dolní části stránky **Všechny aktualizace** můžete vidět zprávy s připomenutím ohledně aktualizací.
 
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

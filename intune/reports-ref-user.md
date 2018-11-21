@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 1ce1d429b830ac6f494346697bd7e44ac250d9b6
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
-ms.translationtype: HT
+ms.openlocfilehash: 38a4383fe9fbeec4abc8ce37ad46ce55b2849090
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49642940"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182580"
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
@@ -46,6 +47,6 @@ Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují
 | IsCurrent |Určuje, zda tento záznam představuje nejnovější stav uživatele. Může existovat více záznamů pro jednoho uživatele, ale pouze jeden z nich představuje aktuální stav.  |True nebo False |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil  |23.11.2016 12:00:00 |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
  - Kolekci entit **Aktuální uživatel** můžete použít k omezení dat uživatelů na uživatele, kteří jsou aktuálně aktivní. Další informace najdete v tématu [Referenční informace pro entitu aktuálního uživatele](reports-ref-current-user.md).
  - Další informace o tom, jak datový sklad sleduje dobu života uživatele v Intune, získáte v článku [Znázornění životnosti uživatele v datovém skladu Microsoft Intune](reports-ref-user-timeline.md).

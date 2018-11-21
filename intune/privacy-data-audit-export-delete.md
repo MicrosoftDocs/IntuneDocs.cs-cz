@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
 ms.reviewer: angerobe
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c646e134f6311e7c365fe38301a9015a752b553f
-ms.sourcegitcommit: 378474debffbc85010c54e20151d81b59b7a7828
-ms.translationtype: HT
+ms.openlocfilehash: 82d6ef4494ee85e86b42d0c500c6f5b26bb00d27
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47028609"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179690"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -78,6 +79,6 @@ Pokud máte hybridní prostředí MDM (tzn. že služba Intune je integrovaná d
 2. Pokud chcete odebrat uživatele a s ním spojená data z Configuration Manageru, odstraňte ho z konzoly Configuration Manageru. V konzole přejděte na **Prostředky a kompatibilita** > **Uživatelé**. Pravým tlačítkem klikněte na uživatele, kterého chcete odstranit, a klikněte na **Odstranit**.
 3. Když [uživatele odstraníte z AAD](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad), odeberete uživatele a data, která se ho týkají, současně z Azure Active Directory i z Intune. Po trvalém odstranění uživatele z AAD obdrží Intune signál o odstranění z AAD. Na jeho základě začne ze služby Intune automaticky mazat všechna osobní data uživatele. Informace o uživateli budou ze služby Intune odstraněny do 30 dnů od jeho odebrání.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtete si, jak [auditovat, exportovat nebo odstranit](privacy-data-audit-export-delete.md) osobní data evidovaná v Intune.

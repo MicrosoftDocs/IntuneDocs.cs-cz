@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 1c086943-84a0-4d99-8295-490a2bc5be4b
 ms.reviewer: joglocke
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: fea87d72e8d8485c1cde3038d357b8d6bc7f1c71
-ms.sourcegitcommit: ab08dd841f16ae11f958c43b6262a9f6a0cabdd4
-ms.translationtype: HT
+ms.openlocfilehash: d974e6db3543ef3ba0b11cf67989260e429dde4c
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101989"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179163"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -58,7 +59,7 @@ Použití správy mobilních zařízení se zásadami ochrany aplikací přiná�
 
 - **Řešení MDM zajišťuje ochranu zařízení**. Můžete například přístup do zařízení zabezpečit kódem PIN nebo do zařízení nasadit spravované aplikace. Do zařízení můžete aplikace nasadit také pomocí řešení MDM, čímž získáte větší kontrolu nad správou aplikací.
 
-- **Zásady ochrany aplikací zajišťují, že se používá ochrana aplikační vrstvy**. Můžete třeba:
+- **Zásady ochrany aplikací zajišťují, že se používá ochrana aplikační vrstvy**. Například můžete:
   - Vyžadovat PIN k otevření aplikace v pracovním kontextu 
   - Řídit sdílení dat mezi aplikacemi 
   - Zabránit ukládání dat firemních aplikací do osobního úložiště
@@ -149,9 +150,9 @@ Představte si třeba uživatele, který spustí aplikaci OneDrive pomocí svéh
 
 - Přečtěte si další informace o aplikacích, které podporují [MAM a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Viz také
 Aplikace jiných firem, například mobilní aplikace Salesforce, fungují s Intune specifickým způsobem, aby chránily podniková data. Další informace o tom, jak konkrétně aplikace Salesforce funguje s Intune (včetně nastavení konfigurace aplikace MDM), najdete v článku [Aplikace Salesforce a Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).

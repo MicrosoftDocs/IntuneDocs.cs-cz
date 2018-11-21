@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5e88108d6c438bf2c192516be44908c4d76dfa9f
-ms.sourcegitcommit: ba0699cc351954960b222223c60c4ecd50edc829
-ms.translationtype: HT
+ms.openlocfilehash: 2c23ad2c63fad8c74666e3c1ae9acc543e48f8e8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49652117"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181866"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana e-mailu Exchange Online na spravovaných zařízeních
 Přečtěte si o použití zásad dodržování předpisů zařízením s podmíněným přístupem, které zajistí, že zařízení s iOSem mají přístup k e-mailu Exchange Online pouze v případě, že jsou spravovaná v Intune a používají schválenou e-mailovou aplikaci. 
@@ -133,7 +134,7 @@ Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady**.
 3. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku (**...**) a potom vyberte **Odstranit**. Vyberte **OK**. Tím akci potvrdíte.
 4. Vyberte **Podmíněný přístup** > **Zásady**.
-5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku (**...**) a potom vyberte **Odstranit**. Vyberte **Ano**. Tím akci potvrdíte.
+5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku (**...**) a potom vyberte **Odstranit**. Vyberte **Ano** potvrďte.
 
- ## <a name="next-steps"></a>Další kroky 
+ ## <a name="next-steps"></a>Další postup 
 V tomto kurzu jste vytvořili zásady, které vyžadují, aby se zařízení s iOSem zaregistrovala v Intune a používala aplikaci Outlook pro přístupu k e-mailu Exchange Online. Další informace o používání Intune s podmíněným přístupem za účelem ochrany dalších aplikací a služeb, včetně klientů Exchange ActiveSync pro Office 365 se službou Exchange Online, najdete v článku, který se věnuje [nastavení podmíněného přístupu](conditional-access.md).

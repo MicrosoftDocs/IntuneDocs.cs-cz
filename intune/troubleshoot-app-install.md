@@ -13,13 +13,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6e25149199c9362f628fa108d20247bb6b86d895
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
-ms.translationtype: HT
+ms.openlocfilehash: 86f0892fe855201b9bdb28d61301353f6588954a
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075825"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188122"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -84,7 +85,7 @@ V následující tabulce jsou uvedeny chybové zprávy s popisem podrobností o 
 |    Neznámá chyba (0x87D103E8)    |    Došlo k neznámé chybě instalace aplikace. Tato výsledná chyba se zobrazí, pokud nedošlo k jiným uvedeným chybám.    |
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Další informace o řešení potíží s Intune najdete v článku [Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti](help-desk-operators.md). 
 - Zjistěte další informace o známých problémech v Microsoft Intune. Ty najdete v článku [Známé problémy v Microsoft Intune](known-issues.md).

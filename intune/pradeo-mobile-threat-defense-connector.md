@@ -12,12 +12,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
-ms.openlocfilehash: 784d51822425decc900e8a4ae0d348291f0a0c88
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: bf08796be801e1947fc1b18f2b5d2c49a5db945d
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232150"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179894"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Konektor Pradeo Mobile Threat Defense s Intune
 
@@ -93,7 +94,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
     -   Další informace naleznete na [webu Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Integrace služby Pradeo s Intune](pradeo-mtd-connector-integration.md)
 

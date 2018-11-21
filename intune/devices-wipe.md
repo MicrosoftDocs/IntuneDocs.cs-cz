@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dfefb17a2d8b9b4041846b879297f388156fee54
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
-ms.translationtype: HT
+ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43312813"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189193"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -171,7 +172,7 @@ Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebo
 1.  Přihlaste se k [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com). V nabídce vyberte **Centra pro správu** > **Azure AD**.
 2.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (vyberte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory** ).
 3.  Vyberte **Azure Active Directory** a pak vyberte svoji organizaci.
-4.  Vyberte kartu **Uživatelé**.
+4.  Vyberte kartu **Uživatelé** .
 5. Vyberte uživatele spojeného se zařízením, které chcete odstranit.
 6.  Vyberte **Zařízení**.
 7.  Odeberte zařízení podle potřeby. Můžete třeba odebrat zařízení, která už se nepoužívají, nebo zařízení s nesprávnými definicemi.
@@ -192,7 +193,7 @@ Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, pos
 
     ![Snímek obrazovky opětovného přiřazení Apple](./media/devices-wipe/apple-reassign.png)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Pokud chcete znovu zaregistrovat odstraněné zařízení, najdete informace v tématu o [možnostech registrace](enrollment-options.md).
 

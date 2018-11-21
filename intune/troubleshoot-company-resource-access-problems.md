@@ -1,5 +1,5 @@
 ---
-title: Řešení problémů s přístupem k prostředkům společnosti | Microsoft Docs
+title: Řešení problémů s přístupem k prostředkům společnosti | Dokumentace Microsoftu
 description: Kódy chyb a stavové kódy Microsoft Intune můžete použít k řešení problémů s přístupem k prostředkům.
 keywords: ''
 author: MandiOhlinger
@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 40622ced-6029-4abf-873e-b51d2b51934c
 ms.reviewer: tscott
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: ca4b289f059cc4fc8bc77518e06e9cee0f8e7864
-ms.sourcegitcommit: b47fad133ef8ef1eb65484463431c6c53f6a638a
-ms.translationtype: HT
+ms.openlocfilehash: f4ead71e626316b515646d474cc006be7cf2f774
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35291613"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190366"
 ---
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
 
@@ -174,7 +175,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016323108|0x87D159DC|13004:Nejde nastavit protokol EAP.|
 |-2016323109|0x87D159DB|13003:Nejde vytvořit konfiguraci připojení WiFi.|
 |-2016323110|0x87D159DA|13002:Heslo je povinné.|
-|-2016323111|0x87D159D9|13001:Uživatelské jméno je povinné.|
+|-2016323111|0x87D159D9| 13001:Uživatelské jméno je povinné.|
 |-2016323112|0x87D159D8|13000:Nejde nainstalovat.|
 |-2016324070|0x87D1561A|12042:Neznámý kód národního prostředí|
 |-2016324071|0x87D15619|12041:Neznámý kód jazyka|
@@ -382,5 +383,5 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |-2016345912|0x87D100C8|Příkaz SyncML se úspěšně dokončil.|
 |-2016346011|0x87D10065|Zadaný příkaz SyncML se provádí, ale zatím není dokončený.|
 
-### <a name="next-steps"></a>Další kroky
+### <a name="next-steps"></a>Další postup
 Pokud vám tyto informace o řešení potíží nepomohly, obraťte se na podporu společnosti Microsoft podle pokynů v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).

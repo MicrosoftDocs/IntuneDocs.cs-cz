@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a10c392f91c3c2992f1eebf8e71814520fbb4aa0
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: d7a545fe08acc9ab88086fa92be934c860ae4716
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231929"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179537"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Konektor Lookout Mobile Threat Defense s Intune
 
@@ -91,7 +92,7 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ![Diagram zobrazuje, jak podmíněný přístupu po nápravě ohrožení sítě znovu povoluje přístup](./media/network-spo-unblocked.png)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:
 1.  [Nastavení integrace služby Lookout](lookout-mtd-connector-integration.md)
 2.  [Povolení ochrany před mobilními hrozbami Lookout ve službě Intune](mtd-connector-enable.md)

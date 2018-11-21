@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6b6e270e01102ae05f04253ec57759aad35c26cf
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.openlocfilehash: 827766d76a66ea7d69ebbd3ba77efe785689e7e2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51510988"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189176"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -122,7 +123,7 @@ Existují dva portály, které můžete použít:
 - Řídicí panel Intune v Azure ([portal.azure.com](https://portal.azure.com)), kde můžete prozkoumat [možnosti Intune](what-is-intune.md). Na řídicím panelu Intune budete obvykle pracovat.
 - Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com)), kde můžete přidávat a spravovat uživatele, pokud k tomu nepoužíváte Azure Active Directory. Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste vytvořili bezplatné předplatné, abyste si mohli vyzkoušet Intune v testovacím prostředí. Další informace o nastavení Intune najdete v článku [Nastavení Intune](setup-steps.md).
 

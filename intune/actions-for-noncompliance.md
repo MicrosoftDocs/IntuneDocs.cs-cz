@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 953b468337d3317027344573d147b65d765e3db3
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: 5bd8bfe0230e4d49ce5ae4372e0f373a014c00ce
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236437"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187765"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
 
@@ -46,7 +47,7 @@ V tomto článku se dozvíte, jak:
 
 - Abyste mohli akce při nedodržení předpisů nastavit, musíte mít aspoň jednu zásadu dodržování předpisů zařízením. Podívejte se, jak vytvořit zásady dodržování předpisů zařízeními pro tyto platformy:
 
-  - [Androidemem](compliance-policy-create-android.md)
+  - [Android](compliance-policy-create-android.md)
   - [Pracovní profily Androidu](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
@@ -104,5 +105,5 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
 
 5. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Monitorování dodržování předpisů zařízením](device-compliance-monitor.md).

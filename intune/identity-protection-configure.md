@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7012479023ece83ef475431c5cefe150ab2ef342
-ms.sourcegitcommit: 4d314df59747800169090b3a870ffbacfab1f5ed
-ms.translationtype: HT
+ms.openlocfilehash: f9d0db8e15e6de1241984f98bf651fcff1578033
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43317991"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188627"
 ---
 # <a name="configure-identity-protection-settings-in-microsoft-intune"></a>Konfigurace nastavení ochrany identit v Microsoft Intune
 
@@ -45,8 +46,8 @@ Tato funkce je dostupná pro zařízení s následujícími systémy:
 5. V rozevíracím seznamu **Platforma** vyberte **Windows 10 a novější**. Windows Hello pro firmy se podporuje jen na zařízeních s Windows 10 a novějšími.
 6. V rozevíracím seznamu **Typ profilu** zvolte **Identity Protection**.
 7. V podokně Windows Hello pro firmy zvolte jednu z těchto možností konfigurace:
-    * Zakázáno Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Všechna ostatní nastavení na obrazovce jsou nedostupná.
-    * Povoleno. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  
+    * Zakázané. Toto nastavení vyberte, pokud Windows Hello pro firmy nechcete používat. Všechna ostatní nastavení na obrazovce jsou nedostupná.
+    * Povolené. Toto nastavení vyberte, pokud chcete konfigurovat nastavení Windows Hello pro firmy.  
 
 8. Pokud jste v předchozím kroku vybrali **Povoleno**, nakonfigurujte požadovaná nastavení, která se použijí pro cílená zaregistrovaná zařízení a uživatele s Windows 10 a Windows 10 Mobile.
 

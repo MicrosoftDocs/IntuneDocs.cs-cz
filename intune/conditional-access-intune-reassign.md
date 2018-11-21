@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 301159ad-5f7e-4fcc-86c7-f72a71701ff4
 ms.reviewer: chrisgree
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 00c657700cd8c27e4758b9cc94292ba83b2db3cd
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 6dbd7d9079bdb826f83cce76650cacebee056b68
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231708"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184484"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure Portal
 
@@ -202,7 +203,7 @@ Po změně přiřazení zásad podmíněného přístupu na portálu Azure Porta
 
     ![Obrázek ukazující vypnutí zásad podmíněného přístupu na klasickém portálu Intune](./media/reassign-ca-18.png)
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Viz také
 
 - [Běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
 - [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)

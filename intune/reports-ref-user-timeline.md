@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 363D148E-688F-4830-B6DE-AB4FE3648817
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 222636c271140edb528da3ebfbbf7dbe9e44b727
-ms.sourcegitcommit: 445a54dc6826a549d770a9953549ae2191d391c2
-ms.translationtype: HT
+ms.openlocfilehash: 4493ea8442642c09ee7a94b9b73fe0412c015649
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45727528"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189907"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
 
@@ -75,7 +76,7 @@ Každý sloupec metadat začínající předponou **Row**, jako například **Ro
  
 Každý, kdo chce zobrazit pouze aktuálně existující entity dimenze, musí použít filtr **IsDeleted = FALSE**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
  - Další informace o entitě **Aktuální uživatel** najdete v tématu [Referenční informace o entitě aktuálního uživatele](reports-ref-current-user.md).
  - Další informace o entitě **Uživatel** najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).

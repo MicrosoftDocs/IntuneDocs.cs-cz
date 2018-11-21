@@ -13,13 +13,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 8190814-07f0-42d8-9b3a-87c67dd2b7ed
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 183acfc36e77aab85fa086452e00561c521dd830
-ms.sourcegitcommit: 07528df71460589522a2e1b3e5f9ed63eb773eea
-ms.translationtype: HT
+ms.openlocfilehash: c69fa80fb1c1f539252b8e25eb839090b87c97f5
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34475604"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190230"
 ---
 # <a name="turn-on-ios-supervised-mode"></a>Zapnutí režimu iOSu Pod dohledem
 
@@ -46,6 +47,6 @@ Pokud chcete zjistit, jestli je zařízení pod dohledem, zkontrolujte zamykací
 - Na zamykací obrazovce zařízení bude sdělení **iPhone je ve správě organizace „název společnosti“.**
 - Na zařízení bude na stránce **Informace** sdělení **iPhone je pod dohledem. Organizace „název společnosti“ může monitorovat jeho aktivitu na internetu a určit jeho polohu.**
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další možnosti správy zařízení najdete v tématu [Co je správa zařízení v Microsoft Intune](device-management.md).

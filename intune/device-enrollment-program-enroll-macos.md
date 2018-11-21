@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: dagerrit
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e71f49c6a336efa5c15d8f10e664ddbf9b0579d0
-ms.sourcegitcommit: 5bfc7a1375fdb2992b9b5d4f6d1b34eec12457ae
-ms.translationtype: HT
+ms.openlocfilehash: 92ddad3e7e8de4a10c67f9feae10d2441ec560bd
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45533655"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180761"
 ---
 # <a name="automatically-enroll-macos-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s macOS do Programu registrace zařízení Apple
 
@@ -204,6 +205,6 @@ Povolili jste správu a synchronizaci mezi společností Apple a Intune a přiř
 9. Zvolte **Obnovit token**. Zobrazí se potvrzení, že se token obnovil.   
     ![Snímek obrazovky s potvrzením](./media/device-enrollment-program-enroll-ios/confirmation.png)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Jakmile zaregistrujete zařízení s macOS, můžete je začít [spravovat](device-management.md).

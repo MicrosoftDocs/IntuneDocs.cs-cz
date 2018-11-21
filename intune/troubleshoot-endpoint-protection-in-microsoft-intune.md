@@ -14,13 +14,14 @@ ms.assetid: e31df2d2-bb1b-491b-9a71-04e0b18829c1
 ROBOTS: ''
 ms.reviewer: tscott
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 1d8794345f22b2c19cf89eca2d3603fe8ac68161
-ms.sourcegitcommit: 24d9ae0396ca410f72cc061a3c4c402835ef32a1
-ms.translationtype: HT
+ms.openlocfilehash: f828394c48b5b7d55d9180da875d9cb3062f23c6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49643055"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181679"
 ---
 # <a name="troubleshoot-endpoint-protection-in-intune"></a>Řešení potíží se službou Endpoint Protection v Intune
 
@@ -46,5 +47,5 @@ V této části se popisují možné příčiny následujících chyb a varován
 |**Zpožděna rychlá kontrola**|14 dnů se kompletně neudělala rychlá kontrola. Může to být způsobené restartováním během rychlé kontroly.|Pokud je rychlá kontrola zpožděná, můžete spustit jednorázovou rychlou kontrolu nebo naplánovat rychlé kontroly, které budou probíhat opakovaně. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).|
 |**Je spuštěna jiná aplikace ochrany koncových bodů.**|Je spuštěná jiná aplikace ochrany koncových bodů a počítač je v pořádku.|Ve výchozím nastavení platí, že když je nainstalovaná jiná aplikace ochrany koncových bodů a Intune tuto aplikaci rozpozná, může se zařízení stát nestabilním.|
 
-### <a name="next-steps"></a>Další kroky
+### <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

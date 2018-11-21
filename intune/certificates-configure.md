@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4a047ceb6baa15ad59a5792430b60f2adf18c98a
-ms.sourcegitcommit: e8e8164586508f94704a09c2e27950fe6ff184c3
-ms.translationtype: HT
+ms.openlocfilehash: 1a70e8a5e9ad973f5d2c94a146a9f263f461d0ab
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39321267"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180557"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurace profilu certifikátu pro zařízení v Microsoft Intune
 
@@ -90,7 +91,7 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS je potřeba vytvořit pro
 4. Zadejte **název** a **popis** profilu důvěryhodného certifikátu.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát. Možnosti:
 
-    - **Androidemem**
+    - **Android**
     - **Android Enterprise**
     - **iOS**
     - **macOS**
@@ -121,7 +122,7 @@ Potřebujete-li nápovědu ke konfiguraci a přiřazení jednotlivých typů pro
 
 Po vytvoření profilu důvěryhodného certifikátu vytvořte profily certifikátů SCEP nebo PKCS pro každou platformu, kterou chcete použít. Při vytváření profilu certifikátu SCEP zadejte profil důvěryhodného certifikátu pro stejnou platformu. Oba profily certifikátů se tak propojí, ale přesto musíte každý profil přiřadit samostatně.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Přiřazení profilů zařízení](device-profile-assign.md)  
 [Podepisování a šifrování e-mailů pomocí S/MIME](certificates-s-mime-encryption-sign.md)  
 [Používání certifikační autority třetí strany](certificate-authority-add-scep-overview.md)

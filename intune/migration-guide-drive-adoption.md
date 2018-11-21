@@ -14,12 +14,13 @@ ms.technology: ''
 ms.assetid: c2d7ce3f-fe97-4044-ad9e-25ac8fa301c9
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 31e2a79e5506666cc5ebe655536600b57a429802
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: 4fad67bcde44246e7673d6ebe12afcdcf14fc8cd
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "29926384"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183796"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Využití podmíněného přístupu v Microsoft Intune pro účely přijetí koncovými uživateli
 
@@ -72,6 +73,6 @@ Vyberte jednu z následujících možností:
 
 -   [Blokování aplikací, které nepoužívají moderní ověřování (ADAL)](app-modern-authentication-block.md)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtěte si další informace o [typickém cyklu migrace](migration-guide-cycle.md).

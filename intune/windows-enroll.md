@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
 ms.reviewer: damionw
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 31c3e7b6d255cd99efee134f0276fd4d15dab6b9
-ms.sourcegitcommit: 2795255e89cbe97d0b17383d446cca57c7335016
-ms.translationtype: HT
+ms.openlocfilehash: efb850e0f08c94cfee7948f50411220216eb8418
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403557"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188063"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -59,7 +60,7 @@ Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. P
 
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
 
-|Typ|Název hostitele|Odkazuje na|Hodnota TTL|
+|Typ|Název hostitele|Odkazuje na|TTL|
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 |CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hodina|
@@ -72,11 +73,11 @@ Pokud podnik používá více než jednu příponu UPN, musíte vytvořit jeden 
 
 Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
-|Typ|Název hostitele|Odkazuje na|Hodnota TTL|  
+|Typ|Název hostitele|Odkazuje na|TTL|  
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
@@ -99,6 +100,6 @@ Postup registrace koncových uživatelů najdete v tématu [Registrace zařízen
 
 Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](end-user-educate.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Co je třeba zvážit při správě zařízení Windows pomocí Intune v Azure](/intune-classic/deploy-use/intune-on-azure)

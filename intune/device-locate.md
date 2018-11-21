@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 3e544286-12ad-4a3a-86f8-d2cf16940b1f
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dc5d9f47a8d950c6c5de9f362bd618d1724055f4
-ms.sourcegitcommit: 3e3e2af98dd92f7ba710f393841cfdb3dbcc4867
-ms.translationtype: HT
+ms.openlocfilehash: e3f4d63a2e749e1070bd5969d6f8a3046f6bcc4e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912147"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182172"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
 
@@ -64,6 +65,6 @@ Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se
 - Údaje o poloze jsou při uložení i při přenosu zašifrované.
 - Při konfiguraci režimu ztráty můžete přizpůsobit zprávu, která se zobrazí na zamykací obrazovce. V této zprávě určené osobě, která ztracené zařízení najde, nezapomeňte uvést konkrétní podrobnosti o vrácení ztraceného zařízení.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Pokud se chcete podívat na stav povolení funkce Najít zařízení, otevřete **Zařízení** a vyberte **Akce zařízení**.

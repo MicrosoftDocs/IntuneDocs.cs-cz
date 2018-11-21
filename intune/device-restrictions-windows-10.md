@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac0348736e5975633776c86dee88555dfceb6919
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: c49da9c323e1c4124ad76ae64e63a177edfcaa71
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576881"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189975"
 ---
 # <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
 Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
@@ -233,7 +234,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
     -   **Soukromí** – Zablokuje přístup k oblasti soukromí v aplikaci Nastavení.
     -   **Aktualizace a zabezpečení** – Zablokuje přístup k oblasti aktualizací a zabezpečení v aplikaci Nastavení.
 
-## <a name="start"></a>Start
+## <a name="start"></a>Začátek
 
 - **Rozložení nabídky Start** – Pokud chcete přizpůsobit nabídku Start na desktopových zařízeních, můžete nahrát soubor XML s vlastním nastavením, jako je pořadí, v jakém jsou aplikace uvedeny, a další. Uživatelé nemohou zadané rozložení nabídky Start změnit.
 - **Připnout weby na dlaždice do nabídky Start** – Naimportuje obrázky z Microsoft Edge, které se na desktopových zařízeních zobrazují jako odkazy v nabídce Start ve Windows.

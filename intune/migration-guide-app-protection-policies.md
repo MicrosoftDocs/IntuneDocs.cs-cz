@@ -14,12 +14,13 @@ ms.technology: ''
 ms.assetid: 93cda587-bf56-4d41-b123-9fe203fad788
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: eab6d5d48e5b15b79683fe6f03e4c81fb7392a9b
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: 7f108af829cd24e3aeff7f6a8210e0be3669b82f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "29926418"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183550"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
 
@@ -53,6 +54,6 @@ Když zakážete podmíněný přístup u předchozího poskytovatele MDM, uživ
 2. [Nasazení zásady](app-protection-policies.md#deploy-a-policy-to-users)
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Speciální aspekty migrace](migration-guide-considerations.md)

@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 113d2e52783f3c7e9f013d2cc239efad45408c87
-ms.sourcegitcommit: d8edd1c3d24123762dd6d14776836df4ff2a31dd
+ms.openlocfilehash: ac4b7821f132c92b247538e4ea6131f517da7698
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51576813"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52187683"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurace nastavení VPN pro zařízení s Androidem v Intune
 
@@ -27,7 +28,7 @@ Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfigur
 
 Nastavení sítě VPN můžete nakonfigurovat pro tyto platformy:
 
-- [Androidemem](#android-vpn-settings)
+- [Android](#android-vpn-settings)
 - [Android for work](#android-for-work-vpn-settings)
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všechny následující hodnoty.
@@ -72,5 +73,5 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všec
   - **F5 Edge Client**
   - **Pulse Secure**
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Profily VPN v Intune](vpn-settings-configure.md)

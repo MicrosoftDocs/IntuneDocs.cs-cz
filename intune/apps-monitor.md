@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 09e4cfc314ea21294cd3de62611a089ec724a683
-ms.sourcegitcommit: f69f2663ebdd9c1def68423e8eadf30f86575f7e
-ms.translationtype: HT
+ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49075623"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181883"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -41,12 +42,12 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
 
-### <a name="essentials"></a>Essentials
+### <a name="essentials"></a>Základy
 Část **Základy** obsahuje následující informace o aplikaci:
 
  | **Podrobnosti aplikace**            | **Popis**                                                      |
 |------------------------|------------------------------------------------------------------|
-| **Vydavatel**          | Vydavatel aplikace                                            |
+| **Publisher**          | Vydavatel aplikace                                            |
 | **Operační systém**   | Operační systém aplikace (Windows, iOS, Android atd.) |
 | **Vytvořeno**             | Datum a čas vytvoření této revize                         |
 | **Přiřazeno**           | Jestli byla aplikace přiřazena (**Ano** nebo **Ne**)                  |
@@ -56,9 +57,9 @@ Grafy zobrazují počet aplikací pro následující stav:
 
 | **Stav zařízení**       | **Popis**                                       |
 |-----------------------|-------------------------------------------------------|
-| **Instalováno**         | Počet nainstalovaných aplikací                         |
+| **Nainstalovat**         | Počet nainstalovaných aplikací                         |
 | **Nenainstalováno**     | Počet nenainstalovaných aplikací                     |
-| **Neúspěch**            | Počet neúspěšných instalací                   |
+| **Se nezdařilo**            | Počet neúspěšných instalací                   |
 | **Instalace čeká**   | Počet aplikací, které se právě instalují |
 | **Není k dispozici**           | Počet aplikací, u nichž není stav k dispozici            |
 
@@ -67,7 +68,9 @@ Grafy zobrazují počet aplikací pro následující stav:
 >    - Změna cílení nainstalované spravované aplikace může způsobit, že se počet instalací ve stavovém okně sníží, bude ale dál hlášený mezi zjištěnými aplikacemi.
 >    - Cílení více instancí téže aplikace v tenantovi povede k různým počtům kvůli možnému překrývání uživatelů nebo zařízení. Každá instance aplikace započítá překrývající se uživatele, ale zjištěné aplikace budou mít duplicitní počty.
 >    - Zjištěné aplikace a stavy aplikací se shromažďují v různých časových intervalech, což může způsobit nesoulad v počtech aplikací.
- 
+> 
+> Také, mějte na paměti, že aplikace pro Android nasadit jako **k dispozici s registrací i bez** jenom nahlásit stav instalace aplikace pro zaregistrovaná zařízení. Stav instalace aplikace není k dispozici pro zařízení, která nejsou zaregistrovaná v Intune.
+
 ### <a name="device-install-status"></a>Stav instalace zařízení
 
 Seznam stavů zařízení se zobrazí, když v části nabídky **Monitorovat** vyberete **Stav instalace zařízení**. Tabulka s podrobnostmi obsahuje následující sloupce:
@@ -96,7 +99,7 @@ Seznam stavů uživatele se zobrazí, když v části nabídky **Monitorovat** v
 | **Nenainstalováno**   | Počet aplikací, které nenainstaloval uživatel |
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Další informace o práci s daty Intune najdete v článku [Použití datového skladu Intune](reports-nav-create-intune-reports.md).
 - Další informace o zásadách konfigurace aplikací najdete v tématu [Zásady konfigurace aplikací v Intune](app-configuration-policies-overview.md).

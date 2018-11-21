@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 917c0eed-96d0-49d8-8db8-a6ba13ad0e1f
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4e070e80bb9575154aded12f0992d04bd7a4718f
-ms.sourcegitcommit: e814cfbbefe818be3254ef6f859a7bf5f5b99123
-ms.translationtype: HT
+ms.openlocfilehash: 1b22840429224b70ddaaf5d77f850c4d4af8b5e2
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43329950"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180897"
 ---
 # <a name="getting-started-with-microsoft-intune-in-the-azure-portal"></a>Začínáme s Microsoft Intune na portálu Azure Portal
 
@@ -55,6 +56,6 @@ Tato možnost bude užitečnější, až si do Intune přidáte další obsah, j
 
 Kdykoli v Azure otevřete Intune nebo jakoukoli jinou službu, objeví se v **podokně**. Některé z prvních úloh, které v Intune použijete, jako jsou **Uživatelé**, **Skupiny** a **Klientské aplikace**, se zobrazí v podokně přes celou obrazovku. Při výběru úlohy se toto podokno otevře přes celou stránku. Jiná podokna se při otevření vysunou z pravé strany podokna a následně sbalí pod hlavní podokno, ze kterého pocházejí.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 * [Začínáme se správou uživatelů](get-started-users.md) – přidáním uživatele do Intune mu povolíte přístup k firemním prostředkům na mobilních zařízeních.

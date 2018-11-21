@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 24ed1a895dd3e4cad6111b40913b43fa9c6a3cec
-ms.sourcegitcommit: 11bd3dbbc9dd762df7c6d20143f2171799712547
-ms.translationtype: HT
+ms.openlocfilehash: 691029cc7b9fd8880c5440a84b95bbf2462920d6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48903518"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180319"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Nastavení konfigurace Microsoft Outlooku 
 
@@ -41,6 +42,6 @@ Outlook pro iOS a Android nabízí správcům Exchange možnost „odeslat“ ko
 - **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`). Doporučuje se vybrat možnost **Primární adresa SMTP**.
 - **Doména účtu**: (volitelné) Doména účtu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)
 

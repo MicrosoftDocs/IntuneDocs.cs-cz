@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
 ms.reviewer: aanavath
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 652157f41f0fbefa14e9f22fea01c918cb7704a1
-ms.sourcegitcommit: ae27c04a68ee893a5a6be4c56fe143263749a0d7
-ms.translationtype: HT
+ms.openlocfilehash: 5482d84d22aa7be29a8030dc75a27ba793792e40
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169494"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182104"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -404,7 +405,7 @@ Při používání nástroje App Wrapping použijte následující doporučené 
 ## <a name="intune-app-wrapping-tool-for-ios-with-citrix-mdx-mvpn"></a>Nástroj Intune App Wrapping pro iOS s Citrix MDX mVPN
 Tato funkce je integrací s obálkou aplikací (app wrapper) Citrix MDX pro iOS. Tato integrace je jednoduše další volitelný příznak příkazového řádku (`-citrix`) k obecným nástrojům Intune App Wrapping Tools.
 
-### <a name="requirements"></a>požadavky
+### <a name="requirements"></a>Požadavky
 
 Abyste mohli použít příznak `-citrix`, musíte také na stejný počítač s macOS nainstalovat [obálku aplikací (app wrapper) Citrix MDX pro iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html). Soubory ke stažení najdete na webu [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/). Přístup k nim získají jenom zákazníci Citrixu po přihlášení. Zajistěte, aby se do výchozího umístění nainstalovalo toto: `/Applications/Citrix/MDXToolkit`. 
 
@@ -436,7 +437,7 @@ Následující postup vám pomůže získat protokoly zabalených aplikací, kte
 > [!NOTE]
 > Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)</br>
 - [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)</br>
 - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)

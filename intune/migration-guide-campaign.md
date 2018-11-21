@@ -14,12 +14,13 @@ ms.technology: ''
 ms.assetid: f781b029-50f2-46ee-8ff7-03b4a6719e80
 ms.reviewer: dagerrit
 ms.suite: ems
-ms.openlocfilehash: 0cea6d9f1ad4f962fcb2fbca910a737f6330bf30
-ms.sourcegitcommit: 21db583d6a9d3c15a8a8ee5579309dff1cfe1f8b
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: df26b0c752b14851876fd9ec42f0a2d2bfe76d91
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2018
-ms.locfileid: "29926316"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52183616"
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 
@@ -66,6 +67,6 @@ Pokud jste spokojení s první fází migrace, zopakujte daný [cyklus migrace](
 > [!IMPORTANT]
 > Vyhněte se tomu, abyste konfigurovali použití ovládacích prvků přístupu k prostředkům, jako je Exchange nebo SharePoint Online, současně pro Intune i vaše stávající řešení MDM. Kromě toho by měla být zařízení registrována vždy jen v jednom řešení.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Vytvořte svůj [plán komunikace](migration-guide-communication-plan.md).

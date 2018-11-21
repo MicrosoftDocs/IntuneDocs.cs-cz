@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 31c083dcd2087de99830317d892750a42cc5ae6d
-ms.sourcegitcommit: ae62a269778cdbf1d207cd017de522f934b030e9
-ms.translationtype: HT
+ms.openlocfilehash: 054342994a75965b3e1bcb13884af07131ab0122
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44700978"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181917"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -296,7 +297,7 @@ Ověřování a testování správné integrace vašeho řešení s Intune je ne
 12. Zkontrolujte, že vlastnosti nainstalovaných certifikátů odpovídají vlastnostem nastaveným v profilu SCEP.
 13. Zkontrolujte, že vydané certifikáty jsou v konzole Intune uvedené správně.
 
-## <a name="see-also"></a>Viz taky
+## <a name="see-also"></a>Viz také
 
 - [Přidání přehledu externích certifikačních autorit](certificate-authority-add-scep-overview.md)
 - [Nastavení Intune](setup-steps.md)

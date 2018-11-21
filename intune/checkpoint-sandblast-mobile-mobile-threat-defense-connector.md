@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5766c4ebe7b261356248b00d0ca2d8937d3db79a
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 3600cae373dceb88122852e3d260e91e2618d516
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231509"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180421"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
@@ -59,7 +60,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
-Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
+Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
 **Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:**
 
@@ -71,7 +72,7 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání 
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
-Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
+Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
 **Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:**
 
@@ -96,7 +97,7 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 -   Předplatné ochrany před mobilními hrozbami Check Point SandBlast
     -   Další informace najdete na [webu služby CheckPoint SandBlast](https://www.checkpoint.com/).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Integrace služby CheckPoint SandBlast s Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
 

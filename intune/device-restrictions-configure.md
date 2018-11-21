@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56ddf28bb9e81417b4b91bb18baaba14f07fbdd9
-ms.sourcegitcommit: 98b444468df3fb2a6e8977ce5eb9d238610d4398
-ms.translationtype: HT
+ms.openlocfilehash: 9b84877d37d26dababda2987801fc7267cb3c2e6
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37905049"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181203"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -40,7 +41,7 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 4. Zadejte **název** a **popis** profilu omezení zařízení.
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-    - **Androidemem**
+    - **Android**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: aiwang
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 740eee3324a9dc2266b987e119694e2ff70fe2e9
-ms.sourcegitcommit: 5c2a70180cb69049c73c9e55d36a51e9d6619049
-ms.translationtype: HT
+ms.openlocfilehash: c98eb7795ca01db9a78b428faf433109928cff76
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50236369"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182260"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -147,6 +148,6 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 |Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané)|17000|-|Klikni a spusť|
 |U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané)|17001|-|Klikni a spusť|
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Pokud chcete aplikace přiřadit do vybraných skupin, přečtěte si článek [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).

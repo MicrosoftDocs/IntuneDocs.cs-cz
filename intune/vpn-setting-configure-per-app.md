@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
 ms.reviewer: karanda
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 87c3313fd7b5fc0705460e539164ac70779bebeb
-ms.sourcegitcommit: 77540295381a59918eb638ce9c1870209cf8af02
-ms.translationtype: HT
+ms.openlocfilehash: f4cdd3c215fbd9eab4204eca0639d5d38fe4c97a
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46505763"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180727"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
@@ -103,7 +104,7 @@ Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky d�
 9. Klikněte na Kořenový certifikát a vyberte certifikát SCEP. Klikněte na **OK**.
 10. Do pole **Název** v části **Rozšířené použití klíče** zadejte `Client Authentication`.
 11. Do pole **Identifikátor objektu** zadejte `1.3.6.1.5.5.7.3.2`.
-12. Klikněte na **Přidat**.
+12. Klikněte na tlačítko **přidat**.
 13. Zadejte ***adresu URL serveru*** a klikněte na **Přidat**.
 14. Klikněte na **OK**.
 15. Klikněte na **Vytvořit**.
@@ -219,7 +220,7 @@ To review event logs:
 2. Open the **iPhone Configuration Utility** (IPCU). If you do not have a copy, you can install it from [CompatCenter](http://www.microsoft.com/en-us/windows/compatibility/CompatCenter/ProductDetailsViewer?Name=iPhone%20Configuration%20Utility&vendor=Apple&Locale=1033%2C2057%2C3081%2C4105%2C16393&ModelOrVersion=3&BreadCrumbPath=iphone%20configuration%20utility&LastSearchTerm=iphone%2Bconfiguration%2Butility&Type=Software&tempOsid=Windows%208.1)
 3. Review the logs. -->
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Na nastavení iOSu se můžete podívat v článku [Nastavení sítě VPN pro zařízení s iOSem v Microsoft Intune](vpn-settings-ios.md).
 -  Další informace o nastavení sítě VPN a Intune najdete v článku [Konfigurace nastavení sítě VPN v Microsoft Intune](vpn-settings-configure.md).

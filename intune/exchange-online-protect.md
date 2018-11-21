@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 88a0d3b9-2622-403b-8374-1396afd8066e
 ms.reviewer: pchacon
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 482939ac72899704e8e3696be4f0321ff977630f
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: e82942148b65b3dce67e640c6e10fa3fbb234295
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231963"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179792"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
@@ -41,7 +42,7 @@ Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ 
 * Požádejte zaměstnance a studenty, aby si stáhli a nainstalovali Microsoft Outlook nebo Microsoft SharePoint pro iOS z Apple App Storu, nebo pro Android z Obchodu Google Play. 
 * Pokud zablokujete přístup k aplikacím, které nepoužívají moderní ověřování, nezapomeňte se zaměstnancům a studentům o tomto omezení zmínit. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Podmíněný přístup na základě aplikací používáte k lepšímu zabezpečení firemních dat. V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 

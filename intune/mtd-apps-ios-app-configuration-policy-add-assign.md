@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
 ms.reviewer: heenamac
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4ffd4008ec327660e72fa52c6407ee8067cabfbd
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: afc5028e4ed57757832844637298caf1656d610c
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231739"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181169"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -60,7 +61,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurace aplikací Lookout for Work
 
-- **Androidemem**
+- **Android**
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Lookout for Work v obchodě s aplikacemi Google](https://play.google.com/store/apps/details?id=com.lookout.enterprise).
 
 - **iOS**
@@ -92,7 +93,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-symantec-endpoint-protection-mobile-apps"></a>Konfigurace aplikací Symantec Endpoint Protection Mobile
 
- - **Androidemem**
+ - **Android**
 
     - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na SEp Mobile v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.skycure.skycure).  Jako **Minimální operační systém** vyberte **Android 4.0 (Ice Cream Sandwich)**.
 
@@ -102,7 +103,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-check-point-sandblast-mobile-apps"></a>Konfigurace aplikací Check Point SandBlast Mobile
 
- - **Androidemem**
+ - **Android**
 
     - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tuto [adresu URL na Check Point SandBlast Mobile v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.lacoon.security.fox).
 
@@ -112,7 +113,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-zimperium-apps"></a>Konfigurace aplikací Zimperium
 
- - **Androidemem**
+ - **Android**
 
     - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Zimperium v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en).
 
@@ -122,7 +123,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-pradeo-apps"></a>Konfigurace aplikací Pradeo
 
- - **Androidemem**
+ - **Android**
 
     - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte tento [odkaz URL na Pradeo v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US).
 
@@ -132,7 +133,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="configure-better-mobile-apps"></a>Konfigurace aplikací Better Mobile
 
- - **Androidemem**
+ - **Android**
 
     - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7** použijte [tento odkaz URL na Active Shield v obchodě s aplikacemi](https://play.google.com/store/apps/details?id=com.better.active.shield.enterprise).
 
@@ -211,6 +212,6 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 - Tento krok platí pro všechny partnery MTD. Přečtěte si pokyny pro [přiřazení aplikací do skupin pomocí Intune](apps-deploy.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Konfigurace zásad dodržování předpisů zařízení pro MTD](mtd-device-compliance-policy-create.md)

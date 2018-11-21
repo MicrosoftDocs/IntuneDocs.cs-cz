@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 573cdf8746b9eaf593a33cd943b69a2dd83030ae
-ms.sourcegitcommit: 2e88ec7a412a2db35034d30a70d20a5014ddddee
-ms.translationtype: HT
+ms.openlocfilehash: 70d1594220b3315db2c7d7eeb01a915aaf2ec995
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49391599"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186728"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -28,7 +29,7 @@ ms.locfileid: "49391599"
 
 Certifikáty ověřují a zabezpečují přístup k firemním prostředkům, jako je síť VPN nebo Wi-Fi. Tento článek ukazuje, jak exportovat certifikát PKCS a pak ho přidat do profilu Intune.
 
-## <a name="requirements"></a>požadavky
+## <a name="requirements"></a>Požadavky
 
 Pokud chcete používat certifikáty PKCS společně s Intune, musíte mít následující infrastrukturu:
 
@@ -121,7 +122,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
 1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.
-3. Stáhněte a uložte soubor konektoru. Uložte ho do umístění přístupné ze serveru, na který chcete konektor nainstalovat.
+3. Stáhněte a uložte soubor konektoru. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
     ![ConnectorDownload][ConnectorDownload]
 
@@ -143,7 +144,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
 1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.
-3. Stáhněte a uložte konektor certifikátu PFX pro Microsoft Intune. Uložte ho do umístění přístupné ze serveru, na který chcete konektor nainstalovat.
+3. Stáhněte a uložte konektor certifikátu PFX pro Microsoft Intune. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 4. Po dokončení stahování se přihlaste k serveru. Další kroky:
 
     1. Zkontrolujte, že je nainstalované rozhraní .NET 4.6 Framework nebo novější, protože ho konektor certifikátu PFX pro Microsoft Intune vyžaduje. Pokud rozhraní .NET Framework 4.6 nainstalované není, instalační program ho nainstaluje automaticky.
@@ -226,7 +227,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 4. Vyberte **OK** > **Vytvořit** a profil uložte.
 5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](device-profile-assign.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 [Použití certifikátů SCEP](certificates-scep-configure.md) nebo [vydání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md).
 
 [NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Přechod do Intune na webu Azure Portal a vytvoření nového profilu důvěryhodného certifikátu"

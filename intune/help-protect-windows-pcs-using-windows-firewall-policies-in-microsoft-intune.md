@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 9549c072-ac3d-4d14-a931-a2eda8846217
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: a38ff69b878880ffa16e327eace0afe64d336f43
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
-ms.translationtype: HT
+ms.openlocfilehash: db9cdf539f0cf80fb4640ba41929c67e643956c4
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310568"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181118"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
@@ -38,7 +39,7 @@ Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, k
 > [!NOTE]
 > Pokud jsou zásady Microsoft Intune a zásady skupiny nakonfigurované pro správu stejných nastavení na počítači PC, pak má nastavení zásad skupiny přednost před zásadami Microsoft Intune. Informace o tom, jak zamezit konfliktům mezi zásadami Intune a zásadami skupiny, najdete v článku [Řešení konfliktů GPO a zásad Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Pokud chcete nasadit nastavení brány Windows Firewall do počítačů se systémem Windows Vista, musíte na tyto počítače nejdřív nainstalovat [opravu Hotfix KB971800](http://support2.microsoft.com/kb/971800).
+> Pokud chcete nasadit nastavení brány Windows Firewall do počítačů se spustit Windows Vista, je potřeba nejdřív nainstalovat [opravu Hotfix KB971800](http://support2.microsoft.com/kb/971800) na těchto počítačích.
 
 > [!IMPORTANT]
 > Pokud chcete spravovat bránu Windows Firewall pomocí Intune, musí být na počítačích, které spravujete, povolené tyto dvě služby:
@@ -79,7 +80,7 @@ Tato nastavení zásad konfigurují bránu Windows Firewall, aby blokovala pří
 Výchozí hodnota pro každé z těchto nastavení je **Ano**, což je nejbezpečnější hodnota.
 
 > [!IMPORTANT]
-> Pokud prostředí obsahuje spravované počítače, ve kterých je spuštěný systém Windows Vista bez nainstalovaných aktualizací Service Pack, musíte nainstalovat aktualizaci uvedenou ve znalostní bázi Microsoft Knowledge Base v [článku 971800](http://go.microsoft.com/fwlink/?LinkId=188405) nebo v zásadách nasazených v těchto počítačích vypnout nastavení zásady **Blokovat všechna příchozí připojení**.
+> Pokud vaše prostředí zahrnuje spravovaných počítačů se systémem Windows Vista bez nainstalovaných aktualizací service Pack, musíte buď nainstalovat aktualizace, který je přidružen [článku 971800](http://go.microsoft.com/fwlink/?LinkId=188405) na bázi Microsoft Knowledge Base nebo zakázat **Blokovat všechna příchozí připojení** nastavení zásad v zásadách, které jsou nasazeny do těchto počítačů.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Oznámit uživatelům blokování nového programu bránou Windows Firewall
 
@@ -135,5 +136,5 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Windows Virtual PC**<br>(Windows 7 nebo novější)|Umožňuje virtuálním počítačům komunikovat s dalšími počítači.|
 |**Bezdrátová přenosná zařízení**|Umožňuje přenos multimediálních souborů z fotoaparátu nebo multimediálního zařízení připojeného k síti do spravovaných počítačů pomocí protokolu MTP (Media Transfer Protocol). Toto nastavení používá síťové protokoly SSDP a UPnP.|
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

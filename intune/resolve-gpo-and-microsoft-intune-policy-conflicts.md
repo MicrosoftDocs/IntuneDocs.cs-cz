@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: e76af5b7-e933-442c-a9d3-3b42c5f5868b
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 848ce25b2ad7c4a6410befe3770dc27b477dfb3a
-ms.sourcegitcommit: 116be0eaa44fd5518ff34780d39569224ef4746b
-ms.translationtype: HT
+ms.openlocfilehash: 2aee866d06a31c0fe188dd8fb313609043f0092f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36310891"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190056"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
 
@@ -118,5 +119,5 @@ Můžete použít objekty zásad skupiny jenom na skupiny zabezpečení, které 
 
 S novou skupinou zabezpečení se musí ve změnách služby Intune nakládat jako s registrací.
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Správa počítačů s Windows pomocí Intune](manage-windows-pcs-with-microsoft-intune.md)

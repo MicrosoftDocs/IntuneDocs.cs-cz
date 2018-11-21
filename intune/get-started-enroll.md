@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: b595848d-c451-43ab-812d-b22e0170fb7a
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 21d32cda464170aad737b51fdc405059a8320faf
-ms.sourcegitcommit: 2162ed46d939b4a9b85fa4e7e9943f2fb5948f1e
-ms.translationtype: HT
+ms.openlocfilehash: bdd8267701b20600d67e6927c8b55d7f9c11a34f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31617341"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186762"
 ---
 # <a name="understand-the-users-experience-enrolling-an-ios-device"></a>Popis prostředí uživatele registrujícího zařízení s iOSem
 
@@ -58,7 +59,7 @@ Registrace zařízení je pro mnoho koncových uživatelů první zkušeností s
 15. Na obrazovce se zobrazí zpráva o registraci zařízení a potom se zobrazí zpráva o tom, že zařízení bylo úspěšně zaregistrováno. Zobrazí se místní nabídka s dotazem, jestli chcete otevřít stránku na Portálu společnosti. Klepněte na **Otevřít**.
 16. Vrátíte se na obrazovku **Nastavení přístupu k firmě**. Pokud jste nenastavili testovací zásady, mělo by se zařízení zobrazit jako vyhovující. Pokud jste je nastavili, po klepnutí na **Dodržování předpisů zařízením** se zobrazí, co je potřeba udělat, aby bylo zařízení bezpečné.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Začínáme s přidáváním aplikací](get-started-apps.md) – najděte a přidejte aplikace do zařízení, aby mohli vaši zaměstnanci plnit úkoly.
 

@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 2cc3c960-1fdd-47ca-a693-420d47b403de
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ecbc15c4888ae42c34c5ff9f488d639fc321853e
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
-ms.translationtype: HT
+ms.openlocfilehash: 4082b845643aae47464e4df14ac6621fcf8f39cf
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279402"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52180247"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -87,6 +88,6 @@ Další informace najdete v tématu [Konfigurace profilu certifikátu pro zaří
 
 Profily sítě Wi-Fi spravované Androidem Enterprise se po vyřazení zařízení z Intune a odstranění pracovního profilu odeberou. Další informace najdete v tématu [Jak nakonfigurovat nastavení Wi-Fi v Microsoft Intune](wi-fi-settings-configure.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - [Registrace zařízení s Androidem](android-enroll.md)
 - [Přiřazení aplikací k zařízením s pracovním profilem Androidu pomocí Intune](apps-add-android-for-work.md)

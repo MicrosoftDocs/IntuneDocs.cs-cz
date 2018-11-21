@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: chrisbal
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1b1f54486ab2c3d98e663cfddded346eb61662ae
-ms.sourcegitcommit: e4832ea81b9a707a6ad0699a18c8b3988413c283
-ms.translationtype: HT
+ms.openlocfilehash: c32effb645b329c8095ec8757a980b1f3d80a4d7
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279419"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52184282"
 ---
 # <a name="connect-your-intune-account-to-your-android-enterprise-account"></a>Propojení účtu Intune s účtem Androidu Enterprise
 
@@ -57,6 +58,6 @@ Registraci a správu Androidu Enterprise můžete vypnout. Pokud to chcete uděl
 2. Zvolte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play** > **Odpojit**.
 3. Volbou možnosti **Ano** odpojte a zrušte registraci všech zařízení s Androidem Enterprise z Intune.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Po připojení k účtu Androidu Enterprise můžete [nastavit zařízení s pracovním profilem Androidu](android-work-profile-enroll.md) a [nastavit zařízení s Androidem v beznabídkovém režimu](android-kiosk-enroll.md).

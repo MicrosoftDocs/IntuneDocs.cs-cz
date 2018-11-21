@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e32749225af3f19ab07decbcf1488595b7d946fd
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
-ms.translationtype: HT
+ms.openlocfilehash: a5042c3b1c125a1699091a8a313df3a0058ecd7d
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424862"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52188139"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows v Intune
 
@@ -38,7 +39,7 @@ Na počítači s Windows, který už má nainstalovaný požadovaný profil WiFi
 1. Vytvořte místní složku pro exportované profily Wi-Fi, například **c:\WiFi**.
 2. Otevřete příkazový řádek jako správce.
 3. Spusťte příkaz `netsh wlan show profiles` a uveďte název profilu, který chcete exportovat. V tomto příkladu je název profilu **WiFiNázev**.
-4. Spusťte příkaz `netsh wlan export profile name="ProfileName" folder=c:\Wifi`. Tento příkaz vytvoří v cílové složce soubor profilu Wi-Fi s názvem **Wi-Fi-WiFiNázev.xml**.
+4. Spustit `netsh wlan export profile name="ProfileName" folder=c:\Wifi` příkazu. Tento příkaz vytvoří v cílové složce soubor profilu Wi-Fi s názvem **Wi-Fi-WiFiNázev.xml**.
 
 ## <a name="import-the-wi-fi-settings-into-intune"></a>Import nastavení Wi-Fi do Intune
 
@@ -60,10 +61,10 @@ Na počítači s Windows, který už má nainstalovaný požadovaný profil WiFi
     - **Obsah souboru**: Zobrazuje kód XML vybraného konfiguračního profilu.
 7. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 
-## <a name="more-resources"></a>Další zdroje
+## <a name="more-resources"></a>Další materiály
 
 [Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších dostupných platforem

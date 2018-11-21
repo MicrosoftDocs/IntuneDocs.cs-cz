@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3361ce41dfa95de0cb1a7a3bdbdbd74e7d6d5edf
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
-ms.translationtype: HT
+ms.openlocfilehash: 65ecff2a21fa814c3b3518eb92e0378301dbd606
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31832557"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189263"
 ---
 # <a name="microsoft-intune-home-screen-layout-settings-for-devices-running-ios"></a>Nastavení rozložení domovské obrazovky Microsoft Intune pro zařízení s iOSem
 
@@ -140,6 +141,6 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 |Počasí|com.apple.weather|
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Nyní můžete profil zařízení přiřadit do požadované skupiny. Podrobnosti najdete v tématu [Přiřazení profilů zařízení](device-profile-assign.md).

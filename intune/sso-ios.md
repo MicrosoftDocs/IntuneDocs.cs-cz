@@ -11,13 +11,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d1add113222c2aa7eaea10679c329e877b1a136f
-ms.sourcegitcommit: 437eaf364c3b8a38d294397310c770ea4d8a8015
-ms.translationtype: HT
+ms.openlocfilehash: c4d19807ecfcc33b957d5f6582f095427dbf978e
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49992005"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52190196"
 ---
 # <a name="use-single-sign-on-ios-device-in-microsoft-intune"></a>Použití jednotného přihlašování na zařízení s iOSem v Microsoft Intune
 
@@ -86,7 +87,7 @@ Na zařízení s iOSem musí být aplikace naprogramovaná na vyhledávání v �
 
 6. Vyberte **OK** > **OK** > **Vytvořit**, uložte změny a vytvořte profil. Vytvořený profil se zobrazí v seznamu **Konfigurace zařízení – Profily**. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další informace o konfiguraci funkce zařízení najdete v tématu [Konfigurace nastavení funkce zařízení ve službě Microsoft Intune](device-features-configure.md).
 

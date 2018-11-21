@@ -12,13 +12,14 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 83a231f41f5cf9d4488e86040c2d7e141f71d0a7
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
-ms.translationtype: HT
+ms.openlocfilehash: 8b5f86a8f0d9beaef9e55d2281e3500e0c298a16
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49424913"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182394"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -32,7 +33,7 @@ V tomto dokumentu je vysvětlené resetování hesla na úrovni zařízení a re
 | ---- | ---- |
 | Zařízení s Androidem verze 6.x nebo starší | Ano |
 | Zařízení s Androidem Enterprise v beznabídkovém režimu | Ano |
-| Zařízení se systémem iOS | Ano |
+| zařízení s Iosem | Ano |
 | Zařízení s Androidem zaregistrovaná s pracovním profilem, verze 7.0 nebo starší | Ne |
 | Zařízení s Androidem, verze 7.0 nebo novější | Ne |
 | macOS | Ne |
@@ -70,6 +71,6 @@ U zařízení s Androidem Enterprise, na kterých běží verze 8.x nebo nověj�
 
 Místo resetování stačí hesla ze zařízení s iOS jenom odebrat. Pokud jsou nastavené zásady dodržování předpisů vyžadující heslo, zobrazí se uživateli zařízení výzva, aby v Nastavení zadal nové heslo.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Stav akce, kterou jste spustili, zobrazíte tak, že v podokně **Zařízení** vyberete **Akce zařízení**.

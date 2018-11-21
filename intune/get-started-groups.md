@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 39a93fb5-d318-4997-a409-b64549a00e7a
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d039cfe5509990ff15fe8a1cb476ad44037d60df
-ms.sourcegitcommit: 5eba4bad151be32346aedc7cbb0333d71934f8cf
-ms.translationtype: HT
+ms.openlocfilehash: fcf6f3071e50304216a182a21dd542cace1b6390
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31021009"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186456"
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Vytvoření skupiny pro správu uživatelů a přístupu k datům
 
@@ -42,7 +43,7 @@ Microsoft Intune používá ke správě přístupu k firemním prostředkům slu
 
 Pokud jste úspěšně vytvořili skupinu, měla by se zobrazit v seznamu **Všechny skupiny**. Pokud tam není, zkuste vytvořit jinou skupinu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 [Začínáme se zásadami](get-started-policies.md) – vytvořením zásad zabráníte uživatelům, aby se svými zařízeními dělali něco neoprávněného.
 

@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 0a080660fcc1b285e0ed00b76a94c2f0cc1ba40a
-ms.sourcegitcommit: c78923b0d5b320322c828b1bbea2deb9062e30d2
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: 21257169e069a139ac94dcdecbe6074ab0778aeb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37844959"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179554"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -78,7 +79,7 @@ Jak jsme už uvedli, pomocí podmíněného přístupu lze uživatele přimět k
 | Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázání funkce Uložit jako | Zakázání funkce Uložit jako |
 |Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | není k dispozici|
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Teď je čas na rozhodnutí, jestli se ve vaší organizaci při povolování vlastních zařízení uživatelů (BYOD) zaměříte na správu zařízení, na správu aplikací nebo na kombinaci obou možností. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.  
 
 K navržení další úrovně plánování použijte [průvodce plánováním](planning-guide.md) Intune.

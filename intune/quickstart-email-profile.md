@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 21dda51d2ddde74f07fcc173c5a4dd2a13c9c8b8
-ms.sourcegitcommit: 5e5004a31207e75e54504d74548735c048676a03
+ms.openlocfilehash: 3da4208b3036b0252e2e5bd26d8361d04642183a
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51225743"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189695"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS
 
@@ -67,7 +68,7 @@ Pokud nemáte v úmyslu používat vytvořený profil v dalších kurzech nebo k
 2. Vyberte vytvořený testovací profil **Vyžadovat pracovní e-mail pro iOS**.
 3. Vyberte tři tečky (**...**) vedle tohoto profilu a pak vyberte **Odstranit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto rychlém startu jste vytvořili e-mailový profil pro zařízení s iOSem. Teď můžete pomocí tohoto profilu určovat, jestli jsou zařízení s iOSem kompatibilní. Uděláte to tak, že vytvoříte zásady dodržování předpisů, které budou označovat jako nekompatibilní všechna zařízení s iOSem, která tomuto profilu neodpovídají. Pro zvýšení ochrany můžete vytvořit zásady podmíněného přístupu, které budou přístup k e-mailu pomocí nekompatibilních zařízení s iOSem blokovat. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](device-compliance-get-started.md).
 

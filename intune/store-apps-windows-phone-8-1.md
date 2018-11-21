@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: 4a95e575-2c63-4bfc-b9c4-f0a132eef618
 ms.reviewer: mghadial
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2785d81b1c061dd46d24c6806b72101e18e4a5ee
-ms.sourcegitcommit: 63b74a60aafa8d2d6af0594448ae0471fbd79194
-ms.translationtype: HT
+ms.openlocfilehash: 47861e95a016338447091e4fcaffdda3e199eee7
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493992"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182750"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 
@@ -56,6 +57,6 @@ Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu A
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)

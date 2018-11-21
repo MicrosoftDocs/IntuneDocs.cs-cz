@@ -11,12 +11,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-ms.openlocfilehash: 763cc61aae50de893461d1ed137025fa1e6b00b9
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: c75956cd1e3e9bba0017a624b99dcc090d32978b
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231651"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52182223"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
@@ -81,7 +82,7 @@ Možností Intune popsaných v tomto článku můžete využít k přechodu orga
 - **Krok 3b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy.
   - Tyto zásady vyžadují, aby byla zařízení aktualizována, pokud mají mít dál přístup k datům organizace. Chráněné služby jsou zablokované při použití s podmíněným přístupem zařízení. Aplikace, pro které jsou aktivní zásady ochrany aplikací, jsou zablokované při spuštění nebo přístupu k datům organizace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Ke správě verzí operačního systému ve vaší organizaci můžete využít tyto prostředky: 
 
 - [Nastavení omezení typů zařízení](https://docs.microsoft.com/intune/enrollment-restrictions-set#set-device-type-restrictions)

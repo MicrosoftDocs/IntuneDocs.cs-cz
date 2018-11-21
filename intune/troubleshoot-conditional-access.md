@@ -13,13 +13,14 @@ ms.technology: ''
 ms.assetid: 5fa59501-5f33-46b7-a5f5-75eeae9f1209
 ms.reviewer: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f7f8e9d4fb6c6ce551d30623db864eb1784b7a54
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 642a4da6a1ca3c368e90f2d3007c1fc6a068af78
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231623"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52189227"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
@@ -75,5 +76,5 @@ Pokud narazíte na zařízení, které nevyhovuje předpisům, ale má nadále p
   - Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte tuto rutinu PowerShellu: Get-ActiveSyncDeviceStatistics -mailbox mbx. Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
   - Pokud zařízení je uvedené, pomocí rutiny Get-CASmailbox -identity:’upn’ | fl získejte podrobné informace o jeho stavu přístupu a předejte tyto informace podpoře Microsoftu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

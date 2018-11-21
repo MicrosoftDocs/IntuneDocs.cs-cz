@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a8e38e29-f5e3-4a71-a170-d3b1a06e37c6
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
+search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 8e73a9cf189ba44a9f093559b9175dfa947a38e1
-ms.sourcegitcommit: a30cfdb3d3f97b6d5943db2d842011a6f60115f0
-ms.translationtype: HT
+ms.openlocfilehash: 1d8ccd4e432623cf7d0ce4ce66651a95e13b8473
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864587"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52186490"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -34,11 +35,11 @@ Návrh Intune vychází z informací, které shromáždíte, a rozhodnutí, kter
 
 -   Informace o platformě zařízení
 
--   Závazné požadavky  
+-   Závazné požadavky  
 
 Přestože jsou požadavky na místní infrastrukturu minimální, pomůže vám plán návrhu zajistit, abyste ke správě mobilních zařízení používali správné řešení, které splňuje vaše cíle, účely a požadavky.
 
-Pojďme se na každou z těchto oblastí podívat podrobněji. 
+Pojďme se na každou z těchto oblastí podívat podrobněji. 
 
 ## <a name="record-your-current-environment"></a>Popis současného prostředí
 Během fáze implementace a testování dochází často ke změnám návrhu. Použijte plán návrhu k dokumentaci těchto změn a jejich odůvodnění.
@@ -414,6 +415,6 @@ Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady podmíněného přístupu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další část obsahuje pokyny k [procesu implementace Intune](planning-guide-onboarding.md).

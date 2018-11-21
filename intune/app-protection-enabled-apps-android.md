@@ -14,13 +14,14 @@ ms.technology: ''
 ms.assetid: a6816285-8e43-4dc8-bca0-e80ec5ef01e6
 ms.reviewer: andcerat
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e8c606f9b304f91e02ba977c801bd8de18682612
-ms.sourcegitcommit: fffa64f28278573dc83a846b647315def2108781
-ms.translationtype: HT
+ms.openlocfilehash: 6e38ac954f0b8c85b7127143c98f41bfe5497ef9
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48231691"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179571"
 ---
 # <a name="what-to-expect-when-your-android-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací 
 
@@ -85,5 +86,5 @@ Podporovány jsou následující typy souborů:
 ## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)
 
-### <a name="see-also"></a>Viz taky
+### <a name="see-also"></a>Viz také
 [Vytvoření a nasazení zásad ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)

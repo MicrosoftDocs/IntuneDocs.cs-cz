@@ -12,12 +12,13 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
-ms.openlocfilehash: 9e067db84cd2491cf82bbdf7fc5cf3364446716e
-ms.sourcegitcommit: dbea918d2c0c335b2251fea18d7341340eafd673
-ms.translationtype: HT
+search.appverid: MET150
+ms.openlocfilehash: 64dc02be20ecc15574959d50f1cfc89542c484fb
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31833213"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52181424"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Snížení nákladů na helpdesk pomocí samoobslužného resetování hesla
 
@@ -33,7 +34,7 @@ Zaměstnancům můžete umožnit, aby si resetovali hesla pracovních a školní
 3. Pro budoucí potřeby dejte zaměstnancům a studentům pokyny, [jak resetovat nebo změnit heslo](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-update-your-own-password).
 4. [Povolte samoobslužné resetování hesla](https://docs.microsoft.com/azure/active-directory/active-directory-passwords-getting-started).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Přečtěte si další informace v těchto článcích:
 * [Osvědčené postupy pro hesla](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 

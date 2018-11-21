@@ -12,13 +12,14 @@ ms.technology: ''
 ms.assetid: ''
 ms.reviewer: owenyen
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 322a60101132d5ef435752079bb5c52a7a4b3a78
-ms.sourcegitcommit: cff65435df070940da390609d6376af6ccdf0140
-ms.translationtype: HT
+ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49425015"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52179068"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -117,9 +118,9 @@ Uživatelé nainstalují klientský software Intune tak, že přejdou na [web Po
 
 Pokud nemají uživatelé přiřazenou licenci k Intune nebo nebyla na Intune nastavena autorita MDM, nezobrazí se uživatelům žádné možnosti registrace.
 
-Pokud byla uživatelům přiřazena licence k Intune a na Intune byla nastavena autorita MDM organizace:
+Pokud byla uživatelům přiřazena licence Intune a Intune byla nastavena autorita MDM organizace:
 
-- Uživatelům počítačů s Windows 7 nebo Windows 8 se zobrazí JENOM možnost registrace do Intune na základě stažení a instalace klientského softwaru pro PC, který je pro svou organizaci jedinečný.
+- Windows 7 nebo Windows 8 PC uživatelům se zobrazí jenom možnost registrace do Intune stažením a instalací klientského počítačového softwaru, který je pro svou organizaci jedinečný.
 
 - Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
 
@@ -256,7 +257,7 @@ Zkontrolujte cestu %ProgramFiles%\Microsoft\OnlineManagement a ujistěte se, že
 
 Proces zrušení registrace neodebere složku OnlineManagement. Po dokončení odinstalace počkejte 30 minut a spusťte tento příkaz. Pokud byste ho spustili příliš brzy, odinstalace by mohla zůstat v neznámém stavu. Složku odeberte spuštěním příkazového řádku se zvýšenými oprávněními a spuštěním následujícího příkazu:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
-### <a name="next-steps"></a>Další kroky
+### <a name="next-steps"></a>Další postup
 [Správa zařízení v Microsoft Intune](device-management.md)
