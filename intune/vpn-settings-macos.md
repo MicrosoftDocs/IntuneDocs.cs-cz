@@ -12,13 +12,14 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
+search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e4330d8e8095df49b14ab60c4b08aae44d134452
-ms.sourcegitcommit: cac71802b2782700f0d52ea114089d73620cd1ed
-ms.translationtype: HT
+ms.openlocfilehash: 9e763c30400617e47a0fd7933e9ce3677c60e601
+ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50679215"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52178976"
 ---
 # <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-macos"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s macOS
 
@@ -56,6 +57,6 @@ Pokud jste vybrali **Vlastní VPN**, nakonfigurujte tato další nastavení:
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (třeba `** http://proxy.contoso.com**`), na které je konfigurační soubor.
+- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL proxy serveru** (třeba `**http://proxy.contoso.com**`), na které je konfigurační soubor.
 - **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
 - **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.
