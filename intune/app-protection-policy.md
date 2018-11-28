@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d974e6db3543ef3ba0b11cf67989260e429dde4c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
+ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179163"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389865"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -66,9 +66,9 @@ Použití správy mobilních zařízení se zásadami ochrany aplikací přiná�
 
 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Podporované platformy pro zásady ochrany aplikací
-Podpora platforem pro zásady ochrany aplikací Intune je spojená s podporou platforem pro mobilní aplikace Office. Podrobnosti najdete v části **Mobilní aplikace** článku [Požadavky na systém pro Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
+Podpora platforem pro zásady Intune app protection v souladu s podporou platforem pro mobilní aplikace Office pro zařízení s Androidem a iOS. Podrobnosti najdete v části **Mobilní aplikace** článku [Požadavky na systém pro Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
-V současné době není dostupná podpora zařízení s Windows. Pokud zařízení s Windows 10 zaregistrujete do Intune, můžete použít sadu Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
+V současné době není dostupná podpora zařízení s Windows. Můžete ale použít Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 
 ## <a name="how-app-protection-policies-protect-app-data"></a>Jak zásady ochrany aplikací chrání data aplikací
@@ -146,7 +146,9 @@ Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vyt
 
 Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé účty (pracovní a osobní). Zásady ochrany aplikací se použijí, jen když se aplikace použijí v pracovním kontextu.
 
-Představte si třeba uživatele, který spustí aplikaci OneDrive pomocí svého pracovního účtu. V pracovním kontextu nemůže přesunout soubory do svého osobního úložiště. Pokud ale později uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.
+Pro příklad osobní kontext, vezměte v úvahu uživatel, který spustí nový dokument ve Wordu, to je považovány za osobní kontext tak nepoužívají zásady ochrany aplikací Intune. Jakmile je uložený na firemním Onedrivu účtu pak bude consieered corporatte kontextu a zásady ochrany aplikací Intune se použijí.
+
+Příklad práci vezměte v úvahu uživatel spustí aplikaci OneDrive pomocí svého pracovního účtu. V pracovním kontextu nemůže přesunout soubory do svého osobního úložiště. Pokud ale později uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.
 
 - Přečtěte si další informace o aplikacích, které podporují [MAM a více identit](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) s Intune.
 
