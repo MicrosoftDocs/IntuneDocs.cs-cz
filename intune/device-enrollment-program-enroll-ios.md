@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 650a358281f89c511bbd56f3807f2ef4a6ba582c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 94e7bc3e3b936489ea34170616d1ab0ad49bafd3
+ms.sourcegitcommit: 8ddd3b0d4636a4516b2a05fa83c60ec111903c6c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190349"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52546036"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -139,7 +139,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     ![Snímek obrazovky s možností Nainstalovat Portál společnosti pomocí VPP](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
 7. Pokud jste u možnosti **Nainstalovat Portál společnosti pomocí VPP** vybrali token, můžete zařízení uzamknout v režimu jedné aplikace (konkrétně Portálu společnosti) ihned po dokončení Průvodce nastavením. Tuto možnost nastavíte volbou **Ano** u položky **Spustit Portál společnosti v režimu Jedna aplikace, dokud neproběhne ověření**. Než bude uživatel moct zařízení použít, musí se nejprve ověřit přihlášením na Portálu společnosti.
-    Tato funkce funguje nejlépe s iOSem 11.3.1 a novějším. Použití starších verzí může prodloužit dobu instalace.
+    Tato funkce je podporované jenom pro iOS 11.3.1 a novější.
 
 8. Zvolte **Nastavení správy zařízení** a vyberte, jestli mají být zařízení, která používají tento profil, pod dohledem nebo ne.
 

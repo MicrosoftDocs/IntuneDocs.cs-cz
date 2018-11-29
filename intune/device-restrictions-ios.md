@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8f9e9533793a8792e9ad354392b9d8e911cd07f4
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 209179f6ae5492e26d0d11b0b45711a096c65936
+ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188700"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52579196"
 ---
 # <a name="microsoft-intune-ios-device-restriction-settings"></a>Nastavení omezení pro zařízení s iOSem v Microsoft Intune
 
@@ -102,7 +102,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
     -   **Minimální délka hesla** – Určuje minimální počet znaků v hesle.
     -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje počet jedinečných neúspěšných pokusů o zadání hesla, než toto nastavení vymaže zařízení.
     -   **Maximální počet minut po uzamčení obrazovky, po kterém bude nutné zadat heslo**<sup>1</sup> – Určuje, jak dlouho může zařízení zůstat nečinné, než uživatel musí znovu zadat heslo.
-    -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup> – Určuje počet minut, než se displej zařízení vypne.
+    -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup> – zadejte maximální počet minut nečinnosti, po kterém se zamkne obrazovce. Pokud je doba, kterou zadáte delší než hodnota aktuálně nastavená na zařízení, tato hodnota je ignorována zařízení. Pokud je nastavena na **okamžitě**, zařízení používat minimální možné hodnoty podle zařízení.
     -   **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
     -   **Znemožnit opakované použití předchozích hesel** – Určuje počet dříve použitých hesel, která si zařízení pamatuje.
     -   **Odemknutí pomocí otisků prstů** – Povolí odemknutí kompatibilních zařízení pomocí otisku prstu.
@@ -308,7 +308,7 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
-| com.apple.MapsMaps          |              | Apple     |
+| com.apple.Maps              | Mapy         | Apple     |
 | com.apple.MobileSMS         | Zprávy     | Apple     |
 | com.apple.Music             | Hudba        | Apple     |
 | com.apple.news              | News         | Apple     |

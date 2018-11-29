@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dabd5b6ca2f8bb01421c24cb7c16ab57cf59ef56
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 06b568ee7cc2dc55a8d44cf04b96078b47d8c4b3
+ms.sourcegitcommit: 77a1047f5d93c1924e5c9ea243454532881be031
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180982"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52579162"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
@@ -43,8 +43,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce spustí akci [vymazání](devices-wipe.md#wipe).
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
   - Zařízení je odebrané ze skupiny Azure Active Directory (AD).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
+  - Profil certifikátu se odebere z přiřazení skupiny
 
 - K odvolání certifikátu SCEP dojde, když:
   - Správce změní nebo aktualizuje profil SCEP.
@@ -53,7 +52,6 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Koncový uživatel zruší registraci.
   - Správce spustí akci [vymazání](devices-wipe.md#wipe).
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
 
 - Certifikáty SCEP **zůstanou** v zařízení (nebudou odvolané ani odebrané), když:
   - Koncový uživatel ztratí licenci Intune.
@@ -78,8 +76,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce si vezme zpět licenci Intune.
   - Správce odebere uživatele nebo skupinu z Azure AD.
   - Správce změní nebo aktualizuje profil PKCS.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů. 
+  - Profil certifikátu se odebere z přiřazení skupiny
 
 
 ## <a name="ios-devices"></a>zařízení s Iosem
@@ -92,8 +89,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce spustí akci [vymazání](devices-wipe.md#wipe).
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
   - Zařízení je odebrané ze skupiny Azure Active Directory (AD).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
+  - Profil certifikátu se odebere z přiřazení skupiny
 
 - K odvolání certifikátu SCEP dojde, když:
   - Správce změní nebo aktualizuje profil SCEP.
@@ -102,7 +98,6 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Koncový uživatel zruší registraci.
   - Správce spustí akci [vymazání](devices-wipe.md#wipe).
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
 
 - Certifikáty SCEP **zůstanou** v zařízení (nebudou odvolané ani odebrané), když:
   - Koncový uživatel ztratí licenci Intune.
@@ -118,8 +113,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
 
 - K odebrání certifikátu PKCS dojde, když:
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
+  - Profil certifikátu se odebere z přiřazení skupiny
   
 - K odebrání kořenového certifikátu dojde, když:
   - Koncový uživatel zruší registraci.
@@ -143,8 +137,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
 - K odvolání certifikátu SCEP dojde, když:
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
   - Zařízení je odebrané ze skupiny Azure Active Directory (AD).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
+  - Profil certifikátu se odebere z přiřazení skupiny
   - Správce odebere uživatele nebo skupinu z Azure Active Directory (AD).
   - Správce změní nebo aktualizuje profil SCEP.
 
@@ -176,8 +169,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Správce si vezme zpět licenci Intune.
   - Správce odebere uživatele nebo skupinu z Azure AD.
   - Správce změní nebo aktualizuje profil PKCS.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů. 
+  - Profil certifikátu se odebere z přiřazení skupiny
   
   
 > [!NOTE]
@@ -191,8 +183,7 @@ V tomto článku najdete nejčastější scénáře, které mají vliv na certif
   - Koncový uživatel zruší registraci.
   - Správce spustí akci [vyřazení](devices-wipe.md#retire).
   - Zařízení je odebrané ze skupiny Azure Active Directory (AD).
-  - Z přiřazené skupiny je odebraná zásada dodržování předpisů.
-  - Z přiřazené skupiny je odebraný konfigurační profil.
+  - Profil certifikátu se odebere z přiřazení skupiny
 
 - K odvolání certifikátu SCEP dojde, když:
   - Správce změní nebo aktualizuje profil SCEP.
