@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 1cb30c1125add982a40fa2319e1f9b8b9edae1e2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b6b833794b6ed903ca2915bc95d1faa67648104f
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190417"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630081"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -1016,6 +1016,27 @@ Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživa
 Nově můžete chránit přístup k místním datům systému Exchange z Outlooku Mobile prostřednictvím zásad ochrany aplikací Intune a podmíněného přístupu. Pokud chcete na portálu Azure Portal přidat nebo upravit zásady ochrany aplikací, vyberte **Microsoft Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
 
 ## <a name="notices"></a>Sdělení
+
+### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Plánovaná změna: Exchange Online ke konektoru Intune přestanou být dostupné v Intune <!-- 3105122 -->
+Pro zjednodušení práce s Exchange Online a podmíněného přístupu, Zakážeme Exchange Online "Službami" konektor Intune. Tato změna bude začínat aktualizace z prosince služby a dokončit aktualizaci služby. února 2019.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tuto zprávu jste obdrželi, protože naše záznamy ukazují, že využíváte funkci "Službami" konektor ve vašem prostředí. "Službami" konektor podporuje Intune správu Exchange Active Sync jenom zařízení pro Exchange Online a nepodporuje místní infrastrukturu. Tento konektor, kvůli způsobu, jakým se zobrazovat v konzole, se zobrazí nezbytné pro podmíněný přístup (CA), když ve skutečnosti není potřeba pro certifikační Autoritu. Aktualizace z prosince ke službě Intune na tomto jasně v konzole, budete Zakážeme tlačítko Nastavit nové konektory. Potom ve. února 2019 všechny existující Exchange Online, aby konektory Intune se deaktivuje.
+
+Pokud používáte tyto konektory ve vašem prostředí, nebude schopna monitorovat nebo vymazat Exchange Active Sync jenom zařízení v Intune až v únoru byly zakázány konektory. Během této změny neexistuje žádné předpokládaný dopad na koncové uživatele.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+
+Pokud máte Service to Service connector nastavit a mít Exchange Active Sync jenom zařízení, přepněte na jiné metody správy zařízení. Máte následující možnosti:
+
+- Registrace zařízení do správy mobilních zařízení (MDM)
+- Použití zásad ochrany aplikací Intune ke správě svých zařízení
+- Pomocí ovládacích prvků systému Exchange, jak je uvedeno v dokumentaci. 
+
+#### <a name="additional-information"></a>Další informace
+[Konfigurace konektoru Exchange služby Intune a Exchange Online](https://docs.microsoft.com/intune/exchange-service-connector-configure)
+
+
 
 ### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Plánovaná změna: Aktualizace výkonu pro Intune for Education <!--1750215-->
 Do Intune for Education přidáváme určité aktualizace, které zvyšují rychlost a spolehlivost při přiřazování nastavení uživatelům nebo zařízením. V rámci této změny přesuneme koncem listopadu přiřazení vašich zásad nebo nastavení do nových skupin.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/05/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 59736ad188cf88c994ff93b4a505731afad8f550
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: a7250471e698d32a305755147943311d2150f0b2
+ms.sourcegitcommit: a27a9c4cae47be50807aa3c890f0d5c0c023f04a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186320"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52618182"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -34,9 +34,8 @@ Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů
 ## <a name="before-you-begin"></a>Před zahájením
 
 - Může být pro vás snadnější zkopírovat kód z počítače připojeného k síti, jak je popsáno dále v tomto článku.
-- U Androidu můžete také použít nástroj [Android PSK Generator](http://intunepskgenerator.johnathonb.com/).
 - Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
-- Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac. Můžete ale také použít nástroj [iOS PSK Mobile Config Generator](http://intunepskgenerator.johnathonb.com/).
+- Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac.
 - PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), se nepodporují.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
