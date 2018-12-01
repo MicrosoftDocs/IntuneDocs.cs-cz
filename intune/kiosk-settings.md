@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7552c9c1fa8e94560505a8971143886160cff6ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 574bc38fb9ce47d2b051a74f3f931139c0de7224
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185947"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728833"
 ---
 # <a name="kiosk-settings-for-windows-10-and-later-in-intune"></a>Nastavení veřejného terminálu pro Windows 10 a novější v Intune
 
@@ -200,3 +200,5 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
 ## <a name="next-steps"></a>Další postup
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+
+Můžete také vytvořit profily beznabídkového režimu pro [Android](device-restrictions-android.md#kiosk) a [Androidu Enterprise](device-restrictions-android-for-work.md#kiosk-settings) zařízení.

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6d35ecbb830af7df2f81e2e9412eef8e7a252cbe
-ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
+ms.openlocfilehash: 3d10962db06230341b0faf41431355e123b69e8f
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52630030"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728850"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
-Existují dvě kategorie nastavení zásad:nastavení přemístění dat a nastavení přístupu. Termín *aplikace spravované podle zásad* v tomto článku označuje aplikace, které mají nakonfigurované zásady ochrany aplikací.
+Existují dvě kategorie nastavení zásad: nastavení ochrany dat a nastavení přístupu. Termín *aplikace spravované podle zásad* v tomto článku označuje aplikace, které mají nakonfigurované zásady ochrany aplikací.
 
-##  <a name="data-relocation-settings"></a>Nastavení přemístění dat
+##  <a name="data-protection-settings"></a>Nastavení pro ochranu dat.
 
 | Nastavení | Způsob použití | Výchozí hodnoty |
 |------|------|------|

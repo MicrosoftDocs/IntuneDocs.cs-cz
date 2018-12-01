@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ada9fee575824d27a6bfdd8f14d4845d228467db
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b953ea281ad785d8a0ce7bee4b0f6d420b785dd9
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186069"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52729037"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -61,6 +61,16 @@ Zařízení nebo uživatel mohou být členy více skupin a mohou mít více pro
 2. Najeďte myší na profil v seznamu.
 3. Pomocí tří svislých teček přetáhněte profil na požadované místo v seznamu.
 
+## <a name="block-access-to-a-device-until-a-specific-application-is-installed"></a>Blokovat přístup k zařízení, do konkrétní aplikace je nainstalována.
+
+Můžete určit aplikace, které je potřeba nainstalovat předtím, než uživatel může přístup k ploše.
+
+1. V Intune, zvolte **registrace zařízení** > **registrace Windows** > **stránka stavu registrace (Preview)**.
+2. Zvolte profil > **nastavení**.
+3. Zvolte **Ano** pro **zobrazit průběh instalace aplikaci a profilu**.
+4. Zvolte **Ano** pro **zablokovat používání zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.
+5. Zvolte **vybrané** pro **zablokovat používání zařízení, dokud následující požadované aplikace jsou nainstalovány, pokud jsou přiřazeny k uživatele nebo zařízení**.
+ 6. Zvolte **vyberte aplikace** > vyberte aplikace > **vyberte** > **Uložit**.
 
 ## <a name="enrollment-status-page-tracking-information"></a>Informace o sledování na stránce stavu registrace
 

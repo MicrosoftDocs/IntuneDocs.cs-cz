@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: ec3535004dccedb5b0310f4ecc10bb5c93f0ea43
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c9a3146b1ad5f6f7c439d2e49cf534e14d154f76
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186881"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728697"
 ---
 # <a name="what-are-microsoft-intune-device-profiles"></a>Co jsou profily zařízení v Microsoft Intune?
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se spravují pomocí profilů. Například: 
 
@@ -34,6 +32,7 @@ Microsoft Intune zahrnuje nastavení a funkce, které můžete povolit nebo zak�
 Tento článek obsahuje přehled různých profilů, které můžete pro zařízení vytvořit. Tyto profily umožňují povolit nebo zakázat některé funkce na zařízeních.
 
 ## <a name="before-you-begin"></a>Před zahájením
+
 Pokud chcete zobrazit dostupné funkce, otevřete [Azure Portal](https://portal.azure.com) a spusťte prostředek Intune. 
 
 **Konfigurace zařízení** zahrnuje následující možnosti:
@@ -55,42 +54,61 @@ Tato funkce podporuje:
 - iOS 
 - macOS
 
-
 ## <a name="device-restrictions"></a>Omezení zařízení
+
 [Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zakazuje použít fotoaparát v zařízení. 
 
 Tato funkce podporuje:
 
 - Android
+- Android enterprise
 - iOS
 - macOS
 - Windows 10
 - Windows 10 Team
 
+## <a name="delivery-optimization"></a>Optimalizace doručení
+
+[Optimalizace doručení](delivery-optimization-windows.md) poskytuje lepší prostředí pro doručování aktualizací softwaru. Tato nastavení jsou nahrazení **aktualizace softwaru** > **aktualizační kanál Windows 10** nastavení.
+
+Pomocí těchto nastavení můžete řídit, jak se aktualizace softwaru se stáhnou do zařízení ve vaší organizaci. Například můžete umožnit uživatelům získat vlastní aktualizace nebo aktualizace pomocí cloudových služeb, která optimalizace doručování v profilu zařízení.
+
+Tato funkce podporuje:
+
+- Windows 10 a novější
+
 ## <a name="endpoint-protection"></a>Ochrana koncového bodu
+
 [Nastavení služby Ochrana koncového bodu pro Windows 10](endpoint-protection-windows-10.md) konfiguruje nastavení pro BitLocker a Windows Defender pro zařízení s Windows 10.
 
 Informace o zařazení rozšířené ochrany před internetovými útoky v programu Windows Defender pomocí Microsoft Intune najdete v článku o [konfiguraci koncových bodů pomocí nástrojů pro správu mobilních zařízení (MDM)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-mdm-windows-defender-advanced-threat-protection).
 
 Tato funkce podporuje:
+
 - Windows 10 a novější
 
 ## <a name="identity-protection"></a>Ochrana identit
+
 [Ochrana identit](identity-protection-configure.md) řídí prostředí Windows Hello pro firmy na zařízeních s Windows 10 a Windows 10 Mobile. Konfigurací těchto nastavení můžete zpřístupnit Windows Hello pro firmy uživatelům a zařízením a specifikovat požadavky na PIN kódy a gesta zařízení.  
 
 Tato funkce podporuje:  
+
 - Windows 10 a novější
 - Windows Holographic for Business  
 
 ## <a name="kiosk"></a>Kiosk
 
-Profil [nastavení veřejného terminálu](kiosk-settings.md) nakonfiguruje, aby zařízení spouštělo jednu aplikaci nebo několik aplikací. Na svém veřejném terminálu si můžete přizpůsobit i další funkce, například úvodní nabídku a webový prohlížeč.
+[Nastavení celoobrazovkového](kiosk-settings.md) profilu konfiguruje zařízení běžela jedna aplikace nebo spustit velký počet aplikací. Na svém veřejném terminálu si můžete přizpůsobit i další funkce, například úvodní nabídku a webový prohlížeč.
 
 Tato funkce podporuje:
+
 - Windows 10 a novější
 
+K dispozici i jako omezení zařízení pro nastavení celoobrazovkového [Android](device-restrictions-android.md#kiosk), [Androidu Enterprise](device-restrictions-android-for-work.md#kiosk-settings), a [ios](device-restrictions-ios.md#kiosk-supervised-only).
+
 ## <a name="email"></a>E-mailu
-Profil [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a sleduje nastavení e-mailu Exchange ActiveSync na zařízeních. E-mailové profily pomáhají zajistit konzistentnost, omezují volání na podporu a dávají uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat. 
+
+[Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a sleduje nastavení e-mailu protokolu Exchange ActiveSync na zařízeních. E-mailové profily pomoc s konzistencí, omezíte volání podpory a umožní koncovým uživatelům přístup k firemnímu e-mailu na jejich osobních zařízení bez nutnosti něco nastavovat jejich část. 
 
 Tato funkce podporuje: 
 
@@ -100,6 +118,7 @@ Tato funkce podporuje:
 - Windows 10
 
 ## <a name="vpn"></a>Síť VPN
+
 [Nastavení VPN](vpn-settings-configure.md) přiřadí uživatelům a zařízením v organizaci profily sítě VPN, aby se mohli snadno a bezpečně připojit k síti. 
 
 Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. 
@@ -114,6 +133,7 @@ Tato funkce podporuje:
 - Windows 10
 
 ## <a name="wi-fi"></a>Wi-Fi
+
 [Nastavení Wi-Fi](wi-fi-settings-configure.md) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Po přiřazení profilu Wi-Fi získají uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami. 
 
 Tato funkce podporuje: 
@@ -125,30 +145,34 @@ Tato funkce podporuje:
 
 ## <a name="esim-cellular---public-preview"></a>Mobilní profily eSIM ve verzi Public Preview
 
-[Mobilní profily eSIM](esim-device-configuration.md) vám umožňují na spravovaných zařízeních konfigurovat mobilní datové tarify pro přístup k internetu a datům.  Po získání aktivačních kódů od mobilního operátora můžete použít Intune k importování těchto aktivačních kódů a potom je můžete přiřadit k zařízením podporujícím eSIM.
+[mobilní profily karty eSIM](esim-device-configuration.md) umožňuje správcům nakonfigurovat mobilní datové tarify pro vaše spravovaná zařízení pro přístup k Internetu a data. Po získání aktivační kódy od mobilního operátora, použijte k importu těchto aktivační kódy a zařaďte do zařízení s podporou karty eSIM Intune.
 
 Tato funkce podporuje:
 - Windows 10 Fall Creators Update a novější
 
 ## <a name="education"></a>Vzdělávání
+
 [Nastavení vzdělávání – Windows 10](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
 
-[Nastavení vzdělávání – iOS](education-settings-configure-ios-shared.md) používá aplikaci Classroom pro systém iOS, která umožňuje vést výuku a ovládat zařízení studentů v učebně. Zařízení s iPadem lze nakonfigurovat tak, aby více studentů mohlo sdílet jedno zařízení.
+[Nastavení vzdělávání – iOS](education-settings-configure-ios-shared.md) používá aplikaci Classroom pro systém iOS, která umožňuje vést výuku a ovládat zařízení studentů v učebně. Zařízení iPad můžete nakonfigurovat tak, že mnoho studentů můžou sdílet jedno zařízení.
 
 ## <a name="edition-upgrade"></a>Upgrade edice
+
 [Upgrady edice Windows 10](edition-upgrade-configure-windows-10.md) automaticky upgradují zařízení s některými verzemi Windows 10 na novější edici.
 
 Tato funkce podporuje: 
 - Windows 10 a novější
 
 ## <a name="update-policies"></a>Zásady aktualizací
+
 [Zásady aktualizací pro iOS](software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS k instalaci aktualizací softwaru na zařízení s iOSem. Můžete také zkontrolovat stav instalace.
 
 Tato funkce podporuje:
 - iOS
 
 ## <a name="certificates"></a>Certifikáty
-[Certifikáty](certificates-configure.md) umožňují nakonfigurovat důvěryhodné certifikáty a certifikáty SCEP a PKCS, které je možné přiřadit k zařízením a použít k ověření profilů Wi-Fi, sítě VPN a e-mailu.
+
+[Certifikáty](certificates-configure.md) nakonfiguruje považuje za důvěryhodnou, SCEP a PKCS certifikáty, které je přiřazený k zařízením a používá k ověřování Wi-Fi, VPN a e-mailové profily.
 
 Tato funkce podporuje: 
 
@@ -159,13 +183,15 @@ Tato funkce podporuje:
 - Windows 10
 
 ## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
-[Služba Windows Information Protection](windows-information-protection-configure.md) pomáhá chránit před únikem dat, aniž by zasahovala do možností zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví společnosti a osobních zařízeních, která zaměstnanci používají v práci. Probíhá to bez nutnosti provádět změny prostředí nebo ostatních aplikací.
+
+[Služba Windows Information Protection](windows-information-protection-configure.md) pomáhá chránit před únikem dat, aniž by zasahovala do možností zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na firemních zařízeních a osobních zařízeních, která zaměstnanci používají v práci. Použití služby Windows Information Protection nevyžaduje shanges prostředí nebo jiných aplikací.
 
 Tato funkce podporuje:
 - Windows 10 a novější
 
 ## <a name="custom-profile"></a>Profil Vlastní
-[Vlastní nastavení](custom-settings-configure.md) zahrnuje možnost přiřadit k zařízení nastavení, která nejsou předdefinovaná v Intune. Například na zařízení s Androidem, můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator. 
+
+[Vlastní nastavení](custom-settings-configure.md) umožňuje správcům přiřadit nastavení zařízení, která nejsou předdefinovaná v Intune. Například na zařízení s Androidem, můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator. 
 
 Tato funkce podporuje:
 
@@ -176,4 +202,4 @@ Tato funkce podporuje:
 
 ## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
 
-[Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Zobrazením nastavení, která způsobují konflikt, a profilů, které tato nastavení obsahují, si můžete pomoci při řešení konfliktů. [Běžné problémy a řešení](device-profile-troubleshoot.md) obsahují seznam otázek a odpovědí, které vám pomůžou pracovat s profily. Zjistíte, co se stane při odstranění profilu, co způsobuje odeslání oznámení do zařízení a spoustu dalšího.
+[Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Zobrazením nastavení, která způsobují konflikt, a profilů, které tato nastavení obsahují, si můžete pomoci při řešení konfliktů. [Běžné problémy a řešení](device-profile-troubleshoot.md) poskytuje funkce Q & A usnadňují práci s profily, včetně toho, co se stane po odstranění profilu, která způsobí, že oznámení k odeslání do zařízení a další.

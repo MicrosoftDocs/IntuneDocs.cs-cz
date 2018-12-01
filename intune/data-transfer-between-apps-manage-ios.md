@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/21/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d5a2bc0939da5ee4cb35585a930f145b832a58ad
-ms.sourcegitcommit: 0dbce0415e53fe963dc7f927ac4b0c06411f199c
+ms.openlocfilehash: e252822569723be6cfe18e488f79a7605f21193c
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281101"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728663"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -38,7 +38,7 @@ Použití zásad ochrany aplikací v IOS **Správa Open in** funkce k ochraně f
 
 -   **Zařízení patřící zaměstnancům, která nejsou spravovaná řešením MDM:** Zásady ochrany aplikací můžete nastavit na **Povolit aplikaci přenos dat jenom do aplikací spravovaných zásadami**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
 
--   **Zařízení spravovaná v Intune:** Pro zařízení zaregistrovaná v Intune jsou přenosy dat mezi aplikacemi se zásadami ochrany aplikací a ostatními spravovanými aplikacemi pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-relocation-settings).   
+-   **Zařízení spravovaná v Intune:** Pro zařízení zaregistrovaná v Intune jsou přenosy dat mezi aplikacemi se zásadami ochrany aplikací a ostatními spravovanými aplikacemi pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection-settings).   
 
 -   **Zařízení spravovaná řešením MDM třetí strany:** můžete omezit přenosy dat jenom do spravovaných aplikací s použitím iOS **Správa Open in** funkce.
 Pokud chcete mít jistotu, že aplikace nasazené pomocí řešení MDM jiného výrobce byly také přidružené k pomocí zásad ochrany aplikací Intune, konfigurace nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [konfigurace nastavení hlavního názvu uživatele (UPN)](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Při nasazení aplikace pomocí nastavení hlavního názvu uživatele (UPN), použít zásady ochrany aplikací pro aplikaci, jakmile se uživatel přihlásí pomocí svého pracovního účtu.
@@ -50,9 +50,9 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 2.  Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce pomocí následujících obecných kroků. Toto prostředí je také popsaná v *Příklad 1*.
 
-3.  Nasaďte aplikaci s tímto nastavením konfigurace:
+3.  Nasazení aplikace s následujícím nastavením konfigurace aplikací:
 
-      **key** = IntuneMAMUPN, **value** = <username@company.com>
+      **klíč** = IntuneMAMUPN, **hodnota** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
 
@@ -65,7 +65,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 2. V části Konfigurace aplikace zadejte tato nastavení:
 
-   **key** = IntuneMAMUPN, **value** = <username@company.com>
+   **klíč** = IntuneMAMUPN, **hodnota** = <username@company.com>
 
    Skutečná syntaxe dvojice klíč/hodnota se může lišit podle toho, jakého máte jiného poskytovatele řešení MDM. V následující tabulce jsou uvedeny příklady jiných poskytovatelů MDM a přesných hodnot, které je potřeba zadat dvojice klíč/hodnota.
 

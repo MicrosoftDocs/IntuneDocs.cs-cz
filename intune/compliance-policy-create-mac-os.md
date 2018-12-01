@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 14588563dd261063071c09c1bbd3b428fb375830
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 469c0b7c3e67135c53de7c58583d820e1750ad7f
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184178"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728799"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Přidání zásad dodržování předpisů pro zařízení s macOS v Intune
 
@@ -49,7 +49,8 @@ Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení 
 ## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. U možnosti **Platforma** vyberte **macOS**. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
+4. U možnosti **Platforma** vyberte **macOS**. 
+5. Zvolte **nastavení konfigurace**a zadejte **stav zařízení**, **vlastnosti zařízení**, a **zabezpečení systému** nastavení popsaná v Tento článek. Po dokončení zvolte **OK** a **Vytvořit**.
 
 ## <a name="device-health"></a>Stav zařízení
 
@@ -59,6 +60,8 @@ Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení 
 
 - **Minimální verze OS**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, označí se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
 - **Maximální verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze specifikovaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
+- **Minimální operační systém sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení.
+- **Maximální verze operačního systému sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení.
 
 ## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 

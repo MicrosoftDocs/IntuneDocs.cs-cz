@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/30/2018
+ms.date: 11//28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2e0331210a10727ff5753e6c227777cd1ebb16d9
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185955"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728816"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -74,10 +74,14 @@ Nové zásady, které vytvoříte, se nenasadí žádným uživatelům, dokud to
 
    ![Snímek obrazovky podokna Přiřazení se zvýrazněnou možností nabídky Vybrat skupiny, které se zahrnou](./media/app-protection-policy-add-users.png)
 
-3.  Zobrazí se seznam všech skupin zabezpečení ve službě **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. Zvolením možnosti **Vybrat** nasadíte tuto zásadu uživatelům.
+3.  Zobrazí se seznam všech skupin zabezpečení ve službě **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. 
 
     ![Snímek obrazovky podokna Přidat skupinu uživatelů zobrazující seznam uživatelů Azure Active Directory](./media/azure-ad-user-group-list.png)
 
+4.  Po zahrnutí a vyloučení skupin, vyberte **Uložit** uložte konfiguraci a nasazení zásad pro uživatele. Pokud vyberete **zahodit** před uložením konfiguraci se zahodí všechny změny, které jste udělali *zahrnout* a *vyloučit* karty.   
+ 
+     ![Snímek obrazovky ukazující, ukládání a zahodit možnosti](./media/save-assignment.png)
+  
 Teď je zásada vytvořená a nasazená u uživatelů.
 
 Tyto zásady ovlivní jenom uživatele, kteří mají přiřazené licence Microsoft Intune. Nemají vliv na uživatele ve vybrané skupině zabezpečení, kteří nemají přiřazenou licenci pro Intune.
@@ -109,9 +113,13 @@ Aby se změny projevily hned, musí se koncový uživatel odhlásit od aplikace 
 
 2.  V podokně *Intune App Protection* otevřete výběrem možnosti **Přiřazení** podokno **Intune App Protection – Přiřazení** se seznamem aktuálních skupin uživatelů, kteří mají tuto zásadu.
 
-3.  Pokud chcete přidat k zásadě novou skupinu uživatelů, zvolte na kartě **Zahrnout** možnost **Vybrat skupiny, které se zahrnou** a vyberte skupinu uživatelů. Zvolením možnosti **Vybrat** nasadíte zásadu do skupiny uživatelů, kterou jste vybrali.
+3.  Pokud chcete přidat k zásadě novou skupinu uživatelů, zvolte na kartě *Zahrnout* možnost **Vybrat skupiny, které se zahrnou** a vyberte skupinu uživatelů. Zvolte **vyberte** přidejte skupinu. 
 
-4.  Pokud chcete odstranit skupinu uživatelů, zvolte na kartě **Vyjmout** možnost **Vybrat skupiny, které se vyloučí** a vyberte skupinu uživatelů. Skupinu uživatelů odeberte pomocí možnosti **Vybrat**.
+4.  Vyloučit skupiny uživatelů, na *vyloučit* zvolte kartu **výběr skupin k vyloučení**a vyberte skupinu uživatelů. Skupinu uživatelů odeberte pomocí možnosti **Vybrat**.  
+
+5.  Odstranění skupiny, které byly dříve přidány na buď *zahrnout* nebo *vyloučit* karty, vyberte tři tečky (...) a vyberte **odstranit**. 
+
+5.  Po dokončení změn přiřazení připraveni, vyberte **Uložit** uložte konfiguraci a nasazení zásad pro novou skupinu uživatelů. Pokud vyberete **zahodit** před uložením konfiguraci se zahodí všechny změny, které jste udělali *zahrnout* a *vyloučit* karty.
 
 ### <a name="to-change-policy-settings"></a>Změna nastavení zásad
 

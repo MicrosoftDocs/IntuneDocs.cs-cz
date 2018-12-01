@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/27/2018
+ms.date: 11/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,16 +13,14 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9b84877d37d26dababda2987801fc7267cb3c2e6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 11b241a14ed70a2e999fa505449cd12cdd1e025e
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181203"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728782"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
-
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Pomocí omezení zařízení můžete ovládat širokou škálu spravovaných nastavení a funkcí v různých kategoriích, jako jsou například:
 - Zabezpečení
@@ -36,20 +34,24 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
 
 ## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-4. Zadejte **název** a **popis** profilu omezení zařízení.
-5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
+1. V k [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte **název** a **popis** profilu omezení zařízení.
+4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
+
     - **Android**
+    - **Android Enterprise**
     - **iOS**
     - **macOS**
     - **Windows Phone 8.1**
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
-6. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je Surface Hub, zvolte **Omezení zařízení (Windows 10 Team)**.
-7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobnosti o nastaveních na jednotlivých platformách najdete v následujících tématech:
+
+5. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Chcete-li vytvořit zařízení omezení profilu pro zařízení s Windows 10 Team, jako je Surface Hub, a pak zvolte **omezení zařízení (Windows 10 Team)**.
+6. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Zvolte vaši platformu podrobné nastavení:
+
     - [Nastavení Androidu](device-restrictions-android.md)
+    - [Nastavení androidu enterprise](device-restrictions-android-for-work.md)
     - [Nastavení iOSu](device-restrictions-ios.md)
     - [Nastavení macOS](device-restrictions-macos.md)
     - [Nastavení Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
@@ -57,11 +59,14 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - [Nastavení Windows 10](device-restrictions-windows-10.md)
     - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
-    - [Nastavení pracovního profilu Androidu](device-restrictions-android-for-work.md)
-8. Až to budete mít, vraťte se na stránku **Vytvořit profil** a klikněte na **Vytvořit**.
 
-Profil se vytvoří a zobrazí se na stránce se seznamem profilů.
-Pokud chcete pokračovat a přiřadit tento profil ke skupinám, podívejte se na téma [Jak přiřadit profily zařízení](device-profile-assign.md).
+7. Až to budete mít, vraťte se do **vytvořit profil** stránku a vybrat **vytvořit**.
+
+Profil se vytvoří a zobrazí se na stránce se seznamem profilů. 
+
+## <a name="next-step"></a>Další krok
+
+Po vytvoření profilu je připraven k přiřazení. Zobrazit [přiřazení profilů zařízení](device-profile-assign.md) kroky. 
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

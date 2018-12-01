@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 79df4e20a1dcd4a5cbc30ab0c887d53bf205ebbf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5ff7876ef5c04eb59d1e89ac03b640d4f443cca6
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184739"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728952"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -30,7 +30,7 @@ Nastavení zásad popsané v tomto článku se dá [nakonfigurovat](app-protecti
 
 Existují tři kategorie nastavení zásad: *přemístění dat*, *požadavky na přístup* a *podmíněné spouštění*. Termín ***aplikace spravované podle zásad*** v tomto článku označuje aplikace, které mají nakonfigurované zásady ochrany aplikací.
 
-##  <a name="data-relocation-settings"></a>Nastavení přemístění dat
+##  <a name="data-protection-settings"></a>Nastavení pro ochranu dat.
 
 | Nastavení | Způsob použití |  
 |------|------| 
@@ -47,7 +47,7 @@ Existují tři kategorie nastavení zásad: *přemístění dat*, *požadavky na
 
 
 > [!NOTE]
-> Žádné z nastavení přemístění dat na zařízeních s iOSem neřídí funkci otevírání v aplikaci spravované Applem. Pokud chcete spravovat funkci Otevřít v od Applu, přečtěte si [Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](data-transfer-between-apps-manage-ios.md).
+> Žádné z nastavení ochrany dat řídit Apple spravované open in funkce na zařízeních s Iosem. Pokud chcete spravovat funkci Otevřít v od Applu, přečtěte si [Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](data-transfer-between-apps-manage-ios.md).
 
 ## <a name="data-transfer-exemptions"></a>Výjimky přenosu dat
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: b6b833794b6ed903ca2915bc95d1faa67648104f
-ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
+ms.openlocfilehash: 656c08fbc59b5656d4fc69c5e8e45d9d4903eab8
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52630081"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52729071"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,6 +42,75 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-november-26-2018"></a>Týden od 26. listopadu 2018
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="downloading-intune-win32-app-content----2617320---"></a>Stahuje se obsah aplikace Intune Win32 <!-- 2617320 -->
+Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí optimalizace doručení komponenty na straně klienta Windows 10. Optimalizace doručení poskytuje Peer-to-Peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení lze konfigurovat pomocí zásad skupiny a v budoucnu prostřednictvím Intune MDM. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+
+#### <a name="end-user-device-and-app-content-menu----2771453---"></a>Místní nabídka zařízení a aplikací koncových uživatelů <!-- 2771453 -->
+Koncoví uživatelé teď můžou používat místní nabídka na zařízení a aplikací pro aktivaci běžné akce, jako je přejmenování zařízení nebo kontroluje se dodržování předpisů.
+
+#### <a name="set-custom-background-in-managed-home-screen-app-----3041945---"></a>Nastavení vlastního pozadí v aplikaci Managed Home Screen <!-- 3041945 -->
+Přidáváme nastavení, které umožňuje přizpůsobit vzhled pozadí spravované domovskou obrazovku aplikace na Androidu Enterprise, s více aplikacemi, zařízení pro beznabídkový režim.  Pokud chcete nakonfigurovat **vlastní adresu URL pozadí**, na webu Azure Portal přejděte na Intune > Konfigurace zařízení. Vyberte aktuální profil konfigurace zařízení nebo vytvořte nový a upravte nastavení beznabídkového režimu.
+Nastavení beznabídkového režimu, najdete v sekci [omezení zařízení s Androidem Enterprise](device-restrictions-android-for-work.md).
+
+#### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Uložení a použití přiřazení zásad ochrany aplikací <!-- 3104570 -->
+Teď máte lepší kontrolu nad vaší [přiřazených zásad ochrany aplikací](app-protection-policies.md#deploy-a-policy-to-users). Když vyberete *přiřazení* nastavit nebo upravit přiřazení zásady, je nutné **Uložit** konfigurace předtím, než změna se vztahuje. Použití **zahodit** zrušte všechny změny provedete bez uložení jakýchkoliv změn k zahrnutí nebo vyloučení seznamy.  Vyžadování uložit nebo zahodit jsou přiřazeny pouze uživatele, které chcete zásady ochrany aplikací.
+
+#### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nová nastavení prohlížeče Microsoft Edge pro Windows 10 a novější <!-- 3174639 -->
+Tato aktualizace zahrnuje nové nastavení, které pomáhá řídit a spravovat prohlížeč Microsoft Edge na zařízení. Seznam nastavení najdete v tématu [omezení zařízení pro Windows 10 (a novější)](device-restrictions-windows-10.md#microsoft-edge-browser).
+
+#### <a name="new-apps-support-with-app-protection-policies----3330037---"></a>Podpora nových aplikací se zásadami ochrany aplikací <!-- 3330037 -->
+Teď můžete spravovat tyto aplikace s [zásady ochrany aplikací Intune](app-protection-policies.md):
+- Stream (iOS)
+- Úkol (Android, iOS)
+- PowerApps (Android, iOS)
+- Tok (Android, iOS)
+
+Použití zásad ochrany aplikací pro ochranu firemních dat a ovládací prvek přenos dat u těchto aplikací, jako ostatní zásady spravované aplikace Intune. Poznámka: Pokud tok není viditelné v konzole, přidejte tok, když vytvoříte nebo upravíte a zásady ochrany aplikací. Chcete-li tak učinit, použijte **+ další aplikace** možnost a potom zadejte *ID aplikace* pro tok do vstupního pole. Pro Android pomocí *com.microsoft.flow*, a pro iOS použijte *com.microsoft.procsimo*.
+
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="ios-and-macos-version-numbers-and-build-numbers-are-shown----1892471---"></a>Zobrazení čísel verzí a buildů systémů iOS a macOS <!-- 1892471 -->
+V oblasti **Dodržování předpisů zařízením** > **Dodržování předpisů zařízením** se zobrazují verze operačního systému iOS a macOS, která lze použít v zásadách dodržování předpisů. Tato aktualizace obsahuje číslo sestavení, které je možné nakonfigurovat pro obě platformy.
+Při vydání aktualizací zabezpečení společnost Apple obvykle ponechává stávající číslo verze, ale aktualizuje číslo buildu. Pomocí čísla buildu v zásadách dodržování předpisů můžete snadno zkontrolovat, jestli je nainstalovaná aktualizace řešící ohrožení zabezpečení.
+Chcete-li tuto funkci používat, naleznete v tématu [iOS](compliance-policy-create-ios.md#device-health) a [macOS](compliance-policy-create-mac-os.md#device-properties) zásady dodržování předpisů.
+
+#### <a name="update-rings-are-being-replaced-with-delivery-optimization-settings-for-windows-10-and-later----2753807---"></a>Nastavení optimalizace doručení pro Windows 10 a novější se nahrazují aktualizační okruhy <!-- 2753807 -->
+Optimalizace doručení je nový profil konfigurace pro Windows 10 a novější. Tato funkce poskytuje přináší optimalizaci prostředí pro doručení aktualizací softwaru do zařízení ve vaší organizaci. Tato aktualizace umožňuje poskytovat nastavení nové i stávající aktualizačních kanálů pomocí konfiguračního profilu.
+Konfiguraci optimalizace doručení konfiguračního profilu najdete v tématu [nastavení aktualizace Windows 10 (nebo novější)](delivery-optimization-windows.md).
+
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="select-apps-tracked-on-the-enrollment-status-page---2531007---"></a>Výběr aplikací sledovaných na stránce se stavem registrace<!-- 2531007 -->
+Můžete vybrat aplikace, které jsou sledovány v stránka stavu registrace. Dokud se tyto aplikace jsou nainstalované, nemůže používat zařízení. Další informace najdete v tématu [nastavení na stránce Stav registrace](windows-enrollment-status.md).
+
+#### <a name="search-for-autopilot-device-by-serial-number---2595788---"></a>Hledat podle sériového čísla zařízení Autopilot <!--2595788 -->
+Zařízení Autopilot můžete teď hledat podle sériového čísla. Chcete-li to provést, zvolte **registrace zařízení** > **registrace Windows** > **zařízení** > zadejte sériové číslo do **hledat podle sériové číslo** pole > stiskněte klávesu Enter.
+
+#### <a name="track-installation-of-office-proplus---2620217---"></a>Sledování instalace Office ProPlus <!--2620217 -->
+Uživatelé mohou sledovat průběh instalace [Office ProPlus](apps-add-office365.md) pomocí [stránka stavu registrace](windows-enrollment-status.md). Další informace najdete v tématu [nastavení na stránce Stav registrace](windows-enrollment-status.md).
+
+#### <a name="alerts-for-expiring-vpp-token-or-company-portal-license-running-low----2237572---"></a>Upozornění na vypršení platnosti tokenu VPP nebo docházející licence pro aplikaci Portál společnosti <!-- 2237572 -->
+Pokud používáte Volume Purchase Program (VPP) k předběžnému přidělení portálu společnosti během registrace DEP, vás Intune upozorní VPP token blížící se vypršení platnosti a pokud není k dispozici dostatek licencí pro aplikaci portál společnosti. Další informace najdete v tématu [Automatická registrace zařízení s macOS pomocí Apple School Manager nebo programu registrace zařízení](device-enrollment-program-enroll-macos.md).
+
+### <a name="new-intune-device-subscription-sku---3312071--"></a>Nové předplatné Intune zařízení SKU <!--3312071-->
+Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je dostupná přes přímý kanál, smlouvu Enterprise (EA), program MPSA (Microsoft Products and Services) a programy Open a Cloud Solution Provider (CSP).
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="temporarily-pause-kiosk-mode-on-android-devices-to-make-changes----3041935---"></a>Dočasné pozastavení beznabídkového režimu na zařízeních s Androidem kvůli provedení změn <!-- 3041935 -->
+Při používání zařízení s Androidem v beznabídkovém režimu s více aplikacemi může správce IT potřebovat udělat v zařízení změny. Tato aktualizace zahrnuje nové nastavení veřejný terminál s více aplikacemi, které správcům IT umožňuje dočasně pozastavit beznabídkovým režimem pomocí kódu PIN a získat přístup k celé zařízení.
+Nastavení beznabídkového režimu, najdete v sekci [omezení zařízení s Androidem Enterprise](device-restrictions-android-for-work.md).
+
+#### <a name="enable-virtual-home-button-on-android-enterprise-kiosk-devices-----3042021---"></a>Povolení virtuálního tlačítka Domů na zařízeních s Androidem Enterprise v beznabídkovém režimu <!-- 3042021 -->
+Nové nastavení umožní uživatelům klepnutím na softwarové tlačítko přepínat mezi aplikací Managed Home Screen a jinými přiřazenými aplikacemi na zařízení v beznabídkovém režimu s více aplikacemi. Toto nastavení je zvláště užitečné v situacích, kdy beznabídková aplikace uživatele nereaguje správně na tlačítko Zpět. Toto nastavení budete moci nakonfigurovat pro zařízení s Androidem ve vlastnictví firmy pro použití s jednou aplikací. Pokud chcete nakonfigurovat **Virtuální tlačítko Domů**, na webu Azure Portal přejděte na Intune > Konfigurace zařízení. Vyberte aktuální profil konfigurace zařízení nebo vytvořte nový a upravte nastavení beznabídkového režimu.
+Nastavení beznabídkového režimu, najdete v sekci [omezení zařízení s Androidem Enterprise](device-restrictions-android-for-work.md).
 
 ## <a name="week-of-november-12-2018"></a>Týden od 12. listopadu 2018
 
@@ -84,7 +153,7 @@ Potíže s instalací klientských aplikací můžete řešit tak, že se podív
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
-#### <a name="network-access-control-support-on-ios-vpn-clients----1333693-wnready---"></a>Podpora řízení přístupu k síti na klientech VPN v iOSu <!-- 1333693 wnready -->
+#### <a name="network-access-control-support-on-ios-vpn-clients----1333693---"></a>Podpora řízení přístupu k síti na klientech VPN v iOSu <!-- 1333693 -->
 V této aktualizaci zavádíme nové nastavení, kterým můžete při vytváření konfiguračního profilu VPN pro Cisco AnyConnect, F5 Access a Citrix SSO pro iOS povolit řízení přístupu k síti (NAC). Toto nastavení umožní zahrnutí ID NAC zařízení do profilu VPN. V současné době neexistují žádní klienti VPN ani partnerská řešení NAC podporující toto nové ID NAC, ale jakmile se tak stane, budeme vás informovat prostřednictvím [blogového příspěvku o podpoře](ttps://aka.ms/iOS12_and_vpn).
 
 Abyste mohli používat NAC, budete muset:
@@ -173,7 +242,7 @@ U zákazníků v této vlně nasazení toto nové prostředí nahradí aktuáln�
 
 Další informace najdete v tématu [Nové prostředí pro nápovědu a podporu](get-support.md#new-help-and-support-experience) v článku Jak získat podporu pro Microsoft Intune.  
 
-### <a name="powershell-module-for-intune--preview-available----wnready-951068---"></a>Modul prostředí PowerShell pro Intune – k dispozici ve verzi Preview <!-- wnready 951068 -->
+### <a name="powershell-module-for-intune--preview-available----951068---"></a>Modul prostředí PowerShell pro Intune – k dispozici ve verzi Preview <!-- 951068 -->
 Nový modul prostředí PowerShell, který poskytuje podporu pro rozhraní Intune API prostřednictvím Microsoft Graphu, je teď dostupný ve verzi Preview na [GitHubu]( https://aka.ms/intunepowershell). Podrobnosti o tom, jak tento modul používat, najdete v souboru README v uvedeném umístění. 
 
 
@@ -355,7 +424,7 @@ Informace o aktuálně dostupných nastaveních profilů VPN najdete v seznamu [
 
 #### <a name="the-macos-company-portal-installer-now-includes-the-version-number-in-the-installer-file-name---2652728--"></a>Instalační program Portálu společnosti pro macOS nově obsahuje číslo verze v názvu svého souboru <!--2652728-->
 
-#### <a name="ios-automatic-app-updates----2729759-wnready---"></a>Automatické aktualizace aplikací pro iOS <!-- 2729759 wnready -->
+#### <a name="ios-automatic-app-updates----2729759---"></a>Automatické aktualizace aplikací pro iOS <!-- 2729759 -->
 Automatické aktualizace aplikací fungují u aplikací licencovaných pro zařízení i uživatele v iOSu verze 11.0 a novějších.
 
 
@@ -733,7 +802,7 @@ V této aktualizaci se uživatelský graf vrací a zobrazuje se na portálu Azur
 
 ### <a name="device-enrollment"></a>Registrace zařízení
 
-#### <a name="support-for-windows-autopilot-enrollment-without-user-authentication----1165118-wnready---"></a>Podpora pro registraci pomocí řešení Windows Autopilot bez ověření uživatele <!-- 1165118 wnready -->
+#### <a name="support-for-windows-autopilot-enrollment-without-user-authentication----1165118---"></a>Podpora pro registraci pomocí řešení Windows Autopilot bez ověření uživatele <!-- 1165118 -->
 Intune teď podporuje registraci pomocí řešení Windows Autopilot bez ověření uživatele. Je to nová možnost v profilu nasazení Windows Autopilot, která nastavuje režim automatického nasazení.  Pokud chcete úspěšně dokončit tento typ registrace, musí zařízení běžet na sestavení Windows 10 Insider Preview 17672 nebo novějším a musí mít čip TPM 2.0. Vzhledem k tomu, že se nevyžaduje žádné ověřování uživatelů, byste tuto možnost měli přiřazovat jenom pro zařízení, nad kterými máte fyzickou kontrolu.
 
 #### <a name="new-languageregion-setting-when-configuring-oobe-for-autopilot----1821766---"></a>Nové nastavení jazyka/oblasti při konfiguraci možností při prvním spuštění počítače pro Autopilot <!-- 1821766 -->
@@ -781,7 +850,7 @@ U každého zařízení je teď uvedený údaj CCID (Chip Card Interface Device)
 #### <a name="assign-all-users-and-all-devices-as-scope-groups----2196803---"></a>Přiřazení všech uživatelů a všech zařízení jako skupin oborů <!-- 2196803 -->
 Všechny uživatele, všechna zařízení a všechny uživatele a zařízení teď můžete přiřadit do skupin oborů. Když to chcete udělat, zvolte **Role Intune** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > zvolte přiřazení > **Rozsah (Skupiny)**.
 
-#### <a name="udid-information-now-included-for-ios-and-macos-devices----2219806-wnready--"></a>U zařízení s iOSem a macOS je teď uvedený identifikátor UDID <!-- 2219806 wnready-->
+#### <a name="udid-information-now-included-for-ios-and-macos-devices----2219806---"></a>U zařízení s iOSem a macOS je teď uvedený identifikátor UDID <!-- 2219806 -->
 Když chcete identifikátor UDID (Unique Device Identifier) pro zařízení s iOSem a macOS zobrazit, přejděte na **Zařízení** > **Všechna zařízení** > zvolte zařízení > **Hardware**. Identifikátor UDID je dostupný jenom pro firemní zařízení (podle nastavení v části **Zařízení** > **Všechna zařízení** > zvolte zařízení > **Vlastnosti** > **Vlastnictví zařízení**).
 
 ### <a name="intune-apps"></a>Aplikace Intune
@@ -955,7 +1024,7 @@ Aktualizovali jsme aplikaci Portál společnosti pro zařízení s macOS a zlep�
 
 Další informace najdete v článku o [posílání chyb ze zařízení s macOS](/intune-user-help/send-errors-macos).
 
-#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10----1195010-wnready---"></a>Aplikace Portál společnosti Intune pro Windows 10 používá systém návrhu FDS (Fluent Design System) <!-- 1195010 WNready -->
+#### <a name="intune-adapts-to-fluent-design-system-in-the-company-portal-app-for-windows-10----1195010---"></a>Aplikace Portál společnosti Intune pro Windows 10 používá systém návrhu FDS (Fluent Design System) <!-- 1195010 -->
 Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navigační zobrazení systému návrhu FDS](https://docs.microsoft.com/windows/uwp/design/basics/navigation-basics). Po straně aplikace je statický svislý seznam všech hlavních stránek. Když na odkaz kliknete, stránka se rychle zobrazí nebo můžete mezi stránkami přepínat. Jde o první z řady aktualizací, které jsou výsledkem naší trvalé snahy o vytvoření přizpůsobivého, empatického a známého prostředí Intune. Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md).
 
 ## <a name="week-of-april-16-2018"></a>Týden od 16. dubna 2018
@@ -1111,14 +1180,8 @@ Zkontrolujte nastavení hesla ve vašem Androidu a v podnikových zásadách ome
 #### <a name="additional-information"></a>Další informace
 https://aka.ms/PasswordSettings 
 
-### <a name="plan-for-change-change-password-at-next-auth-added-to-intune---1873216---"></a>Plánovaná změna: Do Intune přibude nastavení Změnit heslo při příštím ověření<!-- 1873216 -->
-V zářijovém vydání služby se do Intune chystáme integrovat nové nastavení společnosti Apple **Změnit heslo při příštím ověření** určené pro zařízení s macOS ve verzi 10.13 a novější. Před uvedením tohoto nastavení nemůžou poskytovatelé řešení MDM ověřit, že heslo zařízení bylo změněno tak, aby vyhovovalo předpisům. Zásady konfigurace a dodržování předpisů v Intune pouze ověřují, zda je heslo zařízení při příští změně označeno jako vyhovující. Po přidání této nové funkce Apple obdrží uživatelé zařízení s macOS žádost o aktualizaci hesla i v případě, že jejich heslo odpovídá zásadám.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tato změna se dotýká prostředí, kde se pomocí Intune uplatňují zásady pro zařízení s macOS, a prostředí s hybridní správou mobilních zařízení. S tímto novým nastavením **Změnit heslo při příštím ověření** od Applu teď Intune může při doručení zásady hesel vynutit od uživatelů aktualizaci hesla. Pokud blokujete firemní prostředky do doby, než bude zařízení označeno jako vyhovující, můžou mít koncoví uživatelé zablokovaný přístup k firemním prostředkům, jako je e-mail nebo sharepointové weby, dokud si neresetují heslo. V budoucnu veškeré aktualizace zásad konfigurace a dodržování předpisů týkající se hesel vynutí u cílových uživatelů aktualizaci hesla.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Informujte váš tým technické podpory. Pokud tuto zásadu pro zařízení s macOS nechcete vynucovat, doporučujeme zrušit přiřazení stávajících zásad pro macOS nebo je odstranit. Z průzkumu mezi zákazníky vyplývá, že většiny z nich se tato změna nedotkne. Většina koncových uživatelů si po přijetí žádosti o registraci s heslem aktualizuje heslo, případně jej resetuje, aby vyhovovalo podmínkám.
+### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
+Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. S podrobnostmi vás seznámíme na [blogu podpory Intune](https://aka.ms/compportalats).
 
 ### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plánovaná změna: Přechod Intune na TLS 1.2
 Od 31. října 2018 bude Intune podporovat protokol TLS (Transport Layer Security) ve verzi 1.2, který zajistí nejlepší šifrování ve své třídě, aby byla naše služba bezpečnější a v souladu s jinými službami Microsoftu, jako je Microsoft Office 365. Office tuto změnu oznámil v MC128929.
@@ -1134,13 +1197,6 @@ Pokud budete mít po 31. říjnu 2018 problém s použitím staré verze protoko
 Doporučujeme vám proaktivně ve vašich prostředích rušit závislosti na protokolech TLS 1.0 a 1.1 a tam, kde je to možné, zakázat protokoly TLS 1.0 a 1.1 na úrovni operačního systému. Začněte plánovat migraci na protokol TLS 1.2 už dnes. Přečtěte si níže uvedený blogový příspěvek o podpoře se seznamem zařízení, které Intune aktuálně nepodporuje, ale přesto mohou přijímat zásady, a které nebudou moct prostřednictvím protokolu TLS verze 1.2 komunikovat. Dané koncové uživatele budete muset upozornit, že přijdou o přístup k podnikovým prostředkům.
 
 **Další informace**: [Přechod Intune na šifrování TLS 1.2](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
-
-
-### <a name="plan-for-change-use-intune-on-azure-now-for-your-mdm-management----1227338---"></a>Plánovaná změna: Ke správě MDM se teď používá Intune v Azure <!-- 1227338 -->
-Před více než rokem jsme oznámili vydání [Intune ve verzi Public Preview na platformě Azure](https://cloudblogs.microsoft.com/enterprisemobility/2016/12/07/public-preview-of-intune-on-azure/) a pak před šesti měsíci [obecnou dostupnost nového prostředí pro správu](https://cloudblogs.microsoft.com/enterprisemobility/2017/06/08/the-new-intune-and-conditional-access-admin-consoles-are-ga/) Intune. Od 31. srpna 2018 vypínáme správu mobilních zařízení (MDM) v klasické konzole Silverlight pro zákazníky, kteří používají Intune samostatně. Místo toho můžete ke svým potřebám MDM používat [Intune v Azure](https://aka.ms/Intune_on_Azure). Pokud k MDM ještě používáte klasickou konzolu, přestaňte ji prosím používat a seznamte se s Intune v Azure. Neočekáváme, že tato změna bude mít nějaký dopad na koncové uživatele. Klasická správa počítačů zůstane v Silverlightu. Další informace o této změně a o jejím dopadu na vás najdete [tady](https://aka.ms/Intune_on_Azure_mdm).
-
-### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
-Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. S podrobnostmi vás seznámíme na [blogu podpory Intune](https://aka.ms/compportalats).
 
 
 

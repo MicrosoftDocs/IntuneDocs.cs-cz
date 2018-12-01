@@ -16,12 +16,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: fbe8cc0fc3e835ee5807dfbe56ea1aa3c728547e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 542efda11e6d1c6b61f8cbc08ea6c29e36e1f8fc
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184722"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728714"
 ---
 # <a name="the-early-edition-for-microsoft-intune---november-2018"></a>Časná edice Microsoft Intune – listopad 2018
 
@@ -45,30 +45,14 @@ Tato stránka se pravidelně aktualizuje. Přijďte se tedy znovu podívat, jest
 ### <a name="uninstalling-apps-on-corporate-owned-supervised-ios-devices----1281677---"></a>Odinstalace aplikací na zařízeních s iOSem ve vlastnictví společnosti pod dohledem <!-- 1281677 -->
 Na zařízeních s iOSem ve vlastnictví společností pod dohledem budete moci odebrat libovolnou aplikaci. Libovolnou aplikaci můžete odebrat, když cílem přiřazení typu **Odinstalovat** budou skupiny uživatelů nebo zařízení. U zařízení s iOSem, která jsou osobní nebo nejsou pod dohledem, budete nadále moci odebrat jen aplikace, které byly nainstalované pomocí Intune.
 
-### <a name="track-installation-of-office-proplus---2620217--"></a>Sledování instalace Office ProPlus <!--2620217-->
-Pomocí [stránky se stavem registrace](windows-enrollment-status.md) budete moci sledovat průběh instalace [Office ProPlus](apps-add-office365.md).
-
 ### <a name="macos-device-enrollment-program-support-for-apple-school-manager-accounts---3006133--"></a>Podpora Programu registrace zařízení s macOS pro účty Apple School Manageru <!--3006133-->
 Intune bude pro účty Apple School Manageru podporovat použití Programu registrace zařízení na zařízeních s macOS.
-
-### <a name="temporarily-pause-kiosk-mode-on-android-devices-to-make-changes----3041935---"></a>Dočasné pozastavení beznabídkového režimu na zařízeních s Androidem kvůli provedení změn <!-- 3041935 -->
-Při používání zařízení s Androidem v beznabídkovém režimu s více aplikacemi může správce IT potřebovat udělat v zařízení změny. Nové nastavení beznabídkového režimu s více aplikacemi umožní správcům IT dočasně pozastavit tento režim pomocí kódu PIN a získat tak přístup k celému zařízení.
-Aktuální nastavení beznabídkového režimu najdete v článku [Nastavení beznabídkového režimu Androidu](android-kiosk-settings.md).
 
 ### <a name="set-custom-background-in-managed-home-screen-app-----3041945---"></a>Nastavení vlastního pozadí v aplikaci Managed Home Screen <!-- 3041945 -->
 Přidáme nastavení, které vám umožní přizpůsobit vzhled pozadí aplikace Managed Home Screen na zařízeních s Androidem Enterprise v beznabídkovém režimu s více aplikacemi.  Pokud chcete nakonfigurovat **vlastní adresu URL pozadí**, na webu Azure Portal přejděte na Intune > Konfigurace zařízení. Vyberte aktuální profil konfigurace zařízení nebo vytvořte nový a upravte nastavení beznabídkového režimu.
 
-### <a name="enable-virtual-home-button-on-android-enterprise-kiosk-devices-----3042021---"></a>Povolení virtuálního tlačítka Domů na zařízeních s Androidem Enterprise v beznabídkovém režimu <!-- 3042021 -->
-Nové nastavení umožní uživatelům klepnutím na softwarové tlačítko přepínat mezi aplikací Managed Home Screen a jinými přiřazenými aplikacemi na zařízení v beznabídkovém režimu s více aplikacemi. Toto nastavení je zvláště užitečné v situacích, kdy beznabídková aplikace uživatele nereaguje správně na tlačítko Zpět. Toto nastavení budete moci nakonfigurovat pro zařízení s Androidem ve vlastnictví firmy pro použití s jednou aplikací. Pokud chcete nakonfigurovat **Virtuální tlačítko Domů**, na webu Azure Portal přejděte na Intune > Konfigurace zařízení. Vyberte aktuální profil konfigurace zařízení nebo vytvořte nový a upravte nastavení beznabídkového režimu.
-
-### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Uložení a použití přiřazení zásad ochrany aplikací <!-- 3104570 -->
-Nad přiřazeními zásad ochrany aplikací budete mít lepší kontrolu. Protože přiřazení zásad ochrany aplikací budete moci uložit a použít, budou zásadami ochrany aplikací přímo ovlivněni jen zamýšlení uživatelé.
-
 ### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nová nastavení prohlížeče Microsoft Edge pro Windows 10 a novější <!-- 3174639 -->
 Bude přidáno nové nastavení, které umožní řídit a spravovat prohlížeč Microsoft Edge v zařízeních. Seznam aktuálních nastavení najdete v článku o [omezení zařízení s Windows 10 (a novějšími verzemi)](device-restrictions-windows-10.md#microsoft-edge-browser).
-
-### <a name="select-apps-tracked-on-the-enrollment-status-page---2531007---"></a>Výběr aplikací sledovaných na stránce se stavem registrace<!-- 2531007 -->
-Budete moci zvolit, které aplikace se sledují na stránce se stavem registrace.
 
 ### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
 
@@ -108,11 +92,6 @@ Nastavení zásad ochrany aplikací (APP) pro webový obsah na zařízeních s A
 
 ### <a name="apple-vpp-token-used-by-another-mdm----1488946---"></a>Token Apple VPP používá jiný produkt MDM <!-- 1488946 -->
 Intune rozpozná situaci, kdy se token programu hromadných nákupů (VPP) společnosti Apple používá v Intune a zároveň v jiném produktu MDM, a zobrazí podrobnosti.
-
-### <a name="ios-and-macos-version-numbers-and-build-numbers-are-available-in-compliance-policies----1892471---"></a>V zásadách dodržování předpisů jsou dostupná čísla verzí a buildů pro iOS a macOS <!-- 1892471 -->
-V oblasti **Dodržování předpisů zařízením** > **Dodržování předpisů zařízením** se zobrazují verze operačního systému iOS a macOS, která lze použít v zásadách dodržování předpisů. V některé z budoucích aktualizací půjde u obou platforem nakonfigurovat i číslo buildu.
-
-Při vydání aktualizací zabezpečení společnost Apple obvykle ponechává stávající číslo verze, ale aktualizuje číslo buildu. Pomocí čísla buildu v zásadách dodržování předpisů můžete snadno zkontrolovat, jestli je nainstalovaná aktualizace řešící ohrožení zabezpečení.
 
 ### <a name="retired-devices-in-the-device-compliance-dashboard----1981119---"></a>Vyřazená zařízení na řídicím panelu Dodržování předpisů zařízením <!-- 1981119 -->
 V budoucí aktualizaci se z řídicího panelu Dodržování předpisů zařízením odeberou vyřazená zařízení. Změní se tím číselné údaje týkající se dodržování předpisů.

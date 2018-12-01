@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/15/2018
+ms.date: 11/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc1974a57e5a5aa6808936c37e02fd31a7cac7b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ef26e42b2e500d841aa32fa6239e6970e0cfb577
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187289"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728986"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -186,7 +186,7 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
     - **Použít vlastní skript zjišťování**: Zadejte powershellový skript, který se použije ke zjištění této aplikace. 
     
         1.  **Soubor skriptu**: Vyberte powershellový skript, který zjistí přítomnost aplikace v klientovi. Aplikace se bude považovat za zjištěnou, když skript vrátí ukončovací kód s hodnotou 0 a zapíše řetězcovou hodnotu do výstupu STDOUT.
-        2.  **Na 64bitových klientech spouštět skript jako 32bitový proces**: Vyberte **Ano**, pokud chcete spouštět skript pomocí přihlašovacích údajů přihlášeného koncového uživatele. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět v kontextu systému.
+        2.  **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** ke spuštění skriptu s použitím pověření přihlášeného uživatele. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět v kontextu systému.
         3.  **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
     
         Funkce Intune Sidecar zkontroluje výsledky skriptu. Přečte hodnoty, které skript zapsal do standardního streamu výstupu (STDOUT), standardního streamu chyb (STDERR) a do ukončovacího kódu. Pokud kód končí nenulovou hodnotu, skript selže a stav zjišťování aplikace je Nenainstalováno. Pokud ukončovací kód obsahuje nulovou hodnotu a výstup STDOUT obsahuje data, byl stav zjišťování aplikace je Nainstalováno. 
@@ -200,7 +200,7 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
 1.  V podokně **Přidat aplikaci** vyberte **Návratové kódy** a přidejte návratové kódy, které se mají použít buď pro přidání chování při opakování instalace aplikace, nebo pro přidání chování po instalaci. Položky návratových kódů se standardně přidají při vytváření aplikace. Můžete ale přidat další nebo změnit existující návratové kódy. 
 2.  V podokně **Návratové kódy** přidejte další návratové kódy nebo změňte existující návratové kódy.
-    - **Chyba**: Tato návratová hodnota označuje, že se aplikaci nepodařilo nainstalovat.
+    - **Nepovedlo** – návratovou hodnotu, která označuje k selhání instalace aplikace.
     - **Úplné restartování**: Návratový kód pro úplné restartování nepovolí instalaci dalších aplikací Win32 do klienta bez úplného restartování. 
     - **Rychlé restartování**: Návratový kód pro rychlé restartování umožní instalaci další aplikace Win32 bez nutnosti restartovat klienta. Restartování je důležité pro instalaci aktuální aplikace.
     - **Opakovat**: Agent návratového kódu pro opakování se třikrát pokusí aplikaci nainstalovat. Mezi jednotlivými pokusy počká 5 minut. 
@@ -228,15 +228,19 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
 V tomto okamžiku jste dokončili postup přidání aplikace Win32 do Intune. Informace o přiřazení a monitorování aplikace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) a [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
 
+## <a name="delivery-optimization"></a>Optimalizace doručení
+
+Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí komponenty optimalizace doručování na klientovi Windows 10. Optimalizace doručení poskytuje peer-to-peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení lze konfigurovat pomocí zásad skupiny a v budoucnu prostřednictvím Intune MDM. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+
 ## <a name="install-required-and-available-apps-on-devices"></a>Instalace požadovaných a dostupných aplikací na zařízení
 
-Koncovému uživateli se pro instalaci požadovaných a dostupných aplikací zobrazí informační zprávy Windows. Na následujícím obrázku je znázorněna ukázková informační zpráva, že instalace aplikace se nedokončí, dokud se zařízení nerestartuje. 
+Koncovému uživateli se zobrazí informační zprávy Windows pro instalace aplikací povinné a k dispozici. Na následujícím obrázku je znázorněna ukázková informační zpráva, že instalace aplikace se nedokončí, dokud se zařízení nerestartuje. 
 
 ![Snímek obrazovky s ukázkovými informačními zprávami Windows pro instalaci aplikace](./media/apps-win32-app-08.png)    
 
-Následující obrázek oznamuje koncovému uživateli, že aplikace provádí změny zařízení.
+Na následujícím obrázku upozorní koncového uživatele, že jsou prováděny změny aplikace do zařízení.
 
-![Snímek obrazovky s ukázkovým oznámením koncovému uživateli, že aplikace provádí změny zařízení](./media/apps-win32-app-09.png)    
+![Snímek obrazovky s příkladem upozornění koncového uživatele, které jsou prováděny změny aplikace do zařízení](./media/apps-win32-app-09.png)    
 
 ## <a name="troubleshoot-win32-app-issues"></a>Řešení potíží s aplikacemi Win32
 Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. Nástroj *CMTrace.exe* si můžete stáhnout z umístění uvedeném v článku o [klientských nástrojích SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
