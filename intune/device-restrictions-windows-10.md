@@ -1,11 +1,11 @@
 ---
 title: Nastavení omezení zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
-description: Přečtěte si o nastaveních Microsoft Intune, pomocí kterých můžete řídit nastavení a funkce na zařízeních s Windows 10.
+description: Zobrazit seznam všech nastavení a jejich popisy pro vytvoření omezení zařízení v systému Windows 10 a novější zařízení. Chcete-li řídit snímky obrazovky, požadavky na heslo, nastavení beznabídkového režimu, aplikace ve storu, prohlížeč Microsoft Edge, program Windows defender, přístup do cloudu a nabídce start a další v Microsoft Intune pomocí těchto nastavení v profilu konfigurace.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 11/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,420 +13,492 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c49da9c323e1c4124ad76ae64e63a177edfcaa71
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8c62a9e6914402d65b215a1f722289bd5660b739
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189975"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728765"
 ---
-# <a name="device-restriction-for-windows-10-and-newer-settings-in-intune"></a>Nastavení omezení zařízení se systémem Windows 10 (a novějším) v Intune
-Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s Windows 10.
+# <a name="windows-10-and-newer-device-restriction-settings-in-microsoft-intune"></a>Nastavení omezení pro Windows 10 (a novějších) zařízení v Microsoft Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Tento článek uvádí a popisuje všechna nastavení omezení zařízení, která můžete konfigurovat pro zařízení s Windows 10. Tato nastavení jsou přidány do konfiguračního profilu zařízení a potom přiřazené nebo nasazené do zařízení pomocí Microsoft Intune.
 
 > [!Note]
 > Některé možnosti nejsou v některých verzích Windows dostupné.
 
 ## <a name="general"></a>Obecné
-- **Snímek obrazovky (jenom mobilní verze)** – Umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
-- **Kopírování a vložení (jenom mobilní verze)** – Povolí akce kopírování a vkládání mezi aplikacemi na zařízení.
-- **Ruční zrušení zápisu** – Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
-   - Nastavení této zásady se neuplatní, pokud je počítač připojený ke službě Azure AD a je povolená automatická registrace. 
-   - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
-- **Ruční instalace kořenového certifikátu (jenom mobilní verze)** – Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 
-- **Kamera** – Povolí nebo zablokuje použití fotoaparátu v zařízení.
-- **Synchronizace souborů OneDrivu** – Zablokuje zařízení možnost synchronizovat soubory s OneDrivem.
-- **Vyměnitelné úložiště** – Určuje, jestli je možné v zařízení používat externí úložiště, jako jsou karty SD.
-- **Zeměpisná poloha** – Určuje, jestli zařízení může používat informace služeb určování polohy.
-- **Sdílení internetu** – Povolí používat sdílení internetového připojení na zařízení.
-- **Obnovení továrního nastavení telefonu** – Určuje, jestli uživatel může své zařízení vymazat.
-- **Připojení USB (jenom mobilní zařízení)** – Určuje, jestli má zařízení přístup k zařízením externího úložiště prostřednictvím připojení USB.
-- **Režim AntiTheft (jenom mobilní verze)** – Umožňuje nakonfigurovat, jestli má být povolený režim Windows Antitheft.
-- **Cortana** – Povolí nebo zakáže hlasovou asistentku Cortanu.
-- **Záznam hlasu (jenom mobilní verze)** – Povolí nebo zablokuje na zařízení použití hlasového záznamu.
-- **Změny názvu zařízení** – Zabrání koncovému uživateli ve změně názvu zařízení (jenom Windows 10 Mobile).
-- **Přidávat zřizovací balíčky** – Blokuje agenta konfigurace modulu runtime, který instaluje zřizovací balíčky.
-- **Odebírat zřizovací balíčky** – Blokuje agenta konfigurace modulu runtime, který odebírá zřizovací balíčky.
-- **Zjišťování zařízení** – Zablokuje zjišťování zařízení jinými zařízeními.
-- **Přepínání úloh (jenom mobilní verze)** – Zablokuje přepínání úloh na zařízení.
-- **Chybový dialog SIM karty (jenom mobilní verze)** – Zablokuje zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta.
-- **Pracovní prostor Ink** – Brání uživatelům v přístupu k Pracovnímu prostoru Ink. Při nastavení na **Nenakonfigurováno** je tento pracovní prostor povolený (funkce je zapnutá) a uživatel ho může používat nad zamykací obrazovkou.
-- **Automatické opětovné nasazení** – Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí klávesové zkratky **CTRL+Win+R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
-- **Vyžadovat, aby se uživatelé při instalaci zařízení připojili k síti (jen Windows Insider)** – Zvolte **Vyžadovat**, aby se během instalace Windows 10 zařízení ještě před opuštěním stránky Síť připojilo k síti. Funkce je sice ve verzi Preview, ale ve Windows Insider sestavení 1809 nebo novějších je toto nastavení povinné.
+- **Snímek obrazovky (jenom mobilní)**: umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
+- **Kopírování a vložení (jenom mobilní verze)**: Povolit kopírování a vkládání mezi aplikacemi na zařízení akce.
+- **Ruční zrušení zápisu**: umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
+  - Nastavení této zásady se neuplatní, pokud je počítač připojený ke službě Azure AD a je povolená automatická registrace. 
+  - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
+- **Ruční instalace kořenového certifikátu (jenom mobilní verze)**: zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
+
+- **Fotoaparát**: Povolí nebo zablokuje použití fotoaparátu v zařízení.
+- **Synchronizace souboru Onedrivu**: zablokuje zařízení možnost synchronizovat soubory na OneDrive.
+- **Vyměnitelné úložiště**: Určuje, jestli se zařízení můžete použít zařízení externího úložiště, jako jsou SD karty.
+- **Informace o zeměpisné poloze**: Určuje, jestli zařízení může používat informace služeb určování polohy.
+- **Sdílení Internetu**: umožňují používat sdílení internetového připojení na zařízení.
+- **Obnovení továrního nastavení telefonu**: Určuje, jestli uživatel může vymazání na svém zařízení.
+- **Připojení USB (jenom mobilní verze)**: Určuje, jestli zařízení má přístup k zařízením externího úložiště prostřednictvím připojení USB.
+- **Režim antiTheft (jenom mobilní verze)**: konfigurovat, jestli je povolený režim Windows Antitheft.
+- **Cortana**: Povolí nebo zakáže hlasového asistenta Cortany.
+- **Záznam hlasu (jenom mobilní verze)**: Povolí nebo zablokuje použití záznamu hlasu zařízení.
+- **Změny názvu zařízení**: zabrání koncovému uživateli ve změně názvu zařízení (jenom Windows 10 Mobile)
+- **Přidávat zřizovací balíčky**: blokuje agenta konfigurace modulu runtime, který instaluje zřizovací balíčky.
+- **Odebírání zřizovacích balíčků**: blokuje agenta konfigurace modulu runtime, který odebírá zřizovací balíčky.
+- **Zjišťování zařízení**: blokovat zařízení zjišťování jiných zařízení.
+- **Přepínání (jenom mobilní verze) úloh**: zablokuje přepínání úloh na zařízení.
+- **Chybový dialog SIM karty (jenom mobilní verze)**: blokuje chybová zpráva ze zobrazení na zařízení, pokud se nezjistí žádná SIM karta.
+- **Pracovní prostor Ink**: uživatelům zablokovat přístup k pracovnímu prostoru ink. **Není nakonfigurováno** zapne tento pracovní prostor a uživatel může používat nad zamykací obrazovkou.
+- **Automatické opětovné nasazení**: umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí **CTRL + Win + R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
+- **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení (jenom Windows Insider)**: Zvolte **vyžadují** tak připojení zařízení k síti před pokračováním stránky sítě během instalace Windows 10. Funkce je sice ve verzi Preview, ale ve Windows Insider sestavení 1809 nebo novějších je toto nastavení povinné.
 
 ## <a name="password"></a>Heslo
--   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
-    -   **Požadovaný typ hesla** – Určuje, jestli musí být heslo složené jen z čísel, nebo z čísel a písmen.
-    -   **Minimální délka hesla** – Platí jenom pro Windows 10 Mobile.
-    -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Pro zařízení s Windows 10: Pokud má zařízení povolený nástroj BitLocker, přejde do režimu obnovení nástroje BitLocker v případě, že se nepovede určený počet pokusů o přihlášení. Pokud zařízení nemá povolený nástroj BitLocker, toto nastavení se na něho nevztahuje.
-Pro zařízení s Windows 10: Jakmile se nepovede určený počet pokusů o přihlášení, zařízení bude vymazáno.
-    -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí být zařízení v nečinnosti, než se zamkne obrazovka.
-    -   **Konec platnosti hesla (dny)** – Určuje dobu, po jejímž uplynutí je třeba změnit heslo k zařízení.
-    -   **Znemožnit opakované použití předchozích hesel** – Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.
-    -   **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)** – Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
-    -   **Jednoduchá hesla** – Umožňuje používat jednoduchá hesla, třeba 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
--   **Šifrování** – Povoluje šifrování na cílových zařízeních.
+
+- **Heslo**: vyžaduje koncový uživatel zadal heslo pro přístup k zařízení.
+  - **Vyžadovaný typ hesla**: Určuje, zda heslo musí být číselná hodnota pouze nebo alfanumerické znaky.
+  - **Minimální délka hesla**: platí pouze pro Windows 10 Mobile.
+  - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: pro zařízení s Windows 10: Pokud má zařízení povolený nástroj BitLocker, ji má přejde do režimu obnovení nástroje BitLocker po přihlášení v selže počet pokusů, které jste zadali. Pokud zařízení není povolený nástroj BitLocker, toto nastavení neplatí. Pro zařízení s Windows 10 Mobile: po přihlášení se nepovede určený počet pokusů o, bude zařízení vymazáno.
+  - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Určuje dobu, musí být zařízení nečinné, než se uzamkne jeho obrazovka.
+  - **Vypršení platnosti hesla (dny)**: Určuje dobu, po jejímž uplynutí se musí změnit heslo zařízení.
+  - **Zakázat opakované použití předchozích hesel**: Určuje počet dříve použitých hesel, která jsou na zařízení zapamatovávají.
+  - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)**: Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
+  - **Jednoduchá hesla**: umožňuje používat jednoduchá hesla jako 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
+- **Šifrování**: Povolit šifrování na cílových zařízeních.
 
 ## <a name="personalization"></a>Přizpůsobení
 
-- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)** – Zadejte adresu URL obrázku ve formátu JPEG, který chcete použít jako tapetu na ploše Windows. Uživatelé nemohou tento obrázek změnit.
+- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu JPEG, který chcete použít jako tapeta na ploše Windows. Uživatelé nemohou tento obrázek změnit.
 
 ## <a name="privacy"></a>Ochrana osobních údajů
 
--   **Přizpůsobení vstupu** – Zakáže použití cloudových hlasových služeb pro Cortanu, diktování nebo aplikace z Microsoft Storu. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
--   **Automatické přijetí párování a výzev k udělení souhlasu uživatele s ochranou osobních údajů** – Umožňuje Windows u spuštěných aplikací automaticky potvrzovat zprávy o párování a ochraně osobních údajů.
-- **Publikovat aktivity uživatele**: Zvolte **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh.
-- **Jen místní aktivity**: Zvolte **Blokovat**, pokud chcete zabránit ve sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen u místní aktivity.
+- **Přizpůsobení vstupu**: Zakáže použití cloudových hlasových služeb pro Cortanu, diktování nebo Microsoft Store aplikace. Pokud tyto služby povolíte, může Microsoft kvůli vylepšení služby shromažďovat hlasová data.
+- **Automatické přijetí párování a ochrana osobních údajů pokynů souhlasu uživatele**: Povolit Windows pro automatické přijetí párování a ochrana osobních údajů souhlas zpráv při spuštění aplikace.
+- **Publikovat aktivity uživatele**: **bloku** zabraňuje sdílení a zjišťování naposledy použitých prostředků v přepínání úloh.
+- **Jen místní aktivity**: **bloku** zabraňuje sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen na základě místní aktivity.
 
-Můžete definovat informace, ke kterým budou mít přístup všechny aplikace na zařízení. Pomocí **výjimek ze zásad ochrany osobních údajů pro jednotlivé aplikace** můžete definovat výjimky.
+Můžete nakonfigurovat informace, které můžete přístup všechny aplikace na zařízení. Pomocí **výjimek ze zásad ochrany osobních údajů pro jednotlivé aplikace** můžete definovat výjimky.
 
 ### <a name="exceptions"></a>Výjimky
 
-- **Informace o účtu** – Definujte, jestli tato aplikace bude mít přístup k uživatelskému jménu, obrázku nebo dalším kontaktním informacím.
-- **Aplikace na pozadí** – Definujte, jestli tato aplikace může běžet na pozadí.
-- **Kalendář** – Definujte, jestli tato aplikace bude mít přístup ke kalendáři.
-- **Historie volání** – Definujte, jestli tato aplikace bude mít přístup k historii volání.
-- **Kamera** – Definujte, jestli tato aplikace bude mít přístup ke kameře.
-- **Kontakty** – Definujte, jestli tato aplikace bude mít přístup ke kontaktům.
-- **E-mail** – Definujte, jestli tato aplikace bude mít přístup k e-mailům a k jejich odesílání.
-- **Poloha** – Definujte, jestli tato aplikace bude mít přístup k informacím o poloze.
-- **Zasílání zpráv** – Definujte, jestli tato aplikace může číst nebo posílat textové zprávy nebo zprávy MMS.
-- **Mikrofon** – Definujte, jestli tato aplikace může používat mikrofon.
-- **Pohyb** – Definujte, jestli tato aplikace bude mít přístup k informacím o pohybu zařízení.
-- **Oznámení** – Definujte, jestli tato aplikace bude mít přístup k oznámením.
-- **Telefon** – Definujte, jestli tato aplikace bude mít přístup k telefonu.
-- **Radiostanice** – Některé aplikace používají bezdrátové moduly vašeho zařízení (například Bluetooth), pomocí kterých posílají a přijímají data, a potřebují mít možnost je vypnout nebo zapnout. Definujte, jestli tato aplikace může tyto moduly používat.
-- **Úkoly** – Definujte, jestli tato aplikace bude mít přístup k vašim úkolům.
-- **Důvěryhodná zařízení** – Zvolte, jestli tato aplikace může používat důvěryhodná zařízení (hardware, který jste už připojili nebo který se dodává spolu s počítačem, tabletem nebo telefonem), např. televizory, projektory apod.
-- **Zpětná vazba a diagnostika** – Zvolte, jestli tato aplikace má mít přístup k diagnostickým informacím.
+- **Informace o účtu**: Definujte, jestli tato aplikace přístup k uživatelským jménem, obrázku nebo dalším kontaktním informacím.
+- **Aplikace na pozadí**: Definujte, jestli tato aplikace může běžet na pozadí.
+- **Kalendář**: Definujte, jestli tato aplikace mít přístup ke kalendáři.
+- **Historie volání**: Definujte, jestli tato aplikace může mít přístup k historii volání.
+- **Fotoaparát**: Definujte, jestli tato aplikace může mít přístup k fotoaparátu/kamery.
+- **Kontakty**: Definujte, jestli tato aplikace může mít přístup ke kontaktům.
+- **E-mailu**: Definujte, jestli tato aplikace může přistupovat k a odeslání e-mailu.
+- **Umístění**: Definujte, jestli tato aplikace může přistupovat k informacím o poloze.
+- **Zasílání zpráv**: Definujte, jestli tato aplikace může číst nebo posílat textové zprávy nebo zprávy MMS.
+- **Mikrofon**: Definujte, jestli tato aplikace může používat mikrofon.
+- **Pohybu**: Definujte, jestli tato aplikace můžete mít přístup k informacím o pohybu zařízení.
+- **Oznámení**: Definujte, jestli tato aplikace může mít přístup k oznámením.
+- **Phone**: Definujte, jestli tato aplikace může mít přístup k telefonu.
+- **Radiostanice**: některé aplikace používají bezdrátové (například Bluetooth) pomocí vašeho zařízení odesílat a přijímat data, a potřebují mít možnost vypnout zapnutí nebo vypnutí. Definujte, jestli tato aplikace může tyto moduly používat.
+- **Úlohy**: Definujte, jestli tato aplikace může mít přístup k vaše úkoly.
+- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení, což je hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte. televizory, projektory, a podobně jako důvěryhodná zařízení.
+- **Zpětná vazba a Diagnostika**: Zvolte, pokud tuto aplikaci může přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními** – Definujte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se explicitně nepárují s tímto počítačem, tabletem nebo telefonem.
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 
 Můžete přidat aplikace, které by měly mít jiné chování ochrany osobních údajů než to, které jste definovali ve výchozích zásadách.
 
-- **Název balíčku** – název řady balíčku aplikace
-- **Název aplikace** – název aplikace
+- **Název balíčku**: název řady balíčku aplikace.
+- **Název aplikace**: název aplikace.
 
 ### <a name="exceptions"></a>Výjimky
 
-- **Informace o účtu** – Definujte, jestli tato aplikace bude mít přístup k uživatelskému jménu, obrázku nebo dalším kontaktním informacím.
-- **Aplikace na pozadí** – Definujte, jestli tato aplikace může běžet na pozadí.
-- **Kalendář** – Definujte, jestli tato aplikace bude mít přístup ke kalendáři.
-- **Historie volání** – Definujte, jestli tato aplikace bude mít přístup k historii volání.
-- **Kamera** – Definujte, jestli tato aplikace bude mít přístup ke kameře.
-- **Kontakty** – Definujte, jestli tato aplikace bude mít přístup ke kontaktům.
-- **E-mail** – Definujte, jestli tato aplikace bude mít přístup k e-mailům a k jejich odesílání.
-- **Poloha** – Definujte, jestli tato aplikace bude mít přístup k informacím o poloze.
-- **Zasílání zpráv** – Definujte, jestli tato aplikace může číst nebo posílat textové zprávy nebo zprávy MMS.
-- **Mikrofon** – Definujte, jestli tato aplikace může používat mikrofon.
-- **Pohyb** – Definujte, jestli tato aplikace bude mít přístup k informacím o pohybu zařízení.
-- **Oznámení** – Definujte, jestli tato aplikace bude mít přístup k oznámením.
-- **Telefon** – Definujte, jestli tato aplikace bude mít přístup k telefonu.
-- **Radiostanice** – Některé aplikace používají bezdrátové moduly vašeho zařízení (například Bluetooth), pomocí kterých posílají a přijímají data, a potřebují mít možnost je vypnout nebo zapnout. Definujte, jestli tato aplikace může tyto moduly používat.
-- **Úkoly** – Definujte, jestli tato aplikace bude mít přístup k vašim úkolům.
-- **Důvěryhodná zařízení** – Definujte, jestli tato aplikace může používat důvěryhodná zařízení (hardware, který jste už připojili nebo který se dodává spolu s vaším počítačem, tabletem nebo telefonem), např. televizory, projektory apod.
-- **Zpětná vazba a diagnostika** – Definujte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
-- **Synchronizovat se zařízeními** – Definujte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se explicitně nepárují s tímto počítačem, tabletem nebo telefonem.
+- **Informace o účtu**: Definujte, jestli tato aplikace přístup k uživatelským jménem, obrázku nebo dalším kontaktním informacím.
+- **Aplikace na pozadí**: Definujte, jestli tato aplikace může běžet na pozadí.
+- **Kalendář**: Definujte, jestli tato aplikace mít přístup ke kalendáři.
+- **Historie volání**: Definujte, jestli tato aplikace může mít přístup k historii volání.
+- **Fotoaparát**: Definujte, jestli tato aplikace může mít přístup k fotoaparátu/kamery.
+- **Kontakty**: Definujte, jestli tato aplikace může mít přístup ke kontaktům.
+- **E-mailu**: Definujte, jestli tato aplikace může přistupovat k a odeslání e-mailu.
+- **Umístění**: Definujte, jestli tato aplikace může přistupovat k informacím o poloze.
+- **Zasílání zpráv**: Definujte, jestli tato aplikace může číst nebo posílat textové zprávy nebo zprávy MMS.
+- **Mikrofon**: Definujte, jestli tato aplikace může používat mikrofon.
+- **Pohybu**: Definujte, jestli tato aplikace můžete mít přístup k informacím o pohybu zařízení.
+- **Oznámení**: Definujte, jestli tato aplikace může mít přístup k oznámením.
+- **Phone**: Definujte, jestli tato aplikace může mít přístup k telefonu.
+- **Radiostanice**: některé aplikace používají bezdrátové (například Bluetooth) pomocí vašeho zařízení odesílat a přijímat data, a potřebují mít možnost vypnout zapnutí nebo vypnutí. Definujte, jestli tato aplikace může tyto moduly používat.
+- **Úlohy**: Definujte, jestli tato aplikace může mít přístup k vaše úkoly.
+- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení, což je hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte. televizory, projektory, a podobně jako důvěryhodná zařízení.
+- **Zpětná vazba a Diagnostika**: Definujte, jestli tato aplikace může přístup k diagnostickým informacím.
+- **Synchronizace se zařízeními**: Zvolte, pokud tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, které se explicitně nepárují s zařízení.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
-- **Oznámení Centra akcí (jenom mobilní verze)** – Povolí zobrazovat oznámení centra akcí na zamykací obrazovce zařízení (jenom Windows 10 Mobile).
-- **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové verze)** – Určuje adresu URL obrázku ve formátu JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Uživatelé nemůžou toto nastavení změnit.
--   **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní verze)** – Umožňuje uživatelům konfigurovat časový limit. 
--   **Cortana na zamknuté obrazovce (jenom stolní počítač)** – Nepovolí uživateli pracovat s Cortanou, když je na zařízení aktivovaná zamykací obrazovka (jenom Windows 10 Desktop).
--   **Informační zprávy na zamknuté obrazovce** – Blokuje zobrazení upozornění na zamykací obrazovce zařízení.
--   **Časový limit obrazovky (jenom mobilní verze)** – Určuje, za jak dlouho (v sekundách) po uzamčení se obrazovka vypne.
+- **Oznámení Centra akcí (jenom mobilní verze)**: zobrazovat oznámení umožňuje centra akcí na zamykací obrazovce zařízení (jenom Windows 10 Mobile).
+- **Obrázek adresa URL zamknutou obrazovku (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Uživatelé nemohou změnit toto nastavení.
+- **Uživatel Konfigurovatelný časový limit obrazovky (jenom mobilní verze)**: umožňuje uživatelům konfigurovat časový úsek 
+- **Cortana na zamknuté obrazovce (jenom desktopové verze)**: Nepovolovat uživatelům interakci s Cortanou, když je zařízení na zamykací obrazovce (jenom Windows 10 desktop).
+- **Informační zprávu oznámení na uzamčené obrazovce**: blokovat oznámení z zobrazuje na zamykací obrazovce zařízení.
+- **Časový limit (jenom mobilní verze) obrazovky**: Určuje dobu v sekundách, po uzamčení obrazovky, když se vypne.
 
 ## <a name="app-store"></a>App Store
 
--   **App Store (jenom mobilní verze)** – Povolí nebo zablokuje použití App Storu na zařízeních s Windows 10 Mobile.
--   **Automaticky aktualizovat aplikace ze Storu** – Povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Storu.
--   **Instalace důvěryhodné aplikace** – Povolí, aby se aplikace podepsané důvěryhodným certifikátem instalovaly bokem.
--   **Odemčení pro vývojáře** – Povolí nastavení pro vývojáře Windows, například možnost povolit koncovým uživatelům provádět změny aplikací nainstalovaných bokem.
--   **Sdílená data aplikací uživatele** – Povolí aplikacím sdílet data mezi různými uživateli na stejném zařízení.
--   **Použít pouze privátní úložiště** – Umožní, aby koncoví uživatelé mohli stahovat aplikace jen z privátního úložiště.
--   **Spuštění aplikace pocházející ze Storu** – Slouží k zákazu všech aplikací předinstalovaných na zařízení nebo stažených z Microsoft Storu.
--   **Nainstalovat data aplikací na systémový svazek** – Zabrání aplikacím ukládat data na systémový svazek zařízení.
--   **Nainstalovat aplikace na systémovou jednotku** – Zabrání aplikacím ukládat data na systémovou jednotku zařízení.
--   **Záznam ze hry (jenom desktopové verze)** – Umožňuje nakonfigurovat, zda jsou povolené záznam a vysílání z her.
--   **Jen aplikace ze Storu** – Nakonfiguruje, jestli uživatelé můžou instalovat aplikace odjinud než z obchodu s aplikacemi.
+- **App storu (jenom mobilní verze)**: Povolí nebo zablokuje použití app storu na zařízeních s Windows 10 Mobile.
+- **Automaticky aktualizovat aplikace ze storu**: umožňuje aplikací nainstalovaných z Microsoft Store automaticky aktualizovat.
+- **Instalace důvěryhodné aplikace**: umožňuje aplikacím, které jsou podepsané důvěryhodným certifikátem instalovaly bokem.
+- **Odemčení pro vývojáře**: Windows povolit nastavení pro vývojáře, například můžete umožnit zkušebně načtené aplikace má být upraven koncový uživatel.
+- **Sdílená data aplikací uživatele**: Povolí aplikacím sdílet data mezi různými uživateli na stejném zařízení.
+- **Použít pouze privátní úložiště**: povolení a Povolit jenom stahování aplikací z vašeho privátního úložiště koncovým uživatelům.
+- **Spuštění aplikace pocházející ze Store**: používá se k zakázání všech aplikací, které byly předem nainstalované na zařízení nebo stažených z Microsoft Store.
+- **Nainstalovat data aplikací na systémový svazek**: zabrání aplikacím ukládat data na systémový svazek zařízení.
+- **Nainstalovat aplikace na systémovou jednotku**: zabrání aplikacím ukládat data na systémovou jednotku zařízení.
+- **(Jenom desktopové verze) záznam ze hry**: Konfiguruje, jestli je povolené záznam a vysílání z her.
+- **Aplikace ze storu jenom**: Konfiguruje, zda se uživatelé můžou instalovat aplikace odjinud než v app storu.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
--   **Prohlížeč Microsoft Edge (jenom mobilní verze)** – Povolí používání webového prohlížeče Microsoft Edge na zařízení.
--   **Rozevírání panelu Adresa (jenom stolní počítače)** – Způsobí, že Microsoft Edge přestane během psaní zobrazovat seznam návrhů v rozevíracím seznamu. Tato možnost pomáhá minimalizovat využití šířky pásma sítě mezi prohlížečem Microsoft Edge a službami Microsoftu.
--   **Synchronizovat oblíbené položky mezi prohlížeči Microsoft (jenom stolní počítače)** – Umožňuje Windows synchronizovat oblíbené položky mezi Internet Explorerem a Microsoft Edgem.
--   **Odesílat hlavičky Do Not Track** – Nakonfiguruje prohlížeč Microsoft Edge tak, aby se webům, které uživatelé navštíví, posílaly hlavičky DNT (Do Not Track).
--   **Soubory cookie** – Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
--   **JavaScript** – Umožní, aby se v prohlížeči Microsoft Edge mohly spouštět skripty, třeba JavaScript.
--   **Automaticky otevíraná okna** – Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
--   **Návrhy hledání** – Umožní, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
--   **Odesílat intranetové přenosy do Internet Exploreru** – Umožňuje uživatelům otevírat intranetové weby v Internet Exploreru (jenom Windows 10 Desktop).
--   **Automatické vyplňování** – Umožňuje uživatelům měnit nastavení automatického dokončování v prohlížeči (jenom Windows 10 Desktop).
--   **Správce hesel** – Povolí nebo zakáže funkci Správce hesel v Microsoft Edgi.
--   **Umístění seznamu webů využívajících Režim rozlehlé sítě** – Určuje, kde najít seznam webů, které se otevřou v podnikovém režimu rozlehlé sítě. Uživatelé nemohou tento seznam upravovat.<br>(jenom Windows 10 Desktop)
--   **Vývojářské nástroje** – Zabrání koncovému uživateli v otevření vývojářských nástrojů Microsoft Edge.
--   **Rozšíření** – Povolí koncovému uživateli nainstalovat rozšíření Microsoft Edge na zařízení.
--   **Procházení InPrivate** – Zabrání koncovému uživateli v otevírání relací procházení InPrivate.
--   **Zobrazovat stránku softwaru spouštěného při prvním zapnutí počítače** – Přestane zobrazovat úvodní stránku při prvním spuštění Microsoft Edge.
-    -   **Adresa URL softwaru spouštěného při prvním zapnutí počítače** – Určuje adresu URL stránky, která se uživateli zobrazí při prvním spuštění Microsoft Edge (jen Windows 10 Mobile).
--   **Domovské stránky** – Přidá seznam webů, které chcete v prohlížeči Microsoft Edge použít jako domovské stránky (jen desktopové verze).
--   **Změny domovské stránky** – Umožňuje uživatelům změnit počáteční stránky, které se zobrazí při otevření Microsoft Edge. K vytvoření stránky nebo seznamu stránek, které se otevřou při spuštění Microsoft Edge, použijte nastavení Domovské stránky.
--   **Blokovat přístup k značkám s informacemi** – Zabrání koncovému uživateli v přístupu ke stránce about:flags v Microsoft Edgi, která obsahuje vývojářská a experimentální nastavení.
--   **IP adresa LocalHost pro WebRtc** – Zablokuje zobrazení IP adresy LocalHost uživatele při telefonování pomocí protokolu WebRTC.
--   **Výchozí vyhledávací web** – Určuje výchozí vyhledávací web, který se má použít. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit.
--   **Vymazat údaje o procházení při ukončení** – Vymaže historii a údaje o procházení, když uživatel zavře Microsoft Edge.
--   **Shromažďování dat pro živé dlaždice** – Zastaví ve Windows shromažďování informací pro živé dlaždice, když uživatelé v Microsoft Edgi připnou web k nabídce Start.
--  **Seznam oblíbených položek** – Definuje cestu k souboru oblíbených položek. Například http://contoso.com/favorites.html.
--  **Omezit změny oblíbených položek** -  – Možnost **Blokovat** zabrání uživatelům v přidávání, importování, řazení nebo úpravě seznamu oblíbených položek. 
+### <a name="start-experience"></a>Počáteční zkušenosti
+
+- **Spuštění Microsoft Edge s**: Zvolte, které stránky se otevře při spuštění Microsoft Edge. Možnosti:
+  - **Začít editaci**: spuštění Microsoft Edge s výchozí úvodní stránka určené operačního systému
+  - **Nová stránka karty**: Microsoft Edge načíst cokoli, co je definováno v **adresa URL stránky Nová karta** nastavení
+  - **Poslední stránka relace**: načte poslední stránka relace Microsoft Edge 
+  - **Vlastní úvodní stránku**: úvodní stránku určeného správcem IT načte Microsoft Edge
+- **Uživatel může změnit počáteční stránky**: **povolit** umožňuje uživatelům změnit domovské stránky. Správci můžou použít `EdgeHomepageUrls` přejdete stránky, které se uživatelům zobrazí ve výchozím nastavení při otevření Microsoft Edge. **Není nakonfigurováno** zablokuje uživatelům možnost měnit úvodních stránek.
+- **Nová adresa URL stránky karty**: Zadejte adresu URL otevřít na nové záložce. Zadejte například `https://www.bing.com`.
+- **Otevírání webového obsahu na stránce Nová karta**: Zvolte **bloku** zastavit Microsoft Edge otevírání webu na nové záložce. V případě blokování se nová karta otevřete prázdnou. **Není nakonfigurováno** použije výchozí chování operačního systému v zařízení, což může umožnit uživatelům si vybrat, jak je zobrazeno.
+- **Tlačítko Domů**: Zvolte, co se stane, pokud je zaškrtnuto tlačítko Domů. Možnosti:
+  - **Začít editaci**: možnost jste vybrali **spuštění Microsoft Edge s** nastavení otevře
+  - **Nová stránka karty**: možnost jste vybrali **adresa URL stránky Nová karta** nastavení otevře
+  - **Adresa URL vlastní domovské tlačítko**: možnost jste vybrali pro **domácí adresa URL tlačítka** nastavení otevře
+  - **Tlačítko Domů skrýt**: skryje tlačítko Domů
+- **Uživatel může změnit tlačítko Domů**: **povolit** umožňuje uživatelům změnit domovské tlačítko. Změny uživatele přepsání jakéhokoli nastavení správce na tlačítko Domů. **Není nakonfigurováno** použije výchozí chování operačního systému v zařízení, který může zablokovat uživatelům možnost měnit, jak správce nakonfiguroval tlačítko Domů.
+- **Zobrazit stránku prvního spuštění**: **bloku** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, třeba těm zaregistrovaným v konfiguracích s nulovými emisemi, zablokovat tuto stránku. **Není nakonfigurováno** ukazuje úvodní stránka.
+  - **První spuštění prostředí adresa URL**: Zadejte adresu URL stránky zobrazíte uživatele při prvním spuštění Microsoft Edge (jenom Windows 10 Mobile).
+- **Automaticky otevíraná okna**: Zvolte **bloku** zastavení automaticky otevíraná okna v prohlížeči. Platí jen pro Windows 10 Desktop. **Není nakonfigurováno** umožňuje automaticky otevíraných oken ve webovém prohlížeči.
+- **Odesílat intranetové přenosy do Internet Exploreru**: **povolit** umožňuje uživatelům otevírat intranetové weby v Internet Exploreru, ne Microsoft Edge (jenom Windows 10 desktop). **Není nakonfigurováno** umožňuje uživatelům používat Microsoft Edge.
+- **Umístění seznamu webů využívajících režim rozlehlé sítě**: Zadejte adresu URL, která obsahuje seznam webů, které se otevřou v podnikovém režimu. Uživatelé nemohou změnit tohoto seznamu. Platí jen pro Windows 10 Desktop.
+- **Zpráva při otevírání webů v Internet Exploreru**: pomocí tohoto nastavení můžete nakonfigurovat Microsoft Edge zobrazíte oznámení před otevřením webu v aplikaci Internet Explorer 11. Možnosti:
+  - **Není nakonfigurováno**: se používá operační systém výchozí chování, které se nemusí zobrazit zprávu.
+  - **Zobrazit zprávu bez možnosti otevřít servery v Microsoft Edge**: Zobrazit zprávu při otevírání webů v Internet Exploreru. Weby se otevřou v Internet Exploreru. Není k dispozici možnost otevření weby ve Microsoft Edge.
+  - **Zobrazit zprávu při otevírání webů v Microsoft Edge**: Zobrazit zprávu při otevírání webů v Internet Exploreru. Zpráva obsahuje **dál pokračovat v Microsoft Edge** odkaz, takže uživatelé mohou Microsoft Edge místo Internet Exploreru.
+
+  > [!IMPORTANT]
+  > Toto nastavení vyžaduje, abyste zapnuli **konfigurovat seznam webů podnikového režimu** nastavení, **odeslat všechny weby v intranetu na Internet Explorer 11** nastavení, nebo obě nastavení.
+
+- **Seznam kompatibility Microsoftu**: **bloku** brání seznam kompatibility Microsoftu v Microsoft Edge. Tento seznam od Microsoftu pomáhá Edgi správně zobrazovat stránky se známými problémy s kompatibilitou. **Není nakonfigurováno** umožňuje používat seznam kompatibility Microsoftu.
+- **Předběžné načtení úvodní stránky a stránky nové karty**: Zvolte **bloku** zabránit spuštění Microsoft Edge od předběžného načítání stránek a nové záložce. Předběžné načítání minimalizuje dobu spuštění Microsoft Edge a načtení na nové kartě. **Není nakonfigurováno** použije výchozí chování operačního systému, který může být přednačtení tyto stránky.
+- **Předběžné spuštění úvodní stránky a stránky nové karty**: Zvolte **bloku** zabránit před spuštěním úvodních stránek a nové záložce Microsoft Edge. Před spuštěním pomáhá výkonu Microsoft Edge a minimalizuje dobu potřebnou ke spuštění Microsoft Edge. **Není nakonfigurováno** použije výchozí chování operačního systému, který může být na předběžné spuštění těchto stránek.
+
+### <a name="favorites-and-search"></a>Oblíbené a vyhledávání
+
+- **Panel Oblíbené**: Zvolte, co se stane, že k oblíbeným položkám na libovolné stránce Microsoft Edge. Možnosti:
+  - **Není nakonfigurováno**: použije výchozí chování operačního systému, který může být skrýt panel Oblíbené položky na všech stránkách. Uživatel může změnit toto nastavení.
+  - **Skrýt**: skryje panel Oblíbené položky na všech stránkách. Uživatel nemůže změnit toto nastavení.
+  - **Zobrazit**: zobrazí panel Oblíbené položky na všech stránkách. Uživatel nemůže změnit toto nastavení.
+- **Seznam oblíbených položek**: Přidat seznam adres URL k souboru oblíbených položek. Například přidejte `http://contoso.com/favorites.html`.
+- **Omezit změny oblíbených položek**: **bloku** zabránit uživatelům přidávat, import, řazení nebo úpravy seznamu oblíbených položek. **Není nakonfigurováno** používá výchozí operační systém, což může povolit uživatelům změnit seznam.
+- **Synchronizovat Oblíbené položky mezi prohlížeči Microsoft (jenom desktopové verze)**: **vyžadují** vynutí Windows synchronizovat Oblíbené položky mezi Internet Explorerem a Microsoft Edgem. Přidání, odstranění, změny a změny pořadí mezi oblíbené položky jsou sdíleny mezi prohlížeči.  **Není nakonfigurováno** používá výchozí operační systém, což může uživatelům možnost k synchronizaci oblíbených položek mezi prohlížečů.
+- **Výchozí vyhledávací web**: Zvolte výchozí vyhledávací web na zařízení. Koncoví uživatelé mohou tuto hodnotu kdykoli změnit. Možnosti:
+  - Výchozí
+  - Bing
+  - Google
+  - Yahoo
+  - Vlastní hodnota
+- **Návrhy hledání**: **Nenakonfigurováno** umožňuje vyhledávací navrhoval weby web při psaní vyhledávání v panelu Adresa. **Blok** brání tuto funkci.
+
+### <a name="privacy-and-security"></a>Ochrana osobních údajů a zabezpečení
+
+- **Procházení inPrivate**: **bloku** zabrání koncovým uživatelům v otevírání relací procházení InPrivate. **Není nakonfigurováno** této funkce.
+- **Uložit historie procházení**: **bloku** zabrání v uložení historie procházení Microsoft Edge. **Není nakonfigurováno** povolení ukládání historie procházení.
+- **Vymazat údaje o ukončení (jenom desktopové verze) procházení**: **vyžadují** vymaže historii a údaje o procházení při ukončení Microsoft Edge uživatelem. **Není nakonfigurováno** používá výchozí operační systém, což může procházení dat do mezipaměti.
+- **Synchronizovat nastavení prohlížeče mezi zařízeními uživatelů**: Zvolte, jak chcete synchronizovat nastavení prohlížeče mezi zařízeními. Možnosti:
+  - **Povolit**: Povolit synchronizaci nastavení prohlížeče Microsoft Edge mezi zařízeními uživatelů
+  - **Blokovat a povolit přepsání uživatele**: blokovat synchronizaci nastavení prohlížeče Microsoft Edge mezi zařízení uživatele. Toto nastavení můžou uživatelé potlačit.
+  - **Blok**: blokovat synchronizaci nastavení prohlížeče Microsoft Edge mezi zařízení uživatele. Toto nastavení nelze přepsat uživatelé.
+- **Správce hesel**: **bloku** zakáže funkci správce hesel Microsoft Edge. **Není nakonfigurováno** této funkce.
+- **Soubory cookie**: Zvolte, jak se zpracovává soubory cookie ve webovém prohlížeči. Možnosti:
+  - **Povolit**: soubory cookie se ukládají na zařízení.
+  - **Blokovat všechny soubory cookie**: soubory cookie se ukládají na zařízení.
+  - **Blokovat jenom soubory cookie třetích stran**: třetích stran nebo partnera souborů cookie nejsou uloženy v zařízení.
+- **Automatické vyplňování**: **bloku** zakáže automatické vyplňování funkci na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči (jenom Windows 10 desktop).
+- **Odesílat hlavičky not track**: **Nenakonfigurováno** vyžaduje, aby zařízení odesílat hlavičky not track na weby, které požadují trasovací informace (doporučeno). Zvolte **bloku** zabránit odesílání těchto hlaviček, což umožní webům sledovat uživatele zařízení.
+- **IP adresa localhost pro WebRtc**: **bloku** brání IP adresy localhost uživatele při telefonování pomocí protokolu WEBRTC zobrazením. **Není nakonfigurováno** umožňuje uživatelům IP adresa localhost, které budou zobrazeny při telefonování pomocí tohoto protokolu.
+- **Dlaždice shromažďování dat pro živé**: Zvolte **bloku** zastavit Windows shromažďování informací o lokalitě je připnutá. živé dlaždice do nabídky start z Microsoft Edge. **Není nakonfigurováno** umožňuje tyto informace, které se mají shromažďovat.
+- **Uživatel může přepsat chyby certifikátů**: **bloku** zabraňuje uživatelům v přístupu k webům, které obsahují chyby SSL nebo TLS. **Není nakonfigurováno** umožňuje uživatelům přístup k těmto serverům.
+
+### <a name="additional"></a>Další
+
+- **Prohlížeč Microsoft Edge (jenom mobilní verze)**: Zvolte **bloku** k zabránění použití Microsoft Edge na zařízení. Pokud zablokujete Microsoft Edge, individuální nastavení platí jenom pro desktop. **Není nakonfigurováno** umožňuje pomocí webového prohlížeče Microsoft Edge na zařízení.
+- **(Jenom desktopové verze) Rozevírání panelu Adresa**: **bloku** zastaví zobrazování seznamu návrhů v rozevíracím seznamu při psaní Microsoft Edge. Tato možnost se může minimalizovat šířku pásma sítě mezi Microsoft Edge a služby Microsoftu. **Není nakonfigurováno** umožňuje Microsoft Edge zobrazí seznam návrhů.
+- **Zobrazení na celé obrazovce**: Zvolte **bloku** aby Microsoft Edge z pouze zobrazení webového obsahu a skrytí Microsoft Edge (režim celé obrazovky). **Není nakonfigurováno** používá výchozí operační systém, což umožňuje Microsoft Edge použít režim celé obrazovky.
+- **Příznaky**: **bloku** zabrání koncovým uživatelům v přístupu k `about:flags` stránky v Microsoft Edge, která obsahuje vývojářské a experimentální nastavení. **Není nakonfigurováno** používá výchozí operační systém, což může umožnit přístup k `about:flags` stránky.
+- **Nástroje pro vývojáře**: **bloku** koncovým uživatelům zabrání v otevření vývojářských nástrojů Microsoft Edge. **Není nakonfigurováno** umožňuje uživatelům otevírat nástroje pro vývojáře.
+- **Rozšíření**: **Nenakonfigurováno** umožňuje koncovým uživatelům pro instalaci rozšíření Microsoft Edge na zařízení. **Blok** zabrání instalaci.
+- **Rozšíření pro zkušební načtení před prodejem vývojáře**: **bloku** brání pro zkušební načtení, což nainstaluje a spustí neověřený pomocí rozšíření Microsoft Edge **načíst rozšíření** funkce. **Není nakonfigurováno** používá výchozí operační systém, což může povolit zkušební načtení před prodejem.
+- **Vyžaduje rozšíření**: vyberte, jaká rozšíření, nejde ji vypnout koncovým uživatelům v Microsoft Edge. Zadejte název řady balíčku a vyberte **přidat**. [Najít název řady balíčku (PFN)](https://docs.microsoft.com/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn) zobrazí pokyny.
+
+  Můžete také **Import** soubor CSV, který obsahuje název řady balíčku.
+
+- **JavaScript**: Zvolte **bloku** zabránit skriptů Java v prohlížeči spuštěného v příslušném zařízení. **Není nakonfigurováno** umožňuje skripty, třeba Javascript pro spuštění v prohlížeči Microsoft Edge.
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 
-- **SmartScreen pro Microsoft Edge** – Povolí filtr SmartScreen v Microsoft Edgi pro přístup k webu a stahování souborů.
-- **Přístup na škodlivý web** – Zablokuje uživatelům možnost ignorovat upozornění filtru Windows Defender SmartScreen a znemožní jim přejít na daný web.
-- **Stahování neověřených souborů** – Zablokuje uživatelům možnost ignorovat upozornění filtru Windows Defender SmartScreen a znemožní jim stahovat neověřené soubory.
+- **Filtr SmartScreen pro Microsoft Edge**: Povolit SmartScreen Microsoft Edge pro přístup k webu a stahování souborů.
+- **Přístup na škodlivý web**: zablokuje uživatelům možnost Ignorovat upozornění filtru Windows Defender SmartScreen a znemožní jim přejít na daný web.
+- **Stahování neověřených souborů**: zablokuje uživatelům možnost Ignorovat upozornění filtru Windows Defender SmartScreen a znemožní jim stahovat neověřené soubory.
 
 ## <a name="search"></a>Hledat
-- **Bezpečné vyhledávání (jenom mobilní verze)** – Řídí, jak Cortana filtruje ve výsledcích obsah pro dospělé. Můžete vybrat možnost **Striktní**, **Pokročilé** nebo povolit koncovým uživatelům, aby si zvolili vlastní nastavení.
-- **Zobrazovat webové výsledky ve vyhledávání** – Umožňuje blokovat nebo povolit zobrazování webových výsledků ve vyhledávání na zařízení.
+
+- **Bezpečné vyhledávání (jenom mobilní verze)**: řídí, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Můžete vybrat možnost **Striktní**, **Pokročilé** nebo povolit koncovým uživatelům, aby si zvolili vlastní nastavení.
+- **Zobrazovat webové výsledky ve vyhledávání**: blokování nebo povolení webových výsledků k zobrazování na zařízení.
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
--   **Účet Microsoft** – Umožní uživateli přidružit k zařízení účet Microsoft.
--   **Jiný účet než účet Microsoft** – Umožní uživateli přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.
--   **Synchronizace nastavení pro účet Microsoft** – Povolí synchronizaci nastavení zařízení a aplikací přidružených k účtu Microsoft mezi zařízeními.
+
+- **Účet Microsoft**: umožňuje uživateli přidružit k zařízení účet Microsoft.
+- **Účet od jiných výrobců**: umožňuje přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.
+- **Synchronizace nastavení pro účet Microsoft**: Povolí nastavení zařízení a aplikací, které jsou přidružené k účtu Microsoft k synchronizaci mezi zařízeními.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
--   **Mobilní datový kanál** – Zakáže uživatelům používat data, třeba k procházení webu, když jsou připojeni k mobilní síti. 
--   **Datový roaming** – Povolí roaming mezi sítěmi při práci s daty.
--   **VPN přes mobilní síť** – Určuje, jestli zařízení může při připojení k mobilní síti získat přístup k připojením VPN.
--   **VPN v mobilní síti při roamingu** – Určuje, jestli zařízení může při roamingu v mobilní síti získat přístup k připojením VPN.
--   **Bluetooth** – Určuje, jestli uživatel může povolit a konfigurovat Bluetooth na zařízení.
--   **Zjistitelnost zařízení Bluetooth** – Umožní, aby bylo toto zařízení zjistitelné jinými zařízeními podporujícími Bluetooth.
--   **Párování Bluetooth předem** – Umožní automatické párování určitých zařízení Bluetooth se zařízením hostitele.
--   **Reklama přes Bluetooth** – Umožní zařízení přijímat přes Bluetooth inzerci.
--   **Služba připojených zařízení** – Umožní vybrat, jestli povolíte službu připojených zařízení, abyste mohli zjišťovat jiná zařízení Bluetooth a připojovat se k nim.
--   **Bezkontaktní komunikace (NFC)** – Umožní uživateli povolit a konfigurovat na zařízení možnosti bezkontaktní komunikace.
--   **Wi-Fi** – Umožní uživateli povolit a konfigurovat Wi-Fi na zařízení (jenom Windows 10 Mobile).
--   **Automaticky se připojovat k Wi-Fi hotspotům** – Umožní zařízení automaticky se připojovat k volným Wi-Fi hotspotům a automaticky pro připojení přijímat jakékoli podmínky a ujednání.
--   **Ruční konfigurace Wi-Fi** – Určuje, jestli může uživatel nakonfigurovat svoje vlastní Wi-Fi připojení, nebo jestli může použít jenom připojení nakonfigurovaná v rámci profilu Wi-Fi sítě (jenom Windows 10 Mobile).
--   **Interval hledání Wi-Fi** – Určuje, jak často zařízení skenují sítě Wi-Fi. Zadejte hodnotu v intervalu 1 (nejčastěji) až 500 (nejméně často).
--   **Povolené služby Bluetooth** – Zadejte seznam povolených služeb a profilů Bluetooth (v podobě hexadecimálních řetězců).
+- **Mobilní datový kanál**: Zakáže uživatelům používat data, třeba k procházení webu, při připojení k mobilní síti. 
+- **Datový roaming**: povoluje roaming mezi sítěmi při přístupu k datům.
+- **VPN přes mobilní síť**: Určuje, jestli zařízení může získat přístup k připojení k síti VPN při připojení k mobilní síti.
+- **VPN v mobilní síti v roamingu**: Určuje, jestli zařízení může získat přístup k připojení k síti VPN při roamingu v mobilní síti.
+- **Bluetooth**: Určuje, jestli uživatel může zapnout a konfigurovat Bluetooth na zařízení.
+- **Zjistitelnost zařízení Bluetooth**: umožňuje zařízení být zjištěny jinými zařízeními podporujícími technologii Bluetooth.
+- **Párování Bluetooth předem**: umožňuje určitých zařízení Bluetooth automatické párování s hostujícím zařízením.
+- **Reklama přes Bluetooth**: umožňuje zařízení přijímat reklamu přes Bluetooth.
+- **Služba připojených zařízení**: umožňuje vybrat, jestli povolíte službu připojených zařízení, která umožňuje zjišťování a připojování dalších zařízení Bluetooth.
+- **NFC**: umožní uživateli povolit a konfigurovat funkce Bezkontaktní komunikace na zařízení.
+- **Wi-Fi**: umožní uživateli povolit a konfigurovat Wi-Fi na zařízení (jenom Windows 10 Mobile).
+- **Automaticky se připojovat k Wi-Fi hotspotům**: umožňuje zařízení automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky přijímat jakékoli podmínky a ujednání pro připojení.
+- **Ruční konfigurace Wi-Fi**: Určuje, jestli může uživatel nakonfigurovat svoje vlastní Wi-Fi připojení, nebo jestli může použít jenom připojení nakonfigurovaná v rámci profilu Wi-Fi (jenom Windows 10 Mobile).
+- **Interval skenování Wi-Fi**: Určete, jak často zařízení skenují sítě Wi-Fi. Zadejte hodnotu v intervalu 1 (nejčastěji) až 500 (nejméně často).
+- **Povolené služby Bluetooth**: zadejte jako hexadecimálních řetězců na seznam povolených služeb a profilů Bluetooth.
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
--   **Aplikace Nastavení** – Zablokuje přístup k aplikaci Nastavení Windows.
-    -   **Systém** – Zablokuje přístup k systémové oblasti v aplikaci Nastavení.
-        -   **Změny nastavení napájení a režimu spánku (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení napájení a režimu spánku na zařízení.
-    -   **Zařízení** – Zablokuje přístup k oblasti zařízení v aplikaci Nastavení.
-    -   **Síť a internet** – Zablokuje přístup k oblasti sítě a internetu v aplikaci Nastavení.
-    -   **Přizpůsobení** – Zablokuje přístup k oblasti přizpůsobení v aplikaci Nastavení.
-    -   **Účty** – Zablokuje přístup k oblasti účtů v aplikaci Nastavení.
-    -   **Čas a jazyk** – Zablokuje přístup k oblasti času a jazyka v aplikaci Nastavení.
-        -   **Změny systémového času** – Zabrání koncovému uživateli ve změně data a času zařízení.
-        -   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání koncovému uživateli ve změně nastavení oblasti na zařízení.
-        -   **Změny nastavení oblasti (jenom desktopové verze)** – Zabrání uživateli ve změně nastavení jazyka na zařízení.
-    -   **Hry** – Zablokuje přístup k aplikaci Hry v Nastavení.
-    -   **Usnadnění přístupu** – Zablokuje přístup k oblasti usnadnění přístupu v aplikaci Nastavení.
-    -   **Soukromí** – Zablokuje přístup k oblasti soukromí v aplikaci Nastavení.
-    -   **Aktualizace a zabezpečení** – Zablokuje přístup k oblasti aktualizací a zabezpečení v aplikaci Nastavení.
+- **Nastavení aplikace**: blokovat přístup k aplikaci nastavení Windows.
+  - **Systém**: blokuje přístup k systémové oblasti v aplikaci nastavení.
+    - **Změny nastavení napájení a režimu spánku (jenom desktopové verze)**: zabrání koncovému uživateli možnost měnit nastavení napájení a režimu spánku na zařízení.
+  - **Zařízení**: blokuje přístup k oblasti zařízení v aplikaci nastavení.
+  - **Síť a Internet**: blokuje přístup k oblasti sítě a Internetu v aplikaci nastavení.
+  - **Přizpůsobení**: blokuje přístup k oblasti přizpůsobení v aplikaci nastavení.
+  - **Účty**: blokuje přístup k oblasti účtů v aplikaci nastavení.
+  - **Čas a jazyk**: blokuje přístup k oblasti času a jazyka v aplikaci nastavení.
+    - **Změny systémového času**: zabrání koncovému uživateli ve změně data a času.
+    - **Změny nastavení oblasti (jenom desktopové verze)**: zabrání změně nastavení oblasti na zařízení koncového uživatele.
+    - **Změny nastavení jazyka (jenom desktopové verze)**: zabrání uživateli ve změně nastavení jazyka na zařízení.
+  - **Hraní her**: blokuje přístup k aplikaci hry v nastavení.
+  - **Usnadnění přístupu**: blokuje přístup k oblasti usnadnění přístupu v aplikaci nastavení.
+  - **Ochrana osobních údajů**: blokuje přístup k oblasti soukromí v aplikaci nastavení.
+  - **Aktualizace a zabezpečení**: blokuje přístup k oblasti aktualizací a zabezpečení v aplikaci nastavení.
 
 ## <a name="start"></a>Začátek
 
-- **Rozložení nabídky Start** – Pokud chcete přizpůsobit nabídku Start na desktopových zařízeních, můžete nahrát soubor XML s vlastním nastavením, jako je pořadí, v jakém jsou aplikace uvedeny, a další. Uživatelé nemohou zadané rozložení nabídky Start změnit.
-- **Připnout weby na dlaždice do nabídky Start** – Naimportuje obrázky z Microsoft Edge, které se na desktopových zařízeních zobrazují jako odkazy v nabídce Start ve Windows.
-- **Odepínání aplikací z hlavního panelu** – Zvolte **Blokovat**, pokud chcete uživateli zabránit v odepínání aplikací z nabídky Start.
-- **Rychlé přepínání uživatelů** – Zvolte **Blokovat**, pokud chcete současně přihlášeným uživatelům zabránit v přepínání bez odhlášení.
-- **Nejpoužívanější aplikace** – Zvolte **Blokovat**, pokud chcete v nabídce Start skrýt nejpoužívanější aplikace. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
-- **Naposledy přidané aplikace** – Zvolte **Blokovat**, pokud chcete v nabídce Start skrýt nedávno přidané aplikace. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
-- **Režim úvodní obrazovky** – Zvolte, jak se má zobrazovat obrazovka Start. Můžete zvolit možnosti **Celá obrazovka** nebo **V okně**.
-- **Naposledy otevřené položky v seznamech odkazů** – Zvolte **Blokovat**, pokud chcete v nabídce Start a na hlavním panelu skrýt nedávné seznamy odkazů. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
-- **Seznam aplikací** – Zvolte, jak se má zobrazovat aplikace Nastavení. Možnosti: 
+- **Rozložení nabídky Start**: přizpůsobení nabídky start na desktopových zařízeních, můžete nahrát soubor XML, který obsahuje vaše vlastní nastavení, včetně pořadí jsou uvedené aplikace a další. Uživatelé nemohou měnit rozložení nabídky Start, které zadáte.
+- **Připnout weby na dlaždice do nabídky Start**: Import imagí z Microsoft Edge, které se zobrazují jako odkazy v nabídce Windows Start pro desktopové zařízení.
+- **Odepínání aplikací z hlavního panelu**: Zvolte **bloku** zastavit uživateli v odepínání aplikací z nabídky Start.
+- **Rychlé přepínání uživatelů**: Zvolte **bloku** zabránit přepínání mezi uživatele, kteří jsou přihlášení současně bez odhlašování.
+- **Nejpoužívanější aplikace**: Zvolte **bloku** skrýt nejpoužívanější aplikace v seznamu zobrazuje v nabídce start. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
+- **Naposledy přidané aplikace**: Zvolte **bloku** skrýt naposledy přidané aplikace zobrazuje v nabídce start. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
+- **Režim úvodní obrazovky**: Zvolte, jak je znázorněno na obrazovce start. Můžete zvolit možnosti **Celá obrazovka** nebo **V okně**.
+- **Naposledy otevřené položky v seznamech odkazů**: Zvolte **bloku** skrýt poslední seznamy odkazů ze zobrazených v nabídce start a na hlavním panelu. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
+- **Seznam aplikací**: Zvolte, jak je znázorněno v aplikaci nastavení. Možnosti: 
   - Sbalit
   - Sbalit a zakázat aplikaci Nastavení 
   - Odebere a zakáže aplikaci Nastavení.
-- **Tlačítko napájení** – Zvolte **Blokovat**, pokud chcete v nabídce Start skrýt tlačítko napájení.
-- **Dlaždice uživatele** – Zvolte **Blokovat**, pokud chcete v nabídce Start skrýt dlaždici uživatele.
-  - **Uzamknout** – Zvolte **Blokovat**, pokud chcete v dlaždici uživatele v nabídce Start skrýt možnost `Lock`.
-  - **Odhlásit** – Zvolte **Blokovat**, pokud chcete v dlaždici uživatele v nabídce Start skrýt možnost `Sign out`.
-- **Vypnout** – Zvolte **Blokovat**, pokud chcete v tlačítku napájení v nabídce Start skrýt možnosti `Update and shut down` a `Shut down`.
-- **Režim spánku** – Zvolte **Blokovat**, pokud chcete v tlačítku napájení v nabídce Start skrýt možnost `Sleep`.
-- **Hibernace** – Zvolte **Blokovat**, pokud chcete v tlačítku napájení v nabídce Start skrýt možnost `Hibernate`.
-- **Přepnout účet** – Zvolte **Blokovat**, pokud chcete v dlaždici uživatele v nabídce Start skrýt možnost `Switch account`.
-- **Možnosti restartování** – Zvolte **Blokovat**, pokud chcete v tlačítku napájení v nabídce Start skrýt možnosti `Update and restart` a `Restart`.
-- **Dokumenty v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Dokumenty v nabídce Windows Start.
-- **Stažené soubory v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Stažené soubory v nabídce Windows Start.
-- **Průzkumník souborů v nabídce Start** – Umožňuje skrýt nebo zobrazit aplikaci Průzkumník souborů v nabídce Windows Start.
-- **Domácí skupina v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Domácí skupina v nabídce Windows Start.
-- **Hudba v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Hudba v nabídce Windows Start.
-- **Síť v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Síť v nabídce Windows Start.
-- **Složka Osobní v nabídce Start** – Umožňuje skrýt nebo zobrazit složku Osobní v nabídce Windows Start.
-- **Obrázky v nabídce Start** – Umožňuje skrýt nebo zobrazit složku s obrázky v nabídce Windows Start.
-- **Nastavení v nabídce Start** – Umožňuje skrýt nebo zobrazit aplikaci Nastavení v nabídce Windows Start.
-- **Videa v nabídce Start** – Umožňuje skrýt nebo zobrazit složku s videi v nabídce Windows Start.
+- **Tlačítko napájení**: Zvolte **bloku** skrýt tlačítko napájení v nabídce start zobrazuje.
+- **Dlaždici uživatele**: Zvolte **bloku** skrýt dlaždici uživatele ze zobrazení v nabídce start.
+  - **Zámek**: Zvolte **bloku** skrýt `Lock` možnost ukazující na dlaždici uživatele v nabídce start.
+  - **Odhlásit se**: Zvolte **bloku** skrýt `Sign out` možnost ukazující na dlaždici uživatele v nabídce start.
+- **Vypnout**: Zvolte **bloku** skrýt `Update and shut down` a `Shut down` možnosti ze zobrazení na tlačítku napájení v nabídce start.
+- **Přejít do režimu spánku**: Zvolte **bloku** skrýt `Sleep` možnost ukazující na tlačítku napájení v nabídce start.
+- **Do režimu hibernace**: Zvolte **bloku** skrýt `Hibernate` možnost ukazující na tlačítku napájení v nabídce start.
+- **Přepnout účet**: Zvolte **bloku** skrýt `Switch account` ze zobrazení uživatele dlaždice do nabídky start.
+- **Možnosti restartování**: Zvolte **bloku** skrýt `Update and restart` a `Restart` možnosti ze zobrazení na tlačítku napájení v nabídce start.
+- **Dokumenty v nabídce Start**: skrýt nebo zobrazit složku Dokumenty v nabídce Windows Start.
+- **Soubory ke stažení v nabídce Start**: skrýt nebo zobrazit složku stažené soubory v nabídce Windows Start.
+- **Průzkumník souborů v nabídce Start**: skrýt nebo zobrazit aplikaci Průzkumník souborů v nabídce Windows Start.
+- **Domácí skupina v nabídce Start**: skrýt nebo zobrazit složku domácí skupina v nabídce Windows Start.
+- **Hudba v nabídce Start**: skrýt nebo zobrazit složku Hudba v nabídce Windows Start.
+- **Síť v nabídce Start**: skrýt nebo zobrazit složku Síť v nabídce Windows Start.
+- **Složka Osobní v nabídce Start**: skrýt nebo zobrazit složku Osobní v nabídce Windows Start.
+- **Obrázky v nabídce Start**: skrýt nebo zobrazit složku s obrázky v nabídce Windows Start.
+- **Nastavení v nabídce Start**: skrýt nebo zobrazit aplikaci nastavení v nabídce Windows Start.
+- **Videa v nabídce Start**: skrýt nebo zobrazit složku s videi v nabídce Windows Start.
 
 ## <a name="display"></a>Zobrazit
 
 - **Zapnout přizpůsobení rozlišení GDI pro aplikace**
 - **Vypnout přizpůsobení rozlišení GDI pro aplikace**
 
-  Přizpůsobení rozlišení DPI GDI umožňuje aplikacím, které nepoužívají DPI, začít používat hodnoty DPI pro jednotlivé monitory. Zadejte starší verze aplikací, které budou mít přizpůsobení rozlišení DPI GDI zapnuté. Když se pro aplikaci přizpůsobení rozlišení DPI GDI vypne i zapne zároveň, bude pro danou aplikaci vypnuté.
+  Rozlišení DPI GDI umožňuje aplikacím, které nejsou rozpoznání nastavení DPI k rozpoznání nastavení DPI podle monitoru. Zadejte starší verze aplikací, které mít rozlišení DPI GDI zapnuté. S DPI škálování GDI nakonfigurovaný tak, aby zapnout a vypnout nastavení v aplikaci je škálování pro aplikaci vypnuté.
 
 ## <a name="kiosk-preview---obsolete"></a>Veřejný terminál (Preview) – zastaralé
 
 Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfigurovat režim veřejného terminálu, podívejte se na článek o [nastavení veřejného terminálu pro Windows 10 a novější](kiosk-settings.md).
 
-Zařízení s beznabídkovým režimem obvykle spouští jednu aplikaci nebo konkrétní sadu aplikací. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikací veřejného terminálu.
+Zařízení s beznabídkovým režimem obvykle spouští jednu aplikaci nebo konkrétní sadu aplikací. Uživatelé nemají přístup k žádným prvkům ani funkcím na zařízení.
 
-- **Beznabídkový režim** – Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
+- **Celoobrazovkový režim**: Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
 
-  - **Nenakonfigurováno** (výchozí) – Zásady nepovolují režim veřejného terminálu. 
-  - **Veřejný terminál s jednou aplikací** – Profil povoluje v zařízení spouštět pouze jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - **Veřejný terminál s více aplikacemi** – Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují, a nezobrazuje aplikace, které nepotřebují.
+  - **Není nakonfigurováno** (výchozí): zásady neumožňuje celoobrazovkový režim na zařízení.
+  - **Veřejný terminál aplikace s jedním**: profil povoluje v zařízení běžela jenom jedna aplikace. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+  - **Veřejný terminál s více aplikacemi**: profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují, a nezobrazuje aplikace, které nepotřebují.
 
 #### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
+
 Zadejte následující nastavení:
 
-- **Uživatelský účet** – Zadejte místní uživatelský účet (vůči zařízení), účet domény AD nebo účet Azure AD přidružený k aplikaci veřejného terminálu.
+- **Uživatelský účet**: Zadejte místní (pro zařízení) uživatelského účtu, účet domény AD nebo účet Azure AD přidružené k aplikaci veřejného terminálu.
   - Místní účet: Zadejte jako `devicename\accountname`, `.\accountname` nebo `accountname`.
   - Účet domény: Zadejte jako `domain\accountname`.
   - Účet Azure AD: Zadejte jako `AzureAD\emailaddress`. Nezapomeňte zadat „AzureAD“, protože se jedná o pevný název domény. Potom pokračujte s e-mailovou adresou Azure AD. Zadejte například `AzureAD\user@contoso.onmicrosoft.com`.
 
     U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Pokud pro beznabídkový režim používáte účet Azure AD, nezapomeňte zadat `AzureAD\user@yourorganization.com`.
 
-- **ID modelu uživatele aplikace (AUMID) dané aplikace** – Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **Modelu uživatele aplikace ID (AUMID) dané aplikace**: Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
 #### <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
+
 [Veřejné terminály s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) používají konfiguraci veřejného terminálu, která zobrazuje povolené aplikace, a další nastavení. 
 
 Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci. Potom zadejte následující nastavení:
 
-- **Název konfigurace veřejného terminálu** – Zadejte popisný název, pomocí kterého se daná konfigurace identifikuje.
+- **Název konfigurace veřejného terminálu**: Zadejte popisný název používaný k identifikaci konfigurace.
 
-- **Aplikace veřejného terminálu** – Zadejte aplikace, které jsou k dispozici v nabídce Start. Aplikace, které přidáte, jsou jediné aplikace, které uživatel může otevřít.
+- **Aplikace veřejného terminálu**: Zadejte aplikace, které jsou k dispozici v nabídce Start. Aplikace, které přidáte, jsou jediné aplikace, které uživatel může otevřít.
 
-  - **Typ aplikace** – Zvolte typ aplikace veřejného terminálu:
-    - **Aplikace Win32** – Tradiční desktopová aplikace. Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.
-    - **Aplikace pro UPW** – Univerzální aplikace pro Windows. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+  - **Typ aplikace**: Vyberte typ aplikace veřejného terminálu:
+    - **Aplikace Win32**: tradiční desktopové aplikace. Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.
+    - **Aplikace pro UPW**: Universal Windows app. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
-  - **Identifikátor** – Zadejte buď plně kvalifikovanou cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (u aplikací pro UPW).
+  - **Identifikátor**: zadejte plně kvalifikovanou cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
 
 - **Hlavní panel**: Zvolte buď **Povolit**, aby se hlavní panel zobrazoval, nebo ho ponechejte **nenakonfigurovaný** (skrytý) na veřejném terminálu.
 
-- **Rozložení nabídky Start** – Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
+- **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
 
+  [Vytvořit jako veřejný terminál Windows 10, na kterém běží aplikace](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) obsahuje další podrobnosti o používání a vytváření souborů XML.
 
-  Článek [Vytvoření veřejného terminálu s Windows 10 umožňujícího použití více aplikací](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) poskytuje podrobnější informace o používání a vytváření souborů XML.
-
-- **Přiřazení uživatelé** – Přidejte jeden či více uživatelských účtů, které mohou přidané aplikace používat. Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci. Účtem může být účet místní vůči zařízení nebo účet Azure AD přidružený k aplikaci veřejného terminálu.
+- **Přiřazení uživatelé**: Přidání jednoho nebo více uživatelských účtů, které můžou používat aplikace. Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci. Účtem může být účet místní vůči zařízení nebo účet Azure AD přidružený k aplikaci veřejného terminálu.
 
     U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `domain\user@tenant.com`.
 
 ## <a name="windows-defender-antivirus"></a>Antivirová ochrana v programu Windows Defender
 
--   **Monitorování v reálném čase** – Umožní v reálném čase zjišťovat výskyt malwaru, spywaru a dalšího nežádoucího softwaru.
--   **Monitorování chování** – Umožní programu Defender zjišťovat na zařízeních výskyt určitých známých vzorců podezřelých aktivit.
--   **Systém kontroly sítě (NIS)** – Systém NIS pomáhá chránit zařízení proti síťovým hrozbám. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
--   **Kontrolovat všechna stahování** – Určuje, jestli bude Defender kontrolovat všechny soubory stahované z internetu.
--   **Kontrolovat skripty načtené do webových prohlížečů Microsoftu** – Umožní Defenderu kontrolovat skripty, které se používají v Internet Exploreru.
--   **Přístup koncového uživatele k programu Defender** – Určuje, jestli se bude koncovým uživatelům zobrazovat uživatelské rozhraní Windows Defenderu.
-Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
--   **Interval aktualizace podpisu (v hodinách)** – Zadejte interval, ve kterém bude Defender kontrolovat dostupnost nových souborů s podpisem.
--   **Monitorovat aktivity spojené se soubory a programy** – Umožní Defenderu monitorovat aktivitu souborů a programů v zařízeních.
--   **Počet dní před odstraněním malwaru v karanténě** – Umožní Defenderu dál sledovat rozpoznaný malware po vámi určený počet dní, aby bylo možné ručně zkontrolovat dříve zasažená zařízení. Pokud nastavíte počet dnů **0**, malware zůstane ve složce karantény a automaticky se neodebere.
--   **Limit využití procesoru při kontrole** – Umožňuje nastavit maximální procento využití procesoru, které je možné využívat k provádění kontrol (od **1** do **100**).
--   **Kontrolovat archivované soubory** – Umožní Defenderu kontrolovat archivované soubory, jako jsou soubory Zip nebo Cab.
--   **Kontrolovat příchozí e-mailové zprávy** – Umožní Defenderu kontrolovat e-mailové zprávy při jejich doručení na zařízení.
--   **Při spuštění úplné kontroly kontrolovat vyměnitelné jednotky** – Umožní Defenderu kontrolovat vyměnitelné jednotky, jako jsou jednotky USB Flash.
--   **Při spuštění úplné kontroly kontrolovat namapované síťové jednotky** – Umožní Defenderu kontrolovat soubory na namapovaných síťových jednotkách.<br>Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defender odebrat žádný malware, který v nich najde.
--   **Kontrolovat soubory otevřené ze síťových složek** –Umožní Defenderu kontrolovat soubory na sdílených síťových jednotkách (například na těch, ke kterým se získává přístup pomocí cesty UNC).
-Pokud jsou soubory na jednotce určené jen pro čtení, nemůže z nich Defender odebrat žádný malware, který v nich najde.
--   **Cloudová ochrana** – Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.
--   **Dotázat se uživatele před odesláním vzorku** – Určuje, jestli se mají Microsoftu k další analýze automaticky posílat potenciálně škodlivé soubory.
--   **Čas, kdy se má provést rychlá denní kontrola** – Umožní vám naplánovat rychlou kontrolu, ke které dochází denně v době, kterou vyberete.
--   **Typ systémové kontroly, který se má provést** – Umožní vám určit hloubku kontroly při plánované kontrole systému.
--   **Zjišťovat potenciálně nežádoucí aplikace** – Zvolte stupeň ochrany, pokud Windows zjistí potenciálně nežádoucí aplikace z těchto zdrojů:
-        - **Blokováno**
-        - **Audit** Další informace o potenciálně nežádoucích aplikacích najdete v [tomto tématu](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
--   **Akce ohledně zjištěných malwarových hrozeb** – Tuto možnost povolte, pokud chcete zadat akce, které má Defender provést při zjištění hrozby určité úrovně (nízká, střední, vysoká a vážná). Mohou být provedeny tyto akce:
-    -   **Vyčistit**
-    -   **Karanténa**
-    -   **Odebrat**
-    -   **Povoleno**
-    -   **Definováno uživatelem**
-    -   **Blokováno**
+- **Monitorování v reálném čase**: umožňuje v reálném čase výskyt malwaru, spywaru a dalšího nežádoucího softwaru.
+- **Monitorování chování**: umožňuje programu Defender zjišťovat na zařízeních výskyt určitých známých vzorců podezřelých aktivit.
+- **Systém kontroly sítě (NIS)**: NIS pomáhá chránit zařízení před zneužitím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
+- **Kontrolovat všechna stahování**: Určuje, jestli bude Defender kontrolovat všechny soubory stahované z Internetu.
+- **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru.
+- **Přístup koncového uživatele k Defenderu**: Určuje, jestli se uživatelské rozhraní Windows Defenderu koncovým uživatelům. Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
+- **Interval aktualizace podpisu (v hodinách)**: Zadejte interval, ve kterém bude Defender kontrolovat dostupnost nových souborů signatur.
+- **Monitorovat aktivitu souborů a programů**: umožňuje programu Defender monitorovat aktivitu souborů a programů v zařízení.
+- **Počet dní před odstraněním malwaru v karanténě**: umožní Defenderu dál sledovat rozpoznaný malware počet dní, určíte tak, aby mohli ručně zkontrolovat dříve zasažená zařízení. Pokud nastavíte počet dnů **0**, malware zůstane ve složce karantény a automaticky se neodebere.
+- **Limit využití procesoru při kontrole**: umožňuje nastavit maximální procento využití procesoru, který je možné využívat (z **1** k **100**).
+- **Prohledat archivní soubory**: umožňuje programu Defender zkontrolovat soubory archivu, jako jsou soubory Zip nebo Cab.
+- **Kontrolovat příchozí e-mailové zprávy**: umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručení na zařízení.
+- **Během úplné kontroly kontrolovat vyměnitelné jednotky**: umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB Flash disky.
+- **Kontrolovat namapované síťové jednotky během úplného prohledávání**: umožní Defenderu kontrolovat soubory na namapovaných síťových jednotkách.
+  Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.
+- **Kontrolovat soubory otevřené ze síťových složek**: umožní Defenderu kontrolovat soubory na sdílených síťových jednotkách (například soubory se přistupuje pomocí cesty UNC). Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.
+- **Cloudová ochrana**: umožňuje povolit nebo blokovat Microsoft Active Protection Service příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.
+- **Dotázat se uživatele před odesláním vzorku**: ovládací prvky, zda potenciálně škodlivých souborů, které by mohly vyžadovat další analýzu jsou automaticky odeslány společnosti Microsoft.
+- **Čas k provedení každodenní rychlou kontrolu**: umožní vám naplánovat rychlou kontrolu, ke které dochází denně v době vyberete.
+- **Typ systémové kontroly provádět**: Zadejte úroveň prohledávání, který je spuštěn při naplánovat kontrolu systému.
+- **Zjišťovat potenciálně nežádoucí aplikace**: Zvolte stupeň ochrany, pokud Windows zjistí potenciálně nežádoucí aplikace z:
+  - **Blokováno**
+  - **Audit** Další informace o potenciálně nežádoucích aplikacích najdete v tématu [detekovat a blokovat potenciálně nežádoucí aplikace](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
+- **Akce ohledně zjištěných malwarových hrozeb**: tuto možnost použijte, chcete-li zvolit akcí, které má Defender provést na jednotlivých úrovních hrozeb detekuje (nízká, střední, vysoká a vážná). Možnosti:
+  - **Vyčistit**
+  - **Karanténa**
+  - **Odebrat**
+  - **Povoleno**
+  - **Definováno uživatelem**
+  - **Blokováno**
 
 ### <a name="windows-defender-antivirus-exclusions"></a>Výjimky antivirové ochrany v programu Windows Defender
 
--   **Soubory a složky, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje do seznamu vyloučení přidat jeden nebo více souborů a složek, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
--   **Přípony souborů, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje přidat do seznamu vyloučení jednu nebo více přípon souborů jako **jpg** nebo **txt**. Soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
--   **Procesy, které chcete vyloučit z kontrol a ochrany v reálném čase** – Umožňuje přidat do seznamu vyloučení jeden nebo více procesů typu **.exe**, **.com** nebo **.scr**. Tyto procesy nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Soubory a složky, které chcete vyloučit z kontrol a ochrany v reálném čase**: Přidá jednu nebo více souborů a složky, například **C:\Path** nebo **%ProgramFiles%\Path\filename.exe** do seznamu vyloučení. Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Vyloučit z kontrol a ochrany v reálném čase přípony souborů**: přidat jeden nebo více přípon souborů jako **jpg** nebo **txt** do seznamu vyloučení. Soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Procesy, které chcete vyloučit z kontrol a ochrany v reálném čase**: Přidání jednoho nebo více procesů typu **.exe**, **.com**, nebo **.scr** do seznamu vyloučení. Tyto procesy nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 
 ## <a name="network-proxy"></a>Síťový proxy server
 
--   **Automaticky zjišťovat nastavení proxy serveru** – Pokud je tato možnost povolena, zařízení se pokusí najít cestu ke skriptu PAC.
--   **Použít skript proxy serveru** – Tuto možnost vyberte, pokud chcete zadat cestu ke skriptu PAC pro konfiguraci proxy serveru.
-    -   **Nastavení adresy URL skriptu** – Zadejte adresu URL skriptu PAC, pomocí kterého chcete nakonfigurovat proxy server.
--   **Použít ruční proxy server** – Tuto možnost vyberte, pokud chcete ručně zadat informace o proxy serveru.
-    -   **Adresa** – Zadejte název nebo IP adresu proxy serveru.
-    -   **Číslo portu** – Zadejte číslo portu vašeho proxy serveru.
-    -   **Výjimky proxy serveru** – Zadejte adresy URL, které nesmí používat proxy server. Jednotlivé položky oddělte středníkem.
-    -   **Obejít proxy server pro místní adresy** – Tuto možnost povolte, pokud nechcete proxy server používat pro místní adresy na vašem intranetu.
+- **Automaticky zjišťovat nastavení proxy serveru**: při povolené, zařízení se pokusí najít cestu ke skriptu PAC.
+- **Použít skript proxy serveru**: tuto možnost zadejte cestu ke skriptům PAC a nakonfigurovat proxy server.
+  - **Nastavení adresy URL skriptu**: Zadejte adresu URL skriptu PAC, kterou chcete použít ke konfiguraci proxy serveru.
+- **Použít ruční proxy server**: Výběrem této možnosti ručně zadat informace o proxy serveru.
+  - **Adresa**: Zadejte název nebo IP adresu proxy serveru.
+  - **Číslo portu**: Zadejte číslo portu proxy serveru.
+  - **Výjimky proxy serveru**: Zadejte adresy URL, které se nesmí používat proxy server. Jednotlivé položky oddělte středníkem.
+  - **Obejít proxy server pro místní adresy**: tuto možnost povolte, pokud nechcete používat proxy server pro místní adresy na vašem intranetu.
 
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
-- **Windows Spotlight** – Toto nastavení použijte k zablokování všech funkcí Windows Spotlight na zařízeních s Windows 10. Pokud toto nastavení zablokujete, nebudou následující nastavení k dispozici.
-    - **Windows Spotlight na zamykací obrazovce** – Zastaví zobrazování informací z Windows Spotlight na zamykací obrazovce zařízení.
-    - **Návrhy třetích stran ve Windows Spotlightu** – Zastaví ve Windows Spotlightu návrhy obsahu, který nebyl vydán Microsoftem.
-    - **Uživatelské funkce** – Umožňuje zablokovat uživatelské funkce, jako jsou návrhy nabídky Start a oznámení o členství.
-    - **Tipy Windows** – Umožňuje zablokovat zobrazování automaticky otevíraných tipů ve Windows.
-    - **Windows Spotlight v centru akcí** – Zablokuje zobrazování návrhů Windows Spotlightu na nové aplikace nebo obsah týkající se zabezpečení v Centru akcí systému Windows.
-    - **Přizpůsobení Windows Spotlightu** – Zastaví přizpůsobování výsledků ve Windows Spotlightu na základě použití zařízení.
-    - **Prostředí uvítání systémem Windows** – Zablokuje prostředí uvítání systémem Windows, které uživateli zobrazuje informace o nových nebo aktualizovaných funkcích.
+- **Windows Spotlight**: Toto nastavení použijte k zablokování všech funkcí Windows Spotlight na zařízeních s Windows 10. Pokud toto nastavení zablokujete, nejsou k dispozici následující nastavení:
+  - **Windows Spotlight na zamykací obrazovce**: zastavení Windows Spotlightu zobrazení informací na zamykací obrazovce zařízení.
+  - **Návrhy třetích stran ve Windows Spotlightu**: zastavení Windows Spotlightu návrhy obsahu, který nebyl vydán microsoftem.
+  - **Uživatelské funkce**: Start umožňuje zablokovat uživatelské funkce, jako jsou návrhy nabídky a oznámení o členství.
+  - **Tipy Windows**: umožňuje zablokovat zobrazování v Windows automaticky otevíraných tipů.
+  - **Windows Spotlight v Centru akcí**: bloku Windows Spotlightu návrhy, jako jsou nové aplikace nebo zabezpečení obsah týkající se v Centru akcí Windows.
+  - **Přizpůsobení Windows Spotlightu**: Spotlightu Windows zastaví přizpůsobování výsledků na základě využití zařízení.
+  - **Prostředí uvítání Windows**: zablokuje prostředí uvítání Windows, které uživateli zobrazuje informace o nových nebo aktualizovaných funkcích.
 
 ## <a name="projection"></a>Promítání
 
-- **Uživatelský vstup z přijímačů bezdrátového zobrazení** – Zablokuje uživatelský vstup z přijímačů bezdrátového zobrazení.
-- **Promítání na tento počítač** – Zabrání ostatním zařízením, aby zjišťovala tento počítač pro promítání.
-- **Při párování požadovat PIN kód** – Vyžaduje PIN kód při připojení k promítacímu zařízení.
+- **Uživatelský vstup z přijímačů bezdrátového zobrazení**: zablokuje uživatelský vstup z přijímačů bezdrátového zobrazení.
+- **Promítání na tento počítač**: zabrání ostatním zařízením hledání počítač pro promítání.
+- **Párování požadovat PIN kód**: při připojení k promítacímu zařízení požadovat kód PIN.
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
-- **Adresa URL pro zjišťování tiskáren** – Zadejte adresu URL pro zjišťování cloudových tiskáren.
-- **Adresa URL autority pro přístup k tiskárnám** – Zadejte adresu URL koncového bodu ověřování pro získání tokenů OAuth. Zadejte třeba `https://login.microsoftonline.com/your Azure AD Tenant ID`.
-- **Identifikátor GUID nativní klientské aplikace Azure** – Zadejte identifikátor GUID klientské aplikace autorizované k získání tokenů OAuth od OAuthAuthority
-- **Identifikátor URI prostředku tiskové služby** – Zadejte identifikátor URI prostředku OAuth pro tiskovou službu nakonfigurovanou na webu Azure Portal. Zadejte třeba `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
-- **Maximální počet tiskáren, na který by se měl posílat dotaz (jenom mobilní zařízení)** – Zadejte maximální počet tiskáren, které se mají dotazovat. Zadejte například `10`.
-- **Identifikátor URI prostředku služby zjišťování tiskáren** – Zadejte identifikátor URI prostředku OAuth pro službu zjišťování tiskáren tak, jak je nakonfigurovaný na webu Azure Portal. Zadejte třeba `http://MopriaDiscoveryService/CloudPrint`.
+- **Adresa URL pro zjišťování tiskáren**: Zadejte adresu URL pro hledání cloudových tiskáren.
+- **Adresa URL autority pro přístup k tiskárnám**: Zadejte adresu URL koncového bodu ověřování k získání tokenů OAuth. Zadejte třeba `https://login.microsoftonline.com/your Azure AD Tenant ID`.
+- **Nativní klientské aplikace Azure GUID**: Zadejte identifikátor GUID klientské aplikace k získání tokenů OAuth od OAuthAuthority povolené.
+- **Služba identifikátor URI prostředku tiskové**: Zadejte identifikátor URI prostředku OAuth pro tiskovou službu nakonfigurované na webu Azure Portal. Zadejte třeba `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
+- **Maximální počet tiskáren pro dotaz (jenom mobilní verze)**: Zadejte maximální počet tiskáren, na které chcete, aby se dalo dotazovat. Zadejte například `10`.
+- **Identifikátor URI prostředku služby zjišťování tiskáren**: Zadejte identifikátor URI prostředku OAuth pro zjišťování tiskáren služba nakonfigurovaná na webu Azure Portal. Zadejte třeba `http://MopriaDiscoveryService/CloudPrint`.
 
 > [!TIP]
 > Po nastavení [hybridního cloudového tisku Windows Serveru](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview) můžete tato nastavení nakonfigurovat a následně nasadit do zařízení s Windows.
 
 ## <a name="local-printer"></a>Místní tiskárna
-- **Tiskárny** – Seznam přidaných místních tiskáren
-- **Výchozí tiskárna** – Nastaví výchozí tiskárnu.
-- **Přístup uživatelů k přidávání nových tiskáren** – Povolí nebo zablokuje používání místních tiskáren.
+
+- **Tiskárny**: seznam místních tiskáren, které byly přidány.
+- **Výchozí tiskárna**: Nastaví výchozí tiskárnu.
+- **Přístup uživatelů k přidávání nových tiskáren**: Povolí nebo zablokuje používání místních tiskáren.
 
 ## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
 
-- **Sdílet data o využití** – Umožňuje vybrat úroveň odesílaných diagnostických dat.
-- **Proxy server pro telemetrii**
+- **Sdílet data o využití**: Zvolte úroveň diagnostických dat, které je odeslána. Možnosti:
+  - Zabezpečení
+  - Základní
+  - Rozšířené
+  - Full
+- **Odeslat Microsoft Edge procházení dat pro Microsoft 365 Analytics**: Chcete-li tuto funkci používat, nastavte **sdílet data o využití** nastavení **rozšířená** nebo **úplné**. Tato funkce řídí, jaká data Microsoft Edge odesílá do Microsoftu 365 Analytics u podnikových zařízení nakonfigurované komerční ID. Možnosti:
+  - **Není nakonfigurováno**: používá výchozí operační systém, který nemůže posílat žádné procházení historie
+  - **Odesílala jen data intranetu**: umožňuje správci posílat intranetový data historie
+  - **Odesílala jen internet data**: umožňuje správci posílat data historie internet
+  - **Odesílat intranetové a internetové data**: umožňuje správci posílat data historie intranetu a Internetu
+- **Proxy server pro telemetrii**: zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy serveru pro předávání propojených uživatelských prostředí a Telemetrie požadavky, pomocí připojení vrstvy SSL (Secure Sockets). Formát pro toto nastavení je *server*:*port*. Pokud uvedený proxy server selže nebo pokud není k dispozici proxy zadá, když se povolí tyto zásady, data propojených uživatelských prostředí a Telemetrie se neposílají a zůstane na místním zařízení.
 
-  Zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy serveru, na který se pomocí připojení SSL (Secure Sockets Layer) budou přeposílat požadavky Propojených uživatelských prostředí a telemetrie. Formát pro toto nastavení je *server*:*port*. Pokud uvedený proxy server selže nebo se žádný proxy server nezadá, i když se povolí tyto zásady, data Propojených uživatelských prostředí a telemetrie se nebudou přenášet a zůstanou na místním zařízení.
+  Příklady formátů:
 
-   Příklady formátů:
-
-   IPv4: 192.246.246.106:100<br>
- IPv6: [2001:4898:4010:4013:95c1:a8b2:953c:c633]:100<br> FQDN: www.contoso.com:345
+  ```
+  IPv4: 192.246.246.106:100
+  IPv6: [2001:4898:4010:4013:95c1:a8b2:953c:c633]:100
+  FQDN: www.contoso.com:345
+  ```
 
 ## <a name="messaging"></a>Zasílání zpráv
 
-- **Synchronizace zpráv (jen mobilní zařízení)** – Zakáže Zasílání zpráv všude a zálohování a obnovování textových zpráv.
-- **MMS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv MMS.
-- **RCS (jen mobilní zařízení)** – Zakáže na zařízení funkci přijímání a posílání zpráv RCS (Rich Communication Services).
+- **Synchronizace (jenom mobilní verze) zpráv**: Zakázat zasílání zpráv všude a textové zprávy zálohování a obnovení.
+- **MMS (jenom mobilní verze)**: Zakáže funkci přijímání a odesílání zpráv MMS na zařízení.
+- **RCS (jenom mobilní verze)**: Zakáže funkci přijímání a odesílání Rich Communication Services na zařízení.
 
 ## <a name="more-information"></a>Další informace
-Další technické podrobnosti o jednotlivých nastaveních a podporovaných edicích Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider).
+
+Další technické podrobnosti o jednotlivých nastaveních a podporovaných edicích Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider).
