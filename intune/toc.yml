@@ -216,7 +216,7 @@ items:
     - name: Nastavení registrace zařízení s macOS
       href: macos-enroll.md
       items:
-      - name: Program DEP (Device Enrollment Program)
+      - name: Program registrace zařízení nebo Apple School Manager
         href: device-enrollment-program-enroll-macos.md
     - name: Instalace klientského softwaru Intune na počítače se systémem Windows
       href: install-the-windows-pc-client-with-microsoft-intune.md
@@ -414,6 +414,8 @@ items:
         href: device-restrictions-windows-10-teams.md
       - name: Windows Holographic for Business
         href: device-restrictions-windows-holographic.md
+    - name: Optimalizace doručení
+      href: delivery-optimization-windows.md
     - name: Konfigurace služby Endpoint Protection
       href: endpoint-protection-configure.md
       items:
@@ -423,10 +425,6 @@ items:
         href: endpoint-protection-windows-10.md
     - name: Konfigurace nastavení Identity Protection
       href: identity-protection-configure.md
-    - name: Nastavení beznabídkového režimu Androidu
-      href: android-kiosk-settings.md
-    - name: Nastavení beznabídkového režimu Androidu Enterprise
-      href: android-enterprise-settings.md
     - name: Nastavení beznabídkového režimu Windows 10
       href: kiosk-settings.md
     - name: Konfigurace nastavení e-mailů
@@ -845,9 +843,9 @@ items:
         href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
   - name: Glosář
     href: intune-glossary.md
-ms.openlocfilehash: c7f77f5acb94a3e137313a136807c70bdb085136
-ms.sourcegitcommit: 4c4e87cb0d8906085fcb7cdd170bd6b0cfeb23ff
+ms.openlocfilehash: a3712961f5980cb9aa40efd57fe324d2c349c377
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511056"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728731"

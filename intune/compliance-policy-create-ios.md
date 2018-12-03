@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/16/2018
+ms.date: 11/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56427f5b6d72d952ce9c388b4d5289d3075b7df0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 35091139e3afaabac4fad0b22fc6096cf7ada7c3
+ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182261"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52728867"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s iOSem v Intune
 
@@ -54,7 +54,8 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 ## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
 [!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-5. U možnosti **Platforma** vyberte **iOS**. Zvolte **Nastavení – Konfigurace** a zadejte nastavení **E-mail**, **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému**. Po dokončení zvolte **OK** a **Vytvořit**.
+4. U možnosti **Platforma** vyberte **iOS**. 
+5. Zvolte **nastavení konfigurace**a zadejte **e-mailu**, **stav zařízení**, **vlastnosti zařízení**, a **systému Zabezpečení** nastavení popsané v tomto tématu. Po dokončení zvolte **OK** a **Vytvořit**.
 
 <!--- 4. Choose **Actions for noncompliance** to say what actions should happen when a device is determined as noncompliant with this policy.
 5. In the **Actions for noncompliance** pane, choose **Add** to create a new action.  The action parameters pane allows you to specify the action, email recipients that should receive the notification in addition to the user of the device, and the content of the notification that you want to send.
@@ -88,6 +89,8 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 
 - **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
 - **Maximální povolená verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
+- **Minimální operační systém sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější. 
+- **Maximální verze operačního systému sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější.
 
 ## <a name="system-security"></a>Zabezpečení systému
 

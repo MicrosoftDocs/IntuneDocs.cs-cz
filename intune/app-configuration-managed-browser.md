@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d86df4c38e0d4313dbff6ff2cd9111b2126dbaba
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
+ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180931"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52630013"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -175,7 +175,12 @@ Další informace o tom, jak lze Managed Browser, Microsoft Edge a proxy aplikac
 
 ## <a name="how-to-configure-the-homepage-for-a-protected-browser"></a>Postup konfigurace domovské stránky chráněného prohlížeče
 
-Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když chráněný prohlížeč spustí nebo když otevřou novou kartu. Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
+Toto nastavení vám umožňuje nakonfigurovat domovskou stránku, kterou uživatelé uvidí, když chráněný prohlížeč spustí nebo když otevřou novou kartu. 
+- Toto nastavení zobrazí webovou stránku v Managed Browseru.  Microsoft Edge místo toho zobrazí zástupce domovské stránky.
+- Ikona zástupce domovské stránky se zobrazí jako ikona pod ovládacím prvkem vyhledávání.  Není možné ji upravit ani odstranit.
+- Zástupce domovské stránky bude za účelem odlišení zobrazovat název vaší organizace.  Vždy se bude zobrazovat jako první ikona.
+
+Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
 |                                Klíč                                |                                                           Hodnota                                                            |
 |-------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
