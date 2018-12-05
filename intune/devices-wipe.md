@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 28c8863e8739563a6b6c9152a46abb6bf50f2db5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 44923d89647118268c7a55746599354ac88fbfd2
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189193"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861009"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -81,7 +81,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 |Datový typ|iOS|
 |-------------|-------|
-|Firemní aplikace a související data instalovaná službou Intune|Odinstalují se aplikace. Odeberou se data firemních aplikací.<br /><br />Odeberou se data aplikací z aplikací Microsoftu, které používají správu mobilních aplikací. Aplikace se neodebere.|
+|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portálu společnosti:** se odeberou všechna data aplikace a aplikace. Tyto aplikace patří aplikace původně nainstalované z App Store a později spravovat jako podnikové aplikace. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a byly nainstalovány z App Store:** osobní aplikační data se odeberou. Data firemních aplikací a aplikací se neodeberou.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|

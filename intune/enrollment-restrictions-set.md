@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d9a7ad5d77f0c085fc1e91b6991657e6b848b3f3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e813d64d3019748eed3c985dcefda744188ad850
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187833"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861026"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -123,7 +123,7 @@ Nastavení omezení počtu zařízení můžete změnit podle následujícího p
 6. Vyberte **Uložit**.
 
 
-Při dosažení limitu počtu zaregistrovaných zařízení se uživatelům zobrazí oznámení. Například v iOSu vypadá takto:
+Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažení limitu počtu zaregistrovaných zařízení. Například v iOSu vypadá takto:
 
 ![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
 

@@ -6,22 +6,22 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/29/2017
+ms.date: 12/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
-ms.reviewer: heenamac
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 68896a363cab37aabe9a597872da0fe75c44c473
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: 3f2ffb3f99ce0dc925c52f733b25292cdbddae3e
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267233"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52860992"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -36,7 +36,7 @@ Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, 
 
 -   Odběr služby Microsoft Intune
 
--   Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
+-   Azure Active Directory globálního správce přihlašovacích údajů správce udělit následující oprávnění:
 
     -   Přihlášení a čtení profilu uživatele
 
@@ -52,7 +52,7 @@ Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, 
 
 Postup autorizace aplikace Zimperium:
 
--   Povolte službě Zimperium předávání informací týkajících se stavu zařízení zpět do Intune.
+-   Udělení oprávnění služby Zimperium informací týkajících se stavu zařízení zpět do Intune. Udělení oprávnění, že je nutné použít přihlašovací údaje globálního správce. Udělení oprávnění se o jednorázovou operaci. Jakmile budou oprávnění udělena, nejsou potřebné přihlašovací údaje globálního správce pro každodenní operace.
 
 -   Zimperium se synchronizuje s členstvím skupiny registrace Azure Active Directory (AD), aby se mohla naplnit databáze zařízení.
 
@@ -60,9 +60,12 @@ Postup autorizace aplikace Zimperium:
 
 -   Povolte aplikaci Zimperium přihlášení pomocí jednotného přihlašování k Azure AD.
 
+Další informace o souhlas a aplikace Azure Active Directory najdete v tématu [požádat o oprávnění od správce adresáře](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) v Azure Active Directory článku *oprávnění a vyjádření souhlasu v Azure Active Koncový bod v2.0 Directory*.
+
+
 ## <a name="to-set-up-zimperium-integration"></a>Nastavení integrace řešení Zimperium
 
-1.  Přejděte na [konzole Zimperium MTD](https://sso.zimperium.com/signon/aad/) a přihlaste se pomocí svých přihlašovacích údajů.
+1.  Přejděte na [konzole Zimperium MTD](https://sso.zimperium.com/signon/aad/) a přihlaste se pomocí svých přihlašovacích údajů. K provedení instalačního procesu integrace řešení Zimperium, musíte se přihlásit pomocí Azure Active Directory uživatele, který má roli globálního správce. Tato operace jednorázová nastavení používá oprávnění globálního správce k udělení oprávnění ve vaší organizaci pro aplikace Zimperium s Intune komunikovat. 
 
 2.  Zvolte z levé nabídky možnost **Management** (Správa).
 
@@ -72,14 +75,16 @@ Postup autorizace aplikace Zimperium:
 
 5.  Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností:  **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
 
-    > [!IMPORTANT]
-    > Pro dokončení procesu integrace s Intune je nutné přidat aplikace zConsole Zimperium a zIPS pro iOS a Android.
+    > [!IMPORTANT]  
+    > Je nutné přidat Zimperium zConsole, zIPS pro iOS a Android k dokončení procesu integrace s Intune.
 
 6.  Zvolte **přijmout** autorizovat aplikaci Zimperium komunikovalo s Intune a Azure Active Directory.
 
-7.  Po přidání aplikací **Zimperium zConsole** a **zIPS pro iOS a Android** do Azure AD přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
+7.  Po přidání **Zimperium zConsole** a **zIPS pro iOS a Android** aplikací do služby Azure AD přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
 
 8.  Zvolte **Dokončit** uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
+
+9.  Odhlaste se z konzole Zimperium MTD.
 
 ## <a name="next-steps"></a>Další postup
 

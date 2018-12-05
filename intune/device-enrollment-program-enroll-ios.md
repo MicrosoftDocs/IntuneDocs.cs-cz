@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 94e7bc3e3b936489ea34170616d1ab0ad49bafd3
-ms.sourcegitcommit: 8ddd3b0d4636a4516b2a05fa83c60ec111903c6c
+ms.openlocfilehash: 271c055e1922e8db78f35e85c9187fb1438e4644
+ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52546036"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52887062"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -107,6 +107,10 @@ V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevř
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení DEP. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
+
+> [!NOTE]
+> Zařízení se zablokuje, pokud nejsou k dispozici dostatek licencí portál společnosti pro VPP token, nebo pokud vypršela platnost tokenu. Intune se zobrazí výstraha whne token brzy vyprší platnost licence jsou spuštěné nebo nízké.
+ 
 
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace**.
 2. Vyberte token, zvolte **Profily** a potom zvolte **Vytvořit profil**.

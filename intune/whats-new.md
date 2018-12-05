@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 656c08fbc59b5656d4fc69c5e8e45d9d4903eab8
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 939ef9d164038f795ef9c591993751425ed6e89f
+ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52729071"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52861094"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -46,6 +46,10 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ## <a name="week-of-november-26-2018"></a>Týden od 26. listopadu 2018
 
 ### <a name="app-management"></a>Správa aplikací
+
+#### <a name="uninstalling-apps-on-corporate-owned-supervised-ios-devices----1281677---"></a>Odinstalace aplikací na zařízeních s iOSem ve vlastnictví společnosti pod dohledem <!-- 1281677 -->
+
+Můžete odebrat všechny aplikace na zařízeních vlastněných společností s Iosem pod dohledem. Libovolnou aplikaci můžete odebrat, když cílem přiřazení typu **Odinstalovat** budou skupiny uživatelů nebo zařízení. U zařízení s iOSem, která jsou osobní nebo nejsou pod dohledem, budete nadále moci odebrat jen aplikace, které byly nainstalované pomocí Intune.
 
 #### <a name="downloading-intune-win32-app-content----2617320---"></a>Stahuje se obsah aplikace Intune Win32 <!-- 2617320 -->
 Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí optimalizace doručení komponenty na straně klienta Windows 10. Optimalizace doručení poskytuje Peer-to-Peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení lze konfigurovat pomocí zásad skupiny a v budoucnu prostřednictvím Intune MDM. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
@@ -72,6 +76,13 @@ Teď můžete spravovat tyto aplikace s [zásady ochrany aplikací Intune](app-p
 
 Použití zásad ochrany aplikací pro ochranu firemních dat a ovládací prvek přenos dat u těchto aplikací, jako ostatní zásady spravované aplikace Intune. Poznámka: Pokud tok není viditelné v konzole, přidejte tok, když vytvoříte nebo upravíte a zásady ochrany aplikací. Chcete-li tak učinit, použijte **+ další aplikace** možnost a potom zadejte *ID aplikace* pro tok do vstupního pole. Pro Android pomocí *com.microsoft.flow*, a pro iOS použijte *com.microsoft.procsimo*.
 
+#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
+Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
+
+- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
+- Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
+
+Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané.
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -97,7 +108,10 @@ Zařízení Autopilot můžete teď hledat podle sériového čísla. Chcete-li 
 Uživatelé mohou sledovat průběh instalace [Office ProPlus](apps-add-office365.md) pomocí [stránka stavu registrace](windows-enrollment-status.md). Další informace najdete v tématu [nastavení na stránce Stav registrace](windows-enrollment-status.md).
 
 #### <a name="alerts-for-expiring-vpp-token-or-company-portal-license-running-low----2237572---"></a>Upozornění na vypršení platnosti tokenu VPP nebo docházející licence pro aplikaci Portál společnosti <!-- 2237572 -->
-Pokud používáte Volume Purchase Program (VPP) k předběžnému přidělení portálu společnosti během registrace DEP, vás Intune upozorní VPP token blížící se vypršení platnosti a pokud není k dispozici dostatek licencí pro aplikaci portál společnosti. Další informace najdete v tématu [Automatická registrace zařízení s macOS pomocí Apple School Manager nebo programu registrace zařízení](device-enrollment-program-enroll-macos.md).
+Pokud používáte Volume Purchase Program (VPP) k předběžnému přidělení portálu společnosti během registrace DEP, vás Intune upozorní VPP token blížící se vypršení platnosti a pokud není k dispozici dostatek licencí pro aplikaci portál společnosti.
+
+### <a name="macos-device-enrollment-program-support-for-apple-school-manager-accounts---3006133---"></a>Podpora Programu registrace zařízení s macOS pro účty Apple School Manageru <!--3006133 -->
+Intune teď podporuje pomocí programu registrace zařízení na zařízeních s macOS pro účty Apple School Manageru.  Další informace najdete v tématu [Automatická registrace zařízení s macOS pomocí Apple School Manager nebo programu registrace zařízení](device-enrollment-program-enroll-macos.md).
 
 ### <a name="new-intune-device-subscription-sku---3312071--"></a>Nové předplatné Intune zařízení SKU <!--3312071-->
 Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je dostupná přes přímý kanál, smlouvu Enterprise (EA), program MPSA (Microsoft Products and Services) a programy Open a Cloud Solution Provider (CSP).
@@ -214,9 +228,6 @@ Zásady ochrany aplikací Intune umožňují pro aplikace chráněné přes Intu
 - **Podmíněné spouštění** – tato skupina obsahuje nastavení, jako je minimální verze operačního systému, detekce zařízení s jailbreakem a rootem a období odkladu pro offline režim.  
   
 Funkčnost těchto nastavení se nemění, ale bude snazší je vyhledat při vytváření zásad.
-
-### <a name="new-intune-device-subscription-sku---3312071--"></a>Nová skladová položka pro předplatné Intune na základě zařízení !--3312071-->
-Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je dostupná přes přímý kanál, smlouvu Enterprise (EA), program MPSA (Microsoft Products and Services) a programy Open a Cloud Solution Provider (CSP).
 
 ### <a name="intune-apps"></a>Aplikace Intune
 
@@ -1151,6 +1162,8 @@ Další informace najdete v tématu [Registrace zařízení s macOS v Intune pom
  
 
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: nové prostředí pro podporu Intune u zákazníků Premier 
+12/4/18 aktualizací: pokoušíme vylepšit tento proces si tak vytvoření žádosti o podporu v MPO nebude být zakázány na dne 3, ale na pozdější datum. Dáme vám vědět, prostřednictvím Centra zpráv a aktualizovat tento příspěvek brzy ke sdílení časové osy pro tuto změnu.
+
 Jako zákazník Microsoft Premier aktuálně můžete používat portál Microsoft Premier Online (MPO) (premier.microsoft.com) a Intune v Azure (portal.azure.com) k vytváření žádostí o podporu pro Intune. Od 3. prosince 2018 si budete moct vytvářet žádosti o podporu jenom v Intune v Azure, pokud si budete chtít dál vylepšovat prostředí podpory Premier.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
