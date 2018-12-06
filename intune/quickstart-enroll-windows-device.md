@@ -5,22 +5,22 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/05/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 658a7655-a6df-4dbe-b56c-22c7fc60e706
-ms.reviewer: angerobe
+ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 13ffb9e7091b484c59f44802de675b1ab45b1c77
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5876b0df6787640e465952cb1cca17f4f3105762
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183464"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977333"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
 
@@ -29,7 +29,7 @@ V tomto rychlém startu nejprve převezmete roli uživatele Intune a zaregistruj
 Registrace zařízení v Microsoft Intune umožňuje zařízením s Windows 10 získat přístup k zabezpečeným datům vaší organizace, včetně e-mailů, souborů a dalších prostředků. Platí to pro zařízení s desktopovou verzí Windows 10 i zařízení s Windows 10 Mobile. Registrace zařízení pomáhá zabezpečit přístup pro vás i vaši organizaci a udržovat pracovní data odděleně od osobních dat.
 
 > [!TIP]
-> Zjistěte, co se stane, když [zařízení zaregistrujete v Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md), a co to znamená pro [informace v zařízení](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+> Zjistěte, co se stane, když [zařízení zaregistrujete v Intune](/intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows), a co to znamená pro [informace v zařízení](/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune).
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
@@ -58,7 +58,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 4. Potvrďte, že **Verze** Windows 10 je **1607 nebo vyšší**.
 
     > [!IMPORTANT]
-    > Postup uvedený v tomto rychlém startu platí pro Windows 10 verze **1607 nebo vyšší**. Pokud máte verzi **1511 nebo nižší**, pokračujte [tímto postupem](/intune-user-help/enroll-your-w10-device-your-account.md).
+    > Postup uvedený v tomto rychlém startu platí pro Windows 10 verze **1607 nebo vyšší**. Pokud máte verzi **1511 nebo nižší**, pokračujte [tímto postupem](/intune-user-help/enroll-your-w10-device-your-account).
 
 ## <a name="enroll-windows-10-desktop"></a>Registrace desktopové verze Windows 10
 
@@ -85,7 +85,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
    ![Snímek obrazovky nově přidaného účtu](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    Pokud jste použili výše uvedené kroky, ale pořád nemáte přístup ke svému pracovnímu e-mailovému účtu nebo souborům, použijte kroky v části [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](/intune-user-help/troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
+    Pokud jste použili výše uvedené kroky, ale pořád nemáte přístup ke svému pracovnímu e-mailovému účtu nebo souborům, použijte kroky v části [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](/intune-user-help/troubleshoot-your-windows-10-device-windows#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potvrzení registrace zařízení v Intune
 
@@ -97,11 +97,11 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud chcete registraci zařízení s Windows zrušit, přečtěte si článek [Odebrání zařízení s Windows ze systému správy](/intune-user-help/unenroll-your-device-from-intune-windows.md).
+Pokud chcete registraci zařízení s Windows zrušit, přečtěte si článek [Odebrání zařízení s Windows ze systému správy](/intune-user-help/unenroll-your-device-from-intune-windows).
 
 ## <a name="next-steps"></a>Další postup
 
-V tomto rychlém startu jste se naučili zaregistrovat zařízení s Windows 10 v Intune. Teď se naučíte další způsoby registrace zařízení na všech platformách. Další informace o používání zařízení s Intune najdete v článku [Práce pomocí spravovaných zařízení](/intune-user-help/use-managed-devices-to-get-work-done.md).
+V tomto rychlém startu jste se naučili zaregistrovat zařízení s Windows 10 v Intune. Teď se naučíte další způsoby registrace zařízení na všech platformách. Další informace o používání zařízení s Intune najdete v článku [Práce pomocí spravovaných zařízení](/intune-user-help/use-managed-devices-to-get-work-done).
 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 

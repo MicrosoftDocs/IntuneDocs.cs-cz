@@ -16,12 +16,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 24cc45f8f769d08c083bdddc27a12900613b98b0
-ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
+ms.openlocfilehash: 4110f1298ffa3e8497463d4751bc711a6c19baf1
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52887147"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977367"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
@@ -70,9 +70,6 @@ Nová stránka se přidají do aplikace portál společnosti Windows. Na stránc
 ### <a name="use-trusted-network-detection-for-vpn-profiles-on-windows-10-devices----1500165---"></a>Detekce důvěryhodných sítí pomocí profilů sítě VPN na zařízeních s Windows 10 <!-- 1500165 -->
 Při použití detekce důvěryhodných sítí, budete moct zabránit profily sítě VPN automaticky vytvoří připojení k síti VPN, pokud je uživatel v důvěryhodné síti. Budete moct přidat přípony DNS pro povolení detekce důvěryhodných sítí na zařízeních s Windows 10 a novější (**konfigurace zařízení** > **profily**  >   **Vytvoření profilu** > **Windows 10 a novější** pro platformu > **VPN** pro typ profilu).
 [Nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md) uvádí aktuální nastavení sítě VPN.
-
-### <a name="support-for-android-corporate-owned-fully-managed-devices----574342---"></a>Podpora pro vlastněných společností, plně spravovaná zařízení s Androidem <!-- 574342 -->
-Intune bude podporovat plně spravovaná zařízení s Androidem vlastnictví "vlastník zařízení" scénář, ve kterém zařízení úzce spravuje IT a jste spojeni jednotlivým uživatelům. To umožňuje správcům spravovat celé zařízení, vynucovat ochranu před rozsahem rozšířené ovládací prvky zásad, není k dispozici pro pracovní profily a instalaci aplikací ze spravovaného obchodu Google Play pouze omezení pro uživatele. Nastavení Androidu plně spravovaná zařízení, přejděte na **registrace zařízení** > **registrace zařízení s Androidem** > **uživatele vlastněné společností, plně spravovaná zařízení**.
 
 ### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK bude podporovat 256bitových šifrovacích klíčů <!-- 1832174 -->
 Sady Intune App SDK pro iOS bude používat 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK.

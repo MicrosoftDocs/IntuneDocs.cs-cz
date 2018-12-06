@@ -5,23 +5,25 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/05/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 36cfb5ac05b2d69b5c7349f4ebc6054848a08fc8
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 1b83a380620704e9e3f616cee77b33d577c86c0d
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52730105"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977265"
 ---
 # <a name="windows-10-and-newer-delivery-optimization-settings-in-microsoft-intune"></a>Nastavení optimalizace doručení 10 (a novějších) systému Windows v Microsoft Intune
 
-Tento článek uvádí a popisuje všechny nastavení optimalizace doručení, která můžete konfigurovat pro zařízení s Windows 10. Tato nastavení jsou přidány do konfiguračního profilu zařízení a potom přiřazené nebo nasazené do zařízení pomocí Microsoft Intune.
+Tento článek uvádí a popisuje všechny nastavení optimalizace doručení, která můžete konfigurovat pro zařízení s Windows 10. Tato nastavení jsou přidány do konfiguračního profilu zařízení a potom přiřazené nebo nasazené do zařízení pomocí Microsoft Intune. 
+
+[Optimalizace doručení aktualizací](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je skvělý prostředek pro další informace o optimalizace doručení ve Windows 10.
 
 ## <a name="settings"></a>Nastavení
 

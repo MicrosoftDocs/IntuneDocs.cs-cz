@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 77a0c3f3a2e1ed0ee2dbc652049bb7057c736010
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2a656a53062e8529541cd067fa32bfc83aee2ea0
+ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189958"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977316"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
@@ -68,7 +68,7 @@ Zařízení, která chcete zaregistrovat, musí:
 
 Konektor Intune pro Active Directory vytváří počítače registrované pomocí Autopilotu v místní doméně služby Active Directory. Počítač hostující tento konektor Intune musí mít práva k vytváření objektů počítače v této doméně. 
 
-V některých doménách se počítačům práva k vytváření počítačů neudělují. Správci možná také nechtějí limit pro účty počítačů v doméně zvyšovat. V těchto situacích se dají tato práva delegovat na organizační jednotku, ve které se zařízení připojená k hybridní službě Azure AD vytvářejí.
+V některých doménách se počítačům práva k vytváření počítačů neudělují. Domény mají navíc integrovaný do limitu (výchozí je 10), která se vztahuje na všechny uživatele a počítače, které nejsou delegovaná oprávnění k vytváření počítačových objektů. Proto jsou vytvořeny práva potřeba delegovat na počítače, který je hostitelem konektoru Intune na organizační jednotku, ve kterém zařízení připojená k hybridní službě Azure AD.
 
 Organizační jednotce, které se udělí právo k vytváření počítačů, musí odpovídat:
 - organizační jednotka zadaná v profilu připojení k doméně
