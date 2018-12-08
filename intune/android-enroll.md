@@ -15,13 +15,13 @@ ms.assetid: f276d98c-b077-452a-8835-41919d674db5
 ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 2b2b3ba5443cd95cd81bdca6d386ab95a2c831eb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 79a1a03f74db8e44dc3ee4d6575e193ce7841e24
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190111"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031887"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -33,7 +33,7 @@ Jako správce Intune můžete spravovat následující zařízení s Androidem:
 
 U zařízení, která používají Samsung Knox Standard, se podporuje správa více uživatelů pomocí Intune. To znamená, že uživatelé se můžou přihlásit k zařízení pomocí svých přihlašovacích údajů Azure AD a odhlásit se od něho. Zařízení je centrálně spravované bez ohledu na to, jestli se používá. Když se uživatelé přihlásí, mají přístup k aplikacím a také se na ně vztahují všechny zásady. Po odhlášení uživatelů se všechna data aplikací vymažou.
 
-## <a name="prerequisite"></a>Předpoklad
+## <a name="prerequisite"></a>Požadavek
 
 Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 

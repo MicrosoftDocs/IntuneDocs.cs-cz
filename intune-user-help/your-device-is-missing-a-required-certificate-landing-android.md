@@ -1,11 +1,12 @@
 ---
 title: Zařízení nemá požadovaný certifikát | Dokumentace Microsoftu
-description: ''
+titlesuffix: Microsoft Intune
+description: Vašemu zařízení chybí certifikát, který vyžaduje firemní podpora.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +17,19 @@ searchScope:
 ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
-ms.custom: intune-enduser
-ms.openlocfilehash: 043b04688630f345be625456fb9cfec586e2f790
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.custom: intune-enduser; seodec18
+ms.openlocfilehash: e40ac2fd81375b84084dd229f4cb5a6ab3e9915f
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150748"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032210"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Zařízení nemá požadovaný certifikát
 
 ## <a name="whats-a-certificate"></a>Co je certifikát?
 
-[Kryptografie](https://technet.microsoft.com/library/cc962030.aspx) je věda, jak poskytovat zabezpečení informacím. V tradičním pojetí kryptografie sloužila k předávání zakódovaných zpráv, což mělo [zajistit utajení komunikace](https://technet.microsoft.com/library/cc962019.aspx). Ve zjednodušené podobě kryptografie nahrazuje neboli transponuje písmena a tím vytvoří zakódovanou zprávu, která je nečitelná, utajená nebo skrytá. Jenom člověk s dekódovacím klíčem, neboli _certifikátem_, může zakódovanou zprávu převést zpět do její původní čitelné formy. Vaše zařízení s Androidem používá certifikáty s Intune, aby se zajistilo, že komunikace mezi zařízením a prostředky organizace, jako je e-mail a dokumenty, byla zabezpečená na jednom konci, po dobu přenosu i na druhém konci.
+[Kryptografie](https://technet.microsoft.com/library/cc962030.aspx) je věda, jak poskytovat zabezpečení informacím. V tradičním pojetí kryptografie sloužila k předávání zakódovaných zpráv, což mělo [zajistit utajení komunikace](https://technet.microsoft.com/library/cc962019.aspx). Šifrování v podobě simplist nahradí nebo transponuje písmena vytvoří zakódovanou zprávu do zprávy nečitelná, utajená nebo skrytá. Jenom člověk s dekódovacím klíčem, neboli _certifikátem_, může zakódovanou zprávu převést zpět do její původní čitelné formy. Vaše zařízení s Androidem používá certifikáty s Intune, aby se zajistilo, že komunikace mezi zařízením a prostředky organizace, jako je e-mail a dokumenty, byla zabezpečená na jednom konci, po dobu přenosu i na druhém konci.
 
 ## <a name="fixing-certificate-issues"></a>Oprava problémů s certifikáty
 
@@ -38,6 +39,6 @@ Pokud zařízení s Androidem nemáte zaregistrované v Intune a chybí mu konkr
 
 První možnost, kterou byste měli zkusit, je zjistit, jestli v zařízení [nechybí certifikát, který je na něm obvykle předinstalovaný](your-device-is-missing-a-preinstalled-certificate-android.md).
 
-Pokud to nepomůže, vaše firemní podpora by vás mohla [požádat, abyste si nainstalovali druhý certifikát ke zvýšení zabezpečení](your-device-is-missing-an-IT-required-certificate-android.md).
+Pokud řešení problémů s certifikáty nebude fungovat, může vaše firemní podpora [vyžadují, abyste si nainstalovali druhý certifikát ke zvýšení zabezpečení](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

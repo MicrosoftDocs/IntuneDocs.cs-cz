@@ -1,11 +1,12 @@
 ---
-title: Použití rozhraní API pro připojení k externím certifikačním autoritám – Microsoft Intune – Azure | Microsoft Docs
+title: Rozhraní API pro připojení 3. stran certifikační autority
+titlesuffix: Microsoft Intune
 description: Přidejte nebo integrujte řešení GitHubu SCEP pro externí certifikační autority (CA), abyste mohli vydávat zařízením v Microsoft Intune certifikáty SCEP. Toto řešení zahrnuje rozhraní API jazyka Java a C#, která provádí ověřování, odesílají oznámení o úspěchu a neúspěchu do Intune a při komunikaci s Intune používají objekt pro vytváření soketu SSL. Taky se můžete podívat na přehled kroků k testování konfigurace certifikační autority SCEP.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/12/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,13 +14,13 @@ ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 054342994a75965b3e1bcb13884af07131ab0122
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 4109c437ae5a096c78c19aef489218cf7286eb01
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181917"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032329"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -297,7 +298,7 @@ Ověřování a testování správné integrace vašeho řešení s Intune je ne
 12. Zkontrolujte, že vlastnosti nainstalovaných certifikátů odpovídají vlastnostem nastaveným v profilu SCEP.
 13. Zkontrolujte, že vydané certifikáty jsou v konzole Intune uvedené správně.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přidání přehledu externích certifikačních autorit](certificate-authority-add-scep-overview.md)
 - [Nastavení Intune](setup-steps.md)

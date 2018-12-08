@@ -1,6 +1,7 @@
 ---
 title: Časná edice
-description: ''
+titlesuffix: Microsoft Intune
+description: Časná edice Microsoft Intune
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -15,13 +16,13 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: 4110f1298ffa3e8497463d4751bc711a6c19baf1
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.custom: seodec18
+ms.openlocfilehash: ddd1af82c700b0398ca7250f577c712e4a428788
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977367"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032451"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
@@ -114,6 +115,9 @@ Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** >
 Budete moct vytvořit konfigurační profil, který nastaví nastavení služby endpoint protection na zařízeních s Windows 10, včetně nástroje BitLocker. Tento postup přidá podporu pro Windows 10 Professional edition pro některá nastavení nástroje BitLocker. Nastavení aktuální edice Windows 10 najdete v tématu [nastavení služby Endpoint protection pro Windows 10](endpoint-protection-windows-10.md#windows-encryption).
 Intune bude poskytovat další zařízení polí, včetně s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole budou dostupná tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
 
+### <a name="intune-device-reporting-fields----2748738---"></a>Zařízení v Intune polí pro vytváření sestav <!-- 2748738 -->
+Intune bude poskytovat další zařízení polí, včetně s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole budou dostupná tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
+
 ### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal----2809362---"></a>Konfigurace sdíleného zařízení bylo přejmenováno na zpráva na zamčené obrazovce pro zařízení s Iosem na webu Azure Portal <!-- 2809362 -->
 Při vytváření konfiguračního profilu pro zařízení s Iosem, budete moct přidat **konfigurace sdíleného zařízení** nastavení na zamykací obrazovce zobrazit určitý text. To zahrnuje následující změny: 
 
@@ -204,7 +208,7 @@ Platí pro Windows 10 a novější.
 
 V současné době nejsou aktivní žádná sdělení.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).
 
 

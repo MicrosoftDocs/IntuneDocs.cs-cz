@@ -1,28 +1,32 @@
 ---
-title: Omezení zařízení pro pracovní profily Androidu v Microsoft Intune – Azure | Microsoft Docs
-description: Na zařízeních s profily Androidu Enterprise můžete omezit některá nastavení včetně kopírování a vkládání, zobrazování oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, odemykání pomocí otisku prstu, opakovaného použití hesel a povolení sdílení pracovních kontaktů přes Bluetooth.
+title: Nastavení zařízení s androidem Enterprise v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Na Androidu Enterprise nebo zařízení Android for Work omezení nastavení na zařízení, včetně kopírování a vkládání, zobrazit oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, použijte otisků prstů k odemknutí, opakované použití hesla a povolit bluetooth sdílení pracovních kontaktů. Konfigurace zařízení jako veřejný terminál pro spuštění aplikace jeden nebo více aplikací.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 5f153e738aff28cae6481c0502f0682d10b8f104
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.custom: intune-azure, seodec18
+ms.openlocfilehash: c9e2e0df79625329310171c509327395989f3a7c
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52729088"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032533"
 ---
-# <a name="work-device-restriction-settings-in-intune"></a>Nastavení omezení pracovních zařízení v Intune
+# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
-Tento článek uvádí nastavení omezení zařízení v Microsoft Intune, která můžete nakonfigurovat pro zařízení s profilem Androidu Enterprise.
+Tento článek uvádí a popisuje různá nastavení, které můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, spuštění aplikace v režimu veřejného terminálu, ovládací prvek zabezpečení a další.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md).
 
 ## <a name="device-owner-only"></a>Pouze vlastník zařízení
 
@@ -243,7 +247,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
   > [!IMPORTANT]
   >  - Klient VPN, kterého zvolíte, musí být nainstalovaný na zařízení a musí podporovat VPN pro jednotlivé aplikace v pracovních profilech. V opačném případě dojde k chybě. 
   >  - Aplikaci klienta VPN je potřeba schválit ve **spravovaném obchodu Google Play**, synchronizovat ji do Intune a nasadit ji do zařízení. Až to vše uděláte, bude aplikace nainstalovaná v pracovním profilu uživatele.
-  >  - Při použití VPN pro jednotlivé aplikace s aplikací F5 Access for Android 3.0.3 existují známé problémy. Další informace najdete v [poznámkách k verzi pro aplikaci F5 Access for Android 3.0.3](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-3.html#relnotes_known_issues_f5_access_android).
+  >  - Může zde být známé problémy při pomocí F5 přístup pro Android 3.0.4 VPN pro jednotlivé aplikace. Zobrazit [F5 zpráva k vydání verze pro F5 přístup pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) Další informace.
 
 - **Režim uzamčení**: **Povolte**, abyste vynutili používání tunelu VPN veškerým síťovým provozem. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
 

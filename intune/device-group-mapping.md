@@ -14,19 +14,19 @@ ms.technology: ''
 ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 159079686507815ad4cf1738ca4157467352f681
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 0abc42de95f90b3690e91908f92bb53d11a802d8
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189516"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53031751"
 ---
-# <a name="categorize-devices-into-groups-for-easier-management"></a>Snadnější správa pomocí kategorizace zařízení do skupin
+# <a name="categorize-devices-into-groups"></a>Kategorizace zařízení do skupin
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-S využitím kategorií zařízení Microsoft Intune můžete automaticky přidávat zařízení do skupin podle kategorií, které definujete. Takové uspořádání vám zjednoduší správu zařízení.
+Abychom usnadnili správu zařízení, můžete použít kategorií zařízení Microsoft Intune k automatickému přidávání zařízení do skupin podle kategorií, které definujete.
 
 Pro kategorie zařízení se používá následující pracovní postup:
 1. Vytvořte kategorie, z kterých si uživatelé při registraci svého zařízení můžou vybrat.

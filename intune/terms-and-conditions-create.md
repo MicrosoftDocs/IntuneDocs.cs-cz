@@ -15,15 +15,15 @@ ms.assetid: 4a3a11a8-9c0c-4334-8c6b-6fea4d0a2efb
 ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: e407b2059d986841541c969e387d77e71c5e5b4b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181356"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032295"
 ---
-# <a name="manage-your-companys-terms-and-conditions-for-user-access"></a>Správa firemních podmínek a ujednání pro přístup uživatelů
+# <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -41,7 +41,7 @@ Existují dva způsoby, jak vytvořit podmínky a ujednání společnosti:
 ## <a name="create-terms-and-conditions"></a>Vytvoření podmínek a ujednání
 Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazovaný název a popis jsou určené pro správu, zatímco vlastnosti podmínek se zobrazují uživatelům na Portálu společnosti.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Registrace zařízení** > **Podmínky**.
 2. Zvolte **Vytvořit**.

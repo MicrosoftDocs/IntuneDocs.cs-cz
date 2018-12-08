@@ -1,33 +1,37 @@
 ---
-title: Nastavení e-mailu v zařízeních s Androidem a pracovním profilem Androidu v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte e-mailový profil konfigurace zařízení, který používá servery Exchange a načítá atributy ze služby Azure Active Directory. Pomocí Microsoft Intune můžete také povolit protokol SSL nebo SMIME, ověřovat uživatele certifikáty nebo uživatelským jménem a heslem a synchronizovat e-maily a plány na zařízeních s Androidem a pracovním profilem Androidu.
+title: Android & nastavení e-mailu s Androidem Enterprise v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Vytvoření zařízení konfigurace e-mailové profily, které používají servery Exchange a načtení atributů z Azure Active Directory. Povolit protokol SSL nebo SMIME, ověřování uživatelů pomocí certifikátů nebo uživatelského jména a hesla a synchronizace e-mailu a plány na Android a Android pracovní profil zařízení pomocí Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/20/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: b8ab8dfadb113d81922119a54aefcac43d15b5a1
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: ffe25f7e4870f2ea6969d1261f33c69362d75469
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187425"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032023"
 ---
-# <a name="email-profile-settings-for-devices-running-android-and-android-enterprise---intune"></a>Nastavení e-mailového profilu v zařízeních s Androidem a Androidem Enterprise – Intune
+# <a name="android-and-android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení pro zařízení s Androidem Enterprise konfigurace e-mailu, ověřování a synchronizace v Intune a Android
 
-Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s Androidem.
+Tento článek uvádí a popisuje jinou e-mailovou nastaveních, pomocí kterých můžete řídit na zařízeních s Androidem a s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
 
 Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro následující zařízení s Androidem:
 
 - Android Samsung Knox Standard
 - Android Enterprise
+
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořit profil konfigurace zařízení](email-settings-configure.md).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 

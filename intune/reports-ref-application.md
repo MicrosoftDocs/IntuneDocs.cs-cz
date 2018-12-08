@@ -1,12 +1,12 @@
 ---
-title: Aplikace
+title: Referenční informace pro entity aplikací
 titlesuffix: Microsoft Intune
 description: Téma referenčních informací ke kategorii Aplikace pro kolekce entit v rozhraní API datového skladu Intune
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: 32f41e4f299af4802dd270ec4a46c0cf4d467bc9
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: 1a6019365b03a54e5897bc8788c171ef969e0d1e
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179129"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032368"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -49,7 +49,7 @@ Entita **AppRevision** obsahuje seznam všech verzí aplikací.
 | VppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
 | CreationTime |Čas vytvoření této revize |23.11.2016 12:00:00 |
 | ModifiedTime |Čas poslední změny nějakého prvku, který s touto revizí souvisí |23.11.2016 12:00:00 |
-| Size |Velikost binárního souboru | |
+| Velikost |Velikost binárního souboru | |
 | StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
 | EndDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
 | IsCurrent |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
