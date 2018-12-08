@@ -1,7 +1,7 @@
 ---
-title: Možnosti Intune podle metody registrace pro zařízení s Windows
+title: Metoda možnosti registrace Intune pro zařízení s Windows
 titlesuffix: Microsoft Intune
-description: Podívejte se na možnosti, které každá metoda registrace podporuje pro zařízení s Windows.
+description: Možnosti pro jednotlivé metody registrace pro zařízení s Windows.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 38bb88015261aa50d6c27aec026614f1205aebe8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: seodec18
+ms.openlocfilehash: f32a0967c094c16b76ad4c4572ebd8e80c6115b2
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189805"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032125"
 ---
-# <a name="capabilities-by-enrollment-method-for-windows-devices"></a>Možnosti podle metody registrace pro zařízení s Windows
+# <a name="intune-enrollment-method-capabilities-for-windows-devices"></a>Metoda možnosti registrace Intune pro zařízení s Windows
 [!INCLUDE[azure_portal](./includes/azure_portal.md)]
 
-Intune umožňuje spravovat zařízení a aplikace vašich zaměstnanců a způsob, jakým přistupují k firemním datům. Zařízení musí být nejprve registrovaná ve službě Intune. Zařízení pracovníků lze registrovat několika způsoby. Každá metoda má jiné osvědčené postupy a možnosti, jak je znázorněno v následujících tabulkách.
+Vaši pracovníci zařízení v Intune registrovat několika způsoby. Každá metoda má jiné osvědčené postupy a možnosti, jak je znázorněno v následujících tabulkách.
 
 ## <a name="best-practices-by-enrollment-method"></a>Osvědčené postupy podle metody registrace
 | **Osvědčené postupy** | **[Připojené k Azure AD](windows-enroll.md#enable-windows-10-automatic-enrollment)**|**[Připojené k Azure AD s Autopilotem](enrollment-autopilot.md)** |**[Hromadné](windows-bulk-enroll.md)**|**[DEM](device-enrollment-manager-enroll.md)** | **[Uživatelé s vlastním zařízením (BYOD)](device-enrollment.md#bring-your-own-device)** | **[OBJEKT ZÁSAD SKUPINY](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)** |
