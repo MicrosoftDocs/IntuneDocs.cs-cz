@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: df84438ca93e50c392b085eb439abe02f074e5c3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd238a7b779dd5e52e3cf8fb06c8f89db1f76559
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189720"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112915"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -73,7 +73,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
 > [!NOTE]
 > 
-> Limitu registrace zařízení se můžete vyhnout tak, že použijete účet správce registrace zařízení, jak je popsáno v tématu [Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune](/intune-classic/deploy-use/enroll-corporate-owned-devices-with-the-device-enrollment-manager-in-microsoft-intune).
+> Limitu registrace zařízení se můžete vyhnout tak, že použijete účet správce registrace zařízení, jak je popsáno v tématu [Registrace firemních zařízení pomocí správce registrace zařízení v Microsoft Intune](device-enrollment-manager-enroll.md).
 > 
 > Pokud se pro přihlašovací údaje uživatele, jehož účet přidáte do účtu správců registrace zařízení, vynucuje zásada podmíněného přístupu, nebude možné dokončit registraci.
 

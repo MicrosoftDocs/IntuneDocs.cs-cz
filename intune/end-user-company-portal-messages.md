@@ -15,12 +15,12 @@ ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 44e7307997df67ad1c1ae6170da3bcc13e99070d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8c4e5e18c0b995ad84340cdbc07a8a11b09e4f3a
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185045"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112778"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -108,7 +108,7 @@ Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených apli
 
 ### <a name="what-it-means"></a>Význam
 
-Přidejte Portál společnosti na seznam **Povolených aplikací** nebo **Aplikací s výjimkou** v zásadě ochrany aplikací Windows Information Protection (WIP). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](/intune-classic/deploy-use/create-windows-information-protection-policy-with-intune).
+Přidejte Portál společnosti na seznam **Povolených aplikací** nebo **Aplikací s výjimkou** v zásadě ochrany aplikací Windows Information Protection (WIP). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 [Co říct koncovým uživatelům o používání služby Intune](end-user-educate.md)

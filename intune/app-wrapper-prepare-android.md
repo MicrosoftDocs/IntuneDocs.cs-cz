@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 74ef09c8979e6867d49c119668ad329570cee424
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 42b554f025f80546a0a2dd93de92549f2f037b3f
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189822"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112855"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -28,7 +28,7 @@ ms.locfileid: "52189822"
 
 Pokud chcete změnit chování interních aplikací pro Android tím, že omezíte jejich funkce – beze změny samotného kódu aplikace – použijte nástroj Microsoft Intune App Wrapping Tool for Android.
 
-Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a který vytvoří okolo vaší aplikace pro Android obálku. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) v Intune.
+Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a který vytvoří okolo vaší aplikace pro Android obálku. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](app-protection-policies.md) v Intune.
 
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
@@ -175,7 +175,7 @@ Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcet
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Microsoft Intune App SDK pro Android – Příručka pro vývojáře](app-sdk-android.md)

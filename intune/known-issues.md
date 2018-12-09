@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: db655c49277051267036d76e518cc870757f67c2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fafc9381f59ceb4e78e3e76d24694cd0acdcf8d0
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183039"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112370"
 ---
 # <a name="known-issues-in-microsoft-intune"></a>Známé problémy v Microsoft Intune
 
@@ -29,9 +29,9 @@ ms.locfileid: "52183039"
 
 V tomto článku se dozvíte více o známých problémech v Microsoft Intune.
 
-Pokud chcete nahlásit chybu, která tu není uvedená, [otevřete žádost o podporu](get-support.md).
+Pokud chcete ohlásit chybu, která tu není uvedená, [žádost o podporu](get-support.md).
 
-Pokud chcete zažádat o novou funkci pro Intune, můžete nám zaslat zprávu prostřednictvím webu [Uservoice](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console).
+Pokud chcete požádat o novou funkci pro Intune, zvažte podání [Microsoft Intune Feedback](https://microsoftintune.uservoice.com/forums/291681-ideas/category/189016-azure-admin-console) sestavy.
 
 ## <a name="migration"></a>Migrace
 
@@ -44,13 +44,13 @@ Zásady dodržování předpisů vytvořené na portálu Azure Classic se přest
 
 ### <a name="intune-legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Funkce starší verze klienta Intune v osobním počítači jsou dostupné jenom v konzole Silverlight
 
-Funkce správy Windows 10 v Intune na portálu Azure Portal je k dispozici prostřednictvím registrace Windows MDM. Další informace najdete v tématu [Konzola Intune v Azure a starší verze klienta Intune v osobním počítači](https://docs.microsoft.com/intune-classic/deploy-use/intune-on-azure).
+Funkce správy Windows 10 v Intune na portálu Azure Portal je k dispozici prostřednictvím registrace Windows MDM. Další informace najdete v tématu [Konzola Intune v Azure a starší verze klienta Intune v osobním počítači](intune-legacy-pc-client.md).
 
 ### <a name="groups-created-by-intune-during-migration-might-affect-functionality-of-other-microsoft-products"></a>Skupiny vytvořené pomocí Intune během migrace můžou ovlivnit funkčnost jiných produktů Microsoftu
 
 Při migraci z Intune na Azure Portal se může zobrazit nová skupina s názvem **Všichni uživatelé – b0b08746-4dbe-4a37-9adf-9e7652c0b421**. Tato skupina obsahuje všechny uživatele ve vašem Azure Active Directory, ne jenom uživatele s licencí Intune. Toto použití může způsobit problémy s jinými produkty Microsoftu, pokud očekáváte, že někteří existující nebo noví uživatelé nebudou členem žádné skupiny.
 
-### <a name="status-blades-for-migrated-policies-do-not-work"></a>Okna stavu pro migrované zásady nefungují
+### <a name="status-blades-for-migrated-policies-dont-work"></a>Okna stavu pro migrované zásady nefungují
 
 Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického portálu na portál Azure Portal. Můžete ale dál zobrazovat sestavy pro tyto zásady na portálu Classic. Pokud chcete zobrazit informace o stavu migrovaných konfiguračních zásad, na portálu Azure Portal je znovu vytvořte.
 
@@ -58,11 +58,11 @@ Nejde zobrazit informace o stavu pro zásady, které se migrovaly z klasického 
 
 
 ### <a name="multiple-app-install-prompts-for-certain-vpp-apps"></a>Zobrazování několika výzev k instalaci aplikací u určitých aplikací VPP
-U některých aplikací VPP, které jsou už nainstalované na zařízeních koncových uživatelů, se můžete setkat s několika výzvami k instalaci aplikací. K tomuto problému dochází, pokud máte možnost **Automatické aktualizace aplikací** nastavenou na **Zapnuto** u tokenu VPP, který jste nahráli na portál Intune Azure Portal.    
+Může se zobrazit více instalace aplikace zobrazí výzvu pro určité aplikace VPP, které jsou již nainstalovány na zařízeních koncových uživatelů. K tomuto problému dochází, pokud máte možnost **Automatické aktualizace aplikací** nastavenou na **Zapnuto** u tokenu VPP, který jste nahráli na portál Intune Azure Portal.    
 
-Tento problém vyřešíte tak, že u tokenu VPP zakážete **Automatické aktualizace aplikací**. Uděláte to tak, že na portálu Azure Portal otevřete Microsoft Intune. V Intune vyberete **Klientské aplikace** > **Tokeny VPP pro iOS**. Dále vyberete token VPP, který nasadil ovlivněnou aplikaci, a vyberete **Upravit** > **Automatické aktualizace aplikací** > **Vypnuto** > **Uložit**. Můžete také ukončit nasazení ovlivněné aplikace jako aplikace VPP, čímž zastavíte zobrazování výzev.    
+Chcete-li tento problém obejít, můžete zakázat **automatické aktualizace aplikací** možnost pro daný token VPP. Uděláte to tak, že na portálu Azure Portal otevřete Microsoft Intune. V Intune vyberete **Klientské aplikace** > **Tokeny VPP pro iOS**. Dále vyberete token VPP, který nasadil ovlivněnou aplikaci, a vyberete **Upravit** > **Automatické aktualizace aplikací** > **Vypnuto** > **Uložit**. Můžete také ukončit nasazení ovlivněné aplikace jako aplikace VPP, čímž zastavíte zobrazování výzev.    
 
-Toto je známý problém v aktuální verzi. Připravujeme opravu, která tento problém vyřeší. Po implementaci této opravy se už uživatelům nebude zobrazovat více výzev k instalaci aplikací.
+Toto je známý problém v aktuální verzi. Máme chystané opravě, který bude tento problém vyřešit. Po implementaci této opravy se už uživatelům nebude zobrazovat více výzev k instalaci aplikací.
 
 ### <a name="ios-volume-purchased-apps-only-available-in-default-intune-tenant-language"></a>Hromadně zakoupené aplikace pro iOS jsou k dispozici pouze ve výchozím jazyce tenanta Intune
 Hromadně zakoupené aplikaci pro iOS se zobrazují a jde je přiřadit pouze ke stejnému kódu země, jaký má účet Intune. Intune synchronizuje jenom aplikace ze stejného národního prostředí iTunes, jako je kód země účtu tenanta Intune. Pokud třeba koupíte aplikaci dostupnou jenom pro USA, ale váš účet Intune je český, Intune tuto aplikaci nezobrazí.

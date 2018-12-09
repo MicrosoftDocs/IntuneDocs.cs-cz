@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1693c61b43b7470bc70dad3bc08ca040fce1d102
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032550"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112982"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -402,7 +402,7 @@ Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným 
 
 U online přístupu rozhodněte, jaké platformy a skupiny uživatelů budou cílem zásad podmíněného přístupu. Dále rozhodněte, jestli potřebujete nainstalovat nebo nakonfigurovat Intune Service to Service Connector pro Exchange Online nebo místní Exchange. Přečtěte si další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector: <!---these links are correct--->
 
--   [Exchange Online](/intune-classic/deploy-use/intune-service-to-service-exchange-connector)
+-   [Exchange Online](exchange-service-connector-configure.md)
 
 -   [Místní Exchange](exchange-connector-install.md)
 

@@ -15,12 +15,12 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 27f3a184e355f63d20a79fd92e8326206f6eee15
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9bbf6f30b7a7490608f9896ae8fe54e27341ccae
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185623"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112319"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Konzola Intune v Azure a starší verze klienta Intune v osobním počítači
 
@@ -53,7 +53,7 @@ Pro systém Windows 7, který nelze spravovat pomocí MDM, budeme nadále podpor
 
 ## <a name="mdm-capabilities"></a>Funkce MDM
 
-Podrobné porovnání možností klienta v osobním počítači a MDM najdete v tématu [Porovnání správy počítačů s Windows jako osobních počítačů nebo jako mobilních zařízení](https://docs.microsoft.com/intune-classic/deploy-use/pc-management-comparison). Aktualizace MDM budou nadále přinášet nové možnosti správy zařízení s Windows 10 zaregistrovaných v MDM včetně vyhodnocení možnosti pro aplikace Win 32. V tématu [Co je nového](https://docs.microsoft.com/intune/whats-new) najdete nejnovější funkce přidané do služby.
+Podrobné porovnání možností klienta v osobním počítači a MDM najdete v tématu [Porovnání správy počítačů s Windows jako osobních počítačů nebo jako mobilních zařízení](pc-management-comparison.md). Aktualizace MDM budou nadále přinášet nové možnosti správy zařízení s Windows 10 zaregistrovaných v MDM včetně vyhodnocení možnosti pro aplikace Win 32. V tématu [Co je nového](https://docs.microsoft.com/intune/whats-new) najdete nejnovější funkce přidané do služby.
 
 ## <a name="switch-from-pc-client-to-mdm"></a>Přechod z klienta v počítači na MDM
 

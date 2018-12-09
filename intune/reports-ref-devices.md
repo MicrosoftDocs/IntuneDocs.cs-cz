@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2782190f043a6d0c2d1af52d5a77fd3ce53b739f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 69c8b4a5b786768d315bfe6ec707b8c4b915c93a
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181443"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112921"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -145,7 +145,7 @@ Entita **MdmStatuses** označuje stav kompatibility daného zařízení.
 | MdmStatusID  | ComplianceStatus | Popis |
 |---------|------------|--------|
 | 0 |Neznámé |Stav dodržování předpisů zařízení je neznámý. |
-| 1 |Vyhovuje |Zařízení dodržuje předpisy. |
+| 1 |Odpovídající |Zařízení dodržuje předpisy. |
 | 2 |a nevyhovující |Zařízení nedodržuje předpisy. |
 | 3 |Konflikt |Dodržování předpisů zařízení způsobilo konflikt. |
 | 4 |Chyba |Při čtení stavu dodržování předpisů zařízením došlo k chybě. |
@@ -232,7 +232,7 @@ Entita **Zařízení** obsahuje seznam všech zaregistrovaných zařízení ve s
 |---------|------------|
 | DeviceKey | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč |
 | DeviceId | Jedinečný identifikátor zařízení. |
-| DeviceName | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
+| Název zařízení | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
 | DeviceTypeKey | Klíč atributu typu zařízení pro toto zařízení. |
 | ClientRegisterationStateKey | Klíč atributu stavu registrace klienta pro toto zařízení. |
 | OwnerTypeKey | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý. |
@@ -258,7 +258,7 @@ Entita **Zařízení** obsahuje seznam všech zaregistrovaných zařízení ve s
 | EasID | ID EAS tohoto zařízení, pokud se zařízení spravuje pomocí protokolu Exchange Active Sync |
 | GraphDeviceIsManaged | Poslední stav správy, který Intune nastavil v Azure AD. |
 | GraphDeviceIsCompliant | Poslední stav kompatibility, který Intune nastavil v Azure AD. |
-| SerialNumber | Sériové číslo zařízení, pokud je dostupné. |
+| sériové číslo | Sériové číslo zařízení, pokud je dostupné. |
 | EnrolledByUser | ID uživatele, který toto zařízení zaregistroval, odkazující na sloupec userId v tabulce Uživatel |
 | RowLastModifiedDateTimeUTC | Čas poslední změny tohoto záznamu |
 | ProcessorArchitecture | Architektura procesoru. |
@@ -278,7 +278,7 @@ Entita **DevicePropertyHistory** obsahuje stejné vlastnosti jako tabulka zaří
 |---------|------------|
 | DateKey |Odkaz na tabulku kalendářních dat udávající den. |
 | DeviceKey |Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
-| DeviceName |Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
+| Název zařízení |Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
 | DeviceTypeKey |Klíč atributu typu zařízení pro toto zařízení. |
 | ClientRegisterationStateKey |Klíč atributu stavu registrace klienta pro toto zařízení. |
 | OwnerTypeKey |Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý. |
@@ -304,7 +304,7 @@ Entita **DevicePropertyHistory** obsahuje stejné vlastnosti jako tabulka zaří
 | EasID |ID EAS tohoto zařízení, pokud se zařízení spravuje pomocí protokolu Exchange Active Sync |
 | GraphDeviceIsManaged |Poslední stav správy, který Intune nastavil v Azure AD. |
 | GraphDeviceIsCompliant |Poslední stav kompatibility, který Intune nastavil v Azure AD. |
-| SerialNumber |Sériové číslo zařízení, pokud je dostupné. |
+| sériové číslo |Sériové číslo zařízení, pokud je dostupné. |
 | EnrolledByUser |ID uživatele, který toto zařízení zaregistroval, odkazující na sloupec userId v tabulce Uživatel |
 | RowLastModifiedDateTimeUTC |Čas poslední změny tohoto záznamu |
 | ProcessorArchitecture |Architektura procesoru. |
@@ -316,7 +316,7 @@ Entita **DevicePropertyHistory** obsahuje stejné vlastnosti jako tabulka zaří
 
 ## <a name="mdmdeviceinventoryhistories"></a>MdmDeviceInventoryHistories
 
-Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře pro zařízení spravovaná pomocí MDM za posledních 90 dnů. Sloupec DateKey označuje den pro daný řádek. U některých zařízení se nemusí některé vlastnosti používat nebo vyplňovat. Další podrobnosti najdete na této stránce. Další informace najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](https://docs.microsoft.com/Intune-classic/deploy-use/understand-your-devices-with-inventory-in-microsoft-Intune).
+Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře pro zařízení spravovaná pomocí MDM za posledních 90 dnů. Sloupec DateKey označuje den pro daný řádek. U některých zařízení se nemusí některé vlastnosti používat nebo vyplňovat. Další podrobnosti najdete na této stránce. Další informace najdete v tématu [Seznámení se zařízeními s inventářem v Microsoft Intune](device-inventory.md).
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -324,7 +324,7 @@ Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře p
 | DeviceKey |Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
 | DeviceModel |Model zařízení. |
 | Operační systém |Operační systém zařízení. |
-| DeviceName |Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
+| Název zařízení |Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemůže být dostupný pro všechna zařízení. |
 | SoftwareVersion |Toto je ve většině případů verze operačního systému, kromě platforem Apple, kde se tato hodnota neshoduje s verzí operačního systému |
 | Imei |Číslo IMEI |
 | HardwareInventoryTimeUtc |Čas prvního nahlášení inventáře pro toto zařízení |
@@ -342,7 +342,7 @@ Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře p
 | OSManufacturer |Výrobce operačního systému. |
 | OSProductSuite |Sada produktů operačního systému. |
 | OSProductType |Typ produktu operačního systému. |
-| Locale |Národní prostředí operačního systému. |
+| Národní prostředí |Národní prostředí operačního systému. |
 | PhysicalMemoryCapacity |Kapacita fyzické paměti (v bajtech). |
 | PhysicalMemoryRemovable |Fyzická vyměnitelná paměť (v bajtech). |
 | SystemEnclosureChassisTypesInnerText |Definuje typ skříně systému pro toto zařízení. Čísla udávají tyto hodnoty:  <br>0 nebo prázdné = Neznámý   <br>1 = Jde o stolní počítač   <br>2 = Jde o notebook  <br>3 = Jde o pracovní stanici  <br>4 = Jde o podnikový server  <br>100 = Jde o telefon  <br>101 = Jde o tablet  <br>102/103 = Jiný neznámý typ mobilního zařízení |
@@ -354,7 +354,7 @@ Entita **MdmDeviceInventoryHistories** obsahuje denní snímky dat inventáře p
 | CertExpiry |Datum vypršení platnosti certifikátu pro správu MDM |
 | DeviceClientAgentVersion |Verze agenta klienta. |
 | DeviceClientID |ID klienta zařízení. |
-| SerialNumber |Sériové číslo. |
+| sériové číslo |Sériové číslo. |
 | DeviceManufacturer |Výrobce zařízení. |
 | DMVersion |Verze DM. |
 | FirmwareVersion |Verze firmwaru. |

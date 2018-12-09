@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: c5a0f49079f18b333172698449193fa02db1c704
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 0cea1b958849d6c2422461e85eba57577a65e884
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031853"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112591"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "53031853"
 
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
-Pokud potřebujete pomoc s instalací Intune do zařízení, přečtěte si o [práci pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions) a [využití šířka pásma Intune](network-bandwidth-use.md) ([klasický portál](/intune-classic/get-started/network-bandwidth-use)).
+Nápovědu k instalaci Intune na zařízení, najdete v článku [práce pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma sítě Intune](network-bandwidth-use.md).
 
 ## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 
@@ -86,11 +86,11 @@ Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace
 
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 
-Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
+Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
 
 <!--  ### Exchange ActiveSync management
 
-You can manage [Exchange ActiveSync devices](/intune-classic/deploy-use/mobile-device-management-with-exchange-activesync-and-microsoft-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
+You can manage [Exchange ActiveSync devices](device-enrollment.md#mobile-device-management-with-exchange-activesync-and-intune) from the Intune console. This option provides a limited set of management capabilities when compared to the other methods. See [Capabilities of built-in Mobile Device Management in Office 365](https://support.office.com/article/Capabilities-of-built-in-Mobile-Device-Management-for-Office-365-a1da44e5-7475-4992-be91-9ccec25905b0) for a list of supported devices.  -->
 
 ## <a name="intune-supported-web-browsers"></a>Podporované webové prohlížeče Intune
 

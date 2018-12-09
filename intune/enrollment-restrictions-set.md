@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e813d64d3019748eed3c985dcefda744188ad850
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861026"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112948"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -52,7 +52,7 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 ## <a name="create-a-restriction"></a>Vytvoření omezení
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Zvolte **Vytvořit omezení**.
@@ -67,14 +67,14 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 
 ## <a name="set-device-type-restrictions"></a>Nastavení omezení typů zařízení
 
-Nastavení omezení typu zařízení můžete změnit podle následujícího postupu. Tato omezení nemají vliv na zařízení, která jsou už zaregistrovaná. Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune).
+Nastavení omezení typu zařízení můžete změnit podle následujícího postupu. Tato omezení nemají vliv na zařízení, která jsou už zaregistrovaná. Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](manage-windows-pcs-with-microsoft-intune.md).
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. V části **Omezení typů zařízení** zvolte omezení, které chcete nastavit > **Vlastnosti** > **Vyberte platformy**. U každé uvedené platformy zvolte **Povolit** nebo **Blokovat**.
     ![Obrazovka s volbami pro povolení nebo blokování platformy](media/enrollment-restrictions-set/platform-allow-block.png)
-5. Vyberte **OK**.
+5. Zvolte **OK**.
 6. Zvolte **Konfigurovat platformy**.
     ![Obrazovka s volbou pro konfiguraci platforem](media/enrollment-restrictions-set/configure-platforms.png)
 7. Vyberte minimální a maximální **verze** uvedených platforem. Podporované formáty verzí:
@@ -82,7 +82,7 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
     - Systém iOS podporuje major.minor.rev. Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
     - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
 8. U každé uvedené platformy vyberte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
-9. Vyberte **OK**.
+9. Zvolte **OK**.
 
 ### <a name="blocking-personal-android-devices"></a>Blokování osobních zařízení s Androidem
 - Když zablokujete registraci osobních zařízení s Androidem, stále půjde zaregistrovat osobní zařízení s pracovním profilem Androidu.
@@ -114,7 +114,7 @@ Zablokují se také následující metody osobní registrace:
 
 Nastavení omezení počtu zařízení můžete změnit podle následujícího postupu:
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. V části **Omezení počtu zařízení** zvolte omezení, které chcete nastavit.
@@ -137,7 +137,7 @@ Registrace zařízení obsahuje výchozí omezení jak pro omezení typu zaříz
 
 Prioritu kteréhokoli nevýchozího omezení můžete změnit.
 
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Zvolte **Registrace zařízení** > **Omezení registrace**.
 4. Najeďte kurzorem myši na omezení v seznamu priorit.

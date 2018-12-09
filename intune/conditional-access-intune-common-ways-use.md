@@ -1,6 +1,6 @@
 ---
-title: Podmíněný přístup s Microsoft Intune
-titlesuffix: ''
+title: Situace podmíněného přístupu
+titlesuffix: Microsoft Intune
 description: Přečtěte si, jak se podmíněný přístup Intune běžně používá pro podmíněný přístup podle zařízení a aplikace.
 keywords: ''
 author: brenduns
@@ -14,13 +14,13 @@ ms.technology: ''
 ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure; get-started
-ms.openlocfilehash: d7c47e7e82928ea40d0b39dfbb17472441eac4f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; get-started; seodec18
+ms.openlocfilehash: 7073c5c617806bcf35934aba73bf15a9a195a506
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187663"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112472"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby používání podmíněného přístupu s Intune?
 
@@ -45,7 +45,7 @@ Zásady podmíněného přístupu na základě zařízení pro Exchange Online a
 
 -   Přečtěte si další informace o [dodržování předpisů zařízením v Intune](device-compliance.md).
 
--   Přečtěte si další informace o [ochraně e-mailu, Office 365 a dalších služeb pomocí podmíněného přístupu v Intune](https://docs.microsoft.com/intune-classic/deploy-use/restrict-access-to-email-and-o365-services-with-microsoft-intune).
+-   Přečtěte si další informace o [ochraně e-mailu, Office 365 a dalších služeb pomocí podmíněného přístupu v Intune](app-based-conditional-access-intune.md).
 
 > [!NOTE]
 > Pokud na zařízeních s Androidem povolíte přístup na základě zařízení pro Sharepoint Online, je nutné, aby uživatelé na zaregistrovaném zařízení povolili možnost **Povolit přístup z prohlížeče** následujícím způsobem:
@@ -125,7 +125,7 @@ Když mají mobilní zařízení nainstalovaného agenta pro ochranu před mobil
 
 Integrace Intune a ochrany před mobilními hrozbami hraje roli při rozhodování podmíněného přístupu na základě rizika zařízení.
 
--   Přečtěte si další informace o [Intune Mobile Threat Defense](https://docs.microsoft.com/intune-classic/deploy-use/mobile-threat-defense).
+-   Přečtěte si další informace o [Intune Mobile Threat Defense](mobile-threat-defense.md).
 
 ### <a name="conditional-access-for-windows-pcs"></a>Podmíněný přístup pro počítače s Windows
 

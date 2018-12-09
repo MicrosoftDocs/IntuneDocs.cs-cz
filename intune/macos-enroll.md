@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 85a05f4816692d3bccfe695c7e69f54d007f3b59
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 7a54a72afb6052ed11566c2d2ada596ebde2159b
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187000"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112404"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -37,7 +37,7 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 
 - [Konfigurace domén](custom-domain-name-configure.md)
 - [Nastavení autority MDM](mdm-authority-set.md)
-- [Vytvoření skupin](https://docs.microsoft.com/intune-classic/get-started/start-with-a-paid-subscription-to-microsoft-intune-step-5)
+- [Vytvoření skupin](groups-add.md)
 - [Konfigurace aplikace Portál společnosti](company-portal-app.md)
 - Přiřazení uživatelských licencí na [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](apple-mdm-push-certificate-get.md)

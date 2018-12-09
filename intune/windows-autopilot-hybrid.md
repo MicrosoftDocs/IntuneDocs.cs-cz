@@ -1,7 +1,7 @@
 ---
-title: Registrace hybridní služby Active Directory připojených k zařízení pomocí Windows Autopilot
-titleSuffix: Microsoft Intune
-description: K registraci zařízení připojených k hybridní službě Active Directory v Intune použijte Windows Autopilot.
+title: Registrace hybridní služby Active Directory připojené zařízení – Windows Autopilot
+titleSuffix: ''
+description: Použití Windows Autopilot registrace hybridní služby Active Directory připojené zařízení v Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ed404d97b2fe0ccf38a5d3946819fd8225127581
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: ced67b2dcdd5720a9708868808ec885938b8ddcd
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032312"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112438"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.

@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 56bf46be841cb5acd5e6ec3a5d32eb4f7f525516
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 290d60732130a82fb3daf7779142605ebc0bfeaa
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032584"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112999"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -1548,7 +1548,7 @@ Intune přidává nová omezení registrace řídící to, které platformy mobi
 * Omezení registrace mobilních zařízení neomezuje registraci klienta pro počítače.  
 * Pouze pro iOS a Android existuje další možnost blokování registrace osobních zařízení.
 
-Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](https://docs.microsoft.com/intune-classic/deploy-use/manage-corporate-owned-devices).
+Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune všechna nová zařízení označí jako osobní. Podrobnosti najdete v [tomto článku](device-enrollment.md).
 
 ### <a name="view-all-actions-on-managed-devices---677150--"></a>Zobrazení všech akcí na spravovaných zařízeních <!--677150-->
 V nové sestavě __Akce zařízení__ se zobrazí, kdo provedl vzdálené akce, jako je obnovení továrního nastavení zařízení, a dále stav dané akce. Viz [Co je správa zařízení?](device-management.md)

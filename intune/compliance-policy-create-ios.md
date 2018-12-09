@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 35091139e3afaabac4fad0b22fc6096cf7ada7c3
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 41ae1ffc17eee93b45f00e4eef5590f6a5d0b7b4
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728867"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112506"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s iOSem v Intune
 
@@ -64,7 +64,7 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 8. Choose **Add** to finish creating the action.
 9. You can create multiple actions and the sequence in which they should occur. Choose **Ok** when you are finished creating all the actions.--->
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 - **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil**: Pokud nastavíte možnost Vyžadovat, budou se zařízení, která nemají e-mailový profil spravovaný službou Intune, považovat za nedodržující předpisy. Zařízení nemusí mít spravovaný e-mailový profil, pokud není správně zacíleno nebo pokud uživatel e-mailový účet na zařízení nastavil ručně.
 
@@ -74,7 +74,7 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 
 - **Vyberte e-mailový profil, který se musí spravovat přes Intune**: Pokud je vybraná možnost **E-mailový účet se musí spravovat přes Intune**, zvolte **Vybrat** a nastavte e-mailový profil Intune. Tento e-mailový profil musí být na zařízení.
 
-Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/configure-access-to-corporate-email-using-email-profiles-with-microsoft-intune).
+Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](email-settings-configure.md).
 
 ## <a name="device-health"></a>Device health
 

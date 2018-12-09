@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: cf930b7625d474d66abef0d65efb009474bf79b0
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032176"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112421"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -35,7 +35,7 @@ K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašo
 
 Nástroj App Wrapping **nepodporuje** aplikace v Apple App Storu nebo obchodu Google Play. Nepodporuje ani některé funkce, které vyžadují vývojářskou integraci (viz následující tabulka s porovnáním funkcí).
 
-Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na zařízeních, která nejsou registrovaná do Intune, najdete v článku [Ochrana obchodních aplikací a dat na zařízeních neregistrovaných do Microsoft Intune](/intune-classic/deploy-use/protect-line-of-business-apps-and-data-on-devices-not-enrolled-in-microsoft-intune).
+Další informace o nástroji App Wrapping Tool pro zásady ochrany aplikací na zařízeních, která nejsou registrovaná do Intune, najdete v článku [Ochrana obchodních aplikací a dat na zařízeních neregistrovaných do Microsoft Intune](apps-add.md).
 
 ### <a name="reasons-to-use-the-app-wrapping-tool"></a>Důvody pro použití nástroje App Wrapping Tool
 * Aplikace nemá předdefinované funkce ochrany dat.
@@ -117,4 +117,4 @@ Další informace o zásadách ochrany aplikací a službě Intune najdete v tě
 
   - [Nástroj App Wrapping Tool a aplikace pro Android](app-wrapper-prepare-android.md)</br>
   - [Nástroj App Wrapping Tool a aplikace pro iOS](app-wrapper-prepare-ios.md)</br>
-  - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+  - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)

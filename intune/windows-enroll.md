@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: efb850e0f08c94cfee7948f50411220216eb8418
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9562eb2c8fae49628ac042f28f172fb9f8fd5106
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188063"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112540"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -102,4 +102,4 @@ Další informace o úlohách pro koncové uživatele najdete v tématu [Materi�
 
 ## <a name="next-steps"></a>Další postup
 
-- [Co je třeba zvážit při správě zařízení Windows pomocí Intune v Azure](/intune-classic/deploy-use/intune-on-azure)
+- [Co je třeba zvážit při správě zařízení Windows pomocí Intune v Azure](intune-legacy-pc-client.md)

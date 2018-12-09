@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5482d84d22aa7be29a8030dc75a27ba793792e40
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 26bf759722b5cb92bda28b0e60c9365a7edc7710
+ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182104"
+ms.lasthandoff: 12/08/2018
+ms.locfileid: "53112853"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -28,7 +28,7 @@ ms.locfileid: "52182104"
 
 Pomocí nástroje Microsoft Intune App Wrapping Tool pro iOS můžete zapnout zásady ochrany aplikací Intune pro interní aplikace pro iOS, aniž byste museli měnit kód samotné aplikace.
 
-Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](/intune-classic/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console).
+Tento nástroj je vlastně aplikace příkazového řádku systému Mac OS, která vytvoří obálku aplikace. Až se aplikace zpracuje, můžete její funkce změnit tak, že do ní nasadíte [zásady ochrany aplikací](app-protection-policies.md).
 
 Nástroj si můžete stáhnout na stránce [Microsoft Intune App Wrapping Tool pro iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) v GitHubu.
 
@@ -127,7 +127,7 @@ K distribuci aplikací zabalených pomocí Intune budete potřebovat toto:
 
     ![Žádost o certifikát od certifikační autority v Klíčence](./media/iOS-signing-cert-6.png)
 
-12. Vraťte se na web Apple Developer. Klikněte na **Continue** (Pokračovat). Pak nahrajte soubor CSR.
+12. Vraťte se na web Apple Developer. Klikněte na **Pokračovat**. Pak nahrajte soubor CSR.
 
 13. Apple vygeneruje váš podpisový certifikát. Stáhněte a uložte si ho do počítače s macOS na nějaké snadno zapamatovatelné místo.
 
@@ -220,9 +220,9 @@ Ve složce IntuneMAMPackager/Contents/MacOS otevřete `Parameters.plist` (prázd
 | Output Application Package Path |Prázdná| Odpovídá vlastnosti -o.|
 | Provisioning Profile Path |Prázdná| Odpovídá vlastnosti -p.|
 | SHA-1 Certificate Hash |Prázdná| Odpovídá vlastnosti -c.|
-| Verbose Enabled |nepravda| Odpovídá vlastnosti -v.|
-| Remove Missing Entitlements | nepravda| Odpovídá vlastnosti -c.|
-| Prevent Default Build |nepravda | Odpovídá použití vlastnosti -b bez argumentů.|
+| Verbose Enabled |false (nepravda)| Odpovídá vlastnosti -v.|
+| Remove Missing Entitlements | false (nepravda)| Odpovídá vlastnosti -c.|
+| Prevent Default Build |false (nepravda) | Odpovídá použití vlastnosti -b bez argumentů.|
 |Build String Override | Prázdná| Vlastní verze balíčku (CFBundleVersion) zabalené výstupní aplikace |
 |Extension Provisioning Profile Paths | Prázdná| Pole zřizovacích profilů rozšíření pro aplikaci
 
@@ -257,7 +257,7 @@ Mezi osvědčené postupy pro opětovné balení patří:
 ## <a name="error-messages-and-log-files"></a>Chybové zprávy a soubory protokolu
 K řešení potíží s nástrojem App Wrapping použijte následující informace.
 
-### <a name="error-messages"></a>Chybovými zprávami
+### <a name="error-messages"></a>Chybové zprávy
 Pokud se nástroji App Wrapping nepodaří aplikaci zabalit, zobrazí konzola některou z následujících chybových zpráv:
 
 |Chybová zpráva|Další informace|
@@ -437,7 +437,7 @@ Následující postup vám pomůže získat protokoly zabalených aplikací, kte
 > [!NOTE]
 > Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)</br>
-- [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](/intune-classic/deploy-use/manage-settings-and-features-on-your-devices-with-microsoft-intune-policies)</br>
-- [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](/intune-classic/deploy-use/use-the-sdk-to-enable-apps-for-mobile-application-management)
+- [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
+- [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)
