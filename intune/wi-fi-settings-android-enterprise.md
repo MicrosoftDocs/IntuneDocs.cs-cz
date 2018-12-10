@@ -1,25 +1,25 @@
 ---
-title: Konfigurace nastavení Wi-Fi pro zařízení s Androidem Enterprise a pro zařízení s beznabídkovým režimem – Microsoft Intune – Azure | Microsoft Docs
-titleSuffix: ''
+title: Konfigurace nastavení Wi-Fi pro zařízení s Androidem Enterprise a veřejného terminálu
+titleSuffix: Microsoft Intune
 description: Vytvořte nebo přidejte konfigurační profil zařízení s připojením Wi-Fi pro Android Enterprise a beznabídkový režim Androidu. Podívejte se na různá nastavení, včetně přidání certifikátů, volby typu protokolu EAP a výběru metody ověřování v Microsoft Intune. U zařízení s beznabídkovým režimem zadejte také předsdílený klíč sítě.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: be26522555766c6a3661857ba7722c2425cc984e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
-ms.translationtype: MT
+ms.custom: seodec18
+ms.openlocfilehash: 89a89312bde2c69f4301e12416b9dc8ed57a492e
+ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180438"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53032142"
 ---
 # <a name="add-wi-fi-settings-for-devices-running-android-enterprise-and-android-kiosk-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Androidem Enterprise a s beznabídkovým režimem Androidu v Microsoft Intune
 
@@ -45,7 +45,7 @@ Tuto možnost vyberte, pokud používáte zařízení s Androidem Enterprise v b
   - **Předsdílený klíč WEP**: Zadejte heslo do pole **Předsdílený klíč**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK.
   - **Předsdílený klíč WPA**: Zadejte heslo do pole **Předsdílený klíč**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK.
 
-Výběrem **OK** uložte změny.
+Vyberte **OK** uložte provedené změny.
 
 ## <a name="work-profile-only"></a>Pouze pracovní profil
 
@@ -68,17 +68,17 @@ Výběrem **OK** uložte změny.
 
     - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
-      Výběrem **OK** uložte změny.
+      Vyberte **OK** uložte provedené změny.
 
     - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-      Výběrem **OK** uložte změny.
+      Vyberte **OK** uložte provedené změny.
 
   - **EAP-TTLS**: Dále zadejte:
 
     - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
-      Výběrem **OK** uložte změny.
+      Vyberte **OK** uložte provedené změny.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
@@ -89,7 +89,7 @@ Výběrem **OK** uložte změny.
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-        Výběrem **OK** uložte změny.
+        Vyberte **OK** uložte provedené změny.
 
       - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
@@ -97,7 +97,7 @@ Výběrem **OK** uložte změny.
 
     - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
-      Výběrem **OK** uložte změny.
+      Vyberte **OK** uložte provedené změny.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
@@ -108,7 +108,7 @@ Výběrem **OK** uložte změny.
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-        Výběrem **OK** uložte změny.
+        Vyberte **OK** uložte provedené změny.
 
       - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
