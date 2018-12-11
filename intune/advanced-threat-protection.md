@@ -14,18 +14,18 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de80092647462f83fb92303080239fd30198bd3c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1b8d08e60b9cd656eb9467fd5289b9dfc428d183
+ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180230"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53167990"
 ---
 # <a name="enable-windows-defender-atp-with-conditional-access-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem v Intune
 
 Rozšířená ochrana před internetovými útoky v programu Windows Defender (ATP) a Microsoft Intune společně předcházejí porušením zabezpečení a pomáhají omezit dopad těchto porušení na organizaci.
 
-Tato funkce se vztahuje k zařízením s Windows 10
+Tato funkce platí pro: Zařízení s Windows 10
 
 Příklad: Někdo pošle uživateli ve vaší organizaci wordový soubor s vloženým škodlivým kódem. Uživatel přílohu otevře a povolí obsah. Spustí se útok se zvýšenými oprávněními. Útočník ho provádí ze vzdáleného počítače na napadeném zařízení, ke kterému získal oprávnění správce. Z tohoto zařízení získá vzdálený přístup i k dalším zařízením uživatele.
 
@@ -51,7 +51,7 @@ Abyste mohli používat ATP s Intune, je potřeba mít nakonfigurované a připr
 
 ## <a name="enable-windows-defender-atp-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender v Intune
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Dodržování předpisů zařízením** > **Windows Defender ATP** > **Otevřít Centrum zabezpečení v programu Windows Defender**.
 
@@ -89,13 +89,13 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)**.
 6. Nakonfigurujte nastavení:
 
-  - **Typ balíčku konfigurace klienta Ochrany ATP v programu Windows Defender**: Pokud chcete do profilu přidat konfigurační balíček, vyberte možnost **Připojení**. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+  - **Typ balíček konfigurace klienta ochrany ATP v programu Windows Defender**: Vyberte **připojení** chcete do profilu přidat konfigurační balíček. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
   
     > [!NOTE] 
-    > Pokud jste správně navázali spojení s Ochranou ATP v programu Windows Defender, Intune automaticky **Připojí** konfigurační profil za vás.
+    > Pokud jste správně navázat spojení se ochrana ATP v programu Windows Defender, Intune se automaticky **připojení** konfigurační profil a **typ balíček konfigurace klienta ochrany ATP v programu Windows Defender** nastavení nebude k dispozici.
   
-  - **Sdílení ukázky pro všechny soubory**: Možnost **Povolit** umožňuje shromažďovat ukázky a sdílet je se službou Ochrana ATP v programu Windows Defender. Pokud například uvidíte podezřelý soubor, můžete ho odeslat službě Ochrana ATP v programu Windows Defender k hloubkové analýze. Pokud nechcete sdílet ukázky s Ochranou ATP v programu Windows Defender, vyberte možnost **Nenakonfigurováno**.
-  - **Zvýšení četnosti hlášení telemetrie**: Tuto možnost **povolte** pro vysoce riziková zařízení, aby hlásila telemetrii Ochraně ATP v programu Windows Defender častěji.
+  - **Sdílení ukázky pro všechny soubory**: **Povolit** umožňuje ukázky, které se shromažďují a sdílet je s ochrany ATP v programu Windows Defender. Pokud například uvidíte podezřelý soubor, můžete ho odeslat službě Ochrana ATP v programu Windows Defender k hloubkové analýze. Pokud nechcete sdílet ukázky s Ochranou ATP v programu Windows Defender, vyberte možnost **Nenakonfigurováno**.
+  - **Zvýšit četnost hlášení telemetrie**: U zařízení s vysokým rizikem **povolit** toto nastavení, aby hlásila telemetrii službě ochrana ATP v programu Windows Defender častěji.
 
     Další podrobnosti o těchto nastaveních Ochrany ATP v programu Windows Defender získáte v článku [Připojení počítačů s Windows 10 pomocí System Center Configuration Manageru](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/configure-endpoints-sccm-windows-defender-advanced-threat-protection).
 
@@ -110,9 +110,9 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 4. V části **Platforma** vyberte **Windows 10 a novější**.
 5. V části **Windows Defender ATP** nastavte možnost **Vyžadovat, aby zařízení mělo určité nebo nižší skóre rizika počítače** na požadovanou úroveň:
 
-  - **Vymazat:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
-  - **Nízká:** Zařízení se vyhodnotí jako vyhovující, pokud se v něm nacházejí jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
-  - **Střední:** Zařízení vyhovuje, pokud se v něm vyskytují hrozby na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
+  - **Vymazat**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
+  - **Nízká**: Zařízení splňuje předpisy, pokud jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
+  - **Střední**: Zařízení splňuje předpisy, pokud jsou hrozby pohybují na střední nebo nízké. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
   - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Jako vyhovující se tedy vyhodnotí zařízení s hrozbami nízké, střední i vysoké úrovně.
 
 6. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.

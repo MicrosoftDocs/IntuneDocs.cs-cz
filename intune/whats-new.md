@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: f6cb413e4cdd4c465254786e3f6abe1cf52db78e
-ms.sourcegitcommit: ea4dac7c6106f060698266a78a6693c10cd84a0b
+ms.openlocfilehash: 06031b8085e50caa2092287c97b3eab0ead366ee
+ms.sourcegitcommit: 5e4c7da8ce62d5a5720316ef4068c1920f8f5b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "53003586"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53200602"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,6 +42,14 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-december-10-2018"></a>Týden od 10. prosince 2018
+
+### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Microsoft automaticky aktualizovanou verzi 4.50 požadované pro zařízení s macOS <!-- 3503442 -->
+Chcete-li pokračovat, příjem aktualizací pro aplikaci portál společnosti a další aplikace Office, musí zařízení s macOS spravovaná pomocí Intune upgradovat na Microsoft automatickou aktualizaci 4.5.0. Uživatelé můžou mít už tuto verzi pro jejich aplikace Office.
+
+### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Intune vyžaduje macOS 10.12 nebo novější <!-- 2827778 -->
+Intune teď vyžaduje macOS verze 10.12 nebo novější. Zařízení s macOS předchozí verze pomocí nelze použít aplikaci portál společnosti k registraci do Intune. Na podporu a nové funkce, musí uživatelé upgradovat svoje zařízení s macOS 10.12 nebo novější a upgradovat na nejnovější verzi aplikace portál společnosti.
 
 ## <a name="week-of-november-26-2018"></a>Týden od 26. listopadu 2018
 
@@ -74,7 +82,7 @@ Teď můžete spravovat tyto aplikace s [zásady ochrany aplikací Intune](app-p
 - PowerApps (Android, iOS)
 - Tok (Android, iOS)
 
-Použití zásad ochrany aplikací pro ochranu firemních dat a ovládací prvek přenos dat u těchto aplikací, jako ostatní zásady spravované aplikace Intune. Poznámka: Pokud tok není viditelné v konzole, přidejte tok, když vytvoříte nebo upravíte a zásady ochrany aplikací. Chcete-li tak učinit, použijte **+ další aplikace** možnost a potom zadejte *ID aplikace* pro tok do vstupního pole. Pro Android pomocí *com.microsoft.flow*, a pro iOS použijte *com.microsoft.procsimo*.
+Použití zásad ochrany aplikací pro ochranu firemních dat a ovládací prvek přenos dat u těchto aplikací, jako ostatní zásady spravované aplikace Intune. Poznámka: Pokud tok není viditelné v konzole, přidáte tok, když vytvoříte nebo upravíte a zásady ochrany aplikací. Chcete-li tak učinit, použijte **+ další aplikace** možnost a potom zadejte *ID aplikace* pro tok do vstupního pole. Pro Android pomocí *com.microsoft.flow*, a pro iOS použijte *com.microsoft.procsimo*.
 
 #### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
 Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
@@ -187,9 +195,9 @@ Cílem powershellových skriptů v Intune mohou být skupiny zabezpečení zař�
 #### <a name="new-required-password-type-default-setting-for-android-android-enterprise---2649963---"></a>Nové výchozí nastavení Požadovaný typ hesla pro Android, Android Enterprise <!-- 2649963 -->
 Když vytvoříte nové zásady dodržování předpisů (**Intune** > **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Android** nebo **Android Enterprise** pro Platforma > Zabezpečení systému), výchozí hodnota pro **Požadovaný typ hesla** se změní:
 
-z: Výchozí ze zařízení na: Aspoň číslice.
+Od: Výchozí ze zařízení na: Aspoň číselné
 
-Platí pro Android, Android Enterprise.
+Platí pro: Android, Android Enterprise
 
 Pokud se chcete podívat na tato nastavení, přejděte do [Androidu](compliance-policy-create-android.md) nebo [Androidu Enterprise](compliance-policy-create-android-for-work.md).
 
@@ -304,7 +312,7 @@ Koncoví uživatelé teď budou moct aktivovat akce aplikací a zařízení v ap
 #### <a name="create-dns-suffixes-in-vpn-configuration-profiles-on-devices-running-windows-10---1333668---"></a>Vytvoření přípon DNS v konfiguračních profilech sítě VPN na zařízeních s Windows 10 <!-- 1333668 -->
 Při vytváření profilu konfigurace zařízení v síti VPN (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Windows 10 a novější** Platforma > **VPN** pro typ profilu), zadáváte nastavení DNS. S touto aktualizací můžete také zadat v Intune více **přípon DNS**. Pokud použijete přípony DNS, můžete k vyhledání síťového prostředku použít jeho krátký název místo plně kvalifikovaného názvu domény (FQDN). V této aktualizaci můžete v Intune změnit pořadí přípon DNS.
 Seznam aktuálních nastavení DNS je v [nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md#dns-settings).
-Platí pro: zařízení s Windows 10
+Platí pro: Zařízení s Windows 10
 
 #### <a name="support-for-always-on-vpn-for-android-enterprise-work-profiles----1333705---"></a>Podpora neustále aktivních pracovních profilů sítě VPN pro Android Enterprise <!-- 1333705 -->
 V této aktualizaci můžete využít neustále aktivní připojení VPN na zařízeních s Androidem Enterprise, která používají spravované pracovní profily. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned znovu připojí, jakmile uživatel odemkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Připojení také můžete přepnout do „zamčeného“ režimu, který blokuje veškerý síťový provoz, dokud není připojení VPN zase aktivní.
@@ -316,7 +324,7 @@ Certifikáty se v současnosti vydávají jenom uživatelům. S touto aktualizac
 - Vlastnost **Alternativní název subjektu (SAN)** v profilu SCEP má nyní formát tabulky a může obsahovat nové proměnné. Správce může do tabulky přidat atribut a vyplnit hodnotu vlastního textového pole. Alternativní název subjektu (SAN) podporuje následující atributy: 
   - DNS
   - E-mailová adresa
-  - UPN
+  - HLAVNÍ NÁZEV UŽIVATELE
 
   Tyto nové proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
 
@@ -345,7 +353,7 @@ Nové proměnné certifikátu zařízení:
 
 V části [Vytvoření profilu certifikátu SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) je seznam aktuálních proměnných při vytvoření konfiguračního profilu SCEP. 
 
-Platí pro: Windows 10 a novější a iOS, podporuje síť Wi-Fi
+Platí pro: Windows 10 a novější a iOS, které jsou podporovány pro Wi-Fi
 
 #### <a name="remotely-lock-uncompliant-devices----2064495---"></a>Vzdálené zamčení nevyhovujících zařízení <!-- 2064495 -->
 Pokud zařízení nevyhovuje, můžete vytvořit akci, která vychází ze zásady dodržování předpisů a která zařízení vzdáleně zamkne. V Intune vyberte **Dodržování předpisů zařízením**, vytvořte novou nebo vyberte některou ze stávajících zásad > **Vlastnosti**. Vyberte **Akce při nedodržení předpisů** > **Přidat** a zvolte, že chcete zařízení vzdáleně zamknout.
@@ -594,9 +602,9 @@ K dispozici je aktualizovaná verze sady Intune App SDK pro Android, která podp
 #### <a name="create-device-compliance-policy-using-firewall-settings-on-macos-devices----1497640---"></a>Vytváření zásad dodržování předpisů pro zařízení pomocí nastavení Firewall na zařízeních s macOSem <!-- 1497640 -->
 Při vytváření nových zásad dodržování předpisů systému macOS (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: macOS** > **Zabezpečení systému**) jsou dostupná některá nová nastavení pro **bránu firewall**: 
 
-- **Firewall:** Umožňuje konfigurovat způsob zpracování příchozích připojení ve vašem prostředí.
-- **Příchozí připojení:** **Blokuje** všechna příchozí připojení s výjimkou připojení potřebných pro základní internetové služby, jako je DHCP, Bonjour a IPSec. Toto nastavení blokuje také všechny služby sdílení.
-- **Neviditelný režim:** **Aktivací** neviditelného režimu zakážete zařízení odpovídat na zjišťovací požadavky. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti.
+- **Brána firewall**: Nakonfigurovat jak příchozí připojení jsou zpracovávány ve vašem prostředí.
+- **Příchozí připojení**: **Blok** všechna příchozí připojení s výjimkou souborů požadovaných pro základní internetové služby, například DHCP, Bonjour a IPSec. Toto nastavení blokuje také všechny služby sdílení.
+- **Neviditelný režim**: **Povolit** neviditelný režim, který zabrání zařízení v odpovídání na zjišťovací požadavky. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti.
 
 Platí pro: macOS 10.12 a novější
 
@@ -692,8 +700,8 @@ Jako správce Microsoft Intune můžete odvolat všechny licence pro vybrané ap
 #### <a name="updates-to-out-of-compliance-messages-in-company-portal-app----1832222---"></a>Aktualizace zpráv o nedodržování předpisů v aplikaci Portál společnosti <!-- 1832222 -->
 Revidovali jsme zprávy, které se zobrazují uživatelům zařízení, když zařízení nedodržuje předpisy. Zprávy si zachovávají svůj původní význam, ale jsou aktualizované tak, aby byly lépe srozumitelné a méně technické. Aktualizovali jsme také odkazy na dokumentaci a postupy pro odstranění problémů.
 Následující texty „Před“ a „Po“ jsou jedním z příkladů vylepšení zpráv, kterých si můžete všimnout:
-- **Před**: *Toto zařízení nekontaktovalo službu Intune v zadaném časovém období vyžadovaném vaším správcem IT. Pokud chcete tento problém vyřešit, otevřete prosím aplikaci Portál společnosti na svém zařízení a klikněte na tlačítko Zkontrolovat dodržování předpisů.*
-- **Po**: *Vaše zařízení se už nějakou dobu neohlásilo organizaci. Pokud chcete znovu navázat spojení, otevřete na zařízení aplikaci Portál společnosti a pro dané zařízení klepněte na Zkontrolovat nastavení.*
+- **Před**: *Toto zařízení nekontaktovalo službu Intune v časovém období vymezeném správcem IT. Pokud chcete tento problém vyřešit, otevřete prosím aplikaci Portál společnosti na svém zařízení a klikněte na tlačítko Zkontrolovat dodržování předpisů.*
+- **Po**: *Vaše zařízení po nějakou dobu nepřipojilo organizaci nějakou dobu. Pokud chcete znovu navázat spojení, otevřete na zařízení aplikaci Portál společnosti a pro dané zařízení klepněte na Zkontrolovat nastavení.*
 
 #### <a name="revoke-ios-vpp-app-license----1863797---"></a>Odvolání licence aplikace VPP pro iOS <!-- 1863797 -->
 Jako správce můžete uvolnit licenci aplikace VPP pro iOS přiřazenou uživateli nebo zařízení. Licenci aplikace budete moct uvolnit také odinstalováním aplikace VPP pro iOS. Před odinstalací aplikace je potřeba odebrat uživatele nebo zařízení ze skupiny, na kterou daná aplikace cílí. Odebráním uživatele nebo zařízení z příslušné skupiny se vyhnete opětovné instalaci této aplikace. Po dokončení těchto kroků můžete licenci aplikace přiřadit dalšímu uživateli nebo zařízení. Další informace o licencích aplikací VPP pro iOS najdete v tématu [o správě aplikací pro iOS zakoupených přes Volume Purchase Program v Microsoft Intune](vpp-apps-ios.md).
@@ -724,9 +732,9 @@ Na stránku **Dodržování předpisů zařízením** > **Zásady** > vyberte z�
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Dodržování předpisů zařízením podporuje antivirová řešení jiných výrobců <!-- 2325484 -->
-Při vytváření zásad dodržování předpisů zařízením (**Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu** > **Platforma: Windows 10 nebo novější** > **Nastavení** > **Zabezpečení systému**) jsou dostupné nové možnosti **[Zabezpečení zařízení](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)**: 
-- **Antivirus:** Když je tato možnost nastavená na **Vyžadovat**, můžete dodržování předpisů kontrolovat pomocí antivirových řešení, která jsou registrovaná Centrem zabezpečení systému Windows, jako je Symantec nebo Windows Defender. 
-- **Antispyware**: Když je tato možnost nastavená na **Vyžadovat**, můžete dodržování předpisů kontrolovat pomocí antispywarových řešení (například Symantec nebo Windows Defender), která jsou registrovaná Centrem zabezpečení Windows. 
+Když vytvoříte zásadu dodržování předpisů (**dodržování předpisů zařízením** > **zásady** > **vytvořit zásadu**  >  **Platformy: Windows 10 a novější** > **nastavení** > **zabezpečení systému**), existují nové **[zabezpečení zařízení](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)** možnosti: 
+- **Antivirová ochrana v programu**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antivirových řešení, které jsou registrovány Windows Security Center, jako je například Symantec a programem Windows Defender. 
+- **AntiSpyware**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antispywaru řešení, které jsou registrovány v systému Windows Security Center, jako je například Symantec a programem Windows Defender. 
 
 Platí pro: Windows 10 a novější 
 
@@ -833,7 +841,7 @@ Profily nasazení AutoPilot můžete přiřadit skupinám Azure AD, které obsah
 #### <a name="set-compliance-by-device-location----851881----"></a>Nastavení dodržování předpisů podle umístění zařízení <!-- 851881 ! -->
 Někdy můžete chtít omezit přístup k podnikovým prostředkům na konkrétní umístění definovaná podle síťového připojení. Teď můžete vytvořit zásady dodržování předpisů (**Dodržování předpisů zařízením** > **Umístění**) na základě IP adresy zařízení. Pokud se zařízení přesune mimo rozsah IP adres, nebude moct přistupovat k podnikovým prostředkům.
 
-Platí pro: Zařízení s Androidem verze 6.0 a novější s aktualizovanou aplikací Portál společnosti
+Platí pro: Používejte zařízení s Androidem verze 6.0 nebo novější s aktualizovanou aplikací Portál společnosti.
 
 #### <a name="prevent-consumer-apps-and-experiences-on-windows-10-enterprise-rs4-autopilot-devices---1621980---"></a>Blokování uživatelských aplikací a prostředí na zařízeních Windows 10 Enterprise RS4 AutoPilot<!-- 1621980 -->
 Budete moct zabránit v instalaci uživatelských aplikací a prostředí na zařízeních Windows 10 Enterprise RS4 AutoPilot. Když chcete tuto funkci zobrazit, přejděte na **Intune** > **Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Platforma** = **Windows 10 nebo novější** > **Typ profilu** = **Omezení zařízení** > **Konfigurovat** > **Windows Spotlight** > **Uživatelské funkce**. 
@@ -847,7 +855,7 @@ Teď můžete hledat IMEI a sériová čísla v okně Všechna zařízení (pole
 #### <a name="management-name-field-will-be-editable----1875989---"></a>Pole Název správy bude možné upravovat <!-- 1875989 -->
 Teď můžete v okně **Vlastnosti** příslušného zařízení upravovat pole Název správy. Pokud chcete toto pole upravit, vyberte **Zařízení** > **Všechna zařízení** > vyberte zařízení > **Vlastnosti**. Pole s názvem správy můžete použít k jednoznačné identifikaci zařízení.
 
-#### <a name="new-all-devices-filter-device-category----1878520---"></a>Nový filtr Všechna zařízení: Kategorie zařízení <!-- 1878520 -->
+#### <a name="new-all-devices-filter-device-category----1878520---"></a>Nové všechna zařízení filtru: Kategorie zařízení <!-- 1878520 -->
 Teď můžete filtrovat seznam **Všechna zařízení** podle kategorie zařízení. Když to chcete udělat, zvolte **Zařízení** > **Všechna zařízení** > **Filtrovat** > **Kategorie zařízení**.
 
 #### <a name="use-teamviewer-to-screen-share-ios-and-macos-devices----1985547---"></a>Použití TeamVieweru ke sdílení obrazovek na zařízeních s iOSem a MacOS<!-- 1985547 -->
@@ -858,7 +866,7 @@ Už neplatí omezení v podobě jednoho Microsoft Intune Exchange Connectoru na 
 
 S místním konektorem Exchange v Intune můžete spravovat přístup zařízení k místním poštovním schránkám Exchange podle toho, jestli je zařízení zaregistrované v Intune a splňuje zásady dodržování předpisů zařízením. Konektor nastavíte tak, že místní konektor Exchange v Intune stáhnete z portálu Azure Portal a nainstalujete ho na server v organizaci Exchange. Na řídicím panelu Microsoft Intune zvolte **Místní přístup** a pak v **Nastavení** vyberte **Konektor Exchange ActiveSync**. Stáhněte místní konektor Exchange a nainstalujte ho na server v organizaci Exchange. Protože už teď neplatí omezení v podobě jednoho konektoru Exchange na každého tenanta, pokud máte další organizace Exchange, můžete stejným postupem stáhnout a nainstalovat konektor pro každou další organizaci Exchange.
 
-#### <a name="new-device-hardware-detail-ccid----2156657---"></a>Nový údaj o hardwaru zařízení: CCID <!-- 2156657 -->
+#### <a name="new-device-hardware-detail-ccid----2156657---"></a>Nové podrobnosti o hardwaru zařízení: CCID <!-- 2156657 -->
 U každého zařízení je teď uvedený údaj CCID (Chip Card Interface Device). Když ho chcete zobrazit, zvolte **Zařízení** > **Všechna zařízení** > zvolte zařízení > **Hardware** a zkontrolujte část **Podrobnosti o síti**>.
 
 #### <a name="assign-all-users-and-all-devices-as-scope-groups----2196803---"></a>Přiřazení všech uživatelů a všech zařízení jako skupin oborů <!-- 2196803 -->
@@ -937,7 +945,7 @@ Po této aktualizaci mohou správci přímo v Intune na webu Azure Portal povoli
 
 #### <a name="new-printer-settings-for-education-profiles----1308900---"></a>Nové nastavení tiskárny pro vzdělávací profily <!-- 1308900 -->
 
-Ve vzdělávacích profilech je k dispozici nové nastavení v kategorii **Tiskárny**: **Tiskárny**, **Výchozí tiskárna**, **Přidat nové tiskárny**.
+Pro vzdělávací profily jsou k dispozici v rámci nové nastavení **tiskárny** kategorie: **Tiskárny**, **výchozí tiskárna**, **přidat nové tiskárny**.
 
 #### <a name="show-caller-id-in-personal-profile---android-enterprise-work-profile---1098984---"></a>Zobrazení ID volajícího v osobním profilu – pracovní profil Android Enterprise <!--1098984 -->
 Při použití osobního profilu na zařízení nemusí koncoví uživatelé vidět podrobnosti ID volajícího z pracovního kontaktu. 
@@ -947,31 +955,31 @@ Od této aktualizace je v části **Android Enterprise** > **Omezení zařízen�
 
 Pokud je povoleno (nenakonfigurováno), podrobnosti volajícího pracovního kontaktu se v osobním profilu zobrazují. V případě blokování se číslo volajícího pracovního kontaktu v osobním profilu nezobrazuje. 
 
-Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších.
+Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších
 
 #### <a name="new-windows-defender-credential-guard-settings-added-to-endpoint-protection-settings---1102252-----from-1802-and-1804--"></a>Nové nastavení Ochrany Credential Guard v programu Windows Defender přidaná do nastavení ochrany koncového bodu <!--1102252 --><!--from 1802 and 1804-->
 
 V této aktualizaci zahrnuje [ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard) (**Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu**) následující nastavení: 
 
-- **Ochrana Credential Guard v programu Windows Defender**: Zapne ochranu přihlašovacích údajů Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Vaše možnosti jsou:
-  - **Zakázáno**: Pokud byla ochrana Credential Guard dříve zapnutá možností **Povoleno bez zámku**, vzdáleně vypne ochranu Credential Guard.
+- **Windows Defender Credential Guard**: Zapne Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Vaše možnosti jsou:
+  - **Zakázané**: Pokud Credential Guard byla dříve zapnutá pomocí **povoleno bez zámku**"možnost, pak ji vypne Credential Guard vzdáleně.
 
-  - **Povoleno s uzamčením UEFI**: Zajistí, že ochrana Credential Guard nepůjde vypnout v klíčích registru ani v zásadách skupiny. Pokud jste použili toto nastavení a chcete ochranu Credential Guard zakázat, musíte nastavit zásady skupiny na Zakázáno. Potom bezpečnostní funkci odeberte z každého počítače, u kterého je uživatel fyzicky přítomen. Tyto kroky smažou konfiguraci uloženou v rozhraní UEFI. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.
+  - **Povoleno s uzamčením UEFI**: Zajišťuje, že Credential Guard nejde zakázat pomocí klíče registru nebo pomocí zásad skupiny. Pokud jste použili toto nastavení a chcete ochranu Credential Guard zakázat, musíte nastavit zásady skupiny na Zakázáno. Potom bezpečnostní funkci odeberte z každého počítače, u kterého je uživatel fyzicky přítomen. Tyto kroky smažou konfiguraci uloženou v rozhraní UEFI. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.
 
-  - **Povoleno bez zámku**: Umožňuje vzdáleně zakázat ochranu Credential Guard v zásadách skupiny. Na zařízeních s tímto nastavením musí běžet přinejmenším Windows 10 (verze 1511).
+  - **Povoleno bez zámku**: Umožňuje Credential Guard zakázat vzdáleně pomocí zásad skupiny. Na zařízeních s tímto nastavením musí běžet přinejmenším Windows 10 (verze 1511).
 
 Následující související technologie se při konfiguraci ochrany přihlašovacích údajů Credential Guard zapnou automaticky: 
 
-  - **Povolit zabezpečení na základě virtualizace (VBS)**: Při příštím restartování povolí zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows a vyžaduje zabezpečené spouštění.
-  - **Zabezpečené spouštění s přímým přístupem do paměti (DMA)**: Zapne VBS se zabezpečeným spouštěním a přímým přístupem k paměti. Ochrana DMA vyžaduje hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních. 
+  - **Povolit zabezpečení na základě virtualizace (VBS)**: Zapne založené na virtualizaci zabezpečení (VBS) při příštím restartování počítače. Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows a vyžaduje zabezpečené spouštění.
+  - **Zabezpečené spouštění s přímý přístup do paměti (DMA)**: Zapne VBS se zabezpečeným spouštěním a přímý přístup do paměti. Ochrana DMA vyžaduje hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních. 
 
 #### <a name="use-a-custom-subject-name-on-scep-certificate----2064190---"></a>Použití vlastního názvu subjektu u certifikátu SCEP <!-- 2064190 -->
 V profilu certifikátu SCEP můžete u vlastního subjektu použít běžný název **OnPremisesSamAccountName**. Můžete například použít `CN={OnPremisesSamAccountName})`.
 
 ####  <a name="block-camera-and-screen-captures-on-android-enterprise-work-profiles----1098977---"></a>Blokování kamery a snímků obrazovky v pracovních profilech Android Enterprise <!-- 1098977 -->
 Při konfiguraci omezení zařízení s Androidem jsou k dispozici dvě nové vlastnosti umožňující blokování: 
-- Kamera: Blokování přístupu ke všem kamerám na zařízení
-- Snímek obrazovky: Blokování vytváření snímků obrazovky a tím také ochrana obsahu před zobrazením na zobrazovacích zařízení, která nemají zabezpečený výstup videa
+- Kamera: Blokuje přístup ke všem kamerám na zařízení
+- Snímek obrazovky: Blokovat snímek obrazovky a tím také ochrana obsahu před zobrazením na zobrazovacích zařízeních, která nemají zabezpečený výstup videa
 
 Platí pro pracovní profily Android Enterprise.
 
@@ -1045,7 +1053,7 @@ Aplikace Portál společnosti Intune pro Windows 10 byla aktualizována o [navig
 
 #### <a name="use-cisco-anyconnect-client-for-ios----1333708---"></a>Použití klienta Cisco AnyConnect pro iOS <!-- 1333708 -->
 
-Když vytváříte nový profil VPN pro iOS, jsou teď k dispozici dvě možnosti: **Cisco AnyConnect** a **Cisco Legacy AnyConnect**. Profily Cisco AnyConnect podporují verzi 4.0.7x a novější. Stávající profily VPN Cisco AnyConnect pro iOS jsou označené jako **Cisco Legacy AnyConnect** a budou dál fungovat s Cisco AnyConnect 4.0.5x stejně jako dnes.
+Když vytvoříte nový profil VPN pro iOS, jsou teď dvě možnosti: **Cisco AnyConnect** a **Cisco Legacy AnyConnect**. Profily Cisco AnyConnect podporují verzi 4.0.7x a novější. Stávající profily VPN Cisco AnyConnect pro iOS jsou označené jako **Cisco Legacy AnyConnect** a budou dál fungovat s Cisco AnyConnect 4.0.5x stejně jako dnes.
 
 > [!NOTE]
 > Tato změna platí jen pro iOS. Pro Android, pracovní profily Android Enterprise a macOS bude dál existovat jenom jedna možnost Cisco AnyConnect.
@@ -1100,7 +1108,7 @@ Nově můžete chránit přístup k místním datům systému Exchange z Outlook
 
 ## <a name="notices"></a>Sdělení
 
-### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Plánovaná změna: Exchange Online ke konektoru Intune přestanou být dostupné v Intune <!-- 3105122 -->
+### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Plánovaná změna: Exchange Online, aby konektor Intune přestanou být dostupné v Intune <!-- 3105122 -->
 Pro zjednodušení práce s Exchange Online a podmíněného přístupu, Zakážeme Exchange Online "Službami" konektor Intune. Tato změna bude začínat aktualizace z prosince služby a dokončit aktualizaci služby. února 2019.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
@@ -1121,12 +1129,12 @@ Pokud máte Service to Service connector nastavit a mít Exchange Active Sync je
 
 
 
-### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Plánovaná změna: Aktualizace výkonu pro Intune for Education <!--1750215-->
+### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Plánovaná změna: Aktualizace výkonu do Intune for Education <!--1750215-->
 Do Intune for Education přidáváme určité aktualizace, které zvyšují rychlost a spolehlivost při přiřazování nastavení uživatelům nebo zařízením. V rámci této změny přesuneme koncem listopadu přiřazení vašich zásad nebo nastavení do nových skupin.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 
-Jako zákazník Intune for Education máte dvě dynamické skupiny služby Azure Active Directory (Azure AD): „Všichni uživatelé“ a „Všechna zařízení“. S těmito aktualizacemi už skupiny služby Azure AD „Všichni uživatelé“ a „Všechna zařízení“ nebudou viditelné v konzole Intune for Education. Budou ale pořád viditelné v konzole Intune v Azure a přejmenují se na „Všichni uživatelé (zastaralé, nepoužívat)“ a „Všechna zařízení (zastaralé, nepoužívat)“.
+Jako Intune for Education zákazníka budete mít dvě dynamické skupiny Azure Active Directory (Azure AD): "Všichni uživatelé" a "Všechna zařízení". S těmito aktualizacemi už skupiny služby Azure AD „Všichni uživatelé“ a „Všechna zařízení“ nebudou viditelné v konzole Intune for Education. Budou ale pořád viditelné v konzole Intune v Azure a přejmenují se na „Všichni uživatelé (zastaralé, nepoužívat)“ a „Všechna zařízení (zastaralé, nepoužívat)“.
 
 Po zavedení těchto aktualizací už nebudete muset k přiřazení aplikací a nastavení v Intune používat skupiny služby Azure AD. Místo toho přesuneme přiřazení vašich nastavení do nových skupin v konzole Intune for Education, které za vás vytvoříme a které se budou jmenovat „Všichni uživatelé“ a „Všechna zařízení“ jako dříve. Tyto změny se odehrávají v back-endu, takže si v konzole Intune for Education nevšimnete žádných odlišností. Neočekává se žádný vliv na vaše koncové uživatele a zaregistrovaná zařízení. 
 
@@ -1136,7 +1144,7 @@ Během přesouvání přiřazení zásad nemusíte nic dělat. Pokud momentáln�
 Pokud momentálně přiřazujete zásady k výše uvedeným skupinám služby Azure AD v Intune v Azure, začněte je místo toho přiřazovat ke skupině Všichni uživatelé a Všechna zařízení v konzole Intune for Education. Až v konzole uvidíte tyto skupiny služby Azure AD přejmenované na zastaralé, přestaňte zásady přiřazovat ve službě Azure AD. Pokud v současnosti nepoužíváte přejmenované skupiny k žádnému jinému účelu, měli byste je odstranit.
 
 
-### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Plánovaná změna: V Intune se začne podporovat macOS 10.12 a vyšší v prosinci <!--2970975--> 
+### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Plánovaná změna: Intune se přesune k podpoře macOS 10.12 a vyšší v prosinci <!--2970975--> 
 
 Apple právě vydal macOS 10.14. Následně Intune začne podporovat macOS 10.12 a vyšší v prosinci 2018. 
 
@@ -1164,8 +1172,8 @@ Po prosinci nebudou mít koncoví uživatelé, kteří mají zařízení kromě 
 Další informace najdete v tématu [Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
  
 
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: nové prostředí pro podporu Intune u zákazníků Premier 
-12/4/18 aktualizací: pokoušíme vylepšit tento proces si tak vytvoření žádosti o podporu v MPO nebude být zakázány na dne 3, ale na pozdější datum. Dáme vám vědět, prostřednictvím Centra zpráv a aktualizovat tento příspěvek brzy ke sdílení časové osy pro tuto změnu.
+### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: Vyzkoušejte novou podporu Intune u verze Premier zákazníků 
+12/4/18 aktualizace: Pokoušíme vylepšit tento proces si tak vytvoření žádosti o podporu v MPO nebude být zakázány na dne 3, ale na pozdější datum. Dáme vám vědět, prostřednictvím Centra zpráv a aktualizovat tento příspěvek brzy ke sdílení časové osy pro tuto změnu.
 
 Jako zákazník Microsoft Premier aktuálně můžete používat portál Microsoft Premier Online (MPO) (premier.microsoft.com) a Intune v Azure (portal.azure.com) k vytváření žádostí o podporu pro Intune. Od 3. prosince 2018 si budete moct vytvářet žádosti o podporu jenom v Intune v Azure, pokud si budete chtít dál vylepšovat prostředí podpory Premier.
 
@@ -1186,7 +1194,7 @@ Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služ
 Další informace najdete v [blogovém příspěvku technické podpory pro Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
 
 
-### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Provedení akce: Aktualizujte prosím v Intune nastavení hesla v zásadách omezení nebo dodržování předpisů u zařízení s Androidem
+### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Proveďte akci: Aktualizujte prosím vaše zařízení s Androidem omezení nebo dodržování předpisů heslo nastavení zásad v Intune
 Intune pro zařízení s Androidem 4.4 nebo vyšším odebere dostupný typ hesla Výchozí ze zařízení (Výchozí nastavení zařízení). Vzhledem k rozdílům v platformách Android a výchozích nastaveních zařízení nakládá zařízení s těmito zásadami často jako s volitelnými. Abychom odstranili nejasnost, kdy je toto nastavení v Androidu vynucované, v nadcházející verzi toto nastavení odebereme. 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 - Pokud máte v úmyslu vyžadovat na zařízeních heslo, doporučujeme abyste místo použití typu Výchozí ze zařízení upravili profily vaší platformy Android tak, aby jasně vyjadřovaly požadovaný typ hesla.
@@ -1199,7 +1207,7 @@ https://aka.ms/PasswordSettings
 ### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
 Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. S podrobnostmi vás seznámíme na [blogu podpory Intune](https://aka.ms/compportalats).
 
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plánovaná změna: Přechod Intune na TLS 1.2
+### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plánovaná změna: Intune přesouvání protokolu TLS 1.2
 Od 31. října 2018 bude Intune podporovat protokol TLS (Transport Layer Security) ve verzi 1.2, který zajistí nejlepší šifrování ve své třídě, aby byla naše služba bezpečnější a v souladu s jinými službami Microsoftu, jako je Microsoft Office 365. Office tuto změnu oznámil v MC128929.
 
 Portál společnosti také začne podporovat protokol TLS 1.2 31. října 2018.
@@ -1212,11 +1220,11 @@ Pokud budete mít po 31. říjnu 2018 problém s použitím staré verze protoko
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Doporučujeme vám proaktivně ve vašich prostředích rušit závislosti na protokolech TLS 1.0 a 1.1 a tam, kde je to možné, zakázat protokoly TLS 1.0 a 1.1 na úrovni operačního systému. Začněte plánovat migraci na protokol TLS 1.2 už dnes. Přečtěte si níže uvedený blogový příspěvek o podpoře se seznamem zařízení, které Intune aktuálně nepodporuje, ale přesto mohou přijímat zásady, a které nebudou moct prostřednictvím protokolu TLS verze 1.2 komunikovat. Dané koncové uživatele budete muset upozornit, že přijdou o přístup k podnikovým prostředkům.
 
-**Další informace**: [Přechod Intune na šifrování TLS 1.2](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
+**Další informace o**: [Intune Přesun do protokolu TLS 1.2 pro šifrování](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
 
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v uživatelském rozhraní Portálu společnosti](whats-new-app-ui.md)

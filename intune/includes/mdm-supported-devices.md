@@ -2,7 +2,7 @@
 
 ### <a name="apple"></a>Apple
 - Apple iOS 10.0 a novější
-- Mac OS X 10.11 a novější (v prosinci 2018 se podporovaná verze změní na 10.12 a novější)
+- Mac OS X 10.12 a novější
 
 ### <a name="google"></a>Google
 - Android 4.4 a novější (včetně řešení Samsung Knox Standard 4.4 a novějších)
