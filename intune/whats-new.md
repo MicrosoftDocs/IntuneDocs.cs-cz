@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 06031b8085e50caa2092287c97b3eab0ead366ee
-ms.sourcegitcommit: 5e4c7da8ce62d5a5720316ef4068c1920f8f5b67
+ms.openlocfilehash: d95bc665d271eac55682fa8f0aeee2bf267c48ef
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 12/11/2018
-ms.locfileid: "53200602"
+ms.locfileid: "53267085"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -44,6 +44,15 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 -->     
 
 ## <a name="week-of-december-10-2018"></a>Týden od 10. prosince 2018
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="updates-for-application-transport-security----748318---"></a>Aktualizace pro Application Transport Security <!-- 748318 -->
+
+Microsoft Intune podporuje zabezpečení TLS (Transport Layer) 1.2 + poskytnout ve své třídě nejlepší šifrování, ujistěte se, že je ve výchozím nastavení bezpečnější, Intune a aby bylo v souladu s jinými službami Microsoftu, jako je například Microsoft Office 365. Aby bylo možné tento požadavek splnit, portály společnosti pro iOS a macOS bude vynucovat společnosti Apple aktualizované aplikace přenosu zabezpečení () požadavky na ATS, které také vyžadují protokol TLS 1.2 +. ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune pomocí aplikace portál společnosti pro iOS a macOS. Další informace najdete v tématu [blogu podpory Intune](https://aka.ms/compportalats).
+
+#### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK bude podporovat 256bitových šifrovacích klíčů <!-- 1832174 -->
+Intune App SDK pro Android teď používá 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK.
 
 ### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Microsoft automaticky aktualizovanou verzi 4.50 požadované pro zařízení s macOS <!-- 3503442 -->
 Chcete-li pokračovat, příjem aktualizací pro aplikaci portál společnosti a další aplikace Office, musí zařízení s macOS spravovaná pomocí Intune upgradovat na Microsoft automatickou aktualizaci 4.5.0. Uživatelé můžou mít už tuto verzi pro jejich aplikace Office.
@@ -103,6 +112,23 @@ Chcete-li tuto funkci používat, naleznete v tématu [iOS](compliance-policy-cr
 Optimalizace doručení je nový profil konfigurace pro Windows 10 a novější. Tato funkce poskytuje přináší optimalizaci prostředí pro doručení aktualizací softwaru do zařízení ve vaší organizaci. Tato aktualizace umožňuje poskytovat nastavení nové i stávající aktualizačních kanálů pomocí konfiguračního profilu.
 Konfiguraci optimalizace doručení konfiguračního profilu najdete v tématu [nastavení aktualizace Windows 10 (nebo novější)](delivery-optimization-windows.md).
 
+#### <a name="new-device-restriction-settings-added-to-ios-and-macos-devices----2827760---"></a>Nová nastavení omezení zařízení přidat do zařízení s Iosem a macOS <!-- 2827760 -->
+Tato aktualizace zahrnuje nové nastavení pro zařízení s Iosem a macOS, které jsou vydány s Iosem 12:
+
+**nastavení iOS**: 
+- Obecné: Odebrání bloku aplikace (jenom pod dohledem)
+- Obecné: Blok USB omezený režim (jenom pod dohledem)
+- Obecné: Vynutit automatické datum a čas (jenom pod dohledem)
+- Heslo: Heslo blokovat automatické vyplňování (jenom pod dohledem)
+- Heslo: Blokovat požadavky blízkosti hesla (jenom pod dohledem)
+- Heslo: Blokovat sdílení hesla (jenom pod dohledem)
+
+**nastavení macOS**: 
+- Heslo: Blokovat automatické vyplňování hesel
+- Heslo: Blokovat požadavky blízkosti heslo
+- Heslo: Blokovat sdílení hesla
+
+Další informace o těchto nastaveních najdete v tématu [iOS](device-restrictions-ios.md) a [macOS](device-restrictions-macos.md) nastavení omezení zařízení.
 
 ### <a name="device-enrollment"></a>Registrace zařízení
 
@@ -1143,35 +1169,6 @@ Během přesouvání přiřazení zásad nemusíte nic dělat. Pokud momentáln�
 
 Pokud momentálně přiřazujete zásady k výše uvedeným skupinám služby Azure AD v Intune v Azure, začněte je místo toho přiřazovat ke skupině Všichni uživatelé a Všechna zařízení v konzole Intune for Education. Až v konzole uvidíte tyto skupiny služby Azure AD přejmenované na zastaralé, přestaňte zásady přiřazovat ve službě Azure AD. Pokud v současnosti nepoužíváte přejmenované skupiny k žádnému jinému účelu, měli byste je odstranit.
 
-
-### <a name="plan-for-change-intune-will-move-to-support-macos-1012-and-higher-in-december---2970975--"></a>Plánovaná změna: Intune se přesune k podpoře macOS 10.12 a vyšší v prosinci <!--2970975--> 
-
-Apple právě vydal macOS 10.14. Následně Intune začne podporovat macOS 10.12 a vyšší v prosinci 2018. 
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-
-Od prosince koncoví uživatelé zařízení s macOS 10.11 a staršími nebudou moci používat portál společnosti k registraci do Intune. Budou muset upgradovat svoje zařízení s macOS 10.12 nebo vyšší a upgradovat aplikaci Portál společnosti na nejnovější verzi, aby mohli i nadále přijímat podporu a nové funkce. 
-
-macOS verze 10.12 a vyšší se aktuálně podporuje na: 
-- MacBook (konec roku 2009 nebo novější) 
-- iMac (konec roku 2009 nebo novější)
-- MacBook Air (konec roku 2010 nebo novější)  
-- MacBook Pro (konec roku 2010 nebo novější) 
-- Mac Mini (konec roku 2010 nebo novější) 
-- Mac Pro (konec roku 2010 nebo novější) 
-
-Po prosinci nebudou mít koncoví uživatelé, kteří mají zařízení kromě těch, která jsou uvedená výše, přístup k nejnovější verzi aplikace Portál společnosti pro macOS. Stávající zaregistrovaná zařízení s nepodporovanými verzemi macOS staršími než 10.12 se budou spravovat a zobrazovat i nadále v konzole správce Intune.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-
-- Požádejte vaše koncové uživatele, aby si do prosince 2018 upgradovali zařízení na podporovanou verzi operačního systému. 
-- Podívejte se do sestav Intune v konzole Intune v Azure a zkontrolujte, jakých zařízení nebo uživatelů se to může týkat. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat dodatečné sloupce, které vám pomůžou identifikovat, kdo ve vaší organizaci má zařízení s macOS 10.11. 
-- Pokud používáte hybridní správu mobilních zařízení (MDM), přejděte v konzole nástroje Configuration Manager na Prostředky a kompatibilita > Zařízení, klikněte pravým tlačítkem na sloupce, abyste mohli přidat sloupce Operační systém a Verze klienta, a seřaďte je podle operačního systému. Připomínáme, že hybridní MDM je už zastaralé a měli byste co nejdříve přejít na Intune v Azure. 
- 
-#### <a name="additional-information"></a>Další informace
-Další informace najdete v tématu [Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp).
- 
-
 ### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: Vyzkoušejte novou podporu Intune u verze Premier zákazníků 
 12/4/18 aktualizace: Pokoušíme vylepšit tento proces si tak vytvoření žádosti o podporu v MPO nebude být zakázány na dne 3, ale na pozdější datum. Dáme vám vědět, prostřednictvím Centra zpráv a aktualizovat tento příspěvek brzy ke sdílení časové osy pro tuto změnu.
 
@@ -1204,28 +1201,3 @@ Zkontrolujte nastavení hesla ve vašem Androidu a v podnikových zásadách ome
 #### <a name="additional-information"></a>Další informace
 https://aka.ms/PasswordSettings 
 
-### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
-Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS. S podrobnostmi vás seznámíme na [blogu podpory Intune](https://aka.ms/compportalats).
-
-### <a name="plan-for-change-intune-moving-to-tls-12"></a>Plánovaná změna: Intune přesouvání protokolu TLS 1.2
-Od 31. října 2018 bude Intune podporovat protokol TLS (Transport Layer Security) ve verzi 1.2, který zajistí nejlepší šifrování ve své třídě, aby byla naše služba bezpečnější a v souladu s jinými službami Microsoftu, jako je Microsoft Office 365. Office tuto změnu oznámil v MC128929.
-
-Portál společnosti také začne podporovat protokol TLS 1.2 31. října 2018.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Od 31. října 2018 už nebude Intune podporovat protokol TLS ve verzích 1.0 a 1.1. Všechny kombinace klient-server a prohlížeč-server by měly používat protokol TLS ve verzi 1.2, aby nedošlo k potížím s připojením k Intune. Tato změna ovlivní zařízení koncových uživatelů, které už Intune nepodporují, ale stále přijímají prostřednictvím Intune zásady, a které nemohou protokol TLS verze 1.2 používat. Patří sem například zařízení se systémem Android 4.3 a starší. Seznam ovlivněných zařízení a prohlížečů najdete níže v části Další informace.
-
-Pokud budete mít po 31. říjnu 2018 problém s použitím staré verze protokolu TLS, bude součástí řešení aktualizace na protokol TLS 1.2 nebo přechod na zařízení, které tento protokol podporuje.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Doporučujeme vám proaktivně ve vašich prostředích rušit závislosti na protokolech TLS 1.0 a 1.1 a tam, kde je to možné, zakázat protokoly TLS 1.0 a 1.1 na úrovni operačního systému. Začněte plánovat migraci na protokol TLS 1.2 už dnes. Přečtěte si níže uvedený blogový příspěvek o podpoře se seznamem zařízení, které Intune aktuálně nepodporuje, ale přesto mohou přijímat zásady, a které nebudou moct prostřednictvím protokolu TLS verze 1.2 komunikovat. Dané koncové uživatele budete muset upozornit, že přijdou o přístup k podnikovým prostředkům.
-
-**Další informace o**: [Intune Přesun do protokolu TLS 1.2 pro šifrování](https://blogs.technet.microsoft.com/intunesupport/2018/06/05/intune-moving-to-tls-1-2-for-encryption/)
-
-
-
-## <a name="see-also"></a>Viz také:
-* [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
-* [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co je nového v uživatelském rozhraní Portálu společnosti](whats-new-app-ui.md)
-* [Novinky v předchozích měsících](whats-new-archive.md)

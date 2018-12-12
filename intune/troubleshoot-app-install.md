@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: b613f364-0150-401f-b9b8-2b09470b34f4
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 86f0892fe855201b9bdb28d61301353f6588954a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cd43bfda69b42fb81a72d520d169fe1785161f65
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188122"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267001"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -30,7 +30,7 @@ U zařízení spravovaných pomocí Microsoft Intune MDM může občas dojít k 
 
 Intune poskytuje podrobnosti o řešení potíží s aplikacemi nainstalovanými na konkrétním zařízení uživatele.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Řešení potíží**.
 4. Klikněte na **Vybrat uživatele** a vyberte uživatele, pro kterého chcete řešit potíže. Zobrazí se podokno **Vybrat uživatele**.
@@ -84,6 +84,19 @@ V následující tabulce jsou uvedeny chybové zprávy s popisem podrobností o 
 |    Uživatel odmítl nabídku na aktualizaci aplikace. (0x87D13B63)    |    Koncový uživatel během procesu aktualizace klikl na tlačítko Zrušit.     |
 |    Neznámá chyba (0x87D103E8)    |    Došlo k neznámé chybě instalace aplikace. Tato výsledná chyba se zobrazí, pokud nedošlo k jiným uvedeným chybám.    |
 
+### <a name="other-installation-errors"></a>Další chyby při instalaci
+
+|    Chybová zpráva/kód    |    Popis    |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    0x80073CFF, 0x80CF201C (Chyba klienta)    |    Pro instalaci této aplikace musíte mít systém s podporou instalace aplikací bokem. Ujistěte se, že je balíček aplikace podepsaný důvěryhodným podpisem a nainstalovaný na zařízení připojeném k doméně, která má **AllowAllTrustedApps** zásadu nebo zařízení, které má licenci pro zkušební načtení Windows se  **AllowAllTrustedApps** povolenou zásadou. Další informace najdete v tématu [řešení potíží s balení, nasazování a dotazování aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).     |
+|    0x80073CF0    |    Balíček se nepodařilo otevřít. Možné příčiny:<ul><li> Balíček není podepsaný.</li><li> Název vydavatele neodpovídá subjektu podpisového certifikátu.</li></ul> Zkontrolujte, **AppxPackagingOM** informace v protokolu událostí. Další informace najdete v tématu [řešení potíží s balení, nasazování a dotazování aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x80073CF3    |    Balíčku se nezdařilo. aktualizace, závislostí nebo konfliktů ověření. Možné příčiny:<ul><li> Příchozí balíček je v konfliktu s nainstalovaným balíčkem.</li><li> Nebyla nalezena zadaná závislost balíčku.</li><li> Balíček nepodporuje správnou architekturu procesoru.</li></ul> Zkontrolujte, **AppXDeployment-Server** informace v protokolu událostí. Další informace najdete v tématu [řešení potíží s balení, nasazování a dotazování aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x80073CFB    |    Zadaný balíček je už nainstalovaný a přeinstalace balíčku je blokován. Tato chyba může zobrazit při instalaci balíčku, který není totožný s balíčkem, který je už nainstalovaný. Potvrďte, že součástí balíčku je i digitální podpis. Pokud se balíček znovu vytvoří nebo znovu podepíše, nebude už tento balíček při bitovém porovnání totožný s dříve nainstalovaným balíčkem. Tuto chybu můžete odstranit jedním ze dvou způsobů:<ul><li> Zvýšit číslo verze aplikace a pak znovu sestavit a znovu podepsat balíček.</li><li> Než budete instalovat nový balíček, odeberte starý balíček pro každého uživatele v systému.</li></ul> Další informace najdete v tématu [řešení potíží s balení, nasazování a dotazování aplikací pro Windows Store](https://docs.microsoft.com/windows/desktop/appxpkg/troubleshooting).    |
+|    0x87D1041C    |    Instalace aplikace úspěšně proběhla, ale není zjištěna aplikace. Aplikace byla úspěšně nasazena službou Intune a potom byla odinstalována. Mezi důvody pro aplikaci odinstalují patří:<ul><li> Koncový uživatel odinstaluje aplikaci.</li><li> Informace o identitě v balíčku se neshoduje, jaké zařízení hlásí pro chybný aplikace.</li><li>Pro automatických aktualizací souborů MSI verzi produktu se neshoduje s informací o aplikaci po aktualizaci mimo Intune.</li></ul> Dejte uživateli pokyn, aby aplikaci znovu nainstaloval z portálu společnosti. Všimněte si, že požadované aplikace budou automaticky znovu nainstalovány, když zařízení příště připojí.    |
+
+## <a name="troubleshooting-apps-from-the-microsoft-store"></a>Řešení problémů s aplikacemi z Microsoft Storu
+
+Informace v tématu [Řešení problémů s vytvářením balíčků, nasazením a dotazy aplikací pro Microsoft Store](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) vám pomůžou s řešením běžných problémů, na které můžete narazit při instalaci aplikací z Microsoft Storu, ať už k ní využíváte službu Intune, nebo jiný nástroj.
 
 ## <a name="next-steps"></a>Další postup
 

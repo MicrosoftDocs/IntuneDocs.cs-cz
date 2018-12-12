@@ -1,12 +1,12 @@
 ---
 title: Přidružení zařízení uživatelů – Datový sklad Intune
 titlesuffix: Microsoft Intune
-description: Seznam změn v rozhraní API datového skladu Intune
+description: UserDeviceAssociation entitě přidružení zařízení uživatelů ve vaší organizaci.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,13 +15,13 @@ ms.assetid: 777484A7-09CE-4409-987F-76B3F87DFE93
 ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
-ms.openlocfilehash: a207c0f9e7f1890d88ca233df6f4c53a32aed51b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-classic; seodec18
+ms.openlocfilehash: 8655122b1aa0ce809d1b63e8b40e61aea6bbd285
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189788"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266881"
 ---
 # <a name="user-device-association"></a>Přidružení zařízení uživatelů
 

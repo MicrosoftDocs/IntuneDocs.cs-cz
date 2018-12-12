@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/15/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c98eb7795ca01db9a78b428faf433109928cff76
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e2958b536aa6603fc9cde14e679a05e4a9d5f4dd
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182260"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266966"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -46,7 +46,7 @@ Tento typ aplikace vám usnadní přiřazování aplikací Office 365 na vámi s
 
 ## <a name="get-started"></a>Začínáme
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
@@ -70,17 +70,17 @@ V tomto kroku zadáte informace o sadě aplikací. Tyto informace vám pomůžou
 
 1. V podokně **Přidat aplikaci** vyberte **Informace o sadě aplikací**.
 2. V podokně **Informace o sadě aplikací** postupujte takto:
-    - **Název sady**: Zadejte název sady aplikací, který se zobrazí na portálu společnosti. Názvy všech používaných sad musí být jedinečné. Pokud stejný název sady aplikací existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
+    - **Název sady**: Zadejte název sady aplikací, který se zobrazí v aplikaci portál společnosti. Názvy všech používaných sad musí být jedinečné. Pokud stejný název sady aplikací existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis sady**: Zadejte popis sady aplikací. Můžete například uvést aplikace, které jste vybrali pro zahrnutí.
     - **Vydavatel**: Jako vydavatel se zobrazí Microsoft.
-    - **Kategorie**: Můžete vybrat jednu nebo několik předdefinovaných kategorií nebo kategorii, kterou jste vytvořili. Díky tomuto nastavení uživatelé dokážou sadu aplikací při procházení portálu společnosti jednodušeji najít.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
+    - **Kategorie**: Volitelně vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Díky tomuto nastavení uživatelé dokážou sadu aplikací při procházení portálu společnosti jednodušeji najít.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Vyberte tuto možnost, chcete-li zobrazit sadu aplikací výrazném místě na hlavní stránce portálu společnosti když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Vývojář**: Jako vývojář se zobrazí Microsoft.
+    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Pro vývojáře**: Jako vývojář se zobrazí Microsoft.
     - **Vlastník**: Jako vlastník se zobrazí Microsoft.
-    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Logo**: Logo Office 365 se zobrazí u aplikace, když uživatelé procházejí Portál společnosti.
+    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
+    - **Logo**: Logo Office 365 se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
 3. Vyberte **OK**.
 
 ## <a name="configure-app-settings"></a>Konfigurace nastavení aplikace
@@ -89,8 +89,8 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
 
 1. V podokně **Přidat aplikaci** vyberte **Nastavení sady aplikací**.
 2. V podokně **Nastavení sady aplikací** postupujte takto:
-    - **Verze Office**: Vyberte, jestli chcete přiřadit 32bitovou nebo 64bitovou verzi Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
-    - **Kanál aktualizací**: Zvolte, jak se na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
+    - **Verze Office**: Zvolte, zda chcete přiřadit 32bitové nebo 64bitové verzi systému Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
+    - **Aktualizační kanál**: Zvolte, jak je na těchto zařízeních aktualizuje Office. Informace o různých kanálech aktualizací najdete v článku [Přehled kanálů aktualizací pro Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus). Vybírejte z těchto možností:
         - **Měsíčně**
         - **Měsíční (cílený)**
         - **Půlroční**
@@ -105,9 +105,9 @@ V tomto kroku nakonfigurujte možnosti instalace pro sadu aplikací. Nastavení 
         Další informace najdete v článku [Základní informace o aktualizačních kanálech Office 365 ProPlus](https://docs.microsoft.com/DeployOffice/overview-of-update-channels-for-office-365-proplus).
 
     - **Odebrat MSI ze zařízení koncových uživatelů**: Vyberte, jestli chcete ze zařízení koncových uživatelů odebrat dřívější aplikace Office .MSI. Pokud na zařízeních koncových uživatelů takové aplikace jsou, instalace se nezdaří. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v článku věnovaném [odebrání stávajících verzí služby MSI v systému Office při upgradu na Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI. 
-    - **Automaticky přijmout licenční smlouvu s koncovým uživatelem aplikace**: Tuto možnost vyberte, pokud nevyžadujete přijetí licenční smlouvy koncovými uživateli. Intune pak smlouvu přijme automaticky.
-    - **Použít aktivaci pro sdílené počítače**: Tuto možnost vyberte, když počítač sdílí více uživatelů. Další informace najdete v článku s [přehledem aktivace pro sdílené počítače pro Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
-    - **Jazyky**: Office se automaticky nainstaluje ve všech podporovaných jazycích nainstalovaných s Windows na zařízení koncových uživatelů. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
+    - **Automaticky přijmout licenční smlouvy s koncovým uživatelem aplikace**: Tuto možnost vyberte, Pokud nevyžadujete přijetí licenční smlouvy koncovým uživatelům. Intune pak smlouvu přijme automaticky.
+    - **Použít sdílenou aktivaci počítače**: Tuto možnost vyberte, když počítač sdílí několik uživatelů. Další informace najdete v článku s [přehledem aktivace pro sdílené počítače pro Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
+    - **Jazyky**: Office je automaticky nainstalován v některém z podporovaných jazyků, které jsou nainstalovány s Windows na zařízení koncového uživatele společnosti. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
     Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Klientské aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**. Další informace najdete v tématu s [přehledem jazyků nasazení v Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
 
 ## <a name="finish-up"></a>Dokončení
@@ -120,33 +120,31 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 
 ### <a name="status-for-office-csp"></a>Stav pro Office CSP
 
-||||
-|-|-|-|
-|Stav|Fáze|Popis|
-|1460 (ERROR_TIMEOUT)|Stažení|Nepodařilo se stáhnout nástroj pro nasazení Office.|    
-|13 (ERROR_INVALID_DATA)|-|Nelze ověřit podpis staženého nástroje pro nasazení Office.|
-|Kód chyby z CertVerifyCertificateChainPolicy|-|Nezdařila se kontrola certifikace staženého nástroje pro nasazení Office.|    
-|997|WIP|Instalace|
-|0|Po instalaci|Instalace proběhla úspěšně.|    
-|1603 (ERROR_INSTALL_FAILURE)|-|Nezdařila se kontrola předpokladů, například:<ul><li>SxS (pokus o instalaci, když je nainstalovaná MSI 2016)</li><li>Neshoda verzí</li><li>Jiné</li></ul>|  
-|0x8000ffff (E_UNEXPECTED)|-|Pokus odinstalovat, když na počítači není technologie Office Klikni a spusť|     
-|17002|-|Scénář se nepodařilo dokončit (nainstalovat). Možné důvody:<ul><li>Instalace zrušena uživatelem</li><li>Instalace zrušena jinou instalací</li><li>Nedostatek místa na disku během instalace</li><li>Neznámý identifikátor jazyka</li></ul>|
-|17004|-|Neznámé skladové položky|   
+| Stav | Fáze | Popis |
+|--------------------------------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1460 (ERROR_TIMEOUT) | Stažení | Nepodařilo se stáhnout nástroj pro nasazení Office. |
+| 13 (ERROR_INVALID_DATA) | - | Nelze ověřit podpis staženého nástroje pro nasazení Office. |
+| Kód chyby z CertVerifyCertificateChainPolicy | - | Nezdařila se kontrola certifikace staženého nástroje pro nasazení Office. |
+| 997 | WIP | Instalace |
+| 0 | Po instalaci | Instalace proběhla úspěšně. |
+| 1603 (ERROR_INSTALL_FAILURE) | - | Se nezdařila kontrola předpokladů, jako například: SxS (pokus o instalaci, když je nainstalovaná MSI 2016) mismatchOthers verze |
+| 0x8000ffff (E_UNEXPECTED) | - | Pokus odinstalovat, když na počítači není technologie Office Klikni a spusť |
+| 17002 | - | Scénář se nepodařilo dokončit (nainstalovat). Možné důvody: instalace zrušena userInstallation zrušil installationOut jiného místa na disku během installationUnknown ID jazyka |
+| 17004 | - | Neznámé skladové položky |
 
 
 ### <a name="office-deployment-tool-error-codes"></a>Kódy chyb nástroje pro nasazení Office
 
-|||||
-|-|-|-|-|
-|Scénář|Návratový kód|Uživatelské rozhraní|Poznámka|
-|Pokus odinstalovat bez aktivní instalace Klikni a spusť|-2147418113, 0x8000ffff nebo 2147549183|Kód chyby: 30088-1008<br>Kód chyby: 30125-1011 (404)|Nástroj pro nasazení systému Office|
-|Instalace, když je nainstalovaná verze MSI|1603|-|Nástroj pro nasazení systému Office|
-|Instalace byla zrušena uživatelem nebo jinou instalací.|17002|-|Klikni a spusť|
-|Pokus nainstalovat 64bitovou verzi na zařízení, na kterém je nainstalovaná 32bitová verze.|1603|-|Návratový kód nástroje pro nasazení Office|
-|Pokus nainstalovat neznámou skladovou položku (případ neoprávněného použití Office CSP, protože je nutné předávat jenom platné skladové položky)|17004|-|Klikni a spusť|
-|Nedostatek místa|17002|-|Klikni a spusť|
-|Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané)|17000|-|Klikni a spusť|
-|U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané)|17001|-|Klikni a spusť|
+| Scénář | Návratový kód | Uživatelské rozhraní | Poznámka |
+|------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------|------------------------------------|
+| Pokus odinstalovat bez aktivní instalace Klikni a spusť | -2147418113, 0x8000ffff nebo 2147549183 | Kód chyby: 30088-1008Error kód: 30125-1011 (404) | Nástroj pro nasazení systému Office |
+| Instalace, když je nainstalovaná verze MSI | 1603 | - | Nástroj pro nasazení systému Office |
+| Instalace byla zrušena uživatelem nebo jinou instalací. | 17002 | - | Klikni a spusť |
+| Pokus nainstalovat 64bitovou verzi na zařízení, na kterém je nainstalovaná 32bitová verze. | 1603 | - | Návratový kód nástroje pro nasazení Office |
+| Pokus nainstalovat neznámou skladovou položku (případ neoprávněného použití Office CSP, protože je nutné předávat jenom platné skladové položky) | 17004 | - | Klikni a spusť |
+| Nedostatek místa | 17002 | - | Klikni a spusť |
+| Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané) | 17000 | - | Klikni a spusť |
+| U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané) | 17001 | - | Klikni a spusť |
 
 ## <a name="next-steps"></a>Další postup
 

@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 11/13/2018
 ms.prod: ''
 ms.service: microsoft-intune
+ms.topic: article
 ms.technology: ''
 ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
 ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9f6d5bc8c124e3ba26b7e3fc110510c7d5e0e6a3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 3158d0531de4809bf654c030b8c1e0ef90185362
+ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183158"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247063"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Ověření nastavení zásad ochrany aplikací
 
@@ -41,7 +42,7 @@ Pokud testování odhalí chování zásady ochrany vaší aplikace není podle 
 - Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**.
 
 #### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Vyberte **klientské aplikace** > **monitorování** >  **stav ochrany aplikace**a pak vyberte **přiřazení uživatelé**dlaždici. 
 4. Na **vytváření sestav aplikace** stránce **vybrat uživatele** zobrazíte seznam uživatelů a skupin. 
@@ -57,6 +58,6 @@ Postupujte podle stavu uživatele:
 - Pokud je aplikace uživatele uvedená se stavem **Není zaregistrováno**, zkontrolujte, jestli jste pro tuto aplikaci správně nakonfigurovali zásady ochrany aplikací.
 - Ujistěte se, že platí tyto podmínky přes všechny uživatele, u kterých chcete použít zásady ochrany aplikací.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 
 [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)

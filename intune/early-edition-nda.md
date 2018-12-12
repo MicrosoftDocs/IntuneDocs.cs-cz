@@ -17,17 +17,17 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 35298713738c666ca19d57e647412729a85bbc4a
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 77aa0d1544351adaa8d338bc7c4c7182d35941e8
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112829"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267007"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
 > [!Note]
-> Upozornění na dohodu o mlčenlivosti (NDA): Následující změny v Intune jsou ve vývoji. Tyto informace jsou sdíleny ve velmi omezeném rozsahu a platí pro ně dohoda o mlčenlivosti (NDA). Nepublikujte žádné z těchto informací na sociálních sítích nebo veřejných webech, jako jsou Twitter, UserVoice, Reddit apod. 
+> Smlouvu NDA pro oznámení: Následující změny v Intune jsou ve vývoji. Tyto informace jsou sdíleny ve velmi omezeném rozsahu a platí pro ně dohoda o mlčenlivosti (NDA). Nepublikujte žádné z těchto informací na sociálních sítích nebo veřejných webech, jako jsou Twitter, UserVoice, Reddit apod. 
 
 **Časná edice** poskytuje seznam funkcí, sdílený na základě dohody o mlčenlivosti (NDA), které se chystají v nadcházejících vydáních služby Microsoft Intune. Tyto informace jsou poskytovány v omezené míře a můžou podléhat změnám. Tyto informace netweetujte, nepublikujte na webu UserVoice ani jinak nesdílejte mimo vaši společnost. U některých funkcí, které jsou zde uvedeny, existuje riziko, že nebudou do konečného termínu dokončeny, a můžou se proto objevit až v budoucí verzi. Další funkce se testují v pilotní (testovací) verzi, aby bylo zajištěno, že je budou moct zákazníci bez problémů využívat. Pokud máte jakékoli dotazy nebo připomínky, obraťte se na příslušný kontakt pro skupinu produktů společnosti Microsoft.
 
@@ -49,12 +49,12 @@ Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace a
 ### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices----1333665-2999078---"></a>Nové možnosti, které automaticky připojit a zachovat pravidla při použití nastavení DNS na Windows 10 a novější zařízení <!-- 1333665, 2999078 -->
 V systému Windows 10 a novější zařízení budete moct vytvořit konfigurační profil sítě VPN, který obsahuje seznam serverů DNS přeložit domén, třeba contoso.com. To bude obsahovat nové nastavení pro překlad adres (**konfigurace zařízení** > **profily** > **vytvořit profil** > zvolit  **Windows 10 a novější** pro platformu > zvolit **VPN** pro typy profilů > **nastavení DNS** >**přidat**): 
 
-- **Automaticky se připojovat**: když **povoleno**, zařízení se automaticky připojí k síti VPN, když zařízení kontaktuje domény můžete zadat, třeba contoso.com.
-- **Trvalé**: ve výchozím nastavení, všechna pravidla tabulky (IP adres NRPT) název zásady překladu IP adres jsou aktivní, tak dlouho, dokud se zařízení připojí pomocí tohoto profilu sítě VPN. Pokud je toto nastavení **povoleno** u pravidla tabulky NRPT, zůstane aktivní na zařízení, pravidla, i v případě odpojení sítě VPN nebo odebrání profilu sítě VPN. Pravidlo zůstane, dokud bude ručně odstraněn, což lze provést pomocí Powershellu.
+- **Automaticky se připojovat**: Když **povoleno**, zařízení se automaticky připojí k síti VPN, když zařízení kontaktuje domény můžete zadat, třeba contoso.com.
+- **Trvalé**: Ve výchozím nastavení všechna pravidla tabulky (IP adres NRPT) název zásady překladu IP adres jsou aktivní, tak dlouho, dokud se zařízení připojí pomocí tohoto profilu sítě VPN. Pokud je toto nastavení **povoleno** u pravidla tabulky NRPT, zůstane aktivní na zařízení, pravidla, i v případě odpojení sítě VPN nebo odebrání profilu sítě VPN. Pravidlo zůstane, dokud bude ručně odstraněn, což lze provést pomocí Powershellu.
 
 [Nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md) popisuje aktuální seznam nastavení. 
 
-### <a name="use-smime-to-encrypt-and-sign-a-users-multiple-devices-----1333642-eeready---"></a>Použití S/MIME k šifrování a podepsání více zařízení uživatele <!-- 1333642 eeready -->
+### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user----1333642-eeready---"></a>Použít S/MIME k šifrování a podepisování více zařízení pro uživatele <!-- 1333642 eeready -->
 Šifrování S/MIME e-mailu pomocí nového profilu importovaný certifikát se bude podporovat (**konfigurace zařízení** > **profily** > **vytvořit profil** > Vyberte platformy > **importovaný certifikát PKCS** typ profilu). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může doručit stejné certifikáty do více zařízení zaregistrovaných jedním uživatelem. To také zahrnuje:
 
 - Nativní e-mailový profil v iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
@@ -63,7 +63,7 @@ V systému Windows 10 a novější zařízení budete moct vytvořit konfigurač
 - Na jiných platformách může být nutné ručně nakonfigurovat e-mailovou aplikaci a povolit S/MIME.  
 - E-mailové aplikace, které podporují šifrování S/MIME, můžou zpracovávat načítání certifikátů pro šifrování S/MIME e-mailů způsobem, který MDM nepodporuje (například ho načítají z úložiště certifikátů svého vydavatele).
 
-Podporováno v systémech: Windows, Windows Phone 10, macOS, iOS, Android
+Podporované platformy: Windows, Windows Phone 10, macOS, iOS, Android
 
 ### <a name="help-and-support-page-in-the-windows-company-portal-app----1488939---"></a>Nápověda a podpora stránky v aplikaci portál společnosti pro Windows <!-- 1488939 -->
 Nová stránka se přidají do aplikace portál společnosti Windows. Na stránce Nápověda a podpora poskytne kontaktní údaje helpdesku. Koncoví uživatelé budou také moct posílat protokoly portálu společnosti v případě, že jsou problémy s. Na stránce také poskytuje části Nejčastější dotazy k pomoci koncovým uživatelům.
@@ -80,7 +80,7 @@ V současné době můžete nakonfigurovat nastavení sdílené počítače na d
 Platí pro: Windows 10 a novější, Windows Holographic for Business
 
 ### <a name="intune-policies-update-authentication-method-and-company-portal-app-installation-----1927359---"></a>Aktualizovat zásady Intune metodu ověřování a instalace aplikace portál společnosti  <!-- 1927359 -->
-Intune se už nepodporují aplikaci portál společnosti po instalaci z App storu, na některých zařízeních. Tato změna platí pouze v Apple Pomocníka s nastavením ověřování během registrace. Tato změna ovlivní také pouze zařízení s Iosem zaregistrovaná prostřednictvím:  
+Na zařízení už zaregistrované prostřednictvím pomocníka prostřednictvím jednoho z metody registrace podnikového zařízení společnosti Apple Intune nebude podporovat aplikace portál společnosti nainstalovaný ručně koncovými uživateli z app storu. Tato změna platí pouze v Apple Pomocníka s nastavením ověřování během registrace. Tato změna ovlivní také pouze zařízení s Iosem zaregistrovaná prostřednictvím:  
 * Apple configurator
 * Obchodní ředitel společnosti Apple
 * Apple School Manager
@@ -108,7 +108,7 @@ Budete moct vytvořit e-mailový profil, který obsahuje jiné nastavení. To za
 [Konfigurace nastavení e-mailu iOS](email-settings-ios.md) vypíše aktuální nastavení.
 
 ### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509---"></a>Přeskočit další obrazovky Pomocníka s nastavením nastavení na zařízení s Iosem <!-- 2687509 -->
-Kromě obrazovky nyní můžete přeskočit, budete moct nastavit zařízení DEP, přejděte na následující obrazovce v nastavením když se uživatel zaregistruje zařízení s Iosem: tón zobrazení, ochrana osobních údajů, migrace s Androidem, tlačítko Domů, iMessage a FaceTime, registrace, Podívejte se na migraci, vzhled obrazovky, aktualizace softwaru, SIM nastavení.
+Kromě obrazovky, které se aktuálně můžete přeskočit budete moct nastavit zařízení s programem DEP, přejděte na následující obrazovce v nastavením když se uživatel zaregistruje zařízení s Iosem: Zobrazení tón, ochrany osobních údajů, Android migrace, tlačítko Domů, iMessage & FaceTime, připojení, sledování migrace, vzhled, čas obrazovky, aktualizace softwaru, SIM instalace.
 Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** > **registrace Apple** > **tokeny programu registrace** > zvolte token > **Profily** > zvolte profil > **vlastnosti** > **Pomocníka pro nastavení přizpůsobení** > zvolte **skrýt**  pro všechny obrazovky, které chcete nechat Přeskočit > **OK**.
 
 ### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Edice Windows 10 Pro podporu některých nastavení Bitlockeru<!-- 2727036 -->
@@ -148,7 +148,7 @@ Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení omezení 
 Platí pro: Windows 10 a novější
 
 ### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Šablony pro správu jsou ve verzi public preview a přesunout do své vlastní konfigurační profil <!-- 3322847 -->
-Šablony pro správu v Intune (**konfigurace zařízení** > **šablony pro správu**) jsou aktuálně ve verzi private preview. Od této aktualizace: šablony pro správu zahrnuje přibližně 300 nastavení, které jde spravovat v Intune. Dříve tato nastavení existuje pouze v editoru zásad skupiny.
+Šablony pro správu v Intune (**konfigurace zařízení** > **šablony pro správu**) jsou aktuálně ve verzi private preview. Od této aktualizace: Šablony pro správu zahrnuje přibližně 300 nastavení, které jde spravovat v Intune. Dříve tato nastavení existuje pouze v editoru zásad skupiny.
 Šablony pro správu jsou k dispozici ve verzi public preview pro správu šablon se přesouvají z **konfigurace zařízení** > **šablony pro správu** k **zařízení konfigurace** > **profily** >**vytvořit profil** > v **platformy**, zvolte  **Windows 10 a novější**v **typ profilu**, zvolte **šablony pro správu**.
 Je povoleno oznamování platí pro: Windows 10 a novější
 
@@ -166,10 +166,10 @@ Ke konfiguračnímu profilu přidáte značku oboru tak, zvolíte **Konfigurace 
 
 ### <a name="tenant-health-dashboard----1124854---"></a>Řídicí panel Stav tenanta <!-- 1124854 -->
 Stránka Stav tenanta v Intune vám poskytne informace o stavu tenanta na jednom místě. Stránka je rozdělená do 4 částí:  
-- **Podrobnosti o tenantovi**: obsahuje informace, jako je například autorita MDM, celkový počet zařízení zaregistrovaných ve vašem tenantovi a počet vašich licencí. Tato část také obsahuje aktuální vydanou verzi služby pro vašeho tenanta.
-- **Stav konektoru**: obsahuje informace pro nakonfigurované konektory, jako je třeba Apple VPP, Windows Store pro firmy a konektory Certificate Connectors. Na základě jejich aktuálního stavu jsou konektory označené jako *V pořádku*, *Upozornění* nebo *Není v pořádku*.
-- **Stav služby Intune**: obsahuje aktivní incidenty nebo výpadky vašeho tenanta. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
-- **Novinky v Intune**: obsahuje aktivní zprávy pro vašeho tenanta, které zahrnují například oznámení, že váš tenant obdržel nejnovější funkce Intune. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
+- **Tenant podrobnosti**: Obsahuje informace, jako je například vaše autorita MDM, celkový počet zaregistrovaných zařízení ve vašem tenantovi a licence se počítá. Tato část také obsahuje aktuální vydanou verzi služby pro vašeho tenanta.
+- **Stav konektoru**: Obsahuje informace o konfigurovaných konektorů, jako je například Apple VPP, Windows Store pro firmy a certifikát konektory. Na základě jejich aktuálního stavu jsou konektory označené jako *V pořádku*, *Upozornění* nebo *Není v pořádku*.
+- **Stav služby Intune**: Obsahuje aktivní incidenty nebo výpadky pro vašeho tenanta. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
+- **Intune zpráv**: Obsahuje aktivní zprávy pro vašeho tenanta, které patří oznámení, že váš tenant byl přijat nejnovější funkce Intune. Informace v této části se načítají přímo z centra zpráv Office ([https://portal.office.com](https://portal.office.com)).
 
 
 ### <a name="deployed-wip-policies-without-user-enrollment----1434452---"></a>Nasazené zásady WIP bez registrace uživatele <!-- 1434452 -->

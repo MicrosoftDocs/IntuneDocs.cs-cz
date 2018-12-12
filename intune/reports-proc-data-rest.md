@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: bcd4d9177bcefc1e026bc55831e589a5bcb57105
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: e5040626a27f50fae4df2ec2472d167269a282e4
+ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247267"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -61,13 +61,13 @@ Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace pří
 4.  Vyberte **Vyberte rozhraní API**.
 5.  Vyhledejte název webové aplikace. Její název je **Rozhraní API Microsoft Intune**.
 6.  Vyberte v seznamu tuto aplikaci.
-7.  Vyberte **Vybrat**.
+7.  Vyberte **vyberte**.
 8.  Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
 
     ![Povolení přístupu – rozhraní API Microsot Intune](./media/reports-get_rest_data_client_access.png)
 
-9.  Vyberte **Vybrat**.
-10.  Vyberte **Hotovo**.
+9.  Vyberte **vyberte**.
+10.  Vyberte **Done** (Hotovo).
 11.  V podokně Požadovaná oprávnění můžete volitelně vybrat **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 12.  Vyberte **Ano**.
 
@@ -93,7 +93,7 @@ Abyste mohli nástrojem Postman uskutečnit volání REST, budete potřebovat n�
 
 Potřebujete také koncový bod. K získání koncového bodu datového skladu budete potřebovat adresu URL vlastního kanálu. Koncový bod OData můžete získat v podokně datového skladu.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V části **Ostatní úkoly** vyberte **Nastavení Datového skladu Intune**.
 4. V části **Použít služby generování sestav třetích stran** zkopírujte adresu URL vlastního kanálu. Měla by vypadat přibližně takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
@@ -116,7 +116,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 4.  Zvolte kartu **Authorization** (Autorizace) a v seznamu **Type** (Typ) vyberte **OAuth 2.0**.
-5.  Vyberte **Get New Access Token** (Získat nový přístupový token).
+5.  Vyberte **získat nový přístupový Token**.
 6.  Ověřte, že jste do své aplikace v Azure už přidali adresu URL zpětného volání. Adresa URL zpětného volání je `https://www.getpostman.com/oauth2/callback`.
 7.  Do pole **Token Name** (Název tokenu) zadejte Bearer.
 8.  Přidejte **Auth URL** (Ověřovací adresa URL). Vypadá přibližně takto:  
@@ -141,7 +141,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Odeslání volání koncovému bodu pomocí nástroje Postman
 
-1.  Vyberte **Send** (Odeslat).
+1.  Vyberte **Poslat**.
 2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
 
     ![Postman 200OK](./media/reports-postman_200OK.png)

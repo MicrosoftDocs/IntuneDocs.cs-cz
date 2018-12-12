@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 931aa360b82efcf4ef643fb40bc4982c05e589ee
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fc6b5aac1d75fc67c469f6ecd24e331d1cc35d30
+ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182988"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247233"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -45,14 +45,14 @@ Používání pojmů _entita_ a _tabulka_ může být matoucí. Datový model je
 
 ## <a name="install-power-bi-desktop"></a>Instalace Power BI Desktopu
 
-Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop si můžete stáhnout z webu: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu z si můžete stáhnout: [Webu PowerBI.microsoft.com.](https://powerbi.microsoft.com/desktop)
 
 ## <a name="connect-to-the-odata-feed-for-the-intune-data-warehouse-for-your-tenant"></a>Připojení k datovému kanálu OData pro datový sklad Intune pro vašeho tenanta
 
 > [!Note]  
 > Potřebujete oprávnění k **Sestavám** v Intune. Další informace najdete v sekci [Autorizace](reports-api-url.md).
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Otevřete podokno **Datový sklad Intune**.
 4. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
@@ -68,7 +68,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Přihlašovací údaje pro účet organizace](media/reports-create-02-org-account.png)
 
-11. Vyberte **připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+11. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Navigátor](media/reports-create-02-loadentities.png)
 

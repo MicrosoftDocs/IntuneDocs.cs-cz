@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c7d5d29df0f91a4cff1060cd10a5d2355e196e39
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 67855a7c52a1fad16f64106230658a730d55afd6
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180133"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266932"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Přiřazení aplikací k zařízením s pracovním profilem Androidu pomocí Intune
 
@@ -56,13 +56,13 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 
     ![Možnosti zpracovávání nových žádostí oprávnění aplikace](media/approve-app-settings.png)
 
-    Aplikace se schválí a zobrazí v konzole pro správu. Dále můžete [synchronizovat aplikaci v pracovním profilu Androidu s Intune](apps-add-android-for-work.md#sync-an-android-for-work-app-with-intune). 
+    Aplikace se schválí a zobrazí v konzole pro správu. Dále můžete [synchronizovat aplikaci v pracovním profilu Androidu s Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
 
 ## <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizace aplikace ze spravovaného obchodu Google Play s Intune
 
 Pokud jste aplikaci v tomto obchodě schválili, ale nevidíte ji v uzlu **Licencované aplikace** úlohy **Klientské aplikace**, vynuťte tímto způsobem okamžitou synchronizaci:
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úlohy **Klientské aplikace** vyberte **Spravovaný obchod Google Play** v části **Nastavení**.

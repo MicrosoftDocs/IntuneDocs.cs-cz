@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b72a0bf1a5f5c996ad299bd84ff6f927ef780059
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8da448ece30c1ae90c447f27056f19f74b16dd90
+ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185198"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247131"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 
@@ -40,7 +40,7 @@ Následující proces používá ke zpracování a převodu klíče aplikace pri
 
 V této části zadáte podrobnosti o webové aplikaci, na kterou byste chtěli ukázat v Intune. Webová aplikace představuje aplikaci klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Tento typ aplikace se samostatně udržuje na webu. Přístup do Intune můžete webové aplikaci udělit pomocí Intune. Tok dat iniciuje webová aplikace. 
 
-1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2.  Pomocí pole **Hledat prostředky, služby a dokumenty** v horní části portálu Azure vyhledejte **Azure Active Directory**.
 3.  V rozevírací nabídce vyberte **Azure Active Directory** pod položkou **Služby**.
 4.  Vyberte **Registrace aplikací**.
@@ -75,7 +75,7 @@ V této části Azure AD vygeneruje hodnotu klíče pro vaši aplikaci.
 V této části udělíte aplikacím oprávnění.
 
 1.  V okně **Nastavení** vyberte **Požadovaná oprávnění**.
-2.  Klikněte na tlačítko **přidat**.
+2.  Klikněte na **Přidat**.
 3.  Vyberte **Přidat rozhraní API**, aby se zobrazilo okno **Vyberte rozhraní API**.
 4.  Vyberte **Microsoft Intune API (MicrosoftIntuneAPI)** a pak v okně **Vyberte rozhraní API** klikněte na **Vybrat**. Je vybraný krok **Vybrat oprávnění** a zobrazené okno **Povolit přístup**.
 5.  Zvolte možnost **Získat informace o datovém skladu z Microsoft Intune** z části **Oprávnění aplikace**.
