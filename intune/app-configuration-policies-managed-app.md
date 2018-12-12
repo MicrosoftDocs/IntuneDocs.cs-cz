@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2407225bfd0cdb5892663bf2e66de36157aaf4e0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 24b64d4d7b2ccd376f666e9d7961706025b6eaad
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182002"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829092"
 ---
 # <a name="add-app-configuration-policies-for-managed-apps-without-device-enrollment"></a>Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení
 
@@ -40,7 +40,7 @@ Zásady konfigurace aplikací můžete používat se spravovanými aplikacemi, k
       Popis profilu, který se zobrazí na portálu Azure Portal
     - **Typ registrace zařízení**  
       Zvolte **Spravovat aplikace**.
-6. Vyberte  **Přidružená aplikace**  a zvolte aplikaci, kterou budete konfigurovat. Ze seznamu vyberte některou z aplikací, kterou jste schválili a synchronizovali s Intune.
+6. Vyberte **přidružené aplikace** zvolte aplikaci, kterou chcete konfigurovat. Ze seznamu vyberte některou z aplikací, kterou jste schválili a synchronizovali s Intune.
 7. Pro každé nastavení konfigurace podporované aplikací zadejte položky **Název** a **Hodnota** a zvolte tři tečky (**…**).  
     Pokud chcete konfiguraci odstranit, zvolte tři tečky (**…**) a vyberte **Odstranit**.  
     

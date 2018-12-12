@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/21/2018
+ms.date: 12/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ef26e42b2e500d841aa32fa6239e6970e0cfb577
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728986"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52829143"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -29,15 +29,11 @@ Samostatné využití Intune vám poskytuje širší možnosti správy aplikací
 
 ## <a name="prerequisites-for-public-preview"></a>Předpoklady pro veřejnou verzi Preview
 
-- Windows 10 verze 1607 nebo novější (Enterprise)
+- Windows 10 verze 1607 nebo novější (Enterprise, Pro a vzdělávání verze)
 - Klient Windows 10 musí splňovat tyto předpoklady: 
     - musí být připojen ke službě Azure Active Directory (AAD) nebo hybridní službě Azure Active Directory, a
     - musí být zaregistrován v Intune (spravovaný přes MDM).
 - Ve veřejné verzi Preview je velikost aplikace pro Windows omezená na 8 GB na jednu aplikaci. 
-
-> [!NOTE]
-> Momentálně testujeme edice Pro a Education verze 1607 systému Windows 10 a budeme rádi, když nám napíšete svůj názor.
-
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Příprava obsahu aplikace Win32 pro nahrání
 

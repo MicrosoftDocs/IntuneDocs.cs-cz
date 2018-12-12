@@ -14,12 +14,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 469c0b7c3e67135c53de7c58583d820e1750ad7f
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 583a64b5dd91df2ef9e5acbaf129b447aca7f2d9
+ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728799"
+ms.lasthandoff: 12/04/2018
+ms.locfileid: "52828990"
 ---
 # <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Přidání zásad dodržování předpisů pro zařízení s macOS v Intune
 
@@ -97,7 +97,7 @@ Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomoc
 
 **Povolit aplikace stažené z těchto míst**: Povolí instalaci podporovaných aplikací na vaše zařízení z různých umístění. Možnosti umístění:
 
-- **Nenakonfigurováno**: Toto je výchozí možnost. Možnost Gatekeeper nemá žádný vliv na dodržování nebo nedodržování předpisů. 
+- **Nenakonfigurováno**: Toto je výchozí možnost. Možnost vrátný nemá žádný vliv na dodržování předpisů nebo nedodržení předpisů. 
 - **Mac App Store**: Povolí instalaci aplikací pouze z Mac App Storu. Aplikace jiných výrobců ani identifikovaných vývojářů nelze nainstalovat. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo Mac App Store, považuje se zařízení za nevyhovující předpisům.
 - **Mac App Store a identifikovaní vývojáři**: Povolí instalaci aplikací z Mac App Storu a od identifikovaných vývojářů. macOS zkontroluje identitu vývojářů a provede několik dalších kontrol, aby ověřil integritu aplikace. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo tyto možnosti, považuje se zařízení za nevyhovující předpisům.
 - **Kdekoli**: Aplikace je možné instalovat odkudkoli a od kteréhokoli vývojáře. Jedná se o nejméně bezpečnou možnost.
