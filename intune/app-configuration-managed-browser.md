@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 829b9587849208c40d5e4c0f58169b4f6dfd4153
-ms.sourcegitcommit: a0e965b3a568d1435270012ab89e5857e72cd434
+ms.openlocfilehash: 40e189a3bb9e45851011ae1961ef89576dbcb5d0
+ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52630013"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267034"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -150,7 +150,7 @@ Aplikace Microsoft Edge a Intune Managed Browser a [proxy aplikací Azure AD]( 
 ### <a name="before-you-start"></a>Než začnete
 
 - Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
-    - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#how-to-get-started). 
+    - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started). 
 - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
 - Uživatelé aplikace Managed Browser nebo Microsoft Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
 
@@ -168,7 +168,7 @@ Tento postup nakonfiguruje aplikaci Managed Browser nebo Microsoft Edge tak, aby
 |-----------------------------------------------------------------|----------|
 | **com.microsoft.intune.mam.managedbrowser.AppProxyRedirection** | **true** |
 
-Další informace o tom, jak lze Managed Browser, Microsoft Edge a proxy aplikací Azure AD používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
+Další informace o tom, jak lze Managed Browser, Microsoft Edge a proxy aplikací služby Azure Active Directory používat společně za účelem bezproblémového (a chráněného) přístupu k místním webovým aplikacím, najdete v blogovém příspěvku Enterprise Mobility + Security s názvem [Better together: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup).
 
 > [!NOTE]
 > Microsoft Edge používá stejné dvojice klíč-hodnota jako Managed Browser. 
