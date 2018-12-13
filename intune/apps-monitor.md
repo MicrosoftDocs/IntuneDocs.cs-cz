@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 457b5b97bd13caddb5c60836940dd491eac752f8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bff4e2b3afe684fe12243fa0f410728eb16eeaba
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181883"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325173"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -29,14 +29,14 @@ ms.locfileid: "52181883"
 
 Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných aplikací a spravovat stav jejich přiřazení.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V nabídce **Intune** zvolte **Klientské aplikace**.
 4. V části nabídky **Spravovat** vyberte **Aplikace**.
 5. V seznamu aplikací vyberte aplikaci, která se má monitorovat. Zobrazí se podokno aplikace s přehledem stavu zařízení a uživatele.
 
 > [!NOTE]
-> Aplikace z obchodu pro Android, které jsou nasazeny jako **K dispozici**, nehlásí svůj stav instalace.
+> Aplikace Android Store, které jsou nasazeny jako **dostupné** a s Androidem obchodní aplikace nasazené jako **k dispozici s registrací i bez** nehlásí stav instalace.
 
 ## <a name="app-overview-pane"></a>Podokno přehledu aplikace
 

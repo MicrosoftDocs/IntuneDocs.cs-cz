@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: dfdbaffeb8872e8b121d138ee0aca0315279e718
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bcafad38be9d971e98405ee4b79655cb5d8e5554
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189941"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306028"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
@@ -95,4 +95,4 @@ Pomocí informací o přidružení uživatelů a zařízení, které přidružuj
 
 ## <a name="next-steps"></a>Další postup
  - Zjistěte, [jaké novinky každý týden přináší Intune](whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
- - Přečtěte si [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882).
+ - Přečtěte si [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

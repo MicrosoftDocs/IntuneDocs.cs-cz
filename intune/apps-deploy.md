@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9afde942f2784cb2fb42b13d11a127e3c9811a1
-ms.sourcegitcommit: 3903f20cb5686532ccd8c36aa43c5150cee7cca2
+ms.openlocfilehash: b6e9901bfea3ec129246494d6d8077a440c8a675
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267250"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324918"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -51,7 +51,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 
 ## <a name="to-assign-an-app"></a>Přiřazení aplikace
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V nabídce **Intune** zvolte **Klientské aplikace**.
 4. V části nabídky **Spravovat** vyberte **Aplikace**.
@@ -59,13 +59,13 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 6. V části nabídky **Spravovat** vyberte **Přiřazení**.
 7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
 8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
-   - **K dispozici zaregistrovaným zařízením**: přiřadit aplikace do skupin uživatelů, kteří můžou aplikaci nainstalovat z aplikace portál společnosti nebo webu.
-   - **K dispozici s registrací i bez ní**: Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Aplikace ze spravovaného obchodu Google Play tuto možnost nepodporují. 
-   - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
-   - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
+   - **K dispozici zaregistrovaným zařízením**: Aplikaci můžete přiřadíte do skupin uživatelů, kteří můžou aplikaci nainstalovat z aplikace portál společnosti nebo webu.
+   - **K dispozici s registrací i bez**: Přiřazení této aplikace do skupiny uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Aplikace ze spravovaného obchodu Google Play tuto možnost nepodporují. Uživatelé musí mít přiřazenou licenci Intune najdete v článku [licence Intune](licenses.md).
+   - **Vyžaduje**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy může mít dalších zobrazených výzev pro koncového uživatele k potvrzení před zahájením instalace aplikace.
+   - **Odinstalujte**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune předchozí instalaci aplikace na zařízení prostřednictvím "Dostupné pro zaregistrovaná zařízení" nebo "Povinné" přiřazení pomocí stejného nasazení. Webové odkazy, nelze odebrat po nasazení.
 
      > [!NOTE]
-     > **Jenom pro aplikace pro iOS** : Pokud jste vytvořili profil VPN iOSu, který obsahuje nastavení sítě VPN podle aplikací, můžete profil VPN ve **VPN** vybrat. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
+     > **Jenom pro aplikace iOS**: Pokud jste vytvořili pro iOS profil VPN, který obsahuje nastavení sítě VPN pro aplikaci, můžete vybrat profil sítě VPN v rámci **VPN**. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
      >
      > **Pro aplikace pro Android pouze**: Pokud nasadíte aplikaci pro Android jako **k dispozici s registrací i bez**, vytváření sestav stavu budou k dispozici pouze v zaregistrovaných zařízeních.
 
@@ -87,8 +87,8 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 |-|-|-|
 |**Záměr skupiny 1**|**Záměr skupiny 2**|**Výsledný záměr**|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
-|Uživatel: Povinné|Uživatel: Není k dispozici|Povinné|
-|Uživatel: Povinné|Uživatel: Odinstalace|Povinné|
+|Uživatel: Povinné|Uživatel: Není k dispozici|Požadováno|
+|Uživatel: Povinné|Uživatel: Odinstalace|Požadováno|
 |Uživatel: K dispozici|Uživatel: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Uživatel: Odinstalace|Odinstalace|
 |Uživatel: Není k dispozici|Uživatel: Odinstalace|Odinstalace
@@ -100,7 +100,7 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 |Uživatel: Není k dispozici|Zařízení: Odinstalace|Odinstalace|
 |Uživatel: Odinstalace|Zařízení: Povinné|Existuje obojí, Intune překládá Povinné.|
 |Uživatel: Odinstalace|Zařízení: Odinstalace|Existuje obojí, Intune překládá Odinstalaci.|
-|Zařízení: Povinné|Zařízení: Odinstalace|Povinné|
+|Zařízení: Povinné|Zařízení: Odinstalace|Požadováno|
 |Uživatel: Povinné a K dispozici|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Odinstalace|Povinné a K dispozici|
 |Uživatel: Povinné a K dispozici|Uživatel: Není k dispozici|Povinné a K dispozici|
@@ -109,9 +109,9 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 |Uživatel: Povinné a K dispozici|Zařízení: Odinstalace|Existuje obojí, Intune překládá Povinné (Povinné a K dispozici).
 |Uživatel: Není k dispozici|Zařízení: Není k dispozici|Není k dispozici|
 |Uživatel: K dispozici|Zařízení: Není k dispozici|K dispozici|
-|Uživatel: Povinné|Zařízení: Není k dispozici|Povinné|
+|Uživatel: Povinné|Zařízení: Není k dispozici|Požadováno|
 |Uživatel: K dispozici bez registrace|Uživatel: Povinné a K dispozici|Povinné a K dispozici
-|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Povinné
+|Uživatel: K dispozici bez registrace|Uživatel: Povinné|Požadováno
 |Uživatel: K dispozici bez registrace|Uživatel: Není k dispozici|Není k dispozici
 |Uživatel: K dispozici bez registrace|Uživatel: K dispozici|K dispozici|
 |Uživatel: K dispozici bez registrace|Zařízení: Povinné|Povinné a K dispozici bez registrace|

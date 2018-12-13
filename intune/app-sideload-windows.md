@@ -5,7 +5,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c96d66a11f49db68d20511aeae9b2abbab53b172
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2c15c8915c1fefabf301525b3ef03f74038d31dc
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181238"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325038"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -34,10 +34,10 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 
 
 1. **Registrace jako vývojář Microsoftu**<br>
-   [Zaregistrujte se jako vývojář Microsoftu](http://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu, které jste použili při přihlašování za účelem zakoupení firemního účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
+   [Zaregistrujte se jako vývojář Microsoftu](https://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu, které jste použili při přihlašování za účelem zakoupení firemního účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
 
 2. **Získejte pro společnost certifikát Symantec**<br>
-  Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](http://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli při registraci jako vývojář Microsoftu, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
+  Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](https://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli při registraci jako vývojář Microsoftu, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
 
 3.  **Import certifikátů**<br>
     Jakmile se žádost schválí, obdržíte e-mail s pokyny k importování certifikátů. Postupujte podle pokynů v e-mailu pro import certifikátů.
@@ -52,7 +52,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 
     ![Export podpisového certifikátu](./media/wit-walk-cert2.gif)
 
-    V **Průvodci exportem certifikátu**vyberte **Ano, exportovat soukromý klíč** a klikněte na **Další**. Vyberte **Formát Personal Information Exchange – PKCS č. 12 (.PFX)** a zaškrtněte políčko **Zahrnout všechny certifikáty na cestě k certifikátu, pokud je to možné**. Dokončete průvodce. Další informace naleznete v tématu [Exportování certifikátu se soukromým klíčem](http://go.microsoft.com/fwlink/?LinkID=203031).
+    V **Průvodci exportem certifikátu**vyberte **Ano, exportovat soukromý klíč** a klikněte na **Další**. Vyberte **Formát Personal Information Exchange – PKCS č. 12 (.PFX)** a zaškrtněte políčko **Zahrnout všechny certifikáty na cestě k certifikátu, pokud je to možné**. Dokončete průvodce. Další informace naleznete v tématu [Exportování certifikátu se soukromým klíčem](https://go.microsoft.com/fwlink/?LinkID=203031).
 
 6.  **Nahrání aplikace do Intune**<br>
     Nahráním podepsaného souboru aplikace a svého certifikátu pro podpis kódu zpřístupníte aplikaci vašim koncovým uživatelům.
@@ -65,39 +65,39 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 
     4.  Dokončete průvodce.
 
-## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Příklad: Stažení, podepsání a nasazení aplikace Portál společnosti pro zařízení s Windows
+## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Příklad: Stažení, podepsání a nasazení aplikace portál společnosti pro zařízení s Windows
 
 Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadit na zařízení s Windows, včetně zařízení Windows Phone a mobilních zařízení s Windows 10, pomocí Intune. Musíte si stáhnout aplikaci Portál společnosti a podepsat ji svým certifikátem.  To je nutné pouze v případě, že uživatelé nebudou používat Store společnosti a chcete nasadit firemní portál na zařízení Windows Phone 8.1.
 
 
 1.  **Stáhněte Portál společnosti**
 
-    Pokud chcete aplikaci Portál společnosti nasadit pomocí Intune, můžete si stáhnout [aplikaci Portál společnosti Microsoft Intune pro Windows Phone 8.1](http://go.microsoft.com/fwlink/?LinkId=615799) z webu služby Stažení softwaru a spustit samorozbalovací soubor (.exe). Tento soubor obsahuje dva soubory:
+    Pokud chcete aplikaci Portál společnosti nasadit pomocí Intune, můžete si stáhnout [aplikaci Portál společnosti Microsoft Intune pro Windows Phone 8.1](https://go.microsoft.com/fwlink/?LinkId=615799) z webu služby Stažení softwaru a spustit samorozbalovací soubor (.exe). Tento soubor obsahuje dva soubory:
 
     -   CompanyPortal.appx – instalační aplikace Portálu společnosti pro Windows Phone 8.1
 
     -   WinPhoneCompanyPortal.ps1 – Powershellový skript, který můžete použít k podepsání aplikace Portál společnosti, aby se dala nasadit na zařízení s Windows Phone 8.1
 
-    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](http://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
+    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](https://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 
-2.  **Stažení sady Windows Phone SDK** Stáhněte sadu Windows Phone SDK 8.0 (http://go.microsoft.com/fwlink/?LinkId=615570) a nainstalujte ji na počítač. Potřebujete ji k vygenerování tokenu pro registraci aplikace.
+2.  **Stažení sady Windows Phone SDK** Stáhněte sadu Windows Phone SDK 8.0 (https://go.microsoft.com/fwlink/?LinkId=615570) a nainstalujte ji na počítač. Potřebujete ji k vygenerování tokenu pro registraci aplikace.
 
 3.  **Generování souboru AETX** Pomocí programu AETGenerator.exe, který je součástí sady Windows Phone SDK 8.0, vygenerujte soubor tokenu pro registraci aplikace (.aetx) ze souboru Symantec PFX. Pokyny, jak vytvořit soubor AETX, najdete v tématu [Jak vygenerovat token pro registraci aplikace pro Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj735576.aspx).
 
-4.  **Stažení sady Windows SDK pro Windows 8.1** Stáhněte a nainstalujte sadu [Windows Phone SDK](http://go.microsoft.com/fwlink/?LinkId=613525) (http://go.microsoft.com/fwlink/?LinkId=613525). Všimněte si, že powershellový skript dodaný spolu s aplikací Portál společnosti používá výchozí umístění instalace `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Pokud máte instalaci jinde, musíte její umístění zahrnout jako parametr rutiny.
+4.  **Stažení sady Windows SDK pro Windows 8.1** Stáhněte a nainstalujte sadu [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=613525) (https://go.microsoft.com/fwlink/?LinkId=613525). Všimněte si, že powershellový skript dodaný spolu s aplikací Portál společnosti používá výchozí umístění instalace `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Pokud máte instalaci jinde, musíte její umístění zahrnout jako parametr rutiny.
 
 5.  **Opatření aplikace podpisem kódu pomocí prostředí PowerShell** Jako správce otevřete na hostitelském počítači, na kterém je nainstalovaná sada Windows SDK a certifikát Symantec Enterprise Mobile Code Signing Certificate, prostředí **Windows PowerShell**, přejděte na soubor Sign-WinPhoneCompanyPortal.ps1 a spusťte skript.
 
     **Příklad 1**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -AetxPath 'C:\signing\cert.aetx'
     ```
     Tento příklad podepíše CompanyPortal.appx ve složce C:\temp\ a vytvoří soubor CompanyPortalEnterpriseSigned.appx. Použije heslo PFX 1234 a přečte ID vydavatele ze souboru PFX. Kromě toho přečte i ID organizace ze souboru cert.aetx.
 
     **Příklad 2**
 
-    ```
+    ```PowerShell
     .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -PublisherId 'OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1' -EnterpriseId 1000000001
     ```
     Tento příklad podepíše CompanyPortal.appx ve složce C:\temp\ a vytvoří soubor CompanyPortalEnterpriseSigned.appx. Použije heslo PFX 1234 a zadané ID vydavatele.
@@ -128,7 +128,7 @@ Certifikát Symantecu, který se používá k nasazení mobilních aplikací pro
 
 1.  Najděte e-mail s informacemi o obnovení, který vám Symantec poslal přibližně 14 dnů před vypršením platnosti certifikátu. V tomto e-mailu jsou pokyny od Symantecu o obnovení vašeho podnikového certifikátu.
 
-    Další informace o certifikátech Symantec získáte na webu [www.symantec.com](http://www.symantec.com) nebo telefonním čísle 1-877-438-8776 nebo 1-650-426-3400.
+    Další informace o certifikátech Symantec získáte na webu [www.symantec.com](https://www.symantec.com) nebo telefonním čísle 1-877-438-8776 nebo 1-650-426-3400.
 
 2.  Přejděte na web (například na [https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do](https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do)) a přihlaste se pomocí ID vydavatele od Symantecu a e-mailové adresy přidružené k certifikátu. Ke spuštění obnovení musíte použít stejný počítač, který použijete ke stažení certifikátu.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a4d40915cce17846ca2aaab29bb597c6580e8920
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 30155227f68f5b98eb1808cfc255b368f134ce91
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180659"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305909"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -35,7 +35,7 @@ Microsoft Intune pomáhá synchronizovat, spravovat a přiřazovat knihy, které
 Postupy při správě knih jsou podobné jako u [správy aplikací VPP](vpp-apps-ios.md).
 
 ## <a name="manage-volume-purchased-books-for-ios-devices"></a>Správa knih zakoupených v rámci multilicenčního programu pro zařízení s iOSem
-Více licencí ke knihám pro iOS můžete zakoupit prostřednictvím programu [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](http://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o nákupu v rámci multilicenčního programu s Intune a sledovat využití knih, které jste tímto způsobem koupili.
+Více licencí ke knihám pro iOS můžete zakoupit prostřednictvím programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o nákupu v rámci multilicenčního programu s Intune a sledovat využití knih, které jste tímto způsobem koupili.
 
 ## <a name="before-you-start"></a>Než začnete
 Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. Navíc platí:
@@ -54,7 +54,7 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 1.  V úloze **Klientské aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.

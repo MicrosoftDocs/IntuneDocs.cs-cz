@@ -14,12 +14,12 @@ ms.reviewer: kmyrup
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73a3b26eb9a18475530e3b52ba9b91c4af5e685d
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: 49e80c364c02902a185b85c7aed09a292ad9c6c8
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303868"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325105"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -29,21 +29,21 @@ Tento článek popisuje, jak pomocí Intune nakonfigurovat infrastrukturu a pak 
 
 - **Doména služby Active Directory**: Všechny servery uvedené v této části (s výjimkou proxy serveru webové aplikace) musí být připojené k vaší doméně služby Active Directory.
 
-- **Certifikační autorita** (CA): Musí to být certifikační autorita organizace od Microsoftu, která se provozuje na edici Enterprise systému Windows Server 2008 R2 nebo novějšího. Samostatná certifikační autorita není podporovaná. Podrobnosti najdete v tématu [Instalace certifikační autority](http://technet.microsoft.com/library/jj125375.aspx).
+- **Certifikační autorita** (CA): Musí být Microsoft certifikační autority (CA), na kterém běží na verzi Enterprise systému Windows Server 2008 R2 nebo novější. Samostatná certifikační autorita není podporovaná. Podrobnosti najdete v tématu [Instalace certifikační autority](http://technet.microsoft.com/library/jj125375.aspx).
     Pokud certifikační autorita používá Windows Server 2008 R2, musíte [instalovat opravu hotfix z KB2483564](http://support.microsoft.com/kb/2483564/).
 
-- **Server NDES**: Na Windows Serveru 2012 R2 nebo novější verzi nastavte roli serveru NDES (Služba zápisu síťových zařízení). Intune nepodporuje používání služby zápisu síťových zařízení na serveru, na kterém se provozuje také certifikační autorita organizace. Pokyny ke konfiguraci Windows Serveru 2012 R2 pro hostování této služby najdete v [doprovodných materiálech ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
+- **NDES Server**: V systému Windows Server 2012 R2 nebo novějším nastavení role serveru zápisu služby síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení na serveru, na kterém se provozuje také certifikační autorita organizace. Pokyny ke konfiguraci Windows Serveru 2012 R2 pro hostování této služby najdete v [doprovodných materiálech ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
 Server NDES musí být připojený k doméně ve stejné doménové struktuře jako certifikační autorita organizace. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector**: Stáhněte si instalační program **Certificate Connectoru** (**NDESConnectorSetup.exe**) z portálu pro správu Intune. Tento instalační program spustíte na serveru s rolí NDES.  
+- **Microsoft Intune Certificate Connector**: Stáhněte si **Certificate Connector** instalačního programu (**NDESConnectorSetup.exe**) z portálu pro správu Intune. Tento instalační program spustíte na serveru s rolí NDES.  
 
   - Certificate Connector pro NDES také podporuje režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
-- **Proxy server webových aplikací** (volitelné): Jako server služby Proxy webových aplikací (WAP) použijte server se systémem Windows Server 2012 R2 nebo novějším. Tato konfigurace:
+- **Proxy Server webových aplikací** (volitelné): Použít server se systémem Windows Server 2012 R2 nebo vyšší jako server Proxy webových aplikací (WAP). Tato konfigurace:
   - Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
   - Je doporučeným zabezpečením v případě, že se zařízení připojují prostřednictvím internetu za účelem příjmu a obnovení certifikátů.
   
-- **Proxy aplikací služby AD** (volitelné): K publikování serveru NDES na internet je možné místo vyhrazeného serveru Proxy webových aplikací (WAP) použít Proxy aplikací služby AD. Další informace najdete v tématu [Zajištění bezpečného vzdáleného přístupu k místním aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
+- **Azure AD Application Proxy** (volitelné): Proxy aplikací služby Azure AD je použít místo vyhrazený Server Proxy webových aplikací (WAP) pro publikování serveru NDES k Internetu. Další informace najdete v tématu [Jak poskytnout zabezpečený vzdálený přístup k místním aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy).
 
 #### <a name="additional"></a>Další
 
@@ -52,7 +52,7 @@ Server NDES musí být připojený k doméně ve stejné doménové struktuře j
 
 Další informace najdete v [plánování certifikátů pro WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) a [obecných informacích o serverech WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
-### <a name="network-requirements"></a>Požadavky sítě
+### <a name="network-requirements"></a>Síťové požadavky
 
 Pokud nepoužíváte reverzní proxy, jako je například WAP nebo Proxy aplikací služby Azure AD, povolte provoz TCP na portu 443 ze všech hostitelů nebo IP adres v internetu na server NDES.
 
@@ -71,7 +71,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 
 ### <a name="accounts"></a>Účty
 
-|Name|Podrobnosti|
+|Název|Podrobnosti|
 |--------|-----------|
 |**Účet služby NDES**|Zadejte účet uživatele domény, který chcete použít jako účet služby NDES. |
 
@@ -223,7 +223,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Umístění                        |      Hodnota      | Type  |      Data       |
+   |                        Umístění                        |      Hodnota      | Typ  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -233,7 +233,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
     ![Maximální délka dotazu a adresy URL ve službě IIS](./media/SCEP_IIS_max_URL.png)
 
 5. Restartujte server. Nepoužívejte příkaz **iisreset**. Tento příkaz k dokončení těchto změn nestačí.
-6. Přejděte na `http://*FQDN*/certsrv/mscep/mscep.dll`. Měla by se zobrazit stránka NDES podobná následující stránce:
+6. Přejděte do `http://*FQDN*/certsrv/mscep/mscep.dll`. Měla by se zobrazit stránka NDES podobná následující stránce:
 
     ![Test NDES](./media/SCEP_NDES_URL.png)
 
@@ -261,9 +261,9 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 
     Certifikát pro ověřování klientů musí mít následující vlastnosti:
 
-    - **Rozšířené použití klíče**: Tato hodnota musí zahrnovat **Ověření klienta**.
+    - **Rozšířené použití klíče**: Tato hodnota musí obsahovat **ověření klienta**
 
-    - **Název subjektu**: Hodnota musí být stejná jako název DNS serveru, na který instalujete certifikát (server NDES).
+    - **Název subjektu**: Hodnota musí být stejný jako název DNS serveru, kde instalujete certifikát (NDES Server)
 
 ##### <a name="configure-iis-request-filtering"></a>Konfigurace filtrování požadavků služby IIS
 
@@ -362,13 +362,13 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 5. V rozevíracím seznamu **Typ profilu** zvolte **Certifikát SCEP**.
 6. Zadejte následující nastavení:
 
-   - **Typ certifikátu**: Pro uživatelské certifikáty vyberte **Uživatel**. Pro zařízení bez uživatele, jako jsou například veřejné terminály, vyberte **Zařízení**. Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
+   - **Typ certifikátu**: Zvolte **uživatele** u uživatelských certifikátů. Pro zařízení bez uživatele, jako jsou například veřejné terminály, vyberte **Zařízení**. Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
      - iOS
      - Windows 8.1 a vyšší
      - Windows 10 a novější
      - Android Enterprise
 
-   - **Formát názvu subjektu**: Vyberte způsob, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
+   - **Formát názvu subjektu**: Vyberte, jak Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
 
         **Typ uživatelského certifikátu**  
 
@@ -380,17 +380,17 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         - **Běžný název jako e-mail**
         - **IMEI (International Mobile Equipment Identity)**
         - **Sériové číslo**
-        - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
+        - **Vlastní**: Když vyberete tuto možnost **vlastní** se navíc zobrazí textové pole. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-            - **CN={{UserName}}**: Hlavní název uživatele, například janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
-            - **CN={{SERIALNUMBER}}**: Jedinečné sériové číslo (SN), které obvykle používá výrobce k identifikaci zařízení
-            - **CN={{IMEINumber}}**: Jedinečné číslo IMEI (International Mobile Equipment Identity), které slouží k identifikaci mobilního telefonu
-            - **CN={{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN = {{UserName}}**: Hlavní název uživatele, jako například janedoe@contoso.com
+            - **CN = {{AAD_Device_ID}}**: ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
+            - **CN = {{SERIALNUMBER}}**: Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
+            - **CN = {{IMEINumber}}**: Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu
+            - **CN = {{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
-            - **CN={{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName z Active Directory do Azure AD pomocí Azure AD Connect do atributu zvaného `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
+            - **CN = {{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD connect na atribut s názvem `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
 
                 Pokud chcete použít proměnnou `{{onPremisesSamAccountName}}`, nezapomeňte synchronizovat atribut uživatele `onPremisesSamAccountName` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
@@ -428,7 +428,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří. 
 
 
-   - **Alternativní název subjektu**: Zadejte způsob, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
+   - **Alternativní název subjektu**: Zadejte, jak má Intune automaticky vytvořit hodnoty pro alternativní název subjektu (SAN) v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
 
         **Typ uživatelského certifikátu**  
 
@@ -470,7 +470,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v alternativním názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří.  
 
-   - **Období platnosti certifikátu**: Pokud jste spustili příkaz `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` na vydávající CA, která umožňuje nastavit vlastní období platnosti certifikátu, můžete zadat dobu zbývající do vypršení platnosti certifikátu.<br>Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA. 
+   - **Období platnosti certifikátu**: Pokud jste spustili `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` příkaz na vydávající CA, která umožňuje nastavit vlastní období platnosti, můžete zadat dobu zbývající do vypršení platnosti certifikátu.<br>Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA. 
    - **Zprostředkovatel úložiště klíčů (KSP)** (Windows Phone 8.1, Windows 8.1, Windows 10): Zadejte, kam se má uložit klíč k certifikátu. Vyberte jednu z těchto hodnot:
      - **Zapsat do KSP na čipu TPM (Trusted Platform Module), pokud existuje, jinak zapsat do softwarového KSP**
      - **Zapsat do KSP na čipu TPM (Trusted Platform Module), jinak chyba**
@@ -478,15 +478,15 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
      - **Zapsat do softwarového KSP**
 
    - **Použití klíče**: Zadejte možnosti použití klíče pro certifikát. Možnosti:
-     - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
-     - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že se k ochraně klíče využívá digitální podpis.
-   - **Velikost klíče (bity)**: Vyberte počet bitů, které klíč obsahuje.
+     - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný
+     - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že digitální podpis k ochraně klíče
+   - **Velikost klíče (bity)**: Vyberte počet bitů v klíči
    - **Hashovací algoritmus** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
    - **Kořenový certifikát**: Zvolte profil kořenové CA certifikátu dříve nakonfigurovali a přiřadili pro uživatele a/nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu. Nezapomeňte přiřadit tento profil důvěryhodného kořenového certifikátu do stejné skupiny přiřadit profil certifikátu SCEP.
-   - **Rozšířené použití klíče**: **Přidejte** hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
+   - **Rozšířené použití klíče**: **Přidat** hodnoty pro tento certifikát zamýšlený účel. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
    - **Nastavení registrace**
-     - **Prahová hodnota obnovení (%)**: Zadejte procento doby životnosti certifikátu zbývající v okamžiku, kdy zařízení požádá o obnovení certifikátu.
-     - **Serverové adresy URL pro SCEP**: Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP.
+     - **Prahová hodnota obnovení (%)**: Zadejte procento životnosti certifikátu, který zůstává zařízení požádá o obnovení certifikátu.
+     - **Adresy URL serveru SCEP**: Zadejte jeden nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například podobný `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Vyberte **OK** a **vytvořte** profil.
 
 Profil se vytvoří a zobrazí se v podokně se seznamem profilů.

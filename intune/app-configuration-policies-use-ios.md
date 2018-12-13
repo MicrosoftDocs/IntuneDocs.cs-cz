@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dd18b882af8c685bb640468ef7076ed6317126a5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 685803f6ef30994a943969e3642bd8349dcf9f6e
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184603"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324935"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -47,7 +47,7 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
@@ -100,14 +100,14 @@ Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat 
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
+Pro zařízení s Iosem použijte následující dvojice klíč/hodnota:
 
 | **Klíč** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hodnoty** | <ul><li>**Povolené**: Jediný povolený účet je spravovaný uživatelský účet definovaný klíčem [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Zakázané** (nebo libovolná hodnota, která se neshoduje malými a velkými písmeny s **Povolené**): Je povolený libovolný účet.</li></ul> |
+| **Hodnoty** | <ul><li>**Povolené**: Jediný účet povolený je spravované uživatelský účet, definované [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) klíč.</li><li>**Zakázané** (nebo libovolnou hodnotu, která se neshodují malá a velká písmena na **povoleno**): Každý účet je povolen.</li></ul> |.
 
    > [!NOTE]
-   > Musíte použít OneDrive pro iOS 10.34 nebo novější a Outlook pro iOS 2.99.0 nebo novější, když budete povolovat jenom nakonfigurované účty organizace s více identitami.
+   > Je nutné použít OneDrive pro iOS 10.34 nebo novější a Outlook pro iOS 2.99.0 nebo novější a musí být aplikace cílem [zásady ochrany aplikací Intune](app-protection-policy.md) při povolení nakonfigurovat jenom účty organizace s více identitami.
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 
@@ -123,7 +123,7 @@ Další informace o seznamech vlastností XML:
 
 Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu zadat jednu nebo několik následujících hodnot:
 
-```
+```xml
 <dict>
   <key>userprincipalname</key>
   <string>{{userprincipalname}}</string>

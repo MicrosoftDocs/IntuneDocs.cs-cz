@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: aeade83142c15fe0423bf4da8ca48d9278e8c2da
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.openlocfilehash: 897eca8eab6a3b5d2f8f12d69aa5da3ae1988f13
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266983"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324884"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 Funkce Přineste si vlastní zařízení (BYOD) umožňuje použít osobní telefony, tablety a počítače. Kvůli registraci vlastního zařízení uživatelé nainstalují a používají aplikaci Portál společnosti. Tento program umožňuje uživatelům přístup k firemním prostředkům, jako je třeba e-mail.
 
 ## <a name="corporate-owned-device"></a>Zařízení vlastněná společností
-[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). Zařízení iOS lze zaregistrovat přímo prostřednictvím nástrojů DEP (Device Enrollment Program), které poskytuje Apple. Zařízení s číslem IMEI se také dají identifikovat a označit jako zařízení vlastněná společností.
+[Mezi zařízení vlastněná společností](corporate-identifiers-add.md) patří telefony, tablety a počítače ve vlastnictví organizace, které se přidělují zaměstnancům. Registrace zařízení vlastněných společností umožňuje různé způsoby správy, například v podobě automatické registrace, sdílených zařízení nebo předem autorizovaných požadavků na registraci. Správce nebo manažer používá k registraci takových zařízení nejčastěji Správce registrace zařízení (DEM). Zařízení iOS lze zaregistrovat přímo prostřednictvím nástrojů DEP (Device Enrollment Program), které poskytuje Apple. Zařízení s číslem IMEI lze také identifikovat a označit jako zařízení vlastněných společností.
 
 ### <a name="device-enrollment-manager"></a>správce registrace zařízení
 Správce registrace zařízení (DEM) je zvláštní uživatelský účet, který se používá k registraci a správě více zařízení vlastněných společností. Správci pak mohou nainstalovat aplikaci Portál společnosti a zaregistrovat velký počet zařízení bez uživatele. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Přečtěte si další informace o [DEM](./device-enrollment-manager-enroll.md). 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 38c1d982dc627ccddf2844bf7a6334157e1f0b92
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 83baf13b42cd67e682227d6310b7057bdbd6bf1e
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032244"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324854"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -43,7 +43,7 @@ Po registraci můžete [měnit nastavení vlastnictví](#change-device-ownership
 
 Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělovači (.csv) se seznamem čísel IMEI nebo sériových čísel. Intune pomocí těchto identifikátorů během registrace určuje, že zařízení je ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem, macOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
-<!-- When you upload serial numbers for company-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as company-owned. -->
+<!-- When you upload serial numbers for corporate-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
 [Přečtete si, jak zjistit sériové číslo zařízení Apple](https://support.apple.com/HT204308).<br>
 [Přečtete si, jak zjistit sériové číslo zařízení s Androidem](https://support.google.com/store/answer/3333000).
@@ -67,7 +67,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 > [!IMPORTANT]
 > Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI v inventáři služby Intune, označí se zařízení jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
->Poznámka: Sériová čísla Androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
+>Všimněte si také: Sériová čísla androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 >Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.
 
@@ -77,7 +77,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
    ![Pracovní prostor s identifikátory podnikových zařízení a zvýrazněným tlačítkem Přidat](./media/add-corp-id.png)
 
-2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
+2. V **přidat identifikátory** okně zadejte typ identifikátoru: **IMEI** nebo **sériového portu**.
 
 3. Klikněte na ikonu složky a určete cestu k seznamu, který chcete importovat. Přejděte do souboru .csv a zvolte **Přidat**. 
 
@@ -87,7 +87,7 @@ V textovém editoru vypadá soubor .csv takhle:
 
 1. V [Intune na portálu Azure Portal](https://portal.azure.com) zvolte **Registrace zařízení** > **Identifikátory podnikových zařízení** > **Přidat** > **Zadat ručně**.
 
-2. V okně **Přidat identifikátory** zadejte typ identifikátoru: **IMEI** nebo **Sériové**.
+2. V **přidat identifikátory** okně zadejte typ identifikátoru: **IMEI** nebo **sériového portu**.
 
 3. Pro každý identifikátor, který chcete přidat, zadejte **Identifikátor** a **Podrobnosti**. Až zadávání identifikátorů dokončíte, zvolte **Přidat**.
 

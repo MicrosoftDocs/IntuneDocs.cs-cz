@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 77aa0d1544351adaa8d338bc7c4c7182d35941e8
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.openlocfilehash: 1e72160dd88c14f7160f75ea30b803551f49392a
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267007"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325020"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
@@ -73,7 +73,7 @@ Při použití detekce důvěryhodných sítí, budete moct zabránit profily s�
 [Nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md) uvádí aktuální nastavení sítě VPN.
 
 ### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK bude podporovat 256bitových šifrovacích klíčů <!-- 1832174 -->
-Sady Intune App SDK pro iOS bude používat 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK.
+Sady Intune App SDK pro Android bude používat 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK.
 
 ### <a name="enabled-shared-pc-settings-in-intune-profile----1907917---"></a>Povolené nastavení sdíleného počítače v Intune profil <!-- 1907917 -->
 V současné době můžete nakonfigurovat nastavení sdílené počítače na desktopových zařízeních s Windows 10 pomocí vlastního nastavení OMA-URI. Přidá nový profil konfigurace nastavení sdílené počítače (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **Windows 10 a novější** > **sdílený více uživateli zařízení**).

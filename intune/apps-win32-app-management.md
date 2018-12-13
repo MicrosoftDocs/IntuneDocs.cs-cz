@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 10/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6e8a74763f29707aa3e774be52f7b383b040ec1e
-ms.sourcegitcommit: b93db06ba435555f5b126f97890931484372fcfb
+ms.openlocfilehash: 456e3922b74bb8c8ebbbca4718b36b3fb0dcdc29
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52829143"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324986"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -71,14 +71,14 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com/).
+1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
 2.  Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
 4.  V podokně **Přidat aplikaci** vyberte **Aplikace pro Windows (Win32) – Preview** ze seznamu v rozevírací nabídce.
 
     ![Snímek obrazovky Přidat aplikaci – rozevírací nabídka typů pro přidání](./media/apps-win32-app-01.png)
 
-### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Nahrání souboru balíčku aplikace
+### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Nahrát soubor balíčku aplikace
 
 1.  V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace** a vyberte soubor. Zobrazí se podokno Soubor balíčku aplikace.
 
@@ -91,20 +91,20 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
 1.  V podokně **Přidat aplikaci** zvolte **Informace o aplikaci** a nakonfigurujte aplikaci.
 2.  V podokně **Informace o aplikaci** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
-    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti všechny aplikace.
+    - **Název**: Zadejte název aplikace, zobrazí se v aplikaci portál společnosti. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti všechny aplikace.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
-    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
-    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace. Zadat můžete například **Personální oddělení**.
-    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Logo**: Nahrajte ikonu, která se k aplikaci přidruží. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Publikování**r: Zadejte název vydavatele aplikace.
+    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
+    - **Adresa URL informací**: Volitelně zadejte adresu URL webu, který obsahuje informace o aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Soukromá adresa URL**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů pro aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
+    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
+    - **Logo**: Nahrajte ikonu, která je spojená s aplikací. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 3.  Až to budete mít, vyberte **OK**.
 
-### <a name="step-4-configure-app-installation-details"></a>Krok 4: Konfigurace podrobností instalace aplikace
+### <a name="step-4-configure-app-installation-details"></a>Krok 4: Nakonfigurujte podrobnosti instalace aplikace
 1.  V podokně **Přidat aplikaci** vyberte **Program** a nakonfigurujte příkazy pro instalaci a odebrání aplikace.
 2.  Přidejte příkazový řádek pro dokončení aplikace, abyste mohli nainstalovat aplikaci. 
 
@@ -121,19 +121,19 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
 4.  Až to budete mít, vyberte **OK**.
 
-### <a name="step-5-configure-app-requirements"></a>Krok 5: Konfigurace požadavků aplikace
+### <a name="step-5-configure-app-requirements"></a>Krok 5: Konfigurace požadavků na aplikaci
 
 1.  V podokně **Přidat aplikaci** vyberte **Požadavky** a nakonfigurujte požadavky, které zařízení musí splnit, aby bylo možné aplikaci nainstalovat.
 2.  V podokně **Požadavky** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
-    - **Architektura operačního systému**: Zvolte architektury nutné k instalaci aplikace.
-    - **Minimální operační systém**: Vyberte minimální operační systém potřebný k instalaci aplikace.
-    - **Požadované místo na disku (MB)**: Volitelně přidejte volné místo na systémové jednotce pro instalaci aplikace.
-    - **Požadovaná fyzická paměť (MB)**: Volitelně přidejte fyzickou paměť (RAM) nutnou pro instalaci aplikace.
-    - **Minimální požadovaný počet logických procesorů**: Volitelně přidejte minimální počet logických procesorů požadovaných k instalaci aplikace.
-    - **Minimální požadovaná rychlost CPU (MHz)**: Volitelně přidejte minimální rychlost procesoru, která se požaduje pro instalaci aplikace.
+    - **Architektura operačního systému**: Zvolte, že architektury potřebujete k instalaci aplikace.
+    - **Minimální verzi operačního systému**: Vyberte minimální verzi operačního systému, které jsou potřebné k instalaci aplikace.
+    - **Místo na disku vyžadované (MB)**: Volitelně můžete přidáte volné místo na disku potřebné k instalaci aplikace na systémovou jednotku.
+    - **Vyžaduje fyzické paměti (MB)**: Volitelně můžete přidáte fyzické paměti (RAM) požadovaná k instalaci aplikace.
+    - **Minimální počet logických procesorů potřebný**: Volitelně můžete přidáte minimální počet logických procesorů potřebný k instalaci aplikace.
+    - **Minimální rychlost procesoru požadované (MHz)**: Volitelně můžete přidáte minimální rychlost procesoru, které jsou potřebné k instalaci aplikace.
 3.  Až to budete mít, vyberte **OK**.
 
-### <a name="step-6-configure-app-detection-rules"></a>Krok 6: Konfigurace pravidel zjišťování aplikace
+### <a name="step-6-configure-app-detection-rules"></a>Krok 6: Konfigurace pravidel detekce aplikace
 
 1.  V podokně **Přidat aplikaci** vyberte **Pravidla detekce** a nakonfigurujte pravidla pro zjištění přítomnosti aplikace.
 2.  V poli **Formát pravidel** vyberte, jak se bude přítomnost aplikace zjišťovat. Pravidla detekce můžete nakonfigurovat ručně, ale můžete použít i vlastní skript, který zjistí přítomnost aplikace. Musíte zvolit alespoň jedno pravidlo detekce. 
@@ -182,17 +182,19 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
     - **Použít vlastní skript zjišťování**: Zadejte powershellový skript, který se použije ke zjištění této aplikace. 
     
         1.  **Soubor skriptu**: Vyberte powershellový skript, který zjistí přítomnost aplikace v klientovi. Aplikace se bude považovat za zjištěnou, když skript vrátí ukončovací kód s hodnotou 0 a zapíše řetězcovou hodnotu do výstupu STDOUT.
-        2.  **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** ke spuštění skriptu s použitím pověření přihlášeného uživatele. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět v kontextu systému.
+
+        2.  **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** pro spuštění skriptu v procesu 32-bit v 64bitových klientech. Vyberte **ne** (výchozí) pro spuštění skriptu v procesu 64-bit v 64bitových klientech. 32bitové klienty, spusťte skript 32bitový proces.
+
         3.  **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
     
-        Funkce Intune Sidecar zkontroluje výsledky skriptu. Přečte hodnoty, které skript zapsal do standardního streamu výstupu (STDOUT), standardního streamu chyb (STDERR) a do ukončovacího kódu. Pokud kód končí nenulovou hodnotu, skript selže a stav zjišťování aplikace je Nenainstalováno. Pokud ukončovací kód obsahuje nulovou hodnotu a výstup STDOUT obsahuje data, byl stav zjišťování aplikace je Nainstalováno. 
-    
-        > [!NOTE]
-        > Pokud se skript ukončí s hodnotou 0, bylo spuštění skriptu úspěšné. Sekundární výstupní kanál označuje, že aplikace byla zjištěna – data STDOUT označují, že aplikace se v klientovi našla. Konkrétnímu řetězci z výstupu STDOUT se nevěnujeme.
-    
-3.  Po přidání pravidel vyberte **Přidat** > **OK**.
+            Agenta Intune kontroluje výsledky ze skriptu. Přečte hodnoty, které skript zapsal do standardního streamu výstupu (STDOUT), standardního streamu chyb (STDERR) a do ukončovacího kódu. Pokud kód končí nenulovou hodnotu, skript selže a stav zjišťování aplikace je Nenainstalováno. Pokud ukončovací kód obsahuje nulovou hodnotu a výstup STDOUT obsahuje data, byl stav zjišťování aplikace je Nainstalováno. 
 
-### <a name="step-7-configure-app-return-codes"></a>Krok 7: Konfigurace návratových kódů aplikace
+            > [!NOTE]
+            > Pokud se skript ukončí s hodnotou 0, bylo spuštění skriptu úspěšné. Sekundární výstupní kanál označuje, že aplikace byla zjištěna – data STDOUT označují, že aplikace se v klientovi našla. Konkrétnímu řetězci z výstupu STDOUT se nevěnujeme.
+
+        4.  Po přidání pravidel vyberte **Přidat** > **OK**.
+
+### <a name="step-7-configure-app-return-codes"></a>Krok 7: Konfigurace aplikace návratové kódy
 
 1.  V podokně **Přidat aplikaci** vyberte **Návratové kódy** a přidejte návratové kódy, které se mají použít buď pro přidání chování při opakování instalace aplikace, nebo pro přidání chování po instalaci. Položky návratových kódů se standardně přidají při vytváření aplikace. Můžete ale přidat další nebo změnit existující návratové kódy. 
 2.  V podokně **Návratové kódy** přidejte další návratové kódy nebo změňte existující návratové kódy.
@@ -213,9 +215,9 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 1.  V podokně aplikace vyberte **Přiřazení**.
 2.  Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
 3.  Pro konkrétní aplikaci vyberte **typ přiřazení**:
-    - **K dispozici zaregistrovaným zařízením**: Uživatelé nainstalují aplikaci z aplikace Portál společnosti nebo z webu Portál společnosti.
-    - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
-    - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
+    - **K dispozici zaregistrovaným zařízením**: Uživatelé nainstalovat aplikaci z aplikace portál společnosti nebo webu portál společnosti.
+    - **Vyžaduje**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
+    - **Odinstalujte**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
 4.  Vyberte **Zahrnuté skupiny** a přiřaďte skupiny, které budou tuto aplikaci používat.
 5.  V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
 6.  Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.

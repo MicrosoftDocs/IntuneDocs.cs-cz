@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 67855a7c52a1fad16f64106230658a730d55afd6
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266932"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305926"
 ---
 # <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Přiřazení aplikací k zařízením s pracovním profilem Androidu pomocí Intune
 
@@ -84,7 +84,7 @@ Když vývojář aplikace aktualizuje oprávnění v nové verzi aplikace, nejso
 
 Pravidelně navštěvujte spravovanou konzolu Google Play a kontrolujte nová oprávnění. Obchod Google Play můžete nastavit tak, aby byl vám nebo jiným uživatelům zaslán e-mail, pokud bude schválená aplikace vyžadovat nová oprávnění. Pokud přiřadíte aplikaci a zjistíte, že není na zařízeních nainstalovaná, zkontrolujte tímto způsobem nová oprávnění:
 
-1. Přejděte na [Google Play](http://play.google.com/work).
+1. Přejděte na [Google Play](https://play.google.com/work).
 2. Přihlaste se pod účtem Google, který jste použili k publikování a schválení aplikací.
 3. Vyberte kartu **Aktualizace** a zkontrolujte, jestli některé aplikace nevyžadují aktualizaci.  
     Všechny zde uvedené aplikace vyžadují nová oprávnění a nepřiřadí se, dokud nebudou použita.

@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c073040275f63b4623ea28a25ad0940dea563b75
-ms.sourcegitcommit: 67666682935c44ff6ad003c0da220a79cc42c9c3
+ms.openlocfilehash: 24af17395cee1e84d72fdb066c0a4ffb949f3045
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168024"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53325139"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -86,7 +86,7 @@ Nástroj provede pouze [přímé nahrazení](#class-and-method-replacements)). N
 ### <a name="gradle-build-plugin"></a>Modul plug-in sestavení Gradle
 Pokud aplikace neprovádí sestavení pomocí nástroje Gradle, přejděte na část [Integrace s nástrojem příkazového řádku](#command-line-build-tool). 
 
-Modul plug-in App SDK se distribuuje v sadě SDK jako **GradlePlugin/com.microsoft.intune.mam.build.jar**. Aby Gradle mohl vyhledat modul plug-in, musíte ho přidat do cesty ke třídě skriptu sestavení. Modul plug-in závisí na nástroji [Javassist](http://jboss-javassist.github.io/javassist/), který také musíte přidat. Do cesty třídy je přidáte tak, že do kořene `build.gradle` přidáte následující kód.
+Modul plug-in App SDK se distribuuje v sadě SDK jako **GradlePlugin/com.microsoft.intune.mam.build.jar**. Aby Gradle mohl vyhledat modul plug-in, musíte ho přidat do cesty ke třídě skriptu sestavení. Modul plug-in závisí na nástroji [Javassist](https://jboss-javassist.github.io/javassist/), který také musíte přidat. Do cesty třídy je přidáte tak, že do kořene `build.gradle` přidáte následující kód.
 
 ```groovy
 buildscript {
@@ -170,7 +170,7 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 
 #### <a name="dependencies"></a>Závislosti
 
-Modul plug-in Gradle má závislost na nástroji [Javassist](http://jboss-javassist.github.io/javassist/), který musí být dostupný pro zjištění závislostí Gradlu (jak jsme popsali výše). Javassist se používá výhradně v době sestavení při spuštění modulu plug-in. Do vaší aplikace se nepřidá žádný kód Javassist.
+Modul plug-in Gradle má závislost na nástroji [Javassist](https://jboss-javassist.github.io/javassist/), který musí být dostupný pro zjištění závislostí Gradlu (jak jsme popsali výše). Javassist se používá výhradně v době sestavení při spuštění modulu plug-in. Do vaší aplikace se nepřidá žádný kód Javassist.
 
 > [!NOTE]
 > Musíte používat verzi 3.0 nebo novější modulu plug-in Android Gradle a Gradle 4.1 nebo novější.
@@ -338,7 +338,7 @@ Azure Active Directory Authentication Library ([ADAL](https://azure.microsoft.co
 
 Abyste ze zaprotokolovaných dat získali co nejvíce, měli byste protokolování zahájit brzy. Nejlepším místem k zahájení protokolování je obvykle `Application.onMAMCreate()`.
 
-Pokud chcete v aplikaci přijímat protokoly MAM, vytvořte [Java Handler](http://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) a přidejte ho do `MAMLogHandlerWrapper`. Tím se pro každou zprávu protokolu vyvolá v obslužné rutině aplikace `publish()`.
+Pokud chcete v aplikaci přijímat protokoly MAM, vytvořte [Java Handler](https://docs.oracle.com/javase/7/docs/api/java/util/logging/Handler.html) a přidejte ho do `MAMLogHandlerWrapper`. Tím se pro každou zprávu protokolu vyvolá v obslužné rutině aplikace `publish()`.
 
 ```java
 /**
@@ -502,9 +502,9 @@ SaveLocation service, String username);
 ... kde `service` je jedním z parametrů SaveLocation:
 
 
-    * SaveLocation.ONEDRIVE_FOR_BUSINESS
-    * SaveLocation.LOCAL
-    * SaveLocation.SHAREPOINT
+    * `SaveLocation.ONEDRIVE_FOR_BUSINESS`
+    * `SaveLocation.LOCAL`
+    * `SaveLocation.SHAREPOINT`
 
 Dříve se pro určování, jestli zásady uživatele umožňují ukládání dat do různých umístění, využívala funkce `getIsSaveToPersonalAllowed()` ze stejné třídy **AppPolicy**. Ta je teď **zastaralá** a neměla by se používat. Vyvolání ekvivalentní k funkci `getIsSaveToPersonalAllowed()` vidíte níže:
 
@@ -798,7 +798,7 @@ Result getRegisteredAccountStatus(String upn);
 
 Aplikace [podporující suverénní cloud](https://www.microsoft.com/en-us/trustcenter/cloudservices/nationalcloud) **musí** poskytovat `authority` metodě `registerAccountForMAM()`.  Toho lze dosáhnout tím, že v parametrech [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters knihovny ADAL poskytnete `instance_aware=true` a pak vyvoláte metodu `getAuthority()` u výsledku AuthenticationCallback AuthenticationResult.
 
-```
+```java
 mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBehavior.FORCE_PROMPT, "instance_aware=true",
         new AuthenticationCallback<AuthenticationResult>() {
             @Override
@@ -817,7 +817,8 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 > [!NOTE]
 > Nenastavujte autoritu metadat AndroidManifest.xml.
 <br/>
-```
+
+```xml
 <meta-data
     android:name="com.microsoft.intune.mam.aad.Authority"
     android:value="https://AAD authority/" />
@@ -892,7 +893,7 @@ I když se stav zaregistrovaného uživatelského účtu může při přijetí o
 
 ## <a name="protecting-backup-data"></a>Ochrana dat zálohy
 
-Od verze Android Marshmallow (API 23) má Android dvě možnosti, jak může aplikace zálohovat svá data. Obě možnosti se dají použít pro vaši aplikaci a k tomu, aby se zajistila správná implementace ochrany dat Intune, je potřeba udělat různé kroky. Přehled akcí požadovaných pro zajištění správné ochrany dat najdete v tabulce níže.  Další informace o metodách zálohování najdete v [průvodci rozhraním Android API](http://developer.android.com/guide/topics/data/backup.html).
+Od verze Android Marshmallow (API 23) má Android dvě možnosti, jak může aplikace zálohovat svá data. Obě možnosti se dají použít pro vaši aplikaci a k tomu, aby se zajistila správná implementace ochrany dat Intune, je potřeba udělat různé kroky. Přehled akcí požadovaných pro zajištění správné ochrany dat najdete v tabulce níže.  Další informace o metodách zálohování najdete v [průvodci rozhraním Android API](https://developer.android.com/guide/topics/data/backup.html).
 
 ### <a name="auto-backup-for-apps"></a>Automatické zálohování pro aplikace
 
@@ -1413,7 +1414,7 @@ Aplikace, která zaregistruje `WIPE_USER_DATA`, nezíská výhodu sady SDK vých
 V konzole Intune je možné nakonfigurovat páry klíč-hodnota specifické pro aplikace. Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale jednoduše se předávají do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
 
 ### <a name="example"></a>Příklad
-```
+```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
 String identity = "user@contoso.com"
 MAMAppConfig appConfig = configManager.getAppConfig(identity);
@@ -1434,7 +1435,7 @@ LOGGER.info("Found value " + valueToUse);
 
 ### <a name="mamappconfig-reference"></a>Reference MAMAppConfig
 
-```
+```java
 public interface MAMAppConfig {
     /**
      * Conflict resolution types for Boolean values.
@@ -1609,20 +1610,27 @@ Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kte
    > Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal. 
 2. Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
 
-3. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+3. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
+   ```
    > [!NOTE] 
    > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
 
-4. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+4. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
    >
    > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, dojde ke konfliktům.
 
 3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
-```xml
-<meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-```
+
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
 
 > [!NOTE] 
 > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.

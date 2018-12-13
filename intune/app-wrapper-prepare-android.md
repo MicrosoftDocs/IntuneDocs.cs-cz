@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 42b554f025f80546a0a2dd93de92549f2f037b3f
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: e9d3b82fb544b1c73671438440b108573343795a
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112855"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324901"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -45,7 +45,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 -   Aplikaci musí vyvinout vaše společnost nebo je tato aplikace vyvinuta pro ni. Tento nástroj se nedá používat u aplikací stažených z obchodu Google Play.
 
--   Pokud chcete nástroj App Wrapping Tool spustit, musíte mít nainstalovanou nejnovější verzi [prostředí Java Runtime](http://java.com/download/). Potom zkontrolujte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na C:\ProgramData\Oracle\Java\javapath. Další nápovědu najdete v [dokumentaci k Javě](http://java.com/download/help/).
+-   Pokud chcete nástroj App Wrapping Tool spustit, musíte mít nainstalovanou nejnovější verzi [prostředí Java Runtime](https://java.com/download/). Potom zkontrolujte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na C:\ProgramData\Oracle\Java\javapath. Další nápovědu najdete v [dokumentaci k Javě](https://java.com/download/help/).
 
     > [!NOTE]
     > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Proto je vhodné nainstalovat 64bitovou verzi.
@@ -63,7 +63,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 2.  Přijměte licenční smlouvu a dokončete instalaci.
 
-Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
+Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program soubory (x86) \Microsoft Intune Mobile Application Management\Android\App nástroj pro zabalení.
 
 ## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
@@ -71,12 +71,12 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 
 2. Ze složky, do které jste nástroj nainstalovali, naimportujte modul PowerShell nástroje App Wrapping Tool:
 
-   ```
+   ```PowerShell
    Import-Module .\IntuneAppWrappingTool.psm1
    ```
 
 3. Spusťte nástroj příkazem **invoke-AppWrappingTool**, který má následující syntaxi použití:
-   ```
+   ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
    ```
@@ -99,18 +99,18 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 
 - Pokud chcete zobrazit podrobné informace o použití tohoto nástroje, zadejte tento příkaz:
 
-    ```
+    ```PowerShell
     Help Invoke-AppWrappingTool
     ```
 
 **Příklad:**
 
 Naimportujte modul PowerShellu.
-```
+```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
 Spusťte nástroj App Wrapping Tool na nativní aplikaci HelloWorld.apk.
-```
+```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
 
@@ -142,7 +142,7 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
 
 -   Výstupní aplikaci naimportujte do Intune na stejném počítači, na kterém je spuštěný tento nástroj. Další informace o nástroji Java keytool viz [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
--   Pokud se výstupní aplikace a nástroj sice nacházejí v cestě UNC (Universal Naming Convention), ale vy nespouštíte nástroj a vstupní soubory na stejném počítači, použijte k nastavení zabezpečení prostředí podpis [protokolu IPsec (Internet Protocol Security)](http://wikipedia.org/wiki/IPsec) nebo [protokolu SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
+-   Pokud se výstupní aplikace a nástroj sice nacházejí v cestě UNC (Universal Naming Convention), ale vy nespouštíte nástroj a vstupní soubory na stejném počítači, použijte k nastavení zabezpečení prostředí podpis [protokolu IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) nebo [protokolu SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 
 -   Aplikace musí pocházet z důvěryhodného zdroje.
 
@@ -167,11 +167,17 @@ Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcet
 > Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal, který se váže na vaši aplikaci. 
 > * Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
 
-2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
+2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
+   ```
    > [!NOTE] 
    > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
 
-3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
+   ```xml
+   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
+   ```
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 

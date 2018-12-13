@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 12/11/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 175491e53ba9b1fbd41ac8bec8841c600b6916fb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b2ec10ec1174e5e689802d2c4f17a21de8312a15
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184552"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305960"
 ---
 # <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
 
@@ -56,7 +56,7 @@ V Intune také můžete synchronizovat, spravovat a přiřazovat knihy, které j
 
 ### <a name="supports-apple-volume-purchase-program-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem prostřednictvím programu Apple Volume Purchase Program
 
-Nákup více licencí k aplikacím pro iOS je možný prostřednictvím programu [Apple Volume Purchase Program for Business](http://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](http://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
+Nákup více licencí k aplikacím pro iOS je možný prostřednictvím programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
 
 ### <a name="supports-business-to-business-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem v rámci spolupráce mezi firmami
 
@@ -81,7 +81,7 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V podokně **Intune** v části **Nastavení** zvolte **Klientské aplikace** > **Tokeny VPP pro iOS**.
 4.  V podokně s tokeny VPP vyberte **Vytvořit**.
@@ -123,13 +123,13 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 
 | # | Scénář                                | Pozvánka do programu Apple VPP                              | Výzva při instalaci aplikace | Výzva k zadání Apple ID |
 |---|--------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------------------|
-| 1 | Vlastní zařízení – licencovaný uživatel                             | Y                                                                                               | Y                                           | Y                                 |
-| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Y                                                                                               | Y                                           | Y                                 |
-| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Y                                                                                               | N                                           | Y                                 |
-| 4 | Vlastní zařízení – licencované zařízení                           | N                                                                                               | Y                                           | N                                 |
-| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | N                                                                                               | Y                                           | N                                 |
-| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | N                                                                                               | N                                           | N                                 |
-| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | N                                                                                               | N                                           | N                                 |
+| 1 | Vlastní zařízení – licencovaný uživatel                             | Ano                                                                                               | Ano                                           | Ano                                 |
+| 2 | Zařízení společnosti – licencovaný uživatel (zařízení není pod dohledem)     | Ano                                                                                               | Ano                                           | Ano                                 |
+| 3 | Zařízení společnosti – licencovaný uživatel (zařízení pod dohledem)         | Ano                                                                                               | Ne                                           | Ano                                 |
+| 4 | Vlastní zařízení – licencované zařízení                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 5 | Zařízení společnosti – licencované zařízení (zařízení není pod dohledem)                           | Ne                                                                                               | Ano                                           | Ne                                 |
+| 6 | Zařízení společnosti – licencované zařízení (zařízení pod dohledem)                           | Ne                                                                                               | Ne                                           | Ne                                 |
+| 7 | Beznabídkový režim (zařízení pod dohledem) – licencované zařízení | Ne                                                                                               | Ne                                           | Ne                                 |
 | 8 | Beznabídkový režim (zařízení pod dohledem) – licencovaný uživatel   | --- | ---                                          | ---                                |
 
 > [!Note]  

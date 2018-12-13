@@ -15,12 +15,12 @@ ms.reviewer: erikre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb6e5e603b353be5d3c0d3fdaca4f1d8af675ad
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 1e2b97970a7ab440a032eb29f5307e4dbeddc3bc
+ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181186"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53306011"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -37,9 +37,9 @@ MAM chrání data organizace v rámci aplikace. Díky funkci MAM bez registrace 
 
 **Jaké konfigurace zařízení MAM podporuje?**<br></br>
 Intune MAM podporuje dvě konfigurace:
-- **MDM+MAM Intune**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení (MDM) Intune. Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat konzolu Intune na portálu Azure Portal na https://portal.azure.com.
+- **Intune MDM + MAM**: Správci IT můžou spravovat aplikace pomocí MAM a zásad ochrany aplikací jenom na zařízeních, která jsou zaregistrovaná ve správě mobilních zařízení Intune (MDM). Pokud zákazníci chtějí spravovat aplikace pomocí MDM + MAM, měli by používat konzolu Intune na portálu Azure Portal na https://portal.azure.com.
 
-- **MAM bez registrace zařízení:** MAM bez registrace zařízení, neboli MAM-WE, umožňuje správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních, která nejsou zaregistrovaná ve správě mobilních zařízení Intune. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud zákazníci chtějí spravovat aplikace pomocí MAM-WE, měli by používat konzolu Intune na portálu Azure Portal na http://portal.azure.com. Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
+- **MAM bez registrace zařízení**: MAM bez registrace zařízení, neboli MAM-WE, umožňují správcům IT spravovat aplikace pomocí MAM a zásad ochrany aplikací na zařízeních nezaregistrovaných pomocí Intune MDM. To znamená, že aplikace je možné spravovat pomocí Intune na zařízeních, která jsou zaregistrovaná u jiných poskytovatelů EMM. Pokud zákazníci chtějí spravovat aplikace pomocí MAM-WE, měli by používat konzolu Intune na portálu Azure Portal na https://portal.azure.com. Aplikace je také možné spravovat pomocí Intune na zařízeních zaregistrovaných pomocí jiných poskytovatelů správy firemních mobilních zařízení (Enterprise Mobility Management (EMM)) nebo na zařízeních vůbec v MDM nezaregistrovaných.
 
 
 ## <a name="app-protection-policies"></a>Zásady ochrany aplikace
@@ -61,7 +61,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 - Koncový uživatel musí mít ke svému účtu Azure Active Directory přiřazenou licenci pro Microsoft Intune. Informace o tom, jak se přiřazují licence Intune koncovým uživatelům, najdete v článku [Správa licencí Intune](/intune/licenses-assign).
 
-- Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](http://portal.azure.com). Skupiny zabezpečení se aktuálně dají vytvářet na [portálu Office](http://portal.office.com).
+- Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](https://portal.azure.com). Skupiny zabezpečení se aktuálně dají vytvářet na [portálu Office](https://portal.office.com).
 
 - Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
 
@@ -76,7 +76,7 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 
 **Jaké jsou další požadavky na používání aplikací [Word, Excel a PowerPoint](https://products.office.com/business/office)?**
 
-- Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](http://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
+- Koncový uživatel musí mít licenci pro [Office 365 Business nebo Enterprise](https://products.office.com/business/compare-more-office-365-for-business-plans) propojenou se svým účtem Azure Active Directory. Předplatné musí obsahovat aplikace Office na mobilních zařízeních a může obsahovat účet pro ukládání do cloudu přes [OneDrive pro firmy](https://onedrive.live.com/about/business/). Licence na Office 365 se dají přiřadit na [portálu Office](https://portal.office.com) podle těchto [pokynů](https://support.office.com/article/Assign-or-remove-licenses-for-Office-365-for-business-997596b5-4173-4627-b915-36abac6786dc).
 
 - Koncový uživatel musí mít spravované umístění nakonfigurované pomocí podrobné funkce Uložit jako v nastavení zásad ochrany aplikace Zakázat možnost Uložit jako. Pokud je spravovaným umístěním třeba OneDrive, musí být v aplikaci Word, Excel nebo PowerPoint koncového uživatele nakonfigurovaná aplikace [OneDrive](https://onedrive.live.com/about/).
 
@@ -109,9 +109,9 @@ Osobní identifikační číslo (PIN) je heslo, kterým se ověřuje, že s daty
 
 - **Jak často se uživateli zobrazí výzva k zadání kódu PIN Intune?**<br></br> Správce IT může v konzole pro správu Intune definovat nastavení zásad ochrany aplikací Překontrolovat požadavky na přístup za (minuty). Toto nastavení určuje dobu, než se v zařízení zkontrolují požadavky na přístup a znovu se zobrazí obrazovka pro kód PIN aplikace. Četnost, s jakou se budou uživateli zobrazovat výzvy, ale ovlivňují důležité detaily týkající se kódu PIN: 
 
-    - **Kvůli větší použitelnosti se kód PIN sdílí mezi aplikacemi stejného vydavatele:** V iOSu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi **stejného vydavatele**. V Androidu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi.
-    - **Chování „Překontrolovat požadavky na přístup za (minuty)“ po restartu zařízení:** „Časovač kódu PIN“ sleduje počet minut nečinnosti, které určí, kdy znovu zobrazit PIN aplikace Intune. V systému iOS nemá restart zařízení na časovač kódu PIN vliv. Proto restart zařízení nemá vliv na počet minut, během kterých byl uživatel v aplikaci pro iOS se zásadou pro PIN nečinný. V systému Android restartování zařízení časovač kódu PIN vynuluje. Proto aplikace pro Android se zásadou pro PIN budou pravděpodobně **po restartu zařízení** vyžadovat PIN aplikace bez ohledu na hodnotu nastavení „Překontrolovat požadavky na přístup za (minuty)“.  
-    - **Kolísavost časovače přidruženého ke kódu PIN:** Když po zadání kódu PIN pro přístup k nějaké aplikaci (aplikace A) se tato aplikace v zařízení přestane zobrazovat na popředí (hlavní fokus), vynuluje se časovač tohoto kódu PIN. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty).
+    - **Kód PIN sdílí mezi aplikacemi stejného vydavatele použitelnosti:** V Iosu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi **stejného vydavatele aplikace**. V Androidu se kód PIN jedné aplikace sdílí mezi všemi aplikacemi.
+    - **Chování "překontrolovat požadavky na přístup po (minuty)' po restartování zařízení:** Časovač"PIN" sleduje počet minut nečinnosti, které určují, kdy zobrazíte další PIN aplikace Intune. V systému iOS nemá restart zařízení na časovač kódu PIN vliv. Proto restart zařízení nemá vliv na počet minut, během kterých byl uživatel v aplikaci pro iOS se zásadou pro PIN nečinný. V systému Android restartování zařízení časovač kódu PIN vynuluje. Proto aplikace pro Android se zásadou pro PIN budou pravděpodobně **po restartu zařízení** vyžadovat PIN aplikace bez ohledu na hodnotu nastavení „Překontrolovat požadavky na přístup za (minuty)“.  
+    - **Kolísavost časovače přidruženého ke kódu PIN:** Po zadání kódu PIN pro přístup k aplikaci (aplikace A) a aplikace přestane zobrazovat na popředí (hlavní fokus) na zařízení, vynuluje se časovač tohoto kódu PIN. Jakákoli aplikace (aplikace B), která tento kód PIN sdílí, nevyzve uživatele k jeho zadání, protože časovač se vynuloval. Tato výzva se zobrazí znovu, jakmile je opět splněna hodnota nastavení Překontrolovat požadavky na přístup za (minuty).
 
 Na zařízeních s iOSem platí, že i když stejný PIN používají aplikace od různých vydavatelů, zobrazí se výzva znovu po splnění hodnoty nastavení **Znovu zkontrolovat požadavky na přístup po (minuty)** u aplikace, která se nenachází v hlavním fokusu. Představte si například, že má uživatel aplikaci _A_ od vydavatele _X_ a aplikaci _B_ od vydavatele _Y_ a na obou se používá stejný PIN. Uživatel se zaměřuje na aplikaci _A_ (popředí), aplikace _B_ se minimalizuje. Když se splní hodnota **Znovu zkontrolovat požadavky na přístup po (minuty)** a uživatel přepne na aplikaci _B_, bude vyžadován PIN.
 
@@ -192,7 +192,7 @@ Při zpracování různých typů nastavení by měl přednost požadavek na ver
 - Pokud není přiřazená licence Intune, probíhá kontrola každých 24 hodin.
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Implementace plánu Intune](planning-guide-onboarding.md)
 - [Testování a ověřování Intune](planning-guide-test-validation.md)
 - [Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md)
