@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1e72160dd88c14f7160f75ea30b803551f49392a
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: 633ce26a98f9cc7895e9ac4706498bf8c8c773d6
+ms.sourcegitcommit: 121e550bf686f38cba1a02fa37f7039358b4a446
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325020"
+ms.locfileid: "53378228"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
@@ -113,6 +113,9 @@ Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** >
 
 ### <a name="some-bitlocker-settings-support-windows-10-pro-edition---2727036---"></a>Edice Windows 10 Pro podporu některých nastavení Bitlockeru<!-- 2727036 -->
 Budete moct vytvořit konfigurační profil, který nastaví nastavení služby endpoint protection na zařízeních s Windows 10, včetně nástroje BitLocker. Tento postup přidá podporu pro Windows 10 Professional edition pro některá nastavení nástroje BitLocker. Nastavení aktuální edice Windows 10 najdete v tématu [nastavení služby Endpoint protection pro Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+
+### <a name="intune-device-reporting-fields----2748738---"></a>Zařízení v Intune polí pro vytváření sestav <!-- 2748738 -->
 Intune bude poskytovat další zařízení polí, včetně s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole budou dostupná tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
 
 ### <a name="intune-device-reporting-fields----2748738---"></a>Zařízení v Intune polí pro vytváření sestav <!-- 2748738 -->
