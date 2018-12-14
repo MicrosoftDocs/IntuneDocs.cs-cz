@@ -16,12 +16,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 40e189a3bb9e45851011ae1961ef89576dbcb5d0
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.openlocfilehash: 65f3598282bd46d422f8748d2653dbf8e18cf9b7
+ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267034"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53324969"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -261,6 +261,19 @@ V následující části najdete informace o povolených formátech a zástupný
   - `http://www.contoso.com:*`
 
   - `http://www.contoso.com: /*`
+## <a name="opening-links-within-the-intune-managed-browser-vs-microsoft-edge"></a>Otevírání odkazů v prohlížeči Intune Managed Browser nebo v prohlížeči Microsoft Edge 
+
+Intune Managed Browser i Microsoft Edge jsou teď považované za prohlížeče spravované zásadami/chráněné prohlížeče. Dnešní zásady ochrany aplikací vedou k tomu, že se webové odkazy z aplikací spravovaných přes Intune otevírají v určitém prohlížeči v závislosti na scénáři a platformě. 
+
+V Androidu: 
+* Managed Browser – pokud je na zařízení MB i Edge a pokud není konfigurační nastavení aplikací „com.microsoft.intune.useEdge“ nastavené na „true“ pro všechny aplikace spravované přes Intune, které vyžadují prohlížeč spravovaný zásadami.  
+* Microsoft Edge – pokud je na zařízení jenom Microsoft Edge a cílí se na něj zásadami.
+* Managed Browser– pokud je na zařízení jenom Managed Browser a cílí se na něj zásadami. 
+
+V iOSu u aplikací, které mají integrovanou sadu Intune SDK pro iOS verze 9.0.9+: 
+* Managed Browser – pokud je na zařízení MB i Edge a pokud není konfigurační nastavení aplikací „com.microsoft.intune.useEdge“ nastavené na „true“ pro všechny aplikace spravované přes Intune, které vyžadují prohlížeč spravovaný zásadami, **nebo** Microsoft Edge – pokud je nainstalovaný Microsoft Edge a přijal zásady. 
+* Microsoft Edge – pokud je na zařízení jenom Microsoft Edge, cílí se na něj zásadami a přijal je. 
+* Managed Browser – pokud je na zařízení jenom Managed Browser, cílí se na něj zásadami a přijal je.
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem
 
