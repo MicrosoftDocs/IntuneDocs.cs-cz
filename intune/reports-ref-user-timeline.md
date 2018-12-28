@@ -1,12 +1,12 @@
 ---
 title: Časová osa entity uživatele datového skladu
 titlesuffix: Microsoft Intune
-description: Přečtěte si, jak datový sklad Intune představuje uživatele na časové ose.
+description: Zjistěte, jak Microsoft datový sklad Intune představuje uživatele na časové ose.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 10/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 4493ea8442642c09ee7a94b9b73fe0412c015649
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d270aef9bd7102148466006f4057f1c598b02b0e
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189907"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642697"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
 
@@ -35,13 +35,13 @@ Tento scénář bude jasnější, když si projdete životnost entity.
 
 Představte si uživatele **Jan Macek**, který získá licenci na 1.6.2017. V tabulce **Uživatel** bude následující položka: 
  
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Jan Macek | FALSE | 1.6.2017 | 31.12.9999 | TRUE
  
 Jan Macek vrací licenci 25.7.2017. Tabulka **Uživatel** obsahuje následující položky. Změny v existujících záznamech jsou `marked`. 
 
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Jan Macek | FALSE | 1.6.2017 | `07/26/2017` | `FALSE` 
 | Jan Macek | TRUE | 26.7.2017 | 31.12.9999 | TRUE 
@@ -50,7 +50,7 @@ První řádek označuje, že Jan Macek existoval v Intune od 1.6.2017 do 25.7.2
 
 Nyní si představte, že uživatel Jan Macek získá novou licenci dne 31.8.2017. V tabulce Uživatel budou následující položky:
  
-| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Jan Macek | FALSE | 1.6.2017 | 26.7.2017 | FALSE 
 | Jan Macek | TRUE | 26.7.2017 | `08/31/2017` | `FALSE` 

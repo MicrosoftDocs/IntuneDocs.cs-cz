@@ -1,7 +1,7 @@
 ---
 title: Koncový bod rozhraní API datového skladu Intune
 titlesuffix: Microsoft Intune
-description: Referenční téma popisuje strukturu adresy URL rozhraní API datového skladu Intune.
+description: Toto referenční téma popisuje strukturu adresy URL rozhraní API Microsoft Intune Data Warehouse. Jsou uvedeny příklady filtrů.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d819656b59f1f1ceffa1e19645bddc0e8427ad8c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 58a78cee51a411c940d4510cd8498994c14129f0
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180591"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642740"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -81,6 +81,6 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Full                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
 |    `maxhistorydays=7&$filter=Id gt 1`                            |    Částečná, Id gt 1 se neoptimalizuje    |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221 a Id větší než 1.             |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Full                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
-|    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
-|    `$filter=DateKey ne 20180214`                                 |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Žádné                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde. `maxhistorydays` se ignoruje.    |
+|    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
+|    `$filter=DateKey ne 20180214`                                 |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
+|    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde. `maxhistorydays` se ignoruje.    |

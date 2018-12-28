@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 633ce26a98f9cc7895e9ac4706498bf8c8c773d6
-ms.sourcegitcommit: 121e550bf686f38cba1a02fa37f7039358b4a446
+ms.openlocfilehash: 21d89d97355430f071763391d69fe332cf3ef369
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53378228"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642893"
 ---
 # <a name="the-early-edition-for-microsoft-intune---december-2018"></a>Časná edice Microsoft Intune – prosinec 2018
 
@@ -50,7 +50,7 @@ Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace a
 V systému Windows 10 a novější zařízení budete moct vytvořit konfigurační profil sítě VPN, který obsahuje seznam serverů DNS přeložit domén, třeba contoso.com. To bude obsahovat nové nastavení pro překlad adres (**konfigurace zařízení** > **profily** > **vytvořit profil** > zvolit  **Windows 10 a novější** pro platformu > zvolit **VPN** pro typy profilů > **nastavení DNS** >**přidat**): 
 
 - **Automaticky se připojovat**: Když **povoleno**, zařízení se automaticky připojí k síti VPN, když zařízení kontaktuje domény můžete zadat, třeba contoso.com.
-- **Trvalé**: Ve výchozím nastavení všechna pravidla tabulky (IP adres NRPT) název zásady překladu IP adres jsou aktivní, tak dlouho, dokud se zařízení připojí pomocí tohoto profilu sítě VPN. Pokud je toto nastavení **povoleno** u pravidla tabulky NRPT, zůstane aktivní na zařízení, pravidla, i v případě odpojení sítě VPN nebo odebrání profilu sítě VPN. Pravidlo zůstane, dokud bude ručně odstraněn, což lze provést pomocí Powershellu.
+- **Trvalé**: Ve výchozím nastavení všechna pravidla tabulky (IP adres NRPT) název zásady překladu IP adres jsou aktivní, tak dlouho, dokud se zařízení připojí pomocí tohoto profilu sítě VPN. Pokud je toto nastavení **povoleno** u pravidla tabulky NRPT, zůstane aktivní na zařízení, pravidla, dokonce i při odpojení sítě VPN. Pravidlo zůstane, dokud se odebere profil sítě VPN nebo dokud je ručně odebrat pravidlo, které lze provést pomocí Powershellu.
 
 [Nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md) popisuje aktuální seznam nastavení. 
 

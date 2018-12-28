@@ -1,11 +1,11 @@
 ---
 title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu
-description: Registrace zařízení s Windows 10 1511 v Intune
+description: Odesílání diagnostických protokolů pro firemní podpoře pomoct vyřešit problémy s aplikací
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/13/2017
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,29 +14,35 @@ ms.assetid: bd428c14-7d75-42de-9322-b57323a01f06
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: priyar
+ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e1bf702dcc8f4f1163c26d25e42edf0a00825c81
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.openlocfilehash: fa6018d4a226303c6ea097a9ee36a043a040038c
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146515"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626063"
 ---
-# <a name="send-logs-to-your-company-support-from-the-company-portal-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10
+# <a name="send-diagnostic-logs-to-your-company-support-from-company-portal-for-windows"></a>Odesílání diagnostických protokolů firemní podpoře z portálu společnosti pro Windows
 
-Pokud při použití aplikace Portál společnosti v zařízení s Windows 10 dojde k chybě, můžete firemní podpoře pomoct potíže vyřešit tak, že jí pošlete e-mailem informace o této chybě. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+Řešení problémů s aplikací v aplikaci portál společnosti pro Windows 10. Pokud narazíte na problém při použití aplikace na zařízení s Windows 10, můžete poslat e-mail týmu podpory pro nápovědu. Události a chyby, ke kterým dochází v aplikaci portál společnosti se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Když si vyžádat pomoc, aplikace se otevře předem vyplněná e-mailu, s ID diagnostiky, tak, že můžete rychle získat potřebnou pomoc.
 
 > [!Note]       
-> Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje pracovní postup pro získání pomoci s problémem. Usnadní se tak řešení problémů, které jsou předávány Microsoftu.
+> Po kliknutí na **pomoc**, portál společnosti bude automaticky odesílat protokoly na tým podpory společnosti Microsoft. Tento krok je aktivní jeden, který umožňuje snadněji odstraňovat potíže a řešit problémy související se službou.  
 
 1. Otevřete aplikaci **Portál společnosti**.
-2. Vyberte ozubené kolečko **Nastavení** a pak **Poslat protokoly**.
-3. Otevře se okno **Sdílet**. Vyberte **Pošta**. Vytvoří se e-mailová zpráva s připojenými protokoly z Portálu společnosti, kterou můžete poslat firemní podpoře.
+2. Vyberte **nastavení** > **pomoc**.  
 
-   ![Dialog Poslat protokoly ze stránky Nastavení v aplikaci Portál společnosti Jedná se o odkaz Poslat protokoly – Když protokoly pro diagnostiku pošlete firemní podpoře, může jí to pomoct vyřešit potíže s Portálem společnosti.](./media/w10-share-logs-after-1711.png)
+   ![Snímek obrazovky stránky nastavení zvýraznění nastavení a získání nápovědy části a tlačítko.](./media/1811_Get_Help_Windows_Cpapp.png)    
 
-Možná bude také potřeba odeslat [protokoly z aplikace Nastavení](send-logs-to-your-it-admin-settings-windows.md) a poskytnout tak firemní podpoře další pomoc při řešení potíží, které se můžou vyskytnout.
+3. Když **sdílenou složku** obrazovka se zobrazí, vyberte **e-mailu**. **E-mailu** aplikace pro vytvoření e-mailovou zprávu. Zadejte popis problému, který zaznamenal/zaznamenala jste tak, aby měl tým podpory představu, co se má hledat v protokolech.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+   ![Snímek obrazovky pro sdílení, zvýraznění na ikonu aplikace e-mailu.](./media/1811_Mail_Logs_Windows_CPapp.png)  
+
+
+   ![Snímek obrazovky s předem vyplněná e-mailu, který se otevře v e-mailové aplikace.](./media/1811_Get_Help_Email_Windows_CPapp.png)  
+
+Pokud vaše společnost potřebuje další informace o aktivitě aplikací a zařízení, může být také potřeba odeslat [protokoly z aplikace nastavení](send-logs-to-your-it-admin-settings-windows.md).  
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

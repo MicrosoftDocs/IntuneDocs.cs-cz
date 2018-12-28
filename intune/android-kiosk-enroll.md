@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 637fe2d2c764cf78e67e728bfa77567cf12e88ce
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53031989"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626080"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Nastavení Intune registrace zařízení s Androidem enterprise v celoobrazovkovém režimu
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android podporuje prostřednictvím svého řešení „ve vlastnictví firmy, pro použití s jednou aplikací“ zařízení v beznabídkovém režimu. Taková zařízení se používají k jednomu účelu, například jako zobrazovací zařízení na veřejných místech, k tisku vstupenek nebo k evidenci zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
+Android podporuje zařízení beznabídkového režimu stylu s jeho [vyhrazená zařízení](https://developers.google.com/android/work/overview#company-owned-devices-for-dedicated-use) řešení. Taková zařízení se používají k jednomu účelu, například jako zobrazovací zařízení na veřejných místech, k tisku vstupenek nebo k evidenci zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
 
 Intune vám pomůže nasadit do zařízení s Androidem v beznabídkovém režimu aplikace a nastavení. Konkrétní podrobnosti o Androidu Enterprise najdete v tématu [Požadavky na Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
@@ -56,8 +56,8 @@ Kvůli registraci zařízení v beznabídkovém režimu musíte vytvořit regist
 
 1. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Registrace zařízení** > **Registrace Androidu** > **Beznabídkový režim a registrace zařízení úloh**.
 2. Zvolte **Vytvořit** a vyplňte požadovaná pole.
-    - **Název**: Zadejte název, který použijete při přiřazení tohoto profilu k dynamické skupině zařízení.
-    - **Datum vypršení platnosti tokenu**: Datum, kdy vyprší platnost tokenu. Google vynucuje maximálně 90 dnů.
+    - **Název**: Zadejte název, který budete používat při přiřazování profilu dynamická skupina zařízení.
+    - **Datum vypršení platnosti tokenu**: Datum vypršení platnosti tokenu. Google vynucuje maximálně 90 dnů.
 3. Uložte profil pomocí tlačítka **Vytvořit**.
 
 ### <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
@@ -67,7 +67,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 1. Přejděte na [portál Intune](https://portal.azure.com) a zvolte **Skupiny** > **Všechny skupiny** > **Nová skupina**.
 2. V okně **Skupina** vyplňte požadovaná pole následujícím způsobem:
     - **Typ skupiny**: Zabezpečení
-    - **Název skupiny**: Zadejte výstižný název (například Zařízení závodu 1).
+    - **Název skupiny**: Zadejte intuitivní název (třeba objekt pro vytváření 1 zařízení)
     - **Typ členství**: Dynamické zařízení
 3. Zvolte **Přidat dynamický dotaz**.
 4. V okně **Pravidla dynamického členství** vyplňte pole následujícím způsobem:
@@ -82,8 +82,8 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 
 Tokeny a kódy QR můžete nahradit nebo odebrat.
 
-- **Nahrazení tokenu**: Příkazem Nahradit token můžete vygenerovat nový token nebo kód QR, pokud brzy vyprší platnost stávajícího.
-- **Odvolání tokenu**: Platnost tokenu nebo kódu QR můžete nechat okamžitě vypršet. Od tohoto okamžiku nebude token nebo kód QR použitelný. Tuto možnost můžete použít, pokud:
+- **Nahradit token**: Když jedna vypršení platnosti přiblíží pomocí nahradit Token, můžete vygenerovat nový token/QR kód.
+- **Odvolat token**: Okamžitě můžete ukončit platnost tokenu/QR kód. Od tohoto okamžiku nebude token nebo kód QR použitelný. Tuto možnost můžete použít, pokud:
     - Omylem nasdílíte token nebo kód QR s neautorizovanou stranou
     - Dokončíte všechny registrace a token nebo kód QR už nepotřebujete
 

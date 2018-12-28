@@ -1,7 +1,7 @@
 ---
 title: Přidání obchodní aplikace pro Android do Microsoft Intune
 titlesuffix: ''
-description: Přečtěte si o přidávání obchodních aplikací pro Android do Microsoft Intune.
+description: Další informace o tom, jak přidat Android – obchodní (LOB) aplikace do Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f14e4f6be9202582ebc98a300f19d288ac8d36e5
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 2d1bc4762f46062cc80bb584da0a71423140c234
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247148"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642774"
 ---
 # <a name="add-an-android-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Android do Microsoft Intune
 

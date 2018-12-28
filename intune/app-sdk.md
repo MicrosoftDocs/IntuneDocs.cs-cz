@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 890c0eeb104838640ddd1f4daa312c1cab1288c8
-ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
+ms.openlocfilehash: 5180682489e693e49e8142d7912302bc8ea2f7a8
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305943"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429691"
 ---
-# <a name="intune-app-sdk-overview"></a>Přehled sady Intune App SDK
+# <a name="microsoft-intune-app-sdk-overview"></a>Přehled Microsoft Intune App SDK
 Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
 
 Jakmile v aplikaci povolíte zásady ochrany aplikací, můžou správci IT tyto zásady nasazovat, aby chránili firemní data v rámci dané aplikace.
@@ -76,3 +76,7 @@ Ochrana aplikací bez registrace zařízení umožňuje službě Microsoft Intun
 Můžete spravovat zařízení a aplikace s kombinací Citrix XenMobile MDX a Microsoft Intune. Tato kombinace znamená, že při používání technologie mVPN od Citrixu můžete aplikace spravovat pomocí zásad ochrany aplikací Intune. Integrace s Citrixem je dostupná pro sadu Intune App SDK pro iOS a Android a při použití nástroje Intune App Wrapping Tool pro iOS a Android (s příznakem -citrix).
  
 Další informace o Citrix MDX najdete v tématech, které pojednávají o [sadě nástrojů MDX](https://docs.citrix.com/en-us/mdx-toolkit/10/about-mdx-toolkit.html), [nástroji Citrix MDX App Wrapper pro iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) a [nástroji Citrix MDX App Wrapper pro Android](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-android.html).
+
+## <a name="next-steps"></a>Další postup
+
+- Další informace o [zásady ochrany aplikací](app-protection-policy.md).

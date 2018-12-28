@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1d645de0dfa9c215a9670246f43375de5153286
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 72349a609485096b5abd6eaff3c252a510a978a7
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185419"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53738014"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -72,7 +72,7 @@ Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu neb
 |**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte **standardní** vizuálně výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
 |**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
 |**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
-|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: x 400px 400 px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Po nahrání loga se v oblasti náhledu zobrazí logo s barvou motivu. Pokud jste si zvolili zobrazení názvu firmy, zobrazí se název na Portálu společnosti v černé nebo bílé barvě. Barva se zvolí automaticky tak, aby byl zajištěn nejvyšší kontrast s ohledem na barvu motivu. V oblasti náhledu na obrazovce se název vaší firmy nezobrazí. 
 
@@ -81,7 +81,7 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: x 400px 400 px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 
@@ -89,7 +89,7 @@ Zobrazte si firemní logo, které odráží značku vaší společnosti. Po ulo�
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p>*Poznámka:*: může být obrázek zobrazen odlišně pro různé platformy.<p><ul><li>Doporučená šířka obrázku: větší než 1 125 px, ale minimálně 640 px</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p>*Poznámka*: Na obrázku, může se zobrazit odlišně pro různé platformy.<p><ul><li>Doporučená šířka obrázku: Větší než 1125px, ale ne míň než 640 pixelů</li><li>Maximální velikost obrázku: 1.3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 
@@ -119,26 +119,26 @@ Koncoví uživatelé může aktivovat akce navigace, aplikace a zařízení v ap
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Popis | Klávesové zkratky |
+| Oblast | Popis | Klávesová zkratka |
 |:------------------:|:--------------:|:-----------------:|
 | Navigační nabídka | Navigace | Alt+M |
 |  | Domů | Alt+H |
-|  | Všechny aplikace | Alt+A |
+|  | Všechny aplikace | ALT + A |
 |  | Nainstalované aplikace | Alt+I |
 |  | Váš názor | Alt+F |
 |  | Můj profil | Alt+U |
 |  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
-|  | Odebrat | Ctrl+D nebo Delete |
+|  | odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti o zařízení | Přejmenovat | F2 |
-|  | Odebrat | Ctrl+D nebo Delete |
+|  | odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti aplikace | Install | Ctrl+I |
+| Podrobnosti aplikace | Instalace | Ctrl+I |
 
 Koncoví uživatelé budou také moct zobrazit dostupné klávesové zkratky v aplikaci portál společnosti pro Windows.
 
-![Snímek obrazovky k dispozici klávesových zkratek v aplikaci portál společnosti pro Windows](media/company-portal-app/company-portal-app-01.png)
+![Snímek obrazovky k dispozici klávesových zkratek v aplikaci portál společnosti Windows](media/company-portal-app/company-portal-app-01.png)
 
 ## <a name="next-steps"></a>Další postup
 

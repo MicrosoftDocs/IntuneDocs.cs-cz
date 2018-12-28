@@ -1,7 +1,7 @@
 ---
 title: Získání dat z rozhraní API datového skladu pomocí klienta REST
 titlesuffix: Microsoft Intune
-description: Načtěte pomocí rozhraní RESTful API data z datového skladu Intune.
+description: Toto téma popisuje, jak načíst data z Microsoft Intune Data Warehouse pomocí rozhraní RESTful API.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: e5040626a27f50fae4df2ec2472d167269a282e4
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247267"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642876"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 

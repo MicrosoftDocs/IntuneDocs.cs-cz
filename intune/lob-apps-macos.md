@@ -1,7 +1,7 @@
 ---
 title: Přidání obchodních aplikací pro macOS do Microsoft Intune
 titlesuffix: ''
-description: Přečtěte si o přidávání obchodních aplikací pro macOS do Microsoft Intune.
+description: Další informace o tom, jak do Microsoft Intune přidat aplikace – obchodní (LOB) pro macOS.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c6fb5616bc17fadd413bd94af20fafe37e1ea769
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 356f21067f0e0d625882822fd8747661d72005e8
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247080"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642655"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 

@@ -1,7 +1,7 @@
 ---
 title: Přidání obchodní aplikace pro Windows do Microsoft Intune
 titlesuffix: ''
-description: Zjistěte, jak přidat obchodní aplikaci pro Windows do Microsoft Intune.
+description: Zjistěte, jak přidat aplikace – obchodní (LOB) s Windows pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 15e5eb80008e7365479bfd3a63224818d0c19a73
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 551fd188ef22b5bf9516e51604d20d43efca5608
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183192"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642672"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -31,7 +31,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V úloze **Klientské aplikace** vyberte **Spravovat** > **Aplikace**.
@@ -53,19 +53,19 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 
 1. V podokně **Přidat aplikaci** vyberte **Informace o aplikaci**.
 2. V podokně **Informace o aplikaci** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
-    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
+    - **Název**: Zadejte název aplikace, zobrazí se v aplikaci portál společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Vydavatel**: Zadejte název vydavatele aplikace.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano**, pokud aplikaci automaticky aktualizuje její vývojář. Tato možnost platí jen pro mobilní aplikace .msi.
-    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste si vytvořili sami. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Aplikace se zobrazí na význačném místě hlavní stránky portálu společnosti, když uživatelé vyhledávají aplikace.
-    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít při spuštění souboru .msi. Příkladem je **/q**.
-    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace. Zadat můžete například **Personální oddělení**.
-    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
-    - **Logo**: Nahrajte ikonu, která se k aplikaci přidruží. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Ignorovat verzi aplikace**: Nastavte na **Ano** Pokud vývojáři aplikace automaticky aktualizuje aplikaci. Tato možnost platí jen pro mobilní aplikace .msi.
+    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
+    - **Adresa URL informací**: Volitelně zadejte adresu URL webu, který obsahuje informace o aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Soukromá adresa URL**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů pro aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít soubor .msi spuštění. Příkladem je **/q**.
+    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
+    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
+    - **Logo**: Nahrajte ikonu, která je spojená s aplikací. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 3. Až to budete mít, vyberte **OK**.
 
 ## <a name="step-4-finish-up"></a>Krok 4: Dokončení
@@ -73,7 +73,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 1. V podokně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací o aplikaci.
 2. Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
 
-## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizace obchodní aplikace
+## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizace – obchodní aplikace
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 5a28cdcf4d19aec62cd05808f4fb3cda68e083ea
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 3f53ce0b2afd214dec98082c23f7187b4e69317b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032047"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734234"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -84,10 +84,10 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 -  Výrobci zařízení
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
-Příklad zadání: *Výrobce A;Výrobce B* 
+Příklad vstupu: *Výrobce A; Výrobce B* 
 
 >[!NOTE]
-> Toto je několik obvyklých výrobců hlášených ze zařízení používajících Intune, které lze použít pro zadání: Asus; Blackberry; Bq; Gionee; Google; Hmd global; Htc; Huawei; Infinix; Kyocera; Lemobile; Lenovo; Lge; Motorola; Oneplus; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Xiaomi; Zte; Zuk.
+> Toto jsou některé běžné výrobci nahlásila zařízení pomocí Intune a může sloužit jako vstup: ASUS; BlackBerry; Bq; Gionee; Google; HMD globální; HTC; Huawei; Infinix; Tiskárny Kyocera; Lemobile; Lenovo; Lge; Zařízení Oneplus Motorola; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Chytré telefony Xiaomi; Zte; Zuk
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 
@@ -110,7 +110,7 @@ Následující seznam obsahuje nejčastější akce:
 
 V některých případech, jako u nastavení **Minimální verze operačního systému**, můžete nakonfigurovat, aby se provedly všechny použitelné akce na základě různých čísel verzí. 
 
-![Snímek obrazovky akcí přístupu ochrany aplikací v Intune – Minimální verze operačního systému](./media/apps-selective-wipe-access-actions05.png)
+![Snímek obrazovky s app protection přístup akce – verze operačního systému Min](./media/apps-selective-wipe-access-actions05.png)
 
 Jakmile je nastavení plně nakonfigurované, objeví se řádek v zobrazení jen pro čtení a bude možné ho kdykoli upravit. Ve sloupci **Nastavení** bude u tohoto řádku dostupný rozevírací seznam pro výběr. Nastavení, která už jsou nakonfigurovaná a neumožňují více akcí, nebudou v tomto rozevíracím seznamu dostupná k výběru.
 

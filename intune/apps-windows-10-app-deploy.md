@@ -1,7 +1,7 @@
 ---
 title: Nasazení aplikací pro Windows 10 pomocí Intune
 titlesuffix: ''
-description: Získejte další informace o dostupných scénářích týkajících se aplikací pro Windows 10 v Intune.
+description: Další informace o scénářích nasazení aplikace systému Windows 10 pomocí Microsoft Intune k dispozici.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 00e8b0e35514fe583027d15fdcc810295aa9fa9e
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: 0ece7f3d5b7f0d01359a342da5e3dca9b8193a27
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977282"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642604"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 
@@ -45,10 +45,10 @@ Aplikace pro Microsoft Store pro firmy jsou moderními aplikacemi, které může
 ## <a name="installing-apps-on-windows-10-devices"></a>Instalace aplikací na zařízeních s Windows 10
 V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 instalovat jedním ze dvou způsobů:
 
-- **Kontext uživatele**: když se aplikace nasadí v kontextu uživatele, spravovaná aplikace se nainstaluje konkrétnímu uživateli na zařízení, jakmile se k němu přihlásí. Instalace aplikace úspěšné neproběhne, dokud se uživatel k zařízení nepřihlásí. 
+- **Kontext uživatele**: Když je aplikace nasazená v kontextu uživatele, spravované aplikace se nainstaluje pro tohoto uživatele na zařízení, jakmile se uživatel přihlásí k zařízení. Instalace aplikace úspěšné neproběhne, dokud se uživatel k zařízení nepřihlásí. 
     - V kontextu uživatele je možné nasadit moderní obchodní aplikace a aplikace pro Microsoft Store pro firmy (online i offline) s podporou záměru Povinné i K dispozici.
     - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **uživatelském režimu** nebo v **duálním režimu** s podporou záměru **Povinné** i **K dispozici**. 
-- **Kontext zařízení**: když se aplikace nasadí v kontextu zařízení, spravovaná aplikace se pomocí Intune nainstaluje do zařízení přímo.
+- **Kontext zařízení**: Po nasazení aplikace v kontextu zařízení spravované aplikace se nainstaluje přímo do zařízení pomocí Intune.
     - Jenom moderní aplikace podnikové aplikace a offline licencované Microsoft Store pro obchodní aplikace je možné nasadit v kontextu zařízení a bude podporovat jenom požadované záměr.
     - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **režimu počítače** nebo v **duálním režimu** jenom s podporou záměru **Povinné**.
 
@@ -57,11 +57,11 @@ V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 ins
 
 Když se aplikace nasadí v kontextu zařízení, instalace proběhne úspěšně pouze v případě, že zařízení kontext zařízení podporuje. Kromě toho nasazení v kontextu zařízení obsahuje následující podmínky:
 - Pokud se aplikace nasadí v kontextu zařízení a cílí na uživatele, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:
-    - Stav: Neúspěšné.
-    - Chyba: Instalace v kontextu zařízení nemůže cílit na uživatele.
+    - Stav: Se nezdařilo.
+    - Chyba: Uživatel nemůžou být cílem zařízení kontext instalace.
 - Pokud se aplikace nasadí v kontextu zařízení a cílí na zařízení, které kontext zařízení nepodporuje, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:
-    - Stav: Neúspěšné.
-    - Chyba: Tato platforma nepodporuje instalaci v kontextu zařízení. 
+    - Stav: Se nezdařilo.
+    - Chyba: Tato platforma nepodporuje instalaci kontextu zařízení. 
 
 > [!Note]
 > Jakmile se přiřazení aplikace uloží pod konkrétním nasazením, není možné u daného přiřazení kontext změnit (s výjimkou moderních aplikací). V případě moderních aplikací můžete kontext změnit z kontextu uživatele na kontext zařízení. 

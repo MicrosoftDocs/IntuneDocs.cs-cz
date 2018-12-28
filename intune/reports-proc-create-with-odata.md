@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: fc6b5aac1d75fc67c469f6ecd24e331d1cc35d30
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247233"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429708"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -106,7 +106,7 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky.
 
 
-1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a pak vyberte **ikonu Průřez** (![Mapa stromové struktury s daty](media/reports-create-slicer.png)) v části **Vizualizace**.
+1. Přidat filtr, vyberte plátno pro sestavy a pak vyberte **ikony průřez** (![mapa stromové struktury s datový model a podporovaných vztahy](media/reports-create-slicer.png)) v části **vizualizace**.
 2. Najděte tabulku **ownerTypes** a přetáhněte datové pole **ownerTypeName** do části **Filtry** na panelu **Vizualizace**.  
 
    V tabulce zařízení je datové pole s názvem **OwnerTypeKey**, které obsahuje kód, jestli je zařízení ve vlastnictví společnosti, nebo osobní. Protože v tomto filtru chcete zobrazit popisné názvy, najděte tabulku **ownerTypes** a přetáhněte **ownerTypeName**. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.

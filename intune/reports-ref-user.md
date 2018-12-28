@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 38a4383fe9fbeec4abc8ce37ad46ce55b2849090
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 52201b68e946ec59b7c70ea5ff735c26728e27ce
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182580"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429725"
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
@@ -38,8 +38,8 @@ Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují
 | UserKey |Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč |123 |
 | UserId |Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |E-mailová adresa uživatele |John@constoso.com |
-| UPN | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
-| DisplayName |Zobrazované jméno uživatele |Honza |
+| HLAVNÍ NÁZEV UŽIVATELE | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
+| displayName |Zobrazované jméno uživatele |Honza |
 | IntuneLicensed |Určuje, jestli tento uživatel má licenci na službu Intune. |True nebo False |
 | IsDeleted | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. |True nebo False |
 | StartDateInclusiveUTC |Pokud IsDeleted = FALSE, použije se DateTime ve standardu UTC, kdy byla uživateli přiřazena licence a začal existovat v Intune. Pokud IsDeleted = TRUE, použije se DateTime ve standardu UTC, kdy uživateli vypršela platnost licencí a byl odebrán z Intune. |23.11.2016 12:00:00 |

@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 55d624f63c8563cc3dde561b98cd0894d5a9b65d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 521f33b0c4cfa0f1f4ba534acc2f3fec9a53f151
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189159"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429623"
 ---
 # <a name="reference-for-date-entity"></a>Referenční informace o entitě Date
 
 Kategorie **Datum** obsahuje entitu **Date**, která se v datovém modelu používá k definování odkazů na kalendářní data.
 
-**Datum**
+## <a name="date"></a>Datum
 
 Entita **Date** zastupuje kalendářní data, na která odkazují různé entity datového skladu.
 
@@ -53,3 +53,6 @@ Entita **Date** zastupuje kalendářní data, na která odkazují různé entity
 | CalendarQuarter |                    Kalendářní čtvrtletí                    |          3           |
 |  CalendarYear   |                     Kalendářní rok                      |         2016         |
 
+## <a name="next-steps"></a>Další postup
+
+- Další informace o [datový sklad Intune](reports-nav-create-intune-reports.md).

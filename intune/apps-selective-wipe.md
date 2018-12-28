@@ -1,7 +1,7 @@
 ---
 title: Jak z aplikací vymazat jenom firemní data
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak selektivně vymazat data z aplikací v Microsoft Intune.
+description: Zjistěte, jak selektivně vymazat jenom firemní data z aplikací spravovaných pomocí Intune v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 19d173cabda71b4e6a24008eb94f9665c54ba924
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 57e22c7b999f2f672c67dc623a20bf643e739376
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184348"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642570"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -39,7 +39,7 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
 ## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
 
-1.  Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
 2.  Zvolte **Všechny služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se podokno Intune. Zvolte **Klientské aplikace**.
 
@@ -84,7 +84,7 @@ Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. R
 
 3.  Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 [Zásady ochrany aplikací](app-protection-policy.md)
 
 [Co je správa aplikací?](app-management.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b4a45ac5a73d199ec883e3dda95a97a8f3c09d9a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fee473cd6cb6fa7e8a092ebd70192f2b7f8a8b84
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181509"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737929"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -43,14 +43,14 @@ Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k z
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V nabídce **Intune** zvolte **Klientské aplikace**.
 4. V podokně **Klientské aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
 5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
 6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
 
-    ![Přiřazení aplikací Intune](./media/apps-inc-exl-01.png)
+    ![Při přiřazování aplikací zahrnují přiřazení aplikací](./media/apps-inc-exl-01.png)
 7. Pokud chcete přidat skupiny uživatelů, kteří jsou přiřazení k aplikaci, vyberte **Přidat skupinu**. 
 8. V podokně **Přidat skupinu** vyberte **Typ přiřazení** z dostupných typů přiřazení.
 9. Jako typ přiřazení vyberte **K dispozici s registrací i bez ní**.

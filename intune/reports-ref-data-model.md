@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 228b662739d161a4f4d6d145746fc68e7c3b87e0
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ce4689aaecd40d7d44f0064b1e951823fa0bb2c2
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188105"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737997"
 ---
-# <a name="data-warehouse-data-model"></a>Datový model datového skladu
+# <a name="microsoft-intune-data-warehouse-data-model"></a>Datový model datového skladu Microsoft Intune
 
 Datový sklad Intune denně vzorkuje data, aby mohl poskytovat historický přehled průběžně se měnícího prostředí mobilních zařízení. Zobrazení se skládá z časově souvisejících entit.
 
-## <a name="entities-entity-sets"></a>Entity: sady entit
+## <a name="entities-entity-sets"></a>Entity: Sady entit
 
 Sklad zveřejňuje data v následujících oblastech vyšší úrovně:
 

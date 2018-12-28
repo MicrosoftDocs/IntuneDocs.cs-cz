@@ -15,12 +15,12 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 897eca8eab6a3b5d2f8f12d69aa5da3ae1988f13
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: 73caf328bd25cb31bacea6b964c1db7601f3aec6
+ms.sourcegitcommit: baacdb2c5ee69d0055acad2d64f2bf1a3fc5e02d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324884"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53570804"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -57,10 +57,10 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 |**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne |  Ano |   Ne | [Další informace](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  |[Další informace](device-enrollment-manager-enroll.md)|
 |**Automatická registrace** | Ne |Ano |Ne | [Další informace](./windows-enroll.md#enable-windows-10-automatic-enrollment)|
-|**AutoPilot** |Ano |Ano |Ne | [Další informace o](enrollment-autopilot.md)]
+|**AutoPilot** |Ano |Ano |Ne | [Další informace](enrollment-autopilot.md)
 |**Hromadná registrace** |Ne |Ne |Ne | [Další informace](./windows-bulk-enroll.md) |
-|**Společná správa** |Ne |Ano |Ne | [Další informace o](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)]
-|**Objekty zásad skupiny** |Ne |Ano |Ne | [Další informace o](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)]
+|**Společná správa** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview)
+|**Objekty zásad skupiny** |Ne |Ano |Ne | [Další informace](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
 
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fd3a38b331507ddc50a7b5e4ce8794e71d0e5dc5
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
+ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977350"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53531324"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -80,7 +80,7 @@ Pokud chcete používat zásady dodržování předpisů zařízeními, musíte 
   - Android
   - iOS
   - macOS (preview)
-  - Windows 8.1
+  - Windows 8.1
   - Windows Phone 8.1
   - Windows 10
 
@@ -98,11 +98,11 @@ Téma věnované [procesu registrace Azure AD](https://docs.microsoft.com/azure/
 
 Pokud má nějaké zařízení několik konfiguračních profilů a má pro dva nebo více z nich různé stavy dodržování předpisů, přiřadí se mu jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
 
-|Stav  |Závažnost  |
+|Stav  |Severity  |
 |---------|---------|
-|Čeká     |1|
-|Úspěšné     |2|
-|Neúspěch     |3|
+|Čekající na vyřízení     |1|
+|Úspěch     |2|
+|Selhalo     |3|
 |Chyba     |4|
 
 Pokud má zařízení více konfiguračních profilů, přiřadí se mu nejvyšší úroveň závažnosti ze všech profilů.
@@ -133,11 +133,11 @@ Další informace o monitorování zásad dodržování předpisů zařízením 
 
 Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dvě nebo více z nich má různé stavy dodržování předpisů, přiřadí se mu jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
 
-|Stav  |Závažnost  |
+|Stav  |Severity  |
 |---------|---------|
 |Neznámé     |1|
 |NotApplicable     |2|
-|Vyhovuje|3|
+|Odpovídající|3|
 |InGracePeriod|4|
 |NonCompliant|5|
 |Chyba|6|
@@ -157,23 +157,23 @@ Zásady dodržování předpisů zařízeními se dají používat také bez pod
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
 Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Zařízení s Windows 10 verze 1803 a novějšími je doporučeno nasadit do skupin zařízení, *pokud* primární uživatel zařízení nezaregistroval. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
 
-Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Patří sem:
+Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Mezi ně patří:
 
-- **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
+- **Označit zařízení žádné zásady dodržování předpisů, který je přiřazen jako**: Tato vlastnost má dvě hodnoty:
 
   - **Vyhovující předpisům**: Funkce zabezpečení je vypnuta.
   - **Nevyhovující předpisům** (výchozí): Funkce zabezpečení je zapnuta.
 
   Pokud zařízení nemá přiřazeny žádné zásady dodržování předpisů, je považováno za nevyhovující předpisům. Ve výchozím nastavení jsou zařízení označena jako **Vyhovující předpisům**. Pokud používáte podmíněný přístup, doporučujeme změnit nastavení na **Nevyhovující předpisům**. Pokud koncový uživatel nevyhovuje předpisům, protože nejsou přiřazeny žádné zásady, na Portálu společnosti je uvedeno `No compliance policies have been assigned`.
 
-- **Vylepšené zjišťování jailbreaků**: Když toto nastavení povolíte, budou se zařízení s iOSem vracet se změnami pomocí Intune častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Intune data o poloze uživatele neukládá.
+- **Vylepšené zjišťování jailbreaků**: Když je povoleno, toto nastavení způsobí, že zařízení s Iosem k vrácení se změnami pomocí Intune častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Intune data o poloze uživatele neukládá.
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
   - povolila zjišťování polohy na úrovni operačního systému,
   - povolila Portálu společnosti používat zjišťování polohy,
-  - vyhodnocovat a hlásit do Intune stav jailbreaku minimálně každých 72 hodin. V opačném případě je zařízení označeno jako nedodržující předpisy. Vyhodnocení se aktivuje po otevření aplikace Portál společnosti nebo po fyzickém přemístění zařízení o nejméně 500 metrů.
+  - vyhodnocovat a hlásit do Intune stav jailbreaku minimálně každých 72 hodin. V opačném případě je zařízení označeno jako nedodržující předpisy. Vyhodnocení se aktivuje po otevření aplikace Portál společnosti nebo po fyzickém přemístění zařízení o nejméně 500 metrů. Pokud zařízení čárka nepohybuje 500 měřiče během 72 hodin, uživatel musí otevřete aplikaci portál společnosti pro vyhodnocení přerušení rozšířené jailbreak.
 
-- **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, během kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní.
+- **Doba platnosti stavu dodržování předpisů (dny)**: Zadejte časové období, kterého zařízení nahlásí stav všech přijatých zásad dodržování předpisů. Zařízení, která během tohoto období nevrátí stav, se považují za nedodržující předpisy. Výchozí hodnota je 30 dní.
 
 Všechna zařízení mají **integrované zásady dodržování předpisů zařízením** (Azure Portal > Dodržování předpisů zařízením > Dodržování zásad). Tyto integrované zásady můžete použít k monitorování nastavení.
 
@@ -184,7 +184,7 @@ Sestavy dodržování předpisů představují skvělý způsob, jak můžete ko
 ### <a name="actions-for-noncompliance"></a>Akce při nedodržení předpisů
 Můžete nakonfigurovat časově řazenou posloupnost akcí, které se použijí na zařízeních, která nevyhovují kritériím zásad dodržování předpisů. Tyto akce při nedodržení předpisů mohou být automatické, jak je popsáno v článku [Automatické akce při nedodržení předpisů](actions-for-noncompliance.md).
 
-## <a name="azure-classic-portal-vs-azure-portal"></a>Portál Azure Classic vs. Portál Azure Portal
+## <a name="azure-classic-portal-vs-azure-portal"></a>Portál Azure Classic vs. portál Azure
 
 Hlavním rozdíl při použití zásad dodržování předpisů zařízením na portálu Azure Portal:
 

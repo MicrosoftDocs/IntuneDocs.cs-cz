@@ -1,12 +1,12 @@
 ---
 title: Ruční přidání aplikace Portál společnosti pro Windows 10
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak ručně přidat aplikaci Portál společnosti pro Windows 10.
+description: Zjistěte, jak vaši pracovníci můžete ručně přidat aplikaci portál společnosti pro Windows 10 na svůj počítač z Microsoft Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/14/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7808d9c189f429e15cdf916d18412ba951c7e696
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190264"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642587"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune
 
@@ -51,7 +51,7 @@ Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Mic
 
 7. Vyberte **Stáhnout** a stáhněte všechny balíčky v části Požadované platformy.  
     Tuto akci je nutné provést pro architektury x86, x64 a ARM – celkem 12 balíčků.
-8. Než nahrajete aplikaci Portál společnosti do Intune, vytvořte složku (například C:\Portál společnosti) s takto strukturovanými balíčky:
+8. Než nahrajete aplikaci portál společnosti do Intune, vytvořte složku (například: Portál C:\Company) s balíčky strukturovanými následovně:
    - Umístěte balíček Portálu společnosti do složky C:\Portál společnosti. V tomto umístění vytvořte také podsložku *Závislosti*.  
 
      ![Složka Závislosti uložená se souborem APPXBUN](./media/Win10CP-Dependencies-save.png)

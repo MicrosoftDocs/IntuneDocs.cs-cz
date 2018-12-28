@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: d95bc665d271eac55682fa8f0aeee2bf267c48ef
-ms.sourcegitcommit: 0f19bc5c76b7c0835bfd180459f2bbd128eec1c2
+ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267085"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553686"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -54,7 +54,7 @@ Microsoft Intune podporuje zabezpečení TLS (Transport Layer) 1.2 + poskytnout 
 #### <a name="the-intune-app-sdk-will-support-256-bit-encryption-keys----1832174---"></a>Intune App SDK bude podporovat 256bitových šifrovacích klíčů <!-- 1832174 -->
 Intune App SDK pro Android teď používá 256bitových šifrovacích klíčů, když je povoleno šifrování pomocí zásad ochrany aplikací. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK.
 
-### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Microsoft automaticky aktualizovanou verzi 4.50 požadované pro zařízení s macOS <!-- 3503442 -->
+### <a name="microsoft-auto-update-version-450-required-for-macos-devices----3503442---"></a>Microsoft automaticky aktualizovanou verzi 4.5.0 požadované pro zařízení s macOS <!-- 3503442 -->
 Chcete-li pokračovat, příjem aktualizací pro aplikaci portál společnosti a další aplikace Office, musí zařízení s macOS spravovaná pomocí Intune upgradovat na Microsoft automatickou aktualizaci 4.5.0. Uživatelé můžou mít už tuto verzi pro jejich aplikace Office.
 
 ### <a name="intune-requires-macos-1012-or-later----2827778---"></a>Intune vyžaduje macOS 10.12 nebo novější <!-- 2827778 -->

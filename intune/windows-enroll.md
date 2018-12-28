@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9562eb2c8fae49628ac042f28f172fb9f8fd5106
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112540"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626032"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -55,7 +55,7 @@ Intune podporuje vícenásobnou správu pro zařízení s Windows 10 Creators Up
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Zjednodušení registrace zařízení s Windows bez služby Azure AD Premium
 Pokud chcete uživatelům registraci zjednodušit, vytvořte alias serveru DNS (typu záznamu CNAME), který přesměruje žádosti o registraci na servery Intune. V opačném případě musí uživatelé, kteří se pokoušejí připojit k Intune, zadat během registrace název serveru Intune.
 
-**Krok 1: Vytvořte záznamy CNAME** (volitelné)<br>
+**Krok 1: Vytvořit záznam CNAME** (volitelné)<br>
 Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
 
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
@@ -69,7 +69,7 @@ Pokud podnik používá více než jednu příponu UPN, musíte vytvořit jeden 
 
 - name@contoso.com
 - name@us.contoso.com
-- name@eu.constoso.com\
+- name@eu.contoso.com
 
 Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
@@ -83,7 +83,7 @@ Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
-**Krok 2: Ověřte záznamy CNAME** (volitelné)<br>
+**Krok 2: Ověření CNAME** (volitelné)<br>
 1. V [Intune na webu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Ověření CNAME**.
 2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 

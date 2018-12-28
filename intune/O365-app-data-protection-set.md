@@ -1,7 +1,7 @@
 ---
 title: Správa dat aplikací Office 365 v Microsoft Intune
 titlesuffix: ''
-description: Přečtěte si o správě dat aplikací Office 365 v Microsoft Intune.
+description: Další informace o správě dat a ochrany aplikací Office 365 v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a3eed03deb3f619f75502e8a9d1d66fefc38a081
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 05af4625c06975e4eb7b2566ce676c4610500bdf
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180067"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642469"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Přečtěte si, jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365 v Microsoft Intune.
 
@@ -95,8 +95,8 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 | **Popis**|Vytvořené průvodcem Správa aplikací Office 365| |
 | |  | |
 | **Název nastavení** |**Hodnota zásad iOSu** | **Hodnota zásad Androidu** |
-|Zakázat zálohování dat v iTunes a na iCloudu| Ne | Není k dispozici |
-|Zakázat zálohování dat v zařízeních s Androidem |Není k dispozici | Ne|
+|Zakázat zálohování dat v iTunes a na iCloudu| Ne | neuvedeno |
+|Zakázat zálohování dat v zařízeních s Androidem |neuvedeno | Ne|
 |Povolit aplikaci přenos dat do ostatních aplikací | Všechny aplikace | Všechny aplikace|
 |Povolit aplikaci, aby přijímala data z jiných aplikací| Všechny aplikace | Všechny aplikace|
 |Zakázat možnost Uložit jako | Ne | Ne|
@@ -106,16 +106,16 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 |Zakázat synchronizaci kontaktů | Ne| Ne|
 |Zakázat tisk | Ne | Ne|
 |Vyžadovat pro přístup kód PIN | Ne | Ano|
-|Počet pokusů o zadání před obnovení kódu PIN | Není k dispozici |5|
-|Povolit jednoduchý PIN | Není k dispozici |Ano|
-|Délka PIN kódu | Není k dispozici | 4|
-|Povolit otisk prstu místo PIN kódu | Není k dispozici | Ano |
+|Počet pokusů o zadání před obnovení kódu PIN | neuvedeno |5|
+|Povolit jednoduchý PIN | neuvedeno |Ano|
+|Délka PIN kódu | neuvedeno | 4|
+|Povolit otisk prstu místo PIN kódu | neuvedeno | Ano |
 |Vyžadovat podnikové přihlašovací údaje pro přístup | Ne | Ne|
 |Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem | Ne | Ne|
 |Znovu zkontrolovat požadavky na přístup po (minuty) – časový limit | 30 | 30|
 |Znovu zkontrolovat požadavky na přístup po (minuty) – období odkladu pro offline režim | 720 |720|
 |Doba v offline režimu (ve dnech) před vymazáním dat | 90 | 90|
-|Blokovat snímání obrazovky (jenom zařízení s Androidem) | Není k dispozici | Ne |
+|Blokovat snímání obrazovky (jenom zařízení s Androidem) | neuvedeno | Ne |
 
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Proč se zásady PIN kódu aplikace konfigurují jenom pro zařízení s Androidem?
 Šifrování v iOSu a Androidu funguje rozdílně.

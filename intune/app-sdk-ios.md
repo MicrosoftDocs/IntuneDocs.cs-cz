@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: 084294ca6b715f05957e973635a05abd8c0762a2
-ms.sourcegitcommit: 121e550bf686f38cba1a02fa37f7039358b4a446
+ms.openlocfilehash: d484c227b33cc364d98ec4843894f447ae2ea8ab
+ms.sourcegitcommit: 02f75d241b3cbb125cb235d16d447f8855b1806d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53378262"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657827"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -543,11 +543,11 @@ SUBQUERY (
 
 Staré uživatelské rozhraní:
 
-![Staré uživatelské rozhraní pro sdílení](./media/sharing-UI-old.png)
+![Sdílení dat - iOS staré uživatelské rozhraní sdílení](./media/sharing-UI-old.png)
 
 Nové uživatelské rozhraní:
 
-![Nové uživatelské rozhraní pro sdílení](./media/sharing-UI-new.png)
+![Sdílení dat - iOS nové uživatelské rozhraní sdílení](./media/sharing-UI-new.png)
 
 ## <a name="enable-targeted-configuration-appmam-app-config-for-your-ios-applications"></a>Povolení cílené konfigurace (konfigurace aplikací APP/MAM) aplikací pro iOS
 
@@ -602,7 +602,7 @@ Bez ohledu na to, jestli je uživatel spravován, zodpovídá za vhodné nastave
 
 Každé vlákno má v každém okamžiku platnou identitu pro úlohy uživatelského rozhraní a pro úlohy se soubory. Jde o identitu, která kontroluje, jaké zásady (pokud vůbec) by se měly použít. Pokud identita chybí („žádná identita“) nebo uživatel není spravován, nepoužijí se žádné zásady. Níže uvedené diagramy znázorňují, jak se určují platné identity.
 
-  ![Intune App SDK iOS: propojené architektury a knihovny](./media/ios-thread-identities.png)
+  ![Intune App SDK iOS: Proces určení identity](./media/ios-thread-identities.png)
 
 ### <a name="thread-queues"></a>Fronty vláken
 

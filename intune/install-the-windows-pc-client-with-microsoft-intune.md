@@ -14,19 +14,19 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 9059ddb164dfa57ed76b57141aad89dbb716a09f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 66402d9e2bc66ec96de88f64dd61c41e1ddb34e5
+ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179068"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53553635"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](windows-enroll.md).
+> V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](windows-enroll.md). Další informace najdete v části [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md) 
 
 
 Počítače se systémem Windows se dají zaregistrovat přes klientský software Intune. Klientský software Intune je možné nainstalovat následujícími způsoby:
@@ -124,8 +124,8 @@ Pokud byla uživatelům přiřazena licence Intune a Intune byla nastavena autor
 
 - Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
 
-  -  **Zaregistrovat počítač jako mobilní zařízení**: Poté, co uživatelé zvolí tlačítko **Zjistěte, jak můžete zaregistrovat svoje zařízení s Windows**, přejdou na pokyny týkající se způsobu registrace počítače jako mobilního zařízení. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
-  - **Zaregistrovat počítač pomocí klientského softwaru Intune**: Bude potřeba říct uživatelům, že mají vybrat odkaz **Kliknutím sem ho můžete stáhnout** a přejít tak k pokynům pro instalaci klientského softwaru.
+  -  **Zaregistrovat počítač jako mobilní zařízení**: Uživatelé vybrat **zjistěte, jak zapsat** tlačítko a jsou přesměrováni na pokyny, jak na svůj počítač jako mobilní zařízení zaregistrovat. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
+  - **Zaregistrovat počítač pomocí klientského softwaru Intune**: Bude potřeba říct uživatelům k výběru **kliknutím sem ho můžete stáhnout** odkaz, který provede klientský software znova.
 
 V následující tabulce najdete souhrnný přehled možností.
 
@@ -260,4 +260,4 @@ Proces zrušení registrace neodebere složku OnlineManagement. Po dokončení o
     "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Další postup
-[Správa zařízení v Microsoft Intune](device-management.md)
+[Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

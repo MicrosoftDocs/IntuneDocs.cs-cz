@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 13054bcaf885173e768fefb585cb71f266e9ca9e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 02bf1672db70bce57e527a0992f6a979b2e099e7
+ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184654"
+ms.lasthandoff: 12/15/2018
+ms.locfileid: "53429572"
 ---
-# <a name="use-the-intune-data-warehouse"></a>Použití datového skladu Intune
+# <a name="use-the-microsoft-intune-data-warehouse"></a>Pomocí Microsoft Intune Data Warehouse
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -31,6 +31,8 @@ Datový sklad Intune můžete používat k vytváření sestav poskytujících p
 -   Trend uživatelů registrujících se v Intune, který vám umožní optimalizovat nákupy licencí
 -   Rozpis verzí aplikací a operačních systémů, abyste mohli kontrolovat stav mobilních zařízení
 -   Trendy registrace a dodržování předpisů zařízeními, abyste mohli plynule zavést aktualizace zásad
+
+## <a name="data-warehouse-benefits"></a>Výhody datového skladu
 
 Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mobilního prostředí než web Azure Portal. Datový sklad Intune vám umožňuje přistupovat k:
 
@@ -45,7 +47,7 @@ Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mo
 > Nastavením parametru dotazu  `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.<br><br>
 > Nejnovější funkce datového skladu můžete vyzkoušet pomocí beta verze. Pokud chcete použít beta verzi, musí adresa URL obsahovat parametr dotazu  `api-version=beta`. Beta verze nabízí funkce dřív, než budou všeobecně dostupné jako podporované služby. S tím, jak Intune přidává nové funkce, se může měnit chování a kontrakty dat beta verze. Jakýkoli vlastní kód nebo nástroje pro vytváření sestav závislé na beta verzi můžou přestat v probíhajících aktualizacích fungovat.
 
-**Další kroky**
+## <a name="next-steps"></a>Další postup
 
 - Získejte odkaz a použijte Power BI k získání přehledu. Pokyny najdete v tématu [Připojení k datovému skladu Intune pomocí Power BI](reports-proc-get-a-link-powerbi.md).
 - S odkazem vytvořte vlastní sestavu pomocí Power BI. Pokyny najdete v článku [Vytvoření sestavy z datového kanálu OData pomocí Power BI](reports-proc-create-with-odata.md).

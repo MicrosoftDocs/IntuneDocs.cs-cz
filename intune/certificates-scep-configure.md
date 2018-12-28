@@ -14,12 +14,12 @@ ms.reviewer: kmyrup
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 49e80c364c02902a185b85c7aed09a292ad9c6c8
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
+ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325105"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53597371"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -382,7 +382,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         - **Sériové číslo**
         - **Vlastní**: Když vyberete tuto možnost **vlastní** se navíc zobrazí textové pole. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-            - **CN = {{UserName}}**: Hlavní název uživatele, jako například janedoe@contoso.com
+            - **CN = {{UserName}}**: Hlavní uživatelské jméno uživatele, jako například janedoe@contoso.com
             - **CN = {{AAD_Device_ID}}**: ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
             - **CN = {{SERIALNUMBER}}**: Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
             - **CN = {{IMEINumber}}**: Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu

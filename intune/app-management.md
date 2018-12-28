@@ -1,12 +1,12 @@
 ---
 title: Co je správa aplikací v Microsoft Intune?
 titlesuffix: ''
-description: Naučte se základy správy aplikací pomocí Microsoft Intune.
+description: Další informace o funkcích správy, klient aplikace podle platformy pro Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2018
+ms.date: 12/19/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 366fab51d88587233f945fe7d880e3b6881bef45
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f156accf5b51e7fff51db738c70b0b0840d7e365
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179180"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642825"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -64,7 +64,7 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 
 Většinu toho, co souvisí s aplikacemi, najdete v úloze **Klientské aplikace**, ke které se dostanete takto:
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.  
     Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Microsoft Intune** vyberte **Klientské aplikace**.
@@ -74,51 +74,51 @@ Většinu toho, co souvisí s aplikacemi, najdete v úloze **Klientské aplikace
 Další čtyři části popisují možnosti dostupné v podokně **Klientské aplikace**.
 
 ### <a name="manage"></a>Správa
-- **Aplikace**: Tuto možnost vyberte pro přidávání, zobrazení, přiřazování a monitorování aplikací používaných vašimi pracovníky. Více informací najdete v následujících tématech:
+- **Aplikace**: Tuto možnost chcete přidat, zobrazit, přiřadit a monitorování aplikací používaných vašimi pracovníky. Další informace naleznete v tématu:
     - [Přidání aplikací](apps-add.md)
     - [Přiřazení aplikací](apps-deploy.md)
     - [Monitorování aplikací](apps-monitor.md)
-- **Zásady konfigurace aplikací**: Tuto možnost vyberte k poskytování nastavení, která se můžou požadovat, když uživatel spustí aplikaci. Více informací najdete v následujících tématech:
+- **Zásady Konfigurace aplikací**: Tuto možnost vyberte k poskytování nastavení, které mohou být vyžadovány, když uživatel spustí nějakou aplikaci. Další informace naleznete v tématu:
     - [Zásady konfigurace aplikací pro Intune](app-configuration-policies-overview.md)
         - [Zásady konfigurace aplikací pro iOS](app-configuration-policies-use-ios.md)
         - [Zásady konfigurace aplikací pro Android](app-configuration-policies-use-android.md)
-- **Zásady ochrany aplikací**: Tuto možnost vyberte, pokud chcete aplikaci přidružit nastavení pomáhající chránit firemní data, která tato aplikace používá. Můžete například omezit možnosti komunikace aplikace s jinými aplikacemi nebo vyžadovat, aby uživatel při přístupu k firemní aplikaci zadal PIN kód. Více informací najdete v následujících tématech:
+- **Zásady ochrany aplikací**: Tuto možnost použijte k aplikaci přidružit nastavení a pomáhají chránit firemní data, které používá. Můžete například omezit možnosti komunikace aplikace s jinými aplikacemi nebo vyžadovat, aby uživatel při přístupu k firemní aplikaci zadal PIN kód. Další informace naleznete v tématu:
     - [Zásady ochrany aplikací](app-protection-policies.md)
-- **Selektivní vymazání aplikace**: Tuto možnost vyberte, pokud chcete odebrat pouze firemní data z vybraného zařízení uživatele. Více informací najdete v následujících tématech:
+- **Selektivní vymazání aplikace**: Vyberte tuto možnost, chcete-li odebrat jenom firemní data z vybraného uživatele zařízení. Další informace naleznete v tématu:
     - [Selektivní vymazání aplikace](apps-selective-wipe.md)
-- **Zřizovací profily aplikací pro iOS**: Aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Více informací najdete v následujících tématech:
+- **Zřizovací profily aplikací pro iOS**: Aplikace pro iOS obsahují zřizovací profil a kód, který je podepsaný certifikátem. Když tomuto certifikátu vyprší platnost, není možné aplikaci spustit. Intune poskytuje nástroje pro proaktivní přiřazení nových zásad zřizovacího profilu k zařízením s aplikacemi, kterým brzy vyprší platnost. Další informace naleznete v tématu:
     - [Zřizovací profily aplikací pro iOS](app-provisioning-profile-ios.md)
 
 Další informace o této části najdete v tématu [Správa aplikací](app-management.md).
 
 ### <a name="monitor"></a>Monitorování
-- **Licence aplikací**: Tady můžete zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech s aplikacemi. Více informací najdete v následujících tématech:
+- **Licence aplikací**: Zobrazit, přiřadit a monitorovat aplikace hromadně zakoupené v obchodech. Další informace naleznete v tématu:
     - [Aplikace programu hromadných nákupů pro iOS](vpp-apps-ios.md)
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
-- **Zjištěné aplikace:** Můžete zobrazit aplikace přiřazené z Intune nebo nainstalované v zařízení. Další informace najdete v tématu [Zobrazení podrobností o zařízení v Intune](device-inventory.md).
-- **Stav instalace aplikace**: Tady můžete zobrazit stav vytvořeného přiřazení aplikace. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
-- **Stav ochrany aplikací**: Tady můžete zobrazit stav zásad ochrany aplikací pro vámi vybraného uživatele.
-- **Protokoly auditu**: Tady můžete zobrazit aktivity všech správců IT související s aplikacemi v Intune.
+- **Zjištěné aplikace**: Zobrazení aplikací, které byly přiřazeny přes Intune nebo nainstalované v zařízení. Další informace najdete v tématu [Zobrazení podrobností o zařízení v Intune](device-inventory.md).
+- **Stav instalace aplikace**: Zobrazte stav přiřazení aplikace, kterou jste vytvořili. Další informace najdete v článku [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md#device-and-user-status-graphs).
+- **Stav ochrany aplikace**: Zobrazte stav zásad ochrany aplikací pro vybraného uživatele.
+- **Protokoly auditu**: Zobrazte aktivitu související s aplikacemi v Intune všech správců IT.
 
 Další informace o této části najdete v tématu [Monitorování aplikací](apps-monitor.md).
 
 ### <a name="set-up"></a>Nastavení
-- **Tokeny VPP pro iOS**: Tady můžete použít a zobrazit licence programu VPP (Volume Purchase Program) pro iOS. Více informací najdete v následujících tématech:
+- **tokeny VPP pro iOS**: Přiřazuje a zobrazuje licence Volume Purchase Program (VPP) pro iOS. Další informace naleznete v tématu:
     - [hromadně zakoupených aplikací pro iOS](vpp-apps-ios.md)
-- **Certifikát Windows Enterprise**: Tady můžete použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci obchodních aplikací do spravovaných zařízení s Windows.
-- **Certifikát Windows Symantec**: Tady můžete použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx pro XAP a WP8.x na zařízení s Windows 10 Mobile.
-- **Microsoft Store pro firmy**: Tady můžete nastavit integraci do Microsoft Storu pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. Více informací najdete v následujících tématech:
+- **Certifikát Windows enterprise**: Použít nebo zobrazit stav certifikátu pro podepisování kódu, který se používá k distribuci-obchodních aplikací do spravovaných zařízení s Windows.
+- **Certifikát Windows Symantec**: Použít nebo zobrazit stav certifikátu Symantec pro podepisování kódu, který je nutný k distribuci souborů appx XAP a WP8.x na zařízení Windows 10 Mobile.
+- **Microsoft Store pro firmy**: Nastavení integrace do Microsoft Store pro firmy. Potom můžete zakoupené aplikace synchronizovat s Intune, přiřazovat je a sledovat využití licencí. Další informace naleznete v tématu:
     - [Aplikace hromadně zakoupené v Microsoft Storu pro firmy](windows-store-for-business.md)
-- **Klíče pro instalaci bokem ve Windows**: Přidejte klíč pro instalaci bokem ve Windows, který lze použít k instalaci aplikace přímo do zařízení (místo publikování aplikace a jejího stahování z Windows Storu). Více informací najdete v následujících tématech:
+- **Klíče pro instalaci bokem ve Windows**: Přidáte klíč pro zkušební načtení Windows, který slouží k instalaci aplikace přímo do zařízení místo publikování a stažení aplikace z Windows storu. Další informace naleznete v tématu:
     - [Instalace aplikace pro Windows bokem](app-sideload-windows.md)
-- **Značky Portálu společnosti**: Portál společnosti můžete přizpůsobit o značku své firmy. Více informací najdete v následujících tématech:
+- **Značky portálu společnosti**: Přizpůsobení portálu společnosti o značku své firmy. Další informace naleznete v tématu:
     - [Konfigurace Portálu společnosti](company-portal-app.md)
-- **Kategorie aplikací**: Tady můžete přidat, připnout a odstranit názvy kategorií aplikací.
-- **Pracovní profil Androidu**: Tady můžete schválit a synchronizovat aplikace schválené pro váš podnik. Více informací najdete v následujících tématech:
+- **Kategorie aplikací**: Přidat, připnout a odstranit názvy kategorií aplikací.
+- **Pracovní profil androidu**: Schválit a synchronizovat aplikace schválené pro vaši firmu. Další informace naleznete v tématu:
     - [Aplikace v pracovním profilu Androidu](apps-add-android-for-work.md)
 
 ### <a name="help-and-support"></a>Nápověda a podpora
-- **Nápověda a podpora**: Tady můžete řešit potíže, požádat o podporu nebo zobrazit stav Intune. Více informací najdete v následujících tématech:
+- **Nápověda a podpora**: Řešení potíží, požádat o podporu nebo zobrazit stav Intune. Další informace naleznete v tématu:
     - [Odstraňování potíží](help-desk-operators.md)
 
 ## <a name="next-steps"></a>Další postup

@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 0cea1b958849d6c2422461e85eba57577a65e884
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 2d47a8f61c85b390ae53311154f27d2d85860840
+ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112591"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626034"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -30,6 +30,8 @@ ms.locfileid: "53112591"
 Před nastavením Microsoft Intune zkontrolujte podporované operační systémy a prohlížeče.
 
 Nápovědu k instalaci Intune na zařízení, najdete v článku [práce pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma sítě Intune](network-bandwidth-use.md).
+
+Další informace o podpoře poskytovatele konfigurace služby, najdete [referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 

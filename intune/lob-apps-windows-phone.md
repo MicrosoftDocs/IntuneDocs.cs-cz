@@ -1,7 +1,7 @@
 ---
 title: Přidání obchodní aplikace pro Windows Phone do Microsoft Intune
 titlesuffix: ''
-description: Podívejte se, jak do Intune přidávat obchodní aplikace pro Windows Phone.
+description: Zjistěte, jak přidat aplikace – obchodní (LOB) s Windows Phone pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d0a20ad2934163826c017fc0ae8b9ade6e80fcdc
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 9fa39f212c9979a9986bba5537f0c9a2b5e01c8c
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247199"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642638"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows Phone do Microsoft Intune
 

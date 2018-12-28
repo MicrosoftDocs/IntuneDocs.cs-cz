@@ -1,12 +1,12 @@
 ---
 title: Přiřazení aplikací do skupin v Microsoft Intune
 titlesuffix: ''
-description: Zjistěte, jak přiřadit aplikace Intune do skupin uživatelů nebo zařízení.
+description: Zjistěte, jak přiřadit aplikaci v Intune ke skupinám uživatelů nebo zařízení pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b6e9901bfea3ec129246494d6d8077a440c8a675
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324918"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734268"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -29,20 +29,22 @@ ms.locfileid: "53324918"
 
 Po [přidání aplikace](apps-add.md) do Microsoft Intune ji můžete přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune. 
 
+> [!NOTE]
+> Záměr nasazení k dispozici není podporována pro skupiny zařízení, jsou podporovány pouze skupiny uživatelů.
+
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
-||||
-|-|-|-|-|
-|&nbsp;|**Zařízení zaregistrovaná v Intune**|**Zařízení nezaregistrovaná v Intune**|
-|Přiřadit uživatelům|Ano|Ano|
-|Přiřadit zařízením|Ano|Ne|
-|Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací)|Ano|Ano|
-|Přiřadit aplikace jako K dispozici|Ano|Ano|
-|Přiřadit aplikace jako Povinné|Ano|Ne|
-|Odinstalovat aplikace|Ano|Ne|
-|Dostávat aktualizace aplikací z Intune|Ano|Ne|
-|Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti|Ano|Ne|
-|Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti|Ano|Ano|
+|   | Zařízení zaregistrovaná v Intune | Zařízení nezaregistrovaná v Intune |
+|-------------------------------------------------------------------------------------------|------------------------------|----------------------------------|
+| Přiřadit uživatelům | Ano | Ano |
+| Přiřadit zařízením | Ano | Ne |
+| Přiřadit zabalené aplikace nebo aplikace obsahující sadu Intune SDK (kvůli zásadám ochrany aplikací) | Ano | Ano |
+| Přiřadit aplikace jako K dispozici | Ano | Ano |
+| Přiřadit aplikace jako Povinné | Ano | Ne |
+| Odinstalovat aplikace | Ano | Ne |
+| Dostávat aktualizace aplikací z Intune | Ano | Ne |
+| Koncoví uživatelé instalují dostupné aplikace z aplikace Portál společnosti | Ano | Ne |
+| Koncoví uživatelé instalují dostupné aplikace z webového Portálu společnosti | Ano | Ano |
 
 > [!NOTE]
 > V současné době můžete přiřadit aplikace pro iOS a Android (firemní i zakoupené v obchodu s aplikacemi) zařízením, která nejsou zaregistrovaná v Intune.
@@ -83,9 +85,8 @@ Aplikace je teď přiřazená do skupin, které jste vybrali. Další informace 
 
 Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry. Když k tomu dojde, pomůžou vám výsledný záměr pochopit informace v následující tabulce:
 
-||||
-|-|-|-|
-|**Záměr skupiny 1**|**Záměr skupiny 2**|**Výsledný záměr**|
+| Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
+|-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |Uživatel: Povinné|Uživatel: K dispozici|Povinné a K dispozici|
 |Uživatel: Povinné|Uživatel: Není k dispozici|Požadováno|
 |Uživatel: Povinné|Uživatel: Odinstalace|Požadováno|

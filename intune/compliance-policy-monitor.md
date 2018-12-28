@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 12/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e26de8691e78e4b35e8618c48f38c7972af233f8
-ms.sourcegitcommit: 88f760abcea7348a0c6d00b533b54a6ff68d3985
+ms.openlocfilehash: fd401875e1a98690d9673243b28b48347e4c6183
+ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977299"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53642808"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -56,26 +56,31 @@ Když se do těchto sestav ponoříte, najdete také specifické zásady dodržo
 
 ### <a name="device-compliance-status-report"></a>Stav dodržování předpisů pro zařízení
 
-Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy jsou uložené ve dvou různých databázích – Intune a Azure Active Directory. 
+Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy dodržování předpisů zařízením jsou uloženy ve dvou různých databázích: Intune a Azure Active Directory. 
 
 > [!IMPORTANT]
 > Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
 
 Podrobnosti o různých stavech zásad dodržování předpisů zařízením jsou následující:
 
-- **Vyhovující předpisům**: Zařízení úspěšně použilo jedno nebo více nastavení zásad dodržování předpisů zařízením.
+- **Kompatibilní**: Zařízení úspěšně použilo jedno nebo více nastavení zásad dodržování předpisů zařízení.
 
-- **V období odkladu**: Na zařízení je zacíleno jedno nebo více nastavení zásad dodržování předpisů zařízením. Koncový uživatel ale zásady ještě nepoužil. To znamená, že zařízení předpisy nedodržuje, ale je v období odkladu definovaném správcem.
+- **V období odkladu:** Zařízení je cílem jednoho nebo více nastavení zásad dodržování předpisů zařízením. Koncový uživatel ale zásady ještě nepoužil. To znamená, že zařízení předpisy nedodržuje, ale je v období odkladu definovaném správcem.
 
   - Přečtěte si další informace o [akcích pro zařízení nedodržující předpisy](actions-for-noncompliance.md).
 
-- **Nevyhodnoceno**: Počáteční stav všech nově zaregistrovaných zařízení. Označuje také zařízení, ke kterým nejsou zásady dodržování předpisů přiřazeny nebo které nemají aktivační událost pro provedení kontroly dodržování předpisů.
+- **Nevyhodnoceno**: Počáteční stav pro nově registrovaná zařízení. Další možné příčiny tohoto stavu stavu:
 
-- **Nedodržující předpisy**: Zařízení se nepodařilo použít jedno nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
+  - Zařízení, které nejsou přiřazené zásady dodržování předpisů a nemáte aktivační události ke kontrole dodržování předpisů
+  - Zařízení, která nebyla vrácena se změnami od poslední aktualizace zásad dodržování předpisů
+  - Zařízení není přidružen k specifické pro uživatele
+  - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení
 
-- **Zařízení není synchronizované**: Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů zařízením z některého z následujících důvodů:
+- **Nedodržující předpisy:** Zařízení se nepodařilo použít jednu nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
 
-  - **Neznámý**: Zařízení je offline nebo se mu s Intune nebo Azure AD nepodařilo komunikovat z jiných důvodů.
+- **Zařízení není synchronizované:** Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů zařízení, protože jeden z následujících důvodů:
+
+  - **Neznámý**: Zařízení je offline nebo se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.
 
   - **Chyba**: Zařízení se nepodařilo komunikovat s Intune a Azure AD a obdrželo chybovou zprávu s odůvodněním.
 
@@ -155,11 +160,11 @@ Tato funkce je zahrnutá v sestavách stavu zařízení:
 1. Vyberte **Dodržování předpisů zařízením** > **Zásady**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
-    - Úspěch: Zásada je použita.
-    - Chyba: Zásadu se nepodařilo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
-    - Konflikt: Pro stejné zařízení jsou použita dvě nastavení a Intune nemůže vyřešit konflikt. Správce by měl provést kontrolu.
-    - Čeká na vyřízení: Zařízení se dosud nepřipojilo k Intune, aby získalo zásadu. 
-    - Není k dispozici: Zařízení nemůže zásadu získat. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
+    - Úspěšné: Zásady platí
+    - Chyba: Použití zásad se nezdařilo. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
+    - Konflikt: Dvě nastavení se použijí pro stejné zařízení a Intune nemůže zařadit konflikt. Správce by měl provést kontrolu.
+    - Čekající na vyřízení: Intune přijímat zásady ještě nějakou dobu nepřipojilo k zařízení. 
+    - Není k dispozici: Zařízení nejde získat zásady. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
 
 3. Pokud chcete zobrazit podrobnosti o zařízeních používajících tyto zásady, vyberte některý stav. Vyberte například **Úspěšné**. V dalším okně se zobrazí podrobnosti o konkrétním zařízení včetně jeho názvu a stavu nasazení.
 

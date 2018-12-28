@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2c15c8915c1fefabf301525b3ef03f74038d31dc
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: 4e37675186ef21d219627ec3ec1973e6e9944d1d
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53325038"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737963"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -45,7 +45,7 @@ Následující postup vám pomůže získat požadovaný certifikát a podepsat 
 4.  **Ověření importovaných certifikátů**<br>
     Chcete-li ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
 
-    ![Hledání certifikátu Symantec](./media/wit.gif)
+    ![Certifikát výsledky jsou uvedeny v dialogovém okně Hledat certifikáty](./media/wit.gif)
 
 5. **Export podpisového certifikátu**<br>
     Jakmile ověříte, že jsou certifikáty dostupné, můžete exportovat soubor .pfx a podepsat Portál společnosti. Vyberte certifikát Symantec se **zamýšleným účelem** „podepisování kódu”. Klikněte pravým tlačítkem na certifikát pro podpis kódu a vyberte **Exportovat**.
@@ -155,7 +155,7 @@ Aplikaci Portál společnosti pro Windows 10 můžete ručně nasadit přímo z 
 1. Přihlaste se ke svému účtu v [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
 2. Jakmile aplikaci získáte, vyberte ji na stránce **Inventář**.  
 3. Vyberte **Windows 10 – všechna zařízení** jako **platformu**, potom vyberte příslušnou **architekturu** a stahujte. Pro tuto aplikaci není nutné mít soubor s licencí aplikace.
-![Windows 10 – všechna zařízení a architektura x86 – obrázek s podrobnostmi balíčku ke stažení](./media/Win10CP-all-devices.png)
+![Obrázek podrobnosti balíčku Windows 10 X86 ke stažení](./media/Win10CP-all-devices.png)
 4. Stáhněte všechny balíčky v části Požadované platformy. To je nutné provést pro architektury x86, x64 a ARM – celkem 9 balíčků, jak je vidět na následujícím obrázku.
 
 ![Obrázek souborů závislostí ke stažení ](./media/Win10CP-dependent-files.png)
@@ -164,7 +164,7 @@ Aplikaci Portál společnosti pro Windows 10 můžete ručně nasadit přímo z 
    ![Obrázek složky Závislosti uložené se souborem APPXBUN](./media/Win10CP-Dependencies-save.png)
    2. Umístěte devět balíčků závislostí do složky Závislosti.  
    Pokud nebudou závislosti umístěné v tomto formátu, Intune je při nahrávání balíčku nerozpozná a nenahraje a nahrávání se nezdaří s následující chybou.  
-   ![Závislost aplikace systému Windows pro tento instalační soubor softwaru nebyla nalezena ve složce aplikací. Můžete sice pokračovat, vytvořit a nasadit tuto aplikaci, nebude však možné ji spustit, dokud nebude poskytnuta chybějící závislost aplikace systému Windows.](./media/Win10CP-error-message.png)
+   ![Chybová zpráva - musí být zadaná závislost aplikace Windows.](./media/Win10CP-error-message.png)
 6. Vraťte se do Intune a nahrajte aplikaci Portál společnosti jako novou aplikaci. Nasaďte ji jako požadovanou aplikaci pro vybranou skupinu cílových uživatelů.  
 
 Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  

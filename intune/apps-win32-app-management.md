@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 12/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 456e3922b74bb8c8ebbbca4718b36b3fb0dcdc29
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324986"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734285"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -76,13 +76,13 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 3.  V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
 4.  V podokně **Přidat aplikaci** vyberte **Aplikace pro Windows (Win32) – Preview** ze seznamu v rozevírací nabídce.
 
-    ![Snímek obrazovky Přidat aplikaci – rozevírací nabídka typů pro přidání](./media/apps-win32-app-01.png)
+    ![Snímek obrazovky okna Přidat aplikaci – přidat typ rozevírací seznam pole](./media/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Nahrát soubor balíčku aplikace
 
 1.  V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace** a vyberte soubor. Zobrazí se podokno Soubor balíčku aplikace.
 
-    ![Snímek obrazovky Soubor balíčku aplikace](./media/apps-win32-app-02.png)
+    ![Snímek obrazovky okna soubor balíčku aplikace](./media/apps-win32-app-02.png)
 
 2.  V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou *.intunewin*.
 3.  Až to budete mít, vyberte **OK**.
@@ -234,16 +234,16 @@ Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win3
 
 Koncovému uživateli se zobrazí informační zprávy Windows pro instalace aplikací povinné a k dispozici. Na následujícím obrázku je znázorněna ukázková informační zpráva, že instalace aplikace se nedokončí, dokud se zařízení nerestartuje. 
 
-![Snímek obrazovky s ukázkovými informačními zprávami Windows pro instalaci aplikace](./media/apps-win32-app-08.png)    
+![Snímek obrazovky Windows informační zprávy pro instalaci aplikace](./media/apps-win32-app-08.png)    
 
 Na následujícím obrázku upozorní koncového uživatele, že jsou prováděny změny aplikace do zařízení.
 
-![Snímek obrazovky s příkladem upozornění koncového uživatele, které jsou prováděny změny aplikace do zařízení](./media/apps-win32-app-09.png)    
+![Snímek obrazovky upozornění uživatele, které se provádějí změny aplikace](./media/apps-win32-app-09.png)    
 
 ## <a name="troubleshoot-win32-app-issues"></a>Řešení potíží s aplikacemi Win32
 Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. Nástroj *CMTrace.exe* si můžete stáhnout z umístění uvedeném v článku o [klientských nástrojích SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
 
-![Snímek obrazovky s protokoly agenta](./media/apps-win32-app-10.png)    
+![Snímek obrazovky se Agent přihlásí v klientském počítači.](./media/apps-win32-app-10.png)    
 
 ### <a name="troubleshooting-areas-to-consider"></a>Oblasti řešení potíží, na které je třeba se zaměřit
 - Zkontroluje cílení, abyste měli jistotu, že je agent nainstalovaný na zařízení – aplikace Win32 zacílená na skupinu nebo powershellový skript zacílený na skupinu vytvoří zásady instalace agenta pro skupinu zabezpečení.

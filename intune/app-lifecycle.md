@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/04/2018
+ms.date: 12/20/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: apps; get-started
-ms.openlocfilehash: 048b8472be00c544611fe2ea8763b16019cebc0b
-ms.sourcegitcommit: 580eb4920d18ce09c9431d9d0dfee9d195459c0e
+ms.openlocfilehash: e122f2c0c62fbde04a328b1423416be82dcfa1f9
+ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52887045"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53734217"
 ---
 # <a name="overview-of-the-app-lifecycle-in-microsoft-intune"></a>Přehled životního cyklu aplikace v Microsoft Intune
 
@@ -28,9 +28,9 @@ ms.locfileid: "52887045"
 
 Životní cyklus aplikace Microsoft Intune začíná, když je aplikace přidána, a postupuje dalšími fázemi, dokud ji neodeberete. Když těmto fázím porozumíte, budete mít podrobnosti, které potřebujete, abyste mohli začít se správou aplikací v Intune.
 
-![Životní cyklus aplikace](./media/app-lifecycle.png "Životní cyklus aplikace Intune")
+![Životní cyklus aplikace – přidání, nasazení, konfiguraci, ochranu a vyřazení z provozu. ](./media/app-lifecycle.png "životní cyklus aplikace Intune")
 
-## <a name="add"></a>Přidání
+## <a name="add"></a>Přidat
 
 Prvním krokem při nasazení aplikací je přidání aplikací, které chcete spravovat a přiřazovat, do Intune. Můžete pracovat s mnoha různými typy aplikací, ale základní postupy jsou stejné. S Intune můžete přidávat různé typy aplikací, včetně aplikací napsaných interně (z obchodních), aplikace ze storu, aplikace, které jsou vestavěny a aplikace na webu. Další informace o těchto typech aplikací najdete v článku [Přidání aplikací do Microsoft Intune](apps-add.md). 
 

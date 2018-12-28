@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/09/2018
+ms.date: 12/20/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 827766d76a66ea7d69ebbd3ba77efe785689e7e2
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2257253d023c97d14418b3566c0c493a3cd8f615
+ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189176"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53737912"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -50,7 +50,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
 2. Vytvořte si účet. Použijte k tomu název společnosti, za který přidáte **.onmicrosoft.com**. 
 
-    ![Snímek obrazovky s webovou stránkou registrace účtu zkušební verze Microsoft Intune](./media/account-sign-up-site-user-id.png)
+    ![Snímek obrazovky nového přihlašovacích údajů procesu účtu zkušební verze Microsoft Intune](./media/account-sign-up-site-user-id.png)
 
     Pokud má vaše organizace vlastní doménu, kterou chcete použít bez **.onmicrosoft.com**, můžete doménu změnit na portálu pro správu Office 365 podle popisu v další části tohoto článku.
 
@@ -58,7 +58,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
     ![Obrázek s informacemi o účtu](./media/intune-end-of-sign-up-process.png) 
 
-## <a name="sign-in-to-the-azure-portal"></a>Přihlášení na webu Azure Portal
+## <a name="sign-in-to-the-azure-portal"></a>Přihlášení k webu Azure Portal
 
 1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com**. 
 2. K přihlášení použijte přihlašovací údaje, které jste získali v předchozích krocích.
@@ -106,13 +106,13 @@ Další informace o autoritě MDM najdete v článku [Nastavení autority pro sp
 
 3. Zadejte název vlastní domény. Pak vyberte **Další**.
 
-   ![Snímek obrazovky z Centra pro správu Office 365 s vybranou možností Nastavení > Domény a přidaným novým názvem domény](./media/domain-custom-add.png)
+   ![Snímek obrazovky z centra pro správu Office 365 – přidání domény](./media/domain-custom-add.png)
 
 4. Potvrďte, že jste vlastník domény zadané v předchozím kroku. 
     
     Pokud vyberete, že chcete **poslat kód e-mailem**, odešle se e-mail kontaktu, který je zaregistrovaný u domény. Jakmile dostanete e-mail, zkopírujte kód a zadejte ho do pole označeného **Sem napište ověřovací kód**. Pokud se ověřovací kód shoduje, přidá se doména do tenanta. Zobrazený e-mail vám nemusí být povědomý. Někteří registrátoři totiž skrývají skutečnou e-mailovou adresu zadanou při registraci domény.
 
-   ![Snímek obrazovky s Centrem pro správu Office 365 při ověřování přidaného názvu domény](./media/domain-custom-verify.png)
+   ![Snímek obrazovky z centra pro správu Office 365 – ověření domény](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > Podrobné informace o ověření záznamu TXT najdete v článku [Vytvoření záznamů DNS pro Office 365 u libovolného poskytovatele hostingu DNS](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
@@ -130,4 +130,4 @@ V tomto rychlém startu jste vytvořili bezplatné předplatné, abyste si mohli
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvoření uživatele a přiřazení licence tomuto uživateli](quickstart-create-user.md)
+> [Rychlý start: Vytvořte uživatele a přiřadit licenci](quickstart-create-user.md)
