@@ -1,6 +1,5 @@
 ---
-title: Integrace služby Zimperium MTD s Microsoft Intune
-titleSuffix: ''
+title: Integrace řešení Zimperium MTD s Microsoft Intune | Microsoft Intune
 description: Přečtěte si, jak integrovat řešení Zimperium Mobile Threat Defense s Microsoft Intune, abyste mohli regulovat přístup mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3f2ffb3f99ce0dc925c52f733b25292cdbddae3e
-ms.sourcegitcommit: d3b1e3fffd3e0229292768c7ef634be71e4736ae
+ms.openlocfilehash: b12cec7a01d809eb5a6b6523a73dd224c10c972e
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52860992"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817190"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -73,7 +72,7 @@ Další informace o souhlas a aplikace Azure Active Directory najdete v tématu 
 
 4.  Zvolte **Add MDM** (Přidat MDM) a pak vyberte **Microsoft Intune** ze seznamu **MDM provider** (Zprostředkovatel MDM).
 
-5.  Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností:  **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
+5.  Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností: **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
 
     > [!IMPORTANT]  
     > Je nutné přidat Zimperium zConsole, zIPS pro iOS a Android k dokončení procesu integrace s Intune.

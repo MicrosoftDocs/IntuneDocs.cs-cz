@@ -1,12 +1,11 @@
 ---
-title: Nastavení místního Exchange Connectoru pro Microsoft Intune
-titleSuffix: ''
+title: Nastavení Microsoft Intune – místní Exchange connector | Microsoft Intune
 description: Pomocí místního konektor Exchange můžete spravovat přístup zařízení k poštovním schránkám Exchange na základě registrace do Intune a Exchange Active Sync (EAS).
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/08/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0dc87c20b0da6fcfcc4e3ab304c61c5b264aaf38
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 28886382da00f5c07129f4e69e0bbadf97634420
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112557"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817258"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -71,7 +70,7 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude mí
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [Azure Portal](http://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního serveru Exchange a který má licenci k používání Exchange Serveru.
+1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního serveru Exchange a který má licenci k používání Exchange Serveru.
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 

@@ -13,12 +13,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
-ms.openlocfilehash: d7b88b73c260a6a84fdb835069de23c52775929a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 65b480b60b195ab012743f9a4006fb69aa929dbb
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179478"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816799"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integrace služby Pradeo s Intune
 
@@ -67,7 +67,7 @@ Postup autorizace aplikace Pradeo:
 
 4.  V okně **EMM (Enterprise mobility management) – Intune** vyberte v části **Step 1** (Krok 1) tlačítko **Pradeo Connector** (konektor Pradeo). 
 
-    ![Okno Pradeo EMM Intune](./media/pradeo_setup.png)
+    ![Snímek obrazovky okna Pradeo EMM Intune](./media/pradeo_setup.png)
 
 5. Do okna pro připojení Microsoft Intune zadejte přihlašovací údaje Intune.
 

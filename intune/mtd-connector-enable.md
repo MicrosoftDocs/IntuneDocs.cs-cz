@@ -1,6 +1,5 @@
 ---
-title: Povolení konektoru Mobile Threat Defense v Microsoft Intune
-titleSuffix: ''
+title: Povolení konektoru Mobile Threat Defense v Microsoft Intune | Microsoft Intune
 description: Povolte konektor mezi vaším partnerem Mobile Threat Defense (MTD) a Microsoft Intune.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2937814ae5ceb6c7d8b3def4e954c8eec9337126
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cfd6f222533728c754f55a76b78698eac5e4031b
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180472"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816680"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -52,17 +51,17 @@ Při nastavení Mobile Threat Defense (MTD) jste v konzole partnera MTD nakonfig
 
 Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínání konektoru MTD potřebujete povolit. Tady jsou další podrobnosti:
 
-- **Připojit zařízení s Androidem 4.1+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem Android verze 4.1 a vyšší hlásit bezpečnostní riziko zpět Intune.
-    - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
+- **Připojení s Androidem 4.1 + zařízení k [název partnera MTD] for Work MTD**: Když povolíte tuto možnost, můžete mít s Androidem 4.1 + zařízení hlásit bezpečnostní riziko zpět Intune.
+    - **Označit jako nedodržující předpisy, pokud neobdrží žádná data**: Pokud Intune údaje o zařízení na této platformě nedostane od partnera MTD, můžete zařízení Považujte za nedodržující předpisy.
 <br></br>
-- **Připojit zařízení s iOSem 8.0+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem iOS verze 8.0 a vyšší hlásit bezpečnostní riziko zpět Intune.
-    - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
+- **Připojit zařízení s iOS 8.0 + k [název partnera MTD] for Work MTD**: Když povolíte tuto možnost, můžete mít zařízení se systémem iOS 8.0 + hlásit bezpečnostní riziko zpět Intune.
+    - **Označit jako nedodržující předpisy, pokud neobdrží žádná data**: Pokud Intune údaje o zařízení na této platformě nedostane od partnera MTD, můžete zařízení Považujte za nedodržující předpisy.
 <br></br>
-- **Povolit synchronizaci aplikací pro zařízení iOS**: Povolí tomuto partnerovi Ochrany před mobilními hrozbami žádat o metadata aplikací pro iOS z Intune, která se použijí pro účely analýzy hrozeb.
+- **Povolit synchronizaci aplikací pro zařízení se systémem iOS**: Umožňuje tato partnerem Mobile Threat Defense žádat o metadata aplikací pro iOS v Intune používat pro účely analýzy hrozeb.
 
-- **Blokovat nepodporované verze operačního systému**: Blokovat zařízení, pokud je na něm spuštěn operační systém nižší verze, než je minimálně podporovaná.
+- **Blokovat nepodporované verze operačního systému**: Blokovat, pokud zařízení používá menší než minimální podporovaná verze operačního systému.
 
-- **Počet dnů, než partner přestane reagovat**: Počet dnů nečinnosti, než bude Intune kvůli ztrátě připojení považovat partnera za nereagujícího. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.
+- **Počet dní, než partner přestane reagovat**: Počet dnů neaktivity, než začne Intune považovat partnera za nereagujícího kvůli dojde ke ztrátě připojení. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.
 
 > [!IMPORTANT] 
 > Před vytvořením pravidel zásad dodržování předpisů zařízení a podmíněného přístupu musíte přidat a přiřadit aplikace MTD. Tím zajistíte, že aplikace MTD bude připravena a koncoví uživatelé ji budou moci nainstalovat a získat tak přístup k e-mailu a dalším firemním prostředkům.

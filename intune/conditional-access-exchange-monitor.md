@@ -1,6 +1,5 @@
 ---
-title: Monitorování podmíněného přístupu u Exchange v Microsoft Intune
-titlesuffix: ''
+title: Monitorování podmíněného přístupu Exchange v Microsoft Intune | Microsoft Intune
 description: Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online prostřednictvím portálu Intune Azure Portal.
 keywords: ''
 author: brenduns
@@ -15,12 +14,12 @@ ms.assetid: 5712682d-285b-43fd-9978-3dcfd95ec5f9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 20a99290d2a84c22bc2bee823d7a3bb42e43aced
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 8c9602dbe183501cc779fcb9b5d5a1e6e4bf6154
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180574"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816766"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online v Intune
 
@@ -56,16 +55,16 @@ Můžete také procházet hierarchii konkrétních zařízeních zobrazíte dal�
 
 V podokně podrobností o zařízení můžete zobrazit další informace:
 
--   **Přehled:** Můžete zjistit vlastnosti zařízení, třeba verzi operačního systému, model zařízení, vlastnictví, sériové číslo, výrobce zařízení, telefonní číslo a čas, kdy se zařízení naposledy ohlásilo.
+-   **Přehled:** Můžete zobrazit vlastnosti zařízení, například: Verze operačního systému, model zařízení, vlastnictví, sériové číslo, výrobce zařízení, telefonní číslo a poslední čas zařízení se změnami.
 
--   **Vlastnosti:** Můžete stanovit vlastnictví zařízení (Osobní nebo Firemní).
+-   **Vlastnosti:** Můžete nastavit vlastnictví zařízení (osobní nebo firemní).
 
--   **Hardware:** Tady jsou informace, které vidíte v Přehledu, a také podrobnosti o úložišti (celkové místo a volné místo), o počítačové skříni, podrobnosti o síti, o síťové službě a další informace o blokování podmíněného přístupu.
+-   **Hardware:** Poskytuje informace, které se zobrazí na přehled a také podrobnosti o úložišti (celkové místo a volné místo), počítačová skříň, podrobnosti o síti, síťové služby a další podmíněný přístup blokuje podrobnosti.
 
--   **Zjištěné aplikace:** Tady se zobrazují všechny aplikace nainstalované na zařízení. Seznam nainstalovaných aplikací můžete exportovat do formátu CSV.
+-   **Zjištěné aplikace:** Zobrazuje všechny aplikace nainstalované na zařízení. Seznam nainstalovaných aplikací můžete exportovat do formátu CSV.
 
--   **Dodržování předpisů:** Tady se zobrazují všechny podrobnosti zásad dodržování předpisů u zařízení.
+-   **Dodržování předpisů:** Dodržování předpisů pro všechna zařízení zobrazuje podrobnosti zásad.
 
--   **Konfigurace zařízení:** Tady se zobrazují všechny podrobnosti o konfiguraci zařízení.
+-   **Konfigurace zařízení:** Zobrazuje všechny podrobnosti o konfiguraci zařízení.
 
--   **Přístup k Exchangi:** Tady najdete další informace o stavu zařízení po použití zásad podmíněného přístupu.
+-   **Přístup k systému Exchange:** Tady najdete další informace o stavu zařízení po použití zásad podmíněného přístupu.

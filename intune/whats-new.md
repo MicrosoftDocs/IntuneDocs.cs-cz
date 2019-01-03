@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 3f0283b07c4efd03800f21aadba2cc53beffec68
-ms.sourcegitcommit: 58ac1051faeb33dd29e59049d901761707486350
+ms.openlocfilehash: a84683531481410d54f527ddd35400dcfe504fc5
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553686"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53996027"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -93,13 +93,6 @@ Teď můžete spravovat tyto aplikace s [zásady ochrany aplikací Intune](app-p
 
 Použití zásad ochrany aplikací pro ochranu firemních dat a ovládací prvek přenos dat u těchto aplikací, jako ostatní zásady spravované aplikace Intune. Poznámka: Pokud tok není viditelné v konzole, přidáte tok, když vytvoříte nebo upravíte a zásady ochrany aplikací. Chcete-li tak učinit, použijte **+ další aplikace** možnost a potom zadejte *ID aplikace* pro tok do vstupního pole. Pro Android pomocí *com.microsoft.flow*, a pro iOS použijte *com.microsoft.procsimo*.
 
-#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
-Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
-
-- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
-- Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
-
-Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané.
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 

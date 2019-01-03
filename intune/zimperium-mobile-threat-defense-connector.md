@@ -16,18 +16,18 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aad6687a110642f3b21dc0cff3a791f4714c7949
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: b94b4228f05abd2e7c815797f2f187efb8b303e4
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187455"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817241"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
 Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Zimperium. Je to řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
 
-Zásady podmíněného přístupu založené na posouzení rizika službou Zimperium můžete nakonfigurovat prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení, které nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika službou Zimperium prostřednictvím zásad dodržování předpisů zařízení služby Intune. Zásady rizik posouzení můžete povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Jak služby Intune a Zimperium pomáhají chránit prostředky společnosti?
 
@@ -51,11 +51,11 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![Zjištění přítomnosti škodlivých aplikací](./media/Maliciousapps_blocked_Zimperium.png)
+![Koncepčního obrázku zjištění přítomnosti škodlivých aplikací](./media/Maliciousapps_blocked_Zimperium.png)
 
 **Přístup udělený po nápravě:**
 
-![Udělení přístupu po zjištění přítomnosti škodlivých aplikací](./media/maliciousapps_unblocked_Zimperium.png)
+![Koncepčního obrázku povoleného přístupu po nápravě](./media/maliciousapps_unblocked_Zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
@@ -95,7 +95,7 @@ Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchroni
 
 -   Předplatné služby Zimperium Mobile Threat Defense
 
-    -   Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips) Další informace.
+    -   Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Další postup
 

@@ -1,23 +1,23 @@
 ---
-title: Správa verzí operačního systému pomocí Microsoft Intune
+title: Správa verzí operačního systému pomocí Microsoft Intune | Microsoft Intune
 description: Zjistěte, jak pomocí Microsoft Intune spravovat verze operačního systému napříč platformami.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2017
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
-ms.openlocfilehash: c75956cd1e3e9bba0017a624b99dcc090d32978b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 27a581a72c20c940a04a791ef9e63a2dc8bf5b24
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182223"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816986"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
@@ -59,13 +59,12 @@ Podrobnosti najdete v tématu [Začínáme se zásadami dodržování předpisů
 Nastavení přístupu v zásadách ochrany aplikací Intune a správě mobilních aplikací (MAM) umožňují zadat minimální verzi operačního systému ve vrstvě aplikací. Můžete tak koncové uživatele informovat a vybídnout nebo po nich vyžadovat, aby svůj operační systém aktualizovali na zadanou minimální verzi.
  
 Máte dvě různé možnosti: 
+- **Upozornit** -upozornění informuje koncového uživatele, že by měl upgradovat, pokud spustí aplikaci se zásadami ochrany aplikací nebo nastavením přístupu MAM na zařízení s verzí nižší než zadanou verzí operačního systému. Přístup k datům aplikace a organizace je povolený.
+  ![Obrázek dialogové okno s upozorněním aktualizaci Androidu](./media/os-version-update-warning.png) 
 
-|Upozornění  |Blokování  |
-|---------|---------|
-|Upozornění informuje koncového uživatele, pokud spustí aplikaci se zásadami ochrany aplikací nebo nastavením přístupu MAM na zařízení s nižší než zadanou verzí operačního systému, že by měl upgradovat. Přístup k datům aplikace a organizace je povolený.|Blokování informuje koncového uživatele, když spustí aplikaci se zásadami ochrany aplikací nebo nastavením přístupu MAM na zařízení s nižší než zadanou verzí operačního systému, že musí upgradovat. Přístup k datům aplikace a organizace není povolený.|
-|![Dialogové okno Androidu s upozorněním na aktualizaci](./media/os-version-update-warning.png)    |![Dialogové okno o blokovaném přístupu k aplikaci](./media/os-version-access-blocked.png)          |
+- **Blok** -blokování informuje koncového uživatele, který se musí upgradovat, když spustí aplikaci se zásadami ochrany aplikací nebo nastavením přístupu MAM na zařízení s verzí nižší než zadanou verzí operačního systému. Přístup k datům aplikace a organizace není povolený.
+  ![Obrázek přístup k aplikaci blokován dialogového okna](./media/os-version-access-blocked.png)
 
- 
 ### <a name="in-practice"></a>V praxi
 Organizace dnes nastavení zásad ochrany aplikací využívají při spuštění nebo obnovení aplikací jako způsob, jak uživatele informovat o potřebě udržovat aplikace aktuální. Příkladem konfigurace je, že koncoví uživatelé s verzí o jednu nižší než aktuální jsou upozorněni a uživatelé s verzí o dvě nižší než aktuální jsou zablokováni.
  
@@ -73,12 +72,12 @@ Podrobnosti najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikac
 
 ## <a name="managing-a-new-operating-system-version-rollout"></a>Správa zavedení nové verze operačního systému
 Možností Intune popsaných v tomto článku můžete využít k přechodu organizace na novou verzi operačního systému v rámci časového plánu, který určíte. Následující kroky popisují ukázkový model nasazení pro přechod vašich uživatelů z operačního systému verze 1 na operační systém verze 2 během sedmi dní.
-- **Krok 1**: Pomocí omezení registrace vyžadujte operační systém verze 2 jako minimální verzi k registraci zařízení. To zajistí, aby nová zařízení koncových uživatelů v době registrace dodržovala předpisy.
-- **Krok 2a**: Pomocí zásad ochrany aplikací Intune uživatele při spuštění nebo obnovení aplikace upozorněte, že je vyžadován operační systém verze 2.
+- **Krok 1**: Pomocí omezení registrace Vyžadujte operační systém verze 2 jako minimální verzi k registraci zařízení. To zajistí, aby nová zařízení koncových uživatelů v době registrace dodržovala předpisy.
+- **Krok 2a**: Zásady ochrany aplikací Intune použijte upozornit uživatele, když aplikaci spustí nebo obnoví tento operační systém verze 2 je povinný.
 - **Krok 2b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy. Pomocí **akcí** při nedodržení předpisů umožněte sedmidenní období odkladu a zašlete koncovým uživatelům oznamovací e-mail s časovým plánem a požadavky.
   -  Tyto zásady budou koncové uživatele informovat, že stávající zařízení se musí aktualizovat, a to prostřednictvím e-mailu, Portálu společnosti Intune a při spuštění aplikace v případě aplikací, pro které jsou aktivní zásady ochrany aplikací.
   - Můžete spustit sestavu dodržování předpisů, abyste identifikovali uživatele, kteří předpisy nedodržují. 
-- **Krok 3a**: Pomocí zásad ochrany aplikací Intune uživatele při spuštění nebo obnovení aplikace zablokujte, pokud zařízení nepoužívá operační systém verze 2.
+- **Krok 3a**: Zásady ochrany aplikací Intune použít k blokování uživatelů aplikace při spuštění nebo obnovení, pokud zařízení není spuštěný operační systém verze 2.
 - **Krok 3b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy.
   - Tyto zásady vyžadují, aby byla zařízení aktualizována, pokud mají mít dál přístup k datům organizace. Chráněné služby jsou zablokované při použití s podmíněným přístupem zařízení. Aplikace, pro které jsou aktivní zásady ochrany aplikací, jsou zablokované při spuštění nebo přístupu k datům organizace.
 

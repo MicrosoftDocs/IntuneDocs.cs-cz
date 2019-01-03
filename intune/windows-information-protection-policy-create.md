@@ -1,6 +1,5 @@
 ---
-title: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection)
-titlesuffix: Microsoft Intune
+title: Vytvoření a nasazení zásady ochrany aplikací Windows Information Protection (WIP) | Microsoft Intune
 description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Microsoft Intune
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b5599e98b9712d30979c327167b19b159d3ff5dc
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 57d0aaebd0ed07a78b32eec64a6dc2817bf5e7f5
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181322"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817309"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -35,15 +34,15 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Seznamy povolených aplikací a aplikací s výjimkou
 
--   **Chráněné aplikace**: Jedná se o aplikace, které musí tuto zásadu dodržovat.
+-   **Chráněné aplikace:** Tyto aplikace jsou aplikace, které je potřeba tuto zásadu dodržovat.
 
--   **Aplikace s výjimkou:** Tyto aplikace mají z této zásady výjimku a můžou k podnikovým datům přistupovat bez omezení.
+-   **Aplikace s výjimkou:** Tyto aplikace mají z těchto zásad vyloučení a můžete přístup k podnikovým datům bez omezení.
 
 ### <a name="types-of-apps"></a>Typy aplikací
 
--   **Doporučené aplikace:** Předvyplněný seznam aplikací (většinou Microsoft Office), které můžete snadno importovat do zásady.
--   **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Microsoft Storu.
--   **Desktopové aplikace Windows:** Do zásad můžete přidat libovolné tradiční desktopové aplikace Windows (např. soubory typu exe nebo dll).
+-   **Doporučené aplikace:** Předem vyplněný seznam (většinou Microsoft Office) aplikace, které vám umožní snadno importovat do zásady.
+-   **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Windows storu.
+-   **Aplikace klasické pracovní plochy Windows:** Můžete přidat libovolné tradiční desktopové aplikace Windows zásad (například .exe, .dll)
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -69,16 +68,16 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 > Související informace o vytváření zásad WIP pro Intune, včetně dostupných nastavení a postupů jejich konfigurace, najdete v tématu o [vytvoření zásad WIP (Windows Information Protection) s MAM pomocí webu Azure Portal pro Microsoft Intune](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/create-wip-policy-using-mam-intune-azure) v knihovně dokumentace k zabezpečení systému Windows. 
 
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**.
 3. V okně **Microsoft Intune** vyberte **Klientské aplikace**.
 4. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 5. Vyberte **Přidat zásadu**, aby se zobrazilo okno **Přidat zásadu**.
 6. Přidejte následující hodnoty:
-    - **Název:** Zadejte název nové zásady (povinné).
-    - **Popis:** Volitelně zadejte popis.
-    - **Platforma:** Jako podporovanou platformu pro vaši zásadu ochrany aplikací zvolte **Windows 10**.
-    - **Stav registrace:** Jako stav registrace pro vaši zásadu zvolte **Bez registrace**.
+    - **Jméno:** Zadejte název (povinné) nové zásady.
+    - **Popis:** (Volitelné) Zadejte popis.
+    - **Platforma:** Zvolte **Windows 10** jako podporovanou platformu pro zásady ochrany aplikací.
+    - **Stav registrace:** Zvolte **bez registrace** jako stav registrace pro vaše zásady.
 7.  Zvolte **Vytvořit**. Zásada se vytvoří a objeví se v tabulce v okně **Zásady ochrany aplikací**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
@@ -131,7 +130,7 @@ Když pracujete s aplikacemi podporujícími WIP a s neznámými aplikacemi v r�
 
 ### <a name="what-are-the-protection-modes"></a>Co jsou režimy ochrany?
 
-#### <a name="block"></a>Blokování
+#### <a name="block"></a>Zablokovat
 WIP hledá nepatřičné postupy sdílení dat a zabrání uživateli dokončit akci. K blokovaným akcím může patřit sdílení mezi podnikově nechráněnými aplikacemi a sdílení podnikových dat mezi dalšími lidmi a zařízeními mimo vaši organizaci.
 
 #### <a name="allow-overrides"></a>Povolit potlačení
@@ -149,13 +148,13 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 1.  V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Požadovaná nastavení**.
 
-    ![Snímek obrazovky s režimem Kurzy](./media/learning-mode-sc1.png)
+    ![Snímek obrazovky podokna výukového režimu](./media/learning-mode-sc1.png)
 
 1.  Vyberte nastavení a potom zvolte **Uložit**.
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
-1. Otevřete portál [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
+1. Otevřete web [Azure Portal](https://portal.azure.com). Zvolte **Všechny služby**. Do filtru textového pole zadejte **Intune**.
 
 3. Zvolte **Intune** > **Klientské aplikace**.
 

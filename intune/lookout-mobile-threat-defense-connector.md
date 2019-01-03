@@ -1,6 +1,5 @@
 ---
-title: Konektor Lookout MTD s Microsoft Intune
-titlesuffix: ''
+title: Konektor lookout MTD s Microsoft Intune | Microsoft Intune
 description: Přečtěte si o integraci Intune se službou Lookout Mobile Threat Defense (MTD) za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d7a545fe08acc9ab88086fa92be934c860ae4716
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bd61b10ee60e1f9413c22d0d618bc5c270dc76a6
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179537"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817071"
 ---
 # <a name="lookout-mobile-threat-defense-connector-with-intune"></a>Konektor Lookout Mobile Threat Defense s Intune
 
@@ -63,34 +62,34 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![diagram zobrazující zásady podmíněného přístupu, které blokují přístup zařízení vyhodnoceného jako nevyhovující z důvodu škodlivých aplikací v zařízení](./media/malicious-apps-blocked.png)
+![Koncepčního obrázku zásada blokuje přístup z důvodu škodlivých aplikací](./media/malicious-apps-blocked.png)
 
 **Přístup udělený po nápravě:**
 
-![diagram zobrazující zásady podmíněného přístupu udělující přístup zařízení vyhodnocenému po nápravě jako vyhovující](./media/malicious-apps-unblocked.png)
+![Koncepční obrázek se udělení přístupu k zařízení po nápravě](./media/malicious-apps-unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
 **Zablokování přístupu k síti prostřednictvím Wi-Fi:**
 
-![diagram zobrazující zásady podmíněného přístupu, které blokují přístup k Wi-Fi na základě ohrožení sítě](./media/network-wifi-blocked.png)
+![Obrázek znázorňující blokuje přístup k Wi-Fi na základě ohrožení sítě](./media/network-wifi-blocked.png)
 
 **Přístup udělený po nápravě:**
 
-![diagram zobrazuje podmíněný přístup, jak po nápravě hrozby znovu povoluje přístup](./media/network-wifi-unblocked.png)
+![Koncepčního obrázku podmíněný přístup umožňuje přístup po nápravě](./media/network-wifi-unblocked.png)
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
 Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
 **Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:**
 
-![Diagram zobrazuje, jak podmíněný přístup blokuje přístup zařízení k SharePointu Online na základě zjištění hrozby](./media/network-spo-blocked.png)
+![Koncepčního obrázku blokování přístupu k Sharepointu Online](./media/network-spo-blocked.png)
 
 
 **Přístup udělený po nápravě:**
 
-![Diagram zobrazuje, jak podmíněný přístupu po nápravě ohrožení sítě znovu povoluje přístup](./media/network-spo-unblocked.png)
+![Koncepční snímek umožňuje přístup po napravit ohrožení sítě](./media/network-spo-unblocked.png)
 
 ## <a name="next-steps"></a>Další postup
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11//28/2018
+ms.date: 11/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2a5b16e828b1a2e680f41f50aa603b1bfe2ad9fa
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 35fd4650d5508995f879f4d83030f70fe9c550b8
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728816"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817360"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -72,11 +72,11 @@ Nové zásady, které vytvoříte, se nenasadí žádným uživatelům, dokud to
 
 2. V podokně ***Intune App Protection** otevřete výběrem možnosti **Přiřazení** podokno **Intune App Protection – Přiřazení**. Na kartě *Zahrnout* zvolte **Vybrat skupiny, které se zahrnou**. 
 
-   ![Snímek obrazovky podokna Přiřazení se zvýrazněnou možností nabídky Vybrat skupiny, které se zahrnou](./media/app-protection-policy-add-users.png)
+   ![Snímek obrazovky podokna přiřazení se vybrané skupiny zahrnout nabídky](./media/app-protection-policy-add-users.png)
 
 3.  Zobrazí se seznam všech skupin zabezpečení ve službě **Azure Active Directory**. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít, a pak zvolte **Vybrat**. 
 
-    ![Snímek obrazovky podokna Přidat skupinu uživatelů zobrazující seznam uživatelů Azure Active Directory](./media/azure-ad-user-group-list.png)
+    ![Snímek obrazovky podokna přidat skupinu uživatelů seznam uživatelů Azure AD](./media/azure-ad-user-group-list.png)
 
 4.  Po zahrnutí a vyloučení skupin, vyberte **Uložit** uložte konfiguraci a nasazení zásad pro uživatele. Pokud vyberete **zahodit** před uložením konfiguraci se zahodí všechny změny, které jste udělali *zahrnout* a *vyloučit* karty.   
  
@@ -89,7 +89,7 @@ Tyto zásady ovlivní jenom uživatele, kteří mají přiřazené licence Micro
 >[!IMPORTANT]
 > Pokud ke správě zařízení používáte Intune s Configuration Managerem, použijí se zásady jenom pro uživatele přímo ve skupinách, které jste vybrali. Na členy podřízených skupin vnořených ve skupině, kterou jste vybrali, tyto zásady nemají vliv.
 
-Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Více informací najdete v následujících tématech:
+Koncoví uživatelé můžou stahovat aplikace z App Storu nebo Google Play. Další informace naleznete v tématu:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)
 
@@ -138,11 +138,11 @@ Protože zásady ochrany aplikací Intune cílí na identitu uživatele, mohou n
 
 Tyto zásady vytvoříte tak, že v konzole Intune přejdete na **Klientské aplikace** > **Zásady ochrany aplikací** a kliknete na **Přidat zásadu**. Můžete také upravit existující zásadu ochranu aplikací. Aby zásada ochrany aplikací platila pro spravovaná i nespravovaná zařízení, zkontrolujte, že je možnost **Cílit na všechny typy aplikací** nastavena na výchozí hodnotu **Ano**. Pokud chcete zásady přiřazovat podrobněji na základě stavu správy, nastavte možnost **Cílit na všechny typy aplikací** na **Ne**. 
 
-![Snímek obrazovky s oknem Přidat zásadu a vybranou možností Cílit na všechny typy aplikací](./media/app-protection-policies-target-all.png)
+![Snímek obrazovky okna zásady přidat pomocí cílit na všechny typy aplikací](./media/app-protection-policies-target-all.png)
 
 U iOSu jsou nutná další nastavení konfigurace aplikace, která mají cílit nastavení APP na aplikace na zařízeních zaregistrovaných v Intune:
 - **IntuneMAMUPN** musí být nakonfigurované pro všechny aplikace spravované pomocí správy mobilních zařízení (MDM). Další informaci získáte v článku o [správě přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](https://docs.microsoft.com/intune/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-- **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace třetích stran a obchodní aplikace pod správou mobilních zařízení. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
+- **IntuneMAMDeviceID** musí být nakonfigurované pro všechny aplikace třetích stran a obchodní aplikace pod správou mobilních zařízení. **IntuneMAMDeviceID** by mělo být nakonfigurované na token ID zařízení. Například, `key=IntuneMAMDeviceID, value={{deviceID}}`. Další informace najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem](https://docs.microsoft.com/intune/app-configuration-policies-use-ios).
 - Pokud je nakonfigurované jenom **IntuneMAMDeviceID**, Intune APP bude zařízení považovat za nespravované.  
 
 > [!NOTE]
@@ -157,6 +157,6 @@ Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vybert
 ## <a name="next-steps"></a>Další postup
 [Monitorování stavu dodržování předpisů a uživatele](app-protection-policies-monitor.md)
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 * [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
 * [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)

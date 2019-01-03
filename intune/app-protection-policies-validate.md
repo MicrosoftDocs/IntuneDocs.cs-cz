@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3158d0531de4809bf654c030b8c1e0ef90185362
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 0201f9a33fcdf3e7f5780f8e65a3666e6eb5d7d1
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247063"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816952"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup"></a>Ověření nastavení zásad ochrany aplikací
 
@@ -29,11 +29,11 @@ ms.locfileid: "53247063"
 
 Prověřte, jestli jsou vaše zásady ochrany aplikací správně nastavené a jestli fungují. Tento návod se vztahuje k zásadám ochrany aplikací na portálu Azure Portal.
 
-### <a name="checking-for-symptoms"></a>Zjišťování příznaků
+## <a name="checking-for-symptoms"></a>Zjišťování příznaků
 Není pravděpodobné, že by problém nahlásili uživatelé, protože ochrana aplikací je nástroj na ochranu dat. Pokud dojde k nějakému problému s konfigurací ochrany aplikací uživatele má neomezený přístup, jako bez ochrany aplikací a nemusíte vědět, že se vyskytl problém. Z tohoto důvodu doporučujeme, abyste že měli ověřit konfiguraci ochrany aplikací pomocí pilotní nasazení zásad ochrany aplikací s malou skupinou uživatelů, kteří mohou omezení ochrany aplikací cíleně vyzkoušet.
 
 
-### <a name="what-to-check"></a>Co zkontrolovat
+## <a name="what-to-check"></a>Co zkontrolovat
 
 Pokud testování odhalí chování zásady ochrany vaší aplikace není podle očekávání, zkontrolujte tyto položky:
 
@@ -41,7 +41,7 @@ Pokud testování odhalí chování zásady ochrany vaší aplikace není podle 
 - Mají uživatelé licenci k O365?
 - Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**.
 
-#### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
+### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Vyberte **klientské aplikace** > **monitorování** >  **stav ochrany aplikace**a pak vyberte **přiřazení uživatelé**dlaždici. 
@@ -50,7 +50,7 @@ Pokud testování odhalí chování zásady ochrany vaší aplikace není podle 
 
 
 
-### <a name="what-to-do"></a>Co dělat
+## <a name="what-to-do"></a>Co dělat
 Postupujte podle stavu uživatele:
 
 - Pokud uživatel nemá licenci k ochraně aplikací, přiřadíte licence Intune uživateli.
@@ -58,6 +58,6 @@ Postupujte podle stavu uživatele:
 - Pokud je aplikace uživatele uvedená se stavem **Není zaregistrováno**, zkontrolujte, jestli jste pro tuto aplikaci správně nakonfigurovali zásady ochrany aplikací.
 - Ujistěte se, že platí tyto podmínky přes všechny uživatele, u kterých chcete použít zásady ochrany aplikací.
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 
 [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)

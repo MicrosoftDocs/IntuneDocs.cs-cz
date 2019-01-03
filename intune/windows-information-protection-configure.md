@@ -1,12 +1,11 @@
 ---
-title: Nastavení Windows Information Protection v Microsoft Intune
-titleSuffix: ''
+title: Nastavení Windows Information Protection v Microsoft Intune | Microsoft Intune
 description: Přečtěte si o nastaveních Microsoft Intune, pomocí kterých můžete spravovat Windows Information Protection.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/18/2018
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e1505c48d8605f2ac53b0d93ca933137fac981e3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2d1d5468779bf300ad4f2713c363d4ca723b80da
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179214"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817003"
 ---
 # <a name="how-to-configure-windows-information-protection-in-microsoft-intune"></a>Konfigurace nastavení Windows Information Protection v Microsoft Intune
 
@@ -35,8 +34,8 @@ Tyto zásady Intune spravují seznam aplikací chráněných službou Windows In
 >[!NOTE]
 > Pokud chcete používat aplikaci Portál společnosti pro Windows 10 se službou Windows Information Protection, musíte přidat aplikaci Portál společnosti v režimu služby Windows Information Protection **Výjimka**. 
 
-### <a name="next-steps"></a>Další postup
-Více informací najdete v následujících tématech:
+## <a name="next-steps"></a>Další postup
+Další informace naleznete v tématu:
 -  [Ochrana podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip)
 - [Vytvoření zásad pro Windows Information Protection (WIP) pomocí klasické konzoly pro Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune)
 - [Vytvoření zásad pro Windows Information Protection (WIP) s MDM pomocí portálu Azure Portal pro Microsoft Intune](https://docs.microsoft.com/windows/threat-protection/windows-information-protection/create-wip-policy-using-intune-azure)

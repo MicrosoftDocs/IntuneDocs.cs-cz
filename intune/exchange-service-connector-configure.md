@@ -1,12 +1,11 @@
 ---
-title: Konektor Intune Exchange pro Exchange Online
-titleSuffix: ''
+title: Intune Exchange connector pro Exchange Online | Microsoft Intune
 description: Připojte Intune ke službě Office 365 Exchange, abyste podporovali správu mobilních zařízení Exchange ActiveSync (MDM).
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/22/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 318bde24e42bfdf9bbcf15d83f42405fc06f7901
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9845ed1b809b611975c07c6c8335acd237d845c0
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184204"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816697"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
@@ -52,7 +51,7 @@ Musíte také vytvořit uživatelský účet Exchange Online, který bude konekt
 
 ## <a name="set-up-the-service-to-service-connector"></a>Nastavení konektoru Service to Service Connector
 
-1. Přihlaste se k webu [Azure Portal](http://portal.azure.com) uživatelským účtem, který má práva ke správě Exchange, oprávnění pro [výše popsané](#exchange-cmdlet-requirements) rutiny, platnou licenci pro Intune a roli Globální správce. Microsoft Intune používá e-mailovou adresu aktuálně přihlášeného uživatele k nastavení připojení.
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com) uživatelským účtem, který má práva ke správě Exchange, oprávnění pro [výše popsané](#exchange-cmdlet-requirements) rutiny, platnou licenci pro Intune a roli Globální správce. Microsoft Intune používá e-mailovou adresu aktuálně přihlášeného uživatele k nastavení připojení.
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 

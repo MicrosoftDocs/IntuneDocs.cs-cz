@@ -1,12 +1,11 @@
 ---
-title: Jak získat podporu pro Microsoft Intune
-titlesuffix: Microsoft Intune
+title: Jak získat podporu pro Microsoft Intune | Microsoft Intune
 description: Získejte online podporu a podporu po telefonu pro placené i zkušební předplatné Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/29/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +15,12 @@ ms.reviewer: cacamp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 2feb18f9c21929d803bbb3605842effa8f63d75d
-ms.sourcegitcommit: 8019bdd8117806c6a3a73a8c6d40af1a3def6d90
+ms.openlocfilehash: 6a57a3a26a786e86775ce1509c5f751d2856f95b
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53247165"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817292"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -49,11 +48,11 @@ Pokud není běžná řešení, můžete vybrat **žádost o podporu** vytvořit
 
 1. Přihlaste se na portálu Azure Portal (<https://portal.azure.com>) pomocí svých přihlašovacích údajů správce Intune, vyberte ikonu **?** v pravém horním rohu portálu a pak vyberte možnost **Nápověda a podpora**, kterou přejdete na stránku [nápovědy a podpory Azure](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
-   ![Snímek obrazovky nápovědy a podpory na portálu Azure Portal s odkazem v podobě otazníku a se zvýrazněným odkazem Nápověda a podpora](./media/azure-get-support.png)
+   ![Obrázek otazníku odkazu pomocí + zvýrazněným odkazem](./media/azure-get-support.png)
 
 2. Na Azure **Nápověda a podpora** stránce **nová žádost o podporu**.
 
-   ![Snímek stránky obrazovky nápovědy a podpory na portálu Azure Portal se zvýrazněným odkazem na novou žádost o podporu](media/azure-support-ticket-link.png)
+   ![Obrázek nový odkaz na nápovědu zvýrazní žádost o podporu a stránku podpory](media/azure-support-ticket-link.png)
 
 3. Na **Základy** kartu pro většinu problémů technické podpory Intune, vyberte následující možnosti:
    - **Typ problému**: **Technické**
@@ -63,18 +62,18 @@ Pokud není běžná řešení, můžete vybrat **žádost o podporu** vytvořit
    - **Podtyp problém**: Podtyp problému zvolte z rozevírací nabídky.
    - **Předmět**: Krátce popište problém, který máte.
 
-   ![Snímek obrazovky s kartou základy na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-basics.png)
+   ![Obrázek karty základy na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-basics.png)
 
    Zvolte **Další: Řešení** pokračujte.
 4. Na **řešení** kartu, přečtěte si doporučené kroky, které mohly pomoct problém vyřešit bez vyplňování lístku. Pokud chcete vytvořit žádost o podporu po hledání prostřednictvím kroky, klikněte na tlačítko **Další: Podrobnosti o**.
 
-   ![Snímek obrazovky s kartou řešení na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-solutions.png)
+   ![Obrázek karty řešení na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-solutions.png)
 5. Na **podrobnosti** kartu, vyplňte podrobnosti pro váš problém, podpůrná metoda, vaše kontaktní informace a pak klikněte na tlačítko **Další: Zkontrolovat a vytvořit**.
 
-   ![Snímek obrazovky na kartě Podrobnosti v Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-details.png)
+   ![Obrázek karty podrobnosti na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-details.png)
 6. Přečtěte si informace, zkontrolujte, zda ji opravte a potom zvolte **vytvořit** k odeslání žádosti o podporu.
 
-   ![Snímek obrazovky kontroly + vytvořit kartu na Nápověda a podpora - novou stránku žádosti o podporu](./media/get-support/help-new-support-case-create.png)
+   ![Obrázek kontroly + vytvořit kartu na novou podporu stránce žádosti](./media/get-support/help-new-support-case-create.png)
 
 <!--
   - **Support plan**: **Technical support - included** (for Intune technical issues, support is complimentary) or **Premier**
@@ -117,7 +116,7 @@ Pokud není běžná řešení, můžete vybrat **žádost o podporu** vytvořit
 ## <a name="new-help-and-support-experience"></a>Nové prostředí pro nápovědu a podporu
 *Následující informace platí pouze pro uživatele portálu Správa zařízení a jsou součástí nasazení nového prostředí pro nápovědu a podporu. Účastníci tohoto nasazení jsou náhodně vybráni z dostupných tenantů Intune.*  
 
-Aktualizace nápovědy a podpory pro Intune je nové prostředí, které je dostupné na [portálu Správa zařízení Microsoft 365](http://devicemanagement.microsoft.com) některým, ale ne všem tenantům. Toto nové prostředí se podobá prostředí v [centru pro správu Microsoft 365](https://portal.office.com/AdminPortal/Home) a nahrazuje předchozí prostředí pro nápovědu a správu, které se zobrazuje při přístupu z některých míst v konzole Správa zařízení.  
+Aktualizace nápovědy a podpory pro Intune je nové prostředí, které je dostupné na [portálu Správa zařízení Microsoft 365](https://devicemanagement.microsoft.com) některým, ale ne všem tenantům. Toto nové prostředí se podobá prostředí v [centru pro správu Microsoft 365](https://portal.office.com/AdminPortal/Home) a nahrazuje předchozí prostředí pro nápovědu a správu, které se zobrazuje při přístupu z některých míst v konzole Správa zařízení.  
 
 Na portálu Správa zařízení se k novému prostředí dostanete tak, že vyberete **Nápověda a podpora** v libovolném okně v části **Všechny služby** > **Správa zařízení**. Jedinou výjimkou je okno **Řešení potíží**, ve kterém tento postup neplatí. Při přístupu k nápovědě a podpoře z jiných umístění, jako je například okno **Řešení potíží**, pomocí možnosti **?** v pravém horním rohu banneru konzoly nebo výběrem možnosti **Nápověda a podpora** v seznamu služeb v levém podokně se dostanete k původnímu prostředí.  
 
@@ -143,7 +142,7 @@ Tady jsou příklady dotazů, které můžete odeslat:
 
 ### <a name="view-context-sensitive-help"></a>Získání kontextové nápovědy
 Po výběru některé z nabízených možností nebo odeslání vlastního dotazu se v části **Zobrazit řešení** zobrazí kontextové výsledky. Ty zahrnují jak samoobslužné pokyny specifické pro Intune, tak i další výsledky vrácené z webového vyhledávání na základě kritérií dotazu.  
-![Zobrazení výsledků](./media/get-support/view-results.png)
+![Snímek podokna zobrazení výsledků](./media/get-support/view-results.png)
 
 ### <a name="get-support"></a>Získat podporu
 Pokud se vám problém nepodaří vyřešit pomocí samoobslužné nápovědy ani postupů získaných z webu, můžete v konzole otevřít žádost o e-mailovou nebo telefonickou podporu.  
@@ -151,16 +150,16 @@ Na stránce **Potřebujete pomoct?** vyberte možnost, kterou chcete použít.
 
 - U e-mailové žádosti zadejte e-mailovou adresu a volitelně také přidejte přílohy. Výběrem možnosti **Odeslat** otevřete žádost.  
 
-  ![E-mailová žádost](./media/get-support/email-support.png)
+  ![Snímek podokna e-mailové žádosti](./media/get-support/email-support.png)
   
 - U telefonické žádosti zadejte telefonní číslo. Můžete také přidat e-mailovou adresu a přílohy. Žádost odešlete výběrem možnosti Zavolejte mi.  
 
-   ![Telefonická žádost](./media/get-support/phone-support.png)
+   ![Snímek podokna Phone žádost](./media/get-support/phone-support.png)
 
 ### <a name="view-support-cases"></a>Zobrazení případů podpory
 Výběrem tlačítka historie zobrazíte incidenty podpory, které jste vytvořili.  
 
-![Zobrazení případů podpory](./media/get-support/view-support-tickets.png)
+![Obrázek podokna zobrazení podporu případů](./media/get-support/view-support-tickets.png)
 
 - V tomto pracovním postupu se zobrazí pouze případy podpory, které jste otevřeli pomocí nového pracovního postupu. Pokud se na ně chcete podívat, otevřete zobrazení Nápověda a podpora z konzoly Správa zařízení, která je součástí nového prostředí. Tyto případy jsou označeny osmimístnými čísly. Na tyto případy se také můžete podívat v centru pro správu Microsoft 365.  
 
@@ -173,5 +172,5 @@ Výběrem tlačítka historie zobrazíte incidenty podpory, které jste vytvoři
 ## <a name="additional-resources"></a>Další zdroje
 - [Kontakt na odbornou telefonickou podporu Microsoft Intune](phone-support-contact.md)
 - [Podpora správy fakturace a předplatného](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
-- [Multilicence](http://go.microsoft.com/fwlink/p/?LinkID=282015)
+- [Multilicence](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Řešení potíží s Intune](help-desk-operators.md)

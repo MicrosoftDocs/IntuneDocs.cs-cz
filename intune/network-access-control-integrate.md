@@ -15,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c6ab669b1f9331d0bd0a70ca5f86ac7f3f190fb6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bda8512bd28351c384bfe53b46db62e5a86fe9bd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180369"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817275"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -48,7 +48,7 @@ Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační
 
 Následující seznam obsahuje přehled fungování řešení pro řízení přístupu k síti (NAC) při integraci do Intune. První tři kroky (1–3) vysvětlují proces připojování. Kroky 4–9 popisují další provoz řešení NAC po jeho integraci do Intune.
 
-![Jak funguje NAC s Intune](./media/ca-intune-common-ways-2.png)
+![Koncepčního obrázku toho, jak funguje NAC s Intune](./media/ca-intune-common-ways-2.png)
 
 1. Partnerské řešení NAC zaregistrujte v Azure Active Directory (AAD) a přidělte rozhraní API řešení NAC integrovanému do Intune delegovaná oprávnění.
 2. U partnerského řešení NAC nakonfigurujte příslušná nastavení, včetně adresy URL Intune pro zjišťování.

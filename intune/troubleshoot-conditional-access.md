@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s podmíněným přístupem
+title: Řešení potíží s podmíněným přístupem | Microsoft Intune
 description: Popisuje, co dělat, pokud se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune.
 keywords: ''
 author: brenduns
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 642a4da6a1ca3c368e90f2d3007c1fc6a068af78
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d24b96408ed02413f25957e2558704385c5e1bfd
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189227"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817139"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
@@ -73,7 +73,7 @@ Pokud narazíte na zařízení, které nevyhovuje předpisům, ale má nadále p
 - Zkontrolujte cílovou skupinu a skupinu pro vyloučení. Pokud uživatel není ve správné cílové skupině nebo je ve skupině pro vyloučení, nebude blokován. Vyhovování předpisům se kontroluje jenom u zařízení uživatelů, kteří jsou v cílové skupině.
 - Zkontrolujte, že se zařízení zjišťuje. Směřuje Exchange Connector na CAS pro Exchange 2010, zatímco je uživatel na serveru Exchange 2013? V takovém případě pokud je výchozí pravidlo Exchange nastavené na povolení, i když je uživatel v cílové skupině, Intune nemůže vědět o připojení zařízení k Exchangi.
 - Kontrola stavu existence a přístupu k zařízení v Exchangi:
-  - Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte tuto rutinu PowerShellu: Get-ActiveSyncDeviceStatistics -mailbox mbx. Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
+  - Chcete-li získat seznam všech mobilních zařízení pro poštovní schránku, použijte tuto rutinu Powershellu: "Get-ActiveSyncDeviceStatistics-mailbox mbx". Pokud zařízení není v seznamu, nepřistupuje k Exchangi.
   - Pokud zařízení je uvedené, pomocí rutiny Get-CASmailbox -identity:’upn’ | fl získejte podrobné informace o jeho stavu přístupu a předejte tyto informace podpoře Microsoftu.
 
 ## <a name="next-steps"></a>Další postup

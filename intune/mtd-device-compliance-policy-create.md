@@ -1,12 +1,11 @@
 ---
-title: Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Microsoft Intune
-titlesuffix: ''
+title: Vytvoření zásad dodržování předpisů zařízením pro MTD s Microsoft Intune | Microsoft Intune
 description: Vytvořte zásady dodržování předpisů zařízením v Intune, které využívají úrovně hrozby partnerů MTD k určení, jestli má mobilní zařízení přístup k firemním prostředkům.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +15,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aaa02c397ca17011dd231c98018ca86c190f49ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5962ff96b9c92bcf69a75221f1b7c5a5ab2f2634
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186170"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53995976"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
 > [!NOTE] 
 > Tyto informace se týkají všech partnerů ochrany před mobilními hrozbami.
 
-Intune s MTD vám pomůže odhalit hrozby a posoudit rizika u mobilních zařízení. Můžete vytvořit pravidlo zásad dodržování předpisů zařízení služby Intune, které posuzuje rizika a zjišťuje, jestli zařízení předpisy dodržuje, nebo ne. Pomocí zásad podmíněného přístupu pak můžete zablokovat přístup ke službám podle toho, jestli zařízení dodržuje předpisy.
+Intune s MTD vám pomůže odhalit hrozby a posoudit rizika u mobilních zařízení. Můžete vytvořit pravidlo zásad dodržování předpisů zařízení služby Intune, které posuzuje rizika a zjišťuje, jestli zařízení předpisy dodržuje, nebo ne. Pak můžete použít [zásady podmíněného přístupu](create-conditional-access-intune.md) a zablokovat přístup ke službám podle toho, nakolik zařízení.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -54,13 +53,13 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
 7.  V podokně **Stav zařízení** vyberte v části **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní** z rozevíracího seznamu úroveň mobilní hrozby.
 
-    a.  **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
+    a.  **Zabezpečené**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
 
-    b.  **Nízká:** Zařízení se vyhodnotí jako vyhovující i v případě, že se v něm nachází jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+    b.  **Nízká**: Zařízení splňuje předpisy, pokud jen hrozby nízké úrovně jsou k dispozici. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
 
-    c.  **Střední:** Zařízení vyhovuje, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
+    c.  **Střední**: Zařízení splňuje předpisy, pokud jsou hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
 
-    d.  **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. Tato možnost povoluje všechny úrovně hrozeb, protože používá ochranu před mobilními hrozbami jenom ke generování sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
+    d.  **Vysoká**: Tato úroveň je nejméně bezpečná. Tato možnost povoluje všechny úrovně hrozeb, protože používá ochranu před mobilními hrozbami jenom ke generování sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
 8.  Dvakrát klikněte na **OK** a potom zvolte **Vytvořit**.
 

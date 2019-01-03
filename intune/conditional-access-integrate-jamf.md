@@ -1,6 +1,5 @@
 ---
-title: Integrace Jamf Pro s Microsoft Intune pro dodržování předpisů
-titlesuffix: ''
+title: Integrace Jamf Pro s Microsoft Intune pro dodržování předpisů | Microsoft Intune
 description: Použijte zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k lepšímu zabezpečení zařízení spravovaných pomocí Jamf.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e936ecd4ce6a9b0fa447ecfe8e45e04a78999a2b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: cc547926d95e3fa1bec54b4ea55f764b5701b3b7
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185011"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816816"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -50,7 +49,7 @@ Intune propojíte s Jamf Pro následujícími postupy:
 1. Otevřete **Azure Active Directory** > **Registrace aplikací**.
 2. Klikněte na možnost **Registrace nové aplikace**.
 3. Zadejte **Zobrazovaný název**, jako například **Podmíněný přístup Jamf**.
-4. Vyberte možnost **Webová aplikace nebo API**.
+4. Vyberte **webovou aplikaci nebo API**.
 5. Pomocí adresy URL instance Jamf Pro zadejte **přihlašovací adresu URL**.
 6. Klikněte na **Vytvořit aplikaci**.
 7. Uložte nově vytvořené **ID aplikace**, otevřete **Nastavení** a přejděte na **Přístup přes rozhraní API** > **Klíče** a vytvořte nový klíč aplikace. Zadejte **Popis**, jak dlouho se má čekat, než **vyprší jeho platnost**, a potom klíč aplikace uložte.
@@ -115,7 +114,7 @@ Jamf Pro zaznamená informace o inventáři spravovaných zařízeních macOS. J
 * Připojení k doméně
 * ID Jamf
 * Adresa MAC
-* Ujistěte se
+* Vytvoření
 * Model
 * Identifikátor modelu
 * Rychlost síťové karty

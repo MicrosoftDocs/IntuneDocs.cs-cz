@@ -1,12 +1,12 @@
 ---
-title: Zásady dodržování předpisů pro zařízení Jamf
+title: Zásady dodržování předpisů zařízením pro zařízení Jamf | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Použijte zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k lepšímu zabezpečení zařízení spravovaných pomocí Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6fa89e96b05e5344dec32fb452be8ebeaa58bc12
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d7d054b11a4abc969ad411169d0222be37fd6711
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182019"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817224"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
@@ -31,7 +31,7 @@ Pomocí Azure Active Directory a zásad podmíněného přístupu pro Microsoft 
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Nastavení zásad dodržování předpisů pro zařízení v Intune
 
-1. Otevřete Microsoft Azure a pak přejděte na **Intune** > **Dodržování předpisů zařízením** > **Zásady**. Můžete vytvářet zásady pro systém macOS včetně výběru série akcí (například zasílání e-mailů s upozorněním) pro uživatele a skupiny, kteří nesplňují požadavky.
+1. Otevřete Microsoft Azure a pak přejděte na **Intune** > **Dodržování předpisů zařízením** > **Zásady**. Uživatelé nedodržující předpisy a skupiny můžete vytvořit zásady pro systém macOS včetně výběru série akcí (například odesílání upozornění e-mailů).
 2. Vyhledejte požadované skupiny a pak u nich použijte zásady.
 
 > [!Note]
@@ -57,7 +57,7 @@ Aplikaci Portál společnosti pro macOS v Jamf Pro byste měli nasadit jako inst
 ## <a name="create-a-policy-in-jamf-pro-to-have-users-register-their-devices-with-azure-active-directory"></a>Vytvoření zásad v Jamf Pro, které donutí uživatele zaregistrovat zařízení ve službě Azure Active Directory
 
 > [!NOTE]
-> Před provedením dalších kroků musíte [nasadit Portál společnosti](conditional-access-assign-jamf.md#require-the-company-portal-app-for-macos) pro macOS.  
+> Před provedením dalších kroků musíte [nasadit Portál společnosti](conditional-access-assign-jamf.md#deploy-the-company-portal-app-for-macos-in-jamf-pro) pro macOS.  
 
 Koncoví uživatelé musí aplikaci Portál společnosti spustit prostřednictvím samoobslužné služby Jamf, aby se zařízení zaregistrovalo s Azure AD jako zařízení spravované aplikací Jamf Pro. To bude vyžadovat, aby koncoví uživatelé provedli akci. Doporučujeme, abyste e-mailem, přes Jamf Pro nebo jiným způsobem [kontaktovali koncové uživatele](end-user-educate.md) a oznámili jim, že musí kliknout na tlačítko ve službě Jamf Self Service.
 

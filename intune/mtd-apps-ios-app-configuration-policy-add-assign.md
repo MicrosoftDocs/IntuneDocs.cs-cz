@@ -1,12 +1,11 @@
 ---
-title: Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) do Microsoft Intune
-titleSuffix: ''
+title: Přidání a přiřazení aplikací MTD s Microsoft Intune | Microsoft Intune
 description: Pomocí Intune můžete přidat aplikace pro ochranu před mobilními hrozbami (MTD), aplikaci Microsoft Authenticator a zásady konfigurace iOS na portálu Azure Portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2018
+ms.date: 01/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +15,19 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: afc5028e4ed57757832844637298caf1656d610c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d08a7332ba96f552b488ad3f5d00004d0445d7ec
+ms.sourcegitcommit: 6058c611d5a54076121af1d327a43ad861a43f8a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181169"
+ms.lasthandoff: 01/03/2019
+ms.locfileid: "53995993"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
 > [!NOTE] 
 > Toto téma se týká všech partnerů ochrany před mobilními hrozbami.
 
-Pokud chcete přidat a nasadit aplikace MTD, aby koncoví uživatelé mohli dostávat oznámení, když v jejich mobilních zařízeních dojde k identifikování hrozby, a získat pokyny k nápravě těchto hrozeb, můžete použít službu Intune.
+Intune můžete použít k přidání a nasazení aplikací Mobile Threat Defense (MTD) tak, aby koncoví uživatelé mohli dostávat oznámení, když je v jejich mobilních zařízeních identifikována hrozba a získat pokyny k nápravě těchto hrozeb.
 
 
 ## <a name="before-you-begin"></a>Před zahájením
@@ -38,13 +37,12 @@ Níže uvedený postup musíte provést na [portálu Azure Portal](https://porta
   -   [Přidání aplikace do služby Intune](apps-add.md)
   -   [Přidání zásad konfigurace aplikace pro iOS do služby Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)
   -   [Přiřazení aplikace pomocí služby Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)
-  -   [Přidání zásad konfigurace aplikace pro iOS](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)
 
 > [!TIP]
-> Portál společnosti Intune funguje jako zprostředkovatel pro zařízení s Androidem, aby mohla být identita uživatelů ověřena pomocí Azure AD.
+> Aplikace portál společnosti Intune funguje jako zprostředkovatel pro zařízení s Androidem aby mohla být identita uživatelů ověřit ve službě Azure AD uživatelů.
 
 ## <a name="configure-microsoft-authenticator-for-ios"></a>Konfigurace aplikace Microsoft Authenticator pro iOS
-U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Kromě toho potřebujete zásady konfigurace pro aplikaci iOS, aby bylo zřejmé, která aplikace MTD pro iOS se má v Intune použít.
+U zařízení se systémem iOS je potřeba [Microsoft Authenticator](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to), aby mohla být identita uživatelů ověřena pomocí Azure AD. Kromě toho potřebujete zásady Konfigurace aplikace iOS, která nastavuje aplikace MTD pro iOS, které používáte s Intune.
 
 Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na Microsoft Authenticator v obchodě s aplikacemi](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8).
 
@@ -145,11 +143,11 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Zásady konfigurace aplikací pro Lookout for Work
 
-- Vytvořte zásady konfigurace aplikace pro iOS pomocí tématu [o použití zásad konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md).
+- Jak je popsáno v vytvořte zásady Konfigurace aplikací pro iOS [pomocí zásad Konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md) článku.
 
 ### <a name="sep-mobile-app-configuration-policy"></a>Zásady konfigurace aplikace SEP Mobile
 
--   Použijte stejný účet Azure Active Directory, který jste dříve nakonfigurovali v [konzole pro správu Symantec Endpoint Protection](https://aad.skycure.com). Mělo by jít o stejný účet, který slouží k přihlašování ke klasickému portálu Intune.
+-   Účet použijte stejnou službou Azure AD, které jste dříve nakonfigurovali v [konzole pro správu aplikace Symantec Endpoint Protection](https://aad.skycure.com), který by měl být stejný účet použili k přihlášení na klasickém portálu Intune.
 
 -   Musíte **stáhnout** soubor zásad konfigurace aplikace pro iOS: 
     -   Přejděte na [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com) a přihlaste se pomocí svých přihlašovacích údajů správce.

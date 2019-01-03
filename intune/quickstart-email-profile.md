@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3da4208b3036b0252e2e5bd26d8361d04642183a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 83371d14215eb9ed2298796279d232ffbc7d129f
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189695"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817037"
 ---
-# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS
+# <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvořte profil zařízení pro iOS
 
 V tomto rychlém startu se dozvíte, jak vytvořit e-mailový profil zařízení pro zařízení s iOSem. Tento profil určuje nastavení, která se vyžadují k tomu, aby se integrovaná e-mailová aplikace na zařízení s iOSem mohla připojit k firemnímu e-mailu. E-mailové profily zařízení pomáhají standardizovat nastavení pro různá zařízení a umožňují koncovým uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat. Pokud chcete ochranu e-mailu dále zdokonalit, můžete pomocí e-mailového profilu určovat, jestli jsou zařízení kompatibilní, a pak nastavením podmíněného přístupu umožnit přístup k e-mailu jenom kompatibilním zařízením. Podrobnosti o e-mailových profilech najdete v tématu [Jak nakonfigurovat nastavení e-mailu v Microsoft Intune](email-settings-configure.md).
 
@@ -45,16 +45,16 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce n
    - U možnosti **Platforma** vyberte **iOS**.
    - U možnosti **Typ profilu** vyberte **E-mail**.
     
-     ![Vytvoření e-mailového profilu pro iOS](media/quickstart-email-profile/ios-email-profile-name.png)
+     ![Vytvořit e-mailový profil pro použití se systémem iOS](media/quickstart-email-profile/ios-email-profile-name.png)
 
 5. Vyberte **Nastavení** a zadejte následující nastavení (u dalších nastavení ponechejte výchozí hodnoty):
    - **E-mailový server**: Pro účely tohoto rychlého startu zadejte **outlook.office365.com**. Toto nastavení určuje umístění (URL) e-mailového serveru Exchange, který bude aplikace iOS Mail používat pro připojení k e-mailu.
-   - **Název účtu**: Zadejte **Firemní e-mail**.
-   - **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá z Azure Active Directory (Azure AD). Pomocí tohoto jména Intune dynamicky vygeneruje uživatelské jméno pro tento profil. Pro účely tohoto rychlého startu budeme předpokládat, že chceme, aby se jako uživatelské jméno pro tento profil použil **Hlavní název uživatele (UPN)** (například user1@contoso.com).
-   - **Atribut e-mailové adresy z AAD**: Toto nastavení je e-mailová adresa z Azure AD, která se použije pro přihlášení k serveru Exchange. Pro účely tohoto rychlého startu vyberte **Hlavní název uživatele (UPN)**.
-   - **Metoda ověřování**: Pro účely tohoto rychlého startu vyberte možnost **Uživatelské jméno a heslo**. (Pokud jste už nastavili certifikát pro Intune, můžete zvolit také možnost **Certifikát**.)
+   - **Název účtu**: Zadejte **firemní e-mailu**.
+   - **Atribut uživatelského jména z AAD**: Tento název je atribut, který Intune získá od služby Azure Active Directory (Azure AD). Pomocí tohoto jména Intune dynamicky vygeneruje uživatelské jméno pro tento profil. Pro účely tohoto rychlého startu budeme předpokládat, že chceme, aby se jako uživatelské jméno pro tento profil použil **Hlavní název uživatele (UPN)** (například user1@contoso.com).
+   - **Atribut e-mailové adresy z AAD**: Toto nastavení je e-mailovou adresu z Azure AD, který se použije k přihlášení k serveru Exchange. Pro účely tohoto rychlého startu vyberte **Hlavní název uživatele (UPN)**.
+   - **Metoda ověřování**: Pro účely tohoto rychlého startu vyberte **uživatelské jméno a heslo**. (Pokud jste už nastavili certifikát pro Intune, můžete zvolit také možnost **Certifikát**.)
     
-     ![Vytvoření e-mailového profilu pro iOS](media/quickstart-email-profile/ios-email-profile.png)
+     ![Vytvořit e-mailový profil pro použití s Iosem](media/quickstart-email-profile/ios-email-profile.png)
 
 6. Vyberte **OK**.
 7. Vyberte **Vytvořit**. V zobrazeném řídicím panelu se v seznamu profilů zobrazí nový profil, takže můžete monitorovat jeho přiřazení k zařízením a uživatelům s iOSem.
@@ -73,4 +73,4 @@ Pokud nemáte v úmyslu používat vytvořený profil v dalších kurzech nebo k
 V tomto rychlém startu jste vytvořili e-mailový profil pro zařízení s iOSem. Teď můžete pomocí tohoto profilu určovat, jestli jsou zařízení s iOSem kompatibilní. Uděláte to tak, že vytvoříte zásady dodržování předpisů, které budou označovat jako nekompatibilní všechna zařízení s iOSem, která tomuto profilu neodpovídají. Pro zvýšení ochrany můžete vytvořit zásady podmíněného přístupu, které budou přístup k e-mailu pomocí nekompatibilních zařízení s iOSem blokovat. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
-> [Kurz: Ochrana e-mailu Exchange Online na spravovaných zařízeních](tutorial-protect-email-on-enrolled-devices.md)
+> [Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních](tutorial-protect-email-on-enrolled-devices.md)

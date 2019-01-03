@@ -1,6 +1,5 @@
 ---
-title: Správa přenosu dat mezi aplikacemi pro iOS
-titlesuffix: Microsoft Intune
+title: Správa přenosu dat mezi aplikacemi pro iOS | Microsoft Intune
 description: Přečtěte si, jak používat zásady správy mobilních aplikací v Microsoft Intune ke správě přenosů dat mezi aplikacemi.
 keywords: ''
 author: brenduns
@@ -16,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e252822569723be6cfe18e488f79a7605f21193c
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: bbd0272b37b56f9f9e66cdf00ddc89a827f3c875
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728663"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53816969"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -36,11 +35,11 @@ Funkce **Správa pro Open In** pro zařízení s iOSem může omezit přenosy so
 ##  <a name="use-app-protection-with-ios-apps"></a>Ochrana aplikací pomocí aplikace pro iOS
 Použití zásad ochrany aplikací v IOS **Správa Open in** funkce k ochraně firemních dat těmito způsoby:
 
--   **Zařízení patřící zaměstnancům, která nejsou spravovaná řešením MDM:** Zásady ochrany aplikací můžete nastavit na **Povolit aplikaci přenos dat jenom do aplikací spravovaných zásadami**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
+-   **Zařízení patřící zaměstnancům, nejsou spravována žádným řešením MDM:** Můžete nastavit ochranu aplikace nastavení zásad **povolit aplikaci přenos dat jenom aplikace spravované podle zásad**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
 
--   **Zařízení spravovaná v Intune:** Pro zařízení zaregistrovaná v Intune jsou přenosy dat mezi aplikacemi se zásadami ochrany aplikací a ostatními spravovanými aplikacemi pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection-settings).   
+-   **Zařízení spravovaná pomocí Intune:** Pro zařízení zaregistrovaná v Intune přenos dat mezi aplikacemi se zásadami ochrany aplikací a další spravované aplikace pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection-settings).   
 
--   **Zařízení spravovaná řešením MDM třetí strany:** můžete omezit přenosy dat jenom do spravovaných aplikací s použitím iOS **Správa Open in** funkce.
+-   **Zařízení spravovaná řešením MDM třetí strany:** Můžete omezit přenosy dat jenom do spravovaných aplikací s použitím iOS **Správa Open in** funkce.
 Pokud chcete mít jistotu, že aplikace nasazené pomocí řešení MDM jiného výrobce byly také přidružené k pomocí zásad ochrany aplikací Intune, konfigurace nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [konfigurace nastavení hlavního názvu uživatele (UPN)](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Při nasazení aplikace pomocí nastavení hlavního názvu uživatele (UPN), použít zásady ochrany aplikací pro aplikaci, jakmile se uživatel přihlásí pomocí svého pracovního účtu.
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
@@ -59,7 +58,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 4.  Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 
 
-### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Příklad 1: Činnost správce v Intune nebo konzole řešení MDM jiného výrobce
+### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Příklad 1: Prostředí pro správu v Intune nebo konzole řešení MDM třetí strany
 
 1. Přejděte do konzoly pro správu Intune nebo poskytovatele řešení MDM jiného výrobce. Přejděte do části konzoly, ve které nasadíte nastavení konfigurace aplikace do zaregistrovaných zařízení s iOSem.
 
@@ -103,5 +102,5 @@ Například **požadování PINU v aplikaci** je snadné k otestování nastaven
 Nejdřív pro aplikaci pro iOS [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md). Další informace o testování zásad ochrany aplikací najdete v tématu [ověření zásad ochrany aplikací](app-protection-policies-validate.md).
 
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 [Co jsou zásady ochrany aplikací Intune](app-protection-policy.md)

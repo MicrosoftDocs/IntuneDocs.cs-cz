@@ -1,5 +1,5 @@
 ---
-title: Vytvoření zásad podmíněného přístupu pro Exchange
+title: Vytvoření zásad podmíněného přístupu Exchange | Microsoft Intune
 titlesuffix: Microsoft Intune
 description: Konfigurace podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated v Intune
 keywords: ''
@@ -15,12 +15,12 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0a539000153ad45b5256e4e63086fa72fee44947
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
+ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186086"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53817054"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -64,7 +64,7 @@ Než nakonfigurujete podmíněný přístup, ověřte, jestli jsou splněné tyt
 - Windows Phone 8.1 nebo novější
 - Nativní e-mailová aplikace v systému iOS
 - Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
-- **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. Aby v pracovních profilech Androidu fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work for Android Enterprise a zároveň tyto aplikace nasadit jako povinnou instalaci.
+- Poštovní klienti EAS, **zařízení s pracovním profilem:** Pouze **Gmail** a **Nine Work pro Android Enterprise** v **pracovního profilu** jsou podporovány v zařízení s pracovním profilem. Aby v pracovních profilech Androidu fungoval podmíněný přístup, musíte nasadit e-mailový profil pro aplikaci Gmail nebo Nine Work for Android Enterprise a zároveň tyto aplikace nasadit jako povinnou instalaci.
 
 > [!NOTE]
 > Aplikace Microsoft Outlook pro Android a iOS se nepodporuje prostřednictvím místního konektoru Exchange. Pokud chcete využít zásady Azure Active Directory podmíněného přístupu a zásady ochrany aplikací Intune s aplikací Outlook pro iOS a Android poštovních schránek v místním, najdete [hybridní použití moderního ověřování v aplikaci Outlook pro iOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth). 
@@ -125,6 +125,6 @@ Počínaje verzí 1704 můžou správci vytvořit zásady podmíněného příst
 
 2. V podokně **Zásady** vytvořte novou zásadu podmíněného přístupu Azure AD výběrem možnosti **Nová zásada**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)
