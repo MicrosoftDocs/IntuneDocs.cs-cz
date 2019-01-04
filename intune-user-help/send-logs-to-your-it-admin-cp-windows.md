@@ -1,6 +1,6 @@
 ---
 title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu
-description: Odesílání diagnostických protokolů pro firemní podpoře pomoct vyřešit problémy s aplikací
+description: Podrobnosti o chybě poslat usnadnit firemní podpoře opravit problémy s vaší aplikací
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: fa6018d4a226303c6ea097a9ee36a043a040038c
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: cc1af3dee9dc8c591322c26b65a354130b05786a
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626063"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006314"
 ---
 # <a name="send-diagnostic-logs-to-your-company-support-from-company-portal-for-windows"></a>Odesílání diagnostických protokolů firemní podpoře z portálu společnosti pro Windows
 
