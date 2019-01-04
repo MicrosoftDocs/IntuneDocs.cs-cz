@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 785f4d1d81858fe5d4ebe4feab72880b408d8cd3
-ms.sourcegitcommit: 0499d16db961aaed4bd134ee924e40c5861121c7
+ms.openlocfilehash: 49ecdebc2777112ce8c8c97af1f98b3c12b200e1
+ms.sourcegitcommit: 0dc977795ff80abb6a3b989ca633cba410f06c64
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389865"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54006280"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -37,14 +37,14 @@ Můžete použít zásady ochrany aplikací Intune **nezávisle na řešení spr
 
 Zásady ochrany aplikací lze konfigurovat pro aplikace běžící na zařízeních, která jsou:
 
-- **Zaregistrovaná v Microsoft Intune:** Tato zařízení jsou obvykle vlastněná společností.
+- **Zaregistrovaná v Microsoft Intune:** Obvykle jsou tato zařízení ve vlastnictví.
 
-- **Zaregistrovaná v rámci řešení pro správu mobilních zařízení (MDM) třetích stran:** Tato zařízení jsou obvykle vlastněná společností.
+- **Zaregistrovaná v řešení správy mobilních zařízení třetích stran:** Obvykle jsou tato zařízení ve vlastnictví.
 
   > [!NOTE]
   > Zásady správy mobilních aplikací není vhodné používat s řešeními pro správu mobilních aplikací třetích stran nebo zabezpečeného kontejneru.
 
-- **Neregistrovaná v žádném řešení pro správu mobilních zařízení:** Zařízení obvykle vlastní zaměstnanci a nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
+- **Nejsou zaregistrovaná v žádném řešení pro správu mobilních zařízení:** Zařízení jsou obvykle zařízení zaměstnanců, která nejsou spravovaná ani zaregistrovaná v Intune nebo jiných řešeních MDM.
 
 > [!IMPORTANT]
 > Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Přístup k místním poštovním schránkám Exchange můžete chránit také tak, že vytvoříte zásady ochrany aplikací Intune pro Outlook pro iOS a Android s hybridním moderním ověřováním. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zásady ochrany aplikací se nepodporují pro jiné aplikace, které se připojují k místním službám Exchange nebo SharePoint.
@@ -75,14 +75,14 @@ V současné době není dostupná podpora zařízení s Windows. Můžete ale p
 
 #### <a name="apps-without-app-protection-policies"></a>Aplikace bez zásad ochrany aplikací
 
-![Obrázek, který znázorňuje, že pokud se nepoužívají zásady ochrany aplikací, můžou se data volně přesouvat mezi aplikacemi](./media/apps-without-protection-policies.png)
+![Koncepčního obrázku pro přesun dat mezi aplikacemi se žádné zásady na místě](./media/apps-without-protection-policies.png)
 
 Pokud se aplikace používají bez omezení, můžou se osobní a firemní data prolínat. Firemní data můžou být uložená v osobním úložišti nebo přenesená do aplikací mimo váš dosah, a může tím dojít ke ztrátě dat. Šipky v předchozím diagramu znázorňují neomezený přesun dat mezi firemními i osobními aplikacemi a do úložišť.
 
 
 ### <a name="data-protection-with-app-protection-policies"></a>Ochrana dat pomocí zásad ochrany aplikací
 
-![Obrázek, který znázorňuje způsob ochrany firemních dat při použití zásad ochrany aplikací ](./media/apps-with-protection-policies.png)
+![Koncepčního obrázku, který zobrazuje firemní data chráněná zásadami](./media/apps-with-protection-policies.png)
 
 
 Pomocí zásad ochrany aplikací můžete zabránit ukládání firemních dat do místního úložiště na zařízení. Můžete také zamezit přesunu dat do jiných aplikací, které nejsou chráněné zásadami ochrany aplikací. Mezi nastavení zásad ochrany aplikací patří:
@@ -146,7 +146,7 @@ Implicitně smí existovat jenom jedna **globální** zásada pro tenanta. K vyt
 
 Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé účty (pracovní a osobní). Zásady ochrany aplikací se použijí, jen když se aplikace použijí v pracovním kontextu.
 
-Pro příklad osobní kontext, vezměte v úvahu uživatel, který spustí nový dokument ve Wordu, to je považovány za osobní kontext tak nepoužívají zásady ochrany aplikací Intune. Jakmile je uložený na firemním Onedrivu účtu pak bude consieered corporatte kontextu a zásady ochrany aplikací Intune se použijí.
+Pro příklad osobní kontext, vezměte v úvahu uživatel, který spustí nový dokument ve Wordu, to je považovány za osobní kontext tak nepoužívají zásady ochrany aplikací Intune. Jakmile je uložený na firemním Onedrivu účtu pak bude za firemním a zásady ochrany aplikací Intune se použijí.
 
 Příklad práci vezměte v úvahu uživatel spustí aplikaci OneDrive pomocí svého pracovního účtu. V pracovním kontextu nemůže přesunout soubory do svého osobního úložiště. Pokud ale později uživatel použije OneDrive se svým osobním účtem, může kopírovat a přesouvat data ze svého osobního OneDrivu bez omezení.
 
@@ -156,5 +156,5 @@ Příklad práci vezměte v úvahu uživatel spustí aplikaci OneDrive pomocí s
 
 [Jak vytvořit a nasadit zásady ochrany aplikací pomocí Microsoft Intune](app-protection-policies.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 Aplikace jiných firem, například mobilní aplikace Salesforce, fungují s Intune specifickým způsobem, aby chránily podniková data. Další informace o tom, jak konkrétně aplikace Salesforce funguje s Intune (včetně nastavení konfigurace aplikace MDM), najdete v článku [Aplikace Salesforce a Microsoft Intune](https://gallery.technet.microsoft.com/Salesforce-App-and-Intune-c47d44ee/file/188000/1/Salesforce%20App%20and%20Intune%20for%20external.pdf).
