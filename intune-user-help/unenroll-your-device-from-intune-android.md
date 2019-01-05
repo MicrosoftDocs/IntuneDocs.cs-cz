@@ -1,11 +1,11 @@
 ---
 title: Odebrání zařízení s Androidem z Intune | Microsoft Docs
-description: Popisuje zrušení registrace zařízení s Androidem v Intune.
+description: Odebrání zařízení s Androidem z portálu společnosti Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: d932005c955afed7f16e9766b559b77b2cd43182
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
-ms.translationtype: HT
+ms.openlocfilehash: 75b26e178badbaa7905199eb91490134d2b72ba9
+ms.sourcegitcommit: 61ed365f7f8826451c41bcab5e19bef97b5a3c72
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959481"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54057334"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -51,8 +51,23 @@ Postup odebrání všech dat, která do zařízení uložila aplikace Portál sp
 -   Odstraňte složku „\storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal“.
 
 ## <a name="uninstall-the-company-portal-app"></a>Odinstalace aplikace Portál společnosti  
-Portál společnosti je aplikace, která slouží ke správě zařízení. Tuto aplikaci nemůžete odinstalovat, dokud [nezrušíte registraci spravovaného zařízení](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  
+Portál společnosti je aplikace pro správu zařízení. Ji nelze odinstalovat, dokud ji [zrušení registrace zařízení od jeho správu](unenroll-your-device-from-intune-android.md#unenroll-your-android-device-from-management). Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  
 
-Můžete také klepnout na **Nastavení** > **Aplikace** > **Portál společnosti** > **Odinstalovat**.  
+Alternativně klepněte na **nastavení** > **aplikace** > **portál společnosti** > **odinstalovat**.  
+
+### <a name="remove-company-portal-app-as-device-administrator"></a>Odebrat aplikaci portál společnosti jako správce zařízení  
+Jako poslední možnost můžete odinstalovat aplikaci z vašeho zařízení tak, že odeberete jako správce zařízení.  
+
+Pokud máte zařízení ve vlastnictví společnosti, organizace může požadovat, aby portál společnosti na vašem zařízení za všech okolností. Pokud provádíte odinstalaci, může ztratit přístup k chráněné firemním prostředkům, jako je e-mail, aplikace, Wi-Fi nebo VPN, dokud je znovu nainstalovat aplikaci. Další informace o instalaci aktualizace nebo odebrání požadované aplikace, najdete v článku [do Microsoft Intune přidat aplikace](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
+
+Proveďte následující postup, chcete-li zakázat portálu společnosti jako správce zařízení. Názvy jednotlivých nastavení se může lišit na zařízení s Androidem.  
+
+**Android kroky možnost 1**:  
+1. Vyberte **nastavení** > **zabezpečení** > **nastavení dalšího ověření zabezpečení** > **Správci zařízení** .  
+2. Zrušte **portál společnosti** výběru.  
+
+**Android kroky možnost 2**:  
+1. Vyberte **nastavení** > **zamykací obrazovka a zabezpečení** > **další nastavení zabezpečení** > **Správce zařízení aplikace**.  
+2. Zrušte **portál společnosti** výběru.    
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
