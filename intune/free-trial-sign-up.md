@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/06/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2257253d023c97d14418b3566c0c493a3cd8f615
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 59e9af2449f384fce22acaef9a696f2944eabaa1
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737912"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067427"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -50,7 +50,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
 2. Vytvořte si účet. Použijte k tomu název společnosti, za který přidáte **.onmicrosoft.com**. 
 
-    ![Snímek obrazovky nového přihlašovacích údajů procesu účtu zkušební verze Microsoft Intune](./media/account-sign-up-site-user-id.png)
+    ![Snímek obrazovky nového přihlašovacích údajů procesu zkušebního účtu Intune](./media/account-sign-up-site-user-id.png)
 
     Pokud má vaše organizace vlastní doménu, kterou chcete použít bez **.onmicrosoft.com**, můžete doménu změnit na portálu pro správu Office 365 podle popisu v další části tohoto článku.
 

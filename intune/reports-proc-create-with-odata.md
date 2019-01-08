@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 01/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 9c93554fd6750459aacc154165e7a58e160534fb
-ms.sourcegitcommit: 1c9ef5cfac2fc024528d2cfc9d590fa68dd58080
+ms.openlocfilehash: 3599146aaebc2e3788fa96e8e04657ce4db41c4f
+ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429708"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54067444"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -59,9 +59,9 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu
 5. Otevřete Power BI Desktop.
 6. Zvolte **Načíst data** > **Datový kanál Odata**.
 7. Do pole pro adresu URL v okně **Datový kanál OData** vložte adresu URL vlastního kanálu.
-8. Vyberte **Základní**.
+8. Vyberte **Basic**.
 
-    ![Datový kanál OData](media/reports-create-01-odatafeed.png)
+    ![Datového kanálu OData pro datový sklad Intune pro vašeho tenanta](media/reports-create-01-odatafeed.png)
 
 9. Vyberte **OK**.
 10. Vyberte **Účet organizace** a pak se přihlaste pomocí přihlašovacích údajů Intune.
@@ -70,7 +70,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu
 
 11. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
-    ![Navigátor](media/reports-create-02-loadentities.png)
+    ![Snímek obrazovky Navigátor – seznam tabulek datového skladu](media/reports-create-02-loadentities.png)
 
 12. Vyberte **zařízení** a tabulky **ownerTypes**.  Vyberte **Načíst**. Power BI načte data do modelu.
 
@@ -78,7 +78,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu
 
 Můžete importovat víc tabulek k analýze nejen dat v jedné tabulce, ale souvisejících dat mezi tabulkami.  PowerBI má funkci zvanou **automatické rozpoznávání**, která se pokusí relace najít a vytvořit za vás. Tabulky v datovém skladu jsou vytvořené tak, aby funkci automatického rozpoznání v PowerBI podporovaly. I když ale PowerBI relace automaticky nenajde, stále je spravujete.
 
-![Správa relací](media/reports-create-03-managerelationships.png)
+![Spravovat relace související data napříč tabulkami](media/reports-create-03-managerelationships.png)
 
 1. Vyberte **Spravovat relace**.
 2. Pokud PowerBI ještě relace nerozpoznal, vyberte **Automatické rozpoznávání**.
@@ -99,7 +99,7 @@ Graf mapy stromové struktury zobrazuje hierarchická data jako pole uvnitř pol
 
 Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rámci vaší organizace.
 
-![Mapa stromové struktury s daty](media/reports-create-06-treemapwdata.png)
+![Mapa stromové struktury s daty – rozdělení výrobců zařízení](media/reports-create-06-treemapwdata.png)
 
 ## <a name="add-a-filter"></a>Přidání filtru
 
@@ -111,7 +111,7 @@ Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší a
 
    V tabulce zařízení je datové pole s názvem **OwnerTypeKey**, které obsahuje kód, jestli je zařízení ve vlastnictví společnosti, nebo osobní. Protože v tomto filtru chcete zobrazit popisné názvy, najděte tabulku **ownerTypes** a přetáhněte **ownerTypeName**. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
 
-![Mapa stromové struktury s filtrem](media/reports-create-08_ownertype.png)
+![Mapa stromové struktury s filtrem - podporuje relace mezi tabulkami](media/reports-create-08_ownertype.png)
 
 Teď máte interaktivní filtr, pomocí kterého můžete přepínat mezi zařízeními ve vlastnictví společnosti a v osobním vlastnictví. Pomocí tohoto filtru uvidíte, jak se jejich rozdělení mění.
 
