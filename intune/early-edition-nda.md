@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/07/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 94125ced318f304e5b2bdc8f09472280fc05b08a
-ms.sourcegitcommit: 662afec5e87639a7f541bb89700cc0fec5037bb0
+ms.openlocfilehash: 18cb2c6f9d43ee58f1289c754c16d5b87bcb8139
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069349"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122651"
 ---
 # <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Časná edice Microsoft Intune – leden 2019
 
@@ -52,7 +52,7 @@ Budete moct odstranit spravované aplikace Google Play v Microsoft Intune. Pokud
 ### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Ve verzi Preview podpory pro vlastněných společností, plně spravovaná zařízení s Androidem <!-- 1574342  -->
 Intune bude podporovat plně spravovaná zařízení s Androidem vlastnictví "vlastník zařízení" scénář, ve kterém zařízení úzce spravuje IT a jste spojeni jednotlivým uživatelům. To umožňuje správcům spravovat celé zařízení, vynucovat ochranu před rozsahem rozšířené ovládací prvky zásad, není k dispozici pro pracovní profily a instalaci aplikací ze spravovaného obchodu Google Play pouze omezení pro uživatele. K nastavení plně spravovaná zařízení s Androidem, budou moct **registrace zařízení** > **registrace zařízení s Androidem** > **uživatele vlastněné společností, plně spravovaná zařízení** . Mějte prosím na paměti, že tato funkce je ve verzi preview. Některé funkce Intune, jako jsou certifikáty, dodržování předpisů a podmíněného přístupu nejsou aktuálně k dispozici pro Android je plně spravovaná zařízení uživatelů.
 
-### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660----"></a>Nasazení služby online licenci pro obchodní aplikace pro Microsoft Store <!-- 16726660  -->
+### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----1672660----"></a>Nasazení služby online licenci pro obchodní aplikace pro Microsoft Store <!-- 1672660  -->
 Budete moct přiřadit vyžaduje online licencovaných Microsoft Store pro obchodní aplikace v kontextu zařízení. Nasazení Microsoft Store pro firmy díky tomu umožní aplikaci nainstalují pro všechny uživatele v zařízení. Tento krok platí jenom na Windows 10 RS4 + desktopových zařízeních. Možnost instalace v kontextu zařízení je k dispozici na stránce pro přiřazení klientské aplikace pro MSFB Online licencované aplikace.
 
 ### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470----"></a>Konfigurace profilu tak, aby se v Průvodci nastavením přeskočily některé obrazovky <!-- 2276470  -->
@@ -93,7 +93,7 @@ V systému Windows 10 a novější zařízení budete moct vytvořit konfigurač
 
 [Nastavení sítě VPN ve Windows 10](vpn-settings-windows-10.md) popisuje aktuální seznam nastavení. 
 
-### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user----1333642-eeready---"></a>Použít S/MIME k šifrování a podepisování více zařízení pro uživatele <!-- 1333642 eeready -->
+### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user----1333642---"></a>Použít S/MIME k šifrování a podepisování více zařízení pro uživatele <!-- 1333642 -->
 Šifrování S/MIME e-mailu pomocí nového profilu importovaný certifikát se bude podporovat (**konfigurace zařízení** > **profily** > **vytvořit profil** > Vyberte platformy > **importovaný certifikát PKCS** typ profilu). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může doručit stejné certifikáty do více zařízení zaregistrovaných jedním uživatelem. To také zahrnuje:
 
 - Nativní e-mailový profil v iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
@@ -140,8 +140,6 @@ Pro vaše aktualizační okruhy Windows 10 budete moct:
 - obnovit původní nastavení automatických aktualizací na počítač s Windows 10 na počítače, které běží *aktualizace z října 2018*
 - aktualizace nastavení, která umožňuje blokovat nebo povolit uživatelům k pozastavení instalace aktualizace z nového softwaru nakonfigurujte *nastavení* jejich počítačů. 
 
-
-
 ### <a name="ios-email-profiles-can-use-smime-signing-and-encryption----2662949---"></a>e-mailové profily iOS můžete použít S/MIME podepisování a šifrování <!-- 2662949 -->
 Budete moct vytvořit e-mailový profil, který obsahuje jiné nastavení. To zahrnuje nastavení S/MIME, které lze použít pro podepisování a šifrování komunikace e-mailu na zařízeních s Iosem (**konfigurace zařízení** > **profily**  >   **Vytvoření profilu** > zvolit **iOS** pro platformu > **e-mailu** pro typ profilu).
 
@@ -155,7 +153,7 @@ Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** >
 Budete moct vytvořit konfigurační profil, který nastaví nastavení služby endpoint protection na zařízeních s Windows 10, včetně nástroje BitLocker. Tento postup přidá podporu pro Windows 10 Professional edition pro některá nastavení nástroje BitLocker. Nastavení aktuální edice Windows 10 najdete v tématu [nastavení služby Endpoint protection pro Windows 10](endpoint-protection-windows-10.md#windows-encryption).
 
 ### <a name="intune-device-reporting-fields----2748738---"></a>Zařízení v Intune polí pro vytváření sestav <!-- 2748738 -->
-Intune bude poskytovat další zařízení polí, včetně s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole budou dostupná tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
+Intune bude poskytovat další zařízení polí, včetně Id registrace aplikace, s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole budou dostupná tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
 
 ### <a name="shared-device-configuration-is-renamed-to-lock-screen-message-for-ios-devices-in-the-azure-portal----2809362---"></a>Konfigurace sdíleného zařízení bylo přejmenováno na zpráva na zamčené obrazovce pro zařízení s Iosem na webu Azure Portal <!-- 2809362 -->
 Při vytváření konfiguračního profilu pro zařízení s Iosem, budete moct přidat **konfigurace sdíleného zařízení** nastavení na zamykací obrazovce zobrazit určitý text. To zahrnuje následující změny: 
@@ -185,6 +183,20 @@ Můžete povolit vždy zapnutá síť VPN v **konfigurace zařízení** > **prof
 Tato aktualizace zahrnuje nové nastavení k ukončení procesů pomocí Správce úloh na zařízení s Windows 10. Pomocí konfiguračního profilu zařízení (**konfigurace zařízení** > **profily** > **vytvořit profil** > v **platformy** , zvolte **Windows 10** > v **typ profilu**, zvolte **omezení zařízení** > **Obecné** nastavení), budete chtít povolit nebo zakázat toto nastavení.
 Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení omezení zařízení s Windows 10](device-restrictions-windows-10.md).
 Platí pro: Windows 10 a novější
+
+### <a name="additional-settings-for-outlook----3301182---"></a>Další nastavení pro aplikaci Outlook <!-- 3301182 -->
+Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující:
+- Povolte jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v Iosu a Androidu
+- Nasazení moderní ověřování Office 365 a hybridním moderním ověřováním místních účtů
+- Použití `SAMAccountName` pro pole uživatelské jméno v e-mailový profil, pokud je vybrána základní ověřování
+- Povolit kontakty, které chcete uložit
+- Konfigurace upozornění než odešlete externím příjemcům
+- Konfigurace **zaměřuje doručené pošty**
+- Vyžadovat biometrické údaje pro přístup k aplikaci Outlook pro iOS 
+- Blokovat externí obrázky
+
+> [!NOTE]
+> Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-settings) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-settings).
 
 ### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Šablony pro správu jsou ve verzi public preview a přesunout do své vlastní konfigurační profil <!-- 3322847 -->
 Šablony pro správu v Intune (**konfigurace zařízení** > **šablony pro správu**) jsou aktuálně ve verzi private preview. Od této aktualizace: Šablony pro správu zahrnuje přibližně 300 nastavení, které jde spravovat v Intune. Dříve tato nastavení existuje pouze v editoru zásad skupiny.

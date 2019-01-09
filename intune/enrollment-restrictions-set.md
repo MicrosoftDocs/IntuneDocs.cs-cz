@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e6f816ae0eb025addfaa0c5f7ec7d16005f6b040
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: a8ebe8f8cd84ef5eb38bf7e17f413bcc6a0791cd
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112948"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122535"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -81,6 +81,8 @@ Nastavení omezení typu zařízení můžete změnit podle následujícího pos
     - Pracovní profil Androidu podporuje major.minor.rev.build.
     - Systém iOS podporuje major.minor.rev. Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
     - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
+> [!Note]
+> Windows 10 neposkytuje číslo sestavení během registrace, tak pro instanci, pokud zadáte do 10.0.17134.100 a zařízení je 10.0.17134.174 se zablokuje při registraci.
 8. U každé uvedené platformy vyberte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
 9. Zvolte **OK**.
 

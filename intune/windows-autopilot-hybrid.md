@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9de47f996706255c072926524860cfcc833e8b8b
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 2fda0fbc40137c8b5a2acd32cacf12bf7d04b0d0
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642553"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122600"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
@@ -204,7 +204,7 @@ Bude trvat přibližně 15 minut, než se stav profilu zařízení změní z **N
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: Zvolte **Windows 10 a novější**.
    - **Typ profilu**: Zvolte **připojení k doméně (Preview)**.
-3. Zvolte **nastavení** a zadejte **předpona názvu počítače**, **název domény**, a **organizační jednotka** ve formátu DN (volitelné). 
+3. Zvolte **nastavení** a zadejte **předpona názvu počítače**, **název domény**a (volitelně) **organizační jednotka** v [Formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 4. Zvolte **OK** > **Vytvořit**. Profil se vytvoří a zobrazí se v seznamu.
 5. Pokud chcete profil přiřadit, postupujte podle kroků v části [Přiřazení profilu zařízení](device-profile-assign.md#assign-a-device-profile). 
 

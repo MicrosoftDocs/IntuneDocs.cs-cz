@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 76a16df06c085eb3b40a3a48d4398a46233a09b8
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: 5a84bcd820b7596d1b1df01342604562c7853140
+ms.sourcegitcommit: a44359b426e19b8bf4b99eca6af2755c6d3c6fb8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626080"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54098313"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-kiosk-devices"></a>Nastavení Intune registrace zařízení s Androidem enterprise v celoobrazovkovém režimu
 
@@ -112,7 +112,7 @@ Zařízení s Androidem 5.1 a vyšším, která podporují bezkontaktní komunik
 
 ### <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
-U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android 6.1 a novější verze můžou také využít skenování kódu QR při použití metody registrace **aft#setup**.
+U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android verze 6.1 a novější můžete taky využít naskenovat kód QR. při použití **afw #setup** metodu registrace.
 
 1. Zapněte vymazané zařízení.
 2. Na **uvítací** obrazovce vyberte svůj jazyk.

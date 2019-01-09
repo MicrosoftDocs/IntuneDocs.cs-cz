@@ -14,12 +14,12 @@ ms.assetid: a0b8e55e-c3d8-4599-be25-dc10c1027b62
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
-ms.openlocfilehash: 753ad125e541936586f2939985a23ed3b06ea7ea
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: a762f14fd93400d76c63d2108a41229bf2ffc34d
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817156"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122583"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby používání podmíněného přístupu s Intune?
 
@@ -39,15 +39,14 @@ Intune a Azure Active Directory spolupracují a zajišťují, aby přístup k e-
 Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje službě Azure Active Directory, která ho využívá k vynucení zásady podmíněného přístupu vytvořené v Azure Active Directory, když se uživatel pokusí získat přístup k firemním prostředkům.
 
 Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím portálu [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
-
--   Přečtěte si další informace o [podmíněném přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+-   Další informace o [vyžadují spravovaná zařízení s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-managed-devices).
 
 -   Přečtěte si další informace o [dodržování předpisů zařízením v Intune](device-compliance.md).
 
--   Přečtěte si další informace o [ochraně e-mailu, Office 365 a dalších služeb pomocí podmíněného přístupu v Intune](app-based-conditional-access-intune.md).
+-   Další informace o [podporované prohlížeče pomocí podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> Pokud na zařízeních s Androidem povolíte přístup na základě zařízení pro Sharepoint Online, je nutné, aby uživatelé na zaregistrovaném zařízení povolili možnost **Povolit přístup z prohlížeče** následujícím způsobem:
+> Na zařízeních s Androidem, při povolení přístupu podle zařízení pro Sharepoint Online nebo přístup k Exchangi Online, na základě prohlížeče uživatelů musí povolit **povolit přístup z prohlížeče** možnost v zaregistrovaném zařízení následujícím způsobem:
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
 > 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
@@ -146,7 +145,9 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 #### <a name="bring-your-own-device-byod"></a>Přineste si vlastní zařízení (BYOD)
 
--   **Připojení k síti na pracovišti a správa prostřednictvím Intune:** Sem uživatel připojit svoje osobní zařízení pro přístup k firemním prostředkům a službám. Můžete použít připojení k pracovišti a zaregistrovat zařízení v Intune pro přijímání zásad na úrovni zařízení, což je také další možnost pro vyhodnocování kritérií podmíněného přístupu.
+-   **Připojení k síti na pracovišti a správa prostřednictvím Intune:** Sem uživatel připojit svoje osobní zařízení pro přístup k firemním prostředkům a službám. Můžete použít připojení k síti na pracovišti a zaregistrovat zařízení v MDM Intune přijímat zásady na úrovni zařízení, která je také další možnost pro vyhodnocování kritérií podmíněného přístupu.
+
+Další informace o [správy zařízení ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Podmíněný přístup založený na aplikacích
 

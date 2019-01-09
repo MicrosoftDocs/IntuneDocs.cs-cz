@@ -15,12 +15,12 @@ ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b12cec7a01d809eb5a6b6523a73dd224c10c972e
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 3f19425fad2cd5d8d2d832eac42c84f4a0f827b0
+ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817190"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54122617"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -64,24 +64,24 @@ Další informace o souhlas a aplikace Azure Active Directory najdete v tématu 
 
 ## <a name="to-set-up-zimperium-integration"></a>Nastavení integrace řešení Zimperium
 
-1.  Přejděte na [konzole Zimperium MTD](https://sso.zimperium.com/signon/aad/) a přihlaste se pomocí svých přihlašovacích údajů. K provedení instalačního procesu integrace řešení Zimperium, musíte se přihlásit pomocí Azure Active Directory uživatele, který má roli globálního správce. Tato operace jednorázová nastavení používá oprávnění globálního správce k udělení oprávnění ve vaší organizaci pro aplikace Zimperium s Intune komunikovat. 
+1.  Přejděte do [konzoly Zimperium MTD](https://sso.zimperium.com/signon/aad/) a přihlaste se pomocí přihlašovacích údajů. K provedení instalačního procesu integrace řešení Zimperium, musíte se přihlásit pomocí Azure Active Directory uživatele, který má roli globálního správce. Tato operace jednorázová nastavení používá oprávnění globálního správce k udělení oprávnění ve vaší organizaci pro aplikace Zimperium s Intune komunikovat. 
 
 2.  Zvolte z levé nabídky možnost **Management** (Správa).
 
-3.  Zvolte **nastavení MDM** kartu.
+3.  Vyberte kartu **MDM settings** (Nastavení MDM).
 
 4.  Zvolte **Add MDM** (Přidat MDM) a pak vyberte **Microsoft Intune** ze seznamu **MDM provider** (Zprostředkovatel MDM).
 
-5.  Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností: **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
+5.  Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností: **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
 
     > [!IMPORTANT]  
     > Je nutné přidat Zimperium zConsole, zIPS pro iOS a Android k dokončení procesu integrace s Intune.
 
-6.  Zvolte **přijmout** autorizovat aplikaci Zimperium komunikovalo s Intune a Azure Active Directory.
+6.  Volbou **Accept** (Přijmout) povolte komunikaci aplikace Zimperium s Intune a Azure Active Directory.
 
 7.  Po přidání **Zimperium zConsole** a **zIPS pro iOS a Android** aplikací do služby Azure AD přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
 
-8.  Zvolte **Dokončit** uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
+8.  Volbou **Finish** (Dokončit) uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
 
 9.  Odhlaste se z konzole Zimperium MTD.
 
