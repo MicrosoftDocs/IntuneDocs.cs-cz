@@ -16,12 +16,12 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 81f84c2e645a9a6a20ff901239117b562a26b0aa
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 9d6c894e30b050ec6e824e1e77d0c476d4dc15bc
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186643"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149623"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Správa propojení uživatelů se zařízeními u počítačů s Windows
 
@@ -43,13 +43,13 @@ Propojení uživatele s počítačem:
 
    - Pokud chcete nechat počítač propojený s případným aktuálním uživatelem, klikněte na **Zrušit**.
 
-   - Pokud chcete aktuálnímu uživateli odebrat odkaz (za předpokladu, že existuje), zvolte <strong>Odebrat odkaz**&gt; **OK</strong>.
+   - Chcete-li odebrat odkaz na aktuálním uživatelem, pokud existuje, zvolte <strong>odebrat odkaz **&gt;** OK</strong>.
 
    - Pokud chcete propojit počítač s novým uživatelem, vyberte uživatele v seznamu **Všichni uživatelé**. Potvrďte správnost údajů o uživateli a potom zvolte **OK**.
 
 > [!TIP]
 > Když chcete koncovým uživatelům omezit schopnost propojit se s počítači, povolte možnost **Omezit schopnosti uživatelů propojit s počítači vlastní účet** v zásadě **Nastavení agenta Microsoft Intune**.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

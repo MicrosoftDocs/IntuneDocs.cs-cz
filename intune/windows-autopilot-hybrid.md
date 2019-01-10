@@ -16,18 +16,15 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 2fda0fbc40137c8b5a2acd32cacf12bf7d04b0d0
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
+ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122600"
+ms.locfileid: "54149657"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
-
-> [!NOTE]
-> Tato funkce se bude zavádět pro uživatelskou základnu v průběhu několika dalších dnů. Následující postup bude možné provést až po jejím zavedení pro váš účet.
 
 ## <a name="prerequisites"></a>Požadavky
 
