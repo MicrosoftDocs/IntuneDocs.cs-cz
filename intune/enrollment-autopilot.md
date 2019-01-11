@@ -16,12 +16,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 636767a783f3c2f2454423f0f6bbda9da781c8e2
-ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
+ms.openlocfilehash: 17e60e489b024b5f70c0c3c9a1fe564ed227172e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149726"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210852"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -79,20 +79,20 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna zařízení v přiřazených skupinách bez Autopilotu se zaregistrují se službou nasazení Autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
 4. Pro **Režim nasazení** zvolte jednu z těchto dvou možností:
     - **Řízené uživatele**: Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
-    - **Nasazení sebou samým (Preview)**: (Vyžaduje nejnovější [build Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/).) Zařízení s tímto profilem nejsou přiřazená uživateli, který je registruje. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
+    - **Místním nasazení (preview)**: (vyžaduje Windows 10, verze 1809 nebo novější) zařízení s tímto profilem nejsou přidruženy s uživatelem, registrace zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
 5. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 6. Vyberte **Software spouštěný při prvním zapnutí zařízení**, nakonfigurujte následující možnosti a pak zvolte **Uložit**:
     - **Jazyk (oblast)**\*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
     - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
     - **Licenční smlouva s koncovým uživatelem (EULA)**: (Windows 10 verze 1709 nebo novější) Zvolte, pokud chcete uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Zvolte, pokud chcete zobrazit nastavení ochrany osobních údajů pro uživatele.
-    - **Skrýt možnosti změnu účtu (jenom Windows Insider)**: Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    - **Skrýt možnosti změnu účtu (vyžaduje Windows 10, verze 1809 nebo novější)**: Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ uživatelského účtu**: Zvolte typ účtu uživatele (**správce** nebo **standardní** uživatele).
-    - **Použít šablonu název počítače (pouze Windows Insider)**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
+    - **Použít šablonu název počítače (vyžaduje Windows 10, verze 1809 nebo novější)**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
 
 6. Výběrem možnosti **Vytvořit** vytvořte profil. Profil nasazení Autopilotu je teď možné přiřazovat zařízením.
 
-*Obě možnosti **Jazyk (oblast)** a **Automaticky nakonfigurovat klávesnici** jsou k dispozici, jen pokud v **režimu nasazení** zvolíte **Nasazení sebou samým (Preview)** (vyžaduje nejnovější [build Windows 10 Insider Preview](https://docs.microsoft.com/windows-insider/at-work-pro/)).
+* Oba **jazyk (oblast)** a **automaticky nakonfigurovat klávesnici** jsou k dispozici, pokud jste zvolili pouze **místním nasazení (preview)** pro **režim nasazení**  (vyžaduje Windows 10, verze 1809 nebo novější).
 
 
 ## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Přiřazení profilu nasazení Autopilotu ke skupině zařízení
@@ -128,7 +128,7 @@ Pokud chcete zobrazit upozornění na nepřiřazená zařízení, v [Intune na p
 
 K zařízení Autopilot můžete přiřadit uživatele. Díky přiřazení se během instalace systému Windows uživatel předem vyplní na přihlašovací stránce s [firemním brandingem](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding) ze služby Azure Active Directory. Také můžete nastavit vlastní uvítací název. Ten se předem nevyplňuje, ani neupravuje přihlašování ve Windows. Způsobem popsaným níže lze přiřadit jen uživatele s licencí pro službu Intune.
 
-Požadavky: Portál Azure Active Directory společnosti byl nakonfigurován a nejnovější [Windows 10 Insider Preview Build](https://docs.microsoft.com/windows-insider/at-work-pro/).
+Požadavky: Portál Azure Active Directory společnosti byl nakonfigurován a Windows 10, verze 1809 nebo novější.
 
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení** > zvolte zařízení > **Přiřadit uživatele**.
 
