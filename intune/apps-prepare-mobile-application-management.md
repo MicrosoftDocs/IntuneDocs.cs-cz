@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 84b36f6cae9dd16bde6bd380407a78aeb2478010
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 742b4892c4dbe9ee2dfa2bb03eebb2667803c6bf
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112421"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210750"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -98,7 +98,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Blokovat snímek obrazovky (jenom Android)|X|X|
 |Podpora MAM bez registrace zařízení|X|X|
 |Úplné vymazání|X|X|
-|Selektivní vymazání <br></br>**Poznámka:** V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
+|Selektivní vymazání <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
 |Zabránit možnosti Uložit jako|X||
 |Konfigurace cílové aplikace|X||
 |Podpora víc identit|X||
@@ -115,6 +115,6 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 
 Další informace o zásadách ochrany aplikací a službě Intune najdete v těchto tématech:
 
-  - [Nástroj App Wrapping Tool a aplikace pro Android](app-wrapper-prepare-android.md)</br>
-  - [Nástroj App Wrapping Tool a aplikace pro iOS](app-wrapper-prepare-ios.md)</br>
+  - [Nástroj App Wrapping Tool a aplikace pro Android](app-wrapper-prepare-android.md)<br>
+  - [Nástroj App Wrapping Tool a aplikace pro iOS](app-wrapper-prepare-ios.md)<br>
   - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)

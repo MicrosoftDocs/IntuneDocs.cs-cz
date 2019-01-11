@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 60df25542e69422e15a2a57473a3fbfa2cc413a5
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
+ms.openlocfilehash: d5b07262dad3eaab76dd4854b82f0e45b3921b26
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959498"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203497"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
@@ -56,7 +56,15 @@ Napřed potřebujete nainstalovat aplikaci Portál společnosti, a pokud je to p
 * Organizace zpřístupní spravované aplikace na Portálu společnosti. Přejděte do aplikace Portál společnosti nebo na její web, kde můžete tyto aplikace vyhledávat, prohlížet nebo je odtud instalovat. 
 * Aplikaci si nainstalujete z obchodu Google Play a pak se do ní přihlásíte pod svým pracovním nebo školním účtem.  
 
-## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?
+ ## <a name="available-apps"></a>Dostupné aplikace   
+ Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.   
+
+ Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Android, budete mít přístup do aplikace pro Android, ale ne aplikace pro iOS.   
+
+ ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
+ Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti **kontakt na IT** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
+
+## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  
 Následující seznam popisuje nastavení aplikace, které můžou pracovníci podpory ve společnosti spravovat. Tato nastavení ovlivňují, jak na zařízení zobrazujete pracovní nebo školní data, jak k nim přistupujete nebo je používáte:
 
 * Přístup k určitým webům  

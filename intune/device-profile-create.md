@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 12/18/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,26 +15,27 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6bc6f5d2f32ff060eb2eec568b0048628ad0e09c
-ms.sourcegitcommit: 349ab913932547b4a7491181f0aff092f109b87b
+ms.openlocfilehash: cb6e3f0a9f62348d55b5dc2284c1007ea7faf088
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303851"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203208"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
-1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
 
-2. V **Microsoft Intune** vyberte **Konfigurace zařízení** a pak **Profily**. Pak vyberte **Vytvořit profil**.
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 
 3. Zadejte tyto vlastnosti:
 
-   - **Název**: Zadejte popisný název nového profilu.
-   - **Popis**: Zadejte popis profilu. (Ten je nepovinný, ale doporučuje se ho zadat.)
+   - **Název**: Zadejte popisný název pro nový profil.
+   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: Vyberte typ platformy:  
 
        - **Android**
@@ -46,7 +47,7 @@ ms.locfileid: "52303851"
        - **Windows 10 a novější**
 
    - **Typ profilu**: Vyberte typ, který chcete vytvořit. Seznam závisí na platformě, kterou vyberete.
-   - **Nastavení**: Informace o nastaveních pro jednotlivé typy profilů najdete v následujících tématech:
+   - **Nastavení**: Informace o nastaveních pro jednotlivé typy profilů najdete v následujících článcích:
 
        -  [Funkce zařízení](device-features-configure.md)
        -  [Omezení zařízení](device-restrictions-configure.md)

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 755e836c5954b9cbbf3c7729755aaa25062710d8
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: ec170727b8846caae3e96cc19be8d1e274c17427
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642587"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210733"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune
 
@@ -47,7 +47,7 @@ Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Mic
 5. Jako **Platformu** vyberte **Windows 10 – všechna zařízení**, potom vyberte příslušné hodnoty **Minimální verze**, **Architektury** a **Stáhnout metadata aplikace**. 
 6. Výběrem možnosti **Stáhnout** uložte soubor na místní počítač.
 
-    ![Podrobnosti balíčku Windows 10 – všechna zařízení a Architektura x86 vybraného ke stažení](./media/Win10CP-all-devices.png)
+    ![Zařízení s Windows 10, kde se architektura rovná X86, je vybrán.](./media/Win10CP-all-devices.png)
 
 7. Vyberte **Stáhnout** a stáhněte všechny balíčky v části Požadované platformy.  
     Tuto akci je nutné provést pro architektury x86, x64 a ARM – celkem 12 balíčků.

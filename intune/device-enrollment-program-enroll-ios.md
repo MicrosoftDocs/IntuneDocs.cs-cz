@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 1af474063ec7b6ccac2a36afbec421767f79444a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: afddf57f93ef2308ce8e8fd8aab8d74c3419a3ea
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642842"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203412"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -192,7 +192,15 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Přiblížení</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
     | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
     | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku **Diagnostická data**. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
-
+    | <strong>Zobrazit tón</strong> | Umožnit uživateli zapnout tón zobrazení. |
+    | <strong>Ochrana osobních údajů</strong> | Zobrazte na obrazovce o ochraně osobních údajů pro uživatele. |
+    | <strong>Migrace s androidem</strong> | Uživateli přidělit možnosti můžete migrovat data ze zařízení s Androidem. |
+    | <strong>iMessage a FaceTime</strong> | Umožnit uživateli nastavit iMessage a FaceTime. |
+    | <strong>Registrace</strong> | Zobrazit informační obrazovky registrace pro vzdělávání uživatelů, jako je například zahrnovat list a multitaskingu a Control Centeru. |
+    | <strong>Podívejte se na migraci</strong> | Umožnit uživateli pro migraci dat ze zařízení kukátka. |
+    | <strong>Čas obrazovky</strong> | Zobrazte obrazovku čas obrazovky. |
+    | <strong>Aktualizace softwaru</strong> | Zobrazte obrazovku povinné softwarové aktualizace. |
+    | <strong>Instalační program SIM</strong> | Umožnit uživateli přidat mobilní plánu. |
 
 14. Zvolte **OK**.
 

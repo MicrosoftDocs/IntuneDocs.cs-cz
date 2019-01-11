@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0c09a80f97056f7cb08d69d6a8deedc4e421a556
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 37483f0fa33db109510ee537772a7bdead79e4f3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190298"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203548"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -45,11 +45,11 @@ Když uživatel kontaktuje podporu ohledně technického problému s Intune, zad
 
 Zvolením možnosti **Vybrat uživatele** v podokně pro řešení potíží zobrazíte informace o uživateli. Informace o uživateli vám mohou pomoci porozumět aktuálnímu stavu uživatelů a jejich zařízení.  
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Řešení potíží**.
 4. Klikněte na **Vybrat** a vyberte uživatele, pro kterého chcete řešit potíže.
-5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na **Vybrat**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následující tabulce.
+5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na tlačítko **vyberte**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následující tabulce.
 
 > [!Note]  
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
@@ -109,7 +109,7 @@ Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility 
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
 | Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Název aplikace    | Název aplikace                                                           |
+| App name (Název aplikace)    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
 | Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
@@ -187,7 +187,7 @@ Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozic
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
 | Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Název aplikace    | Název aplikace                                                           |
+| App name (Název aplikace)    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
 | Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
@@ -233,7 +233,7 @@ Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozic
 | Vlastnost    | Popis                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
 | Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Název aplikace    | Název aplikace                                                           |
+| App name (Název aplikace)    | Název aplikace                                                           |
 | Název zařízení | Název typu zařízení                                                       |
 | Typ zařízení | Název typu zařízení                                                       |
 | Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
@@ -254,7 +254,7 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 
 Po výběru řádku chyby se zobrazí další podrobnosti.
 
-| Oddíl | Popis |
+| Sekce | Popis |
 |-------------|----------|
 | Podrobnosti chyby | Podrobnější vysvětlení chyby |
 | Možná náprava | Navrhovaný postup k vyřešení chyby. Pro některé chyby nemusí být náprava uvedená. |
@@ -271,6 +271,15 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 | Ověřování registrace nebylo úspěšné | Došlo k pokusu o registraci pomocí staré verze Portálu společnosti. |
 | Zařízení se nepodporuje | Zařízení nesplňuje minimální požadavky pro registraci v Intune. |
 | Nesplnila se omezení registrace | Tato registrace se zablokovala kvůli omezení registrace, které nakonfiguroval správce. |
+| Verze zařízení příliš nízká. | Správce nakonfiguroval omezení registrace vyžaduje vyšší verzi zařízení. |
+| Verze zařízení příliš vysoká. | Správce nakonfiguroval omezení registrace vyžadující nižší verzi zařízení. |
+| Není možné zaregistrovat zařízení jako osobní | Správce nakonfiguroval omezení registrace k blokování registrace osobních a nebyl předdefinované označené jako firemní zařízení se nezdařilo. |
+| Platforma zařízení blokované | Správce nakonfiguroval omezení registrace, které blokuje platformy toto zařízení. |
+| Vypršení platnosti hromadného tokenu | Hromadný token do zřizovacího balíčku vypršela platnost. |
+| Podrobnosti nebyl nalezen nebo zařízení AutoPilot | Při pokusu o registraci se nenašel zařízení Autopilot. |
+| Profil AutoPilot se nenašel nebo není přiřazen | Zařízení nemá aktivní profil Autopilot. |
+| Metodu registrace AutoPilot neočekávané | Zařízení se pokusil zaregistrovat pomocí metody není povolený. |
+| Zařízení AutoPilot se odstranilo. | Při pokusu o registraci zařízení byla odebrána z Autopilot pro tento účet. |
 | Dosažení limitu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
 | Onboarding Apple | Registrace všech zařízení s iOSem se v tuto chvíli zablokovala kvůli chybějícímu nebo prošlému certifikátu Apple MDM Push Certificate v Intune. |
 | Zařízení se nezaregistrovalo předem | Zařízení se nezaregistrovalo předem jako podnikové a správce zablokoval všechny osobní registrace. |

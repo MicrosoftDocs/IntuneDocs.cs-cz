@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 01/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c0603b3cfd2b8fbe1d26e782118fb07526849cfa
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 5dfce7475e0ee7e39ea6d99c6d12f4ef513c2713
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53816836"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203242"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -44,20 +44,16 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V úloze **Klientské aplikace** zvolte **Monitorovat** > **Stav ochrany aplikace** a zobrazte tak souhrnné zobrazení:
+4. V **klientské aplikace** zatížení, zvolte **stav ochrany aplikace** z **monitorování** části, a zobrazte tak souhrnné zobrazení:
 
 ![Dlaždice souhrnu podokna Správa mobilních aplikací Intune](./media/app-protection-user-status-summary.png)
 
--   **Uživatelé**: Celkový počet uživatelů ve vaší společnosti, kteří používají aplikaci, která je přidružené k zásadám v pracovním kontextu.
+-   **Přiřazení uživatelé**: Celkový počet přiřazení uživatelé ve vaší společnosti, kteří používají aplikace, které je přidružené k zásadám v pracovním kontextu a jsou chráněné a licenci, a také přiřazení uživatelé, které jsou Nechráněno a nelicencováno
+-   **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. Zařízení s Jailbreakem jsou hlášeny v rámci **uživatelé označení příznakem**.
+-   **Stav uživatele pro iOS** a **stav uživatele pro Android**: Počet uživatelů, kteří použili aplikaci, kteří mají přiřazené k nim v pracovním kontextu pro platformu související zásady. Tyto informace zobrazují počet uživatelů, spravovat zásady, jakož i počet uživatelů, kteří používají aplikaci, která není cílem žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
 
--   **SPRAVOVÁNO ZÁSADOU**: Počet uživatelů, kteří použili aplikaci, kteří mají zásady přiřazené k nim v pracovním kontextu.
-
--   **ŽÁDNÉ ZÁSADY**: Počet uživatelů, kteří používají aplikaci, která není cílem žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
     > [!NOTE]
     > Pokud máte pro každou platformu více zásad, bude se uživatel považovat za spravovaného zásadou, pokud má přiřazenou minimálně jednu zásadu.
-
-- **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. V současnosti jsou v části **Uživatelé označení příznakem** jenom uživatelé zařízení, u kterých byla zrušena softwarová omezení (zařízení s jailbreakem).
-
 
 ## <a name="detailed-view"></a>Podrobné zobrazení
 Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživatele** (podle platformy operačního systému) a pak dlaždici **Uživatelé označení příznakem**.
@@ -79,7 +75,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
 
 Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 
-1.  Uživatele vyberte tak, že zvolíte dlaždici **Souhrn**.
+1.  Chcete-li vybrat uživatele, zvolte **stav uživatele** dlaždici se souhrnem.
 
     ![Snímek obrazovky dlaždice souhrnu správy mobilních aplikací Intune](./media/MAM-reporting-6.png)
 
@@ -94,18 +90,24 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 
-Najdete tady stejné sestavy jako v Podrobném zobrazení, ale i další sestavy, které vám pomůžou se stavem dodržování zásad MAM:
+Stejné sestavy v můžete najít **stav ochrany aplikace** okno.
 
-![Snímek obrazovky se zvýrazněnými dvěma sestavami dostupnými v podokně Nastavení](./media/MAM-reporting-7.png)
+> [!NOTE]
+> Intune poskytuje další zařízení polí, včetně Id registrace aplikace, s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole jsou dostupné tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
 
--   **Sestava uživatele ochrany aplikací:** Popisuje tyto informace můžete najít **stav uživatele** sestavy ve výše uvedeném oddílu podrobné zobrazení.
+Další sestavy jsou k dispozici, které vám pomůžou se stavem dodržování zásad MAM. Chcete-li zobrazit tyto sestavy, vyberte **klientské aplikace** > **stav ochrany aplikace** > **sestavy**. 
 
--   **Sestava aplikace ochrany:** Poskytuje dva různé stavy ochrany aplikací, které správce může před generováním sestavy vybrat. Může vybrat chráněný nebo nechráněný stav.
+**Sestavy** okno nabízí několik sestav na základě uživatele a aplikace, včetně následujících:
+
+
+-   **Sestava uživatelů spadajících pod**: Tato sestava obsahuje stejné informace můžete najít **stav uživatele** sestavy ve výše uvedeném oddílu podrobné zobrazení.
+
+-   **Sestava aplikací**: Tato sestava poskytuje dva různé stavy ochrany aplikací, které správce může před generováním sestavy vybrat. Může vybrat chráněný nebo nechráněný stav.
 
     -   Stav uživatele pro spravovanou aktivitu MAM (chráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací spravovaných prostřednictvím MAM na jednotlivé uživatele.
 
         -   Zobrazuje všechny aplikace, které jsou cílem zásad MAM, pro jednotlivé uživatele. Zobrazuje také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách MAM, nebo aplikací, které jsou cílem zásad MAM, ale nebyly nikdy zaregistrované.
-<br></br>
+<br><br>
     -   Stav uživatele pro nespravovanou aktivitu MAM (nechráněný): Tato sestava obsahuje aktivitu aplikací aktivovaných pro MAM, které jsou aktuálně spravované, podle jednotlivých uživatelů. K tomu může dojít z následujících důvodů:
 
         -   Tyto aplikace používá uživatel nebo aplikace, která momentálně není cílem žádné zásady MAM.

@@ -1,11 +1,11 @@
 ---
 title: Instalace aplikací z aplikace Portál společnosti Intune pro Windows
-description: Naučte se instalovat a sdílet aplikace z aplikace Portál společnosti pro Windows.
+description: Instalace a sdílení aplikace z aplikace portál společnosti pro Windows
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e2bf5ffd5c913b4e2c51c9efd0aa40ba3d3f0fa7
-ms.sourcegitcommit: 2d30ec70b85f49a7563adcab864c1be5a63b9947
-ms.translationtype: HT
+ms.openlocfilehash: 5c57db351aae613d0213e4ef439084ad9577a3fc
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48863089"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203225"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
@@ -34,11 +34,11 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
     ![Domovská stránka aplikace Portál společnosti pro Windows 10](./media/RS1_AppDetailsPage_Installed_03.png)    
 2. Vyhledejte a nainstalujte aplikace z některé z následujících částí aplikace Portál společnosti:  
 
-    * **Domů**: Vybírejte ze seznamu vybraných aplikací vaší organizace.  
-    * **Zobrazit vše**: V části **Domů** > **Aplikace** klikněte na **Zobrazit vše** a prohlédněte si všechny dostupné aplikace.  
-    * **Všechny aplikace**: Když vyberete tuto stránku v navigačním podokně, zobrazíte všechny dostupné aplikace, včetně nainstalovaných a vybraných.  
-    * **Hledat aplikace**: Statický panel hledání umístěný v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
-    * **Všechny aplikace**: Umožňuje zobrazit, řadit a filtrovat všechny dostupné aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
+    * **Domů**: Vyberte ze seznamu vybrané aplikace vaší organizace.  
+    * **Zobrazit vše**: Z **domovskou stránku** > **aplikace** klikněte na tlačítko **Zobrazit vše** zobrazíte všechny dostupné aplikace.  
+    * **Všechny aplikace**: Na této stránce vyberte v navigačním podokně zobrazíte všechny dostupné aplikace, včetně, nainstalovaný a funkční.  
+    * **Hledat aplikace**: Statické vyhledávacího nachází v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
+    * **Všechny aplikace**: Zobrazit, řadit a filtrovat všechny dostupné aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
 
 3. Vyberte aplikaci.   
 4. Na stránce s podrobnostmi aplikace klikněte na **Nainstalovat**. Jakmile se instalace dokončí, zobrazí se stav **Nainstalováno**.  
@@ -63,4 +63,16 @@ Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. N�
 
 Po nasdílení příjemce obdrží odkaz a zprávu, aby si zobrazil podrobnosti o aplikaci. Odkaz otevře stránku Portálu společnosti **Detaily o aplikaci**. 
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+## <a name="available-apps"></a>Dostupné aplikace  
+
+Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.  
+
+Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Windows, budete mít přístup k Windows, ale ne iOS aplikací.  
+
+## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu  
+Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, si ji vyžádat. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti, na stránce Nápověda a podpora. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    
+
+  ![Aplikace portál společnosti pro Windows 10, Nápověda a podpora stránky, zvýraznění údaje helpdesku. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

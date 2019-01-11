@@ -14,12 +14,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 65457a65504b633018bb61851f16c8c65fa1c806
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185674"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203089"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS nebo macOS v Intune
 
@@ -30,7 +30,7 @@ Funkce zařízení umožňují řídit celou řadu nastavení a funkcí na zař�
 - Nastavení AirPrint a AirPlay
 - Rozložení domovské obrazovky
 - Oznámení z aplikací
-- Konfigurace sdíleného zařízení
+- Zpráva na zamčené obrazovce
 - Nastavení jednotného přihlašování
 - Filtrování webového obsahu
 
@@ -38,24 +38,24 @@ Tento článek obsahuje základní informace o konfiguraci profilů funkcí zař
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a potom vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 4. Zadejte tyto vlastnosti:
 
-   - **Název**: Zadejte popisný název nového profilu.
-   - **Popis**: Zadejte popis profilu. (Ten je nepovinný, ale doporučuje se ho zadat.)
+   - **Název**: Zadejte popisný název pro nový profil.
+   - **Popis**: Zadejte popis profilu. (Toto nastavení je volitelný, ale doporučujeme.)
    - **Platforma**: Vyberte typ platformy:
      - **iOS**
      - **macOS**
-   - **Typ profilu**: Vyberte **Funkce zařízení**.
-   - **Nastavení**: Nastavení závisí na vámi zvolené platformě. Informace o nastaveních pro jednotlivé typy profilů najdete v následujících článcích:
+   - **Typ profilu**: Vyberte **funkcí na zařízeních**.
+   - **Nastavení**: Nastavení závisí na zvolené platformě. Informace o nastaveních pro jednotlivé typy profilů najdete v následujících článcích:
 
      - [Nastavení AirPrintu pro iOS a MacOS](air-print-settings-ios-macos.md)
      - [Nastavení AirPlay pro iOS](airplay-settings-ios.md)
      - [Nastavení rozložení domovské obrazovky pro iOS](home-screen-settings-ios.md)
      - [Nastavení oznámení aplikace pro iOS](app-notification-settings-ios.md)
-     - [Nastavení konfigurace sdíleného zařízení pro iOS](shared-device-settings-ios.md)
+     - [Nastavení zámku obrazovky zpráv pro iOS](shared-device-settings-ios.md)
      - [Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem](sso-ios.md)
      - [Nastavení filtru webového obsahu pro iOS](web-content-filter-settings-ios.md)
 

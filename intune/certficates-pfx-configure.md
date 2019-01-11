@@ -1,11 +1,11 @@
 ---
-title: Používání certifikátů PKCS s Microsoft Intune – Azure | Micrososft Docs
-description: Přidání nebo vytvoření certifikátů PKCS (Public Key Cryptography Standards) v Microsoft Intune, včetně návodu na export kořenového certifikátu, konfigurace šablony certifikátu, stažení a instalace Microsoft Intune Certificate Connectoru (NDES), vytvoření konfiguračního profilu zařízení, vytvoření profilu certifikátu PKCS v Azure a vaší certifikační autority.
+title: Použití privátních a veřejných klíčů certifikátů v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Přidejte nebo vytvořte Public Key Cryptography Standards (PKCS) certifikáty pomocí Microsoft Intune, včetně postupu jak vyexportovat kořenový certifikát, nakonfigurujte šablonu certifikátu, stáhnout a nainstalovat Microsoft Intune Certificate Connector (NDES), vytvořit Konfigurace zařízení profil, vytvořte profil certifikátu PKCS v Azure a vaší certifikační autority.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2018
+ms.date: 12/10/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,49 +14,48 @@ ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
-ms.openlocfilehash: 70d1594220b3315db2c7d7eeb01a915aaf2ec995
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.custom: intune-azure; seodec18
+ms.openlocfilehash: 6a617f56e688d8dd6e9bca8e964e075865f05be1
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186728"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203616"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
-> [!IMPORTANT]
-> Funkci S/MIME popsanou v tomto článku právě vylepšujeme. V důsledku toho je tato funkce S/MIME z Intune odebraná. Až tuto funkci uvolníme k použití, tuto poznámku odstraníme.
+Certifikáty ověřování a zabezpečený přístup k firemním prostředkům, jako je například síť VPN nebo Wi-Fi síti. V mnoha organizacích se používají certifikáty, které používají privátní a veřejné pár klíčů, označované také jako certifikáty PKCS. Microsoft Intune zahrnuje předdefinované nastavení používat certifikáty PKCS č. pro přístup a ověřování k prostředkům vaší organizace. Tato nastavení jsou vloženy (nebo nasadit) na zařízení pomocí konfiguračních profilů zařízení v Intune.
 
-Certifikáty ověřují a zabezpečují přístup k firemním prostředkům, jako je síť VPN nebo Wi-Fi. Tento článek ukazuje, jak exportovat certifikát PKCS a pak ho přidat do profilu Intune.
+Tento článek obsahuje požadavky na používání certifikátů PKCS, ukazuje, jak exportovat certifikát PKCS a přidání certifikátu do profilu konfigurace zařízení Intune.
 
 ## <a name="requirements"></a>Požadavky
 
 Pokud chcete používat certifikáty PKCS společně s Intune, musíte mít následující infrastrukturu:
 
-- **Doména služby Active Directory:** Všechny servery uvedené v této části musí být připojené k doméně Active Directory.
+- **Doména služby Active Directory**: Všechny servery uvedené v této části musí být připojené k doméně služby Active Directory.
 
   Další informace o instalaci a konfiguraci AD DS najdete v článku [Návrh a plánování služby AD DS](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/ad-ds-design-and-planning).
 
-- **Certifikační autorita** (CA): Certifikační autorita (CA) organizace.
+- **Certifikační autorita** (CA): Certifikační autorita organizace (CA)
 
   Další informace o tom, jak nainstalovat a nakonfigurovat AD CS (Active Directory Certificate Services), najdete v [podrobném průvodci službou AD CS](https://technet.microsoft.com/library/cc772393).
 
   > [!WARNING]
   > Intune vyžaduje, abyste službu AD CS spustili pomocí certifikační autority (CA) organizace, nikoli pomocí samostatné certifikační autority.
 
-- **Klient:** Pro připojení k certifikační autoritě organizace.
+- **Klient**: Pro připojení k certifikační autority organizace
 
-- **Kořenový certifikát:** Exportovaná kopie kořenového certifikátu od certifikační autority organizace.
+- **Kořenový certifikát**: Vyexportovanou kopii kořenového certifikátu z certifikační autority organizace
 
-- **Microsoft Intune Certificate Connector**: Instalační program **Certificate Connectoru** (**NDESConnectorSetup.exe**) si můžete stáhnout z webu Azure Portal. 
+- **Microsoft Intune Certificate Connector**: Pomocí webu Azure portal ke stažení **Certificate Connector** instalačního programu (**NDESConnectorSetup.exe**). 
 
   Konektor zpracuje žádosti o certifikát PKCS používané k ověřování nebo podepisování e-mailů S/MIME.
 
   Certificate Connector pro NDES také podporuje režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
-- **Konektor certifikátu PFX pro Microsoft Intune**: Pokud máte v plánu šifrovat e-maily pomocí S/MIME, stáhněte z webu Azure Portal instalační program **konektoru certifikátu PFX pro Microsoft Intune** ( **PfxCertificateConnectorBootstrapper.exe**). Tento konektor zpracovává požadavky pro soubory PFX, které se importují do Intune pro šifrování e-mailů konkrétního uživatele pomocí S/MIME.
+- **Konektor certifikátu PFX pro Microsoft Intune**: Pokud máte v plánu používat šifrování S/MIME e-mailu, pomocí webu Azure portal ke stažení **konektor certifikátu PFX pro Microsoft Intune** instalačního programu (**PfxCertificateConnectorBootstrapper.exe**). Konektor zpracovává požadavky na soubory PFX importu v Intune pro šifrování S/MIME e-mailu pro konkrétního uživatele.
 
-- **Windows Server**: je hostitelem:
+- **Windows Server**: Hostitelů:
 
   - nástroje Microsoft Intune Certificate Connector (NDESConnectorSetup.exe) k ověřování a podepisování e-mailů pomocí S/MIME
   - konektoru certifikátu PFX pro Microsoft Intune (PfxCertificateConnectorBootstrapper.exe) k šifrování e-mailů pomocí S/MIME
@@ -65,7 +64,7 @@ Pokud chcete používat certifikáty PKCS společně s Intune, musíte mít nás
 
 ## <a name="export-the-root-certificate-from-the-enterprise-ca"></a>Export kořenového certifikátu z certifikační autority organizace
 
-Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, potřebujete na každém zařízení certifikát kořenové nebo zprostředkující certifikační autority. Následující kroky popisují, jak získat požadovaný certifikát z certifikační autority organizace.
+K ověření pomocí sítě VPN, WiFi nebo jiných prostředků, kořenový nebo zprostředkující certifikát CA je potřeba na každé zařízení. Následující kroky popisují, jak získat požadovaný certifikát z certifikační autority organizace.
 
 1. Přihlaste se do certifikační autority organizace pomocí účtu, který má oprávnění správce.
 2. Otevřete příkazový řádek jako správce.
@@ -76,7 +75,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
    Další informace najdete v tématu [Úkoly programu CertUtil pro správu certifikátů](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
 
-## <a name="configure-certificate-templates-on-the-certification-authority"></a>Konfigurace šablon certifikátů v certifikační autoritě
+## <a name="configure-certificate-templates-on-the-ca"></a>Konfigurace šablon certifikátů v certifikační Autoritě
 
 1. Přihlaste se do certifikační autority organizace pomocí účtu, který má oprávnění správce.
 2. Otevřete konzolu **Certifikační autorita** klikněte pravým tlačítkem myši na **Šablony certifikátů** a vyberte **Spravovat**.
@@ -87,8 +86,8 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
 4. Na kartě **Kompatibilita**:
 
-  - Nastavte pole **Certifikační autorita** na **Windows Server 2008 R2**.
-  - Nastavte pole **Příjemce certifikátu** na **Windows 7 / Server 2008 R2**.
+    - Nastavte pole **Certifikační autorita** na **Windows Server 2008 R2**.
+    - Nastavte pole **Příjemce certifikátu** na **Windows 7 / Server 2008 R2**.
 
 5. Na kartě **Obecné** nastavte **Zobrazovaný název šablony**. Použijte popisný název.
 
@@ -106,10 +105,11 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 10. V **Zabezpečení** přidejte účet počítače pro server, na který instalujete Microsoft Intune Certificate Connector. Pro tento účet povolte oprávnění **Číst** a **Zaregistrovat**.
 11. Vyberte **Použít** > **OK** a šablonu certifikátu uložte. Zavřete **konzolu šablon certifikátů**.
 12. V konzole **Certifikační autorita** klikněte pravým tlačítkem myši na **Šablony certifikátů** > **Nová** > **Vystavovaná šablona certifikátu**. Zvolte šablonu, kterou jste vytvořili v předchozím postupu. Vyberte **OK**.
-13. Aby server spravoval certifikáty jménem zařízení a uživatelů zaregistrovaných v Intune, postupujte takto:
+13. Server pro správu certifikátů pro zaregistrovaná zařízení a uživatele použijte následující kroky:
 
     1. Klikněte pravým tlačítkem na certifikační autoritu a potom vyberte **Vlastnosti**.
-    2. Na kartě Zabezpečení přidejte účet počítače pro server, na kterém konektory (**Microsoft Intune Certificate Connector** nebo **konektor certifikátu PFX pro Microsoft Intune**) běží. Udělte oprávnění účtu počítače, která povolují **Vydávat a spravovat certifikáty** a **Vyžádat certifikáty**.
+    2. Na kartě Zabezpečení přidejte účet počítače pro server, na kterém konektory (**Microsoft Intune Certificate Connector** nebo **konektor certifikátu PFX pro Microsoft Intune**) běží. 
+    3. Udělte oprávnění účtu počítače, která povolují **Vydávat a spravovat certifikáty** a **Vyžádat certifikáty**.
 
 14. Odhlaste se z certifikační autority organizace.
 
@@ -120,7 +120,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **musí** být nainstalovaný na samostatném serveru Windows. Nemůžete ho nainstalovat na vystavující certifikační autoritu.
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby**, vyfiltrujte **Intune** > vyberte **Intune**.
 2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.
 3. Stáhněte a uložte soubor konektoru. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
@@ -135,7 +135,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 5. NDES Connector otevře kartu **registrace**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce.
 6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)**.
 7. **Použít** > **Zavřít**
-8. Přejděte zpět na portál Azure Portal (**Intune** > **Konfigurace zařízení** > **Certifikační autorita**). Po chvíli se zobrazí zelené zaškrtnutí a **Stav připojení** bude **Aktivní**. Váš server konektoru teď může komunikovat s Intune.
+8. Přejděte zpět na portál Azure Portal (**Intune** > **Konfigurace zařízení** > **Certifikační autorita**). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 
 > [!NOTE]
 > Microsoft Intune Certificate Connector podporuje také protokol TLS 1.2. Pokud server s nainstalovaným konektorem Microsoft Intune Certificate Connector podporuje TLS 1.2, použije se TLS 1.2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.
@@ -153,7 +153,7 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
 5. Konektor certifikátu PFX pro Microsoft Intune se po instalaci otevře na kartě **Zápis**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce pro Azure nebo s oprávněním správce pro Intune.
 6. Okno zavřete.
-7. Přejděte zpět na portál Azure Portal (**Intune** > **Konfigurace zařízení** > **Certifikační autorita**). Po chvíli se zobrazí zelené zaškrtnutí a **Stav připojení** bude **Aktivní**. Váš server konektoru teď může komunikovat s Intune.
+7. Přejděte zpět na portál Azure Portal (**Intune** > **Konfigurace zařízení** > **Certifikační autorita**). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
@@ -190,21 +190,21 @@ Pokud chcete k ověření použít síť VPN, Wi-Fi nebo jiné prostředky, pot�
 
 3. Přejděte na **Nastavení** a zadejte tyto vlastnosti:
 
-    - **Prahová hodnota obnovení (%):** doporučuje se 20 %.
-    - **Období platnosti certifikátu:** pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
-    - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.
-    - **Certifikační autorita:** zobrazuje interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.
-    - **Název certifikační autority:** uvádí název certifikační autority vaší organizace, jako je „Certifikační autorita Contoso“.
-    - **Název šablony certifikátu:** název šablony, kterou jste dříve vytvořili. Pamatujte, že **Název šablony** je ve výchozím nastavení stejný jako **Zobrazovaný název šablony**, pouze *bez mezer*.
-    - **Formát názvu subjektu:** tuto možnost nastavte na **Běžný název**, pokud není potřeba jiný.
-    - **Alternativní název subjektu:** tuto možnost nastavte na **Hlavní název uživatele (UPN)**, pokud není potřeba jiný.
+    - **Prahová hodnota obnovení (%)**: Doporučuje se 20 %.
+    - **Období platnosti certifikátu**: Pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
+    - **Zprostředkovatel úložiště klíčů (KSP)**: Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
+    - **Certifikační autorita**: Zobrazí interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.
+    - **Název certifikační autority**: Uvádí název vaší certifikační autority organizace, jako je například "Certifikační autority společnosti Contoso".
+    - **Název šablony certifikátu**: Název šablony vytvořili dříve. Pamatujte, že **Název šablony** je ve výchozím nastavení stejný jako **Zobrazovaný název šablony**, pouze *bez mezer*.
+    - **Formát názvu subjektu**: Tuto možnost nastavte na **běžný název** Pokud není potřeba jiný.
+    - **Alternativní název subjektu**: Tuto možnost nastavte na **hlavní název uživatele (UPN)** Pokud není potřeba jiný.
 
 4. Vyberte **OK** > **Vytvořit** a profil uložte.
 5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](device-profile-assign.md).
 
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Vytvoření importovaného profilu certifikátu PKCS
 
-Dříve vydané certifikáty pro konkrétního uživatele od libovolné certifikační autority můžete importovat do Intune. Importované certifikáty se nainstalují na každé zařízení, které si uživatel zaregistruje. Šifrování e-mailu pomocí S/MIME je nejběžnějším scénářem pro import existujících certifikátů PFX do Intune. Uživatel může e-maily šifrovat několika certifikáty. Privátní klíče těchto certifikátů se musí nacházet na všech zařízeních uživatele, aby bylo možné dešifrovat dříve šifrované e-maily.
+Můžete importovat certifikáty dříve vydané pro konkrétního uživatele z jakékoli certifikační Autority v Intune. Importované certifikáty se nainstalují na každé zařízení, které si uživatel zaregistruje. Šifrování e-mailu pomocí S/MIME je nejběžnějším scénářem pro import existujících certifikátů PFX do Intune. Uživatel může mít mnoho certifikátů k šifrování e-mailu. Privátní klíče těchto certifikátů se musí nacházet na všech zařízeních uživatele, aby bylo možné dešifrovat dříve šifrované e-maily.
 
 Pokud chcete certifikáty importovat do Intune, můžete použít [rutiny PowerShellu, které jsou k dispozici na GitHubu](https://github.com/Microsoft/Intune-Resource-Access).
 
@@ -220,15 +220,18 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
 3. Přejděte na **Nastavení** a zadejte tyto vlastnosti:
 
-    - **Zamýšlený účel:** zamýšlený účel certifikátů importovaných pro tento profil. Správce může certifikáty importovat pod různými zamýšlenými účely (například ověřování, podepisování pomocí S/MIME nebo šifrování pomocí S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty.
-    - **Období platnosti certifikátu:** pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
-    - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.
+    - **Zamýšlený účel**: Zamýšlený účel certifikáty, které jsou importovány pro tento profil. Správce může certifikáty importovat pod různými zamýšlenými účely (například ověřování, podepisování pomocí S/MIME nebo šifrování pomocí S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty.
+    - **Období platnosti certifikátu**: Pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
+    - **Zprostředkovatel úložiště klíčů (KSP)**: Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
 
 4. Vyberte **OK** > **Vytvořit** a profil uložte.
 5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](device-profile-assign.md).
 
 ## <a name="next-steps"></a>Další postup
-[Použití certifikátů SCEP](certificates-scep-configure.md) nebo [vydání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md).
+
+Profil je vytvořený, ale zatím se nepoužívá. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+
+[Používání certifikátů SCEP](certificates-scep-configure.md), nebo [vydávání certifikátů PKCS od společnosti Symantec PKI manager webová služba](certificates-symantec-configure.md).
 
 [NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Přechod do Intune na webu Azure Portal a vytvoření nového profilu důvěryhodného certifikátu"
 [ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Vytvoření profilu a nahrání důvěryhodného certifikátu"

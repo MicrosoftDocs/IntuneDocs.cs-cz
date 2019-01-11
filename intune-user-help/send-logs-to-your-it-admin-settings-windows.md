@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/25/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,20 @@ ROBOTS: ''
 ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 1e9b9908fcc48e9137c07f9a5397661d66e5be95
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.openlocfilehash: 88107a580eb72f647bb7c32d52ed5d3c848cd392
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146735"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203310"
 ---
 # <a name="send-logs-to-your-company-support-from-the-settings-app-for-windows-10"></a>Odeslání protokolů firemní podpoře z aplikace Nastavení pro Windows 10
 
-Pokud dojde k chybě při použití zařízení s Windows 10 spravovaného vaší společností, můžete firemní podpoře poslat e-mailem informace o této chybě a pomoct jí tak při řešení daných potíží. Tyto informace se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_.
+Řešení potíží s portál společnosti pro Windows 10 pomocí nastavení aplikace. Pokud narazíte na problém při použití aplikace na zařízení s Windows 10, můžete poslat e-mail týmu podpory pro nápovědu. Události a chyby, ke kterým dochází v aplikaci portál společnosti se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Může obsahovat další přehledy o chybě a při exportu jsou užitečné pro podporu týmů.
 
-1. Otevřete aplikaci **Nastavení** Windows – přejděte na **nabídku Start** a vyberte tlačítko **Nastavení**. Můžete také pomocí panelu hledání vyhledat „nastavení“.
+1. Chcete-li otevřít **nastavení** aplikaci, přejděte na **Start** nabídky > **nastavení**. Můžete také vyhledat *nastavení* na panelu hledání.
 2. Vyberte **Účty** > **Přístup do práce nebo do školy**.
-3. Vyberte možnost Exportovat soubory protokolů správy.
+3. Vyberte **exportovat soubory protokolů správy**.
 
    ![Obrazovka Přístup do práce nebo do školy s možností exportu pod nadpisem Související nastavení](./media/w10-export-logs.png)
 

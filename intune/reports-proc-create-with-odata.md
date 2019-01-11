@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 3599146aaebc2e3788fa96e8e04657ce4db41c4f
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: cc7e61d7b5dd0d7ff16836602b8d959683a971e7
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067444"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210716"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -89,7 +89,7 @@ Relace se zobrazí ve sloupci Z do sloupce Do. V tomto příkladu datové pole *
 
 Graf mapy stromové struktury zobrazuje hierarchická data jako pole uvnitř polí. Každá větev hierarchie je pole, které obsahuje menší pole zobrazující nižší větve. Pomocí Power BI Desktopu můžete vytvořit mapu stromové struktury vašich dat Intune.
 
-![Vizualizace > mapa stromové struktury](media/reports-create-03-treemap.png)
+![Vizualizace mapy stromové struktury v Power BI](media/reports-create-03-treemap.png)
 
 1. Zvolte typ grafu. Vyberte **Mapa stromové struktury**.
 2. V datovém modelu najděte tabulku **zařízení**.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 893e20652af68ec7f33c733376252a937f9584dc
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: f587fdf7c1690dbb0a31388a9c70b780179e541e
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642876"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210869"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -47,7 +47,7 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
     3.  Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
 4.  Vyberte **Vytvořit**.
 
-     ![Rozhraní API datového skladu Intune](./media/reports-get_rest_data_client_overview.png)
+     ![Klientskou aplikaci pro datový sklad Intune](./media/reports-get_rest_data_client_overview.png)
 
 5. Poznačte si **ID aplikace** této aplikace. Toto ID použijete v další části.
 
@@ -134,7 +134,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 12. Vyberte **Request Token** (Vyžádat token).
 
-    ![Informace pro token](./media/reports-postman_getnewtoken.png)
+    ![Informace o přístupový token](./media/reports-postman_getnewtoken.png)
 
 13. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
 14. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
@@ -144,7 +144,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 1.  Vyberte **Poslat**.
 2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
 
-    ![Postman 200OK](./media/reports-postman_200OK.png)
+    ![Stav klienta postman se rovná 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Vytvoření klienta REST (v jazyce C#), který získá data z datového skladu Intune
 
@@ -161,7 +161,7 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 6. Výběrem možnosti **Přijímám** přijměte licenci na tento balíček NuGet.
 7. Otevřete `Program.cs` v Průzkumníkovi řešení.
 
-    ![Projekt v sadě Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Progam.cs a Průzkumník řešení v sadě Visual Studio](./media/reports-get_rest_data_in.png)
 
 8. Kód v souboru Program.cs nahraďte následujícím kódem:  
    ```csharp

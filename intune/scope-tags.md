@@ -14,16 +14,16 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 080205e601b857d4765eb6b97eeeeeb8f4e6fc1b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 0da6861b6c49fc37691b8c6e464a506670643fa3
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187153"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203327"
 ---
 # <a name="use-scope-tags-to-filter-policies"></a>Filtrování zásad pomocí značek oboru
 
-Značky oboru vám umožňují filtrovat zásady pomocí značek, které sami vytvoříte.
+Značky oboru vám umožňují filtrovat zásady pomocí značek, které sami vytvoříte. Můžete použít značky oboru role a aplikace.
 
 Můžete například vytvořit značku oboru s názvem „Technické oddělení“ a přiřadit ji ke konfiguračním profilům týkajícím se právě tohoto oddělení. Následně ji přiřadíte k roli „Správci technického oddělení“. Těmto uživatelům se pak zobrazí jen zásady se značkou „Technické oddělení“.
 
@@ -38,6 +38,11 @@ Zvolte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnost
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
 Zvolte **Role** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
+
+## <a name="to-assign-a-scope-tag-to-an-app"></a>Přiřadit značky oboru aplikace
+
+Zvolte **klientské aplikace** > **aplikace** > zvolte aplikace > **vlastnosti** > **obor (značky)**  >  **Přidat** > zvolte značky > **vyberte** > **OK** > **Uložit**.
+
 
 ## <a name="next-steps"></a>Další postup
 

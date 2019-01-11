@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2017
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,26 +17,26 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 2a5f383eef6f380711578cb79dfd8006ca6f96e1
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
+ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150662"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54203141"
 ---
-# <a name="use-managed-devices-to-get-work-done"></a>Práce pomocí spravovaných zařízení
-Microsoft Intune je software, který organizacím umožňuje spravovat zařízení (jako jsou smartphony, tablety nebo počítače), aplikace a další firemní prostředky (například e-mail). To zaměstnancům zajistí přístup k pracovním informacím prakticky odkudkoli z jakéhokoli zařízení a současně uchová firemní data v bezpečí.
+# <a name="use-managed-devices-to-access-work-or-school-resources"></a>Pomocí spravovaných zařízení měl přístup k pracovním nebo školním prostředkům
+Microsoft Intune je systém správy zařízení, která organizacím umožňuje spravovat přístup k zařízení, aplikacím a e-mailu. Správa zařízení umožní a jiné zaměstnance a studenty, pro přístup k pracovním informacím prakticky odkudkoli na téměř jakémkoli zařízení. I v případě, že pracujete vzdáleně, zůstane zabezpečené jste a informace o vaší organizaci.
 
-Když si zaregistrujete zařízení do správy pomocí Intune, může vaše IT oddělení tyto pracovní nebo školní prostředky spravovat, udržovat zařízení ve větším bezpečí a zároveň vám jako zaměstnanci umožnit, abyste k plnění úkolů používali zařízení, které preferujete. Základním způsobem, jak toho dosáhnout, je registrace zařízení do správy prostřednictvím Portálu společnosti.
+Microsoft Intune je software, vaše společnost používá ke konfiguraci jejich zabezpečení a požadavky na zařízení. Až budete připravení nechte si spravovat zařízení, budete používat aplikaci portál společnosti Intune. S touto aplikací vám pomůže zařízení měl přístup k pracovním nebo školním prostředkům. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll-my-device-in-intune"></a>Jaké informace moje společnost uvidí, když svoje zařízení zaregistruji do Intune?
-Podpora vaší společnosti uvidí informace související s vaší prací, ale neuvidí vaše osobní údaje. To je důležité vědět, když registrujete svoje osobní zařízení, abyste ho používali v práci. Seznam věcí, které správce IT [uvidí nebo neuvidí na vašem zařízení, najdete v dalším článku uživatelské nápovědy](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+## <a name="what-information-can-my-company-see-when-i-get-my-device-managed"></a>Jaké informace Moje společnost uvidí při získat Moje zařízení spravované?
+Jakmile máte nastavíte v aplikaci portál společnosti, podpora vaší společnosti uvidí jenom informace, které jsou relevantní pro práci. Neuvidí vaše osobní údaje. To je důležité vědět, když registrujete svoje osobní zařízení, abyste ho používali v práci. Přesně jaké jsou další [uvidí a neuvidí v dalším článku](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
 
-## <a name="how-do-i-get-the-company-portal"></a>Jak získám Portál společnosti?
-Můžete ho získat jedním ze dvou způsobů:
+## <a name="how-do-i-get-company-portal"></a>Jak získám portál společnosti?
+Portál společnosti Get buď:
 
-- Nainstalováním aplikace Portál společnosti do zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat firemní podpora.
-- Přechodem na [web Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980), který nastavila vaše firemní podpora.
+- Instalace aplikace portál společnosti na vašem zařízení. Aplikaci Portál společnosti získáte zpravidla v obchodě s aplikacemi pro vaše zařízení, může vám ji ale také nainstalovat firemní podpora.
+- Chystáte [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) , aby nastavila vaše firemní podpora nahoru.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
 Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
@@ -73,7 +73,7 @@ Pokud vás zajímá, co vaše firemní podpora uvidí nebo naopak neuvidí na va
     -   Windows 10 Mobile
     -   Windows 10 Desktop
     -   Windows Phone 8.1
-    -   Windows 8.1
+    -   Windows 8.1
 
 ## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Můžete z Portálu společnosti odebrat počítač nebo zařízení?
 Počítač nebo zařízení můžete z Portálu společnosti odebrat nebo obnovit. Mezi **odebráním** a **obnovením** je rozdíl.

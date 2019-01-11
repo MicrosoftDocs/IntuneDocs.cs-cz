@@ -17,12 +17,12 @@ ms.reviewer: ayesham
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ef84a77961dafc1a881bdb54208fae602857ae32
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: 807bc306848a731e63f7f854a9d4b451264e21a8
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067461"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210801"
 ---
 # <a name="how-your-users-will-experience-basic-protection-on-managed-office-365-apps-in-microsoft-intune"></a>Přečtěte si, jak vaši uživatelé budou moct používat základní ochranu ve spravovaných aplikacích Office 365 v Microsoft Intune.
 
@@ -89,33 +89,32 @@ Jako příklad tento článek používá OneDrive pro firmy, pomocí kterého uk
 
 ## <a name="what-policies-does-this-wizard-set"></a>Jaké zásady tento průvodce nastavuje?
 
-|     |       | |
-|----|--------|-|
-|**Název**|Správa aplikací Office 365| |
-| **Popis**|Vytvořené průvodcem Správa aplikací Office 365| |
-| |  | |
-| **Název nastavení** |**Hodnota zásad iOSu** | **Hodnota zásad Androidu** |
-|Zakázat zálohování dat v iTunes a na iCloudu| Ne | neuvedeno |
-|Zakázat zálohování dat v zařízeních s Androidem |neuvedeno | Ne|
-|Povolit aplikaci přenos dat do ostatních aplikací | Všechny aplikace | Všechny aplikace|
-|Povolit aplikaci, aby přijímala data z jiných aplikací| Všechny aplikace | Všechny aplikace|
-|Zakázat možnost Uložit jako | Ne | Ne|
-|Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi | Libovolná aplikace | Libovolná aplikace |
-|Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč | Ne| Ne|
-|Zašifrovat data aplikací | Když je zařízení blokované | Ano|
-|Zakázat synchronizaci kontaktů | Ne| Ne|
-|Zakázat tisk | Ne | Ne|
-|Vyžadovat pro přístup kód PIN | Ne | Ano|
-|Počet pokusů o zadání před obnovení kódu PIN | neuvedeno |5|
-|Povolit jednoduchý PIN | neuvedeno |Ano|
-|Délka PIN kódu | neuvedeno | 4|
-|Povolit otisk prstu místo PIN kódu | neuvedeno | Ano |
-|Vyžadovat podnikové přihlašovací údaje pro přístup | Ne | Ne|
-|Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem | Ne | Ne|
-|Znovu zkontrolovat požadavky na přístup po (minuty) – časový limit | 30 | 30|
-|Znovu zkontrolovat požadavky na přístup po (minuty) – období odkladu pro offline režim | 720 |720|
-|Doba v offline režimu (ve dnech) před vymazáním dat | 90 | 90|
-|Blokovat snímání obrazovky (jenom zařízení s Androidem) | neuvedeno | Ne |
+**Název**: Správa aplikací Office 365<br>
+**Popis**: Vytvořené průvodcem Správa aplikací Office 365
+
+| Název nastavení | Hodnota zásad Iosu | Hodnota zásad androidu |
+|------------------------------------------------------------------------|-----------------------|----------------------|
+| Zakázat zálohování dat v iTunes a na iCloudu | Ne | neuvedeno |
+| Zakázat zálohování dat v zařízeních s Androidem | neuvedeno | Ne |
+| Povolit aplikaci přenos dat do ostatních aplikací | Všechny aplikace | Všechny aplikace |
+| Povolit aplikaci, aby přijímala data z jiných aplikací | Všechny aplikace | Všechny aplikace |
+| Zakázat možnost Uložit jako | Ne | Ne |
+| Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi | Libovolná aplikace | Libovolná aplikace |
+| Omezit zobrazování obsahu webu jenom na podnikový spravovaný prohlížeč | Ne | Ne |
+| Zašifrovat data aplikací | Když je zařízení blokované | Ano |
+| Zakázat synchronizaci kontaktů | Ne | Ne |
+| Zakázat tisk | Ne | Ne |
+| Vyžadovat pro přístup kód PIN | Ne | Ano |
+| Počet pokusů o zadání před obnovení kódu PIN | neuvedeno | 5 |
+| Povolit jednoduchý PIN | neuvedeno | Ano |
+| Délka PIN kódu | neuvedeno | 4 |
+| Povolit otisk prstu místo PIN kódu | neuvedeno | Ano |
+| Vyžadovat podnikové přihlašovací údaje pro přístup | Ne | Ne |
+| Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem | Ne | Ne |
+| Znovu zkontrolovat požadavky na přístup po (minuty) – časový limit | 30 | 30 |
+| Znovu zkontrolovat požadavky na přístup po (minuty) – období odkladu pro offline režim | 720 | 720 |
+| Doba v offline režimu (ve dnech) před vymazáním dat | 90 | 90 |
+| Blokovat snímání obrazovky (jenom zařízení s Androidem) | neuvedeno | Ne |
 
 ### <a name="why-is-an-app-pin-policy-only-configured-for-android-devices"></a>Proč se zásady PIN kódu aplikace konfigurují jenom pro zařízení s Androidem?
 Šifrování v iOSu a Androidu funguje rozdílně.

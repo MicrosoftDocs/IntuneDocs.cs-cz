@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 1/17/2018
+ms.date: 1/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 305799fa21ae7c3464caf8f7019dcf9e8170d3ac
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 32281ae37b7b36dfbf49503275a8a1e6c35d8f6d
+ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181475"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54210784"
 ---
 # <a name="common-issues-and-resolutions-with-device-profiles-in-microsoft-intune"></a>Běžné problémy a řešení u profilů zařízení v Microsoft Intune
 
@@ -48,17 +48,17 @@ Po přiřazení zásady nebo aplikace začne Intune hned upozorňovat zařízen�
 
 Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune provede tři další pokusy. Když je zařízení offline (je třeba vypnuté nebo není připojené k síti), nemusí oznámení vůbec dostat. V takovém případě zařízení získá zásadu při dalším plánovaném ohlášení své přítomnosti ve službě Intune:
 
-- iOS a macOS: Každých 6 hodin
+- zařízení s iOS a macOS: Každých 6 hodin
 - Android: Každých 8 hodin
 - Windows Phone: Každých 8 hodin
-- Počítače s Windows 8.1 a Windows 10 zaregistrované jako zařízení: Každých 8 hodin
+- Windows 8.1 a počítače s Windows 10 zaregistrované jako zařízení: Každých 8 hodin
 
 Pokud se zařízení zaregistrovalo nedávno, četnost ohlašování bude vyšší:
 
-- iOS a macOS: Prvních 6 hodin každých 15 minut a potom každých 6 hodin
-- Android: Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin
-- Windows Phone: Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin
-- Počítače s Windows zaregistrované jako zařízení: Prvních 30 minut každé 3 minuty a potom každých 8 hodin
+- zařízení s iOS a macOS: Další šest hodin a potom každých 6 hodin každých 15 minut
+- Android: 15 minut každé 3 minuty a potom další 2 hodiny každých 15 minut a potom každých 8 hodin
+- Windows Phone: 15 minut každých 5 minut a pak další 2 hodiny každých 15 minut a potom každých 8 hodin
+- Počítače s Windows zaregistrované jako zařízení: Každé 3 minuty 30 minut a potom každých 8 hodin
 
 Pokud chtějí uživatelé zkontrolovat zásady hned, můžou otevřít aplikaci Portál společnosti a synchronizovat zařízení.
 
@@ -72,11 +72,11 @@ Ostatní změny, jako je třeba úprava kontaktních informací na portálu spol
 ## <a name="if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied"></a>Pokud se stejnému zařízení nebo uživateli přiřadí několik zásad, jak poznám, které nastavení se použije?
 Pokud se stejnému uživateli nebo zařízení přiřadí dvě nebo více zásad, závisí použití nastavení na úrovni jednotlivých nastavení:
 
--   Nastavení zásad dodržování předpisů mají vždycky přednost před nastaveními zásad konfigurace.
+- Nastavení zásad dodržování předpisů mají vždycky přednost před nastaveními zásad konfigurace.
 
--   Pokud se zásady hodnotí podle stejného nastavení v jiné zásadě dodržování předpisů, použije se nejrestriktivnější nastavení dodržování zásad.
+- Pokud se zásady hodnotí podle stejného nastavení v jiné zásadě dodržování předpisů, použije se nejrestriktivnější nastavení dodržování zásad.
 
--   Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na portálu Azure Portal. V tomto scénáři tyto konflikty vyřešte ručně.
+- Pokud je nastavení zásady konfigurace v konfliktu s nastavením jiné zásady konfigurace, zobrazí se tento konflikt na portálu Azure Portal. V tomto scénáři tyto konflikty vyřešte ručně.
 
 ## <a name="what-happens-when-app-protection-policies-conflict-with-each-other-which-one-is-applied-to-the-app"></a>Co se stane, když zásady ochrany aplikací navzájem kolidují? Která se použije pro příslušnou aplikaci?
 Nejvíce omezující nastavení dostupná v zásadách ochrany aplikací jsou konfliktní hodnoty s výjimkou polí pro zadání čísel (jako je zadání PIN kódu před resetováním). Pole s počtem zadání se nastaví na stejnou hodnotu, jako když zásadu MAM vytvoříte v konzole pomocí možnosti doporučeného nastavení.
@@ -88,45 +88,48 @@ Pokud se jeden profil přiřadí aplikaci a uplatní se a pak se přiřadí druh
 ## <a name="what-happens-when-ios-custom-policies-conflict"></a>Co se stane při konfliktu vlastních zásad iOS?
 Intune nevyhodnocuje datovou část konfiguračních souborů Apple ani vlastní profil OMA-URI (Open Mobile Alliance Uniform Resource Identifier). Slouží jenom jako mechanismus doručování.
 
-Při přiřazování vlastního profilu zkontrolujte, jestli nakonfigurované nastavení není v konfliktu se zásadami dodržování předpisů, konfiguračními zásadami nebo jinými vlastními zásadami. Pokud dojde ke konfliktu mezi vlastním profilem a jeho nastavením, použije se nastavení náhodně.
+Při přiřazování vlastního profilu zkontrolujte, jestli nakonfigurované nastavení není v konfliktu se zásadami dodržování předpisů, konfiguračními zásadami nebo jinými vlastními zásadami. Pokud vlastního profilu a jeho nastavení v konfliktu, použijí se náhodně nastavení.
 
 ## <a name="what-happens-when-a-profile-is-deleted-or-no-longer-applicable"></a>Co se stane, když se profil odstraní nebo už není použitelný?
 Pokud odstraníte profil nebo odeberete zařízení ze skupiny, která má tento profil, odebere se tento profil a nastavení ze zařízení podle následujících seznamů:
 
-- Profily sítě Wi-Fi, VPN, certifikátu a e-mailu: Tyto profily se odeberou ze všech podporovaných registrovaných zařízení.
+- Wi-Fi, VPN, certifikátu a e-mailové profily: Tyto profily se odeberou ze všech podporovaných registrovaných zařízení.
 - Všechny ostatní typy profilů:  
-    - **Zařízení s Windows a Androidem**: Nastavení se ze zařízení neodeberou.
-    - **Zařízení Windows Phone 8.1**: Odeberou se tato nastavení:  
-        - Vyžadovat heslo k odemknutí mobilních zařízení
-        - Povolit jednoduchá hesla
-        - Minimální délka hesla
-        - Vyžadovaný typ hesla
-        - Vypršení platnosti hesla (dny)
-        - Pamatovat si historii hesel
-        - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
-        - Počet minut nečinnosti před vyžadováním hesla
-        - Typ požadovaného hesla – minimální počet znaků
-        - Povolit fotoaparát
-        - Vyžadovat šifrování u mobilního zařízení
-        - Povolit vyměnitelné úložiště
-        - Povolit webový prohlížeč
-        - Povolit obchod s aplikacemi
-        - Povolit snímek obrazovky
-        - Povolit zeměpisnou polohu
-        - Povolit účet Microsoft
-        - Povolit kopírování a vkládání
-        - Povolit sdílení internetového připojení přes Wi-Fi
-        - Povolit automatické připojení k bezplatným Wi-Fi hotspotům
-        - Povolit oznamování Wi-Fi hotspotů
-        - Povolit vymazání
-        - Povolit Bluetooth
-        - Povolit komunikaci NFC
-        - Povolit Wi-Fi
 
-    - **iOS**: Odeberou se všechna nastavení s těmito výjimkami:
-        - Povolit hlasový roaming
-        - Povolit datový roaming
-        - Povolit automatickou synchronizaci při roamingu
+  - **Windows a androidem**: Nastavení se ze zařízení neodeberou.
+  - **Zařízení s Windows Phone 8.1**: Následující nastavení jsou odebraná:  
+  
+    - Vyžadovat heslo k odemknutí mobilních zařízení
+    - Povolit jednoduchá hesla
+    - Minimální délka hesla
+    - Vyžadovaný typ hesla
+    - Vypršení platnosti hesla (dny)
+    - Pamatovat si historii hesel
+    - Počet povolených opakovaných neúspěšných přihlášení, než bude zařízení vymazáno
+    - Počet minut nečinnosti před vyžadováním hesla
+    - Typ požadovaného hesla – minimální počet znaků
+    - Povolit fotoaparát
+    - Vyžadovat šifrování u mobilního zařízení
+    - Povolit vyměnitelné úložiště
+    - Povolit webový prohlížeč
+    - Povolit obchod s aplikacemi
+    - Povolit snímek obrazovky
+    - Povolit zeměpisnou polohu
+    - Povolit účet Microsoft
+    - Povolit kopírování a vkládání
+    - Povolit sdílení internetového připojení přes Wi-Fi
+    - Povolit automatické připojení k bezplatným Wi-Fi hotspotům
+    - Povolit oznamování Wi-Fi hotspotů
+    - Povolit vymazání
+    - Povolit Bluetooth
+    - Povolit komunikaci NFC
+    - Povolit Wi-Fi
+
+  - **iOS**: Odeberou se všechna nastavení, s výjimkou:
+  
+    - Povolit hlasový roaming
+    - Povolit datový roaming
+    - Povolit automatickou synchronizaci při roamingu
 
 ## <a name="i-changed-a-device-restriction-profile-but-the-changes-havent-taken-effect"></a>Změnil(a) jsem profil omezení zařízení, ale tyto změny se neprojevily
 Zařízení Windows Phone neumožňují zmírnění zásad zabezpečení nastavených s použitím MDM nebo EAS, když je jednou nastavíte. Nastavíte třeba **Minimální počet znaků hesla** na hodnotu 8, kterou se pak pokusíte snížit na 4. V zařízení se už používá více omezující profil.
@@ -134,6 +137,14 @@ Zařízení Windows Phone neumožňují zmírnění zásad zabezpečení nastave
 Pokud chcete změnit profil na méně bezpečnou hodnotu, resetujte zásady zabezpečení. Třeba v systému Windows 8.1 potáhněte na ploše prstem zprava a vyberte **Nastavení** > **Ovládací panely**. Vyberte aplet **Uživatelské účty** . V navigační nabídce vlevo najdete (dole) odkaz **Resetovat zásady zabezpečení**. Vyberte ho a potom zvolte **Resetovat zásady**.
 
 Jiná zařízení MDM, třeba zařízení se systémy Android, Windows Phone 8.1 a novější, iOS a Windows 10 možná bude potřeba ze služby vyřadit a znovu je do ní zaregistrovat, aby bylo možné použít méně omezující profil.
+
+## <a name="some-settings-in-a-windows-10-profile-return-not-applicable"></a>Některá nastavení v profilu Windows 10 vrátit "Není k dispozici"
+Některá nastavení v zařízení s Windows 10 se můžou zobrazovat jako "Není k dispozici". Pokud k tomu dojde, že konkrétní nastavení nepodporuje verzi nebo edici Windows spuštěného v příslušném zařízení. Tato zpráva může dojít z následujících důvodů:
+
+- Nastavení dostupná jenom pro novější verze systému Windows a ne aktuální verzi operačního systému (OS) na zařízení.
+- Nastavení dostupná jenom pro konkrétní edice Windows, nebo jen některé, například Home, Professional, Enterprise a Education.
+
+Další informace o verzi a požadavky na SKU pro různá nastavení, najdete v článku [poskytovatele konfiguračních služeb (CSP) odkaz](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="next-steps"></a>Další postup
 Potřebujete další pomoc? Přečtěte si téma [Jak získat podporu pro Microsoft Intune](get-support.md).
