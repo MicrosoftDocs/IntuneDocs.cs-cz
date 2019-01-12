@@ -1,12 +1,12 @@
 ---
-title: Přiřazení aplikací k zařízením s pracovním profilem Androidu
+title: Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem enterprise
 titlesuffix: Microsoft Intune
-description: Zjistěte, jak synchronizovat a přiřazovat aplikace k zařízením s pracovním profilem Androidu ze spravovaného obchodu Google Play.
+description: Naučte se synchronizovat a přiřadit aplikace do zařízení s Androidem enterprise v spravovaný obchod Google Play storu.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5495addba30e8a958d2a49f2c04ee5af70d62712
-ms.sourcegitcommit: a0db74934433226e28ffdf5d92930dafd2feceae
+ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
+ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305926"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54239570"
 ---
-# <a name="assign-apps-to-android-work-profile-devices-with-intune"></a>Přiřazení aplikací k zařízením s pracovním profilem Androidu pomocí Intune
+# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem enterprise v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android Enterprise je program pro zařízení s pracovním profilem Androidu a zařízení v beznabídkovém režimu. U zařízení s pracovním profilem Androidu představuje Android Enterprise sadu funkcí a služeb, které oddělují osobní aplikace a data od pracovních aplikací a dat. Android Enterprise poskytuje další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Nasazením aplikací a nastavení do zařízení s pracovním profilem Androidu vám Intune pomůže zajistit, aby byly pracovní a osobní informace oddělené. Všechny aplikace, které instalujete do zařízení s pracovním profilem Androidu, pocházejí ze spravovaného obchodu Google Play. Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
+Android enterprise je program pro zařízení s pracovním profilem, vyhrazené/veřejný terminál pro zařízení a plně spravovaná zařízení. U zařízení s pracovním profilem Androidu představuje Android Enterprise sadu funkcí a služeb, které oddělují osobní aplikace a data od pracovních aplikací a dat. Android Enterprise poskytuje další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Nasazením aplikací a nastavení do zařízení s pracovním profilem Androidu vám Intune pomůže zajistit, aby byly pracovní a osobní informace oddělené. Všechny aplikace, které instalujete do zařízení s pracovním profilem Androidu, pocházejí ze spravovaného obchodu Google Play. Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
 
 Pokud jste vytvořili své vlastní obchodní aplikace, můžete je také přiřadit tímto způsobem:
 - Zaregistrujte si vývojářský účet Google, který umožňuje publikování aplikací do privátní oblasti obchodu Google Play.
