@@ -130,6 +130,7 @@
 ### [Co se stane, když obnovíte tovární nastavení zařízení?](what-happens-if-you-reset-your-device-using-the-company-portal-windows.md)
 ### [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-windows.md)
 ### [Ruční synchronizace zařízení](sync-your-device-manually-windows.md)
+### [Získání nápovědy a podpory](help-support-windows-cpapp.md)
 
 ### [Řešení běžných problémů pro Windows](troubleshoot-your-device-windows.md)
 #### [Řešení omezení přístupového bodu](resolve-access-point-restrictions.md)
