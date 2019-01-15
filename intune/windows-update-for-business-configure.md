@@ -2,10 +2,10 @@
 title: Konfigurace služby Windows Update pro firmy v Microsoft Intune – Azure | Microsoft Docs
 description: Přečtěte si, jak upravit nastavení aktualizací softwaru na profilu a vytvořit aktualizační kanál, zkontrolujte dodržování předpisů a zjistěte, jak pozastavit aktualizace v nastavení služby Windows Update pro firmy pomocí Microsoft Intune na zařízeních s Windows 10.
 keywords: ''
-author: dougeby
-ms.author: dougeby
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 01/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: c0ab63ab8832db69ecf27361dc4fe4c9a1196db3
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: ccb91082a3226ec4091a139d31796fd77bdf0616
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203480"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297379"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
@@ -106,7 +106,7 @@ Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. 
 
    - **Brání uživateli ve pozastavení aktualizací Windows**: Ve výchozím nastavení povolený. Pomocí tohoto nastavení můžete blokovat nebo povolit uživatelům k pozastavení instalace aktualizace z *nastavení* jejich počítačů. 
       
-   - **Režim stahování pro optimalizaci doručení**: Zvolte metodu, pro kterou zařízení stahovat aktualizace Windows. Podrobnosti najdete v části [DeliveryOptimization/DODownloadMode](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#download-mode).
+   - **Režim stahování pro optimalizaci doručení**: Optimalizace doručení je už nakonfigurovaný jako součást aktualizační kanál Windows 10 v rámci aktualizace softwaru. Optimalizace doručení je nyní nastaveno prostřednictvím konfigurace zařízení. Ale předchozí konfigurace zůstanou dostupné i v konzole. Tyto předchozích konfigurací můžete odebrat úpravou jejich *Nenakonfigurováno*, ale jinak nedaly změnit. Aby nedocházelo ke konfliktům mezi původní a nové zásady, najdete v článku [přesouvat existující aktualizační okruhy optimalizace doručení](delivery-optimization-windows.md#move-from-existing-update-rings-to-delivery-optimization) a poté přesuňte nastavení do profilu optimalizace doručení. 
 
 5. Po dokončení zvolte **OK**. V podokně **Vytvořit aktualizační kanál** vyberte **Vytvořit**.
 

@@ -15,12 +15,12 @@ ms.reviewer: karanda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f4cdd3c215fbd9eab4204eca0639d5d38fe4c97a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 12131fe0b78814850cfadee15533620dd5813f6c
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180727"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297396"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
 
@@ -33,9 +33,9 @@ Síť VPN pro jednotlivé aplikace je v tuto chvíli k dispozici pro následují
  - Citrix
  - F5
  - Pulse Connect Secure
+ - Palo Alto Networks
  - SonicWall
- - Palo Alto Networks GlobalProtect
- - Zscaler
+ - Privátní přístup Zscaler
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 
@@ -56,7 +56,7 @@ Vyexportujte certifikát a přidejte certifikační autoritu.
 
 Vytvořte nebo zvolte existující skupinu ve službě Azure AD (Azure Active Directory), která bude obsahovat členy, kteří mají přístup k síti VPN pro jednotlivé aplikace.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Zvolte **Skupiny** a klikněte na **Nová skupina**.
 3. Vyberte **typ skupiny**. 
@@ -71,7 +71,7 @@ Vytvořte nebo zvolte existující skupinu ve službě Azure AD (Azure Active Di
 
 Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportujte do profilu vytvořeného v Intune. Profil důvěryhodného certifikátu vydá pokyn zařízení s iOSem, aby automaticky důvěřovalo certifikační autoritě, kterou uvádí server VPN.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
 3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
@@ -80,7 +80,7 @@ Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportu
     3. Jako **platformu** vyberte **iOS**.
     4. Jako **typ profilu** vyberte **Důvěryhodný certifikát**.
 4. Klikněte na ikonu složky a vyhledejte certifikát VPN (soubor s příponou .cer), který jste vyexportovali z konzoly pro správu sítě VPN. Klikněte na **OK**.
-5. Klikněte na **Vytvořit**.
+5. Klikněte na možnost **Vytvořit**.
 
     ![Vytvoření profilu důvěryhodného certifikátu](./media/vpn-per-app-create-trusted-cert.png)
 
@@ -88,7 +88,7 @@ Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportu
 
 Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky důvěřovat serveru VPN. Certifikát SCEP poskytuje serveru VPN přihlašovací údaje z klienta VPN iOSu. Certifikát umožňuje, aby se zařízení tiše ověřilo, aniž by po uživateli zařízení s iOSem požadovalo uživatelské jméno a heslo. 
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
 3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
@@ -104,10 +104,10 @@ Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky d�
 9. Klikněte na Kořenový certifikát a vyberte certifikát SCEP. Klikněte na **OK**.
 10. Do pole **Název** v části **Rozšířené použití klíče** zadejte `Client Authentication`.
 11. Do pole **Identifikátor objektu** zadejte `1.3.6.1.5.5.7.3.2`.
-12. Klikněte na tlačítko **přidat**.
+12. Klikněte na **Přidat**.
 13. Zadejte ***adresu URL serveru*** a klikněte na **Přidat**.
 14. Klikněte na **OK**.
-15. Klikněte na **Vytvořit**.
+15. Klikněte na možnost **Vytvořit**.
 
     ![Vytvoření profilu certifikátu SCEP](./media/vpn-per-app-create-scep-cert.png)
 
@@ -115,7 +115,7 @@ Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky d�
 
 Součástí profilu sítě VPN je certifikát SCEP, který obsahuje přihlašovací údaje klienta, informace o připojení k síti VPN a příznak sítě VPN pro jednotlivé aplikace a umožní aplikaci iOSu používat funkce sítě VPN pro jednotlivé aplikace.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
 3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
@@ -136,7 +136,7 @@ Součástí profilu sítě VPN je certifikát SCEP, který obsahuje přihlašova
     2. Zadejte adresu URL sítě VPN a klikněte na **Přidat**.
     3. Klikněte na **OK**.
 6. Klikněte na **OK**.
-7. Klikněte na **Vytvořit**.
+7. Klikněte na možnost **Vytvořit**.
 
     ![Vytvoření profilu sítě VPN pro jednotlivé aplikace](./media/vpn-per-app-create-vpn-profile.png)
 
@@ -145,7 +145,7 @@ Součástí profilu sítě VPN je certifikát SCEP, který obsahuje přihlašova
 
 Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD k profilu.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Klientské aplikace**.
 4. Klikněte na **Aplikace**.
@@ -186,10 +186,12 @@ Po nastavení sítě VPN pro jednotlivé aplikace a jejím přidružení k aplik
     - Check Point Capsule Connect
     - Cisco AnyConnect
     - Citrix VPN
+    - Citrix SSO
     - F5 Access
+    - Palo Alto Networks GlobalProtect
     - Pulse Secure
     - SonicWall Mobile Connect
-    - Zscaler App
+    - Zscaler
 
     > [!NOTE]
     > Pokud používáte aplikaci VPN Pulse Secure, můžete použít tunelování v aplikační vrstvě nebo na úrovni paketů. U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 01/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: d290fadf92ee112a1f663c6894861b393b81f74d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190315"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297498"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -42,7 +42,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 | VppProgramTypeKey          | Odkaz na entitu VppProgramType, která je popsaná níže.                                        | 30876                                |
 | CreationTime               | Čas vytvoření této revize                                            | 23. 11. 2016 0:00                      |
 | ModifiedTime               | Čas poslední změny nějakého prvku, který s touto revizí souvisí.                            | 23. 11. 2016 0:00                      |
-| Size                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
+| Velikost                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
 | StartDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila.      | 23. 11. 2016 0:00                      |
 | EndDateExclusiveUTC        | Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá                        | 23. 11. 2016 0:00                      |
 | IsCurrent                  | Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální.         | True nebo False                           |
@@ -83,7 +83,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 | DateKey       | Klíč data, kdy se vytvořil souhrn pro zásady dodržování předpisů.                                                                                                                   | 20161204 |
 | Neznámé       | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 5        |
 | NotApplicable | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 201      |
-| Vyhovuje     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
+| Odpovídající     | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 4083     |
 | InGracePeriod | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 57       |
 | NonCompliant  | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 43       |
 |    Chyba      |    Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                          |    3     |
@@ -98,7 +98,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 | PolicyPlatformKey | Klíč pro typ platformy zásad dodržování předpisů, pro který se vytvořil souhrn.                                                                                            | 5        |
 | Neznámé           | Počet zařízení, která jsou offline nebo kterým se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.                                                                           | 13       |
 | NotApplicable     | Počet zařízení, ve kterých nejsou použitelné zásady dodržování předpisů, na které zacílil správce.                                                                                     | 3        |
-| Vyhovuje         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
+| Odpovídající         | Počet zařízení, ve kterých se úspěšně použily jedny nebo více zásad dodržování předpisů, na které zacílil správce.                                                                        | 45       |
 | InGracePeriod     | Počet zařízení, která nevyhovují předpisům, ale jsou v období odkladu definovaném správcem.                                                                                  | 3        |
 | NonCompliant      | Počet zařízení, u kterých se nepodařilo použít jedny nebo více zásad dodržování předpisů, na které zacílil správce nebo u kterých uživatel nedodržel zásady, na které správce zacílil. | 7        |
 | Chyba             | Počet zařízení, kterým se nepodařilo komunikovat s Intune nebo Azure AD a která vrátila chybovou zprávu.                                                                             | 3        |
@@ -115,7 +115,7 @@ Následující tabulka shrnuje stav přiřazení zásad dodržování předpisů
 |  complianceStatus  |                       Popis                      |
 |:------------------:|:------------------------------------------------------:|
 |    Neznámé         |    Neznámý.                                                                        |
-|    Vyhovuje       |    Dodržuje předpisy.                                                                      |
+|    Odpovídající       |    Dodržuje předpisy.                                                                      |
 |    a nevyhovující    |       Zařízení nedodržuje předpisy a má zablokovaný přístup k podnikovým prostředkům.             |
 |    Konflikt        |    Konflikt s jinými pravidly                                                      |
 |    Chyba           |       Chyba                                                                       |
@@ -160,7 +160,7 @@ Entita **DeviceConfigurationProfileDeviceActivity** obsahuje počet zařízení 
 |  Vlastnost |                                          Popis                                          |  Příklad |
 |:---------:|:---------------------------------------------------------------------------------------------:|:--------:|
 | DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703 |
-| Čeká   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123      |
+| Čekající na vyřízení   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123      |
 | Úspěšné | Počet jedinečných zařízení v úspěšném stavu                                                    | 12       |
 | Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10       |
 | Neúspěch    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2        |
@@ -171,7 +171,7 @@ Entita **DeviceConfigurationProfileUserActivity** obsahuje počet uživatelů v 
 | Vlastnost  | Popis  | Příklad  |
 |------------|----------------------------------------------------------------------------------------------|-----------|
 | DateKey  | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo  | 20160703  |
-| Čeká  | Počet jedinečných uživatelů v čekajícím stavu  | 123  |
+| Čekající na vyřízení  | Počet jedinečných uživatelů v čekajícím stavu  | 123  |
 | Úspěšné  | Počet jedinečných uživatelů v úspěšném stavu  | 12  |
 | Chyba  | Počet jedinečných uživatelů v chybovém stavu  | 10  |
 | Neúspěch  | Počet jedinečných uživatelů v neúspěšném stavu  | 2  |
@@ -182,7 +182,7 @@ Entita **DeviceConfigurationProfileUserActivity** obsahuje počet uživatelů v 
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
 | DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |
-| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| Název zařízení                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
 | DeviceRegistrationStateKey | Klíč atributu stavu registrace zařízení pro toto zařízení                                                                                                                    |
 | OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                  |
 | ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
@@ -215,7 +215,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
 | DeviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
-| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| Název zařízení                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
 | DeviceTypeKey              | Klíč atributu typu zařízení pro toto zařízení                                                                                                                                    |
 | DeviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
 | OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
@@ -230,7 +230,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | ComplianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
 | OSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
 | EasDeviceId                | ID zařízení Exchange ActiveSync                                                                                                                                                  |
-| SerialNumber               | SerialNumber                                                                                                                                                                           |
+| sériové číslo               | sériové číslo                                                                                                                                                                           |
 | UserId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
 | Výrobce               | Výrobce zařízení                                                                                                                                                             |
@@ -312,6 +312,92 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | 9                | WindowsCoManagement                | Aktivace spolusprávy Windows 10 AutoPilotem nebo zásadou skupiny                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Připojení k Azure AD pomocí Device Auth ve Windows 10                                            |
 
+## <a name="enrollmentactivities"></a>enrollmentActivities 
+**EnrollmentActivity** entity indikuje aktivitu registrace zařízení.
+
+| Vlastnost                      | Popis                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| dateKey                       | Klíč data, když se tato aktivita registrace přihlášení.               |
+| deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
+| deviceTypeKey                 | Klíč typu zařízení.                                                |
+| enrollmentEventStatusKey      | Klíč stavu indikující úspěch nebo neúspěch registrace.    |
+| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (pokud registrace nebyla úspěšná.).        |
+| enrollmentFailureReasonKey    | Klíč důvod selhání registrace (pokud registrace nebyla úspěšná.).          |
+| osVersion                     | Verze operačního systému zařízení.                               |
+| count                         | Celkový počet zápisu aktivit odpovídající klasifikace výše.  |
+
+## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
+**EnrollmentEventStatus** entity označuje výsledek registrace zařízení.
+
+| Vlastnost                   | Popis                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
+| enrollmentEventStatusName  | Název stavu registrace. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentEventStatusName  | Popis                            |
+|----------------------------|----------------------------------------|
+| Úspěch                    | Registrace úspěšná zařízení         |
+| Selhalo                     | Registrace zařízení se nezdařilo             |
+| Není k dispozici              | Stav zápisu není k dispozici.  |
+
+## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
+**EnrollmentFailureCategory** entity označuje, proč registrace zařízení se nepovedla. 
+
+| Vlastnost                       | Popis                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureCategoryName  | Název kategorie chyby registrace. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentFailureCategoryName   | Popis                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Nelze použít                  | Kategorie chyby registrace se nedá použít.                                                            |
+| Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
+| Neznámé                         | Neznámá chyba                                                                                                |
+| Ověřování                  | Ověření se nezdařilo.                                                                                        |
+| Autorizace                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
+| AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
+| UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
+| DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
+| InMaintenance                   | Účet je ve stavu údržby.                                                                                    |
+| Chybného požadavku                      | Klient odešle požadavek, který není srozumitelný/podporované službou.                                        |
+| FeatureNotSupported             | Funkce používá tento zápis nejsou podporovány pro tento účet.                                        |
+| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurované správcem blokované tato registrace.                                          |
+| ClientDisconnected              | Vypršel časový limit klienta nebo registrace bylo přerušeno roli.                                                        |
+| UserAbandonment                 | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
+
+## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
+**EnrollmentFailureReason** entity označuje podrobnější důvod selhání registrace zařízení v kategorii daného selhání.  
+
+| Vlastnost                     | Popis                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------|
+| enrollmentFailureReasonKey   | Jedinečný identifikátor důvod selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureReasonName  | Název registrace důvod selhání. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentFailureReasonName      | Popis                                                                                                                                                                                            |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
+| Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
+| Neznámé                          | Došlo k neznámé chybě.                                                                                                                                                                                         |
+| UserNotLicensed                  | Uživatel se nenašel v Intune nebo nemá platnou licenci.                                                                                                                                     |
+| UserUnknown                      | Uživatel není znám do Intune.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení už zaregistroval někdo jiný uživatel.                                                                                                                |
+| EnrollmentOnboardingIssue        | Autoritu pro správu (MDM) Intune mobilního zařízení ještě není nakonfigurovaná.                                                                                                                                 |
+| AppleChallengeIssue              | Instalace profilu správy iOS se zpozdila nebo nebyla úspěšná.                                                                                                                                         |
+| AppleOnboardingIssue             | Certifikát Apple MDM push certificate se vyžaduje k registraci do Intune.                                                                                                                                       |
+| DeviceCap                        | Uživatel se pokusil zaregistrovat víc zařízení, než maximální povolená.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Registrace služby Intune se nepodařilo autorizovat tento požadavek.                                                                                                                                            |
+| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky pro registraci v Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Toto zařízení se nepodařilo registrovat z důvodu nakonfigurované registrace omezení pravidla.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nenašel se mezinárodní identifikátor mobilního zařízení (IMEI) nebo sériové číslo tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení v osobním vlastnictví, které jsou aktuálně zablokovány.  |
+| FeatureNotSupported              | Uživatel se pokusil pro přístup k funkci, která ještě není k všem zákazníkům nebo není kompatibilní s vaší konfigurací Intune.                                                            |
+| UserAbandonment                  | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
+| APNSCertificateExpired           | Zařízení Apple nelze spravovat pomocí vypršela platnost certifikátu Apple MDM push certificate.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 **IntuneManagementExtension** uvádí seznam stavů **intuneManagementExtension** na jednotlivých zařízeních s Windows 10 za den. Uchovávají se data za posledních 60 dní.
@@ -419,7 +505,7 @@ Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastni
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Jedinečný identifikátor typu vlastníka.                                                                                                                                               |                            |
 | ownerTypeKey  | Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč                                                                                                       |                            |
-| ownerTypeName | Představuje typ vlastníka zařízení: Společnost – zařízení je ve vlastnictví podniku.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Společnost, Osobní, Neznámé |
+| ownerTypeName | Představuje typ vlastníka zařízení:  Společnost – zařízení je ve vlastnictví společnosti.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Společnost, Osobní, Neznámé |
 
 ## <a name="policies"></a>policies
 Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.
@@ -441,11 +527,11 @@ Následující tabulka uvádí počet zařízení v úspěšném, čekajícím, 
 |  Vlastnost |                                           Popis                                           |        Příklad        |
 |:---------:|:-----------------------------------------------------------------------------------------------:|:---------------------:|
 | DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703              |
-| Čeká   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                   |
-| Úspěšné | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                    |
+| Čekající na vyřízení   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                   |
+| Úspěch | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                    |
 | PolicyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                  | Směrný plán Windows 10 |
 | Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                    |
-| Neúspěch    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                     |
+| Selhalo    | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                     |
 
 ## <a name="policyplatformtypes"></a>policyPlatformTypes
 
@@ -463,7 +549,7 @@ Entita **PolicyTypeActivity** obsahuje kumulativní počet zařízení v úspě�
 | DateKey       | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703                    |
 | PolicyKey     | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10         |
 | PolicyTypeKey | Typ klíče zásad, který jde připojit k typu zásad a získat tak název typu zásad.             | Zásady dodržování předpisů Windows 10 |
-| Čeká       | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                         |
+| Čekající na vyřízení       | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                         |
 | Úspěšné     | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                          |
 | Chyba         | Počet jedinečných zařízení v chybovém stavu                                                      | 10                          |
 | Neúspěch        | Počet jedinečných zařízení v neúspěšném stavu                                                     | 2                           |
@@ -483,7 +569,7 @@ Následující tabulka uvádí počet uživatelů v úspěšném, čekajícím, 
 |  Vlastnost |                                          Popis                                          |       Příklad       |
 |:---------:|:---------------------------------------------------------------------------------------------:|:-------------------:|
 | DateKey   | Klíč data, kdy se přihlášení konfiguračního profilu zařízení v datovém skladu zaznamenalo. | 20160703            |
-| Čeká   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                 |
+| Čekající na vyřízení   | Počet jedinečných zařízení v čekajícím stavu                                                    | 123                 |
 | Úspěšné | Počet jedinečných zařízení v úspěšném stavu                                                    | 12                  |
 | PolicyKey | Klíč zásad, který jde připojit k zásadám a získat tak název zásad.                                | Směrný plán Windows 10 |
 | Chyba     | Počet jedinečných zařízení v chybovém stavu                                                      | 10                  |
@@ -496,12 +582,12 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    termsAndConditionsKey    |    Klíč odpovídající položce v kolekci userTermsAndConditionsAcceptances    |    123    |
 |    termsAndCondidionsId    |    ID této položky termsAndConditions    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    Verze této položky termsAndConditions    |    1    |
-|    Jméno    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
+|    jméno    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
 |    description    |    Popis těchto podmínek a ujednání     |         |
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
 |    termsAndConditionsBodyText    |    Text těchto podmínek a ujednání       |    *Šifrování zařízení* Vynucení šestimístného číselného kódu PIN    |
-|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    False (Nepravda)    |
+|    IsDeleted    |    Hodnota true nebo false určující, zda se tato hodnota odstranila.     |    False    |
 |    startDateInclusiveUTC    |    Počáteční datum těchto podmínek a ujednání.     |    23. 8. 2018 4:01:34    |
 |    endDateEclusiveUTC    |    Koncové datum těchto podmínek a ujednání.     |    31. 12. 9999 12:00:00    |
 
@@ -526,8 +612,8 @@ Kolekce entit **user** obsahuje uživatelská data. Tyto záznamy zahrnují stav
 | UserKey                    | Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč                                                                                                                                                         | 123                                  |
 | UserId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
-| UPN                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
-| DisplayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
+| HLAVNÍ NÁZEV UŽIVATELE                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
+| displayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
 | IntuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | True nebo False                           |
 | IsDeleted                  | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. | True nebo False                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil                                                                                                                                                 | 23. 11. 2016 0:00                      |

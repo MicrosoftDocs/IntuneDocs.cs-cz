@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 01/11/2010
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,25 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 0f39b0cb758c8c62da2e76ef8eaff07264ff3f3a
-ms.sourcegitcommit: 4e69a8664c289263490daa4c02bc6b81c33196e5
+ms.openlocfilehash: 3fce49decb7574d32d1923a77bb2cca28384ce11
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53642757"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297226"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="1812"></a>1812 
+_Vydáno prosince 2018_
+
+### <a name="enrollment-activities-collection-released-to-v10"></a>Kolekce aktivit registrace všeobecně dostupné verze 1.0 
+
+Kolekce aktivity zápisu je teď dostupná v v1.0. Tuto kolekci můžete použít k pochopení svazku selhání registrace a trendy ve vašem prostředí. Další informace najdete v tématu [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities), [enrollmentEventStatuses](intune-data-warehouse-collections.md#enrollmenteventstatuses), [enrollmentFailureCategories](intune-data-warehouse-collections.md#enrollmentfailurecategories), a [ enrollmentFailureReasons](intune-data-warehouse-collections.md#enrollmentfailurereasons).
 
 ## <a name="1808"></a>1808
 _Vydáno v srpnu 2018_
@@ -36,9 +43,9 @@ _Vydáno v srpnu 2018_
 
 Nastavením parametru dotazu `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.
 
-### <a name="enrollment-failure-collection-released-to-beta"></a>Kolekce neúspěšných registrací vydaná ve verzi beta
+### <a name="enrollment-activities-collection-released-to-beta"></a>Kolekce aktivit registrace všeobecně dostupné verze Beta
 
-Nová kolekce `Enrollment Failure` se vydala ve verzi beta. Můžete ji použít k pochopení průběhu registrace tím, že se zaměříte na nejběžnější chyby. 
+Nová kolekce `Enrollment Activities` se vydala ve verzi beta. Můžete ji použít k pochopení průběhu registrace tím, že se zaměříte na nejběžnější chyby. 
 
 
 ## <a name="1805"></a>1805

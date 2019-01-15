@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 44dc3f82b8d51007d3eaf1d71f1a416ebfe319b4
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 3993cb4e7ccbc04ccc1d341a9bd72594948f3262
+ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53738065"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54297515"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -46,7 +46,7 @@ Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné enti
 | DeviceTypeKey |Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
 | DeviceTypeName |Typ zařízení |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | deviceTypeID  | Název | Popis |
 |---------|------------|--------|
@@ -81,7 +81,7 @@ Entita **ClientRegistrationStateTypes** zastupuje typ registrace, na který odka
 | clientRegisterationStateKey |Jedinečný identifikátor stavu registrace v datovém skladu – náhradní klíč |
 | clientRegisterationStateName |Stav registrace |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | ClientRegisterationStateID  | Název | Popis |
 |---------|------------|--------|
@@ -95,6 +95,93 @@ Entita **ClientRegistrationStateTypes** zastupuje typ registrace, na který odka
 | 7 |NotRegisteredPendingEnrollment |Nezaregistrováno, nevyřízená registrace |
 | 8 |Neznámé |Neznámý stav |
 
+## <a name="enrollmentactivities"></a>enrollmentActivities 
+**EnrollmentActivity** entity indikuje aktivitu registrace zařízení.
+
+| Vlastnost                      | Popis                                                               |
+|-------------------------------|---------------------------------------------------------------------------|
+| dateKey                       | Klíč data, když se tato aktivita registrace přihlášení.               |
+| deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
+| deviceTypeKey                 | Klíč typu zařízení.                                                |
+| enrollmentEventStatusKey      | Klíč stavu indikující úspěch nebo neúspěch registrace.    |
+| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (pokud registrace nebyla úspěšná.).        |
+| enrollmentFailureReasonKey    | Klíč důvod selhání registrace (pokud registrace nebyla úspěšná.).          |
+| osVersion                     | Verze operačního systému zařízení.                               |
+| count                         | Celkový počet zápisu aktivit odpovídající klasifikace výše.  |
+
+## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
+**EnrollmentEventStatus** entity označuje výsledek registrace zařízení.
+
+| Vlastnost                   | Popis                                                                       |
+|----------------------------|-----------------------------------------------------------------------------------|
+| enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
+| enrollmentEventStatusName  | Název stavu registrace. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentEventStatusName  | Popis                            |
+|----------------------------|----------------------------------------|
+| Úspěch                    | Registrace úspěšná zařízení         |
+| Selhalo                     | Registrace zařízení se nezdařilo             |
+| Není k dispozici              | Stav zápisu není k dispozici.  |
+
+## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
+**EnrollmentFailureCategory** entity označuje, proč registrace zařízení se nepovedla. 
+
+| Vlastnost                       | Popis                                                                                 |
+|--------------------------------|---------------------------------------------------------------------------------------------|
+| enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureCategoryName  | Název kategorie chyby registrace. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentFailureCategoryName   | Popis                                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------------------|
+| Nelze použít                  | Kategorie chyby registrace se nedá použít.                                                            |
+| Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
+| Neznámé                         | Neznámá chyba                                                                                                |
+| Ověřování                  | Ověření se nezdařilo.                                                                                        |
+| Autorizace                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
+| AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
+| UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
+| DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
+| InMaintenance                   | Účet je ve stavu údržby.                                                                                    |
+| Chybného požadavku                      | Klient odešle požadavek, který není srozumitelný/podporované službou.                                        |
+| FeatureNotSupported             | Funkce používá tento zápis nejsou podporovány pro tento účet.                                        |
+| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurované správcem blokované tato registrace.                                          |
+| ClientDisconnected              | Vypršel časový limit klienta nebo registrace bylo přerušeno roli.                                                        |
+| UserAbandonment                 | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
+
+## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
+**EnrollmentFailureReason** entity označuje podrobnější důvod selhání registrace zařízení v kategorii daného selhání.  
+
+| Vlastnost                     | Popis                                                                               |
+|------------------------------|-------------------------------------------------------------------------------------------|
+| enrollmentFailureReasonKey   | Jedinečný identifikátor důvod selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureReasonName  | Název registrace důvod selhání. Další příklady naleznete níže.                            |
+
+### <a name="example"></a>Příklad
+
+| enrollmentFailureReasonName      | Popis                                                                                                                                                                                            |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
+| Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
+| Neznámé                          | Došlo k neznámé chybě.                                                                                                                                                                                         |
+| UserNotLicensed                  | Uživatel se nenašel v Intune nebo nemá platnou licenci.                                                                                                                                     |
+| UserUnknown                      | Uživatel není znám do Intune.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení už zaregistroval někdo jiný uživatel.                                                                                                                |
+| EnrollmentOnboardingIssue        | Autoritu pro správu (MDM) Intune mobilního zařízení ještě není nakonfigurovaná.                                                                                                                                 |
+| AppleChallengeIssue              | Instalace profilu správy iOS se zpozdila nebo nebyla úspěšná.                                                                                                                                         |
+| AppleOnboardingIssue             | Certifikát Apple MDM push certificate se vyžaduje k registraci do Intune.                                                                                                                                       |
+| DeviceCap                        | Uživatel se pokusil zaregistrovat víc zařízení, než maximální povolená.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Registrace služby Intune se nepodařilo autorizovat tento požadavek.                                                                                                                                            |
+| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky pro registraci v Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Toto zařízení se nepodařilo registrovat z důvodu nakonfigurované registrace omezení pravidla.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nenašel se mezinárodní identifikátor mobilního zařízení (IMEI) nebo sériové číslo tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení v osobním vlastnictví, které jsou aktuálně zablokovány.  |
+| FeatureNotSupported              | Uživatel se pokusil pro přístup k funkci, která ještě není k všem zákazníkům nebo není kompatibilní s vaší konfigurací Intune.                                                            |
+| UserAbandonment                  | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
+| APNSCertificateExpired           | Zařízení Apple nelze spravovat pomocí vypršela platnost certifikátu Apple MDM push certificate.                                                                                                                            |
+
 ## <a name="enrollmenttypes"></a>EnrollmentTypes
 
 Entita **EnrollmentTypes** určuje, jak se zařízení zaregistrovalo. Typ registrace zaznamenává metodu registrace. Příklady ukazují různé typy registrace a jejich význam.
@@ -105,7 +192,7 @@ Entita **EnrollmentTypes** určuje, jak se zařízení zaregistrovalo. Typ regis
 | managementStateKey |Jedinečný identifikátor stavu správy v datovém skladu – náhradní klíč |
 | managementStateName |Určuje stav vzdálené akce použité pro toto zařízení. |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | enrollmentTypeID  | Název | Popis |
 |---------|------------|--------|
@@ -140,7 +227,7 @@ Entita **MdmStatuses** označuje stav kompatibility daného zařízení.
 | ComplianceStatus |Stav dodržování předpisů zařízením; měl by mít jednu z hodnot z tabulky níže | 
 
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | MdmStatusID  | ComplianceStatus | Popis |
 |---------|------------|--------|
@@ -161,7 +248,7 @@ Entita **ManagementStates** poskytuje podrobné informace o stavu daného zaří
 | managementStateKey | Jedinečný identifikátor stavu správy v datovém skladu – náhradní klíč |
 | managementStateName | Určuje stav vzdálené akce použité pro toto zařízení. |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | managementStateID  | Název | Popis |
 |---------|------------|--------|
@@ -188,7 +275,7 @@ Entita **WorkPlaceJoinStateTypes** představuje stav připojení k pracovišti A
 | WorkPlaceJoinStateKey | Jedinečný identifikátor stavu připojení k pracovišti v datovém skladu – náhradní klíč |
 | WorkPlaceJoinStateName | Stav připojení k pracovišti |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | workPlaceJoinStateID  | Název | Popis |
 |---------|------------|--------|
@@ -212,7 +299,7 @@ Entita **ManagementAgentTypes** představuje agenty používané ke správě za�
 | ManagementAgentTypeKey | Jedinečný identifikátor typu agenta správy v datovém skladu – náhradní klíč. |
 | ManagementAgentTypeName |Určuje typ agenta, který se používá ke správě zařízení. |
 
-## <a name="example"></a>Příklad
+### <a name="example"></a>Příklad
 
 | ManagementAgentTypeID  | Název | Popis |
 |---------|------------|--------|
