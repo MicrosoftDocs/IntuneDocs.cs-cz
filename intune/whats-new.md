@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 0cc94da03e1288de519d08acadbf3374bb76fcd7
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 00367fffa141ed2337c1089710050c9aefc857c5
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210903"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316946"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -161,10 +161,10 @@ Nová stránka nápovědy portál společnosti a podpora pomáhá uživatelům �
 Zavádíme nové prostředí nápovědy a podpory pro všechny tenanty prostřednictvím během několika dalších dnů. Toto nové prostředí je k dispozici pro Intune a je přístupný při používání okna Intune v [webu Azure portal](https://portal.azure.com/).
 Nové prostředí vám umožňuje popsat problém vlastními slovy a získat přehled možností řešení potíží a postupy z webu, jak problém opravit. Tato řešení jsou k dispozici prostřednictvím počítač založený na pravidlech umožňujících učení algoritmu řízené uživatelem. Kromě pokyny týkající se problému můžete použít nový pracovní postup vytvoření případu k otevření případu podpory podle e-mail nebo telefon. Toto nové prostředí nahradí předchozí prostředí nápovědy a podpory statickou sadu předem vybranými možnostmi, které jsou založeny na oblasti konzoly jsou otevřít nápovědu a podporu. Další informace najdete v tématu [jak získat podporu pro Microsoft Intune](get-support.md).
 
-### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+### <a name="role-based-access-control"></a>Řízení přístupu podle rolí
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Značky oboru pro aplikace <!-- 1081941 -->
-Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
+Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. Aplikace zakoupené pomocí Apple Volume Purchase Program (VPP) nelze přiřadit značky oboru.  Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
 
 
 
@@ -468,7 +468,7 @@ Certifikáty se v současnosti vydávají jenom uživatelům. S touto aktualizac
 - Vlastnost **Alternativní název subjektu (SAN)** v profilu SCEP má nyní formát tabulky a může obsahovat nové proměnné. Správce může do tabulky přidat atribut a vyplnit hodnotu vlastního textového pole. Alternativní název subjektu (SAN) podporuje následující atributy: 
   - DNS
   - E-mailová adresa
-  - HLAVNÍ NÁZEV UŽIVATELE
+  - UPN
 
   Tyto nové proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
 
@@ -712,7 +712,7 @@ Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.mi
 #### <a name="enhanced-jailbreak-detection-in-compliance-reporting---2198738---"></a>Vylepšená detekce jailbreaků při generování sestav dodržování předpisů <!-- 2198738 -->
 Vylepšené stavy nastavení detekce jailbreaků se nově zobrazují při veškerém generování sestav dodržování předpisů v konzole správce.
 
-### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+### <a name="role-based-access-control"></a>Řízení přístupu podle rolí
 
 #### <a name="scope-tags-for-policies---1081974---"></a>Značky oboru pro zásady <!--1081974 -->
 Nově můžete [vytvářet značky oboru](scope-tags.md) a omezovat s jejich pomocí přístup k prostředkům Intune. Přidejte značku oboru k přiřazení role a poté přidejte značku oboru ke konfiguračnímu profilu. Daná role bude mít přístup pouze k prostředkům s konfiguračními profily, které mají odpovídající značky oboru (nebo žádnou značku oboru).
@@ -1105,7 +1105,7 @@ Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0
 
 V této aktualizaci zahrnuje [ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard) (**Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu**) následující nastavení: 
 
-- **Windows Defender Credential Guard**: Zapne Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Vaše možnosti jsou:
+- **Windows Defender Credential Guard**: Zapne Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Mezi možnosti patří:
   - **Zakázané**: Pokud Credential Guard byla dříve zapnutá pomocí **povoleno bez zámku**"možnost, pak ji vypne Credential Guard vzdáleně.
 
   - **Povoleno s uzamčením UEFI**: Zajišťuje, že Credential Guard nejde zakázat pomocí klíče registru nebo pomocí zásad skupiny. Pokud jste použili toto nastavení a chcete ochranu Credential Guard zakázat, musíte nastavit zásady skupiny na Zakázáno. Potom bezpečnostní funkci odeberte z každého počítače, u kterého je uživatel fyzicky přítomen. Tyto kroky smažou konfiguraci uloženou v rozhraní UEFI. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.

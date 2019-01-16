@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: a698d7a57c59a27dbd39036b1e2607e80570029f
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 65a461928c377dd4a674f8f3f2eeeef148ab56b2
+ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210767"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54316895"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -50,7 +50,7 @@ Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich
 
 Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přijímají zásady ochrany aplikací Intune na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune i na neregistrovaných zařízeních.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
@@ -113,12 +113,10 @@ U aplikací pro Android založených na Xamarinu, které nevyužívají architek
 
 1.  Přidejte do svého projektu balíček NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks). Tím se automaticky přidají xamarinové vazby sady Intune APP SDK, pokud jste je ještě nezahrnuli.
 
-2.  Přidejte volání `Xamarin.Forms.Forms.Init(Context, Bundle)` ve funkci `OnMAMCreate` třídy `MAMApplication`, kterou jste vytvořili v kroku 2.2 výše. To je nutné, protože se správou přes Intune se aplikace může spustit i na pozadí.
+2.  Přidejte volání `Xamarin.Forms.Forms.Init(Context, Bundle)` ve funkci `OnMAMActivity` třídy `MAMApplication`, kterou jste vytvořili v kroku 2.2 výše. To je nutné, protože se správou přes Intune se aplikace může spustit i na pozadí.
 
 > [!NOTE]
 > Tato operace znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování Intellisense, a proto možná budete muset po prvním spuštění nástroje pro přemapování restartovat Visual Studio, aby funkce Intellisense správně rozpoznala změny. 
-
-Dokončili jste základní kroky pro začlenění komponenty do aplikace. Teď můžete postupovat podle kroků, které jsou součástí ukázkové aplikace Xamarin pro Android. Nabízíme dvě ukázky, jednu pro Xamarin.Forms a druhou pro Android.
 
 ## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Vyžadování zásad ochrany aplikací Intune k tomu, aby bylo možné použít obchodní aplikaci pro Android, která je založená na Xamarinu (volitelné) 
 
@@ -144,8 +142,14 @@ Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcet
 Tyto pokyny se týkají požadavku pro aplikace .NET/Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
 
 1. Proveďte všechny kroky, které jsou uvedené v dokumentaci pro ADAL v části o [zprostředkovaném ověřování pro Android](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android).
-> [!NOTE] 
-> Očekává se, že další vydaná verze .NET ADAL (3.17.4) bude obsahovat opravu, která zajistí, že toto bude fungovat.
+
+## <a name="potential-compilation-errors"></a>Potenciální chyby při kompilaci
+Tady jsou některé z nejčastěji viděli kompilace chyby při vývoji Xamarin aplikace založené na.
+
+* [CS0239 Chyba kompilátoru](https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0239): Tato chyba obvykle nastává v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+Když remapper změní dědičnosti tříd Xamarin, některé funkce pak bude možné `sealed` a přepsat místo toho se přidá nová varianta MAM. Jednoduše přejmenovat je přepsání jak je popsáno [tady](https://docs.microsoft.com/en-us/intune/app-sdk-android#renamed-methods). Pro instanci `MainActivity.OnCreate()` bude přejmenován na `MainActivity.OnMAMCreate()`
+
+* [Chyba kompilátoru CS0507](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba obvykle nastává v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Jak nástroj remapper změní některé třídy Xamarin dědičnost, některé z členské funkce se změní na `public`. Pokud některý z těchto funkcí přepíšete, může být nutné změnit tyto přepsání bude `public` také.
 
 ## <a name="support"></a>Podpora
 Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na zástupce podpory Microsoft a požádejte ho o otevření lístku podpory a vytvoření problému na [stránce problémů s Githubem](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), abychom vám mohli co nejrychleji pomoci. 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2019
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8e607dc612f71cdf72322b9fa7ecf14abb5fd809
-ms.sourcegitcommit: d54a12a836503f7e8b90346f16b7ad2d83b710dc
+ms.openlocfilehash: 971dc851714045a8a3b60dfe8ff6c6acc4419294
+ms.sourcegitcommit: 7c41f42d6e398ed46aa602ec8aaa4f39aaf92772
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54270584"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54325011"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -28,7 +28,7 @@ Platí pro: Intune na portálu Azure Portal
 
 Pokud vaše organizace používá [Jamf Pro](https://www.jamf.com) ke správě vašich koncových uživatelů Mac, můžete zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k zajištění, že jsou kompatibilní zařízení ve vaší organizaci.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Předpoklady
 
 Pro konfiguraci podmíněného přístupu s Jamf Pro je potřeba následující:
 
@@ -83,51 +83,9 @@ Propojení služby Intune s Jamf Pro můžete:
 
 Po dokončení konfigurace integrace mezi Intune a Jamf musíte [použití zásad dodržování předpisů pro zařízení spravovaná aplikací Jamf](conditional-access-assign-jamf.md).
 
-## <a name="information-shared-from-jamf-pro-to-intune"></a>Informace sdílené z Jamf Pro do Intune
 
-Jamf Pro zaznamená informace o inventáři spravovaných zařízeních macOS. Jamf Pro dodá do Intune následující informace:
-
-* ID zařízení v Azure AD
-* Stav inventáře JAMF (stav inventáře počítače připojeného k Jamf Pro během posledních 24 hodin)
-* Verze operačního systému
-* ID uživatele v Azure AD
-* Šifrované (FileVault 2)
-* Stav serveru gatekeeper
-* Heslo: minimální počet znakových sad
-* Vypršení platnosti hesla (dny)
-* Typ hesla – jednoduché, alfanumerické nebo neznámé
-* Zakázat automatické přihlášení
-* Požadovaná délka hesla
-* Heslo: počet předchozích hesel, aby se předešlo opětovnému použití
-* Ochrana Integrity systému
-* Poslední vrácení se změnami
-* Typ architektury
-* Dostupné sloty paměti RAM
-* Kapacita baterie
-* Spouštěcí paměť ROM
-* Rychlost sběrnice
-* Velikost mezipaměti
-* Název zařízení
-* Připojení k doméně
-* ID Jamf
-* Adresa MAC
-* Vytvoření
-* Model
-* Identifikátor modelu
-* Rychlost síťové karty
-* Počet jader
-* Počet procesorů
-* Operační systém
-* Platforma
-* Rychlost procesoru
-* Typ procesoru
-* Sekundární adresa MAC
-* Sériové číslo
-* Verze řadiče pro správu systému (SMC)
-* Celkové paměti RAM
-* UDID
-* E-mail uživatele
 
 ## <a name="next-steps"></a>Další postup
 
 - [Použití zásad dodržování předpisů pro zařízení spravovaná aplikací Jamf](conditional-access-assign-jamf.md)
+- [Odešle data Jamf do Intune](data-jamf-sends-to-intune.md)
