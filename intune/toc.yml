@@ -21,7 +21,7 @@ items:
   - name: Získání podpory
     href: get-support.md
   expanded: true
-- name: Rychlé starty
+- name: Rychlý start
   href: get-started-evaluation.md
   items:
   - name: Vyzkoušejte si Intune zdarma
@@ -160,7 +160,7 @@ items:
     - name: Možnosti registrace
       href: enrollment-options.md
       items:
-      - name: Podmínky a ujednání
+      - name: podmínky a ujednání
         href: terms-and-conditions-create.md
       - name: Omezení
         href: enrollment-restrictions-set.md
@@ -170,7 +170,7 @@ items:
         href: corporate-identifiers-add.md
       - name: Vícefaktorové ověřování
         href: multi-factor-authentication.md
-      - name: Správce registrace zařízení
+      - name: správce registrace zařízení
         href: device-enrollment-manager-enroll.md
       - name: Mapování zařízení na skupiny
         href: device-group-mapping.md
@@ -406,7 +406,7 @@ items:
         href: device-restrictions-ios.md
       - name: macOS
         href: device-restrictions-macos.md
-      - name: Windows 8.1
+      - name: Windows 8.1
         href: device-restrictions-windows-8-1.md
       - name: Windows Phone 8.1
         href: device-restrictions-windows-phone-8-1.md
@@ -451,7 +451,7 @@ items:
         href: vpn-setting-configure-per-app.md
       - name: macOS
         href: vpn-settings-macos.md
-      - name: Windows 8.1
+      - name: Windows 8.1
         href: vpn-settings-windows-8-1.md
       - name: Windows Phone 8.1
         href: vpn-settings-windows-phone-8-1.md
@@ -470,7 +470,7 @@ items:
         href: wi-fi-settings-macos.md
       - name: Windows 10
         href: wi-fi-settings-windows.md
-      - name: Windows 8.1
+      - name: Windows 8.1
         href: wi-fi-settings-import-windows-8-1.md
     - name: Mobilní profily eSIM
       href: esim-device-configuration.md
@@ -583,12 +583,12 @@ items:
           href: data-apple-sends-to-intune.md
         - name: Data odesílaná Googlem do Intune
           href: data-google-sends-to-intune.md
+        - name: Data, která Jamf Pro odesílaná do Intune
+          href: data-jamf-sends-to-intune.md
         - name: Data z Intune odesílaná Applu
           href: data-intune-sends-to-apple.md
         - name: Data z Intune odesílaná Googlu
           href: data-intune-sends-to-google.md
-        - name: Informace sdílené z Jamf Pro do Intune
-          href: conditional-access-integrate-jamf.md
       - name: Zobrazení a oprava osobních údajů
         href: privacy-data-view-correct.md
       - name: Auditování, export, odstranění
@@ -854,9 +854,9 @@ items:
         href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
       - name: Řešení konfliktů zásad
         href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
-ms.openlocfilehash: 1f17ae67e609e9836c29f6afd810bbea5ece99b4
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 2939459eafe7771c33ec20fd150c36c7808c2b1c
+ms.sourcegitcommit: 7c41f42d6e398ed46aa602ec8aaa4f39aaf92772
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203582"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54325045"
