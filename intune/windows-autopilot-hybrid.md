@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f6a78c6612f98903fcbaa9d33b8037c5ea4a3960
-ms.sourcegitcommit: 2ff19c09a43c63556d082966727674120b516d10
+ms.openlocfilehash: f81875afffa461e036bc319febc9a6141967c440
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149657"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380474"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
@@ -116,6 +116,9 @@ Konektor Intune pro Active Directory je nutné nainstalovat do počítače s Win
 6. Zvolte **Přihlásit se**.
 7. Zadejte přihlašovací údaje uživatele s rolí globálního správce nebo správce Intune.
 8. Přejděte na **Registrace zařízení** > **Registrace zařízení s Windows** > **Konektor Intune pro Active Directory (Preview)** a ověřte, že stav připojení je **Aktivní**.
+
+ > [!NOTE]
+ > Poté co **Sign In** v konektoru, může trvat několik minut, než se objeví v [Intune](https://aka.ms/intuneportal). Mějte na paměti, že konektor se zobrazit pouze pokud to bude možné úspěšně komunikovat se službou Intune.
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurace nastavení webového proxy serveru
 

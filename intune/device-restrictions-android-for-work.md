@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 671c713be805038c7c2f2608dbadd9d8afdce344
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203599"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54387016"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -33,7 +33,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 ### <a name="general-settings"></a>Obecná nastavení
 
 - **Snímek obrazovky**: Zvolte **bloku** zabránit snímky obrazovky a obrazovky zachycuje na zařízení. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
-- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Není nutné** umožňuje přístup k fotoaparátu zařízení.
+- **Camera**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Není nutné** umožňuje přístup k fotoaparátu zařízení.
 - **Výchozí zásady oprávnění**: Toto nastavení definuje výchozí zásady oprávnění pro žádosti o oprávnění modulu runtime. Mezi možné hodnoty patří:
   - **Výchozí ze zařízení**: Použijte výchozí nastavení zařízení.
   - **Příkazový řádek**: Uživatel je vyzván ke schválení oprávnění.
@@ -68,7 +68,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 - **Aktualizace systému**: Zvolte možnost definovat způsob, jakým zpracovává aktualizace distribuované bezdrátově zařízení:
   - **Výchozí ze zařízení**: Použijte výchozí nastavení zařízení.
   - **Automatické**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
-  - **Odložené**: Aktualizace jsou odložené po dobu 30 dnů. Na konci na 30 dnů Android se zobrazí výzva k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
+  - **Postponed**: Aktualizace jsou odložené po dobu 30 dnů. Na konci na 30 dnů Android se zobrazí výzva k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
   - **Časové období údržby**: Nainstaluje aktualizace automaticky během denní údržby, kterou jste nastavili v Intune. Instalace pokusí denně po dobu 30 dnů a může selhat, pokud je nedostatek místa či baterie úrovněmi. Po 30 dnech Android se zobrazí výzva k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazené zařízení, jako jsou veřejné terminály, jako veřejný terminál s jednou aplikací popředí aplikace je možné aktualizovat.
 - **Automatické aktualizace aplikací**: Zvolte, pokud mají automatické aktualizace instalovat. Možnosti:
   - **Není nakonfigurováno**
@@ -87,7 +87,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ### <a name="kiosk-settings"></a>Nastavení veřejného terminálu
 
-Můžete nakonfigurovat na zařízení běžela jedna aplikace nebo velký počet aplikací. Když se zařízení v celoobrazovkovém režimu, jsou k dispozici pouze aplikace, které přidáte.
+Můžete nakonfigurovat na zařízení běžela jedna aplikace nebo velký počet aplikací. Když se zařízení v celoobrazovkovém režimu, jsou k dispozici pouze aplikace, které přidáte. Tato nastavení platí pro zařízení s Androidem vyhrazené ale ne na Android plně spravovat vyhrazená zařízení.
 
 **Celoobrazovkový režim**: Zvolte, pokud zařízení spustí aplikaci jednu nebo více aplikací.
 
@@ -208,7 +208,7 @@ Můžete nakonfigurovat na zařízení běžela jedna aplikace nebo velký poče
 
 - **Hledat pracovní kontakty z osobního profilu**: Zvolte **bloku** uživatelům zabránit v hledání pracovní kontakty v aplikacích v osobním profilu. **Není nutné** umožňuje vyhledat pracovní kontakty v osobním profilu.
 
-- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení v pracovním profilu. Nastavení nemá vliv na kameru v osobním profilu. **Není nutné** umožňuje přístup k fotoaparátu/kamery v pracovním profilu.
+- **Camera**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení v pracovním profilu. Nastavení nemá vliv na kameru v osobním profilu. **Není nutné** umožňuje přístup k fotoaparátu/kamery v pracovním profilu.
 
 #### <a name="work-profile-password"></a>Heslo pracovního profilu
 

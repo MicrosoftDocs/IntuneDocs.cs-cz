@@ -14,12 +14,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d6fb1c65199b68f7492b1f397c4f6075e345d3e8
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 80eb088063522ba3acb293776064fd98846b9a3e
+ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203667"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54380506"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 
@@ -151,12 +151,12 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - **Obsah hudbě, podcastech nebo zprávách explicitní iTunes (jenom pod dohledem)**: Zvolte **bloku** zabránit explicitní iTunes hudbě, podcastech nebo zprávách obsah. **Není nakonfigurováno** povolí zařízení přístup k obsahu označený jako obsah pro dospělé obchodě.
 - **Stažení obsahu z obchodu ibooks, který má označení "Erotika"**: Zvolte **bloku** zastaví uživatelům zabránit ve stahování média z úložiště iBook označená jako erotická. **Není nakonfigurováno** povolí uživateli stahování knih z kategorie "Erotika".
 - **Zobrazování firemních dokumentů v nespravovaných aplikacích**: **Blok** zabraňuje zobrazování nefiremních dokumentů v nespravovaných aplikacích. **Není nakonfigurováno** umožňuje podnikových dokumentů v jakékoli aplikaci zobrazit. Například chcete uživatelům zabránit v ukládání souborů z aplikace OneDrive do Dropboxu. Toto nastavení jako **bloku**. Až zařízení zásadu obdrží (třeba po restartování), již neumožňuje ukládání.
-  - **Povolit spravovaným aplikacím zápis kontaktů nespravované kontaktů účty (jenom pod dohledem)**: Pokud je nastavena na **povolit**, uživatelé mohou přidat nebo synchronizovat kontaktní údaje Outlook jakákoli osoba, včetně obchodních a podnikových kontaktů pro integrované aplikace kontakty na zařízení. Pokud je nastavena na **Nenakonfigurováno**, nebudou uživatelé moci přidávat kontaktům aplikace Outlook integrované aplikace kontakty na zařízení.
+  - **Povolit spravovaným aplikacím zápis kontaktů na nespravované kontakty účty**: Pokud je nastavena na **povolit**, uživatelé mohou přidat nebo synchronizovat kontaktní údaje Outlook jakákoli osoba, včetně obchodních a podnikových kontaktů pro integrované aplikace kontakty na zařízení. Pokud je nastavena na **Nenakonfigurováno**, nebudou uživatelé moci přidávat kontaktům aplikace Outlook integrované aplikace kontakty na zařízení.
   
     Chcete-li toto nastavení použít, nastavte **zobrazování firemních dokumentů v nespravovaných aplikacích** nastavení **bloku**.
   
 - **Zobrazování nefiremních dokumentů ve firemních aplikacích**: **Blok** zabraňuje zobrazování nefiremních dokumentů ve firemních aplikacích. **Není nakonfigurováno** umožňuje libovolného dokumentu ve spravovaných podnikových aplikacích prohlížení.
-  - **Nespravované aplikace čtení ze spravované kontakty účty (jenom pod dohledem)**: Pokud je nastavena na **povolit**, uživatelé můžou přidávat jakákoli osoba iContacts aplikace kontaktní informace do aplikace Outlook. **Není nakonfigurováno** brání čtení, včetně odebrat duplicity, od integrované aplikace kontakty na zařízení.
+  - **Nespravované aplikace o čtení z účtů spravovaných kontakty**: Pokud je nastavena na **povolit**, uživatelé můžou přidávat jakákoli osoba iContacts aplikace kontaktní informace do aplikace Outlook. **Není nakonfigurováno** brání čtení, včetně odebrat duplicity, od integrované aplikace kontakty na zařízení.
   
     Chcete-li toto nastavení použít, nastavte **zobrazování nefiremních dokumentů ve firemních aplikacích** nastavení **bloku**.
   
@@ -169,7 +169,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
-- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Není nakonfigurováno** umožňuje přístup k fotoaparátu zařízení.
+- **Camera**: Zvolte **bloku** zabránit přístupu k fotoaparátu v zařízení. **Není nakonfigurováno** umožňuje přístup k fotoaparátu zařízení.
   - **FaceTime**: **Blok** zabránit přístupu k používání aplikace FaceTime. **Není nakonfigurováno** povolí přístup k používání aplikace FaceTime v zařízení.
 - **Siri**: **Blok** brání v přístupu k Siri. **Není nakonfigurováno** povolí používání hlasového pomocníka Siri na zařízení.
   - **Siri při uzamčení zařízení zašifrovaná**: Zvolte **bloku** zabránit přístupu k Siri, když je zařízení zamknuté. **Není nakonfigurováno** povolí používání hlasového pomocníka Siri na zařízení, pokud je uzamčeno.

@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 00367fffa141ed2337c1089710050c9aefc857c5
-ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
+ms.openlocfilehash: 699936a1cef35d0435b329d1f8e09a64174fe2bd
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316946"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54387080"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -42,7 +42,10 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ### Role-based access control
 
 -->     
+## <a name="week-of-january-14-2019"></a>Týden od 14. května 2019
 
+### <a name="preview-of-support-for-android-corporate-owned-fully-managed-devices----1574342----"></a>Ve verzi Preview podpory pro vlastněných společností, plně spravovaná zařízení s Androidem <!-- 1574342  -->
+Intune teď podporuje zařízení s Androidem, firemním vlastnictví plně spravovaná "vlastník zařízení" scénář, ve kterém zařízení úzce spravuje IT a jste spojeni jednotlivým uživatelům. To umožňuje správcům spravovat celé zařízení, vynucovat ochranu před rozsahem rozšířené ovládací prvky zásad, není k dispozici pro pracovní profily a instalaci aplikací ze spravovaného obchodu Google Play pouze omezení pro uživatele. Další informace najdete v tématu [Intune nastavit registraci androidu plně spravovaná zařízení](android-fully-managed-enroll.md) a [zaregistrujete své zařízení vyhrazená nebo plně spravovaná zařízení](android-dedicated-devices-fully-managed-enroll.md).  Mějte prosím na paměti, že tato funkce je ve verzi preview. Některé funkce Intune, jako jsou certifikáty, dodržování předpisů a podmíněného přístupu nejsou aktuálně k dispozici pro Android je plně spravovaná zařízení uživatelů.
 
 ## <a name="week-of-january-7-2019"></a>Týden od 7. ledna 2019
 
@@ -115,7 +118,7 @@ Při vytváření konfiguračního profilu pro zařízení s Iosem, můžete př
 [Nastavení pro zobrazení zpráv na zamykací obrazovce](shared-device-settings-ios.md) uvádí nastavení.
 
 #### <a name="new-app-store-doc-viewing-gaming-device-restriction-settings-added-to-ios-devices----2827760--"></a>Nové aplikace App Store, zobrazování dokumentů, nastavení omezení pro herní zařízení přidat do zařízení s Iosem <!-- 2827760-->
-V **konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS** pro Platforma > **omezení zařízení** pro typy profilů > **App Store, zobrazování dokumentů, hraní her**, jsou přidána následující nastavení: Povolit spravovaným aplikacím zápis kontaktů nespravované kontakty účty (jenom pod dohledem) povolit nespravované aplikace o čtení z účtů spravovaných kontakty (pod dohledem jenom) zobrazovat tato nastavení, přejděte na [omezení zařízení s Iosem](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+V **konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS** pro Platforma > **omezení zařízení** pro typy profilů > **App Store, zobrazování dokumentů, hraní her**, jsou přidána následující nastavení: Povolit spravovaným aplikacím zápis kontaktů nespravované kontakty účtům povolit nespravované aplikace o čtení z účtů spravovaných kontakty zobrazovat tato nastavení, přejděte na [omezení zařízení s Iosem](device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Nové oznámení, Rady a keyguard nastavení vlastníka zařízení s Androidem Enterprise <!-- 3201839 3201843 -->
 Tato aktualizace zahrnuje několik nových funkcí na zařízeních s Androidem Enterprise, při spuštění jako vlastník zařízení. K používání těchto funkcí, přejděte na **konfigurace zařízení** > **profily** > **vytvořit profil** > v **platformy**, zvolte **Androidu Enterprise** > v **typ profilu**, zvolte **jen vlastník zařízení** > **zařízení Omezení**.
@@ -161,7 +164,7 @@ Nová stránka nápovědy portál společnosti a podpora pomáhá uživatelům �
 Zavádíme nové prostředí nápovědy a podpory pro všechny tenanty prostřednictvím během několika dalších dnů. Toto nové prostředí je k dispozici pro Intune a je přístupný při používání okna Intune v [webu Azure portal](https://portal.azure.com/).
 Nové prostředí vám umožňuje popsat problém vlastními slovy a získat přehled možností řešení potíží a postupy z webu, jak problém opravit. Tato řešení jsou k dispozici prostřednictvím počítač založený na pravidlech umožňujících učení algoritmu řízené uživatelem. Kromě pokyny týkající se problému můžete použít nový pracovní postup vytvoření případu k otevření případu podpory podle e-mail nebo telefon. Toto nové prostředí nahradí předchozí prostředí nápovědy a podpory statickou sadu předem vybranými možnostmi, které jsou založeny na oblasti konzoly jsou otevřít nápovědu a podporu. Další informace najdete v tématu [jak získat podporu pro Microsoft Intune](get-support.md).
 
-### <a name="role-based-access-control"></a>Řízení přístupu podle rolí
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Značky oboru pro aplikace <!-- 1081941 -->
 Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. Aplikace zakoupené pomocí Apple Volume Purchase Program (VPP) nelze přiřadit značky oboru.  Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
@@ -468,7 +471,7 @@ Certifikáty se v současnosti vydávají jenom uživatelům. S touto aktualizac
 - Vlastnost **Alternativní název subjektu (SAN)** v profilu SCEP má nyní formát tabulky a může obsahovat nové proměnné. Správce může do tabulky přidat atribut a vyplnit hodnotu vlastního textového pole. Alternativní název subjektu (SAN) podporuje následující atributy: 
   - DNS
   - E-mailová adresa
-  - UPN
+  - HLAVNÍ NÁZEV UŽIVATELE
 
   Tyto nové proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS = {{AzureADDeviceId}}.domain.com`.
 
@@ -712,7 +715,7 @@ Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.mi
 #### <a name="enhanced-jailbreak-detection-in-compliance-reporting---2198738---"></a>Vylepšená detekce jailbreaků při generování sestav dodržování předpisů <!-- 2198738 -->
 Vylepšené stavy nastavení detekce jailbreaků se nově zobrazují při veškerém generování sestav dodržování předpisů v konzole správce.
 
-### <a name="role-based-access-control"></a>Řízení přístupu podle rolí
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
 #### <a name="scope-tags-for-policies---1081974---"></a>Značky oboru pro zásady <!--1081974 -->
 Nově můžete [vytvářet značky oboru](scope-tags.md) a omezovat s jejich pomocí přístup k prostředkům Intune. Přidejte značku oboru k přiřazení role a poté přidejte značku oboru ke konfiguračnímu profilu. Daná role bude mít přístup pouze k prostředkům s konfiguračními profily, které mají odpovídající značky oboru (nebo žádnou značku oboru).
@@ -1105,7 +1108,7 @@ Platí pro: Zařízení s pracovním profilem Android v systému Android OS v6.0
 
 V této aktualizaci zahrnuje [ochrana Credential Guard v programu Windows Defender](https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard) (**Konfigurace zařízení** > **Profily** > **Ochrana koncového bodu**) následující nastavení: 
 
-- **Windows Defender Credential Guard**: Zapne Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Mezi možnosti patří:
+- **Windows Defender Credential Guard**: Zapne Credential Guard se zabezpečením na základě virtualizace. Pokud je tato funkce zapnutá, budou po dalším restartování přihlašovací údaje chráněny **úrovní zabezpečení platformy, která je nastavená na zabezpečené spouštění,** a zapnutým **zabezpečením založeným na virtualizaci**. Vaše možnosti jsou:
   - **Zakázané**: Pokud Credential Guard byla dříve zapnutá pomocí **povoleno bez zámku**"možnost, pak ji vypne Credential Guard vzdáleně.
 
   - **Povoleno s uzamčením UEFI**: Zajišťuje, že Credential Guard nejde zakázat pomocí klíče registru nebo pomocí zásad skupiny. Pokud jste použili toto nastavení a chcete ochranu Credential Guard zakázat, musíte nastavit zásady skupiny na Zakázáno. Potom bezpečnostní funkci odeberte z každého počítače, u kterého je uživatel fyzicky přítomen. Tyto kroky smažou konfiguraci uloženou v rozhraní UEFI. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.

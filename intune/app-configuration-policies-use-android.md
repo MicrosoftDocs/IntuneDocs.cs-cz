@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4b76625276a34c027ae8c74f1c6a3977c4a7e8bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: db6aed3d87b8a8df55c5c95e52eb3dd9ccc690a7
+ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179945"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54386966"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
@@ -32,7 +32,7 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 > [!Note]  
 > Některé aplikace konfiguraci aplikací nepodporují. Zeptejte se vývojáře, jestli vaše aplikace zásady konfigurace aplikací podporuje.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
@@ -62,13 +62,17 @@ Pro každý klíč a hodnotu v konfiguraci nastavte:
 ### <a name="supported-variables-for-configuration-values"></a>Podporované proměnné u hodnot konfigurace
 
 Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících možností:
-- Hlavní název uživatele — například **John@contoso.com**
-- E-mail — například **John@contoso.com**
-- Část hlavního názvu uživatele — například **Jan**
-- ID účtu — například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
-- ID zařízení — například **b9841cd9-9843-405f-be28-b2265c59ef97**
-- ID uživatele — například **3ec2c00f-b125-4519-acf0-302ac3761822**
-- Uživatelské jméno — například **Jan Novák**
+
+| Možnost | Příklad |
+|----|----|
+| Mail | john@contoso.com |
+| Hlavní název uživatele | john@contoso.com |
+| Částečný hlavní název uživatele | Jan |
+| Doména | contoso.com |
+| Uživatelské jméno | John Doe |
+| ID účtu | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
+| ID zařízení | b9841cd9-9843-405f-be28-b2265c59ef97 |
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
@@ -99,7 +103,7 @@ Když se přiřazená aplikace na zařízení spustí, použijí se nastavení, 
 
 Předem nakonfigurovat můžete také oprávnění aplikací k přístupu k funkcím zařízení s Androidem. Aplikace pro Android, které vyžadují oprávnění zařízení, jako je například přístup k umístění nebo fotoaparátu zařízení, ve výchozím nastavení vyzvou uživatele, aby oprávnění přijali nebo odmítli. Pokud například aplikace používá mikrofon zařízení, zobrazí se uživateli výzva, aby aplikaci udělil oprávnění používat mikrofon.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Vyberte **Klientské aplikace**.
 3. V části **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
