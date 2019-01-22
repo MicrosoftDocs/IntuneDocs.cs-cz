@@ -14,12 +14,12 @@ ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 8b5f86a8f0d9beaef9e55d2281e3500e0c298a16
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 2992dbfef4c51b8550e748bde453c85070b6910b
+ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182394"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418172"
 ---
 # <a name="reset-or-remove-a-device-passcode-in-intune"></a>Resetování nebo odebrání hesla zařízení v Intune
 
@@ -55,7 +55,8 @@ K vytvoření nového hesla pracovního profilu použijte akci Resetovat heslo. 
 
 ## <a name="reset-a-passcode"></a>Resetování hesla
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+
+1. Přihlaste se k [webu Azure portal](https://portal.azure.com) s žádným z následujících rolí: Globální správce Azure Active Directory, Azure Active Directory Správce služby Intune, pracovník odborné pomoci nebo roli správce. Úplný seznam rolí a oprávnění, najdete v článku [Intune RBAC tabulky](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a potom vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
 4. Ze seznamu zařízení, která spravujete, vyberte zařízení a vyberte **...Další**. Pak zvolte vzdálenou akci zařízení **Odebrat heslo**.

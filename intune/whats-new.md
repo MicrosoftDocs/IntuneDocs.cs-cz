@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: bc7cd36390d6807bfc6c92de6c5bf071dec27aa4
-ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
+ms.openlocfilehash: 264b7f4b476b18695c6dd0282f34a9af33b6b27f
+ms.sourcegitcommit: 1f544172299f0990e1e13cebf3830b8c0511d6ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54400054"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418206"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -1252,6 +1252,54 @@ Nově můžete chránit přístup k místním datům systému Exchange z Outlook
 
 ## <a name="notices"></a>Sdělení
 
+### <a name="upcoming-password-enforcement-change-for-macos-10142-in-intune---1873216--"></a>Vynucení nadcházející heslo změnit pro 10.14.2 macOS v Intune <!--1873216-->
+Jsme oznámili v MC145129 zpět v červenci, že Intune se chystá integrace Apple nově vydané "Změnit heslo na další ověřování" nastavení pro zařízení s macOS 10.13 verze a vyšší. Chcete-li vrátit toto nastavení v únoru pro macOS 10.14.2 aktuálně plánujeme nebo novější. 
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+To ovlivňuje, je Pokud jste nebo plánujete, že zařízení s macOS 10.14.2 nebo novější. Teď, když Apple zavedla nastavení "Změna hesla na nové ověřování", můžete vynutit Intune uživatelům aktualizovat své heslo, který je kompatibilní s při vložení zásady hesel. MacOS uživatelé obdrží požadavek na aktualizaci hesla, když budeme integrovat tato nová funkce Apple i v případě, že své heslo již kompatibilní. Všimněte si, že pokud heslo je již kompatibilní a není nutné požadavek proti hesel opakování, pak koncoví uživatelé budou moct aktualizovat své stávající heslo. Koncovým uživatelům se zobrazí pouze požadavek na aktualizaci hesla při pokusu o ověření nebo se přihlaste do jejich zařízení. Pokud zablokujete firemním prostředkům, dokud zařízení označeno jako vyhovující, pak vědět, že koncoví uživatelé zařízení s macOS 10.14.2 může blokovat přístup k podnikovým prostředkům, například e-mailu nebo Sharepointové weby, dokud se resetování hesla. Všechny aktualizace konfigurace a dodržování předpisů zásady hesel v budoucnu, vynutí cíloví uživatelé pro aktualizaci hesla. Náš výzkum zákazníků před jejich implementací této změny uvedené, že většina zákazníků tyto zásady neovlivní tato změna od koncových uživatelů obvykle aktualizace hesla po přijetí žádosti o registraci s heslem nebo resetování hesla kvůli zachování kompatibility
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Můžete chtít nechat helpdesk vědět. Aktualizujeme této stránce s novinkami při nasazení této změny. Pokud nechcete, aby se tyto zásady hesla zařízení s macOS vynucení, doporučujeme zrušit přiřazení nebo odstranění stávajících zásad pro macOS.
+
+
+### <a name="reminder-intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo---2828727--"></a>Připomenutí: Podpora služby Intune prostředí pro plán Premier zákazníci nyní do Azure místo MPO <!--2828727-->
+Jsme oznámili v MC147649 v září zjistíte, že doporučujeme odebrat schopnost vytvářet žádosti o podporu Intune z portálu Microsoft Premier Online (MPO) (premier.microsoft.com) v prosinci. Nyní po krátké prodlevě, na konci dne, budete přesměrováni k vytvoření žádosti o podporu jenom v Intune na Azure. 
+
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Po skončení January, chcete-li pokračovat, vylepšení Premier podporu prostředí, se nebude možné vytvořit v MPO žádosti o podporu.  Při pokusu o to provést, zobrazí se vám dotaz, který není možné zrušit, přesměrovat na Intune na Azure. Zde můžete vytvořit žádost o podporu, která se bude směrovat na podporu Microsoftu vyhrazenou pro Intune, k včasnému diagnostikování a vyřešení vašeho problému. Všimněte si, že žádosti o podporu vytvořené na portálu MPO nelze zobrazit na webu Azure Portal. 
+
+Na webu Azure portal obsahuje nové prostředí pro podporu, jak jsme oznámili nedávno MC171941. Další informace najdete v [ https://aka.ms/new_support_experience ](https://aka.ms/new_support_experience) a v odkazu Další informace.
+
+Pokud používáte hybridní správu mobilních zařízení (hybridní MDM) nebo spolusprávu, můžete nadále používat MPO k vytváření žádostí o podporu pro nástroj ConfigMgr, ale žádosti o podporu pro Intune vytvářejte pomocí webu Azure Portal. Připomínáme, hybridní MDM je [zastaralé](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures), a měli byste naplánovat přesunout do Intune v Azure co nejdříve. Další informace najdete v tématu o [přechodu z hybridní správy mobilních zařízení na Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+
+Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služby Intune a Správce podpory služeb můžou vytvářet lístky podpory na webu Azure Portal.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+- Přestaňte vytvářet a spravovat všechny žádosti o podporu Intune pomocí portálu Microsoft Premier Online (MPO) a používejte k tomu Intune v Azure.  
+- Upozorněte helpdesk a aktualizujte v případě potřeby dokumentaci.
+- Pokud máte uživatele bez role Globální správce nebo Správce služby Intune, kteří momentálně vytvářejí žádosti o podporu v MPO, přiřaďte jim v Azure Active Directory roli Správce podpory služeb, aby mohli i nadále vytvářet lístky podpory na webu Azure Portal.
+
+#### <a name="additional-information"></a>Další informace
+[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+
+### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Plánovaná změna: Aktualizaci uživatelského prostředí aplikace portál společnosti Intune pro iOS
+Jsme rádi, že Intune bude brzy k vydání důležitou aktualizaci uživatelského prostředí pro aplikaci portál společnosti pro iOS sdílet. Aktualizace se funkce vizuální Design domovské stránky s rozšířené filtry a rychlejší přístup k aplikací a knih.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tato činnost koncového uživatele aktualizovat, zatímco Správa iOS aktuální funkce aplikace portál společnosti, bude funkce:
+- Domovská stránka s vzhled nativní aplikace pro iOS 
+- Možnosti filtrování obsahu výpisy a vyhledávání, včetně možnosti filtrovat podle typu obsahu (aplikace nebo e-knihy) a dostupnost (Správa zařízení povinné nebo dostupné bez registrace)
+- Schopnost Hledat v e-knihy
+- Historie pro aplikace a e-knih pro hledání, pokud jste součástí programu Apple TestFlight, budete informováni o předběžnou verzi aplikace portál společnosti Intune pro iOS aktualizované, až bude k dispozici. Pokud si nejste součástí programu Apple TestFlight, není příliš pozdě pro registraci. Registrace vám umožní použít aktualizované aplikace portál společnosti, než je k dispozici koncovým uživatelům. Budete mít také možnost poskytnout zpětnou vazbu přímo s týmem Intune.  
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Není potřeba provádět žádnou akci; Tyto změny budou vydané v iOS nadcházející verzi CP aplikace. 
+
+#### <a name="additional-information"></a>Další informace
+[https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
+
+
 ### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Plánovaná změna: Exchange Online, aby konektor Intune přestanou být dostupné v Intune <!-- 3105122 -->
 Pro zjednodušení práce s Exchange Online a podmíněného přístupu, Zakážeme Exchange Online "Službami" konektor Intune. Tato změna bude začínat aktualizace z prosince služby a dokončit aktualizaci služby. února 2019.
 
@@ -1286,27 +1334,6 @@ Po zavedení těchto aktualizací už nebudete muset k přiřazení aplikací a 
 Během přesouvání přiřazení zásad nemusíte nic dělat. Pokud momentálně přiřazujete zásady v konzole Intune for Education, pokračujte v tom i nadále.
 
 Pokud momentálně přiřazujete zásady k výše uvedeným skupinám služby Azure AD v Intune v Azure, začněte je místo toho přiřazovat ke skupině Všichni uživatelé a Všechna zařízení v konzole Intune for Education. Až v konzole uvidíte tyto skupiny služby Azure AD přejmenované na zastaralé, přestaňte zásady přiřazovat ve službě Azure AD. Pokud v současnosti nepoužíváte přejmenované skupiny k žádnému jinému účelu, měli byste je odstranit.
-
-### <a name="plan-for-change-new-intune-support-experience-for-premier-customers"></a>Plánovaná změna: Vyzkoušejte novou podporu Intune u verze Premier zákazníků 
-12/4/18 aktualizace: Pokoušíme vylepšit tento proces si tak vytvoření žádosti o podporu v MPO nebude být zakázány na dne 3, ale na pozdější datum. Dáme vám vědět, prostřednictvím Centra zpráv a aktualizovat tento příspěvek brzy ke sdílení časové osy pro tuto změnu.
-
-Jako zákazník Microsoft Premier aktuálně můžete používat portál Microsoft Premier Online (MPO) (premier.microsoft.com) a Intune v Azure (portal.azure.com) k vytváření žádostí o podporu pro Intune. Od 3. prosince 2018 si budete moct vytvářet žádosti o podporu jenom v Intune v Azure, pokud si budete chtít dál vylepšovat prostředí podpory Premier.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po 3. prosinci nebudete moct vytvářet žádosti o podporu v MPO.  Když se o to pokusíte, zobrazí se vám výzva, kterou nebude možné zrušit, k přesměrování na Intune v Azure. Zde můžete vytvořit žádost o podporu, která se bude směrovat na podporu Microsoftu vyhrazenou pro Intune, k včasnému diagnostikování a vyřešení vašeho problému. Žádosti o podporu vytvořené v MPO nelze zobrazit na webu Azure Portal, takže byste měli vytváření žádosti o podporu v MPO zastavit.  
-
-Pokud používáte hybridní správu mobilních zařízení (hybridní MDM) nebo spolusprávu, můžete nadále používat MPO k vytváření žádostí o podporu pro nástroj ConfigMgr, ale žádosti o podporu pro Intune vytvářejte pomocí webu Azure Portal. Připomínáme, že hybridní MDM je zastaralé a měli byste si co nejdříve naplánovat přechod na Intune v Azure. Další informace najdete v tématu o [přechodu z hybridní správy mobilních zařízení na Intune v Azure](https://aka.ms/hybrid_notification).
-
-Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služby Intune a Správce podpory služeb můžou vytvářet lístky podpory na webu Azure Portal.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-- Přestaňte vytvářet a spravovat všechny žádosti o podporu Intune pomocí portálu Microsoft Premier Online (MPO) a používejte k tomu Intune v Azure.  
-- Upozorněte helpdesk a aktualizujte v případě potřeby dokumentaci.
-- Pokud máte uživatele bez role Globální správce nebo Správce služby Intune, kteří momentálně vytvářejí žádosti o podporu v MPO, přiřaďte jim v Azure Active Directory roli Správce podpory služeb, aby mohli i nadále vytvářet lístky podpory na webu Azure Portal.
-- Další informace a užitečné odkazy získáte kliknutím na Další informace.
-
-#### <a name="additional-information"></a>Další informace
-Další informace najdete v [blogovém příspěvku technické podpory pro Microsoft Intune](https://aka.ms/IntuneSupport_MPO_to_Azure).
 
 
 ### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Proveďte akci: Aktualizujte prosím vaše zařízení s Androidem omezení nebo dodržování předpisů heslo nastavení zásad v Intune
