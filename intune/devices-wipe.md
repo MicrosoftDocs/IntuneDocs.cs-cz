@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2018
+ms.date: ''
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ad2d2842672853587da1396cae6c15ebd7ade44a
-ms.sourcegitcommit: c84e1845b854704c4b048832e365dd381c7f3754
+ms.openlocfilehash: 1866d658503cb2dcdf482a050d7bbd73a914858b
+ms.sourcegitcommit: 398b8a0d98e928b3406f59ab3d061554643ef60b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54122634"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54400020"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -81,22 +81,20 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 |Datový typ|iOS|
 |-------------|-------|
-|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portálu společnosti:** se odeberou všechna data aplikace a aplikace. Tyto aplikace patří aplikace původně nainstalované z App Store a později spravovat jako podnikové aplikace. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a byly nainstalovány z App Store:** Odeberou se data firemních aplikací. Osobní aplikační data a aplikace se neodeberou.|
+|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portálu společnosti:** Díky aplikace, které jsou připnuté na profil pro správu, všechna data aplikace a aplikace se odeberou. Tyto aplikace patří aplikace původně nainstalované z App Store a později spravovat jako podnikové aplikace. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a byly nainstalovány z App Store:** Pro aplikace, které se nespravují přes portál společnosti se odeberou firemní aplikace data chráněná šifrováním správy mobilních aplikací (MAM) v rámci místní úložiště aplikací. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodeberou. Osobní aplikační data a aplikace se neodeberou.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Odebere se profil pro správu.|
 |Email|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
-|Outlook|Odeberou se e-maily přijaté aplikací Microsoft Outlook pro iOS. Nejprve ale budete muset uživatelům iOSu nasadit mobilní aplikaci Outlook jako požadovanou aplikaci.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|
-|Kontakty |Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.
 
 ### <a name="android"></a>Android
 
 |Datový typ|Android|Android Samsung Knox Standard|
 |-------------|-----------|------------------------|
 |Webové odkazy|Odebrány.|Odebrány.|
-|Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována.|Aplikace a data zůstanou nainstalována.|
+|Nespravované aplikace Google Play|Aplikace a data zůstanou nainstalována. <br /> <br />Data firemních aplikací, která je chráněná šifrováním správy mobilních aplikací (MAM) v rámci místní úložiště aplikací se odebere. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodeberou. |Aplikace a data zůstanou nainstalována. <br /> <br />Data firemních aplikací, která je chráněná šifrováním správy mobilních aplikací (MAM) v rámci místní úložiště aplikací se odebere. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodeberou.|
 |Nespravované obchodní aplikace|Aplikace a data zůstanou nainstalována.|Odinstalují se aplikace a odeberou se jejich místní data. Data mimo aplikaci (například na kartě SD) se neodeberou.|
 |Spravované aplikace Google Play|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním správy mobilních zařízení (MAM) mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, ale neodeberou se.|
 |Spravované obchodní aplikace|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|Odeberou se data aplikací. Aplikace se neodebere. Data chráněná šifrováním MAM mimo aplikaci (třeba na kartě SD) zůstanou zašifrována, takže nepůjdou použít, ale neodeberou se.|
@@ -105,9 +103,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 |Nastavení profilu certifikátu|Certifikáty se zruší, ale neodeberou.|Certifikáty jsou odebrané a odvolané.|
 |Agent pro správu|Zruší se oprávnění správce zařízení.|Zruší se oprávnění správce zařízení.|
 |Email|Není k dispozici (zařízení s Androidem nepodporují e-mailové profily)|Odeberou se e-mailové profily, které jsou zřízené prostřednictvím Intune. Odstraní se e-maily v mezipaměti zařízení.|
-|Outlook|E-mail přijatý aplikací Outlook pro Android se odebere, ale jenom v případě, že je Outlook chráněný zásadami MAM. Jinak se Outlook při zrušení registrace zařízení nevymaže.|E-mail přijatý aplikací Outlook pro Android se odebere, ale jenom v případě, že je Outlook chráněný zásadami MAM. Jinak se Outlook při zrušení registrace zařízení nevymaže.|
 |Zrušení připojení k Azure AD|Odebere se záznam Azure AD.|Odebere se záznam Azure AD.|
-|Kontakty |Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.|Odeberou se kontakty synchronizované přímo z aplikace do nativního adresáře. Kontakty synchronizované z nativního adresáře do jiného externího zdroje není možné odebrat. <br /> <br />V současné době se podporuje jenom aplikace Outlook.
 
 ### <a name="android-work-profile"></a>Pracovní profil Androidu
 
@@ -131,7 +127,7 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 
 ### <a name="windows"></a>Windows
 
-|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8.1 a Windows Phone 8|Windows 10|
+|Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8.1 a Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
 |Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>Ve Windows 10 verze 1703 (Creators Update) a novějších verzích se neodeberou aplikace Office 365 ProPlus.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
