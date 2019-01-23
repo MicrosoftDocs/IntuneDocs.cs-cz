@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 9f9f95c42be252e0b2be515344e01a1d93e2cc6c
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 0366a4394f5046d72c7cf01d2848974d225597a6
+ms.sourcegitcommit: d757c907af6c3c1b20823ffa4fda3acbaa8ecd9f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387094"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54444553"
 ---
 # <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem vyhrazené nebo plně spravovaná zařízení (Preview)
 
@@ -42,7 +42,7 @@ Pro zařízení, které podporují NFC můžete zřizovat zařízení tak, že v
 
 ### <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
-U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android 6.1 a novější verze můžou také využít skenování kódu QR při použití metody registrace **aft#setup**.
+U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android verze 6.1 a novější můžete taky využít naskenovat kód QR. při použití **afw #setup** metodu registrace.
 
 1. Zapněte vymazané zařízení.
 2. Na **uvítací** obrazovce vyberte svůj jazyk.

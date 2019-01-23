@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/01/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1584344907df168a98f947e187d6f0f0ef4a492a
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: d6ee36785c4134dd1c346bdc464096e832df3a9c
+ms.sourcegitcommit: f854ed8619ac66fe626198d8e4a8cac2e0c0710a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187912"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54460051"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
 
@@ -52,18 +52,18 @@ Kromě toho související sady a licencované aplikace Offline, které se synchr
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Přidružení účtu v Microsoft Storu pro firmy k Intune
 Než povolíte synchronizaci v konzole služby Intune, musíte svůj účet ve Storu nakonfigurovat tak, aby používal Intune jako nástroj pro správu:
-1. Ujistěte se, že se do Storu pro firmy přihlašujete pomocí stejného účtu tenanta, který používáte k přihlášení do Intune.
-2. Ve Storu pro firmy vyberte **Nastavení** > **Nástroje pro správu**.
-3. Na stránce Nástroje pro správu vyberte **Přidat nástroj pro správu** a zvolte **Microsoft Intune**.
+1. Ujistěte se, že se přihlásíte do [Microsoft Store pro firmy](https://www.microsoft.com/business-store) pomocí stejného účtu tenanta, můžete použít k přihlášení do Intune.
+2. V Business Store, zvolte **spravovat** kartu, vyberte možnost **nastavení**a zvolte **rozmístit** kartu.
+3. Pokud nemáte konkrétně **Microsoft Intune** k dispozici jako nástroj pro správu mobilních zařízení, zvolte **přidat nástroj pro správu** přidat **Microsoft Intune**. Pokud nemáte **Microsoft Intune** aktivován jako váš nástroj pro správu mobilních zařízení, klikněte na tlačítko **aktivovat** vedle **Microsoft Intune**. Všimněte si, že by měly aktivovat **Microsoft Intune** spíše než **registrace v Microsoft Intune**.
 
 > [!NOTE]
-> Dřív bylo možné přidružit k Microsoft Storu pro firmy jenom jeden nástroj pro správu na přiřazování aplikací. Teď už jich můžete přidružit více, například Intune a Configuration Manager.
+> Dřív bylo možné přidružit k Microsoft Storu pro firmy jenom jeden nástroj pro správu na přiřazování aplikací. Teď už jich můžete přidružit více, například Intune a Configuration Manager. 
 
 Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 ## <a name="configure-synchronization"></a>Konfigurace synchronizace
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 1. V podokně **Klientské aplikace** zvolte **Nastavení** > **Microsoft Store pro firmy**.
@@ -92,12 +92,12 @@ Když přiřadíte aplikaci z Microsoft Storu pro firmy, využije licenci každ�
 
 ## <a name="remove-apps"></a>Odebrání aplikací
 
-Pokud chcete odebrat aplikaci, která se synchronizuje s Microsoft Storem pro firmy, musíte se k Microsoft Storu pro firmy přihlásit a aplikaci vrátit.
+Pokud chcete odebrat aplikaci, která se synchronizuje s Microsoft Storem pro firmy, musíte se k Microsoft Storu pro firmy přihlásit a aplikaci vrátit. Proces je stejný, ať aplikace je zdarma, nebo ne. Pro bezplatnou aplikaci ve storu vrátí 0 USD. Následující příklad ukazuje refundaci za bezplatná aplikace. 
 
 ![Snímek obrazovky s podrobnostmi o odebírané aplikaci](./media/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> Pouhé odebrání aplikace ze zobrazení v soukromém obchodu nezabrání Intune v její synchronizaci. Aplikaci musíte vrátit.
+> Odebrání viditelnost vaší aplikace v privátním úložišti nebude zabránit synchronizace aplikace Intune. Musí vracet aplikace plně tím aplikaci odeberete.
 
 ## <a name="next-steps"></a>Další postup
 
