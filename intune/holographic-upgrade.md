@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,50 +14,34 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 4839206db5e34a039c9e99dd74f5ab1bad328418
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 80d4cf8db5789e6eeb22a777eeef74dce3009856
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112336"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831288"
 ---
 # <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení se softwarem Windows Holographic na Windows Holographic for Business
 
+Microsoft Intune zahrnuje mnoho nastavení, která pomáhá spravovat a chránit vaše zařízení. Tento článek uvádí a popisuje nastavení pro upgrade zařízení s Windows Holographic na Windows Holographic for Business. Tato nastavení se vytvoří v profilu konfigurace upgradem v Intune, které jsou vloženy nebo nasadit do zařízení.
 
-Pokud chcete spravovat zařízení s Windows Holographic v Microsoft Intune, musíte zařízení upgradovat z Windows Holographic na Windows Holographic for Business. K provedení upgradu můžete vytvořit profil Upgrade edice. V případě zařízení Microsoft HoloLens můžete požadovanou licenci pro upgrade získat zakoupením edice Commercial Suite. Další informace najdete v tématu [Odblokování funkcí Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
+Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete upgradovat zařízení s Windows Holographic. Pro Microsoft HoloLens můžete můžete zakoupením edice Commercial Suite k získání požadovanou licenci pro upgrade. Další informace najdete v tématu [Odblokování funkcí Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
 
-## <a name="to-set-up-an-edition-upgrade-device-configuration-profile"></a>Nastavení profilu konfigurace zařízení s upgradem edice
+Další informace o této funkci najdete v tématu [edice upgradovat Windows 10 nebo režim povolit S](edition-upgrade-configure-windows-10.md).
 
-1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com) s účtem správce.
+## <a name="before-you-begin"></a>Před zahájením
 
+[Vytvořit profil konfigurace zařízení](edition-upgrade-configure-windows-10.md#create-the-profile).
 
-2.  Klikněte na **Konfigurace zařízení**, **Profily** a potom na **Vytvořit profil**.
+## <a name="edition-upgrade"></a>Upgrade edice
 
-    ![Vytvoření profilu](media/Holographic-create-profile.png)
+- **Upgrade edice na**: Vyberte **Windows 10 Holographic pro firmy**.
+- **Soubor s licencí**: Vyhledejte a vyberte soubor XML s licencí, který jste obdrželi.
 
-3.  V podokně **Vytvořit profil** zadejte název pro profil a jako platformu vyberte **Windows 10 a novější** a jako typ profilu vyberte **Upgrade edice**. Klikněte na **Konfigurovat nastavení**.
-
-5. V podokně **Upgrade edice** vyberte v části **Edice, na kterou se má upgradovat** možnost **Windows 10 Holographic pro firmy**. V části **Soubor s licencí** vyhledejte a vyberte soubor XML s licencí, kterou jste obdrželi.
-
-    ![Zadejte název souboru XML.](media/Holographic-edition-upgrade.png)
+  ![Zadejte název souboru XML, který obsahuje Holographic pro firmy licenčních informací](media/Holographic-edition-upgrade.png)
  
-5.  Klikněte na **OK**, **Vytvořit** a vytvořte profil.
-
-
-## <a name="deploy-the-edition-upgrade-policy"></a>Nasazení zásad upgradu edice
-
-V dalším kroku přiřadíte profil Upgrade edice k vybraným skupinám nebo zařízením.
-
-1. V profilu, který jste vytvořili v předchozím postupu, klikněte na tlačítko **Přiřazení**.
-
-2. V podokně **Přiřazení** vyberte skupiny uživatelů a zařízení, které chcete zahrnout a vyloučit pomocí zásad.
-
-![Zahrnutí a vyloučení skupin](media/Holographic-groups.PNG)
-
-Po registraci těchto uživatelů nebo zařízení do Intune se použije profil Upgrade edice. 
-
 ## <a name="next-steps"></a>Další postup
 
-Další informace o skupinách najdete v tématu [Začínáme se skupinami](get-started-groups.md).
+Vytvoření profilu, ale to nemusí být teď zrovna nic nedělá ještě. Nezapomeňte [přiřadit profil](device-profile-assign.md), a [monitorování jejího stavu](device-profile-monitor.md).
 
-
+Můžete také vytvořit vydání upgradu profily pro [Windows 10 a novější](edition-upgrade-windows-settings.md) zařízení.

@@ -14,12 +14,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b896a1607dfc036fe248c233477239700dc96091
-ms.sourcegitcommit: 3297fe04ad0d10bc32ebdb903406c2152743179e
+ms.openlocfilehash: b6679f0b1d7392bc2db2e39b4c283b702dd21285
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531324"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751225"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
@@ -93,21 +93,6 @@ Pokud chcete používat zásady dodržování předpisů zařízeními, musíte 
 Když je zařízení zaregistrované v Intune, spustí se proces registrace služby Azure AD a aktualizují se atributy zařízení ve službě Azure AD. Jednou z informací je stav dodržování předpisů zařízením. Tento stav dodržování předpisů zařízením používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším podnikovým prostředkům.
 
 Téma věnované [procesu registrace Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction) poskytuje další informace.
-
-### <a name="assign-a-resulting-device-configuration-profile-status"></a>Přiřazení výsledného stavu konfiguračního profilu zařízení
-
-Pokud má nějaké zařízení několik konfiguračních profilů a má pro dva nebo více z nich různé stavy dodržování předpisů, přiřadí se mu jediný výsledný stav dodržování předpisů. Toto přiřazení vychází z koncepční úrovně závažnosti přiřazené jednotlivých stavům dodržování předpisů. Jednotlivé stavy dodržování předpisů mají následující úroveň závažnosti:
-
-|Stav  |Severity  |
-|---------|---------|
-|Čekající na vyřízení     |1|
-|Úspěch     |2|
-|Selhalo     |3|
-|Chyba     |4|
-
-Pokud má zařízení více konfiguračních profilů, přiřadí se mu nejvyšší úroveň závažnosti ze všech profilů.
-
-Dejme tomu, že k zařízení jsou přiřazené tři profily: jeden má stav Čeká (závažnost 1), jeden má stav Úspěšné (závažnost 2) a jeden má stav Chyba (závažnost 4). Stav Chyba má nejvyšší úroveň závažnosti, takže všechny tři profily mají stav dodržování předpisů Chyba.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Přiřazení stavu V období odkladu
 

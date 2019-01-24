@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 01/16/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,24 +13,24 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a338cce6249cc7c5214a9d69a897cad3eaa09e93
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 54af9b1ef7872caddb972515d9c4765f8492bf00
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188394"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831356"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
-Pomocí profilů Wi-Fi v Intune můžete přiřadit nastavení bezdrátové sítě pro uživatele a zařízení ve vaší organizaci. Při přiřazení profilu Wi-Fi budou mít uživatelé přístup k síti Wi-Fi vaší organizace, aniž by ji museli sami konfigurovat.
+Wi-Fi je bezdrátové sítě, který používá mnoho mobilních zařízení získat přístup k síti. Microsoft Intune zahrnuje předdefinované nastavení Wi-Fi, které se dají nasadit pro uživatele a zařízení ve vaší organizaci. Tato skupina nastavení se nazývá "profil" a je možné přiřadit různým uživatelům a skupinám. Po přiřazení, získají uživatelé přístup síť Wi-Fi ve vaší organizaci bez konfigurace sami.
 
 Můžete třeba nainstalovat novou Wi-Fi síť nazvanou Contoso Wi-Fi. Potom můžete třeba nastavit, že se všechna zařízení s iOSem mají připojovat k této síti. Postup je následující:
 
-1. Vytvořte profil Wi-Fi, který obsahuje nastavení potřebná pro připojení k bezdrátové síti Contoso Wi-Fi.
-2. Přiřaďte tento profil skupině obsahující všechny uživatele zařízení s iOSem.
+1. Vytvoření profilu Wi-Fi obsahující nastavení, která se připojují k bezdrátové síti Contoso Wi-Fi.
+2. Přiřaďte profil ke skupině, která obsahuje všechny uživatele zařízení s Iosem.
 3. Uživatelé najdou novou síť Contoso Wi-Fi v seznamu bezdrátových sítí na svém zařízení. Potom se mohou k této síti připojit s využitím metody ověřování, kterou zvolíte.
 
-Pomocí postupu v tomto článku vytvořte profil Wi-Fi. Potom si projděte témata týkající se nastavení a podrobností ke konkrétním platformám.
+V tomto článku jsou uvedené kroky k vytvoření profilu sítě Wi-Fi. Obsahuje také odkazy, které popisují různá nastavení pro každou platformu.
 
 ## <a name="supported-device-platforms"></a>Podporované platformy zařízení
 
@@ -45,7 +45,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 > [!NOTE]
 > Pro zařízení s Windows 8.1 můžete importovat konfiguraci Wi-Fi, kterou předtím vyexportujete z jiného zařízení.
 
-## <a name="create-a-wi-fi-device-profile"></a>Vytvoření profilu zařízení Wi-Fi
+## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
 1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** > vyfiltrujte **Intune** a vyberte **Microsoft Intune**. 
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
@@ -56,7 +56,6 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
     - **Android Enterprise**
     - **iOS**
     - **macOS**
-    - **Windows Phone 8.1**
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 
@@ -80,4 +79,4 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 ## <a name="next-steps"></a>Další postup
 
-Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
+Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřadit](device-profile-assign.md) a [monitorování jejího stavu.](device-profile-monitor.md).

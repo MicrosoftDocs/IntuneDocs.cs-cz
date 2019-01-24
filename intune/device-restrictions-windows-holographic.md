@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: cdac4623c6c5c9e7258897e1536856e6b24492ea
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 8479e69d661b163778a4d0b4eb1f68e729436f4e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032006"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831492"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business zařízení nastavení k povolení nebo zakázání funkcí pomocí Intune
 
@@ -28,36 +28,36 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md).
+[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Obecné
 
-- **Ruční zrušení zápisu**: umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
+- **Ruční zrušení zápisu**: Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
 - **Cortana**: Povolí nebo zakáže hlasového asistenta Cortany.
 - **Informace o zeměpisné poloze**: Určuje, jestli zařízení může používat informace služeb určování polohy.
 
 ## <a name="password"></a>Heslo
 
-- **Heslo**: vyžaduje koncový uživatel zadal heslo pro přístup k zařízení.
+- **Heslo**: Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
 - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti**: Určuje, že uživatel musí zadat heslo k odemknutí zařízení.
 
 ## <a name="app-store"></a>App Store
 
-- **Automaticky aktualizovat aplikace ze storu**: umožňuje aplikací nainstalovaných z Microsoft Store automaticky aktualizovat.
-- **Instalace důvěryhodné aplikace**: umožňuje aplikacím, které jsou podepsané důvěryhodným certifikátem instalovaly bokem.
-- **Odemčení pro vývojáře**: Windows povolit nastavení pro vývojáře, například můžete umožnit zkušebně načtené aplikace má být upraven koncový uživatel.
+- **Automaticky aktualizovat aplikace ze storu**: Umožňuje aplikací nainstalovaných z Microsoft Store automaticky aktualizovat.
+- **Instalace důvěryhodné aplikace**: Povolí aplikacím, které jsou podepsané důvěryhodným certifikátem instalovaly bokem.
+- **Odemčení pro vývojáře**: Povolit nastavení pro vývojáře Windows, například můžete umožnit zkušebně načtené aplikace má být upraven koncový uživatel.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
-- **Soubory cookie**: umožní prohlížeči ukládat internetové soubory cookie do zařízení.
-- **Automaticky otevíraná okna**: blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 desktop).
-- **Návrhy hledání**: umožňuje vyhledávací navrhoval weby vyhledávací web při psaní.
+- **Soubory cookie**: Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
+- **Automaticky otevíraná okna**: Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 desktop).
+- **Návrhy hledání**: Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
 - **Správce hesel**: Povolí nebo zakáže funkci správce hesel Microsoft Edge.
-- **Odesílat hlavičky not track**: nakonfiguruje prohlížeč Microsoft Edge odesílat hlavičky do not track na weby, které uživatelé navštíví.
+- **Odesílat hlavičky not track**: Nakonfiguruje prohlížeč Microsoft Edge odesílat hlavičky do not track na weby, které uživatelé navštíví.
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 
-- **Filtr SmartScreen pro Microsoft Edge**: Povolit SmartScreen Microsoft Edge pro přístup k webu a stahování souborů.
+- **Filtr SmartScreen pro Microsoft Edge**: Povolte filtr SmartScreen Microsoft Edge pro přístup k webu a stahování souborů.
 
 ## <a name="search"></a>Search
 
@@ -65,29 +65,29 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
-- **Účet Microsoft**: umožňuje uživateli přidružit k zařízení účet Microsoft.
+- **Účet Microsoft**: Umožňuje uživateli přidružit k zařízení účet Microsoft.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
 - **Bluetooth**: Určuje, jestli uživatel může zapnout a konfigurovat Bluetooth na zařízení.
-- **Zjistitelnost zařízení Bluetooth**: umožňuje zařízení být zjištěny jinými zařízeními podporujícími technologii Bluetooth.
-- **Reklama přes Bluetooth**: umožňuje zařízení přijímat reklamu přes Bluetooth.
+- **Zjistitelnost zařízení Bluetooth**: Umožňuje zařízení být zjištěny jinými zařízeními podporujícími technologii Bluetooth.
+- **Reklama přes Bluetooth**: Umožňuje zařízení přijímat reklamu přes Bluetooth.
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
-- **Změny systémového času**: zabrání koncovému uživateli ve změně data a času.
+- **Změny systémového času**: Zabrání koncovému uživateli ve změně data a času.
 
 ## <a name="kiosk---obsolete"></a>Veřejný terminál (zastaralé)
 
-Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfigurovat režim veřejného terminálu, podívejte se na článek o [nastavení veřejného terminálu](kiosk-settings.md#windows-holographic-for-business).
+Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfigurovat režim veřejného terminálu, podívejte se na článek o [nastavení veřejného terminálu](kiosk-settings-holographic.md).
 
 Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikaci veřejného terminálu.
 
 - **Celoobrazovkový režim**: Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
 
-  - **Není konfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu. 
-  - **Veřejný terminál aplikace s jedním**: profil povoluje v zařízení běžela jenom jedna aplikace. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - **Veřejný terminál s více aplikacemi**: profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
+  - **Není nakonfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu. 
+  - **Veřejný terminál aplikace s jedním**: Profil povoluje v zařízení běžela jenom jedna aplikace. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+  - **Veřejný terminál s více aplikacemi**: Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
   
     Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
 
@@ -103,4 +103,8 @@ Zadejte následující nastavení:
 
 ## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
 
-- **Sdílet data o využití**: vybrat úroveň odesílaných diagnostických dat.
+- **Sdílet data o využití**: Vyberte úroveň odesílaných diagnostických dat.
+
+## <a name="next-steps"></a>Další postup
+
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

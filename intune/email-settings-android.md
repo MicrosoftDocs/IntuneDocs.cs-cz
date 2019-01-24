@@ -1,6 +1,6 @@
 ---
-title: Android & nastavení e-mailu s Androidem Enterprise v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Vytvoření zařízení konfigurace e-mailové profily, které používají servery Exchange a načtení atributů z Azure Active Directory. Povolit protokol SSL nebo SMIME, ověřování uživatelů pomocí certifikátů nebo uživatelského jména a hesla a synchronizace e-mailu a plány na Android a Android pracovní profil zařízení pomocí Microsoft Intune.
+title: Nastavení androidu e-mailu v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Vytvoření zařízení konfigurace e-mailové profily, které používají servery Exchange a načtení atributů z Azure Active Directory. Povolit protokol SSL nebo SMIME, ověřování uživatelů pomocí certifikátů nebo uživatelského jména a hesla a synchronizace e-mailu a plány na zařízeních s Androidem Samsung Knox v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -13,34 +13,33 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b96363d679a6f09327bf9a1b46421e786d1956a8
-ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
+ms.openlocfilehash: 4336be8d24ac4a81ec6fca09f22d594000bbd9a5
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316878"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831378"
 ---
-# <a name="android-and-android-enterprise-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení pro zařízení s Androidem Enterprise konfigurace e-mailu, ověřování a synchronizace v Intune a Android
+# <a name="android-device-settings-to-configure-email-authentication-and-synchronization-in-intune"></a>Nastavení zařízení s androidem v Intune nakonfigurovat e-mailu, ověřování a synchronizace
 
-Tento článek uvádí a popisuje jinou e-mailovou nastaveních, pomocí kterých můžete řídit na zařízeních s Androidem a s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
+Tento článek uvádí a popisuje jinou e-mailovou nastaveních, pomocí kterých můžete řídit na zařízeních s Androidem Samsung Knox v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nakonfigurovat e-mailový server, použijte protokol SSL k šifrování e-mailů a další.
 
-Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro následující zařízení s Androidem:
+Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro zařízení s Androidem Samsung Knox Standard.
 
-- Android Samsung Knox Standard
-- Android Enterprise
+Další informace o e-mailové profily v Intune najdete v tématu [nakonfigurovat nastavení e-mailu](email-settings-configure.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](email-settings-configure.md).
+[Vytvořit profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
 
 ## <a name="android-samsung-knox"></a>Android (Samsung Knox)
 
-- **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru.
+- **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru. Zadejte například `outlook.office365.com`.
 - **Název účtu**: Zadejte zobrazovaný název e-mailový účet. Tento název se zobrazuje uživatelům na jejich zařízeních.
-- **Atribut uživatelského jména z AAD**: Tento název je atribut, který Intune získá z Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+- **Atribut uživatelského jména z AAD**: Tento název je atribut, který Intune získá od služby Azure Active Directory (Azure AD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
   - **Hlavní název uživatele**: Získá název, jako například `user1` nebo `user1@contoso.com`
   - **Uživatelské jméno**: Získá pouze název, například `user1`
-  - **sAM název účtu**: Vyžaduje domény, jako například `domain\user1`. Název účtu SAM lze použít jen u zařízení s Androidem. Android Enterprise není podporovaný.
+  - **sAM název účtu**: Vyžaduje domény, jako například `domain\user1`. název účtu sAM se používá pouze pro zařízení s Androidem.
 
     Dále zadejte:  
     - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **vlastní**.
@@ -51,7 +50,9 @@ Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro nás
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
       - **Název vlastní domény pro použití**: Zadejte hodnotu, která Intune používá pro název domény, jako například `contoso.com` nebo `contoso`
 
-- **Atribut e-mailové adresy z AAD**: Vyberte způsob generování e-mailovou adresu uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
+- **Atribut e-mailové adresy z AAD**: Tento název je atribut e-mailu, který Intune získá od služby Azure AD. Intune dynamicky generuje e-mailovou adresu, která používají tento profil. Možnosti:
+  - **Hlavní název uživatele**:  Použije celý hlavní název, jako například `user1@contoso.com` nebo `user1`, jako e-mailovou adresu.
+  - **Primární adresa SMTP**: Používá jako primární adresu SMTP, `user1@contoso.com`, pro přihlášení k systému Exchange.
 
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
   - Pokud vyberete **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
@@ -71,27 +72,13 @@ Jako správce Intune můžete vytvořit a přiřadit nastavení e-mailu pro nás
 
 - **Typ obsahu k synchronizaci**: Vyberte typy obsahu, které se mají na zařízeních synchronizovat. **Není nakonfigurováno** toto nastavení zakáže. Pokud je nastavena na **Nenakonfigurováno**, pokud synchronizaci koncového uživatele umožňuje na zařízení, synchronizace je zakázaná, znovu když synchronizuje zařízení v Intune, protože posílit zásady. 
 
-  Můžete synchronizovat následujícím obsahem: 
-  - **Kontakty**
-  - **Kalendář**
-  - **Úkoly**
-
-## <a name="android-enterprise"></a>Android Enterprise
-
-- **E-mailová aplikace**: Vyberte buď **Gmail** nebo **Nine Work**
-- **E-mailový server**: Název hostitele serveru Exchange.
-- **Atribut uživatelského jména z AAD**: Tento název je atribut v Active Directory (AD) nebo Azure AD, který se používá k vygenerování uživatelského jména pro tento e-mailový profil. Vyberte **Primární adresa SMTP**, třeba user1@contoso.com, nebo **Hlavní název uživatele**, třeba uživatel1 nebo user1@contoso.com.
-- **Atribut e-mailové adresy z AAD**: Způsob generování e-mailové adresy uživatele na každém zařízení. Pokud chcete jako e-mailovou adresu nebo **uživatelské jméno** používat celý hlavní název, vyberte **Hlavní název uživatele**.
-- **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**.
-  - Pokud jste vybrali **Certifikát**, vyberte profil certifikátu SCEP nebo PKCS klienta, který jste dříve vytvořili za účelem ověřování připojení Exchange.
-- **SSL**: Při posílání a přijímání e-mailů a komunikaci se serverem Exchange se použije komunikace SSL (Secure Sockets Layer).
-- **Počet e-mailů k synchronizaci**: Zvolte počet dní e-mailu, který chcete synchronizovat, nebo vyberte **Unlimited** chcete synchronizovat všechny dostupné e-maily.
-- **Typ obsahu k synchronizaci** (jenom Nine Work): Vyberte typy obsahu, které se mají na zařízeních synchronizovat. **Není nakonfigurováno** toto nastavení zakáže. Pokud je nastavena na **Nenakonfigurováno**, pokud synchronizaci koncového uživatele umožňuje na zařízení, synchronizace je zakázaná, znovu když synchronizuje zařízení v Intune, protože posílit zásady. 
-
-  Můžete synchronizovat následujícím obsahem: 
-  - **Kontakty**
-  - **Kalendář**
-  - **Úkoly**
+  Můžete synchronizovat následujícím obsahem:  
+  - **Kontakty**: Zvolte **povolit** umožňuje koncovým uživatelům synchronizovat kontakty, aby si svoje zařízení.
+  - **Kalendář**: Zvolte **povolit** umožňuje koncovým uživatelům synchronizovat kalendář, který bude jejich zařízení.
+  - **Úlohy**: Zvolte **povolit** umožňuje koncovým uživatelům k synchronizaci všech úloh se svými zařízeními.
 
 ## <a name="next-steps"></a>Další postup
-[Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)
+
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+
+Můžete také vytvořit e-mailových profilů pro [Android Enterprise – pracovní profil](email-settings-android-enterprise.md), [iOS](email-settings-ios.md), [Windows 10 a novější](email-settings-windows-10.md), a [Windows Phone 8.1](email-settings-windows-phone-8-1.md).

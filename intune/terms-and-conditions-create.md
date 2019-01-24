@@ -16,12 +16,12 @@ ms.reviewer: amyro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ecc5228eef9e9d7be5ba567db6b32c84e95df1b6
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 7283b728e519eb2ca5a9a0b7516774c8cfc26f9b
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032295"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831509"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
 
@@ -29,7 +29,7 @@ ms.locfileid: "53032295"
 
 Správce Intune může uživatele požádat, aby před použitím Portálu společnosti přijali podmínky a ujednání společnosti, aby mohli:
 - registrovat zařízení,
-- přistupovat k prostředkům, jako jsou aplikace a e-mail společnosti.
+- přistupovat k prostředkům, jako jsou aplikace a e-mail společnosti.    
 Konfigurace podmínek a ujednání je volitelná.
 
 Můžete vytvořit více sad podmínek a přiřadit je různým skupinám, abyste například zajistili podporu různých jazyků.
@@ -48,17 +48,17 @@ Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazov
 ![Snímek obrazovky Azure Portalu zobrazující tlačítko Vytvořit pro podmínky a ujednání](media/terms-create-terms.png)
 3. V rozbaleném podokně zadejte tyto informace:
 
-   - **Zobrazovaný název**: Název pro podmínky na Azure Portalu. Tento název se uživatelům nezobrazuje.
+   - **Zobrazovaný název**: Název pro podmínky na webu Azure Portal. Tento název se uživatelům nezobrazuje.
 
-   - **Popis**: Volitelné podrobnosti, které vám pomůžou identifikovat tuto sadu podmínek na Azure Portalu.
+   - **Popis**: Volitelné podrobnosti, které vám pomůžou identifikovat tuto sadu podmínek na webu Azure Portal.
 
 4. Když vyberete šipku vedle **definování podmínek použití**, otevře se podokno podmínek a ujednání, ve kterém zadejte tyto informace:
 
    ![Snímek obrazovky s přijetím podmínek a ujednání koncovým uživatelem se souhrnným zněním podmínek](./media/terms-summary-create.png)
 
-   - **Nadpis**: Název vašich podmínek, který uživatelé uvidí na Portálu společnosti nad **Souhrnem**.
-   - **Souhrn podmínek**: Text, který vysvětluje, jaký význam má pro uživatele přijetí podmínek. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.
-   - **Podmínky**: Podmínky, které se zobrazí uživatelům a které musí uživatelé přijmout nebo odmítnout.
+   - **Název**: Název vašich podmínek, který uživatelé uvidí na portálu společnosti nad **Souhrn**.
+   - **Souhrn podmínek**: Text, který vysvětluje význam toho, když uživatelé přijmou podmínky. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.
+   - **Podmínky a ujednání**: Podmínky a ujednání, které uživatelé naleznete v tématu a musí přijmout nebo odmítnout.
 
 5. Zvolte **OK** > **Vytvořit**.
 

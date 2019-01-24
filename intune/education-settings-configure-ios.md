@@ -16,18 +16,19 @@ ms.reviewer: derriw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 40549d8fa9bead312f39ca9a782fb555e1022cd6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: fd71af5d52f81d05ce424212e029f01c59a33a8d
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180404"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831577"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
->[!NOTE]
->Nastavení Intune pro aplikaci Classroom byla v Intune označena jako zastaralá. Tento článek je určen pouze pro uživatele, kteří mají v Intune existující vzdělávací profily.
+
+> [!NOTE]
+> Nastavení Intune pro aplikaci Classroom jsou zastaralé v Intune. Tento článek je určen pouze pro uživatele, kteří mají v Intune existující vzdělávací profily.
 
 ## <a name="introduction"></a>Úvod
 [Classroom](https://itunes.apple.com/app/id1085319084) je aplikace, která učitelům umožňuje vést výuku a ovládat zařízení studentů v učebně. Učitelé například můžou:
@@ -75,7 +76,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.

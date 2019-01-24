@@ -1,68 +1,64 @@
 ---
 title: Vytvoření profilu zařízení se systémem iOS nebo macOS pomocí Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte profil zařízení s iOSem nebo macOS a pak nakonfigurujte nastavení pro AirPrint, AirPlay, rozložení domovské obrazovky, oznámení aplikací, sdílené zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune.
+description: Přidejte nebo vytvořte profil zařízení s Iosem nebo macOS a pak nakonfigurujte nastavení pro AirPrint, rozložení domovské obrazovky, oznámení aplikací, sdílené zařízení, jednotné přihlašování a nastavení filtru webového obsahu v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: heenamac
+ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2282ba4dd3caf8c71c8624884bc124393ea52d2f
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 4542a65afa87668702620a1b50443c9844692a87
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203089"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831271"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS nebo macOS v Intune
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+Intune obsahuje mnoho funkcí a nastavení, které pomáhají správcům řídit zařízení s Iosem a macOS. Například správci můžou:
 
-Funkce zařízení umožňují řídit celou řadu nastavení a funkcí na zařízeních se systémy iOS a macOS, jako jsou například:
+- Povolit uživatelům přístup k tiskárnám ve vaší síti
+- Přidejte aplikace a složky na domovskou obrazovku, včetně přidání nové stránky
+- Zvolte, jestli a jakým způsobem se zobrazí oznámení aplikace
+- Konfigurace zamykací obrazovce zobrazit zprávu nebo inventární štítek, zejména pro sdílená zařízení
+- Uživatelům zabezpečené prostředí s jednotným přihlašování sdílet přihlašovací údaje mezi aplikacemi
+- Filtrovat webové servery, které používají jazyk pro dospělé a povolit nebo blokovat konkrétní webové stránky
 
-- Nastavení AirPrint a AirPlay
-- Rozložení domovské obrazovky
-- Oznámení z aplikací
-- Zpráva na zamčené obrazovce
-- Nastavení jednotného přihlašování
-- Filtrování webového obsahu
+Tyto funkce jsou dostupné v Intune a jsou konfigurovatelné správcem. Intune používá "konfiguračních profily" vytvořit a přizpůsobit nastavení pro potřeby vaší organizace. Po přidání těchto funkcí v profilu, můžete pak push nebo nasadit profil pro zařízení s Iosem a macOS ve vaší organizaci.
 
-Tento článek obsahuje základní informace o konfiguraci profilů funkcí zařízení s iOSem. Potom můžete pokračovat dalšími články a konfigurovat nastavení specifická pro danou platformu vašeho zařízení.
+V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Můžete také zobrazit všechna nastavení, které jsou k dispozici pro [iOS](ios-device-features-settings.md) a [macOS](macos-device-features-settings.md) zařízení.
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a potom vyberte **Microsoft Intune**.
-3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-4. Zadejte tyto vlastnosti:
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte tyto vlastnosti:
 
-   - **Název**: Zadejte popisný název pro nový profil.
-   - **Popis**: Zadejte popis profilu. (Toto nastavení je volitelný, ale doporučujeme.)
-   - **Platforma**: Vyberte typ platformy:
-     - **iOS**
-     - **macOS**
-   - **Typ profilu**: Vyberte **funkcí na zařízeních**.
-   - **Nastavení**: Nastavení závisí na zvolené platformě. Informace o nastaveních pro jednotlivé typy profilů najdete v následujících článcích:
+    - **Název**: Zadejte popisný název pro nový profil.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Platforma**: Vyberte vaši platformu:
+        - **iOS**
+        - **macOS**
+    - **Typ profilu**: Vyberte **funkcí na zařízeních**.
+    - **Nastavení**: Zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení, a co dělají naleznete v tématu:
 
-     - [Nastavení AirPrintu pro iOS a MacOS](air-print-settings-ios-macos.md)
-     - [Nastavení AirPlay pro iOS](airplay-settings-ios.md)
-     - [Nastavení rozložení domovské obrazovky pro iOS](home-screen-settings-ios.md)
-     - [Nastavení oznámení aplikace pro iOS](app-notification-settings-ios.md)
-     - [Nastavení zámku obrazovky zpráv pro iOS](shared-device-settings-ios.md)
-     - [Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem](sso-ios.md)
-     - [Nastavení filtru webového obsahu pro iOS](web-content-filter-settings-ios.md)
+        - [iOS](ios-device-features-settings.md)
+        - [macOS](macos-device-features-settings.md)
 
-5. Až skončíte, vyberte **OK** a zvolte **Vytvořit**. Provedené změny tak uložíte.
+4. Až skončíte, vyberte **OK** a zvolte **Vytvořit**. Provedené změny tak uložíte.
 
-Profil se vytvoří a zobrazí se v seznamu.
+Profil se vytvoří a zobrazí v seznamu. Nezapomeňte [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
 
-## <a name="next-step"></a>Další krok
+## <a name="next-steps"></a>Další postup
 
-Pokud chcete tento profil přiřadit ke skupinám, přečtěte si článek [Přiřazení profilů zařízení](device-profile-assign.md).
+Po vytvoření profilu je připraven k přiřazení. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+
+Zobrazit všechna nastavení funkce zařízení pro [iOS](ios-device-features-settings.md) a [macOS](macos-device-features-settings.md) zařízení.

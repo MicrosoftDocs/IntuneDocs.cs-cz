@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 7/26/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ac4b7821f132c92b247538e4ea6131f517da7698
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 5e442ae550d138d532f7a2d8e829c623d09f240a
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187683"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751157"
 ---
 # <a name="configure-vpn-settings-for-devices-running-android-in-intune"></a>Konfigurace nastavení VPN pro zařízení s Androidem v Intune
 
@@ -29,19 +29,19 @@ Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfigur
 Nastavení sítě VPN můžete nakonfigurovat pro tyto platformy:
 
 - [Android](#android-vpn-settings)
-- [Android for work](#android-for-work-vpn-settings)
+- [Android Enterprise](#android-enterprise-vpn-settings)
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všechny následující hodnoty.
 
 ## <a name="android-vpn-settings"></a>Nastavení VPN v Androidu
 
-- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény**: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
+- **Název připojení**: Zadejte název pro toto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény**: Zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, který zařízení připojovat. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
 
-  - **Metoda ověřování**: Zvolte způsob, kterým se zařízení ověřují vůči serveru VPN. Možnosti:
+  - **Metoda ověřování**: Zvolte, jak zařízení ověření vůči serveru VPN. Možnosti:
 
-    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověřování připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
-    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN se koncovým uživatelům zobrazí výzva k zadání uživatelského jména a hesla.
+    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověření připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
+    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN, koncovým uživatelům se výzva k zadání uživatelského jména a hesla.
 
 - **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
 
@@ -52,25 +52,25 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou konfigurovatelné všec
   - **Pulse Secure**
   - **Citrix**
 
-- **Otisk prstu** (pouze Check Point Capsule VPN): Zadejte řetězec, například **Kód otisku prstu Contoso**, který se použije k ověření, že serveru VPN je možné důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který má při připojování ten samý otisk. Pokud zařízení otisk prstu nemá, vyzve uživatele, aby danému serveru VPN důvěřoval. Současně přitom zobrazuje otisk prstu. Uživatel ho ručně ověří a zvolí důvěryhodnost připojení.
-- **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix): Zadejte páry klíče a hodnoty, které poskytl Citrix. Tyto hodnoty nakonfigurují vlastnosti připojení VPN.
+- **Otisk prstu** (Check Point Capsule VPN pouze): Zadejte řetězec, jako například **kód otisku prstu Contoso**, chcete-li ověřit, že možné serveru VPN důvěřovat. Otisk prstu se může odeslat klientovi, aby věděl, že může důvěřovat jakémukoli serveru, který má při připojování ten samý otisk. Pokud zařízení otisk prstu nemá, vyzve uživatele, aby danému serveru VPN důvěřoval. Současně přitom zobrazuje otisk prstu. Uživatel ho ručně ověří a zvolí důvěryhodnost připojení.
+- **Zadejte páry klíč-hodnota pro atributy Citrix VPN** (pouze Citrix): Zadejte páry klíč-hodnota, poskytl Citrix. Tyto hodnoty nakonfigurují vlastnosti připojení VPN.
 
-## <a name="android-for-work-vpn-settings"></a>Nastavení VPN v Androidu for Work
+## <a name="android-enterprise-vpn-settings"></a>Nastavení sítě VPN v androidu enterprise
 
-- **Název připojení**: zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény**: zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
+- **Název připojení**: Zadejte název pro toto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí dostupná připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény**: Zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, který zařízení připojovat. Zadejte například **192.168.1.1** nebo **vpn.contoso.com**.
 
-  - **Metoda ověřování**: Zvolte způsob, kterým se zařízení ověřují vůči serveru VPN. Možnosti:
+  - **Metoda ověřování**: Zvolte, jak zařízení ověření vůči serveru VPN. Možnosti:
   
-    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověřování připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
-    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN se koncovým uživatelům zobrazí výzva k zadání uživatelského jména a hesla.
+    - **Certifikáty**: Vyberte existující profil certifikátu SCEP nebo PKCS pro ověření připojení. [Konfigurace certifikátů](certificates-configure.md) obsahuje kroky pro vytvoření profilu certifikátu.
+    - **Uživatelské jméno a heslo**: Při přihlašování k serveru VPN, koncovým uživatelům se výzva k zadání uživatelského jména a hesla.
 
 - **Typ připojení**: Vyberte typ připojení VPN. Možnosti:
 
   - **Check Point Capsule VPN**
   - **Cisco AnyConnect**
   - **SonicWall Mobile Connect**
-  - **F5 Edge Client**
+  - **F5 Access**
   - **Pulse Secure**
 
 ## <a name="next-steps"></a>Další postup

@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 721d3a26e25c14a2e4ccd20b179ae7d4611d3186
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: df91908f3d3be7be23e3cecfa83e2d92b656b91e
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203378"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831594"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Spravovat a využívat funkce správy různých zařízení na Windows Holographic a zařízení HoloLens s Intune
 
@@ -108,7 +108,7 @@ V profilech můžete k přizpůsobení některých nastavení, vytvoření omeze
 
 Pokud chcete nakonfigurovat nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier), můžete v Intune vytvořit vlastní profil. Nastavení OMA-URI se používá k ovládání různých funkcí zařízení s Windows Holographic for Business, jako je povolení VPN nebo kontrola aktualizací ve službě Microsoft Update.
 
-#### <a name="configure-kiosk-modekiosk-settingsmdwindows-holographic-for-business"></a>[Konfigurace beznabídkového režimu](kiosk-settings.md#windows-holographic-for-business)
+#### <a name="configure-kiosk-modekiosk-settings-holographicmd"></a>[Konfigurace beznabídkového režimu](kiosk-settings-holographic.md)
 
 Pomocí funkcí sdíleného nebo hostovaného počítače dostupných v Intune můžete na zařízeních s Windows Holographic for Business nakonfigurovat beznabídkový režim. Na těchto zařízení může běžet jen jedna aplikace (beznabídkový režim s jednou aplikací), nebo několik aplikací (beznabídkový režim s více aplikacemi).
 

@@ -3,7 +3,7 @@ title: Hromadný zápis pro Windows 10
 titlesuffix: Microsoft Intune
 description: Vytvoření balíčku hromadné registrace pro Microsoft Intune
 keywords: ''
-author: Erikje
+author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
@@ -15,12 +15,12 @@ ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fca6fd73da1277973ee313055eaf4b5ba073afbb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 97f51b4934a2dc2267e255da0ec1d896dd6b8961
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184807"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751191"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -48,9 +48,8 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
    - **Project folder** (Složka projektu) – místo pro ukládání projektu
    - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
-4. Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (%%SERIAL%%) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
-
-   ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
+4. Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (% sériového portu %) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
+   ![Snímek obrazovky se zadáním názvu kódu product key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
    ![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
@@ -65,7 +64,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 9. Volitelně můžete **Add applications** (Přidat aplikace) a **Add certificates** (Přidat certifikáty). Tyto aplikace a certifikáty se zřídí v zařízení.
 
-10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na **Vytvořit**.
+10. Volitelně můžete zřizovací balíček ochránit heslem.  Klikněte na možnost **Vytvořit**.
     ![Snímek obrazovky s ochranou balíčku v aplikaci Windows Configuration Designer](media/bulk-enroll-create.png)
 
 ## <a name="provision-devices"></a>Zřízení zařízení

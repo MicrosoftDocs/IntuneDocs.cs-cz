@@ -1,12 +1,12 @@
 ---
-title: Začínáme s Microsoft Intune
+title: Co můžete dělat Microsoft Intune pro moji firmu
 titleSuffix: ''
-description: Projděte si sérii krátkých praktických rychlých startů a zjistěte, jak Intune funguje.
+description: Běžné obchodní problémy, které Microsoft Intune pomáhá vyřešit.
 keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 11/12/2018
+ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 8adb038fbd5fa1b4ad2400a215eb228b81433bde
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: c8e15675beb97b396c9340e2ab3bfa86a3a43f76
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186898"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831424"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jaké přínosy má Intune pro moji firmu?
 Microsoft Intune je cloudová služba pro správu mobility velkých organizací (EMM), která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data.
@@ -42,7 +42,7 @@ Intune vám umožňuje:
 * [Umožnění zabezpečeného přístupu zaměstnanců k Office 365 z nespravované veřejného terminálu](common-scenarios.md#enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk)
 * [Poskytnutí sdílených tabletů s omezeným použitím pracovníkům, kteří provádějí konkrétní úlohy](common-scenarios.md#issue-limited-use-shared-tablets-to-your-employees)
 
-## <a name="quickstarts"></a>Rychlý start
+## <a name="quickstarts"></a>Šablony Rychlý start
 
 Chápeme, že začátky související se správou mobilních zařízení můžou být obtížné, protože za svou firmu musíte udělat spoustu různých rozhodnutí. Následující rychlé starty vám pomůžou začít pracovat s Intune a provádět některé běžné úlohy v co nejkratším čase.
 
@@ -76,7 +76,7 @@ Intune je součást řešení Enterprise Mobility + Security (EMS), která slou�
 
 [Začínáme s používáním Azure](get-started-azure.md) – pochopte principy Azure Portalu a zjistěte, jak můžete udělat změny na stránce, kterou vidíte.
 
-## <a name="learn-more"></a>Další informace
+## <a name="learn-more"></a>Víc se uč
 
 * [Co je Intune?](introduction-intune.md)
 * [Co je Azure Portal?](what-is-intune.md)

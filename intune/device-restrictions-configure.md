@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 11b241a14ed70a2e999fa505449cd12cdd1e025e
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.openlocfilehash: 7ab60e64927db5537a106c1257a5624670771f86
+ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728782"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54831407"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -32,7 +32,7 @@ Můžete například vytvořit profil omezení zařízení, který uživatelům 
 
 Naučte se základy o profilech omezení zařízení a pak si přečtěte další články pro jednotlivé platformy, abyste zjistili zvláštnosti zařízení.
 
-## <a name="create-a-device-profile-containing-device-restriction-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení omezení zařízení
+## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. V k [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
@@ -48,7 +48,7 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - **Windows 10 a novější**
 
 5. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Chcete-li vytvořit zařízení omezení profilu pro zařízení s Windows 10 Team, jako je Surface Hub, a pak zvolte **omezení zařízení (Windows 10 Team)**.
-6. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Zvolte vaši platformu podrobné nastavení:
+6. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Zvolte vaši platformu, pro podrobné informace o nastavení:
 
     - [Nastavení Androidu](device-restrictions-android.md)
     - [Nastavení androidu enterprise](device-restrictions-android-for-work.md)
@@ -60,13 +60,13 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-7. Až to budete mít, vraťte se do **vytvořit profil** stránku a vybrat **vytvořit**.
+7. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
-Profil se vytvoří a zobrazí se na stránce se seznamem profilů. 
+Profil se vytvoří a zobrazí v seznamu profilů.
 
-## <a name="next-step"></a>Další krok
+## <a name="next-steps"></a>Další postup
 
-Po vytvoření profilu je připraven k přiřazení. Zobrazit [přiřazení profilů zařízení](device-profile-assign.md) kroky. 
+Po vytvoření profilu je připraven k přiřazení. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

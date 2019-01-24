@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/15/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4082b845643aae47464e4df14ac6621fcf8f39cf
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f3bea9b1678669aa568c44e63f57aebd832cf203
+ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180247"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54751174"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -67,7 +67,7 @@ Používané zásady ochrany aplikace jsou plně podporované v pracovním i o
 
 Podpora sítě VPN je podobná profilům Android VPN. Pro správu Androidu Enterprise jsou k dispozici stejní poskytovatelé sítě VPN a základní možnosti konfigurace, až na dva rozdíly:
 
--  **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Připojení VPN můžou používat jen aplikace spravované v rámci Androidu Enterprise. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu o [nastavení sítě VPN v Androidu Enterprise](vpn-settings-android.md#android-for-work-vpn-settings).
+-  **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Připojení VPN můžou používat jen aplikace spravované v rámci Androidu Enterprise. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu o [nastavení sítě VPN v Androidu Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
 -  **Síť VPN specifická pro aplikaci** – tuto síť lze v Intune nakonfigurovat, pokud poskytovatel VPN podporuje:
     - Konfiguraci sítě VPN specifické pro aplikaci
