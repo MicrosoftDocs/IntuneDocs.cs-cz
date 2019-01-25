@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c7c5f163eef37333367511650ba86e01250ffe18
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 58ff1bd91a5c95d66d75ad6546137dd2de9feac3
+ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831683"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54899089"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -30,7 +30,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 ## <a name="common-it-administrator-issues"></a>Běžné problémy správců IT
 
-Jedná se o běžné problémy, ke kterým může docházet, když správce IT používá zásady ochrany aplikací pro Intune.
+Jedná se o běžné problémy, které správce IT může docházet při použití zásad ochrany aplikací Intune.
 
 | Problém | Popis | Řešení |
 | -- | -- | -- |
@@ -63,12 +63,12 @@ Android | Proč je potřeba, aby si koncový uživatel **nainstaloval aplikaci P
 
 Platforma | Zpráva nebo dialog | Vysvětlení |
 --- | --- | --- |
-iOS, Android | **Přihlášení**: Pokud chcete chránit svá data, vaše organizace potřebuje ke správě této aplikace. Pokud budete chtít správu nastavit, přihlaste se svým pracovním nebo školním účtem. | Aby mohl koncový uživatel používat tuto aplikaci, která vyžaduje zásady ochrany aplikací, musí se přihlásit svým pracovním nebo školním účtem. Aby zásady začaly platit, je nutné, aby se uživatel ověřil v Azure Active Directory.
-iOS, Android |**Vyžadováno restartování**: Vaše organizace teď chrání svoje data v této aplikaci. Abyste mohli pokračovat, musíte aplikaci restartovat. | Aplikace právě přijala zásady ochrany aplikací pro Intune a musí se restartovat,aby zásady začaly platit.
-iOS, Android |**Akce Nepovolena**: Vaše organizace povoluje pouze otevírat pracovní nebo školní data v této aplikaci. | Správce IT nastavil u zásady **Povolit aplikaci přijímat data z jiných aplikací** možnost **Pouze spravované aplikace**. Koncový uživatel proto může do této aplikace přenášet data jenom z aplikací, které používají zásady ochrany aplikací.
-iOS, Android |**Akce Nepovolena**: Vaše organizace jenom povoluje přenést její data do ostatních spravovaných aplikací. | Správce IT nastavil u zásady **Povolit aplikaci posílat data do jiných aplikací** možnost **Pouze spravované aplikace**. Koncový uživatel proto může z této aplikace přenášet data jenom do aplikací, které používají zásady ochrany aplikací.
+iOS, Android | **Přihlášení**: Pokud chcete chránit svá data, vaše organizace potřebuje ke správě této aplikace. Pokud budete chtít správu nastavit, přihlaste se svým pracovním nebo školním účtem. | Koncový uživatel musí přihlásit pomocí svého pracovního nebo školního účtu chcete-li použít tuto aplikaci, která vyžaduje zásady ochrany aplikací. Aby zásady začaly platit uživatel musí ověřit vůči Azure Active Directory.
+iOS, Android |**Vyžadováno restartování**: Vaše organizace teď chrání svoje data v této aplikaci. Abyste mohli pokračovat, musíte aplikaci restartovat. | Aplikace právě přijala zásady ochrany aplikací Intune a musí se restartovat, aby zásady začaly platit.
+iOS, Android |**Akce Nepovolena**: Vaše organizace povoluje pouze otevírat pracovní nebo školní data v této aplikaci. | Správce IT nastavil u zásady **Povolit aplikaci přijímat data z jiných aplikací** možnost **Pouze spravované aplikace**. Proto se koncový uživatel může přenášet data jenom do této aplikace z jiných aplikací, které mají zásady ochrany aplikací.
+iOS, Android |**Akce Nepovolena**: Vaše organizace jenom povoluje přenést její data do ostatních spravovaných aplikací. | Správce IT nastavil u zásady **Povolit aplikaci posílat data do jiných aplikací** možnost **Pouze spravované aplikace**. Proto se koncový uživatel může přenášet data jenom z této aplikace do jiných aplikací, které mají zásady ochrany aplikací.
 iOS, Android |**Vymazání výstrahy**: Vaše organizace odebrala svoje data související s touto aplikací. Pokud chcete pokračovat, restartujte aplikaci. | Správce IT pomocí ochrany aplikací pro Intune inicioval vymazání aplikace.
-Android | **Firemní portál vyžaduje**: S touto aplikací používat svůj pracovní nebo školní účet, musíte nainstalovat aplikaci portál společnosti Intune. Pokračujte klepnutím na Přejít do obchodu. | V Androidu je většina funkcí ochrany aplikací integrovaná do aplikace Portál společnosti. **Aplikace Portál společnosti se sice vyžaduje vždycky, ale registrace zařízení se nevyžaduje**. K ochraně aplikací bez registrace stačí, aby měl koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.
+Android | **Firemní portál vyžaduje**: S touto aplikací používat svůj pracovní nebo školní účet, musíte nainstalovat aplikaci portál společnosti Intune. Klikněte na tlačítko "Přejít do obchodu" abyste mohli pokračovat. | V Androidu je většina funkcí ochrany aplikací integrovaná do aplikace Portál společnosti. **Aplikace Portál společnosti se sice vyžaduje vždycky, ale registrace zařízení se nevyžaduje**. K ochraně aplikací bez registrace stačí, aby měl koncový uživatel na zařízení nainstalovanou aplikaci Portál společnosti.
 
 ### <a name="error-messages-and-dialogs-on-ios"></a>Chybové zprávy a dialogy v iOS
 

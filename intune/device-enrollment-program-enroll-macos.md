@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 2bd9b244947f5f0b8fcb832682951c7a241f96a4
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: 064fa53341558ac18a228b56dca6d129cd58a3af
+ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032346"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54899072"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatická registrace zařízení s macOS pomocí programu registrace zařízení nebo Apple School Manageru
 
@@ -123,7 +123,7 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
  
 7. Zvolte **OK**.
 
-8. Zvolte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png).
+8. Vyberte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu:  ![Nastavení přizpůsobení průvodce nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Nastavení oddělení | Popis |
     |---|---|
@@ -150,6 +150,10 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
     | <strong>FileVault</strong> | Umožní uživateli nastavit šifrování FileVault. |
     | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
     | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
+    | <strong>Android Migration</strong> | Umožnit uživateli pro migraci dat ze zařízení s Androidem. |
+    | <strong>Zobrazit tón</strong> | Umožnit uživateli zapnout tón zobrazení. |
+    | <strong>Ochrana osobních údajů</strong> | Zobrazte na obrazovce o ochraně osobních údajů pro uživatele. |
+    | <strong>iCloud Storage</strong> | Dát uživateli možnost používat úložiště iCloud. |
 
    
 

@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 145b4ba18325d82942eb4ebf5fbfe17ffc8e653b
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.openlocfilehash: 833e58d8add6b316267e7cb1e177384a0ca4966d
+ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737895"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54899106"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -45,7 +45,7 @@ Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak použív
 
 ## <a name="install-power-bi"></a>Instalace Power BI
 
-Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu z si můžete stáhnout: [Webu PowerBI.microsoft.com.](https://powerbi.microsoft.com/desktop)
+Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu z si můžete stáhnout: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
 
 ## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Načtení dat a sestav pomocí souboru Power BI (pbix)
 
@@ -54,7 +54,7 @@ Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sa
 > [!Important]  
 > Jednotlivé soubory Power BI (pbix) se můžou lišit podle umístění tenanta. Pokud spravujete několik tenantů Intune, je nutné použít soubor, který jste z portálu Azure Portal stáhli, když jste byli přihlášení k požadovanému tenantovi.  
 
-1.  Přihlaste se k webu Azure portal a vyberte **monitorování a správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
+1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřete okno **Rozhraní API datového skladu Microsoft Intune (Preview)**.
 3.  Vyberte **Stáhnout soubor Power BI**. Soubor s příponou PBIX se stáhne do vámi zadaného umístění.
 4.  Soubor otevřete pomocí Power BI. Načtou se *sestavy datového skladu Intune*. Získání dat vašeho tenanta ale může chvíli trvat.
@@ -65,7 +65,7 @@ Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sa
 
 S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovému bodu RESTful v rozhraní API datového skladu, který zveřejní datový model do klienta sestav. Pokud chcete použít aplikaci Power BI Desktop pro připojení a vytvoření vlastních sestav, postupujte podle těchto pokynů. Nejste omezeni aplikací Power BI Desktop. Můžete použít oblíbený analytický nástroj s adresou URL pro OData, za předpokladu, že klient podporuje ověřování OAUTH2.0 a standard OData v4.0.
 
-1.  Přihlaste se k webu Azure portal a vyberte **monitorování a správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
+1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřete okno **Rozhraní API datového skladu Microsoft Intune (Preview)**.
 3. V okně vytváření sestav načtěte adresu URL vlastního informačního kanálu, například `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
 4. Otevřete aplikaci **Power BI Desktop**.
