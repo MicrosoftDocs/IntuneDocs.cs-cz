@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 11a698628e3ca1342f10f088045012523c8ac745
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.openlocfilehash: cb52a9755dffd20e6d3d66419855cc4ee7fca293
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734285"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068318"
 ---
 # <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
 
@@ -61,7 +61,7 @@ K předběžnému zpracování aplikací Win32 použijte [nástroj pro příprav
 Při generování *.intunewin* souboru, umístěte všechny soubory, které potřebujete k odkazování na dílčí složku složky instalace. Potom použijte relativní cesty tak, aby odkazovaly na konkrétní soubor, který potřebujete. Příklad:
 
 **Složky zdroje instalace:** *c:\testapp\v1.0*<br>
-**Soubor s licencí:** *c:\testapp\v1.0\licenses\license.txt*
+**License file:** *c:\testapp\v1.0\licenses\license.txt*
 
 Odkazovat *license.txt* soubor pomocí relativní cesty *licenses\license.txt*.
 
@@ -239,6 +239,9 @@ Koncovému uživateli se zobrazí informační zprávy Windows pro instalace apl
 Na následujícím obrázku upozorní koncového uživatele, že jsou prováděny změny aplikace do zařízení.
 
 ![Snímek obrazovky upozornění uživatele, které se provádějí změny aplikace](./media/apps-win32-app-09.png)    
+
+## <a name="toast-notifications-for-win32-apps"></a>Informační zprávy pro aplikace Win32 
+V případě potřeby můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **Assignemnts** > **zahrnout skupiny**. 
 
 ## <a name="troubleshoot-win32-app-issues"></a>Řešení potíží s aplikacemi Win32
 Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. Nástroj *CMTrace.exe* si můžete stáhnout z umístění uvedeném v článku o [klientských nástrojích SCCM](https://docs.microsoft.com/sccm/core/support/tools). 

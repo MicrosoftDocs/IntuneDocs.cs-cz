@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2019
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cd6ac0b1fdb64897a831c0111f7e0a611c85bede
-ms.sourcegitcommit: 513c59a23ca5dfa80a3ba6fc84068503a4158757
+ms.openlocfilehash: 51d1c477f490cb23c35ef54a0a5099ee4b4b035b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54210699"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068250"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -36,6 +36,9 @@ Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o
 
 >[!IMPORTANT]
 > Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. V současnosti to platí jen pro aplikaci Microsoft Outlook.
+
+## <a name="deployed-wip-policies-without-user-enrollment"></a>Nasazené zásady WIP bez registrace uživatele
+Zásady Windows Information Protection (WIP) můžete nasadit bez nutnosti MDM uživatelé museli zaregistrovat svá zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Jakmile jsou dokumenty chráněny zásadami WIP, mohou být chráněná data selektivně vymazána správcem služby Intune. Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. V Intune na portálu Azure portal, vyberte **klientskou aplikaci** > **selektivní vymazání aplikace**. Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
 
 ## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
 

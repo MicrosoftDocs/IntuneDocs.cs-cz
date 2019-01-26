@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: cd9aedbc8f02cd116eb3135e30348ca104aa1120
-ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
+ms.openlocfilehash: c5bced54973818b78190d81ade2fde5358c58443
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54899157"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072605"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -43,6 +43,91 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 
 -->     
 ## <a name="week-of-january-21-2019"></a>Týden od 21. ledna 2019
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="toast-notifications-for-win32-apps----3136566-----"></a>Informační zprávy pro aplikace Win32 <!-- 3136566   -->
+Můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **přiřazení** > **zahrnout skupiny**. 
+
+#### <a name="intune-app-protection-policies-ui-update----3251427----"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427  -->
+Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
+- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
+- Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
+
+Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
+
+#### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
+Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující: Povolit jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v iOS a Android nasadit moderní ověřování pro moderní ověřování Office 365 a hybridní místní účty použití `SAMAccountName` pro pole uživatelské jméno v e-mailového profilu, když je základní ověřování vybrané kontakty povolit ukládání konfigurace externím příjemcům Konfigurace upozornění než odešlete **zaměřuje doručené pošty** vyžadují biometrické údaje pro přístup k aplikaci Outlook pro iOS blokovat externí obrázky
+> [!NOTE]
+> Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-settings) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-settings).
+
+#### <a name="delete-android-enterprise-apps----1352553---"></a>Odstranění aplikací Androidu Enterprise <!-- 1352553 -->
+Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
+
+#### <a name="managed-google-play-app-type----1352580---"></a>Typ aplikace Google Play spravované <!-- 1352580 -->
+**Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravované aplikace Google Play](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune teď můžete procházet, Hledat, schválit, synchronizaci a přiřazení aplikací v Intune schválené spravovaného obchodu Google Play.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte.  V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. V **typ aplikace** seznamu vyberte **spravovaný obchod Google Play** jako typ aplikace.
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview----2055484-----"></a>Nastavení Microsoft doporučuje používat směrné plány zabezpečení (Public Preview) <!-- 2055484   -->
+Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně Ochrany ATP v programu Windows Defender a Ochrany ATP v Office 365. Zákazníci požadují ve službách Microsoft 365 společnou strategii a soudržnější sadu ucelených bezpečnostních pracovních postupů. Naším cílem je srovnat strategie tak, abychom mohli vytvářet řešení přemosťující operace zabezpečení a běžné úlohy správy. V Intune se snažíme tohoto cíle dosáhnout prostřednictvím publikování sady Standardních hodnot zabezpečení doporučených Microsoftem (**Intune** > **Standardní hodnoty zabezpečení**).  Správce můžete vytvořit zásady zabezpečení přímo z těchto standardních hodnot a pak je nasadit na svoje uživatele. Můžete také přizpůsobit doporučení osvědčených postupů pro potřeby vaší organizace. Intune zajišťuje, že zařízení zůstávají v souladu s těmito standardními hodnotami, a upozorní správce, pokud uživatelé nebo zařízení tyto hodnoty nedodržují.
+
+Další informace o standardních hodnot zabezpečení najdete v tématu [vytvoření standardních hodnot zabezpečení Windows 10 v Intune](security-baselines-monitor.md).
+
+Tato funkce platí pro: Windows 10 a novější
+
+#### <a name="non-administrators-can-enable-bitlocker-on-windows-10-devices-joined-to-azure-ad---2147379-----"></a>Non-správci mohou povolit nástroj BitLocker na zařízeních s Windows 10 připojená k Azure AD<!-- 2147379   -->
+Když povolíte nastavení nástroje BitLocker na zařízeních s Windows 10 (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **Windows 10 a novější** pro platformu > **Endpoint protection** pro typy profilů > **šifrování Windows**), přidejte nastavení Bitlockeru. 
+
+Tato aktualizace zahrnuje nové nastavení nástroje BitLocker umožňuje standardní uživatelé (bez oprávnění správce), aby šifrování povolil. 
+
+Chcete-li nastavení zobrazit, přejděte na [nastavení služby Endpoint protection pro Windows 10](endpoint-protection-windows-10.md#windows-encryption).
+
+#### <a name="check-for-configuration-manager-compliance----2192052--eepublished----"></a>Kontrola Configuration Manageru z hlediska dodržování předpisů <!-- 2192052  eepublished  -->
+Tato aktualizace zahrnuje novým nastavením dodržování předpisů System Center Configuration Manager (**dodržování předpisů zařízením** > **zásady** > **vytvořit zásadu**  >  **Windows 10 a novější** > **dodržování předpisů v Configuration Manageru**). Configuration Manager bude posílat signály funkci dodržování předpisů v Intune. Pomocí tohoto nastavení můžete vyžadovat všechny signály nástroje Configuration Manager k vrácení "kompatibilní".
+
+Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manageru má tento požadavek stav Nainstalováno. Pokud jsou všechny programy na zařízení v neznámém stavu, je zařízení nedodržují předpisy v Intune.
+
+[Dodržování předpisů v Configuration Manageru](compliance-policy-create-windows.md#configuration-manager-compliance) popisuje toto nastavení.
+
+Platí pro: Windows 10 a novější
+
+#### <a name="customize-wallpaper-on-supervised-ios-devices-using-a-device-configuration-profile----2809324-----"></a>Přizpůsobení tapeta na zařízeních s Iosem pod dohledem pomocí konfiguračního profilu zařízení <!-- 2809324   -->
+Když vytvoříte profil konfigurace zařízení pro zařízení s Iosem, můžete přizpůsobit některé funkce (**konfigurace zařízení** > **profily** > **Create profil** > **iOS** pro platformu > **funkcí na zařízeních** pro typ profilu). Tato aktualizace zahrnuje nové **tapeta** nastavení, které umožňují správcům použít image ve formátu PNG, JPG nebo JPEG na domovské obrazovce nebo zamykací obrazovce. Tato nastavení tapeta platí jenom pro zařízení pod dohledem. 
+
+Seznam nastavení najdete v tématu [nastavení funkcí zařízení s Iosem](ios-device-features-settings.md).
+
+#### <a name="windows-10-kiosk-is-generally-available----3594661----"></a>Veřejný terminál Windows 10 je obecně dostupná <!-- 3594661  -->
+V této aktualizaci funkce veřejného terminálu na Windows 10 a novější zařízení je všeobecně dostupná (GA). Pokud chcete zobrazit všechna nastavení, můžete přidávat a konfigurovat, najdete v článku [nastavení beznabídkového režimu pro Windows 10 (a novější)](kiosk-settings.md).
+
+#### <a name="contact-sharing-via-bluetooth-is-removed-in-device-restrictions--device-owner-for-android-enterprise----3598396-----"></a>Sdílení kontaktů přes Bluetooth se už v omezení zařízení > vlastník zařízení pro Android Enterprise <!-- 3598396   -->
+Když vytvoříte profil omezení zařízení pro zařízení s Androidem Enterprise, je **sdílení kontaktů přes Bluetooth** nastavení. V této aktualizaci **sdílení kontaktů přes Bluetooth** odebrat nastavení (**konfigurace zařízení** > **profily**  >   **Vytvoření profilu** > **Androidu Enterprise** pro platformu > **omezení zařízení > vlastník zařízení** pro typy profilů > **obecné** ). 
+
+**Sdílení kontaktů přes Bluetooth** nastavení není podporováno pro vlastníka zařízení s Androidem Enterprise management. Takže při odebrání tohoto nastavení neovlivní žádné zařízení ani tenantů, i když toto nastavení je povolena a konfigurována ve vašem prostředí.
+
+Pokud chcete zobrazit aktuální seznam nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolení nebo zakázání funkce](device-restrictions-android-for-work.md).
+
+Platí pro: Vlastník zařízení s androidem Enterprise
+
+#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
+Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
+- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
+- Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
+
+Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
+
+### <a name="device-management"></a>Správa zařízení
+#### <a name="deployed-wip-policies-without-user-enrollment----1434452---"></a>Nasazené zásady WIP bez registrace uživatele <!-- 1434452 -->
+Zásady Windows Information Protection (WIP) můžete nasadit bez nutnosti MDM uživatelé museli zaregistrovat svá zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Jakmile jsou dokumenty chráněny zásadami WIP, mohou být chráněná data selektivně vymazána správcem služby Intune. Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. V Intune na portálu Azure portal, vyberte **klientskou aplikaci** > **selektivní vymazání aplikace**.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="new-operational-logs-and-ability-to-send-logs-to-azure-monitor-services----3762211----"></a>Novou provozní protokoly a možnost odesílat protokoly do služby Azure Monitor <!-- 3762211  -->
+Intune poskytuje protokolování integrované auditu, která sleduje události, jakmile jsou provedeny změny. Tato aktualizace zahrnuje nové funkce protokolování, včetně: 
+- Operační protokoly (preview), které ukazují na uživatele a zařízení, která zaregistrovaná, včetně úspěšných a neúspěšných pokusů o podrobnosti.
+- Protokoly auditu a provozní protokoly je možné odeslat k monitorování Azure, včetně účtů úložiště, služba event hubs a protokolu analytics. Tyto služby umožňují ukládat, použijte analýzy, jako jsou Splunk a QRadar a zobrazit vizualizaci dat protokolování.
+
+[Odeslat data protokolů do služby storage, služby event hubs, nebo se přihlaste analytics Intune](review-logs-using-azure-monitor.md) poskytuje další informace o této funkci.
 
 ### <a name="skip-more-setup-assistant-screens-on-an-ios-dep-device----2687509----"></a>Přeskočit další obrazovky Pomocníka s nastavením nastavení na zařízení s Iosem <!-- 2687509  -->
 Kromě obrazovky, které se aktuálně můžete přeskočit můžete nastavit zařízení DEP, přejděte na následující obrazovce v nastavením když se uživatel zaregistruje zařízení s Iosem: Zobrazení tón, ochrany osobních údajů, Android migrace, tlačítko Domů, iMessage & FaceTime, připojení, sledování migrace, vzhled, čas obrazovky, aktualizace softwaru, SIM instalace.

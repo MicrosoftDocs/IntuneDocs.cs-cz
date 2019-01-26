@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 01/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
-ms.openlocfilehash: 62c44768f17ecc82dc748eb4dfda74da421ee3b5
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: 91f338a768ef67106a9b65de759dd74da2902138
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387016"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072554"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -48,7 +48,6 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 - **Změny nastavení Wi-Fi**: Zvolte **bloku** zabránit uživatelům možnost měnit nastavení Wi-Fi vytvořených vlastníkem zařízení. Uživatelé můžou vytvářet své vlastní konfigurace Wi-Fi. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení Wi-Fi na zařízení.
 - **Konfigurace přístupového bodu Wi-Fi**: Zvolte **bloku** chcete zabránit uživatelům ve vytváření nebo změně konfigurace Wi-Fi. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení Wi-Fi na zařízení.
 - **Konfigurace technologie Bluetooth**: Zvolte **bloku** uživatelům zabránit v konfiguraci Bluetooth na zařízení. **Není nakonfigurováno** umožňuje používat Bluetooth na zařízení.
-- **Sdílení kontaktů přes Bluetooth**: Zvolte **bloku** zabránit přístupu k pracovním kontaktům z jiného zařízení, například systém automobilu, když zařízení s Androidem je spárováno pomocí Bluetooth. **Není nakonfigurováno** umožňuje přístup k pracovním kontaktům na jiném zařízení Bluetooth, které je spárováno na zařízení s Androidem.
 - **Sdílení internetového připojení přes a přístup k hotspotům**: Zvolte **bloku** chcete zabránit ve sdílení internetového připojení přes a přístup na přenosné aktivní. **Není nakonfigurováno** umožňuje sdílení internetového připojení přes a přístup na přenosné aktivní.
 - **Úložiště USB**: Zvolte **povolit** do úložiště USB na zařízení. **Není nakonfigurováno** brání v přístupu k úložiště USB.
 - **Přenos souborů USB**: Zvolte **bloku** aby se zabránilo přenosu souborů přes USB. **Není nakonfigurováno** umožňuje přenos souborů.

@@ -14,12 +14,12 @@ ms.assetid: c707e0c4-391a-4bad-9dfd-9a7799c48dd5
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: aa16e180b016ec142ecca5644b7f93fb088d15f5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: f814abc4d47517c17e24a188c7efb5da771bc328
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184299"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068267"
 ---
 # <a name="remotely-restart-devices-with-intune"></a>Vzdálené restartování zařízení přes Intune
 
@@ -32,7 +32,7 @@ Akce zařízení **Restartovat** způsobí, že se zvolené zařízení restartu
 
 - Windows – podporováno ve Windows 8.1 a novějších verzích
 - Windows Phone – podporováno ve Windows Phone 8.1 a novějších verzích
-- Zařízení s Androidem v beznabídkovém režimu – podporováno
+- Zařízení v celoobrazovkovém režimu Android – podporováno u Androidu 7.0 a novějších verzích
 - iOS – podporováno
 
     > [!Note]  
@@ -42,7 +42,7 @@ Akce zařízení **Restartovat** způsobí, že se zvolené zařízení restartu
 
 ## <a name="restart-a-device"></a>Restart zařízení
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Zařízení** > **Všechna zařízení**.
 4. V seznamu zařízení, která spravujete, zvolte zařízení, zvolte **Více** a pak zvolte akci se vzdáleným zařízením **Restartovat**.

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
-ms.openlocfilehash: 321d5958808d291e6bd6969cfffa66a6bc0194fe
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: a5a756cd3fd8b78893cee6a3c4629e49d6ac7c87
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831670"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072537"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>nastavení funkce zařízení s Iosem v Intune
 
@@ -29,7 +29,7 @@ Tento článek uvádí tato nastavení a popisuje, co dělá jednotlivých nasta
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení pro iOS](device-features-configure.md).
+[Vytvořit profil konfigurace zařízení pro iOS](device-features-configure.md#create-a-device-profile).
 
 ## <a name="airprint-settings"></a>Nastavení AirPrint
 
@@ -275,6 +275,20 @@ Toto nastavení řídí přístup k adrese URL prohlížeče na zařízeních s 
       Pokud nezadáte žádné adresy URL, pak koncoví uživatelé nemají přístup k žádným webům s výjimkou `microsoft.com`, `microsoft.net`, a `apple.com`. Tyto adresy URL jsou povolené automaticky službou Intune.
 
       Vyberte **OK** uložte provedené změny.
+
+## <a name="wallpaper-settings"></a>Nastavení tapety
+
+Přidání vlastní image ve formátu PNG, JPG nebo JPEG do zařízení s Iosem pod dohledem. Použijte například logo společnosti na zamykací obrazovce.
+
+- **Tapeta umístění zobrazení**: Vyberte umístění na zařízení zobrazit obrázek. Možnosti:
+  - **Není nakonfigurováno**: Vlastní image se přidá do zařízení. Zařízení využívá výchozí operační systém.
+  - **Zamykací obrazovka**: Přidá obrázek zamykací obrazovku.
+  - **Domovské obrazovky**: Přidá image na domovskou obrazovku.
+  - **Zamykací obrazovka a domovské obrazovce**: Používá stejnou bitovou kopii na zamykací obrazovce a domovské obrazovky.
+- **Obrázek tapety**: Nahrajte existující .png, .jpg nebo .jpeg image, kterou chcete použít. Ujistěte se, že velikost souboru je menší než 750 KB. Můžete také **odebrat** bitovou kopii, kterou jste přidali.
+
+> [!TIP]
+> Chcete-li zobrazit různé obrázky na zamykací obrazovce a na domovské obrazovce, vytvoření profilu s obrázek zamykací obrazovky. Vytvořte jiný profil s použitím image domovskou obrazovku. Přiřaďte oba profily do skupin uživatelů nebo zařízení s Iosem.
 
 ## <a name="bundle-ids-for-built-in-ios-apps"></a>ID sady prostředků pro integrované aplikace pro iOS
 

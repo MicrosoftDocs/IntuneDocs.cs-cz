@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 01/25/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 135aa120d8c0e441c59e9b9b3c5bb8ee6aa17229
-ms.sourcegitcommit: 8c1590db761cc411369cae26677f909d3a8ca297
+ms.openlocfilehash: ee9e72b727f5634721cf3a45c918aeee44e83309
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54239570"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072469"
 ---
-# <a name="assign-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem enterprise v Intune
+# <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání aplikací pro spravovaný obchod Google Play do podnikových zařízení s Androidem v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -106,6 +106,9 @@ Případně ale můžete obchod Google Play nastavit tak, aby automaticky schval
 4. Po publikování aplikace se přihlaste do [spravovaného obchodu Google Play](https://play.google.com/work) pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem Enterprise.
 5. Ověřte si, že se v uzlu **Aplikace** tohoto obchodu zobrazuje aplikace, kterou jste publikovali.  
     Synchronizace s Intune bude automaticky schválená.
+
+## <a name="delete-managed-google-play-apps"></a>Odstranění aplikace spravovaného obchodu Google Play 
+Pokud je to nezbytné, můžete odstranit spravované aplikace Google Play v Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
 
 ## <a name="next-steps"></a>Další postup
 

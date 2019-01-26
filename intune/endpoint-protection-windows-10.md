@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/26/2018
+ms.date: 01/23/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 5981b3dbb74209fbd4d7f0ab03adb5a35a41954b
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: d9dfa25c2528ea2f929c3db6714bc68fee013a7b
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203531"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072571"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -152,6 +152,9 @@ Podporováno v následujících edicích Windows 10:
 Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy datových jednotek. Tato nastavení určují, které úkoly šifrování jednotek nebo možnosti konfigurace může koncový uživatel upravit na všech typech datových jednotek.
 
 - **Upozornění pro další šifrování disku**: Vyberte **bloku** zakázat tato výzva s upozorněním, pokud jiná služba šifrování disku je v zařízení. **Nenakonfigurováno** (výchozí) zobrazení upozornění povolí.
+    - **Standardní uživatelé k povolení šifrování během připojení ke službě Azure AD povolit**: Pokud zvolíte **povolit**, standardní uživatelé/bez oprávnění správce můžete povolit šifrování nástrojem BitLocker, pokud uživatel je přihlášený. Toto nastavení platí jenom pro Azure Active Directory zařízení připojená k (přídavné jméno Azure). **Není nakonfigurováno** pouze správcům umožňuje povolit nástroj BitLocker šifrování na zařízení.
+      
+      Toto nastavení platí jenom pro Azure Active Directory zařízení připojená k (přídavné jméno Azure). Také vyžaduje, aby **upozornění pro další šifrování disku** nastavení **bloku**.
 - **Konfigurovat metody šifrování**: **Povolit** toto nastavení umožní konfiguraci algoritmů šifrování operačního systému, dat a vyměnitelných jednotek. **Nenakonfigurováno** (výchozí) znamená, že BitLocker používá jako výchozí metodu šifrování XTS-AES 128 bit nebo používá metodu šifrování určenou skriptem instalace.
   - **Šifrování pro operační systém jednotek**: Zvolte metodu šifrování pro jednotky s operačním systémem. Doporučujeme použít algoritmus XTS-AES.
   - **Šifrování pevných datových jednotek**: Zvolte metodu šifrování pro pevné (vestavěné) datové jednotky. Doporučujeme použít algoritmus XTS-AES.
@@ -301,7 +304,7 @@ Zablokujte odchozí připojení z libovolné aplikace na IP adresy a domény s n
 
 Pokud chcete používat ochranu před zneužitím, vytvořte soubor XML, který obsahuje nastavení zmírňování systém a aplikace, potřebujete. Existují dvě metody:
 
- 1. Prostředí PowerShell: Pomocí jedné nebo více rutin Get-ProcessMitigation, Set-ProcessMitigation a ConvertTo-ProcessMitigationPolicy Powershellu. Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.
+ 1. PowerShell: Pomocí jedné nebo více rutin Get-ProcessMitigation, Set-ProcessMitigation a ConvertTo-ProcessMitigationPolicy Powershellu. Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.
 
  2. Uživatelské rozhraní centra zabezpečení Windows Defender: Ve službě Windows Defender Security Center klikněte na ovládací prvek aplikace a prohlížeč a posuňte se dolů zobrazenou obrazovku na najdete ochranu Exploit Protection. Nejprve nakonfigurujte nastavení zmírňování na kartách Nastavení systému a Nastavení programů. Pak ve spodní části obrazovky najděte odkaz Exportovat nastavení a exportujte reprezentaci daného nastavení v jazyce XML.
 

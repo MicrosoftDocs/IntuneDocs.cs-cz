@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 064fa53341558ac18a228b56dca6d129cd58a3af
-ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
+ms.openlocfilehash: 91d85182ccb51968915511d6d1941a350e3a9695
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54899072"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55068284"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatická registrace zařízení s macOS pomocí programu registrace zařízení nebo Apple School Manageru
 
@@ -150,11 +150,7 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
     | <strong>FileVault</strong> | Umožní uživateli nastavit šifrování FileVault. |
     | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
     | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
-    | <strong>Android Migration</strong> | Umožnit uživateli pro migraci dat ze zařízení s Androidem. |
-    | <strong>Zobrazit tón</strong> | Umožnit uživateli zapnout tón zobrazení. |
-    | <strong>Ochrana osobních údajů</strong> | Zobrazte na obrazovce o ochraně osobních údajů pro uživatele. |
-    | <strong>iCloud Storage</strong> | Dát uživateli možnost používat úložiště iCloud. |
-
+    
    
 
 10. Zvolte **OK**.
