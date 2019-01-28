@@ -389,6 +389,11 @@ items:
             href: mtd-connector-enable.md
       - name: Ochrana ATP v programu Windows Defender
         href: advanced-threat-protection.md
+      - name: Základní nastavení zabezpečení
+        href: security-baselines.md
+        items:
+        - name: Monitorování základního nastavení
+          href: security-baselines-monitor.md
       - name: Ochrana koncového bodu
         href: endpoint-protection-configure.md
     - name: Řízení přístupu k síti
@@ -442,7 +447,7 @@ items:
           items:
           - name: Ruční přidání aplikace Portál společnosti
             href: store-apps-company-portal-app.md
-        - name: Aplikace s pracovním profilem Androidu
+        - name: Spravované aplikace Google Play
           href: apps-add-android-for-work.md
         - name: Aplikace Office 365 pro Windows 10
           href: apps-add-office365.md
@@ -569,6 +574,8 @@ items:
         href: troubleshoot-app-install.md
       - name: Protokoly auditu pro aktivity v Intune
         href: monitor-audit-logs.md
+      - name: Kontrola protokolů pomocí Azure Monitoru
+        href: review-logs-using-azure-monitor.md
       - name: Kontrola protokolů ochrany aplikace
         href: app-protection-policy-settings-log.md
       - name: Řešení potíží s e-mailovými profily
@@ -938,9 +945,9 @@ items:
       href: data-outside-protect.md
     - name: Zabránění únikům dat na nespravovaných zařízeních
       href: data-leak-prevention.md
-ms.openlocfilehash: 79bff18a23b6613fbc1e2522b6fd7c6c414ffef5
-ms.sourcegitcommit: a30d4b699df4bff17ef39d6c93b2a5c5432db5ae
+ms.openlocfilehash: 70240d3c6969ffe86d3b32b14b50b390020b10b0
+ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54899123"
+ms.lasthandoff: 01/26/2019
+ms.locfileid: "55072486"
