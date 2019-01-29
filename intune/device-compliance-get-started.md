@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/17/2018
+ms.date: 01/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,32 +14,28 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b6679f0b1d7392bc2db2e39b4c283b702dd21285
-ms.sourcegitcommit: 9739a9aab032ebb2c4b52ccfb454a9e0f78b2ee4
+ms.openlocfilehash: 806df8077045a4ad81cb7e221bd053059461a2fd
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54751225"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199400"
 ---
 # <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Požadavky na dodržování předpisů jsou v podstatě pravidla, která například vyžadují používání kódu PIN v zařízení nebo šifrování. Zásady dodržování předpisů zařízeními definují pravidla a nastavení, která jsou pro zařízení povinná, pokud má toto zařízení vyhovět zásadám. Mezi tato pravidla patří:
+Mnoho řešení pro správu (MDM) mobilních zařízení pomáhají chránit firemní data tím, že vyžaduje uživatelů a zařízení splnit určité požadavky. V Intune tato funkce se nazývá "zásady dodržování předpisů". Zásady dodržování předpisů definují pravidla a nastavení, které uživatelé a zařízení musí splnit, aby vyhovovalo předpisům. V kombinaci s podmíněným přístupem, správci můžou blokovat uživatelů a zařízení, která nesplňují předpisy. Například může vyžadovat správce služby Intune:
 
-- Používání hesla pro přístup k zařízení
+- Koncoví uživatelé používat hesla pro přístup k datům organizace na mobilních zařízeních
 
-- Šifrování
+- Zařízení není jailbreakem nebo rootem
 
-- Jestli je zařízení s jailbreakem nebo rootem
+- Verze minimální nebo maximální operačního systému v zařízení
 
-- Požadavek na minimální verzi operačního systému
+- Aby zařízení bylo na nebo pod úroveň hrozby
 
-- Maximální povolená verze operačního systému
-
-- Požadavek, aby zařízení bylo na určité úrovni Mobile Threat Defense nebo pod ní
-
-Zásady dodržování předpisů zařízeními můžete používat i k monitorování stavu dodržování předpisů u vašich zařízení.
+Zásady dodržování předpisů zařízením můžete použít také k monitorování stavu dodržování předpisů v zařízeních.
 
 > [!IMPORTANT]
 > Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
@@ -68,7 +64,8 @@ compliance issues on the device. You can also use this time to create your actio
 Remember that you need to implement conditional access policies in addition to compliance policies in order for access to company resources to be blocked.--->
 
 ## <a name="prerequisites"></a>Požadavky
-Pokud chcete používat zásady dodržování předpisů zařízeními, musíte splňovat následující podmínky:
+
+Chcete-li použít zásady dodržování předpisů zařízením, můžete:
 
 - Použití následujících předplatných:
 
@@ -84,15 +81,28 @@ Pokud chcete používat zásady dodržování předpisů zařízeními, musíte 
   - Windows Phone 8.1
   - Windows 10
 
-- Aby mohla zařízení oznamovat stavy dodržování předpisů, musejí být zaregistrovaná v Intune.
+- Registrace zařízení v Intune a zjistit stav dodržování předpisů
 
-- Jsou podporována zařízení zaregistrovaná na jednoho uživatele nebo bez primárního uživatele. Kontexty více uživatelů nejsou podporovány.
+- Registrace zařízení na jednoho uživatele nebo zaregistrovat bez primárního uživatele. Zařízení zaregistrovaná ve službě více uživatelů nejsou podporovány.
 
-## <a name="how-intune-device-compliance-policies-work-with-azure-ad"></a>Jak fungují zásady dodržování předpisů zařízeními v Intune s Azure AD
+## <a name="how-device-compliance-policies-work-with-azure-ad"></a>Jak fungují zásady dodržování předpisů pro zařízení s Azure AD
 
 Když je zařízení zaregistrované v Intune, spustí se proces registrace služby Azure AD a aktualizují se atributy zařízení ve službě Azure AD. Jednou z informací je stav dodržování předpisů zařízením. Tento stav dodržování předpisů zařízením používají zásady podmíněného přístupu k blokování nebo povolení přístupu k e-mailu a dalším podnikovým prostředkům.
 
 Téma věnované [procesu registrace Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction) poskytuje další informace.
+
+## <a name="refresh-cycle-times"></a>Aktualizovat doby cyklů
+
+Při kontrole dodržování předpisů, Intune používá stejný cyklus aktualizace jako konfigurační profily. Obecně platí časy jsou:
+
+- iOS: Každých 6 hodin
+- macOS: Každých 6 hodin
+- Android: Každých 8 hodin
+- Počítače s Windows 10 zaregistrované jako zařízení: Každých 8 hodin
+- Windows Phone: Každých 8 hodin
+- Windows 8.1: Každých 8 hodin
+
+Kontrola dodržování předpisů dochází častěji hned po registraci zařízení.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Přiřazení stavu V období odkladu
 
@@ -137,21 +147,21 @@ Dejme tomu, že k zařízení jsou přiřazené tři zásady dodržování před
 Zařízením, která vyhovují pravidlům zásad, můžete udělit přístup k e-mailu a dalším podnikovým prostředkům. Pokud zařízení pravidlům zásad nevyhovuje, nezíská přístup k podnikovým prostředkům. Tomu se říká podmíněný přístup.
 
 #### <a name="without-conditional-access"></a>Bez podmíněného přístupu
-Zásady dodržování předpisů zařízeními se dají používat také bez podmíněného přístupu. Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Můžete si například nechat nahlásit, kolik zařízení není šifrovaných nebo která zařízení mají jailbreak nebo root. Pokud ale tyto zásady použijete bez podmíněného přístupu, neexistuje žádné omezení přístupu k prostředkům společnosti.
+Zásady dodržování předpisů zařízeními se dají používat také bez podmíněného přístupu. Při nezávislém použití zásad dodržování předpisů se cílová zařízení vyhodnotí a nahlásí se jejich stav dodržování předpisů. Například můžete získat zprávu o tom, kolik zařízení není šifrovaných nebo která zařízení mají jailbreakem nebo rootem. Když používáte zásady dodržování předpisů bez podmíněného přístupu, nejsou k dispozici žádné omezení přístupu k prostředkům organizace.
 
 ## <a name="ways-to-deploy-device-compliance-policies"></a>Způsoby nasazení zásad dodržování předpisů zařízeními
 Zásady dodržování předpisů můžete nasadit uživatelům ve skupinách uživatelů nebo zařízením ve skupinách zařízení. Po nasazení zásady dodržování předpisů uživateli se u všech jeho zařízení kontroluje dodržování předpisů. Zařízení s Windows 10 verze 1803 a novějšími je doporučeno nasadit do skupin zařízení, *pokud* primární uživatel zařízení nezaregistroval. Použití skupin zařízení pomáhá v této situaci s vykazováním dodržování předpisů.
 
-Na všech zařízeních zaregistrovaných v Intune můžete vyhodnotit sadu integrovaných **nastavení zásad dodržování předpisů** (Azure Portal > Dodržování předpisů zařízením). Mezi ně patří:
+Sadu nastavení zásad dodržování předpisů integrované (**Intune** > **dodržování předpisů zařízením**) vyhodnoceno na všechna zařízení zaregistrovaná v Intune. Mezi ně patří:
 
 - **Označit zařízení žádné zásady dodržování předpisů, který je přiřazen jako**: Tato vlastnost má dvě hodnoty:
 
   - **Vyhovující předpisům**: Funkce zabezpečení je vypnuta.
   - **Nevyhovující předpisům** (výchozí): Funkce zabezpečení je zapnuta.
 
-  Pokud zařízení nemá přiřazeny žádné zásady dodržování předpisů, je považováno za nevyhovující předpisům. Ve výchozím nastavení jsou zařízení označena jako **Vyhovující předpisům**. Pokud používáte podmíněný přístup, doporučujeme změnit nastavení na **Nevyhovující předpisům**. Pokud koncový uživatel nevyhovuje předpisům, protože nejsou přiřazeny žádné zásady, na Portálu společnosti je uvedeno `No compliance policies have been assigned`.
+  Pokud zařízení nemá přiřazeny žádné zásady dodržování předpisů, je považováno za nevyhovující předpisům. Ve výchozím nastavení jsou zařízení označena jako **Nevyhovující předpisům**. Pokud používáte podmíněný přístup, doporučujeme změnit nastavení pro **nevyhovující předpisům**. Pokud koncový uživatel není kompatibilní, protože není přiřazená zásada, potom portál společnosti zobrazí `No compliance policies have been assigned`.
 
-- **Vylepšené zjišťování jailbreaků**: Když je povoleno, toto nastavení způsobí, že zařízení s Iosem k vrácení se změnami pomocí Intune častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Intune data o poloze uživatele neukládá.
+- **Vylepšené zjišťování jailbreaků**: Když je povoleno, toto nastavení způsobí, že zařízení s Iosem k Intune častěji. Pokud je povolena, používá tato vlastnost funkce zjišťování polohy zařízení a má vliv na výdrž baterie. Intune data o poloze uživatele neukládá.
 
   Povolení tohoto nastavení vyžaduje, aby zařízení:
   - povolila zjišťování polohy na úrovni operačního systému,

@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f81875afffa461e036bc319febc9a6141967c440
-ms.sourcegitcommit: 8e3a20b2ad59d3a6789ee81b9cbe6d2c711da11d
+ms.openlocfilehash: 171e994be67a24e351b242967c8af934272da356
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54380474"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105166"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-using-intune-and-windows-autopilot-preview"></a>Nasazení zařízení připojených k hybridní službě Azure AD pomocí Intune a Windows Autopilotu (Preview)
 Zařízení připojená k hybridní službě Azure Active Directory můžete nastavit pomocí Intune a Windows Autopilotu. Použijte k tomu následující postup.
@@ -106,7 +106,7 @@ Organizační jednotce, které se udělí právo k vytváření počítačů, mu
 
 ## <a name="install-the-intune-connector"></a>Instalace konektoru Intune
 
-Konektor Intune pro Active Directory je nutné nainstalovat do počítače s Windows Serverem 2016, který má přístup k internetu a službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Konektor doporučujeme nainstalovat na server, na kterém se neprovozují žádné jiné konektory Intune.
+Konektor Intune pro službu Active Directory musí být nainstalovaná na počítači se systémem Windows Server 2016 (nebo novější), s přístupem k Internetu a služby Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Konektor doporučujeme nainstalovat na server, na kterém se neprovozují žádné jiné konektory Intune.
 
 1. Ujistěte se, že máte nainstalovaný a nakonfigurovaný podle popisu v jazykové sady [konektor Intune (Preview) jazykové požadavky](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
 2. V [Intune](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Konektor Intune pro Active Directory (Preview)** > **Přidat konektor**. 
@@ -114,7 +114,7 @@ Konektor Intune pro Active Directory je nutné nainstalovat do počítače s Win
 4. Otevřete instalační soubor staženého konektoru a nainstalujte konektor (ODJConnectorBootstrapper.exe).
 5. Na konci instalace zvolte **Konfigurovat**.
 6. Zvolte **Přihlásit se**.
-7. Zadejte přihlašovací údaje uživatele s rolí globálního správce nebo správce Intune.
+7. Zadejte přihlašovací údaje uživatele s rolí globálního správce nebo správce Intune. Uživatelský účet musí mít přiřazenou licenci pro Intune.
 8. Přejděte na **Registrace zařízení** > **Registrace zařízení s Windows** > **Konektor Intune pro Active Directory (Preview)** a ověřte, že stav připojení je **Aktivní**.
 
  > [!NOTE]

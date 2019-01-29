@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 37d83b835b5b0f4705fe04985753779a2c79d1be
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 61cb1a3c9de10020381d62a2a7795d5ff728db22
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831666"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199417"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 a novější zařízení nastavení pro spuštění jako veřejný terminál v Intune
 
@@ -137,7 +137,7 @@ Když zvolíte beznabídkový režim s více aplikacemi, zadejte následující 
 
 - **Použití alternativní rozložení nabídky Start**: Zvolte **Ano** zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce start, včetně pořadí aplikace. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
 
-- **Hlavním panelu Windows**: Zvolit **zobrazit** nebo **skrýt** na hlavním panelu. Ve výchozím nastavení se hlavní panel nezobrazuje.
+- **Hlavním panelu Windows**: Zvolit **zobrazit** nebo **skrýt** na hlavním panelu. Ve výchozím nastavení se hlavní panel nezobrazuje. Ikony, jako je například na ikonu sítě Wi-Fi se zobrazí, ale nastavení nelze změnit koncovými uživateli.
 
 ## <a name="next-steps"></a>Další postup
 

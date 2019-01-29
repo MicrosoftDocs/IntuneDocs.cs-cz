@@ -16,23 +16,23 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 0366a4394f5046d72c7cf01d2848974d225597a6
-ms.sourcegitcommit: d757c907af6c3c1b20823ffa4fda3acbaa8ecd9f
+ms.openlocfilehash: 0eb12470c20efd8d455f8bb165455ae4266da956
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54444553"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146889"
 ---
 # <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem vyhrazené nebo plně spravovaná zařízení (Preview)
 
 Po nastavení vašeho [vyhrazená zařízení s Androidem](android-kiosk-enroll.md) nebo [plně spravovaná zařízení](android-fully-managed-enroll.md) v Intune, můžete tato zařízení zaregistrovat. Způsob registrace zařízení s Androidem závisí na operačním systému.
 
-| Způsob registrace | Minimální verze operačního systému Android pro vyhrazená zařízení. | Minimální verze operačního systému Android pro plně spravovaná zařízení |
-| ----- | ----- | ----- |
-| Bezkontaktní komunikace (NFC) | 5.1 | 6.0 |
-| Zadání tokenu | 6.0 | 6.0 |
-| Kód QR | 7.0 | 7.0 |
-| Zero Touch  | 8.0\* | 8.0\* |
+| Způsob registrace | Minimální verze operačního systému Android pro vyhrazené a plně spravovaná zařízení |
+| ----- | ----- |
+| Bezkontaktní komunikace (NFC) | 5.1 |
+| Zadání tokenu | 6.0 |
+| Kód QR | 7.0 |
+| Zero Touch  | 8.0\* |
 
 \* Na zúčastněných výrobci.
 

@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: b87e0d24c000e3083eaebeac1a4cf6026d495ccf
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.openlocfilehash: f01009a0cb35f4270bdb1e768ee781172c8bfa2f
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032091"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105183"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -32,7 +32,7 @@ Během nastavování zařízení pomocí Intune stránka stavu registrace se zob
 - Blokovaly používání, než se instalace dokončí.
 - Určovaly, co může uživatel udělat, pokud se instalace zařízení nezdaří.
 
-Můžete také nastavit pořadí jednotlivých profilů podle priority, abyste ošetřili konfliktní přiřazení profilů stejného uživatele nebo zařízení.
+Můžete také nastavit pořadí priorit pro každý profil, aby se zohlednily konfliktních přiřazení profilů na stejné zařízení nebo uživatele.
 
  
 ## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Zapnutí výchozí stránky stavu registrace pro všechny uživatele

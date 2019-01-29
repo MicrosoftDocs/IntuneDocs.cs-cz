@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 45c1d1f293454b32b97c8147f08809565714743a
-ms.sourcegitcommit: 911923e9fe0eed52b1c93e400f776956835e582f
+ms.openlocfilehash: d457ca413f3069e8528dc6f4951f834e3f1dac6a
+ms.sourcegitcommit: 2a1720184cec577684a64af85d0d731693d11d81
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54387090"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146906"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Nastavení Intune registrace androidu plně spravovaná zařízení (Preview)
 
@@ -38,7 +38,7 @@ Musíte mít Intune samostatný tenant plně spravovat Android spravovaná zař�
 
 Zařízení musí splňovat tyto požadavky jej lze spravovat jako plně spravovaná zařízení s Androidem:
 
-- Operační systém Android verze 6.0 a vyšší.
+- Verze operačního systému Android 5.1 a vyšší
 - Zařízení musí používat sestavení androidu, který má připojení Google Mobile Services (g). Zařízení musí mít dostupnou službu GMS a musí být schopna se k této službě připojit.
 
 Pokud jsou výše uvedené požadavky splněny, neexistuje žádné omezení na výrobce zařízení/výrobce OEM.

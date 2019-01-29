@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 83baf13b42cd67e682227d6310b7057bdbd6bf1e
-ms.sourcegitcommit: 874d9a00cc4666920069d54f99c6c2e687fa34a6
+ms.openlocfilehash: ae4691b21b9728a28f9cac0ae0af7fd42a8bdbde
+ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53324854"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55199434"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -41,7 +41,7 @@ Po registraci můžete [měnit nastavení vlastnictví](#change-device-ownership
 
 ## <a name="identify-corporate-owned-devices-with-imei-or-serial-number"></a>Identifikace zařízení ve vlastnictví firmy pomocí čísla IMEI nebo sériového čísla
 
-Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělovači (.csv) se seznamem čísel IMEI nebo sériových čísel. Intune pomocí těchto identifikátorů během registrace určuje, že zařízení je ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem, macOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
+Jako správce Intune můžete vytvořit a importovat soubor hodnot oddělených čárkami (.csv) obsahující seznam 14 číslic čísla IMEI nebo sériová čísla. Intune pomocí těchto identifikátorů během registrace určuje, že zařízení je ve vlastnictví firmy. Můžete deklarovat čísla IMEI všech podporovaných platforem. Je možné deklarovat pouze sériová čísla zařízení s iOSem, macOSem a Androidem. Každý kód IMEI nebo sériové číslo může mít v tomto seznamu uvedené podrobnosti pro účely správy.
 
 <!-- When you upload serial numbers for corporate-owned iOS devices, they must be paired with a corporate enrollment profile. Devices must then be enrolled using either Apple’s device enrollment program (DEP) or Apple Configurator to have them appear as corporate-owned. -->
 
@@ -49,7 +49,7 @@ Jako správce Intune můžete vytvořit a naimportovat textový soubor s oddělo
 [Přečtete si, jak zjistit sériové číslo zařízení s Androidem](https://support.google.com/store/answer/3333000).
 
 ## <a name="add-corporate-identifiers-by-using-a-csv-file"></a>Přidání podnikových identifikátorů pomocí souboru .csv
-Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. Do levého sloupce přidejte kód IMEI nebo sériové číslo a v pravém sloupci uveďte podrobnosti. V rámci jednoho souboru .csv můžete importovat pouze jeden typ identifikačního čísla: buď IMEI, nebo sériové číslo. Podrobnosti jsou omezené na 128 znaků a používají se jenom pro účely správy. Na zařízení se podrobnosti nezobrazují. Současný limit jednoho souboru CSV je 5 000 řádků.
+Pokud chcete vytvořit seznam, vytvořte seznam hodnot oddělených čárkami se dvěma sloupci (.csv) bez záhlaví. V levém sloupci a podrobnosti v pravém sloupci přidáte 14 číslic čísla IMEI nebo sériová čísla. V rámci jednoho souboru .csv můžete importovat pouze jeden typ identifikačního čísla: buď IMEI, nebo sériové číslo. Podrobnosti jsou omezené na 128 znaků a používají se jenom pro účely správy. Na zařízení se podrobnosti nezobrazují. Současný limit jednoho souboru CSV je 5 000 řádků.
 
 **Nahráním souboru .csv se sériovými čísly** – Vytvořte seznam oddělený čárkami (.csv), který bude mít dva sloupce, a nebude mít záhlaví. Soubor .csv může obsahovat maximálně 5000 zařízení, ale jeho velikost nesmí překročit 5 MB.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 95f41985f11803e6e1a474b38a2af6a891ddafcb
-ms.sourcegitcommit: bf1549eb59adc31ead8601e40253a7024b22853c
+ms.openlocfilehash: c615dd2dda680cd106fd099d180f57ce2a5ebfef
+ms.sourcegitcommit: 17f58d35a6bdff3e179662f3731fc74d39144470
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54067478"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55105217"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -52,7 +52,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Aplikace pro iOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace pro Windows Phone 8.1 Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows Phone 8.1** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
-| Aplikace s pracovním profilem Androidu | Aplikace pro Store  | Vyhledejte a schvalte aplikaci s pracovním profilem Androidu ze spravovaného obchodu Google Play.  |
+| Spravované aplikace Google Play | Aplikace pro Store  | Vyberte **spravovaný obchod Google Play** jako **typ aplikace**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace Office 365 pro Windows 10  | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **Windows 10** a pak vyberte aplikaci Office 365, kterou chcete nainstalovat.  |
 | Aplikace Office 365 pro macOS | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **macOS** a potom vyberte sadu aplikací Office 365. |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Android s příponou **.apk**.  |
@@ -119,7 +119,7 @@ Aplikace spravované přes Intune můžou také povolit ochranu aplikací bez nu
 ### <a name="understanding-licensed-apps"></a>Princip licencovaných aplikací
 Kromě pochopení webových aplikací, aplikací pro Store a obchodních aplikací byste měli také něco vědět o cíli aplikací programu Volume Purchase Program a licencovaných aplikací, jako jsou: 
 - **Apple Volume Purchasing Program for Business (iOS)**: IOS App Store umožňuje nakoupit více licencí pro aplikaci, kterou chcete spouštět ve vaší společnosti. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v článku [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu](vpp-apps-ios.md).
-- **Pracovní profil androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
+- **Pracovní profil androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Pomocí Intune a vyhledejte si aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
 - **Microsoft Store pro firmy (Windows 10)**: Microsoft Store pro firmy vám místo, kde můžete najít a zakoupit aplikace pro svou organizaci jednotlivě nebo hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 
     > [!NOTE]
