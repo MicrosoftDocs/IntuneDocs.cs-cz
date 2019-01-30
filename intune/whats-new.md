@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 21fde80ec80492957b686a66dcfe4db55894c38e
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.openlocfilehash: 2d27b37fe627b6b697bf102be4bd29427c2223c8
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199485"
+ms.locfileid: "55230184"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -52,7 +52,7 @@ Můžete potlačit oznámení informační zprávy zobrazující koncový uživa
 
 #### <a name="intune-app-protection-policies-ui-update----3251427----"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427  -->
 Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
-- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
+- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / **povolit** a **zakázat** / **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
 - Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
 
 Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
@@ -60,7 +60,7 @@ Výchozí nastavení a několik položek nastavení zůstávají stejné, ale ta
 #### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
 Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující: Povolit jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v iOS a Android nasadit moderní ověřování pro moderní ověřování Office 365 a hybridní místní účty použití `SAMAccountName` pro pole uživatelské jméno v e-mailového profilu, když je základní ověřování vybrané kontakty povolit ukládání konfigurace externím příjemcům Konfigurace upozornění než odešlete **zaměřuje doručené pošty** vyžadují biometrické údaje pro přístup k aplikaci Outlook pro iOS blokovat externí obrázky
 > [!NOTE]
-> Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-settings) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-settings).
+> Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-requirements) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-requirements).
 
 #### <a name="delete-android-enterprise-apps----1352553---"></a>Odstranění aplikací Androidu Enterprise <!-- 1352553 -->
 Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
@@ -113,7 +113,7 @@ Pokud chcete zobrazit aktuální seznam nastavení, přejděte na [nastavení za
 Platí pro: Vlastník zařízení s androidem Enterprise
 
 #### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
-Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější každý jsme změnili. Některé změny patří:  
+Popisky pro nastavení jsme změnili nd tlačítka pro Intune app protection srozumitelnější každý. Některé změny patří:  
 - Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
 - Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
 
@@ -400,7 +400,7 @@ Tato funkce se bude zavádět pro uživatelskou základnu v průběhu několika 
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="require-non-biometric-pin-after-a-specified-timeout----1506985---"></a>Po uplynutí časového limitu se vyžaduje nebiometrický kód PIN <!-- 1506985 -->
-Po uplynutí časového limitu určeného správcem Intune požaduje nebiometrický kód PIN. Služba tak lépe zabezpečí aplikace s podporou Správy mobilních aplikací (MAM), protože omezí použití biometrické identifikace pro přístup k firemním datům. Toto nastavení má vliv na uživatele, kteří pro přístup k aplikacím s podporou APP/MAM používají Touch ID (iOS), Face ID (iOS), Biometriku Androidu nebo jiné budoucí způsoby biometrického ověřování. S tímto nastavením mají správci Intune přesnější kontrolu nad přístupem uživatelů, takže mohou vyloučit případy, kdy zařízení s více otisky prstů nebo jinými biometrickými metodami přístupu může odhalit firemní data nesprávnému uživateli. Na portálu Azure Portal otevřete **Microsoft Intune**. Vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Přidat zásadu** > **Nastavení**. Najděte část **Přístup** s konkrétními nastaveními. Informace o nastavení přístupu najdete v [nastavení iOSu](app-protection-policy-settings-ios.md#access-settings) a [nastavení Androidu](app-protection-policy-settings-android.md#access-settings).
+Po uplynutí časového limitu určeného správcem Intune požaduje nebiometrický kód PIN. Služba tak lépe zabezpečí aplikace s podporou Správy mobilních aplikací (MAM), protože omezí použití biometrické identifikace pro přístup k firemním datům. Toto nastavení má vliv na uživatele, kteří pro přístup k aplikacím s podporou APP/MAM používají Touch ID (iOS), Face ID (iOS), Biometriku Androidu nebo jiné budoucí způsoby biometrického ověřování. S tímto nastavením mají správci Intune přesnější kontrolu nad přístupem uživatelů, takže mohou vyloučit případy, kdy zařízení s více otisky prstů nebo jinými biometrickými metodami přístupu může odhalit firemní data nesprávnému uživateli. Na portálu Azure Portal otevřete **Microsoft Intune**. Vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Přidat zásadu** > **Nastavení**. Najděte část **Přístup** s konkrétními nastaveními. Informace o nastavení přístupu najdete v [nastavení iOSu](app-protection-policy-settings-ios.md#access-requirements) a [nastavení Androidu](app-protection-policy-settings-android.md#access-requirements).
 
 #### <a name="intune-app-data-transfer-settings-on-ios-mdm-enrolled-devices----2244713---"></a>Nastavení Intune APP pro přenos dat na zařízeních s iOS zaregistrovaných v MDM <!-- 2244713 -->
 Ovládání nastavení Intune APP pro přenos dat na zařízeních s iOSem zaregistrovaných v MDM můžete oddělit od zadání identity registrovaného uživatele, která se označuje také jako hlavní název uživatele (UPN). Správci, kteří nepoužívají aplikaci IntuneMAMUPN, nezaznamenají změnu chování. Pokud je tato funkce k dispozici, musí správci, kteří k řízení chování při přenosech dat na registrovaných zařízeních používají Intune MAMUPN, zkontrolovat nové nastavení a podle potřeby aktualizovat nastavení APP.

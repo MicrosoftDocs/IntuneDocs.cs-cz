@@ -2,24 +2,24 @@
 title: Používání certifikátů SCEP s Microsoft Intune – Azure | Microsoft Docs
 description: Pokud chcete v Microsoft Intune používat certifikáty SCEP, nakonfigurujte místní doménu AD, vytvořte certifikační autoritu, nastavte server NDES a nainstalujte Intune Certificate Connector. Potom vytvořte profil certifikátu SCEP a přiřaďte ho ke skupinám. Podívejte se také na ID různých událostí a jejich popisy a na diagnostické kódy služby konektoru Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 1/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
-ms.reviewer: kmyrup
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ee61063a36a486a0840446f82834bc37cc96bfc0
-ms.sourcegitcommit: a843bd081e9331838ade05a3c05b02d60b6bec4c
+ms.openlocfilehash: f8b4d1aded0198dfc3dcccf6bdeda30bb54ee651
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597371"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230150"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -67,7 +67,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 |**Šablona certifikátu**|Tuto šablonu nakonfigurujte na své vydávající certifikační autoritě.|
 |**Certifikát pro ověřování klientů**|Tento certifikát vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte na server NDES.|
 |**Ověřovací certifikát serverů**|Tento certifikát SSL vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte a připojte ve službě IIS na serveru NDES. Pokud tento certifikát obsahuje sadu použití klíče pro ověřování klienta a serveru (**rozšířené použití klíče**), můžete použít stejný certifikát.|
-|**Certifikát důvěryhodné kořenové certifikační autority**|Exportujte tento certifikát jako soubor **.cer** z kořenové certifikační autority nebo jakéhokoli zařízení, které kořenové certifikační agentuře důvěřuje. Pak přiřaďte ji pro uživatele, zařízení nebo pomocí profilu certifikátu důvěryhodné certifikační Autority.<br /><b>Poznámka:<b />při přiřazení profilu certifikátu SCEP, je potřeba přiřadit profil důvěryhodného certifikátu kořenové odkazuje ve vašem profilu certifikátu SCEP pro stejnou skupinu uživatelů nebo zařízení.<br /><br />Použijete jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružíte ho ke každému profilu důvěryhodného kořenového certifikátu, který vytvoříte.<br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
+|**Certifikát důvěryhodné kořenové certifikační autority**|Exportujte tento certifikát jako soubor **.cer** z kořenové certifikační autority nebo jakéhokoli zařízení, které kořenové certifikační agentuře důvěřuje. Pak přiřaďte ji uživatelé, zařízení nebo pomocí profilu certifikátu důvěryhodné certifikační Autority.<br /><b>Poznámka:<b />při přiřazení profilu certifikátu SCEP, je potřeba přiřadit profil důvěryhodného certifikátu kořenové odkazuje ve vašem profilu certifikátu SCEP pro stejnou skupinu uživatelů nebo zařízení.<br /><br />Použijete jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružíte ho ke každému profilu důvěryhodného kořenového certifikátu, který vytvoříte.<br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
 
 ### <a name="accounts"></a>Účty
 
@@ -223,7 +223,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Umístění                        |      Hodnota      | Typ  |      Data       |
+   |                        Umístění                        |      Hodnota      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -382,15 +382,15 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         - **Sériové číslo**
         - **Vlastní**: Když vyberete tuto možnost **vlastní** se navíc zobrazí textové pole. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-            - **CN = {{UserName}}**: Hlavní uživatelské jméno uživatele, jako například janedoe@contoso.com
-            - **CN = {{AAD_Device_ID}}**: ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
-            - **CN = {{SERIALNUMBER}}**: Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
-            - **CN = {{IMEINumber}}**: Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu
-            - **CN = {{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN={{UserName}}**: Hlavní uživatelské jméno uživatele, jako například janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
+            - **CN={{SERIALNUMBER}}**: Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
+            - **CN={{IMEINumber}}**: Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu
+            - **CN={{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
-            - **CN = {{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD connect na atribut s názvem `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
+            - **CN={{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD connect na atribut s názvem `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
 
                 Pokud chcete použít proměnnou `{{onPremisesSamAccountName}}`, nezapomeňte synchronizovat atribut uživatele `onPremisesSamAccountName` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
@@ -560,5 +560,6 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 
 ## <a name="next-steps"></a>Další postup
 
-- [Použití certifikátů SCEP](certficates-pfx-configure.md) nebo [vydání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md)
-- [Přidání certifikační autority třetí strany pro používání SCEP v Intune](certificate-authority-add-scep-overview.md)
+- [Používání certifikátů PKCS](certficates-pfx-configure.md), nebo [vydávání certifikátů PKCS od správce infrastruktury veřejných KLÍČŮ Symantec webové služby](certificates-symantec-configure.md)
+- [Přidat certifikační Autoritu 3. stran SCEP pomocí Intune](certificate-authority-add-scep-overview.md)
+- Další pomoc [nasazení profilu certifikátu SCEP pro odstraňování potíží v Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) průvodce.

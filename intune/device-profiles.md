@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: bc28bca31c43140a7bca528655825bab60c53be1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: cf2bfbc992d4577e345b73f07ec465990feac317
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203514"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229980"
 ---
 # <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -123,7 +123,7 @@ Tato funkce podporuje:
 - Android enterprise
 - iOS
 - macOS
-- Windows 10
+- Windows 10 a novější
 - Windows 10 Team
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
@@ -174,7 +174,7 @@ Tato funkce podporuje:
 - Android
 - iOS
 - Windows Phone 8.1
-- Windows 10
+- Windows 10 a novější
 
 ## <a name="vpn"></a>Síť VPN
 
@@ -189,7 +189,7 @@ Tato funkce podporuje:
 - macOS
 - Windows Phone 8.1
 - Windows 8.1
-- Windows 10
+- Windows 10 a novější
 
 ## <a name="wi-fi"></a>Wi-Fi
 
@@ -201,6 +201,7 @@ Tato funkce podporuje:
 - iOS
 - macOS
 - Windows 8.1 (pouze import)
+- Windows 10 a novější
 
 ## <a name="esim-cellular---public-preview"></a>Mobilní profily eSIM ve verzi Public Preview
 
@@ -241,7 +242,7 @@ Tato funkce podporuje:
 - iOS
 - Windows Phone 8.1
 - Windows 8.1
-- Windows 10
+- Windows 10 a novější
 
 ## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
 
@@ -251,7 +252,7 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-## <a name="shared-multi-user-device"></a>Sdílené zařízení více uživatelů
+## <a name="shared-multi-user-device"></a>Sdílené zařízení s více uživateli
 
 [Windows 10](shared-user-device-settings-windows.md) a [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) zahrnuje nastavení pro správu zařízení s více uživateli, označované také jako sdílená zařízení nebo sdílené počítače. Když se uživatel přihlásí k zařízení, zvolíte-li uživatel může změnit možnosti Přejít do režimu spánku nebo uložit soubory v zařízení. Například můžete vytvořit zásadu, která odstraní neaktivní přihlašovacích údajů ze zařízení HoloLens Windows pro úsporu místa.
 

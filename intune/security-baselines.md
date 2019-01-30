@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: d78adf8e7d6d2ce05951171e6248dcc8c389945d
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: afc5faff7ea06bca07c06aadb887aa199739c6c0
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55071228"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229921"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Vytvoření standardních hodnot zabezpečení Windows 10 v Intune
 
@@ -30,7 +30,7 @@ Tato funkce platí pro:
 - Windows 10 verze 1809 a novější
 
 > [!NOTE]
-> Směrné plány zabezpečení je ve verzi preview a nepodporuje Microsoft doporučujeme použití profilů v produkčním prostředí, jako směrných plánů může změnit v průběhu verze preview.
+> Směrné plány zabezpečení je ve verzi preview a nepodporuje Microsoft doporučujeme použití profilů v produkčním prostředí, jako směrných plánů může změnit v průběhu verze preview. Pokud jsou obecně dostupné základní nastavení zabezpečení, nebude stávající profily převést na nejnovější podporované profily.
 
 Cílem pomocí standardních hodnot zabezpečení je poskytnout začátku do konce zabezpečené pracovní postupy při práci s Microsoft 365. Mezi výhody patří:
 

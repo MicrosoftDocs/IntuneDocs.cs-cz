@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 58d0cbbd503697575cd63e66fff80bd91e742e5e
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 8e223301b15a408c5f5a444a1904fca9826929ac
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831442"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55229895"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -37,7 +37,7 @@ Použití zásad ochrany aplikací v IOS **Správa Open in** funkce k ochraně f
 
 -   **Zařízení patřící zaměstnancům, nejsou spravována žádným řešením MDM:** Můžete nastavit ochranu aplikace nastavení zásad **povolit aplikaci přenos dat jenom aplikace spravované podle zásad**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
 
--   **Zařízení spravovaná pomocí Intune:** Pro zařízení zaregistrovaná v Intune přenos dat mezi aplikacemi se zásadami ochrany aplikací a další spravované aplikace pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection-settings).   
+-   **Zařízení spravovaná pomocí Intune:** Pro zařízení zaregistrovaná v Intune přenos dat mezi aplikacemi se zásadami ochrany aplikací a další spravované aplikace pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection).   
 
 -   **Zařízení spravovaná řešením MDM třetí strany:** Můžete omezit přenosy dat jenom do spravovaných aplikací s použitím iOS **Správa Open in** funkce.
 Pokud chcete mít jistotu, že aplikace nasazené pomocí řešení MDM jiného výrobce byly také přidružené k pomocí zásad ochrany aplikací Intune, konfigurace nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [konfigurace nastavení hlavního názvu uživatele (UPN)](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Při nasazení aplikace pomocí nastavení hlavního názvu uživatele (UPN), použít zásady ochrany aplikací pro aplikaci, jakmile se uživatel přihlásí pomocí svého pracovního účtu.

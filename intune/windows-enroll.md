@@ -16,12 +16,12 @@ ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3c100ef3e598bf377f0464bfba161d4ad689ba98
-ms.sourcegitcommit: 9a1924ba2372904eb4a8a1894973e6f2be84129d
+ms.openlocfilehash: bab1656ec141b26cc3e9cb4195da7c1c24e401a1
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626032"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230167"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -82,6 +82,12 @@ Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
+
+## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Další koncové body jsou podporované, ale nedoporučuje se
+EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifikovaný název domény pro zápis, ale existují dva další koncové body, které se používají zákazníci v minulosti a jsou podporovány. EnterpriseEnrollment.manage.microsoft.com (bez -s) a manage.microsoft.com oba fungují jako cíl pro automatické zjišťování serveru, ale uživatel se musejí dotýkat OK na potvrzovací zpráva. Pokud přejdete na EnterpriseEnrollment-s.manage.microsoft.com, uživatel nebude mít k tomu jedná se o doporučené konfiguraci dalšího kroku
+
+## <a name="alternate-methods-of-redirection-are-not-supported"></a>Nejsou podporovány alternativní metody pro přesměrování
+Pomocí jiné metody než konfigurace CNAME se nepodporuje. Například použití proxy serveru pro přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc buď enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc se nepodporuje.
 
 **Krok 2: Ověření CNAME** (volitelné)<br>
 1. V [Intune na webu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Ověření CNAME**.
