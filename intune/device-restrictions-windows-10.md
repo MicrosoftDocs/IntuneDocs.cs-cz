@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: f2b75eb5a87dbfd7a17aee83f173d3d472920428
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
+ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203633"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55230116"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
 Tento článek uvádí a popisuje všechny různých nastaveních, pomocí kterých můžete řídit na Windows 10 a novější zařízení. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, přizpůsobení zamykací obrazovka, použijte program Windows Defender a další.
 
-Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené na zařízení s Windows 10.
+Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené na zařízení s Windows 10.508
 
 > [!Note]
 > Některé možnosti nejsou v některých verzích Windows dostupné.
@@ -89,7 +89,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
   - **Systém**: Blokuje přístup k systémové oblasti v aplikaci nastavení.
     - **Změny nastavení napájení a režimu spánku (jenom desktopové verze)**: Zabrání koncovému uživateli možnost měnit nastavení napájení a režimu spánku na zařízení.
   - **zařízení**: Zablokuje přístup k oblasti zařízení v aplikaci nastavení.
-  - **Síť a Internet**: Zablokuje přístup k oblasti sítě a Internetu v aplikaci nastavení.
+  - **Network Internet**: Zablokuje přístup k oblasti sítě a Internetu v aplikaci nastavení.
   - **Přizpůsobení**: Zablokuje přístup k oblasti přizpůsobení v aplikaci nastavení.
   - **Účty**: Blokuje přístup k oblasti účtů v aplikaci nastavení.
   - **Čas a jazyk**: Zablokuje přístup k oblasti času a jazyka v aplikaci nastavení.
@@ -117,7 +117,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
   - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
 - **Ruční instalace kořenového certifikátu (jenom mobilní verze)**: Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 
-- **Fotoaparát**: Povolí nebo zablokuje použití fotoaparátu v zařízení.
+- **Camera**: Povolí nebo zablokuje použití fotoaparátu v zařízení.
 - **Synchronizace souboru Onedrivu**: Zablokuje zařízení možnost synchronizovat soubory na OneDrive.
 - **Vyměnitelné úložiště**: Určuje, jestli se zařízení můžete použít zařízení externího úložiště, jako jsou SD karty.
 - **Informace o zeměpisné poloze**: Určuje, jestli zařízení může používat informace služeb určování polohy.
@@ -179,7 +179,7 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
 
   - **identifikátor**: Zadejte plně kvalifikovanou cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
 
-- **Hlavní panel**: Zvolit **povolit** (Zobrazit) na hlavním panelu, nebo je Uchovávejte **Nenakonfigurováno** (skryté) na veřejném terminálu.
+- **Taskbar**: Zvolit **povolit** (Zobrazit) na hlavním panelu, nebo je Uchovávejte **Nenakonfigurováno** (skryté) na veřejném terminálu.
 
 - **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
 
@@ -328,7 +328,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Aplikace na pozadí**: Definujte, jestli tato aplikace může běžet na pozadí.
 - **Kalendář**: Definujte, jestli tato aplikace může přístup ke kalendáři.
 - **Historie volání**: Definujte, jestli tato aplikace může mít přístup k historii volání.
-- **Fotoaparát**: Definujte, jestli tato aplikace neměly přístup k fotoaparátu.
+- **Camera**: Definujte, jestli tato aplikace neměly přístup k fotoaparátu.
 - **Kontakty**: Definujte, jestli tato aplikace může mít přístup ke kontaktům.
 - **e-mailu**: Definujte, jestli tato aplikace může přistupovat k a odeslání e-mailu.
 - **Umístění**: Definujte, jestli tato aplikace může přistupovat k informacím o poloze.
@@ -368,7 +368,7 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 - **Aplikace na pozadí**: Definujte, jestli tato aplikace může běžet na pozadí.
 - **Kalendář**: Definujte, jestli tato aplikace může přístup ke kalendáři.
 - **Historie volání**: Definujte, jestli tato aplikace může mít přístup k historii volání.
-- **Fotoaparát**: Definujte, jestli tato aplikace neměly přístup k fotoaparátu.
+- **Camera**: Definujte, jestli tato aplikace neměly přístup k fotoaparátu.
 - **Kontakty**: Definujte, jestli tato aplikace může mít přístup ke kontaktům.
 - **e-mailu**: Definujte, jestli tato aplikace může přistupovat k a odeslání e-mailu.
 - **Umístění**: Definujte, jestli tato aplikace může přistupovat k informacím o poloze.
@@ -420,7 +420,7 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 
 - **Rozložení nabídky Start**: Přizpůsobení nabídky start na desktopových zařízeních, můžete nahrát soubor XML, který obsahuje vaše vlastní nastavení, včetně pořadí, ve kterém jsou uvedené aplikace a další. Uživatelé nemohou měnit rozložení nabídky Start, které zadáte.
 - **Připnout weby na dlaždice do nabídky Start**: Importovat Image z Microsoft Edge, které se zobrazují jako odkazy v nabídce Windows Start pro desktopové zařízení.
-- **Odepínání aplikací z hlavního panelu**: Zvolte **bloku** zastavit uživateli v odepínání aplikací z nabídky Start.
+- **Odepínání aplikací z hlavního panelu**: Zvolte **bloku** zastavit uživateli v odepínání aplikací z hlavního panelu.
 - **Rychlé přepínání uživatelů**: Zvolte **bloku** zabránit přepínání mezi uživatele, kteří jsou přihlášení současně bez odhlašování.
 - **Nejpoužívanější aplikace**: Zvolte **bloku** skrýt nejpoužívanější aplikace v seznamu zobrazuje v nabídce start. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
 - **Naposledy přidané aplikace**: Zvolte **bloku** skrýt naposledy přidané aplikace zobrazuje v nabídce start. Zároveň se zakáže odpovídající přepínač v aplikaci Nastavení.
@@ -503,8 +503,8 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 ### <a name="windows-defender-antivirus-exclusions"></a>Výjimky antivirové ochrany v programu Windows Defender
 
 - **Soubory a složky, které chcete vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat soubory a složky, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
-- **Vyloučit z kontrol a ochrany v reálném čase přípony souborů**: Umožňuje do seznamu vyloučení přidat přípony souborů, například jpg nebo **txt**. Soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
-- **Procesy, které chcete vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat procesy typu .exe, **.com** nebo **.scr**. Tyto procesy nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Vyloučit z kontrol a ochrany v reálném čase přípony souborů**: Umožňuje do seznamu vyloučení přidat přípony souborů, například **jpg** nebo **txt**. Soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
+- **Procesy, které chcete vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 
 ## <a name="next-steps"></a>Další postup
 
