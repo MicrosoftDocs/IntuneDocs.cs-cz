@@ -2,8 +2,8 @@
 title: Použití privátních a veřejných klíčů certifikátů v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Přidejte nebo vytvořte Public Key Cryptography Standards (PKCS) certifikáty pomocí Microsoft Intune, včetně postupu jak vyexportovat kořenový certifikát, nakonfigurujte šablonu certifikátu, stáhnout a nainstalovat Microsoft Intune Certificate Connector (NDES), vytvořit Konfigurace zařízení profil, vytvořte profil certifikátu PKCS v Azure a vaší certifikační autority.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 12/10/2018
 ms.topic: article
@@ -11,16 +11,16 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: lacranda
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 6a617f56e688d8dd6e9bca8e964e075865f05be1
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: f825e66a4668a007dc364e4c42b18ca7c2736016
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203616"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303482"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -82,7 +82,7 @@ K ověření pomocí sítě VPN, WiFi nebo jiných prostředků, kořenový nebo
 3. Vyhledejte šablonu certifikátu **Uživatel**, klikněte pravým tlačítkem myši a zvolte **Duplikovat šablonu**. Otevřou se **Vlastnosti nové šablony**.
 
     > [!NOTE]
-    > K podepisování a šifrování e-mailů pomocí S/MIME používá mnoho správců samostatné certifikáty pro podepisování a šifrování. Pokud používáte službu Microsoft Active Directory Certificate Services, můžete pro podpisové certifikáty e-mailu S/MIME použít šablonu **Pouze podpis serveru Exchange** a pro šifrovací certifikáty S/MIME můžete použít šablonu **Uživatel serveru Exchange**.  Pokud používáte externí certifikační autoritu, doporučujeme vám zkontrolovat jejich pokyny pro nastavení šablon pro podepisování a šifrování.
+    > K podepisování a šifrování e-mailů pomocí S/MIME používá mnoho správců samostatné certifikáty pro podepisování a šifrování. Pokud používáte službu Microsoft Active Directory Certificate Services, můžete pro podpisové certifikáty e-mailu S/MIME použít šablonu **Pouze podpis serveru Exchange** a pro šifrovací certifikáty S/MIME můžete použít šablonu **Uživatel serveru Exchange**.  Pokud používáte 3. stran certifikační autority, doporučuje se zkontrolujte jejich pokyny k nastavení šablony Podepisování a šifrování.
 
 4. Na kartě **Kompatibilita**:
 
@@ -136,6 +136,7 @@ K ověření pomocí sítě VPN, WiFi nebo jiných prostředků, kořenový nebo
 6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)**.
 7. **Použít** > **Zavřít**
 8. Přejděte zpět na portál Azure Portal (**Intune** > **Konfigurace zařízení** > **Certifikační autorita**). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
+9. Pokud máte webový proxy server v síťovém prostředí, můžete potřebovat další konfigurace, které umožňují fungování konektoru. Další informace najdete v tématu [práce s existující místní proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) v dokumentaci k Azure Active Directory.
 
 > [!NOTE]
 > Microsoft Intune Certificate Connector podporuje také protokol TLS 1.2. Pokud server s nainstalovaným konektorem Microsoft Intune Certificate Connector podporuje TLS 1.2, použije se TLS 1.2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.

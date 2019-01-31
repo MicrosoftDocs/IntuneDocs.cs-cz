@@ -2,10 +2,10 @@
 title: PIN kód používáte k přihlášení na zařízení s Windows 10 pomocí Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Použití Windows Hello pro firmy umožňuje uživatelům přihlašovat do zařízení pomocí kódu PIN, otisku prstu a další. Vytvoření profilu konfigurace ochrany identit v zařízení s Intune pro Windows 10 s těmito nastaveními a přiřaďte profil ke skupinám uživatelů a skupin zařízení.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 843806681fcee4ddec175207c2c49d6db95e0f0d
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: c6ca040c91437a35d12626f54b8385311d6631eb
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831376"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290651"
 ---
 # <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Použití Windows Hello pro firmy na zařízeních s Windows 10 pomocí Microsoft Intune
 
@@ -60,7 +60,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 
 4. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
-Profil se vytvoří a zobrazí v seznamu profilů. Dále [přiřadit](device-profile-assign.md) tento profil ke skupinám.
+Profil se vytvoří a zobrazí v seznamu profilů. Dále [přiřadit](device-profile-assign.md) tento profil ke skupinám uživatelů a zařízení podle svých potřeb.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

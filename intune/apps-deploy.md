@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 01/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bc31c793722f7073281c82da1fe4389fc214457b
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.openlocfilehash: 9258bf1847e83087404967c0ded50481da3a8dff
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734268"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290736"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -51,7 +51,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 >
 > Pokud chtějí uživatelé získat aktualizace aplikací na zařízeních, která nejsou zaregistrovaná v Intune, musí přejít na Portál společnosti organizace a aktualizace aplikací nainstalovat ručně.
 
-## <a name="to-assign-an-app"></a>Přiřazení aplikace
+## <a name="assign-an-app"></a>Přiřazení aplikace
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
@@ -62,7 +62,7 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
 8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
    - **K dispozici zaregistrovaným zařízením**: Aplikaci můžete přiřadíte do skupin uživatelů, kteří můžou aplikaci nainstalovat z aplikace portál společnosti nebo webu.
-   - **K dispozici s registrací i bez**: Přiřazení této aplikace do skupiny uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Aplikace ze spravovaného obchodu Google Play tuto možnost nepodporují. Uživatelé musí mít přiřazenou licenci Intune najdete v článku [licence Intune](licenses.md).
+   - **K dispozici s registrací i bez**: Přiřazení této aplikace do skupiny uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Uživatelé musí mít přiřazenou licenci Intune najdete v článku [licence Intune](licenses.md).
    - **Vyžaduje**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy může mít dalších zobrazených výzev pro koncového uživatele k potvrzení před zahájením instalace aplikace.
    - **Odinstalujte**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune předchozí instalaci aplikace na zařízení prostřednictvím "Dostupné pro zaregistrovaná zařízení" nebo "Povinné" přiřazení pomocí stejného nasazení. Webové odkazy, nelze odebrat po nasazení.
 
@@ -122,6 +122,9 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 > [!NOTE]
 > Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
 > Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.
+
+## <a name="android-enterprise-app-we-app-deployment"></a>Aplikace pro Android Enterprise-jsme nasazení aplikace
+Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete nyní použít spravovaný obchod Google Play pro nasazení aplikací pro store a obchodních aplikací pro uživatele. Konkrétně můžete poskytnout koncovým uživatelům aplikace katalogu a instalace prostředí, které už vyžaduje, aby koncoví uživatelé zmírnit stav zabezpečení svých zařízeních tím, že instalace z neznámých zdrojů. Kromě toho tento scénář nasazení bude poskytovat Vylepšené uživatelské prostředí. Postup přiřazení aplikace najdete v tématu [přiřadit aplikaci](apps-deploy.md#assign-an-app).
 
 ## <a name="next-steps"></a>Další postup
 

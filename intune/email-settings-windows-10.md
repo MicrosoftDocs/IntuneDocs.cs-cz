@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 6/20/2018
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,34 +13,34 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 849e3feed23b46585f9b737cb0ee91ecdf47ecae
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: bf9581fe81aea3d2671da0adb2d37bbc203875c8
+ms.sourcegitcommit: 4bd992da609b8bcc85edc2d64fe8128546aa4617
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186133"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55303527"
 ---
 # <a name="email-profile-settings-for-devices-running-windows-10---intune"></a>Nastavení e-mailového profilu pro zařízení s Windows 10 – Intune
 
-Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s Windows 10.
+E-mailového profilu můžete nakonfigurovat e-mailové aplikace na zařízení s Windows 10.
 
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru.
-- **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
-- **Atribut uživatelského jména z AAD**: Toto jméno je atribut, který Intune získá od služby Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá jméno, například `user1` nebo `user1@contoso.com`.
-  - **Primární adresa SMTP**: Získá jméno ve formátu e-mailové adresy, například `user1@contoso.com`.
-  - **Název účtu SAM**: Vyžaduje doménu, například `domain\user1`.
+- **Název účtu**: Zadejte zobrazovaný název e-mailový účet. Tento název se zobrazuje uživatelům na jejich zařízeních.
+- **Atribut uživatelského jména z AAD**: Tento název je atribut, který Intune získá z Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+  - **Hlavní název uživatele**: Získá název, jako například `user1` nebo `user1@contoso.com`
+  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, jako například `user1@contoso.com`
+  - **sAM název účtu**: Vyžaduje domény, jako například `domain\user1`.
 
     Dále zadejte:  
-    - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **Vlastní**.
+    - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **vlastní**.
 
       Pokud se rozhodnete získat atributy ze služby **AAD**, zadejte:
-      - **Atribut názvu domény uživatele z AAD**: Zvolte, jestli se má získat atribut **Úplný název domény** nebo **Název NetBIOS** uživatele.
+      - **Atribut názvu domény uživatele z AAD**: Zvolte zobrazíte **úplným názvem domény** nebo **název pro rozhraní NetBIOS** atribut uživatele
 
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Vlastní název domény, který se má použít**: Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo `contoso`.
+      - **Název vlastní domény pro použití**: Zadejte hodnotu, která Intune používá pro název domény, jako například `contoso.com` nebo `contoso`
 
-- **Atribut e-mailové adresy z AAD**: Zvolte, jak se generuje e-mailová adresa uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
+- **Atribut e-mailové adresy z AAD**: Vyberte způsob generování e-mailovou adresu uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchange použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
 
 ## <a name="security-settings"></a>Nastavení zabezpečení
 
@@ -48,12 +48,12 @@ Pomocí nastavení e-mailového profilu můžete konfigurovat zařízení s Wind
 
 ## <a name="synchronization-settings"></a>Nastavení synchronizace
 
-- **Počet e-mailů k synchronizaci**: Zvolte počet dní, za které se mají e-maily synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
-- **Plán synchronizace**: Vyberte pro zařízení plán synchronizace dat z Exchange serveru. Můžete také vybrat **Při doručení zprávy**, kdy se data budou synchronizovat při doručení, nebo **Ručně**, kdy musí synchronizaci zahájit uživatel zařízení.
+- **Počet e-mailů k synchronizaci**: Zvolte počet dní e-mailu, který chcete synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
+- **Plán synchronizace**: Vyberte plán, zařízení, synchronizovat data z Exchange serveru, můžete také vybrat **při doručování zpráv**, který synchronizuje data ihned po doručení, nebo **ruční**, kde uživatel zařízení musel synchronizaci zahájit.
 
 ## <a name="content-sync-settings"></a>Nastavení synchronizace obsahu
 
-- **Typ obsahu k synchronizaci**: Vyberte typy obsahu, které se mají na zařízeních synchronizovat:
+- **Typ obsahu k synchronizaci**: Vyberte typy obsahu, které chcete na zařízeních synchronizovat:
   - **Kontakty**
   - **Kalendář**
   - **Úkoly**

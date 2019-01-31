@@ -16,12 +16,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7a54a72afb6052ed11566c2d2ada596ebde2159b
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.openlocfilehash: 5ffd2dca10db3df6abdcd5fa9603f1f58a37a078
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112404"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290532"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -47,7 +47,7 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení licencí uživatelům si uživatelé můžou zaregistrovat svoje zařízení takto:
 - přechodem na [web Portál společnosti](https://portal.manage.microsoft.com) nebo
 - stažením aplikace Portál společnosti.
-Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Můžete také odeslat je odkaz na postup online registrace: [Registrace zařízení s macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
@@ -56,8 +56,8 @@ Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
 ## <a name="company-owned-macos-devices"></a>Zařízení s macOS ve vlastnictví společnosti
 U organizací, které svým uživatelům zařízení pořizují, Intune podporuje následující způsoby registrace zařízení s macOS ve vlastnictví společnosti:
-- [Program registrace zařízení (DEP) společnosti Apple](device-enrollment-program-enroll-macos.md): Organizace můžou pořizovat zařízení s macOS prostřednictvím Programu registrace zařízení (DEP) společnosti Apple. Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení.
-- [Správce registrace zařízení (DEM)](device-enrollment-manager-enroll.md): Pomocí účtu DEM můžete zaregistrovat až 1 000 zařízení.
+- [Program registrace zařízení Apple (DEP)](device-enrollment-program-enroll-macos.md): Organizace můžou nakupovat zařízení s macOS prostřednictvím Apple zařízení registrace programu (DEP). Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení.
+- [Správce registrace zařízení (DEM)](device-enrollment-manager-enroll.md): Můžete použít účet DEM k registraci až 1000 zařízení.
 
 ## <a name="block-macos-enrollment"></a>Blokování registrace zařízení s macOS
 Intune ve výchozím nastavení umožňuje registraci zařízení s macOS. Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte si téma [Nastavení omezení typu zařízení](enrollment-restrictions-set.md).
@@ -69,7 +69,7 @@ Intune ve výchozím nastavení umožňuje registraci zařízení s macOS. Pokud
 
 Virtuální počítače s macOS pro testování můžete zaregistrovat pomocí softwaru Parallels Desktop nebo VMware Fusion. 
 
-Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuálního počítače, aby ho služba Intune mohla rozpoznat. Podle pokynů softwaru Parallels k [nastavení typu hardwaru](http://kb.parallels.com/123594) a [sériového čísla](http://kb.parallels.com/123455) nakonfigurujte potřebná nastavení pro testování. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
+Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuálního počítače, aby ho služba Intune mohla rozpoznat. Postupujte podle pokynů softwaru Parallels k nastavení typu hardwaru a [sériové číslo](http://kb.parallels.com/123455) nastavení potřebná nastavení pro testování. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
 
 U softwaru VMware Fusion musíte [upravit soubor .vmx](https://kb.vmware.com/s/article/1014782), abyste mohli nastavit model hardwaru a sériové číslo virtuálního počítače. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
 

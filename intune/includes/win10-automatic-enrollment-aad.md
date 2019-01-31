@@ -28,7 +28,9 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
    - **Všechna** – všichni uživatelé můžou automaticky zaregistrovat svá zařízení s Windows 10.
 
       > [!IMPORTANT]
-      > Pokud u skupiny povolíte jak **obor uživatele MAM**, tak i automatickou registraci MDM (**obor uživatele MDM**), povolí se jenom MAM. Při připojení osobního zařízení k pracovnímu prostoru se pro uživatele v dané skupině přidá jenom MAM. Zařízení se v MDM neregistrují automaticky.
+      > U vlastních zařízení uživatelů obor uživatele MAM má přednost, pokud obor uživatele MAM a obor uživatele MDM (automatickou registraci MDM) jsou povolené pro všechny uživatele (nebo stejné skupiny uživatelů). Zařízení bude používat zásady Windows Information Protection (WIP) (Pokud je nakonfigurovaná) namísto MDM zaregistrovaná.
+      >
+      > Pro firemní zařízení má obor uživatele MDM přednost, pokud jsou povolené oba obory. Získání zařízení MDM zaregistrovaná.
 
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
 

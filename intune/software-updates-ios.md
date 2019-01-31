@@ -2,8 +2,8 @@
 title: Konfigurace zásad aktualizace softwaru iOS v Microsoft Intune – Azure | Microsoft Docs
 description: V Microsoft Intune můžete vytvořit nebo přidat zásady konfigurace, které omezují, kdy se na zařízení s iOSem, která spravuje Intune nebo která jsou pod dohledem, mají automaticky instalovat aktualizace softwaru. Můžete zvolit datum a čas, kdy se aktualizace nemají instalovat. Můžete tyto zásady také přiřadit skupinám, uživatelům nebo zařízením a vyhledat případné chyby instalace.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 10/11/2018
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
-ms.openlocfilehash: 61bd7d5cf40355536aa7d5c361a771ce2b4f30ec
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 12b387a5c09e0d009fa5014ff355104f6bff71f3
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189873"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290634"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurace zásad aktualizací pro iOS v Intune
 
@@ -27,7 +27,7 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
 Tato funkce podporuje zařízení s iOSem 10.3 a novějšími verzemi. Nastavení zpoždění je k dispozici v iOSu 11.3 a novějších verzích.
 
 ## <a name="configure-the-policy"></a>Konfigurace zásad
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
 4. Zadejte název a popis zásad.
@@ -35,7 +35,7 @@ Tato funkce podporuje zařízení s iOSem 10.3 a novějšími verzemi. Nastaven�
 
     Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat **dny** v týdnu, **časové pásmo**, **počáteční čas**, **koncový čas** a možnost **podržet zpřístupnění aktualizací softwaru (dny)** pro uživatele. Dále můžete vybrat pozdržení aktualizací softwaru v rozsahu 1 až 90 dní. Pokud chcete pozdržení aktualizací softwaru vypnout, zadejte hodnotu 0. Tato nastavení aktualizací se uplatní jen na zařízeních s iOSem pod dohledem.
 
-6. Výběrem **OK** uložte změny. Výběrem **Vytvořit** vytvořte tyto zásady.
+6. Vyberte **OK** uložte provedené změny. Výběrem **Vytvořit** vytvořte tyto zásady.
 
 Profil se vytvoří a zobrazí se v seznamu zásad. Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data. 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 01/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,30 +16,30 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cb52a9755dffd20e6d3d66419855cc4ee7fca293
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: ba77c14e470ed75a87f44adcaf0ba9b98cd06438
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55068318"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290753"
 ---
-# <a name="intune-standalone---win32-app-management-public-preview"></a>Samostatné využití Intune – správa aplikací Win32 (veřejná verze Preview)
+# <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
 Samostatné využití Intune vám poskytuje širší možnosti správy aplikací Win32. Přestože zákazníci připojení ke cloudu mohou pro správu aplikací Win32 používat nástroj Configuration Manager, zákazníci, kteří používají pouze Intune, mají širší možnosti správy svých obchodních aplikací Win32. Toto téma poskytuje přehled funkce správy aplikací Win32 v Intune a informace o řešení potíží.
 
-## <a name="prerequisites-for-public-preview"></a>Předpoklady pro veřejnou verzi Preview
+## <a name="prerequisites"></a>Požadavky
 
 - Windows 10 verze 1607 nebo novější (Enterprise, Pro a vzdělávání verze)
 - Klient Windows 10 musí splňovat tyto předpoklady: 
     - musí být připojen ke službě Azure Active Directory (AAD) nebo hybridní službě Azure Active Directory, a
     - musí být zaregistrován v Intune (spravovaný přes MDM).
-- Ve veřejné verzi Preview je velikost aplikace pro Windows omezená na 8 GB na jednu aplikaci. 
+- Velikost aplikace Windows je omezené na 8 GB na aplikaci
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Příprava obsahu aplikace Win32 pro nahrání
 
-K předběžnému zpracování aplikací Win32 použijte [nástroj pro přípravu nahrání aplikace Win32 do Microsoft Intune](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool). Nástroj pro vytváření balíčků převede instalační soubory aplikace do formátu *.intunewin*. Nástroj také zjistí některé z atributů, které Intune vyžaduje pro určení stavu instalace aplikace. Po použití tohoto nástroje u složky instalačního programu aplikace budete moci v konzole Intune vytvořit aplikaci Win32.
+Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) předběžně zpracovat aplikací Win32. Tento nástroj převede instalačních souborů aplikace do *.intunewin* formátu. Nástroj zjistí také některé atributy, které vyžaduje služba Intune k určení stavu instalace aplikace. Po použití tohoto nástroje u složky instalačního programu aplikace budete moci v konzole Intune vytvořit aplikaci Win32.
 
-[Nástroj pro přípravu nahrání aplikace Win32 do Microsoft Intune](https://github.com/Microsoft/Intune-Win32-App-Packaging-Tool) si můžete stáhnout z GitHubu.
+Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu.
 
 ### <a name="available-command-line-parameters"></a>Dostupné parametry příkazového řádku 
 
@@ -74,7 +74,7 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
 2.  Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
-4.  V podokně **Přidat aplikaci** vyberte **Aplikace pro Windows (Win32) – Preview** ze seznamu v rozevírací nabídce.
+4.  V **přidat** podokno aplikace, vyberte **aplikace Windows (Win32)** ze zadané rozevíracího seznamu.
 
     ![Snímek obrazovky okna Přidat aplikaci – přidat typ rozevírací seznam pole](./media/apps-win32-app-01.png)
 
@@ -85,6 +85,10 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
     ![Snímek obrazovky okna soubor balíčku aplikace](./media/apps-win32-app-02.png)
 
 2.  V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou *.intunewin*.
+
+    > [!IMPORTANT]
+    > Nezapomeňte použít nejnovější verzi nástroje Microsoft Win32 obsahu Prep Tool. Pokud nepoužíváte nejnovější verzi, zobrazí se upozornění, že se aplikace zabalila ve starší verzi nástroje Příprava obsahu pro Microsoft Win32. 
+
 3.  Až to budete mít, vyberte **OK**.
 
 ### <a name="step-3-configure-app-information"></a>Krok 3: Konfigurace informací o aplikaci
@@ -171,7 +175,7 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
             
                 ![Snímek obrazovky s podoknem pravidla detekce – existence klíče registru](./media/apps-win32-app-05.png)    
             
-            2.  Zkontrolujte, zda existuje hodnota registru (**není dostupné ve verzi Preview**).
+            2.  Zkontrolujte, zda hodnota registru existuje.
         
                 ![Snímek obrazovky s podoknem pravidla detekce – existence hodnoty registru](./media/apps-win32-app-06.png)    
         

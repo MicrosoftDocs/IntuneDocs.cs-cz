@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 01/30/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
-ms.openlocfilehash: a5a756cd3fd8b78893cee6a3c4629e49d6ac7c87
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: 8656e480c292fc9ed1212f9d2c180b791cb4f94c
+ms.sourcegitcommit: ce76541ceb783eb2e242032ef8579041d2f61532
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55072537"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55431486"
 ---
 # <a name="ios-device-feature-settings-in-intune"></a>nastavení funkce zařízení s Iosem v Intune
 
@@ -177,16 +177,23 @@ Zvolte, jak aplikace nainstalované na iOS zařízení odesílat oznámení. Tat
 
 Pomocí těchto nastavení můžete zobrazit vlastní zprávu nebo text na přihlašovací okno a na zamykací obrazovce. Například můžete zadat zprávu "Při ztrátě vrátit..." a informace z inventárního štítku. 
 
-Tato nastavení podporují zařízení pod dohledem s iOSem 9.3 a novějším.
+Tato funkce podporuje zařízení pod dohledem s:
 
-1. V **nastavení**vyberte **konfigurace sdíleného zařízení (jenom pod dohledem)**.
+- iOS 9.3 nebo novější
+
+1. V **nastavení**vyberte **zpráva na zamčené obrazovce (jenom pod dohledem)**.
 2. Zadejte následující nastavení:
 
-    - **Informace z inventárního štítku**: Zadejte informace o inventárním štítku zařízení. Zadejte například `Owned by Contoso Corp`. 
+    - **Informace z inventárního štítku**: Zadejte informace o inventárním štítku zařízení. Zadejte například `Owned by Contoso Corp` nebo `Serial Number: {{serialnumber}}`. 
 
       Text, který zadáte, se zobrazí na přihlašovací okno a na zamykací obrazovce zařízení.
 
-    - **Zamykací obrazovka Poznámka pod čarou**: Pokud ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může pomoci vrátit zařízení. Zadejte třeba `If found, call Contoso at ...`.
+    - **Zamykací obrazovka Poznámka pod čarou**: Pokud ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může pomoci vrátit zařízení. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
+
+    Zařízení tokeny lze také přidat informace specifické pro zařízení s těmito poli. Chcete-li zobrazit sériové číslo, zadejte například `Serial Number: {{serialnumber}}`. Text se zobrazí na zamykací obrazovce, podobně jako `Serial Number 123456789ABC`. Při vstupu do proměnné, je potřeba použít složené závorky `{{ }}`. [Konfigurace tokenů aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahuje seznam proměnných, které lze použít. Můžete také použít `deviceName` nebo libovolné jiné hodnoty konkrétní zařízení.
+
+    > [!NOTE]
+    > Proměnné pořadí úloh se neověřuje v uživatelském rozhraní. V důsledku toho se může zobrazit profily uložen s nesprávný vstup. Pokud zadáte například `{{Devicename}}` místo `{{devicename}}`, pak namísto jedinečný název zařízení se zobrazí řetězcový literál.
 
 3. Až budete hotovi, vyberte **OK** uložte provedené změny.
 
@@ -279,6 +286,8 @@ Toto nastavení řídí přístup k adrese URL prohlížeče na zařízeních s 
 ## <a name="wallpaper-settings"></a>Nastavení tapety
 
 Přidání vlastní image ve formátu PNG, JPG nebo JPEG do zařízení s Iosem pod dohledem. Použijte například logo společnosti na zamykací obrazovce.
+
+Pokud profil se žádné image je přiřazený k zařízení pomocí stávající image, může dojít k neočekávanému chování. Například vytvořit profil bez bitovou kopii. Tento profil je přiřazený k zařízení, která již mít nějakou image. V tomto scénáři image se může změnit výchozí nastavení zařízení nebo původní bitové kopie mohou zůstat na zařízení. Toto chování je řízen a omezené platformou MDM společnosti Apple.
 
 - **Tapeta umístění zobrazení**: Vyberte umístění na zařízení zobrazit obrázek. Možnosti:
   - **Není nakonfigurováno**: Vlastní image se přidá do zařízení. Zařízení využívá výchozí operační systém.

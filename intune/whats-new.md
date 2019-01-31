@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/25/2019
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,19 +16,21 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 2d27b37fe627b6b697bf102be4bd29427c2223c8
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.openlocfilehash: 283239a412f8c7b0a43fa5c88b4a3583b89cac8f
+ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230184"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55290787"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zde také chystané změny, [důležitá sdělení](#notices) a informace o [předchozích verzích](whats-new-archive.md). Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zde také chystané změny, [důležitá sdělení](#notices) a informace o [předchozích verzích](whats-new-archive.md). 
 
 > [!Note]
+> Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
+>
 > Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce s novinkami pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 **Informační kanál RSS**: Nechte se informovat Tato stránka se aktualizuje zkopírováním a vložením do informačního kanálu čtečky na následující adrese URL: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
@@ -58,7 +60,16 @@ Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější
 Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
 
 #### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
-Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující: Povolit jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v iOS a Android nasadit moderní ověřování pro moderní ověřování Office 365 a hybridní místní účty použití `SAMAccountName` pro pole uživatelské jméno v e-mailového profilu, když je základní ověřování vybrané kontakty povolit ukládání konfigurace externím příjemcům Konfigurace upozornění než odešlete **zaměřuje doručené pošty** vyžadují biometrické údaje pro přístup k aplikaci Outlook pro iOS blokovat externí obrázky
+Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující:
+- Povolte jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v Iosu a Androidu
+- Nasazení moderní ověřování Office 365 a hybridním moderním ověřováním místních účtů
+- Použití `SAMAccountName` pro pole uživatelské jméno v e-mailový profil, pokud je vybrána základní ověřování
+- Povolit kontakty, které chcete uložit (k dispozici brzy)
+- Konfigurace externího příjemce upozornění než odešlete (k dispozici brzy)
+- Konfigurace **zaměřuje doručené pošty** (k dispozici brzy)
+- Vyžadovat biometrické údaje pro přístup k aplikaci Outlook pro iOS (k dispozici brzy) 
+- Blokovat externí obrázky (viditelné v Intune konzole, ale není rozpoznaný nastavení, ale – k dispozici brzy)
+
 > [!NOTE]
 > Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-requirements) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-requirements).
 
@@ -112,13 +123,6 @@ Pokud chcete zobrazit aktuální seznam nastavení, přejděte na [nastavení za
 
 Platí pro: Vlastník zařízení s androidem Enterprise
 
-#### <a name="intune-app-protection-policies-ui-update----3251427---"></a>Aktualizace uživatelského rozhraní zásad ochrany aplikací Intune <!-- 3251427 -->
-Popisky pro nastavení jsme změnili nd tlačítka pro Intune app protection srozumitelnější každý. Některé změny patří:  
-- Ovládací prvky se změnil z **Ano** / **žádné** ovládacích prvků do primárně **bloku** / ** povolit ** a **zakázat**  /  **povolit** ovládacích prvků. Popisky jsou také aktualizovány.  
-- Nastavení přeformátovali, takže nastavení s popiskem jsou vedle sebe v ovládacím prvku, poskytují lepší navigace.   
-
-Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
-
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="selective-wipe-support-for-wip-without-enrollment-devices----1434452---"></a>Podpora selektivní vymazání pro WIP bez registrace zařízení <!-- 1434452 -->
@@ -138,6 +142,9 @@ Kromě obrazovky, které se aktuálně můžete přeskočit můžete nastavit za
 Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** > **registrace Apple** > **tokeny programu registrace** > zvolte token > **Profily** > zvolte profil > **vlastnosti** > **Pomocníka pro nastavení přizpůsobení** > zvolte **skrýt**  pro všechny obrazovky, které chcete nechat Přeskočit > **OK**.
 Je-li vytvořit nový profil nebo upravte profil, přeskočte vybrané obrazovky nutnost synchronizovat s Apple MDM server. Uživatelé můžou vydat ruční synchronizaci zařízení tak, aby se žádné zpoždění v ujímají změny profilu.
 Tato funkce se spouští pro distribuci, avšak bude trvat několik dnů bude k dispozici všem zákazníkům.
+
+#### <a name="android-enterprise-app-we-app-deployment----1171203---"></a>Aplikace pro Android Enterprise-jsme nasazení aplikace <!-- 1171203 -->
+Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete teď použít spravované Google Play pro nasazení aplikací pro store a obchodních aplikací pro uživatele. Konkrétně můžete poskytnout koncovým uživatelům aplikace katalogu a instalace prostředí, které už vyžaduje, aby koncoví uživatelé zmírnit stav zabezpečení svých zařízeních tím, že instalace z neznámých zdrojů. Kromě toho tento scénář nasazení bude poskytovat Vylepšené uživatelské prostředí.
 
 ## <a name="week-of-january-14-2019"></a>Týden od 14. května 2019
 
