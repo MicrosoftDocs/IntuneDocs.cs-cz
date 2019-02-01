@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 01/31/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 283239a412f8c7b0a43fa5c88b4a3583b89cac8f
-ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
+ms.openlocfilehash: 9ca959bf28145500df71cb9ce8c7c36d62c9f773
+ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290787"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55504574"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -60,15 +60,19 @@ Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější
 Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
 
 #### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
-Teď můžete nakonfigurovat další nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune.  Nastavení zahrnují následující:
+Teď můžete nakonfigurovat další nastavení followiong pro aplikaci Outlook pro iOS a Android pomocí Intune:
 - Povolte jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v Iosu a Androidu
 - Nasazení moderní ověřování Office 365 a hybridním moderním ověřováním místních účtů
 - Použití `SAMAccountName` pro pole uživatelské jméno v e-mailový profil, pokud je vybrána základní ověřování
-- Povolit kontakty, které chcete uložit (k dispozici brzy)
-- Konfigurace externího příjemce upozornění než odešlete (k dispozici brzy)
-- Konfigurace **zaměřuje doručené pošty** (k dispozici brzy)
-- Vyžadovat biometrické údaje pro přístup k aplikaci Outlook pro iOS (k dispozici brzy) 
-- Blokovat externí obrázky (viditelné v Intune konzole, ale není rozpoznaný nastavení, ale – k dispozici brzy)
+
+Následující nastavení jsou stále zavádí postupně a brzy bude k dispozici v konzole:
+- Povolit kontakty, které chcete uložit
+- Konfigurace externího příjemce upozornění než odešlete
+- Konfigurace **zaměřuje doručené pošty**
+- Vyžadovat biometrické údaje pro přístup k aplikaci Outlook pro iOS
+
+Nastavení níže se zobrazí v konzole Intune, ale při konfiguraci, nebude fungovat podle očekávání. Tento problém bude opraven brzy:
+- Blokovat externí obrázky
 
 > [!NOTE]
 > Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-requirements) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-requirements).
@@ -82,9 +86,10 @@ Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune.
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
 #### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview----2055484-----"></a>Nastavení Microsoft doporučuje používat směrné plány zabezpečení (Public Preview) <!-- 2055484   -->
-Poznámka: Tato funkce se stále zavádění a bude brzy k dispozici.
 
 Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně Ochrany ATP v programu Windows Defender a Ochrany ATP v Office 365. Zákazníci požadují ve službách Microsoft 365 společnou strategii a soudržnější sadu ucelených bezpečnostních pracovních postupů. Naším cílem je srovnat strategie tak, abychom mohli vytvářet řešení přemosťující operace zabezpečení a běžné úlohy správy. V Intune se snažíme tohoto cíle dosáhnout prostřednictvím publikování sady Standardních hodnot zabezpečení doporučených Microsoftem (**Intune** > **Standardní hodnoty zabezpečení**).  Správce můžete vytvořit zásady zabezpečení přímo z těchto standardních hodnot a pak je nasadit na svoje uživatele. Můžete také přizpůsobit doporučení osvědčených postupů pro potřeby vaší organizace. Intune zajišťuje, že zařízení zůstávají v souladu s těmito standardními hodnotami, a upozorní správce, pokud uživatelé nebo zařízení tyto hodnoty nedodržují.
+
+Tato funkce je ve verzi public preview, takže všechny profily vytvořené nyní nebude přesunout do standardních hodnot zabezpečení šablony, které jsou všeobecně dostupná (GA). Plánujete by neměly používat tyto šablony ve verzi preview v produkčním prostředí.
 
 Další informace o standardních hodnot zabezpečení najdete v tématu [vytvoření standardních hodnot zabezpečení Windows 10 v Intune](security-baselines-monitor.md).
 
@@ -141,7 +146,6 @@ Intune poskytuje protokolování integrované auditu, která sleduje události, 
 Kromě obrazovky, které se aktuálně můžete přeskočit můžete nastavit zařízení DEP, přejděte na následující obrazovce v nastavením když se uživatel zaregistruje zařízení s Iosem: Zobrazení tón, ochrany osobních údajů, Android migrace, tlačítko Domů, iMessage & FaceTime, připojení, sledování migrace, vzhled, čas obrazovky, aktualizace softwaru, SIM instalace.
 Zvolte, které obrazovky přeskočte, přejděte na **registrace zařízení** > **registrace Apple** > **tokeny programu registrace** > zvolte token > **Profily** > zvolte profil > **vlastnosti** > **Pomocníka pro nastavení přizpůsobení** > zvolte **skrýt**  pro všechny obrazovky, které chcete nechat Přeskočit > **OK**.
 Je-li vytvořit nový profil nebo upravte profil, přeskočte vybrané obrazovky nutnost synchronizovat s Apple MDM server. Uživatelé můžou vydat ruční synchronizaci zařízení tak, aby se žádné zpoždění v ujímají změny profilu.
-Tato funkce se spouští pro distribuci, avšak bude trvat několik dnů bude k dispozici všem zákazníkům.
 
 #### <a name="android-enterprise-app-we-app-deployment----1171203---"></a>Aplikace pro Android Enterprise-jsme nasazení aplikace <!-- 1171203 -->
 Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete teď použít spravované Google Play pro nasazení aplikací pro store a obchodních aplikací pro uživatele. Konkrétně můžete poskytnout koncovým uživatelům aplikace katalogu a instalace prostředí, které už vyžaduje, aby koncoví uživatelé zmírnit stav zabezpečení svých zařízeních tím, že instalace z neznámých zdrojů. Kromě toho tento scénář nasazení bude poskytovat Vylepšené uživatelské prostředí.
@@ -1365,27 +1369,37 @@ To ovlivňuje, je Pokud jste nebo plánujete, že zařízení s macOS 10.14.2 ne
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
 Můžete chtít nechat helpdesk vědět. Aktualizujeme této stránce s novinkami při nasazení této změny. Pokud nechcete, aby se tyto zásady hesla zařízení s macOS vynucení, doporučujeme zrušit přiřazení nebo odstranění stávajících zásad pro macOS.
 
+###<a name="plan-for-change-update-to-ios-setting-for-supervised-devices-in-the-intune-console"></a>Plánovaná změna: Aktualizovat nastavení iOS pro zařízení pod dohledem v konzole Intune  
+S aktualizací update února do služby Intune Probíhá přejmenování 'Povolení omezení v nastavení zařízení' nastavení pro zařízení s Iosem pod dohledem "Čas obrazovky (jenom pod dohledem)". Po této změně budou měnit v závislosti na verzi iOS činnost koncového uživatele.
 
-### <a name="reminder-intune-support-experience-for-premier-customers-now-in-azure-instead-of-mpo---2828727--"></a>Připomenutí: Podpora služby Intune prostředí pro plán Premier zákazníci nyní do Azure místo MPO <!--2828727-->
-Jsme oznámili v MC147649 v září zjistíte, že doporučujeme odebrat schopnost vytvářet žádosti o podporu Intune z portálu Microsoft Premier Online (MPO) (premier.microsoft.com) v prosinci. Nyní po krátké prodlevě, na konci dne, budete přesměrováni k vytvoření žádosti o podporu jenom v Intune na Azure. 
+####<a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Po nastavení "Povolení omezení v nastavení zařízení (jenom pod dohledem)" bylo přejmenováno na "Obrazovky čase (jenom pod dohledem)", tady je prostředí pro hlídaných zařízeních (zařízení zaregistrovaná přes programy registrace Apple): 
+
+Pro zařízení s Iosem 11.4 a před: Toto nastavení je možné zabránit uživatelům v úpravách omezení zařízení jako před. Koncoví uživatelé neuvidí změny v prostředí.
+ 
+Pro zařízení s Iosem 12 a novější: Koncoví uživatelé nebudou moci zobrazit kartu omezení v Nastavení > Obecné > Správa zařízení > profil správy > omezení.
+Místo toho to bude součástí nastavení > Obecné > čas obrazovky. Konfigurace tohoto nastavení můžete "Blok" zablokuje uživatelům možnost měnit nastavení času obrazovky na svých zařízeních, které také obsahují omezení obsahu a ochrany osobních údajů.
+
+####<a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Aktualizujte vaše pokyny pro koncové uživatele si uvědomit změnu v hodnotě pro zařízení, která se upgradují na iOS 12 a novější verze.
 
 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po skončení January, chcete-li pokračovat, vylepšení Premier podporu prostředí, se nebude možné vytvořit v MPO žádosti o podporu.  Při pokusu o to provést, zobrazí se vám dotaz, který není možné zrušit, přesměrovat na Intune na Azure. Zde můžete vytvořit žádost o podporu, která se bude směrovat na podporu Microsoftu vyhrazenou pro Intune, k včasnému diagnostikování a vyřešení vašeho problému. Všimněte si, že žádosti o podporu vytvořené na portálu MPO nelze zobrazit na webu Azure Portal. 
+###<a name="plan-for-change-workflow-changes-for-ios-12-enrollment-in-intune"></a>Plánovaná změna: Změny pracovního postupu pro iOS 12 registrace v Intune
+Apple oznámil některé změny související s registrací do služby správy mobilních zařízení (MDM) zařízení s Iosem. Změny se pravděpodobně projeví v spring 2019 verzi iOS, jakož i všechny budoucí iOS verze.
 
-Na webu Azure portal obsahuje nové prostředí pro podporu, jak jsme oznámili nedávno MC171941. Další informace najdete v [ https://aka.ms/new_support_experience ](https://aka.ms/new_support_experience) a v odkazu Další informace.
+####<a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Pokud vaši koncoví uživatelé upgradovat svoje zařízení na této nové verzi iOS 12 udělali na jaře, vědět, že je upravený pracovního postupu a bude potřeba provést další kroky dokončit registraci do Intune. Když Apple zavádí tyto změny, koncoví uživatelé budou muset: • začal tak proces registrace v aplikaci portál společnosti pro stahování správu profilu • přejít do Nastavení > Obecné > • profilů vyberte správný profil a klikněte na tlačítko prostřednictvím k instalaci dokončit registraci • vrátit se k portálu společnosti 
 
-Pokud používáte hybridní správu mobilních zařízení (hybridní MDM) nebo spolusprávu, můžete nadále používat MPO k vytváření žádostí o podporu pro nástroj ConfigMgr, ale žádosti o podporu pro Intune vytvářejte pomocí webu Azure Portal. Připomínáme, hybridní MDM je [zastaralé](https://docs.microsoft.com/sccm/core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures), a měli byste naplánovat přesunout do Intune v Azure co nejdříve. Další informace najdete v tématu o [přechodu z hybridní správy mobilních zařízení na Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150).
+Zařízení, která jsou už zaregistrovaná a upgrade na novou verzi iOS by neměla mít vliv na Pokud se zruší a potřebujete nové registrace.
+Prostředí pro registraci na zařízeních s Iosem 12,1 nebo předchozí nedojde ke změně v této nové verzi společností Apple.
 
-Všimněte si, že pouze uživatelé s rolí Globální správce, Správce služby Intune a Správce podpory služeb můžou vytvářet lístky podpory na webu Azure Portal.
+####<a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+By měly vy plánujete provést upgrade, dokumentaci a pokyny pro koncové uživatele. Můžete také nechat helpdesk vědět těchto změn. Budeme vás informovat prostřednictvím Centra zpráv a naší stránce s novinkami když se tato změna dostane za provozu.
 
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-- Přestaňte vytvářet a spravovat všechny žádosti o podporu Intune pomocí portálu Microsoft Premier Online (MPO) a používejte k tomu Intune v Azure.  
-- Upozorněte helpdesk a aktualizujte v případě potřeby dokumentaci.
-- Pokud máte uživatele bez role Globální správce nebo Správce služby Intune, kteří momentálně vytvářejí žádosti o podporu v MPO, přiřaďte jim v Azure Active Directory roli Správce podpory služeb, aby mohli i nadále vytvářet lístky podpory na webu Azure Portal.
+Klikněte na další informace pro podporu blogový příspěvek se snímky obrazovky a video s postupem očekávané registrace.
 
-#### <a name="additional-information"></a>Další informace
-[https://aka.ms/IntuneSupport_MPO_to_Azure](https://aka.ms/IntuneSupport_MPO_to_Azure)
+####<a name="additional-information"></a>Další informace
+https://aka.ms/iOS_enrollment_changes
 
 ### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Plánovaná změna: Aktualizaci uživatelského prostředí aplikace portál společnosti Intune pro iOS
 Jsme rádi, že Intune bude brzy k vydání důležitou aktualizaci uživatelského prostředí pro aplikaci portál společnosti pro iOS sdílet. Aktualizace se funkce vizuální Design domovské stránky s rozšířené filtry a rychlejší přístup k aplikací a knih.
