@@ -16,16 +16,16 @@ Customer intent: As an Intune admin, I want to learn where to find the different
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: fd6230fda65a22bb7cae4f5d130d13bb6f2379e7
-ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
+ms.openlocfilehash: f9d72ec2f35f15e2515160869fc352360b17e812
+ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55505227"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55645168"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: Návod služby Microsoft Intune na portálu Azure portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje víc než 100 služeb, abychom vám s širokou škálu cloud computingu scénáře a možnosti. Microsoft Intune je jednou z několika služeb dostupných v Azure. Intune vám pomůže zajistit, že zařízení, aplikace a data společnosti splňovat požadavky na zabezpečení vaší společnosti. Budete mít kontrolu sady, které je třeba zkontrolovat požadavky a co se stane, když tyto požadavky nejsou splněny. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Princip funkce dostupné v Intune můžete provádět různé správy mobilních zařízení (MDM) a správu mobilních aplikací (MAM) úlohy.
+[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, abychom vám s širokou škálu cloud computingu scénáře a možnosti. Microsoft Intune je jednou z několika služeb dostupných v Azure. Intune vám pomůže zajistit, že zařízení, aplikace a data společnosti splňovat požadavky na zabezpečení vaší společnosti. Budete mít kontrolu sady, které je třeba zkontrolovat požadavky a co se stane, když tyto požadavky nejsou splněny. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Princip funkce dostupné v Intune můžete provádět různé správy mobilních zařízení (MDM) a správu mobilních aplikací (MAM) úlohy.
 
 V tomto kurzu provedete následující:
 > [!div class="checklist"]
@@ -72,7 +72,7 @@ Postupujte podle následujících kroků, abyste lépe pochopili Intune na port�
     ![Snímek obrazovky podokna dodržování předpisů zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-03.png)
     
     Požadavky na dodržování předpisů jsou v podstatě pravidla, jako je například vyžadování PIN kódu zařízení nebo šifrování zařízení. Zásady dodržování předpisů zařízeními definují pravidla a nastavení, která musí zařízení splňovat, aby bylo považováno za kompatibilní. Pokud chcete použít dodržování předpisů u zařízení, musíte mít:
-    - Intune a předplatné Azure Active Directory (AD) Premium
+    - Intune a předplatné Azure Active Directory (Azure AD) Premium
     - Zařízení se systémem na podporované platformě
     - Zařízení musí být zaregistrovaná v Intune
     - Zařízení, která jsou zaregistrovaná na jednoho uživatele nebo bez primárního uživatele.
@@ -111,7 +111,7 @@ Postupujte podle následujících kroků, abyste lépe pochopili Intune na port�
 
     Můžete přímo do Intune přidat uživatele nebo synchronizovat uživatele z vaší místní Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění pro přístup k Intune. Další informace najdete v tématu [přidání uživatelů a udělení oprávnění pro správu Intune](users-add.md).
 
-9. Z [Intune](https://aka.ms/intuneportal)vyberte **skupiny** zobrazíte podrobnosti o skupinách Azure Active Directory (AD) v Intune. Jako správce Intune používat skupiny ke správě zařízení a uživatelů. 
+9. Z [Intune](https://aka.ms/intuneportal)vyberte **skupiny** zobrazíte podrobnosti o skupinách Azure Active Directory (Azure AD) v Intune. Jako správce Intune používat skupiny ke správě zařízení a uživatelů. 
 
     ![Snímek obrazovky podokna skupiny](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 

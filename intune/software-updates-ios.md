@@ -11,12 +11,12 @@ ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
-ms.openlocfilehash: 12b387a5c09e0d009fa5014ff355104f6bff71f3
-ms.sourcegitcommit: e0d55bdda1a818ffe4cfc0ef0592833e22f65a89
+ms.openlocfilehash: d73dc96c966b93f26269cc53527a787824c94d3b
+ms.sourcegitcommit: 00fe2b601e3becbe5d644fcbd35a706da3b43af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290634"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652625"
 ---
 # <a name="configure-ios-update-policies-in-intune"></a>Konfigurace zásad aktualizací pro iOS v Intune
 
@@ -33,7 +33,10 @@ Tato funkce podporuje zařízení s iOSem 10.3 a novějšími verzemi. Nastaven�
 4. Zadejte název a popis zásad.
 5. Vyberte **Nastavení**. 
 
-    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat **dny** v týdnu, **časové pásmo**, **počáteční čas**, **koncový čas** a možnost **podržet zpřístupnění aktualizací softwaru (dny)** pro uživatele. Dále můžete vybrat pozdržení aktualizací softwaru v rozsahu 1 až 90 dní. Pokud chcete pozdržení aktualizací softwaru vypnout, zadejte hodnotu 0. Tato nastavení aktualizací se uplatní jen na zařízeních s iOSem pod dohledem.
+    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat **dny** v týdnu, **časové pásmo**, **počáteční čas**, **koncový čas** a možnost **podržet zpřístupnění aktualizací softwaru (dny)** pro uživatele. Dále můžete vybrat pozdržení aktualizací softwaru v rozsahu 1 až 90 dní. Když vyprší platnost zpoždění, uživatelé získají oznámení, které nejstarší verzi operačního systému, která byla k dispozici při aktivaci zpoždění. Pokud chcete pozdržení aktualizací softwaru vypnout, zadejte hodnotu 0. Tato nastavení aktualizací se uplatní jen na zařízeních s iOSem pod dohledem.
+  
+    Například pokud iOS 12a je k dispozici na **1. ledna** a máte **aktualizace operačního systému zpoždění** nastavena na **5 dní**, tuto konkrétní verzi nebude zobrazovat jako dostupná aktualizace na žádné straně uživatel zařízení přiřazená k tomuto profilu. Na **šestý den** následující verzi, že aktualizace zobrazí jako dostupné a všichni koncoví uživatelé jsou zdarma k zahájení aktualizace.
+
 
 6. Vyberte **OK** uložte provedené změny. Výběrem **Vytvořit** vytvořte tyto zásady.
 
@@ -44,7 +47,7 @@ Profil se vytvoří a zobrazí se v seznamu zásad. Apple MDM neumožňuje vynut
 1. V části **Aktualizace softwaru** vyberte **Aktualizovat zásady pro iOS**.
 2. Zvolte existující zásady > **Vlastnosti**.
 3. Aktualizace zakázaného času:
-
+    
     1. Vyberte dny v týdnu.
     2. Zvolte časové pásmo, ve kterém se tyto zásady použijí.
     3. Zadejte počáteční a koncový čas pro zakázané hodiny.

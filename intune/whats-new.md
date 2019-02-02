@@ -16,12 +16,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 9ca959bf28145500df71cb9ce8c7c36d62c9f773
-ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
+ms.openlocfilehash: e471c14bddd80e88931326c0fad7a2a4fd85f73b
+ms.sourcegitcommit: 00fe2b601e3becbe5d644fcbd35a706da3b43af2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55504574"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652659"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -82,6 +82,9 @@ Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune.
 
 #### <a name="managed-google-play-app-type----1352580---"></a>Typ aplikace Google Play spravované <!-- 1352580 -->
 **Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravované aplikace Google Play](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune teď můžete procházet, Hledat, schválit, synchronizaci a přiřazení aplikací v Intune schválené spravovaného obchodu Google Play.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte.  V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. V **typ aplikace** seznamu vyberte **spravovaný obchod Google Play** jako typ aplikace.
+
+### <a name="default-android-pin-keyboard----3802457---"></a>Výchozí Android PIN klávesnice <!-- 3802457 -->
+Pro koncové uživatele, kteří na svých zařízeních s Androidem se PIN kód typu "Číselná" nastavili App Protection zásad (PIN aplikace Intune) zobrazí se nyní výchozí Android klávesnice místo pevné Android klávesnice uživatelského rozhraní, která dříve byla navržena. Tato změna byla provedena, aby byla konzistentní při použití výchozí klávesnice v Androidu a iOS, pro oba typy kódu PIN, "Číselná" nebo "Heslo". Další informace o nastavení přístup koncového uživatele na Androidu, jako je například PIN kód aplikace, najdete v části [požadavky na přístup Android](app-protection-policy-settings-android.md#access-requirements).
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -1419,12 +1422,12 @@ Není potřeba provádět žádnou akci; Tyto změny budou vydané v iOS nadchá
 
 
 ### <a name="plan-for-change-exchange-online-to-intune-connector-will-not-be-available-in-intune----3105122---"></a>Plánovaná změna: Exchange Online, aby konektor Intune přestanou být dostupné v Intune <!-- 3105122 -->
-Pro zjednodušení práce s Exchange Online a podmíněného přístupu, Zakážeme Exchange Online "Službami" konektor Intune. Tato změna bude začínat aktualizace z prosince služby a dokončit aktualizaci služby. února 2019.
+Pro zjednodušení práce s Exchange Online a podmíněného přístupu, Zakážeme Exchange Online "Službami" konektor Intune.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tuto zprávu jste obdrželi, protože naše záznamy ukazují, že využíváte funkci "Službami" konektor ve vašem prostředí. "Službami" konektor podporuje Intune správu Exchange Active Sync jenom zařízení pro Exchange Online a nepodporuje místní infrastrukturu. Tento konektor, kvůli způsobu, jakým se zobrazovat v konzole, se zobrazí nezbytné pro podmíněný přístup (CA), když ve skutečnosti není potřeba pro certifikační Autoritu. Aktualizace z prosince ke službě Intune na tomto jasně v konzole, budete Zakážeme tlačítko Nastavit nové konektory. Potom ve. února 2019 všechny existující Exchange Online, aby konektory Intune se deaktivuje.
+Tuto zprávu jste obdrželi, protože naše záznamy ukazují, že využíváte funkci "Službami" konektor ve vašem prostředí. "Službami" konektor podporuje Intune správu Exchange Active Sync jenom zařízení pro Exchange Online a nepodporuje místní infrastrukturu. Tento konektor, kvůli způsobu, jakým se zobrazovat v konzole, se zobrazí nezbytné pro podmíněný přístup (CA), když ve skutečnosti není potřeba pro certifikační Autoritu. S aktualizací update února do služby Intune tomto jasně v konzole, budete Zakážeme tlačítko Nastavit nové konektory. Potom v březnu 2019 všechny existující Exchange Online, aby konektory Intune se deaktivuje.
 
-Pokud používáte tyto konektory ve vašem prostředí, nebude schopna monitorovat nebo vymazat Exchange Active Sync jenom zařízení v Intune až v únoru byly zakázány konektory. Během této změny neexistuje žádné předpokládaný dopad na koncové uživatele.
+Pokud používáte tyto konektory ve vašem prostředí, nebude schopna monitorovat nebo vymazat Exchange Active Sync jenom zařízení v Intune po konektory byly zakázány v březnu. Během této změny neexistuje žádné předpokládaný dopad na koncové uživatele.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
 
