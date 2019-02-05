@@ -5,173 +5,142 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 02/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: D9958CBF-34BF-41C2-A86C-28F832F87C94
-ms.reviewer: karanda
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 12131fe0b78814850cfadee15533620dd5813f6c
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: c0177e136d516ba1d4fe44c7301b1534ab1c5e6a
+ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297396"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737464"
 ---
-# <a name="set-up-per-app-virtual-private-network-vpn-in-intune-for-ios-devices"></a>Nastavení virtuální privátní sítě (VPN) pro jednotlivé aplikace v Intune pro zařízení s iOSem
+# <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Nastavte si aplikaci virtuální privátní sítě (VPN) pro zařízení s Iosem v Intune
 
-Můžete určit, které spravované aplikace můžou používat vaši virtuální privátní síť (VPN) na zařízeních s iOSem spravovaných pomocí Intune. Když v Intune vytvoříte síť VPN pro jednotlivé aplikace, koncový uživatel se při přístupu k firemním dokumentům automaticky připojí přes vaši síť VPN.
+V Microsoft Intune můžete vytvořit a používat virtuální privátní sítě (VPN) přiřazené k aplikaci. Tato funkce se nazývá "VPN pro jednotlivé aplikace". Zvolíte spravovaných aplikací, které můžete použít svou síť VPN na zařízeních spravovaných přes Intune. Při použití sítě VPN pro aplikaci, koncoví uživatelé automaticky připojovat prostřednictvím VPN a získat přístup k prostředkům organizace, jako jsou například dokumenty.
 
-Síť VPN pro jednotlivé aplikace je v tuto chvíli k dispozici pro následující poskytovatele:
+Tato funkce platí pro:
 
- - Check Point Remote Access VPN
- - Cisco AnyConnect
- - Citrix
- - F5
- - Pulse Connect Secure
- - Palo Alto Networks
- - SonicWall
- - Privátní přístup Zscaler
+- iOS 9 a novější
+
+Pokud chcete zobrazit, pokud vaši síť VPN podporuje VPN pro jednotlivé aplikace v dokumentaci poskytovatele připojení VPN.
+
+Tento článek ukazuje, jak vytvořit profil VPN pro aplikaci a přiřadit tento profil ke svým aplikacím. Pomocí těchto kroků můžete vytvořit prostředí bezproblémové aplikaci VPN pro koncové uživatele. Pro většinu sítí VPN, které podporují VPN pro jednotlivé aplikace uživatel otevře aplikaci a automaticky se připojí k síti VPN.
+
+Některé sítě VPN umožňují ověřování uživatelského jména a hesla s VPN pro jednotlivé aplikace. To znamená, uživatelé musí zadat uživatelské jméno a heslo pro připojení k síti VPN.
+
+## <a name="per-app-vpn-with-zscaler"></a>VPN pro jednotlivé aplikace se Zscalerem
+
+Zscalerem privátní přístup (ZPA) se integruje s Azure Active Directory (Azure AD) pro ověřování. Při použití ZPA, není nutné [důvěryhodný certifikát](#create-a-trusted-certificate-profile) nebo [certifikátu SCEP nebo PKCS](#create-a-scep-or-pkcs-certificate-profile) profily (popsané v tomto článku). Pokud máte nastavení profilu sítě VPN pro aplikaci do služby Zscalerem, otevření jedné ze přidružené aplikace nebude automaticky připojit k ZPA. Místo toho uživatel musí pro přihlášení do aplikace Zscalerem nejprve. Potom vzdálený přístup je omezený na přidružené aplikace.
 
 ## <a name="prerequisites-for-per-app-vpn"></a>Předpoklady pro síť VPN pro jednotlivé aplikace
 
 > [!IMPORTANT]
-> Dodavatel sítě VPN může mít jiné zvláštní požadavky na VPN pro aplikaci, například zvláštní hardware nebo licencování. Nezapomeňte zkontrolovat jeho dokumentaci a splnit tyto požadavky dříve, než VPN pro aplikaci v Intune nastavíte.
+> Váš dodavatel sítě VPN může mít jiné požadavky na VPN pro jednotlivé aplikace, jako je například specifický hardware nebo licencování. Nezapomeňte zkontrolovat jeho dokumentaci a splnit tyto požadavky dříve, než VPN pro aplikaci v Intune nastavíte.
 
-Server VPN prokáže svoji identitu tak, že předloží certifikát, který musí zařízení bez vyzvání přijmout. Zajištění automatického schválení certifikátu vyžaduje, abyste vytvořili profil důvěryhodného certifikátu, který obsahuje kořenový certifikát serveru VPN vystavený certifikační autoritou. 
+Server VPN prokáže svoji identitu tak, že předloží certifikát, který musí zařízení bez vyzvání přijmout. Potvrďte automatické schválení certifikátu vytvořte profil důvěryhodného certifikátu obsahující kořenový certifikát serveru VPN vystavený službou certifikační autority (CA). 
 
-Vyexportujte certifikát a přidejte certifikační autoritu.
+#### <a name="export-the-certificate-and-add-the-ca"></a>Vyexportujte certifikát a přidejte certifikační Autoritu
 
 1. Na serveru VPN otevřete konzolu pro správu.
-2. Zkontrolujte, že server VPN používá ověřování prostřednictvím certifikátu. 
+2. Potvrďte, že VPN server používá ověřování prostřednictvím certifikátu. 
 3. Vyexportujte soubor s důvěryhodným kořenovým certifikátem. Soubor má příponu .cer a přidáte ho při vytváření profilu důvěryhodného certifikátu.
 4. Přidejte název certifikační autority, která vystavila certifikát pro ověřování vůči serveru VPN.
-    Pokud certifikační autorita prezentovaná zařízením odpovídá jedné z certifikačních autorit uvedených na seznamu důvěryhodných certifikačních autorit na serveru VPN, server VPN úspěšně ověří zařízení.
+
+    Pokud certifikační Autorita poskytlo odpovídá certifikační Autoritu v seznamu důvěryhodných certifikačních Autorit na serveru VPN, VPN server úspěšně ověří zařízení.
 
 ## <a name="create-a-group-for-your-vpn-users"></a>Vytvoření skupiny pro uživatele sítě VPN
 
-Vytvořte nebo zvolte existující skupinu ve službě Azure AD (Azure Active Directory), která bude obsahovat členy, kteří mají přístup k síti VPN pro jednotlivé aplikace.
-
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Zvolte **Skupiny** a klikněte na **Nová skupina**.
-3. Vyberte **typ skupiny**. 
-3. Zadejte **název skupiny**. 
-4. Zadejte **popis** skupiny. 
-5. Jako **typ členství** vyberte **Přiřazeno**.
-7. V podokně **Členové** vyhledejte uživatele sítě VPN podle jména nebo e-mailové adresy.
-8. Po jednom vyberte uživatele a klikněte na **Vybrat**.
-9. Klikněte na **Vytvořit**.
+Vytvořte nebo vyberte existující skupinu ve službě Azure Active Directory (Azure AD) pro uživatele nebo zařízení, která používají VPN pro jednotlivé aplikace. Pokud chcete vytvořit novou skupinu, naleznete v tématu [přidat skupiny pro uspořádání uživatelů a zařízení](groups-add.md).
 
 ## <a name="create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
 Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportujte do profilu vytvořeného v Intune. Profil důvěryhodného certifikátu vydá pokyn zařízení s iOSem, aby automaticky důvěřovalo certifikační autoritě, kterou uvádí server VPN.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
-3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
-    1. Zadejte **název**.
-    2. Zadejte **popis**.
-    3. Jako **platformu** vyberte **iOS**.
-    4. Jako **typ profilu** vyberte **Důvěryhodný certifikát**.
-4. Klikněte na ikonu složky a vyhledejte certifikát VPN (soubor s příponou .cer), který jste vyexportovali z konzoly pro správu sítě VPN. Klikněte na **OK**.
-5. Klikněte na možnost **Vytvořit**.
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+3. Zadejte tyto vlastnosti:
+    - **Název**
+    - **Popis**
+    - **Platforma**: Vyberte **iOS**.
+    - **Typ profilu**: Vyberte **důvěryhodný certifikát**.
+4. Vyberte ikonu složky a vyhledejte certifikát VPN (soubor .cer), který jste exportovali z konzoly pro správu vaší sítě VPN. 
+5. Vyberte **OK** > **vytvořit**.
 
-    ![Vytvoření profilu důvěryhodného certifikátu](./media/vpn-per-app-create-trusted-cert.png)
+    ![Vytvoření profilu důvěryhodného certifikátu pro zařízení s Iosem v Microsoft Intune](./media/vpn-per-app-create-trusted-cert.png)
 
-## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
+## <a name="create-a-scep-or-pkcs-certificate-profile"></a>Vytvoření profilu certifikátu SCEP nebo PKCS
 
-Profil důvěryhodného kořenového certifikátu umožňuje iOSu automaticky důvěřovat serveru VPN. Certifikát SCEP poskytuje serveru VPN přihlašovací údaje z klienta VPN iOSu. Certifikát umožňuje, aby se zařízení tiše ověřilo, aniž by po uživateli zařízení s iOSem požadovalo uživatelské jméno a heslo. 
+Profil důvěryhodného kořenového certifikátu umožňuje zařízení automaticky důvěřovat serveru VPN. Certifikát SCEP nebo PKCS poskytuje přihlašovací údaje z klienta VPN Iosu na serveru sítě VPN. Tento certifikát umožňuje zařízení tiše ověřilo, aniž by vás vyzve k zadání uživatelského jména a hesla. 
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
-3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
-    1. Zadejte **název**.
-    2. Zadejte **popis**.
-    3. Jako **platformu** vyberte **iOS**.
-    4. Jako **typ profilu** vyberte **Certifikát SCEP**.
-4. Vyberte **Roky** a jako **Období platnosti certifikátu** zadejte `2`.
-5. Jako **formát názvu subjektu** vyberte **Běžný název**.
-6. Jako **alternativní název subjektu** vyberte **Hlavní název uživatele (UPN)**.
-7. Vyberte **Digitální podpis** a u možnosti **Použití klíče** vyberte **Šifrování klíče**.
-8. Jako **velikost klíče (bity)** vyberte **2048**.
-9. Klikněte na Kořenový certifikát a vyberte certifikát SCEP. Klikněte na **OK**.
-10. Do pole **Název** v části **Rozšířené použití klíče** zadejte `Client Authentication`.
-11. Do pole **Identifikátor objektu** zadejte `1.3.6.1.5.5.7.3.2`.
-12. Klikněte na **Přidat**.
-13. Zadejte ***adresu URL serveru*** a klikněte na **Přidat**.
-14. Klikněte na **OK**.
-15. Klikněte na možnost **Vytvořit**.
+Ke konfiguraci a přiřazení certifikátu ověřování klienta, přečtěte si následující články:
 
-    ![Vytvoření profilu certifikátu SCEP](./media/vpn-per-app-create-scep-cert.png)
+- [Konfigurace a správa certifikátů SCEP pomocí Intune](certificates-scep-configure.md)
+- [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)
+
+Je potřeba nakonfigurovat certifikát pro ověřování klientů. Tento parametr můžete nastavit přímo do profilů certifikátů SCEP (**rozšířené použití klíče** seznamu > **ověření klienta**). Pro PKCS nastavte ověření klienta v šabloně certifikátu v certifikační autority (CA).
+
+![Vytvoření profilu certifikátu SCEP v Microsoft Intune, včetně formát názvu subjektu, použití klíče, rozšířeného použití klíče a další](./media/vpn-per-app-create-scep-cert.png)
 
 ## <a name="create-a-per-app-vpn-profile"></a>Vytvoření profilu sítě VPN pro jednotlivé aplikace
 
-Součástí profilu sítě VPN je certifikát SCEP, který obsahuje přihlašovací údaje klienta, informace o připojení k síti VPN a příznak sítě VPN pro jednotlivé aplikace a umožní aplikaci iOSu používat funkce sítě VPN pro jednotlivé aplikace.
+Certifikát SCEP nebo PKCS pomocí přihlašovacích údajů klienta, informace o připojení k síti VPN, obsahuje profil sítě VPN a příznak sítě VPN pro jednotlivé aplikace k povolení této funkce sítě VPN pro aplikaci používají, aplikace pro iOS.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Zvolte **Konfigurace zařízení** a potom klikněte na **Profily**.
-3. Klikněte na **Vytvořit profil**. V okně **Vytvořit profil**:
-    1. Zadejte **název**.
-    2. Zadejte **popis**.
-    3. Jako **platformu** vyberte **iOS**.
-    4. Jako **typ profilu** vyberte **VPN**.
-4. Vyberte **Základní síť VPN**. V okně **Základní síť VPN**:
-    1. Zadejte **název připojení**.
-    2. Zadejte **IP adresu nebo plně kvalifikovaný název domény**.
-    3. Jako **metodu ověřování** vyberte **Certifikáty**.
-    4. V části **Ověřovací certifikát** vyberte certifikát SCEP a klikněte na **OK**.
-    5. Jako **typ připojení** vyberte svou síť VPN.
-    6. V případě potřeby nakonfigurujte atributy sítě VPN.
-    7. Zvolte, že se má **dělené tunelové propojení zakázat**.
-5. Klikněte na **Automatické připojení VPN**. V okně **Automatické připojení VPN**:
-    1. Jako **typ automatické sítě VPN** vyberte **VPN pro jednotlivé aplikace**.
-    2. Zadejte adresu URL sítě VPN a klikněte na **Přidat**.
-    3. Klikněte na **OK**.
-6. Klikněte na **OK**.
-7. Klikněte na možnost **Vytvořit**.
+1. V **Intune**vyberte **konfigurace zařízení** > **profily** > **vytvořit profil**. 
+2. Zadejte tyto vlastnosti: 
+    - **Název**
+    - **Popis**
+    - **Platforma**: Vyberte **iOS**.
+    - **Typ profilu**: Vyberte **VPN**.
+3. V **typ připojení**, vyberte svou aplikaci klienta VPN.
+4. Vyberte **Základní síť VPN**. [nastavení sítě VPN iOS](vpn-settings-ios.md) uvádí a popisuje všechna nastavení. Když používáte VPN pro jednotlivé aplikace, nezapomeňte že nastavit následující vlastnosti, jak je uvedeno: 
+    
+    - **Metoda ověřování**: Vyberte **certifikáty**. 
+    - **Certifikát pro ověřování**: Vyberte existující certifikát SCEP nebo PKCS > **OK**.      
+    - **Dělené tunelové propojení**: Vyberte **zakázat** přinutit veškerý provoz směrem k pomocí tunelového připojení sítě VPN při připojení k síti VPN je aktivní. 
 
-    ![Vytvoření profilu sítě VPN pro jednotlivé aplikace](./media/vpn-per-app-create-vpn-profile.png)
+      ![V profilu sítě VPN pro aplikaci zadejte připojení, IP adresa nebo plně kvalifikovaný název domény, metodu ověřování a rozdělení tunning v Microsoft Intune](./media/vpn-per-app-create-vpn-profile.png)
 
+    Informace o dalších nastaveních najdete v tématu [nastavení sítě VPN iOS](vpn-settings-ios.md).
+
+5. Vyberte **automatické připojení VPN** > **typ Automatické sítě VPN** > **VPN pro jednotlivé aplikace**
+
+    ![V Intune nastavte automatické připojení VPN na VPN pro jednotlivé aplikace na zařízeních s Iosem](./media/vpn-per-app-automatic.png)
+
+6. Vyberte **OK** > **OK** > **vytvořit**.
 
 ## <a name="associate-an-app-with-the-vpn-profile"></a>Přidružení aplikace k profilu sítě VPN
 
 Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD k profilu.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Vyberte **Klientské aplikace**.
-4. Klikněte na **Aplikace**.
-5. Ze seznamu aplikací vyberte požadovanou aplikaci.
-6. Klikněte na **Přiřazení**.
-7. Klikněte na **Přidat skupinu**.
-8. Jako **Typ přiřazení** vyberte v podokně **Přidat skupinu** možnost **Povinné**.
-9. Vyberte skupinu, kterou jste definovali dříve, a vyberte **Nastavit tuto aplikaci jako povinnou**.
-10. V části **VPN** zadejte definici sítě VPN.
- 
-    > [!NOTE]  
-    > Někdy se může stát, že načtení hodnoty definice sítě VPN trvá až jednu minutu. Než kliknete na **Uložit**, počkejte tři až pět minut.
+1. V **Intune** vyberte **Klientské aplikace** > **Aplikace**.
+2. Vyberte aplikaci ze seznamu > **přiřazení** > **přidat skupinu**.
+3. V **typ přiřazení**vyberte **vyžaduje** nebo **k dispozici pro zaregistrovaná zařízení**.
+4. Vyberte **zahrnutých skupin** > **vybrat skupiny, které chcete zahrnout** > vyberte skupinu [jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **vyberte**.
+5. V **VPN**, vyberte profil sítě VPN pro jednotlivé aplikace [jste vytvořili](#create-a-per-app-vpn-profile) (v tomto článku).
 
-11. Klikněte na **OK** a pak na **Uložit**.
+    ![Přiřazení aplikace k profilu sítě VPN pro jednotlivé aplikace v Microsoft Intune](./media/vpn-per-app-app-to-vpn.png)
 
-    ![Přidružení aplikace k síti VPN](./media/vpn-per-app-app-to-vpn.png)
+6. Vyberte **OK** > **Uložit**.
 
-Přidružení aplikace k profilu se odebere během dalšího ohlášení zařízení, pokud jsou splněné následující podmínky:
+Přidružení mezi aplikace a profil se odebere během další zařízení vrácení se změnami, pokud existují všechny následující podmínky:
+
 - Aplikace byla cílem záměru požadované instalace.
 - Profil a aplikace cílí na stejnou skupinu.
 - Odeberete konfiguraci sítě VPN pro jednotlivé aplikace z přiřazení aplikace.
 
-Přidružení aplikace k profilu zůstane, dokud koncový uživatel na portálu společnosti nepožádá o přeinstalaci. Platí to za předpokladu, že jsou splněné následující podmínky:
+Přidružení mezi aplikace a profil potrvá, dokud uživatel požaduje přeinstalaci z portálu společnosti, pokud existují všechny následující podmínky:
+
 - Aplikace byla cílem záměru dostupné instalace.
 - Profil a aplikace cílí na stejnou skupinu.
-- Koncový uživatel si vyžádal instalaci aplikace z Portálu společnosti, což má za následek, že aplikace a profil se nainstalují na zařízení.
+- Koncový uživatel si vyžádal instalace aplikací z portálu společnosti, což vede k aplikaci a profilu se instalují na zařízení.
 - Z přiřazené aplikace jste odebrali konfiguraci sítě VPN pro aplikaci nebo jste ji změnili.
 
 ## <a name="verify-the-connection-on-the-ios-device"></a>Ověření připojení na zařízení s iOSem
@@ -180,35 +149,16 @@ Po nastavení sítě VPN pro jednotlivé aplikace a jejím přidružení k aplik
 
 ### <a name="before-you-attempt-to-connect"></a>Než se pokusíte připojit
 
- - Ověřte, že používáte iOS 9 nebo novější.
- - Zkontrolujte, že *všechny* výše uvedené zásady nasazujete do stejné skupiny uživatelů. V opačném případě nebude síť VPN pro jednotlivé aplikace s největší pravděpodobností fungovat.  
- - Zkontrolujte, že máte nainstalovanou podporovanou aplikaci VPN od jiného výrobce. Podporují se tyto aplikace VPN:
-    - Check Point Capsule Connect
-    - Cisco AnyConnect
-    - Citrix VPN
-    - Citrix SSO
-    - F5 Access
-    - Palo Alto Networks GlobalProtect
-    - Pulse Secure
-    - SonicWall Mobile Connect
-    - Zscaler
-
-    > [!NOTE]
-    > Pokud používáte aplikaci VPN Pulse Secure, můžete použít tunelování v aplikační vrstvě nebo na úrovni paketů. U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**.
+ - Zajistěte, aby že všechny výše uvedené zásady nasazujete do stejné skupiny. V opačném případě nebude fungovat rozhraní VPN pro aplikaci.
+ - Pokud používáte aplikaci Pulse Secure VPN nebo vlastní klientskou aplikaci VPN, můžete použít aplikační vrstvy nebo tunelové propojení vrstvě paketů. U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Abyste měli jistotu, že používáte správné hodnoty v dokumentaci poskytovatele připojení VPN.
 
 ### <a name="connect-using-the-per-app-vpn"></a>Připojení pomocí sítě VPN pro jednotlivé aplikace
 
 Ověřte funkčnost bezdotykového prostředí – připojte se bez výběru sítě VPN nebo zadání svých přihlašovacích údajů. Bezdotykové prostředí znamená toto:
 
- - Zařízení vás nežádá, abyste vyjádřili důvěru serveru VPN. To znamená, že uvidíte **dynamické dialogové okno důvěryhodnosti**.
- - Nemusíte zadávat přihlašovací údaje.
- - Po klepnutí na tlačítko pro připojení se připojíte k síti VPN.
-
-Ověřte připojení na zařízení s iOSem.
-
-1. Klepněte na aplikaci VPN.
-2. Klepněte na **Připojit**.  
-Síť VPN se úspěšně připojí bez dalších výzev.
+ - Zařízení není dotaz, aby důvěřoval serveru VPN. To znamená, nezobrazí uživateli **dynamického vztahu důvěryhodnosti** dialogové okno.
+ - Uživatel nemá k zadání přihlašovacích údajů.
+ - Zařízení uživatele je připojený k síti VPN, když uživatel otevře jeden přidružené aplikace.
 
 <!-- ## Troubleshooting the per-app VPN
 
@@ -225,4 +175,4 @@ To review event logs:
 ## <a name="next-steps"></a>Další postup
 
 - Na nastavení iOSu se můžete podívat v článku [Nastavení sítě VPN pro zařízení s iOSem v Microsoft Intune](vpn-settings-ios.md).
--  Další informace o nastavení sítě VPN a Intune najdete v článku [Konfigurace nastavení sítě VPN v Microsoft Intune](vpn-settings-configure.md).
+- Další informace o nastavení sítě VPN a Intune najdete v tématu [nastavení sítě VPN v Microsoft Intune](vpn-settings-configure.md).

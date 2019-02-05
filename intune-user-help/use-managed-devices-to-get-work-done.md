@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: e067ce76046355a7da6bb785ae3302c0fc3e8bb9
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.openlocfilehash: 360715881e3d6b2f61e7bf251045fc3356c44f6b
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203141"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690678"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Pomocí spravovaných zařízení měl přístup k pracovním nebo školním prostředkům
 Microsoft Intune je systém správy zařízení, která organizacím umožňuje spravovat přístup k zařízení, aplikacím a e-mailu. Správa zařízení umožní a jiné zaměstnance a studenty, pro přístup k pracovním informacím prakticky odkudkoli na téměř jakémkoli zařízení. I v případě, že pracujete vzdáleně, zůstane zabezpečené jste a informace o vaší organizaci.
@@ -39,16 +39,9 @@ Portál společnosti Get buď:
 - Chystáte [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) , aby nastavila vaše firemní podpora nahoru.
 
 ## <a name="whats-the-difference-between-the-app-and-the-website"></a>Jaký je rozdíl mezi aplikací a webem?
-Mezi aplikací Portál společnosti a webem Portál společnosti jsou drobné rozdíly, u obou ale můžete provádět většinu stejných úloh. Úlohy, které můžete provést:
+Každá aplikace portál společnosti pro Windows 10, iOS, macOS a Android se bez problémů integruje s příslušné platformy zařízení. Na webu je přístupný z jakéhokoli zařízení a umožňuje využít možnosti stejné a univerzálního bez ohledu na to, jaké zařízení používáte. 
 
-- Registrace zařízení do správy
-- Zobrazení stavu zařízení
-- Stažení aplikací doporučených a požadovaných ve vaší organizaci
-- Přejmenování zařízení
-- Resetování PIN kódu nebo hesla k vašemu zařízení
-- Kontaktování IT oddělení s žádostí o podporu
-
-Pokud chcete zjistit, co můžete dělat pomocí webu Portál společnosti v porovnání s aplikací Portál společnosti na vašem konkrétním zařízení, zvolte jeden z následujících odkazů:
+Najdete pokyny k portálu společnosti specifické pro platformu vašeho zařízení, počínaje kroky registrace, v části na následujících odkazech:  
 
 - [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
 - [Používání zařízení s iOSem](using-your-ios-device-with-intune.md)

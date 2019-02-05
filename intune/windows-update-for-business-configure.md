@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/15/2019
+ms.date: 02/04/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.technology: ''
 ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: d0fcb021545d96fe8f5bfdf742dd4d181c91fb1a
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.openlocfilehash: 184f70aefbdc90c301ef2f97c5a3abb5ac49a4a8
+ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831560"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737481"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
@@ -167,7 +167,7 @@ Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality za
 > Když vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášení ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci.
 > Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
 
-### <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalace nejnovější aktualizace softwaru Windows 10 
+## <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalace nejnovější aktualizace softwaru Windows 10 
 Pokud na počítačích s Windows 10 najdete problém způsobující chybu, můžete se rozhodnout odinstalovat (vrátit zpět) nejnovější aktualizaci funkcí nebo nejnovější aktualizaci pro zvýšení kvality. Odinstalace aktualizace funkcí nebo kvality je dostupná jenom pro kanál pro údržbu, ve kterém se dané zařízení nachází. Při odinstalaci se aktivují zásady, které na počítačích s Windows 10 obnoví předchozí aktualizaci. Konkrétně u aktualizací funkcí je možné omezit dobu 2 až 60 dnů, po kterou lze provést odinstalaci nejnovější verze. Možnosti odinstalace aktualizací softwaru nastavíte takto:
 
 1. V Intune vyberte **Aktualizace softwaru**.

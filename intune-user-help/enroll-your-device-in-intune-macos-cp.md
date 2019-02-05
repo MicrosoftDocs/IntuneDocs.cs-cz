@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 7d45ea6d2a33db2de1d640a554b6a07ad8825109
-ms.sourcegitcommit: 8117444cfdddf6d9bdbc4ac715af8d88e72f411d
-ms.translationtype: HT
+ms.openlocfilehash: d54c778923b0d217187f6e4c70e4bc8730788fbc
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260245"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690797"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -57,7 +57,7 @@ V této části najdete postup registrace zařízení s macOS verze OS X El Capi
 
 4. Na stránce __Zařízení__ se zobrazí buď seznam spravovaných zařízení, nebo banner. Tato možnost závisí na tom, jestli už spravované zařízení máte, nebo nikoliv. 
     * Pokud chcete přidat zařízení, které není v seznamu, vyberte banner s textem **Klepněte sem a řekněte nám, které zařízení používáte, nebo přidejte nové.**
-    * Pokud žádné zařízení nemáte, zobrazí se text **Nemáte žádná spravovaná zařízení. Toto zařízení můžete přidat tak, že klepnete sem.** Přidejte zařízení kliknutím na banner.  
+    * Pokud nemáte k dispozici žádná zařízení, přečte hlavičky: **Nemáte žádná spravovaná zařízení. Toto zařízení můžete přidat tak, že klepnete sem.** Přidejte zařízení kliknutím na banner.  
 
      ![Snímek obrazovky se stránkou Zařízení s červeným obdélníkem okolo banneru, který zvýrazňuje možnost, na niž má uživatel kliknout](./media/CP-enroll-MACOS-1808.png)  
 5.  Proveďte jeden z kroků níže podle toho, která zpráva se vám na Portálu společnosti zobrazuje.  
@@ -73,7 +73,7 @@ V této části najdete postup registrace zařízení s macOS verze OS X El Capi
 
 7. Po ukončení instalačního programu přejděte na **Launchpad** a otevřete **Portál společnosti**.  
 
-8. Zařízení s macOS vás vyzve k potvrzení, že chcete otevřít aplikaci Portál společnosti. Klikněte na **Otevřít**.  
+8. Zařízení s macOS vás vyzve k potvrzení, že chcete otevřít aplikaci Portál společnosti. Klikněte na tlačítko **otevřít**.  
 
    > [!TIP]
    > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Pokud váš počítač odmítá aplikaci Portál společnosti otevřít, [vypněte Gatekeeper](https://support.apple.com/HT202491). Potom aplikaci otevřete.
@@ -93,4 +93,11 @@ Právě profil správy definuje připojení kanálu MDM. Pokud je profil správy
 
 Navíc vzhledem k tomu, že tyto ostatní profily nevyžadují jednotlivé ověřování, rychleji se generují a do zařízení doručují. 
 
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+## <a name="updating-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
+
+Aktualizace aplikace Portál společnosti se provádí stejným způsobem jako aktualizace kterékoli jiné aplikace Office, tedy přes Microsoft AutoUpdate pro Mac. Další informace o [aktualizaci aplikací Microsoftu pro macOS najdete tady](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+
+## <a name="next-steps"></a>Další kroky  
+Potřebujete další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+
+

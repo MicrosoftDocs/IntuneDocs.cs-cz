@@ -2,10 +2,10 @@
 title: Použijte základní nastavení zabezpečení v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Přidat nebo nakonfigurovat nastavení doporučené skupiny zabezpečení k ochraně uživatelů a dat na zařízeních pomocí Microsoft Intune pro správu mobilních zařízení. Povolit nástroj bitlocker, konfigurace rozšířené ochrany před internetovými útoky programu Windows Defender, řídit aplikaci Internet Explorer, použijte SmartScreen, nastavení místní zásady zabezpečení, vyžadovat heslo, blokovat soubory stažené z Internetu a další.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: afc5faff7ea06bca07c06aadb887aa199739c6c0
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.openlocfilehash: 8102ab88e878f7976ab7946f67080c4d4f23d6b1
+ms.sourcegitcommit: dde9e1e1d15c412751a186410c2a04974ff1b102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229921"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55690712"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Vytvoření standardních hodnot zabezpečení Windows 10 v Intune
 
-Základní nastavení zabezpečení je funkce ve verzi preview, která je k dispozici pro zařízení s Windows 10 a novější. Tato funkce zahrnuje mnoho nastavení Intune k zabezpečení a ochrany uživatelů a zařízení. Tato nastavení také automaticky nastaví na hodnoty doporučení zabezpečení týmy. Například Směrný plán automaticky povoluje nástroj BitLocker, automaticky vyžaduje heslo k odemknutí zařízení, automaticky zakáže základní ověřování a další.
+Základní nastavení zabezpečení je funkce ve verzi preview, která je k dispozici pro zařízení s Windows 10 a novější. Tato funkce zahrnuje mnoho nastavení podporovaných službou Intune, můžete použít k zabezpečení a ochrany uživatelů a zařízení. Tato nastavení také automaticky nastaví na hodnoty doporučení zabezpečení týmy. Například Směrný plán automaticky povoluje nástroj BitLocker, automaticky vyžaduje heslo k odemknutí zařízení, automaticky zakáže základní ověřování a další.
 
 Tato funkce platí pro:
 
@@ -94,6 +94,12 @@ Po vytvoření profilu je připraven k přiřazení na uživatele, zařízení a
 
 Po uložení, profil, který se vloží do zařízení, při vracení se pomocí Intune. Ano k tomu může dojít okamžitě.
 
+## <a name="available-security-baselines"></a>Směrné plány zabezpečení k dispozici  
+
+Následující standardní hodnoty zabezpečení jsou páskových pro použití s Intune.
+- **Ve verzi Preview: Směrný plán zabezpečení MDM**
+  - Verze: [. Října 2018](security-baseline-settings-windows.md)
+
 ## <a name="q--a"></a>Dotazy a odpovědi
 
 #### <a name="why-these-settings"></a>Proč tato nastavení?
@@ -117,5 +123,5 @@ Přísně vzato není. Bezpečnostní tým Microsoftu consults organizacím, jak
 - Migrace z místní zásady skupiny služby Active Directory na čistě cloudové řešení pomocí Azure Active Directory (AD) pomocí Microsoft Intune se na cestu. Abychom pomohli, jsou doprovodné publikování objekty zásad skupiny pro hybridní AD a Azure zařízení připojených k doméně AD. Tato zařízení můžete získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z řadičů domény s místními podle potřeby.
 
 ## <a name="next-steps"></a>Další postup
-
-Zkontrolujte stav a monitorování [směrného plánu a profil](security-baselines-monitor.md).
+- Zobrazení [nastavení standardních hodnot zabezpečení Windows](security-baseline-settings-windows.md) podporovaných službou Intune.  
+- Zkontrolujte stav a monitorování [směrného plánu a profil](security-baselines-monitor.md).
