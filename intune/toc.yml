@@ -231,19 +231,19 @@ items:
       href: troubleshoot-device-enrollment-in-intune.md
   - name: Nastavit dodržování předpisů zařízením
     items:
-    - name: Přehled dodržování předpisů zařízením
+    - name: Přehled dodržování předpisů
       href: device-compliance-get-started.md
-    - name: Vytvoření zásad pro Android
+    - name: Dodržování předpisů pro Android
       href: compliance-policy-create-android.md
-    - name: Vytvoření zásady profilu Androidu Enterprise
+    - name: Dodržování předpisů pro Android Enterprise
       href: compliance-policy-create-android-for-work.md
-    - name: Vytvoření zásady pro povolení služeb Google Play Protect
+    - name: Povolení služby Google Play Protect
       href: compliance-policy-create-google-play-protect.md
-    - name: Vytvoření zásad pro iOS
+    - name: Dodržování předpisů pro iOS
       href: compliance-policy-create-ios.md
-    - name: Vytvoření zásad pro Windows
+    - name: Dodržování předpisů pro Windows
       href: compliance-policy-create-windows.md
-    - name: Zásady založené na poloze
+    - name: Dodržování předpisů podle umístění
       href: use-network-locations.md
     - name: Evaluate Policy (Vyhodnotit zásadu)
       href: policy-evaluate.md
@@ -251,39 +251,39 @@ items:
       href: actions-for-noncompliance.md
     - name: Monitorování dodržování předpisů zařízením
       href: compliance-policy-monitor.md
-  - name: Konfigurace zařízení
+  - name: Konfigurace nastavení zařízení
     items:
-    - name: Konfigurace zařízení pomocí profilů
+    - name: Přehled konfigurace zařízení
       href: device-profiles.md
     - name: profily zařízení
       href: device-profile-create.md
     - name: Šablony pro správu
       href: administrative-templates-windows.md
-    - name: Funkce zařízení (iOS a macOS)
+    - name: Funkce zařízení
       href: device-features-configure.md
-    - name: Omezení zařízení
+    - name: Omezení nastavení a funkcí zařízení
       href: device-restrictions-configure.md
-    - name: Optimalizace doručení
+    - name: Doručování aktualizací
       href: delivery-optimization-windows.md
-    - name: Upgrade edice a přepínač režimů
+    - name: Upgradování edicí a režim S
       href: edition-upgrade-configure-windows-10.md
-    - name: Nastavení e-mailu
+    - name: Konfigurace e-mailu
       href: email-settings-configure.md
-    - name: Nastavení veřejného terminálu
+    - name: Povolení beznabídkového režimu
       href: kiosk-settings.md
-    - name: Nastavení sítě VPN
+    - name: Přidání připojení VPN
       href: vpn-settings-configure.md
       items:
       - name: VPN pro aplikaci pro Android
         href: android-pulse-secure-per-app-vpn.md
       - name: VPN pro aplikaci pro iOS
         href: vpn-setting-configure-per-app.md
-    - name: Nastavení Wi-Fi
+    - name: Přidání bezdrátové sítě Wi-Fi
       href: wi-fi-settings-configure.md
       items:
       - name: Wi-Fi s předsdíleným klíčem
         href: wi-fi-profile-shared-key.md
-    - name: Nastavení vzdělávání
+    - name: Aplikace Zkuste si test ve vzdělávacím profilu
       href: education-settings-configure.md
     - name: Sdílená zařízení s více uživateli
       href: shared-user-device-settings.md
@@ -295,7 +295,7 @@ items:
       href: device-profile-assign.md
     - name: Monitorování profilů
       href: device-profile-monitor.md
-    - name: Řešení potíží s profily
+    - name: Běžné otázky a odpovědi
       href: device-profile-troubleshoot.md
   - name: Ochrana dat zařízení
     items:
@@ -854,6 +854,8 @@ items:
       items:
       - name: Referenční dokumentace k rozhraní Intune API
         href: https://developer.microsoft.com/graph/docs/api-reference/beta/resources/intune_graph_overview
+    - name: Rozhraní Graph API používaná ke konfiguraci zařízení
+      href: graph-apis-used-by-intune-device-configuration-windows.md
 - name: Prostředky
   items:
   - name: Průvodce dokumentací k Microsoft Intune
@@ -949,9 +951,9 @@ items:
       href: data-outside-protect.md
     - name: Zabránění únikům dat na nespravovaných zařízeních
       href: data-leak-prevention.md
-ms.openlocfilehash: 9ba87d149285aea0e39e790f7e620bba52bb47bd
-ms.sourcegitcommit: 36e41b5164a72bf54c80a9f5ad054f77b0e8c07e
+ms.openlocfilehash: 456d3f4205ca9e24c4358c97a3a2f6a33d1a421f
+ms.sourcegitcommit: 4a1ac07efd66b45c1435649bcd7215adbd84898f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55504540"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55645185"
