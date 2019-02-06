@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,18 +13,18 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: e297169757f1bcc703ce698302ce6f7129104827
-ms.sourcegitcommit: 0142020a7cd75348c6367facf072ed94238e667f
+ms.openlocfilehash: 6613b19102aac752e9717fc376d99a178fe9dd3c
+ms.sourcegitcommit: ef85e28df802c974664305270c4a8571c0bb47b9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55230116"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742958"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
 Tento článek uvádí a popisuje všechny různých nastaveních, pomocí kterých můžete řídit na Windows 10 a novější zařízení. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, přizpůsobení zamykací obrazovka, použijte program Windows Defender a další.
 
-Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené na zařízení s Windows 10.508
+Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené na zařízení s Windows 10.
 
 > [!Note]
 > Některé možnosti nejsou v některých verzích Windows dostupné.
@@ -70,6 +70,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Účet Microsoft**: Umožňuje uživateli přidružit k zařízení účet Microsoft.
 - **Účet od jiných výrobců**: Umožňuje přidat do zařízení e-mailové účty, které nejsou přidružené k účtu Microsoft.
 - **Synchronizace nastavení pro účet Microsoft**: Povolit nastavení zařízení a aplikací, které jsou přidružené k účtu Microsoft k synchronizaci mezi zařízeními.
+- **Microsoft Account Pomocníka pro přihlášení**: Zvolte **zakázat** koncovým uživatelům zabránit řízení služby Pomocníka pro přihlášení společnosti Microsoft (wlidsvc), jako je například ručně zastavení nebo spuštění služby. Pokud je nastavena na **Nenakonfigurováno**, službu wlidsvc NT používá výchozí operační systém (OS), což může umožnit koncovým uživatelům spouštět a zastavovat služby. Tato služba používá operační systém umožňující uživatelům umožní přihlásit ke svému účtu Microsoft.
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
@@ -192,7 +193,7 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
 - **Oznámení Centra akcí (jenom mobilní verze)**: Oznámení Centra akcí vám umožňuje zobrazit na zamykací obrazovce zařízení (jenom Windows 10 Mobile).
-- **Obrázek adresa URL zamknutou obrazovku (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Uživatelé nemohou změnit toto nastavení.
+- **Obrázek adresa URL zamknutou obrazovku (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu JPEG, který se použije jako tapeta zamknuté obrazovky Windows. Toto nastavení omezí na obrázku. Obrázek nelze později změnit.
 - **Uživatel Konfigurovatelný časový limit obrazovky (jenom mobilní verze)**: Umožňuje uživatelům konfigurovat časový úsek 
 - **Cortana na zamknuté obrazovce (jenom desktopové verze)**: Nepovolit uživatelům interakci s Cortanou, když je zařízení na zamykací obrazovce (jenom Windows 10 desktop).
 - **Informační zprávu oznámení na uzamčené obrazovce**: Blokovat oznámení z zobrazuje na zamykací obrazovce zařízení.
@@ -313,7 +314,6 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
   - **Zakázat opakované použití předchozích hesel**: Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)**: Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
   - **Jednoduchá hesla**: Umožňuje povolit použití jednoduchých hesel, jako jsou 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
-- **Šifrování**: Povoluje šifrování na cílových zařízeních.
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 
