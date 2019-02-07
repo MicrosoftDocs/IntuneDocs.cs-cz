@@ -15,12 +15,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 65a461928c377dd4a674f8f3f2eeeef148ab56b2
-ms.sourcegitcommit: 912aee714432c4a1e8efeee253ca2be4f972adaa
+ms.openlocfilehash: b0b2c7fb0f4122f8651b773f4039be43fc5e2c6b
+ms.sourcegitcommit: fddf90a6aa17b09005723653a0c9a520856bb2ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54316895"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55781483"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -50,7 +50,7 @@ Xamarinové vazby sady Microsoft Intune App SDK umožňují začlenit do vašich
 
 Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přijímají zásady ochrany aplikací Intune na zařízeních zaregistrovaných ve správě mobilních zařízení (MDM) Intune i na neregistrovaných zařízeních.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadavky
 
 Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
@@ -88,68 +88,87 @@ Pokud vaše aplikace je již nakonfigurována pro použití ADAL nebo MSAL a má
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
 
-U aplikací pro Android založených na Xamarinu, které nevyužívají architekturu uživatelského rozhraní, si přečtěte téma [Intune APP SDK pro Android – Příručka vývojáře](app-sdk-android.md) a postupujte podle něj. Vaše založených na Xamarinu pro aplikaci pro Android, budete muset nahradit třídy, metody a aktivity jejich ekvivalentem MAM na základě [třídy a metody nahrazení tabulky](app-sdk-android.md#class-and-method-replacements) v Průvodci najdete. Pokud vaše aplikace nedefinuje třídu `android.app.Application`, budete ji muset vytvořit a zajistit, abyste dědili z `MAMApplication`. Hodnoty ADAL konfigurace se předávají SDK prostřednictvím metadat AndroidManifest. Přečtěte si dokumentaci ke [konfiguraci knihovny ADAL pro vaši aplikaci](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
+1. Do svého projektu Xamarin.Android přidejte [balíček NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android).
+    1. Pro aplikaci Xamarin.Forms, přidejte [balíčku Microsoft.Intune.mam.remapper.Tasks, kvůli NuGet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) do projektu Xamarin.Android. 
+2. Postupujte podle obecných kroků potřebných k [integraci sady Intune App SDK](app-sdk-android.md) do mobilní aplikace pro Android při odkazování na tento dokument pro další podrobnosti.
 
 ### <a name="xamarinandroid-integration"></a>Integrace Xamarin.Android
 
-1. Do svého projektu Xamarin.Android přidejte nejnovější verzi [balíčku NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android). Ten vám poskytne potřebné odkazy, abyste mohli aplikaci v Intune povolit.
+Úplný přehled pro integraci sady Intune App SDK najdete v [Microsoft Intune App SDK pro Android developer průvodce](app-sdk-android.md). Přečtěte si v příručce a integrace s aplikací Xamarin sady Intune App SDK v následujících částech jsou určeny zvýrazněte rozdíly mezi implementací pro nativní aplikace pro Android vyvinuté v jazyce Java a Xamarin aplikace vyvinuté v C#. Tyto části by se měla zpracovávat jako doplňkové a nemůže fungovat jako náhradu přečtete průvodce v celém rozsahu.
 
-2. Přečtěte si celou [příručku pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), a zvláštní pozornost věnujte těmto částem:
+#### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Přejmenované metody](app-sdk-android.md#renamed-methods)
+V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `OnCreate()` a volání `base.OnCreate()` přepsat `OnMAMCreate()` a volat `base.OnMAMCreate()`.
 
-    1. [Celá část věnovaná nahrazením tříd a metod](app-sdk-android.md#class-and-method-replacements). 
-    2. [Část věnovaná MAMApplication](app-sdk-android.md#mamapplication). Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
-    3. [Část věnovaná integraci ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal), pokud se vaše aplikace ověřuje ve službě AAD. 
-    4. [Část věnovaná registraci MAM-WE](app-sdk-android.md#app-protection-policy-without-device-enrollment), pokud plánujete, že vaše aplikace bude získávat zásady ze služby MAM.
+#### <a name="mam-applicationapp-sdk-androidmdmamapplication"></a>[Aplikace MAM](app-sdk-android.md#mamapplication)
+Musíte definovat aplikaci `Android.App.Application` třídu odvozenou od `MAMApplication`. Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
+```csharp
+    [Application]
+    class TaskrApp : MAMApplication
+    {
+    public TaskrApp(IntPtr handle, JniHandleOwnership transfer)
+        : base(handle, transfer) { }
+```
 
-> [!NOTE]
-> Když se ve vazbách `Microsoft.Intune.MAM.Xamarin.Android` pokoušíte najít odpovídající rozhraní API z [příručky pro vývojáře, kteří používají sadu Intune App SDK pro Android](app-sdk-android.md), nebo se z této příručky pokoušíte převést fragmenty kódu, mějte na paměti, že xamarinový generátor vazeb v rozhraní API Androidu podstatně mění následující položky:
-> * Všechny identifikátory se převedou na formát PascalCase (com.foo.bar -> Com.Foo.Bar).
-> * Všechny operace get/set se převedou na operace vlastností (např. Foo.getBar() -> Foo.Bar, Foo.setBar("zap") -> Foo.Bar = "zap").
-> * Všechna rozhraní mají před názvem znak „I“ (FooInterface -> IFooInterface).
+#### <a name="enable-features-that-require-app-participationapp-sdk-androidmdenable-features-that-require-app-participation"></a>[Povolení funkcí, které vyžadují zapojení aplikace](app-sdk-android.md#enable-features-that-require-app-participation)
+Příklad: Určení, zda je aplikace vyžaduje PIN kód
+```csharp
+MAMPolicyManager.GetPolicy(currentActivity).IsPinRequired;
+```
+Příklad: Určení primárního uživatele Intune
+```csharp
+IMAMUserInfo info = MAMComponents.Get<IMAMUserInfo>();
+return info?.PrimaryUser;
+```
+Příklad: Určí, zda ukládání na zařízení nebo cloudové úložiště je povolený.
+```csharp
+MAMPolicyManager.GetPolicy(currentActivity).GetIsSaveToLocationAllowed(SaveLocation service, String username);
+```
+
+#### <a name="register-for-notifications-from-the-sdkapp-sdk-androidmdregister-for-notifications-from-the-sdk"></a>[Registrace k oznámením z SDK](app-sdk-android.md#register-for-notifications-from-the-sdk)
+Vaše aplikace musí k oznámením z SDK registrovat vytvořením `MAMNotificationReceiver` a její registrací pomocí `MAMNotificationReceiverRegistry`. To se uvede příjemce a typ požadovaného v oznámení `App.OnMAMCreate`, jak ukazuje následující příklad:
+```csharp
+public override void OnMAMCreate()
+{
+    // Register the notification receivers
+    IMAMNotificationReceiverRegistry registry = MAMComponents.Get<IMAMNotificationReceiverRegistry>();
+    foreach (MAMNotificationType notification in MAMNotificationType.Values())
+    {
+    registry.RegisterReceiver(new ToastNotificationReceiver(this), notification);
+    }
+    ...
+```
+
+#### <a name="mam-enrollment-managerapp-sdk-androidmdmamenrollmentmanager"></a>[Správce registrace MAM](app-sdk-android.md#mamenrollmentmanager)
+```csharp
+IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
+```
 
 ### <a name="xamarinforms-integration"></a>Integrace Xamarin.Forms
 
-**Kromě provedení všech výše uvedených kroků** poskytujeme pro aplikace `Xamarin.Forms` balíček `Microsoft.Intune.MAM.Remapper`. Tento balíček za vás nahradí třídy a vloží třídy `MAM` do hierarchie běžně používaných tříd `Xamarin.Forms`, například `FormsAppCompatActivity` a `FormsApplicationActivity`, abyste tyto třídy mohli i nadále používat tak, že budete poskytovat přepsání ekvivalentních funkcí MAM, jako jsou `OnMAMCreate` a `OnMAMResume`. Pokud ho chcete použít, postupujte takto:
-
-1.  Přidejte do svého projektu balíček NuGet [Microsoft.Intune.MAM.Remapper.Tasks](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks). Tím se automaticky přidají xamarinové vazby sady Intune APP SDK, pokud jste je ještě nezahrnuli.
-
-2.  Přidejte volání `Xamarin.Forms.Forms.Init(Context, Bundle)` ve funkci `OnMAMActivity` třídy `MAMApplication`, kterou jste vytvořili v kroku 2.2 výše. To je nutné, protože se správou přes Intune se aplikace může spustit i na pozadí.
+Pro `Xamarin.Forms` aplikace uvádíme `Microsoft.Intune.MAM.Remapper` balíček automaticky provádět náhradní třída MAM vložením `MAM` třídy do hierarchie tříd běžně používaných `Xamarin.Forms` třídy. 
 
 > [!NOTE]
-> Tato operace znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování Intellisense, a proto možná budete muset po prvním spuštění nástroje pro přemapování restartovat Visual Studio, aby funkce Intellisense správně rozpoznala změny. 
+> Kromě toho provést integraci Xamarin.Android výše popsané je integrace Xamarin.Forms.
 
-## <a name="requiring-intune-app-protection-policies-in-order-to-use-your-xamarin-based-android-lob-app-optional"></a>Vyžadování zásad ochrany aplikací Intune k tomu, aby bylo možné použít obchodní aplikaci pro Android, která je založená na Xamarinu (volitelné) 
+Jakmile Remapper se přidá do vašeho projektu je potřeba provést nahrazení ekvivalentem MAM. Například `FormsAppCompatActivity` a `FormsApplicationActivity` můžete nadále používat v aplikaci k dispozici přepsání `OnCreate` a `OnResume` jsou nahrazeny ekvivalenty MAM `OnMAMCreate` a `OnMAMResume` v uvedeném pořadí.
 
-Následující část obsahuje postup, který zajistí, aby obchodní aplikace pro Android, které jsou založené na Xamarinu, mohli na svém zařízení používat jenom uživatelé s ochranou Intune. 
-    
-### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
-Tyto pokyny se týkají všech aplikací pro Android a Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+```csharp
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnMAMCreate(Bundle savedInstanceState)
+        {
+            base.OnMAMCreate(savedInstanceState);
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            LoadApplication(new App());
+        }
+```
+Pokud nejsou provedeny nahrazení může až když provedete nahrazení dojít následující chyby kompilace:
+* [CS0239 Chyba kompilátoru](https://docs.microsoft.com/dotnet/csharp/misc/cs0239). Tato chyba obvykle nastává v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
+To je očekáváno, protože když Remapper změní dědičnosti tříd Xamarin, některé funkce pak bude možné `sealed` a přepsat místo toho se přidá nová varianta MAM.
+* [Chyba kompilátoru CS0507](https://docs.microsoft.com/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba obvykle nastává v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Dědičnost některé třídy Xamarin změně Remapper určitých členských funkcí se změní na `public`. Pokud některý z těchto funkcí přepíšete, budete muset změnit tyto modifikátory přístupu pro ty funkci přepsání hodnot a být `public` také.
 
-1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal).
-> [!NOTE] 
-> Termín „ID klienta“ je shodný s termínem „ID aplikace“ z portálu Azure Portal, který se váže na vaši aplikaci. 
-* Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
-
-2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />```
-> [!NOTE] 
-> Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
-
-3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu: ```xml <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />```
-> [!NOTE] 
-> Tím vynutíte, aby si aplikace na zařízení stáhly Portál společnosti a před použitím provedly postup výchozí registrace.
-
-### <a name="working-with-adal"></a>Práce s ADAL
-Tyto pokyny se týkají požadavku pro aplikace .NET/Xamarin, u kterých chcete při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
-
-1. Proveďte všechny kroky, které jsou uvedené v dokumentaci pro ADAL v části o [zprostředkovaném ověřování pro Android](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet/tree/dev/adal#brokered-authentication-for-android).
-
-## <a name="potential-compilation-errors"></a>Potenciální chyby při kompilaci
-Tady jsou některé z nejčastěji viděli kompilace chyby při vývoji Xamarin aplikace založené na.
-
-* [CS0239 Chyba kompilátoru](https://docs.microsoft.com/en-us/dotnet/csharp/misc/cs0239): Tato chyba obvykle nastává v tomto formuláři ``'MainActivity.OnCreate(Bundle)': cannot override inherited member 'MAMAppCompatActivityBase.OnCreate(Bundle)' because it is sealed``.
-Když remapper změní dědičnosti tříd Xamarin, některé funkce pak bude možné `sealed` a přepsat místo toho se přidá nová varianta MAM. Jednoduše přejmenovat je přepsání jak je popsáno [tady](https://docs.microsoft.com/en-us/intune/app-sdk-android#renamed-methods). Pro instanci `MainActivity.OnCreate()` bude přejmenován na `MainActivity.OnMAMCreate()`
-
-* [Chyba kompilátoru CS0507](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/cs0507): Tato chyba obvykle nastává v tomto formuláři ``'MyActivity.OnRequestPermissionsResult()' cannot change access modifiers when overriding 'public' inherited member ...``. Jak nástroj remapper změní některé třídy Xamarin dědičnost, některé z členské funkce se změní na `public`. Pokud některý z těchto funkcí přepíšete, může být nutné změnit tyto přepsání bude `public` také.
+> [!NOTE]
+> Remapper přepíše závislost, kterou používá Visual Studio pro automatické dokončování IntelliSense. Proto budete muset znovu načíst a znovu sestavte projekt, když se přidá Remapper technologie IntelliSense správně rozpoznat změny.
 
 ## <a name="support"></a>Podpora
 Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na zástupce podpory Microsoft a požádejte ho o otevření lístku podpory a vytvoření problému na [stránce problémů s Githubem](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), abychom vám mohli co nejrychleji pomoci. 

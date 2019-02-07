@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2018
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7cb7c23e673c9e0c074f45991333fde9bfc8e930
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.openlocfilehash: 50338c64960563eb15b70eacf7d47109fc6fc704
+ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186176"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760952"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -31,10 +31,10 @@ Zařízení spravovaná pomocí Intune je možné spravovat vzdáleně pomocí [
 
 - Správce Intune musí mít na portálu Azure Portal tyto [role Intune](role-based-access-control.md):  
 
-    - **Aktualizovat vzdálenou pomoc**: Umožňuje správcům upravit nastavení konektoru TeamVieweru.
-    - **Požádat o vzdálenou pomoc**: Umožňuje správcům zahájit pro libovolného uživatele novou relaci vzdálené pomoci. Uživatele s touto rolí neomezuje žádná role Intune, která je v daném rozsahu. Uživatelé nebo skupiny zařízení, kteří mají přiřazenou roli Intune v rámci rozsahu, si také můžou vyžádat vzdálenou pomoc. 
+    - **Aktualizovat vzdálenou pomoc**: Umožňuje správcům upravit nastavení konektoru pro TeamViewer
+    - **Požádat o vzdálenou pomoc**: Umožňuje správcům zahájit novou relaci vzdálené pomoci pro libovolného uživatele. Uživatele s touto rolí neomezuje žádná role Intune, která je v daném rozsahu. Uživatelé nebo skupiny zařízení, kteří mají přiřazenou roli Intune v rámci rozsahu, si také můžou vyžádat vzdálenou pomoc. 
 
-- Účet [TeamViewer](https://www.teamviewer.com) s přihlašovacími údaji
+- A [TeamViewer](https://www.teamviewer.com) účtu s přihlašovacími údaji. Integrace se službou Intune můžou podporovat pouze některé licence Teamvieweru. Pro konkrétní potřeby TeamViewer, naleznete v tématu [partnera integrace TeamViewer: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune vytvářet relace TeamVieweru, číst data služby Active Directory a uložit přístupový token účtu TeamVieweru.
 

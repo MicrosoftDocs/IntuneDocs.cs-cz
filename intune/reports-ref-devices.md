@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 3993cb4e7ccbc04ccc1d341a9bd72594948f3262
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: 98c0dafc3430387242bee93d8536cb32151f9a96
+ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297515"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55761088"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
@@ -214,7 +214,10 @@ Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním v
 |---------|------------|--------|
 | ownerTypeID |Jedinečný identifikátor typu vlastníka. | |
 | ownerTypeKey |Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč. | |
-| ownerTypeName |Představuje typ vlastníka zařízení:  <br>Společnost – zařízení je ve vlastnictví společnosti. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Společnost, Osobní, Neznámé |
+| ownerTypeName |Představuje typ vlastníka zařízení:  <br>Firemní – zařízení je ve vlastnictví společnosti. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Podnikové osobní, neznámé |
+
+> [!Note]  
+> Pro `ownerTypeName` v Azure AD při vytváření dynamické skupiny zařízení, je nutné nastavit hodnotu filtru `deviceOwnership` jako `Company`. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="mdmstatuses"></a>MdmStatuses
 

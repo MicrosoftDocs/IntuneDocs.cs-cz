@@ -16,12 +16,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 2eae4ea2bfabe1b41af88ae34b81fbf12ef5f9d9
-ms.sourcegitcommit: e9ba1280b95565a5c5674b825881655d0303e688
+ms.openlocfilehash: a2a832e773a1a2fb413bfbc761d93988f2230ec7
+ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54297498"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55761071"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -505,7 +505,10 @@ Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastni
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Jedinečný identifikátor typu vlastníka.                                                                                                                                               |                            |
 | ownerTypeKey  | Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč                                                                                                       |                            |
-| ownerTypeName | Představuje typ vlastníka zařízení:  Společnost – zařízení je ve vlastnictví společnosti.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Společnost, Osobní, Neznámé |
+| ownerTypeName | Představuje typ vlastníka zařízení:  Firemní – zařízení je ve vlastnictví společnosti.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Podnikové osobní, neznámé |
+
+> [!Note]  
+> Pro `ownerTypeName` filtru v Azure AD při vytváření dynamické skupiny zařízení, je potřeba nastavit hodnotu `deviceOwnership` jako `Company`. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.

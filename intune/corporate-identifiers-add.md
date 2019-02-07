@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: ae4691b21b9728a28f9cac0ae0af7fd42a8bdbde
-ms.sourcegitcommit: 6f2f2fa70f4e47fa5ad2f3c536ba7116e1bd1d05
+ms.openlocfilehash: 54282789f4a9b335e2a83232d6dc1fb1000179a9
+ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55199434"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55761054"
 ---
 # <a name="identify-devices-as-corporate-owned"></a>Identifikace zařízení jako vlastněných společností
 
@@ -66,7 +66,7 @@ V textovém editoru vypadá soubor .csv takhle:
 ```
 
 > [!IMPORTANT]
-> Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud importujete kód IMEI, který ale není kódem IMEI v inventáři služby Intune, označí se zařízení jako osobní, a ne jako firemní. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
+> Některá zařízení s Androidem mají více kódů IMEI. Intune dokáže přečíst jen jeden kód IMEI na každé zaregistrované zařízení. Pokud naimportujete čísla IMEI, ale není kódem IMEI v inventáři služba Intune, označí se zařízení jako osobní zařízení místo zařízení vlastněných společností. Pokud importujete více kódů IMEI pro jedno zařízení, zobrazí se u kódů, které nejsou v inventáři, stav registrace **Neznámý**.<br>
 >Všimněte si také: Sériová čísla androidu nemusí být jedinečná nebo existovat. Pokud chcete zjistit, jestli je sériové číslo spolehlivým identifikátorem zařízení, obraťte se na dodavatele zařízení.
 >Sériová čísla, která službě Intune oznámí zařízení, se nemusí shodovat se zobrazenými identifikátory v nabídkách zařízení Nastavení/ O zařízení. Ověřte si typ sériového čísla oznámeného výrobcem zařízení.
 >Pokus o nahrání souborů se sériovými čísly, které obsahují tečky (.), způsobí selhání nahrávání. Sériová čísla s tečkami nejsou podporovaná.

@@ -17,14 +17,14 @@ ms.reviewer: cacampbell
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: d50925d9f5422e1bfea01869233c63d6a2889109
-ms.sourcegitcommit: 12f8b7f0bca1baa2c1f68dd6af4f16a4814daa11
+ms.openlocfilehash: 92644eeed28911d0d49ec2aa20fcfed4a6553486
+ms.sourcegitcommit: fddf90a6aa17b09005723653a0c9a520856bb2ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737498"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55781500"
 ---
-# <a name="the-early-edition-for-microsoft-intune---january-2019"></a>Časná edice Microsoft Intune – leden 2019
+# <a name="the-early-edition-for-microsoft-intune---february-2019"></a>Časná edice Microsoft Intune –. února 2019
 
 > [!Note]
 > Smlouvu NDA pro oznámení: Následující změny v Intune jsou ve vývoji. Tyto informace jsou sdíleny ve velmi omezeném rozsahu a platí pro ně dohoda o mlčenlivosti (NDA). Nepublikujte žádné z těchto informací na sociálních sítích nebo veřejných webech, jako jsou Twitter, UserVoice, Reddit apod. 

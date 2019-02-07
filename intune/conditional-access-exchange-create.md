@@ -15,12 +15,12 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ed996ec17ab0c8144286eeed0a87f07b35da2969
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.openlocfilehash: 17d64822453c5aeafe4c618879aaef6176e9bbb7
+ms.sourcegitcommit: 09dcc8ba903b66b3fb8b9a71212ccd3194a046fe
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817054"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763281"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -80,9 +80,9 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 1. Po úspěšném jste přihlášení, zobrazí **řídicím panelu Azure**.
 
-1. Zvolte **všechny služby** v levé nabídce zadejte **Intune** do filtru textového pole.
+1. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-1. Zvolte **Intune**, uvidíte **řídicí panel Intune**.
+1. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
 1. Vyberte **Místní přístup**. V podokně **Místní přístup** se zobrazí stav zásad podmíněného přístupu a zařízení, na která má vliv.
 

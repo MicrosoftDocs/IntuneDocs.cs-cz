@@ -2,8 +2,8 @@
 title: Kontrola úspěchu nebo neúspěchu standardních hodnot zabezpečení v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Zkontrolujte stav chyby, ke konfliktu a úspěchu, při nasazení standardních hodnot zabezpečení pro uživatele a zařízení v Microsoft Intune MDM. Naleznete v části řešení potíží pomocí protokolů klienta a funkcí sestavy v Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/24/2019
 ms.topic: article
@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 28a98a20e5f0b5181628da46ccd662f1f8f503dd
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: db748f7c39cb133c5c7025dbb299f3fd1411ba17
+ms.sourcegitcommit: 5b4a6c17bdba2f87e6ae81a3ac0cb88438a0fa27
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55071230"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807745"
 ---
 # <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilu v Microsoft Intune
 

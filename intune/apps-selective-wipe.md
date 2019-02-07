@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 51d1c477f490cb23c35ef54a0a5099ee4b4b035b
-ms.sourcegitcommit: 06f62ae989da6c60bac4a52ccd41b429f7367d8c
+ms.openlocfilehash: c79f3db99f1023acee189b6e7a49f26d8d3fdd4c
+ms.sourcegitcommit: 01d6832978cb7ca23049000950696b300a87abd4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55068250"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760918"
 ---
 # <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
 
@@ -30,7 +30,7 @@ ms.locfileid: "55068250"
 V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
 
 >[!NOTE]
-> Dvěma platformami, na kterých se v současnosti mazání podnikových dat z aplikací spravovaných v Intune podporuje, jsou iOS a Android. Intune spravované aplikace jsou aplikace, které zahrnují Intune APP SDK a mít licencovanou uživatelský účet pro vaši organizaci. Nasazení zásad ochrany aplikací není nutné povolit selektivní vymazání aplikace.
+> IOS, Android a Windows 10 platformy jsou pouze platformy, které jsou aktuálně podporovány pro mazání podnikových dat z aplikací spravovaných v Intune. Intune spravované aplikace jsou aplikace, které zahrnují Intune APP SDK a mít licencovanou uživatelský účet pro vaši organizaci. Nasazení zásad ochrany aplikací není nutné povolit selektivní vymazání aplikace.
 
 Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o vymazání pomocí kroků v tomto tématu. Po dokončení žádosti se při příštím spuštění aplikace na zařízení z aplikace odeberou firemní data. Kromě vytvoření žádosti o vymazání můžete nakonfigurovat selektivní vymazání dat organizace jako novou akci, když nejsou splněny podmínky nastavení přístupu zásad ochrany aplikací. Tato funkce umožňuje automaticky chránit a odebírat citlivá data organizace z aplikací na základě předem nakonfigurovaných kritérií.
 
