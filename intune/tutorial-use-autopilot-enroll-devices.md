@@ -17,12 +17,13 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 087f890f84c9bc0ff0c46f129ef84b8a268c738e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 455d3fa3b26ae7b18eb195019bc89100714946b9
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187731"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850773"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 Windows Autopilot zjednodušuje registraci zařízení. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat. 
@@ -94,7 +95,7 @@ Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mo
 5. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 6. Vyberte **Software spouštěný při prvním zapnutí zařízení** a nakonfigurujte následující možnosti. Ostatní možnosti ponechejte ve výchozím nastavení a potom zvolte **Uložit**:
     - **Licenční smlouva s koncovým uživatelem (EULA)**: **Skrýt**
-    - **Nastavení ochrany osobních údajů**: **Zobrazit**
+    - **Nastavení ochrany osobních údajů**: **Show**
     - **Typ uživatelského účtu**: **Standard**
 
 6. Výběrem možnosti **Vytvořit** vytvořte profil. Profil nasazení Autopilotu je teď možné přiřazovat zařízením.

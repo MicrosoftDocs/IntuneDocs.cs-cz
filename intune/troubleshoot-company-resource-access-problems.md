@@ -15,12 +15,13 @@ ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
-ms.openlocfilehash: f4ead71e626316b515646d474cc006be7cf2f774
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e600c2db57352eb2348ded9fe55295837223797b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190366"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843081"
 ---
 # <a name="troubleshoot-company-resource-access-problems-with-microsoft-intune"></a>Řešení problémů s přístupem k prostředkům společnosti ve službě Microsoft Intune
 
@@ -34,7 +35,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |---------------|-----------------|--------------|
 |10 (APP_CI_ENFORCEMENT_IN_PROGRESS)|Probíhá instalace||
 |20 (APP_CI_ENFORCEMENT_IN_PROGRESS_WAITING_CONTENT)|Čeká se na obsah||
-|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Načítá se obsah|Pravděpodobná příčina: Stav úlohy 30 označuje, že se uživateli nepodařilo stáhnout aplikaci.<br /><br />Toto jsou pravděpodobné příčiny:<br /><br />V průběhu stahování zařízení ztratilo připojení k internetu.<br /><br />Mohlo dojít k vypršení platnosti certifikátu vydaného pro zařízení v době registrace.<br /><br />Snížení rizika:<br /><br />Spuštěním Aplikací společnosti z ovládacích panelů na zařízení potvrďte, že platnost certifikátu zařízení nevypršela. Pokud platnost vypršela, bude nutné zařízení znovu zaregistrovat.<br /><br />Potvrďte, že zařízení je připojené k internetu , a zkuste znovu požádat o aplikaci.|
+|30 (APP_CI_ENFORCEMENT_ERROR_RETRIEVING_CONTENT)|Načítá se obsah|Pravděpodobná příčina: Stav úlohy 30 označuje, že se uživateli aplikace nepodařilo stáhnout.<br /><br />Toto jsou pravděpodobné příčiny:<br /><br />V průběhu stahování zařízení ztratilo připojení k internetu.<br /><br />Mohlo dojít k vypršení platnosti certifikátu vydaného pro zařízení v době registrace.<br /><br />Snížení rizika:<br /><br />Spuštěním Aplikací společnosti z ovládacích panelů na zařízení potvrďte, že platnost certifikátu zařízení nevypršela. Pokud platnost vypršela, bude nutné zařízení znovu zaregistrovat.<br /><br />Potvrďte, že zařízení je připojené k internetu , a zkuste znovu požádat o aplikaci.|
 |40 (APP_CI_ENFORCEMENT_IN_PROGRESS_CONTENT_DOWNLOADED)|Stahování obsahu se dokončilo||
 |50 (APP_CI_ENFORCEMENT_IN_PROGRESS_INSTALLING)|Probíhá instalace||
 |60 (APP_CI_ENFORCEMENT_ERROR_INSTALLING)|Při instalaci došlo k chybě|Aplikaci se po stažení nepodařilo nainstalovat.<br /><br />Certifikát pro podpis kódu, kterým je aplikace podepsaná, se v zařízení nenachází.<br /><br />Závislost architektury, na které je aplikace závislá, není na zařízení nainstalovaná.<br /><br />Ujistěte se, že certifikát pro podpis kódu, se kterým je aplikace podepsaná, v zařízení existuje, a u správce ověřte, že tento certifikát je určený pro všechna zapsaná podniková zařízení s Windows RT.<br /><br />V případě, že je chyba instalace způsobená chybějící závislostí architektury, bude muset správce aplikaci znovu publikovat v balíčku společně s aplikací.<br /><br />Stažený balíček aplikace není platným balíčkem, je poškozený, nebo není kompatibilní s verzí operačního systému zařízení.|
@@ -45,7 +46,7 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 |110 (APP_CI_ENFORCEMENT_ERROR)|Neshoda algoritmu hash obsahu||
 |120 (APP_CI_ENFORCEMENT_ERROR)|SLK / zkušební načítání se nepovoluje||
 |130 (APP_CI_ENFORCEMENT_ERROR)|Instalace licence MSADP se nepodařila||
-|Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|není k dispozici|Stav je momentálně neznámý.|
+|Bez stavu (APP_CI_ENFORCEMENT_UNKNOWN)|neuvedeno|Stav je momentálně neznámý.|
 
 ## <a name="company-resource-access-common-errors"></a>Přístup k prostředkům společnosti (běžné chyby)
 
@@ -302,72 +303,72 @@ Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získ
 
 |Stavový kód|Šestnáctkový kód chyby|Chybová zpráva|
 |---------------|--------------------------|-----------------|
-|-2016344008|0x87D10838|(1404): Přístup k certifikátu zamítnut|
-|-2016344009|0x87D10837|(1403): Certifikát nebyl nalezen|
-|-2016344010|0x87D10836|DCMO(1402): Operace se nezdařila|
-|-2016344011|0x87D10835|DCMO(1401): Uživatel reagoval na výzvu nepřijetím operace|
+|-2016344008|0x87D10838|(1404): Přístup k certifikátu zamítnutý|
+|-2016344009|0x87D10837|(1403): Certifikát se nenašel|
+|-2016344010|0x87D10836|DCMO(1402): Operace se nezdařila.|
+|-2016344011|0x87D10835|DCMO(1401): Uživatel zvolil na výzvu nepřijetím operace|
 |-2016344012|0x87D10834|DCMO(1400): Chyba klienta|
-|-2016344108|0x87D107D4|DCMO(1204): Funkce zařízení je vypnutá. Uživatel ji může znovu zapnout.|
-|-2016344109|0x87D107D3|DCMO(1203): Funkce zařízení je vypnutá. Uživatel ji nemůže znovu zapnout.|
-|-2016344110|0x87D107D2|DCMO(1202): Zapnutí proběhlo úspěšně, ale funkce zařízení je momentálně odpojená.|
-|-2016344111|0xF3FB4D95|DCMO(1201): Zapnutí proběhlo úspěšně. Funkce zařízení je v současnosti připojená.|
+|-2016344108|0x87D107D4|DCMO(1204): Funkce zařízení je vypnutá. uživatel může ji znovu povolit|
+|-2016344109|0x87D107D3|DCMO(1203): Funkce zařízení je vypnutá. uživatel nemá povoleno ji znovu povolit|
+|-2016344110|0x87D107D2|DCMO(1202): Povolit proběhlo úspěšně, ale funkce zařízení je momentálně odpojená.|
+|-2016344111|0xF3FB4D95|DCMO(1201): Povolit proběhlo úspěšně a funkce zařízení je momentálně připojená.|
 |-2016344112|0x87D107D0|DCMO(1200): Operace probíhá úspěšně|
-|-2016345595|0x87D10205|Syncml(517): Odpověď na atomický příkaz byla tak velká, že se nevešla do jedné zprávy.|
-|-2016345596|0x87D10204|Syncml(516): Příkaz byl uvnitř elementu Atomic, a ten selhal. Příkaz se nepovedlo úspěšně vrátit zpátky.|
-|-2016345598|0x87D10202|Syncml(514): Příkaz SyncML se nedokončil úspěšně, protože operace byla zrušená ještě před jeho provedením.|
+|-2016345595|0x87D10205|Syncml(517): Odpověď na Atomický příkaz byla se nevešla do jedné zprávy.|
+|-2016345596|0x87D10204|Syncml(516): Příkaz byl uvnitř elementu Atomic a ten selhal. Příkaz se nepovedlo úspěšně vrátit zpátky.|
+|-2016345598|0x87D10202|Syncml(514): Příkaz SyncML se nedokončil úspěšně, protože operace byla zrušená ještě před příkaz.|
 |-2016345599|0x87D10201|Syncml(513): Příjemce nepodporuje nebo odmítá podporovat určenou verzi synchronizačního protokolu SyncML použitou ve zprávě SyncML žádosti.|
 |-2016345600|0x87D10200|Syncml(512): Při synchronizační relaci došlo k chybě aplikace.|
 |-2016345601|0x87D101FF|Syncml(511): Při zpracování požadavku došlo na serveru k vážné chybě.|
-|-2016345602|0x87D101FE|Syncml(510): Při zpracování žádosti došlo k chybě. Chyba se týká výpadku úložiště dat příjemce.|
-|-2016345603|0x87D101FD|Syncml(509): Vyhrazené pro budoucí použití.|
+|-2016345602|0x87D101FE|Syncml(510): Při zpracování požadavku došlo k chybě. Chyba se týká výpadku úložiště dat příjemce.|
+|-2016345603|0x87D101FD|Syncml(509): Vyhrazeno pro budoucí použití.|
 |-2016345604|0x87D101FC|Syncml (508): Došlo k chybě, která vyžaduje obnovení aktuálního stavu synchronizace klienta se serverem.|
-|-2016345605|0x87D101FB|Syncml(507): Chyba způsobila selhání všech příkazů protokolu SyncML v typu elementu Atomic.|
-|-2016345606|0x87D101FA|Syncml(506): Při zpracování žádosti došlo k chybě aplikace.|
+|-2016345605|0x87D101FB|Syncml(507): Chyba způsobila všech příkazů protokolu SyncML v typu elementu Atomic selhání.|
+|-2016345606|0x87D101FA|Syncml(506): Při zpracování požadavku došlo k chybě aplikace.|
 |-2016345607|0x87D101F9|Syncml(505): Příjemce nepodporuje nebo odmítá podporovat určenou verzi souboru DTD protokolu SyncML použitou ve zprávě SyncML žádosti.|
-|-2016345608|=0x87D101F8|Syncml(504): Příjemce, který funguje jako brána nebo proxy, nedostal včas odpověď od nadřazeného příjemce určeného identifikátorem URI (např. HTTP, FTP, LDAP) nebo od jiného pomocného příjemce (třeba DNS). Odpověď potřeboval pro přístup, když se pokoušel dokončit žádost.|
-|-2016345609|0x87D101F7|Syncml(503): Příjemce v současnosti nemůže žádost zpracovat. Příčinou je dočasné přetížení nebo údržba na straně příjemce.|
-|-2016345610|0x87D101F6|Syncml(502): Příjemce, který funguje jako brána nebo proxy, nedostal platnou odpověď od nadřazeného příjemce, na kterého se obrátil při pokusu o splnění žádosti.|
+|-2016345608|=0x87D101F8|Syncml(504): Příjemce, který funguje jako brána nebo proxy, nedostal včas odpověď od nadřazeného příjemce určeného identifikátorem URI (např. HTTP, FTP, LDAP) nebo od jiného pomocného příjemce (třeba DNS) potřeboval pro přístup se pokoušel dokončit žádost.|
+|-2016345609|0x87D101F7|Syncml(503): Příjemce je v současnosti nemůže žádost zpracovat. Příčinou je dočasné přetížení nebo Údržba na straně příjemce.|
+|-2016345610|0x87D101F6|Syncml(502): Příjemce, který funguje jako brána nebo proxy, obdržel neplatnou odpověď od nadřazeného příjemce, který se obrátil při pokusu o splnění žádosti.|
 |-2016345611|0x87D101F5|Syncml(501): Příjemce nepodporuje příkaz potřebný ke splnění žádosti.|
 |-2016345612|0x87D101F4|Syncml(500): U příjemce vznikl nečekaně stav, který brání splnění žádosti.|
 |-2016345684|0x87D101AC|Syncml(428): Přesun se nepodařil.|
-|-2016345685|0x87D101AB|Syncml(427): Nadřazený objekt nejde odstranit, protože obsahuje podřízené položky.|
+|-2016345685|0x87D101AB|Syncml(427): Nadřazené nejde odstranit, protože obsahuje podřízené položky.|
 |-2016345686|0x87D101AA|Syncml(426): Dílčí položka není přijatá.|
-|-2016345687|0x87D101A9|Syncml(425): Požadovaný příkaz nejde provést, protože odesílatel nemá u příjemce odpovídající oprávnění pro řízení přístupu (ACL).|
+|-2016345687|0x87D101A9|Syncml(425): Požadovaný příkaz nejde provést, protože odesílatel nemá u příjemce odpovídající ovládací prvek oprávnění přístupu (ACL).|
 |-2016345688|0x87D101A8|Syncml(424): Objekt v bloku byl přijatý, ale velikost přijatého objektu neodpovídá velikosti deklarované v prvním bloku.|
-|-2016345689|0x87D101A7|Syncml(423): Požadovaný příkaz nejde provést, protože „logicky odstraněná“ položka už byla předtím na serveru trvale odstraněná.|
-|-2016345690|0x87D101A6|Syncml(422): Požadovaný příkaz nejde na serveru provést kvůli nesprávně vytvořenému skriptování CGI v LocURI.|
-|-2016345691|0x87D101A5|Syncml(421): Požadovaný příkaz nejde na serveru provést, protože byla zadaná neznámá gramatika vyhledávání.|
-|-2016345692|0x87D101A4|Syncml(420): Pro zbývající synchronizovaná data příjemce nemá další úložný prostor.|
+|-2016345689|0x87D101A7|Syncml(423): Požadovaný příkaz nejde provést, protože "Logicky Odstraněná" položka už byla dříve "Pevné odstraněných" na serveru.|
+|-2016345690|0x87D101A6|Syncml(422): Požadovaný příkaz nejde na serveru provést kvůli vytvořenému skriptování CGI v LocURI nesprávně.|
+|-2016345691|0x87D101A5|Syncml(421): Požadovaný příkaz nejde na serveru, protože zadaný hledaný gramatika.|
+|-2016345692|0x87D101A4|Syncml(420): Příjemce nemá další úložný prostor pro zbývající synchronizovaná data.|
 |-2016345693|0x87D101A3|Syncml(419): Žádost klienta způsobila konflikt, který se vyřešil předností pro serverový příkaz.|
-|-2016345694|0x87D101A2|Syncml(418): Požadovaný příkaz Put nebo Add nejde provést, protože cíl už existuje.|
-|-2016345695|0x87D101A1|Syncml(417): Žádost v této chvíli nejde provést, ale původce ji může zopakovat později.|
-|-2016345696|0x87D101A0|Syncml(416): Žádost nejde provést, protože je v ní uvedená nadměrná velikost v bajtech.|
-|-2016345697|0x87D1019F|Syncml(415): Nepodporovaný typ nebo formát média|
-|-2016345698|0x87D1019E|Syncml(414): Požadovaný příkaz nejde provést, protože cílový identifikátor URI je moc dlouhý na to, aby ho příjemce mohl nebo chtěl zpracovat.|
-|-2016345699|0x87D1019D|Syncml(413): Příjemce odmítá provést požadovaný příkaz, protože požadovaná položka je větší, než příjemce může nebo chce zpracovat.|
-|-2016345700|0x87D1019C|Syncml(412): Požadovaný příkaz se na straně příjemce nepodařilo provést, protože je neúplný nebo nesprávně vytvořený.|
-|-2016345701|0x87D1019B|Syncml(411): Požadovaný příkaz musí doprovázet velikost v bajtech nebo informace o délce v typu elementu Meta.|
-|-2016345702|0x87D1019A|Syncml(410): Požadovaný cíl už není u příjemce a není známý ani předávací identifikátor URI.|
+|-2016345694|0x87D101A2|Syncml(418): Požadovaný příkaz Put nebo Add se nezdařila, protože cíl už existuje.|
+|-2016345695|0x87D101A1|Syncml(417): Požadavek se nezdařil v tuto chvíli a původce musí zopakovat později.|
+|-2016345696|0x87D101A0|Syncml(416): Požadavek se nezdařil, protože ní uvedená nadměrná velikost v žádosti byl příliš velký.|
+|-2016345697|0x87D1019F|Syncml(415): Nepodporovaný typ nebo formát média.|
+|-2016345698|0x87D1019E|Syncml(414): Požadovaný příkaz nejde provést, protože cílový identifikátor URI je moc dlouhý příjemce mohl nebo chtěl zpracovat.|
+|-2016345699|0x87D1019D|Syncml(413): Příjemce odmítá provést požadovaný příkaz, protože požadovaná položka je větší, než příjemce mohl nebo chtěl zpracovat.|
+|-2016345700|0x87D1019C|Syncml(412): Požadovaný příkaz nejde provést u příjemce, protože je neúplný nebo nesprávně vytvořený.|
+|-2016345701|0x87D1019B|Syncml(411): Požadovaný příkaz musí doprovázet bajtů velikost nebo informace o délce v typu elementu Meta.|
+|-2016345702|0x87D1019A|Syncml(410): Požadovaný cíl už není u příjemce a není známý identifikátor URI.|
 |-2016345703|0x87D10199|Syncml(409): Žádost nebyla úspěšná, protože došlo ke konfliktu aktualizací mezi klientskou a serverovou verzí dat.|
 |-2016345704|0x87D10198|Syncml(408): Očekávaná zpráva nebyla v požadované době přijatá.|
 |-2016345705|0x87D10197|Syncml(407): Požadovaný příkaz nejde provést, protože původce nezajistil správné ověření.|
 |-2016345706|0x87D10196|Syncml(406): Požadovaný příkaz nejde provést, protože volitelná funkce v žádosti nebyla podporovaná.|
 |-2016345707|0x87D10195|Syncml(405): Požadovaný příkaz není v cíli dovolený.|
 |-2016345708|0x87D10194|Syncml(404): Požadovaný cíl se nepovedlo najít.|
-|-2016345709|0x87D10193|Syncml(403): Požadovaný příkaz nejde provést, i když mu příjemce rozumí.|
+|-2016345709|0x87D10193|Syncml(403): Požadovaný příkaz nejde provést, ale příjemce rozumí.|
 |-2016345710|0x87D10192|Syncml(402): Požadovaný příkaz nejde provést, protože je potřeba řádná platba.|
 |-2016345711|0x87D10191|Syncml(401): Požadovaný příkaz nejde provést, protože žadatel nezajistil správné ověření.|
 |-2016345712|0x87D10190|Syncml(400): Požadovaný příkaz nejde provést kvůli chybné syntaxi příkazu.|
-|-2016345807|0x87D10131|Syncml(305): Přístup k požadovanému cíli je možný přes zadaný identifikátor URI proxy serveru.|
+|-2016345807|0x87D10131|Syncml(305): přístup Požadovaný cíl je možný přes zadaný identifikátor URI proxy serveru.|
 |-2016345808|0x87D10130|Syncml(304): Požadovaný příkaz SyncML se v cíli neprovedl.|
 |-2016345809|0x87D1012F|Syncml(303): Požadovaný cíl byl nalezený na jiném identifikátoru URI.|
 |-2016345810|0x87D1012E|Syncml(302): Požadovaný cíl se dočasně přesunul na jiný identifikátor URI.|
 |-2016345811|0x87D1012D|Syncml(301): Požadovaný cíl má nový identifikátor URI.|
 |-2016345812|0x87D1012C|Syncml(300): Požadovaný cíl je jedním z několika alternativních požadovaných cílů.|
-|-2016345896|0x87D100D8|Syncml(216):Příkaz byl uvnitř elementu Atomic, a ten selhal. Příkaz je úspěšně vrácený zpět.|
-|-2016345897|0x87D100D7|Syncml(215): Příkaz se neprovedl kvůli zásahu uživatele, který nepotvrdil volbu.|
-|-2016345898|0x87D100D6|Syncml(214): Operace je zrušená. Příkaz SyncML se úspěšně dokončil, ale v této relaci se další příkazy nezpracují.|
-|-2016345899|0x87D100D5|Syncml(213): Položka v bloku je přijatá a uložená do vyrovnávací paměti.|
+|-2016345896|0x87D100D8|Syncml (216): Příkaz byl uvnitř elementu Atomic a ten selhal. Příkaz je úspěšně vrácený zpět.|
+|-2016345897|0x87D100D7|Syncml(215): Příkaz se neprovedl, interakci s uživatelem a uživatel zvolil nepotvrdil volbu.|
+|-2016345898|0x87D100D6|Syncml(214): Operace byla zrušena. Příkaz SyncML se úspěšně dokončil, ale v této relaci se další příkazy nezpracují.|
+|-2016345899|0x87D100D5|Syncml(213): Položka v bloku přijatá a uložená do vyrovnávací paměti|
 |-2016345900|0x87D100D4|Syncml(212): Ověření je přijaté. Zbytek synchronizační relace nevyžaduje další ověřování. Kód odpovědi jde použít jenom v odpovědi na žádost, ve které byly přihlašovací údaje poskytnuté.|
 |-2016345901|0x87D100D3|Syncml(211): Položka není odstraněná. Požadovaná položka se nenašla. Možná se odstranila dřív.|
 |-2016345902|0x87D100D2|Syncml(210): Odstranění bez archivace. Z odpovědi vyplývá, že požadovaná data se úspěšně odstranila, ale nearchivovala se předtím, protože implementace tuto VOLITELNOU funkci nepodporuje.|
