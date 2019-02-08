@@ -13,12 +13,13 @@ ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 21257169e069a139ac94dcdecbe6074ab0778aeb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 776b1c6fcba6487a45133f486bf68bab312b86c9
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179554"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848130"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -77,7 +78,7 @@ Jak jsme už uvedli, pomocí podmíněného přístupu lze uživatele přimět k
 | | | |
 | Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázání zálohování dat na zařízení | Zakázání funkcí Vyjmout, Kopírovat a Vložit|
 | Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázání funkce Uložit jako | Zakázání funkce Uložit jako |
-|Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | není k dispozici|
+|Nechtěné sdílení dat nebo uložení do nezabezpečených umístění | Zakázat tisk | neuvedeno|
 
 ## <a name="next-steps"></a>Další postup
 Teď je čas na rozhodnutí, jestli se ve vaší organizaci při povolování vlastních zařízení uživatelů (BYOD) zaměříte na správu zařízení, na správu aplikací nebo na kombinaci obou možností. Volba implementace je na vás, ale bez ohledu na zvolenou možnost máte jistotu, že budete mít k dispozici funkce pro práci s identitami a funkce zabezpečení, které jsou dostupné v Azure AD.  

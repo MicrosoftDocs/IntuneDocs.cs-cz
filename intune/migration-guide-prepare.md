@@ -15,12 +15,13 @@ ms.assetid: 58591442-6606-4f39-a06b-f17a1f25af25
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: 1e21fef5102b22dfe698a9adb73736508452acfe
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a9f332acdd0deff3885c8fce7e0e7ccddc7c10da
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186371"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846056"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune na správu mobilních zařízení (MDM)
 

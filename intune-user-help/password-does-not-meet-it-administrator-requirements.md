@@ -15,12 +15,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: bb565cdaf200e8bf7d3836fd921b0b5893734955
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ac0a8b076fe6f21621826dec32f7aaa72eba88c7
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150917"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837012"
 ---
 # <a name="your-password-does-not-meet-your-company-supports-requirements"></a>Heslo nesplňuje požadavky firemní podpory
 
@@ -47,7 +48,7 @@ Pokud potřebujete postup nastavení PIN kódu nebo hesla, použijte odkaz, kter
 | **Heslo bylo použito v nedávné době.** | Firemní podpora vám zakázala používat předchozí hesla, která jste použili v minulosti. Zvolte si heslo, které jste ještě nikdy nepoužili. |
 | **Heslo není dostatečně složité a nesplňuje požadavky.** | Vaše firemní podpora požaduje, abyste v hesle použili složitější znaky. Zkuste použít třeba číslice, velká písmena a symboly jako $, % a #. Tento problém může vzniknout i u dalších účtů na vašem zařízení. Zkontrolujte proto všechny případné další pracovní účty a zajistěte, aby vaše heslo splňovalo požadavky nastavené správcem IT pro vaše zařízení. |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Pokud potřebujete postup nastavení PIN kódu nebo hesla, použijte odkaz, který odpovídá typu vašeho zařízení:
 

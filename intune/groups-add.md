@@ -16,12 +16,13 @@ ms.reviewer: amyros
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 7a6fffaa0ae35675538d04b91980799d7d8aa80d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1dd61edf02e8d5344494129715325250fbfdd7bc
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181288"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834411"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 Služba Intune používá ke správě zařízení a uživatelů skupiny Azure Active Directory (AD). Jako správce Intune můžete nastavit skupiny tak, aby odpovídaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Například můžete nastavit zásady pro mnoho uživatelů nebo nasadit aplikace řadě zařízení.
@@ -33,12 +34,12 @@ Můžete přidat následující typy skupin:
 ## <a name="add-a-new-group"></a>Přidání nové skupiny
 
 Pomocí následujícího postupu vytvořte novou skupinu.
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Skupiny** a potom v podokně **Všechny skupiny** zvolte **Nová skupina**.
    ![Snímek obrazovky Azure Portalu s vybranou možností Nová skupina](./media/groups-add-new.png)
 4. Pro **typ skupiny**, zvolte jednu z následujících možností:
-    - **Zabezpečení**: skupiny zabezpečení jsou dobrý prostředek pro naplňování skupin uživatelů. Vzhledem k tomu, že skupiny zabezpečení definují, kdo má přístup k jakým prostředkům, jsou dobře převeditelné i na skupiny uživatelů Intune. Skupiny zabezpečení, které jsou synchronizované z Active Directory do Azure Active Directory nebo které vytvoříte přímo v Azure Active Directory pomocí Centra pro správu Office 365 nebo webu Azure Portal, můžete použít k vytváření skupin uživatelů ve službě Intune.
+    - **Zabezpečení**: Skupiny zabezpečení jsou dobrý prostředek pro naplňování skupin uživatelů. Vzhledem k tomu, že skupiny zabezpečení definují, kdo má přístup k jakým prostředkům, jsou dobře převeditelné i na skupiny uživatelů Intune. Skupiny zabezpečení, které jsou synchronizované z Active Directory do Azure Active Directory nebo které vytvoříte přímo v Azure Active Directory pomocí Centra pro správu Office 365 nebo webu Azure Portal, můžete použít k vytváření skupin uživatelů ve službě Intune.
     - **Office 365**
 
 5. Zadejte **název** a **popis** nové skupiny. Tyto vlastnosti se objeví jenom na portálu správy a uživatelům se nezobrazí.
@@ -63,6 +64,6 @@ Budete taky nejspíš chtít vytvořit výchozí zásady, které budou platit pr
 
 
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 - [Správa přístupu k prostředkům prostřednictvím skupin Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)
 - [Skupiny Intune Classic na portálu Azure Portal](groups-get-started.md)

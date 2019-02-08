@@ -15,12 +15,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: 0e8f10bac2c7ffc75f81572da60249842c8f4cc1
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 03463bebfd9279173179dff56ce8df9d80b1707b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43148517"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848014"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
 
@@ -50,7 +51,7 @@ Pomocí těchto kroků získáte znovu přístup k firemním prostředkům poté
 
 Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu, zobrazí se zpráva podobná té na snímku níže.  
 
-![Ukázkový snímek obrazovky s výstrahou aplikace Lookout for Work zobrazenou přes její rozhraní. K dispozici jsou tři tlačítka: Zavřít, Další informace a Odinstalovat.](./media/lookout-virus-alert-android.png)  
+![Ukázkový snímek obrazovky s výstrahou aplikace Lookout for Work zobrazenou přes její rozhraní. Ukazuje tři tlačítka: "Zavřít," "Další informace" a "Odinstalovat".](./media/lookout-virus-alert-android.png)  
 
 Ztracený přístup k firemnímu e-mailu a datům získáte odinstalováním sporné aplikace. Dokud je aplikace na zařízení nainstalovaná, nebudete mít k prostředkům přístup.    
 

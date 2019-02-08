@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 36ddac5b9fc7d03e0ef3e719e7c1d46d7881d2ac
-ms.sourcegitcommit: 279f923b1802445e501324a262d14e8bfdddabde
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 98f25ec1dce7b07fdd6271cea965b9d44b137221
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737946"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55845750"
 ---
 # <a name="add-microsoft-store-apps-to-microsoft-intune"></a>Přidání aplikací z Microsoft Storu do Microsoft Intune
 
@@ -42,7 +43,7 @@ Aplikaci z Microsoft Storu můžete do Intune přidat následujícím postupem:
 7. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
     - **Název**: Zadejte název aplikace, jak je zobrazený na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Publisher**: Zadejte název vydavatele aplikace.
     - **Adresa URL obchodu**: Zadejte adresu URL aplikace App Store aplikace, kterou chcete vytvořit.
     - **Kategorie**: Volitelně vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Vyberte tuto možnost, chcete-li zobrazit sadu aplikací výrazném místě na hlavní stránce portálu společnosti když uživatelé vyhledávají aplikace.

@@ -16,12 +16,13 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: fdda0edd8c7bf67dbfce9d428f1b3ce0266b3726
-ms.sourcegitcommit: fff179f59bd542677cbd4bf3bacc24bb880e2cb6
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b1498e6bf9a4b2df7da9ef0a7ec6824e2a3e4f94
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53032414"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851317"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-school-manager"></a>Nastavení registrace zařízení s iOSem pomocí Apple School Manageru
 
@@ -108,8 +109,8 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     Uživatelé se dozvědí, že jejich zařízení jsou pod dohledem, dvěma způsoby:
 
-   - Na zamykací obrazovce se zobrazí oznámení: „Tento iPhone spravuje Contoso.“
-   - Na obrazovce **Nastavení** > **Obecné** > **O produktu** je uvedeno: „Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
+   - Zamykací obrazovce se zobrazí oznámení: "Tento iPhone spravuje Contoso."
+   - **Nastavení** > **Obecné** > **o** obrazovce se zobrazí oznámení: "Tento iPhone je pod dohledem. Společnost Contoso může monitorovat internetové přenosy a zařízení vyhledat.“
 
      > [!NOTE]
      > Zařízení zaregistrované bez dohledu se dá resetovat do stavu pod dohledem jenom pomocí Apple Configuratoru. Resetování zařízení tímto způsobem vyžaduje připojení zařízení s iOSem k Macu pomocí kabelu USB. Další informace na toto téma získáte v [dokumentaci Apple Configuratoru](http://help.apple.com/configurator/mac/2.3).
@@ -124,7 +125,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
 11. Zvolte **OK**.
 
-12. Zvolte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Přizpůsobení Průvodce nastavením](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png).
+12. Vyberte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu: ![Nastavení přizpůsobení průvodce nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     |                 Nastavení                  |                                                                                               Popis                                                                                               |

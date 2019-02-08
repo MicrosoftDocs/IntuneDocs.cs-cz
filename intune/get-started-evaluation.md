@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: c8e15675beb97b396c9340e2ab3bfa86a3a43f76
-ms.sourcegitcommit: e08a26558174be3ea8f3d20646e577f1493ea21a
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1df3676b4259ac84cf1ae5f0ce76ee300aa92f85
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54831424"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839137"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jaké přínosy má Intune pro moji firmu?
 Microsoft Intune je cloudová služba pro správu mobility velkých organizací (EMM), která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data.

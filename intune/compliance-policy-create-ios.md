@@ -15,12 +15,13 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 41ae1ffc17eee93b45f00e4eef5590f6a5d0b7b4
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 28f6cfe3b97381cd60bf485b8110cfa602ea9133
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112506"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838593"
 ---
 # <a name="add-a-device-compliance-policy-for-ios-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s iOSem v Intune
 
@@ -64,33 +65,33 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 8. Choose **Add** to finish creating the action.
 9. You can create multiple actions and the sequence in which they should occur. Choose **Ok** when you are finished creating all the actions.--->
 
-## <a name="email"></a>E-mail
+## <a name="email"></a>Email
 
-- **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil**: Pokud nastavíte možnost Vyžadovat, budou se zařízení, která nemají e-mailový profil spravovaný službou Intune, považovat za nedodržující předpisy. Zařízení nemusí mít spravovaný e-mailový profil, pokud není správně zacíleno nebo pokud uživatel e-mailový účet na zařízení nastavil ručně.
+- **Vyžaduje mobilní zařízení měla spravovaný e-mailový profil**: Pokud tuto možnost nastavíte na vyžadovat, budou se zařízení, která nemají e-mailu profil spravovaný službou Intune jsou považovány za nedodržující předpisy. Zařízení nemusí mít spravovaný e-mailový profil, pokud není správně zacíleno nebo pokud uživatel e-mailový účet na zařízení nastavil ručně.
 
   Zařízení je považováno za nedodržující předpisy v následujících situacích:
   - E-mailový profil je nasazený do jiné skupiny uživatelů, než je ta, která cílí na zásady dodržování předpisů.
   - Uživatel na zařízení už nastavil e-mailový účet, který se shoduje s e-mailovým profilem služby Intune nasazeným na zařízení. Intune nemůže přepsat uživatelem zřízený profil, a proto ho nemůže ani spravovat. Aby zařízení dodržovalo předpisy, musí uživatel odebrat stávající nastavení e-mailu. Pak Intune může nainstalovat spravovaný e-mailový profil.
 
-- **Vyberte e-mailový profil, který se musí spravovat přes Intune**: Pokud je vybraná možnost **E-mailový účet se musí spravovat přes Intune**, zvolte **Vybrat** a nastavte e-mailový profil Intune. Tento e-mailový profil musí být na zařízení.
+- **Vyberte e-mailový profil, který se musí spravovat přes Intune**: Pokud **e-mailový účet se musí spravovat přes Intune** je vybráno nastavení, zvolte **vyberte** zadat e-mailový profil Intune. Tento e-mailový profil musí být na zařízení.
 
 Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k podnikovému e-mailu pomocí e-mailových profilů v Microsoft Intune](email-settings-configure.md).
 
 ## <a name="device-health"></a>Device health
 
-- **Zařízení s Jailbreakem**: Pokud toto nastavení povolíte, zařízení s jailbreakem nebudou dodržovat předpisy.
-- **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní** (iOS 8.0 a novější): Zvolte maximální úroveň hrozby, nad kterou se zařízení označí jako nedodržující předpisy. Zařízení, která tuto úroveň hrozby překročí, se označí jako nedodržující předpisy:
-  - **Zabezpečeno**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
-  - **Nízká:** Zařízení je vyhodnoceno jako vyhovující, pokud se v něm nachází i jen nízká úroveň hrozeb. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se existující hrozby pohybují na střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
+- **Zařízení s Jailbreakem**: Pokud povolíte toto nastavení, nejsou kompatibilní zařízení s jailbreakem.
+- **Vyžadovat, aby zařízení bylo na nebo za úrovně hrozby pro zařízení** (iOS 8.0 a novější): Zvolte ochranu při maximální úrovni se zařízení označí jako nedodržující předpisy. Zařízení, která tuto úroveň hrozby překročí, se označí jako nedodržující předpisy:
+  - **Zabezpečené**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo zabezpečení. Pokud se v zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká**: Zařízení je vyhodnoceno jako vyhovující, pokud jen hrozby nízké úrovně jsou k dispozici. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení je vyhodnoceno jako vyhovující, pokud se existující hrozby v zařízení se střední nebo nízké úrovni. Pokud se zjistí, že zařízení má i hrozby vysoké úrovně, bude vyhodnoceno jako nedodržující předpisy.
   - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
-- **Maximální povolená verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
-- **Minimální operační systém sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější. 
-- **Maximální verze operačního systému sestavení verze**: když Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, verzi operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější.
+- **Minimální požadovaný operační systém**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel může zvolit upgrade svého zařízení. Pak může přistupovat k prostředkům společnosti.
+- **Maximální povolená verze operačního systému**: Pokud zařízení používá verzi operačního systému novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně v pravidle, která tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
+- **Minimální operační systém sestavení verze**: Jakmile Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, nikoli na verzi operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější. 
+- **Maximální verze operačního systému sestavení verze**: Jakmile Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, nikoli na verzi operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení. Tato kontrola dodržování předpisů se podporuje zařízení se systémem iOS 8.0 a novější.
 
 ## <a name="system-security"></a>Zabezpečení systému
 
@@ -99,22 +100,22 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 > [!NOTE]
 > Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví.
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
-- **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadovat** uživatelé zadat heslo, než bude moct svoje zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
+- **Jednoduchá hesla**: Nastavte na **bloku** , uživatelé nemůžou vytvářet jednoduchá hesla, jako například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
 - **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Požadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků (&, #, %, ! a podobně), které musí heslo obsahovat.
+- **Vyžadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaků, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
+- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků (&, #, %,! a tak dále), které musí heslo obsahovat.
 
     Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
-- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
-- **Konec platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Počet předchozích hesel, která se nesmí použít znovu**: Zadejte počet dříve použitých hesel, která se nesmí znovu použít.
+- **Maximální počet minut nečinnosti před vyžádáním hesla**: Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
+- **Vypršení platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
+- **Počet předchozích hesel, která zakázat opakované použití**: Zadejte počet dříve použitých hesel, která nelze použít.
 
 ### <a name="restricted-applications"></a>Omezené aplikace 
 Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud si uživatel aplikaci nainstaluje na zařízení, označí se toto zařízení jako nevyhovující předpisům. 
-- **Název aplikace**: Zadejte popisný název, který vám pomůže dané ID sady prostředků identifikovat. 
-- **ID sady prostředků aplikace**: Zadejte jedinečný identifikátor sady prostředků přidělený poskytovatelem aplikace. Pokud potřebujete ID vyhledat, přečtěte si článek o [postupu nalezení ID sady prostředků aplikací pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
+- **Název aplikace**: Zadejte popisný název, abyste mohli snáze zjistit ID sady prostředků. 
+- **ID sady prostředků aplikace**: Zadejte jedinečnou sadu identifikátor přiřazený poskytovatelem aplikace. Pokud potřebujete ID vyhledat, přečtěte si článek o [postupu nalezení ID sady prostředků aplikací pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).  
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 

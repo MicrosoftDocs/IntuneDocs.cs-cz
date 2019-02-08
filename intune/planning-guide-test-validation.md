@@ -15,12 +15,13 @@ ms.assetid: 4f82ee0c-4bd6-4623-9b10-9249d316ccf5
 ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: ba214e059e9a5ddb17a8b1344d4d30ab1d7b40fa
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b2a733eb92dba91c5e11d6ec463eb538df3845fb
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112455"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834309"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 
@@ -34,15 +35,15 @@ Doporučujeme vytvořit následující dokumentaci:
 
 -   **Testovací kritéria:** Identifikujte srovnávací testy pro měření.
 
--   **Součásti návrhu:** Musí existovat minimálně v jednom testovacím kritériu.
+-   **Součásti návrhu:** Musí existovat alespoň v jednom testovacím kritériu.
 
 Pokud součást návrhu neexistuje minimálně v jednom testovacím kritériu, které odpovídá požadavku nebo scénáři, zvažte, jestli je tato součást návrhu potřeba. Nezapomeňte si také připravit následující věci:
 
--   **Účty:** Testovací účty licencované pro EMS a Office 365, aby bylo možné testovat všechny scénáře použití.
+-   **Účty:** Testovací účty licencované pro EMS a Office 365 a testovat všechny scénáře použití.
 
--   **Zařízení:** Testovací zařízení, která je možné vymazat nebo resetovat do výchozího továrního nastavení.
+-   **Zařízení:** Testovací zařízení, které je možné vymazat nebo resetovat do továrního nastavení.
 
--   **Integrované komponenty:** Všechny integrované komponenty (Certificate Connector, Intune Service to Service Connector pro hostovaný Exchange a konektor Intune pro místní Exchange) by měly být nainstalované a nakonfigurované, pokud jsou potřeba.
+-   **Integrační komponenty:** Všechny integrované komponenty (certificate connector, Intune service to service connector pro hostovaný Exchange a konektor Intune pro místní Exchange) by měl nainstalovaný a nakonfigurovaný v případě potřeby.
 
 V případě nečekaných komplikací možná bude potřeba změnit návrh. Všechny změny návrhu musí být plně dokumentované, včetně důvodu každé změny. Následující příklad ilustruje, o jaký druh změn může jít:
 
@@ -62,7 +63,7 @@ Ověřování funkčnosti spočívá v testování každé součásti a konfigur
 
 ## <a name="use-case-validation-testing"></a>Ověřovací testování případů použití
 
-Ověřovací testování případů použití se provádí, aby se ověřilo, zda jsou scénáře použití úplné a funkční. Existují dva typy scénářů použití: správce IT a koncový uživatel.
+Ověřovací testování případů použití se provádí, aby se ověřilo, zda jsou scénáře použití úplné a funkční. Existují dva typy scénářů použití: Správce IT a koncový uživatel.
 
 ### <a name="it-admin"></a>Správce IT
 

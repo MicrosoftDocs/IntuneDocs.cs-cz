@@ -15,12 +15,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: d5d29db61191306e60b0c3ac756620e836b56dd6
-ms.sourcegitcommit: 121e550bf686f38cba1a02fa37f7039358b4a446
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f51d229e745a1e545d0853fa9e710a06cbfe6f8b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53378279"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851419"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -40,9 +41,9 @@ Sada Intune App SDK obsahuje tyto soubory:
 * **Microsoft.Intune.MAM.SDK.Support.v17.jar**: Třídy, která je nutná pro povolení MAM v aplikacích, které používají Android v17 knihovnu podpory. 
 * **Microsoft.Intune.MAM.SDK.Support.Text.jar**: Třídy, která je nutná pro povolení MAM v aplikacích používajících Android podporují knihovny tříd v `android.support.text` balíčku.
 * **Microsoft.Intune.MDM.SDK.DownlevelStubs.jar**: Tento soubor jar obsahuje zástupné procedury pro třídy systému Android, které jsou k dispozici jenom na novějších zařízeních, ale které odkazují metody v MAMActivity. Novější zařízení budou tyto zástupné třídy ignorovat. Tento soubor JAR je nutný jenom v případě, že aplikace provádí reflexi u tříd odvozených z MAMActivity. U většiny aplikací není nutné ho používat. Pokud chcete tento soubor JAR použít, musíte při vylučování všech jeho tříd z ProGuard postupovat opatrně. Všechny třídy budou v kořenovém balíčku „android“.
-* **com.microsoft.Intune.mam.Build.JAR**: Modul plug-in Gradle který [pomáhá při integraci sady SDK](#build-tooling).
+* **com.microsoft.intune.mam.build.jar**: Modul plug-in Gradle který [pomáhá při integraci sady SDK](#build-tooling).
 * **CHANGELOG.txt**: Obsahuje záznam změn provedených v každé verzi sady SDK.
-* **THIRDPARTYNOTICES. TXT**:  Všimněte si autorství, které uznává třetích stran OSS nebo kód, který se zkompiluje do vší aplikace.
+* **THIRDPARTYNOTICES.TXT**:  Všimněte si autorství, které uznává třetích stran OSS nebo kód, který se zkompiluje do vší aplikace.
 
 ## <a name="requirements"></a>Požadavky
 

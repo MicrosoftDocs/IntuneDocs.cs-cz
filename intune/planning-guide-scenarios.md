@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 8058a6f4cda02a044e050f07bb6264e29b83f879
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: de72bc56bf1ec0e7f1555d889ae0684c1162fdb9
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179911"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841398"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifikace scénářů použití při správě mobilních zařízení
 
@@ -56,7 +57,7 @@ Tady je několik příkladů scénářů použití a dílčích scénářů pou�
 | Firemní | Vedení |           
 | Firemní | Kiosk |
 | uživatelé s vlastním zařízením (BYOD) | Informatik |           
-| uživatelé s vlastním zařízením (BYOD) | Vedení |
+| uživatelé s vlastním zařízením (BYOD) | Členové vedení |
 
 Pokud chcete zadat scénáře použití a dílčí scénáře použití ve vaší organizaci, můžete si [stáhnout šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 
@@ -82,10 +83,10 @@ Scénář firemního použití může například podporovat platformy zařízen
 | **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** |   
 |:---:|:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance | iOS |                                                           
-| Firemní | Vedení | Personalistika, finance | iOS |                                                           
+| Firemní | Členové vedení | Personalistika, finance | iOS |                                                           
 | Firemní | Kiosk | Maloobchod | Android |
 | uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej | iOS |                                                           
-| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej | iOS |
+| uživatelé s vlastním zařízením (BYOD) | Členové vedení | Marketing, prodej | iOS |
 
 ## <a name="next-steps"></a>Další postup
 

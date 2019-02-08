@@ -16,12 +16,13 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
-ms.openlocfilehash: 243e9602a253fecf2eda1dd73dfb49a488db0974
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 0ba4cf212f44742ca9feb077a945a1f500ca1a78
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190247"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840939"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
@@ -79,7 +80,7 @@ Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache
 
 - Windows 7
 - Windows 8.0
-- Windows 8.1
+- Windows 8.1
 - Windows 10
 
 Abyste mohli BranchCache používat, musíte na klientském počítači povolit BranchCache a pak ho nakonfigurovat pro **režim distribuované mezipaměti**.
@@ -165,7 +166,7 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 
 ### <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
-|         Název hostitele         |                                        Adresa URL (IP adresa/podsíť)                                        |  Protokol  |     Port     |                          Zařízení                           |
+|         Název hostitele         |                                        Adresa URL (IP adresa/podsíť)                                        |  Protocol (Protokol)  |     Port     |                          Zařízení                           |
 |--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
 |      Konzola správce       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS a macOS                    |
 |      Konzola správce       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS a macOS                    |

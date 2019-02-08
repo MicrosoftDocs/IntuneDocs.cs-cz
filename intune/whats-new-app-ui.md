@@ -16,12 +16,13 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0d6a798f9f16f4eaa0e882fb7d90203be912051f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 44e2d29222cfbab3d22ae9746d3cc42d7c959f04
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190026"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841585"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám pomůže při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.
@@ -450,11 +451,11 @@ Od března bude aplikace Portál společnosti pro Android odpovídat [specifikac
 
 ![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Zařízení jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/CP_Android_DevicesTab_BeforeAfter.png)
 
-* __Rozhraní__: Jsou aktualizovaná tlačítka __Vybrané aplikace__ a __Všechny aplikace__ na kartě __Aplikace__. Tlačítko __Hledat__ je teď plovoucí tlačítko akce.
+* __Rozhraní__: __Vybrané aplikace__ a __všechny aplikace__ jsou aktualizovaná tlačítka __aplikace__ kartu. Tlačítko __Hledat__ je teď plovoucí tlačítko akce.
 
 ![Nalevo je obrázek aplikace Portál společnosti pro Android před aktualizací. Napravo je obrázek aplikace Portál společnosti pro Android po aktualizaci. Na obou obrázcích je karta Aplikace jako vybraná karta ze tří dostupných karet Aplikace, Zařízení a Kontaktovat oddělení IT.](./media/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigace__: V části Všechny aplikace se teď zobrazují karty __Doporučené__, __Vše__ a __Kategorie__, které zjednodušují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
+* __Navigace__: Všechny aplikace teď zobrazují s kartami __doporučené__, __všechny__ a __kategorie__ zjednodušují navigaci. __Kontaktovat oddělení IT__ je teď jednodušší a s vylepšenou čitelností.
 
 <html>
 <body>
@@ -501,7 +502,7 @@ __Aktualizace Vybraných aplikací__ Přidali jsme na web vyhrazenou stránku, k
 
 
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
 * [Co je nového v Intune](https://docs.microsoft.com/intune/whats-new)

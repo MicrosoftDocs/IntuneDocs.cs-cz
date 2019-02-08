@@ -16,12 +16,13 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 3b1115a91707c639caba6410ace3c2e255e40a39
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e36580a477db29a52249c4ce809239ae3a524462
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184994"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837882"
 ---
 # <a name="manage-settings-and-features-on-your-devices-with-intune-policies"></a>Správa nastavení a funkcí v zařízeních pomocí zásad Intune
 
@@ -31,10 +32,10 @@ ms.locfileid: "52184994"
 
 Zásady Intune spadají do následujících kategorií. Kategorie, kterou použijete, má vliv na způsob vytvoření a nasazení zásady.
 
-- **Zásady konfigurace**: Běžně se používají ke správě nastavení a funkcí zabezpečení na vašich zařízeních, včetně přístupu k firemním prostředkům. Pokud začínáte, přečtěte si článek o [profilech zařízení v Intune](device-profiles.md).
-- **Zásady dodržování předpisů pro zařízení**: Definují pravidla a nastavení, která musí zařízení splňovat, aby se dalo považovat za zařízení, které dodržuje zásady podmíněného přístupu. Zásady dodržování předpisů můžete používat i k monitorování a opravám dodržování předpisů u zařízení, a to nezávisle na podmíněném přístupu. Pokud začínáte, přečtěte si článek o [zásadách dodržování předpisů pro zařízení](device-compliance-get-started.md).
-- **Zásady podmíněného přístupu**: Pomáhají zabezpečit e-mail a další služby v závislosti na zadaných podmínkách. Dobrým zdrojem informací jsou pro začátek články [Co je podmíněný přístup](conditional-access.md) a [Jaké jsou běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
-- **Zásady registrace podnikových zařízení**: Informace o vytváření zásad registrace podnikových zařízení najdete v tématu [Registrace zařízení s iOSem v Intune](ios-enroll.md).
+- **Zásady konfigurace**: Běžně se používají ke správě nastavení zabezpečení a funkcí v zařízeních, včetně přístupu k prostředkům společnosti. Pokud začínáte, přečtěte si článek o [profilech zařízení v Intune](device-profiles.md).
+- **Zásady dodržování předpisů zařízením**: Definujte pravidla a nastavení, která musí zařízení dodržovat, aby bylo považováno za vyhovující zásady podmíněného přístupu. Zásady dodržování předpisů můžete používat i k monitorování a opravám dodržování předpisů u zařízení, a to nezávisle na podmíněném přístupu. Pokud začínáte, přečtěte si článek o [zásadách dodržování předpisů pro zařízení](device-compliance-get-started.md).
+- **Zásady podmíněného přístupu**: Pomoct zabezpečit e-mail a další služby, v závislosti na podmínkách, které zadáte. Dobrým zdrojem informací jsou pro začátek články [Co je podmíněný přístup](conditional-access.md) a [Jaké jsou běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+- **Zásady registrace podnikových zařízení**: Informace o vytváření zásad registrace podnikových zařízení najdete v tématu [registrace zařízení s Iosem](ios-enroll.md).
 
 ## <a name="frequently-asked-questions-about-intune-policies"></a>Nejčastější dotazy týkající se zásad Intune
 
@@ -49,7 +50,7 @@ Pokud se zařízení neohlásí po odeslání prvního oznámení, Intune proved
 | Mac OS X | Každých 6 hodin |
 | Android | Každých 8 hodin | 
 | Windows Phone | Každých 8 hodin | 
-| Windows 8.1  | Každých 8 hodin |  
+| Windows 8.1  | Každých 8 hodin |  
 | Počítače s Windows 10 zaregistrované jako zařízení | Každých 8 hodin | 
 
 Pokud se zařízení zaregistrovalo nedávno, četnost ohlašování bude vyšší:
@@ -95,10 +96,10 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny s nasazenou zás
 
 #### <a name="enrolled-devices"></a>Registrovaná zařízení
 
-- Profily sítě Wi-Fi, VPN, certifikátu a e-mailu: Tyto profily se odeberou ze všech podporovaných registrovaných zařízení.
+- Wi-Fi, VPN, certifikátu a e-mailové profily: Tyto profily se odeberou ze všech podporovaných registrovaných zařízení.
 - Všechny ostatní typy zásad:
-  - **Zařízení s Windows a Androidem**: Nastavení se ze zařízení neodeberou.
-  - **Zařízení Windows Phone 8.1**: Odeberou se tato nastavení:
+  - **Windows a androidem**: Nastavení se ze zařízení neodeberou.
+  - **Zařízení s Windows Phone 8.1**: Následující nastavení jsou odebraná:
     - Vyžadovat heslo k odemknutí mobilních zařízení
     - Povolit jednoduchá hesla
     - Minimální délka hesla
@@ -125,7 +126,7 @@ Pokud odstraníte zásadu nebo odeberete zařízení ze skupiny s nasazenou zás
     - Povolit komunikaci NFC
     - Povolit Wi-Fi
 
-  - **iOS**: Odeberou se všechna nastavení s těmito výjimkami:
+  - **iOS**: Odeberou se všechna nastavení, s výjimkou:
     - Povolit hlasový roaming
     - Povolit datový roaming
     - Povolit automatickou synchronizaci při roamingu

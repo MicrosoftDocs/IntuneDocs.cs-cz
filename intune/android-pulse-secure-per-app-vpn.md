@@ -16,12 +16,13 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 48f1227da6260217105120d31301f60b6e06110c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f4e973c9fcc31c4aaacc40d89c0b03c23a50dedd
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186014"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834054"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>K vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete použít vlastní profil Microsoft Intune.
 
@@ -39,7 +40,7 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 ## <a name="step-1-create-a-vpn-profile"></a>Krok 1: Vytvoření profilu sítě VPN
 
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
@@ -51,9 +52,9 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 
 Poznamenejte si hodnotu **Název připojení**, kterou zadáváte při vytváření profilu VPN. Tento název bude potřeba v dalším kroku. Příklad: **profil_VPN_pro_moje_aplikace**.
 
-## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady konfigurace
+## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady Konfigurace
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.

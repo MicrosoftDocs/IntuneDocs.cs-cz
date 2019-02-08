@@ -15,12 +15,13 @@ ms.reviewer: heenamac
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: dc3a9620532951bd78e545e87b0d43dd6be3efe5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 73ff5db08d7d4da2cd96c62c1a7f16acd55e58a0
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186592"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842452"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -30,7 +31,7 @@ Intune obsahuje na portálu Azure Portal některé funkce, které pomáhají sle
 
 ## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** > **Profily**.
 
@@ -64,11 +65,11 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
     Zavřete podrobné informace **Stav uživatele**.
 
 5. V seznamu **Profily** vyberte konkrétní profil. Můžete také změnit stávající vlastnosti:
-  - **Vlastnosti**: Můžete změnit název nebo aktualizovat libovolné existující nastavení.
-  - **Přiřazení**: Můžete zahrnout nebo vyloučit zařízení, pro která mají zásady platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
+  - **Vlastnosti**: Změnit název nebo aktualizovat stávající nastavení.
+  - **Přiřazení**: Zahrňte nebo vylučte zařízení, které mají zásady platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
   - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
-  - **Stav uživatele**: Uvádí uživatelská jména se zařízeními, na která má tento profil vliv, a jestli je profil úspěšně nasazený. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
-  - **Stav podle nastavení**: Filtruje výstup tím, že zobrazí jednotlivá nastavení v rámci profilu, a zobrazuje, jestli je toto nastavení úspěšně použité.
+  - **Stav uživatele**: Obsahuje seznam uživatelských jmen s zařízení vliv tento profil, a pokud profil se úspěšně nasadil. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
+  - **Stav podle nastavení**: Filtruje výstup tím, že zobrazuje jednotlivá nastavení v rámci profilu a zobrazí, pokud je toto nastavení úspěšně použito.
 
 ## <a name="view-conflicts"></a>Zobrazení konfliktů
 

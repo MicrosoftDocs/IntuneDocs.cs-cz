@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fcf6f3071e50304216a182a21dd542cace1b6390
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 8b7e187bb182db0491e055ce3af3833d82e578de
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186456"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842401"
 ---
 # <a name="create-a-group-to-manage-your-users-and-data-access"></a>Vytvoření skupiny pro správu uživatelů a přístupu k datům
 
@@ -31,7 +32,7 @@ Microsoft Intune používá ke správě přístupu k firemním prostředkům slu
 
 ## <a name="how-do-i-create-a-group"></a>Jak vytvořím skupinu?
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Po otevření podokna **Microsoft Intune** vyberte **Skupiny**.
 4. V podokně **Uživatelé a skupiny – Všechny skupiny** vyberte příkaz **Nová skupina**.
@@ -39,7 +40,7 @@ Microsoft Intune používá ke správě přístupu k firemním prostředkům slu
 5. Přidejte **název** a **popis** skupiny.
 6. **Typ členství** nastavte na **Přiřazené**. Testovací skupině **nepovolujte funkce Office**.
 7. Vyberte **členy** skupiny.
-7. Klikněte na **Vytvořit**.
+7. Klikněte na možnost **Vytvořit**.
 
 Pokud jste úspěšně vytvořili skupinu, měla by se zobrazit v seznamu **Všechny skupiny**. Pokud tam není, zkuste vytvořit jinou skupinu.
 
@@ -47,7 +48,7 @@ Pokud jste úspěšně vytvořili skupinu, měla by se zobrazit v seznamu **Vše
 
 [Začínáme se zásadami](get-started-policies.md) – vytvořením zásad zabráníte uživatelům, aby se svými zařízeními dělali něco neoprávněného.
 
-## <a name="learn-more"></a>Další informace
+## <a name="learn-more"></a>Víc se uč
 
 * [Nastavení omezení registrace pomocí skupin v Intune](groups-add.md)
 * [Správa přístupu k firemním prostředkům pomocí skupin ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-manage-groups)

@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 50fc19410b280e984c8dc3abe620baad7c3267de
-ms.sourcegitcommit: 604b29c480b24270b5debc3e5f3141c8149ee6ed
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e7db319586b9375b8c88f177197e2fdf15378ab4
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49959532"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55847297"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti
 
@@ -87,7 +88,7 @@ Další informace o registraci najdete v tématu s informacemi o tom, [co se sta
 |![Potvrzení nastavení zařízení](./media/ios-25-cp-enroll-1802.PNG)|Portál společnosti zkontroluje, zda je nutné aktualizovat některá nastavení.|
 |![Kontrola nastavení byla dokončena s nesprávnou verzí operačního systému.](./media/ios-26-cp-enroll-1802.PNG)|Portál společnosti vám poskytne pokyny, jak opravit problémy s nastavením. Jakmile dokončíte opravu problémů, klepněte na možnost **Zkontrolovat nastavení**.|
 |![Obrazovka načítání pro potvrzení nastavení zařízení](./media/ios-27-cp-enroll-1802.PNG)|Zařízení zkontroluje, jestli jsou nastavení dostatečně zabezpečená pro přístup k prostředkům společnosti.|
-|![Úspěšně zaregistrované a aktualizované nastavení](./media/ios-28-cp-enroll-1802.PNG)|Gratulujeme! Právě jste zaregistrovali své zařízení do služby Intune.|
+|![Úspěšně zaregistrované a aktualizované nastavení](./media/ios-28-cp-enroll-1802.PNG)|Blahopřejeme! Právě jste zaregistrovali své zařízení do služby Intune.|
 
 > [!Note]
 > K dokončení přípravy zařízení pro správu je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
