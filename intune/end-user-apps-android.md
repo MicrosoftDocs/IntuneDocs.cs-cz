@@ -15,12 +15,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 5f8263f06fe33537a74a6d1889b02b89ee6a825f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c458e77e41d67466ad52a4f0b4089d85a9513f5d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183396"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834870"
 ---
 # <a name="how-your-android-users-get-their-apps"></a>Jak uživatelé s Androidem získávají svoje aplikace
 
@@ -37,8 +38,8 @@ Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé Androi
 
 Aby si koncoví uživatelé mohli nainstalovat [obchodní aplikace](lob-apps-android.md), musí povolit instalaci z neznámých zdrojů. Toto nastavení se normálně nachází na dvou různých místech:
 
-* **Android 7.1.2 a starší**: **Nastavení** > **Zabezpečení** > **Neznámé zdroje**
-* **Android 8.0 a novější**: **Nastavení** > **Aplikace a oznámení** > **Přístup speciálních aplikací** > **Instalace neznámých aplikací** > **Portál společnosti** > **Povolit z tohoto zdroje**
+* **Android 7.1.2 a starší**: **Nastavení** > **zabezpečení** > **neznámé zdroje**
+* **Android 8.0 a novější**: **Nastavení** > **aplikace a oznámení** > **přístup speciálních aplikací** > **instalace neznámých aplikací**  >  **Portál společnosti** > **povolit z tohoto zdroje**
 
 Aplikace Portál společnosti v takovém případě koncového uživatele informuje a navede ho na příslušné nastavení. 
 
@@ -56,7 +57,7 @@ Aplikace můžou být spravované nebo nespravované, jak je popsáno dál. Proc
 
 **Nespravované aplikace** – aplikace, které nejde spravovat prostřednictvím zásad. Nejsou zabalené službou Intune ani sestavené pomocí sady Intune App SDK. Na tyto aplikace nejdou aplikovat zásady použití.
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 [Přidávání aplikací s Microsoft Intune](apps-add.md)
 
 [Jak uživatelé systému iOS získávají svoje aplikace](end-user-apps-ios.md)

@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 013e2c6c10d5a545343c864b1b564acbede7c675
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 157328b1fdf774f46d69e619ec0e44e32cbba101
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179818"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834278"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
@@ -71,7 +72,7 @@ Například úvodní komunikace o zahájení projektu Intune může být cílena
 
   | **Plán komunikace** | **Červenec** | **Srpen** | **Září** | **Říjen** |
 |:---:|:---:|:---:|:---:|:---:|
-| 1. vlna  | Všechny |  |  |  |                                                         
+| 1. vlna  | Vše |  |  |  |                                                         
 | Úvodní schůzka | První týden |  |  |  |                                                         
 | 2. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail před registrací 1 | První týden | První týden | První týden | První týden |

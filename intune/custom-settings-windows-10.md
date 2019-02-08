@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d87d8c8da5511f641b785f28bad7d7ef6739d888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 86c822ba197851fe7e05d91ff8aa703fb9fe3811
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184450"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842777"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows 10 v Intune
 
@@ -42,17 +43,17 @@ V tomto článku najdete:
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 
-    - **Název:** Zadejte název profilu, třeba `windows 10 custom profile`.
+    - **Název**: Zadejte název profilu, jako například `windows 10 custom profile`.
     - **Popis**: Zadejte popis profilu.
     - **Platforma**: Zvolte **Windows 10 a novější**.
-    - **Typ profilu:** Zvolte **Vlastní**.
+    - **Typ profilu**: Zvolte **vlastní**.
 
 4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
 
-    - **Název:** Zadejte jedinečný název nastavení OMA-URI, abyste ho v seznamu poznali.
-    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
-    - **OMA-URI** (rozlišuje velká a malá písmena): Zadejte nastavení OMA-URI, které chcete použít.
-    - **Datový typ:** Zvolte datový typ, který pro toto nastavení OMA-URI použijete. Možnosti:
+    - **Název**: Zadejte jedinečný název nastavení OMA-URI, který vám pomůže ho rozpoznat v seznamu nastavení.
+    - **Popis**: Zadejte popis, který bude shrnovat účel nastavení a další důležité podrobnosti.
+    - **OMA-URI** (rozlišuje velikost písmen): Zadejte OMA-URI, které chcete použít jako nastavení.
+    - **Datový typ**: Vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
         - Řetězec
         - Řetězec (soubor XML)
@@ -62,11 +63,11 @@ V tomto článku najdete:
         - Logická hodnota
         - Base64 (soubor)
 
-    - **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
+    - **Hodnota**: Zadejte hodnotu dat, které chcete přidružit k uvedenému OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
 
     Po přidání nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
 
-5. Výběrem **OK** uložte změny. Podle potřeby přidejte další nastavení.
+5. Vyberte **OK** uložte provedené změny. Podle potřeby přidejte další nastavení.
 6. Až to budete mít, zvolte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
 
 ## <a name="example"></a>Příklad

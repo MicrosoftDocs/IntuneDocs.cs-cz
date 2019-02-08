@@ -11,14 +11,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: 5de108835254d6a65546b8f1c9e8d0e9c32dbd26
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e06d40ebcbd16940b7c980f529f7fc44ff5c736e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189924"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848453"
 ---
-# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvoření a přiřazení vlastní role
+# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvořit a přiřadit vlastní roli
 
 V tomto rychlém startu pro Intune vytvoříte vlastní roli se specifickými oprávněními pro oddělení operací zabezpečení. Potom tuto roli přiřadíte skupině příslušných operátorů. Existuje několik výchozích rolí, které se dají okamžitě použít. Vytvořením vlastních rolí, jako je tato, však můžete přesně řídit přístup ke všem částem systému pro správu mobilních zařízení.
 
@@ -73,4 +74,4 @@ V tomto rychlém startu jste vytvořili vlastní roli pro operace zabezpečení 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS](quickstart-email-profile.md)
+> [Rychlý start: Vytvořte profil zařízení pro iOS](quickstart-email-profile.md)

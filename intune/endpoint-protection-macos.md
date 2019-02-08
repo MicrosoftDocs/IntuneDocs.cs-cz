@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a9828f1b8a24e4f7d871f9e6e6f67e9f6c6fb197
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1151df35abfe5f7806370a5ad466381dd3d10013
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182767"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839885"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů macOS v Intune
 
@@ -26,22 +27,22 @@ V tomto článku se dozvíte, jak nastavit ochranu koncových bodů pro zaříze
 
 ## <a name="gatekeeper"></a>Gatekeeper
 
-- **Povolit aplikace stažené z těchto míst**: Omezuje aplikace podle toho, odkud jsou stažené. Účelem je chránit zařízení před malwarem a povolit jenom aplikace z důvěryhodných zdrojů. Dostupné možnosti: 
+- **Povolit aplikace stažené z těchto míst**: Omezuje aplikace podle toho, kde jsou stažené. Účelem je chránit zařízení před malwarem a povolit jenom aplikace z důvěryhodných zdrojů. Dostupné možnosti: 
   - **Mac App Store**
   - **Mac App Store a identifikovaní vývojáři**
   - **Kdekoliv**
 
-- **Uživatel může přepsat Gatekeeper**: Zabraňuje uživatelům přepsat nastavení Gatekeeperu a instalovat aplikace kliknutím při současném stisknutí klávesy Control. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.
+- **Uživatel může přepsat Gatekeeper**: Zabrání uživatelům v gatekeeperu nastavení a zabraňuje uživatelům kliknutím na instalovat aplikaci pro ovládací prvek. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.
 
-## <a name="firewall"></a>Brány firewall
+## <a name="firewall"></a>Firewall
 
 Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. Když použijete nastavení pro danou aplikaci, získáte snadno výhody ochrany branou firewall. Nežádoucím aplikacím také znemožníte převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.
 
 - **Použijte bránu firewall k ochraně zařízení před neoprávněným přístupem do sítě pomocí řízení připojení na základě jednotlivých aplikací.**
-  - **Firewall**: Umožňuje bráně firewall konfigurovat způsob zpracování příchozích připojení ve vašem prostředí.
-  - **Příchozí připojení**: Blokuje všechna příchozí připojení s výjimkou připojení potřebných pro základní internetové služby, jako je DHCP, Bonjour a IPSec. Tato funkce také zablokuje všechny služby sdílení, jako je sdílení souborů nebo sdílení obrazovky. Pokud používáte služby sdílení, toto nastavení **nekonfigurujte**.
+  - **Brána firewall**: Povolit bránu Firewall nakonfigurovat jak příchozí připojení jsou zpracovávány ve vašem prostředí.
+  - **Příchozí připojení**: Blokovat všechna příchozí připojení s výjimkou připojení potřebných pro základní internetové služby, například DHCP, Bonjour a IPSec. Tato funkce také zablokuje všechny služby sdílení, jako je sdílení souborů nebo sdílení obrazovky. Pokud používáte služby sdílení, toto nastavení **nekonfigurujte**.
 
 - **Povolení nebo blokování příchozích připojení pro konkrétní aplikace**
-  - **Povolené aplikace**: Vyberte aplikace, kterým výslovně povolíte přijímat příchozí připojení.
-  - **Blokované aplikace**: Vyberte aplikace, kterým zablokujete příchozí připojení.
-  - **Neviditelný režim**: Aktivací neviditelného režimu zakážete počítači odpovídat na zjišťovací požadavky. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti. Neočekávané požadavky, jako je ICMP (ping), se ignorují.
+  - **Povolené aplikace**: Vyberte aplikace, které se explicitně povolí příjem příchozích připojení.
+  - **Blokované aplikace**: Vyberte aplikace, které by měly blokovat příchozí připojení.
+  - **Neviditelný režim**: Zabráníte počítači v odpovídání na zjišťovací požadavky, povolení neviditelného režimu. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti. Neočekávané požadavky, jako je ICMP (ping), se ignorují.

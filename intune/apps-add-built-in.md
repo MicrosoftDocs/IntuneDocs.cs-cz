@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: e3bb60d3d6bd7321ea3e378c747e87481b659888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c4660706a5c9768949d09dfe2b35ead8b8721901
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181543"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848985"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -35,7 +36,7 @@ Ve starších verzích konzoly Intune bylo v Intune několik výchozích spravov
 ## <a name="add-a-built-in-app"></a>Přidání integrované aplikace
 
 Postup přidání integrované aplikace k aplikacím dostupným v Microsoft Intune je následující:
-1. Přihlaste se k portálu Azure Portal.
+1. Přihlaste se k portálu Azure.
 2. Zobrazte podokno Microsoft Intune tak, že zvolíte **Další služby** > **Monitorování + správa** > **Intune**.
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
@@ -54,16 +55,16 @@ Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžo
 2. V části **Spravovat** vyberte možnost **Vlastnosti**.
 3. Informace o integrované aplikaci můžete upravovat výběrem možnosti **Konfigurovat**.
 4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
-    - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
+    - **Název**: Zadejte název integrované aplikace, který se zobrazí v aplikaci portál společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. 
-    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Publisher**: Zadejte název vydavatele aplikace.
     - **Kategorie**: Volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci**: Když uživatelé vyhledávají aplikace, zobrazí se daná aplikace na význačném místě hlavní stránky portálu společnosti.
+    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Adresa URL informací o ochraně osobních údajů**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Vývojář**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte vlastníka aplikace, například *Personální oddělení*.
-    - **Poznámky**: Zadejte jakékoli poznámky, které chcete k aplikaci přidružit.
+    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
+    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace (například *Personální oddělení*).
+    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
     - **Nahrát ikonu**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
 4. Vyberte **OK**.
 5. V podokně **Vlastnosti** vyberte **Uložit**.

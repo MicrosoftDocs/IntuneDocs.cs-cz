@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: fc5d2a6f17bdac8711348c136ee390a400fc21bd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 646a72eaa3837b48b4af718904064fddaeb98955
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52182495"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840378"
 ---
 # <a name="get-started-managing-users"></a>Začínáme se správou uživatelů
 
@@ -29,10 +30,10 @@ Zamyslete se nad všemi různými lidmi, kteří pracují ve vaší organizaci. 
 
 ## <a name="how-do-i-create-a-user"></a>Jak vytvořím uživatele?
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. Po otevření podokna **Microsoft Intune** vyberte **Uživatelé**. Na stránce **Všichni uživatelé** vyberte **+ Nový uživatel**.
-4. Zadejte podrobnosti o uživateli, jako je **Jméno** a **Uživatelské jméno**. Část uživatelského jména, která odpovídá názvu domény, musí být jedna z následujících domén:
+4. Zadejte podrobnosti o uživateli, například **Jméno** a **Uživatelské jméno**. Část uživatelského jména, která odpovídá názvu domény, musí být jedna z následujících domén:
     - počáteční výchozí název domény contoso.onmicrosoft.com, nebo
     - ověřený nefederovaný název domény, například contoso.com.
 5. V části **Skupiny** zvolte [skupinu](get-started-groups.md), do které chcete uživatele přidat.

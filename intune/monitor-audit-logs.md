@@ -12,12 +12,13 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
-ms.openlocfilehash: d9ecfa44e2619e5e123c9e8af169b6a8a95ee466
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9e7269eb6e396557a6bc19daa371a10be7154866
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183889"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844628"
 ---
 # <a name="audit-logs-for-intune-activities"></a>Protokoly auditu pro aktivity v Intune
 Protokoly auditu obsahují zaznamenané aktivity, které v Microsoft Intune generují změnu. Vytváření, aktualizace (úpravy), odstraňování, přiřazování akcí nebo vzdálené úlohy generují události protokolu, které můžete kontrolovat. V protokolech auditu můžete kontrolovat většinu úloh Intune. Auditování je ve výchozím nastavení povolené pro všechny zákazníky a nedá se zakázat. Události auditu se začaly zaznamenávat od data vydání této součásti v prosinci 2017. Dřívější události nejsou dostupné.
@@ -30,7 +31,7 @@ Protokoly auditu mohou kontrolovat uživatelé s tímto oprávněním:
 
 ## <a name="audit-logs-for-intune-workloads"></a>Protokoly auditu pro úlohy Intune
 Ve skupině Monitorování můžete kontrolovat protokoly auditu o každé úloze Intune.  
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3. V podokně **Intune** zvolte úlohu, jejíž protokoly auditu chcete zkontrolovat, například **Zařízení**.
 4. Ve skupině **Monitorování** zvolte u úlohy **Protokoly auditu**.

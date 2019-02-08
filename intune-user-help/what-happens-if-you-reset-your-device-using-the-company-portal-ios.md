@@ -1,5 +1,5 @@
 ---
-title: Co se stane, pokud resetujete zařízení s iOSem? | Dokumentace Microsoftu
+title: Co se stane, pokud resetujete zařízení s iOSem? | Dokumenty Microsoft
 description: ''
 keywords: ''
 author: lenewsad
@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 11c82861a7367b1552e9f505fc622e439bb86ad0
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9f328577ba2da97595c116efc51626176a14931a
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43149538"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840752"
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti?
 

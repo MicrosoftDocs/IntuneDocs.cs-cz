@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: be0d80828327550e248d1ed5417b373c273a7a56
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7f3332b4ec3db4830a3759303acf91e82fc9c131
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184858"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846532"
 ---
 # <a name="microsoft-intune-windows-10-team-device-restriction-settings"></a>Nastavení omezení pro zařízení s Windows 10 Team v Microsoft Intune
 
@@ -31,7 +32,7 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
 ## <a name="apps-and-experience"></a>Aplikace a prostředí
 
 - **Probudit obrazovku, když je někdo v místnosti** – Umožňuje automatické probuzení zařízení, když jeho senzor zachytí osobu v místnosti.
-- **Zobrazování informací o schůzkách na úvodní obrazovce** – Pokud povolíte tuto možnost, budete moct zvolit informace, které se zobrazí na dlaždici Schůzky na úvodní obrazovce. Můžete postupovat následovně:
+- **Zobrazování informací o schůzkách na úvodní obrazovce** – Pokud povolíte tuto možnost, budete moct zvolit informace, které se zobrazí na dlaždici Schůzky na úvodní obrazovce. Můžete:
     - **Zobrazit jenom organizátora a čas**
     - **Zobrazit organizátora, čas a předmět (u privátních schůzek je předmět skrytý)**
 - **Adresa URL obrázku na pozadí úvodní obrazovky** – Povolením tohoto nastavení umožníte zobrazit na **úvodní** obrazovce zařízení s Windows 10 Team vlastní pozadí ze zadané adresy URL.<br>Obrázek musí být ve formátu PNG a adresa URL musí začínat **https://**.
