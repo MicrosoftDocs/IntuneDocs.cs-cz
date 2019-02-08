@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 89be04405f76c290c252c382fbee207176e7180d
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cd91a7c862b87d9842d08a2346e2e23af4f3665e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43150303"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836320"
 ---
 # <a name="send-logs-to-your-company-support-using-a-usb-cable"></a>Odeslání protokolů firemní podpoře pomocí kabelu USB
 

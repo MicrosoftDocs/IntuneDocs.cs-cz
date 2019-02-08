@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 10598f4868a42b9736b6b33a6d9b5c4b4b308967
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b30fd61bd00cc32da4d9a85a08ae06327a8aea96
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189346"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850671"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Vymezení cílů, úkolů a problémů při nasazení
 
@@ -33,27 +34,27 @@ Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v 
 
 -   **Integrace s Office 365 a podpora použití mobilních aplikací Office**
 
-    -   **Popis:** Zajištění úzké integrace Office 365 a použití mobilních aplikací Office, včetně jejich ochrany.
+    -   **Popis:** Zajištění úzké integrace Office 365 a použití mobilních aplikací Office pomocí zásad ochrany aplikací.
 
-    -   **Obchodní hodnota:** Zabezpečené a vylepšené uživatelské prostředí, které umožňuje uživatelům používat známé a oblíbené aplikace.
+    -   **Obchodní hodnota:** Zabezpečené a vylepšené uživatelské prostředí tím, že uživatelům používat aplikace, které znají a dáváte přednost.
 
 -   **Zpřístupnění interních firemních služeb na mobilních zařízeních**
 
-    -   **Popis:** Umožní zaměstnancům, aby byli produktivní všude, kde potřebují pracovat, a s libovolným zařízením, které je pro ně nejvhodnější. Projekt má zajistit mobilní produktivitu a bezpečný přístup k firemním datům.
+    -   **Popis:** Povolte zaměstnancům, aby byli produktivní všude, kde potřebují pracovat, a s libovolným zařízením je pro ně nejvhodnější. Projekt má zajistit mobilní produktivitu a bezpečný přístup k firemním datům.
 
-    -   **Obchodní hodnota:** Umožní zaměstnancům, aby byli aktivní a mohli pracovat odkudkoliv. Podnikům zase nabízí větší konkurenceschopnost a hodnotnější pracovní prostředí.
+    -   **Obchodní hodnota:** Povolení zaměstnanců, kteří budou pracovat odkudkoliv, kde potřebují umožňuje firmám větší konkurenceschopnost a přínosnější pracovní prostředí.
 
 -   **Zajištění ochrany dat v mobilních zařízeních**
 
-    -   **Popis:** Pokud jsou data uložená v mobilním zařízení, musí být chráněna proti poškození, náhodné ztrátě nebo sdílení.
+    -   **Popis:** Pokud jsou data uložená na mobilních zařízeních, by měly být chráněné proti poškození a náhodné ztrátě nebo sdílení.
 
-    -   **Obchodní hodnota:** Ochrana dat je nezbytným předpokladem zachování konkurenceschopnosti, který organizaci umožňuje zacházet s klienty a jejich daty co nejopatrněji.
+    -   **Obchodní hodnota:** Ochrana dat je důležité k zajištění konkurenceschopnosti a organizaci umožňuje zacházet klienty a jejich data s nejvyšší opatrností.
 
 -   **Snižování nákladů**
 
-    -   **Popis:** Pokud je to možné, snižuje projekt náklady na nasazení a provoz.
+    -   **Popis:** Pokud je to možné, snižuje projekt nasazení a provozní náklady.
 
-    -    **Obchodní hodnota:** Efektivní využití prostředků umožňuje podnikům investovat do jiných oblastí, zachovat si konkurenceschopnost a poskytovat lepší služby klientům.
+    -    **Obchodní hodnota:** Efektivní využívání prostředků umožňuje podnikům investovat do jiných oblastí, konkurenceschopnost a poskytovat lepší služby klientům.
 
 ## <a name="deployment-objectives"></a>Úkoly nasazení
 
@@ -61,7 +62,7 @@ Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v 
 
 -   **Snížení počtu řešení pro správu zařízení**
 
-    -   **Implementace:** Sjednocení do jediného řešení pro správu mobilních zařízení Microsoft Intune, které chrání firemní data v aplikacích a zařízeních.
+    -   **Implementace:** Konsolidovat do řešení pro správu jednoho mobilního zařízení: Microsoft Intune chrání firemní data z aplikací a zařízení.
 
 -   **Zajištění zabezpečeného přístup k Exchangi a SharePointu Online**
 
@@ -69,7 +70,7 @@ Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v 
 
 -   **Zabránění ukládání nebo přeposílání firemních dat v mobilním zařízení jiným než firemním službám**
 
-    -   **Implementace:** Použít zásady ochrany aplikací v Intune pro Microsoft Office a obchodní aplikace.
+    -   **Implementace:** Použijte zásady ochrany aplikací Intune pro Microsoft Office a -obchodní aplikace.
 
 -   **Zajistit možnost vymazání firemních dat ze zařízení**
 
@@ -81,16 +82,16 @@ Problémy při nasazení mají pro organizaci nejvyšší prioritu, protože moh
 
 -   Při úvodním stanovení rozsahu projektu se nepřihlédlo k připravenosti podpory a zkušenostem koncových uživatelů. To vede k nedostatečnému osvojení koncovými uživateli a k problémům s podporou v organizaci.
 
-    -   **Zmírnění dopadů:** Začlenit školení podpory. Doplnit plán nasazení o ověření zkušeností koncových uživatelů prostřednictvím měřítek úspěšnosti.
+    -   **Omezení rizik:** Zahrnout podporu školení. Doplnit plán nasazení o ověření zkušeností koncových uživatelů prostřednictvím měřítek úspěšnosti.
 
 -   Nedostatek jasně definovaných cílů a měřítek úspěšnosti vede k nedefinovatelným výsledkům. Při vzniku problémů se organizace může dostat do situace, kdy na ně reaguje dodatečně.
 
-    -   **Zmírnění dopadů:** Definujte cíle a metriky úspěšnosti už na začátku projektu a použijte tyto údaje, abyste podpořili další zaváděcí fáze. Zajistěte, aby cíle vyhovovaly pravidlu SMART (Specific = konkrétní, Measurable = měřitelné, Attainable = dosažitelné, Realistic = reálné a Timely = včas). V každé fázi naplánujte měření cílů, abyste zajistili průběh projektu podle plánu.
+    -   **Omezení rizik:** Definování cílů a měřítek úspěšnosti již v rané fázi v stanovování oboru projektu a používejte tyto datové body, abyste podpořili další zaváděcí fáze. Zajistěte, aby cíle vyhovovaly pravidlu SMART (Specific = konkrétní, Measurable = měřitelné, Attainable = dosažitelné, Realistic = reálné a Timely = včas). V každé fázi naplánujte měření cílů, abyste zajistili průběh projektu podle plánu.
 
 -   Opomenete vytvořit , ověřit a důsledně sdílet jasný návrh přidané hodnoty, který zajistí podporu celé organizace. Častým důsledkem je omezené osvojení a nedostatečná návratnost investic (ROI).
 
-    -   **Zmírnění dopadů:** Pravděpodobně se už nemůžete dočkat, až projekt zahájíte. Přesto se napřed ujistěte, že máte jasně definované cíle a úkoly. Ty pak uvádějte na všech propagačních akcích a školeních, abyste pomohli uživatelům pochopit, proč organizace vybrala Intune.
+    -   **Omezení rizik:** Zatímco lze také přejít do vašeho projektu, zkontrolujte, jestli že je máte jasně definované cíle a úkoly. Ty pak uvádějte na všech propagačních akcích a školeních, abyste pomohli uživatelům pochopit, proč organizace vybrala Intune.
 
 ## <a name="next-steps"></a>Další postup
 
-Po identifikaci cílů, úkolů a možných problémů při nasazení můžete přejít k další části, kterou je [identifikace scénářů použití](planning-guide-scenarios.md).
+Teď, když jste identifikovali cílů nasazení, úkolů a možných problémů při, přejít k další části: [Identifikace scénářů použití](planning-guide-scenarios.md).

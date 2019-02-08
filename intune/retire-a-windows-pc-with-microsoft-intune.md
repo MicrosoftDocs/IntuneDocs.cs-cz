@@ -16,12 +16,13 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: bfb7186d7dcd764237ba4dd00fc12bd9e666f67e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 24a3c53cb9aa26277ac7aef0ed643c9492e6e401
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187408"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846505"
 ---
 # <a name="retire-a-windows-pc"></a>Vyřazení počítače s Windows
 
@@ -58,6 +59,6 @@ Při vyřazení počítače se stane toto:
 
     Pokud se odinstalace klienta služby Endpoint Protection nepovede, přečtěte si další nápovědu v tématu [Řešení potíží se službou Endpoint Protection](/intune/troubleshoot-endpoint-protection-in-microsoft-intune).
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: cd605542a0711e27f87d68af51662fd318f3250e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b2d0bde56c6622648d47fe47458bdac62d7843ca
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184875"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838457"
 ---
 # <a name="create-vpn-profiles-in-intune"></a>Vytváření profilů sítě VPN v Intune
 
@@ -41,9 +42,9 @@ Vlastní zásady konfigurace Intune můžete použít k vytvoření profilů sí
 
 Profily VPN můžete vytvářet pomocí následujících typů připojení:
 
-|Typ připojení|Android<br>Pracovní profily Androidu|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
+|Typ připojení|Android<br>Pracovní profily Androidu|iOS|macOS|Windows Phone 8.1|Windows 8.1|Windows 10|
 |-|-|-|-|-|-|-|
-|Automaticky|Ne|Ne|Ne|Ne|Ne|Ano|
+|Automatické|Ne|Ne|Ne|Ne|Ne|Ano|
 |Check Point Capsule VPN|Ano|Ano|Ano|Ano|Ano|Ano|
 |Cisco AnyConnect|Ano|Ano|Ano|Ne|Ne|Ne|
 |SonicWall Mobile Connect|Ano|Ano|Ano|Ano|Ano|Ano|
@@ -65,7 +66,7 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 
 ## <a name="create-a-device-profile-containing-vpn-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení VPN
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 4. Zadejte **název** a **popis** profilu VPN.

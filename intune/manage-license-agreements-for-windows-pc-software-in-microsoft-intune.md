@@ -16,12 +16,13 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: f6559b10bb9e3c293a9719235d01d8c7b55ee62f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a858de59c073152c984b9b912da1b2ef3d7a0ed4
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185385"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837644"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 
@@ -76,11 +77,11 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         Soubor vytvoříte tak, že do obyčejného textového dokumentu přidáte páry smluv. Soubor musí být v některém z následujících formátů podle typu organizace, který jste zaregistrovali na webu VLSC. Na řádku uveďte jednu dvojici čísel smluv.
 
-        -   **Zákazníci s programem Open Value:** *číslo smlouvy*, *opakujte číslo smlouvy*, *název smlouvy*
+        -   **Hodnota zákazníci s programem Open:** *Číslo smlouvy*, *opakujte číslo smlouvy*, *název smlouvy*
 
-        -   **Zákazníci s programem Open:** *autorizační číslo*, *číslo související licence*, *název smlouvy*
+        -   **Zákazníci s programem Open:** *Autorizační číslo*, *číslo související licence*, *název smlouvy*
 
-        -   **Zákazníci s programy Select a Enterprise:** *číslo smlouvy*, *číslo související prováděcí smlouvy*, *název smlouvy*
+        -   **Vyberte a podnikovými zákazníky:** *Číslo smlouvy*, *číslo související prováděcí*, *název smlouvy*
 
         Při přidání nové smlouvy zobrazí formulář **Přidat smlouvy** výzvu k vyhledání tohoto souboru.
 
@@ -111,7 +112,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
     -   **Přidání smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
 
-5.  Vyberte **OK**.
+5.  Zvolte **OK**.
 
 Zobrazí se seznam **Všechny smlouvy** a služba Intune se připojí k centru Microsoft VLSC, aby ověřila vámi zadané páry čísel smluv.
 
@@ -170,7 +171,7 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
     -   Pokud chcete nové smlouvy přidávat do existující skupiny licencí, vyberte **Přidat smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
 
-6.  Vyberte **OK**.
+6.  Zvolte **OK**.
 
 Zobrazí se zobrazení seznamu **Všechny smlouvy**.
 
@@ -180,9 +181,9 @@ Licenční smlouvy na software se dají přidat do skupin licencí. Skupiny lice
 
 |                            |                                                                                                                                                                                                                                                                                                                                                                          |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|            Úloha            |                                                                                                                                                                                 Podrobnosti                                                                                                                                                                                  |
-|   Vytvoření skupiny licencí   |                                                            V pracovním prostoru <strong>Licence</strong> na stránce <strong>Přehled</strong> vyberte v nabídce <strong>Úlohy</strong> možnost <strong>Vytvořit skupinu licencí</strong>. <strong>Poznámka:</strong> Můžete vytvořit maximálně 500 skupin licencí.                                                             |
+|            Úkol            |                                                                                                                                                                                 Podrobnosti                                                                                                                                                                                  |
+|   Vytvoření skupiny licencí   |                                                            V pracovním prostoru <strong>Licence</strong> na stránce <strong>Přehled</strong> vyberte v nabídce <strong>Úlohy</strong> možnost <strong>Vytvořit skupinu licencí</strong>. <strong>Poznámka:</strong> Můžete vytvořit maximálně 500 skupin licencí.                                                             |
 |   Přejmenování skupiny licencí   |                                                                                                      V pracovním prostoru <strong>Licence</strong> zvolte skupinu licencí a pak v nabídce <strong>Úlohy</strong> klikněte na <strong>Upravit skupinu licencí</strong>.                                                                                                       |
-|   Odstranění skupiny licencí   |                                 V pracovním prostoru <strong>Licence</strong> zvolte skupinu licencí a pak v nabídce <strong>Úlohy</strong> klikněte na <strong>Odstranit skupinu licencí</strong>. <strong>Tip:</strong> Všechny licence se z odstraněné skupiny přesunou do skupiny licencí <strong>Nepřiřazené smlouvy</strong>.                                 |
-| Odstranění licenční smlouvy | V pracovním prostoru <strong>Licence</strong> zvolte smlouvu a klikněte na <strong>Odstranit</strong>. <strong>Tip:</strong> Pokud chcete po odstranění multilicenčních smluv aktualizovat informace o licencích, klikněte na <strong>Aktualizovat</strong> na stránce <strong>Přehled licencí</strong> nebo na kartě <strong>Obecné</strong> konkrétní skupiny licencí. |
+|   Odstranění skupiny licencí   |                                 V pracovním prostoru <strong>Licence</strong> zvolte skupinu licencí a pak v nabídce <strong>Úlohy</strong> klikněte na <strong>Odstranit skupinu licencí</strong>. <strong>Tip:</strong> Všechny licence se z odstraněné skupiny přesunou do <strong>nepřiřazené smlouvy</strong> skupiny licencí.                                 |
+| Odstranění licenční smlouvy | V pracovním prostoru <strong>Licence</strong> zvolte smlouvu a klikněte na <strong>Odstranit</strong>. <strong>Tip:</strong> Po odstranění multilicenčních smluv aktualizovat informace o licencích, zvolte <strong>aktualizovat</strong> na <strong>přehled licencí</strong> stránku nebo na <strong>Obecné</strong> kartu pro konkrétní skupiny licencí. |
 

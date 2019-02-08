@@ -17,12 +17,13 @@ ROBOTS: ''
 ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
-ms.openlocfilehash: 8ce71a14f9bb7e877fb31e78afdf64d5e492f4a8
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43146685"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838032"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -73,12 +74,12 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
 V této části najdete chování při resetování hesla a vytvoření dočasného hesla pro jednotlivé platformy.  
 
-**Android**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice.
+**Android**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmena a číslice.
 
-**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, je potřeba ho nastavit znovu.  
+**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, je potřeba ho nastavit znovu.  
 
-**Windows 10 Mobile**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
+**Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmena a číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
     
-**Windows Phone 8.1**: Odebere stávající heslo a vytvoří dočasné heslo obsahující číslice.  
+**Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo tvořené čísla.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

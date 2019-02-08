@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: bdd8267701b20600d67e6927c8b55d7f9c11a34f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 487ad607bc34d5fc2137f1b3903b0711e793658d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186762"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840525"
 ---
 # <a name="understand-the-users-experience-enrolling-an-ios-device"></a>Popis prostředí uživatele registrujícího zařízení s iOSem
 
@@ -33,7 +34,7 @@ Microsoft Intune umožňuje vybavit vaše pracovníky mobilními zařízeními a
 | Umístění | Sériové číslo |
 | Osobní e-mail | Verze operačního systému |
 | Textové zprávy | Názvy aplikací |
-| Kontakty | Vlastník |
+| Kontakty | Owner |
 | Hesla k osobním účtům | Název zařízení |
 | Události kalendáře | Výrobce (pro zařízení, která nejsou vyrobená společností Apple) |
 | Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu | Telefonní číslo (pro pracovní zařízení celé číslo, pro osobní zařízení jenom poslední čtyři číslice) |
@@ -63,7 +64,7 @@ Registrace zařízení je pro mnoho koncových uživatelů první zkušeností s
 
 [Začínáme s přidáváním aplikací](get-started-apps.md) – najděte a přidejte aplikace do zařízení, aby mohli vaši zaměstnanci plnit úkoly.
 
-## <a name="learn-more"></a>Další informace
+## <a name="learn-more"></a>Víc se uč
 
 * [Možnosti registrace pro Intune](enrollment-options.md)
 * [Jak v Intune povolit funkci Přineste si vlastní zařízení](byod-enable.md)

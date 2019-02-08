@@ -11,14 +11,15 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
-ms.openlocfilehash: b5653c67766a3312cf7ce2872e8b0cd4301b0e8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 982caa46adb29ef1d57ec65ac855adca9cef1883
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52189485"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834836"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Rychlý start: Vytvoření uživatele a přiřazení licence tomuto uživateli
+# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Rychlý start: Vytvořte uživatele a přiřadit licenci
 
 V tomto rychlém startu vytvoříte uživatele a potom mu přiřadíte licenci. Při používání Intune musí mít uživatelský účet každý uživatel, který má mít přístup k firemním datům. Správci Intune později můžou tyto uživatele nakonfigurovat a spravovat tak řízení přístupu.
 

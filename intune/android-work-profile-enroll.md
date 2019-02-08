@@ -16,12 +16,13 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b3592ceb2b1a4e7ba32fc0a8b3de53e0f0329d8b
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f39e9b5f8ecd49ba84f4e9614e2a63a6cfbfef7a
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179724"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837924"
 ---
 # <a name="set-up-enrollment-of-android-work-profile-devices"></a>Nastavení registrace zařízení s pracovním profilem Androidu
 
@@ -33,8 +34,8 @@ Správu pracovního profilu Androidu nastavíte tímto postupem:
 
 1. [Propojte účet tenanta Intune s účtem Androidu Enterprise](connect-intune-android-enterprise.md).
 2. Určete nastavení registrace pracovního profilu Androidu. Pracovní profily Androidu jsou [podporované jen na určitých zařízeních s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Jakékoli zařízení, které podporuje pracovní profily Androidu, podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující pracovní profily Androidu v rámci [Omezení registrace](enrollment-restrictions-set.md).
-    - **Blokovat (standardně nastaveno)**: Všechna zařízení s Androidem včetně zařízení podporujících pracovní profily Androidu se zaregistrují jako zařízení s konvenčním Androidem.
-    - **Povolit**: Všechna zařízení podporující pracovní profily Androidu se zaregistrují jako zařízení s pracovním profilem Androidu. Jakékoli zařízení s Androidem, které nepodporuje pracovní profily Androidu, se zaregistruje jako zařízení s konvenčním Androidem.
+    - **Blok (ve výchozím nastavení)**:  Všechna zařízení s Androidem včetně zařízení podporujících pracovní profily Androidu, se zaregistrují jako zařízení s konvenčním Androidem.
+    - **Povolit**: Všechna zařízení, která podporují pracovní profily Androidu, se zaregistrují jako zařízení s pracovním profilem. Jakékoli zařízení s Androidem, které nepodporuje pracovní profily Androidu, se zaregistruje jako zařízení s konvenčním Androidem.
 3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
 
 

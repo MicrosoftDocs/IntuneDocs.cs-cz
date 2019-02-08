@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: c01e1d955fd8442e9d1ba24ed27164bb3c6bc694
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: bd3fc85b0d5cf55407daca1dee5f4c20ba22f498
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179991"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843234"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Určení požadavků na scénáře použití
 
@@ -33,13 +34,13 @@ Ve scénáři firemního použití také můžete mít organizační skupiny s r
 
 Tady je několik příkladů scénářů použití v organizaci s různými sadami požadavků pro každý scénář nebo dílčí scénář použití, organizační skupinu a platformu mobilního zařízení. Požadavky na případy použití v organizaci také můžete zadat do následující tabulky:
 
-| **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** | **požadavky** |
+| **Případy použití** | **Dílčí případy použití** | **Skupiny** | **Platformy zařízení** | **Požadavky** |
 |:---:|:---:|:---:|:---:|:---:|
 | Firemní | Informatik | Personalistika, finance | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                          
-| Firemní | Vedení | Personalistika, finance | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
+| Firemní | Členové vedení | Personalistika, finance | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
 | Firemní | Kiosk | Maloobchod | Android | Nastavení zařízení, profily, aplikace |
 | uživatelé s vlastním zařízením (BYOD) | Informatik | Marketing, prodej | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |                                                         
-| uživatelé s vlastním zařízením (BYOD) | Vedení | Marketing, prodej | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
+| uživatelé s vlastním zařízením (BYOD) | Členové vedení | Marketing, prodej | iOS | Zabezpečený e-mail, nastavení zařízení, profily, aplikace |
 
 Pokud chcete zadat požadavky na scénáře použití a dílčí scénáře použití ve vaší organizaci, [stáhněte si šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 

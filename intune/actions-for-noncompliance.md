@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5bd8bfe0230e4d49ce5ae4372e0f373a014c00ce
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c37a5991adf2efdb5bf38b32d8af4c77af295ea0
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187765"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844679"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
 
@@ -29,13 +30,13 @@ Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje p
 
 Existuje několik typů akcí:
 
-- **Odeslat e-mail koncovému uživateli**: přizpůsobte si e-mailové oznámení před odesláním koncovému uživateli. Můžete přizpůsobit příjemce, předmět, a text zprávy včetně loga společnosti a kontaktních údajů.
+- **Odeslat e-mail koncovému uživateli**: E-mailové oznámení před odesláním koncovému uživateli přizpůsobte. Můžete přizpůsobit příjemce, předmět, a text zprávy včetně loga společnosti a kontaktních údajů.
 
     Kromě toho Intune v e-mailovém oznámení uvede podrobnosti o zařízení nedodržujícím předpisy.
 
-- **Vzdáleně uzamknout zařízení, které nedodržuje předpisy**: pro zařízení, která nedodržují předpisy, můžete vydat vzdálený zámek. Uživateli se zobrazí výzva k zadání PIN kódu nebo hesla k odemknutí zařízení. Další informace o funkci [vzdáleného uzamčení](device-remote-lock.md). 
+- **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pro zařízení, která nejsou kompatibilní můžete vydat vzdálený zámek. Uživateli se zobrazí výzva k zadání PIN kódu nebo hesla k odemknutí zařízení. Další informace o funkci [vzdáleného uzamčení](device-remote-lock.md). 
 
-- **Označit zařízení jako nedodržující předpisy**: nastavte, za kolik dní má být zařízení označeno jako nedodržující předpisy. Může to být okamžitě nebo můžete dát uživateli nějaký čas na to, aby dodržení předpisů zařízením zajistil.
+- **Označit zařízení jako nevyhovující**: Vytvoření plánu (ve dnech) po zařízení označeno jako nedodržující předpisy. Může to být okamžitě nebo můžete dát uživateli nějaký čas na to, aby dodržení předpisů zařízením zajistil.
 
 V tomto článku se dozvíte, jak:
 
@@ -94,14 +95,14 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
 3. Vyberte **Akce při nedodržení předpisů** > **Přidat**.
 4. Vyberte vaši **Akci**: 
 
-    - **Odeslat e-mail koncovému uživateli**: Pokud zařízení nedodržuje předpisy, vyberte možnost odeslání e-mailu uživateli. Také: 
+    - **Odeslání e-mailu pro koncové uživatele**: Pokud zařízení nedodržuje předpisy, zvolte k e-mailu uživatele. Také: 
     
          - Vyberte **Šablonu zprávy**, kterou jste dříve vytvořili.
          - Zadejte libovolné **Další příjemce** výběrem skupin.
     
-    - **Vzdáleně uzamknout zařízení, které nedodržuje předpisy**: Pokud zařízení nedodržuje předpisy, uzamkněte ho. Aby mohl uživatel zařízení odemknout, musí zadat PIN kód nebo heslo. 
+    - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Aby mohl uživatel zařízení odemknout, musí zadat PIN kód nebo heslo. 
     
-    - **Plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů, kdy se má vyvolat akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud jako počet dnů zadáte **0**, potom začne podmíněný přístup platit **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
+    - **Plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud jako počet dnů zadáte **0**, potom začne podmíněný přístup platit **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
 
 5. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
 

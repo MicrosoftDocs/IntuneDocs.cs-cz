@@ -13,12 +13,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a5042c3b1c125a1699091a8a313df3a0058ecd7d
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c2d89149343e0dc425f8ef19cf56d61c2aa08da0
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188139"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840259"
 ---
 # <a name="import-wi-fi-settings-for-windows-devices-in-intune"></a>Import nastavení Wi-Fi pro zařízení s Windows v Intune
 
@@ -57,8 +58,8 @@ Na počítači s Windows, který už má nainstalovaný požadovaný profil WiFi
 5. V části **Typ profilu** vyberte **Import Wi-Fi**.
 6. Proveďte konfiguraci následujících nastavení:
     - **Název připojení**: Zadejte název připojení Wi-Fi. Tento název se zobrazí koncovým uživatelům, když budou procházet dostupné Wi-Fi sítě.
-    - **XML profilu**: Vyberte tlačítko pro procházení a zvolte soubor XML obsahující nastavení profilu Wi-Fi, která chcete importovat.
-    - **Obsah souboru**: Zobrazuje kód XML vybraného konfiguračního profilu.
+    - **XML profilu**: Vyberte tlačítko Procházet a vyberte soubor XML obsahující nastavení profilu sítě Wi-Fi, který chcete importovat.
+    - **Obsah souboru**: Zobrazuje kód XML pro konfigurační profil, který jste vybrali.
 7. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
 
 ## <a name="next-steps"></a>Další postup

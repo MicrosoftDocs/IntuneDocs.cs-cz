@@ -16,12 +16,13 @@ ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 480b453aa4f08f8d2a2460e26bfdb5f05466df6e
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 89a522047d88fd3720ea6dc7066f9387027d376f
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190094"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840888"
 ---
 # <a name="troubleshoot-email-profiles-in-microsoft-intune"></a>Řešení potíží s e-mailovými profily v Microsoft Intune
 
@@ -56,16 +57,16 @@ Uživatelé s automaticky nakonfigurovanými e-mailovými účty nemohou ze svý
 
 Pokud si uživatel nainstaloval e-mailový profil před provisionining profil Intune, výsledek nasazení e-mailových profilu Intune závisí na platformě zařízení:
 
-- **iOS**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil vytvořený uživatelem blokuje nasazení profilu Intune vytvořeného správcem. To je běžný problém jako iOS uživatelům obvykle vytvořit e-mailový profil a potom se zaregistrují. Uživatele, že nejsou kompatibilní, protože jejich ručně nakonfigurované e-mailového profilu a vyzve uživatele k odebrání profilu aktualizaci aplikace portál společnosti. Uživatel musí svůj e-mailový profil odebrat, aby mohl být nasazen profil Intune. Tomuto problému předejít, požádejte své uživatele k registraci a Intune povolili nasazení profilu. Nainstalujte uživatel vytvořil e-mailový profil.
+- **iOS**: Intune detekuje existující duplicitní profil e-mailu, do na základě názvu hostitele a e-mailové adresy. Duplicitní e-mailový profil vytvořený uživatelem blokuje nasazení profilu Intune vytvořeného správcem. To je běžný problém jako iOS uživatelům obvykle vytvořit e-mailový profil a potom se zaregistrují. Uživatele, že nejsou kompatibilní, protože jejich ručně nakonfigurované e-mailového profilu a vyzve uživatele k odebrání profilu aktualizaci aplikace portál společnosti. Uživatel musí svůj e-mailový profil odebrat, aby mohl být nasazen profil Intune. Tomuto problému předejít, požádejte své uživatele k registraci a Intune povolili nasazení profilu. Nainstalujte uživatel vytvořil e-mailový profil.
 
-- **Windows**: Intune detekuje stávající duplicitní e-mailový profil na základě názvu hostitele a e-mailové adresy. Intune přepíše existující e-mailový profil vytvořený uživatelem.
+- **Windows:** Intune detekuje existující duplicitní profil e-mailu, do na základě názvu hostitele a e-mailové adresy. Intune přepíše existující e-mailový profil vytvořený uživatelem.
 
 - **Samsung KNOX Standard**: Intune rozpozná duplicitní e-mailový účet na základě e-mailové adresy a přepíše se profilem Intune. Pokud uživatel tento účet nakonfiguruje, ho znovu přepíše profilem Intune. To může způsobit jisté zmatení uživatele, jehož účet konfigurace se přepíše.
 
 Samsung KNOX nepoužívá k identifikaci profilu název hostitele. Doporučujeme vám, že nevytvoříte více e-mailových profilů pro nasazení do stejné e-mailovou adresou na různých hostitelích, protože jejich by se vzájemně přepisovaly.
 
 ## <a name="error--0x87d1fde8-for-knox-standard-device"></a>Chyba 0x87D1FDE8 v zařízení KNOX Standard
-**Problém**: Po vytvoření a nasazení protokolu Exchange Active Sync e-mailový profil pro Samsung KNOX Standard pro různá zařízení s Androidem, chyba **0x87D1FDE8** nebo **náprava se nezdařila** je v okně vlastností zařízení > kartu zásad.
+**Problém**: Po vytvoření a nasazení protokolu Exchange Active Sync e-mailový profil pro Samsung KNOX Standard pro různá zařízení s Androidem, chyba **0x87D1FDE8** nebo **náprava se nezdařila** se použije v hlášení v zařízení Vlastnosti > kartu zásad.
 
 Zkontrolujte konfiguraci svého profilu EAS pro zařízení Samsung KNOX a zdroj zásad. Už není dostupná podpora možnosti synchronizace poznámek Samsung a ve vašem profilu by tato možnost neměla být vybraná. Ujistěte se, že zařízení mají dostatek času na zpracování zásady, až na 24 hodin.
 

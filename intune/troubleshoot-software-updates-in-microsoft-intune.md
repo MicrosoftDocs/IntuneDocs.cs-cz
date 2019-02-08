@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 1354c789a6756a6ddf2d9c5d6400ece91c80d57c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: cfc38af8a3ac6093fc9212a902d3ebf6a4731745
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188616"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839001"
 ---
 # <a name="troubleshoot-software-updates-in-microsoft-intune"></a>Řešení potíží s aktualizacemi softwaru ve službě Microsoft Intune
 
@@ -246,22 +247,22 @@ Kódy chyb agenta Intune **Update Agent** jsou uvedené v následující tabulce
 |**0x80af0006**|OMC_E_DOWNLOAD_CANCELLED|Stahování bylo zrušeno.|
 
 ## <a name="windows-7-based-computers-with-lots-of-superseded-updates-stop-reporting-to-the-microsoft-intune-console"></a>Počítače s Windows 7 s mnoha nahrazenými aktualizacemi přestanou předávat hlášení konzole Microsoft Intune.
-**Problém:** Mohou nastat situace, kdy klienti Microsoft Intune zaznamenají jeden nebo více z následujících příznaků:
+**Problém**: Mohou nastat situace, kdy klienti Microsoft Intune zaznamenají jeden nebo více z následujících příznaků:
 - Náhle přestanou předávat hlášení konzole správce Microsoft.  
 - Dojde k vysoké využití procesoru.
 - Aplikace instalované prostřednictvím portálu služby Intune se instalují pomalu.
-- Microsoft Intune Center generuje následující chybu: *Při aktualizaci počítače došlo k chybě. Nalezená chyba: Kód 0x800705b4*.
-- Pole stavu v konzole správce Intune v části Skupiny > Všechna zařízení zobrazuje: *Minimálně u jednoho agenta nainstalovaného v tomto počítači došlo k chybám. Informace pro tento počítač nemusí být přesné nebo aktuální*.
+- Microsoft Intune Center generuje následující chybu: *Při aktualizaci počítače došlo k chybě. Došlo k chybě: Kód 0x800705b4*.
+- Pole Stav v konzole pro správu Intune > skupiny > všechna zařízení zobrazuje: *Jeden nebo více agentů, které jsou nainstalované na tomto počítači došlo k chybám. Informace pro tento počítač nemusí být přesné nebo aktuální*.
 
 K tomuto problému může dojít, pokud nahrazené aktualizace (aktualizace, které byly nahrazeny jinou aktualizací) nebyly odmítnuty po delší dobu. Během některých procesů, například při instalaci aplikace, systém Windows kontroluje všechny nahrazené aktualizace v příslušném pořadí, aby bylo možné správně mapovat aktualizace a jejich následníky. Pokud seznam nahrazených aktualizací příliš naroste, tato kontrola může způsobit vysoké využití procesoru z důvodu zatížení a potřebného času. Tento problém se týká především klientů s Windows 7, protože je pro Windows 7 k dispozici velký počet nahrazených aktualizací. Pro Windows 8 a novější operační systémy není k dispozici tolik nahrazených aktualizací, a proto nejsou tak náchylné k tomuto problému.
 
-**Řešení:**  
+**Rozlišení**:  
 1. Přihlaste se k [webu Azure portal](https://portal.azure.com)a otevřete **Microsoft Intune**. 
 2. Vyberte **aktualizace softwaru**.
 3. Zamítněte všechny nahrazené aktualizace, které se mohou vztahovat na Windows 7 nebo na aplikace (například Microsoft Office), které byly nainstalovány na příslušné klienty.
 4. Restartujte příslušné klienty.
 
-Pokud používáte systém Windows 7, ujistěte se ještě, že je nainstalována následující aktualizace: [3050265 Windows Update Client pro Windows 7: červen 2015](https://support.microsoft.com/kb/3050265).
+Kromě toho pokud používáte systém Windows 7, ujistěte se, že máte nainstalována následující aktualizace:[3050265 Windows Update Client pro Windows 7: Červen 2015](https://support.microsoft.com/kb/3050265).
 
 ### <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

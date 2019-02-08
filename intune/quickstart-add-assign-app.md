@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6d0a7485aa25dee74bf54192fa931d081be81cd8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 3831b86bd619fae130f7173cee8f7e7cc46dfe6a
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52184502"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55839290"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 
@@ -90,9 +91,9 @@ Abyste mohli nainstalovat aplikaci **Úkoly Contoso** zpřístupněnou službou 
 4. Klikněte na aplikaci, kterou jste přidali pomocí Intune. V tomto rychlém startu jste přidali aplikaci **Sada aplikací Microsoft Office 365**.
 
     > [!NOTE]
-    > Pokud jste uživateli Intune nepřiřadili úspěšně žádné aplikace, zobrazí se následující zpráva: *Váš správce IT pro vás nezpřístupnil žádné aplikace.*
+    > Pokud jste nepřiřadili úspěšně všechny aplikace pro uživatele Intune, zobrazí se následující zpráva: *Váš správce IT neprovedli všechny aplikace dostupné pro vás.*
 
-5. Klikněte na tlačítko **Nainstalovat**.
+5. Klikněte na tlačítko **nainstalovat**.
 
 Pokud potřeby vaší firmy vyžadují, abyste aplikaci Portál společnosti přiřadili zaměstnancům, můžete aplikaci Portál společnosti pro Windows 10 přiřadit ručně přímo z Intune. Další informace najdete v článku [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](store-apps-company-portal-app.md).
 
@@ -103,4 +104,4 @@ V tomto rychlém startu jste do Intune přidali aplikace, přiřadili tyto aplik
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvoření a přiřazení zásady ochrany aplikací](quickstart-create-assign-app-policy.md)
+> [Rychlý start: Vytvořte a přiřaďte zásady ochrany aplikací](quickstart-create-assign-app-policy.md)

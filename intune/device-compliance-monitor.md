@@ -16,12 +16,13 @@ ms.reviewer: muhosabe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b6c86b8f365f5ac3e65e91725e9fcd29ccd9ef58
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 534e8316e584259a818130ea9f83c88b44b67fee
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187017"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848079"
 ---
 # <a name="monitor-device-compliance-in-intune"></a>Monitorování dodržování předpisů zařízením v Intune
 
@@ -34,9 +35,9 @@ Klikáním v grafech si můžete interaktivně zobrazit podrobnosti. Pokud máte
 
 Souhrnné zobrazení sestavy dodržování předpisů zařízením uvádí agregované informace o počtu zařízení, která se hlásí v jednom z následujících stavů:
 
-- **Vyhovující**: Zařízení se nedávno vyhodnotilo jako vyhovující nastavením profilu dodržování předpisů, která jste určili.
-- **Nevyhovující**: Zařízení se vyhodnotilo jako nevyhovující.  Pokud se v profilu nastavilo období odkladu, při přechodu zařízení do stavu Nevyhovující toto období vypršelo.
-- **Období odkladu**: Zařízení se vyhodnotilo jako nevyhovující. Stále ale běží období odkladu, do jehož skončení se zařízení neoznačí jako nevyhovující.
+- **Kompatibilní**: Zařízení naposledy byl vyhodnocen a v souladu s nastavením profilu dodržování předpisů, které jste zadali.
+- **Nekompatibilní**: Zařízení se vyhodnotí a vyhodnotí se jako nevyhovující.  Pokud se v profilu nastavilo období odkladu, při přechodu zařízení do stavu Nevyhovující toto období vypršelo.
+- **Období odkladu**: Zařízení se vyhodnotí a vyhodnotí se jako nevyhovující. Stále ale běží období odkladu, do jehož skončení se zařízení neoznačí jako nevyhovující.
 
 V každé sekci si můžete zobrazit podrobnosti o jednotlivých zařízeních a uživatelích.
 

@@ -15,12 +15,13 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73075ed06e98ca987e87a7cfda70c546127bf881
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7016b65bb999ed789dc085831e12c002e2ef5db4
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179588"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846770"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s Androidem Enterprise v Microsoft Intune
 
@@ -38,17 +39,17 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 
-    - **Název:** Zadejte název profilu, třeba `android enterprise custom profile`.
-    - **Popis:** Zadejte popis profilu.
-    - **Platforma:** Zvolte **Android Enterprise**.
-    - **Typ profilu:** Zvolte **Vlastní**.
+    - **Název**: Zadejte název profilu, jako například `android enterprise custom profile`
+    - **Popis**: Zadejte popis profilu
+    - **Platforma**: Zvolte **Androidu Enterprise**
+    - **Typ profilu**: Zvolte **vlastní**
 
 4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
 
-    - **Název:** Zadejte jedinečný název pro nastavení OMA-URI, abyste ho snadno našli.
-    - **Popis:** Zadejte popis, který nastavení stručně charakterizuje, a další důležité podrobnosti.
-    - **OMA-URI:** Zadejte nastavení OMA-URI, které chcete použít.
-    - **Datový typ:** Zvolte datový typ, který pro toto nastavení OMA-URI použijete. Možnosti:
+    - **Název**: Zadejte jedinečný název nastavení OMA-URI, takže budete moci snadno najít.
+    - **Popis**: Zadejte popis, který bude shrnovat účel nastavení a další důležité podrobnosti.
+    - **OMA-URI:** Zadejte OMA-URI, které chcete použít jako nastavení.
+    - **Datový typ**: Vyberte datový typ, který budete používat pro toto nastavení OMA-URI. Možnosti:
 
       - Řetězec
       - Řetězec (soubor XML)
@@ -58,11 +59,11 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
       - Logická hodnota
       - Base64 (soubor)
 
-    - **Hodnota:** Zadejte datovou hodnotu, kterou chcete přidružit k zadanému nastavení OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
+    - **Hodnota**: Zadejte hodnotu dat, které chcete přidružit k uvedenému OMA-URI. Hodnota závisí na vybraném datovém typu. Pokud vyberete například **Datum a čas**, použijte k výběru hodnoty ovládací prvek pro výběr data.
 
     Po přidání nastavení můžete vybrat **Exportovat**. **Export** vytvoří seznam všech hodnot, které jste přidali do souboru hodnot oddělených čárkou (.csv).
 
-5. Výběrem **OK** uložte změny. Podle potřeby přidejte další nastavení.
+5. Vyberte **OK** uložte provedené změny. Podle potřeby přidejte další nastavení.
 6. Až to budete mít, zvolte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
 
 ## <a name="example"></a>Příklad
@@ -73,18 +74,18 @@ V tomto příkladu vytvoříte vlastní profil, který na zařízeních s Androi
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 
-    - **Název:** Zadejte název profilu, třeba `android ent block copy paste custom profile`.
+    - **Název**: Zadejte název profilu, jako například `android ent block copy paste custom profile`.
     - **Popis**: Zadejte popis profilu.
-    - **Platforma:** Zvolte **Android Enterprise**.
-    - **Typ profilu:** Zvolte **Vlastní**.
+    - **Platforma**: Zvolte **Androidu Enterprise**.
+    - **Typ profilu**: Zvolte **vlastní**.
 
 4. V nabídce **Vlastní nastavení OMA-URI** vyberte **Přidat**. Zadejte následující nastavení:
 
-    - **Název:** Zadejte třeba `Block copy and paste`.
-    - **Popis:** Zadejte třeba `Blocks copy/paste between work and personal apps`.
+    - **Název**: Zadejte něco jako `Block copy and paste`.
+    - **Popis**: Zadejte něco jako `Blocks copy/paste between work and personal apps`.
     - **OMA-URI:** Zadejte `./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste`.
-    - **Datový typ**: Zvolte **Logická hodnota**, takže hodnota tohoto nastavení OMA-URI bude **Pravda** nebo **Nepravda**.
-    - **Hodnota**: Zvolte **Pravda**.
+    - **Datový typ**: Zvolte **logická** tak hodnotu OMA-URI **True** nebo **False**.
+    - **Hodnota**: Zvolte **True**.
 
 5. Po zadání nastavení byste měli mít podobné prostředí jako na následujícím obrázku:
 

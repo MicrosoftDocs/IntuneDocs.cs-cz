@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: f0159b4d33112e507556ceb53505eedc57ec05f7
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 192e0ac0e67fb519f1dcd2ff9faf0d7748942997
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112982"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834530"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -211,7 +212,7 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Zařízení se považuje za vlastněné firmou, pokud ho zaregistrujete pomocí některého správce nebo programu pro registraci zařízení. Pokud je například zařízení zaregistrované pomocí Programu registrace zařízení společnosti Apple (DEP – Device Enrollment Program), označí se jako vlastněné firmou a umístí se do skupiny zařízení, která dostává cílené firemní zásady a aplikace.
 
-Další informace o případech použití zařízení vlastněných firmou a zařízení BYOD najdete v [oddílu 3: Určení požadavků scénářů pro případy použití](planning-guide-requirements.md).
+Odkazovat na [část 3: Určení požadavků ve scénářích použití](planning-guide-requirements.md) pro případy použití pro další informace o podnikové i model byod UMOŽNÍ.
 
 ### <a name="bulk-enrollment"></a>Hromadná registrace
 
@@ -257,10 +258,10 @@ Měli byste vytvořit alespoň jednu zásadu konfigurace pro každou platformu. 
 
 | **Název zásady** | **Platforma zařízení** | **Nastavení** | **Cílová skupina** |   
 |:---:|:---:|:---:|:---:|
-| Firemní – iOS | iOS | PIN je povinný, délka 6 znaků, omezené zálohování do cloudu | Firemní zařízení |                                                           
-| Firemní – Android | Android | PIN je povinný, délka 6 znaků, omezené zálohování do cloudu | Firemní zařízení |                                                           
-| Vlastní zařízení uživatelů – iOS  | iOS | PIN je povinný, délka 4 znaky | Vlastní zařízení uživatelů |
-| Vlastní zařízení uživatelů – Android  | Android | PIN je povinný, délka 4 znaky | Vlastní zařízení uživatelů |
+| Firemní – iOS | iOS | PIN je povinný, délka: 6, omezit zálohování do cloudu | Firemní zařízení |                                                           
+| Firemní – Android | Android | PIN je povinný, délka: 6, omezit zálohování do cloudu | Firemní zařízení |                                                           
+| Vlastní zařízení uživatelů – iOS  | iOS | PIN je povinný, délka: 4 | Vlastní zařízení uživatelů |
+| Vlastní zařízení uživatelů – Android  | Android | PIN je povinný, délka: 4 | Vlastní zařízení uživatelů |
 
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady konfigurace.

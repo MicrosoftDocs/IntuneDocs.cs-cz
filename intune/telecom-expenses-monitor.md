@@ -16,12 +16,13 @@ ms.reviewer: sumitp
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b3ca1b95a6dcf7bdc30b61469fa747894d20fe73
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 7514aef9ee94e774ff2e2fca1008966a92a24e0e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188088"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842010"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -88,11 +89,11 @@ Než začnete, musíte mít Intune a předplatné služby TEM Datalert.
 
    ![Stránka Datalert zobrazující úspěšné připojení](./media/tem-datalert-mdm-profiles.png)
 
-### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Krok 2: Zkontrolujte v Intune, že je aktivní funkce správy výdajů na telekomunikaci
+### <a name="step-2-check-that-the-telecom-expense-management-feature-is-active-in-intune"></a>Krok 2: Zkontrolujte, jestli funkce správy telekomunikačních výdajů je aktivní v Intune
 
 Po dokončení kroku 1 výše by se mělo automaticky povolit připojení a na portálu Azure Portal by se měl zobrazit stav připojení **Aktivní**. V tomto postupu vidíte, jak zkontrolovat stav **Aktivní**.
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 
@@ -152,7 +153,7 @@ Podle následujících pokynů vytvořte v Intune aplikaci Datalert pro jednotli
 
    ![Snímek obrazovky s podoknem Přidat zásadu](./media/tem-assign-datalert-app-to-device-group.png)
 
-### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidejte do konzoly Datalert placené firemní telefonní linky
+### <a name="step-4-add-corporate-paid-phone-lines-to-the-datalert-console"></a>Krok 4: Přidat placené firemní telefonní linky ke konzole Datalert
 
 Teď máte služby Intune a Datalert nakonfigurované tak, aby spolu komunikovaly. Teď musíte přidat placené firemní telefonní linky ke konzole Datalert a definovat prahové hodnoty a akce pro veškerá porušení použití mobilních nebo roamingových služeb. Placené firemní telefonní linky můžete ke konzole Datalert přidat ručně nebo je přidat automaticky po registraci zařízení v Intune.
 

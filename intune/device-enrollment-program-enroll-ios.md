@@ -16,12 +16,13 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: afddf57f93ef2308ce8e8fd8aab8d74c3419a3ea
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 60364d01f4ba4ca83ff91226f7738ec095e9152e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203412"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849246"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -194,7 +195,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku **Diagnostická data**. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
     | <strong>Zobrazit tón</strong> | Umožnit uživateli zapnout tón zobrazení. |
     | <strong>Ochrana osobních údajů</strong> | Zobrazte na obrazovce o ochraně osobních údajů pro uživatele. |
-    | <strong>Migrace s androidem</strong> | Uživateli přidělit možnosti můžete migrovat data ze zařízení s Androidem. |
+    | <strong>Android Migration</strong> | Uživateli přidělit možnosti můžete migrovat data ze zařízení s Androidem. |
     | <strong>iMessage a FaceTime</strong> | Umožnit uživateli nastavit iMessage a FaceTime. |
     | <strong>Registrace</strong> | Zobrazit informační obrazovky registrace pro vzdělávání uživatelů, jako je například zahrnovat list a multitaskingu a Control Centeru. |
     | <strong>Podívejte se na migraci</strong> | Umožnit uživateli pro migraci dat ze zařízení kukátka. |

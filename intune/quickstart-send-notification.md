@@ -16,14 +16,15 @@ ms.reviewer: joglocke
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: af24e1c56e43fe2edfc6a9241c31600b7cfe61a7
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 299147a3f3774177cef5d73696a731afc1732f76
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186252"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55847722"
 ---
-# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odeslání oznámení zařízením nedodržujícím předpisy
+# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odesílání oznámení do zařízení nesplňujících požadavky
 
 V tomto rychlém startu použijete Microsoft Intune k odeslání e-mailových oznámení zaměstnancům, kteří používají zařízení nedodržující předpisy.
 
@@ -47,12 +48,12 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 1. V Intune vyberte **Dodržování předpisů zařízením** > **Oznámení** > **Vytvořit oznámení**. 
 2. Zadejte následující informace:
 
-   - **Jméno:** *Správce Contoso*
-   - **Předmět:** *Dodržování předpisů zařízením*
-   - **Zpráva:** *Vaše zařízení momentálně nesplňuje požadavky na dodržování předpisů naší organizace.*
-   - **Záhlaví e-mailu – Připojte logo společnosti:** Pokud chcete zobrazit logo organizace, nastavte na **Povoleno**.
-   - **Zápatí e-mailu – Uveďte název společnosti:** Pokud chcete zobrazit název organizace, nastavte na **Povoleno**.
-   - **Zápatí e-mailu – Uveďte kontaktní údaje:** Pokud chcete zobrazit kontaktní údaje organizace, nastavte na **Povoleno**.
+   - **Název**: *Správce společnosti Contoso*
+   - **Předmět**: *Dodržování předpisů zařízeními*
+   - **Zpráva**: *Vaše zařízení aktuálně nesplňuje naše požadavky na dodržování předpisů organizace.*
+   - **Záhlaví e-mailu – připojte logo společnosti**: Nastavte na **povoleno** zobrazit logo vaší organizace.
+   - **Zápatí e-mailu – uveďte název společnosti**: Nastavte na **povoleno** zobrazíte název vaší organizace.
+   - **Zápatí e-mailu – uveďte kontaktní údaje**: Nastavte na **povoleno** zobrazit kontaktní informace vaší organizace.
 
    ![Příklad oznámení o dodržování předpisů v Intune](./media/quickstart-send-notification-01.png)
 
@@ -73,9 +74,9 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
 2. Vyberte **Zásady** > **Vytvořit zásadu**.
 3. Zadejte následující informace:
 
-   - **Název:** *Dodržování předpisů pro Windows 10*
-   - **Popis:** *Zásada dodržování předpisů pro Windows 10*
-   - **Platforma:** Windows 10 a novější
+   - **Název**: *Dodržování předpisů Windows 10*
+   - **Popis**: *Zásady dodržování předpisů Windows 10*
+   - **Platforma**: Windows 10 a novější
 
 4. Výběrem možnosti **Nastavení** > **Zabezpečení systému** zobrazte nastavení související se zabezpečením zařízení.
 5. Možnost **Vyžadovat heslo k odemknutí mobilních zařízení** nastavte na **Vyžadovat**. Toto nastavení určuje, jestli se má po uživatelích vyžadovat zadání hesla, než bude udělen přístup k informacím uloženým v jejich mobilních zařízeních. 
@@ -84,7 +85,7 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
     ![Nastavení Zabezpečení systému pro novou zásadu dodržování předpisů](./media/quickstart-send-notification-02.png) 
 
 7. Kliknutím na **OK**, **OK** a **Vytvořit** tuto zásadu dodržování předpisů vytvořte.
-8. Vyberte název nové zásady: **Dodržování předpisů pro Windows 10**.
+8. Vyberte název nové zásady: **Dodržování předpisů Windows 10**.
 9. Vyberte **Vlastnosti** > **Akce při nedodržení předpisů** > **Přidat**.
 10. V rozevíracím seznamu **Akce** potvrďte, že je vybraná možnost **Odeslat e-mail koncovému uživateli**.
 11. Výběrem možnosti **Šablona zprávy** > **Správce Contoso** > **Vybrat** vyberte šablonu zprávy, kterou jste vytvořili dříve v tomto tématu.

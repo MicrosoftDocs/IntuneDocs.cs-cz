@@ -16,12 +16,13 @@ ms.reviewer: tscott
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: f828394c48b5b7d55d9180da875d9cb3062f23c6
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 1de1722aa635367dac4b586e1333aed163156a83
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181679"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836672"
 ---
 # <a name="troubleshoot-endpoint-protection-in-intune"></a>Řešení potíží se službou Endpoint Protection v Intune
 
@@ -29,7 +30,7 @@ Informace uvedené v tomto článku vám můžou pomoct při řešení problém�
 
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).
 
-### <a name="error-messages"></a>Chybovými zprávami
+### <a name="error-messages"></a>Chybové zprávy
 V této části se popisují možné příčiny následujících chyb a varování a jejich řešení.
 
 |Položka stavu|Možné příčiny|Možná řešení|

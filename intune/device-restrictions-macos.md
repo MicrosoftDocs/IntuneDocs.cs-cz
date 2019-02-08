@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 0a2a096bfb4b5fafd895425a775abc13afc643e2
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4a7b0f0195db11b556cb4fd6daa580f3620f302b
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728532"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846135"
 ---
 # <a name="microsoft-intune-macos-device-restriction-settings"></a>Nastavení omezení pro zařízení s macOS v Microsoft Intune
 
@@ -47,7 +48,7 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
 
 - **Blokovat požadavky blízkosti heslo**: Zvolte **bloku** tak zařízení uživatele není žádat hesla blízkými zařízeními. **Není nakonfigurováno** umožňuje tyto požadavky na heslo.
 
-- **Blokovat sdílení hesla**: **bloku** zabraňuje sdílení hesla mezi zařízení pomocí AirDrop. **Není nakonfigurováno** umožňuje hesla ke sdílení.
+- **Blokovat sdílení hesla**: **Blok** zabraňuje sdílení hesla mezi zařízení pomocí AirDrop. **Není nakonfigurováno** umožňuje hesla ke sdílení.
 
 
 ## <a name="restricted-apps"></a>Omezené aplikace
@@ -59,7 +60,7 @@ V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících 
 
 Jestli chcete nakonfigurovat seznam, klikněte na **Přidat**, zadejte nějaký název, případně i vydavatele aplikace, a ID sady prostředků aplikace (například *com.apple.calculator*).
 
-## <a name="domains"></a>Domains
+## <a name="domains"></a>Domény
 
 ### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
 

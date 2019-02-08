@@ -15,12 +15,13 @@ searchScope:
 - User help
 ROBOTS: ''
 ms.custom: intune-enduser
-ms.openlocfilehash: c98980cca305bef01dd91e69d00a471b10e741a8
-ms.sourcegitcommit: 490365fb8b5405f323b4358fb1ec9dfdd9ff2d58
-ms.translationtype: HT
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 810e2175faef422eb0ccf9bd24ac8d9b43aee92d
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43147481"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55846906"
 ---
 # <a name="enable-security-threat-scans-on-your-device"></a>Povolení vyhledávání bezpečnostních hrozeb na zařízení 
 Pokud nechtěně nainstalujete nebezpečnou aplikaci, můžete ohrozit data zařízení. Pokud chcete data na svém zařízení chránit, doporučujeme: 

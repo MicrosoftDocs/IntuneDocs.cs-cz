@@ -16,14 +16,15 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2ae378550a75f756390053e44eb4fbd04f665612
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: dd39e6f4cff0caf9935ba217b9e94cf3529bf0f1
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52179067"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844203"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikací
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikace
 
 V tomto rychlém startu použijete Intune k vytvoření a přiřazení zásady ochrany aplikací ke klientské aplikaci na zařízení koncového uživatele. Intune používá zásady ochrany aplikací k potvrzení, že vaše aplikace splňují požadavky vaší organizace na ochranu dat.
 
@@ -44,10 +45,10 @@ Zásadu ochrany aplikací vytvoříte následujícím postupem:
 1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Vytvořit zásadu**. 
 2. Zadejte následující podrobnosti: 
 
-    - **Název:** *Ochrana obsahu pro Windows 10*
-    - **Popis:** *Uživatelé přidružení k této zásadě nebudou moci vyjímat, kopírovat ani vkládat žádný obsah mezi přiřazenou aplikací a jinými nespravovanými aplikacemi v zařízení.*
-    - **Platforma:** *Windows 10*
-    - **Stav registrace:** *S registrací*
+    - **Název**: *Ochrana obsahu Windows 10*
+    - **Popis**: *Uživatelé přidružení k této zásadě se nebude možné vyjmout, kopírovat nebo vložit žádný obsah mezi přiřazené aplikace a jiné nespravované aplikace na zařízení.*
+    - **Platforma**: *Windows 10*
+    - **Stav registrace**: *S registrací*
 
 3. Vyberte **Chráněné aplikace** a zvolte aplikace, které musí tuto zásadu dodržovat.
 4. Klikněte na **Přidat aplikace**.
@@ -70,7 +71,7 @@ K přiřazení zásady ochrany aplikací použijte následující postup:
 3.  Zvolte **Přiřazení**.
 4.  Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
 5.  Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
-6.  Klikněte na **Vybrat**. 
+6.  Klikněte na tlačítko **vyberte**. 
 
 Právě jste přiřadili zásadu ochrany aplikací.
 

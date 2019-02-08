@@ -16,12 +16,13 @@ ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 6d9d6cb1eccd91e7832a9456504c36cb983b4810
-ms.sourcegitcommit: bee072b61cf8a1b8ad8d736b5f5aa9bc526e07ec
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 9c5cf0504ab6a206508cbed4f09a131e5733eb54
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53817377"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849053"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -72,7 +73,7 @@ Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu neb
 |**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte **standardní** vizuálně výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
 |**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
 |**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
-|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: x 400px 400 px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400px x 400px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Po nahrání loga se v oblasti náhledu zobrazí logo s barvou motivu. Pokud jste si zvolili zobrazení názvu firmy, zobrazí se název na Portálu společnosti v černé nebo bílé barvě. Barva se zvolí automaticky tak, aby byl zajištěn nejvyšší kontrast s ohledem na barvu motivu. V oblasti náhledu na obrazovce se název vaší firmy nezobrazí. 
 
@@ -81,7 +82,7 @@ Zvolte logo, které bude nejlépe vypadat na bílých nebo světlých pozadích.
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: x 400px 400 px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát logo**| Tato možnost je dostupná, pokud jste zvolili zobrazení loga společnosti. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400px x 400px</li><li>Maximální velikost souboru: VĚTŠÍ NEŽ 750KB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 ### <a name="brand-image-for-company-portal"></a>Firemní logo pro Portál společnosti
 

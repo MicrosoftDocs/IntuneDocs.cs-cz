@@ -14,12 +14,13 @@ ms.reviewer: ayesham, chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: f546fc66f7c602705289493eb2f5c96555ab7603
-ms.sourcegitcommit: ecd6aebe50b1440a282dfdda771e37fbb8750d42
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: c1f386f9f6e8ffdac413fc542b51ab66e7f3d9b8
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52728935"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55836519"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android a Samsung Knox Standard seznamy nastavení omezení zařízení v Intune
 
@@ -30,11 +31,11 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 
 ## <a name="general"></a>Obecné
 
-- **Fotoaparát**: Zvolte **bloku** zabránit přístupu k fotoaparátu. **Není nakonfigurováno** umožňuje přístup k fotoaparátu zařízení.
+- **Camera**: Zvolte **bloku** zabránit přístupu k fotoaparátu. **Není nakonfigurováno** umožňuje přístup k fotoaparátu zařízení.
 - **Kopírování a vkládání (jenom Samsung Knox)**: Zvolte **bloku** zabránit kopírování a vkládání. **Není nakonfigurováno** povolí v zařízení funkce kopírování a vkládání.
 - **Sdílení přes schránku mezi aplikacemi (jenom Samsung Knox)**: Zvolte **bloku** k zabránění použití clipboardu pro kopírování a vkládání mezi aplikacemi. **Není nakonfigurováno** umožňuje použití clipboardu pro kopírování a vkládání mezi aplikacemi.
 - **Odeslání diagnostických dat (jenom Samsung Knox)**: Zvolte **bloku** zastavit uživateli v odesílání diagnostických dat ze zařízení. **Není nakonfigurováno** umožňuje uživatelům odesílat data.
-- **Vymazat (jenom Samsung Knox)**: umožňuje uživateli spustit [vymazání](devices-wipe.md) akcí na zařízení.
+- **Vymazat (jenom Samsung Knox)**: Umožňuje uživateli spustit [vymazání](devices-wipe.md) akcí na zařízení.
 - **Informace o zeměpisné poloze (jenom Samsung Knox)**: Zvolte **bloku** zakázat zařízení používat informace o poloze. **Není nakonfigurováno** umožňuje zařízení využívat informace o poloze.
 - **Vypnutí (jenom Samsung Knox)**: Zvolte **bloku** zabránit uživateli ve vypnutí zařízení. Pokud je toto nastavení zakázáno, **počet neúspěšných přihlášení před vymazáním obsahu zařízení** nastavení nelze nastavit a nebude fungovat. **Není nakonfigurováno** povolí uživateli vypnout zařízení.
 - **Snímek obrazovky (jenom Samsung Knox)**: Zvolte **bloku** zabránit snímky obrazovky. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
@@ -45,24 +46,24 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 
 ## <a name="password"></a>Heslo
 
-- **Heslo**: **vyžadují** koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** umožňuje uživatelům přístup k zařízení bez zadávání hesla.
+- **Heslo**: **Vyžadovat** koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** umožňuje uživatelům přístup k zařízení bez zadávání hesla.
 
     > [!NOTE]
     > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení Android mohou automaticky vyžadovat kód PIN, aby vyhověla podmínkám podmíněného přístupu.
 
-- **Minimální délka hesla**: Zadejte minimální délku hesla uživatel musí zadat (mezi 4 a 16 znaky).
+- **Minimální délka hesla**: Zadejte minimální délku hesla, které uživatel musí zadat (mezi 4 a 16 znaky).
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Zadejte maximální počet minut nečinnosti, které jsou povoleny v zařízení po kterém se zamkne obrazovka. Koncový uživatel nemůže na zařízení nastavit větší časovou hodnotu, než je nakonfigurovaná v profilu. Může ale nastavit kratší časovou hodnotu. Pokud je v profilu nastaveno třeba 15 minut, může koncový uživatel nastavit 5 minut, ale nemůže nastavit 30 minut. 
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet neúspěšných přihlášení povolit předtím, než se zařízení vymaže.
 - **Vypršení platnosti hesla (dny)**: Zadejte počet dní, než se musí změnit heslo zařízení.
-- **Vyžadovaný typ hesla**: zadání požadovanou úroveň složitosti hesla, a to, jestli můžou používat biometrická zařízení. Možnosti:
+- **Vyžadovaný typ hesla**: Zadejte požadovanou úroveň složitosti hesla a to, jestli můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
   - **Aspoň číslice**
-  - **Číselné komplexní**: opakovaných nebo po sobě jdoucí čísla, jako je například "1111" nebo "1234" nejsou povoleny.<sup> 1</sup>
+  - **Číselné komplexní**: Opakovat nebo po sobě jdoucí čísla, jako je například "1111" nebo "1234" nejsou povoleny. <sup>1</sup>
   - **Aspoň abecední znaky**
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
-- **Zakázat opakované použití předchozích hesel**: Zakáže koncovému uživateli ve vytváření hesel jste nepoužili.
+- **Zakázat opakované použití předchozích hesel**: Zakáže koncovému uživateli ve vytváření hesel, kterou jste použili dříve.
 - **Odemknutí pomocí otisků prstů (jenom Samsung Knox)**: Zvolte **bloku** zabránit k odemknutí zařízení otiskem prstu. **Není nakonfigurováno** uživatel k odemknutí zařízení otiskem prstu.
 - **Smart Lock a jiné agenty pro určování důvěryhodnosti**: Zvolte **bloku** zabránit Smart Lock a jiné agenty pro určování důvěryhodnosti úpravy nastavení zamykací obrazovky (Standard Samsung KNOX 5.0 +). Tato funkce Telefon, někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Tuto funkci například můžete použít, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 - **Šifrování**: Zvolte **vyžadují** tak, aby soubory v zařízení byly šifrované. Šifrování nepodporují všechna zařízení. Tato funkce také použití: 
@@ -88,8 +89,8 @@ Pokud nastavíte **požadovaný typ hesla** k **číselné komplexní**a pak ji 
 
 Pomocí těchto nastavení můžete povolit nebo zakázat konkrétní aplikace na zařízení. Tato funkce je podporovaná v zařízeních s Androidem a Samsung Knox Standard:
 
-- **Zakázané aplikace**: seznam aplikací, které nejsou spravované přes Intune, které nechcete, aby na zařízení nainstalovaná. Pokud uživatel aplikaci nainstaluje z tohoto seznamu, budete upozorněni prostřednictvím Intune.
-- **Schválené aplikace**: seznam aplikací, které uživatelé smějí instalovat. Chcete-li i nadále, nesmí uživatelé instalovat jiné aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.
+- **Zakázané aplikace**: Seznam aplikací, které nejsou spravované přes Intune, které nechcete, aby na zařízení nainstalovaná. Pokud uživatel aplikaci nainstaluje z tohoto seznamu, budete upozorněni prostřednictvím Intune.
+- **Schválené aplikace**: Seznam aplikací, které uživatelé smějí instalovat. Chcete-li i nadále, nesmí uživatelé instalovat jiné aplikace. Aplikace, které spravuje Intune, jsou povolené automaticky.
 
 Chcete-li přidat aplikaci do těchto seznamů, můžete:
 
@@ -123,16 +124,16 @@ Možnosti:
 
 Ke každému nastavení, přidejte seznamu aplikací. Možnosti:
 
-- **Přidat aplikace pomocí názvu balíčku**: primárně slouží pro řádek obchodní aplikace. Zadejte název aplikace a název balíčku aplikace.
+- **Přidat aplikace pomocí názvu balíčku**: Používá se především pro řádek obchodní aplikace. Zadejte název aplikace a název balíčku aplikace.
 - **Přidat aplikace pomocí adresy URL**: Zadejte název aplikace a její adresu URL v obchodu Google Play.
-- **Přidat aplikace pro store**: Vyberte aplikaci ze seznamu existujících aplikací spravovaných v Intune.
+- **Přidat aplikace pro store**: Vyberte aplikaci ze seznamu existujících aplikací, které spravujete v Intune.
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
 - **Zálohovací Služba Google (jenom Samsung Knox)**: Zvolte **bloku** zabránit zařízení synchronizují do zálohy na Googlu. **Není nakonfigurováno** povoluje použití zálohování Google.
 - **Automatická synchronizace účtu Google (jenom Samsung Knox)**: Zvolte **bloku** aby funkce Google účet automatické synchronizace v zařízení. **Není nakonfigurováno** umožňuje automatickou synchronizaci nastavení účtu Google.
 - **Vyměnitelné úložiště (jenom Samsung Knox)**: Zvolte **bloku** zabránit zařízení používat Vyměnitelné úložiště. **Není nakonfigurováno** povolí zařízení používat Vyměnitelné úložiště, třeba SD karty.
-- **Šifrování na paměťových kartách (jenom Samsung Knox)**: **vyžadují** vynutí, že paměťové karty musí být zašifrován. **Není nakonfigurováno** umožňuje nešifrované paměťové karty, který se má použít. Ne všechna zařízení podporují šifrování paměťové karty. Pokud chcete potvrdit, obraťte se na výrobce zařízení.
+- **Šifrování na paměťových kartách (jenom Samsung Knox)**: **Vyžadovat** vynutí, že paměťové karty musí být zašifrován. **Není nakonfigurováno** umožňuje nešifrované paměťové karty, který se má použít. Ne všechna zařízení podporují šifrování paměťové karty. Pokud chcete potvrdit, obraťte se na výrobce zařízení.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
@@ -153,9 +154,9 @@ Nastavení platí jen pro zařízení se zabezpečením Samsung Knox Standard a 
 
   Možnosti aplikace:
 
-  - **Přidat aplikace pomocí názvu balíčku**: primárně slouží pro řádek obchodní aplikace. Zadejte název aplikace a název balíčku aplikace.
+  - **Přidat aplikace pomocí názvu balíčku**: Používá se především pro řádek obchodní aplikace. Zadejte název aplikace a název balíčku aplikace.
   - **Přidat aplikace pomocí adresy URL**: Zadejte název aplikace a její adresu URL v obchodu Google Play.
-  - **Přidat aplikace pro store**: Vyberte aplikaci ze seznamu existujících aplikací spravovaných v Intune.
+  - **Přidat aplikace pro store**: Vyberte aplikaci ze seznamu existujících aplikací, které spravujete v Intune.
 
 - **Tlačítko režimu spánku obrazovky**: Zvolte **bloku** zakázat nebo skrýt tlačítko Přejít do režimu spánku obrazovky. **Není nakonfigurováno** povolí na zařízení tlačítko probuzení z režimu spánku obrazovky.
 - **Tlačítka pro hlasitost**: Zvolte **bloku** uživateli zabránit v nastavení hlasitosti zakázáním tlačítka hlasitosti. **Není nakonfigurováno** umožňuje použití tlačítek hlasitosti na zařízení.

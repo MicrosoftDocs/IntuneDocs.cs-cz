@@ -16,12 +16,13 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 56c81c04c4ee6ae319cb54f513b80738f2fbe5fb
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e8448ec320c953fd22235e6e743306a1f86d6399
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52188021"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851300"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Zjednodušení správy počítačů s Windows pomocí zásad
 
@@ -49,7 +50,7 @@ Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V
 |**Název**|Jméno správce, který spravuje příslušný počítač<br />Maximální délka: 40 znaků|
 |**Telefonní číslo**|Telefonní číslo správce, který spravuje příslušný počítač<br />Maximální délka: 20 znaků|
 |**E-mailová adresa**|Emailová adresa správce, který spravuje příslušný počítač<br />Maximální délka: 40 znaků|
-|**Název webu**|Název vašeho webu pro podporu uživatelů<br />>Maximální délka: 40 znaků|
+|**Název webu**|Název vašeho webu pro podporu uživatelů<br />> maximální délka: 40 znaků|
 |**Adresa URL webu**|Adresa URL vašeho webu podpory<br />Maximální délka: 150 znaků|
 |**Poznámky**|Poznámka, která se zobrazuje uživatelům<br />Maximální délka: 120 znaků|
 
@@ -62,6 +63,6 @@ Informace o zásadách a nastaveních, které můžete konfigurovat pro počíta
 - [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) – Tyto zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích.
 
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

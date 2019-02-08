@@ -16,12 +16,13 @@ ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
-ms.openlocfilehash: 7c6bdbde87f6438696b5a262ba1890532dcfccdd
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 4d123f2b373f0f10027dde53081699d819cdb394
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52180852"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55845444"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune
 
@@ -54,8 +55,8 @@ Následující tabulka zobrazuje hodnoty, které můžete v zásadách konfiguro
   |Nastavení zásad|Podrobnosti|
     |------------------|--------------------|
     |**Četnost detekce aktualizací a aplikací (hodiny)** |Určuje, jak často (od 8 do 22 hodin) Intune kontroluje nové aktualizace a aplikace.<br /><br />Doporučená hodnota: **8** hodin.|
-    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br />**Používat automatickou údržbu pro počítače se systémem Windows** jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Každý den**<br /><br />**Naplánovaný čas: 3:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
-    |**Umožnit okamžitou instalaci aktualizací, které nenaruší běh systému Windows** |Možnost **Povolit** umožňuje instalovat aktualizace hned po stažení s výjimkou aktualizací, které by přerušily nebo restartovaly Windows. Tyto aktualizace se instalují v závislosti na konfiguraci nastavení **Automatizovaná instalace aktualizací nebo instalace aktualizací s výzvami**.<br /><br />Možnost **Nepovolit** umožňuje instalovat aktualizace v závislosti na konfiguraci **Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami**.<br /><br />Doporučená hodnota: **Povolit** |
+    |**Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami** |Určuje, jestli se mají aktualizace instalovat automaticky nebo jestli se má před instalací uživateli zobrazit výzva. Kromě toho vám tohle nastavení umožňuje naplánovat instalaci aktualizací a aplikací.<br /><br />**Instalace aktualizací a aplikací automaticky podle plánu** umožňuje instalovat aktualizace a aplikace pomocí určeného plánu.<br /><br />**Používat automatickou údržbu pro počítače se systémem Windows** jako závislé nastavení zásad určuje, jestli se mají aktualizace a aplikace instalovat při zobrazení okna automatické údržby Windows.<br /><br />**Zobrazit uživateli výzvu k instalaci** vyzývá uživatele k instalaci aktualizací, jakmile jsou připravené.<br /><br />Doporučené hodnoty:<br /><br />Vybraná možnost **Instalovat aktualizace a aplikace automaticky podle plánu**<br /><br />**Naplánovaný den: Každý den**<br /><br />**Naplánovaný čas: 3:00:00**<br /><br />Vybraná možnost **Používat automatickou údržbu pro počítače se systémem Windows**|
+    |**Umožnit okamžitou instalaci aktualizací, které nenaruší běh systému Windows** |Možnost **Povolit** umožňuje instalovat aktualizace hned po stažení s výjimkou aktualizací, které by přerušily nebo restartovaly Windows. Tyto aktualizace se instalují v závislosti na konfiguraci nastavení **Automatizovaná instalace aktualizací nebo instalace aktualizací s výzvami**.<br /><br />Možnost **Nepovolit** umožňuje instalovat aktualizace v závislosti na konfiguraci **Automatizovaná instalace aktualizací a aplikací nebo instalace aktualizací a aplikací s výzvami**.<br /><br />Doporučená hodnota: **Povoleno** |
     |**Zpoždění restartu systému Windows po instalaci plánovaných aktualizací a aplikací (minuty)** |Určuje (1 až 30 minut) dobu čekání na restartování Windows po instalaci naplánovaných aktualizací a aplikací.<br /><br />Doporučená hodnota: **15 minut** |
     |**Zpoždění po restartu systému Windows při zahájení instalace dosud neprovedených plánovaných aktualizací nebo aplikací (minuty)** |Určuje (1 až 60 minut), jak dlouho se má čekat na spuštění instalace aktualizací a aplikací po restartování Windows, pokud nebyla nainstalovaná plánovaná aktualizace.<br /><br />Doporučená hodnota: **5 minut**|
     |**Povolit přihlášenému uživateli řídit restart systému Windows po instalaci plánovaných aktualizací a aplikací** |Určuje, jestli může přihlášený uživatel zpozdit restartování Windows (pokud je nastavené **Ano**), nebo jestli se má zobrazit upozornění na automatické restartování Windows (pokud se nastaví **Ne**). Pokud není po dokončení naplánované instalaci aktualizací a aplikací přihlášený žádný uživatel, Windows se v případě potřeby restartuje automaticky. Pokud nastavíte **Ne**, nastaví se ve výchozím nastavení doba před restartování Windows na 5 minut.<br /><br />Doporučená hodnota: **Ano**|
@@ -76,7 +77,7 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
 
-2.  Na stránce **Nastavení služby: Aktualizace** vyberte v seznamu **Kategorie produktů** kategorie aktualizací, které mají být dostupné pro počítače. Ve výchozím nastavení jsou vybrané nejběžnější aktualizace.
+2.  Na **nastavení služby: Aktualizace** stránku, **kategorie produktů** vyberte kategorie aktualizací, které mají být dostupné pro počítače, ze seznamu. Ve výchozím nastavení jsou vybrané nejběžnější aktualizace.
 
     > [!IMPORTANT]
     > Aby počítače získávaly aktualizace schválené správcem, nesmí se nastavení zásady skupiny služby Windows Server Update Services (WSUS) **Určení umístění intranetového serveru služby Microsoft Update** použít na počítače, které jsou zaregistrované v Intune.
@@ -89,7 +90,7 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
 
-2.  V části **Pravidla automatického schvalování** na stránce **Nastavení serveru: Aktualizace** zvolte **Nový**.
+2.  V **pravidla automatického schvalování** část **nastavení serveru: Aktualizace** zvolte **nový**.
 
 3.  Na stránce **Obecné** v průvodci vytvořením pravidla automatického schvalování zadejte název a volitelný popis pravidla.
 
@@ -110,7 +111,7 @@ Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací 
 
 7.  Na stránce **Souhrn** zkontrolujte nastavení pro nové pravidlo a pak zvolte **Dokončit**.
 
-Nové pravidlo najdete v části **Pravidla automatického schvalování** stránky **Nastavení služby: Aktualizace**.
+Nové pravidlo je zobrazena ve **pravidla automatického schvalování** část **nastavení služby: Aktualizace** stránky.
 
 > [!NOTE]
 > Vytvořené pravidlo automatického schvalování bude schvalovat jenom budoucí aktualizace, ale nebude automaticky schvalovat dřívější aktualizace, které už v Intune existují. Ke schválení těchto aktualizací musíte spustit pravidlo automatického schvalování.
@@ -201,13 +202,13 @@ Abyste usnadnili hledání aktualizací, můžete použít seznam **Filtry**. M�
 
 Po výběru aktualizace ze seznamu budete moct použít další příkazy, které umožňují spravovat aktualizace a které jsou uvedené v této tabulce:
 
-|Úloha|Podrobnosti|
+|Úkol|Podrobnosti|
 |--------|--------------------|
 |**Zobrazit vlastnosti**|Zobrazí podrobné informace o aktualizaci včetně počtu počítačů, na které se vztahuje.|
 |**Upravit**|Používá se jen pro aktualizace jiného výrobce než Microsoftu. Umožňuje upravit vlastnosti aktualizace.|
 |**Schválit**|Schválí vybranou aktualizaci a umožní vám nakonfigurovat, do jakých skupin se nasadí. Další informace najdete v postupu **Schválení aktualizací** v tomto tématu.|
 |**Odmítnout**|Odebere všechna předchozí schválení aktualizace a skryje aktualizaci z výchozích zobrazení. Kromě toho se odeberou všechna data sestavy pro tuto aktualizaci.<br /><br />Pokud chcete později hledat odmítnuté aktualizace, nastavte filtr na stránce **Všechny aktualizace** na **Odmítnuto**. Tuto aktualizaci pak můžete podle potřeby schválit.<br /><br />Pokud došlo k odmítnutí aktualizace z důvodu vypršení její platnosti ve službě Microsoft Update, nebude možné ji schválit v konzole pro správu Intune.<br /><br />Když odstraníte zásady aktualizací nasazené na počítače, hodnoty nastavení zásad těchto aktualizací se vrátí do výchozího stavu pro operační systém nainstalovaný na počítačích.|
-|**Odstranit**|Používá se jen pro aktualizace jiného výrobce než Microsoftu. Odstraní vybranou aktualizaci.|
+|**Odstranění**|Používá se jen pro aktualizace jiného výrobce než Microsoftu. Odstraní vybranou aktualizaci.|
 |**Nahrát**|Spustí průvodce **Nahrát aktualizaci**, který vám umožní nahrát aktualizace jiného výrobce než Microsoftu, které chcete nasadit.|
 
 ### <a name="to-approve-updates"></a>Schválení aktualizací
@@ -256,5 +257,5 @@ Po výběru aktualizace ze seznamu budete moct použít další příkazy, kter�
 6.  Na panelu podrobností v dolní části stránky **Všechny aktualizace** můžete vidět zprávy s připomenutím ohledně aktualizací.
 
 
-### <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také:
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

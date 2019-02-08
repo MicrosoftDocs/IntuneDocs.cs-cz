@@ -16,12 +16,13 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
-ms.openlocfilehash: 3f53ce0b2afd214dec98082c23f7187b4e69317b
-ms.sourcegitcommit: f114eeba1909c7d4e157003b1a9e2232dd1c99e3
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 30c2e6ad91990029d5b5445e7b4e0ac2417d5e7c
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53734234"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55847263"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -87,7 +88,7 @@ Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrob
 Příklad vstupu: *Výrobce A; Výrobce B* 
 
 >[!NOTE]
-> Toto jsou některé běžné výrobci nahlásila zařízení pomocí Intune a může sloužit jako vstup: ASUS; BlackBerry; Bq; Gionee; Google; HMD globální; HTC; Huawei; Infinix; Tiskárny Kyocera; Lemobile; Lenovo; Lge; Zařízení Oneplus Motorola; Oppo; Samsung; Sharp; Sony; Tecno; Vivo; Vodafone; Chytré telefony Xiaomi; Zte; Zuk
+> Toto jsou některé běžné výrobci nahlásila zařízení pomocí Intune a může sloužit jako vstup: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 
