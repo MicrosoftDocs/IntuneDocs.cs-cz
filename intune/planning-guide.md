@@ -16,12 +16,13 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: b2ddf29157255feaa7d336913640a1cf434f921c
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 501638724b6f83e2df1d308a5bbf020adf3ef3d2
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185770"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838423"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Průvodce plánováním nasazení, návrhem a implementací Intune
 
@@ -33,27 +34,27 @@ ms.locfileid: "52185770"
 
 Tento průvodce obsahuje oddíly, které vás provedou celým procesem nasazení Intune. Začněte oddílem 1, abyste si ujasnili své cíle, úkoly a problémy. Pak přejděte k oddílům 2–7 v pořadí, které vám nejvíce vyhovuje. Tyto oddíly nemusíte procházet postupně, ale můžete je dokončit souběžně.
 
--   [Oddíl 1: Vymezení cílů, úkolů a problémů při nasazení](planning-guide-deployment-goals.md)
+-   [Oddíl 1: Určení cílů nasazení, účelu a obtíží](planning-guide-deployment-goals.md)
 
--   [Oddíl 2: Identifikace scénářů pro případy použití](planning-guide-scenarios.md)
+-   [Část 2: Identifikace scénářů použití](planning-guide-scenarios.md)
 
--   [Oddíl 3: Určení požadavků pro případy použití](planning-guide-requirements.md)
+-   [Část 3: Určení požadavků na použití](planning-guide-requirements.md)
 
--   [Oddíl 4: Vývoj plánu zavedení](planning-guide-rollout-plan.md)
+-   [Část 4: Vývoj plánu uvedení](planning-guide-rollout-plan.md)
 
--   [Oddíl 5: Vývoj plánu pro komunikaci zavedení](planning-guide-communication-plan.md)
+-   [Oddíl 5: Vývoj plánu komunikace při nasazení](planning-guide-communication-plan.md)
 
--   [Oddíl 6: Vývoj plánu podpory](planning-guide-support-plan.md)
+-   [Část 6: Vývoj plánu podpory](planning-guide-support-plan.md)
 
--   [Oddíl 7: Vytvoření návrhu Intune](planning-guide-design.md)
+-   [Sekce 7: Vytvoření návrhu Intune](planning-guide-design.md)
 
--   [Oddíl 8: Implementace Intune](planning-guide-onboarding.md)
+-   [Část 8: Implementace Intune](planning-guide-onboarding.md)
 
--   [Oddíl 9: Testování a ověření](planning-guide-test-validation.md)
+-   [9. část: Testování a ověřování](planning-guide-test-validation.md)
 
 Tento průvodce také obsahuje další technické informace a šablony tabulek, které vám pomohou při plánování, návrhu a implementaci Intune.
 
--   [Další zdroje: odkazy a šablony tabulek](planning-guide-resources.md)
+-   [Další zdroje informací: Odkazy a šablony tabulek](planning-guide-resources.md)
 
 ## <a name="assumptions"></a>Předpoklady
 
@@ -63,4 +64,4 @@ Tento průvodce také obsahuje další technické informace a šablony tabulek, 
 
 ## <a name="next-steps"></a>Další postup
 
-Začněte prvním oddílem: [Vymezení cílů, úkolů a problémů při nasazení](planning-guide-deployment-goals.md).
+Začněme prvním oddílem: [Určení cílů nasazení, účelu a obtíží](planning-guide-deployment-goals.md).

@@ -13,12 +13,13 @@ ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
-ms.openlocfilehash: 98b3180bc90c7b54213781ddf8b6668918b22dd3
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f8bdb74c19e6b996bafc9284bfedaf0608fdf8fb
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203794"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834615"
 ---
 # <a name="intune-tenant-status-page"></a>Stránka stavu Tenanta Intune
 Na stránce Stav Tenanta jako centrální rozbočovač pro aktuální informace o důležité podrobnosti o tenantovi, dostupnost licencí a použití, stav konektoru a důležité komunikace o službě Intune.  
@@ -58,7 +59,7 @@ Není v pořádku konektory se vždycky zobrazí v horní části seznamu. Dále
 
 Když vyberete konektor v seznamu, zobrazí na portálu stránky portálu, který je relevantní pro vytvoření nebo konfigurace tohoto konektoru.  Například, když vyberete **datum vypršení platnosti VPP** konektor, **tokeny programu hromadných nákupů pro iOS** stránce otevře, kde najdete další podrobnosti o tento konektor. Můžete pak vytvořit novou konfiguraci nebo upravit a opravte problémy s již existující.  
 
-## <a name="intune-service-health"></a>Stav služby Intune  
+## <a name="intune-service-health"></a>Intune Service Health  
 Můžete zobrazit podrobnosti pro aktivní incidenty a upozornění od společnosti bez nutnosti přejít na řídicí panel s stavu služby Microsoft 365 nebo Centrum zpráv, umístěny v Centru pro správu služeb Microsoft 365 na https://portal.office.com. Jsou zobrazeny pouze incidenty, pokud bylo zaznamenáno dopad ovlivnit vašeho tenanta.  
 
 Když vyberete incident, podrobnosti o incidentu zobrazí přímo na stránce Stav Tenanta. Chcete-li zobrazit minulé poradci a incidentů, vyberte **zobrazit dřívější poradci pro incidenty**. Otevře se Centrum pro správu služeb Microsoft 365 a pak můžete zobrazit poradci a incidenty za posledních 30 dnů pro vašeho tenanta.  
@@ -67,7 +68,7 @@ Chcete-li zobrazit informace o *stav služby Intune*, musí mít váš účet **
 
 Pouze můžete nastavit předvolby komunikace pro stav služby Intune prostřednictvím centra pro správu Microsoftu 365.
 
-## <a name="intune-news"></a>Novinky v Intune  
+## <a name="intune-news"></a>Intune News  
 Zobrazit informační komunikaci od týmu služby Intune bez nutnosti přejít na Centrum zpráv Office. Komunikace zahrnout zprávy o změnách, které nedávno došlo ve službě Intune nebo které jsou na cestě pro vašeho tenanta.  
 
 Ve výchozím zobrazení posledních 10 aktivní zprávy. Chcete-li zobrazit starším zprávám, vyberte **zobrazit dřívější zprávy** otevřít *Centrum zpráv* v portálu System center pro správu služeb Microsoft 365.  

@@ -15,12 +15,13 @@ ms.assetid: e6a52506-2d29-41f7-a171-5d684a740dd4
 ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
-ms.openlocfilehash: e19ce1aa39d6402ccf1de93af493457b0a10d0b8
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: d6c3190f0bac90ef87fcc411423611251c54338e
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183725"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55842061"
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -30,19 +31,19 @@ Plán komunikace je klíčem k úspěšné migraci do Intune. U každé fáze mi
 
 Doporučujeme následující plán komunikace s využitím e-mailů. Vytvořili jsme pro vás šablony, které můžete přizpůsobit svému plánu komunikace:
 
--   **E-mail č. \#1:** Vysvětlete, jaké jsou výhody, co se očekává a jaký je plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.<br/><br/>
+-   **E-mailu \#1:** Vysvětluje výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.<br/><br/>
 
 
     -   [Stáhnout šablonu e-mailu č. \#1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35)
 <br></br>
 
--   **E-mail č. \#2:** Oznamte uživatelům, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali. Připomeňte jim výhody a strategické důvody migrace.<br/><br/>
+-   **E-mailu \#2:** Oznamujeme, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali. Připomeňte jim výhody a strategické důvody migrace.<br/><br/>
 
 
     -   [Stáhnout šablonu e-mailu č. \#2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
 <br></br>
 
--   **E-mail č. \#3:** Poskytněte uživatelům časovou osu s informacemi o tom, kdy bude ovlivněn jejich přístup. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl zahrnovat posuvné okno, aby bylo možné přizpůsobení jednotlivým fázím. Například v červnu pošlete e-mail č. \#1 uživatelům fáze 1, e-mail č. \#2 uživatelům fáze 2 a e-mail č. \#3 uživatelům fáze 3.<br/><br/>
+-   **E-mailu \#3:** Poskytněte uživatelům časovou osu předtím, než je ovlivněn jejich přístup. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl zahrnovat posuvné okno, aby bylo možné přizpůsobení jednotlivým fázím. Například v červnu pošlete e-mail č. \#1 uživatelům fáze 1, e-mail č. \#2 uživatelům fáze 2 a e-mail č. \#3 uživatelům fáze 3.<br/><br/>
 
     -   [Stáhnout šablonu e-mailu č. \#3](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
 

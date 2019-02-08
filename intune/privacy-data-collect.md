@@ -15,12 +15,13 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 73cd8b4f0cf5bdfa02a301d476df31a01fc9691f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b9202bd19d9c932d167808b602aeccfb8b7ed117
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52186116"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55834489"
 ---
 # <a name="data-collection-in-intune"></a>Shromažďování údajů v Intune
 
@@ -57,7 +58,7 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
     - Správa
     - Create
     - Aktualizace (úpravy)
-    - Odstranit
+    - Odstranění
     - přiřazení
     - Vzdálené úlohy
 - Informace o podpoře
@@ -127,10 +128,10 @@ Mezi agregované údaje shromažďované službou Intune patří mimo jiné:
     - Počet zaregistrovaných zařízení nebo uživatelů
     - Počet identifikovaných platforem zařízení  
     - Počet nainstalovaných zařízení
-    - installedDeviceCount: Počet zařízení, na kterých je aplikace nainstalovaná
-    - notApplicableDeviceCount: Počet zařízení, na kterých se aplikace nedá použít
-    - notInstalledDeviceCount: Počet zařízení, na kterých se aplikace dá použít, ale není nainstalovaná
-    - pendingInstallDeviceCount: Počet zařízení, na kterých se aplikace dá použít a instalace čeká na dokončení
+    - installedDeviceCount: Počet zařízení, na kterých je aplikace nainstalovaná.
+    - notApplicableDeviceCount: Počet zařízení, pro které aplikace se nedá použít.
+    - notInstalledDeviceCount: Počet zařízení, u které aplikace použít, ale není nainstalované.
+    - pendingInstallDeviceCount: Numberr zařízení, pro které se vztahuje aplikace a instalace čeká na vyřízení.
     
 ## <a name="next-steps"></a>Další postup
 

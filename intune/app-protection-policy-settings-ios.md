@@ -16,12 +16,13 @@ ms.reviewer: andcerat
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 2bfeb33ea0efab7c4efc027e6ebfc1a058820ac4
-ms.sourcegitcommit: fddf90a6aa17b09005723653a0c9a520856bb2ea
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: ffcec842d9650e8dee61363c3863fc7d458e93ac
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55781534"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838437"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]

@@ -15,12 +15,13 @@ ms.assetid: 38e8a2e2-2329-11e8-b467-0ed5f89f718b
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a69f4c4e5f80c77259656cac7650ca58c51b2407
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: b059d3512576faaa6049bd2c91be9e94ff919058
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52185759"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55844305"
 ---
 # <a name="evaluate-how-many-users-are-targeted-by-a-policy"></a>Vyhodnocení počtu uživatelů, na které cílí zásada
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]

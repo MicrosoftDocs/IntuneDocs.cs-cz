@@ -14,12 +14,13 @@ ms.suite: ems
 search.appverid: MET150
 ms.reviewer: tycast
 ms.custom: intune-azure; seodec18
-ms.openlocfilehash: 9c41fc39b5d2dc644fae91d6b02171681453ab1c
-ms.sourcegitcommit: 4a7421470569ce4efe848633bd36d5946f44fc8d
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: e38d5e68e79facfd270de64c79708b74aa460189
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54203395"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55838185"
 ---
 # <a name="windows-10-and-windows-holographic-device-settings-to-add-vpn-connections-using-intune"></a>Windows 10 a Windows Holographic nastavení zařízení, které chcete přidat připojení k síti VPN pomocí Intune
 
@@ -48,7 +49,7 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
   - **IP adresa nebo plně kvalifikovaný název domény**: Zadejte IP adresu nebo plně kvalifikovaný název domény (FQDN) serveru VPN, který se zařízení připojí, jako například **192.168.1.1** nebo **vpn.contoso.com**
   - **Výchozí server**: Povolí tento server jako výchozí server, který zařízení používat k navázání připojení. Jako výchozí server nastavte jenom jeden server.
   - **Import**: Přejděte na soubor oddělený čárkami, který obsahuje seznam serverů ve formátu: popis, IP adresa nebo plně kvalifikovaný název domény, výchozí server. Pomocí **OK** servery naimportujte do seznamu **Servery**.
-  - **Exportovat**: Exportuje seznam serverů do souboru s čárkou hodnot oddělených čárkami (csv)
+  - **Export**: Exportuje seznam serverů do souboru s čárkou hodnot oddělených čárkami (csv)
 
 - **Zaregistrovat interního serveru DNS IP adresy**: Vyberte **povolit** konfigurace profilu sítě VPN ve Windows 10 pro dynamickou registraci IP adresy přiřazené k rozhraní sítě VPN s interní DNS. Pokud vyberete možnost **Zakázat**, IP adresy se nebudou dynamicky registrovat.
 
@@ -74,7 +75,7 @@ V závislosti na tom, jaká nastavení zvolíte, nemusí být všechny uvedené 
     - **Metoda ověřování**: Vyberte, jak chcete, aby uživatelé ověřovat vůči serveru VPN. Používání **certifikátů** nabízí rozšířené funkce, třeba bezobslužné prostředí, VPN na vyžádání a VPN pro aplikaci.
     - **Pamatovat přihlašovací údaje při každém přihlašování**: Zvolte možnost pro ukládání do mezipaměti přihlašovací údaje pro ověřování.
     - **Vlastní XML**: Zadejte vlastní příkazy XML pro konfiguraci připojení VPN.
-    - **Data Xml protokolu EAP**: Zadejte všechny příkazy XML pro EAP, které konfigurují připojení VPN
+    - **EAP Xml**: Zadejte všechny příkazy XML pro EAP, které konfigurují připojení VPN
 
 #### <a name="pulse-secure-example"></a>Příklad pro Pulse Secure
 

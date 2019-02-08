@@ -16,12 +16,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: ba9d4d779a0f609bf07e4d0d7d9aad83e5d415c5
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 76d63e5d574b6e515d438a896618e87ad2b11473
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52181526"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55847178"
 ---
 # <a name="data-intune-sends-to-apple"></a>Data z Intune odesílaná Applu
 
@@ -60,9 +61,9 @@ Následující tabulka uvádí data, která Microsoft Intune odesílá ze zaří
 | ASM/DEP | os | Operační systém zařízení: iOS, OSX nebo tvOS. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
 | ASM/DEP | device_family | Produktová řada Apple, do které dané zařízení patří: iPad, iPhone, iPod, Mac nebo AppleTV. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
 | ASM/DEP | profile_name | Řetězec. Popisný název pro profil. |
-| ASM/DEP | support_phone_number | Volitelný parametr. Řetězec. Telefonní číslo podpory pro organizaci. |
-| ASM/DEP | support_email_address | Volitelný parametr. Řetězec. E-mailová adresa podpory pro organizaci. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
-| ASM/DEP | Oddělení | Volitelný parametr. Řetězec. Uživatelem definovaný název oddělení nebo umístění. |
+| ASM/DEP | support_phone_number | Volitelné. Řetězec. Telefonní číslo podpory pro organizaci. |
+| ASM/DEP | support_email_address | Volitelné. Řetězec. E-mailová adresa podpory pro organizaci. Tento klíč je platný v X-Server-Protocol-Version 2 nebo v novější verzi. |
+| ASM/DEP | Oddělení | Volitelné. Řetězec. Uživatelem definovaný název oddělení nebo umístění. |
 | ASM/DEP | devices | Pole řetězců obsahující sériová čísla zařízení (může být prázdné) |
 | VPP | Identifikátor GUID ID uživatele Intune | Identifikátor GUID vygenerovaný službou Intune |
 | VPP | Spravovaný hlavní název uživatele (UPN) AppleID | AppleID, které určil správce při konfiguraci spojení s Applem pomocí tokenu VPP |

@@ -15,12 +15,13 @@ ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 5129484a3cfea873be4009849b5989f9c2acd888
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: f32b1b32475d67404dae4325da59fe3f4fda7065
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187442"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840702"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -118,7 +119,7 @@ V tomto okamžiku můžete udělat také toto:
 
 - Zpřístupnění aplikace uživatelům mimo vašeho tenanta  (Toto se obvykle vyžaduje jenom u partnerů podporujících více tenantů nebo organizací.)  
 
-    Postupujte následovně:
+    Postup:
 
   1. V okně aplikace zvolte **Manifest**. Otevře se okno **Upravit manifest**.
 
@@ -160,7 +161,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- Nastavení **Povolit přístup**: __Čtení aplikací v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení aplikací v Microsoft Intune__
 
 - Povoluje přístup pro čtení vlastností a stavu následujících entit:
     - Klientské aplikace
@@ -170,7 +171,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- Nastavení **Povolit přístup**: __Čtení a zápis aplikací v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení a zápis aplikací v Microsoft Intune__
 
 - Umožňuje stejné operace jako __DeviceManagementApps.Read.All__
 
@@ -183,7 +184,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- Nastavení **Povolit přístup**: __Čtení konfigurace a zásad zařízení v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Konfigurace zařízení v Microsoft Intune pro čtení a zásady__
 
 - Povoluje přístup pro čtení vlastností a stavu následujících entit:
     - Konfigurace zařízení
@@ -192,7 +193,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- Nastavení **Povolit přístup**: __Čtení a zápis konfigurace a zásad zařízení v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení a zápis konfigurace zařízení v Microsoft Intune a zásady__
 
 - Umožňuje stejné operace jako __DeviceManagementConfiguration.Read.All__
 
@@ -203,7 +204,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- Nastavení **Povolit přístup**: __Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Provádění vzdálených akcí s dopadem na uživatele na zařízeních v Microsoft Intune__
 
 - Povoluje na spravovaném zařízení následující vzdálené akce:
     - Vyřazení
@@ -217,7 +218,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- Nastavení **Povolit přístup**: __Čtení zařízení v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení zařízení v Microsoft Intune__
 
 - Povoluje přístup pro čtení vlastností a stavu následujících entit:
     - Spravované zařízení
@@ -228,7 +229,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- Nastavení **Povolit přístup**: __Čtení a zápis zařízení v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení a zápis do zařízení v Microsoft Intune__
 
 - Umožňuje stejné operace jako __DeviceManagementManagedDevices.Read.All__
 
@@ -243,7 +244,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- Nastavení **Povolit přístup**: __Čtení nastavení RBAC v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení nastavení RBAC v Microsoft Intune__
 
 - Povoluje přístup pro čtení vlastností a stavu následujících entit:
     - Přiřazení rolí
@@ -252,7 +253,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- Nastavení **Povolit přístup**: __Čtení a zápis nastavení RBAC v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení a zápis nastavení RBAC v Microsoft Intune__
 
 - Umožňuje stejné operace jako __DeviceManagementRBAC.Read.All__
 
@@ -262,7 +263,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- Nastavení **Povolit přístup**: __Čtení konfigurace v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení konfigurace v Microsoft Intune__
 
 - Povoluje přístup pro čtení vlastností a stavu následujících entit:
     - Registrace zařízení
@@ -278,7 +279,7 @@ V současné době všechny obory oprávnění Intune vyžadují přístup sprá
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- Nastavení **Povolit přístup**: __Čtení a zápis konfigurace v Microsoft Intune__
+- **Povolení přístupu** nastavení: __Čtení a zápis konfigurace v Microsoft Intune__
 
 - Umožňuje stejné operace jako DeviceManagementServiceConfig.Read.All_
 

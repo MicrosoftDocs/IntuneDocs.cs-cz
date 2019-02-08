@@ -14,12 +14,13 @@ ms.reviewer: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: de0df4878d2461d2f7c0a022a7e3d305e58aef7f
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 2de0d4cb00ea6bdeef40a9e6f6e400304a003b00
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187782"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55848538"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
 
@@ -69,16 +70,16 @@ Pokud chcete externímu serveru SCEP povolit spuštění vlastního ověření v
 
 Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. Postup najdete v části s [požadovanými oprávněními](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions).
 
-**Krok 1: Vytvoření aplikace služby Azure AD**
+**Krok 1: Vytvoření aplikace Azure AD**
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Vyberte **Azure Active Directory** > **Registrace aplikací** > **Registrace nové aplikace**.
 3. Zadejte název a přihlašovací adresu URL. Jako typ aplikace vyberte **Webová aplikace / webové rozhraní API**.
 4. Vyberte **Vytvořit**.
 
 V článku o [integraci aplikací pomocí Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) najdete některé pokyny týkající se vytváření aplikace, včetně rad ohledně adresy URL a názvu.
 
-**Krok 2: Udělení oprávnění**
+**Krok 2: Udělit oprávnění**
 
 Po vytvoření aplikace poskytněte rozhraní API Microsoft Intune požadovaná oprávnění:
 
@@ -87,7 +88,7 @@ Po vytvoření aplikace poskytněte rozhraní API Microsoft Intune požadovaná 
 3. V část **Vybrat oprávnění** zvolte **Ověření výzvy SCEP** > **Vybrat**.
 4. Zvolením možnosti **Hotovo** uložte změny.
 
-**Krok 3: Získání ID aplikace a ověřovacího klíče**
+**Krok 3: Získejte ID a ověřovacího klíče aplikace**
 
 V dalším kroku získáte hodnoty ID a klíče aplikace Azure AD. Budete potřebovat následující hodnoty:
 
@@ -132,7 +133,7 @@ Pokud jste externí certifikační autoritou a máte zájem o integraci svého p
 - [Úložiště GitHub rozhraní Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Pokyny pro externí certifikační autority k rozhraní Intune SCEP API](scep-libraries-apis.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Konfigurace a používání certifikátů SCEP s Intune](certificates-scep-configure.md)
 - [Úložiště GitHub rozhraní Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)

@@ -14,12 +14,13 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3136088f307d8e2e83faaccafbda4ad2664c6f62
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 5fb7c28663320218412e455c97b38cb62b4826ee
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183209"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55837335"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>Použití vlastního nastavení u zařízení s macOS v Microsoft Intune
 
@@ -54,15 +55,15 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s m
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 
-    - **Název:** Zadejte název profilu, třeba `macos custom profile`.
+    - **Název**: Zadejte název profilu, jako například `macos custom profile`.
     - **Popis**: Zadejte popis profilu.
-    - **Platforma:** Zvolte **macOS**.
-    - **Typ profilu:** Zvolte **Vlastní**.
+    - **Platforma**: Zvolte **macOS**.
+    - **Typ profilu**: Zvolte **vlastní**.
 
 4. V části **Vlastní konfigurace** zadejte následující nastavení:
 
-    - **Název vlastního konfiguračního profilu:** Zadejte název zásady. Tento název se zobrazí na zařízení a ve stavu Intune.
-    - **Soubor konfiguračního profilu:** Přejděte ke konfiguračnímu profilu vytvořenému v Apple Configuratoru nebo Apple Profile Manageru. Importovaný soubor se zobrazí v části **Obsah souboru**.
+    - **Název vlastního konfiguračního profilu**: Zadejte název pro tuto zásadu. Tento název se zobrazí na zařízení a ve stavu Intune.
+    - **Soubor konfiguračního profilu**: Přejděte na konfigurační profil, který jste vytvořili pomocí nástroje Apple Configurator nebo Apple profilu správce. Importovaný soubor se zobrazí v části **Obsah souboru**.
 
 5. Vyberte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
 

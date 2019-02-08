@@ -15,12 +15,13 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
-ms.openlocfilehash: 44a6d89b649514a08193d7144dff7d89dc3d9c55
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 85a03718185de939612f5431a993f9f34c3048ba
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52183362"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55840650"
 ---
 # <a name="company-portal-abandonment-report"></a>Sestava opuštění registrace na Portálu společnosti
 
@@ -52,9 +53,9 @@ Pomocí **filtru** můžete zvolit rozsah kalendářních dat, operační systé
 
 V horní části sestavy se zobrazuje počet opuštění registrace a procentuální hodnota vzhledem k celkovému počtu registrací.
 
--   Zahájené registrace: Počet pokusů o registraci.
--   Opuštěné registrace: Počet pokusů o registraci, jejichž výsledkem nebylo plně zaregistrované zařízení dodržující předpisy.
--   Četnost opuštění: Procentuální hodnota opuštěných pokusů o registraci (opuštěné registrace / zahájené registrace).
+-   Registrace iniciovaná: Počet registrací se pokusili.
+-   Opuštěné registrace: Počet pokusů o registrací nemělo za následek plně zaregistrované a vyhovující zařízení.
+-   Zřeknutí rychlost: Procento pokusy o registraci, které byly opuštěny (opuštěných registrace / iniciované registrací).
 
 ### <a name="line-graph"></a>Spojnicový graf
 
@@ -77,7 +78,7 @@ Následující tabulky zobrazují seznam akcí uživatelů, které způsobily op
 | EnrollmentWrapUp | Výzva k otevření stránky v Portálu společnosti | iOS/Android | **Zrušit** |
 | EnrollmentWrapUp | Obrazovka registrace zařízení až do dokončení **načítání firemních prostředků** | iOS/Android | Trvalo > 30 minut |
 | DeviceCategory | Výběr kategorie zařízení (pokud ji správce nakonfiguroval) až do kliknutí na **Hotovo** | iOS/Android | Trvalo > 30 minut |
-| PreEnrollmentWizard | Obrazovka nastavení přístupu, pokud byla registrace zahájena, ale vrátila se k nastavení přístupu | iOS/Android| **Odložení** |
+| PreEnrollmentWizard | Obrazovka nastavení přístupu, pokud byla registrace zahájena, ale vrátila se k nastavení přístupu | iOS/Android| **Postpone** |
 | PreEnrollmentWizard | Obrazovka nastavení přístupu až do kliknutí na **Další** na obrazovce **Co dál** | iOS/Android | Trvalo > 30 minut |
 
 #### <a name="platform-screens-section"></a>Část Obrazovky platformy
@@ -104,9 +105,9 @@ Následující tabulky zobrazují seznam akcí uživatelů, které způsobily op
 
 | Název opuštění registrace | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
-| Dodržování předpisů | Dodržování předpisů zařízením (pokud je správce nakonfiguroval) se v nastavení přístupu po registraci zobrazuje jinak než zeleně.| iOS/Android | **Odložení** |
+| Dodržování předpisů | Dodržování předpisů zařízením (pokud je správce nakonfiguroval) se v nastavení přístupu po registraci zobrazuje jinak než zeleně.| iOS/Android | **Postpone** |
 | Dodržování předpisů | Dodržování předpisů zařízením se zobrazuje jinak než zeleně až do aktualizace, po které se zobrazuje zeleně. | iOS/Android | Trvalo > 30 minut |
-| Aktivace | Aktivace registrace (pokud ji správce nakonfiguroval) se v nastavení přístupu zobrazuje jinak než zeleně. | iOS/Android | **Odložení** |
+| Aktivace | Aktivace registrace (pokud ji správce nakonfiguroval) se v nastavení přístupu zobrazuje jinak než zeleně. | iOS/Android | **Postpone** |
 | Dodržování předpisů | Aktivace zařízení se zobrazuje jinak než zeleně až do aktualizace, po které se zobrazuje zeleně. | iOS/Android | Trvalo > 30 minut |
 
 ## <a name="next-steps"></a>Další postup

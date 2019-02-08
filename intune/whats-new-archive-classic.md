@@ -15,12 +15,13 @@ ROBOTS: noindex,nofollow
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
-ms.openlocfilehash: 56d5d9c773a11b3884b4e72b55fab27e7044f1e9
-ms.sourcegitcommit: 5058dbfb0e224207dd4e7ca49712c6ad3434c83c
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: a5186af2e02363d74f2f046188168efd38eee363
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53112897"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55843421"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
@@ -113,7 +114,7 @@ Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a 
 
 Snímky obrazovky předchozího způsobu přihlašování, nového způsobu přihlašování zadáním přihlašovacích údajů a nového způsobu přihlašování z jiného zařízení najdete na stránce [novinek v uživatelském rozhraní aplikací](whats-new-app-ui.md).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune mění způsob fungování portálu Intune Partner Portal<!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune se mění prostředí portálu Intune Partner Portal <!-- 1050016 -->
 
 Počínaje aktualizací služby v polovině května 2017 odstraníme stránku Intune Partner z manage.microsoft.com.  
 
@@ -147,11 +148,11 @@ Můžete nakonfigurovat zásady podmíněného přístupu EMS založené na poso
 
 Kvůli modernějšímu vzhledu a chování a lepšímu uživatelskému prostředí bude aktualizováno uživatelské rozhraní aplikace Portál společnosti pro Android. K významným aktualizacím patří:
 
-- Barvy: IT oddělení může v záhlaví karet aplikace Portál společnosti definovat firemní barvy.
-- Aplikace: Na kartě **Aplikace** jsou aktualizovaná tlačítka **Vybrané aplikace** a **Všechny aplikace**.
-- Hledání: Na kartě **Aplikace** má tlačítko **Hledat** podobu plovoucího tlačítka akce.
-- Navigace mezi aplikacemi: Zobrazení **Všechny aplikace** obsahuje karty **Doporučené**, **Vše** a **Kategorie**, které zjednodušují navigaci.
-- Podpora: Karty **Moje zařízení** a **Kontaktovat IT** jsou aktualizované tak, aby byly zřetelnější.
+- Barvy: Záhlaví karet aplikace portál společnosti se zobrazí v IT definované značky.
+- Aplikace: V **aplikace** karta, **vybrané aplikace** a **všechny aplikace** tlačítka se aktualizují.
+- Hledání: V **aplikace** karta, **hledání** tlačítko je plovoucí tlačítko akce.
+- Navigace mezi aplikacemi: **Všechny aplikace** zobrazení teď zobrazují s kartami **doporučené**, **všechny**, a **kategorie** zjednodušují navigaci.
+- Podpora: **Moje zařízení** a **kontakt na IT** karet jsou aktualizované pro lepší čitelnost.
 
 Další podrobnosti o těchto změnách najdete v článku [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).
 
@@ -228,9 +229,9 @@ Uživatelům Windows a Windows Phone se při pokusu o registraci zařízení zob
 Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
 
 * __Barvy__: Záhlaví karet můžou mít barvy podle vaší vlastní palety barev.
-* __Rozhraní__: Byla aktualizována tlačítka Vybrané aplikace a Všechny aplikace na kartě Aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
-* __Navigace__: V části Všechny aplikace se teď zobrazují karty Doporučené, Vše a Kategorie, které zjednodušují navigaci.
-* __Služba__: Zlepšila se čitelnost karet Moje zařízení a Kontaktovat IT.
+* __Rozhraní__: Na kartě aplikace byla aktualizována tlačítka vybrané aplikace a všechny aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
+* __Navigace__: Všechny aplikace teď zobrazují karty doporučené, všechny a kategorie, které zjednodušují navigaci.
+* __Služba__: Moje zařízení a kontaktovat oddělení IT zlepšila se čitelnost karet.
 
 Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhraní](whats-new-app-ui.md).
 

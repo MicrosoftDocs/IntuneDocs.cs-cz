@@ -16,12 +16,13 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 4a1c5f2b400e73566db88fea8e06383e45b363a3
-ms.sourcegitcommit: 51b763e131917fccd255c346286fa515fcee33f0
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 218c1959649e5dd8c56c52b414aeeec02c6f4a42
+ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52187748"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55841755"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
@@ -50,7 +51,7 @@ Na klasickém portálu jste mohli nastavit pravidla, která řídí registraci m
 
 ![Obrázek klasických pravidel registrace mobilních zařízení](./media/01-classic-rules.png)
 
-Tato pravidla platila bez výjimky pro všechny uživatele ve vašem účtu Intune. Na webu Azure Portal jsou místo těchto pravidel dva různé typy zásad: omezení typu zařízení a omezení limitů počtů zařízení.
+Tato pravidla platila bez výjimky pro všechny uživatele ve vašem účtu Intune. Na webu Azure Portal teď tato pravidla zobrazují ve dvou typů různých zásad: Omezení typu zařízení a omezení limitů počtů zařízení.
 
 ![Obrázek omezení registrace mobilních zařízení v Azure](./media/02-azure-enroll-restrictions.png)
 
