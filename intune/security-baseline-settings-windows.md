@@ -5,7 +5,7 @@ description: Windows security základní nastavení zkonstruovat pomocí Intune
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 02/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,17 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86bfda9d7220ea3557bb12a5d6c8ce6ed8cd3932
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 91a8364927667bbc910d86dc3e95f447eb5cf93a
+ms.sourcegitcommit: 77c63ddb51ffd5258f4ea0e68672c2eb011b83e1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840599"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905811"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení Windows Intune  
 
 Zobrazení [nastavení standardních hodnot zabezpečení Windows](security-baselines.md) , který podporuje Microsoft Intune.  
 
+> [!NOTE]  
+> Standardní nastavení zabezpečení Windows jsou ve verzi Preview. Co je k dispozici na portálu se liší ve verzi Preview, seznam dostupných nastavení a pořadí, ve kterém tento obsah představuje těchto nastavení.  
+>  
+> Po standardní nastavení z verze Preview se tento obsah se aktualizuje seznam nastavení standardních hodnot zabezpečení, které Intune podporuje – ve verzi preview.  
 
 ## <a name="above-lock"></a>Nad zámkem  
 Další informace najdete v tématu [zásady CSP – AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) v dokumentaci k Windows.  
@@ -164,11 +168,12 @@ Další informace najdete v tématu [zásady CSP – DeviceGuard](https://docs.m
   Zapne virtualizace na základě při příštím restartování zabezpečení (VBS). Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.
   - **Výchozí**: Ano  
 
-- **Povolení zabezpečeného spouštění DMA**  
-  Mezi příkazy, které následují můžete použít nastavení pro zabezpečené spouštění a zabezpečené spouštění s přímý přístup do paměti. Ve většině případů doporučujeme, abyste zvolili možnost zabezpečeného spouštění. Tato možnost poskytuje zabezpečené spouštění s co nejvíce protection podporuje danou počítačový hardware. Počítače s jednotkami správy paměti vstup/výstup (IOMMUs) bude mít zabezpečené spouštění s ochranou přímý přístup do paměti. Počítač bez IOMMUs jednoduše bude mít povolené zabezpečené spouštění. Naproti tomu se zabezpečeným spouštěním DMA bude toto nastavení Povolit zabezpečené spouštění – a VBS samotný – jenom na počítač, který podporuje přímý přístup do paměti, to znamená, že počítač s IOMMUs. S tímto nastavením nemají jakýkoli počítač bez IOMMUs VBS nebo HVCI ochranu, i když mají stále WDAC povolena.
+<!-- not yet available 
+- **Enable secure boot with DMA**  
+  Among the commands that follow, you can choose settings for Secure Boot and Secure Boot with DMA. In most situations, we recommend that you choose Secure Boot. This option provides Secure Boot with as much protection as is supported by a given computer’s hardware. A computer with input/output memory management units (IOMMUs) will have Secure Boot with DMA protection. A computer without IOMMUs will simply have Secure Boot enabled. In contrast, with Secure Boot with DMA, the setting will enable Secure Boot—and VBS itself—only on a computer that supports DMA, that is, a computer with IOMMUs. With this setting, any computer without IOMMUs will not have VBS or HVCI protection, although it can still have WDAC enabled.
   
-  - **Výchozí**: Ano  
-  
+  - **Default**: Yes  
+  -->
 - **Spusťte systém guard**  
   - **Výchozí**: Povoleno  
 
@@ -181,11 +186,11 @@ Další informace najdete v tématu [zásady CSP – DeviceInstallation](https:/
   
     - **Odeberte odpovídající hardwarové zařízení**  
       Toto nastavení je dostupná jenom v případě *instalace zařízení hardwaru pomocí identifikátorů zařízení* je nastavena na *služba neblokuje instalaci zařízení hardwaru*.
-      - **Výchozí**: *Žádná výchozí konfigurace*
+      - **Výchozí**: Ano
   
     - **Identifikátory hardwaru zařízení, které jsou blokovány**  </br>
       Toto nastavení je dostupná jenom v případě *instalace zařízení hardwaru pomocí identifikátorů zařízení* je nastavena na *služba neblokuje instalaci zařízení hardwaru*.
-      - **Výchozí**: *Žádná výchozí konfigurace*  
+      - **Výchozí**: Ano  
   
 - **Instalace hardwaru zařízení v nastavení tříd**  
   Nastavení této zásady umožňuje určit seznam zařízení nastavení třídy globálně jedinečné identifikátory (GUID) pro ovladače zařízení, že je Windows zabráněno v instalaci. Toto nastavení zásad má přednost před jiného nastavení zásad, který umožňuje nainstalovat zařízení Windows. Pokud nastavení této zásady povolíte, je Windows nebudou instalujete nebo aktualizujete ovladače zařízení, jehož třída instalace zařízení v seznamu se zobrazí identifikátory GUID vytvoříte. Pokud povolíte toto nastavení zásad v serveru vzdálené plochy, nastavení zásad má vliv přesměrování zadané zařízení z klienta vzdálené plochy k serveru vzdálené plochy. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, můžete nainstalovat Windows a aktualizace zařízení povolený, nebo z důvodu dalších nastavení zásad.
@@ -299,23 +304,23 @@ Další informace najdete v tématu [zásady CSP – Průzkumník souborů](http
 
 ## <a name="internet-explorer"></a>Internet Explorer  
 Další informace najdete v tématu [zásady CSP – Internet Explorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) v dokumentaci k Windows.  
-
-- **Kontrolovat příchozí e-mailové zprávy**  
-  Povolí nebo zakáže kontrolu e-mailu.
-  - **Výchozí**: Zakázáno  
+<!-- not yet available 
+- **Scan incoming mail messages**  
+  Allows or disallows scanning of email.
+  - **Default**: Disabled  
   
-- **Aplikace Office spusťte podřízený proces typ**  
-  Aplikace Office nebudou moct vytvářet podřízené procesy. To zahrnuje Word, Excel, PowerPoint, OneNote a přístup. Toto je chování typické malware, hlavně pro útoky – makro, které se snaží používat aplikace Office spouštět ani se stahování škodlivého spustitelné soubory.
-  - **Výchozí**: Zakázat  
+- **Office apps launch child process type**  
+  Office apps will not be allowed to create child processes. This includes Word, Excel, PowerPoint, OneNote, and Access. This is a typical malware behavior, especially for macro-based attacks that attempt to use Office apps to launch or download malicious executables.
+  - **Default**: Disable  
   
-- **Typ souhlasu odeslání vzorku defenderu**  
-  Kontroly pro uživatele souhlas úrovni v programu Windows Defender odesílat data. Pokud již bylo uděleno vyžaduje souhlas, program Windows Defender odešle je. Pokud tomu tak není (a pokud uživatel zadal nikdy se zeptat), požádejte ho o souhlas uživatele (Pokud je povoleno Defender/AllowCloudProtection) před odesláním údajů se spustí uživatelské rozhraní.
-  - **Výchozí**: Zakázat  
+- **Defender sample submission consent type**  
+  Checks for the user consent level in Windows Defender to send data. If the required consent has already been granted, Windows Defender submits them. If not (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+  - **Default**: Disable  
   
-- **Interval aktualizace podpisu (v hodinách)**  
-  Interval aktualizace podpisu Defender v hodinách
-  - **Výchozí**: Zakázáno  
-  
+- **Signature update interval (in hours)**  
+  Defender signature update interval in hours
+  - **Default**: Disabled  
+ -->
 - **Přístup k zóny Internetu aplikace Internet Explorer ke zdrojům dat**  
   Nastavení této zásady umožňuje určit, zda aplikace Internet Explorer můžete přistupovat k datům z jiné zóny zabezpečení pomocí Microsoft XML Parser (MSXML) nebo objekty ADO (ActiveX Data OBJECTS). Pokud nastavení této zásady povolíte, uživatelé můžou načítat stránku v oblasti, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat zvolit, jestli se má povolit stránky, který se má načíst v zóně, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud nastavení této zásady zakážete, uživatelé nelze načíst stránku v oblasti, která používá MSXML nebo ADO pro přístup k datům z jiné lokality v zóně. Pokud nastavení této zásady nenakonfigurujete, uživateli nelze načíst stránku v oblasti, která používá pro přístup k datům z jiné lokality v zóně MSXML nebo ADO.
   - **Výchozí**: Zakázat  
@@ -944,12 +949,12 @@ Další informace najdete v tématu [zásady CSP – RemoteManagement](https://d
   Nastavení této zásady umožňuje určit, zda klient vzdálené správy Windows (WinRM) používá ověřování hodnotou hash. Pokud nastavení této zásady povolíte, Klient WinRM nepoužívá ověřování hodnotou hash. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, používá Klient WinRM ověřování hodnotou hash.
   - **Výchozí**: Povoleno
   
-- **Ověřování hodnotou hash bloku klienta**  
-  Nastavení této zásady umožňuje určit, zda služba Vzdálená správa Windows (WinRM) odesílá a přijímá nezašifrované zprávy přes síť. Pokud nastavení této zásady povolíte, Klient WinRM odesílá a přijímá nezašifrované zprávy přes síť. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, Klient WinRM odesílá nebo přijímá jenom šifrované zprávy přes síť.
+- **Nešifrované přenosy**  
+  Nastavení této zásady umožňuje určit, zda služba Vzdálená správa Windows (WinRM) odesílá a přijímá nezašifrované zprávy přes síť. Pokud nastavení této zásady povolíte, Klient WinRM odesílá a přijímá nezašifrované zprávy přes síť. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, Klient WinRM odesílá nebo přijímá jenom šifrované zprávy přes síť.  
   - **Výchozí**: Zakázáno
   
-- **Ověřování hodnotou hash bloku klienta**  
-  Nastavení zásad Ttento umožňuje určit, zda služba Vzdálená správa Windows (WinRM) odesílá a přijímá nezašifrované zprávy přes síť. Pokud nastavení této zásady povolíte, Klient WinRM odesílá a přijímá nezašifrované zprávy přes síť. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, Klient WinRM odesílá nebo přijímá jenom šifrované zprávy přes síť.
+- **Komunikace s klienty bez šifrování**  
+  Nastavení této zásady umožňuje určit, zda klient vzdálené správy Windows (WinRM) odesílá a přijímá nezašifrované zprávy přes síť. Pokud nastavení této zásady povolíte, Klient WinRM odesílá a přijímá nezašifrované zprávy přes síť. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, Klient WinRM odesílá nebo přijímá jenom šifrované zprávy přes síť.
   - **Výchozí**: Zakázáno
   
 - **Základní ověřování klienta**  

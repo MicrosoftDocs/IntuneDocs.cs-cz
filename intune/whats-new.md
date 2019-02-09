@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ee33525c382b09952a28fad09ee7844e73f2257
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 299e76d55cd5fc61d96a81a49f721bc5c0c69a11
+ms.sourcegitcommit: 77c63ddb51ffd5258f4ea0e68672c2eb011b83e1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850390"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905845"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -283,7 +283,7 @@ Nové prostředí vám umožňuje popsat problém vlastními slovy a získat př
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Značky oboru pro aplikace <!-- 1081941 -->
-Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. Aplikace zakoupené pomocí Apple Volume Purchase Program (VPP) nelze přiřadit značky oboru.  Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
+Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. V současné době aplikace přidat do Intune ze spravovaného obchodu Google Play nebo aplikací koupených pomocí Apple Volume Purchase Program (VPP) se nedá přiřadit značky oboru (ale v budoucnu přijde podpora). Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
 
 
 
