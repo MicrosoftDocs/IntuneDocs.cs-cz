@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5458bdb4e6f967082fcbfd165589386dcc23cec1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835499"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086212"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -151,9 +151,9 @@ Aplikace Microsoft Edge a Intune Managed Browser a [proxy aplikací Azure AD]( 
 ### <a name="before-you-start"></a>Než začnete
 
 - Nastavte svoje interní aplikace prostřednictvím proxy aplikací Azure AD.
-    - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started#get-started). 
+    - Postup konfigurace proxy aplikací a publikování aplikací najdete v [dokumentaci k instalaci](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
 - Musíte používat minimálně verzi 1.2.0 aplikace Managed Browser.
-- Uživatelé aplikace Managed Browser nebo Microsoft Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune]( app-protection-policy.md).
+- Uživatelé aplikace Managed Browser nebo Microsoft Edge mají k dané aplikaci přiřazené [zásady ochrany aplikací Intune](app-protection-policy.md).
 
     > [!NOTE]
     > Aktualizovaným datům přesměrování proxy aplikací může trvat až 24 hodin, než se projeví v aplikaci Managed Browser nebo Microsoft Edge.

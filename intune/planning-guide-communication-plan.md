@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 157328b1fdf774f46d69e619ec0e44e32cbba101
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 39e6f5e13544ba2863320d96984611c9a94b4ff4
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834278"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56085991"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
@@ -56,7 +56,7 @@ Pomoci vám může tento [průvodce registrací pro koncové uživatele](https:/
 
 Existují různé způsoby, jak v organizaci oznámit cílovým skupinám a uživatelům informace, které se týkají zavedení Intune. Následující seznam obsahuje příklady a také vlnu komunikace, v které můžete metodu použít:
 
--   Osobní nebo skypové schůzky probíhající v celé organizaci, které se používají v úvodní vlně.
+-   Celé organizace osobně, nebo použít pro na úvod schůzky Microsoft Teams
 
 -   E-mail se používá ve vlně předcházející registraci, v registrační vlně i ve vlně navazující na registraci.
 

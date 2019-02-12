@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 02/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,173 +14,154 @@ ms.reviewer: coryfe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 977fe53ab439b66c919b783101c0d163d77e6b29
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 5e89c1916c1096923b555bdf9c532d14b829f806
+ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834803"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986854"
 ---
 # <a name="manage-software-updates-in-intune"></a>Správa softwarových aktualizací v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Windows jako služba představuje způsob, jak aktualizovat zařízení s Windows 10. Ve Windows 10 obsahují nové aktualizace funkcí a aktualizace pro zvýšení kvality obsah všech předchozích aktualizací. Pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
+Intune můžete použít k definování aktualizačních kanálů, které určují, jak a kdy jako služba Windows aktualizace zařízení s Windows 10. Aktualizační kanály jsou zásady, kterou můžete přiřadit ke skupinám zařízení. Pomocí aktualizačních kanálů můžete vytvořit strategii aktualizace, která odráží vaše firemní potřeby. Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
 
-Služba Windows Update pro firmy vám zjednodušuje správu aktualizací. Nemusíte tak schvalovat jednotlivé aktualizace pro skupiny zařízení. Konfigurací vhodné strategie zavádění aktualizací budete mít pod kontrolou řízení rizik ve svém prostředí. Služba Windows Update při tom zajistí, aby se aktualizace nainstalovaly ve správný čas. Prostřednictvím Microsoft Intune můžete na zařízeních nakonfigurovat nastavení aktualizací a pozdržet instalaci aktualizací. V Intune nejsou uložené samotné aktualizace, ale jenom přiřazení zásad aktualizací. Zařízení kvůli aktualizacím přistupují přímo k webu Windows Update. Použijte Intune ke konfiguraci a správě **aktualizačních kanálů Windows 10**. Aktualizační kanál obsahuje skupinu nastavení, která konfigurují, kdy a jak se budou aktualizace Windows 10 instalovat. Můžete například nakonfigurovat následující nastavení:
+Ve Windows 10 obsahují nové aktualizace funkcí a aktualizace pro zvýšení kvality obsah všech předchozích aktualizací. Pokud si nainstalujete nejnovější aktualizaci, máte jistotu, že jsou vaše zařízení s Windows 10 aktuální. Na rozdíl od předchozích verzí Windows je teď nutné nainstalovat celou aktualizaci (a ne jenom její část).
 
-- **Kanál pro údržbu Windows 10**: Zvolte kanál pro údržbu ze kterého mají skupiny zařízení přijímat aktualizace. K dispozici jsou tyto kanály: 
-  - Půlroční kanál
-  - Půlroční kanál (vybraní uživatelé)
-  - Windows Insider – Fast
-  - Windows Insider – Slow
-  - Windows Insider – Release 
-      
-  Podrobnosti o dostupných kanálech pro údržbu najdete v tématu [Základní informace o Windows jako službě](https://docs.microsoft.com/windows/deployment/update/waas-overview#servicing-channels).
-- **Nastavení odložení**: Nakonfigurujte nastavení odložení aktualizací ke zpoždění instalací aktualizací pro skupiny zařízení. Tato nastavení vám umožní rozfázovat zavádění aktualizací, abyste mohli kontrolovat jeho průběh.
-- **Pozastavení**: Pokud se vyskytl problém během zavádění aktualizací, můžete odložit instalaci aktualizací. 
-- **Časové období údržby**: Konfigurujte hodiny, ve kterých se můžou aktualizace instalovat.
-- **Typ aktualizace**: Vyberte typy aktualizací, které se nainstalují. Například aktualizace pro zvýšení kvality, aktualizace funkcí nebo ovladače.
-- **Chování při instalaci**: Nakonfiguruje, jak se aktualizace nainstaluje. Třeba jestli se zařízení po instalaci automaticky restartuje.
-- **Partnerské stahování**: Můžete nakonfigurovat partnerské stahování. Pokud ho nakonfigurujete, pak po dokončení stahování aktualizace jedním zařízením můžou aktualizaci z tohoto zařízení stahovat ostatní zařízení. Toto nastavení proces stahování urychlí.
 
-Po vytvoření aktualizačních kanálů je přiřadíte skupinám zařízení. Pomocí aktualizačních kanálů můžete vytvořit strategii aktualizace, která odráží vaše firemní potřeby. Další informace najdete v tématu o [správě aktualizací pomocí Windows Update pro firmy](https://technet.microsoft.com/itpro/windows/manage/waas-manage-updates-wufb).
+Služba Windows Update pro firmy vám zjednodušuje správu aktualizací. Nemusíte tak schvalovat jednotlivé aktualizace pro skupiny zařízení. Konfigurací vhodné strategie zavádění aktualizací budete mít pod kontrolou řízení rizik ve svém prostředí. Intune poskytuje možnost [nakonfigurovat nastavení aktualizací](windows-update-settings.md) na zařízeních a umožňuje pozdržet instalaci aktualizací. V Intune nejsou uložené samotné aktualizace, ale jenom přiřazení zásad aktualizací. Zařízení kvůli aktualizacím přistupují přímo k webu Windows Update. Tato kolekce nastavení, která lze konfigurovat, když se nainstalují aktualizace Windows 10 je volána *aktualizační kanál Windows 10*.
 
-## <a name="before-you-start"></a>Než začnete
+Windows 10 aktualizačních kanálů podpory [značky oboru](scope-tags.md). Značky oboru můžete pomocí aktualizačních kanálů můžete filtrovat a Správa sad konfigurace, které používáte.
 
-- Abyste mohli aktualizovat počítače s Windows 10, musí na nich být aspoň Windows 10 Pro s aktualizací Windows Anniversary Update.
+## <a name="prerequisites"></a>Požadavky  
 
-- Windows Update podporuje následující verze Windows 10:
+Použití funkce aktualizace pro Windows pro zařízení s Windows 10 v Intune musí být splněny následující požadavky.  
+
+- Windows 10 počítačích musí běžet minimálně Windows 10 Pro s aktualizací Windows Anniversary update nebo novější (verze 1607 nebo novější)
+- Windows Update podporuje následující edice Windows 10:
   - Windows 10
   - Windows 10 Team (pro zařízení Surface Hubu)
-  - [Windows Holographic for Business](#windows-holographic-for-business-support)
+  - Windows Holographic for Business  
 
+    Windows Holographic for Business podporuje podmnožinu nastavení aktualizací Windows, včetně:
+    - **Chování automatické aktualizace**
+    - **Aktualizace produktů Microsoftu**
+    - **Kanál pro údržbu**: Podporuje **pololetní kanál** a **pololetní kanál (cílený)** možnosti  
+
+    Další informace najdete v tématu [Správa Windows Holographic](windows-holographic-for-business.md)  
+  
   Zařízení s Windows 10 Mobile nejsou podporovaná.
 
-- Na zařízení s Windows musí být **Zpětná vazba a diagnostika** > **Diagnostika a data o používání** nastavené aspoň na **Základní**.
+- Na zařízeních s Windows **zpětná vazba a Diagnostika** > **data diagnostiky a použití** musí být nastaveno na **základní**, **rozšířená**, nebo **úplné**.  
 
-    ![Nastavení Windows pro diagnostiku a data o používání](./media/telemetry-basic.png)
+  Můžete nakonfigurovat toto nastavení ručně nebo pomocí profilu omezení zařízení Intune pro Windows 10 a novější. Pokud chcete použít profil omezení zařízení, konfigurovat nastavení **Obecné** > **odeslání diagnostických dat** na alespoň **základní**. Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](device-restrictions-configure.md).  
 
-    Buď můžete toto nastavení nakonfigurovat ručně, nebo použít profil Intune pro Windows 10 a novější (**Omezení zařízení** > **Vytváření sestav a telemetrie** > nastavte **Sdílet data o využití**  na alespoň **Základní**). Další informace o profilech zařízení najdete v tématu [Konfigurace nastavení omezení zařízení](device-restrictions-configure.md).
-
-- Portál Azure Classic má také omezený počet dalších nastavení aktualizací Windows 10 v profilu konfigurace zařízení. Pokud jsou během migrace na Azure Portal některá z těchto nastavení nakonfigurovaná, důrazně doporučujeme postupovat takto:
-
-  1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na webu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytváření aktualizačních kanálů můžete nakonfigurovat ostatní nastavení i další nastavení aktualizací Windows 10.
-
-   > [!NOTE]
-   > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale použijí. Pokud jste některá z nich migrovali a migrované zásady z Azure Portalu upravíte, tato nastavení se ze zásad odeberou.
-
-  2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na Azure Portal a přidání stejných nastavení do aktualizačního kanálu odstraňte tato nastavení na portálu Classic, aby se zabránilo možným konfliktům zásad. Pokud je například stejné nastavení nakonfigurované s odlišnými hodnotami, dojde ke konfliktu. Ten ale nejde snadno rozpoznat, protože nastavení nakonfigurované na portálu Classic neexistuje na webu Azure Portal.
+- Pokud používáte portál Azure classic, [migrace nastavení na webu Azure portal](#migrate-update-settings-to-the-azure-portal).  
 
 ## <a name="create-and-assign-update-rings"></a>Vytvoření a přiřazení aktualizačních kanálů
 
-1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Vyberte **Aktualizace softwaru** > **Aktualizační kanály Windows 10** > **Vytvořit**.
-3. Zadejte název a popis (volitelný) a potom zvolte **Konfigurovat**.
-4. V části **Nastavení** zadejte například tyto informace:  
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a potom vyberte **Microsoft Intune**.
+3. Vyberte **Aktualizace softwaru** > **Aktualizační kanály Windows 10** > **Vytvořit**.
+4. Zadejte název a popis (volitelný) a potom zvolte **Konfigurovat**.
+5. V **nastavení**, nakonfigurujte nastavení pro vaše obchodní potřeby. Informace o dostupných nastaveních najdete v tématu [Windows aktualizujte nastavení](windows-update-settings.md).  
+6. Po dokončení zvolte **OK**. V podokně **Vytvořit aktualizační kanál** vyberte **Vytvořit**. Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
+7. Pokud chcete přiřadit kanál, v seznamu aktualizačních kanálů, vyberte kanál a pak na \<název kanálu > kartě **přiřazení**.
+8. Použití **zahrnout** a **vyloučit** karty k definování, které seskupí kanál je přiřazeno a pak vyberte **Uložit** tím přiřazení dokončíte.
 
-   **Aktualizovat nastavení**  
-   - **Kanál pro údržbu**: Nastavte kanál, ze kterého má zařízení přijímat aktualizace Windows.
-   - **Aktualizace produktů Microsoftu**: Zvolte kontrolovat aktualizace aplikací z webu Microsoft Update.
-   - **Ovladače Windows**: Zvolte při aktualizacích vyloučit ovladače Windows Update.
-   - **Odložení aktualizace kvality (ve dnech)**: Zadejte počet dní, pro které budou aktualizace kvality odložené. Příjem těchto aktualizací kvality můžete odložit až o 30 dní od jejich vydání.
+## <a name="manage-your-windows-10-update-rings"></a>Spravovat vaše aktualizační kanály Windows 10
+Na portálu, můžete vybrat aktualizační kanál Windows 10 a otevřete její **přehled** podokně. V tomto podokně můžete zobrazit stav přiřazení aktualizační kanály a provést další akce ke správě kanál. 
+### <a name="to-view-an-updates-rings-overview-pane"></a>Chcete-li zobrazit podokno Přehled aktualizace aktualizační kanály: 
+1. Přihlaste se k portálu Azure.
+2. Přejděte do **Intune** > **aktualizace softwaru** > **aktualizační kanály Windows 10**.
+3. Vyberte aktualizační kanál, který chcete zobrazit nebo spravovat.  
 
-     Aktualizace pro zvýšení kvality jsou zpravidla opravy a vylepšení stávajících funkcí Windows a vydávají se druhé úterý v každém měsíci. Aktualizace pro zvýšení kvality přes Windows Update pro firmy dostávají jen tyto aktualizace (vydání „B“), ačkoli Microsoft může kdykoli vydat jiné aktualizace. Můžete určit, jestli a na jak dlouho chcete odložit příjem aktualizací pro zvýšení kvality po jejich zpřístupnění ve službě Windows Update. Další informace najdete v článku o [nasazení aktualizací pomocí služby Windows Update pro firmy](https://docs.microsoft.com/windows/deployment/update/waas-manage-updates-wufb).
+Kromě zobrazování stavu přiřazení, můžete vybrat z horní části podokna přehledu ke správě aktualizační kanál následující akce:  
+- [Odstranění](#delete)  
+- [Pozastavení](#pause)  
+- [Obnovení](#resume)  
+- [Rozšíření](#extend)  
+- [Odinstalace](#uninstall)  
 
-   - **Odložení aktualizace funkcí (ve dnech)**: Zadejte počet dní, pro které budou aktualizace funkcí odložené. Příjem těchto aktualizací funkcí můžete odložit až o 180 dní od jejich vydání.
+![Dostupné akce](./media/windows-update-for-business-configure/overview-actions.png)
 
-     Aktualizace funkcí jsou zpravidla nové funkce pro Windows. Po konfiguraci nastavení **Kanál pro údržbu** můžete určit, jestli a na jak dlouho chcete odložit příjem aktualizací funkcí po jejich zpřístupnění ve službě Windows Update.
+### <a name="delete"></a>Odstranění  
+Vyberte **odstranit** zastavit vynucení nastavení vybrané aktualizační kanál Windows 10. Odstranění okruhu odebere jeho konfigurace ze služby Intune, tak, aby Intune již nadále platí a vynucuje tato nastavení.  
 
-     Příklad: **Pokud kanál pro údržbu je nastavený na půlroční kanál (cílený) a odložení je 30 dní**: Řekněme, že aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako půlroční kanál (cílený) v lednu. Zařízení tuto aktualizaci přijme až v únoru – o 30 dní později.
+Odstranění okruhu ze služby Intune nezmění nastavení na zařízení, která byly přiřazeny aktualizační kanál.  Místo toho zařízení zachová aktuální nastavení. Toto je vzhledem k tomu, že zařízení neudržují Historický záznam co nastavení bylo dříve použito, a vzhledem k tomu, že zařízení může získat nastavení z další aktualizační kanály, které zůstávají aktivní.  
 
-     **Pokud kanál pro údržbu je nastavený na půlroční kanál a odložení je 30 dní**: Řekněme, že aktualizace funkcí X je nejdříve veřejně dostupná na webu Windows Update jako půlroční kanál (cílený) v lednu. O čtyři měsíce později, v dubnu, je Aktualizace funkcí X vydána do Půlročního kanálu. Zařízení přijme aktualizaci funkcí 30 dní po tomto vydání do Půlročního kanálu a bude se aktualizovat v květnu.  
+#### <a name="to-delete-a-ring"></a>Chcete-li odstranit okruhu  
+1. Při zobrazení na stránce s přehledem pro aktualizační kanál, vyberte **odstranit**.  
+2. Vyberte **OK**.  
 
-   **Nastavení činnosti koncového uživatele**
-   
-   - **Chování automatické aktualizace**: Zvolte, jak automatické aktualizace jsou nainstalovány, pokud má zařízení restartovat. Podrobnosti najdete v popisu nastavení [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#update-allowautoupdate).
+### <a name="pause"></a>Pozastavení  
+Vyberte **pozastavit** zabránit přiřazených zařízeních zamčený příjem aktualizací funkcí nebo aktualizací kvality po dobu až 35 dní od okamžiku pozastavení kanál. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit. Pokud budete pokračovat pozastaveného aktualizační kanál a potom pozastavte tento kanál znovu, obnoví období pozastavení na 35 dní.  
 
-     Nastavení *obnovit výchozí* obnoví původní nastavení automatických aktualizací na počítačů s Windows 10, které běží *aktualizace z října 2018* nebo novější.  
+ #### <a name="to-pause-a-ring"></a>Chcete-li pozastavit okruhu  
+1. Při zobrazení na stránce s přehledem pro aktualizační kanál, vyberte **pozastavení**.  
+2. Vyberte buď **funkce** nebo **kvality** pozastavení daný typ aktualizace, a pak vyberte **OK**.  
+3. Po pozastavení jeden typ aktualizace, můžete vybrat Pause pozastavit daný typ aktualizace.  
 
-     - **Frekvence automatického chování**: Pokud vyberete **automaticky nainstalovat a restartovat v naplánovaném čase** chování aktualizací, toto nastavení se zobrazí. Pomocí něj můžete naplánovat, kdy se aktualizace nainstalují (můžete určit týden, den a čas).
+Pokud typ aktualizace je pozastavený, zobrazí podokno s přehledem pro tento kanál, kolik dní zbývá před tuto aktualizaci zadejte obnoví.
 
-   - **Kontroly při restartu**: Ve výchozím nastavení zapnuté. Po restartu zařízení se provádí některé kontroly, například zjišťování aktivních uživatelů, stavu baterie, spuštěných her a další. Pokud tyto kontroly chcete přeskočit, zvolte **Přeskočit**.
+> [!IMPORTANT]  
+> Po vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášením ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci. Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
 
-   - **Brání uživateli ve pozastavení aktualizací Windows**: Ve výchozím nastavení povolený. Pomocí tohoto nastavení můžete blokovat nebo povolit uživatelům k pozastavení instalace aktualizace z *nastavení* jejich počítačů. 
-      
-   - **Režim stahování pro optimalizaci doručení**: Optimalizace doručení je už nakonfigurovaný jako součást aktualizační kanál Windows 10 v rámci aktualizace softwaru. Optimalizace doručení je nyní nastaveno prostřednictvím konfigurace zařízení. Ale předchozí konfigurace zůstanou dostupné i v konzole. Tyto předchozích konfigurací můžete odebrat úpravou jejich *Nenakonfigurováno*, ale jinak nedaly změnit. Aby nedocházelo ke konfliktům mezi původní a nové zásady, najdete v článku [přesouvat existující aktualizační okruhy optimalizace doručení](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization) a poté přesuňte nastavení do profilu optimalizace doručení. 
+### <a name="resume"></a>Obnovit  
+Zatímco aktualizační kanál je pozastavený, můžete vybrat **Resume** obnovit aktualizace funkcí a kvality pro tento kanál aktivní operace. Po probuzení aktualizační kanál, je možné pozastavit tento kanál znovu.  
 
-5. Po dokončení zvolte **OK**. V podokně **Vytvořit aktualizační kanál** vyberte **Vytvořit**.
+#### <a name="to-resume-a-ring"></a>Obnovit jako kruh  
+1. Při zobrazení na stránce s přehledem pro pozastavené aktualizační kanál, vyberte **Resume**.  
+2. Vyberte z dostupných možností obnovit buď **funkce** nebo **kvality** aktualizace a pak vyberte **OK**.  
+3. Po obnovení jeden typ aktualizace, můžete vybrat pokračovat obnovit jiný typ aktualizace.  
 
-Nový aktualizační kanál se zobrazí v seznamu aktualizačních kanálů.
+### <a name="extend"></a>Rozšíření  
+Zatímco aktualizační kanál je pozastavený, můžete vybrat **rozšířit** obnovíte doby pozastavit aktualizace funkcí a kvality pro tento aktualizační kanál po dobu 35 dní.  
 
-1. Pokud chcete přiřadit kanál, vyberte kanál ze seznamu aktualizačních kanálů a pak na kartě <*název kanálu*> vyberte **Přiřazení**.
-2. Na další kartě zvolte **Vybrat skupiny, které se zahrnou** a pak vyberte skupiny, kterým chcete kanál přiřadit.
-3. Až budete hotovi, volbou příkazu **Vybrat** přiřazení dokončete.
+#### <a name="to-extend-the-pause-period-for-a-ring"></a>Prodloužení doby pozastavit o okruhu  
+1. Při zobrazení na stránce s přehledem pro pozastavené aktualizační kanál, vyberte **rozšířit**. 
+2. Vyberte z dostupných možností obnovit buď **funkce** nebo **kvality** aktualizace a pak vyberte **OK**.  
+3. Po prodlužuje se pozastavení pro jeden typ aktualizace, můžete vybrat rozšíření znovu pro daný typ aktualizace rozšíření.  
 
-## <a name="update-compliance-reporting"></a>Generování sestav dodržování předpisů pro aktualizace
-Dodržování předpisů pro aktualizace můžete sledovat v Intune nebo pomocí bezplatného řešení, které se jmenuje Update Compliance.
+### <a name="uninstall"></a>Odinstalace  
+Správce Intune můžete použít **odinstalovat** odinstalace (vrácení zpět) na nejnovější verzi *funkce* update nebo si prohlédnout nejnovější *kvality* aktualizace pro aktivní nebo pozastaveného aktualizační kanál. Po odinstalování serveru jeden typ, pak můžete odinstalovat jiného typu. Intune nepodporuje ani spravovat možnost odinstalovat aktualizace uživatelů.  
 
-### <a name="review-update-compliance-in-intune"></a>Kontrola dodržování předpisů pro aktualizace v Intune 
-<!-- 1352223 --> Zkontrolujte sestavu zásad, abyste viděli stav nasazení pro nakonfigurované aktualizační kanály Windows 10.
+Odinstalace proběhla úspěšně:  
+- Zařízení musí používat Windows 10. dubna 2018 update (verze 1803) nebo novější.  
 
-1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Vyberte **Aktualizace softwaru** > **Přehled**. Uvidíte obecné informace o stavu všech aktualizačních kanálů, které jste přiřadili.
-3. Otevřete jednu z těchto sestav:
+Zařízení musí mít nainstalované nejnovější aktualizace. Protože jsou kumulativní aktualizace, zařízení, která nainstalovat nejnovější aktualizaci budou mít nejnovější aktualizace funkcí a kvality. Příkladem může být při použití této možnosti je vrátit zpět poslední aktualizace by měl zjistit nejnovější vydání na počítačích s Windows 10.  
 
-   **Pro všechny aktualizační kanály nasazení**:  
-   1. V podokně **Aktualizace softwaru** > **Aktualizační kanály Windows 10**
-   2. V **sekci Monitorování** zvolte **Stav nasazení podle kruhu aktualizace**.
+Použijete-li odinstalovat, zvažte následující:  
+- Odinstalace aktualizace funkcí nebo kvality je dostupná jenom pro kanál pro údržbu, ve kterém se dané zařízení nachází.  
 
-   **Pro konkrétní aktualizační kanály nasazení**:  
-   1. V podokně **Aktualizace softwaru** > **Aktualizační kanály Windows 10** zvolte aktualizační kanál nasazení, který chcete zkontrolovat.
-   2. Pokud chcete zobrazit podrobnější informace o aktualizačním kanálu, v sekci **Monitorování** zvolte z těchto sestav:
-      - **Stav zařízení**
-      - **Stav uživatele**
+- Pomocí funkce odinstalovat nebo aktualizace kvality se aktivuje zásadu, která obnovit předchozí aktualizace na počítačích s Windows 10.  
 
-### <a name="review-update-compliance-using-oms"></a>Kontrola dodržování předpisů pro aktualizace pomocí OMS
-Zavádění aktualizací Windows 10 můžete sledovat pomocí bezplatného řešení, které se jmenuje Update Compliance. Podrobnosti najdete v článku o [monitorování aktualizací Windows pomocí Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor). Když toto řešení použijete, můžete nasadit komerční ID do libovolného z vašich zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete generovat sestavy o dodržování předpisů pro aktualizace.
+- Na zařízení s Windows 10 po aktualizaci kvality úspěšně vrácena zpět, koncoví uživatelé nadále zobrazovat aktualizaci uvedenou v **nastavení Windows** > **aktualizuje**  >  **Aktualizace historie**.  
 
-V Intune můžete ke konfiguraci komerčního ID použít nastavení OMA-URI vlastní zásady. Podrobnosti najdete v článku [Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune](custom-settings-windows-10.md).   
+- Pro funkci aktualizace konkrétně, čas můžete odinstalovat aktualizace funkcí je omezena z 2 až 60 dní, podle konfigurace v rámci nastavení aktualizace update okruhy **nastavit odinstalace aktualizací funkcí období (2 – 60 dní)**. Aktualizace funkcí, který je nainstalovaný na zařízení aktualizací funkcí po instalaci pro delší než nakonfigurované období odinstalace nelze vrátit zpět.  
 
-Cesta OMA-URI (s rozlišováním velkých a malých písmen) pro konfiguraci komerčního ID je: ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
+  Představte si třeba aktualizační kanál s funkcí aktualizace odinstalovat 20 dnů. Za 25 dnů rozhodnete vrátit nejnovější aktualizace funkcí a použijte možnost odinstalovat.  Zařízení s nainstalovanou aktualizací funkcí před více než 20 dny ji nelze odinstalovat, protože se odebraly nezbytné bity jako součást jejich údržbu. Zařízení, která instaluje aktualizace funkcí do 19 dny však můžete aktualizaci odinstalovat, pokud se úspěšně vrácení se změnami do zobrazí příkaz odinstalovat před překročení doby 20 dnů odinstalovat.  
 
-V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeba následující hodnoty:
+Další informace o vytváření zásad Windows Update najdete v tématu [Update CSP](https://docs.microsoft.com/windows/client-management/mdm/update-csp) v dokumentaci ke klientu správy Windows.  
 
-- **Název nastavení**: Komerční ID pro analýzu Windows
-- **Popis nastavení**: Konfigurace řešení pro komerční ID pro analýzu Windows
-- **OMA-URI** (s rozlišováním velkých a malých písmen): ./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID
-- **Datový typ**: Řetězec
-- **Hodnota**: <*Použijte identifikátor GUID zobrazený na kartě Telemetrie Windows v pracovním prostoru OMS*>
+#### <a name="to-uninstall-the-latest-windows-10-update"></a>Odinstalace nejnovější aktualizace Windows 10  
+1. Při zobrazení na stránce s přehledem pro pozastavené aktualizační kanál, vyberte **odinstalovat**.  
+2. Vyberte z dostupných možností odinstalace buď **funkce** nebo **kvality** aktualizace a pak vyberte **OK**.  
+3. Po aktivaci odinstalace pro jeden typ aktualizace, můžete vybrat odinstalovat odinstalovat zbývající typ aktualizace.  
 
-![Nastavení OMA-URI – Upravit řádek](./media/commID-edit.png)
+## <a name="migrate-update-settings-to-the-azure-portal"></a>Migrace nastavení aktualizací na webu Azure portal  
+Portál Azure Classic má také omezený počet dalších nastavení aktualizací Windows 10 v profilu konfigurace zařízení. Pokud máte některá z těchto nastavení nakonfigurovaná při migraci na Azure Portal, důrazně doporučujeme, abyste udělali toto:  
 
-> [!NOTE]
-> Podrobnosti o MS DM Serveru najdete v tématu [Poskytovatel konfiguračních služeb DMClient](https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).
+1. Na portále Azure Portal vytvořte aktualizační kanály Windows 10 s nastaveními, která potřebujete. Nastavení **Povolit funkce v předběžné verzi** není na webu Azure Portal podporované, protože už pro nejnovější buildy Windows 10 neplatí. Při vytvoření aktualizačních kanálů můžete nakonfigurovat ostatní tři nastavení i další nastavení aktualizace Windows 10.  
 
-## <a name="pause-updates"></a>Pozastavení aktualizací
-Je možné pozastavit příjem aktualizací funkcí nebo aktualizací kvality zařízením až na 35 dní od okamžiku pozastavení aktualizací. Po uplynutí maximálního počtu dní funkce pozastavení automaticky vyprší a zařízení zkontroluje dostupné aktualizace ve Windows Update. Po této kontrole můžete aktualizace znovu pozastavit.
+   > [!NOTE]  
+   > Nastavení aktualizací Windows 10 vytvořená na klasickém portálu se na Azure Portalu po migraci nezobrazí. Tato nastavení se ale použijí. Pokud jste některá z nich migrovali a migrované zásady z Azure Portalu upravíte, tato nastavení se ze zásad odeberou.  
 
-1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Vyberte **Aktualizace softwaru** > **Aktualizační kanály Windows 10**.
-3. V seznamu aktualizačních kanálů vyberte kanál, který chcete pozastavit, a potom zvolte **...**  > **Pozastavit kvalitu** > nebo **Pozastavit funkci** v závislosti na typu aktualizací, které se mají pozastavit.
+2. Odstraňte nastavení aktualizací na klasickém portálu. Po migraci na Azure Portal a přidání stejných nastavení do aktualizačního kanálu musíte nastavení na portálu Classic odstranit, aby se zabránilo možným konfliktům zásad. Pokud je například stejné nastavení nakonfigurované s odlišnými hodnotami, dojde ke konfliktu. Není k dispozici snadný způsob, jak poznat, protože nastavení nakonfigurované na klasickém portálu se nezobrazí na portálu Azure portal.  
 
-> [!IMPORTANT]
-> Když vydáte příkaz k pozastavení, zařízení ho obdrží při dalším přihlášení ke službě. Je možné, že před přihlášením ke službě nainstalují plánovanou aktualizaci.
-> Kromě toho platí, že pokud je cílové zařízení při vydání příkazu k pozastavení vypnuté, může po zapnutí stáhnout a nainstalovat plánované aktualizace před tím, než se přihlásí k Intune.
+## <a name="next-steps"></a>Další postup
+[Windows aktualizujte nastavení podporovaných službou Intune](windows-update-settings.md)  
 
-## <a name="uninstall-the-latest-from-windows-10-software-updates"></a>Odinstalace nejnovější aktualizace softwaru Windows 10 
-Pokud na počítačích s Windows 10 najdete problém způsobující chybu, můžete se rozhodnout odinstalovat (vrátit zpět) nejnovější aktualizaci funkcí nebo nejnovější aktualizaci pro zvýšení kvality. Odinstalace aktualizace funkcí nebo kvality je dostupná jenom pro kanál pro údržbu, ve kterém se dané zařízení nachází. Při odinstalaci se aktivují zásady, které na počítačích s Windows 10 obnoví předchozí aktualizaci. Konkrétně u aktualizací funkcí je možné omezit dobu 2 až 60 dnů, po kterou lze provést odinstalaci nejnovější verze. Možnosti odinstalace aktualizací softwaru nastavíte takto:
+[Sestavy dodržování předpisů Intune pro aktualizace](windows-update-compliance-reports.md)
 
-1. V Intune vyberte **Aktualizace softwaru**.
-2. Vyberte **Aktualizační kanály Windows 10**, vyberte existující aktualizační kanál a potom **Odinstalovat**.
-
-> [!NOTE]
-> Poté, co se aktualizace kvality úspěšně vrátí zpět, na počítačích s Windows 10 ji koncoví uživatelé uvidí i nadále uvedenou v části **Nastavení Windows** > **Aktualizace** > **Historie aktualizací**.
-
-## <a name="windows-holographic-for-business-support"></a>Podpora Windows Holographic for Business
-
-Windows Holographic for Business podporuje následující nastavení:
-
-- **Chování automatické aktualizace**
-- **Aktualizace produktů Microsoftu**
-- **Kanál pro údržbu**: Podporuje **pololetní kanál** a **pololetní kanál (cílený)** možnosti

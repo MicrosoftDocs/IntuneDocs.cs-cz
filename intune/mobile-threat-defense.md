@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,29 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8640cf015d03c9d40d7eacbe1a4103d30db63477
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cfe74086393ab3583c6238e6f252406665a3d17f
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840530"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086025"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
-
-
-Konektory Intune Mobile Threat Defense vám umožňují využívat zvoleného dodavatele Mobile Threat Defense jako zdroje informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Správci IT tak mohou přidat podnikovým prostředkům, jako je například Exchange a SharePoint, vrstvu ochrany z ohrožených mobilních zařízení.
+Intune můžete integrovat data od dodavatele Mobile Threat Defense jako zdroje informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Tyto informace můžete použít k ochraně podnikovým prostředkům jako Exchange a SharePoint, protože blokují přístup z ohrožených mobilních zařízení.  
 
 ## <a name="what-problem-does-this-solve"></a>Jaký problém se tím vyřeší?
+Integrování informací od dodavatele Mobile Threat Defense můžete chránit prostředky společnosti před hrozbami, které ovlivňují mobilní platformy.  
 
-Společnosti potřebují chránit citlivá data před vznikajícími hrozbami, mezi které patří fyzické hrozby, hrozby založené na aplikacích nebo síti i ohrožení zabezpečení operačních systémů.
-
-V minulosti byly společnosti aktivní při ochraně počítačů před útoky, ale mobilní zařízení zůstávají nemonitorovaná a nechráněná. Mobilní platformy mají integrovanou ochranu, jako je izolace aplikací nebo obchody s aplikacemi pro prověřené spotřebitele, ale přesto jsou tyto platformy nadále zranitelné sofistikovanými útoky. V dnešní době je více zaměstnanců, kteří k práci využívají nějaká zařízení a potřebují přístup k citlivým údajům. Zařízení je nutné chránit před stále důmyslnějšími útoky.
+Společnosti obvykle jsou aktivní při ochraně počítačů před chybami zabezpečení a útokům, ale mobilní zařízení často zůstávají nemonitorovaná a nechráněná. Pokud mobilní platformy mají integrovanou ochranu, jako je například izolace aplikací nebo obchody s aplikacemi pro prověřené spotřebitele, tyto platformy nadále zranitelné vůči sofistikovaným útokům. Jako další zaměstnanci použít zařízení pro pracovní a přístup k citlivým informacím, informací od dodavatele Mobile Threat Defense můžete chránit před stále důmyslnějšími útoky zařízení a prostředky.  
 
 ## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Jak fungují konektory Intune Mobile Threat Defense?
 
-Konektor chrání firemní prostředky tím, že mezi Intune a vaším dodavatelem zvoleného konektoru Mobile Threat Defense vytvoří komunikační kanál. Partneři Intune Mobile Threat Defense nabízejí intuitivní a snadno nasaditelné aplikace pro mobilní zařízení, které aktivně kontrolují a analyzují informace o hrozbách, aby je sdílely s Intune pro účely nahlášení nebo vynucení. 
+Intune používá k vytvoření kanálu komunikace mezi Intune a zvoleného dodavatele Mobile Threat Defense konektoru Mobile Threat Defense. Partneři Intune Mobile Threat Defense nabízejí intuitivní a snadno nasaditelné aplikace pro mobilní zařízení. Tyto aplikace aktivně kontrolují a analyzují informace o hrozbách do sdílely s Intune. Intune může využívat data pro účely nahlášení nebo vynucení.  
 
-Pokud třeba připojená aplikace Mobile Threat Defense nahlásí dodavateli Mobile Threat Defense, že telefon ve vaší síti je právě připojený k síti, která se dá snadno napadnout útokem třetí osobou (man-in-the-middle), tyto informace se nasdílí a zařadí do příslušné úrovně rizika (nízké, střední nebo vysoké), která se dá pak porovnat s vaší nakonfigurovanou úrovní rizika v Intune, aby se zjistilo, jestli se má při ohrožení zařízení odvolat přístup k určitým zvoleným zdrojům.
+Příklad: Připojená aplikace Mobile Threat Defense sestavy dodavateli Mobile Threat Defense, že telefon ve vaší síti je připojen k síti, která je zranitelný vůči Man útocích střední. Tyto informace jsou k příslušné riziko úrovně nízké, rozdělené do kategorií, střední nebo vysoká. Tato úroveň rizika se následně porovnává s příspěvky úrovně rizika, nastavit v Intune. Založené na toto porovnání, přístup k určitým prostředkům podle vašeho výběru můžete odvolat, když dojde k ohrožení zařízení.
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Která data Intune shromažďuje z důvodu ochrany před mobilními hrozbami?
 

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb79dcb2ff858d283fc5a843dca1b3d5acb3ec9c
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845631"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56086144"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -35,9 +35,9 @@ Jedná se o běžné problémy, které správce IT může docházet při použit
 
 | Problém | Popis | Řešení |
 | -- | -- | -- |
-| Zásady se neuplatňují na Skype pro firmy. | Zásady ochrany aplikací bez registrace zařízení, vytvořené na portálu Azure Portal, se neuplatňují na aplikaci Skype pro firmy na zařízeních s iOSem a Androidem. | Pro Skype pro firmy se musí nastavit moderní ověřování.  Pokud chcete pro Skype nastavit moderní ověřování, řiďte se pokyny v tématu [Povolení tenanta pro moderní ověřování](http://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). |
+| Zásady se neuplatňují na Skype pro firmy. | Zásady ochrany aplikací bez registrace zařízení, vytvořené na portálu Azure Portal, se neuplatňují na aplikaci Skype pro firmy na zařízeních s iOSem a Androidem. | Pro Skype pro firmy se musí nastavit moderní ověřování.  Pokud chcete pro Skype nastavit moderní ověřování, řiďte se pokyny v tématu [Povolení tenanta pro moderní ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). |
 | Zásady pro aplikace Office se neuplatňují. | Zásady ochrany aplikací se neuplatňují na žádné [podporované aplikace Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) u žádného uživatele. | Zkontrolujte, jestli má uživatel licenci pro Intune a jestli na aplikace Office cílí nasazené zásady ochrany aplikací. Než se nově nasazené zásady ochrany aplikací uplatní, může to trvat až 8 hodin. |
-| Správce nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | Uživatel s oprávněním správce IT nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | K portálu Azure Portal mají přístup tyto role uživatelů: <ul><li>Globální správce, kterého můžete nastavit na [Portálu Office](http://portal.office.com/)</li><li>Vlastník, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li><li>Přispěvatel, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li></ul> Odkazovat na [řízení správy na základě rolí (RBAC) v Microsoft Intune](role-based-access-control.md) nápovědu k nastavení těchto rolí.|
+| Správce nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | Uživatel s oprávněním správce IT nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | K portálu Azure Portal mají přístup tyto role uživatelů: <ul><li>Globální správce, kterého můžete nastavit na [Portálu Office](https://portal.office.com/)</li><li>Vlastník, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li><li>Přispěvatel, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li></ul> Odkazovat na [řízení správy na základě rolí (RBAC) v Microsoft Intune](role-based-access-control.md) nápovědu k nastavení těchto rolí.|
 |V sestavách zásad ochrany aplikací chybí uživatelské účty. | Sestavy z konzoly správce nezobrazují uživatelské účty, na které se nedávno nasadily zásady ochrany aplikací. | Než se uživatelé nově zacílení pomocí zásad ochrany aplikací zobrazí v sestavách jako cíloví uživatelé, může uplynout až 24 hodin. |
 | Změny zásad se neuplatňují. | Než se změny a aktualizace zásad ochrany aplikací uplatní, může uplynout až 8 hodin. | Koncový uživatel se může z aplikace odhlásit a znovu přihlásit, aby vynutil synchronizaci se službou. |
 | Zásady ochrany aplikace se neuplatňují na program DEP. | Zásady ochrany aplikací se nevztahují na zařízení v programu Apple DEP. | Zkontrolujte, jestli v programu Apple DEP (Device Enrollment Program) používáte přidružení uživatele. Spřažení uživatelů je požadováno u všech aplikací vyžadujících ověření uživatele pod programem DEP. <br><br>Odkazovat na [Automatická registrace zařízení s Iosem pomocí programu registrace zařízení společnosti Apple](device-enrollment-program-enroll-ios.md) Další informace o registrace DEP pro iOS.|

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/31/2017
+ms.date: 02/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cf9f004a73c88f763cbf48694b8c72de0a12fa2
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 0fa2efe5ca8a4068bad957d96220272abf7664d6
+ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846413"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56085974"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -68,13 +68,13 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 3. Zprostředkující aplikace se nainstaluje na zařízení.
 
-4. Zprostředkující aplikace zahájí proces registrace v Azure AD, který v této službě vytvoří záznam zařízení. Tento proces se liší od procesu registrace ke správě mobilních zařízení. Záznam je ale nutný k tomu, aby bylo možné vynucovat na zařízení zásady podmíněného přístupu.
+4. Zprostředkující aplikace zahájí proces registrace Azure AD, která vytvoří záznam zařízení ve službě Azure AD. To není stejné jako proces zápisu mobilního zařízení management (MDM), ale tento záznam je nezbytné, aby zásady podmíněného přístupu je možné vynucovat na zařízení.
 
-5. Zprostředkující aplikace ověří identitu aplikace. Zde se používá vrstva zabezpečení, která umožňuje zprostředkující aplikaci ověřit, zda má aplikace oprávnění k použití uživatelem.
+5. Zprostředkující aplikace ověří identitu aplikace. Takže zprostředkující aplikaci ověřit, zda má aplikace oprávnění pro použití tímto uživatelem je vrstva zabezpečení.
 
 6. Zprostředkující aplikace odešle v rámci ověřování uživatele ID klienta aplikace do Azure AD, aby zkontrolovala, že je v seznamu schválených zásad.
 
-7. Azure AD umožní ověření uživatele a použití aplikace na základě seznamu schválených zásad. Pokud aplikace v tomto seznamu není, Azure AD k ní uživateli zakáže přístup.
+7. Azure AD umožní ověření uživatele a použití aplikace na základě seznamu schválených zásad. Pokud aplikace v seznamu není, Azure AD uživateli zakáže přístup k aplikaci.
 
 8. Aplikace Outlook komunikuje s cloudovou službou Outlooku a iniciuje tak komunikaci s Exchangem Online.
 

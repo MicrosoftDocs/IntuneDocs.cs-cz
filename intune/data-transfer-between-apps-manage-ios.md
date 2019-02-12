@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eabe1bdba35c40b07c6c8e17e6a58d17ed14a966
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f87b40a32c17ecbdfc3fc9c5bf6937d8793b4e05
+ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843030"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986837"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -50,11 +50,15 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 2.  Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce pomocí následujících obecných kroků. Toto prostředí je také popsaná v *Příklad 1*.
 
-3.  Nasazení aplikace s následujícím nastavením konfigurace aplikací:
+3.  Nasazení aplikace s následujícím nastavením konfigurace aplikací pro spravovaná zařízení:
 
       **klíč** = IntuneMAMUPN, **hodnota** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
+      
+       > [!NOTE]
+       > Zásady Konfigurace aplikací v Intune, musí být pro typ registrace "Zařízení spravovaná prostřednictvím protokolu".
+       > Addicionally, aplikace musí být, že buď nainstalovat z portálu společnosti Intune, pokud jsou nastavené jako dostupné nebo vložení vložil podle potřeby do zařízení. 
 
 4.  Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 

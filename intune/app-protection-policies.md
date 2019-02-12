@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 084b49e4d1b285aca431a34e05286b8d32ce3f71
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: e022dbe748ebe9d77ebcd2890a6d9ef77503ebfc
+ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843472"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986888"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -52,8 +52,8 @@ Informace o přidání obchodních aplikací organizace do Microsoft Intune kvů
 
 6. V okně **Přidat zásadu** vyberte **Konfigurovat požadovaná nastavení**. Otevře se **Nastavení**.
 
-   Nastavení zásad jsou rozdělené do tří kategorií:
-   - **Přemístění dat** – tato skupina obsahuje kontrolní mechanismy ochrany před únikem informací, například omezení operací Vyjmout, Kopírovat, Vložit a Uložit jako. Tato nastavení určují, jak uživatelé pracují s daty v aplikacích.
+   Existují tři kategorie nastavení zásad:
+   - **Ochrana dat** – tato skupina obsahuje ztráty ochrany před únikem informací (DLP) ovládacích prvcích dat, jako je vyjmutí, kopírování a vložení a uložení – jako omezení. Tato nastavení určují, jak uživatelé pracují s daty v aplikacích.
    - **Požadavky na přístup** – tato skupina obsahuje možnosti kódu PIN pro jednotlivé aplikace, které určují, jak koncový uživatel získá přístup k aplikacím v pracovním kontextu.  
    - **Podmíněné spouštění** – tato skupina obsahuje nastavení, jako je minimální verze operačního systému, detekce zařízení s jailbreakem a rootem a období odkladu pro offline režim.
 
