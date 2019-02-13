@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a730dbb702286f71534623b2c08da6b388c3e499
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 482ae185f221b3ff77534c1cfd8cccd8278965b7
+ms.sourcegitcommit: 84ab7a49aad853591a4ae362382f293e29b360df
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55835839"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56156164"
 ---
 # <a name="set-up-intune-enrollment-of-android-fully-managed-devices-preview"></a>Nastavení Intune registrace androidu plně spravovaná zařízení (Preview)
 
@@ -35,7 +35,7 @@ Intune vám pomůže nasadit aplikace a nastavení na zařízení s Androidem en
 
 ## <a name="technical-requirements"></a>Technické požadavky
 
-Musíte mít Intune samostatný tenant plně spravovat Android spravovaná zařízení. Plně spravovaná devcie správy není k dispozici v režimu hybridní (SCCM připojení) nebo v konzole pro správu starší verze Silverlight.
+Musíte mít Intune samostatný tenant plně spravovat Android spravovaná zařízení. Správa plně spravovaná zařízení není k dispozici v hybridní režim (SCCM připojení) nebo v konzole pro správu starší verze Silverlight.
 
 Zařízení musí splňovat tyto požadavky jej lze spravovat jako plně spravovaná zařízení s Androidem:
 
