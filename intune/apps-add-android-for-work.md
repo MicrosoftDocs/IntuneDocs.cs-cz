@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b68206fd2170dd2bc156d844ae83caafaa08180
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ba3e4ae88423183d5d0317dedb59715d2adb4e11
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836570"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240023"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání aplikací pro spravovaný obchod Google Play do podnikových zařízení s Androidem v Intune
 
@@ -41,8 +41,8 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 >[!NOTE]
 >Při práci s Microsoft Intune doporučujeme používat prohlížeč Microsoft Edge nebo Google Chrome.
 
-## <a name="managed-google-play-app-type"></a>Typ aplikace Google Play spravované 
-**Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravovaný obchod Google Play aplikace](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune teď můžete procházet, Hledat, schválit, synchronizaci a přiřazení aplikací v Intune schválené spravovaného obchodu Google Play.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte. 
+## <a name="managed-google-play-app-type"></a>Typ aplikace Google Play spravované
+**Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravovaný obchod Google Play aplikace](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune teď můžete procházet, Hledat, schválit, synchronizaci a přiřazení aplikací v Intune schválené spravovaného obchodu Google Play.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte.
 
 > [!NOTE]
 > Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune, přečtěte si téma [synchronizuje aplikace s spravovaný obchod Google Play s Intune](apps-add-android-for-work.md#synchronize-a-managed-google-play-app-with-intune-alternative)
@@ -55,11 +55,12 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 3. V **Intune** vyberte **klientské aplikace** > **aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V **typ aplikace** rozevíracím seznamu vyberte **spravovaný obchod Google Play**.
-7. Vyberte **spravovaný obchod Google Play – schválení aplikace** k vyhledávání pro schválené aplikace spravovaný obchod Google Play.
-8. Klikněte na každou aplikaci, kterou chcete zahrnout. Potom c
-9. Klikněte na tlačítko **schválit** schválení aplikace spravovaný obchod Google Play a klepněte na tlačítko **schválit** přijmout oprávnění aplikace. 
-10. Klikněte na tlačítko **OK** zahrnout aplikace.
-11. Klikněte na tlačítko **přidat** na **aplikací** podokno synchronizovat s front-end služby spravovaný obchod Google Play.
+7. Vyberte **spravovaný obchod Google Play – schválení** otevřete katalogu spravované Google Play.
+8. Slouží k vyhledání aplikace, které chcete zahrnout do vyhledávacího pole.
+9. Klikněte na tlačítko **schválit** schvalovat aplikace spravovaného obchodu Google Play a klikněte na tlačítko **schválit** přijmout oprávnění aplikace.
+10. Vyberte **zachovat schválené, pokud aplikace vyžaduje nová oprávnění** v okně Nastavení schválení a pak klikněte na tlačítko **Uložit**. Pokud tuto možnost nevyberete, musíte ručně schválit všechny nová oprávnění, pokud vývojář aplikace publikuje aktualizace.  To způsobí instalacích a aktualizacích aplikace k zastavení nedojde, dokud oprávnění neschválí. Z tohoto důvodu doporučujeme vybrat možnost, aby automaticky schvaloval nová oprávnění. 
+11. Klikněte na tlačítko **OK** zahrnout aplikace, které jste schválili.
+12. Klikněte na tlačítko **synchronizace** na **aplikací** podokně na synchronizaci se službou spravovaný obchod Google Play.
 
 ## <a name="synchronize-a-managed-google-play-app-with-intune-alternative"></a>Synchronizace aplikace spravovaného obchodu Google Play s Intune (alternativní)
 Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune, nikoli přidáním přímo pomocí Intune, postupujte následovně.
@@ -75,8 +76,8 @@ Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune,
     Na tomto příkladu jsme zvolili Microsoft Excel.
 
     ![Tlačítko Schválit ve spravovaném obchodu Google Play](media/approve.png)
-    
-   Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací. 
+
+   Otevře se okno s žádostí, abyste této aplikaci udělili oprávnění k provádění různých operací.
 
 4. Pokud chcete přijmout oprávnění aplikace a pokračovat, vyberte **Schválit**.
 
@@ -86,7 +87,7 @@ Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune,
 
     ![Možnosti zpracovávání nových žádostí oprávnění aplikace](media/approve-app-settings.png)
 
-    Aplikace se schválí a zobrazí v konzole pro správu. Dále můžete [synchronizovat aplikaci v pracovním profilu Androidu s Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune). 
+    Aplikace se schválí a zobrazí v konzole pro správu. Dále můžete [synchronizovat aplikaci v pracovním profilu Androidu s Intune](apps-add-android-for-work.md#sync-a-managed-google-play-app-with-intune).
 
 ### <a name="sync-a-managed-google-play-app-with-intune"></a>Synchronizace aplikace ze spravovaného obchodu Google Play s Intune
 
@@ -121,7 +122,7 @@ Pravidelně navštěvujte spravovanou konzolu Google Play a kontrolujte nová op
 3. Vyberte kartu **Aktualizace** a zkontrolujte, jestli některé aplikace nevyžadují aktualizaci.  
     Všechny zde uvedené aplikace vyžadují nová oprávnění a nepřiřadí se, dokud nebudou použita.
 
-Případně ale můžete obchod Google Play nastavit tak, aby automaticky schvaloval nová oprávnění pro každou z aplikací. 
+Případně ale můžete obchod Google Play nastavit tak, aby automaticky schvaloval nová oprávnění pro každou z aplikací.
 
 ## <a name="working-with-a-line-of-business-app-from-the-managed-google-play-store"></a>Používání obchodní aplikace ze spravovaného obchodu Google Play
 
@@ -139,10 +140,9 @@ Případně ale můžete obchod Google Play nastavit tak, aby automaticky schval
 5. Ověřte si, že se v uzlu **Aplikace** tohoto obchodu zobrazuje aplikace, kterou jste publikovali.  
     Synchronizace s Intune bude automaticky schválená.
 
-## <a name="delete-managed-google-play-apps"></a>Odstranění aplikace spravovaného obchodu Google Play 
+## <a name="delete-managed-google-play-apps"></a>Odstranění aplikace spravovaného obchodu Google Play
 Pokud je to nezbytné, můžete odstranit spravované aplikace Google Play v Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
 
 ## <a name="next-steps"></a>Další postup
 
-- [Přiřazení aplikací skupinám](apps-deploy.md) 
-
+- [Přiřazení aplikací skupinám](apps-deploy.md)

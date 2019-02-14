@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8ff89d1776d71dc24ea675de167f3fd22d6bdf04
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6b0c2bff4051a1adba1a68f38d8f0a9b80b914b4
+ms.sourcegitcommit: 5708ec1d7ae50494be44ed5064f150b636188c84
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838763"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56240057"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Po [přidání aplikace](apps-add.md) do Microsoft Intune ji můžete přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune. 
+Po [přidání aplikace](apps-add.md) do Microsoft Intune ji můžete přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune.
 
 > [!NOTE]
 > Záměr nasazení k dispozici není podporována pro skupiny zařízení, jsou podporovány pouze skupiny uživatelů.
@@ -124,8 +124,19 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 > Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
 > Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.
 
-## <a name="android-enterprise-app-we-app-deployment"></a>Aplikace pro Android Enterprise-jsme nasazení aplikace
-Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete nyní použít spravovaný obchod Google Play pro nasazení aplikací pro store a obchodních aplikací pro uživatele. Konkrétně můžete poskytnout koncovým uživatelům aplikace katalogu a instalace prostředí, které už vyžaduje, aby koncoví uživatelé zmírnit stav zabezpečení svých zařízeních tím, že instalace z neznámých zdrojů. Kromě toho tento scénář nasazení bude poskytovat Vylepšené uživatelské prostředí. Postup přiřazení aplikace najdete v tématu [přiřadit aplikaci](apps-deploy.md#assign-an-app).
+## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Spravovat nasazení aplikací Google Play na nespravovaných zařízeních
+Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete použít spravovaný obchod Google Play můžete uživatelům nasadit aplikace pro store a aplikace – obchodní (LOB). Spravované aplikace Google Play cílem jako **k dispozici s registrací i bez** se zobrazí v aplikaci Play Store na zařízení koncového uživatele a ne v aplikaci portál společnosti. Koncový uživatel bude procházet a instalovat aplikace nasazené tímto způsobem z Play aplikace. Vzhledem k tomu, že se nainstalují aplikace ze spravovaného obchodu Google Play, nebudete muset změnit jejich nastavení zařízení a povolit instalaci aplikací z neznámých zdrojů, což znamená, že budou bezpečnější koncového uživatele. Pokud vývojář aplikace publikuje novou verzi aplikace ve službě Play, která byla nainstalována na zařízení uživatele, aplikace se automaticky aktualizuje jejich Play. 
+
+Postup přiřazení aplikace na spravovaný obchod Google Play na nespravovaná zařízení:
+
+1. Propojte svého tenanta Intune do spravovaného obchodu Google Play. Pokud jste už provedli to za účelem správy pracovního profilu Androidu Enterprise, vyhrazené, nebo plně spravovaná zařízení, není potřeba udělat to znova.
+2. Přidání aplikací ze spravovaného obchodu Google Play do konzoly Intune.
+3. Cílové spravované aplikace Google Play jako **k dispozici s registrací i bez** do určeným uživatelem skupiny. **Vyžaduje** a **odinstalovat** cílení aplikace nejsou podporovány pro nezaregistrovaná zařízení.
+4. Přiřadíte zásady ochrany aplikací do skupiny uživatelů.
+5. Koncový uživatel otevře aplikaci portál společnosti, zobrazí se zpráva označující, že jsou pro ně k dispozici v aplikaci Play Store aplikace.  Uživatel může klepnout toto oznámení se přenáší přímo do aplikace Play zobrazíte podnikové aplikace, nebo můžou přejít na aplikaci Play Store samostatně.
+6. Koncový uživatel můžete rozšířit místní nabídky v rámci aplikace Play Store a přepínání mezi svým osobním účtem Google (kde se jim zobrazí jejich osobních aplikací) a svého pracovního účtu (kde uvidí store a obchodních aplikací, které cílí). Koncoví uživatelé nainstalují aplikace ze klepnutím na instalovat v aplikaci Play Store.
+
+Při vydání selektivní vymazání aplikace v konzole Intune se pracovní účet se automaticky odebere z Play Store aplikace a koncový uživatel se z již neuvidí bodu pracovní aplikace v katalogu aplikací Play Store. Při odebrání pracovního účtu na zařízení, aplikací nainstalovaných z Play Store zůstanou na zařízení nainstalované a nedojde k odinstalování. 
 
 ## <a name="next-steps"></a>Další postup
 
