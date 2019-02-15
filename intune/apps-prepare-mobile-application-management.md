@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74445c678455dc881f79fed20ed68be6f090fe78
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 63504acb19125a3971ea6ddc996b42ed8917b2d9
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834768"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302162"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -87,7 +87,6 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Povolit aplikaci, aby přijímala data z jiných aplikací|X|X|
 |Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi|X|X|
 |Požadovat jednoduchý kód PIN pro přístup|X|X|
-|Nahradit integrovaný PIN kód aplikace PIN kódem Intune|X||
 |Určit počet pokusů o zadání PIN kódu před jeho obnovením|X|X|
 |Povolit otisk prstu místo PIN kódu|X|X|
 |Povolit rozpoznávání obličeje místo PIN kódu (pouze iOS)|X|X|
@@ -98,8 +97,8 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Zadat období odkladu pro offline režim|X|X|
 |Blokovat snímek obrazovky (jenom Android)|X|X|
 |Podpora MAM bez registrace zařízení|X|X|
-|Úplné vymazání|X|X|
-|Selektivní vymazání <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
+|Úplné vymazání dat aplikací|X|X|
+|Selektivní vymazání pracovní ad školních dat ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
 |Zabránit možnosti Uložit jako|X||
 |Konfigurace cílové aplikace|X||
 |Podpora víc identit|X||

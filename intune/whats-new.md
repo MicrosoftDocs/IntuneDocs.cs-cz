@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 299e76d55cd5fc61d96a81a49f721bc5c0c69a11
-ms.sourcegitcommit: 77c63ddb51ffd5258f4ea0e68672c2eb011b83e1
+ms.openlocfilehash: f6d346d7f060b5e997577b09c3ee8b006843ab7b
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905845"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302230"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -241,10 +241,15 @@ V **konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS** pro
 
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Nové oznámení, Rady a keyguard nastavení vlastníka zařízení s Androidem Enterprise <!-- 3201839 3201843 -->
 Tato aktualizace zahrnuje několik nových funkcí na zařízeních s Androidem Enterprise, při spuštění jako vlastník zařízení. K používání těchto funkcí, přejděte na **konfigurace zařízení** > **profily** > **vytvořit profil** > v **platformy**, zvolte **Androidu Enterprise** > v **typ profilu**, zvolte **jen vlastník zařízení** > **zařízení Omezení**.
+
 Mezi nové funkce patří: 
-- Zakázat oznámení systému ze zobrazení, včetně příchozí volání, systém upozornění, chyby systému a další
-- Navrhne přeskočit počáteční kurzy a pomocných parametrů pro aplikace, které jsou otevřené poprvé
-- Zakázat rozšířené keyguard nastavení, jako je například fotoaparátu/kamery, oznámení, odemknutí pomocí otisků prstů a informace najdete v části nastavení, přejděte na [nastavení omezení pro zařízení s Androidem Enterprise](device-restrictions-android-for-work.md).
+
+- Zakážete oznámení systému ze zobrazení, včetně příchozí volání, systém upozornění, chyby systému a další.
+- Navrhuje přeskočit počáteční kurzy a pomocných parametrů pro aplikace, které jsou otevřené poprvé.
+- Zakázat rozšířené keyguard, odemkněte nastavení, jako je fotoaparát, oznámení, otisk prstu a další.
+
+
+Chcete-li nastavení zobrazit, přejděte na [nastavení omezení pro zařízení s Androidem Enterprise](device-restrictions-android-for-work.md).
 
 #### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Vlastník zařízení s androidem enterprise, můžete použít připojení Always On VPN <!-- 3202194 -->
 V této aktualizaci použijete k připojení vždy zapnutá síť VPN na zařízeních s Androidem enterprise zařízení vlastníka. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned znovu připojí, jakmile uživatel odemkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Připojení také můžete přepnout do „zamčeného“ režimu, který blokuje veškerý síťový provoz, dokud není připojení VPN zase aktivní.

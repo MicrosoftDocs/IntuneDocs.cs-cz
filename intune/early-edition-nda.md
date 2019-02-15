@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 605868af91e734a6bd1457a97e9089d69ba81718
-ms.sourcegitcommit: bc863efcf760ba35421d8566581e8768056485f1
+ms.openlocfilehash: 19994745a232a362d6bba0f09ed3934e492a17ed
+ms.sourcegitcommit: 2f431f122ce3ee6b5d0cdb04a0b748d00f83e295
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56227892"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265668"
 ---
 # <a name="the-early-edition-for-microsoft-intune---february-2019"></a>Časná edice Microsoft Intune –. února 2019
 
@@ -53,9 +53,6 @@ Budete moct přejmenovat zaregistrovaná zařízení s Windows 10 (RS4 nebo nov�
 
 ### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521-----"></a>Přiřadit zařízení bez uživatelů macOS certifikáty SCEP    <!-- 2340521   -->
 Budete moct přiřadit certifikát protokolu SCEP (Simple Enrollment) certifikáty do zařízení bez uživatelů macOS a certifikát přidružit k Wi-Fi nebo profily sítě VPN. Tím se rozšíří na stávající podporu jsme již [přiřadit certifikátů do zařízení bez uživatelů, na kterých běží Windows, iOS a Android](certificates-scep-configure.md#create-a-scep-certificate-profile).
-
-### <a name="find-out-which-devices-support-esim----2432018---"></a>Přečtěte si zařízení, která podporují karty eSIM <!-- 2432018 -->
-Bude nový **karty eSIM inventáře** pole na stránce Hardware pro zařízení. Chcete-li zobrazit popsané, zvolte **Intune** > **zařízení** > zvolte zařízení > **hardwaru**.
 
 ### <a name="intune-conditional-access-ui-update------2432313----"></a>Aktualizace uživatelského rozhraní podmíněného přístupu Intune   <!-- 2432313  -->
 Nyní vylepšení v uživatelském rozhraní podmíněného přístupu v konzole Intune. Mezi ně patří:

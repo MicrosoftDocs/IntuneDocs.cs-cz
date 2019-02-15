@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d0594c9f14b9d18c597de9ca37826a669dde5f3
-ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
+ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
+ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986871"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56302179"
 ---
 # <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
 
@@ -31,9 +31,9 @@ Rozšíření správy Intune umožňuje nahrát Powershellové skripty do Intune
 
 Prostředí IT pro koncové uživatele prochází digitální transformací. Klasické tradiční informační technologie se zaměřují na platformy pro jednotlivá zařízení, na zařízení vlastněná firmami, uživatele, kteří pracují z kanceláře, a celou řadu manuálních reaktivních IT procesů. Moderní pracoviště používá řada platforem, které jsou uživatelů a ve vlastnictví firmy, umožňuje uživatelům pracovat odkudkoli a nabízí automatické a proaktivní IT procesy.
 
-Služby správy mobilních zařízení, jako je například Microsoft Intune můžete spravovat mobilních a desktopových zařízení s Windows 10. Integrované klient správy Windows 10 komunikuje s Intune a spuštění podnikové úlohy správy. Zde jsou některé úkoly, které mohou vyžadovat, například rozšířenou konfiguraci zařízení, řešení potíží a starší verze správy aplikací Win32, který není aktuálně k dispozici ve Windows 10 správy mobilních zařízení. Za tyto funkce lze softwarového klienta Intune na zařízení s Windows 10. [Porovnání správy počítačů s Windows jako mobilní zařízení nebo počítače](pc-management-comparison.md) je skvělý prostředek.
+Služby správy mobilních zařízení, jako je například Microsoft Intune můžete spravovat mobilních a desktopových zařízení s Windows 10. Integrované klient správy Windows 10 komunikuje s Intune a spuštění podnikové úlohy správy. Zde jsou některé úkoly, které mohou vyžadovat, například rozšířenou konfiguraci zařízení a řešení potíží. Pro správu aplikací Win32, můžete použít [správy aplikací Win32](apps-win32-app-management.md) funkce na zařízeních s Windows 10.
 
-Rozšíření správy Intune doplňuje integrované funkce Windows 10 MDM. Můžete vytvořit skripty Powershellu pro spuštění na zařízení s Windows 10. Například můžete vytvořit skript prostředí PowerShell, který nainstaluje starší aplikaci Win32, nahraje skript do Intune, skript přiřadí skupinu Azure Active Directory (AD) a spustí skript. Potom můžete monitorovat stav spuštění skriptu od začátku do konce.
+Rozšíření správy Intune doplňuje integrované funkce Windows 10 MDM. Můžete vytvořit skripty Powershellu pro spuštění na zařízení s Windows 10. Například můžete vytvořit skript Powershellu, konfigurace pokročilé zařízení, nahraje skript do Intune, skript přiřadí skupinu Azure Active Directory (AD) a spustí skript. Potom můžete monitorovat stav spuštění skriptu od začátku do konce.
 
 ## <a name="prerequisites"></a>Požadavky
 
