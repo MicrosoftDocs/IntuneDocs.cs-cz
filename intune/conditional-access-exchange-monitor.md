@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 951db22026725c2ec2e9c2be340bcccd44b2528b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 383370aaaca10cb44b614be6e250218106406cb4
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848096"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307749"
 ---
 # <a name="monitor-conditional-access-compliance-for-on-premises-exchange-and-exchange-online-in-intune"></a>Monitorování dodržování předpisů podmíněného přístupu u místního Exchange a Exchange Online v Intune
 
-Počínaje verzí Intune 1704 můžou správci zobrazit sestavy informace související s Exchange ActiveSync zařízení záznamy, které se synchronizují s Intune prostřednictvím místního Exchange Connectoru nebo konektor Intune service to service connector (Exchange Online connector). Sestavy dodržování předpisů pro podmíněný přístup poskytuje přehled o zařízeních s různými stavy synchronizace:
+Počínaje verzí Intune 1704 můžou správci zobrazit sestavy s informacemi týkajícími se záznamů o zařízeních používajících protokol Exchange ActiveSync, která jsou synchronizovaná s Intune prostřednictvím místního konektoru Exchange Connector nebo konektoru Intune Service to Service Connector (konektoru Exchange Online). Sestavy dodržování předpisů místního přístupu poskytují přehled o zařízeních s různými stavy synchronizace:
 
 -   **Povoleno**
 
@@ -36,11 +36,11 @@ Počínaje verzí Intune 1704 můžou správci zobrazit sestavy informace souvis
 
 1.  Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
 
-2.  Po úspěšném jste přihlášení, zobrazí **řídicím panelu Azure**.
+2.  Po úspěšném přihlášení se zobrazí **řídicí panel Azure**.
 
-3.  Zvolte **všechny služby** v levé nabídce zadejte **Intune** do filtru textového pole.
+3.  V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-4.  Zvolte **Intune**, uvidíte **řídicí panel Intune**.
+4.  Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
 5.  Zvolte **Podmíněný přístup** a pak zvolte **Přehled**.
 
@@ -50,7 +50,7 @@ Počínaje verzí Intune 1704 můžou správci zobrazit sestavy informace souvis
 
 Po zvolení jedné z těchto oblastí uvidíte podrobnější informace o zařízeních, která jsou povolená, blokovaná nebo v karanténě.
 
-Můžete také procházet hierarchii konkrétních zařízeních zobrazíte další podrobnosti. Například zařízení zvolené na následujícím obrázku je blokované. Intune nabízí možnost z podokna sestavy dodržování předpisů odebrat firemní data.
+Můžete také přecházet k podrobnostem o konkrétních zařízeních. Například zařízení zvolené na následujícím obrázku je blokované. Intune nabízí možnost z podokna sestavy dodržování předpisů odebrat firemní data.
 
 ![Obrázek podrobných informací o zařízení s podmíněným přístupem](./media/CA-reporting-intune-3.png)
 

@@ -32,6 +32,9 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
       >
       > Pro firemní zařízení má obor uživatele MDM přednost, pokud jsou povolené oba obory. Získání zařízení MDM zaregistrovaná.
 
+   > [!NOTE]
+   > Obor uživatele MAM musí být nastavena na skupiny uživatelů nebo kolekci.
+
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
 
 5. Použijte výchozí hodnoty pro následující adresy URL:

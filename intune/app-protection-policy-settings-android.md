@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/28/2019
+ms.date: 02/15/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85b3aa513781026c5c79cdd41837f9ded945e574
-ms.sourcegitcommit: 2f431f122ce3ee6b5d0cdb04a0b748d00f83e295
+ms.openlocfilehash: 1802da8150c9729a2bed8ff82d39f7946b750e06
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265685"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325499"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -54,9 +54,6 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 | **Synchronizace aplikace s využitím aplikací nativních kontaktů** | Zvolte **zakázat** nechcete, aby aplikace ukládala data do nativní aplikace kontakty na zařízení. Pokud se rozhodnete **povolit**, může aplikace ukládat data do nativní aplikace kontakty na zařízení. <br><br>Když budete z aplikace selektivně mazat pracovní nebo školní data, odeberou se kontakty synchronizované přímo z aplikace do nativní aplikace Kontakty. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook. | **Povolit** |
 | **Tisk dat organizace** | Zvolte **zakázat** zabránit tisk pracovních nebo školních dat aplikace. | **Povolit** |
 |**Sdílená složka webového obsahu pomocí zásad spravovaného prohlížeče** | Určete, jakým způsobem se otevírá webový obsah (odkazy http/https) z aplikací spravovaných zásadami. Vybírejte z těchto možností:<ul><li>**Vyžadovat**: Povolit webový obsah, který otevíral jenom ve zásady spravovaného prohlížeče.</li><li>**Není nakonfigurováno**: Povolit webové odkazy v jakékoli aplikaci </li></ul><br><br> Pokud ke správě zařízení používáte Intune, přečtěte si téma [Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune](app-configuration-managed-browser.md).<br><br>**Prohlížeče spravované zásadami**<br>Pokud nasadíte více prohlížečů spravovaných zásadami, spustí se jen jeden.  Jako první se spustí Intune Managed Browser a následně Microsoft Edge.  Pokud není nainstalovaný ani Intune Managed Browser ani Microsoft Edge, mohou si v Androidu koncoví uživatelé zvolit z jiných aplikací spravovaných zásadami, které podporují odkazy http/https.<p>Pokud se vyžaduje prohlížeč spravovaný zásadami, ale není nainstalovaný, budou koncoví uživatelé vyzváni k instalaci řešení Intune Managed Browser.<p>Pokud se vyžaduje prohlížeč spravovaný zásadami, jsou odkazy na aplikace pro Android spravované nastavením zásady **Povolit aplikaci posílat data do jiných aplikací**.<p>**Registrace zařízení v Intune**<br>Pokud ke správě zařízení používáte Intune, přečtěte si článek Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune. <p>**Microsoft Edge spravovaný zásadami**<br>Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) podporuje zásady ochrany aplikací Intune. Uživatelé, kteří se v aplikaci prohlížeče Microsoft Edge přihlásí svými podnikovými účty Azure AD, budou chráněni službou Intune. Prohlížeč Microsoft Edge integruje sadu MAM SDK a podporuje všechny její zásady ochrany dat kromě těchto:<br><ul><li>**Uložit – jako**: Prohlížeč Microsoft Edge neumožňuje uživateli přidat s přímým přístupem, v aplikaci připojení ke cloudovým poskytovatelé úložiště (jako je třeba OneDrive).</li><li>**Obraťte se na synchronizaci**: Prohlížeč Microsoft Edge se neukládá do seznamu nativních kontaktů.</li></ul><br>**Poznámka:** *Sada APP SDK nelze určit, zda je cílové aplikace prohlížeče. Na zařízeních s Androidem jsou povolené další aplikace spravovaného prohlížeče, podporující záměr http/https.* | **Není nakonfigurováno** |
-| **Klávesnice třetích stran** | Vyberte **zakázat** zabránit používání klávesnice třetích stran ve spravovaných aplikacích. <br><br>Když tuto možnost povolíte, obdrží uživatel jednorázově zprávu o tom, že použití takových klávesnic je zablokované. Tato zpráva se zobrazí při první komunikaci uživatele s daty organizace vyžadující použití klávesnice. Pouze standardní klávesnice je k dispozici při použití spravovaných aplikací a všechny ostatní klávesnice je zakázaná. Toto nastavení nemá vliv na používání klávesnic třetích stran v nespravovaných aplikacích. | **Povolit** |
-
-
 
   ## <a name="data-transfer-exemptions"></a>Výjimky přenosu dat
 

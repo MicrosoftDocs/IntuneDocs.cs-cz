@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08e6c7657eeba7a41b9927e736fe7f4fc07e25e6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a57dca7f6b817177cbd131e969c1b5aa52a248a8
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848572"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307766"
 ---
 # <a name="role-based-administration-control-rbac-with-microsoft-intune"></a>Řízení správy na základě role (RBAC) v Microsoft Intune
 
@@ -29,7 +29,8 @@ ms.locfileid: "55848572"
 
 - **Definice role**: Název role, prostředky, které spravuje a oprávnění udělená pro jednotlivé prostředky.
 - **Členové**: Skupiny uživatelů, kteří jsou udělená oprávnění.
-- **Obor**: Skupiny uživatelů nebo zařízení, které můžou členové spravovat.
+- **Rozsah (skupiny)**: Skupiny uživatelů nebo zařízení, které můžou členové spravovat.
+- **[Obor (značky)](https://docs.microsoft.com/intune/scope-tags)**: Značky, kde platí přiřazení role.
 - **Přiřazení**: Pokud po nakonfigurování definice, členů a oboru se role přiřadí.
 
 ![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)
@@ -82,20 +83,22 @@ Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. 
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Role** > **Všechny role**.
-4. V podokně **Role Intune – Všechny role** zvolte předdefinovanou roli, kterou chcete přiřadit.
+3. Na **Intune** okně zvolte **role** > **všechny role**.
+4. Na **role Intune – všechny role** okně zvolte předdefinovanou roli, kterou chcete přiřadit.
 
-5. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**.
+5. Na <*název role*>- **přehled** okně zvolte **spravovat** > **přiřazení**.
 
-6. V podokně vlastní role zvolte **Přiřadit**.
+6. V okně vlastní role zvolte **Přiřadit**.
 
-7. Na **přiřazení rolí** podokně, zadejte **název** a volitelné **popis** přiřazení.
+7. Na **přiřazení rolí** okno, zadejte **název přiřazení** a volitelné **popis přiřazení** přiřazení.
 
-8. Pro **členy**, zvolte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
+8. Pro **členy (skupiny)**, zvolte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
 
-9. Pro **oboru**, zvolte skupinu obsahuje uživatele, které člen výše bude moct spravovat.
-<br></br>
-10. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
+9. Pro **rozsah (skupiny)**, zvolte skupinu obsahuje uživatele, které člen výše bude moct spravovat.
+
+10. Pro **obor (značky)**, zvolte značky, kde se budou aplikovat toto přiřazení role.
+
+11. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
 ### <a name="intune-rbac-table"></a>Řízení správy na základě rolí s Intune
 
@@ -116,31 +119,21 @@ Můžete vytvořit vlastní roli, která zahrnuje všechna oprávnění nutná p
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-3. Vyberte **Intune** > **Role** > **Všechny role** > **Přidat vlastní**.
+3. Zvolte **Intune** > **role** > **všechny role** > **přidat**.
 
-4. V podokně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
+4. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
 
-5. V podokně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+5. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
-6. Po dokončení vyberte **OK**.
+6. Na **obor (značky)** okně zvolte značky, kde se budou aplikovat tuto vlastní roli.
 
-7. V podokně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu v podokně **Role Intune – Všechny role**.
+7. Po dokončení vyberte **OK**.
+
+7. V okně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu na **role Intune – všechny role** okno.
 
 ### <a name="to-assign-a-custom-role"></a>Přiřazení vlastní role
 
-1. V podokně **Role Intune – Všechny role** zvolte vlastní roli, kterou chcete přiřadit.
-
-2. V podokně <*název role*> – **Přehled** zvolte **Spravovat** a pak **Přiřazení**. V tomto podokně můžete také existující role upravovat nebo odstraňovat.
-
-3. V podokně vlastní role zvolte **Přiřadit**.
-
-4. Na **přiřazení rolí** podokně, zadejte **název** a volitelné **popis** přiřazení.
-
-5. Pro **členy**, zvolte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
-
-6. Pro **oboru**, zvolte skupinu obsahuje uživatele, které člen výše bude moct spravovat.
-
-7. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
+Postupujte stejným způsobem jako [přiřazení předdefinované role](https://docs.microsoft.com/intune/role-based-access-control#to-assign-a-built-in-role) a vyberte vlastní roli.
 
 ## <a name="next-steps"></a>Další postup
 

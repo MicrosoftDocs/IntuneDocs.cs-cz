@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63504acb19125a3971ea6ddc996b42ed8917b2d9
-ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
+ms.openlocfilehash: 10b2ef5844c2d8889fd1d5c377fcefb8330be9e2
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56302162"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325431"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -98,7 +98,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Blokovat snímek obrazovky (jenom Android)|X|X|
 |Podpora MAM bez registrace zařízení|X|X|
 |Úplné vymazání dat aplikací|X|X|
-|Selektivní vymazání pracovní ad školních dat ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
+|Selektivní vymazání dat pracovním a školním ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
 |Zabránit možnosti Uložit jako|X||
 |Konfigurace cílové aplikace|X||
 |Podpora víc identit|X||

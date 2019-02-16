@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ea7ee32794a120c12b0720be5fa11f3b97536ab
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ac9c8ca0b04cbb6f7cf570134a6f4bdce7bf57ed
+ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848806"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56325448"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -41,7 +41,7 @@ _**Musíte**_ aplikaci nejdřív zaregistrovat ve službě Microsoft Intune a od
 
 Do té doby, než bude registrace dokončena a potvrzena týmem Microsoft Intune, nebudou mít správci Intune možnost použít zásady ochrany aplikací na přímý odkaz na vaši aplikaci. Microsoft vaši aplikací přidá také na [stránku partnerů Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune-apps). Tady se zobrazí ikona aplikace označující, že aplikace podporuje zásady ochrany aplikací Intune.
 
-Pokud chcete zahájit registraci, i když zatím s nikým z Microsoftu nespolupracujete, vyplňte [dotazník partnera s aplikací pro Microsoft Intune](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR6oOVGFZ3pxJmwSN1N_eXwJUQUc5Mkw2UVU0VzI5WkhQOEYyMENWNDBWRS4u).
+Pokud chcete zahájit registraci, i když zatím s nikým z Microsoftu nespolupracujete, vyplňte [dotazník partnera s aplikací pro Microsoft Intune](https://forms.office.com/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR80SNPjnVA1KsGiZ89UxSdVUMEpZNUFEUzdENENOVEdRMjM5UEpWWjJFVi4u).
 
 E-mailové adresy, které uvedete ve svých odpovědích v dotazníku, použijeme k tomu, abychom se s vámi mohli spojit a pokračovat v registraci. Registrační e-mailová adresa slouží také k tomu, abychom vás mohli kontaktovat v případě jakýchkoliv nejasností.
 
