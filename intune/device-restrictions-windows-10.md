@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5afb23fd571b03e4fde97cb7800c399819d4cc8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 943b5dc8c0fe1c9b55b9c4971be2087353b60428
+ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849839"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56307885"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -138,6 +138,10 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Pracovní prostor Ink**: Zablokuje uživatelům možnost přístupu k pracovnímu prostoru ink. **Není nakonfigurováno** zapne tento pracovní prostor a uživatel může používat nad zamykací obrazovkou.
 - **Automatické opětovné nasazení**: Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí **CTRL + Win + R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
 - **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení (jenom Windows Insider)**: Zvolte **vyžadují** tak připojení zařízení k síti před pokračováním stránky sítě během instalace Windows 10. Funkce je sice ve verzi Preview, ale ve Windows Insider sestavení 1809 nebo novějších je toto nastavení povinné.
+- **Přímý přístup do paměti**: **Blok** brání přímý přístup do paměti (DMA) pro všechny aktivní modulární PCI podřízené porty, dokud se uživatel přihlásí do Windows. **Povolené** (výchozí) umožňuje přístup ke DMA, i v případě, že uživatel není přihlášený.
+
+  CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
+
 - **Ukončit procesy ve Správci úloh**: Toto nastavení určuje, zda nejsou správci, můžete použít Správce úloh na ukončit úlohy. **Blok** brání použití Správce úloh k ukončení procesu nebo úlohy na zařízení uživatele se standardním oprávněním (bez oprávnění správce). **Není nakonfigurováno** (výchozí) umožňuje standardní uživatelé k ukončení procesu nebo úloh pomocí Správce úloh.
 
 ## <a name="kiosk-preview---obsolete"></a>Veřejný terminál (Preview) – zastaralé
