@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f87c2fa5fcb7e76fa8d398018e87ec0b15c05e9
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4ccdb8c40c87bc4f5e778bc1cb7a6966f8a0ad70
+ms.sourcegitcommit: 33bacf9d5db336e73d8c88fa15f6535ae92b4b00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843387"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418514"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -215,11 +215,11 @@ Podporováno v následujících edicích Windows 10:
   - **Vytváření hesla pro obnovení uživatelem**: Nakonfigurujte, jestli uživatelé jsou povolené, vyžaduje nebo nesmí generovat 48místné obnovení hesla.  
   - **Vytváření obnovovacího klíče uživatelem**: Nakonfigurujte, jestli uživatelé jsou povolené, vyžaduje nebo nesmí generovat 256bitový obnovovací klíč.
   - **Možnosti obnovení v Průvodci nastavením Bitlockeru**: Nastavte na **bloku** tak uživatelů nelze zobrazit a změnit možnosti obnovení. **Nenakonfigurováno** (výchozí) umožní uživatelům po spuštění BitLockeru zobrazovat a měnit možnosti obnovení.
-  - **Ukládání informací pro obnovení Bitlockeru do služby AD DS**: Zvolte **povolit** k ukládání informací pro obnovení Bitlockeru ve službě Azure Active Directory (Azure AD). Když **Nenakonfigurováno** (výchozí), informace o obnovení nejsou uloženy ve službě Azure AD.
-  - **Informace o službě AD DS pro obnovení nástroje BitLocker**: Konfigurace, které části informací Bitlockeru o obnově se ukládají ve službě Azure AD. Možnosti:
+  - **Ukládání informací pro obnovení Bitlockeru do služby Azure Active Directory**: Zvolte **povolit** k ukládání informací pro obnovení Bitlockeru ve službě Azure Active Directory (Azure AD). Když **Nenakonfigurováno** (výchozí), informace o obnovení nejsou uloženy ve službě Azure AD.
+  - **Uložit do služby Azure Active Directory informace Bitlockeru o obnově**: Konfigurace, které části informací Bitlockeru o obnově se ukládají ve službě Azure AD. Možnosti:
     - **Zálohovat hesla pro obnovení a sady klíčů**
     - **Zálohovat jenom hesla pro obnovení**
-  - **Store informace o obnově v AD DS před povolením Bitlockeru**: **Vyžadovat** tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud informace Bitlockeru o obnově se úspěšně uložené ve službě Azure AD. **Není nakonfigurováno** (výchozí) umožňuje uživatelům k zapnutí nástroje BitLocker, i v případě, že informace o obnovení nejsou úspěšně uloženy ve službě Azure AD.
+  - **Store informace pro obnovení v Azure Active Directory před povolením Bitlockeru**: **Vyžadovat** tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud informace Bitlockeru o obnově se úspěšně uložené ve službě Azure AD. **Není nakonfigurováno** (výchozí) umožňuje uživatelům k zapnutí nástroje BitLocker, i v případě, že informace o obnovení nejsou úspěšně uloženy ve službě Azure AD.
 
 ### <a name="bitlocker-removable-data-drive-settings"></a>Nastavení nástroje BitLocker pro vyměnitelné datové jednotky
 

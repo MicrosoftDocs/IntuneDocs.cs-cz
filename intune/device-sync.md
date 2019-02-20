@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b766f9f92fb5d0e8cedfbebbac7246f48b90a6a2
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: e5f404f3472f7d22530dfa54fd133a8e97b507df
+ms.sourcegitcommit: 67e4e66e8c05b36c0897fb2955ef68666d22b094
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846124"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56426905"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
@@ -46,6 +46,8 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 5. Potvrďte zvolením **Ano**.
 
 Stav akce Synchronizovat zobrazíte přes **Zařízení** > **Akce zařízení**.
+
+Standardní Intune zásady vrácení se změnami frekvencí v můžete najít [– nejčastější dotazy týkající se zásad Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md##frequently-asked-questions-about-intune-policies).
 
 ## <a name="retryable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
 

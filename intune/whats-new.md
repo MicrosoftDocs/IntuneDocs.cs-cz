@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 02/19/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d346d7f060b5e997577b09c3ee8b006843ab7b
-ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
+ms.openlocfilehash: 65370710f409d028871695de22829f64e82bf54e
+ms.sourcegitcommit: 67e4e66e8c05b36c0897fb2955ef68666d22b094
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56302230"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56426973"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -31,8 +31,6 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 
 > [!Note]
 > Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
->
-> Informace o nových funkcích v hybridní správě mobilních zařízení (MDM) najdete na [stránce s novinkami pro hybridní MDM](/sccm/mdm/understand/whats-new-in-hybrid-mobile-device-management).
 
 **Informační kanál RSS**: Nechte se informovat Tato stránka se aktualizuje zkopírováním a vložením do informačního kanálu čtečky na následující adrese URL: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
@@ -46,6 +44,18 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 ### Role-based access control
 
 -->     
+
+## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019
+
+#### <a name="macos-users-are-prompted-to-update-their-password----1873216---"></a>macOS uživatelům se výzva k aktualizaci hesla <!-- 1873216 -->
+
+Vynucování Intune **ChangeAtNextAuth** nastavení na zařízení s macOS. Toto nastavení má vliv na koncové uživatele a zařízení, která mají zásady dodržování předpisů pro hesla nebo profily omezení zařízení s heslem. Koncovým uživatelům se výzva jednou aktualizovat své heslo. Tuto výzvu dojde pokaždé, když se uživatel poprvé spustí úlohu, která vyžaduje ověření, jako je například přihlášení k zařízení. Uživatelé mohou také vyzváni k aktualizovat své heslo, když teď zrovna nic nedělá, která vyžaduje oprávnění správce, například požadavek na přístup do řetězce klíčů. 
+
+Jakákoli změna zásady nové nebo stávající heslo správce vyzve koncovým uživatelům aktualizovat své heslo.
+
+Platí pro:  
+macOS
+
 ## <a name="week-of-february-4-2019"></a>Týden od 4. února 2019
 
 ### <a name="app-management"></a>Správa aplikací

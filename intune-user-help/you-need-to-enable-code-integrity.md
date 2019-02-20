@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/16/2017
+ms.date: 02/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,26 +14,27 @@ ms.assetid: 84892bbc-f888-417b-bbeb-978cc7e10028
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: chrisbal
+ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34bad76c3b6ff00b42eac70bcd870ef4d59ab017
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: d258fcb7f338e4177c31a5c77b92b5941b7db212
+ms.sourcegitcommit: 67e4e66e8c05b36c0897fb2955ef68666d22b094
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839941"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56426922"
 ---
-# <a name="you-need-to-enable-code-integrity"></a>Je nutné povolit integritu kódu
+# <a name="enable-code-integrity"></a>Povolit integritu kódu
 
-Uchovávání informací v organizaci vyžaduje různé typy zabezpečení, které budou chránit před různými typy problémů. Jedním ze způsobů, jak toto zabezpečení zajistit, je použití integrity kódu Windows, které zajišťuje, že nebude docházet ke změnám programů na hlubokých úrovních (ovladače) a systémových souborů.
+Vaše organizace může nařídit vaším Počítačem a povolit funkci ochrany před internetovými útoky *integrita kódu*. Kontroly integrity kódu ovladačů a systémových souborů na vašem zařízení známky poškození nebo škodlivému softwaru. Pro integrity kódu pro práci na vašem zařízení, volá jinou funkci zabezpečení [ *zabezpečené spouštění* ](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) také musí být povolené. 
 
-Integrita kódu se automaticky zapne, pokud váš systém aktivně používá zabezpečené spouštění.
+Pokud váš počítač nedodržuje předpisy, protože integrita kódu je zakázaný, měli byste požádat vaší organizace IT tým podpory. Pomůžou vám povolit zabezpečené spouštění, který se aktivuje při příštím spuštění zařízení integrity kódu. 
 
-> [!Tip]
-> Povolení zabezpečeného spouštění je pokročilá úloha. Doporučujeme, abyste o pomoc s touto úlohou požádali firemní podporu.
+Pokud identifikovat pokročilé zařízení uživatele a chcete si vyzkoušet kroky sami, přečtěte si téma [opětovné povolení zabezpečeného spouštění](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
-Pokud chcete pokračovat, přečtěte si část Opětovné povolení zabezpečeného spouštění na stránce [Zakázání zabezpečeného spouštění](https://msdn.microsoft.com/library/windows/hardware/dn898540(v=vs.85).aspx) a zkuste zabezpečené spouštění povolit sami.
+## <a name="additional-resources-for-it-administrators"></a>Další zdroje informací pro správce IT  
+Pokud jste správce Intune a chcete získat další informace o nastavení dodržování předpisů stavu zařízení v Intune, přečtěte si téma [přidat zásadu dodržování předpisů pro zařízení s Windows 10 v Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows#windows-10-and-later-policy-settings). Podrobný přehled o dodržování předpisů akce, které můžete provádět v Intune, najdete v článku [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
+## <a name="next-steps"></a>Další postup  
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
