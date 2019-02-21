@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: ''
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e24043bb1c41d68de04669ff27cc659624dc56c1
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6d3a7ea65a560ff317bfe9ff2374c6c9cd2e5f4b
+ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846821"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56458854"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -82,7 +82,7 @@ Následující tabulky popisují, jaká data se odeberou a jaký vliv má akce *
 
 |Datový typ|iOS|
 |-------------|-------|
-|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portálu společnosti:** Díky aplikace, které jsou připnuté na profil pro správu, všechna data aplikace a aplikace se odeberou. Tyto aplikace patří aplikace původně nainstalované z App Store a později spravovat jako podnikové aplikace. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a byly nainstalovány z App Store:** Pro aplikace, které se nespravují přes portál společnosti se odeberou firemní aplikace data chráněná šifrováním správy mobilních aplikací (MAM) v rámci místní úložiště aplikací. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodeberou. Osobní aplikační data a aplikace se neodeberou.|
+|Firemní aplikace a související data instalovaná službou Intune|**Aplikace nainstalované pomocí portálu společnosti:** Pro aplikace, které jsou připnuté na profil pro správu se odeberou všechna data aplikace a aplikace. Tyto aplikace patří aplikace původně nainstalované z App Store a později spravovat jako podnikové aplikace. <br /><br /> **Aplikace Microsoftu, které používají správu mobilních aplikací a byly nainstalovány z App Store:** Pro aplikace, které se nespravují přes portál společnosti se odeberou firemní aplikace data chráněná šifrováním správy mobilních aplikací (MAM) v rámci místní úložiště aplikací. Data chráněná šifrováním MAM mimo aplikaci zůstávají šifrovaná a nepoužitelná, ale neodeberou. Osobní aplikační data a aplikace se neodeberou.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|
@@ -130,7 +130,7 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 
 |Datový typ|Windows 8.1 (MDM) a Windows RT 8.1|Windows RT|Windows Phone 8.1 a Windows Phone 8|Windows 10|
 |-------------|----------------------------------------------------------------|--------------|-----------------------------------------|--------|
-|Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>Ve Windows 10 verze 1703 (Creators Update) a novějších verzích se neodeberou aplikace Office 365 ProPlus.|
+|Firemní aplikace a související data instalovaná službou Intune|Odvolají se klíče pro soubory, které jsou chráněné systémem souborů EFS. Uživatel nemůže soubory otevřít.|Firemní aplikace se neodeberou.|Odinstalují se aplikace původně nainstalované prostřednictvím Portálu společnosti. Odeberou se data firemních aplikací.|Odinstalují se aplikace. Odeberou se klíče pro zkušební načtení.<br>Ve Windows 10 verze 1703 (Creators Update) a novějších verzích se neodeberou aplikace Office 365 ProPlus. Rozšíření správy Intune nainstalovat Win32 neodinstaluje aplikací na nezaregistrovaných zařízeních.|
 |Nastavení|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|Konfigurace nastavené zásadami Intune se už nevynucují. Uživatelé můžou nastavení změnit.|
 |Nastavení profilu sítě Wi-Fi a VPN|Odebrány.|Odebrány.|Nepodporuje se.|Odebrány.|
 |Nastavení profilu certifikátu|Certifikáty jsou odebrané a odvolané.|Certifikáty jsou odebrané a odvolané.|Nepodporuje se.|Certifikáty jsou odebrané a odvolané.|
