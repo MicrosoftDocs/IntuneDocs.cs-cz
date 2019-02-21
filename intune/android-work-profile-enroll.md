@@ -1,7 +1,7 @@
 ---
-title: Registrace zařízení s pracovním profilem Androidu v Intune
+title: Registrace zařízení s Androidem Enterprise pracovním profilem v Intune
 titlesuffix: Microsoft Intune
-description: Zjistěte, jak v Intune zaregistrovat zařízení s pracovním profilem Androidu.
+description: Informace o registraci Androidu Enterprise pracovní profil zařízení v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,46 +17,46 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f39e9b5f8ecd49ba84f4e9614e2a63a6cfbfef7a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6522c3572db715e21b85050cd0c82b4cfb9b9deb
+ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55837924"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56458769"
 ---
-# <a name="set-up-enrollment-of-android-work-profile-devices"></a>Nastavení registrace zařízení s pracovním profilem Androidu
+# <a name="set-up-enrollment-of-android-enterprise-work-profile-devices"></a>Nastavení registrace zařízení s Androidem Enterprise pracovním profilem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Nasazením aplikací a nastavení do zařízení s pracovním profilem Androidu vám Intune pomůže zajistit, aby byly pracovní a osobní informace oddělené. Konkrétní podrobnosti o Androidu Enterprise najdete v tématu [Požadavky na Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
+Intune vám pomůže nasadit aplikace a nastavení pro zařízení s Androidem Enterprise pracovním profilem zajistit, že jsou oddělené pracovní a osobní údaje. Konkrétní podrobnosti o Androidu Enterprise, najdete v části [požadavky na Androidu Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
-Správu pracovního profilu Androidu nastavíte tímto postupem:
+Nastavení správy pracovních profilů Androidu Enterprise, postupujte podle těchto kroků:
 
-1. [Propojte účet tenanta Intune s účtem Androidu Enterprise](connect-intune-android-enterprise.md).
-2. Určete nastavení registrace pracovního profilu Androidu. Pracovní profily Androidu jsou [podporované jen na určitých zařízeních s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Jakékoli zařízení, které podporuje pracovní profily Androidu, podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující pracovní profily Androidu v rámci [Omezení registrace](enrollment-restrictions-set.md).
-    - **Blok (ve výchozím nastavení)**:  Všechna zařízení s Androidem včetně zařízení podporujících pracovní profily Androidu, se zaregistrují jako zařízení s konvenčním Androidem.
-    - **Povolit**: Všechna zařízení, která podporují pracovní profily Androidu, se zaregistrují jako zařízení s pracovním profilem. Jakékoli zařízení s Androidem, které nepodporuje pracovní profily Androidu, se zaregistruje jako zařízení s konvenčním Androidem.
+1. [Připojení účtu tenanta Intune ke svému účtu Androidu Enterprise](connect-intune-android-enterprise.md).
+2. Zadejte nastavení registrace pracovní profil Androidu Enterprise. Pracovní profily androidu Enterprise jsou [podporován pouze některá zařízení s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Jakékoli zařízení, které podporuje pracovní profily Androidu Enterprise podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující Android Enterprise profiles práce v rámci [omezení registrace](enrollment-restrictions-set.md).
+    - **Blok (ve výchozím nastavení)**:  Všechna zařízení s Androidem včetně zařízení podporujících Android Enterprise profiles práce, se zaregistrují jako zařízení s konvenčním Androidem.
+    - **Povolit**: Všechna zařízení, která podporují Android Enterprise pracovních profilů se zaregistrují jako Android Enterprise pracovní profil zařízení. Jakékoli zařízení s Androidem, která nepodporuje pracovní profily Androidu Enterprise se zaregistrují jako zařízení s konvenčním Androidem.
 3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
 
 
-Pokud chcete zaregistrovat zařízení s pracovním profilem Androidu, ale tato zařízení jsou už zaregistrovaná jako zařízení s běžným Androidem, musí se registrace těchto zařízení nejprve zrušit a pak se musí znovu zaregistrovat.
+Pokud chcete zaregistrovat zařízení pomocí pracovních profilů Androidu Enterprise, ale tato zařízení jsou už zaregistrovaná jako běžná zařízení s Androidem, tato zařízení musíte nejprve zrušit jeho registraci a pak znova zapsat.
 
-Při registraci zařízení s pracovním profilem Androidu pomocí účtu [správce registrace zařízení](device-enrollment-manager-enroll.md) platí omezení, že pomocí jednoho účtu je možné zaregistrovat maximálně 10 zařízení.
+Pokud se při registraci zařízení s Androidem Enterprise pracovním profilem pomocí [správce registrace zařízení](device-enrollment-manager-enroll.md) účtu, platí omezení maximálně 10 zařízení, které se dají zaregistrovat na jeden účet.
 
 Další informace najdete v článku [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md).
 
-## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Schválení aplikace Portál společnosti ve spravovaném obchodu Google Play
+## <a name="approve-the-company-portal-app-in-the-managed-google-play-store"></a>Schválení aplikace portál společnosti v úložišti spravovaný obchod Google Play
 
-Aby měli uživatelé vždy přístup k aktuální verzi aplikace Portál společnosti, musíte aplikaci Portál společnosti pro Android schválit ve spravovaném obchodu Google Play. Jejím schválením zajistíte, aby všichni uživatelé dostávali automatické aktualizace. Pokud ji neschválíte, bude Portál společnosti časem zastaralý a nemusí dostávat důležité opravy chyb a nové funkce, které Microsoft vydává.
+Aby bylo zajištěno, že uživatelé mají vždy přístup k nejnovější verzi aplikace portál společnosti, musí schválit aplikace portál společnosti pro Android v úložišti spravovaný obchod Google Play. Jejím schválením zajistíte, aby všichni uživatelé dostávali automatické aktualizace. Pokud ji neschválíte, bude Portál společnosti časem zastaralý a nemusí dostávat důležité opravy chyb a nové funkce, které Microsoft vydává.
 
 Při schvalování Portálu společnosti Intune postupujte takto:
 
-1.  Ve [spravovaném obchodě Google Play](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal) přejděte na aplikaci Portál společnosti.
-2.  Přihlaste se do spravovaného obchodu Google Play pomocí stejného účtu Google, který jste použili ke konfiguraci vazby pro Android Enterprise.
+1.  Přechod do aplikace portál společnosti na [spravovaný obchod Google Play store](https://play.google.com/work/apps/details?id=com.microsoft.windowsintune.companyportal).
+2.  Přihlaste se spravovaný obchod Google Play storu pomocí stejného účtu Google, který jste použili ke konfiguraci vazby pro Android Enterprise.
 3.  Klikněte na **Approve** (Schválit) a otevře se nové dialogové okno.
 4.  Zkontrolujte oprávnění v tomto dialogu a pak klikněte na **Approve** (Schválit). Aby aplikace Portál společnosti mohla spravovat pracovní profil v daném zařízení, je nutné povolit tato oprávnění.
 5.  Vyberte **Keep approved when app requests new permissions** (Pokud aplikace vyžaduje nová oprávnění, zachovat jako schválené) a pak klikněte na **Save** (Uložit).
 
-## <a name="next-steps-for-android-work-profiles"></a>Další kroky pro pracovní profily Androidu
-- [Nasazení aplikací do pracovního profilu Androidu](apps-add-android-for-work.md)
-- [Přidání zásad konfigurace pracovního profilu Androidu](device-profiles.md)
+## <a name="next-steps-for-android-enterprise-work-profiles"></a>Další kroky pro Android Enterprise pracovní profily
+- [Nasazení aplikací pro Android Enterprise pracovní profil](apps-add-android-for-work.md)
+- [Přidání zásad Konfigurace pracovní profil Androidu Enterprise](device-profiles.md)

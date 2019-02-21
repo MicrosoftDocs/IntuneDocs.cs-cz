@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61a2abee2e926605a4d7d35baa53f6259ef77db3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 02505cc21865308ef9ea4dbbabe95fc65ea87b58
+ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840242"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56458871"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -39,6 +39,9 @@ Samostatné využití Intune vám poskytuje širší možnosti správy aplikací
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Příprava obsahu aplikace Win32 pro nahrání
 
 Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) předběžně zpracovat aplikací Win32. Tento nástroj převede instalačních souborů aplikace do *.intunewin* formátu. Nástroj zjistí také některé atributy, které vyžaduje služba Intune k určení stavu instalace aplikace. Po použití tohoto nástroje u složky instalačního programu aplikace budete moci v konzole Intune vytvořit aplikaci Win32.
+
+> [!IMPORTANT]
+> [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) zips všechny soubory a podsložky, když vytváří *.intunewin* souboru. Rozhodně buďte Microsoft Win32 obsahu Prep Tool nezávisle na instalační soubory a složky, tak, aby nezadáte, nástroj nebo jiné nepotřebné soubory a složky ve vaší *.intunewin* souboru.
 
 Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu.
 

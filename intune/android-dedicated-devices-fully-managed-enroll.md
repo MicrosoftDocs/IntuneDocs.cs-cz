@@ -1,7 +1,7 @@
 ---
-title: Registrace zařízení s Androidem vyhrazené nebo plně spravovaných zařízeních v Intune
+title: Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune
 titlesuffix: Microsoft Intune
-description: Zjistěte, jak zaregistrovat zařízení s Androidem enterprise vyhrazené nebo fulluy spravovaných zařízení v Intune.
+description: Zjistěte, jak zaregistrovat zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2a83676f67866bc81ea81f7bb721dec5825a95c9
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 90af5ed5fab21e7b15c0e6d77b170e49b3047c88
+ms.sourcegitcommit: ad213c5be1e1ad2b768661a467878056e6090999
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843438"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444136"
 ---
-# <a name="enroll-your-android-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem vyhrazené nebo plně spravovaná zařízení (Preview)
+# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaná zařízení (Preview)
 
-Po nastavení vašeho [vyhrazená zařízení s Androidem](android-kiosk-enroll.md) nebo [plně spravovaná zařízení](android-fully-managed-enroll.md) v Intune, můžete tato zařízení zaregistrovat. Způsob registrace zařízení s Androidem závisí na operačním systému.
+Po nastavení vašeho [vyhrazená zařízení s Androidem Enterprise](android-kiosk-enroll.md) nebo [plně spravovaná zařízení](android-fully-managed-enroll.md) v Intune, můžete tato zařízení zaregistrovat. Způsob registrace zařízení s Androidem Enterprise, závisí na operačním systému.
 
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazené a plně spravovaná zařízení |
 | ----- | ----- |

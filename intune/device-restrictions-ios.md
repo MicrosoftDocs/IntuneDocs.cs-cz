@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 302f9b34102240c057f7de80abd03a5dda65945f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a7f5c09dca64b227daf21c8a492221a5e025cb20
+ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850229"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56458922"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 
@@ -348,7 +348,7 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 | com.apple.mobileslideshow   | Fotky       | Apple     |
 | com.apple.podcasts          | Podcasty     | Apple     |
 | com.apple.reminders         | Připomínky    | Apple     |
-| com.apple.MobileSafari      | Safari       | Apple     |
+| com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Nastavení     | Apple     |
 | com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Stocks       | Apple     |

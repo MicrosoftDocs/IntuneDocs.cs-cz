@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 866db22b79f2ca9255f9eccdfdba28dc353836ed
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 89825bd77beba9b8653646e9ec7381e9dfd2d6de
+ms.sourcegitcommit: ad213c5be1e1ad2b768661a467878056e6090999
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846753"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444153"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
@@ -30,10 +30,10 @@ ms.locfileid: "55846753"
 
 Jako správce Intune můžete spravovat následující zařízení s Androidem:
 - Zařízení s Androidem včetně zařízení Samsung Knox Standard
-- Zařízení s androidem enterprise, včetně:
-    - **Zařízení s pracovním profilem**: Osobní zařízení udělit oprávnění pro přístup k podnikovým datům. Správci mohou spravovat pracovní účty, aplikace a data. Ze zařízení osobní data se ukládají odděleně od pracovní data a správci nad kterými nemáte kontrolu osobní nastavení nebo data. 
-    - **Vyhrazená zařízení s androidem**: Zařízení vlastněná společností, jeden používá, například digitálních materiálů, lístku podpory tisku nebo řízení zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
-    - **Plně spravovaná zařízení s androidem**: Zařízení vlastněné společností, jeden uživatel používá výhradně pro pracovní a ne osobní použití. Správci můžou spravovat celé zařízení a vynucovat ovládací prvky zásad, není k dispozici pro pracovní profily. 
+- Zařízení s androidem Enterprise, včetně:
+    - **Zařízení s androidem Enterprise pracovním profilem**: Osobní zařízení udělit oprávnění pro přístup k podnikovým datům. Správci mohou spravovat pracovní účty, aplikace a data. Ze zařízení osobní data se ukládají odděleně od pracovní data a správci nad kterými nemáte kontrolu osobní nastavení nebo data. 
+    - **Vyhrazená zařízení s androidem Enterprise**: Zařízení vlastněná společností, jeden používá, například digitálních materiálů, lístku podpory tisku nebo řízení zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
+    - **Plně spravovaná zařízení s androidem Enterprise**: Zařízení vlastněné společností, jeden uživatel používá výhradně pro pracovní a ne osobní použití. Správci můžou spravovat celé zařízení a vynucovat ovládací prvky zásad, není k dispozici pro pracovní profily. 
 
 ## <a name="prerequisite"></a>Požadavek
 
@@ -54,11 +54,11 @@ Pokud chcete blokovat registraci zařízení s Androidem nebo blokovat jenom za�
 
 ## <a name="set-up-android-enterprise-enrollment"></a>Nastavení registrace Androidu Enterprise
 
-Android Enterprise je sada funkcí a služeb pro zařízení s Androidem, které oddělují osobní aplikace a data od pracovního profilu obsahujícího pracovní aplikace a data. Zařízení s androidem enterprise zahrnují pracovní profil zařízení, plně spravovaná zařízení a vyhrazená zařízení. 
+Android Enterprise nabízí sadu možností registrace, které uživatelům poskytnout nejaktuálnější a zabezpečené funkce. Možnosti registrace androidu Enterprise zahrnují pracovní profil, plně spravovaná a vyhrazená zařízení.
 
-- [Nastavení registrace Android pracovní profil](android-work-profile-enroll.md)
-- [Nastavení registrace zařízení s Androidem vyhrazené](android-kiosk-enroll.md)
-- [Nastavení Androidu plně spravovat registrace](android-fully-managed-enroll.md)
+- [Nastavení registrace Androidu Enterprise pracovní profil](android-work-profile-enroll.md)
+- [Nastavení registrace zařízení s Androidem Enterprise vyhrazené](android-kiosk-enroll.md)
+- [Nastavení registrace Androidu Enterprise, plně spravovaná](android-fully-managed-enroll.md)
 
 ## <a name="end-user-experience-when-enrolling-a-samsung-knox-device"></a>Prostředí koncového uživatele při registraci zařízení se zabezpečením Samsung Knox
 
@@ -76,6 +76,6 @@ Při registraci zařízení se zabezpečením Samsung Know je třeba mít na pam
 
 ## <a name="next-steps"></a>Další postup
 
-- [Nastavení registrace Android pracovní profil](android-work-profile-enroll.md)
-- [Nastavení registrace zařízení s Androidem vyhrazené](android-kiosk-enroll.md)
-- [Nastavení Androidu plně spravovat registrace](android-fully-managed-enroll.md)
+- [Nastavení registrace Androidu Enterprise pracovní profil](android-work-profile-enroll.md)
+- [Nastavení registrace zařízení s Androidem Enterprise vyhrazené](android-kiosk-enroll.md)
+- [Nastavení registrace Androidu Enterprise, plně spravovaná](android-fully-managed-enroll.md)
