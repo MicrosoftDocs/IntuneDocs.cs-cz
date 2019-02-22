@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c43b27a07aa5eafc19ce1528bbfe34c1a6dbb1d
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: bb10dfe14dc6da3d58e5ae4279a4d89647691cac
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839459"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655353"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -99,7 +99,7 @@ Potřebujete také koncový bod. K získání koncového bodu datového skladu b
 3. V části **Ostatní úkoly** vyberte **Nastavení Datového skladu Intune**.
 4. V části **Použít služby generování sestav třetích stran** zkopírujte adresu URL vlastního kanálu. Měla by vypadat přibližně takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 
-Koncový bod má tento formát: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`.
+Koncový bod má tento formát: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
 Například entita **dates** vypadá takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`
 
@@ -164,7 +164,7 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 
     ![Progam.cs a Průzkumník řešení v sadě Visual Studio](./media/reports-get_rest_data_in.png)
 
-8. Kód v souboru Program.cs nahraďte následujícím kódem:  
+8. Nahraďte kód v *Program.cs* následujícím kódem:  
    ```csharp
    namespace IntuneDataWarehouseSamples
    {

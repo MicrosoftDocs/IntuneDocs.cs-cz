@@ -1,7 +1,7 @@
 ---
 title: Konfigurace zásad ochrany aplikací pro Windows 10
 titleSuffix: Microsoft Intune
-description: Nastavení poskytovatele správy mobilních aplikací (MAM) v Azure AD
+description: Toto téma popisuje, jak nakonfigurovat zásady ochrany aplikací (aplikace) pro zařízení s Windows 10.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5626861f05e7c78f43715b3dc14773eb3adfa7b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 81208b3eea41b3558c87d8d1df10647fa9fe65ea
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832806"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655251"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Příprava na konfiguraci zásad ochrany aplikací pro Windows 10 
 

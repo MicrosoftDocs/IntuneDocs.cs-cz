@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cfbfb26569a85d8cd19b840ab86ec58160a1dec4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 229659e0021f7386279ffbd5950e4eb849944ef2
+ms.sourcegitcommit: 613b2064df07cfac0081e8549177e1f2d07cf33c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839661"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590049"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -129,6 +129,16 @@ Nastavení omezení počtu zařízení můžete změnit podle následujícího p
 Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažení limitu počtu zaregistrovaných zařízení. Například v iOSu vypadá takto:
 
 ![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
+Omezení limitu počtu zařízení se nedá použít pro následující typy podnikové registrace Windows:
+
+- Spoluspravovaná registrace
+- Objekt zásad skupiny registrací
+- Registrace připojené služby Azure Active Directory
+- Registrace připojené hromadné Azure Active Directory
+- Registrace AutoPilot
+
+Omezení zařízení můžete nastavit pro tyto typy registrace [ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ## <a name="change-enrollment-restriction-priority"></a>Změna priority omezení registrace
 

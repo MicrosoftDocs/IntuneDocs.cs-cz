@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 02/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e827862510f24a2f133562c836d6c1b47186c330
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: ae8113a603ae4c091005f7c82045708f7e9e3e97
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086144"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655387"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -78,7 +78,7 @@ Chybová zpráva nebo dialog | Příčina | Náprava |
 **Nenastavena aplikace**: Tato aplikace není nastavený pro použití. Požádejte o pomoc správce IT. | Nepodařilo se rozpoznat požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
 **Vítá vás Intune Managed Browser**: Tato aplikace funguje nejlépe, když se spravují přes Microsoft Intune. Aplikaci můžete kdykoli použít k procházení webu, a pokud k její správě použijete Microsoft Intune, získáte přístup k dalším funkcím ochrany dat. | Nepodařilo se rozpoznat požadované zásady ochrany aplikací pro aplikaci Intune Managed Browser. <br><br>Uživatel může aplikaci stále používat k procházení webu, ale aplikaci nespravuje Intune. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživetele nasazené zásady ochrany aplikací pro iOS a cílí na aplikaci Intune Managed Browser.
 **Nepovedlo se přihlásit**: Nemůžeme přihlásit vás teď. Zkuste to prosím znovu později. | Nepodařilo se zaregistrovat uživatele ke službě MAM po tom, co se uživatel pokusil přihlásit pomocí svého pracovního nebo školního účtu. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
-**Nenastaven účet**: Vaše organizace nenastavila váš účet k práci s pracovními nebo školními daty. Požádejte prosím o pomoc svého správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](http://portal.office.com).
+**Nenastaven účet**: Vaše organizace nenastavila váš účet k práci s pracovními nebo školními daty. Požádejte prosím o pomoc svého správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](https://portal.office.com).
 **Zařízení nedodržující předpisy**: Tuto aplikaci nejde použít, protože používáte zařízení s jailbreakem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na zařízení s jailbreakem. | Resetujte zařízení na výchozí tovární nastavení. Postupujte podle [těchto pokynů](https://support.apple.com/HT201274) z webu podpory Apple.
 **Připojení k Internetu vyžaduje**: Musíte být připojeni k Internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
 **Došlo k neznámé chybě**: Zkuste aplikaci restartovat. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Došlo k neznámému selhání. | Chvíli počkejte a zkuste to znovu. Pokud potíže potrvají, vytvořte [lístek podpory](get-support.md#create-an-online-support-ticket) s Intune.
@@ -97,7 +97,7 @@ Dialog / chybová zpráva | Příčina | Náprava |
 **Nepovedlo se přihlásit**: Zkuste se přihlásit znovu. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Nepodařilo se ověřit účet, pomocí kterého se uživatel pokusil přihlásit. | Zkontrolujte, jestli se uživatel přihlašuje pomocí pracovního nebo školního účtu, který je už zaregistrovaný službou Intune MAM (první pracovní nebo školní účet, který se do této aplikace úspěšně přihlásil). <br><br> Vymažte data aplikace. <br><br> Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je verze Portálu společnosti aktuální.
 **Připojení k Internetu vyžaduje**: Musíte být připojeni k Internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
 **Zařízení jako nevyhovující**: Tuto aplikaci nejde použít, protože používáte zařízení s rootem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na rootovaném zařízení. | Resetujte zařízení na výchozí tovární nastavení.
-**Nenastaven účet**: Tato aplikace se musí spravovat přes Microsoft Intune, ale váš účet zatím není nastavené. Požádejte o pomoc správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](http://portal.office.com).
+**Nenastaven účet**: Tato aplikace se musí spravovat přes Microsoft Intune, ale váš účet zatím není nastavené. Požádejte o pomoc správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](https://portal.office.com).
 **Nepodařilo se zaregistrovat aplikaci**: Tato aplikace se musí spravovat přes Microsoft Intune, ale nebylo možné zaregistrovat v tuto chvíli. Požádejte o pomoc správce IT. | Nepodařilo se aplikaci automaticky zaregistrovat ve službě MAM, když jsou požadovány zásady ochrany aplikací. | Vymažte data aplikace. <br><br> Odešlete protokoly do Intune prostřednictvím aplikace portál společnosti nebo lístek podpory. Další informace najdete v tématu [jak získat podporu pro Microsoft Intune](get-support.md).
 
 ## <a name="next-steps"></a>Další postup

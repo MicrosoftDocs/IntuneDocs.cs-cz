@@ -15,14 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36076aab02f16937066cb3d47d573f7c74dd6277
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4edf76b2406f07efa68275763da87340bb34f222
+ms.sourcegitcommit: 613b2064df07cfac0081e8549177e1f2d07cf33c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833612"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590066"
 ---
-# <a name="windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Windows 10 šablon ke konfiguraci nastavení zásad skupiny ve Microsoft Intune
+# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Použití šablon Windows 10 v Microsoft Intune konfigurovat nastavení zásad skupiny
 
 Při správě zařízení ve vaší organizaci, můžete chtít vytvořit skupinu nastavení, která se použijí v různých skupinách zařízení. Například můžete mít několik skupin zařízení. Pro GroupA kterému chcete přiřadit určitou sadu nastavení. Pro GroupB kterému chcete přiřadit jinou sadu nastavení. Chcete také jednoduchý přehled na nastavení, která můžete nakonfigurovat.
 

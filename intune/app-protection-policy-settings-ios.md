@@ -1,7 +1,7 @@
 ---
 title: nastavení zásad ochrany aplikací pro iOS | Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s iOSem.
+description: Toto téma popisuje nastavení zásad (aplikace) ochrany aplikací iOS pro zařízení s Iosem.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73bc1a3bc03b5136c849fecbbe2a482f242b062f
-ms.sourcegitcommit: 93de3423d2d8f0019e676a63784edeb3daf47cb7
+ms.openlocfilehash: a0b0c2a588398e962da0aaab839343f20aadbbcb
+ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56325516"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56655404"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
