@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: afa2ef4cf1199597f61af99d631243e2d3b51e64
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 4ff07dfa48ab213bc65afc58708f490a80fb5ba8
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845172"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742512"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -126,10 +126,13 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 4. Vyberte, kterým skupinám Azure AD chcete zásadu přiřadit.
 5. Když zvolíte **Uložit**, zásada se nasadí dané skupině. U uživatelských zařízení, na která zásady cílí, se vyhodnotí dodržování předpisů.
 
-## <a name="create-an-azure-ad-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu Azure AD
-Zásady podmíněného přístupu zablokují přístup zařízení k prostředkům, *pokud* se zařízení vyhodnotí jako nevyhovující. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.
+## <a name="create-a-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu
+Zásady podmíněného přístupu zablokují přístup zařízení k prostředkům, *pokud* se zařízení vyhodnotí jako nevyhovující. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.  
 
-1. Na [portálu Azure Portal](https://portal.azure.com) otevřete **Azure Active Directory** > **Podmíněný přístup** > **Nová zásada**.
+> [!TIP]  
+> Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*.  
+
+1. V [webu Azure portal](https://portal.azure.com), otevřete **Intune** > **podmíněného přístupu** > **nové zásady**.
 2. Zadejte **Název** zásady a zvolte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
 3. Zvolte **Cloudové aplikace** a vyberte aplikace, které chcete chránit. Zvolte například **Vybrat aplikace** a pak vyberte **Office 365 SharePoint Online** a **Office 365 Exchange Online**.
 

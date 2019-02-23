@@ -1,11 +1,11 @@
 ---
 title: Nastavení zařízení s androidem Enterprise v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Na Androidu Enterprise nebo zařízení Android for Work omezení nastavení na zařízení, včetně kopírování a vkládání, zobrazit oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, použijte otisků prstů k odemknutí, opakované použití hesla a povolit bluetooth sdílení pracovních kontaktů. Konfigurace zařízení jako veřejný terminál pro spuštění aplikace jeden nebo více aplikací.
+description: Na Androidu Enterprise nebo zařízení Android for Work omezení nastavení na zařízení, včetně kopírování a vkládání, zobrazit oznámení, oprávnění aplikací, sdílení dat, délky hesla, neúspěšných přihlášení, použijte otisků prstů k odemknutí, opakované použití hesla a povolit bluetooth sdílení pracovních kontaktů. Konfigurace zařízení jako veřejný terminál vyhrazenou zařízení ke spuštění aplikace jeden nebo více aplikací.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e79572b6815f2aded8f3145969beac4233e415b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 0c69d45794b1d40915fbd09bae557916a9daa591
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844220"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742699"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
-Tento článek uvádí a popisuje různá nastavení, které můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, spuštění aplikace v režimu veřejného terminálu, ovládací prvek zabezpečení a další.
+Tento článek uvádí a popisuje různá nastavení, které můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, spouštění aplikací na zařízení vyhrazená, ovládací prvek zabezpečení a další.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -69,7 +69,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
   - **Výchozí ze zařízení**: Použijte výchozí nastavení zařízení.
   - **Automatické**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
   - **Postponed**: Aktualizace jsou odložené po dobu 30 dnů. Na konci na 30 dnů Android se zobrazí výzva k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
-  - **Časové období údržby**: Nainstaluje aktualizace automaticky během denní údržby, kterou jste nastavili v Intune. Instalace pokusí denně po dobu 30 dnů a může selhat, pokud je nedostatek místa či baterie úrovněmi. Po 30 dnech Android se zobrazí výzva k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazené zařízení, jako jsou veřejné terminály, jako veřejný terminál s jednou aplikací popředí aplikace je možné aktualizovat.
+  - **Časové období údržby**: Nainstaluje aktualizace automaticky během denní údržby, kterou jste nastavili v Intune. Instalace pokusí denně po dobu 30 dnů a může selhat, pokud je nedostatek místa či baterie úrovněmi. Po 30 dnech Android se zobrazí výzva k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazené zařízení, jako jsou veřejné terminály, jako vyhrazená zařízení jedné aplikace popředí aplikace je možné aktualizovat.
 - **Automatické aktualizace aplikací**: Zvolte, pokud mají automatické aktualizace instalovat. Možnosti:
   - **Není nakonfigurováno**
   - **Výběr uživatele**
@@ -85,47 +85,48 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 - **Kontrola ohrožení aplikací**: **Vyžadovat** , který vynucuje **ověřovat aplikace** nastavení je povoleno pro pracovní a osobní profily.
 
-### <a name="kiosk-settings"></a>Nastavení veřejného terminálu
+### <a name="dedicated-device-settings"></a>Nastavení vyhrazená zařízení
 
-Můžete nakonfigurovat na zařízení běžela jedna aplikace nebo velký počet aplikací. Když se zařízení v celoobrazovkovém režimu, jsou k dispozici pouze aplikace, které přidáte. Tato nastavení platí pro zařízení s Androidem vyhrazené ale ne na Android plně spravovat vyhrazená zařízení.
+Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální styl vyhrazená zařízení. Můžete nakonfigurovat na zařízení běžela jedna aplikace nebo spuštění velký počet aplikací. Když je zařízení nastavená pomocí celoobrazovkový režim, jsou k dispozici pouze aplikace, které přidáte. Tato nastavení platí pro zařízení s Androidem Enterprise dedicated. Se nevztahují na zařízení s Androidem Enterprise, plně spravovaná.
 
-**Celoobrazovkový režim**: Zvolte, pokud zařízení spustí aplikaci jednu nebo více aplikací.
+**Celoobrazovkový režim**: Zvolte, pokud zařízení spouští jednu aplikaci nebo spuštění více aplikací.
 
-- **Veřejný terminál aplikace s jedním**: Uživatelé můžou používat jenom jednu aplikaci na zařízení. Při spuštění zařízení spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
+- **Aplikace s jedním**: Uživatelé můžou používat jenom jednu aplikaci na zařízení. Při spuštění zařízení spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
 
   **Kroky**
   1. Zvolte **Vyberte spravovanou aplikaci**a vyberte ze seznamu spravovaných aplikací Google Play. 
 
-      Pokud nemáte žádné aplikace, pak uvedené [přidat některé aplikace pro Android](apps-add-android-for-work.md) do zařízení. Nezapomeňte [přiřadit aplikace do skupiny zařízení, vytvořené pro vaše zařízení v celoobrazovkovém režimu](apps-deploy.md).
+      Pokud nemáte žádné aplikace, pak uvedené [přidat některé aplikace pro Android](apps-add-android-for-work.md) do zařízení. Nezapomeňte [přiřadit aplikace do skupiny zařízení, vytvořené pro vyhrazené zařízení](apps-deploy.md).
 
   2. Zvolte **OK** > **OK** a přidejte tak aplikaci.
 
-- **Veřejný terminál s více aplikacemi**: Uživatelé můžou používat omezenou sadu aplikací na zařízení. Při spuštění zařízení, spustit pouze aplikace, které přidáte. Můžete také přidat některé webové odkazy, které uživatelé můžou otevírat. Když se zásady vztahují, uživatelé uvidí ikony pro povolené aplikace na domovské obrazovce.
+- **S více aplikacemi**: Uživatelé můžou používat omezenou sadu aplikací na zařízení. Při spuštění zařízení, spustit pouze aplikace, které přidáte. Můžete také přidat některé webové odkazy, které uživatelé můžou otevírat. Když se zásady vztahují, uživatelé uvidí ikony pro povolené aplikace na domovské obrazovce.
 
-  > [DŮLEŽITÉ] Pro zařízení v celoobrazovkovém režimu s více aplikacemi [spravované domovskou obrazovku aplikace](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) na webu Google Play **musí být**:
+  > [!IMPORTANT]
+  > S více aplikacemi vyhrazená zařízení, [spravované domovskou obrazovku aplikace](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) na webu Google Play **musí být**:
   >   - [Přidat jako klientskou aplikaci](apps-add-android-for-work.md) v Intune
-  >   - [Přiřazené ke skupině zařízení](apps-deploy.md) vytvořené pro vaše zařízení v celoobrazovkovém režimu
+  >   - [Přiřazené ke skupině zařízení](apps-deploy.md) vytvořené pro vyhrazená zařízení
   > 
   > **Spravované domovskou obrazovku** aplikace nemusí být v profilu konfigurace, ale je potřeba přidat jako klientská aplikace. Když **spravované domovskou obrazovku** aplikace se přidá jako klientskou aplikaci, všechny ostatní aplikace, které přidáte do configiration profilu se zobrazují jako ikony na **spravované domovskou obrazovku** aplikace. 
 
   - Zvolte **přidat**a vyberte ze seznamu aplikací.
 
-    Pokud **spravované domovskou obrazovku** aplikace není uvedená, pak [přidat na webu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](apps-deploy.md) do skupiny zařízení, vytvořené pro vaše zařízení v celoobrazovkovém režimu.
+    Pokud **spravované domovskou obrazovku** aplikace není uvedená, pak [přidat na webu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](apps-deploy.md) do skupiny zařízení, vytvořené pro vyhrazená zařízení.
 
-    Můžete také přidat další [aplikace pro Android](apps-add-android-for-work.md) a [webové aplikace](web-app.md) vytvořená vaší organizací na zařízení. Nezapomeňte [přiřadit aplikace do skupiny zařízení, vytvořené pro vaše zařízení v celoobrazovkovém režimu](apps-deploy.md).
+    Můžete také přidat další [aplikace pro Android](apps-add-android-for-work.md) a [webové aplikace](web-app.md) vytvořená vaší organizací na zařízení. Nezapomeňte [přiřadit aplikace do skupiny zařízení, vytvořené pro vyhrazené zařízení](apps-deploy.md).
 
-  - **Virtuální tlačítko Domů**: Zvolte **povolit** na zařízení beznabídkového režimu Zobrazit tlačítko Domů. Při výběru, vrátí uživatele na domovské obrazovce zařízení, uživatelé mohou snadno přepínat mezi aplikacemi. Na některých zařízeních s Androidem můžou uživatelé muset potažením prstem přejděte na obrazovce zobrazit tlačítko Domů. **Zakázat** nezobrazí tlačítko Domů, takže uživatelé musí použijte tlačítko Zpět. Chcete-li přepnout mezi aplikacemi.
-  - **Ukončit režim veřejného terminálu**: Zvolte **povolit** umožňují správcům dočasně pozastavit celoobrazovkový režim pro aktualizaci zařízení. Pokud chcete používat tuto funkci, správce provede následující akce: 
+  - **Virtuální tlačítko Domů**: Zvolte **povolit** na vyhrazené zařízení zobrazit tlačítko Domů. Při výběru, vrátí uživatele na domovské obrazovce zařízení, uživatelé mohou snadno přepínat mezi aplikacemi. Na některých zařízeních s Androidem můžou uživatelé muset potažením prstem přejděte na obrazovce zobrazit tlačítko Domů. **Zakázat** nezobrazí tlačítko Domů, takže uživatelé musí použijte tlačítko Zpět. Chcete-li přepnout mezi aplikacemi.
+  - **Ukončit režim veřejného terminálu**: Zvolte **povolit** umožňují správcům dočasně pozastavit celoobrazovkový režim pro aktualizaci zařízení. Chcete-li použít tuto funkci, správce: 
   
     1. Dál vyberte tlačítko Zpět. až se zobrazí tlačítko "Konec veřejného terminálu". 
-    2. Klikněte na tlačítko a zadejte **ponechte kódu celoobrazovkový režim** PIN kód.
+    2. Vybere tlačítko a přejde **ponechte kódu celoobrazovkový režim** PIN kód.
     3. Po dokončení změn, vyberte **spravované domovskou obrazovku** aplikace. Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi. 
     
     **Zakázat** nedává možnost pozastavit beznabídkový režim. Pokud správce pokračuje s výběrem tlačítka Zpět a vybere tlačítko "Konec veřejného terminálu", pak zobrazí zpráva, že heslo je povinné.
     
     - **Ponechte kódu celoobrazovkový režim**: Zadejte číslice 4 až 6 číselný kód PIN. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
  
-  - **Nastavit vlastní adresu URL pozadí**: Zadejte adresu URL přizpůsobení pozadí obrazovky na zařízení beznabídkového režimu.
+  - **Nastavit vlastní adresu URL pozadí**: Zadejte adresu URL přizpůsobení pozadí obrazovky na vyhrazené zařízení.
 
 ### <a name="device-password-settings"></a>Nastavení hesla zařízení
 
@@ -288,4 +289,4 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také vytvořit profily beznabídkového režimu pro [Android](device-restrictions-android.md#kiosk) a [Windows 10](kiosk-settings.md) zařízení.
+Můžete také vytvořit vyhrazený zařízení profily beznabídkového režimu pro [Android](device-restrictions-android.md#kiosk) a [Windows 10](kiosk-settings.md) zařízení.

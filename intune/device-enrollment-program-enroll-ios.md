@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60364d01f4ba4ca83ff91226f7738ec095e9152e
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f1243bba6158307797744972bf404735c6b8a68a
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849246"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742665"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -102,8 +102,13 @@ V Intune na portálu Azure Portal zadejte Apple ID pro budoucí použití.
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token"></a>Krok 4. Nahrajte token.
-V poli **Token Apple** přejděte k souboru certifikátu (.pem), zvolte **Otevřít** a pak zvolte **Vytvořit**. S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních. Intune se automaticky synchronizuje s Apple, aby bylo možné zobrazit účet registračního programu.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4. Nahrajte token a zvolte značky oboru.
+
+1. V **token pro Apple** pole, vyhledejte soubor certifikátu (.pem), zvolte **otevřít**.
+2. Pokud chcete použít [značky oboru](scope-tags.md) tento token DEP zvolte **obor (značky)** a vyberte značky oboru, které chcete. Značky oboru u tokenu zdědí profilů a zařízení přidat do tohoto tokenu.
+3. Zvolte **Vytvořit**.
+
+S certifikátem Push Certificate může Intune registrovat a spravovat zařízení s iOSem a vynucovat zásady na zaregistrovaných mobilních zařízeních. Intune se automaticky synchronizuje s Apple, aby bylo možné zobrazit účet registračního programu.
 
 ## <a name="create-an-apple-enrollment-profile"></a>Vytvoření registračního profilu Apple
 

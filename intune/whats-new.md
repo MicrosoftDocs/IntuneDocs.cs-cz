@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65370710f409d028871695de22829f64e82bf54e
-ms.sourcegitcommit: 67e4e66e8c05b36c0897fb2955ef68666d22b094
+ms.openlocfilehash: f1212f0d2afb1f5201af6c29201564e104b1c26c
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56426973"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742784"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -45,16 +45,147 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 
 -->     
 
-## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019
+## <a name="week-of-february-18-2019"></a>Týden od 18. února 2019
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="intune-will-leverage-google-play-protect-apis-on-android-devices----2577355-eeready-wnready---"></a>Intune bude využívat služby Google Play API chránit na zařízení s Androidem <!-- 2577355 eeready wnready -->
+Někteří správci IT potýkají s na šířku BYOD, kde koncoví uživatelé uvíznout kořenová nebo jailbreaking svůj mobilní telefon. Toto chování, když někdy není nesprávně míněný, výsledkem jednorázové přihlášení řada zásad Intune, které jsou nastaveny, aby bylo možné chránit data vaší organizace na zařízeních koncových uživatelů. Proto Intune poskytuje detekce rootů a jailbreaků pro zařízení zaregistrovaná a zruší. V této vydané verzi bude Intune využívat nyní Google Play ochrana rozhraní API pro přidání do naší stávající zjišťování kontroly kořenové pro neregistrovaná zařízení. Zatímco Google nesdílí rozsahu zjišťování kontroly kořenové, ke kterým dochází, Očekáváme, že tato rozhraní API pro detekci uživatelé, kteří mají jejich zařízení z jakéhokoli důvodu z vlastního nastavení zařízení, abyste mohli získat novější aktualizace operačního systému na starší zařízení s rootem. Tito uživatelé mohou pak blokovat přístup k podnikovým datům, nebo jejich podnikové účty se můžou vymazat z jejich povolené zásadou. Pro další hodnoty, správce IT budou mít několik sestav aktualizací v rámci okna Intune App Protection – "Uživatelé označení příznakem" sestava bude obsahovat, kteří uživatelé jsou zjištěny přes Google Play Protect kontrola SafetyNet API "Potenciálně škodlivé aplikace" sestavy se Zobrazit aplikace, které jsou zjištěny prostřednictvím ověření aplikace rozhraní API společnosti Google skenování. Tato funkce je dostupná v systému Android.
+
+#### <a name="win32-app-information-available-in-troubleshooting-blade----2617342-eeready-wnready---"></a>Informace pro aplikace Win32 k dispozici v okně řešení potíží <!-- 2617342 eeready wnready -->
+Lze shromažďovat soubory protokolů selhání instalace aplikace Win32 z aplikace Intune **Poradce při potížích s** okno. Další informace o řešení potíží s instalací aplikace najdete v tématu [řešit problémy při instalaci aplikace](troubleshoot-app-install.md) a [Win32 řešení problémů s aplikací](apps-win32-app-management.md#troubleshoot-win32-app-issues).
+
+#### <a name="app-status-details-for-ios-apps----3761235-eeready-wnready---"></a>Podrobnosti o stavu aplikace pro aplikace pro iOS <!-- 3761235 eeready wnready -->
+Existují nové aplikace instalace chybové zprávy související s tímto:
+- Selhání aplikace VPP při instalaci na sdílený iPad
+- Chyba při app storu je zakázaná.
+- Nepodařilo se najít licence VPP pro aplikaci
+- Selhání instalace aplikace pro systém s poskytovatele řešení MDM.
+- Nepodařilo se nainstalovat aplikace, když je zařízení v režimu ztráty nebo celoobrazovkový režim
+- Nepodařilo se nainstalovat aplikaci, když uživatel není přihlášen k App Store
+
+V Intune, vyberte **klientské aplikace** > **aplikace** > "Název aplikace" > **stav instalace zařízení**. Bude k dispozici v nové chybové zprávy **podrobnosti o stavu** sloupce.
+
+#### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready---"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780 wnready -->
+Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
+
+#### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Dodržování předpisů aplikace Power BI <!-- 1455231 doc-work-item -->
+Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app). Další aktualizace datového skladu Intune, najdete v části [nadcházející změny rozhraní API datového skladu Intune](whats-new.md#upcoming-change-to-the-intune-data-warehouse-api).
+
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="powershell-scripts-can-run-in-a-64-bit-host-on-64-bit-devices----1862675-eeready-wnready---"></a>Skripty prostředí PowerShell můžete spustit na hostiteli 64-bit na 64bitových zařízeních <!-- 1862675 eeready wnready -->
+Při přidání skriptu prostředí PowerShell do konfiguračního profilu zařízení se skript spustí vždy v 32bitové i v 64bitových operačních systémech. S touto aktualizací správce můžete spustit skript v hostitelském prostředí PowerShell 64-bit na 64bitových zařízeních (**konfigurace zařízení** > **skripty prostředí PowerShell**  >   **Přidat** > **konfigurovat** > **spuštění skriptu v 64bitovém hostitele prostředí PowerShell**).
+
+Další podrobnosti o použití prostředí PowerShell najdete v tématu [Powershellové skripty do Intune](intune-management-extension.md).
+
+Platí pro: Windows 10 a novější
 
 #### <a name="macos-users-are-prompted-to-update-their-password----1873216---"></a>macOS uživatelům se výzva k aktualizaci hesla <!-- 1873216 -->
-
 Vynucování Intune **ChangeAtNextAuth** nastavení na zařízení s macOS. Toto nastavení má vliv na koncové uživatele a zařízení, která mají zásady dodržování předpisů pro hesla nebo profily omezení zařízení s heslem. Koncovým uživatelům se výzva jednou aktualizovat své heslo. Tuto výzvu dojde pokaždé, když se uživatel poprvé spustí úlohu, která vyžaduje ověření, jako je například přihlášení k zařízení. Uživatelé mohou také vyzváni k aktualizovat své heslo, když teď zrovna nic nedělá, která vyžaduje oprávnění správce, například požadavek na přístup do řetězce klíčů. 
 
 Jakákoli změna zásady nové nebo stávající heslo správce vyzve koncovým uživatelům aktualizovat své heslo.
 
 Platí pro:  
 macOS
+
+#### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521--wnready----"></a>Přiřadit zařízení bez uživatelů macOS certifikáty SCEP    <!-- 2340521  WNready  -->
+Můžete přiřadit certifikát protokolu SCEP (Simple Enrollment) certifikáty pomocí atributů zařízení pro zařízení s macOS, včetně zařízení bez přidružení uživatele a přiřadit profil certifikátu Wi-Fi nebo profily sítě VPN. Tím se rozšiřují podporu jsme již [přiřadit zařízení bez přidružení uživatele s certifikáty SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) , na kterých běží Windows, iOS a Android.  Tato aktualizace přidává možnost vybrat si certifikát typu *zařízení* při konfiguraci profilu certifikátu SCEP systému MacOS.
+
+#### <a name="intune-conditional-access-ui-update------2432313--wnready---"></a>Aktualizace uživatelského rozhraní podmíněného přístupu Intune   <!-- 2432313  WNready -->
+Vylepšili jsme v uživatelském rozhraní podmíněného přístupu v konzole Intune. Mezi ně patří:
+-  Nahradí Intune *podmíněného přístupu* okna okno ze služby Azure Active Directory. To zajistí, že budete mít přístup k široké spektrum konfigurace a nastavení pro [podmíněného přístupu] ((které zůstává technologie Azure AD), z konzoly v Intune. 
+- Jsme jste přejmenovali *přístup k místnímu* okna *přístup k Exchangi*a přemístění *konektoru služby Exchange* instalační program pro toto okno byl přejmenován.  Tato změna konsoliduje, kde jste [konfigurovat a monitorovat podrobnosti související s Exchange online a místně](exchange-connector-install.md).  
+
+#### <a name="kiosk-browser-and-microsoft-edge-browser-apps-can-run-on-windows-10-devices-in-kiosk-mode----2935135-eeready-wnready---"></a>Prohlížeč beznabídkového režimu a prohlížeče Microsoft Edge aplikace můžou běžet na zařízeních s Windows 10 v celoobrazovkovém režimu. <!-- 2935135 eeready wnready -->
+Zařízení s Windows 10 můžete použít v beznabídkovém režimu spouštět jedna aplikace nebo velký počet aplikací. Tato aktualizace zahrnuje několik změn pomocí aplikace prohlížeče v režimu veřejného terminálu, včetně:
+
+- Přidat do prohlížeče Microsoft Edge nebo prohlížeči Kiosk spuštěné jako aplikace na zařízení beznabídkového režimu (**konfigurace zařízení** > **profily** > **nový profil**  >  **Windows 10 a novější** pro platformu > **veřejného terminálu** pro typ profilu).
+- Nové funkce a nastavení jsou k dispozici pro povolení nebo zakázání (**konfigurace zařízení** > **profily** > **nový profil**  >  **Windows 10 a novější** pro platformu > **omezení zařízení** pro typ profilu), včetně:
+
+  - Prohlížeč Microsoft Edge:
+    - Režim veřejného terminálu použijte Microsoft Edge
+    - Aktualizujte prohlížeč po nečinnosti
+
+ - Oblíbené položky a hledání:
+    - Povolit změny v hledání modulu
+
+Seznam nastavení najdete v tématu:
+
+- [Windows 10 a novější zařízení nastavení pro spuštění jako jako veřejný terminál](kiosk-settings-windows.md)
+- [Omezení zařízení prohlížeče Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser)
+- [Oblíbené položky a omezení hledání zařízení](device-restrictions-windows-10.md##favorites-and-search)
+
+Platí pro: Windows 10 a novější
+
+#### <a name="new-device-restriction-settings-for-ios-and-macos-devices----3448774-eeready-wnready---"></a>Nová nastavení omezení zařízení pro zařízení s Iosem a macOS <!-- 3448774 eeready wnready -->
+Můžete omezit některá nastavení a funkcí na zařízeních s iOS a macOS (**konfigurace zařízení** > **profily** > **nový profil**  >  **iOS** nebo **macOS** pro platformu > **omezení zařízení** pro typ profilu). Tato aktualizace přidává další funkce a nastaveních, pomocí kterých můžete řídit, včetně nastavení času obrazovky, změna karty eSIM a mobilní plány a další nastavení na zařízeních s Iosem. Také přičemž dojde ke zpoždění uživatele viditelnost aktualizace softwaru a blokování ukládání obsahu do mezipaměti na zařízeních s macOS. 
+
+Pokud chcete zobrazit, funkcích a nastaveních, pomocí kterých můžete omezit, naleznete v tématu:
+
+- [nastavení omezení zařízení s Iosem](device-restrictions-ios.md)
+- [nastavení omezení zařízení s macOS](device-restrictions-macos.md)
+
+Platí pro:
+
+- iOS
+- macOS
+
+#### <a name="kiosk-devices-are-now-called-dedicated-devices-on-android-enterprise-devices----3598402-eeready-wnready---"></a>Zařízení v "celoobrazovkovém režimu" se teď nazývají "Vyhrazená zařízení" v zařízeních s Androidem Enterprise <!-- 3598402 eeready wnready -->
+Aby bylo v souladu s Androidem terminologií **veřejného terminálu** se změní na **vyhrazená zařízení** pro zařízení s Androidem enterprise (**konfigurace zařízení**  >  **Profily** > **vytvořit profil** > **pro platformu Android enterprise > ** jenom vlastník zařízení > omezení zařízení**  >  **Vyhrazená zařízení**).
+
+Pokud chcete zobrazit dostupná nastavení, přejděte na [nastavení zařízení a povolení nebo zakázání funkce](device-restrictions-android-for-work.md#dedicated-device-settings).
+
+Platí pro:  
+Android Enterprise
+
+#### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850-3803313-eeready-wnready---"></a>Safari a odložením uživatele aktualizace softwaru iOS viditelnost, které nastavení se přesouvají v Uživatelském rozhraní Intune <!-- 3640850, 3803313 eeready wnready -->
+Pro zařízení s Iosem můžete nastavit Safari, nastavení a konfigurace aktualizací softwaru. V této aktualizaci se tato nastavení přesouvají do různých částí uživatelského rozhraní Intune:
+
+- Nastavení prohlížeče Safari přesunuta z **Safari** (**konfigurace zařízení** > **profily** > **nový profil**  >  **iOS** pro platformu > **omezení zařízení** pro typy profilů) k  **[integrované aplikace](device-restrictions-ios.md#built-in-apps)**.
+- **Zpoždění viditelnost aktualizace softwaru uživatele pro zařízení s Iosem pod dohledem** nastavení (**aktualizace softwaru** > **aktualizovat zásady pro iOS**) přechází na  **Omezení zařízení** > **[Obecné](device-restrictions-ios.md#general)**.  Podrobnosti o vlivu na existující zásady najdete v tématu [aktualizace softwaru iOS](software-updates-ios.md#configure-the-policy). 
+
+Seznam nastavení najdete v tématu:
+
+- [omezení zařízení s Iosem](device-restrictions-ios.md) 
+- [aktualizace softwaru v Iosu](software-updates-ios.md)
+
+Tato funkce platí pro: 
+
+- iOS
+
+#### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164-eeready-wnready---"></a>Povolení omezení v nastavení zařízení bylo přejmenováno na čas obrazovky na zařízeních s Iosem <!-- 3699164 eeready wnready -->
+Můžete nakonfigurovat **povolení omezení v nastavení zařízení** na hlídaných zařízeních s Iosem (**konfigurace zařízení** > **profily**  >  **Nový profil** > **iOS** pro platformu > **omezení zařízení** pro typy profilů > **Obecné**). V této aktualizaci se toto nastavení bylo přejmenováno na **čas obrazovky (jenom pod dohledem)**. 
+
+Chování je stejné. Konkrétně: 
+
+- iOS 11.4.1 a dříve: **Blok** zabrání koncovým uživatelům vlastní omezení v nastavení zařízení. 
+- iOS 12,0 a novější: **Blok** koncovým uživatelům zabrání v nastavení své vlastní **obrazovky čas** v nastavení zařízení, včetně omezení obsahu a ochrana osobních údajů. Zařízení upgradovat operační systém na iOS 12.0 už nezobrazí na kartě omezení v nastavení zařízení. Tato nastavení jsou v **obrazovky čas**. 
+
+Seznam nastavení najdete v tématu [omezení zařízení s Iosem](device-restrictions-ios.md#general).
+
+Platí pro: 
+- iOS
+
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="rename-an-enrolled-windows-device----1911112-eeready-wnready--"></a>Přejmenovat zaregistrovaná zařízení s Windows <!-- 1911112 eeready wnready-->
+Nyní můžete přejmenovat zaregistrovaná zařízení s Windows 10 (RS4 nebo novější). Chcete-li provést, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení > **přejmenování zařízení**.
+
+#### <a name="auto-assign-scope-tags-to-resources-created-by-an-admin-with-that-scope----3173823-eeready-wnready--"></a>Umožňuje automaticky přiřazovat značky oboru na prostředky vytvořené v rámci správce v tomto oboru <!-- 3173823 eeready wnready-->
+Když správce vytvoří prostředek, všechny značky oboru přiřazeno správce automaticky přiřadí tyto nové prostředky.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="failed-enrollment-report-moves-to-the-device-enrollment-blade----3560202-eeready-wnready--"></a>Sestava selhání registrace přesune do okna pro registraci zařízení <!-- 3560202 eeready wnready-->
+**Nepovedlo registrace** sestava byla přesunuta do **monitorování** část **registrace zařízení** okno. Přidali jsme dva nové sloupce (způsob registrace a verze operačního systému).
+
+#### <a name="company-portal-abandonment-report-renamed-to-incomplete-user-enrollments---3815076-eemiss-wnready--"></a>Firemní portál zřeknutí sestavy přejmenován na nekompletní uživatele registrací <!--3815076 eemiss wnready-->
+**Portál společnosti zřeknutí** sestava byla přejmenována na **registrací neúplné uživatele**.
+
+
 
 ## <a name="week-of-february-4-2019"></a>Týden od 4. února 2019
 
@@ -894,7 +1025,7 @@ Pokud chcete vytvořit profil, otevřete položku **Konfigurace zařízení** > 
 Platí pro Windows 10 a novější.
 
 #### <a name="kiosk---obsolete-is-grayed-out-and-cant-be-changed----2149998---"></a>Položka Veřejný terminál (zastaralé) se zobrazí šedě a nebude umožňovat změny <!-- 2149998 -->
-[Funkce Veřejný terminál](device-restrictions-windows-10.md#kiosk-preview---obsolete) (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > **Windows 10 a novější** > **Omezení zařízení**) je nyní zastaralá a nahrazuje ji [nastavení veřejného terminálu pro Windows 10 a novější](kiosk-settings.md). Položka **Veřejný terminál (zastaralé)** se v této aktualizaci zobrazuje šedě a uživatelské rozhraní neumožňuje změny ani aktualizace. 
+Beznabídkový režim (preview) funkce (**konfigurace zařízení** > **profily** > **vytvořit profil**  >   **Windows 10 a novější** > **omezení zařízení**) je zastaralý a nahrazen [nastavení beznabídkového režimu pro Windows 10 a novější](kiosk-settings.md). Položka **Veřejný terminál (zastaralé)** se v této aktualizaci zobrazuje šedě a uživatelské rozhraní neumožňuje změny ani aktualizace. 
 
 Pokud budete chtít povolit režim veřejného terminálu, podívejte se na článek[Nastavení veřejného terminálu pro Windows 10 a novější](kiosk-settings.md).
 
@@ -1385,6 +1516,13 @@ Pokud si chcete nový vzhled prohlédnout, přejděte na [Co je nového v uživa
 Nově můžete chránit přístup k místním datům systému Exchange z Outlooku Mobile prostřednictvím zásad ochrany aplikací Intune a podmíněného přístupu. Pokud chcete na portálu Azure Portal přidat nebo upravit zásady ochrany aplikací, vyberte **Microsoft Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/en-us/library/mt846639(v=exchg.160).aspx).
 
 ## <a name="notices"></a>Sdělení
+
+###  <a name="upcoming-change-to-the-intune-data-warehouse-api"></a>Nadcházející změny rozhraní API datového skladu Intune
+Budeme během doby 1903 provádět dvě změny:
+- Vyřazení filtr beta<br>
+    Vyřazení nepodporované beta filtry vytvořena instance. Ovlivněné zákazníků byla e-mailem.   
+- 1.0 změny odráží zpět na verzi beta<br>
+    Změny provedené v našich v1.0 kolekcí se projeví nyní ve verzi beta.  
 
 ### <a name="upcoming-password-enforcement-change-for-macos-10142-in-intune---1873216--"></a>Vynucení nadcházející heslo změnit pro 10.14.2 macOS v Intune <!--1873216-->
 Jsme oznámili v MC145129 zpět v červenci, že Intune se chystá integrace Apple nově vydané "Změnit heslo na další ověřování" nastavení pro zařízení s macOS 10.13 verze a vyšší. Chcete-li vrátit toto nastavení v únoru pro macOS 10.14.2 aktuálně plánujeme nebo novější. 

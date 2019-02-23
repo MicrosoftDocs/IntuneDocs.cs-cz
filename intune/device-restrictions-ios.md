@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune; seodec18
@@ -15,48 +15,95 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7f5c09dca64b227daf21c8a492221a5e025cb20
-ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
+ms.openlocfilehash: 90405b61bd21a96e27e9654a496068d06e368b61
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56458922"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742716"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Tento článek uvádí a popisuje různá nastavení, které můžete řídit na zařízeních s Iosem. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavte pravidla pro hesla, povolení nebo zakázání konkrétní aplikace a další.
 
 Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené do zařízení iOS.
 
 ## <a name="before-you-begin"></a>Před zahájením
-[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md).
+
+[Vytvořit profil konfigurace zařízení omezení](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="general"></a>Obecné
 
-- **Sdílet data o využití**: Zvolte **bloku** zabránit zařízení odesílat data diagnostiky a použití společnosti Apple. **Není nakonfigurováno** umožňuje tato data k odeslání.
-  - **Odeslání diagnostických dat**: **Blok** zabrání uživateli ve změně odesílání a app analytics nastavení diagnostiky v **využití a Diagnostika** (nastavení zařízení). Pokud chcete použít toto nastavení, musí být zařízení v režimu pod dohledem (iOS 9.3.2 a novější). **Není nakonfigurováno** umožňuje uživateli změnit nastavení těchto zařízení.
-- **Snímek obrazovky**: Zvolte **bloku** zabránit snímky obrazovky a obrazovky zachycuje na zařízení. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
-  - **Sledování vzdálených obrazovek v aplikaci Classroom (jenom pod dohledem)**: Zvolte **bloku** zabránit aplikaci Classroom vzdáleně zobrazovat obrazovku na zařízení. Pokud chcete použít toto nastavení, musí být zařízení v režimu pod dohledem (iOS 9.3 a novější). **Není nakonfigurováno** umožňuje aplikaci Apple Classroom zobrazovat obrazovku.
-  - **Sledování obrazovek v aplikaci Classroom (jenom pod dohledem)**: Pokud hodnotu **povolit**, učitelé můžou sledovat obrazovky zařízení s Iosem studentů pomocí aplikace Classroom bez vědomí na studentů. Zařízení studentů zaregistrovaná do třídy přes aplikaci Classroom automaticky udělení oprávnění pro daného kurzu. **Není nakonfigurováno** brání tuto funkci.
-- **Nedůvěryhodné certifikáty TLS**: Zvolte **bloku** zabránit nedůvěryhodné certifikáty zabezpečení TLS (Transport Layer) na zařízení. **Není nakonfigurováno** umožňuje certifikáty protokolu TLS.
-- **Vztah důvěryhodnosti podnikové aplikace**: Zvolte **bloku** odebrat **důvěřovat vývojáři organizace** tlačítko v Nastavení > Obecné > Správa profilů a zařízení na zařízení. **Není nakonfigurováno** umožňuje uživateli vybrat možnost, že důvěřuje aplikacím, které nebudou staženy z app storu.
-- **Účtu (jenom pod dohledem)**: Pokud je nastavena na **bloku**, uživatel nemůže aktualizovat nastavení pro konkrétní zařízení z aplikace pro nastavení Iosu. Uživatele nelze například vytváření nových účtů zařízení nebo změnit uživatelské jméno nebo heslo. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
+- **Sdílet data o využití**: Zvolte **bloku** zabránit zařízení odesílat data diagnostiky a použití společnosti Apple. **Není nakonfigurováno** (výchozí), umožňuje tato data k odeslání.
+  - **Úpravy nastavení odesílání diagnostických informací (jenom pod dohledem)**: **Blok** zabrání uživateli ve změně odesílání a app analytics nastavení diagnostiky v **využití a Diagnostika** (nastavení zařízení). **Není nakonfigurováno** (výchozí) umožňuje uživateli změnit nastavení těchto zařízení.
+
+    Tato funkce platí pro:  
+    - iOS 9.3.2 a novější
+
+- **Snímek obrazovky**: Zvolte **bloku** zabránit snímky obrazovky a obrazovky zachycuje na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek.
+  - **Sledování vzdálených obrazovek v aplikaci Classroom (jenom pod dohledem)**: Zvolte **bloku** zabránit aplikaci Classroom vzdáleně zobrazovat obrazovku na zařízení. **Není nakonfigurováno** (výchozí) umožňuje aplikaci Apple Classroom zobrazovat obrazovku.
+
+    Tato funkce platí pro:  
+    - iOS 9.3 nebo novější
+
+  - **Sledování obrazovek v aplikaci Classroom (jenom pod dohledem)**: Pokud hodnotu **povolit**, učitelé můžou sledovat obrazovky zařízení s Iosem studentů pomocí aplikace Classroom bez vědomí na studentů. Zařízení studentů zaregistrovaná do třídy přes aplikaci Classroom automaticky udělení oprávnění pro daného kurzu. **Není nakonfigurováno** této funkce zabraňuje (výchozí).
+- **Nedůvěryhodné certifikáty TLS**: Zvolte **bloku** zabránit nedůvěryhodné certifikáty zabezpečení TLS (Transport Layer) na zařízení. **Není nakonfigurováno** umožňuje certifikáty TLS (výchozí).
+- **Vztah důvěryhodnosti podnikové aplikace**: Zvolte **bloku** odebrat **důvěřovat vývojáři organizace** tlačítko v Nastavení > Obecné > Správa profilů a zařízení na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům zvolit možnost, že důvěřuje aplikacím, které nebudou staženy z app storu.
+- **Účtu (jenom pod dohledem)**: Pokud je nastavena na **bloku**, uživatel nemůže aktualizovat nastavení pro konkrétní zařízení z aplikace pro nastavení Iosu. Uživatele nelze například vytváření nových účtů zařízení nebo změnit uživatelské jméno nebo heslo. **Není nakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
+
   Tato funkce platí také pro nastavení dostupná z aplikace pro nastavení Iosu, například e-mailu, kontakty, kalendáře, Twitter a další. Tato funkce neplatí pro aplikace s nastavením účtu, které nejsou konfigurovatelné z aplikace pro nastavení Iosu, jako je například aplikace Microsoft Outlook.
-- **Povolení omezení v nastavení zařízení (jenom pod dohledem)**: Zvolte **bloku** uživatelům zabránit v povolení omezení v nastavení zařízení. **Není nakonfigurováno** umožní uživateli konfiguraci omezení zařízení (například rodičovské kontroly) na zařízení.
-- **Vymazání veškerého obsahu a možnost nastavení na zařízení (jenom pod dohledem)**: Zvolte **bloku** , uživatelé nemůžou používat vymazání veškerého obsahu a možnost nastavení na zařízení (jenom pod dohledem). **Není nakonfigurováno** poskytuje uživatelům přístup k těmto nastavením.
-- **Změny názvu zařízení (jenom pod dohledem)**: Zvolte **bloku** , nelze změnit název zařízení. **Není nakonfigurováno** umožňuje uživateli změnit název zařízení.
-- **Úprava nastavení oznámení (jenom pod dohledem)**: Zvolte **bloku** tak nastavení oznámení nelze změnit. **Není nakonfigurováno** umožní uživateli přenastavit v zařízení oznámení.
-- **Úprava tapety (jenom pod dohledem)**: **Blok** zabrání změně tapetu. **Není nakonfigurováno** umožňuje uživateli změnit v zařízení tapetu.
-- **Podnikové aplikace úpravy nastavení vztahu důvěryhodnosti (jenom pod dohledem)**: **Blok** zabrání uživateli ve změně nastavení vztahu důvěryhodnosti podnikových aplikací na zařízeních pod dohledem. **Není nakonfigurováno** umožňuje uživateli možnost, že důvěřuje aplikacím, které nebudou staženy z app storu.
-- **Změny profilu konfigurace (jenom pod dohledem)**: **Blok** brání změny profilu konfigurace zařízení. **Není nakonfigurováno** povolí uživateli instalovat konfigurační profily.
+- **Obrazovky (jenom pod dohledem) čas**: Zvolte **bloku** uživatelům zabránit v jejich vlastní omezení v čase obrazovky (nastavení zařízení). **Není nakonfigurováno** umožní uživateli konfiguraci omezení zařízení (například rodičovské nebo obsah a omezení ochrany osobních údajů) v zařízení.
+
+  Toto nastavení se přejmenoval z **povolení omezení v nastavení zařízení**. Dopad této změny:  
+  
+  - iOS 11.4.1 a dříve: **Blok** zabrání koncovým uživatelům vlastní omezení v nastavení zařízení. Jedná se o stejné; a neexistují žádné změny pro koncové uživatele.
+  - iOS 12,0 a novější: **Blok** koncovým uživatelům zabrání v nastavení své vlastní **obrazovky čas** v nastavení zařízení (Nastavení > Obecné > čas obrazovky), včetně omezení obsahu a ochrany osobních údajů. Zařízení upgradovat operační systém na iOS 12.0 už nezobrazí na kartě omezení v nastavení zařízení (Nastavení > Obecné > Správa zařízení > profil správy > omezení). Tato nastavení jsou v **obrazovky čas**.
+  
+- **Vymazání veškerého obsahu a možnost nastavení na zařízení (jenom pod dohledem)**: Zvolte **bloku** , uživatelé nemůžou používat vymazání veškerého obsahu a možnost nastavení na zařízení (jenom pod dohledem). **Není nakonfigurováno** (výchozí) poskytuje uživatelům přístup k těmto nastavením.
+- **Změny názvu zařízení (jenom pod dohledem)**: Zvolte **bloku** , nelze změnit název zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživateli změnit název zařízení.
+- **Úprava nastavení oznámení (jenom pod dohledem)**: Zvolte **bloku** tak nastavení oznámení nelze změnit. **Není nakonfigurováno** (výchozí) umožní uživateli přenastavit v zařízení oznámení.
+- **Úprava tapety (jenom pod dohledem)**: **Blok** zabrání změně tapetu. **Není nakonfigurováno** (výchozí) umožňuje uživateli změnit v zařízení tapetu.
+- **Podnikové aplikace úpravy nastavení vztahu důvěryhodnosti (jenom pod dohledem)**: **Blok** zabrání uživateli ve změně nastavení vztahu důvěryhodnosti podnikových aplikací na zařízeních pod dohledem. **Není nakonfigurováno** (výchozí) umožňuje uživateli možnost, že důvěřuje aplikacím, které nebudou staženy z app storu.
+- **Změny profilu konfigurace (jenom pod dohledem)**: **Blok** brání změny profilu konfigurace zařízení. **Není nakonfigurováno** (výchozí) umožní uživateli instalovat konfigurační profily.
 - **Zámek aktivace (jenom pod dohledem)**: Zvolte **povolit** pro povolení zámku aktivace na hlídaných zařízeních s Iosem. Zámek aktivace ztěžuje ztraceného nebo odcizeného zařízení znovu aktivovat.
-- **Blokovat odebrání aplikace (jenom pod dohledem)**: Zvolte **bloku** zabráníte uživatelům aplikace odebrat. **Není nakonfigurováno** umožňuje uživatelům odebere aplikaci ze zařízení.
-- **Režim bloky s omezenými USB (jenom pod dohledem)**: Zvolte **bloku** zakázat USB omezeném režimu na zařízeních pod dohledem. USB omezený režim blokuje USB příslušenství z výměna dat se zařízením, která je uzamčena pro více než hodinu. **Není nakonfigurováno** umožňuje USB omezeném režimu.
+- **Blokovat odebrání aplikace (jenom pod dohledem)**: Zvolte **bloku** zabráníte uživatelům aplikace odebrat. **Není nakonfigurováno** (výchozí) umožňuje uživatelům odebere aplikaci ze zařízení.
+- **Režim bloky s omezenými USB (jenom pod dohledem)**: Zvolte **bloku** zakázat USB omezeném režimu na zařízeních pod dohledem. USB omezený režim blokuje USB příslušenství z výměna dat se zařízením, která je uzamčena pro více než hodinu. **Není nakonfigurováno** (výchozí) umožňuje USB omezeném režimu.
 - **Vynutit automatické datum a čas (jenom pod dohledem)**: **Vyžadovat** vynutí hlídaných zařízeních automatické nastavení data a času. Časové pásmo zařízení se aktualizuje, když zařízení mobilní připojení, nebo má povolenou Wi-Fi s zjišťování polohy.
-- **Studenti mohli požádat o oprávnění k ponechte třídenní kurz ve třídě (jenom pod dohledem) vyžadují**: **Vyžadovat** vynutí studenti v nespravované kurzu se pomocí aplikace Classroom na žádost o oprávnění z učitele ponechte kurzu. Dostupné jenom v iOS 11.3 +. **Není nakonfigurováno** nenutí studentů a požádejte o oprávnění.
+- **Studenti mohli požádat o oprávnění k ponechte třídenní kurz ve třídě (jenom pod dohledem) vyžadují**: **Vyžadovat** vynutí studenti v nespravované kurzu se pomocí aplikace Classroom na žádost o oprávnění z učitele ponechte kurzu. **Není nakonfigurováno** (výchozí) nenutí studentů a požádejte o oprávnění.
+
+  Tato funkce platí pro:  
+  - iOS 11,3 a novější
+
+- **Povolit Classroom uzamknout zařízení do aplikace a zařízení uzamknout bez zobrazení výzvy (jenom pod dohledem)**: **Povolit** umožňuje učitelů uzamčení aplikací a uzamčení zařízení pomocí aplikace Classroom bez zobrazení výzvy studenta. Uzamčení prostředků aplikace zařízení můžete pouze učitelů přístup k určité aplikace. **Není nakonfigurováno** uzamčení aplikace nebo zařízení pomocí aplikace Classroom bez zobrazení výzvy studenta učitelé zabraňuje (výchozí). 
+
+  Tato funkce platí pro:  
+  - Iosu 11.0 a novějších
+
+- **Automaticky připojí k tříd Classroom bez zobrazení výzvy (jenom pod dohledem)**: **Povolit** automaticky umožňuje studentům připojit třídu, která je v aplikaci Classroom bez zobrazení výzvy učitele. **Není nakonfigurováno** (výchozí) zobrazí výzvu učitele, studenty chcete připojit k třídu, která je v aplikaci Classroom.
+
+  Tato funkce platí pro:  
+  - Iosu 11.0 a novějších
+
 - **Povolit aktualizace distribuované bezdrátově infrastruktury veřejných KLÍČŮ**: **Povolit** umožňuje dostávat aktualizace softwaru bez připojení zařízení k počítači.
-- **Limit ad sledování**: Zvolte **Limit** zakázat reklamy identifikátor zařízení. **Není nakonfigurováno** zůstane povolena.
-- **Vytváření bloku virtuální privátní sítě (jenom pod dohledem)**: **Blok** zabraňuje uživatelům ve vytváření nastavení konfigurace sítě VPN. **Není nakonfigurováno** umožňuje uživatelům vytvořit připojení VPN na zařízení.
+- **Limit ad sledování**: Zvolte **Limit** zakázat reklamy identifikátor zařízení. **Není nakonfigurováno** (výchozí) zůstane povolena.
+- **Vytváření bloku virtuální privátní sítě (jenom pod dohledem)**: **Blok** zabraňuje uživatelům ve vytváření nastavení konfigurace sítě VPN. **Není nakonfigurováno** (výchozí) umožňuje vytvořit připojení VPN na zařízení.
+- **Úprava nastavení karty eSIM (jenom pod dohledem)**: **Blok** zabraňuje uživatelům a přidat mobilní plán karty eSIM na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
+
+  Tato funkce platí pro:  
+  - iOS 12,1 a novější
+
+- **Odložení aktualizací softwaru (jenom pod dohledem)**: Pokud je nastavena na **Nenakonfigurováno** (výchozí), aktualizací softwaru jsou zobrazeny na zařízení s Apple je uvolní. Například pokud aktualizace iOS získá vydané společností Apple v konkrétní den, pak tuto aktualizaci přirozeně zobrazuje v zařízení po datu vydání.
+
+  **Povolit** umožňuje zpoždění při zobrazení aktualizací softwaru na zařízení z 0 – 90 dní. Toto nastavení nemá pod kontrolou, pokud aktualizace jsou nebo nejsou nainstalovány. 
+
+  - **Zpoždění viditelnost aktualizací softwaru**: Zadejte hodnotu od 0 – 90 dní. Když vyprší platnost zpoždění, uživatelé získají oznámení, které nejstarší verzi operačního systému k dispozici při aktivaci zpoždění.
+
+    Například pokud iOS 12a je k dispozici na **1. ledna**, a **zpoždění viditelnost** je nastavena na **5 dní**, pak iOS 12a nezobrazuje jako k dispozici aktualizace na zařízeních koncových uživatelů. Na **šestý den** po vydání, že je k dispozici aktualizace a koncoví uživatelé ji můžou nainstalovat.
+
+    Toto nastavení platí pro:  
+    - iOS 11,3 a novější
 
 ## <a name="configurations-requiring-supervision"></a>Konfigurace vyžadující dohled
 
@@ -94,7 +141,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - Spárování s Apple Watch 
 
 > [!NOTE]
-> Apple potvrdil, že se některá nastavení přesunou v roce 2019 pouze do režimu Pod dohledem. Doporučujeme, abyste to vzali na vědomí, pokud tato nastavení používáte a nečekáte, než je Apple přesune pouze do režimu Pod dohledem:
+> Apple potvrdil, že některá nastavení přesunout na pod dohledem v jen 2019. Doporučujeme, abyste to udělali v úvahu při používání těchto nastavení, místo abyste čekali, Apple k migraci je jenom pod dohledem pro:
 > - Instalace aplikací koncovými uživateli
 > - Odebrání aplikace
 > - FaceTime
@@ -108,7 +155,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 
 ## <a name="password"></a>Heslo
 
-- **Heslo**: Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení. Není nakonfigurováno umožňuje uživatelům přístup k zařízení bez zadávání hesla.
+- **Heslo**: **Vyžadovat** koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** umožňuje uživatelům přístup k zařízení bez zadávání hesla.
   - **Jednoduchá hesla**: Zvolte **bloku** tak, aby vyžadovala složitějších hesel. **Není nakonfigurováno** umožňuje jednoduchá hesla, jako například `0000` a `1234`.
   - **Vyžadovaný typ hesla**: Vyberte typ hesla, které vaše organizace vyžadovat. Možnosti:
     - **Výchozí ze zařízení**
@@ -122,16 +169,23 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
   - **Vypršení platnosti hesla (dny)**: Zadejte počet dní, než se musí změnit heslo zařízení.
   - **Zakázat opakované použití předchozích hesel**: Zadejte počet nových hesel, která se musí použít, než můžete znovu použít staré heslo.
   - **Odemknutí pomocí otisků prstů**: Zvolte **bloku** zabránit k odemknutí zařízení otiskem prstu. **Není nakonfigurováno** uživatel k odemknutí zařízení otiskem prstu.
-- **Úprava hesla (jenom pod dohledem)**: Zvolte **bloku** zastavit před změnou, přidání nebo odebrání hesla. Omezení se ignorují u zařízení pod dohledem po blokování tuto funkci. **Není nakonfigurováno** umožňuje k přidávání, změny a odebírání hesel.
-  - **Otisků prstů (jenom pod dohledem)**: **Blok** zabrání uživateli změnu, přidávat nebo odebírat otisky prstů TouchID. **Není nakonfigurováno** povolí otisky prstů TouchID aktualizace uživatele v zařízení.
+- **Úprava hesla (jenom pod dohledem)**: Zvolte **bloku** zastavit před změnou, přidání nebo odebrání hesla. Omezení se ignorují u zařízení pod dohledem po blokování tuto funkci. **Není nakonfigurováno** (výchozí) umožňuje k přidávání, změny a odebírání hesel.
+
+  - **Otisků prstů (jenom pod dohledem)**: **Blok** zabrání uživateli změnu, přidávat nebo odebírat otisky prstů TouchID. **Není nakonfigurováno** (výchozí) otisky prstů TouchID povolí aktualizace uživatele v zařízení.
+
 - **Heslo blokovat automatické vyplňování (jenom pod dohledem)**: Zvolte **bloku** zabránit pomocí funkce Automatické vyplňování hesel v systému iOS. Výběr **bloku** rovněž provede následující akce:
+
   - Uživatelé vyzváni k použít heslo uložené v prohlížeči Safari nebo v jakékoli aplikace.
   - Automatické silná hesla jsou zakázána a silná hesla nejsou navržené pro uživatele.
 
-  **Není nakonfigurováno** povoluje tyto funkce.
+  **Není nakonfigurováno** (výchozí) umožňuje tyto funkce.
 
-- **Blokovat požadavky blízkosti hesla (jenom pod dohledem)**: Zvolte **bloku** tak zařízení uživatele není žádat hesla blízkými zařízeními. **Není nakonfigurováno** umožňuje tyto požadavky na heslo.
-- **Blokovat sdílení hesla (jenom pod dohledem)**: **Blok** zabraňuje sdílení hesla mezi zařízení pomocí AirDrop. **Není nakonfigurováno** umožňuje hesla ke sdílení.
+- **Blokovat požadavky blízkosti hesla (jenom pod dohledem)**: Zvolte **bloku** tak zařízení uživatele není žádat hesla blízkými zařízeními. **Není nakonfigurováno** (výchozí) umožňuje tyto požadavky na heslo.
+- **Blokovat sdílení hesla (jenom pod dohledem)**: **Blok** zabraňuje sdílení hesla mezi zařízení pomocí AirDrop. **Není nakonfigurováno** (výchozí) umožňuje hesla ke sdílení.
+- **Vyžadovat Touch ID a Face ID, heslo nebo kreditní karta informace automatické vyplňování (jenom pod dohledem)**: Pokud je nastavena na **vyžadují**, uživatelé musí ověřit pomocí TouchID nebo funkci FaceID před hesla nebo informace o platební kartě se nedají automaticky vyplněné v prohlížeči Safari nebo jiných aplikací. **Není nakonfigurováno** (výchozí) umožňuje uživatelům řídit tuto funkci v nastavení zařízení.
+
+  Tato funkce platí pro:  
+  - Iosu 11.0 a novějších
 
 <sup>1</sup>při konfiguraci **maximální počet minut nečinnosti, po kterém se zamkne obrazovka** a **maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla** nastavení, se použijí v uvedeném pořadí. Například, pokud pro obě nastavení nastavíte hodnotu **5** minut, po pěti minutách automaticky vypne obrazovku a zařízení uzamkne po dalších 5 minut. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. V tomto příkladě poté, co uživatel vypne obrazovku, zamkne zařízení pěti minutách.
 
@@ -186,6 +240,19 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - **Pomocí vyhledávání Spotlight a vracení výsledků z Internetu (jenom pod dohledem)**: **Blok** zastaví Spotlightu vracet výsledky z vyhledávání na Internetu. **Není nakonfigurováno** povolí Spotlightu hledání připojení k Internetu a výsledky hledání.
 - **Blokovat odebírání systémových aplikací ze zařízení (jenom pod dohledem)**: Výběr **bloku** zakáže možnost odebrat aplikace pro systém ze zařízení. **Není nakonfigurováno** umožňuje uživatelům odebrat aplikace pro systém.
 
+#### <a name="safari"></a>Safari
+
+- **Safari**: **Blok** prostřednictvím prohlížeče Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům používat prohlížeč Safari.
+- **Automatické vyplňování**: **Blok** zakáže funkci Automatické vyplňování v prohlížeči Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.
+- **Soubory cookie**: Zvolte, jak se zpracovává soubory cookie v zařízení. Možnosti:
+  - Povolit
+  - Blokovat všechny soubory cookie
+  - Povolit soubory cookie z navštívených webů
+  - Povolit soubory cookie z aktuálního webu
+- **JavaScript**: **Blok** brání skriptů Java v prohlížeči spuštěného v příslušném zařízení. **Není nakonfigurováno** umožňuje skriptů Java.
+- **Upozornění na podvody**: **Vyžadovat** upozornění na podvody zobrazený ve webovém prohlížeči v zařízení. **Není nakonfigurováno** zakáže tuto funkci.
+- **Automaticky otevíraná okna**: **Blok** zakázat blokování automaticky otevíraných oken ve webovém prohlížeči. **Není nakonfigurováno** umožňuje blokování automaticky otevíraných oken.
+
 ## <a name="restricted-apps"></a>Omezené aplikace
 
 V seznamu omezených aplikací můžete nakonfigurovat jeden z následujících seznamů:
@@ -225,29 +292,38 @@ Přidání aplikací do těchto seznamů, můžete:
 
 ## <a name="wireless"></a>Bezdrátová síť
 
-- **Datový roaming**: Zvolte **bloku** zabránit datový roaming přes mobilní síť. **Není nakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
-- **Globální načítání na pozadí při roamingu**: **Blok** brání použití funkce načítání globální na pozadí při roamingu v mobilní síti. **Není nakonfigurováno** umožňuje, aby zařízení k načtení dat, jako jsou e-mailu, když používá roaming v mobilní síti.
-- **Hlasové vytáčení**: Zvolte **bloku** k zabrání uživatelům využívat funkci hlasového vytáčení na zařízení. **Není nakonfigurováno** umožňuje hlasového vytáčení na zařízení.
-- **Hlasový roaming**: Zvolte **bloku** zabránit hlasový roaming přes mobilní síť. **Není nakonfigurováno** povolí hlasový roaming, když je zařízení v mobilní síti.
-- **Změny nastavení využití mobilních dat aplikace (jenom pod dohledem)**: Zvolte **bloku** účelem Neumožnit změny nastavení využití mobilních dat v aplikaci. **Není nakonfigurováno** umožňuje uživateli řídit, které aplikace můžou používat mobilní data.
-- **Osobní Hotspot**: **Blok** zabraňuje zařízení jako osobní hotspot. Někteří mobilní operátoři toto nastavení nemusí podporovat. **Není nakonfigurováno** této funkce.
-- **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů (jenom pod dohledem)**: **Vyžadovat** zařízení donutí se použít jenom sítě Wi-Fi nastavily pomocí konfiguračních profilů Intune. **Není nakonfigurováno** umožňuje zařízení využívat jiné sítě Wi-Fi.
+- **Datový roaming**: Zvolte **bloku** zabránit datový roaming přes mobilní síť. **Není nakonfigurováno** (výchozí), povolí datový roaming, když je zařízení v mobilní síti.
+- **Globální načítání na pozadí při roamingu**: **Blok** brání použití funkce načítání globální na pozadí při roamingu v mobilní síti. **Není nakonfigurováno** (výchozí) umožňuje, aby zařízení k načtení dat, jako jsou e-mailu, když používá roaming v mobilní síti.
+- **Hlasové vytáčení**: Zvolte **bloku** k zabrání uživatelům využívat funkci hlasového vytáčení na zařízení. **Není nakonfigurováno** hlasového vytáčení na zařízení povolí (výchozí).
+- **Hlasový roaming**: Zvolte **bloku** zabránit hlasový roaming přes mobilní síť. **Není nakonfigurováno** (výchozí), povolí hlasový roaming, když je zařízení v mobilní síti.
+- **Změny nastavení využití mobilních dat aplikace (jenom pod dohledem)**: Zvolte **bloku** účelem Neumožnit změny nastavení využití mobilních dat v aplikaci. **Není nakonfigurováno** (výchozí) umožňuje uživateli řídit, které aplikace můžou používat mobilní data.
+- **Změny nastavení plánu mobilní sítě (jenom pod dohledem)**: **Blok** zabraňuje uživatelům možnost měnit nastavení v mobilních plánu. **Není nakonfigurováno** (výchozí) umožňuje uživatelům provádět změny.
+
+  Tato funkce platí pro:  
+  - Iosu 11.0 a novějších
+
+- **Osobní Hotspot**: **Blok** zabraňuje zařízení jako osobní hotspot. Někteří mobilní operátoři toto nastavení nemusí podporovat. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
+- **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů (jenom pod dohledem)**: **Vyžadovat** zařízení donutí se použít jenom sítě Wi-Fi nastavily pomocí konfiguračních profilů Intune. **Není nakonfigurováno** (výchozí) umožňuje zařízení využívat jiné sítě Wi-Fi.
 - **Pravidla používání mobilní sítě (jenom spravované aplikace)**: Definování dat, které typy, které spravované aplikace můžete použít při v mobilní síti. Možnosti:
   - **Zablokovat používání mobilních dat**: Zablokovat používání mobilních dat pro **všechny spravované aplikace** nebo **vybrat konkrétní aplikace**.
   - **Zablokovat používání mobilních dat při roamingu**: Zablokovat používání mobilních dat při roamingu pro **všechny spravované aplikace** nebo **vybrat konkrétní aplikace**.
 
 ## <a name="connected-devices"></a>Připojená zařízení
 
-- **AirDrop (jenom pod dohledem)**: **Blok** brání použití AirDrop na zařízení. **Není nakonfigurováno** umožňuje použití funkce AirDrop k výměně obsahu s blízkými zařízeními.
-- **Párování Apple Watch (jenom pod dohledem)**: **Blok** brání párování s Apple Watch. **Není nakonfigurováno** povolí zařízení spárovat se Apple Watch.
+- **AirDrop (jenom pod dohledem)**: **Blok** brání použití AirDrop na zařízení. **Není nakonfigurováno** (výchozí) umožňuje použití funkce AirDrop k výměně obsahu s blízkými zařízeními.
+- **Párování Apple Watch (jenom pod dohledem)**: **Blok** brání párování s Apple Watch. **Není nakonfigurováno** povolí zařízení spárovat se Apple Watch (výchozí).
 - **Detekce zápěstí pro spárované Apple Watch**: **Vyžadovat** vynutí spárovaných Apple Watch používání detekce zápěstí. V případě potřeby, Apple Watch nebudou zobrazovat oznámení, když ho je uživatel nenasadí. 
-- **Úpravy Bluetooth (jenom pod dohledem)**: **Blok** zabrání koncovému uživateli možnost měnit nastavení Bluetooth na zařízení. **Není nakonfigurováno** umožňuje uživateli změnit tato nastavení.
-- **Podle hostitelského párování určování zařízení, zařízení s Iosem může spárovat s (jenom pod dohledem)**: **Není nakonfigurováno** umožňuje podle hostitelského párování může správce určit zařízení, která zařízení s Iosem může spárovat. **Blok** brání, podle hostitelského párování.
-- **Vyžadovat odchozí požadavky párovací heslo**: **Vyžadovat** párovací heslo, když uživatel použije AirPlay ke streamování obsahu do jiných zařízení Apple. **Není nakonfigurováno** umožňuje uživateli ke streamování obsahu přes AirPlay bez zadávání hesla.
-- **Blokování Airprintu (jenom pod dohledem)**: Zvolte **bloku** zabránit pomocí funkcí AirPrint na zařízení. **Není nakonfigurováno** umožňuje uživateli umožňuje využít AirPrint.
-  - **Blokové úložiště přihlašovacích údajů AirPrint v řetězci klíčů (jenom pod dohledem)**: **Blok** brání použití řetězce klíčů úložiště pro uživatelské jméno a heslo na zařízení. **Není nakonfigurováno** umožňuje ukládání AirPrint uživatelské jméno a heslo v aplikaci klíčenka.
+- **Úpravy Bluetooth (jenom pod dohledem)**: **Blok** zabrání koncovému uživateli možnost měnit nastavení Bluetooth na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
+- **Podle hostitelského párování určování zařízení, zařízení s Iosem může spárovat s (jenom pod dohledem)**: **Není nakonfigurováno** (výchozí) umožňuje, podle hostitelského párování může správce určit zařízení, která zařízení s Iosem může spárovat. **Blok** brání, podle hostitelského párování.
+- **Vyžadovat odchozí požadavky párovací heslo**: **Vyžadovat** párovací heslo, když uživatel použije AirPlay ke streamování obsahu do jiných zařízení Apple. **Není nakonfigurováno** (výchozí) umožňuje uživateli ke streamování obsahu přes AirPlay bez zadávání hesla.
+- **Blokování Airprintu (jenom pod dohledem)**: Zvolte **bloku** zabránit pomocí funkcí AirPrint na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživateli umožňuje využít AirPrint.
+  - **Blokové úložiště přihlašovacích údajů AirPrint v řetězci klíčů (jenom pod dohledem)**: **Blok** brání použití řetězce klíčů úložiště pro uživatelské jméno a heslo na zařízení. **Není nakonfigurováno** (výchozí) umožní ukládání v aplikaci klíčenka AirPrint uživatelské jméno a heslo.
   - **Pro AirPrint (jenom pod dohledem) vyžadují důvěryhodný certifikát TLS**: **Vyžadovat** vynutí zařízení a používány důvěryhodné certifikáty pro komunikaci TLS tisku.
-  - **Zablokuje zjišťování iBeacon z tiskárny s Airprintem (jenom pod dohledem)**: **Blok** brání škodlivým signály AirPrint Bluetooth před útoky typu phishing pro síťový provoz. **Není nakonfigurováno** umožňuje inzerování tiskárny s Airprintem na zařízení.
+  - **Zablokuje zjišťování iBeacon z tiskárny s Airprintem (jenom pod dohledem)**: **Blok** brání škodlivým signály AirPrint Bluetooth před útoky typu phishing pro síťový provoz. **Není nakonfigurováno** (výchozí) umožňuje inzerování tiskárny s Airprintem na zařízení.
+- **Blokovat nastavení si nové okolí zařízení (jenom pod dohledem)**: **Blok** zakáže výzvu k nastavení nová zařízení, která jsou poblíž. **Není nakonfigurováno** (výchozí) umožňuje výzvy pro uživatele pro připojení k dalším blízkým zařízením Apple.
+
+  Tato funkce platí pro:  
+  - Iosu 11.0 a novějších
 
 ## <a name="keyboard-and-dictionary"></a>Klávesnice a slovník
 
@@ -360,19 +436,6 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 | com.apple.Bridge            | Sledování        | Apple     |
 | com.apple.weather           | Počasí      | Apple     |
 
-## <a name="safari"></a>Safari
-
-- **Safari (jenom pod dohledem)**: **Blok** prostřednictvím prohlížeče Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům používat prohlížeč Safari.
-- **Automatické vyplňování**: **Blok** zakáže funkci Automatické vyplňování v prohlížeči Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.
-- **Soubory cookie**: Zvolte, jak se zpracovává soubory cookie v zařízení. Možnosti:
-  - Povolit
-  - Blokovat všechny soubory cookie
-  - Povolit soubory cookie z navštívených webů
-  - Povolit soubory cookie z aktuálního webu
-- **JavaScript**: **Blok** brání skriptů Java v prohlížeči spuštěného v příslušném zařízení. **Není nakonfigurováno** umožňuje skriptů Java.
-- **Upozornění na podvody**: **Vyžadovat** upozornění na podvody zobrazený ve webovém prohlížeči v zařízení. **Není nakonfigurováno** zakáže tuto funkci.
-- **Automaticky otevíraná okna**: **Blok** zakázat blokování automaticky otevíraných oken ve webovém prohlížeči. **Není nakonfigurováno** umožňuje blokování automaticky otevíraných oken.
-
 ## <a name="domains"></a>Domény
 
 ### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
@@ -389,6 +452,6 @@ V **adresa URL domény**, přidejte jeden nebo více adres URL do seznamu. Uživ
 
 ## <a name="next-steps"></a>Další postup
 
-Profil je vytvořený, ale zatím se nepoužívá. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Můžete také nastavit omezení zařízení a nastavení na [macOS](device-restrictions-macos.md) zařízení.
+Funkce a nastavení zařízení můžete taky omezit na [macOS](device-restrictions-macos.md) zařízení.

@@ -25,7 +25,6 @@
 
 ### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
-#### [Synchronizace outlookového e-mailu při používání režimu spořiče baterie](power-saving-mode-android.md)
 #### [Řešení běžných problémů se Samsung Knox](samsung-knox-errors-android.md)
 #### [Aktualizace vašeho zařízení za účelem instalace Outlooku](update-device-outlook-android.md)
 

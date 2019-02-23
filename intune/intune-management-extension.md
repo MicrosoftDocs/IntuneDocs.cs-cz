@@ -1,11 +1,11 @@
 ---
-title: Přidání powershellových skriptů v Microsoft Intune u zařízení s Windows 10 – Azure | Microsoft Docs
-description: Přidejte powershellové skripty, přiřaďte zásady skriptů skupinám Azure Active Directory, použijte sestavy k monitorování skriptů a podívejte se na postup pro odstranění skriptů, které jste přidali na zařízení s Windows 10 v Microsoft Intune. Viz také některé běžné problémy a jejich řešení.
+title: Přidání Powershellových skriptů do zařízení s Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Vytvářet a spouštět skripty prostředí PowerShell, přiřazení zásad skriptu ke skupinám Azure Active Directory, skripty monitorování pomocí sestav a najdete v článku kroky k odstranění skripty, které přidáte na zařízeních s Windows 10 v Microsoft Intune. Viz také některé běžné problémy a jejich řešení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/03/2018
+ms.date: 02/05/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,20 +16,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 573ca3aa10094e61165d297730d556e2ef559767
-ms.sourcegitcommit: 8e503c1b350f7b29a045b7daf3eece64be4ca3c4
+ms.openlocfilehash: a9b44e4fda5e7ff78a41dd952ea9eabcb820cfb3
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56302179"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742376"
 ---
-# <a name="manage-powershell-scripts-in-intune-for-windows-10-devices"></a>Správa powershellových skriptů v Intune u zařízení s Windows 10
+# <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
-Rozšíření správy Intune umožňuje nahrát Powershellové skripty do Intune ke spuštění na zařízení s Windows 10. Rozšíření pro správu podporuje správu mobilních zařízení Windows 10 (MDM) a usnadňuje přechod na moderní správu.
+Rozšíření pro správu Microsoft Intune umožňuje nahrát Powershellové skripty do Intune ke spuštění na zařízení s Windows 10. Rozšíření pro správu podporuje správu mobilních zařízení Windows 10 (MDM) a usnadňuje přechod na moderní správu.
 
-## <a name="moving-to-modern-management"></a>Přechod na moderní správu
+Tato funkce platí pro:
 
-Prostředí IT pro koncové uživatele prochází digitální transformací. Klasické tradiční informační technologie se zaměřují na platformy pro jednotlivá zařízení, na zařízení vlastněná firmami, uživatele, kteří pracují z kanceláře, a celou řadu manuálních reaktivních IT procesů. Moderní pracoviště používá řada platforem, které jsou uživatelů a ve vlastnictví firmy, umožňuje uživatelům pracovat odkudkoli a nabízí automatické a proaktivní IT procesy.
+- Windows 10 a novější
+
+## <a name="move-to-modern-management"></a>Přechod na moderní správu
+
+Prostředí IT pro koncové uživatele prochází digitální transformací. Klasický, tradiční informační technologie se zaměřují na platformy pro jednotlivá zařízení, zařízení vlastněná firmami, uživatele, kteří pracují z office a různých ručně reaktivních IT procesů. Moderní pracoviště používá řada platforem, které jsou uživatelů a ve vlastnictví firmy, umožňuje uživatelům pracovat odkudkoli a nabízí automatické a proaktivní IT procesy.
 
 Služby správy mobilních zařízení, jako je například Microsoft Intune můžete spravovat mobilních a desktopových zařízení s Windows 10. Integrované klient správy Windows 10 komunikuje s Intune a spuštění podnikové úlohy správy. Zde jsou některé úkoly, které mohou vyžadovat, například rozšířenou konfiguraci zařízení a řešení potíží. Pro správu aplikací Win32, můžete použít [správy aplikací Win32](apps-win32-app-management.md) funkce na zařízeních s Windows 10.
 
@@ -39,25 +43,38 @@ Rozšíření správy Intune doplňuje integrované funkce Windows 10 MDM. Můž
 
 Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
-- Zařízení musí být připojený nebo zaregistrovaný do Azure AD a Azure AD je nakonfigurovaný pro [Automatická registrace do Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Rozšíření správy Intune podporuje připojená k Azure AD, připojené k hybridní domény a comanaged zaregistrovaná zařízení s Windows.
+- Zařízení musí být připojený nebo zaregistrovaný do Azure AD a Azure AD je nakonfigurovaný pro [Automatická registrace do Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Rozšíření správy Intune podporuje připojená k Azure AD, připojené k hybridní domény a společně spravovat zaregistrovaná zařízení s Windows.
 - Zařízení musí používat Windows 10 verze 1607 nebo novější.
 - Rozšíření agenta pro správu Intune se nainstaluje při skript prostředí PowerShell nebo aplikace Win32 je nasazená na uživatele nebo skupiny zabezpečení zařízení.
 
-## <a name="create-a-powershell-script-policy"></a>Vytvoření zásad powershellových skriptů 
+## <a name="create-a-script-policy"></a>Vytvoření zásad skriptů 
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Microsoft Intune**.
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
 2. Vyberte **Konfigurace zařízení** > **Powershellové skripty** > **Přidat**.
-3. Zadejte **Název** a **Popis** powershellového skriptu. V části **Umístění skriptu** vyhledejte powershellový skript. Skript nesmí být větší než 200 KB.
-4. Zvolte **Konfigurace**. Potom zvolte, jestli chcete skript spouštět pomocí přihlašovacích údajů uživatele v zařízení (**Ano**) nebo v kontextu systému (**Ne**). Skript se standardně spouští v kontextu systému. Možnost **Ano** vyberte, pokud nechcete, aby se skript spouštěl v kontextu systému. 
-  ![Podokno Přidat powershellový skript](./media/mgmt-extension-add-script.png)
-5. Zvolte, jestli musí být skript podepsán důvěryhodným vydavatelem (**Ano**). Standardně nejsou stanovené žádné požadavky na to, aby byl skript podepsán. 
-6. Výběrem **OK** a **Vytvořit** skript uložíte.
+3. Zadejte tyto vlastnosti:
+    - **Název**: Zadejte název skriptu prostředí PowerShell. 
+    - **Popis**: Zadejte popis pro skript prostředí PowerShell. Toto nastavení není povinné, ale doporučujeme ho zadat. 
+    - **Umístění skriptu**: Vyhledejte skript prostředí PowerShell. Skript musí být kratší než 200 KB (ASCII).
+4. Zvolte **konfigurovat**a zadejte následující vlastnosti:
+    - **Spusťte tento skript pomocí pověření přihlášeného**: Vyberte **Ano** spusťte skript pomocí přihlašovacích údajů uživatele v zařízení. Zvolte **ne** (výchozí) pro spuštění skriptu v kontextu systému. Možnost **Ano** vyberte, pokud nechcete, aby se skript spouštěl v kontextu systému.
+    - **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano** Pokud musí být skript podepsán důvěryhodným vydavatelem. Vyberte **ne** (výchozí), pokud není k dispozici požadavek pro skript, který chcete podepsat. 
+    - **Spuštění skriptu na hostiteli Powershellu 64-bit**: Vyberte **Ano** pro spuštění skriptu v hostitelském prostředí PowerShell (PS) 64-bit na architektuře 64-bit klienta. Vyberte **ne** (výchozí) spustí skript v hostitelském prostředí PowerShell 32-bit.
 
-## <a name="assign-a-powershell-script-policy"></a>Přiřazení zásad powershellových skriptů
+      Při nastavení na **Ano** nebo **ne**, použijte následující tabulku pro nová a existující zásady chování:
+
+      | Spuštění skriptu na hostiteli PS 64-bit | Architektura klienta | Nový skript PS | Existující zásady skriptu PS |
+      | --- | --- | --- | --- | 
+      | Ne | 32-bit  | 32-bit PS hostitele podporována | Spustí jenom v hostiteli PS 32-bit, který pracuje na 32bitové a 64bitové architektury. |
+      | Ano | 64-bit | Skript se spustí v 64-bit PS hostitele pro 64bitové architektury. Při spuštění na 32-bit, spuštění skriptu na hostiteli PS 32-bit. | Skript se spustí v 32bitové PS hostitele. Pokud toto nastavení se změní na 64-bit, skript otevře (není spuštěna) v hostiteli PS 64-bit a sestavy výsledky. Pokud byl spuštěn na 32-bit, spuštění skriptu na hostiteli PS 32-bit. |
+
+    ![Přidat a používat skripty prostředí PowerShell v Microsoft Intune](./media/mgmt-extension-add-script.png)
+5. Vyberte **OK** > **vytvořit** skript uložte.
+
+## <a name="assign-the-policy"></a>Přiřazení zásady
 
 1. V části **Powershellové skripty** vyberte skript, který chcete přiřadit, a potom zvolte **Spravovat** > **Přiřazení**.
 
-    ![Podokno Přidat Powershellový skript](./media/mgmt-extension-assignments.png)
+    ![Přiřazení nebo skript prostředí PowerShell můžete nasadit do skupin zařízení v Microsoft Intune](./media/mgmt-extension-assignments.png)
 
 2. Výběrem možnosti **Vybrat skupiny** zobrazte seznam dostupných skupin Azure AD. 
 3. Vyberte jednu nebo více skupin, které obsahují uživatele, jejichž zařízení přijímat tento skript. Kliknutím na **Vybrat** přiřaďte zásady k vybraným skupinám.
@@ -69,7 +86,7 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
 Klient rozšíření správy Intune kontroluje každou hodinu pomocí Intune. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění.
 
-## <a name="monitor-run-status-for-powershell-scripts"></a>Monitorování stavu spuštění powershellových skriptů
+## <a name="monitor-run-status"></a>Monitorování stavu spuštění
 
 Na portálu Azure Portal můžete monitorovat stav spuštění powershellových skriptů u uživatelů a zařízení.
 
@@ -78,13 +95,13 @@ V části **Powershellové skripty** vyberte skript, který chcete monitorovat, 
 - **Stav zařízení**
 - **Stav uživatele**
 
-## <a name="troubleshoot-powershell-scripts"></a>Řešení potíží s skripty prostředí PowerShell
+## <a name="troubleshoot-scripts"></a>Řešení potíží s skriptů
 
 Protokoly agenta v klientském počítači jsou obvykle v `\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Můžete použít [CMTrace.exe](https://docs.microsoft.com/sccm/core/support/tools) zobrazení tyto soubory protokolů. 
 
-![Snímek obrazovky s protokoly agenta](./media/apps-win32-app-10.png)  
+![Protokoly agenta snímku obrazovky nebo ukázkový nástroj cmtrace v Microsoft Intune](./media/apps-win32-app-10.png)  
 
-## <a name="delete-a-powershell-script"></a>Odstranění powershellového skriptu
+## <a name="delete-a-script"></a>Odstranit skript
 
 V části **Powershellové skripty** klikněte pravým tlačítkem na skript a vyberte **Odstranit**.
 
@@ -106,7 +123,7 @@ Při každé přihlášení není spuštěny skripty prostředí PowerShell. Spu
 
     [Povolit automatickou registraci Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) zahrnuje kroky.
 
-#### <a name="issue-the-powershell-scripts-do-not-run"></a>Problém: Nelze spustit skripty prostředí PowerShell
+#### <a name="issue-powershell-scripts-do-not-run"></a>Problém: Nelze spustit skripty prostředí PowerShell
 
 **Možná řešení**:
 

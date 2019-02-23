@@ -5,50 +5,72 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 02/06/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cce77976ea0cb31596ca0a1fd6c4becc9e3cee34
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: d39f4c541fd7ccf5ab2d09fdcf4f871ba3ee639c
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833595"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742393"
 ---
-# <a name="configure-ios-update-policies-in-intune"></a>Konfigurace zásad aktualizací pro iOS v Intune
+# <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
 
-Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace operačního systému. Tato funkce je dostupná jenom pro zařízení pod dohledem. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace. 
+Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace operačního systému. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace. 
+
+Tato funkce platí pro:
+
+- s Iosem 10.3 a novějším (pod dohledem)
 
 Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je dostupná nějaká aktualizace a není to v zakázaném čase, zařízení stáhne a nainstaluje nejnovější aktualizaci operačního systému. Pro aktualizaci zařízení nemusí uživatel nic udělat. Zásady nebrání tomu, aby uživatel aktualizoval operační systém ručně.
 
-Tato funkce podporuje zařízení s iOSem 10.3 a novějšími verzemi. Nastavení zpoždění je k dispozici v iOSu 11.3 a novějších verzích.
-
 ## <a name="configure-the-policy"></a>Konfigurace zásad
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
-4. Zadejte název a popis zásad.
-5. Vyberte **Nastavení**. 
 
-    Zadejte podrobnosti o časech, kdy se nemá u zařízení s iOSem vynucovat instalace nejnovějších aktualizací. Toto nastavení vytvoří časový rámec omezení. Můžete nakonfigurovat **dny** v týdnu, **časové pásmo**, **počáteční čas**, **koncový čas** a možnost **podržet zpřístupnění aktualizací softwaru (dny)** pro uživatele. Dále můžete vybrat pozdržení aktualizací softwaru v rozsahu 1 až 90 dní. Když vyprší platnost zpoždění, uživatelé získají oznámení, které nejstarší verzi operačního systému, která byla k dispozici při aktivaci zpoždění. Pokud chcete pozdržení aktualizací softwaru vypnout, zadejte hodnotu 0. Tato nastavení aktualizací se uplatní jen na zařízeních s iOSem pod dohledem.
-  
-    Například pokud iOS 12a je k dispozici na **1. ledna** a máte **aktualizace operačního systému zpoždění** nastavena na **5 dní**, tuto konkrétní verzi nebude zobrazovat jako dostupná aktualizace na žádné straně uživatel zařízení přiřazená k tomuto profilu. Na **šestý den** následující verzi, že aktualizace zobrazí jako dostupné a všichni koncoví uživatelé jsou zdarma k zahájení aktualizace.
+1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
+3. Zadejte následující nastavení:
 
+    - **Název**: Zadejte název pro vaše zásady aktualizace softwaru. Zadejte například `iOS restricted update times`.
+    - **Popis**: Zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-6. Vyberte **OK** uložte provedené změny. Výběrem **Vytvořit** vytvořte tyto zásady.
+4. Vyberte **Nastavení > Konfigurace**. Zadejte následující nastavení:
 
-Profil se vytvoří a zobrazí se v seznamu zásad. Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data. 
+    - **Vyberte časy, kdy chcete zakázat instalaci aktualizací**: Aktualizace se neinstalují nuceně zadejte omezený časový rámec. Při nastavování omezený časový rámec, zadejte následující údaje:
+
+      - **Dny**: Vyberte dny v týdnu, kdy aktualizace se neinstalují. Třeba zkontrolujte pondělí, středu a pátek, aby se zabránilo aktualizace instalovaly v tyto dny.
+      - **Časové pásmo**: Vyberte časové pásmo.
+      - **Počáteční čas**: Zvolte čas zahájení omezený časový rámec. Zadejte například 5: 00, nenainstalují se aktualizace od 5: 00.
+      - **Čas ukončení**: Zvolte koncový čas s omezeným přístupem časový rámec. Například zadejte 1: 00, můžou aktualizace instalovat počínaje 1: 00.
+
+    - **Zpoždění viditelnost aktualizací softwaru pro koncové uživatele myší bez nutnosti změn plánovaných aktualizací (dny)**: 
+
+      **Toto nastavení přesunuta do [omezení zařízení](device-restrictions-ios.md#general). Odebere se z tohoto umístění na portálu**. Krátkou dobu můžete zde změnit existující zásady. Po přibližně jeden měsíc, toto nastavení se odebere z existujících zásad.
+
+      Chcete-li omezit dopad, doporučujeme:
+        - Odeberte existující zásady z tohoto umístění na portálu.
+        - Vytvořte nový [zásadu omezení pro zařízení](device-restrictions-ios.md#general).
+        - Cílit na stejné uživatele jako původní zásadou.
+
+      Pokud dojde ke konfliktu, toto nastavení nemá žádný účinek *Pokud* dvě hodnoty jsou identické. Aby se zabránilo konfliktu, nezapomeňte změnit nebo odebrat existující zásady z tohoto umístění na portálu.
+
+5. Vyberte **OK** > **vytvořit** uložte provedené změny a vytvoříte zásadu.
+
+Profil se vytvoří a zobrazí se v seznamu zásad. 
+
+> [!NOTE]
+> Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data.
 
 ## <a name="change-the-restricted-times-for-the-policy"></a>Změna časů s omezeným přístupem u zásady
 
 1. V části **Aktualizace softwaru** vyberte **Aktualizovat zásady pro iOS**.
 2. Zvolte existující zásady > **Vlastnosti**.
 3. Aktualizace zakázaného času:
-    
+
     1. Vyberte dny v týdnu.
     2. Zvolte časové pásmo, ve kterém se tyto zásady použijí.
     3. Zadejte počáteční a koncový čas pro zakázané hodiny.
@@ -71,3 +93,6 @@ U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí
 Možnost <!-- 1352223 -->
 **Aktualizace softwaru** > **Chyby instalace pro zařízení s iOSem** zobrazuje seznam zařízení s iOSem, která jsou pod dohledem a na která zásady aktualizace cílí, na kterých se provedl pokus o aktualizaci a která se nepodařilo aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
+## <a name="next-steps"></a>Další postup
+
+[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

@@ -1,12 +1,12 @@
 ---
-title: Opuštění registrace na Portálu společnosti v Intune
+title: Sestava neúplné uživatele registrace v Intune
 titlesuffix: Microsoft Intune
-description: Přečtěte si informace o sestavě opuštění registrace na Portálu společnosti.
+description: Informace o registraci neúplné uživatele.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/20/2018
+ms.date: 2/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,34 +16,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85a03718185de939612f5431a993f9f34c3048ba
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: e08623485f8e3b07af43891e3b09cfed5b94e583
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840650"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742580"
 ---
-# <a name="company-portal-abandonment-report"></a>Sestava opuštění registrace na Portálu společnosti
+# <a name="incomplete-user-enrollments-report"></a>Sestava registrace neúplné uživatele
 
-Tato sestava informuje, na jakém místě uživatelé opouštějí proces registrace na Portálu společnosti.
+Tato sestava informuje, kde na portálu společnosti nejsou uživatelé proces registrace dokončí proces registrace.
 
-Když chcete tuto sestavu zobrazit, zvolte **Intune** > **Registrace zařízení** > **Opuštění Portálu společnosti**.
+Chcete-li zobrazit sestavy, zvolte **Intune** > **registrace zařízení** > **registrací neúplné uživatele**.
 
-Na základě těchto informací o opuštění registrace můžete vaše dokumenty týkající se onboardingu aktualizovat tak, aby uživatelům pomáhaly registraci dokončit. Pokud například končí mnoho uživatelů u podmínek použití, můžete tuto oblast prozkoumat a upravit, aby byla pro uživatele intuitivnější.
+Na základě těchto informací můžete aktualizovat vaše dokumenty připojování k poskytování pomoci uživatelům bylo možné registraci dokončit. Pokud například končí mnoho uživatelů u podmínek použití, můžete tuto oblast prozkoumat a upravit, aby byla pro uživatele intuitivnější.
 
-## <a name="what-is-abandonment"></a>Co je opuštění registrace?
+## <a name="what-is-an-incomplete-enrollment"></a>Co je neúplný registrace?
 
-K opuštění registrace dojde, když uživatel provede některou z následujících akcí:
+Neúplný zápis je, když uživatel provede některou z následujících akcí:
 
 -   Explicitně zvolí akci, která zastaví registraci.
 -   Zavře Portál společnosti v průběhu registrace.
 -   Stráví více než 30 minut mezi částmi registrace.
 
-Pokud uživatel několikrát zastaví registraci a znovu ji spustí, považuje se to za několik pokusů o registraci a několik opuštění registrace. Pokud uživatel čeká 30 minut na různých obrazovkách registrace, považuje se to za několik opuštění registrace.
+Pokud uživatel zvolí registraci zastavit a znovu spustit několikrát, zobrazí jako více neúplné registrace i více pokusů. Pokud uživatel počká 30 minut mezi obrazovkami různých registrace, bude považován za více neúplné registrace.
 
 ## <a name="what-does-the-report-show"></a>Co tato sestava zobrazuje?
 
-Sestavy registrace obsahují data pro zařízení s iOSem a Androidem.
+Sestavy obsahují data pro iOS a androidem.
 
 Sestavy zobrazují data za poslední dva týdny, ale můžete nastavit filtr sestavy tak, aby zobrazovala libovolné období do 30 dnů v minulosti.
 
@@ -51,15 +51,15 @@ Pomocí **filtru** můžete zvolit rozsah kalendářních dat, operační systé
 
 ### <a name="number-and-percentage-tiles"></a>Dlaždice pro počet a procentuální hodnotu
 
-V horní části sestavy se zobrazuje počet opuštění registrace a procentuální hodnota vzhledem k celkovému počtu registrací.
+V horní části stránky sestavy zobrazí se počet a procento neúplné registrací ve vztahu k všechny registrace.
 
 -   Registrace iniciovaná: Počet registrací se pokusili.
--   Opuštěné registrace: Počet pokusů o registrací nemělo za následek plně zaregistrované a vyhovující zařízení.
--   Zřeknutí rychlost: Procento pokusy o registraci, které byly opuštěny (opuštěných registrace / iniciované registrací).
+-   Neúplné registrace: Počet pokusů o registrací nemělo za následek plně zaregistrované a vyhovující zařízení.
+-   Neúplné rychlost: Procento pokusy o registraci, které byly opuštěny (opuštěných registrace / iniciované registrací).
 
 ### <a name="line-graph"></a>Spojnicový graf
 
-Spojnicový graf zobrazuje denní počet opuštění v každé ze čtyř základních částí registrace:
+Spojnicový graf zobrazuje denní neúplné registrace pro každý oddíl čtyři základní registrace:
 
 -   Kontrolní seznam instalace
 -   Obrazovky platformy
@@ -68,12 +68,12 @@ Spojnicový graf zobrazuje denní počet opuštění v každé ze čtyř základ
 
 ### <a name="user-abandonment-actions"></a>Akce uživatelů, po kterých došlo k opuštění registrace
 
-Následující tabulky zobrazují seznam akcí uživatelů, které způsobily opuštění registrace. Příklady obrazovek registrace můžete vidět ve videích s registrací zařízení s [iOSem](https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment) a [Androidem](https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment). 
+Seznam akcí uživatele, které jsou způsobilé jako dotazování neúplný zápis v následujících tabulkách. Příklady obrazovek registrace můžete vidět ve videích s registrací zařízení s [iOSem](https://channel9.msdn.com/Series/IntuneEnrollment/iOS-Enrollment) a [Androidem](https://channel9.msdn.com/Series/IntuneEnrollment/Android-Enrollment). 
 
 
 #### <a name="setup-checklist-section"></a>Část Kontrolní seznam instalace
 
-| Název opuštění registrace | Obrazovka nebo tok | Platforma | Akce |
+| Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
 | EnrollmentWrapUp | Výzva k otevření stránky v Portálu společnosti | iOS/Android | **Zrušit** |
 | EnrollmentWrapUp | Obrazovka registrace zařízení až do dokončení **načítání firemních prostředků** | iOS/Android | Trvalo > 30 minut |
@@ -83,7 +83,7 @@ Následující tabulky zobrazují seznam akcí uživatelů, které způsobily op
 
 #### <a name="platform-screens-section"></a>Část Obrazovky platformy
 
-| Název opuštění registrace | Obrazovka nebo tok | Platforma | Akce |
+| Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
 | iOSProfileLaunch | Výzva k zobrazení konfiguračního profilu | iOS | **Ignorovat** |
 | iOSProfileLaunch | Obrazovka instalace profilu | iOS | **Zrušit** |
@@ -96,14 +96,14 @@ Následující tabulky zobrazují seznam akcí uživatelů, které způsobily op
 
 #### <a name="terms-of-use-section"></a>Část Podmínky použití
 
-| Název opuštění registrace | Obrazovka nebo tok | Platforma | Akce |
+| Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
 | TermsofUse | Podmínky použití (pokud je správce nakonfiguroval) | iOS/Android | **Odmítnout vše** |
 | TermsofUse | Podmínky použití až do výběru možnosti **Přijmout vše** | iOS/Android | Trvalo > 30 minut |
 
 #### <a name="complianceactivation-section"></a>Část Dodržování předpisů / aktivace
 
-| Název opuštění registrace | Obrazovka nebo tok | Platforma | Akce |
+| Název akce | Obrazovka nebo tok | Platforma | Akce |
 | ---- |---- |---- |---- |
 | Dodržování předpisů | Dodržování předpisů zařízením (pokud je správce nakonfiguroval) se v nastavení přístupu po registraci zobrazuje jinak než zeleně.| iOS/Android | **Postpone** |
 | Dodržování předpisů | Dodržování předpisů zařízením se zobrazuje jinak než zeleně až do aktualizace, po které se zobrazuje zeleně. | iOS/Android | Trvalo > 30 minut |
@@ -112,4 +112,4 @@ Následující tabulky zobrazují seznam akcí uživatelů, které způsobily op
 
 ## <a name="next-steps"></a>Další postup
 
-Po kontrole vašich četností opuštění můžete prozkoumat [možnosti registrace](enrollment-options.md), abyste zjistili, jestli lze provést nějaké změny, které proces registrace vylepší.
+Po kontrole na neúplný zápis sazby, můžete zkontrolovat [možnosti registrace](enrollment-options.md) zobrazíte, pokud jste provedli změny ke zlepšení registrace.

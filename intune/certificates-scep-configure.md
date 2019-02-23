@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 1/29/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50235e4e21e738081dc1b41d8e6a8b6210430064
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55838120"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742733"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -72,7 +72,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 
 ### <a name="accounts"></a>Účty
 
-|Název|Podrobnosti|
+|Name|Podrobnosti|
 |--------|-----------|
 |**Účet služby NDES**|Zadejte účet uživatele domény, který chcete použít jako účet služby NDES. |
 
@@ -364,10 +364,12 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 6. Zadejte následující nastavení:
 
    - **Typ certifikátu**: Zvolte **uživatele** u uživatelských certifikátů. Pro zařízení bez uživatele, jako jsou například veřejné terminály, vyberte **Zařízení**. Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
+     - Android Enterprise
      - iOS
+     - macOS
      - Windows 8.1 a vyšší
      - Windows 10 a novější
-     - Android Enterprise
+
 
    - **Formát názvu subjektu**: Vyberte, jak Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti se změní, pokud vyberete typ certifikátu **Uživatel** nebo typ certifikátu **Zařízení**. 
 

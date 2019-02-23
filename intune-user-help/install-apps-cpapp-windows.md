@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39f19d347cb799a47d07ade4f8458fade68b1b99
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834649"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742529"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
@@ -38,6 +38,7 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
     * **Domů**: Vyberte ze seznamu vybrané aplikace vaší organizace.  
     * **Zobrazit vše**: Z **domovskou stránku** > **aplikace** klikněte na tlačítko **Zobrazit vše** zobrazíte všechny dostupné aplikace.  
     * **Všechny aplikace**: Na této stránce vyberte v navigačním podokně zobrazíte všechny dostupné aplikace, včetně, nainstalovaný a funkční.  
+    * **Kategorie aplikací**: Na této stránce vyberte v navigačním podokně zvolte aplikace založené na typu nebo funkce. Aplikace jsou seřazeny podle kategorie, jako **doporučené**, **vzdělávání**, a **produktivitu**.  
     * **Hledat aplikace**: Statické vyhledávacího nachází v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
     * **Všechny aplikace**: Zobrazit, řadit a filtrovat všechny dostupné aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
 

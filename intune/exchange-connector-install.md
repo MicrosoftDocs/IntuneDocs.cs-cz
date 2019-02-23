@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4481645781e21da4f433f5feae1d685efb73d412
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 5910b4962cc871a370d22efa68a01b78e9b34a0a
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55841415"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742359"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
@@ -73,13 +73,11 @@ Musíte vytvořit uživatelský účet služby Active Directory, který bude mí
 
 1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního serveru Exchange a který má licenci k používání Exchange Serveru.
 
-2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
+2. Přejděte na **Intune** > **přístup k Exchangi**  
 
-3. Zvolte **Intune** a po otevření řídicího panelu Intune zvolte **Místní přístup**.
+3. V části **nastavení**, zvolte **Exchange ActiveSync místní konektor**a pak vyberte **přidat**.
 
-4. V části **Nastavení** zvolte **Konektory Exchange ActiveSync** a pak zvolte **Stáhnout software On-Premises Connector**.
-
-5.  Místní Exchange connector je v komprimované složce (.zip), který můžete otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
+4. Na **konektoru přidat** stránce **stáhnout software on-premises connector**. Místní Exchange connector je v komprimované složce (.zip), který můžete otevřít nebo uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
 
     > [!IMPORTANT]
     > Soubory ve složce místního Exchange Connectoru nepřejmenovávejte ani nepřesouvejte. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace Exchange Connectoru.
@@ -153,8 +151,8 @@ Jakmile konektor Exchange vytvoří připojení k Exchangi pomocí určeného se
 
 Po úspěšné konfiguraci Exchange Connectorů můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Ověření připojení Exchange Connectoru:
 
-1. Na řídicím panelu Intune zvolte **Místní přístup**.
-2. V části **Nastavení** vyberte **Konektory Exchange ActiveSync** a ověřte stav připojení pro každý Exchange Connector.
+1. Na řídicím panelu Intune zvolte **přístup k Exchangi**.
+2. V části **nastavení**vyberte **konektor systému Exchange online** ověření stavu připojení pro každý konektor Exchange connector.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
 
@@ -171,8 +169,8 @@ V místním konektorem Exchange automaticky synchronizuje zařízení záznamy E
 
 Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konektor spustil synchronizaci pomocí možnosti **Rychlá synchronizace** nebo **Úplná synchronizace**:
 
-   1. Na řídicím panelu Intune zvolte **Místní přístup**.
-   2. V části **Nastavení** zvolte **Konektory Exchange ActiveSync**.
+   1. Na řídicím panelu Intune zvolte **přístup k Exchangi**.
+   2. V části **nastavení**, zvolte **konektor systému Exchange online**.
    3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **Rychlá synchronizace** nebo **Úplná synchronizace**.
 
 ## <a name="next-steps"></a>Další postup

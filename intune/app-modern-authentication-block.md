@@ -6,8 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
-ms.topic: article
+ms.date: 02/22/2019
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a651f926f8e8cc5beab80a70649c82677e0b2487
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 5717c7471b8fc003572b863c5f317abe1e66bf07
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55833048"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742176"
 ---
 # <a name="block-apps-that-do-not-use-modern-authentication-adal"></a>Blokování aplikací, které nepoužívají moderní ověřování (ADAL)
 
@@ -35,7 +34,7 @@ Podmíněný přístup založený na aplikaci se zásadami ochrany aplikací spo
 Pokud chcete blokovat přístup k aplikacím, které nepoužívají moderní ověřování, doporučujeme následující metody:
 
 - Nastavte pravidla deklarací služby AD FS pro blokování jiných než moderních ověřovacích protokolů. Podrobné pokyny jsou uvedené ve scénáři 3 – [Blokování veškerého přístupu k O365 kromě aplikací využívajících prohlížeč](https://technet.microsoft.com/library/dn592182.aspx).
-- Pro **Exchange a SharePoint Online** použijte podmíněný přístup Azure Active Directory a použijte rutinu PowerShellu Set-SPOTenant pro SharePoint Online. Podrobné pokyny najdete v tématu [Nastavení SharePointu Online a Exchange Online pro podmíněný přístup Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication#legacy-authentication-protocols).
+- Pro **Exchange a SharePoint Online**, použití podmíněného přístupu a použít tuto rutinu prostředí PowerShell Set-SPOTenant pro službu SharePoint online. Podrobné pokyny najdete v tématu [Nastavení SharePointu Online a Exchange Online pro podmíněný přístup Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication#legacy-authentication-protocols).
 
 
 >[!IMPORTANT]

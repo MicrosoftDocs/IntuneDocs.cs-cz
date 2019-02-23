@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b9bd8aaca9aaf6e39c7a120518eeca1cef31511
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 016b59a915058c3f2d0647a72e3ead224a010500
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55845087"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742435"
 ---
 # <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -34,7 +34,7 @@ Například:
 - Povolit nebo zakázat přístup k bluetooth na zařízení.
 - Vytvoření profilu Wi-Fi nebo VPN, který dává různým zařízením přístup k vaší podnikové síti.
 - Správa aktualizací softwaru, včetně toho, když se instalují.
-- Spusťte zařízení s Androidem ve vyhrazených veřejných terminálech, který můžete spustit jednu aplikaci nebo spustit velký počet aplikací.
+- Spusťte jako vyhrazených veřejných terminálech, který můžete spustit jednu aplikaci, nebo spouštět aplikace pro řadu zařízení s Androidem.
 
 V tomto článku jsou uvedené kroky k vytvoření profilu a poskytuje přehled o různých typů profilů, které lze vytvořit. Povolit nebo zakázat některé funkce na zařízeních, používání těchto profilů.
 
@@ -164,7 +164,7 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-K dispozici i jako omezení zařízení pro nastavení celoobrazovkového [Android](device-restrictions-android.md#kiosk), [Androidu Enterprise](device-restrictions-android-for-work.md#kiosk-settings), a [ios](device-restrictions-ios.md#kiosk-supervised-only).
+K dispozici i jako omezení zařízení pro nastavení celoobrazovkového [Android](device-restrictions-android.md#kiosk), [Androidu Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings), a [ios](device-restrictions-ios.md#kiosk-supervised-only).
 
 ## <a name="email"></a>Email
 

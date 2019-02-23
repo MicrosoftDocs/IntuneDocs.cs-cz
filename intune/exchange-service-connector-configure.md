@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2706a12f9f4844f96d279f753e7cd99f159ca856
-ms.sourcegitcommit: e262b0ad8df610e25eb9421b9ebc2673bcf1020e
+ms.openlocfilehash: e825fa5523edd3907db7754138c76754ec9175e4
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55986803"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742087"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
@@ -58,17 +58,15 @@ Musíte také vytvořit uživatelský účet Exchange Online, který bude konekt
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-3. Výběrem možnosti **Intune** otevřete řídící panel Microsoft Intune. Zvolte **Podmíněný přístup** a potom v části **Nastavení** vyberte **Konektor služby Exchange**.
+3. Výběrem možnosti **Intune** otevřete řídící panel Microsoft Intune. Vyberte **přístup k Exchangi**a potom v části **nastavení** vyberte **konektor systému Exchange online**.
 
-4.  Na stránce **Podmíněný přístup – Konektor služby Exchange** vyberte **Nastavit konektor Service to Service Connector**. 
-   
-     ![Obrázek znázorňující výběr odkazu Nastavit konektor Service to Service Connector](media/exchange_service_connector.png)
+4.  Na **Exchange přístup – Exchange online connector** zvolte **nastavit konektor Service to Service Connector**. 
 
 Konektor Service to Service Connector se automaticky nakonfiguruje a synchronizuje s Exchangem Online nebo novým prostředím Exchange Online Dedicated.
 
 ## <a name="validate-your-exchange-connection"></a>Ověření připojení k Exchangi
 
-Po úspěšné konfiguraci konektoru Service to Service Connector služby Exchange ověřte informace Exchange Connector Serveru na stránce **Podmíněný přístup – Konektor služby Exchange**.
+Po úspěšné konfiguraci konektoru Service to Service Exchange, ověřit informace o konektoru serveru Exchange na **Exchange přístup – Exchange online connector** stránky.
 
 Můžete se taky podívat na **Stav připojení** a datum a čas posledního úspěšného pokusu o synchronizaci.
 
