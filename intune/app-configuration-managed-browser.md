@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 02/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64cd4aa629e980bf69557d6cd2c40f8bee7bd3c6
-ms.sourcegitcommit: c0b954c82cd732b5328f92b618947bf425bf0a91
+ms.openlocfilehash: 52baa8f92401266dbf3043a334eccbc6ddffc873
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56086212"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742631"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -74,9 +74,13 @@ Pokud nejsou aplikace Managed Browser nebo Microsoft Edge spravované službou I
 
 Managed Browser je nově schválenou klientskou aplikací pro podmíněný přístup. To znamená, že můžete omezit přístup mobilních prohlížečů k webovým aplikacím připojeným ke službě Azure AD tak, aby uživatelé mohli používat jenom Managed Browser, a blokovat přístup ze všech ostatních nechráněných prohlížečů, například Safari nebo Chrome. Tuto ochranu můžete použít u prostředků Azure, jako jsou Exchange Online a SharePoint Online, portál Office a dokonce místní weby, k nimž mají přístup externí uživatelé přes [Proxy aplikací Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started). 
 
-Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možnost používání aplikace Intune Managed Browser na mobilních platformách, můžete vytvořit zásadu podmíněného přístupu Azure AD, která vyžaduje schválené klientské aplikace. 
+Pokud chcete webovým aplikacím připojeným ke službě Azure AD omezit možnost používání aplikace Intune Managed Browser na mobilních platformách, můžete vytvořit zásadu podmíněného přístupu, která vyžaduje schválené klientské aplikace. 
 
-1. Na portálu Azure Portal vyberte **Azure Active Directory** > **Podnikové aplikace** > **Podmíněný přístup** > **Nová zásada**. 
+> [!TIP]  
+> Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
+
+
+1. Na portálu Intune vyberte **Podmíněný přístup** > **Nová zásada**. 
 2. Potom v okně v části **Ovládací prvky přístupu** vyberte **Udělení**. 
 3. Klikněte na **Vyžaduje se klientem schválená aplikace**. 
 4. V okně **Udělení** klikněte na **Vybrat**. Tuto zásadu musíte přiřadit ke cloudovým aplikacím, které mají být dostupné jenom pro aplikaci Intune Managed Browser.

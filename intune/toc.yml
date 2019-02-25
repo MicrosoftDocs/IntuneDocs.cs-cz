@@ -199,15 +199,15 @@ items:
         href: android-enroll.md
       - name: Připojení Intune k Androidu Enterprise
         href: connect-intune-android-enterprise.md
-      - name: Nastavení registrace pracovního profilu Androidu
+      - name: Registrace zařízení Android Enterprise s pracovním profilem
         href: android-work-profile-enroll.md
-      - name: Nastavení registrace dedikovaných zařízení s Androidem
+      - name: Registrace dedikovaných zařízení s Androidem Enterprise
         href: android-kiosk-enroll.md
-      - name: Nastavení registrace plně spravovaných zařízení s Androidem
+      - name: Registrace plně spravovaných zařízení s Androidem Enterprise
         href: android-fully-managed-enroll.md
-      - name: Registrace dedikovaných nebo plně spravovaných zařízení s Androidem
+      - name: Registrace dedikovaných nebo plně spravovaných zařízení s Androidem Enterprise
         href: android-dedicated-devices-fully-managed-enroll.md
-      - name: Správa zařízení s pracovním profilem Androidu
+      - name: Správa zařízení Android Enterprise s pracovním profilem
         href: android-enterprise-overview.md
       - name: Registrace mobilního zařízení Samsung Knox
         href: android-samsung-knox-mobile-enroll.md
@@ -250,6 +250,8 @@ items:
       href: device-remote-lock.md
     - name: Resetovat heslo
       href: device-passcode-reset.md
+    - name: Přejmenování zařízení
+      href: device-rename.md
     - name: Restartování zařízení
       href: device-restart.md
     - name: Odhlášení aktuálního uživatele
@@ -578,6 +580,8 @@ items:
             href: app-protection-policies-exception.md
         - name: Ověření zásad ochrany aplikací
           href: app-protection-policies-validate.md
+        - name: Doručování zásad ochrany aplikací
+          href: app-protection-policy-delivery.md
         - name: Monitorování stavu uživatele u ochrany aplikací
           href: app-protection-policies-monitor.md
         - name: Příprava na zásady ochrany aplikací WIP
@@ -1001,9 +1005,9 @@ items:
       href: data-outside-protect.md
     - name: Zabránění únikům dat na nespravovaných zařízeních
       href: data-leak-prevention.md
-ms.openlocfilehash: d10d6c5a1c19430a0413e4f3149035a9e783dfc6
-ms.sourcegitcommit: f1681554ad842c22ad3f82f0e6d44d5966e4aa3d
+ms.openlocfilehash: 680ae510d7f3387b53ad6ae50c8e4d8ba194f8b9
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56458905"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742818"
