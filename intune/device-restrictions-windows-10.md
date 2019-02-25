@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/05/2019
+ms.date: 02/13/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 943b5dc8c0fe1c9b55b9c4971be2087353b60428
-ms.sourcegitcommit: e0374b3ced83c8876a4f78b326869c10588a55e5
+ms.openlocfilehash: 5fd0812967e6cce0e1eabe0fb04e597535b972f3
+ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307885"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56742767"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -32,7 +32,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md).
+[Vytvořit profil konfigurace zařízení](device-restrictions-configure.md#create-the-profile).
 
 ## <a name="app-store"></a>App Store
 
@@ -144,56 +144,6 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 
 - **Ukončit procesy ve Správci úloh**: Toto nastavení určuje, zda nejsou správci, můžete použít Správce úloh na ukončit úlohy. **Blok** brání použití Správce úloh k ukončení procesu nebo úlohy na zařízení uživatele se standardním oprávněním (bez oprávnění správce). **Není nakonfigurováno** (výchozí) umožňuje standardní uživatelé k ukončení procesu nebo úloh pomocí Správce úloh.
 
-## <a name="kiosk-preview---obsolete"></a>Veřejný terminál (Preview) – zastaralé
-
-Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfigurovat režim veřejného terminálu, podívejte se na článek o [nastavení veřejného terminálu pro Windows 10 a novější](kiosk-settings.md).
-
-Zařízení s beznabídkovým režimem obvykle spouští jednu aplikaci nebo konkrétní sadu aplikací. Uživatelé nemají přístup k žádným prvkům ani funkcím na zařízení.
-
-- **Celoobrazovkový režim**: Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
-
-  - **Není nakonfigurováno** (výchozí): Zásady neumožňuje celoobrazovkový režim na zařízení.
-  - **Veřejný terminál aplikace s jedním**: Profil povoluje v zařízení běžela jenom jedna aplikace. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - **Veřejný terminál s více aplikacemi**: Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují, a nezobrazuje aplikace, které nepotřebují.
-
-#### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
-
-Zadejte následující nastavení:
-
-- **Uživatelský účet**: Zadejte místní (pro zařízení) uživatelského účtu, účet domény AD nebo účet Azure AD přidružené k aplikaci veřejného terminálu.
-  - Místní účet: Zadejte jako `devicename\accountname`, `.\accountname`, nebo `accountname`
-  - Doména účtu: Zadejte jako `domain\accountname`
-  - Účet Azure AD: Zadejte jako `AzureAD\emailaddress`. Nezapomeňte zadat „AzureAD“, protože se jedná o pevný název domény. Potom pokračujte s e-mailovou adresou Azure AD. Zadejte například `AzureAD\user@contoso.onmicrosoft.com`.
-
-    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Pokud pro beznabídkový režim používáte účet Azure AD, nezapomeňte zadat `AzureAD\user@yourorganization.com`.
-
-- **Modelu uživatele aplikace ID (AUMID) dané aplikace**: Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-
-#### <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
-
-[Veřejné terminály s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#configure-a-kiosk-in-microsoft-intune) používají konfiguraci veřejného terminálu, která zobrazuje povolené aplikace, a další nastavení. 
-
-Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu, nebo vyberte existující konfiguraci. Potom zadejte následující nastavení:
-
-- **Název konfigurace veřejného terminálu**: Zadejte popisný název používaný k identifikaci konfigurace.
-
-- **Aplikace veřejného terminálu**: Zadejte aplikace, které jsou k dispozici v nabídce Start. Aplikace, které přidáte, jsou jediné aplikace, které uživatel může otevřít.
-
-  - **Typ aplikace**: Zvolte typ aplikace veřejného terminálu:
-    - **Aplikace Win32**: Tradiční desktopové aplikace. Budete potřebovat plně kvalifikovanou (absolutní) cestu ke spustitelnému souboru, s ohledem na zařízení.
-    - **Aplikace pro UPW**: Universal Windows app. Budete potřebovat [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
-
-  - **identifikátor**: Zadejte plně kvalifikovanou cestu spustitelného souboru (u aplikací Win32), nebo [AUMID aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app) (aplikace pro UPW).
-
-- **Taskbar**: Zvolit **povolit** (Zobrazit) na hlavním panelu, nebo je Uchovávejte **Nenakonfigurováno** (skryté) na veřejném terminálu.
-
-- **Rozložení nabídky Start**: Zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce Start. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
-
-  [Vytvořit jako veřejný terminál Windows 10, na kterém běží aplikace](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps#create-xml-file) obsahuje další podrobnosti o používání a vytváření souborů XML.
-
-- **Přiřazení uživatelé**: Přidejte jeden nebo více uživatelských účtů, které můžou používat aplikace, které přidáte. Přihlášenému účtu jsou k dispozici pouze aplikace definované v konfiguraci. Účtem může být účet místní vůči zařízení nebo účet Azure AD přidružený k aplikaci veřejného terminálu.
-
-    U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `domain\user@tenant.com`.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
@@ -211,6 +161,31 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
 - **RCS (jenom mobilní verze)**: Zakáže funkci přijímání a odesílání Rich Communication Services na zařízení.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
+
+### <a name="use-microsoft-edge-kiosk-mode"></a>Režim veřejného terminálu použijte Microsoft Edge
+
+Dostupná nastavení měnit v závislosti na volbách. Možnosti:
+
+- **Ne** (výchozí): Microsoft Edge není spuštěn v režimu veřejného terminálu. Jsou k dispozici můžete změnit a nakonfigurovat všechna nastavení Microsoft Edge.
+- **Digitální/Interaktivní značky (aplikace s jedním veřejný terminál)**: Nastavení Edge filtry, které se dají použít pro digitální/Interaktivní značky Edge celoobrazovkový režim pro použití pouze pro veřejné terminály s Windows 10 jedné aplikace. Toto nastavení chcete otevřít adresy URL zobrazení na celé obrazovce a zobrazit obsah pouze na daném webu. [Nastavit příznaky digitální](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+- **Procházení se službou inPrivate veřejné (beznabídkového režimu jedné aplikace)**: Nastavení Edge filtry, které lze použít se službou InPrivate veřejné procházení Edge celoobrazovkový režim pro použít na veřejné terminály s Windows 10 jedné aplikace. Běží více karet verze Microsoft Edge.
+- **Normální režim (veřejný terminál s více aplikacemi)**: Nastavení Edge filtry, které se dají použít pro normální Edge beznabídkový režim. Spouští se všemi funkcemi procházení plné verze Microsoft Edge.
+- **Veřejné procházení (veřejný terminál s více aplikacemi)**: Nastavení Edge filtry, které se dají použít pro veřejné procházení na jako veřejný terminál s více aplikacemi Windows 10.  Běží více karet verze InPrivate v Microsoft Edgi.
+
+> [!TIP]
+> Další informace o těchto možností k čemu najdete v tématu [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
+
+Tento profil omezení zařízení přímo souvisí s profil beznabídkového režimu vytvoříte pomocí [nastavení beznabídkového režimu Windows](kiosk-settings-windows.md). Shrnutí:
+
+1. Vytvořte [nastavení beznabídkového režimu Windows](kiosk-settings-windows.md) profilu zařízení v beznabídkovém režimu spouštět. Vyberte Microsoft Edge jako aplikace a nastavení celoobrazovkového režimu Edge v profil beznabídkového režimu.
+2. Vytvořit profil omezení zařízení, který je popsaný v tomto článku a konfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge. Zvolte stejný typ režimu veřejného terminálu Edge jako vybrané v profilu aplikace veřejného terminálu ([nastavení beznabídkového režimu Windows](kiosk-settings-windows.md)). 
+
+    [Nepodporuje nastavení celoobrazovkového režimu](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) je skvělý prostředek.
+
+> [!IMPORTANT] 
+> Je potřeba přiřadit tento profil Microsoft Edge pro stejné zařízení jako váš profil beznabídkového režimu ([nastavení beznabídkového režimu Windows](kiosk-settings-windows.md)).
+
+CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Počáteční zkušenosti
 
@@ -230,6 +205,12 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
 - **Uživatel může změnit tlačítko Domů**: **Povolit** umožňuje uživatelům změnit domovské tlačítko. Změny uživatele přepsání jakéhokoli nastavení správce na tlačítko Domů. **Není nakonfigurováno** použije výchozí chování operačního systému v zařízení, který může zablokovat uživatelům možnost měnit, jak správce nakonfiguroval tlačítko Domů.
 - **Zobrazit stránku prvního spuštění**: **Blok** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, třeba těm zaregistrovaným v konfiguracích s nulovými emisemi, zablokovat tuto stránku. **Není nakonfigurováno** ukazuje úvodní stránka.
   - **Prostředí URL při prvním spuštění**: Zadejte adresu URL stránky zobrazíte uživatele při prvním spuštění Microsoft Edge (jenom Windows 10 Mobile).
+- **Aktualizujte prohlížeč po nečinnosti**: Zadejte počet nečinných počet minut, než se aktualizují v prohlížeči z 0 – 1 440 minut. Výchozí hodnota je `5` minut. Pokud je nastavena na `0` (nula) v prohlížeči neobnoví po nečinnosti.
+
+  Toto nastavení je k dispozici pouze při spuštění v [procházení InPrivate veřejné (veřejný terminál s jednou aplikací)](#use-microsoft-edge-kiosk-mode).
+
+  CSP: [ConfigureKioskResetAfterIdleTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskresetafteridletimeout)
+
 - **Automaticky otevíraná okna**: Zvolte **bloku** zastavení automaticky otevíraná okna v prohlížeči. Platí jen pro Windows 10 Desktop. **Není nakonfigurováno** umožňuje automaticky otevíraných oken ve webovém prohlížeči.
 - **Odesílat intranetové přenosy do Internet Exploreru**: **Povolit** umožňuje uživatelům otevírat intranetové weby v Internet Exploreru, ne Microsoft Edge (jenom Windows 10 desktop). **Není nakonfigurováno** umožňuje uživatelům používat Microsoft Edge.
 - **Umístění seznamu webů využívajících režim rozlehlé sítě**: Zadejte adresu URL, která obsahuje seznam webů, které se otevřou v podnikovém režimu. Uživatelé nemohou změnit tohoto seznamu. Platí jen pro Windows 10 Desktop.
@@ -261,6 +242,11 @@ Použijte tlačítko **Přidat** a vytvořte konfiguraci veřejného terminálu,
   - Yahoo
   - Vlastní hodnota
 - **Návrhy hledání**: **Není nakonfigurováno** umožňuje vyhledávací navrhoval weby web při psaní vyhledávání v panelu Adresa. **Blok** brání tuto funkci.
+- **Povolit změny v modulu vyhledávání**: **Ano** (výchozí) umožňuje uživatelům přidání nového vyhledávací weby nebo změnit výchozí vyhledávací web v Microsoft Edge. Zvolte **ne** uživatelům zabránit v přizpůsobení vyhledávací web.
+
+  Toto nastavení je k dispozici pouze při spuštění v [normálního režimu (veřejný terminál s více aplikacemi)](#use-microsoft-edge-kiosk-mode).
+
+  CSP: [AllowSearchEngineCustomization](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsearchenginecustomization)
 
 ### <a name="privacy-and-security"></a>Ochrana osobních údajů a zabezpečení
 
