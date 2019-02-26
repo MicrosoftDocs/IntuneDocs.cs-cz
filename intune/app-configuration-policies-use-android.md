@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/26/2018
+ms.date: 02/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 512fc924f71ba9a9fdd46ba8f5f5c087de83c2dd
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 6278d19edd6d55f3aa06b30ee9ffee867f784bd7
+ms.sourcegitcommit: ba7170e499ea0009e9f1c2d77dbec116ec01ba1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840412"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56826168"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 
@@ -44,13 +44,13 @@ Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastav
 6. V poli **Platforma** vyberte **Android**.
 7. Kliknutím na **Přidružená aplikace** přejděte na výběr aplikace, pro kterou chcete definovat zásady konfigurace aplikací. Ze seznamu vyberte některou z aplikací v pracovním profilu Androidu, které jste schválili a synchronizovali s Intune.
 8. Vyberte **Oprávnění**. K nastavení konfigurace můžete použít:
-    - [Návrhář konfigurace](#Use-the-configuration-designer)
-    - [Editor JSON](#Enter-the-JSON-editor)
+    - [Návrhář konfigurace](#use-the-configuration-designer)
+    - [Editor JSON](#enter-the-json-editor)
 9. Zvolte **OK** a pak **Přidat**.
 
 ## <a name="use-the-configuration-designer"></a>Použití návrháře konfigurace
 
-U aplikací pro Android, které podporují konfigurace, můžete použít návrháře konfigurace. Konfigurace se uplatní na zařízeních, která jsou zaregistrovaná v Intune. Návrhář vám umožní nakonfigurovat konkrétní hodnoty konfigurace pro nastavení, která aplikace zpřístupňuje.
+Návrháře konfigurace můžete použít pro aplikace pro Android, když aplikace byly navržené pro podporu nastavení konfigurace. Konfigurace se uplatní na zařízeních, která jsou zaregistrovaná v Intune. Návrhář vám umožní nakonfigurovat konkrétní hodnoty konfigurace pro nastavení, která aplikace zpřístupňuje.
 
 Volbou **Přidat** vyberte seznam nastavení konfigurace, která chcete pro aplikaci určit.  
 Pro každý klíč a hodnotu v konfiguraci nastavte:

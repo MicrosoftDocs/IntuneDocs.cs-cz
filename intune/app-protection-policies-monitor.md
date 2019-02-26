@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/08/2019
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,24 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dd0ce79f6bbb381523a92855f38ad6b7f372ac2
-ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
+ms.openlocfilehash: 76102e57842567ed1bcc8002862513efd9cbcf5b
+ms.sourcegitcommit: ba7170e499ea0009e9f1c2d77dbec116ec01ba1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56655319"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56826151"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Monitorujte stav dodržování zásad správy mobilních aplikací (MAM), které jste použili u uživatelů v podokně ochrany aplikace Intune na portálu [Azure Portal](https://portal.azure.com). Najděte informace o uživatelích dotčených zásadami MAM, stavu dodržování zásad a všech problémech, se kterými se uživatelé můžou setkat.
+Můžete monitorovat stav dodržování zásad správy (MAM) mobilních aplikací, které jste použili u uživatelů v podokně Intune app protection v [webu Azure portal](https://portal.azure.com). Kromě toho může najít informace o uživatelích dotčených zásadami MAM, stav dodržování zásad MAM a všech problémech, které uživatelé můžou setkat.
 
-Stav dodržování zásad můžete monitorovat na třech místech:
-
+Monitorovat stav dodržování zásad MAM třech místech:
 -   Souhrnné zobrazení
-
 -   Podrobné zobrazení
-
 -   Zobrazení vytváření sestav
 
 > [!NOTE]
@@ -49,27 +46,31 @@ Stav dodržování zásad můžete monitorovat na třech místech:
 
 ![Dlaždice souhrnu podokna Správa mobilních aplikací Intune](./media/app-protection-user-status-summary.png)
 
--   **Přiřazení uživatelé**: Celkový počet přiřazení uživatelé ve vaší společnosti, kteří používají aplikace, které je přidružené k zásadám v pracovním kontextu a jsou chráněné a licenci, a také přiřazení uživatelé, které jsou Nechráněno a nelicencováno
--   **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. Zařízení s Jailbreakem jsou hlášeny v rámci **uživatelé označení příznakem**.
--   **Stav uživatele pro iOS** a **stav uživatele pro Android**: Počet uživatelů, kteří použili aplikaci, kteří mají přiřazené k nim v pracovním kontextu pro platformu související zásady. Tyto informace zobrazují počet uživatelů, spravovat zásady, jakož i počet uživatelů, kteří používají aplikaci, která není cílem žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
+- **Přiřazení uživatelé**: Celkový počet přiřazení uživatelé ve vaší společnosti, kteří používají aplikace, které je přidružené k zásadám v pracovním kontextu a jsou chráněné a licenci, a také přiřazení uživatelé, které jsou Nechráněno a nelicencováno
+- **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. Zařízení s Jailbreakem jsou hlášeny v rámci **uživatelé označení příznakem**.
+- **Stav uživatele pro iOS** a **stav uživatele pro Android**: Počet uživatelů, kteří použili aplikaci, kteří mají přiřazené k nim v pracovním kontextu pro platformu související zásady. Tyto informace zobrazují počet uživatelů, spravovat zásady, jakož i počet uživatelů, kteří používají aplikaci, která není cílem žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
+- **TOP chráněné aplikace pro iOS**: Podle nejpoužívanější aplikace pro iOS, tyto informace zobrazují počet aplikací pro iOS chráněná a nechráněné.
+- **Vybrané chráněné aplikace pro Android**: Podle nejpoužívanější aplikace pro Android, tyto informace zobrazují počet chráněných a nechráněné aplikace pro Android.
+- **TOP aplikací bez registrace pro iOS nakonfigurováno**: Podle nejpoužívanějších aplikací iOS pro neregistrovaná zařízení, tyto informace zobrazují počet nakonfigurovaných iOS aplikací.
+- **Nejčastěji konfigurované aplikace pro Android bez registrace**: Podle nejpoužívanější aplikace pro Android pro neregistrovaná zařízení, tyto informace zobrazují počet konfigurované aplikace pro Android.
 
     > [!NOTE]
-    > Pokud máte pro každou platformu více zásad, bude se uživatel považovat za spravovaného zásadou, pokud má přiřazenou minimálně jednu zásadu.
+    > Pokud máte každou platformu víc zásad, uživatel je považován za spravovaného zásadou, když je nutné splnit aspoň jednu zásadu je přiřadit k nim.
 
 ## <a name="detailed-view"></a>Podrobné zobrazení
 Pokud se chcete podívat na podrobnosti přehledu, zvolte dlaždici **Stav uživatele** (podle platformy operačního systému) a pak dlaždici **Uživatelé označení příznakem**.
 
 ### <a name="user-status"></a>Stav uživatele
 Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržování předpisů. V podokně **Vytváření sestav aplikace** se zobrazují následující informace o vybraném uživateli:
-- Zařízení přidružená k účtu uživatele
-
-- Aplikace se zásadou MAM u zařízení
-
-- Stav:
-
+- **Ikona**: Zobrazuje, zda je aktuální stav aplikace.
+- **Název aplikace**: Název aplikace.
+- **Název zařízení**: Zařízení, které jsou přidružené k účtu uživatele.
+- **Typ zařízení**: Typ zařízení nebo operační systém běží zařízení.
+- **Zásady**: Zásady přidružené k aplikaci.
+- **Stav**:
   - **Vrátit se změnami**: Že byly zásady nasazeny uživateli, a aplikace byla alespoň jednou použita v pracovním kontextu.
-
   - **Není zaregistrováno**: Že byly zásady nasazeny uživateli, ale aplikace nebyla použita v pracovním kontextu od té doby.
+- **Poslední synchronizace**: Pokud byla poslední synchronizace zařízení.
 
 >[!NOTE]
 > Pokud uživatel, kterého jste hledali, nemá nasazené zásady MAM, zobrazí se zpráva, že na uživatele není zacílená žádná zásada MAM.
@@ -91,7 +92,7 @@ V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okam
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 
-Stejné sestavy v můžete najít **stav ochrany aplikace** okno.
+Stejné sestavy můžete najít v horní části **stav ochrany aplikace** okno.
 
 > [!NOTE]
 > Intune poskytuje další zařízení polí, včetně Id registrace aplikace, s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole jsou dostupné tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
@@ -101,32 +102,32 @@ Další sestavy jsou k dispozici, které vám pomůžou se stavem dodržování 
 **Sestavy** okno nabízí několik sestav na základě uživatele a aplikace, včetně následujících:
 
 
--   **Sestava uživatelů spadajících pod**: Tato sestava obsahuje stejné informace můžete najít **stav uživatele** sestavy ve výše uvedeném oddílu podrobné zobrazení.
+- **Sestava uživatelů spadajících pod**: Tato sestava obsahuje stejné informace, které najdete v **stav uživatele** sestavy v rámci [podrobného zobrazení](app-protection-policies-monitor.md#detailed-view) výše uvedené části.
 
--   **Sestava aplikací**: Tato sestava poskytuje dva různé stavy ochrany aplikací, které správce může před generováním sestavy vybrat. Může vybrat chráněný nebo nechráněný stav.
+- **Sestava aplikací**: Kromě výběru platformy a aplikace, tato sestava poskytuje dva různé stavy ochrany aplikací, které můžete před generováním sestavy vybrat. Může být stavy **chráněné** nebo **Unprotected**.
 
-    -   Stav uživatele pro spravovanou aktivitu MAM (chráněný): Tato sestava obsahuje aktivitu jednotlivých aplikací spravovaných prostřednictvím MAM na jednotlivé uživatele.
-
-        -   Zobrazuje všechny aplikace, které jsou cílem zásad MAM, pro jednotlivé uživatele. Zobrazuje také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách MAM, nebo aplikací, které jsou cílem zásad MAM, ale nebyly nikdy zaregistrované.
-<br><br>
-    -   Stav uživatele pro nespravovanou aktivitu MAM (nechráněný): Tato sestava obsahuje aktivitu aplikací aktivovaných pro MAM, které jsou aktuálně spravované, podle jednotlivých uživatelů. K tomu může dojít z následujících důvodů:
-
+    -   Stav uživatele pro spravovanou aktivitu MAM (**chráněné**): Tato sestava obsahuje aktivitu jednotlivých aplikací spravovaných prostřednictvím MAM na jednotlivé uživatele. Zobrazuje všechny aplikace, které jsou cílem zásad MAM, pro jednotlivé uživatele. Zobrazuje také rozdělení stavu jednotlivých aplikací podle toho, jak jsou zaregistrované v zásadách MAM, nebo aplikací, které jsou cílem zásad MAM, ale nebyly nikdy zaregistrované.
+    -   Stav uživatele pro nespravovanou aktivitu MAM (**Unprotected**): Tato sestava obsahuje aktivitu aplikací aktivovaných pro MAM, které jsou aktuálně spravované, podle jednotlivých uživatelů. K tomu může dojít z následujících důvodů:
         -   Tyto aplikace používá uživatel nebo aplikace, která momentálně není cílem žádné zásady MAM.
-
         -   Všechny aplikace jsou zaregistrované, ale nejsou u nich použité žádné zásady MAM.
 
-![Snímek obrazovky uživatele aplikace reporting okno s podrobnostmi o 3 aplikace](./media/MAM-reporting-4.png)
+        ![Snímek obrazovky uživatele aplikace reporting okno s podrobnostmi o 3 aplikace](./media/MAM-reporting-4.png)
+
+- **Sestava uživatelů spadajících pod konfiguraci**: Na základě vybrané uživatelem, tato sestava obsahuje podrobnosti o žádné konfigurace aplikací, které uživatel obdržel.
+- **Sestava ke konfiguraci aplikace**: Základní na vybrané platformy a aplikace, tato sestava obsahuje podrobnosti o tom, které mají uživatelé obdrží konfigurace pro vybranou aplikaci.
+- **Aplikace pro Windows Information Protection referát**: Tato sestava zobrazí aplikace, které se pokoušíte překračují hranice zásad.
+- **Referát o webu pro Windows Information Protection**: Tato sestava zobrazí, které weby se pokoušíte překračují hranice zásad.
 
 ## <a name="table-grouping"></a>Seskupování tabulek
 
-Jakmile se zobrazí data **sestavy uživatele ochrany aplikací**, můžete je agregovat podle těchto možností:
+Jednou **sestava uživatele ochrany aplikací** se zobrazí data, můžete je agregovat podle následující:
 
 - **Výsledek ověřování:** Data se zobrazí seskupená podle stavu ochrany aplikací, který může být selhání, upozornění nebo úspěch.
 - **Název aplikace:** Data se zobrazí seskupená podle aplikací (skutečného názvu aplikace) se selháním, upozorněním nebo úspěch.
 
 ## <a name="export-app-protection-activities-to-csv"></a>Export aktivit ochrany aplikace do souboru CSV
 
-Všechny aktivity ochrany aplikací můžete vyexportovat do jediného souboru .csv. To může být užitečné při analýze všech stavů ochrany aplikací hlášených od uživatelů.
+Všechny vaše aktivity ochrany aplikací můžete vyexportovat do jediného *CSV* souboru. To může být užitečné při analýze všech stavů ochrany aplikací hlášených od uživatelů.
 
 Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
@@ -134,12 +135,11 @@ Pokud chcete vygenerovat sestavu ochrany aplikací, postupujte takto:
 
     ![Snímek obrazovky se odkaz ke stažení App protection](./media/app-protection-report-csv-2.png)
 
-2. Zvolte Ano, aby se vaše sestava uložila, a pak zvolte Uložit jako a vyberte složku, do které chcete sestavu uložit.
+2. Zvolte **Ano** sestavu uložit, klikněte na tlačítko **uložit jako** a vyberte složku, které chcete sestavu uložit.
 
     ![Snímek obrazovky pole pro potvrzení uložení sestavy](./media/app-protection-report-csv-1.png)
 
 ## <a name="see-also"></a>Viz také:
-[Správa přenosu dat mezi aplikacemi pro iOS](data-transfer-between-apps-manage-ios.md)
-
-* [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
-* [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)
+- [Správa přenosu dat mezi aplikacemi pro iOS](data-transfer-between-apps-manage-ios.md)
+- [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](app-protection-enabled-apps-android.md)
+- [Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací](app-protection-enabled-apps-ios.md)

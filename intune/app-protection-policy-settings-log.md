@@ -1,7 +1,7 @@
 ---
 title: Zkontrolujte protokoly zásad ochrany aplikací | Microsoft Intune
 titlesuffix: Microsoft Intune
-description: Toto téma popisuje, jak konfigurovat protokoly (aplikace) zásad ochrany aplikací.
+description: Toto téma popisuje, jak konfigurovat protokoly (aplikace) zásady ochrany aplikací Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7262693a4e56eee97175a835cfdcd66bfefbcb4c
-ms.sourcegitcommit: 8943848d47d5d5d6e44c74d414c34c5e3457862b
+ms.openlocfilehash: bd5c984e210b34a3c9cdfa2083a976ef304065ea
+ms.sourcegitcommit: a9bb967273e8df7e743c9826948582fda555c02d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56655285"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56795575"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
@@ -38,7 +38,7 @@ V následující tabulce jsou uvedeny názvy a vysvětlení nastavení zaznamena
 
 ## <a name="app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací
 
-| Název                        | Možné hodnoty                                                                                                                                                                                                                                                                                           | Nastavení Správa mobilních aplikací Intune v portálu Azure Portal                                                                                                                            |
+| Name                        | Možné hodnoty                                                                                                                                                                                                                                                                                           | Nastavení Správa mobilních aplikací Intune v portálu Azure Portal                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x minut                                                                                                                                                                                                                                                                                                   | [Přístup] Znovu zkontroluje požadavky na přístup – období odkladu pro offline režim.<br>Poznámka: Toto je časové období před opakovaným zkontrolováním požadavků na přístup pro aplikace, pokud je zařízení offline.             |
 | AccessRecheckOnlineTimeout  | _x_ minut                                                                                                                                                                                                                                                                                                   | [Přístup] Znovu zkontroluje požadavky na přístup – časový limit.<br>Poznámka: Toto je časové období před opakovaným zkontrolováním požadavků na přístup pro aplikace po spuštění aplikace, pokud je zařízení online. |

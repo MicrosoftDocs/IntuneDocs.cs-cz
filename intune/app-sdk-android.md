@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/13/2018
+ms.date: 02/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f51d229e745a1e545d0853fa9e710a06cbfe6f8b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 351420cc5c10b78d7423c1827c1448bb1fe8f4b2
+ms.sourcegitcommit: ba7170e499ea0009e9f1c2d77dbec116ec01ba1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55851419"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56826304"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -47,8 +47,8 @@ Sada Intune App SDK obsahuje tyto soubory:
 
 ## <a name="requirements"></a>Požadavky
 
-Sada SDK podporuje Android API 19 (Android 4.4+) až Android API 28 (Android 8.0).
-
+### <a name="android-versions"></a>Verze androidu
+Sada SDK podporuje Android API 19 (Android 4.4 +) až Android API 28 (Android 9.0).
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
 Intune App SDK pro Android se při povolení zásad ochrany aplikací spoléhá na přítomnost [Portálu společnosti](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) v zařízení. Portál společnosti načítá zásady ochrany aplikací ze služeb Intune. Při inicializaci načte aplikace z Portálu společnosti zásadu a kód, který ji vynucuje.
@@ -60,6 +60,9 @@ U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrov
 
 ## <a name="sdk-integration"></a>Integrace sady SDK
 
+### <a name="sample-app"></a>Ukázková aplikace
+Příklad toho, jak správně integrace s Intune App SDK je k dispozici na [Githubu](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App). V tomto příkladu [sestavení modulu plug-in Gradle](#gradle-build-plugin).
+
 ### <a name="referencing-intune-app-libraries"></a>Odkazování na knihovny Intune App
 
 Intune App SDK je standardní knihovna pro Android, která nemá žádné externí závislosti. Soubor **Microsoft.Intune.MAM.SDK.aar** obsahuje jak rozhraní nutná pro povolení zásad ochrany aplikací, tak kód, který je podmínkou interoperability s Portálem společnosti Microsoft Intune.
@@ -70,7 +73,7 @@ Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty 
 
 #### <a name="proguard"></a>ProGuard
 
-Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí souboru .aar do sestavení se naše pravidla automaticky integrují do kroku ProGuard a potřebné soubory třídy se zachovají.
+Pokud je jako krok sestavení použitý [ProGuard](http://proguard.sourceforge.net/) (případně jiný mechanismus zmenšování nebo obfuskace), obsahuje sada SDK další konfigurační pravidla, která je nutné zahrnout. Při zahrnutí. Naše pravidla jsou automaticky integrovaná proguard krok AAR ve vašem sestavení, a jsou uloženy soubory nezbytné třídy.
 
 Knihovna ADAL (Azure Active Directory Authentication Libraries) může mít vlastní omezení pro ProGuard. Pokud je součástí vaší aplikace, informujte se o těchto omezeních v dokumentaci pro ADAL.
 
@@ -79,7 +82,7 @@ Sada Intune App SDK je knihovna Androidu, která umožňuje vaší aplikaci podp
 
 Provádění těchto nahrazení ručně může být zdlouhavé. Místo toho sada SDK poskytuje nástroje sestavení (modul plug-in pro sestavení Gradle a nástroj příkazového řádku pro ostatní sestavení), které provedou nahrazení automaticky. Tyto nástroje transformují soubory tříd vygenerované při kompilaci Java a nezmění původní zdrojový kód.
 
-Nástroj provede pouze [přímé nahrazení](#class-and-method-replacements)). Nástroje neprovádí žádné složitější integrace SDK, jako jsou [zásady uložení jako](#enable-features-that-require-app-participation), [použití více identit](#multi-identity-optional), [registrace App-WE](#app-protection-policy-without-device-enrollment), [změny souboru AndroidManifest](#manifest-replacements) nebo [konfigurace ADAL](#configure-azure-active-directory-authentication-library-adal), a proto je třeba tyto kroky provést dříve, než u aplikace povolíte plnou podporu Intune. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
+Provedení nástroje [přímé nahrazení](#class-and-method-replacements) pouze. Nástroje neprovádí žádné složitější integrace SDK, jako jsou [zásady uložení jako](#enable-features-that-require-app-participation), [použití více identit](#multi-identity-optional), [registrace App-WE](#app-protection-policy-without-device-enrollment), [změny souboru AndroidManifest](#manifest-replacements) nebo [konfigurace ADAL](#configure-azure-active-directory-authentication-library-adal), a proto je třeba tyto kroky provést dříve, než u aplikace povolíte plnou podporu Intune. Pečlivě si pročtěte zbývající část této dokumentace, abyste se seznámili s body integrace, které se týkají vaší aplikace.
 
 > [!NOTE]
 > Tyto nástroje můžete spustit u projektu, u kterého jste již provedli částečnou nebo úplnou integraci sady SDK MAM prostřednictvím ručních nahrazení. Váš projekt musí i nadále uvádět sadu SDK MAM jako závislost.
@@ -134,7 +137,7 @@ dependencies {
 }
 intunemam {
     excludeProjects = [':product:FooLib']
-    includeExternalLibraries = ['bar.jar', "com.contoso.foo:zap-artifact", "com.microsoft.*"]
+    includeExternalLibraries = ['bar.jar', "com.contoso.foo:zap-artifact", "com.microsoft.*", "!com.microsoft.qux*"]
     excludeClasses = ['com.contoso.SplashActivity']
     excludeVariants=['savory']
 }
@@ -147,10 +150,11 @@ Toto by mělo následující důsledky:
 * `zap.jar` se **nepřepíše**, protože se nejedná o projekt a není zahrnut v `includeExternalLibraries`.
 * `com.contoso.foo:zap-artifact:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries`.
 * `com.microsoft.bar:baz:1.0.0` se přepíše, protože je tato závislost zahrnuta v `includeExternalLibraries` prostřednictvím zástupného znaku (`com.microsoft.*`).
+* `com.microsoft.qux:foo:2.0` není přepsán i v případě, že vzhledem k tomu, že je explicitně vyloučila prostřednictvím negace vzor odpovídá zástupný znak stejný jako předchozí položce.
 
 #### <a name="usage-of-includeexternallibraries"></a>Použití vlastnosti includeExternalLibraries
 
-Vzhledem k tomu, že ve výchozím nastavení modul plug-in funguje pouze u závislostí projektu (které obvykle poskytuje funkce `project()`), všechny závislosti zadané funkcí `fileTree(...)` nebo získané z Mavenu nebo jiných zdrojů balíčků (např. `com.contoso.bar:baz:1.2.0`) je třeba zadat do vlastnosti `includeExternalLibraries` v případě, že potřebujete, aby je služba MAM zpracovávala na základě kritérií vysvětlených níže. Zástupné znaky (*) se podporují.
+Vzhledem k tomu, že ve výchozím nastavení modul plug-in funguje pouze u závislostí projektu (které obvykle poskytuje funkce `project()`), všechny závislosti zadané funkcí `fileTree(...)` nebo získané z Mavenu nebo jiných zdrojů balíčků (např. `com.contoso.bar:baz:1.2.0`) je třeba zadat do vlastnosti `includeExternalLibraries` v případě, že potřebujete, aby je služba MAM zpracovávala na základě kritérií vysvětlených níže. Zástupné znaky (*) se podporují. Začátek položky s `!` je negace a je možné vyloučit knihoven, které by jinak byly zahrnuty pomocí zástupného znaku.
 
 Při zadávání externích závislostí pomocí notace artefaktu doporučujeme vynechat komponentu verze v hodnotě `includeExternalLibraries`. Pokud verzi uvedete, musí se jednat o přesnou verzi. Dynamické specifikace verzí (např. `1.+`) se nepodporují.
 
@@ -168,12 +172,20 @@ Pokud je odpověď na obě otázky Ano, musíte danou knihovnu do `includeExtern
 | Zahrnete knihovnu, jako je React Native, která obsahuje třídy odvozené z `Activity`, `Application` a `Fragment`, ale použijete pouze statické pomocné rutiny nebo nástrojové třídy. | Ne |
 | Zahrnete knihovnu, která obsahuje třídy odvozené z `TextView`, a v aplikaci tyto třídy použijete nebo dále odvodíte. | Ano |
 
+#### <a name="reporting"></a>Generování sestav
+Modul plug-in sestavení můžete vygenerovat sestavu html provedené změny. Chcete-li požádat o generování této sestavy, zadejte `report = true` v `intunemam` blok konfigurace. Pokud se generuje, sestava se zapíšou do `outputs/logs` v adresáři sestavení.
+
+```groovy
+intunemam {
+    report = true
+}
+```
 
 #### <a name="dependencies"></a>Závislosti
 
 Modul plug-in Gradle má závislost na nástroji [Javassist](https://jboss-javassist.github.io/javassist/), který musí být dostupný pro zjištění závislostí Gradlu (jak jsme popsali výše). Javassist se používá výhradně v době sestavení při spuštění modulu plug-in. Do vaší aplikace se nepřidá žádný kód Javassist.
 
-> [!NOTE]
+> [!NOTE] 
 > Musíte používat verzi 3.0 nebo novější modulu plug-in Android Gradle a Gradle 4.1 nebo novější.
 
 ### <a name="command-line-build-tool"></a>Nástroj příkazového řádku
@@ -186,6 +198,7 @@ Nástroj příkazového řádku je k dispozici ve složce `BuildTool` sady SDK. 
 Nástroj příkazového řádku lze vyvolat pomocí zadaných skriptů pomocných rutin, které se nacházejí v adresáři `BuildTool\bin`.
 
 Nástroj očekává následující parametry.
+
 | Parametr | Popis |
 | -- | -- |
 | `--input` | Seznam středníkem oddělených souborů JAR a adresářů souborů tříd, které se mají změnit. Seznam by měl obsahovat všechny soubory JAR a adresáře, které máte v úmyslu přepsat. |
@@ -194,6 +207,9 @@ Nástroj očekává následující parametry.
 | `--excludeClasses`| Seznam středníkem oddělených názvů tříd, které chcete z přepsání vyloučit. |
 
 Všechny parametry jsou povinné s výjimkou parametru `--excludeClasses`, který je volitelný.
+
+> [!NOTE] 
+> Na unixových systémů se středníkem oddělovač příkazu. Aby nedošlo k prostředí z rozdělení příkazy, ujistěte se, že každý středníku se dostala mimo "\' nebo zabalovat úplné parametr v uvozovkách.
 
 #### <a name="example-command-line-tool-invocation"></a>Ukázka vyvolání nástroje příkazového řádku
 
@@ -229,6 +245,8 @@ Všechna nahrazení popsaná v tomto oddílu lze provést automaticky pomocí [n
 | android.app.ActivityGroup | MAMActivityGroup |
 | android.app.AliasActivity | MAMAliasActivity |
 | android.app.Application | MAMApplication |
+| android.app.Dialog | MAMDialog |
+| android.app.AlertDialog.Builder | MAMAlertDialogBuilder |
 | android.app.DialogFragment | MAMDialogFragment |
 | android.app.ExpandableListActivity | MAMExpandableListActivity |
 | android.app.Fragment | MAMFragment |
@@ -279,7 +297,8 @@ Všechna nahrazení popsaná v tomto oddílu lze provést automaticky pomocí [n
 
 |Třída Androidu | Náhrada ze sady Intune App SDK |
 |--|--|
-|android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
+| android.support.v7.app.AlertDialog.Builder | MAMAlertDialogBuilder |
+| android.support.v7.app.AppCompatActivity | MAMAppCompatActivity |
 | android.support.v7.widget.AppCompatAutoCompleteTextView | MAMAppCompatAutoCompleteTextView |
 | android.support.v7.widget.AppCompatCheckedTextView | MAMAppCompatCheckedTextView |
 | android.support.v7.widget.AppCompatEditText | MAMAppCompatEditText |
@@ -300,10 +319,11 @@ Všechna nahrazení popsaná v tomto oddílu lze provést automaticky pomocí [n
 | android.support.text.emoji.widget.EmojiTextView | MAMEmojiTextView |
 
 ### <a name="renamed-methods"></a>Přejmenované metody
-V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `onCreate()` a volání `super.onCreate()` přepsat `onMAMCreate()` a volat `super.onMAMCreate()`. Kompilátor Javy by měl vynutit finální omezení, která zabrání náhodnému přepsání původní metody místo jejího ekvivalentu MAM.
+V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (obecně s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `onCreate()` a volání `super.onCreate()` přepsat `onMAMCreate()` a volat `super.onMAMCreate()`. Kompilátor Javy by měl vynutit finální omezení, která zabrání náhodnému přepsání původní metody místo jejího ekvivalentu MAM.
 
 ### <a name="mamapplication"></a>MAMApplication
 Pokud vaše aplikace vytváří podtřídu `android.app.Application`, **musíte** místo ní vytvořit podtřídu `com.microsoft.intune.mam.client.app.MAMApplication`. Pokud vaše aplikace podtřídu `android.app.Application` nevytváří, **musíte** nastavit `"com.microsoft.intune.mam.client.app.MAMApplication"` jako atribut `"android:name"` ve značce`<application>` souboru AndroidManifest.xml.
+
 ### <a name="pendingintent"></a>PendingIntent
 Namísto metody `PendingIntent.get*` musíte použít metodu `MAMPendingIntent.get*`. Pak můžete výslednou třídu `PendingIntent` použít obvyklým způsobem.
 
@@ -313,8 +333,17 @@ U některých tříd systémové služby je třeba volat statickou metodu obálk
 | Třída Androidu | Náhrada ze sady Intune App SDK |
 |--|--|
 | android.content.ClipboardManager | MAMClipboard |
+| android.content.ContentProviderClient | MAMContentProviderClientManagement |
+| android.content.ContentResolver | MAMContentResolverManagement |
 | android.content.pm.PackageManager | MAMPackageManagement |
 | android.app.DownloadManager | MAMDownloadManagement |
+| android.print.PrintManager | MAMPrintManagement |
+| android.support.v4.print.PrintHelper | MAMPrintHelperManagement |
+| android.view.View | MAMViewManagement |
+| android.view.DragEvent | MAMDragEventManagement |
+
+Některé třídy mají většina jejich metod např zabalené `ClipboardManager`, `ContentProviderClient`, `ContentResolver`, a `PackageManager` jiné třídy mají pouze jednu nebo dvě metody např zabalené `DownloadManager`, `PrintManager`, `PrintHelper`, `View`, a `DragEvent`. Obraťte se prosím vystavené třídy ekvivalentem MAM pro konkrétní metody, pokud nepoužijete BuildPlugin rozhraní API. 
+
 ### <a name="manifest-replacements"></a>Nahrazení manifestů
 Některá nahrazení tříd uvedená výše je potřeba provést jak v manifestu, v tak kódu v jazyce Java. Zejména:
 * Odkazy manifestu na `android.support.v4.content.FileProvider` je nutné vyměnit za `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
@@ -411,6 +440,20 @@ boolean getIsSaveToLocationAllowed(Uri location);
 boolean getIsSaveToLocationAllowed(SaveLocation service, String username);
 
 /**
+ * Checks whether any activities which could handle the given intent are allowed by policy. Returns false only if all
+ * activities which could otherwise handle the intent are blocked. If there are no activities which could handle the intent
+ * regardless of policy, returns true. If some activities are allowed and others blocked, returns true. Note that it is not
+ * necessary to use this method for policy enforcement. If your app attempts to launch an intent for which there are no
+ * allowed activities, MAM will display a dialog explaining the situation to the user.
+ *
+ * @param intent
+ *         intent to check
+ *
+ * @return whether any activities which could handle this intent are allowed.
+*/
+boolean areIntentActivitiesAllowed(Intent intent);
+
+/**
  * Whether the SDK PIN prompt is enabled for the app.
  *
  * @return True if the PIN is enabled. False otherwise.
@@ -504,8 +547,11 @@ SaveLocation service, String username);
 
 
 - `SaveLocation.ONEDRIVE_FOR_BUSINESS`
-- `SaveLocation.LOCAL`
 - `SaveLocation.SHAREPOINT`
+- `SaveLocation.LOCAL`
+- `SaveLocation.OTHER`
+
+`username` By se měl v hlavní název uživatele nebo uživatelské jméno nebo e-mailu přidružit se ukládají do cloudové služby (*není* nutně stejné jako uživatele, vlastnící se dokument uložil). Pokud mapování mezi hlavní název uživatele AAD a uživatelské jméno cloud service neexistuje nebo není znám uživatelského jména použijte hodnotu null.
 
 Dříve se pro určování, jestli zásady uživatele umožňují ukládání dat do různých umístění, využívala funkce `getIsSaveToPersonalAllowed()` ze stejné třídy **AppPolicy**. Ta je teď **zastaralá** a neměla by se používat. Vyvolání ekvivalentní k funkci `getIsSaveToPersonalAllowed()` vidíte níže:
 
@@ -574,20 +620,35 @@ Následující oznámení se odesílají do aplikace a některá z nich můžou 
 
 * **WIPE_USER_DATA**: Toto oznámení se posílá ve `MAMUserNotification` třídy. Po přijetí tohoto oznámení by aplikace měla odstranit všechna data přidružená k podnikové identitě předané přes `MAMUserNotification`. Toto oznámení se momentálně odesílá při rušení registrace služby APP-WE. Během procesu registrace se obvykle zadává primární uživatelské jméno. Když si zaregistrujete toto oznámení, aplikace musí zajistit odstranění všech dat uživatele. Pokud si ho nezaregistrujete, použije se výchozí selektivní mazání.
 
-* **WIPE_USER_AUXILIARY_DATA**: Aplikace můžou zaregistrovat toto oznámení, když chtějí, sada Intune App SDK provést výchozí selektivní vymazání, ale přesto chcete při tomto vymazání odebrat ještě některá pomocná data. Toto oznámení není dostupné pro aplikace s jedinou identitou. Bude se posílat pouze aplikacím s více identitami.
+* **WIPE_USER_AUXILIARY_DATA**: Aplikace můžou zaregistrovat toto oznámení, když chtějí, sada Intune App SDK provést výchozí selektivní vymazání, ale přesto chcete při tomto vymazání odebrat ještě některá pomocná data. Toto oznámení není k dispozici pro jednu identitu aplikace – pouze se pošle do aplikace s více identitami.
 
-* **REFRESH_POLICY**: Toto oznámení se posílá ve `MAMUserNotification`. Po přijetí tohoto oznámení se musí zrušit platnost všech zásad Intune uložených v mezipaměti a zásady se musí aktualizovat. To má na starosti sada SDK, ale pokud se zásada používá trvale, měla by ji zpracovat aplikace.
+* **REFRESH_POLICY**: Toto oznámení se posílá ve `MAMUserNotification`. Po přijetí tohoto oznámení rozhodnutích zásad Intune uložených v mezipaměti aplikace musí být zrušena a aktualizovat. Pokud vaše aplikace neukládá závěry zásady, nemusí zaregistrovat toto oznámení.
 
-* **MANAGEMENT_REMOVED**: Toto oznámení se posílá ve `MAMUserNotification` a informuje aplikaci, že se chystá nebude spravovat. Jakmile k ukončení správy dojde, aplikace nebude moct číst šifrované soubory a data zašifrovaná pomocí funkce MAMDataProtectionManager, komunikovat se zašifrovanou schránkou a jinak fungovat v ekosystému spravovaných aplikací.
+* **REFRESH_APP_CONFIG**: Toto oznámení se posílá ve `MAMUserNotification`. Po přijetí tohoto oznámení musí být zrušena a aktualizovat všechna data uložená v mezipaměti konfigurace aplikace.
 
+* **MANAGEMENT_REMOVED**: Toto oznámení se posílá ve `MAMUserNotification` a informuje aplikaci, že se chystá nebude spravovat. Jakmile k ukončení správy dojde, aplikace nebude moct číst šifrované soubory a data zašifrovaná pomocí funkce MAMDataProtectionManager, komunikovat se zašifrovanou schránkou a jinak fungovat v ekosystému spravovaných aplikací. Další podrobnosti najdete níže.
+
+* **MAM_ENROLLMENT_RESULT**: Toto oznámení se posílá ve `MAMEnrollmentNotification` to oznámit sadě app, který aplikace-jsme pokus o registraci dokončí a stav tohoto pokusu.
+
+* **COMPLIANCE_STATUS**: Toto oznámení se posílá ve `MAMComplianceNotification` informovat, výsledek pokus nápravy dodržování předpisů.
 
 > [!NOTE]
 > Aplikace by nikdy neměla zaregistrovat oznámení `WIPE_USER_DATA` i `WIPE_USER_AUXILIARY_DATA`.
 
+### <a name="managementremoved"></a>MANAGEMENT_REMOVED
+
+`MANAGEMENT_REMOVED` Oznámení znamená, že se zásadami MAM služby Intune nebude spravovat uživatele dříve – spravované podle zásad. Tato akce nevyžaduje vymazání dat uživatele nebo odhlášení uživatele (pokud byly zapotřebí, vymazání `WIPE_USER_DATA` bude odesláno oznámení). Velký počet aplikací nemusí potřebovat pro toto oznámení, ale aplikace, která používá `MAMDataProtectionManager` by měl [speciální poznamenejte toto oznámení](#data-protection).
+
+Když volá aplikace MAM `MANAGEMENT_REMOVED` příjemce, bude mít následující hodnotu true:
+* MAM dešifruje již dříve šifrované soubory (ale ne chráněných dat vyrovnávací paměti), které patří k aplikaci. Soubory na veřejných místech na sdcard, které nepatří přímo do aplikace (například dokumenty nebo stahování složek) nejsou dešifrovat.
+* Nové soubory nebo chráněných dat vyrovnávací paměti vytvořené metody příjemce (nebo jakýkoli jiný kód spuštění po spuštění příjemce) nebudou šifrována.
+* Aplikace má stále přístup k šifrovacím klíčům, tak bude úspěšné operace, jako jsou dešifrování dat vyrovnávací paměti.
+
+Po návratu příjemce vaší aplikace ho už nebude mít přístup k šifrovacím klíčům.
 
 ## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
 
-Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti knihovny ADAL na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
+Nejprve si přečtěte pokyny pro integraci knihovny ADAL, které najdete v [úložišti na GitHubu](https://github.com/AzureAD/azure-activedirectory-library-for-android).
 
 Sada SDK spoléhá na [knihovnu ADAL](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) s jejími scénáři [ověření](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, což vyžaduje, aby byly aplikace nakonfigurovány s [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). Hodnoty konfigurace se předávají sadě SDK prostřednictvím metadat AndroidManifest.
 
@@ -611,68 +672,68 @@ Když chcete konfigurovat svoji aplikaci a povolit správné ověření, přidej
 ### <a name="adal-metadata"></a>Metadata knihovny ADAL
 
 * **Authority** je používaná autorita AAD. Pokud tato hodnota chybí, použije se veřejné prostředí AAD.
-> [!NOTE]
-> Toto pole nenastavujte, pokud aplikace podporuje suverénní cloud.
+    > [!NOTE]
+    > Toto pole nenastavujte, pokud aplikace podporuje suverénní cloud.
 
-* **ClientID** je ID klienta AAD, které se má použít. Pokud máte v Azure AD zaregistrováno ClientID vlastní aplikace, použijte ho. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.
+* **ClientID** je ID klienta AAD (také označované jako ID aplikace) který se má použít. Pokud máte v Azure AD zaregistrováno ClientID vlastní aplikace, použijte ho. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.
 
 * **NonBrokerRedirectURI** je identifikátor URI pro přesměrování AAD, který se používá, pokud není zprostředkovatel. Pokud není zadaný, použije se výchozí hodnota `urn:ietf:wg:oauth:2.0:oob`. Tato hodnota se hodí pro většinu aplikací.
 
-* **SkipBroker** se použije tehdy, pokud ClientID nemá využívat identifikátor URI přesměrování zprostředkovatele. Výchozí hodnota je False (Nepravda).
-    * U aplikací, které **neintegrují ADAL** a **nemají být součástí zprostředkovaného jednotného přihlašování/SSO**, nastavte hodnotu True (Pravda). V takovém případě se jako identifikátor URI pro přesměrování použije pouze NonBrokerRedirectURI.
+    * NonBrokerRedirectURI se používá pouze při SkipBroker hodnotu "true".
 
-    * Aplikace, které podporují zprostředkované jednotné přihlašování, by tady měly mít nastavenou hodnotu False. Sada SDK tak vybere poskytovatele mezi výsledkem [`com.microsoft.aad.adal.AuthenticationContext.getRedirectUriForBroker()`](https://github.com/AzureAD/azure-activedirectory-library-for-android) a NonBrokerRedirectURI na základě dostupnosti zprostředkovatele v systému. Obecně bude zprostředkovatel dostupný z aplikace Portál společnosti nebo Azure Authenticator.
+* **SkipBroker** umožňuje potlačit výchozí chování jednotného přihlašování ADAL účast. SkipBroker musí být zadán pouze pro aplikace, které určují ClientID **a** nepodporuje zprostředkované ověřování/celém zařízení jednotné přihlašování. V tomto případě by měla být nastavena na hodnotu "true". Většina aplikací nesmí nastavit parametr SkipBroker.
+
+    * ClientID **musí** zadaný v manifestu zadejte SkipBroker hodnotu.
+
+    * Pokud je zadán ClientID, výchozí hodnota je "false".
+
+    * Když SkipBroker hodnotu "true", se použije NonBrokerRedirectURI. Aplikace, které nejsou integraci knihovny ADAL (a mají proto žádná ClientID) budou také ve výchozím nastavení hodnotu "true".
 
 ### <a name="common-adal-configurations"></a>Obvyklé konfigurace ADAL
 
-V této části najdete běžné způsoby konfigurace aplikace s knihovnou ADAL. Vyhledejte konfiguraci vaší aplikace a nastavte parametry metadat ADAL (viz výše) na požadované hodnoty. Ve všech případech je možné pole Authority zadat i pro nevýchozí prostředí, ale obecně to není nutné.
+V této části najdete běžné způsoby konfigurace aplikace s knihovnou ADAL. Vyhledejte konfiguraci vaší aplikace a nastavte parametry metadat ADAL (viz výše) na požadované hodnoty. Ve všech případech může být určen oprávnění v případě potřeby pro jiné než výchozí prostředí. Pokud není zadán, použije se veřejné produkční autority AAD.
 
-1. **Aplikace neintegruje ADAL:**
+#### <a name="1-app-does-not-integrate-adal"></a>1. Aplikace neintegruje ADAL.
+Metadata knihovny ADAL **nesmí** nacházet v manifestu.
 
-Není třeba konfigurovat žádné další hodnoty manifestu.
+#### <a name="2-app-integrates-adal"></a>2. Aplikace integruje ADAL.
 
-2. **Aplikace integruje ADAL:**
+|Požadovaný parametr ADAL| Hodnota |
+|--|--|
+| ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
 
-    |Požadovaný parametr ADAL| Hodnota |
-    |--|--|
-    | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
-    | SkipBroker | False |
+Může být určen autorita v případě potřeby.
 
-V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
-
-Registrace aplikace v Azure AD pomocí následujících kroků:
-* Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications). 
+Musíte registraci aplikace ve službě Azure AD a poskytnout vaší aplikaci přístup ke službě zásady ochrany aplikací:
+* Informace o registraci aplikace s Azure AD najdete [tady](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
 * Zkontrolujte, jestli jsou potom postup udělení oprávnění vaší aplikace pro Android ve službě app protection zásad (aplikace). Postupujte podle pokynů v [Začínáme s Intune SDK průvodce](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "vaší aplikaci dáte přístup ke službě Intune app protection (volitelné)". 
 
 Podívejte se také na požadavky pro [podmíněný přístup](#conditional-access), které najdete níže.
 
-3. **Aplikace integruje ADAL, ale nepodporuje zprostředkované ověřování / jednotné přihlašování:**
 
-    |Požadovaný parametr ADAL| Hodnota |
-    |--|--|
-    | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
-    | SkipBroker | **True** (Pravda) |
-    
-    V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
+#### <a name="3-app-integrates-adal-but-does-not-support-brokered-authenticationdevice-wide-sso"></a>3. Aplikace integruje ADAL, ale nepodporuje zprostředkované ověřování/celém zařízení jednotné přihlašování
 
+|Požadovaný parametr ADAL| Hodnota |
+|--|--|
+| ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
+| SkipBroker | **True** (Pravda) |
+
+V případě potřeby můžete zadat pole Authority a NonBrokerRedirectURI.
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD.  [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
+
+Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-directory/develop/active-directory-conditional-access-developer) služby Azure Active Directory, pomocí níž je možné řídit přístup k prostředkům AAD. [Správci Intune mohou definovat pravidla podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), která umožní přístup k prostředkům pouze ze zařízení nebo aplikací spravovaných v Intune. Pokud chcete zajistit, že aplikace bude mít v případě potřeby přístup k prostředkům, postupujte podle kroků uvedených níže. Pokud vaše aplikace nevyžaduje přístupové tokeny AAD nebo používá pouze prostředky, které nelze chránit podmíněným přístupem, můžete tento postup přeskočit.
+
 1. Postupujte podle [pokynů k integraci ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-android#how-to-use-this-library). 
    Zvláštní pozornost věnujte kroku 11, který se týká použití zprostředkovatele.
-
-2. [Zaregistrujte si aplikaci ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). Identifikátor URI pro přesměrování najdete v pokynech k integraci ADAL uvedených výše.
-
+2. [Zaregistrujte si aplikaci ve službě Azure Active Directory] (https://docs.microsoft.com/azure/active-directory/active-directory-app-registration). 
+   Identifikátor URI pro přesměrování najdete v pokynech k integraci ADAL uvedených výše.
 3. Nastavte parametry metadat manifestu pro jednotlivé [běžné konfigurace ADAL](#common-adal-configurations), položka 2 výše.
-
 4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
-* Při přihlášení k aplikaci se zobrazí výzva k instalaci a registraci Portálu společnosti Intune.
-* Po registraci se přihlášení k aplikaci úspěšně dokončí.
-
+    - Při přihlášení k aplikaci se zobrazí výzva k instalaci registraci Portálu společnosti Intune.
+    - Po registraci se přihlášení k aplikaci úspěšně dokončí.
 5. Jakmile se integrace sady Intune APP SDK dokončí, obraťte se na tým na adrese msintuneappsdk@microsoft.com se žádostí o přidání do seznamu schválených aplikací pro [podmíněný přístup na základě aplikace](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
-
 6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
-
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zásady ochrany aplikací bez registrace zařízení
 
@@ -701,7 +762,7 @@ Pro implementaci integrace služby APP-WE musí aplikace zaregistrovat uživatel
 
 2. Po vytvoření uživatelského účtu a úspěšném přihlášení uživatele k ADAL _musí_ aplikace volat `registerAccountForMAM()`.
 
-3. Po úplném odebrání uživatelského účtu by měla aplikace voláním `unregisterAccountForMAM()` odstranit účet ze správy Intune.
+3. Po odebrání uživatelského účtu by měla aplikace voláním `unregisterAccountForMAM()` odstranit účet ze správy Intune.
 
     > [!NOTE]
     > Pokud se uživatel z aplikace dočasně odhlásí, není nutné, aby aplikace `unregisterAccountForMAM()` volala. Volání by mohlo inicializovat vymazání, které by uživateli odebralo veškerá podniková data.
@@ -718,9 +779,6 @@ MAMEnrollmentManager mgr = MAMComponents.get(MAMEnrollmentManager.class);
 ```
 
 Je zaručeno, že vrácená instance rozhraní `MAMEnrollmentManager` nemá hodnotu null. Metody API spadají do dvou kategorií: **ověřování** a **registrace účtů**.
-
-> [!NOTE]
-> `MAMEnrollmentManager` obsahuje některé metody API, které se brzy přestanou používat. V zájmu zachování přehlednosti obsahuje blok kódu níže jen relevantní metody a kódy výsledku.
 
 ```java
 package com.microsoft.intune.mam.policy;
@@ -770,10 +828,21 @@ void updateToken(String upn, String aadId, String resourceId, String token);
 
 2. Metoda `acquireToken()` by měla získat přístupový token pro požadované ID prostředku daného uživatele. Pokud ho získat nedokáže, měla by vrátit hodnotu null.
 
+    > [!NOTE]
+    > Ujistěte se, že vaše aplikace využívá `resourceId` a `aadId` parametry předány `acquireToken()` tak, aby získali správný token.
+
+    ```
+    class MAMAuthCallback implements MAMServiceAuthenticationCallback {
+        public String acquireToken(String upn, String aadId, String resourceId) {
+        return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
+        }
+    }
+    ```
+
 3. V případě, že aplikace při volání metody `acquireToken()` sady SDK nedokáže token poskytnout (například tehdy, když se nezdaří bezobslužné ověření a není vhodná doba na zobrazení uživatelského rozhraní), může tak učinit později po volání metody `updateToken()`. Volání metody `updateToken()` musí kromě samotného tokenu předat také stejný hlavní název uživatele, ID AAD a ID prostředku, jako požadovalo předchozí volání (`acquireToken()`). Aplikace by měla tuto metodu volat co nejdříve poté, co dané zpětné volání vrátilo hodnotu null.
 
-> [!NOTE]
-> Sada SDK se bude snažit získat token pravidelným voláním metody `acquireToken()`, takže volání metody `updateToken()` není bezpodmínečně nutné. Doporučuje se ale z toho důvodu, že může zajistit včasné provedení pokusů o registraci a ohlášení zásad ochrany aplikací.
+    > [!NOTE]
+    > Sada SDK se bude snažit získat token pravidelným voláním metody `acquireToken()`, takže volání metody `updateToken()` není bezpodmínečně nutné. Ale je důrazně doporučujeme, jak může pomoct registrace a app protection zásad vrácení se změnami dokončit včas.
 
 
 ### <a name="account-registration"></a>Registrace účtů
@@ -787,17 +856,17 @@ void unregisterAccountForMAM(String upn);
 Result getRegisteredAccountStatus(String upn);
 ```
 
-1. Aby bylo možné zaregistrovat účet ke správě, měla by aplikace provést volání metody `registerAccountForMAM()`. Uživatelský účet definuje jeho hlavní název uživatele a ID uživatele služby AAD. K přidružení dat zápisu ke klientovi AAD příslušného uživatele je také potřeba ID klienta. Autoritu uživatele je možné poskytovat také proto, aby bylo možné provést registraci v konkrétních suverénních cloudech. Další informace najdete v části [Registrace v suverénním cloudu](#sovereign-cloud-registration).  Sada SDK se může pokusit zaregistrovat aplikaci pro daného uživatele ve službě MAM. Pokud se registrace nezdaří, bude pokusy o registraci pravidelně opakovat až do doby, než dojde ke zrušení registrace účtu. Časový interval mezi jednotlivými pokusy je obvykle 12 až 24 hodin. Sada SDK informuje o stavu pokusů o registraci asynchronně prostřednictvím oznámení.
+1. Aby bylo možné zaregistrovat účet ke správě, měla by aplikace provést volání metody `registerAccountForMAM()`. Uživatelský účet definuje jeho hlavní název uživatele a ID uživatele služby AAD. K přidružení dat zápisu ke klientovi AAD příslušného uživatele je také potřeba ID klienta. Autorita uživatele mohou být rovněž poskytnuty Pokud chcete povolit registraci pro konkrétní suverénní cloudy; Další informace najdete v části [suverénní Cloud registrace](#sovereign-cloud-registration).  Sada SDK se může pokusit zaregistrovat aplikaci pro daného uživatele ve službě MAM. Pokud se registrace nezdaří, bude pokusy o registraci pravidelně opakovat až do doby, než dojde ke zrušení registrace účtu. Časový interval mezi jednotlivými pokusy je obvykle 12 až 24 hodin. Sada SDK informuje o stavu pokusů o registraci asynchronně prostřednictvím oznámení.
 
-2. Vzhledem k tomu, že ověřování AAD je povinné, bude nejlepší zaregistrovat uživatelský účet po jeho přihlášení k aplikaci a úspěšném ověření pomocí ADAL.
-    * Ověřovací volání ADAL vrátí ID uživatele AAD a ID klienta jako součást objektu [`AuthenticationResult`](https://github.com/AzureAD/azure-activedirectory-library-for-android). ID klienta pochází z metody `AuthenticationResult.getTenantID()`.
+2. Protože ověřování AAD je povinné, bude nejlepší zaregistrovat uživatelský účet je poté, co uživatel je přihlášený k aplikaci a úspěšném ověření pomocí ADAL. AAD ID a ID tenanta daného uživatele jsou vráceny z ověřovací volání ADAL jako součást [ `AuthenticationResult` ](https://github.com/AzureAD/azure-activedirectory-library-for-android) objektu.
+    * ID klienta pochází z metody `AuthenticationResult.getTenantID()`.
     * Informace o uživateli se nachází v podobjektu typu `UserInfo`, který pochází z `AuthenticationResult.getUserInfo()`, a ID uživatele AAD se získává z tohoto objektu voláním metody `UserInfo.getUserId()`.
 
 3. Pokud chcete zrušit registraci účtu ve správě Intune, měla by aplikace provést volání metody `unregisterAccountForMAM()`. Pokud byl účet úspěšně zaregistrován a je spravován, sada SDK zruší jeho registraci a vymaže jeho data. Kromě toho se zastaví pravidelné pokusy o registraci. Sada SDK informuje o stavu žádosti o zrušení registrace asynchronně prostřednictvím oznámení.
 
 ### <a name="sovereign-cloud-registration"></a>Registrace v suverénním cloudu
 
-Aplikace [podporující suverénní cloud](https://www.microsoft.com/en-us/trustcenter/cloudservices/nationalcloud) **musí** poskytovat `authority` metodě `registerAccountForMAM()`.  Toho lze dosáhnout tím, že v parametrech [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters knihovny ADAL poskytnete `instance_aware=true` a pak vyvoláte metodu `getAuthority()` u výsledku AuthenticationCallback AuthenticationResult.
+Aplikace [podporující suverénní cloud](https://www.microsoft.com/trustcenter/cloudservices/nationalcloud) **musí** poskytovat `authority` metodě `registerAccountForMAM()`.  Toho lze dosáhnout tím, že v parametrech [1.14.0+](https://github.com/AzureAD/azure-activedirectory-library-for-android/releases/tag/v1.14.0) acquireToken extraQueryParameters knihovny ADAL poskytnete `instance_aware=true` a pak vyvoláte metodu `getAuthority()` u výsledku AuthenticationCallback AuthenticationResult.
 
 ```java
 mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBehavior.FORCE_PROMPT, "instance_aware=true",
@@ -816,18 +885,10 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 ```
 
 > [!NOTE]
-> Nenastavujte autoritu metadat AndroidManifest.xml.
-<br/>
-
-```xml
-<meta-data
-    android:name="com.microsoft.intune.mam.aad.Authority"
-    android:value="https://AAD authority/" />
-```
+> Nenastavujte `com.microsoft.intune.mam.aad.Authority` metadata položky v souboru AndroidManifest.xml.
 
 > [!NOTE]
 > Ujistěte se, že je autorita správně nastavena v metodě `MAMServiceAuthenticationCallback::acquireToken()`.
-
 
 #### <a name="currently-supported-sovereign-clouds"></a>Momentálně podporované suverénní cloudy
 
@@ -837,13 +898,14 @@ mAuthContext.acquireToken(this, RESOURCE_ID, CLIENT_ID, REDIRECT_URI, PromptBeha
 
 #### <a name="authentication"></a>Ověřování
 
-* Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace obdržela vlastní token z knihovny ADAL ještě před registrací účtu, aby se urychlilo získání **tokenu MAMService**. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
+* Když aplikace volá `registerAccountForMAM()`, může brzy poté obdržet zpětné volání na rozhraní `MAMServiceAuthenticationCallback`, ale na odlišném vláknu. V ideálním případě aplikace získat vlastní token z knihovny ADAL ještě před registrací účtu, aby se urychlilo získání požadovaný token. Pokud aplikace vrátí platný token ze zpětného volání, registrace bude pokračovat a aplikace získá konečný výsledek prostřednictvím oznámení.
 
-* V případě, že aplikace nevrátí platný token AAD, konečný výsledek pokusu o registraci bude `AUTHENTICATION_NEEDED`. Pokud aplikace obdrží tento výsledek prostřednictvím oznámení, může urychlit proces registrace získáním **tokenu MAMService** a voláním metody `updateToken()`, která proces znovu iniciuje. _Nejde_ ale o nezbytný požadavek, protože sada SDK pokusy o registraci pravidelně opakuje a vyvolává zpětné volání pro získání tokenu.
+* V případě, že aplikace nevrátí platný token AAD, konečný výsledek pokusu o registraci bude `AUTHENTICATION_NEEDED`. Pokud aplikace obdrží tento výsledek prostřednictvím oznámení, se důrazně doporučuje urychlit proces registrace získáním token pro daného uživatele a prostředek již v minulosti požádali z `acquireToken()` a volání `updateToken()` metoda zahájit Opakujte proces registrace.
 
 * Za účelem získání tokenu pro pravidelná ohlášení aktualizací zásad ochrany aplikací bude také voláno rozhraní `MAMServiceAuthenticationCallback` zaregistrované aplikací. Pokud aplikace nedokáže na žádost token poskytnout, nedostane oznámení, ale měla by se pokusit získat token a co nejdříve provést volání `updateToken()`, aby se urychlil proces ohlašování. V případě neposkytnutí tokenu se při dalším pokusu o ohlášení zpětné volání zopakuje.
 
 * Podpora suverénních cloudů vyžaduje poskytování autority.
+
 #### <a name="registration"></a>Registrace
 
 * Pro usnadnění vaší práce jsou metody registrace idempotentní. `registerAccountForMAM()` například zaregistruje účet a pokusí se o registraci aplikace jen v případě, že účet dosud zaregistrovaný není. Podobně `unregisterAccountForMAM()` zruší registraci účtu jen tehdy, že je aktuálně zaregistrovaný. Následná volání nepředstavují operace, takže opakovaná volání těchto metod nejsou na škodu. Kromě toho není zaručena souvztažnost mezi voláním těchto metod a oznámení o výsledku: To znamená pokud `registerAccountForMAM` nazývá identitou, která je už zaregistrovaný, oznámení nemusí poslat znovu pro danou identitu. Může se stát, že se odešlou oznámení, která neodpovídají žádným voláním těchto metod, protože sada SDK může na pozadí opakovat pokusy o registraci, stejně jako může být zrušení registrace aktivováno žádostí o vymazání odeslanou službou Intune.
@@ -873,13 +935,13 @@ Po registraci se účet nachází ve stavu `PENDING`, který značí, že prvotn
 
 Při obdržení výsledku `COMPANY_PORTAL_REQUIRED` zablokuje sada SDK aktivity využívající identitu, pro kterou byla registrace žádána. Místo toho sada SDK zajistí, aby tyto aktivity zobrazily výzvu ke stažení aplikace Portál společnosti. Pokud nechcete, aby k takovému chování došlo, můžou aktivity implementovat metodu `MAMActivity.onMAMCompanyPortalRequired`.
 
-Tato metoda se volá ještě před tím, než sada SDK zobrazí svou výchozí zprávu o blokování. Pokud aplikace změní identitu aktivity nebo zruší registraci uživatele, který se pokusil o registraci, sada SDK tuto aktivitu nezablokuje. V takové situaci je na aplikaci, aby předešla úniku podnikových dat. Všimněte si, že identitu aktivity budou moci změnit pouze aplikace s více identitami (popsané dále).
+Tato metoda se volá ještě před tím, než sada SDK zobrazí svou výchozí zprávu o blokování. Pokud aplikace změní identitu aktivity nebo zruší registraci uživatele, který se pokusil o registraci, sada SDK tuto aktivitu nezablokuje. V takové situaci je na aplikaci, aby předešla úniku podnikových dat. Identitu aktivity budou moct změnit pouze aplikace s více identitami (popsané dále).
 
 Pokud explicitně nezdědíte `MAMActivity` (protože tuto změnu provedou nástroje sestavení), ale potřebujete toto oznámení zpracovat, můžete místo toho implementovat `MAMActivityBlockingListener`.
 
 ### <a name="notifications"></a>Oznámení
 
-Aby bylo možné informovat aplikaci o dokončení žádosti o registraci, byl přidán nový typ `MAMNotification`.  Prostřednictvím rozhraní `MAMNotificationReceiver` se bude zasílat `MAMEnrollmentNotification` (viz část [Registrace k oznámením z SDK](#register-for-notifications-from-the-sdk)).
+Pokud aplikace zaregistruje oznámení typu **MAM_ENROLLMENT_RESULT**, `MAMEnrollmentNotification` se odešlou, aby bylo možné informovat aplikaci o dokončení žádosti o registraci. Prostřednictvím rozhraní `MAMNotificationReceiver` se bude zasílat `MAMEnrollmentNotification` (viz část [Registrace k oznámením z SDK](#register-for-notifications-from-the-sdk)).
 
 ```java
 public interface MAMEnrollmentNotification extends MAMUserNotification {
@@ -889,8 +951,136 @@ public interface MAMEnrollmentNotification extends MAMUserNotification {
 
 Metoda `getEnrollmentResult()` vrací výsledek žádosti o registraci.  Vzhledem k tomu, že `MAMEnrollmentNotification` rozšiřuje `MAMUserNotification`, bude také k dispozici informace o identitě uživatele, za kterého byl pokus o registraci proveden. Aby bylo možné dostávat tato oznámení, musí aplikace implementovat rozhraní `MAMNotificationReceiver`. Další informace o oznámeních najdete v části [Registrace k oznámením z SDK](#register-for-notifications-from-the-sdk).
 
-I když se stav zaregistrovaného uživatelského účtu může při přijetí oznámení o registraci změnit, ne vždy je tomu tak – pokud se například oznámení `AUTHORIZATION_NEEDED` zašle až po informativnějším výsledku, jako je `WRONG_USER`, bude se dál jako stav účtu používat právě tento informativnější výsledek.
+Při přijetí oznámení o registraci, ale nezmění se ve všech případech se může změnit stav zaregistrovaného uživatelského účtu (například pokud `AUTHORIZATION_NEEDED` přijetí oznámení po informativnějším výsledku, jako `WRONG_USER`, dál Výsledek bude udržovat jako stav účtu).  Po úspěšné registraci účtu se stav zůstanou jako `ENROLLMENT_SUCCEEDED` dokud účet je zrušit nebo nevymažete.
 
+Při přijetí oznámení o registraci, ale nezmění se ve všech případech se může změnit stav zaregistrovaného uživatelského účtu (například pokud `AUTHORIZATION_NEEDED` přijetí oznámení po informativnějším výsledku, jako `WRONG_USER`, dál Výsledek bude udržovat jako stav účtu).  Po úspěšné registraci účtu se stav zůstanou jako `ENROLLMENT_SUCCEEDED` dokud účet je zrušit nebo nevymažete.
+
+## <a name="app-ca-with-policy-assurance"></a>Podmíněný přístup aplikací s Assurance zásad
+
+### <a name="overview"></a>Přehled
+S aplikací podmíněným Přístupem (podmíněný přístup) se Assurance zásady je přístup k prostředkům conditionalized na použití zásad ochrany aplikací Intune.  AAD vynucuje tato aplikace je zaregistrovaná a spravovaná aplikace před udělením token pro přístup k Certifikační autoritu aplikace pomocí zásad Assurance chráněného prostředku.  Aplikace je potřeba použít zprostředkovatele ADAL pro získání tokenu a instalační program je stejný, jak je popsáno výše v [podmíněného přístupu](#conditional-access)
+
+### <a name="adal-changes"></a>ADAL změny
+Knihovna ADAL má nový kód chyby informuje aplikaci, která způsobila selhání k získání tokenu nedodržení předpisů pomocí správy aplikací.  Pokud aplikace obdrží tento kód chyby, je potřeba volat sady SDK se pokusit opravit registrace aplikace a použití zásad dodržování předpisů. Se přijal výjimku `onError()` metoda ADAL `AuthenticationCallback`a bude mít kód chyby: `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED`.  V takovém případě lze převést výjimky na `IntuneAppProtectionPolicyRequiredException`, ze které dalších parametrů může být extrahována pro použití v nápravou dodržování předpisů (viz následující ukázka kódu). Po úspěšném náprava aplikace můžete znovu zkusit získání tokenu pomocí ADAL.
+
+> [!NOTE]
+> Tento nový kód chyby a další podporu pro aplikaci certifikační Autority se zásady Assurance vyžadují verzi 1.15.0 (nebo vyšší) knihovny ADAL.
+
+### <a name="mamcompliancemanager"></a>MAMComplianceManager
+
+`MAMComplianceManager` Rozhraní se používá při přijetí chyby požadované zásady z ADAL.  Obsahuje `remediateCompliance()` metodu, která by měla být volána pokusu převést aplikaci do vyhovujícího stavu. Odkaz na `MAMComplianceManager` je možné získat tímto způsobem:
+
+```java
+MAMComplianceManager mgr = MAMComponents.get(MAMComplianceManager.class);
+
+// make use of mgr
+```
+
+Je zaručeno, že vrácená instance rozhraní `MAMComplianceManager` nemá hodnotu null.
+
+```java
+package com.microsoft.intune.mam.policy;
+
+public interface MAMComplianceManager {
+    void remediateCompliance(String upn, String aadId, String tenantId, String authority, boolean showUX);
+}
+```
+
+`remediateCompliance()` Metoda je volána k pokusí aplikaci pod správu splňují podmínky pro AAD poskytnout požadovaný token.  První čtyři parametry může být extrahována z výjimky přijatých ADAL `AuthenticationCallback.onError()` – metoda (viz následující ukázka kódu).  Poslední parametr je logická hodnota, která určuje, zda je zobrazen uživatelské prostředí při pokusu o dodržování předpisů.  Toto je jednoduché blokujících průběh styl rozhraní zadané jako výchozí pro aplikace, které nemají věcí a potřebovali si zobrazit vlastní uživatelské prostředí při této operaci.  Jenom se zablokuje, zatímco probíhá nápravy dodržování předpisů a které nezobrazí konečný výsledek.  Aplikace by měla zaregistrovat příjemce oznámení pro zpracování úspěšné nebo neúspěšné pokusy o nápravy dodržování předpisů (viz níže).
+
+`remediateCompliance()` Metoda může provádět registrace MAM jako součást vytváření dodržování předpisů.  Aplikace může přijímat oznámení o registraci, pokud zaregistroval příjemce oznámení pro registraci oznámení.  Zaregistrované aplikace `MAMServiceAuthenticationCallback` bude mít jeho `acquireToken()` metodu volá za účelem získání tokenu pro registrace MAM. `acquireToken()` bude volána před provedením aplikace získala vlastní token, tak se účetnictví nebo účet vytvoření úkoly, které aplikace provádí po úspěšném získání tokenu nemusí mít dosud neudělali.  Zpětné volání musí být v tomto případě získat token.  Pokud se nedá vrátit tokenu z `acquireToken()`, se nezdaří pokus o nápravy dodržování předpisů.  Při volání `updateToken()` později pomocí platného tokenu pro požadovaný prostředek se nápravy dodržování předpisů se provede hned s daným tokenem.
+
+> [!NOTE]
+> Získání tokenu služby tichou bude stále možné v `acquireToken()` vzhledem k tomu, že uživatel bude mít již byl na základě instalace zprostředkovatele a registrace zařízení před `ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED` přijetí chyby.  Výsledkem zprostředkovatele s platnou obnovovací token v mezipaměti, umožňuje bezobslužné acqisition nedokáže proběhla úspěšně.
+
+Tady je ukázka pro příjem zásad vyžaduje Chyba v `AuthenticationCallback.onError()` metoda a volání `MAMComplianceManager` chybu zpracovat.
+
+```java
+public void onError(@Nullable Exception exc) {
+    if (exc instanceof AuthenticationException && 
+        ((AuthenticationException) exc).getCode() == ADALError.AUTH_FAILED_INTUNE_POLICY_REQUIRED) {
+
+        final IntuneAppProtectionPolicyRequiredException policyRequiredException = 
+            (IntuneAppProtectionPolicyRequiredException) ex;
+
+        final String upn = policyRequiredException.getAccountUpn();
+        final String aadId = policyRequiredException.getAccountUserId();
+        final String tenantId = policyRequiredException.getTenantId();
+        final String authority = policyRequiredException.getAuthorityURL();
+
+        MAMComplianceManager complianceManager = MAMComponents.get(MAMComplianceManager.class);
+        complianceManager.remediateCompliance(upn, aadId, tenantId, authority, showUX);
+    }
+}
+```
+
+### <a name="status-notifications"></a>Oznámení o stavu
+
+Pokud aplikace zaregistruje oznámení typu **COMPLIANCE_STATUS**, `MAMComplianceNotification` se odešlou, aby bylo možné informovat aplikaci konečný stav pokusů o nápravu dodržování předpisů. Prostřednictvím rozhraní `MAMNotificationReceiver` se bude zasílat `MAMComplianceNotification` (viz část [Registrace k oznámením z SDK](#register-for-notifications-from-the-sdk)).
+
+```java
+public interface MAMComplianceNotification extends MAMUserNotification {
+    MAMCAComplianceStatus getComplianceStatus();
+    String getComplianceErrorTitle();
+    String getComplianceErrorMessage();
+}
+```
+
+`getComplianceStatus()` Metoda vrací výsledek pokusu o nápravy dodržování předpisů jako hodnotu z `MAMCAComplianceStatus` výčtu.
+
+|Stavový kód | Vysvětlení |
+| -- | -- |
+| NEZNÁMÝ | Stav není znám. To může znamenat z důvodu neočekávané chyby. Další informace najdete v protokolech portálu společnosti. |
+| VYHOVUJÍCÍ | Dodržování předpisů nichž oprava proběhla úspěšně a aplikace je teď kompatibilní se zásadami. ADAL pořízení tokenu je třeba opakovat. |
+| NOT_COMPLIANT | Opravit dodržování předpisů se nezdařilo.  Aplikace není kompatibilní s a ADAL získání tokenu by neměl opakovat, dokud nebude opravena chybového stavu.  Další informace o chybě se MAMComplianceNotification neposílají. |
+| SERVICE_FAILURE | Došlo k chybě při pokusu o načtení dat dodržování předpisů z služby Intune. Další informace najdete v protokolech portálu společnosti. |
+| NETWORK_FAILURE | Došlo k chybě připojení ke službě Intune. Aplikace by měl zkuste jeho získání tokenu znovu, když se obnoví připojení k síti. |
+| CLIENT_ERROR | Pokus o dodržování předpisů napravit se nezdařil z nějakého důvodu související s klientem.  Například žádný token nebo nesprávné uživatel. Další informace o chybě se MAMComplianceNotification neposílají. |
+| PENDING | Pokus o dodržování předpisů napravit se nezdařila, protože odpověď na stav kdyby byla přijata ze služby ještě, když byl překročen časový limit. Aplikace by měla zkuste jeho získání tokenu znovu později. |
+| COMPANY_PORTAL_REQUIRED | Aplikace portál společnosti musí být nainstalovaný na zařízení mohl nápravy dodržování předpisů na úspěšné.  Pokud portál společnosti je už nainstalovaný na zařízení, aplikace se musí restartovat.  V takovém případě dialogové okno se zobrazí s žádostí o aplikaci restartovat. |
+
+Pokud je stav dodržování předpisů `MAMCAComplianceStatus.COMPLIANT`, aplikace by mělo zahájit znovu její původní získání tokenu (pro vlastní prostředek). Pokud nápravy dodržování předpisů se nezdařilo, `getComplianceErrorTitle()` a `getComplianceErrorMessage()` metody vrátí lokalizované řetězce, které aplikace mohou zobrazit koncovým uživatelům, pokud se zvolí.  Většina případy chyb nejsou odstranitelné aplikace, takže pro tomto obecném případě může být vhodné přebírat služby při vytváření účtů nebo přihlášení a umožnit uživateli a zkuste to znovu později.  Pokud selhání je trvalý, protokoly MAM může pomoci určit příčinu.  Koncový uživatel může odeslat protokoly pomocí pokynů nalezen [tady](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android "protokolů firemní podpoře e-mailem").
+
+Protože `MAMComplianceNotification` rozšiřuje `MAMUserNotification`, identitu uživatele, u kterého došlo k pokusu o opravě je také k dispozici.
+
+Tady je příklad použití anonymní třídy k implementaci rozhraní MAMNotificationReceiver příjemce registrace:
+
+```java
+final MAMNotificationReceiverRegistry notificationRegistry = MAMComponents.get(MAMNotificationReceiverRegistry.class);
+// create a receiver
+final MAMNotificationReceiver receiver = new MAMNotificationReceiver() {
+    public boolean onReceive(MAMNotification notification) {
+        if (notification.getType() == MAMNotificationType.COMPLIANCE_STATUS) {
+            MAMComplianceNotification complianceNotification = (MAMComplianceNotification) notification;
+            
+            // take appropriate action based on complianceNotification.getComplianceStatus()
+            
+            // unregister this receiver if no longer needed
+            notificationRegistry.unregisterReceiver(this, MAMNotificationType.COMPLIANCE_STATUS);
+        }
+        return true;
+    }
+};
+// register the receiver
+notificationRegistry.registerReceiver(receiver, MAMNotificationType.COMPLIANCE_STATUS);
+```
+
+> [!NOTE]
+> Příjemce oznámení musíte zaregistrovat před voláním `remediateCompliance()` , aby spor, který může mít za následek oznámení se vynechalo.
+
+### <a name="implementation-notes"></a>Poznámky k implementaci
+
+> [!NOTE]
+> Aplikace `MAMServiceAuthenticationCallback.acquireToken()` musí projít metoda *true* pro novou `forceRefresh` příznak `acquireTokenSilentSync()` můžete vynutit aktualizaci ze zprostředkovatele.  Toto je ukládání do mezipaměti problém s tokeny ADAL, které můžou ovlivnit tokeny služby MAM. Obecně platí to vypadá takto:
+```java
+AuthenticationResult result = acquireTokenSilentSync(resourceId, clientId, userId, /* forceRefresh */ true);
+```
+
+> [!NOTE]
+> Pokud chcete zobrazit vlastní blokující uživatelské prostředí při pokusu o nápravnou, je třeba předat *false* pro parametr showUX `remediateCompliance()`. Musíte zajistit zobrazit vaše uživatelského rozhraní a zaregistrujte vašeho naslouchací proces oznámení před voláním `remediateCompliance()`.  To zabrání časování, kde oznámení může chybět Pokud `remediateCompliance()` velmi rychle se nezdaří.  Například `onCreate()` nebo `onMAMCreate()` metoda podtřídy aktivity je ideálním místem pro registraci naslouchací proces oznámení a pak vyvolejte `remediateCompliance()`.  Parametry pro `remediateCompliance()` lze předat do vašeho uživatelského prostředí jako záměru funkce.  Při přijetí oznámení o stavu dodržování předpisů, můžete zobrazit výsledek nebo jednoduše dokončení aktivity.
+
+> [!NOTE]
+> `remediateCompliance()` zaregistruje účet a pokus o registraci.  Jakmile je hlavní token získán, volání `registerAccountForMAM()` není nezbytné, ale není na to škodu. Na druhé straně, pokud se aplikaci nepodaří získat jeho token a chce odebrat uživatelský účet, musí volat `unregisterAccountForMAM()` chcete účet odebrat a zabránit registraci opakování na pozadí.
 
 ## <a name="protecting-backup-data"></a>Ochrana dat zálohy
 
@@ -995,6 +1185,7 @@ V části [Rozšíření třídy BackupAgent](https://developer.android.com/guid
 
 ### <a name="overview"></a>Přehled
 Intune App SDK ve výchozím nastavení uplatní zásady na aplikaci jako celek. Možnost používat více identit je volitelná funkce ochrany aplikací Intune, kterou můžete zapnout, pokud chcete zásady uplatňovat na úrovni jednotlivých identit. K tomu je od aplikace potřeba mnohem větší účast než u ostatních funkcí ochrany aplikací.
+
 > [!NOTE]
 >  V případě nesprávného zapojení aplikace může dojít k únikům dat a dalším potížím v souvislosti se zabezpečením.
 
@@ -1003,9 +1194,10 @@ Jakmile uživatel zařízení nebo aplikaci zaregistruje, zaregistruje tuto iden
 > [!NOTE]
 > V současné době je podporována jen jedna spravovaná identita Intune pro každé zařízení.
 
-Identita je definována jednoduše jako řetězec. Identity **rozlišují malá a velká písmena**, ale žádosti odeslané sadě SDK je nemusí vrátit se stejnou velikostí písmen, s jakou byly nastaveny.
+Identita se definuje jako řetězec. Identity **rozlišují malá a velká písmena**, ale žádosti odeslané sadě SDK je nemusí vrátit se stejnou velikostí písmen, s jakou byly nastaveny.
 
 Pokud chce aplikace změnit aktivní identitu, musí informovat sadu *SDK*. V některých případech SDK také upozorní aplikaci, že je nutná změna identity. Ve většině případů však správa MAM nemůže vědět, jaká data se zobrazují v uživatelském rozhraní nebo používají u vlákna v daném okamžiku, a spoléhá na to, že aplikace nastaví správnou identitu, která zabrání úniku dat. V následujících částech najdete některé konkrétní scénáře, které vyžadují akci aplikace.
+
 ### <a name="enabling-multi-identity"></a>Povolení více identit
 
 Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou identitou. U aplikace můžete deklarovat, že dokáže rozpoznat více identit tím, že do souboru AndroidManifest.xml umístíte následující metadata.
@@ -1021,12 +1213,26 @@ Ve výchozím nastavení se všechny aplikace považují za aplikace s jedinou i
 Vývojáři můžou nastavit identitu uživatele aplikace na těchto úrovních se sestupnou prioritou:
 
   1. Úroveň vlákna
-  2. Úroveň objektu Context (obecně aktivita)
+  2. `Context` (obecně `Activity`) úroveň
   3. Úroveň procesu
 
-Identita nastavená na úrovni vlákna nahrazuje identitu nastavenou na úrovni objektu Context, která nahrazuje identitu nastavenou na úrovni procesu. Identita nastavená u objektu Context se používá jenom v příslušných přidružených scénářích. Například vstupně-výstupní operace u souborů nemají přidružený objekt Context. Nejčastěji budou aplikace nastavovat identitu Context u aktivity. Aplikace *nesmí* zobrazit data pro spravovanou identitu, pokud není u identity Aktivity nastavená stejná identita. Obecně je identita na úrovni procesu užitečná pouze tehdy, když pracuje aplikace ve všech vláknech vždy jen s jediným uživatelem. Řada aplikací tuto možnost nemusí potřebovat využít.
+Identita nastavená na úrovni vlákna nahrazuje identitu nastavenou na úrovni objektu `Context`, která nahrazuje identitu nastavenou na úrovni procesu. Identita nastavená u `Context` slouží jen u vhodných přidružených scénářů. Vstupně-výstupní operace se soubory, například nemají přiřazený `Context`. Nejčastěji budou aplikace nastavovat `Context` identitu na `Activity`. Aplikace *musí* není-li zobrazit data pro spravovanou identitu `Activity` identita je nastavená na stejná identita. Obecně je identita na úrovni procesu užitečná pouze tehdy, když pracuje aplikace ve všech vláknech vždy jen s jediným uživatelem. Řada aplikací tuto možnost nemusí potřebovat využít.
 
-Následující metody u třídy `MAMPolicyManager` můžete použít k nastavení identity a načtení dříve nastavených hodnot identity.
+Pokud vaše aplikace používá `Application` kontext k získání systémových služeb, ujistěte se, že byla nastavena identita vlákna nebo procesu a mají nastavit identitu uživatelského rozhraní ve vaší aplikaci `Application` kontextu.
+
+Zpracovat speciální případy při aktualizaci identita uživatelského rozhraní s `setUIPolicyIdentity` nebo `switchMAMIdentity`, obě metody lze předat sadu `IdentitySwitchOption` hodnoty.
+
+* `IGNORE_INTENT`: Použijte v případě žádosti o přepnutí identity, který se má ignorovat záměr přidružené k aktuální aktivitu.
+  Příklad:
+
+  1. Vaše aplikace obdrží záměru ze spravovaných identit obsahující spravovaného dokumentu a aplikace se zobrazí dokument.
+  2. Uživatel přepne na své osobní identity, takže vaše aplikace požaduje Přepnutí identity uživatelského rozhraní. V osobní identitě vaší aplikace je už zobrazení dokumentu, proto použijete `IGNORE_INTENT` při vyžadování Přepnutí identity.
+
+  Pokud ne sadu SDK bude předpokládat, že nejnovější záměr je stále používáno v aplikaci. To způsobí, že zásady pro novou identitu považovat za účelem příchozích dat a používat svoji identitu.
+
+>[!NOTE]
+> Protože `CLIPBOARD_SERVICE` se používá pro operace uživatelského rozhraní, sady SDK používá identita uživatelského rozhraní pro aktivity popředí `ClipboardManager` operace.
+> Následující metody u třídy `MAMPolicyManager` můžete použít k nastavení identity a načtení dříve nastavených hodnot identity.
 
 ```java
   public static void setUIPolicyIdentity(final Context context, final String identity, final MAMSetUIIdentityCallback mamSetUIIdentityCallback);
@@ -1074,7 +1280,7 @@ Všechny metody nastavení identity vrátí zpět výsledné hodnoty přes `MAMI
 | CANCELLED | Uživatel zrušil změnu identity stisknutím tlačítka Zpět po zobrazení výzvy k zadání kódu PIN / ověřování. |
 | FAILED | Změna identity se z neznámého důvodu nezdařila.|
 
-Aplikace *musí* před zobrazením nebo použitím podnikových dat zajistit úspěšné přepnutí identity. V současné době bude přepnutí identit procesů a vláken u aplikací s povolenými více identitami vždy úspěšné, vyhrazujeme si ale právo přidat podmínky týkající se chyb. Přepnutí identity uživatelského rozhraní nemusí být úspěšné při neplatných argumentech, pokud by došlo ke konfliktu s identitou vlákna, nebo v případě, že uživatel zruší akci, když se požaduje podmíněné spuštění (například stiskne tlačítko Zpět na obrazovce PIN kódu).
+Aplikace by měly zajistit, že přepnutí identity úspěšné před zobrazením nebo použitím podnikových dat. V současné době bude přepnutí identit procesů a vláken u aplikací s povolenými více identitami vždy úspěšné, vyhrazujeme si ale právo přidat podmínky týkající se chyb. Přepnutí identity uživatelského rozhraní nemusí být úspěšné při neplatných argumentech, pokud by došlo ke konfliktu s identitou vlákna, nebo v případě, že uživatel zruší akci, když se požaduje podmíněné spuštění (například stiskne tlačítko Zpět na obrazovce PIN kódu).
 
 
 V případě nastavení identity objektu Context je výsledek nahlášený asynchronně. Pokud je objektem Context aktivita, sada SDK nebude vědět, jestli byla změna identity úspěšná, a to až do podmíněného spuštění, které může vyžadovat, aby uživatel zadal kód PIN nebo podnikové přihlašovací údaje. Aby se dosáhlo tohoto výsledku, měla by aplikace implementovat `MAMSetUIIdentityCallback`. Pro tento parametr můžete předat hodnotu null.
@@ -1088,7 +1294,7 @@ V případě nastavení identity objektu Context je výsledek nahlášený async
 Namísto volání `MAMPolicyManager.setUIPolicyIdentity` můžete identitu aktivity také nastavit přímo díky metodě na `MAMActivity`. Použijte tuto metodu:
 
 ```java
-     public final void switchMAMIdentity(final String newIdentity);
+     public final void switchMAMIdentity(final String newIdentity, final EnumSet<IdentitySwitchOption> options);
 ```
 
 Metodu na `MAMActivity` můžete také přepsat, aby mohla být aplikace informovaná o výsledku pokusů změnit identitu této aktivity.
@@ -1096,6 +1302,8 @@ Metodu na `MAMActivity` můžete také přepsat, aby mohla být aplikace informo
 ``` java
     public void onSwitchMAMIdentityComplete(final MAMIdentitySwitchResult result);
 ```
+
+Je-li přepsat `onSwitchMAMIdentityComplete` (nebo volání `super` metoda), přepnutí neúspěšné identity pro aktivitu bude výsledkem dokončení aktivity. Pokud přepíšete metodu, můžete musí zajistíme, že se firemní data nezobrazí po přepnutí identity se nezdařilo.
 
 >[!NOTE]
 > Přepnutí identity může vyžadovat nové vytvoření aktivity. Nové instanci aktivity se pak doručí zpětné volání `onSwitchMAMIdentityComplete`.
@@ -1148,11 +1356,11 @@ Kromě schopnosti aplikace nastavit identitu se může vlákno nebo identita obj
     }
     ```
 
-    Kde ```AppIdentitySwitchResult``` je buď SUCCESS, nebo FAILURE.
+    Kde ```AppIdentitySwitchResult``` je `SUCCESS` nebo `FAILURE`.
 
 Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn identity s výjimkou změn provedených třídou Binder, která se vrátila z `MAMService.onMAMBind`. Výchozí implementace `onMAMIdentitySwitchRequired` okamžitě volají:
 
-* `reportIdentitySwitchResult(FAILURE)`, když je důvod RESUME_CANCELLED.
+* `reportIdentitySwitchResult(FAILURE)` Když je důvod `RESUME_CANCELLED`.
 
 * `reportIdentitySwitchResult(SUCCESS)` ve všech ostatních případech.
 
@@ -1162,25 +1370,29 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
 
   * Pokud služba běží na hlavním vlákně, **musí** se `reportIdentitySwitchResult` volat synchronně, jinak přestane vlákno uživatelského rozhraní reagovat.
 
-  * Při vytváření **aktivity** se bude `onMAMIdentitySwitchRequired` volat před `onMAMCreate`. Pokud musí aplikace zobrazit uživatelské rozhraní, aby určila, jestli se má povolit přepnutí identity, musí se toto uživatelské rozhraní zobrazit pomocí *jiné* aktivity.
+  * Pro **`Activity`** vytváření `onMAMIdentitySwitchRequired` bude volána před `onMAMCreate`. Pokud musí aplikace zobrazit uživatelské rozhraní, aby určila, jestli se má povolit přepnutí identity, musí se toto uživatelské rozhraní zobrazit pomocí *jiné* aktivity.
 
-  * Pokud je potřeba přepnout na prázdnou identitu s odůvodněním, které odpovídá RESUME_CANCELLED, musí aplikace upravit obnovenou **aktivitu** tak, aby zobrazovala data, která jsou konzistentní s tímto přepnutím identity.  Pokud to není možné, aplikace by měla přepnutí odmítnout a uživatel se znovu vyzve k dodržování zásad pro obnovení identity (například zobrazením obrazovky pro zadání kódu PIN).
+  * V **`Activity`**, pokud se požaduje přepnout na prázdnou identitu s odůvodněním, které jako `RESUME_CANCELLED`, musí aplikace upravit obnovenou aktivitu pro zobrazení dat, které jsou konzistentní s tímto přepnutím identity.  Pokud to není možné, aplikace by měla přepnutí odmítnout a uživatel se znovu vyzve k dodržování zásad pro obnovení identity (například zobrazením obrazovky pro zadání kódu PIN).
 
     > [!NOTE]
     > Aplikace s více identitami bude vždycky přijímat příchozí data ze spravovaných i nespravovaných aplikací. Aplikace musí zacházet s daty ze spravovaných identit řízeně.
 
   Pokud je požadovaná identita spravovaná (to si ověříte pomocí `MAMPolicyManager.getIsIdentityManaged`), ale aplikace nemůže tento účet používat (například kvůli tomu, že se v aplikaci musí nejprve nastavit e-mailové nebo jiné účty), mělo by se přepnutí identity odmítnout.
+
 #### <a name="build-plugin--tool-considerations"></a>Důležité informace týkající se nástroje nebo modulu plug-in sestavení
-Pokud explicitně nedědíte z `MAMActivity`, `MAMService` nebo `MAMContentProvider` (protože povolíte nástrojům sestavení, aby tuto změnu provedly za vás), ale potřebujete zpracovat přepnutí identit, můžete místo toho implementovat `MAMActivityIdentityRequirementListener` (pro Activities) nebo `MAMIdentityRequirementListener` (pro Services a ContentProviders). K výchozímu chování `MAMActivity.onMAMIdentitySwitchRequired` se dostanete tak, že zavoláte statickou metodu `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
+Pokud Nedědit explicitně z `MAMActivity`, `MAMService`, nebo `MAMContentProvider` (protože je povoleno sestavení nástrojů k provedení této změny), ale potřebují ke zpracování přepnutí identit, můžete místo toho implementovat `MAMActivityIdentityRequirementListener` (pro `Activity`) nebo `MAMIdentityRequirementListener` (pro `Service` nebo `ContentProviders`).
+K výchozímu chování `MAMActivity.onMAMIdentitySwitchRequired` se dostanete tak, že zavoláte statickou metodu `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
 reason, callback)`.
 
 A pokud potřebujete přepsat `MAMActivity.onSwitchMAMIdentityComplete`, můžete implementovat `MAMActivityIdentitySwitchListener` bez explicitního dědění z `MAMActivity`.
 
 ### <a name="preserving-identity-in-async-operations"></a>Zachování identity v asynchronních operacích
 Operace vlákna uživatelského rozhraní běžně odesílají úlohy na pozadí do jiného vlákna. Aplikace s více identitami bude chtít zajistit, že tyto úlohy na pozadí probíhají pod správnou identitou. Často se jedná o stejnou identitu používanou aktivitou, která je odeslala. Z důvodu usnadnění a pomoci při zachování identity sada SDK MAM poskytuje `MAMAsyncTask` a `MAMIdentityExecutors`.
+Toto musíte použít, pokud asynchronní operace napsat firemních dat do souboru nebo může komunikovat s jinými aplikacemi.
+
 #### <a name="mamasynctask"></a>MAMAsyncTask
 
-Pokud chcete používat `MAMAsyncTask`, nastavte úlohu AsynTask jednoduše tak, aby dědila z uvedené úlohy, a nahraďte `doInBackground` a `onPreExecute` metodou `doInBackgroundMAM` a `onPreExecuteMAM` v uvedeném pořadí. Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
+Použití `MAMAsyncTask`, jednoduše dědí z místo něj `AsyncTask` a nahradit přepsání `doInBackground` a `onPreExecute` s `doInBackgroundMAM` a `onPreExecuteMAM` v uvedeném pořadí. Konstruktor `MAMAsyncTask` převezme kontext aktivity. Příklad:
 
 ```java
   AsyncTask<Object, Object, Object> task = new MAMAsyncTask<Object, Object, Object>(thisActivity) {
@@ -1207,85 +1419,92 @@ Pokud chcete používat `MAMAsyncTask`, nastavte úlohu AsynTask jednoduše tak,
 
 Každý soubor má identitu, která je s ním spojená v době vytvoření, podle identity vláken a procesů. Tato identita se používá pro šifrování souborů i selektivní vymazání. Šifrovat se budou jen soubory, jejichž identita je spravovaná a má zásady vyžadující šifrování. Výchozí selektivní vymazání funkcí sadou SDK vymaže jen soubory spojené s identitou, u které se požaduje vymazání. Aplikace může zadat dotaz na identitu souboru nebo ji změnit pomocí třídy `MAMFileProtectionManager`.
 
-  ```java
-    public final class MAMFileProtectionManager {
+```java
+public final class MAMFileProtectionManager {
 
-        /**
-         * Protect a file. This will synchronously trigger whatever protection is required for the 
-         * file, and will tag the file for future protection changes.
-         *
-         * @param identity
-         *            Identity to set.
-         * @param file
-         *            File to protect.
-         * @throws IOException
-         *             If the file cannot be changed.
-         */
-        public static void protect(final File file, final String identity) throws IOException;
+   /**
+    * Protect a file or directory. This will synchronously trigger whatever protection is required for the file, and will tag the
+    * file for future protection changes. If an identity is set on a directory, it is set recursively on all files and
+    * subdirectories. New files or directories will inherit their parent directory's identity. If MAM is operating in offline mode,
+    * this method will silently do nothing.
+    *
+    * @param identity
+    *       Identity to set.
+    * @param file
+    *       File to protect.
+    *
+    * @throws IOException
+    *       If the file cannot be protected.
+    */
+   public static void protect(final File file, final String identity) throws IOException;
 
-       /**
-         * Protect a file obtained from a content provider. This is intended to be used for
-         * sdcard (whether internal or removable) files accessed through the Storage Access Framework.
-         * It may also be used with descriptors referring to private files owned by this app.
-         * It is not intended to be used for files owned by other apps and such usage will fail. If
-         * creating a new file via a content provider exposed by another MAM-integrated app, the new
-         * file identity will automatically be set correctly if the ContentResolver in use was
-         * obtained via a Context with an identity or if the thread identity is set.
-         *
-         * This will synchronously trigger whatever protection is required for the file, and will tag
-         * the file for future protection changes. If an identity is set on a directory, it is set
-         * recursively on all files and subdirectories. If MAM is operating in offline mode, this
-         * method will silently do nothing.
-         *
-         * @param identity
-         *            Identity to set.
-         * @param file
-         *            File to protect.
-         *
-         * @throws IOException
-         *             If the file cannot be protected.
-         */
-        public static void protect(final ParcelFileDescriptor file, final String identity) throws IOException;
+   /**
+     * Protect a file obtained from a content provider. This is intended to be used for
+     * sdcard (whether internal or removable) files accessed through the Storage Access Framework.
+     * It may also be used with descriptors referring to private files owned by this app.
+     * It is not intended to be used for files owned by other apps and such usage will fail. If
+     * creating a new file via a content provider exposed by another MAM-integrated app, the new
+     * file identity will automatically be set correctly if the ContentResolver in use was
+     * obtained via a Context with an identity or if the thread identity is set.
+     *
+     * This will synchronously trigger whatever protection is required for the file, and will tag
+     * the file for future protection changes. If an identity is set on a directory, it is set
+     * recursively on all files and subdirectories. If MAM is operating in offline mode, this
+     * method will silently do nothing.
+     *
+     * @param identity
+     *            Identity to set.
+     * @param file
+     *            File to protect.
+     *
+     * @throws IOException
+     *             If the file cannot be protected.
+     */
+    public static void protect(final ParcelFileDescriptor file, final String identity) throws IOException;
 
-       /**
-        * Get the protection info on a file.
-        *
-        * @param file
-        *            File or directory to get information on.
-        * @return File protection info, or null if there is no protection info.
-        * @throws IOException
-        *             If the file cannot be read or opened.
-        */
-        public static MAMFileProtectionInfo getProtectionInfo(final File file) throws IOException;
+   /**
+    * Get the protection info on a file.
+    *
+    * @param file
+    *            File or directory to get information on.
+    * @return File protection info, or null if there is no protection info.
+    * @throws IOException
+    *             If the file cannot be read or opened.
+    */
+    public static MAMFileProtectionInfo getProtectionInfo(final File file) throws IOException;
 
-       /**
-        * Get the protection info on a file.
-        *
-        * @param file
-        *            File or directory to get information on.
-        * @return File protection info, or null if there is no protection info.
-        * @throws IOException
-        *             If the file cannot be read or opened.
-        */
-        public static MAMFileProtectionInfo getProtectionInfo(final ParcelFileDescriptor file) throws IOException;
+   /**
+    * Get the protection info on a file.
+    *
+    * @param file
+    *            File or directory to get information on.
+    * @return File protection info, or null if there is no protection info.
+    * @throws IOException
+    *             If the file cannot be read or opened.
+    */
+    public static MAMFileProtectionInfo getProtectionInfo(final ParcelFileDescriptor file) throws IOException;
 
-    }
+}
 
-    public interface MAMFileProtectionInfo {
-        String getIdentity();
-    }
-  ```
+public interface MAMFileProtectionInfo {
+    String getIdentity();
+}
+ ```
+
 #### <a name="app-responsibility"></a>Odpovědnost aplikace
 Správa MAM nemůže automaticky odvodit vztah mezi čtenými soubory a daty zobrazovanými ve třídách `Activity`. Aplikace *musí* před zobrazením podnikových dat správně nastavit identitu uživatelského rozhraní. To platí i pro data čtená ze souborů. Pokud soubor pochází z umístění mimo aplikaci (`ContentProvider` nebo je přečten z umístění s možností veřejného zápisu), *musí* se aplikace před zobrazením informací přečtených ze souboru pokusit určit identitu souboru (s použitím `MAMFileProtectionManager.getProtectionInfo`). Pokud `getProtectionInfo` oznámí identitu, která nemá hodnotu null a není prázdná, *musí* se identita uživatelského rozhraní nastavit tak, aby odpovídala této identitě (pomocí `MAMActivity.switchMAMIdentity` nebo `MAMPolicyManager.setUIPolicyIdentity`). Pokud se přepnutí identity nezdaří, *nesmí* se data ze souboru zobrazit.
 
 Příklad postupu by mohl vypadat takto:
-  * Uživatel vybere dokument, který se má otevřít v aplikaci.
+  * Uživatel vybere dokument otevřete v aplikaci.
   * Během otevírání (před přečtením dat z disku) potvrdí aplikace identitu, která se má použít k zobrazení obsahu.
     * MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
     * if(info)   MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback)
     * Aplikace čeká na oznámení výsledku pro zpětné volání.
     * Pokud je oznámený výsledek chyba, aplikace dokument nezobrazí.
-  * Aplikace otevře a vykreslí soubor.
+  * Aplikace se otevře a vykreslí soubor.
+  
+#### <a name="single-identity-to-multi-identity-transition"></a>Jedinou identitou přechod více identit
+Pokud aplikaci, která dříve vydané s jedinou identitou později v integrací Intune se integruje více identit, dříve nainstalované aplikace dojde k přechodu (není viditelné pro uživatele, neexistuje žádný přidružený uživatelského rozhraní). Aplikace není *požadované* dělat nic explicitní pro zpracování tohoto přechodu. Všechny soubory vytvořené dřív, než přechod dále bude považovat za spravované (tak zůstanou šifrovaná, pokud je zásada šifrování v). V případě potřeby můžete zjišťovat upgradu a použít `MAMFileProtectionManager.protect` označit konkrétní soubory nebo adresáře s prázdnou identitou (tím také odeberete šifrování, pokud byly šifrované).
 
 #### <a name="offline-scenarios"></a>Offline scénáře
 
@@ -1305,7 +1524,8 @@ Adresáře je možné chránit pomocí stejné metody `protect`, která se použ
 
 Soubor se nedá označit jako soubor, který má více identit. Aplikace, které musí ukládat data různých uživatelů ve stejném souboru, to můžou provádět ručně díky funkcím, které poskytuje `MAMDataProtectionManager`. Aplikace tak můžou šifrovat data a spojit je s určitým uživatelem. Šifrovaná data se hodí k ukládání na disk v souboru. Na data, která souvisejí s identitou, můžete zadávat dotazy a později je dešifrovat.
 
-Aplikace využívající `MAMDataProtectionManager` by měly pro oznámení `MANAGEMENT_REMOVED` implementovat příjemce. Po dokončení tohoto oznámení už nebudou vyrovnávací paměti chráněné touto třídou čitelné, pokud bylo v době poskytování ochrany povoleno šifrování souborů. Aplikace může takovou situaci vyřešit voláním MAMDataProtectionManager.unprotect provedeným na všech vyrovnávacích pamětích v průběhu oznámení. Pokud chcete zachovat informace o identitě, je v této době také bezpečné volat metodu protect, protože při probíhajícím oznámení se zaručuje, že šifrování bude zakázáno.
+Aplikace využívající `MAMDataProtectionManager` by měly pro oznámení `MANAGEMENT_REMOVED` implementovat příjemce. Po dokončení tohoto oznámení už nebudou vyrovnávací paměti chráněné touto třídou čitelné, pokud bylo v době poskytování ochrany povoleno šifrování souborů. Aplikace může napravit tuto situaci voláním `MAMDataProtectionManager.unprotect` na všech vyrovnávacích pamětí průběhu oznámení. Pokud chcete zachovat informace o identitě, je v této době také bezpečné volat metodu protect, protože při probíhajícím oznámení se zaručuje, že šifrování bude zakázané.
+
 
 ```java
 
@@ -1402,24 +1622,32 @@ public final class MAMDataProtectionManager {
 
 ### <a name="content-providers"></a>Poskytovatelé obsahu
 
-Pokud aplikace poskytuje podniková data jiná než **ParcelFileDescriptor** prostřednictvím **ContentProvider**, musí aplikace v `MAMContentProvider` volat metodu `isProvideContentAllowed(String)`, čímž předá hlavní název uživatele (UPN) identity vlastníka pro daný obsah. Pokud tato funkce vrací hodnotu False, *nesmí* se obsah vrátit zpět volajícímu. Popisovače souborů, které se vrátí přes poskytovatele obsahu, se automaticky zpracují podle identity souboru.
+Pokud aplikace poskytuje podniková data než `ParcelFileDescriptor` prostřednictvím `ContentProvider`, musí volat metodu `isProvideContentAllowed(String)` v `MAMContentProvider`, předávání identitu vlastníka UPN (hlavní název uživatele) pro obsah. Pokud tato funkce vrací hodnotu False, *nesmí* se obsah vrátit zpět volajícímu. Popisovače souborů, které se vrátí přes poskytovatele obsahu, se automaticky zpracují podle identity souboru.
+
+Pokud Nedědit `MAMContentProvider` explicitně a místo toho povolit nástroje sestavení tak, aby tuto změnu, může volat statickou verzi stejnou metodu: `MAMContentProvider.isProvideContentAllowed(provider, contentIdentity)`.
 
 ### <a name="selective-wipe"></a>Selektivní vymazání
 
 Pokud aplikace s více identitami zaregistruje oznámení `WIPE_USER_DATA`, je odpovědná za odebrání všech dat vymazávaného uživatele, a to včetně všech souborů, jejichž identita označuje, že patří danému uživateli. Pokud aplikace odebere data uživatele ze souboru, ale chce v souboru ponechat ostatní data, *musí* změnit identitu souboru (přes `MAMFileProtectionManager.protect` na osobní identitu uživatele nebo na prázdnou identitu). Pokud se používají zásady šifrování, všechny zbývající soubory, které patří vymazávanému uživateli, zůstanou zašifrované a po vymazání budou pro aplikaci nedostupné.
 
-Aplikace, která zaregistruje `WIPE_USER_DATA`, nezíská výhodu sady SDK výchozího chování sady SDK při selektivním vymazání. U aplikací, které pracují s více identitami, to může být mnohem závažnější, protože výchozí selektivní vymazání MAM vymaže jen soubory, na jejichž identitu vymazání cílí. Pokud si aplikace pracující s více identitami přeje, aby výchozí selektivní vymazání MAM proběhlo, _**a**_ chce při vymazání provádět vlastní akce, měla by si zaregistrovat oznámení `WIPE_USER_AUXILIARY_DATA`. Toto oznámení odešle sada SDK těsně před tím, než provedete výchozí selektivní vymazání MAM. Aplikace by nikdy neměla zaregistrovat WIPE_USER_DATA i WIPE_USER_AUXILIARY_DATA.
+Aplikace, která zaregistruje `WIPE_USER_DATA`, nezíská výhodu sady SDK výchozího chování sady SDK při selektivním vymazání. U aplikací, které pracují s více identitami, to může být mnohem závažnější, protože výchozí selektivní vymazání MAM vymaže jen soubory, na jejichž identitu vymazání cílí. Pokud si aplikace pracující s více identitami přeje, aby výchozí selektivní vymazání MAM proběhlo, _**a**_ chce při vymazání provádět vlastní akce, měla by si zaregistrovat oznámení `WIPE_USER_AUXILIARY_DATA`. Toto oznámení odešle sada SDK těsně před tím, než provedete výchozí selektivní vymazání MAM. Aplikace by nikdy neměla zaregistrovat `WIPE_USER_DATA` a `WIPE_USER_AUXILIARY_DATA`.
+
+Výchozí selektivní vymazání ukončíte aplikaci řádně, dokončení aktivity a ukončuje se proces aplikace. Pokud vaše aplikace přepisuje výchozí vymazání seletive, můžete zvažte možnost Zavřít aplikaci ručně tak, aby zabrání uživateli v přístupu k datům v paměti, když dojde k vymazání.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Povolení konfigurace určené pro správu mobilních aplikací pro Android (nepovinné)
-V konzole Intune je možné nakonfigurovat páry klíč-hodnota specifické pro aplikace. Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale jednoduše se předávají do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
+Je možné nakonfigurovat páry klíč hodnota specifické pro aplikaci v konzole Intune pro [MAM-jsme](https://docs.microsoft.com/intune/app-configuration-policies-managed-app) a [Android pracovní profil aplikace](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+Tyto páry klíč-hodnota se v Intune vůbec neinterpretují, ale předávají se do aplikace. Aplikace, které chtějí obdržet takovou konfiguraci, k tomu můžou použít třídy `MAMAppConfigManager` a `MAMAppConfig`. Pokud je stejná aplikace cílem více zásad, může být pro stejný klíč k dispozici více konfliktních hodnot.
+
+> [!NOTE] 
+> Konfigurace nastavení pro přes MAM delivery-jsme nemůže být delievered v `offline`.  Jenom Android Enterprise AppRestrictions bude doručena prostřednictvím `MAMUserNotification` na prázdnou identitu v tomto případě.
 
 ### <a name="example"></a>Příklad
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
 String identity = "user@contoso.com"
 MAMAppConfig appConfig = configManager.getAppConfig(identity);
-LOGGER.info("App Config Data = " + (appConfig == null ? "null" : appConfig.getFullData()));
+LOGGER.info("App Config Data = " + appConfig.getFullData());
 String valueToUse = null;
 if (appConfig.hasConflict("foo")) {
     List<String> values = appConfig.getAllStringsForKey("foo");
@@ -1434,124 +1662,15 @@ if (appConfig.hasConflict("foo")) {
 LOGGER.info("Found value " + valueToUse);
 ```
 
-### <a name="mamappconfig-reference"></a>Reference MAMAppConfig
-
-```java
-public interface MAMAppConfig {
-    /**
-     * Conflict resolution types for Boolean values.
-     */
-    enum BooleanQueryType {
-        /**
-         * In case of conflict, arbitrarily picks one. This is not guaranteed to return the same value every time.
-         */
-        Any,
-        /**
-         * In case of conflict, returns true if any of the values are true.
-         */
-        Or,
-        /**
-         * In case of conflict, returns false if any of the values are false.
-         */
-        And
-    }
-
-    /**
-     * Conflict resolution types for integer and double values.
-     */
-    enum NumberQueryType {
-        /**
-         * In case of conflict, arbitrarily picks one. This is not guaranteed to return the same value every time.
-         */
-        Any,
-        /**
-         * In case of conflict, returns the minimum Integer.
-         */
-        Min,
-        /**
-         * In case of conflict, returns the maximum Integer.
-         */
-        Max
-    }
-
-    /**
-     * Conflict resolution types for Strings.
-     */
-    enum StringQueryType {
-        /**
-         * In case of conflict, arbitrarily picks one. This is not guaranteed to return the same value every time.
-         */
-        Any,
-        /**
-         * In case of conflict, returns the first result ordered alphabetically.
-         */
-        Min,
-        /**
-         * In case of conflict, returns the last result ordered alphabetically.
-         */
-        Max
-    }
-
-    /**
-     * Retrieve the List of Dictionaries containing all the custom
-     *  config data sent by the MAMService. This will return every
-     * Application Configuration setting available for this user, one
-     *  mapping for each policy applied to the user.
-     */
-    List<Map<String, String>> getFullData();
-
-    /**
-     * Returns true if there is more than one targeted custom config setting for the key provided. 
-     */
-    boolean hasConflict(String key);
-
-    /**
-     * @return a Boolean value for the given key if it can be coerced into a Boolean, or 
-     * null if none exists or it cannot be coerced.
-     */
-    Boolean getBooleanForKey(String key, BooleanQueryType queryType);
-
-    /**
-     * @return a Long value for the given key if it can be coerced into a Long, or null if none exists or it cannot be coerced.
-     */
-    Long getIntegerForKey(String key, NumberQueryType queryType);
-
-    /**
-     * @return a Double value for the given key if it can be coerced into a Double, or null if none exists or it cannot be coerced.
-     */
-    Double getDoubleForKey(String key, NumberQueryType queryType);
-
-    /**
-     * @return a String value for the given key, or null if none exists.
-     */
-    String getStringForKey(String key, StringQueryType queryType);
-
-    /**
-     * Like getBooleanForKey except returns all values if multiple are present.
-     */
-    List<Boolean> getAllBooleansForKey(String key);
-
-    /**
-     * Like getIntegerForKey except returns all values if multiple are present.
-     */
-    List<Long> getAllIntegersForKey(String key);
-
-    /**
-     * Like getDoubleForKey except returns all values if multiple are present.
-     */
-    List<Double> getAllDoublesForKey(String key);
-
-    /**
-     * Like getStringForKey except returns all values if multiple are present.
-     */
-    List<String> getAllStringsForKey(String key);
-}
-```
-
 ### <a name="notification"></a>Oznámení
 Konfigurace aplikace přidá nový typ oznámení:
 * **REFRESH_APP_CONFIG**: Toto oznámení se posílá ve `MAMUserNotification` a informuje aplikaci, že je k dispozici nová konfigurační data aplikace.
 
+Další informace možnostech rozhraní Graph API najdete v [referenčních informacích k rozhraní Graph API](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
+
+Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
+
+### <a name="further-reading"></a>Další čtení
 Další informace možnostech rozhraní Graph API najdete v [referenčních informacích k rozhraní Graph API](https://developer.microsoft.com/graph/docs/concepts/overview). <br>
 
 Další informace o vytváření zásad konfigurace aplikací určených pro MAM v Androidu najdete v části o konfiguraci aplikací určených pro MAM v článku [Použití zásad konfigurace aplikací v Microsoft Intune pro Android](https://docs.microsoft.com/intune/app-configuration-policies-use-android).
@@ -1593,48 +1712,33 @@ Níže najdete kompletní seznam povolených atributů stylu, prvků uživatelsk
 | Logo aplikace | Velká ikona, která se zobrazuje na obrazovce pro zadání PIN kódu aplikace Intune | logo_image | Nákres |
 
 ## <a name="default-enrollment-optional"></a>Výchozí registrace (volitelná)
-<!-- Requiring user login prompt for an automatic APP-WE service enrollment, requiring Intune app protection policies in order to use your SDK-integrated Android LOB app, and enabling ADAL SSO (optional) -->
 
 Následující část obsahuje postup pro vyžadování výzvy uživateli při spuštění aplikace pro registraci služby APP-WE (v této části to označujeme jako **výchozí registraci**) a vyžadování zásad ochrany aplikací Intune, aby obchodní aplikaci pro Android, která je integrovaná se sadou SDK, mohli používat jenom uživatelé s ochranou Intune. Obsahuje také postup pro povolení jednotného přihlašování pro obchodní aplikaci pro Android, která je integrovaná se sadou SDK. Tento postup se **nepodporuje** u aplikací pro Store, které můžou používat uživatelé nevyužívající službu Intune.
 
 > [!NOTE] 
 > Mezi výhody **výchozí registrace** patří zjednodušený způsob získání zásad ze služby APP-WE pro aplikaci na daném zařízení.
 
-### <a name="general-requirements"></a>Obecné požadavky
-* Pomocí postupu v [běžných konfiguracích ADAL #2](https://docs.microsoft.com/intune/app-sdk-android#common-adal-configurations) zkontrolujte, jestli je vaše aplikace zaregistrovaná ve službě Správa mobilních aplikací Intune.
+> [!NOTE] 
+> **Výchozí registraci** zohledňuje suverénních cloudů.
 
-### <a name="working-with-the-intune-sdk"></a>Práce se sadou Intune SDK
-Tyto pokyny se týkají všech vývojářů aplikací pro Android a Xamarin, kteří chtějí při použití na zařízení koncového uživatele vyžadovat zásady ochrany aplikací Intune.
+Povolte výchozí registraci pomocí následujících kroků:
 
-1. Nakonfigurujte ADAL pomocí postupu, který je uvedený v [příručce Intune SDK pro Android](https://docs.microsoft.com/intune/app-sdk-android#configure-azure-active-directory-authentication-library-adal).
-   > [!NOTE] 
-   > Termín „ID klienta“, který se váže na vaši aplikaci, je shodný s termínem „ID aplikace“ z portálu Azure Portal. 
-2. Pokud chcete povolit jednotné přihlašování, použijte postup uvedený v části Obvyklé konfigurace ADAL v bodě 2.
-
-3. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu:
-   ```xml
+1. Pokud vaše aplikace integruje ADAL, nebo je nutné povolit jednotné přihlašování, [nakonfigurujte ADAL](#configure-azure-active-directory-authentication-library-adal) následující [obvyklé konfigurace ADAL](#common-adal-configurations) #2. V opačném případě můžete tento krok přeskočit.
+   
+2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu:
+   ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
    > [!NOTE] 
-   > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, může docházet ke konfliktům.
+   > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, dojde ke konfliktům.
 
-4. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
-   ```xml
+3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
+   ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
    ```
    > [!NOTE] 
    > Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
-   >
-   > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, dojde ke konfliktům.
 
-3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
-
-   ```xml
-   <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />
-   ```
-
-> [!NOTE] 
-> Tím vynutíte, aby si uživatel na zařízení stáhl Portál společnosti a před použitím provedl postup výchozí registrace.
 
 ## <a name="limitations"></a>Omezení
 
@@ -1647,9 +1751,7 @@ Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáh
 
 ### <a name="policy-enforcement-limitations"></a>Omezení vynucení zásad
 
-* **Snímek obrazovky**: Sada SDK není schopná Vynutit novou hodnotu nastavení v aktivitách, které již šly voláním Activity.oncreate snímku obrazovky. To může vést k časovému úseku, kdy aplikace je nakonfigurovaná tak, aby byly zakázané snímky obrazovky, ale snímky obrazovky jde pořád pořizovat.
-
-* **Použití překladačů obsahu**: Zásady Intune "přenosu nebo příjmu" můžou blokovat nebo částečně blokovat použití překladače obsahu při přístupu k poskytovateli obsahu v jiné aplikaci. To způsobí, že metody ContentResolver vrátí hodnotu null nebo generují hodnotu selhání (například `openOutputStream` vyvolá při blokování výjimku `FileNotFoundException` ). Aplikace může určit, jestli selhání při zápisu dat pomocí překladače obsahu způsobila zásada (nebo by způsobila zásada), a to voláním:
+* **Použití překladačů obsahu**: Zásady Intune "přenosu nebo příjmu" můžou blokovat nebo částečně blokovat použití překladače obsahu při přístupu k poskytovateli obsahu v jiné aplikaci. To způsobí, že `ContentResolver` metody vrátit hodnotu null nebo generují hodnotu selhání (například `openOutputStream` vyvolá `FileNotFoundException` Pokud blokován). Aplikace může určit, jestli selhání při zápisu dat pomocí překladače obsahu způsobila zásada (nebo by způsobila zásada), a to voláním:
     ```java
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```
@@ -1669,7 +1771,7 @@ Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáh
 Některé základní třídy (například MAMActivity, MAMDocumentsProvider) obsahují metody (založené na původních základních třídách Androidu), které používají typy parametrů nebo návratové typy nacházející se nad určitými úrovněmi rozhraní API. Z tohoto důvodu nemusí být vždycky možné používat reflexi k výčtu všech metod součástí aplikací. Toto omezení se nevztahuje jenom na MAM. Jedná se o stejné omezení, které by se použilo v případě, že by aplikace samotná implementovala tyto metody ze základních tříd Androidu.
 
 ### <a name="robolectric"></a>Robolectric
-Testování chování sady SDK MAM v rozhraní Robolectric se nepodporuje. Při použití sady SDK MAM v rozhraní Robelectric existují známé problémy vznikající v důsledku chování v rozhraní Roboelectric, která nenapodobují přesně chování na skutečných zařízení nebo emulátorech.
+Testování chování sady SDK MAM v rozhraní Robolectric se nepodporuje. Existují známé problémy, na kterém běží sada SDK MAM podle Robelectric kvůli chování nacházejí v části Robolectric, které není napodobují přesně na skutečných zařízeních nebo emulátorech.
 
 Pokud potřebujete otestovat aplikaci v rozhraní Roboelectric, doporučujeme přesunout logiku třídy aplikace do pomocné rutiny a vytvořit balíček aplikace pro Android pro testování částí s třídou aplikace, která nedědí z aplikace MAMApplication.
 ## <a name="expectations-of-the-sdk-consumer"></a>Očekávání uživatele sady SDK

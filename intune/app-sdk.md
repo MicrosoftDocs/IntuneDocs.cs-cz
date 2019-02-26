@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,17 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71f4ce34abdb0c1b3d7dbc2bbd3f41f618715fb3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 71a21dcdef046205ad511e70e59d787e950d6734
+ms.sourcegitcommit: ba7170e499ea0009e9f1c2d77dbec116ec01ba1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55837390"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56826185"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Přehled Microsoft Intune App SDK
-Intune App SDK, dostupná pro iOS i Android, povoluje ve vaší aplikaci zásady ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Za účelem zlepšení činnosti koncových uživatelů a správců IT můžete využít rozhraní API k přizpůsobení chování vaší aplikace pro funkce, které vyžadují zapojení vaší aplikace.
+Intune App SDK, k dispozici pro iOS a Android, umožňuje aplikaci pro podporu Intune [zásady ochrany aplikací](app-protection-policy.md). Pokud má vaše aplikace použít zásady ochrany aplikací, je možné spravovat pomocí Intune a je rozpoznaná službou Intune jako spravovanou aplikaci. Sada SDK se snaží minimalizovat od vývojáře aplikace vyžadovat změny kódu. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Pro zlepšení koncových uživatelů a prostředí pro správce IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.
 
-Jakmile v aplikaci povolíte zásady ochrany aplikací, můžou správci IT tyto zásady nasazovat, aby chránili firemní data v rámci dané aplikace.
+Jakmile povolíte aplikaci tak, aby podporují zásady ochrany aplikací Intune, správci IT můžou nasadit tyto zásady k ochraně svých firemních dat v aplikaci.
 
 ## <a name="app-protection-features"></a>Funkce ochrany aplikací
 
@@ -51,13 +51,13 @@ Správce IT může vynutit, aby se webové odkazy v aplikaci otevíraly pomocí 
 ### <a name="enforce-a-pin-policy"></a>Vynucení zásady kódu PIN
 Správce IT může po koncovém uživateli vyžadovat, aby před přístupem k podnikovým datům v aplikaci zadal PIN. Tím se zajistí, že uživatel, který aplikaci používá, je tím samým uživatelem, který se původně přihlásil pomocí pracovního nebo školního účtu. Když si koncoví uživatelé nakonfigurují PIN, sada Intune App SDK použije Azure Active Directory k ověření přihlašovacích údajů koncových uživatelů podle registrovaného účtu Intune.
 
-### <a name="require-users-to-sign-in-with-work-or-school-account-for-app-access"></a>Vyžadování, aby se uživatelé před přístupem k aplikaci přihlásili pomocí pracovního nebo školního účtu
+### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Vyžadovat, aby uživatelé přihlásit pomocí pracovního nebo školního účtu pro přístup k aplikaci
 Správci IT můžou vyžadovat, aby se uživatelé před přístupem k aplikaci přihlásili pomocí pracovního nebo školního účtu. Sada Intune App SDK použije Azure Active Directory k poskytnutí jednotného přihlašování, při kterém se jednou zadané přihlašovací údaje znovu použijí pro následující přihlášení. Také podporujeme ověřování řešení správy identity sdružených se službou Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Kontrola stavu zařízení a dodržování předpisů
 Správci IT můžou před přístupem koncových uživatelů k aplikacím kontrolovat stav zařízení a dodržování zásad Intune. Na iOSu tato zásada kontroluje, jestli zařízení nemá jailbreak. Na Androidu tato zásada kontroluje, jestli zařízení nemá root.
 
-### <a name="multi-identity-support"></a>Podpora více identit
+### <a name="support-multi-identity"></a>Podpora více identit
 Podpora více identit je funkce sady SDK umožňující koexistenci účtů spravovaných zásadou (podnikových) a nespravovaných (osobních) v jediné aplikaci.
 
 Mnoho uživatelů si například v mobilních aplikacích Office pro iOS a Android konfiguruje podnikové i osobní e-mailové účty. Když uživatel pracuje s daty s podnikovým účtem, správce IT musí mít jistotu, že se použije zásada ochrany aplikací. Když ale uživatel přistupuje k osobnímu e-mailovému účtu, tato data by měla být mimo dosah správce IT. Sada Intune App SDK toho dosahuje tím, že v aplikaci cílí zásady ochrany aplikace **jenom** na podnikovou identitu.
@@ -80,4 +80,4 @@ Další informace o Citrix MDX najdete v tématech, které pojednávají o [sad�
 
 ## <a name="next-steps"></a>Další postup
 
-- Další informace o [zásady ochrany aplikací](app-protection-policy.md).
+- [Začínáme s Microsoft Intune App SDK](app-sdk-get-started.md).
