@@ -12,12 +12,12 @@ ms.service: microsoft-intune
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d39f4c541fd7ccf5ab2d09fdcf4f871ba3ee639c
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: ecb9a06258c10f2ef00d8940238bc22b539ba21b
+ms.sourcegitcommit: bb80846453850bf17b8c59c25829cf7aa281ca1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742393"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56838309"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
 
@@ -60,7 +60,9 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
 
 5. Vyberte **OK** > **vytvořit** uložte provedené změny a vytvoříte zásadu.
 
-Profil se vytvoří a zobrazí se v seznamu zásad. 
+Profil se vytvoří a zobrazí se v seznamu zásad.
+
+Pokyny od týmu podpory Intune najdete v tématu [zpoždění viditelnost softwarových aktualizací v Intune pro zařízení pod dohledem](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
 
 > [!NOTE]
 > Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbe292aec26e55e6dfbe03e59fd9e91c0689c33a
-ms.sourcegitcommit: ba7170e499ea0009e9f1c2d77dbec116ec01ba1c
+ms.openlocfilehash: ad47171d1d0cd4f5d3ac19fe3dadea90b3be1cc8
+ms.sourcegitcommit: bb80846453850bf17b8c59c25829cf7aa281ca1c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 02/26/2019
-ms.locfileid: "56826270"
+ms.locfileid: "56838343"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -46,6 +46,14 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 -->     
 
 <!-- ########################## -->
+## <a name="week-of-february-25-2019"></a>Týden od 25. února 2019
+
+### <a name="intune-powershell-module----951068-wnready---"></a>Modul Intune PowerShell <!-- 951068 wnready -->
+Modul Intune PowerShell, který poskytuje podporu pro rozhraní Intune API prostřednictvím Microsoft Graphu, je teď dostupná v [Microsoft PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1902.1.10).
+
+- [Podrobnosti o použití tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/README.md)
+- [Příklady scénářů s použitím tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/Samples/README.md)
+
 ## <a name="week-of-february-18-2019"></a>Týden od 18. února 2019
 
 ### <a name="app-management"></a>Správa aplikací
