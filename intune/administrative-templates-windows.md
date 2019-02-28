@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 02/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edf76b2406f07efa68275763da87340bb34f222
-ms.sourcegitcommit: 613b2064df07cfac0081e8549177e1f2d07cf33c
+ms.openlocfilehash: f7b78cdc329e3d6f61dea49ddb28429c2f12d0d6
+ms.sourcegitcommit: 95cc5f1e5e955acdff642191c174249465cc98bf
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590066"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56982228"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Použití šablon Windows 10 v Microsoft Intune konfigurovat nastavení zásad skupiny
 
 Při správě zařízení ve vaší organizaci, můžete chtít vytvořit skupinu nastavení, která se použijí v různých skupinách zařízení. Například můžete mít několik skupin zařízení. Pro GroupA kterému chcete přiřadit určitou sadu nastavení. Pro GroupB kterému chcete přiřadit jinou sadu nastavení. Chcete také jednoduchý přehled na nastavení, která můžete nakonfigurovat.
 
-Pomocí této úlohy můžete dokončit **šablony pro správu** v Microsoft Intune. Šablony pro správu zahrnují stovky nastavení, která řídí funkce v aplikaci Internet Explorer sady Microsoft Office, vzdálené plochy, přístup k Onedrivu, použití obrázkového hesla nebo PIN kód pro přihlášení a další. Tyto šablony jsou podobné nastavení skupiny zásad (objekt zásad skupiny) v Active Directory (AD) a jsou [zálohovanou ADMX nastavení](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) , které používají XML. Ale šablony v Intune jsou 100 % založené na cloudu. Nabízejí další jednoduché a přímočaré až po konfiguraci nastavení a najít nastavení chcete.
+Pomocí této úlohy můžete dokončit **šablony pro správu** v Microsoft Intune. Šablony pro správu zahrnují stovky nastavení, která řídí funkce v aplikaci Internet Explorer sady Microsoft Office, vzdálené plochy, přístup k Onedrivu, použití obrázkového hesla nebo PIN kód pro přihlášení a další. Tyto šablony jsou podobné nastavení skupiny zásad (objekt zásad skupiny) v Active Directory (AD) a jsou [zálohovanou ADMX nastavení](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (otevře jiný web dokumentace), které používají XML. Ale šablony v Intune jsou 100 % založené na cloudu. Nabízejí další jednoduché a přímočaré až po konfiguraci nastavení a najít nastavení chcete.
 
 **Šablony pro správu** jsou integrované do Intune a nevyžadují žádné úpravy, včetně použití OMA-URI. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení šablony jako univerzálním nástrojem pro správu zařízení s Windows 10.
 
@@ -75,6 +75,8 @@ Nejsou k dispozici v těchto šablon stovky nastavení. Aby bylo snazší najít
   ![Klikněte na cestu k seřadit podle abecedy](./media/administrative-templates-windows/search-copy-settings.png)
 
   Například vyhledejte `microsoft word`. Zobrazí všechna nastavení, můžete nastavit pro aplikace Microsoft Word. Vyhledejte `explorer` zobrazíte všechna nastavení Internet Exploreru můžete přidat do šablony.
+
+Tato funkce používá [zásad Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web Docs). Poskytovatelé CSP fungovat v různých edicích Windows, jako je například Home, Professional, Enterprise a tak dále. Pokud chcete zobrazit, pokud zprostředkovatel kryptografických služeb pracuje v konkrétní verzi, přejděte na [zásad Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web Docs).
 
 ## <a name="next-steps"></a>Další postup
 

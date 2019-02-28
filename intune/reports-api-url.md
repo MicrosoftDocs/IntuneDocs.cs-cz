@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2018
+ms.date: 02/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caf4401a2274a74050ec0eb404363cfc15b23e76
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ffdd62c06090e58bc5f00a8750c7a3a301ac9ed7
+ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55851436"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955523"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -57,11 +57,13 @@ Adresa URL obsahuje následující prvky:
 
 ## <a name="api-version-information"></a>Informace o verzi rozhraní API
 
-Aktuální verze rozhraní API je: `beta`. 
+Nastavením parametru dotazu  `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.
+
+Nejnovější funkce datového skladu můžete vyzkoušet pomocí beta verze. Pokud chcete použít beta verzi, musí adresa URL obsahovat parametr dotazu  `api-version=beta`. Beta verze nabízí funkce dřív, než budou všeobecně dostupné jako podporované služby. S tím, jak Intune přidává nové funkce, se může měnit chování a kontrakty dat beta verze. Jakýkoli vlastní kód nebo nástroje pro vytváření sestav závislé na beta verzi můžou přestat v probíhajících aktualizacích fungovat.
 
 ## <a name="odata-query-options"></a>Možnosti dotazu OData
 
-Aktuální verze podporuje tyto parametry dotazu OData: `$filter, $orderby, $select, $skip,` a `$top`.
+Aktuální verze podporuje tyto parametry dotazu OData: `$filter`, `$select`, `$skip,` a `$top`. V `$filter`, pouze `DateKey` nebo `RowLastModifiedDateTimeUTC` mohou být podporováni, když sloupce, které se dají použít, a další vlastnosti aktivuje chybnou žádost.
 
 ## <a name="datekey-range-filters"></a>Filtry rozsahu DateKey
 
@@ -73,15 +75,12 @@ Filtry rozsahu `DateKey` se dají použít k omezení množství dat ke stažen�
 ## <a name="filter-examples"></a>Příklady filtrů
 
 > [!NOTE]
-> V příkladech filtrů se předpokládá, že dnešní datum je 21. 2. 2018.
+> Filtr příklady předpokládají dnes je 2/21/2019.
 
 |                             Filtr                             |           Optimalizace výkonu           |                                          Popis                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
 |    `maxhistorydays=7`                                            |    Full                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221.                                     |
 |    `$filter=DateKey eq 20180214`                                 |    Full                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Full                                      |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180220.                                     |
-|    `maxhistorydays=7&$filter=Id gt 1`                            |    Částečná, Id gt 1 se neoptimalizuje    |    Vrátí data s hodnotou `DateKey` mezi 20180214 a 20180221 a Id větší než 1.             |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Full                                      |    Vrátí data s hodnotou `DateKey` rovnající se 20180214. `maxhistorydays` se ignoruje.                            |
-|    `$filter=DateKey eq 20180214 and Id gt 1`                     |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
-|    `$filter=DateKey ne 20180214`                                 |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde.                              |
-|    `maxhistorydays=7&$filter=DateKey eq 20180214 and Id gt 1`    |    Žádný                                      |    Nepovažuje se za filtr rozsahu `DateKey`, takže k žádnému zvýšení výkonu nedojde. `maxhistorydays` se ignoruje.    |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Full                                       |    Vrátit data s `RowLastModifiedDateTimeUTC` je větší než nebo rovno `2018-02-21T23:18:51.3277273Z`                             |

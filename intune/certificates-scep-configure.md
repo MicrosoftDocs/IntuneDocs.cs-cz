@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdc0f02aa09edd05314d0d4a6a2abacc98c94bf2
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 542eb8e2ae93144709c8e35f22718d6c520cc58a
+ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742733"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955608"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -363,8 +363,8 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 5. V rozevíracím seznamu **Typ profilu** zvolte **Certifikát SCEP**.
 6. Zadejte následující nastavení:
 
-   - **Typ certifikátu**: Zvolte **uživatele** u uživatelských certifikátů. Pro zařízení bez uživatele, jako jsou například veřejné terminály, vyberte **Zařízení**. Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
-     - Android Enterprise
+   - **Typ certifikátu**: Zvolte **uživatele** u uživatelských certifikátů. A **uživatele** certifikát typ může obsahovat atributy uživatelů a zařízení v předmětu a certifikátu SAN.  Zvolte **zařízení** pro scénáře, jako jsou například zařízení bez určeného uživatele, jako jsou veřejné terminály, nebo pro zařízení s Windows, umístění certifikátu v úložišti certifikátů místního počítače. **Zařízení** certifikátů můžou obsahovat jenom atributy zařízení ve službě předmět a certifikátu SAN.  Certifikáty **Zařízení** jsou dostupné pro tyto platformy:  
+     - Android Enterprise – pracovní profil
      - iOS
      - macOS
      - Windows 8.1 a vyšší

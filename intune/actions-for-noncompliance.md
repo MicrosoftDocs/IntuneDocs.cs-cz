@@ -14,19 +14,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c37a5991adf2efdb5bf38b32d8af4c77af295ea0
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f42ebd42a6bf12fda5fbfb13198302b0943b7960
+ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844679"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955540"
 ---
-# <a name="automate-email-and-add-actions-for-noncompliant-devices---intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy – Intune
+# <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy v Intune
 
-Existuje funkce **Akce při nedodržení předpisů**, pomocí které můžete nakonfigurovat sled akcí v časovém pořadí. Tyto akce se aplikují na zařízení, která nesplňují vaše zásady dodržování předpisů. 
+Pro zařízení, která nesplňují zásady dodržování předpisů nebo pravidla, můžete přidat **akce při nedodržení**. Tato funkce nakonfiguruje časově řazenou posloupnost akcí, jako je například e-mailem žádají koncového uživatele a další.
 
 ## <a name="overview"></a>Přehled
-Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) pak zařízení zablokuje. Když zařízení nedodržuje předpisy, **akce při nedodržení předpisů** vám umožní flexibilně se rozhodnout, co udělat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
+
+Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) pak zařízení zablokuje. Pokud zařízení nedodržuje předpisy, **akce při nedodržení** vám umožní flexibilně se rozhodnout, jak postupovat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
 
 Existuje několik typů akcí:
 
@@ -73,10 +74,10 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
    ![Příklad oznámení o dodržování předpisů v Intune](./media/actionsfornoncompliance-1.PNG)
 
-4. Po přidání informací vyberte **Vytvořit**. Šablona zprávy s oznámením je připravená k použití. Všimněte si, že logo nahrané jako součást značky Portálu společnosti, se použije pro e-mailové šablony. Další informace o značce Portálu společnosti najdete v tématu o [přizpůsobení brandingu firemní identity](company-portal-app.md#company-identity-branding-customization).  
+4. Po přidání informací vyberte **Vytvořit**. Šablona zprávy s oznámením je připravená k použití. Logo, které budou nahrány jako součást značky portálu společnosti se používá pro e-mailové šablony. Další informace o značce Portálu společnosti najdete v tématu o [přizpůsobení brandingu firemní identity](company-portal-app.md#company-identity-branding-customization).
 
 > [!NOTE]
-> Můžete také upravit dříve vytvořenou šablonu oznámení.
+> Můžete také změnit nebo aktualizovat stávající šablonu oznámení, který jste předtím vytvořili.
 
 ## <a name="add-actions-for-noncompliance"></a>Přidání akcí při nedodržení předpisů
 
@@ -100,11 +101,12 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
          - Vyberte **Šablonu zprávy**, kterou jste dříve vytvořili.
          - Zadejte libovolné **Další příjemce** výběrem skupin.
     
-    - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Aby mohl uživatel zařízení odemknout, musí zadat PIN kód nebo heslo. 
+    - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Tato akce vynutí, aby uživatel zadal kód PIN nebo hesla k odemknutí zařízení. 
     
-    - **Plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud jako počet dnů zadáte **0**, potom začne podmíněný přístup platit **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
+    - **Plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
 
 5. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
 
 ## <a name="next-steps"></a>Další postup
-[Monitorování dodržování předpisů zařízením](device-compliance-monitor.md).
+
+[Monitorovat zásady](compliance-policy-monitor.md).

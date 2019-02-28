@@ -1,11 +1,11 @@
 ---
 title: Nastavení optimalizace doručení pro Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Konfigurujte způsob doručování aktualizací softwaru do zařízení s Windows 10 a novější zařízení využívají cloudové služby optimalizace doručení k dispozici. V Intune vytvořte profil konfigurace zařízení k instalaci aktualizace z Internetu. Také zjistit, jak nahradit existující aktualizačních kanálů s profilem optimalizace doručení.
+description: Nakonfigurujte, jak zařízení s Windows 10, která spravujete přes Intune používat optimalizace doručení. V Intune vytvořte profil konfigurace zařízení k instalaci aktualizace z Internetu. Také zjistit, jak nahradit existující aktualizačních kanálů s profilem optimalizace doručení.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 02/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,27 +13,27 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f335c8acf9e979366fe75d1a3da2318b7ec46400
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.reviewer: kerimh
+ms.openlocfilehash: 89eb2f92d47c425fe2d286f1f36c175319c519a6
+ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55836689"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955506"
 ---
-# <a name="windows-10-and-newer-delivery-optimization-settings-in-microsoft-intune"></a>Nastavení optimalizace doručení 10 (a novějších) systému Windows v Microsoft Intune
+# <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení optimalizace doručení v Microsoft Intune
+
+Nastavení optimalizace doručení pro zařízení s Windows 10 v Intune, slouží ke snížení využití šířky pásma, když tato zařízení stahovat aplikace a aktualizace. Optimalizace doručení je nakonfigurovaný jako součást vašich profilů konfigurace zařízení.  
+
+Tento článek popisuje, jak nakonfigurovat nastavení optimalizace doručení jako součást profilu konfigurace zařízení. Až profil vytvoříte, můžete pak přiřadit nebo nasadit tento profil k zařízení s Windows 10. 
+
+Seznam nastavení optimalizace doručení, které Intune podporuje, najdete v části [nastavení optimalizace doručení pro Intune](delivery-optimization-settings.md).  
+
+Další informace o optimalizace doručení ve Windows 10 najdete v tématu [optimalizace doručení aktualizací](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) v dokumentaci k Windows.  
+
 
 > [!NOTE]
-> **Aktualizace softwaru – aktualizační kanály Windows 10** nahrazují **optimalizace doručení** nastavení. Použít lze změnit existující aktualizační okruhy **optimalizace doručení** nastavení. [Přesunout existující aktualizační okruhy optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku) jsou uvedené kroky. 
-
-
-Tato funkce platí pro následující platformy:
-
-- Windows 10 a novější
-
-Tento článek uvádí a popisuje všechny nastavení optimalizace doručení, která můžete konfigurovat pro zařízení s Windows 10. Tato nastavení jsou přidány do konfiguračního profilu zařízení a potom přiřazené nebo nasazené do zařízení pomocí Microsoft Intune.
-
-[Optimalizace doručení aktualizací](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) je skvělý prostředek pro další informace o optimalizace doručení ve Windows 10.
-
+> **Aktualizace softwaru – aktualizační kanály Windows 10** nahrazují **optimalizace doručení** nastavení. Použít lze změnit existující aktualizační okruhy **optimalizace doručení** nastavení. [Přesunout existující aktualizační okruhy optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku) 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
@@ -49,23 +49,15 @@ Tento článek uvádí a popisuje všechny nastavení optimalizace doručení, k
         - **Windows 10 a novější**
 
     - **Typ profilu**: Vyberte **optimalizace doručení**.
-    - **Nastavení**: Zvolte, jak chcete aktualizace stáhnout. Možnosti: 
-
-        - **Není nakonfigurováno**: Koncoví uživatelé aktualizovat svá zařízení pomocí vlastní metody, které lze použít **aktualizací Windows** nebo **optimalizace doručení** nastavení k dispozici s operačním systémem.
-        - **Jen HTTP bez partnerů**: Získáte aktualizace pouze z Internetu. Není aktualizován z jiných počítačů v síti (označované jako partnerského vztahu nebo peer-to-peer).
-        - **HTTP v kombinaci s partnery za stejným překladem NAT**: Získejte aktualizace z Internetu a z jiných počítačů v síti. 
-        - **HTTP v kombinaci s partnery v privátní skupině**: Partnerský vztah dochází na zařízeních ve stejné lokality služby Active Directory (pokud existuje) nebo stejné domény. Pokud je vybraná tato možnost, partnerský vztah překročí překlad síťových adres (NAT) IP adresy.
-        - **HTTP v kombinaci s internetovými partnery**: Získejte aktualizace z Internetu a z jiných počítačů v síti.
-        - **Jednoduchý režim stahování bez partnerů**: Získá aktualizace z Internetu, přímo z aktualizace vlastníka, jako je Microsoft. Nekontaktuje cloudové služby pro optimalizaci doručení.
-        - **Režim vynechání**: Pokud chcete získat aktualizace pomocí služby inteligentního přenosu na pozadí (BITS). Nepoužívejte optimalizace doručení.
+    - **Nastavení**: Nakonfigurujte nastavení, které definují, jak chcete, aktualizace a aplikace ke stažení. Informace o dostupných nastaveních najdete v tématu [nastavení optimalizace doručení pro Intune](delivery-optimization-settings.md).
 
 4. Až budete hotovi, vyberte **OK** > **vytvořit** uložte provedené změny.
 
-Profil se vytvoří a zobrazí v seznamu. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil se vytvoří a zobrazí v seznamu. Dále [přiřadit profil](device-profile-assign.md) a potom [monitorování jejího stavu](device-profile-monitor.md).
 
 ## <a name="move-existing-update-rings-to-delivery-optimization"></a>Přesunout existující aktualizační okruhy optimalizace doručení
 
-**Aktualizace softwaru – aktualizační kanály Windows 10** nahrazují **optimalizace doručení** nastavení. Existující aktualizační okruhy můžete snadno změnit používat **optimalizace doručení** nastavení. Pomocí následujících kroků:
+**Optimalizace doručení** nastavení nahrazení **aktualizace softwaru – aktualizační kanály Windows 10**. Existující aktualizační okruhy můžete snadno změnit používat **optimalizace doručení** nastavení. Postup:
 
 1. Vytvořte profil konfigurace optimalizace doručení:
 
@@ -84,7 +76,7 @@ Profil se vytvoří a zobrazí v seznamu. Dále [přiřadit profil](device-profi
             - **HTTP v kombinaci s internetovými partnery**
             - **Jednoduchý režim stahování bez partnerů**
             - **Režim vynechání**
-
+    3. Nakonfigurujte veškerá další nastavení, které chcete spravovat.
 2. Tento nový profil přiřadíte ke stejné zařízení a uživatele jako existující software aktualizační kanál. [Přiřaďte profil](device-profile-assign.md) jsou uvedené kroky.
 
 3. Zrušit konfiguraci stávající aktualizační kanál, který software:
@@ -95,4 +87,5 @@ Profil se vytvoří a zobrazí v seznamu. Dále [přiřadit profil](device-profi
 
 ## <a name="next-steps"></a>Další postup
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md) její stav.
+[Přiřaďte profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md) její stav.  
+Zobrazení [nastavení optimalizace doručení](delivery-optimization-settings.md) pro Intune.

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad47171d1d0cd4f5d3ac19fe3dadea90b3be1cc8
-ms.sourcegitcommit: bb80846453850bf17b8c59c25829cf7aa281ca1c
+ms.openlocfilehash: 83168acc6653f750b9cf32d91602464b62aebcfe
+ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56838343"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955625"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -48,11 +48,17 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zd
 <!-- ########################## -->
 ## <a name="week-of-february-25-2019"></a>Týden od 25. února 2019
 
-### <a name="intune-powershell-module----951068-wnready---"></a>Modul Intune PowerShell <!-- 951068 wnready -->
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="intune-powershell-module----951068----"></a>Modul Intune PowerShell <!-- 951068  -->
 Modul Intune PowerShell, který poskytuje podporu pro rozhraní Intune API prostřednictvím Microsoft Graphu, je teď dostupná v [Microsoft PowerShell Gallery](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1902.1.10).
 
 - [Podrobnosti o použití tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/README.md)
 - [Příklady scénářů s použitím tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/Samples/README.md)
+
+#### <a name="improved-support-for-delivery-optimization----3183757-------"></a>Vylepšená podpora pro optimalizaci doručení  <!--3183757     -->
+Pro konfiguraci optimalizace doručení jsme rozšířili podporu v Intune. Teď můžete nakonfigurovat rozšířený seznam [nastavení optimalizace doručení](delivery-optimization-settings.md) a vyvíjet aplikace cílené na vaše zařízení přímo z konzoly Intune.
+
 
 ## <a name="week-of-february-18-2019"></a>Týden od 18. února 2019
 
@@ -76,7 +82,7 @@ Existují nové aplikace instalace chybové zprávy související s tímto:
 V Intune, vyberte **klientské aplikace** > **aplikace** > "Název aplikace" > **stav instalace zařízení**. Bude k dispozici v nové chybové zprávy **podrobnosti o stavu** sloupce.
 
 #### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780----"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780  -->
-Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
+Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new-app-ui). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Dodržování předpisů aplikace Power BI <!-- 1455231 doc-work-item -->
 Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app). Další aktualizace datového skladu Intune, najdete v části [nadcházející změny rozhraní API datového skladu Intune](whats-new.md#upcoming-change-to-the-intune-data-warehouse-api).
