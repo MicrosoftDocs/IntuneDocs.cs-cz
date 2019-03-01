@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/23/2019
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ccdb8c40c87bc4f5e778bc1cb7a6966f8a0ad70
-ms.sourcegitcommit: 33bacf9d5db336e73d8c88fa15f6535ae92b4b00
+ms.openlocfilehash: 57360f2ffae038b57e2a8c57fc5eeba9a0fd5d2f
+ms.sourcegitcommit: c89e41e7bd546e4feceae26d82326230a16a713c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418514"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017128"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -404,7 +404,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 ### <a name="accounts"></a>Účty
 
 - **Přidat nové účty Microsoft**: Nastavte na **bloku** zabránit uživatelům v přidávání nových účtů Microsoft k zařízení. **Nenakonfigurováno** (výchozí) umožní uživatelům na daném zařízení účty Microsoft používat.
-- **Vzdálené přihlášení bez hesla**: **Povolit** umožňuje místní účty s prázdnými hesly k přihlášení pomocí klávesnice zařízení. **Nenakonfigurováno** (výchozí) umožní místním účtům, které nejsou chráněné heslem, přihlásit se z jiných umístění než z fyzického zařízení.
+- **Vzdálené přihlášení bez hesla**: **Blok** umožňuje pouze místní účty s prázdnými hesly k přihlášení pomocí klávesnice zařízení. **Nenakonfigurováno** (výchozí) umožní místním účtům, které nejsou chráněné heslem, přihlásit se z jiných umístění než z fyzického zařízení.
 
 #### <a name="admin"></a>Správce
 
@@ -442,7 +442,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 #### <a name="display"></a>Zobrazit
 
 - **Informace o uživateli na zamykací obrazovce**: Nakonfigurujte informace o uživateli, který se zobrazí, když je relace uzamčena. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.
-  - **Není nakonfigurováno**
+  - **Není nakonfigurováno**  
   - **Zobrazované jméno uživatele, doména a uživatelské jméno**
   - **Jen zobrazované jméno uživatel**
   - **Nezobrazovat informace o uživateli**
@@ -458,7 +458,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 - **Anonymní výčty účtů SAM a sdílených složek**: **Není nakonfigurováno** (výchozí) znamená, že anonymní uživatelé mohou vytvořit výčet názvů účtů domén a sdílených síťových složek. Pokud chcete zabránit anonymním výčtům účtů SAM a sdílených síťových složek, nastavte možnost **Blokovat**.
 - **Hodnoty hash LAN Manageru při změně hesla uložená**: Při příští změně hesla zvolte na **povolit** LM (LAN Manager) pro ukládání hodnoty hash pro nové heslo. Pokud je nastavená možnost **Nenakonfigurováno** (výchozí), hodnota hash se neuloží.
 - **Žádosti o ověření pku2u odeslaným**: **Blok** o ověřování pku2u odeslaným na zařízení používat online identity. Možnost **Nenakonfigurováno** (výchozí) tyto žádosti povoluje.
-- **Omezit vzdálená připojení RPC k SAM**: **Povolit** výchozí řetězec Security Descriptor Definition Language k znemožňoval uživatelům a skupinám vzdáleně volat SAM. Možnost **Nenakonfigurováno** (výchozí) určuje, že výchozí řetězec jazyka SDDL (Security Descriptor Definition Language) může uživatelům a skupinám povolit vzdálená volání SAM.
+- **Omezit vzdálená připojení RPC k SAM**: Nastavte na **povolit** k znemožňoval uživatelům a skupinám v provádění vzdáleného volání RPC na zabezpečení Správce účtů (SAM), který uchovává uživatelské účty a hesla. **Povolit** také umožňuje změnit výchozí řetězec zabezpečení SDDL Descriptor Definition Language () explicitně povolit nebo zakázat uživatele a skupiny pro tyto vzdálené volání. **Není nakonfigurováno** (výchozí) používá výchozí popisovač zabezpečení a může povolit uživatelům a skupinám vzdáleně volat SAM RPC.
   - **Popisovač zabezpečení**
 
 ### <a name="recovery-console-and-shutdown"></a>Konzola pro zotavení a vypnutí
@@ -468,8 +468,8 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
 
 ### <a name="user-account-control"></a>Řízení uživatelských účtů
 
-- **Integrita UIA bez zabezpečeného umístění**: Pokud je nastavena na **povolit**, aplikace v zabezpečeném umístění v systému souborů spusťte pouze s UIAccess integrity. **Nenakonfigurováno** (výchozí) umožní spuštění aplikací s integritou UIAccess i v nezabezpečených umístěních v systému souborů.
-- **Virtualizovat chyby zápisu souboru a registru do umístění jednotlivých uživatelů**: Pokud je nastavena na **bloku**aplikace zapisovat chyby přesměrování v době běhu definované uživatelských umístění pro systém souborů a registr. **Nenakonfigurováno** (výchozí) nechá aplikace, které zapisují data do chráněných umístění, selhat.
+- **Integrita UIA bez zabezpečeného umístění**: Pokud je nastavena na **bloku**, aplikace v zabezpečeném umístění v systému souborů spusťte pouze s UIAccess integrity. **Nenakonfigurováno** (výchozí) umožní spuštění aplikací s integritou UIAccess i v nezabezpečených umístěních v systému souborů.
+- **Virtualizovat chyby zápisu souboru a registru do umístění jednotlivých uživatelů**: Pokud je nastavena na **povoleno**, aplikace, které zapsat data do chráněných místa selhání. Pokud je nastavena na **Nenakonfigurováno** (výchozí), zapsat application selhání přesměrováni na dobu běhu na umístění uživatelů definovaný pro systém souborů a registr.
 - **Zvýšit oprávnění pouze spustitelné soubory, které se podepsaly a ověřily**: Nastavte na **povoleno** k vynucení ověřování infrastruktury veřejných KLÍČŮ certifikační cesta pro spustitelný soubor, před spuštěním. **Nenakonfigurováno** (výchozí) nebude vynucovat ověření cesty certifikace infrastruktury veřejných klíčů, než se bude moct spustitelný soubor spustit.
 
 #### <a name="uia-elevation-prompt-behavior-settings"></a>Nastavení chování výzvy ke zvýšení úrovně oprávnění UIA
@@ -486,13 +486,13 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   - **Požádat o přihlašovací údajů na zabezpečené ploše**
   - **Není nakonfigurováno**: Vyzvat k zadání pověření
 - **Směrovat výzvy ke zvýšení oprávnění na interaktivní relaci plochy uživatele**: **Povolit** tak všechny požadavky na zvýšení oprávnění přejít na ploše interaktivního uživatele, ne zabezpečenou plochu. Použijí se všechna nastavení zásad chování výzev pro správce a standardní uživatele. **Nenakonfigurováno** (výchozí) vynutí přechod všech žádostí o zvýšení oprávnění na zabezpečenou plochu (bez ohledu na všechna nastavení zásad chování výzev pro správce a standardní uživatele).
-- **Řádek se zvýšenými oprávněními pro instalace aplikací**: Pokud je nastavena na **bloku**, instalační balíčky aplikací nejsou zjištěny nebo zobrazení výzvy ke zvýšení oprávnění. Pokud je nastavena na **Nenakonfigurováno** (výchozí) a instalace balíčku aplikace vyžaduje zvýšená oprávnění, bude uživatel vyzván uživatelské jméno správce a heslo.
-- **Ke zvýšení oprávnění UIA bez zabezpečené plochy**: **Povolit** povolí aplikacím UIAccess zobrazení výzvy ke zvýšení oprávnění bez použití zabezpečené plochy. **Nenakonfigurováno** (výchozí) bude pro výzvy ke zvýšení úrovně oprávnění používat zabezpečenou plochu.
+- **Řádek se zvýšenými oprávněními pro instalace aplikací**: Pokud je nastavena na **povoleno**, instalační balíčky aplikací nejsou zjištěny nebo zobrazení výzvy ke zvýšení oprávnění. **Nenakonfigurováno** (výchozí) bude uživatele vyzývat k zadání přihlašovacích údajů správce, když instalační balíček aplikace vyžaduje zvýšená oprávnění.
+- **Ke zvýšení oprávnění UIA bez zabezpečené plochy**: **Povolit** povolit aplikacím UIAccess Vyzývat ke zvýšení oprávnění, bez použití zabezpečené plochy. **Nenakonfigurováno** (výchozí) bude pro výzvy ke zvýšení úrovně oprávnění používat zabezpečenou plochu.
 
 #### <a name="admin-approval-mode-settings"></a>Nastavení režimu schválení správcem
 
 - **Schválení správcem pro předdefinovaný účet Administrator režimu**: **Povolené** umožňuje předdefinovaný účet správce použít režim schválení správcem. Všechny operace vyžadující zvýšení oprávnění zobrazí uživateli výzvu ke schválení operace. **Nenakonfigurováno** (výchozí) spustí všechny aplikace s plnými oprávněními správce.
-- **Spustit všechny správce v režimu schválení správcem**: Nastavte na **bloku** zakázat režim schválení správcem a všechny související zásady nastavení nástroje Řízení uživatelských účtů. **Nenakonfigurováno** (výchozí) režim schválení správcem povolí.
+- **Spustit všechny správce v režimu schválení správcem**: Nastavte na **povoleno** zakázat režim schválení správcem a všechny související zásady nastavení nástroje Řízení uživatelských účtů. **Nenakonfigurováno** (výchozí) režim schválení správcem povolí.
 
 ### <a name="microsoft-network-client"></a>Microsoft Network Client
 

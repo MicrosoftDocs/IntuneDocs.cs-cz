@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/05/2019
+ms.date: 02/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9b44e4fda5e7ff78a41dd952ea9eabcb820cfb3
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 99e44190f2e87d1b859450bc96bf52e1cd1430f1
+ms.sourcegitcommit: c89e41e7bd546e4feceae26d82326230a16a713c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742376"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017026"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -84,7 +84,7 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 > - Powershellové skripty do Intune můžete zacílit na skupiny zabezpečení Azure AD zařízení.
 > - Powershellové skripty do Intune můžete zacílit na skupiny zabezpečení uživatelů Azure AD.
 
-Klient rozšíření správy Intune kontroluje každou hodinu pomocí Intune. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění.
+Klient rozšíření správy Intune zkontroluje jednou za hodinu a po každém restartování pro nové skripty nebo změny v Intune. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. Jakmile se skript spustí, neprovede znovu Pokud dojde ke změně ve skriptu nebo zásady.
 
 ## <a name="monitor-run-status"></a>Monitorování stavu spuštění
 
