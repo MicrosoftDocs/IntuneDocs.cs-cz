@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/22/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc8bbcdd9e6fa8174ff4b6aa7fb0ae20b14fc184
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 2bf32bfb885433c670d9a33cd2473ef38d9c12a0
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742852"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57229458"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -117,7 +117,7 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Vytvoření zásad podmíněného přístupu Azure AD v Intune
 
-Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*.  
+Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
 > [!IMPORTANT]
 > Abyste mohli vytvořit zásady podmíněného přístupu Azure AD na portálu Intune Azure Portal, musíte mít licenci Azure AD Premium.

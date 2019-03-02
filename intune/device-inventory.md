@@ -6,7 +6,7 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 05/10/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ad3593dfab0326cec4003b794d50d415cf3c536
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 76b125c216cd3767df0cb6a374d0fcbeeade794a
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844118"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57232586"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -69,7 +69,7 @@ V závislosti na operátorovi zařízení používají mohou být shromažďová
 
 |Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
-|Název|Název zařízení|Windows, iOS|
+|Name|Název zařízení|Windows, iOS|
 |Název správy|Název zařízení používaný jenom v konzole. Změnou tohoto názvu nedojde ke změně názvu v zařízení.|Windows, iOS|
 |UDID|Jedinečný identifikátor zařízení|Windows, iOS|
 |ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|Windows, iOS|

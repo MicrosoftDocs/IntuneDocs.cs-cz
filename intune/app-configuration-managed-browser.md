@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/22/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52baa8f92401266dbf3043a334eccbc6ddffc873
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
-ms.translationtype: HT
+ms.openlocfilehash: e36105f89221ee5e33a1a6d8afe26b09a08b76b7
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742631"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57238944"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -121,7 +121,7 @@ Jednotné přihlašování vyžaduje, aby bylo vaše zařízení zaregistrováno
 >[!IMPORTANT]
 >Aby se konfigurace aplikace použily, musí už na zařízení být chráněný prohlížeč nebo jiná aplikace uživatele spravovaná [zásadami ochrany aplikací Intune]( app-protection-policy.md).
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 3.  V okně **Klientské aplikace** v seznamu Spravovat zvolte **Zásady konfigurace aplikací**.
 4.  V okně **Zásady konfigurace aplikací** vyberte možnost **Přidat**.
@@ -271,9 +271,9 @@ V následující části najdete informace o povolených formátech a zástupný
 Intune Managed Browser i Microsoft Edge jsou teď považované za prohlížeče spravované zásadami/chráněné prohlížeče. Dnešní zásady ochrany aplikací vedou k tomu, že se webové odkazy z aplikací spravovaných přes Intune otevírají v určitém prohlížeči v závislosti na scénáři a platformě. 
 
 V Androidu: 
-* Managed Browser – pokud je na zařízení MB i Edge a pokud není konfigurační nastavení aplikací „com.microsoft.intune.useEdge“ nastavené na „true“ pro všechny aplikace spravované přes Intune, které vyžadují prohlížeč spravovaný zásadami.  
-* Microsoft Edge – pokud je na zařízení jenom Microsoft Edge a cílí se na něj zásadami.
-* Managed Browser– pokud je na zařízení jenom Managed Browser a cílí se na něj zásadami. 
+* Pokud má obě Managed Browser a na jejich zařízení stáhnout Microsoft Edge, otevře se Managed Browser. K zajištění, že máte otevřený Microsoft Edge místo Managed Browser, nastavte na hodnotu "true" u všech aplikací spravovaných pomocí Intune pomocí zásad spravovaného prohlížeče vyžaduje nastavení konfigurace aplikace "com.microsoft.intune.useEdge".  
+* Pokud pouze Microsoft Edge na zařízení a je cílem zásady, otevře se Microsoft Edge.
+* Pokud pouze spravovaný prohlížeč je v zařízení a je cílem zásady, otevře se Managed Browser. 
 
 V iOSu u aplikací, které mají integrovanou sadu Intune SDK pro iOS verze 9.0.9+: 
 * Managed Browser – pokud je na zařízení MB i Edge a pokud není konfigurační nastavení aplikací „com.microsoft.intune.useEdge“ nastavené na „true“ pro všechny aplikace spravované přes Intune, které vyžadují prohlížeč spravovaný zásadami, **nebo** Microsoft Edge – pokud je nainstalovaný Microsoft Edge a přijal zásady. 
@@ -313,6 +313,6 @@ Microsoft automaticky shromažďuje anonymní informace o výkonu a využití 
 
 -   V zařízeních se systémem iOS se nedají otevřít weby, u kterých vypršela platnost certifikátu nebo které mají nedůvěryhodný certifikát.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Co jsou zásady ochrany aplikací?](app-protection-policy.md) 

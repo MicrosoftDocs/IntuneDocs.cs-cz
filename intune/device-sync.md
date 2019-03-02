@@ -5,8 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/22/2018
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5f404f3472f7d22530dfa54fd133a8e97b507df
-ms.sourcegitcommit: 67e4e66e8c05b36c0897fb2955ef68666d22b094
+ms.openlocfilehash: 979430ae90ed5599f8192a8707e6c53c754c0708
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56426905"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57230512"
 ---
 # <a name="sync-devices-to-get-the-latest-policies-and-actions-with-intune"></a>Synchronizace zařízení s cílem načíst nejnovější zásady a akce pomocí Intune
 
@@ -47,7 +47,7 @@ Akce zařízení **Synchronizovat** vybrané zařízení donutí se okamžitě o
 
 Stav akce Synchronizovat zobrazíte přes **Zařízení** > **Akce zařízení**.
 
-Standardní Intune zásady vrácení se změnami frekvencí v můžete najít [– nejčastější dotazy týkající se zásad Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md##frequently-asked-questions-about-intune-policies).
+Standardní Intune zásady vrácení se změnami frekvencí v můžete najít [časového cyklu aktualizace](device-profiles.md).
 
 ## <a name="retryable-error-codes"></a>Kódy chyb umožňujících opakovaný pokus
 

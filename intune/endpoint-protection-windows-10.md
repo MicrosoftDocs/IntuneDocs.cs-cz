@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57360f2ffae038b57e2a8c57fc5eeba9a0fd5d2f
-ms.sourcegitcommit: c89e41e7bd546e4feceae26d82326230a16a713c
+ms.openlocfilehash: 2aad4684b1ae0db358a5e0a31a362d610bf109c1
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017128"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57230869"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -290,6 +290,16 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 #### <a name="attack-surface-reduction-exceptions"></a>Výjimky pro omezení možností útoku
 
 - **Soubory a složky, které chcete vyloučit z útoku pravidel pro omezení možností**: Naimportovat nebo přidáte seznam umístění, které chcete vyloučit z nakonfigurovaných pravidel.
+
+> [!IMPORTANT]
+> Povolit správné instalace a spuštění aplikace LOB Win32, by měl nastavení anti-malware vyloučení se má zkontrolovat následující adresáře:<p>
+> **Na X64 klientské počítače**:<br>
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
+>  
+> **Na X86 klientské počítače**:<br>
+> *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
 
 ### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
 

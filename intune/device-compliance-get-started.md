@@ -1,12 +1,12 @@
 ---
 title: Zásady dodržování předpisů zařízením v Microsoft Intune – Azure | Microsoft Docs
-description: Požadavky na použití zásad dodržování předpisů zařízením, přehled stavu a úrovně závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, manipulace se zařízením bez přiřazených zásad a rozdíl v dodržování předpisů na portálu Azure Portal a Azure Classic Portal v Microsoft Intune
+description: Začínáme se zásadami dodržování předpisů zařízení používá, přehled stavu a úrovně závažnosti, použití stav v období odkladu, práce s podmíněným přístupem, manipulace se zařízením bez přiřazených zásad a rozdíl v dodržování předpisů na portálu Azure portal a portál Classic v Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2019
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,28 +15,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2a3a9838043d4e9b69c6369da87a6f54087f76c
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: c3db2b41b8203b74c0892793a4631dbae691a454
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849998"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57234218"
 ---
-# <a name="get-started-with-device-compliance-policies-in-intune"></a>Začínáme se zásadami dodržování předpisů zařízeními v Intune
+# <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízení a povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Mnoho řešení pro správu (MDM) mobilních zařízení pomáhají chránit firemní data tím, že vyžaduje uživatelů a zařízení splnit určité požadavky. V Intune tato funkce se nazývá "zásady dodržování předpisů". Zásady dodržování předpisů definují pravidla a nastavení, které uživatelé a zařízení musí splnit, aby vyhovovalo předpisům. V kombinaci s podmíněným přístupem, správci můžou blokovat uživatelů a zařízení, která nesplňují předpisy. Například může vyžadovat správce služby Intune:
+Mnoho řešení pro správu (MDM) mobilních zařízení pomáhají chránit firemní data tím, že vyžaduje uživatelů a zařízení splnit určité požadavky. V Intune tato funkce se nazývá "zásady dodržování předpisů". Zásady dodržování předpisů definují pravidla a nastavení, které uživatelé a zařízení musí splnit, aby vyhovovalo předpisům. V kombinaci s podmíněným přístupem, správci můžou blokovat uživatelů a zařízení, která nesplňují předpisy. 
+
+Například může vyžadovat správce služby Intune:
 
 - Koncoví uživatelé používat hesla pro přístup k datům organizace na mobilních zařízeních
-
 - Zařízení není jailbreakem nebo rootem
-
 - Verze minimální nebo maximální operačního systému v zařízení
-
 - Aby zařízení bylo na nebo pod úroveň hrozby
 
-Zásady dodržování předpisů zařízením můžete použít také k monitorování stavu dodržování předpisů v zařízeních.
+Tato funkce také můžete monitorovat stav dodržování předpisů na zařízeních ve vaší organizaci.
 
 > [!IMPORTANT]
 > Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
@@ -96,14 +95,26 @@ Téma věnované [procesu registrace Azure AD](https://docs.microsoft.com/azure/
 
 Při kontrole dodržování předpisů, Intune používá stejný cyklus aktualizace jako konfigurační profily. Obecně platí časy jsou:
 
-- iOS: Každých 6 hodin
-- macOS: Každých 6 hodin
-- Android: Každých 8 hodin
-- Počítače s Windows 10 zaregistrované jako zařízení: Každých 8 hodin
-- Windows Phone: Každých 8 hodin
-- Windows 8.1: Každých 8 hodin
+| Platforma | Aktualizovat cyklu|
+| --- | --- |
+| iOS | Každých 6 hodin |
+| macOS | Každých 6 hodin |
+| Android | Každých 8 hodin |
+| Počítače s Windows 10 zaregistrované jako zařízení | Každých 8 hodin |
+| Windows Phone | Každých 8 hodin |
+| Windows 8.1 | Každých 8 hodin |
 
-Kontrola dodržování předpisů dochází častěji hned po registraci zařízení.
+Pokud zařízení zaregistrovalo nedávno, se změnami dodržování předpisů se spustí častěji:
+
+| Platforma | Četnost |
+| --- | --- |
+| iOS | Prvních 6 hodin každých 15 minut a potom každých 6 hodin |  
+| Mac OS X | Prvních 6 hodin každých 15 minut a potom každých 6 hodin | 
+| Android | Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
+| Windows Phone | Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
+| Počítače s Windows zaregistrované jako zařízení | Prvních 30 minut každé 3 minuty a potom každých 8 hodin | 
+
+Na kdykoli a uživatele můžete otevřít aplikaci portál společnosti a synchronizovat zařízení okamžitě zkontroloval zásady.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Přiřazení stavu V období odkladu
 

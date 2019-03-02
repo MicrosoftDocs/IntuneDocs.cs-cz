@@ -6,7 +6,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/28/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4f93ab1cd2c662cb97dafd19684b353268087f6
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: a8b72c4adcba44c1292fc77646c5c1c159d8812e
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55842571"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57236156"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslat data protokolů do služby storage, služby event hubs, nebo se přihlaste analytics Intune (preview)
 
-Microsoft Intune obsahuje integrované protokoly, které poskytují informace o vašem prostředí. **Protokoly auditu** zobrazit podrobnosti pro jednotlivé události nebo úlohy, ke kterým dochází v Intune. **Operační protokoly (preview)** to úspěšně zobrazit podrobností o uživateli a zařízeními (nebo neúspěšných) k registraci.
+Microsoft Intune obsahuje integrované protokoly, které poskytují informace o vašem prostředí. **Protokoly auditu** zobrazit podrobnosti pro jednotlivé události nebo úlohy, ke kterým dochází v Intune. **Operační protokoly (preview)** to úspěšně zobrazit podrobností o uživateli a zařízeními (nebo neúspěšných) k registraci, a také podrobnosti o zařízení nedodržující předpisy.
 
 Tyto protokoly můžete odeslat také se službami Azure Monitor, včetně účtů úložiště, služba event hubs a log analytics. Konkrétně můžete:
 
@@ -82,7 +82,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditování budete po
 
       Pokud budete chtít používat účet úložiště, pak také zadejte jak dlouho chcete uchovávat data (uchovávání). Chcete-li zachovat data navždy, nastavte **uchování (dny)** k `0` (nula).
 
-    - **PROTOKOL** > **OperationalLogs**: Operační protokoly (preview) zobrazit úspěch nebo neúspěch uživatelů a zařízení zaregistrovaná v Intune. Výběrem této možnosti Odeslat protokoly registrace do vašeho účtu úložiště, se v Centru událostí nebo protokolování analytics.
+    - **PROTOKOL** > **OperationalLogs**: Operační protokoly (preview) zobrazit úspěch nebo neúspěch uživatelů a zařízení zaregistrovaná v Intune, jakož i podrobnosti o zařízení nedodržující předpisy. Výběrem této možnosti Odeslat protokoly registrace do vašeho účtu úložiště, se v Centru událostí nebo protokolování analytics.
 
       Pokud budete chtít používat účet úložiště, pak také zadejte jak dlouho chcete uchovávat data (uchovávání). Chcete-li zachovat data navždy, nastavte **uchování (dny)** k `0` (nula).
 

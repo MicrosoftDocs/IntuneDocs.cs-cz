@@ -7,7 +7,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 02/22/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 500a92daf0594936a0fb0fb36fd8d9d8342151f7
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f038ce17e544871f0842df050770f9b78e7710f9
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55846328"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57236020"
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Nastavení nástroje Intune Certificate Connector pro webovou službu správce infrastruktury veřejných klíčů Symantec
 
@@ -301,7 +301,7 @@ Po dokončení předchozích kroků vydá Intune Certificate Connector certifik�
 |Atribut | Formáty podporované Intune | Formáty podporované certifikační autoritou Symantec Cloud | Výsledek |
 | --- | --- | --- | --- |
 | Název subjektu |Intune podporuje název subjektu pouze ve třech následujících formátech: <br><br> 1. Běžný název <br> 2. Běžný název obsahující e-mail <br> 3. Běžný název jako e-mail <br><br> Například: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | CA Symantec podporuje další atributy.  Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu Symantec.| Používá se běžný název nebo e-mail z žádosti o certifikát PKCS. <br><br> Jakákoli neshoda ve výběru atributů mezi profilem certifikátu Intune a šablonou profilu certifikátu Symantec bude znamenat, že CA Symantec nevydá žádné certifikáty.|
-| Alternativní název subjektu | Intune podporuje pouze následující hodnoty polí alternativního názvu subjektu: <br><br> AltNameTypeEmail <br><br> AltNameTypeUpn <br><br> AltNameTypeOtherName (šifrovaná hodnota) | Certifikační autorita Symantec Cloud také podporuje tyto parametry. Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu Symantec. <br><br> AltNameTypeEmail: Pokud tento typ nalézt v síti SAN, použije se hodnota z AltNameTypeUpn.  Pokud nelze v alternativním názvu subjektu nalézt ani AltNameTypeUpn, použije se hodnota z názvu subjektu, pokud má formát e-mailu.  Jestliže ani poté nelze název subjektu nalézt, nepodaří se nástroji Intune Certificate Connector vydat certifikáty. <br><br> Například: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> AltNameTypeUpn: Pokud tento typ nalézt v síti SAN, použije se hodnota z AltNameTypeEmail. Pokud nelze v alternativním názvu subjektu nalézt ani AltNameTypeEmail, použije se hodnota z názvu subjektu, pokud má formát e-mailu.  Jestliže ani poté nelze název subjektu nalézt, nepodaří se nástroji Intune Certificate Connector vydat certifikáty.  <br><br> Například: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> AltNameTypeOtherName: Pokud tento typ nalézt v síti SAN, nepodaří se Intune Certificate Connector k vydávání certifikátů. <br><br> Například: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  **Důležitá poznámka:** Hodnota tohoto pole je podporována pouze v zakódovaném formátu (šestnáctková hodnota) certifikační Autority Symantec. Jakoukoli hodnotu v tomto poli převede nástroj Intune Certificate Connector před odesláním žádosti o certifikát do kódování Base 64. **Intune Certificate Connector neověřuje, jestli už je hodnota zakódovaná.** | Žádný |
+| Alternativní název subjektu | Intune podporuje pouze následující hodnoty polí alternativního názvu subjektu: <br><br> AltNameTypeEmail <br><br> AltNameTypeUpn <br><br> AltNameTypeOtherName (šifrovaná hodnota) | Certifikační autorita Symantec Cloud také podporuje tyto parametry. Pokud chcete vybrat další atributy, musí být definované s pevnými hodnotami v šabloně profilu certifikátu Symantec. <br><br> AltNameTypeEmail: Pokud tento typ nalézt v síti SAN, použije se hodnota z AltNameTypeUpn.  Pokud nelze v alternativním názvu subjektu nalézt ani AltNameTypeUpn, použije se hodnota z názvu subjektu, pokud má formát e-mailu.  Jestliže ani poté nelze název subjektu nalézt, nepodaří se nástroji Intune Certificate Connector vydat certifikáty. <br><br> Například: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> AltNameTypeUpn: Pokud tento typ nalézt v síti SAN, použije se hodnota z AltNameTypeEmail. Pokud nelze v alternativním názvu subjektu nalézt ani AltNameTypeEmail, použije se hodnota z názvu subjektu, pokud má formát e-mailu.  Jestliže ani poté nelze název subjektu nalézt, nepodaří se nástroji Intune Certificate Connector vydat certifikáty.  <br><br> Například: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> AltNameTypeOtherName: Pokud tento typ nalézt v síti SAN, nepodaří se Intune Certificate Connector k vydávání certifikátů. <br><br> Například: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  **Důležitá poznámka:** Hodnota tohoto pole je podporována pouze v zakódovaném formátu (šestnáctková hodnota) certifikační Autority Symantec. Jakoukoli hodnotu v tomto poli převede nástroj Intune Certificate Connector před odesláním žádosti o certifikát do kódování Base 64. **Intune Certificate Connector neověřuje, jestli už je hodnota zakódovaná.** | Žádné |
 
 ## <a name="troubleshooting"></a>Řešení potíží
 

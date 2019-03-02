@@ -6,8 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2019
-ms.topic: article
+ms.date: 02/28/2019
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c586f7f4d72db5d193f02dca06aa868c73cbb09e
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 6130e6fde9f6ddb8515914da049b5c7512c401a7
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742495"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57232807"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -255,6 +255,16 @@ V případě potřeby můžete potlačit oznámení informační zprávy zobrazu
 Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. Nástroj *CMTrace.exe* si můžete stáhnout z umístění uvedeném v článku o [klientských nástrojích SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
 
 ![Snímek obrazovky se Agent přihlásí v klientském počítači.](./media/apps-win32-app-10.png)    
+
+> [!IMPORTANT]
+> Povolit správné instalace a spuštění aplikace LOB Win32, by měl nastavení anti-malware vyloučení se má zkontrolovat následující adresáře:<p>
+> **Na X64 klientské počítače**:<br>
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
+>  
+> **Na X86 klientské počítače**:<br>
+> *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
+> *C:\windows\IMECache*
 
 Další informace o řešení potíží s aplikací Win32, naleznete v tématu [Win32 aplikace řešení potíží s instalací](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 

@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 11/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd5c984e210b34a3c9cdfa2083a976ef304065ea
-ms.sourcegitcommit: a9bb967273e8df7e743c9826948582fda555c02d
+ms.openlocfilehash: fd2d67a2aaee165462287ebed31bc0edd054e956
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56795575"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57229033"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 

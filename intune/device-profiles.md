@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 016b59a915058c3f2d0647a72e3ead224a010500
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 7f8f19b1672f8bbbc65db9604c113a3b69813cc4
+ms.sourcegitcommit: 7cfe23215eabf30cbaab733a403012a0ba05f599
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742435"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211393"
 ---
-# <a name="apply-features-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
+# <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použít nastavení a funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
+
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Microsoft Intune zahrnuje nastavení a funkcí můžete povolit nebo zakázat na různých zařízeních ve vaší organizaci. Tato nastavení a funkce se přidají do "konfiguračních profily". Můžete vytvořit profily pro různá zařízení, různé platformy, včetně iOS, Android, Windows a pak pomocí Intune použít profil pro zařízení ve vaší organizaci.
 
-Například:
+Jako součást řešení správy mobilních zařízení provádět různé úlohy, pomocí těchto konfiguračních profilů. Například:
 
 - Na zařízeních s Windows 10 použijte šablonu profilu blokující ovládacích prvků ActiveX v Internet Exploreru.
 - Na zařízení s Iosem a macOS umožnit uživatelům používat tiskárny s Airprintem ve vaší organizaci.
@@ -93,6 +95,32 @@ V tomto článku jsou uvedené kroky k vytvoření profilu a poskytuje přehled 
 
 5. Až budete hotovi, vyberte **OK** > **vytvořit** uložte provedené změny.
 
+#### <a name="refresh-cycle-times"></a>Aktualizovat doby cyklů
+
+Intune používá následující cyklů aktualizace kontrolu aktualizací konfigurace profilů:
+
+| Platforma | Aktualizovat cyklu|
+| --- | --- |
+| iOS | Každých 6 hodin |
+| macOS | Každých 6 hodin |
+| Android | Každých 8 hodin |
+| Počítače s Windows 10 zaregistrované jako zařízení | Každých 8 hodin |
+| Windows Phone | Každých 8 hodin |
+| Windows 8.1 | Každých 8 hodin |
+
+Pokud zařízení zaregistrovalo nedávno, vrácení se změnami se spustí častěji:
+
+| Platforma | Četnost |
+| --- | --- |
+| iOS | Prvních 6 hodin každých 15 minut a potom každých 6 hodin |  
+| Mac OS X | Prvních 6 hodin každých 15 minut a potom každých 6 hodin | 
+| Android | Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
+| Windows Phone | Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
+| Počítače s Windows zaregistrované jako zařízení | Prvních 30 minut každé 3 minuty a potom každých 8 hodin | 
+
+Kdykoli můžete uživatelům otevřete aplikaci portál společnosti a synchronizovat zařízení okamžitě zkontroloval aktualizace profilu.
+
+### 
 Další informace o odlišných typů profilů, přečtěte si další části tohoto článku.
 
 ## <a name="administrative-templates-preview"></a>Šablony pro správu (Preview)
@@ -255,7 +283,7 @@ Tato funkce podporuje:
 
 ## <a name="shared-multi-user-device"></a>Sdílené zařízení s více uživateli
 
-[Windows 10](shared-user-device-settings-windows.md) a [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) zahrnuje nastavení pro správu zařízení s více uživateli, označované také jako sdílená zařízení nebo sdílené počítače. Když se uživatel přihlásí k zařízení, zvolíte-li uživatel může změnit možnosti Přejít do režimu spánku nebo uložit soubory v zařízení. Například můžete vytvořit zásadu, která odstraní neaktivní přihlašovacích údajů ze zařízení HoloLens Windows pro úsporu místa.
+[Windows 10](shared-user-device-settings-windows.md) a [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) zahrnuje nastavení pro správu zařízení s více uživateli, označované také jako sdílená zařízení nebo sdílené počítače. Když se uživatel přihlásí k zařízení, zvolíte-li uživatel může změnit možnosti Přejít do režimu spánku nebo uložit soubory v zařízení. Například můžete vytvořit profil, který odstraní neaktivní přihlašovacích údajů ze zařízení HoloLens Windows pro úsporu místa.
 
 Tato nastavení sdílených více uživateli zařízení umožňují správcům řídit některé funkce zařízení a spravovat tyto sdílené zařízení přes Intune.
 
@@ -280,5 +308,5 @@ Tato funkce podporuje:
 [Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Zobrazením nastavení, která způsobují konflikt, a profilů, které tato nastavení obsahují, si můžete pomoci při řešení konfliktů. [Běžné problémy a řešení](device-profile-troubleshoot.md) poskytuje funkce Q & A usnadňují práci s profily, včetně toho, co se stane po odstranění profilu, která způsobí, že oznámení k odeslání do zařízení a další.
 
 ## <a name="next-steps"></a>Další postup
-Začněte výběrem platformy:
 
+Zvolte vaši platformu a začít pracovat.

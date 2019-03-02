@@ -6,7 +6,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 12/14/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a44b5b911d89a2e31f2a718aaa76702847ffb3d8
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 1e9aa6784b55c922ba6233f319cf648af4c491df
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849199"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57237159"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -438,7 +438,8 @@ Následující postup vám pomůže získat protokoly zabalených aplikací, kte
 > [!NOTE]
 > Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
 
-### <a name="see-also"></a>Viz také:
-- [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)</br>
-- [Správa nastavení a funkcí v zařízeních pomocí zásad Microsoft Intune](manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md)</br>
+## <a name="see-also"></a>Viz také:
+
+- [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)
+- [Běžné dotazy, problémy a řešení s zařízení zásady a profily](device-profile-troubleshoot.md)
 - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)

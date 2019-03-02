@@ -7,19 +7,19 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/23/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28a2ef36de4e664668875d2c9a099a573f5cfeba
-ms.sourcegitcommit: 68ff00ec0f848f9476740691ed1004144684317e
+ms.openlocfilehash: 04c57870f32d853b48be96a58afaa7b534250e0c
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56667348"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57228118"
 ---
 # <a name="intune-tenant-status-page"></a>Stránka stavu Tenanta Intune
 Na stránce Stav Tenanta je centrála, kde můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost licencí a použití, stav konektoru a důležité komunikace o službě Intune.  

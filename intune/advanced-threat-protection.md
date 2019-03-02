@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/22/2019
-ms.topic: article
+ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.technology: ''
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ff07dfa48ab213bc65afc58708f490a80fb5ba8
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 24286ab4d491bc3c5e6ecc90e881e95c1af2d2fd
+ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742512"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57233929"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -130,7 +130,7 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 Zásady podmíněného přístupu zablokují přístup zařízení k prostředkům, *pokud* se zařízení vyhodnotí jako nevyhovující. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.  
 
 > [!TIP]  
-> Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*.  
+> Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
 1. V [webu Azure portal](https://portal.azure.com), otevřete **Intune** > **podmíněného přístupu** > **nové zásady**.
 2. Zadejte **Název** zásady a zvolte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
