@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f965ff2287cd3e6fcf3e3f3ae1b577fb33081716
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: d27b4389318a8b4caeb86dec9c2c79efa0ac89f1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230104"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335033"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -120,7 +120,7 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 - **Vyžadovat, aby na zařízení povolené zabezpečené spuštění**: Pokud je povolené zabezpečené spouštění, musí se systém spouštět do důvěryhodného stavu z výroby. Kromě toho platí, že při povoleném zabezpečeném spouštění musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou podle výrobce zařízení důvěryhodné. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud se všechny soubory se manipulovalo, které dojde k porušení jejich podpisu, nebude spuštění systému.
 
   > [!NOTE]
-  > Nastavení **Vyžadovat, aby na zařízení bylo povolené zabezpečené spuštění** je podporované na zařízeních s čipem TPM 1.2 a 2.0. Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Jde o omezení služby [Ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation) ve Windows 10.
+  > **Vyžadovat zabezpečené spouštění, aby na zařízení byla povolená** nastavení je podporováno na některé TPM 1.2 a 2.0 zařízení. Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
 - **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti. Integrita kódu zjistí, pokud se do jádra se načítá nepodepsaný ovladač nebo systémový soubor. Navíc rozpozná, pokud je systémový soubor změněn škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
 

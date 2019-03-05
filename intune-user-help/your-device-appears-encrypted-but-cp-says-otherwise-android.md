@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af53739574a5ae7087b59d72bacd866e132a19ac
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 9444a124b9b8a47633f544205940dadb3df0fd8f
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55843217"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334999"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Zdá se, že vaše zařízení s Androidem je zašifrované, ale Portál společnosti hlásí, že není
 
@@ -66,13 +66,13 @@ Některá zařízení s Androidem verze 7.0 a novější šifrují data způsoby
 Pokud máte některé z následujících zařízení, můžete na tento problém narazit, pokud jste zařízení neaktualizovali na nejnovější verzi Androidu. Aktualizace těchto zařízení můžete nainstalovat tak, že přejdete do **Nastavení** > **Aktualizace**. 
 
 - [Huawei Honor 8](https://consumer.huawei.com/us/support/phones/honor-8/)
-- [Huawei P9](http://consumer.huawei.com/en/phones/p9/)
+- [Huawei P9](https://consumer.huawei.com/en/phones/p9/)
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Známá zařízení, u kterých se tento problém momentálně nedá vyřešit jejich aktualizací
 
 Pro níže uvedená zařízení není možné tento problém vyřešit. Pro přístup k prostředkům společnosti budete možná muset použít jiná zařízení. 
 
 - [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [Zařízení OPPO](http://www.oppo.com/en/smartphones)
+- [Zařízení OPPO](https://www.oppo.com/en/smartphones)
 - [Zařízení Vivo](https://www.vivo.co.in)
 - [Chytré telefony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)

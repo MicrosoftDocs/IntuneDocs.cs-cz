@@ -28,6 +28,6 @@
 > [!NOTE]
 > Intune se nedá použít ke správě operačních systémů Windows Server. Domácí skladová položka nepodporuje všechny funkce Intune
 
-Zákazníci s Enterprise mobility + Security (EMS) můžete také použít [Azure Active Directory (Azure AD) pro registraci zařízení s Windows 10](/intune/windows-enroll.md).
+Zákazníci s Enterprise mobility + Security (EMS) můžete také použít [Azure Active Directory (Azure AD) pro registraci zařízení s Windows 10](/intune/windows-enroll).
 
 

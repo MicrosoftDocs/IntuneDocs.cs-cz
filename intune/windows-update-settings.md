@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/16/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,12 +14,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66ccf357f821c3aa4a8e8d23f989526363dd8cff
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 28e7109a82a5c083b4be26bc823bb0e06d97a7ca
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334982"
 ---
 # <a name="windows-update-settings-for-intune"></a>Windows aktualizovat nastavení pro Intune  
 
@@ -236,6 +236,6 @@ Tato nastavení slouží k řízení, když dojde k akcím znamenají angažovan
 
 Optimalizace doručení je už nakonfigurovaný jako součást aktualizační kanál Windows 10 v rámci aktualizace softwaru. Optimalizace doručení je nyní nastaveno prostřednictvím konfigurace zařízení. Ale předchozí konfigurace zůstanou dostupné i v konzole. Tyto předchozích konfigurací můžete odebrat úpravou jejich *Nenakonfigurováno*, ale jinak nedaly změnit. 
 
-Aby nedocházelo ke konfliktům mezi původní a nové zásady, najdete v článku [přesouvat existující aktualizační okruhy optimalizace doručení](https://docs.microsoft.com/en-us/intune/delivery-optimization-windows#move-from-existing-update-rings-to-delivery-optimization) a poté přesuňte nastavení do profilu optimalizace doručení.
+Aby nedocházelo ke konfliktům mezi původní a nové zásady, najdete v článku [přesouvat existující aktualizační okruhy optimalizace doručení](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization) a poté přesuňte nastavení do profilu optimalizace doručení.
 
 

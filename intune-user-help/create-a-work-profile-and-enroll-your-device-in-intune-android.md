@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 683156b968c743c4c82b472c6e566d5762c22c1a
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55844662"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334948"
 ---
 # <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Vytvoření pracovního profilu a registrace zařízení v Intune
 
@@ -33,7 +33,7 @@ Firemní podpora může spravovat jen pracovní profil, který obsahuje vaše pr
 
 Pracovní profil vytvoříte takto:
 
-1.  Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu. Pokud tuto bezplatnou aplikaci ještě nemáte nainstalovanou, stáhněte a nainstalujte ji z obchodu [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1.  Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu. Pokud tuto bezplatnou aplikaci ještě nemáte nainstalovanou, stáhněte a nainstalujte ji z obchodu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
     ![Úvodní obrazovka aplikace Portál společnosti pro Android](./media/and-enroll-0-welcome-screen.png)
 

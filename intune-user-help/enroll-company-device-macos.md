@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acbfafcc26aa924a5a9d0a7712bb56119099af43
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: f84eddaf9fac6dd678c7046664bf1feb9ea8cfc1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55848215"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335237"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
@@ -64,7 +64,7 @@ Zařízení s macOS zaregistrujete do správy provedením následujících krok�
     * Nastavit váš Mac  
 ## <a name="get-the-company-portal-app"></a>Získání aplikace Portál společnosti      
 Stáhněte si do svého zařízení aplikaci Portál společnosti Intune pro macOS. Tato aplikace vám umožní monitorovat, synchronizovat, přidat nebo odebrat zařízení ze správy a nainstalovat aplikace. V tomto postupu je také popsané, zaregistrovat zařízení na Portálu společnosti.  
-1. Na zařízení s macOS přejděte na http://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
+1. Na zařízení s macOS přejděte na https://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet. 
 3. Klikněte na **Získat aplikaci** a stáhněte si instalační program aplikace Portál společnosti pro macOS.
 4. Po zobrazení výzvy otevřete soubor .pkg a dokončete instalační kroky.

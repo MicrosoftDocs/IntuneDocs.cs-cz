@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6130e6fde9f6ddb8515914da049b5c7512c401a7
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 35116ccf13cf94960f02c3aff6d8c7c66fbe0e48
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232807"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335220"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -236,7 +236,7 @@ V tomto okamžiku jste dokončili postup přidání aplikace Win32 do Intune. In
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
-Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí komponenty optimalizace doručování na klientovi Windows 10. Optimalizace doručení poskytuje peer-to-peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení lze konfigurovat pomocí zásad skupiny a v budoucnu prostřednictvím Intune MDM. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Windows 10 1709 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí komponenty optimalizace doručování na klientovi Windows 10. Optimalizace doručení poskytuje peer-to-peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení je možné nakonfigurovat prostřednictvím zásad skupiny a prostřednictvím konfigurace zařízení v Intune. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 ## <a name="install-required-and-available-apps-on-devices"></a>Instalace požadovaných a dostupných aplikací na zařízení
 

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5cf54f7c208e488a2687df64664fd2f87c7995a
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 8aacb9ae498b5eed7654280ea6cc2c2af6fe61ca
+ms.sourcegitcommit: e8c32bd6db2560570d1e1733f999ae3b2c026908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235816"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305472"
 ---
 # <a name="use-custom-settings-for-windows-10-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows 10 v Intune
 
@@ -82,7 +82,7 @@ V následujícím příkladu je zapnuté nastavení **Connectivity/AllowVPNOverC
 
 Ne všechna nastavení jsou kompatibilní se všemi verzemi Windows 10. Informace o tom, jaké verze konfiguračních služeb každý poskytovatel podporuje, najdete v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference).
 
-Intune navíc nepodporuje všechna nastavení, která jsou v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Na každé stránce nastavení se zobrazuje podporovaná operace. Aby dané nastavení fungovalo s Intune, musí podporovat operace **Přidat** nebo **Nahradit**.
+Intune navíc nepodporuje všechna nastavení, která jsou v [referenčních informacích o poskytovatelích konfiguračních služeb](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/configuration-service-provider-reference). Pokud chcete zjistit, jestli Intune podporuje vámi požadované nastavení, otevřete si článek týkající se daného nastavení. Na každé stránce nastavení se zobrazuje podporovaná operace. Pro práci s Intune, musí podporovat nastavení **přidat**, **nahradit**, a **získat** operace. Pokud je hodnota vrácené **získat** operace neodpovídá hodnotě poskytnuté **přidat** nebo **nahradit** operace a pak Intune hlásí chybu dodržování předpisů.
 
 ## <a name="next-steps"></a>Další postup
 

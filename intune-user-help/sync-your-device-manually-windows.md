@@ -18,21 +18,18 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4666779620aa0404c12107a374280c403d66bec3
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 30135c69b95ba9731682af52ad0da3bb9df193e9
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55840208"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335067"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
 Pokud je rychlost instalace aplikace příliš nízká, iniciujte ruční synchronizaci zařízení. Ruční synchronizace vynutí, aby se vaše zařízení spojilo s Intune za účelem nejnovějších aktualizací a komunikací. Po dokončení synchronizace zařízení se může rychlost instalace zvýšit.
 
-Intune podporuje ruční synchronizaci z aplikace Portál společnosti, z hlavního panelu plochy, nabídky Start a z aplikace Nastavení zařízení. 
-
-Funkce aplikace Portál společnosti se podporuje v zařízeních se systémem Windows 10 Creators Update (1703) nebo novějším. 
-* [Synchronizace z aplikace Portál společnosti](#Sync-from-Company-Portal-app-for-Windows)  
+Intune podporuje ruční synchronizaci z aplikace Portál společnosti, z hlavního panelu plochy, nabídky Start a z aplikace Nastavení zařízení. Funkce aplikace Portál společnosti se podporuje v zařízeních se systémem Windows 10 Creators Update (1703) nebo novějším. 
 
 Všechna zařízení s Windows, včetně následujících, se dají synchronizovat z aplikace Nastavení v zařízení:
 
@@ -75,11 +72,11 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
 
 3. Pro stolní počítače existuje více verzí systému Windows 10. Porovnejte svoji obrazovku se snímky obrazovky níže a zjistěte, který postup máte provést. 
 
-    * Pokud na své obrazovce vidíte **Přístup do práce nebo do školy**, pokračujte kroky v části [Přístup do práce nebo do školy](#access-work-or-school).
+    * Pokud na své obrazovce vidíte **Přístup do práce nebo do školy**, pokračujte kroky v části [Přístup do práce nebo do školy](#access-work-or-school-steps).
 
     ![Možnost Přístup do práce nebo do školy v aplikaci Nastavení](./media/w10-enroll-rs1-connect-to-work-or-school.png)  
 
-    * Pokud na své obrazovce vidíte **Přístup do práce**, pokračujte kroky v části [Přístup do práce](#work-access).  
+    * Pokud na své obrazovce vidíte **Přístup do práce**, pokračujte kroky v části [Přístup do práce](#work-access-steps).  
 
     ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 

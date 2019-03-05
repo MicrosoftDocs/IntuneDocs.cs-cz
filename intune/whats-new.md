@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83168acc6653f750b9cf32d91602464b62aebcfe
-ms.sourcegitcommit: 0f4247914f55349f618f6176a4cdca08503215f5
+ms.openlocfilehash: 9a6f40ba7ea5e229a4c4d3f25d182d24b2a0a812
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955625"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335169"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -736,6 +736,9 @@ Přípony souborů obchodních aplikací pro Windows teď budou zahrnovat *.msi*
 #### <a name="windows-10-app-deployment-using-intune----2309001---"></a>Nasazení aplikací pro Windows 10 pomocí Intune <!-- 2309001 -->
 S využitím stávající podpory obchodních aplikací a Microsoft Storu pro obchodní aplikace mohou správci prostřednictvím Intune nasadit většinu svých firemních aplikací koncovým uživatelům, kteří používají zařízení s Windows 10. Správci mohou přidávat, instalovat a odinstalovávat aplikace pro uživatele Windows 10 v různých formátech, jako jsou MSI, Setup.exe nebo MSP. Před stažením a instalací Intune vyhodnotí pravidla požadavků a prostřednictvím centra akcí Windows 10 upozorní koncové uživatele na stav nebo požadavky na restartování. Tato funkce účinně uvolňuje ruce organizacím, které chtějí přesunout tuto úlohu do Intune a do cloudu. Tato funkce je v tuto chvíli ve veřejné verzi Preview. Očekáváme, že během několik dalších měsíců přidáme k této funkci důležité nové schopnosti. 
 
+#### <a name="app-protection-policy-app-settings-for-web-data----2662995---"></a>Nastavení zásady ochrany aplikací (APP) pro webová data <!-- 2662995 -->
+Nastavení zásad ochrany aplikací (APP) pro webový obsah na zařízeních s Androidem a iOS bude aktualizované, aby lépe pracovalo s webovými odkazy http a https a také s přenosy dat prostřednictvím univerzálních odkazů iOS a odkazů aplikací pro Android. 
+
 #### <a name="end-user-device-and-app-content-menu----2771453---"></a>Místní nabídka zařízení a aplikací koncových uživatelů <!-- 2771453 -->
 Koncoví uživatelé teď můžou pomocí místní nabídky zařízení a aplikací aktivovat běžné akce, jako jsou například přejmenování zařízení nebo kontrola dodržování předpisů. 
 
@@ -833,106 +836,4 @@ Platí pro:
 <!-- ########################## -->
 ## <a name="notices"></a>Sdělení
 
-### <a name="check-your-delay-visibility-of-software-updates-setting-in-intune"></a>Zkontrolujte nastavení "Zpoždění viditelnost aktualizací softwaru" v Intune
-Jsme oznámili v MC171466, který jsme se přesouvat několik nastavení v konzole. Při Březnové aktualizaci do Intune úplně Odebereme nastavení "Zpoždění viditelnost softwarových aktualizací" v okně zásad aktualizace iOS. Tím nedojde ke změně způsobu, jakým vaše plánované aktualizace, ale může ovlivnit, jak dlouho je zpožděno Přehled aktualizace pro koncové uživatele. Budete muset provést akci do konce dne, pokud použijete toto nastavení.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Po aktualizaci služby Intune. února můžete si všimnout, že toto nastavení se zobrazí, že v profilech omezení zařízení v konzole a v iOS aktualizovat zásady v okně aktualizace softwaru. Až se tato změna projeví v konzole, zde je, co budete muset provést.
-• Pro existující zásady aktualizací pro iOS: Pokud máte vlastní nakonfigurovat toto nastavení na jinou hodnotu než výchozí hodnota 30 dnů a vaší existující konfigurace pro nastavení viditelnosti zpoždění k pokračování používání na konci dne, budete muset vytvořit nový iOS profil omezení zařízení. Tady bude nutné mít stejné hodnoty jako existující zásady aktualizace Iosu a zacílit na stejné skupiny nastavení viditelnosti zpoždění. Po Březnové aktualizaci služby se již budete moci upravit hodnoty pro toto nastavení v existující zásady aktualizací pro iOS, protože se již nebudou viditelné v tomto okně. Můžete nakonfigurovat toto nastavení v nové profily místo.
-Pokud hodnota pro počet dní, můžete pozdržet viditelnost neodpovídá v obou umístěních nakonfigurované nastavení vlastní hodnoty, zpoždění viditelnost nastavení nebude fungovat, a koncovým uživatelům se zobrazí aktualizace na svých zařízeních, jako je k dispozici. Může to mít minimální vliv pro většinu zákazníků, protože ostatní nastavení v okně zásady aktualizace softwaru vždy převzal prioritu Toto nastavení v konzole.
-• Pro nové zásady aktualizací pro iOS: Pokud se pokusíte vytvořit nové zásady v okně aktualizace softwaru po aktualizaci služby Intune. února, zobrazí se toto nastavení nejde aktivovat. Zobrazí se vám Poznámka: v konzole, pokud budete chtít odložit viditelnost aktualizací přesměrování do okna pro konfiguraci zařízení.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Není nutné provádět akci, pokud toto nastavení nepoužívají nebo nechcete, aby zpoždění viditelnost aktualizací softwaru pro koncové uživatele.
-
-Pokud chcete zpoždění viditelnost aktualizace, spusťte konfiguraci nastavení v nové profily konfigurace zařízení v okně v části v rámci omezení zařízení > Obecné. Pokud máte toto vlastní nastavení nakonfigurovaná v Iosu existující zásady aktualizace, vytvořte nový profil omezení zařízení ekvivalentní se stejnou hodnotou pro "days" zpoždění Přehled aktualizace pro vaše uživatele, po z února aktualizací nebo před březnovém zavede. Můžete chtít aktualizovat vaše IT Pro pokyny a informujte helpdesk.
-Najdete v našem blogu podpory podrobnosti o tom, jak nakonfigurovat toto nastavení můžete publikovat na další informace.
- 
-#### <a name="additional-information"></a>Další informace
-https://aka.ms/Delay_visibility_setting_iOS
-
-###  <a name="upcoming-change-to-the-intune-data-warehouse-api"></a>Nadcházející změny rozhraní API datového skladu Intune
-Budeme během doby 1903 provádět dvě změny:
-- Vyřazení filtr beta<br>
-    Vyřazení nepodporované beta filtry vytvořena instance.   
-- 1.0 změny odráží zpět na verzi beta<br>
-    Změny provedené v našich v1.0 kolekcí se projeví nyní ve verzi beta.  
-
-
-###<a name="plan-for-change-workflow-changes-for-ios-12-enrollment-in-intune"></a>Plánovaná změna: Změny pracovního postupu pro iOS 12 registrace v Intune
-Apple oznámil některé změny související s registrací do služby správy mobilních zařízení (MDM) zařízení s Iosem. Změny se pravděpodobně projeví v spring 2019 verzi iOS, jakož i všechny budoucí iOS verze.
-
-####<a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud vaši koncoví uživatelé upgradovat svoje zařízení na této nové verzi iOS 12 udělali na jaře, vědět, že je upravený pracovního postupu a bude potřeba provést další kroky dokončit registraci do Intune. Když Apple zavádí tyto změny, koncoví uživatelé budou muset: • začal tak proces registrace v aplikaci portál společnosti pro stahování správu profilu • přejít do Nastavení > Obecné > • profilů vyberte správný profil a klikněte na tlačítko prostřednictvím k instalaci dokončit registraci • vrátit se k portálu společnosti 
-
-Zařízení, která jsou už zaregistrovaná a upgrade na novou verzi iOS by neměla mít vliv na Pokud se zruší a potřebujete nové registrace.
-Prostředí pro registraci na zařízeních s Iosem 12,1 nebo předchozí nedojde ke změně v této nové verzi společností Apple.
-
-####<a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-By měly vy plánujete provést upgrade, dokumentaci a pokyny pro koncové uživatele. Můžete také nechat helpdesk vědět těchto změn. Budeme vás informovat prostřednictvím Centra zpráv a naší stránce s novinkami když se tato změna dostane za provozu.
-
-Klikněte na další informace pro podporu blogový příspěvek se snímky obrazovky a video s postupem očekávané registrace.
-
-####<a name="additional-information"></a>Další informace
-https://aka.ms/iOS_enrollment_changes
-
-### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Plánovaná změna: Aktualizaci uživatelského prostředí aplikace portál společnosti Intune pro iOS
-Jsme rádi, že Intune bude brzy k vydání důležitou aktualizaci uživatelského prostředí pro aplikaci portál společnosti pro iOS sdílet. Aktualizace se funkce vizuální Design domovské stránky s rozšířené filtry a rychlejší přístup k aplikací a knih.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tato činnost koncového uživatele aktualizovat, zatímco Správa iOS aktuální funkce aplikace portál společnosti, bude funkce:
-- Domovská stránka s vzhled nativní aplikace pro iOS 
-- Možnosti filtrování obsahu výpisy a vyhledávání, včetně možnosti filtrovat podle typu obsahu (aplikace nebo e-knihy) a dostupnost (Správa zařízení povinné nebo dostupné bez registrace)
-- Schopnost Hledat v e-knihy
-- Historie pro aplikace a e-knih pro hledání, pokud jste součástí programu Apple TestFlight, budete informováni o předběžnou verzi aplikace portál společnosti Intune pro iOS aktualizované, až bude k dispozici. Pokud si nejste součástí programu Apple TestFlight, není příliš pozdě pro registraci. Registrace vám umožní použít aktualizované aplikace portál společnosti, než je k dispozici koncovým uživatelům. Budete mít také možnost poskytnout zpětnou vazbu přímo s týmem Intune.  
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Není potřeba provádět žádnou akci; Tyto změny budou vydané v iOS nadcházející verzi CP aplikace. 
-
-#### <a name="additional-information"></a>Další informace
-[https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
-
-
-### <a name="reminder-removal-of-existing-exchange-online-to-intune-connectors"></a>Připomenutí: Odebrání existující Exchange Online, aby konektory Intune
-Jsme oznámili v MC165575, že jsme by odebírat Exchange Online funkce "Službami" konektor Intune v příští aktualizaci. S aktualizací update února do služby Intune Zakážeme tlačítko Nastavit nové konektory. Plánujeme odebrat všechny stávající Exchange Online, aby konektory Intune v březnu 2019.
- 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tuto zprávu jste obdrželi, protože naše záznamy ukazují, že využíváte funkci "Službami" konektor ve vašem prostředí. 
-
-"Službami" konektor podporuje Intune správu Exchange Active Sync jenom zařízení pro Exchange Online a nepodporuje místní infrastrukturu. Tento konektor, kvůli způsobu, jakým se zobrazovat v konzole, se zobrazí nezbytné pro podmíněný přístup (CA), když ve skutečnosti není potřeba pro certifikační Autoritu. Pravděpodobně používáte tento konektor prozkoumat využití systému Exchange Online před uplatňováním podmíněného přístupu. Tyto informace již poskytuje Centrum pro správu Microsoftu 365. Tady najdete poskytuje sestavy o využití pro Exchange Online včetně aplikace zadáte, se používají pro 7 až 180 dní. Další informace najdete v článku sestavy Office 365 v Centru pro správu – používání aplikací e-mailu  
-
-Pokud používáte tento konektor ve vašem prostředí, nebude schopna monitorovat nebo vymazat Exchange Active Sync jenom zařízení v Intune až v únoru byly zakázány konektory. Během této změny neexistuje žádné předpokládaný dopad na koncové uživatele.
- 
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Pokud máte Service to Service connector nastavit a mít Exchange Active Sync jenom zařízení, přepněte na jiné metody správy zařízení. Máte následující možnosti: • registrace zařízení do správy mobilních zařízení (MDM) • zásady ochrany aplikací Intune použijte ke správě vašeho zařízení • Exchange použijte ovládací prvky, jak je uvedeno v dokumentaci
-  
-#### <a name="additional-information"></a>Další informace
-https://docs.microsoft.com/intune/exchange-service-connector-configure
- 
-
-
-### <a name="plan-for-change-performance-updates-to-intune-for-education---1750215--"></a>Plánovaná změna: Aktualizace výkonu do Intune for Education <!--1750215-->
-Do Intune for Education přidáváme určité aktualizace, které zvyšují rychlost a spolehlivost při přiřazování nastavení uživatelům nebo zařízením. V rámci této změny přesuneme koncem listopadu přiřazení vašich zásad nebo nastavení do nových skupin.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-
-Jako Intune for Education zákazníka budete mít dvě dynamické skupiny Azure Active Directory (Azure AD): "Všichni uživatelé" a "Všechna zařízení". S těmito aktualizacemi už skupiny služby Azure AD „Všichni uživatelé“ a „Všechna zařízení“ nebudou viditelné v konzole Intune for Education. Budou ale pořád viditelné v konzole Intune v Azure a přejmenují se na „Všichni uživatelé (zastaralé, nepoužívat)“ a „Všechna zařízení (zastaralé, nepoužívat)“.
-
-Po zavedení těchto aktualizací už nebudete muset k přiřazení aplikací a nastavení v Intune používat skupiny služby Azure AD. Místo toho přesuneme přiřazení vašich nastavení do nových skupin v konzole Intune for Education, které za vás vytvoříme a které se budou jmenovat „Všichni uživatelé“ a „Všechna zařízení“ jako dříve. Tyto změny se odehrávají v back-endu, takže si v konzole Intune for Education nevšimnete žádných odlišností. Neočekává se žádný vliv na vaše koncové uživatele a zaregistrovaná zařízení. 
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Během přesouvání přiřazení zásad nemusíte nic dělat. Pokud momentálně přiřazujete zásady v konzole Intune for Education, pokračujte v tom i nadále.
-
-Pokud momentálně přiřazujete zásady k výše uvedeným skupinám služby Azure AD v Intune v Azure, začněte je místo toho přiřazovat ke skupině Všichni uživatelé a Všechna zařízení v konzole Intune for Education. Až v konzole uvidíte tyto skupiny služby Azure AD přejmenované na zastaralé, přestaňte zásady přiřazovat ve službě Azure AD. Pokud v současnosti nepoužíváte přejmenované skupiny k žádnému jinému účelu, měli byste je odstranit.
-
-
-### <a name="take-action-please-update-your-android-device-restriction-or-compliance-policy-password-settings-in-intune"></a>Proveďte akci: Aktualizujte prosím vaše zařízení s Androidem omezení nebo dodržování předpisů heslo nastavení zásad v Intune
-Intune pro zařízení s Androidem 4.4 nebo vyšším odebere dostupný typ hesla Výchozí ze zařízení (Výchozí nastavení zařízení). Vzhledem k rozdílům v platformách Android a výchozích nastaveních zařízení nakládá zařízení s těmito zásadami často jako s volitelnými. Abychom odstranili nejasnost, kdy je toto nastavení v Androidu vynucované, v nadcházející verzi toto nastavení odebereme. 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-- Pokud máte v úmyslu vyžadovat na zařízeních heslo, doporučujeme abyste místo použití typu Výchozí ze zařízení upravili profily vaší platformy Android tak, aby jasně vyjadřovaly požadovaný typ hesla.
-- Pokud máte v úmyslu nechat koncového uživatele rozhodnout, jestli vytvořit heslo, vyberte tlačítko Nenakonfigurováno. Když toto nastavení z uživatelského rozhraní odeberete, ale je stále nastavené, při příští úpravě profilu budete vyzváni, abyste zvolili jinou hodnotu než Výchozí ze zařízení.
-Jak se mám na tuto změnu připravit?
-Zkontrolujte nastavení hesla ve vašem Androidu a v podnikových zásadách omezení a dodržování předpisů u zařízení s Androidem. Tato nastavení jsou pro Zásady dodržování předpisů uvedená v rámci Zabezpečení systému a pro Omezení zařízení v rámci nastavení Hesla zařízení nebo Pracovního profilu. Další informace obsahují odkaz na další podrobnosti a snímky obrazovek, které ukazují, kde se tato nastavení konfigurují.
-#### <a name="additional-information"></a>Další informace
-https://aka.ms/PasswordSettings 
-
+[!INCLUDE [Intune notices](./includes/intune-notices.md)]

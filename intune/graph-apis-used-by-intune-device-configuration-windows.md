@@ -1,12 +1,12 @@
 ---
-title: Rozhraní Graph API používaná při konfiguraci zařízení v Microsoft Intune – Azure | Dokumentace Microsoftu
+title: Rozhraní Graph API pro konfiguraci zařízení v Microsoft Intune – Azure | Dokumentace Microsoftu
 titleSuffix: ''
-description: Zobrazit seznam všech rozhraní Graph API s odpovídající zprostředkovatel kryptografických služeb Windows a posun identifikátoru URI na zařízení s Windows 10 a novější použité při konfiguraci zařízení v Microsoft Intune. Zobrazit odpovídající rozhraní API a zprostředkovatele kryptografických služeb pro sdílené počítače, služby endpoint protection, Windows Defender rozšířené ochrany před internetovými útoky, identity protection, Windows 10 týmy, beznabídkového režimu a Windows Update for Business.
+description: Zobrazit seznam všech entit rozhraní Graph API s odpovídající zprostředkovatel kryptografických služeb Windows a posun identifikátoru URI na zařízení s Windows 10 a novější použité při konfiguraci zařízení v Microsoft Intune. Zobrazit odpovídající rozhraní API a zprostředkovatele kryptografických služeb pro sdílené počítače, služby endpoint protection, Windows Defender rozšířené ochrany před internetovými útoky, identity protection, Windows 10 týmy, beznabídkového režimu a Windows Update for Business.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/01/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,30 +15,34 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ccc46914e53e72d941cc726b6a32fa421e23ca4
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b2bed795125043eac07fce41a0f101a9b029bd06
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232127"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335305"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Rozhraní Graph API a odpovídající CSP Windows 10 v Intune použít
 
-Microsoft Intune používá [rozhraní Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) ke konfiguraci zařízení (**Intune** > **konfigurace zařízení**) s Windows 10 a novější. Rozhraní Graph API používá poskytovatelů konfiguračních služeb (CSP), číst, nastavit, změnit nebo odstranit konfigurovat nastavení pro zařízení.
+Microsoft Intune používá [entity rozhraní Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otevře jiný web Docs) ke konfiguraci zařízení (**Intune** > **konfigurace zařízení**) s Windows 10 nebo novější. Rozhraní Graph API používá poskytovatelů konfiguračních služeb (CSP), číst, nastavit, změnit nebo odstranit konfigurovat nastavení pro zařízení.
 
 Tento seznam platí pro:
 
 - Windows 10 a novější
 
-Tento článek uvádí vlastnosti grafu a jejich odpovídající zprostředkovatele kryptografických služeb systému Windows 10 a posun identifikátorů URI.
+Tento článek obsahuje seznam entit grafu a jejich odpovídající CSP Windows 10 a posun identifikátorů URI.
+
+Tyto informace jsou užitečné pro řadu scénářů. Například zjistit, co se používá služba Intune, najdete v části nastavení, které chcete zahrnout do vlastních konfigurací OMA-URI a tak dále. 
 
 ## <a name="windows-10-csps"></a>Windows 10 CSPs
 
-Další informace o poskytovatelů konfiguračních služeb systému Windows 10, najdete v článku [referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Další informace o poskytovatelů konfiguračních služeb systému Windows 10, najdete v článku [referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otevře jiný web Docs).
 
 ## <a name="graph-api-properties-to-csp-mapping"></a>Vlastnosti rozhraní Graph API CSP mapování
 
-V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá Microsoft Intune pro konfiguraci zařízení Windows 10. Profil také ukazuje odpovídající CSP Windows 10 a posun identifikátoru URI.
+Následující seznam obsahuje většinu entit rozhraní Graph API používá Microsoft Intune pro konfiguraci zařízení Windows 10. Profil také ukazuje odpovídající CSP Windows 10 a posun identifikátoru URI.
+
+Pokud chcete zobrazit verze Windows 10, platí následující rozhraní API, použijte Windows 10 [referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otevře jiný web Docs).
 
 #### <a name="editionupgradeconfigurationlicense"></a>EditionUpgradeConfiguration.License 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/WindowsLicensing  
@@ -237,8 +241,7 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Posun identifikátoru URI**: /Config/CredentialsUI/EnumerateAdministrators
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadditionalguardedfolders"></a>Windows10EndpointProtectionConfiguration.DefenderAdditionalGuardedFolders 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Offset URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/Defender/ControlledFolderAccessProtectedFolders
 
 #### <a name="windows10endpointprotectionconfigurationdefenderadvancedransomewareprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderAdvancedRansomewareProtectionType 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -257,23 +260,21 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Posun identifikátoru URI**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurace vyžaduje vlastnosti grafu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxml"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXml 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/ **posun identifikátoru URI**: /Config/ExploitGuard/ExploitProtectionSettings
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderexploitprotectionxmlfilename"></a>Windows10EndpointProtectionConfiguration.DefenderExploitProtectionXmlFileName 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/ExploitGuard/ExploitProtectionSettings
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardedfoldersallowedapppaths"></a>Windows10EndpointProtectionConfiguration.DefenderGuardedFoldersAllowedAppPaths 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/Defender/ControlledFolderAccessAllowedApplications
 
 #### <a name="windows10endpointprotectionconfigurationdefenderguardmyfolderstype"></a>Windows10EndpointProtectionConfiguration.DefenderGuardMyFoldersType 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/Defender/EnableControlledFolderAccess
 
 #### <a name="windows10endpointprotectionconfigurationdefendernetworkprotectiontype"></a>Windows10EndpointProtectionConfiguration.DefenderNetworkProtectionType 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/Defender/EnableNetworkProtection
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/Defender/EnableNetworkProtection
 
 #### <a name="windows10endpointprotectionconfigurationdefenderofficeappsexecutablecontentcreationorlaunch"></a>Windows10EndpointProtectionConfiguration.DefenderOfficeAppsExecutableContentCreationOrLaunch 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -340,8 +341,7 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Posun identifikátoru URI**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurace vyžaduje vlastnosti grafu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterblockexploitprotectionoverride"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterBlockExploitProtectionOverride 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride
 
 #### <a name="windows10endpointprotectionconfigurationdefendersecuritycenterdisableaccountui"></a>Windows10EndpointProtectionConfiguration.DefenderSecurityCenterDisableAccountUI 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -416,19 +416,18 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Posun identifikátoru URI**: /Config/Defender/AttackSurfaceReductionRules (CSP/konfigurace vyžaduje vlastnosti grafu: windows10endpointprotection/Configuration.defenderOfficeAppsOtherProcessInjectionType, windows10endpointprotection / Configuration.defenderOfficeAppsExecutableContentCreationOrLaunchType, windows10endpointprotection/Configuration.defenderOfficeAppsLaunchChildProcessType, windows10endpointprotection / Configuration.defenderOfficeMacroCodeAllowWin32ImportsType, windows10endpointprotection/Configuration.defenderScriptObfuscatedMacroCodeType, windows10endpointprotection/Configuration.defenderScriptDownloadedPayloadExecutionType , windows10endpointprotection/Configuration.defenderEmailContentExecutionType, windows10endpointprotection/Configuration.defenderPreventCredentialStealingType, windows10endpointprotection / Configuration.defenderUntrustedUSBProcessType
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablesecurebootwithdma"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableSecureBootWithDMA 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardenablevirtualizationbasedsecurity"></a>Windows10EndpointProtectionConfiguration.DeviceGuardEnableVirtualizationBasedSecurity 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/DeviceGuard/EnableVirtualizationBasedSecurity
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlaunchsystemguard"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLaunchSystemGuard 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/DeviceGuard/ConfigureSystemGuardLaunch
 
 #### <a name="windows10endpointprotectionconfigurationdeviceguardlocalsystemauthoritycredentialguardsettings"></a>Windows10EndpointProtectionConfiguration.DeviceGuardLocalSystemAuthorityCredentialGuardSettings 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Offset URI**: /Config/DeviceGuard/LsaCfgFlags
 
 #### <a name="windows10endpointprotectionconfigurationdmaguarddeviceenumerationpolicy"></a>Windows10EndpointProtectionConfiguration.DmaGuardDeviceEnumerationPolicy 
@@ -868,12 +867,10 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Posun identifikátoru URI**: /Config/MSSecurityGuide/WDigestAuthentication
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenblockoverrideforfiles"></a>Windows10EndpointProtectionConfiguration.SmartScreenBlockOverrideForFiles 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/DeviceGuard/RequirePlatformSecurityFeatures
 
 #### <a name="windows10endpointprotectionconfigurationsmartscreenenableinshell"></a>Windows10EndpointProtectionConfiguration.SmartScreenEnableInShell 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy/  
-**Posun identifikátoru URI**: /Config/SmartScreen/EnableSmartScreenInShell
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/SmartScreen/EnableSmartScreenInShell
 
 #### <a name="windows10endpointprotectionconfigurationsolicitedremoteassistance"></a>windows10endpointprotectionconfiguration.solicitedRemoteAssistance 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -1030,6 +1027,9 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 #### <a name="windows10endpointprotectionconfigurationxboxserviceslivenetworkingservicestartupmode"></a>Windows10EndpointProtectionConfiguration.XboxServicesLiveNetworkingServiceStartupMode 
 **Zprostředkovatel kryptografických služeb**: ./Vendor/MSFT/Policy  
 **Offset URI**: /Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+
+#### <a name="windows10enterprisemodernappmanagementconfigurationuninstallbuiltinapps"></a>Windows10EnterpriseModernAppManagementConfiguration.UninstallBuiltInApps
+**CSP**: Volání rozhraní Graph API není k dispozici pouze **posun identifikátoru URI**: Volání rozhraní Graph API není k dispozici pouze
 
 #### <a name="windows10generalconfigurationaccountsblockaddingnonmicrosoftaccountemail"></a>Windows10GeneralConfiguration.AccountsBlockAddingNonMicrosoftAccountEmail 
 **Zprostředkovatel kryptografických služeb**: ./Vendor/MSFT/Policy  
@@ -2924,9 +2924,17 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/Update/PauseFeatureUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackStartDateTime
+**CSP**: Není k dispozici – rozhraní Graph API pouze **posun identifikátoru URI**: Není k dispozici – pouze Graph API
+
 #### <a name="windowsupdateforbusinessconfigurationfeatureupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesWillBeRolledBack 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
-**Posun identifikátoru URI**: / Rollback/FeatureUpdate
+**CSP**: Není k dispozici – rozhraní Graph API pouze **posun identifikátoru URI**: Není k dispozici – pouze Graph API
+
+#### <a name="windowsupdateforbusinessconfigurationfeatureupdatesrollbackwindowindays"></a>WindowsUpdateForBusinessConfiguration.FeatureUpdatesRollbackWindowInDays
+**CSP**: Není k dispozici – rozhraní Graph API pouze **posun identifikátoru URI**: Není k dispozici – pouze Graph API
+
+#### <a name="windowsupdateforbusinessconfigurationinstallationschedule"></a>WindowsUpdateForBusinessConfiguration.InstallationSchedule
+**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy **posun identifikátoru URI**: /Config/Update/ActiveHoursStart /Config/Update/ActiveHoursEnd, /Config/Update/ScheduledInstallDay, /Config/Update/ScheduledInstallTime
 
 #### <a name="windowsupdateforbusinessconfigurationmicrosoftupdateserviceallowed"></a>WindowsUpdateForBusinessConfiguration.MicrosoftUpdateServiceAllowed 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -2948,9 +2956,11 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
 **Posun identifikátoru URI**: /Config/Update/PauseQualityUpdatesStartTime
 
+#### <a name="windowsupdateforbusinessconfigurationqualityupdatesrollbackstartdatetime"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesRollbackStartDateTime
+**CSP**: Není k dispozici – rozhraní Graph API pouze **posun identifikátoru URI**: Není k dispozici – pouze Graph API
+
 #### <a name="windowsupdateforbusinessconfigurationqualityupdateswillberolledback"></a>WindowsUpdateForBusinessConfiguration.QualityUpdatesWillBeRolledBack 
-**Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
-**Posun identifikátoru URI**: / Rollback/QualityUpdate
+**CSP**: Není k dispozici – rozhraní Graph API pouze **posun identifikátoru URI**: Není k dispozici – pouze Graph API
 
 #### <a name="windowsupdateforbusinessconfigurationscheduleimminentrestartwarninginminutes"></a>WindowsUpdateForBusinessConfiguration.ScheduleImminentRestartWarningInMinutes 
 **Zprostředkovatel kryptografických služeb**: ./Device/Vendor/MSFT/Policy  
@@ -2976,4 +2986,4 @@ V následujícím seznamu jsou uvedeny vlastnosti rozhraní Graph API používá
 ## <a name="next-steps"></a>Další postup
 
 - [Přehled konfigurace zařízení](device-profiles.md)
-- [Referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference)
+- [Referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference) (otevře jiný web Docs)

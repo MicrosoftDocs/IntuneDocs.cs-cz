@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99f595adf9e53a8704db152e5e3725fe067902af
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 188c32a2fd38d3445380a9d1898b90a3bb080ae1
+ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849443"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57335203"
 ---
 # <a name="enroll-your-android-device-in-intune"></a>Registrace zařízení se systémem Android do Intune
 
@@ -37,7 +37,7 @@ Před registrací nebo po ní se může zobrazit výzva k výběru kategorie, kt
 
 **Postup při registraci zařízení se systémem Android:**
 
-1. Nainstalujte si bezplatnou aplikaci Portál společnosti Intune z [Google Play](http://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1. Nainstalujte si bezplatnou aplikaci Portál společnosti Intune z [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
 2. Otevřete aplikaci Portál společnosti.
 

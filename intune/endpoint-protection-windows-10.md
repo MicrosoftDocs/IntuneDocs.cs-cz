@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2018
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2aad4684b1ae0db358a5e0a31a362d610bf109c1
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 4794adda447754b5dc72ff1b320ec69553a8b55a
+ms.sourcegitcommit: e8c32bd6db2560570d1e1733f999ae3b2c026908
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305506"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -46,7 +46,7 @@ Když budete používat Microsoft Edge, Ochrana Application Guard v programu Win
 
 Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bitovou verzí). Tento profil nainstaluje součást Win32, pomocí které se aktivuje ochrana Application Guard.
 
-- **Ochrana Application Guard**: **Povolit** zapnout tuto funkci, která otevírá neschválené weby v technologií Hyper-V kontejneru procházení virtualizovaném pomocí. **Nenakonfigurováno** (výchozí) znamená, že se na zařízení otevře každá stránka (schválená i neschválená).
+- **Ochrana Application Guard**: **Povoleno pro Edge** zapnout tuto funkci, která se otevře nedůvěryhodné weby v technologií Hyper-V kontejneru procházení virtualizovaném pomocí. **Není nakonfigurováno** (výchozí) znamená, že žádné lokality (důvěryhodné a nedůvěryhodné) otevře v zařízení.
 - **Chování schránky**: Zvolte, které akce kopírování a vkládání jsou povolené mezi místním Počítačem a virtuálním prohlížeči ochrany Application Guard.
 - **Externí obsah na firemních webech**: **Blok** obsahu z neschválených webů načítání. **Nenakonfigurováno** (výchozí) znamená, že se na zařízení mohou otevřít nefiremní weby.
 - **Tisk z virtuálního prohlížeče**: Zvolte **povolit** tak PDF, XPS, místní a síťové tiskárny můžete tisknout obsah z virtuálního prohlížeče. **Nenakonfigurováno** (výchozí) zakáže všechny tiskové funkce.
@@ -309,7 +309,15 @@ Chraňte cenná data před škodlivými aplikacemi a hrozbami, jako je napříkl
 
 ### <a name="network-filtering"></a>Filtrování sítě
 
-Zablokujte odchozí připojení z libovolné aplikace na IP adresy a domény s nízkou reputací.
+- **Ochrana sítě**: Odchozí připojení z libovolné aplikace chrání špatnou reputací IP adresy nebo domény. Cílem je k ochraně koncových uživatelů z aplikací s přístupem k podvodných, servery hostující zneužití a škodlivý obsah na Internetu. Také brání prohlížeče třetích stran v připojení k nebezpečné weby.
+
+  Možnosti:
+
+  - **Nenakonfigurováno** (výchozí) tuto funkci zakáže. Uživatelé a aplikace nejsou blokované bránily v připojení k doménám nebezpečné. Správci neuvidí této aktivity ve službě Windows Defender Security Center.
+  - **Povolit** zapne ochranu sítě a bloky uživatelů a aplikací v připojení k doménám nebezpečné. Správci mohou zobrazit tuto aktivitu ve službě Windows Defender Security Center.
+  - **Pouze audit**: Uživatelé a aplikace nejsou blokované bránily v připojení k doménám nebezpečné. Správci mohou zobrazit tuto aktivitu ve službě Windows Defender Security Center.
+
+  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 ### <a name="exploit-protection"></a>Ochrana Exploit Protection
 
