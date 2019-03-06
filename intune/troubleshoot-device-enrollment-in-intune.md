@@ -6,9 +6,10 @@ author: ErikjeMS
 ms.author: erikje
 manager: dougeby
 ms.date: 11/09/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 6982ba0e-90ff-4fc4-9594-55797e504b62
 ROBOTS: NOINDEX,NOFOLLOW
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b2d345ba84eb963600a921c0f77f7a93ed6aa1b0
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 32f167def5e96061b0d69665c2c5b81a29d03389
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57238672"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57461358"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
 
@@ -100,7 +101,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
 1.  Ověřte, že je [správně nastavená](mdm-authority-set.md) autorita MDM.
     
-2.  Ověřte, jestli synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory proběhla správně. Můžete ověřit, jestli hlavní název uživatele (UPN) odpovídá údajům služby Active Directory na portálu Office 365.
+2.  Ověřte, jestli synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory proběhla správně. Můžete ověřit, že uživatele (UPN) odpovídá údajům služby Active Directory v Centru pro správu Microsoftu 365.
     Pokud hlavní název uživatele neodpovídá údajům služby Active Directory:
 
     1.  Vypněte na místním serveru službu DirSync.
@@ -131,7 +132,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 ### <a name="unable-to-create-policy-or-enroll-devices-if-the-company-name-contains-special-characters"></a>Pokud název společnosti obsahuje speciální znaky, není možné vytvořit zásadu ani registrovat zařízení
 **Problém:** Nelze vytvořit zásadu ani registrovat zařízení.
 
-**Řešení:** V [centra pro správu Office 365](https://portal.office.com/), odeberte speciální znaky z názvu společnosti a uložte informace o společnosti.
+**Řešení:** V [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/), odeberte speciální znaky z názvu společnosti a uložte informace o společnosti.
 
 ### <a name="unable-to-sign-in-or-enroll-devices-when-you-have-multiple-verified-domains"></a>Pokud máte více ověřených domén, není možné se přihlásit nebo zaregistrovat zařízení
 **Problém:** Tomuto problému může dojít, pokud do AD FS přidáte druhou ověřenou doménu. Uživatelé s příponou hlavního názvu uživatele (UPN) druhé domény nemusí být schopni přihlásit se na portály nebo zaregistrovat zařízení.

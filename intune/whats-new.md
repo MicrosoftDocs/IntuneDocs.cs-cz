@@ -10,6 +10,7 @@ ms.date: 02/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
 ms.reviewer: dougeby
@@ -17,17 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a6f40ba7ea5e229a4c4d3f25d182d24b2a0a812
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
+ms.openlocfilehash: e035166200f1112898e4b2fcf2f8618e2f1cc060
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57335169"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57461511"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Najdete zde také chystané změny, [důležitá sdělení](#notices) a informace o [předchozích verzích](whats-new-archive.md). 
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také vyhledat [nadcházejících změnách](in-development.md), [důležitá oznámení](#notices)a informace o [minulých verzích](whats-new-archive.md). 
 
 > [!Note]
 > Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
@@ -244,6 +245,8 @@ Nastavení níže se zobrazí v konzole Intune, ale při konfiguraci, nebude fun
 
 > [!NOTE]
 > Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-requirements) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-requirements).
+
+Další informace najdete v tématu [nastavení konfigurace aplikace Microsoft Outlook](app-configuration-policies-outlook.md). 
 
 #### <a name="delete-android-enterprise-apps----1352553---"></a>Odstranění aplikací Androidu Enterprise <!-- 1352553 -->
 Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
@@ -552,7 +555,7 @@ Pokud používáte Volume Purchase Program (VPP) k předběžnému přidělení 
 Intune teď podporuje pomocí programu registrace zařízení na zařízeních s macOS pro účty Apple School Manageru.  Další informace najdete v tématu [Automatická registrace zařízení s macOS pomocí Apple School Manager nebo programu registrace zařízení](device-enrollment-program-enroll-macos.md).
 
 ### <a name="new-intune-device-subscription-sku---3312071--"></a>Nové předplatné Intune zařízení SKU <!--3312071-->
-Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je k dispozici přímo prostřednictvím portálu pro správu Office a [smlouvy Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise?activetab=enterprise-tab:primaryr2) (EA), [Products Microsoftu a smlouva o poskytování služeb](https://www.microsoft.com/licensing/mpsa/default) (MPSA) [otevřete smlouvu se společností Microsoft ](https://partner.microsoft.com/licensing/licensing-agreements), a [Cloud Solution Provider](https://www.microsoftpartnercommunity.com/t5/Partnership-101/What-is-the-Cloud-Solution-Provider-CSP-program/td-p/2453) (CSP).
+Abychom v podnicích pomohli snížit náklady na správu zařízení, nabízíme teď novou skladovou položku pro předplatné na základě zařízení. Tato skladová položka je licencovaná měsíčně podle počtu zařízení. Ceny se liší podle licenčního programu. Je k dispozici přímo prostřednictvím centra pro správu služeb Microsoft 365 a [smlouvy Enterprise](https://www.microsoft.com/licensing/licensing-programs/enterprise?activetab=enterprise-tab:primaryr2) (EA), [Products Microsoftu a smlouva o poskytování služeb](https://www.microsoft.com/licensing/mpsa/default) (MPSA), [Microsoft Open Smlouvy o](https://partner.microsoft.com/licensing/licensing-agreements), a [Cloud Solution Provider](https://www.microsoftpartnercommunity.com/t5/Partnership-101/What-is-the-Cloud-Solution-Provider-CSP-program/td-p/2453) (CSP).
 
 ### <a name="device-management"></a>Správa zařízení
 

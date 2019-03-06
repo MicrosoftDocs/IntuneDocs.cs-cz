@@ -9,18 +9,19 @@ ms.date: 12/05/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: ''
 ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0707226412d314ac1d44ba339b4c9151b394919
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: f9945aa9dd5ad563f6fde854d7f08fda010c18f7
+ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57233895"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57392971"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkce zařízení s macOS v Intune
 

@@ -4,6 +4,7 @@ description: 'Rychlý start: Vytvoření uživatele v Intune'
 services: microsoft-intune
 author: ErikjeMS
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 10/30/2018
 ms.author: erikje
@@ -12,12 +13,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 982caa46adb29ef1d57ec65ac855adca9cef1883
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 98c71bd4c93e869b429b7677b4fb7c442aa58643
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834836"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57459981"
 ---
 # <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Rychlý start: Vytvořte uživatele a přiřadit licenci
 
@@ -46,9 +47,9 @@ Aby se uživatelé mohli zaregistrovat do správy zařízení Intune, musí mít
 
 ## <a name="assign-a-license-to-the-user"></a>Přiřazení licence uživateli
 
-Po vytvoření uživatele musíte použít [portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854), abyste na něm danému uživateli přiřadili licenci Intune. Bez přiřazení licence si uživatelé nemůžou svoje zařízení zaregistrovat do Intune. 
+Po vytvoření uživatele, je nutné použít [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) přiřadit tomuto uživateli licenci Intune. Bez přiřazení licence si uživatelé nemůžou svoje zařízení zaregistrovat do Intune. 
 
-1. Přihlaste se k [portálu Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854). K přihlášení použijte stejné přihlašovací údaje jako pro Intune.
+1. Přihlaste se k [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí stejných přihlašovacích údajů, které jste použili k přihlášení k Intune.
 2. Zvolte **Uživatelé** > **Aktivní uživatelé** > vyberte uživatele, kterého jste právě vytvořili.
 3. Vedle možnosti **Licence na produkty** vyberte **Upravit**.
 4. V části **Umístění** zvolte umístění pro daného uživatele.
@@ -62,7 +63,7 @@ U nového aktivního uživatele Intune se nyní zobrazí, že používá licenci
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud tohoto uživatele už nepotřebujete, můžete ho odstranit. Přejděte na [portál Office 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolte **Uživatelé** > **Aktivní uživatelé** > *vyberte uživatele ze seznamu* > **Odstranit uživatele** > **Odstranit uživatele** > **Potvrdit změny** > **Zavřít**.
+Pokud tento uživatel víc nepotřebujete, můžete odstranit uživatele tak, že přejdete na [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolte **uživatelé** > **aktivní uživatelé**  >  *vyberte uživatele v seznamu* > **odstranění uživatele** > **odstranění uživatele** > **potvrzení změny** > **Zavřít**.
 
 ## <a name="next-steps"></a>Další postup
 

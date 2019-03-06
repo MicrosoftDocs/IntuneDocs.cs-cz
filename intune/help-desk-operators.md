@@ -7,21 +7,22 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 10/23/2018
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
 ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba74c93e2ef7dc469ebd7f5086659181b72a0981
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: a566d0630836e8cead8cb369d486374ff4583bfa
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57461052"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -81,7 +82,7 @@ Vlastnosti klientských aplikací
 
 | Vlastnost      | Popis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Název          | Název aplikace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Name          | Název aplikace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | Type          | Můžete zvolit typ přiřazení pro každou aplikaci.  <br> **K dispozici** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.  <br> **Nelze použít** – Aplikace není nainstalovaná nebo se na Portálu společnosti nezobrazuje. <br> **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.  <br> **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. |
 | Poslední změna | Název typu zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -160,7 +161,7 @@ Vlastnosti zásad dodržování předpisů.
 | Vlastnost      | Popis                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Název          | Název aplikace                                                                                                        |
+| Name          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
 | Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
 | Poslední změna | Název typu zařízení                                                                                                     |
@@ -205,7 +206,7 @@ Vlastnosti zásad konfigurace.
 | Vlastnost      | Popis                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Name          | Název aplikace                                                                                                        |
+| Název          | Název aplikace                                                                                                        |
 | Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
 | Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
 | Poslední změna | Název typu zařízení                                                                                                     |
