@@ -10,6 +10,7 @@ ms.date: 01/02/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ac7bd764-5365-4920-8fd0-ea57d5ebe039
 ms.reviewer: jeffbu, cgerth
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c76e253287f823c4352667205487cce839e14178
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 76f1c113562e70bd819b2519a8b78d5824ef715b
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228931"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460695"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -77,7 +78,7 @@ Na základě scénáře použití a požadavků na nasazení Intune možná bude
 
 ### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>Úloha 4: Přiřazení uživatelských licencí pro Intune a Office 365
 
-Všichni uživatelé, u kterých budete zavádět EMS/Intune a Office 365, musí mít přiřazenou licenci. Licence k EMS/Intune a Office 365 můžete přiřadit na portálu Centra pro správu Office 365.
+Všichni uživatelé, u kterých budete zavádět EMS/Intune a Office 365, musí mít přiřazenou licenci. Můžete přiřadit EMS/Intune a licence k Office 365 v Centru pro správu Microsoftu 365.
 
 -   Další informace o [přiřazení licencí Intune](licenses-assign.md).
 

@@ -7,21 +7,22 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/21/2019
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: cd5a0a3b-0013-4be3-a233-ce6e9083149f
 ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c94fc26543123f0b3cf6a0f08f8089c48d78778b
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: b4db9845befe7440e615e8deb874971a5b80efdb
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57232195"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57461171"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 
@@ -37,7 +38,7 @@ Jedná se o běžné problémy, které správce IT může docházet při použit
 | -- | -- | -- |
 | Zásady se neuplatňují na Skype pro firmy. | Zásady ochrany aplikací bez registrace zařízení, vytvořené na portálu Azure Portal, se neuplatňují na aplikaci Skype pro firmy na zařízeních s iOSem a Androidem. | Pro Skype pro firmy se musí nastavit moderní ověřování.  Pokud chcete pro Skype nastavit moderní ověřování, řiďte se pokyny v tématu [Povolení tenanta pro moderní ověřování](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx). |
 | Zásady pro aplikace Office se neuplatňují. | Zásady ochrany aplikací se neuplatňují na žádné [podporované aplikace Office](https://www.microsoft.com/cloud-platform/microsoft-intune-partners) u žádného uživatele. | Zkontrolujte, jestli má uživatel licenci pro Intune a jestli na aplikace Office cílí nasazené zásady ochrany aplikací. Než se nově nasazené zásady ochrany aplikací uplatní, může to trvat až 8 hodin. |
-| Správce nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | Uživatel s oprávněním správce IT nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | K portálu Azure Portal mají přístup tyto role uživatelů: <ul><li>Globální správce, kterého můžete nastavit na [Portálu Office](https://portal.office.com/)</li><li>Vlastník, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li><li>Přispěvatel, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li></ul> Odkazovat na [řízení správy na základě rolí (RBAC) v Microsoft Intune](role-based-access-control.md) nápovědu k nastavení těchto rolí.|
+| Správce nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | Uživatel s oprávněním správce IT nemůže na portálu Azure Portal nakonfigurovat zásady ochrany aplikací. | K portálu Azure Portal mají přístup tyto role uživatelů: <ul><li>Globální správce, který jste nastavili v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/)</li><li>Vlastník, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li><li>Přispěvatel, kterého můžete nastavit na webu [Azure Portal](https://portal.azure.com/).</li></ul> Odkazovat na [řízení správy na základě rolí (RBAC) v Microsoft Intune](role-based-access-control.md) nápovědu k nastavení těchto rolí.|
 |V sestavách zásad ochrany aplikací chybí uživatelské účty. | Sestavy z konzoly správce nezobrazují uživatelské účty, na které se nedávno nasadily zásady ochrany aplikací. | Než se uživatelé nově zacílení pomocí zásad ochrany aplikací zobrazí v sestavách jako cíloví uživatelé, může uplynout až 24 hodin. |
 | Změny zásad se neuplatňují. | Než se změny a aktualizace zásad ochrany aplikací uplatní, může uplynout až 8 hodin. | Koncový uživatel se může z aplikace odhlásit a znovu přihlásit, aby vynutil synchronizaci se službou. |
 | Zásady ochrany aplikace se neuplatňují na program DEP. | Zásady ochrany aplikací se nevztahují na zařízení v programu Apple DEP. | Zkontrolujte, jestli v programu Apple DEP (Device Enrollment Program) používáte přidružení uživatele. Spřažení uživatelů je požadováno u všech aplikací vyžadujících ověření uživatele pod programem DEP. <br><br>Odkazovat na [Automatická registrace zařízení s Iosem pomocí programu registrace zařízení společnosti Apple](device-enrollment-program-enroll-ios.md) Další informace o registrace DEP pro iOS.|
@@ -78,7 +79,7 @@ Chybová zpráva nebo dialog | Příčina | Náprava |
 **Nenastavena aplikace**: Tato aplikace není nastavený pro použití. Požádejte o pomoc správce IT. | Nepodařilo se rozpoznat požadované zásady ochrany aplikací pro aplikaci. |Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
 **Vítá vás Intune Managed Browser**: Tato aplikace funguje nejlépe, když se spravují přes Microsoft Intune. Aplikaci můžete kdykoli použít k procházení webu, a pokud k její správě použijete Microsoft Intune, získáte přístup k dalším funkcím ochrany dat. | Nepodařilo se rozpoznat požadované zásady ochrany aplikací pro aplikaci Intune Managed Browser. <br><br>Uživatel může aplikaci stále používat k procházení webu, ale aplikaci nespravuje Intune. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživetele nasazené zásady ochrany aplikací pro iOS a cílí na aplikaci Intune Managed Browser.
 **Nepovedlo se přihlásit**: Nemůžeme přihlásit vás teď. Zkuste to prosím znovu později. | Nepodařilo se zaregistrovat uživatele ke službě MAM po tom, co se uživatel pokusil přihlásit pomocí svého pracovního nebo školního účtu. | Zkontrolujte, jestli jsou ve skupině zabezpečení uživatele nasazené zásady ochrany aplikací iOS a cílí na tuto aplikaci.
-**Nenastaven účet**: Vaše organizace nenastavila váš účet k práci s pracovními nebo školními daty. Požádejte prosím o pomoc svého správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](https://portal.office.com).
+**Nenastaven účet**: Vaše organizace nenastavila váš účet k práci s pracovními nebo školními daty. Požádejte prosím o pomoc svého správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Ujistěte se, že uživatelský účet má přiřazenou v licenci pro Intune [centra pro správu služeb Microsoft 365](https://admin.microsoft.com).
 **Zařízení nedodržující předpisy**: Tuto aplikaci nejde použít, protože používáte zařízení s jailbreakem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na zařízení s jailbreakem. | Resetujte zařízení na výchozí tovární nastavení. Postupujte podle [těchto pokynů](https://support.apple.com/HT201274) z webu podpory Apple.
 **Připojení k Internetu vyžaduje**: Musíte být připojeni k Internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
 **Došlo k neznámé chybě**: Zkuste aplikaci restartovat. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Došlo k neznámému selhání. | Chvíli počkejte a zkuste to znovu. Pokud potíže potrvají, vytvořte [lístek podpory](get-support.md#create-an-online-support-ticket) s Intune.
@@ -97,7 +98,7 @@ Dialog / chybová zpráva | Příčina | Náprava |
 **Nepovedlo se přihlásit**: Zkuste se přihlásit znovu. Pokud s tím budou dál problémy, požádejte o pomoc správce IT. | Nepodařilo se ověřit účet, pomocí kterého se uživatel pokusil přihlásit. | Zkontrolujte, jestli se uživatel přihlašuje pomocí pracovního nebo školního účtu, který je už zaregistrovaný službou Intune MAM (první pracovní nebo školní účet, který se do této aplikace úspěšně přihlásil). <br><br> Vymažte data aplikace. <br><br> Zkontrolujte, jestli je verze aplikace aktuální. <br><br> Zkontrolujte, jestli je verze Portálu společnosti aktuální.
 **Připojení k Internetu vyžaduje**: Musíte být připojeni k Internetu, abychom mohli ověřit, že můžete používat tuto aplikaci. | Zařízení není připojené k internetu. | Připojte zařízení k síti Wi-Fi nebo mobilní síti.
 **Zařízení jako nevyhovující**: Tuto aplikaci nejde použít, protože používáte zařízení s rootem. Požádejte o pomoc správce IT. | Intune zjistil, že uživatel je na rootovaném zařízení. | Resetujte zařízení na výchozí tovární nastavení.
-**Nenastaven účet**: Tato aplikace se musí spravovat přes Microsoft Intune, ale váš účet zatím není nastavené. Požádejte o pomoc správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Zkontrolujte, jestli má uživatelský účet přiřazenou licenci Intune v [portálu Office](https://portal.office.com).
+**Nenastaven účet**: Tato aplikace se musí spravovat přes Microsoft Intune, ale váš účet zatím není nastavené. Požádejte o pomoc správce IT. | Uživatelský účet nemá licenci pro Intune A Direct. | Ujistěte se, že uživatelský účet má přiřazenou v licenci pro Intune [centra pro správu služeb Microsoft 365](https://admin.microsoft.com).
 **Nepodařilo se zaregistrovat aplikaci**: Tato aplikace se musí spravovat přes Microsoft Intune, ale nebylo možné zaregistrovat v tuto chvíli. Požádejte o pomoc správce IT. | Nepodařilo se aplikaci automaticky zaregistrovat ve službě MAM, když jsou požadovány zásady ochrany aplikací. | Vymažte data aplikace. <br><br> Odešlete protokoly do Intune prostřednictvím aplikace portál společnosti nebo lístek podpory. Další informace najdete v tématu [jak získat podporu pro Microsoft Intune](get-support.md).
 
 ## <a name="next-steps"></a>Další postup

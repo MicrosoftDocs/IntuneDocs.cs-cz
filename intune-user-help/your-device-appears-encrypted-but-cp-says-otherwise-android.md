@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9444a124b9b8a47633f544205940dadb3df0fd8f
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
+ms.openlocfilehash: 55935b2f69f9573d8df5ea5ca32fb4587c652b26
+ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334999"
+ms.locfileid: "57389468"
 ---
 # <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Zdá se, že vaše zařízení s Androidem je zašifrované, ale Portál společnosti hlásí, že není
 
@@ -63,16 +63,15 @@ Některá zařízení s Androidem verze 7.0 a novější šifrují data způsoby
 
 ### <a name="known-devices-that-can-be-updated-to-fix-this-issue"></a>Známá zařízení, u kterých se dá tento problém vyřešit jejich aktualizací
 
-Pokud máte některé z následujících zařízení, můžete na tento problém narazit, pokud jste zařízení neaktualizovali na nejnovější verzi Androidu. Aktualizace těchto zařízení můžete nainstalovat tak, že přejdete do **Nastavení** > **Aktualizace**. 
+Pokud vaše zařízení jste neprovedli aktualizaci na nejnovější verzi Androidu, přejděte do svého zařízení **nastavení** aplikaci a vyberte **aktualizace**. Dokud neaktualizujete, může zobrazit tato zařízení jako nevyhovující předpisům:  
 
-- [Huawei Honor 8](https://consumer.huawei.com/us/support/phones/honor-8/)
-- [Huawei P9](https://consumer.huawei.com/en/phones/p9/)
+- Huawei Honor 8
+- Huawei P9
 
 ### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Známá zařízení, u kterých se tento problém momentálně nedá vyřešit jejich aktualizací
+Následující zařízení bude vždy vypadat jako zašifrovaná a nelze použít pro přístup k prostředkům společnosti. Přístup k firemním prostředkům, musí používat jiné zařízení.  
 
-Pro níže uvedená zařízení není možné tento problém vyřešit. Pro přístup k prostředkům společnosti budete možná muset použít jiná zařízení. 
-
-- [Huawei Mate 8](https://consumer.huawei.com/en/mobile-phones/mate8/index.htm)
-- [Zařízení OPPO](https://www.oppo.com/en/smartphones)
-- [Zařízení Vivo](https://www.vivo.co.in)
-- [Chytré telefony Xiaomi Mi](https://xiaomi-mi.com/mi-smartphones/)
+- Huawei Mate 8
+- Zařízení OPPO
+- Zařízení vivo
+- Chytré telefony Xiaomi mi

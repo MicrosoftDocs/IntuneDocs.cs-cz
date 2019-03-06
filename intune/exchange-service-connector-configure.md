@@ -9,6 +9,7 @@ ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: muhosabe
@@ -16,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6be4bfdb971e96da0224d146705e7c9fd0606ab
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 828cd17c320bd13b1b7fcce6578727015be3a77b
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57229577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460440"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
 
 S konektorem **Service to Service Connector** můžete ke správě zařízení v Exchange ActiveSync (EAS) a zařízení v Intune použít jedinou konzolu pro správu.  K povolení podmíněného přístupu pro Exchange Online se tento konektor nevyžaduje.
 
-Při plánování zavádění řešení podmíněného přístupu, je často potřeba vysvětlit, kteří uživatelé a počet uživatelů bude obsahovat nové prostředí. Centrum pro správu Office 365 nabízí to ve formě Exchange Online sestava využití e-mailové aplikace jako součást funkce sestavy aktivit, že tento portál. Tyto sestavy lze použít k pochopení přijetí mobilní e-mailu ve vašem prostředí před a po nasazení podmíněného přístupu.
+Při plánování zavádění řešení podmíněného přístupu, je často potřeba vysvětlit, kteří uživatelé a počet uživatelů bude obsahovat nové prostředí. Centrum pro správu služeb Microsoft 365 poskytuje to ve formě Exchange Online sestava využití e-mailové aplikace jako součást funkce sestavy aktivit, že tento portál. Tyto sestavy lze použít k pochopení přijetí mobilní e-mailu ve vašem prostředí před a po nasazení podmíněného přístupu.
 
 ## <a name="service-to-service-connector-requirements"></a>Požadavky na konektor Service to Service Connector
 **Konektor Service to Service Connector** podporuje jenom Exchange Online nebo Exchange Online Dedicated a nemá žádné požadavky na místní infrastrukturu. 

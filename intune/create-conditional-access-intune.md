@@ -10,24 +10,25 @@ ms.date: 02/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dda25e5c40bcff14b71d65c183c5836cf73bf1ae
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 7b94204d5d1b141218081d01a6daab0ec84d1693
+ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742410"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57392577"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu podle zařízení
 
 S Intune můžete zvýšit podmíněného přístupu v Azure Active Directory tak, že přidáte dodržování předpisů pro mobilní zařízení k řízení přístupu. Po vytvoření zásady dodržování předpisů Intune, který definuje požadavky na zařízení, aby vyhovoval předpisům, můžete použít stav dodržování předpisů zařízení povolit nebo blokovat přístup k aplikacím a službám. Můžete to provést tak, že vytvoříte zásady podmíněného přístupu, který používá nastavení **vyžadovat, aby zařízení bylo označené jako vyhovující**.  
 
-Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete chránit, podmínky, za kterých aplikací nebo služeb je přístupný a uživatelé, kterým se zásady vztahují. Podmíněný přístup je funkce Azure AD premium, je možné konfigurovat ve službě Azure Active Directory, ale můžete také nastavit tyto stejné zásady z portálu Intune. Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*.  
+Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete chránit, podmínky, za kterých aplikací nebo služeb je přístupný a uživatelé, kterým se zásady vztahují. Podmíněný přístup je funkce Azure AD premium, je možné konfigurovat ve službě Azure Active Directory, ale můžete také nastavit tyto stejné zásady z portálu Intune. Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
 > [!IMPORTANT]
 > Před nastavením podmíněného přístupu, budete muset nastavit zásady dodržování předpisů zařízeními v Intune k vyhodnocení zařízení založené na tom, jestli splňují konkrétní požadavky. Zobrazit [Začínáme se zásadami dodržování předpisů zařízeními v Intune](device-compliance-get-started.md).

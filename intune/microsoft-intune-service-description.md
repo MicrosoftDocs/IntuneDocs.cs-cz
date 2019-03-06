@@ -9,6 +9,7 @@ ms.date: 05/30/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 40fa5a2e-6c0f-4150-9740-d5ddc0cdbda0
 ms.reviewer: cacamp
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcd78efe6862e42296764e4791bf8fed940adde4
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: d43c999cf5dc90d62b9409e3c4565502b773ddf4
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850943"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460525"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -36,7 +37,7 @@ Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli �
 Další informace o správě zařízení, aplikací a ochraně firemních dat v Intune najdete v [dokumentaci k Intune](https://docs.microsoft.com/intune/).
 
 ## <a name="30-day-free-trial"></a>30denní bezplatná zkušební verze
-Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
+Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.
 
 > [!NOTE]
 > Pokud má vaše organizace pracovní nebo školní účet služeb Microsoft Online Services a po skončení zkušební doby budete chtít toto předplatné Intune používat v produkčním prostředí, vyberte na této stránce možnost **Přihlásit se** a přihlaste se pod účtem globálního správce organizace. Tím zajistíte, že se zkušební verze Intune propojí s vaším stávajícím pracovním nebo školním účtem.
@@ -58,7 +59,7 @@ Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktual
 
 - [Co je nového v Microsoft Intune](whats-new.md) Toto téma se aktualizuje nejen při měsíčních aktualizacích služeb, ale také týdně, například při vydání aplikací, jako je Portál společnosti.
 
-- Důležité aktualizace služeb také budou oznámeny v centru zpráv na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Důležité aktualizace služeb také budou oznámeny v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/) Centrum zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
     Několik užitečných tipů:
 
@@ -77,7 +78,7 @@ Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktual
     - [Blog podpory Intune](https://blogs.technet.microsoft.com/intunesupport/)
 
 >[!Note]
->Stav služby Intune je možné monitorovat na [portálu pro správu Office 365](https://portal.office.com/Admin/Default.aspx). Zvolte **Stav služby** v levém podokně. K prohlížení stavu služby také můžete použít [mobilní aplikaci Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a).
+>Můžete monitorovat stav služby Intune [centra pro správu služeb Microsoft 365](https://admin.microsoft.com). Zvolte **Stav služby** v levém podokně. K prohlížení stavu služby také můžete použít [mobilní aplikaci Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a).
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typy oznámení , které Microsoft poskytuje o službě Intune
 

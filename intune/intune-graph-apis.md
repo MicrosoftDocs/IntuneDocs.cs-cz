@@ -10,18 +10,19 @@ ms.date: 03/08/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0b7b149977151fa733bb13d5f60818404466014
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 88f5d7e90adbffea20885aaacc92515807025c2a
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57235986"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57461443"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -589,7 +590,7 @@ Nezapomeňte uživatele přidat podle potřeby k dalším rolím. Například ab
 
 Také:
 
-- Pomocí webu https://portal.office.com přiřaďte licenci pro Intune k vašemu uživatelskému účtu.
+- Pomocí webu https://admin.microsoft.com přiřaďte licenci pro Intune k vašemu uživatelskému účtu.
 
 - Aktualizujte kód aplikace k ověřování v doméně tenanta služby Azure AD daného klienta, nikoli ve vaší vlastní.
 

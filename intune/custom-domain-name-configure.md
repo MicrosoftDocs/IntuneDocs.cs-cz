@@ -10,6 +10,7 @@ ms.date: 02/22/2018
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
 ms.reviewer: angerobe
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 456281d5b77933ef82ee734add9f8d7eaf18750b
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: ba1759b04d2319b9a9d7fd911a885e297c4f23f6
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55839448"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460814"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurace vlastního názvu domény
 
@@ -43,14 +44,14 @@ Tento počáteční název domény onmicrosoft.com nelze přejmenovat ani odebra
 
 ## <a name="to-add-and-verify-your-custom-domain"></a>Přidání a ověření vlastní domény
 
-1. Přejděte na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) a přihlaste se k účtu správce.
+1. Přejděte na [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/) a přihlaste se k vašemu účtu správce.
 
 2. V navigačním podokně zvolte **Nastavení** &gt; **Domény**.
 
 3. Zvolte **Přidat doménu** a zadejte vlastní název domény. Vyberte **Další**.
-   ![Snímek obrazovky z Centra Office 365, kde je vybraná možnost Nastavení > Domény a kde se přidává nový název domény](./media/domain-custom-add.png)
+   ![Centrum pro správu Microsoft 365 snímek obrazovky s nastavením > vybraných domén a novou doménu, název přidávané](./media/domain-custom-add.png)
 4. Otevře se dialogové okno **Ověřit doménu** s hodnotami pro vytvoření záznamu TXT u poskytovatele hostingu DNS.
-    - **Uživatelé GoDaddy**: Portál pro správu Office 365 vás přesměruje na přihlašovací stránku GoDaddy. Po zadání přihlašovacích údajů a přijetí smlouvy o oprávnění ke změně domény se záznam TXT vytvoří automaticky. Případně můžete [záznam TXT vytvořit](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
+    - **Uživatelé GoDaddy**: Centrum pro správu služeb Microsoft 365 vás přesměruje na přihlašovací stránku GoDaddy. Po zadání přihlašovacích údajů a přijetí smlouvy o oprávnění ke změně domény se záznam TXT vytvoří automaticky. Případně můžete [záznam TXT vytvořit](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
     - **Uživatelé Register.com**: Postupujte podle [podrobný](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) k vytvoření záznamu TXT.
 
 Postup pro přidání a ověření vlastní domény může být také [proveden v Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-add-domain/).

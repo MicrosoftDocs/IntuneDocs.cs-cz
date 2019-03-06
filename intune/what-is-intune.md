@@ -1,6 +1,6 @@
 ---
 title: Co je Microsoft Intune
-description: Zjistěte, jak Intune v rámci řešení Enterprise Mobility + Security funguje jako součást pro správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM) a jak vám pomůže ochránit firemní data.
+description: Zjistěte, jak Microsoft Intune je Správa mobilních zařízení (MDM) a mobilní aplikace správy (MAM) součástí Enterprise Mobility + Security řešení a jak vám může pomoct chránit firemní data.
 keywords: co je Intune
 author: dougeby
 ms.author: dougeby
@@ -9,6 +9,7 @@ ms.date: 02/26/2019
 ms.topic: overview
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
 ms.reviewer: pmay
@@ -16,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92cd9a5a6c3ee49b2431b43b024c338e06b5dfe2
-ms.sourcegitcommit: 7d694e3cd01623513c2b163946e60a99ab9535d2
+ms.openlocfilehash: 511e672193ec609f817c10572c99ac73831c54ae
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56891602"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460576"
 ---
 # <a name="what-is-microsoft-intune"></a>Co je Microsoft Intune?
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Intune je cloudová služba v oblasti správy mobility velkých organizací (EMM), která umožňuje, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data. Podobně jako jiné služby Azure je Microsoft Intune k dispozici na portálu Azure Portal. Intune vám umožňuje:
+Microsoft Intune je Cloudová služba v oboru enterprise mobility management (EMM), který umožňuje, aby vaši pracovníci byli produktivní a současně chrání vaše firemní data. Podobně jako jiné služby Azure je Microsoft Intune k dispozici na portálu Azure Portal. Intune vám umožňuje:
 * Správa mobilních zařízení a počítačů, které vaši pracovníci používají pro přístup k firemním datům.
 * Spravovat mobilní aplikace, které vaši pracovníci používají
 * Chránit informace vaší společnosti díky řízení způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
@@ -44,7 +45,7 @@ Intune je cloudová služba v oblasti správy mobility velkých organizací (EMM
 
 
 ## <a name="how-does-intune-work"></a>Jak Intune funguje?
-Intune je součást řešení Enterprise Mobility + Security (EMS), která slouží ke správě mobilních zařízení a aplikací. Úzce se integruje s jinými součástmi řešení EMS, jako je Azure Active Directory (Azure AD) pro účely řízení přístupu a identit, a Azure Information Protection pro účely ochrany dat. Při použití v kombinaci s Office 365 vašim pracovníkům umožňuje, aby byli produktivní na všech zařízeních, a současně chrání informace vaší organizace.
+Intune je součástí Enterprise Mobility + Security (EMS) sada, která spravuje mobilní zařízení a aplikace od Microsoftu. Úzce se integruje s jinými součástmi řešení EMS, jako je Azure Active Directory (Azure AD) pro účely řízení přístupu a identit, a Azure Information Protection pro účely ochrany dat. Při použití v kombinaci s Office 365 vašim pracovníkům umožňuje, aby byli produktivní na všech zařízeních, a současně chrání informace vaší organizace.
 
 ![Obrázek architektury Intune](./media/intunearch_sm.png)
 
@@ -63,7 +64,7 @@ Správa zařízení Intune využívá protokoly nebo rozhraní API, která jsou 
 * Hlášení a měření, jak zařízení dodržují firemní standardy
 * Odebírání firemních dat ze spravovaných zařízení  
 
-Někdy se lidé domnívají, že **řízení přístupu k firemním datům** je funkcí správy zařízení. My to tak nevnímáme, protože to není něco, co by poskytoval mobilní operační systém. Spíše to zajišťuje poskytovatel identity. V našem případě je poskytovatelem identity Azure Active Directory (Azure AD), systém Microsoftu pro správu identity a přístupu.  
+Někdy se lidé domnívají **řízení přístupu k firemním datům** je funkcí správy zařízení. My to tak nevnímáme, protože to není něco, co by poskytoval mobilní operační systém. Spíše to zajišťuje poskytovatel identity. V našem případě je poskytovatelem identity Azure Active Directory (Azure AD), systém Microsoftu pro správu identity a přístupu.  
 
 Intune se integruje s Azure AD a umožňuje širokou škálu scénářů řízení přístupu. Můžete třeba vyžadovat, aby mobilní zařízení vyhovovalo firemním standardům definovaným v Intune, než může získat přístup k firemní službě, jako je Exchange. Podobně můžete přístup k podnikové službě omezit jenom na konkrétní sadu mobilních aplikací. Můžete třeba přístup k Exchangi Online omezit jenom na Outlook nebo Outlook Mobile.
 
@@ -77,11 +78,11 @@ Pod termínem „správa aplikací“ se myslí:
 * Hlášení o inventáři mobilních aplikací
 * Sledování využití mobilních aplikací
 
-Termín „správa mobilních aplikací“ (MAM) se často používá k označení kterékoli z těchto jednotlivých věcí nebo jejich konkrétních kombinací. Lidé si především často spojují koncepci konfigurace aplikací s koncepcí zabezpečení firemních dat v mobilních aplikacích. Důvodem je, že některé mobilní aplikace nabízejí nastavení, která umožňují konfigurovat jejich funkce zabezpečení dat.
+Termín „správa mobilních aplikací“ (MAM) se často používá k označení kterékoli z těchto jednotlivých věcí nebo jejich konkrétních kombinací. Zejména je běžně kombinovat koncepci konfigurace aplikací s koncepcí zabezpečení firemních dat v mobilních aplikacích. Důvodem je, že některé mobilní aplikace nabízejí nastavení, která umožňují konfigurovat jejich funkce zabezpečení dat.
 
 Když mluvíme o konfiguraci aplikací a Intune, máme tím na mysli konkrétně technologie, jako je [konfigurace spravovaných aplikací v systému iOS](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html).
 
-Když Intune použijete s dalšími službami v EMS, můžete organizaci poskytnout zabezpečení mobilních aplikací daleko nad rámec toho, co poskytují mobilní operační systém a samotné mobilní aplikace prostřednictvím konfigurace aplikací. Aplikace, která je spravovaná pomocí EMS, má přístup k širší sadě ochran mobilních aplikací a dat, která zahrnuje:
+Když Intune použijete s dalšími službami v EMS, můžete organizaci poskytnout zabezpečení mobilních aplikací daleko nad rámec toho, co poskytují mobilní operační systém a samotné mobilní aplikace prostřednictvím konfigurace aplikací. Aplikace, která je spravovaná pomocí EMS, má přístup k širší sadě mobilní aplikace a funkce pro ochranu dat, která zahrnuje:
 
 * [Jednotné přihlašování](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)  
 *   [Vícefaktorové ověřování](https://docs.microsoft.com/azure/active-directory/authentication/multi-factor-authentication)
@@ -99,16 +100,16 @@ Zabezpečení aplikací je součástí správy aplikací, takže když mluvíme 
 * Omezení akcí, které můžou uživatelé provádět s firemními informacemi, například kopírování, vyjmutí a vložení, uložení a zobrazení
 * Odebrání firemních dat z mobilních aplikací, které se taky označuje jako selektivní vymazání nebo firemní vymazání
 
-Intune zajišťuje zabezpečení mobilních aplikací mimo jiné prostřednictvím funkce **zásad ochrany aplikací**. Zásady ochrany aplikací využívají identitu Azure AD k izolování firemních dat od osobních. Data, ke kterým se přistupuje pomocí firemních přihlašovacích údajů, dostanou dodatečnou firemní ochranu.
+Jedním ze způsobů, Intune zajišťuje zabezpečení mobilních aplikací, je prostřednictvím jeho **zásady ochrany aplikací** funkce. Zásady ochrany aplikací využívají identitu Azure AD k izolování firemních dat od osobních. Data, která se přistupuje pomocí firemních přihlašovacích údajů dostanou dodatečnou firemní ochranu.
 
-Když se například uživatel ke svému zařízení přihlásí pomocí firemních přihlašovacích údajů, jeho firemní identita mu umožní přístup k datům, která jsou jeho osobní identitě odepřená. Zásady ochrany aplikací určují, jak se při používání tato firemní data ukládají a sdílejí. Na data, ke kterým uživatel přistupuje po přihlášení k zařízení pomocí své osobní identity, se stejné ochrany nepoužívají. Tímto způsobem má IT kontrolu nad firemními daty, zatímco koncový uživatel si udržuje kontrolu a soukromí ve vztahu k osobním datům.
+Například při přihlášení uživatele k zařízení pomocí svých firemních přihlašovacích údajů, jeho firemní identita jim umožní přístup k datům, která jsou jeho osobní identitě. Zásady ochrany aplikací určují, jak se při používání tato firemní data ukládají a sdílejí. Tyto stejné ochrany nepoužívají k datům, která se využívají při přihlášení uživatele do jejich zařízení při jeho osobní identitě. Tímto způsobem IT má kontrolu nad firemní data, zatímco koncový uživatel udržuje kontrolu a soukromí přes jejich osobní údaje.
 
 ## <a name="emm-with-and-without-device-enrollment"></a>EMM s registrací a bez registrace zařízení
 Většina řešení správy mobility velkých organizací podporuje základní technologie mobilních zařízení a mobilních aplikací. Ty jsou obvykle svázány se zařízením, které je zaregistrované v řešení správy mobilních zařízení (MDM) vaší organizace. Intune podporuje tyto scénáře a navíc také mnoho scénářů „bez registrace“.  
 
-Organizace se liší v rozsahu, v jakém přijímají scénáře „bez registrace“. Některé organizace to používají jako standard. Některé to povolují u doplňkových zařízení, jako jsou osobní tablety. Jiné to nepodporují vůbec. I v tomto posledním případě, kdy organizace vyžaduje, aby všechna zařízení zaměstnanců byla zaregistrovaná v MDM, se scénáře „bez registrace“ zpravidla podporují pro dodavatele a jiná zařízení, která mají zvláštní výjimku.
+Organizace se liší v rozsahu, v jakém přijímají scénáře „bez registrace“. Některé organizace to používají jako standard. Některé to povolují u doplňkových zařízení, jako jsou osobní tablety. Jiné to nepodporují vůbec. I v tomto posledním případě, kdy organizace vyžaduje, aby všechna zařízení zaměstnanců byla zaregistrovaná v MDM, podporují obvykle scénáře "bez registrace" pro dodavatele, dodavatele a jiná zařízení, která mají zvláštní výjimku.
 
-Můžete dokonce technologii Intune „bez registrace“ používat i na registrovaných zařízeních. Zařízení zaregistrované v MDM může mít třeba ochranu „Otevřít v aplikaci“ poskytovanou mobilním operačním systémem. Ochrana „Otevřít v aplikaci“ je funkce iOS, která neumožňuje otevřít dokument z jedné aplikace (jako je Outlook) do jiné aplikace (jako je Word), pokud obě aplikace nejsou spravované poskytovatelem řešení MDM. Kromě toho může IT oddělení použít zásady ochrany aplikací na mobilní aplikace spravované pomocí EMS proto, aby řídilo možnost „uložit jako“ nebo zajistilo vícefaktorové ověřování.
+Můžete dokonce technologii Intune „bez registrace“ používat i na registrovaných zařízeních. Zařízení zaregistrované v MDM může mít třeba ochranu „Otevřít v aplikaci“ poskytovanou mobilním operačním systémem. Ochrana "Otevřít v aplikaci" je funkce Apple iOS, která zabrání otevřít dokument z jedné aplikace, jako je Outlook, do jiné aplikace, jako je Word, pokud obě aplikace nejsou spravované poskytovatelem řešení MDM. stejné. Navíc IT mohou použít zásady ochrany aplikací pro mobilní aplikace spravované pomocí EMS proto na ovládací prvek uložit – jako, nebo k poskytování služby Multi-Factor authentication.
 
 Bez ohledu na postoj vaší organizace k zaregistrovaným a nezaregistrovaným mobilním zařízením a aplikacím obsahuje Intune jako součást EMS nástroje, které vám pomůžou zvýšit produktivitu zaměstnanců a současně ochránit firemní data.
 
@@ -133,7 +134,7 @@ Stručný návod pro přizpůsobení prostředí portálu najdete v tématu [Za�
 
 ### <a name="before-you-start"></a>Než začnete
 
-K použití Intune na portálu Azure Portal potřebujete účet správce a tenanta Intune. [Zaregistrujte si účet](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20), pokud ho ještě nemáte.
+K použití Intune na portálu Azure Portal potřebujete účet správce a tenanta Intune. [Zaregistrujte si účet](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20), pokud ho ještě nemáte.
 
 ### <a name="supported-web-browsers-for-the-azure-portal"></a>Prohlížeče, které portál Azure Portal podporuje
 

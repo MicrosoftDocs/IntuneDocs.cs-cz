@@ -37,7 +37,7 @@ Nový indikátor průběhu najdete na stránce[Co je nového v uživatelském ro
 
 #### <a name="bulk-enroll-windows-10-devices----747607---"></a>Hromadná registrace zařízení s Windows 10 <!-- 747607 -->
 
-K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-classic/deploy-use/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Jakmile se balíček použije na vaše zařízení, připojí se k Azure AD, zaregistrují se v Intune a budou připravena na přihlášení uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
+K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](/intune-classic/deploy-use/bulk-enroll-windows), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Jakmile se balíček použije na vaše zařízení, připojí se k Azure AD, zaregistrují se v Intune a budou připravena na přihlášení uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
 ### <a name="whats-new-in-the-public-preview-of-the-intune-admin-experience-on-azure---736542--"></a>Co je nového ve veřejné verzi Preview prostředí pro správu Intune v Azure<!--736542-->
 
@@ -73,7 +73,7 @@ Pokud budete chtít provést nová nasazení do počítačů PC, budete muset po
 
 #### <a name="administration-roles-being-replaced-in-azure-portal"></a>Nahrazení rolí správy na portálu Azure Portal
 
-Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastník a Jen pro čtení) používané v klasickém portálu Intune (Silverlight) byly na portálu Azure Portal pro Intune nahrazeny celou řadou nových možností řízení přístupu na základě role (RBAC). Jakmile migrujete na portál Azure Portal, bude potřeba, abyste svým správcům přiřadili tyto nové role správy. Další informace o RBAC a nových rolích najdete v článku [Řízení přístupu na základě role pro Microsoft Intune](/intune/role-based-access-control).
+Existující role pro správu (MAM) správy mobilních aplikací (Přispěvatel, vlastník a jen pro čtení) používané v Intune (Silverlight) portálu classic se nahrazují s kompletními nových prvků pro správu na základě role (RBAC) v Intune Azure Portal portál. Jakmile migrujete na portál Azure Portal, bude potřeba, abyste svým správcům přiřadili tyto nové role správy. Další informace o RBAC a nových rolích najdete v článku [Řízení přístupu na základě role pro Microsoft Intune](/intune/role-based-access-control).
 
 ### <a name="whats-coming"></a>Co připravujeme
 
@@ -83,13 +83,13 @@ Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a 
 
 Snímky obrazovky předchozího způsobu přihlašování, nového způsobu přihlašování zadáním přihlašovacích údajů a nového způsobu přihlašování z jiného zařízení najdete na stránce [novinek v uživatelském rozhraní aplikací](/intune/whats-new-app-ui).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune mění způsob fungování portálu Intune Partner Portal<!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune se mění prostředí portálu Intune Partner Portal <!-- 1050016 -->
 
 Počínaje aktualizací služby v polovině května 2017 odstraníme stránku Intune Partner z manage.microsoft.com.  
 
 Pokud jste partnerským správcem, nebude už moct stránku Intune Partner zobrazit a provádět z ní jménem vašich zákazníků kroky, ale místo toho se budete muset přihlásit k jednomu ze dvou dalších partnerských portálů Microsoftu.
 
-Ke spravovaným účtům zákazníků se můžete přihlásit z [Partnerského centra Microsoftu](https://partnercenter.microsoft.com/) a z [Centra pro partnerskou správu Microsoft Office 365](https://portal.office.com/). V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
+Oba [Microsoft Partner Center](https://partnercenter.microsoft.com/) a [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/) vám umožní přihlášení k účtům zákazníků spravujete. V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
 
 
 #### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS (Application Transport Security) <!--748318-->
@@ -117,11 +117,11 @@ Na základě posouzení rizik aplikací Skycure, které se povoluje přes zásad
 
 Kvůli modernějšímu vzhledu a chování a lepšímu uživatelskému prostředí bude aktualizováno uživatelské rozhraní aplikace Portál společnosti pro Android. K významným aktualizacím patří:
 
-- Barvy: IT oddělení může v záhlaví karet aplikace Portál společnosti definovat firemní barvy.
-- Aplikace: Na kartě **Aplikace** jsou aktualizovaná tlačítka **Vybrané aplikace** a **Všechny aplikace**.
-- Hledání: Na kartě **Aplikace** má tlačítko **Hledat** podobu plovoucího tlačítka akce.
-- Navigace mezi aplikacemi: Zobrazení **Všechny aplikace** obsahuje karty **Doporučené**, **Vše** a **Kategorie**, které zjednodušují navigaci.
-- Podpora: Karty **Moje zařízení** a **Kontaktovat IT** jsou aktualizované tak, aby byly zřetelnější.
+- Barvy: Záhlaví karet aplikace portál společnosti se zobrazí v IT definované značky.
+- Aplikace: V **aplikace** karta, **vybrané aplikace** a **všechny aplikace** tlačítka se aktualizují.
+- Hledání: V **aplikace** karta, **hledání** tlačítko je plovoucí tlačítko akce.
+- Navigace mezi aplikacemi: **Všechny aplikace** zobrazení teď zobrazují s kartami **doporučené**, **všechny**, a **kategorie** zjednodušují navigaci.
+- Podpora: **Moje zařízení** a **kontakt na IT** karet jsou aktualizované pro lepší čitelnost.
 
 Další podrobnosti o těchto změnách najdete v článku [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](/intune/whats-new-app-ui).
 
@@ -198,9 +198,9 @@ Uživatelům Windows a Windows Phone se při pokusu o registraci zařízení zob
 Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
 
 * __Barvy__: Záhlaví karet můžou mít barvy podle vaší vlastní palety barev.
-* __Rozhraní__: Byla aktualizována tlačítka Vybrané aplikace a Všechny aplikace na kartě Aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
-* __Navigace__: V části Všechny aplikace se teď zobrazují karty Doporučené, Vše a Kategorie, které zjednodušují navigaci.
-* __Služba__: Zlepšila se čitelnost karet Moje zařízení a Kontaktovat IT.
+* __Rozhraní__: Na kartě aplikace byla aktualizována tlačítka vybrané aplikace a všechny aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
+* __Navigace__: Všechny aplikace teď zobrazují karty doporučené, všechny a kategorie, které zjednodušují navigaci.
+* __Služba__: Moje zařízení a kontaktovat oddělení IT zlepšila se čitelnost karet.
 
 Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhraní](/intune/whats-new-app-ui).
 
@@ -321,8 +321,7 @@ __Nový Portál společnosti Microsoft Intune pro zařízení s Windows 10__ Spo
 Tato nová aplikace také uživatelům umožní využít v zařízeních s Windows 10 další funkce platformy, jako je jednotné přihlašování (SSO) a ověřování na základě certifikátů. Tato aplikace bude dostupná jako upgrade stávající aplikace Portál společnosti Windows 8.1 a Portál společnosti Windows Phone 8.1 a instaluje se z Microsoft Storu. Další podrobnosti najdete na adrese [aka.ms/intunecp_universalapp](http://aka.ms/intunecp_universalapp).
 
 > [!IMPORTANT]
-> __Aktualizace v Intune a Androidu for Work__
-> Aplikace Android for Work můžete nasazovat s akcí __Požadované__, ale pokud byly vaše skupiny Intune migrovány do nového prostředí Azure AD, můžete aplikace nasazovat jenom jako __Dostupné__.
+> __Aktualizace v Intune a Androidu for Work__Aplikace Android for Work můžete nasazovat s akcí __Požadované__, ale pokud byly vaše skupiny Intune migrovány do nového prostředí Azure AD, můžete aplikace nasazovat jenom jako __Dostupné__.
 
 __Intune App SDK pro modul plug-in Cordova teď podporuje MAM bez registrace__ Vývojáři aplikací můžou teď pomocí modulu plug-in Cordova sady Intune App SDK povolit funkce MAM bez registrace zařízení ve svých aplikacích založených na Cordově pro Android a iOS. Modul plug-in Cordova sady Intune App SDK najdete [tady](https://github.com/msintuneappsdk/cordova-plugin-ms-intune-mam).
 

@@ -10,16 +10,17 @@ ms.date: 02/23/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04c57870f32d853b48be96a58afaa7b534250e0c
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: 0cde1977b0c126f478abae06860110acc2f10444
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57228118"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460763"
 ---
 # <a name="intune-tenant-status-page"></a>Stránka stavu Tenanta Intune
 Na stránce Stav Tenanta je centrála, kde můžete zobrazit aktuální a důležité podrobnosti o vašem tenantovi. Podrobnosti zahrnují dostupnost licencí a použití, stav konektoru a důležité komunikace o službě Intune.  
@@ -60,19 +61,19 @@ Když je více než jeden konektor libovolného typu, je stav souhrn pro všechn
 Když vyberete konektor v seznamu, zobrazí na portálu stránky portálu, který je relevantní pro vytvoření nebo konfigurace tohoto konektoru.  Například, když vyberete **datum vypršení platnosti VPP** konektor, **tokeny programu hromadných nákupů pro iOS** stránce otevře, kde najdete další podrobnosti o tento konektor. Můžete pak vytvořit novou konfiguraci nebo upravit a opravte problémy s již existující.  
 
 ## <a name="intune-service-health"></a>Stav služby Intune  
-Můžete zobrazit podrobnosti pro aktivní incidenty a upozornění od společnosti bez nutnosti přejít na řídicí panel s stavu služby Microsoft 365 nebo Centrum zpráv, umístěny v Centru pro správu služeb Microsoft 365 na https://portal.office.com. Jsou zobrazeny pouze incidenty, pokud bylo zaznamenáno dopad ovlivnit vašeho tenanta.  
+Můžete zobrazit podrobnosti pro aktivní incidenty a upozornění od společnosti bez nutnosti přejít na řídicí panel s stavu služby Microsoft 365 nebo Centrum zpráv, umístěny v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com). Jsou zobrazeny pouze incidenty, pokud bylo zaznamenáno dopad ovlivnit vašeho tenanta.  
 
 Když vyberete incident, podrobnosti o incidentu zobrazí přímo na stránce Stav Tenanta. Chcete-li zobrazit minulé poradci a incidentů, vyberte **zobrazit dřívější poradci pro incidenty**. Otevře se Centrum pro správu služeb Microsoft 365 a pak můžete zobrazit poradci a incidenty za posledních 30 dnů pro vašeho tenanta.  
 
-Chcete-li zobrazit informace o *stav služby Intune*, musí mít váš účet **globálního správce** nebo **Správce služeb** role v Azure Active Directory nebo Portál pro správu Office. Pokud chcete přiřadit oprávnění, přihlaste se k [centra pro správu služeb Microsoft 365](https://portal.officeppe.com/AdminPortal/Home#/homepage) s oprávněními globálního správce. Vyberte **uživatele > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **upravit** rolí, vyberte *Správce služeb* nebo *globálního správce*a potom **Uložit** úpravy přiřazení oprávnění.  
+Chcete-li zobrazit informace o *stav služby Intune*, musí mít váš účet **globálního správce** nebo **Správce služeb** role v Azure Active Directory nebo Centrum pro správu Microsoftu 365. Pokud chcete přiřadit oprávnění, přihlaste se k [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) s oprávněními globálního správce. Vyberte **uživatele > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **upravit** rolí, vyberte *Správce služeb* nebo *globálního správce*a potom **Uložit** úpravy přiřazení oprávnění.  
 
 Pouze můžete nastavit předvolby komunikace pro stav služby Intune prostřednictvím centra pro správu Microsoftu 365.
 
 ## <a name="intune-news"></a>Novinky v Intune  
 Zobrazit informační komunikaci od týmu služby Intune bez nutnosti přejít na Centrum zpráv Office. Komunikace zahrnout zprávy o změnách, které nedávno došlo ve službě Intune nebo které jsou na cestě pro vašeho tenanta.  
 
-Ve výchozím zobrazení posledních 10 aktivní zprávy. Chcete-li zobrazit starším zprávám, vyberte **zobrazit dřívější zprávy** otevřít *Centrum zpráv* v portálu System center pro správu služeb Microsoft 365.  
+Ve výchozím zobrazení posledních 10 aktivní zprávy. Chcete-li zobrazit starším zprávám, vyberte **zobrazit dřívější zprávy** otevřete *Centrum zpráv* v Centru pro správu Microsoftu 365.  
 
-Chcete-li zobrazit informace o Intune zprávy, musí mít váš účet **globálního správce** nebo **Správce služeb** role v Azure Active Directory, nebo **Čtenář Centra zpráv** rolí na portálu správy Office.  Pokud chcete přiřadit toto oprávnění, přihlaste se k [centra pro správu služeb Microsoft 365](https://portal.officeppe.com/AdminPortal/Home#/homepage) s oprávněními správce. Vyberte **uživatele > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **upravit** pro *role*vyberte *týmy komunikace správce*a potom **Uložit** úpravy přiřazení oprávnění.  
+Chcete-li zobrazit informace o Intune zprávy, musí mít váš účet **globálního správce** nebo **Správce služeb** role v Azure Active Directory, nebo **Čtenář Centra zpráv** role v Centru pro správu Microsoftu 365.  Pokud chcete přiřadit toto oprávnění, přihlaste se k [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) s oprávněními správce. Vyberte **uživatele > aktivní uživatelé**a pak vyberte účet, který vyžaduje přístup. Vyberte **upravit** pro *role*vyberte *týmy komunikace správce*a potom **Uložit** úpravy přiřazení oprávnění.  
 
 Pouze můžete nastavit předvolby komunikace pro Intune příspěvky prostřednictvím centra pro správu Microsoftu 365.

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 02/22/2019
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d1693515-de18-4553-91ef-801976cd3ec7
 ms.reviewer: chrisgre
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c4ba4d144338c2cd775a5389f3587c94625b94b4
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: cc73e24da6cd774811eb30d0ca7f551760b9a274
+ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742240"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57389383"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
@@ -33,7 +34,7 @@ Pro aplikace, které jsou na seznamu schválených aplikací, nastavte zásady p
 > Tento článek vás provede postupem přidání zásad podmíněného přístupu na základě aplikace. Stejný postup použijte, když ze seznamu schválených aplikací přidáváte aplikace, jako je SharePoint Online, Microsoft Teams nebo Microsoft Exchange Online.
 
 ## <a name="create-app-based-conditional-access-policies"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
-Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*. To znamená, že nemusíte přepínat mezi Intune a Azure AD ke konfiguraci zásad.
+Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*. To znamená, že nemusíte přepínat mezi Intune a Azure AD ke konfiguraci zásad.
 
 > [!IMPORTANT]
 > Musíte mít licenci Azure AD Premium k vytvoření zásady podmíněného přístupu z portálu Intune.

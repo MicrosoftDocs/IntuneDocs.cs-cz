@@ -10,6 +10,7 @@ ms.date: 01/06/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 195931c0-8208-43bd-b0af-b1f8e469a32c
 ms.reviewer: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b0ed363acca7fc0021569009b1f672a06101e29f
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 1dea5f0a794e0b947e1f542b796e946de85f7eb4
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55834173"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460373"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -53,7 +54,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
     ![Snímek obrazovky nového přihlašovacích údajů procesu zkušebního účtu Intune](./media/account-sign-up-site-user-id.png)
 
-    Pokud má vaše organizace vlastní doménu, kterou chcete použít bez **.onmicrosoft.com**, můžete doménu změnit na portálu pro správu Office 365 podle popisu v další části tohoto článku.
+    Pokud má vaše organizace vlastní vlastní doménu, kterou chcete použít, aniž by **. onmicrosoft.com**, můžete změnit, že v Centru pro správu služeb Microsoft 365 je popsáno dále v tomto článku.
 
 3. Na konci registrace si můžete prohlédnout informace o novém účtu.
 
@@ -96,24 +97,24 @@ Další informace o autoritě MDM najdete v článku [Nastavení autority pro sp
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurace vlastního názvu domény (volitelné)
 
-Řekli jsme si, že pokud má organizace vlastní doménu, kterou chcete použít bez **.onmicrosoft.com**, můžete ji změnit na portálu pro správu Office 365. Můžete přidat, ověřit nebo konfigurovat název vlastní domény.  
+Jak bylo zmíněno výše, pokud má vaše organizace vlastní vlastní doménu, kterou chcete použít, aniž by **. onmicrosoft.com**, můžete ji změnit v Centru pro správu Microsoftu 365. Můžete přidat, ověřit nebo konfigurovat název vlastní domény.  
 
 > [!IMPORTANT]
 > Počáteční název domény **onmicrosoft.com** nemůžete přejmenovat ani odebrat. Aby bylo možné zachovat identitu firmy, můžete přidat, ověřit nebo odebrat vlastní názvy domén používané s Intune.
 
-1. Přejděte na [portál pro správu Office 365](https://portal.office.com/Admin/Default.aspx) a přihlaste se pod účtem správce.
+1. Přejděte na [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) a přihlaste se pomocí účtu správce.
 
 2. V navigačním podokně zvolte **Nastavení** > **Domény** > **Přidat doménu**.
 
 3. Zadejte název vlastní domény. Pak vyberte **Další**.
 
-   ![Snímek obrazovky z centra pro správu Office 365 – přidání domény](./media/domain-custom-add.png)
+   ![Snímek obrazovky s Microsoft 365 správce System center – přidání domény](./media/domain-custom-add.png)
 
 4. Potvrďte, že jste vlastník domény zadané v předchozím kroku. 
     
     Pokud vyberete, že chcete **poslat kód e-mailem**, odešle se e-mail kontaktu, který je zaregistrovaný u domény. Jakmile dostanete e-mail, zkopírujte kód a zadejte ho do pole označeného **Sem napište ověřovací kód**. Pokud se ověřovací kód shoduje, přidá se doména do tenanta. Zobrazený e-mail vám nemusí být povědomý. Někteří registrátoři totiž skrývají skutečnou e-mailovou adresu zadanou při registraci domény.
 
-   ![Snímek obrazovky z centra pro správu Office 365 – ověření domény](./media/domain-custom-verify.png)
+   ![Snímek obrazovky s Microsoft 365 správce System center – ověření domény](./media/domain-custom-verify.png)
 
    > [!NOTE]
    > Podrobné informace o ověření záznamu TXT najdete v článku [Vytvoření záznamů DNS pro Office 365 u libovolného poskytovatele hostingu DNS](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-7B7B075D-79F9-4E37-8A9E-FB60C1D95166).
@@ -122,7 +123,7 @@ Další informace o autoritě MDM najdete v článku [Nastavení autority pro sp
 
 Existují dva portály, které můžete použít:
 - Řídicí panel Intune v Azure ([portal.azure.com](https://portal.azure.com)), kde můžete prozkoumat [možnosti Intune](what-is-intune.md). Na řídicím panelu Intune budete obvykle pracovat.
-- Centrum pro správu Office 365 ([portal.office.com](https://portal.office.com)), kde můžete přidávat a spravovat uživatele, pokud k tomu nepoužíváte Azure Active Directory. Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
+- Centrum pro správu služeb Microsoft 365 ([admin.microsoft.com](https://admin.microsoft.com)) je ve kterém můžete přidat a spravovat uživatele, pokud k tomu nepoužíváte Azure Active Directory. Můžete také spravovat další oblasti svého účtu, včetně fakturace a podpory.
 
 ## <a name="next-steps"></a>Další postup
 
