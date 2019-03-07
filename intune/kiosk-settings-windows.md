@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ce63f836c006c44e88f939c29f3d9648acc045e
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: ed33ed58141be9463d9f0ce885eb5ccb9951effb
+ms.sourcegitcommit: a624abbfc3c80c5fba6c47a19cf1a6923c5fd438
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57400360"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528305"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 a novější zařízení nastavení pro spuštění jako veřejný terminál v Intune
 
@@ -104,7 +104,7 @@ Na zařízení spustí jenom jedna aplikace.
 
 ## <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
 
-Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit.
+Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou jedinými aplikacemi, které může uživatel spustit. Pokud aplikace obsahuje závislost na jiné aplikace, obě musí být součástí seznamu povolených aplikací. Například Internet Explorer 64-bit závislý na Internet Explorer 32-bit, takže je potřeba povolit "C:\Program Files\internet explorer\iexplore.exe" a "C:\Program Files (x86) \Internet". 
 
 - **Vyberte režim veřejného terminálu**: Zvolte **veřejný terminál s více aplikacemi**.
 

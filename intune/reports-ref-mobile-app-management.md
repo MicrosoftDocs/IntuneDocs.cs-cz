@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/20/2018
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d47d681a1c4dd34a2738839f9561efbe621a5b0
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 0f64afa1a2b111f168919f9d6669e246ee348461
+ms.sourcegitcommit: a624abbfc3c80c5fba6c47a19cf1a6923c5fd438
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57390559"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528254"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referenční informace o entitách správy mobilních aplikací (MAM)
 
@@ -84,12 +84,12 @@ Entita **MamCheckin** představuje data shromážděná v době, kdy se instance
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
 | DateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
-| ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený |2.5.1900 12:00:00 |
-| UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený |12.1.1900 12:00:00 |
-| ApplicationKey |Klíč aplikace MAM, která se přihlásila |10.1.1900 12:00:00 |
-| DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený |2.1.1900 12:00:00 |
-| PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |1.1.1900 12:00:00 |
-| EffectiveAppliedPolicyKey |Představuje platné použité zásady, které jsou k tomuto přihlášení aplikace MAM přidružené. Platné použité zásady jsou výsledkem sloučení všech zásad, které jsou pro konkrétní aplikaci a uživatele relevantní. |2.5.1900 12:00:00 |
+| ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
+| UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
+| ApplicationKey |Klíč aplikace MAM, která se přihlásila |234 |
+| DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
+| PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
+| EffectiveAppliedPolicyKey |Představuje platné použité zásady, které jsou k tomuto přihlášení aplikace MAM přidružené. Platné použité zásady jsou výsledkem sloučení všech zásad, které jsou pro konkrétní aplikaci a uživatele relevantní. | 322 |
 | LastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
@@ -98,8 +98,8 @@ Entita **MamDeviceHealth** představuje zařízení, na kterých jsou nasazené 
 
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
-| DeviceHealthKey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |1.1.1900 12:00:00 |
-| DeviceHealth |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |1.1.1900 12:00:00 |
+| DeviceHealthKey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |123 |
+| DeviceHealth |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-ffff-7777-0340-032819502773 |
 | DeviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
 | RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 

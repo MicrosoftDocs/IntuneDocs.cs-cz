@@ -3,8 +3,8 @@ title: 'Kurz: Ochrana e-mailu Exchange Online na zařízeních spravovaných v I
 titlesuffix: Microsoft Intune
 description: Přečtěte si o tom, jak zabezpečit Exchange Online pomocí zásad dodržování předpisů Intune a podmíněného přístupu Azure AD, které vyžadují spravovaná zařízení a aplikaci Outlook.
 keywords: ''
-author: msmimart
-ms.author: mimart
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/19/2018
 ms.topic: tutorial
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d748cc1b9549dfb29d38388a8279cacd8d471b3
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 6c76a22fec1342481a67029147c757347a06447c
+ms.sourcegitcommit: a624abbfc3c80c5fba6c47a19cf1a6923c5fd438
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57396637"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528203"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních
 Přečtěte si o použití zásad dodržování předpisů zařízením s podmíněným přístupem, které zajistí, že zařízení s iOSem mají přístup k e-mailu Exchange Online pouze v případě, že jsou spravovaná v Intune a používají schválenou e-mailovou aplikaci. 

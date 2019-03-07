@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e035166200f1112898e4b2fcf2f8618e2f1cc060
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.openlocfilehash: 16f49c4b8be25766065456270e9ed426a063a212
+ms.sourcegitcommit: a624abbfc3c80c5fba6c47a19cf1a6923c5fd438
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461511"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57528373"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -836,7 +836,7 @@ V části **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit 
 Platí pro: 
 - Android
 
-<!-- ########################## -->
+<!-- ########################### -->
 ## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](./includes/intune-notices.md)]
