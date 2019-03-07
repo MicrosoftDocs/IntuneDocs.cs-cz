@@ -9,18 +9,19 @@ ms.date: 02/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
+ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 4fdb787e-084f-4507-9c63-c96b13bfcdf9
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf4d63ed680b589dd6743daa491c5eaddb74352e
-ms.sourcegitcommit: cb93613bef7f6015a4c4095e875cb12dd76f002e
+ms.openlocfilehash: a0f15eb4aecc1c4c71420df7036a7d143ba298cd
+ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57230988"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57460883"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -166,7 +167,7 @@ Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, kt
 
 Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebovat odstranit zařízení z Azure AD. Pomocí akce **Odstranit** můžete z portálu Azure Portal odebrat záznamy zařízení, o kterých víte, že jsou nedosažitelná a je nepravděpodobné, že by se službou Azure znovu komunikovala. Akce **Odstranit** neodebere zařízení ze správy.
 
-1.  Přihlaste se k [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [portálu Office 365](https://portal.office.com). V nabídce vyberte **Centra pro správu** > **Azure AD**.
+1.  Přihlaste se k [Azure Active Directory na portálu Azure Portal](http://aka.ms/accessaad) pomocí přihlašovacích údajů správce. Můžete se také přihlásit k [centra pro správu služeb Microsoft 365](https://admin.microsoft.com). V nabídce vyberte **Centra pro správu** > **Azure AD**.
 2.  Pokud nemáte předplatné Azure, vytvořte ho. Pokud máte placený účet, neměli byste potřebovat platební kartu ani zadání platby (vyberte odkaz pro předplatné **Zdarma zaregistrovat službu Azure Active Directory** ).
 3.  Vyberte **Azure Active Directory** a pak vyberte svoji organizaci.
 4.  Vyberte kartu **Uživatelé** .
