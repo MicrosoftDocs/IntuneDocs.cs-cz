@@ -7,7 +7,7 @@ author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 02/21/2018
-ms.topic: conceptual
+ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc5c9a202f24dcf88e9a94d9431ac9e0fafa9864
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 065535bc6bb4dc586ab45ffa0a9a1250c0a1c908
+ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57389946"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57566484"
 ---
 # <a name="microsoft-intune-app-sdk-overview"></a>Přehled Microsoft Intune App SDK
 Intune App SDK, k dispozici pro iOS a Android, umožňuje aplikaci pro podporu Intune [zásady ochrany aplikací](app-protection-policy.md). Pokud má vaše aplikace použít zásady ochrany aplikací, je možné spravovat pomocí Intune a je rozpoznaná službou Intune jako spravovanou aplikaci. Sada SDK se snaží minimalizovat od vývojáře aplikace vyžadovat změny kódu. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Pro zlepšení koncových uživatelů a prostředí pro správce IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.

@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 808c5e5c27c7f0ff5c22a0ddc99374da8bfd44bc
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.openlocfilehash: 5a5e000a973932db0bbaa215ea94976219ff905c
+ms.sourcegitcommit: 6da78a3c07e9ad9c72ff532867cde754e9deca00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461477"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57577842"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -132,6 +132,7 @@ V následující tabulce jsou uvedeny chybové zprávy s popisem podrobností o 
 | Nelze nainstalovat aplikace pro systém u svého poskytovatele MDM (-2016330858). | Instalace aplikací, které jsou předinstalované v operačním systému iOS není podporovaný scénář. |
 | Nelze instalovat aplikace, když je zařízení v režimu ztráty (-2016330857). | Veškeré možnosti použití zařízení je blokováno v režimu ztráty.   Zakážete režim ztráty instalovat aplikace. |
 | Nelze instalovat aplikace, když je zařízení v celoobrazovkovém režimu (-2016330856). | Zkuste zařízení přidat do skupiny vyloučení pro zásady Konfigurace celoobrazovkového režimu pro instalaci aplikace. |
+| Nelze nainstalovat 32bitové aplikace na tomto zařízení (-2016330852). | Zařízení nepodporuje instalaci 32bitové aplikace. Vyzkoušejte si nasazení 64bitovou verzi aplikace. |
 | Uživatel musí přihlásit k aplikaci Store (-2016330855). | Uživatel musí přihlásit k aplikaci Store před instalací aplikace. |
 | Neznámý problém. Pokuste se znovu (-2016330854). | Instalace aplikace se nezdařila z neznámého důvodu.   Opakujte akci později. |
 | Instalace aplikace se nezdařilo. Intune se pokusí znovu při příštím synchronizuje zařízení (-2016330853). | Instalace aplikace došlo k chybě zařízení. Synchronizace zařízení a zkuste nainstalovat aplikace znovu. |

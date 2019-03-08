@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4ab45a65fb9c52a48472c7efc3b6bdc7cead1f6e
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 19f0fbf401fee4bad660e946bb135544a29de310
+ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57390688"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57566501"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -116,7 +116,7 @@ S certifikátem Push Certificate může Intune registrovat a spravovat zařízen
 Po nainstalování tokenu můžete vytvořit registrační profil pro zařízení DEP. Registrační profil zařízení definuje nastavení, která se během registrace použijí pro skupinu zařízení.
 
 > [!NOTE]
-> Zařízení se zablokuje, pokud nejsou k dispozici dostatek licencí portál společnosti pro VPP token, nebo pokud vypršela platnost tokenu. Intune se zobrazí výstraha whne token brzy vyprší platnost licence jsou spuštěné nebo nízké.
+> Zařízení se zablokuje, pokud nejsou k dispozici dostatek licencí portál společnosti pro VPP token, nebo pokud vypršela platnost tokenu. Intune se zobrazit upozornění, když token brzy vyprší platnost nebo není k dispozici dostatek licencí.
  
 
 1. V Intune na portálu Azure Portal zvolte **Registrace zařízení** > **Registrace Apple** > **Tokeny programu registrace**.
@@ -151,6 +151,8 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
 7. Pokud jste u možnosti **Nainstalovat Portál společnosti pomocí VPP** vybrali token, můžete zařízení uzamknout v režimu jedné aplikace (konkrétně Portálu společnosti) ihned po dokončení Průvodce nastavením. Tuto možnost nastavíte volbou **Ano** u položky **Spustit Portál společnosti v režimu Jedna aplikace, dokud neproběhne ověření**. Než bude uživatel moct zařízení použít, musí se nejprve ověřit přihlášením na Portálu společnosti.
     Tato funkce je podporované jenom pro iOS 11.3.1 a novější.
+
+   ![Snímek obrazovky režimu jedné aplikace.](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
 8. Zvolte **Nastavení správy zařízení** a vyberte, jestli mají být zařízení, která používají tento profil, pod dohledem nebo ne.
 
