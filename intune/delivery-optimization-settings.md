@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/27/2019
+ms.date: 03/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b9480e6eab21ace05456bd74e89d495517a8356
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
+ms.openlocfilehash: e6e90828da8c209b534b830af7fe522b254374bf
+ms.sourcegitcommit: 29d754c2b67aa2d8f4fb68343988c3bb05d5dcec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57566518"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57695275"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Nastavení optimalizace doručení pro Intune
 
@@ -65,6 +65,8 @@ Nakonfigurování Intune na používání těchto nastavení najdete v tématu [
 |[Minimální stav baterie potřeba nahrát (v %)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#allow-uploads-while-the-device-is-on-battery-while-under-set-battery-level)      | 1709        | Zadejte jako procento, minimální baterie, které zařízení musí mít k odesílání dat do partnerské uzly. Pokud stav baterie klesne na zadanou hodnotu, umožňuje automaticky pozastavit všechny aktivní nahrávání.   <br><br>**Výchozí**:  *Žádné hodnoty*  <br><br>**Doporučené**:  40%   <br><br>Zásady CSP: [DOMinBatteryPercentageAllowedToUpload](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dominbatterypercentageallowedtoupload) <br><br>        |
 |[Změnit jednotky mezipaměti](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#modify-cache-drive)        | 1607        | Určete taky jednotku, používá tento optimalizace doručení pro uloženou v mezipaměti. Můžete použít proměnné prostředí, písmeno jednotky nebo úplnou cestu.  <br><br>**Výchozí**: % systemdrive % musí být % <br><br>Zásady CSP:  [DOModifyCacheDrive](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domodifycachedrive) <br><br>        |
 | [Maximální stáří mezipaměti (ve dnech)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#max-cache-age)    | 1511         | Zadejte jak dlouho po úspěšně stahování jednotlivých souborů, že soubor je uložený v mezipaměti optimalizace doručení na zařízení.   <br><br>Pomocí Intune nakonfigurovat mezipaměti stáří ve dnech. Počet dní, po které můžete definovat je převeden na příslušný počet sekund, což je, jak Windows definuje toto nastavení. Například konfiguraci služby Intune 3 dny, je převedena na zařízení 259200 sekund (3 dny).  <br><br>**Výchozí**:   *Žádné hodnoty*     <br><br>**Doporučené**: 7   <br><br>Zásady CSP: [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
+| Typ velikosti mezipaměti  | *Zobrazit podrobnosti*    | Vyberte, jak spravovat množství místa na disku na zařízení, které používají optimalizace doručení. Pokud není nakonfigurováno, použije výchozí velikost mezipaměti 20 % volného místa k dispozici.  <br><ul><li>**Není nakonfigurováno** (výchozí)</li><br><li>**Absolutní** – zadejte [absolutní maximální velikost mezipaměti (v GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#absolute-max-cache-size) nakonfigurovat maximální množství místa na disku zařízení může používat pro optimalizaci doručení. Pokud je nastavený na hodnotu 0 (nula), velikost mezipaměti neomezený, i když optimalizace doručení se vymazání mezipaměti, pokud zařízení není dostatek místa na disku. <br><br>Vyžaduje Windows 1607<br><br> Zásady CSP: [DOAbsoluteMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize) </li><br><li>**Procento** – zadejte [maximální velikost mezipaměti (v %)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#max-cache-size) nakonfigurovat maximální množství místa na disku zařízení může používat pro optimalizaci doručení. Je procento místa dostupnou jednotku a optimalizace doručení neustále vyhodnocuje dostupné místo na disku a vymaže mezipaměť zajistit maximální velikost mezipaměti v rámci sady procento. <br><br>Vyžaduje Windows 1511<br><br>Zásady CSP: [DOMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)  |
+| [Sítě VPN do sdílené mezipaměti](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#enable-peer-caching-while-the-device-connects-via-vpn)  | 1709  | Vyberte **povoleno** konfigurace zařízení k účasti ve sdílené mezipaměti během připojení k doménové síti pomocí sítě VPN. Zařízení, u kterých jde můžete stáhnout z nebo nahrání do jiné domény síťová zařízení, sítě VPN nebo v podnikové doménové síti.  <br><br>**Výchozí**: Není nakonfigurováno  <br><br>Zásady CSP: [DOAllowVPNPeerCaching](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)    |
 
 ## <a name="next-steps"></a>Další postup
 

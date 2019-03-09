@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: befc07fe1c5d4c25bc082168045acacd353e4654
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 0aff39eeb8a825c4161ee92d798dc817d5928995
+ms.sourcegitcommit: a59c78c13c4ff68e8a56b69029adfe51704ba570
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57397241"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682602"
 ---
 # <a name="microsoft-outlook-configuration-settings"></a>Nastavení konfigurace Microsoft Outlooku 
 
@@ -36,5 +36,5 @@ Při přidání zásad konfigurace v Intune, můžete zadat nastavení pro konfi
 Informace o nastavení účtu Outlooku a příklady kroků pro iOS a zařízení s Androidem v Microsoft Intune najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikace pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
 ## <a name="next-steps"></a>Další postup
-[Konfigurace nastavení e-mailu v Intune](email-settings-configure.md)
 
+- Další informace najdete v tématu [zásad Konfigurace aplikací pro Microsoft Intune](app-configuration-policies-overview.md)

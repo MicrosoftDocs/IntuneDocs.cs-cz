@@ -5,50 +5,86 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/29/2018
-ms.topic: conceptual
+ms.date: 03/08/2019
+ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
-ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50163b253cddadc5e18eef8f43199691117f14cd
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 0625968c4f0c30d125be73045a52b58a032b2fd7
+ms.sourcegitcommit: a59c78c13c4ff68e8a56b69029adfe51704ba570
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57394091"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682619"
 ---
-# <a name="use-scope-tags-to-filter-policies"></a>Filtrování zásad pomocí značek oboru
+# <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Použití značek RBAC a obor pro distribuované IT
 
-Značky oboru vám umožňují filtrovat zásady pomocí značek, které sami vytvoříte. Můžete použít značky oboru role a aplikace.
+Abyste měli jistotu, že správné Správci mají správný přístup a viditelnost pro správné objekty Intune můžete použít řízení přístupu na základě role (RBAC) a značky oboru. Role určují, jaký přístup do objektů, které mají správci. Značky oboru určit, které objekty se správcům zobrazí.
 
-Když správce vytvoří prostředek v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový prostředek.
+Například Řekněme, že správce regionální pobočky Seattle má přiřazenou roli správce zásad a profilů. Chcete, aby tento správce zobrazit a spravovat profily a zásady, které se vztahují jenom na zařízení Seattle. Proto byste:
 
-Můžete například vytvořit značku oboru s názvem „Technické oddělení“ a přiřadit ji ke konfiguračním profilům týkajícím se právě tohoto oddělení. Následně ji přiřadíte k roli „Správci technického oddělení“. Těmto uživatelům se pak zobrazí jen zásady se značkou „Technické oddělení“.
+1. Vytvořte značku oboru názvem Seattle.
+2. Vytvořte přiřazení role pro roli správce zásad a profilů pomocí: 
+    - Členové (skupiny) = skupinu zabezpečení s názvem správcům Seattle IT. Všichni správci v této skupině budou mít oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
+    - Rozsah (skupiny) = bezpečnostní skupiny s názvem Seattle uživatelů. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny). 
+    - Obor (značky) = Seattle. Správci v členu (skupiny) můžete zobrazit zařízení, které také obsahovat značku oboru Seattle.
+3. Přidáte značku oboru Seattle zásady a profily, které chcete, aby správci v členy (skupiny), bude mít přístup.
+4. Přidáte značku oboru Seattle do zařízení, která chcete viditelné pro správce v členy (skupiny). 
+
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-Vyberte **Role** > **Obor (značky)** > **Vytvořit**.
-
-## <a name="to-add-a-scope-tag-to-a-configuration-profile"></a>Přidaní značky oboru do konfiguračního profilu
-
-Zvolte **Konfigurace zařízení** > **Profily** > vyberete profil > **Vlastnosti** > **Obor (značky)**.
+1. V Intune, zvolte **role** > **obor (značky)** > **vytvořit**.
+2. Zadejte **Název** a **Popis**.
+3. Zvolte **Vytvořit**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
-Zvolte **Role** > **Všechny role** > **Správce zásad a profilů** > **Přiřazení** > **Obor (značky)**.
+1. V Intune, zvolte **role** > **všechny role** > vyberte roli > **přiřazení** > **přiřadit**.
+2. Poskytují **název přiřazení** a **popis**.
+3. Zvolte **členy (skupiny)** a vyberte skupiny, které chcete, aby jako součást tohoto přiřazení. Uživatelé z této skupiny mají oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
+4. Zvolte **rozsah (skupiny)** a vyberte uživatele a skupiny, které mají být součástí tohoto přiřazení. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny).
+5. Zvolte **obor (značky)** > **přidat** > zvolte značky, které chcete přidat do této role. Uživatelé v členy (skupiny) bude mít přístup k zásady a profily, které mají stejnou značku oboru.
+6. Zvolte **Vybrat** > **OK** > **OK**. 
 
-## <a name="to-assign-a-scope-tag-to-an-app"></a>Přiřadit značky oboru aplikace
+## <a name="to-add-a-scope-tag-to-a-configuration-profile"></a>Přidaní značky oboru do konfiguračního profilu
+1. V Intune, zvolte **konfigurace zařízení** > **profily** > zvolte profil > **vlastnosti** > **obor (značky)**   >  **Přidat**.
+2. V části **vyberte značky**, zvolte značky, které chcete přidat do profilu.
+3. Zvolte **vyberte** > **OK** > **Uložit**.
 
-Zvolte **klientské aplikace** > **aplikace** > zvolte aplikace > **vlastnosti** > **obor (značky)**  >  **Přidat** > zvolte značky > **vyberte** > **OK** > **Uložit**.
+## <a name="scope-tag-details"></a>Podrobnosti značky oboru
+Při práci s značky oboru, mějte na paměti následující informace:
+
+- Nyní můžete přiřadit značky oboru na:
+    - Přiřazení rolí
+    - Zásady dodržování předpisů pro zařízení
+    - Konfigurační profily zařízení
+    - Aktualizuje aktualizační kanály Windows 10
+    - Spravovaná zařízení
+    - Aplikace
+    - Zásady Konfigurace aplikací – spravovaná zařízení
+    - Skripty prostředí PowerShell
+    - Tokeny DEP
+    - Když správce vytvoří objekt v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový objekt.
+- RBAC v Intune se nevztahuje k rolím Azure Active Directory. Tedy role Správci služby Intune a globální Správci mají přístup správce k Intune bez ohledu na to, co značky oboru mají.
+- Správci v přiřazení role pomocí značky oboru můžete také zobrazit objekty Intune se žádné značky oboru.
+- Pouze můžete přiřadit značky oboru, který máte v přiřazení role.
+- Můžete pouze cílové skupiny, které jsou uvedeny v oboru přiřazení role (skupiny).
+- Pokud máte značka oboru přiřazené pro vaši roli nelze odstranit všechny značky oboru objektu Intune. Vyžaduje se aspoň jeden obor značky.
+- Pokud má uživatel více přiřazení role, oprávnění v těchto přiřazení rolí následujícím způsobem rozšířit na různé objekty:
+    - Přiřazení oprávnění se vztahují jenom na objekty (třeba zásady nebo aplikace) v této roli přiřazení rozsah (skupiny). Přiřazení oprávnění se nevztahují na objekty v jiných přiřazení rolí není-li toto přiřazení je explicitně neudělí.
+    - Pro všechny objekty stejného typu (stejně jako všechny zásady nebo všechny aplikace) se vztahují další oprávnění (jako je například vytvoření a čtení), v některém z přiřazení uživatele.
+    - Oprávnění pro objekty různé typy (třeba zásady nebo aplikace), nemůžete použít k sobě navzájem. Oprávnění ke čtení pro zásady, například, neposkytuje oprávnění pro čtení k aplikacím v přiřazení uživatele.
+
+
+
 
 
 ## <a name="next-steps"></a>Další postup
 
 Spravujte [role](role-based-access-control.md) a [profily](device-profile-assign.md).
-

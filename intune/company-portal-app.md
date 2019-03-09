@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab5fe8ea70e9f0db73a28d7ffa363c42ab7d51c2
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 50be92847922458a7145e02bcc2125ddadc6976f
+ms.sourcegitcommit: a59c78c13c4ff68e8a56b69029adfe51704ba570
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57394014"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682636"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -34,7 +34,7 @@ Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé pří
 > [!Tip]        
 > Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít pro přístup k webu portál společnosti přiřazenou licenci Intune.
 
-Přizpůsobení Portálu společnosti pomáhá poskytnout známé a užitečné prostředí pro koncové uživatele. Postup: V úloze **Klientské aplikace** zvolte **Nastavení** > **Značky Portálu společnosti** a nakonfigurujte požadovaná nastavení.  
+Přizpůsobení portálu společnosti, pomůže poskytnout známé a užitečné prostředí pro koncové uživatele. Chcete-li to provést na portálu Intune, vyberte **klientské aplikace** > **značky a přizpůsobení**a potom nakonfigurujte požadovaná nastavení. 
 
 > [!Note]       
 > Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým uživatelům, aby se rozhodli o způsobu sdílení po inicializaci procesu získání pomoci s problémem. Pokud ale Azure Government nepoužíváte, Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje proces pro získání pomoci s problémem. Odesílání protokolů aplikace do Microsoftu usnadní řešení problémů. 
