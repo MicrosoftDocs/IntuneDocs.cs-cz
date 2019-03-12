@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0625968c4f0c30d125be73045a52b58a032b2fd7
-ms.sourcegitcommit: a59c78c13c4ff68e8a56b69029adfe51704ba570
+ms.openlocfilehash: bca2d52bb47a149c6a36bc1b8cbc4d65e50c0f4c
+ms.sourcegitcommit: 3abc3bb93a95a81154146325c26c119a784e7487
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57682619"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756798"
 ---
 # <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Použití značek RBAC a obor pro distribuované IT
 
@@ -40,22 +40,48 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
 1. V Intune, zvolte **role** > **obor (značky)** > **vytvořit**.
+
+    ![Snímek obrazovky vytvořit značku oboru.](./media/scope-tags/create-scope-tag.png)
+
 2. Zadejte **Název** a **Popis**.
 3. Zvolte **Vytvořit**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
 1. V Intune, zvolte **role** > **všechny role** > vyberte roli > **přiřazení** > **přiřadit**.
+
+    ![Snímek obrazovky přiřazení k roli oboru.](./media/scope-tags/assign-scope-to-role.png)
+
 2. Poskytují **název přiřazení** a **popis**.
-3. Zvolte **členy (skupiny)** a vyberte skupiny, které chcete, aby jako součást tohoto přiřazení. Uživatelé z této skupiny mají oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
-4. Zvolte **rozsah (skupiny)** a vyberte uživatele a skupiny, které mají být součástí tohoto přiřazení. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny).
-5. Zvolte **obor (značky)** > **přidat** > zvolte značky, které chcete přidat do této role. Uživatelé v členy (skupiny) bude mít přístup k zásady a profily, které mají stejnou značku oboru.
-6. Zvolte **Vybrat** > **OK** > **OK**. 
+3. Zvolte **členy (skupiny)** > **přidat** > vyberte skupiny, které chcete, aby jako součást tohoto přiřazení > **vyberte**  >   **OK**. mUsers do této skupiny mají oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
+
+    ![Snímek obrazovky vyberte člena skupiny.](./media/scope-tags/select-member-groups.png)
+
+4. Pokud chcete ke správě uživatelů a zařízení v konkrétní sadu skupin, zvolte **rozsah (skupiny)** > **vybrané skupiny** > **vybrat skupiny, které chcete zahrnout**> zvolte skupiny > **vyberte** > **OK**. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny).
+
+    ![Snímek obrazovky vyberte oboru skupiny.](./media/scope-tags/select-scope-groups.png)
+
+    Alternativně můžete zvolit **všechna zařízení**, **všichni uživatelé**, nebo **všichni uživatelé a všechna zařízení**.
+
+    ![Snímek obrazovky s další možnosti pro výběr oboru skupiny.](./media/scope-tags/scope-group-other-options.png)
+    
+5. Zvolte **obor (značky)** > **přidat** > zvolte značky, které chcete přidat do této role > **vyberte** > **OK**. Uživatelé v členy (skupiny) bude mít přístup k zásady a profily, které mají stejnou značku oboru.
+
+    ![Snímek obrazovky s tagy vyberte obor.](./media/scope-tags/select-scope-tags.png)
+
+6. Zvolte **OK**. 
 
 ## <a name="to-add-a-scope-tag-to-a-configuration-profile"></a>Přidaní značky oboru do konfiguračního profilu
-1. V Intune, zvolte **konfigurace zařízení** > **profily** > zvolte profil > **vlastnosti** > **obor (značky)**   >  **Přidat**.
-2. V části **vyberte značky**, zvolte značky, které chcete přidat do profilu.
-3. Zvolte **vyberte** > **OK** > **Uložit**.
+1. V Intune, zvolte **konfigurace zařízení** > **profily** > zvolte profil.
+
+    ![Snímek obrazovky vyberte profil.](./media/scope-tags/choose-profile.png)
+
+2. Zvolte **vlastnosti** > **obor (značky)** > **přidat**.
+
+    ![Snímek obrazovky přidání značky oboru.](./media/scope-tags/add-scope-tags.png)
+
+3. V části **vyberte značky**, zvolte značky, které chcete přidat do profilu.
+4. Zvolte **vyberte** > **OK** > **Uložit**.
 
 ## <a name="scope-tag-details"></a>Podrobnosti značky oboru
 Při práci s značky oboru, mějte na paměti následující informace:
@@ -70,7 +96,7 @@ Při práci s značky oboru, mějte na paměti následující informace:
     - Zásady Konfigurace aplikací – spravovaná zařízení
     - Skripty prostředí PowerShell
     - Tokeny DEP
-    - Když správce vytvoří objekt v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový objekt.
+- Když správce vytvoří objekt v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový objekt.
 - RBAC v Intune se nevztahuje k rolím Azure Active Directory. Tedy role Správci služby Intune a globální Správci mají přístup správce k Intune bez ohledu na to, co značky oboru mají.
 - Správci v přiřazení role pomocí značky oboru můžete také zobrazit objekty Intune se žádné značky oboru.
 - Pouze můžete přiřadit značky oboru, který máte v přiřazení role.

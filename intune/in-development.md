@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 42200c474b964e6c6bc9610c3e90689c5811a2ee
-ms.sourcegitcommit: 6da78a3c07e9ad9c72ff532867cde754e9deca00
+ms.openlocfilehash: 9c377a8558b1f318b4ddad735b6368a291e34516
+ms.sourcegitcommit: 3abc3bb93a95a81154146325c26c119a784e7487
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57577825"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756815"
 ---
 # <a name="in-development-for-microsoft-intune---march-2019"></a>Při vývoji pro Microsoft Intune – březen 2019
 
@@ -35,6 +35,8 @@ Pomáhat při vaší připravenosti a plánování, tato stránka seznamy uživa
 
 > [!Note]
 > Tyto položky odrážejí aktuální očekávání společnosti Microsoft o možnostech Intune v budoucí verzi. Data a jednotlivé funkce mohou změnit. Ne všechny položky ve vývoji mají popis funkce na této stránce.
+
+**Informační kanál RSS**: Nechte se informovat Tato stránka se aktualizuje zkopírováním a vložením do informačního kanálu čtečky na následující adrese URL: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
 
 
 <!--
@@ -82,7 +84,7 @@ Portál společnosti pro iOS budou aktualizace obrazovek registrace aplikace a p
 - Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.
 - Vraťte se do aplikace portál společnosti, aby prošel registrací.  
 
-Další informace o tom, jak můžete připravit pro tyto změny, najdete v článku [příspěvek o technické komunitě Microsoftu] (https://techcommunity.microsoft.com/]. Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentace za provozu. 
+Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://techcommunity.microsoft.com/). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentace za provozu. 
 
 ### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
 Na stránce Stav Tenanta se zobrazí informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.
@@ -108,12 +110,10 @@ Přidáváme novou možnost, jak **protokoly auditu** okno v každé v každé �
 ### <a name="create-and-use-device-configuration-profiles-on-android-zebra-devices-in-intune----3895244----"></a>Vytváření a používání profilů konfigurace zařízení na zařízeních s Androidem Zebra v Intune <!-- 3895244  -->
 Intune bude podporovat konfiguraci zařízení s Androidem Zebra. Konkrétně budete moci: 
 
-- Vytvořit profil konfigurace zařízení a použijte nastavení na zařízení s Androidem Enterprise Zebra pomocí OEMConfig (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Androidu enterprise** pro platformu).
 - Vytvořit profil konfigurace zařízení a použijte nastavení na zařízení s Androidem Zebra pomocí profilů rozšíření Mobility (MX) generovaných StageNow (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Android** pro platformu).
 
 Platí pro:  
 - Android
-- Android enterprise
 
 <!-- 1901 start -->
 

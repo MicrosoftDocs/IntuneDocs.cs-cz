@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16f49c4b8be25766065456270e9ed426a063a212
-ms.sourcegitcommit: a624abbfc3c80c5fba6c47a19cf1a6923c5fd438
+ms.openlocfilehash: 3bbde7c796c386897bbb79056a8a3a8b5fab5eb3
+ms.sourcegitcommit: f97e03074509ea9ef4d9007fae2644429a060c1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57528373"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57787164"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -429,9 +429,7 @@ Platí pro: Windows 10 a novější
 ### <a name="device-enrollment"></a>Registrace zařízení
 
 #### <a name="more-detailed-enrollment-restriction-failure-messaging----3111564---"></a>Podrobnější zasílání zpráv selhání omezení registrace <!-- 3111564 -->
-Podrobné chybové zprávy jsou k dispozici, pokud nejsou splněné omezení registrace. Chcete-li zobrazit tyto zprávy, přejděte na **Intune** > **Poradce při potížích** > a zkontrolovat chyby registrace tabulku. Další informace najdete v tématu [seznam chyb registrace](help-desk-operators.md#configuration-policies-reference).
-
-
+Podrobné chybové zprávy jsou k dispozici, pokud nejsou splněné omezení registrace. Chcete-li zobrazit tyto zprávy, přejděte na **Intune** > **Poradce při potížích** > a zkontrolovat chyby registrace tabulku. Další informace najdete v tématu [seznam chyb registrace](help-desk-operators.md#enrollment-failure-reference).
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 

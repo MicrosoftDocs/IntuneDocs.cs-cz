@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/06/2019
+ms.date: 03/11/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dea5f0a794e0b947e1f542b796e946de85f7eb4
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
+ms.sourcegitcommit: 3abc3bb93a95a81154146325c26c119a784e7487
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57460373"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756849"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -87,20 +87,20 @@ K nastavení autority MDM na Intune použijte následující postup:
 3. Vyberte informační zprávu, že nemáte aktivovanou správu zařízení. Pokud se nezobrazuje, vyberte **Registrace zařízení**. Pokud správa zařízení není aktivovaná, zobrazí se okno **Zvolte autoritu MDM**.
 
     > [!NOTE]
-    > Oranžová informační zpráva se zobrazí jenom v případě, že jste autoritu MDM ještě nenastavili.
+    > Pokud nastavíte autoritu MDM, zobrazí se hodnota autoritu MDM na **registrace zařízení** okno. Oranžová informační zpráva se zobrazí jenom v případě, že jste autoritu MDM ještě nenastavili. 
 
     ![Obrázek okna Zvolte autoritu MDM](./media/choose-mdm-authority.png) 
 
-4. V části **Zvolte autoritu MDM** nastavte autoritu MDM na **Autorita MDM Intune**.
+4. Pokud není-li nastavit autoritu MDM, v části **zvolte autoritu MDM**, nastavení autority MDM **autorita MDM Intune**.
 
 Další informace o autoritě MDM najdete v článku [Nastavení autority pro správu mobilních zařízení](mdm-authority-set.md).
 
 ## <a name="configure-your-custom-domain-name-optional"></a>Konfigurace vlastního názvu domény (volitelné)
 
-Jak bylo zmíněno výše, pokud má vaše organizace vlastní vlastní doménu, kterou chcete použít, aniž by **. onmicrosoft.com**, můžete ji změnit v Centru pro správu Microsoftu 365. Můžete přidat, ověřit nebo konfigurovat název vlastní domény.  
+Jak bylo zmíněno výše, pokud má vaše organizace vlastní vlastní doménu, kterou chcete použít, aniž by **. onmicrosoft.com**, můžete ji změnit v Centru pro správu Microsoftu 365. Můžete přidat, ověřit a konfigurace vlastního názvu domény pomocí následujících kroků.  
 
 > [!IMPORTANT]
-> Počáteční název domény **onmicrosoft.com** nemůžete přejmenovat ani odebrat. Aby bylo možné zachovat identitu firmy, můžete přidat, ověřit nebo odebrat vlastní názvy domén používané s Intune.
+> Nelze přejmenovat ani odebrat *počáteční* **onmicrosoft.com** část názvu domény. Ale můžete přidat, ověřit nebo odebrat *vlastní* názvy domén používané s Intune zachovat identitu firmy. Další informace najdete v tématu [konfigurace vlastního názvu domény](custom-domain-name-configure.md).
 
 1. Přejděte na [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) a přihlaste se pomocí účtu správce.
 
@@ -112,7 +112,7 @@ Jak bylo zmíněno výše, pokud má vaše organizace vlastní vlastní doménu,
 
 4. Potvrďte, že jste vlastník domény zadané v předchozím kroku. 
     
-    Pokud vyberete, že chcete **poslat kód e-mailem**, odešle se e-mail kontaktu, který je zaregistrovaný u domény. Jakmile dostanete e-mail, zkopírujte kód a zadejte ho do pole označeného **Sem napište ověřovací kód**. Pokud se ověřovací kód shoduje, přidá se doména do tenanta. Zobrazený e-mail vám nemusí být povědomý. Někteří registrátoři totiž skrývají skutečnou e-mailovou adresu zadanou při registraci domény.
+    Pokud vyberete, že chcete **poslat kód e-mailem**, odešle se e-mail kontaktu, který je zaregistrovaný u domény. Jakmile dostanete e-mail, zkopírujte kód a zadejte ho do pole označeného **Sem napište ověřovací kód**. Pokud se ověřovací kód shoduje, přidá se doména do tenanta. Zobrazený e-mail vám nemusí být povědomý. Některé registrátorů skrýt skutečné e-mailovou adresu. E-mailová adresa může být také jiné pak je zadán při byla doména zaregistrována.
 
    ![Snímek obrazovky s Microsoft 365 správce System center – ověření domény](./media/domain-custom-verify.png)
 

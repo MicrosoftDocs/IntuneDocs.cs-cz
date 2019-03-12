@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: dc86f2c22410236368753acd4dd3b66698037241
+ms.sourcegitcommit: 3c80028fd995675e7664b27d7e4051c9a9d0e669
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736852"
+---
 
 Tato oznámení poskytují důležité informace, které vám pomohou připravit se na budoucí změny Intune a funkce. 
 
@@ -102,7 +110,33 @@ Pokud máte Service to Service connector nastavit a mít Exchange Active Sync je
 
 - Registrace zařízení do správy mobilních zařízení (MDM) 
 - Použití zásad ochrany aplikací Intune ke správě svých zařízení 
-- Použití ovládacích prvků systému Exchange, jak je uvedeno v dokumentaci 
+- Použití ovládacích prvků systému Exchange, jak je uvedeno v dokumentaci k [zde](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online) 
 
 #### <a name="additional-information"></a>Další informace  
 https://docs.microsoft.com/intune/exchange-service-connector-configure
+
+
+
+
+### <a name="check-your-delay-visibility-of-software-updates-setting-in-intune"></a>Zkontrolujte nastavení "Zpoždění viditelnost aktualizací softwaru" v Intune 
+
+Jsme oznámili v MC171466, který jsme se přesouvat několik nastavení v konzole. Při Březnové aktualizaci do Intune úplně Odebereme nastavení "Zpoždění viditelnost softwarových aktualizací" v okně zásad aktualizace iOS. Tím nedojde ke změně způsobu, jakým vaše plánované aktualizace, ale může ovlivnit, jak dlouho je zpožděno Přehled aktualizace pro koncové uživatele. Budete muset provést akci do konce dne, pokud použijete toto nastavení. 
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Po aktualizaci služby Intune. února můžete si všimnout, že toto nastavení se zobrazí, že v profilech omezení zařízení v konzole a v iOS aktualizovat zásady v okně aktualizace softwaru. Až se tato změna projeví v konzole, zde je, co budete muset provést.
+
+- Pro existující zásady aktualizací pro iOS: Pokud máte vlastní nakonfigurovat toto nastavení na jinou hodnotu než výchozí hodnota 30 dnů a vaší existující konfigurace pro nastavení viditelnosti zpoždění k pokračování používání na konci dne, budete muset vytvořit nový iOS profil omezení zařízení. Tady bude nutné mít stejné hodnoty jako existující zásady aktualizace Iosu a zacílit na stejné skupiny nastavení viditelnosti zpoždění. Po Březnové aktualizaci služby se již budete moci upravit hodnoty pro toto nastavení v existující zásady aktualizací pro iOS, protože se již nebudou viditelné v tomto okně. Můžete nakonfigurovat toto nastavení v nové profily místo.
+  Pokud hodnota pro počet dní, můžete pozdržet viditelnost neodpovídá v obou umístěních nakonfigurované nastavení vlastní hodnoty, zpoždění viditelnost nastavení nebude fungovat, a koncovým uživatelům se zobrazí aktualizace na svých zařízeních, jako je k dispozici. Může to mít minimální vliv pro většinu zákazníků, protože ostatní nastavení v okně zásady aktualizace softwaru vždy převzal prioritu Toto nastavení v konzole.
+- Pro nové zásady aktualizací pro iOS: Pokud se pokusíte vytvořit nové zásady v okně aktualizace softwaru po aktualizaci služby Intune. února, zobrazí se toto nastavení nejde aktivovat. Zobrazí se vám Poznámka: v konzole, pokud budete chtít odložit viditelnost aktualizací přesměrování do okna pro konfiguraci zařízení.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Není nutné provádět akci, pokud toto nastavení nepoužívají nebo nechcete, aby zpoždění viditelnost aktualizací softwaru pro koncové uživatele.
+
+Pokud chcete zpoždění viditelnost aktualizace, spusťte konfiguraci nastavení v nové profily konfigurace zařízení v okně v části v rámci omezení zařízení > Obecné. Pokud máte toto vlastní nastavení nakonfigurovaná v Iosu existující zásady aktualizace, vytvořte nový profil omezení zařízení ekvivalentní se stejnou hodnotou pro "days" zpoždění Přehled aktualizace pro vaše uživatele, po z února aktualizací nebo před březnovém zavede. 
+
+Můžete chtít aktualizovat vaše IT Pro pokyny a informujte helpdesk.
+
+Najdete v našem blogu podpory podrobnosti o tom, jak nakonfigurovat toto nastavení můžete publikovat na další informace.
+
+#### <a name="additional-information"></a>Další informace 
+[https://aka.ms/Delay_visibility_setting_iOS](https://aka.ms/Delay_visibility_setting_iOS)

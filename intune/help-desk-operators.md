@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a566d0630836e8cead8cb369d486374ff4583bfa
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.openlocfilehash: 13010655cef307de442896fbc1aed9c666653b92
+ms.sourcegitcommit: f97e03074509ea9ef4d9007fae2644429a060c1e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57461052"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57787130"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -70,176 +70,180 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 | 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
-## <a name="client-apps-reference"></a>Informace o klientských aplikacích
+<!-- this section needs to be updated
 
-Aplikace, které používají zařízení
-- spravovaná přes Intune a Azure Active Directory (AD) 
-- vlastněná uživateli spravovanými přes Intune a Azure Active Directory (AD)
+## Client apps reference
 
-### <a name="properties"></a>Vlastnosti
+The apps that are running devices
+- managed by Intune and Azure Active Directory (AD) 
+- owned by users managed by Intune and Azure Active Directory (AD).
 
-Vlastnosti klientských aplikací
+### Properties
 
-| Vlastnost      | Popis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+The properties of client apps.
+
+| Property      | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Name          | Název aplikace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Operační systém            | Operační systém nainstalovaný v zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| Type          | Můžete zvolit typ přiřazení pro každou aplikaci.  <br> **K dispozici** – Uživatelé instalují aplikaci z aplikace nebo webu Portál společnosti.  <br> **Nelze použít** – Aplikace není nainstalovaná nebo se na Portálu společnosti nezobrazuje. <br> **Odinstalovat** – Aplikace se odinstaluje ze zařízení ve vybraných skupinách.  <br> **K dispozici s registrací i bez ní** – Přiřadí tuto aplikaci do skupin uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. |
-| Poslední změna | Název typu zařízení                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Name          | The name of the application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| OS            | The operating system installed on the device.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Type          | You can choose an assignment type for each app.  <br> **Available** - Users install the app from the Company Portal app or website.  <br> **Not Applicable** - The app is not installed or shown in the Company Portal. <br> **Uninstall** - The app is uninstalled from devices in the selected groups.  <br> **Available with or without enrollment** - Assign this app to groups of users whose devices are not enrolled with Intune. |
+| Last Modified | The name of the type of device.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-### <a name="devices"></a>Zařízení
+### Devices
 
-Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní pomocí Intune nebo Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Vlastnost           | Popis                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Název zařízení        | Název typu zařízení                                                                                                     |
-| Spravuje         | Časové razítko změny zásad                                                                                              |
-| Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Vyhovuje Intune   | Název typu zařízení                                                                                                     |
-| Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Instalace aplikace | Určuje, jestli byla instalace aplikace na konkrétním zařízení úspěšná nebo neúspěšná. |
-| Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
-| Verze operačního systému         | Číslo verze operačního systému zařízení.                                                                                  |
-| Poslední vrácení se změnami      | Název typu zařízení                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| App install | Denotes whether an app install failure or success has occurred on the individual device. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
-### <a name="app-protection-status"></a>Stav ochrany aplikace
+### App protection status
 
-Pro mobilní aplikace, které se integrují s technologiemi Enterprise Mobility Solution (EMS), jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Vlastnost    | Popis                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| App name (Název aplikace)    | Název aplikace                                                           |
-| Název zařízení | Název typu zařízení                                                       |
-| Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
 
-## <a name="app-protection-policies-reference"></a>Informace o zásadách ochrany aplikací
+## App protection policies reference
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-### <a name="properties"></a>Vlastnosti
+### Properties
 
-Tabulka shrnuje stav zásad ochrany aplikací pro zařízení spravovaná pomocí Intune.
+The table summarizes app protection policies status for devices managed by Intune.
 
-| Vlastnost    | Popis                                                                                                                                |
+| Property    | Description                                                                                                                                |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Name        | Název aplikace                                                                                                        |
-| Nasazeno    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Platforma    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Registrace  | Název typu zařízení                                                                                                     |
-| Poslední aktualizace | Časové razítko změny zásad                                                                                              |
+| Name        | The name of the application.                                                                                                        |
+| Deployed    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Platform    | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Enrollment  | The name of the type of device.                                                                                                     |
+| Last Update | The timestamp the policy was modified.                                                                                              |
 
-### <a name="devices"></a>Zařízení
+### Devices
 
-Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní pomocí Intune nebo Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Vlastnost           | Text                                                                                                                                |
+| Property           | Text                                                                                                                                |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Název zařízení        | Název typu zařízení                                                                                                     |
-| Spravuje         | Časové razítko změny zásad                                                                                              |
-| Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Vyhovuje Intune   | Název typu zařízení                                                                                                     |
-| Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
-| Verze operačního systému         | Číslo verze operačního systému zařízení.                                                                                  |
-| Poslední vrácení se změnami      | Název typu zařízení                                                                                                     |
+| Device Name        | The name of the type of device.                                                                                                     |
+| Managed By         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last Check in      | The name of the type of device.                                                                                                     |
 
-## <a name="compliance-policies-reference"></a>Informace o zásadách dodržování předpisů
+## Compliance policies reference
 
-Tyto zásady zajišťují, aby zařízení používaná pro přístup k firemním aplikacím a datům dodržovala určitá pravidla, třeba že pro přístup k zařízení je potřeba PIN nebo že data uložená v zařízení budou šifrovaná.
+Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
 
-### <a name="properties"></a>Vlastnosti
+### Properties
 
-Vlastnosti zásad dodržování předpisů.
+The properties of the compliance policies.
 
-| Vlastnost      | Popis                                                                                                                         |
+| Property      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Name          | Název aplikace                                                                                                        |
-| Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
-| Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
-| Poslední změna | Název typu zařízení                                                                                                     |
+| Assignment    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Name          | The name of the application.                                                                                                        |
+| OS            | The operating system installed on the device.                                                                                       |
+| Policy Type   | The type of device ownership (**Company**, **Personal**, and **Unknown**).                                               |
+| Last Modified | The name of the type of device.                                                                                                     |
 
-### <a name="devices"></a>Zařízení
+### Devices
 
-Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní pomocí Intune nebo Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Vlastnost           | Popis                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Název zařízení        | Název typu zařízení                                                                                                     |
-| Spravuje         | Časové razítko změny zásad                                                                                              |
-| Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** a **Neznámé**)                                               |
-| Vyhovuje Intune   | Název typu zařízení                                                                                                     |
-| Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
-| Verze operačního systému         | Číslo verze operačního systému zařízení.                                                                                  |
-| Poslední vrácení se změnami      | Název typu zařízení                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, and **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
-### <a name="app-protection-policies"></a>Zásady ochrany aplikace
+### App protection policies
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Vlastnost    | Popis                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| App name (Název aplikace)    | Název aplikace                                                           |
-| Název zařízení | Název typu zařízení                                                       |
-| Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
 
-## <a name="configuration-policies-reference"></a>Informace o zásadách konfigurace
+## Configuration policies reference
 
-Pro mobilní aplikace se specifickou konfigurací podle dodavatele jsou k dispozici zásady konfigurace aplikací. 
+An app configuration policy is available to mobile apps with vendor-specific configuration. 
 
-### <a name="properties"></a>Vlastnosti
+### Properties
 
-Vlastnosti zásad konfigurace.
+The properties of the configuration policies.
 
-| Vlastnost      | Popis                                                                                                                         |
+| Property      | Description                                                                                                                         |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Přiřazení    | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Název          | Název aplikace                                                                                                        |
-| Operační systém            | Operační systém nainstalovaný v zařízení                                                                                       |
-| Typ zásad   | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Poslední změna | Název typu zařízení                                                                                                     |
+| Assignment    | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Name          | The name of the application.                                                                                                        |
+| OS            | The operating system installed on the device.                                                                                       |
+| Policy Type   | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Last Modified | The name of the type of device.                                                                                                     |
 
-### <a name="devices"></a>Zařízení
+### Devices
 
-Zařízení spravovaná pomocí Intune nebo uživateli, kteří jsou spravovaní pomocí Intune nebo Azure AD.
+Devices managed by Intune or by users managed by Intune or Azure AD.
 
-| Vlastnost           | Popis                                                                                                                         |
+| Property           | Description                                                                                                                         |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| Název zařízení        | Název typu zařízení                                                                                                     |
-| Spravuje         | Časové razítko změny zásad                                                                                              |
-| Typ připojení ke službě Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Vlastnictví          | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**)                                               |
-| Vyhovuje Intune   | Název typu zařízení                                                                                                     |
-| Vyhovuje Azure AD | Stav všech aplikací ochrany aplikací jednotlivých uživatelů. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**. |
-| Operační systém                 | Operační systém nainstalovaný v zařízení                                                                                       |
-| Verze operačního systému         | Číslo verze operačního systému zařízení.                                                                                  |
-| Poslední vrácení se změnami      | Název typu zařízení                                                                                                     |
+| Device name        | The name of the type of device.                                                                                                     |
+| Managed by         | The timestamp the policy was modified.                                                                                              |
+| Azure AD join type | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| Ownership          | The type of device ownership (**Company**, **Personal**, or **Unknown**).                                               |
+| Intune compliant   | The name of the type of device.                                                                                                     |
+| Azure AD compliant | The status of each of the users' app protection apps. The possible statuses for the apps are **Checked in** and **Not checked in**. |
+| OS                 | The operating system installed on the device.                                                                                       |
+| OS version         | The Operating System version number of the device.                                                                                  |
+| Last check-in      | The name of the type of device.                                                                                                     |
 
 
-### <a name="app-protection-policies"></a>Zásady ochrany aplikace
+### App protection policies
 
-Pro mobilní aplikace, které se integrují s technologiemi EMS, jsou k dispozici zásady ochrany aplikací. Tyto zásady poskytují základ ochrany dat společnosti po jejich stažení do mobilních aplikací, včetně mobilních aplikací Office. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
-| Vlastnost    | Popis                                                                           |
+| Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
-| Stav      | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| App name (Název aplikace)    | Název aplikace                                                           |
-| Název zařízení | Název typu zařízení                                                       |
-| Typ zařízení | Název typu zařízení                                                       |
-| Zásady    | Typ vlastnictví zařízení (**Společnost**, **Osobní** nebo **Neznámé**) |
-| Poslední synchronizace   | Časové razítko poslední synchronizace zařízení s Intune.                   |
+| Status      | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| App name    | The name of the application                                                           |
+| Device name | The name of the type of device.                                                       |
+| Device type | The name of the type of device.                                                       |
+| Policies    | The type of device ownership (**Company**, **Personal**, or **Unknown**). |
+| Last sync   | The timestamp of the last time the device synchronized with Intune.                   |
+
+-->
 
 ## <a name="enrollment-failure-reference"></a>Informace o neúspěšných registracích
 
