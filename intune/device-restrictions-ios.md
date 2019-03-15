@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/06/2019
+ms.date: 03/13/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,11 +16,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a525efb8b05d5dfd9d33e1fa0c603c72ed3084f0
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
+ms.openlocfilehash: a92d18615f6be7c1e0ce931d443d2ac986db991e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57566705"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
@@ -105,54 +105,6 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 
     Toto nastavení platí pro:  
     - iOS 11,3 a novější
-
-## <a name="configurations-requiring-supervision"></a>Konfigurace vyžadující dohled
-
-Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavování zařízení prostřednictvím Programu registrace zařízení společnosti Apple nebo prostřednictvím Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
-
-- Zámek aplikace (režim jedné aplikace) 
-- Globální proxy server HTTP 
-- Vyřazení zámku aktivace 
-- Autonomní režim jedné aplikace 
-- Filtr webového obsahu 
-- Nastavení pozadí a zamykací obrazovky 
-- Tiché doručení aplikací bez vyžádání 
-- Vždy zapnutá síť VPN 
-- Povolení pouze instalace spravovaných aplikací 
-- iBooks Store 
-- Zprávy iMessage 
-- Herní centrum 
-- AirDrop 
-- AirPlay 
-- Hostitelské párování 
-- Synchronizace cloudu 
-- Vyhledávání Spotlight 
-- Handoff 
-- Vymazání zařízení 
-- Uživatelské rozhraní pro omezení 
-- Instalace konfiguračních profilů uživatelským rozhraním 
-- News 
-- Klávesové zkratky 
-- Změny hesla 
-- Změny názvu zařízení 
-- Automatická stahování aplikací 
-- Úpravy vztahu důvěryhodnosti u podnikových aplikací 
-- Apple Music 
-- Doručení pošty 
-- Spárování s Apple Watch 
-
-> [!NOTE]
-> Apple potvrdil, že některá nastavení přesunout na pod dohledem v jen 2019. Doporučujeme, abyste to udělali v úvahu při používání těchto nastavení, místo abyste čekali, Apple k migraci je jenom pod dohledem pro:
-> - Instalace aplikací koncovými uživateli
-> - Odebrání aplikace
-> - FaceTime
-> - Safari
-> - iTunes
-> - Explicitní obsah
-> - Dokumenty a data v iCloudu
-> - Hry pro víc hráčů
-> - Přidat přátele z herního centra
-> - Siri
 
 ## <a name="password"></a>Heslo
 
@@ -338,7 +290,7 @@ Přidání aplikací do těchto seznamů, můžete:
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
 - **Zálohování na iCloud**: **Není nakonfigurováno** povolí uživateli zálohovat zařízení do Icloudu. **Blok** zabrání uživateli zálohovat zařízení do Icloudu.
-- **Zdokumentujte synchronizaci s icloudem (jenom pod dohledem)**: **Není nakonfigurováno** povolí synchronizaci dokumentu a klíč hodnota s úložným prostorem Icloudu. **Blok** zabrání synchronizaci dokumenty a data serveru služby iCloud.
+- **Zablokuje synchronizaci dokumentů s Icloudem**: **Není nakonfigurováno** povolí synchronizaci dokumentu a klíč hodnota s úložným prostorem Icloudu. **Blok** zabrání synchronizaci dokumenty a data serveru služby iCloud.
 - **Synchronizace datového proudu fotografií s Icloudem**: **Není nakonfigurováno** umožňuje uživatelům povolit **tento Stream fotek** na svém zařízení synchronizovat na serveru služby iCloud a mít fotky, které jsou k dispozici na všech jeho zařízeních. **Blok** brání synchronizace datového proudu fotografií s Icloudem.
 - **Šifrované zálohování**: **Vyžadovat** tak zálohy zařízení musí být zašifrován.
 - **Knihovna fotografií na Icloudu**: Nastavte na **bloku** zakázat použití knihovny fotografií Icloudu, přes ukládat fotografie a videa v cloudu. Všechny fotky, které nejsou kompletně stažené z knihovny fotografií na Icloudu do zařízení se odebere ze zařízení. **Není nakonfigurováno** umožňuje použití knihovny fotografií Icloudu.
@@ -355,15 +307,16 @@ Pomocí těchto nastavení můžete nakonfigurovat zařízení s Iosem spustit k
 
 Přidání aplikací, můžete:
 
-- Zadejte **název aplikace** a **ID sady prostředků aplikace**a vyberte **přidat**. [Vytvoření balíčku referenční informace o ID pro vestavěné aplikace iOS](#bundle-id-reference-for-built-in-ios-apps) (v tomto článku) zahrnuje některé aplikace pomocí jejich identifikátorů.
+- Zadejte **název aplikace** a **ID sady prostředků aplikace**a vyberte **přidat**. [ID sady pro vestavěné aplikace iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) zahrnuje některé aplikace pomocí jejich identifikátorů.
 - **Import** soubor CSV se seznamem názvů aplikací a jejich ID sady prostředků. Nebo, **exportovat** existujícího seznamu, který obsahuje aplikace.
 
 ## <a name="kiosk-supervised-only"></a>Veřejný terminál (jenom pod dohledem)
 
-- **Aplikace ale běží v beznabídkovém režimu**: Zvolte typ aplikace, které chcete v beznabídkovém režimu spouštět. Možnosti: 
-  - **App Store**: Zadejte adresu URL aplikace v iTunes App storu
-  - **Spravovaná aplikace**: Zvolte aplikaci, kterou jste přidali do Intune
-  - **Integrovaná aplikace**: Zadejte [ID sady](#bundle-id-reference-for-built-in-ios-apps) integrované aplikace
+- **Aplikace ale běží v beznabídkovém režimu**: Zvolte typ aplikace, které chcete v beznabídkovém režimu spouštět. Možnosti:
+  - **Není nakonfigurováno**: Veřejný terminál, nastavení se nepoužijí. Zařízení není spuštěna v režimu veřejného terminálu.
+  - **App Store**: Zadejte adresu URL aplikace v iTunes App storu.
+  - **Spravovaná aplikace**: Zvolte aplikaci, kterou jste přidali do Intune.
+  - **Integrovaná aplikace**: Zadejte [ID sady](#bundle-ids-for-built-in-ios-apps) (v tomto článku) integrované aplikace.
 
 - **Dotykového ovládání pro usnadnění**: **Vyžadovat** nastavení usnadnění dotykového ovládání bude na zařízení. Tato funkce pomáhá uživatelům na obrazovce gesta, která může být obtížné pro ně. **Není nakonfigurováno** nelze spustit nebo povolit tuto funkci v celoobrazovkovém režimu.
 - **Invertovat barvy**: **Vyžadovat** Invertovat barvy pro usnadnění nastavení, uživatelům se zrakovým můžete změnit zobrazení obrazovky. **Není nakonfigurováno** nelze spustit nebo povolit tuto funkci v celoobrazovkovém režimu.
@@ -386,7 +339,15 @@ Přidání aplikací, můžete:
 > Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. V příručce společnosti Apple pomocí Apple configuratoru.
 > Pokud zadáte aplikace pro iOS nainstaluje až přiřadíte profil, zařízení nebude zadejte celoobrazovkový režim až po restartování zařízení.
 
-## <a name="bundle-id-reference-for-built-in-ios-apps"></a>Referenční informace o ID sady prostředků pro integrované aplikace pro iOS
+## <a name="domains"></a>Domény
+
+- **Zrušit označení e-mailových domén** > **e-mailová adresa URL domény**: Přidejte jeden nebo více adres URL do seznamu. Když koncoví uživatelé dostanou e-mail z jiné domény než domény můžete zadat, označí se e-mail jako nedůvěryhodný v aplikaci iOS Mail.
+
+- **Spravované webové domény** > **adresa URL webové domény**; Přidejte jeden nebo více adres URL do seznamu. Pokud stahujete dokumenty z těchto zadaných domén, které jste zadali, budou považovány za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+
+- **Domény pro automatické vyplňování hesel v Safari** > **adresa URL domény**: Přidejte jeden nebo více adres URL do seznamu. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a pro zařízení s iOSem 9.3 a novějším v režimu pod dohledem. Pokud nezadáte žádné adresy URL, můžete si uložit hesla ze všech webů.
+
+## <a name="bundle-ids-for-built-in-ios-apps"></a>ID sady prostředků pro integrované aplikace pro iOS
 
 Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
 
@@ -437,19 +398,53 @@ Tento seznam zobrazuje ID sady prostředků některých běžných integrovanýc
 | com.apple.Bridge            | Sledování        | Apple     |
 | com.apple.weather           | Počasí      | Apple     |
 
-## <a name="domains"></a>Domény
+## <a name="settings-that-require-supervised-mode"></a>Nastavení vyžadujících režim pod dohledem
 
-### <a name="unmarked-email-domains"></a>Zrušení označení e-mailových domén
+Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavování zařízení prostřednictvím Programu registrace zařízení společnosti Apple nebo prostřednictvím Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
-V **e-mailová adresa URL domény**, přidejte jeden nebo více adres URL do seznamu. Když koncoví uživatelé dostanou e-mail z jiné domény než domény můžete zadat, označí se e-mail jako nedůvěryhodný v aplikaci iOS Mail.
+- Zámek aplikace (režim jedné aplikace) 
+- Globální proxy server HTTP 
+- Vyřazení zámku aktivace 
+- Autonomní režim jedné aplikace 
+- Filtr webového obsahu 
+- Nastavení pozadí a zamykací obrazovky 
+- Tiché doručení aplikací bez vyžádání 
+- Vždy zapnutá síť VPN 
+- Povolení pouze instalace spravovaných aplikací 
+- iBooks Store 
+- Zprávy iMessage 
+- Herní centrum 
+- AirDrop 
+- AirPlay 
+- Hostitelské párování 
+- Synchronizace cloudu 
+- Vyhledávání Spotlight 
+- Handoff 
+- Vymazání zařízení 
+- Uživatelské rozhraní pro omezení 
+- Instalace konfiguračních profilů uživatelským rozhraním 
+- News 
+- Klávesové zkratky 
+- Změny hesla 
+- Změny názvu zařízení 
+- Automatická stahování aplikací 
+- Úpravy vztahu důvěryhodnosti u podnikových aplikací 
+- Apple Music 
+- Doručení pošty 
+- Spárování s Apple Watch 
 
-### <a name="managed-web-domains"></a>Spravované webové domény
-
-V **adresa URL webové domény**, přidejte jeden nebo více adres URL do seznamu. Pokud stahujete dokumenty z těchto zadaných domén, které jste zadali, budou považovány za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
-
-### <a name="safari-password-autofill-domains"></a>Domény pro automatické vyplňování hesel v Safari
-
-V **adresa URL domény**, přidejte jeden nebo více adres URL do seznamu. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a pro zařízení s iOSem 9.3 a novějším v režimu pod dohledem. Pokud nezadáte žádné adresy URL, můžete si uložit hesla ze všech webů.
+> [!NOTE]
+> Apple potvrdil, že některá nastavení přesunout na pod dohledem v jen 2019. Doporučujeme, abyste to udělali v úvahu při používání těchto nastavení, místo abyste čekali, Apple k migraci je jenom pod dohledem pro:
+> - Instalace aplikací koncovými uživateli
+> - Odebrání aplikace
+> - FaceTime
+> - Safari
+> - iTunes
+> - Explicitní obsah
+> - Dokumenty a data v iCloudu
+> - Hry pro víc hráčů
+> - Přidat přátele z herního centra
+> - Siri
 
 ## <a name="next-steps"></a>Další postup
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/30/2019
+ms.date: 03/13/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,18 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ee0d8660b810f5f568b69babba0b648b0095fa7
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
+ms.openlocfilehash: 34f0869b46323606d69891c3761bfbc154f3b6a3
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57566620"
 ---
-# <a name="ios-device-feature-settings-in-intune"></a>nastavení funkce zařízení s Iosem v Intune
+# <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>nastavení zařízení s Iosem v Intune použít běžné funkce iOS
 
 Intune zahrnuje několik předdefinovaných nastavení umožníte uživatelům používat různé funkce Apple na svých zařízeních s Iosem. Například správci můžete řídit, jak uživatelé systému iOS pomocí tiskárny s Airprintem, přidání aplikací a složek do docku a stránky na domovské obrazovce zobrazit oznámení aplikací, zobrazit podrobnosti o značce asset na zamykací obrazovce, použijte ověření jednotného přihlašování a ověřování uživatelů s certifikáty.
+
+Tyto funkce používejte k řízení zařízení s Iosem jako součást řešení správy mobilních zařízení.
 
 Tento článek uvádí tato nastavení a popisuje, co dělá jednotlivých nastavení.
 
@@ -39,8 +41,8 @@ Tato funkce umožňuje iOS uživatelům tisknout známé tiskárny s Airprintem.
 
 1. V **nastavení**vyberte **AirPrint**. Zadejte následující vlastnosti AirPrint serveru:
 
-    - **IP adresa**: Zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazu ping tiskárny, v terminálu. [Získat IP adresu a cestu](#get-the-ip-address-and-path) (v tomto článku) poskytuje další podrobnosti.
-    - **Cesta**: Cesta je obvykle `ipp/print` pro tiskárny ve vaší síti. [Získat IP adresu a cestu](#get-the-ip-address-and-path) (v tomto článku) poskytuje další podrobnosti.
+    - **IP adresa**: Zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazu ping tiskárny, v terminálu. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
+    - **Cesta**: Cesta je obvykle `ipp/print` pro tiskárny ve vaší síti. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
     - **Port**: Zadejte naslouchající port cíle AirPrint. Pokud tuto vlastnost nezadáte, AirPrint použije výchozí port. K dispozici v Iosu 11.0 a novějších.
     - **TLS**: Zvolte **povolit** k zabezpečení připojení AirPrint pomocí zabezpečení TLS (Transport Layer). K dispozici v Iosu 11.0 a novějších.
 
@@ -305,47 +307,52 @@ Pokud profil se žádné image je přiřazený k zařízení pomocí stávajíc�
 
 Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
 
-|||
-|-|-|
-|Název aplikace|ID sady prostředků|
-|App Store|com.apple.AppStore|
-|Kalkulačka|com.apple.calculator|
-|Kalendář|com.apple.mobilecal|
-|Fotoaparát|com.apple.camera|
-|Hodiny|com.apple.mobiletimer|
-|Kompas|com.apple.compass|
-|Kontakty|com.apple.MobileAddressBook|
-|FaceTime|com.apple.facetime|
-|Najít přátele|com.apple.mobileme.fmf1|
-|Najít iPhone|com.apple.mobileme.fmip1|
-|Herní centrum|com.apple.gamecenter|
-|GarageBand|com.apple.mobilegarageband|
-|Stav|com.apple.Health|
-|iBooks|com.apple.iBooks|
-|iTunes Store|com.apple.MobileStore|
-|iTunes U|com.apple.itunesu|
-|Keynote|com.apple.Keynote|
-|Mail|com.apple.mobilemail|
-|Mapy|com.apple.Maps|
-|Zprávy|com.apple.MobileSMS|
-|Hudba|com.apple.Music|
-|News|com.apple.news|
-|Poznámky|com.apple.mobilenotes|
-|Numbers|com.apple.Numbers|
-|Pages|com.apple.Pages|
-|Photo Booth|com.apple.Photo-Booth|
-|Fotky|com.apple.mobileslideshow|
-|Podcasty|com.apple.podcasts|
-|Připomínky|com.apple.reminders|
-|Safari|com.apple.mobilesafari|
-|Nastavení|com.apple.Preferences|
-|Stocks|com.apple.stocks|
-|Tipy|com.apple.tips|
-|Videa|com.apple.videos|
-|Diktafon|com.apple.VoiceMemos|
-|Wallet|com.apple.Passbook|
-|Watch|com.apple.Bridge|
-|Počasí|com.apple.weather|
+| ID sady prostředků                   | Název aplikace     | Vydavatel |
+|-----------------------------|--------------|-----------|
+| com.apple.AppStore          | App Store    | Apple     |
+| com.apple.calculator        | Kalkulačka   | Apple     |
+| com.apple.mobilecal         | Kalendář     | Apple     |
+| com.apple.camera            | Fotoaparát       | Apple     |
+| com.apple.mobiletimer       | Hodiny        | Apple     |
+| com.apple.compass           | Kompas      | Apple     |
+| com.apple.MobileAddressBook | Kontakty     | Apple     |
+| com.apple.facetime          | FaceTime     | Apple     |
+| com.apple.DocumentsApp      | Soubory        | Apple     |
+| com.apple.mobileme.fmf1     | Najít přátele | Apple     |
+| com.apple.mobileme.fmip1    | Najít iPhone  | Apple     |
+| com.apple.gamecenter        | Herní centrum  | Apple     |
+| com.apple.mobilegarageband  | GarageBand   | Apple     |
+| com.apple.Health            | Stav       | Apple     |
+| com.apple.Home              | Domů         | Apple     |
+| com.apple.iBooks            | iBooks       | Apple     |
+| com.apple.iMovie            | iMovie       | Apple     |
+| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
+| com.apple.MobileStore       | iTunes Store | Apple     |
+| com.apple.itunesu           | iTunes U     | Apple     |
+| com.apple.Keynote           | Keynote      | Apple     |
+| com.apple.mobilemail        | Mail         | Apple     |
+| com.apple.Maps              | Maps         | Apple     |
+| com.apple.MobileSMS         | Zprávy     | Apple     |
+| com.apple.Music             | Hudba        | Apple     |
+| com.apple.news              | News         | Apple     |
+| com.apple.mobilenotes       | Poznámky        | Apple     |
+| com.apple.Numbers           | Numbers      | Apple     |
+| com.apple.Pages             | Stránky        | Apple     |
+| com.apple.Photo-Booth       | Photo Booth  | Apple     |
+| com.apple.mobileslideshow   | Fotky       | Apple     |
+| com.apple.podcasts          | Podcasty     | Apple     |
+| com.apple.reminders         | Připomínky    | Apple     |
+| com.apple.mobilesafari      | Safari       | Apple     |
+| com.apple.Preferences       | Nastavení     | Apple     |
+| com.apple.SiriViewService   | Siri         | Apple     |
+| com.apple.stocks            | Stocks       | Apple     |
+| com.apple.tips              | Tipy         | Apple     |
+| com.apple.TV                | TV           | Apple     |
+| com.apple.videos            | Videa       | Apple     |
+| com.apple.VoiceMemos        | Diktafon   | Apple     |
+| com.apple.Passbook          | Wallet       | Apple     |
+| com.apple.Bridge            | Sledování        | Apple     |
+| com.apple.weather           | Počasí      | Apple     |
 
 ## <a name="next-steps"></a>Další postup
 

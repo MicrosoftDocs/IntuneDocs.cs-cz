@@ -18,10 +18,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9c377a8558b1f318b4ddad735b6368a291e34516
-ms.sourcegitcommit: 3abc3bb93a95a81154146325c26c119a784e7487
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/11/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57756815"
 ---
 # <a name="in-development-for-microsoft-intune---march-2019"></a>Při vývoji pro Microsoft Intune – březen 2019
@@ -59,7 +59,7 @@ Přidáváme nový vstupní bod v zařízení, kde najdete podrobnosti o z Azure
 ### <a name="scope-tags-for-app-configuration-policies---2371891---"></a>Značky oboru pro zásady Konfigurace aplikací <!--2371891 -->
 Budete moct přidat značku oboru pro zásady Konfigurace aplikací tak, aby pouze uživatelé s rolí také přiřadit značky oboru přístupu pro zásady Konfigurace aplikací. Zásady Konfigurace aplikací můžete pouze cílené na nebo přidružené aplikace přiřazené stejné značka oboru.
 
-### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Přiřazení profilů Autopilotu virtuální skupině Všechna zařízení <!--2715522 -->
+### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Přiřazení profilů Autopilot na všechny virtuální skupiny zařízení <!--2715522 -->
 Profily Autopilotu budete moct přiřadit virtuální skupině Všechna zařízení. Uděláte to tak, že vyberete **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil > **Přiřazení** > v části **Přiřadit k** vyberte **Všechna zařízení**. Další informace o profilech Autopilotu najdete v článku [Registrace zařízení s Windows pomocí Windows Autopilotu](enrollment-autopilot.md).
 
 ### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment----2751523----"></a>Instalovat dostupné aplikace pomocí aplikace portál společnosti po Windows hromadný zápis <!-- 2751523  -->

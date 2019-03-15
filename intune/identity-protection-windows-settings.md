@@ -16,10 +16,10 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 51569b5cb6faac6c265734b46f1efbb8407e0d3c
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
-ms.translationtype: MT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57566212"
 ---
 # <a name="windows-10-and-newer-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení Windows 10 (a novější) zařízení chcete povolit Windows Hello pro firmy v Intune

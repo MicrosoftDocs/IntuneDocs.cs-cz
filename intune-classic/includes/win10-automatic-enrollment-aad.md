@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fbfff91d2993becc99e2132285bef78d245ff50e
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "35289268"
+---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
 Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Windows 10 do Intune, když přidávají pracovní účet do svého osobního zařízení nebo připojují zařízení vlastněná společností k Azure Active Directory. Na pozadí se uživatelovo zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.
@@ -9,7 +17,7 @@ Automatická registrace umožňuje uživatelům zaregistrovat zařízení s Wind
 
 ### <a name="configure-automatic-mdm-enrollment"></a>Konfigurace automatického zápisu MDM
 
-1. Přihlaste se k [portálu pro správu Microsoft Azure](https://portal.azure.com) (https://manage.windowsazure.com) a vyberte **Azure Active Directory**.
+1. Přihlaste se k [portál pro správu Azure](https://portal.azure.com) (https://manage.windowsazure.com) a vyberte **Azure Active Directory**.
 
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
 

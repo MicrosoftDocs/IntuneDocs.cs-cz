@@ -18,11 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32f167def5e96061b0d69665c2c5b81a29d03389
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.openlocfilehash: add5ee699b652aacfa3e3b2bfd089905a881fe11
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57461358"
 ---
 # <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
@@ -226,7 +226,7 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 
 **Řešení 1**:
 
-Uživatel možná bude moct načíst chybějící certifikát podle pokynů v tématu [Zařízení nemá požadovaný certifikát](/intune-user-help/your-device-is-missing-a-required-certificate-android#your-device-is-missing-a-certificate-required-by-your-it-administrator). Pokud chyba přetrvává, vyzkoušejte Řešení 2.
+Uživatel možná bude moct načíst chybějící certifikát podle pokynů v tématu [Zařízení nemá požadovaný certifikát](/intune-user-help/your-device-is-missing-a-required-certificate-android). Pokud chyba přetrvává, vyzkoušejte Řešení 2.
 
 **Řešení 2**:
 

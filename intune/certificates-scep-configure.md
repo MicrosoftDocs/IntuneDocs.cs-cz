@@ -5,8 +5,8 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
-ms.topic: conceptual
+ms.date: 03/05/2019
+ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,11 +16,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c0f498dd4a3fc26a909bd9c0adfd9247c588097
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 8712fc49bce8237e717a1a38e63ec334509e3217
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57400462"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
@@ -37,9 +37,9 @@ Tento článek popisuje, jak pomocí Intune nakonfigurovat infrastrukturu a pak 
 - **NDES Server**: V systému Windows Server 2012 R2 nebo novějším nastavení role serveru zápisu služby síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení na serveru, na kterém se provozuje také certifikační autorita organizace. Pokyny ke konfiguraci Windows Serveru 2012 R2 pro hostování této služby najdete v [doprovodných materiálech ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
 Server NDES musí být připojený k doméně ve stejné doménové struktuře jako certifikační autorita organizace. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
 
-- **Microsoft Intune Certificate Connector**: Stáhněte si **Certificate Connector** instalačního programu (**NDESConnectorSetup.exe**) z portálu pro správu Intune. Tento instalační program spustíte na serveru s rolí NDES.  
+- **Microsoft Intune Certificate Connector**: Na portálu Intune přejděte na **konfigurace zařízení** > **konektory Certificate Connectors** > **přidat**a postupujte podle pokynů *kroky Instalace konektoru pro SCEP*. Použijte odkaz ke stažení portálu a zahájit stahování instalačního programu pro konektor certificate **NDESConnectorSetup.exe**.  Tento instalační program spustíte na serveru s rolí NDES.  
 
-  - Certificate Connector pro NDES také podporuje režim FIPS (Federal Information Processing Standard). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
+Tento konektor NDES certifikát také podporuje režim federální informace o zpracování Standard (FIPS). Režim FIPS není povinný, ale pokud ho aktivujete, můžete vydávat a odvolávat certifikáty.
 
 - **Proxy Server webových aplikací** (volitelné): Použít server se systémem Windows Server 2012 R2 nebo vyšší jako server Proxy webových aplikací (WAP). Tato konfigurace:
   - Umožňuje zařízením získat certifikáty pomocí připojení k internetu.
@@ -302,7 +302,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.
 3. Stáhněte a uložte soubor konektoru. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
-    ![ConnectorDownload](./media/certificates-download-connector.png)
+    ![ConnectorDownload](/media/certificates-pfx-configure/certificates-download-connector.png)
 
 4. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Další kroky:
 

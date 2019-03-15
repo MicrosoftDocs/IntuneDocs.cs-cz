@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 03/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,11 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b714b48d33aa0a5e3af952195aaf6e01954a831a
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
+ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57566042"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
@@ -31,7 +31,6 @@ ms.locfileid: "57566042"
 Pokud chcete změnit chování interních aplikací pro Android tím, že omezíte jejich funkce – beze změny samotného kódu aplikace – použijte nástroj Microsoft Intune App Wrapping Tool for Android.
 
 Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a který vytvoří okolo vaší aplikace pro Android obálku. Po zabalení aplikace můžete změnit její funkce nakonfigurováním [zásad správy mobilní aplikace](app-protection-policies.md) v Intune.
-
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
@@ -54,10 +53,12 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 - Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Informace o **opětovném použití** existujících certifikátů a celkové pokyny k podpisovým certifikátům najdete v tématu [Opětovné použití podpisových certifikátů a balení aplikací](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Ke generování **nových** přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace se používá spustitelný soubor Java keytool.exe. Nastavená hesla musí být bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
 
-> [!NOTE]
-> Nástroj Intune App Wrapping Tool nepodporuje pro podepisování aplikací podpisová schémata v2 a nadcházející v3 od Googlu. Po zabalení souboru .apk pomocí nástroje Intune App Wrapping Tool se doporučuje použít [nástroj Apksigner od Googlu]( https://developer.android.com/studio/command-line/apksigner). Tím se zajistí, že když se vaše aplikace dostane na zařízení koncových uživatelů, bude ji možné spustit správně podle standardů Androidu. 
+    > [!NOTE]
+    > Nástroj Intune App Wrapping Tool nepodporuje pro podepisování aplikací podpisová schémata v2 a nadcházející v3 od Googlu. Po zabalení souboru .apk pomocí nástroje Intune App Wrapping Tool se doporučuje použít [nástroj Apksigner od Googlu]( https://developer.android.com/studio/command-line/apksigner). Tím se zajistí, že když se vaše aplikace dostane na zařízení koncových uživatelů, bude ji možné spustit správně podle standardů Androidu. 
 
-- (Volitelné) V rámci vstupní aplikace povolte Multidex. Někdy se může stát, že aplikace dosáhne limitu velikosti souboru DEX (Dalvik Executable) kvůli třídám sady Intune MAM SDK, které se přidávají během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. V tomto scénáři doporučujeme povolit Multidex přímo v aplikaci. V některých organizacích to může vyžadovat spolupráci s těmi, kteří kompilují aplikaci (tedy s týmem, který vytvořil build aplikace). 
+- (Volitelné) Někdy aplikace narazit na omezení velikosti Dalvik Executable (DEX) z důvodu tříd sady Intune MAM SDK, které se přidávají během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. Intune App Wrapping Tool automaticky zpracovává během zabalení pro aplikace pomocí rozhraní API pro minimální úrovně 21 nebo vyšší přetečení souboru DEX (počínaje verzí [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). U aplikací s minimální úroveň rozhraní API < 21, doporučujeme je ke zvýšení minimální úroveň rozhraní API pomocí Obálka `-UseMinAPILevelForNativeMultiDex` příznak. Pro zákazníky, kteří nelze zvýšit minimální úroveň rozhraní API aplikace jsou k dispozici následujících náhradních postupů DEX přetečení. V některých organizacích to může vyžadovat spolupráci s těmi kompilují aplikaci (tj. team build aplikace):
+* Chcete-li odstranit odkazy na nevyužité třídy ze souboru DEX primární aplikace pomocí ProGuard.
+* Pro zákazníky, kteří používají v3.1.0 nebo vyšší modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
@@ -94,6 +95,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 |**-KeyAlias**&lt;String&gt;|Název klíče, který se má použít pro podepisování.| |
 |**-KeyPassword**&lt;SecureString&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
 |**-SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA|
+|**-UseMinAPILevelForNativeMultiDex**| (Volitelné) Pomocí tohoto příznaku zvýšit zdrojové aplikaci pro Android na minimální úroveň rozhraní API 21. Tento příznak bude výzvu k potvrzení, protože se omezit, kdo může tuto aplikaci nainstalovat. Uživatelům můžete přeskočit potvrzovací dialogové okno přidáním parametru "-potvrzení: $false" na jejich příkaz prostředí PowerShell. Příznak by měla sloužit pouze zákazníci v aplikacích s minimální rozhraní API < 21, které selhaly z důvodu chyb přetečení DEX zabalit úspěšně. | |
 | **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 
 

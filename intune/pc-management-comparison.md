@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9c70dbee01c546f73052b8741ce339c7bfe92fc7
-ms.sourcegitcommit: fb2ca28ab0cf89202c935da3f9d98adcea20566d
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/06/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57461137"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
@@ -54,4 +54,5 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 Správa počítačů s Windows s využitím moderní správy mobilních zařízení přináší následující výhody:
 - **Škálovatelnost** – řešení MDM je díky cloudové správě Intune škálovatelné. Softwarový klient Intune je omezený na 7000 počítačů.
 - **Jednoduchost** – používá moderní funkce správy, které jsou součástí operačního systému, bez spoléhání se na staženého softwarového klienta.
-- **Konzistence** – počítače s Windows se v organizaci spravují jako všechna ostatní mobilní zařízení. <!-- - **Cloud optimization** - -->
+- **Konzistence** – počítače s Windows se v organizaci spravují jako všechna ostatní mobilní zařízení.
+<!-- - **Cloud optimization** - -->

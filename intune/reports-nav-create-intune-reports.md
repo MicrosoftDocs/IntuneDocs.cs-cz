@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0b43323d19d79a7ce6bb6e8da9a3eb87c307e968
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
-ms.translationtype: MT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57564886"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Pomocí Microsoft Intune Data Warehouse
@@ -53,4 +53,4 @@ Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mo
 
 - Získejte odkaz a použijte Power BI k získání přehledu. Pokyny najdete v tématu [Připojení k datovému skladu Intune pomocí Power BI](reports-proc-get-a-link-powerbi.md).
 - S odkazem vytvořte vlastní sestavu pomocí Power BI. Pokyny najdete v článku [Vytvoření sestavy z datového kanálu OData pomocí Power BI](reports-proc-create-with-odata.md).
-- Další informace o rozhraní API datového skladu Intune, datovém modelu a relacích mezi entitami<!-- , and an example of creating a custom client to retrieve data,--> najdete v tématu [Rozhraní API datového skladu Intune](reports-nav-intune-data-warehouse.md).
+- Získejte další informace o rozhraní API datového skladu Intune, datovém modelu a vztahy mezi entitami<!-- , and an example of creating a custom client to retrieve data,--> Zobrazit [rozhraní API datového skladu Intune](reports-nav-intune-data-warehouse.md).

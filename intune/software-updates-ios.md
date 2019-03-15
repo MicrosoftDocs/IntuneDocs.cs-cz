@@ -14,10 +14,10 @@ ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3a6cf207c58194030a4e4bab8a02f76cd97b338
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57398609"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
@@ -93,8 +93,8 @@ Existující zásady se přiřazují skupinám, uživatelům nebo zařízením. 
 U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů pro aktualizace. Tyto zásady podporují také zařízení bez uživatelů.
 
 ## <a name="monitor-device-installation-failures"></a>Monitorování chyb instalace na zařízeních
-Možnost <!-- 1352223 -->
-**Aktualizace softwaru** > **Chyby instalace pro zařízení s iOSem** zobrazuje seznam zařízení s iOSem, která jsou pod dohledem a na která zásady aktualizace cílí, na kterých se provedl pokus o aktualizaci a která se nepodařilo aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
+<!-- 1352223 -->
+**Aktualizace softwaru** > **chyby instalace pro zařízení s Iosem** se zobrazí seznam objektů s Iosem pod dohledem zařízení zacílení pomocí zásad aktualizace, pokus o aktualizaci a nelze jej aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
 ## <a name="next-steps"></a>Další postup
 

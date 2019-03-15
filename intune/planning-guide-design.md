@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 268f6d7aab273efdc9bd718861b8ea67cd281c97
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
-ms.translationtype: MT
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57393254"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
@@ -402,7 +402,7 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným firemním prostředkům povolit jen zařízením, která dodržují předpisy. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Musíte se rozhodnout, jestli je podmíněný přístup potřeba a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
 
-U online přístupu rozhodněte, jaké platformy a skupiny uživatelů budou cílem zásad podmíněného přístupu. Dále rozhodněte, jestli potřebujete nainstalovat nebo nakonfigurovat Intune Service to Service Connector pro Exchange Online nebo místní Exchange. Přečtěte si další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector: <!---these links are correct--->
+U online přístupu rozhodněte, jaké platformy a skupiny uživatelů budou cílem zásad podmíněného přístupu. Dále rozhodněte, jestli potřebujete nainstalovat nebo nakonfigurovat Intune Service to Service Connector pro Exchange Online nebo místní Exchange. Další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector: <!---these links are correct--->
 
 -   [Exchange Online](exchange-service-connector-configure.md)
 
