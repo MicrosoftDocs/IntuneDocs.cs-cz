@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 04afc9c44bc1c4898950e6f3aff5dac7cb93370f
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "56323464"
+---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
 Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Windows 10 zaregistrovali v Intune. Při registraci si uživatelé přidají pracovní účet do svého vlastního zařízení nebo připojí zařízení, která patří společnosti, ke službě Azure Active Directory. Na pozadí se zařízení zaregistruje a připojí ke službě Azure Active Directory. Po registraci je zařízení spravováno přes Intune.

@@ -17,11 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530cc40fcc08fd527a6330f2931cae22f57a0888
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57389983"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
@@ -60,7 +60,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 4. Potvrďte, že **Verze** Windows 10 je **1607 nebo vyšší**.
 
     > [!IMPORTANT]
-    > Postup uvedený v tomto rychlém startu platí pro Windows 10 verze **1607 nebo vyšší**. Pokud máte verzi **1511 nebo nižší**, pokračujte [tímto postupem](/intune-user-help/enroll-your-w10-device-your-account).
+    > Postup uvedený v tomto rychlém startu platí pro Windows 10 verze **1607 nebo vyšší**. Pokud máte verzi **1511 nebo nižší**, pokračujte [tímto postupem](/intune-user-help/enroll-windows-10-device.md).  
 
 ## <a name="enroll-windows-10-desktop"></a>Registrace desktopové verze Windows 10
 

@@ -19,10 +19,10 @@ search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5d3473b04a1d015f88d27359864a84227215b62a
-ms.sourcegitcommit: 9a4c5b6c2ce511edaeace25426a23f180cb71e15
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57565294"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Referenční informace o entitě Přidružení zařízení uživatelů
@@ -32,7 +32,7 @@ Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů 
 ## <a name="userdeviceassociation"></a>UserDeviceAssociation
 
 
-|        Name        |                                           Popis                                            |        Příklad         |
+|        Název        |                                           Popis                                            |        Příklad         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      UserKey       |              Jedinečný identifikátor uživatele v datovém skladu (náhradní klíč)               |          123           |
 |     DeviceKey      |                      Jedinečný identifikátor zařízení v datovém skladu                      |          123           |

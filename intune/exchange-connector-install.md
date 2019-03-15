@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73e139b64da214a7246cc300b5e850ea77073929
-ms.sourcegitcommit: 430b290474b11f9df87785b01edc178e6bae2049
+ms.openlocfilehash: cf169dbae20285b9134766323b41ea9139440d74
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57390395"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
 
-V prostředí místního Exchange Serveru lze pomocí podmíněného přístupu Intune povolit nebo blokovat přístup k místním poštovním schránkám Exchange. Pomocí místních konektorů s protokolem Exchange Active Sync připojte Intune k vašim organizacím Exchange a nastavte podmíněný přístup Intune spolu se zásadami dodržování předpisů pro zařízení. Pak když se zařízení pokusí o připojení k systému Exchange, určuje Intune, pokud zařízení je zaregistrované v Intune a dodržuje předpisy. Aby se dalo určit, která zařízení jsou registrovaná v Intune, místní Exchange Connector namapuje záznamy Exchange Active Sync (EAS) v Exchange Serveru na záznamy Intune. Další informace o tom, jak to funguje, najdete v části [Jaké jsou běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+V prostředí místního Exchange Serveru lze pomocí podmíněného přístupu Intune povolit nebo blokovat přístup k místním poštovním schránkám Exchange. Pomocí místních konektorů s protokolem Exchange Active Sync připojte Intune k vašim organizacím Exchange a nastavte podmíněný přístup Intune spolu se zásadami dodržování předpisů pro zařízení. Pak když se zařízení pokusí o připojení k systému Exchange, určuje Intune, pokud zařízení je zaregistrované v Intune a dodržuje předpisy. Aby se dalo určit, která zařízení jsou registrovaná v Intune, místní Exchange Connector namapuje záznamy Exchange Active Sync (EAS) v Exchange Serveru na záznamy Intune. Další informace najdete v tématu [jaké jsou běžné způsoby použití podmíněného přístupu v Intune?](conditional-access-intune-common-ways-use.md)
 
 > [!IMPORTANT]
 > Intune teď podporuje více místních Exchange Connectorů pro každé předplatné. Pokud máte více než jednu místní organizaci Exchange, můžete pro každou organizaci Exchange nastavit samostatný konektor.
@@ -39,22 +39,23 @@ Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune
 4. Opakujte tento postup pro každou organizaci Exchange, kterou chcete připojit k Intune.
 
 ## <a name="intune-on-premises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector pro Intune
-V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.
+Budete potřebovat účet s licencí Intune, který lze použít konektor pro připojení k serveru Exchange. Účet je zadán při instalaci konektoru.  
 
+V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.  
 
-|            Požadavek             |                                                                                                                                                                                                        Další informace                                                                                                                                                                                                        |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|         Operační systémy          |                                                               Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporovaný v žádné instalaci jádra serveru.                                                                |
-|         Microsoft Exchange         |                                                                           Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů.                                                                           |
-| Autorita pro správu mobilních zařízení |                                                                                                                              [Nastavte autoritu pro správu mobilních zařízení na Intune](mdm-authority-set.md).                                                                                                                               |
-|              Hardware              |                                                                                                                                                     Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku.                                                                                                                                                      |
-|  Synchronizace se službou Active Directory  |                                                                                      Než použijete konektor k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory.                                                                                      |
-|        Další software         |                                                                                                                                           Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4.5 a musí na něm být nainstalované prostředí Windows PowerShell 2.0.                                                                                                                                           |
-|              Síť               | Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službou Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com. |
+|  Požadavek  |   Další informace     |
+|---------------|------------------------|
+|  Operační systémy        | Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporovaný v žádné instalaci jádra serveru.  |
+| Microsoft Exchange          | Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů. |
+| Autorita pro správu mobilních zařízení           | [Nastavte autoritu pro správu mobilních zařízení na Intune](mdm-authority-set.md). |
+| Hardware              | Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku. |
+|  Synchronizace se službou Active Directory             | Než použijete konektor k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](users-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory. |
+| Další software         | Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4.5 a musí na něm být nainstalované prostředí Windows PowerShell 2.0. |
+| Síť               | Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službou Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com. |
 
 ### <a name="exchange-cmdlet-requirements"></a>Požadavky rutin systému Exchange
 
-Musíte vytvořit uživatelský účet služby Active Directory, který bude místní Exchange Connector používat. Tento účet musí mít oprávnění ke spouštění těchto požadovaných rutin prostředí Windows PowerShell:
+Vytvoření účtu uživatele služby Active Directory, který se použije místní Exchange connector. Tento účet musí mít oprávnění ke spouštění těchto požadovaných rutin prostředí Windows PowerShell:
 
 
  -   Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
@@ -116,9 +117,9 @@ Při instalaci místního Exchange Connectoru pro Intune použijte tento postup.
 
        4. Vyberte **OK**.
 
-4. Do polí **Uživatel (doména\uživatel)** a **Heslo** zadejte přihlašovací údaje potřebné k připojení k Exchange serveru.
+4. Do polí **Uživatel (doména\uživatel)** a **Heslo** zadejte přihlašovací údaje potřebné k připojení k Exchange serveru. Účet, který zadáte, musí mít licenci k používání Intune. 
 
-5. Zadejte přihlašovací údaje potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel pro oznámení potřebuje poštovní schránku Exchange, aby mohl odesílat oznámení e-mailem. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.  
+5. Zadejte přihlašovací údaje potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel pro oznámení potřebuje poštovní schránku Exchange k odesílání oznámení e-mailem. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.  
 
        Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
 
@@ -159,10 +160,10 @@ Můžete se taky podívat na datum a čas posledního úspěšného pokusu o syn
 
 ### <a name="system-center-operations-manager-management-pack"></a>Sada System Center Operations Manager management pack
 
-Počínaje verzí Intune 1710 můžete použít [nástroje Operations Manager management pack pro Exchange connector a Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). V případě potřeby řešení potíží tak máte různé možnosti monitorování Exchange Connectoru.
+Počínaje verzí Intune 1710 můžete použít [nástroje Operations Manager management pack pro Exchange connector a Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Použití sady management pack poskytuje různé možnosti monitorování Exchange Connectoru, když budete potřebovat k řešení potíží.
 
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Ruční vynucení rychlé synchronizace nebo úplné synchronizace
-V místním konektorem Exchange automaticky synchronizuje zařízení záznamy EAS a Intune pravidelně. Pokud se stav dodržování předpisů nějakého zařízení změní, proces automatické synchronizace pravidelně aktualizuje záznamy, takže přístup daného zařízení je možné následně blokovat nebo povolit.
+V místním konektorem Exchange automaticky synchronizuje zařízení záznamy EAS a Intune pravidelně. Pokud se změní stav dodržování předpisů zařízením procesu automatické synchronizace pravidelně aktualizují záznamy tak, aby přístup k zařízení můžete blokované nebo povolené.
 
    - **Rychlá synchronizace** se provádí pravidelně několikrát za den. Při rychlé synchronizaci se načítají informace o zařízeních pro uživatele s licencí Intune a cílením podmíněného přístupu pro místní Exchange, kteří se od poslední synchronizace změnily.
 

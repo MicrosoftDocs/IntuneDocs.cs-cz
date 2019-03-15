@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/13/2017
+ms.date: 03/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,15 +18,15 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3dba2401240b19b93318946af0e8760fef121518
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55837573"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
-Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile nebo Windows 10 Desktop v Intune](enroll-your-w10-phone-or-w10-pc-windows.md), ale stále nemáte přístup ke svému školnímu nebo pracovnímu e-mailu a souborům, zkuste tyto kroky pro řešení potíží.
+Pokud jste zaregistrovali zařízení, ale pořád nemáte přístup k pracovním nebo školním e-mailům a souborům, zkuste tyto kroky pro řešení potíží.  
 
 1.  Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
 
@@ -44,17 +44,17 @@ Pokud jste použili postup v části [Registrace zařízení s Windows 10 Mobile
 
 2. Udělejte jednu z těchto věcí:
 
-   - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud se tyto možnosti zobrazují, znamená to, že jste zaregistrovaní a připojení.
+   - Pokud vidíte připojení, které vypadá jako na obrázku níž, klepněte na něj a potom zkontrolujte, že se zobrazují možnosti Správa, Informace a Odpojit. Pokud se zobrazí tyto možnosti, se teď zaregistrované a připojené.
 
      ![validate-successful-enrollment](./media/w10-enroll-rs1-validate-successful-enrollment.png)
 
-   - Pokud se informace o připojení nezobrazují nebo pokud je vidíte, ale nezobrazují se všechny možnosti, klepněte na **Připojit** a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Teď byste měli být připojení.
+   - Pokud nevidíte informace o připojení nezobrazují nebo pozorování, ale chybí některé možnosti, klepněte na **připojit**. Přihlaste se pomocí pracovních nebo školních přihlašovacích údajů pro připojení.  
 
 ## <a name="troubleshooting-steps-to-follow-if-you-see-your-account"></a>Postup řešení potíží, pokud se zobrazí „Váš účet“
 
 Pokud jste použili tento postup, ale pořád nemáte přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším datům, vraťte se k položce **Účty** a klepněte na **Přístup do práce**.
 
-- Pokud vidíte svůj pracovní nebo školní účet, gratulujeme. Jste připojení.
+- Je-li zobrazit váš pracovní nebo školní účet, jste připojeni.  
 
 - Pokud svůj pracovní nebo školní účet nevidíte, klepněte na **Připojit** a přihlaste se pomocí přihlašovacích údajů svého pracovního nebo školního účtu.
 

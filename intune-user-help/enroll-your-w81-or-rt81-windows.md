@@ -18,52 +18,54 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b20acc1c6b3fd64536b473013182d06e2bc04623
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: 3ecc93ae788179991fd27545405d8d7319f74481
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55834190"
 ---
-# <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune
+# <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune  
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 
-Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
+Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:  
 
-1.  V zařízení klepněte na **Nastavení** &gt; **Nastavení počítače** &gt; **Síť** &gt; **Pracoviště**.
+1.  V zařízení klepněte na **Nastavení** &gt; **Nastavení počítače** &gt; **Síť** &gt; **Pracoviště**.  
 
-    ![nav-to-workplace](./media/W81-1-workplacejoin.png)
+    ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
-2.  Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**.
+2.  Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**. Pokud vaše ID uživatele se nevyžaduje, použije se e-mailovou adresu, kterou jste zadali při přihlašování k tomuto zařízení.  
 
-    Pokud se nevyžaduje ID uživatele, použije se e-mailová adresa, kterou jste zadali při přihlašování k tomuto zařízení.
+3.  Zadejte heslo pracovního nebo školního e-mailu.  
 
-3.  Zadejte heslo pracovního nebo školního e-mailu.
 
-    ![type-password](./media/W81-2-workplacesettings_signin.png)
+    ![type-password](./media/W81-2-workplacesettings_signin.png)  
 
-4.  V části **Zapnout správu zařízení** klepněte na **Zapnout**.
+4.  V části **Zapnout správu zařízení** klepněte na **Zapnout**.  
 
-    ![turn-on-device-management](./media/W81-3-dev-mgt-turn-on.png)
 
-5.  V dialogovém okně **Povolit aplikace a služby od firemní podpory** zaškrtněte políčko **Souhlasím** a potom klepněte na **Zapnout**.
+    ![turn-on-device-management](./media/W81-3-dev-mgt-turn-on.png)  
 
-    ![turn-on-allow-apps-services](./media/W81-4-agree-allow-apps-services.png)
+5.  V dialogovém okně **Povolit aplikace a služby od firemní podpory** zaškrtněte políčko **Souhlasím** a potom klepněte na **Zapnout**.  
 
-    Po úspěšné registraci uvidíte následující obrazovku.
+
+    ![turn-on-allow-apps-services](./media/W81-4-agree-allow-apps-services.png)  
+
+    Po úspěšné registraci uvidíte následující obrazovku.  
+
 
     ![enrollment-complete](./media/W81-5-enrolled-done.png)
 
 Doporučujeme také nainstalovat aplikaci Portál společnosti, která vám umožní snadno identifikovat a instalovat podnikové aplikace, které jsou relevantní pro vás i vaši roli. V závislosti na tom, jak vaše firma službu Intune nastavila, se aplikace Portál společnosti mohla nainstalovat jako součást procesu registrace. Pokud chcete zjistit, jestli aplikaci máte, hledejte v seznamu aplikací aplikaci **Portál společnosti**. Pokud aplikaci Portál společnosti v seznamu nenajdete, nainstalujte ji podle následujícího postupu.
 
-1.  Klepněte na **Start** &gt; **Store**.
+1.  Klepněte na **Start** &gt; **Store**.  
 
-2.  Klepněte na **Hledat** a napište **portál společnosti**.
+2.  Klepněte na **Hledat** a napište **portál společnosti**.  
 
-3.  V seznamu výsledků klepněte na **Portál společnosti**.
+3.  V seznamu výsledků klepněte na **Portál společnosti**.  
 
-4.  Klepněte buď na **Instalovat**, nebo na **Zdarma**. Zobrazená možnost závisí na tom, jak vaše firma tuto aplikaci nastavila.
+4.  Klepněte buď na **Instalovat**, nebo na **Zdarma**. Zobrazená možnost závisí na tom, jak vaše firma tuto aplikaci nastavila.  
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

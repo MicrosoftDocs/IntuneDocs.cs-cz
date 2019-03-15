@@ -18,10 +18,10 @@ ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7ccaa9d12c7a7b187f612edad2177882fff2420c
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55846073"
 ---
 # <a name="you-need-to-turn-off-unknown-sources"></a>Musíte vypnout nastavení Neznámé zdroje

@@ -18,11 +18,11 @@ ms.reviewer: robstack
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44aad280f0b8714adbb3c8a1e109b68a5af46d4d
-ms.sourcegitcommit: 727c3ae7659ad79ea162250d234d7730f840c731
+ms.openlocfilehash: b7b67f1484ed74bd538cad53f02babd542b77fff
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "55838831"
 ---
 # <a name="use-managed-devices-to-access-work-or-school-resources"></a>Pomocí spravovaných zařízení měl přístup k pracovním nebo školním prostředkům
@@ -58,7 +58,7 @@ Pokud vás zajímá, co vaše firemní podpora uvidí nebo naopak neuvidí na va
 - [Instalace aplikace Portál společnosti pro Android](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
 - [Instalace aplikace Portál společnosti pro iOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
 - [Instalace aplikace Portál společnosti pro macOS](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-macos.md)
-- [Instalace aplikace Portál společnosti pro Windows](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows10.md)
+- [Instalace aplikace Portál společnosti pro Windows](about-cp-app-for-windows-10.md)
 
 ## <a name="what-kind-of-computers-or-devices-can-you-add-to-the-company-portal"></a>Jaký typ počítačů nebo zařízení můžete přidávat na Portál společnosti?
 -   Zařízení Apple používající iOS (například iPhone a iPad) a macOS (například MacBook a iMac)

@@ -18,68 +18,76 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b7621ce491cceb6d39efa52a7ba6a0265bf84ad
-ms.sourcegitcommit: da9ee02de327f202b00be44c79bf7abd35b9929b
+ms.openlocfilehash: 16a610050a7c4ce094005617304249acdb961878
+ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
+ms.lasthandoff: 03/14/2019
 ms.locfileid: "57335101"
 ---
-# <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrace zařízení s Windows Phone 8.1 v Intune
+# <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrace zařízení s Windows Phone 8.1 v Intune  
 
-Pokud vaše společnost nebo škola používá Microsoft Intune, můžete svá zařízení zaregistrovat, a získat tak přístup k e-mailům, souborům a dalším prostředkům společnosti. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Zaregistrujte svoje zařízení získat přístup k pracovní nebo školní e-mail, soubory a další prostředky. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 Registrace zařízení v Intune, postupujte podle sadu instrukcí, které odpovídají oprávnění nebo aktuální stav účtu.
 
-## <a name="if-your-company-lets-you-use-the-company-portal-from-the-microsoft-store"></a>Pokud vám vaše společnost umožňuje používat Portál společnosti z Microsoft Storu  
-Nainstalujte si do zařízení aplikaci Portál společnosti:
+## <a name="enroll-through-company-portal"></a>Registrace prostřednictvím portálu společnosti  
+Pokud nainstalujete aplikaci portál společnosti z Microsoft Store, postupujte podle těchto kroků. 
 
-1.  Klepněte na **Start** &gt; **Store**.
+1.  Klepněte na **Start** > **Store**.  
 
-2.  Klepněte na **Hledat** a napište **portál společnosti**.
+2.  Klepněte na **Hledat** a napište **portál společnosti**.  
 
-3.  V seznamu výsledků klepněte na **Portál společnosti**.
+3.  V seznamu výsledků klepněte na **Portál společnosti**.  
 
-    ![Výsledky hledání Portálu společnosti](./media/WP81-1-CP-search-store-v2.png)
 
-4.  Klepněte na **Portál společnosti** &gt; **Instalovat**.
+    ![Výsledky hledání Portálu společnosti](./media/WP81-1-CP-search-store-v2.png)  
 
-    ![Instalace Portálu společnosti](./media/WP81-2-CP-install-v2.png)
+4.  Klepněte na **Portál společnosti** &gt; **Instalovat**.  
 
-Zaregistrujte své zařízení:
 
-1.  V zařízení otevřete aplikaci **Portál společnosti Microsoft Intune**.
+    ![Instalace Portálu společnosti](./media/WP81-2-CP-install-v2.png)  
 
-2.  Zadejte svoje přihlašovací údaje. V odpovídajících případech můžete být vyzváni, abyste přijali podmínky a ujednání vaší společnosti.
+Zaregistrujte své zařízení:  
 
-3.  Potažením prstem přejděte na **Moje zařízení**.
+1.  V zařízení otevřete aplikaci **Portál společnosti Microsoft Intune**.  
 
-4.  Klepněte na **Klepněte sem a můžete pak toto zařízení zaregistrovat nebo identifikovat**.
 
-    ![Klepněte sem a můžete pak toto zařízení zaregistrovat nebo identifikovat](./media/WP81-enroll-1-swipe-my-devices.png)
+2.  Zadejte svoje přihlašovací údaje. V odpovídajících případech můžete být vyzváni, abyste přijali podmínky a ujednání vaší společnosti.  
 
-5.  Klepněte na **Zaregistrovat toto zařízení**.
+3.  Potažením prstem přejděte na **Moje zařízení**.  
 
-    ![Zaregistrovat toto zařízení.](./media/WP81-enroll-2-enroll-this-device.png)
+4.  Vyberte **klepněte sem a můžete zaregistrovat nebo identifikovat toto zařízení**.  
 
-6.  Klepněte na **Přidat účet**.
 
-    ![Obrazovka nastavení pracoviště](./media/WP81-enroll-3-workplace-add-acct.png)
+    ![Klepněte sem a můžete pak toto zařízení zaregistrovat nebo identifikovat](./media/WP81-enroll-1-swipe-my-devices.png)  
 
-7.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět účet pracoviště na stránce **Nastavení** &gt; **Pracoviště**.
+5.  Klepněte na **Zaregistrovat toto zařízení**.  
 
-    ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)
 
-## <a name="if-you-are-not-allowed-to-access-the-microsoft-store-from-your-windows-phone-or-if-you-do-not-have-a-microsoft-account"></a>Pokud nemáte oprávnění k přístupu do Microsoft Storu z Windows Phonu nebo pokud ještě nemáte účet Microsoft
+    ![Zaregistrovat toto zařízení.](./media/WP81-enroll-2-enroll-this-device.png)  
 
-1.  Klepněte na **Nastavení** &gt; **Pracoviště**.
+6.  Klepněte na **Přidat účet**.  
 
-2.  Klikněte na **Přidat účet** a potom se přihlaste pomocí svého pracovního účtu.
 
-3.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci.
+    ![Obrazovka nastavení pracoviště](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-4.  Pokud se zobrazí výzva k instalaci firemní aplikace nebo firemního centra, zaškrtněte odpovídající políčko a potom klepněte na **Hotovo**.
+7.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci. Teď byste měli vidět účet pracoviště na stránce **Nastavení** &gt; **Pracoviště**.  
 
-Pokud vaše firemní podpora nastavila Portál společnosti tak, aby se nainstaloval během registrace, zobrazí se Portál společnosti ve vašem seznamu aplikací.
+
+    ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)  
+
+## <a name="enroll-through-settings-app"></a>Registrace prostřednictvím nastavení aplikace  
+Následující postup, pokud nemá přístup k Microsoft Store ze zařízení s Windows Phone, nebo pokud nemáte Account Microsoft.
+
+1.  Klepněte na **Nastavení** &gt; **Pracoviště**.  
+
+2.  Klikněte na **Přidat účet** a potom se přihlaste pomocí svého pracovního účtu.  
+
+3.  Podle potřeby zadejte další informace a klepnutím na **Přihlásit se** dokončete registraci.  
+
+4.  Pokud se zobrazí výzva k instalaci firemní aplikace nebo firemního centra, zaškrtněte odpovídající políčko a potom klepněte na **Hotovo**.  
+
+Pokud vaše firemní podpora nastavila Portál společnosti tak, aby se nainstaloval během registrace, zobrazí se Portál společnosti ve vašem seznamu aplikací.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
