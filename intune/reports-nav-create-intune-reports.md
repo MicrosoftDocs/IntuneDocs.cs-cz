@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b43323d19d79a7ce6bb6e8da9a3eb87c307e968
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: c3112683d44b7c4d4a3e9d1bccc6fb8c06450600
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57564886"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991044"
 ---
 # <a name="use-the-microsoft-intune-data-warehouse"></a>Pomocí Microsoft Intune Data Warehouse
 
@@ -43,7 +43,7 @@ Datový sklad poskytuje přístup k více informacím týkajícím se vašeho mo
   -  Datovému modelu používajícímu standard OData
 
 > [!Note]
-> Pokud spolu s nástrojem System Center Configuration Manager a Microsoft Intune používáte hybridní správu mobilních zařízení (MDM), můžete chtít načíst data z SCCM. Datový sklad Intune obsahuje jenom data Intune. Pro vlastní sestavy můžete využít řídicí panel Power BI SCCM. Další informace najdete v článku [Announcing the Power BI solution template for System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template) (Představujeme šablonu řešení pro System Center Configuration Manager) a [Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page) (Obsah Power BI pro Dynamics 365).
+> Pokud jste pomocí spravovaného společně mobilní správy zařízení (MDM) pomocí System Center Configuration Manager a Microsoft Intune, budete potřebovat k načtení dat z nástroje Configuration Manager. Datový sklad Intune obsahuje jenom data Intune. Řídicím panelu Power BI nástroje Configuration Manager můžete použít pro vlastní sestavy. Další informace najdete v článku [Announcing the Power BI solution template for System Center Configuration Manager]( https://powerbi.microsoft.com/blog/sccm-solution-template) (Představujeme šablonu řešení pro System Center Configuration Manager) a [Power BI content for Dynamics 365](https://docs.microsoft.com/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page) (Obsah Power BI pro Dynamics 365).
 
 > [!Important]  
 > Nastavením parametru dotazu  `api-version=v1.0` můžete teď používat verzi datového skladu Intune v1.0. Aktualizace kolekcí v datovém skladu mají aditivní povahu a nijak nenarušují existující scénáře.<br><br>

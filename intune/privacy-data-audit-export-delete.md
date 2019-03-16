@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4924b83caba0047f326f38cd7bce36b3fd38c4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 5a253894e400e4b63de40d2d8ef56cefef5b2ca0
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393568"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991105"
 ---
 # <a name="audit-export-or-delete-personal-data-in-intune"></a>Audit, export a odstranění osobních dat v Intune
 
@@ -80,6 +80,9 @@ Pokud máte hybridní prostředí MDM (tzn. že služba Intune je integrovaná d
 1. Odstraňte uživatele z místní služby Active Directory (AD). Tím zastavíte synchronizaci uživatele s Azure AD a také zjišťování uživatele Configuration Managerem. 
 2. Pokud chcete odebrat uživatele a s ním spojená data z Configuration Manageru, odstraňte ho z konzoly Configuration Manageru. V konzole přejděte na **Prostředky a kompatibilita** > **Uživatelé**. Pravým tlačítkem klikněte na uživatele, kterého chcete odstranit, a klikněte na **Odstranit**.
 3. Když [uživatele odstraníte z AAD](https://docs.microsoft.com/azure/active-directory/add-users-azure-active-directory.md#delete-users-from-azure-ad), odeberete uživatele a data, která se ho týkají, současně z Azure Active Directory i z Intune. Po trvalém odstranění uživatele z AAD obdrží Intune signál o odstranění z AAD. Na jeho základě začne ze služby Intune automaticky mazat všechna osobní data uživatele. Informace o uživateli budou ze služby Intune odstraněny do 30 dnů od jeho odebrání.
+
+> [!Important]
+>Registrace nové zákazníky hybridní MDM je zastaralá. Další informace najdete v tématu [přesunout z hybridní správy mobilních zařízení do Intune na Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogový příspěvek.
 
 ## <a name="next-steps"></a>Další postup
 

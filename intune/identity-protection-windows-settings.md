@@ -2,10 +2,10 @@
 title: Windows Hello pro firmy nastavení v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Zobrazit seznam všech PIN kód, biometrické a ochranu proti falšování identity nastavení v profilu ochrany identit, použití a konfigurace Windows Hello pro firmy na zařízeních s Windows 10 v Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 03/14/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,18 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51569b5cb6faac6c265734b46f1efbb8407e0d3c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.reviewer: shpate
+ms.openlocfilehash: 308a730737612f39863160952409ab92670f9153
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566212"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991059"
 ---
-# <a name="windows-10-and-newer-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení Windows 10 (a novější) zařízení chcete povolit Windows Hello pro firmy v Intune
+# <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení Windows 10 a povolit Windows Hello pro firmy v Intune
 
-Tento článek uvádí a popisuje ve Windows Hello pro firmy nastavení můžete řídit na zařízeních s Windows 10 v Intune. Jako součást řešení správy mobilních zařízení použijte toto nastavení použít PIN kód nebo otisk prstu k přihlášení a další.
+Tento článek uvádí a popisuje ve Windows Hello pro firmy nastavení můžete řídit na zařízeních s Windows 10 v Intune. Jako správce Intune můžete nakonfigurovat a přiřadit tato nastavení pro zařízení s Windows 10 jako součást řešení správy mobilních zařízení. 
 
-Jako správce Intune můžete vytvořit a přiřadit tato nastavení pro Windows 10 a novější zařízení.
+Můžete najít další informace o těchto nastaveních [konfigurovat Windows Hello pro firmy zásady nastavení](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), v dokumentaci WIndows Hello.
+
 
 Další informace o Windows Hello pro firmy profily v Intune, najdete v článku [konfigurovat identity protection](identity-protection-configure.md).
 
@@ -83,8 +85,7 @@ Další informace o Windows Hello pro firmy profily v Intune, najdete v článku
 - **Certifikát pro místní prostředky**: 
 
   - **Povolit**: Umožňuje funkci Windows Hello pro firmy používat k ověřování místních prostředků certifikáty.
-  - **Není nakonfigurováno** (výchozí): Brání funkci Windows Hello pro firmy používat k ověřování místních prostředků certifikáty.  
-
+  - **Není nakonfigurováno** (výchozí): Brání funkci Windows Hello pro firmy používat k ověřování místních prostředků certifikáty. Místo toho použijte výchozí chování zařízení *ověřovací key důvěryhodnosti v místním*. Další informace najdete v tématu [uživatelský certifikát pro ověřování v místním](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) v dokumentaci Windows Hello.  
 ## <a name="next-steps"></a>Další postup
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

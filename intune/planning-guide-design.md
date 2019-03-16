@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 268f6d7aab273efdc9bd718861b8ea67cd281c97
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 97e815914ad96b7c0db14228c76488a6147c0b46
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393254"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991167"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -110,6 +110,10 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 ## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
 
 Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatné znamená, že Intune běží v cloudu. Hybridní znamená integraci Intune do System Center Configuration Manageru. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+
+> [!Important]
+>Registrace nové zákazníky hybridní MDM je zastaralá. Další informace najdete v tématu [přesunout z hybridní správy mobilních zařízení do Intune na Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogový příspěvek.
+
 
 ## <a name="intune-tenant-location"></a>Umístění tenanta Intune
 

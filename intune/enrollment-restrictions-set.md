@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e86285d81527d16486ce592d16937b679720d51
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 2fda667710c43514c389e5d356f8b80fedd420ea
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390379"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991145"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
@@ -131,15 +131,16 @@ Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažen
 
 ![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
 
-Omezení limitu počtu zařízení se nedá použít pro následující typy podnikové registrace Windows:
-
-- Spoluspravovaná registrace
-- Objekt zásad skupiny registrací
-- Registrace připojené služby Azure Active Directory
-- Registrace připojené hromadné Azure Active Directory
-- Registrace AutoPilot
-
-Omezení zařízení můžete nastavit pro tyto typy registrace [ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
+> [!IMPORTANT]
+> Omezení limitu počtu zařízení se nedá použít pro následující typy registrace Windows:
+> - Spoluspravovaná registrace
+> - Objekt zásad skupiny registrací
+> - Registrace připojené služby Azure Active Directory
+> - Registrace připojené hromadné Azure Active Directory
+> - Registrace AutoPilot
+>
+> Omezení limitů počtů zařízení nejsou vynucena pro tyto typy registrace, protože jsou považovány za scénáře se sdílenými zařízeními.
+> Můžete nastavit pevných limitů pro tyto typy registrace [ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ## <a name="change-enrollment-restriction-priority"></a>Změna priority omezení registrace
 

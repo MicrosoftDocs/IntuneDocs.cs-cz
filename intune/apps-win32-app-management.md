@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aa1901a1b9159c2e8ab7398b70f5693708f0657
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 75137c4a9f58e1b851435cd7319d84a47478b8af
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57682670"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57991172"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -33,7 +33,7 @@ Samostatné využití Intune vám poskytuje širší možnosti správy aplikací
 
 - Windows 10 verze 1607 nebo novější (Enterprise, Pro a vzdělávání verze)
 - Klient Windows 10 musí splňovat tyto předpoklady: 
-    - musí být připojen ke službě Azure Active Directory (AAD) nebo hybridní službě Azure Active Directory, a
+    - připojené k Azure Active Directory (AAD) nebo [hybridní služby Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (otevře jiný web dokumentace), a
     - musí být zaregistrován v Intune (spravovaný přes MDM).
 - Velikost aplikace Windows je omezené na 8 GB na aplikaci
 
@@ -257,7 +257,7 @@ Na následujícím obrázku upozorní koncového uživatele, že jsou prováděn
 V případě potřeby můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **Assignemnts** > **zahrnout skupiny**. 
 
 ## <a name="troubleshoot-win32-app-issues"></a>Řešení potíží s aplikacemi Win32
-Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. Nástroj *CMTrace.exe* si můžete stáhnout z umístění uvedeném v článku o [klientských nástrojích SCCM](https://docs.microsoft.com/sccm/core/support/tools). 
+Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. *CMTrace.exe* si můžete stáhnout z [klienta nástroje Configuration Manager](https://docs.microsoft.com/sccm/core/support/tools). 
 
 ![Snímek obrazovky se Agent přihlásí v klientském počítači.](./media/apps-win32-app-10.png)    
 

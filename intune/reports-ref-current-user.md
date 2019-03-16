@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e6a543e835e67c55be4d62cb0290a096d3a65ee
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
-ms.translationtype: HT
+ms.openlocfilehash: 1b2aaab2f66b2a30c354517278ab0e764f1128ee
+ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565770"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "57990967"
 ---
 # <a name="reference-for-current-user-entity"></a>Referenční informace o entitě aktuálního uživatele
 
-Kategorie **Aktuální uživatel** obsahuje vlastnosti uživatele v datovém modelu. Kolekce entit **Aktuální uživatel** se omezuje na aktuálně aktivní uživatele. Entita obsahuje všechny uživatele Azure Active Directory, kteří mají aktuálně přiřazenou licenci. Licence může být licence Intune, hybridní licence nebo licence Microsoft Office 365. Odebraný uživatel v kolekci aktuálních uživatelů zastoupen nebude. Kolekci, která obsahuje historii změn ve stavu uživatele, najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).
+Kategorie **Aktuální uživatel** obsahuje vlastnosti uživatele v datovém modelu. Kolekce entit **Aktuální uživatel** se omezuje na aktuálně aktivní uživatele. Entita obsahuje všechny uživatele Azure Active Directory, kteří mají aktuálně přiřazenou licenci. Licence, které může být licence Intune, spoluspravovaná licence nebo licence Microsoft Office 365. Odebraný uživatel v kolekci aktuálních uživatelů zastoupen nebude. Kolekci, která obsahuje historii změn ve stavu uživatele, najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).
 
 
 ## <a name="current-user"></a>Aktuální uživatel
