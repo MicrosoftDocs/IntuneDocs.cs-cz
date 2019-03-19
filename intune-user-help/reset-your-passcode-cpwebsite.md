@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e973e18a79c18af6b201194fc1a6534da5fa38a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
+ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838032"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58163424"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -32,7 +32,7 @@ Pokud ztratíte kód PIN nebo heslo zařízení, můžete použít k jeho reseto
 Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro resetování hesla zobrazovat. V takovém případě kontaktujte svou firemní podporu, aby heslo resetovala za vás.
 
    > [!NOTE]
-   > U hesel pro zařízení s Androidem 7.0 nebo novějším hesla resetovat nemůžete. Pokud heslo zapomenete, musíte zařízení obnovit do továrního nastavení. 
+   > Nelze resetovat heslo pro zařízení s Androidem 7.0 nebo novější. Pokud zapomenete své heslo, je nutné obnovit zařízení do továrního nastavení. 
 
 ## <a name="reset-your-passcode"></a>Postup resetování hesla
 

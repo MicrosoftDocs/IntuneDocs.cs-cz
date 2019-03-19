@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,14 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 828cd17c320bd13b1b7fcce6578727015be3a77b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f35adbe01b0e0a52219480c17aa5779a98f82b3b
+ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460440"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58173979"
 ---
 # <a name="configure-the-exchange-service-connector-for-intune-and-exchange-online"></a>Nakonfigurujte konektor služby Exchange pro Intune a Exchange Online.
+> [!IMPORTANT]  
+> V MC165575 jsme oznámili, že jsme by odebírat Exchange Online funkce "Službami" konektor Intune v příští aktualizaci. Plánujeme odebrat všechny stávající Exchange Online, aby konektory Intune v březnu 2019.
+>  
+>  Další informace o této změně najdete v tématu [připomenutí: Odebrání existující Exchange Online, aby konektory Intune](whats-new.md#reminder-removal-of-existing-exchange-online-to-intune-connectors-)
+
 Tento článek vám ukáže, jak připojit službu Microsoft Intune k Exchangi Online nebo nové službě Exchange Online Dedicated. Pokud chcete zjistit, jestli máte prostředí Exchange Online Dedicated v **nové** nebo **starší** verzi, kontaktujte svého account manažera.
 
 S konektorem **Service to Service Connector** můžete ke správě zařízení v Exchange ActiveSync (EAS) a zařízení v Intune použít jedinou konzolu pro správu.  K povolení podmíněného přístupu pro Exchange Online se tento konektor nevyžaduje.
