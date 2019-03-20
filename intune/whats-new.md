@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8a79eadda82f6c48aa3df794acef2b57b4807297
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ab89676ca7a652aa317993286b8c91c0a0ed6910
+ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57787164"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221504"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -86,7 +86,7 @@ V Intune, vyberte **klientské aplikace** > **aplikace** > "Název aplikace" > *
 Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new-app-ui). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Dodržování předpisů aplikace Power BI <!-- 1455231 doc-work-item -->
-Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app). Další aktualizace datového skladu Intune, najdete v části [nadcházející změny rozhraní API datového skladu Intune](whats-new.md).
+Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app). Další aktualizace datového skladu Intune, najdete v části [nadcházející změny rozhraní API datového skladu Intune](whats-new.md#upcoming-change-to-the-intune-data-warehouse-api-).
 
 
 ### <a name="device-configuration"></a>Konfigurace zařízení

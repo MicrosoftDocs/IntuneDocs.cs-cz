@@ -5,38 +5,38 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 03/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: a0376ea1-eb13-4f13-84da-7fd92d8cd63c
-ms.reviewer: chrisgre
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf169dbae20285b9134766323b41ea9139440d74
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1fcfc225d9945ecfd370468e2d48b8d9d448ffac
+ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390395"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221496"
 ---
-# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune-azure"></a>Nastavení místního Exchange Connectoru pro Intune v Microsoft Intune Azure
+# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavit konektor Intune pro místní Exchange v Microsoft Intune
+Informace v tomto článku vám pomůže při instalaci a následně monitorovat místní konektor Exchange Active Sync pro Intune.  Používáte místní Exchange connector Intune s vaší [zásady podmíněného přístupu povolit nebo zablokovat přístup k Exchange v místním poštovním schránkám](conditional-access-exchange-create.md). 
 
-V prostředí místního Exchange Serveru lze pomocí podmíněného přístupu Intune povolit nebo blokovat přístup k místním poštovním schránkám Exchange. Pomocí místních konektorů s protokolem Exchange Active Sync připojte Intune k vašim organizacím Exchange a nastavte podmíněný přístup Intune spolu se zásadami dodržování předpisů pro zařízení. Pak když se zařízení pokusí o připojení k systému Exchange, určuje Intune, pokud zařízení je zaregistrované v Intune a dodržuje předpisy. Aby se dalo určit, která zařízení jsou registrovaná v Intune, místní Exchange Connector namapuje záznamy Exchange Active Sync (EAS) v Exchange Serveru na záznamy Intune. Další informace najdete v tématu [jaké jsou běžné způsoby použití podmíněného přístupu v Intune?](conditional-access-intune-common-ways-use.md)
+Když zařízení došlo k pokusu o přístup k vaší místní Exchange, konektor Exchange mapuje Exchange Active Sync (EAS) zaznamenává v systému Exchange Server záznamů Intune kontroluje registrace zařízení v Intune a dodržování předpisů pro zařízení zásady dodržování předpisů. V závislosti na zásad podmíněného přístupu zařízení může být povolený přístup, nebo zablokované. Další informace najdete v tématu [jaké jsou běžné způsoby použití podmíněného přístupu v Intune?](conditional-access-intune-common-ways-use.md)
 
-> [!IMPORTANT]
-> Intune teď podporuje více místních Exchange Connectorů pro každé předplatné. Pokud máte více než jednu místní organizaci Exchange, můžete pro každou organizaci Exchange nastavit samostatný konektor.
+Intune podporuje instalaci více Exchange connectorů lokálně na jedno předplatné. Pokud máte více než jedné organizace v místním systému Exchange, můžete nastavit samostatný konektor pro každý. Však může být jenom jeden konektor nainstalovaný, každé jednotlivé organizace Exchange. 
 
-Pokud chcete nastavit připojení, které umožňuje komunikaci Microsoft Intune s místním Exchange Serverem, tady je obecný postup:
+Toto jsou obecné kroky, které chcete nastavit připojení umožňující komunikaci Intune s místní Exchange Server:
 
-1.  Stáhněte si místní Exchange Connector pro Intune z webu Azure Portal.
-2.  Nainstalujte a nakonfigurujte Exchange Connector na počítači v místní organizaci Exchange.
-3.  Ověřte připojení k Exchangi.
-4. Opakujte tento postup pro každou organizaci Exchange, kterou chcete připojit k Intune.
+1. Stáhněte si místní Exchange connector pro Intune z portálu Intune.
+2. Nainstalujte a nakonfigurujte Exchange Connector na počítači v místní organizaci Exchange.
+3. Ověřte připojení k Exchangi.
+4. Tento postup opakujte pro každou další organizaci Exchange, kterou chcete připojit k Intune.
 
 ## <a name="intune-on-premises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector pro Intune
 Budete potřebovat účet s licencí Intune, který lze použít konektor pro připojení k serveru Exchange. Účet je zadán při instalaci konektoru.  
@@ -137,17 +137,35 @@ Až Exchange Connector připojení nastaví, mobilní zařízení přidružená 
 > [!NOTE]
 > Pokud máte nainstalovaný místní Exchange Connector a odstraníte připojení k Exchangi, musíte místní Exchange Connector z počítače, na kterém je nainstalovaný, odinstalovat.
 
-## <a name="install-connectors-for-multiple-exchange-organizations"></a>Instalace konektorů pro více organizací Exchange
-Intune podporuje více místních Exchange Connectorů pro každé předplatné. U tenanta s více organizacemi Exchange můžete pro každou organizaci Exchange nastavit jeden konektor. Stáhněte si jednou složku .zip a pak pro každou organizaci Exchange extrahujte a spusťte instalační program na serveru v příslušné organizaci podle postupu uvedeného v předchozí části.
 
-Funkce vysoké dostupnosti, monitorování a ruční synchronizace, které jsou popsané v následujících částech, jsou podporované pro každou organizaci Exchange, která je připojená k Intune.
+
+## <a name="install-connectors-for-multiple-exchange-organizations"></a>Instalace konektorů pro více organizací Exchange
+Intune podporuje více místních Exchange Connectorů pro každé předplatné. Pro tenanta s více organizacemi Exchange můžete nastavit konektor pro každou organizaci Exchange, ale pouze jeden konektor pro jakékoli jedné organizace. 
+
+Pokud nainstalujete konektorů pro připojení k více organizací Exchange, stáhněte si složku .zip jednou a pak znovu použít stejné stáhnout pro každý konektor, kterou instalujete. Pro každý další konektor postupujte podle kroků v předchozí části extrahovat a spusťte instalační program na serveru v organizaci Exchange.
+
+Vysokou dostupnost, monitorování a ruční synchronizaci, funkce popsané v následujících částech jsou podporovány pro každou organizaci Exchange, který se připojuje k Intune.
 
 ## <a name="on-premises-exchange-connector-high-availability-support"></a>Podpora vysoké dostupnosti místního konektoru Exchange 
-Jakmile konektor Exchange vytvoří připojení k Exchangi pomocí určeného serveru CAS, může konektor zjišťovat další servery CAS. Pokud primární server CAS není dostupný, přepne konektor na další server CAS (pokud je k dispozici), až bude primární server CAS znovu dostupný. Tato funkce je ve výchozím nastavení zapnutá. Tuto funkci můžete vypnout pomocí následujícího postupu:
-1. Na serveru s nainstalovaným Exchange Connectorem přejděte ke složce %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
+Vysoká dostupnost pro místní Exchange connector znamená, že by měl Exchange serveru pro klientský přístup (CAS), která používá konektor přestanou být dostupné konektoru můžete přepnout použití různých certifikačních Autorit pro danou organizaci Exchange. Samotný software Exchange connector nepodporuje vysokou dostupnost. Pokud se konektoru nepodaří, neexistuje žádné automatické převzetí služeb při selhání a je třeba nahradit tento konektor podle [instalace nový konektor](#reinstall-the-on-premises-exchange-connector). 
+
+K provedení převzetí služeb při selhání, jakmile konektor vytvoří úspěšné připojení k Exchangi pomocí určeného serveru CAS, konektor umožňuje zjistit další servery CAS pro danou organizaci Exchange. Znalost další servery CAS umožňuje konektor k převzetí služeb při selhání na jiný server CAS, pokud je k dispozici, dokud nebude primární server CAS přestane být k dispozici. Ve výchozím nastavení je povoleno zjišťování další servery CAS. Převzetí služeb při selhání můžete vypnout pomocí následujícího postupu:  
+1. Na serveru, kde je nainstalován software Exchange connector, přejděte na %*ProgramData*%\Microsoft\Windows Intune Exchange Connector. 
 2. V textovém editoru otevřete soubor **OnPremisesExchangeConnectorServiceConfiguration.xml**.
 3. Pokud chcete funkci vypnout, změňte parametr &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; na &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;.    
+ 
 
+## <a name="reinstall-the-on-premises-exchange-connector"></a>Znovu nainstalujte místní Exchange connector
+Můžete potřebovat k opětovné instalaci konektoru serveru Exchange. Vzhledem k tomu, že jeden konektor je podporovaná pro připojení pro každou organizaci Exchange, pokud nainstalujete druhý konektor v organizaci, nahradí nový konektor, který nainstalujete v původní konektor.
+
+1. Pomocí postupu z [nainstalovat a nakonfigurovat konektor Intune pro místní Exchange](#install-and-configure-the-intune-on-premises-exchange-connector) postup spuštění instalace nového konektoru. 
+2. Po zobrazení výzvy vyberte **nahradit** k instalaci nového konektoru.  
+   ![Konfigurace výzvy k nahrazení konektoru](./media/exchange-connector-install/prompt-to-replace.png)
+
+3. Pokračujte v používání kroky tvoří z předchozího postupu a přihlášení do Intune znovu.
+4. Při poslední obrazovka zobrazí, vyberte **Zavřít** pro dokončení instalace.  
+   ![Dokončit nastavení](./media/exchange-connector-install/successful-reinstall.png)
+ 
 
 ## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity Exchange Connectoru
 
