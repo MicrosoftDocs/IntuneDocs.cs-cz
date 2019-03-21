@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6e82e24f051e64d07487d915ac6fd0848727ecf
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: acf14ea6f1b667cb631a424223a40e44a8338edd
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566807"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306838"
 ---
 # <a name="add-a-device-compliance-policy-for-windows-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Windows v Intune
 
@@ -125,7 +125,10 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 
 - **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti. Integrita kódu zjistí, pokud se do jádra se načítá nepodepsaný ovladač nebo systémový soubor. Navíc rozpozná, pokud je systémový soubor změněn škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
 
-Podrobnosti o fungování služby pro ověření stavu najdete v tématu o [poskytovateli CSP služby pro ověření stavu](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp).
+Další zdroje informací:
+
+- [Poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) obsahuje podrobnosti o tom, jak služba HAS funguje.
+- [Tip podporu: Použití nastavení pro ověření stavu zařízení jako součást zásad dodržování předpisů Intune ](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
 
 ### <a name="device-properties"></a>Vlastnosti zařízení
 

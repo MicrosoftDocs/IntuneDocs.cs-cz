@@ -1,13 +1,20 @@
 ---
-ms.openlocfilehash: dc86f2c22410236368753acd4dd3b66698037241
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 15cf7f35c1ea2a3351b5a6d829cfca42ddb62729
+ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57736852"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58261389"
 ---
 
 Tato oznámení poskytují důležité informace, které vám pomohou připravit se na budoucí změny Intune a funkce. 
+
+###  <a name="upcoming-change-to-the-intune-data-warehouse-api----1455231-doc-work-item---"></a>Nadcházející změny rozhraní API datového skladu Intune <!-- 1455231 doc-work-item -->
+Budeme během doby 1903 provádět dvě změny:
+- Vyřazení filtr beta<br>
+    Vyřazení nepodporované beta filtry vytvořena instance. Ovlivněné zákazníků byla e-mailem.   
+- 1.0 změny odráží zpět na verzi beta<br>
+    Změny provedené v našich v1.0 kolekcí se projeví nyní ve verzi beta.  
 
 ### <a name="change-in-enrollment-workflow-with-intune-company-portal-on-corporate-ios-devices-authenticating-with-setup-assistant----1927359---"></a>Změnit v pracovním postupu registrace pomocí portálu společnosti Intune na zařízení se systémem iOS podnikové ověřování Pomocníka s nastavením <!-- 1927359 -->
 Je chystanou změnou v pracovním postupu pro registraci zařízení s Iosem prostřednictvím jednoho z Apple podnikové způsoby registrace zařízení – Apple Configurator, obchodní ředitel společnosti Apple, Apple School Manager nebo Apple zařízení registrace programu (DEP), když pomocí instalačního programu Pomocník pro ověřování. Tato změna platí pouze pro zařízení zaregistrovaná s přidružením uživatele.

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fa6a68d1b5a8d2ccf87587ecab36c7807770d48
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c82224dbf1e67135a99913ed0d1144680955bd10
+ms.sourcegitcommit: 4049a3aed15f2d8d21bb814410875a13f613e4ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565345"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283238"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s macOS k povolení nebo zakázání funkcí pomocí Intune
 
@@ -46,7 +46,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
   Tato funkce platí pro:  
   - macOS 10.13 a novější
 
-- **Odložení aktualizací softwaru (jenom pod dohledem)**: Pokud je nastavena na **Nenakonfigurováno** (výchozí), aktualizací softwaru jsou zobrazeny na zařízení s Apple je uvolní. Například pokud aktualizace macOS získá vydané společností Apple v konkrétní den, pak tuto aktualizaci přirozeně zobrazuje v zařízení po datu vydání.
+- **Odložení aktualizací softwaru (jenom pod dohledem)**: Pokud je nastavena na **Nenakonfigurováno** (výchozí), aktualizací softwaru jsou zobrazeny na zařízení s Apple je uvolní. Například pokud aktualizace macOS získá vydané společností Apple v konkrétní den, pak tuto aktualizaci přirozeně zobrazuje v zařízení po datu vydání. Počáteční hodnota sestavení aktualizace jsou povoleny bez zpoždění.
 
   **Povolit** umožňuje zpoždění při zobrazení aktualizací softwaru na zařízení z 0 – 90 dní. Toto nastavení nemá pod kontrolou, pokud aktualizace jsou nebo nejsou nainstalovány. 
 

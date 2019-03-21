@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ab89676ca7a652aa317993286b8c91c0a0ed6910
-ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
+ms.openlocfilehash: 7e78aaf026146ae2cf531668464a7f7c644894ce
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221504"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306869"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -47,6 +47,17 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->     
 
 <!-- ########################## -->
+## <a name="week-of-march-18-2019"></a>Týden od 18. března 2019
+
+#### <a name="encryption-report-for-windows-10-devices-in-public-preview---2351538---"></a>Sestava šifrování pro zařízení s Windows 10 (ve verzi public preview)<!-- 2351538 -->  
+
+Pomocí nové [šifrování sestavu (Preview)](encryption-monitor.md#encryption-report) k zobrazení podrobností o stav šifrování zařízení s Windows 10. Dostupné podrobnosti zahrnují verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
+
+#### <a name="access-bitlocker-recovery-keys-from-the-intune-portal-in-public-preview----2351547-----"></a>Přístupové klíče pro obnovení Bitlockeru z portálu Intune (ve verzi public preview) <!-- 2351547   -->  
+
+Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md#bitlocker-recovery-keys) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru, ze služby Azure Active Directory.
+
+
 ## <a name="week-of-february-25-2019"></a>Týden od 25. února 2019
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -347,7 +358,7 @@ Intune poskytuje další zařízení polí, včetně Id registrace aplikace, s A
 
 #### <a name="administrative-templates-are-in-public-preview-and-moved-to-their-own-configuration-profile----3322847---"></a>Šablony pro správu jsou ve verzi public preview a přesunout do své vlastní konfigurační profil <!-- 3322847 -->
 
-Šablony pro správu v Intune (**konfigurace zařízení** > **šablony pro správu**) jsou aktuálně ve verzi private preview. Od této aktualizace:
+Šablony pro správu v Intune (**konfigurace zařízení** > **šablony pro správu**) jsou aktuálně ve verzi public preview. Od této aktualizace:
 
 - Šablony pro správu zahrnují přibližně 300 nastavení, které jde spravovat v Intune. Dříve tato nastavení existuje pouze v editoru zásad skupiny.
 - Šablony pro správu jsou k dispozici ve verzi public preview.

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c377a8558b1f318b4ddad735b6368a291e34516
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2310f9720c64301a3ea25631e1e8688d88a001e4
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756815"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306817"
 ---
 # <a name="in-development-for-microsoft-intune---march-2019"></a>Při vývoji pro Microsoft Intune – březen 2019
 
@@ -49,12 +49,6 @@ Pomáhat při vaší připravenosti a plánování, tato stránka seznamy uživa
 
 
 <!-- 1903 start-->
-
-### <a name="encryption-report-----2351538---"></a>Sestava šifrování  <!-- 2351538 -->
-Budete moct použít novou sestavu šifrování, chcete-li zobrazit podrobné informace o stavu šifrování zařízení. Dostupné podrobnosti bude zahrnovat verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
-
-### <a name="access-bitlocker-recovery-keys-from-the-intune-portal-----2351547----"></a>Přístupové klíče pro obnovení Bitlockeru z portálu Intune  <!-- 2351547  -->
-Přidáváme nový vstupní bod v zařízení, kde najdete podrobnosti o z Azure Active Directory (AAD) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru.
 
 ### <a name="scope-tags-for-app-configuration-policies---2371891---"></a>Značky oboru pro zásady Konfigurace aplikací <!--2371891 -->
 Budete moct přidat značku oboru pro zásady Konfigurace aplikací tak, aby pouze uživatelé s rolí také přiřadit značky oboru přístupu pro zásady Konfigurace aplikací. Zásady Konfigurace aplikací můžete pouze cílené na nebo přidružené aplikace přiřazené stejné značka oboru.
@@ -84,7 +78,7 @@ Portál společnosti pro iOS budou aktualizace obrazovek registrace aplikace a p
 - Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.
 - Vraťte se do aplikace portál společnosti, aby prošel registrací.  
 
-Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://techcommunity.microsoft.com/). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentace za provozu. 
+Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentu za provozu. 
 
 ### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
 Na stránce Stav Tenanta se zobrazí informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.

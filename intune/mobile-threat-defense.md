@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 996b5ea3eb3c8d8f3a95bb94fb8a77584143ae8a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2dc1136b5f47c6f695f9822dd1d7bcdbb21a22a0
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395390"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306806"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
 Intune můžete integrovat data od dodavatele Mobile Threat Defense jako zdroje informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Tyto informace můžete použít k ochraně podnikovým prostředkům jako Exchange a SharePoint, protože blokují přístup z ohrožených mobilních zařízení.  
@@ -79,3 +79,5 @@ Zjistěte, jak zabezpečit přístup k prostředkům společnosti na základě r
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
+- Sophos (podrobnosti už brzy)
+- Wandera (podrobnosti už brzy)

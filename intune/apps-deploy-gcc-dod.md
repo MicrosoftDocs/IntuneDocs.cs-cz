@@ -1,7 +1,7 @@
 ---
 title: Aplikace pro prostředí s vysokou GCC a ministerstva obrany USA
 titlesuffix: Microsoft Intune
-description: Další informace o aplikacích zahrnující GCC vysoké a ministerstva OBRANY prostředí pomocí Microsoft Intune.
+description: Další informace o aplikacích zahrnující GCC vysoké a ministerstva obrany prostředí pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8de56c6fc0909ee06fa9dd22e1636694952fc799
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: fb49cd97e029e45d7d098ec1898fd0e27efa1132
+ms.sourcegitcommit: 4049a3aed15f2d8d21bb814410875a13f613e4ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175634"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283231"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikace pomocí Intune v GCC vysoké a ministerstva obrany USA prostředí 
 
-Microsoft Intune umožňuje správci tenanta distribuovat aplikace pro jejich pracovní síly. Pracovní síly stále zaměstnancem společnosti uživatelům aplikace. Existuje mnoho typů aplikací, které se dají nasadit z Intune na US Government Community (GCC) prostředí vysoce nebo oddělení obrany (DOD). Pokud správce potřebuje k nahrání a distribuovat aplikace s Windows určené pro vysoké GCC nebo cílová skupina amerického ministerstva OBRANY, který je vlastní, vytvořené pomocí jiných dodavatelů, nebo jako offline aplikace stažené z [Microsoft Store pro firmy](https://businessstore.microsoft.com/store), Správce může vybrat, zda jej jako distribuovat [– obchodní aplikace](apps-add.md#app-types-in-microsoft-intune).  
+Microsoft Intune umožňuje správci tenanta distribuovat aplikace pro jejich pracovní síly. Pracovní síly stále zaměstnancem společnosti uživatelům aplikace. Existuje mnoho typů aplikací, které se dají nasadit z Intune na vysokou GCC nebo prostředí ministerstva obrany USA. Pokud správce potřebuje k nahrání a distribuovat aplikace s Windows určené pro vysoké GCC nebo cílová skupina amerického ministerstva obrany, který je vlastní, vytvořené pomocí jiných dodavatelů, nebo jako offline aplikace stažené z [Microsoft Store pro firmy](https://businessstore.microsoft.com/store), Správce může vybrat, zda jej jako distribuovat [– obchodní aplikace](apps-add.md#app-types-in-microsoft-intune).  
 
 > [!NOTE]
 > Pro obchodní prostředí správce tenanta můžete synchronizovat jejich Store pro firmy v Intune, ale pro prostředí s vysokou GCC a ministerstva obrany USA, tato služba není k dispozici. Správci v této situaci musíte nasadit aplikaci tak, že nahrajete přímo do Intune.  

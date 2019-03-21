@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/28/2018
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bcd32f975d0d31cfdd659c295ef8ec0ee971efb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6fb5cd74e52e15fd3b1d34b6f4737deffe8425c9
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396688"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306831"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -76,10 +76,12 @@ Následující příklad zahrnuje kód XML pro profil Wi-Fi pro Android nebo Win
 
 > [!IMPORTANT]
 >
-> `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
+> - `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
 >
->  `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
+> - `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
 >  Zařízení s Windows 10 můžou vrátit falešnou chybu *0x87D1FDE8 Náprava se nezdařila*, nicméně zařízení přesto profil obsahuje.
+>
+> - XML má speciální znaky, například `&` (znak). Pomocí speciálních znaků může zabránit XML funkční podle očekávání. 
 
 ```
 <!--
