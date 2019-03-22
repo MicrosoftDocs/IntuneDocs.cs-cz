@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a0cb69612e4cf0181fde957f06f490bede7200e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 28de9e939f63f7cb95c09eb28f3869ffc95ebe43
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392546"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330433"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízení a povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -110,10 +110,11 @@ Pokud zařízení zaregistrovalo nedávno, se změnami dodržování předpisů 
 | Platforma | Četnost |
 | --- | --- |
 | iOS | Prvních 6 hodin každých 15 minut a potom každých 6 hodin |  
-| Mac OS X | Prvních 6 hodin každých 15 minut a potom každých 6 hodin | 
+| macOS | Prvních 6 hodin každých 15 minut a potom každých 6 hodin | 
 | Android | Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
+| Počítače s Windows 10 zaregistrované jako zařízení | Prvních 30 minut každé 3 minuty a potom každých 8 hodin | 
 | Windows Phone | Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
-| Počítače s Windows zaregistrované jako zařízení | Prvních 30 minut každé 3 minuty a potom každých 8 hodin | 
+| Windows 8.1 | Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
 
 Na kdykoli a uživatele můžete otevřít aplikaci portál společnosti a synchronizovat zařízení okamžitě zkontroloval zásady.
 

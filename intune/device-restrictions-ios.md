@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a92d18615f6be7c1e0ce931d443d2ac986db991e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 44f7c5b897dc1aedfe8ffc23c25ea479eceb35e5
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566705"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330491"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 
@@ -43,7 +43,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
     Tato funkce platí pro:  
     - iOS 9.3.2 a novější
 
-- **Snímek obrazovky**: Zvolte **bloku** zabránit snímky obrazovky a obrazovky zachycuje na zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek.
+- **Snímek obrazovky**: Zvolte **bloku** zabránit snímky obrazovky a obrazovky zachycuje na zařízení. V Iosu 9.0 a novější to zahrnuje také blokovat záznam obrazovky. **Není nakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo video.
   - **Sledování vzdálených obrazovek v aplikaci Classroom (jenom pod dohledem)**: Zvolte **bloku** zabránit aplikaci Classroom vzdáleně zobrazovat obrazovku na zařízení. **Není nakonfigurováno** (výchozí) umožňuje aplikaci Apple Classroom zobrazovat obrazovku.
 
     Tato funkce platí pro:  

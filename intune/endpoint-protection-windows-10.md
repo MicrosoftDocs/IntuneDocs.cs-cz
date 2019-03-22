@@ -2,8 +2,8 @@
 title: Nastavení ochrany pro zařízení s Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Na zařízeních s Windows 10 můžete v Intune použít nebo nakonfigurovat nastavení ochrany koncového bodu a povolit tak na místních zařízeních funkce Windows Defender, mezi něž patří Application Guard, brána firewall, filtr SmartScreen, šifrování a BitLocker, Exploit Guard, řízení aplikací, Security Center a zabezpečení.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbbdbbb92c033a99f1c439271c745c1abfbcd562
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4c2df888e146a7f240530e5cbc6628dbce34cb61
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566688"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342993"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
 
@@ -87,8 +87,7 @@ Tato nastavení platí pro všechny typy sítě.
 
 Tato nastavení platí pro určité typy sítě, například pro typy **Doménová (firemní) síť**, **Privátní (zjistitelná) síť** a **Veřejná (nezjistitelná) síť**.
 
-#### <a name="general-settings"></a>Obecná nastavení
-
+#### <a name="general-settings"></a>Obecná nastavení  
 - **Firewallu v programu Windows Defender**: Zvolte **povolit** zapnutí brány firewall a pokročilým zabezpečením. **Nenakonfigurováno** (výchozí) povolí veškerý provoz bez ohledu na ostatní nastavení zásad.
 - **Neviditelný režim**: **Blok** provoz firewallu v neviditelném režimu. Blokování neviditelného režimu vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**. **Nenakonfigurováno** (výchozí) provozuje firewall v neviditelném režimu, který pomáhá předejít odpovědím na zjišťovací požadavky.
 - **Stíněné**: **Blok** vypne tuto funkci. **Nenakonfigurováno** (výchozí) toto nastavení povolí. Když je toto nastavení a Firewall v programu Windows Defender zapnutý, veškerý provoz bez ohledu na ostatní nastavení zásad se blokuje.

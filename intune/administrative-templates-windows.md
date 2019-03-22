@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d68b5c9bce1f846357330aaff7e93019d8535375
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 704abe5e03410b52d54c7729e1832e527ae4dfb6
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397211"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342978"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Použití šablon Windows 10 v Microsoft Intune konfigurovat nastavení zásad skupiny
 
@@ -32,9 +32,6 @@ Pomocí této úlohy můžete dokončit **šablony pro správu** v Microsoft Int
 **Šablony pro správu** jsou integrované do Intune a nevyžadují žádné úpravy, včetně použití OMA-URI. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení šablony jako univerzálním nástrojem pro správu zařízení s Windows 10.
 
 V tomto článku jsou uvedené kroky k vytvoření šablony pro zařízení s Windows 10 a ukazuje, jak filtrovat všechna nastavení, které jsou dostupné v Microsoft Intune. Při vytváření šablony vytvoří profil konfigurace zařízení. Pak můžete přiřadit nebo tento profil nasadíte u zařízení s Windows 10 ve vaší organizaci.
-
-> [!NOTE]
-> Šablony pro správu jsou podporovány pro samostatné zařízení. Nejsou aktuálně podporovány pro spoluspravovaná zařízení System Center Configuration Manageru (SCCM).
 
 ## <a name="create-a-template"></a>Vytvoření šablony
 

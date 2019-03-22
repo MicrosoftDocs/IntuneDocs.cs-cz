@@ -1,11 +1,11 @@
 ---
-title: Zrušení registrace zařízení s macOS v Intune | Microsoft Docs
-description: Popisuje zrušení registrace zařízení s macOS v Intune.
+title: Zrušení registrace zařízení s macOS z portálu společnosti Intune | Dokumentace Microsoftu
+description: Popisuje zrušení registrace zařízení s macOS z portálu společnosti
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/12/2018
+ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,24 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3518707aa90c3866fbf8b24936db6d781712bdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 19cb76df318abe84670c1a7d703e85e3b7e7539a
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55839961"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330394"
 ---
-# <a name="unenroll-your-macos-device-from-intune"></a>Zrušení registrace zařízení s macOS v Intune
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Zrušení registrace zařízení s macOS z portálu společnosti
 
-Když v Intune zrušíte registraci zařízení s macOS, přestane mít zařízení přístup k prostředkům společnosti.
+Když zrušíte registraci zařízení s macOS v Intune, zařízení už mít přístup k prostředkům společnosti.
 
 Pokud chcete ve správě zrušit registraci zařízení s macOS, postupujte takto:
 
-1.  V aplikaci Portál společnosti v části **Moje zařízení** vyberte zařízení, u kterého chcete zrušit registraci.
+1.  Přihlaste se k portálu společnosti pro macOS.
+2.  Přejděte na **zařízení** a vyberte zařízení, u kterého chcete zrušit registraci.
 
-2.  Klikněte na **Odebrat** > **Odebrat**.
+3.  Vyberte ikonu tří teček nabídky > **odebrat**.
+4.  Zobrazí se potvrzovací zpráva. Vyberte **odebrat** zrušení registrace zařízení. 
 
 Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 

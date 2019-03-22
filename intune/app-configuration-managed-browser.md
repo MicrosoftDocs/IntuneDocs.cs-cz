@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63d0d04ff670bedaa3de8b183917b34fed35ba7f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: cac17395d7615ef038e99dc5c14357d6388ec6ec
+ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461035"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58343011"
 ---
 # <a name="manage-internet-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune
 
@@ -36,6 +36,24 @@ Pomocí prohlížeče chráněného zásadami Intune (Microsoft Edge nebo Intune
 - Jednotné přihlašování
 - Nastavení konfigurace aplikace
 - Integrace s proxy aplikací Azure
+
+## <a name="microsoft-edge-support"></a>Podpora Microsoft Edge
+
+Pro podnikové scénáře na iOS a androidem můžete použít Microsoft Edge. Microsoft Edge podporuje všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení činnost koncového uživatele. K dispozici jsou následující funkce enterprise Microsoft Edge povolené prostřednictvím zásad v Intune. Tyto podnikové funkce patří:
+
+1. **Dual-Identity** – uživatelé můžou přidávat i pracovní účet, stejně jako osobní účet, pro procházení. Je zcela oddělit mezi dvěma identity, které se podobá architektuře a zkušeností v Office 365 a Outlook. Správci Intune budou moct nastavit zásady požadovaného pro chráněné procházení v rámci pracovního účtu. 
+2. **Integrace zásad ochrany aplikací Intune** – správci nyní mohou cílit na zásady ochrany aplikací pro Microsoft Edge, včetně řízení operací vyjmutí, kopírování a vložení, předcházení zachycení snímků obrazovky a zajištění, že uživatel vybral odkazy otevřít pouze v jiných spravovaných aplikace.
+3. **Integrace Azure Application Proxy** – správci můžou řídit přístup k aplikacím SaaS a webových aplikací, což pomáhá zaručit založené na prohlížeči jenom aplikace spusťte v zabezpečené prohlížeč Microsoft Edge, koncoví uživatelé připojit z podnikové sítě nebo připojení z Internet. 
+4. **Spravované Oblíbené položky a zkratky domovskou stránku** -pro usnadnění přístupu, správci můžou nastavit adresy URL se budou zobrazovat pod Oblíbené položky, když koncoví uživatelé jsou v jejich firemní kontextu. Správci můžou nastavit místní domovské stránky, kde se zobrazí jako primární místní, když uživatel organizace otevře novou stránku nebo na nové kartě v Microsoft Edge.
+
+Pomocí prohlížeče chráněná zásadami Intune (Microsoft Edge nebo Intune Managed Browser), můžete zajistit, že se firemní websites jsou přístupné pomocí bezpečnostní opatření na místě. Prohlížeče chráněné zásad Intune využít z následujících akcí:
+- Zásady ochrany aplikací
+- podmíněný přístup
+- Jednotné přihlašování
+- Nastavení konfigurace aplikace
+- Integrace proxy aplikace Azure
+
+Zásady ochrany společnosti Microsoft Intune pro Microsoft Edge pomáhají chránit data vaší organizace a prostředky. Microsoft Edge s ochranou Intune zajišťuje, že prostředkům vaší společnosti chráněni nejen v rámci nativně nainstalovaných aplikací, ale také při přístupu prostřednictvím webového prohlížeče.
 
 ## <a name="getting-started"></a>Začínáme
 
@@ -269,17 +287,17 @@ V následující části najdete informace o povolených formátech a zástupný
   - `http://www.contoso.com: /*`
 ## <a name="opening-links-within-the-intune-managed-browser-vs-microsoft-edge"></a>Otevírání odkazů v prohlížeči Intune Managed Browser nebo v prohlížeči Microsoft Edge 
 
-Intune Managed Browser i Microsoft Edge jsou teď považované za prohlížeče spravované zásadami/chráněné prohlížeče. Dnešní zásady ochrany aplikací vedou k tomu, že se webové odkazy z aplikací spravovaných přes Intune otevírají v určitém prohlížeči v závislosti na scénáři a platformě. 
+Jak Intune Managed Browser a Microsoft Edge jsou teď považovány za zásad spravované prohlížeče nebo chráněným prohlížeče. Dnešní zásady ochrany aplikací vedou k tomu, že se webové odkazy z aplikací spravovaných přes Intune otevírají v určitém prohlížeči v závislosti na scénáři a platformě. 
 
 V Androidu: 
-* Pokud má obě Managed Browser a na jejich zařízení stáhnout Microsoft Edge, otevře se Managed Browser. K zajištění, že máte otevřený Microsoft Edge místo Managed Browser, nastavte na hodnotu "true" u všech aplikací spravovaných pomocí Intune pomocí zásad spravovaného prohlížeče vyžaduje nastavení konfigurace aplikace "com.microsoft.intune.useEdge".  
+* Pokud má obě Managed Browser a na jejich zařízení stáhnout Microsoft Edge, otevře se Managed Browser. K zajištění, že máte otevřený Microsoft Edge místo Managed Browser, nastavení konfigurace aplikace com.microsoft.intune.useEdge"nastavení" na hodnotu "true" u všech aplikací spravovaných pomocí Intune s prohlížečem spravované podle zásad, který vyžaduje.  
 * Pokud pouze Microsoft Edge na zařízení a je cílem zásady, otevře se Microsoft Edge.
 * Pokud pouze spravovaný prohlížeč je v zařízení a je cílem zásady, otevře se Managed Browser. 
 
 V iOSu u aplikací, které mají integrovanou sadu Intune SDK pro iOS verze 9.0.9+: 
-* Managed Browser – pokud je na zařízení MB i Edge a pokud není konfigurační nastavení aplikací „com.microsoft.intune.useEdge“ nastavené na „true“ pro všechny aplikace spravované přes Intune, které vyžadují prohlížeč spravovaný zásadami, **nebo** Microsoft Edge – pokud je nainstalovaný Microsoft Edge a přijal zásady. 
-* Microsoft Edge – pokud je na zařízení jenom Microsoft Edge, cílí se na něj zásadami a přijal je. 
-* Managed Browser – pokud je na zařízení jenom Managed Browser, cílí se na něj zásadami a přijal je.
+* Spravovaný prohlížeč, pokud jsou MB a Edge na zařízení, pokud aplikace konfiguračního nastavení "com.microsoft.intune.useEdge" je nastavena na "true" pro všechny Intune spravovat aplikace s prohlížečem spravované podle zásad, který vyžaduje **nebo** Microsoft okraj, pokud Microsoft Edge je nainstalovaný a přijal zásady. 
+* Microsoft Edge Pokud je Microsoft Edge na zařízení, jen je cílem a přijal zásady. 
+* Managed Browser Pokud jen pro Managed Browser je na zařízení, je cílem a přijal zásady.
 
 ## <a name="how-to-access-to-managed-app-logs-using-the-managed-browser-on-ios"></a>Jak se dostat k protokolům spravovaných aplikací pomocí Managed Browseru na zařízení s iOSem
 

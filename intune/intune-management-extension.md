@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20bacb9d181778fb2b2f52a19c116e7792f0a481
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 469327261b8f617be0851b52d389965c5eff9b59
+ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991131"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58330408"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -44,7 +44,7 @@ Rozšíření správy Intune doplňuje integrované funkce Windows 10 MDM. Můž
 
 Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
-- Zařízení musí být připojený nebo zaregistrovaný do Azure AD a Azure AD je nakonfigurovaný pro [Automatická registrace do Intune](windows-enroll.md#enable-windows-10-automatic-enrollment). Rozšíření správy Intune podporuje připojená k Azure AD, připojená k hybridní službě Azure AD domain a společně spravovat zaregistrovaná zařízení s Windows.
+- Zařízení musí být připojený nebo zaregistrovaný do služby Azure AD a Azure AD a Intune nakonfigurované pro [automatický zápis](quickstart-setup-auto-enrollment.md). Rozšíření správy Intune podporuje připojená k Azure AD, připojená k hybridní službě Azure AD domain a společně spravovat zaregistrovaná zařízení s Windows.
 - Zařízení musí používat Windows 10 verze 1607 nebo novější.
 - Rozšíření agenta pro správu Intune se nainstaluje při skript prostředí PowerShell nebo aplikace Win32 je nasazená na uživatele nebo skupiny zabezpečení zařízení.
 
