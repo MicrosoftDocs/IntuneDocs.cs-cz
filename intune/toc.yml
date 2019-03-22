@@ -12,6 +12,8 @@ items:
     items:
     - name: Co je nového v uživatelském rozhraní aplikace
       href: whats-new-app-ui.md
+    - name: Funkce ve vývoji
+      href: in-development.md
   expanded: true
 - name: Rychlý start
   items:
@@ -75,8 +77,6 @@ items:
     href: windows-information-protection-configure.md
   - name: MAM – NEJČASTĚJŠÍ DOTAZY
     href: mam-faq.md
-  - name: Zásady a profil – nejčastější dotazy
-    href: manage-settings-and-features-on-your-devices-with-microsoft-intune-policies.md
 - name: Praktičtí průvodci
   items:
   - name: Nasazení plánu
@@ -225,9 +225,7 @@ items:
       items:
       - name: Program registrace zařízení nebo Apple School Manager
         href: device-enrollment-program-enroll-macos.md
-    - name: Instalace klientského softwaru Intune na počítače se systémem Windows
-      href: install-the-windows-pc-client-with-microsoft-intune.md
-    - name: Sestava opuštění registrace
+    - name: Sestava nedokončených registrací
       href: enrollment-report-company-portal-abandon.md
     - name: Řešení potíží při registraci zařízení
       href: troubleshoot-device-enrollment-in-intune.md
@@ -258,7 +256,7 @@ items:
       href: device-logout-user.md
     - name: Odebrat uživatele
       href: device-remove-user.md
-    - name: Vymazání zařízení
+    - name: Vymazání zařízení s macOS
       href: device-erase.md
     - name: Vzdálené řízení mobilních zařízení
       href: device-profile-android-teamviewer.md
@@ -307,6 +305,7 @@ items:
     - name: Omezení nastavení a funkcí zařízení
       href: device-restrictions-configure.md
     - name: Doručování aktualizací
+      displayName: delivery optimization; updates
       href: delivery-optimization-windows.md
     - name: Upgradování edicí a režim S
       href: edition-upgrade-configure-windows-10.md
@@ -363,7 +362,7 @@ items:
         - name: Data z Intune odesílaná Googlu
           href: data-intune-sends-to-google.md
         - name: Informace sdílené z Jamf Pro do Intune
-          href: conditional-access-integrate-jamf.md
+          href: data-jamf-sends-to-intune.md
       - name: Zobrazení a oprava osobních údajů
         href: privacy-data-view-correct.md
       - name: Auditování, export, odstranění
@@ -376,6 +375,7 @@ items:
       - name: Instalace konektoru Exchange On-Premises Connector
         href: exchange-connector-install.md
       - name: Vytvoření a přiřazení zásad podmíněného přístupu
+        href: conditional-access-exchange-create.md
       - name: Zásady podmíněného přístupu podle zařízení
         href: create-conditional-access-intune.md
       - name: Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune
@@ -448,6 +448,8 @@ items:
       href: network-access-control-integrate.md
     - name: Windows Hello
       href: windows-hello.md
+    - name: Monitorování šifrování zařízení
+      href: encryption-monitor.md
     - name: Certifikáty
       href: certificates-configure.md
       items:
@@ -532,6 +534,8 @@ items:
         href: apps-inc-exl-assignments.md
       - name: Nasazení aplikací systému Windows 10
         href: apps-windows-10-app-deploy.md
+      - name: Nasazení aplikací do prostředí státní správy
+        href: apps-deploy-gcc-dod.md
     - name: Monitorování aplikací
       href: apps-monitor.md
     - name: Konfigurace aplikací
@@ -616,6 +620,8 @@ items:
       href: data-google-sends-to-intune.md
   - name: Získání nápovědy a podpory
     items:
+    - name: Stav tenanta
+      href: tenant-status.md
     - name: Řešení problémů
       items:
       - name: Pomoc uživatelům s řešením problémů
@@ -624,6 +630,8 @@ items:
         href: troubleshoot-company-resource-access-problems.md
       - name: Řešení problémů s instalací aplikací
         href: troubleshoot-app-install.md
+      - name: Řešení potíží se správou mobilních aplikací
+        href: troubleshoot-mam.md
       - name: Protokoly auditu pro aktivity v Intune
         href: monitor-audit-logs.md
       - name: Kontrola protokolů pomocí Azure Monitoru
@@ -636,14 +644,12 @@ items:
         href: troubleshoot-software-updates-in-microsoft-intune.md
       - name: Řešení potíží se službou Endpoint Protection
         href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-      - name: Řešení potíží se zásadami
+      - name: Řešení potíží se zásadami a profily
         href: troubleshoot-policies-in-microsoft-intune.md
       - name: Řešení potíží s podmíněným přístupem
         href: troubleshoot-conditional-access.md
       - name: Řešení problémů s konektorem Exchange
         href: troubleshoot-exchange-connector.md
-    - name: Známé problémy
-      href: known-issues.md
     - name: Získání podpory
       href: get-support.md
 - name: Reference
@@ -660,14 +666,6 @@ items:
           href: device-restrictions-android.md
         - name: E-mailu
           href: email-settings-android.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: Importovaný certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile
-        - name: Certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: Síť VPN
           href: vpn-settings-android.md#android-vpn-settings
         - name: Wi-Fi
@@ -687,16 +685,8 @@ items:
           href: device-restrictions-android-for-work.md
         - name: E-mailu
           href: email-settings-android-enterprise.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: Importovaný certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-imported-certificate-profile
-        - name: Certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: Síť VPN
-          href: vpn-settings-android.md#android-for-work-vpn-settings
+          href: vpn-settings-android.md#android-enterprise-vpn-settings
         - name: Wi-Fi
           href: wi-fi-settings-android-enterprise.md
         - name: Vlastní
@@ -713,12 +703,6 @@ items:
           href: device-restrictions-ios.md
         - name: E-mailu
           href: email-settings-ios.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: Certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: Síť VPN
           href: vpn-settings-ios.md
         - name: Wi-Fi
@@ -737,26 +721,20 @@ items:
           href: device-restrictions-macos.md
         - name: Ochrana koncového bodu
           href: endpoint-protection-macos.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: Síť VPN
           href: vpn-settings-macos.md
         - name: Wi-Fi
           href: wi-fi-settings-macos.md
         - name: Vlastní
           href: custom-settings-macos.md
-    - name: Základní nastavení zabezpečení
-      items:
-      - name: Nastavení standardních hodnot zabezpečení systému Windows
-        href: security-baseline-settings-windows.md
     - name: Windows 10 a novější
       items:
       - name: Nastavení zásad dodržování předpisů
         href: compliance-policy-create-windows.md#windows-10-and-later-policy-settings
       - name: Nastavení konfiguračního profilu
         items:
+        - name: Nastavení optimalizace doručení
+          href: delivery-optimization-settings.md
         - name: Omezení zařízení
           href: device-restrictions-windows-10.md
         - name: Omezení zařízení (Windows 10 Team)
@@ -771,12 +749,6 @@ items:
           href: identity-protection-windows-settings.md
         - name: Kiosk
           href: kiosk-settings-windows.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
-        - name: Certifikát PKCS
-          href: certficates-pfx-configure.md#create-a-pkcs-certificate-profile
         - name: Síť VPN
           href: vpn-settings-windows-10.md
         - name: Wi-Fi
@@ -787,6 +759,8 @@ items:
           href: shared-user-device-settings-windows.md
         - name: Vlastní
           href: custom-settings-windows-10.md
+      - name: Nastavení standardních hodnot zabezpečení
+        href: security-baseline-settings-windows.md
       - name: Nastavení služby Windows Update
         href: windows-update-settings.md
     - name: Windows Holographic for Business
@@ -809,10 +783,6 @@ items:
         items:
         - name: Omezení zařízení
           href: device-restrictions-windows-8-1.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: Síť VPN
           href: vpn-settings-windows-8-1.md
         - name: Import Wi-Fi
@@ -827,10 +797,6 @@ items:
           href: device-restrictions-windows-phone-8-1.md
         - name: E-mailu
           href: email-settings-windows-phone-8-1.md
-        - name: Důvěryhodný certifikát
-          href: certficates-pfx-configure.md#create-a-trusted-certificate-profile
-        - name: Certifikát SCEP
-          href: certificates-scep-configure.md#create-a-scep-certificate-profile
         - name: Síť VPN
           href: vpn-settings-windows-phone-8-1.md
         - name: Vlastní
@@ -854,6 +820,9 @@ items:
         href: app-wrapper-prepare-android.md
       - name: Intune App SDK pro Android
         href: app-sdk-android.md
+        items:
+        - name: Intune App SDK pro Android – příručka pro testování
+          href: app-sdk-android-testing-guide.md
       - name: Xamarinové vazby sady Intune App SDK
         href: app-sdk-xamarin.md
     - name: Použití datového skladu Intune
@@ -912,34 +881,6 @@ items:
       href: graph-apis-used-by-intune-device-configuration-windows.md
 - name: Prostředky
   items:
-  - name: Průvodce dokumentací k Microsoft Intune
-    href: intune-documentation.md
-  - name: Řešení problémů
-    items:
-    - name: Pomoc uživatelům s řešením problémů
-      href: help-desk-operators.md
-    - name: Řešení problémů s přístupem k prostředkům společnosti
-      href: troubleshoot-company-resource-access-problems.md
-    - name: Řešení problémů s instalací aplikací
-      href: troubleshoot-app-install.md
-    - name: Řešení potíží se správou mobilních aplikací
-      href: troubleshoot-mam.md
-    - name: Protokoly auditu pro aktivity v Intune
-      href: monitor-audit-logs.md
-    - name: Kontrola protokolů ochrany aplikace
-      href: app-protection-policy-settings-log.md
-    - name: Řešení potíží s e-mailovými profily
-      href: troubleshoot-email-profiles-in-microsoft-intune.md
-    - name: Řešení potíží s aktualizacemi softwaru
-      href: troubleshoot-software-updates-in-microsoft-intune.md
-    - name: Řešení potíží se službou Endpoint Protection
-      href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-    - name: Řešení potíží se zásadami
-      href: troubleshoot-policies-in-microsoft-intune.md
-    - name: Řešení potíží s podmíněným přístupem
-      href: troubleshoot-conditional-access.md
-    - name: Řešení problémů s konektorem Exchange
-      href: troubleshoot-exchange-connector.md
   - name: Archivovat
     items:
     - name: Archiv Co je nového
@@ -1005,9 +946,9 @@ items:
       href: data-outside-protect.md
     - name: Zabránění únikům dat na nespravovaných zařízeních
       href: data-leak-prevention.md
-ms.openlocfilehash: 680ae510d7f3387b53ad6ae50c8e4d8ba194f8b9
-ms.sourcegitcommit: e5f501b396cb8743a8a9dea33381a16caadc51a9
+ms.openlocfilehash: 2a7f7b7a1d1c56cf316362ef8dc2693343e64955
+ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56742818"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306855"
