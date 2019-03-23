@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63dca685317555553573dbbdae1ae3ba391c1903
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7bda958985234b8d6bbaf1cb5b685eb85ff4b504
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395415"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358155"
 ---
 # <a name="how-to-create-a-device-compliance-policy-to-enable-google-play-protect"></a>Jak vytvořit zásadu dodržování předpisů zařízeními pro službu Google Play Protect
 
@@ -59,8 +59,7 @@ Zásadu dodržování předpisů, která vyžaduje potřebná nastavení, může
  - **Ověření zařízení SafetyNet**  
    Nastavuje úroveň integrity, které musí zařízení dosáhnout při ověření SafetyNet. Mezi možné úrovně patří **Nenakonfigurováno**, **Zkontrolovat základní integritu** a **Zkontrolovat základní integritu a certifikovaná zařízení**.
 
-
-
+> [! Poznámka:] pokyny o tom, jak nakonfigurovat nastavení Google Play Protect pomocí zásad ochrany aplikací, najdete v článku [nastavení zásad ochrany aplikací Intune](https://docs.microsoft.com/en-us/intune/app-protection-policy-settings-android#conditional-launch) v Androidu. 
 
 ## <a name="next-steps"></a>Další postup
 

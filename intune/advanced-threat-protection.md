@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9bf69e0c677fe61fc8d2eda12745a407f8f0eefa
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 036f2ca8302f9b3c2d700a04918c4c49a4c6211a
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57398116"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358201"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -110,12 +110,12 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V části **Windows Defender ATP** nastavte možnost **Vyžadovat, aby zařízení mělo určité nebo nižší skóre rizika počítače** na požadovanou úroveň:
+5. V **ochrany ATP v programu Windows Defender** nastavte **vyžadovat, aby zařízení bylo na nebo za skóre rizika počítače** na požadovanou úroveň. Úrovně klasifikace hrozeb jsou [určené ochrany ATP v programu Windows Defender](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
 
-  - **Vymazat**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
-  - **Nízká**: Zařízení splňuje předpisy, pokud jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
-  - **Střední**: Zařízení splňuje předpisy, pokud jsou hrozby pohybují na střední nebo nízké. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
-  - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Jako vyhovující se tedy vyhodnotí zařízení s hrozbami nízké, střední i vysoké úrovně.
+   - **Vymazat**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Uživatelé ochrany ATP v programu Windows Defender hodnota *Secure*.)
+   - **Nízká**: Zařízení splňuje předpisy, pokud jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
+   - **Střední**: Zařízení splňuje předpisy, pokud jsou hrozby pohybují na střední nebo nízké. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
+   - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Jako vyhovující se tedy vyhodnotí zařízení s hrozbami nízké, střední i vysoké úrovně.
 
 6. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/15/2019
+ms.date: 03/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fcfc225d9945ecfd370468e2d48b8d9d448ffac
-ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
+ms.openlocfilehash: deb3e57876dffdc19129a5d845872d90d5833aaf
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221496"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394698"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavit konektor Intune pro místní Exchange v Microsoft Intune
 Informace v tomto článku vám pomůže při instalaci a následně monitorovat místní konektor Exchange Active Sync pro Intune.  Používáte místní Exchange connector Intune s vaší [zásady podmíněného přístupu povolit nebo zablokovat přístup k Exchange v místním poštovním schránkám](conditional-access-exchange-create.md). 
@@ -169,12 +169,13 @@ Můžete potřebovat k opětovné instalaci konektoru serveru Exchange. Vzhledem
 
 ## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity Exchange Connectoru
 
-Po úspěšné konfiguraci Exchange Connectorů můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Ověření připojení Exchange Connectoru:
+Po úspěšné konfiguraci konektoru serveru Exchange, můžete zobrazit stav připojení a poslední úspěšné synchronizace. Ověření připojení Exchange connector:
 
 1. Na řídicím panelu Intune zvolte **přístup k Exchangi**.
-2. V části **nastavení**vyberte **konektor systému Exchange online** ověření stavu připojení pro každý konektor Exchange connector.
+2. Vyberte **Exchange přístup k místnímu** ověření stavu připojení pro každý konektor Exchange connector.
 
 Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
+--> 
 
 ### <a name="system-center-operations-manager-management-pack"></a>Sada System Center Operations Manager management pack
 
@@ -187,10 +188,11 @@ V místním konektorem Exchange automaticky synchronizuje zařízení záznamy E
 
    - **Úplná synchronizace** se ve výchozím nastavení provádí jednou za den. Při úplné synchronizaci se načítají informace o zařízeních pro všechny uživatele s licencí Intune a cílením podmíněného přístupu pro místní Exchange. Při úplné synchronizaci se načítají také informace Exchange Serveru a zajišťuje se, aby se na Exchange Serveru aktualizovala konfigurace zadaná pomocí Intune na webu Azure Portal. 
 
+
 Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konektor spustil synchronizaci pomocí možnosti **Rychlá synchronizace** nebo **Úplná synchronizace**:
 
    1. Na řídicím panelu Intune zvolte **přístup k Exchangi**.
-   2. V části **nastavení**, zvolte **konektor systému Exchange online**.
+   2. Vyberte **Exchange přístup k místnímu**.
    3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **Rychlá synchronizace** nebo **Úplná synchronizace**.
 
 ## <a name="next-steps"></a>Další postup

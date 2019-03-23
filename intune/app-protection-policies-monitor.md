@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cee1cbc05164a418148ecea8d93f6c8c45c73e01
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 2d8c34f1947a0abaa4cdf0bbcd65dcf31e4c11ff
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991137"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358159"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -48,7 +48,7 @@ Monitorovat stav dodržování zásad MAM třech místech:
 ![Dlaždice souhrnu podokna Správa mobilních aplikací Intune](./media/app-protection-user-status-summary.png)
 
 - **Přiřazení uživatelé**: Celkový počet přiřazení uživatelé ve vaší společnosti, kteří používají aplikace, které je přidružené k zásadám v pracovním kontextu a jsou chráněné a licenci, a také přiřazení uživatelé, které jsou Nechráněno a nelicencováno
-- **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. Zařízení s Jailbreakem jsou hlášeny v rámci **uživatelé označení příznakem**.
+- **Uživatelé označení příznakem**: Počet uživatelů, kteří mají problémy. Zařízení s Jailbreakem (iOS) a zařízením s rootem (Android) jsou hlášeny v rámci **uživatelé označení příznakem**. Tady jsou hlášeny uživatelů se zařízeními, která jsou označena pomocí kontroly ověření zařízení Google SafetyNet (Pokud je zapnutá správcem IT). 
 - **Stav uživatele pro iOS** a **stav uživatele pro Android**: Počet uživatelů, kteří použili aplikaci, kteří mají přiřazené k nim v pracovním kontextu pro platformu související zásady. Tyto informace zobrazují počet uživatelů, spravovat zásady, jakož i počet uživatelů, kteří používají aplikaci, která není cílem žádné zásady v pracovním kontextu. Tyto uživatele případně můžete k zásadě přidat.
 - **TOP chráněné aplikace pro iOS**: Podle nejpoužívanější aplikace pro iOS, tyto informace zobrazují počet aplikací pro iOS chráněná a nechráněné.
 - **Vybrané chráněné aplikace pro Android**: Podle nejpoužívanější aplikace pro Android, tyto informace zobrazují počet chráněných a nechráněné aplikace pro Android.
@@ -89,7 +89,7 @@ Pokud chcete zobrazit vytváření sestav pro uživatele, postupujte takto:
 3. Vyberte uživatele ze seznamu. Zobrazí se podrobné informace o konkrétním uživateli a stavu dodržování předpisů.
 
 ### <a name="flagged-users"></a>Uživatelé označení příznakem
-V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko.
+V podrobném přehledu se zobrazí chybová zpráva, otevíraná aplikace v okamžiku chyby, dotčená platforma operačního systému zařízení a časové razítko. Uživatelům se zařízeními, která jsou označena pomocí kontroly ověření zařízení Google SafetyNet označené tady s odůvodněním podle Google.
 
 ## <a name="reporting-view"></a>Zobrazení vytváření sestav
 

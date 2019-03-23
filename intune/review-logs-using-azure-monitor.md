@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2019
+ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 412e5527e1a740f9b460ef8e090913a3c3270b5c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: fb33a1207e165323de2e82467c7a0dd5239d9713
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460984"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394852"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslat data protokolů do služby storage, služby event hubs, nebo se přihlaste analytics Intune (preview)
 
@@ -34,7 +34,7 @@ Tyto protokoly můžete odeslat také se službami Azure Monitor, včetně účt
 * Protokoly Intune integrate svoje vlastní řešení vlastního protokolu pomocí streamování do centra událostí.
 * Odeslání protokolů Intune umožňují přehledné vizualizace, monitorování a upozorňování na připojených dat Log Analytics.
 
-Tyto funkce jsou součástí **nastavení diagnostiky** v Intune. 
+Tyto funkce jsou součástí **nastavení diagnostiky** v Intune.
 
 V tomto článku se dozvíte, jak používat **nastavení diagnostiky** k odesílání dat protokolu do různých služeb, poskytuje příklady a odhady nákladů a odpovědi na některé běžné dotazy.
 
@@ -95,6 +95,19 @@ V závislosti na tom, kde chcete směrovat data protokolu auditování budete po
     ![Ukázkový obrázek, který odešle protokoly auditu Intune do účtu služby Azure storage](media/diagnostics-settings-example.png)
 
 4. **Uložte** provedené změny. Vaše nastavení se zobrazí v seznamu. Jakmile se vytvoří, můžete změnit nastavení tak, že vyberete **upravit nastavení** > **Uložit**.
+
+## <a name="use-audit-logs-throughout-intune"></a>Pomocí protokolů auditu v Intune
+
+Můžete také exportovat protokoly auditu v ostatních částech Intune, včetně registrace, dodržování předpisů, konfigurace, zařízení, klientské aplikace a další.
+
+Například pro export auditu protokoly při použití dodržování předpisů pro zařízení:
+
+1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Vyberte **dodržování předpisů zařízením** > **monitorování** > **protokoly auditu**:
+
+    ![Zvolte protokoly auditu pro směrování Intune dat do úložiště Azure Monitor, události rozbočovače nebo analytics](media/audit-logs-under-monitor-in-compliance.png)
+
+3. Vyberte **exportovat nastavení dat**. Pokud není povolená, můžete zapnout **nastavení diagnostiky**. Kam má odesílat protokoly, můžete také zvolit, jak je popsáno v [odeslat protokoly Azure monitoru](#send-logs-to-azure-monitor) (v tomto článku).
 
 ## <a name="cost-considerations"></a>Důležité informace o nákladech
 

@@ -6,24 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/20/2018
+ms.date: 03/19/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 4CD5EE94-7BA6-4F59-8E28-1EBCA7CA6436
-ms.reviewer: andcerat
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ff80a5911c4bb027cbe2f9289a415ed9797277a6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6c42003f53e5d4ff7afa8afe9c242ef2470b5ee3
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460491"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394789"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
@@ -43,6 +43,7 @@ V následující tabulce jsou uvedeny názvy a vysvětlení nastavení zaznamena
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AccessRecheckOfflineTimeout | x minut                                                                                                                                                                                                                                                                                                   | [Přístup] Znovu zkontroluje požadavky na přístup – období odkladu pro offline režim.<br>Poznámka: Toto je časové období před opakovaným zkontrolováním požadavků na přístup pro aplikace, pokud je zařízení offline.             |
 | AccessRecheckOnlineTimeout  | _x_ minut                                                                                                                                                                                                                                                                                                   | [Přístup] Znovu zkontroluje požadavky na přístup – časový limit.<br>Poznámka: Toto je časové období před opakovaným zkontrolováním požadavků na přístup pro aplikace po spuštění aplikace, pokud je zařízení online. |
+| AllowedOutboundClipboardSharingExceptionLength               | x znaků                                                                                                                                                                                                                                                                                           | [Přístup] Zadejte počet znaků, které mohou být vyjmutých nebo zkopírovaných z spravovanou aplikaci.  Toto nastavení potlačí `AllowedOutboundClipboardSharingLevel` omezení. Výchozí hodnota '0' znamená, že je povolená žádná výjimka. 
 | AppPinDisabled              | 0 = ne<br>1 = ano                                                                                                                                                                                                                                                                                           | [Přístup] Zakáže PIN kód aplikace, když je PIN kód zařízení spravovaný.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = žádné aplikace<br>1 = spravované aplikace<br>2 = libovolná aplikace                                                                                                                                                                                                                                                              | [Přemístění dat] Povolí této aplikaci přijímat data z jiných aplikací.                                                                                                                        |
 | AppSharingToLevel           | 0 = žádné aplikace<br>1 = spravované aplikace<br>2 = libovolná aplikace                                                                                                                                                                                                                                                              | [Přemístění dat] Povolí této aplikaci přenášet data do jiných aplikací.                                                                                                                         |

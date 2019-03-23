@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 03/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1c7f7a2ed1d87d23d01b51ff928c906bc32541a
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: ecc315bfcccc5d3b71107e80720d39e675d42d19
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58173983"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394657"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -36,7 +36,21 @@ ms.locfileid: "58173983"
 
 ![Příklad řízení správy na základě rolí s Intune](./media/intune-rbac-1.PNG)
 
-Na novém Azure Portalu poskytuje **Azure Active Directory (Azure AD)** dvě role adresáře, které je možné s Intune použít. Tyto role mají přidělena úplná oprávnění provádět v Intune všechny aktivity:
+## <a name="azure-active-directory-roles-with-intune-access"></a>Role služby Azure Active Directory s přístupem k Intune
+
+| Role Azure Active Directory | Všechna data Intune | Data auditu Intune |
+| --- | :---: | :---: |
+| Globální správce | Čtení/zápisu | Čtení/zápisu |
+| Stali služby Intune | Čtení/zápisu | Čtení/zápisu |
+| Správce podmíněného přístupu | Žádné | Žádné |
+| Správce zabezpečení | Jen pro čtení | Jen pro čtení |
+| Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
+| Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
+| Globální čtečky | Jen pro čtení | Jen pro čtení |
+| Správce dodržování předpisů | Žádné | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
+
+**Azure Active Directory (Azure AD)** poskytuje dvě role adresáře, které je možné s Intune. Tyto role mají přidělena úplná oprávnění provádět v Intune všechny aktivity:
 
 - **Globální správce:** Uživatelé s touto rolí mají přístup ke všem funkcím pro správu v Azure AD, jakož i službám s federováním do Azure AD, jako jsou Exchange Online, SharePoint Online a Skype for Business Online. Osoba, která se zaregistruje k tenantovi Azure AD, se stane globálním správcem. Další role správců můžou přiřazovat jenom globální správci Azure AD. Organizace může mít víc globálních správců. Globální správci můžou resetovat heslo kteréhokoliv uživatele a všech ostatních správců.
 
@@ -64,7 +78,7 @@ Z klasického portálu Intune se do Intune na Azure Portalu migrují jenom **spr
 Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. Nejde odstranit ani upravit integrované role.
 
 - **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
-- **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple a identifikátory podnikových zařízení.
+- **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple, identifikátory podnikových zařízení a standardních hodnot zabezpečení.
 - **Operátor pouze pro čtení**: Zobrazení uživatele, zařízení, registraci, konfiguraci a informace o aplikaci. Nelze provádět změny v Intune.
 - **Správce aplikací**: Spravuje mobilní a spravované aplikace, může číst informace o zařízení a profily konfigurace zařízení můžete zobrazit.
 - **Role Správce služby Intune**: Spravuje vlastní role Intune a přidá přiřazení předdefinované role Intune. Je jediná role Intune, které můžete přiřazovat oprávnění správcům.
@@ -139,8 +153,12 @@ Postupujte stejným způsobem jako [přiřazení předdefinované role](https://
 
 ## <a name="next-steps"></a>Další postup
 
-[Použití role operátora helpdesku v Intune a portálu pro řešení potíží](help-desk-operators.md)
+- [Použití role operátora helpdesku v Intune a portálu pro řešení potíží](help-desk-operators.md)
+
+
 
 ## <a name="see-also"></a>Viz také:
 
-[Přiřazení rolí pomocí služby Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
+- [Přiřazení rolí pomocí služby Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-users-assign-role-azure-portal)
+- Další informace o [podpory rozhraní Microsoft Graph API pro přístup na základě rolí v Intune](https://docs.microsoft.com/graph/api/resources/intune-rbac-roledefinition?view=graph-rest-1.0)
+- Získejte [SDK prostředí PowerShell pro rozhraní Intune Graph API](https://www.powershellgallery.com/packages/Microsoft.Graph.Intune/6.1902.1.10)

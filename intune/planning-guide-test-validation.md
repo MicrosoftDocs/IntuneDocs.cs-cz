@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/31/2017
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61e7bf62202877b6a20717b0774843d1a859eb47
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9f63d396f51254f4aec99ac630b812a54ceeb405
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396914"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394939"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 
@@ -44,7 +44,7 @@ Pokud součást návrhu neexistuje minimálně v jednom testovacím kritériu, k
 
 -   **Zařízení:** Testovací zařízení, které je možné vymazat nebo resetovat do továrního nastavení.
 
--   **Integrační komponenty:** Všechny integrované komponenty (certificate connector, Intune service to service connector pro hostovaný Exchange a konektor Intune pro místní Exchange) by měl nainstalovaný a nakonfigurovaný v případě potřeby.
+-   **Integrační komponenty:** Všechny integrované komponenty (certificate konektory a místní konektor Intune Exchange) by měl nainstalovaný a nakonfigurovaný v případě potřeby.
 
 V případě nečekaných komplikací možná bude potřeba změnit návrh. Všechny změny návrhu musí být plně dokumentované, včetně důvodu každé změny. Následující příklad ilustruje, o jaký druh změn může jít:
 

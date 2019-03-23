@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdbe2c34f9e0bfb05324d7030ad27ce664fcfb76
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4592820500cebddcdafc9d9e86caeeb1addc93a3
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461073"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358197"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -171,6 +171,27 @@ Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uži
 
 Při zpracování různých typů nastavení by měl přednost požadavek na verzi aplikace. Následoval by požadavek na verzi operačního systému Android a pak požadavek na verzi opravy Androidu. Pak se ve stejném pořadí kontrolují všechna upozornění pro všechny typy nastavení.
 
+**Zásady ochrany aplikací Intune poskytuje funkce pro správce vyžadují zařízení koncových uživatelů k předání ověření SafetyNet společnosti Google pro zařízení s Androidem. Jak často se nový výsledek ověření SafetyNet odesílají do služby?** <br><br> Nové určení služby Google Play se ohlásí Správci IT v intervalu určit přes službu Intune. Jak často je uskutečněn hovor služby je omezena z důvodu zatížení, proto tato hodnota se zachová interně a nelze ji konfigurovat. Jakékoli správce IT nakonfiguroval akce pro ověření SafetyNet Google nastavení se provedou na základě na poslední oznámený výsledek do služby Intune v době podmíněnému spouštění. Pokud není k dispozici žádná data, přístup povolen v závislosti na žádné jiné kontroly podmíněného spuštění neúspěšné a Google Play služby "umožňujícím zpětnou transformaci" pro určení ověření výsledky začínají v back-end, který se asynchronně vyzve uživatele, pokud zařízení se nezdařilo. Pokud existuje zastaralá data, přístup se blokované nebo povolené v závislosti na poslední oznámený výsledek a podobně, služby Google Play "zpětná" pro určení výsledky ověření zahájíme a asynchronně vyzve uživatele, pokud zařízení se nezdařilo.
+
+**Zásady ochrany aplikací Intune poskytuje funkce pro správce vyžadují zařízení koncových uživatelů můžete posílat signály prostřednictvím API Apps ověřte Googlu pro zařízení s Androidem. Jak může koncový uživatel zapnout skenování aplikace tak, že nemáte zablokovaný přístup z toho důvodu?**<br><br> Pokyny, jak to udělat mírně lišit podle zařízení. Obecný postup zahrnuje přejít Google Play Store a klikněte na položku **Moje aplikace a hry**, pak kliknete na výsledek posledního skenování aplikací, které se dostanete do nabídky Play Protect. Zajištění přepínač **vyhledat v zařízení bezpečnostní hrozby** přepnutí na on.
+
+**Co rozhraní API ověření SafetyNet společnosti Google skutečně zkontrolovat na zařízeních s Androidem? Jaký je rozdíl mezi hodnotami konfigurovatelné kontrola základní integritu a "Kontrola základní integritu a certifikovaná zařízení'?** <br><br>
+Intune využívá Google Play chránit SafetyNet rozhraní API pro přidání do naší stávající zjišťování kontroly kořenové pro neregistrovaná zařízení. Google se vyvíjí a udržuje toto rozhraní API pro aplikace pro Android na přijmout, pokud nechcete své aplikace spouštět na zařízením s rootem. Aplikace Android platit doplnil, např. Zatímco Google veřejně sdílet rozsahu zjišťování kontroly kořenové, ke kterým dochází, Očekáváme, že tato rozhraní API pro detekci uživatelé, kteří mají svá zařízení s rootem. Tito uživatelé můžou potom blokovat přístup k nebo jejich podnikové účty ze své zásady v aplikacích s podporou. 'Zkontrolovat základní integritu' vás informuje o obecné integrity zařízení. Root zařízení, emulátory, virtuální zařízení a zařízení s příznaky manipulaci základní integrity navrácení služeb po. 'Kontrola základní integritu a certifikovaná zařízení' vás informuje o kompatibility zařízení se službami od Googlu. Pouze bez úprav zařízení, které byly ověřeny Google, můžete předat tuto kontrolu. Zařízení, která se nezdaří, patří:
+* Zařízení, které nesplní základní integritu
+* Zařízení s odemknout zaváděcího programu pro spouštění
+* Zařízení s vlastní systém image/ROM
+* Zařízení u kterých nebyla výrobce platí pro, nebo předejte certifikační služby Google 
+* Zařízení s bitovou kopii systému vytvořené přímo ze zdrojových souborů s Androidem otevřete zdrojový Program
+* Zařízení s bitovou kopii systému beta/developer preview
+
+Zobrazit [dokumentace Googlu na ověření SafetyNet](https://developer.android.com/training/safetynet/attestation) technické podrobnosti.
+
+**Existují dvě podobné kontroly sekce podmíněného spuštění, při vytváření zásady ochrany aplikací Intune pro zařízení s Androidem. By měl být vyžadující, nastavení ověření zařízení SafetyNet nebo "zařízení s jailbreakem/rootem zařízení" nastavení?** <br><br>
+Google Play Protect kontroly SafetyNet rozhraní API vyžaduje, koncový uživatel je zařízení online, alespoň po dobu trvání čas, kdy "zpětná" pro určení výsledky ověření provádí. Pokud koncový uživatel je v režimu offline, správce IT může stále očekávat, že výsledek ze "zařízení s jailbreakem/rootem zařízení" nastavení vynucení. Tento říká, pokud koncový uživatel byl příliš dlouhý offline, "období odkladu pro Offline' Hodnota vstupu do play a všechny přístup k práci nebo školních dat je blokován, jakmile je dosaženo této hodnoty časovače, dokud nebude k dispozici přístup k síti. Zapnutí obě nastavení umožňuje vrstveného přístupu k udržování koncový uživatel zařízení v pořádku, což je důležité, když se koncoví uživatelé přístup fungovat nebo školních dat na mobilních zařízeních. 
+
+**Nastavení zásad ochrany aplikací, které využívají Google Play ochrana rozhraní API vyžadují služby Google Play na funkci. Co když aplikace služby Google Play nejsou povoleny v místě, kde může být koncový uživatel?**<br><br>
+Ověření zařízení SafetyNet i "Kontrola ohrožení aplikací" nastavení vyžadují Google určit verzi správné fungování služby Google Play. Protože jde o nastavení, které spadají v oblasti zabezpečení, bude koncový uživatel zablokován, zaměřuje s těmito nastaveními a nesplňují příslušnou verzi služby Google Play nebo nemají přístup k služby Google Play. 
+
 ## <a name="app-experience-on-ios"></a>Prostředí aplikací v iOS
 **Co se stane, když v zařízení přidám nebo odeberu otisk prstu nebo tvář?**
 Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen uživatelům s licencí na Intune. Jedním ze způsobů, jak řídit přístup k aplikacím, je vyžadovat na podporovaných zařízeních Touch ID nebo Face ID od Applu. Intune se chová tak, že když se v zařízení změní databáze biometrických údajů, vyzve uživatele k zadání kódu PIN, pokud je splněna hodnota časového limitu nečinnosti. Ke změnám biometrických údajů patří přidání nebo odebrání otisku prstu nebo tváře. Pokud uživatel Intune nemá nastavený kód PIN, je nasměrován na nastavení kódu PIN pro Intune.
@@ -185,20 +206,13 @@ Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uži
 
 Při zpracování různých typů nastavení by měl přednost požadavek na verzi Intune App SDK. Následoval by požadavek na verzi aplikace a pak požadavek na verzi operačního systému iOS. Pak se ve stejném pořadí kontrolují všechna upozornění pro všechny typy nastavení. Doporučujeme nakonfigurovat verzi Intune App SDK jenom po pokynu od produktového týmu Intune pro základní scénáře blokování.
 
-## <a name="app-protection-policies---policy-refresh"></a>Zásady ochrany aplikací – aktualizace zásad
-- Aplikace kontrolují službu APP každých 30 minut.
-- Prahová hodnota 30 minut je založená na časovači.
-    - Pokud je aplikace ve 30. minutě aktivní, proběhne kontrola za 30 minut.
-    - Pokud je aplikace ve 30. minutě v režimu spánku, proběhne kontrola při dalším fokusu.
-- Pokud uživatel nemá přiřazenu zásadu, probíhá kontrola každých osm hodin.
-- Pokud není přiřazená licence Intune, probíhá kontrola každých 24 hodin.
-
 
 ## <a name="see-also"></a>Viz také:
 - [Implementace plánu Intune](planning-guide-onboarding.md)
 - [Testování a ověřování Intune](planning-guide-test-validation.md)
 - [Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md)
 - [Nastavení zásad správy mobilních aplikací pro iOS](app-protection-policy-settings-ios.md)
-- [Ověření zásad ochrany aplikací](app-protection-policies-validate.md)
+- [Aktualizace zásad zásady ochrany aplikací](app-protection-policy-delivery.md)
+- [Ověření zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
 - [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](app-configuration-policies-managed-app.md)
 - [Jak získat podporu pro Microsoft Intune](get-support.md)

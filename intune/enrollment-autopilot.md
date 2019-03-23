@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bd5679a0c42959f5b523ac064801864c3c6113a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 65c19f58e41e4f8a739ae16a1b56703fb743b738
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396408"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394964"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -102,6 +102,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil.
 2. V okně zvoleného profilu vyberte **Přiřazení**. 
 3. Zvolte **Vybrat skupiny**, pak v okně **Vybrat skupiny** vyberte skupiny, ke kterým chcete přiřadit profil, a zvolte **Vybrat**.
+
 
 > [!NOTE]
 > Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupin a potom zahájit proces přiřazení profilů zařízení. Tento proces může trvat několik minut. Před nasazením zařízení, ujistěte se, že tento proces dokončil.  Můžete zkontrolovat v části **registrace zařízení** > ** Registrace Windows ** > **zařízení** kam byste měli vidět stav profilu změnit z "Unassigned" na "Přiřazení" a nakonec na "Přiřazeno."

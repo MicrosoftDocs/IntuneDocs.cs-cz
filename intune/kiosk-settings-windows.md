@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/11/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78b47decc297c58feadb7cd507a3ff09070d46d4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0e83e371f5c3d1690cc50c6b250db8a2c3251b48
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565736"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394950"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 a novější zařízení nastavení pro spuštění jako veřejný terminál v Intune
 
@@ -184,6 +184,8 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 - **Použití alternativní rozložení nabídky Start**: Zvolte **Ano** zadejte soubor XML, který popisuje, jak se mají aplikace zobrazit v nabídce start, včetně pořadí aplikace. Tuto možnost použijte, pokud v nabídce Start potřebujete větší míru přizpůsobení. V článku [Přizpůsobení a export rozložení nabídky Start](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout) najdete pokyny a ukázkový soubor XML.
 
 - **Hlavním panelu Windows**: Zvolit **zobrazit** nebo **skrýt** na hlavním panelu. Ve výchozím nastavení se hlavní panel nezobrazuje. Ikony, jako je například na ikonu sítě Wi-Fi se zobrazí, ale nastavení nelze změnit koncovými uživateli.
+
+- **Povolit přístup ke složce stažené soubory**: Zvolte **Ano** umožníte uživatelům přistupovat ke složce stažené soubory v Průzkumníku Windows. Ve výchozím nastavení je zakázán přístup ke složce pro stahování. Tato funkce se běžně používá pro koncové uživatele pro přístup k položkám stažené z prohlížeče.
 
 Vyberte **OK** uložte provedené změny.
 

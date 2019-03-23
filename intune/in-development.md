@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2310f9720c64301a3ea25631e1e8688d88a001e4
-ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
+ms.openlocfilehash: 5612ae0ea6c1495fdf12e85bbed80e54bc3f287f
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306817"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394639"
 ---
 # <a name="in-development-for-microsoft-intune---march-2019"></a>Při vývoji pro Microsoft Intune – březen 2019
 
@@ -56,15 +56,6 @@ Budete moct přidat značku oboru pro zásady Konfigurace aplikací tak, aby pou
 ### <a name="assign-autopilot-profiles-to-the-all-devices-virtual-group---2715522---"></a>Přiřazení profilů Autopilot na všechny virtuální skupiny zařízení <!--2715522 -->
 Profily Autopilotu budete moct přiřadit virtuální skupině Všechna zařízení. Uděláte to tak, že vyberete **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil > **Přiřazení** > v části **Přiřadit k** vyberte **Všechna zařízení**. Další informace o profilech Autopilotu najdete v článku [Registrace zařízení s Windows pomocí Windows Autopilotu](enrollment-autopilot.md).
 
-### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment----2751523----"></a>Instalovat dostupné aplikace pomocí aplikace portál společnosti po Windows hromadný zápis <!-- 2751523  -->
-Zařízení Windows, která zaregistrovaná v Intune pomocí [Windows hromadnou registraci](windows-bulk-enroll.md) (zřizovacích balíčků) budete moct používat aplikaci portál společnosti instalovat aplikace k dispozici. Další informace o aplikaci portál společnosti, naleznete v tématu [ručně přidat portál společnosti pro Windows 10](store-apps-company-portal-app.md) a [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
-
-### <a name="scope-tags-for-ios-app-provisioning-profiles---2934430---"></a>Značky oboru pro zřizovací profily aplikací pro iOS <!--2934430 -->
-Budete moct přidat značku oboru do zřizovacího profilu aplikace iOS tak, aby pouze uživatelé s rolí také přiřadit značky oboru mít přístup k zřizovací profil aplikace pro iOS. 
-
-### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment----3192477----"></a>Nástroj pro nasazení Office (ODT) XML pro nasazení Office ProPlus <!-- 3192477  -->
-Budete moct poskytovat nástroj pro nasazení Office (ODT) XML při vytváření instance Office Pro Plus v konzole správce Intune. To vám umožní větší přizpůsobitelnost, pokud existující možnosti uživatelského rozhraní Intune nevyhovují vašim potřebám. 
-
 ###  <a name="block-users-from-scanning-for-windows-updates-------3316758------"></a>Zablokovat uživatelům hledání aktualizací Windows    <!-- 3316758    -->
 Přidáváme nové Windows aktualizační kanál nastavení, které můžete použít, který se zablokuje uživatelům možnost skenování pro aktualizace Windows. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
 
@@ -79,27 +70,6 @@ Portál společnosti pro iOS budou aktualizace obrazovek registrace aplikace a p
 - Vraťte se do aplikace portál společnosti, aby prošel registrací.  
 
 Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentu za provozu. 
-
-### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
-Na stránce Stav Tenanta se zobrazí informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.
-
-### <a name="granting-intune-read-only-access-to-some-azure-active-directory-roles----3637917---"></a>Udělení Intune přístup pro čtení jenom k několik rolí Azure Active Directory <!-- 3637917 -->
-Jsme budete udělení, že Intune přístup pro čtení jenom k následující role Azure AD. Oprávnění udělená role Azure AD mají přednost před oprávněním s Intune řízení přístupu na základě role (RBAC).
-
-Číst pouze přístup k datům auditování Intune:
-
-- Správce dodržování předpisů
-- Správce dat dodržování předpisů
-
-Přístup jen ke čtení ke všem datům Intune:
-
-- Správce zabezpečení
-- Operátor zabezpečení
-- Čtenář zabezpečení
-- Globální čtečky
-
-### <a name="easier-access-to-diagnostic-settings------3804627-----"></a>Jednodušší přístup k nastavení diagnostiky   <!-- 3804627   -->
-Přidáváme novou možnost, jak **protokoly auditu** okno v každé v každé úloze protokolu auditu v konzole Intune, který vám umožní otevřít přímo *nastavení diagnostiky* stránky.
 
 ### <a name="create-and-use-device-configuration-profiles-on-android-zebra-devices-in-intune----3895244----"></a>Vytváření a používání profilů konfigurace zařízení na zařízeních s Androidem Zebra v Intune <!-- 3895244  -->
 Intune bude podporovat konfiguraci zařízení s Androidem Zebra. Konkrétně budete moci: 

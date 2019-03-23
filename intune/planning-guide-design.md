@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 3/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e815914ad96b7c0db14228c76488a6147c0b46
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 3707ee66d11af0550659d8357d84aa0fea534778
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991167"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394690"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -109,7 +109,7 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 ## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
 
-Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatné znamená, že Intune běží v cloudu. Hybridní znamená integraci Intune do System Center Configuration Manageru. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatné znamená, že Intune běží v cloudu, hybridní znamená integraci Intune se System Center Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
 >Registrace nové zákazníky hybridní MDM je zastaralá. Další informace najdete v tématu [přesunout z hybridní správy mobilních zařízení do Intune na Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogový příspěvek.
@@ -138,7 +138,7 @@ Externí závislosti jsou služby a produkty, které jsou oddělené od Intune, 
 
 -   Infrastruktura veřejných klíčů (PKI)
 
-Pojďme se na nejčastější externí závislosti podívat podrobněji.
+V následujícím příkladu budeme věnovat podrobněji nejčastější externí závislosti.
 
 ### <a name="identity"></a>Identita
 
@@ -404,11 +404,9 @@ Tady je příklad návrhu zásad dodržování předpisů:
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
 #### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
 
-Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným firemním prostředkům povolit jen zařízením, která dodržují předpisy. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Musíte se rozhodnout, jestli je podmíněný přístup potřeba a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
+Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným firemním prostředkům povolit jen zařízením, která dodržují předpisy. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, pokud se vyžadují podmíněný přístup, a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
 
-U online přístupu rozhodněte, jaké platformy a skupiny uživatelů budou cílem zásad podmíněného přístupu. Dále rozhodněte, jestli potřebujete nainstalovat nebo nakonfigurovat Intune Service to Service Connector pro Exchange Online nebo místní Exchange. Další informace o instalaci a konfiguraci konektorů Intune Service to Service Connector: <!---these links are correct--->
-
--   [Exchange Online](exchange-service-connector-configure.md)
+U online přístupu rozhodněte, jaké platformy a skupiny uživatelů bude cílit zásady podmíněného přístupu. Kromě toho určete, jestli je potřeba nainstalovat nebo nakonfigurovat konektor Intune pro místní Exchange: 
 
 -   [Místní Exchange](exchange-connector-install.md)
 

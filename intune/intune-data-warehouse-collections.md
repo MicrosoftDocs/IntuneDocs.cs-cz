@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/11/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cdf7ea715a13809c860e77412914e3fd2b45a28
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5f2a9f2512f4f6fb12a65d0e7c4982fd351f1770
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400479"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358313"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -231,7 +231,7 @@ Entita **device** obsahuje seznam všech zaregistrovaných zařízení ve správ
 | DeviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
 | ComplianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
 | OSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
-| EasDeviceId                | ID zařízení Exchange ActiveSync                                                                                                                                                  |
+| EasDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
 | sériové číslo               | sériové číslo                                                                                                                                                                           |
 | UserId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
@@ -281,7 +281,7 @@ Entita **deviceType** zastupuje typ zařízení, na který odkazují jiné entit
 | 12           | ISocConsumer      | Zařízení iSoc Consumer                                |
 | 13           | Unix              | Zařízení se systémem Unix                                         |
 | 14           | MacMDM            | Zařízení se systémem Mac OS X spravované pomocí integrovaného agenta MDM |
-| 15           | HoloLens          | Zařízení Holo Lens                                    |
+| 15           | HoloLens          | Zařízení HoloLens                                       |
 | 16           | SurfaceHub        | Zařízení Surface Hub                                  |
 | 17           | AndroidForWork    | Zařízení Android spravované pomocí vlastníka profilu Androidu  |
 | 18           | AndroidEnterprise | Zařízení s Androidem Enterprise                          |
@@ -311,7 +311,7 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | 6                | WindowsBulkUserless                | Hromadná registrace Windows 10 prostřednictvím nástroje ICD s certifikátem                               |
 | 7                | WindowsAutoEnrollment              | Automatická registrace Windows 10   (Přidání pracovního účtu)                                    |
 | 8                | WindowsBulkAzureDomainJoin         | Hromadné připojení k Azure AD s Windows 10                                                           |
-| 9                | WindowsCoManagement                | Aktivace spolusprávy Windows 10 AutoPilotem nebo zásadou skupiny                       |
+| 9                | WindowsCoManagement                | Společná správa systému Windows 10 aktivuje AutoPilot nebo zásad skupiny.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Připojení k Azure AD pomocí Device Auth ve Windows 10                                            |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
@@ -368,8 +368,8 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | Chybného požadavku                      | Klient odešle požadavek, který není srozumitelný/podporované službou.                                        |
 | FeatureNotSupported             | Funkce používá tento zápis nejsou podporovány pro tento účet.                                        |
 | EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurované správcem blokované tato registrace.                                          |
-| ClientDisconnected              | Vypršel časový limit klienta nebo registrace bylo přerušeno roli.                                                        |
-| UserAbandonment                 | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
+| ClientDisconnected              | Vypršel časový limit klienta nebo registrace byla přerušena koncovým uživatelem.                                                        |
+| UserAbandonment                 | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
 **EnrollmentFailureReason** entity označuje podrobnější důvod selhání registrace zařízení v kategorii daného selhání.  
@@ -398,7 +398,7 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | EnrollmentCriteriaNotMet         | Toto zařízení se nepodařilo registrovat z důvodu nakonfigurované registrace omezení pravidla.                                                                                                                          |
 | BulkDeviceNotPreregistered       | Nenašel se mezinárodní identifikátor mobilního zařízení (IMEI) nebo sériové číslo tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení v osobním vlastnictví, které jsou aktuálně zablokovány.  |
 | FeatureNotSupported              | Uživatel se pokusil pro přístup k funkci, která ještě není k všem zákazníkům nebo není kompatibilní s vaší konfigurací Intune.                                                            |
-| UserAbandonment                  | Registrace byla opuštěna podle roli. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
+| UserAbandonment                  | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
 | APNSCertificateExpired           | Zařízení Apple nelze spravovat pomocí vypršela platnost certifikátu Apple MDM push certificate.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
@@ -448,7 +448,7 @@ Entita **managementAgentType** představuje agenty používané ke správě zař
 | 5                     | EasIntuneClient                   | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
 | 8                     | ConfigManagerClient               | Zařízení se spravuje pomocí agenta produktu System Center Configuration Manager.     |
 | 10                    | ConfigurationManagerClientMdm     | Zařízení se spravuje pomocí Configuration Manageru a MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Zařízení se spravuje pomocí Configuration Manageru, MDM a Eas.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Zařízení se spravuje přes Configuration Manager, MDM a protokolu Exchange Active Sync.               |
 | 16                    | Neznámé                           | Neznámý typ agenta správy                                              |
 | 32                    | Jamf                              | Atributy zařízení se načítají z Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Zařízení se spravuje přes CloudDPC Googlu.                                 |
@@ -617,7 +617,7 @@ Kolekce entit **user** obsahuje uživatelská data. Tyto záznamy zahrnují stav
 | UserKey                    | Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč                                                                                                                                                         | 123                                  |
 | UserId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
-| HLAVNÍ NÁZEV UŽIVATELE                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
+| userPrincipalName (Hlavní název uživatele)                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
 | displayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
 | IntuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | True nebo False                           |
 | IsDeleted                  | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. | True nebo False                           |

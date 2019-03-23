@@ -1,11 +1,11 @@
 ---
-title: Protokoly auditu pro aktivity v Microsoft Intune
+title: Auditovat změny a události v Microsoft Intune – Azure | Dokumentace Microsoftu
 description: Přečtěte si, jak kontrolovat protokoly auditu se zaznamenanými aktivitami Microsoft Intune.
 keywords: ''
 ms.author: dougeby
 author: dougeby
 manager: dougeby
-ms.date: 02/27/2018
+ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,33 +14,49 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98540af0f0b7d259973d1a7e873c68fc64f488d1
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 93072ba4730de0252f54d93fa1169062d496ce38
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460670"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394897"
 ---
-# <a name="audit-logs-for-intune-activities"></a>Protokoly auditu pro aktivity v Intune
-Protokoly auditu obsahují zaznamenané aktivity, které v Microsoft Intune generují změnu. Vytváření, aktualizace (úpravy), odstraňování, přiřazování akcí nebo vzdálené úlohy generují události protokolu, které můžete kontrolovat. V protokolech auditu můžete kontrolovat většinu úloh Intune. Auditování je ve výchozím nastavení povolené pro všechny zákazníky a nedá se zakázat. Události auditu se začaly zaznamenávat od data vydání této součásti v prosinci 2017. Dřívější události nejsou dostupné.
+# <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Použití protokolů auditu ke sledování a sledování událostí v Microsoft Intune
+
+Protokoly auditu obsahují zaznamenané aktivity, které v Microsoft Intune generují změnu. Vytvoření, aktualizace (úpravy), odstranit, přiřadit a akce se vzdáleným vytvoření událostí auditu, které správce může zkontrolovat pro většinu úloh Intune. Ve výchozím nastavení je auditování povoleno pro všechny zákazníky. Nelze zakázat.
+
+> [!NOTE]
+> Události auditu spustit záznam na vydání funkce. prosince 2017. Dřívější události nejsou k dispozici.
 
 ## <a name="who-can-access-the-data"></a>Kdo má k těmto datům přístup?
+
 Protokoly auditu mohou kontrolovat uživatelé s tímto oprávněním:
+
 - Globální správce
 - Správce služby Intune
 - Správci s přiřazenou rolí Intune a oprávněními pro **data auditu** - **čtení**.
 
 ## <a name="audit-logs-for-intune-workloads"></a>Protokoly auditu pro úlohy Intune
-Ve skupině Monitorování můžete kontrolovat protokoly auditu o každé úloze Intune.  
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte úlohu, jejíž protokoly auditu chcete zkontrolovat, například **Zařízení**.
-4. Ve skupině **Monitorování** zvolte u úlohy **Protokoly auditu**.
+
+Můžete kontrolovat protokoly auditu ve skupině monitorování o každé úloze Intune:
+
+1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+2. Zvolte úlohu, kterou chcete kontrolovat protokoly auditu. Vyberte například **zařízení**.
+3. V části **monitorování**, zvolte **protokoly auditu**.
+
+## <a name="route-logs-to-azure-monitor"></a>Směrování protokolů do Azure monitoru
+
+Protokoly auditu a provozní protokoly je možné také směrovat do Azure monitoru. V **protokoly auditu**vyberte **exportovat nastavení dat**:
+
+![Export protokolů dat do Azure monitoru výběrem možnosti Export dat nastavení v Intune](./media/audit-logs-export-data-settings.png)
+
+Další informace o této funkci najdete v tématu [odeslat data protokolů do služby storage, služby event hubs nebo protokolování analytics](review-logs-using-azure-monitor.md).
 
 ## <a name="review-audit-events"></a>Kontrola událostí auditu
-![Protokoly událostí](./media/monitor-audit-logs.png "Protokoly událostí")
 
-Protokol událostí zobrazí výchozí seznam s následujícími položkami:    
+![Zvolte protokoly auditu v Intune, chcete-li zobrazit akce a data, kdy došlo k událostem](./media/monitor-audit-logs.png "protokoly auditu")
+
+Protokol událostí zobrazí výchozí seznam s následujícími položkami:
 
 - Datum a čas výskytu
 - Iniciátor (actor)
@@ -50,18 +66,25 @@ Protokol událostí zobrazí výchozí seznam s následujícími položkami:
 - Kategorie
 - Stav
 
-Když v seznamu kliknete na položku, získáte o ní všechny dostupné informace.
+Chcete-li zobrazit podrobnější informace o události, vyberte položku v seznamu:
 
-![Protokoly auditu](./media/monitor-audit-log-detail.png "Protokoly auditu")
+![Získat podrobnější informace, na který nebyla, které v auditu protokoly do Intune](./media/monitor-audit-log-detail.png "podrobnosti protokolu auditu")
 
-> [!Note]    
-> V oddílu **Iniciátor (actor)** jsou v protokolu auditu informace o uživateli, který aktivitu provedl, a o tom, odkud byla provedena. Pokud aktivitu Intune provedete na webu Azure Portal, bude ve sloupci **Aplikace** vždy uvedeno, že jde o **rozšíření portálu Microsoft Intune** a jako **ID aplikace** se vždy použije stejný identifikátor GUID. 
->    
-> Oddíl **Cíle** může obsahovat více změněných cílů a vlastností.  
-
+> [!NOTE]
+> **Iniciátor (actor)** obsahuje informace o kdo spustil úlohu a ve kterém byl spuštěn. Například při spuštění aktivity v Intune na webu Azure Portal, pak **aplikace** vždy uvedeno **rozšíření portálu Microsoft Intune** a **ID aplikace** vždy používá stejný identifikátor GUID.
+> 
+> **Cíle** části je uveden seznam více cílů a vlastnosti, které byly změněny.  
 
 ## <a name="filter-audit-events"></a>Filtrování událostí auditu
-Každá úloha má položku nabídky, která předem vyfiltruje kategorii událostí auditu spojených s tímto podoknem. Samostatná volba ve filtru umožňuje změnit kategorii na jinou. V dané kategorii také můžete změnit podrobnosti zaznamenané akce. Hledat můžete podle UPN (například uživatel, který akci provedl). Filtr časového rozsahu nabízí tyto možnosti: 24 hodin, 7 dní nebo 30 dní. Ve výchozím nastavení se zobrazují události auditu za posledních 30 dní.
+
+Každá úloha má položku nabídky, která předem vyfiltruje kategorii událostí auditu spojených s tímto podoknem. Samostatná volba ve filtru umožňuje změnit kategorii na jinou. V dané kategorii také můžete změnit podrobnosti zaznamenané akce. Můžete vyhledávat podle UPN, jako je například uživatel, který akci provedl. Filtr časového rozsahu nabízí tyto možnosti: 24 hodin, 7 dní nebo 30 dní. Ve výchozím nastavení se zobrazí za posledních 30 dní událostí auditu.
 
 ## <a name="use-graph-api-to-retrieve-audit-events"></a>Použití rozhraní API služby Graph k načtení událostí auditu
-Podrobnosti o použití rozhraní API služby Graph k načtení událostí auditu až za jeden rok najdete v článku o [vytvoření seznamu událostí auditu s použitím objektů auditEvent](https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/api/intune_auditing_auditevent_list).
+
+Podrobnosti o použití rozhraní graph API k získání událostí auditu až jednoho roku, naleznete v tématu [seznamu použitím objektů Auditevent](https://docs.microsoft.com/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+
+## <a name="next-steps"></a>Další postup
+
+[Odeslat data protokolů do služby storage, služby event hubs nebo protokolování analytics](review-logs-using-azure-monitor.md).
+
+[Kontrola protokolů ochrany aplikace klient](app-protection-policy-settings-log.md).

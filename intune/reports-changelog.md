@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/21/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20c9c1bf5eea12407cba2e00288a039b74fcaca7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d7d69c602471e8508744f2a00008294cbd335204
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565634"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358254"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Udržujte si přehled o aktualizacích datového skladu Intune.
+
+## <a name="1903"></a>1903
+_Vydáno dne 2019_
+
+### <a name="v10-changes-reflecting-back-to-beta"></a>Verze 1.0 změny odráží zpět na verzi beta
+Verze 1.0 bylo poprvé dostupné ve. 1808, se liší v některých ohledech významné z beta verze rozhraní API. Tyto změny se projeví v 1903 zpět do beta verzi rozhraní API. Pokud máte důležitá sestavy, které používají beta verzi rozhraní API, důrazně doporučujeme přepínání tyto sestavy V1.0, aby se zabránilo rozbíjející změny. Najdete [informace o verzi rozhraní API](reports-api-url.md) Další informace o verzích rozhraní API datového skladu a zpětnou kompatibilitu. 
 
 ## <a name="1902"></a>1902 
 _Vydáno. února 2019_
@@ -42,9 +48,9 @@ Přístup k datovému skladu Intune pomocí Power BI Online [dodržování před
 > Existují dva další filtry, které můžete použít pro aplikaci dodržování předpisů v Intune.
 
 #### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Přidat další filtry aplikace dodržování předpisů v Intune
-1. Otevřít [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) browers vaší webové aplikace.
+1. Otevřít [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikací ve webových prohlížečích.
 2. Klikněte na tlačítko **nekompatibilní zařízení** a vyberte **nekompatibilní** v **complianceStatus** filtru. 
-3. Klikněte na **Neznámá zařízení** a vyberte **zatím není k dispozici** v **complianceStatus** filtru. 
+3. Klikněte na **neznámým zařízením** a vyberte **zatím není k dispozici** v **complianceStatus** filtru. 
 
 ## <a name="1812"></a>1812 
 _Vydáno prosince 2018_
@@ -93,7 +99,7 @@ Jako parametr dotazu OData můžete použít <code>$select</code>. Aktuální ve
 
 ### <a name="new-entities-in-the-in-data-warehouse-data-model----2077804---"></a>Nové entity v v datovém modelu datového skladu <!-- 2077804 -->
 
- - Byla přidána entita [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md#mobileappdeviceuserinstallstatus). **MobileAppDeviceUserInstallStatus** představuje stav instalace mobilní aplikace pro dané zařízení a uživatele.
+ - Byla přidána entita [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md). **MobileAppDeviceUserInstallStatus** představuje stav instalace mobilní aplikace pro dané zařízení a uživatele.
  - Byla přidána entita [**MobileAppInstallState**](reports-ref-application.md#mobileappinstallstate). Entita **MobileAppInstallState** představuje stav instalace mobilní aplikace po jejím přiřazení do skupiny obsahující zařízení, uživatele, nebo obě tyto možnosti. 
 
 ## <a name="1710"></a>1710

@@ -1,11 +1,11 @@
 ---
 title: Zařízení funkcích a nastaveních v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Přehled různých profilů zařízení Microsoft Intune, včetně funkcí, omezení, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátů, upgradu Windows 10, Bitlockeru a Windows defender, Windows Information Protection, šablony pro správu, a nastavení konfigurace vlastních zařízení na portálu Azure portal. Používání těchto profilů pro správu a ochranu dat a zařízení ve vaší společnosti.
+description: Přehled různých profilů zařízení v Microsoft Intune. Získejte informace o funkce, omezení, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátů, upgradu Windows 10, Bitlockeru a Windows defender, Windows Information Protection, šablony pro správu a vlastní nastavení konfigurace na webu Azure Portal. Používání těchto profilů pro správu a ochranu dat a zařízení ve vaší společnosti.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad9b0fb2fc8814f04860793bb1210da17dbe2a65
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df8cc8c921b685ba7fa0b957685836d059a677e0
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395325"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394989"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použít nastavení a funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Microsoft Intune zahrnuje nastavení a funkcí můžete povolit nebo zakázat na různých zařízeních ve vaší organizaci. Tato nastavení a funkce se přidají do "konfiguračních profily". Můžete vytvořit profily pro různá zařízení, různé platformy, včetně iOS, Android, Windows a pak pomocí Intune použít profil pro zařízení ve vaší organizaci.
+Microsoft Intune zahrnuje nastavení a funkcí můžete povolit nebo zakázat na různých zařízeních ve vaší organizaci. Tato nastavení a funkce se přidají do "konfiguračních profily". Můžete vytvořit profily pro různá zařízení a různé platformy, včetně iOS, Android a Windows. Potom pomocí Intune můžete použít nebo "přiřazení" profilu k zařízením.
 
 Jako součást řešení správy mobilních zařízení provádět různé úlohy, pomocí těchto konfiguračních profilů. Například:
 
@@ -36,99 +36,16 @@ Jako součást řešení správy mobilních zařízení provádět různé úloh
 - Na zařízení s Iosem a macOS umožnit uživatelům používat tiskárny s Airprintem ve vaší organizaci.
 - Povolit nebo zakázat přístup k bluetooth na zařízení.
 - Vytvoření profilu Wi-Fi nebo VPN, který dává různým zařízením přístup k vaší podnikové síti.
-- Správa aktualizací softwaru, včetně toho, když se instalují.
+- Správa aktualizací softwaru, včetně při jejich instalaci.
 - Spusťte jako vyhrazených veřejných terminálech, který můžete spustit jednu aplikaci, nebo spouštět aplikace pro řadu zařízení s Androidem.
 
-V tomto článku jsou uvedené kroky k vytvoření profilu a poskytuje přehled o různých typů profilů, které lze vytvořit. Povolit nebo zakázat některé funkce na zařízeních, používání těchto profilů.
-
-## <a name="create-the-profile"></a>Vytvoření profilu
-
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
-
-2. Vyberte **Konfigurace zařízení**. Máte následující možnosti:
-
-    - **Přehled**: Zobrazí stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
-    - **Správa**: Vytvoření profilů zařízení tím, že nahrajete vlastní [skripty prostředí PowerShell](intune-management-extension.md) ke spuštění v rámci profilu a přidejte datové tarify do zařízení pomocí [karty eSIM](esim-device-configuration.md).
-    - **Monitorování**: Zkontrolovat stav profilu úspěchu nebo selhání a také zobrazit protokoly vašich profilů.
-    - **Instalační program**: Přidat certifikační autoritu SCEP nebo PFX, nebo povolit [služby Telecom Expense Management](telecom-expenses-monitor.md) v profilu.
-
-3. Vyberte **profily** > **vytvořit profil**. Zadejte tyto vlastnosti:
-
-   - **Název**: Zadejte popisný název pro profil.
-   - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platforma**: Zvolte platformu zařízení. Možnosti:  
-
-       - **Android**
-       - **Android Enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 a novější**
-       - **Windows 10 a novější**
-
-   - **Typ profilu**: Vyberte typ nastavení, které chcete vytvořit. V zobrazeném seznamu závisí **platformy** zvolíte:
-
-       - [Šablony pro správu](administrative-templates-windows.md)
-       - [Vlastní](custom-settings-configure.md)
-       - [Optimalizace doručení](delivery-optimization-windows.md)
-       - [Funkce zařízení](device-features-configure.md)
-       - [Omezení zařízení](device-restrictions-configure.md)
-       - [Upgrade a režim přepínač Edition](edition-upgrade-configure-windows-10.md)
-       - [Vzdělávání](education-settings-configure.md)
-       - [E-mailu](email-settings-configure.md)
-       - [Endpoint Protection](endpoint-protection-configure.md)
-       - [Ochrana identit](identity-protection-configure.md)  
-       - [Veřejný terminál](kiosk-settings.md)
-       - [Certifikát PKCS](certficates-pfx-configure.md)
-       - [Certifikát SCEP](certificates-scep-configure.md)
-       - [Důvěryhodný certifikát](certificates-configure.md)
-       - [Aktualizovat zásady](software-updates-ios.md)
-       - [VPN](vpn-settings-configure.md)
-       - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Ochrana ATP v programu Windows Defender](advanced-threat-protection.md)
-       - [Windows Information Protection](windows-information-protection-configure.md)
-
-     Pokud vyberete třeba **iOS** pro platformu, možností typu profilu vypadat podobně jako následující:
-
-     ![Vytvoření profilu iOS v Intune](./media/create-device-profile.png)
-
-4. Vyberte **nastavení**. Nastavení jsou uspořádány podle kategorií. Vyberte kategorii zobrazíte seznam všech nastavení, která můžete konfigurovat.
-
-5. Až budete hotovi, vyberte **OK** > **vytvořit** uložte provedené změny.
-
-#### <a name="refresh-cycle-times"></a>Aktualizovat doby cyklů
-
-Intune používá následující cyklů aktualizace kontrolu aktualizací konfigurace profilů:
-
-| Platforma | Aktualizovat cyklu|
-| --- | --- |
-| iOS | Každých 6 hodin |
-| macOS | Každých 6 hodin |
-| Android | Každých 8 hodin |
-| Počítače s Windows 10 zaregistrované jako zařízení | Každých 8 hodin |
-| Windows Phone | Každých 8 hodin |
-| Windows 8.1 | Každých 8 hodin |
-
-Pokud zařízení zaregistrovalo nedávno, vrácení se změnami se spustí častěji:
-
-| Platforma | Četnost |
-| --- | --- |
-| iOS | Prvních 6 hodin každých 15 minut a potom každých 6 hodin |  
-| Mac OS X | Prvních 6 hodin každých 15 minut a potom každých 6 hodin | 
-| Android | Prvních 15 minut každé 3 minuty, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
-| Windows Phone | Prvních 15 minut každých 5 minut, další 2 hodiny každých 15 minut a potom každých 8 hodin | 
-| Počítače s Windows zaregistrované jako zařízení | Prvních 30 minut každé 3 minuty a potom každých 8 hodin | 
-
-Kdykoli můžete uživatelům otevřete aplikaci portál společnosti a synchronizovat zařízení okamžitě zkontroloval aktualizace profilu.
-
-### 
-Další informace o odlišných typů profilů, přečtěte si další části tohoto článku.
+Tento článek obsahuje přehled různých typů profilů, které lze vytvořit. Povolit nebo zakázat některé funkce na zařízeních, používání těchto profilů.
 
 ## <a name="administrative-templates-preview"></a>Šablony pro správu (Preview)
 
-[Šablony pro správu](administrative-templates-windows.md) zahrnuje stovky nastavení, která můžete nakonfigurovat pro aplikaci Internet Explorer, OneDrive, vzdálené plochy, Word, Excel a jiných aplikacích a spoustu dalších věcí.
+[Šablony pro správu](administrative-templates-windows.md) zahrnují stovky nastavení, která můžete nakonfigurovat pro aplikaci Internet Explorer, OneDrive, vzdálené plochy, Word, Excel a jiných aplikacích.
 
-Tyto šablony správce, kterým poskytuje snadný a zjednodušený přehled nastavení zásad skupiny podobné, ale jsou 100 % založené na cloudu. 
+Tyto šablony správce, kterým poskytuje zjednodušený pohled na nastavení zásad skupiny podobné, ale jsou 100 % založené na cloudu.
 
 Tato funkce podporuje:
 
@@ -202,6 +119,7 @@ K dispozici i jako omezení zařízení pro nastavení celoobrazovkového [Andro
 Tato funkce podporuje: 
 
 - Android
+- Android Enterprise
 - iOS
 - Windows Phone 8.1
 - Windows 10 a novější
@@ -215,6 +133,7 @@ Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdá
 Tato funkce podporuje: 
 
 - Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows Phone 8.1
@@ -228,6 +147,7 @@ Tato funkce podporuje:
 Tato funkce podporuje: 
 
 - Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows 8.1 (pouze import)
@@ -264,11 +184,12 @@ Tato funkce podporuje:
 
 ## <a name="certificates"></a>Certifikáty
 
-[Certifikáty](certificates-configure.md) nakonfiguruje považuje za důvěryhodnou, SCEP a PKCS certifikáty, které je přiřazený k zařízením a používá k ověřování Wi-Fi, VPN a e-mailové profily.
+[Certifikáty](certificates-configure.md) nakonfigurovat důvěryhodné SCEP a PKCS certifikáty, které jsou přiřazeny k zařízení. Tyto certifikáty ověřování Wi-Fi, VPN a e-mailové profily.
 
 Tato funkce podporuje: 
 
 - Android
+- Android Enterprise
 - iOS
 - Windows Phone 8.1
 - Windows 8.1
@@ -284,7 +205,7 @@ Tato funkce podporuje:
 
 ## <a name="shared-multi-user-device"></a>Sdílené zařízení s více uživateli
 
-[Windows 10](shared-user-device-settings-windows.md) a [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) zahrnuje nastavení pro správu zařízení s více uživateli, označované také jako sdílená zařízení nebo sdílené počítače. Když se uživatel přihlásí k zařízení, zvolíte-li uživatel může změnit možnosti Přejít do režimu spánku nebo uložit soubory v zařízení. Například můžete vytvořit profil, který odstraní neaktivní přihlašovacích údajů ze zařízení HoloLens Windows pro úsporu místa.
+[Windows 10](shared-user-device-settings-windows.md) a [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) zahrnuje nastavení pro správu zařízení s více uživateli, označované také jako sdílená zařízení nebo sdílené počítače. Když se uživatel přihlásí k zařízení, zvolíte-li uživatel může změnit možnosti Přejít do režimu spánku nebo uložit soubory v zařízení. Například pro úsporu místa, můžete vytvořit profil, který odstraní neaktivní přihlašovacích údajů ze zařízení s Windows, HoloLens.
 
 Tato nastavení sdílených více uživateli zařízení umožňují správcům řídit některé funkce zařízení a spravovat tyto sdílené zařízení přes Intune.
 
@@ -293,20 +214,29 @@ Tato funkce podporuje:
 - Windows 10 a novější
 - Windows Holographic for Business
 
-## <a name="custom-profile"></a>Profil Vlastní
+## <a name="zebra-mobility-extensions-mx"></a>Zebra Mobility Extensions (MX)
 
-[Vlastní nastavení](custom-settings-configure.md) umožňuje správcům přiřadit nastavení zařízení, která nejsou předdefinovaná v Intune. Například na zařízení s Androidem, můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator. 
+[Zebra Mobility rozšíření (MX)](android-zebra-mx-overview.md) správcům umožňuje použití a správa Zebra zařízení v Intune. Vytváření profilů StageNow s nastavením a pak pomocí Intune můžete přiřadit a tyto profily nasadit do zařízení Zebra. [StageNow běžné problémy a protokolování](android-zebra-mx-logs-troubleshoot.md) je skvělý prostředek pro řešení potíží s profily a podívejte se na některé potenciální problémy při použití StageNow.
 
 Tato funkce podporuje:
 
 - Android
+
+## <a name="custom-profile"></a>Profil Vlastní
+
+[Vlastní nastavení](custom-settings-configure.md) umožňují správcům přiřadit nastavení zařízení, která nejsou součástí Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
+
+Tato funkce podporuje:
+
+- Android
+- Android Enterprise
 - iOS
 - macOS
 - Windows Phone 8.1
 
 ## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
 
-[Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Zobrazením nastavení, která způsobují konflikt, a profilů, které tato nastavení obsahují, si můžete pomoci při řešení konfliktů. [Běžné problémy a řešení](device-profile-troubleshoot.md) poskytuje funkce Q & A usnadňují práci s profily, včetně toho, co se stane po odstranění profilu, která způsobí, že oznámení k odeslání do zařízení a další.
+[Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Také pomoci vyřešit konflikty tím, že zobrazíte nastavení, které způsobují konflikt a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhá správcům práci pomocí profilů. Popisuje, co se stane po odstranění profilu, co způsobí, že oznámení k odeslání do zařízení a další.
 
 ## <a name="next-steps"></a>Další postup
 

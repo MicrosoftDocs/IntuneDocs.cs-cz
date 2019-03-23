@@ -6,24 +6,24 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/06/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 0f8b08f2-504c-4b38-bea2-b8a4ef0526b8
-ms.reviewer: andcerat
+ms.reviewer: demerson
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8e73af9ce317ebda09570c2c18df901529e7749
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5355257792dd8fa0e06d1b0fb4071f5e9e52b5a9
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528322"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394943"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -44,7 +44,7 @@ Existují tři kategorie nastavení zásad: *Přemístění dat*, *požadavky na
 | **Ukládejte si kopie dat organizace** | Vyberte **bloku** zakázat použití *uložit jako* možnost v této aplikaci. Vyberte **povolit** Pokud chcete povolit použití *uložit jako*. <br><br>**Poznámka:** *Toto nastavení je podporováno pro aplikaci Microsoft Excel, OneNote, Outlook, PowerPoint a Word. Podporovat ho můžou i aplikace třetích stran a podnikové aplikace.* <br><br> Pokud je nastavena na *bloku*, můžete nakonfigurovat následující nastavení *povolit uživateli k uložení kopie vybraných služeb*.   | <br><br> **Povoleno**   |
 | <ul><ui> **Uživateli umožňují uložit kopie vybraných služeb** | Uživatelé můžou k ukládání používat vybrané služby (OneDrive pro firmy, SharePoint a místní úložiště). Všechny ostatní služby jsou blokované.| **Vybraná 0**  |
 | **Omezit operace vyjmutí, kopírování a vkládání mezi jinými aplikacemi** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vyberte z těchto možností: <ul><li>**Zablokuje**:  Nepovolit akce vyjmutí, kopírování a vložení mezi touto aplikací a jakoukoli jinou aplikaci.</li><li>**Aplikace spravované podle zásad**: Povolit akce vyjmutí, kopírování a vložení mezi touto a jinými aplikacemi spravovanými zásadami.</li><li>**S vložením spravované podle zásad**: Povoluje vyjmutí a kopírování mezi touto a jinými aplikacemi spravovanými zásadami. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace**: Žádná omezení pro vyjmutí, kopírování a vložení do a z této aplikace.</ul> | **Libovolná aplikace**   |
-
+| **Vyjmutí a kopírování omezení znaků pro libovolnou aplikaci** | Zadejte počet znaků, které mohou být vyjmutých nebo zkopírovaných z dat organizace a účty.  To vám umožní sdílení zadaný počet znaků k jakékoli aplikaci, bez ohledu **omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** nastavení.<p>Výchozí hodnota = 0<p>**Poznámka**: Vyžaduje, aby aplikace měla sadu Intune SDK verze 9.0.14 nebo novější.  | **0**   |
 
 
 ### <a name="encryption"></a>Šifrování

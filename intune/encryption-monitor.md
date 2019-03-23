@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 9ad531f96e1f04a19350418f13e742fa74bace7a
-ms.sourcegitcommit: 768430b5296573c6e007ae4e13d57aeda4be4b7e
+ms.openlocfilehash: 820800deea491c363834a9cafaf077c0992467f6
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306975"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394653"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
@@ -29,10 +29,8 @@ Intune nabízí centralizované umístění k identifikaci stav šifrování za�
 - [Sestavy šifrování (ve verzi Public Preview)](#encryption-report) obsahuje podrobné informace o stavu šifrování a připravenost zařízení. Podrobnosti sestavy můžete identifikovat problémy, které brání v úspěšné šifrování zařízení, která chcete chránit.  
 - [Zobrazit podrobnosti o BitLocker (ve verzi Public Preview)](#bitlocker-recovery-keys) , jako je ID klíče a obnovení klíče pro vaše zařízení z portálu Intune.  
 
-## <a name="encryption-report"></a>Sestava šifrování 
-*Tato funkce je ve verzi Public Preview.*  
-
-Sestava šifrování (ve verzi Public Preview) slouží k zobrazení podrobností o stav šifrování zařízení s Windows 10.  
+## <a name="encryption-report-in-public-preview"></a>Sestava šifrování (ve verzi Public Preview)
+Sestava šifrování (ve verzi Preview stydké) slouží k zobrazení podrobností o stav šifrování zařízení s Windows 10.  
 
 Pokud chcete najít sestavu, přihlaste se k [Intune](https://aka.ms/intuneportal) a přejděte na **konfigurace zařízení**a potom v části *monitorování*vyberte **šifrování sestavu (Preview)**.  
 
@@ -86,10 +84,7 @@ V tomto podokně poskytuje následující podrobnosti:
    - Čip TPM není připraven pro BitLocker.  
    - Síť není k dispozici, které jsou požadovány pro zálohu pro obnovení klíče.  
 
-
-## <a name="bitlocker-recovery-keys"></a>Obnovení klíče Bitlockeru 
-*Tato funkce je ve verzi Public Preview.*  
-
+## <a name="bitlocker-recovery-keys-in-public-preview"></a>Klíče pro obnovení nástroje BitLocker (ve verzi Public Preview)
 Jako verze Public Preview Intune poskytuje přístup okno Azure AD pro nástroj BitLocker, můžete zobrazit ID klíče Bitlockeru a obnovovací klíče pro zařízení s Windows 10 z portálu Intune.  Být přístupné, zařízení musí mít jeho klíče mezi do služby Azure AD. 
 1. Přihlaste se k [Intune](https://aka.ms/intuneportal), přejděte na stránku **zařízení** a potom v části *spravovat*vyberte **všechna zařízení**.
 2. Vyberte zařízení, ze seznamu a pak v části *monitorování*vyberte **obnovovací klíče – ve verzi Preview**.  

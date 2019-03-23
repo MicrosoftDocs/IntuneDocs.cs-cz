@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/14/2018
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ccd9a14c29db5039ce0173d0c09fd3d2851755f3
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4ab0674304f1e74c8bf2ad1aeecd419575484e5f
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566246"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358166"
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
@@ -40,13 +40,10 @@ Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují
 | UserKey |Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč |123 |
 | UserId |Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč. |b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail |E-mailová adresa uživatele |John@constoso.com |
-| HLAVNÍ NÁZEV UŽIVATELE | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
+| userPrincipalName (Hlavní název uživatele) | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
 | displayName |Zobrazované jméno uživatele |Honza |
 | IntuneLicensed |Určuje, jestli tento uživatel má licenci na službu Intune. |True nebo False |
 | IsDeleted | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. |True nebo False |
-| StartDateInclusiveUTC |Pokud IsDeleted = FALSE, použije se DateTime ve standardu UTC, kdy byla uživateli přiřazena licence a začal existovat v Intune. Pokud IsDeleted = TRUE, použije se DateTime ve standardu UTC, kdy uživateli vypršela platnost licencí a byl odebrán z Intune. |23.11.2016 12:00:00 |
-| EndDateExclusiveUTC |Pokud IsDeleted = FALSE, použije se DateTime ve standardu UTC, kdy uživateli vypršela platnost licence a byl odebrán z Intune. Platnost licence vypršela během předchozího dne. Pokud IsDeleted = TRUE, použije se DateTime ve standardu UTC, kdy uživatel znovu získal novou licenci a byl znovu vytvořen v Intune.  |23.11.2016 12:00:00 |
-| IsCurrent |Určuje, zda tento záznam představuje nejnovější stav uživatele. Může existovat více záznamů pro jednoho uživatele, ale pouze jeden z nich představuje aktuální stav.  |True nebo False |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil  |23.11.2016 12:00:00 |
 
 ## <a name="next-steps"></a>Další postup

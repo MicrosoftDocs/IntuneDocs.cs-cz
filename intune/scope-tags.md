@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bca2d52bb47a149c6a36bc1b8cbc4d65e50c0f4c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2ceba92a48f4ae899b5a645137ec0891a7c16659
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756798"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394830"
 ---
 # <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Použití značek RBAC a obor pro distribuované IT
 
@@ -82,6 +82,17 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 
 3. V části **vyberte značky**, zvolte značky, které chcete přidat do profilu.
 4. Zvolte **vyberte** > **OK** > **Uložit**.
+
+## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Přiřadit značky oboru zásady Konfigurace aplikací
+Pro zařízení s **typ registrace zařízení** nastavena na **spravovaných zařízeních**, zvolte **klientské aplikace** > **zásady Konfigurace aplikací** > zvolte zásady Konfigurace aplikací > **vlastnosti** > **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
+
+Pro zařízení s **typ registrace zařízení** nastavena na **spravované aplikace**, zvolte **klientské aplikace** > **zásady Konfigurace aplikací**> zvolte zásady Konfigurace aplikací > **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
+
+
+## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Přiřadit značky oboru zřizovací profil aplikace pro iOS
+1. V Intune, zvolte **klientské aplikace** > **zřizovací profily aplikací pro iOS** > zvolte profil.
+2. Zvolte **vlastnosti** > **obor (značky)** > zvolte značky, které chcete přiřadit k profilu.
+3. Zvolte **vyberte** > **OK** > **Uložit**.
 
 ## <a name="scope-tag-details"></a>Podrobnosti značky oboru
 Při práci s značky oboru, mějte na paměti následující informace:

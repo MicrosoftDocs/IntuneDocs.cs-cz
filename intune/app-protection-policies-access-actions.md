@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 400049bd2637a0e14f5ece4be9d4e40142b0acee
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5b07081ceae3ba07148723490977546fb3edcdd6
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390385"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358205"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -84,6 +84,8 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 -  Minimální verze aplikace
 -  Minimální verze opravy
 -  Výrobci zařízení
+-  V rámci ověření zařízení SafetyNet
+-  Kontrola ohrožení aplikací
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
 Příklad vstupu: *Výrobce A; Výrobce B* 

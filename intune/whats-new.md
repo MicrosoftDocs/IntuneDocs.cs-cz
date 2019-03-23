@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 03/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ad4ac5a2560cf6c3d06354ca8d4e3190f1bf198b
-ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
+ms.openlocfilehash: f7a35104982998c00e0fc653dc04e23051a46dc5
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58343015"
+ms.locfileid: "58394848"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -49,17 +49,109 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 <!-- ########################## -->
 ## <a name="week-of-march-18-2019"></a>Týden od 18. března 2019
 
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="deploy-microsoft-visio-and-microsoft-project----3725386----"></a>Nasazení aplikace Microsoft Visio a Microsoft Project <!-- 3725386  -->
+Teď můžete nasadit aplikaci Microsoft Visio Pro Office 365 a Microsoft Project Online Desktop Client jako aplikace nezávislých na zařízení s Windows 10 pomocí Microsoft Intune, pokud vlastníte příslušné licence pro tyto aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Na **přidat aplikaci** okně vyberte **Windows 10** jako **typ aplikace**. Vyberte **konfiguraci sady aplikací** vybrat aplikace k instalaci. Další informace o aplikacích Office 365 pro zařízení s Windows 10 najdete v tématu [aplikace přiřadit Office 365 na zařízení s Windows 10 pomocí Microsoft Intune](apps-add-office365.md).
+
+#### <a name="microsoft-visio-pro-for-office-365-product-name-change----3593653----"></a>Aplikace Microsoft Visio Pro for Office 365 Změna názvu produktu <!-- 3593653  -->
+**Aplikace Microsoft Visio Pro for Office 365** se teď označuje jako **Microsoft Visio Online Plan 2**.  Další informace o aplikaci Microsoft Visio, naleznete v tématu [Visio Online Plan 2](https://products.office.com/visio/visio-online-plan-2). Další informace o aplikacích Office 365 pro zařízení s Windows 10 najdete v tématu [aplikace přiřadit Office 365 na zařízení s Windows 10 pomocí Microsoft Intune](apps-add-office365.md).
+
+#### <a name="intune-app-protection-policy-app-character-limit-setting----3291302----"></a>Intune app protection (aplikace) znak limit zásad nastavení <!-- 3291302  -->
+Správci Intune můžou určit výjimku pro aplikaci Intune **omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** nastavení zásad.  Jako správce můžete zadat počet znaků, které mohou být vyjmutých nebo zkopírovaných z spravovanou aplikaci. Toto nastavení vám umožní sdílení zadaný počet znaků do žádné aplikace, bez ohledu na to, "omezit vyjmutí, kopírování a vkládání v ostatních aplikacích" nastavení. Upozorňujeme, že verze aplikace portál společnosti Intune pro Android vyžaduje verzi 5.0.4364.0 nebo novější. Další informace najdete v tématu [ochranu dat s Iosem](app-protection-policy-settings-ios.md#data-protection), [ochrany dat pro Android](app-protection-policy-settings-android.md#data-protection), a [kontrola protokolů ochrany aplikace klient](app-protection-policy-settings-log.md#app-protection-policy-settings).
+
+#### <a name="office-deployment-tool-odt-xml-for-office-proplus-deployment----3192477-----"></a>Nástroj pro nasazení Office (ODT) XML pro nasazení Office ProPlus <!-- 3192477   -->
+Budou moci poskytnout nástroj pro nasazení Office (ODT) XML při vytváření instance Office Pro Plus v konzole správce Intune. To vám umožní větší přizpůsobitelnost, pokud existující možnosti uživatelského rozhraní Intune nevyhovují vašim potřebám. Další informace najdete v tématu [aplikace přiřadit Office 365 na zařízení s Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-add-office365) a [možnosti konfigurace pro nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/configuration-options-for-the-office-2016-deployment-tool).
+
+#### <a name="app-icons-will-now-be-displayed-with-an-automatically-generated-background----1429026----"></a>Ikony aplikací se teď budou zobrazovat s automaticky generovaným pozadím <!-- 1429026  -->
+V aplikaci portál společnosti Windows ikony aplikace nyní zobrazí s automaticky generovaným pozadím na základě dominantní barvy ikony (Pokud se dá zjistit). V případě potřeby toto pozadí nahradí šedé ohraničení, která byla dříve vidět na dlaždicích aplikací. Uživatelům se zobrazí tato změna později než 10.3.3451.0 verze portálu společnosti.
+
+#### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment----2751523-----"></a>Instalovat dostupné aplikace pomocí aplikace portál společnosti po Windows hromadný zápis <!-- 2751523   -->
+Zařízení Windows, která zaregistrovaná v Intune pomocí [Windows hromadnou registraci](windows-bulk-enroll.md) (zřizovacích balíčků) budete moct používat aplikaci portál společnosti instalovat aplikace k dispozici. Další informace o aplikaci portál společnosti, naleznete v tématu [ručně přidat portál společnosti pro Windows 10](store-apps-company-portal-app.md) a [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
+
+#### <a name="the-microsoft-teams-app-can-be-selected-as-part-of-the-office-app-suite----3828932----"></a>Aplikace Microsoft Teams lze vybrat jako součást aplikace sady Office <!-- 3828932  -->
+Aplikace Microsoft Teams můžete zahrnuty nebo vyloučeny jako součást instalace sady aplikací Office Pro Plus. Tato funkce funguje pro Office Pro Plus číslo 16.0.11328.20116+ sestavení. Uživatel musí odhlásit a pak se přihlaste k zařízení pro dokončení instalace. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. Vyberte jednu z **sada Office 365** typy aplikací a pak vyberte **konfiguraci sady aplikací**.
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="operational-logs-also-show-details-on-non-compliant-devices----4063755----"></a>Operační protokoly také zobrazit podrobnosti o zařízení nedodržující předpisy <!-- 4063755  -->
+Když směrování Intune přihlásí k funkcím Azure monitor, můžete také směrovat provozní protokoly. V této aktualizaci provozních protokolech také poskytují informace o zařízení nedodržující předpisy. 
+
+Další informace o této funkci najdete v tématu [protokolu odesílání dat do úložiště, služba event hubs nebo log analytics v Intune](review-logs-using-azure-monitor.md).
+
+#### <a name="create-and-use-device-configuration-profiles-on-android-zebra-devices-in-intune----3895244---"></a>Vytváření a používání profilů konfigurace zařízení na zařízeních s Androidem Zebra v Intune <!-- 3895244 -->
+V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Zebra. Konkrétně můžete: 
+
+- Vytvořit profil konfigurace zařízení a použijte nastavení na zařízení s Androidem Zebra pomocí profilů rozšíření Mobility (MX) generovaných StageNow (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Android** pro platformu).
+
+Platí pro:  
+- Android
+
+#### <a name="route-logs-to-azure-monitor-in-more-intune-workloads----3804627---"></a>Směrování protokolů do Azure monitoru v další úlohy Intune <!-- 3804627 -->
+V Intune, můžete směrovat do centra událostí, úložiště, audit a provozní protokoly a protokolovat analytics ve službě Azure Monitor (**Intune** > **monitorování** > **diagnostiky nastavení**). Tato aktualizace může směrovat tyto protokoly ve více úloh Intune, včetně dodržování předpisů, konfigurace, klientské aplikace a další. 
+
+Další informace o směrování protokolů do Azure monitoru, naleznete v tématu [odeslat data protokolů do služby storage, služby event hubs nebo protokolování analytics](review-logs-using-azure-monitor.md).
+
+#### <a name="create-and-use-mobility-extensions-on-android-zebra-devices-in-intune----3305880-----"></a>Vytváření a používání rozšíření nastavení mobilních zařízení na zařízeních s Androidem Zebra v Intune <!-- 3305880   -->
+V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Zebra. Konkrétně můžete vytvořit profil konfigurace zařízení a použít nastavení na zařízení s Androidem Zebra pomocí profilů rozšíření Mobility (MX) generovaných StageNow (**konfigurace zařízení**  >   **Profily** > **vytvořit profil** > **Android** pro platformu > **MX profil (jenom Zebra)** profilu Typ).
+
+Další informace o této funkci najdete v tématu [použití a správa zařízení Zebra pomocí rozšíření nastavení mobilních zařízení v Intune](android-zebra-mx-overview.md).
+
+Platí pro:  
+- Android
+
+### <a name="device-management"></a>Správa zařízení
+
 #### <a name="encryption-report-for-windows-10-devices-in-public-preview---2351538---"></a>Sestava šifrování pro zařízení s Windows 10 (ve verzi public preview)<!-- 2351538 -->  
 
-Pomocí nové [šifrování sestavu (Preview)](encryption-monitor.md#encryption-report) k zobrazení podrobností o stav šifrování zařízení s Windows 10. Dostupné podrobnosti zahrnují verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
+Pomocí nové [šifrování sestavu (Preview)](encryption-monitor.md#encryption-report-&#40;in-public-preview&#41;) k zobrazení podrobností o stav šifrování zařízení s Windows 10. Dostupné podrobnosti zahrnují verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
 
 #### <a name="access-bitlocker-recovery-keys-from-the-intune-portal-in-public-preview----2351547-----"></a>Přístupové klíče pro obnovení Bitlockeru z portálu Intune (ve verzi public preview) <!-- 2351547   -->  
 
-Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md#bitlocker-recovery-keys) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru, ze služby Azure Active Directory.
+Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md#bitlocker-recovery-keys-&#40;in-public-preview&#41;) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru, ze služby Azure Active Directory.
 
 ### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices----3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízení iOS a Androidem <!-- 3411007 -->
 Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení prostředí pro koncové uživatele. Microsoft Edge podnikových funkcí, které jsou povolené prostřednictvím zásad v Intune zahrnují dual-Identity, integraci zásady ochrany aplikací, integrace proxy aplikace Azure a spravovaný Oblíbené položky a zkratky domovské stránky. Další informace najdete v tématu [podpory Microsoft Edge](app-configuration-managed-browser.md#microsoft-edge-support).
 
+#### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices---3105122------"></a>Konektor systému Exchange Online a Intune přestat poskytovat podporu pro pouze zařízení v EAS <!--3105122    -->
+Konzola Intune už podporuje zobrazení a správy EA jen pro zařízení připojené k Exchane Online s Intune Connector. Místo toho máte následující možnosti:
+- Registrace zařízení do správy mobilních zařízení (MDM)
+- Použití zásad ochrany aplikací Intune ke správě svých zařízení
+- Použití ovládacích prvků systému Exchange, jak je uvedeno v [klientů a mobilní zařízení v Exchangi Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online)
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
+[Tenanta stavové stránce](tenant-status.md) teď zobrazuje informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.
+
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+
+#### <a name="granting-intune-read-only-access-to-some-azure-active-directory-roles----3637917----"></a>Udělení Intune přístup pro čtení jenom k několik rolí Azure Active Directory <!-- 3637917  -->
+Následující role Azure AD je udělen přístup jen pro čtení Intune. Oprávnění udělená role Azure AD mají přednost před oprávněním s Intune řízení přístupu na základě role (RBAC).
+
+Číst pouze přístup k datům auditování Intune:
+
+- Správce dodržování předpisů
+- Správce dat dodržování předpisů
+
+Přístup jen ke čtení ke všem datům Intune:
+
+- Správce zabezpečení
+- Operátor zabezpečení
+- Čtenář zabezpečení
+- Globální čtečky
+
+Další informace najdete v tématu [řízení přístupu na základě rolí](role-based-access-control.md).
+
+#### <a name="scope-tags-for-ios-app-provisioning-profiles---2934430-----"></a>Značky oboru pro zřizovací profily aplikací pro iOS <!--2934430   -->
+Značka oboru můžete přidat do zřizovacího profilu aplikace iOS tak, aby pouze uživatelé s rolemi také přiřadit značky oboru mít přístup k zřizovací profil aplikace iOS. Další informace najdete v tématu [značky pomocí RBAC a oboru](scope-tags.md).
+
+#### <a name="scope-tags-for-app-configuration-policies---2371891-----"></a>Značky oboru pro zásady Konfigurace aplikací <!--2371891   -->
+Značka oboru můžete přidat do zásad Konfigurace aplikace tak, aby pouze uživatelé s rolí také přiřadit značky oboru přístupu pro zásady Konfigurace aplikací. Zásady Konfigurace aplikací můžete pouze cílené na nebo přidružené aplikace přiřazené stejné značka oboru. Další informace najdete v tématu [značky pomocí RBAC a oboru](scope-tags.md).
+
+
+<!-- ########################## -->
+>>>>>>> 5e7c086a04b16c159f2ddf9054c8054b4a389872
 ## <a name="week-of-february-25-2019"></a>Týden od 25. února 2019
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -241,25 +333,22 @@ Popisky pro nastavení a tlačítka pro Intune app protection srozumitelnější
 
 Výchozí nastavení a několik položek nastavení zůstávají stejné, ale tato změna umožňuje uživatelům pochopit, navigace a využívat další nastavení snadno a použít zásady ochrany aplikací vybrané. Informace najdete v tématu [nastavení iOS](app-protection-policy-settings-ios.md) a [nastavení Androidu](app-protection-policy-settings-android.md).
 
-#### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
+### <a name="additional-settings-for-outlook----3301182----"></a>Další nastavení pro aplikaci Outlook <!-- 3301182  -->
 Teď můžete nakonfigurovat následující dodatečná nastavení pro aplikaci Outlook pro iOS a Android pomocí Intune:
+
 - Povolte jenom pracovní nebo školní účty, který se má použít v aplikaci Outlook v Iosu a Androidu
 - Nasazení moderní ověřování Office 365 a hybridním moderním ověřováním místních účtů
 - Použití `SAMAccountName` pro pole uživatelské jméno v e-mailový profil, pokud je vybrána základní ověřování
-
-Následující nastavení jsou stále zavádí postupně a brzy bude k dispozici v konzole:
 - Povolit kontakty, které chcete uložit
 - Konfigurace externího příjemce upozornění než odešlete
 - Konfigurace **zaměřuje doručené pošty**
 - Vyžadovat biometrické údaje pro přístup k aplikaci Outlook pro iOS
-
-Nastavení níže se zobrazí v konzole Intune, ale při konfiguraci, nebude fungovat podle očekávání. Tento problém bude opraven brzy:
 - Blokovat externí obrázky
 
 > [!NOTE]
 > Pokud používáte zásady ochrany aplikací Intune pro správu přístupu pro podnikové identity, měli byste zvážit, ne povolení **vyžadují biometrika**. Další informace najdete v tématu **vyžadovat pro přístup podnikové přihlašovací údaje** pro [nastavení přístupu pro iOS](app-protection-policy-settings-ios.md#access-requirements) a [nastavení přístupu pro Android](app-protection-policy-settings-android.md#access-requirements).
 
-Další informace najdete v tématu [nastavení konfigurace aplikace Microsoft Outlook](app-configuration-policies-outlook.md). 
+Další informace najdete v tématu [nastavení konfigurace aplikace Microsoft Outlook](app-configuration-policies-outlook.md).
 
 #### <a name="delete-android-enterprise-apps----1352553---"></a>Odstranění aplikací Androidu Enterprise <!-- 1352553 -->
 Spravované aplikace Google Play můžete odstranit ze služby Microsoft Intune. Pokud chcete odstranit spravovanou aplikaci služby Google Play, otevřete Microsoft Intune v Azure portal a vyberte **klientské aplikace** > **aplikace**. Ze seznamu aplikací vyberte symbol tří teček (...) napravo od spravované aplikace Google Play a potom vyberte **odstranit** ze zobrazeného seznamu. Když odstraníte spravované aplikace Google Play ze seznamu aplikací, je automaticky neschválených spravované aplikace Google Play.
