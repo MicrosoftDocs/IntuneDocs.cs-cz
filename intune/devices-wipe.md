@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0f15eb4aecc1c4c71420df7036a7d143ba298cd
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8d5c26c53e5d1a8e8d0e02a227b84d9e5ebea83c
+ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460883"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58358247"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat prostřednictvím akce **Vyřazení** nebo **Vymazání**. Uživatelé můžou také z Portálu společnosti Intune vydat vzdálený příkaz zařízením v osobním vlastnictví, která jsou registrovaná v Intune.
+Zařízení, která už nepotřebujete, která využíváte k jinému účelu nebo která se ztratila, můžete z Intune odebrat prostřednictvím akce **Vyřazení** nebo **Vymazání**. Uživatele můžete také z aplikace portál společnosti Intune vydat vzdálený příkaz do zařízení, která jsou zaregistrovaná v Intune.
 
 > [!NOTE]
 > Před odebráním uživatele z Azure Active Directory (Azure AD) použijte akce **Vymazání** nebo **Vyřazení** u všech zařízení přidružených k tomuto uživateli. Pokud z Azure AD odeberete uživatele se spravovanými zařízeními, nemůže už Intune tato zařízení vymazat ani vyřadit.
