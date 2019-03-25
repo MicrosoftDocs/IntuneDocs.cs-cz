@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/13/2019
+ms.date: 03/20/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8190365ad2b50dfa7369b8899e8984b6a52f1cba
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7ca34826f3a235fe620b5ac0dcb95d57dabf4c71
+ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566740"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394996"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -29,7 +29,7 @@ Tento článek uvádí a popisuje všechny různých nastaveních, pomocí kter�
 Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune a potom přiřazené nebo nasazené na zařízení s Windows 10.
 
 > [!Note]
-> Některé možnosti nejsou v některých verzích Windows dostupné.
+> Některé možnosti jsou dostupné ve všech edicích systému Windows. Podporované edice zobrazíte najdete [zásad poskytovatele CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider) (otevře jiný web společnosti Microsoft).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -59,12 +59,12 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Zjistitelnost zařízení Bluetooth**: Umožňuje zařízení být zjištěny jinými zařízeními podporujícími technologii Bluetooth.
 - **Párování Bluetooth předem**: Umožňuje konfigurovat automatické párování s hostujícím zařízením určitých zařízení Bluetooth.
 - **Reklama přes Bluetooth**: Umožňuje zařízení přijímat reklamu přes Bluetooth.
-- **Služba připojených zařízení**: Umožňuje zvolit, jestli se má povolit služba připojených zařízení, která umožňuje zjišťování a připojování dalších zařízení Bluetooth.
-- **NFC**: Umožní uživateli povolit a konfigurovat funkce téměř pole komunikace (NFC) na zařízení.
+- **Služba připojených zařízení**: Umožňuje zvolit, aby služba připojených zařízení, která umožňuje zjišťování a připojování dalších zařízení Bluetooth.
+- **NFC**: Umožní uživateli povolit a konfigurovat téměř funkce pole komunikace (NFC) na zařízení.
 - **Wi-Fi**: Umožní uživateli povolit a konfigurovat Wi-Fi na zařízení (jenom Windows 10 Mobile).
 - **Automaticky se připojovat k Wi-Fi hotspotům**: Umožňuje zařízení automaticky se připojovat k volným Wi-Fi hotspotům a automaticky pro připojení přijímat jakékoli podmínky a ujednání.
 - **Ruční konfigurace Wi-Fi**: Určuje, jestli může uživatel nakonfigurovat svoje vlastní Wi-Fi připojení, nebo jestli může použít jenom připojení nakonfigurovaná v rámci profilu Wi-Fi (jenom Windows 10 Mobile).
-- **Interval skenování Wi-Fi**: Určete, jak často zařízení skenují sítě Wi-Fi. Zadejte hodnotu v intervalu 1 (nejčastěji) až 500 (nejméně často).
+- **Interval skenování Wi-Fi**: Zadejte, jak často zařízení skenují sítě Wi-Fi. Zadejte hodnotu od 1 (nejčastěji) na 500 (nejméně často).
 - **Povolené služby Bluetooth**: Zadejte jako hexadecimálních řetězců na seznam povolených služeb a profilů Bluetooth.
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
@@ -116,7 +116,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Snímek obrazovky (jenom mobilní)**: Umožňuje uživateli zachytit obrazovku zařízení v podobě obrázku.
 - **Kopírování a vložení (jenom mobilní verze)**: Povolit kopírování a vkládání mezi aplikacemi na zařízení akce.
 - **Ruční zrušení zápisu**: Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
-  - Nastavení této zásady se neuplatní, pokud je počítač připojený ke službě Azure AD a je povolená automatická registrace. 
+  - Nastavení této zásady neplatí, pokud je počítač připojený k Azure AD a je povolená Automatická registrace. 
   - Nastavení této zásady neplatí pro počítače s Windows 10 Home.
 - **Ruční instalace kořenového certifikátu (jenom mobilní verze)**: Zabrání uživateli v ruční instalaci kořenových certifikátů a zprostředkujících certifikátů CAP.
 
@@ -138,13 +138,12 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Chybový dialog SIM karty (jenom mobilní verze)**: Zablokuje zobrazování na zařízení, pokud se nezjistí žádná SIM karta chybovou zprávu.
 - **Pracovní prostor Ink**: Zablokuje uživatelům možnost přístupu k pracovnímu prostoru ink. **Není nakonfigurováno** zapne tento pracovní prostor a uživatel může používat nad zamykací obrazovkou.
 - **Automatické opětovné nasazení**: Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí **CTRL + Win + R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
-- **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení (jenom Windows Insider)**: Zvolte **vyžadují** tak připojení zařízení k síti před pokračováním stránky sítě během instalace Windows 10. Funkce je sice ve verzi Preview, ale ve Windows Insider sestavení 1809 nebo novějších je toto nastavení povinné.
+- **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení (jenom Windows Insider)**: Zvolte **vyžadují** tak připojení zařízení k síti před pokračováním stránky sítě během instalace Windows 10. Tato funkce je ve verzi preview, sestavení Windows insider 1809 nebo novější je nutné pomocí tohoto nastavení.
 - **Přímý přístup do paměti**: **Blok** brání přímý přístup do paměti (DMA) pro všechny aktivní modulární PCI podřízené porty, dokud se uživatel přihlásí do Windows. **Povolené** (výchozí) umožňuje přístup ke DMA, i v případě, že uživatel není přihlášený.
 
   CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
 - **Ukončit procesy ve Správci úloh**: Toto nastavení určuje, zda nejsou správci, můžete použít Správce úloh na ukončit úlohy. **Blok** brání použití Správce úloh k ukončení procesu nebo úlohy na zařízení uživatele se standardním oprávněním (bez oprávnění správce). **Není nakonfigurováno** (výchozí) umožňuje standardní uživatelé k ukončení procesu nebo úloh pomocí Správce úloh.
-
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
@@ -168,25 +167,25 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 Dostupná nastavení měnit v závislosti na volbách. Možnosti:
 
 - **Ne** (výchozí): Microsoft Edge není spuštěn v režimu veřejného terminálu. Jsou k dispozici můžete změnit a nakonfigurovat všechna nastavení Microsoft Edge.
-- **Digitální/Interaktivní značky (aplikace s jedním veřejný terminál)**: Nastavení Edge filtry, které se dají použít pro digitální/Interaktivní značky Edge celoobrazovkový režim pro použití pouze pro veřejné terminály s Windows 10 jedné aplikace. Toto nastavení chcete otevřít adresy URL zobrazení na celé obrazovce a zobrazit obsah pouze na daném webu. [Nastavit příznaky digitální](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
-- **Procházení se službou inPrivate veřejné (beznabídkového režimu jedné aplikace)**: Nastavení Edge filtry, které lze použít se službou InPrivate veřejné procházení Edge celoobrazovkový režim pro použít na veřejné terminály s Windows 10 jedné aplikace. Běží více karet verze Microsoft Edge.
-- **Normální režim (veřejný terminál s více aplikacemi)**: Nastavení Edge filtry, které se dají použít pro normální Edge beznabídkový režim. Spouští se všemi funkcemi procházení plné verze Microsoft Edge.
-- **Veřejné procházení (veřejný terminál s více aplikacemi)**: Nastavení Edge filtry, které se dají použít pro veřejné procházení na jako veřejný terminál s více aplikacemi Windows 10.  Běží více karet verze InPrivate v Microsoft Edgi.
+- **Digitální/Interaktivní značky (aplikace s jedním veřejný terminál)**: Nastavení Microsoft Edge filtry, které se dají použít pro digitální/Interaktivní značky Microsoft Edge celoobrazovkový režim pro použití pouze pro veřejné terminály s Windows 10 jedné aplikace. Toto nastavení chcete otevřít adresy URL zobrazení na celé obrazovce a zobrazit obsah pouze na daném webu. [Nastavit příznaky digitální](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+- **Procházení se službou inPrivate veřejné (beznabídkového režimu jedné aplikace)**: Nastavení Microsoft Edge filtry, které se dají použít pro InPrivate veřejné procházení Microsoft Edge celoobrazovkový režim pro použití na veřejné terminály s Windows 10 jedné aplikace. Běží více karet verze Microsoft Edge.
+- **Normální režim (veřejný terminál s více aplikacemi)**: Nastavení Microsoft Edge filtry, které se dají použít pro normální Microsoft Edge beznabídkový režim. Spouští se všemi funkcemi procházení plné verze Microsoft Edge.
+- **Veřejné procházení (veřejný terminál s více aplikacemi)**: Nastavení Microsoft Edge filtry, které se dají použít pro veřejné procházení na jako veřejný terminál s více aplikacemi Windows 10.  Běží více karet verze InPrivate v Microsoft Edgi.
 
 > [!TIP]
 > Další informace o těchto možností k čemu najdete v tématu [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
 Tento profil omezení zařízení přímo souvisí s profil beznabídkového režimu vytvoříte pomocí [nastavení beznabídkového režimu Windows](kiosk-settings-windows.md). Shrnutí:
 
-1. Vytvořte [nastavení beznabídkového režimu Windows](kiosk-settings-windows.md) profilu zařízení v beznabídkovém režimu spouštět. Vyberte Microsoft Edge jako aplikace a nastavení celoobrazovkového režimu Edge v profil beznabídkového režimu.
-2. Vytvořit profil omezení zařízení, který je popsaný v tomto článku a konfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge. Zvolte stejný typ režimu veřejného terminálu Edge jako vybrané v profilu aplikace veřejného terminálu ([nastavení beznabídkového režimu Windows](kiosk-settings-windows.md)). 
+1. Vytvořte [nastavení beznabídkového režimu Windows](kiosk-settings-windows.md) profilu zařízení v beznabídkovém režimu spouštět. Vyberte Microsoft Edge jako aplikace a nastavení režimu veřejného terminálu Microsoft Edge v profil beznabídkového režimu.
+2. Vytvořit profil omezení zařízení, který je popsaný v tomto článku a konfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge. Zvolte stejný typ režimu veřejného terminálu Microsoft Edge jako vybrané v profilu aplikace veřejného terminálu ([nastavení beznabídkového režimu Windows](kiosk-settings-windows.md)). 
 
     [Nepodporuje nastavení celoobrazovkového režimu](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-policies-for-kiosk-mode) je skvělý prostředek.
 
 > [!IMPORTANT] 
 > Je potřeba přiřadit tento profil Microsoft Edge pro stejné zařízení jako váš profil beznabídkového režimu ([nastavení beznabídkového režimu Windows](kiosk-settings-windows.md)).
 
-CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
+[ConfigureKioskMode CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-configurekioskmode)
 
 ### <a name="start-experience"></a>Počáteční zkušenosti
 
@@ -204,7 +203,7 @@ CSP: [ConfigureKioskMode](https://docs.microsoft.com/windows/client-management/m
   - **Adresa URL vlastní domovské tlačítko**: Možnost jste vybrali **domácí adresa URL tlačítka** nastavení otevře
   - **Tlačítko Domů skrýt**: Skryje tlačítko Domů
 - **Uživatel může změnit tlačítko Domů**: **Povolit** umožňuje uživatelům změnit domovské tlačítko. Změny uživatele přepsání jakéhokoli nastavení správce na tlačítko Domů. **Není nakonfigurováno** použije výchozí chování operačního systému v zařízení, který může zablokovat uživatelům možnost měnit, jak správce nakonfiguroval tlačítko Domů.
-- **Zobrazit stránku prvního spuštění**: **Blok** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, třeba těm zaregistrovaným v konfiguracích s nulovými emisemi, zablokovat tuto stránku. **Není nakonfigurováno** ukazuje úvodní stránka.
+- **Zobrazit stránku prvního spuštění**: **Blok** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, třeba ty organizace registrovaná v konfiguracích s nulovými emisemi, zablokovat tuto stránku. **Není nakonfigurováno** ukazuje úvodní stránka.
   - **Prostředí URL při prvním spuštění**: Zadejte adresu URL stránky zobrazíte uživatele při prvním spuštění Microsoft Edge (jenom Windows 10 Mobile).
 - **Aktualizujte prohlížeč po nečinnosti**: Zadejte počet nečinných počet minut, než se aktualizují v prohlížeči z 0 – 1 440 minut. Výchozí hodnota je `5` minut. Pokud je nastavena na `0` (nula) v prohlížeči neobnoví po nečinnosti.
 
@@ -331,7 +330,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Phone**: Definujte, jestli tato aplikace může přistupovat k telefonu.
 - **Radiostanice**: Některé aplikace používají bezdrátové (například Bluetooth) pomocí vašeho zařízení odesílat a přijímat data, a potřebují mít možnost vypnout zapnutí nebo vypnutí. Definujte, jestli tato aplikace může tyto moduly používat.
 - **Úlohy**: Definujte, jestli tato aplikace mají přístup k úkolům.
-- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení, což je hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte jako důvěryhodná zařízení. televizory, projektory a tak dále.
+- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení. Důvěryhodná zařízení jsou hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte jako důvěryhodná zařízení. televizory, projektory a tak dále.
 - **Zpětná vazba a Diagnostika**: Definujte, jestli tato aplikace může přístup k diagnostickým informacím.
 - **Synchronizace se zařízeními**: Zvolte, pokud tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, které se explicitně nepárují s zařízení.
 
@@ -352,7 +351,7 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Publikovat aktivity uživatele**: **Blok** zabraňuje sdílení a zjišťování naposledy použitých prostředků v přepínání úloh.
 - **Jen místní aktivity**: **Blok** zabraňuje sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen na základě místní aktivity.
 
-Můžete nakonfigurovat informace, které můžete přístup všechny aplikace na zařízení. Pomocí **výjimek ze zásad ochrany osobních údajů pro jednotlivé aplikace** můžete definovat výjimky.
+Můžete nakonfigurovat informace, které můžete přístup všechny aplikace na zařízení. Navíc definovat výjimky na základě aplikaci pomocí **výjimky ochrany osobních údajů pro jednotlivé aplikace**.
 
 ### <a name="exceptions"></a>Výjimky
 
@@ -371,7 +370,7 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 - **Phone**: Definujte, jestli tato aplikace může přistupovat k telefonu.
 - **Radiostanice**: Některé aplikace používají bezdrátové (například Bluetooth) pomocí vašeho zařízení odesílat a přijímat data, a potřebují mít možnost vypnout zapnutí nebo vypnutí. Definujte, jestli tato aplikace může tyto moduly používat.
 - **Úlohy**: Definujte, jestli tato aplikace mají přístup k úkolům.
-- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení. Důvěryhodná zařízení je hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte. televizory, projektory, a podobně jako důvěryhodná zařízení.
+- **Důvěryhodná zařízení**: Zvolte, pokud tato aplikace může používat důvěryhodná zařízení. Důvěryhodná zařízení jsou hardwaru, který už jste připojili nebo hardware, který je součástí zařízení. Například použijte jako důvěryhodná zařízení. televizory, projektory a tak dále.
 - **Zpětná vazba a Diagnostika**: Zvolte, pokud tuto aplikaci může přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními** – Definujte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se explicitně nepárují s tímto počítačem, tabletem nebo telefonem.
 
@@ -381,7 +380,7 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 - **Promítání na tento počítač**: Zabrání ostatním zařízením hledání počítač pro promítání.
 - **Párování požadovat PIN kód**: Při připojení k promítacímu zařízení požadovat kód PIN.
 
-## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
+## <a name="reporting-and-telemetry"></a>Generování sestav a telemetrie
 
 - **Sdílet data o využití**: Vyberte úroveň diagnostických dat, které je odeslána. Možnosti:
   - Zabezpečení
@@ -393,7 +392,7 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
   - **Odesílala jen data intranetu**: Umožňuje správci posílat intranetový data historie
   - **Odesílala jen internet data**: Umožňuje správci posílat data historie internet
   - **Odesílat intranetové a internetové data**: Umožňuje správci posílat data historie intranetu a Internetu
-- **Proxy server pro telemetrii**: Zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy serveru pro předávání propojených uživatelských prostředí a Telemetrie požadavky, pomocí připojení vrstvy SSL (Secure Sockets). Formát pro toto nastavení je *server*:*port*. Pokud uvedený proxy server selže nebo pokud není k dispozici proxy zadá, když se povolí tyto zásady, data propojených uživatelských prostředí a Telemetrie se neposílají a zůstane na místním zařízení.
+- **Proxy server pro telemetrii**: Zadejte plně kvalifikovaný název domény (FQDN) nebo IP adresu proxy serveru pro předávání propojených uživatelských prostředí a Telemetrie požadavky, pomocí připojení vrstvy SSL (Secure Sockets). Formát pro toto nastavení je *server*:*port*. Pokud uvedený proxy server selže nebo pokud není zadán proxy server, při povolování těchto zásad, data propojených uživatelských prostředí a Telemetrie se neposílají a zůstane na místním zařízení.
 
   Příklady formátů:
 
@@ -467,24 +466,46 @@ Můžete nakonfigurovat informace, které můžete přístup všechny aplikace n
 - **Kontrolovat všechna stahování**: Určuje, jestli bude Defender kontrolovat všechny soubory stahované z internetu.
 - **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: Umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru.
 - **Přístup koncového uživatele k Defenderu**: Určuje, jestli se bude koncovým uživatelům zobrazovat uživatelské rozhraní Windows Defenderu. Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
-- **Interval aktualizace podpisu (v hodinách)**: Zadejte interval, ve kterém bude Defender kontrolovat dostupnost nových souborů signatur.
+- **Interval aktualizace podpisu (v hodinách)**: Zadejte interval, ve kterém bude Defender zkontroluje dostupnost nových souborů signatur.
 - **Monitorovat aktivitu souborů a programů**: Umožňuje Defenderu monitorování aktivity souborů a programů v zařízení.
-- **Počet dní před odstraněním malwaru v karanténě**: Umožňuje programu Defender dál sledovat rozpoznaný malware po vámi určený počet dní, aby bylo možné ručně zkontrolovat dříve zasažená zařízení. Pokud nastavíte počet dnů **0**, malware zůstane ve složce karantény a automaticky se neodebere.
-- **Limit využití procesoru při kontrole**: Umožňuje nastavit maximální procento využití procesoru, které je možné využívat k provádění kontrol (od **1** do **100**).
+- **Počet dní před odstraněním malwaru v karanténě**: Dál sledovat vyřešené problémy s malwarem pro počet dní, které zadáte, abyste mohli ručně zkontrolovat dříve zasažená zařízení. Pokud nastavíte počet dnů **0**, malware zůstane ve složce karantény a automaticky se neodebere.
+- **Limit využití procesoru při kontrole**: Maximální procento využití procesoru, které můžou používat, kontroly z **1** k **100**.
 - **Prohledat archivní soubory**: Umožňuje programu Defender zkontrolovat soubory archivu, jako jsou soubory Zip nebo Cab.
 - **Kontrolovat příchozí e-mailové zprávy**: Umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručování na zařízení.
 - **Během úplné kontroly kontrolovat vyměnitelné jednotky**: Umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB flash disky.
 - **Kontrolovat namapované síťové jednotky během úplného prohledávání**: Umožňuje Defenderu kontrolovat soubory na namapované síťové jednotce.
   Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.
 - **Kontrolovat soubory otevřené ze síťových složek**: Umožňuje Defenderu zkontrolovat soubory na sdílených síťových jednotkách (například soubory se přistupuje pomocí cesty UNC). Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.
-- **Cloudová ochrana**: Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace slouží k budoucímu vylepšování služby.
+- **Cloudová ochrana**: Umožňuje službě Microsoft Active Protection Service povolit nebo blokovat příjem informací o činnosti malwaru ze zařízení, která spravujete. Tyto informace služby zvyšuje v budoucnosti.
 - **Dotázat se uživatele před odesláním vzorku**: Ovládací prvky, zda potenciálně škodlivých souborů, které by mohly vyžadovat další analýzu jsou automaticky odeslány společnosti Microsoft.
-- **Čas k provedení každodenní rychlou kontrolu**: Umožňuje vám naplánovat rychlou kontrolu, ke kterému dochází denně v době, kterou vyberete.
-- **Typ systémové kontroly provádět**: Zadejte úroveň prohledávání, který je spuštěn při naplánovat kontrolu systému.
+- **Čas k provedení každodenní rychlou kontrolu**: Vyberte hodinu spustit denní rychlé prohledávání. **Není nakonfigurováno** každodenní kontrolu se nespustí. Pokud chcete větší míru přizpůsobení, konfigurace **typ systémové kontroly provádět** nastavení.
+
+  [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
+- **Typ systémové kontroly provádět**: Naplánujte úplnou kontrolu, včetně úroveň prohledávání a datum a čas ke spuštění kontroly. Možnosti:
+  - **Není nakonfigurováno**: Nelze naplánovat kontrolu systému na zařízení. Koncovým uživatelům můžete ručně spustit prohledávání jako potřebné nebo požadované na svých zařízeních.
+  - **Zakázat**: Zakáže všechny systémy kontroly na zařízení. Tuto možnost zvolte, pokud používáte partnerského řešení antivirový program, který vyhledá zařízení.
+  - **Rychlá kontrola**: Kontrolují společného místa, kde by mohl být malware zaregistrovaný, jako jsou klíče registru a známé spouštěcí složky Windows.
+    - **Naplánovaný den**: Vyberte den, abyste mohli prohledávání.
+    - **Naplánovaný čas**: Vyberte hodinu k prohledání.
+  - **Úplná kontrola**: Kontrolují místa, běžné tam, kde může být malware zaregistrovaný a také kontroluje všech souborů a složek na zařízení.
+    - **Naplánovaný den**: Vyberte den, abyste mohli prohledávání.
+    - **Naplánovaný čas**: Vyberte hodinu k prohledání.
+
+  Toto nastavení dojít ke konfliktu se **času provádění každodenní rychlou kontrolu** nastavení. Několik doporučení:
+
+  - Spustit denní rychlé prověřování, pokud chcete nakonfigurovat **času provádění každodenní rychlou kontrolu** nastavení.
+  - Spustit denní rychlé prohledávání a úplnou kontrolu každý týden, nakonfigurujte **času provádění každodenní rychlou kontrolu**a nastavte **typ systémové kontroly provádět** na úplné prohledávání se datum a čas.
+  - Nekonfigurujte **času provádění každodenní rychlou kontrolu** nastavení současně s **typ systémové kontroly provádět** nastavena na **Rychlá kontrola**. Tato nastavení dojít ke konfliktu a kontroly se možná nespustí.
+  - Chcete-li spustit rychlé prověřování každé úterý v 6: 00, nakonfigurovat **typ systémové kontroly provádět** nastavení.
+
+  [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
+  [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
+  [Defender/ScheduleScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescantime)
+
 - **Zjišťovat potenciálně nežádoucí aplikace**: Zvolte stupeň ochrany pokud Windows zjistí potenciálně nežádoucí aplikace od:
   - **Blokováno**
   - **Audit** Další informace o potenciálně nežádoucích aplikacích najdete v tématu [detekovat a blokovat potenciálně nežádoucí aplikace](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
-- **Akce ohledně zjištěných malwarových hrozeb**: Tuto možnost použijte, chcete-li zvolit akcí, které má Defender provést na jednotlivých úrovních hrozeb detekuje (nízká, střední, vysoká a vážná). Možnosti:
+- **Akce ohledně zjištěných malwarových hrozeb**: Vyberte akce, které má Defender provést na jednotlivých úrovních hrozeb detekuje: s nízkou, střední, vysoká a závažnost. Možnosti:
   - **Vyčistit**
   - **Karanténa**
   - **Odebrat**
