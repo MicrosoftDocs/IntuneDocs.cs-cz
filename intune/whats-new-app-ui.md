@@ -18,15 +18,15 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a812a0ec11c4e577e2ed0c7e4aeb702601ceeaf
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3e67e9deb77d1f479107c5d3e43cd602ae6eab80
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397470"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429743"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
-Zjistěte, jaké jsme v uživatelském rozhraní aplikací udělali změny, které koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám pomůže při komunikaci s uživateli a aktualizaci vlastní dokumentace, kterou jste vytvořili za účelem podpory vašeho nasazení. Můžete také zjistit, jak lépe řešit problémy uživatelů, když požádají helpdesk o podporu pomocí Portálu společnosti.  
+Další informace, které aktualizace byly provedeny v uživatelském rozhraní (UI) pro aplikace, které vaši koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám umožňují komunikaci s uživateli a aktualizuje všechny vlastní dokumentace jste vytvořili pro podporu svého nasazení. Také pomůže vám pochopit, jak lépe řešit problémy uživatelů se potýkáte když požádají helpdesk o podporu pomocí portálu společnosti.  
 
 Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
 
@@ -34,7 +34,7 @@ Další informace o tom, jak používat aplikaci portál společnosti, najdete v
 
 ## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780 WNready4Review -->  
-Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Další informace o tom, jak aplikace portálu společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
+Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií aplikací, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Další informace o tom, jak aplikace do aplikace portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 
 ![Snímek obrazovky z portál společnosti pro Windows 10, kategorie obrazovky aplikace.](./media/1902_CP_app_categories.png)   
@@ -55,7 +55,7 @@ Správce služby Microsoft Intune může nahrát obrázek vlastní značky, kter
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nové aktualizace uživatelského prostředí na webu portál společnosti <!--2000968 -->  
-Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Oblasti webu – jako třeba podrobnosti o zařízení, váš názor a podpora a přehled zařízení – získaly nový, moderní a živý vzhled. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby tyto změny reflektovala.   
+Na základě zpětné vazby od zákazníků, přidali jsme nové funkce na webu portál společnosti. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Oblasti webu, jako je například Podrobnosti o zařízení, zpětná vazba a podpora a Přehled zařízení, obdrželi nové, moderní a responzivní návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
 
 Mezi nové aktualizace patří:  
 
@@ -75,13 +75,13 @@ Mezi nové aktualizace patří:
 ## <a name="week-of-july-16-2018"></a>Týden od 16. července 2018  
 
 ### <a name="more-opportunities-to-sync-in-the-company-portal-app-for-windows"></a>Další možnosti synchronizace v aplikaci Portál společnosti pro Windows   
-Aplikace Portál společnosti pro Windows teď umožňuje zahájit synchronizaci přímo z hlavního panelu Windows a z nabídky Start. Tato funkce je užitečná hlavně v případě, že vaším jediným úkolem je synchronizace zařízení a získání přístupu k podnikovým prostředkům. Pokud chcete tuto novou funkci použít, klikněte pravým tlačítkem na ikonu Portál společnosti, která je připnutá na hlavní panel nebo v nabídce Start. V možnostech nabídky (označuje se také jako seznam odkazů) vyberte **Synchronizovat toto zařízení**. V aplikaci Portál společnosti se otevře stránka **Nastavení** a zahájí se synchronizace.  
+Aplikace Portál společnosti pro Windows teď umožňuje zahájit synchronizaci přímo z hlavního panelu Windows a z nabídky Start. Tato funkce je užitečná hlavně v případě, že vaším jediným úkolem je synchronizace zařízení a získání přístupu k podnikovým prostředkům. Chcete-li použít novou funkci, klikněte pravým tlačítkem na firemním portálu ikonu připnutý na hlavním panelu nebo **Start** nabídky. V možnostech nabídky (označuje se také jako seznam odkazů) vyberte **Synchronizovat toto zařízení**. V aplikaci Portál společnosti se otevře stránka **Nastavení** a zahájí se synchronizace.  
 
 ![Snímek obrazovky s hlavním panelem Windows na ploše zařízení. Po kliknutí na ikonu aplikace Portál společnosti se zobrazila nabídka s možnostmi Připnout na hlavní panel, Zavřít okno a Synchronizovat toto zařízení.](./media/sync-device-from-start-menu-1807.png)  
 
 ### <a name="new-browsing-experiences-in-the-company-portal-app-for-windows"></a>Nové možnosti procházení v aplikaci Portál společnosti pro Windows  
 
-Při procházení nebo hledání aplikací v aplikaci Portál společnosti pro Windows teď můžete přepínat mezi stávajícím zobrazením **dlaždic** a nově přidaným zobrazením **podrobností**. Toto nové zobrazení obsahuje podrobnosti aplikace, například název, vydavatele, datum publikování a stav instalace.  
+Nyní při procházení nebo vyhledávání pro aplikace v aplikaci portál společnosti pro Windows, můžete přepínat mezi stávající **dlaždice** zobrazení a nové **podrobnosti** zobrazení. Toto nové zobrazení uvádí podrobnosti o aplikaci, jako je například název, vydavatele, datum publikování a stav instalace.  
 
 Na stránce **Aplikace** si v zobrazení **Nainstalované** můžete prohlédnout podrobnosti o dokončených a probíhajících instalacích aplikací.  
 

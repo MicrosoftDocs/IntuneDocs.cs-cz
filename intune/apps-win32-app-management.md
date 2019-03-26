@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 03/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75137c4a9f58e1b851435cd7319d84a47478b8af
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 51a2f862a53476a825bfb1a61a6f115c883eba18
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991172"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429722"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -118,9 +118,9 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 2.  Přidejte příkazový řádek pro dokončení aplikace, abyste mohli nainstalovat aplikaci. 
 
     Například, pokud je vaše aplikace filename **MyApp123**, přidejte následující:<br>
-    `msiexec /i “MyApp123.msi”`<p>
-    A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argruments příkazu (přepínače) podporované tímto balíčkem. Například:<br>
-    'ApplicationName.exe /quite'<br>
+    `msiexec /p “MyApp123.msp”`<p>
+    A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argruments příkazu (přepínače) podporované tímto balíčkem. <br>Příklad:<br>
+    `ApplicationName.exe /quite`<br>
     Ve výše uvedeném příkazu `ApplicaitonName.exe` balíček podporuje `/quite` argrument příkazu.<p> Pro konkrétní agruments podporovaný balíček aplikace obraťte se na dodavatele aplikace.
 
 3.  Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 

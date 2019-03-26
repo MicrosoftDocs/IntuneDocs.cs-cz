@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f7a35104982998c00e0fc653dc04e23051a46dc5
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: d73d96d2246c89e014bd75f9b3b48493d3ac11fb
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394848"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429768"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -103,14 +103,12 @@ Platí pro:
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="encryption-report-for-windows-10-devices-in-public-preview---2351538---"></a>Sestava šifrování pro zařízení s Windows 10 (ve verzi public preview)<!-- 2351538 -->  
-
-Pomocí nové [šifrování sestavu (Preview)](encryption-monitor.md#encryption-report-&#40;in-public-preview&#41;) k zobrazení podrobností o stav šifrování zařízení s Windows 10. Dostupné podrobnosti zahrnují verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
+Pomocí nové [šifrování sestavu (Preview)](encryption-monitor.md) k zobrazení podrobností o stav šifrování zařízení s Windows 10. Dostupné podrobnosti zahrnují verze čipu TPM zařízení, šifrování připravenost a stav, chybách a další.  
 
 #### <a name="access-bitlocker-recovery-keys-from-the-intune-portal-in-public-preview----2351547-----"></a>Přístupové klíče pro obnovení Bitlockeru z portálu Intune (ve verzi public preview) <!-- 2351547   -->  
+Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru, ze služby Azure Active Directory.
 
-Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md#bitlocker-recovery-keys-&#40;in-public-preview&#41;) o ID klíče Bitlockeru a klíče pro obnovení Bitlockeru, ze služby Azure Active Directory.
-
-### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices----3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízení iOS a Androidem <!-- 3411007 -->
+#### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices----3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízení iOS a Androidem <!-- 3411007 -->
 Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení prostředí pro koncové uživatele. Microsoft Edge podnikových funkcí, které jsou povolené prostřednictvím zásad v Intune zahrnují dual-Identity, integraci zásady ochrany aplikací, integrace proxy aplikace Azure a spravovaný Oblíbené položky a zkratky domovské stránky. Další informace najdete v tématu [podpory Microsoft Edge](app-configuration-managed-browser.md#microsoft-edge-support).
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices---3105122------"></a>Konektor systému Exchange Online a Intune přestat poskytovat podporu pro pouze zařízení v EAS <!--3105122    -->
@@ -149,9 +147,9 @@ Značka oboru můžete přidat do zřizovacího profilu aplikace iOS tak, aby po
 #### <a name="scope-tags-for-app-configuration-policies---2371891-----"></a>Značky oboru pro zásady Konfigurace aplikací <!--2371891   -->
 Značka oboru můžete přidat do zásad Konfigurace aplikace tak, aby pouze uživatelé s rolí také přiřadit značky oboru přístupu pro zásady Konfigurace aplikací. Zásady Konfigurace aplikací můžete pouze cílené na nebo přidružené aplikace přiřazené stejné značka oboru. Další informace najdete v tématu [značky pomocí RBAC a oboru](scope-tags.md).
 
+### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices----3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízení iOS a Androidem <!-- 3411007 -->
+Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení prostředí pro koncové uživatele. Microsoft Edge podnikových funkcí, které jsou povolené prostřednictvím zásad v Intune zahrnují dual-Identity, integraci zásady ochrany aplikací, integrace proxy aplikace Azure a spravovaný Oblíbené položky a zkratky domovské stránky. Další informace najdete v tématu [podpory Microsoft Edge](app-configuration-managed-browser.md#microsoft-edge-support).
 
-<!-- ########################## -->
->>>>>>> 5e7c086a04b16c159f2ddf9054c8054b4a389872
 ## <a name="week-of-february-25-2019"></a>Týden od 25. února 2019
 
 ### <a name="device-configuration"></a>Konfigurace zařízení

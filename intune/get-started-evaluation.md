@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34d1cbe969b8e186d9e067660237da9c4ca88fb8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 313e4ccf0e96536b3e99edb968298e4cc3343aa1
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396214"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429729"
 ---
 # <a name="what-can-intune-do-for-my-company"></a>Jaké přínosy má Intune pro moji firmu?
 Microsoft Intune je cloudová služba pro správu mobility velkých organizací (EMM), která pomáhá tomu, aby vaši pracovníci byli produktivní, a současně chrání vaše firemní data.
@@ -46,17 +46,17 @@ Intune vám umožňuje:
 
 ## <a name="quickstarts"></a>Šablony Rychlý start
 
-Chápeme, že začátky související se správou mobilních zařízení můžou být obtížné, protože za svou firmu musíte udělat spoustu různých rozhodnutí. Následující rychlé starty vám pomůžou začít pracovat s Intune a provádět některé běžné úlohy v co nejkratším čase.
+Chápeme, získávání Začínáme správu mobilních zařízení může být obtížné. Existují spoustu různých rozhodnutí, kterým je třeba provést za svou firmu. V následujících rychlých startech nápovědy, které vám pomůžou začít s Intune a provádět některé běžné úlohy v co nejkratším čase.
 
-Pomocí obsahu na levé straně této stránky můžete postupovat v zamýšleném pořadí **rychlých startů**.
+Můžete postupovat zamýšleném pořadí podle **rychlých startů** pomocí obsahu na levé straně této stránky.
 
 - [Bezplatné vyzkoušení Intune](free-trial-sign-up.md) – vytvořte si bezplatné předplatné, abyste mohli vyzkoušet Intune v testovacím prostředí.    
 - [Vytvoření uživatele](quickstart-create-user.md) – přidáním uživatele do Intune mu povolíte přístup k firemním prostředkům na mobilních zařízeních.
-- [Vytvoření skupiny](quickstart-create-group.md) – když uživatele uspořádáte do skupin, usnadníte si správu zásad a aplikací, ke kterým mají přístup.
-- [Nastavení automatické registrace](quickstart-setup-auto-enrollment.md) – nastavte automatickou registraci zařízení v Microsoft Intune, když se konkrétní uživatelé přihlásí k zařízením s Windows 10.
-- [Registrace zařízení](quickstart-enroll-windows-device.md) – převezměte roli uživatele Intune a zaregistrujte své zařízení v Microsoft Intune. Pak se vraťte do Intune a toto zaregistrované zařízení potvrďte.
+- [Vytvořte skupinu](quickstart-create-group.md) – když uživatele uspořádáte do skupin, aby bylo snazší spravovat zásady a aplikace bude mít přístup k.
+- [Nastavení automatické registrace](quickstart-setup-auto-enrollment.md) – nastavení Intune automaticky registrovat zařízení, když konkrétní uživatelé přihlásí k zařízení s Windows 10.
+- [Registrace zařízení](quickstart-enroll-windows-device.md) – přepněte tuto roli uživatele Intune a zaregistrovali své zařízení do Intune. Poté vraťte se do Intune a potvrďte, že zařízení úspěšně zaregistrované.
 - [Vytvoření zásady dodržování předpisů pro zařízení](quickstart-set-password-length-android.md) – vytvořte zásadu dodržování předpisů pro zařízení a pak k ní přiřaďte některou skupinu.
-- [Odeslání oznámení zařízením nedodržujícím předpisy](quickstart-send-notification.md) – vytvořením a přiřazením zásady dodržování předpisů odešlete e-mailové oznámení zaměstnancům, jejichž zařízení nedodržují předpisy.
+- [Odesílání oznámení do zařízení nedodržující předpisy](quickstart-send-notification.md) – poslat oznámení e-mailem členům vaši pracovníci, kteří mají neodpovídající zařízení podle vytvářet a přiřazovat zásady dodržování předpisů.
 - [Přidání a přiřazení aplikace](quickstart-add-assign-app.md) – přidejte a přiřaďte svým zaměstnancům klientskou aplikaci.
 - [Vytvoření a přiřazení zásady ochrany aplikací](quickstart-create-assign-app-policy.md) – vytvořte a přiřaďte zásadu ochrany aplikací ke klientské aplikaci na zařízení koncového uživatele.
 - [Vytvoření a přiřazení vlastní role](quickstart-create-custom-role.md) – vytvořte a přiřaďte vlastní roli se specifickými oprávněními pro oddělení operací zabezpečení. 
@@ -64,13 +64,13 @@ Pomocí obsahu na levé straně této stránky můžete postupovat v zamýšlen�
 
 ## <a name="prerequisites"></a>Požadavky
 
-Než začnete, musíte mít aktivovaný účet správce Intune a účet tenanta. Vytvořte si bezplatné předplatné, abyste mohli [bezplatně vyzkoušet Intune](free-trial-sign-up.md) v testovacím prostředí. Stávající odběratelé také mohou k těmto činnostem použít živého tenanta. Tyto články ze sekce Začínáme předpokládají, že pracujete na testovacích zařízeních.
+Než začnete, musíte mít Intune správce a tenanta účet aktivovat. Vytvořte si bezplatné předplatné, abyste mohli [bezplatně vyzkoušet Intune](free-trial-sign-up.md) v testovacím prostředí. Aktuální předplatitelé můžete také provádět tyto aktivity v rámci jejich tenanta za provozu. Tyto články Začínáme předpokládají, že pracujete na testovacích zařízeních.
 
 Abyste mohli všechny tyto úlohy Začínáme dokončit, musíte být globálními správci své organizace.
 
 ## <a name="intune-architecture"></a>Architektura Intune
 
-Intune je součást řešení Enterprise Mobility + Security (EMS), která slouží ke správě mobilních zařízení a aplikací. Úzce se integruje s jinými součástmi řešení EMS, jako je Azure Active Directory (Azure AD) pro účely řízení přístupu a identit, a Azure Information Protection pro účely ochrany dat. Při použití v kombinaci s Office 365 vašim pracovníkům umožňuje, aby byli produktivní na všech zařízeních, a současně chrání informace vaší organizace.
+Intune je součást řešení Enterprise Mobility + Security (EMS), která slouží ke správě mobilních zařízení a aplikací. Úzce se integruje s jinými součástmi řešení EMS, jako je Azure Active Directory (Azure AD) pro účely řízení přístupu a identit, a Azure Information Protection pro účely ochrany dat. Když ji použijete s Office 365, můžete povolit vaši pracovníci byli produktivní na všech zařízeních a současně chrání informace vaší organizace.
 
 ![Diagram architektury vysoké úrovně pro Microsoft Intune](/intune/media/intunearchitecture.svg)
 

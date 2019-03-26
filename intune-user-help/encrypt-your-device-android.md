@@ -1,11 +1,11 @@
 ---
-title: Jak chránit zařízení s Androidem pomocí šifrování | Dokumentace Microsoftu
-description: Postup při registraci zařízení s Androidem
+title: Šifrování zařízení s Androidem pro portál společnosti Intune | Dokumentace Microsoftu
+description: Postup zapnutí šifrování zařízení na zařízení s Androidem
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 03/22/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,31 +18,45 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 115025d60038daea6f43c97cbdc03a20d5b0bf59
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9ad953049b9d2efd6f7a828ee70b5e1cede4ee68
+ms.sourcegitcommit: d0749cbc68df41893742f5187ac378a5ade824f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55838168"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58406251"
 ---
-# <a name="how-to-protect-your-android-device-using-encryption"></a>Jak chránit zařízení s Androidem pomocí šifrování
+# <a name="encrypt-your-android-device"></a>Šifrování zařízení s Androidem
 
-Při šifrování zařízení balíte informace v zařízení do vrstvy ochranného kódu, který brání neoprávněným osobám v přístupu k nim. Jako další krok k zabezpečení vašich informací vyžaduje vaše organizace, abyste si zašifrovali zařízení s Androidem. Teprve pak budete mít přístup k firemním souborům, e-mailu nebo datům.
+Šifrování zařízení chrání své soubory a složky před neoprávněným přístupem, pokud dojde ke ztrátě nebo odcizení zařízení. Po zapnutí šifrování zařízení pouze uživatelé, kteří mají správné heslo nebo PIN kód bude moct přihlásit k zařízení. 
+
+Pro přístup k pracovním nebo školním prostředkům, vaše organizace může vyžadovat šifrování zařízení s Androidem. Některé novější zařízení s Androidem se šifrují ve výchozím nastavení, out-of-the-box.  
+
+Pokud se zobrazí zpráva v aplikaci portál společnosti, které potřebujete k zašifrování zařízení, proveďte následující kroky. 
 
 > [!Note]
-> Určitá zařízení Android, včetně některých od výrobce Huawei, Vivo a OPPO, nelze zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).
+> Některá zařízení s Androidem od Huawei Vivo a OPPO nelze zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
+1.  Nastavte zámek obrazovky zařízení.  
+    a. Přejděte na **nastavení** > **zamykací obrazovka a zabezpečení** > **typ zámku obrazovky**.  
+    b. Vyberte buď **PIN**, **heslo**, nebo **vzor**.  
+    c. Postupujte podle pokynů na obrazovce konfigurace svůj zámek obrazovky.  
 
-1.  Zkontrolujte, že je pro vaše zařízení nastavený kód PIN nebo heslo zamykací obrazovky.
+2. Přejděte zpět na **zamykací obrazovka a zabezpečení** a vyberte **zabezpečené spuštění**.
+3. Zvolte **vyžadovat PIN, když zařízení Zapne** > **OK**.
+4. Zadejte svůj PIN kód k potvrzení a k šifrování zařízení.
+5. Otevřete aplikaci portál společnosti, vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**.  
 
-2.  V **Nastavení** zvolte **Zabezpečení** > **Šifrovat zařízení**.
-    (Na některých telefonech budete muset najít možnost šifrování tak, že zvolíte **Úložiště** > **Šifrování úložiště** nebo **Úložiště** > **Zamykací obrazovka a zabezpečení** > **Další nastavení zabezpečení**.)
+Pravděpodobně nemáte zařízení s Androidem 4.4 nebo starší **zabezpečené spuštění** možnost. V takovém případě proveďte následující kroky k zašifrování zařízení.
 
-3.  Postupujte podle pokynů na obrazovce. Během šifrování se zařízení může několikrát restartovat.
+1. Přejděte na **nastavení** > **zabezpečení** > **šifrování zařízení**. Na obrazovce popisky se liší mezi zařízení s Androidem. Pokud se nezobrazí **šifrování zařízení** možnost, vrátit se změnami:
+    * **Úložiště** > **šifrování úložiště**
+    * **Úložiště** > **zamykací obrazovka a zabezpečení** > **další nastavení zabezpečení** 
 
-### <a name="what-to-do-if-you-have-issues"></a>Co dělat v případě problémů
-**Problém**: Vaše zařízení jste už zašifrovali a se zobrazí jedna z následujících akcí:
+2. Postupujte podle pokynů na obrazovce. Během šifrování se může několikrát restartovat zařízení.
+3. Otevřete aplikaci portál společnosti, vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**.  
+
+## <a name="troubleshoot"></a>Řešení potíží  
+**Problém**: Jste už zašifrovali zařízení a
 
 - Tlačítko pro šifrování je zakázané.
 - Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
@@ -50,20 +64,7 @@ Pokud byste zrušili registraci telefonu, zůstane zašifrovaný.
 
 **Možná řešení**
 
-- Ujistěte se, že je zařízení nabité a připojené k nabíječce.
-- Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.
-- Pokud jste na zařízení nastavili PIN nebo heslo, vyzkoušejte následující postup, který může firemní podpora vyžadovat kvůli většímu zabezpečení zařízení. Zobrazované názvy nabídek se mohou mírně lišit od názvů nabídek uvedených v postupech podle toho, jaký máte typ zařízení s Androidem.
+- Ujistěte se, že je zařízení nabité a připojené k nabíječce.  
+- Zkontrolujte, že jste na zařízení nastavili PIN kód nebo heslo.  
 
-    1. Přejděte na **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zámek obrazovky**. Potvrďte aktuální PIN kód nebo heslo.
-
-    2. Na obrazovce **Vyberte zámek obrazovky** vyberte typ zámku obrazovky, který chcete použít. 
-
-    3. Po zvolení zámku obrazovky se vraťte na obrazovku **Zamykací obrazovka a zabezpečení** a vyberte **Zabezpečené spuštění**. 
-    
-    4. Na obrazovce **Zabezpečené spuštění** klepněte na **Ke spuštění zařízení požadovat kód PIN** a pak na **Pokračovat**.
-
-    5. Zvolte kód PIN (můžete zadat stejný jako ten, který jste zadali dříve) a klepněte na **Potvrďte kód PIN**.
-
-    6. Otevřete Portál společnosti, vyberte své zařízení a klepněte na možnost **Kontrola dodržování předpisů**.
-
-Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with encryption on my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

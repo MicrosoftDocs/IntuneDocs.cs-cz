@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5612ae0ea6c1495fdf12e85bbed80e54bc3f287f
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: a34cf1ec89165821e853b00be1fd8c83717767e2
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394639"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429670"
 ---
 # <a name="in-development-for-microsoft-intune---march-2019"></a>Při vývoji pro Microsoft Intune – březen 2019
 
@@ -57,19 +57,40 @@ Budete moct přidat značku oboru pro zásady Konfigurace aplikací tak, aby pou
 Profily Autopilotu budete moct přiřadit virtuální skupině Všechna zařízení. Uděláte to tak, že vyberete **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil > **Přiřazení** > v části **Přiřadit k** vyberte **Všechna zařízení**. Další informace o profilech Autopilotu najdete v článku [Registrace zařízení s Windows pomocí Windows Autopilotu](enrollment-autopilot.md).
 
 ###  <a name="block-users-from-scanning-for-windows-updates-------3316758------"></a>Zablokovat uživatelům hledání aktualizací Windows    <!-- 3316758    -->
-Přidáváme nové Windows aktualizační kanál nastavení, které můžete použít, který se zablokuje uživatelům možnost skenování pro aktualizace Windows. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
+Přidáváme nové nastavení Windows update kanál, který vám pomůže se zablokuje uživatelům možnost skenování pro aktualizace Windows. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
 
 ### <a name="windows-update-notifications-----3316782---"></a>Oznámení o aktualizaci Windows  <!-- 3316782 -->
-Konfigurace aktualizačního kanálu Windows Update Doplňujeme podporu, takže budete moci konfigurovat oznámení o aktualizaci Windows, které se uživatelům zobrazí. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
+Konfigurace aktualizačního kanálu Windows Update Doplňujeme podporu, takže budete moci konfigurovat oznámení o aktualizacích Windows, které se uživatelům zobrazí. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
 
 ### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 -->  
-Portál společnosti pro iOS budou aktualizace obrazovek registrace aplikace a postupy, které bylo v souladu s MDM změny registrace v Apple iOS 12.2. Aktualizovaný pracovní postup bude nyní vyzvat uživatele, aby:
+Portál společnosti pro iOS se aktualizuje obrazovky registrace aplikace a postupy, které bylo v souladu s MDM změny registrace v Apple iOS 12.2. Aktualizovaný pracovní postup bude nyní vyzvat uživatele, aby:
 
-- Povolit Safari otevřít na webu portál společnosti (přes Safari) a stáhněte profil správy před návratem do aplikace portál společnosti. 
+- Povolit Safari otevřít na webu portál společnosti (přes Safari) a stáhněte profil správy před návratem do aplikace portál společnosti.
 - Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.
-- Vraťte se do aplikace portál společnosti, aby prošel registrací.  
+- Vraťte se do aplikace portál společnosti, aby prošel registrací.
 
 Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentu za provozu. 
+
+### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
+Na stránce Stav Tenanta se zobrazí informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.
+
+### <a name="granting-intune-read-only-access-to-some-azure-active-directory-roles----3637917---"></a>Udělení Intune přístup pro čtení jenom k několik rolí Azure Active Directory <!-- 3637917 -->
+Jsme budete udělení, že Intune přístup pro čtení jenom k následující role Azure AD. Oprávnění udělená role Azure AD mají přednost před oprávněním s Intune řízení přístupu na základě role (RBAC).
+
+Číst pouze přístup k datům auditování Intune:
+
+- Správce dodržování předpisů
+- Správce dat dodržování předpisů
+
+Přístup jen ke čtení ke všem datům Intune:
+
+- Správce zabezpečení
+- Operátor zabezpečení
+- Čtenář zabezpečení
+- Globální čtečky
+
+### <a name="easier-access-to-diagnostic-settings------3804627-----"></a>Jednodušší přístup k nastavení diagnostiky   <!-- 3804627   -->
+Přidáváme novou možnost, jak **protokoly auditu** okno v každé úloze protokolu auditu v konzole Intune, který vám umožní otevřít přímo *nastavení diagnostiky* stránky.
 
 ### <a name="create-and-use-device-configuration-profiles-on-android-zebra-devices-in-intune----3895244----"></a>Vytváření a používání profilů konfigurace zařízení na zařízeních s Androidem Zebra v Intune <!-- 3895244  -->
 Intune bude podporovat konfiguraci zařízení s Androidem Zebra. Konkrétně budete moci: 

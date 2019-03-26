@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4610f99d9190ddad01ab604195e086e407e7161a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566314"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429750"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -108,7 +108,7 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
   >   - [Přidat jako klientskou aplikaci](apps-add-android-for-work.md) v Intune
   >   - [Přiřazené ke skupině zařízení](apps-deploy.md) vytvořené pro vyhrazená zařízení
   > 
-  > **Spravované domovskou obrazovku** aplikace nemusí být v profilu konfigurace, ale je potřeba přidat jako klientská aplikace. Když **spravované domovskou obrazovku** aplikace se přidá jako klientskou aplikaci, všechny ostatní aplikace, které přidáte do configiration profilu se zobrazují jako ikony na **spravované domovskou obrazovku** aplikace. 
+  > **Spravované domovskou obrazovku** aplikace nemusí být v profilu konfigurace, ale je potřeba přidat jako klientská aplikace. Když **spravované domovskou obrazovku** aplikace se přidá jako klientskou aplikaci, všechny ostatní aplikace, které přidáte do konfiguračního profilu se zobrazují jako ikony na **spravované domovskou obrazovku** aplikace. 
 
   - Zvolte **přidat**a vyberte ze seznamu aplikací.
 

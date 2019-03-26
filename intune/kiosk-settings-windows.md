@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e83e371f5c3d1690cc50c6b250db8a2c3251b48
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 55a0cb45cd3e3a8e367b0bff7bd8e856b02af953
+ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394950"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58429687"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows 10 a novější zařízení nastavení pro spuštění jako veřejný terminál v Intune
 
@@ -176,6 +176,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
       Vyberte **OK** uložte provedené změny.
 
+    - **Automatickým spouštěním**: Volitelné. Zvolte aplikaci k automatickým spouštěním, když se uživatel přihlásí. AutoLaunched může být pouze jednu aplikaci.
     - **Dlaždici velikost**: Povinný parametr. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
 
   > [!TIP]
