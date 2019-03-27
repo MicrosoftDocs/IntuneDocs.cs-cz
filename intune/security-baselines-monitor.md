@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8e5c8996aecb11666fca13c6e032ccad1a1e0a7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0bd6e7f37a2e3b10371dead97e849834b39ba06f
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397963"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490572"
 ---
 # <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilu v Microsoft Intune
 
@@ -50,6 +50,9 @@ Když monitorujete směrný plán, získejte přehled o stavu zabezpečení vaš
     - **Neodpovídá směrného plánu**: Alespoň jedno nastavení ve směrném plánu neodpovídá doporučené nastavení.
     - **Chybně nakonfigurovaný**: Alespoň jedno nastavení není správně nakonfigurována. Tento stav znamená, že toto nastavení je v konfliktu, chyby nebo stavu čekající na vyřízení.
     - **Není k dispozici**: Alespoň jedno nastavení nelze použít a nebude použita.
+    
+> [!NOTE]
+> Pokud zařízení obsahuje nastavení ve více státech, označí se zařízení podle následujícího pořadí priorit: **Chybně nakonfigurovaný**, **neodpovídá směrného plánu**, **není k dispozici**, **směrného plánu odpovídá**.
 
 4. Vyberte jednu z stavy, které se mají zařízení. Vyberte například **Misconfigured** stav.
 

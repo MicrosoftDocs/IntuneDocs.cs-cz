@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffcec5adb5a57309ca2eb47291fa35acf98f6e94
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: aa2734247569245794bce7fe1de68c8b20c6091f
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58395256"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490600"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Použití a správa zařízení Zebra s příponami Zebra nastavení mobilních zařízení v Microsoft Intune
 
@@ -107,6 +107,13 @@ Když vytvoříte profil v StageNow, v posledním kroku, vyberte **exportovat do
 > Doporučuje se test profil předtím, než ho nasadíte do zařízení ve vaší organizaci. K otestování v posledním kroku při vytváření profilů s StageNow v počítači, použijte **testování** možnosti. Potom využívání souboru generované StageNow s StageNow aplikací na zařízení. 
 > 
 > StageNow aplikace na zařízení zobrazí protokoly generované při testování profilu. [Použití StageNow přihlášení Zebra zařízení s Androidem v Intune](android-zebra-mx-logs-troubleshoot.md) obsahuje informace o použití StageNow protokoly o chybách.
+
+> [!NOTE]
+> Je-li odkazovat na aplikace, balíčky aktualizací nebo aktualizovat ostatní soubory ve vašem profilu StageNow chcete zařízení a získat tyto aktualizace. Můžou získat aktualizace, musí zařízení připojit k serveru StageNow nasazení, když se profil použije. 
+> 
+> Nebo můžete použít integrované funkce v Intune k získání těchto změn, včetně: 
+> - Funkce správy aplikací k [přidat](apps-add.md), [nasazení](apps-deploy.md), aktualizovat, a [monitorování](apps-monitor.md) aplikace.
+> - Správa [aktualizace systému a aplikací](device-restrictions-android-for-work.md#device-owner-only) na zařízeních s Androidem Enterprise
 
 Po otestování soubor, dalším krokem je nasazení profilu na zařízení pomocí Intune.
 

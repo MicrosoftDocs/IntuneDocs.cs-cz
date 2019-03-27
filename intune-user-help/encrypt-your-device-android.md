@@ -18,18 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ad953049b9d2efd6f7a828ee70b5e1cede4ee68
-ms.sourcegitcommit: d0749cbc68df41893742f5187ac378a5ade824f2
+ms.openlocfilehash: c9f1e7bbbad243e37f34cb298466adf886be9273
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58406251"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490583"
 ---
-# <a name="encrypt-your-android-device"></a>Šifrování zařízení s Androidem
+# <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
 Šifrování zařízení chrání své soubory a složky před neoprávněným přístupem, pokud dojde ke ztrátě nebo odcizení zařízení. Po zapnutí šifrování zařízení pouze uživatelé, kteří mají správné heslo nebo PIN kód bude moct přihlásit k zařízení. 
 
 Pro přístup k pracovním nebo školním prostředkům, vaše organizace může vyžadovat šifrování zařízení s Androidem. Některé novější zařízení s Androidem se šifrují ve výchozím nastavení, out-of-the-box.  
+
+## <a name="turn-on-encryption"></a>Zapnutí šifrování
 
 Pokud se zobrazí zpráva v aplikaci portál společnosti, které potřebujete k zašifrování zařízení, proveďte následující kroky. 
 

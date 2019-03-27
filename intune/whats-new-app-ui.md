@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,24 +18,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e67e9deb77d1f479107c5d3e43cd602ae6eab80
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: 1b3d48789773c655ee7c836b211859528d394d56
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490702"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
-Další informace, které aktualizace byly provedeny v uživatelském rozhraní (UI) pro aplikace, které vaši koncoví uživatelé uvidí v této verzi Microsoft Intune. Pochopení těchto aktualizací vám umožňují komunikaci s uživateli a aktualizuje všechny vlastní dokumentace jste vytvořili pro podporu svého nasazení. Také pomůže vám pochopit, jak lépe řešit problémy uživatelů se potýkáte když požádají helpdesk o podporu pomocí portálu společnosti.  
+Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
 
-Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
+* Pošle upozornění, studenty a zaměstnance, aby aplikace a registrace změny.
+* Aktualizace dokumentace ke službě nebo na technickou podporu postupy vaší organizace.  
+
+Pokud jste zaměstnancem nebo studenty, nezapomeňte se podívat na více systémů snímky obrazovky a odkazy na dokumentaci nápovědy portál společnosti. Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
 ## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780 WNready4Review -->  
-Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií aplikací, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Další informace o tom, jak aplikace do aplikace portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
-
+Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Další informace o instalaci aplikace portálu společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 ![Snímek obrazovky z portál společnosti pro Windows 10, kategorie obrazovky aplikace.](./media/1902_CP_app_categories.png)   
 
@@ -48,14 +50,12 @@ Koncoví uživatelé teď budou moct aktivační událost akce aplikace a zaří
 ## <a name="week-of-october-22-2018"></a>Týden od 22. října 2018
 
 ### <a name="add-custom-brand-image-for-company-portal-app----1916266---"></a>Přidat vlastní značky obrázku pro aplikaci portál společnosti <!-- 1916266 -->
-Správce služby Microsoft Intune může nahrát obrázek vlastní značky, který se v aplikaci Portál společnosti pro iOS zobrazí jako pozadí stránky s profilem uživatele. Další informace o konfiguraci aplikace Portál společnosti najdete v tématu [Konfigurace aplikace Portál společnosti služby Microsoft Intune](company-portal-app.md).
-
-
+Správce služby Microsoft Intune může nahrát obrázek vlastní značky, který se v aplikaci Portál společnosti pro iOS zobrazí jako pozadí stránky s profilem uživatele. Další informace o konfiguraci aplikace Portál společnosti najdete v tématu [Konfigurace aplikace Portál společnosti služby Microsoft Intune](company-portal-app.md).  
 
 ## <a name="week-of-august-27-2018"></a>Týden od 27. srpna 2018  
 
 ### <a name="new-user-experience-update-for-the-company-portal-website---2000968---"></a>Nové aktualizace uživatelského prostředí na webu portál společnosti <!--2000968 -->  
-Na základě zpětné vazby od zákazníků, přidali jsme nové funkce na webu portál společnosti. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Oblasti webu, jako je například Podrobnosti o zařízení, zpětná vazba a podpora a Přehled zařízení, obdrželi nové, moderní a responzivní návrh. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
+Na základě názorů zákazníků jsme přidali na web Portál společnosti nové funkce. Na svých zařízeních si všimnete značného vylepšení stávající funkčnosti a použitelnosti. Konkrétní oblasti webu, jako je například Podrobnosti o zařízení, zpětná vazba a podpora a Přehled zařízení, teď mají nové moderní responzivní design. Aktualizovali jsme [dokumentaci na Portálu společnosti Intune](https://docs.microsoft.com/intune-user-help/using-the-intune-company-portal-website), aby reflektovala tyto změny.   
 
 Mezi nové aktualizace patří:  
 
@@ -493,24 +493,14 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 > [!Note]
 > Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
 
-### <a name="ui-iwp"></a>Nové aktualizace uživatelského prostředí na webu portál společnosti <!--2000968-->
+### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635-eeready-eestaged--"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 EEready eestaged-->  
 
-V dubnu představíme nový web Portál společnosti, který bude mít aktualizované uživatelské prostředí, zjednodušené pracovní postupy a lepší přístupnost. Bude zahrnovat rozšíření orientované na zákazníka, jako je sdílení aplikací a vylepšený celkový výkon, která vám přinese lepší uživatelský zážitek.
+Aplikace portál společnosti pro iOS se aktualizuje obrazovky registrace a postupy, které bylo v souladu s MDM změny registrace v Apple iOS 12.2. Nové prostředí registrace bude vyzvat uživatele, aby:  
+* Povolit Safari otevřít na webu portál společnosti (přes Safari) a stáhněte profil správy před návratem do aplikace portál společnosti.  
+* Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.  
+* Vraťte se do aplikace portál společnosti, aby prošel registrací.  
 
-Na základě zpětné vazby od zákazníků, jako jste vy, jsme přidali několik nových funkcí, které výrazně zlepší stávající funkčnost a použitelnost:
-
--   Vylepšení uživatelského rozhraní na celém webu
--   Možnost sdílet přímé odkazy na aplikace
-- Vylepšený výkon u velkých katalogů aplikací
-
-V rámci přípravy na tuto změnu nemusíte provádět žádnou akci. Jakmile bude aktualizovaný web Portál společnosti pro vás dostupný, dáme vám vědět. Je však možné, že nakonec budete muset dokumentaci pro koncové uživatele doplnit o aktualizované snímky obrazovky. Nezapomeňte, že možná bude nutné také aktualizovat dokumentaci pro aplikaci Portál společnosti v iOSu, protože web využívá část **Aplikace** v aplikaci pro iOS.  
-
-### <a name="ui-updates-to-the-company-portal-website---1313244-part-2--"></a>Aktualizace uživatelského rozhraní na webu portál společnosti <!--1313244 part 2-->
-
-__Aktualizace Vybraných aplikací__ Přidali jsme na web vyhrazenou stránku, kde můžou uživatelé procházet aplikace, které jste speciálně vybrali, a upravili jsme uživatelské rozhraní sekce Vybrané na domovské stránce.
-
-![Barevné dlaždice, které zobrazují aplikace. Jsou to velké barevné čtverce pod každou aplikací, pro které se použije primární barva v rámci loga aplikace. Sekce „Vybrané aplikace“ se zobrazuje v horní části aplikace Portál společnosti.](./media/cp_win10_colorful_tiles_after_1708.png)
-
+ Budeme aktualizovat pořadí zápisu a text pokynů na obrazovce odpovídají toto prostředí. Další informace o jak můžete tyto změny připravit zařízení uživatelů, najdete v článku [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/intune/ios-enroll).   
 
 
 ### <a name="see-also"></a>Viz také:

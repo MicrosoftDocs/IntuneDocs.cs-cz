@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 03/26/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4692e19d657e19efe18a91273ce585eb59c6cb65
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 17638838e049e5940b1b59019be6573b7eb09d64
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57528271"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490655"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Kurz: Ochrana Exchange Online e-mailu na nespravovaných zařízeních
 
@@ -91,8 +91,8 @@ Teď vytvoříme dvě zásady podmíněného přístupu pro všechny platformy z
 5.  V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
      
     1. V části **Konfigurovat** vyberte **Ano**.
-    2. Na **zahrnout** kartu, vyberte možnost **všechny platformy (včetně nepodporovaných)**. 
-    3. Vyberte **Done** (Hotovo).
+    2. Na **zahrnout** kartu, vyberte možnost **jakékoli zařízení**.
+    1. Vyberte **Done** (Hotovo).
    
 6.  Na **podmínky** vyberte **klientské aplikace**.
      
@@ -136,7 +136,7 @@ Vytvoření zásady podmíněného přístupu pro moderní ověřování klient�
 5.  V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
      
     1. V části **Konfigurovat** vyberte **Ano**.
-    2. Na kartě **Zahrnout** vyberte **Všechny platformy (včetně nepodporovaných)** a potom vyberte **Hotovo**. 
+    2. Na **zahrnout** kartu, vyberte možnost **jakékoli zařízení**a pak vyberte **provádí**. 
     3. Znovu vyberte **Hotovo**.
 
 6.  Na **podmínky** vyberte **klientské aplikace**.

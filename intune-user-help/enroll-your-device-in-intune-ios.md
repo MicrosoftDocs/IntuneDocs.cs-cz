@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2018
+ms.date: 03/26/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,83 +14,110 @@ ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: esmich
+ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7db319586b9375b8c88f177197e2fdf15378ab4
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ee0f438d929abd6b5b90acbaeeddc41e3ce11f98
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55847297"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490638"
 ---
-# <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti
+# <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
 Zaregistrujte si zařízení s iOSem pomocí aplikace Portál společnosti v Intune a získejte zabezpečený přístup k e-mailům, souborům a aplikacím vaší organizace.
 
-Než budete moct přistupovat k interním datům z podnikového nebo osobního zařízení, vyžaduje se, aby bylo vaše zařízení spravované. Jakmile je vaše zařízení spravované, vaše organizace přiřadí zařízení zásady a aplikace prostřednictvím poskytovatele správy mobilních zařízení (MDM). 
+Předtím, než se dá dostat specifická vlastní data z podnikových a osobních zařízení, je nutné nechte si spravovat zařízení. Poté, co se stane zařízení spravovaným, vaše organizace na zařízení prostřednictvím poskytovatele management (MDM) mobilních zařízení, jako je například Intune přiřaďte zásady a aplikace. 
 
-Pokud chcete na zařízení udržovat přístup k pracovním nebo školním datům, je nutné nakonfigurovat ho tak, aby odpovídalo upřednostňovaným nastavením vaší organizace. V tomto článku se dozvíte, jak vám může aplikace Portál společnosti pomoct při registraci, konfiguraci a údržbě zařízení, které má splňovat tyto požadavky.
+Pokud chcete na zařízení udržovat přístup k pracovním nebo školním datům, je nutné nakonfigurovat ho tak, aby odpovídalo upřednostňovaným nastavením vaší organizace. Tento článek popisuje, jak používat portál společnosti k registraci můžete zařízení a zachovat nastavení požadavky vaší organizace. 
 
 > [!NOTE]
-> Pokud jste se pokusili přistoupit k podnikovému e-mailu v aplikaci Pošta a zobrazila se vám výzva ke správě vašeho zařízení, jste na správném místě. Podle pokynů uvedených níže získáte přístup ke svému e-mailu a dalším prostředkům společnosti na zařízení s iOSem.
+> Pokud jste se pokusili přistoupit k podnikovému e-mailu v aplikaci Pošta a zobrazila se vám výzva ke správě vašeho zařízení, jste na správném místě. Podle pokynů uvedených níže získáte přístup ke svému e-mailu a dalším prostředkům společnosti na zařízení s iOSem.  
 
-## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti
+## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti  
 
-### <a name="security"></a>Zabezpečení
-Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte aktualizovat. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.    
+### <a name="security"></a>Zabezpečení  
+Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte aktualizovat. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.     
 
-### <a name="protection"></a>Protection
-Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolovat, že je chráněno. Pokud si například nainstalujete aplikaci z nedůvěryhodného zdroje, upozorní vás a dokonce vám může i odvolat přístup k firemním datům. Zásady ochrany aplikací, jako je tato, jsou v organizacích běžné. Často vyžadují, abyste, než budete moct znovu získat přístup, odinstalovali nedůvěryhodnou aplikaci.
+### <a name="protection"></a>Protection  
+Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolovat, že je chráněno. Pokud si například nainstalujete aplikaci z nedůvěryhodného zdroje, upozorní vás a dokonce vám může i odvolat přístup k firemním datům. Takovouto zásadu je běžné v organizacích a často je potřeba odinstalovat nedůvěryhodné aplikace předtím, než jste znovu získali přístup.  
 
-### <a name="setting-notifications"></a>Nastavení oznámení
+### <a name="setting-notifications"></a>Nastavení oznámení  
 Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení (například vícefaktorové ověřování), aplikace Portál společnosti vás o něm informuje. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
 
-Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](https://docs.microsoft.com//intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios). 
+Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](https://docs.microsoft.com//intune-user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios).  
 
-## <a name="before-you-start"></a>Než začnete
+## <a name="enroll-your-ios-device"></a>Registrace zařízení s Iosem   
 
-- Ujistěte se, že když zahájíte registraci, budete moct celý proces dokončit najednou. Pokud ho přerušíte na dobu delší než několik minut, nastavení se může ukončit a bude potřeba začít znovu.  
-- Pokud by se proces nezdařil, vraťte se do aplikace Portál společnosti a začněte znovu.  
-- Zkontrolujte, že je funkční Wi-Fi a že ve vašem zařízení funguje aplikace Safari.
-- Stáhněte a nainstalujte [aplikaci Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md).  
+> [!IMPORTANT]
+> Snímky obrazovky v této části ukazují možnosti pro zařízení s Iosem verze 12,1 a starší. Kde je to možné, jsme zahrnuli pokyny specifické pro verzi iOS 12.2 a novější. Pokud si všimnete, že vaše prostředí se liší od na snímcích obrazovky je znázorněno, prosím použijte 12.2 pokyny.      
+
+Přejděte do obchodu s aplikacemi stáhnout a nainstalovat [aplikace portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md) do vašeho zařízení. Během registrace budete také potřebovat připojení Wi-Fi a přístup do prohlížeče Safari. 
+
+Pokud pozastavíte na více než několik minut, během registrace, může aplikace zavření nebo ukončení instalace. Pokud k tomu dojde, otevřete aplikaci portál společnosti a zkuste to znovu.  
+
+1. Otevřete portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu. 
+
+    ![Příklad snímek obrazovky aplikace portál společnosti přihlásit.](./media/ios-01-cp-enroll-1903.PNG)  
+
+2. Po zobrazení výzvy k přijímání oznámení na portál společnosti, klepněte na **povolit.** Portál společnosti používá oznámení vás upozorní, pokud je například potřeba aktualizovat nastavení zařízení. 
+
+    ![Příklad snímek domovské stránky portálu společnosti, řádku "Oznámení".](./media/ios-04-cp-enroll-1903.PNG)  
+
+3. Na **nastavení přístupu** obrazovky, vyberte **začít.**  
+
+     ![Příklad – snímek obrazovky portálu společnosti, obrazovky "Nastavení přístupu".](./media/ios-05-cp-enroll-1903.PNG)  
+
+4. Přečtěte si seznam informací o zařízení vaší organizaci uvidí a neuvidí. [Další podrobnosti o tomto tématu](what-info-can-your-company-see-when-you-enroll-your-device-in-Intune.md) může se vyhledat přes **Další** odkaz. Až budete hotovi, klepněte na **pokračovat**.  
+
+    ![Příklad snímek obrazovky aplikace portál společnosti "Co organizaci uvidí", pomocí tlačítka pro pokračování.](./media/ios-06-cp-enroll-1903.PNG)  
+ 
+5. **Co se chystá?** obrazovky obsahuje souhrn zbývající kroky. Tyto kroky může lišit v závislosti na vaší verzi iOS. 
+    * **iOS 12.2 a novější**: prostředí může vyžadovat, místo abyste:  
+
+        a. **Povolit stažení profilu správy**: Váš prohlížeč bude otevřít na webu portál společnosti a vyzve, abyste toto stahování povolili. Stahování se uloží v aplikaci nastavení.  
+
+        b. **Otevřete aplikaci nastavení a instalovat profil**: Budete muset přejít do nastavení aplikace a nainstalovali profil správy.  
+
+        c. **Vraťte se do aplikace portál společnosti**: Budete se muset vrátit do aplikace portál společnosti pro dokončení instalace.  
+
+    Až budete připraveni stáhnout profil pro správu, klepněte na **pokračovat**.  
+
+6. Safari se otevře web portál společnosti. Po zobrazení výzvy ke stažení konfiguračního profilu, klepněte na **povolit**.  
+    * **iOS 12.2 a novější**: Počkejte profil, který chcete dokončení stahování v prohlížeči Safari nebo klepněte na **provádí**. Otevřete **nastavení** aplikace na vašem zařízení.  
+
+    > [!IMPORTANT]
+    > Je třeba přejít **nastavení** aplikace a instalaci tohoto profilu do 8 minut od stáhnout. Pokud to neuděláte, profil, který se odeberou a bude nutné restartovat registrace. 
+
+7. V **nastavení** aplikace, klepněte na **instalovat profil stažen** > **nainstalovat**. Pokud **instalovat profil stažen** nebude nezobrazí jako možnost, přejděte na **Obecné** > **profily**. Pokud stále nevidíte profilu, budete muset znovu stáhnout.  
+
+    ![Ukázkovém snímku obrazovky v aplikaci nastavení, nastavení instalace profilu stáhli s red Odznáček udávající nedávno staženým profilem.](./media/ios-10-cp-enroll-1903.PNG)  
+    
+8. Pokud se zobrazí výzva, zadejte heslo zařízení. Potom klepněte na **nainstalovat**.      
+
+9. Na další obrazovce je standardní systém upozornění pro správu zařízení. Další informace o co vaše organizace uvidí a neuvidí na vašem zařízení, najdete v příslušné [článek dokumentace Intune](what-info-can-your-company-see-when-you-enroll-your-device-in-Intune.md). Chcete-li pokračovat v instalaci, klepněte na **nainstalovat**. Pokud budete vyzváni k důvěřování vzdálené správě, klepněte na **důvěryhodnosti**.  
+
+    ![Příklad snímek obrazovky nastavení aplikace, obrazovka upozornění standardního systému pro správu mobilních zařízení a kořenový certifikát.](./media/ios-15-cp-enroll-1903.PNG)  
+
+10. Po dokončení instalace, klepněte na **provádí**. Pokud chcete ověřit, že profil byl nainstalován, přejděte na **Správa zařízení a profily** nastavení. Profil uvedený v seznamu byste měli vidět **Správa mobilních zařízení**.   
+
+    ![Příklad snímek obrazovky nastavení aplikace, Správa profilů a zařízení nastavení zobrazující profil pro správu.](./media/ios-00-cp-enroll-1903.PNG)  
 
 
-## <a name="using-the-company-portal-app-to-set-up-access-to-company-resources"></a>Nastavení přístupu k prostředkům společnosti pomocí aplikace Portál společnosti
+11. Vraťte se **portál společnosti** aplikace. Portál společnosti se začne synchronizovat, a nastavit vaše zařízení. Portál společnosti vyzve aktualizovat další nastavení zařízení. Pokud ano, klepněte na **pokračovat**.
 
-|Co se zobrazí|Vysvětlení|
-|---|---|
-|![Přihlašovací obrazovka aplikace Portál společnosti s tlačítkem Přihlásit se v dolní části](./media/ios-01-cp-enroll-1802.PNG)|Otevřete aplikaci Portál společnosti a klepněte na **Přihlásit se**.|
-|![Výzva k přihlášení do služby Azure AD](./media/ios-02-cp-enroll-1802.PNG)|Zadejte e-mailovou adresu vaší společnosti a pak klepněte na **Další**.|
-|![Výzva k zadání hesla Azure AD.](./media/ios-03-cp-enroll-1802.PNG)|Zadejte heslo a potom klepněte na **Přihlásit se**.|
-|![Úvodní obrazovka načítání firemních prostředků](./media/ios-04-cp-enroll-1802.PNG)|Počkejte, až se tato obrazovka načte.|
-|![Stránka Podmínky a ujednání](./media/ios-05-cp-enroll-1802.PNG)|Přečtěte si podmínky a ujednání a vyberte možnost **Přijmout vše**.|
-|![Nastavte obrazovku firemního přístupu. Aktuálně je potřeba vyřešit správu a nastavení.](./media/ios-06-cp-enroll-1802.PNG)|Klepnutím na volbu **Začít** zahájíte proces zpřístupnění prostředků společnosti pro vaše zařízení. Pokud to nemůžete udělat teď hned, můžete proces **Odložit**, ale znamená to, že nebudete moct získat e-mail, dokumenty atd.|
-|![Obrazovka Co uvidí moje společnost.](./media/ios-07-cp-enroll-1802.PNG)|**Další informace** o tom, co vaše může společnost zobrazit, získáte klepnutím na odkaz dole. Jinak klepněte na **Pokračovat**.|
-|![Obrazovka Co dál?](./media/ios-08-cp-enroll-1802.PNG)|Tato obrazovka vás provede kroky instalace. Budete využívat prohlížeč Safari, aplikaci Nastavení a aplikaci Portál společnosti. Klepněte na **Pokračovat**.|
-|![Načítání obrazovky po klepnutí na možnost Další na obrazovce Co dál](./media/ios-09-cp-enroll-1802.PNG)|Počkejte, až se tato obrazovka načte.|
-|![Přepnutí do Safari pro registraci](./media/ios-cp-sent-to-safari-1808.png)|Přesměruje vás to do prohlížeče Safari, abyste získali informace o správě vašeho zařízení.|
-|![Výzva systému ke spuštění aplikace Nastavení](./media/ios-8-cp-enroll-1711.PNG)|Klepnutím na **Povolit** otevřete aplikaci Nastavení, která stáhne konfigurační profil. Touto instalací umožníte vaší společnosti spravovat podnikové informace ve vašem zařízení.|
-|![Snímek obrazovky s obrazovkou Nainstalovat profil v nastaveních zařízení](./media/ios-9-cp-enroll-1711.PNG)|Klepněte na **Instalovat**.|
-|![Modální dialogové okno instalace profilu z dolní části obrazovky](./media/ios-10-cp-enroll-1711.PNG)|Klepněte na **Instalovat**.|
-|![Obrazovka načítání instalace profilu](./media/ios-11-cp-enroll-1711.PNG)|Počkejte, až se tato obrazovka načte.|
-|![Obrazovka upozornění správy profilu](./media/ios-12-cp-enroll-1711.PNG)|Toto upozornění vydané společností Apple poskytuje více informací o typech akcí, které lze provést v zařízení v rámci správy. Přečtěte si další informace o tom, [jaké informace může vaše společnost zobrazit](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).|
-|![Výzva systému s žádostí o vztah důvěryhodnosti vzdálené správy](./media/ios-13-cp-enroll-1711.PNG)|Klepnutím na **Důvěřovat** umožníte vaší společnosti spravovat podnikové informace a nastavení v daném zařízení.|
-|![Obrazovka načítání pro dokončení instalace profilu](./media/ios-14-cp-enroll-1711.PNG)|Počkejte, až se tato obrazovka načte.|
-|![Obrazovka nainstalovaného profilu](./media/ios-15-cp-enroll-1711.PNG)|Váš profil je nainstalovaný a podnikové informace a nastavení vašeho zařízení již brzo bude možné spravovat.|
-|![Přepnutí do Safari pro registraci](./media/ios-16-cp-enroll-1711.PNG)|Přecházíte zpět do prohlížeče Safari, abyste dokončili získání informací o správě vašeho zařízení. |
-|![Výzva systému k otevření portálu společnosti](./media/ios-17-cp-enroll-1711.PNG)|Klepněte na **Otevřít**.|
-|![Obrazovka načítání prostředků společnosti](./media/ios-21-cp-enroll-1802.PNG)|Počkejte, až se tato obrazovka načte.|
-|![Vyberte kategorii zařízení v aplikaci portálu společnosti.](./media/ios-22-cp-enroll-1802.PNG)|Zvolte nejvhodnější kategorii pro vaše zařízení. To obvykle souvisí s majitelem zařízení nebo s jeho převládajícím umístěním.|
-|![Vybraná kategorie](./media/ios-23-cp-enroll-1802.PNG)||
-|![Správa zařízení probíhá úspěšně. Teď je potřeba aktualizovat nastavení.](./media/ios-24-cp-enroll-1802.PNG)|Úspěšně jste začali vaše zařízení spravovat. Existují pravděpodobně stále nastavení, jako je délka hesla, která po vás může chtít vaše společnost aktualizovat. Pokračujte klepnutím na **Pokračovat**.|
-|![Potvrzení nastavení zařízení](./media/ios-25-cp-enroll-1802.PNG)|Portál společnosti zkontroluje, zda je nutné aktualizovat některá nastavení.|
-|![Kontrola nastavení byla dokončena s nesprávnou verzí operačního systému.](./media/ios-26-cp-enroll-1802.PNG)|Portál společnosti vám poskytne pokyny, jak opravit problémy s nastavením. Jakmile dokončíte opravu problémů, klepněte na možnost **Zkontrolovat nastavení**.|
-|![Obrazovka načítání pro potvrzení nastavení zařízení](./media/ios-27-cp-enroll-1802.PNG)|Zařízení zkontroluje, jestli jsou nastavení dostatečně zabezpečená pro přístup k prostředkům společnosti.|
-|![Úspěšně zaregistrované a aktualizované nastavení](./media/ios-28-cp-enroll-1802.PNG)|Blahopřejeme! Právě jste zaregistrovali své zařízení do služby Intune.|
+    ![Příklad – snímek obrazovky portálu společnosti, "Nastavení přístupu" obrazovka s žlutém trojúhelníku vedle nastavení požadavek.](./media/ios-12-cp-enroll-1903.PNG)  
+
+12. Budete vědět, že tento instalační program je dokončen, pokud všechny položky v seznamu zobrazit zeleném kroužku. Klepněte na **Hotovo**.  
+    
+    ![Ukázkovém snímku obrazovky z portálu společnosti, "všechno je nastavené!" obrazovka zobrazující všechny zelené kruzích.](./media/ios-13-cp-enroll-1903.PNG)  
 
 > [!Note]
-> K dokončení přípravy zařízení pro správu je potřeba dokončit ještě několik kroků. Přečtěte si další informace o [registraci zařízení s použitím softwaru pro správu telekomunikačních výdajů](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace používá program registrace zařízení společnosti Apple, přečtěte si další informace [tady](enroll-your-device-dep-ios.md).
+> Pokud vaše organizace monitoruje omezení hlasu a dat nebo vám poskytne zařízení vlastněná společností, můžete mít několik kroků k dokončení. Pokud budete vyzváni k instalaci **Datalert** aplikace, najdete v článku [registraci zařízení do služby telecom expense management](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace je součástí programu registrace zařízení společnosti Apple, přečtěte si [způsobu registrace zařízení ve vlastnictví společnosti](enroll-your-device-dep-ios.md).  
+
+## <a name="next-steps"></a>Další postup  
+Najdete aplikace, které vám pomohou při práci nebo školu. Přečtěte si [jak aplikací jsou k dispozici](use-managed-apps-on-your-device-ios.md) vám prostřednictvím portálu společnosti.  
 
 Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

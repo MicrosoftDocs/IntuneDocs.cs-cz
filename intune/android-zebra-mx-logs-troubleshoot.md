@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5edc528abf5c3cb58200e2d0511fac3220cfad11
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 36476820805c00cefafcd9f64dd2f08a014762c0
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58395252"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490537"
 ---
-# <a name="use-stagenow-logs-to-troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží s pomocí StageNow protokoly a podívejte se na potenciální problémy na zařízeních s Androidem Zebra v Microsoft Intune
+# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží a podívejte se na potenciální problémy na zařízeních s Androidem Zebra v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-V Microsoft Intune, můžete použít [ **Zebra Mobility rozšíření (MX)** ke správě zařízení s Androidem Zebra](android-zebra-mx-overview.md). Při použití Zebra zařízení, vytvořte profily v StageNow ke správě nastavení a jejich nahrávání do Intune. Intune používá aplikace StageNow aplikaci nastavení na zařízení. StageNow aplikace také vytvoří soubor protokolu podrobné na zařízení, která se používá k řešení.
+V Microsoft Intune, můžete použít [Zebra Mobility rozšíření (MX) ke správě zařízení s Androidem Zebra](android-zebra-mx-overview.md). Při použití Zebra zařízení, vytvořte profily v StageNow ke správě nastavení a jejich nahrávání do Intune. Intune používá aplikace StageNow aplikaci nastavení na zařízení. StageNow aplikace také vytvoří soubor protokolu podrobné na zařízení, která se používá k řešení.
 
 Tato funkce platí pro:
 
@@ -36,13 +36,28 @@ Tato funkce platí pro:
 
 Například můžete vytvořit profil v StageNow ke konfiguraci zařízení. Při vytváření profilu StageNow poslední krok generuje soubor pro test profilu. Můžete využívat tento soubor s StageNow aplikací na zařízení.
 
-Například vytvořit profil v StageNow a testování. V Intune přidat profil StageNow a pak ji přiřaďte Zebra zařízení. Při kontrole stavu přiřazeného profilu, profil, který se zobrazuje základní stav. Chcete podrobnosti na další.
+Například vytvořit profil v StageNow a testování. V Intune přidat profil StageNow a pak ji přiřaďte Zebra zařízení. Při kontrole stavu přiřazeného profilu, profil, který se zobrazuje základní stav.
 
 V obou těchto případech můžete získat další podrobnosti ze souboru protokolu StageNow, který se ukládá v zařízení pokaždé, když platí StageNow profilu.
 
-Tento článek popisuje, jak číst protokoly StageNow a uvádí některé možné problémy s Zebra zařízení.
+Některé problémy s nesouvisejí se obsah StageNow profilu a se neprojeví v protokolech.
+
+Tento článek popisuje, jak číst protokoly StageNow a uvádí některé možné problémy s Zebra zařízení, která nemusí být zobrazí v protokolech.
 
 [Použití a správa zařízení Zebra s příponami Mobility Zebra](android-zebra-mx-overview.md) obsahuje další informace o této funkci.
+
+## <a name="get-the-logs"></a>Získání protokolů
+
+### <a name="use-the-stagenow-app-on-the-device"></a>Použití StageNow aplikace na zařízení
+Při testování profilu přímo pomocí StageNow v počítači, namísto použití [nasazení profilu Intune](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), StageNow aplikace na zařízení uloží protokoly z testu. Chcete-li získat soubor protokolu, použijte **(...)**  možnost v aplikaci StageNow na zařízení.
+
+### <a name="get-logs-using-android-debug-bridge"></a>Získání protokolů pomocí Android Debug Bridge
+Pokud chcete získat protokoly po profil, který je už nasazená s Intune, připojte zařízení k počítači s [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) (otevře web pro Android).
+
+Na zařízení protokoly se ukládají do `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
+
+### <a name="get-logs-from-email"></a>Získání protokolů z e-mailu
+Pokud chcete získat protokoly po profil, který je už nasazená s Intune, koncovým uživatelům může poslat e-mail přihlásí pomocí e-mailové aplikace na zařízení. Zebra zařízení otevřete aplikaci portál společnosti a [odeslat protokoly](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly také vytvoří PowerLift incidentu ID, které můžete využít, pokud se obrátíte na podporu Microsoftu.
 
 ## <a name="read-the-logs"></a>Přečtěte si protokoly
 
@@ -112,9 +127,9 @@ Protokol obsahuje chybu, protože obsahuje `<characteristic-error>` značky. V t
 </wap-provisioningdoc>
 ```
 
-## <a name="potential-issues-with-zebra-devices"></a>Možné problémy s Zebra zařízení
+## <a name="other-potential-issues-with-zebra-devices"></a>Ostatní potenciální potíže se zařízeními Zebra
 
-Tato část uvádí informace o možných problémech, které můžete narazit při používání Zebra zařízení pomocí Správce zařízení.
+Tato část uvádí další informace o možných problémech, které se můžete setkat při používání Zebra zařízení pomocí Správce zařízení. V protokolech StageNow nezobrazují, tyto problémy.
 
 ### <a name="android-system-webview-is-out-of-date"></a>Android System WebView je zastaralá
 

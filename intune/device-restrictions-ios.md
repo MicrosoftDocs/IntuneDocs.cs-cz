@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/13/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 44f7c5b897dc1aedfe8ffc23c25ea479eceb35e5
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
+ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330491"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58490722"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 
@@ -158,7 +158,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Nákupy v aplikaci**: Zvolte **bloku** zabránit nákupy v aplikaci ve storu. **Není nakonfigurováno** povolí ve spuštěné aplikaci nákupy na storu.
 - **Obsah hudbě, podcastech nebo zprávách explicitní iTunes (jenom pod dohledem)**: Zvolte **bloku** zabránit explicitní iTunes hudbě, podcastech nebo zprávách obsah. **Není nakonfigurováno** povolí zařízení přístup k obsahu označený jako obsah pro dospělé obchodě.
 - **Stažení obsahu z obchodu ibooks, který má označení "Erotika"**: Zvolte **bloku** zastaví uživatelům zabránit ve stahování média z úložiště iBook označená jako erotická. **Není nakonfigurováno** povolí uživateli stahování knih z kategorie "Erotika".
-- **Zobrazování firemních dokumentů v nespravovaných aplikacích**: **Blok** zabraňuje zobrazování nefiremních dokumentů v nespravovaných aplikacích. **Není nakonfigurováno** umožňuje podnikových dokumentů v jakékoli aplikaci zobrazit. Například chcete uživatelům zabránit v ukládání souborů z aplikace OneDrive do Dropboxu. Toto nastavení jako **bloku**. Až zařízení zásadu obdrží (třeba po restartování), již neumožňuje ukládání.
+- **Zobrazování firemních dokumentů v nespravovaných aplikacích**: **Blok** zabraňuje zobrazování firemních dokumentů v nespravovaných aplikacích. **Není nakonfigurováno** umožňuje podnikových dokumentů v jakékoli aplikaci zobrazit. Například chcete uživatelům zabránit v ukládání souborů z aplikace OneDrive do Dropboxu. Toto nastavení jako **bloku**. Až zařízení zásadu obdrží (třeba po restartování), již neumožňuje ukládání.
   - **Povolit spravovaným aplikacím zápis kontaktů na nespravované kontakty účty**: Pokud je nastavena na **povolit**, uživatelé mohou přidat nebo synchronizovat kontaktní údaje Outlook jakákoli osoba, včetně obchodních a podnikových kontaktů pro integrované aplikace kontakty na zařízení. Pokud je nastavena na **Nenakonfigurováno**, nebudou uživatelé moci přidávat kontaktům aplikace Outlook integrované aplikace kontakty na zařízení.
   
     Chcete-li toto nastavení použít, nastavte **zobrazování firemních dokumentů v nespravovaných aplikacích** nastavení **bloku**.
@@ -255,7 +255,7 @@ Přidání aplikací do těchto seznamů, můžete:
   Tato funkce platí pro:  
   - Iosu 11.0 a novějších
 
-- **Osobní Hotspot**: **Blok** zabraňuje zařízení jako osobní hotspot. Někteří mobilní operátoři toto nastavení nemusí podporovat. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
+- **Osobní Hotspot**: **Blok** vypne osobní hotspot na zařízení uživatelů se synchronizací každé zařízení. Někteří mobilní operátoři toto nastavení nemusí podporovat. **Není nakonfigurováno** (výchozí) uchovává osobní hotspot konfiguraci jako výchozí nastavení uživatele.
 - **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů (jenom pod dohledem)**: **Vyžadovat** zařízení donutí se použít jenom sítě Wi-Fi nastavily pomocí konfiguračních profilů Intune. **Není nakonfigurováno** (výchozí) umožňuje zařízení využívat jiné sítě Wi-Fi.
 - **Pravidla používání mobilní sítě (jenom spravované aplikace)**: Definování dat, které typy, které spravované aplikace můžete použít při v mobilní síti. Možnosti:
   - **Zablokovat používání mobilních dat**: Zablokovat používání mobilních dat pro **všechny spravované aplikace** nebo **vybrat konkrétní aplikace**.
