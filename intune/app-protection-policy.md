@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/11/2018
+ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fc6cba2d1088ddb367d5c47da04118aa9d6fcab
-ms.sourcegitcommit: 25e17a1d002ee1faa49bb89648eb59373528539f
+ms.openlocfilehash: d6d130892200b5592f42bae8ec5423f4b8f6f8f7
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58173987"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514386"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 
@@ -51,7 +51,7 @@ Zásady ochrany aplikací lze konfigurovat pro aplikace běžící na zařízen�
 > [!IMPORTANT]
 > Můžete vytvářet zásady správy mobilních aplikací pro mobilní aplikace Office, které se připojují ke službám Office 365. Přístup k místním poštovním schránkám Exchange můžete chránit také tak, že vytvoříte zásady ochrany aplikací Intune pro Outlook pro iOS a Android s hybridním moderním ověřováním. Ještě než začnete tuto funkci využívat, zkontrolujte, že splňujete [požadavky na Outlook pro iOS a Android](https://technet.microsoft.com/library/mt846639(v=exchg.160).aspx). Zásady ochrany aplikací se nepodporují pro jiné aplikace, které se připojují k místním službám Exchange nebo SharePoint.
 
-**Důležité výhody při použití zásad ochrany aplikací:**
+**Důležité výhody použití zásad ochrany aplikací jsou**:
 
 -   Ochrana podnikových dat na úrovni aplikace. Protože správa mobilních aplikací nevyžaduje správu zařízení, můžete podniková data chránit na spravovaných i nespravovaných zařízeních. Správa je zaměřená na identitu uživatele, odpadá tedy požadavek na správu zařízení.
 
@@ -69,8 +69,6 @@ Použití správy mobilních zařízení se zásadami ochrany aplikací přiná�
 
 ### <a name="supported-platforms-for-app-protection-policies"></a>Podporované platformy pro zásady ochrany aplikací
 Podpora platforem pro zásady Intune app protection v souladu s podporou platforem pro mobilní aplikace Office pro zařízení s Androidem a iOS. Podrobnosti najdete v části **Mobilní aplikace** článku [Požadavky na systém pro Office](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
-
-V současné době není dostupná podpora zařízení s Windows. Můžete ale použít Windows Information Protection, která nabízí podobné funkce. Podrobnosti najdete v tématu věnovanému [ochraně podnikových dat pomocí sady Windows Information Protection](https://technet.microsoft.com/itpro/windows/keep-secure/protect-enterprise-data-using-wip).
 
 > [!IMPORTANT]
 > U zařízení se vyžaduje aplikace portál společnosti Intune přijímat zásady ochrany aplikací v Androidu. Další informace najdete v tématu [požadavky na aplikace portál společnosti Intune přístup](end-user-mam-apps-android.md#access-apps).
