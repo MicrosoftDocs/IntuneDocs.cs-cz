@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 03/26/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a7ccc2da5fd99c3c72c8c9beb765f292e896eee
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991179"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514493"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -832,7 +832,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > [!NOTE]
     > Ujistěte se, že vaše aplikace využívá `resourceId` a `aadId` parametry předány `acquireToken()` tak, aby získali správný token.
 
-    ```
+    ```java
     class MAMAuthCallback implements MAMServiceAuthenticationCallback {
         public String acquireToken(String upn, String aadId, String resourceId) {
         return mAuthContext.acquireTokenSilentSync(resourceId, ClientID, aadId).getAccessToken();
@@ -1633,7 +1633,7 @@ Pokud aplikace s více identitami zaregistruje oznámení `WIPE_USER_DATA`, je o
 
 Aplikace, která zaregistruje `WIPE_USER_DATA`, nezíská výhodu sady SDK výchozího chování sady SDK při selektivním vymazání. U aplikací, které pracují s více identitami, to může být mnohem závažnější, protože výchozí selektivní vymazání MAM vymaže jen soubory, na jejichž identitu vymazání cílí. Pokud si aplikace pracující s více identitami přeje, aby výchozí selektivní vymazání MAM proběhlo, _**a**_ chce při vymazání provádět vlastní akce, měla by si zaregistrovat oznámení `WIPE_USER_AUXILIARY_DATA`. Toto oznámení odešle sada SDK těsně před tím, než provedete výchozí selektivní vymazání MAM. Aplikace by nikdy neměla zaregistrovat `WIPE_USER_DATA` a `WIPE_USER_AUXILIARY_DATA`.
 
-Výchozí selektivní vymazání ukončíte aplikaci řádně, dokončení aktivity a ukončuje se proces aplikace. Pokud vaše aplikace přepisuje výchozí vymazání seletive, můžete zvažte možnost Zavřít aplikaci ručně tak, aby zabrání uživateli v přístupu k datům v paměti, když dojde k vymazání.
+Výchozí selektivní vymazání ukončíte aplikaci řádně, dokončení aktivity a ukončuje se proces aplikace. Pokud vaše aplikace přepíše výchozí selektivní vymazání, můžete chtít zvažte možnost Zavřít aplikaci ručně tak, aby zabrání uživateli v přístupu k datům v paměti, když dojde k vymazání.
 
 
 ## <a name="enabling-mam-targeted-configuration-for-your-android-applications-optional"></a>Povolení konfigurace určené pro správu mobilních aplikací pro Android (nepovinné)
@@ -1785,7 +1785,7 @@ Intune SDK udržuje kontrakt poskytovaný rozhraním Android API, i když podmí
 
 ## <a name="telemetry"></a>Telemetrie
 
-Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace Portál společnosti ve výchozím nastavení protokoluje telemetrická data. Tato data se odešlou do Microsoft Intune. V souladu se zásadami Microsoftu neshromažďujeme žádné identifikovatelné osobní údaje.
+Sada Intune App SDK pro Android neřídí shromažďování dat z vaší aplikace. Aplikace z firemního portálu se ve výchozím nastavení protokoluje systémem generovaná data. Tato data se odešlou do Microsoft Intune. Podle Policy Microsoftu Neshromažďujeme žádné osobní údaje.
 
 > [!NOTE]
 > Pokud se koncoví uživatelé rozhodnou tato data neodesílat, musí v nastavení aplikace Portál společnosti vypnout telemetrii. Další informace najdete v článku [Vypnutí shromažďování dat Microsoftu o využití](https://docs.microsoft.com/intune-user-help/turn-off-microsoft-usage-data-collection-android). 

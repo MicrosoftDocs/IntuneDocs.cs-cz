@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 307e3ce1b1973897a08159bdcf91e0117d58bfe8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: cbd3b13215a58a831a15884bfe451f00a35ba379
+ms.sourcegitcommit: 94f7dc236db5995ffee7cd13c7e02794e561b532
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392664"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538760"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Profily zásad a pracovní ochrany aplikací na zařízeních s Androidem Enterprise v Intune
 
@@ -51,7 +51,7 @@ Jednotlivé aplikace pro Android jsou povolené pro aplikaci několika způsoby:
 
     Abychom pomohli, Intune zahrnuje **nástroj App wrapping Tool** nástroje pro existující aplikace pro Android (soubory Apk) a vytvoří aplikaci, která rozpozná zásady aplikací.
 
-    Další informace o tomto nástroji najdete v tématu [repare – obchodní aplikace pro zásady ochrany aplikací](apps-prepare-mobile-application-management.md).
+    Další informace o tomto nástroji najdete v tématu [Příprava-obchodních aplikací pro zásady ochrany aplikací](apps-prepare-mobile-application-management.md).
 
 Pokud chcete zobrazit seznam aplikací, které jsou povolené s aplikací, najdete v článku [spravované aplikace s bohatou sadou zásad ochrany mobilních aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 

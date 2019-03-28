@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/22/2019
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b1bf13c404fc8a0f4d7ab4bbeaf061a4cb4261d
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: a61bd060b5c120a73df427688865e2ee976f8f68
+ms.sourcegitcommit: 94f7dc236db5995ffee7cd13c7e02794e561b532
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490715"
+ms.locfileid: "58538768"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -77,6 +77,14 @@ Aplikace Microsoft Teams můžete zahrnuty nebo vyloučeny jako součást instal
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
+#### <a name="automatically-start-an-app-when-running-multiple-apps-in-kiosk-mode-on-windows-10-and-later-devices----2351390---"></a>Automatické spuštění aplikace při spuštění více aplikací na Windows 10 a novější zařízení v celoobrazovkovém režimu. <!-- 2351390 -->
+
+V systému Windows 10 a novější zařízení můžete zařízení v beznabídkovém režimu spouštět a spustit velký počet aplikací. V této aktualizaci se **automatickým spouštěním** nastavení (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **Windows 10 a novější** pro platformu > **veřejného terminálu** pro typy profilů > **veřejný terminál s více aplikacemi**). Pomocí tohoto nastavení můžete automaticky spustit aplikaci, když uživatel přihlásí k zařízení.
+
+Pokud chcete zobrazit seznam a popis všech nastavení beznabídkového režimu, najdete v článku [Windows 10 a novější zařízení nastavení pro spuštění jako veřejný terminál v Intune](kiosk-settings-windows.md).
+
+Platí pro: Windows 10 a novější
+
 #### <a name="operational-logs-also-show-details-on-non-compliant-devices----4063755----"></a>Operační protokoly také zobrazit podrobnosti o zařízení nedodržující předpisy <!-- 4063755  -->
 Když směrování Intune přihlásí k funkcím Azure monitor, můžete také směrovat provozní protokoly. V této aktualizaci provozních protokolech také poskytují informace o zařízení nedodržující předpisy. 
 
@@ -87,8 +95,7 @@ V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Zebra. 
 
 - Vytvořit profil konfigurace zařízení a použijte nastavení na zařízení s Androidem Zebra pomocí profilů rozšíření Mobility (MX) generovaných StageNow (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Android** pro platformu).
 
-Platí pro:  
-- Android
+Platí pro: Android
 
 #### <a name="route-logs-to-azure-monitor-in-more-intune-workloads----3804627---"></a>Směrování protokolů do Azure monitoru v další úlohy Intune <!-- 3804627 -->
 V Intune, můžete směrovat do centra událostí, úložiště, audit a provozní protokoly a protokolovat analytics ve službě Azure Monitor (**Intune** > **monitorování** > **diagnostiky nastavení**). Tato aktualizace může směrovat tyto protokoly ve více úloh Intune, včetně dodržování předpisů, konfigurace, klientské aplikace a další. 
@@ -100,8 +107,7 @@ V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Zebra. 
 
 Další informace o této funkci najdete v tématu [použití a správa zařízení Zebra pomocí rozšíření nastavení mobilních zařízení v Intune](android-zebra-mx-overview.md).
 
-Platí pro:  
-- Android
+Platí pro: Android
 
 ### <a name="device-management"></a>Správa zařízení
 

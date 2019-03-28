@@ -13,26 +13,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ed34b8bdd91057e64f72c68166c15b89fa80c187
-ms.sourcegitcommit: 9af102e1232d9a568a7901783c30ba9905e64d99
+ms.openlocfilehash: b49595493b5db3e5735e0a4717c27e91f058b8d8
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477090"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514259"
 ---
-# <a name="quickstart-create-a-user-and-assign-a-license-to-it"></a>Rychlý start: Vytvořte uživatele a přiřadit licenci
+# <a name="quickstart-create-a-user-in-intune-and-assign-them-a-license"></a>Rychlý start: Vytvořte uživatele v Intune a přiřaďte mu licenci
 
-V tomto rychlém startu vytvoříte uživatele a potom mu přiřadíte licenci. Při používání Intune musí mít uživatelský účet každý uživatel, který má mít přístup k firemním datům. Správci Intune později můžou tyto uživatele nakonfigurovat a spravovat tak řízení přístupu.
+V tomto rychlém startu vytvoříte uživatele a přiřadit je Intune. Při použití Intune, musí mít každou osobu, která mají mít přístup k firemním datům jejich vlastní uživatelský účet. Správce Intune můžete nakonfigurovat uživatele později ke správě řízení přístupu.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo jako správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
+Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="create-a-user"></a>Vytvoření uživatele
 
-Aby se uživatelé mohli zaregistrovat do správy zařízení Intune, musí mít uživatelský účet.
+Uživatelé musí mít uživatelský účet pro zápis do systému správy Intune zařízení. Chcete-li vytvořit nového uživatele:
 
 1. V Intune zvolte **Uživatelé** > **Všichni uživatelé** > **Nový uživatel**.
 ![Prohlížeč](media/quickstart-create-user/create-user.png)
@@ -40,17 +40,19 @@ Aby se uživatelé mohli zaregistrovat do správy zařízení Intune, musí mít
 3. Do pole **Uživatelské jméno** zadejte identifikátor uživatele, například Dewey@contoso.onmicrosoft.com.
 
     > [!NOTE]
-    > Pokud jste nenakonfigurovali název domény zákazníka, použijte název ověřené domény, kterou jste použili k vytvoření předplatného Intune (nebo [bezplatného zkušebního předplatného](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)). 
+    > Pokud jste nenakonfigurovali váš název domény zákazníků, použijte název ověřené domény, který jste použili k vytvoření předplatného Intune (nebo [bezplatnou zkušební verzi](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)). 
 
 4. Zvolte **Zobrazit heslo** a poznamenejte si automaticky vygenerované heslo, abyste se mohli přihlásit k testovacímu zařízení.
 5. Zvolte **Vytvořit**.
 
 ## <a name="assign-a-license-to-the-user"></a>Přiřazení licence uživateli
 
-Po vytvoření uživatele, je nutné použít [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) přiřadit tomuto uživateli licenci Intune. Bez přiřazení licence si uživatelé nemůžou svoje zařízení zaregistrovat do Intune. 
+Po vytvoření uživatele, je nutné použít [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) přiřadit licenci pro Intune. Pokud uživatel není přiřadit licenci, budou moct zaregistrovat svá zařízení v Intune. 
+
+Přiřazení licence Intune uživateli:
 
 1. Přihlaste se k [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí stejných přihlašovacích údajů, které jste použili k přihlášení k Intune.
-2. Zvolte **Uživatelé** > **Aktivní uživatelé** > vyberte uživatele, kterého jste právě vytvořili.
+2. Zvolte **uživatelé** > **aktivní uživatelé** > a vyberte uživatele, který jste právě vytvořili.
 3. Vedle možnosti **Licence na produkty** vyberte **Upravit**.
 4. V části **Umístění** zvolte umístění pro daného uživatele.
 5. Vedle licence na Intune (případně jiné licence, kterou máte a která zahrnuje Intune) klikněte na **Zapnuto**. Zobrazený [název produktu](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** slouží jako plán služeb ve správě Azure. 
@@ -67,7 +69,7 @@ Pokud tento uživatel víc nepotřebujete, můžete odstranit uživatele tak, ž
 
 ## <a name="next-steps"></a>Další postup
 
-V tomto rychlém startu jste vytvořili uživatele a přiřadili mu licenci. Další informace o přidání uživatelů do Intune najdete v článku [Přidání uživatelů a udělení oprávnění pro správu v Intune](users-add.md).
+V tomto rychlém startu jste vytvořili uživatele a přiřazenou licenci Intune. Další informace o přidání uživatelů do Intune najdete v článku [Přidání uživatelů a udělení oprávnění pro správu v Intune](users-add.md).
 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 

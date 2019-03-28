@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ffe5c66de5f088702bdf75ff89d96fc12818d93
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 0dacd331ead84771447168808a354db5524b5ae7
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388357"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514353"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení v Intune pomocí účtu správce registrace zařízení
 
@@ -38,7 +38,8 @@ Pro uživatelské účty správce registrace zařízení a zařízení, která j
   - Uživatelské účty DEM nemůžou používat aplikace z programu Apple Volume Purchase Program (VPP) s uživatelskou licencí Apple VPP, protože ke správě těchto aplikací potřebujete Apple ID jednotlivých uživatelů.
   - Aplikace VPP je možné instalovat do zařízení, pokud tato zařízení mají licence Apple VPP.
   - Zařízení, které jsou zablokovaná pro podmíněný přístup s výjimkou Windows 10 1803 +
-  - Každé zařízení zaregistrovaná pomocí účtu DEM musí mít svůj vlastní licenci pro zařízení Intune.
+  - Všechna zařízení zaregistrovaná s účty správce registrace zařízení musí mít řádnou licenci na musí spravovat přes Intune. Licence může být uživatelskou licenci Intune nebo zařízení licenci Intune.
+
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení

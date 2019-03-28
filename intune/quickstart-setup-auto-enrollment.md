@@ -6,19 +6,19 @@ author: ErikjeMS
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.topic: quickstart
-ms.date: 03/25/2019
+ms.date: 03/26/2019
 ms.author: erikje
 ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f54c0c0d184fcc67fea001fd236ded3c1e998e7b
-ms.sourcegitcommit: 9af102e1232d9a568a7901783c30ba9905e64d99
+ms.openlocfilehash: 3b81525034f69b43abeb60f562e4d6ee6a46b866
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477107"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58514276"
 ---
 # <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý start: Nastavení automatické registrace pro zařízení s Windows 10
 
@@ -33,7 +33,7 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo jako správce služby Intune.
+Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo jako správce služby Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace pro Windows 10
 

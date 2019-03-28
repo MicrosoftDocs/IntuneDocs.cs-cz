@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b3d48789773c655ee7c836b211859528d394d56
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: dc7d806624ca75f2570f46b1f3e0606a6878dcb3
+ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490702"
+ms.locfileid: "58514444"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -500,7 +500,7 @@ Aplikace portál společnosti pro iOS se aktualizuje obrazovky registrace a post
 * Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.  
 * Vraťte se do aplikace portál společnosti, aby prošel registrací.  
 
- Budeme aktualizovat pořadí zápisu a text pokynů na obrazovce odpovídají toto prostředí. Další informace o jak můžete tyto změny připravit zařízení uživatelů, najdete v článku [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/intune/ios-enroll).   
+ Budeme aktualizovat pořadí zápisu a text pokynů na obrazovce odpovídají toto prostředí. Další informace o jak můžete tyto změny připravit zařízení uživatelů, najdete v článku [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune-user-help/enroll-your-device-in-intune-ios#enroll-your-ios-device).   
 
 
 ### <a name="see-also"></a>Viz také:
