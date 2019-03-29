@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2018
+ms.date: 03/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c3fd8ca136862db4e80ff11d31fc4860d4785ff1
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7e6af5a7d7911d7e8ba12e9fd15ad72ca1e51c74
+ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390278"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618469"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -76,14 +76,14 @@ Používání certifikátů PKCS pomocí Intune, budete potřebovat následujíc
 
 K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zařízení kořenový nebo zprostředkující certifikát CA. Následující kroky popisují, jak získat požadovaný certifikát z certifikační autority organizace.
 
-1. Přihlaste se do certifikační autority organizace pomocí účtu, který má oprávnění správce.
-2. Otevřete příkazový řádek jako správce.
-3. Exportujte certifikát kořenové certifikační autority (.cer) do umístění, kam budete mít později přístup.
-4. Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.
+**Použijte příkazový řádek**:  
+1. Přihlaste se ke kořenové certifikační autority serveru pomocí účtu správce.
+ 
+2. Přejděte na **Start** > **spustit**a pak zadejte **Cmd** otevřít příkazový řádek. 
+    
+3. Zadejte **certutil-ca.cert ca_name.cer** exportovat kořenový certifikát jako soubor s názvem *ca_name.cer*.
 
-   `certutil -ca.cert certnew.cer`
 
-   Další informace najdete v tématu [Úkoly programu CertUtil pro správu certifikátů](https://technet.microsoft.com/library/cc772898.aspx#BKMK_ret_sign).
 
 ## <a name="configure-certificate-templates-on-the-ca"></a>Konfigurace šablon certifikátů v certifikační Autoritě
 
