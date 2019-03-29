@@ -18,15 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a61bd060b5c120a73df427688865e2ee976f8f68
-ms.sourcegitcommit: 94f7dc236db5995ffee7cd13c7e02794e561b532
+ms.openlocfilehash: c19973190c367c37e96e66eae8d507b4d94639e9
+ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538768"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618473"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také vyhledat [nadcházejících změnách](in-development.md), [důležitá oznámení](#notices)a informace o [minulých verzích](whats-new-archive.md). 
 
@@ -121,10 +120,13 @@ Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md) o ID klí
 Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení prostředí pro koncové uživatele. Microsoft Edge podnikových funkcí, které jsou povolené prostřednictvím zásad v Intune zahrnují dual-Identity, integraci zásady ochrany aplikací, integrace proxy aplikace Azure a spravovaný Oblíbené položky a zkratky domovské stránky. Další informace najdete v tématu [podpory Microsoft Edge](app-configuration-managed-browser.md#microsoft-edge-support).
 
 #### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices---3105122------"></a>Konektor systému Exchange Online a Intune přestat poskytovat podporu pro pouze zařízení v EAS <!--3105122    -->
-Konzola Intune už podporuje zobrazení a správy EA jen pro zařízení připojené k Exchane Online s Intune Connector. Místo toho máte následující možnosti:
+Konzola Intune už podporuje zobrazení a správy EA jen pro zařízení připojená na Exchange Online s Intune Connectoru. Místo toho máte následující možnosti:
 - Registrace zařízení do správy mobilních zařízení (MDM)
 - Použití zásad ochrany aplikací Intune ke správě svých zařízení
 - Použití ovládacích prvků systému Exchange, jak je uvedeno v [klientů a mobilní zařízení v Exchangi Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online)
+
+### <a name="search-the-all-devices-page-for-an-exact-device-by-using-name---4254930---"></a>Vyhledejte všechny stránky zařízení pro zařízení s přesnou pomocí [název] <!--4254930 -->
+Teď můžete hledat názvu přesné zařízení. Přejděte na **Intune** > **zařízení** > **všechna zařízení** > do vyhledávacího pole před a za název zařízení {} k vyhledání přesná shoda. Například **{Device12345}**.
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
@@ -198,7 +200,7 @@ V Intune, vyberte **klientské aplikace** > **aplikace** > "Název aplikace" > *
 Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new-app-ui). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Dodržování předpisů aplikace Power BI <!-- 1455231 doc-work-item -->
-Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app). Další aktualizace datového skladu Intune, najdete v části [nadcházející změny rozhraní API datového skladu Intune](whats-new.md#upcoming-change-to-the-intune-data-warehouse-api-).
+Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app).
 
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -303,7 +305,7 @@ Platí pro:
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="rename-an-enrolled-windows-device----1911112----"></a>Přejmenovat zaregistrovaná zařízení s Windows <!-- 1911112  -->
-Nyní můžete přejmenovat zaregistrovaná zařízení s Windows 10 (RS4 nebo novější). Chcete-li provést, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení > **přejmenování zařízení**.
+Nyní můžete přejmenovat zaregistrovaná zařízení s Windows 10 (RS4 nebo novější). Chcete-li provést, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení > **přejmenování zařízení**. Tato funkce v současné době nepodporuje přejmenování zařízení hybridní Windows Azure AD.
 
 #### <a name="auto-assign-scope-tags-to-resources-created-by-an-admin-with-that-scope----3173823----"></a>Umožňuje automaticky přiřazovat značky oboru na prostředky vytvořené v rámci správce v tomto oboru <!-- 3173823  -->
 Když správce vytvoří prostředek, všechny značky oboru přiřazeno správce automaticky přiřadí tyto nové prostředky.
@@ -449,7 +451,7 @@ Jako správce IT vám teď můžete nakonfigurovat počet dní, po které koncov
 
 
 #### <a name="intune-device-reporting-fields----2748738---"></a>Zařízení v Intune polí pro vytváření sestav <!-- 2748738 -->
-Intune poskytuje další zařízení polí, včetně Id registrace aplikace, s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole jsou dostupné tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
+Intune poskytuje další zařízení polí, včetně ID registrace aplikace, s Androidem výrobce, model a verzi opravy zabezpečení, jakož i modelu iOS, který pro vytváření sestav. V Intune najdete tato pole jsou dostupné tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** a zvolíte **sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry můžete nakonfigurovat **povolit** seznamu pro výrobce zařízení (Android), **povolit** seznam pro model zařízení (Android a iOS) a minimální opravu zabezpečení Androidu nastavení verze. 
 
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
@@ -841,7 +843,7 @@ Teď můžete vytvořit zásadu konfigurace aplikace Outlook pro iOS a Android p
 Jako správce Intune budete moct nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Klientské aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**.
 
 ####  <a name="windows-line-of-business-lob-apps-file-extensions----1884873---"></a>Přípony souborů z podnikové (LOB) aplikace Windows <!-- 1884873 -->
-Přípony souborů obchodních aplikací pro Windows teď budou zahrnovat *.msi*, *.appx*, *.appxbundle*, *.msix* a *.msixbundle*. Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Pro obchodní aplikace pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
+Přípony souborů pro Windows obchodní aplikace teď bude zahrnovat *MSI*, *.appx*, *.appxbundle*, *.msix*, a *. msixbundle*. Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. Pro obchodní aplikace pro Windows vyberte jako typ aplikace **Obchodní aplikace**, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor s příslušnou příponou.
 
 #### <a name="windows-10-app-deployment-using-intune----2309001---"></a>Nasazení aplikace systému Windows 10 pomocí Intune <!-- 2309001 -->
 S využitím stávající podpory obchodních aplikací a Microsoft Storu pro obchodní aplikace mohou správci prostřednictvím Intune nasadit většinu svých firemních aplikací koncovým uživatelům, kteří používají zařízení s Windows 10. Správci mohou přidávat, instalovat a odinstalovávat aplikace pro uživatele Windows 10 v různých formátech, jako jsou MSI, Setup.exe nebo MSP. Před stažením a instalací Intune vyhodnotí pravidla požadavků a prostřednictvím centra akcí Windows 10 upozorní koncové uživatele na stav nebo požadavky na restartování. Tato funkce účinně uvolňuje ruce organizacím, které chtějí přesunout tuto úlohu do Intune a do cloudu. Tato funkce je v tuto chvíli ve veřejné verzi Preview. Očekáváme, že během několik dalších měsíců přidáme k této funkci důležité nové schopnosti. 

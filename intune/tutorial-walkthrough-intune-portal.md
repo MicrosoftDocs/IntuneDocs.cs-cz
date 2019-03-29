@@ -6,7 +6,7 @@ keywords: ''
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 01/31/2019
+ms.date: 03/28/2019
 ms.topic: tutorial
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c733dbbf992ae10e14ba711b34e621d3f0fb3da8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c601af8c2b73ac68ec88f45d3684fcfd41f1c87f
+ms.sourcegitcommit: 1144247aa7f042eb1b99d8fd8dd17b909eae38c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395268"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58567584"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: Návod služby Microsoft Intune na portálu Azure portal
 
@@ -113,7 +113,7 @@ Postupujte podle následujících kroků, abyste lépe pochopili Intune na port�
 
     Můžete přímo do Intune přidat uživatele nebo synchronizovat uživatele z vaší místní Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění pro přístup k Intune. Další informace najdete v tématu [přidání uživatelů a udělení oprávnění pro správu Intune](users-add.md).
 
-9. Z [Intune](https://aka.ms/intuneportal)vyberte **skupiny** zobrazíte podrobnosti o skupinách Azure Active Directory (Azure AD) v Intune. Jako správce Intune používat skupiny ke správě zařízení a uživatelů. 
+9. Z [Intune](https://aka.ms/intuneportal)vyberte **skupiny** zobrazíte podrobnosti o skupinách Azure Active Directory (Azure AD) v Intune. Jako správce Intune použití skupin pro správu zařízení a uživatelů. 
 
     ![Snímek obrazovky podokna skupiny](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 

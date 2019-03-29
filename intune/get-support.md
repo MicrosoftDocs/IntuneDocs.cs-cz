@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 03/28/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 350ce5980cb7575a991cdc45702db95f802b4749
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df289d84cb78f5cb08db6ca66a0db9b7443171f5
+ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461324"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618461"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -30,16 +30,14 @@ ms.locfileid: "57461324"
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. Telefonické podpory a online podporu fakturace jsou dostupné v dalších jazycích.
 
+Jako správce IT, můžete použít **Nápověda a podpora** možnost do souboru lístek online podpory pro Intune z portálu Azure portal. Informace o rolích Azure AD a oprávnění, která jsou nutná k vytvoření lístku podpory najdete v tématu [rolí správce ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal). 
+
 >[!IMPORTANT]  
 > Pokud potřebujete technickou podporu k produktům třetích stran, které fungují s Intune (jako je Saaswedo, Cisco nebo Lookout), obraťte se nejdřív na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, zkontrolujte, jestli máte produkt správně nakonfigurovaný.
 >
 > Informace o řešení potíží souvisejících s Microsoft Intune najdete v dokumentaci k Intune v části týkající se [řešení potíží](help-desk-operators.md).
 
-Jako správce IT, můžete použít **Nápověda a podpora** možnost do souboru lístek online podpory pro Intune z portálu Azure portal. Pokud chcete vytvořit lístek podpory, musí mít váš účet přiřazenou jednu z následujících [rolí správce v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
 
-- Správce Intune
-- Globální správce
-- Správce služeb  
 
 
 ## <a name="help-and-support-experience"></a>Nápověda a podpora prostředí

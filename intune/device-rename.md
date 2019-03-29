@@ -16,20 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fdd5a19d46cd6081e5671ddd84e29bf7db2ef538
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8dfdc3641d583fc045346034ee8543feff1e7cbf
+ms.sourcegitcommit: 1144247aa7f042eb1b99d8fd8dd17b909eae38c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57398932"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58567560"
 ---
 # <a name="rename-a-windows-device-in-intune"></a>Přejmenování zařízení s Windows v Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-**Přejmenování zařízení** akce slouží k přejmenování vlastněných společností zařízení Windows, které je zaregistrované v Intune. Tím se změní název zařízení v Intune i na zařízení. 
+**Přejmenování zařízení** akce slouží k přejmenování vlastněných společností zařízení Windows, které je zaregistrované v Intune. Název zařízení se změní v Intune a na zařízení. 
 
+Tato funkce v současné době nepodporuje přejmenování zařízení hybridní Windows Azure AD.
 
 ## <a name="rename-a-device"></a>Přejmenování zařízení
 
@@ -37,7 +38,7 @@ ms.locfileid: "57398932"
 2. Zvolte **všechny služby**, vyfiltrujte **Intune**a zvolte **Microsoft Intune**.
 3. Zvolte **zařízení** > **všechna zařízení** > zvolte zařízení s Windows > **Další** > **přejmenování zařízení**.
 4. V **přejmenování zařízení** okno, zadejte nový název do textového pole. Můžete použít písmena, číslice a pomlčky. Název musí obsahovat alespoň jedno písmeno nebo pomlčkou.
-5. Pokud chcete zařízení restartovat po jeho přejmenování, zvolte **Ano** vedle **Resart po přejmenování**.
+5. Pokud chcete zařízení restartovat po jeho přejmenování, zvolte **Ano** vedle **restartování po přejmenování**.
 6. Zvolte **přejmenovat**.
 
 
