@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ceba92a48f4ae899b5a645137ec0891a7c16659
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394830"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658545"
 ---
-# <a name="use-rbac-and-scope-tags-for-distributed-it"></a>Použití značek RBAC a obor pro distribuované IT
+# <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značky oboru pro distribuované IT
 
-Abyste měli jistotu, že správné Správci mají správný přístup a viditelnost pro správné objekty Intune můžete použít řízení přístupu na základě role (RBAC) a značky oboru. Role určují, jaký přístup do objektů, které mají správci. Značky oboru určit, které objekty se správcům zobrazí.
+Abyste měli jistotu, že správné Správci mají správný přístup a viditelnost pro správné objekty Intune můžete použít značky ovládacího prvku a obor přístupu na základě rolí. Role určují, jaký přístup do objektů, které mají správci. Značky oboru určit, které objekty se správcům zobrazí.
 
 Například Řekněme, že správce regionální pobočky Seattle má přiřazenou roli správce zásad a profilů. Chcete, aby tento správce zobrazit a spravovat profily a zásady, které se vztahují jenom na zařízení Seattle. Proto byste:
 
@@ -84,9 +84,13 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 4. Zvolte **vyberte** > **OK** > **Uložit**.
 
 ## <a name="to-assign-a-scope-tag-to-an-app-configuration-policy"></a>Přiřadit značky oboru zásady Konfigurace aplikací
-Pro zařízení s **typ registrace zařízení** nastavena na **spravovaných zařízeních**, zvolte **klientské aplikace** > **zásady Konfigurace aplikací** > zvolte zásady Konfigurace aplikací > **vlastnosti** > **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
+Pro zařízení s **typ registrace zařízení** nastavena na **spravovaných zařízeních**:
+1. Zvolte **klientské aplikace** > **zásady Konfigurace aplikací** > zvolte zásady Konfigurace aplikací.
+2. Zvolte **vlastnosti** > **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
 
-Pro zařízení s **typ registrace zařízení** nastavena na **spravované aplikace**, zvolte **klientské aplikace** > **zásady Konfigurace aplikací**> zvolte zásady Konfigurace aplikací > **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
+Pro zařízení s **typ registrace zařízení** nastavena na **spravované aplikace**:
+1. Zvolte **klientské aplikace** > **zásady Konfigurace aplikací** > zvolte zásady Konfigurace aplikací.
+2. Zvolte **obor (značky)** > zvolte značky, které chcete přiřadit k zásadám.
 
 
 ## <a name="to-assign-a-scope-tag-to-an-ios-app-provisioning-profile"></a>Přiřadit značky oboru zřizovací profil aplikace pro iOS
@@ -107,20 +111,13 @@ Při práci s značky oboru, mějte na paměti následující informace:
     - Zásady Konfigurace aplikací – spravovaná zařízení
     - Skripty prostředí PowerShell
     - Tokeny DEP
+    - zřizovací profil aplikace pro iOS
 - Když správce vytvoří objekt v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový objekt.
 - RBAC v Intune se nevztahuje k rolím Azure Active Directory. Tedy role Správci služby Intune a globální Správci mají přístup správce k Intune bez ohledu na to, co značky oboru mají.
 - Správci v přiřazení role pomocí značky oboru můžete také zobrazit objekty Intune se žádné značky oboru.
 - Pouze můžete přiřadit značky oboru, který máte v přiřazení role.
 - Můžete pouze cílové skupiny, které jsou uvedeny v oboru přiřazení role (skupiny).
 - Pokud máte značka oboru přiřazené pro vaši roli nelze odstranit všechny značky oboru objektu Intune. Vyžaduje se aspoň jeden obor značky.
-- Pokud má uživatel více přiřazení role, oprávnění v těchto přiřazení rolí následujícím způsobem rozšířit na různé objekty:
-    - Přiřazení oprávnění se vztahují jenom na objekty (třeba zásady nebo aplikace) v této roli přiřazení rozsah (skupiny). Přiřazení oprávnění se nevztahují na objekty v jiných přiřazení rolí není-li toto přiřazení je explicitně neudělí.
-    - Pro všechny objekty stejného typu (stejně jako všechny zásady nebo všechny aplikace) se vztahují další oprávnění (jako je například vytvoření a čtení), v některém z přiřazení uživatele.
-    - Oprávnění pro objekty různé typy (třeba zásady nebo aplikace), nemůžete použít k sobě navzájem. Oprávnění ke čtení pro zásady, například, neposkytuje oprávnění pro čtení k aplikacím v přiřazení uživatele.
-
-
-
-
 
 ## <a name="next-steps"></a>Další postup
 

@@ -1,30 +1,30 @@
 ---
-ms.openlocfilehash: 15cf7f35c1ea2a3351b5a6d829cfca42ddb62729
-ms.sourcegitcommit: b085121bf1fc56b636aefe47caeabd1d4ee96ea1
+title: zahrnout soubor
+description: zahrnout soubor
+author: ErikjeMS
+ms.service: microsoft-intune
+ms.topic: include
+ms.date: 03/28/2019
+ms.author: erikje
+ms.custom: include file
+ms.openlocfilehash: 073115d33f9a4f22fe3706ef15860c2a8d8a68ee
+ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58261389"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675489"
 ---
-
 Tato oznámení poskytují důležité informace, které vám pomohou připravit se na budoucí změny Intune a funkce. 
-
-###  <a name="upcoming-change-to-the-intune-data-warehouse-api----1455231-doc-work-item---"></a>Nadcházející změny rozhraní API datového skladu Intune <!-- 1455231 doc-work-item -->
-Budeme během doby 1903 provádět dvě změny:
-- Vyřazení filtr beta<br>
-    Vyřazení nepodporované beta filtry vytvořena instance. Ovlivněné zákazníků byla e-mailem.   
-- 1.0 změny odráží zpět na verzi beta<br>
-    Změny provedené v našich v1.0 kolekcí se projeví nyní ve verzi beta.  
 
 ### <a name="change-in-enrollment-workflow-with-intune-company-portal-on-corporate-ios-devices-authenticating-with-setup-assistant----1927359---"></a>Změnit v pracovním postupu registrace pomocí portálu společnosti Intune na zařízení se systémem iOS podnikové ověřování Pomocníka s nastavením <!-- 1927359 -->
 Je chystanou změnou v pracovním postupu pro registraci zařízení s Iosem prostřednictvím jednoho z Apple podnikové způsoby registrace zařízení – Apple Configurator, obchodní ředitel společnosti Apple, Apple School Manager nebo Apple zařízení registrace programu (DEP), když pomocí instalačního programu Pomocník pro ověřování. Tato změna platí pouze pro zařízení zaregistrovaná s přidružením uživatele.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Když tuto změnu nasazení ~~března~~ dne, profily registrace v Intune na portálu Azure portal bude aktualizován, takže můžete určit, jak ověřovat zařízení a pokud se zobrazí v aplikaci portál společnosti. Bude Vylepšený pracovní postup registrace zařízení s Iosem pomocí výše uvedených metod. Poznámka:
+Když tuto změnu nasazení ~~března~~ dne, profily registrace v Intune na portálu Azure portal bude aktualizován, takže můžete určit, jak ověřovat zařízení a pokud se zobrazí v aplikaci portál společnosti. Bude Vylepšený pracovní postup registrace zařízení s Iosem pomocí výše uvedených metod. 
 
 - Při registraci nového zařízení a ověřování s pomocníkem s nastavením, je budete moci rozhodnout, zda chcete automaticky nasadit aplikaci portál společnosti. Koncoví uživatelé uvidí už "Identifikovat vlastní zařízení" obrazovky a obrazovky "Potvrdit zařízení" v postupem registrace.  
 - Na zařízení už zaregistrované prostřednictvím pomocníka prostřednictvím jednoho z metody registrace podnikového zařízení společnosti Apple je nutné provést akci, pokud chcete zapnout zásady podmíněného přístupu. Budete muset nakonfigurovat zásady Konfigurace aplikací s konkrétní xml tak, aby nabízel až do těchto zařízení aplikaci portál společnosti. Pokyny k tomu jsou v blogovém příspěvku v odkazu Další informace. Pokud se rozhodnete tak, aby nabízel portálu společnosti tímto způsobem, koncovým uživatelům se zobrazí už "Identifikovat vlastní zařízení" obrazovky a obrazovky "Potvrdit zařízení" v postupem registrace. 
-- Po této změně nasazení, pokud jste nenasadili portál společnosti pomocí konfigurační profil aplikací uvedených výše, a pokud budete ke stažení koncovým uživatelům ukládat aplikace portál společnosti z aplikace, budete můžou zaregistrovat, ale zobrazí chybová zpráva. Nebudou moct používat aplikace pro podmíněný přístup. 
+- Po této změně nasazení, pokud jste nenasadili portál společnosti pomocí konfigurační profil aplikací uvedených výše, a pokud budete ke stažení koncovým uživatelům ukládat aplikace portál společnosti z aplikace, můžou zaregistrovat, ale zobrazí chybová zpráva. Nebudou moct používat aplikace pro podmíněný přístup. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Pokud máte v úmyslu používat upravenou pracovní postup, budete chtít aktualizovat označuje, že vaše pokyny pro koncové uživatele:
@@ -39,52 +39,6 @@ Najdete v článku podpory blogovém příspěvku v odkazu Další informace pro
 #### <a name="additional-information"></a>Další informace 
 [https://aka.ms/enrollment_setup_assistant](https://aka.ms/enrollment_setup_assistant)
 
-
-### <a name="company-portal-changes-for-ios-122-enrollment-in-intune"></a>Změny portálu společnosti pro iOS 12.2 registrace v Intune
-Jsme oznámili v MC172534, který Apple oznámil některé změny související s registrací do služby správy mobilních zařízení (MDM) zařízení s Iosem. Tato změna se pravděpodobně projeví ve verzi iOS nárůst 2019. března, stejně jako všechny budoucí iOS verze. Některé aktualizace nyní v aplikaci portál společnosti tak, aby odrážely změny od společnosti Apple. 
- 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud vaši koncoví uživatelé upgradovat svoje zařízení do systému iOS 12.2 a výše, vědět, že je upravený pracovního postupu a že musí podniknout další kroky dokončit registraci do Intune. Po Březnová aktualizace pro Intune tady je co budete dělat-  
-
-- Proces registrace v aplikaci portál společnosti se stáhnout profil správy
-- Přejděte na Nastavení > Obecné > profily a hledat red oznámení "BADGE" oznámení
-- Vyberte správný profil a klikněte na tlačítko prostřednictvím k instalaci
-- Vraťte se do portálu společnosti, aby prošel registrací
-
-Další informace kliknutím získáte podrobné informace o postupem registrace.
-
-Pokud se zruší se tím registrace a třeba novou registraci, zařízení, která jsou už zaregistrované a proveďte upgrade na iOS 12.2 a výše by neměla mít vliv. Prostředí pro registraci na zařízeních s Iosem 12,1 nebo starší nedojde ke změně v této nové verzi společností Apple. Zařízení zaregistrovaná pomocí jednoho nebo metody podnikové registrace od Applu (Device Enrollment Program, Apple School Manager nebo Apple obchodní ředitel) nebude mít vliv.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-By měly vy plánujete provést upgrade, dokumentaci a pokyny pro koncové uživatele. Můžete také nechat helpdesk vědět těchto změn. Budeme vás informovat prostřednictvím naší stránce s novinkami když se tato změna dostane za provozu. 
-
-Pokud chcete využít výhod Zavádíme změny portálu společnosti, požádejte koncové uživatele, aby jejich zařízení po služby Březnová aktualizace pro Intune, když aktualizovat na novou verzi iOS portál společnosti verze aplikace 3.9.0. vydání.
-
-Klikněte na další informace pro podporu blogový příspěvek se snímky obrazovky náhled změn portál společnosti.
-
-Další informace [https://aka.ms/CP_changes_iOS12](https://aka.ms/CP_changes_iOS12)
-
-### <a name="plan-for-change-workflow-changes-for-ios-12-enrollment-in-intune"></a>Plánovaná změna: Změny pracovního postupu pro iOS 12 registrace v Intune
-Apple oznámil některé změny související s registrací do služby správy mobilních zařízení (MDM) zařízení s Iosem. Změny se pravděpodobně projeví v spring 2019 verzi iOS, jakož i všechny budoucí iOS verze.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud vaši koncoví uživatelé upgradovat svoje zařízení na této nové verzi iOS 12 udělali na jaře, vědět, že je upravený pracovního postupu a budete muset provést další kroky dokončit registraci do Intune. Když Apple zavádí tyto změny, koncoví uživatelé budou muset:
-
-- Proces registrace v aplikaci portál společnosti se stáhnout profil správy
-- Přejděte na Nastavení > Obecné > profily
-- Vyberte správný profil a klikněte na tlačítko prostřednictvím k instalaci
-- Vraťte se do portálu společnosti, aby prošel registrací 
-
-Pokud se zruší se tím registrace a třeba novou registraci, zařízení, která jsou už zaregistrovaná a upgrade na novou verzi iOS by neměly být ovlivněny.
-
-Prostředí pro registraci na zařízeních s Iosem 12,1 nebo starší nedojde ke změně v této nové verzi společností Apple.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-By měly vy plánujete provést upgrade, dokumentaci a pokyny pro koncové uživatele. Můžete také nechat helpdesk vědět těchto změn. Budeme vás informovat prostřednictvím Centra zpráv a naší stránce s novinkami když se tato změna dostane za provozu.
-
-#### <a name="additional-information"></a>Další informace
-[Podpora blogový příspěvek se snímky obrazovky a video s postupem registrace očekávané](https://aka.ms/iOS_enrollment_changes).
-
 ### <a name="plan-for-change-user-experience-update-to-intune-company-portal-app-for-ios"></a>Plánovaná změna: Aktualizaci uživatelského prostředí aplikace portál společnosti Intune pro iOS
 Jsme rádi, že Intune bude brzy k vydání důležitou aktualizaci uživatelského prostředí pro aplikaci portál společnosti pro iOS sdílet. Aktualizace se funkce vizuální Design domovské stránky s rozšířené filtry a rychlejší přístup k aplikací a knih.
 
@@ -95,35 +49,13 @@ Tato činnost koncového uživatele aktualizovat, zatímco Správa iOS aktuáln�
 - Schopnost Hledat v e-knihy
 - Historie hledání pro aplikace a e-knihy
 
-Pokud jste součástí programu Apple TestFlight, budete upozorněni o předběžnou verzi aktualizované iOS v Intune aplikaci portál společnosti, až bude k dispozici. Pokud si nejste součástí programu Apple TestFlight, není příliš pozdě pro registraci. Registrace vám umožní použít aktualizované aplikace portál společnosti, než je k dispozici koncovým uživatelům. Budete také zadáte zpětnou vazbu přímo s týmem Intune.  
+Pokud jste součástí programu Apple TestFlight, budete upozorněni o předběžnou verzi aktualizované iOS v Intune aplikaci portál společnosti, až bude k dispozici. Pokud si nejste součástí programu Apple TestFlight, není příliš pozdě pro registraci. Registrace vám umožní použít aktualizované aplikace portál společnosti, než je k dispozici koncovým uživatelům. Můžete také poskytnout zpětnou vazbu přímo s týmem Intune.  
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
 Není nutné provádět žádnou akci; Tyto změny budou vydané v iOS nadcházející verzi CP aplikace. 
 
 #### <a name="additional-information"></a>Další informace
 [https://aka.ms/cp_update_iOS](https://aka.ms/cp_update_iOS)
-
-
-### <a name="reminder-removal-of-existing-exchange-online-to-intune-connectors----3105122---"></a>Připomenutí: Odebrání existující Exchange Online, aby konektory Intune <!-- 3105122 -->
-V MC165575 jsme oznámili, že jsme by odebírat Exchange Online funkce "Službami" konektor Intune v příští aktualizaci. S aktualizací update února do služby Intune Zakážeme tlačítko Nastavit nové konektory. Plánujeme odebrat všechny stávající Exchange Online, aby konektory Intune v březnu 2019.
- 
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Tuto zprávu jste obdrželi, protože naše záznamy ukazují, že využíváte funkci "Službami" konektor ve vašem prostředí. "Službami" konektor podporuje Intune správu Exchange Active Sync jenom zařízení pro Exchange Online a nepodporuje místní infrastrukturu. Tento konektor vzhledem ke způsobu se zobrazovat v konzole, se zobrazí nezbytné pro podmíněný přístup (CA), když ve skutečnosti není potřeba pro certifikační Autoritu. Pravděpodobně používáte tento konektor porozumět využití služby Exchange Online, než uplatňováním podmíněného přístupu. Tyto informace již poskytuje Centrum pro správu Microsoftu 365. Tady najdete poskytuje sestavy o využití pro Exchange Online včetně aplikace zadáte, se používají pro 7 až 180 dní. Další informace najdete v části [sestavy Office 365 v Centru pro správu – používání aplikace e-mailů](https://docs.microsoft.com/office365/admin/activity-reports/email-apps-usage?view=o365-worldwide).  
- 
-Pokud používáte tento konektor ve vašem prostředí, nebude schopna monitorovat nebo vymazat Exchange Active Sync jenom zařízení v Intune až v únoru byly zakázány konektory. Během této změny neexistuje žádné předpokládaný dopad na koncové uživatele.
- 
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Pokud máte Service to Service connector nastavit a mít Exchange Active Sync jenom zařízení, přepněte na jiné metody správy zařízení. Máte následující možnosti:
-
-- Registrace zařízení do správy mobilních zařízení (MDM) 
-- Použití zásad ochrany aplikací Intune ke správě svých zařízení 
-- Použití ovládacích prvků systému Exchange, jak je uvedeno v dokumentaci k [zde](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online) 
-
-#### <a name="additional-information"></a>Další informace  
-https://docs.microsoft.com/intune/exchange-service-connector-configure
-
-
-
 
 ### <a name="check-your-delay-visibility-of-software-updates-setting-in-intune"></a>Zkontrolujte nastavení "Zpoždění viditelnost aktualizací softwaru" v Intune 
 
@@ -147,3 +79,38 @@ Najdete v našem blogu podpory podrobnosti o tom, jak nakonfigurovat toto nastav
 
 #### <a name="additional-information"></a>Další informace 
 [https://aka.ms/Delay_visibility_setting_iOS](https://aka.ms/Delay_visibility_setting_iOS)
+
+### <a name="plan-for-change-upcoming-fix-for-windows-10-email-profiles-in-intune---3904031--"></a>Plánovaná změna: Chystané opravě pro Windows 10 e-mailové profily v Intune <!--3904031-->
+Aktualizujeme tak, jak Intune zapíše e-mailové profily pro Windows 10 v dubnu aktualizace služby Intune k opravě chyby a aby bylo zajištěno, že se e-mailové profily pokračovat v práci v budoucích verzích Windows 10. Se akce, které je potřeba provést po nasazení této opravy.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tato změna ovlivní Pokud používáte Windows 10 e-mailových profilů pomocí
+- Nativní klient e-mailu na stolních počítačů s Windows 10 nebo
+- E-mailového klienta Outlook na Windows 10 Mobile
+
+To má vliv i zákazníky Intune samostatnou a hybridní správy mobilních zařízení (MDM).
+
+Po aktualizaci dubna vidíme, budete muset znovu vytvořit tyto profily v konzole Intune (v konzole správce nástroje Configuration Manager, pokud používáte hybridní MDM).
+
+Pokud neprovedete akce, zde je, co uvidíte pro profily vytvořené před aktualizací dne:
+
+- Existující e-mailové profily se zobrazí v chybovém stavu v konzole pro Intune nebo v konzole pro správu nástroje Configuration Manager, ale koncoví uživatelé budou mít dál přístup k e-mailu. Po zavádění následné aktualizace Windows nebudou fungovat těchto profilů. Koncoví uživatelé na zařízeních s cílem těchto profilů ztratí přístup k e-mailu.
+- Úpravy profilů po. dubna se neprojeví v cílových zařízení.
+- Selektivní vymazání nebude fungovat pro odebrání těchto profilů i po opravy nasazení v dubnu na trh.
+
+Je-li provést akci a znovu vytvořte e-mailové profily, koncoví uživatelé muset projít kroky, které jsou podobné těm, při prvním nasazení e-mailový profil. E-mailu bude blokovat synchronizaci, dokud nepřijme aktualizace, která se použije nový profil.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Je potřeba provést akci, až po opravy nasazení aktualizace. dubna. Budeme pro vás prostřednictvím Centra zpráv když tuto změnu dostane za provozu, abyste je mohli začít znovu vytvořit vaše profily v Intune.
+
+Pokud používáte Windows 10 e-mailové profily v Intune, budete muset provést následující kroky:
+
+1. Zachycení existujících nastavení profilu Windows 10
+2. Zrušit nebo odstranit existující profily
+3. Vytváření nových profilů pomocí zachycené nastavení a přiřaďte nové profily ke stejným skupinám
+
+Budete muset informovat koncové uživatele a nechat helpdesk vědět této změny. Najdete podporu blogový příspěvek na další informace o podrobnosti o chybě a pokyny k opakovaným vytvářením těchto profilů.
+
+#### <a name="additional-information"></a>Další informace
+https://aka.ms/Win10EmailProfiles
+

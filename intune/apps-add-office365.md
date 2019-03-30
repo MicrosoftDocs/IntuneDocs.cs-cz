@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d8ddb81a488ccf0cc902ccf792463144d1b0116
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 4f84bb6573d6bdf3aef3088bc58dec5ed067fe3d
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394923"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658563"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
-Tento typ aplikace vám usnadní přiřazování aplikací Office 365 na vámi spravovaná zařízení s Windows 10. Můžete také nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Online Plan 2, pokud vlastníte jejich licence. Požadované aplikace se v seznamu aplikací v konzole Intune zobrazí jako jedna položka.
+Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, musíte je přidat do Intune. Jeden z dostupných [typy aplikací](apps-add.md#app-types-in-microsoft-intune) je aplikací Office 365 pro zařízení s Windows 10. Pokud vyberete tento typ aplikace v Intune, můžete přiřadit a instalaci aplikací Office 365 na vámi spravovaných zařízeních s Windows 10. Můžete také přiřadit a nainstalovat aplikace pro klienta pro stolní počítače Microsoft Project Online a Microsoft Visio Online Plan 2, pokud vlastníte jejich licence. Dostupné aplikace Office 365 se zobrazí jako jedna položka v seznamu aplikací v konzole Intune v rámci Azure.
 
 > [!NOTE]
 > K aktivaci aplikací Office 365 ProPlus nasazených prostřednictvím Microsoft Intune musíte použít licence Office 365 ProPlus. V současné době Intune nepodporuje edici Office 365 Business.

@@ -4,7 +4,7 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Zjistěte
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2018
+ms.date: 03/29/2018
 ms.topic: conceptual
 audience: ITPro
 ms.prod: microsoft-365-enterprise
@@ -16,16 +16,16 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e34c3de77dde59b87829617b8cbbd2614f7081
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ea24101600c7a0e485440f50fc043c14bd840968
+ms.sourcegitcommit: 8e6f4acb592dbe5de63aa7642ee9487288740714
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57231243"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58646484"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
-Hlavní úlohou každého správce je ochrana a zabezpečení prostředků a dat příslušné organizace. Této úloze se říká správa zařízení. Uživatelé mají mnoho zařízení, na kterých otevírají a sdílejí osobní soubory, navštěvují weby a instalují aplikace a hry. Titíž uživatelé jsou také zaměstnanci a studenti a chtějí pomocí svých zařízení přistupovat k pracovním a školním prostředkům, jako jsou e-mail a OneNote. *Správa zařízení* umožňuje organizacím chránit a zabezpečit svoje prostředky a data. 
+Hlavní úlohou každého správce je ochrana a zabezpečení prostředků a dat příslušné organizace. Tato úloha je *správy zařízení*. Uživatelé mají mnoho zařízení, na kterých otevírají a sdílejí osobní soubory, navštěvují weby a instalují aplikace a hry. Titíž uživatelé jsou také zaměstnanci a studenti a chtějí pomocí svých zařízení přistupovat k pracovním a školním prostředkům, jako jsou e-mail a OneNote. Správa zařízení umožňuje organizacím chránit a zabezpečit svoje prostředky a data. 
 
 Pomocí poskytovatele správy zařízení můžou organizace zajistit, aby přístup k vlastnickým informacím měli jenom autorizovaní jednotlivci a zařízení. Obdobně také uživatelé zařízení můžou být při přístupu k pracovním datům ze svého telefonu klidní, protože vědí, že jejich zařízení splňuje požadavky organizace na zabezpečení. Jako zástupci organizace si možná kladete otázku: **Jaký produkt máme k ochraně našich prostředků použít?**
 
