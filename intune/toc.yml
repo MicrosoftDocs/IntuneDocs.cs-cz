@@ -19,7 +19,7 @@ items:
   items:
   - name: Vyzkoušejte si Intune zdarma
     href: free-trial-sign-up.md
-  - name: Umožňuje vytvořit uživatele.
+  - name: Vytvoření uživatele
     href: quickstart-create-user.md
   - name: Vytvoření skupiny
     href: quickstart-create-group.md
@@ -154,6 +154,10 @@ items:
       items:
       - name: Řízení přístupu na základě role
         href: role-based-access-control.md
+      - name: Přiřazení role uživateli
+        href: assign-role.md
+      - name: Vytvoření vlastní role
+        href: create-custom-role.md
       - name: Použití značek oboru
         href: scope-tags.md
   - name: Registrovat zařízení
@@ -284,7 +288,7 @@ items:
       href: compliance-policy-create-windows.md
     - name: Dodržování předpisů podle umístění
       href: use-network-locations.md
-    - name: Evaluate Policy (Vyhodnotit zásadu)
+    - name: Vyhodnocení zásady
       href: policy-evaluate.md
     - name: Akce při nedodržení předpisů
       href: actions-for-noncompliance.md
@@ -945,9 +949,9 @@ items:
       href: data-outside-protect.md
     - name: Zabránění únikům dat na nespravovaných zařízeních
       href: data-leak-prevention.md
-ms.openlocfilehash: d273d9c300f49a2d78f8b9ed62031497b06a0060
-ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.openlocfilehash: c58e250d7aeb4913554874c8a1e931b2dc356dfd
+ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58514418"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658570"
