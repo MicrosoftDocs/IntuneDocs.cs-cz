@@ -1,6 +1,6 @@
 ---
 title: Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zjistěte, jak zaregistrovat zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune.
 keywords: ''
 author: ErikjeMS
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59891f042bed9602bd755e9320e0660ffaa6c3bc
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f56e2987fefcc514911f762c5fd82ca1ebc6779c
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394401"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798282"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaná zařízení (Preview)
 

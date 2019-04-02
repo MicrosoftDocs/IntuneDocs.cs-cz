@@ -1,6 +1,6 @@
 ---
 title: 'Rychlý start: Vytvoření e-mailového profilu zařízení pro iOS'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zjistěte, jak pomocí Microsoft Intune vytvořit e-mailový profil zařízení, aby se zařízení s iOSem mohla bezpečně připojovat k firemnímu e-mailu.
 keywords: ''
 author: brenduns
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5f78c2b47bb916fd06492175b688afd17297384
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: b252c9d3d719847c8c0911b6cbce06c83bb4bf0e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490672"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799278"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvořte profil zařízení pro iOS
 

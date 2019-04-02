@@ -1,6 +1,6 @@
 ---
 title: Při vývoji – Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Microsoft Intune nabízí ve vývoji
 keywords: ''
 author: ErikjeMS
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e068e2c9834290b705e8e7bc2f895636415f9ba
-ms.sourcegitcommit: 69aaf89140f82f344404e75a69dc59d8a1585b10
+ms.openlocfilehash: 8807cb090cfb662f2ab273d29baf2715dfcd6426
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675438"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799124"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Při vývoji pro Microsoft Intune – duben 2019
 
 Pomáhat při vaší připravenosti a plánování, tato stránka seznamy uživatelské rozhraní Intune aktualizuje a funkce, které jsou ve vývoji, ale ještě není. Navíc platí:
 
-- Pokud předpokládáme, že budete muset udělat před změnu, budeme publikovat praktického příspěvek Centru zpráv Office.
+- Pokud předpokládáme, že budete muset udělat před změnu, budeme publikovat doplňkové příspěvek Centru zpráv Office.
 - Když funkce se spustí v produkčním prostředí, buď ve verzi preview nebo obecně k dispozici, popis funkce se přesune mimo tuto stránku a na [stránce s novinkami](whats-new.md).
 - Na této stránce a [stránce s novinkami](whats-new.md) jsou pravidelně aktualizovány. Přijďte se tedy znovu podívat, jestli nejsou k dispozici nové informace.
 - Odkazovat [M365 plán](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) pro strategické dodávky a časovými osami.

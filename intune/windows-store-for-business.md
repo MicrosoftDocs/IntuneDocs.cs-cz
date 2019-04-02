@@ -1,6 +1,6 @@
 ---
 title: Správa aplikací z Microsoft Storu pro firmy
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zjistěte, jak můžete synchronizovat aplikace z Microsoft Storu pro firmy do Intune a pak je přiřazovat a sledovat.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cde2f123c40b9a823270bc89b78c8c01eff75585
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 697d4f0b7bd2b5739847968dccdca2517a5a53fa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389661"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798433"
 ---
 # <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
 

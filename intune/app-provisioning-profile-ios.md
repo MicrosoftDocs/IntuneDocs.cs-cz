@@ -1,6 +1,6 @@
 ---
 title: Zřizovací profily pro aplikace iOS v Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Intune poskytuje nástroje umožňující proaktivně přiřadit nový zřizovací profil k zařízením s aplikacemi, kterým brzy vyprší platnost.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b92f50be9b1473c9f2d13b6946b1b069bfbed07
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 11b483fc5a0293999603b801a4844a73bab91347
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399113"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798191"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí zřizovacích profilů pro aplikace pro iOS
 

@@ -1,6 +1,6 @@
 ---
 title: Přidání uživatelů a udělení oprávnění
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Synchronizace místních uživatelů s Azure AD a udělení správci oprávnění ke správě předplatného Intune.
 keywords: ''
 author: ErikjeMS
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca4b48c2c611273cee385fd94486591e8a97d5a0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: a4e25ab5a546f20309853346d0d4ded42fee6e8b
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460916"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799407"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 

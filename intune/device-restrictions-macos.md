@@ -1,6 +1,6 @@
 ---
 title: nastavení pro zařízení s macOS v Microsoft Intune – Azure | Dokumentace Microsoftu
-titlesuffix: ''
+titleSuffix: ''
 description: Přidat, konfigurovat, nebo vytvořit nastavení na zařízení s macOS k omezení funkcí, včetně nastavení požadavky na heslo, řízení na uzamčené obrazovce, pomocí integrovaných aplikací, přidejte s omezením pomocí specifikátoru nebo schválené aplikace, zpracovávat zařízeními bluetooth, připojit ke cloudu pro zálohování a úložiště, povolte režim veřejného terminálu, přidejte domény a řídit, jak uživatelé pracují s webovým prohlížečem Safari v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a59c40a5f1095e832f84c4b21d553e3c5f11ed7
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 5feec66e791da4038bd069cdad69a7ba573f27f3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330415"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798373"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s macOS k povolení nebo zakázání funkcí pomocí Intune
 

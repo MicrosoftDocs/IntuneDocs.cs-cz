@@ -1,6 +1,6 @@
 ---
 title: Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zásady konfigurace aplikací v Microsoft Intune slouží k poskytování nastavení, když uživatelé spustí aplikaci v pracovním profilu Androidu.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 599b31a30d1a2ab05e8a8c00e0ad704d2dd38b6c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dccbfe597fa4bd461bb71cb86d38ffdfd52d719a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400071"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799075"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem
 

@@ -1,6 +1,6 @@
 ---
 title: Konfigurace dodržování předpisů zařízení a aplikací během migrace do Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tento článek popisuje kroky potřebné ke konfiguraci zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3cdda7464a2bf5ccdf0b86c87bc081d59ae5d80
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 76c6000c375c3128c0832f3dd6b40fe1ed4cf34b
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392403"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798616"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurace zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune
 

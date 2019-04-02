@@ -1,6 +1,6 @@
 ---
 title: Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem enterprise
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Naučte se synchronizovat a přiřadit aplikace do zařízení s Androidem enterprise v spravovaný obchod Google Play storu.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1000f71ba6e9da979b9a86a72342908baf00a389
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2b99f9e394fdced985b5b1309640b09b8e7fa5e6
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389205"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799588"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání aplikací pro spravovaný obchod Google Play do podnikových zařízení s Androidem v Intune
 

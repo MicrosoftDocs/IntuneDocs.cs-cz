@@ -1,6 +1,6 @@
 ---
 title: Správa licenčních smluv k softwaru v počítačích se softwarovým klientem Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Intune můžete použít ke správě licenčních smluv pro software zakoupený prostřednictvím multilicenční smlouvy s Microsoftem i pro jinak zakoupený software.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d79cf2e8d61de1737d3a47533fbf25976c32d7a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 92262a9d1f07b8756ced8788feee586ffa30088a
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461205"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798797"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 

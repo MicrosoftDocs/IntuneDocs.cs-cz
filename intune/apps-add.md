@@ -1,6 +1,6 @@
 ---
 title: Přidání aplikací do Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Zjistěte, jak přidat aplikace do Microsoft Intune, aby je bylo možné přiřadit uživatelům a zařízením. Intune podporuje širokou škálu typů aplikací.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 008a2096ab01d1fe9642a5adf153ccd06c6dbe57
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3dfd2442d737b91d5722f26313ac1d0200a341a7
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400343"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799486"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 

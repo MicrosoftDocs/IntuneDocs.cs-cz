@@ -1,6 +1,6 @@
 ---
 title: Úvod k plánování a návrhu Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tento článek slouží jako úvod ke všem oddílům plánování, návrhu a implementace Microsoft Intune. Obsahuje nástroje, které vám pomohou stanovit cíle, scénáře a požadavky na použití, a umožní vám vytvořit plány nasazení, komunikace, podpory, testování a ověřování.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e59706c1a6bbf3195f402bf9582baab13d3905d9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5b8a4a76e59604038ae133701b3378c573e862aa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57398915"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799572"
 ---
 # <a name="intune-deployment-planning-design-and-implementation-guide"></a>Průvodce plánováním nasazení, návrhem a implementací Intune
 

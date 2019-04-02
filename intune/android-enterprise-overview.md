@@ -1,6 +1,6 @@
 ---
 title: Správa zařízení pracovním profilem Androidu Enterprise v Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Microsoft Intune spravuje zařízení s Androidem Enterprise pracovním profilem poskytnout další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje osobní zařízení s Androidem.
 keywords: ''
 author: ErikjeMS
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f7726b99a870a404b5fd1ca95dad9d9a48ea3a7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 305ed5c18ad0e8beeaa47bc644266d4cb19f80e6
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396322"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799333"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 

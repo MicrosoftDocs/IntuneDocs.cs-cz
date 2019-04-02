@@ -1,6 +1,6 @@
 ---
 title: Příprava plánu komunikace při nasazení
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tento článek vám pomůže vytvořit plán komunikace při nasazení služby Microsoft Intune.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5732faaff872ca06d54f0103bfe0de8bd906149
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6e3584d97bf9f1a223b15c986f398681a20520c1
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394385"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799536"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 

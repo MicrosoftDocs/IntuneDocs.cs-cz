@@ -1,6 +1,6 @@
 ---
 title: Rychlý start – vytvoření zásady dodržování předpisů pro hesla pro zařízení s Androidem
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: V tomto rychlém startu použijete Microsoft Intune k nastavení délky hesla, která se vyžaduje pro zařízení s Androidem.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02050dc3cd1047a38e9be78a9e37be0bd313be26
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: f4a16272f32b8546e7e9bb12a22f16235ab49aed
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490558"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799654"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý start: Vytvoření zásady dodržování předpisů hesla pro zařízení s Androidem
 

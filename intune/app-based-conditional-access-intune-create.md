@@ -1,6 +1,6 @@
 ---
 title: Nastavení zásad podmíněného přístupu na základě aplikace v Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace.
 keywords: ''
 author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc73e24da6cd774811eb30d0ca7f551760b9a274
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1514fe9dfcd09e2b77967b0fed8c36fb7a06634f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389383"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798461"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 03/31/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46b2dbf31d5813a646fc2ea1a97f7ba273c3c6e9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1538693923a1fcefcfee06022ed4c11d746c3be9
+ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394340"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788501"
 ---
 # <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby používání podmíněného přístupu s Intune?
 
@@ -72,15 +72,15 @@ Pokud zařízení nesplňuje stanovené podmínky, je koncový uživatel provede
 
 Konektor Intune Exchange si vyžádá všechny záznamy Exchange Active Sync (EAS), které existují na serveru Exchange, aby Intune mohl tyto záznamy EAS namapovat na záznamy zařízení Intune. Tyto záznamy jsou zařízení zaregistrovaná a rozpoznaná službou Intune. Tento proces povolí nebo zablokuje přístup k e-mailu.
 
-Pokud je záznam EAS zcela nový a Intune o něm neví, vydá Intune rutinu, která zablokuje přístup k e-mailu. Tady jsou další podrobnosti o tom, jak tento proces funguje:
+Pokud je záznam EAS zcela nový a Intune není něm neví, vydá Intune rutin (anglicky "rutinu"), která blokuje přístup k e-mailu. Tady jsou další podrobnosti o tom, jak tento proces funguje:
 
 ![Vývojový diagram místního Exchange s podmíněným přístupem](./media/ca-intune-common-ways-1.png)
 
 1.  Uživatel se pokusí o přístup k podnikovému e-mailu, který je hostovaný na místním Exchangi 2010 SP1 nebo novějším.
 
-2.  Pokud zařízení nespravuje Intune, bude mít zablokovaný přístup k e-mailu. Intune odešle oznámení o zablokování klientovi EAS.
+2.  Pokud zařízení nespravuje Intune, se zablokuje přístup k e-mailu. Intune odešle oznámení o zablokování klientovi EAS.
 
-3.  EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě obsahující odkazy, aby uživatelé mohli svá zařízení zaregistrovat.
+3.  EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě obsahující odkazy, aby uživatelé mohli zaregistrovat svá zařízení.
 
 4.  Provede se proces připojení k pracovišti, který je prvním krokem k tomu, aby se zařízení spravovalo pomocí Intune.
 
@@ -92,7 +92,7 @@ Pokud je záznam EAS zcela nový a Intune o něm neví, vydá Intune rutinu, kte
 
 8.  Registrace zařízení Azure AD uloží informace o stavu zařízení.
 
-9.  Pokud uživatel splňuje zásady podmíněného přístupu, Intune prostřednictvím konektoru Intune Exchange vydá rutinu, která umožní synchronizaci poštovní schránky.
+9.  Pokud uživatel splňuje zásady podmíněného přístupu, vydá Intune rutinu prostřednictvím konektoru Intune Exchange connector, která umožní synchronizaci poštovní schránky.
 
 10. Server Exchange odešle oznámení klientovi EAS, aby uživatel získal přístup k e-mailu.
 
@@ -102,10 +102,10 @@ Intune vyhodnocuje a spravuje stav zařízení.
 
 #### <a name="whats-the-exchange-server-role"></a>Jaká je role serveru Exchange?
 
-Server Exchange poskytuje rozhraní API a infrastrukturu pro přesun zařízení do jeho karantény.
+Exchange server poskytuje rozhraní API a infrastrukturu pro přesun zařízení do karantény.
 
 > [!IMPORTANT]
-> Mějte na paměti, že uživatel, který zařízení používá, musí mít přiřazený profil dodržování předpisů, aby se dodržování předpisů zařízením vyhodnocovalo. Pokud uživatel nemá nasazené žádné zásady dodržování předpisů, považuje se zařízení za dodržující předpisy a žádná omezení přístupu se neuplatní.
+> Mějte na paměti, že uživatel, který zařízení používá, musí mít přiřazený k nim, zařízení může být vyhodnocen pro dodržování předpisů profil dodržování předpisů. Pokud uživatel nemá nasazené žádné zásady dodržování předpisů, považuje se zařízení za dodržující předpisy a žádná omezení přístupu se neuplatní.
 
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
@@ -137,7 +137,7 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 -   **Azure AD připojených k doméně a správa prostřednictvím Intune:** Tento scénář je typický pro zvolte si vlastní zařízení (CYOD) a scénáře přenosných počítačů kde jsou tato zařízení zřídka připojená k podnikové síti. Zařízení se připojí k Azure AD a zaregistruje v Intune, čímž se odeberou všechny závislosti na místním AD a řadičích domény. To se dá využít jako kritérium podmíněného přístupu při přístupu k podnikovým prostředkům.
 
--   **AD připojených k doméně a System Center Configuration Manager:** Od aktuální větve System Center Configuration Manager poskytuje možnosti podmíněného přístupu, které můžou vyhodnocovat konkrétní kritéria dodržování předpisů, kromě toho bude počítač Připojený k doméně:
+-   **AD připojených k doméně a System Center Configuration Manager:** Od aktuální větve System Center Configuration Manager poskytuje možnosti podmíněného přístupu, které můžou vyhodnocovat konkrétní kritéria dodržování předpisů, kromě toho, že počítač Připojený k doméně:
 
     -   Je počítač zašifrovaný?
 

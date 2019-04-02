@@ -1,6 +1,6 @@
 ---
 title: Určení cílových skupin a časových rámců nasazení
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tento článek vám pomůže rozhodnout, jakým skupinám budete nasazovat Microsoft Intune, a stanovit časové rámce tohoto nasazení.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fedc1a0c089df0859b4072222f3d1e46d0ccc048
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e75900137ce1e590078a8baa5d00dbc617afc937
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397623"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798907"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/01/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28f8a589f20cb63ad4f9873942e9ad511d729b37
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 535f66c68b066454ce9706b1dd1d7a4fce5c265c
+ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566450"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788483"
 ---
 # <a name="windows-10-and-later-settings-to-manage-shared-devices-using-intune"></a>Nastavení Windows 10 a novější spravovat sdílená zařízení pomocí Intune
 
@@ -60,6 +60,9 @@ Další informace o této funkci v Intune najdete v tématu [ovládat přístup,
 - **Zásady vzdělávání**: Zvolte **povoleno** použít doporučená nastavení pro zařízení používaná v školy, které jsou více omezující. Zvolte **zakázané** tak výchozí a doporučený vzdělávání zásady nepoužijí. **Není nakonfigurováno** (výchozí) opustí, tato nastavení nespravovaných přes Intune a nebude push všechny zásady pro řízení tohoto nastavení na zařízení.
 
   Další informace o čem vzdělávání zásady, najdete v části [doporučené konfigurace Windows 10 pro education zákazníky](https://docs.microsoft.com/education/windows/configure-windows-for-education).
+
+> [!TIP]
+> [Nastavení sdílené nebo hosta PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc) (otevře jiný web docs) je skvělým zdrojem o této funkci Windows 10, včetně konceptů a zásady skupiny, které lze nastavit ve sdíleném režimu.
 
 ## <a name="next-steps"></a>Další postup
 

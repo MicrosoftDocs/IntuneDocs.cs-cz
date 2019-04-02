@@ -1,6 +1,6 @@
 ---
 title: Řešení konfliktů GPO a zásad Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Přečtěte si o řešení konfliktů mezi zásadami skupiny a zásadami konfigurace Intune.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7024d2c5f9e6b5ac3f844a2f974d2a1d5a0444b0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 05941f35fe2a3501d6596e4d818027f7e1a57c79
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57459930"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798411"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Řešení konfliktů objektů zásad skupiny (GPO) a zásad Microsoft Intune
 

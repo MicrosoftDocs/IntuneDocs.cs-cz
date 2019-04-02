@@ -1,6 +1,6 @@
 ---
 title: Zařízení – Datový sklad Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Téma referenčních informací ke kategorii Zařízení pro kolekce entit v rozhraní API datového skladu Intune
 keywords: Datový sklad Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29213400b5baf9705c188bb45b3666b65262d577
-ms.sourcegitcommit: 93286c22426dcb59191a99e3cf2af4ff6ff16522
+ms.openlocfilehash: e8af3dffbb4875e588d20eeaef5193122c1f1f49
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58358229"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799679"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 

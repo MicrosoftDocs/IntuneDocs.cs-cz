@@ -1,6 +1,6 @@
 ---
 title: Rychlý start – vytvoření a přiřazení zásady ochrany aplikací
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: V tomto rychlém startu použijete Microsoft Intune k vytvoření a přiřazení zásady ochrany aplikací.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b48efb05979f879c039ad14a90df2cac532b8a0e
-ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.openlocfilehash: a883536b1c56948083a7e32bcb56d8d182fddfb5
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58514451"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799094"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikace
 

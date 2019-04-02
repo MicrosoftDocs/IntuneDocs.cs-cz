@@ -1,6 +1,6 @@
 ---
 title: Nastavení zásad ochrany aplikací pro Android | Microsoft Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e604b3be6ce0381429eb263d9a1d15d7cf39c55
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 22abe2d0ab06f9d9fbc41e764f180b6a14585f2d
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394694"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799560"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -34,9 +34,9 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
 | **Zálohování dat organizace pro Android do služeb zálohování** | Vyberte **bloku** k této aplikaci zabránit v zálohování pracovních nebo školních dat [Android Backup Service](https://developer.android.com/google/backup/index.html).<br><br> Vyberte **povolit** chcete této aplikaci k zálohování pracovních nebo školních dat povolit.| **Povoleno** |
-| **Odeslání dat organizace do jiných aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad**: Povolíte přenos jenom do jiných aplikací spravovaných pomocí zásad.</li> <li>**Všechny aplikace**: Povolíte přenos do všech aplikací. </li> <li>**Žádný**: Nepovolovat přenos dat do žádné aplikace, včetně jiných aplikací spravovaných pomocí zásad.</li></ul> <p>U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje zásady ochrany aplikací Intune, můžete vytvořit vlastní výjimky. Další informace najdete v tématu [výjimky přenosu dat](#Data-transfer-exemptions).<p>Tato zásada může platit také pro odkazy na aplikace pro Android.  Spravuje obecné webové odkazy **otevřete aplikaci odkazy v aplikaci Intune Managed Browser** nastavení zásad.<p>**Poznámka:** *Intune aktuálně nepodporuje funkci Android Instant Apps. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje. Další informace najdete v tématu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) v dokumentaci pro vývojáře Androidu.*</p>| **Všechny aplikace** | 
+| **Odeslání dat organizace do jiných aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad**: Povolíte přenos jenom do jiných aplikací spravovaných pomocí zásad.</li> <li>**Všechny aplikace**: Povolíte přenos do všech aplikací. </li> <li>**Žádný**: Nepovolovat přenos dat do žádné aplikace, včetně jiných aplikací spravovaných pomocí zásad.</li></ul> <p>U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje zásady ochrany aplikací Intune, můžete vytvořit vlastní výjimky. Další informace najdete v tématu [výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Tato zásada může platit také pro odkazy na aplikace pro Android.  Spravuje obecné webové odkazy **otevřete aplikaci odkazy v aplikaci Intune Managed Browser** nastavení zásad.<p>**Poznámka:** *Intune aktuálně nepodporuje funkci Android Instant Apps. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje. Další informace najdete v tématu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) v dokumentaci pro vývojáře Androidu.*</p>| **Všechny aplikace** | 
 |<ul><ui> **Vyberte aplikace, které se mají vyloučit** | Tato možnost je k dispozici, když vyberete *aplikace spravované podle zásad* pro možnost předchozí. | |
-| **Přijímat data z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad**: Povolíte přenos jenom z ostatních aplikací spravovaných zásadou.</li><li>**Všechny aplikace**: Povolíte přenos dat ze žádné aplikace.</li><li>**Žádný**: Nepovolovat přenos dat ze žádné aplikace, včetně jiných aplikací spravovaných pomocí zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](#data-transfer-exemptions). | **Všechny aplikace** |
+| **Přijímat data z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad**: Povolíte přenos jenom z ostatních aplikací spravovaných zásadou.</li><li>**Všechny aplikace**: Povolíte přenos dat ze žádné aplikace.</li><li>**Žádný**: Nepovolovat přenos dat ze žádné aplikace, včetně jiných aplikací spravovaných pomocí zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions). | **Všechny aplikace** |
 | **Ukládejte si kopie dat organizace** | Zvolte **bloku** zakážete použití možnosti Uložit jako v této aplikaci. Zvolte **povolit** Pokud chcete povolit použití možnosti Uložit jako. **Poznámka:** *Toto nastavení je podporováno pro aplikaci Microsoft Excel, OneNote, PowerPoint a Word. Může být také podporován třetích stran a obchodní aplikace.*| **Povoleno** |  
 |<ul><ui> **Uživateli umožňují uložit kopie vybraných služeb** |Uživatelé můžou k ukládání používat vybrané služby (OneDrive pro firmy, SharePoint a místní úložiště). Všechny ostatní služby budou blokované.  | **Vybraná 0** |
 | **Omezit operace vyjmutí, kopírování a vkládání mezi jinými aplikacemi** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Zablokuje**:  Nepovoluje akce vyjmutí, kopírování a vložení mezi touto aplikací a jakoukoli jinou aplikaci.</li><li>**Aplikace spravované podle zásad**: Povolit akce vyjmutí, kopírování a vložení mezi touto a jinými aplikacemi spravovanými zásadami.</li><li>**S vložením spravované podle zásad**: Povoluje vyjmutí a kopírování mezi touto a jinými aplikacemi spravovanými zásadami. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace**: Žádná omezení pro vyjmutí, kopírování a vložení do a z této aplikace. | **Libovolná aplikace** |

@@ -1,6 +1,6 @@
 ---
 title: Využití podmíněného přístupu k většímu přijetí koncovými uživateli
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Naučte se využít podmíněný přístup k řízení registrací v Microsoft Intune.
 keywords: ''
 author: dougeby
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13215879c90c15a366fa3f2ab8df2c401b660bcc
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 803bcda24b7d6fa1cf923ff28848b8d2b71cf62e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393974"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798387"
 ---
 # <a name="drive-end-user-adoption-with-conditional-access-in-microsoft-intune"></a>Využití podmíněného přístupu v Microsoft Intune pro účely přijetí koncovými uživateli
 

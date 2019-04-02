@@ -1,6 +1,6 @@
 ---
 title: Vyřazení zámku aktivace v iOSu přes Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Přečtěte si, jak se dá přes Intune vyřadit zámek aktivace v iOSu, aby bylo možné přistupovat k uzamčeným zařízením.
 keywords: ''
 author: ErikjeMS
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb8967c82758bbf5749a2335f706d1e32e51010e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 406a08788663603340ab4af78217a07e68e66604
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397810"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799556"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Vyřazení zámku aktivace přes Intune na zařízeních s iOSem, která jsou pod dohledem
 

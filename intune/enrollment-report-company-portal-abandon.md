@@ -1,6 +1,6 @@
 ---
 title: Sestava neúplné uživatele registrace v Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Informace o registraci neúplné uživatele.
 keywords: ''
 author: ErikjeMS
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0202fba7e31b7be1d325617867be9a43d4f2064a
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 78d55ef2baf0608d22af53bf0803634700e01eb3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991138"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798286"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Sestava registrace neúplné uživatele
 

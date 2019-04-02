@@ -1,6 +1,6 @@
 ---
 title: Přidání aplikací pro App Store (iOS) do Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro iOS. Můžete přiřadit aplikace pomocí této metody, pokud aplikace jsou zadarmo dostupné v App Store.
 keywords: Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80a07fea5f014b0a363c97fce2f3f20ca83f7d72
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 454000ccc7ac2d6f531b5ab43bb7652541559992
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57395861"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799540"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 

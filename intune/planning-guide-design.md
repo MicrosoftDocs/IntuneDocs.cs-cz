@@ -1,6 +1,6 @@
 ---
 title: Vytvoření návrhu Microsoft Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tento článek vám pomůže vytvořit a implementovat návrh cloudového řešení Microsoft Intune.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3707ee66d11af0550659d8357d84aa0fea534778
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 307895935e1cd6fe2489a4ee8ae03333ce97d55b
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394690"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799051"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 

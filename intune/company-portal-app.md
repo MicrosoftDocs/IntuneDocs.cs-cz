@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50be92847922458a7145e02bcc2125ddadc6976f
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 33f24a3d7b30973855bb303bb97bf703cd4dc5fa
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991111"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798249"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -91,7 +91,7 @@ Zobrazte si firemní logo, které odráží značku vaší společnosti. Po ulo�
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Prostřednictvím této možnosti můžete povolit zobrazení obrázku na pozadí na stránce profilu uživatele v aplikaci Portál společnosti.<p>*Poznámka*: Na obrázku, může se zobrazit odlišně pro různé platformy.<p><ul><li>Doporučená šířka obrázku: Menší než 1125px, ale není menší než 640 pixelů</li><li>Maximální velikost obrázku: 1.3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. Na portál společnosti pro iOS zobrazuje jako obrázek pozadí na stránce profilu uživatele.<p><ul><li>Doporučená šířka obrázku: Menší než 1125px, ale není menší než 640 pixelů</li><li>Maximální velikost obrázku: 1.3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 

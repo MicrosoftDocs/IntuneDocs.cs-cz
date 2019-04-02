@@ -1,6 +1,6 @@
 ---
 title: Hromadný zápis pro Windows 10
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Vytvoření balíčku hromadné registrace pro Microsoft Intune
 keywords: ''
 author: ErikjeMS
@@ -17,12 +17,12 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e663e80cfeb4ec3a4e2e8c92e17344b62c5bb6fc
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394968"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799329"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 

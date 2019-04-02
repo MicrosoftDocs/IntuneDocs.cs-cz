@@ -1,6 +1,6 @@
 ---
 title: Příprava Intune na správu mobilních zařízení
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Před migrací do Microsoft Intune vyhodnoťte svoje obchodní a technické požadavky.
 keywords: ''
 author: dougeby
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 984461631911703321859c618fc6302832f8b811
-ms.sourcegitcommit: fdc6261f4ed695986e06d18353c10660a4735362
+ms.openlocfilehash: e527ed11e451ec0ef2f6d2fde42e0c8fd53408f3
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57393480"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799321"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune na správu mobilních zařízení (MDM)
 

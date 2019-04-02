@@ -1,6 +1,6 @@
 ---
 title: 'Rychlý start: Bezplatné vyzkoušení Microsoft Intune'
-titlesuffix: ''
+titleSuffix: ''
 description: V tomto rychlém startu vytvoříte bezplatné zkušební předplatné, dozvíte se o podporovaných konfiguracích a síťových požadavcích a případně také můžete nakonfigurovat název vlastní domény.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94c83ab0f70a5a40bd745b4db83ef16ac14acd00
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5cc7593818027f8b1c8c3600143e9909662cd922
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57756849"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799637"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 

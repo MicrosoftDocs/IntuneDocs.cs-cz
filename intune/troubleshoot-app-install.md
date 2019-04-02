@@ -1,6 +1,6 @@
 ---
 title: Řešení problémů s instalací aplikací
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Pomocí podokna pro řešení potíží s Microsoft Intune můžete řešit potíže s instalací aplikací.
 keywords: ''
 author: Erikre
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a5e000a973932db0bbaa215ea94976219ff905c
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 574f509383891ff3e8e0f4c1b04a19832a378829
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57577842"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799497"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 

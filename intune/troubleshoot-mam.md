@@ -1,6 +1,6 @@
 ---
 title: Řešení potíží se správou mobilních aplikací
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Toto téma popisuje některé tipy pro řešení potíží při nasazování podmíněného přístupu.
 keywords: ''
 author: Erikre
@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4db9845befe7440e615e8deb874971a5b80efdb
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dc7b7f56060ff90cc7b9df6cb8700c163d78e8f5
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461171"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798623"
 ---
 # <a name="troubleshoot-mobile-application-management"></a>Řešení potíží se správou mobilních aplikací
 

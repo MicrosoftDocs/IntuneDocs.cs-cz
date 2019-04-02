@@ -1,6 +1,6 @@
 ---
 title: Novinky v Microsoft Intune – Azure | Microsoft Docs
-titlesuffix: ''
+titleSuffix: ''
 description: Zjistěte, jaké novinky přináší portál Intune Azure.
 keywords: ''
 author: ErikjeMS
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19973190c367c37e96e66eae8d507b4d94639e9
-ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
+ms.openlocfilehash: 5fcd355023ceff43cf47c198a84c9c6e2867a08f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618473"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799300"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -46,6 +46,13 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->     
 
 <!-- ########################## -->
+## <a name="week-of-march-25-2019"></a>Týden od 25. března 2019
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+### <a name="support-for-the-power-bi-compliance-app-from-the-data-warehouse-blade-in-microsoft-intune----4260871---"></a>Podpora pro dodržování předpisů službou Power BI aplikace v okně datového skladu v Microsoft Intune <!-- 4260871 -->
+Dříve **soubor stáhněte si Power BI** odkaz v **datový sklad Intune** okno Stáhnout sestavu datového skladu Intune (soubor .pbix). Tato sestava se nahradil údajem aplikace dodržování předpisů službou Power BI. Dodržování předpisů službou Power BI aplikace nebude vyžadovat zvláštní načítání a nastavování. Bude otevírat přímo v Power BI online portálu a zobrazení dat speciálně pro vašeho tenanta Intune na základě vašich přihlašovacích údajů. V Intune, vyberte **nastavení datového skladu Intune** odkaz na pravé straně okna Intune. Potom klikněte na **získat aplikace Power BI**. Další informace najdete v tématu [připojení k datovému skladu pomocí Power BI](reports-proc-get-a-link-powerbi.md).
+
 ## <a name="week-of-march-18-2019"></a>Týden od 18. března 2019
 
 ### <a name="app-management"></a>Správa aplikací
@@ -88,13 +95,6 @@ Platí pro: Windows 10 a novější
 Když směrování Intune přihlásí k funkcím Azure monitor, můžete také směrovat provozní protokoly. V této aktualizaci provozních protokolech také poskytují informace o zařízení nedodržující předpisy. 
 
 Další informace o této funkci najdete v tématu [protokolu odesílání dat do úložiště, služba event hubs nebo log analytics v Intune](review-logs-using-azure-monitor.md).
-
-#### <a name="create-and-use-device-configuration-profiles-on-android-zebra-devices-in-intune----3895244---"></a>Vytváření a používání profilů konfigurace zařízení na zařízeních s Androidem Zebra v Intune <!-- 3895244 -->
-V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Zebra. Konkrétně můžete: 
-
-- Vytvořit profil konfigurace zařízení a použijte nastavení na zařízení s Androidem Zebra pomocí profilů rozšíření Mobility (MX) generovaných StageNow (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Android** pro platformu).
-
-Platí pro: Android
 
 #### <a name="route-logs-to-azure-monitor-in-more-intune-workloads----3804627---"></a>Směrování protokolů do Azure monitoru v další úlohy Intune <!-- 3804627 -->
 V Intune, můžete směrovat do centra událostí, úložiště, audit a provozní protokoly a protokolovat analytics ve službě Azure Monitor (**Intune** > **monitorování** > **diagnostiky nastavení**). Tato aktualizace může směrovat tyto protokoly ve více úloh Intune, včetně dodržování předpisů, konfigurace, klientské aplikace a další. 

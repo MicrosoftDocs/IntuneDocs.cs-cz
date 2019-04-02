@@ -1,6 +1,6 @@
 ---
 title: Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Popisuje kroky koncových uživatelů a správců IT potřebné k poskytnutí vzdálené pomoci na počítačích s Windows, které se spravují jako počítače, a kroky potřebné k vzdálenému spuštění počítače.
 keywords: ''
 author: dougeby
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b57bae0c0e7a734071be79318286714a97d0fbf
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b7004d72328d606f6adc5cd84e79ce4830409059
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460593"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798527"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 

@@ -1,6 +1,6 @@
 ---
 title: Připojení k datovému skladu pomocí Power BI
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Můžete si stáhnout soubor pro použití s Microsoft Power BI, který vám umožní načíst interaktivní, dynamicky generované sestavy vašeho tenanta Microsoft Intune.
 keywords: Datový sklad Intune
 author: Erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b93bb9911fa93998e443a797d085a568280c278
-ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
+ms.openlocfilehash: 3bbf9848f8a66f3773772187de2486ffcf3e1cd7
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618497"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798152"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Můžete si stáhnout soubor pro použití s Microsoft Power BI, který vám umožní načíst interaktivní, dynamicky generované sestavy vašeho tenanta Intune. Soubor Power BI datového skladu (pbix) obsahuje nastavení připojení k vašemu tenantovi a také následující ukázkové sestavy a grafy:  
+Můžete aplikaci dodržování předpisů službou Power BI načíst interaktivní, dynamicky generované sestavy vašeho tenanta Intune. Kromě toho můžete načíst data tenanta v Power BI pomocí odkazu OData. Intune poskytuje nastavení připojení k vašemu tenantovi tak, aby se zobrazí následující ukázkové sestavy a související s grafy:  
 
   -  Zařízení
   -  Registrace
@@ -47,21 +47,29 @@ Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak použív
 
 ## <a name="install-power-bi"></a>Instalace Power BI
 
-Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu z si můžete stáhnout: [PowerBI.microsoft.com](https://powerbi.microsoft.com/desktop)
+Nainstalujte nejnovější verzi [Power BI Desktopu](https://aka.ms/intune/datawarehouseapi/installpowerbi). Další informace najdete v tématu [Power BI Desktopu](https://powerbi.microsoft.com/desktop)
 
-## <a name="load-the-data-and-reports-using-the-power-bi-file-pbix"></a>Načtení dat a sestav pomocí souboru Power BI (pbix)
+## <a name="load-the-data-and-reports-using-the-power-bi-compliance-app"></a>Načtení dat a sestavy, které používají aplikace dodržování předpisů službou Power BI
 
-Soubor Power BI (pbix) obsahuje informace o připojení pro vašeho tenanta a sadu předem vytvořených sestav založených na datovém modelu datového skladu. Soubor otevřete v aplikaci Power BI Desktop a přihlaste se k Azure AD. Sestava načte data z vašeho tenanta Intune.
+Aplikace dodržování předpisů službou Power BI obsahuje informace pro vašeho tenanta a sadu předem vytvořených sestav založených na datovém modelu datového skladu. Otevřete sestavu v Power BI Desktopu a přihlaste se k Azure AD. Sestava načte data z vašeho tenanta Intune.
 
 > [!Important]  
-> Jednotlivé soubory Power BI (pbix) se můžou lišit podle umístění tenanta. Pokud spravujete několik tenantů Intune, je nutné použít soubor, který jste z portálu Azure Portal stáhli, když jste byli přihlášení k požadovanému tenantovi.  
+> Sestavy Power BI se může lišit v závislosti na umístění tenanta. Pokud spravujete několik tenantů Intune, je potřeba použít sestavu z portálu Azure portal, zatímco jste přihlášeni do tohoto tenanta.  
 
 1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřít **nastavení datového skladu Intune** okno.
-3.  Vyberte **Stáhnout soubor Power BI**. Soubor s příponou PBIX se stáhne do vámi zadaného umístění.
-4.  Soubor otevřete pomocí Power BI. Načtou se *sestavy datového skladu Intune*. Získání dat vašeho tenanta ale může chvíli trvat.
-5.  Pokud chcete načíst data tenanta a zkontrolovat sestavy, vyberte **Aktualizovat**.
-6.  Pokud se služba Power BI neověřila pomocí přihlašovacích údajů pro Azure Active Directory, vyzve vás k zadání vašich přihlašovacích údajů. Při výběru přihlašovacích údajů zvolte jako metodu ověřování **Účet organizace**.
+3.  Vyberte **získat aplikace Power BI** pro přístup k a sdílet předem vytvořených sestav Power BI pro vašeho tenanta v prohlížeči.
+
+> [!NOTE]
+> Pokud se služba Power BI neověřila pomocí přihlašovacích údajů pro Azure Active Directory, vyzve vás k zadání vašich přihlašovacích údajů. Při výběru přihlašovacích údajů zvolte jako metodu ověřování **Účet organizace**.
+
+### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Přidat další filtry aplikace dodržování předpisů v Intune
+
+Pokud chcete použít další filtry pro sestavy Power BI, použijte následující kroky:
+
+1. Otevřít [dodržování předpisů službou Power BI](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace ve webovém prohlížeči.
+2. Klikněte na tlačítko **nekompatibilní zařízení** a vyberte **nekompatibilní** v **complianceStatus** filtru. 
+3. Klikněte na **neznámým zařízením** a vyberte **zatím není k dispozici** v **complianceStatus** filtru. 
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Načtení dat v Power BI pomocí odkazu OData
 
@@ -84,7 +92,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 
 ## <a name="next-steps"></a>Další postup
 
-Můžete získat odpovědi na otázky týkající se vašeho prostředí, například týkající se počtu zařízení zaregistrovaných podle dne za poslední týden. Můžete získat přehled o naplnění vašeho klienta a tenanta Intune pomocí sestav využívajících soubor Power BI datového skladu Intune (pbix) načtených z okna v Azure. Intune ale poskytuje množství dalších způsobů, jak data rozšířit a znovu použít. Pomocí Power BI a rozhraní API datového skladu Intune můžete udělat mnohem víc, například:
+Můžete získat odpovědi na otázky týkající se vašeho prostředí, například týkající se počtu zařízení zaregistrovaných podle dne za poslední týden. Můžete získat přehled vašeho klienta a tenanta základního souboru Intune pomocí sestav Power BI datového skladu Intune načtených z okna v Azure. Intune ale poskytuje množství dalších způsobů, jak data rozšířit a znovu použít. Power BI a rozhraní API datového skladu Intune poskytují další funkce, například:
 
 <!-- -  You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
  -  Data tenanta budou uspořádána tak, aby vám pomohla získat lepší přehled. Další informace o způsobu uspořádání dat najdete v tématu [Datový model datového skladu](reports-ref-data-model.md).

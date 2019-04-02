@@ -1,6 +1,6 @@
 ---
 title: 'Rychlý start: Vytvoření skupiny pro správu uživatelů'
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: V tomto rychlém startu použijete Microsoft Intune k vytvoření skupiny ze stávajících uživatelů.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 20ca3a7924eb4c0366d7aa9a18f137ab263c2fbc
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 816a0479f19b5bb65376825f46687bf4b8b07045
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490465"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798352"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
 

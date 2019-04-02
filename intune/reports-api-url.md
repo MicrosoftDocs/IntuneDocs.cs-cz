@@ -1,6 +1,6 @@
 ---
 title: Koncový bod rozhraní API datového skladu Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Toto referenční téma popisuje strukturu adresy URL rozhraní API Microsoft Intune Data Warehouse. Jsou uvedeny příklady filtrů.
 keywords: Datový sklad Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0e56c2dd4e26c68a82d5cb9d902e4480e1b98c8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50be11f9ada92670c201fc2540499effa5a7edef
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396472"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798492"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 
@@ -53,7 +53,7 @@ Adresa URL obsahuje následující prvky:
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Základní adresu URL můžete najít zobrazením okna rozhraní API datového skladu na webu Azure Portal. |
 | kolekce-entit | kalendářní data | Název kolekce entit OData Další informace o kolekcích a entitách v datovém modelu najdete v tématu [Datový model](reports-ref-data-model.md). |
-| verze-api | beta | Verze je verzí rozhraní API, ke kterému přistupujete. Další informace najdete v tématu [Verze](#API-version-information). |
+| verze-api | beta | Verze je verzí rozhraní API, ke kterému přistupujete. Další informace najdete v tématu [Verze](reports-api-url.md#api-version-information). |
 | maxhistorydays | 7 | (Volitelné) Maximální počet dní, pro které se načte historie. Tento parametr lze zadat pro jakoukoli kolekci, ale bude mít účinek jenom u kolekcí, jejichž klíčová vlastnost zahrnuje `dateKey`. Další informace najdete v části [Filtry rozsahu DateKey](reports-api-url.md#datekey-range-filters). |
 
 ## <a name="api-version-information"></a>Informace o verzi rozhraní API

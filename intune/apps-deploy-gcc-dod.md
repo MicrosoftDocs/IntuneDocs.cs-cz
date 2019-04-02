@@ -1,6 +1,6 @@
 ---
 title: Aplikace pro prostředí s vysokou GCC a ministerstva obrany USA
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Další informace o aplikacích zahrnující GCC vysoké a ministerstva obrany prostředí pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb49cd97e029e45d7d098ec1898fd0e27efa1132
-ms.sourcegitcommit: 4049a3aed15f2d8d21bb814410875a13f613e4ed
+ms.openlocfilehash: 43df4d72cda3830f9793f591eebcb4d2a1ec284f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283231"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799353"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikace pomocí Intune v GCC vysoké a ministerstva obrany USA prostředí 
 

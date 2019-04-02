@@ -1,6 +1,6 @@
 ---
 title: Přidružení zařízení uživatelů – Datový sklad Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: UserDeviceAssociation entitě přidružení zařízení uživatelů ve vaší organizaci.
 keywords: Datový sklad Intune
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d3473b04a1d015f88d27359864a84227215b62a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 466066faf03cbdf560697a04310eac844d4f1b87
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565294"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798256"
 ---
 # <a name="reference-for-user-device-association-entity"></a>Referenční informace o entitě Přidružení zařízení uživatelů
 
@@ -32,7 +32,7 @@ Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů 
 ## <a name="userdeviceassociation"></a>UserDeviceAssociation
 
 
-|        Název        |                                           Popis                                            |        Příklad         |
+|        Name        |                                           Popis                                            |        Příklad         |
 |--------------------|--------------------------------------------------------------------------------------------------|------------------------|
 |      UserKey       |              Jedinečný identifikátor uživatele v datovém skladu (náhradní klíč)               |          123           |
 |     DeviceKey      |                      Jedinečný identifikátor zařízení v datovém skladu                      |          123           |

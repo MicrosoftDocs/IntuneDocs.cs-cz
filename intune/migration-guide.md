@@ -1,6 +1,6 @@
 ---
 title: Průvodce migrací správy mobilních zařízení do Intune
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Tato příručka vás seznámí s různými detaily migrace od jiného poskytovatele MDM do Microsoft Intune.
 keywords: ''
 author: dougeby
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5283061f92e2f57b7ea833be79d357a1b7827d9d
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e293140838cd772dea4cdf810623cfe92fa0fe9e
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57398898"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799337"
 ---
 # <a name="intune-migration-guide"></a>Příručka k migraci do Intune
 

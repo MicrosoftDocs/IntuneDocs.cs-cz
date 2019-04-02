@@ -1,6 +1,6 @@
 ---
 title: Portál helpdesku pro řešení potíží
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Pracovníci helpdesku používají portál pro řešení potíží, aby pomohli uživatelům s řešením technických problémů.
 keywords: ''
 author: dougeby
@@ -17,12 +17,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 135e93bf3cfb93b5299dfd005a3ca70bbba84d77
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: df5b20be667159689aaaee9a790c0a4c5b5864fd
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57787130"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798394"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 

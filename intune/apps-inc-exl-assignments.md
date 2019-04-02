@@ -1,6 +1,6 @@
 ---
 title: Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Zjistěte, jak pomocí Microsoft Intune zahrnout nebo vyloučit přiřazení aplikací.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86d9b950cf18dc62405baa5fa600f44fdce7cb97
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 771092b193154680c7755460d53b7c95efe592cf
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392479"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799584"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 

@@ -1,6 +1,6 @@
 ---
 title: Odhlášení uživatele zařízení s iOSem
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zjistěte, jak v Intune odhlásit aktuálního uživatele zařízení s iOSem.
 keywords: ''
 author: ErikjeMS
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e9ce1a42613e88e7cfbd3fe32345da2d97226cd
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 23af88f4d595669589b8f7104cbac0c5b695602f
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396469"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798580"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Odhlášení aktuálního uživatele na zařízení s iOSem spravovaných pomocí Intune
 

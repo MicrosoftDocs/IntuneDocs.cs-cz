@@ -1,6 +1,6 @@
 ---
 title: Odebrání uživatele ze zařízení s iOSem pomocí Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Zjistěte, jak odebrat uživatele ze sdíleného zařízení s iOSem pomocí Intune.
 keywords: ''
 author: ErikjeMS
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7265ee47beb6fc9d82410044a535a291466365af
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 53c4e02f32fa421c745f5bfa15e97023f47ece88
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399187"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799548"
 ---
 # <a name="remove-a-user-from-a-shared-ios-device"></a>Odebrání uživatele ze sdíleného zařízení s iOSem
 

@@ -1,6 +1,6 @@
 ---
 title: Rozhraní API pro připojení 3. stran certifikační autority
-titlesuffix: Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Přidejte nebo integrujte řešení GitHubu SCEP pro externí certifikační autority (CA), abyste mohli vydávat zařízením v Microsoft Intune certifikáty SCEP. Toto řešení zahrnuje rozhraní API jazyka Java a C#, která provádí ověřování, odesílají oznámení o úspěchu a neúspěchu do Intune a při komunikaci s Intune používají objekt pro vytváření soketu SSL. Taky se můžete podívat na přehled kroků k testování konfigurace certifikační autority SCEP.
 keywords: ''
 author: MandiOhlinger
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 274b512a8fa4b4026d26c8b5e6a704f51a0bef95
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bf5a9d509bd390561614f59fdce208e8e9f10dde
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565787"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799616"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 

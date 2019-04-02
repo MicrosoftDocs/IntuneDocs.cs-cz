@@ -1,6 +1,6 @@
 ---
 title: Co je správa aplikací v Microsoft Intune?
-titlesuffix: ''
+titleSuffix: ''
 description: Další informace o funkcích správy, klient aplikace podle platformy pro Microsoft Intune.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d9b10c8bf06e0e0a5aa481afebb01c980fc20a9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3586822b16a7c04f16a1b6eb894f45aaf9106bef
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394522"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58798564"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 

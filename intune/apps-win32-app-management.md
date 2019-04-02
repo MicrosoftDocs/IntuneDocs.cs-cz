@@ -1,6 +1,6 @@
 ---
 title: Přidání aplikací Win32 do Microsoft Intune
-titlesuffix: ''
+titleSuffix: ''
 description: Přečtěte si, jak přidat aplikace Win32 do Microsoft Intune a jak je prostřednictvím této služby poskytovat a spravovat. Toto téma poskytuje přehled funkcí pro poskytování a správu aplikací Win32 přes Intune a informace o řešení potíží s těmito aplikacemi.
 keywords: ''
 author: Erikre
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51a2f862a53476a825bfb1a61a6f115c883eba18
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: d93ad2e838f4980c206c098d8e36e51e138969d1
+ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429722"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58799047"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
