@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bbf9848f8a66f3773772187de2486ffcf3e1cd7
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 259d700d04547a801b0ebc37242dacf536ad61d3
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798152"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871374"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -49,27 +49,26 @@ Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak použív
 
 Nainstalujte nejnovější verzi [Power BI Desktopu](https://aka.ms/intune/datawarehouseapi/installpowerbi). Další informace najdete v tématu [Power BI Desktopu](https://powerbi.microsoft.com/desktop)
 
-## <a name="load-the-data-and-reports-using-the-power-bi-compliance-app"></a>Načtení dat a sestavy, které používají aplikace dodržování předpisů službou Power BI
+## <a name="load-the-data-and-reports-using-the-power-bi-intune-compliance-data-warehouse-app"></a>Načtení dat a sestavy pomocí aplikace Power BI Intune dodržování předpisů datového skladu
 
-Aplikace dodržování předpisů službou Power BI obsahuje informace pro vašeho tenanta a sadu předem vytvořených sestav založených na datovém modelu datového skladu. Otevřete sestavu v Power BI Desktopu a přihlaste se k Azure AD. Sestava načte data z vašeho tenanta Intune.
+Power BI [datový sklad Intune dodržování předpisů aplikace](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) obsahuje informace pro vašeho tenanta a sadu předem vytvořených sestav založených na datovém modelu datového skladu.
 
-> [!Important]  
-> Sestavy Power BI se může lišit v závislosti na umístění tenanta. Pokud spravujete několik tenantů Intune, je potřeba použít sestavu z portálu Azure portal, zatímco jste přihlášeni do tohoto tenanta.  
+1.  Přejděte [datový sklad Intune dodržování předpisů aplikace](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) k zahájení procesu instalace.
+2.  Po zobrazení výzvy k instalaci aplikace Power BI z důvěryhodných zdrojů, klikněte na tlačítko **nainstalovat**.
+3.  Klikněte na **aplikace skladu dat dodržování předpisů Intune** dlaždici.
+4.  Klikněte na tlačítko **propojení dat** tlačítko. 
+    **Připojit k aplikaci skladu dat dodržování předpisů Intune** se zobrazí dialogové okno.
+5.  Klikněte na tlačítko **přihlášení** tlačítko.
+6.  Přihlaste se pomocí uživatelského účtu, který má přístup k datovému skladu Intune pro tenanta, který má hlásí, že chcete zobrazit. 
+7.  Klikněte na tlačítko **sestavy** kartu a potom klikněte na tlačítko **dodržování předpisů V1.0** sestavy.
+8.  Abyste usnadnili snadnou přejít zpět na tyto sestavy později, klikněte na hvězdičku vedle **V1.0 dodržování předpisů** sestavy. Sestava se přidá do oblíbených položek Power BI.
 
-1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
+Alternativně můžete nainstalovat aplikace z portálu Intune:
+
+1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také hledat prostředky Intune.
 2.  Otevřít **nastavení datového skladu Intune** okno.
 3.  Vyberte **získat aplikace Power BI** pro přístup k a sdílet předem vytvořených sestav Power BI pro vašeho tenanta v prohlížeči.
-
-> [!NOTE]
-> Pokud se služba Power BI neověřila pomocí přihlašovacích údajů pro Azure Active Directory, vyzve vás k zadání vašich přihlašovacích údajů. Při výběru přihlašovacích údajů zvolte jako metodu ověřování **Účet organizace**.
-
-### <a name="add-additional-filters-to-the-intune-compliance-app"></a>Přidat další filtry aplikace dodržování předpisů v Intune
-
-Pokud chcete použít další filtry pro sestavy Power BI, použijte následující kroky:
-
-1. Otevřít [dodržování předpisů službou Power BI](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace ve webovém prohlížeči.
-2. Klikněte na tlačítko **nekompatibilní zařízení** a vyberte **nekompatibilní** v **complianceStatus** filtru. 
-3. Klikněte na **neznámým zařízením** a vyberte **zatím není k dispozici** v **complianceStatus** filtru. 
+4.  Postupujte podle kroků 2 až 8 výše.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Načtení dat v Power BI pomocí odkazu OData
 
@@ -77,7 +76,7 @@ S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovém
 
 1.  Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro **Intune**.  
 2.  Otevřít **nastavení datového skladu Intune** okno.
-3. V okně vytváření sestav načtěte adresu URL vlastního informačního kanálu, například `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=beta`.
+3. V okně vytváření sestav načtěte adresu URL vlastního informačního kanálu, například `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`.
 4. Otevřete aplikaci **Power BI Desktop**.
 5. Zvolte **Domů** > **Získat data**. Vyberte **Datový kanál OData**.
 6. Zvolte **Základní**.

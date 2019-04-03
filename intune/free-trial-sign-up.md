@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cc7593818027f8b1c8c3600143e9909662cd922
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 63f9ef266c9a5754d5de57232a8f7bc41a6c5777
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799637"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871391"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -67,7 +67,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
     ![Obrázek přihlašovací stránky webu Azure Portal](./media/azure-portal-signin.png)
 
-3. Pokud chcete na webu Azure Portal zobrazit Microsoft Intune, vyberte na levém bočním panelu na stránce možnost **Všechny služby**.
+3. Chcete-li zobrazit Microsoft Intune na portálu Azure portal, vyberte **všechny služby** bočním panelu na levé straně stránky.
 4. Do filtrovacího pole zadejte **Microsoft Intune** a pak tuto možnost vyberte.
 5. Když vyberete **hvězdičku**, přidá se Intune na konec seznamu oblíbených služeb a otevře se řídicí panel Intune.
 
@@ -110,7 +110,7 @@ Jak bylo zmíněno výše, pokud má vaše organizace vlastní vlastní doménu,
 
    ![Snímek obrazovky s Microsoft 365 správce System center – přidání domény](./media/domain-custom-add.png)
 
-4. Potvrďte, že jste vlastník domény zadané v předchozím kroku. 
+4. Ověřte, že jste vlastníkem domény, který jste zadali v předchozím kroku. 
     
     Pokud vyberete, že chcete **poslat kód e-mailem**, odešle se e-mail kontaktu, který je zaregistrovaný u domény. Jakmile dostanete e-mail, zkopírujte kód a zadejte ho do pole označeného **Sem napište ověřovací kód**. Pokud se ověřovací kód shoduje, přidá se doména do tenanta. Zobrazený e-mail vám nemusí být povědomý. Některé registrátorů skrýt skutečné e-mailovou adresu. E-mailová adresa může být také jiné pak je zadán při byla doména zaregistrována.
 

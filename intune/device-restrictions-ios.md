@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5106a4f147828310fc1b4a41ef4065d10bdaeecf
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 0d0623e9d12132ac470813d65510bc2c76379109
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490722"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871467"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 
@@ -195,7 +195,7 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 
 #### <a name="safari"></a>Safari
 
-- **Safari**: **Blok** prostřednictvím prohlížeče Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům používat prohlížeč Safari.
+- **Safari (jenom pod dohledem)**: **Blok** prostřednictvím prohlížeče Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům používat prohlížeč Safari.
 - **Automatické vyplňování**: **Blok** zakáže funkci Automatické vyplňování v prohlížeči Safari na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit nastavení automatického dokončování v prohlížeči.
 - **Soubory cookie**: Zvolte, jak se zpracovává soubory cookie v zařízení. Možnosti:
   - Povolit
@@ -290,7 +290,7 @@ Přidání aplikací do těchto seznamů, můžete:
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
 - **Zálohování na iCloud**: **Není nakonfigurováno** povolí uživateli zálohovat zařízení do Icloudu. **Blok** zabrání uživateli zálohovat zařízení do Icloudu.
-- **Zablokuje synchronizaci dokumentů s Icloudem**: **Není nakonfigurováno** povolí synchronizaci dokumentu a klíč hodnota s úložným prostorem Icloudu. **Blok** zabrání synchronizaci dokumenty a data serveru služby iCloud.
+- **Zablokuje synchronizaci dokumentů (jenom pod dohledem) serveru služby iCloud**: **Není nakonfigurováno** povolí synchronizaci dokumentu a klíč hodnota s úložným prostorem Icloudu. **Blok** zabrání synchronizaci dokumenty a data serveru služby iCloud.
 - **Synchronizace datového proudu fotografií s Icloudem**: **Není nakonfigurováno** umožňuje uživatelům povolit **tento Stream fotek** na svém zařízení synchronizovat na serveru služby iCloud a mít fotky, které jsou k dispozici na všech jeho zařízeních. **Blok** brání synchronizace datového proudu fotografií s Icloudem.
 - **Šifrované zálohování**: **Vyžadovat** tak zálohy zařízení musí být zašifrován.
 - **Knihovna fotografií na Icloudu**: Nastavte na **bloku** zakázat použití knihovny fotografií Icloudu, přes ukládat fotografie a videa v cloudu. Všechny fotky, které nejsou kompletně stažené z knihovny fotografií na Icloudu do zařízení se odebere ze zařízení. **Není nakonfigurováno** umožňuje použití knihovny fotografií Icloudu.

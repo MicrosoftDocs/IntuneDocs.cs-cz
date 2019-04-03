@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 12/05/2018
+ms.date: 03/27/2018
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b9247d07ae947e61528095a4853e5cdbcbc80c0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6dfdf61159d899a81e1ef53a1aaa649c98833b0e
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389983"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871412"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
 
-V tomto rychlém startu nejprve převezmete roli uživatele Intune a zaregistrujete své zařízení s Windows 10 v Microsoft Intune. Pak se vrátíte do Intune a toto zaregistrované zařízení potvrdíte.
+V tomto rychlém startu nejprve převezmete roli uživatele Intune a zaregistrujete své zařízení s Windows 10 v Microsoft Intune. Budete pak, vraťte se do Intune a potvrďte zařízení zaregistrované.
 
 Registrace zařízení v Microsoft Intune umožňuje zařízením s Windows 10 získat přístup k zabezpečeným datům vaší organizace, včetně e-mailů, souborů a dalších prostředků. Platí to pro zařízení s desktopovou verzí Windows 10 i zařízení s Windows 10 Mobile. Registrace zařízení pomáhá zabezpečit přístup pro vás i vaši organizaci a udržovat pracovní data odděleně od osobních dat.
 
@@ -72,7 +72,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
     ![Vyberte možnost Nastavit pracovní nebo školní účet.](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Přihlaste se k Intune pomocí svého pracovního nebo školního účtu a vyberte **Další**. Pokud jste postupovali podle rychlého startu [vytvoření uživatele a přiřazení licence], můžete se přihlásit uživatelským účtem, který jste vytvořili.
+3. Přihlaste se k Intune pomocí svého pracovního nebo školního účtu a vyberte **Další**. Pokud jste postupovali podle [vytvořte uživatele a přiřadit licenci](quickstart-create-user.md) rychlém startu se můžete přihlásit pomocí uživatelského účtu, který jste vytvořili.
 
     > [!NOTE]
     > Pokud nastavujete „.onmicrosoft.com“, bude se jako součást adresy uživatelského účtu používat **.onmicrosoft.com**. 

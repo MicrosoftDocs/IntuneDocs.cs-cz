@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ef628623c7f14a703025e80a2ade4283d36c007
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871429"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odesílání oznámení do zařízení nesplňujících požadavky
 
@@ -40,7 +40,7 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k portálu [Intune](https://aka.ms/intuneportal) jako [globální správce](users-add.md#types-of-administrators) nebo jako [správce služby](users-add.md#types-of-administrators) Intune. 
+Přihlaste se k portálu [Intune](https://aka.ms/intuneportal) jako [globální správce](users-add.md#types-of-administrators) nebo jako [správce služby](users-add.md#types-of-administrators) Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="create-a-notification-message-template"></a>Vytvoření šablony zprávy s oznámením
 
@@ -51,7 +51,7 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
    - **Název**: *Správce společnosti Contoso*
    - **Předmět**: *Dodržování předpisů zařízeními*
-   - **Zpráva**: *Vaše zařízení aktuálně nesplňuje naše požadavky na dodržování předpisů organizace.*
+   - **Zpráva**: *Vaše zařízení aktuálně nesplňuje požadavky na dodržování předpisů pro naši organizaci.*
    - **Záhlaví e-mailu – připojte logo společnosti**: Nastavte na **povoleno** zobrazit logo vaší organizace.
    - **Zápatí e-mailu – uveďte název společnosti**: Nastavte na **povoleno** zobrazíte název vaší organizace.
    - **Zápatí e-mailu – uveďte kontaktní údaje**: Nastavte na **povoleno** zobrazit kontaktní informace vaší organizace.
@@ -83,14 +83,13 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
 5. Možnost **Vyžadovat heslo k odemknutí mobilních zařízení** nastavte na **Vyžadovat**. Toto nastavení určuje, jestli se má po uživatelích vyžadovat zadání hesla, než bude udělen přístup k informacím uloženým v jejich mobilních zařízeních. 
 6. Volbu **Minimální délka hesla** nastavte na **6**. Toto nastavení určuje minimální počet číslic nebo znaků v hesle.
 
-    ![Nastavení Zabezpečení systému pro novou zásadu dodržování předpisů](./media/quickstart-send-notification-02.png) 
+    <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
 7. Kliknutím na **OK**, **OK** a **Vytvořit** tuto zásadu dodržování předpisů vytvořte.
-8. Vyberte název nové zásady: **Dodržování předpisů Windows 10**.
-9. Vyberte **Vlastnosti** > **Akce při nedodržení předpisů** > **Přidat**.
-10. V rozevíracím seznamu **Akce** potvrďte, že je vybraná možnost **Odeslat e-mail koncovému uživateli**.
-11. Výběrem možnosti **Šablona zprávy** > **Správce Contoso** > **Vybrat** vyberte šablonu zprávy, kterou jste vytvořili dříve v tomto tématu.
-12. Výběrem **OK** > **OK** > **Uložit** uložte provedené změny.
+8. Vyberte **Vlastnosti** > **Akce při nedodržení předpisů** > **Přidat**.
+9. V rozevíracím seznamu **Akce** potvrďte, že je vybraná možnost **Odeslat e-mail koncovému uživateli**.
+10. Výběrem možnosti **Šablona zprávy** > **Správce Contoso** > **Vybrat** vyberte šablonu zprávy, kterou jste vytvořili dříve v tomto tématu.
+11. Vyberte **přidat** > **OK** > **Uložit** uložte provedené změny.
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 

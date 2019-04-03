@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a883536b1c56948083a7e32bcb56d8d182fddfb5
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 5d7e63542563425606cf1f9a8509a7bf0c09b9a9
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799094"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871357"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikace
 
@@ -41,7 +41,7 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce 
 
 ## <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
 
-Zásadu ochrany aplikací vytvoříte následujícím postupem:
+Chcete-li vytvořit zásadu ochrany aplikací, postupujte následovně:
 
 1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Vytvořit zásadu**. 
 2. Zadejte následující podrobnosti: 
@@ -72,7 +72,7 @@ K přiřazení zásady ochrany aplikací použijte následující postup:
 3.  Zvolte **Přiřazení**.
 4.  Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
 5.  Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
-6.  Klikněte na tlačítko **vyberte**. 
+6.  Klikněte na tlačítko **vyberte** > **Uložit**. 
 
 Právě jste přiřadili zásadu ochrany aplikací.
 

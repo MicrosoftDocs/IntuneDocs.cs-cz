@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 816a0479f19b5bb65376825f46687bf4b8b07045
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 7cbfe19e4f7aea28c16cae50c9b79336be81c8fa
+ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58871323"
 ---
 # <a name="quickstart-create-a-group-to-manage-users"></a>Rychlý start: Vytvoření skupiny pro správu uživatelů
 
@@ -44,17 +44,18 @@ Přihlaste se k [portál Intune](https://aka.ms/intuneportal) jako [globální s
 
 ## <a name="create-a-group"></a>Vytvoření skupiny
 
-Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých startů.
+Vytvoříte skupinu, kterou použijete později v tomto seriálu rychlých startů. Vytvoření skupiny:
 
 1. Po otevření podokna **Microsoft Intune** vyberte **Skupiny** > **Nová skupina**.
 2. V rozevíracím seznamu **Typ skupiny** vyberte **Zabezpečení**.
-3. V poli **Název** nastavte „Contoso Testers“ a přidejte **popis** skupiny.
-4. **Typ členství** nastavte na **Přiřazeno**. 
-5. Klikněte na **Členové** a ze seznamu vyberte pro skupinu alespoň jednoho člena.
+3. V **název skupiny** pole, zadejte název pro novou skupinu (například **testeři společnosti Contoso**).
+4. Přidat **popis** pro skupinu.
+5. **Typ členství** nastavte na **Přiřazeno**. 
+6. Klikněte na tlačítko **členy** a vyberte jeden nebo více členů skupiny ze seznamu.
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-use-groups-01.png)
 
-6. Klikněte na **Vybrat** > **Vytvořit**.
+7. Klikněte na **Vybrat** > **Vytvořit**.
 
 Po úspěšném vytvoření se skupina zobrazí v seznamu **Všechny skupiny**. 
 
