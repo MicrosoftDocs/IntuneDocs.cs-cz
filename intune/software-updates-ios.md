@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/06/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3a6cf207c58194030a4e4bab8a02f76cd97b338
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: de73aa069765ce75068781674ff24d097346cdba
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57398609"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899025"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
 
@@ -41,7 +41,11 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
 
 4. Vyberte **Nastavení > Konfigurace**. Zadejte následující nastavení:
 
-    - **Vyberte časy, kdy chcete zakázat instalaci aktualizací**: Aktualizace se neinstalují nuceně zadejte omezený časový rámec. Při nastavování omezený časový rámec, zadejte následující údaje:
+    - **Vyberte časy, kdy chcete zakázat instalaci aktualizací**: Při aktualizace se neinstalují nuceně, zadejte omezený časový rámec. 
+      - Přes noc bloků nejsou podporovány a nemusí fungovat. Například nekonfigurujte zásadu s *počáteční čas* z 20: 00 a *čas ukončení* ze 6: 00.
+      - Zásadu, která začíná ve 12: 00 a končí 12: 00 je vyhodnocen jako 0 hodin a ne 24 hodin, výsledek bude bez omezení.
+
+      Při nastavování omezený časový rámec, zadejte následující údaje:
 
       - **Dny**: Vyberte dny v týdnu, kdy aktualizace se neinstalují. Třeba zkontrolujte pondělí, středu a pátek, aby se zabránilo aktualizace instalovaly v tyto dny.
       - **Časové pásmo**: Vyberte časové pásmo.
@@ -58,6 +62,8 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
         - Cílit na stejné uživatele jako původní zásadou.
 
       Pokud dojde ke konfliktu, toto nastavení nemá žádný účinek *Pokud* dvě hodnoty jsou identické. Aby se zabránilo konfliktu, nezapomeňte změnit nebo odebrat existující zásady z tohoto umístění na portálu.
+      > [! [Důležité]  
+      > Zásadu, která má *počáteční čas* a *čas ukončení* nastavená na 12: 00 je vyhodnocen jako 0 hodin a ne za 24 hodin. Výsledkem je bez omezení.  
 
 5. Vyberte **OK** > **vytvořit** uložte provedené změny a vytvoříte zásadu.
 
@@ -79,7 +85,7 @@ Pokyny od týmu podpory Intune najdete v tématu [zpoždění viditelnost softwa
     3. Zadejte počáteční a koncový čas pro zakázané hodiny.
 
     > [!NOTE]
-    > Pokud jsou **počáteční čas** i **koncový čas** nastavené na 12:00, je ovládací prvek pro dobu údržby vypnutý.
+    > Pokud **počáteční čas** a **čas ukončení** jsou obě sady do 12: 00, pak Intune nekontroluje omezení toho, kdy k instalaci aktualizací. To znamená, že než žádné konfigurace, které máte pro **vyberte časy Pokud chcete zakázat instalaci aktualizací** jsou ignorovány, a aktualizace můžete nainstalovat kdykoli.  
 
 ## <a name="assign-the-policy-to-users"></a>Přiřazení zásad uživatelům
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df289d84cb78f5cb08db6ca66a0db9b7443171f5
-ms.sourcegitcommit: e23e78a563928ed2b2cbc588f2aa65678f7bb409
+ms.openlocfilehash: cbcc1d81f4ac52ed78a1addbcaefc7d4f9953362
+ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618461"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920256"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -51,7 +51,7 @@ Nápověda a podpora prostředí pro Intune je k dispozici [portál pro správu 
 
 Toto nové prostředí se podobá prostředí v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/)a nahradí předchozí nápovědu a podporu prostředí. 
 
-Pro přístup k nápovědě a podpoře, použijte následující:  
+Pro přístup k nápovědě a podpoře, použijte následující možnosti:  
 - **Řídicí panel pro správu zařízení:**
    - Vyberte všechny dostupné možnosti pro **Nápověda a podpora**
    - Vyberte **?** ikony v pravém horním rohu portálu
@@ -72,7 +72,7 @@ V tomto zobrazení můžete:
 4. [Zobrazit případy podpory](#view-support-cases), které jste dříve otevřeli pomocí tohoto nového pracovního postupu.  
 
 ### <a name="specify-details-about-an-issue"></a>Zadání podrobností o problému
-Při otevření nápovědy a podpory od umístění, které podporuje nové prostředí **potřebujete pomoc?**  Otevře se stránka. Na této stránce můžete zadat podrobnosti o problému. Po zadání podrobností vám konzola nabídne běžné dotazy na základě použitých klíčových slov. Můžete si vybrat z nabízených možností nebo zadat vlastní popis problému. Pokud zadáte vlastní popis, vyberte **Získat nápovědu** a dotaz odešlete. Po odeslání dotaz vrátí konzole kontextové informace, které mohou pomoci problém vyřešit.
+Při otevření nápovědy a podpory od umístění, které podporuje nové prostředí **potřebujete pomoc?** otevře se stránka. Na této stránce můžete zadat podrobnosti o problému. Po zadání podrobností vám konzola nabídne běžné dotazy na základě použitých klíčových slov. Vyberte nabízený možnost nebo dokončení vlastní popis problému. Pokud zadáte vlastní popis, vyberte **Získat nápovědu** a dotaz odešlete. Po odeslání dotaz vrátí konzole kontextové informace, které mohou pomoci problém vyřešit.
 
 Tady jsou příklady dotazů, které můžete odeslat:
   
@@ -86,7 +86,7 @@ Po výběru některé z nabízených možností nebo odeslání vlastního dotaz
 ![Zobrazení výsledků](./media/get-support/view-results.png)
 
 ### <a name="get-support"></a>Získat podporu
-Pokud se vám problém nepodaří vyřešit pomocí samoobslužné nápovědy ani postupů získaných z webu, můžete v konzole otevřít žádost o e-mailovou nebo telefonickou podporu.  
+Pokud samoobslužné podpory nebo webové pokyny vám nepomohly problém vyřešit, otevřete problém podpory e-mail nebo telefon pomocí konzoly.  
 Na stránce **Potřebujete pomoct?** vyberte možnost, kterou chcete použít.  
 
 - U e-mailové žádosti zadejte e-mailovou adresu a volitelně také přidejte přílohy. Výběrem možnosti **Odeslat** otevřete žádost.  
@@ -130,7 +130,7 @@ Následující informace popisují Azure Nápověda a podpora prostředí, kter�
    - **Služba**: **Microsoft Intune**
    - **Typ problému**: Typ problému zvolte z rozevírací nabídky.
    - **Podtyp problém**: Podtyp problému zvolte z rozevírací nabídky.
-   - **Předmět**: Krátce popište problém, který máte.
+   - **Předmět**: Krátce popište problém, potřebujete pomoc s.
 
    ![Obrázek karty základy na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-basics.png)
 
@@ -141,7 +141,7 @@ Následující informace popisují Azure Nápověda a podpora prostředí, kter�
 5. Na **podrobnosti** kartu, vyplňte podrobnosti pro váš problém, podpůrná metoda, vaše kontaktní informace a pak klikněte na tlačítko **Další: Zkontrolovat a vytvořit**.
 
    ![Obrázek karty podrobnosti na Nápověda a podpora – nová stránka žádosti o podporu](./media/get-support/help-new-support-case-details.png)
-6. Přečtěte si informace, zkontrolujte, zda ji opravte a potom zvolte **vytvořit** k odeslání žádosti o podporu.
+6. Přečtěte si informace, ověřte, zda je správný a pak zvolte **vytvořit** k odeslání žádosti o podporu.
 
    ![Obrázek kontroly + vytvořit kartu na novou podporu stránce žádosti](./media/get-support/help-new-support-case-create.png)
 
@@ -184,7 +184,6 @@ Následující informace popisují Azure Nápověda a podpora prostředí, kter�
 2. Na stránce **Nápověda a podpora** se zobrazí seznam **Nedávné žádosti o podporu**. Výběrem žádostí o podporu lze zobrazit další podrobnosti.
 
 ## <a name="additional-resources"></a>Další zdroje
-- [Kontakt na odbornou telefonickou podporu Microsoft Intune](phone-support-contact.md)
 - [Podpora správy fakturace a předplatného](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b)
 - [Multilicence](https://go.microsoft.com/fwlink/p/?LinkID=282015)
 - [Řešení potíží s Intune](help-desk-operators.md)

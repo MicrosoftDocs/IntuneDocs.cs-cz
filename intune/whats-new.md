@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68d65c43d15034c8ef1a69d4912a3140aca953e6
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.openlocfilehash: 3943e8e2590ae5428477c53e53c229e7a9df47c3
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871481"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899101"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -46,11 +46,8 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->     
 
 <!-- ########################## -->
-## <a name="week-of-march-25-2019"></a>Týden od 25. března 2019  
-
-### <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
+## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
 Vydali jsme aktualizace pro obě [Intune Certificate Connector a konektor certifikátu PFX](certficates-pfx-configure.md#whats-new-for-connectors). Nové vydání opravy několik známých problémů.  
-
 
 ## <a name="week-of-march-25-2019"></a>Týden od 25. března 2019
 

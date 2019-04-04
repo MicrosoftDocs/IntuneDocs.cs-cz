@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 469327261b8f617be0851b52d389965c5eff9b59
-ms.sourcegitcommit: 464cf677e3746eaba46836dedfb94572a75032f9
+ms.openlocfilehash: 66a23b75913f6465064a988bd8f2ba9c2b4c36d6
+ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330408"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920252"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -57,7 +57,7 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
     - **Popis**: Zadejte popis pro skript prostředí PowerShell. Toto nastavení není povinné, ale doporučujeme ho zadat. 
     - **Umístění skriptu**: Vyhledejte skript prostředí PowerShell. Skript musí být kratší než 200 KB (ASCII).
 4. Zvolte **konfigurovat**a zadejte následující vlastnosti:
-    - **Spusťte tento skript pomocí pověření přihlášeného**: Vyberte **Ano** spusťte skript pomocí přihlašovacích údajů uživatele v zařízení. Zvolte **ne** (výchozí) pro spuštění skriptu v kontextu systému. Možnost **Ano** vyberte, pokud nechcete, aby se skript spouštěl v kontextu systému.
+    - **Spusťte tento skript pomocí pověření přihlášeného**: Vyberte **Ano** spusťte skript pomocí přihlašovacích údajů uživatele v zařízení. Zvolte **ne** (výchozí) pro spuštění skriptu v kontextu systému. Mnoho správců zvolte **Ano**. Pokud skript se vyžaduje pro spuštění v kontextu systému, zvolte **ne**.
     - **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano** Pokud musí být skript podepsán důvěryhodným vydavatelem. Vyberte **ne** (výchozí), pokud není k dispozici požadavek pro skript, který chcete podepsat. 
     - **Spuštění skriptu na hostiteli Powershellu 64-bit**: Vyberte **Ano** pro spuštění skriptu v hostitelském prostředí PowerShell (PS) 64-bit na architektuře 64-bit klienta. Vyberte **ne** (výchozí) spustí skript v hostitelském prostředí PowerShell 32-bit.
 

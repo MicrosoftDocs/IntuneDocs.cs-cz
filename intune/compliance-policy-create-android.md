@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 04/02/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,20 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dc4fc0a0f16717bd0c21db3a9e7e57daf7867bc
-ms.sourcegitcommit: c4258bb5824daf3f7e0ac3bb8afc539bde4d95da
+ms.openlocfilehash: 4880026b59c958f8f602713279797f85c8e2d7be
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "57991156"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899032"
 ---
 # <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
 
-Zásada dodržování předpisů Intune pro zařízení s Androidem určuje pravidla a nastavení, které musí zařízení s Androidem splňovat, aby bylo považováno za dodržující předpisy. Tyto zásady [podmíněného přístupu](conditional-access.md) můžete použít k povolení nebo zablokování přístupu k prostředkům organizace. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. 
+Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune, která umožňuje chránit prostředky organizace. V Intune můžete vytvořit pravidla a nastavení, která musí zařízení s Androidem splňovat, aby být považováno za dodržující předpisy, jako je například minimální verze operačního systému. Pokud zařízení nevyhovuje, můžete [podmíněným přístupem](conditional-access.md) zablokovat přístup k datům a prostředkům.
 
-Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
+Tato funkce platí pro:  
+- Android
 
-V tomto tématu najdete nastavení, která můžete v rámci zásad dodržování předpisů použít u zařízení s Androidem.
+Můžete také získat sestavy o zařízení a v případě jeho nevyhovujícího stavu podniknout určité akce, třeba poslat uživateli oznámení e-mailem. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
+
+Tento článek obsahuje seznam nastavení, které můžete použít v rámci zásad dodržování předpisů pro zařízení s Androidem.
 
 ## <a name="non-compliance-and-conditional-access"></a>Nevyhovující stav a podmíněný přístup
 
@@ -52,7 +55,7 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 
 **Opravené** = operační systém zařízení vynucuje dodržování předpisů. Uživatel musí třeba zadat kód PIN.
 
-**V karanténě** = operační systém zařízení nevyhovuje předpisům. Například zařízení s Androidem nenutí uživatele zašifrovat obsah zařízení. Pokud zařízení nesplňuje předpisy, provedou se následující akce:
+**V karanténě** = operační systém zařízení nevyhovuje předpisům. Například zařízení s Androidem nenutí uživatele zašifrovat obsah zařízení. Pokud zařízení nevyhovuje, provedou se následující akce:
 
   - Zařízení se zablokuje, pokud se zásady podmíněného přístupu vztahují na uživatele.
   - Portál společnosti oznamuje uživateli všechny problémy s dodržováním předpisů.
@@ -71,6 +74,9 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
   - **Nízká**: Zařízení je vyhodnoceno jako vyhovující, pokud jen hrozby nízké úrovně jsou k dispozici. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
   - **Střední**: Zařízení je vyhodnoceno jako vyhovující, pokud se existující hrozby v zařízení se střední nebo nízké úrovni. Pokud se u zařízení zjistí vysoká míra ohrožení, vyhodnotí se jako nevyhovující.
   - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
+
+### <a name="google-play-protect"></a>Ochrana služby Google Play
+
 - **Služby Google Play je nakonfigurovaná**: **Vyžadovat** , že služby Google Play aplikace je nainstalován a povolen. Aplikace Služby Google Play umožňuje instalaci aktualizací zabezpečení a je základní závislostí pro mnoho funkcí zabezpečení na zařízeních s certifikací Google. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
 - **Aktualizovaný poskytovatel zabezpečení**: **Vyžadovat** , aby aktualizovaný poskytovatel zabezpečení chránil zařízení před známými chybami zabezpečení. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
 - **Kontrola ohrožení aplikací**: **Vyžadovat** , která Android **ověřovat aplikace** funkce je povolená. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
@@ -82,6 +88,9 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
   - **Není nakonfigurováno** (výchozí): Nastavení se nevyhodnotí dodržování předpisů nebo nedodržení předpisů.
   - **Zkontrolovat základní integritu**
   - **Zkontrolovat základní integritu a certifikovaná zařízení**
+
+> [!NOTE]
+> Nakonfigurování nastavení Google Play Protect pomocí zásad ochrany aplikací najdete v tématu [nastavení zásad ochrany aplikací Intune](app-protection-policy-settings-android.md#conditional-launch) v Androidu.
 
 ## <a name="device-property-settings"></a>Nastavení vlastností zařízení
 
@@ -155,7 +164,7 @@ Pokud například používáte funkci Umístění, přidáte do zásady dodržov
 
 ## <a name="scope-tags"></a>Značky oboru
 
-Značky oboru umožňují přiřadit zásady určitým skupinám, třeba prodejnímu, technickému, personálnímu nebo jinému oddělení. Značky oboru můžete přidat zásadám dodržování předpisů. Další informace najdete v článku [Filtrování zásad pomocí značek oboru](scope-tags.md). 
+Značky oboru umožňují přiřadit zásady určitým skupinám, třeba prodejnímu, technickému, personálnímu nebo jinému oddělení. Značky oboru můžete přidat do zásad dodržování předpisů. Další informace najdete v článku [Filtrování zásad pomocí značek oboru](scope-tags.md). 
 
 ## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
 
@@ -168,6 +177,7 @@ Vytvořená zásada nedělá nic, dokud ji nepřiřadíte. Přiřazení zásady:
 Nastavili jste zásady uživatelům zařízení. U zařízení používaných uživateli, pro která platí nastavené zásady, se vyhodnocuje, jestli vyhovují.
 
 ## <a name="next-steps"></a>Další postup
+
 [Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md)  
 [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)  
 [Nastavení zásad dodržování předpisů pro Android Enterprise](compliance-policy-create-android-for-work.md)

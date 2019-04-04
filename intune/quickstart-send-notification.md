@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 03/27/2019
 ms.topic: quickstart
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba835eb76dae19a13985a6175b4eceee0bae7f12
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.openlocfilehash: 4b5e6ac4683284dc71c9171f4367e72d5ec45c59
+ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871429"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899007"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odesílání oznámení do zařízení nesplňujících požadavky
 
@@ -85,7 +85,7 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Kliknutím na **OK**, **OK** a **Vytvořit** tuto zásadu dodržování předpisů vytvořte.
+7. Vyberte **OK** > **OK** > **vytvořit** vytvořte zásadu dodržování předpisů.
 8. Vyberte **Vlastnosti** > **Akce při nedodržení předpisů** > **Přidat**.
 9. V rozevíracím seznamu **Akce** potvrďte, že je vybraná možnost **Odeslat e-mail koncovému uživateli**.
 10. Výběrem možnosti **Šablona zprávy** > **Správce Contoso** > **Vybrat** vyberte šablonu zprávy, kterou jste vytvořili dříve v tomto tématu.
