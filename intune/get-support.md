@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 04/05/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbcc1d81f4ac52ed78a1addbcaefc7d4f9953362
-ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
+ms.openlocfilehash: ba463c4de45c31f9b5644852c7e48bd000a1b36b
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920256"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041685"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -30,7 +30,21 @@ ms.locfileid: "58920256"
 
 Microsoft poskytuje pro Microsoft Intune globální technickou a předprodejní podporu a podporu k fakturaci a správě předplatného. Podpora je k dispozici online i po telefonu pro placené i zkušební předplatné. Online technická podpora je k dispozici v angličtině a japonštině. Telefonické podpory a online podporu fakturace jsou dostupné v dalších jazycích.
 
-Jako správce IT, můžete použít **Nápověda a podpora** možnost do souboru lístek online podpory pro Intune z portálu Azure portal. Informace o rolích Azure AD a oprávnění, která jsou nutná k vytvoření lístku podpory najdete v tématu [rolí správce ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal). 
+Jako správce Intune můžete použít **Nápověda a podpora** možnost do souboru lístek online podpory pro Intune z portálu Azure portal. K vytváření a správě incident podpory, musí mít váš účet přiřazenou roli Azure Active Directory (Azure AD), která zahrnuje *akce* **microsoft.office365.supportTickets/allEntities/allTasks**. Informace o rolích Azure AD a oprávnění, která jsou nutná k vytvoření lístku podpory najdete v tématu [rolí správce ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles-azure-portal). 
+
+**Známé problémy pro vytváření incidentů podpory**
+
+Pokud váš účet má potřebná oprávnění, ale nepodaří úspěšně přístup nápovědu a podporu, nebo vytvořit nebo spravovat incident podpory, projděte si následující známé problémy a jejich řešení:  
+- Token uživatele zastaralé pro váš účet. K vyřešení tohoto problému, odhlásit všechny relace konzoly aktivní, znovu se přihlaste a pak se pokusíte vytvořit ani spravovat incident podpory. 
+- Více aktivních relací. Pokud jste přihlášeni pomocí více než jednoho uživatele nebo relace, odhlaste všechny kromě jednoho konzoly. Potom jednu aktivní relaci, pokusí vytvořit ani spravovat incident technické podpory.
+
+Další akce, které může být potřeba vyřešit potíže s přístupem k:
+- Vymazat všechny soubory cookie pro relace aktivní prohlížeče a opakujte vytváření a správě incident technické podpory.
+- Použít procházení relaci InPrivate pro přihlášení k Intune a zkuste vytvořit ani spravovat incident podpory.  
+
+Pokud nemáte vám předchozí řešení, přejděte na [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) a z něj vytvořit lístek podpory. Aktuálně pracujeme na opravě, které budou dostupné v létě pozdní. 
+
+
 
 >[!IMPORTANT]  
 > Pokud potřebujete technickou podporu k produktům třetích stran, které fungují s Intune (jako je Saaswedo, Cisco nebo Lookout), obraťte se nejdřív na dodavatele konkrétního produktu. Než otevřete žádost o podporu Intune, zkontrolujte, jestli máte produkt správně nakonfigurovaný.

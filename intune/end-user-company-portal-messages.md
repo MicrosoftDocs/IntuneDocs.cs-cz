@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0985f09ad758403e3461ee00f35af949d0d35bc3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798366"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041701"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -111,6 +111,34 @@ Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených apli
 ### <a name="what-it-means"></a>Význam
 
 Přidejte portál společnosti **povolené aplikace** nebo **aplikace s výjimkou** seznamu v zásady ochrany aplikací Windows Information Protection (WIP). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
+
+## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Schválení aplikace společnosti iOS (-obchodní aplikace) na zařízení s Iosem 
+
+### <a name="where-it-appears"></a>Místo zobrazení
+aplikace pro iOS vyvinuté ve vaší organizaci, které nejsou k dispozici v App Store zařízení nedůvěřuje ve výchozím nastavení. Při instalaci aplikace portálu společnosti a spusťte aplikaci, zobrazí se následující zpráva:
+
+![zpráva aplikace iOS - nedůvěryhodném vývojáři podnikových aplikací](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+
+### <a name="what-it-means"></a>Význam
+Tato zpráva znamená, že budete muset upravit nastavení zařízení iOS pro schválení a instalace aplikace vyvinuté ve vaší společnosti na zařízení s Iosem.
+
+Při instalaci těchto aplikací na portálu společnosti a spusťte aplikaci, schválit aplikaci po si ho stáhnout pomocí těchto kroků:
+
+1. Při spuštění aplikace nainstalované společnosti (-obchodní aplikace), zobrazí se zpráva "Nedůvěryhodném vývojáři podnikových aplikací". <br>
+   Stisknutím klávesy **zrušit**.
+2. Přejděte do **nastavení** > **Obecné** > **správy zařízení**.
+
+   ![zařízení s Iosem uživatelské rozhraní – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Vyberte **správy profilu** > **podnikové aplikace**.
+4. Vyberte název pro vývojáře.
+5. Stisknutím klávesy **důvěřovat _jména vývojáře_**.
+6. Potvrzení aplikace tak, že vyberete **důvěřovat** v automaticky otevřeném okně instalace aplikace.
+
+   ![zařízení s Iosem uživatelské rozhraní – vztahu důvěryhodnosti aplikace zprávy](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
+
+    Je třeba spustit a používat aplikace společnosti.
+
 
 ### <a name="see-also"></a>Viz také:
 [Co říct koncovým uživatelům o používání služby Intune](end-user-educate.md)

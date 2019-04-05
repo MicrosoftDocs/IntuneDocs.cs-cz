@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3943e8e2590ae5428477c53e53c229e7a9df47c3
-ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
+ms.openlocfilehash: bd348a1bfbe4c9fa9b787a4f167a1eb750b27db3
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899101"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041709"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -46,8 +46,18 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->     
 
 <!-- ########################## -->
+
 ## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="updated-certificate-connectors-----icm-113304612---"></a>Aktualizovaný certifikát konektory  <!-- ICM 113304612 -->
 Vydali jsme aktualizace pro obě [Intune Certificate Connector a konektor certifikátu PFX](certficates-pfx-configure.md#whats-new-for-connectors). Nové vydání opravy několik známých problémů.  
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace portál společnosti pro iOS <!-- 2536024 -->
+Domovská stránka aplikace portál společnosti pro zařízení s iOS jsme přepracovali. Díky této změně se na domovské stránce lépe postupujte podle vzorů uživatelského rozhraní pro iOS a také poskytují vylepšili jsme zjistitelnost aplikací a e-knihy.
 
 ## <a name="week-of-march-25-2019"></a>Týden od 25. března 2019
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f97af5e2e6cf5e89e185ada2350294f11b6d5f8
-ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
+ms.openlocfilehash: 55a4a38f583ab5ac8e8eb9dc23db045c29430bd6
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788497"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041705"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurace profilu certifikátu pro zařízení v Microsoft Intune
 
@@ -34,6 +34,9 @@ Pomocí Intune můžete přiřadit tyto certifikáty k zařízením, která spra
 - PKCS#12 (nebo PFX)
 
 Každý z těchto typů certifikátů má vlastní požadované součásti a požadavky na infrastrukturu.
+
+> [!NOTE]
+> Vyhrazená zařízení se systémem Android nepodporují profily certifikátů.
 
 ## <a name="overview"></a>Přehled
 

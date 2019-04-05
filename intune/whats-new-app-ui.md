@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0dd51e92cfc88c8d1f9ee78e414c899f216f8a3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 0dbeed85ea368267ddfcf61bb919729b64dc3dde
+ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799511"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041713"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -34,6 +34,11 @@ Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Při
 Pokud jste zaměstnancem nebo studenty, nezapomeňte se podívat na více systémů snímky obrazovky a odkazy na dokumentaci nápovědy portál společnosti. Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace portál společnosti pro iOS <!-- 2536024 -->
+Domovská stránka aplikace portál společnosti pro zařízení s iOS jsme přepracovali. Díky této změně se na domovské stránce lépe postupujte podle vzorů uživatelského rozhraní pro iOS a také poskytují vylepšili jsme zjistitelnost aplikací a e-knihy.
+
 
 ## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780 WNready4Review -->  
