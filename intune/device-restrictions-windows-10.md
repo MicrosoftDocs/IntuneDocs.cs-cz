@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51c1ee388c6930c328aff23cc6fc6db730097b86
-ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
+ms.openlocfilehash: 41eca84f49c8bd1827d6dfbc74909ee829dd3554
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899066"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292462"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -138,9 +138,9 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Chybový dialog SIM karty (jenom mobilní verze)**: Zablokuje zobrazování na zařízení, pokud se nezjistí žádná SIM karta chybovou zprávu.
 - **Pracovní prostor Ink**: Zablokuje uživatelům možnost přístupu k pracovnímu prostoru ink. **Není nakonfigurováno** zapne tento pracovní prostor a uživatel může používat nad zamykací obrazovkou.
 - **Automatické opětovné nasazení**: Umožňuje uživatelům s právy správce odstranit všechna uživatelská data a nastavení pomocí **CTRL + Win + R** na zamykací obrazovce zařízení. Zařízení se automaticky překonfiguruje a znovu zaregistruje ke správě.
-- **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení (jenom Windows Insider)**: Zvolte **vyžadují** tak připojení zařízení k síti před přetáhli za stránka v síti během instalace Windows 10. Tato funkce je ve verzi preview, sestavení Windows insider 1809 nebo novější je nutné pomocí tohoto nastavení.
+- **Vyžadovat, aby uživatelé pro připojení k síti během nastavování zařízení**: Zvolte **vyžadují** tak připojení zařízení k síti před přetáhli za stránka v síti během instalace Windows 10.
 
-  Pokud zařízení nemá připojení k síti během instalace Windows 10, toto nastavení není platné. Nastavení začne platit při příštím zařízení je vymazat nebo resetovat. Tedy nemusí vztahovat na zcela nové zařízení. Stejně jako jakoukoli jinou konfiguraci Intune musí být zařízení zaregistrovaných a spravovaných v Intune pro přijímání nastavení konfigurace. Ale jednou je zaregistrované a přijímá zásady, potom Resetuje zařízení vynucuje nastavení během další nastavení Windows.
+  Nastavení začne platit při příštím zařízení je vymazat nebo resetovat. Stejně jako jakoukoli jinou konfiguraci Intune musí být zařízení zaregistrovaných a spravovaných v Intune pro přijímání nastavení konfigurace. Ale jednou je zaregistrované a přijímá zásady, potom Resetuje zařízení vynucuje nastavení během další nastavení Windows.
 
 - **Přímý přístup do paměti**: **Blok** brání přímý přístup do paměti (DMA) pro všechny aktivní modulární PCI podřízené porty, dokud se uživatel přihlásí do Windows. **Povolené** (výchozí) umožňuje přístup ke DMA, i v případě, že uživatel není přihlášený.
 
