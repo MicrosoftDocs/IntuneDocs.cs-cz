@@ -1,5 +1,5 @@
 ---
-title: Nastavení zásad ochrany aplikací pro Android | Microsoft Intune
+title: Nastavení zásad ochrany aplikací pro Android
 titleSuffix: Microsoft Intune
 description: Toto téma popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22abe2d0ab06f9d9fbc41e764f180b6a14585f2d
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 5fad21abf8bd08d989d881953b4c0c790c4b9b8c
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292392"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.

@@ -1,12 +1,12 @@
 ---
-title: Instalace aplikací Office 365 na zařízení pomocí Intune
+title: Přiřazení aplikací Office 365 na zařízení s Windows 10 pomocí Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak můžete s Microsoft Intune zjednodušit instalaci aplikací Office 365 na zařízeních s Windows 10.
+description: Zjistěte, jak můžete pomocí Microsoft Intune k instalaci aplikací Office 365 na zařízení s Windows 10.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,14 +16,14 @@ ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ecdb96bc908f4220d2eb62c52df3b7750e0cba3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: c640e3e02d7d016785b87d681443b2c49f7a6281
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292434"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 

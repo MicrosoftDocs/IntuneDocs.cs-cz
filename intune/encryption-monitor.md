@@ -1,5 +1,6 @@
 ---
-title: Sestava šifrování a klíče Bitlockeru v Microsoft Intune | Microsoft Intune
+title: Sestava šifrování a klíče Bitlockeru v Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Zobrazit sestavu na stav šifrování zařízení a přístupové klíče pro obnovení Bitlockeru z v rámci portálu Microsoft Intune.
 keywords: ''
 author: brenduns
@@ -16,18 +17,18 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 820800deea491c363834a9cafaf077c0992467f6
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 43cef2e5a07795bc4c6dc7cf42b2cfa6be04269f
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292257"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
 
-- [Sestavy šifrování (ve verzi Public Preview)](#encryption-report) obsahuje podrobné informace o stavu šifrování a připravenost zařízení. Podrobnosti sestavy můžete identifikovat problémy, které brání v úspěšné šifrování zařízení, která chcete chránit.  
-- [Zobrazit podrobnosti o BitLocker (ve verzi Public Preview)](#bitlocker-recovery-keys) , jako je ID klíče a obnovení klíče pro vaše zařízení z portálu Intune.  
+- [Sestavy šifrování (ve verzi Public Preview)](encryption-monitor.md#encryption-report-in-public-preview) obsahuje podrobné informace o stavu šifrování a připravenost zařízení. Podrobnosti sestavy můžete identifikovat problémy, které brání v úspěšné šifrování zařízení, která chcete chránit.  
+- [Zobrazit podrobnosti o BitLocker (ve verzi Public Preview)](encryption-monitor.md#bitlocker-recovery-keys-in-public-preview) , jako je ID klíče a obnovení klíče pro vaše zařízení z portálu Intune.  
 
 ## <a name="encryption-report-in-public-preview"></a>Sestava šifrování (ve verzi Public Preview)
 Sestava šifrování (ve verzi Preview stydké) slouží k zobrazení podrobností o stav šifrování zařízení s Windows 10.  

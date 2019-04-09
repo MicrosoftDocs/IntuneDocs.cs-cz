@@ -1,6 +1,7 @@
 ---
 title: Řešení potíží při registraci zařízení
-description: Doporučení pro řešení potíží s registrací zařízení
+titleSuffix: Microsoft Intune
+description: Doporučení pro řešení potíží s registrací zařízení v Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,18 +17,18 @@ ROBOTS: NOINDEX,NOFOLLOW
 ms.reviewer: damionw
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-classic
+ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: add5ee699b652aacfa3e3b2bfd089905a881fe11
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 06a8bd8d0a46b7d7eed8efb4cb8b4c2d4e21f77d
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461358"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292438"
 ---
-# <a name="troubleshoot-device-enrollment-in-intune"></a>Řešení potíží s registrací do služby Intune
+# <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží s registrací zařízení v Microsoft Intune
 
-Tento článek obsahuje doporučení pro řešení potíží s registrací zařízení. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](get-support.md), ve kterém najdete další způsoby, jak získat nápovědu.
+Tento článek nabízí návrhy pro řešení potíží s [registrace zařízení](device-enrollment.md) problémy. Pokud tyto informace váš problém nevyřeší, přečtěte si téma [Jak získat podporu pro Microsoft Intune](get-support.md), ve kterém najdete další způsoby, jak získat nápovědu.
 
 
 ## <a name="initial-troubleshooting-steps"></a>První kroky při řešení potíží

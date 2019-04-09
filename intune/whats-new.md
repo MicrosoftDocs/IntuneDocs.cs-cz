@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd348a1bfbe4c9fa9b787a4f167a1eb750b27db3
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: 71591e0be428d54af359c51daee96d6a21b43169
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59041709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231810"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -58,6 +58,15 @@ Vydali jsme aktualizace pro obě [Intune Certificate Connector a konektor certif
 
 #### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace portál společnosti pro iOS <!-- 2536024 -->
 Domovská stránka aplikace portál společnosti pro zařízení s iOS jsme přepracovali. Díky této změně se na domovské stránce lépe postupujte podle vzorů uživatelského rozhraní pro iOS a také poskytují vylepšili jsme zjistitelnost aplikací a e-knihy.
+
+#### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 -->  
+Portál společnosti pro iOS registrace obrazovky a kroky byla aktualizována, aby bylo v souladu s MDM změny registrace v Apple iOS 12.2. Aktualizovaný pracovní postup vyzve uživatele k:  
+
+* Povolit Safari otevřít na webu portál společnosti a stáhnout profil pro správu před návratem do aplikace portál společnosti.  
+* Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.
+* Vraťte se do aplikace portál společnosti, aby prošel registrací.  
+
+Postup aktualizované registrace a obrazovky, naleznete v tématu [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).  
 
 ## <a name="week-of-march-25-2019"></a>Týden od 25. března 2019
 

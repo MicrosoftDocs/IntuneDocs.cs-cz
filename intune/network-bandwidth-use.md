@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 189e1fdebeb3856c3e65d51d509b190a63d8372b
-ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
+ms.openlocfilehash: 9dca4dc0b0b93d8466835ce0518268a548f3174a
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231757"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
@@ -153,15 +153,13 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 
 ### <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
-|         Název hostitele         |                                        Adresa URL (IP adresa/podsíť)                                        |  Protocol (Protokol)  |     Port     |                          Zařízení                           |
-|--------------------------|-------------------------------------------------------------------------------------------------------|------------|--------------|-----------------------------------------------------------|
-|      Konzola správce       |                                  gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |                    Apple iOS a macOS                    |
-|      Konzola správce       |                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |                    Apple iOS a macOS                    |
-|      Konzola správce       | Apple iTunesitunes.apple.com, \*.mzstatic.com, \*.phobos.apple.com, \*.phobos.apple.com.edgesuite.net |    HTTP    |      80      |                    Apple iOS a macOS                    |
-|        Server PI         |                gateway.push.apple.com(17.0.0.0/8) feedback.push.apple.com(17.0.0.0/8)                 |    TCP     |  2195, 2196  |         Platí pro cloudové zasílání zpráv v systémech Apple iOS a macOS.          |
-|     Služby zařízení      |                                        gateway.push.apple.com                                         |    TCP     |     2195     |                           Apple                           |
-|     Služby zařízení      |                                        feedback.push.apple.com                                        |    TCP     |     2196     |                           Apple                           |
-|     Služby zařízení      |   Apple iTunesitunes.apple.com \*.mzstatic.com\*.phobos.apple.com \*.phobos.apple.com.edgesuite.net   |    HTTP    |      80      |                           Apple                           |
-| Zařízení (internet/Wi-Fi) |                                 #-courier.push.apple.com(17.0.0.0/8)                                  |    TCP     | 5223 a 443 | Pouze Apple. &#39;#&#39; je náhodné číslo od 0 do 200. |
-| Zařízení (internet/Wi-Fi) |                           phobos.apple.comocsp.apple.comax.itunes.apple.com                           | HTTP/HTTPS |  80 nebo 443   |                        Pouze Apple.                         |
 
+|Používá pro|Hostname (IP address/subnet)|Protocol (Protokol)|Port|
+|-----|--------|------|-------|
+|Nabízená oznámení ze služby Intune prostřednictvím Apple Push Notification Service (APNS). Najdete v dokumentaci Apple [zde](https://support.apple.com/en-us/HT203609)|                                    gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |
+|Odeslání zpětné vazby na službu Intune prostřednictvím Apple Push Notification Service (APNS)|                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |
+|Načítání a zobrazování obsahu ze serverů společnosti Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
+|Komunikaci se servery pro služby APN|#-courier.push.apple.com (17.0.0.0/8)<br>"#" je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
+|Různé funkce, včetně přístupu k World Wide Web iTunes storu, obchodu s aplikacemi s macOS, Icloudu, zasílání zpráv, atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
+
+Další informace najdete v tématu společnosti Apple [porty TCP a UDP používané softwarové produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [o macOS, iOS a iTunes připojení k serveru hostitele a iTunes pozadí procesy](https://support.apple.com/en-us/HT201999), a [Pokud vaše klienty se systémy iOS a macOS nedaří získat nabízených oznámení Apple](https://support.apple.com/en-us/HT203609).

@@ -3,8 +3,8 @@ title: Odebrání certifikátů SCEP a PKCS v Microsoft Intune – Azure | Micro
 titleSuffix: ''
 description: Správci můžou k odebrání certifikátů z Microsoft Intune použít akce vymazání nebo vyřazení. Při některých scénářích, třeba při zrušení registrace zařízení nebo při odebrání zásady dodržování předpisů, se certifikát odebere automaticky. Při jiných scénářích naopak certifikáty zůstanou v zařízení, třeba při ztrátě nebo odebrání licence v Intune. Podívejte se na různé způsoby u zařízení se systémy Android, Android Enterprise, iOS, macOS a Windows.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 01/08/2019
 ms.topic: conceptual
@@ -16,12 +16,13 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e19df00a829d0cedb22210cd0ebe6b48c55229fe
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.reviewer: lacranda
+ms.openlocfilehash: 6a1280ca2a78853ae188ad68620f0b82846a365a
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231753"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
@@ -81,7 +82,7 @@ Certifikáty PKCS *zůstat* na zařízení (certifikátů není odvolaný nebo o
 - Profil certifikátu se odebere z přiřazení skupiny.
 
 
-## <a name="ios-devices"></a>zařízení s Iosem
+## <a name="ios-devices"></a>Zařízení se systémem iOS
 
 #### <a name="scep-certificates"></a>Certifikáty SCEP
 

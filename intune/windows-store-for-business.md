@@ -1,12 +1,12 @@
 ---
-title: Správa aplikací z Microsoft Storu pro firmy
+title: Správa hromadně zakoupených nebo bezplatných aplikací z Microsoft Store pro firmy
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak můžete synchronizovat aplikace z Microsoft Storu pro firmy do Intune a pak je přiřazovat a sledovat.
+description: Zjistěte, jak můžete synchronizovat aplikace zakoupené (nebo jinou) z Microsoft Store pro firmy do Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,21 +16,21 @@ ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 ms.reviewer: mghadial
 ms.suite: ems
 search.appverid: MET150
-ms.custom: intune-azure
+ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 500fef4cf0edf7739bb1a4f0785f590e328dbbed
-ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
+ms.openlocfilehash: 895101f2102e019c291609915a4407d1dad4c81c
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920244"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292281"
 ---
-# <a name="how-to-manage-apps-you-purchased-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa aplikací zakoupených v Microsoft Storu pro firmy v Microsoft Intune
+# <a name="how-to-manage-volume-purchased-or-free-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa svazku zakoupené (nebo jinou) aplikací z Microsoft Store pro firmy v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 [Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Příklad:
-* Můžete synchronizovat seznam aplikací, které jste zakoupili ve Storu, s Intune.
+* Můžete synchronizovat seznam aplikací, které jste zakoupili (nebo které jsou zdarma) z úložiště s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune. Tyto aplikace můžete přiřadit stejně jako všechny ostatní aplikace.
 * V konzole pro správu Intune můžete sledovat, kolik licencí je dostupných a kolik se jich právě používá.
 * Pokud není dostupný dostatečný počet licencí, blokuje Intune přiřazení a instalaci aplikací.

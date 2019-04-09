@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2018
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd162f6af256c104c04374290a695141cdcc26f6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d42fab929d6fa3e7fbaed8e9557573ebbaa1f3ad
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566195"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292346"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -110,6 +110,8 @@ Musíte definovat aplikaci `Android.App.Application` třídu odvozenou od `MAMAp
     public TaskrApp(IntPtr handle, JniHandleOwnership transfer)
         : base(handle, transfer) { }
 ```
+> [!NOTE]
+> Problém s vazbami MAM Xamarin může způsobit, že aplikace k chybě při nasazení v režimu ladění. Jako alternativní řešení `Debuggable=false` atribut musí být přidané do `Application` třídy a `android:debuggable="true"` příznak je třeba odebrat z manifestu byl ručně nastavený.
 
 #### <a name="enable-features-that-require-app-participationapp-sdk-androidmdenable-features-that-require-app-participation"></a>[Povolení funkcí, které vyžadují zapojení aplikace](app-sdk-android.md#enable-features-that-require-app-participation)
 Příklad: Určení, zda je aplikace vyžaduje PIN kód
@@ -173,4 +175,4 @@ To je očekáváno, protože když Remapper změní dědičnosti tříd Xamarin,
 > Remapper přepíše závislost, kterou používá Visual Studio pro automatické dokončování IntelliSense. Proto budete muset znovu načíst a znovu sestavte projekt, když se přidá Remapper technologie IntelliSense správně rozpoznat změny.
 
 ## <a name="support"></a>Podpora
-Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na zástupce podpory Microsoft a požádejte ho o otevření lístku podpory a vytvoření problému na [stránce problémů s Githubem](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues), abychom vám mohli co nejrychleji pomoci. 
+Pokud je vaše organizace stávajícím zákazníkem Intune, prosím práci s zástupce podpory Microsoftu vytvořit lístek podpory a vytvoření problému [stránce problémů na Githubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) a pomůžeme nejdříve podíváme. 

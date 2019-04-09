@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b19a0100a53cebe66dae9805ac0cc5b5314e8ad
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1d3e6877a690eaf1f33c1b81841170fb616592ec
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292479"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -179,7 +179,7 @@ Propojte aplikaci s binárními soubory ADAL podle následujících pokynů:
 
 3. Pokud aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
 
-4. Přidáním `com.microsoft.adalcache` a `com.microsoft.workplacejoin` do přístupových skupin řetězce klíčů povolte jednotné přihlašování (SSO) ADAL.
+4. Přidáním `com.microsoft.adalcache` do přístupových skupin řetězce klíčů povolte jednotné přihlašování (SSO) ADAL.
 
 5. V případě, že explicitně nastavujete skupinu pro sdílený řetězec klíčů mezipaměti ADAL, ujistěte se, že je nastavená na `<appidprefix>.com.microsoft.adalcache`. Pokud ho nepřepíšete, knihovna ADAL tohle nastavení provede za vás. Pokud chcete `com.microsoft.adalcache` nahradit vlastní skupinou řetězce klíčů, uveďte ji pomocí klíče `ADALCacheKeychainGroupOverride` v souboru Info.plist pod IntuneMAMSettings.
 

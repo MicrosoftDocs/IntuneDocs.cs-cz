@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8712fc49bce8237e717a1a38e63ec334509e3217
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57400462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231806"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -299,12 +299,13 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 > Microsoft Intune Certificate Connector **musí** být nainstalovaný na samostatném serveru Windows. Nemůžete ho nainstalovat na vystavující certifikační autoritu. **Musí** být také nainstalovaný na stejném serveru jako role Služba zápisu síťových zařízení (NDES).
 
 1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.
-3. Stáhněte a uložte soubor konektoru. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
+2. Vyberte **konfigurace zařízení** > **certifikace konektorů** > **přidat**.
+3. Stáhněte a uložte konektoru pro SCEP soubor. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
-    ![ConnectorDownload](/media/certificates-pfx-configure/certificates-download-connector.png)
+   ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Další kroky:
+
+4. Po dokončení stahování, přejděte na server, který je hostitelem vašich síťových zařízení pro zápis služby (NDES). Další kroky:
 
     1. Zkontrolujte, že je nainstalované rozhraní .NET 4.5 Framework, protože ho vyžaduje NDES Certificate Connector. Rozhraní .NET 4.5 Framework je automaticky součástí Windows Serveru 2012 R2 a novějších verzí.
     2. Spusťte instalační program (**NDESConnectorSetup.exe**). Tento instalační program nainstaluje taky modul zásad pro NDES a webovou službu CRP. Webová služba CRP, která má označení CertificateRegistrationSvc, běží ve službě IIS jako aplikace.

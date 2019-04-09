@@ -1,5 +1,6 @@
 ---
-title: Postup při integraci Windows Hello pro firmy s Microsoft Intune | Microsoft Intune
+title: Postup při integraci Windows Hello pro firmy s Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Naučte se vytvářet zásady pro řízení použití Windows Hello pro firmy na spravovaných zařízeních.
 keywords: ''
 author: brenduns
@@ -16,12 +17,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 2a06dbe81d0135658ddc52d6a21e8e651a278006
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: beb2043f2e32435d7e4ada3fcb1bb9918908dff9
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292376"
 ---
 # <a name="integrate-windows-hello-for-business-with-microsoft-intune"></a>Integrace Windows Hello pro firmy s Microsoft Intune
 

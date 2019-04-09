@@ -1,5 +1,6 @@
 ---
-title: Vytvoření a nasazení zásady ochrany aplikací Windows Information Protection (WIP) | Microsoft Intune
+title: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection)
+titleSuffix: Microsoft Intune
 description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Microsoft Intune
 keywords: ''
 author: Erikre
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e3751456e5a889134cfc44a4fec3cfffa7e41cd
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1b8257b315bc18b10e7c2c86e931af005e44730c
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57390097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292327"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 

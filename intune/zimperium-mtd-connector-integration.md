@@ -1,5 +1,6 @@
 ---
-title: Integrace řešení Zimperium MTD s Microsoft Intune | Microsoft Intune
+title: Integrace služby Zimperium MTD s Microsoft Intune
+titleSuffix: Microsoft Intune
 description: Přečtěte si, jak integrovat řešení Zimperium Mobile Threat Defense s Microsoft Intune, abyste mohli regulovat přístup mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 594482cc5bfae8c165863ff37cd98502922b9bd8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5ce1950c81a1327ede14fc5885eaf12f33614097
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292331"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 

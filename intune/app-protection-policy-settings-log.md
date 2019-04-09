@@ -1,5 +1,5 @@
 ---
-title: Zkontrolujte protokoly zásad ochrany aplikací | Microsoft Intune
+title: Podívejte se na protokoly zásad ochrany aplikací
 titleSuffix: Microsoft Intune
 description: Toto téma popisuje, jak konfigurovat protokoly (aplikace) zásady ochrany aplikací Intune.
 keywords: ''
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8546ca0d513fd5b4d935e030d82e956f3030fa4d
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: bab5671f8b4069608f32e22057e4ddcbb594cb9f
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292207"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 

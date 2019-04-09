@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0dbeed85ea368267ddfcf61bb919729b64dc3dde
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: e1c4266ad4ae877eadb29b7f35ef0e955028a4b9
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59041713"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231852"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -35,10 +35,20 @@ Pokud jste zaměstnancem nebo studenty, nezapomeňte se podívat na více systé
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
 
-## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
-### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace portál společnosti pro iOS <!-- 2536024 -->
-Domovská stránka aplikace portál společnosti pro zařízení s iOS jsme přepracovali. Díky této změně se na domovské stránce lépe postupujte podle vzorů uživatelského rozhraní pro iOS a také poskytují vylepšili jsme zjistitelnost aplikací a e-knihy.
 
+## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019  
+
+### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 -->  
+Portál společnosti pro iOS registrace obrazovky a kroky byla aktualizována, aby bylo v souladu s MDM změny registrace v Apple iOS 12.2. Aktualizovaný pracovní postup vyzve uživatele k:  
+
+* Povolit Safari otevřít na webu portál společnosti a stáhnout profil pro správu před návratem do aplikace portál společnosti.  
+* Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.  
+* Vraťte se do aplikace portál společnosti, aby prošel registrací.  
+
+Postup aktualizované registrace a obrazovky, naleznete v tématu [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-ios).  
+
+### <a name="user-experience-update-for-the-company-portal-app-for-ios----2536024---"></a>Aktualizace uživatelského prostředí aplikace portál společnosti pro iOS <!-- 2536024 -->
+Domovská stránka aplikace portál společnosti pro zařízení s iOS jsme přepracovali. Díky této změně se na domovské stránce lépe postupujte podle vzorů uživatelského rozhraní pro iOS a také poskytují vylepšili jsme zjistitelnost aplikací a e-knihy.  
 
 ## <a name="week-of-february-19-2019"></a>Týden od 19. února 2019  
 ### <a name="new-app-categories-screen-in-the-company-portal-app-for-windows-10---3834780-wnready4review---"></a>Nová obrazovka kategorie aplikací v aplikaci portál společnosti pro Windows 10<!-- 3834780 WNready4Review -->  
@@ -496,16 +506,7 @@ Od února bude web Portál společnosti podporovat aplikace zaměřené na uživ
 Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vylepší uživatelské prostředí.
 
 > [!Note]
-> Upozorňujeme, že následující obrázky mohou být náhledy a avizovaný produkt se od prezentovaných verzí může lišit.
-
-### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635-eeready-eestaged--"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 EEready eestaged-->  
-
-Aplikace portál společnosti pro iOS se aktualizuje obrazovky registrace a postupy, které bylo v souladu s MDM změny registrace v Apple iOS 12.2. Nové prostředí registrace bude vyzvat uživatele, aby:  
-* Povolit Safari otevřít na webu portál společnosti (přes Safari) a stáhněte profil správy před návratem do aplikace portál společnosti.  
-* Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.  
-* Vraťte se do aplikace portál společnosti, aby prošel registrací.  
-
- Budeme aktualizovat pořadí zápisu a text pokynů na obrazovce odpovídají toto prostředí. Další informace o jak můžete tyto změny připravit zařízení uživatelů, najdete v článku [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune-user-help/enroll-your-device-in-intune-ios#enroll-your-ios-device).   
+> Následující obrázky mohou být náhledy a avizovaný produkt se může lišit od prezentovaných verzí.  
 
 
 ### <a name="see-also"></a>Viz také:

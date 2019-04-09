@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8807cb090cfb662f2ab273d29baf2715dfcd6426
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 327019527ea3c374a3ebeb3c29703dbd744d18dc
+ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231764"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Při vývoji pro Microsoft Intune – duben 2019
 
@@ -177,15 +177,6 @@ Přidáváme nové nastavení Windows update kanál, který vám pomůže se zab
 
 ### <a name="windows-update-notifications----3316782---"></a>Oznámení o aktualizaci Windows <!-- 3316782 -->
 Konfigurace aktualizačního kanálu Windows Update Doplňujeme podporu, takže budete moci konfigurovat oznámení o aktualizacích Windows, které se uživatelům zobrazí. Toto nastavení nebude k dispozici v rámci portálu, ale dá se s použitím rozhraní Intune Graph API.
-
-### <a name="changes-to-company-portal-enrollment-for-ios-12-device-users---3448635---"></a>Změny registrace pomocí portálu společnosti pro uživatele zařízení s Iosem 12 <!--3448635 --> 
-Portál společnosti pro iOS se aktualizuje obrazovky registrace aplikace a postupy, které bylo v souladu s MDM změny registrace v Apple iOS 12.2. Aktualizovaný pracovní postup bude nyní vyzvat uživatele, aby:
-
-- Povolit Safari otevřít na webu portál společnosti (přes Safari) a stáhněte profil správy před návratem do aplikace portál společnosti.
-- Otevřete aplikaci nastavení na instalaci profilu správy na svém zařízení.
-- Vraťte se do aplikace portál společnosti, aby prošel registrací.
-
-Další informace o tom, jak můžete připravit pro tyto změny najdete v tématu [technické komunitě Microsoftu příspěvek](https://aka.ms/CP_changes_iOS12). Do té doby pro podporu nové registrace iOS v aplikaci portál společnosti, jsme aktualizovali kroky v [zaregistrovat zařízení s Iosem v Intune](https://docs.microsoft.com/en-us/intune/ios-enroll). Po vydání iOS verze 12.2 Apple, budou tyto změny dokumentu za provozu. 
 
 ### <a name="easier-access-to-diagnostic-settings----3804627---"></a>Jednodušší přístup k nastavení diagnostiky <!-- 3804627 -->
 Přidáváme novou možnost, jak **protokoly auditu** okno v každé úloze protokolu auditu v konzole Intune, který vám umožní otevřít přímo *nastavení diagnostiky* stránky.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11b483fc5a0293999603b801a4844a73bab91347
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 888c136934deca80877d75879e270807af194a1e
+ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798191"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59292225"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí zřizovacích profilů pro aplikace pro iOS
 
@@ -52,7 +52,7 @@ Jako správce můžete podle potřeby zahrnout nebo vyloučit skupiny zabezpeče
 3. V podokně **Vytvořit profil** nakonfigurujte následující hodnoty:
     - **Název** – Zadejte název tohoto mobilního zřizovacího profilu.
     - **Popis** – Volitelně zadejte popis pro tuto zásadu.
-    - **Odeslat soubor profilu** – zvolte **Import**a potom zvolte soubor mobilního konfiguračního profilu Apple (s příponou `.mobileprovision`), který jste si stáhli z webu pro vývojáře Apple.
+    - **Odeslat soubor profilu** – zvolte **otevřít** ikonu a potom zvolte soubor mobilního konfiguračního profilu Apple (s příponou `.mobileprovision`), který jste stáhli ze služby [webu Apple Developer](https://developer.apple.com/).
 4. Až skončíte, zvolte **Vytvořit**.
 
 ## <a name="next-steps"></a>Další postup
