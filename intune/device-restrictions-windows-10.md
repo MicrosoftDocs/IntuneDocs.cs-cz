@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 41eca84f49c8bd1827d6dfbc74909ee829dd3554
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 8957c8d8aad2eaa1741b1a625afd4b5a41a8bb51
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292462"
+ms.locfileid: "59423692"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -308,6 +308,29 @@ Tento profil omezení zařízení přímo souvisí s profil beznabídkového re�
   - **Zakázat opakované použití předchozích hesel**: Určuje počet dříve použitých hesel, která se na zařízení zapamatovávají.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (jenom mobilní verze)**: Určuje, že uživatel musí zadat heslo k odemknutí zařízení (jenom Windows 10 Mobile).
   - **Jednoduchá hesla**: Umožňuje povolit použití jednoduchých hesel, jako jsou 1111 nebo 1234. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
+- **Automatické šifrování během AADJ**: **Blok** zabraňuje automatické šifrování zařízení nástroj BitLocker, pokud zařízení je připravený pro první použití, když je zařízení připojeno k Azure AD. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, což může povolit šifrování. Více o [šifrování nástrojem BitLocker zařízení](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
+
+  [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
+
+- **Federální informace o zpracování Standard (FIPS) zásady**: **Povolit** používá zásady federální informace o zpracování Standard (FIPS), které je US government standard pro šifrování, hašování a podpisování. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, který nepoužívá FIPS.
+
+  [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
+
+- **Ověřování zařízení Windows Hello**: **Povolit** uživatelům používat Windows Hello doprovodná zařízení, například telefon, vhodnosti obsluhy vzdálené správy nebo zařízení IoT pro přihlášení k počítači s Windows 10. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, což může zabránit ověřování pomocí Windows Windows Hello doprovodná zařízení.
+
+  [Authentication/AllowSecondaryAuthenticationDevice CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-allowsecondaryauthenticationdevice)
+
+- **Webové přihlášení**: Umožňuje podporu Windows přihlášení pro poskytovatele federované bez služby AD FS (Active Directory Federation Services), jako je zabezpečení kontrolního výrazu SAML (Markup Language). SAML využívá zabezpečené tokeny, které poskytují prostředí webového prohlížeče jednotné přihlašování (SSO). Možnosti:
+
+  - **Není nakonfigurováno** (výchozí): Použije výchozí nastavení operačního systému v zařízení.
+  - **Povolené**: Poskytovatel přihlašovacích údajů webu je povolen pro přihlášení.
+  - **Zakázané**: Poskytovatel přihlašovacích údajů webu je zakázané pro přihlášení.
+
+  [Ověřování/EnableWebSignIn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin)
+
+- **Upřednostňovaný doména tenanta Azure AD**: Zadejte název domény ve vaší organizaci Azure AD. Při přihlášení uživatele v této doméně, nemají zadejte název domény. Zadejte například `contoso.com`. Uživatelé v `contoso.com` domény se můžete přihlásit pomocí své uživatelské jméno, například "abby" místo "abby@contoso.com".
+
+  [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 

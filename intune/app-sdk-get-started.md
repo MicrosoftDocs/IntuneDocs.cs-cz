@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23c254094281c7591730b2972ec0de41f5243e66
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: c6389bc9790fce45604887bc2d73b3d5d8c35c45
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566382"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423590"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -34,7 +34,7 @@ Intune App SDK podporuje podobné scénáře v systémech iOS a Android a je ur�
 
 ### <a name="if-your-app-is-internal-to-your-organization-and-will-not-be-publicly-available"></a>Pokud aplikaci používáte v organizaci interně a nebude veřejně dostupná:
 
-Můžete _**není nutné**_ registrace vaší aplikace. Pro interní [-obchodní (LOB) aplikace](apps-add.md#app-types-in-microsoft-intune) , které byly vytvořeny podle nebo vaší společnosti, správce IT interně nasadí aplikaci. Intune rozpozná, že aplikace byla vytvořena pomocí sady SDK a umožní správci IT, aby u ní použil zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-iOS-or-Android-app-for-app-protection-policy).
+Můžete _**není nutné**_ registrace vaší aplikace. Pro interní [-obchodní (LOB) aplikace](apps-add.md#app-types-in-microsoft-intune) , které byly vytvořeny podle nebo vaší společnosti, správce IT interně nasadí aplikaci. Intune rozpozná, že aplikace byla vytvořena pomocí sady SDK a umožní správci IT, aby u ní použil zásady ochrany aplikací. Můžete přeskočit k části [Povolení zásad ochrany aplikací v aplikaci pro iOS nebo Android](#enable-your-ios-or-android-app-for-app-protection-policy).
 
 ### <a name="if-your-app-will-be-released-to-a-public-app-store-like-the-apple-app-store-or-google-play"></a>Pokud bude vaše aplikace vydána ve veřejném obchodě s aplikacemi, například Apple App Storu nebo Google Play:
 

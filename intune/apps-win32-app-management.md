@@ -1,12 +1,12 @@
 ---
-title: Přidání aplikací Win32 do Microsoft Intune
+title: Přidání a přiřazení aplikací Win32 do Microsoft Intune
 titleSuffix: ''
-description: Přečtěte si, jak přidat aplikace Win32 do Microsoft Intune a jak je prostřednictvím této služby poskytovat a spravovat. Toto téma poskytuje přehled funkcí pro poskytování a správu aplikací Win32 přes Intune a informace o řešení potíží s těmito aplikacemi.
+description: Zjistěte, jak přidávat, přiřazovat a spravovat aplikace Win32 v Microsoft Intune. Toto téma poskytuje přehled funkcí pro poskytování a správu aplikací Win32 přes Intune a informace o řešení potíží s těmito aplikacemi.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,40 +18,47 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d93ad2e838f4980c206c098d8e36e51e138969d1
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: bd93e5ef7af5f4a4c0cd8d29f4cbcc26fc0515cd
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799047"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429154"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
-Samostatné využití Intune vám poskytuje širší možnosti správy aplikací Win32. Přestože zákazníci připojení ke cloudu mohou pro správu aplikací Win32 používat nástroj Configuration Manager, zákazníci, kteří používají pouze Intune, mají širší možnosti správy svých obchodních aplikací Win32. Toto téma poskytuje přehled funkce správy aplikací Win32 v Intune a informace o řešení potíží.
+[Samostatnou službu Intune](mdm-authority-set.md) teď umožňuje větší aplikace Win32 možnosti správy. Přestože zákazníci připojení ke cloudu mohou pro správu aplikací Win32 používat nástroj Configuration Manager, zákazníci, kteří používají pouze Intune, mají širší možnosti správy svých obchodních aplikací Win32. Toto téma poskytuje přehled funkce správy aplikací Win32 v Intune a informace o řešení potíží.
+
+> [!NOTE]
+> Tato funkce správy aplikací podporuje obě architektury 32bitová verze a 64bitová verze operačního systému pro aplikace Windows.
 
 ## <a name="prerequisites"></a>Požadavky
 
+Pokud chcete použít správu aplikací Win32, ujistěte se, že splňujete následující kritéria:
+
 - Windows 10 verze 1607 nebo novější (Enterprise, Pro a vzdělávání verze)
 - Klient Windows 10 musí splňovat tyto předpoklady: 
-    - připojené k Azure Active Directory (AAD) nebo [hybridní služby Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) (otevře jiný web dokumentace), a
+    - připojené k Azure Active Directory (AAD) nebo [hybridní služby Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
     - musí být zaregistrován v Intune (spravovaný přes MDM).
 - Velikost aplikace Windows je omezené na 8 GB na aplikaci
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Příprava obsahu aplikace Win32 pro nahrání
 
-Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) předběžně zpracovat aplikací Win32. Tento nástroj převede instalačních souborů aplikace do *.intunewin* formátu. Nástroj zjistí také některé atributy, které vyžaduje služba Intune k určení stavu instalace aplikace. Po použití tohoto nástroje u složky instalačního programu aplikace budete moci v konzole Intune vytvořit aplikaci Win32.
+Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) předběžně zpracovat klasické Windows (Win32) aplikace. Tento nástroj převede instalačních souborů aplikace do *.intunewin* formátu. Nástroj zjistí také některé atributy, které vyžaduje služba Intune k určení stavu instalace aplikace. Po použití tohoto nástroje ve složce instalační program aplikace, bude možné k vytvoření aplikace Win32 v konzole Intune.
 
 > [!IMPORTANT]
 > [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) zips všechny soubory a podsložky, když vytváří *.intunewin* souboru. Rozhodně buďte Microsoft Win32 obsahu Prep Tool nezávisle na instalační soubory a složky, tak, aby nezadáte, nástroj nebo jiné nepotřebné soubory a složky ve vaší *.intunewin* souboru.
 
-Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu.
+Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu jako soubor zip. Soubor ZIP obsahuje složku s názvem **Microsoft-Win32-Content-Prep-Tool-master**. Složka obsahuje nástroj pro přípravu, licence, souboru readme a poznámky k verzi. 
+
+Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vás provedou nástroje vám umožní zadat požadované parametry krok za krokem. Nebo můžete přidat datového příkazu založené na následující parametry příkazového řádku k dispozici.
 
 ### <a name="available-command-line-parameters"></a>Dostupné parametry příkazového řádku 
 
 |    **Parametr příkazového řádku**    |    **Popis**    |
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Nápověda    |
-|    `-c <setup_folder>`     |    Instalační složka pro všechny instalační soubory    |
+|    `-c <setup_folder>`     |    Složka pro všechny instalační soubory. Všechny soubory v této složce se zkomprimují do *.intunewin* souboru.    |
 |   ` -s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
 |    `-o <output_folder>`     |    Výstupní složka pro vygenerovaný soubor *.intunewin*    |
 |    `-q`       |    Tichý režim    |
@@ -61,7 +68,7 @@ Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/f
 |    **Příklad příkazu**    |    **Popis**    |
 |:-----------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |    `IntuneWinAppUtil -h`    |    Tento příkaz zobrazí informace o využití nástroje.    |
-|    `IntuneWinAppUtil -c <setup_folder> -s <source_setup_file> -o <output_folder> <-q>`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
+|    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
 
 Při generování *.intunewin* souboru, umístěte všechny soubory, které potřebujete k odkazování na dílčí složku složky instalace. Potom použijte relativní cesty tak, aby odkazovaly na konkrétní soubor, který potřebujete. Příklad:
 
@@ -255,6 +262,9 @@ Na následujícím obrázku upozorní koncového uživatele, že jsou prováděn
 
 ## <a name="toast-notifications-for-win32-apps"></a>Informační zprávy pro aplikace Win32 
 V případě potřeby můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **Assignemnts** > **zahrnout skupiny**. 
+
+> [!NOTE]
+> Rozšíření správy Intune nainstalovat Win32 neodinstaluje aplikací na nezaregistrovaných zařízeních. Správci můžou využívat vyloučení přiřazení není nabízet aplikace Win32 vlastních zařízení uživatelů.
 
 ## <a name="troubleshoot-win32-app-issues"></a>Řešení potíží s aplikacemi Win32
 Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. K zobrazení těchto protokolů můžete využít nástroj `CMTrace.exe`. *CMTrace.exe* si můžete stáhnout z [klienta nástroje Configuration Manager](https://docs.microsoft.com/sccm/core/support/tools). 

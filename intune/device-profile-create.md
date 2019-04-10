@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2019
+ms.date: 04/03/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 066508ba62d4b0ece3fe5a5e95b709a12832f1a0
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 08c6ece37a4ff6eceaa4df735f365453a4bc7d88
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423528"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -49,7 +49,7 @@ V tomto článku najdete:
 
 3. Vyberte **profily** > **vytvořit profil**. Zadejte tyto vlastnosti:
 
-   - **Název**: Zadejte popisný název pro profil.
+   - **Název**: Zadejte popisný název pro profil. Profily pojmenujte, abyste je později mohli snadno identifikovat. Například je název profilu dobré **e-mailový profil WP pro celou firmu**.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: Zvolte platformu zařízení. Možnosti:  
 

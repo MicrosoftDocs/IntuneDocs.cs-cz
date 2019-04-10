@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 982a21214831f14f6f13bf8d484d49769f031fba
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 00a0bd4936d1ad8ba8dd52f1839e7d42505db60e
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429220"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -427,6 +427,85 @@ Entita **IntuneManagementExtensionVersion** uvádí seznam všech verzí, které
 |:-------------------:|:-------------------------------------------------------------:|:-------:|
 | ExtensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
 | ExtensionVersion    | Číslo verze tvořené 4 číslicemi                                   | 1.0.2.0 |
+
+## <a name="mamapplications"></a>MamApplications
+
+Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spravované přes správu mobilních aplikací (MAM) bez registrace ve vašem podniku.
+
+| Vlastnost | Popis | Příklad |
+|---------|------------|--------|
+| mamApplicationKey |Jedinečný identifikátor aplikace MAM. | 432 |
+| mamApplicationName |Název aplikace MAM. |Ukázkový název aplikace MAM |
+| mamApplicationId |Id aplikace MAM. | 123 |
+| IsDeleted |Určuje, jestli je tento záznam aplikace MAM aktualizovaný. <br>True – aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto aplikaci MAM. |True nebo False |
+| StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
+| DeletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
+| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+
+
+## <a name="mamapplicationinstances"></a>MamApplicationInstances
+
+Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes správu mobilních aplikací (MAM) jako jedinečné instance pro uživatele a zařízení. Všichni uživatelé a zařízení, kteří jsou v této entitě uvedení, jsou chránění, protože mají přiřazenou aspoň jednu zásadu MAM.
+
+
+|          Vlastnost          |                                                                                                  Popis                                                                                                  |               Příklad                |
+|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
+|   ApplicationInstanceKey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
+|           UserId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
+|   ApplicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
+| mamApplicationId | Id aplikace Mam, pro kterou byla vytvořena tato Instance aplikace Mam.   | 23.11.2016 12:00:00   |
+|     ApplicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
+|        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
+|          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
+|      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2.2                  |
+|         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
+| mamDeviceId | Id zařízení ze zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+| mamDeviceType | Zařízení typu zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+| mamDeviceName | Název zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+|         IsDeleted          | Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |              True nebo False              |
+|   StartDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
+|       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
+| RowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
+
+## <a name="mamcheckins"></a>MamCheckins
+
+Entita **MamCheckin** představuje data shromážděná v době, kdy se instance aplikace MAM přihlásila ke službě Intune. 
+
+> [!Note]  
+> Pokud se instance aplikace přihlásí několikrát denně, uloží se to v datovém skladu jako jediné přihlášení.
+
+| Vlastnost | Popis | Příklad |
+|---------|------------|--------|
+| DateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
+| ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
+| UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
+| mamApplicationKey |Klíč z aplikací přidružené k aplikaci MAM vrácení se změnami. | 432 |
+| DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
+| PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
+| LastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
+
+## <a name="mamdevicehealths"></a>MamDeviceHealths
+
+Entita **MamDeviceHealth** představuje zařízení, na kterých jsou nasazené zásady správy mobilních aplikací (MAM), i když jsou tato zařízení s jailbreakem.
+
+| Vlastnost | Popis | Příklad |
+|---------|------------|--------|
+| DeviceHealthKey |Jedinečný identifikátor zařízení a jeho přidruženého stavu v datovém skladu – náhradní klíč |123 |
+| DeviceHealth |Jedinečný identifikátor zařízení a jeho přidruženého stavu – podobá se vlastnosti DeviceHealthKey, ale tento identifikátor představuje přirozený klíč. |b66bc706-ffff-7777-0340-032819502773 |
+| DeviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
+| RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
+
+## <a name="mamplatforms"></a>MamPlatforms
+
+Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých byla aplikace MAM nainstalována.
+
+
+|          Vlastnost          |                                    Popis                                    |                         Příklad                         |
+|----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
+|        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
+|          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádný <br>Windows <br>iOS <br>Android. |
+| RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
 Entita **managementAgentType** představuje agenty používané ke správě zařízení.

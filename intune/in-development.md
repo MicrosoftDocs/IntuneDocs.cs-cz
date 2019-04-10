@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 327019527ea3c374a3ebeb3c29703dbd744d18dc
-ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
+ms.openlocfilehash: 2422762fb6717cb4666345599785430a2c35cd1f
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231764"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423535"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Při vývoji pro Microsoft Intune – duben 2019
 
@@ -60,9 +60,6 @@ Brzy budete moct používat Intune ke správě vlastních pravidel brány firewa
 
 ### <a name="require-app-protection-conditional-access----1634317---"></a>Vyžadují podmíněný přístup ochrany aplikací  <!--1634317 -->
 Budete moct použít *zásady ochrany aplikací vyžadují*, tím se potvrdí zásad se použije pro uživatele aplikace před dokončením přihlášení uživatelům zabránit v přístupu k datům můžete chránit pomocí podmíněného přístupu. Při zabezpečování zásad může zpomalit první prostředí použijte, pomáhá chránit před problémy se sítí, správu chyb v konfiguraci nebo úmyslné úsilí o čáru přes rozpočet zásady ochrany aplikací. 
-
-### <a name="deployment-of-online-licensed-microsoft-store-for-business-apps----16726660---"></a>Nasazení služby online licenci pro obchodní aplikace pro Microsoft Store <!-- 16726660 -->
-Budete moct přiřadit vyžaduje online licencovaných Microsoft Store pro obchodní aplikace v kontextu zařízení. Nasazení Microsoft Store pro firmy díky tomu umožní aplikaci nainstalují pro všechny uživatele v zařízení. Tento krok platí jenom na Windows 10 RS4 + desktopových zařízeních. Možnost instalace v kontextu zařízení je k dispozici na stránce pro přiřazení klientské aplikace pro MSFB Online licencované aplikace.
 
 ### <a name="include-and-exclude-mixture-of-user-groups-and-device-groups-when-assigning-policies-and-profiles----1807547---"></a>Zahrnout a vyloučit skupiny uživatelů a skupin zařízení při přiřazování zásady a profily <!-- 1807547 -->
 Při přiřazování zásady dodržování předpisů nebo konfigurace profilů, můžete je přiřadit ke skupinám zabezpečení s uživateli nebo zařízení. V současné době můžete zahrnout a vyloučit pouze skupiny uživatelů, *nebo* zahrnout a vyloučit pouze skupiny zařízení. Nelze zahrnout a vyloučit směs skupin, jako například zahrnovat skupiny uživatelů *a* vyloučit skupiny zařízení.
@@ -142,7 +139,7 @@ Platí pro: Plně spravovaná zařízení s androidem Enterprise
 ### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671 -->
 Mnoho Windows 10 a novější zařízení má čipovými sadami Trusted Platform Module (TPM). Nové nastavení dodržování předpisů bude zkontrolujte, jestli je čip TPM na zařízení.
 
-[Windows 10 a novější nastavení zásad dodržování předpisů](compliance-policy-create-windows.md#windows-10-and-later-policy-settings) vypíše aktuální nastavení.
+[Windows 10 a novější nastavení zásad dodržování předpisů](compliance-policy-create-windows.md) vypíše aktuální nastavení.
 
 Platí pro: 
 - Windows 10 a novější

@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16084e2cd33f6aac9313bb1f8e9fba0467a3ce73
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 4e650f8cb713d76c44d3f3399612ee5fd6d02426
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429140"
 ---
 # <a name="reference-for-user-entity"></a>Referenční informace pro entitu uživatele
 
@@ -33,18 +33,19 @@ Kategorie **Uživatel** obsahuje entitu **Uživatel**, která definuje vlastnost
 
 Entita **User** obsahuje seznam všech uživatelů Azure Active Directory (Azure AD) s přiřazenými licencemi ve vaší společnosti.
 
-Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomen, existují data o uživateli a stavu z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
+Kolekce entit **Uživatel** obsahuje uživatelská data. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomný, data o něm a jeho stavu existují z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.
 
-| Vlastnost  | Popis | Příklad |
-|---------|------------|--------|
-| UserKey |Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč |123 |
-| UserId |Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč. |b66bc706-ffff-7437-0340-032819502773 |
-| UserEmail |E-mailová adresa uživatele |John@constoso.com |
-| userPrincipalName (Hlavní název uživatele) | Hlavní název uživatele (UPN) uživatele | John@constoso.com |
-| displayName |Zobrazované jméno uživatele |Honza |
-| IntuneLicensed |Určuje, jestli tento uživatel má licenci na službu Intune. |True nebo False |
-| IsDeleted | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. |True nebo False |
-| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil  |23.11.2016 12:00:00 |
+|          Vlastnost          |                                                                                                           Popis                                                                                                          |                Příklad               |
+|:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------:|
+| UserKey                    | Jedinečný identifikátor uživatele v datovém skladu – náhradní klíč                                                                                                                                                         | 123                                  |
+| UserId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
+| UserEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
+| userPrincipalName (Hlavní název uživatele)                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
+| displayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
+| IntuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | True nebo False                           |
+| IsDeleted                  | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. | True nebo False                           |
+| RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil                                                                                                                                                 | 23. 11. 2016 0:00                      |
+
 
 ## <a name="next-steps"></a>Další postup
  - Kolekci entit **Aktuální uživatel** můžete použít k omezení dat uživatelů na uživatele, kteří jsou aktuálně aktivní. Další informace najdete v tématu [Referenční informace pro entitu aktuálního uživatele](reports-ref-current-user.md).

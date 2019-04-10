@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d77308e010b71ec076f33b669674ce1252937f9
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: 0c950efdd95fd8d856ec677385712a022dead870
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394844"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423853"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -43,6 +43,16 @@ Tento článek ukazuje, jak přiřadit profil a zahrnuje některé informace o p
 
 5. **Uložte** provedené změny.
 
+### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnotit, kolik uživatelů cílí.
+
+Když přiřadíte profil, můžete také **vyhodnotit** kolik uživatelů se TOP týká. Tato funkce vypočítá uživatelů. nepočítá zařízení.
+
+1. V Intune, vyberte **konfigurace zařízení** > **profily**.
+2. Vyberte profil > **přiřazení** > **vyhodnotit**. Zpráva se zobrazí, kolik uživatelů cílí tento profil.
+
+Pokud **vyhodnotit** tlačítko nejde aktivovat, ujistěte se, profil je přiřazený k jedné nebo více skupin.
+
+
 ## <a name="use-scope-tags"></a>Použití značek oboru
 
 Při vytváření nebo aktualizaci profilu, můžete také přidat značky oboru profilu.
@@ -53,7 +63,7 @@ Při vytváření nebo aktualizaci profilu, můžete také přidat značky oboru
 
 Profily konfigurace zařízení v Intune vám umožňují vyloučit skupiny z přiřazení zásad. Například můžete profil zařízení přiřadit **všechny firemní uživatele** skupině, ale vyloučit členy **nejvyššího vedení** skupiny.
 
-Při vyloučení skupin, vylučte jenom uživatele nebo z přiřazení vyloučit pouze skupiny zařízení (ne směs skupin), Intune nebere v úvahu žádný vztah uživatel zařízení. Zahrnutí skupin uživatelů a současné vyloučení skupin zařízení nemusí získat přinést očekávané výsledky. Při použití smíšené skupiny nebo vyvstanou jiné konflikty, zahrnutí má přednost před vyloučením.
+Při vyloučení skupin, jenom uživatelé, nebo pouze skupiny zařízení (ne směs skupin) z přiřazení, Intune nebude podívejte se na relace uživatele na zařízení. Zahrnutí skupin uživatelů a současné vyloučení skupin zařízení nemusí získat přinést očekávané výsledky. Při použití smíšené skupiny nebo vyvstanou jiné konflikty, zahrnutí má přednost před vyloučením.
 
 Když například chcete přiřadit profil zařízení všem zařízením ve své organizaci kromě zařízení sloužících jako veřejný terminál. Zahrnete skupinu **Všichni uživatelé**, ale vyloučíte skupinu **Všechna zařízení**. V takovém případě všichni uživatelé a jejich zařízení tyto zásady získají, i když v zařízení uživatele **všechna zařízení** skupiny.
 

@@ -1,11 +1,11 @@
 ---
-title: Vytvoření zásad dodržování předpisů pro zařízení s Androidem v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvářejte nebo konfigurujte zásady dodržování předpisů zařízením služby Microsoft Intune pro zařízení s Androidem. Rozhodněte se povolit zařízení s jailbreakem, nastavte přijatelnou úroveň hrozby, zkontrolujte Google Play, zadejte minimální a maximální verzi operačního systému, zvolte si požadavky na heslo a povolte bokem instalované aplikace.
+title: Nastavení dodržování předpisů pro zařízení s androidem v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Zobrazit seznam všech nastavení, které můžete použít při nastavení dodržování předpisů pro zařízení s Androidem v Microsoft Intune. Nastavit pravidla pro hesla, zvolte verzi minimální nebo maximální operačního systému, omezit určité aplikace, zabránění opětovné použití hesla a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/02/2019
+ms.date: 04/08/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,54 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4880026b59c958f8f602713279797f85c8e2d7be
-ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
+ms.openlocfilehash: 7670af46657fed048bfe10b8659eae6d45db7620
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423573"
 ---
-# <a name="add-a-device-compliance-policy-for-android-devices-in-intune"></a>Přidání zásad dodržování předpisů pro zařízení s Androidem v Intune
+# <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení pro Android se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
 
-Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune, která umožňuje chránit prostředky organizace. V Intune můžete vytvořit pravidla a nastavení, která musí zařízení s Androidem splňovat, aby být považováno za dodržující předpisy, jako je například minimální verze operačního systému. Pokud zařízení nevyhovuje, můžete [podmíněným přístupem](conditional-access.md) zablokovat přístup k datům a prostředkům.
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tato funkce platí pro:  
+Tento článek uvádí a popisuje nastavení různých dodržování předpisů, které lze konfigurovat v zařízeních s Androidem v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete začínající kořenovým adresářem (zařízení s jailbreakem) zařízení označí jako nedodržující předpisy, nastavení povolené úrovně hrozby, povolit Google Play Protect a další.
+
+Tato funkce platí pro:
+
 - Android
 
-Můžete také získat sestavy o zařízení a v případě jeho nevyhovujícího stavu podniknout určité akce, třeba poslat uživateli oznámení e-mailem. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
+Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáhají chránit prostředky organizace. Další informace o zásadách dodržování předpisů a jaké, viz [Začínáme s dodržováním předpisů zařízeními](device-compliance-get-started.md).
 
-Tento článek obsahuje seznam nastavení, které můžete použít v rámci zásad dodržování předpisů pro zařízení s Androidem.
+## <a name="before-you-begin"></a>Před zahájením
 
-## <a name="non-compliance-and-conditional-access"></a>Nevyhovující stav a podmíněný přístup
-
-Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu.
-
---------------------
-
-|**Nastavení zásad**| **Android 4.0 nebo novější, Samsung Knox Standard 4.0 nebo novější** |
-| --- | ----|
-| **Konfigurace kódu PIN nebo hesla** |  V karanténě |
-| **Šifrování zařízení** | V karanténě |
-| **Zařízení s jailbreakem nebo rootem** | V karanténě (není nastavení) |
-| **e-mailový profil** | Nelze použít |
-| **Minimální verze operačního systému** | V karanténě |
-| **Maximální verze operačního systému** |   V karanténě |
-| **Ověření stavu Windows** | Nelze použít |
-
---------------------------
-
-**Opravené** = operační systém zařízení vynucuje dodržování předpisů. Uživatel musí třeba zadat kód PIN.
-
-**V karanténě** = operační systém zařízení nevyhovuje předpisům. Například zařízení s Androidem nenutí uživatele zašifrovat obsah zařízení. Pokud zařízení nevyhovuje, provedou se následující akce:
-
-  - Zařízení se zablokuje, pokud se zásady podmíněného přístupu vztahují na uživatele.
-  - Portál společnosti oznamuje uživateli všechny problémy s dodržováním předpisů.
-
-## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. U možnosti **Platforma** vyberte **Android**. 
-5. Zvolte **konfiguraci nastavení**. Nastavte **Stav zařízení**, **Vlastnosti zařízení** a **Zabezpečení systému** podle popisu v tomto článku.
+[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). U možnosti **Platforma** vyberte **Android**.
 
 ## <a name="device-health"></a>Device health
 
@@ -142,42 +116,18 @@ Následující tabulka popisuje, jak jsou spravované nevyhovující nastavení 
 - **Minimální úroveň oprav zabezpečení** (Android 6.0 nebo novější): Vyberte nejstarší úroveň opravy zabezpečení, kterou může zařízení mít. Zařízení, která nemají aspoň tuto úroveň opravy, nevyhovují. Datum musí být zadáno ve formátu `YYYY-MM-DD`.
 - **Omezených aplikací**: Zadejte **název aplikace** a **ID sady prostředků aplikace** pro aplikace, které by měla být omezena. Zvolte **přidat**. Pokud je na zařízení nainstalovaná aspoň jedna zakázaná aplikace, označí se zařízení jako nevyhovující.
 
-Až to budete mít, uložte změny volbou **OK** > **OK**.
+Vyberte **OK** > **Vytvořit** a změny uložte.
 
 ## <a name="locations"></a>Umístění
 
-V zásadách zvolte některé z existujících umístění. Žádné umístění ještě nemáte? Pokyny najdete v tématu o [používání umístění (ochranné sítě) v Intune](use-network-locations.md).
+V zásadách můžete vynutit dodržování předpisů podle polohy zařízení. Vyberte si ze stávající umístění. Žádné umístění ještě nemáte? [Použijte umístění (ohraničení sítě)](use-network-locations.md) v Intune najdete pokyny k.
 
-1. Zvolte **Umístění**.
-2. V seznamu zkontrolujte umístění a zvolte **Vybrat**.
+1. Zvolte **umístění** > **vybrat umístění**.
+2. Ze seznamu, zkontrolujte vaši polohu > **vyberte**.
 3. **Uložte** zásady.
-
-## <a name="actions-for-noncompliance"></a>Akce při nedodržení předpisů
-
-Vyberte **Akce při nedodržení předpisů**. Výchozí akce okamžitě označí zařízení jako nedodržující předpisy.
-
-Pokud je zařízení označené jako nevyhovující, můžete plán třeba další den změnit. Můžete také nakonfigurovat druhou akci, která uživateli nevyhovujícího zařízení pošle e-mail.
-
-Další informace, včetně návodu na vytvoření e-mailu s oznámením pro uživatele, najdete v článku o [přidání akcí pro nevyhovující zařízení](actions-for-noncompliance.md).
-
-Pokud například používáte funkci Umístění, přidáte do zásady dodržování předpisů nějaké umístění a vyberete aspoň jedno umístění, použije se pro nevyhovující zařízení výchozí akce. Pokud zařízení není připojené k vybraným umístěním, považuje se hned za nevyhovující. Uživatelům můžete dát určitou lhůtu, třeba jeden den.
-
-## <a name="scope-tags"></a>Značky oboru
-
-Značky oboru umožňují přiřadit zásady určitým skupinám, třeba prodejnímu, technickému, personálnímu nebo jinému oddělení. Značky oboru můžete přidat do zásad dodržování předpisů. Další informace najdete v článku [Filtrování zásad pomocí značek oboru](scope-tags.md). 
-
-## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
-
-Vytvořená zásada nedělá nic, dokud ji nepřiřadíte. Přiřazení zásady: 
-
-1. Vyberte zásadu, kterou jste nakonfigurovali. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
-2. Zvolte zásady a pak **Přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
-3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Můžete vybrat skupiny uživatelů, na které chcete zásady použít, a pak pomocí **Uložit** tyto zásady uživatelům nasadit.
-
-Nastavili jste zásady uživatelům zařízení. U zařízení používaných uživateli, pro která platí nastavené zásady, se vyhodnocuje, jestli vyhovují.
 
 ## <a name="next-steps"></a>Další postup
 
-[Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md)  
-[Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)  
-[Nastavení zásad dodržování předpisů pro Android Enterprise](compliance-policy-create-android-for-work.md)
+- [Přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [pomocí značky oboru filtru zásad](scope-tags.md).
+- [Monitorovat zásady dodržování předpisů](compliance-policy-monitor.md).
+- Zobrazit [nastavení zásad dodržování předpisů pro Android Enterprise](compliance-policy-create-android-for-work.md) zařízení.

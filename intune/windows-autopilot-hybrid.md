@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7993b598a2194cb11fa6f4d17a9c21fb6435c4e9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7cd9b6718b4406fd18fc0251fbeaf589acd1d0c9
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391158"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429209"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot (Preview)
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -212,6 +212,9 @@ Trvá přibližně 15 minut pro stav profilu zařízení změnit z *Nepřiřazen
 1. Vyberte **OK** > **vytvořit**.  
     Profil se vytvoří a zobrazí v seznamu.
 1. Pokud chcete profil přiřadit, postupujte podle kroků v části [Přiřazení profilu zařízení](device-profile-assign.md#assign-a-device-profile). 
+
+> [!NOTE]
+> Pojmenování funkce pro Windows Autopilotu pro hybridní připojení k Azure AD nepodporuje proměnné například sériového portu % a podporují pouze předpony pro název počítače.
 
 ## <a name="next-steps"></a>Další postup
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d3e6877a690eaf1f33c1b81841170fb616592ec
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 683f1aaccab789124039b10fac2c9270ce924166
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292479"
+ms.locfileid: "59423675"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -86,7 +86,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 1. **Možnost 1 (doporučeno)**: Odkaz `IntuneMAM.framework` do projektu. Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
    > [!NOTE]
-   > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#Submit-your-app-to-the-App-Store), kde najdete další podrobnosti.
+   > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#submit-your-app-to-the-app-store), kde najdete další podrobnosti.
 
    **Možnost 2**: Propojit `libIntuneMAM.a` knihovny. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
@@ -267,7 +267,7 @@ Aplikace, které už používají ADAL, by měly po úspěšném ověření uži
 (void)registerAndEnrollAccount:(NSString *)identity;
 ```
 
-Po zavolání metody `registerAndEnrollAccount` SDK uživatelský účet zaregistruje a pokusí se jeho jménem zaregistrovat aplikaci. Pokud se registrace z jakéhokoli důvodu nepodaří, SDK se o ni automaticky znovu pokusí za 24 hodin. Za účelem ladění může aplikace prostřednictvím delegáta přijímat [oznámení](#Status-result-and-debug-notifications) o výsledcích veškerých žádostí o registraci.
+Po zavolání metody `registerAndEnrollAccount` SDK uživatelský účet zaregistruje a pokusí se jeho jménem zaregistrovat aplikaci. Pokud se registrace z jakéhokoli důvodu nepodaří, SDK se o ni automaticky znovu pokusí za 24 hodin. Za účelem ladění může aplikace prostřednictvím delegáta přijímat [oznámení](#status-result-and-debug-notifications) o výsledcích veškerých žádostí o registraci.
 
 Po zavolání tohoto rozhraní API může aplikace dál normálně fungovat. Pokud se registrace podaří, SDK uživateli oznámí, že se vyžaduje restartování aplikace. V tu chvíli může uživatel aplikaci hned restartovat.
 
@@ -291,7 +291,7 @@ Aplikace, které uživatele nepřihlašují pomocí knihovny ADAL, můžou od sl
 
 Zavoláním této metody vyzve SDK uživatele k zadání přihlašovacích údajů, pokud nejde najít žádný existující token. Sada SDK se pak pokusí aplikaci zaregistrovat ve službě Intune MAM jménem zadaného uživatelského účtu. Metodu je možné volat s identitou nil. V tom případě SDK provede registraci s existujícím spravovaným uživatelem, kterého najde na zařízení (pokud se používá MDM), nebo pokud žádného takového nenajde, vyzve uživatele k zadání uživatelského jména.
 
-Pokud se registrace nepovede, aplikace by na základě podrobností selhání měla zvážit, jestli rozhraní API nezavolá za nějaký čas znovu. Aplikace může prostřednictvím delegáta přijímat [oznámení](#Status-result-and-debug-notifications) o výsledcích veškerých žádostí o registraci.
+Pokud se registrace nepovede, aplikace by na základě podrobností selhání měla zvážit, jestli rozhraní API nezavolá za nějaký čas znovu. Aplikace může prostřednictvím delegáta přijímat [oznámení](#status-result-and-debug-notifications) o výsledcích veškerých žádostí o registraci.
 
 Po zavolání tohoto rozhraní API může aplikace dál normálně fungovat. Pokud se registrace podaří, SDK uživateli oznámí, že se vyžaduje restartování aplikace.
 

@@ -1,11 +1,11 @@
 ---
-title: Vytvoření zásad dodržování předpisů pro zařízení s macOS v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvořte a nakonfigurujte zásady dodržování předpisů zařízením v Microsoft Intune pro zařízení s macOS, abyste mohli používat ochranu integrity systému, nastavit minimální a maximální verzi operačního systému, zvolit požadavky na heslo a zašifrovat úložiště dat.
+title: nastavení dodržování předpisů zařízení s macOS v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Zobrazit seznam všech nastavení, které můžete použít při nastavení dodržování předpisů pro zařízení s macOS v Microsoft Intune. Vyžadovat ochranu integrity systému společnosti Apple, nastavit omezení pro heslo, vyžadují bránu firewall, povolit vrátný a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/14/2018
+ms.date: 04/04/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,47 +16,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21eca671d40f1ee2f2f9176a272cab5754140a26
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: b3224e7400ad56f971488aba53bb073a0d33bb9d
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423641"
 ---
-# <a name="add-a-device-compliance-policy-for-macos-devices-with-intune"></a>Přidání zásad dodržování předpisů pro zařízení s macOS v Intune
+# <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení macOS se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
 
-Zásady dodržování předpisů Intune pro zařízení s macOS určují pravidla a nastavení, která musí zařízení s macOS splňovat, aby dodržovalo předpisy. Když používáte zásady dodržování předpisů zařízením s podmíněným přístupem, můžete povolit nebo blokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů. Zásady dodržování předpisů zařízením pro každou platformu můžete vytvořit na portálu Intune Azure. Další informace o zásadách dodržování předpisů a případných požadavcích najdete v tématu [Začínáme s dodržováním předpisů](device-compliance-get-started.md).
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení při použití zásad dodržování předpisů se zásadami podmíněného přístupu:
+Tento článek uvádí a popisuje nastavení různých dodržování předpisů, které můžete nakonfigurovat na zařízeních s macOS v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete nastavit minimální nebo maximální OS verze, sada hesla vyprší a další.
 
----------------------------
+Tato funkce platí pro:
 
-| Nastavení zásad | macOS 10.11 a novější |
-| --- | --- |
-| **Konfigurace kódu PIN nebo hesla** | Opravené |   
-| **Šifrování zařízení** | Opravené (nastavením PIN kódu) |
-| **E-mailový profil** | V karanténě |
-|**Minimální verze operačního systému** | V karanténě |
-| **Maximální verze operačního systému** | V karanténě |
+- macOS
 
----------------------------
+Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáhají chránit prostředky organizace. Další informace o zásadách dodržování předpisů a jaké, viz [Začínáme s dodržováním předpisů zařízeními](device-compliance-get-started.md).
 
-**Opravené** = operační systém zařízení vynucuje dodržování předpisů. Uživatel musí třeba zadat kód PIN.
+## <a name="before-you-begin"></a>Před zahájením
 
-**V karanténě** = operační systém zařízení nevynucuje dodržování předpisů. (Například zařízení s Androidem nenutí uživatele šifrovat zařízení.) Pokud zařízení nesplňuje předpisy, provedou se následující akce:
-
-- Zařízení se zablokuje, pokud se zásady podmíněného přístupu vztahují na uživatele.
-- Portál společnosti oznamuje uživateli všechny problémy s dodržováním předpisů.
-
-## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
-
-[!INCLUDE [new-device-compliance-policy](./includes/new-device-compliance-policy.md)]
-4. U možnosti **Platforma** vyberte **macOS**. 
-5. Zvolte **nastavení konfigurace**a zadejte **stav zařízení**, **vlastnosti zařízení**, a **zabezpečení systému** nastavení popsaná v Tento článek. Po dokončení zvolte **OK** a **Vytvořit**.
+[Vytvořte zásadu dodržování předpisů](create-compliance-policy.md#create-the-policy). U možnosti **Platforma** vyberte **macOS**.
 
 ## <a name="device-health"></a>Stav zařízení
 
-- **Vyžadovat ochranu integrity systému**: **Vyžadovat** vaše zařízení s macOS měla [ochranu Integrity systému](https://support.apple.com/HT204899) povolena.
+- **Vyžadovat ochranu integrity systému**: **Vyžadovat** vaše zařízení s macOS měla [ochranu Integrity systému](https://support.apple.com/HT204899) (otevře web společnosti Apple) povolena. Pokud je nastavena na **Nenakonfigurováno** (výchozí), toto nastavení se nevyhodnotí dodržování předpisů nebo nedodržení předpisů.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
@@ -73,7 +58,7 @@ Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení 
 - **Jednoduchá hesla**: Nastavte na **bloku** , uživatelé nemůžou vytvářet jednoduchá hesla, jako například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
 - **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
 - **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaků, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků (&, #, %,! a tak dále), které musí heslo obsahovat.
+- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků, jako například `&`, `#`, `%`, `!`, a tak dále, který musí být v hesle.
 
     Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
@@ -89,13 +74,16 @@ Následující tabulka popisuje, jak jsou spravovaná nevyhovující nastavení 
 - **Šifrování datového úložiště na zařízení**: Zvolte **vyžadují** a zašifrujte úložiště dat na vašich zařízeních.
 
 ### <a name="device-security"></a>Zabezpečení zařízení
+
 Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomocí firewallu můžete ovládat připojení pro jednotlivé aplikace. 
 
-- **Brána firewall**: **Povolit** k ochraně zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. Nastavení **Nenakonfigurováno** (výchozí) ponechá firewall vypnutý a síťový provoz bude povolený (neblokovaný).
-- **Příchozí připojení**: **Blok** všechna příchozí připojení s výjimkou souborů požadovaných pro základní internetové služby, například DHCP, Bonjour a IPSec. Toto nastavení blokuje také všechny služby sdílení včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby iTunes a dalších. Nastavení **Nenakonfigurováno** (výchozí) povoluje příchozí připojení a služby sdílení. 
+- **Brána firewall**: Vyberte **povolit** k ochraně zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. Nastavení **Nenakonfigurováno** (výchozí) ponechá firewall vypnutý a síťový provoz bude povolený (neblokovaný).
+- **Příchozí připojení**: **Blok** všechna příchozí připojení s výjimkou připojení potřebných pro základní internetové služby, například DHCP, Bonjour a IPSec. Toto nastavení také zablokuje všechny služby sdílení, včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby iTunes a další. Nastavení **Nenakonfigurováno** (výchozí) povoluje příchozí připojení a služby sdílení.
 - **Neviditelný režim**: **Povolit** neviditelný režim, který zabrání zařízení v odpovídání na zjišťovací požadavky, které můžou být uživatelé se zlými úmysly. Při aktivaci této možnosti bude zařízení oprávněným aplikacím dále odpovídat na příchozí požadavky. Nastavení **Nenakonfigurováno** (výchozí) ponechá neviditelný režim vypnutý.
 
 ### <a name="gatekeeper"></a>Gatekeeper
+
+Další informace najdete v tématu [vrátný v systému macOS](https://support.apple.com/HT202491) (otevře web společnosti Apple).
 
 **Povolit aplikace stažené z těchto míst**: Umožňuje nainstalovat na zařízení z různých míst podporovaných aplikací. Možnosti umístění:
 
@@ -104,19 +92,10 @@ Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomoc
 - **Mac App Store a identifikovaní vývojáři**: Instalovat aplikace do obchodu Mac app Store a identifikovaní vývojáři. macOS zkontroluje identitu vývojářů a provede několik dalších kontrol, aby ověřil integritu aplikace. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo tyto možnosti, považuje se zařízení za nevyhovující předpisům.
 - **Kdekoli**: Aplikace můžete nainstalovat z kdekoli a pro všechny vývojáře. Jedná se o nejméně bezpečnou možnost.
 
-Další podrobnosti najdete v dokumentaci od společnosti Apple v tématu, které se věnuje [Gatekeeperu v systému macOS](https://support.apple.com/HT202491).
-
-## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
-
-1. Vyberte zásadu, kterou jste nakonfigurovali. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
-2. Zvolte zásady a pak **Přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
-3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Můžete vybrat skupiny uživatelů, na které chcete zásady použít, a pak pomocí **Uložit** tyto zásady uživatelům nasadit.
-
-> [!TIP]
-> Ve výchozím nastavení zařízení kontroluje dodržování předpisů každých osm hodin. Uživatelé ale mohou tento proces vynutit prostřednictvím aplikace Portál společnosti Intune.
-
-Tím jste zásady uplatnili u uživatelů. U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů.
+Vyberte **OK** > **Vytvořit** a změny uložte.
 
 ## <a name="next-steps"></a>Další postup
-[Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md)  
-[Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md)
+
+- [Přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [pomocí značky oboru filtru zásad](scope-tags.md).
+- [Monitorovat zásady dodržování předpisů](compliance-policy-monitor.md).
+- Zobrazit [nastavení zásad dodržování předpisů pro iOS](compliance-policy-create-ios.md) zařízení.

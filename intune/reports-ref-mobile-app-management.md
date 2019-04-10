@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 04/09/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e9f01ad981350f250e35961f9a41a62698061a1
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 456abbf849120675b6a7c108ca65c6f9967ae64a
+ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799595"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429195"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referenční informace o entitách správy mobilních aplikací (MAM)
 
@@ -43,10 +43,14 @@ Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spr
 
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
+| mamApplicationKey |Jedinečný identifikátor aplikace MAM. | 432 |
+| mamApplicationName |Název aplikace MAM. |Ukázkový název aplikace MAM |
+| mamApplicationId |Id aplikace MAM. | 123 |
 | IsDeleted |Určuje, jestli je tento záznam aplikace MAM aktualizovaný. <br>True – aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto aplikaci MAM. |True nebo False |
 | StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
 | DeletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
+
 
 ## <a name="mamapplicationinstance"></a>MamApplicationInstance
 
@@ -58,15 +62,20 @@ Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes 
 |   ApplicationInstanceKey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
 |           UserId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
+| mamApplicationId | Id aplikace Mam, pro kterou byla vytvořena tato Instance aplikace Mam.   | 23.11.2016 12:00:00   |
 |     ApplicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
 |          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
+| mamDeviceId | Id zařízení ze zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+| mamDeviceType | Zařízení typu zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+| mamDeviceName | Název zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
 |         IsDeleted          | Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |              True nebo False              |
 |   StartDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
 |       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
 | RowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
+
 
 ## <a name="mamcheckin"></a>MamCheckin
 
@@ -80,10 +89,12 @@ Entita **MamCheckin** představuje data shromážděná v době, kdy se instance
 | DateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
 | ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
 | UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
+| mamApplicationKey |Klíč z aplikací přidružené k aplikaci MAM vrácení se změnami. | 432 |
 | DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
 | PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
 | EffectiveAppliedPolicyKey |Představuje platné použité zásady, které jsou k tomuto přihlášení aplikace MAM přidružené. Platné použité zásady jsou výsledkem sloučení všech zásad, které jsou pro konkrétní aplikaci a uživatele relevantní. | 322 |
 | LastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
+
 
 ## <a name="mamdevicehealth"></a>MamDeviceHealth
 
@@ -127,6 +138,6 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
 |          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádný <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 

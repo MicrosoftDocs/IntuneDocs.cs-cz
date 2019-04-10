@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87f7ad0f155ba1dac7d72b6a71f3b555ba908c97
-ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
+ms.openlocfilehash: 8df4a1d7f929301c11f577a9b7e50ef1647dda11
+ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59423709"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -316,7 +316,7 @@ Na stránku **Dodržování předpisů zařízením** > **Zásady** > vyberte z�
 - Nepoužitelné Také se zobrazí obrázek, který ukazuje počet zařízení s jinou platformou. Když se třeba díváte na profil iOSu, na nové dlaždici se zobrazí počet zařízení s jiným systémem než iOS, která jsou také přiřazená k tomuto profilu. Viz [Zásady dodržování předpisů zařízením](compliance-policy-monitor.md#view-status-of-device-policies).
 
 #### <a name="device-compliance-supports-3rd-party-anti-virus-solutions----2325484---"></a>Dodržování předpisů u zařízení podporuje 3. stran antivirových řešení <!-- 2325484 -->
-Když vytvoříte zásadu dodržování předpisů (**dodržování předpisů zařízením** > **zásady** > **vytvořit zásadu**  >  **Platformy: Windows 10 a novější** > **nastavení** > **zabezpečení systému**), existují nové **[zabezpečení zařízení](compliance-policy-create-windows.md#windows-10-and-later-policy-settings)** možnosti: 
+Když vytvoříte zásadu dodržování předpisů (**dodržování předpisů zařízením** > **zásady** > **vytvořit zásadu**  >  **Platformy: Windows 10 a novější** > **nastavení** > **zabezpečení systému**), existují nové **[zabezpečení zařízení](compliance-policy-create-windows.md)** možnosti: 
 - **Antivirová ochrana v programu**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antivirových řešení, které jsou registrovány Windows Security Center, jako je například Symantec a programem Windows Defender. 
 - **AntiSpyware**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antispywaru řešení, které jsou registrovány v systému Windows Security Center, jako je například Symantec a programem Windows Defender. 
 
