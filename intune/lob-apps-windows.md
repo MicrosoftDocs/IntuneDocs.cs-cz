@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2019
+ms.date: 04/10/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 05d0841a8d358ac691cbd2293e95e2f2aa8a3f23
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: ca41e12136911cc0aecb6968a949fb738e2e2d77
+ms.sourcegitcommit: d1116c70bd0f2382d590091e0e66095de3925324
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799148"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59504557"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -93,4 +93,4 @@ Tato možnost je užitečná, když chcete předejít konfliktu časování. Ke 
 
 - Zjistěte, jakými způsoby můžete monitorovat vlastnosti a přiřazení aplikace. Viz [Postup monitorování informací a přiřazení aplikace](apps-monitor.md).
 
-- Zjistěte více o kontextu své aplikace v Intune. Viz [Přehled životních cyklů zařízení a aplikací](introduction-device-app-lifecycles.md).
+- Zjistěte více o kontextu své aplikace v Intune. Zobrazit [Přehled životního cyklu aplikací v Microsoft Intune](app-lifecycle.md).

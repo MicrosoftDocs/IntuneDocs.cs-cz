@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9dca4dc0b0b93d8466835ce0518268a548f3174a
-ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
+ms.openlocfilehash: 40f9ada715570de7b5b2f95292b7ed0d238242d2
+ms.sourcegitcommit: 04d29d47b61486b3586a0e0e5e8e48762351f2a3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231757"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59509707"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 
@@ -68,11 +68,16 @@ Tady jsou obvyklá nastavení proxy serveru, který do mezipaměti ukládá obsa
 |         Velikost mezipaměti         |             5 GB až 30 GB             | Hodnota se liší podle počtu klientských počítačích v síti a používaných konfigurací. Aby se soubory neodstranily příliš brzy, upravte velikost mezipaměti pro vaše prostředí. |
 | Velikost jednotlivých souborů mezipaměti |                950 MB                 |                                                                     Toto nastavení nemusí být dostupné na všech proxy serverech s ukládáním do mezipaměti.                                                                     |
 |   Typy objektů do mezipaměti    | HTTP<br /><br />HTTPS<br /><br />BITS |                                               Balíčky Intune jsou soubory CAB stažené Službou inteligentního přenosu na pozadí (BITS) přes HTTP.                                               |
+> [!NOTE]
+> Pokud používáte proxy server pro ukládání do mezipaměti obsah žádosti, komunikace mezi klientem a proxy serveru a z proxy serveru do služby Intune jenom zašifrovaná. Připojení z klienta do Intune nebudou šifrovaná začátku do konce.
 
 Informace o používání proxy serveru k ukládání obsahu do mezipaměti najdete v dokumentaci k vašemu řešení proxy serveru.
 
 ### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Používání služby inteligentního přenosu na pozadí (BITS) na počítačích
 Během doby, které nakonfigurujete můžete použít službu BITS na počítači Windows ke snížení šířky pásma sítě. Můžete nakonfigurovat zásady služby BITS na **šířky pásma sítě** stránka zásady agenta Intune.
+
+> [!NOTE]
+> Jenom OS rozhraní pro správu pro typ aplikace MobileMSI správu správy mobilních zařízení na Windows, používá BITS ke stažení. AppX/MsiX používat jejich vlastní zásobníku stahování – služba BITS a aplikace Win32 přes agenta Intune používat optimalizace doručení spíše než službu BITS.
 
 Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](http://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
 
