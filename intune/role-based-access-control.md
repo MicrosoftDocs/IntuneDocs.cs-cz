@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b711da0cb8bceb3273215a41e75a5180e957fb4
-ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.openlocfilehash: 1efa421b568a5cc28b23859f68de7145b5b4a943
+ms.sourcegitcommit: af2512a1342d8037a96a61c8cc2c63e107913733
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658559"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533530"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "58658559"
 
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
-- **Správce služby Intune**
+- **Správce služby Intune** (označované také jako **správce Intune**)
 
 ## <a name="roles"></a>Role
 Role definuje sadu oprávnění udělit uživatelům, kteří k této roli přiřazení.
@@ -65,7 +65,7 @@ Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další inform
 | Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
 | Globální čtečky | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádný | Jen pro čtení |
 
 > [!TIP]
 > Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**, a **podmíněného přístupu**, řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
