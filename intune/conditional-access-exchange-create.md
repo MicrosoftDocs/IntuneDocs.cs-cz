@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9b03bf1cf4b19d66ed26e7a21c965d8297e1b84
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 003e6e5aa78440861e6aff5be138c4a302171c1b
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292266"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571735"
 ---
 # <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvořte zásady podmíněného přístupu pro místní Exchange a starší verze Exchange Online Dedicated
 
@@ -105,16 +105,16 @@ Nativní aplikace **Pošta** ve Windows 8.1 a novějších verzích (při regist
     > [!TIP]
     > Další informace o jazyku využívajícím značky najdete v [článku](https://en.wikipedia.org/wiki/Markup_language) na Wikipedii.
 
-12. V podokně **Upřesnit nastavení přístupu k Exchange ActiveSyncu** nastavte globální výchozí pravidlo pro přístup ze zařízení, která se nespravují v Intune, a pro pravidla na úrovni platformy, jak popisují další dva kroky.
+12. V podokně **Upřesnit nastavení přístupu k Exchange ActiveSyncu** nastavte globální výchozí pravidlo pro přístup ze zařízení, která se nespravují v Intune, a pro pravidla na úrovni platformy, jak popisují další dva kroky. Chcete-li získat na podokno Upřesnit nastavení na *Exchange přístup k – přístup k místnímu systému Exchange* zobrazit, vyberte možnost *Exchange ActiveSync – místní konektor*.
 
-8. U zařízení, na která nemá vliv podmíněný přístup ani další pravidla, můžete zvolit povolení přístupu k Exchangi, nebo tento přístup můžete zablokovat.
+13. U zařízení, na která nemá vliv podmíněný přístup ani další pravidla, můžete zvolit povolení přístupu k Exchangi, nebo tento přístup můžete zablokovat.
 
    - Pokud povolíte přístup, všechna zařízení mají okamžitě přístup k místnímu Exchangi.  U zařízení, která patří uživatelům v **zahrnutých skupinách**, se bude blokovat přístup v případě, že budou vyhodnocená jako zařízení, která nevyhovují zásadám nebo nejsou zaregistrovaná v Intune.
    - Při nastavení blokování přístupu se hned na začátku blokuje přístup na Exchange u všech zařízení.  Zařízení, která patří uživatelům v **zahrnutých skupinách**, získají přístup po registraci v Intune a jejich stav se vyhodnotí jako vyhovující zásadám. Zařízení s Androidem, která nepoužívají Samsung Knox Standard, jsou blokována vždy, protože nastavení nepodporují.
 
-13. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, jsou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když existuje výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
+14. V části **Výjimky platformy zařízení** zvolte **Přidat** a určete platformy. Pokud je u nastavení **Nespravovaný přístup zařízení** nastavená možnost **Blokováno**, jsou zařízení, která jsou zaregistrovaná a vyhovují podmínkám zásad, povolená i tehdy, když existuje výjimka pro blokování platformy. Kliknutím na **OK** uložte nastavení.
 
-14. V podokně **Místní** kliknutím na tlačítko **Uložit** uložte zásady podmíněného přístupu.
+15. V podokně **Místní** kliknutím na tlačítko **Uložit** uložte zásady podmíněného přístupu.
 
 ## <a name="create-azure-ad-conditional-access-policies-in-intune"></a>Vytvoření zásad podmíněného přístupu Azure AD v Intune
 

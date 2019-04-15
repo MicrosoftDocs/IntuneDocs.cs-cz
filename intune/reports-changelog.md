@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b4765cf953c2cdc9e972224b4f04c54df7a32af
-ms.sourcegitcommit: 04d29d47b61486b3586a0e0e5e8e48762351f2a3
+ms.openlocfilehash: 30f315f58a905e690a43ab3c44aee783bd0ef8c9
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59509714"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571803"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
@@ -48,7 +48,7 @@ Následující tabulka uvádí posledních odebrané kolekce a nahrazení kolekc
 |    currentUser                         |    Odebrané    |    Použití [uživatelé](intune-data-warehouse-collections.md#users) kolekce místo.                                                                                                                                                                                                                                                                                                      |
 |    mdmDeviceInventoryHistories         |    Odebrané    |    Mnoho vlastností byly redundantní nebo teď může být součástí [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) nebo [zařízení](intune-data-warehouse-collections.md#devices) kolekce. Žádné **mdmDeviceInventoryHistories** vlastnosti, které ještě nejsou uvedená se tyto dvě kolekce už nejsou k dispozici. Viz podrobnosti níže.    |
 
-Následující tabulka uvádí vlastnost staré dříve součástí **mdmDeviceInventoryHistories** kolekce a změnit/nahrazení:
+V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v **mdmDeviceInventoryHistories** kolekce a změnit/nahrazení. Všechny vlastnosti, které byly v **mdmDeviceInventoryHistories** , ale není uveden níže byly odebrány.
 
 |    Původní vlastnosti                |    Změna/nahrazení                                                           |
 |--------------------------------|---------------------------------------------------------------------------------|

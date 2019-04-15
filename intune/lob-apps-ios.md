@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d687fee70a5983379d1e4e95a7be6aa454f26f8a
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 1bb213230db5a699be913929cc3b68b90a8f019a
+ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799544"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59571752"
 ---
 # <a name="add-an-ios-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro iOS do Microsoft Intune
 
@@ -33,6 +33,8 @@ Informace v tomto článku vám pomůžou přidat do Microsoft Intune obchodní 
 
 >[!NOTE]
 >Uživatelé iOS zařízení můžou odebrat některé výchozí aplikace pro iOS, například Akcie nebo Mapy. Intune je ale neumožňuje znovu nasadit. Pokud uživatel tyto aplikace odstraní, musí si je znovu nainstalovat z App Storu.
+>
+>OBCHODNÍ aplikace pro iOS mají omezení maximální velikost 4 GB na aplikaci.
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
