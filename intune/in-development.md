@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2422762fb6717cb4666345599785430a2c35cd1f
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.openlocfilehash: aa38a684a32756d4f2c3be3b750f8e79b66e98f6
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423535"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587378"
 ---
 # <a name="in-development-for-microsoft-intune---april-2019"></a>Při vývoji pro Microsoft Intune – duben 2019
 
@@ -60,15 +60,6 @@ Brzy budete moct používat Intune ke správě vlastních pravidel brány firewa
 
 ### <a name="require-app-protection-conditional-access----1634317---"></a>Vyžadují podmíněný přístup ochrany aplikací  <!--1634317 -->
 Budete moct použít *zásady ochrany aplikací vyžadují*, tím se potvrdí zásad se použije pro uživatele aplikace před dokončením přihlášení uživatelům zabránit v přístupu k datům můžete chránit pomocí podmíněného přístupu. Při zabezpečování zásad může zpomalit první prostředí použijte, pomáhá chránit před problémy se sítí, správu chyb v konfiguraci nebo úmyslné úsilí o čáru přes rozpočet zásady ochrany aplikací. 
-
-### <a name="include-and-exclude-mixture-of-user-groups-and-device-groups-when-assigning-policies-and-profiles----1807547---"></a>Zahrnout a vyloučit skupiny uživatelů a skupin zařízení při přiřazování zásady a profily <!-- 1807547 -->
-Při přiřazování zásady dodržování předpisů nebo konfigurace profilů, můžete je přiřadit ke skupinám zabezpečení s uživateli nebo zařízení. V současné době můžete zahrnout a vyloučit pouze skupiny uživatelů, *nebo* zahrnout a vyloučit pouze skupiny zařízení. Nelze zahrnout a vyloučit směs skupin, jako například zahrnovat skupiny uživatelů *a* vyloučit skupiny zařízení.
-
-Budete mít zahrnout nebo vyloučit skupiny uživatelů i skupiny zařízení. Můžete zahrnout skupiny uživatelů a vyloučit skupiny zařízení. Například můžete přiřadit nebo nasadit profil konfigurace zařízení na skupinu uživatelů, ale vyloučit osobní zařízení.
-
-[Přiřazení profilů konfigurace zařízení](device-profile-assign.md) obsahuje další informace o přiřazování profilů na skupiny uživatelů a skupin zařízení.
-
-Platí pro: Všechny platformy
 
 ### <a name="retire-noncompliant-devices----1827291---"></a>Vyřazení zařízení nedodržující předpisy <!-- 1827291 -->
 Chceme přidat novou akci vyřadit z provozu zařízení nesplňujícím požadavky dodržování předpisů. Po vyřazení zařízení nesplňujícím požadavky, odeberete z něj všechna podniková data a také odebere zařízení ze spravované pomocí Intune. Tato akce spustí, když je dosaženo použije se konfigurovaná hodnota ve dnech. Minimální hodnota je 30 dní. 

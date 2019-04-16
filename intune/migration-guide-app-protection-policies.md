@@ -1,5 +1,5 @@
 ---
-title: Konfigurace zásad ochrany aplikací při migraci do Intune
+title: Konfigurace zásad ochrany aplikací během migrace
 titleSuffix: Microsoft Intune
 description: Tento článek popisuje nezbytné kroky postupu k nastavení zásad ochrany aplikací během migrace do Microsoft Intune.
 keywords: ''
@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 076750334c8faba6e9a99368d7af682b10de8962
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: c516c53c38eb033aa2a9688c40b301bedcc7a034
+ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798195"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59587395"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
 
