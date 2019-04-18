@@ -18,31 +18,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 363a7d0ef32aee0c21c6e5cecbd55cc3087f4613
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: b76b461d445bfbec5fe2e8d355cd2a4f228735df
+ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799576"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671832"
 ---
 # <a name="enroll-android-devices"></a>Registrace zařízení s Androidem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Jako správce Intune můžete spravovat následující zařízení s Androidem:
-- Zařízení s Androidem včetně zařízení Samsung Knox Standard
+- Zařízení s androidem včetně zařízení se Samsung Knox Standard a [Zebra zařízení](android-zebra-mx-overview.md).
 - Zařízení s androidem Enterprise, včetně:
     - **Zařízení s androidem Enterprise pracovním profilem**: Osobní zařízení udělit oprávnění pro přístup k podnikovým datům. Správci mohou spravovat pracovní účty, aplikace a data. Ze zařízení osobní data se ukládají odděleně od pracovní data a správci nad kterými nemáte kontrolu osobní nastavení nebo data. 
     - **Vyhrazená zařízení s androidem Enterprise**: Zařízení vlastněná společností, jeden používá, například digitálních materiálů, lístku podpory tisku nebo řízení zásob. Správci omezí použití zařízení na omezenou sadu aplikací a webových odkazů. Uživatelé zároveň nemůžou na tomto zařízení přidávat jiné aplikace ani provádět jiné akce.
     - **Plně spravovaná zařízení s androidem Enterprise**: Zařízení vlastněné společností, jeden uživatel používá výhradně pro pracovní a ne osobní použití. Správci můžou spravovat celé zařízení a vynucovat ovládací prvky zásad, není k dispozici pro pracovní profily. 
 
-## <a name="prerequisite"></a>Požadavek
+## <a name="prerequisites"></a>Požadavky
 
 Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
 
+Pro zařízení od Zebra technologie budete muset udělit oprávnění na další portál společnosti v závislosti na možnosti konkrétní zařízení. [Rozšíření nastavení mobilních zařízení na zařízení Zebra](android-zebra-mx-overview.md) obsahuje další podrobnosti.
+
 ## <a name="set-up-android-enrollment"></a>Nastavení registrace zařízení s Androidem
 
-Standardně je služba Intune nastavená tak, aby umožňovala registraci zařízení používajících Android a Samsung Knox Standard. Po splnění tohoto předpokladu musí správci pouze [sdělit uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
+Ve výchozím nastavení Intune, aby umožňovala registraci zařízení s Androidem, Samsung Knox Standard a Zebra. Po splnění požadavků, správci pouze potřeba [řekněte svým uživatelům, jak mají registrovat svá zařízení](/intune-user-help/enroll-your-device-in-intune-android).
 
 Po registraci můžete začít se správou zařízení uživatelů v Intune včetně [přiřazení zásad dodržování předpisů](compliance-policy-create-android.md), [správy aplikací](app-management.md) a dalších úloh.
 

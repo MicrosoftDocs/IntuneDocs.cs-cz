@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/03/2019
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,29 +18,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 844342d0d21110f46ac9a344edbd7409f7d779cb
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: cc29e7bb56c5a5e21264e275cfecf0ea4b0e9273
+ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797963"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59704854"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
-V Microsoft Intune se zásady konfigurace aplikací používají k nastavení konfigurace aplikací pro iOS nebo Android. Nastavení konfigurace umožňuje přizpůsobit aplikaci. Tyto konfigurační zásady se nepřiřazují přímo uživatelům ani zařízením, ale spojíte je s aplikací a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
+V Microsoft Intune se zásady konfigurace aplikací používají k nastavení konfigurace aplikací pro iOS nebo Android. Nastavení konfigurace umožňuje přizpůsobit aplikaci. Tyto zásady konfigurace se nepřiřazujte přímo na uživatele nebo zařízení. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
 Pokud chcete zásadu konfigurace aplikace přiřadit skupině uživatelů a zařízení, použijte kombinaci zahrnujících a vylučovacích přiřazení. Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Integrované skupiny jsou **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**.
 
-Aplikace může například požadovat zadání následujících podrobných informací:
+Nastavení, konfigurace aplikace například může vyžadovat lze zadat následující údaje:
 
 - Vlastní číslo portu
 - Nastavení jazyka
 - Nastavení zabezpečení
 - Nastavení brandingu, jako je logo společnosti
 
-Když tato nastavení zadají uživatelé špatně, můžete to zvýšit zatížení vašeho helpdesku a zpomalit přijímání nových aplikací.
+Pokud tato nastavení zadají uživatelé místo, může to udělají nesprávně, což může zvýšit zatížení vašeho helpdesku a zpomalit přijímání nových aplikací.
 
-Zásady konfigurace aplikací pomůžou tyto problémy eliminovat tím, že vám dovolí pomocí zásad přiřadit tato nastavení uživatelům dřív, než aplikaci spustí. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci.
+Zásady Konfigurace aplikací pomůžou eliminovat instalační program aplikace problémů s tím, že umožňuje přiřadit nastavení configation zásadu, která se přiřadí uživatelům dřív, než spustí aplikaci. Nastavení jsou pak zadaná automaticky a uživatelé nemusí provádět žádnou akci.
 
 Nastavení konfigurace se použije, když ho aplikace zjistí. Nastavení konfigurace aplikace se většinou kontroluje při prvním spuštění aplikace uživatelem.
 

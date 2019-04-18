@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 71591e0be428d54af359c51daee96d6a21b43169
-ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
+ms.openlocfilehash: dc7f4bf02c05bdece8465b1af91bfd4cbd45492b
+ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231810"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59704922"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -46,6 +46,13 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->     
 
 <!-- ########################## -->
+
+## <a name="week-of-april-15-2019"></a>Týden od 15. dubna 2019
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="intune-data-warehouse-v10-changes-reflecting-back-to-beta----4403765---"></a>Intune Data Warehouse V1.0 změny odráží zpět na verzi beta <!-- 4403765 -->
+Verze 1.0 bylo poprvé dostupné ve. 1808, se liší v některých ohledech významné z beta verze rozhraní API. Tyto změny se projeví v 1903 zpět do beta verzi rozhraní API. Pokud máte důležitá sestavy, které používají beta verzi rozhraní API, důrazně doporučujeme přepínání tyto sestavy V1.0, aby se zabránilo rozbíjející změny. Další informace najdete v tématu [protokol změn pro rozhraní API datového skladu Intune](reports-changelog.md#1903-part-2).
 
 ## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
 

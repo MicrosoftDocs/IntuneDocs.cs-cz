@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bab5671f8b4069608f32e22057e4ddcbb594cb9f
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: d593ee1389cfa183c5daaefdeae3ea7f6c44a8a8
+ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292207"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671862"
 ---
 # <a name="review-client-app-protection-logs"></a>Kontrola protokolů ochrany klientské aplikace
 
@@ -31,7 +31,7 @@ Přečtěte si informace o nastaveních, která můžete zkontrolovat v protokol
 
 Postup povolení a shromažďovat protokoly se liší podle platformy:
 - **Zařízení s androidem** – použití *portál společnosti*. Zobrazit [protokolů firemní podpoře e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
-- **iOS deices** -použít Managed Browser, nebo *Microsoft Edge* shromažďování protokolů. Podrobnosti najdete v tématu blog týmu podpory Intune [nové diagnostické konzoly Intune k odeslání protokolů v aplikaci Intune Managed Browser](https://blogs.technet.microsoft.com/intunesupport/2017/11/10/support-tip-new-intune-diagnostic-console-for-log-submission-in-the-intune-managed-browser). 
+- **iOS deices** -použít Managed Browser, nebo *Microsoft Edge* shromažďování protokolů. Podrobnosti najdete v tématu blog týmu podpory Intune [nové diagnostické konzoly Intune k odeslání protokolů v aplikaci Intune Managed Browser](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-New-Intune-Diagnostic-Console-for-Log-Submission-in/ba-p/280021). 
 - **Zařízení s Windows 10** – použití *MDMDiag* a protokoly událostí. Zobrazit, [MDM diagnostikovat selhání ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) v obsahu správu klientů Windows a na blogu [řešení potíží s Windows 10 Intune zásady selhání](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
 
 

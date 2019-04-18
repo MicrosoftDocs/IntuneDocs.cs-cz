@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4b5398517a13b940a828932113698c15c7eaed67
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: ab4ecfe3f407082d0a51910b35ad8ac8d6724f9c
+ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392784"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671879"
 ---
 # <a name="set-up-ios-device-enrollment-with-apple-configurator"></a>Nastavení registrace zařízení s Iosem pomocí Apple Configuratoru
 
@@ -119,6 +119,7 @@ Po vytvoření profilu a přiřazení sériových čísel je potřeba profil exp
 1. Na počítači Mac otevřete **Apple Configurator 2**. V panelu nabídek vyberte **Apple Configurator 2** a potom **Předvolby**.
     > [!WARNING]
     > V průběhu registrace se v zařízeních obnoví tovární konfigurace. Doporučuje se zařízení resetovat a zapnout ho. Zařízení by při připojení měla mít nastavenou **úvodní obrazovku**.
+    > Zařízení byl již zaregistrován pomocí Apple ID účtu, musí se odstranit zařízení ze serveru služby iCloud Apple před zahájením procesu registrace. Chyba výzvy se zobrazí jako "Nepodařilo se aktivovat [název]".
 
 2. V podokně **předvoleb** vyberte **Servery** a znaménkem plus (+) spusťte průvodce serveru MDM. Zvolte **Další**.
 3. V části registrace Průvodce nastavením zařízení s iOSem v Microsoft Intune zadejte **název hostitele nebo adresu URL** a **adresu URL pro registraci** serveru MDM. Jako adresu URL pro registraci zadejte adresu URL profilu pro registraci exportovanou z Intune. Zvolte **Další**.  

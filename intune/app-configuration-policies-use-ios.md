@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/12/2018
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9273d547d72fd6cf10d2addc5efff2eba8e18205
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 5bd57d12630d5e2c8b69963f513ef007a9023f9b
+ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799461"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59704888"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Konfigurační nastavení umožňují přizpůsobit aplikace na základě pokynů dodavatele. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje. Konfigurační zásady kromě toho nepřiřazujete přímo uživatelům ani zařízením. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
+Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Tato nastavení konfigurace umožňují aplikaci přizpůsobit podle směru dodavatele aplikace. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje. Konfigurační zásady kromě toho nepřiřazujete přímo uživatelům ani zařízením. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
 Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi integrované skupiny patří **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**. 
 
@@ -56,15 +56,15 @@ Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžet
 5. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
-    - **Typ registrace zařízení**: Zvolte **Spravovaná zařízení**.
+    - **Typ registrace zařízení** – zvolte **spravovaných zařízeních** pro zařízení zaregistrovaná v Intune.
 6. V poli **Platforma** vyberte **iOS**.
 7.  Zvolte **Přidružená aplikace**. Pak v podokně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci, a vyberte **OK**.
 8.  V podokně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
-9. Vyberte **Formát nastavení konfigurace**. Přidejte informace XML jedním z těchto způsobů:
+9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z následujících metod přidáte informace o konfiguraci:
     - **Použití návrháře konfigurace**
     - **Zadání XML dat**<br><br>
     Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-configuration-designer). Podrobnosti o zadávání XML dat najdete v části [Zadání XML dat](#enter-xml-data). 
-10. Po přidání informací XML, zvolte **OK** a potom **Přidat** a přidejte zásadu konfigurace. Zobrazí se podokno s přehledem zásad konfigurace.
+10. Po přidání konfigurační informace, zvolte **OK**a klikněte na tlačítko **přidat** chcete přidat zásady konfigurace. Zobrazí se podokno s přehledem zásad konfigurace.
 11. Po výběru možnosti **Přiřazení** se zobrazí možnosti zahrnutí a vyloučení. 
 
     ![Snímek obrazovky s přiřazením zásad – karta Zahrnout](./media/app-config-policy01.png)

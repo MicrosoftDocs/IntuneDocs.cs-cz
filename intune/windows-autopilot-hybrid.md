@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cd9b6718b4406fd18fc0251fbeaf589acd1d0c9
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
+ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429209"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671896"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot (Preview)
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -121,7 +121,7 @@ Konektor Intune pro službu Active Directory musí být nainstalován na počít
 
 ### <a name="configure-web-proxy-settings"></a>Konfigurace nastavení webového proxy serveru
 
-Pokud máte webový proxy server v síťovém prostředí, ujistěte se, že je konektor Intune pro Active Directory funguje správně rekapitulací [práce s existující místní proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers).
+Pokud máte webový proxy server v síťovém prostředí, ujistěte se, že je konektor Intune pro Active Directory funguje správně rekapitulací [práce s existující místní proxy servery](autopilot-hybrid-connector-proxy.md).
 
 
 ## <a name="create-a-device-group"></a>Vytvoření skupiny zařízení
