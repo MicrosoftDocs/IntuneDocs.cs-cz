@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
-ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231806"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899971"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -64,7 +64,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 
 ### <a name="certificates-and-templates"></a>Certifikáty a šablony  
 
-|Objekt|Podrobnosti|
+|Object|Podrobnosti|
 |----------|-----------|
 |**Šablona certifikátu**|Tuto šablonu nakonfigurujte na své vydávající certifikační autoritě.|
 |**Certifikát pro ověřování klientů**|Tento certifikát vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte na server NDES.|
@@ -73,7 +73,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 
 ### <a name="accounts"></a>Účty
 
-|Name|Podrobnosti|
+|Název|Podrobnosti|
 |--------|-----------|
 |**Účet služby NDES**|Zadejte účet uživatele domény, který chcete použít jako účet služby NDES. |
 
@@ -225,7 +225,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Umístění                        |      Hodnota      | Type  |      Data       |
+   |                        Location                        |      Hodnota      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |

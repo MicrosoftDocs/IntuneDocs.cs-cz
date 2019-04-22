@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e364ad88591b8ecc945702659255d9378723624f
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292229"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897241"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
 Intune můžete integrovat data od dodavatele Mobile Threat Defense jako zdroje informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Tyto informace můžete použít k ochraně podnikovým prostředkům jako Exchange a SharePoint, protože blokují přístup z ohrožených mobilních zařízení.  

@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 307895935e1cd6fe2489a4ee8ae03333ce97d55b
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799051"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900719"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 

@@ -16,11 +16,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ce6ed4b57199f87fc014addf74a06e70a285044b
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798922"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59895163"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Snížení nákladů na helpdesk pomocí samoobslužného resetování hesla
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e284c7f5549cf3ad1e610dc1941516283cf51cf9
-ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
+ms.openlocfilehash: e71a9a69cfc474f311bc6acd9e8f24c776a44476
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59587361"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59895025"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý start: Vytvoření zásady dodržování předpisů hesla pro zařízení s Androidem
 
@@ -32,7 +32,7 @@ V tomto rychlém startu použijete Microsoft Intune a nastavíte, že uživatel�
 Zásada dodržování předpisů Intune pro zařízení určuje pravidla a nastavení, která zařízení musí splňovat, aby bylo považováno za dodržující předpisy. Pomocí zásad dodržování předpisů a podmíněného přístupu můžete povolit nebo zablokovat přístup k firemním prostředkům. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
 
 > [!IMPORTANT]
-> Kromě nastavení hesla byste také měli zvážit další nastavení zabezpečení systému pro ochranu pracovníků. Další informace najdete v tématu [Systémové nastavení zabezpečení](compliance-policy-create-android-for-work.md#system-security-settings).
+> Kromě nastavení hesla byste také měli zvážit další nastavení zabezpečení systému pro ochranu pracovníků. Další informace najdete v tématu [Systémové nastavení zabezpečení](compliance-policy-create-android-for-work.md).
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 

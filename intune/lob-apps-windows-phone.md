@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: e3458570f617fb24fa2798c843ca4d7c69342472
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476474"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896563"
 ---
 # <a name="add-a-windows-phone-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows Phone do Microsoft Intune
 

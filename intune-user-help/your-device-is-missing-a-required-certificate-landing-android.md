@@ -1,12 +1,12 @@
 ---
 title: Zařízení nemá požadovaný certifikát | Dokumentace Microsoftu
 titlesuffix: Microsoft Intune
-description: Vašemu zařízení chybí certifikát, který vyžaduje firemní podpora.
+description: Co dělat, když zařízení nemá požadovaný certifikát.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,16 +15,16 @@ ms.assetid: 9081b1d8-50e8-4bc2-ba37-766421364213
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: arnab
+ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc86a53dd790059297430fd6b08f1a699aafbc84
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 150dceebd26430e82845eef6480b87c70d00a1f0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55850654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896528"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Zařízení nemá požadovaný certifikát
 
@@ -43,3 +43,7 @@ První možnost, kterou byste měli zkusit, je zjistit, jestli v zařízení [ne
 Pokud řešení problémů s certifikáty nebude fungovat, může vaše firemní podpora [vyžadují, abyste si nainstalovali druhý certifikát ke zvýšení zabezpečení](your-device-is-missing-an-IT-required-certificate-android.md).
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Další postup  
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+

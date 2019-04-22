@@ -16,11 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4ed863378616f8001beab89177c642404287e7d3
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59425324"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893885"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 8.1 se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
 

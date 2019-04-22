@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa2734247569245794bce7fe1de68c8b20c6091f
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: d3f5625a84a3d2327a5ccac24ad10d2bb0e48c02
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490600"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896627"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Použití a správa zařízení Zebra s příponami Zebra nastavení mobilních zařízení v Microsoft Intune
 
@@ -30,7 +30,12 @@ ms.locfileid: "58490600"
 
 Intune obsahuje bohatou sadu funkcí, včetně správy aplikací a konfigurace nastavení zařízení. Tyto integrované funkce a nastavení se používají ke správě zařízení s Androidem, které pocházejí od Zebra technologií, označované také jako "Zebra zařízení".
 
-Pokud chcete upravit nebo přidat další nastavení specifická pro Zebra, můžete použít také Zebra **Mobility rozšíření (MX)** na těchto zařízeních. 
+Intune nabízí také další způsoby, jak spravovat nastavení *konkrétní* Zebra zařízení:
+
+- Na zařízeních s Androidem Enterprise, použijte **OEMConfig** ke konfiguraci nastavení, které nejsou integrovaná do služby Intune. [Použití a správa zařízení s Androidem Enterprise Zebra s OEMConfig](android-oem-configuration-overview.md) obsahuje další informace.
+- Na zařízeních s Androidem, použijte **Mobility rozšíření (MX)** profily k přizpůsobení nebo přidejte další nastavení specifická pro Zebra.
+
+Tento článek ukazuje, jak použít rozšíření Mobility Zebra (MX) na Zebra zařízení v Microsoft Intune. Chcete-li použít OEMConfig, přejděte na [používat a spravovat zařízení s Androidem Enterprise Zebra s OEMConfig](android-oem-configuration-overview.md).
 
 Tato funkce platí pro:
 
@@ -39,8 +44,6 @@ Tato funkce platí pro:
 Vaše společnost může pomocí Zebra zařízení pro maloobchodní prodej ve výrobním závodě a další. Například jste prodejce a vaše prostředí zahrnuje tisíce Zebra mobilních zařízení používaných prodejcům. Intune může pomoct spravovat tato zařízení jako součást řešení správy mobilních zařízení.
 
 Pomocí Intune, můžou zapsat zařízení Zebra nasazení z obchodních aplikací do zařízení. "Konfigurace zařízení" profily vám umožňují vytvořit profily MX a spravovat Zebra konkrétní nastavení.
-
-Tento článek ukazuje, jak použít rozšíření Mobility Zebra (MX) na Zebra zařízení v Microsoft Intune.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -95,7 +98,7 @@ Dál profil publikování a využívání s StageNow aplikací na zařízení. A
 
 Po dokončení první dva kroky, je nainstalovaná aplikace portál společnosti na zařízení. Zařízení je připravené byla zaregistrovaná v Intune.
 
-[Registrace zařízení s Androidem](android-enroll.md) jsou uvedené kroky. Pokud máte mnoho Zebra zařízení, můžete použít [účet správce registrace zařízení](device-enrollment-manager-enroll.md).
+[Registrace zařízení s Androidem](android-enroll.md) jsou uvedené kroky. Pokud máte mnoho Zebra zařízení, můžete použít [účet správce registrace zařízení](device-enrollment-manager-enroll.md). Účet DEM také odebere možnost zrušení registrace z aplikace portál společnosti, tak, aby uživatelé nemohou zrušit registraci zařízení stejně snadno.
 
 ## <a name="step-4-create-a-device-management-profile-in-stagenow"></a>Krok 4: Vytvoření profilu správy zařízení v StageNow
 
@@ -149,6 +152,6 @@ Při příštím zařízení kontroluje aktualizace konfigurace MX profil je nas
 
 ## <a name="next-steps"></a>Další postup
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
-
-[Řešení potíží s Zebra zařízení pomocí protokolů StageNow](android-zebra-mx-logs-troubleshoot.md).
+- [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+- [Umožňuje spravovat zařízení s Androidem Enterprise Zebra OEMConfig](android-oem-configuration-overview.md).
+- [Řešení potíží s Zebra zařízení pomocí protokolů StageNow](android-zebra-mx-logs-troubleshoot.md).

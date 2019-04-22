@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: dd2d9f0a0caf87eb75ba3a9cdc123e69425ceb8b
-ms.sourcegitcommit: 699427f36dbf31dc7921fb75da647b736eafd79b
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899021"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898152"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 

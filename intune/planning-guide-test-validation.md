@@ -18,11 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: ba257ad6ebd7c8dbb2ca6ef805c896a4584ed41f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797450"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900175"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 

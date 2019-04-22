@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 51fe7ab05174f614ad4278cd83ede31c6bb9beb2
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798612"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899801"
 ---
 # <a name="get-an-apple-mdm-push-certificate"></a>Získání certifikátu Apple MDM Push Certificate
 

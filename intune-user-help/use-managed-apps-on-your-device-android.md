@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ba4ca5ccc9083f2132a8b8893c3bc2070ed3c50
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d3a477f24f2678b5b4c8830819d1410eb8525220
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55841330"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897992"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
@@ -52,25 +52,25 @@ Příklady často spravovaných aplikací, které jsou povinné nebo dostupné v
 -   Microsoft Word, Excel a PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?
-Napřed potřebujete nainstalovat aplikaci Portál společnosti, a pokud je to potřeba, nastavit správu zařízení. Potom existují tři způsoby, jak získat spravované aplikace.
-* Organizace nainstaluje aplikace do zařízení automaticky při jeho registraci. Informace o registraci najdete v tématu [Registrace zařízení v Intune](enroll-your-device-in-Intune-android.md).
-* Organizace zpřístupní spravované aplikace na Portálu společnosti. Přejděte do aplikace Portál společnosti nebo na její web, kde můžete tyto aplikace vyhledávat, prohlížet nebo je odtud instalovat. 
-* Aplikaci si nainstalujete z obchodu Google Play a pak se do ní přihlásíte pod svým pracovním nebo školním účtem.  
+Existují tři způsoby, jak získat spravovaných aplikací.  
+* Organizace nainstaluje aplikace do zařízení automaticky při jeho registraci.  
+* Aplikaci si nainstalujete z obchodu Google Play a pak se do ní přihlásíte pod svým pracovním nebo školním účtem.    
+* Organizace zpřístupní spravované aplikace na Portálu společnosti. Přejděte do aplikace portál společnosti nebo webu můžou vyhledávat, zobrazit a instalovat dostupné aplikace. Další informace o těchto aplikací, najdete v další části [dostupné aplikace](#available-apps).  
 
- ## <a name="available-apps"></a>Dostupné aplikace   
- Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.   
+ ### <a name="available-apps"></a>Dostupné aplikace   
+ Vaše organizace můžete vybrat aplikace, které jsou vhodné a užitečné pro vás v práci nebo škole a zpřístupnit je pro vás v aplikaci portál společnosti.  
 
  Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Android, budete mít přístup do aplikace pro Android, ale ne aplikace pro iOS.   
 
  ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
- Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti **kontakt na IT** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v jedné aplikaci **kontakt na IT** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  
 Následující seznam popisuje nastavení aplikace, které můžou pracovníci podpory ve společnosti spravovat. Tato nastavení ovlivňují, jak na zařízení zobrazujete pracovní nebo školní data, jak k nim přistupujete nebo je používáte:
 
 * Přístup k určitým webům  
 
-* Přístup k interním webům společnosti pomocí Microsoft Edge a proxy Azure Active Directory  
+* Přístup k interní weby organizace pomocí Microsoft Edge a proxy Azure Active Directory  
 
 * Minimální verze aplikace, verze operačního systému
 

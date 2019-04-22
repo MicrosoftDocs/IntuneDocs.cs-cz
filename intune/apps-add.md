@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58fea39d7461f4ce6b1838b0df78434f6bc53372
-ms.sourcegitcommit: a2cd14c30949cef17bfc6576513e7660a8015669
+ms.openlocfilehash: bd0eb13a0a65116545922ddae05f5959224fc571
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59571786"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897693"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -51,6 +51,7 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | **Konkrétní typ aplikace** | **Obecný typ** | **Konkrétní postupy aplikace** |
 | --- | --- | --- |
 | Aplikace pro Android Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Android** a zadejte adresu URL obchodu Google Play pro aplikaci. |
+| Aplikace Android Enterprise  | Aplikace pro Store  | Vyberte **Android** jako **typ aplikace**a zadejte adresu URL obchodu spravovaný obchod Google Play pro aplikaci. <sup>1</sup> |
 | Aplikace pro iOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace pro Windows Phone 8.1 Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows Phone 8.1** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
@@ -65,6 +66,8 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Webové aplikace  | Webová aplikace  | Jako **typ aplikace** vyberte **Webový odkaz** a pak zadejte platnou adresu URL odkazující na webovou aplikaci.  |
 | Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)**, vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
+
+<sup>1</sup> Další informace o Androidu Enterprise a pracovní profily Androidu, naleznete v tématu [Principy licencované aplikace](apps-add.md#understanding-licensed-apps) níže.
 
 Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
 

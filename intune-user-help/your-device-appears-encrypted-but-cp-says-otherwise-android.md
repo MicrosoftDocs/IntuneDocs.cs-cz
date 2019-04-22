@@ -1,11 +1,11 @@
 ---
 title: Vaše zařízení Android je zřejmě zašifrované | Microsoft Docs
-description: ''
+description: Vyřešit stav šifrování v aplikaci portál společnosti a Microsoft Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,60 +18,55 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55935b2f69f9573d8df5ea5ca32fb4587c652b26
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: f8c35400f37ab4ddee275cf23f7a50f280322e3b
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389468"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898664"
 ---
-# <a name="your-android-device-seems-to-be-encrypted-but-company-portal-says-otherwise"></a>Zdá se, že vaše zařízení s Androidem je zašifrované, ale Portál společnosti hlásí, že není
+# <a name="device-encrypted-but-apps-say-otherwise"></a>Zařízení zašifrovaná, ale aplikace Řekněme, že jinak
 
-Když zařízení zašifrujete, zakódujete informace, které jsou na něm uložené, pomocí tajného klíče, který znáte jenom vy. Zabráníte tak v přístupu neoprávněným osobám. Mnoho organizací vyžaduje, aby uživatelé zašifrovali svoje zařízení s Androidem, než získají přístup k firemním souborům, e-mailu nebo datům.
+Pokud aplikace portál společnosti nebo aplikace pro Microsoft Intune říct, že vaše zařízení není zašifrované, ale jste si jisti, že se jedná, proveďte kroky v tomto článku.  
 
-## <a name="common-issues"></a>Běžné problémy
+## <a name="add-a-startup-pin"></a>Přidání spouštěcího kódu PIN
 
-Novější verze Androidu, zejména počínaje verzí 7.0, vyžadují spouštěcí heslo, aby se zaručilo, že je zařízení plně zašifrované. Výrobci různých zařízení používají pro spouštěcí heslo různé popisy a umístění. Ve většině případů se toto nastavení označuje jako zabezpečené spuštění. 
+Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude ve vašem zařízení **nastavení** aplikace. Název a umístění nastavení může lišit. Třeba na Samsungu Galaxy S7 nastavení se nazývá **zabezpečené spuštění**. Chcete-li jej povolit a vytvořit heslo, přejděte na **nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečené spuštění**.  
 
-## <a name="solutions"></a>Řešení
+## <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
 
-### <a name="add-a-startup-pin"></a>Přidání spouštěcího kódu PIN
+Tato část platí jenom pro aplikaci portál společnosti. Některá zařízení vám dají na výběr, jestli chcete zašifrovat celé zařízení, nebo jenom využité místo. Zvolte možnost zašifrování celého zařízení. Pokud jste se rozhodli šifrovat jenom využité místo:
 
-Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Existuje mnoho verzí Androidu od mnoha různých výrobců. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**.  
+1. [Odebrat toto zařízení z portálu společnosti](unenroll-your-device-from-intune-android.md).
+2. Dešifrujte využité místo.  
+3. Zašifrujte celé zařízení.  
+4. Zařízení znovu zaregistrujte.  
 
-### <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
+## <a name="downgrade-your-version-of-android"></a>Přechod na starší verzi Androidu
 
-Některá zařízení vám dají na výběr, jestli chcete zašifrovat celé zařízení, nebo jenom využité místo. Místo zašifrování jenom využitého místa zvolte možnost zašifrování celého zařízení. Pokud jste už zašifrovali jenom využité místo:
-
-1. [Odeberte zařízení z Portálu společnosti](unenroll-your-device-from-intune-android.md).
-2. Dešifrujte využité místo.
-3. Zašifrujte celé zařízení.
-4. Zařízení znovu zaregistrujte.
-
-### <a name="downgrade-your-version-of-android"></a>Přechod na starší verzi Androidu
-
-Pokud vaše zařízení umožňuje přechod na starší verzi produktu, tedy na verzi Android 6.0+, proveďte to. Pokud se pokusíte přejít na starší verzi produktu, může dojít ke ztrátě dat. Jinak doporučujeme, abyste se kvůli řešení tohoto problému obrátili na svou firemní podporu. Kontaktní údaje na firemní podporu najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+Tato část platí jenom pro aplikaci portál společnosti. Pokud vaše zařízení nabízí možnost downgradovat na Android 6.0 a novější, proveďte to. Existuje riziko ztráty dat, pokud se pokusíte přejít na. Jinak doporučujeme, abyste se kvůli řešení tohoto problému obrátili na svou firemní podporu. Kontaktní informace na svou firemní podporu získat [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## <a name="specific-manufacturer-issues"></a>Problémy konkrétních výrobců
 
-Některá zařízení s Androidem verze 7.0 a novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tato zařízení můžou vypadat jako zašifrovaná, i když jsou zcela nová. Intune rozpozná, že metody šifrování u těchto zařízení můžou ohrozit informace na daném zařízení. Riziko představují především kyberzločinci, kteří mají k zařízení fyzický přístup.
+Některá zařízení s Androidem verze 7.0 nebo novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tato zařízení můžou vypadat jako zašifrovaná, i když jsou zcela nová. Intune rozpozná, že metody šifrování u těchto zařízení můžou ohrozit informace na daném zařízení. Riziko představují především kyberzločinci, kteří mají k zařízení fyzický přístup.
 
 > [!Note]
 > Microsoft spolupracuje s výrobci na vyřešení problémů, na které narazíme při testování nebo které nám nahlásí uživatelé. Tento článek aktualizujeme vždy, když jsou k dispozici nové informace. 
 
-## <a name="known-devices"></a>Známá zařízení
+## <a name="update-known-devices"></a>Aktualizovat známá zařízení   
 
-### <a name="known-devices-that-can-be-updated-to-fix-this-issue"></a>Známá zařízení, u kterých se dá tento problém vyřešit jejich aktualizací
-
-Pokud vaše zařízení jste neprovedli aktualizaci na nejnovější verzi Androidu, přejděte do svého zařízení **nastavení** aplikaci a vyberte **aktualizace**. Dokud neaktualizujete, může zobrazit tato zařízení jako nevyhovující předpisům:  
+Pokud vaše zařízení jste neprovedli aktualizaci na nejnovější verzi Androidu, přejděte do svého zařízení **nastavení** aplikaci a vyberte **aktualizace**. Dokud je aktualizovat, se nemusí zobrazit tato zařízení kompatibilní.  
 
 - Huawei Honor 8
 - Huawei P9
 
-### <a name="known-devices-that-currently-cannot-be-updated-to-fix-this-issue"></a>Známá zařízení, u kterých se tento problém momentálně nedá vyřešit jejich aktualizací
+## <a name="known-devices-that-always-appear-encrypted"></a>Známá zařízení, které se vždy zobrazují šifrované  
 Následující zařízení bude vždy vypadat jako zašifrovaná a nelze použít pro přístup k prostředkům společnosti. Přístup k firemním prostředkům, musí používat jiné zařízení.  
 
 - Huawei Mate 8
 - Zařízení OPPO
 - Zařízení vivo
-- Chytré telefony Xiaomi mi
+- Chytré telefony Xiaomi mi  
+
+## <a name="next-steps"></a>Další postup   
+Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

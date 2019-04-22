@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66574fe66f90b73d8ebf5835c5b16e93276579e4
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 1a86eaece208d1c8ea1737acde74c74ef633eea0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799349"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59901127"
 ---
 # <a name="set-up-enrollment-of-android-enterprise-work-profile-devices"></a>Nastavení registrace zařízení s Androidem Enterprise pracovním profilem
 
@@ -37,7 +37,7 @@ Nastavení správy pracovních profilů Androidu Enterprise, postupujte podle t�
 2. Zadejte nastavení registrace pracovní profil Androidu Enterprise. Pracovní profily androidu Enterprise jsou [podporován pouze některá zařízení s Androidem](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Jakékoli zařízení, které podporuje pracovní profily Androidu Enterprise podporuje také správu konvenčního Androidu. Intune umožňuje určit, jak se mají spravovat zařízení podporující Android Enterprise profiles práce v rámci [omezení registrace](enrollment-restrictions-set.md).
     - **Blok (ve výchozím nastavení)**:  Všechna zařízení s Androidem včetně zařízení podporujících Android Enterprise profiles práce, se zaregistrují jako zařízení s konvenčním Androidem.
     - **Povolit**: Všechna zařízení, která podporují Android Enterprise pracovních profilů se zaregistrují jako Android Enterprise pracovní profil zařízení. Jakékoli zařízení s Androidem, která nepodporuje pracovní profily Androidu Enterprise se zaregistrují jako zařízení s konvenčním Androidem.
-3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).
+3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/create-a-work-profile-and-enroll-your-device-in-intune-android).  
 
 
 Pokud chcete zaregistrovat zařízení pomocí pracovních profilů Androidu Enterprise, ale tato zařízení jsou už zaregistrovaná jako běžná zařízení s Androidem, tato zařízení musíte nejprve zrušit jeho registraci a pak znova zapsat.

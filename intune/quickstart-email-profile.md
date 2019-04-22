@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b252c9d3d719847c8c0911b6cbce06c83bb4bf0e
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799278"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59901178"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvořte profil zařízení pro iOS
 

@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c361c6054cf52c802155587084eaea76e024f78c
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429178"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896079"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 

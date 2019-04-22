@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: a4e25ab5a546f20309853346d0d4ded42fee6e8b
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799407"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898750"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb57ea2ef5c99c58968ee25b3a75b2165ece787a
-ms.sourcegitcommit: 0adb41c0640743d5cb726e66ad2427e3ad6faf20
+ms.openlocfilehash: 2eb709ad0d649b2ac32505b395fa91e85ad81b8a
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658545"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900226"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značky oboru pro distribuované IT
 
@@ -98,6 +98,11 @@ Pro zařízení s **typ registrace zařízení** nastavena na **spravované apli
 2. Zvolte **vlastnosti** > **obor (značky)** > zvolte značky, které chcete přiřadit k profilu.
 3. Zvolte **vyberte** > **OK** > **Uložit**.
 
+## <a name="to-assign-a-scope-tag-to-an-apple-volume-purchase-program-vpp-token"></a>Přiřadit značky oboru tokenu pro Apple Volume Purchase Program (VPP)
+1. V Intune, zvolte **klientské aplikace** > **tokeny programu Apple VPP** > zvolte VPP token.
+2. Vyberte **obor (značky)** > zvolte značky, které chcete přiřadit k profilu. Aplikace VPP a elektronické knihy, které jsou přidružené k tokenu VPP dědí přiřazené značky.
+3. Zvolte **vyberte** > **OK** > **Uložit**.
+
 ## <a name="scope-tag-details"></a>Podrobnosti značky oboru
 Při práci s značky oboru, mějte na paměti následující informace:
 
@@ -112,6 +117,7 @@ Při práci s značky oboru, mějte na paměti následující informace:
     - Skripty prostředí PowerShell
     - Tokeny DEP
     - zřizovací profil aplikace pro iOS
+    - Tokeny pro Volume Purchase Program (VPP)
 - Když správce vytvoří objekt v Intune, všechny značky oboru přiřazeno, kterou správce se automaticky přiřadí nový objekt.
 - RBAC v Intune se nevztahuje k rolím Azure Active Directory. Tedy role Správci služby Intune a globální Správci mají přístup správce k Intune bez ohledu na to, co značky oboru mají.
 - Správci v přiřazení role pomocí značky oboru můžete také zobrazit objekty Intune se žádné značky oboru.

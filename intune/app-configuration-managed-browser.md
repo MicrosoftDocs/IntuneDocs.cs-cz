@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8f32cfbb5e05958ec9d8f303809d3ffa28c3a3ec
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292388"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898987"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa webového přístupu pomocí prohlížeče chráněné zásad Microsoft Intune
 
@@ -221,7 +221,7 @@ Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Micros
 
 Pomocí postupu pro vytvoření konfigurace aplikace Managed Browser nebo Microsoft Edge zadejte následující dvojici klíč-hodnota:
 
-|Klíč|Value|
+|Klíč|Hodnota|
 |-|-|
 |Vybírejte z těchto možností:<br><ul><li>Určení povolených adres URL (povolené jsou pouze tyto adresy URL; na žádné jiné weby nebudou mít uživatelé přístup):<br> **com.microsoft.intune.mam.managedbrowser.AllowListURLs**<br><br></li><li>Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup):<br>**com.microsoft.intune.mam.managedbrowser.BlockListURLs**</li></ul>|Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy, které chcete povolit nebo blokovat, jako jedinou hodnotu oddělenou znaky svislé čáry **&#124;**.<br><br>Příklady:<br><br><code>URL1&#124;URL2&#124;URL3</code><br><code>http://*.contoso.com/*&#124;https://*.bing.com/*&#124;https://expenses.contoso.com</code>|
 

@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 1080ae8a73223ad16445d0d2233434faa818b04b
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59041689"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900005"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 

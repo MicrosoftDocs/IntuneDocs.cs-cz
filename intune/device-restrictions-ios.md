@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0d0623e9d12132ac470813d65510bc2c76379109
-ms.sourcegitcommit: 79baf89e4a7a7b1cecb8ccf5cb976736ae6a7286
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58871467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898628"
 ---
 # <a name="ios-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune
 

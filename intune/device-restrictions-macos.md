@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5feec66e791da4038bd069cdad69a7ba573f27f3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798373"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897047"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s macOS k povolení nebo zakázání funkcí pomocí Intune
 

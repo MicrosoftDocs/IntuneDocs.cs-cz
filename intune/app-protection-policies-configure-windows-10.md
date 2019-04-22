@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9f7bff9fa319f8df1abc4622237d1f9b98b9a685
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476499"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898935"
 ---
 # <a name="get-ready-to-configure-app-protection-policies-for-windows-10"></a>Příprava na konfiguraci zásad ochrany aplikací pro Windows 10 
 

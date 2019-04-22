@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9ca96f36f8813d80c7ebb07bfb3bd65f8aa0b392
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59041677"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897302"
 ---
 # <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Blokování aplikací, které nepoužívají moderní ověřování (ADAL)
 

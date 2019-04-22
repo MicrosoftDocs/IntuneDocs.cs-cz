@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,20 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 08eb5c3d2f306fef6f867fbe9f3976cb7a5aea80
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9a43b574c4bf0daf90e30690f95f6f497b441bc1
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55837844"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898067"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
-Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a internetovým připojením. Tato aplikace přispívá k bezpečnosti informací organizace díky zabezpečení zařízení, například udržováním aktuálního stavu podnikových aplikací nebo zajištěním, že se zařízení po určité době samo zamkne. Aplikace Portál společnosti vám tyto funkce může nabídnout, protože díky ní si můžete [zaregistrovat zařízení v Microsoft Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md).
+Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a internetovým připojením. Tato aplikace přispívá k bezpečnosti informací organizace díky zabezpečení zařízení, například udržováním aktuálního stavu podnikových aplikací nebo zajištěním, že se zařízení po určité době samo zamkne. Další informace o funkcích aplikace portál společnosti a jeho součástí správy zařízení najdete v tématu [kdy zaregistrovat zařízení s Androidem](why-enroll-android-device.md).  
 
 1.  Klepněte na **Domů** > **Obchod Play**.
 
-2.  Do **vyhledávacího** pole napište **portál společnosti intune** (případně Portál firmy Microsoft Intune).
+2.  V **hledání** zadejte **portál společnosti Intune**.  
 
 3.  Klepněte na **Portál společnosti Intune**.
 
@@ -45,6 +45,6 @@ Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 
-Po stažení aplikace Portál společnosti si nejspíše budete chtít [zaregistrovat zařízení v Intune](enroll-your-device-in-Intune-android.md), abyste získali úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
+Po stažení aplikace portál společnosti, budete pravděpodobně chtít [registrace zařízení v Intune](enroll-device-android-company-portal.md) abyste získali úplný přístup k pracovním informacím. Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

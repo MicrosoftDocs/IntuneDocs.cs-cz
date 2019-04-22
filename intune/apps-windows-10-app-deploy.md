@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f9c263b9b5fbb7916fb1ae9b9835e2647593f3b1
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798199"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900906"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 

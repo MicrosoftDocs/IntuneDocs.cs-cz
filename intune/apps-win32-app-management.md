@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 04/15/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd93e5ef7af5f4a4c0cd8d29f4cbcc26fc0515cd
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.openlocfilehash: 434fe0a51a2a6be5e40a7a2f8b851966ebf4845f
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429154"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898356"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -38,9 +38,10 @@ Pokud chcete použít správu aplikací Win32, ujistěte se, že splňujete nás
 
 - Windows 10 verze 1607 nebo novější (Enterprise, Pro a vzdělávání verze)
 - Klient Windows 10 musí splňovat tyto předpoklady: 
-    - připojené k Azure Active Directory (AAD) nebo [hybridní služby Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)
-    - musí být zaregistrován v Intune (spravovaný přes MDM).
-- Velikost aplikace Windows je omezené na 8 GB na aplikaci
+    - Zařízení musí být připojená k Azure AD a automatické zaregistrovaná. Rozšíření správy Intune podporuje Azure AD připojí, hybridní připojených k doméně, se podporují zařízení zaregistrovaná zásad skupiny. 
+    > [!NOTE]
+    > Pro zásady skupiny zaregistrovaná scénář – koncový uživatel používá místní uživatelský účet aad připojte se k jejich zařízení s Windows 10. Uživatel musí přihlásit pomocí svého účtu AAD uživatele zařízení a registrace v Intune. Intune se nainstalovat rozšíření správy Intune na zařízení, pokud Powershellový skript nebo aplikace Win32 je zacílený na uživatele nebo zařízení.
+- Velikost aplikace Windows je omezené na 8 GB na aplikaci.
 
 ## <a name="prepare-the-win32-app-content-for-upload"></a>Příprava obsahu aplikace Win32 pro nahrání
 
@@ -51,13 +52,13 @@ Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?li
 
 Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu jako soubor zip. Soubor ZIP obsahuje složku s názvem **Microsoft-Win32-Content-Prep-Tool-master**. Složka obsahuje nástroj pro přípravu, licence, souboru readme a poznámky k verzi. 
 
-Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vás provedou nástroje vám umožní zadat požadované parametry krok za krokem. Nebo můžete přidat datového příkazu založené na následující parametry příkazového řádku k dispozici.
+Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vás provedou nástroje vám umožní zadat požadované parametry krok za krokem. Nebo můžete přidat parametry do příkazu založené na následující parametry příkazového řádku k dispozici.
 
 ### <a name="available-command-line-parameters"></a>Dostupné parametry příkazového řádku 
 
 |    **Parametr příkazového řádku**    |    **Popis**    |
 |:------------------------------:|:----------------------------------------------------------:|
-|    `-h`     |    Nápověda    |
+|    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    Složka pro všechny instalační soubory. Všechny soubory v této složce se zkomprimují do *.intunewin* souboru.    |
 |   ` -s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
 |    `-o <output_folder>`     |    Výstupní složka pro vygenerovaný soubor *.intunewin*    |
@@ -70,7 +71,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vá
 |    `IntuneWinAppUtil -h`    |    Tento příkaz zobrazí informace o využití nástroje.    |
 |    `IntuneWinAppUtil -c c:\testapp\v1.0 -s c:\testapp\v1.0\setup.exe -o c:\testappoutput\v1.0 -q`    |    Tento příkaz vygeneruje soubor `.intunewin` ze zadané zdrojové složky a instalačního souboru. U instalačního souboru MSI tento nástroj načte požadované informace pro Intune. Pokud zadáte parametr `-q`, příkaz se spustí v tichém režimu a pokud už výstupní soubor existuje, přepíše se. Pokud výstupní složka ještě neexistuje, automaticky se vytvoří.    |
 
-Při generování *.intunewin* souboru, umístěte všechny soubory, které potřebujete k odkazování na dílčí složku složky instalace. Potom použijte relativní cesty tak, aby odkazovaly na konkrétní soubor, který potřebujete. Příklad:
+Při generování *.intunewin* souboru, umístěte všechny soubory, budete muset odkaz do podsložky složky instalace. Potom použijte relativní cesty tak, aby odkazovaly na konkrétní soubor, který potřebujete. Příklad:
 
 **Složky zdroje instalace:** *c:\testapp\v1.0*<br>
 **License file:** *c:\testapp\v1.0\licenses\license.txt*
@@ -126,9 +127,9 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 
     Například, pokud je vaše aplikace filename **MyApp123**, přidejte následující:<br>
     `msiexec /p “MyApp123.msp”`<p>
-    A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argruments příkazu (přepínače) podporované tímto balíčkem. <br>Příklad:<br>
+    A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argumenty příkazu (přepínače) podporované tímto balíčkem. <br>Příklad:<br>
     `ApplicationName.exe /quite`<br>
-    Ve výše uvedeném příkazu `ApplicaitonName.exe` balíček podporuje `/quite` argrument příkazu.<p> Pro konkrétní agruments podporovaný balíček aplikace obraťte se na dodavatele aplikace.
+    Ve výše uvedeném příkazu `ApplicaitonName.exe` balíček podporuje `/quite` příkaz argument.<p> Pro konkrétní argumentů podporovaných balíčku aplikace obraťte se na dodavatele aplikace.
 
 3.  Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
 
@@ -144,14 +145,32 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 ### <a name="step-5-configure-app-requirements"></a>Krok 5: Konfigurace požadavků na aplikaci
 
 1.  V podokně **Přidat aplikaci** vyberte **Požadavky** a nakonfigurujte požadavky, které zařízení musí splnit, aby bylo možné aplikaci nainstalovat.
-2.  V podokně **Požadavky** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
+2.  V **přidat pravidlo požadavku** podokno, nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
     - **Architektura operačního systému**: Zvolte, že architektury potřebujete k instalaci aplikace.
     - **Minimální verzi operačního systému**: Vyberte minimální verzi operačního systému, které jsou potřebné k instalaci aplikace.
     - **Místo na disku vyžadované (MB)**: Volitelně můžete přidáte volné místo na disku potřebné k instalaci aplikace na systémovou jednotku.
     - **Vyžaduje fyzické paměti (MB)**: Volitelně můžete přidáte fyzické paměti (RAM) požadovaná k instalaci aplikace.
     - **Minimální počet logických procesorů potřebný**: Volitelně můžete přidáte minimální počet logických procesorů potřebný k instalaci aplikace.
     - **Minimální rychlost procesoru požadované (MHz)**: Volitelně můžete přidáte minimální rychlost procesoru, které jsou potřebné k instalaci aplikace.
-3.  Až to budete mít, vyberte **OK**.
+
+3. Klikněte na tlačítko **přidat** zobrazíte **přidat pravidlo požadavku** okno Konfigurace pravidel další požadavek. Vyberte **typ požadavku** zvolit typ pravidlo, které budete používat k určení, jak je požadavek ověřen. Pravidla požadavků můžete podle informací o systému souboru, hodnoty registru nebo skripty prostředí PowerShell. 
+    - **Soubor**: Při výběru **souboru** jako **typ požadavku**, pravidlo požadavku musí odhalit souboru nebo složky, datum, verze nebo velikosti. 
+        - **Cesta**: Úplná cesta ke složce obsahující soubor nebo složku, které se mají zjistit.
+        - **Soubor nebo složka**: Soubor nebo složka, které se mají zjistit.
+        - **Vlastnost** – vyberte typ pravidla použitá k ověření přítomnosti aplikace.
+        - **Přidruženo k 32bitové aplikaci na 64bitových klientech**: Vyberte **Ano**, pokud chcete rozbalit všechny proměnné prostředí cesty ve 32bitovém kontextu na 64bitových klientech. Výchozí možnost **Ne** vyberte, pokud chcete rozbalit všechny proměnné cesty ve 64bitovém kontextu na 64bitových klientech. 32bitoví klienti budou vždy používat 32bitový kontext.
+    - **Registru**: Pokud zvolíte **registru** jako **typ požadavku**, pravidlo požadavku musí odhalit nastavení registru na základě hodnoty, řetězec, celé číslo nebo verze.
+        - **Cesta ke klíči**: Úplná cesta k položce registru obsahující hodnotu, která se má zjistit.
+        - **Název hodnoty**: Název hodnoty registru, která se má zjistit. Pokud je tato hodnota prázdná, provede se zjišťování u klíče. Hodnota klíče (výchozí) se použije jako hodnota zjišťování v případě, že se metoda zjišťování liší od metody zjišťování existence souboru nebo složky.
+        - **Klíčovým požadavkem registru** – vyberte typ porovnání, klíčů registru použít k určení, jak se ověřit pravidlo požadavku.
+        - **Přidruženo k 32bitové aplikaci na 64bitových klientech**: Vyberte **Ano**, pokud chcete vyhledat 32bitový registr na 64bitových klientech. Výchozí možnost **Ne** vyberte, pokud chcete vyhledat 64bitový registr na 64bitových klientech. 32bitoví klienti budou vždy vyhledávat 32bitový registr.
+    - **skript**: Zvolte **skript** jako **typ požadavku**, když nebude možné vytvořit pravidlo požadavku na základě souborů, registru nebo jakékoliv jiné metody, které jsou k dispozici v konzole Intune.
+        - **Soubor skriptu** – pro Powershellový skript na základě pravidlo požadavku, pokud existuje kód je 0, zjistíme standardního výstupu skriptu podrobněji. Například abychom mohli detekovat STDOUT jako celé číslo, které má hodnotu 1.
+        - **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** pro spuštění skriptu v procesu 32-bit v 64bitových klientech. Vyberte **ne** (výchozí) pro spuštění skriptu v procesu 64-bit v 64bitových klientech. 32bitové klienty, spusťte skript 32bitový proces.
+        - **Spusťte tento skript pomocí pověření přihlášeného**: Vyberte **Ano** ke spuštění skriptu s použitím podepsané v přihlašovací údaje zařízení **.
+        - **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
+        - **Vybrat výstupní datový typ**: Vyberte typ dat, které se používají při zjišťování shody pravidlo požadavku.
+4.  Až to budete mít, vyberte **OK**.
 
 ### <a name="step-6-configure-app-detection-rules"></a>Krok 6: Konfigurace pravidel detekce aplikace
 
@@ -244,7 +263,34 @@ Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplik
 7.  V podokně **Přidat skupinu** vyberte **OK**.
 8.  V podokně **Přiřazení** aplikace vyberte **Uložit**.
 
-V tomto okamžiku jste dokončili postup přidání aplikace Win32 do Intune. Informace o přiřazení a monitorování aplikace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) a [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+V tomto okamžiku jste dokončili postup do Intune přidat aplikace Win32. Informace o přiřazení a monitorování aplikace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) a [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
+
+## <a name="app-dependencies"></a>Závislosti aplikace
+
+Závislosti aplikace jsou aplikace, které musí být nainstalovaný před instalací aplikace Win32. Můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. Je maximálně 100 závislosti, obsahující závislosti žádné zahrnuté závislosti, stejně jako vlastní aplikaci. Závislosti aplikace systému Win32 můžete přidat až po aplikace Win32 byl přidán a nahrát do Intune. Po přidání aplikace Win32, zobrazí se vám **závislosti** možnost v okně pro vaši aplikaci Win32. 
+
+Při přidání závislosti aplikaci, můžete hledat podle názvu aplikace a vydavatele. Kromě toho můžete seřadit přidání závislostí podle názvu aplikace a vydavatele. Dříve závislosti přidání aplikace se nedá vybrat v seznamu závislostí přidaných aplikací. 
+
+Můžete rozhodnout, zda se mají instalovat automaticky každé závislé aplikace. Ve výchozím nastavení **automaticky instalovat** je možnost nastavená na **Ano** každý závislosti. Po instalaci automaticky závislé aplikace, i v případě, že závislé aplikace neodkazuje na uživatele nebo zařízení, Intune nainstaluje aplikaci na zařízení, které splňuje závislost před instalací aplikace Win32. Je důležité si uvědomit, že závislosti může mít dílčí závislosti rekurzivní a každý dílčí závislostí se dá nainstalovat před instalací hlavní závislostí. Kromě toho instalace závislostí nedodržuje pořadí instalace na úrovni dané závislosti.
+
+Chcete-li přidat závislost aplikace do vaší aplikace Win32, postupujte následovně:
+
+1. V Intune, vyberte **klientské aplikace** > **aplikace** zobrazíte seznam přidali klientské aplikace. 
+2. Vyberte přidání **aplikace Windows (Win32)** aplikace. 
+3. Vyberte **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. 
+4. Klikněte na tlačítko **přidat** Přidat závislost aplikace.
+5. Po přidání závislé aplikace, klikněte na tlačítko **vyberte**.
+6. Zvolte, zda chcete automaticky nainstalovat závislé aplikace tak, že vyberete **Ano** nebo **ne** pod **automaticky instalovat**.
+7. Klikněte na **Uložit**.
+
+Koncovému uživateli se zobrazí informační zprávy Windows označující, že závislé aplikace se stahují a instalují jako součást procesu instalace aplikace Win32. Kromě toho při závislé aplikace není nainstalovaná, koncový uživatel se běžně zobrazí následující oznámení:
+- 1 nebo více závislých aplikací, které se nepodařilo nainstalovat
+- 1 nebo více závislých aplikací požadavky nesplněny
+- 1 nebo více závislých aplikací se čeká na restartování zařízení
+
+Pokud se rozhodnete **automaticky instalovat** závislost, Win32, nebude pokus o instalaci aplikace. Kromě toho vytváření sestav aplikace se zobrazí, že závislost byla označena jako `failed` a také zadat příslušný důvod selhání. Selhání instalace závislostí můžete zobrazit kliknutím na selhání (nebo upozornění) součástí aplikace Win 32 [podrobné informace o instalaci](troubleshoot-app-install.md#win32-app-installation-troubleshooting). 
+
+Každá závislost bude dodržovat logika opakovaných pokusů aplikace Intune Win32 (pokus o instalaci 3krát za čekání po dobu 5 minut) a plán globální opakovaného vyhodnocení. Navíc závislosti platí pouze v době instalace aplikace Win32 v zařízení. Závislosti se nedají použít pro odinstalaci aplikace Win32. Pokud chcete odstranit závislost, musí klikněte na výpustky (tři tečky) nalevo od závislé aplikace umístěné na konci řádku v seznamu závislostí. 
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
@@ -261,7 +307,7 @@ Na následujícím obrázku upozorní koncového uživatele, že jsou prováděn
 ![Snímek obrazovky upozornění uživatele, které se provádějí změny aplikace](./media/apps-win32-app-09.png)    
 
 ## <a name="toast-notifications-for-win32-apps"></a>Informační zprávy pro aplikace Win32 
-V případě potřeby můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **Assignemnts** > **zahrnout skupiny**. 
+V případě potřeby můžete potlačit oznámení informační zprávy zobrazující koncový uživatel za přiřazení aplikace. V Intune, vyberte **klientské aplikace** > **aplikace** > vyberte aplikaci > **přiřazení** > **zahrnout skupiny**. 
 
 > [!NOTE]
 > Rozšíření správy Intune nainstalovat Win32 neodinstaluje aplikací na nezaregistrovaných zařízeních. Správci můžou využívat vyloučení přiřazení není nabízet aplikace Win32 vlastních zařízení uživatelů.

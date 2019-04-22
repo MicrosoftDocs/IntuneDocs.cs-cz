@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: da57b14f8196251ee8c77de3ffcd48f5b586a12f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799086"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900039"
 ---
 # <a name="set-up-intune-certificate-connector-for-symantec-pki-manager-web-service"></a>Nastavení nástroje Intune Certificate Connector pro webovou službu správce infrastruktury veřejných klíčů Symantec
 
@@ -284,7 +284,7 @@ Identifikátor objektu profilu certifikátu je přidružený k šabloně profilu
    > [!IMPORTANT]
    > Následující parametry profilu certifikátu PKCS musí být nakonfigurované podle hodnot zadaných v následující tabulce, jak je znázorněno na snímku obrazovky k vydávání certifikátů PKCS prostřednictvím nástroje Intune Certificate Connector z CA Symantec. 
 
-    |Parametr certifikátu PKCS | Hodnota | Popis |
+    |Parametr certifikátu PKCS | Value | Popis |
     | --- | --- | --- |
     | Certifikační autorita | pki-ws.symauth.com | Tato hodnota musí být základní plně kvalifikovaný název domény služby CA Symantec bez koncových lomítek.  Pokud si nejste jistí, jestli máte pro svoje předplatné CA Symantec správný základní plně kvalifikovaný název domény služby, obraťte se na oddělení podpory zákazníků Symantec. <br><br> Pokud je tento plně kvalifikovaný název domény nesprávný, nevydá Intune Certificate Connector certifikáty PKCS z certifikační autority Symantec.| 
     | Název certifikační autority | Symantec | Tato hodnota musí být řetězec **Symantec**. <br><br> Pokud se tato hodnota jakkoli změní, nevydá Intune Certificate Connector certifikáty PKCS z certifikační autority Symantec.|

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/6/2018
+ms.date: 04/17/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d914ea9bffe9485d2e37f8ede4d168f597f9e200
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d4221250f71df2a6c3c0d310ba25e7021269d1dc
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565925"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900362"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN na zařízeních s iOSem v Microsoft Intune
 
@@ -42,8 +42,10 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: Je potřeba integrovat Zscalerem privátní přístup (ZPA) pomocí svého účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Zscaler**: Použití podmíněného přístupu, a umožňují uživatelům obejít Zscalerem přihlašovací obrazovka, pak musíte integrovat Zscalerem privátní přístup (ZPA) pomocí svého účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
 - **Vlastní VPN**
+
+
 
 > [!NOTE]
 > Společnosti Cisco, Citrix, F5 a Palo Alto oznámily, že v iOSu 12 nebudou starší klienti fungovat. Co nejdříve byste tak měli provést migraci do nových aplikací. Další informace najdete na [blogu technické podpory pro Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).

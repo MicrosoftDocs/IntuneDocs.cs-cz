@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 7670af46657fed048bfe10b8659eae6d45db7620
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423573"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897975"
 ---
 # <a name="android-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení pro Android se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
 

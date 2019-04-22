@@ -1,7 +1,7 @@
 ---
-title: Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem enterprise
+title: Přiřazení aplikací spravovaný obchod Google Play na zařízení s Androidem Enterprise
 titleSuffix: Microsoft Intune
-description: Naučte se synchronizovat a přiřadit aplikace do zařízení s Androidem enterprise v spravovaný obchod Google Play storu.
+description: Naučte se synchronizovat a přiřadit aplikace do zařízení s Androidem Enterprise v spravovaný obchod Google Play storu.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,18 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad07252ccf10fefdd1c753ab103eb91a2789c39
-ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
+ms.openlocfilehash: b977d60c982a43e4465cd451cc2fc24b4e69f4cf
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59587344"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898103"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání aplikací pro spravovaný obchod Google Play do podnikových zařízení s Androidem v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Android enterprise je program pro zařízení s pracovním profilem, vyhrazené/veřejný terminál pro zařízení a plně spravovaná zařízení. U zařízení s pracovním profilem Androidu představuje Android Enterprise sadu funkcí a služeb, které oddělují osobní aplikace a data od pracovních aplikací a dat. Android Enterprise poskytuje další možnosti správy a ochrany osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Nasazením aplikací a nastavení do zařízení s pracovním profilem Androidu vám Intune pomůže zajistit, aby byly pracovní a osobní informace oddělené. Všechny aplikace, které instalujete do zařízení s pracovním profilem Androidu, pocházejí ze spravovaného obchodu Google Play. Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
+Android Enterprise je program pro zařízení s pracovním profilem, vyhrazené/veřejný terminál pro zařízení a plně spravovaná zařízení. Pro zařízení s pracovním profilem Androidu Enterprise je sada funkcí a služeb, které oddělují osobní aplikace a data z pracovním aplikacím a datům. Android Enterprise poskytuje možnosti pro další správa a ochrana osobních údajů, když uživatelé používají při práci svoje zařízení s Androidem. Nasazením aplikací a nastavení do zařízení s pracovním profilem Androidu vám Intune pomůže zajistit, aby byly pracovní a osobní informace oddělené. Všechny aplikace, které instalujete do zařízení s pracovním profilem Androidu, pocházejí ze spravovaného obchodu Google Play. Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Do tohoto obchodu se přihlásíte, prohlédnete si požadované aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
 
 Pokud jste vytvořili své vlastní obchodní aplikace, můžete je také přiřadit tímto způsobem:
 - Zaregistrujte si vývojářský účet Google, který umožňuje publikování aplikací do privátní oblasti obchodu Google Play.
@@ -43,7 +43,7 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 >Při práci s Microsoft Intune doporučujeme používat prohlížeč Microsoft Edge nebo Google Chrome.
 
 ## <a name="managed-google-play-app-type"></a>Typ aplikace Google Play spravované
-**Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravovaný obchod Google Play aplikace](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune teď můžete procházet, Hledat, schválit, synchronizaci a přiřazení aplikací v Intune schválené spravovaného obchodu Google Play.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte.
+**Spravované Google Play** typ aplikace vám umožní konkrétně přidat [spravovaný obchod Google Play aplikace](https://play.google.com/work/search?q=microsoft&c=apps) do Intune. Jako správce Intune můžete nyní procházet, Hledat, schválit, synchronizovat a přiřadit schválené spravovaného obchodu Google Play aplikací v Intune.  Už nemusíte procházet spravovanou konzolu Google Play samostatně a donutit k už máte.
 
 > [!NOTE]
 > Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune, přečtěte si téma [synchronizuje aplikace s spravovaný obchod Google Play s Intune](apps-add-android-for-work.md#synchronize-a-managed-google-play-app-with-intune-alternative)
@@ -59,7 +59,7 @@ Ověřte, že jste v úloze **Registrace zařízení** na Azure Portalu nakonfig
 7. Vyberte **spravovaný obchod Google Play – schválení** otevřete katalogu spravované Google Play.
 8. Slouží k vyhledání aplikace, které chcete zahrnout do vyhledávacího pole.
 9. Klikněte na tlačítko **schválit** schvalovat aplikace spravovaného obchodu Google Play a klikněte na tlačítko **schválit** přijmout oprávnění aplikace.
-10. Vyberte **zachovat schválené, pokud aplikace vyžaduje nová oprávnění** v okně Nastavení schválení a pak klikněte na tlačítko **Uložit**. Pokud tuto možnost nevyberete, musíte ručně schválit všechny nová oprávnění, pokud vývojář aplikace publikuje aktualizace.  To způsobí instalacích a aktualizacích aplikace k zastavení nedojde, dokud oprávnění neschválí. Z tohoto důvodu doporučujeme vybrat možnost, aby automaticky schvaloval nová oprávnění. 
+10. Vyberte **zachovat schválené, pokud aplikace vyžaduje nová oprávnění** v okně Nastavení schválení a pak klikněte na tlačítko **Uložit**. Pokud tuto možnost nevyberete, musíte ručně schválit všechny nová oprávnění, pokud vývojář aplikace publikuje aktualizace. To způsobí instalacích a aktualizacích aplikace k zastavení nedojde, dokud oprávnění neschválí. Z tohoto důvodu doporučujeme vybrat možnost, aby automaticky schvaloval nová oprávnění. 
 11. Klikněte na tlačítko **OK** zahrnout aplikace, které jste schválili.
 12. Klikněte na tlačítko **synchronizace** na **aplikací** podokně na synchronizaci se službou spravovaný obchod Google Play.
 
@@ -71,7 +71,7 @@ Pokud chcete synchronizovat aplikace na spravovaný obchod Google Play s Intune,
 
 ### <a name="synchronize-an-app-from-the-managed-google-play-store"></a>Synchronizace aplikace ze spravovaného obchodu Google Play
 
-1. Přejděte na [spravovaný obchod Google Play](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem Enterprise.
+1. Přejděte na [spravovaný obchod Google Play](https://play.google.com/work). Přihlaste se pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidu Enterprise.
 2. Vyhledejte a vyberte v obchodě aplikaci, kterou chcete přiřadit pomocí Intune.
 3. Na stránce s aplikací vyberte **Schválit**.  
     Na tomto příkladu jsme zvolili Microsoft Excel.
@@ -103,16 +103,25 @@ Pokud jste aplikaci v tomto obchodě schválili, ale nevidíte ji v uzlu **Licen
 6. V podokně úloh **Klientské aplikace** vyberte **Aplikace**.  
     Zobrazí se nově dostupná aplikace ze spravovaného obchodu Google Play.
 
-## <a name="assigning-the-managed-google-play-app"></a>Přiřazuje se aplikace spravovaného obchodu Google Play
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-work-profile-devices"></a>Přiřazení aplikace na spravovaný obchod Google Play na zařízení s Androidem Enterprise pracovním profilem
 
 Když se aplikace objeví v **licence aplikací** uzlu **klientské aplikace** podokně úloh můžete [přiřadit stejně jako byste přiřadili jakoukoli jinou aplikaci](/intune-azure/manage-apps/deploy-apps) přiřazením na aplikaci skupiny uživatelů.
 
-Po přiřazení se aplikace nainstaluje na zařízení, která jste určili. Uživatel zařízení nebude požádán o schválení instalace.
+Po přiřazení se aplikace nainstaluje na zařízení, která jste určili. Uživatel zařízení nebude požádán o schválení instalace. Další informace o zařízení s Androidem Enterprise pracovním profilem, naleznete v tématu [nastavení registrace zařízení s Androidem Enterprise pracovním profilem](android-work-profile-enroll.md).
+
+## <a name="assigning-a-managed-google-play-app-to-android-enterprise-fully-managed-devices"></a>Přiřazení spravovaný obchod Google Play aplikaci Android Enterprise plně spravovaných zařízení
+
+[Plně spravovaná zařízení s androidem Enterprise](android-fully-managed-enroll.md) jsou přidružené k na jednoho uživatele a použít slouží výhradně pro pracovní a ne osobní zařízení vlastněných společností. Uživatelé na plně spravovaných zařízeních můžete získávají svoje aplikace k dispozici společnosti ze spravované aplikace Google Play na zařízení.
+
+Ve výchozím nastavení plně spravovaná zařízení s Androidem Enterprise neumožní zaměstnanci k instalaci nějaké aplikace, které nejsou schválené organizací. Také zaměstnanci nebude možné odebrat všechny nainstalované aplikace proti zásad. Pokud chcete uživatelům povolit přístup k obchodu Google Play úplné instalaci aplikací, místo jenom pro přístup k schválených aplikací s spravovaný obchod Google Play storu, můžete nastavit **povolit přístup ke všem aplikacím v obchodě Google Play** k  **Povolit**. Toto nastavení má uživatel přístup všechny aplikace v obchodu Google Play pomocí firemního účtu, ale může nákupy omezená. Tím, že uživatelům přidávat nové účty do zařízení můžete odebrat omezení omezené nákupy. Tím se povolit koncovým uživatelům se budou moct koupit aplikace z obchodu Google Play pomocí osobní účty, jakož i provádět nákupy v aplikaci. Další informace najdete v tématu [nastavení zařízení s Androidem Enterprise a povolení nebo zakázání funkcí pomocí Intune](device-restrictions-android-for-work.md). 
+
+> [!NOTE]
+> Aplikace pro Microsoft Intune a aplikaci Microsoft Authenticator se nainstaluje jako požadované aplikace do všech plně spravovaná zařízení během registrace. Tyto aplikace automaticky nainstaluje podporuje podmíněný přístup a Microsoft Intune app uživatelé viděli a vyřešit problémy dodržování předpisů. 
 
 ## <a name="manage-android-enterprise-app-permissions"></a>Správa oprávnění aplikací Androidu Enterprise
-Android Enterprise vyžaduje, abyste aplikace ve webové konzole spravovaného obchodu Google Play schválili, než je synchronizujete s Intune a přiřadíte uživatelům. Protože přes Android Enterprise můžete nepozorovaně a automaticky nainstalovat tyto aplikace do zařízení uživatelů, musíte oprávnění aplikací schválit za všechny svoje uživatele. Uživatelé neuvidí při instalaci žádná oprávnění aplikací, takže je důležité, abyste těmto oprávněním porozuměli.
+Android Enterprise vyžaduje, abyste aplikace ve webové konzole spravované Google Play schválili, než je synchronizujete s Intune a přiřadíte uživatelům. Protože přes Android Enterprise můžete nepozorovaně a automaticky nainstalovat aplikace do zařízení uživatelů, je nutné přijmout oprávnění aplikací schválit za všechny svoje uživatele. Uživatelé neuvidí při instalaci žádná oprávnění aplikací, takže je důležité, abyste těmto oprávněním porozuměli.
 
-Když vývojář aplikace aktualizuje oprávnění v nové verzi aplikace, nejsou tato oprávnění přijata automaticky, i když jste dřívější oprávnění schválili. Zařízení s předchozí verzí aplikace ji mohou dál používat. Dokud ale oprávnění neschválíte, nebude se aplikace upgradovat. Na zařízení, ve kterých tato aplikace není nainstalovaná, nejde aplikace nainstalovat, dokud neschválíte její nová oprávnění.
+Když vývojář aplikace aktualizuje oprávnění v nové verzi aplikace, nejsou tato oprávnění přijata automaticky, i když jste dřívější oprávnění schválili. Zařízení s předchozí verzí aplikace ji mohou dál používat. Dokud ale oprávnění neschválíte, nebude se aplikace upgradovat. Na zařízení, ve kterých tato aplikace není nainstalovaná, nejde aplikace nainstalovat, dokud neschválíte její nová oprávnění. 
 
 ### <a name="update-app-permissions"></a>Aktualizace oprávnění aplikace
 
@@ -125,9 +134,13 @@ Pravidelně navštěvujte spravovanou konzolu Google Play a kontrolujte nová op
 
 Případně ale můžete obchod Google Play nastavit tak, aby automaticky schvaloval nová oprávnění pro každou z aplikací.
 
+## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Vytváření sestav pro zařízení s Androidem Enterprise pracovním profilem dalších aplikace spravovaný obchod Google Play
+
+Pro spravovaný obchod Google Play aplikace nasazené na zařízení s Androidem Enterprise pracovním profilem můžete zobrazit číslo verze konkrétní aplikace nainstalované v zařízení. To platí pro pouze požadované aplikace. 
+
 ## <a name="working-with-a-line-of-business-app-from-the-managed-google-play-store"></a>Používání obchodní aplikace ze spravovaného obchodu Google Play
 
-1. Přihlaste se ke [konzole pro vývojáře Google Play](https://play.google.com/apps/publish) pod stejným účtem, který jste použili ke konfiguraci propojení mezi Intune a Androidem Enterprise.  
+1. Přihlaste se k [konzole pro vývojáře Google Play](https://play.google.com/apps/publish) pod stejným účtem, který jste použili ke konfiguraci propojení mezi Intune a Androidu Enterprise.  
     Pokud se přihlašujete poprvé, musíte se zaregistrovat a zaplatit poplatek, abyste se stali členy programu pro vývojáře Google.
 2. V této konzole zvolte **Přidat novou aplikaci**.
 3. Informace o vaší aplikaci nahrajete a zadáte stejným způsobem jako při publikování jakékoli jiné aplikace v obchodě Google Play. Musíte ale vybrat **Zpřístupnit tuto aplikaci pouze pro moji organizaci (<*název organizace*>)**.
@@ -137,7 +150,7 @@ Případně ale můžete obchod Google Play nastavit tak, aby automaticky schval
     Tato operace zpřístupní aplikaci ve vaší organizaci. Nebude dostupná ve veřejném obchodu Google Play.
 
     Další informace o nahrávání a publikování aplikací pro Android najdete v [nápovědě ke konzole pro vývojáře Google](https://support.google.com/googleplay/android-developer/answer/113469).
-4. Po publikování aplikace se přihlaste do [spravovaného obchodu Google Play](https://play.google.com/work) pomocí stejného účtu, který jste použili ke konfiguraci propojení mezi Intune a Androidem Enterprise.
+4. Po publikování vaší aplikace, přihlaste se k [spravovaný obchod Google Play storu](https://play.google.com/work) pod stejným účtem, který jste použili ke konfiguraci propojení mezi Intune a Androidu Enterprise.
 5. Ověřte si, že se v uzlu **Aplikace** tohoto obchodu zobrazuje aplikace, kterou jste publikovali.  
     Synchronizace s Intune bude automaticky schválená.
 

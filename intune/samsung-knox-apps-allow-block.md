@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4efa2a813dda16805effe55ff3d1b967ef5d6c88
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798223"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59895081"
 ---
 # <a name="use-custom-policies-in-microsoft-intune-to-allow-and-block-apps-for-samsung-knox-standard-devices"></a>Použití vlastních zásad v Microsoft Intune, které v povolí nebo blokují aplikace pro zařízení se zabezpečením Samsung Knox Standard 
 

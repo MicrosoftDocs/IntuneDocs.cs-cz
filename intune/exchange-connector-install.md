@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3724f2494dd4e4fe7939a9be87a30e1bc5bfbf27
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292171"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896146"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavit konektor Intune pro místní Exchange v Microsoft Intune
 Informace v tomto článku vám pomůže při instalaci a následně monitorovat místní konektor Exchange Active Sync pro Intune.  Používáte místní Exchange connector Intune s vaší [zásady podmíněného přístupu povolit nebo zablokovat přístup k Exchange v místním poštovním schránkám](conditional-access-exchange-create.md). 

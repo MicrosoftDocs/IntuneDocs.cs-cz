@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 0e3615f1f090af3ce589e83f11d12e95a2f07641
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799399"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899348"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Nastavení Intune registraci Androidu Enterprise plně spravovaná zařízení (Preview)
 

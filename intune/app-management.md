@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 04/12/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34807edabf99a107c259fdfae5e43db18084fb67
-ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
+ms.openlocfilehash: 8cc09f0c700316474e9b59a3bc619ee0874bd16f
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920248"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900838"
 ---
 # <a name="what-is-microsoft-intune-app-management"></a>Co je správa aplikací v Microsoft Intune?
 
@@ -41,26 +41,28 @@ Intune nabízí celou řadu funkcí, které vám pomůžou dostat požadované a
 
 ## <a name="app-management-capabilities-by-platform"></a>Funkce správy aplikací podle platformy
 
-|  | Android | iOS | macOS | Windows 10 | Windows Phone 8.1 |
+|  | Android a Android Enterprise | iOS | macOS | Windows 10 | Windows Phone 8.1 |
 |-------------------------------------------------------------------------------------|---------|-----|-------|------------|-------------------|
 | Přidání a přiřazení aplikací k zařízením a uživatelům | Ano | Ano | Ano | Ano | Ano |
 | Přiřazení aplikací k zařízením nezaregistrovaným v Intune | Ano | Ano | Ne | Ne | Ne |
 | Určení chování aplikací při spuštění pomocí zásad konfigurace aplikací | Ano | Ano | Ne | Ne | Ne |
 | Obnovení aplikací s vypršelou platností pomocí zásad zřizování mobilních aplikací | Ne | Ano | Ne | Ne | Ne |
-| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne1 | Ne |
+| Ochrana firemních dat v aplikacích pomocí zásad ochrany aplikací | Ano | Ano | Ne | Ne <sup>1</sup> | Ne |
 | Odebrání pouze firemních dat z nainstalovaných aplikací (selektivní vymazání aplikací) | Ano | Ano | Ne | Ano | Ano |
 | Monitorování přiřazení aplikací | Ano | Ano | Ano | Ano | Ano |
 | Přiřazení a sledování aplikací hromadně zakoupených v obchodu s aplikacemi | Ne | Ne | Ne | Ano | Ne |
-| Nařízená instalace aplikací na zařízení (povinná)2 | Ano | Ano | Ano | Ano | Ano |
-| Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano | Ano | Ano | Ano | Ano |
-| Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano | Ano | Ano | Ano | Ano |
+| Nařízená instalace aplikací na zařízení (povinná) <sup>2</sup> | Ano | Ano | Ano | Ano | Ano |
+| Nepovinná instalace na zařízení z Portálu společnosti (dostupná instalace) | Ano <sup>3</sup> | Ano | Ano | Ano | Ano |
+| Zástupce pro instalaci aplikace na webu (webový odkaz) | Ano <sup>4</sup> | Ano | Ano | Ano | Ano |
 | Vlastní (obchodní) aplikace | Ano | Ano | Ano | Ano | Ne |
 | Aplikace z obchodu | Ano | Ano | Ne | Ano | Ano |
 | Aktualizace aplikací | Ano | Ano | Ne | Ano | Ano |
 
-<sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](windows-information-protection-configure.md).
+<sup>1</sup> Při ochraně aplikací na zařízeních s Windows 10 uvažujte o použití funkce [Windows Information Protection](windows-information-protection-configure.md).<br>
+<sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.<br>
+<sup>3</sup> Intune podporuje aplikace dostupné pro spravovaný obchod Google Play storu na zařízeních s Androidem Enterprise.<br>
+<sup>4</sup> Intune neposkytuje instalaci zástupce na aplikaci jako webový odkaz na standardní zařízení s Androidem Enterprise. Ale webového odkazu podpora se poskytuje pro [s více aplikacemi vyhrazená zařízení s Androidem Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings). 
 
-<sup>2</sup> Platí jen pro zařízení spravovaná přes Intune.
 
 ## <a name="get-started"></a>Začínáme
 

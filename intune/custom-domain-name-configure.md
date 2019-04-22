@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 4d0c3d11eb3a031f34704dcd9ecf16f3312ac818
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798183"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59895976"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurace vlastního názvu domény
 

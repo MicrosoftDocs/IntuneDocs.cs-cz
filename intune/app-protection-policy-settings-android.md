@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 04/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5fad21abf8bd08d989d881953b4c0c790c4b9b8c
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: de10359b9045c704d27f94954ddfd69a3f1a9bd5
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292392"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900464"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -47,7 +47,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 ### <a name="encryption"></a>Šifrování
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
-| **Šifrování dat organizace** | Zvolte **vyžadují** povolit šifrování pracovní nebo školní data v této aplikaci. Intune používá OpenSSL, 256bitového schéma šifrování AES systém Android Keystore k zabezpečenému šifrování dat aplikace. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK. <br><br> Metoda šifrování **nemá** certifikaci FIPS 140-2.     |  **vyžadovat**|  
+| **Šifrování dat organizace** | Zvolte **vyžadují** povolit šifrování pracovní nebo školní data v této aplikaci. Intune používá OpenSSL, 256bitového schéma šifrování AES systém Android Keystore k zabezpečenému šifrování dat aplikace. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK. <br><br> Metoda šifrování je FIPS 140-2 kompatibilní.     |  **vyžadovat**|  
 
 
 

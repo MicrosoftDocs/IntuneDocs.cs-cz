@@ -17,11 +17,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 15f908a34f0a9315552acfad56cbf560a23fa26d
-ms.sourcegitcommit: e63e3debb5f4d9a757f767913e72e39742137b17
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58788441"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896061"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 

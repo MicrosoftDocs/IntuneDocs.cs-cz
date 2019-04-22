@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 90684c2994ccd3c90116a90e255ed6b9be1f6a76
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476462"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897557"
 ---
 # <a name="how-to-add-macos-line-of-business-lob-apps-to-microsoft-intune"></a>Přidání obchodních aplikací pro macOS do Microsoft Intune
 

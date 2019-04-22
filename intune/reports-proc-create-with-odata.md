@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b9cfb464122018c6e77d5ea1395b699bafa81f33
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799032"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59901059"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 

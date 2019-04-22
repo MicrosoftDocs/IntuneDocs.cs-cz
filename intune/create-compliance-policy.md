@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: da0aa98774f25bf290391225c6ccae56a3859c22
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59425325"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896044"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásad dodržování předpisů v Microsoft Intune
 

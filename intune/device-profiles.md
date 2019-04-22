@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4dc68071886b8f2a0852feb69bf78c2c265f046d
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 4e099470140672a45948391cb0cf7c243f6fb84d
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292501"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59894605"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použít nastavení a funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -221,7 +221,15 @@ Tato funkce podporuje:
 
 Tato funkce podporuje:
 
-- Android
+- Android (Mobility Extensions)
+
+## <a name="oemconfig"></a>OEMConfig
+
+[OEMConfig](android-oem-configuration-overview.md) je standard, která umožňuje podnikových zařízení s Androidem výrobce OEM (original equipment manufacturer) a EMMs (enterprise mobility management) k vývoji a podpoře funkce specifické pro výrobce OEM a standardizovaným způsobem. Výrobce OEM OEMConfig, vytvoří schéma, které definuje funkce správy specifické pro výrobce OEM a vloží ho do aplikace nahrána do Google Play. Intune přečte schéma z aplikace, umožňuje správcům Intune nakonfigurovat nastavení ve schématu.
+
+Tato funkce podporuje:
+
+- Android Enterprise (OEMConfig)
 
 ## <a name="custom-profile"></a>Profil Vlastní
 

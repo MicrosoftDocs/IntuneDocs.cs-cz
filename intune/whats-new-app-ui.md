@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1c4266ad4ae877eadb29b7f35ef0e955028a4b9
-ms.sourcegitcommit: 9daaeba9a960c50efcc951856234fbfec3635737
+ms.openlocfilehash: 753c261ea08ce304176f19e1c64389053b055d5f
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231852"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898668"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -34,6 +34,27 @@ Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Při
 Pokud jste zaměstnancem nebo studenty, nezapomeňte se podívat na více systémů snímky obrazovky a odkazy na dokumentaci nápovědy portál společnosti. Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-april-15-2019"></a>Týden od 15. dubna 2019  
+
+### <a name="new-end-user-app-microsoft-intune-app---3903244---"></a>Nový koncový uživatel aplikace (aplikace pro Microsoft Intune) <!--3903244 -->  
+Je nová aplikace koncového uživatele pro Android je plně spravovaná zařízení, která volá **Microsoft Intune**. Tato nová aplikace je odlehčené a moderní a poskytuje podobné funkce jako aplikace portál společnosti, ale pro plně spravované zařízení. Další informace najdete v tématu [aplikace pro Microsoft Intune na webu Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).  
+
+Ukázkový snímek podrobnostmi o zařízení: 
+
+![Snímek obrazovky s Microsoft Intune app, zobrazení podrobností o zařízení pro Android Jana.](./media/1904-intune-app-device-details.png)   
+
+Ukázkový snímek **nastavení přístupu** obrazovky:  
+
+![Snímek obrazovky s Microsoft Intune aplikace obrazovku nastavení přístupu registrace.](./media/1904-intune-app-setup-access.png)   
+
+Příklad snímek obrazovky nabídky aplikace:  
+
+![Snímek obrazovky s Microsoft Intune aplikace boční nabídkou.](./media/1904-intune-app-navigation-menu.png)   
+
+Snímek obrazovky příklad **pomáhají** obrazovky:  
+
+![Snímek obrazovky s Microsoft Intune app obrazovka s nápovědou.](./media/1904-intune-app-help.png)   
 
 
 ## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019  

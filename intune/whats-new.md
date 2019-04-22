@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/17/2019
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc7f4bf02c05bdece8465b1af91bfd4cbd45492b
-ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
+ms.openlocfilehash: 0c8f359be8878d42204a86e6ff8db7d75304b3bb
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59704922"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59901076"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -43,16 +43,147 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Monitor and troubleshoot
 ### Role-based access control
 
--->     
+-->  
 
 <!-- ########################## -->
 
 ## <a name="week-of-april-15-2019"></a>Týden od 15. dubna 2019
 
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="openssl-encryption-for-android-app-protection-policies----3747362---"></a>Šifrování OpenSSL pro zásady ochrany aplikací pro Android <!-- 3747362 -->
+Zásady ochrany aplikací (aplikace) Intune na zařízeních s Androidem teď využívá knihovnu šifrování OpenSSL, který je podle standardu FIPS 140-2 kompatibilní. Další informace najdete v tématu [šifrování](app-protection-policy-settings-android.md#encryption) část [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md).
+
+#### <a name="enable-win32-app-dependencies----2617348----"></a>Povolí závislosti aplikace systému Win32 <!-- 2617348  -->
+Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md).
+
+#### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informace o instalaci verze aplikace pro Microsoft Store pro obchodní aplikace <!-- 3537391   -->
+Sestavy nainstalovaných aplikací zahrnuje informace o verzi aplikace pro Microsoft Store pro obchodní aplikace. V Intune, vyberte **klientské aplikace** > **aplikace**. Vyberte **Microsoft Store pro firmy** a pak vyberte **stav instalace zařízení** pod **monitorování** oddílu.
+
+#### <a name="additions-to-win32-apps-requirement-rules----3676883-----"></a>Tvorba pravidla požadavků aplikace Win32 <!-- 3676883   -->
+Můžete vytvořit požadavek na skripty prostředí PowerShell, hodnoty registru a informace o systému souborů na základě pravidel. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. Potom vyberte **aplikace Windows (Win32)** jako **typ aplikace** v **přidat aplikaci** okno.  Vyberte **požadavky** > **přidat** ke konfiguraci pravidla dalších požadavků. Vyberte buď **typ souboru**, **registru**, nebo **skript** jako **typ požadavku**. Další informace najdete v tématu [správy aplikací Win32](apps-win32-app-management.md).
+
+ #### <a name="configure-your-win32-apps-to-be-installed-on-intune-enrolled-azure-ad-joined-devices----3695227----"></a>Konfigurace aplikace Win32 pro instalaci na zaregistrovaná v Intune zařízení připojená k Azure AD <!-- 3695227  -->
+Aplikace Win32 pro instalaci na zaregistrovaná v Intune můžete přiřadit zařízení připojená k Azure AD. Další informace o aplikacích Win32 v Intune najdete v tématu [správy aplikací Win32](apps-win32-app-management.md).
+
+#### <a name="device-overview-shows-primary-user---794259----"></a>Přehled zařízení zobrazuje primární uživatel <!--794259  -->
+Primární uživatel taky jako uživatele pro spřažení zařízení uživatele (UDA) se zobrazí stránka s přehledem zařízení. Pokud chcete zjistit primární uživatele pro zařízení, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení. Primární uživatel se zobrazí v horní části **přehled** stránky.
+
+#### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Vytváření sestav pro zařízení s Androidem Enterprise pracovním profilem dalších aplikace spravovaný obchod Google Play <!-- 4105925  -->
+Pro spravovaný obchod Google Play aplikace nasazené na zařízení s Androidem Enterprise pracovním profilem můžete zobrazit číslo verze konkrétní aplikace nainstalované v zařízení. To platí pro pouze požadované aplikace. Povolí se stejné funkce pro aplikace k dispozici v budoucí verzi. 
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="set-login-settings-and-control-restart-options-on-macos-devices----1210083----"></a>Nastavení přihlášení a řídit možnosti restartování na zařízeních s macOS <!-- 1210083  -->
+Na zařízeních s macOS, můžete vytvořit profil konfigurace zařízení (**konfigurace zařízení** > **profily** > **vytvořit profil** > Zvolte **macOS** pro platformu > **funkcí na zařízeních** pro typ profilu). Tato aktualizace zahrnuje nové okno Nastavení přihlášení, například zobrazení vlastní hlavičky, zvolte, jak uživatelé přihlásit, zobrazit nebo skrýt nastavení napájení a další.
+
+Chcete-li zobrazit tato nastavení, přejděte na [nastavení funkcí zařízení s macOS](macos-device-features-settings.md).
+
+#### <a name="configure-wifi-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode---3041940----"></a>Konfigurace Wi-Fi na Androidu Enterprise, vlastník zařízení vyhrazená zařízení spuštěné v režimu veřejného terminálu s více aplikacemi <!--3041940  -->
+Můžete povolit nastavení na Androidu Enterprise, vlastník zařízení při spuštění jako vyhrazená zařízení v celoobrazovkovém režimu s více aplikacemi. V této aktualizaci, povolíte uživatelům ke konfiguraci a připojení k sítím Wi-Fi (**Intune** > **konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Androidu Enterprise** pro platformu > **jen vlastník zařízení, omezení zařízení** pro typy profilů >  **Vyhrazená zařízení** > **celoobrazovkový režim**: **Multi-App** > **konfigurace Wi-Fi**). 
+
+Pokud chcete zobrazit všechna nastavení můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolení nebo zakázání funkce](device-restrictions-android-for-work.md).
+
+Platí pro: Zařízení s androidem Enterprise vyhrazené spuštěn v režimu veřejného terminálu s více aplikacemi
+
+
+#### <a name="configure-bluetooth-and-pairing-on-android-enterprise-device-owner-dedicated-devices-running-in-multi-app-kiosk-mode----3041941----"></a>Konfigurovat Bluetooth a párování na Androidu Enterprise, vlastník zařízení vyhrazená zařízení spuštěné v režimu veřejného terminálu s více aplikacemi <!-- 3041941  -->
+Můžete povolit nastavení na Androidu Enterprise, vlastník zařízení při spuštění jako vyhrazená zařízení v celoobrazovkovém režimu s více aplikacemi. V této aktualizaci můžete povolit koncovým uživatelům povolit Bluetooth a spárujte zařízení přes Bluetooth (**Intune** > **konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Androidu Enterprise** pro platformu > **jen vlastník zařízení, omezení zařízení** profilu Typ > **vyhrazená zařízení** > **celoobrazovkový režim**: **Multi-App** > **Bluetooth konfigurace**). 
+
+Pokud chcete zobrazit všechna nastavení můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolení nebo zakázání funkce](device-restrictions-android-for-work.md).
+
+Platí pro: Zařízení s androidem Enterprise vyhrazené spuštěn v režimu veřejného terminálu s více aplikacemi
+
+#### <a name="create-and-use-oemconfig-device-configuration-profiles-in-intune----3305883----"></a>Vytváření a používání OEMConfig profilů konfigurace zařízení v Intune <!-- 3305883  -->
+V této aktualizaci Intune podporuje konfiguraci zařízení s Androidem Enterprise s OEMConfig. Konkrétně můžete vytvořit profil konfigurace zařízení a použít nastavení podnikových zařízení s Androidem pomocí OEMConfig (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Androidu enterprise** pro platformu).
+
+Podpora pro výrobce OEM, je aktuálně na základě za OEM. Pokud chcete, aby aplikace OEMConfig není k dispozici v seznamu aplikací OEMConfig, obraťte se na `IntuneOEMConfig@microsoft.com`.
+
+Další informace o této funkci, přejděte na [použití a správa zařízení s Androidem Enterprise v OEMConfig v Microsoft Intune](android-oem-configuration-overview.md).
+
+Platí pro: Android enterprise
+
+#### <a name="windows-update-notifications-----3316758-3316782----"></a>Oznámení o aktualizaci Windows  <!-- 3316758, 3316782  -->
+Přidali jsme dvě *nastavení činnosti koncového uživatele* nastavení ke službě Windows Update vyzvánět konfigurace, které můžete spravovat z konzoly Intune. Teď můžete:
+- Blokovat nebo povolit uživatelům [vyhledávání aktualizací Windows](windows-update-settings.md#block-user-from-scanning-for-windows-updates).
+- Správa [úrovně upozornění na aktualizace Windows](windows-update-settings.md#windows-update-notification-level) , že uživatelé uvidí.
+
+#### <a name="new-device-restriction-settings-for-android-enterprise-device-owner----3574254----"></a>Nová nastavení omezení zařízení s Androidem Enterprise, vlastník zařízení <!-- 3574254  -->
+Na zařízeních s Androidem Enterprise, můžete vytvořit profil omezení zařízení, povolení nebo zakázání funkce, nastavit pravidla pro hesla a další (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > zvolte **Androidu Enterprise** pro platformu > **jen vlastník zařízení > omezení zařízení** pro typ profilu). 
+
+Tato aktualizace zahrnuje nové nastavení hesla, umožňuje plný přístup k aplikacím v Google Play Store plně spravovaných zařízeních a další věci. Pokud chcete zobrazit aktuální seznam nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolení nebo zakázání funkce](device-restrictions-android-for-work.md). 
+
+Platí pro: Plně spravovaná zařízení s androidem Enterprise
+
+#### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671----"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671  -->
+Mnoho Windows 10 a novější zařízení má čipovými sadami Trusted Platform Module (TPM). Tato aktualizace zahrnuje nové nastavení dodržování předpisů, která kontroluje verze čipu TPM v zařízení. 
+
+[Windows 10 a novější nastavení zásad dodržování předpisů](compliance-policy-create-windows.md#device-security) popisuje toto nastavení.
+
+Platí pro: Windows 10 a novější
+
+#### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Aktualizované změny uživatelského rozhraní pro prohlížeče Microsoft Edge ve Windows 10 a novější zařízení <!-- 3775833   -->
+Když vytvoříte profil konfigurace zařízení, můžete povolit nebo omezit funkce Microsoft Edge ve Windows 10 a novější zařízení (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Windows 10 a novější** pro platformu > **omezení zařízení** pro typy profilů >  **Prohlížeč Microsoft Edge**). V této aktualizaci nastavení Microsoft Edge jsou více popisné a srozumitelnější. 
+
+Pokud chcete zobrazit tyto funkce, přejděte na [nastavení omezení zařízení s prohlížečem Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+
+Platí pro: Windows 10 a novější
+
+#### <a name="expanded-support-for-android-enterprise-fully-managed-devices--preview-------3903241-3903244-3903246-----"></a>Rozšířenou podporu pro zařízení s Androidem Enterprise, plně spravovaná (Preview)  <!--   3903241, 3903244, 3903246   -->
+Stále ve verzi public preview, jsme rozšířili naši podporu zařízení s Androidem Enterprise, plně spravovaná ([poprvé oznámena v lednu. 2019](whats-new.md#week-of-january-14-2019) zahrnout následující: 
+
+- Na plně spravované a vyhrazená zařízení, můžete vytvořit [zásady dodržování předpisů](compliance-policy-create-android-for-work.md) pravidla pro hesla a požadavky na operační systém (**dodržování předpisů zařízením**  >   **Zásady** > **vytvořit zásadu** > **Androidu Enterprise** pro platformu > **vlastník zařízení** pro Typ profilu). 
+
+  Vyhrazená zařízení můžou zařízení zobrazit jako **nevyhovující předpisům**. Podmíněný přístup není k dispozici na vyhrazené zařízení. Ujistěte se, že dokončení libovolné úlohy nebo akce pro získání vyhrazená zařízení kompatibilní s přiřazené zásady.
+
+- [Podmíněný přístup](conditional-access.md) – podmíněný přístup, zásady, které platí pro Android platí také pro Android Enterprise plně spravovaná zařízení. Uživatelé můžou registrovat nyní plně spravovaná zařízení v Azure Active Directory pomocí **aplikace pro Microsoft Intune**. Pak naleznete v tématu a vyřešte všechny problémy dodržování předpisů pro přístup k prostředkům organizace.
+
+- Nový koncový uživatel aplikace (Microsoft Intune app) – je nová koncový uživatel aplikace pro Android je plně spravovaná zařízení, která volá **Microsoft Intune**. Tato nová aplikace je odlehčené a moderní a poskytuje podobné funkce jako aplikace portál společnosti, ale pro plně spravovaná zařízení. Další informace najdete v tématu [aplikace pro Microsoft Intune na webu Google Play](https://play.google.com/store/apps/details?id=com.microsoft.intune).
+
+Nastavení Androidu plně spravovaná zařízení, přejděte na **registrace zařízení** > **registrace zařízení s Androidem** > **uživatele vlastněné společností, plně spravovaná zařízení**. Podpora pro zůstává plně spravovaná zařízení s Androidem ve verzi preview a některé funkce Intune nemusí být plně funkční.  
+
+Další informace o této verzi preview, najdete v našem blogu [Microsoft Intune – náhled 2 pro zařízení s Androidem Enterprise plně spravovaná](https://aka.ms/preview2_AE_fullymanaged).
+
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470--wnstaged--"></a>Konfigurace profilu některé obrazovky přeskočte Průvodci nastavením <!-- 2276470  wnstaged-->
+Když vytvoříte profil registrace s macOS, můžete nakonfigurovat na některý z následujících obrazovky přeskočit, když uživatel prochází Pomocníka pro instalaci:
+- Vzhled
+- Tón zobrazení
+- iCloudStorage, je-li vytvořit nový profil nebo upravte profil, vybrané přeskočit obrazovky nutnost synchronizovat s Apple MDM server.  Uživatelé můžou vydat ruční synchronizaci zařízení tak, aby se žádné zpoždění v ujímají změny profilu.
+Další informace najdete v tématu [automaticky zaregistrovat zařízení s macOS pomocí programu registrace zařízení nebo Apple School Manageru](device-enrollment-program-enroll-macos.md).
+
+#### <a name="bulk-device-naming-when-enrolling-corporate-ios-devices--3566569----"></a>Hromadné zařízení pojmenování při registraci zařízení s Iosem podnikové<!--3566569  -->
+Při použití jedné z metod registrace podnikového společnosti Apple (DEP/ABM/ASM), můžete nastavit formát názvu zařízení automaticky název příchozí zařízením s Iosem. Můžete určit formát, který obsahuje typ zařízení a sériové číslo ve vaší šabloně. Chcete-li to provést, zvolte **Intune** > **registrace zařízení** > **registrace Apple** > **programu registrace tokeny** > **vyberte token** >**vytvořit profil** > **formát pojmenování zařízení**. Můžete upravit stávající profily, ale jenom nově synchronizovaných zařízení bude mít název použít.
+
+#### <a name="updated-default-timeout-message-on-enrollment-status-page----3959331---"></a>Aktualizované výchozí časový limit zprávy na stránka stavu registrace <!-- 3959331 -->
+Aktualizovali jsme výchozí časový limit zprávy, které uživatelé uvidí, když se stránka stavu registrace (ESP) překročí hodnotu časového limitu, který je specifikovaný v profilu ESP. Nové výchozí zprávu je, co uživatelé uvidí a pomáhá jim pochopit, provedení další akcí s jejich ESP nasazení.  
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="retire-noncompliant-devices-----1827291-----"></a>Vyřazení zařízení nedodržující předpisy  <!-- 1827291   -->
+Jako součást zásady dodržování předpisů zařízením jsme přidali novou akci pro případ nedodržování předpisů: [Vyřazení zařízení nedodržující předpisy](actions-for-noncompliance.md#add-actions-for-noncompliance). Pomocí této akce automaticky vymazání firemních dat z o zařízení nesplňujícím požadavky také odebírání zařízení z spravované pomocí Intune.
+
+
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
 #### <a name="intune-data-warehouse-v10-changes-reflecting-back-to-beta----4403765---"></a>Intune Data Warehouse V1.0 změny odráží zpět na verzi beta <!-- 4403765 -->
 Verze 1.0 bylo poprvé dostupné ve. 1808, se liší v některých ohledech významné z beta verze rozhraní API. Tyto změny se projeví v 1903 zpět do beta verzi rozhraní API. Pokud máte důležitá sestavy, které používají beta verzi rozhraní API, důrazně doporučujeme přepínání tyto sestavy V1.0, aby se zabránilo rozbíjející změny. Další informace najdete v tématu [protokol změn pro rozhraní API datového skladu Intune](reports-changelog.md#1903-part-2).
+
+#### <a name="monitor-security-baseline-status-public-preview----3082047---"></a>Monitorovat stav standardních hodnot zabezpečení (public preview) <!-- 3082047 --> 
+Přidali jsme [zobrazení podle kategorií](security-baselines-monitor.md#per-category-view) monitorování standardních hodnot zabezpečení. (Základní nastavení zabezpečení zůstávají ve verzi preview). Podle kategorie zobrazení jednotlivých kategorií ze standardních hodnot společně s procento zařízení, které spadají do skupiny pro každý stav pro danou kategorii. Nyní můžete vidět, kolik zařízení jednotlivých kategorií se neshodují, jsou nesprávně nakonfigurované nebo se nedají použít.
+
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+
+#### <a name="scope-tags-for-apple-vpp-tokens---2371886----"></a>Značky oboru pro tokeny programu Apple VPP <!--2371886  -->
+Nyní můžete přidat značky oboru na tokeny programu Apple VPP. Přístup k tokenu Apple VPP s konkrétní značkou budou mít jenom uživatelé, kterým je přiřazená stejnou značku oboru. Aplikace VPP a e-knih pro zakoupit pomocí tohoto tokenu zdědí její klíčová slova oboru. Další informace o značky oboru, naleznete v tématu [značky pomocí RBAC a oboru](scope-tags.md).
+
+
+
+
+
+
 
 ## <a name="week-of-april-1-2019"></a>Týden od 1. dubna 2019
 
@@ -148,7 +279,7 @@ Teď můžete pomocí Intune, aby [podrobnosti](encryption-monitor.md) o ID klí
 #### <a name="microsoft-edge-support-for-intune-scenarios-on-ios-and-android-devices----3411007---"></a>Podpora Microsoft Edge pro scénáře Intune na zařízení iOS a Androidem <!-- 3411007 -->
 Microsoft Edge bude podporovat všechny stejné scénáře správy jako Intune Managed Browser a uveďte vylepšení prostředí pro koncové uživatele. Microsoft Edge podnikových funkcí, které jsou povolené prostřednictvím zásad v Intune zahrnují dual-Identity, integraci zásady ochrany aplikací, integrace proxy aplikace Azure a spravovaný Oblíbené položky a zkratky domovské stránky. Další informace najdete v tématu [podpory Microsoft Edge](app-configuration-managed-browser.md#microsoft-edge-support).
 
-#### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices---3105122------"></a>Konektor systému Exchange Online a Intune přestat poskytovat podporu pro pouze zařízení v EAS <!--3105122    -->
+#### <a name="exchange-onlineintune-connector-deprecate-support-for-eas-only-devices---3105122----"></a>Konektor systému Exchange Online a Intune přestat poskytovat podporu pro pouze zařízení v EAS <!--3105122  -->
 Konzola Intune už podporuje zobrazení a správy EA jen pro zařízení připojená na Exchange Online s Intune Connectoru. Místo toho máte následující možnosti:
 - Registrace zařízení do správy mobilních zařízení (MDM)
 - Použití zásad ochrany aplikací Intune ke správě svých zařízení
@@ -159,7 +290,7 @@ Teď můžete hledat názvu přesné zařízení. Přejděte na **Intune** > **z
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
-#### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202-------"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202     -->
+#### <a name="support-for-additional-connectors-on-the-tenant-status-page----3617202----"></a>Podpora pro další konektory na stránce Stav Tenanta. <!-- 3617202  -->
 [Tenanta stavové stránce](tenant-status.md) teď zobrazuje informace o dalších konektorů, včetně stavu *rozšířené ochrany před internetovými útoky programu Windows Defender* (ATP) a dalším konektorům Mobile Threat Defense.
 
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
@@ -200,7 +331,7 @@ Modul Intune PowerShell, který poskytuje podporu pro rozhraní Intune API prost
 - [Podrobnosti o použití tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/README.md)
 - [Příklady scénářů s použitím tohoto modulu](https://github.com/Microsoft/Intune-PowerShell-SDK/blob/master/Samples/README.md)
 
-#### <a name="improved-support-for-delivery-optimization----3183757-------"></a>Vylepšená podpora pro optimalizaci doručení  <!--3183757     -->
+#### <a name="improved-support-for-delivery-optimization----3183757----"></a>Vylepšená podpora pro optimalizaci doručení  <!--3183757  -->
 Pro konfiguraci optimalizace doručení jsme rozšířili podporu v Intune. Teď můžete nakonfigurovat rozšířený seznam [nastavení optimalizace doručení](delivery-optimization-settings.md) a vyvíjet aplikace cílené na vaše zařízení přímo z konzoly Intune.
 
 
@@ -249,7 +380,7 @@ Jakákoli změna zásady nové nebo stávající heslo správce vyzve koncovým 
 Platí pro:  
 macOS
 
-#### <a name="assign-scep-certificates-to-a-userless-macos-device-------2340521------"></a>Přiřadit zařízení bez uživatelů macOS certifikáty SCEP    <!-- 2340521    -->
+#### <a name="assign-scep-certificates-to-a-userless-macos-device-----2340521----"></a>Přiřadit zařízení bez uživatelů macOS certifikáty SCEP  <!-- 2340521  -->
 Můžete přiřadit certifikát protokolu SCEP (Simple Enrollment) certifikáty pomocí atributů zařízení pro zařízení s macOS, včetně zařízení bez přidružení uživatele a přiřadit profil certifikátu Wi-Fi nebo profily sítě VPN. Tím se rozšiřují podporu jsme již [přiřadit zařízení bez přidružení uživatele s certifikáty SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) , na kterých běží Windows, iOS a Android.  Tato aktualizace přidává možnost vybrat si certifikát typu *zařízení* při konfiguraci profilu certifikátu SCEP systému MacOS.
 
 Platí pro: 
@@ -267,11 +398,11 @@ Zařízení s Windows 10 můžete použít v beznabídkovém režimu spouštět 
 - Nové funkce a nastavení jsou k dispozici pro povolení nebo zakázání (**konfigurace zařízení** > **profily** > **nový profil**  >  **Windows 10 a novější** pro platformu > **omezení zařízení** pro typ profilu), včetně:
 
   - Prohlížeč Microsoft Edge:
-    - Režim veřejného terminálu použijte Microsoft Edge
-    - Aktualizujte prohlížeč po nečinnosti
+  - Režim veřejného terminálu použijte Microsoft Edge
+  - Aktualizujte prohlížeč po nečinnosti
 
  - Oblíbené položky a hledání:
-    - Povolit změny v hledání modulu
+  - Povolit změny v hledání modulu
 
 Seznam nastavení najdete v tématu:
 

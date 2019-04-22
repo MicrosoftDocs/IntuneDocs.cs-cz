@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 04/12/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b3cba546be350f47c1a57f47b8eddf85323dc74
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.openlocfilehash: 041a8198f8017bff88e139e4020e3364c05be5c8
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58797960"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899631"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -44,7 +44,7 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve vašem prostředí.
 
-### <a name="essentials"></a>Základy
+### <a name="essentials"></a>Essentials
 Část **Základy** obsahuje následující informace o aplikaci:
 
  | **Podrobnosti aplikace**            | **Popis**                                                      |
@@ -82,7 +82,7 @@ Seznam stavů zařízení se zobrazí, když v části nabídky **Monitorovat** 
 | **Název zařízení**      | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut není k dispozici žádnému jinému zařízení.                                                                       |
 | **Uživatelské jméno**        | Jméno uživatele                                                                                                                                                                                                                                      |
 | **Platforma**         | Operační systém zařízení (Windows, iOS, Android atd.)                                                                                                                                                                                           |
-| **Verze**          | Číslo verze aplikace. Pro aplikace – obchodní (LOB) se zobrazí celé číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) Pro aplikace pro Store jsou uvedeny žádné verze. |
+| **Verze**          | Číslo verze aplikace. Pro aplikace – obchodní (LOB) a Microsoft Store pro obchodní aplikace se zobrazí celé číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) Pro standardní Store aplikace jsou uvedeny žádné verze. |
 | **Stav**           | Stav aplikace                                                                                                                                                                                                                                     |
 | **Podrobnosti stavu**   | Podrobnosti o stavu                                                                                                                                                                                                                                     |
 | **Poslední vrácení se změnami**    | Datum, kdy se zařízení naposledy synchronizovalo s Intune                                                                                                                                                                                                                  |

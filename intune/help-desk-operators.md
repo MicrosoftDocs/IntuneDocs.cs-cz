@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: df5b20be667159689aaaee9a790c0a4c5b5864fd
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798394"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900855"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -62,12 +62,12 @@ V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 
 ![](/intune/media/troubleshooting-dash.png)
 
-| Oblast | Name | Popis |
+| Oblast | Název | Popis |
 | ---  | ---  | ---         |
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
 | 3.   | Stav uživatele  | Zobrazí stav uživatelovy licence Intune, počet zařízení, dodržování předpisů u každého zařízení, počet aplikací a dodržování předpisů u aplikací.       |
-| 4.   | Informace o uživateli  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
+| 4.   | Údaje uživatele  | Pomocí seznamu můžete vybrat podrobnosti, které chcete v podokně zkontrolovat. <br>Můžete vybrat: <ul><li>Klientské aplikace<li>Zásady dodržování předpisů<li> Zásady konfigurace<li>Zásady ochrany aplikace <li>Omezení registrace</ul>      |
 | 5.   | Členství ve skupině  | Zobrazí aktuální skupiny, ve kterých je vybraný uživatel členem.       |
 
 <!-- this section needs to be updated
@@ -254,7 +254,7 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 | Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
 | Operační systém | Operační systém zařízení |
 | Verze operačního systému | Verze operačního systému zařízení |
-| selhání | Důvod chyby |
+| Chyba | Důvod chyby |
 
 ### <a name="failure-details"></a>Podrobnosti chyby
 

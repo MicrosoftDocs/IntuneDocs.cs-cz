@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 30d7b2acb6acf48699df92075349b06e5ad9e742
-ms.sourcegitcommit: 617bd653c34c1e6a4e2ad61811c5912f8dab775c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59476506"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900413"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 

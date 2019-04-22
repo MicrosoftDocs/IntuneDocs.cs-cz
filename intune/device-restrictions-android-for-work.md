@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/20/2019
+ms.date: 04/10/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 493a5be89e747c2de1eca3a63907b79228fcdfa2
-ms.sourcegitcommit: aab39bf86707ccaef45fd6527fff4f1c89336710
+ms.openlocfilehash: 528ed184a39f687cf075c9cd779cceee6ad04a47
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58429750"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898251"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -65,26 +65,18 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
   **Není nakonfigurováno** zabraňuje uživatelům v zapnutí funkce šrafování řídicí sítě na zařízení.
 
-- **Povolit instalaci z neznámých zdrojů**: Zvolte **povolit** tak můžou uživatelé můžou zapnout **neznámé zdroje**. Toto nastavení umožňuje aplikace k instalaci z neznámých zdrojů. **Není nakonfigurováno** zabrání uživatelům zapnete **neznámé zdroje**.
 - **Aktualizace systému**: Zvolte možnost definovat způsob, jakým zpracovává aktualizace distribuované bezdrátově zařízení:
   - **Výchozí ze zařízení**: Použijte výchozí nastavení zařízení.
   - **Automatické**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
   - **Postponed**: Aktualizace jsou odložené po dobu 30 dnů. Na konci na 30 dnů Android se zobrazí výzva k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
   - **Časové období údržby**: Nainstaluje aktualizace automaticky během denní údržby, kterou jste nastavili v Intune. Instalace pokusí denně po dobu 30 dnů a může selhat, pokud je nedostatek místa či baterie úrovněmi. Po 30 dnech Android se zobrazí výzva k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazené zařízení, jako jsou veřejné terminály, jako vyhrazená zařízení jedné aplikace popředí aplikace je možné aktualizovat.
-- **Automatické aktualizace aplikací**: Zvolte, pokud mají automatické aktualizace instalovat. Možnosti:
-  - **Není nakonfigurováno**
-  - **Výběr uživatele**
-  - **Nikdy**
-  - **Pouze Wi-Fi**
-  - **Vždy**
 
 - **Oznámení windows**: Pokud je nastavena na **zakázat**, na zařízení se nezobrazí okno oznámení, včetně informační zprávy, příchozí, odchozí volání, systému upozornění a chyby systému. Pokud je nastavena na **Nenakonfigurováno**, operační systém bude použita výchozí, což může být zobrazovala oznámení.
 - **Přeskočit prvním použití pomocných parametrů**: Zvolte **povolit** pro skrytí nebo přeskočit návrhy od aplikací až po kroku výukové programy nebo si přečtěte úvodní pomocných při spuštění aplikace. Pokud je nastavena na **Nenakonfigurováno**, operační systém bude použita výchozí, což může být zobrazíte tyto návrhy při spuštění aplikace.
 
-
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
-- **Kontrola ohrožení aplikací**: **Vyžadovat** , který vynucuje **ověřovat aplikace** nastavení je povoleno pro pracovní a osobní profily.
+- **Kontrola ohrožení aplikací**: **Vyžadovat** (výchozí) umožňuje Google Play Protect Kontrola aplikace před a po jejich instalaci. Pokud zjistí hrozbu, ho může upozornit uživatele, které chcete tuto aplikaci odinstalovat ze zařízení. **Není nakonfigurováno** nelze povolit nebo spusťte Google Play Protect vyhledávat v aplikacích.
 
 ### <a name="dedicated-device-settings"></a>Nastavení vyhrazená zařízení
 
@@ -122,25 +114,49 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
     1. Dál vyberte tlačítko Zpět. až se zobrazí tlačítko "Konec veřejného terminálu". 
     2. Vybere tlačítko a přejde **ponechte kódu celoobrazovkový režim** PIN kód.
     3. Po dokončení změn, vyberte **spravované domovskou obrazovku** aplikace. Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi. 
-    
+
     **Zakázat** nedává možnost pozastavit beznabídkový režim. Pokud správce pokračuje s výběrem tlačítka Zpět a vybere tlačítko "Konec veřejného terminálu", pak zobrazí zpráva, že heslo je povinné.
-    
+
     - **Ponechte kódu celoobrazovkový režim**: Zadejte číslice 4 až 6 číselný kód PIN. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
- 
+
   - **Nastavit vlastní adresu URL pozadí**: Zadejte adresu URL přizpůsobení pozadí obrazovky na vyhrazené zařízení.
+
+  - **Konfigurace Wi-Fi**: Zvolte **povolit** umožňuje koncovým uživatelům se připojit k různým sítím Wi-Fi zařízení. Povolení této funkce se také změní na umístění zařízení. **Není nakonfigurováno** (výchozí) zabrání uživatelům v připojení k sítím Wi-Fi ve spravovaných Domů obrazovky (režim zámku úloh).
+
+    Více o [režimu uzamčení úloh](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (otevře web pro Android).
+
+  - **Konfigurace technologie Bluetooth**: Zvolte **povolit** povolit Bluetooth na zařízení a povolit koncovým uživatelům pár zařízení přes Bluetooth. Povolení této funkce se také změní na umístění zařízení. **Není nakonfigurováno** (výchozí) zabrání uživatelům v konfiguraci Bluetooth a párování zařízení ve spravované Domů obrazovky (režim zámku úloh). 
+
+    Více o [režimu uzamčení úloh](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (otevře web pro Android).
 
 ### <a name="device-password-settings"></a>Nastavení hesla zařízení
 
-- **Keyguard**: Zvolte **zakázat** zabránit funkci Keyguard zámek obrazovky na zařízení používá. **Není nakonfigurováno** umožňuje uživateli používat Keyguard funkce.
-- **Zakázané funkce keyguard**: Když je na zařízení povolená keyguard, zvolte funkcí, které chcete zakázat. Například když **zabezpečené fotoaparát** je zaškrtnuto, je funkce fotoaparátu v zařízení zakázána. Na zařízení jsou povoleny všechny funkce není zaškrtnuté.
+- **Zakázat zamykací obrazovka**: Zvolte **zakázat** k zabrání uživatelům využívat funkci Keyguard zámek obrazovky na zařízení. **Není nakonfigurováno** umožňuje uživateli používat Keyguard funkce.
+- **Zakázaný zámek obrazovky funkce**: Když je na zařízení povolená keyguard, zvolte funkcí, které chcete zakázat. Například když **zabezpečené fotoaparát** je zaškrtnuto, je funkce fotoaparátu v zařízení zakázána. Na zařízení jsou povoleny všechny funkce není zaškrtnuté.
+
+  Tyto funkce jsou dostupné pro uživatele, když je zařízení zamknuté. Uživatelům nezobrazí a přístup k funkcím, které jsou kontrolovány.
+
 - **Vyžadovaný typ hesla**: Definujte požadovaný typ hesla pro zařízení. Možnosti:
-  - **Aspoň číslice**
-  - **Číselné komplexní**: Opakovat nebo po sobě jdoucí čísla, jako je například "1111" nebo "1234" nejsou povoleny.
-  - **Aspoň abecední znaky**
-  - **Aspoň alfanumerické znaky**
-  - **Aspoň alfanumerické se symboly**
-- **Minimální délka hesla**: Zadejte minimální délku hesla, které uživatel musí zadat (mezi 4 a 16 znaky).
-- **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet neúspěšných přihlášení povolit předtím, než se zařízení vymaže (mezi 1 – 11).
+  - **Výchozí ze zařízení**
+  - **Zadání hesla, bez omezení**
+  - **Slabé biometrické**: [Silná vs. slabé biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web pro Android)
+  - **Číselné**: Heslo musí být pouze čísla, jako například `123456789`. Zadejte **minimální délka hesla** uživatel musí zadat 4 až 16 znaků.
+  - **Číselné komplexní**: Opakovat nebo po sobě jdoucí čísla, jako je například "1111" nebo "1234" nejsou povoleny. Zadejte **minimální délka hesla** uživatel musí zadat 4 až 16 znaků.
+  - **Abecední**: Písmena abecedy jsou povinné. Čísla a symboly nejsou povinné. Zadejte **minimální délka hesla** uživatel musí zadat 4 až 16 znaků.
+  - **Alfanumerické**: Obsahuje velká písmena, malá písmena a číslice. Zadejte **minimální délka hesla** uživatel musí zadat 4 až 16 znaků.
+  - **Alfanumerické se symboly**: Obsahuje velká písmena, malá písmena, číslice, interpunkční znaménka a symboly. Dále zadejte:
+
+    - **Minimální délka hesla**: Zadejte minimální délku hesla musí mít 4 až 16 znaků.
+    - **Počet znaků vyžadovaný**: Zadejte počet znaků, které musí heslo uživatele obsahovat, 0 až 16 znaků.
+    - **Malá písmena požadovaný počet znaků**: Zadejte číslo, malá písmena, které musí heslo uživatele obsahovat, 0 až 16 znaků.
+    - **Počet velkých písmen vyžaduje**: Zadejte číslo, velká písmena, které musí heslo uživatele obsahovat, 0 až 16 znaků.
+    - **Počet znaků není písmeno**: Zadejte číslo než-písmen (jiném než písmena abecedy) musí heslo uživatele obsahovat, 0 až 16 znaků.
+    - **Počet číselných znaků**: Zadejte počet číslic (`1`, `2`, `3`, a tak dále) musí heslo obsahovat 0 až 16 znaků.
+    - **Počet znaků symbolu**: Zadejte počet znaků symbolu (`&`, `#`, `%`, a tak dále) musí heslo obsahovat 0 až 16 znaků.
+
+- **Počet dnů do vypršení platnosti hesla**: Zadejte počet dnů mezi 1 – 365, dokud se musí změnit heslo zařízení. Chcete-li změnit heslo po uplynutí 60 dnů, zadejte například `60`. Když vyprší platnost hesla, uživatelům se výzva k vytvoření nového hesla.
+- **Počet hesel vyžadovaných předtím, než uživatel může resuse heslo**: Zadejte počet dřívějších hesel, která se nesmí znovu použít, mezi 1 – 24. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
+- **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte číslo mezi 4 – 11, neúspěšných přihlášení povolit předtím, než se zařízení vymaže.
 
 ### <a name="power-settings"></a>Nastavení napájení
 
@@ -152,6 +168,17 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
 - **Přidat nové uživatele**: Zvolte **bloku** zabránit uživatelům v přidávání nových uživatelů. Každý uživatel má osobní pracovní prostor na zařízení pro vlastní domovské obrazovky, účty, aplikace a nastavení. **Není nakonfigurováno** umožňuje uživatelům přidávat ostatním uživatelům na zařízení.
 - **Odebrání uživatele**: Zvolte **bloku** uživatelům zabránit v odebírání uživatelů. **Není nakonfigurováno** umožňuje uživatelům odebírat další uživatele ze zařízení.
 - **Účet změny**: Zvolte **bloku** zabránit uživatelům v úpravách účty. **Není nakonfigurováno** umožňuje uživatelům aktualizovat uživatelských účtů v zařízení.
+
+### <a name="applications"></a>Aplikace
+
+- **Povolit instalaci z neznámých zdrojů**: Zvolte **povolit** tak můžou uživatelé můžou zapnout **neznámé zdroje**. Toto nastavení umožňuje aplikace k instalaci z neznámých zdrojů, včetně zdrojů než Google Play Store. **Není nakonfigurováno** zabrání uživatelům zapnete **neznámé zdroje**.
+- **Povolit přístup ke všem aplikacím v obchodě Google Play**: Pokud je nastavena na **povolit**, uživatelé získají přístup ke všem aplikacím v obchodě Google Play. Není získávají přístup k aplikacím, správce bloky v [klientské aplikace](apps-add-android-for-work.md). **Není nakonfigurováno** vynutí uživatelům přístup jenom k aplikace správce je k dispozici Google Play store nebo aplikace vyžaduje [klientské aplikace](apps-add-android-for-work.md).
+- **Automatické aktualizace aplikací**: Zvolte, pokud mají automatické aktualizace instalovat. Možnosti:
+  - **Není nakonfigurováno**
+  - **Výběr uživatele**
+  - **Nikdy**
+  - **Pouze Wi-Fi**
+  - **Vždy**
 
 ### <a name="connectivity"></a>Připojení
 

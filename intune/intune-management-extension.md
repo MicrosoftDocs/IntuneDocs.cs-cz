@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 66a23b75913f6465064a988bd8f2ba9c2b4c36d6
-ms.sourcegitcommit: 219bbbfb44eba70ac2b751970d8b4b778cd28416
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920252"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899750"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -65,8 +65,8 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
       | Spuštění skriptu na hostiteli PS 64-bit | Architektura klienta | Nový skript PS | Existující zásady skriptu PS |
       | --- | --- | --- | --- | 
-      | Ne | 32-bit  | 32-bit PS hostitele podporována | Spustí jenom v hostiteli PS 32-bit, který pracuje na 32bitové a 64bitové architektury. |
-      | Ano | 64-bit | Skript se spustí v 64-bit PS hostitele pro 64bitové architektury. Při spuštění na 32-bit, spuštění skriptu na hostiteli PS 32-bit. | Skript se spustí v 32bitové PS hostitele. Pokud toto nastavení se změní na 64-bit, skript otevře (není spuštěna) v hostiteli PS 64-bit a sestavy výsledky. Pokud byl spuštěn na 32-bit, spuštění skriptu na hostiteli PS 32-bit. |
+      | Ne | 32bitová  | 32-bit PS hostitele podporována | Spustí jenom v hostiteli PS 32-bit, který pracuje na 32bitové a 64bitové architektury. |
+      | Ano | 64bitová | Skript se spustí v 64-bit PS hostitele pro 64bitové architektury. Při spuštění na 32-bit, spuštění skriptu na hostiteli PS 32-bit. | Skript se spustí v 32bitové PS hostitele. Pokud toto nastavení se změní na 64-bit, skript otevře (není spuštěna) v hostiteli PS 64-bit a sestavy výsledky. Pokud byl spuštěn na 32-bit, spuštění skriptu na hostiteli PS 32-bit. |
 
     ![Přidat a používat skripty prostředí PowerShell v Microsoft Intune](./media/mgmt-extension-add-script.png)
 5. Vyberte **OK** > **vytvořit** skript uložte.

@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4a1c81b1b2f54b15397e9e1d7451ee7ed911848
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798739"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898509"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
 

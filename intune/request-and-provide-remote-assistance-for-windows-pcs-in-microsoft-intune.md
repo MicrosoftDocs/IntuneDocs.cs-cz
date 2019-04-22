@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: b7004d72328d606f6adc5cd84e79ce4830409059
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798527"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900923"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 

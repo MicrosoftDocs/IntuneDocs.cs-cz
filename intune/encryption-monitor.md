@@ -18,11 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.openlocfilehash: 1c9028d3b8e69c8f20e264f99bd4bf8fda6c9050
-ms.sourcegitcommit: 02803863eba37ecf3d8823a7f1cd7c4f8e3bb42c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59423520"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900770"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  

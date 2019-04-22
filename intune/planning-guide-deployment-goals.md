@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: cd1fd6198e71dd585d0216c0850c0140f5e71344
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798765"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59894684"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Vymezení cílů, úkolů a problémů při nasazení
 

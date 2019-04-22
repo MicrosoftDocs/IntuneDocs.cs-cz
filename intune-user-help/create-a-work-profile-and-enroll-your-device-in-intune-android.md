@@ -1,11 +1,11 @@
 ---
-title: Registrace zařízení pomocí pracovního profilu | Dokumentace Microsoftu
-description: Jak lépe zabezpečit zařízení s Androidem pomocí pracovních profilů
+title: Registrace zařízení s Androidem pracovního profilu | Dokumentace Microsoftu
+description: Vytvoření pracovního profilu a registrace zařízení
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2017
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,20 +18,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eab28cdd4515561ad34a433773e351150a87f626
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 29928023abc2d6119bb318bbe046e954288ebaa3
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57334948"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896511"
 ---
-# <a name="create-a-work-profile-and-enroll-your-device-in-intune"></a>Vytvoření pracovního profilu a registrace zařízení v Intune
+# <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení se pracovní profil Androidu
 
-Registrací zařízení s Androidem získáte přístup k e-mailu, aplikacím a jiným pracovním datům společnosti. Součástí registrace je nastavení pracovního profilu, který v zařízení oddělí osobní a pracovní data.
+Registrace osobních zařízení s Androidem, chcete-li získat přístup k firemnímu e-mailu, aplikacím a jiným pracovním datům. Během registrace které nastavíte pracovní profil Androidu. Tento profil odděluje osobních údajů na zařízení z pracovní data. Spravuje vaše společnost jen pracovní profil, který se skládá z pracovní soubory a data. Vaše firemní podpora nemůže spravovat osobní údaje ve vašem zařízení. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md). 
 
-Firemní podpora může spravovat jen pracovní profil, který obsahuje vaše pracovní data. Firemní podpora nemůže v zařízení spravovat vaše osobní data. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).
-
-Pracovní profil vytvoříte takto:
+## <a name="create-work-profile-and-enroll-device"></a>Vytvoření pracovního profilu a registrace zařízení
 
 1.  Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu. Pokud tuto bezplatnou aplikaci ještě nemáte nainstalovanou, stáhněte a nainstalujte ji z obchodu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
@@ -82,5 +80,7 @@ Pracovní profil vytvoříte takto:
     Teď můžete získávat firemní aplikace z obchodu Play for Work.
 
     ![Stránka obchodu Google Play for Work s aplikacemi](./media/andr-afw-tap-work-play-store-icon.png)
+
+## <a name="next-steps"></a>Další postup  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

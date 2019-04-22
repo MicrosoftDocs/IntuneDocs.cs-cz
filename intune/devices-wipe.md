@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 896008594e17c3773831edede263c8c47cde3c48
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429213"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900528"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 

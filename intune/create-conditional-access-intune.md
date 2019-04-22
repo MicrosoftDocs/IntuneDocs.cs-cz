@@ -18,11 +18,11 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: aaf9b82bc810dd3a616eb25f39f4b5830b1c3e6f
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798836"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899325"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu podle zařízení
 

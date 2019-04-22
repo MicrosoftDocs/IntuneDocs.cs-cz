@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: f4a8e873c48ceb59bfb8ac98fec9a29fa51d6cd3
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58799764"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900821"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních
 Přečtěte si o použití zásad dodržování předpisů zařízením s podmíněným přístupem, které zajistí, že zařízení s iOSem mají přístup k e-mailu Exchange Online pouze v případě, že jsou spravovaná v Intune a používají schválenou e-mailovou aplikaci. 

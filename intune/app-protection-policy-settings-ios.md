@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/12/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 448008d20919d95369000b1191f773b23f143d00
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.openlocfilehash: 25fd89335d290cef5d100d58fddf7cbd56370393
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292339"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59895689"
 ---
 #  <a name="ios-app-protection-policy-settings"></a>Nastavení zásad ochrany aplikací pro iOS
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -59,9 +59,6 @@ Existují tři kategorie nastavení zásad: *Přemístění dat*, *požadavky na
 | **Synchronizace aplikace s využitím aplikací nativních kontaktů** |  Vyberte **zakázat** nechcete, aby aplikace ukládala data do nativní aplikace kontakty na zařízení. Pokud vyberete **povolit**, může aplikace ukládat data do nativní aplikace kontakty na zařízení. <br><br>Když budete z aplikace selektivně mazat pracovní nebo školní data, odeberou se kontakty synchronizované přímo z aplikace do nativní aplikace Kontakty. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. To se v současné době týká jenom aplikace Microsoft Outlook.   | **Povolit**  |
 | **Tisk dat organizace** | Vyberte **zakázat** zabránit tisk pracovních nebo školních dat aplikace.   | **Povolit**  |
 | **Sdílená složka webového obsahu pomocí zásad spravovaného prohlížeče** | Určete, jakým způsobem se otevírá webový obsah (odkazy http/https) z aplikací spravovaných zásadami. Vybírejte z těchto možností: <ul><li>**Zásady spravovaného prohlížeče**: Povolit webový obsah, který otevíral jenom ve zásady spravovaného prohlížeče.</li><li>**Libovolná aplikace**: Povolit webové odkazy v jakékoli aplikaci </li></ul> Pokud ke správě zařízení používáte Intune, přečtěte si téma [Správa přístupu k internetu pomocí prohlížeče chráněného zásadami Microsoft Intune](app-configuration-managed-browser.md).<br><br>**Prohlížeče spravované zásadami**<br>Pokud nasadíte více prohlížečů spravovaných zásadami, spustí se jen jeden.  Jako první se spustí Intune Managed Browser a následně Microsoft Edge.<p>Pokud se vyžaduje prohlížeč spravovaný zásadami, ale není nainstalovaný, budou koncoví uživatelé vyzváni k instalaci řešení Intune Managed Browser.<p>Pokud se vyžaduje prohlížeč spravovaný zásadami, jsou univerzální odkazy iOS spravované nastavením zásady **Povolit aplikaci posílat data do jiných aplikací**. <p>**Registrace zařízení v Intune**<br>Pokud ke správě zařízení používáte Intune, přečtěte si článek Správa přístupu k internetu pomocí zásad aplikace Managed Browser v Microsoft Intune. <p>**Microsoft Edge spravovaný zásadami**<br>Prohlížeč Microsoft Edge pro mobilní zařízení (iOS a Android) podporuje zásady ochrany aplikací Intune. Uživatelé, kteří se v aplikaci prohlížeče Microsoft Edge přihlásí svými podnikovými účty Azure AD, budou chráněni službou Intune. Prohlížeč Microsoft Edge integraci sady Intune SDK a podporuje všechny její zásady ochrany dat, s výjimkou brání:<br><ul><li>**Uložit – jako**: Prohlížeč Microsoft Edge neumožňuje uživateli přidat s přímým přístupem, v aplikaci připojení ke cloudovým poskytovatelé úložiště (jako je třeba OneDrive).</li><li>**Obraťte se na synchronizaci**: Prohlížeč Microsoft Edge se neukládá do seznamu nativních kontaktů.</li></ul><br>**Poznámka**:<br>Intune SDK nelze určit, pokud je cílové aplikace v prohlížeči. Na zařízeních s iOSem nejsou povolené žádné jiné aplikace spravovaného prohlížeče.    | **Není nakonfigurováno**  |
-| **Klávesnice třetích stran** | Vyberte **zakázat** zabránit používání klávesnice třetích stran ve spravovaných aplikacích. <br><br>Když tuto možnost povolíte, obdrží uživatel jednorázově zprávu o tom, že použití takových klávesnic je zablokované. Tato zpráva se zobrazí při první komunikaci uživatele s daty organizace vyžadující použití klávesnice. Při práci se spravovanými aplikacemi je k dispozici jen standardní klávesnice pro iOS, všechny ostatní možnosti jsou zakázané. Toto nastavení nemá vliv na používání klávesnic třetích stran v nespravovaných aplikacích. | **Povolit** |
-
-
 
 > [!NOTE]  
 > Žádné z nastavení ochrany dat řídit Apple spravované open in funkce na zařízeních s Iosem. Pokud chcete spravovat funkci Otevřít v od Applu, přečtěte si [Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune](data-transfer-between-apps-manage-ios.md).

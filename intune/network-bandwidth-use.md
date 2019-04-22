@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 40f9ada715570de7b5b2f95292b7ed0d238242d2
-ms.sourcegitcommit: 04d29d47b61486b3586a0e0e5e8e48762351f2a3
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59509707"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897098"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
 

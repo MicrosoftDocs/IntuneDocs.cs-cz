@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 4/19/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8b95c79013b56d792af80831050a6bca74083952
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 02e2e76af49887242be1625adf4641ebb324e7b7
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397776"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899546"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy v Intune
 
@@ -28,7 +28,7 @@ Pro zařízení, která nesplňují zásady dodržování předpisů nebo pravid
 
 ## <a name="overview"></a>Přehled
 
-Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) pak zařízení zablokuje. Pokud zařízení nedodržuje předpisy, **akce při nedodržení** vám umožní flexibilně se rozhodnout, jak postupovat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
+Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) pak zařízení zablokuje. Pokud zařízení nedodržuje předpisy, **akcí pro případ nedodržování předpisů** vám umožní flexibilně se rozhodnout, jak postupovat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
 
 Existuje několik typů akcí:
 
@@ -39,6 +39,15 @@ Existuje několik typů akcí:
 - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pro zařízení, která nejsou kompatibilní můžete vydat vzdálený zámek. Uživateli se zobrazí výzva k zadání PIN kódu nebo hesla k odemknutí zařízení. Další informace o funkci [vzdáleného uzamčení](device-remote-lock.md). 
 
 - **Označit zařízení jako nevyhovující**: Vytvoření plánu (ve dnech) po zařízení označeno jako nedodržující předpisy. Může to být okamžitě nebo můžete dát uživateli nějaký čas na to, aby dodržení předpisů zařízením zajistil.
+
+- **Vyřazení zařízení nedodržujícím předpisy**: Tato akce odebere všechna firemní data mimo zařízení a také odebere zařízení ze správy Intune. Aby se zabránilo nechtěnému vymazání zařízení, tato akce podporuje minimální plánu 30 dnů. Následující platformy podporují tato akce:
+   - Android
+   - iOS
+   - macOS
+   - Windows 10 Mobile
+   - Windows Phone 8.1 nebo novější  
+
+  Další informace o [vyřazení zařízení](devices-wipe.md#retire).
 
 V tomto článku se dozvíte, jak:
 
@@ -103,10 +112,13 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
          - Zadejte libovolné **Další příjemce** výběrem skupin.
     
     - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Tato akce vynutí, aby uživatel zadal kód PIN nebo hesla k odemknutí zařízení. 
-    
-    - **Plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
 
-5. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
+    - **Vyřazení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, odeberte všechna podniková data mimo zařízení a odeberte zařízení ze správy Intune. Pokud chcete zabránit náhodnému vymazání zařízení, tato akce podporuje minimální plán **30** dnů.  
+
+    
+5. Konfigurace **plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. (*Vyřadit z provozu zařízení nedodržujícím předpisy* podporuje minimálně za 30 dní.) Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
+
+6. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
 
 ## <a name="next-steps"></a>Další postup
 

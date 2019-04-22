@@ -1,11 +1,11 @@
 ---
-title: Šifrování zařízení s Androidem pro portál společnosti Intune | Dokumentace Microsoftu
-description: Postup zapnutí šifrování zařízení na zařízení s Androidem
+title: Šifrování zařízení s Androidem v Intune | Dokumentace Microsoftu
+description: Postup zapnutí šifrování zařízení s Androidem v případě potřeby přes Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9f1e7bbbad243e37f34cb298466adf886be9273
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 58217b6088669a7387ed7452f0ec81ae4a04b60c
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490583"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896673"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
@@ -33,7 +33,7 @@ Pro přístup k pracovním nebo školním prostředkům, vaše organizace může
 
 ## <a name="turn-on-encryption"></a>Zapnutí šifrování
 
-Pokud se zobrazí zpráva v aplikaci portál společnosti, které potřebujete k zašifrování zařízení, proveďte následující kroky. 
+Pokud aplikace portál společnosti nebo aplikace pro Microsoft Intune vás vyzve k zašifrování zařízení, proveďte následující kroky. 
 
 > [!Note]
 > Některá zařízení s Androidem od Huawei Vivo a OPPO nelze zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
@@ -46,7 +46,9 @@ Pokud se zobrazí zpráva v aplikaci portál společnosti, které potřebujete k
 2. Přejděte zpět na **zamykací obrazovka a zabezpečení** a vyberte **zabezpečené spuštění**.
 3. Zvolte **vyžadovat PIN, když zařízení Zapne** > **OK**.
 4. Zadejte svůj PIN kód k potvrzení a k šifrování zařízení.
-5. Otevřete aplikaci portál společnosti, vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**.  
+5. Otevřete aplikaci portál společnosti nebo Microsoft Intune.
+    * Portál společnosti, které uživatelé: Vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**. 
+    * Microsoft Intune users: Budete muset počkat až do aktualizace stránky, ale pokud tomu tak, by měl změnit stav šifrování na kompatibilní.  
 
 Pravděpodobně nemáte zařízení s Androidem 4.4 nebo starší **zabezpečené spuštění** možnost. V takovém případě proveďte následující kroky k zašifrování zařízení.
 
@@ -55,14 +57,16 @@ Pravděpodobně nemáte zařízení s Androidem 4.4 nebo starší **zabezpečen�
     * **Úložiště** > **zamykací obrazovka a zabezpečení** > **další nastavení zabezpečení** 
 
 2. Postupujte podle pokynů na obrazovce. Během šifrování se může několikrát restartovat zařízení.
-3. Otevřete aplikaci portál společnosti, vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**.  
+3. Otevřete aplikaci portál společnosti nebo Microsoft Intune.
+    * Portál společnosti, které uživatelé: Vyberte zařízení a klepněte na **zkontrolovat nastavení zařízení**.  
+    * Microsoft Intune users: Budete muset počkat až do aktualizace stránky, ale pokud tomu tak, by měl změnit stav šifrování na kompatibilní.
 
 ## <a name="troubleshoot"></a>Řešení potíží  
 **Problém**: Jste už zašifrovali zařízení a
 
 - Tlačítko pro šifrování je zakázané.
 - Zobrazí se zpráva s informacemi o tom, že je stále nutné nastavit šifrování.
-- Bude docházet k chybám při pokusu o použití aplikace Portál společnosti.
+- Dojde k chybám při pokusu o použití aplikace portál společnosti nebo Microsoft Intune.
 
 **Možná řešení**
 

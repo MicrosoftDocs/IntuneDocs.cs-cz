@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 50be11f9ada92670c201fc2540499effa5a7edef
-ms.sourcegitcommit: 484a898d54f5386fdbce300225aaa3495cecd6b0
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58798492"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897591"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Koncový bod rozhraní API datového skladu Intune
 

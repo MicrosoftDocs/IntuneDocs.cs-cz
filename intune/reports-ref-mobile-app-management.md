@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 456abbf849120675b6a7c108ca65c6f9967ae64a
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429195"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898798"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Referenční informace o entitách správy mobilních aplikací (MAM)
 
@@ -138,6 +138,6 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
 |          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádný <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 

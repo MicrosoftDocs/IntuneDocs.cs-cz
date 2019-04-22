@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 5ce1950c81a1327ede14fc5885eaf12f33614097
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292331"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59897574"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 

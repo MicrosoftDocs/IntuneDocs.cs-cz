@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73808499aa4f70b4a05e5e7984eaf3af6e7654c9
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8d19be73472aed6b6ede1cfdc3d14007c5222c43
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57389338"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59896608"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -36,7 +36,9 @@ Během nastavování zařízení pomocí Intune stránka stavu registrace se zob
 
 Můžete také nastavit pořadí priorit pro každý profil, aby se zohlednily konfliktních přiřazení profilů na stejné zařízení nebo uživatele.
 
- 
+> [!NOTE]
+> Stránka stavu registrace se nezobrazí, pokud jen pro zařízení se v přiřazené skupině. Uživatel musí být v přiřazené skupině pro stránka stavu registrace se zobrazí.
+
 ## <a name="turn-on-default-enrollment-status-page-for-all-users"></a>Zapnutí výchozí stránky stavu registrace pro všechny uživatele
 
 Pokud chcete zapnout stránku stavu registrace, postupujte podle následujících kroků.

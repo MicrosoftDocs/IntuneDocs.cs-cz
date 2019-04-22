@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-azure, get-started, seoapril2019
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 45e9f50881ff7da0554a4731712441b5fedb01d8
-ms.sourcegitcommit: 364a7dbc7eaa414c7a9c39cf53eb4250e1ad3151
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59292249"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59898543"
 ---
 # <a name="what-are-app-protection-policies"></a>Co jsou zásady ochrany aplikací?
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2019
+ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fafd9c92a51c8ef258d151a3c19c271fdc45f4c2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 7d4030762e625e24fb0c72724473162a4ad98183
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "55835856"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900090"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -33,6 +33,9 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 * Zařízení se přestane zobrazovat na Portálu společnosti.
 * Z Portálu společnosti nebude možné instalovat aplikace.
 * Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).  
+
+> [!NOTE]
+> Nelze zrušit registraci nebo odebrat zařízení vlastněných společností z aplikace pro Microsoft Intune. Zařízení bylo zaregistrováno během počátečního nastavování zařízení a musí být zaregistrovaná pro přístup k prostředkům vaší organizace.  
 
 1. Na Portálu společnosti přejděte do pravého horního rohu a klepněte na tři svislé tečky. Otevře se nabídka akcí.
 

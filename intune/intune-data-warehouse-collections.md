@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 00a0bd4936d1ad8ba8dd52f1839e7d42505db60e
-ms.sourcegitcommit: 601327125ac8ae912d8159422de8aac7dbdc25f6
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59429220"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59900736"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -504,7 +504,7 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
 |          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádný <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes
@@ -678,7 +678,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů ve vaší organizaci.
 
-|        Name        |                                             Popis                                            |     Příklad     |
+|        Název        |                                             Popis                                            |     Příklad     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Jedinečný identifikátor uživatele v datovém skladu   (náhradní klíč)                            | 123             |
 | DeviceKey          | Jedinečný identifikátor zařízení v datovém skladu                                             | 123             |

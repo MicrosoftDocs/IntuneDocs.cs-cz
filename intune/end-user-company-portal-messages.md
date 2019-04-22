@@ -17,12 +17,12 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 700bded8930385c5576a198dc0364c64066121e5
-ms.sourcegitcommit: 71314481e644025c005019b478b4cbeaf2390ea9
+ms.openlocfilehash: 2168c39c80369e16284078df608bdab5f29858c6
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59041701"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59894961"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
@@ -57,7 +57,7 @@ Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zp
 Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Telefon** a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
-Nasměrujte uživatele na článek [Registrace zařízení s Androidem v Intune](/intune-user-help/enroll-your-device-in-intune-android), kde najdou další informace.
+Nasměrujte uživatele na článek [Registrace zařízení s Androidem v Intune](/intune-user-help/enroll-device-android-company-portal), kde najdou další informace.
 
 ## <a name="allow-company-portal-to-access-your-contacts"></a>Povolit pro Portál společnosti přístup k vašim kontaktům?
 
@@ -78,7 +78,7 @@ Pokud uživatel povolí přístup, ale později ho zamítne, zobrazí se tato zp
 Pokud se uživatel rozhodne povolit přístup později, může přejít na **Nastavení** > **Aplikace** > **Portál společnosti** > **Oprávnění** > **Telefon** a zapnout ho.
 
 ### <a name="how-to-explain-this-to-your-users"></a>Jak to vysvětlit uživatelům
-Nasměrujte uživatele na článek [Registrace zařízení s Androidem v Intune](/intune-user-help/enroll-your-device-in-intune-android), kde najdou další informace.
+Nasměrujte uživatele na článek [Registrace zařízení s Androidem v Intune](/intune-user-help/enroll-device-android-company-portal), kde najdou další informace.  
 
 ## <a name="allow-company-portal-to-access-photos-media-and-files-on-your-device"></a>Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?
 
