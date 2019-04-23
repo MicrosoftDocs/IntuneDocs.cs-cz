@@ -1,11 +1,11 @@
 ---
 title: Kontrola úspěchu nebo neúspěchu standardních hodnot zabezpečení v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zkontrolujte stav chyby, ke konfliktu a úspěchu, při nasazení standardních hodnot zabezpečení pro uživatele a zařízení v Microsoft Intune MDM. Naleznete v části řešení potíží pomocí protokolů klienta a funkcí sestavy v Intune.
+description: Zkontrolujte stav chyby a úspěchu konflikt při nasazení standardních hodnot zabezpečení pro uživatele a zařízení v Microsoft Intune MDM. Naleznete v části řešení potíží pomocí protokolů klienta a funkcí sestavy v Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 04/19/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,60 +16,70 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bd6e7f37a2e3b10371dead97e849834b39ba06f
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
-ms.translationtype: MT
+ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
+ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490572"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59899954"
 ---
-# <a name="monitor-the-security-baseline-and-profile-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilu v Microsoft Intune
+# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilů v Microsoft Intune  
 
-Existují různé možnosti monitorování, při použití standardních hodnot zabezpečení. Můžete monitorovat na profil standardních hodnot zabezpečení, která se použije pro uživatele a zařízení. Můžete také monitorovat skutečné směrného plánu a všechna zařízení, které odpovídají (nebo se neshodují.) doporučené hodnoty.
+Intune poskytuje celou řadu možností pro monitorování vaší základní nastavení zabezpečení. Můžete monitorovat na profil standardních hodnot zabezpečení, která se použije pro uživatele a zařízení. Můžete také monitorovat skutečné směrného plánu a všechna zařízení, které odpovídají (nebo se neshodují.) doporučené hodnoty.
 
 Tento článek vás provede obou možností monitorování.
 
 [Základní nastavení zabezpečení v Intune](security-baselines.md) poskytuje podrobnější informace o funkci směrné plány zabezpečení v Microsoft Intune.
 
-## <a name="monitor-the-baseline-and-your-devices"></a>Monitorování zařízení a snímek směrného plánu
+## <a name="monitor-the-baseline-and-your-devices"></a>Monitorování zařízení a snímek směrného plánu  
 
-Když monitorujete směrný plán, získejte přehled o stavu zabezpečení vašich zařízení, na základě doporučení služby od Microsoftu.
+Když monitorujete směrný plán, získejte přehled o stavu zabezpečení vašich zařízení, na základě doporučení služby od Microsoftu. Tyto informace z podokna přehledu standardních hodnot zabezpečení můžete zobrazit v konzole Intune.  Trvá až 24 hodin se zobrazí po prvním přiřazení směrného plánu data. Novější změny trvat až 6 hodin se zobrazí.  
 
-> [!NOTE]
-> Po prvním přiřazení směrného plánu, sestavy může trvat až 24 hodin k aktualizaci. Potom se může trvat až 6 hodin k aktualizaci.
+Chcete-li zobrazit data monitorování standardních hodnot a zařízení, přihlaste se k [portál Intune](https://aka.ms/intuneportal). V dalším kroku vyberte **směrné plány zabezpečení (preview)** vyberte směrný plán a zobrazení **přehled** podokně.
 
-1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
-2. Vyberte **směrné plány zabezpečení (preview)** > vyberte směrný plán.
-3. V **přehled**, graf ukazuje, kolik zařízení je postiženo zvolíte a snímek směrného plánu různé stavy:
+**Přehled** podokně nabízí dvě metody k monitorování stavu:
+- **Zobrazení zařízení** – souhrn kolik zařízení je v každé kategorii stav směrného plánu.  
+- **Podle kategorie** – zobrazení, která zobrazuje každou kategorii ve směrném plánu a procento zařízení pro každou skupinu stav pro každou kategorii směrný plán obsahuje. 
 
-    ![Kontrola stavu zařízení](./media/security-baselines-monitor/overview.png)
+Každé zařízení je reprezentované pomocí jedné z následujících stavů, které se používají v obou *zařízení* zobrazení a *podle kategorie* zobrazení:  
+- **Standardní hodnoty shody** – všechna nastavení ve směrném plánu shodovat s doporučeným nastavením.
+- **Neodpovídá směrného plánu** – alespoň jedno nastavení ve směrném plánu neodpovídá doporučené nastavení.
+- **Chybně nakonfigurovaný** – alespoň jedno nastavení není správně nakonfigurována. Tento stav znamená, že toto nastavení je v konfliktu, chyby nebo stavu čekající na vyřízení.
+- **Není k dispozici** – alespoň jedno nastavení nelze použít a nebude použita.
 
-    K dispozici jsou následující stavy:
 
-    - **Standardní hodnoty shody**: Všechna nastavení ve směrném plánu shodovat s doporučeným nastavením.
-    - **Neodpovídá směrného plánu**: Alespoň jedno nastavení ve směrném plánu neodpovídá doporučené nastavení.
-    - **Chybně nakonfigurovaný**: Alespoň jedno nastavení není správně nakonfigurována. Tento stav znamená, že toto nastavení je v konfliktu, chyby nebo stavu čekající na vyřízení.
-    - **Není k dispozici**: Alespoň jedno nastavení nelze použít a nebude použita.
-    
-> [!NOTE]
-> Pokud zařízení obsahuje nastavení ve více státech, označí se zařízení podle následujícího pořadí priorit: **Chybně nakonfigurovaný**, **neodpovídá směrného plánu**, **není k dispozici**, **směrného plánu odpovídá**.
+### <a name="device-view"></a>Zobrazení zařízení
+Podokno s přehledem zobrazí shrnutí graf na základě počtu zařízení mají konkrétní stav směrného plánu; **Stav standardních hodnot zabezpečení pro zařízení s Windows 10 přiřazené**.  
 
-4. Vyberte jednu z stavy, které se mají zařízení. Vyberte například **Misconfigured** stav.
+![Kontrola stavu zařízení](./media/security-baselines-monitor/overview.png)
 
-5. Seznam všech zařízení s tímto stavem se zobrazí. Vyberte konkrétní zařízení, abyste získali více podrobností. 
+Pokud má zařízení jiný stav z různých kategorií podle směrného plánu, zařízení je reprezentován jeden stav. Stav, který představuje zařízení je převzata z následujícího pořadí priorit: **Chybně nakonfigurovaný**, **neodpovídá směrného plánu**, **není k dispozici**, **směrného plánu odpovídá**.  
 
-    V následujícím příkladu, vyberte **konfigurace zařízení** > vyberte profil s chybový stav:
+Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný.*.  
 
-    ![Kontrola stavu zařízení](./media/security-baselines-monitor/device-configuration-profile-list.png)
+Můžete kliknout na graf na Procházet a zobrazit seznam zařízení s různými stavy. Jednotlivá zařízení pak můžete vybrat ze seznamu zobrazíte podrobnosti o jednotlivých zařízeních. Příklad:
+- Vyberte **konfigurace zařízení** > vyberte profil s chybový stav:
 
-    Vyberte profil, chyba. Seznam všech nastavení v profilu a jejich stav se zobrazí. Teď se můžete posouvat nastavení příčinou chyby:
+  ![Kontrola stavu zařízení](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-    ![Podívejte se na nastavení, který způsobil chybu](./media/security-baselines-monitor/profile-with-error-status.png)
+- Vyberte profil, chyba. Seznam všech nastavení v profilu a jejich stav se zobrazí. Teď se můžete posouvat nastavení příčinou chyby:
+
+  ![Podívejte se na nastavení, který způsobil chybu](./media/security-baselines-monitor/profile-with-error-status.png)
 
 Pomocí těchto sestav můžete zobrazit všechna nastavení v profilu, které jsou příčinou problému. Také Získejte podrobnosti o zásady a profily nasadit do zařízení.
 
 > [!NOTE]
 > Pokud je vlastnost nastavena na **Nenakonfigurováno** ve standardních hodnotách, nastavení je ignorováno a žádná omezení se vynucují. Vlastnost se nezobrazí v jakékoli generování sestav.
+
+### <a name="per-category-view"></a>Na zobrazení kategorií
+Podokno s přehledem zobrazuje graf podle kategorií pro požadovaný směrný plán; **Stav standardních hodnot zabezpečení podle kategorie**.  Toto zobrazení zobrazuje každou kategorii ze standardních hodnot a určuje procento zařízení, které spadají do klasifikace stav pro každou z těchto kategorií. 
+ 
+![Stav zobrazení podle kategorií](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+
+Stav **směrného plánu odpovídá** nezobrazí, dokud se 100 % zařízení nahlásit stav pro kategorii.   
+
+Zobrazení podle kategorií můžete řadit jednotlivé sloupce tak, že vyberete ikonu šipky nahoru dolů v horní části sloupce.  
+
 
 ## <a name="monitor-the-profile"></a>Monitorování profilu
 
