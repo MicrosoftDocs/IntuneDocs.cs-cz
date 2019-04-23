@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 528ed184a39f687cf075c9cd779cceee6ad04a47
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505773"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -120,7 +120,16 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
     - **Ponechte kódu celoobrazovkový režim**: Zadejte číslice 4 až 6 číselný kód PIN. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
 
   - **Nastavit vlastní adresu URL pozadí**: Zadejte adresu URL přizpůsobení pozadí obrazovky na vyhrazené zařízení.
-
+    
+    > [!NOTE]
+    > Většině případů doporučujeme začít s obrázky alespoň následující formáty:
+    >
+    > - Telefon: 1080x1920 px
+    > - Tablety: 1920x1080 px
+    >    
+    > Pro dosažení co nejlepších výsledků a zřetelný podrobnosti je určeno, že na obrázku zařízení prostředky vytvořit zobrazení požadavků.
+    >
+    > Moderní zobrazí mají vyšší hustota pixelů a zobrazit obrázky definice ekvivalentní 2/4 tis.
   - **Konfigurace Wi-Fi**: Zvolte **povolit** umožňuje koncovým uživatelům se připojit k různým sítím Wi-Fi zařízení. Povolení této funkce se také změní na umístění zařízení. **Není nakonfigurováno** (výchozí) zabrání uživatelům v připojení k sítím Wi-Fi ve spravovaných Domů obrazovky (režim zámku úloh).
 
     Více o [režimu uzamčení úloh](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (otevře web pro Android).

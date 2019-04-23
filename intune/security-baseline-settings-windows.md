@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 67938f8697002f94f275f953510d1b0f4864a3fa
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507150"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení Windows Intune  
 
@@ -48,7 +48,7 @@ Další informace najdete v tématu [zásady CSP – AppRuntime](https://docs.mi
 - **Účty Microsoft, volitelné pro aplikace Windows Store**  
   Nastavení této zásady umožňuje řídit, zda jsou účty Microsoft volitelné pro aplikace Windows Store, které vyžadují účet pro přihlášení. Tyto zásady ovlivní pouze aplikace Windows Store, které ji podporují. Pokud povolíte toto nastavení zásad, aplikací Windows Store, které obvykle vyžadují účet Microsoft pro přihlášení vám umožní uživatelům přihlašovat se místo toho se pomocí účtu organizace. Pokud zakážete nebo není pro toto nastavení zásad, musíte se přihlásit uživatele pomocí účtu Microsoft.  
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 ## <a name="application-management"></a>Správa aplikací   
 Další informace najdete v tématu [zásady CSP – ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) v dokumentaci k Windows.  
@@ -74,7 +74,7 @@ Další informace najdete v tématu [zásady – CSP pro automatické přehrán�
 - **Blokovat automatické přehrávání pro zařízení bez svazku**  
   Nastavení této zásady zakazuje automatické přehrávání pro zařízení MTP, jako jsou kamery a telefonů. Pokud povolíte toto nastavení zásad, automatické přehrávání není povolena pro zařízení MTP, jako jsou kamery a telefonů. Pokud zakážete nebo není pro toto nastavení zásad, automatické přehrávání je povolený pro zařízení bez svazku.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 ## <a name="bitlocker"></a>Nástroj BitLocker    
 Další informace najdete v tématu [zásady CSP – Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
@@ -138,12 +138,12 @@ Další informace najdete v tématu [zásady CSP – připojení](https://docs.m
 - **Stahování z Internetu bloku pro webové, publikování a online objednáním**  
   Nastavení této zásady určuje, zda by měl Windows stáhnout seznam poskytovatelů pro weby, publikování a online objednáním. Tito průvodci povolit uživatelům výběr ze seznamu společností, které poskytují služby, jako je online úložiště a tisk fotografií. Ve výchozím nastavení zobrazí stažené z webu Windows kromě poskytovatelů uvedený v registru Windows. Pokud nastavení této zásady povolíte, nebude Windows stáhnout poskytovatele a pouze poskytovatelé služeb, které jsou uložené v mezipaměti v místním registru zobrazení. Pokud zakážete nebo není pro toto nastavení zásad, seznamu zprostředkovatelů stáhne, pokud uživatel použije webového publikování nebo online objednáním. Další informace, který obsahuje informace o určení poskytovatelů služeb v registru naleznete v dokumentaci pro weby, publikování a online objednáním.  
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 - **Blokovat stahování ovladačů tiskáren pomocí protokolu HTTP**  
   Nastavení této zásady určuje, jestli se má povolit tohoto klienta stáhnout balíčky ovladače tiskárny přes protokol HTTP. Nastavení HTTP tisk, ovladače doručené pošty není třeba stahovat přes protokol HTTP. Poznámka: Nastavení této zásady nezabrání Klient tisku na tiskárnách na intranetu nebo Internetu přes protokol HTTP. Zakazuje pouze stahování ovladačů, které nejsou nainstalovány místně. Pokud nastavení této zásady povolíte, nejde stáhnout ovladačů tiskárny přes protokol HTTP. Pokud zakážete nebo není pro toto nastavení zásad, uživatelé můžou stahovat ovladačů tiskárny přes protokol HTTP.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 ## <a name="credentials-delegation"></a>Delegování přihlašovacích údajů  
 Další informace najdete v tématu [zásady CSP – CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
@@ -153,7 +153,7 @@ Další informace najdete v tématu [zásady CSP – CredentialsDelegation](http
   Vzdálený hostitel povoluje delegování neexportovatelného přihlašovacích údajů. Při použití delegování přihlašovacích údajů, zařízení poskytují exportovatelné verzi přihlašovací údaje ke vzdálenému hostiteli, která poskytuje uživatelům riziku krádeže přihlašovacích údajů proti útokům na vzdáleného hostitele. Pokud nastavení této zásady povolíte, hostitel podporuje režim Restrictedadmin nebo vzdálené Credential Guard. Pokud zakážete nebo není pro toto nastavení zásad správy s omezeným přístupem a režim vzdáleného Credential Guard nejsou podporovány. Uživatel bude muset vždy předat své přihlašovací údaje k hostiteli.  
 
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 ## <a name="credentials-ui"></a>Přihlašovací údaje uživatelského rozhraní  
 Další informace najdete v tématu [zásady CSP – CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) v dokumentaci k Windows.  
@@ -195,7 +195,7 @@ Další informace najdete v tématu [zásady CSP – DeviceGuard](https://docs.m
   **Default**: Yes  
   -->
 - **Spusťte systém guard**    
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 ## <a name="device-installation"></a>Instalace zařízení  
 Další informace najdete v tématu [zásady CSP – DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) v dokumentaci k Windows.  
@@ -239,7 +239,7 @@ Další informace najdete v tématu [zásady CSP – DeviceLock](https://docs.mi
 - **Zakázat použití fotoaparátu**  
   Zakáže přepínač zámek obrazovky fotoaparát v nastavení počítače a zabraňuje kamera vyvolání na zamykací obrazovce. Ve výchozím nastavení můžete uživatelům povolit volání k dispozici fotoaparátu na zamykací obrazovce. Pokud toto nastavení povolíte, uživatelé už nebudou moct povolit nebo zakázat přístup k fotoaparátu zámek obrazovky v nastavení počítače a fotoaparátu/kamery nelze vyvolat na zamykací obrazovce. 
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
 
 - **Vyžadovat heslo**  
   Určuje, zda je povoleno uzamčení zařízení.
@@ -287,7 +287,7 @@ Další informace najdete v tématu [zásady CSP – DeviceLock](https://docs.mi
 - **Zabránit prezentace**  
   Zakáže nastavení zamykací obrazovky prezentace v nastavení počítače a prezentace brání přehrávání na zamykací obrazovce. Ve výchozím nastavení můžete uživatelům povolit prezentace, která se spustí po jejich uzamčení počítače. Pokud toto nastavení povolíte, uživatelé nemohou upravovat nastavení prezentace v nastavení počítače a může začít žádné prezentace.
   
-    **Výchozí**: Povoleno  
+    **Výchozí**: Enabled  
     *Nastavení povoleno prezentace zabraňuje spuštění.* 
 
 - **Minimální stáří hesla ve dnech**  
@@ -391,7 +391,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Upozornění o neshodě certifikátu adresa aplikace Internet Explorer**  
   Nastavení této zásady umožňuje zapnout upozornění zabezpečení neshoda adresy certifikátu. Pokud nastavení této zásady je zapnuté, uživatel je upozorněn při návštěvě této k dispozici certifikáty vydané pro jiný web adresu weby Secure HTTP (HTTPS). Toto upozornění zabraňuje podvodným útokům. Pokud nastavení této zásady povolíte, certifikát adresu neshoda upozornění vždy se zobrazí. Pokud zakážete nebo není pro toto nastavení zásad, uživatel může zvolit, zda se zobrazí upozornění o neshodě adresu certifikát (s použitím pokročilé stránky Internet ovládacího panelu).
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Aplikace Internet Explorer s omezeným přístupem zóna menší privilegované webů**  
   Nastavení této zásady umožňuje určit, zda webů z méně privilegovaným zóny, jako jsou internetové weby se můžete dostat do této zóny. Pokud nastavení této zásady povolíte, webové servery ze zóny méně privilegovaným můžete otevřít v nových oknech, nebo přejít do této zóny. Zóna zabezpečení se spustí bez další úroveň zabezpečení, které poskytuje ochranu před funkci zabezpečení ke zvýšení úrovně oprávnění zóny. Pokud v rozevíracím seznamu vyberte řádek, objeví se upozornění pro uživatele, které potenciálně nebezpečné navigace se použije. Pokud nastavení této zásady zakážete, je zabráněno potenciálně škodlivé navigace. Funkce zabezpečení aplikace Internet Explorer je na v této zóně úmluvu ochranu ze zóny zvýšení funkce správy. Pokud nastavení této zásady nenakonfigurujete, nebudou další potenciálně škodlivé navigaci. Funkce zabezpečení aplikace Internet Explorer je na v této zóně úmluvu ochranu ze zóny zvýšení funkce správy.
@@ -411,7 +411,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Povolit zóny Internetu aplikace Internet Explorer schválí jen tehdy, domén používat ovládací prvky ActiveX ORS**  
   Toto nastavení zásady řídí, jestli uživatel může spustit ovládací prvek ActiveX ORS na webech. Pokud nastavení této zásady povolíte, ovládací prvek ActiveX ORS nespustí z webů v této zóně. Pokud nastavení této zásady zakážete, ovládací prvek ActiveX ORS se spustí ze všech lokalit v této zóně.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Skript zóny s omezením pomocí specifikátoru aplikace Internet Explorer inicioval systému windows**  
   Toto nastavení zásad umožňuje spravovat omezení iniciované skriptu automaticky otevíraná okna a okna, která zahrnují panely názvu a stavu. Pokud nastavení této zásady povolíte, nebude v této zóně použít Windows omezení zabezpečení. Zóna zabezpečení se spustí bez další úroveň zabezpečení poskytované touto funkcí. Pokud nastavení této zásady zakážete, je to možné škodlivých akcí, které jsou součástí iniciované skriptu automaticky otevíraná okna a okna, která zahrnují panely názvu a stavu nelze spustit. Tuto funkci zabezpečení aplikace Internet Explorer je na v této zóně určený nastavení pro proces řízení funkci skripty Windows bezpečnostní omezení. Pokud nastavení této zásady nenakonfigurujete, je to možné škodlivých akcí, které jsou součástí iniciované skriptu automaticky otevíraná okna a okna, která zahrnují panely názvu a stavu nelze spustit. Tuto funkci zabezpečení aplikace Internet Explorer je na v této zóně určený nastavení pro proces řízení funkci skripty Windows bezpečnostní omezení.
@@ -426,7 +426,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Zakázat procesy v rozšířený chráněný režim Internet Exploreru**  
   Nastavení této zásady určuje, zda aplikace Internet Explorer 11 používá 64bitové procesy (kvůli lepšímu zabezpečení) nebo 32bitové procesy (pro lepší kompatibilita s) při spuštění v rozšířeným chráněným režimem v 64bitových verzích Windows. Důležité: Některé ovládací prvky ActiveX a panelů nástrojů nemusí být k dispozici, pokud jsou použity 64bitové procesy. Pokud nastavení této zásady povolíte, bude aplikace Internet Explorer 11 používat procesy karty 64-bit při spuštění v rozšířeným chráněným režimem na 64bitovými verzemi Windows. Pokud nastavení této zásady zakážete, bude aplikace Internet Explorer 11 používat procesy karty 32-bit při spuštění v rozšířeným chráněným režimem na 64bitovými verzemi Windows. Pokud nastavení této zásady nenakonfigurujete, uživatelé tuto funkci můžete zapnout nebo vypnout pomocí nastavení aplikace Internet Explorer. Tato funkce je ve výchozím nastavení vypnuté.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Aplikace Internet Explorer ignorovat chyby certifikátů**  
   Nastavení této zásady zabrání uživateli možnost Ignorovat chyby certifikátů Secure Sockets Layer/Transport Layer Security (SSL/TLS), které přerušení procházení (jako "prošlé", "zrušeno" nebo "došlo k neshodě názvů" chyby) v aplikaci Internet Explorer. Pokud nastavení této zásady povolíte, uživatel nemůže pokračovat v procházení. Pokud zakážete nebo není pro toto nastavení zásad, uživatele můžete rozhodnout ignorovat chyby certifikátů a pokračovat v procházení.
@@ -441,7 +441,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Soubory ke stažení zóny Internetu aplikace Internet Explorer pro soubor automatické řádku.**  
   Nastavení této zásady určuje, jestli se uživatelům výzva pro stahování souborů bez zahájená uživatelem. Bez ohledu na toto nastavení, uživatelé dostanou dialogová okna Stažení souboru pro uživatelem iniciované soubory ke stažení. Pokud toto nastavení povolíte, uživatelům se zobrazí dialogové okno Stažení souboru pro pokusy o automatické stahování. Pokud zakážete nebo toto nastavení nemusíte konfigurovat, jsou blokovány stahování souborů, které nejsou v uživatelem iniciované a uživatelům se zobrazí oznamovací pruh místo dialogu stažení souboru. Uživatelům můžete pak kliknout na oznamovací pruh umožňuje výzva ke stažení souboru.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Upozornění zabezpečení aplikace Internet Explorer s omezením pomocí specifikátoru zóny pro potenciálně nebezpečná soubory**  
   Nastavení této zásady řídí, jestli se zobrazí zpráva "Otevření souboru – upozornění zabezpečení" když se uživatel pokusí otevřít spustitelné soubory nebo další potenciálně nebezpečná soubory (z intranetu sdílenou složku s použitím Průzkumníka souborů, například). Pokud povolíte toto nastavení zásad a nastavte rozevírací seznam na povolit, otevřete tyto soubory bez upozornění zabezpečení. Pokud nastavíte rozevíracího seznamu na příkazový řádek, zobrazí upozornění zabezpečení před otevřete soubory. Pokud nastavení této zásady zakážete, tyto soubory neotevírat. Pokud nastavení této zásady nenakonfigurujete, může uživatel nakonfigurovat způsob, jakým zpracovává tyto soubory do počítače. Ve výchozím nastavení jsou tyto soubory blokované v zóně s omezeným přístupem, povolené v zóně intranetu a místního počítače a nastavit na výzvu v zóně Internet a důvěryhodné.
@@ -451,7 +451,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Zóny Internetu aplikace Internet Explorer křížový filtr skriptování**  
   Tato zásada řídí, jestli se filtr skriptování mezi weby (XSS) odhalování a prevenci injektáže skriptu webů do webů v této zóně. Pokud nastavení této zásady povolíte, je zapnutá filtr skriptování mezi weby pro servery v této zóně a filtr XSS, pokusí se zablokovat injektáže skriptu webů. Pokud nastavení této zásady zakážete, XSS filtru je vypnuté pro servery v této zóně a Internet Explorer povoluje injektáže skriptu webů.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Aplikace Internet Explorer nouzového řešení ověření pomocí SSL3**  
   Nastavení této zásady umožňuje blokovat nezabezpečeného použití náhradní lokality pro protokol SSL 3.0. Když se povolí tyto zásady, aplikace Internet Explorer se pokusí připojit k webům pomocí protokolu SSL 3.0 nebo pod TLS 1.0 nebo vyšší v případě selhání. Doporučujeme vám, že není Povolit nezabezpečené zálohu prevence útok man-in-the-middle. Tato zásada nemá vliv, které bezpečnostní protokoly jsou povolené. Pokud tato zásada se používají výchozí systémové nastavení.
@@ -461,7 +461,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Uzamčené obrazovky inteligentní zóny Internetu aplikace Internet Explorer**  
   Tato zásada, nastavení ovládacích prvků, zda filtr SmartScreen vyhledá stránky v této zóně na škodlivý obsah. Pokud nastavení této zásady povolíte, filtr SmartScreen prohledává stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady zakážete, nebude kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, jestli kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Poznámka: V aplikaci Internet Explorer 7 nastavení této zásady určuje, zda filtr útoků Phishing kontrolovat stránkách v této zóně na škodlivý obsah.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Aplikace Internet Explorer s omezením pomocí specifikátoru zóny spuštění aplikace a soubory v elementu iFrame**  
   Nastavení této zásady umožňuje určit, zda aplikace mohou být spuštěny a soubory stáhnout z odkazu na element IFRAME ve formátu HTML stránek v této zóně. Pokud nastavení této zásady povolíte, uživatelé můžou spouštět aplikace a stahovat soubory z prvky IFRAME na stránkách v této zóně bez zásahu uživatele. Pokud v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat zvolit, jestli se má spouštět aplikace a stahovat soubory z prvky IFRAME na stránkách v této zóně. Pokud nastavení této zásady zakážete, uživatelé nebudou moci spouštění aplikací a stahování souborů z prvky IFRAME na stránkách v této zóně. Pokud nastavení této zásady nenakonfigurujete, uživatelé nebudou moci spouštění aplikací a stahování souborů z prvky IFRAME na stránkách v této zóně.
@@ -481,7 +481,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer zpracovává konzistentní zpracování MIME**  
   Aplikace Internet Explorer obsahuje dynamické binární chování: komponenty, které zapouzdřují funkce specifická pro elementy HTML, které jsou připojeny. Tato zásada, nastavení ovládacích prvků, jestli je nastavení binární omezení zabezpečení chování zabránit nebo povolené. Pokud povolíte toto nastavení zásad, nebudou další binární chování pro procesy Průzkumníka souborů a prohlížeče Internet Explorer. Pokud nastavení této zásady zakážete, binární chování jsou povoleny pro procesy Průzkumníka souborů a prohlížeče Internet Explorer. Pokud nastavení této zásady nenakonfigurujete, nebudou další binární chování pro procesy Průzkumníka souborů a prohlížeče Internet Explorer.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer omezená oprávnění java zóny**  
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety. Pokud nastavení této zásady povolíte, můžete z rozevíracího seznamu možnosti. Vlastní, řídit oprávnění nastavení jednotlivě. Nízká bezpečnosti umožňuje aplety provádět všechny operace. Střední úroveň zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru (oblast v paměti mimo který program nelze provést volání), a navíc možnosti, jako jsou pomocné místo (bezpečné a zabezpečené úložiště v klientském počítači) a soubor řízené uživatelem vstupně-výstupních operací. Vysoké zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru. Zakážete Java žádné aplety Zabraňte jejich spuštění. Pokud nastavení této zásady zakážete, aplety nelze spustit. Pokud nastavení této zásady nenakonfigurujete, aplety jsou zakázané.
@@ -502,7 +502,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Zpracovává skriptované okno omezení zabezpečení aplikace Internet Explorer**  
   Aplikace Internet Explorer umožňuje skripty prostřednictvím kódu programu otevřete, změny velikosti a přemístění windows podle různých typů. Funkce zabezpečení okno omezení omezuje zobrazována místní okna a zakazuje skripty zobrazování windows ve kterých pruhy názvu a stavu nejsou viditelné pro uživatele nebo obfuskaci jiných Windows nadpis a stavové řádky. Pokud nastavení této zásady povolíte, jsou skriptované windows s omezeným přístupem pro všechny procesy. Pokud zakážete nebo není pro toto nastavení zásad, oken nejsou s omezeným přístupem.
   
-  **Výchozí**: Povoleno   
+  **Výchozí**: Enabled   
   
 - **Zakázané zóny Internet Explorer spustit ovládací prvky ActiveX a moduly plug-in**  
   Nastavení této zásady umožňuje určit, zda ovládací prvky ActiveX a moduly plug-in můžete spustit na stránkách z určené zóny. Pokud nastavení této zásady povolíte, můžete spustit ovládací prvky a moduly plug-in bez zásahu uživatele. Pokud jste vybrali v rozevíracím seznamu řádku, jsou uživatelé zvolit, jestli chce použít ovládací prvky ke správě nebo modulu plug-in pro spuštění. Pokud nastavení této zásady zakážete, ovládací prvky a moduly plug-in bránit spouštění. Pokud nastavení této zásady nenakonfigurujete, ovládací prvky a moduly plug-in bránit spouštění.
@@ -533,7 +533,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Odvolání certifikátů serveru zkontrolujte aplikaci Internet Explorer**  
   Nastavení této zásady umožňuje určit, zda aplikace Internet Explorer se zkontrolovat stav odvolání certifikátů serverů. Certifikáty byly odvolány, když jsou rizikům, nebo již nejsou platné, a tato možnost chrání uživatelé před odesláním důvěrná data do lokality, který může být podvodné nebo nezabezpečenou. Pokud nastavení této zásady povolíte, Internet Explorer zkontroluje, pokud byl odvolán certifikát serveru. Pokud nastavení této zásady zakážete, nebude aplikace Internet Explorer zkontrolovat certifikáty serveru, pokud chcete zobrazit, pokud byl odvolán. Pokud nastavení této zásady nenakonfigurujete, nebudou aplikace Internet Explorer zkontrolovat certifikáty serveru, pokud chcete zobrazit, pokud byl odvolán.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Zóna Internetu aplikace Internet Explorer menší privilegované webů**  
   Nastavení této zásady umožňuje určit, zda webové stránky z méně privilegovaným zóny, jako jsou servery s omezeným přístupem, se můžete dostat do této zóny. Pokud nastavení této zásady povolíte, webové servery ze zóny méně privilegovaným můžete otevřít v nových oknech, nebo přejít do této zóny. Zóna zabezpečení se spustí bez další úroveň zabezpečení, které poskytuje ochranu před funkci zabezpečení ke zvýšení úrovně oprávnění zóny. Pokud v rozevíracím seznamu vyberte řádek, objeví se upozornění pro uživatele, které potenciálně nebezpečné navigace se použije. Pokud nastavení této zásady zakážete, nebudou další potenciálně škodlivé navigaci. Funkce zabezpečení aplikace Internet Explorer je na v této zóně úmluvu ochranu ze zóny zvýšení funkce správy. Pokud nastavení této zásady nenakonfigurujete, webové servery ze zóny méně privilegovaným můžete otevřít v nových oknech, nebo přejít do této zóny.
@@ -553,7 +553,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer zabránit za instalaci uživatelské ovládací prvky ActiveX**  
   Nastavení této zásady umožňuje zabránit v instalaci ovládací prvky ActiveX pro jednotlivé uživatele zvlášť. Pokud nastavení této zásady povolíte, ovládací prvky ActiveX nelze nainstalovat na jednotlivé uživatele. Pokud zakážete nebo není pro toto nastavení zásad, ovládací prvky ActiveX lze nainstalovat na jednotlivé uživatele.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer zabránit správě filtru SmartScreen**  
   Nastavení této zásady zabrání uživateli ve správě filtru SmartScreen, který upozorní uživatele, pokud je známá podvodné pokusy o shromáždění osobních informací prostřednictvím "phishing" návštěvě webu, nebo je znám hostiteli malware. Pokud nastavení této zásady povolíte, uživatel není vyzván k zapnutí filtru SmartScreen. Všechny webové adresy, které nejsou na filtrech povolit seznamu jsou automaticky odesílány společnosti Microsoft bez výzvy pro uživatele. Pokud zakážete nebo není pro toto nastavení zásad, získá uživatel vyzván k rozhodování, jestli se má zapnutí filtru SmartScreen během prvního spuštění.
@@ -563,7 +563,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer zpracovává MIME analýzy rozšíření bezpečnostní funkce**  
   Nastavení této zásady určuje, zda pro analýzu sítě Internet Explorer MIME zabrání povýšení soubor jednoho typu k více nebezpečné typ souboru. Pokud nastavení této zásady povolíte, MIME pro analýzu sítě nikdy povýšit soubor jednoho typu na více nebezpečné typ souboru. Pokud nastavení této zásady zakážete, aplikace Internet Explorer procesů vám umožní MIME monitorování podpora souboru jednoho typu na více nebezpečné typ souboru. Pokud nastavení této zásady nenakonfigurujete, MIME pro analýzu sítě nikdy podporovat soubor jednoho typu na více nebezpečné typ souboru.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Stažení aplikace Internet Explorer zakázané zóny podepsané ovládací prvky ActiveX**  
   Nastavení této zásady umožňuje určit, zda uživatelé mohou stáhnout podepsané ovládací prvky ActiveX ze stránky v zóně. Pokud tuto zásadu povolíte, uživatelé můžou Stahovat podepsané ovládací prvky bez zásahu uživatele. Pokud v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat, jestli se má stáhnout ovládací prvky, které jsou podepsány vydavatelé, kteří nejsou důvěryhodné. Bezobslužná stažením kódu podepsány Důvěryhodní vydavatelé. Pokud nastavení zásad zakážete, podepsané ovládací prvky nelze stáhnout. Pokud nastavení této zásady nenakonfigurujete, uživateli se generuje dotaz na, jestli se má stáhnout ovládací prvky, které jsou podepsány vydavatelé, kteří nejsou důvěryhodné. Bezobslužná stažením kódu podepsány Důvěryhodní vydavatelé.
@@ -586,7 +586,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Povolit zakázané zóny Internet Exploreru schválí jen tehdy, domény určený ORS ovládací prvky ActiveX**  
   Toto nastavení zásady řídí, jestli uživatel může spustit ovládací prvek ActiveX ORS na webech. Pokud nastavení této zásady povolíte, ovládací prvek ActiveX ORS nespustí z webů v této zóně. Pokud nastavení této zásady zakážete, ovládací prvek ActiveX ORS se spustí ze všech lokalit v této zóně.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Zóny důvěryhodných serverů Internet Exploreru při spuštění antimalwarové proti ovládací prvky ActiveX**  
   Nastavení této zásady určuje, jestli aplikace Internet Explorer se spouští antimalwarové programy proti ovládací prvky ActiveX, a zkontrolujte, zda jsou bezpečné pro načtení na stránkách. Pokud nastavení této zásady povolíte, nebude Internet Exploreru zkontrolujte s vaším programem antimalwaru, jestli je bezpečný pro vytvoření instance ovládacího prvku ActiveX. Pokud nastavení této zásady zakážete, aplikace Internet Explorer vždy kontroluje s vaším programem antimalwaru, jestli je bezpečný pro vytvoření instance ovládacího prvku ActiveX. Pokud nastavení této zásady nenakonfigurujete, aplikace Internet Explorer vždy kontroluje s vaším programem antimalwaru, jestli je bezpečný pro vytvoření instance ovládacího prvku ActiveX. Uživatele můžete vypnout toto chování zapnout nebo vypnout pomocí nastavení zabezpečení aplikace Internet Explorer.
@@ -610,7 +610,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer procesy oznamovací pruh**  
   Nastavení této zásady umožňuje určit, zda oznamovací pruh se zobrazí pro procesy aplikace Internet Explorer, když se nainstaluje soubor nebo kód s omezeným přístupem. Ve výchozím nastavení zobrazí se oznamovací pruh pro procesy aplikace Internet Explorer. Pokud nastavení této zásady povolíte, zobrazí se oznamovací pruh pro procesy, které Internet Explorer. Pokud nastavení této zásady zakážete, oznamovací pruh se nezobrazí pro procesy aplikace Internet Explorer. Pokud nastavení této zásady nenakonfigurujete, oznamovací pruh nezobrazuje pro Internet Explorer procesy.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Stažení zóny Internetu aplikace Internet Explorer podepsané ovládací prvky ActiveX**  
   Nastavení této zásady umožňuje určit, zda uživatelé mohou stáhnout podepsané ovládací prvky ActiveX ze stránky v zóně. Pokud tuto zásadu povolíte, uživatelé můžou Stahovat podepsané ovládací prvky bez zásahu uživatele. Pokud v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat, jestli se má stáhnout ovládací prvky, které jsou podepsány vydavatelé, kteří nejsou důvěryhodné. Bezobslužná stažením kódu podepsány Důvěryhodní vydavatelé. Pokud nastavení zásad zakážete, podepsané ovládací prvky nelze stáhnout. Pokud nastavení této zásady nenakonfigurujete, uživateli se generuje dotaz na, jestli se má stáhnout ovládací prvky, které jsou podepsány vydavatelé, kteří nejsou důvěryhodné. Bezobslužná stažením kódu podepsány Důvěryhodní vydavatelé.
@@ -620,12 +620,12 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer zakázané zóny SmartScreen**  
   Tato zásada, nastavení ovládacích prvků, zda filtr SmartScreen vyhledá stránky v této zóně na škodlivý obsah. Pokud nastavení této zásady povolíte, filtr SmartScreen prohledává stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady zakážete, nebude kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, jestli kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Poznámka: V aplikaci Internet Explorer 7 nastavení této zásady určuje, zda filtr útoků Phishing kontrolovat stránkách v této zóně na škodlivý obsah.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Odebrat aplikaci Internet Explorer spustili toto tlačítko čas pro zastaralé ovládací prvky ActiveX**  
   Nastavení této zásady umožňuje zabránit uživatelům v zobrazení na tlačítko "Spustit nyní" a ve spuštění konkrétních zastaralé ovládacích prvků ActiveX v Internet Exploreru. Pokud nastavení této zásady povolíte, uživatelé nebudou "Spustit nyní" na tlačítko Zobrazit upozornění, které se zobrazí, když aplikace Internet Explorer zablokuje zastaralé ovládacího prvku ActiveX. Pokud zakážete nebo není pro toto nastavení zásady, uživatelům se zobrazí tlačítko "Spustit nyní" na upozornění, které se zobrazí, když aplikace Internet Explorer zablokuje zastaralé ovládacího prvku ActiveX. Kliknutím na toto tlačítko umožňuje uživateli spustit jednou zastaralé ovládacího prvku ActiveX. Další informace najdete v tématu "Zastaralé ovládací prvky ActiveX" v knihovně Internet Explorer TechNet.
   
-  **Výchozí**: Povoleno 
+  **Výchozí**: Enabled 
   
 - **Spuštění aplikace Internet Explorer zóny a soubory v elementu iframe**  
   Nastavení této zásady umožňuje určit, zda aplikace mohou být spuštěny a soubory stáhnout z odkazu na element IFRAME ve formátu HTML stránek v této zóně. Pokud nastavení této zásady povolíte, uživatelé můžou spouštět aplikace a stahovat soubory z prvky IFRAME na stránkách v této zóně bez zásahu uživatele. Pokud v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat zvolit, jestli se má spouštět aplikace a stahovat soubory z prvky IFRAME na stránkách v této zóně. Pokud nastavení této zásady zakážete, uživatelé nebudou moci spouštění aplikací a stahování souborů z prvky IFRAME na stránkách v této zóně. Pokud nastavení této zásady nenakonfigurujete, jsou uživatelé dotazovat zvolit, jestli se má spouštět aplikace a stahovat soubory z prvky IFRAME na stránkách v této zóně
@@ -640,7 +640,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Inteligentní obrazovce zóny Internetu aplikace Internet Explorer**  
   Tato zásada, nastavení ovládacích prvků, zda filtr SmartScreen vyhledá stránky v této zóně na škodlivý obsah. Pokud nastavení této zásady povolíte, filtr SmartScreen prohledává stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady zakážete, nebude kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, jestli kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Poznámka: V aplikaci Internet Explorer 7 nastavení této zásady určuje, zda filtr útoků Phishing kontrolovat stránkách v této zóně na škodlivý obsah.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Uzamčené oprávnění pro jazyk java zóny důvěryhodných serverů Internet Exploreru**  
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety. Pokud nastavení této zásady povolíte, můžete z rozevíracího seznamu možnosti. Vlastní, řídit oprávnění nastavení jednotlivě. Nízká bezpečnosti umožňuje aplety provádět všechny operace. Střední úroveň zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru (oblast v paměti mimo který program nelze provést volání), a navíc možnosti, jako jsou pomocné místo (bezpečné a zabezpečené úložiště v klientském počítači) a soubor řízené uživatelem vstupně-výstupních operací. Vysoké zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru. Zakážete Java žádné aplety Zabraňte jejich spuštění. Pokud nastavení této zásady zakážete, aplety nelze spustit. Pokud nastavení této zásady nenakonfigurujete, aplety jsou zakázané.
@@ -650,7 +650,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer zkontrolovat podpisy stažených programů**  
   Nastavení této zásady umožňuje určit, zda aplikace Internet Explorer zkontroluje digitální podpisy (který určuje vydavatele softwaru podepsané barvy a ověřuje nebyl byl změněn nebo úmyslně) v počítačích uživatelů před stažením spustitelné programy. Pokud nastavení této zásady povolíte, Internet Explorer zkontroluje digitální podpisy spustitelné programy a zobrazí jejich identity před stažením do počítačů uživatelů. Pokud nastavení této zásady zakážete, nebude aplikace Internet Explorer zkontrolujte digitální podpisy spustitelné programy nebo zobrazení jejich identity před stažením do počítačů uživatelů. Pokud tuto zásadu nenakonfigurujete, nebudou aplikace Internet Explorer zkontrolujte digitální podpisy spustitelné programy nebo zobrazení jejich identity před stažením do počítačů uživatelů.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer s omezením pomocí specifikátoru skriptování v zóně ovládacích prvků webového prohlížeče**  
   Nastavení této zásady určuje, zda na stránku můžete řídit vložené WebBrowser – ovládací prvky pomocí skriptu. Pokud nastavení této zásady povolíte, je povolen skript přístup k ovládacímu prvku WebBrowser. Pokud nastavení této zásady zakážete, není povolen přístup skript do ovládacího prvku WebBrowser. Pokud nastavení této zásady nenakonfigurujete, uživateli můžete povolit nebo zakázat přístup skript do ovládacího prvku WebBrowser. Ve výchozím nastavení je povolen skript přístup k ovládacímu prvku WebBrowser pouze v místním počítači a zóny intranetu.
@@ -660,7 +660,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Zóny s omezeným přístupem v Internet Exploreru křížový filtr skriptování**  
   Tato zásada řídí, jestli se filtr skriptování mezi weby (XSS) odhalování a prevenci injektáže skriptu webů do webů v této zóně. Pokud nastavení této zásady povolíte, je zapnutá filtr skriptování mezi weby pro servery v této zóně a filtr XSS, pokusí se zablokovat injektáže skriptu webů. Pokud nastavení této zásady zakážete, XSS filtru je vypnuté pro servery v této zóně a Internet Explorer povoluje injektáže skriptu webů.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Binární s omezeným přístupem zóny Internet Exploreru a chování skriptu**  
   Toto nastavení zásad umožňuje spravovat chování dynamické binární soubor a skriptu: komponenty, které zapouzdřují funkce specifická pro elementy HTML, do kterých byla připojena. Pokud nastavení této zásady povolíte, chování binárních souborů a skriptů jsou k dispozici. Pokud jste vybrali v rozevíracím seznamu schválení správcem, jsou k dispozici pouze chování, které jsou uvedeny v chování schválení správce v části zásady omezení zabezpečení binární chování. Pokud nastavení této zásady zakážete, binární soubor a skript chování nejsou dostupné, pokud aplikace implementovali vlastní security manager. Pokud nastavení této zásady nenakonfigurujete, binární soubor a skript chování nejsou dostupné, pokud aplikace implementovali vlastní security manager.
@@ -670,7 +670,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Kontrola nastavení zabezpečení aplikace Internet Explorer**  
   Nastavení této zásady vypne funkce Kontrola nastavení zabezpečení, která zkontroluje nastavení zabezpečení aplikace Internet Explorer můžete určit, kdy nastavení ohrozit aplikace Internet Explorer. Pokud nastavení této zásady povolíte, tato funkce je vypnuta. Pokud zakážete nebo není pro toto nastavení zásad, tato funkce je zapnutá.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Upozornění v Internet Exploreru zóny zabezpečení Internetu potenciálně nebezpečná souborů**  
   Nastavení této zásady řídí, jestli se zobrazí zpráva "Otevření souboru – upozornění zabezpečení" když se uživatel pokusí otevřít spustitelné soubory nebo další potenciálně nebezpečná soubory (z intranetu sdílenou složku s použitím Průzkumníka souborů, například). Pokud povolíte toto nastavení zásad a nastavte rozevírací seznam na povolit, otevřete tyto soubory bez upozornění zabezpečení. Pokud nastavíte rozevíracího seznamu na příkazový řádek, zobrazí upozornění zabezpečení před otevřete soubory. Pokud nastavení této zásady zakážete, tyto soubory neotevírat. Pokud nastavení této zásady nenakonfigurujete, může uživatel nakonfigurovat způsob, jakým zpracovává tyto soubory do počítače. Ve výchozím nastavení jsou tyto soubory blokované v zóně s omezeným přístupem, povolené v zóně intranetu a místního počítače a nastavit na výzvu v zóně Internet a důvěryhodné.
@@ -685,7 +685,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer blokovat zastaralé ovládací prvky ActiveX**  </br>
   Nastavení této zásady určuje, zda aplikace Internet Explorer bloky konkrétní zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX jsou nikdy blokována v zóně intranetu. Pokud nastavení této zásady povolíte, přestane aplikace Internet Explorer blokovat zastaralé ovládací prvky ActiveX. Pokud zakážete nebo není pro toto nastavení zásad, pokračuje aplikace Internet Explorer blokovat konkrétní zastaralé ovládací prvky ActiveX. Další informace najdete v tématu "Zastaralé ovládací prvky ActiveX" v knihovně Internet Explorer TechNet.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer s omezením pomocí specifikátoru zóny blokování automaticky otevíraných oken**  
   Nastavení této zásady umožňuje určit, zda nežádoucí automaticky otevíraných oken. Automaticky otevíraná okna, které jsou otevřeny, když koncový uživatel klepne na odkaz nejsou blokované. Pokud nastavení této zásady povolíte, většina nežádoucích automaticky otevíraná okna bránit v zobrazení. Pokud nastavení této zásady zakážete, ji povolí automaticky otevíraná okna. Pokud nastavení této zásady nenakonfigurujete, většina nežádoucích automaticky otevíraná okna bránit v zobrazení.
@@ -695,7 +695,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Omezení pro protokol zabezpečení aplikace Internet Explorer procesy MK**  
   Nastavení zásad omezení zabezpečení protokolu MK snižuje zabráněním protokolu MK možností útoku. Prostředky, které jsou hostované na protokol MK se nezdaří. Pokud nastavení této zásady povolíte, MK protokol je zabráněno z Průzkumníka souborů a prohlížeče Internet Explorer a prostředky, které jsou hostované na protokol MK se nezdaří. Pokud nastavení této zásady zakážete, aplikace můžete použít protokol MK rozhraní API. Prostředky, které jsou hostované na protokol MK bude fungovat pro procesy Průzkumníka souborů a prohlížeče Internet Explorer. Pokud nastavení této zásady nenakonfigurujete, MK protokol je zabráněno z Průzkumníka souborů a prohlížeče Internet Explorer a prostředky, které jsou hostované na protokol MK se nezdaří.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Oprávnění pro jazyk java aplikace Internet Explorer důvěryhodné zóny**  </br>
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety. Pokud nastavení této zásady povolíte, můžete z rozevíracího seznamu možnosti. Vlastní, řídit oprávnění nastavení jednotlivě. Nízká bezpečnosti umožňuje aplety provádět všechny operace. Střední úroveň zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru (oblast v paměti mimo který program nelze provést volání), a navíc možnosti, jako jsou pomocné místo (bezpečné a zabezpečené úložiště v klientském počítači) a soubor řízené uživatelem vstupně-výstupních operací. Vysoké zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru. Zakážete Java žádné aplety Zabraňte jejich spuštění. Pokud nastavení této zásady zakážete, aplety nelze spustit. Pokud nastavení této zásady nenakonfigurujete, je oprávnění nastaveno nízká bezpečnosti.
@@ -715,7 +715,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Povolit zóny Internetu aplikace Internet Explorer schválí jen tehdy, domén používat ovládací prvky ActiveX**  </br>
   Toto nastavení zásady řídí, jestli uživatel je vyzván k povolit ovládacích prvků ActiveX ke spuštění ve službě websites než webu, nainstalované ovládacího prvku ActiveX. Pokud nastavení této zásady povolíte, bude uživatel vyzván, ovládací prvky ActiveX lze spustit z webů v této zóně. Uživatel může zvolit, aby ovládací prvek pro spuštění z aktuální lokality nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazí výzva ActiveX podle webu a ovládací prvky ActiveX lze spustit ze všech lokalit v této zóně.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer zahrnout všechny síťové cesty**  
   Aplikace Internet Explorer zahrnout všechny síťové cesty
@@ -735,7 +735,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer uzamčené obrazovky inteligentní zakázané zóny**  </br>
   Tato zásada, nastavení ovládacích prvků, zda filtr SmartScreen vyhledá stránky v této zóně na škodlivý obsah. Pokud nastavení této zásady povolíte, filtr SmartScreen prohledává stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady zakážete, nebude kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, jestli kontrolovat filtru SmartScreen stránkách v této zóně na škodlivý obsah. Poznámka: V aplikaci Internet Explorer 7 nastavení této zásady určuje, zda filtr útoků Phishing kontrolovat stránkách v této zóně na škodlivý obsah.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Detekce chybového ukončení Internet Exploreru**  
   Toto nastavení zásad umožňuje spravovat funkce rozpoznávání chyb správy doplňku. Pokud nastavení této zásady povolíte, při selhání v aplikaci Internet Explorer se chovat nalezen ve Windows XP Professional Service Pack 1 a starší, konkrétně k vyvolání zasílání zpráv o chybách Windows. Všechna nastavení zásad pro zasílání zpráv o chybách Windows pokračovat v používání. Pokud zakážete nebo není pro toto nastavení zásad, funkce rozpoznávání chyb pro správu doplňku je funkční.
@@ -790,7 +790,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer procesy omezit Active X install**  </br>
   Nastavení této zásady umožňuje aplikacím hostujícím ovládací prvek webového prohlížeče k blokování Automatické dotazování instalace ovládacího prvku ActiveX. Pokud nastavení této zásady povolíte, bude ovládací prvek webového prohlížeče blokovat Automatické dotazování instalace ovládacího prvku ActiveX pro všechny procesy. Pokud zakážete nebo není pro toto nastavení zásad, ovládací prvek webového prohlížeče nebude blokovat Automatické dotazování instalace ovládacího prvku ActiveX pro všechny procesy.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Skriptlety zóny Internetu aplikace Internet Explorer** nastavení této zásady umožňuje určit, zda uživatel může spustit skriptlety. Pokud nastavení této zásady povolíte, uživatel může spustit skriptlety. Pokud nastavení této zásady zakážete, uživatel nemůže spustit skriptlety. Pokud nastavení této zásady nenakonfigurujete, uživateli můžete povolit nebo zakázat skriptlety.
   
@@ -827,7 +827,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Zóny zabezpečení aplikace Internet Explorer použijte pouze nastavení počítače**  
   Informace o zóně zabezpečení se vztahuje na všechny uživatele stejném počítači. Zóny zabezpečení je skupina webových stránek se stejnou úrovní zabezpečení. Pokud tuto zásadu povolit, budou změny, které uživatel provede do zóny zabezpečení platí pro všechny uživatele tohoto počítače. Pokud tato zásada nebo nemusíte konfigurovat, uživatelé stejném počítači můžete vytvořit vlastní nastavení zóny zabezpečení. Pomocí této zásady zajistíte, že nastavení zóny zabezpečení platí jednotně na stejném počítači a nemusíte se liší od uživatelů. Další informace naleznete "zóny zabezpečení: Nepovolovat uživatelům změnit zásady" zásady.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer uzamčen oprávnění pro jazyk java zóna místního počítače**  
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety. Pokud nastavení této zásady povolíte, můžete z rozevíracího seznamu možnosti. Vlastní, řídit oprávnění nastavení jednotlivě. Nízká bezpečnosti umožňuje aplety provádět všechny operace. Střední úroveň zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru (oblast v paměti mimo který program nelze provést volání), a navíc možnosti, jako jsou pomocné místo (bezpečné a zabezpečené úložiště v klientském počítači) a soubor řízené uživatelem vstupně-výstupních operací. Vysoké zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru. Zakážete Java žádné aplety Zabraňte jejich spuštění. Pokud nastavení této zásady zakážete, aplety nelze spustit. Pokud nastavení této zásady nenakonfigurujete, jsou zakázané aplety
@@ -861,12 +861,12 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Aplikace Internet Explorer použijte Active X instalační služba**  </br>
   Nastavení této zásady umožňuje určit, jak jsou nainstalovány – ovládací prvky ActiveX. Pokud nastavení této zásady povolíte, ovládací prvky ActiveX jsou nainstalovány pouze v případě, že je k dispozici instalační služba ActiveX a není nakonfigurovaná k povolení instalace ovládacích prvků ActiveX. Pokud zakážete nebo není pro toto nastavení zásad, nainstaluje se ovládací prvky ActiveX, včetně uživatelských ovládacích prvků, prostřednictvím standardního procesu instalace.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer zpracovává ochranu proti zvýšení oprávnění zóny**  
   Na každé webové stránky, otevře se aplikace Internet Explorer umístí omezení. Omezení jsou závislé na umístění webové stránky (Internetu, intranetu, zóna místního počítače a tak dále). Například webové stránky v místním počítači máte nejmíň bezpečnostní omezení a jsou v místním počítači zóně zabezpečení místního počítače zóna prvotní cíle uživateli se zlými úmysly. Pokud nastavení této zásady povolíte, se dají chránit všechny zóny ze zóny ke zvýšení úrovně oprávnění pro všechny procesy. Pokud zakážete nebo není pro toto nastavení zásady, procesy než Internet Explorer nebo hodnotami uvedenými v seznamu proces přijímat žádná taková ochrana.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Zóny Internetu aplikace Internet Explorer stahování bez znaménka ovládací prvky ActiveX**  </br>
   Nastavení této zásady umožňuje určit, zda uživatelé mohou stáhnout nepodepsané ovládací prvky ActiveX ze zóny. Takový kód je potenciálně škodlivých, zejména v případě, že pocházejí z nedůvěryhodné zóny. Pokud povolíte toto nastavení zásad, můžou uživatelé spouštět nepodepsané ovládací prvky bez zásahu uživatele. Pokud v rozevíracím seznamu vyberte řádek, uživatelé se dotazováním vyberte, jestli chcete povolit spuštění bez znaménka ovládacího prvku. Pokud nastavení této zásady zakážete, uživatelé nemůžou spouštět nepodepsané ovládací prvky. Pokud nastavení této zásady nenakonfigurujete, uživatelé nemůžou spouštět nepodepsané ovládací prvky.
@@ -889,12 +889,12 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
   
 - **Aplikace Internet Explorer procesy omezit stahování souborů**  </br> Nastavení této zásady umožňuje aplikacím hostujícím ovládací prvek webového prohlížeče k blokování Automatické dotazování stahování souborů, které nejsou iniciované uživatelem. Pokud nastavení této zásady povolíte, bude ovládací prvek webového prohlížeče blokovat Automatické dotazování stahování souborů, které nejsou uživatelem iniciované pro všechny procesy. Pokud nastavení této zásady zakážete, nebude blokovat Automatické dotazování stahování souborů, které nejsou uživatelem iniciované pro všechny procesy ovládací prvek WebBrowser.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Povolit zakázané zóny Internet Exploreru schválí jen tehdy, domény použít ovládací prvky ActiveX**  </br>
   Toto nastavení zásady řídí, jestli uživatel je vyzván k povolit ovládacích prvků ActiveX ke spuštění ve službě websites než webu, nainstalované ovládacího prvku ActiveX. Pokud nastavení této zásady povolíte, bude uživatel vyzván, ovládací prvky ActiveX lze spustit z webů v této zóně. Uživatel může zvolit, aby ovládací prvek pro spuštění z aktuální lokality nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazí výzva ActiveX podle webu a ovládací prvky ActiveX lze spustit ze všech lokalit v této zóně.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Inicializace s omezeným přístupem zóny Internet Exploreru a skript, který ovládací prvky ActiveX neoznačené jako bezpečné**  
   Toto nastavení zásad umožňuje spravovat ovládací prvky ActiveX neoznačené jako bezpečné. Pokud nastavení této zásady povolíte, ovládací prvky ActiveX spuštění načíst s parametry a skriptované bez nastavování objektu zabezpečení pro nedůvěryhodná data nebo skripty. Toto nastavení se nedoporučuje, s výjimkou zabezpečený a spravovaný zóny. Toto nastavení způsobí, že nebezpečné a bezpečné ovládací prvky k inicializaci a skripty, ignoruje ovládací prvky skriptu ActiveX označeny jako bezpečné pro skriptování – možnost. Pokud povolíte toto nastavení zásad a v rozevíracím seznamu vyberte řádek, jsou uživatelé dotazovat, jestli chce použít ovládací prvek pro zatížení s parametry nebo skripty. Pokud nastavení této zásady zakážete, ovládací prvky ActiveX, které nejde provést bezpečné nejsou načtena s parametry nebo skripty. Pokud nastavení této zásady nenakonfigurujete, ovládací prvky ActiveX, které nejde provést bezpečné nejsou načtena s parametry nebo skripty.
@@ -935,7 +935,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
 - **Internet Explorer rozšířeného chráněný režim**  
   Rozšířený chráněný režim nabízí další ochranu před škodlivým webům pomocí 64bitové procesy v 64bitových verzích Windows. Pro počítače se systémem nejméně Windows 8, rozšířeným chráněným režimem omezení, které aplikace Internet Explorer můžete číst z umístění v registru a systému souborů. Pokud nastavení této zásady povolíte, rozšířeným chráněným režimem zapnutý. Všechny zóny s povoleným režimem chráněné použije rozšířeným chráněným režimem. Uživatelé nebudou moct zakázat rozšířeným chráněným režimem. Pokud nastavení této zásady zakážete, rozšířeným chráněným režimem je vypnutý. Všechny zóny s povoleným režimem chráněné budou používat verzi chráněný režim zavedený aplikace Internet Explorer 7 pro Windows Vista. Pokud tuto zásadu nenakonfigurujete, uživateli můžete zapnout nebo vypnout rozšířeným chráněným režimem na kartě Upřesnit v dialogovém okně Možnosti Internetu.
   
-  **Výchozí**: Povoleno  
+  **Výchozí**: Enabled  
   
 - **Aplikace Internet Explorer obejít upozornění SmartScreen**  
   Nastavení této zásady určuje, zda uživatel může obejít upozornění filtru SmartScreen. Filtr SmartScreen uživatele upozorní na spustitelné soubory, které uživatele aplikace Internet Explorer není běžně stáhnout z Internetu. Pokud nastavení této zásady povolíte, uživateli blokovat upozornění filtru SmartScreen. Pokud zakážete nebo není pro toto nastavení zásad, můžete uživateli obejít upozornění filtru SmartScreen.
@@ -1094,7 +1094,7 @@ Další informace najdete v tématu [zásady CSP – LocalPoliciesSecurityOption
 Další informace najdete v tématu [zásady CSP – MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) v dokumentaci k Windows.  
 
 - **Místní účty na přihlášení k síti použít omezení nástroje Řízení uživatelských účtů**  
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Konfigurace spuštění ovladače klienta v1 SMB**  
   **Výchozí**: Zakázané ovladače
@@ -1106,7 +1106,7 @@ Další informace najdete v tématu [zásady CSP – MSSecurityGuide](https://do
   **Výchozí**: Zakázáno
   
 - **Strukturované zpracování výjimek přepsat ochrany**  
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 ## <a name="mss-legacy"></a>Starší verze MSS  
 Další informace najdete v tématu [zásady CSP – MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) v dokumentaci k Windows.  
@@ -1115,7 +1115,7 @@ Další informace najdete v tématu [zásady CSP – MSSLegacy](https://docs.mic
   **Výchozí**: Nejvyšší ochrany  
   
 - **Ignorovat síťové požadavky na verzi název rozhraní NetBIOS s výjimkou ze serverů WINS**  
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **IPv6 zdroj směrování úroveň ochrany sítě**  
   **Výchozí**: Nejvyšší ochrany
@@ -1129,7 +1129,7 @@ Další informace najdete v tématu [zásady CSP - Power](https://docs.microsoft
 - **Vyžadovat heslo při probuzení, zatímco napájen ze sítě**  
   Nastavení této zásady určuje, pokud bude uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku. Pokud povolíte nebo není pro toto nastavení zásad, bude uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku. Pokud nastavení této zásady zakážete, není uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Úsporné při režimu spánku, když jste na baterie**  
   Toto nastavení zásad spravuje, pokud Windows může používat úsporné režimy při uvedení počítače do režimu spánku. Pokud povolíte nebo není pro toto nastavení zásad, pomocí Windows úsporné počítač přepnout do režimu spánku. Pokud nastavení této zásady zakážete, úsporné (S1 S3) nejsou povoleny.
@@ -1144,7 +1144,7 @@ Další informace najdete v tématu [zásady CSP - Power](https://docs.microsoft
 - **Vyžadovat heslo při probuzení na baterie**  
   Nastavení této zásady určuje, pokud bude uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku. Pokud povolíte nebo není pro toto nastavení zásad, bude uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku. Pokud nastavení této zásady zakážete, není uživatel vyzván k zadání hesla, když se systém obnoví z režimu spánku.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 ## <a name="remote-desktop-services"></a>Vzdálená plocha  
 Další informace najdete v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) v dokumentaci k Windows.  
@@ -1152,22 +1152,22 @@ Další informace najdete v tématu [zásady CSP – RemoteDesktopServices](http
 - **Blokování ukládání hesel**  
   Určuje, zda hesla lze uložit na tento počítač z připojení ke vzdálené ploše. Pokud povolíte toto nastavení hesla ukládání zaškrtávacího políčka v připojení ke vzdálené ploše je zakázané a uživatelé nebudou moci ukládat hesla. Když uživatel otevře soubor RDP pomocí připojení ke vzdálené ploše a uloží jejich nastavení, se odstraní všechna hesla, která dříve byla uložena v souboru RDP. Pokud toto nastavení zakážete nebo ponechte není nakonfigurované, může uživatel uložit hesla, pomocí připojení ke vzdálené ploše.
   
-   **Výchozí**: Povoleno
+   **Výchozí**: Enabled
   
 - **Zabezpečená komunikace RPC**  
   Určuje, jestli server hostitele relace vzdálené plochy vyžaduje zabezpečené komunikace RPC se všemi klienty nebo umožňuje nezabezpečenou komunikaci. Toto nastavení můžete použít k posílení zabezpečení protokolu RPC komunikaci s klienty tím, že jenom ověřený a šifrovaný požadavky. Pokud je stav nastaven na povoleno, služby Vzdálená plocha přijímá požadavky od klientů vzdáleného volání Procedur, které podporuje požadavky na zabezpečení a neumožňuje nezabezpečenou komunikaci s nedůvěryhodné klienty. Pokud je stav nastaven na hodnotu zakázáno, služby Vzdálená plocha vždy požadavky zabezpečení pro všechny přenosy RPC. Zabezpečená komunikace je však povoleno pro klienty vzdáleného volání Procedur, které nemáte odpověď na žádost o. Pokud je stav nastaven není nakonfigurováno, zabezpečená komunikace bude povolena. Poznámka: Rozhraní RPC se používá ke správě a konfiguraci služby Vzdálená plocha.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Jednotku přesměrování bloku**  
   Nastavení této zásady určuje, zda bude bráněno mapování jednotky klienta v relaci vzdálené plochy (přesměrování jednotek). Ve výchozím nastavení serveru hostitele relace VP mapuje klientské jednotky automaticky po připojení. Připojené jednotky se objeví ve stromové struktuře relace složek v Průzkumníku souborů nebo počítače ve formátu  *\<písmeno_jednotky >* na  *\<název_počítače >*. Nastavení této zásady můžete použít k přepsání tohoto chování. Pokud nastavení této zásady povolíte, přesměrování klienta jednotky není povoleno v relace služby Vzdálená plocha a přesměrování kopie souboru schránky není povolené v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování jednotek je vždycky povolená. Navíc je vždycky povolená přesměrování kopie souborů schránky. Pokud je povoleno přesměrování schránky. Pokud nastavení této zásady nenakonfigurujete, nejsou zadány jednotky přesměrování klientů a přesměrování kopie souboru schránky na úrovni zásad skupiny.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Výzva k zadání hesla při připojení**  
   Nastavení této zásady určuje, zda služby Vzdálená plocha vždy vyzve k zadání hesla při připojení klienta. Toto nastavení slouží k vynucení výzva k zadání hesla pro uživatele přihlášení do služby Vzdálená plocha, i v případě, že se už zadali heslo v klientovi připojení ke vzdálené ploše. Ve výchozím nastavení služby Vzdálená plocha umožňuje uživatelům přihlásit se automaticky tak, že zadáte heslo klienta připojení ke vzdálené ploše. Pokud nastavení této zásady povolíte, uživatelé nemohou přihlásit automaticky k vzdálené ploše zadáním hesla do klienta připojení ke vzdálené ploše. se výzva k zadání hesla k přihlášení. Pokud nastavení této zásady zakážete, můžete vždy přihlášení k vzdálené ploše automaticky zadáním hesla do klienta připojení ke vzdálené ploše. Pokud nastavení této zásady nenakonfigurujete, není zadán automatické přihlášení na úrovni zásad skupiny. 
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Úroveň šifrování připojení klienta služby Vzdálená plocha**  
   Určuje, jestli se vyžaduje použití úrovně konkrétní šifrování pro zabezpečení komunikace mezi klientskými počítači a servery hostitele relace VP během připojení protokolu RDP (Remote Desktop). Tyto zásady platí jenom při použití nativní šifrování protokolu RDP. Však není doporučeno nativní šifrování protokolu RDP (na rozdíl od šifrování SSL). Tyto zásady neplatí pro šifrování SSL. Pokud nastavení této zásady povolíte, musí veškerá komunikace mezi klienty a servery hostitele relace VP během vzdálené připojení použijte metodu šifrování zadané v tomto nastavení. Ve výchozím nastavení úrovně šifrování nastavena na hodnotu Vysoká. Jsou dostupné tyto metody šifrování:  
@@ -1185,7 +1185,7 @@ Další informace najdete v tématu [zásady CSP – RemoteManagement](https://d
 - **Blokování ukládání spustit jako přihlašovací údaje**  
   Základní ověřování klienta
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Základní ověřování**  
   Nastavení této zásady umožňuje určit, zda služba Vzdálená správa Windows (WinRM) přijme základní ověřování ze vzdáleného klienta. Pokud nastavení této zásady povolíte, Služba WinRM přijme základní ověřování ze vzdáleného klienta. Pokud zakážete nebo není pro toto nastavení zásad služby WinRM nepřijme základní ověřování ze vzdáleného klienta.
@@ -1195,7 +1195,7 @@ Další informace najdete v tématu [zásady CSP – RemoteManagement](https://d
 - **Ověřování hodnotou hash bloku klienta**  
   Nastavení této zásady umožňuje určit, zda klient vzdálené správy Windows (WinRM) používá ověřování hodnotou hash. Pokud nastavení této zásady povolíte, Klient WinRM nepoužívá ověřování hodnotou hash. Pokud zakážete nebo není pro toto nastavení zásad, používá Klient WinRM ověřování hodnotou hash.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 - **Nešifrované přenosy**  
   Nastavení této zásady umožňuje určit, zda služba Vzdálená správa Windows (WinRM) odesílá a přijímá nezašifrované zprávy přes síť. Pokud nastavení této zásady povolíte, Klient WinRM odesílá a přijímá nezašifrované zprávy přes síť. Pokud zakážete nebo není pro toto nastavení zásad, Klient WinRM odesílá nebo přijímá jenom šifrované zprávy přes síť.  
@@ -1290,7 +1290,7 @@ Další informace najdete v tématu [zásady CSP – WindowsConnectionManager](h
 
   Pokud nastavení této zásady není nakonfigurována nebo je zakázána, jsou povoleny počítačů současně připojit k doméně a doméně sítě.  
 
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
   
 ## <a name="windows-defender"></a>Windows Defender  
 Další informace najdete v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) v dokumentaci k Windows.  
@@ -1414,7 +1414,7 @@ Další informace najdete v tématu [zásady CSP – WindowsInkWorkspace](https:
   - *Povolené* – pracovní prostor Ink funkce je zapnutá, ale uživatel nemůže přejít nad zamykací obrazovkou.
   - *Není nakonfigurováno* – pracovní prostor Ink funkce je zapnutá a uživatel ho může používat nad zamykací obrazovkou.  
 
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
  
 ## <a name="windows-powershell"></a>Windows PowerShell  
 Další informace najdete v tématu [zásady CSP – WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) v dokumentaci k Windows.  
@@ -1422,5 +1422,5 @@ Další informace najdete v tématu [zásady CSP – WindowsPowerShell](https://
 - **Power shell skript prostředí blokovat protokolování**  
   Nastavení této zásady umožňuje protokolování veškerý vstup skriptu prostředí PowerShell do protokolu událostí Microsoft-Windows-PowerShell/Operational. Pokud nastavení této zásady povolíte, prostředí Windows PowerShell bude protokolovat zpracování příkazů, bloky skriptu, funkce a skripty – zda vyvolat interaktivně nebo prostřednictvím automatizace. Pokud nastavení této zásady zakážete, protokolování vstupu skriptu prostředí PowerShell je zakázáno. Pokud povolíte protokolování vyvolání blok skriptu, prostředí PowerShell také protokoluje události při vyvolání příkazu, blok skriptu, funkce nebo skriptu, spuštění nebo zastavení. Povolení protokolování vyvolání generuje k velkému počtu protokoly událostí. Poznámka: Toto nastavení zásad existuje v rámci konfigurace počítače a konfigurace uživatele v editoru zásad skupiny. Nastavení zásad Konfigurace počítače má přednost před nastavením zásad Konfigurace uživatele.
   
-  **Výchozí**: Povoleno
+  **Výchozí**: Enabled
  

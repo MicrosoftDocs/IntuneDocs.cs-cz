@@ -16,11 +16,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: c2c3a33b996a68263550fc05d3af853c263c930a
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512912"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů macOS v Intune
 
@@ -35,7 +35,7 @@ V tomto článku se dozvíte, jak nastavit ochranu koncových bodů pro zaříze
 
 - **Uživatel může přepsat Gatekeeper**: Zabrání uživatelům v gatekeeperu nastavení a zabraňuje uživatelům kliknutím na instalovat aplikaci pro ovládací prvek. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.
 
-## <a name="firewall"></a>Firewall
+## <a name="firewall"></a>Brána firewall
 
 Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. Když použijete nastavení pro danou aplikaci, získáte snadno výhody ochrany branou firewall. Nežádoucím aplikacím také znemožníte převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.
 

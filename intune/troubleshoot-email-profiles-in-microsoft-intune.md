@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 02eac7eaa42f6f9c97426e0536e48a4bc399ed08
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61514221"
 ---
 # <a name="troubleshoot-email-profiles-in-microsoft-intune"></a>Řešení potíží s e-mailovými profily v Microsoft Intune
 

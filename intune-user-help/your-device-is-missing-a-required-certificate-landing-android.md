@@ -20,11 +20,11 @@ ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 150dceebd26430e82845eef6480b87c70d00a1f0
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61500677"
 ---
 # <a name="your-device-is-missing-a-required-certificate"></a>Zařízení nemá požadovaný certifikát
 

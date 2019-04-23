@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/20/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 1c9028d3b8e69c8f20e264f99bd4bf8fda6c9050
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: a18c579853b162024aaa93d5dad2bfd854d8c0d2
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61512922"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
@@ -42,7 +42,16 @@ Zobrazit v sestavě šifrování zařízení musí používat Windows verze 1607
 Sestavě se zobrazuje **název zařízení** pro zařízení s Windows 10 a základní podrobnosti o každém, včetně:  
 - **Verze operačního systému** – verze Windows.  
 - **Verze čipu TPM** – verze čipu Trusted Platform Module (TPM) na zařízení.  
-- **Šifrování připravenosti** – což je hodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM.  
+- **Šifrování připravenosti** – což je hodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení je možné identifikovat jako:
+  - **Připraveno**: Zařízení můžete zašifrovat pomocí zásady MDM, která vyžaduje zařízení s čipem TPM a splňuje následující verze Windows 10 a požadavky na SKU:
+    - Verze 1703 nebo novější, Business, Enterprise, Education
+    - Verze 1809 nebo novější verze Pro  
+  
+    Další informace najdete v tématu [BitLocker poskytovatel konfiguračních služeb (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) v dokumentaci k Windows.  
+
+  - **Není připraven**: Zařízení nemá možností úplné šifrování, ale stále podporuje šifrování. Zařízení třeba může být zašifrovaný ručně, uživatelem nebo prostřednictvím zásad skupiny, které můžete nastavit tak, aby šifrování bez TMP.
+  - **Není k dispozici**: Není k dispozici dostatek informací ke klasifikaci toto zařízení.  
+
 - **Stav šifrování** – ať už zašifrovaný jednotky operačního systému.  
 
 
@@ -51,11 +60,11 @@ Pokud vyberete zařízení, Intune se zobrazí **stav šifrování zařízení**
 
 V tomto podokně poskytuje následující podrobnosti:  
 - **Název zařízení** – název zařízení prohlížíte.  
-- **Šifrování připravenosti** – vyhodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM.  
+- **Šifrování připravenosti** – vyhodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM. (Viz šifrování připravenosti v he předchozí části Další podrobnosti.)
 - **Stav šifrování** – ať už zašifrovaný jednotky operačního systému.  
 - **Profily** – seznam *konfigurace zařízení* profily, které platí pro toto zařízení a zahrnuje následující typy profilů a nastavení:  
-    - Typ profilu = *Endpoint protection*  
-    - Nastavení > šifrování Windows > šifrovat zařízení = *vyžaduje*  
+  - Typ profilu = *Endpoint protection*  
+  - Nastavení > šifrování Windows > šifrovat zařízení = *vyžaduje*  
 
   Tento seznam může být použita při hledání jednotlivé zásady pro kontrolu, přehled stavu profilu označovat potíže s.  
 

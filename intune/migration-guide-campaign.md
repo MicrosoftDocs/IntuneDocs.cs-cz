@@ -18,11 +18,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: db56bbc180a84e8b3972ffc6473126efd366faa8
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59901008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508177"
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 

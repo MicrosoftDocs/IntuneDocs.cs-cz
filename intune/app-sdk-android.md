@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 965dcfbb711eac1b38977e023d1975f4dc0e8b81
-ms.sourcegitcommit: d38ca1bf44e17211097aea481e00b6c1e87effae
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58514493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505841"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -699,7 +699,7 @@ Metadata knihovny ADAL **nesmí** nacházet v manifestu.
 
 #### <a name="2-app-integrates-adal"></a>2. Aplikace integruje ADAL.
 
-|Požadovaný parametr ADAL| Hodnota |
+|Požadovaný parametr ADAL| Value |
 |--|--|
 | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
 
@@ -714,7 +714,7 @@ Podívejte se také na požadavky pro [podmíněný přístup](#conditional-acce
 
 #### <a name="3-app-integrates-adal-but-does-not-support-brokered-authenticationdevice-wide-sso"></a>3. Aplikace integruje ADAL, ale nepodporuje zprostředkované ověřování/celém zařízení jednotné přihlašování
 
-|Požadovaný parametr ADAL| Hodnota |
+|Požadovaný parametr ADAL| Value |
 |--|--|
 | ClientID | ClientID aplikace (u zaregistrovaných aplikací je generuje AzureAD) |
 | SkipBroker | **True** (Pravda) |

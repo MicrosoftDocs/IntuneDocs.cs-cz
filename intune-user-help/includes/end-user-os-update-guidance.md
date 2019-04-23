@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bbad42e478fadcb40f35d621e805367e60944a00
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490466"
+---
   > [!NOTE]
   > Když budete svoje zařízení udržovat aktuální, budete mít přístup k nejnovějším funkcím. Navíc díky tomu budete mít nejzabezpečenější verzi svého operačního systému. Microsoft a většina velkých dodavatelů obecně doporučují udržovat jak osobní, tak firemní zařízení na nejnovějších verzích softwaru, které máte k dispozici.
 

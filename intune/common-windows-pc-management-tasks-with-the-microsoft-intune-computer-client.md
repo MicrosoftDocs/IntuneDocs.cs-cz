@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 2fdb45c711e605da9a1d160593d37564ef846d32
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59894599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508510"
 ---
 # <a name="common-windows-pc-management-tasks-with-the-intune-software-client"></a>Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune
 

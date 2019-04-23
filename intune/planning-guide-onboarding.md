@@ -19,11 +19,11 @@ search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 9cd9f14d48c86119acf862e2d335fe88fb2a9a1c
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513966"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 

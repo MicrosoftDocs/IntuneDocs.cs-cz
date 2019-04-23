@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: eede87fdca31e8e263d1dea78d766fec59f05f58
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61511298"
 ---
 # <a name="data-collection-in-intune"></a>Shromažďování údajů v Intune
 
@@ -41,7 +41,7 @@ Většina osobních údajů shromážděných službou Intune představuje ident
 
 Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné: 
 
-- Informace o uživateli
+- Údaje uživatele
     - Jméno vlastníka / zobrazované jméno uživatele (jméno uživatele zaregistrované v Azure, které označuje ID uživatele služby Azure)
     - Hlavní název uživatele nebo e-mailová adresa
     - Identifikátory uživatele třetích stran (např. Apple ID)
@@ -60,7 +60,7 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
     - Create
     - Aktualizace (úpravy)
     - Odstranění
-    - přiřazení
+    - Assign
     - Vzdálené úlohy
 - Informace o podpoře
     - Kontaktní informace (jméno, telefonní číslo, e-mailová adresa)

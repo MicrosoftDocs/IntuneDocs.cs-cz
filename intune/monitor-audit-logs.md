@@ -15,11 +15,11 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 93072ba4730de0252f54d93fa1169062d496ce38
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61513166"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Použití protokolů auditu ke sledování a sledování událostí v Microsoft Intune
 
@@ -63,7 +63,7 @@ Protokol událostí zobrazí výchozí seznam s následujícími položkami:
 - Název aplikace
 - Aktivita
 - Cíle
-- Kategorie
+- Category
 - Stav
 
 Chcete-li zobrazit podrobnější informace o události, vyberte položku v seznamu:

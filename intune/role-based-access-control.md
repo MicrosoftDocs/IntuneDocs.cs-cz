@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1efa421b568a5cc28b23859f68de7145b5b4a943
-ms.sourcegitcommit: af2512a1342d8037a96a61c8cc2c63e107913733
+ms.openlocfilehash: 98e2229194287ff644e9503fa21c9536cbff4734
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507303"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -63,9 +63,8 @@ Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další inform
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
 | Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
-| Globální čtečky | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádný | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
 
 > [!TIP]
 > Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**, a **podmíněného přístupu**, řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).

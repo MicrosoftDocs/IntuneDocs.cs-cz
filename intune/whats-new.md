@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/18/2019
+ms.date: 04/22/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c8f359be8878d42204a86e6ff8db7d75304b3bb
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: e3064a73cd9c56275363cce8c99190c4f5c98192
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59901076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61515357"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -47,6 +47,26 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 <!-- ########################## -->
 
+## <a name="week-of-april-22-2019"></a>Týden od 22. dubna 2019
+
+### <a name="use-compliance-manager-to-create-assessments-for-microsoft-intune---4404750---"></a>Správce dodržování předpisů můžete vytvořit posouzení pro Microsoft Intune<!-- 4404750 -->
+
+[Správce dodržování předpisů](https://servicetrust.microsoft.com/ComplianceManager) (otevře jiný web společnosti Microsoft) je nástroj pro vyhodnocení rizik založené na pracovních postupech v Microsoft Service Trust Portal. Umožňuje sledovat, přiřaďte a ověřte aktivit vaší organizace dodržování legislativních předpisů týkající se ke službám Microsoftu. Můžete vytvořit vlastní hodnocení dodržování předpisů Office 365, Azure, Dynamics, odborné služby a Intune. Intune má dvě posouzení k dispozici – FFIEC a nařízení GDPR.
+
+Správce dodržování předpisů pomáhá soustředit vaše úsilí rozdělením ovládací prvky – spravováno společností Microsoft a ovládací prvky spravované vaší organizací. Můžete dokončení vyhodnocení a pak je exportovat a vytisknout posouzení, která.
+
+[Federální finanční instituce zkoumání Rady (FFIEC)](https://www.microsoft.com/trustcenter/compliance/FFIEC) (otevře jiný web společnosti Microsoft) je sada standardů pro online bankovnictví vydané FFIEC dodržování předpisů. Je zatím nejžádanějších posouzení pro finanční instituce, které používají Intune. Interpretuje, jak Intune pomáhá plnit FFIEC příkazu o kyberbezpečnosti pokyny související s veřejnou cloudovými úlohami. FFIEC hodnocení služby Intune je druhý FFIEC vyhodnocování ve Správci dodržování předpisů.
+
+V následujícím příkladu můžete zobrazit rozpis FFIEC ovládacích prvků. Microsoft věnuje 64 ovládací prvky. Zodpovídáte za zbývající 12 ovládací prvky.
+
+![Naleznete v tématu ukázka posouzení Intune FFIEC, včetně akce zákazníků a akce Microsoft](./media/intune-ffiec-assessment-status.png)
+
+[Obecné nařízení (GDPR)](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview) (otevře jiný web společnosti Microsoft) je Evropské unie (EU) zákon, který pomáhá chránit práva jednotlivce a jejich data. GDPR se zatím nejžádanějších hodnocení pomáhají dodržovat nařízení o ochraně osobních údajů. 
+
+V následujícím příkladu se vám zobrazit rozpis pro ovládací prvky podle nařízení GDPR. Microsoft věnuje 49 ovládací prvky. Zodpovídáte za zbývající 66 ovládací prvky.
+
+![Viz ukázka posouzení Intune gdpr, včetně akce zákazníků a akce Microsoft](./media/intune-assessment-status.png)
+
 ## <a name="week-of-april-15-2019"></a>Týden od 15. dubna 2019
 
 ### <a name="app-management"></a>Správa aplikací
@@ -58,7 +78,7 @@ Zásady ochrany aplikací (aplikace) Intune na zařízeních s Androidem teď vy
 Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md).
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informace o instalaci verze aplikace pro Microsoft Store pro obchodní aplikace <!-- 3537391   -->
-Sestavy nainstalovaných aplikací zahrnuje informace o verzi aplikace pro Microsoft Store pro obchodní aplikace. V Intune, vyberte **klientské aplikace** > **aplikace**. Vyberte **Microsoft Store pro firmy** a pak vyberte **stav instalace zařízení** pod **monitorování** oddílu.
+Sestavy instalací aplikace zahrnují informace o verzi aplikace pro Microsoft Store pro obchodní aplikace. V Intune, vyberte **klientské aplikace** > **aplikace**. Vyberte **Microsoft Store pro firmy** a pak vyberte **stav instalace zařízení** pod **monitorování** oddílu.
 
 #### <a name="additions-to-win32-apps-requirement-rules----3676883-----"></a>Tvorba pravidla požadavků aplikace Win32 <!-- 3676883   -->
 Můžete vytvořit požadavek na skripty prostředí PowerShell, hodnoty registru a informace o systému souborů na základě pravidel. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. Potom vyberte **aplikace Windows (Win32)** jako **typ aplikace** v **přidat aplikaci** okno.  Vyberte **požadavky** > **přidat** ke konfiguraci pravidla dalších požadavků. Vyberte buď **typ souboru**, **registru**, nebo **skript** jako **typ požadavku**. Další informace najdete v tématu [správy aplikací Win32](apps-win32-app-management.md).
@@ -115,12 +135,9 @@ Tato aktualizace zahrnuje nové nastavení hesla, umožňuje plný přístup k a
 
 Platí pro: Plně spravovaná zařízení s androidem Enterprise
 
-#### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671----"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671  -->
-Mnoho Windows 10 a novější zařízení má čipovými sadami Trusted Platform Module (TPM). Tato aktualizace zahrnuje nové nastavení dodržování předpisů, která kontroluje verze čipu TPM v zařízení. 
+#### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671 -->
 
-[Windows 10 a novější nastavení zásad dodržování předpisů](compliance-policy-create-windows.md#device-security) popisuje toto nastavení.
-
-Platí pro: Windows 10 a novější
+Tato funkce je zpožděno a mají být zahrnuty v budoucí verzi.
 
 #### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Aktualizované změny uživatelského rozhraní pro prohlížeče Microsoft Edge ve Windows 10 a novější zařízení <!-- 3775833   -->
 Když vytvoříte profil konfigurace zařízení, můžete povolit nebo omezit funkce Microsoft Edge ve Windows 10 a novější zařízení (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Windows 10 a novější** pro platformu > **omezení zařízení** pro typy profilů >  **Prohlížeč Microsoft Edge**). V této aktualizaci nastavení Microsoft Edge jsou více popisné a srozumitelnější. 
@@ -163,7 +180,7 @@ Aktualizovali jsme výchozí časový limit zprávy, které uživatelé uvidí, 
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="retire-noncompliant-devices-----1827291-----"></a>Vyřazení zařízení nedodržující předpisy  <!-- 1827291   -->
-Jako součást zásady dodržování předpisů zařízením jsme přidali novou akci pro případ nedodržování předpisů: [Vyřazení zařízení nedodržující předpisy](actions-for-noncompliance.md#add-actions-for-noncompliance). Pomocí této akce automaticky vymazání firemních dat z o zařízení nesplňujícím požadavky také odebírání zařízení z spravované pomocí Intune.
+Tato funkce byla odložena a budou přicházet v budoucí verzi.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
@@ -308,7 +325,6 @@ Přístup jen ke čtení ke všem datům Intune:
 - Správce zabezpečení
 - Operátor zabezpečení
 - Čtenář zabezpečení
-- Globální čtečky
 
 Další informace najdete v tématu [řízení přístupu na základě rolí](role-based-access-control.md).
 

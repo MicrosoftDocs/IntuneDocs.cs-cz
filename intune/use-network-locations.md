@@ -18,11 +18,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: d2431695f89c9cdf339a0192e27f8140ec042435
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57396230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61515326"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
@@ -30,7 +30,7 @@ Můžete chtít blokovat přístup k firemní síti v případě, že zařízen�
 
 Můžete vytvořit zásady dodržování předpisů založené na síťovém umístění, které se také označují jako ohraničení sítě. Tyto zásady zajišťují, že pokud mají zařízení vyhovovat, musí být připojená k pracovní síti. Tyto zásady se dají používat se zásadami podmíněného přístupu, aby zařízení měla přístup k pracovním prostředkům *jenom* v případě, že jsou připojená k pracovní síti. Když není zařízení připojené k pracovní síti, stane se nevyhovujícím a ztratí přístup k pracovním prostředkům.
 
-Vezměte v úvahu následující scénář:
+Uvažte následující příklady:
 
 Někteří zaměstnanci ve vašem výrobním závodě používají zařízení s Androidem. Zaměstnanci si odnášejí zařízení s Androidem mimo závod nebo továrnu. Abyste zabránili neoprávněnému přístupu, můžete:
 

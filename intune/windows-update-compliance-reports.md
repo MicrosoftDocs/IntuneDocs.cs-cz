@@ -16,11 +16,11 @@ ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 3af9fbfa5bb1a9c6ebd9ebd0f20a55677c48b755
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61509972"
 ---
 # <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů Intune pro aktualizace
 Při použití Intune k nasazení Windows update pro zařízení s Windows 10, zobrazení podrobností o dodržování předpisů pro aktualizace pomocí Intune nebo pomocí bezplatného řešení volána *Update Compliance*, která je součástí sady Microsoft Operations Management Suite (OMS).

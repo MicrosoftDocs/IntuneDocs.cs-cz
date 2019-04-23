@@ -19,11 +19,11 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 54bdef2252467de9cd06e5b5f0a7c38acc38ba88
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61505314"
 ---
 # <a name="enroll-device-for-access-to-work-or-school-resources"></a>Registrace zařízení pro přístup k pracovním nebo školním prostředkům
 Registrace zařízení a získat přístup k e-mailu a aplikacím, budete muset nainstalovat aplikaci portál společnosti Intune nebo aplikace pro Microsoft Intune. Při registraci, základní správu zásad, které vaše organizace má nakonfigurovanou, jako jsou hesla, PIN kód a šifrování, se použijí k zařízení. Po nastavení zařízení splňovat všechny požadavky vaší organizace, budete mít bezpečný přístup pracovním informacím prakticky odkudkoli.  

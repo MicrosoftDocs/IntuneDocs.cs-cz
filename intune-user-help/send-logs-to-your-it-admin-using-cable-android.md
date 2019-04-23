@@ -19,11 +19,11 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 071a6e7a4db6fbe6c13ffc6753ae73c5ce63660b
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61490983"
 ---
 # <a name="upload-and-email-logs-using-a-usb-cable"></a>Nahrávání a e-mailových protokolů pomocí kabelu USB
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 04/22/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 102c440e378549205877787b0bba126abd613fd3
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
-ms.translationtype: MT
+ms.openlocfilehash: e57b96a21904f5c6789c7ac2214e6acf46b81d16
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59895241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60164103"
 ---
 # <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novější se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
 
@@ -127,10 +127,6 @@ Platí pouze pro spoluspravovaná zařízení se systémem Windows 10 a novějš
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-- **Trusted Platform Module (TPM)**: Pokud je nastavena na **vyžadují**, Intune zkontroluje verzi pro dodržování předpisů. Zařízení splňuje předpisy, pokud verze čipu TPM je větší než 0 (nula). Zařízení nedodržuje předpisy, pokud není k dispozici verze čipu TPM v zařízení. Když **Nenakonfigurováno**, Intune nezkontroluje zařízení pro verze čipu TPM.
-
-  [DeviceStatus CSP – DeviceStatus/TPM/SpecificationVersion uzlu](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
-  
 - **Antivirová ochrana v programu**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antivirových řešení, které jsou registrovány [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je například Symantec a programem Windows Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antivirová řešení nainstalovaná v zařízení.
 - **AntiSpyware**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antispywaru řešení, které jsou registrovány [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je například Symantec a programem Windows Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antispywarová řešení nainstalovaná v zařízení.
 

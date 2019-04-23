@@ -17,11 +17,11 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: 8e1edae77144b85d100bf590716768792afd8470
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61508306"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s iOSem v Microsoft Intune
 

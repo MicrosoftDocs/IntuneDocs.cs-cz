@@ -19,11 +19,11 @@ ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
 ms.openlocfilehash: bb6c63cacfba26b58a0de6f70c4e4b93344ca562
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61503883"
 ---
 # <a name="upload-and-email-logs"></a>Nahrávání a e-mailu protokoly  
 

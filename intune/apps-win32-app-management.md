@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 434fe0a51a2a6be5e40a7a2f8b851966ebf4845f
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: f05d3d19e1cce0c290a9af363ca1541881d7820f
+ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61507888"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -51,6 +51,12 @@ Použití [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?li
 > [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) zips všechny soubory a podsložky, když vytváří *.intunewin* souboru. Rozhodně buďte Microsoft Win32 obsahu Prep Tool nezávisle na instalační soubory a složky, tak, aby nezadáte, nástroj nebo jiné nepotřebné soubory a složky ve vaší *.intunewin* souboru.
 
 Můžete stáhnout [Microsoft Win32 obsahu Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) z Githubu jako soubor zip. Soubor ZIP obsahuje složku s názvem **Microsoft-Win32-Content-Prep-Tool-master**. Složka obsahuje nástroj pro přípravu, licence, souboru readme a poznámky k verzi. 
+
+### <a name="process-flow-to-create-intunewin-file"></a>Tok procesu pro vytvoření souboru .intunewin
+
+   ![Tok procesu pro vytvoření souboru .intunewin](./media/prepare-win32-app.svg)
+
+### <a name="run-the-microsoft-win32-content-prep-tool"></a>Spusťte nástroj Microsoft Win32 obsahu přípravu
 
 Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vás provedou nástroje vám umožní zadat požadované parametry krok za krokem. Nebo můžete přidat parametry do příkazu založené na následující parametry příkazového řádku k dispozici.
 
@@ -80,7 +86,15 @@ Odkazovat *license.txt* soubor pomocí relativní cesty *licenses\license.txt*.
 
 ## <a name="create-assign-and-monitor-a-win32-app"></a>Vytvoření, přiřazení a monitorování aplikace Win32
 
-Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplikaci Win32. Tento typ aplikace obvykle vytváří místní vývojáři nebo třetí strana. Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intune.
+Stejně jako obchodní aplikaci můžete do Microsoft Intune přidat také aplikaci Win32. Tento typ aplikace obvykle vytváří místní vývojáři nebo třetí strana. 
+
+### <a name="process-flow-to-add-a-win32-app-to-intune"></a>Tok procesu do Intune přidat aplikace Win32
+
+   ![Tok procesu do Intune přidat aplikace Win32](./media/add-win32-app.svg)
+
+### <a name="add-a-win32-app-to-intune"></a>Přidat aplikaci Win32 do Intune
+
+Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intune.
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
