@@ -8,10 +8,12 @@
 
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 
-## [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
-### [Co se stane při registraci zařízení s Androidem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-android.md)
-### [Registrace zařízení](enroll-your-device-in-Intune-android.md)
-#### [Registrace zařízení s Androidem for Work](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+## Použití zařízení s Androidem
+### [Proč registrovat vaše zařízení s Androidem](why-enroll-android-device.md)
+### Registrace zařízení
+#### [Registrace zařízení s Androidem](enroll-device-android-company-portal.md)  
+#### [Registrace zařízení s pracovním profilem Androidu](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Registrace pomocí aplikace Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-android.md)
 ### [Zašifrování zařízení](encrypt-your-device-android.md)
 ### [Nastavení PIN kódu nebo hesla](set-your-pin-or-password-android.md)
@@ -23,16 +25,15 @@
 #### [Zrušení registrace zařízení](unenroll-your-device-from-intune-android.md)
 #### [Zrušení registrace zařízení, pokud odmítnete podmínky použití](unenroll-your-device-from-intune-if-you-declined-terms-of-use-android.md)
 
-### [Řešení běžných problémů s Androidem](troubleshoot-your-device-android.md)
+### Řešení běžných problémů s Androidem
 #### [Kontrola dodržování předpisů pro zařízení](check-compliance-on-your-device-android.md)
 #### [Řešení běžných problémů se Samsung Knox](samsung-knox-errors-android.md)
 #### [Aktualizace vašeho zařízení za účelem instalace Outlooku](update-device-outlook-android.md)
 
-#### Oprava problémů pomocí protokolů
+#### Protokolování
 ##### [Zapnutí podrobného protokolování](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md)
-##### [Odeslání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
+##### [Nahrávání a posílání protokolů e-mailem](send-logs-to-your-it-admin-by-email-android.md)
 ##### [Odeslání protokolů přes USB kabel](send-logs-to-your-it-admin-using-cable-android.md)
-##### [Odeslání chyb registrace](send-enrollment-errors-to-your-it-admin-android.md)
 ##### [Odeslání chyb do Microsoftu](send-logs-to-microsoft-android.md)
 
 ### Dotazy k operačnímu systému
