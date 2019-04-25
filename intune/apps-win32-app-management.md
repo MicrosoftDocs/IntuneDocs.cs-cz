@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f05d3d19e1cce0c290a9af363ca1541881d7820f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
+ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507888"
+ms.locfileid: "62426149"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -282,6 +282,9 @@ V tomto okamžiku jste dokončili postup do Intune přidat aplikace Win32. Infor
 ## <a name="app-dependencies"></a>Závislosti aplikace
 
 Závislosti aplikace jsou aplikace, které musí být nainstalovaný před instalací aplikace Win32. Můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. Je maximálně 100 závislosti, obsahující závislosti žádné zahrnuté závislosti, stejně jako vlastní aplikaci. Závislosti aplikace systému Win32 můžete přidat až po aplikace Win32 byl přidán a nahrát do Intune. Po přidání aplikace Win32, zobrazí se vám **závislosti** možnost v okně pro vaši aplikaci Win32. 
+
+> [!NOTE]
+> Funkce závislostí aplikace bude k dispozici pouze po 1904 verzi (větší než 1.18.120.0), což může trvat jednu nebo dvě další týdny poté, co jsme upgradovat službu na 1904 byl upgradován agent pro správu Intune.
 
 Při přidání závislosti aplikaci, můžete hledat podle názvu aplikace a vydavatele. Kromě toho můžete seřadit přidání závislostí podle názvu aplikace a vydavatele. Dříve závislosti přidání aplikace se nedá vybrat v seznamu závislostí přidaných aplikací. 
 

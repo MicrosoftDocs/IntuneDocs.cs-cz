@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8997cb8f3e36367de06d6e5aa1c7c6971ee905a4
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8858848d12ca3f5839741fc15d87e1cd66e9fad0
+ms.sourcegitcommit: bc1bdd63725e62253fcb2daecc41df128bd320f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506011"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63452836"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkce zařízení s macOS v Intune
 
@@ -51,6 +51,21 @@ Tato nastavení jsou přidány do konfiguračního profilu zařízení v Intune 
 - **Import** (volitelné): Můžete také **Import** soubor oddělených čárkou (.csv), který obsahuje seznam tiskárny s Airprintem. Po přidání tiskárny s Airprintem v Intune, můžete také **exportovat** tohoto seznamu.
 
 Vyberte **OK** uložte nastavení.
+
+### <a name="get-the-ip-address-and-path"></a>Získat IP adresu a cestu
+
+Přidání serverů AirPrinter, potřebujete IP adresu z tiskárny, cestu prostředku a port. Následující kroky ukazují, jak získat tyto informace.
+
+1. Na Macu, který je připojený ke stejné místní síti (stejná podsíť) jako tiskárny s Airprintem, otevřete **terminálu** (z **/aplikace/Utility**).
+2. V aplikaci terminál, zadejte `ippfind`, a vyberte možnost enter.
+
+    Poznámka: informace o tiskárně. Například může vrátit podobně jako `ipp://myprinter.local.:631/ipp/port1`. První část je název tiskárny. Poslední část (`ipp/port1`) je cesta prostředku.
+
+3. V terminálu zadejte `ping myprinter.local`, a vyberte možnost enter.
+
+   Poznamenejte si IP adresu. Například může vrátit podobně jako `PING myprinter.local (10.50.25.21)`.
+
+4. Použijte hodnoty IP adres a prostředků cestu. V tomto příkladu je IP adresa `10.50.25.21`, a cesta prostředku je `/ipp/port1`.
 
 ## <a name="login-window"></a>Přihlašovací okno
 
@@ -90,22 +105,7 @@ Po přihlášení k zařízení, tato nastavení vliv, co můžete dělat.
 
 Vyberte **OK** uložte nastavení.
 
-## <a name="get-the-ip-address-and-path"></a>Získat IP adresu a cestu
-
-Přidání serverů AirPrinter, potřebujete IP adresu z tiskárny, cestu prostředku a port. Následující kroky ukazují, jak získat tyto informace.
-
-1. Na Macu, který je připojený ke stejné místní síti (stejná podsíť) jako tiskárny s Airprintem, otevřete **terminálu** (z **/aplikace/Utility**).
-2. V aplikaci terminál, zadejte `ippfind`, a vyberte možnost enter.
-
-    Poznámka: informace o tiskárně. Například může vrátit podobně jako `ipp://myprinter.local.:631/ipp/port1`. První část je název tiskárny. Poslední část (`ipp/port1`) je cesta prostředku.
-
-3. V terminálu zadejte `ping myprinter.local`, a vyberte možnost enter.
-
-   Poznamenejte si IP adresu. Například může vrátit podobně jako `PING myprinter.local (10.50.25.21)`.
-
-4. Použijte hodnoty IP adres a prostředků cestu. V tomto příkladu je IP adresa `10.50.25.21`, a cesta prostředku je `/ipp/port1`.
-
 ## <a name="next-steps"></a>Další postup
 
 - Zobrazit všechna nastavení [iOS](ios-device-features-settings.md) zařízení.
-- [Tento profil přiřadit](device-profile-assign.md) do skupin a [monitorování jejího stavu](device-profile-monitor.md).
+- [Tento profil přiřadit](device-profile-assign.md) do skupin, a [monitorování jejího stavu](device-profile-monitor.md).

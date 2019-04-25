@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3064a73cd9c56275363cce8c99190c4f5c98192
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
-ms.translationtype: MT
+ms.openlocfilehash: 6dff7e28daff503570350950b60ae974cd048c5c
+ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515357"
+ms.locfileid: "62426226"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -75,7 +75,7 @@ V následujícím příkladu se vám zobrazit rozpis pro ovládací prvky podle 
 Zásady ochrany aplikací (aplikace) Intune na zařízeních s Androidem teď využívá knihovnu šifrování OpenSSL, který je podle standardu FIPS 140-2 kompatibilní. Další informace najdete v tématu [šifrování](app-protection-policy-settings-android.md#encryption) část [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md).
 
 #### <a name="enable-win32-app-dependencies----2617348----"></a>Povolí závislosti aplikace systému Win32 <!-- 2617348  -->
-Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md).
+Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md). Tato funkce je dostupná až po 1904 verzi (větší než 1.18.120.0), což může trvat jednu nebo dvě další týdny poté, co jsme upgradovat službu na 1904 byl upgradován agent pro správu Intune.
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informace o instalaci verze aplikace pro Microsoft Store pro obchodní aplikace <!-- 3537391   -->
 Sestavy instalací aplikace zahrnují informace o verzi aplikace pro Microsoft Store pro obchodní aplikace. V Intune, vyberte **klientské aplikace** > **aplikace**. Vyberte **Microsoft Store pro firmy** a pak vyberte **stav instalace zařízení** pod **monitorování** oddílu.
