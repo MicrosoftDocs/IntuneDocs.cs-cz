@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6dff7e28daff503570350950b60ae974cd048c5c
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
-ms.translationtype: HT
+ms.openlocfilehash: 401bc833b2b864983ec301972950ffbd04fe2229
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426226"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135190"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -46,6 +46,25 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-6-2019"></a>Týden od 6. května 2019 
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="network-access-control-nac-support-for-f5-access-for-ios-devices----4500808---"></a>Řízení přístupu (NAC) podporu pro F5 přístup pro zařízení s Iosem sítě <!-- 4500808 -->
+
+F5 vydali aktualizaci BIG-IP 13, které umožňuje funkci NAC F5 přístup v systému iOS v Intune. Chcete používat tuto funkci:
+
+- Aktualizovat BIG-IP 13.1.1.5 aktualizovat. 14 BIG-IP se nepodporuje.
+- Integrace BIG-IP pro NAC s Intune. Kroky v [přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+- Zkontrolujte, **povolit síť přístup ovládacího prvku (NAC)** nastavení v profilu sítě VPN v Intune.
+
+Pokud chcete zobrazit nastavení dostupnosti, přejděte na [nastavení konfigurace sítě VPN na zařízeních s Iosem](vpn-settings-ios.md).
+
+Platí pro: iOS
+
+#### <a name="updated-pfx-certificate-connector-for-microsoft-intune----doc-vso-1521237----"></a>Aktualizovaný soubor PFX Certificate Connector pro Microsoft Intune <!-- doc-vso 1521237  -->  
+Vydali jsme aktualizaci [konektor certifikátu PFX pro Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors) interval dotazování od 5 sekund, který klesne na 30 sekund.
 
 ## <a name="week-of-april-22-2019"></a>Týden od 22. dubna 2019
 
@@ -75,7 +94,7 @@ V následujícím příkladu se vám zobrazit rozpis pro ovládací prvky podle 
 Zásady ochrany aplikací (aplikace) Intune na zařízeních s Androidem teď využívá knihovnu šifrování OpenSSL, který je podle standardu FIPS 140-2 kompatibilní. Další informace najdete v tématu [šifrování](app-protection-policy-settings-android.md#encryption) část [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md).
 
 #### <a name="enable-win32-app-dependencies----2617348----"></a>Povolí závislosti aplikace systému Win32 <!-- 2617348  -->
-Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md). Tato funkce je dostupná až po 1904 verzi (větší než 1.18.120.0), což může trvat jednu nebo dvě další týdny poté, co jsme upgradovat službu na 1904 byl upgradován agent pro správu Intune.
+Jako správce můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti před instalací aplikace Win32. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat** zobrazíte **přidat aplikaci** okno. Vyberte **aplikace Windows (Win32)** jako **typ aplikace**. Po přidání aplikace můžete vybrat **závislosti** přidat závislé aplikace, které musí být nainstalovaný před instalací aplikace Win32. Další informace najdete v tématu [samostatnou službu Intune – Správa aplikací Win32](apps-win32-app-management.md). 
 
 #### <a name="app-version-installation-information-for-microsoft-store-for-business-apps----3537391-----"></a>Informace o instalaci verze aplikace pro Microsoft Store pro obchodní aplikace <!-- 3537391   -->
 Sestavy instalací aplikace zahrnují informace o verzi aplikace pro Microsoft Store pro obchodní aplikace. V Intune, vyberte **klientské aplikace** > **aplikace**. Vyberte **Microsoft Store pro firmy** a pak vyberte **stav instalace zařízení** pod **monitorování** oddílu.
@@ -91,6 +110,9 @@ Primární uživatel taky jako uživatele pro spřažení zařízení uživatele
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Vytváření sestav pro zařízení s Androidem Enterprise pracovním profilem dalších aplikace spravovaný obchod Google Play <!-- 4105925  -->
 Pro spravovaný obchod Google Play aplikace nasazené na zařízení s Androidem Enterprise pracovním profilem můžete zobrazit číslo verze konkrétní aplikace nainstalované v zařízení. To platí pro pouze požadované aplikace. Povolí se stejné funkce pro aplikace k dispozici v budoucí verzi. 
+
+#### <a name="ios-third-party-keyboards----4111843-idready-eeready---"></a>iOS klávesnice třetích stran <!-- 4111843 idready eeready -->
+Podpora Intune app protection zásad (aplikace) pro **třetích stran klávesnice** nastavení pro iOS se už nepodporuje z důvodu o změnu pro platformu iOS. Nebude moct nakonfigurovat toto nastavení v konzole správce Intune a neuplatní se na klientovi v sadě Intune App SDK.
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -124,7 +146,7 @@ Další informace o této funkci, přejděte na [použití a správa zařízení
 Platí pro: Android enterprise
 
 #### <a name="windows-update-notifications-----3316758-3316782----"></a>Oznámení o aktualizaci Windows  <!-- 3316758, 3316782  -->
-Přidali jsme dvě *nastavení činnosti koncového uživatele* nastavení ke službě Windows Update vyzvánět konfigurace, které můžete spravovat z konzoly Intune. Teď můžete:
+Přidali jsme dvě *nastavení činnosti koncového uživatele* ke službě Windows Update vyzvánět konfigurace, které můžete spravovat z konzoly Intune. Teď můžete:
 - Blokovat nebo povolit uživatelům [vyhledávání aktualizací Windows](windows-update-settings.md#block-user-from-scanning-for-windows-updates).
 - Správa [úrovně upozornění na aktualizace Windows](windows-update-settings.md#windows-update-notification-level) , že uživatelé uvidí.
 
@@ -207,7 +229,7 @@ Nyní můžete přidat značky oboru na tokeny programu Apple VPP. Přístup k t
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
 #### <a name="updated-certificate-connectors-----icm-113304612---"></a>Aktualizovaný certifikát konektory  <!-- ICM 113304612 -->
-Vydali jsme aktualizace pro obě [Intune Certificate Connector a konektor certifikátu PFX](certficates-pfx-configure.md#whats-new-for-connectors). Nové vydání opravy několik známých problémů.  
+Vydali jsme aktualizace pro obě [Intune Certificate Connector a konektor certifikátu PFX pro Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors). Nové vydání opravy několik známých problémů.  
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -376,7 +398,7 @@ V Intune, vyberte **klientské aplikace** > **aplikace** > "Název aplikace" > *
 Volá se nová obrazovka **kategorie aplikací** byla přidána ke zlepšení prostředí procházení a výběr aplikací v aplikaci portál společnosti pro Windows 10. Uživatelé nyní uvidí svoje aplikace, seřazený podle kategorií, jako **doporučené**, **vzdělávání**, a **produktivitu**. Tato změna se zobrazí v aplikaci portál společnosti verze 10.3.3451.0 a novější. Chcete-li zobrazit novou obrazovku, naleznete v tématu [co je nového v Uživatelském rozhraní aplikace](https://docs.microsoft.com/intune/whats-new-app-ui). Další informace o aplikacích v aplikaci portál společnosti, naleznete v tématu [nainstalovat a sdílejte aplikace na zařízení](/intune-user-help/install-apps-cpapp-windows).  
 
 #### <a name="power-bi-compliance-app----1455231-doc-work-item---"></a>Dodržování předpisů aplikace Power BI <!-- 1455231 doc-work-item -->
-Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://app.powerbi.com/groups/me/getapps/services/Intune_dw_compliance) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app).
+Přístup k datovému skladu Intune pomocí Power BI Online [dodržování předpisů v Intune (datový sklad)](https://aka.ms/intune/datawarehouseapi/getpowerbiapp) aplikace. V této aplikaci Power BI můžete nyní přístup k a sdílet předem vytvořených sestav bez nastavení a aniž byste museli opustit ve webovém prohlížeči. Další informace najdete v tématu [protokol změn – dodržování předpisů službou Power BI aplikace](reports-changelog.md#power-bi-compliance-app).
 
 
 ### <a name="device-configuration"></a>Konfigurace zařízení

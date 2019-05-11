@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 05/09/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3e9c9c538f9311da4c383b5de24048eb836ab0a
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 108b9fb0eb227e9f046919efc6ef4d04b0903c40
+ms.sourcegitcommit: d259c0986d356135e626a30468971e32f8103f4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513439"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65442951"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune
 
@@ -59,6 +59,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
   - [Zimperium](#configure-zimperium-apps)
   - [Pradeo](#configure-pradeo-apps)
   - [Better Mobile](#configure-better-mobile-apps)
+  - [Sophos Mobile](#configure-sophos-apps)
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurace aplikací Lookout for Work
 
@@ -142,7 +143,18 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
     - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na ActiveShield v obchodě s aplikacemi](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4).
 
+
+### <a name="configure-sophos-apps"></a>Konfigurace aplikací Sophos  
+- **Android**
+
+    - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). Použijte tento [URL obchodu s aplikacemi Sophos](https://play.google.com/store/apps/details?id=com.sophos.smsec) na **kroku 7**.
+
+ - **iOS**
+
+    - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). V **kroku 12** v části **Konfigurace informací o aplikaci** použijte tento [odkaz URL na ActiveShield v obchodě s aplikacemi](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8).
+
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurace aplikací MTD k zásadám konfigurace aplikace pro iOS
+
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Zásady konfigurace aplikací pro Lookout for Work
 
@@ -163,7 +175,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 
     - V **kroku 8** použijte možnost **Zadat XML data**, zkopírujte obsah ze souboru ***.plist** a vložte ho do těla zásad konfigurace.
 
-> [!NOTE]
+> [!NOTE]  
 > Pokud se vám nedaří soubory načíst, obraťte se na [podporu Symantec Endpoint Protection Mobile pro firmy](https://support.symantec.com/en_US/contact-support.html).
 
 ### <a name="check-point-sandblast-mobile-app-configuration-policy"></a>Zásady konfigurace aplikace Check Point SandBlast Mobile
@@ -192,6 +204,9 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 <string>{{udidlast4digits}}</string>
 </dict>
 ```
+### <a name="pradeo-app-configuration-policy"></a>Zásady Konfigurace aplikací Pradeo
+Pradeo nepodporuje zásady Konfigurace aplikace pro iOS.  Místo toho pokud chcete získat nakonfigurovanou aplikaci, pracujete s Pradeo k implementaci vlastních souborů IPA nebo APK, které jsou předem nakonfigurovány s nastavením, které chcete.
+
 
 ### <a name="better-mobile-app-configuration-policy"></a>Zásady konfigurace aplikace Better Mobile
 
@@ -208,6 +223,9 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 <string>{{userprincipalname}}</string>
 </dict>
 ```
+
+### <a name="sophos-mobile-app-configuration-policy"></a>Zásady Konfigurace Sophos mobilních aplikací
+Jak je popsáno v vytvořte zásady Konfigurace aplikací pro iOS [pomocí zásad Konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md) článku.
 
 ## <a name="assign-apps-to-groups"></a>Přiřazení aplikací skupinám
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48228d0baea204fd94175750075c04771116a74d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cbef2059f42a209a63e4ba3f1e83aec410237d02
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513790"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135140"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -63,27 +63,39 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 9. Připojení se úspěšně naváže, aby zařízení mělo přístup k firemním prostředkům.
 
 ## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Pomocí NAC pro síť VPN na zařízeních s Iosem  
-Aniž byste museli povolit NAC v profilu sítě VPN se podporuje NAC pro Cisco Legacy AnyConnect, starší verze F5 přístup a Citrix VPN.
 
-NAC pro jednotné přihlašování Citrix je také podporována. Pokud chcete povolit NAC pro Citrix jednotného přihlašování pro iOS:
-- Použití brány Citrix 12.0.59 nebo vyšší.  
-- Uživatelé musí mít Citrix SSO 1.1.6 nebo novější.
-- [Integrace NetScaler s Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) jak je popsáno v dokumentaci k produktu Citrix.
-- V konfiguraci nastavení základní síť VPN pro **povolit síť přístup ovládacího prvku (NAC)**, zaškrtněte políčko pro **souhlasím**.
+- NAC je k dispozici v následujících virtuálních privátních sítí bez povolení NAC v profilu sítě VPN:
 
-Při použití Citrix jednotného přihlašování pro iOS je odpojené připojení k síti VPN z bezpečnostních důvodů každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
+  - NAC pro Cisco Legacy AnyConnect
+  - F5 Starší verze přístup
+  - Citrix VPN
 
+- NAC je také k dispozici pro Citrix jednotné přihlašování a přístupu F5. Pokud chcete povolit NAC pro Citrix jednotné přihlašování:
 
-**Řízení přístupu k síti se momentálně nepodporuje následující klienty VPN v iOS**:
--   Cisco AnyConnect
--   F5 Access
+  - Použití brány Citrix 12.0.59 nebo vyšší.  
+  - Uživatelé musí mít Citrix SSO 1.1.6 nebo novější.
+  - [Integrace NetScaler s Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) jak je popsáno v dokumentaci k produktu Citrix.
+  - V profilu sítě VPN vyberte **základní nastavení** > **povolit síť přístup ovládacího prvku (NAC)** > vyberte **souhlasím**.
 
-Pracujeme s našimi partnery uvolnit řešení NAC pro těchto novějších klientů. Až budou tato řešení připravená, aktualizujeme tento článek o další podrobnosti. 
+  Připojení k síti VPN se odpojí z bezpečnostních důvodů každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
 
+- Pokud chcete povolit NAC F5 přístup:
+
+  - Pomocí F5 BIG-IP 13.1.1.5. 14 BIG-IP se nepodporuje.
+  - Integrace BIG-IP pro NAC s Intune. [Přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 průvodce jsou uvedené kroky.
+  - V profilu sítě VPN vyberte **základní nastavení** > **povolit síť přístup ovládacího prvku (NAC)** > vyberte **souhlasím**.
+
+  Připojení k síti VPN se odpojí z bezpečnostních důvodů každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
+
+- Řízení přístupu k síti se nepodporuje pro následující klienta VPN v iOS:
+  - Cisco AnyConnect
+
+Pracujeme s našimi partnery uvolnit řešení NAC pro těchto novějších klientů. Při řešení je připravené, tento článek bude aktualizován společně s dalšími informacemi.
 
 ## <a name="next-steps"></a>Další postup
 
 - [Integrace řešení Cisco ISE do Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrace řešení Citrix NetScaler do Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integrace správce zásad přístupu F5 BIG-IP do Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrace řešení HP Aruba ClearPass do Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
 - [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

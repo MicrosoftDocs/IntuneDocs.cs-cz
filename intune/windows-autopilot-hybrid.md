@@ -18,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ab718cd087757211ad4e84cbba39808cf9de7d3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 2dd523b1c624de9fbdb12cc4f90cafa5c4395250
+ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515455"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527196"
 ---
-# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot-preview"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot (Preview)
+# <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
 
 ## <a name="prerequisites"></a>Požadavky
@@ -35,7 +35,7 @@ Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít I
 Zařízení, která chcete zaregistrovat, musí:
 - Používat Windows 10 s [aktualizací z října 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)
 - Mít přístup k internetu
-- Mít přístup k Active Directory (připojení VPN se nepodporuje)
+- Máte přístup ke službě Active Directory (připojení k síti VPN v tuto chvíli nepodporuje).
 - Této oblasti podstupovali prostředí out-of-box (OOBE).
 - Možné poslat příkaz ping řadič domény, který se pokoušíte připojit.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 4/24/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d089d0e9724a1ce150fa7e8697c80734fb0d7e9c
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 68f5fad9d05787b6e79792d594480547ce10cf81
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59894293"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764913"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -67,11 +67,19 @@ Standardně se do Intune můžou registrovat zařízení pro všechny platformy.
 
 ## <a name="android-enrollment-methods"></a>Metody registrace zařízení s Androidem
 
-| **– Metoda** |  **Vyžadováno resetování** |    **Přidružení uživatele**   |   **Uzamčeno** | **Podrobnosti**|
+| **Osobní** | **Metody registrace zařízení** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|**[Uživatelé s vlastním zařízením (BYOD)](#bring-your-own-device)** | Ne|   Ano |   Ne | [Další informace](./android-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| Ne |Ne |Ne  |[Další informace](./device-enrollment-manager-enroll.md)|
-|**Pracovní profily Androidu**| Ne | Ano | Ne| [Další informace](./android-work-profile-enroll.md) |
+|**Správce zařízení s androidem**|**Uživatelem iniciované prostřednictvím portálu společnosti** | Ne | Ano | Ne | [Další informace](https://docs.microsoft.com/intune-user-help/enroll-device-android-company-portal)|
+|**Pracovní profil androidu Enterprise**|**Uživatelem iniciované prostřednictvím portálu společnosti**| Ne | Ano | Ne | [Další informace](./android-work-profile-enroll.md)|
+
+
+| **Podnikové** | **Metody registrace zařízení** | **Vyžadováno resetování** | **Přidružení uživatele** | **Uzamčeno** | **Podrobnosti**|
+|:---:|:---:|:---:|:---:|:---:|:---:|
+|**Správce zařízení s androidem**|**[DEM](#device-enrollment-manager) spuštěných prostřednictvím portálu společnosti**| Ne | Ne | Ne |[Další informace](./device-enrollment-manager-enroll.md)|
+|**Správce zařízení s androidem**|**(Předem deklarovaná čísla IMEI nebo sériové číslo) Uživatelem iniciované prostřednictvím portálu společnosti**| Ne | Ano | Ne | [Další informace](./corporate-identifiers-add.md)|
+|**Správce zařízení s androidem s příponami Zebra Mobility**|**Uživatel nebo [DEM](#device-enrollment-manager) spuštěných prostřednictvím portálu společnosti**| Ne | Ano, kterou inicioval uživatel, Ne Pokud [DEM](#device-enrollment-manager) zahájené | Ne | [Další informace](./android-zebra-mx-overview.md)|
+|**Android Enterprise Dedicated**|**NFC, Token, kód QR, nula Touch**| Ano | Ne | Konfigurovat pomocí zásad | [Další informace](./android-kiosk-enroll.md)|
+|**Plně spravovaná Android Enterprise (Preview)**|**NFC, Token, kód QR, nula Touch**| Ano | Ano | Konfigurovat pomocí zásad | [Další informace](./android-dedicated-devices-fully-managed-enroll.md)|
 
 
 ## <a name="bring-your-own-device"></a>Přineste si vlastní zařízení

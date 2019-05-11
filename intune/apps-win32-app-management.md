@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c2cac99ba45ccd91629e6db32d91735d90d706e
-ms.sourcegitcommit: 6d6f43d69462f7f8fadc421c4ba566dc6ec20c36
+ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62426149"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135126"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -142,8 +142,8 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     Například, pokud je vaše aplikace filename **MyApp123**, přidejte následující:<br>
     `msiexec /p “MyApp123.msp”`<p>
     A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argumenty příkazu (přepínače) podporované tímto balíčkem. <br>Příklad:<br>
-    `ApplicationName.exe /quite`<br>
-    Ve výše uvedeném příkazu `ApplicaitonName.exe` balíček podporuje `/quite` příkaz argument.<p> Pro konkrétní argumentů podporovaných balíčku aplikace obraťte se na dodavatele aplikace.
+    `ApplicationName.exe /quiet`<br>
+    Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje `/quiet` příkaz argument.<p> Pro konkrétní argumentů podporovaných balíčku aplikace obraťte se na dodavatele aplikace.
 
 3.  Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
 
@@ -282,9 +282,6 @@ V tomto okamžiku jste dokončili postup do Intune přidat aplikace Win32. Infor
 ## <a name="app-dependencies"></a>Závislosti aplikace
 
 Závislosti aplikace jsou aplikace, které musí být nainstalovaný před instalací aplikace Win32. Můžete vyžadovat, aby ostatní aplikace se instalují jako závislosti. Konkrétně zařízení musíte nainstalovat závislé aplikace, před instalací aplikace Win32. Je maximálně 100 závislosti, obsahující závislosti žádné zahrnuté závislosti, stejně jako vlastní aplikaci. Závislosti aplikace systému Win32 můžete přidat až po aplikace Win32 byl přidán a nahrát do Intune. Po přidání aplikace Win32, zobrazí se vám **závislosti** možnost v okně pro vaši aplikaci Win32. 
-
-> [!NOTE]
-> Funkce závislostí aplikace bude k dispozici pouze po 1904 verzi (větší než 1.18.120.0), což může trvat jednu nebo dvě další týdny poté, co jsme upgradovat službu na 1904 byl upgradován agent pro správu Intune.
 
 Při přidání závislosti aplikaci, můžete hledat podle názvu aplikace a vydavatele. Kromě toho můžete seřadit přidání závislostí podle názvu aplikace a vydavatele. Dříve závislosti přidání aplikace se nedá vybrat v seznamu závislostí přidaných aplikací. 
 

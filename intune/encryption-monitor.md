@@ -17,12 +17,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a18c579853b162024aaa93d5dad2bfd854d8c0d2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 52b92483ddafadf460911caaa472825a0bc0a20f
+ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61512922"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527223"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
@@ -60,7 +60,7 @@ Pokud vyberete zařízení, Intune se zobrazí **stav šifrování zařízení**
 
 V tomto podokně poskytuje následující podrobnosti:  
 - **Název zařízení** – název zařízení prohlížíte.  
-- **Šifrování připravenosti** – vyhodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM. (Viz šifrování připravenosti v he předchozí části Další podrobnosti.)
+- **Šifrování připravenosti** – vyhodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM. (Viz šifrování připravenosti v předchozí části Další podrobnosti.)
 - **Stav šifrování** – ať už zašifrovaný jednotky operačního systému.  
 - **Profily** – seznam *konfigurace zařízení* profily, které platí pro toto zařízení a zahrnuje následující typy profilů a nastavení:  
   - Typ profilu = *Endpoint protection*  

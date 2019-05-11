@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/01/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2a94be7ebc369005f92809d57c8e55076972df3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 1bcd3a5d0b9f7abc1aa2e0b4d96c30c956b6b4c7
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764894"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>nastavení zařízení s Iosem v Intune použít běžné funkce iOS
 
@@ -35,22 +35,18 @@ Tento článek uvádí tato nastavení a popisuje, co dělá jednotlivých nasta
 
 [Vytvořit profil konfigurace zařízení pro iOS](device-features-configure.md#create-a-device-profile).
 
-## <a name="airprint-settings"></a>Nastavení AirPrint
+## <a name="airprint"></a>AirPrint
 
-Tato funkce umožňuje iOS uživatelům tisknout známé tiskárny s Airprintem.
+- **IP adresa**: Zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazu ping tiskárny, v terminálu. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
+- **Cesta**: Cesta je obvykle `ipp/print` pro tiskárny ve vaší síti. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
+- **Port**: Zadejte naslouchající port cíle AirPrint. Pokud tuto vlastnost nezadáte, AirPrint použije výchozí port. K dispozici v Iosu 11.0 a novějších.
+- **TLS**: Zvolte **povolit** k zabezpečení připojení AirPrint pomocí zabezpečení TLS (Transport Layer). K dispozici v Iosu 11.0 a novějších.
 
-1. V **nastavení**vyberte **AirPrint**. Zadejte následující vlastnosti AirPrint serveru:
+**Přidat** AirPrint server přidá do seznamu. Můžete přidat více serverů AirPrint. Můžete také **Import** souboru oddělený čárkami (CSV) s těmito informacemi. Po vytvoření seznamu, můžete také **exportovat** seznamu serverů AirPrint.
 
-    - **IP adresa**: Zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazu ping tiskárny, v terminálu. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
-    - **Cesta**: Cesta je obvykle `ipp/print` pro tiskárny ve vaší síti. Získání IP adresy a cesty (v tomto článku) poskytuje další podrobnosti.
-    - **Port**: Zadejte naslouchající port cíle AirPrint. Pokud tuto vlastnost nezadáte, AirPrint použije výchozí port. K dispozici v Iosu 11.0 a novějších.
-    - **TLS**: Zvolte **povolit** k zabezpečení připojení AirPrint pomocí zabezpečení TLS (Transport Layer). K dispozici v Iosu 11.0 a novějších.
+Vyberte **OK** k uložení seznamu.
 
-2. Vyberte **Přidat**. AirPrint server se přidá do seznamu. Můžete přidat více serverů AirPrint.
-
-    Můžete také **Import** souboru oddělený čárkami (CSV) s těmito informacemi. Po vytvoření seznamu, můžete také **exportovat** seznamu serverů AirPrint.
-
-3. Až budete hotovi, vyberte **OK** k uložení seznamu.
+### <a name="get-server-ip-address-resource-path-and-port"></a>Získejte IP adresu serveru, cesta k prostředku a portu
 
 Přidání serverů AirPrinter, potřebujete IP adresu z tiskárny, cestu prostředku a port. Následující kroky ukazují, jak získat tyto informace.
 
@@ -73,29 +69,32 @@ Tato nastavení konfigurovat rozložení aplikací a složky v docku a domovské
 
 Použití **ukotvit** nastavení přidat až šest položek nebo složek do docku obrazovky Iosu. Mnoho zařízení podporuje méně položek. Zařízení iPhone například podporují maximálně čtyři položky. V takovém případě se zobrazí jenom první čtyři položky, které přidáte na zařízení.
 
-1. V **nastavení**vyberte **rozložení domovské obrazovky (jenom pod dohledem)** > **Dock** > **přidat**. Můžete přidat až **šest** položek (aplikace a složky, v kombinaci) pro dock zařízení.
-2. V **typ**, zvolte možnost Přidat **aplikace** nebo **složky**.
+Můžete přidat až **šest** položek (aplikace a složky, v kombinaci) pro dock zařízení.
 
-    - **Přidat aplikaci**: Tato možnost slouží k přidání aplikací do docku na obrazovce. Zadejte:
+- **Přidat**: Přidá aplikace nebo složek do docku v zařízení.
+- **Typ**: Přidat **aplikace** nebo **složky**:
 
+  - **Aplikace**: Tato možnost slouží k přidání aplikací do docku na obrazovce. Zadejte:
+
+    - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
+    - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) příklady.
+
+    Vyberte **OK** uložte provedené změny.
+
+  - **Složka**: Tato možnost slouží k přidání složky do docku na obrazovce.
+
+    Aplikace, které přidáte na stránku ve složce jsou seřazené zleva doprava a ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se na jinou stránku.
+
+    - **Název složky**: Zadejte název složky. Tento název se zobrazí uživatelům na jejich zařízení.
+    - **Seznam stránek**: **Přidat** stránku a zadejte následující vlastnosti:
+
+      - **Název stránky**: Zadejte název stránky. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
       - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
-      - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) pro několik příkladů.
+      - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) příklady.
 
-      Vyberte **OK** uložte provedené změny.
+      Můžete přidat až **20** ukotvení stránky pro zařízení.
 
-    - **Přidat složku**: Tato možnost slouží k přidání složky do docku na obrazovce. 
-
-      Aplikace, které přidáte na stránku ve složce jsou seřazené zleva doprava a ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se na jinou stránku.
-
-      1. Zadejte **název složky**. Tento název se zobrazí uživatelům na jejich zařízení.
-      2. Zvolte **přidat**a zadejte následující vlastnosti:
-
-          - **Název stránky**: Zadejte název stránky. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
-          - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
-          - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) pro několik příkladů.
-
-      3. Zvolte **přidat**. Můžete přidat až **20** ukotvení stránky pro zařízení.
-      4. Vyberte **OK** uložte provedené změny.
+    Vyberte **OK** uložte provedené změny.
 
 > [!NOTE]
 > Při přidání ikony pomocí nastavení Docku ikony na domovskou obrazovku a stránky jsou zamknuté a nejde přesunout. To může být záměrné s iOS a zásady MDM společnosti Apple.
@@ -117,33 +116,37 @@ Přidejte stránky, které chcete, aby zobrazený na domovské obrazovce a aplik
 > [!TIP]
 > Chcete-li změnit pořadí položek v jakékoli domovské obrazovce a v seznamech stránek, lze přetáhnout a jejich umístění.
 
-1. V **nastavení**vyberte **rozložení domovské obrazovky (jenom pod dohledem)** > **stránky** > **přidat**. Můžete přidat až **40** stránky na zařízení.
-2. Zadejte **název stránky**. Tento název se používá pro vaši informaci na webu Azure Portal a *není* zobrazí na zařízení s Iosem. 
+Můžete přidat až **40** stránky na zařízení.
 
-    Vyberte **Přidat**. Můžete přidat až **60** položek (aplikace a složky v kombinaci) na zařízení.
+- **Seznam stránek**: **Přidat** stránku a zadejte následující vlastnosti:
 
-3. V **typ**, zvolte možnost Přidat **aplikace** nebo **složky**.
+  - **Název stránky**: Zadejte název stránky. Tento název se používá pro vaši informaci na webu Azure Portal a *není* zobrazí na zařízení s Iosem.
 
-    - **Přidat aplikaci**: Tato možnost přidat na stránku na obrazovce aplikace. Zadejte:
+  Můžete přidat až **60** položek (aplikace a složky v kombinaci) na zařízení.
 
-      - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
-      - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) pro několik příkladů.
+  - **Přidat**: Přidá do stránky v zařízení aplikace nebo složky.
+
+    - **Typ**: Přidat **aplikace** nebo **složky**:
+
+      - **Aplikace**: Tato možnost přidat na stránku na obrazovce aplikace. Dále zadejte:
+
+        - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
+        - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) příklady.
 
       Vyberte **OK** uložte provedené změny.
 
-    - **Přidat složku**: Tato možnost slouží k přidání složky do docku na obrazovce. 
+      - **Složka**: Tato možnost slouží k přidání složky do docku na obrazovce.
 
-      Aplikace, které přidáte na stránku ve složce jsou seřazené zleva doprava a ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se na jinou stránku.
+        Aplikace, které přidáte na stránku ve složce jsou seřazené zleva doprava a ve stejném pořadí jako seznam. Pokud přidáte více aplikací, než se vejde na stránku, přesunou se na jinou stránku.
 
-      1. Zadejte **název složky**. Tento název se zobrazí uživatelům na jejich zařízení.
-      2. Zvolte **přidat**a zadejte následující vlastnosti:
+        - **Název složky**: Zadejte název složky. Tento název se zobrazí uživatelům na zařízení.
+        - **Přidat**: Přidá stránky ke složce. Také zadejte následující vlastnosti:
 
           - **Název stránky**: Zadejte název stránky. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
           - **Název aplikace**: Zadejte název aplikace. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazí na zařízení s Iosem.
-          - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) pro několik příkladů.
+          - **ID sady prostředků aplikace**: Zadejte ID sady prostředků aplikace. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) příklady.
 
-      3. Zvolte **přidat**.
-      4. Vyberte **OK** uložte provedené změny.
+      Vyberte **OK** uložte provedené změny.
 
 #### <a name="example"></a>Příklad
 
@@ -159,50 +162,43 @@ Když přiřadíte zásady k Iphonu, bude stránka vypadat podobně jako na nás
 
 Zvolte, jak aplikace nainstalované na iOS zařízení odesílat oznámení. Tato nastavení podporují zařízení pod dohledem s iOSem 9.3 a novějším.
 
-1. V **nastavení**vyberte **oznámení aplikací (jenom pod dohledem)** > **přidat**:
+- **Přidat**: Přidání oznámení pro aplikace:
 
     ![Přidání oznámení aplikací v profilu iOS v Intune](./media/ios-macos-app-notifications.png)
 
-2. Zadejte tyto vlastnosti:
+  - **ID sady prostředků aplikace**: Zadejte **ID sady prostředků aplikace** aplikace, které chcete přidat. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](bundle-ids-built-in-ios-apps.md) příklady.
+  - **Název aplikace**: Zadejte název aplikace, kterou chcete přidat. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazené na zařízení.
+  - **Publisher**: Zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazené na zařízení.
+  - **Oznámení**: **Povolit** nebo **zakázat** aplikaci zasílání oznámení do zařízení.
+    - **Zobrazit v centru oznámení**: **Povolit** umožňuje, aby aplikace zobrazovala oznámení v centru oznámení zařízení. **Zakázat** brání aplikaci v zobrazení oznámení v centru oznámení.
+    - **Zobrazit na zamykací obrazovce**: Vyberte **povolit** umožníte zobrazování oznámení z aplikace na zamykací obrazovce zařízení. **Zakázat** brání aplikaci v zobrazení oznámení na zamykací obrazovce.
+    - **Typ výstrahy**: Když je zařízení odemčené z, zvolte, jak se zobrazí oznámení. Možnosti:
+      - **Žádný**: Je zobrazena žádná oznámení.
+      - **Banner**: Banner se krátce zobrazí oznámení.
+      - **Modální**: Zobrazí oznámení a uživatel ho musí ručně zavřít než budete pokračovat s používáním zařízení.
+    - **Odznáček na ikoně aplikace**: Vyberte **povolit** přidá Odznáček na ikonu aplikace. Oznámení "BADGE" znamená, že aplikace odeslala oznámení.
+    - **Zvuky**: Vyberte **povolit** při doručení oznámení se přehraje zvuk.
 
-    - **ID sady prostředků aplikace**: Zadejte **ID sady prostředků aplikace** aplikace, které chcete přidat. Zobrazit [ID sady prostředků pro integrované aplikace pro iOS](#bundle-ids-for-built-in-ios-apps) (v tomto článku) pro několik příkladů.
-    - **Název aplikace**: Zadejte název aplikace, kterou chcete přidat. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazené na zařízení.
-    - **Publisher**: Zadejte vydavatele aplikace, kterou přidáváte. Tento název se používá pro vaši informaci na webu Azure Portal. To *není* zobrazené na zařízení.
-    - **Oznámení**: **Povolit** nebo **zakázat** aplikaci zasílání oznámení do zařízení.
-       - **Zobrazit v centru oznámení**: **Povolit** umožňuje, aby aplikace zobrazovala oznámení v centru oznámení zařízení. **Zakázat** brání aplikaci v zobrazení oznámení v centru oznámení.
-       - **Zobrazit na zamykací obrazovce**: Vyberte **povolit** umožníte zobrazování oznámení z aplikace na zamykací obrazovce zařízení. **Zakázat** brání aplikaci v zobrazení oznámení na zamykací obrazovce.
-       - **Typ výstrahy**: Když je zařízení odemčené z, zvolte, jak se zobrazí oznámení. Možnosti:
-         - **Žádný**: Je zobrazena žádná oznámení.
-         - **Banner**: Banner se krátce zobrazí oznámení.
-         - **Modální**: Zobrazí oznámení a uživatel ho musí ručně zavřít než budete pokračovat s používáním zařízení.
-       - **Odznáček na ikoně aplikace**: Vyberte **povolit** přidá Odznáček na ikonu aplikace. Oznámení "BADGE" znamená, že aplikace odeslala oznámení.
-       - **Zvuky**: Vyberte **povolit** při doručení oznámení se přehraje zvuk.
-
-3. Vyberte **OK** uložte provedené změny. Pokračujte v přidávání aplikací, které chcete. Až budete hotovi, vyberte **OK**.
+Vyberte **OK** uložte provedené změny.
 
 ## <a name="lock-screen-message-settings"></a>Zpráva nastavení zamykací obrazovky
 
 Pomocí těchto nastavení můžete zobrazit vlastní zprávu nebo text na přihlašovací okno a na zamykací obrazovce. Například můžete zadat zprávu "Při ztrátě vrátit..." a informace z inventárního štítku. 
 
-Tato funkce podporuje zařízení pod dohledem s:
+Tato funkce podporuje zařízení pod dohledem s Iosem 9.3 a novějším.
 
-- iOS 9.3 nebo novější
+- **Informace z inventárního štítku**: Zadejte informace o inventárním štítku zařízení. Zadejte například `Owned by Contoso Corp` nebo `Serial Number: {{serialnumber}}`.
 
-1. V **nastavení**vyberte **zpráva na zamčené obrazovce (jenom pod dohledem)**.
-2. Zadejte následující nastavení:
+  Text, který zadáte, se zobrazí na přihlašovací okno a na zamykací obrazovce zařízení.
 
-    - **Informace z inventárního štítku**: Zadejte informace o inventárním štítku zařízení. Zadejte například `Owned by Contoso Corp` nebo `Serial Number: {{serialnumber}}`. 
+- **Zamykací obrazovka Poznámka pod čarou**: Pokud ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může pomoci vrátit zařízení. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
 
-      Text, který zadáte, se zobrazí na přihlašovací okno a na zamykací obrazovce zařízení.
+  Zařízení tokeny lze také přidat informace specifické pro zařízení s těmito poli. Chcete-li zobrazit sériové číslo, zadejte například `Serial Number: {{serialnumber}}`. Text se zobrazí na zamykací obrazovce, podobně jako `Serial Number 123456789ABC`. Při vstupu do proměnné, je potřeba použít složené závorky `{{ }}`. [Konfigurace tokenů aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahuje seznam proměnných, které lze použít. Můžete také použít `deviceName` nebo libovolné jiné hodnoty konkrétní zařízení.
 
-    - **Zamykací obrazovka Poznámka pod čarou**: Pokud ke ztrátě nebo odcizení zařízení, zadejte poznámku, která může pomoci vrátit zařízení. Můžete zadat libovolný text, který chcete. Zadejte třeba `If found, call Contoso at ...`.
+  > [!NOTE]
+  > Proměnné pořadí úloh se neověřuje v uživatelském rozhraní. V důsledku toho se může zobrazit profily uložen s nesprávný vstup. Pokud zadáte například `{{Devicename}}` místo `{{devicename}}`, pak namísto jedinečný název zařízení se zobrazí řetězcový literál.
 
-    Zařízení tokeny lze také přidat informace specifické pro zařízení s těmito poli. Chcete-li zobrazit sériové číslo, zadejte například `Serial Number: {{serialnumber}}`. Text se zobrazí na zamykací obrazovce, podobně jako `Serial Number 123456789ABC`. Při vstupu do proměnné, je potřeba použít složené závorky `{{ }}`. [Konfigurace tokenů aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahuje seznam proměnných, které lze použít. Můžete také použít `deviceName` nebo libovolné jiné hodnoty konkrétní zařízení.
-
-    > [!NOTE]
-    > Proměnné pořadí úloh se neověřuje v uživatelském rozhraní. V důsledku toho se může zobrazit profily uložen s nesprávný vstup. Pokud zadáte například `{{Devicename}}` místo `{{devicename}}`, pak namísto jedinečný název zařízení se zobrazí řetězcový literál.
-
-3. Až budete hotovi, vyberte **OK** uložte provedené změny.
+Vyberte **OK** uložte provedené změny.
 
 ## <a name="single-sign-on-settings"></a>Nastavení jednotného přihlašování
 
@@ -213,82 +209,77 @@ Použití jednotného přihlašování, nezapomeňte, že máte následující:
 - Aplikace, která je kódem vyhledávajícím úložiště přihlašovacích údajů uživatele v jednotného přihlašování na zařízení.
 - Nakonfigurování Intune na jednotné přihlašování pro zařízení s iOSem
 
-1. V **nastavení**vyberte **jednotného přihlašování**:
+![Podokno Jednotné přihlašování](./media/sso-blade.png)
 
-   ![Podokno Jednotné přihlašování](./media/sso-blade.png)
+- **Atribut uživatelského jména z AAD**: Intune bude vypadat pro tento atribut pro každého uživatele ve službě Azure AD. Intune pak vyplní příslušné pole (například hlavní název uživatele) před vytvořením kódu XML, který se nainstaluje na zařízení. Možnosti:
 
-2. Zadejte následující nastavení:
+  - **Hlavní název uživatele**: Hlavní název uživatele je analyzován následujícím způsobem:
 
-    - **Atribut uživatelského jména z AAD**: Intune bude vypadat pro tento atribut pro každého uživatele ve službě Azure AD. Intune pak vyplní příslušné pole (například hlavní název uživatele) před vytvořením kódu XML, který se nainstaluje na zařízení. Možnosti:
+    ![Atribut uživatelského jména](media/User-name-attribute.png)
 
-      - **Hlavní název uživatele**: Hlavní název uživatele je analyzován následujícím způsobem:
+    Sféru také můžete přepsat textem, který zadáte do textového pole **Sféra**.
 
-        ![Atribut uživatelského jména](media/User-name-attribute.png)
+    Například Contoso má několik oblastí, včetně Evropa, Asie a Severní Amerika. Contoso chce, aby jejich uživatelé Asie přes jednotné přihlašování a daná aplikace vyžaduje hlavní název uživatele v `username@asia.contoso.com` formátu. Když vyberete **hlavní název uživatele**, sféra pro každého uživatele je převzata z Azure AD, která je `contoso.com`. Proto pro uživatele v Asii, vyberte **hlavní název uživatele**a zadejte `asia.contoso.com`. Koncový uživatel (UPN) se stane `username@asia.contoso.com`, namísto `username@contoso.com`.
 
-        Sféru také můžete přepsat textem, který zadáte do textového pole **Sféra**.
+  - **ID zařízení v Intune**: Intune automaticky vybere ID zařízení v Intune.
 
-        Například Contoso má několik oblastí, včetně Evropa, Asie a Severní Amerika. Contoso chce, aby jejich uživatelé Asie přes jednotné přihlašování a daná aplikace vyžaduje hlavní název uživatele v `username@asia.contoso.com` formátu. Když vyberete **hlavní název uživatele**, sféra pro každého uživatele je převzata z Azure AD, která je `contoso.com`. Proto pro uživatele v Asii, vyberte **hlavní název uživatele**a zadejte `asia.contoso.com`. Koncový uživatel (UPN) se stane `username@asia.contoso.com`, namísto `username@contoso.com`.
+    Ve výchozím nastavení aplikace používají ID zařízení. Pokud vaše aplikace používá sféru a ID zařízení, můžete však zadat sféru v textovém poli sféru.
 
-      - **ID zařízení v Intune**: Intune automaticky vybere ID zařízení v Intune.
+    > [!NOTE]
+    > Implicitně platí, že pokud používáte ID zařízení, sféru nevyplňujte.
 
-        Ve výchozím nastavení aplikace používají ID zařízení. Pokud vaše aplikace používá sféru a ID zařízení, můžete však zadat sféru v textovém poli sféru.
+  - **ID zařízení Azure AD**
 
-        > [!NOTE]
-        > Implicitně platí, že pokud používáte ID zařízení, sféru nevyplňujte.
+- **Sféra**: Zadejte domény část adresy URL. Zadejte například `contoso.com`.
+- **Předpony adres URL, které použijí jednotné přihlašování**: **Přidat** všechny adresy URL ve vaší organizaci, které vyžadují jednotné přihlašování – ověřování uživatelů.
 
-      - **ID zařízení Azure AD**
+  Například pokud se uživatel připojí k některému z těchto webů, použije zařízení s iOSem přihlašovací údaje pro jednotné přihlašování. Uživatel nemusí zadávat další přihlašovací údaje. Pokud je povolené ověřování službou Multi-Factor Authentication, uživatelé budou muset i druhé ověření.
 
-    - **Sféra**: Zadejte domény část adresy URL. Zadejte například `contoso.com`.
-    - **Předpony adres URL, které použijí jednotné přihlašování**: **Přidat** všechny adresy URL ve vaší organizaci, které vyžadují jednotné přihlašování – ověřování uživatelů.
+  > [!NOTE]
+  > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby tyto v `http://<yourURL.domain>` formátu.
 
-        Například pokud se uživatel připojí k některému z těchto webů, použije zařízení s iOSem přihlašovací údaje pro jednotné přihlašování. Uživatel nemusí zadávat další přihlašovací údaje. Pokud je povolené ověřování službou Multi-Factor Authentication, uživatelé budou muset i druhé ověření.
+  Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Prosté ověření shody řetězců běží, takže `http://www.contoso.com/` předponu adresy URL zadané informace neodpovídají `http://www.contoso.com:80/`. Se systémem iOS 10.0 nebo vyšší, jeden zástupný znak \* slouží k zadání všech odpovídajících hodnot. Například `http://*.contoso.com/` odpovídá obě `http://store.contoso.com/` a `http://www.contoso.com`.
 
-        > [!NOTE]
-        > V těchto adresách URL se musí používat správně naformátovaný plně kvalifikovaný název domény. Apple vyžaduje, aby tyto v `http://<yourURL.domain>` formátu.
+  `http://.com` a `https://.com` vzorky odpovídají všechny HTTP a adresy URL HTTPS, v uvedeném pořadí.
 
-        Odpovídající vzory adres URL musí mít na začátku `http://` nebo `https://`. Prosté ověření shody řetězců běží, takže `http://www.contoso.com/` předponu adresy URL zadané informace neodpovídají `http://www.contoso.com:80/`. Se systémem iOS 10.0 nebo vyšší, jeden zástupný znak \* slouží k zadání všech odpovídajících hodnot. Například `http://*.contoso.com/` odpovídá obě `http://store.contoso.com/` a `http://www.contoso.com`.
+- **Aplikace, které použijí jednotné přihlašování**: **Přidat** aplikací na zařízeních koncových uživatelů, které můžou používat jednotné přihlašování.
 
-        `http://.com` a `https://.com` vzorky odpovídají všechny HTTP a adresy URL HTTPS, v uvedeném pořadí.
+  `AppIdentifierMatches` Pole musí obsahovat řetězce, které odpovídají ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody, jako například `com.contoso.myapp`, nebo zadejte shodu předpony pomocí ID sady prostředků \* zástupný znak. Zástupný znak musí být uvedena po tečce (.) a může objevit jenom jednou, na konci řetězce, jako například `com.contoso.*`. Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
 
-    - **Aplikace, které použijí jednotné přihlašování**: **Přidat** aplikací na zařízeních koncových uživatelů, které můžou používat jednotné přihlašování.
+  **Název aplikace** použijte k zadání popisného názvu, který pomůže při identifikaci ID sady prostředků.
 
-        `AppIdentifierMatches` Pole musí obsahovat řetězce, které odpovídají ID sady prostředků aplikace. Tyto řetězce můžou být přesné shody, jako například `com.contoso.myapp`, nebo zadejte shodu předpony pomocí ID sady prostředků \* zástupný znak. Zástupný znak musí být uvedena po tečce (.) a může objevit jenom jednou, na konci řetězce, jako například `com.contoso.*`. Při použití zástupného znaku se udělí přístup k účtu všem aplikacím, jejichž ID sady prostředků začíná příslušnou předponou.
+- **Certifikát pro prodloužení platnosti přihlašovacích údajů**: Pokud používáte certifikáty pro ověřování (a ne hesla), vyberte existující certifikát SCEP nebo PFX jako ověřovací certifikát. Tento certifikát je obvykle stejný certifikát, který se nasazuje pro jiné profily, jako je například VPN, Wi-Fi nebo e-mailu uživatele.
 
-        **Název aplikace** použijte k zadání popisného názvu, který pomůže při identifikaci ID sady prostředků.
-
-    - **Certifikát pro prodloužení platnosti přihlašovacích údajů**: Pokud používáte certifikáty pro ověřování (a ne hesla), vyberte existující certifikát SCEP nebo PFX jako ověřovací certifikát. Tento certifikát je obvykle stejný certifikát, který se nasazuje pro jiné profily, jako je například VPN, Wi-Fi nebo e-mailu uživatele.
-
-3. Až budete hotovi, vyberte **OK** uložte provedené změny.
+Vyberte **OK** uložte provedené změny.
 
 ## <a name="web-content-filter-settings"></a>Nastavení filtru webového obsahu
 
 Toto nastavení řídí přístup k adrese URL prohlížeče na zařízeních s Iosem.
 
-1. V **nastavení**vyberte **filtr webového obsahu (jenom pod dohledem)**.
-2. Zvolte **typ filtru**. Možnosti:
+- **Typ filtru**: Zvolte, aby konkrétní webové stránky. Možnosti:
 
-    - **Konfigurovat adresy URL**: Použijte integrovaný webový filtr společnosti Apple, který hledá, včetně vulgárních výrazů a sexuálně explicitní výrazy. Tato funkce vyhodnocuje každou webovou stránku, jako je načteno a identifikuje a blokovat nevhodný obsah. Můžete také přidat adresy URL, které nechcete, aby zkontroloval filtru. Nebo blokovat konkrétní adresu URL, bez ohledu na nastavení filtru společnosti Apple.
+  - **Konfigurovat adresy URL**: Použijte integrovaný webový filtr společnosti Apple, který hledá, včetně vulgárních výrazů a sexuálně explicitní výrazy. Tato funkce vyhodnocuje každou webovou stránku, jako je načteno a identifikuje a blokovat nevhodný obsah. Můžete také přidat adresy URL, které nechcete, aby zkontroloval filtru. Nebo blokovat konkrétní adresu URL, bez ohledu na nastavení filtru společnosti Apple.
 
-      - **Povolené adresy URL**: **Přidat** adresy URL, které chcete povolit. Těmto adresám URL obejít webový filtr společnosti Apple.
+    - **Povolené adresy URL**: **Přidat** adresy URL, které chcete povolit. Těmto adresám URL obejít webový filtr společnosti Apple.
 
-        > [!NOTE]
+      > [!NOTE]
         > Adresy URL, kterou zadáte jsou adresy URL nechcete evauluated pomocí webového filtru Apple. Tyto adresy URL nejsou seznam povolených webů. Chcete-li vytvořit seznam povolených webů, nastavte **typ filtru** k **jenom konkrétní weby**.
 
-        Vyberte **OK** uložte provedené změny.
+      Vyberte **OK** uložte provedené změny.
 
-      - **Blokované adresy URL**: **Přidat** adresy URL, které chcete zastavit otevřít, bez ohledu na nastavení webového filtru Apple.
-
-        Vyberte **OK** uložte provedené změny.
-
-    - **Jenom konkrétní weby** (pro webový prohlížeč Safari pouze): Tyto adresy URL se přidají do záložek prohlížeče Safari. Uživatel je **pouze** navštěvovat tyto weby; žádné jiné servery lze otevřít. Tuto možnost použijte jenom v případě, že znáte přesný seznam adres URL, ke kterým mají uživatelé přístup.
-
-      - **ADRESA URL**: Zadejte adresu URL webu, který chcete povolit. Zadejte například `https://www.contoso.com`.
-      - **Cesta k záložce**: Zadejte cestu k uložit záložku. Zadejte například `/Contoso/Business Apps`. Pokud cestu nepřidáte, záložka se přidá do výchozí složky záložek na zařízení.
-      - **Název**: Zadejte popisný název záložky.
-
-      Pokud nezadáte žádné adresy URL, pak koncoví uživatelé nemají přístup k žádným webům s výjimkou `microsoft.com`, `microsoft.net`, a `apple.com`. Tyto adresy URL jsou povolené automaticky službou Intune.
+    - **Blokované adresy URL**: **Přidat** adresy URL, které chcete zastavit otevřít, bez ohledu na nastavení webového filtru Apple.
 
       Vyberte **OK** uložte provedené změny.
+
+  - **Jenom konkrétní weby** (pro webový prohlížeč Safari pouze): Tyto adresy URL se přidají do záložek prohlížeče Safari. Uživatel je **pouze** navštěvovat tyto weby; žádné jiné servery lze otevřít. Tuto možnost použijte jenom v případě, že znáte přesný seznam adres URL, ke kterým mají uživatelé přístup.
+
+    - **ADRESA URL**: Zadejte adresu URL webu, který chcete povolit. Zadejte například `https://www.contoso.com`.
+    - **Cesta k záložce**: Zadejte cestu k uložit záložku. Zadejte například `/Contoso/Business Apps`. Pokud cestu nepřidáte, záložka se přidá do výchozí složky záložek na zařízení.
+    - **Název**: Zadejte popisný název záložky.
+
+    Pokud nezadáte žádné adresy URL, pak koncoví uživatelé nemají přístup k žádným webům s výjimkou `microsoft.com`, `microsoft.net`, a `apple.com`. Tyto adresy URL jsou povolené automaticky službou Intune.
+
+    Vyberte **OK** uložte provedené změny.
 
 ## <a name="wallpaper-settings"></a>Nastavení tapety
 
@@ -305,57 +296,6 @@ Pokud profil se žádné image je přiřazený k zařízení pomocí stávajíc�
 
 > [!TIP]
 > Chcete-li zobrazit různé obrázky na zamykací obrazovce a na domovské obrazovce, vytvoření profilu s obrázek zamykací obrazovky. Vytvořte jiný profil s použitím image domovskou obrazovku. Přiřaďte oba profily do skupin uživatelů nebo zařízení s Iosem.
-
-## <a name="bundle-ids-for-built-in-ios-apps"></a>ID sady prostředků pro integrované aplikace pro iOS
-
-Tento seznam zobrazuje ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru.
-
-| ID sady prostředků                   | Název aplikace     | Vydavatel |
-|-----------------------------|--------------|-----------|
-| com.apple.AppStore          | App Store    | Apple     |
-| com.apple.calculator        | Kalkulačka   | Apple     |
-| com.apple.mobilecal         | Kalendář     | Apple     |
-| com.apple.camera            | Fotoaparát       | Apple     |
-| com.apple.mobiletimer       | Hodiny        | Apple     |
-| com.apple.compass           | Kompas      | Apple     |
-| com.apple.MobileAddressBook | Kontakty     | Apple     |
-| com.apple.facetime          | FaceTime     | Apple     |
-| com.apple.DocumentsApp      | Soubory        | Apple     |
-| com.apple.mobileme.fmf1     | Najít přátele | Apple     |
-| com.apple.mobileme.fmip1    | Najít iPhone  | Apple     |
-| com.apple.gamecenter        | Herní centrum  | Apple     |
-| com.apple.mobilegarageband  | GarageBand   | Apple     |
-| com.apple.Health            | Stav       | Apple     |
-| com.apple.Home              | Domů         | Apple     |
-| com.apple.iBooks            | iBooks       | Apple     |
-| com.apple.iMovie            | iMovie       | Apple     |
-| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
-| com.apple.MobileStore       | iTunes Store | Apple     |
-| com.apple.itunesu           | iTunes U     | Apple     |
-| com.apple.Keynote           | Keynote      | Apple     |
-| com.apple.mobilemail        | Mail         | Apple     |
-| com.apple.Maps              | Maps         | Apple     |
-| com.apple.MobileSMS         | Zprávy     | Apple     |
-| com.apple.Music             | Hudba        | Apple     |
-| com.apple.news              | News         | Apple     |
-| com.apple.mobilenotes       | Poznámky        | Apple     |
-| com.apple.Numbers           | Numbers      | Apple     |
-| com.apple.Pages             | Stránky        | Apple     |
-| com.apple.Photo-Booth       | Photo Booth  | Apple     |
-| com.apple.mobileslideshow   | Fotky       | Apple     |
-| com.apple.podcasts          | Podcasty     | Apple     |
-| com.apple.reminders         | Připomínky    | Apple     |
-| com.apple.mobilesafari      | Safari       | Apple     |
-| com.apple.Preferences       | Nastavení     | Apple     |
-| com.apple.SiriViewService   | Siri         | Apple     |
-| com.apple.stocks            | Stocks       | Apple     |
-| com.apple.tips              | Tipy         | Apple     |
-| com.apple.TV                | TV           | Apple     |
-| com.apple.videos            | Videa       | Apple     |
-| com.apple.VoiceMemos        | Diktafon   | Apple     |
-| com.apple.Passbook          | Wallet       | Apple     |
-| com.apple.Bridge            | Sledování        | Apple     |
-| com.apple.weather           | Počasí      | Apple     |
 
 ## <a name="next-steps"></a>Další postup
 

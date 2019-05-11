@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3f5625a84a3d2327a5ccac24ad10d2bb0e48c02
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 69814b91978aa3cd74c4dc239b099883ae402af9
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896627"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764768"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Použití a správa zařízení Zebra s příponami Zebra nastavení mobilních zařízení v Microsoft Intune
 
@@ -30,12 +30,9 @@ ms.locfileid: "59896627"
 
 Intune obsahuje bohatou sadu funkcí, včetně správy aplikací a konfigurace nastavení zařízení. Tyto integrované funkce a nastavení se používají ke správě zařízení s Androidem, které pocházejí od Zebra technologií, označované také jako "Zebra zařízení".
 
-Intune nabízí také další způsoby, jak spravovat nastavení *konkrétní* Zebra zařízení:
+Na zařízeních s Androidem, použijte **Mobility rozšíření (MX)** profily k přizpůsobení nebo přidejte další nastavení specifická pro Zebra.
 
-- Na zařízeních s Androidem Enterprise, použijte **OEMConfig** ke konfiguraci nastavení, které nejsou integrovaná do služby Intune. [Použití a správa zařízení s Androidem Enterprise Zebra s OEMConfig](android-oem-configuration-overview.md) obsahuje další informace.
-- Na zařízeních s Androidem, použijte **Mobility rozšíření (MX)** profily k přizpůsobení nebo přidejte další nastavení specifická pro Zebra.
-
-Tento článek ukazuje, jak použít rozšíření Mobility Zebra (MX) na Zebra zařízení v Microsoft Intune. Chcete-li použít OEMConfig, přejděte na [používat a spravovat zařízení s Androidem Enterprise Zebra s OEMConfig](android-oem-configuration-overview.md).
+Tento článek ukazuje, jak použít rozšíření Mobility Zebra (MX) na Zebra zařízení v Microsoft Intune.
 
 Tato funkce platí pro:
 
@@ -153,5 +150,4 @@ Při příštím zařízení kontroluje aktualizace konfigurace MX profil je nas
 ## <a name="next-steps"></a>Další postup
 
 - [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
-- [Umožňuje spravovat zařízení s Androidem Enterprise Zebra OEMConfig](android-oem-configuration-overview.md).
 - [Řešení potíží s Zebra zařízení pomocí protokolů StageNow](android-zebra-mx-logs-troubleshoot.md).

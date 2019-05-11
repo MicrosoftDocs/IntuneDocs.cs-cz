@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4221250f71df2a6c3c0d310ba25e7021269d1dc
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: c40146f37ff6477663dc63468d1081a73ac2544a
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61515309"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135155"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN na zařízeních s iOSem v Microsoft Intune
 
@@ -45,8 +45,6 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 - **Zscaler**: Použití podmíněného přístupu, a umožňují uživatelům obejít Zscalerem přihlašovací obrazovka, pak musíte integrovat Zscalerem privátní přístup (ZPA) pomocí svého účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
 - **Vlastní VPN**
 
-
-
 > [!NOTE]
 > Společnosti Cisco, Citrix, F5 a Palo Alto oznámily, že v iOSu 12 nebudou starší klienti fungovat. Co nejdříve byste tak měli provést migraci do nových aplikací. Další informace najdete na [blogu technické podpory pro Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2013806&clcid=0x409).
 
@@ -55,7 +53,7 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným typem připojení k síti VPN.  
 
 - **Název připojení**: Tento název koncoví uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **Vlastní název domény** (Zscalerem pouze): Předvyplní aplikace Zscalerem pole s doménou, kterou uživatelé patří do. Například pokud je uživatelské jméno `Joe@contoso.net`, zobrazí se při otevření aplikace v poli statická doména `contoso.net`. Pokud nezadáte název domény, použije se v Azure Active Directory (AD) doménová část hlavního názvu uživatele (UPN).
+- **Vlastní název domény** (Zscalerem pouze): Předvyplní aplikace Zscalerem pole pro přihlášení k doméně, které uživatelé patří do. Například pokud je uživatelské jméno `Joe@contoso.net`, zobrazí se při otevření aplikace v poli statická doména `contoso.net`. Pokud nezadáte název domény, použije se v Azure Active Directory (AD) doménová část hlavního názvu uživatele (UPN).
 - **IP adresa nebo plně kvalifikovaný název domény**: IP adresa nebo plně kvalifikovaný název domény (FQDN) serveru VPN, který napojení na zařízení. Zadejte například `192.168.1.1` nebo `vpn.contoso.com`.
 - **Název organizace v cloudu** (Zscalerem pouze): Zadejte název cloudu, ve kterém je vaše organizace zřízený. Název je v adrese URL, kterou používáte k přihlášení do aplikace Zscaler.  
 - **Metoda ověřování**: Zvolte, jak zařízení ověření vůči serveru VPN. 
@@ -69,22 +67,31 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
 - **Dělené tunelové propojení**: **Povolit** nebo **zakázat** do zařízení mohla rozhodnout, které připojení se má použít, v závislosti na provoz. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
-- **Identifikátor VPN** (vlastní VPN, Zscalerem a Citrix): Identifikátor aplikace VPN používáte a získáte ho od poskytovatele připojení VPN.
+- **Identifikátor VPN** (vlastní VPN Zscalerem a Citrix): Identifikátor aplikace VPN používáte a získáte ho od poskytovatele připojení VPN.
   - **Zadejte páry klíč/hodnota pro vlastní atributy VPN vaší organizace**: Přidejte nebo naimportujte **klíče** a **hodnoty** , který nichž si přizpůsobíte připojení VPN. Nezapomeňte, že tyto hodnoty obvykle dodá poskytovatel připojení VPN.
 
-- **Povolit řízení přístupu k síti (NAC)** (pouze Citrix SSO): Pokud zvolíte **souhlasím**, zařízení je ID zahrnutá v profilu sítě VPN. Toto ID můžete použít k ověření k síti VPN povolit nebo zakázat přístup k síti.
+- **Povolit řízení přístupu k síti (NAC)** (jednotné přihlašování Citrix, F5 přístup): Pokud zvolíte **souhlasím**, zařízení je ID zahrnutá v profilu sítě VPN. Toto ID můžete použít k ověření k síti VPN povolit nebo zakázat přístup k síti.
+
+  **Při použití přístupu F5**, nezapomeňte:
+
+  - Potvrďte, že používáte F5 BIG-IP 13.1.1.5. 14 BIG-IP se nepodporuje.
+  - Integrace BIG-IP pro NAC s Intune. Zobrazit [přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) Průvodce F5.
+  - Povolte NAC v profilu sítě VPN.
 
   **Při použití Citrix SSO s bránou**, nezapomeňte:
 
   - Potvrďte používáte bránu Citrix 12.0.59 nebo vyšší.
   - Potvrďte uživatelům jednotné přihlašování Citrix 1.1.6 nainstalována nebo vyšší na svých zařízeních.
-  - Integrace Citrix brány s Intune pro NAC, jak je popsáno v [integraci Microsoft Intune nebo Enterprise Mobility Suite s NetScaler (LDAP + scénáře jednorázového HESLA)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Příručka pro nasazení Citrix.
+  - Integrace Citrix brány pro NAC s Intune. Najdete v článku [integraci Microsoft Intune nebo Enterprise Mobility Suite s NetScaler (LDAP + scénáře jednorázového HESLA)](https://www.citrix.com/content/dam/citrix/en_us/documents/guide/integrating-microsoft-intune-enterprise-mobility-suite-with-netscaler.pdf) Příručka pro nasazení Citrix.
   - Povolte NAC v profilu sítě VPN.
 
-  Důležité informace:  
+  **Důležité podrobnosti**:  
 
-  - Když je povolené NAC, síť VPN se odpojí každých 24 hodin.
-  - ID zařízení je součástí profilu, ale nebude zobrazen v Intune. Microsoft toto ID nikde neukládá, ani ho nesdílí. Jakmile ho budou partneři VPN toto ID podporovat, může ho získat klient VPN, jako je Citrix SSO, a požádat službu Intune o potvrzení registrace zařízení a vyhovujícího nebo nevyhovujícího profilu sítě VPN.
+  - Když je povolené NAC, síť VPN se odpojí každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
+  - ID zařízení je součástí profilu, ale nebude zobrazen v Intune. Microsoft toto ID nikde neukládá, ani ho nesdílí.
+
+  Pokud ID zařízení je podpora partnerů pro sítě VPN, klient VPN, jako je jednotné přihlašování Citrix, můžete získat ID. Potom se můžete dotazovat Intune potvrďte registraci zařízení, a pokud je profil sítě VPN nebo nesplňují předpisy.
+
   - Pokud chcete toto nastavení odebrat, znovu profil vytvořte, ale nevybírejte při tom **Souhlasím**. Pak profil znovu přiřaďte.
 
 ## <a name="automatic-vpn-settings"></a>Automatické nastavení sítě VPN
@@ -94,10 +101,10 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
   - Pokud používáte profily **VPN pro jednotlivé aplikace** pro iOS s typem Pulse Secure nebo Vlastní VPN, zvolte tunelování v aplikační vrstvě (proxy aplikace) nebo na úrovni paketů (tunel pro pakety). U tunelování v aplikační vrstvě nastavte hodnotu **ProviderType** na **app-proxy**, u tunelování na úrovni paketů na **packet-tunnel**. Pokud si nejste jistí, jakou hodnotu použít, podívejte se do dokumentace poskytovatele připojení VPN.
   - **Adresy URL Safari, které aktivují tuto síť VPN**: Přidejte jeden nebo více adres URL webů. Při návštěvě těchto adres URL pomocí prohlížeče Safari na zařízení se automaticky naváže připojení k VPN.
 
-- **VPN na vyžádání**: Nakonfigurujte podmíněná pravidla, která řídí zahájení připojení k síti VPN. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo můžete vytvořit podmínku, která zajistí, že se připojení VPN neaktivuje, pokud zařízení nemá přístup k zadané doméně hledání DNS.
+- **VPN na vyžádání**: Nakonfigurujte podmíněná pravidla, která řídí zahájení připojení k síti VPN. Můžete třeba vytvořit podmínku, že se připojení VPN použije, jen pokud zařízení není připojené k firemní síti Wi-Fi. Nebo můžete vytvořit podmínku. Pokud zařízení nemá přístup k zadané doméně hledání DNS zadáte a připojení VPN není spuštěna.
 
   - **Identifikátory SSID nebo domény hledání DNS**: Vyberte, jestli této podmínce používají bezdrátové sítě **SSID**, nebo **domény hledání DNS**. Zvolte **Přidat** a nakonfigurujte minimálně jeden identifikátor SSID nebo doménu hledání.
-  - **Test řetězce adresy URL**: Volitelné. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení s tímto profilem otevře tuto adresu URL bez přesměrování, zahájí se připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje dodržování předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost sítě VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL přes síť VPN.
+  - **Test řetězce adresy URL**: Volitelné. Zadejte adresu URL, kterou pravidlo použije pro účely testování. Pokud zařízení s tímto profilem přistupuje k této adrese URL bez přesměrování, je spustit připojení VPN. A zařízení se připojí k cílové adrese URL. Uživatel neuvidí testovací web řetězce adresy URL. Příkladem testu řetězce adresy URL je adresa auditujícího webového serveru, který zkontroluje dodržování předpisů zařízením předtím, než ho připojí k VPN. Další možností je, že adresa URL otestuje schopnost sítě VPN připojit se k webu předtím, než se zařízení připojí k cílové adrese URL přes síť VPN.
   - **Akce domény**: Zvolte jednu z následujících možností:
     - Připojit v případě potřeby
     - Nepřipojovat

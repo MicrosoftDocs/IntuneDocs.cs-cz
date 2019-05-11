@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b2a5e2bbd6d06cc4ec0cf71ee815229b01040a8
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 70638228875f1fb063a2ea22dc424c00f3940a30
+ms.sourcegitcommit: ef4bc7318449129af3dc8c0154e54a264b7bf4e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61490648"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65197629"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Vytvoření standardních hodnot zabezpečení Windows 10 v Intune
 
@@ -61,7 +61,7 @@ Při použití spoluspravovaná zařízení, je nutné přepnout **konfigurace z
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
-2. Vyberte **směrné plány zabezpečení (preview)**. Seznam dostupných standardních hodnot je k dispozici. Při přidání více směrných plánů, zobrazí se tady:
+2. Vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)**. Seznam dostupných standardních hodnot je k dispozici. Při přidání více směrných plánů, zobrazí se tady:
 
     ![Podívejte se do seznamu standardních hodnot zabezpečení aktuálně k dispozici v Intune](./media/security-baselines/available-baselines.png)
 

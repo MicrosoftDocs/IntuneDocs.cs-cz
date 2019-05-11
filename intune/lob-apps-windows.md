@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca41e12136911cc0aecb6968a949fb738e2e2d77
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 0eadff455a25a22d53d58d87790a356072f9db66
+ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64764723"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -63,7 +63,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
     - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
     - **Adresa URL informací**: Volitelně zadejte adresu URL webu, který obsahuje informace o aplikaci. Adresa URL se zobrazí na portálu společnosti.
     - **Soukromá adresa URL**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů pro aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít soubor .msi spuštění. Příkladem je **/q**.
+    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít soubor .msi spuštění.  Příkladem je **/q**. Nezahrnují program msiexec s odkazem příkaz nebo argumenty, jako například **/i** nebo **/x**, jako jsou automaticky použity. Další informace najdete v tématu [možnosti příkazového řádku](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). 
     - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
     - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
     - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.

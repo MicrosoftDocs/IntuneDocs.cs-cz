@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 4/19/2019
+ms.date: 05/01/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e642573311d1452a970dce798dabdc705e4a44f7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 751d89ef023bea07d3c8bdb69904605d88c9e0b6
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504196"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135227"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy v Intune
 
@@ -103,9 +103,6 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
          - Zadejte libovolné **Další příjemce** výběrem skupin.
     
     - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Tato akce vynutí, aby uživatel zadal kód PIN nebo hesla k odemknutí zařízení. 
-
-    - **Vyřazení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, odeberte všechna podniková data mimo zařízení a odeberte zařízení ze správy Intune. Pokud chcete zabránit náhodnému vymazání zařízení, tato akce podporuje minimální plán **30** dnů.  
-
     
 5. Konfigurace **plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
 

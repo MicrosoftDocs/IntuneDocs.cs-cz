@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/03/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8b05b7f2a0b56321023bc8444528578aeface0b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 491610fcefa1b20159ebfe487c9e2d95a6f5e7c6
+ms.sourcegitcommit: 586114e1beee31aa8553f69c0ba4d731afcb45e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508539"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65402070"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -189,7 +189,7 @@ K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zař
 3. Přejděte na **Nastavení** a zadejte soubor .cer kořenového certifikátu CA, který jste předtím vyexportovali.
 
    > [!NOTE]
-   > V závislosti na platformě, kterou jste zvolili v **kroku 3**, můžete nebo nemusíte mít možnost vybrat **cílové úložiště** certifikátu.
+   > V závislosti na platformě, kterou jste zvolili v **kroku 2**, může nebo nemusí mít možnost vybrat **cílové úložiště** pro certifikát.
 
    ![Vytvoření profilu a nahrání důvěryhodného certifikátu](media/certificates-pfx-configure/certificates-pfx-configure-profile-fill.png) 
 
@@ -248,16 +248,21 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 ## <a name="whats-new-for-connectors"></a>Co je nového pro konektory
 Aktualizace certifikátu dva konektory jsou vydávány pravidelně. Při aktualizaci konektoru, si přečíst o změnách tady. 
 
-*Konektor certifikáty PFX* [podporuje automatické aktualizace](#requirements), zatímco nástroje Intune Certificate Connector je aktualizovat ručně.
+*Konektoru certifikátů PFX pro Microsoft Intune* [podporuje automatické aktualizace](#requirements), zatímco *Intune Certificate Connector* je aktualizovat ručně.
+
+### <a name="may-6-2019"></a>6. května 2019
+- **Konektor certifikátů PFX pro Microsoft Intune – verze 6.1905.0.402**  
+  Změny v této verzi:  
+  - Interval dotazování pro konektor je omezený ze 5 minut na 30 sekund.
  
 ### <a name="april-2-2019"></a>2. dubna 2019
-- **Certifikát konektoru ndes služby – verze 6.1904.1.0**  
+- **Intune Certificate Connector – verze 6.1904.1.0**  
   Změny v této verzi:  
   - Opravili jsme problém, kde tento konektor se nemusí podařit registrovat do Intune po přihlášení ke službě connector pomocí účtu globálního správce.  
   - Zahrnuje opravy spolehlivost k odvolání certifikátů.  
   - Zahrnuje opravy výkonu zvýšit rychlost zpracování žádosti o certifikát PKCS.  
 
-- **Konektor certifikáty PFX – verze 6.1904.0.401**
+- **Konektor certifikátů PFX pro Microsoft Intune – verze 6.1904.0.401**
   > [!NOTE]  
   > Automatickou aktualizaci pro tuto verzi konektoru PFX není k dispozici do 11. dubna 2019.  
 
