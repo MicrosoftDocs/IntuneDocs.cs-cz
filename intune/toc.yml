@@ -397,36 +397,6 @@
             - name: Mobile Threat Defense
               href: mobile-threat-defense.md
               items:
-                - name: Nastavení Lookoutu
-                  href: lookout-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Lookoutu a Intune
-                      href: lookout-mtd-connector-integration.md
-                - name: Nastavení Symantecu
-                  href: skycure-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Symantecu a Intune
-                      href: skycure-mtd-connector-integration.md
-                - name: Nastavení Check Pointu
-                  href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace Check Pointu a Intune
-                      href: checkpoint-sandblast-mobile-mtd-connector-integration.md
-                - name: Nastavení služby Zimperium
-                  href: zimperium-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služeb Zimperium a Intune
-                      href: zimperium-mtd-connector-integration.md
-                - name: Nastavení služby Pradeo
-                  href: pradeo-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služeb Pradeo a Intune
-                      href: pradeo-mtd-connector-integration.md
-                - name: Nastavení služby Better Mobile
-                  href: better-mobile-threat-defense-connector.md
-                  items:
-                    - name: Integrace služby Better Mobile se službou Intune
-                      href: better-mobile-mtd-connector-integration.md
                 - name: Nastavení Intune pro MDM
                   items:
                     - name: Přidání aplikací MTD
@@ -435,6 +405,43 @@
                       href: mtd-device-compliance-policy-create.md
                     - name: Povolení MTD v Intune
                       href: mtd-connector-enable.md
+                - name: Aplikace MTD
+                  items:
+                    - name: Nastavení Lookoutu
+                      href: lookout-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace Lookoutu a Intune
+                          href: lookout-mtd-connector-integration.md
+                    - name: Nastavení Symantecu
+                      href: skycure-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace Symantecu a Intune
+                          href: skycure-mtd-connector-integration.md
+                    - name: Nastavení Check Pointu
+                      href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace Check Pointu a Intune
+                          href: checkpoint-sandblast-mobile-mtd-connector-integration.md
+                    - name: Nastavení služby Zimperium
+                      href: zimperium-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace služeb Zimperium a Intune
+                          href: zimperium-mtd-connector-integration.md
+                    - name: Nastavení služby Pradeo
+                      href: pradeo-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace služeb Pradeo a Intune
+                          href: pradeo-mtd-connector-integration.md
+                    - name: Nastavení služby Better Mobile
+                      href: better-mobile-threat-defense-connector.md
+                      items:
+                        - name: Integrace služby Better Mobile se službou Intune
+                          href: better-mobile-mtd-connector-integration.md
+                    - name: Nastavení Sophos Mobile
+                      href: sophos-mtd-connector.md
+                      items:
+                        - name: Integrace Sophos Mobile a Intune
+                          href: sophos-mtd-connector-integration.md
             - name: Ochrana ATP v programu Windows Defender
               href: advanced-threat-protection.md
             - name: Základní nastavení zabezpečení
@@ -709,6 +716,8 @@
                   href: wi-fi-settings-ios.md
                 - name: Vlastní
                   href: custom-settings-ios.md
+                - name: ID sad pro integrované aplikace
+                  href: bundle-ids-built-in-ios-apps.md
         - name: macOS
           items:
             - name: Nastavení zásad dodržování předpisů

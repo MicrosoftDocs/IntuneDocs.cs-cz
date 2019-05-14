@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc82653355ae57830684270fc8f7b9f1f3ae2491
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: a013698e56b342953e52296270e7571a257db860
+ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506988"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65135081"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilů v Microsoft Intune  
 
@@ -35,7 +35,7 @@ Tento článek vás provede obou možností monitorování.
 
 Když monitorujete směrný plán, získejte přehled o stavu zabezpečení vašich zařízení, na základě doporučení služby od Microsoftu. Tyto informace z podokna přehledu standardních hodnot zabezpečení můžete zobrazit v konzole Intune.  Trvá až 24 hodin se zobrazí po prvním přiřazení směrného plánu data. Novější změny trvat až 6 hodin se zobrazí.  
 
-Chcete-li zobrazit data monitorování standardních hodnot a zařízení, přihlaste se k [portál Intune](https://aka.ms/intuneportal). V dalším kroku vyberte **směrné plány zabezpečení (preview)** vyberte směrný plán a zobrazení **přehled** podokně.
+Chcete-li zobrazit data monitorování standardních hodnot a zařízení, přihlaste se k [portál Intune](https://go.microsoft.com/fwlink/?linkid=2090973). V dalším kroku vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)** vyberte směrný plán a zobrazení **přehled** podokně.
 
 **Přehled** podokně nabízí dvě metody k monitorování stavu:
 - **Zobrazení zařízení** – souhrn kolik zařízení je v každé kategorii stav směrného plánu.  
@@ -55,7 +55,7 @@ Podokno s přehledem zobrazí shrnutí graf na základě počtu zařízení maj�
 
 Pokud má zařízení jiný stav z různých kategorií podle směrného plánu, zařízení je reprezentován jeden stav. Stav, který představuje zařízení je převzata z následujícího pořadí priorit: **Chybně nakonfigurovaný**, **neodpovídá směrného plánu**, **není k dispozici**, **směrného plánu odpovídá**.  
 
-Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný.*.  
+Například, pokud zařízení obsahuje nastavení jsou klasifikovány jako *nesprávně nakonfigurované* a jedno nebo více nastavení, které jsou klasifikovány jako *neodpovídá směrného plánu*, zařízení je klasifikován tak *správněnakonfigurovaný*.  
 
 Můžete kliknout na graf na Procházet a zobrazit seznam zařízení s různými stavy. Jednotlivá zařízení pak můžete vybrat ze seznamu zobrazíte podrobnosti o jednotlivých zařízeních. Příklad:
 - Vyberte **konfigurace zařízení** > vyberte profil s chybový stav:
