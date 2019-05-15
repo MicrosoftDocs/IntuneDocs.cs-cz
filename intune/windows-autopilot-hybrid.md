@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2dd523b1c624de9fbdb12cc4f90cafa5c4395250
-ms.sourcegitcommit: b4483c8476a209de83102e8993d8074dbb323493
+ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
+ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65527196"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619446"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -211,7 +211,14 @@ Trvá přibližně 15 minut pro stav profilu zařízení změnit z *Nepřiřazen
 1. Vyberte **nastavení**a potom zadejte **předpona názvu počítače**, **název domény**a (volitelně) **organizační jednotka** v [Formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Vyberte **OK** > **vytvořit**.  
     Profil se vytvoří a zobrazí v seznamu.
-1. Pokud chcete profil přiřadit, postupujte podle kroků v části [Přiřazení profilu zařízení](device-profile-assign.md#assign-a-device-profile). 
+1. Pokud chcete přiřadit profil, postupujte podle kroků v části [profil zařízení přiřadit](device-profile-assign.md#assign-a-device-profile) a přiřaďte profil do stejné skupiny použité v tomto kroku [vytvoření skupiny zařízení](windows-autopilot-hybrid.md#create-a-device-group)
+   - Nasazení víc profilů připojení k doméně
+   
+     a. Vytvoření dynamické skupiny, která zahrnuje všechna svá zařízení Autopilot konkrétní profilu nasazení Autopilotu, zadejte (device.enrollmentProfileName - eq "Název profilu Autopilot"). 
+     
+     b. Nahraďte "Název profilu Autopilot" zobrazovaný název profilu vytvořené v rámci [vytvoření a přiřazení profilu nasazení Autopilotu](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
+     
+     c. Vytvoření více profilů nasazení Autopilotu a přiřadit profil zadaný do této dynamické skupiny zařízení.
 
 > [!NOTE]
 > Pojmenování funkce pro Windows Autopilotu pro hybridní připojení k Azure AD nepodporuje proměnné například sériového portu % a podporují pouze předpony pro název počítače.

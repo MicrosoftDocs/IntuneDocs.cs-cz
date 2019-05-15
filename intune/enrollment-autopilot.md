@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b6355724a0c518cba59f70167adbcf4208fa18a
-ms.sourcegitcommit: ef4bc7318449129af3dc8c0154e54a264b7bf4e5
+ms.openlocfilehash: 6545724294eefc83789f56f851549c0b5fee7f22
+ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197615"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626436"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -151,15 +151,17 @@ Požadavky: Portál Azure Active Directory společnosti byl nakonfigurován a Wi
 
 ## <a name="delete-autopilot-devices"></a>Odstranění zařízení Autopilot
 
-Zařízení Windows Autopilot, která nejsou zaregistrovaná, můžete odstranit.
+Můžete odstranit zařízení Windows Autopilot, která nejsou zaregistrovaná v Intune:
 
-1. Pokud jsou zařízení registrována v Intune, musíte je nejdřív [odstranit z portálu služby Azure Active Directory](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
+- Odstranit zařízení z Windows Autopilot v **registrace zařízení** > **registrace Windows** > **zařízení**. Vyberte zařízení, kterou chcete odstranit, a pak zvolte **odstranit**. Odstranění zařízení Windows Autopilot může trvat několik minut.
 
-2. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení**.
+Úplné odebrání zařízení z vašeho tenanta, musíte odstranit zařízení v Intune, zařízení Azure Active Directory a záznamů zařízení Windows Autopilot. To všechno můžete dělat v Intune:
 
-3. V části **Zařízení Windows Autopilot** vyberte zařízení, která chcete odstranit, a pak vyberte **Odstranit**.
+1. Pokud jsou daná zařízení zaregistrovaná v Intune, je nutné nejprve [je odstranit z okna Intune všechna zařízení](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-4. Potvrďte odstranění pomocí **Ano**. Odstranění může trvat několik minut.
+2. Umožňuje odstraňovat devices v Azure Active Directory zařízení na **zařízení** > **podpora k zařízením Azure AD**.
+
+3. Odstranit zařízení z Windows Autopilot v **registrace zařízení** > **registrace Windows** > **zařízení**. Vyberte zařízení, kterou chcete odstranit, a pak zvolte **odstranit**. Odstranění zařízení Windows Autopilot může trvat několik minut.
 
 ## <a name="using-autopilot-in-other-portals"></a>Použití Autopilotu na jiných portálech
 Pokud nemáte zájem o správu mobilních zařízení, můžete Autopilot používat na jiných portálech. I když je používání na jiných portálech možné, doporučujeme ke správě nasazení Autopilotu používat jenom Intune. Pokud používáte Intune a jiný portál, nemůže Intune:  
