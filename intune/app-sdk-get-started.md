@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2019
+ms.date: 04/29/2019
 ms.topic: reference
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6389bc9790fce45604887bc2d73b3d5d8c35c45
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6f2729918a164989714f88564ef0f42f7f319f16
+ms.sourcegitcommit: d21cf21dee15b11b8206bf92cc602b082e9846a5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505968"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709049"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -164,7 +164,7 @@ Po dokončení nezbytných kroků k integraci vaší aplikace pro iOS nebo Andro
     
     * Pokud testujete aplikaci na mobilním zařízení pomocí účtu koncového uživatele, ujistěte se, že jste udělili tento účet licenci Intune na webu Microsoft 365 admin center po přihlášení pomocí účtu správce, naleznete v tématu [licence přiřadit Microsoft Intune ](https://docs.microsoft.com/en-ca/intune/licenses-assign).
 
-* **Zásady ochrany aplikací Intune**: Chcete-li otestovat aplikaci se všechny zásady Intune app protection, byste měli vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md).
+* **Zásady ochrany aplikací Intune**: Chcete-li otestovat aplikaci se všechny zásady Intune app protection, byste měli vědět, jaké chování je očekávané pro každé nastavení zásad. Více najdete v popisech [zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md) a [zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md). Pokud vaše aplikace obsahuje integrované sady Intune SDK, ale není uvedena na webu Azure Portal jako cílové aplikaci ještě, můžete zacílíte ho pomocí zásad tak, že vyberete "+ Další aplikací" možnost a ID sady prostředků (iOS) nebo názvu balíčku (Android) do textového pole.
 
 * **Řešení potíží s**: Pokud narazíte na nějaké problémy při ručním testování vaší aplikace instalace uživatelské prostředí, přečtěte si téma [řešit problémy při instalaci aplikace](troubleshoot-app-install.md). 
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b17ab1fb385bb1079a834f0a6fa690223ab64163
-ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
+ms.openlocfilehash: 2e2dfcaee050ad506da225e179efbc5fc49f1c89
+ms.sourcegitcommit: ca0f48982e49e90bc14fac5575077445e027f728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65627237"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65712652"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace Microsoft spravovaná aplikace z domovské obrazovky pro Android Enterprise
 
@@ -59,10 +59,10 @@ V následující tabulce jsou uvedeny spravované domovskou obrazovku k dispozic
 
 | Konfigurační klíč | Typ hodnoty | Výchozí hodnota | Popis |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nastavte velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace se umístí na spravované domovské obrazovce. Můžete nastavit počet aplikace řádky a sloupce, které chcete definovat velikost mřížky v následujícím formátu (`rows;column`). Pokud definujete velikost mřížky, maximální počet aplikací, které budou zobrazeny po sobě na domovské obrazovce by být počet řádků, které nastavíte, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce by počet sloupců, které jste nastavili. |
+| Nastavte velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace se umístí na spravované domovské obrazovce. Můžete nastavit počet aplikace řádky a sloupce, které chcete definovat velikost mřížky v následujícím formátu `rows;columns`. Pokud definujete velikost mřížky, maximální počet aplikací, které budou zobrazeny po sobě na domovské obrazovce by být počet řádků, které nastavíte, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce by počet sloupců, které jste nastavili. |
 | Povolit hlavičky obrazovky | BOOL | TRUE | Umožňuje horním navigačním panelu pro různá zobrazení, které nabízí spravované domovské obrazovky jako jsou karty informačního kanálu nebo informačního kanálu. Pokud toto nastavení povolíte, uživatelům zařízení se zobrazí hlavičku. |
-| -Aktivovat zařízení stavového řádku | BOOL | TRUE | Umožňuje stavovém řádku v domovské obrazovky (hlavní panel, který zobrazuje aktuální počet připojení jako Wi-Fi a atd.). Pokud povolíte tuto konfiguraci klíče, koncový uživatel bude moci zobrazit ikony zobrazené na stavové řádky, které představují připojení a aktivní aplikace. |
-| Povolit oznámení "BADGE" oznámení | BOOL | FALSE | Povolí oznámení Odznáček ikony aplikace, který zobrazuje počet. nové oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení, oznámení v aplikacích používajících nepřečtená oznámení. Pokud tuto konfiguraci klíče zakázáno, koncový uživatel neuvidí žádné oznámení do aplikací, které může být označené jako nepřečtená oznámení. |
+| Povolit zařízení stavového řádku | BOOL | TRUE | Umožňuje stavovém řádku v domovské obrazovky (hlavní panel, který zobrazuje aktuální počet připojení jako Wi-Fi a atd.). Pokud povolíte tuto konfiguraci klíče, koncový uživatel bude moci zobrazit ikony zobrazené na stavové řádky, které představují připojení a aktivní aplikace. |
+| Povolit oznámení "BADGE" oznámení | BOOL | FALSE | Povolí oznámení Odznáček ikony aplikace, který zobrazuje počet nových oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení, oznámení v aplikacích používajících nepřečtená oznámení. Pokud tuto konfiguraci klíče zakázáno, koncový uživatel neuvidí žádné oznámení do aplikací, které může být označené jako nepřečtená oznámení. |
 | Domovská stránka zámek obrazovky | BOOL | TRUE | Odebere schopnost koncový uživatel pohyb ikony aplikace na domovské obrazovce. Pokud povolíte tuto konfiguraci klíče, uzamknou ikony aplikace na domovské obrazovce a koncový uživatel nebude moci přetažení do různých mřížky polohy na domovskou obrazovku. Pokud `false`, koncoví uživatelé budou moci pohyb ikony aplikace a webový odkaz na na spravované domovskou obrazovku.  |
 | Nastavit tapetu zařízení | řetězec | Výchozí | Umožňuje nastavit tapetu podle vašeho výběru tak, že zadáte adresu URL obrázku, který chcete nastavit jako tapetu. |
 | Nastavte velikost ikony aplikace | integer | 2 | Umožňuje nastavit velikost ikony pro aplikace na domovské obrazovce. Můžete použít následující hodnoty v této konfiguraci pro různé velikosti - 0 (nejmenší), 1 (malé), 2 (Regular), 3 (velké) a 4 (největší). |
@@ -85,7 +85,7 @@ V následující tabulce jsou uvedeny spravované domovskou obrazovku k dispozic
 | Neaktivní doba umožňující spořič obrazovky | integer | 30 | Počet sekund, po které zařízení neaktivní před aktivací spořič obrazovky. Pokud je nastaveno na 0, zařízení nikdy přejde do režimu spořič obrazovky. |
 | Média detekovat před zobrazením spořič obrazovky | BOOL | TRUE | Zvolte, jestli obrazovku zařízení by měl obsahovat spořič obrazovky Pokud je na zařízení přehrávání audio/video. Je-li nastavena hodnota true, zařízení nebude možné přehrát zvuk/video, bez ohledu na hodnotu v **inactive_time_to_show_scree_saver**. Pokud nastavena na hodnotu false, zobrazí obrazovku zařízení spořič obrazovky podle hodnotu nastavenou v **inactive_time_to_show_screen_saver**.   |
 | Povolit virtuální tlačítko Domů | BOOL | FALSE | Zapnout toto nastavení `True` koncový uživatel přístup k domovské tlačítko na spravované domovské obrazovky, který vrátí uživatelem na domovskou obrazovku spravované z aktuální úlohy jsou v.  |
-| Typ virtuální tlačítko Domů | řetězec | Swipe_up | Použití **swipe_up** pro přístup k domovské tlačítko s potáhnutí prstem nahoru gest. Použití **float** pro přístup k rychlé, trvalé tlačítko Domů, které koncový uživatel může přesouvat na obrazovce. |
+| Typ virtuální tlačítko Domů | řetězec | swipe_up | Použití **swipe_up** pro přístup k domovské tlačítko s potáhnutí prstem nahoru gest. Použití **float** pro přístup k rychlé, trvalé tlačítko Domů, které koncový uživatel může přesouvat na obrazovce. |
 | Baterie a signálem řádku indikátoru | BOOL | Pravda  | Povolením tohoto nastavení `True` zobrazí panel indikátor sílu baterie a signálu. |
 | Heslo režimu uzamčení úloh ukončení | řetězec |   | Zadejte 4-6místným číselným kódem pomocí dočasně vyřadit z režimu uzamčení úloh odstraňování potíží. |
 | Zobrazit nastavení Wi-Fi | BOOL | FALSE | Povolením tohoto nastavení `True` umožňuje koncový uživatel můžete zapnout nebo vypnout Wi-Fi nebo se připojit k různým sítím Wi-Fi.  |

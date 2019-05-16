@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/16/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57527d0b1825d0e8d3fefb63d1b960ab3fb5c676
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cac92aeac895201459e692aae164f51dab10dfb0
+ms.sourcegitcommit: ca0f48982e49e90bc14fac5575077445e027f728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508119"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65712624"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -49,38 +49,53 @@ Propojení služby Intune s Jamf Pro můžete:
 
 ## <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory
 
-1. V [webu Azure portal](https://portal.azure.com), přejděte na stránku **Azure Active Directory** > **registrace aplikací**.
-2. Vyberte **+ registrace nové aplikace**.
-3. Zadejte **Zobrazovaný název**, jako například **Podmíněný přístup Jamf**.
-4. Vyberte **webovou aplikaci nebo API**.
-5. Pomocí adresy URL instance Jamf Pro zadejte **přihlašovací adresu URL**.
-6. Vyberte **Vytvořit**. Aplikace se vytvoří a na portálu zobrazí podrobnosti o aplikaci.
-7. Uložit kopii **ID aplikace** pro novou aplikaci. Toto ID je zadat v pozdějším postupu. V dalším kroku vyberte **nastavení** a přejděte na **přístup přes rozhraní API** > **klíče**.
-8. Na *klíče* podokně, zadejte **popis**, jak dlouho se má čekat, než **Expires**a pak vyberte **Uložit** pro vygenerování aplikace Klíč (hodnota).
+1. V [webu Azure portal](https://portal.azure.com), přejděte na stránku **Azure Active Directory** > **registrace aplikací**a pak vyberte **registrace nové**. 
 
-   > [!IMPORTANT]
-   > Klíč aplikace se zobrazí pouze jednou během tohoto procesu. Nezapomeňte ho uložit, abyste ho měli snadno k dispozici.
+2. Na **zaregistrovat aplikaci** stránky, zadejte následující podrobnosti:
+   - V **název** části, zadejte název smysluplné aplikace, například **podmíněný přístup Jamf**.
+   - Pro **podporovaných typů účtu** vyberte **účty v libovolném adresáři organizace**. 
+   - Pro **identifikátor URI pro přesměrování**, ponechte výchozí Web a potom zadejte adresu URL instance Jamf Pro.  
 
-8. Na *nastavení* podokno pro aplikaci, přejděte na **přístup přes rozhraní API** > **požadovaná oprávnění**. Vyberte všechna stávající oprávnění a potom klikněte na tlačítko **odstranit** a odstraňte všechna oprávnění. Odstraňuje se stávající oprávnění je nutné přidat nové oprávnění a aplikace funguje, pouze pokud má jediné požadované oprávnění.  
-9. Chcete-li přiřadit nové oprávnění, vyberte **+ přidat** > **vyberte rozhraní API** > **rozhraní API Microsoft Intune**a potom klikněte na **vyberte**.
-10. Na *povolit přístup z* vyberte **odesílat atributy zařízení do Microsoft Intune** a potom klikněte na tlačítko **vyberte**a potom **provádí**.
-11. Na *požadovaná oprávnění* vyberte **udělit oprávnění** a potom **Ano** použít potřebná oprávnění k aplikaci.
+3. Vyberte **zaregistrovat** vytvořit aplikaci a otevřete stránku přehled pro novou aplikaci.  
+
+4. V aplikaci **přehled** stránky, zkopírujte **ID aplikace (klient)** hodnotu a uložte ho pro pozdější použití. V postupech novější tuto hodnotu budete potřebovat.  
+
+5. Vyberte **certifikáty a tajné kódy** pod **spravovat**. Vyberte **nový tajný kód klienta** tlačítko. Zadejte hodnotu do **popis**, vyberte možnosti pro **Expires** a zvolte **přidat**.
+
+   > [!IMPORTANT]  
+   > Než odejdete z této stránky, zkopírujte hodnotu tajný kód klienta a poznamenejte si ho pro pozdější použití. Je třeba tuto hodnotu v pozdější postupy. Tato hodnota není k dispozici, bez nutnosti opětovného vytvoření registraci aplikace.  
+
+6. Vyberte **oprávnění k rozhraní API** v části Správa.  Vyberte existující oprávnění a pak vyberte **odebrat oprávnění** odstranit tato oprávnění. Odebrání všech existujících oprávnění je nutné, protože přidáte nová oprávnění a aplikace funguje, pouze pokud má jediné požadované oprávnění.  
+
+7. Chcete-li přiřadit nové oprávnění, vyberte **přidat oprávnění**. Na **žádosti rozhraní API oprávnění** stránce **Intune**a pak vyberte **oprávnění aplikace**. Zaškrtněte políčko pro **update_device_attributes**.  
+
+   Vyberte **přidejte oprávnění** tuto konfiguraci uložíte.  
+
+8. Na **oprávnění k rozhraní API** stránce **udělit souhlas správce služby pro Microsoft**a pak vyberte Ano.  
+
+   Byl dokončen proces registrace aplikace ve službě Azure AD.
+
 
     > [!NOTE]
-    > Pokud klíč aplikace vyprší, musíte vytvořit nový klíč aplikace v Microsoft Azure a pak aktualizovat data podmíněného přístupu v Jamf Pro. Azure umožňuje mít aktivní starý klíč i nový klíč, aby se zabránilo přerušení služeb.
+    > Pokud vyprší platnost tajného klíče klienta, musíte vytvořit nový tajný kód klienta v Azure a pak aktualizovat data podmíněného přístupu v Jamf Pro. Azure umožňuje mít oba starý tajných kódů a nový klíč aktivní, aby se zabránilo přerušení služeb.
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf Pro
 
-1. V [webu Azure portal](https://portal.azure.com), přejděte na stránku **Microsoft Intune** > **dodržování předpisů zařízením** > **Správa partnerského zařízení**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=20909)a přejděte na **Microsoft Intune** > **dodržování předpisů zařízením** > **Správa partnerského zařízení**.
+
 2. Povolte konektor dodržování předpisů pro Jamf vložením ID aplikace, který jste uložili během předchozího postupu do **Jamf Azure Active Directory App ID** pole.
+
 3. Vyberte **Uložit**.
 
 ## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurace integrace Microsoft Intune v Jamf Pro
 
 1. V Jamf Pro přejděte do části **Global Management (Globální správa)** > **Conditional Access (Podmíněný přístup)**. Klikněte na tlačítko **Edit** (Upravit) na kartě **Microsoft Intune Integration** (Integrace Microsoft Intune).
+
 2. Zaškrtněte políčko **Enable Microsoft Intune Integration** (Povolit integraci Microsoft Intune).
-3. Zadejte požadované informace o vašem tenantovi Azure včetně polí **Location (Umístění)**, **Domain name (Název domény)** a **Application ID (ID aplikace)** a **Application Key (Klíč aplikace)**, která jste uložili v předchozích krocích.
-4. Vyberte **Uložit**. Jamf Pro otestuje nastavení a ověří úspěšné propojení.
+
+3. Zadejte požadované informace o vašem tenantovi Azure, včetně **umístění**, **název domény**, **ID aplikace**a hodnota *klienta tajný kód* , že jste si uložili při vytváření aplikace ve službě Azure AD.  
+
+4. Vyberte **Uložit**. Jamf Pro otestuje nastavení a ověří úspěchu.
 
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Nastavení zásad dodržování předpisů a registrace zařízení
 
