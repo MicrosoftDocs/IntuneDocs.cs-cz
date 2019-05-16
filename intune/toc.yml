@@ -552,6 +552,8 @@
               href: app-configuration-policies-use-ios.md
             - name: Android spravovaná zařízení
               href: app-configuration-policies-use-android.md
+            - name: Aplikace Managed Home Screen pro Android Enterprise
+              href: app-configuration-managed-home-screen-app.md
             - name: Spravované aplikace
               href: app-configuration-policies-managed-app.md
             - name: Zřizovací profily aplikací pro iOS
