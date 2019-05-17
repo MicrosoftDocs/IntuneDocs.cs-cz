@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 24e783bc4586709d0cde6a2ebd19c2b5ca30ab6b
-ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
+ms.openlocfilehash: 23a211d48a38cdffb909ceaf611a9939b5ac82f0
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135126"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733200"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -153,6 +153,8 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     > Aplikaci Win32 můžete nakonfigurovat tak, aby se nainstalovala v kontextu **uživatele** nebo **systému**. Kontext **Uživatel** se vztahuje pouze k danému uživateli. Kontext **Systém** se vztahuje ke všem uživatelům zařízení s Windows 10.
     >
     > Koncoví uživatelé nemusí být kvůli instalaci aplikací Win32 přihlášení k zařízení.
+    > 
+    > Win32 aplikaci nainstalovat a odinstalovat se spustí v části oprávnění správce (ve výchozím nastavení) Pokud je aplikace nastavena k instalaci v kontextu uživatele a koncový uživatel na zařízení má oprávnění správce.
 
 4.  Až to budete mít, vyberte **OK**.
 

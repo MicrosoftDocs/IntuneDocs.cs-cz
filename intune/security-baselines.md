@@ -1,11 +1,11 @@
 ---
 title: Použijte základní nastavení zabezpečení v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Přidat nebo nakonfigurovat nastavení doporučené skupiny zabezpečení k ochraně uživatelů a dat na zařízeních pomocí Microsoft Intune pro správu mobilních zařízení. Povolit nástroj bitlocker, konfigurace rozšířené ochrany před internetovými útoky programu Windows Defender, řídit aplikaci Internet Explorer, použijte SmartScreen, nastavení místní zásady zabezpečení, vyžadovat heslo, blokovat soubory stažené z Internetu a další.
+description: Přidat nebo nakonfigurovat nastavení doporučené skupiny zabezpečení k ochraně uživatelů a dat na zařízeních pomocí Microsoft Intune pro správu mobilních zařízení. Povolit nástroj BitLocker, konfigurace rozšířené ochrany před internetovými útoky Defender Microsoft, řídit aplikaci Internet Explorer, použijte SmartScreen, nastavení místní zásady zabezpečení, vyžadovat heslo, blokovat soubory stažené z Internetu a další.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70638228875f1fb063a2ea22dc424c00f3940a30
-ms.sourcegitcommit: ef4bc7318449129af3dc8c0154e54a264b7bf4e5
+ms.openlocfilehash: 9dd289535ba4276b1bca21044d362172517b07e0
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65197629"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65732545"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Vytvoření standardních hodnot zabezpečení Windows 10 v Intune
 
@@ -44,9 +44,19 @@ Základní nastavení zabezpečení v Intune vytvořit profil"configuration". Te
 
 Po přiřazení profilu, můžete sledovat profil a monitorování standardních hodnot. Můžete například zobrazit zařízení, která odpovídají směrný plán nebo směrného plánu se neshodují.
 
-V tomto článku se dozvíte, jak používat směrné plány zabezpečení k vytvoření profilu, profil přiřadit a monitorovat profil.
+Tento článek vám umožňují používat směrné plány zabezpečení k vytvoření profilu, profil přiřadit a monitorovat profil.
 
 [Základní nastavení zabezpečení Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) je skvělý prostředek pro další informace o této funkci. [Správa mobilních zařízení](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) je skvělým zdrojem o MDM a co můžete dělat na zařízeních s Windows.
+
+## <a name="available-security-baselines"></a>Směrné plány zabezpečení k dispozici  
+
+Následující standardní hodnoty zabezpečení jsou k dispozici pro použití s Intune.
+- **Ve verzi Preview: Směrný plán zabezpečení MDM pro října 2018**  
+  [Zobrazit nastavení](security-baseline-settings-windows.md)
+
+- **VE VERZI PREVIEW: Směrný plán ochrany ATP v programu Windows Defender**  
+  [Zobrazit nastavení](security-baseline-settings-defender-atp.md)
+
 
 ## <a name="prerequisites"></a>Požadavky
 Ke správě směrných plánů v Intune, musí mít váš účet [správce zásad a profilů](role-based-access-control.md#built-in-roles) předdefinovaná role.
@@ -60,51 +70,36 @@ Při použití spoluspravovaná zařízení, je nutné přepnout **konfigurace z
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
-2. Vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)**. Seznam dostupných standardních hodnot je k dispozici. Při přidání více směrných plánů, zobrazí se tady:
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=20909) a pak vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)**. Seznam dostupných standardních hodnot je k dispozici. 
 
-    ![Podívejte se do seznamu standardních hodnot zabezpečení aktuálně k dispozici v Intune](./media/security-baselines/available-baselines.png)
+    ![Vyberte směrný plán zabezpečení ke konfiguraci](./media/security-baselines/available-baselines.png)
 
-3. Vyberte směrný plán by chtěl používat > **vytvořit profil**.
-4. V **Základy**, zadejte následující vlastnosti:
 
-    - **Název**: Zadejte název pro svůj profil standardních hodnot zabezpečení. Zadejte například `pilot Windows 10 MDM baseline - Oct 2018`.
+2. Vyberte směrný plán, který chcete použít a potom vyberte **vytvořit profil**.  
+
+3. Na **Základy** kartu, zadejte následující vlastnosti:
+
+    - **Název**: Zadejte název pro svůj profil standardních hodnot zabezpečení. Zadejte například *standardní profil pro Defender ATP*
     - **Popis**: Zadejte nějaký text, který popisuje, co dělá tyto standardní hodnoty. Popis je můžete zadat libovolný text, který chcete. Je volitelný, ale jednoznačně doporučujeme.
 
-5. Rozbalte **nastavení**. V seznamu uvidíte všechna nastavení v těchto standardních hodnot zabezpečení a co je automaticky nastavení. Nastavení a jejich hodnoty se doporučuje a může být změněno vámi.
+4. Vyberte **konfigurace** kartu k zobrazení dostupných skupin **nastavení** v těchto standardních hodnot. Vyberte skupinu a rozbalte ho a zobrazit individuální nastavení, které obsahuje. Nastavení mají výchozí konfigurace pro směrný plán zabezpečení. Překonfigurujte nastavení výchozí hodnoty pro vaše obchodní potřeby.  
 
-    ![Rozbalte nastavení, pokud chcete zobrazit všechna nastavení v těchto standardních hodnot zabezpečení v Intune](./media/security-baselines/sample-list-of-settings.png)
+    ![Rozbalením skupiny lze zobrazit nastavení pro tuto skupinu](./media/security-baselines/sample-list-of-settings.png)
 
-    Rozbalte některá nastavení ke kontrole jejich hodnot. Rozbalte například položku **programu Windows Defender**. Všimněte si, že některé z nastavení, a co je nastavena:
+5. Vyberte **přiřazení** kartu přiřazení směrného plánu ke skupinám. Přiřazení směrného plánu do existující skupiny, nebo vytvořte novou skupinu pomocí standardního procesu v konzole Intune dokončete konfiguraci.  
 
-    ![Jaké některé z programu Windows Defender automaticky nastavení v Intune](./media/security-baselines/expand-windows-defender.png)
+   ![Přiřazení profilu](./media/security-baselines/assignments.png)
+  
+6. Až budete připravení nasadit směrný plán, vyberte **zkontrolujte + vytvořit** kartu chcete podívat na podrobnosti pro požadovaný směrný plán. Vyberte **uložit profil** uložte a nasaďte profil. 
 
-6. **Vytvoření** profilu. 
-7. Vyberte **profily**. Váš profil je vytvořen a uvedené v seznamu. Ale to není teď zrovna nic nedělá ještě. Dále přiřaďte profil.
+   ![Revize směrného plánu](./media/security-baselines/review.png) 
 
-## <a name="assign-the-profile"></a>Přiřadit profil
+   Po uložení, profil, který se vloží do zařízení, při vracení se pomocí Intune. Ano k tomu může dojít okamžitě.
 
-Po vytvoření profilu je připraven k přiřazení na uživatele, zařízení a skupiny. Po přiřazení, profil a nastavení se použijí na uživatele, zařízení a skupiny, kterou zvolíte.
+   > [!TIP]  
+   > Uložit profil bez první přiřazení do skupin. Upravte profil později přidat skupiny. 
 
-1. V Intune, vyberte **směrné plány zabezpečení** > vyberte směrný plán > **profily**.
-2. Vyberte požadovaný profil > **přiřazení**.
-
-    ![Zvolte profil standardních hodnot zabezpečení v Intune a klikněte na přiřazení nasazení profilu](./media/security-baselines/assignments.png)
-
-3. V **zahrnout** kartu, přidat skupiny uživatelů nebo zařízení, které chcete tuto zásadu použít.
-
-    > [!TIP]
-    > Všimněte si, že je také možné **vyloučit** skupiny. Pokud pomocí zásad zasílejte **všichni uživatelé**, zvažte možnost vyloučit skupiny správců. V případě, že se stane něco, vám a vašim správcům nechcete uzamčeni.
-
-4. **Uložte** provedené změny.
-
-Po uložení, profil, který se vloží do zařízení, při vracení se pomocí Intune. Ano k tomu může dojít okamžitě.
-
-## <a name="available-security-baselines"></a>Směrné plány zabezpečení k dispozici  
-
-Následující standardní hodnoty zabezpečení jsou páskových pro použití s Intune.
-- **Ve verzi Preview: Směrný plán zabezpečení MDM**
-  - Verze: [. Října 2018](security-baseline-settings-windows.md)
+7. Až profil vytvoříte, můžete ho upravit tak, že přejdete do **zabezpečení zařízení** > **směrné plány zabezpečení**, vyberte standardní hodnoty jste nakonfigurovali a pak vyberte **profily**.  Vyberte profil a pak vyberte **vlastnosti** upravit nastavení a vyberte **přiřazení** upravit skupiny, které se zobrazí tyto standardní hodnoty. 
 
 ## <a name="q--a"></a>Dotazy a odpovědi
 

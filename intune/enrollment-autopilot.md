@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6545724294eefc83789f56f851549c0b5fee7f22
-ms.sourcegitcommit: 01117021dfaebb5507aa146b7369447c3d5a403d
+ms.openlocfilehash: bf01926ddc461b9b86b93d1307c00515bc744a28
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626436"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733180"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -78,32 +78,41 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 ## <a name="create-an-autopilot-deployment-profile"></a>Vytvoření profilu nasazení Autopilotu
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
-2. Zadejte **název** a volitelný **popis**.
+2. Na **Základy** stránky, zadejte **název** a volitelné **popis**.
+
+    ![Snímek obrazovky základní stránky](media/enrollment-autopilot/create-profile-basics.png)
+
 3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna zařízení v přiřazených skupinách bez Autopilotu se zaregistrují se službou nasazení Autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
-4. Pro **Režim nasazení** zvolte jednu z těchto dvou možností:
+4. Vyberte **Další**.
+5. Na **Out-of-box zapnutí** stránky, pro **režim nasazení**, zvolte jednu z těchto dvou možností:
     - **User-driven**: Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
     - **Místním nasazení (preview)**: (vyžaduje Windows 10, verze 1809 nebo novější) zařízení s tímto profilem nejsou přidruženy s uživatelem, registrace zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
-5. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
-6. Vyberte **Software spouštěný při prvním zapnutí zařízení**, nakonfigurujte následující možnosti a pak zvolte **Uložit**:
-    - **Jazyk (oblast)**\*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
-    - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+
+    ![Snímek obrazovky OOBE stránky](media/enrollment-autopilot/create-profile-outofbox.png)
+
+6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
+7. Nakonfigurujte tyhle možnosti:
     - **Licenční smlouva s koncovým uživatelem (EULA)**: (Windows 10 verze 1709 nebo novější) Zvolte, pokud chcete uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Zvolte, pokud chcete zobrazit nastavení ochrany osobních údajů pro uživatele.
     - **Skrýt možnosti změnu účtu (vyžaduje Windows 10, verze 1809 nebo novější)**: Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ uživatelského účtu**: Zvolte typ účtu uživatele (**správce** nebo **standardní** uživatele).
-    - **Použít šablonu název počítače (vyžaduje Windows 10, verze 1809 nebo novější)**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
+    - **Povolit šetrný OOBE**: Zvolte **Ano** povolit podporu šetrnější.
+    - **Použít šablonu název zařízení**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
+    - **Jazyk (oblast)**\*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+8. Vyberte **Další**.
+9. Na **značky oboru** stránce, volitelně přidat značky oboru, které chcete použít k tomuto profilu. Další informace o značky oboru, naleznete v tématu [použít značky ovládacího prvku a obor přístupu na základě rolí pro distribuované IT](scope-tags.md).
+10. Vyberte **Další**.
+11. Na **přiřazení** zvolte **vybrané skupiny** pro **přiřadit**.
 
-6. Výběrem možnosti **Vytvořit** vytvořte profil. Profil nasazení Autopilotu je teď možné přiřazovat zařízením.
+    ![Snímek obrazovky přiřazení stránky](media/enrollment-autopilot/create-profile-assignments.png)
 
-* Oba **jazyk (oblast)** a **automaticky nakonfigurovat klávesnici** jsou k dispozici, pokud jste zvolili pouze **místním nasazení (preview)** pro **režim nasazení**  (vyžaduje Windows 10, verze 1809 nebo novější).
+12. Zvolte **vybrat skupiny, které chcete zahrnout**a vyberte skupiny, které chcete zahrnout do profilu.
+13. Pokud budete chtít vyloučit jakékoli skupiny, zvolte **výběr skupin k vyloučení**a vyberte skupiny, které chcete vyloučit.
+14. Vyberte **Další**.
+15. Na **revize + vytvořit** zvolte **vytvořit** vytvořte profil.
 
-
-## <a name="assign-an-autopilot-deployment-profile-to-a-device-group"></a>Přiřazení profilu nasazení Autopilotu ke skupině zařízení
-
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > vyberte profil.
-2. V okně zvoleného profilu vyberte **Přiřazení**. 
-3. Zvolte **Vybrat skupiny**, pak v okně **Vybrat skupiny** vyberte skupiny, ke kterým chcete přiřadit profil, a zvolte **Vybrat**.
-
+    ![Snímek obrazovky kontrolní stránku](media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
 > Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupin a potom zahájit proces přiřazení profilů zařízení. Tento proces může trvat několik minut. Před nasazením zařízení, ujistěte se, že tento proces dokončil.  Můžete zkontrolovat v části **registrace zařízení** > ** Registrace Windows ** > **zařízení** kam byste měli vidět stav profilu změnit z "Unassigned" na "Přiřazení" a nakonec na "Přiřazeno."

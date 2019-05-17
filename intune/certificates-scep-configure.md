@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f1cdacf4b4d26e9db9b4090805f697927a399c5
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 96a0da69cdb77ae36ce2456186593f5c334c870c
+ms.sourcegitcommit: 4980c094faaca452f8ec8ddded04f47b3229ff38
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61510045"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65765404"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -567,4 +567,6 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 
 - [Používání certifikátů PKCS](certficates-pfx-configure.md), nebo [vydávání certifikátů PKCS od správce infrastruktury veřejných KLÍČŮ Symantec webové služby](certificates-symantec-configure.md)
 - [Přidat certifikační Autoritu 3. stran SCEP pomocí Intune](certificate-authority-add-scep-overview.md)
-- Další pomoc [nasazení profilu certifikátu SCEP pro odstraňování potíží v Microsoft Intune](https://support.microsoft.com/help/4457481/troubleshooting-scep-certificate-profile-deployment-in-intune) průvodce.
+- Další pomoc získáte pomocí následujících návodů:
+  - [Řešení potíží s nasazení profilu certifikátu SCEP v Microsoft Intune](https://support.microsoft.com/help/4457481)
+  - [Řešení potíží s konfigurací NDES pro použití s profily certifikátů v Microsoft Intune](https://support.microsoft.com/help/4459540)

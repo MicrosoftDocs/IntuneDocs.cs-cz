@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: be0598d09f10403892fa6a82e109ecc90015ccf9
-ms.sourcegitcommit: 47d8ca144ea4e8b8817e95ac4b8c6bd8591fcc06
+ms.openlocfilehash: 7ac370ffe297cb62af6ed55cfd5c4c41cf8452d3
+ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65619446"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65816290"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -119,6 +119,9 @@ Konektor Intune pro službu Active Directory musí být nainstalován na počít
 > [!NOTE]
 > Po přihlášení ke konektoru může trvat několik minut, než se zobrazí v [Intune](https://aka.ms/intuneportal). Zobrazí se pouze v případě, že může úspěšně komunikovat se službou Intune.
 
+### <a name="turn-off-ie-enhanced-security-configuration"></a>Vypnout konfiguraci rozšířeného zabezpečení Internet Exploreru
+Ve výchozím nastavení systém Windows Server má Internet Explorer konfigurace rozšířeného zabezpečení zapnutá. Pokud se nemůžete přihlásit ke službě Intune Connector pro službu Active Directory pak vypnutí konfigurace rozšířeného zabezpečení Internet Exploreru pro správce. [Aplikace Internet Explorer vypnutí konfigurace rozšířeného zabezpečení](https://blogs.technet.microsoft.com/chenley/2011/03/10/how-to-turn-off-internet-explorer-enhanced-security-configuration)
+
 ### <a name="configure-web-proxy-settings"></a>Konfigurace nastavení webového proxy serveru
 
 Pokud máte webový proxy server v síťovém prostředí, ujistěte se, že je konektor Intune pro Active Directory funguje správně rekapitulací [práce s existující místní proxy servery](autopilot-hybrid-connector-proxy.md).
@@ -194,7 +197,7 @@ Trvá přibližně 15 minut pro stav profilu zařízení změnit z *Nepřiřazen
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>(Volitelné) Tato stránka stavu registrace
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **stránka stavu registrace(veverziPreview)**.
+1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **stránka stavu registrace**.
 1. V **stránka stavu registrace** vyberte **výchozí** > **nastavení**.
 1. V **zobrazit průběh instalace aplikaci a profilu** vyberte **Ano**.
 1. Nakonfiguruje další možnosti podle potřeby.

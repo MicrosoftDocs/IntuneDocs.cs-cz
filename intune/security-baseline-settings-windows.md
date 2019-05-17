@@ -1,7 +1,7 @@
 ---
-title: Nastavení směrné plány zabezpečení Windows Intune
+title: Nastavení směrné plány zabezpečení Intune pro Windows 10
 titleSuffix: Microsoft Intune
-description: Základní nastavení zabezpečení pro Windows podporovaných službou Intune
+description: Základní nastavení zabezpečení Intune pro správu systému Windows 10
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67938f8697002f94f275f953510d1b0f4864a3fa
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 1d9d095db4d10630555e5696610535bb828f0b5f
+ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507150"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65733068"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení Windows Intune  
 
@@ -1366,7 +1366,7 @@ Další informace najdete v tématu [zásady CSP – Defender](https://docs.micr
   **Výchozí**: Ano
   
 - **Monitorování chování**  
-  Povolí nebo zakáže funkci monitorování chování Windows Defender. Vložený ve Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému a odešle tato data ze senzorů do privátního izolovaného, cloudu instance ochrany ATP v programu Windows Defender.
+  Povolí nebo zakáže funkci monitorování chování Windows Defender. Vložený ve Windows 10, tyto senzory shromažďovat a zpracovávat chování signály od operačního systému a odešle tato data ze senzorů do privátního izolovaného, cloudu instance ochrany ATP v programu Defender Microsoft.
   
   **Výchozí**: Ano
 
