@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd8de55acf8fa24db005f7725502b691f9f0adbb
-ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
+ms.openlocfilehash: 8d28ac5f7964fa7b2ddb5ec9be1878ccdd3dadbd
+ms.sourcegitcommit: 5fec35341d83b16023a92fc4b2b3e9237fc6c9ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816355"
+ms.locfileid: "65853940"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace Microsoft spravovaná aplikace z domovské obrazovky pro Android Enterprise
 
@@ -59,7 +59,7 @@ V následující tabulce jsou uvedeny spravované domovskou obrazovku k dispozic
 
 | Konfigurační klíč | Typ hodnoty | Výchozí hodnota | Popis |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nastavte velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace se umístí na spravované domovské obrazovce. Můžete nastavit počet aplikace řádky a sloupce, které chcete definovat velikost mřížky v následujícím formátu `rows;columns`. Pokud definujete velikost mřížky, maximální počet aplikací, které budou zobrazeny po sobě na domovské obrazovce by být počet řádků, které nastavíte, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce by počet sloupců, které jste nastavili. |
+| Nastavte velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace se umístí na spravované domovské obrazovce. Můžete nastavit počet aplikace řádky a sloupce, které chcete definovat velikost mřížky v následujícím formátu `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které budou zobrazeny po sobě na domovské obrazovce by být počet řádků, které nastavíte, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce by počet sloupců, které jste nastavili. |
 | Povolit hlavičky obrazovky | BOOL | TRUE | Umožňuje horním navigačním panelu pro různá zobrazení, které nabízí spravované domovské obrazovky jako jsou karty informačního kanálu nebo informačního kanálu. Pokud toto nastavení povolíte, uživatelům zařízení se zobrazí hlavičku. |
 | Povolit zařízení stavového řádku | BOOL | TRUE | Umožňuje stavovém řádku v domovské obrazovky (hlavní panel, který zobrazuje aktuální počet připojení jako Wi-Fi a atd.). Pokud povolíte tuto konfiguraci klíče, koncový uživatel bude moci zobrazit ikony zobrazené na stavové řádky, které představují připojení a aktivní aplikace. |
 | Povolit oznámení "BADGE" oznámení | BOOL | FALSE | Povolí oznámení Odznáček ikony aplikace, který zobrazuje počet nových oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení, oznámení v aplikacích používajících nepřečtená oznámení. Pokud tuto konfiguraci klíče zakázáno, koncový uživatel neuvidí žádné oznámení do aplikací, které může být označené jako nepřečtená oznámení. |
@@ -75,7 +75,7 @@ V následující tabulce jsou uvedeny spravované domovskou obrazovku k dispozic
 | Povolení kanálu domovské obrazovky | BOOL | FALSE | Umožňuje kanál domovské obrazovce, která můžou vidět potažením doleva na domovskou obrazovku. Tento kanál se zobrazí jiný typ obsahu, jako jsou novinky, kalendář, často uživatelským aplikacím a Cortana hlasového Pomocníka s nastavením karty atd. Pokud je povolit, bude koncový uživatel moci přejít na informační kanál potáhnutím prstem doleva na domovské obrazovce. |
 | Povolit režim – přehled | BOOL | FALSE | Umožňuje koncovým uživatelům přidávat nebo odebírat různé stránky na domovské obrazovce, který je přístupný potáhnutím pravé na výchozí obrazovce. Pokud povolíte tím, koncový uživatel budete moct přidat stránkovaného napravo od výchozí stránku na domovskou obrazovku, bude také možné změnit výchozí stránku a také budou mít přístup k nastavení na domovské obrazovce spravované. |
 | Povolit telemetrii zařízení | BOOL | FALSE | Umožňuje veškerá telemetrická data zachytávaná pro spravované domovskou obrazovku. Pokud povolíte toto, Microsoft bude možné ji zachytit zařízení telemetrických dat, jako je počet průchodů konkrétní aplikace se spustí na tomto zařízení. |
-| Nastavení Povolit uvedených v seznamu aplikací | bundleArray | FALSE | Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z mezi aplikacemi na zařízení nainstalovaná. Aplikace můžete definovat tak, že zadáte název balíčku aplikace z aplikace, které chcete zviditelnit, například com.android.settings s žádným nastavení přístupné na domovské obrazovce. Aplikace už musí být nainstalován tento jste seznamu povolených v této části na zařízení-li být viditelný na domovské obrazovce. |
+| Nastavení seznamu povolených aplikací | bundleArray | FALSE | Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z mezi aplikacemi na zařízení nainstalovaná. Aplikace můžete definovat tak, že zadáte název balíčku aplikace z aplikace, které chcete zviditelnit, například com.android.settings s žádným nastavení přístupné na domovské obrazovce. Aplikace už musí být nainstalován tento jste seznamu povolených v této části na zařízení-li být viditelný na domovské obrazovce. |
 | Sada připnuté webové odkazy | bundleArray | FALSE | Můžete připnout weby jako ikony rychlé spuštění na domovské obrazovce. Pomocí této konfigurace můžete definovat adresu URL a přidat na domovskou obrazovku pro koncového uživatele spustit v prohlížeči s jediným klepnutím. |
 | Povolit panel hledání | BOOL | FALSE | Umožňuje panelu hledání na domovské obrazovce. Pokud povolíte tím, uživatelům zařízení se zobrazí na panelu hledání na domovské obrazovce, ve kterém bude možné je zadat cokoli, co chtějí hledat na webu. |
 | Zakázat aplikaci nastavení | BOOL | FALSE | Na stránce nastavení zakáže spravované domácí obrazovky. Pokud zakážete toto, koncový uživatel zařízení nebude možné získat nastavení na spravovaných domovskou obrazovku. |

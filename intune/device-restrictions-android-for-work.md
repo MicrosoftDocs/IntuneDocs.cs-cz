@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4840ccac35f37e956c363a1f6103da623ef27782
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: d2eac8c396e63fa2f3a4e8ef2c2b88b883c87433
+ms.sourcegitcommit: b7f3a6d67f7ae2356bbca1934056d28cdfc6e45e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505773"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836459"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -327,3 +327,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
 Můžete také vytvořit vyhrazený zařízení profily beznabídkového režimu pro [Android](device-restrictions-android.md#kiosk) a [Windows 10](kiosk-settings.md) zařízení.
+
+## <a name="see-also"></a>Viz také:
+
+[Konfigurace a řešení potíží s zařízení s Androidem enterprise v Microsoft Intune](https://support.microsoft.com/help/4476974)
