@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98e2229194287ff644e9503fa21c9536cbff4734
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 895b358760775b1021e545b271acb7ced7fa7b1d
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61507303"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942088"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -42,7 +42,7 @@ Chcete-li zobrazit roli, zvolte **Intune** > **role** > **všechny role** > zvol
 -   **Přiřazení**: Seznam [přiřazení rolí]( assign-role.md) definující, kteří mají přístup na uživatele nebo zařízení, která. Roli můžete mít více přiřazení a uživatel může být ve více přiřazení.
 
 ### <a name="built-in-roles"></a>Vestavěné role
-Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. Nejde odstranit ani upravit název, popis, typ nebo oprávnění předdefinovaná role. Úplný seznam oprávnění pro každou předdefinovaná role, naleznete v tématu [RBAC tabulka Intune] ((https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. Nejde odstranit ani upravit název, popis, typ nebo oprávnění předdefinovaná role. Úplný seznam oprávnění pro každou předdefinovaná role, najdete v článku [Intune RBAC tabulky](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 - **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
 - **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple, identifikátory podnikových zařízení a standardních hodnot zabezpečení.
@@ -59,7 +59,7 @@ Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další inform
 | --- | :---: | :---: |
 | Globální správce | Čtení/zápisu | Čtení/zápisu |
 | Správce služby Intune | Čtení/zápisu | Čtení/zápisu |
-| Správce podmíněného přístupu | Žádné | Žádné |
+| Správce podmíněného přístupu | Žádné | Žádný |
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
 | Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |

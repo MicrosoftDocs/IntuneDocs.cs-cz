@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 05/20/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 654d5b86a8a2df8eaddc8ea626b55390d2d32920
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b5da0e5f14d3b87827d42d48341fa7080d73c567
+ms.sourcegitcommit: ac3fe7504e58c74495a560a68eae2b784a4f7d46
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508991"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942047"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -75,7 +75,9 @@ Podrobnosti o různých stavech zásad dodržování předpisů zařízením jso
 
   - Zařízení, které nejsou přiřazené zásady dodržování předpisů a nemáte aktivační události ke kontrole dodržování předpisů
   - Zařízení, která nebyla vrácena se změnami od poslední aktualizace zásad dodržování předpisů
-  - Zařízení není přidružen k specifické pro uživatele
+  - Zařízení není přidružen k konkrétního uživatele, jako například:
+    - zařízení s iOS zakoupená prostřednictvím programu pro registrace zařízení společnosti Apple (DEP), které nemají přidružení uživatele
+    - Veřejný terminál s androidem nebo zařízení s Androidem Enterprise dedicated
   - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení
 
 - **Nedodržující předpisy:** Zařízení se nepodařilo použít jednu nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
