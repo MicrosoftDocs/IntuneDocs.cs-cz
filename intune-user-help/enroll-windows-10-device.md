@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 05/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4eb5dbb150559de7ad30a598fb78a4fa78033c42
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 162044fdfbe9df6dd6461bcdf919dc798ad3c4a1
+ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497842"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65992920"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí portálu společnosti Intune
 
@@ -90,11 +90,14 @@ Tyto kroky popisují, jak zaregistrovat zařízení, která běží na Windows 1
 
     ![Když se přihlásíte](./media/W10-enroll-4-sign-in.png)  
 
-Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Zjistěte, jak [Poradce při potížích účet](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account).   
+Stále nemáte přístup k pracovním nebo školním e-mailům, souborům nebo jiným datům? Zjistěte, jak [řešit problémy související s účtem](troubleshoot-your-windows-10-device-windows.md#troubleshooting-steps-to-follow-if-you-see-your-account) během registrace.  
+
+## <a name="it-administrator-support"></a>Podpora pro správce IT   
+
+Pokud jste správcem IT a spustit potíží při registraci zařízení, najdete v článku [problémy registrace zařízení Poradce při potížích s Windows v Microsoft Intune](https://support.microsoft.com/help/4469913). Tento článek uvádí běžné chyby, jejich příčiny a kroky k jejich řešení. 
 
 ## <a name="next-steps"></a>Další postup  
-
-Potřebujete pomoc, obraťte se na svou firemní podporu. Můžete najít vaše organizace IT o [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). Přihlaste se k webu pomocí svého pracovního nebo školního účtu.  
+Pokud potřebujete pomoc s aplikace portál společnosti nebo registrace, obraťte se na vaše organizace IT tým podpory. Jeho kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980). Přihlaste se k webu pomocí svého pracovního nebo školního účtu.  
 
  
 

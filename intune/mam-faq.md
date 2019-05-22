@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21d773b0ab2227f59f1ee0b2091d39b7c9799721
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
+ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506810"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65992900"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -51,6 +51,13 @@ Zásady ochrany aplikací jsou pravidla, která zajistí, že data organizace bu
 
 **Jaké jsou příklady zásad ochrany aplikací?**<br></br>
 Podrobné informace o každém nastavení zásad ochrany aplikací najdete v tématech [Nastavení zásad ochrany aplikací pro Android](app-protection-policy-settings-android.md) a [Nastavení zásad ochrany aplikací pro iOS](app-protection-policy-settings-ios.md).
+
+**Je možné mít zásady MDM a MAM u stejného uživatele ve stejnou dobu pro různá zařízení? Pokud například uživatel může moct přistupovat k jejich pracovním prostředkům z vlastních počítači s podporou MAM, ale také přijdou do práce a použít zařízení spravovaná pomocí Intune MDM. Existují jakékoli upozornění pro tento nápad?**<br></br>
+Pokud použijete zásady MAM pro uživatele bez nastavení stavu zařízení, uživatel dostane zásady MAM na zařízení BYOD a zařízení spravovaných pomocí Intune. Můžete také použít zásady MAM na základě spravovaného stavu. Takže když vytvoříte zásady ochrany aplikací, vedle cílit na všechny typy aplikací, vyberte Ne. Poté proveďte jednu z následujících akcí:
+- Použít méně striktní zásady MAM pro zařízení spravovaná pomocí Intune a použít přísnější zásady MAM na jiné zařízení zaregistrovaná v MDM.
+- Používejte zásady MAM na nezaregistrovaných zařízeních pouze.
+
+Další informace najdete v tématu [jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md).
 
 ## <a name="apps-you-can-manage-with-app-protection-policies"></a>Aplikace, které se dají spravovat pomocí zásad ochrany aplikací
 

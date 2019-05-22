@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb689fd77d79e34abe0e4418ceea40e53373fd83
-ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
+ms.openlocfilehash: cf40c3b8f31e042a501e1502097f147d48fc328d
+ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816281"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975825"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -121,9 +121,6 @@ Platí pro: macOS
 Pokud chcete zobrazit dostupná nastavení, přejděte na [App Store, zobrazování dokumentů, nastavení iOS herní](device-restrictions-ios.md#app-store-doc-viewing-gaming).
 
 Platí pro: iOS
-
-#### <a name="advanced-settings-for-windows-defender-firewall-------1311949---"></a>Pokročilé nastavení firewallu v programu Windows Defender   <!--  1311949 -->
-Intune můžete použít ke správě [vlastních pravidel brány firewall jako součást profilu konfigurace zařízení](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices) pro aplikaci endpoint protection ve Windows 10. Pravidla můžete zadat příchozí a odchozí chování aplikací, síťové adresy a porty.
 
 ####  <a name="microsoft-defender-advanced-threat-protection--baseline--preview------3754134---"></a>Microsoft Defender Advanced Threat Protection směrným plánem (Preview)  <!--  3754134 -->
 Přidali jsme základní řešení zabezpečení ve verzi Preview pro [Microsoft Defender Advanced Threat Protection](security-baseline-settings-defender-atp.md) nastavení.  
