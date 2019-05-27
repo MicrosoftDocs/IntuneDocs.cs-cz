@@ -7,7 +7,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31b5697d9673866d378cc526a3735138d6a120b3
-ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
+ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65992900"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041652"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
@@ -220,6 +219,6 @@ Při zpracování různých typů nastavení by měl přednost požadavek na ver
 - [Nastavení zásad správy mobilních aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md)
 - [Nastavení zásad správy mobilních aplikací pro iOS](app-protection-policy-settings-ios.md)
 - [Aktualizace zásad zásady ochrany aplikací](app-protection-policy-delivery.md)
-- [Ověření zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery)
+- [Ověření zásad ochrany aplikací](app-protection-policy-delivery.md)
 - [Přidání zásad konfigurace aplikací pro spravované aplikace bez registrace zařízení](app-configuration-policies-managed-app.md)
 - [Jak získat podporu pro Microsoft Intune](get-support.md)

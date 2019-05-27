@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c9ea11cd19fee8f491329020753501996b47f40
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61498972"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196779"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -31,7 +31,9 @@ Zaregistrujte si zařízení s macOS pomocí aplikace Portál společnosti v Int
 
 Organizace někdy požadují, abyste si ještě před získáním přístupu k jejich vlastnickým datům nechali své zařízení spravovat. Jakmile je zařízení spravované, mohou do něj prostřednictvím poskytovatele správy mobilních zařízení odesílat zásady a aplikace. Pokud chcete na zařízení získat nepřetržitý přístup k pracovním nebo školním datům, je nutné nakonfigurovat je tak, aby odpovídalo nastavení zásad.  
 
-V tomto článku se dozvíte, jak vám může aplikace Portál společnosti Intune pro macOS pomoci při registraci, konfiguraci a údržbě zařízení, které má splňovat požadavky organizace.
+V tomto článku se dozvíte, jak vám může aplikace Portál společnosti Intune pro macOS pomoci při registraci, konfiguraci a údržbě zařízení, které má splňovat požadavky organizace.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/Pa2pfhwq_yk?rel=0]
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti
 

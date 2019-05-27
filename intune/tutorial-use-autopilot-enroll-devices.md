@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/19/2018
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -19,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2d137945325d8ec11801aec225fd0e89196ed05
-ms.sourcegitcommit: f8bbd9bac2016a77f36461bec260f716e2155b4a
+ms.openlocfilehash: 2ee353e5e6c39c3b402c0b4f039bb02efcfa4532
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65732994"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044528"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 Windows Autopilot zjednodušuje registraci zařízení. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat. 
@@ -51,11 +50,11 @@ Přehled výhod, scénáře a požadavky Autopilotu najdete v [přehledu Windows
 
 Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Windows do Intune. Nemusíte dělat nic více, než vytvořit soubor CSV a naimportovat ho do Intune.
 
-1. V libovolném textovém editoru vytvořte seznam hodnot oddělených čárkami (CSV), které identifikují zařízení s Windows. Použijte tento formát:
+1. V libovolném textovém editoru vytvořte seznam hodnot oddělených čárkami (CSV), které identifikují zařízení s Windows. Použijte následující formát:
     
-    *sériové_číslo*, *ID_produktu_windows*, *hodnota_hash_hardwaru*, *volitelné_ID_pořadí*
+    *serial-number*, *windows-product-id*, *hardware-hash*, *optional-Group-Tag*
     
-    První tři položky jsou povinné, ale ID pořadí je volitelné.
+    První tři položky jsou povinné, ale značka skupiny (dříve označovanou "ID objednávky") je volitelné.
 
 2. Soubor CSV uložte.
 

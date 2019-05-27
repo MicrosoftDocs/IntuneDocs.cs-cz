@@ -8,19 +8,18 @@ ms.author: erikje
 manager: dougeby
 ms.date: 04/30/2019
 ms.topic: tutorial
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e006ce1be5a19d0557ef0a5d6046afea2c13986
-ms.sourcegitcommit: dde4b8788e96563edeab63f612347fa222d8ced0
-ms.translationtype: MT
+ms.openlocfilehash: f1f2d584e3e19726ee79671437d2d6e5c729879d
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135178"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66040311"
 ---
 # <a name="tutorial-use-apples-corpoate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: Použití funkce Corpoate registrace zařízení společnosti Apple v Apple obchodní správce (ABM) k registraci zařízení s Iosem v Intune
 Možnosti registrace zařízení v Apple obchodní ředitel usnadňuje registraci zařízení. Intune také podporuje starší portál programu registrace zařízení (DEP) společnosti Apple, ale doporučujeme vám začít pracovat s Apple manažera. S Microsoft Intune a Apple registrace podnikového zařízení jsou zařízení zaregistrovaná automaticky bezpečně okamžiku, kdy uživatel zařízení zapne. Proto můžete zaslat zařízení mnoha uživatelům bez nutnosti nastavit každé zařízení zvlášť. 

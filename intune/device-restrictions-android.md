@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 11/13/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edb01e1cbe5fdbc79b48ee90e39fe45a2ccefb2a
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: eeb70727a187a769e56a9cfd517ecd7b583ba1c1
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505756"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66042473"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android a Samsung Knox Standard seznamy nastavení omezení zařízení v Intune
 

@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf40c3b8f31e042a501e1502097f147d48fc328d
-ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
-ms.translationtype: MT
+ms.openlocfilehash: 0aa6f0e65c8f31a86dba6fd4a31384f61f4002be
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66044241"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -45,8 +44,22 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 -->  
 
+<!-- ########################## -->
+
+## <a name="week-of-may-20-2019"></a>Týden od 20. května 2019 
+
+#### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>AutoPilot zařízení OrderID název atributu změněn na značka skupiny <!-- 4659453 -->
+
+Aby byl intuitivnější, **OrderID** název atributu na zařízení Autopilot se změnil na **značka skupiny**. Při použití sdílených svazků clusteru pro nahrání informací o zařízení Autopilot, je nutné použít značka skupiny jako záhlaví sloupců, nikoli OrderID. V opačném případě nahrávání se nezdaří. OrderID bude brzy znovu nezavedou, aby vyhovoval starší verze zákazníků a skripty. Značka skupiny však bude v budoucnu standardní.
 
 <!-- ########################## -->
+
+## <a name="week-of-may-20-2019"></a>Týden od 20. května 2019 
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="windows-company-portal-app----3316993---"></a>Aplikace Portál společnosti pro Windows <!-- 3316993 -->
+Aplikaci portál společnosti pro Windows budou mít novou stránku s popiskem **zařízení**. **Zařízení** stránce se zobrazí koncovým uživatelům všech zaregistrovaných zařízeních. Uživatelům se zobrazí tuto změnu na portálu společnosti, pokud používají verzi 10.3.4291.0 a novější. Informace o konfiguraci portálu společnosti, naleznete v tématu [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
 
 ## <a name="week-of-may-13-2019"></a>Týden od 13. května 2019 
 
@@ -64,7 +77,7 @@ Na zařízení už zaregistrované prostřednictvím pomocníka prostřednictví
 
 Pokud je uživatelé nainstalovat aplikaci portál společnosti z App storu a potom se pokuste registraci těchto zařízení jeho prostřednictvím, dojde k chybě. Tato zařízení bude očekávat, jenom když ho se převede, automaticky, pomocí Intune během registrace pomocí portálu společnosti. Profily registrace v Intune na portálu Azure portal bude aktualizován, takže můžete určit, jak ověřovat zařízení a pokud se zobrazí v aplikaci portál společnosti. Pokud chcete, aby uživatelé zařízení DEP budou používat aplikaci portál společnosti, musíte zadat předvolby v registrační profil. 
 
-Kromě toho **identifikaci vašeho zařízení** obrazovky v aplikaci portál společnosti pro iOS se odebírá. Proto správci, kteří mají povolení podmíněného přístupu a nasazovat firemní aplikace musí aktualizovat registrační profil DEP. Tento požadavek platí, pouze pokud registrace DEP se ověřuje pomocí Pomocníka pro nastavení. V takovém případě musíte nahrajete aplikaci portál společnosti na zařízení. Chcete-li to provést, zvolte **Intune** > **registrace zařízení** > **registrace Apple** > **programu registrace tokeny** > zvolte token > **profily** > zvolte profil > **vlastnosti** > nastavit **nainstalovat portál společnosti** k **True**.
+Kromě toho **identifikaci vašeho zařízení** obrazovky v aplikaci portál společnosti pro iOS se odebírá. Proto správci, kteří mají povolení podmíněného přístupu a nasazovat firemní aplikace musí aktualizovat registrační profil DEP. Tento požadavek platí, pouze pokud registrace DEP se ověřuje pomocí Pomocníka pro nastavení. V takovém případě musíte nahrajete aplikaci portál společnosti na zařízení. Chcete-li to provést, zvolte **Intune** > **registrace zařízení** > **registrace Apple** > **programu registrace tokeny** > zvolte token > **profily** > zvolte profil > **vlastnosti** > nastavit **nainstalovat portál společnosti** k **Ano**.
 
 Chcete-li nainstalovat aplikaci portál společnosti na zařízení už zaregistrované s programem DEP, budete muset přejít do Intune > klientských aplikací a poslat ho jako spravovaná aplikace pomocí zásad Konfigurace aplikací. 
 

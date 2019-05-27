@@ -473,8 +473,8 @@
               href: certificates-s-mime-encryption-sign.md
             - name: Používání certifikační autority třetí strany spolu s SCEP
               href: certificate-authority-add-scep-overview.md
-            - name: Webová služba správce infrastruktury veřejných klíčů společnosti Symantec
-              href: certificates-symantec-configure.md
+            - name: Použití infrastruktury veřejných klíčů DigiCert
+              href: certificates-digicert-configure.md
             - name: Odebrání certifikátů SCEP a PKCS
               href: remove-certificates.md
         - name: Mobilní profily eSIM

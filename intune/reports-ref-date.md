@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/10/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc88aaca62868af2db024dcea90594161269fd86
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0baf74515af22fb04f773da0d26b94a7eec5f572
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511281"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041031"
 ---
 # <a name="reference-for-date-entity"></a>Referenční informace o entitě Date
 
 Kategorie **Datum** obsahuje entitu **Date**, která se v datovém modelu používá k definování odkazů na kalendářní data.
 
-## <a name="date"></a>Datum
+## <a name="date"></a>Date
 
 Entita **Date** zastupuje kalendářní data, na která odkazují různé entity datového skladu.
 

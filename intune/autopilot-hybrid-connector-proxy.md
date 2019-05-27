@@ -7,7 +7,6 @@ ms.author: tanvira
 manager: smantri
 ms.date: 4/16/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebefba3f912669166e5e077fe15b0b04f4a7b75f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5c47a7413d98467fffc26dee098a64cfeac770e4
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61489991"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66043549"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Práce s existující místní proxy servery
 
 Tento článek vysvětluje postup při konfiguraci konektoru Intune pro službu Active Directory pro práci s odchozí proxy servery. Je určená pro zákazníky pomocí síťových prostředí, které mají existující proxy servery.
 
-Další informace o tom, jak fungují konektory najdete v tématu [pochopit Azure AD Application Proxy konektory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-connectors).
+Další informace o tom, jak fungují konektory najdete v tématu [pochopit Azure AD Application Proxy konektory](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
 
 ## <a name="bypass-outbound-proxies"></a>Odchozí proxy jednorázové přihlášení
 

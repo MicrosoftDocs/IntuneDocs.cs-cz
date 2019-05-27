@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/18/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55d14a242644a8c3115936acf6a5d35933c4e11c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 18f8e072037d0ca9065201e0d0db2a9a2f6074ce
+ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505722"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174187"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -71,7 +70,7 @@ Pomocí těchto nastavení [zásad připojení](https://docs.microsoft.com/windo
 - **Mobilní datový kanál**: Zvolte, pokud se koncoví uživatelé mohou používat data, třeba k procházení webu, při připojení k mobilní síti. Možnosti:
   - **Není nakonfigurováno** (výchozí): Používá výchozí operační systém, což může umožnit mobilní datový kanál. Koncoví uživatelé ji můžete vypnout.
   - **Blok**: Nepovolit mobilní datový kanál. Koncoví uživatelé ji nelze zapnout.
-  - **Povolit (nejde upravit)**: Umožňuje mobilní datový kanál. Koncoví uživatelé ji nelze vypnout.
+  - **Povolit (nejde upravit)** : Umožňuje mobilní datový kanál. Koncoví uživatelé ji nelze vypnout.
 
 - **Datový roaming**: **Blok** brání mobilní datový roaming v zařízení. **Není nakonfigurováno** (výchozí) povoluje roaming mezi sítěmi při přístupu k datům.
 - **VPN přes mobilní síť**: **Blok** zařízení brání v přístupu k připojení k síti VPN při připojení k mobilní síti. **Není nakonfigurováno** (výchozí) umožňuje VPN použít jakékoli připojení, včetně mobilního.
@@ -137,7 +136,7 @@ Vyberte **OK** uložte provedené změny.
   - **Čas a jazyk**: **Blok** brání v přístupu k oblasti čas a jazyk v aplikaci nastavení na zařízení. **Není nakonfigurováno** (výchozí) umožňuje přístup.
     - **Změny systémového času**: **Blok** zabrání koncovým uživatelům možnost měnit nastavení data a času na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
     - **Změny nastavení oblasti** (jenom desktopové verze): **Blok** zabrání koncovým uživatelům možnost měnit nastavení oblasti na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
-    - **Změny nastavení jazyka (jenom desktopové verze)**: **Blok** zabrání koncovým uživatelům možnost měnit nastavení jazyka na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
+    - **Změny nastavení jazyka (jenom desktopové verze)** : **Blok** zabrání koncovým uživatelům možnost měnit nastavení jazyka na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit tato nastavení.
 
       [Nastavení zásad CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-settings)
 
@@ -171,7 +170,7 @@ Vyberte **OK** uložte provedené změny.
 Použijte tato nastavení [prostředí zásad CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience); které taky seznamy podporovaných edicí Windows. 
 
 - **Snímek obrazovky** (jenom mobilní verze): **Blok** zabrání koncovým uživatelům v přístupu snímky obrazovky na zařízení. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
-- **Kopírování a vložení (jenom mobilní verze)**: **Blok** koncovým uživatelům bránit v použití kopírování a vkládání mezi aplikacemi na zařízení. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
+- **Kopírování a vložení (jenom mobilní verze)** : **Blok** koncovým uživatelům bránit v použití kopírování a vkládání mezi aplikacemi na zařízení. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
 - **Ruční zrušení zápisu**: **Blok** zabrání koncovým uživatelům odstranit pracovní účet, pomocí ovládacího panelu síti na pracovišti na zařízení. **Není nakonfigurováno** (výchozí), umožňuje tato funkce.
 
   Nastavení této zásady neplatí, pokud je počítač připojený k Azure AD a je povolená Automatická registrace.
@@ -215,12 +214,12 @@ Vyberte **OK** uložte provedené změny.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
-- **Oznámení Centra akcí (jenom mobilní verze)**: **Blok** brání oznámení Centra akcí z zobrazuje na zamykací obrazovce zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace zobrazovala oznámení na zamykací obrazovce.
+- **Oznámení Centra akcí (jenom mobilní verze)** : **Blok** brání oznámení Centra akcí z zobrazuje na zamykací obrazovce zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace zobrazovala oznámení na zamykací obrazovce.
 
   [AboveLock/AllowActionCenterNotifications CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowactioncenternotifications)
 
-- **Obrázek adresa URL zamknutou obrazovku (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu JPG, JPEG nebo PNG, který se použije jako tapeta zamknuté obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení uzamkne bitovou kopii a nedá se změnit později.
-- **Uživatel Konfigurovatelný časový limit obrazovky (jenom mobilní verze)**: **Povolit** umožňuje uživatelům konfigurovat časový limit obrazovky. **Není nakonfigurováno** (výchozí) nedává uživatelům tuto možnost.
+- **Obrázek adresa URL zamknutou obrazovku (jenom desktopové verze)** : Zadejte adresu URL obrázku ve formátu JPG, JPEG nebo PNG, který se použije jako tapeta zamknuté obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení uzamkne bitovou kopii a nedá se změnit později.
+- **Uživatel Konfigurovatelný časový limit obrazovky (jenom mobilní verze)** : **Povolit** umožňuje uživatelům konfigurovat časový limit obrazovky. **Není nakonfigurováno** (výchozí) nedává uživatelům tuto možnost.
 
   [DeviceLock/AllowScreenTimeoutWhileLockedUserConfig CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowscreentimeoutwhilelockeduserconfig)
 
@@ -243,8 +242,8 @@ Vyberte **OK** uložte provedené změny.
 Použijte tato nastavení [zásad zprostředkovatele kryptografických služeb pro zasílání zpráv](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging); které taky seznamy podporovaných edicí Windows.
 
 - **Synchronizace (jenom mobilní verze) zpráv**: **Blok** zakáže textové zprávy, zálohovat a obnovit a synchronizaci zpráv mezi zařízením Windows. Zakázání pomáhá zabránit informace uložené na serverech mimo ovládací prvek pro organizaci. **Není nakonfigurováno** (výchozí) umožňuje uživatelům změnit nastavení a synchronizovat své zprávy.
-- **MMS (jenom mobilní verze)**: **Blok** zakáže MMS odesílat a přijímat v zařízení. Pro podniky použijte tyto zásady k zakázání zpráv MMS na zařízeních v rámci požadavku auditování nebo vedení. **Není nakonfigurováno** (výchozí) umožňuje MMS odesílat a přijímat.
-- **RCS (jenom mobilní verze)**: **Blok** zakáže Rich Communication Services (RCS) odesílat a přijímat v zařízení. Pro podniky použijte tyto zásady k zakázání RCS na zařízeních v rámci požadavku auditování nebo vedení. **Není nakonfigurováno** (výchozí) umožňuje RCS odesílat a přijímat.
+- **MMS (jenom mobilní verze)** : **Blok** zakáže MMS odesílat a přijímat v zařízení. Pro podniky použijte tyto zásady k zakázání zpráv MMS na zařízeních v rámci požadavku auditování nebo vedení. **Není nakonfigurováno** (výchozí) umožňuje MMS odesílat a přijímat.
+- **RCS (jenom mobilní verze)** : **Blok** zakáže Rich Communication Services (RCS) odesílat a přijímat v zařízení. Pro podniky použijte tyto zásady k zakázání RCS na zařízeních v rámci požadavku auditování nebo vedení. **Není nakonfigurováno** (výchozí) umožňuje RCS odesílat a přijímat.
 
 Vyberte **OK** uložte provedené změny.
 
@@ -257,10 +256,10 @@ Použijte tato nastavení [zásady prohlížeče CSP](https://docs.microsoft.com
 Dostupná nastavení měnit v závislosti na volbách. Možnosti:
 
 - **Ne** (výchozí): Microsoft Edge není spuštěn v režimu veřejného terminálu. Jsou k dispozici můžete změnit a nakonfigurovat všechna nastavení Microsoft Edge.
-- **Digitální/Interaktivní značky (aplikace s jedním veřejný terminál)**: Nastavení Microsoft Edge filtry, které se dají použít pro digitální/Interaktivní značky Microsoft Edge celoobrazovkový režim pro použití pouze pro veřejné terminály s Windows 10 jedné aplikace. Toto nastavení chcete otevřít adresy URL zobrazení na celé obrazovce a zobrazit obsah pouze na daném webu. [Nastavit příznaky digitální](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
-- **Procházení se službou inPrivate veřejné (beznabídkového režimu jedné aplikace)**: Nastavení Microsoft Edge filtry, které se dají použít pro InPrivate veřejné procházení Microsoft Edge celoobrazovkový režim pro použití na veřejné terminály s Windows 10 jedné aplikace. Běží více karet verze Microsoft Edge.
-- **Normální režim (veřejný terminál s více aplikacemi)**: Nastavení Microsoft Edge filtry, které se dají použít pro normální Microsoft Edge beznabídkový režim. Spouští se všemi funkcemi procházení plné verze Microsoft Edge.
-- **Veřejné procházení (veřejný terminál s více aplikacemi)**: Nastavení Microsoft Edge filtry, které se dají použít pro veřejné procházení na jako veřejný terminál s více aplikacemi Windows 10.  Běží více karet verze InPrivate v Microsoft Edgi.
+- **Digitální/Interaktivní značky (aplikace s jedním veřejný terminál)** : Nastavení Microsoft Edge filtry, které se dají použít pro digitální/Interaktivní značky Microsoft Edge celoobrazovkový režim pro použití pouze pro veřejné terminály s Windows 10 jedné aplikace. Toto nastavení chcete otevřít adresy URL zobrazení na celé obrazovce a zobrazit obsah pouze na daném webu. [Nastavit příznaky digitální](https://docs.microsoft.com/windows/configuration/setup-digital-signage) poskytuje další informace o této funkci.
+- **Procházení se službou inPrivate veřejné (beznabídkového režimu jedné aplikace)** : Nastavení Microsoft Edge filtry, které se dají použít pro InPrivate veřejné procházení Microsoft Edge celoobrazovkový režim pro použití na veřejné terminály s Windows 10 jedné aplikace. Běží více karet verze Microsoft Edge.
+- **Normální režim (veřejný terminál s více aplikacemi)** : Nastavení Microsoft Edge filtry, které se dají použít pro normální Microsoft Edge beznabídkový režim. Spouští se všemi funkcemi procházení plné verze Microsoft Edge.
+- **Veřejné procházení (veřejný terminál s více aplikacemi)** : Nastavení Microsoft Edge filtry, které se dají použít pro veřejné procházení na jako veřejný terminál s více aplikacemi Windows 10.  Běží více karet verze InPrivate v Microsoft Edgi.
 
 > [!TIP]
 > Další informace o těchto možností k čemu najdete v tématu [typy konfigurace celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
@@ -295,7 +294,7 @@ Tento profil omezení zařízení přímo souvisí s profil beznabídkového re�
   - **Adresa URL tlačítka domácí**: Zadejte adresu URL pro otevření. Zadejte například `https://www.bing.com` nebo `https://www.contoso.com`.
   - **Tlačítko Domů skrýt**: Skryje tlačítko Domů
 - **Umožní uživatelům změnit domovské tlačítko**: **Ano** umožňuje uživatelům změnit domovské tlačítko. Změny uživatele přepsání jakéhokoli nastavení správce na tlačítko Domů. **Ne** zablokuje uživatelům možnost měnit, jak správce nakonfiguruje tlačítko Domů (výchozí).
-- **Zobrazit stránku prvního spuštění (jenom mobilní verze)**: **Ano** (výchozí) zobrazí první úvodní stránka použití v Microsoft Edge. **Ne** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, jako například organizace registrovaná v nulové emisí konfigurace, zablokovat tuto stránku.
+- **Zobrazit stránku prvního spuštění (jenom mobilní verze)** : **Ano** (výchozí) zobrazí první úvodní stránka použití v Microsoft Edge. **Ne** zastaví úvodní stránky zobrazují první čas spuštění Microsoft Edge. Tato funkce umožňuje podnikům, jako například organizace registrovaná v nulové emisí konfigurace, zablokovat tuto stránku.
 - **První spuštění prostředí adresa URL seznamu umístění** (jenom Windows 10 Mobile): Zadejte adresu URL, která odkazuje na soubor XML obsahující první adres(y) URL spuštění stránky. Zadejte například `https://www.contoso.com/sites.xml`.
 
 - **Aktualizujte prohlížeč po nečinnosti**: Zadejte počet nečinných počet minut, než se aktualizují v prohlížeči z 0 – 1 440 minut. Výchozí hodnota je `5` minut. Pokud je nastavena na `0` (nula) v prohlížeči neobnoví po nečinnosti.
@@ -414,7 +413,7 @@ Použijte tato nastavení [DeviceLock zásad CSP](https://docs.microsoft.com/win
     Toto nastavení má vliv různé v závislosti na edici. Konkrétní podrobnosti najdete v tématu [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Zadejte dobu, kterou musí být zařízení nečinné, než se uzamkne jeho obrazovka.
-  - **Vypršení platnosti hesla (dny)**: Zadejte dobu, kdy musí změnit heslo zařízení, z 1 – 365 dnů. Zadejte například `90` heslo vyprší po 90 dnech.
+  - **Vypršení platnosti hesla (dny)** : Zadejte dobu, kdy musí změnit heslo zařízení, z 1 – 365 dnů. Zadejte například `90` heslo vyprší po 90 dnech.
   - **Zakázat opakované použití předchozích hesel**: Zadejte počet dříve použitých hesel, která nejde použít, 1 – 24. Zadejte například `5` tak uživatelé nemohli nastavit nové heslo pro jejich aktuální heslo nebo některý z předchozí čtyři hesla.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** (Mobile a Holographic): Zvolte **vyžadují** , musí uživatelé zadat heslo k odemknutí zařízení po nečinnosti. **Není nakonfigurováno** (výchozí) nevyžaduje kód PIN nebo heslo při návratu zařízení ze stavu nečinnosti.
   - **Jednoduchá hesla**: Nastavte na **bloku** , uživatelé nemůžou vytvářet jednoduchá hesla, jako například `1234` nebo `1111`. Nastavte na **Nenakonfigurováno** (výchozí), umožníte uživatelům vytvářet hesla jako `1234` nebo `1111`. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
@@ -478,7 +477,7 @@ Vyberte **OK** uložte provedené změny.
 
 Pomocí těchto nastavení [individuální nastavení zásad CSP](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), který také obsahuje seznam podporovaných edicí Windows.
 
-- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)**: Zadejte adresu URL obrázku ve formátu .jpg, .jpeg nebo .png, který chcete použít jako tapeta na ploše Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
+- **Adresa URL obrázku na pozadí plochy (jenom desktopové verze)** : Zadejte adresu URL obrázku ve formátu .jpg, .jpeg nebo .png, který chcete použít jako tapeta na ploše Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
 Vyberte **OK** uložte provedené změny.
 
@@ -573,7 +572,7 @@ Vyberte **OK** uložte provedené změny.
 
 Použijte tato nastavení [hledat zásady CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search), který také obsahuje seznam podporovaných edicí Windows. 
 
-- **Bezpečné vyhledávání (jenom mobilní verze)**: Řídí, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Možnosti:
+- **Bezpečné vyhledávání (jenom mobilní verze)** : Řídí, jak Cortana filtruje obsah pro dospělé ve výsledcích hledání. Možnosti:
   - **Uživatelem definované**: Povolit koncovým uživatelům vybrat vlastní nastavení.
   - **Striktní**: Největší filtrování obsahu pro dospělé.
   - **Střední**: Střední filtrování obsahu pro dospělé. Platné výsledky vyhledávání se nebudou filtrovat.
@@ -697,7 +696,7 @@ Pomocí těchto nastavení [zásady defender CSP](https://docs.microsoft.com/win
 - **Kontrolovat všechna stahování**: Určuje, jestli bude Defender kontrolovat všechny soubory stahované z internetu.
 - **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru. **Povolit** brání toto vyhledávání.
 - **Přístup koncového uživatele k Defenderu**: **Blok** skryje uživatelské rozhraní Windows Defenderu koncovým uživatelům. Všechna oznámení programu Windows Defender jsou potlačeny také. **Není nakonfigurováno** (výchozí) umožňuje uživateli přístup k rozhraní Windows Defenderu. Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
-- **Interval aktualizace podpisu (v hodinách)**: Zadejte interval, který Defender zkontroluje dostupnost nových souborů signatur z 0-24. Možnosti:
+- **Interval aktualizace podpisu (v hodinách)** : Zadejte interval, který Defender zkontroluje dostupnost nových souborů signatur z 0-24. Možnosti:
 
   - **Není nakonfigurováno** (výchozí)
   - **Nezaškrtávejte políčko**: Není Defender zjišťovat dostupnost nových souborů signatur.
@@ -706,7 +705,7 @@ Pomocí těchto nastavení [zásady defender CSP](https://docs.microsoft.com/win
 - **Počet dní před odstraněním malwaru v karanténě**: Dál sledovat vyřešené problémy s malwarem pro počet dní, které zadáte, abyste mohli ručně zkontrolovat dříve zasažená zařízení. Pokud nastavíte počet dnů **0**, malware zůstane ve složce karantény a automaticky se neodebere. Pokud je nastavena na `90`, karantény položek se uchovávají po dobu 90 dní v systému a potom se odeberou.
 - **Limit využití procesoru při kontrole**: Maximální procento využití procesoru, které můžou používat, kontroly z **1** k **100**.
 - **Prohledat archivní soubory**: **Povolit** brání Defender z kontrolovat archivované soubory, jako jsou soubory Zip nebo Cab. **Není nakonfigurováno** (výchozí) umožňuje toto vyhledávání.
-- **Kontrolovat příchozí e-mailové zprávy**: **Povolit** brání skenování e-mailu. **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručení na zařízení.
+- **Kontrolovat příchozí e-mailové zprávy**: **Povolit** umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručení na zařízení. **Není nakonfigurováno** (výchozí) zabrání vyhledávání e-mailu.
 - **Během úplné kontroly kontrolovat vyměnitelné jednotky**: **Povolit** brání úplné kontroly vyměnitelných jednotek. **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB Flash disky.
 - **Kontrolovat namapované síťové jednotky během úplného prohledávání**: **Povolit** umožňuje programu Defender kontrolovat soubory na namapovaných síťových jednotkách. **Není nakonfigurováno** (výchozí) brání úplnou kontrolu. Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.
 - **Kontrolovat soubory otevřené ze síťových složek**: **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat soubory na sdílených síťových jednotkách, jako jsou například soubory přistupuje pomocí cesty UNC. **Povolit** brání toto vyhledávání. Pokud jsou soubory na disku jen pro čtení, nelze Defender odebrat žádný malware, který v nich najde.

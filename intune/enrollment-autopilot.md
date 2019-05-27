@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/5/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2615c058c5de04842e8d607b717a290663b1a9b1
-ms.sourcegitcommit: bc5e4dff18f5f9b79077a888f8a58dcc490708c0
+ms.openlocfilehash: 7aeda02cae01e989041ec41b54186d62988f592d
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983400"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66047894"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -48,7 +47,8 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 
     ![Snímek obrazovky se zařízeními Windows Autopilot](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. V části **Přidat zařízení Windows AutoPilot** přejděte na soubor CSV se seznamem zařízení, která chcete přidat. Soubor by měl seznamu sériových čísel, ID produktu Windows, hodnoty hash hardwaru a značky volitelnou skupinu zařízení.
+2. V části **Přidat zařízení Windows AutoPilot** přejděte na soubor CSV se seznamem zařízení, která chcete přidat. Soubor CSV zveřejnit sériová čísla, volitelné ID produktu Windows, hodnoty hash hardwaru a značky volitelnou skupinu zařízení. Můžete mít až 500 řádků v seznamu. Použijte záhlaví a řádek formát je uvedeno níže: `Device Serial Number,Windows Product ID,Hardware Hash,GroupTag`
+    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
 
     ![Snímek obrazovky s přidáním zařízení Windows Autopilot](media/enrollment-autopilot/autopilot-import-device2.png)
 

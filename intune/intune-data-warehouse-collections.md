@@ -8,7 +8,6 @@ ms.author: erikre
 manager: dougeby
 ms.date: 04/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 00a0bd4936d1ad8ba8dd52f1839e7d42505db60e
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8581d047e76ac1734b2d6c7816facf601e397957
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61508256"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66041721"
 ---
 #  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -666,7 +665,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 |    termsAndConditionsKey    |    Klíč odpovídající položce v kolekci userTermsAndConditionsAcceptances    |    123    |
 |    termsAndCondidionsId    |    ID této položky termsAndConditions    |    276edcb7-7440-4339-b6c5-8b6fc556fee6    |
 |    termsAndConditionsVersion    |    Verze této položky termsAndConditions    |    1    |
-|    jméno    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
+|    name    |    Název této položky termsAndConditions        |    Podmínky použití Intune     |
 |    description    |    Popis těchto podmínek a ujednání     |         |
 |    title    |    Název těchto podmínek a ujednání     |    Podnikové zásady správy zařízení        |
 |    summaryOfTerms    |    Souhrn podmínek předaných uživateli     |    Souhlasím s podmínkami a ujednáními.    |
