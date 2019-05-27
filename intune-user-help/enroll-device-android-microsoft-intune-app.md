@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2cf384bfcc0782226e363a6527ea47c4140f7faa
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 7e68e404a91927192f1006626d1b865acd5eb589
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61499643"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197046"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace firemních zařízení pomocí aplikace pro Microsoft Intune
 
@@ -35,8 +35,6 @@ Existují čtyři způsoby, jak zaregistrovat. Vaše organizace by měly umožň
 * Podpisový  
 * Kód QR   
 * Automatizované Google  
-
-Než začnete s registrací, ujistěte se, že budete vědět o možnosti, kterou budete muset použít tak, že můžete provést příslušné kroky.  
 
 ## <a name="enroll-device"></a>Registrace zařízení 
 Dokončete tyto kroky pro nastavení a registrace zařízení.  

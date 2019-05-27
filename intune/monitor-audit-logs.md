@@ -7,19 +7,18 @@ author: dougeby
 manager: dougeby
 ms.date: 03/18/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93072ba4730de0252f54d93fa1169062d496ce38
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 9d01b1f745450785209bf289be5b6e36ac65cc2d
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61513166"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66046305"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Použití protokolů auditu ke sledování a sledování událostí v Microsoft Intune
 

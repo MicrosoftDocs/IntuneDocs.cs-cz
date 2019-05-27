@@ -18,18 +18,20 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e9120110b1840d1f5075549737722328ef2551f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 736b1d891207a19f281aa1127975de1a55889e8b
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61498299"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197035"
 ---
 # <a name="enroll-your-device-with-company-portal"></a>Registrace zařízení pomocí portálu společnosti  
 Zapište osobní nebo firemní vlastněné zařízení s Androidem získat zabezpečený přístup k firemnímu e-mailu, aplikacím a datům. Portál společnosti podporuje zařízení s Androidem, včetně Samsung Knox, systémem Android 4.4 a novější.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
 
 > [!NOTE]
-> Samsung Knox je typ zabezpečení, které určitá zařízení Samsung používají pro další ochrany nad rámec co poskytuje nativní Android. Chcete-li zkontrolovat, jestli máte zařízení Samsung Knox, > přejděte na **nastavení** > **o zařízení**. Pokud nevidíte **verze Knoxu** tu, máte nativní zařízení s Androidem.    
+> Samsung Knox je typ zabezpečení, které určitá zařízení Samsung používají pro další ochrany nad rámec co poskytuje nativní Android. Chcete-li zkontrolovat, jestli máte zařízení Samsung Knox, > přejděte na **nastavení** > **o zařízení**. Pokud nevidíte **verze Knoxu** tu, máte nativní zařízení s Androidem.
 
 ## <a name="enroll-device"></a>Registrace zařízení  
 Ujistěte se, že k [nainstalujte bezplatnou aplikaci portál společnosti Intune na webu Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal). 

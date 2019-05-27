@@ -18,20 +18,20 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 162044fdfbe9df6dd6461bcdf919dc798ad3c4a1
-ms.sourcegitcommit: 6de06b475f16893710dc34027096138aa697e482
+ms.openlocfilehash: cbb6c3b771ae768fe45bea1eecb21f7083003010
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65992920"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196845"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí portálu společnosti Intune
 
 Registrace zařízení s Windows 10 v rámci správy vaší organizace pomocí portálu společnosti Intune. Tento článek popisuje, jak zaregistrovat zařízení s Windows 10 verze 1607 a novější a Windows 10 verze 1511 a starší. Než začnete, ujistěte se, že jste [ověřit verzi na zařízení s](windows-enrollment-company-portal.md#find-windows-10-version-number) tak, aby provedením správným krokům.  
 
 Windows 10 je podporována mezi různé typy zařízení, včetně desktop, telefonu a tabletu. Kroky registrace se stejný libovolným zařízením, které používáte. Vaše obrazovka může vypadat trochu liší od bitové kopie, uvidíte v tomto článku.  
-
-> [!VIDEO https://channel9.msdn.com/Series/IntuneEnrollment/Windows-Enrollment/player]  
+</br>
+> [!VIDEO https://www.youtube.com/embed/TKQxEckBHiE?rel=0]
 
 ## <a name="enroll-windows-10-version-1607-and-later-device"></a>Registrace Windows 10 verze 1607 a novější zařízení 
 Tyto kroky popisují, jak zaregistrovat zařízení, která běží na Windows 10 verze 1607 a novější.  

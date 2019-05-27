@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/12/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a637b6eed162243d2be81ac08fbcc055e1fd5816
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: d9f29e2d737dfd7bef709f239d6c8506c3bb746c
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505169"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196883"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Registrace zařízení Windows v portálu společnosti Intune  
 
@@ -78,6 +78,9 @@ Postup registrace lišit pro různé verze zařízení s Windows 10. Následují
 K registraci ostatní podporovaná zařízení Windows pomocí webu portál společnosti použijte v následujících článcích:   
 * [Windows 8.1. nebo zařízení s Windows RT 8.1](enroll-your-W81-or-rt81-windows.md)  
 * [Zařízení Windows Phone 8.1](enroll-your-wp81-windows.md)    
+
+## <a name="it-administrator-support"></a>Podpora pro správce IT  
+Pokud jste správcem IT a spustit potíží při registraci zařízení, najdete v článku [problémy registrace zařízení Poradce při potížích s Windows v Microsoft Intune](https://support.microsoft.com/help/4469913). Tento článek uvádí běžné chyby, jejich příčiny a kroky k jejich řešení.  
 
 ## <a name="next-steps"></a>Další postup  
 Když teď víte, že podporovaná zařízení a číslo verze Windows 10, přejděte k článku doporučené registrace.  

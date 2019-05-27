@@ -18,16 +18,18 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29928023abc2d6119bb318bbe046e954288ebaa3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6fb5911f8a706f38e3e880c32113d203369ed870
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497689"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196924"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení se pracovní profil Androidu
 
-Registrace osobních zařízení s Androidem, chcete-li získat přístup k firemnímu e-mailu, aplikacím a jiným pracovním datům. Během registrace které nastavíte pracovní profil Androidu. Tento profil odděluje osobních údajů na zařízení z pracovní data. Spravuje vaše společnost jen pracovní profil, který se skládá z pracovní soubory a data. Vaše firemní podpora nemůže spravovat osobní údaje ve vašem zařízení. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md). 
+Registrace osobních zařízení s Androidem, chcete-li získat přístup k firemnímu e-mailu, aplikacím a jiným pracovním datům. Během registrace které nastavíte pracovní profil Androidu. Tento profil odděluje osobních údajů na zařízení z pracovní data. Spravuje vaše společnost jen pracovní profil, který se skládá z pracovní soubory a data. Vaše firemní podpora nemůže spravovat osobní údaje ve vašem zařízení. Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-happens-when-you-create-a-work-profile-android.md).  
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI?rel=0]
 
 ## <a name="create-work-profile-and-enroll-device"></a>Vytvoření pracovního profilu a registrace zařízení
 

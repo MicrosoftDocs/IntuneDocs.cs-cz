@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/05/2019
+ms.date: 05/24/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0c7ac239a67a51ba7165771206883f3c46f5f55
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61498050"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196865"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -31,7 +31,9 @@ Zaregistrujte si zařízení s iOSem pomocí aplikace Portál společnosti v Int
 
 Po registraci vašeho zařízení, stane se *spravované*. Vaše organizace můžete přiřadit zásady a aplikace na zařízení prostřednictvím poskytovatele management (MDM) mobilních zařízení, jako je například Intune.  
 
-Pokud chcete zachovat přístup k práci nebo škole informace z vašeho zařízení, budete muset nakonfigurovat zařízení tak, aby odpovídaly nastavení vaší organizace. Tento článek popisuje, jak používat portál společnosti k registraci můžete zařízení a zachovat nastavení požadavky vaší organizace. 
+Pokud chcete zachovat přístup k práci nebo škole informace z vašeho zařízení, budete muset nakonfigurovat zařízení tak, aby odpovídaly nastavení vaší organizace. Tento článek popisuje, jak používat portál společnosti k registraci můžete zařízení a zachovat nastavení požadavky vaší organizace.  
+</br>
+> [!VIDEO https://www.youtube.com/embed/mJyv6YcHi7c?rel=0]
 
 > [!NOTE]
 > Pokud jste se pokusili přistoupit k podnikovému e-mailu v aplikaci Pošta a zobrazila se vám výzva ke správě vašeho zařízení, jste na správném místě. Podle pokynů uvedených níže získáte přístup ke svému e-mailu a dalším prostředkům společnosti na zařízení s iOSem.  
@@ -39,7 +41,7 @@ Pokud chcete zachovat přístup k práci nebo škole informace z vašeho zaříz
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti  
 
 ### <a name="security"></a>Zabezpečení  
-Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte aktualizovat. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.     
+Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte aktualizovat. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.
 
 ### <a name="protection"></a>Protection  
 Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolovat, že je chráněno. Pokud si například nainstalujete aplikaci z nedůvěryhodného zdroje, upozorní vás a dokonce vám může i odvolat přístup k firemním datům. Tento typ zásad je běžné v organizacích a často je potřeba odinstalovat nedůvěryhodné aplikace předtím, než jste znovu získali přístup.  
@@ -118,6 +120,9 @@ Přerušení na více než několik minut, během registrace může způsobit, �
 
 > [!Note]
 > Pokud vaše organizace monitoruje omezení hlasu a dat nebo vám poskytne zařízení vlastněná společností, můžete mít několik kroků k dokončení. Pokud budete vyzváni k instalaci **Datalert** aplikace, najdete v článku [registraci zařízení do služby telecom expense management](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace je součástí programu registrace zařízení společnosti Apple, přečtěte si [způsobu registrace zařízení ve vlastnictví společnosti](enroll-your-device-dep-ios.md).  
+
+## <a name="it-administrator-support"></a>Podpora pro správce IT  
+Pokud jste správcem IT a spustit potíží při registraci zařízení, najdete v článku [řešení potíží s problémy registrace zařízení s Iosem v Microsoft Intune](https://support.microsoft.com/en-us/help/4039809). Tento článek uvádí běžné chyby, jejich příčiny a kroky k jejich řešení.  
 
 ## <a name="next-steps"></a>Další postup  
 Najdete aplikace, které vám pomohou při práci nebo školu. Přečtěte si [jak aplikací jsou k dispozici](use-managed-apps-on-your-device-ios.md) vám prostřednictvím portálu společnosti.  

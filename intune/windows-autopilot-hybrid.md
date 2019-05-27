@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ac370ffe297cb62af6ed55cfd5c4c41cf8452d3
-ms.sourcegitcommit: dfcf80a91792715404dc021c8684866c8b0a27e1
+ms.openlocfilehash: 030467009e0fed8716a1aa622474188352c0e0b0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65816290"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66050358"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -140,7 +139,7 @@ Pokud máte webový proxy server v síťovém prostředí, ujistěte se, že je 
 
 1. Pokud jste vybrali **dynamické zařízení** pro typ členství v **skupiny** vyberte **členové s dynamickými zařízeními** a pak na **rozšířené pravidlo** pole, proveďte jednu z následujících akcí:
     - Chcete-li vytvořit skupinu, která zahrnuje všechna svá zařízení Autopilot, zadejte `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Chcete-li vytvořit skupinu, která zahrnuje všechna svá zařízení Autopilot ID konkrétní pořadí, zadejte `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
+    - Atribut ID objednávky zařízení Azure AD mapuje pole značka skupiny v Intune. Pokud chcete vytvořit skupinu, která obsahuje všechna svá zařízení Autopilot konkrétní Tag(OrderID) skupiny je nutné zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Chcete-li vytvořit skupinu, která zahrnuje všechna zařízení Autopilot s konkrétním ID nákupní objednávky, zadejte `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Vyberte **Uložit**.
