@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aa6f0e65c8f31a86dba6fd4a31384f61f4002be
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: 044ced57d9dd2e3e4b86548540090de35b88a6b0
+ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044241"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197078"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -48,18 +48,16 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 ## <a name="week-of-may-20-2019"></a>Týden od 20. května 2019 
 
-#### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>AutoPilot zařízení OrderID název atributu změněn na značka skupiny <!-- 4659453 -->
-
-Aby byl intuitivnější, **OrderID** název atributu na zařízení Autopilot se změnil na **značka skupiny**. Při použití sdílených svazků clusteru pro nahrání informací o zařízení Autopilot, je nutné použít značka skupiny jako záhlaví sloupců, nikoli OrderID. V opačném případě nahrávání se nezdaří. OrderID bude brzy znovu nezavedou, aby vyhovoval starší verze zákazníků a skripty. Značka skupiny však bude v budoucnu standardní.
-
-<!-- ########################## -->
-
-## <a name="week-of-may-20-2019"></a>Týden od 20. května 2019 
-
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="windows-company-portal-app----3316993---"></a>Aplikace Portál společnosti pro Windows <!-- 3316993 -->
 Aplikaci portál společnosti pro Windows budou mít novou stránku s popiskem **zařízení**. **Zařízení** stránce se zobrazí koncovým uživatelům všech zaregistrovaných zařízeních. Uživatelům se zobrazí tuto změnu na portálu společnosti, pokud používají verzi 10.3.4291.0 a novější. Informace o konfiguraci portálu společnosti, naleznete v tématu [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>AutoPilot zařízení OrderID název atributu změněn na značka skupiny <!-- 4659453 -->
+
+Aby byl intuitivnější, **OrderID** název atributu na zařízení Autopilot se změnil na **značka skupiny**. Při použití sdílených svazků clusteru pro nahrání informací o zařízení Autopilot, je nutné použít značka skupiny jako záhlaví sloupců, nikoli OrderID. V opačném případě nahrávání se nezdaří. OrderID bude znovu zavedena tak, aby vyhovovaly starší verze zákazníkům nebo skripty. Značka skupiny však bude v budoucnu standardní.
 
 ## <a name="week-of-may-13-2019"></a>Týden od 13. května 2019 
 
@@ -445,7 +443,7 @@ Konzola Intune už podporuje zobrazení a správy EA jen pro zařízení připoj
 - Použití ovládacích prvků systému Exchange, jak je uvedeno v [klientů a mobilní zařízení v Exchangi Online](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/clients-and-mobile-in-exchange-online)
 
 ### <a name="search-the-all-devices-page-for-an-exact-device-by-using-name---4254930---"></a>Vyhledejte všechny stránky zařízení pro zařízení s přesnou pomocí [název] <!--4254930 -->
-Teď můžete hledat názvu přesné zařízení. Přejděte na **Intune** > **zařízení** > **všechna zařízení** > do vyhledávacího pole před a za název zařízení {} k vyhledání přesná shoda. Například **{Device12345}**.
+Teď můžete hledat názvu přesné zařízení. Přejděte na **Intune** > **zařízení** > **všechna zařízení** > do vyhledávacího pole před a za název zařízení {} k vyhledání přesná shoda. Například **{Device12345}** .
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
@@ -607,7 +605,7 @@ Tato funkce platí pro:
 - iOS
 
 #### <a name="enabling-restrictions-in-the-device-settings-is-renamed-to-screen-time-on-ios-devices----3699164-----"></a>Povolení omezení v nastavení zařízení bylo přejmenováno na čas obrazovky na zařízeních s Iosem <!-- 3699164   -->
-Můžete nakonfigurovat **povolení omezení v nastavení zařízení** na hlídaných zařízeních s Iosem (**konfigurace zařízení** > **profily**  >  **Nový profil** > **iOS** pro platformu > **omezení zařízení** pro typy profilů > **Obecné**). V této aktualizaci se toto nastavení bylo přejmenováno na **čas obrazovky (jenom pod dohledem)**. 
+Můžete nakonfigurovat **povolení omezení v nastavení zařízení** na hlídaných zařízeních s Iosem (**konfigurace zařízení** > **profily**  >  **Nový profil** > **iOS** pro platformu > **omezení zařízení** pro typy profilů > **Obecné**). V této aktualizaci se toto nastavení bylo přejmenováno na **čas obrazovky (jenom pod dohledem)** . 
 
 Chování je stejné. Konkrétně: 
 
@@ -1135,7 +1133,7 @@ Nový modul prostředí PowerShell, který poskytuje podporu pro rozhraní Intun
 ## <a name="week-of-october-15-2018"></a>Týden od 15. října 2018
 
 ### <a name="pin-prompt-when-you-change-fingerprints-or-face-id-on-an-ios-device-----2637704----"></a>Výzvy k zadání PINU při změně otisky prstů nebo ID pro rozpoznávání tváře na zařízení s iOS  <!-- 2637704  -->
-Uživatelům se teď po provedení biometrických změn na zařízení s iOSem zobrazuje výzva k zadání kódu PIN. Týká se to i změn zaregistrovaných otisků prstů nebo Face ID. Načasování výzvy závisí na konfiguraci časového limitu *Překontrolovat požadavky na přístup za (minuty)*.  Pokud není kód PIN nastavený, zobrazí se uživateli výzva k jeho nastavení. 
+Uživatelům se teď po provedení biometrických změn na zařízení s iOSem zobrazuje výzva k zadání kódu PIN. Týká se to i změn zaregistrovaných otisků prstů nebo Face ID. Načasování výzvy závisí na konfiguraci časového limitu *Překontrolovat požadavky na přístup za (minuty)* .  Pokud není kód PIN nastavený, zobrazí se uživateli výzva k jeho nastavení. 
  
 Tato funkce je dostupná jen pro iOS a vyžaduje zapojení aplikací, které integrují sadu Intune APP SDK pro iOS verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer.
 

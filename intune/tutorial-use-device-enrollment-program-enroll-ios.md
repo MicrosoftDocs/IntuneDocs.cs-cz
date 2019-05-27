@@ -14,14 +14,14 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1f2d584e3e19726ee79671437d2d6e5c729879d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: HT
+ms.openlocfilehash: faceee883194dbbdcec83f282806035ffc0432d1
+ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040311"
+ms.locfileid: "66174179"
 ---
-# <a name="tutorial-use-apples-corpoate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: Použití funkce Corpoate registrace zařízení společnosti Apple v Apple obchodní správce (ABM) k registraci zařízení s Iosem v Intune
+# <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: Použití funkce registrace podnikového zařízení společnosti Apple v Apple obchodní správce (ABM) k registraci zařízení s Iosem v Intune
 Možnosti registrace zařízení v Apple obchodní ředitel usnadňuje registraci zařízení. Intune také podporuje starší portál programu registrace zařízení (DEP) společnosti Apple, ale doporučujeme vám začít pracovat s Apple manažera. S Microsoft Intune a Apple registrace podnikového zařízení jsou zařízení zaregistrovaná automaticky bezpečně okamžiku, kdy uživatel zařízení zapne. Proto můžete zaslat zařízení mnoha uživatelům bez nutnosti nastavit každé zařízení zvlášť. 
 
 V tomto kurzu se naučíte:
@@ -59,7 +59,7 @@ Použití portálu ABM nebo zabránění spuštění dat k vytvoření tokenu re
 
 5. Pro **název serveru MDM**, zadejte *TestMDMServer* a klikněte na tlačítko **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název nebo adresu URL serveru pro Microsoft Intune.
 
-6. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;**, ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+6. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **zvolit soubor...** abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
 6. Přejděte na **Deployment Programs** > **programu Device Enrollment Program** > **spravovat zařízení**.
 7. V části **Choose Devices By**, zvolte **sériové číslo**. <!--ask Tiffany about this-->
