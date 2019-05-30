@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0965d08dc2981fbd35bcb5aa3c2652726a96ccd5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9309b110d37795f840e10f22b71b06507aea4c62
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050100"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373723"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Použití šablon Windows 10 v Microsoft Intune konfigurovat nastavení zásad skupiny
 
@@ -34,14 +34,14 @@ V tomto článku jsou uvedené kroky k vytvoření šablony pro zařízení s Wi
 
 ## <a name="create-a-template"></a>Vytvoření šablony
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
     - **Název**: Zadejte název pro profil.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: Vyberte **Windows 10 a novější**.
-    - **Typ profilu**: Vyberte **šablony pro správu (Preview)**.
+    - **Typ profilu**: Vyberte **šablony pro správu (Preview)** .
 
 4. Vyberte **Vytvořit**. V novém okně vyberte **nastavení**. Každé nastavení odpovídá a můžete použít předtím a vedle šipky zobrazíte další nastavení:
 

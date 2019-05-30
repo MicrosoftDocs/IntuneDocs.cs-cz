@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18f8e072037d0ca9065201e0d0db2a9a2f6074ce
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
+ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174187"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354228"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -58,6 +58,24 @@ Použijte tato nastavení [ApplicationManagement zásad CSP](https://docs.micros
 - **Nainstalovat aplikace na systémovou jednotku**: **Blok** aplikacím bránit instalaci na systémovou jednotku zařízení. **Není nakonfigurováno** (výchozí) umožňuje aplikace k instalaci na systémovou jednotku.
 - **Záznam ze hry** (jenom desktopové verze): **Blok** zakáže hru Windows záznam a vysílání. **Není nakonfigurováno** (výchozí) umožňuje záznam a vysílání z her.
 - **Aplikace ze storu jenom**: **Vyžadovat** vynutí koncoví uživatelé instalují jenom aplikace z App Store Windows. **Není nakonfigurováno** umožňuje koncovým uživatelům instalovat aplikace odjinud než Store aplikace Windows.
+- **Vynutit restartování aplikace při selhání aktualizace**: Při použití aplikace nemusí aktualizovat. Pomocí tohoto nastavení můžete vynutit aplikaci restartovat. **Není nakonfigurováno** (výchozí) nebude vynucené restartování. **Vyžadovat** správcům umožňuje vynutit restartování na určité datum a čas, nebo podle plánu opakování. Pokud je nastavena na **vyžadují**, také zadejte:
+
+  - **Počáteční datum/čas**: Vyberte určité datum a čas k restartování aplikace.
+  - **Opakování**: Zvolte denních, týdenních nebo měsíčních restartovat.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
+
+- **Kontrola uživatele nad instalací**: Pokud je nastavena na **Nenakonfigurováno** (výchozí), instalační služby systému Windows zabrání uživatelům změnit možnosti instalace, obvykle vyhrazené pro správce systému, jako je zadání adresář pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace, a některé z funkcí zabezpečení Instalační služby systému Windows se přeskočí.
+
+  [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
+
+- **Instalace aplikací s vyššími oprávněními**: Pokud je nastavena na **Nenakonfigurováno** (výchozí), systém použije aktuální uživatel oprávnění při instalaci programy, které nemá správce systému nasadit nebo nabídky. **Blok** instruuje Instalační služby systému Windows použít zvýšenou úroveň oprávnění při instalaci libovolné aplikace v systému. Tato oprávnění jsou rozšířeny, aby všechny programy.
+
+  [ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
+
+- **Při spuštění aplikace**: Zadejte seznam aplikací spustíte po přihlášení uživatele k zařízení. Nezapomeňte použít seznam oddělený středníkem z balíčku oddělených (PFN) aplikace Windows. Pro tyto zásady fungují musíte použít manifest v aplikacích Windows úlohy po spuštění.
+
+  [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
 
 Vyberte **OK** uložte provedené změny.
 
@@ -408,6 +426,10 @@ Použijte tato nastavení [DeviceLock zásad CSP](https://docs.microsoft.com/win
     - **Číselné**: Heslo musí obsahovat pouze čísla.
     - **Alfanumerické**: Heslo musí obsahovat kombinaci čísel a písmen.
   - **Minimální délka hesla**: Zadejte minimální počet nebo znaků, z 4-16. Zadejte například `6` tak, aby vyžadovala minimálně šest znaků heslo.
+  
+    > [!IMPORTANT]
+    > Pokud požadavek na heslo se změnilo na ploše Windows, uživatelů bylo ovlivněno při příštím přihlašování v jako, který má při, co zařízení projde z nečinnosti na aktivní. Uživatelé s heslem, které splňují tento požadavek se stále výzva ke změně hesla.
+    
   - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet povolených předtím, než bude zařízení vymazáno, od 1 – 11 neúspěšných přihlášení. `0` (nula) může zakázat funkce vymazání zařízení.
 
     Toto nastavení má vliv různé v závislosti na edici. Konkrétní podrobnosti najdete v tématu [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
@@ -755,7 +777,7 @@ Pomocí těchto nastavení [zásady defender CSP](https://docs.microsoft.com/win
 
   Další informace o potenciálně nežádoucích aplikacích najdete v tématu [detekovat a blokovat potenciálně nežádoucí aplikace](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Akce ohledně zjištěných malwarových hrozeb**: Vyberte akce, které má Defender provést na jednotlivých úrovních hrozeb detekuje: s nízkou, střední, vysoká a závažnost. Možnosti:
+- **Akce ohledně zjištěných malwarových hrozeb**: Vyberte akce, které má Defender provést na jednotlivých úrovních hrozeb detekuje: s nízkou, střední, vysoká a závažnost. Pokud není možné, program Windows Defender vybere nejlepší volbou, ujistěte se, že se hrozba vyřeší. Možnosti:
   - **Vyčistit**
   - **Karanténa**
   - **Odebrat**

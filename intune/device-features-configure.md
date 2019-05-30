@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8483e036e270744daa5e36bf9375da6e11c25746
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1a5c85c936e49c277b54b542f372f97b247d6a37
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373806"
 ---
 # <a name="add-ios-or-macos-device-feature-settings-in-intune"></a>Přidání nastavení funkcí zařízení se systémem iOS nebo macOS v Intune
 
@@ -39,7 +39,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Mů�
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 

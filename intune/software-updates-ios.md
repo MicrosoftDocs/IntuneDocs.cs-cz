@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf07f942feeab0a73c01625f90c04ec3b989c1c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044842"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373416"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
 
@@ -31,7 +31,7 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
 
 ## <a name="configure-the-policy"></a>Konfigurace zásad
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
 3. Zadejte následující nastavení:
 
@@ -51,7 +51,7 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
       - **Počáteční čas**: Zvolte čas zahájení omezený časový rámec. Zadejte například 5: 00, nenainstalují se aktualizace od 5: 00.
       - **Čas ukončení**: Zvolte koncový čas s omezeným přístupem časový rámec. Například zadejte 1: 00, můžou aktualizace instalovat počínaje 1: 00.
 
-    - **Zpoždění viditelnost aktualizací softwaru pro koncové uživatele myší bez nutnosti změn plánovaných aktualizací (dny)**: 
+    - **Zpoždění viditelnost aktualizací softwaru pro koncové uživatele myší bez nutnosti změn plánovaných aktualizací (dny)** : 
 
       **Toto nastavení přesunuta do [omezení zařízení](device-restrictions-ios.md#general). Odebere se z tohoto umístění na portálu**. Krátkou dobu můžete zde změnit existující zásady. Po přibližně jeden měsíc, toto nastavení se odebere z existujících zásad.
 

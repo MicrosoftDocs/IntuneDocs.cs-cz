@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04c4cb95d9eacd8967ecacedfe1a5d335b729005
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e802a7196369cf7918ffd8b76e62e03176e7a617
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043732"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374103"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -224,7 +224,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Location                        |      Hodnota      | Type  |      Data       |
+   |                        Location                        |      Value      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -272,8 +272,8 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 
 2. Vyberte **Upravit nastavení funkce**a pak nastavte tyto hodnoty:
 
-    - **řetězec dotazu (bajty)** = **65534**
-    - **Maximální délka adresy URL (bajty)** = **65534**
+    - **řetězec dotazu (bajty)**  = **65534**
+    - **Maximální délka adresy URL (bajty)**  = **65534**
 
 3. Zkontrolujte následující klíč registru:
 
@@ -297,7 +297,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **musí** být nainstalovaný na samostatném serveru Windows. Nemůžete ho nainstalovat na vystavující certifikační autoritu. **Musí** být také nainstalovaný na stejném serveru jako role Služba zápisu síťových zařízení (NDES).
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **konfigurace zařízení** > **certifikace konektorů** > **přidat**.
 3. Stáhněte a uložte konektoru pro SCEP soubor. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
@@ -350,7 +350,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
@@ -384,17 +384,17 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         - **Běžný název jako e-mail**
         - **IMEI (International Mobile Equipment Identity)**
         - **Sériové číslo**
-        - **Vlastní**: Když vyberete tuto možnost **vlastní** se navíc zobrazí textové pole. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)**. **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
+        - **Vlastní**: Když vyberete tuto možnost **vlastní** se navíc zobrazí textové pole. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)** . **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-            - **CN={{UserName}}**: Hlavní uživatelské jméno uživatele, jako například janedoe@contoso.com
-            - **CN={{AAD_Device_ID}}**: ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
-            - **CN={{SERIALNUMBER}}**: Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
-            - **CN={{IMEINumber}}**: Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu
-            - **CN={{OnPrem_Distinguished_Name}}**: Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
+            - **CN={{UserName}}** : Hlavní uživatelské jméno uživatele, jako například janedoe@contoso.com
+            - **CN={{AAD_Device_ID}}** : ID přiřazené při registraci zařízení v Azure Active Directory (AD). Toto ID se obvykle používá k ověření ve službě Azure AD.
+            - **CN={{SERIALNUMBER}}** : Jedinečné sériové číslo (SN) obvykle používá výrobce k identifikaci zařízení
+            - **CN={{IMEINumber}}** : Jedinečné číslo International Mobile Equipment Identity (IMEI) použít k identifikaci mobilního telefonu
+            - **CN={{OnPrem_Distinguished_Name}}** : Posloupnost relativních rozlišujících názvů oddělených čárkami, například `CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com`
 
                 Pokud chcete použít proměnnou `{{OnPrem_Distinguished_Name}}`, nezapomeňte synchronizovat atribut uživatele `onpremisesdistingishedname` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
-            - **CN={{onPremisesSamAccountName}}**: Správci můžou synchronizovat atribut samAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD connect na atribut s názvem `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
+            - **CN={{onPremisesSamAccountName}}** : Správci můžou synchronizovat atribut samAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD connect na atribut s názvem `onPremisesSamAccountName`. Intune může tuto proměnnou nahradit v rámci žádosti o vystavení certifikátu v předmětu certifikátu SCEP.  Atribut samAccountName je přihlašovací jméno uživatele, které slouží pro podporu klientů a serverů z předchozí verze Windows (před Windows 2000). Formát přihlašovacího jména uživatele je: `DomainName\testUser` nebo jenom `testUser`.
 
                 Pokud chcete použít proměnnou `{{onPremisesSamAccountName}}`, nezapomeňte synchronizovat atribut uživatele `onPremisesSamAccountName` pomocí služby [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) se službou Azure AD.
 
@@ -425,8 +425,8 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         Tyto proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například běžný název můžete přidat jako `CN = {{DeviceName}}text`.
 
         > [!IMPORTANT]
-        >  - Ve statickém textu subjektu se složené závorky **{}**, které neuzavírají proměnnou, vyhodnotí jako chyba. 
-        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }**.
+        >  - Ve statickém textu subjektu se složené závorky **{}** , které neuzavírají proměnnou, vyhodnotí jako chyba. 
+        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }** .
         >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
         >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří. 
@@ -468,8 +468,8 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         Tyto proměnné můžete přidat jako statický text do textového pole s vlastní hodnotou. Například atribut DNS můžete přidat jako `DNS name = {{AzureADDeviceId}}.domain.com`.
 
         > [!IMPORTANT]
-        >  - Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky **{ }**, středníky **;** ani svislé čáry **|**. 
-        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }**.
+        >  - Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky **{ }** , středníky **;** ani svislé čáry **|** . 
+        >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }** .
         >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
         >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v alternativním názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří.  
@@ -484,12 +484,12 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
    - **Použití klíče**: Zadejte možnosti použití klíče pro certifikát. Možnosti:
      - **Šifrování klíče**: Umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný
      - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že digitální podpis k ochraně klíče
-   - **Velikost klíče (bity)**: Vyberte počet bitů v klíči
+   - **Velikost klíče (bity)** : Vyberte počet bitů v klíči
    - **Hashovací algoritmus** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
    - **Kořenový certifikát**: Zvolte profil kořenové CA certifikátu dříve nakonfigurovali a přiřadili pro uživatele a/nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu. Nezapomeňte přiřadit tento profil důvěryhodného kořenového certifikátu do stejné skupiny přiřadit profil certifikátu SCEP.
    - **Rozšířené použití klíče**: **Přidat** hodnoty pro tento certifikát zamýšlený účel. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
    - **Nastavení registrace**
-     - **Prahová hodnota obnovení (%)**: Zadejte procento životnosti certifikátu, který zůstává zařízení požádá o obnovení certifikátu.
+     - **Prahová hodnota obnovení (%)** : Zadejte procento životnosti certifikátu, který zůstává zařízení požádá o obnovení certifikátu.
      - **Adresy URL serveru SCEP**: Zadejte jeden nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například podobný `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
      - Vyberte **OK** a **vytvořte** profil.
 

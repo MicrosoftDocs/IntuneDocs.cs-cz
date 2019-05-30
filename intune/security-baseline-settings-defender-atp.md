@@ -5,7 +5,7 @@ description: Základní nastavení zabezpečení podporovaných službou Intune 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,16 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f96393e0d6071b1b56700e954714324b01ffcf25
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c6feae4d7caeeefbf9638e5018ba7b653a260f5c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040732"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373498"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Microsoft Defender Advanced Threat Protection základní nastavení Intune
 
 Zobrazte nastavení směrného plánu Microsoft Defender Advanced Threat Protection (dříve Windows Defender Advanced Threat Protection), které podporuje Microsoft Intune. Výchozí hodnoty v tomto článku představují výchozí směrného plánu konfigurace pro Intune. Tyto výchozí hodnoty představují doporučenou konfiguraci pro Intune a výchozí nastavení Windows se nemusí shodovat.
+
+  The Microsoft Defender Advanced Threat Protection směrného plánu je k dispozici, pokud vaše prostředí splňuje předpoklady pro použití [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites)).
+
+
+
 
 > [!NOTE]  
 > Standardní nastavení WDATP jsou v **ve verzi Preview**. Ve verzi Preview, seznam dostupných nastavení a pořadí, ve kterém tento obsah představuje tato nastavení nemusí odpovídat co je k dispozici na portálu. 

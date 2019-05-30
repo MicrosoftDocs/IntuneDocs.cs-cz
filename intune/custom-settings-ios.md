@@ -1,7 +1,7 @@
 ---
 title: Přidání vlastního nastavení do zařízení s iOSem v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Exportujte nastavení iOSu z nástrojů Apple Configurator nebo Apple Profile Manager a pak ho naimportujte do Microsoft Intune. S těmito nastaveními můžete vytvářet, používat a ovládat vlastní nastavení a funkce zařízení s iOSem. Tento vlastní profil pak můžete v organizaci přiřadit zařízením s iOSem nebo ho mezi ně distribuovat, abyste vytvořili základní nebo standardní nastavení.
+description: Exportujte nastavení iOSu z nástrojů Apple Configurator nebo Apple Profile Manager a pak ho naimportujte do Microsoft Intune. Tato nastavení můžete vytvářet, používat a řídit vlastní nastavení a funkcí na zařízeních s Iosem. Tento vlastní profil pak můžete v organizaci přiřadit zařízením s iOSem nebo ho mezi ně distribuovat, abyste vytvořili základní nebo standardní nastavení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6bfd832d9225221bcc6aaefe091a3cebf57a54c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9637cc36d6ee901b5da0ffbe44180cd7dbdaffee
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048620"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373999"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s iOSem v Microsoft Intune
 
@@ -51,7 +51,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s i
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 

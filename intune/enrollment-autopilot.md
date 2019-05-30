@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7aeda02cae01e989041ec41b54186d62988f592d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 03d5d4b9cb69e2d95706357280e324c58656a866
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047894"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264137"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -86,19 +86,22 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 4. Vyberte **Další**.
 5. Na **Out-of-box zapnutí** stránky, pro **režim nasazení**, zvolte jednu z těchto dvou možností:
     - **User-driven**: Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
-    - **Místním nasazení (preview)**: (vyžaduje Windows 10, verze 1809 nebo novější) zařízení s tímto profilem nejsou přidruženy s uživatelem, registrace zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
+    - **Místním nasazení (preview)** : (vyžaduje Windows 10, verze 1809 nebo novější) zařízení s tímto profilem nejsou přidruženy s uživatelem, registrace zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
 
     ![Snímek obrazovky OOBE stránky](media/enrollment-autopilot/create-profile-outofbox.png)
 
 6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
 7. Nakonfigurujte tyhle možnosti:
-    - **Licenční smlouva s koncovým uživatelem (EULA)**: (Windows 10 verze 1709 nebo novější) Zvolte, pokud chcete uživatelům zobrazit EULA.
+    - **Licenční smlouva s koncovým uživatelem (EULA)** : (Windows 10 verze 1709 nebo novější) Zvolte, pokud chcete uživatelům zobrazit EULA.
     - **Nastavení ochrany osobních údajů**: Zvolte, pokud chcete zobrazit nastavení ochrany osobních údajů pro uživatele.
-    - **Skrýt možnosti změnu účtu (vyžaduje Windows 10, verze 1809 nebo novější)**: Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
+    >[!IMPORTANT]
+    >Pro nasazení Autopilotu ve verzi 1903 zařízení s Windows 10 a novějších verzích se automaticky nastaví výchozí diagnostická Data na úplné. Další informace najdete v tématu [Windows diagnostická Data](https://docs.microsoft.com/en-us/windows/privacy/windows-diagnostic-data) <br>
+    
+    - **Skrýt možnosti změnu účtu (vyžaduje Windows 10, verze 1809 nebo novější)** : Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ uživatelského účtu**: Zvolte typ účtu uživatele (**správce** nebo **standardní** uživatele).
     - **Povolit šetrný OOBE**: Zvolte **Ano** povolit podporu šetrnější.
     - **Použít šablonu název zařízení**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
-    - **Jazyk (oblast)**\*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
+    - **Jazyk (oblast)** \*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
     - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
 8. Vyberte **Další**.
 9. Na **značky oboru** stránce, volitelně přidat značky oboru, které chcete použít k tomuto profilu. Další informace o značky oboru, naleznete v tématu [použít značky ovládacího prvku a obor přístupu na základě rolí pro distribuované IT](scope-tags.md).

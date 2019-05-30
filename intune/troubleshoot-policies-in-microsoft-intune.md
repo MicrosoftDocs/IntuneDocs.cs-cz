@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a0f8e9e7fec0bea759d408f3ca3d94aa46748bf8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9085cff7e305f7081a3048637c80df43e22d2ee9
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044601"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374122"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží s zásady a profily a v Intune
 
@@ -32,7 +32,7 @@ Tento článek uvádí některé běžné postupy řešení potíží a popisuje
 
 ## <a name="use-built-in-troubleshooting"></a>Použít integrované řešení potíží
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Poradce při potížích s**:
 
     ![V Intune přejděte na Nápověda a odborná pomoc a vyberte Poradce při potížích](./media/help-and-support-troubleshoot.png)
@@ -98,7 +98,7 @@ Tento článek uvádí některé běžné postupy řešení potíží a popisuje
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Jste si jisti, jestli je správně použít profil
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **zařízení** > **všechna zařízení** > vyberte zařízení > **konfigurace zařízení**. 
 
     Každé zařízení obsahuje své profily. Každý profil obsahuje **stav**. Stav použije, když jsou společně zvažovány všechny přiřazené Profily hardwaru a operačního systému omezení a požadavky, včetně. Možné stavy patří:

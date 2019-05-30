@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc3de4f0fb3b497c1786f8d089b565a688cd08d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f17bdf21db61616f88cef4d257fbcd28d941dae8
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047228"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373470"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -41,15 +41,31 @@ Rozšíření správy Intune doplňuje integrované funkce Windows 10 MDM. Můž
 
 ## <a name="prerequisites"></a>Požadavky
 
-Rozšíření správy Intune vyžaduje splnění následujících požadavků:
+Rozšíření správy Intune má následující požadavky. Jakmile jsou splněny tyto, rozšíření správy Intune se nainstaluje automaticky při skript prostředí PowerShell nebo aplikace Win32 je přiřazená uživateli nebo zařízení.
 
-- Zařízení musí být připojený nebo zaregistrovaný do služby Azure AD a Azure AD a Intune nakonfigurované pro [automatický zápis](quickstart-setup-auto-enrollment.md). Rozšíření správy Intune podporuje připojená k Azure AD, připojená k hybridní službě Azure AD domain a společně spravovat zaregistrovaná zařízení s Windows.
-- Zařízení musí používat Windows 10 verze 1607 nebo novější.
-- Rozšíření agenta pro správu Intune se nainstaluje při skript prostředí PowerShell nebo aplikace Win32 je nasazená na uživatele nebo skupiny zabezpečení zařízení.
+- Zařízení se systémem Windows 10 verze 1607 nebo novější. Pokud je zařízení zaregistrované pomocí [hromadně automatický zápis](windows-bulk-enroll.md), zařízení musí používat Windows 10 verze 1703 nebo novější. Rozšíření správy Intune se nepodporuje ve Windows 10 v režimu S, protože režim S neumožňuje spouštění aplikací mimo úložiště. 
+  
+- Zařízení připojená k Azure Active Directory (AD), včetně:
+  
+  - Hybridní Azure připojené k AD: Zařízení připojené k Azure Active Directory (AD) a také připojené k místní služby Active Directory (AD). Zobrazit [naplánování vaší implementace připojení k hybridní službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) pokyny.
+
+- Zařízení zaregistrovaná v Intune, včetně:
+
+  - Zařízení zaregistrovaná v zásadách skupiny (GPO). Zobrazit [registraci zařízení s Windows 10 automaticky prostřednictvím zásad skupiny](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) pokyny.
+  
+  - Zařízení ručně zaregistrovaná v Intune, což je při:
+  
+    - Uživatel přihlásí k zařízení pomocí místní uživatelský účet a ručně připojí zařízení k Azure AD (a je povolená Automatická registrace do Intune v Azure AD).
+    
+    Nebo
+    
+    - Uživatel přihlásí k zařízení pomocí svého účtu Azure AD a pak zaregistruje v Intune.
+
+  - Spoluspravovaná zařízení, které používají Configuration Managerem a Intune. Zobrazit [co je společná správa](https://docs.microsoft.com/sccm/comanage/overview) pokyny.
 
 ## <a name="create-a-script-policy"></a>Vytvoření zásad skriptů 
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Powershellové skripty** > **Přidat**.
 3. Zadejte tyto vlastnosti:
     - **Název**: Zadejte název skriptu prostředí PowerShell. 
@@ -71,7 +87,7 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 5. Vyberte **OK** > **vytvořit** skript uložte.
 
 > [!NOTE]
-> Powershellový skript se spustí v části oprávnění správce (ve výchozím nastavení) Pokud skript je nastavena na uživatelský kontext a koncový uživatel na zařízení má oprávnění správce.
+> Spuštění skriptu prostředí PowerShell v rámci oprávnění správce (ve výchozím nastavení) Pokud skript je nastavena na uživatelský kontext a koncový uživatel na zařízení má oprávnění správce.
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 
@@ -84,8 +100,7 @@ Rozšíření správy Intune vyžaduje splnění následujících požadavků:
 
 > [!NOTE]
 > - Koncoví uživatelé nemusí přihlásit k zařízení a spouštění skriptů prostředí PowerShell.
-> - Powershellové skripty do Intune můžete zacílit na skupiny zabezpečení Azure AD zařízení.
-> - Powershellové skripty do Intune můžete zacílit na skupiny zabezpečení uživatelů Azure AD.
+> - Powershellové skripty do Intune můžete zacílit na skupiny zabezpečení Azure AD zařízení nebo skupiny zabezpečení uživatelů Azure AD.
 
 Klient rozšíření správy Intune zkontroluje jednou za hodinu a po každém restartování pro nové skripty nebo změny v Intune. Po přiřazení zásad ke skupinám Azure AD se powershellový skript spustí a zobrazí se výsledky spuštění. Jakmile se skript spustí, neprovede znovu Pokud dojde ke změně ve skriptu nebo zásady.
 
@@ -110,41 +125,57 @@ V části **Powershellové skripty** klikněte pravým tlačítkem na skript a v
 
 ## <a name="common-issues-and-resolutions"></a>Běžné problémy a jejich řešení
 
-Při každé přihlášení není spuštěny skripty prostředí PowerShell. Spuštění až po restartování počítače, nebo pokud **rozšíření pro správu Microsoft Intune** restartování služby. Klient kontrola Intune správu rozšíření jednou za hodinu pro všechny změny ve skriptu nebo zásady v Intune.
-
 #### <a name="issue-intune-management-extension-doesnt-download"></a>Problém: Rozšíření správy Intune se nestahuje
 
 **Možná řešení**:
 
-- Ujistěte se, že zařízení jsou automaticky zaregistrovat ve službě Azure AD. Pokud chcete potvrdit, na zařízení: 
+- Zařízení není připojená k Azure AD. Ujistěte se, zařízení splňují [požadavky](#prerequisites) (v tomto článku). 
+- Neexistují žádné Powershellových skriptů nebo aplikací Win32 přiřadit ke skupinám, které uživatel nebo zařízení patří.
+- Zařízení nemůže vrácení se změnami pomocí služby Intune, protože žádný přístup k Internetu bez přístupu k Windows Push Notification Services (WNS) a tak dále.
+- Zařízení je v režimu S. Rozšíření správy Intune nepodporuje na zařízeních se systémem v režimu S. 
+
+Chcete-li zjistit, zda je zařízení zaregistrované automaticky, můžete:
 
   1. Přejděte na **nastavení** > **účty** > **přístup do práce nebo do školy**.
   2. Vyberte účet, připojené k doméně > **informace**.
   3. V části **Advanced diagnostickou sestavu**vyberte **vytvořit sestavu**.
-  4. Otevřít `MDMDiagReport` v webový prohlížeč a přejděte k **zaregistrované zdroje konfigurace** oddílu.
-  5. Hledat **MDMDeviceWithAAD** vlastnost. Pokud tato vlastnost neexistuje, zařízení není zaregistrované automaticky.
+  4. Otevřít `MDMDiagReport` ve webovém prohlížeči.
+  5. Hledat **MDMDeviceWithAAD** vlastnost. Pokud existuje vlastnost, je zařízení zaregistrované automaticky. Pokud tato vlastnost neexistuje, zařízení není zaregistrované automaticky.
 
-    [Povolit automatickou registraci Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) zahrnuje kroky.
+[Povolit automatickou registraci Windows 10](windows-enroll.md#enable-windows-10-automatic-enrollment) obsahuje postup, jak nakonfigurovat automatické registrace v Intune.
 
 #### <a name="issue-powershell-scripts-do-not-run"></a>Problém: Nelze spustit skripty prostředí PowerShell
 
 **Možná řešení**:
 
+- Při každé přihlášení není spuštěny skripty prostředí PowerShell. Spuštění:
+
+  - Když je skript přiřazen k zařízení
+  - Pokud změníte skript, nahrajte ho a přiřadit ho ke uživatele nebo zařízení
+  
+    > [!TIP]
+    > **Rozšíření pro správu Microsoft Intune** je služba, která se spustí na zařízení, stejně jako jakoukoli jinou službu v aplikaci služeb (services.msc). Po restartování zařízení se tato služba může také restartovat a vyhledat všechny přiřazené skripty prostředí PowerShell ve službě Intune. Pokud **rozšíření pro správu Microsoft Intune** služby je nastaven na ručně a restartujte službu nemusí po restartování zařízení.
+
+- Klient rozšíření správy Intune kontroluje jednou za hodinu pro všechny změny ve skriptu nebo zásady v Intune.
 - Ověřte rozšíření správy Intune se stáhne do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
-- Skripty nespouštět na Surface Huby.
-- Zkontrolujte protokoly `\ProgramData\Microsoft\IntuneManagementExtension\Logs` nějaké chyby.
+- Na Surface Huby nebo Windows 10 nejsou v režimu S spouštěny skripty.
+- Zkontrolujte protokoly nějaké chyby. Zobrazit [Poradce při potížích s skripty](#troubleshoot-scripts) (v tomto článku).
 - Pro oprávnění možné problémy, ujistěte se, vlastnosti skript prostředí PowerShell jsou nastavené `Run this script using the logged on credentials`. Zkontrolujte také, že má přihlášený uživatel příslušná oprávnění ke spuštění skriptu.
-- K izolování problémů skriptování, spusťte ukázkový skript. Například vytvořit `C:\Scripts` adresáře a udělte všem úplné řízení. Spusťte tento skript:
 
-  ```powershell
-  write-output "Script worked" | out-file c:\Scripts\output.txt
-  ```
+- K izolování problémů skriptování, postupujte takto:
 
-  Pokud se aktivace podaří, výstup.txt by měly být vytvořeny a by měl obsahovat text "Pracoval skript".
+  - Zkontrolujte konfiguraci spuštění skriptu PowerShell na vašich zařízeních. Zobrazit [zásady spouštění prostředí PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) pokyny.
+  - Spustíte ukázkový skript, pomocí rozšíření správy Intune. Například vytvořit `C:\Scripts` adresáře a udělte všem úplné řízení. Spusťte tento skript:
 
-- Pokud chcete otestovat spuštění skriptu bez Intune, spustit skripty v kontextu systému pomocí [nástroj psexec](https://docs.microsoft.com/sysinternals/downloads/psexec) místně:
+    ```powershell
+    write-output "Script worked" | out-file c:\Scripts\output.txt
+    ```
 
-  `psexec -i -s`
+    Pokud se aktivace podaří, výstup.txt by měly být vytvořeny a by měl obsahovat text "Pracoval skript".
+
+  - Pokud chcete otestovat spuštění skriptu bez Intune, spouštění skriptů v systému pomocí účtu [nástroj psexec](https://docs.microsoft.com/sysinternals/downloads/psexec) místně:
+
+    `psexec -i -s`
 
 ## <a name="next-steps"></a>Další postup
 

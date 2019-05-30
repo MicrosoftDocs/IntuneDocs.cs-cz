@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: feb2bda30547779680a001b3c598b54d236f70ed
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0e4d5c23d598641256c196cd7217797f87f99d1c
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045105"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374137"
 ---
 # <a name="create-a-windows-10-security-baseline-in-intune"></a>Vytvoření standardních hodnot zabezpečení Windows 10 v Intune
 
@@ -54,7 +54,8 @@ Následující standardní hodnoty zabezpečení jsou k dispozici pro použití 
   [Zobrazit nastavení](security-baseline-settings-windows.md)
 
 - **VE VERZI PREVIEW: Směrný plán ochrany ATP v programu Windows Defender**  
-  [Zobrazit nastavení](security-baseline-settings-defender-atp.md)
+  [Zobrazit nastavení](security-baseline-settings-defender-atp.md)  
+  *(Tyto standardní hodnoty je k dispozici, pokud vaše prostředí splňuje předpoklady pro použití [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
 
 
 ## <a name="prerequisites"></a>Požadavky
@@ -69,11 +70,12 @@ Při použití spoluspravovaná zařízení, je nutné přepnout **konfigurace z
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=20909) a pak vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)**. Seznam dostupných standardních hodnot je k dispozici. 
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=20909) a pak vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)** . Seznam dostupných standardních hodnot je k dispozici. 
 
     ![Vyberte směrný plán zabezpečení ke konfiguraci](./media/security-baselines/available-baselines.png)
 
-
+   >[!TIP]  
+   > Směrný plán ochrany ATP v programu Windows Defender je k dispozici, pokud vaše prostředí splňuje předpoklady pro použití [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites).
 2. Vyberte směrný plán, který chcete použít a potom vyberte **vytvořit profil**.  
 
 3. Na **Základy** kartu, zadejte následující vlastnosti:

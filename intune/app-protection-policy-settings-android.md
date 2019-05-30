@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 05/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4d6331083256ab5c658519854459cdb07056466
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a9f421a54319878c4f985ecc08252d4e03a00919
+ms.sourcegitcommit: 95572ed540e90471963833c0bbf71478477b1813
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049706"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269997"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
 Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky na přístup a podmíněného spuštění. Termín *aplikace spravované podle zásad* v tomto článku označuje aplikace, které mají nakonfigurované zásady ochrany aplikací.
+
+> [!IMPORTANT]
+> U zařízení přijímat zásady ochrany aplikací pro zařízení s Androidem se vyžaduje aplikace portál společnosti Intune. Další informace najdete v tématu [požadavky na aplikace portál společnosti Intune přístup](end-user-mam-apps-android.md).
 
 ##  <a name="data-protection"></a>Ochrana dat 
 ### <a name="data-transfer"></a>Přenos dat

@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: d927c886bbb3f82c18d5873a86fc427d00d96337
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4190d84fda46e4be3cdc4c4f7bfe4ac8a1852ebc
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042637"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373951"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení optimalizace doručení v Microsoft Intune
 
@@ -36,7 +36,7 @@ Další informace o optimalizace doručení ve Windows 10 najdete v tématu [opt
 > **Aktualizace softwaru – aktualizační kanály Windows 10** nahrazují **optimalizace doručení** nastavení. Použít lze změnit existující aktualizační okruhy **optimalizace doručení** nastavení. [Přesunout existující aktualizační okruhy optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku) 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02a5a7bd3625b5e95ddb304df7cf64461cca9c10
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cf6febf0ead541e1346cc095bb14437083dd5d64
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049127"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66373747"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -150,7 +150,7 @@ K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zař
     3. Ve výchozím nastavení služba konektoru běží pod místním systémovým účtem. Pokud pro přístup k internetu vyžaduje proxy, ověřte, že účet místní služby má na serveru přístup k nastavení proxy serveru.
 
 5. NDES Connector otevře kartu **registrace**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce.
-6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)**.
+6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)** .
 7. **Použít** > **Zavřít**
 8. Přejděte zpět na portálu Intune (**Intune** > **konfigurace zařízení** > **certifikace konektorů**). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 9. Pokud máte webový proxy server v síťovém prostředí, můžete potřebovat další konfigurace, které umožňují fungování konektoru. Další informace najdete v tématu [práce s existující místní proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) v dokumentaci k Azure Active Directory.
@@ -160,7 +160,7 @@ K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zař
 
 ### <a name="pfx-certificate-connector-for-microsoft-intune"></a>Konektor certifikátu PFX pro Microsoft Intune
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **konfigurace zařízení** > **certifikace konektorů** > **přidat**
 3. Stáhněte a uložte konektor certifikátu PFX pro Microsoft Intune. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 4. Po dokončení stahování se přihlaste k serveru. Další kroky:
@@ -207,9 +207,9 @@ K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zař
 
 3. Přejděte na **Nastavení** a zadejte tyto vlastnosti:
 
-    - **Prahová hodnota obnovení (%)**: Doporučuje se 20 %.
+    - **Prahová hodnota obnovení (%)** : Doporučuje se 20 %.
     - **Období platnosti certifikátu**: Pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
-    - **Zprostředkovatel úložiště klíčů (KSP)**: Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
+    - **Zprostředkovatel úložiště klíčů (KSP)** : Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
     - **Certifikační autorita**: Zobrazí interní plně kvalifikovaný název domény (FQDN) vaší certifikační autority organizace.
     - **Název certifikační autority**: Uvádí název vaší certifikační autority organizace, jako je například "Certifikační autority společnosti Contoso".
     - **Název šablony certifikátu**: Název šablony vytvořili dříve. Pamatujte, že **Název šablony** je ve výchozím nastavení stejný jako **Zobrazovaný název šablony**, pouze *bez mezer*.
@@ -239,7 +239,7 @@ Po importování certifikátů do Intune vytvořte profil **importovaného certi
 
     - **Zamýšlený účel**: Zamýšlený účel certifikáty, které jsou importovány pro tento profil. Správce může certifikáty importovat pod různými zamýšlenými účely (například ověřování, podepisování pomocí S/MIME nebo šifrování pomocí S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty.
     - **Období platnosti certifikátu**: Pokud jste nezměnili šablonu certifikátu, může být tato možnost nastavená na jeden rok.
-    - **Zprostředkovatel úložiště klíčů (KSP)**: Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
+    - **Zprostředkovatel úložiště klíčů (KSP)** : Pro Windows vyberte, kam chcete ukládat klíče v zařízení.
 
 4. Vyberte **OK** > **Vytvořit** a profil uložte.
 5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](device-profile-assign.md).

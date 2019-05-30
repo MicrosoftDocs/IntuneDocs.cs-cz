@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a53ae7f43f135f7316b665672dc410812ef14d08
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050138"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374083"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -83,11 +83,11 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 
 ### <a name="create-the-configuration-profile"></a>Vytvoření konfiguračního profilu
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)**.
+5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)** .
 6. Nakonfigurujte nastavení:
 
   - **Typ balíček konfigurace klienta ochrany ATP v programu Windows Defender**: Vyberte **připojení** chcete do profilu přidat konfigurační balíček. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
@@ -105,11 +105,11 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 ## <a name="create-the-compliance-policy"></a>Vytvoření zásady dodržování předpisů
 Zásady dodržování předpisů určují přijatelnou úroveň rizika v zařízení.
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V **ochrany ATP v programu Windows Defender** nastavte **vyžadovat, aby zařízení bylo na nebo za skóre rizika počítače** na požadovanou úroveň. Úrovně klasifikace hrozeb jsou [určené ochrany ATP v programu Windows Defender](https://review.docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection?branch=atp-server2008#sort-filter-and-group-the-alerts-queue).
+5. V **ochrany ATP v programu Windows Defender** nastavte **vyžadovat, aby zařízení bylo na nebo za skóre rizika počítače** na požadovanou úroveň. Úrovně klasifikace hrozeb jsou [určené ochrany ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/alerts-queue-windows-defender-advanced-threat-protection).
 
    - **Vymazat**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Uživatelé ochrany ATP v programu Windows Defender hodnota *Secure*.)
    - **Nízká**: Zařízení splňuje předpisy, pokud jenom hrozby nízké úrovně. Zařízení s hrozbami střední nebo vysoké úrovně jsou nevyhovující.
@@ -120,7 +120,7 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady**> vyberte zásady dodržování předpisů vaší Ochrany ATP v programu Windows Defender.
 3. Zvolte **Přiřazení**.
 4. Vyberte, kterým skupinám Azure AD chcete zásadu přiřadit.
@@ -153,7 +153,7 @@ Doporučujeme přečíst si článek [Co je podmíněný přístup](conditional-
 ## <a name="monitor-device-compliance"></a>Monitorování dodržování předpisů zařízením
 V dalším kroku monitorujte stav zařízení, která mají nasazené zásady dodržování předpisů Ochrany ATP v programu Windows Defender.
 
-1. Na [portálu Azure Portal](https://portal.azure.com) vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Dodržování zásad**.
 3. Najděte v seznamu požadovanou zásadu Ochrany ATP v programu Windows Defender a podívejte se, která zařízení jsou vyhovující a která ne.
 

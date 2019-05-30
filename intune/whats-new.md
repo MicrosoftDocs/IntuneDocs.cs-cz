@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 044ced57d9dd2e3e4b86548540090de35b88a6b0
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
-ms.translationtype: MT
+ms.openlocfilehash: 25a3acda374266a0fbd16feabde7787204555ea2
+ms.sourcegitcommit: 876719180e0d73b69fc053cf67bb8cc40b364056
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197078"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66264177"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,7 +57,7 @@ Aplikaci portál společnosti pro Windows budou mít novou stránku s popiskem *
 
 #### <a name="autopilot-device-orderid-attribute-name-changed-to-group-tag----4659453---"></a>AutoPilot zařízení OrderID název atributu změněn na značka skupiny <!-- 4659453 -->
 
-Aby byl intuitivnější, **OrderID** název atributu na zařízení Autopilot se změnil na **značka skupiny**. Při použití sdílených svazků clusteru pro nahrání informací o zařízení Autopilot, je nutné použít značka skupiny jako záhlaví sloupců, nikoli OrderID. V opačném případě nahrávání se nezdaří. OrderID bude znovu zavedena tak, aby vyhovovaly starší verze zákazníkům nebo skripty. Značka skupiny však bude v budoucnu standardní.
+Aby byl intuitivnější, **OrderID** název atributu na zařízení Autopilot se změnil na **značka skupiny**. Při použití sdílených svazků clusteru pro nahrání informací o zařízení Autopilot, je nutné použít značka skupiny jako záhlaví sloupců, nikoli OrderID.  
 
 ## <a name="week-of-may-13-2019"></a>Týden od 13. května 2019 
 
@@ -592,8 +592,8 @@ Android Enterprise
 #### <a name="safari-and-delaying-user-software-update-visibility-ios-settings-are-moving-in-the-intune-ui----3640850-3803313-----"></a>Safari a odložením uživatele aktualizace softwaru iOS viditelnost, které nastavení se přesouvají v Uživatelském rozhraní Intune <!-- 3640850, 3803313   -->
 Pro zařízení s Iosem můžete nastavit Safari, nastavení a konfigurace aktualizací softwaru. V této aktualizaci se tato nastavení přesouvají do různých částí uživatelského rozhraní Intune:
 
-- Nastavení prohlížeče Safari přesunuta z **Safari** (**konfigurace zařízení** > **profily** > **nový profil**  >  **iOS** pro platformu > **omezení zařízení** pro typy profilů) k  **[integrované aplikace](device-restrictions-ios.md#built-in-apps)**.
-- **Zpoždění viditelnost aktualizace softwaru uživatele pro zařízení s Iosem pod dohledem** nastavení (**aktualizace softwaru** > **aktualizovat zásady pro iOS**) přechází na  **Omezení zařízení** > **[Obecné](device-restrictions-ios.md#general)**.  Podrobnosti o vlivu na existující zásady najdete v tématu [aktualizace softwaru iOS](software-updates-ios.md#configure-the-policy). 
+- Nastavení prohlížeče Safari přesunuta z **Safari** (**konfigurace zařízení** > **profily** > **nový profil**  >  **iOS** pro platformu > **omezení zařízení** pro typy profilů) k  **[integrované aplikace](device-restrictions-ios.md#built-in-apps)** .
+- **Zpoždění viditelnost aktualizace softwaru uživatele pro zařízení s Iosem pod dohledem** nastavení (**aktualizace softwaru** > **aktualizovat zásady pro iOS**) přechází na  **Omezení zařízení** >  **[Obecné](device-restrictions-ios.md#general)** .  Podrobnosti o vlivu na existující zásady najdete v tématu [aktualizace softwaru iOS](software-updates-ios.md#configure-the-policy). 
 
 Seznam nastavení najdete v tématu:
 

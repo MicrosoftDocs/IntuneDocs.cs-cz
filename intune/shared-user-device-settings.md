@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a5064a9065dba75f3594f2e6bb6fb36b42be2e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: dc1fca439f0edf4a5d4caaad4ff4f9e0bae5972b
+ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044966"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66374054"
 ---
 # <a name="control-access-accounts-and-power-features-on-shared-pc-or-multi-user-devices-using-intune"></a>Řízení přístupu, účty a funkce power na sdílený počítač nebo zařízení více uživatelů pomocí Intune
 
@@ -41,7 +41,7 @@ Profil se vytvoří v Intune, nasazení nebo přiřaďte profil ke skupinám za�
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
