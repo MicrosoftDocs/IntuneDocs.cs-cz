@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc6b8f90a261325afe7d7ee97bab99dbbd09c095
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: d6e010a6f7d9a975c93b24ad7248534ff548359d
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374071"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412166"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -45,6 +45,13 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-may-27-2019"></a>Týden od 27. května 2019 
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="reporting-for-potentially-harmful-apps-on-android-devices----4223162---"></a>Vytváření sestav pro potenciálně škodlivých aplikací na zařízeních s Androidem <!-- 4223162 -->
+Intune teď poskytuje další informace sestav o potenciálně škodlivých aplikací na zařízeních s Androidem. 
 
 ## <a name="week-of-may-20-2019"></a>Týden od 20. května 2019 
 

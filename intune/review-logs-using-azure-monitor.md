@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 803d556150d60d0a3d60ec03c029d65f0f935f67
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8d13cb9fed28bb759007f1be1cb6df6139c19d3b
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045292"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412700"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslat data protokolů do služby storage, služby event hubs, nebo se přihlaste analytics Intune (preview)
 
@@ -53,7 +53,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditování budete po
 
 ## <a name="send-logs-to-azure-monitor"></a>Odeslání protokolů s Azure monitor
 
-1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V části **monitorování**vyberte **nastavení diagnostiky**. Při prvním otevření, zapněte ho:
 
     ![Zapnout nastavení diagnostiky v Intune odeslat protokoly Azure monitoru](media/diagnostics-settings-turn-on.png)
@@ -101,7 +101,7 @@ Můžete také exportovat protokoly auditu v ostatních částech Intune, včetn
 
 Například pro export auditu protokoly při použití dodržování předpisů pro zařízení:
 
-1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **dodržování předpisů zařízením** > **monitorování** > **protokoly auditu**:
 
     ![Zvolte protokoly auditu pro směrování Intune dat do úložiště Azure Monitor, události rozbočovače nebo analytics](media/audit-logs-under-monitor-in-compliance.png)

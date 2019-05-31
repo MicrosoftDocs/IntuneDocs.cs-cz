@@ -1,11 +1,11 @@
 ---
-title: Řešení potíží se službou Endpoint Protection v Intune – Azure | Microsoft Docs
-description: Řešení problémů během používání služby Microsoft Intune Endpoint Protection.
+title: Běžné zprávy ochrany koncového bodu v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Zobrazit běžné zprávy a možné řešení při použití a řešení problémů aplikace endpoint protection a programem Windows Defender v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2018
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,36 +17,70 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec655a53018c2e45d1cb771c1ce9c0aad376b2b1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a4f749ab85d283ed9743d227476f8229dc1cf7c3
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040156"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402648"
 ---
-# <a name="troubleshoot-endpoint-protection-in-intune"></a>Řešení potíží se službou Endpoint Protection v Intune
+# <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problémy s Endpoint protection a možná řešení v Microsoft Intune
 
-Informace uvedené v tomto článku vám můžou pomoct při řešení problémů, ke kterým dochází při používání služby Endpoint Protection. [Při řešení potíží s antivirovou ochranou v programu Windows Defender si také můžete projít protokoly událostí a kódy chyb](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Tento článek uvádí a popisuje možné příčiny a řešení pro některé chyby a upozornění. Použijte informace k řešení problémů při používání aplikace endpoint protection.
 
-Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).
+## <a name="windows-defender-error-codes"></a>Kódy chyb v programu Windows Defender
 
-### <a name="error-messages"></a>Chybové zprávy
-V této části se popisují možné příčiny následujících chyb a varování a jejich řešení.
+Zkontrolujte protokoly událostí a kódy chyb [řešení potíží s antivirová ochrana v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
-|Položka stavu|Možné příčiny|Možná řešení|
-|---------------|--------------------|-----------------------|
-|**Modul služby Endpoint Protection není k dispozici.**|Modul Endpoint Protection služby Intune je poškozený nebo odstraněný.|Pokud je modul Endpoint Protection služby Intune poškozený, můžete zkusit příslušný software aktualizovat nebo přeinstalovat.<br /><br />Pokud chcete vynutit okamžitou aktualizaci, zvolte v klientském softwaru Endpoint Protection **Aktualizovat** (tuto možnost najdete na hlavním panelu spravovaných počítačů).<br /><br />Pokud se modul Endpoint Protection nedá aktualizovat, musíte ho přeinstalovat.<br /><br />V seznamu nainstalovaných programů v Ovládacích panelech spravovaného počítače najděte položku **Microsoft Intune Endpoint Protection Agent** a pak tuto aplikaci odinstalujte.<br /><br />Při další synchronizaci aktualizací zjistí program Microsoft Online Management Update Manager chybějící program a v další naplánované době pro instalace ho nainstaluje znova.|
-|**Služba Endpoint Protection je zakázána.**|Správce zakázal službu Intune Endpoint Protection pomocí konfiguračního profilu, nebo ji na spravovaném počítači zakázal uživatel.|Povolte službu Endpoint Protection. Viz [přidání nastavení služby Endpoint Protection](endpoint-protection-configure.md) v Intune nebo [zapnutí přístupu k prostředkům společnosti pro program Windows Defender](/intune-user-help/turn-on-defender-windows).|
-|**Ochrana v reálném čase je zakázána.**|Ochranu v reálném čase zakázal správce pomocí profilu, nebo ji na spravovaném počítači zakázal uživatel.|Povolte službu Endpoint Protection. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Kontrola stahování zakázána**|Kontrolu stahování zakázal správce pomocí profilu, nebo ji na spravovaném počítači zakázal uživatel.|Povolte kontrolu. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Monitorování aktivit souborů a programů zakázáno**|Monitorování aktivit souborů a programů zakázal správce pomocí profilu, nebo ho na spravovaném počítači zakázal uživatel.|Povolte monitorování aktivit souborů a programů. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Monitorování chování zakázáno**|Monitorování chování zakázal správce pomocí profilu, nebo ho na spravovaném počítači zakázal uživatel.|Povolte monitorování chování. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Kontrola skriptů zakázána**|Kontrolu skriptů zakázal správce pomocí profilu, nebo ji na spravovaném počítači zakázal uživatel.|Povolte kontrolu skriptů. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Systém kontroly sítě zakázán**|Systém kontroly sítě zakázal správce pomocí profilu, nebo ho na spravovaném počítači zakázal uživatel.|Povolte systém kontroly sítě (NIS). Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus) v Intune nebo [zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows). |
-|**Definice malwaru nejsou aktuální.**|Počítač mohl být delší dobu odpojený od internetu a jeho definice malwaru se nejspíš ještě neaktualizovaly. Tato stavová zpráva se zobrazuje, když jsou definice malwaru na počítači staré 14 dnů a víc.|Pokud jsou definice malwaru zastaralé, můžete je aktualizovat pomocí [antivirové ochrany v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).|
-|**Zpožděna úplná kontrola**|14 dnů se kompletně neudělala úplná kontrola. Může to být tím, že se počítač během úplné kontroly restartoval.|Pokud je úplná kontrola zpožděná, můžete spustit jednorázovou úplnou kontrolu nebo naplánovat úplné kontroly, které budou probíhat opakovaně. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus). |
-|**Zpožděna rychlá kontrola**|14 dnů se kompletně neudělala rychlá kontrola. Může to být způsobené restartováním během rychlé kontroly.|Pokud je rychlá kontrola zpožděná, můžete spustit jednorázovou rychlou kontrolu nebo naplánovat rychlé kontroly, které budou probíhat opakovaně. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).|
-|**Je spuštěna jiná aplikace ochrany koncových bodů.**|Je spuštěná jiná aplikace ochrany koncových bodů a počítač je v pořádku.|Ve výchozím nastavení platí, že když je nainstalovaná jiná aplikace ochrany koncových bodů a Intune tuto aplikaci rozpozná, může se zařízení stát nestabilním.|
+## <a name="common-intune-errors-and-possible-resolutions"></a>Běžné chyby Intune a jejich možná řešení
 
-### <a name="next-steps"></a>Další postup
-Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).
+#### <a name="endpoint-protection-engine-unavailable"></a>Modul služby Endpoint Protection není k dispozici.
+
+**Možnou příčinou**: Modul Endpoint Protection služby Intune je poškozený nebo odstraněný.
+
+**Možná řešení**:
+
+- Pokud řešení endpoint protection je poškozený nebo se neaktualizuje, pak aktualizujte nebo přeinstalujte program.
+- Vynuťte okamžitou aktualizaci. V programu klienta ochrany koncového bodu (pravděpodobně na hlavním panelu) zvolte **aktualizace**.
+- V okně Ovládací panely > programy, vyberte **Microsoft Intune Endpoint Protection Agent**. Tuto aplikaci odinstalujte.
+- Při další synchronizaci aktualizací zjistí program Microsoft Online Management Update Manager chybějící program a v další naplánované době pro instalace ho nainstaluje znova.
+
+#### <a name="features-are-disabled"></a>Funkce jsou zakázané.
+
+Může zobrazit zpráva, že některé funkce jsou zakázány. Tyto zprávy se může stát, když Intune endpoint protection nebo programu Windows Defender zakázal správce pomocí konfiguračního profilu. Nebo je zakázaný koncový uživatel na zařízení. Je to možné zprávy:
+
+`Endpoint Protection disabled`  
+`Real-time protection disabled`  
+`Download scanning disabled`  
+`File and program activity monitoring disabled`  
+`Behavior monitoring disabled`  
+`Script scanning disabled`  
+`Network Inspection System disabled`  
+
+**Možná řešení**: Tyto funkce povolte. Pokyny najdete v tématu:
+
+- [Přidat nastavení služby endpoint protection](endpoint-protection-configure.md)
+- [Antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Koncoví uživatelé: Zapnout ochranu v reálném čase přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows)
+
+#### <a name="malware-definitions-out-of-date"></a>Definice malwaru nejsou aktuální
+
+Tento stav se zobrazí, když jsou definice malwaru v zařízení aktuální 14 dnů a víc. Zprávy mohou například zobrazit, pokud zařízení je odpojené od Internetu nebo jsou zastaralé definice malwaru.
+
+**Možná řešení**: Pokud jsou definice malwaru zastaralé, aktualizujte definice pomocí [antivirové ochrany v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+
+#### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zpožděna úplná kontrola nebo zpožděná Rychlá kontrola
+
+Úplná kontrola nebo rychlou kontrolu nebyla dokončena po dobu 14 dnů. Tomuto scénáři může dojít, pokud se zařízení restartuje při spuštění úplné kontroly.
+
+**Možná řešení**: Pokud je kontrola zpožděná, můžete spustit jednorázovou kontrolu nebo naplánovat v konzole. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+
+#### <a name="another-endpoint-protection-application-running"></a>Je spuštěna jiná aplikace ochrany koncových bodů.
+
+Je spuštěna jiná aplikace ochrany koncových bodů a zařízení je v pořádku.
+
+**Možná řešení**: Pokud je nainstalovaná jiná aplikace ochrany koncových bodů a Intune tuto aplikaci rozpozná, zařízení může stát nestabilní.
+
+## <a name="next-steps"></a>Další postup
+
+Získat [podpory Microsoftu](get-support.md), nebo použijte [komunitní fóra](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

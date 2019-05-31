@@ -1,6 +1,6 @@
 ---
 title: Vytvoření profilu Wi-Fi pro zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Můžete vytvořit profily pro Android, Android Enterprise, beznabídkový režim Androidu, iOS, macOS, Windows 10 a novější a Windows Holographic for Business. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
+description: Projděte si postup vytvoření konfiguračního profilu zařízení v Microsoft Intune. Vytvořte profily pro Android, Android Enterprise, veřejný terminál s Androidem, iOS, macOS, Windows 10 a novější a Windows Holographic for Business. Pomocí těchto profilů můžete vytvořit připojení Wi-Fi pro použití certifikátů, volbu typu protokolu EAP, výběr metody ověřování, povolení proxy a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73d6aab271e6c065dbdaac2359974457d8fae607
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7dc28a614514bf9b1a4987976cb057529b75a5fc
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050561"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412001"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -48,7 +48,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. Na webu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** > vyfiltrujte **Intune** a vyberte **Microsoft Intune**. 
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **Název** a **Popis** profilu Wi-Fi.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, na kterou chcete nastavení Wi-Fi použít. Možnosti:

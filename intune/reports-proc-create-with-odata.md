@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45df3e3b217e25c9e61fd51d7f458f33c7c0481d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0d2e52ed64bfee2da8eafbc228abe61f109b3c27
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045526"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412442"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
 
@@ -53,14 +53,13 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktopu
 > [!Note]  
 > Potřebujete oprávnění k **Sestavám** v Intune. Další informace najdete v sekci [Autorizace](reports-api-url.md).
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Otevřete podokno **Datový sklad Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Otevřít **datový sklad Intune** výběrem odkazu datového skladu **dalších úloh** na pravé straně **Microsoft Intune – přehled** okno.
 4. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-5. Otevřete Power BI Desktop.
-6. Zvolte **Načíst data** > **Datový kanál Odata**.
-7. Do pole pro adresu URL v okně **Datový kanál OData** vložte adresu URL vlastního kanálu.
-8. Vyberte **Basic**.
+1. Otevřete Power BI Desktop.
+2. Zvolte **Načíst data** > **Datový kanál Odata**.
+3. Do pole pro adresu URL v okně **Datový kanál OData** vložte adresu URL vlastního kanálu.
+4. Vyberte **Basic**.
 
     ![Datového kanálu OData pro datový sklad Intune pro vašeho tenanta](media/reports-create-01-odatafeed.png)
 

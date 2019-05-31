@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8554f0addf7364150c3f225e8cba1a7d751f8a7d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4cae90723c7ff92a8042f068fb49c1709506c7ff
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048099"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412434"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
@@ -35,7 +35,7 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. V k [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu omezení zařízení.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
@@ -48,7 +48,7 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - **Windows 8.1 a novější**
     - **Windows 10 a novější**
 
-5. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Chcete-li vytvořit zařízení omezení profilu pro zařízení s Windows 10 Team, jako je Surface Hub, a pak zvolte **omezení zařízení (Windows 10 Team)**.
+5. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Chcete-li vytvořit zařízení omezení profilu pro zařízení s Windows 10 Team, jako je Surface Hub, a pak zvolte **omezení zařízení (Windows 10 Team)** .
 6. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Zvolte vaši platformu, pro podrobné informace o nastavení:
 
     - [Nastavení Androidu](device-restrictions-android.md)

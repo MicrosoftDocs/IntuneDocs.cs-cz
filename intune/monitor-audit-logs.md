@@ -13,12 +13,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d01b1f745450785209bf289be5b6e36ac65cc2d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5d39b62762d623c150ac6198bd2d6215b4410663
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046305"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66412291"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Použití protokolů auditu ke sledování a sledování událostí v Microsoft Intune
 
@@ -39,7 +39,7 @@ Protokoly auditu mohou kontrolovat uživatelé s tímto oprávněním:
 
 Můžete kontrolovat protokoly auditu ve skupině monitorování o každé úloze Intune:
 
-1. V [webu Azure portal](https://portal.azure.com/)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Zvolte úlohu, kterou chcete kontrolovat protokoly auditu. Vyberte například **zařízení**.
 3. V části **monitorování**, zvolte **protokoly auditu**.
 

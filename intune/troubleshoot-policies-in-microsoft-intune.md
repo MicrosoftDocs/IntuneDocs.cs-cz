@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2019
+ms.date: 05/29/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9085cff7e305f7081a3048637c80df43e22d2ee9
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
+ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374122"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66402666"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží s zásady a profily a v Intune
 
@@ -32,13 +32,12 @@ Tento článek uvádí některé běžné postupy řešení potíží a popisuje
 
 ## <a name="use-built-in-troubleshooting"></a>Použít integrované řešení potíží
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Poradce při potížích s**:
+1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **Poradce při potížích**:
 
     ![V Intune přejděte na Nápověda a odborná pomoc a vyberte Poradce při potížích](./media/help-and-support-troubleshoot.png)
 
-3. Zvolte **vybrat uživatele** > vyberte uživatele, se vyskytl problém > **vyberte**.
-4. Ujistěte se, že **licence Intune** a **stav účtu** obě tyto sestavy ukazují zelené kontroly:
+2. Zvolte **vybrat uživatele** > vyberte uživatele, se vyskytl problém > **vyberte**.
+3. Ujistěte se, že **licence Intune** a **stav účtu** obě tyto sestavy ukazují zelené kontroly:
 
     ![V Intune vyberte uživatele a potvrďte, že stav účtu a licence pro Intune zobrazit značky zelené kontroly stavu](./media/account-status-intune-license-show-green.png)
 
@@ -47,7 +46,7 @@ Tento článek uvádí některé běžné postupy řešení potíží a popisuje
     - [Přiřazení licencí, aby uživatelé mohli registrovat zařízení](licenses-assign.md)
     - [Přidání uživatelů do Intune](users-add.md)
 
-5. V části **zařízení**, najděte příslušné zařízení se vyskytl problém. Projděte si různé sloupce:
+4. V části **zařízení**, najděte příslušné zařízení se vyskytl problém. Projděte si různé sloupce:
 
     - **Spravované**: Pro zařízení mohlo přijmout zásady dodržování předpisů nebo konfigurace, musíte tuto vlastnost zobrazit **MDM** nebo **EAS/MDM**.
 
@@ -164,4 +163,6 @@ Chcete-li vyřešit tento problém, nastavte místního systémového času co n
 
 ## <a name="next-steps"></a>Další postup
 
-Pokud stále potřebujete pomoc, můžete si [získat podporu pro Microsoft Intune](get-support.md).
+[Běžné problémy a řešení s e-mailových profilů](troubleshoot-email-profiles-in-microsoft-intune.md)
+
+Získat [podpory Microsoftu](get-support.md), nebo použijte [komunitní fóra](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
