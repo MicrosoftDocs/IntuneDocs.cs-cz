@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb55951390c3fe19651087e16c3185018cfd9dab
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c8353cf2f0c24c3a894fa219df9fc9a8272e17af
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049303"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454066"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -44,9 +44,8 @@ Při vyloučení skupin se v Intune nebere v úvahu přiřazení uživatelů k z
 
 ## <a name="include-and-exclude-groups-when-assigning-apps"></a>Zahrnutí a vyloučení skupin při přiřazování aplikací 
 Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V nabídce **Intune** zvolte **Klientské aplikace**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně **Klientské aplikace** vyberte **Aplikace**. Zobrazí se seznam přidaných aplikací.
 5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
 6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
@@ -76,7 +75,7 @@ Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 
 Když provedete přiřazení skupin, pak už přiřazené skupiny nejsou k dispozici pro změny. Pokud chcete vybrat skupinu, která aktuálně není dostupná, nejdřív ji odeberte ze seznamu přiřazení k aplikaci. 
 
-Přiřazení můžete upravit tak, že ze seznamu **Přiřazení** aplikací vyberete řádek obsahující konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky (**...**) na konci řádku a vyberete **Odebrat**. Zobrazení seznamu **Přiřazení** můžete změnit seskupením podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
+Přiřazení můžete upravit tak, že ze seznamu **Přiřazení** aplikací vyberete řádek obsahující konkrétní přiřazení, které chcete změnit. Kromě toho můžete odebrat přiřazení tak, že kliknete na tři tečky ( **...** ) na konci řádku a vyberete **Odebrat**. Zobrazení seznamu **Přiřazení** můžete změnit seskupením podle možnosti **Typ přiřazení** nebo **Zahrnuto/Vyloučeno**.
 
 ![Přiřazení aplikací Intune – dokončení](./media/apps-inc-exl-05.png)
 

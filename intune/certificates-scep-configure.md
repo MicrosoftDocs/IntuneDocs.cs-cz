@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e802a7196369cf7918ffd8b76e62e03176e7a617
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: ee0f7ce806b1ed2a17b59add467b1b0af2a40578
+ms.sourcegitcommit: 023b1293b47314b77eb80997bbd8aa679db90880
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374103"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448111"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -34,7 +34,7 @@ Tento článek popisuje, jak pomocí Intune nakonfigurovat infrastrukturu a pak 
     Pokud certifikační autorita používá Windows Server 2008 R2, musíte [instalovat opravu hotfix z KB2483564](http://support.microsoft.com/kb/2483564/).
 
 - **NDES Server**: V systému Windows Server 2012 R2 nebo novějším nastavení role serveru zápisu služby síťových zařízení (NDES). Intune nepodporuje používání služby zápisu síťových zařízení na serveru, na kterém se provozuje také certifikační autorita organizace. Pokyny ke konfiguraci Windows Serveru 2012 R2 pro hostování této služby najdete v [doprovodných materiálech ke službě zápisu síťových zařízení](http://technet.microsoft.com/library/hh831498.aspx).
-Server NDES musí být připojený k doméně ve stejné doménové struktuře jako certifikační autorita organizace. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx).
+Server NDES musí být připojený k doméně ve stejné doménové struktuře jako certifikační autorita organizace. Další informace o nasazení serveru NDES v samostatné doménové struktuře, izolované síti nebo interní doméně najdete v tématu [Použití modulu zásad se Službou zápisu síťových zařízení](https://technet.microsoft.com/library/dn473016.aspx). Není možné použít server NDES, která je již používán s jinou správy mobilních zařízení.
 
 - **Microsoft Intune Certificate Connector**: Na portálu Intune přejděte na **konfigurace zařízení** > **konektory Certificate Connectors** > **přidat**a postupujte podle pokynů *kroky Instalace konektoru pro SCEP*. Použijte odkaz ke stažení portálu a zahájit stahování instalačního programu pro konektor certificate **NDESConnectorSetup.exe**.  Tento instalační program spustíte na serveru s rolí NDES.  
 
@@ -224,7 +224,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Location                        |      Value      | Type  |      Data       |
+   |                        Location                        |      Hodnota      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |

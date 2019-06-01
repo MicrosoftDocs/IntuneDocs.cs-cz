@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/30/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d6e010a6f7d9a975c93b24ad7248534ff548359d
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: 0b1544266ff0f03341bd08e0dd8dc3c27eea1252
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412166"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454145"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -234,7 +234,7 @@ Aplikace Win32 pro instalaci na zaregistrovaná v Intune můžete přiřadit za�
 Primární uživatel taky jako uživatele pro spřažení zařízení uživatele (UDA) se zobrazí stránka s přehledem zařízení. Pokud chcete zjistit primární uživatele pro zařízení, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení. Primární uživatel se zobrazí v horní části **přehled** stránky.
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Vytváření sestav pro zařízení s Androidem Enterprise pracovním profilem dalších aplikace spravovaný obchod Google Play <!-- 4105925  -->
-Pro spravovaný obchod Google Play aplikace nasazené na zařízení s Androidem Enterprise pracovním profilem můžete zobrazit číslo verze konkrétní aplikace nainstalované v zařízení. To platí pro pouze požadované aplikace. Povolí se stejné funkce pro aplikace k dispozici v budoucí verzi. 
+Pro spravovaný obchod Google Play aplikace nasazené na zařízení s Androidem Enterprise pracovním profilem můžete zobrazit číslo verze konkrétní aplikace nainstalované v zařízení. To platí pro pouze požadované aplikace.  
 
 #### <a name="ios-third-party-keyboards----4111843-----"></a>iOS klávesnice třetích stran <!-- 4111843   -->
 Podpora Intune app protection zásad (aplikace) pro **třetích stran klávesnice** nastavení pro iOS se už nepodporuje z důvodu o změnu pro platformu iOS. Nebude moct nakonfigurovat toto nastavení v konzole správce Intune a neuplatní se na klientovi v sadě Intune App SDK.
@@ -284,7 +284,7 @@ Platí pro: Plně spravovaná zařízení s androidem Enterprise
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671 -->
 
-Tato funkce je zpožděno a mají být zahrnuty v budoucí verzi.
+Tato funkce je zpožděno a plánujeme přidat později uvolní.
 
 #### <a name="updated-ui-changes-for-microsoft-edge-browser-on-windows-10-and-later-devices----3775833-----"></a>Aktualizované změny uživatelského rozhraní pro prohlížeče Microsoft Edge ve Windows 10 a novější zařízení <!-- 3775833   -->
 Když vytvoříte profil konfigurace zařízení, můžete povolit nebo omezit funkce Microsoft Edge ve Windows 10 a novější zařízení (**konfigurace zařízení** > **profily**  >  **Vytvořit profil** > **Windows 10 a novější** pro platformu > **omezení zařízení** pro typy profilů >  **Prohlížeč Microsoft Edge**). V této aktualizaci nastavení Microsoft Edge jsou více popisné a srozumitelnější. 
@@ -327,7 +327,7 @@ Aktualizovali jsme výchozí časový limit zprávy, které uživatelé uvidí, 
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="retire-noncompliant-devices-----1827291-----"></a>Vyřazení zařízení nedodržující předpisy  <!-- 1827291   -->
-Tato funkce byla odložena a budou přicházet v budoucí verzi.
+Tato funkce byla odložena a je plánovaná pro budoucí verzi.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
@@ -885,7 +885,7 @@ Nové prostředí vám umožňuje popsat problém vlastními slovy a získat př
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Značky oboru pro aplikace <!-- 1081941 -->
-Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. V současné době aplikace přidat do Intune ze spravovaného obchodu Google Play nebo aplikací koupených pomocí Apple Volume Purchase Program (VPP) se nedá přiřadit značky oboru (ale v budoucnu přijde podpora). Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
+Můžete vytvořit značky oboru k omezení přístupu pro role a aplikace. Značka oboru můžete přidat do aplikace tak, aby přístup k aplikaci mají pouze lidé s rolemi také přiřadit značky oboru. Aplikace přidaní do Intune ze spravovaného obchodu Google Play nebo aplikací koupených pomocí Apple Volume Purchase Program (VPP) v současné době nelze přiřadit značky oboru (budoucí podpora je naplánovaná). Další informace najdete v tématu [pomocí značky oboru filtru zásad](scope-tags.md).
 
 <!-- ########################## -->
 ## <a name="week-of-december-10-2018"></a>Týden od 10. prosince 2018
@@ -915,7 +915,7 @@ Intune teď vyžaduje macOS verze 10.12 nebo novější. Zařízení s macOS př
 Můžete odebrat všechny aplikace na zařízeních vlastněných společností s Iosem pod dohledem. Libovolnou aplikaci můžete odebrat, když cílem přiřazení typu **Odinstalovat** budou skupiny uživatelů nebo zařízení. U zařízení s iOSem, která jsou osobní nebo nejsou pod dohledem, budete nadále moci odebrat jen aplikace, které byly nainstalované pomocí Intune.
 
 #### <a name="downloading-intune-win32-app-content----2617320---"></a>Stahuje se obsah aplikace Intune Win32 <!-- 2617320 -->
-Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí optimalizace doručení komponenty na straně klienta Windows 10. Optimalizace doručení poskytuje Peer-to-Peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení lze konfigurovat pomocí zásad skupiny a v budoucnu prostřednictvím Intune MDM. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
+Windows 10 RS3 a vyšší než klienti budou stahovat obsah aplikace Intune Win32 pomocí optimalizace doručení komponenty na straně klienta Windows 10. Optimalizace doručení poskytuje Peer-to-Peer funkce, které je ve výchozím nastavení zapnutá. Optimalizace doručení v současné době je možné nakonfigurovat prostřednictvím zásad skupiny. Další informace najdete v tématu [optimalizace doručení pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization). 
 
 #### <a name="end-user-device-and-app-content-menu----2771453---"></a>Koncový uživatel zařízení a aplikací kontextové nabídky <!-- 2771453 -->
 Koncoví uživatelé teď můžou používat místní nabídka na zařízení a aplikací pro aktivaci běžné akce, jako je přejmenování zařízení nebo kontroluje se dodržování předpisů.

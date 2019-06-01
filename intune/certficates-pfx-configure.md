@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf6febf0ead541e1346cc095bb14437083dd5d64
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373747"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454054"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -136,7 +136,7 @@ K ověření zařízení s VPN, WiFi nebo jiných prostředků, bude nutné zař
 > [!IMPORTANT]  
 > Microsoft Intune Certificate Connector se nedá nainstalovat na vydávající certifikační autoritu (CA) a místo toho musí být nainstalován na samostatném serveru Windows.  
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby**, vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **konfigurace zařízení** > **certifikace konektorů** > **přidat**.
 3. Stáhněte a uložte soubor konektor na umístění máte přístup ze serveru, kam se chcete dostat k instalaci konektoru.
 

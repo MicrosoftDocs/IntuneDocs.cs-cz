@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: c4a17abdb518daba30fbdf339090f7e24c8c26d5
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 1073a38da8a5b2467b1ff8c97b32b93f92e34e4c
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412157"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454115"
 ---
 Tato oznámení poskytují důležité informace, které vám pomohou připravit se na budoucí změny Intune a funkce. 
 
@@ -27,3 +27,16 @@ Zeptejte se, že koncoví uživatelé zařízení s Androidem, které neprovedli
 
 #### <a name="additional-information"></a>Další informace
 https://firebase.google.com/docs/cloud-messaging/
+
+
+### <a name="new-fullscreen-experience-coming-to-intune---4593669--"></a>Nové prostředí na celou obrazovku – Intune <!--4593669-->
+Zavádíme aktualizované vytvářet a upravovat uživatelská rozhraní do Intune na portálu Azure portal. Toto nové prostředí zjednoduší stávajících pracovních postupů s použitím formátu styl Průvodce zhušťovat v rámci o jedno okno. Tato aktualizace bude okamžitě provést pomocí "okno zvětšování" nebo libovolný vytvořit a upravit toky, které vyžadují, abyste k podrobnostem jízdy hloubkové okno. Vytvořit pracovní postupy také zaktualizuje a zahrnují přiřazení (s výjimkou přiřazení aplikace).
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Možnosti zobrazení na celé obrazovce se začne distribuovat do služby Intune i na adrese portal.azure.com a devicemanagement.microsoft.com průběhu několika následujících měsíců. Tato aktualizace v uživatelském rozhraní to neovlivní funkčnost vaší stávající zásady a profily, ale zobrazí se mírně upravenou pracovní postup. Když vytvoříte nové zásady, třeba bude možné nastavit některá přiřazení jako součást tohoto toku místo tím po vytvoření zásady. Najdete v blogovém příspěvku na další informace pro snímky obrazovky vypadat nové prostředí v konzole.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Není potřeba provádět žádnou akci, ale můžete zvážit možnost se v případě potřeby aktualizují vaše pokyny pro IT. Naši dokumentaci aktualizujeme, jak toto prostředí vidíme na různé listy v Intune na portálu Azure portal.
+
+#### <a name="additional-information"></a>Další informace 
+https://aka.ms/intune_fullscreen

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87a7657577372a37c7554941886b80277bfee11e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1aa79bbaa6765a0d4b6009468bdfa184222c5f00
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049422"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454080"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -47,8 +47,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 
 ## <a name="get-started"></a>Začínáme
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. Vyberte **Přidat**.
@@ -126,6 +125,14 @@ Pokud jste vybrali **Configuration designer** v části **formát nastavení** r
     - **Použít sdílenou aktivaci počítače**: Tuto možnost vyberte, když počítač sdílí několik uživatelů. Další informace najdete v článku s [přehledem aktivace pro sdílené počítače pro Office 365](https://docs.microsoft.com/DeployOffice/overview-of-shared-computer-activation-for-office-365-proplus).
     - **Jazyky**: Office je automaticky nainstalován v některém z podporovaných jazyků, které jsou nainstalovány s Windows na zařízení koncového uživatele společnosti. Tuto možnost zvolte, pokud chcete nainstalovat se sadou aplikací další jazyky. <p></p>
     Můžete nasadit další jazyky pro aplikace Office 365 Pro Plus spravované prostřednictvím Intune. Seznam dostupných jazyků zahrnuje **Typ** jazykové sady (Základní, Částečná a Kontrola pravopisu). Na portálu Azure Portal vyberte **Microsoft Intune** > **Klientské aplikace** > **Aplikace** > **Přidat**. V okně **Přidat aplikaci** v seznamu **Typ aplikace** vyberte v části **Sada Office 365** možnost **Windows 10**. V okně **Nastavení sady aplikací** vyberte **Jazyky**. Další informace najdete v tématu s [přehledem jazyků nasazení v Office 365 ProPlus](https://docs.microsoft.com/deployoffice/overview-of-deploying-languages-in-office-365-proplus).
+
+## <a name="select-scope-tags-optional"></a>Vyberte značky oboru (volitelné)
+Chcete-li zjistit, kdo může zobrazit informace o klientských aplikací v Intune můžete použít značky oboru. Úplné podrobnosti o značky oboru, naleznete v tématu [použít značky ovládacího prvku a obor přístupu na základě rolí pro distribuované IT](scope-tags.md).
+
+1. Vyberte **obor (značky)**  > **přidat**.
+2. Použití **vyberte** pole pro hledání značky oboru.
+3. Zaškrtněte políčko vedle značky oboru, které chcete přiřadit k této aplikaci.
+4. Zvolte **Vybrat** > **OK**.
 
 ## <a name="enter-xml-format"></a>Zadejte formát XML
 

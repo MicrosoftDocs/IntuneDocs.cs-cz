@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 05/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4edf6e1e2b0ed57ec221e445bc171895fb9e0072
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
+ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042678"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454032"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 
@@ -89,13 +89,14 @@ V této části udělíte aplikacím oprávnění.
 Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework), který podporuje .NET Framework a používá C# jako kódovací jazyk.
 
 1.  Vyberte **Soubor** > **Nový** > **Projekt**. Zobrazí se dialogové okno **Nový projekt**.
-2.  Na levé straně vyberte **Visual C#**, aby se zobrazily všechny projekty rozhraní .NET Framework.
-3.  Vyberte **Konzolová aplikace (.NET Framework)**, přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
+2.  Na levé straně vyberte **Visual C#** , aby se zobrazily všechny projekty rozhraní .NET Framework.
+3.  Vyberte **Konzolová aplikace (.NET Framework)** , přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
 4.  V **Průzkumníku řešení** vyberte **Program.cs**, aby se zobrazil kód.
-5.  V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
-6.  Na levé straně v části **Visual C#** vyberte **Kód**.
-7.  Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.
-8.  V rámci metody <code>Main</code> přidejte následující kód:
+5.  V Průzkumníku řešení, přidejte odkaz na sestavení `System.Configuration`.
+6.  V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
+7.  Na levé straně v části **Visual C#** vyberte **Kód**.
+8.  Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.
+9.  V rámci metody <code>Main</code> přidejte následující kód:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
@@ -110,7 +111,7 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
                  new SecureClientSecret(applicationSecret))).Result;
     ``` 
 
-9. Přidejte další obory názvů přidáním následujícího kódu v horní části souboru kódu:
+10. Přidejte další obory názvů přidáním následujícího kódu v horní části souboru kódu:
 
     ``` csharp
      using System.Security;
@@ -118,7 +119,7 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
      using System.Configuration;
     ``` 
 
-10. Za metodu <code>Main</code> přidejte ke zpracování a převodu klíče aplikace následující privátní metodu:
+11. Za metodu <code>Main</code> přidejte ke zpracování a převodu klíče aplikace následující privátní metodu:
 
     ``` csharp
     private static SecureString ConvertToSecureStr(string appkey)
@@ -136,10 +137,10 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
     }
     ```
 
-11. V **Průzkumníku řešení** klikněte pravým tlačítkem myši na **Odkazy** a pak vyberte **Spravovat balíčky NuGet**.
-12. Vyhledejte *Microsoft.IdentityModel.Clients.ActiveDirectory* a nainstalujte související balíček Microsoft NuGet.
-13. V **Průzkumníku řešení** vyberte a otevřete soubor *App.config*.
-14. Přidejte oddíl <code>appSettings</code> tak, aby se kód xml zobrazil následujícím způsobem:
+12. V **Průzkumníku řešení** klikněte pravým tlačítkem myši na **Odkazy** a pak vyberte **Spravovat balíčky NuGet**.
+13. Vyhledejte *Microsoft.IdentityModel.Clients.ActiveDirectory* a nainstalujte související balíček Microsoft NuGet.
+14. V **Průzkumníku řešení** vyberte a otevřete soubor *App.config*.
+15. Přidejte oddíl <code>appSettings</code> tak, aby se kód xml zobrazil následujícím způsobem:
 
     ``` xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -155,8 +156,8 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
     </configuration>
     ``` 
 
-15. Aktualizujte hodnoty <code>appId</code>, <code>appKey</code> a <code>tenantDomain</code> tak, aby odpovídaly vašim jedinečným hodnotám souvisejícím s aplikací.
-16. Sestavte aplikaci.
+16. Aktualizujte hodnoty <code>appId</code>, <code>appKey</code> a <code>tenantDomain</code> tak, aby odpovídaly vašim jedinečným hodnotám souvisejícím s aplikací.
+17. Sestavte aplikaci.
 
     >[!NOTE] 
     > Pokud se chcete podívat na další implementační kód, otevřete si článek s [příkladem kódu Intune-Data-Warehouse](https://github.com/Microsoft/Intune-Data-Warehouse/tree/master/Samples/CSharp ).
