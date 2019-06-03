@@ -652,14 +652,14 @@
               href: review-logs-using-azure-monitor.md
             - name: Kontrola protokolů ochrany aplikace
               href: app-protection-policy-settings-log.md
-            - name: Řešení potíží s e-mailovými profily
+            - name: Řešení potíží se zásadami a profily
+              href: troubleshoot-policies-in-microsoft-intune.md
+            - name: Problémy s e-mailovými profily a jejich řešení
               href: troubleshoot-email-profiles-in-microsoft-intune.md
             - name: Řešení potíží s aktualizacemi softwaru
               href: troubleshoot-software-updates-in-microsoft-intune.md
-            - name: Řešení potíží se službou Endpoint Protection
+            - name: Běžné chyby ochrany koncového bodu
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-            - name: Řešení potíží se zásadami a profily
-              href: troubleshoot-policies-in-microsoft-intune.md
             - name: Řešení potíží s podmíněným přístupem
               href: troubleshoot-conditional-access.md
             - name: Řešení problémů s konektorem Exchange
@@ -825,6 +825,10 @@
                   href: vpn-settings-windows-phone-8-1.md
                 - name: Vlastní
                   href: custom-settings-windows-phone-8-1.md
+    - name: "Kódy a\_popisy chyb"
+      items:
+        - name: Chyby aktualizace softwaru
+          href: software-update-agent-error-codes.md
     - name: Informace pro vývojáře
       items:
         - name: Rozhraní API pro přidání certifikační autority třetí strany
