@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b1544266ff0f03341bd08e0dd8dc3c27eea1252
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: 72b96714e8740fe4077583cfa5d9f148c2ee0908
+ms.sourcegitcommit: f41b22f65286a64a8002e2cbe80debfdd6692278
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454145"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469583"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -160,6 +160,14 @@ Nebudete muset při hledání obsahují mezery v čísla IMEI **všechna zaříz
 
 #### <a name="deleting-a-device-in-the-apple-portal-will-be-reflected-in-the-intune-portal---2489996---"></a>Odstraňuje se zařízení na portálu Apple se projeví na portálu Intune <!--2489996 -->
 Pokud zařízení se odstraní z Apple Device Enrollment Program nebo Apple obchodní ředitel portálů, zařízení automaticky se odstraní ze služby Intune při příští synchronizaci.
+
+### <a name="the-enrollment-status-page-now-tracks-win32-apps----2714451---"></a>Stránka stavu registrace se teď sleduje aplikací Win32 <!-- 2714451 -->
+Platí jenom pro zařízení s Windows 10 verze 1903 a výše. Další informace najdete v tématu [nastavení na stránce Stav registrace](windows-enrollment-status.md).
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="reset-and-wipe-devices-in-bulk-by-using-the-graph-api----3295288---"></a>Resetovat a vymazání zařízení hromadně pomocí rozhraní Graph API <!-- 3295288 -->
+Teď můžete obnovit a vymazání zařízení až 100 hromadně pomocí rozhraní Graph API.
 
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
