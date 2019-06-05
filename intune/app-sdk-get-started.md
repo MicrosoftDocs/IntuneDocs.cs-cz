@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/29/2019
+ms.date: 06/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35f4007d03ca66ada5721de1ffe20dd87bfe4527
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043797"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506873"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -81,11 +81,11 @@ Doporučujeme, abyste si zaregistrovali na GitHubu účet, který je možné pou
 
 Budete potřebovat jednu z následujících příruček pro vývojáře, která vám pomůže integrovat Intune App SDK do vaší aplikace:
 
-* **[Intune App SDK pro iOS – Příručka vývojáře](app-sdk-ios.md)**: Tento dokument se vás detailně provede procesem povolování vaší nativní aplikace pro iOS pomocí sady Intune App SDK.
+* **[Intune App SDK pro iOS – Příručka vývojáře](app-sdk-ios.md)** : Tento dokument se vás detailně provede procesem povolování vaší nativní aplikace pro iOS pomocí sady Intune App SDK.
 
-* **[Intune App SDK pro Android Developer Příručka](app-sdk-android.md)**: Tento dokument se vás detailně provede procesem povolování vaší nativní aplikace pro Android s Intune App SDK.
+* **[Intune App SDK pro Android Developer Příručka](app-sdk-android.md)** : Tento dokument se vás detailně provede procesem povolování vaší nativní aplikace pro Android s Intune App SDK.
 
-* **[Xamarinové vazby sady Intune App SDK průvodce](app-sdk-xamarin.md)**: Tento dokument vám pomůže vytvářet zařízení s iOS a aplikace pro Android pomocí Xamarinu zásady ochrany aplikací Intune.
+* **[Xamarinové vazby sady Intune App SDK průvodce](app-sdk-xamarin.md)** : Tento dokument vám pomůže vytvářet zařízení s iOS a aplikace pro Android pomocí Xamarinu zásady ochrany aplikací Intune.
 
 
 
@@ -173,16 +173,13 @@ Pokud vaše aplikace používá k ověřování vlastní vlastní nastavení Azu
 
 Jakmile jste zaregistrovali aplikaci v rámci tenanta služby Azure a se objeví pod **všechny aplikace**, musíte poskytnout přístup k vaší aplikaci ke službě Intune app protection (dříve označovanou jako služba MAM). Na webu Azure Portal:
 
-1.  Přejděte do okna **Azure Active Directory**.
-2.  Vyberte pro danou aplikaci možnost **Registrace aplikace**.
-3.  V části **Nastavení** pod záhlavím **Přístup přes rozhraní API** vyberte **Požadovaná oprávnění**. 
-4.  Klikněte na **+ Přidat**.
-5.  Klikněte na **Vyberte rozhraní API**. 
-6.  Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
-7.  V seznamu rozhraní API vyberte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu) a kliknutím proveďte výběr.
-8.  Vyberte **Read and Write the User’s App Management Data** (Čtení a zápis dat správy uživatelských aplikací).
-9.  Klikněte na **Done** (Hotovo).
-10. Klikněte na **Udělit oprávnění** a potom na **Ano**. 
+1.  Přejděte **Azure Active Directory** okno.
+2.  V části **registrace aplikací**, přejděte na seznam nastavení pro aplikaci.
+3.  Klikněte na tlačítko **+ přidat oprávnění**.
+4.  Klikněte na **naše organizace bude využívat rozhraní API**. 
+5.  Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
+6.  V části **delegovaná oprávnění**, vyberte **DeviceManagementManagedApps.ReadWrite: Čtení a zápis dat správy aplikací uživatele*** zaškrtávací políčko.
+7. Klikněte na tlačítko **přidat oprávnění**.
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 

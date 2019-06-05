@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/21/2019
+ms.date: 06/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,19 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fb3b02cd9d9b978f1de5e98634d647c4c81cde0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9884f1c5d794b527aeaf8fb522d9118d59468b3b
+ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041652"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506888"
 ---
 # <a name="frequently-asked-questions-about-mam-and-app-protection"></a>Časté otázky ke správě mobilních aplikací (MAM) a ochraně aplikací
 
 Tento článek poskytuje odpovědi na některé časté otázky ke správě mobilních aplikací (MAM) Intune a ochraně aplikací Intune.
 
 ## <a name="mam-basics"></a>Základní informace o MAM
-
 
 **Co je MAM?**<br></br>
 [Správa mobilních aplikací (MAM) Intune](/intune/app-lifecycle) představuje sadu funkcí Intune pro správu, s kterými můžete publikovat, doručovat, konfigurovat, zabezpečovat, monitorovat a aktualizovat mobilní aplikace pro uživatele.
@@ -45,7 +44,7 @@ Intune MAM podporuje dvě konfigurace:
 
 ## <a name="app-protection-policies"></a>Zásady ochrany aplikace
 
-**Co jsou zásady ochrany aplikací**?<br></br>
+**Co jsou zásady ochrany aplikací?**<br></br>
 Zásady ochrany aplikací jsou pravidla, která zajistí, že data organizace budou zabezpečená nebo vázaná ve spravované aplikaci. Zásada může být pravidlo, které je vynuceno, když se uživatel pokusí pracovat s firemními daty nebo je přesunout, nebo sada akcí, které jsou zakázané nebo monitorované, pokud je uživatel uvnitř aplikace.
 
 **Jaké jsou příklady zásad ochrany aplikací?**<br></br>
@@ -72,6 +71,13 @@ Zásadami ochrany aplikací Intune se dá spravovat každá aplikace integrovan�
 - Koncový uživatel musí patřit do skupiny zabezpečení, která je cílem zásady ochrany aplikace. Stejná zásada ochrany aplikace musí mít za cíl konkrétní používanou aplikaci. Zásady ochrany aplikací se dají vytvářet a nasazovat v konzole Intune na [portálu Azure](https://portal.azure.com). Skupiny zabezpečení se aktuálně dají vytvářet v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com).
 
 - Koncový uživatel se musí do aplikace přihlásit pomocí svého účtu AAD.
+
+**Co když chci povolit aplikace pomocí Intune App Protection, ale nepoužívá vývojovou platformu z podporovaných aplikací?** 
+
+Vývojový tým Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené pomocí nativní Android, iOS (Obj-C, Swift), Cordova, Xamarin a Xamarin.Forms platformy. Když někteří zákazníci měli úspěchu díky integraci sady Intune SDK jiných platforem, jako je například React Native a NativeScript neposkytujeme explicitní pokyny nebo moduly plug-in pro vývojáře aplikací pomocí nic jiného než naše podporovaných platforem.
+
+**Podporuje sada Intune App SDK knihovnu MSAL (Microsoft Authentication Library) nebo účty sociálních sítí?**<br></br>
+Sada Intune App SDK používá některé pokročilé možnosti ADAL (Active Directory Authentication Library) pro výchozí verze sady SDK i pro verze třetích stran. Proto knihovna MSAL příliš dobře nespolupracuje s mnoha našimi hlavními scénáři, jako je ověřování ve službě Intune App Protection nebo podmíněné spuštění. Vzhledem k tomu, že celkové pokyny od týmu služby identit společnosti Microsoft se přepnout na MSAL pro všechny aplikace Microsoft Office, sady Intune SDK bude časem nutné pro její podporu, ale nejsou žádné plány ještě dnes.
 
 **Jaké jsou další požadavky na používání [mobilní aplikace Outlook](https://products.office.com/outlook)?**
 
@@ -164,8 +170,7 @@ Ochrana aplikací Intune závisí na identitě uživatele, aby byla konzistentn�
 **Existuje bezpečný způsob, jak otevírat webové odkazy ze spravovaných aplikací?**<br></br>
 Ano. Správce IT může nasadit a nastavit zásadu ochrany aplikace pro [aplikaci Intune Managed Browser](app-configuration-managed-browser.md), což je webový prohlížeč vyvinutý týmem Microsoft Intune, který se dá snadno spravovat přes Intune. Správce IT může vyžadovat, aby se všechny webové odkazy v aplikacích spravovaných přes Intune otvíraly v aplikaci Managed Browser.
 
-**Podporuje sada Intune App SDK knihovnu MSAL (Microsoft Authentication Library) nebo účty sociálních sítí?**
-Sada Intune App SDK používá některé pokročilé možnosti ADAL (Active Directory Authentication Library) pro výchozí verze sady SDK i pro verze třetích stran. Proto knihovna MSAL příliš dobře nespolupracuje s mnoha našimi hlavními scénáři, jako je ověřování ve službě Intune App Protection nebo podmíněné spuštění. Aktuálně žádné plány pro jejich podporu neexistují.
+
 
 ## <a name="app-experience-on-android"></a>Prostředí aplikací na Androidu
 
@@ -199,13 +204,13 @@ Google Play Protect kontroly SafetyNet rozhraní API vyžaduje, koncový uživat
 Ověření zařízení SafetyNet i "Kontrola ohrožení aplikací" nastavení vyžadují Google určit verzi správné fungování služby Google Play. Protože jde o nastavení, které spadají v oblasti zabezpečení, bude koncový uživatel zablokován, zaměřuje s těmito nastaveními a nesplňují příslušnou verzi služby Google Play nebo nemají přístup k služby Google Play. 
 
 ## <a name="app-experience-on-ios"></a>Prostředí aplikací v iOS
-**Co se stane, když v zařízení přidám nebo odeberu otisk prstu nebo tvář?**
+**Co se stane, když v zařízení přidám nebo odeberu otisk prstu nebo tvář?**<br></br>
 Zásady ochrany aplikací Intune umožňují řídit přístup k aplikacím jen uživatelům s licencí na Intune. Jedním ze způsobů, jak řídit přístup k aplikacím, je vyžadovat na podporovaných zařízeních Touch ID nebo Face ID od Applu. Intune se chová tak, že když se v zařízení změní databáze biometrických údajů, vyzve uživatele k zadání kódu PIN, pokud je splněna hodnota časového limitu nečinnosti. Ke změnám biometrických údajů patří přidání nebo odebrání otisku prstu nebo tváře. Pokud uživatel Intune nemá nastavený kód PIN, je nasměrován na nastavení kódu PIN pro Intune.
  
 Záměrem tohoto chování je nadále udržovat data organizace v aplikaci zabezpečená a chráněná na úrovni aplikace. Tato funkce je dostupná jen pro iOS a vyžaduje zapojení aplikací, které integrují sadu Intune APP SDK pro iOS verze 9.0.1 nebo novější. Integrace této sady SDK je nezbytná kvůli vynucení tohoto chování u cílových aplikací. K této integraci dochází průběžně a závisí na týmech konkrétních aplikací. Mezi zapojené aplikace patří například WXP, Outlook, Managed Browser a Yammer. 
   
 **Můžu pomocí rozšíření pro sdílení v iOS otevírat pracovní nebo školní data v nespravovaných aplikacích, i když je zásada přenosu dat nastavená na „jenom spravované aplikace“ nebo „žádné aplikace“. Nemůže při tom dojít k úniku dat?**<br></br>
-Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_. Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
+Zásady ochrany aplikací pro Intune nemůžou ovládat rozšíření pro sdílení v iOS, když dané zařízení nespravují. Proto Intune _**podniková data před jejich sdílením mimo příslušnou aplikaci zašifruje**_ . Můžete si to ověřit tak, že si zkusíte otevřít podnikový soubor mimo spravovanou aplikaci. Měl by být zašifrovaný a mimo spravovanou aplikaci by ho nemělo být možné otevřít.
 
 **Jak v iOSu funguje více nastavení přístupu k ochraně aplikací Intune, která jsou nakonfigurovaná na stejnou sadu aplikací a uživatelů?**<br></br>
 Zásady ochrany aplikací Intune pro přístup se na zařízení koncových uživatelů, která se pokusí o přístup k cílové aplikaci z firemního účtu, použijí v konkrétním pořadí. Obecně má přednost vymazání, pak blokování, a pak upozornění, které se dá zavřít. Například pokud se aplikuje na konkrétního uživatele nebo aplikaci, nastavení minimální verze operačního systému iOS, které uživatele upozorňuje, aby svou verzi iOSu aktualizoval, se použije po nastavení minimální verze operačního systému, které uživateli zablokuje přístup. Proto ve scénáři, kde správce IT nakonfiguruje minimální operační systém iOS na 11.0.0.0 a minimální operační systém iOS (pouze upozornění) na 11.1.0.0, zatímco zařízení pokoušející se o přístup k aplikaci má iOS 10, by byl koncový uživatel zablokován na základě přísnějšího nastavení pro minimální verzi operačního systému iOS, které vede k zablokování přístupu.
