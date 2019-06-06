@@ -135,6 +135,10 @@
           items:
             - name: Konfigurace sítě
               href: network-bandwidth-use.md
+            - name: Koncové body Intune
+              href: intune-endpoints.md
+            - name: Koncové body Intune pro vládu USA
+              href: intune-us-government-endpoints.md
         - name: Přihlášení k Intune
           href: account-sign-up.md
         - name: Konfigurace domén
