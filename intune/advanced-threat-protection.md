@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbd226f2b812e1062d56a1d66b3e10bc9d68036
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 1d13d4094239cd36f736bb5cb19af7a11d29e727
+ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374083"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719579"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -52,8 +52,7 @@ Abyste mohli používat ATP s Intune, je potřeba mít nakonfigurované a připr
 
 ## <a name="enable-windows-defender-atp-in-intune"></a>Povolení Ochrany ATP v programu Windows Defender v Intune
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Vyberte **Dodržování předpisů zařízením** > **Windows Defender ATP** > **Otevřít Centrum zabezpečení v programu Windows Defender**.
 
     ![Výběrem otevřete Centrum zabezpečení v programu Windows Defender.](./media/atp-device-compliance-open-windows-defender.png)
