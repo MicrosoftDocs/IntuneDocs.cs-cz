@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72b96714e8740fe4077583cfa5d9f148c2ee0908
-ms.sourcegitcommit: f41b22f65286a64a8002e2cbe80debfdd6692278
+ms.openlocfilehash: 7c14568a0581220cf5941984645bd0b9044e00c1
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66469583"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749941"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -106,8 +106,11 @@ Správci uvidí tyto čtyři aplikace automaticky přidá do seznamu svých apli
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
+#### <a name="updated-pfx-certificate-connector-for-microsoft-intune-----1533038---"></a>Aktualizovaný soubor PFX Certificate Connector pro Microsoft Intune  <!-- 1533038 -->
+Vydali jsme aktualizaci [konektor certifikátu PFX pro Microsoft Intune](certficates-pfx-configure.md#whats-new-for-connectors) , který řeší problém kde nadále znovu zpracována, stávající certifikáty PFX, což způsobí, že konektoru zastaví zpracování nových žádostí.
+
 ####  <a name="intune-security-tasks-for-defender-atp-in-public-preview--------3208597---"></a>Zabezpečení úloh Intune pro ochrany ATP v programu Defender (ve verzi public preview)     <!-- 3208597 -->
-Ve verzi public preview můžete Intune použít ke správě zabezpečení úloh pro Microsoft Defender Advanced Threat Protection (ATP). Tato integrace s ochrany ATP v programu a přidá a přístup na základě rizik zjistit, prioritu a náprava ohrožení zabezpečení koncového bodu a chybné konfigurace, při současném snížení času mezi zjišťování tak, aby omezení rizik.
+Ve verzi public preview, můžete Intune použít ke správě [úloh zabezpečení pro Microsoft Defender Advanced Threat Protection (ATP)](atp-manage-vulnerabilities.md). Tato integrace s ochrany ATP v programu a přidá a přístup na základě rizik zjistit, prioritu a náprava ohrožení zabezpečení koncového bodu a chybné konfigurace, při současném snížení času mezi zjišťování tak, aby omezení rizik.
 
 #### <a name="check-for-a-tpm-chipset-in-a-windows-10-device-compliance-policy----3617671---idstaged--"></a>Vyhledat čipů TPM v zásadách dodržování předpisů zařízení Windows 10 <!-- 3617671   idstaged-->
 Mnoho Windows 10 a novější zařízení má čipovými sadami Trusted Platform Module (TPM). Tato aktualizace zahrnuje nové nastavení dodržování předpisů, která kontroluje verze čipu TPM v zařízení. 
@@ -116,7 +119,7 @@ Mnoho Windows 10 a novější zařízení má čipovými sadami Trusted Platform
 
 Platí pro: Windows 10 a novější
 
-#### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices----4097904-----"></a>Koncovým uživatelům zabránit ve změně jejich osobní HotSpot a zakázat protokolování zařízení s Iosem server Siri <!-- 4097904   --> 
+#### <a name="prevent-end-users-from-modifying-their-personal-hotspot-and-disable-siri-server-logging-on-ios-devices----4097904-----"></a>Koncovým uživatelům zabránit ve změně jejich osobní HotSpot a zakázat protokolování zařízení s Iosem server Siri <!-- 4097904   -->  
 Vytvořit profil omezení zařízení na zařízení s Iosem (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **iOS** pro platformu > **omezení zařízení** pro typ profilu). Tato aktualizace zahrnuje nové nastavení, které můžete nakonfigurovat:
 
 - **Integrované aplikace**: Protokolování na straně serveru pro příkazy Siri

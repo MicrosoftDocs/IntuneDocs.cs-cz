@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/08/2019
+ms.date: 06/05/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13858b257c1adbc8ce3147710d450c4a09ec9dc2
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: c1119a5681033574ec0a114442b122990da872bf
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454054"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749816"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -249,12 +249,17 @@ Aktualizace certifikátu dva konektory jsou vydávány pravidelně. Při aktuali
 
 *Konektoru certifikátů PFX pro Microsoft Intune* [podporuje automatické aktualizace](#requirements), zatímco *Intune Certificate Connector* je aktualizovat ručně.
 
-### <a name="may-6-2019"></a>6. května 2019
+### <a name="may-17-2019"></a>17. května 2019  
+- **Konektor certifikátů PFX pro Microsoft Intune – verze 6.1905.0.404**  
+  Změny v této verzi:  
+  - Opravili jsme problém, kde nadále být přepracován stávající certifikáty PFX to způsobí, že konektoru zastaví zpracování nových žádostí. 
+
+### <a name="may-6-2019"></a>6. května 2019  
 - **Konektor certifikátů PFX pro Microsoft Intune – verze 6.1905.0.402**  
   Změny v této verzi:  
   - Interval dotazování pro konektor je omezený ze 5 minut na 30 sekund.
  
-### <a name="april-2-2019"></a>2. dubna 2019
+### <a name="april-2-2019"></a>2. dubna 2019  
 - **Intune Certificate Connector – verze 6.1904.1.0**  
   Změny v této verzi:  
   - Opravili jsme problém, kde tento konektor se nemusí podařit registrovat do Intune po přihlášení ke službě connector pomocí účtu globálního správce.  

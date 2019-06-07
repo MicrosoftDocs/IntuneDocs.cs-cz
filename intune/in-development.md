@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ae43aa6820f5a858f4dd92153ad4b931af77dc6
-ms.sourcegitcommit: b8021474846b655954c2796c71bdbe2a8d22b421
+ms.openlocfilehash: bc5ea7076e77e5071724168fab58fa78f59601c4
+ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500791"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744312"
 ---
 # <a name="in-development-for-microsoft-intune---june-2019"></a>Při vývoji pro Microsoft Intune – červen 2019
 
@@ -99,7 +99,7 @@ Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení Windows 1
 Platí pro: Windows 10 a novější
 
 #### <a name="deploy-multiple-zebra-mobility-extensions-device-profiles-to-a-device-same-user-group-or-same-devices-group----4089955---"></a>Více Zebra mobility rozšíření zařízení profily nasadit do zařízení, stejnou skupinu uživatelů nebo stejné skupiny zařízení <!-- 4089955 -->
-V Intune můžete použít rozšíření mobility Zebra (MZ) v profilu konfigurace zařízení k nastavení nebo přidat nastavení nejsou integrované do Intune. V současné době můžete nasadit jeden profil pro jedno zařízení. V budoucí aktualizaci budete moct nasadit více profilů, můžete:
+V Intune můžete použít rozšíření mobility Zebra (MX) v profilu konfigurace zařízení k nastavení nebo přidat nastavení nejsou integrované do Intune. V současné době můžete nasadit jeden profil pro jedno zařízení. V budoucí aktualizaci budete moct nasadit více profilů, můžete:
 
 - Stejnou skupinu uživatelů
 - Do stejné skupiny zařízení

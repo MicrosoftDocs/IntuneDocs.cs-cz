@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 92aa438e436c4612ede29564f61c3fc529f789c0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 82fa4fc7f9e60dff3c08adf3281351cbfa8eb743
+ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045048"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749929"
 ---
 # <a name="windows-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení Windows Intune  
 
-Zobrazení [nastavení standardních hodnot zabezpečení Windows](security-baselines.md) , který podporuje Microsoft Intune.  
+Zobrazení [nastavení standardních hodnot zabezpečení Windows](security-baselines.md) , který podporuje Microsoft Intune. Výchozí hodnoty směrného plánu Windows představují doporučené konfigurace pro Windows a nemusí odpovídat výchozí hodnoty směrného plánu z dalších standardních hodnot zabezpečení.  
 
 > [!NOTE]  
-> Standardní nastavení zabezpečení Windows jsou ve verzi Preview. Co je k dispozici na portálu se liší ve verzi Preview, seznam dostupných nastavení a pořadí, ve kterém tento obsah představuje těchto nastavení.  
+> Nastavení standardních hodnot zabezpečení Windows, musí být v **ve verzi Preview**. Co je k dispozici na portálu se liší ve verzi Preview, seznam dostupných nastavení a pořadí, ve kterém tento obsah představuje těchto nastavení.  
 >  
 > Po standardní nastavení z verze Preview se tento obsah se aktualizuje seznam nastavení standardních hodnot zabezpečení, které Intune podporuje – ve verzi preview.  
 
@@ -1085,7 +1085,7 @@ Další informace najdete v tématu [zásady CSP – LocalPoliciesSecurityOption
   **Výchozí**: Ano
 
 - **Virtualizovat souborů a registrů zápisu chyby do podle umístění uživatele**  
-  Toto nastavení řídí, jestli se chyby zápisu aplikace přesměrují na definovaná umístění registru a souborů systému zásad. Nastavení této zásady snižuje riziko zneužití aplikací, které spustit jako správce a zápis dat za běhu aplikace k *% ProgramFiles %*, *% Windir %*, *%Windir%\system32*, nebo *Klíče HKLM\Software*.
+  Toto nastavení řídí, jestli se chyby zápisu aplikace přesměrují na definovaná umístění registru a souborů systému zásad. Nastavení této zásady snižuje riziko zneužití aplikací, které spustit jako správce a zápis dat za běhu aplikace k *% ProgramFiles %* , *% Windir %* , *%Windir%\system32*, nebo *Klíče HKLM\Software*.
   
   **Výchozí**: Ano
 
@@ -1159,7 +1159,7 @@ Další informace najdete v tématu [zásady CSP – RemoteDesktopServices](http
   **Výchozí**: Enabled
   
 - **Jednotku přesměrování bloku**  
-  Nastavení této zásady určuje, zda bude bráněno mapování jednotky klienta v relaci vzdálené plochy (přesměrování jednotek). Ve výchozím nastavení serveru hostitele relace VP mapuje klientské jednotky automaticky po připojení. Připojené jednotky se objeví ve stromové struktuře relace složek v Průzkumníku souborů nebo počítače ve formátu  *\<písmeno_jednotky >* na  *\<název_počítače >*. Nastavení této zásady můžete použít k přepsání tohoto chování. Pokud nastavení této zásady povolíte, přesměrování klienta jednotky není povoleno v relace služby Vzdálená plocha a přesměrování kopie souboru schránky není povolené v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování jednotek je vždycky povolená. Navíc je vždycky povolená přesměrování kopie souborů schránky. Pokud je povoleno přesměrování schránky. Pokud nastavení této zásady nenakonfigurujete, nejsou zadány jednotky přesměrování klientů a přesměrování kopie souboru schránky na úrovni zásad skupiny.
+  Nastavení této zásady určuje, zda bude bráněno mapování jednotky klienta v relaci vzdálené plochy (přesměrování jednotek). Ve výchozím nastavení serveru hostitele relace VP mapuje klientské jednotky automaticky po připojení. Připojené jednotky se objeví ve stromové struktuře relace složek v Průzkumníku souborů nebo počítače ve formátu  *\<písmeno_jednotky >* na  *\<název_počítače >* . Nastavení této zásady můžete použít k přepsání tohoto chování. Pokud nastavení této zásady povolíte, přesměrování klienta jednotky není povoleno v relace služby Vzdálená plocha a přesměrování kopie souboru schránky není povolené v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování jednotek je vždycky povolená. Navíc je vždycky povolená přesměrování kopie souborů schránky. Pokud je povoleno přesměrování schránky. Pokud nastavení této zásady nenakonfigurujete, nejsou zadány jednotky přesměrování klientů a přesměrování kopie souboru schránky na úrovni zásad skupiny.
   
   **Výchozí**: Enabled
   
