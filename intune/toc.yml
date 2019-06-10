@@ -576,10 +576,12 @@
                   href: windows-store-for-business.md
                 - name: E-knihy pro iOS
                   href: vpp-ebooks-ios.md
-            - name: Konfigurace aplikace Portál společnosti
+            - name: Konfigurace Portálu společnosti
               href: company-portal-app.md
             - name: Konfigurace Managed Browseru
               href: app-configuration-managed-browser.md
+            - name: Konfigurace Microsoft Edge
+              href: manage-microsoft-edge.md
             - name: Konfigurace Outlooku
               href: app-configuration-policies-outlook.md
         - name: Ochrana aplikací
