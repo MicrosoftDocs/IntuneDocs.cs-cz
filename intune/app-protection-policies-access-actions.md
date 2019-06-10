@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 490c7312f510651cafc6ade516e5f7dca8131b3a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043958"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804681"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
 
@@ -32,9 +32,7 @@ S využitím těchto nastavení můžete explicitně vymazat podniková data ze 
 
 ## <a name="create-an-app-protection-policy-using-access-actions"></a>Vytvoření zásad ochrany aplikací využívajících akce přístupu
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.  
-    Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** vyberte **Klientské aplikace** > **Zásady ochrany aplikací**.
 4. Klikněte na **Přidat zásadu** (můžete také upravit některou existující zásadu). 
 5. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 

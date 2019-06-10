@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/14/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0b3a566fd5c040e1c0007c10b1b57a64788a2323
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043828"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804702"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -97,8 +97,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
-2.  Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3.  V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
 4.  V **přidat** podokno aplikace, vyberte **aplikace Windows (Win32)** ze zadané rozevíracího seznamu.
 
@@ -163,10 +162,10 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 2.  V **přidat pravidlo požadavku** podokno, nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
     - **Architektura operačního systému**: Zvolte, že architektury potřebujete k instalaci aplikace.
     - **Minimální verzi operačního systému**: Vyberte minimální verzi operačního systému, které jsou potřebné k instalaci aplikace.
-    - **Místo na disku vyžadované (MB)**: Volitelně můžete přidáte volné místo na disku potřebné k instalaci aplikace na systémovou jednotku.
-    - **Vyžaduje fyzické paměti (MB)**: Volitelně můžete přidáte fyzické paměti (RAM) požadovaná k instalaci aplikace.
+    - **Místo na disku vyžadované (MB)** : Volitelně můžete přidáte volné místo na disku potřebné k instalaci aplikace na systémovou jednotku.
+    - **Vyžaduje fyzické paměti (MB)** : Volitelně můžete přidáte fyzické paměti (RAM) požadovaná k instalaci aplikace.
     - **Minimální počet logických procesorů potřebný**: Volitelně můžete přidáte minimální počet logických procesorů potřebný k instalaci aplikace.
-    - **Minimální rychlost procesoru požadované (MHz)**: Volitelně můžete přidáte minimální rychlost procesoru, které jsou potřebné k instalaci aplikace.
+    - **Minimální rychlost procesoru požadované (MHz)** : Volitelně můžete přidáte minimální rychlost procesoru, které jsou potřebné k instalaci aplikace.
 
 3. Klikněte na tlačítko **přidat** zobrazíte **přidat pravidlo požadavku** okno Konfigurace pravidel další požadavek. Vyberte **typ požadavku** zvolit typ pravidlo, které budete používat k určení, jak je požadavek ověřen. Pravidla požadavků můžete podle informací o systému souboru, hodnoty registru nebo skripty prostředí PowerShell. 
     - **Soubor**: Při výběru **souboru** jako **typ požadavku**, pravidlo požadavku musí odhalit souboru nebo složky, datum, verze nebo velikosti. 
@@ -342,12 +341,50 @@ Protokoly agenta na klientském počítači se obvykle nachází ve složce `C:\
 > *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
 > *C:\windows\IMECache*
 
-Další informace o řešení potíží s aplikací Win32, naleznete v tématu [Win32 aplikace řešení potíží s instalací](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
+### <a name="detecting-the-win32-app-file-version-using-powershell"></a>Zjištění verze souboru aplikace Win32 pomocí Powershellu
 
-### <a name="troubleshooting-areas-to-consider"></a>Oblasti řešení potíží, na které je třeba se zaměřit
+Pokud máte potíže při zjištění verze souboru aplikace Win32, zvažte použití nebo úpravou následujícího příkazu Powershellu:
+
+``` PowerShell
+
+$FileVersion = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+#The below line trims the spaces before and after the version name
+$FileVersion = $FileVersion.Trim();
+if ("<file version of successfully detected file>" -eq $FileVersion)
+{
+#Write the version to STDOUT by default
+$FileVersion
+exit 0
+}
+else
+{
+#Exit with non-zero failure code
+exit 1
+}
+
+```
+Ve výše uvedeném příkazu Powershellu nahraďte `<path to binary file>` řetězec s cestou k souboru aplikace systému Win32. Příklad cesty by měl vypadat přibližně následující:<br>
+`C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\ssms.exe`
+
+Také nahraďte `<file version of successfully detected file>` řetězce, které potřebujete ke zjištění verze souboru. Příklad řetězce verze souboru bude podobný následujícímu:<br>
+`2019.0150.18118.00 ((SSMS_Rel).190420-0019)`
+
+Pokud potřebujete získat informace o verzi vaší aplikace Win32, můžete použít následující příkaz Powershellu:
+
+``` PowerShell
+
+[System.Diagnostics.FileVersionInfo]::GetVersionInfo("<path to binary file>").FileVersion
+
+```
+
+Ve výše uvedeném příkazu Powershellu nahraďte `<path to binary file>` se vaše cesta k souboru.
+
+### <a name="additional-troubleshooting-areas-to-consider"></a>Další řešení potíží oblasti vzít v úvahu
 - Zkontroluje cílení, abyste měli jistotu, že je agent nainstalovaný na zařízení – aplikace Win32 zacílená na skupinu nebo powershellový skript zacílený na skupinu vytvoří zásady instalace agenta pro skupinu zabezpečení.
 - Zkontrolujte verzi operačního systému – Windows 10 1607 a novější.  
 - Zkontrolujte skladovou položku Windows 10 – Windows 10 S nebo verze Windows s povoleným režimem S nepodporují instalaci pomocí instalační služby MSI.
+
+Další informace o řešení potíží s aplikací Win32, naleznete v tématu [Win32 aplikace řešení potíží s instalací](troubleshoot-app-install.md#win32-app-installation-troubleshooting).
 
 ## <a name="next-steps"></a>Další postup
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fc2e17c605af2c9cec021724852bcf1b48012ba8
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61490123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804428"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Pravidla chování v oblasti Open Source u Microsoftu
 
@@ -23,7 +23,7 @@ Jsme **chtějí a podporují příspěvky** z naší komunity (uživatelů, zák
 * **Pomocí prohlížeče**: Existují dvě možnosti: 
 
     **Option 1: Upravit přímo z webu docs.microsoft.com**  
-    1. Přechod na téma, jako například [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/ntune/troubleshoot-policies-in-microsoft-intune). 
+    1. Přechod na téma, jako například [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
     2. Vyberte **upravit** (pravého horního). To ukazuje soubor markdownu v úložišti GitHub.
     3. Vyberte ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se vám **tento soubor upravit** popisu tlačítka. 
     4. Proveďte požadované změny a pak **potvrzení** provedené změny. 

@@ -16,51 +16,38 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80292fab9a8e35db23163f7c5a0dfc1c01b65848
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 864e43bf644bf4e4f959c6ad826d9d5bade617a5
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050536"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804668"
 ---
-# <a name="plan-communications"></a>Plán komunikace
+# <a name="plan-communications"></a>Plán komunikace 
+Plán komunikace je klíčovým prvkem, který migrace do Intune. Následující nástroje a šablony jsou k dispozici při vzdělávání koncovým uživatelům. Sada přechodu na Intune obsahuje e-mailové šablony, Průvodce registrací v Intune a odkazy na instruktážní videa pro registrace koncového uživatele.  
 
-Plán komunikace je klíčem k úspěšné migraci do Intune. U každé fáze migrace můžete použít stejný plán komunikace.
+Stažení:  [Sada přechodu na Intune](http://aka.ms/IntuneAdoptionKit)
 
-## <a name="email-templates"></a>E-mailové šablony
+## <a name="email-templates"></a>E-mailové šablony 
+Doporučujeme následující plán komunikace s využitím e-mailů. Poskytujeme šablony si můžete přizpůsobit svému plánu komunikace:
+- **E-mailu #1**: Vysvětluje výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune. 
 
-Doporučujeme následující plán komunikace s využitím e-mailů. Vytvořili jsme pro vás šablony, které můžete přizpůsobit svému plánu komunikace:
-
--   **E-mailu \#1:** Vysvětluje výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.<br/><br/>
-
-
-    -   [Stáhnout šablonu e-mailu č. \#1](https://gallery.technet.microsoft.com/Intune-migration-guide-end-e3209b35)
-<br></br>
-
--   **E-mailu \#2:** Oznamujeme, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali. Připomeňte jim výhody a strategické důvody migrace.<br/><br/>
-
-
-    -   [Stáhnout šablonu e-mailu č. \#2](https://gallery.technet.microsoft.com/Intune-migration-guide-end-a9d25eb5)
-<br></br>
-
--   **E-mailu \#3:** Poskytněte uživatelům časovou osu předtím, než je ovlivněn jejich přístup. Znovu jim připomeňte výhody a strategické důvody migrace. Časový plán posílání e-mailů by měl zahrnovat posuvné okno, aby bylo možné přizpůsobení jednotlivým fázím. Například v červnu pošlete e-mail č. \#1 uživatelům fáze 1, e-mail č. \#2 uživatelům fáze 2 a e-mail č. \#3 uživatelům fáze 3.<br/><br/>
-
-    -   [Stáhnout šablonu e-mailu č. \#3](https://gallery.technet.microsoft.com/Intune-migration-guide-end-831521b5)
-
+- **E-mailu #2**: Oznamujeme, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali.  Poskytněte uživatelům časovou osu předtím, než je ovlivněn jejich přístup. Připomeňte jim výhody a strategické důvody migrace.
 Po určité době můžete začít vynucovat dodržování předpisů pomocí zásad podmíněného přístupu, které můžete použít jako kritéria pro přístup k firemním datům, jak je vysvětleno v tématu [Využití podmíněného přístupu pro účely rozsáhlejšího přijetí koncovými uživateli](migration-guide-drive-adoption.md).
 
-## <a name="additional-communication-templates"></a>Další šablony komunikace
+## <a name="intune-enrollment-guide"></a>Průvodce registrací pro Intune 
+Tuto přílohu PDF je možné poskytnout uživatelům jako-je, nebo může přizpůsobit verzi aplikace Word zahrnout interním prostředkům a kontaktní údaje.
 
-Intune poskytuje další šablony, které můžete použít na podporu registrace zařízení uživateli:
-
--   Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](end-user-educate.md).
-
--   [Šablona registrace koncového uživatele do Intune pro správce IT](https://gallery.technet.microsoft.com/End-user-Intune-enrollment-55dfd64a) je přizpůsobitelný wordový dokument, který vysvětluje, jak zaregistrovat zařízení s Androidem, iOSem a počítače Mac v Intune.
-
--   [Návody a e-maily k FastTrack pro EMS](https://gallery.technet.microsoft.com/FastTrack-for-EMS-How-To-f170da4c) můžete přizpůsobit pomocí loga vaší společnosti, abyste propagovali přijetí Intune a EMS ve vaší organizaci.
-
--   Sdílené složky [adresa URL aplikace portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli, Android, iOS a Windows. Tato adresa URL se přesměruje do odpovídající aplikaci portál společnosti na zařízení Windows, iOS a Android.
+## <a name="instructional-videos"></a>Instruktážní videa
+Vytvořili jsme krátký, podrobné videa, která vám pomůže se vaši uživatelé snadno registrují svoje zařízení v Intune.
+- [Registrace zařízení s Androidem](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
+- [Registrace zařízení s Androidem pracovního profilu](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
+- [Registrace zařízení s iOSem](https://www.youtube.com/watch?v=mJyv6YcHi7c)
+- [Registrace zařízení s macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
+- [Registrace vašich Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
 ## <a name="next-steps"></a>Další postup
-
-[Využití podmíněného přístupu pro účely rozsáhlejšího přijetí koncovými uživateli](migration-guide-drive-adoption.md)
+Intune poskytuje další zdroje informací, které lze použít na podporu registrace zařízení s uživateli:
+- Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). 
+- [Registraci zařízení v Intune pro správce IT](https://docs.microsoft.com/intune/device-enrollment) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
+- Sdílené složky [adresa URL aplikace portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli, Android, iOS a Windows. Tato adresa URL se přesměruje do odpovídající aplikaci portál společnosti na zařízení Windows, iOS a Android.

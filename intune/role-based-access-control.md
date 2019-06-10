@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7419a316018ed5c883f89a51090a852680cd9e38
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4c4b9f1d1dd0072555d8438940969b7abd0a9fff
+ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040671"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66804486"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -30,6 +30,8 @@ ms.locfileid: "66040671"
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
 - **Správce služby Intune** (označované také jako **správce Intune**)
+
+Rady a návrhy RBAC v Intune najdete v dokumentu tato série pěti videa, které prezentují příklady a názorné postupy: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
 
 ## <a name="roles"></a>Role
 Role definuje sadu oprávnění udělit uživatelům, kteří k této roli přiřazení.
@@ -58,12 +60,12 @@ Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další inform
 | --- | :---: | :---: |
 | Globální správce | Čtení/zápisu | Čtení/zápisu |
 | Správce služby Intune | Čtení/zápisu | Čtení/zápisu |
-| Správce podmíněného přístupu | Žádný | Žádný |
+| Správce podmíněného přístupu | Žádné | Žádné |
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
 | Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádný | Jen pro čtení |
 
 > [!TIP]
 > Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**, a **podmíněného přístupu**, řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
@@ -84,8 +86,8 @@ Chcete-li zobrazit přiřazení role, zvolte **Intune** > **role** > **všechny 
 
 -   **Vlastnosti**: Název, popis, role, členy, obory a přiřazení značek.
 -   **Členové**: Všichni uživatelé v uvedené skupiny mají oprávnění ke správě uživatelů a zařízení, které jsou uvedeny v rozsah (skupiny).
--   **Rozsah (skupiny)**: Všechny uživatele nebo zařízení v těchto skupinách může být spravován uživatelů ve členech.
--   **[Obor (značky)](scope-tags.md)**: Uživatelé v členové mohou vidět prostředky, které mají stejné značky oboru.
+-   **Rozsah (skupiny)** : Všechny uživatele nebo zařízení v těchto skupinách může být spravován uživatelů ve členech.
+-   **[Obor (značky)](scope-tags.md)** : Uživatelé v členové mohou vidět prostředky, které mají stejné značky oboru.
 
 ### <a name="multiple-role-assignments"></a>Více přiřazení rolí
 Pokud má uživatel více přiřazení role, oprávnění v těchto přiřazení rolí následujícím způsobem rozšířit na různé objekty:
