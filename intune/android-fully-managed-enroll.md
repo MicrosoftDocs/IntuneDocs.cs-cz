@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9edfa2ec7a408f512d4cb0b99a468db0b29f5868
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f1b1197671b54cb5374bd79b6acbeb8137c0135c
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044206"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819890"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Nastavení Intune registraci Androidu Enterprise plně spravovaná zařízení (Preview)
 
@@ -55,8 +55,11 @@ Nastavení Androidu Enterprise plně spravovaná Správa zařízení, postupujte
 
 ### <a name="enable-corporate-owned-user-devices"></a>Povolit firemní vlastněné zařízení
 
-1. Přejděte [portál Intune](https://portal.azure.com) a zvolte **registrace zařízení** > **registrace zařízení s Androidem** > **vlastněné společností, plně spravovaná zařízení uživatelů (Preview)**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a zvolte **registrace zařízení** > **registrace zařízení s Androidem** > **vlastněné společností, plně spravovaná zařízení uživatelů (Preview)** .
 2. V části **umožňují uživatelům registraci zařízení vlastněných společností uživatelů**, zvolte **Ano**.
+
+[!NOTE]
+Pokud máte zásadu podmíněného přístupu Azure AD definované, který používá *vyžadovat, aby zařízení bylo označené jako vyhovující* řízení a platí pro **všech cloudových aplikacích**, **Android** a **Prohlížeče** -je nutné vyloučit **Microsoft Intune** cloudové aplikace z těchto zásad. Toto je vzhledem k tomu procesy, které instalace sady Android Chrome karta používá k ověřování vašich uživatelů během registrace. Další informace najdete v tématu [dokumentace k Azure AD podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/conditional-access/).
 
 Když toto nastavení je **Ano**, poskytne vám token pro registraci (náhodný řetězec) a kód QR pro vašeho tenanta Intune. Tento token jeden registrace je platná pro všechny uživatele a bez vypršení platnosti. V závislosti na operační systém Android a verze zařízení můžete použít buď tokenu nebo kódu QR registrace zařízení beznabídkového režimu.
 

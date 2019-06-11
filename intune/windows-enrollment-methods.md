@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: c3f5f3b39efd33e8dbd3dd84f9a5f2abaf347216
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 55e758c8a7eddc1a5500464754448d26680ec772
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046693"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819578"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace v Intune pro zařízení s Windows
 
@@ -49,8 +49,8 @@ Správci můžou nastavit následující metody registrace, které nevyžadují 
 
 - [Hybridní připojení k Azure AD](https://docs.microsoft.com/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) umožňuje správcům nakonfigurovat zásady skupiny služby Active Directory o automatickou registraci zařízení, která jsou připojená k hybridní Azure AD. 
 - [Společná Správa nástroje Configuration Manager](https://docs.microsoft.com/sccm/comanage/overview) umožňuje správcům zaregistrovat svá zařízení existující spravované Configuration Manageru do Intune, abyste získali duální výhody Intune a Configuration Managerem. 
-- [Správce registrace zařízení](device-enrollment-manager-enroll.md) (zařízení DEM) je speciální účet. Účty správce registrace zařízení mají oprávnění, která umožní oprávněným uživatelům registrovat a spravovat více zařízení vlastněných společností. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Tato metoda navíc neumožňuje použití funkce, jako je podmíněný přístup. 
-- [Hromadná registrace](windows-bulk-enroll.md) umožňuje autorizovaným uživatelům k Azure Active Directory a Intune připojit velký počet nových zařízení vlastněných společností. Vytvořte zřizovací balíček s aplikací Windows Configuration designeru (WCD). Potom přes port USB média během počáteční prvního Windows prostředí nebo z existujících Windows PC, nainstalovat zřizovací balíček automaticky registrovat zařízení do Intune. 
+- [Správce registrace zařízení](device-enrollment-manager-enroll.md) (zařízení DEM) je speciální účet. Účty správce registrace zařízení mají oprávnění, která umožní oprávněným uživatelům registrovat a spravovat více zařízení vlastněných společností. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Tato metoda nepovoluje použití funkce, jako je podmíněný přístup. 
+- [Hromadná registrace](windows-bulk-enroll.md) umožňuje autorizovaným uživatelům k Azure Active Directory a Intune připojit velký počet nových zařízení vlastněných společností. Vytvořte zřizovací balíček s aplikací Windows Configuration designeru (WCD). Potom přes port USB média během počáteční prvního Windows prostředí nebo z existujících Windows PC, nainstalovat zřizovací balíček automaticky registrovat zařízení do Intune. Tato metoda nepovoluje použití podmíněného přístupu. 
 
 ## <a name="next-steps"></a>Další postup
 

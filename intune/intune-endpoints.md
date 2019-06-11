@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4d4efd34bbc83f29e8dc8ca03419b70bc7083cd
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 30fee770e4af561cac62241e65b673d2f608c918
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804644"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819719"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune
 
@@ -32,8 +32,8 @@ Jako čistě cloudovou službu Intune nevyžaduje místní infrastrukturu, jako 
 
 Ke správě zařízení za bránami firewall nebo proxy servery, je nutné povolit komunikaci pro Intune.
 
-- Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)** , protože klienti Intune používají oba protokoly.
-- Pro některé úlohy (jako je stahování aktualizace softwaru), vyžaduje Intune přístup k neověřenému proxy serveru na adresu manage.microsoft.com
+- Proxy server musí podporovat **HTTP (80)** a **HTTPS (443)** vzhledem k tomu, že klienti Intune používají oba protokoly. Windows Information Protection používá port 444.
+- Pro některé úlohy (jako je stahování aktualizací softwaru pro agenta pro klasické počítače), vyžaduje Intune přístup k neověřenému proxy serveru na adresu manage.microsoft.com
 
 Můžete upravit nastavení proxy serveru na jednotlivých klientských počítačích. Nastavení zásad skupiny můžete také změnit nastavení pro všechny klientské počítače umístěné za zadaným proxy serverem.
 
@@ -108,6 +108,9 @@ Pokud Intune používáte k nasazení Powershellových skriptů nebo aplikací W
 | AMSUC0501 | prodmsuc05data | https://prodmsuc05data.azureedge.net |
 | AMSUA0701 | pemsua07rcdata | https://pemsua07data.azureedge.net |
 
+### <a name="windows-push-notification-services-wns"></a>Služby nabízených oznámení Windows (WNS)
+Pro zařízení s Windows spravovaných pomocí Intune spravovat pomocí správy mobilních zařízení (MDM) akce zařízení a dalších okamžité aktivit vyžaduje použití sady Windows Push Notification Services (WNS). Další informace najdete v části [oznámení Windows umožňuje provoz přes brány firewall organizace](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
+
 ### <a name="delivery-optimization-port-requirements"></a>Požadavky na porty optimalizace doručení
 
 #### <a name="port-requirements"></a>Požadavky na porty
@@ -130,10 +133,8 @@ Pro metadata z optimalizace doručení:
 
 |Používá pro|Hostname (IP address/subnet)|Protocol|Port|
 |-----|--------|------|-------|
-|Nabízená oznámení ze služby Intune prostřednictvím Apple Push Notification Service (APNS). Najdete v dokumentaci Apple [zde](https://support.apple.com/en-us/HT203609)|                                    gateway.push.apple.com (17.0.0.0/8)                                  |    TCP     |     2195     |
-|Odeslání zpětné vazby na službu Intune prostřednictvím Apple Push Notification Service (APNS)|                                  feedback.push.apple.com(17.0.0.0/8)                                  |    TCP     |     2196     |
 |Načítání a zobrazování obsahu ze serverů společnosti Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|Komunikaci se servery pro služby APN|#-courier.push.apple.com (17.0.0.0/8)<br>"#" je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
+|Komunikaci se servery pro služby APN|#-courier.push.apple.com<br>"#" je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
 |Různé funkce, včetně přístupu k webu, iTunes storu, obchodu s aplikacemi s macOS, Icloudu, zasílání zpráv, atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
 Další informace najdete v tématu společnosti Apple [porty TCP a UDP používané softwarové produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [o macOS, iOS a iTunes připojení k serveru hostitele a iTunes pozadí procesy](https://support.apple.com/en-us/HT201999), a [Pokud vaše klienty se systémy iOS a macOS nedaří získat nabízených oznámení Apple](https://support.apple.com/en-us/HT203609).

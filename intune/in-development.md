@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc5ea7076e77e5071724168fab58fa78f59601c4
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: 4e9a640a343efd4ad786d7697439531de3cd4ed3
+ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744312"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66828958"
 ---
 # <a name="in-development-for-microsoft-intune---june-2019"></a>Při vývoji pro Microsoft Intune – červen 2019
 
@@ -50,9 +50,6 @@ Pomáhat při vaší připravenosti a plánování, tato stránka seznamy uživa
 
 #### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Uživatelé zařízení můžete zobrazit všechny spravované aplikace, které jste nainstalovaná nebo se pokusila o instalaci <!-- 2352913 -->
 Portál společnosti pro Windows se zobrazí seznam všech spravovaných aplikací (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Uživatelé budou moct k pokusu o zobrazení a probíhající instalace aplikací a jejich aktuální stavy. Pokud vaše organizace nemá vytvořit obdobné aplikace vyžaduje nebo jsou dostupné, uživatelům se zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Uživatelé budou také moct seřadíte nebo vyfiltrujete podle stavu instalace aplikace.
-
-#### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956---"></a>Dostupná aplikace Google Play pro vytváření sestav pro pracovní profily Androidu <!-- 3041956 -->
-Instalací dostupných aplikací na zařízení s pracovním profilem bude moct zobrazit stav instalace aplikace, jakož i nainstalovanou verzi spravované aplikace Google Play. Další informace najdete v tématu [jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md), [spravovat pracovní profil androidu pomocí Intune](android-enterprise-overview.md) a [spravovaný obchod Google Play typ aplikace](apps-add-android-for-work.md#managed-google-play-app-type).
 
 #### <a name="configure-which-browser-is-allowed-to-link-to-organization-data----3145939---"></a>Konfigurace webového prohlížeče může připojit k datům organizace <!-- 3145939 -->
 Intune App Protection zásady (aplikace) na zařízeních s Androidem a iOS vám umožní přenést organizace webové odkazy do určitého webového prohlížeče nad rámec Intune Managed Browser nebo Microsoft Edge.  Další informace o aplikaci, najdete v článku [co jsou zásady ochrany aplikací?](app-protection-policy.md).

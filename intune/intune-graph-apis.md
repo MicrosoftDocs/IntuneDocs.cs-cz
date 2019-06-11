@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6276f38eed4d20e7e81437c2ba3e2c9bc58ae1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047751"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819742"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -61,7 +61,7 @@ Další informace najdete v tématech:
 
 Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
-1.  Přihlaste se k portálu [Azure Portal](https://portal.azure.com) pomocí pověření správce.
+1.  Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí pověření správce.
 
     Podle potřeby můžete použít:
     - Účet správce tenanta

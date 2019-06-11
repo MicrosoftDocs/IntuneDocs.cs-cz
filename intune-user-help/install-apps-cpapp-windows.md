@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 05/28/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25f1bb6d2d78f5c4188d81bc8d9be2cc0c7de43e
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
+ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61495117"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66828947"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
@@ -70,6 +70,10 @@ Po nasdílení příjemce obdrží odkaz a zprávu, aby si zobrazil podrobnosti 
 Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.  
 
 Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Windows, budete mít přístup k Windows, ale ne iOS aplikací.  
+
+## <a name="required-apps"></a>Required apps  
+
+Vaše organizace může nasadit některé aplikace přímo do vašeho zařízení a označit je jako **vyžaduje**. Tyto aplikace automaticky se nainstaluje za vás bez zásahu.
 
 ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu  
 Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, si ji vyžádat. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti, na stránce Nápověda a podpora. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    

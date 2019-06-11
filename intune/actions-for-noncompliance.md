@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72a9156ce9b7b1b43acf9b39d9186a52dd6c3e8d
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: b799fd65a08646b46bf7fcce67bf4a09dc0413a6
+ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373711"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66819913"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy v Intune
 
@@ -85,7 +85,7 @@ Když vytvoříte zásady dodržování předpisů pro zařízení, Intune autom
 
 Další akci můžete přidat při vytváření zásad dodržování předpisů nebo při aktualizaci existujících zásad. 
 
-1. Na portálu [Azure Portal](https://portal.azure.com) otevřete **Microsoft Intune** > **Dodržování předpisů zařízením**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **dodržování předpisů zařízením**.
 2. Vyberte **Zásady**, vyberte jednu ze zásad a pak vyberte **Vlastnosti**. 
 
     Ještě zásadu nemáte? Vytvořte zásadu pro [Android](compliance-policy-create-android.md), [iOS](compliance-policy-create-ios.md), [Windows](compliance-policy-create-windows.md) nebo jinou platformu.
