@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 47c5892541359263383621307d269936f01fa2c6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8733de6f7a452f9d06667f948dd047822dc16835
+ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041533"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840972"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 
@@ -43,7 +43,7 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 |**Inventář**|K dispozici <br>[Zobrazení inventáře hardwaru a softwaru pro počítače s Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|K dispozici <br>[Jak monitorovat informace o aplikacích](apps-monitor.md)<br>[Co je správa zařízení?](device-management.md)|
 |**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |K dispozici <br>[Firewall v programu Windows Defender](endpoint-protection-windows-10.md#windows-defender-firewall)|
 |**Ochrana proti malwaru**|Funkce Endpoint Protection<br>[Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Windows Defender<br>[Povolení Windows Defenderu](advanced-threat-protection.md)|
-|**Vzdálená pomoc** |TeamViewer<br>[Žádost o poskytnutí vzdálené pomoci na počítačích s Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Vzdálená správa zařízení s Intune pomocí TeamVieweru](device-profile-android-teamviewer.md) |
+|**Vzdálená pomoc** |TeamViewer<br>[Žádost o poskytnutí vzdálené pomoci na počítačích s Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Vzdálená správa zařízení s Intune pomocí TeamVieweru](teamviewer-support.md) |
 |**Nasazení aplikací** | Není k dispozici pro Microsoft Store pro firmy,<br>jenom .exe, .appx a vícesouborové .msi<br>[Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|K dispozici pro aplikace z Microsoft Storu a pro podnikové aplikace<br>[Přidání aplikací pro Windows Store](store-apps-windows.md)<br>[Přidání obchodních aplikací (LOB) pro Windows](lob-apps-windows.md)|
 |**Ochrana aplikací**|Není k dispozici|K dispozici <br>[Co jsou zásady ochrany aplikací?](app-protection-policy.md)|
 |**Ověření stavu**|Není k dispozici|K dispozici|

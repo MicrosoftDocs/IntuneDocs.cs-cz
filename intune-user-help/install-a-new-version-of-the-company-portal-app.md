@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2018
+ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7fcee9a5d721eb3c898c65e18c6fd56189739ffa
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
+ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61494995"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840960"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
 
@@ -29,7 +29,7 @@ Tento článek popisuje, jak aktualizovat vaši verzi aplikace Portál společno
 * Je k dispozici novější verze Portálu společnosti.
 * Vaše verze Portálu společnosti už není podporovaná.
 
-Tyto kroky popisují, jak tuto aplikaci aktualizovat nebo získat její nejnovější verzi na zařízeních s Androidem, iOSem a Windows.    
+Tyto kroky popisují, jak aktualizovat nebo získat nejnovější verzi aplikace na zařízeních s Androidem, iOS, macOS a Windows.    
 
 ## <a name="update-the-company-portal-app-on-your-android-device"></a>Aktualizace aplikace Portál společnosti na zařízení s Androidem  
 
@@ -41,6 +41,16 @@ Když je k dispozici nová verze, zobrazí se v seznamu nainstalovaných aplikac
 
 1. Otevřete App Store a vyhledejte řetězec **Intune**.  
 2. Až aplikaci najdete, klepněte na **Aktualizovat**.  
+
+## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizace aplikace portál společnosti na zařízení s macOS
+
+Nastavení portálu společnosti můžete automaticky nainstalovat aktualizace, jakmile budou k dispozici. 
+
+1. Otevřete portál společnosti a přejděte na **pomáhají**. 
+2. Vyberte **vyhledávat aktualizace**. 
+3. Na obrazovce Microsoft AutoUpdate vyberte **automaticky stáhnout a nainstalovat**. 
+
+Chcete-li zobrazit dostupné aktualizace, vyberte **vyhledávat aktualizace**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Aktualizace aplikace Portál společnosti na zařízení s Windows
 Pokud chcete aktualizace získávat automaticky, jakmile jsou dostupné, otevřete Microsoft Store a přejděte na **Nastavení**. Zapněte **Aktualizace aplikací**. Pokud chcete zobrazit nejnovější aktualizace a aktualizace čekající ve frontě ke stažení, přejděte na **Položky ke stažení a aktualizace**.  
