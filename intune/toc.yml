@@ -270,7 +270,7 @@
         - name: Vymazání zařízení s macOS
           href: device-erase.md
         - name: Vzdálené řízení mobilních zařízení
-          href: device-profile-android-teamviewer.md
+          href: teamviewer-support.md
         - name: Resetování PIN kódu ve Windows 10
           href: device-windows-pin-reset.md
         - name: Synchronizace zařízení
