@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c84cd0ec61ea08956bbebd040167991c6285d073
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044985"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044330"
 ---
 # <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: Návod služby Microsoft Intune na portálu Azure portal
 
@@ -104,7 +104,7 @@ Postupujte podle následujících kroků, abyste lépe pochopili Intune na port�
 
     ![Snímek obrazovky podokna podmíněného přístupu](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Podmíněný přístup označuje způsoby, jimiž můžete řídit zařízení a aplikace, které se smí připojovat k vašemu e-mailu a firemním prostředkům. Prostudujte si podmíněný přístup podle zařízení a na základě aplikace a najdete běžné scénáře pro použití podmíněného přístupu s Intune, přečtěte si téma [co je podmíněný přístup?](conditional-access.md)
+    Podmíněný přístup označuje způsoby, jimiž můžete řídit zařízení a aplikací, které se můžou připojit k e-mailu a firemním prostředkům. Prostudujte si podmíněný přístup podle zařízení a na základě aplikace a najdete běžné scénáře pro použití podmíněného přístupu s Intune, přečtěte si téma [co je podmíněný přístup?](conditional-access.md)
 
 8. Z [Intune](https://aka.ms/intuneportal)vyberte **uživatelé** zobrazíte podrobnosti o uživatelích, které jste zahrnuli do Intune. Tito uživatelé se pracovníci vaší společnosti. 
  

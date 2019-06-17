@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 417d244cbe64af967e61112f67dbf7829ce7feda
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7068bb96b72861c0647c44261edef0c3e83a120c
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046955"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031671"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 
@@ -53,7 +53,7 @@ Můžete taky generovat sestavy, které u softwarových titulů zobrazují počt
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Přidání multilicenčních smluv uzavřených s Microsoftem
 Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  V [konzole pro správu Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) vyberte **Licence**.
+1.  V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
 
 2.  Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy**vyberte **Multilicenční smlouva**.
 
@@ -67,7 +67,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         -   Podporují se jenom znaky ASCII.
 
-        -   V názvu smlouvy nejsou povolené následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Název může obsahovat mezery.
+        -   V názvu smlouvy nejsou povolené následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
         -   Název souboru nesmí být delší než 128 znaků.
 
@@ -93,7 +93,7 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         -   **Název smlouvy** – zadejte jedinečný název smlouvy.
 
-            Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Název může obsahovat mezery.
+            Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
         -   **Autorizační číslo nebo číslo smlouvy** – zadejte autorizační číslo nebo číslo smlouvy, které odpovídá licenčnímu páru.
 
@@ -138,7 +138,7 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 ### <a name="to-add-other-software-agreements"></a>Přidání jiných smluv na software
 
-1.  V [konzole pro správu Microsoft Intune](https://account.manage.microsoft.com/admin/default.aspx) vyberte **Licence**.
+1.  V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
 
 2.  Vyberte **Přidat smlouvy** v části **Licenční smlouvy na ostatní software**.
 
@@ -146,7 +146,7 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 4.  V části **Přidat podrobnosti smlouvy** zadejte toto:
 
-    -   **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /**. Název může obsahovat mezery.
+    -   **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
     -   **Vydavatel** (povinné) Když začnete psát název vydavatele, služba načte všechny názvy vydavatelů obsahující vámi zadaná písmena. Pokud třeba zadáte „soft“, služba načte všechny vydavatele, kteří mají v názvu řetězec „soft“, například „Microsoft“ a „Microsoft Research“. Názvy vydavatelů se načítají z katalogu Software Asset Catalog. Než budete moct zadat název produktu, musíte vybrat vydavatele.
 

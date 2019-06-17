@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6175fca13f1883338b7f5858538728132183b8db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: MT
+ms.openlocfilehash: 9c33f13a7768b86895b89732f1f595d2ede39b41
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040598"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031583"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží s registrací zařízení v Microsoft Intune
 
@@ -143,7 +143,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 - mají pro přípony UPN uživatelů v rámci své organizace více domén nejvyšší úrovně (například @contoso.com nebo @fabrikam.com).
 
 
-[Kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](https://blogs.technet.microsoft.uucom/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
+[Kumulativní aktualizace pro službu AD FS 2.0](http://support.microsoft.com/kb/2607496) ve spojení s přepínačem <strong>SupportMultipleDomain</strong> umožňuje zajistit, aby server AD FS podporoval tento scénář bez vyžadování dalších serverů služby AD FS 2.0. Další informace najdete v [tomto blogu](https://blogs.technet.microsoft.com/abizerh/2013/02/05/supportmultipledomain-switch-when-managing-sso-to-office-365/).
 
 
 ## <a name="android-issues"></a>Problémy na zařízeních s Androidem
@@ -176,7 +176,7 @@ Software Samsung Smart Manager, který se dodává s některými zařízeními S
 
 **Řešení 2:**
 
-Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)** > **About device (O zařízení)** > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
+Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)**  > **About device (O zařízení)**  > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
 
 **Řešení 3:**
 
@@ -284,7 +284,7 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 **Řešení:** Následující řešení sdílejte s koncovými uživateli k jim pomůžou znovu získat přístup k firemním prostředkům.
 
-Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...**). ).
+Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...** ). ).
 
   ![Oznámení Probíhá pokus o synchronizaci](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 

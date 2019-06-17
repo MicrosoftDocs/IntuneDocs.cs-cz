@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1a255391a2cf27a764da6122031fd0c9cbb64cf
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66751391"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044876"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge v Microsoft Intune
 
@@ -134,7 +134,7 @@ Microsoft Edge a [Proxy aplikací Azure AD](https://docs.microsoft.com/azure/act
 
 Toto jsou některé příklady scénářů povolit Proxy aplikací služby AD: 
 
-- Uživatel je pomocí mobilní aplikace Outlook, který je chráněn službou Intune. Klikněte na odkaz na intranetový server v e-mailu a Microsoft Edge rozpozná, že tento intranetový server byl zpřístupněn uživateli prostřednictvím Proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím Proxy aplikací k ověření libovolné příslušného vícefaktorového ověřování a podmíněný přístup před dosažením intranetový server. Uživatelé se nyní může přistupovat k interním webům i na mobilních zařízeních, a odkaz v Outlooku funguje podle očekávání.
+- Uživatel je pomocí mobilní aplikace Outlook, který je chráněn službou Intune. Klikněte na odkaz na intranetový server v e-mailu a Microsoft Edge rozpozná, že tento intranetový server byl zpřístupněn uživateli prostřednictvím Proxy aplikací. Uživatel je automaticky přesměrován prostřednictvím Proxy aplikací k ověření pomocí libovolné příslušného vícefaktorového ověřování a podmíněný přístup před dosažením intranetový server. Uživatelé se nyní může přistupovat k interním webům i na mobilních zařízeních, a odkaz v Outlooku funguje podle očekávání.
 - Uživatel otevře Microsoft Edge na jejich iOS nebo zařízení s Androidem. Pokud Microsoft Edge je pak chráněn rozhraním Intune a proxy aplikací je povolen, uživatel můžete přejít na intranetový server pomocí interní adresy URL se používají k. Microsoft Edge rozpozná, že tento intranetový server byl zpřístupněn uživatele prostřednictvím Proxy aplikací a uživatel je automaticky přesměrován prostřednictvím Proxy aplikací k ověření před dosažením intranetový server. 
 
 ### <a name="before-you-start"></a>Než začnete
@@ -166,7 +166,7 @@ Toto nastavení umožňuje nakonfigurovat domovskou stránku zástupce pro Micro
 
 Použití následující dvojici klíč/hodnota konfigurace místní domovské stránky:
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:** `<https://www.bing.com`>
     |
@@ -190,7 +190,7 @@ Ke konfiguraci spravovaných záložky použijte následující dvojici klíč/h
 
 Ve výchozím nastavení se uživatelům zobrazí MyApps weby, které jsou nakonfigurované k nim v rámci složky uvnitř záložky Microsoft Edge. Složku se popisek s názvem vaší organizace.
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota TRUE** ukazuje MyApps v rámci záložek Microsoft Edge.<p>**False** skryje MyApps v rámci Microsoft Edge.    |
 
@@ -283,7 +283,7 @@ Další požadavky na zabezpečení a ochrana osobních údajů pro Microsoft Ed
 - Microsoft Edge nespotřebovává nastavení, která uživatelům nastavit pro nativní prohlížeč na svých zařízeních, protože Microsoft Edge nemá přístup k těmto nastavením.
 - Pokud nakonfigurujete možnost **vyžadovat pro přístup jednoduchý PIN kód** nebo **vyžadovat pro přístup podnikové přihlašovací údaje** v aplikaci zásady ochrany přidružené k Microsoft Edge a uživatel vybere na odkaz Nápověda ověřování stránky mohli procházet libovolné weby bez ohledu na to, zda byly přidány do seznamu blokovaných v zásadách.
 - Microsoft Edge může blokovat přístup k webům, pouze v případě, že jsou k nim přistupuje přímo. V případě, že se k webu přistupuje přes zprostředkující služby (třeba překladatelské služby), aplikace přístup neblokuje.
-- Povolení ověřování a přístup k dokumentaci k Intune * **. microsoft.com** se vyjímá z nastavení seznamu povolených nebo blokovaných. Je vždycky povolená.
+- Povolení ověřování a přístup k dokumentaci k Intune ***. microsoft.com** se vyjímá z nastavení seznamu povolených nebo blokovaných. Je vždycky povolená.
 Vypnutí dat o využití Microsoft automaticky shromažďuje anonymní data o výkonu a využití spravovaného prohlížeče za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu. V zařízeních se systémem iOS se nedají otevřít weby, u kterých vypršela platnost certifikátu nebo které mají nedůvěryhodný certifikát.
 
 ## <a name="next-steps"></a>Další postup

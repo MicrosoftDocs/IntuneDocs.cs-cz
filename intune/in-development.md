@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e9a640a343efd4ad786d7697439531de3cd4ed3
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 1c8a7be6646c0035eaefed6d61d749c8469c8a4e
+ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828958"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67031647"
 ---
 # <a name="in-development-for-microsoft-intune---june-2019"></a>Při vývoji pro Microsoft Intune – červen 2019
 
@@ -55,7 +55,7 @@ Portál společnosti pro Windows se zobrazí seznam všech spravovaných aplikac
 Intune App Protection zásady (aplikace) na zařízeních s Androidem a iOS vám umožní přenést organizace webové odkazy do určitého webového prohlížeče nad rámec Intune Managed Browser nebo Microsoft Edge.  Další informace o aplikaci, najdete v článku [co jsou zásady ochrany aplikací?](app-protection-policy.md).
 
 #### <a name="installed-apps-page-on-the-company-portal-website-----4224326---"></a>Na webu portál společnosti nainstalovaný stránky aplikace  <!-- 4224326 -->
-[Webu portál společnosti](https://portal.manage.microsoft.com/) nové stránky do zobrazit uživatele bude obsahovat všechny aplikace, které byly nainstalovány na svých zařízeních. Tento seznam obsahuje dostupné aplikace a na aplikace, které vyžadují jejich organizace. Na této stránce Uživatelé budou moci zobrazit stavy instalace a požadavky aplikací na svém zařízení. Další informace o webu portál společnosti, naleznete v tématu [použití webu portál společnosti Intune](/intune-user-help/using-the-intune-company-portal-website.md) a [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
+[Webu portál společnosti](https://portal.manage.microsoft.com/) nové stránky do zobrazit uživatele bude obsahovat všechny aplikace, které byly nainstalovány na svých zařízeních. Tento seznam obsahuje dostupné aplikace a na aplikace, které vyžadují jejich organizace. Na této stránce Uživatelé budou moci zobrazit stavy instalace a požadavky aplikací na svém zařízení. Další informace o webu portál společnosti, naleznete v tématu [použití webu portál společnosti Intune](/intune-user-help/using-the-intune-company-portal-website) a [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
 
 #### <a name="call-graph-api-read-operations-from-an-application-without-user-credentials----4655885---"></a>Volání rozhraní Graph API, operace čtení z aplikace bez přihlašovacích údajů uživatele <!-- 4655885 -->
 Aplikace bude moct volat rozhraní Intune Graph API s identitou aplikace bez přihlašovacích údajů uživatele operace čtení. Další informace najdete v tématu [získat přístup bez uživatele](https://docs.microsoft.com/graph/auth-v2-service).

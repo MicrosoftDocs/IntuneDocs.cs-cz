@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e347d72a8eec93f9936f3c488cada5667ecf51f8
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6bf1aa096d5ebd89130eb5fabe936a02183599c5
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050572"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044637"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
 
@@ -47,7 +47,7 @@ V tomto období může být vaše organizace vystavena většímu nebezpečí ú
 
 Intune vám může poskytnout ochranu firemních dat i během migrace, takže tato data zůstanou v bezpečí, i když nebudete používat žádnou správu na úrovni zařízení.
 
-Když zakážete podmíněný přístup u předchozího poskytovatele MDM, uživatelé můžou být dál produktivní, i když ještě není dokončená registrace do Intune.
+Když zakážete podmíněný přístup v předchozího poskytovatele MDM, uživatelé můžou být dál produktivní, i když začlenit do Intune.
 
 ## <a name="task-list-for-app-protection-policies"></a>Seznam kroků pro zásady ochrany aplikací
 

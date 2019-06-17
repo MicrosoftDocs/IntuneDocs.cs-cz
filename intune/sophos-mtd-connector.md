@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4363bb4feba52c15b8918a7c6ea02fa2917a00de
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 550dfe58687806f7ead65dab2d7e15b310ae4b6e
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044943"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044044"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Konektor Sophos Mobile Threat Defense s Intune
 Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu založené na posouzení rizik, které Sophos Mobile řešení Mobile Threat Defense (MTD), která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie se shromažďuje ze zařízení se systémem Sophos mobilní aplikace.

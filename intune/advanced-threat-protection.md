@@ -1,6 +1,6 @@
 ---
 title: Použití Ochrany ATP v programu Windows Defender v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se, jak komplexně povolit Rozšířenou ochranu před internetovými útoky v programu Windows Defender (ATP), včetně zapnutí ATP v Intune a Centru zabezpečení v programu Windows Defender (portál ATP), dále jak připojit zařízení pomocí konfiguračního profilu ATP, jak vytvořit zásady dodržování předpisů pro zařízení v Intune a zásady podmíněného přístupu Azure AD a jak monitorovat dodržování předpisů zařízeními.
+description: Informace o tom, jak zapnout Windows Defender Advanced Threat Protection (ATP) ve scénáři začátku do konce, včetně zapnutí ATP v Intune a Centrum zabezpečení v systému Windows Defender (portál ATP), připojení zařízení pomocí konfiguračního profilu ATP, vytvoření zařízení v Intune zásady dodržování předpisů, vytvoření zásady podmíněného přístupu Azure AD a monitorovat dodržování předpisů zařízením.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78c34345804f600aa62ff5e25ef27a23591e0f5c
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: 186ba1a8813e84b89a23c8aabb3a4ef0bd392da4
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819870"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045923"
 ---
 # <a name="enforce-compliance-for-windows-defender-atp-with-conditional-access-in-intune"></a>Vynucování dodržování předpisů pro Windows Defender ATP s podmíněným přístupem v Intune
 
@@ -40,7 +40,7 @@ V tomto článku se dozvíte, jak:
 
 - Povolit Intune v ATP a ATP v Intune. Tyto úlohy vytvoří propojení mezi službami Intune a Ochrana ATP v programu Windows Defender. Toto propojení umožní Ochraně ATP v programu Windows Defender zapisovat rizika počítačů pro vaše zařízení v Intune.
 - Vytvořit zásady dodržování předpisů v Intune.
-- Povolit podmíněný přístup v Azure Active Directory (AD) na zařízeních podle jejich úrovně ohrožení.
+- Povolení podmíněného přístupu v Azure Active Directory (AD) na zařízeních podle jejich úrovně ohrožení.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -86,7 +86,7 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)** .
+5. Jako **Typ profilu** zvolte **Rozšířená ochrana před internetovými útoky v programu Windows Defender (Windows 10 Desktop)**.
 6. Nakonfigurujte nastavení:
 
   - **Typ balíček konfigurace klienta ochrany ATP v programu Windows Defender**: Vyberte **připojení** chcete do profilu přidat konfigurační balíček. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
@@ -126,7 +126,7 @@ Zásady dodržování předpisů určují přijatelnou úroveň rizika v zaříz
 5. Když zvolíte **Uložit**, zásada se nasadí dané skupině. U uživatelských zařízení, na která zásady cílí, se vyhodnotí dodržování předpisů.
 
 ## <a name="create-a-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu
-Zásady podmíněného přístupu zablokují přístup zařízení k prostředkům, *pokud* se zařízení vyhodnotí jako nevyhovující. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.  
+Zásady podmíněného přístupu zablokují přístup k prostředkům *Pokud* zařízení nedodržuje předpisy. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.  
 
 > [!TIP]  
 > Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
@@ -141,13 +141,13 @@ Zásady podmíněného přístupu zablokují přístup zařízení k prostředk�
 
     Zvolením možnosti **Hotovo** uložte změny.
 
-5. Zvolením možnosti **Udělení** použijete podmíněný přístup na základě dodržování předpisů zařízením. Zvolte například **Udělit přístup** > **Vyžadovat, aby zařízení bylo označené jako vyhovující**.
+5. Vyberte **udělení** použijete podmíněný přístup na základě dodržování předpisů zařízení. Zvolte například **Udělit přístup** > **Vyžadovat, aby zařízení bylo označené jako vyhovující**.
 
     Zvolením možnosti **Vybrat** uložte změny.
 
 6. Zvolte **Povolit zásadu** a potom **Vytvořit**. Tím uložíte provedené změny.
 
-Doporučujeme přečíst si článek [Co je podmíněný přístup](conditional-access.md).
+[Co je podmíněný přístup? ](conditional-access.md) Dobrým zdrojem informací je.
 
 ## <a name="monitor-device-compliance"></a>Monitorování dodržování předpisů zařízením
 V dalším kroku monitorujte stav zařízení, která mají nasazené zásady dodržování předpisů Ochrany ATP v programu Windows Defender.
@@ -157,7 +157,7 @@ V dalším kroku monitorujte stav zařízení, která mají nasazené zásady do
 3. Najděte v seznamu požadovanou zásadu Ochrany ATP v programu Windows Defender a podívejte se, která zařízení jsou vyhovující a která ne.
 
 ## <a name="more-good-stuff"></a>Další užitečné materiály
-[Podmíněný přístup Ochrany ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/conditional-access-windows-defender-advanced-threat-protection)  
+[Windows Defender ATP podmíněný přístup](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/conditional-access-windows-defender-advanced-threat-protection)  
 [Řídicí panel rizika Ochrany ATP v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/dashboard-windows-defender-advanced-threat-protection)  
 [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md)  
-[Podmíněný přístup v Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+[Podmíněný přístup ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)

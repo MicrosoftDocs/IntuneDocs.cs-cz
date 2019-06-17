@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc1f877f9b457c6abafef7f1e66e8b04bba2c8e0
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66829102"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046285"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Kurz: Ochrana Exchange Online e-mailu na nespravovaných zařízeních
 
@@ -87,7 +87,7 @@ Teď vytvoříme dvě zásady podmíněného přístupu pro všechny platformy z
 
 ### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Vytvoření zásad vícefaktorového ověřování pro moderní ověřování klientů  
 
-1. V Intune vyberte **Podmíněný přístup** > **Zásady** > **Nová zásada**.  
+1. V Intune, vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.  
 
 2. Pro **název**, zadejte **testování zásad pro klienty moderní ověřování**.  
 
@@ -132,7 +132,7 @@ Teď vytvoříme dvě zásady podmíněného přístupu pro všechny platformy z
 Vytvoření zásady podmíněného přístupu pro moderní ověřování klientů. Nově můžete vytvářet zásady pro klienty protokolu Exchange Active Sync.
 
 ### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Vytvoření zásad pro klienty protokolu Exchange Active Sync  
-1. V Intune vyberte **Podmíněný přístup** > **Zásady** > **Nová zásada**.  
+1. V Intune, vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.  
 2. Pro **název**, zadejte **testování zásad pro klienty EAS**.  
 3. V části **Přiřazení** vyberte **Uživatelé a skupiny**.  
 4. Na kartě *Zahrnout* vyberte **Všichni uživatelé** a vyberte **Hotovo**.  
@@ -189,4 +189,4 @@ Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 5. V **Název_zásady** seznamu, vyberte příslušnou kontextovou nabídku ( **...** ) pro každý testovací zásady, a pak vyberte **odstranit**. Odstranění potvrďte výběrem **Ano**.  
 
  ## <a name="next-steps"></a>Další postup  
-V tomto kurzu jste vytvořili aplikaci zásady ochrany a omezit, co může uživatel provést s aplikací Outlook a vytvoříte zásady podmíněného přístupu a vyžadovat aplikace Outlook a vyžadovat vícefaktorové ověřování pro moderní ověřování klientů. Další informace o použití Intune k ochraně ostatním aplikacím a službám s podmíněným přístupem najdete v tématu [nastavit podmíněný přístup](conditional-access.md).
+V tomto kurzu jste vytvořili zásady ochrany aplikací a omezit, co může uživatel provést s aplikací Outlook a vytvoříte zásady podmíněného přístupu a vyžadovat aplikace Outlook a vyžadovat vícefaktorové ověřování pro moderní ověřování klientů. Další informace o použití Intune k ochraně ostatním aplikacím a službám s podmíněným přístupem najdete v tématu [nastavit podmíněný přístup](conditional-access.md).

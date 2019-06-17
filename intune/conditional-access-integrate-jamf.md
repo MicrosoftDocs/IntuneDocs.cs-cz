@@ -1,7 +1,7 @@
 ---
 title: Integrace Jamf Pro s Microsoft Intune pro dodržování předpisů
 titleSuffix: Microsoft Intune
-description: Použijte zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k lepšímu zabezpečení zařízení spravovaných pomocí Jamf.
+description: Zásady dodržování předpisů Microsoft Intune použijte s Azure Active Directory podmíněný přístup k lepšímu zabezpečení zařízení spravovaná aplikací Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,22 +17,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 940ef3e6df95629dad03d6c1d4e60343e4273473
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7b5d3754c7dd3ead9236e223fd568e58e96fe9a1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048845"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045153"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
 Platí pro: Intune na portálu Azure Portal
 
-Pokud vaše organizace používá [Jamf Pro](https://www.jamf.com) ke správě vašich koncových uživatelů Mac, můžete zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k zajištění, že jsou kompatibilní zařízení ve vaší organizaci.
+Pokud vaše organizace používá [Jamf Pro](https://www.jamf.com) ke správě vašich koncových uživatelů Mac, můžete zásady dodržování předpisů Microsoft Intune pomocí Azure Active Directory podmíněného přístupu zařízení ve vaší organizaci musí být kompatibilní.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Pro konfiguraci podmíněného přístupu s Jamf Pro je potřeba následující:
+Budete potřebovat následující příkaz pro konfiguraci podmíněného přístupu s Jamf Pro:
 
 - Jamf Pro 10.1.0 nebo novější
 - [Aplikaci Portál společnosti pro macOS](https://aka.ms/macoscompanyportal)
@@ -44,7 +44,7 @@ Propojení služby Intune s Jamf Pro můžete:
 
 1. Vytvoření nové aplikace v Azure
 2. Povolení integrace Intune s Jamf Pro
-3. Konfigurace podmíněného přístupu v aplikaci Jamf Pro
+3. Konfigurace podmíněného přístupu v Jamf Pro
 
 ## <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory
 

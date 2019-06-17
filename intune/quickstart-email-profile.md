@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbf04d771a9c1fd43cfe695dd2d27b9cfe1a0528
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bbd8d81dfab46a1e752084aab75fbcf0d8104187
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050308"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044275"
 ---
 # <a name="quickstart-create-an-email-device-profile-for-ios"></a>Rychlý start: Vytvořte profil zařízení pro iOS
 
-V tomto rychlém startu se dozvíte, jak vytvořit e-mailový profil zařízení pro zařízení s iOSem. Tento profil určuje nastavení, která se vyžadují k tomu, aby se integrovaná e-mailová aplikace na zařízení s iOSem mohla připojit k firemnímu e-mailu. E-mailové profily zařízení pomáhají standardizovat nastavení pro různá zařízení a umožňují koncovým uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat. Pokud chcete ochranu e-mailu dále zdokonalit, můžete pomocí e-mailového profilu určovat, jestli jsou zařízení kompatibilní, a pak nastavením podmíněného přístupu umožnit přístup k e-mailu jenom kompatibilním zařízením. Podrobnosti o e-mailových profilech najdete v tématu [Jak nakonfigurovat nastavení e-mailu v Microsoft Intune](email-settings-configure.md).
+V tomto rychlém startu se dozvíte, jak vytvořit e-mailový profil zařízení pro zařízení s iOSem. Tento profil určuje nastavení, která se vyžadují k tomu, aby se integrovaná e-mailová aplikace na zařízení s iOSem mohla připojit k firemnímu e-mailu. E-mailové profily zařízení pomáhají standardizovat nastavení pro různá zařízení a umožňují koncovým uživatelům přístup k firemnímu e-mailu na jejich osobních zařízeních bez toho, aby museli něco nastavovat. Které zdokonalují ochranu e-mailu, můžete použít určí, jestli je zařízení kompatibilní s e-mailový profil a potom můžete nastavit podmíněný přístup umožňuje přístup k e-mailu jenom kompatibilním zařízením. Podrobnosti o e-mailových profilech najdete v tématu [Jak nakonfigurovat nastavení e-mailu v Microsoft Intune](email-settings-configure.md).
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
@@ -71,7 +71,7 @@ Pokud nemáte v úmyslu používat vytvořený profil v dalších kurzech nebo k
 
 ## <a name="next-steps"></a>Další postup
 
-V tomto rychlém startu jste vytvořili e-mailový profil pro zařízení s iOSem. Teď můžete pomocí tohoto profilu určovat, jestli jsou zařízení s iOSem kompatibilní. Uděláte to tak, že vytvoříte zásady dodržování předpisů, které budou označovat jako nekompatibilní všechna zařízení s iOSem, která tomuto profilu neodpovídají. Pro zvýšení ochrany můžete vytvořit zásady podmíněného přístupu, které budou přístup k e-mailu pomocí nekompatibilních zařízení s iOSem blokovat. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](device-compliance-get-started.md).
+V tomto rychlém startu jste vytvořili e-mailový profil pro zařízení s iOSem. Teď můžete pomocí tohoto profilu určovat, jestli jsou zařízení s iOSem kompatibilní. Uděláte to tak, že vytvoříte zásady dodržování předpisů, které budou označovat jako nekompatibilní všechna zařízení s iOSem, která tomuto profilu neodpovídají. Pro další ochranu můžete vytvořit zásady podmíněného přístupu, které blokuje zařízení s Iosem nesplňujících požadavky v přístupu k e-mailu. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](device-compliance-get-started.md).
 
 > [!div class="nextstepaction"]
 > [Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních](tutorial-protect-email-on-enrolled-devices.md)

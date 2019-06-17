@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5808a4b81fcc66d37e78c50cb5bcd2ae7bbe44e2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c929965b79d9ee35fcc1094b4ad18cff6d73d80d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049608"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045529"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -67,7 +67,7 @@ Příklad toho, jak správně integrace s Intune App SDK je k dispozici na [Gith
 
 Intune App SDK je standardní knihovna pro Android, která nemá žádné externí závislosti. Soubor **Microsoft.Intune.MAM.SDK.aar** obsahuje jak rozhraní nutná pro povolení zásad ochrany aplikací, tak kód, který je podmínkou interoperability s Portálem společnosti Microsoft Intune.
 
-Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. To provede otevřením projektu aplikace v nástroji Android Studio, kliknutím na **File (Soubor) > New (Nový) > New module (Nový modul)** a výběrem možnosti **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)**. Vyberte balíček archivu pro Android s názvem Microsoft.Intune.MAM.SDK.aar a vytvořte modul pro .AAR. Pravým tlačítkem myši klikněte na modul nebo moduly, které obsahují kód aplikace, a přejděte na **Module Settings (Nastavení modulu)** > **karta Dependencies (Závislosti)** > **ikona +** > **Module dependency (Závislost modulu)** > vyberte modul MAM SDK AAR, který jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
+Soubor **Microsoft.Intune.MAM.SDK.aar** musí být uváděn jako odkaz na knihovnu pro Android. To provede otevřením projektu aplikace v nástroji Android Studio, kliknutím na **File (Soubor) > New (Nový) > New module (Nový modul)** a výběrem možnosti **Import .JAR/.AAR Package (Importovat balíček .JAR/.AAR)** . Vyberte balíček archivu pro Android s názvem Microsoft.Intune.MAM.SDK.aar a vytvořte modul pro .AAR. Pravým tlačítkem myši klikněte na modul nebo moduly, které obsahují kód aplikace, a přejděte na **Module Settings (Nastavení modulu)**  > **karta Dependencies (Závislosti)**  > **ikona +**  > **Module dependency (Závislost modulu)** > vyberte modul MAM SDK AAR, který jste právě vytvořili > **OK**. Tím se zajistí, že při sestavení projektu se modul zkompiluje se sadou SDK MAM.
 
 Knihovny **Microsoft.Intune.MAM.SDK.Support.XXX.jar** navíc obsahují varianty Intune odpovídajících knihoven `android.support.XXX`. Nejsou součástí souboru Microsoft.Intune.MAM.SDK.aar pro případ, že není nutné, aby aplikace závisela na knihovnách podpory.
 
@@ -732,7 +732,7 @@ Podmíněný přístup je [funkce](https://docs.microsoft.com/azure/active-direc
 4. Otestujte, že je vše nakonfigurováno správně. Uděláte to tak, že povolíte [podmíněný přístup na základě zařízení](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use) na portálu [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExchangeConnectorMenu/aad/connectorType/2) a zkontrolujete následující:
     - Při přihlášení k aplikaci se zobrazí výzva k instalaci registraci Portálu společnosti Intune.
     - Po registraci se přihlášení k aplikaci úspěšně dokončí.
-5. Jakmile se integrace sady Intune APP SDK dokončí, obraťte se na tým na adrese msintuneappsdk@microsoft.com se žádostí o přidání do seznamu schválených aplikací pro [podmíněný přístup na základě aplikace](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access).
+5. Jakmile vaše aplikace byla odeslaná integraci sady Intune APP SDK, obraťte se na msintuneappsdk@microsoft.com přidávaného do seznamu schválených aplikací pro [podmíněného přístupu na základě aplikace](https://docs.microsoft.com/intune/conditional-access-intune-common-ways-use#app-based-conditional-access)
 6. Po přidání aplikace do seznamu schválených aplikací ji ověřte pomocí [konfigurace podmíněného přístupu na základě aplikace](https://docs.microsoft.com/intune/app-based-conditional-access-intune-create) a ujistěte se, že se přihlášení k aplikaci úspěšně dokončí.
 
 ## <a name="app-protection-policy-without-device-enrollment"></a>Zásady ochrany aplikací bez registrace zařízení
@@ -1372,7 +1372,7 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
 
   * Pro **`Activity`** vytváření `onMAMIdentitySwitchRequired` bude volána před `onMAMCreate`. Pokud musí aplikace zobrazit uživatelské rozhraní, aby určila, jestli se má povolit přepnutí identity, musí se toto uživatelské rozhraní zobrazit pomocí *jiné* aktivity.
 
-  * V **`Activity`**, pokud se požaduje přepnout na prázdnou identitu s odůvodněním, které jako `RESUME_CANCELLED`, musí aplikace upravit obnovenou aktivitu pro zobrazení dat, které jsou konzistentní s tímto přepnutím identity.  Pokud to není možné, aplikace by měla přepnutí odmítnout a uživatel se znovu vyzve k dodržování zásad pro obnovení identity (například zobrazením obrazovky pro zadání kódu PIN).
+  * V **`Activity`** , pokud se požaduje přepnout na prázdnou identitu s odůvodněním, které jako `RESUME_CANCELLED`, musí aplikace upravit obnovenou aktivitu pro zobrazení dat, které jsou konzistentní s tímto přepnutím identity.  Pokud to není možné, aplikace by měla přepnutí odmítnout a uživatel se znovu vyzve k dodržování zásad pro obnovení identity (například zobrazením obrazovky pro zadání kódu PIN).
 
     > [!NOTE]
     > Aplikace s více identitami bude vždycky přijímat příchozí data ze spravovaných i nespravovaných aplikací. Aplikace musí zacházet s daty ze spravovaných identit řízeně.

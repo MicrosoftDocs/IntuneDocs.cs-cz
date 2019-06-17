@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc97e9884fbcd23c599c917c181e29cdbc3708ee
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 7ce117f21c1ad78c2c977466398ce6d30989cc6a
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66374023"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041289"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -60,7 +60,7 @@ Když se do těchto sestav ponoříte, najdete také specifické zásady dodržo
 Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy dodržování předpisů zařízením jsou uloženy ve dvou různých databázích: Intune a Azure Active Directory. 
 
 > [!IMPORTANT]
-> Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-mobile-devices-to-get-a-policy-or-apps-after-they-have-been-assigned).
+> Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Podrobnosti o různých stavech zásad dodržování předpisů zařízením jsou následující:
 

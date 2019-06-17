@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d200c8d56dbbe60dd331081537154951f5e5591d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3d1215d463c89dfa3e740099f7582d61359a4669
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041557"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044549"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
@@ -66,7 +66,7 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 8.  Dvakrát klikněte na **OK** a potom zvolte **Vytvořit**.
 
 > [!IMPORTANT]
-> Pokud vytvoříte zásady podmíněného přístupu pro Office 365 nebo jiné služby, posoudí se toto vyhodnocení dodržování předpisů zařízením. Nevyhovujícím zařízením se zablokuje přístup k prostředkům společnosti, dokud se hrozby v zařízení nevyřeší.
+> Pokud vytvoříte zásady podmíněného přístupu pro Office 365 nebo jiné služby, je použit k vyhodnocení vyhodnocení dodržování předpisů zařízením a nedodržující předpisy zařízením se zablokuje přístup k podnikovým prostředkům, dokud se hrozby nevyřeší v zařízení.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>Přiřazení zásad dodržování předpisů zařízením pro MTD
 

@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b05e9e5b3933e9fbd8ca3f1f03ffd93d2522893e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c0dc8d7cca42898db92412e2cec41252a9a9a4d4
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046836"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046114"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Zimperium. Je to řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
+Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu založené na posouzení rizik, které služba Zimperium Mobile Threat Defense (MTD) řešení, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
 
 Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika službou Zimperium prostřednictvím zásad dodržování předpisů zařízení služby Intune. Zásady rizik posouzení můžete povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
 

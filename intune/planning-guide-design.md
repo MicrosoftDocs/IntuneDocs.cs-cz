@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 812a2e91b28908dcd3893ec77e9923362c8a9173
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046132"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044398"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -236,7 +236,7 @@ V těchto oddílech si probereme následující funkce a možnosti, které odpov
 
 -   zásady dodržování předpisů
 
--   podmíněný přístup
+-   Podmíněný přístup
 
 Pojďme se na každou z těchto oblastí podívat podrobněji.
 
@@ -389,7 +389,7 @@ Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak apli
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
 #### <a name="compliance-policies"></a>Zásady dodržování předpisů
 
-Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásady dodržování předpisů zařízením](device-compliance.md).
+Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme vám navrhnout [zásady dodržování předpisů zařízením](device-compliance.md).
 
 Pokud chcete zjistit, kolik zásad dodržování předpisů zařízením potřebujete a jaké skupiny uživatelů jsou cílové, přečtěte si požadavky a případy použití. Dále musíte rozhodnout, jak dlouho smí být zařízení offline bez přihlášení, než se začne považovat za nedodržující předpisy.
 
@@ -403,20 +403,20 @@ Tady je příklad návrhu zásad dodržování předpisů:
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
 #### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
 
-Podmíněný přístup se používá, když chcete přístup k e-mailu a jiným firemním prostředkům povolit jen zařízením, která dodržují předpisy. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, pokud se vyžadují podmíněný přístup, a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
+Podmíněný přístup umožňuje povolit přístup k e-mailu a dalším firemním prostředkům jenom kompatibilním zařízením. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, pokud se vyžadují podmíněný přístup, a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
 
 U online přístupu rozhodněte, jaké platformy a skupiny uživatelů bude cílit zásady podmíněného přístupu. Kromě toho určete, jestli je potřeba nainstalovat nebo nakonfigurovat konektor Intune pro místní Exchange: 
 
 -   [Místní Exchange](exchange-connector-install.md)
 
-Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
+Tady je příklad toho, jak zásady podmíněného přístupu dokumentu:
 
 | **Služba** | **Platformy moderního ověřování** | **Základní ověřování** | **Případy použití** |   
 |:---:|:---:|:---:|:---:|
 | Exchange Online | iOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
 | SharePoint Online | iOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |
 
-Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady podmíněného přístupu.
+Je možné [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby vaše zásady podmíněného přístupu.
 
 ## <a name="next-steps"></a>Další postup
 

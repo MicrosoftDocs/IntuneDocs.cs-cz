@@ -1,7 +1,7 @@
 ---
 title: Řešení potíží s podmíněným přístupem
 titleSuffix: Microsoft Intune
-description: Popisuje, co dělat, pokud se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu Intune.
+description: Co dělat, když se vašim uživatelům nedaří získat přístup k prostředkům prostřednictvím podmíněného přístupu v Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,20 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5aeae0d4256232d01c7e6171b10159a130b513
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044676"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043915"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
-Pomocí Intune a podmíněného přístupu můžete chránit přístup ke službám Office 365, jako jsou Exchange Online, SharePoint Online, Online Skype pro firmy, místní Exchange, a k dalším službám. Tato funkce umožňuje zajistit, aby se přístup k podnikovým prostředkům omezil na zařízení zaregistrovaná v Intune a vyhovující pravidlům podmíněného přístupu, která jste nastavili v konzole správce Intune nebo v Azure Active Directory. Tento článek popisuje, jak postupovat, když se vašim uživatelům nedaří získat přístup k prostředkům, které jsou chráněné pomocí podmíněného přístupu, nebo když uživatelé mají přístup k chráněným prostředkům, ale měli by být blokovaní.
+Můžete chránit přístup ke službám Office 365, jako je Exchange Online, SharePoint Online, Skype for Business Online, Exchange v místním a dalším službám pomocí Intune a podmíněného přístupu. Díky této funkci můžete zajistěte, aby byl přístup k prostředkům společnosti omezen na zařízení, která jsou zaregistrovaná v Intune a zařízení vyhovující pravidlům podmíněného přístupu, které jste nastavili v konzole pro správu Intune nebo Azure Active Directory. Tento článek popisuje, jak postupovat, když vašim uživatelům nedaří získat přístup k prostředkům, které jsou chráněné pomocí podmíněného přístupu, nebo když uživatelé můžete přístup k chráněným prostředkům, ale zablokovány.
 
 ## <a name="requirements-for-conditional-access"></a>Požadavky pro podmíněný přístup
 
-Aby podmíněný přístup fungoval, musí být splněné následující požadavky:
+Podmíněný přístup fungoval, musí být splněny následující požadavky:
 
 - Zařízení musí být zaregistrované a spravované pomocí Intune.
 - Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
@@ -54,7 +54,7 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 - Některá zařízení s Androidem můžou působit jako zašifrovaná, ale aplikace Portál společnosti tato zařízení rozpozná jako nezašifrovaná, a proto budou nekompatibilní. V tomto scénáři se uživateli zobrazí oznámení aplikace Portál společnosti s výzvou k nastavení hesla pro spuštění zařízení. Po klepnutí na oznámení a potvrzení stávajícího PIN kódu nebo hesla zvolte na obrazovce **Zabezpečené spuštění** možnost **Ke spuštění zařízení vyžadovat PIN kód** a pak v aplikaci Portál společnosti klepněte na tlačítko **Zkontrolovat dodržování předpisů** pro toto zařízení. Zařízení by se teď mělo rozpoznat jako zašifrované. 
   > [!NOTE]
   > Někteří výrobci zařízení používají k zašifrování svých zařízení místo PIN kódu nastaveného uživatelem výchozí PIN. Intune považuje zašifrování pomocí výchozího PIN kódu jako nezabezpečené, a dokud uživatel nevytvoří nový PIN, který není výchozí, označuje taková zařízení jako nedodržující předpisy.
-- Zařízení s Androidem, které je zaregistrované a vyhovující, se může i přesto zablokovat a při prvním pokusu o přístup k podnikovým prostředkům obdržet oznámení o karanténě. Pokud k tomu dojde, ujistěte se, že aplikace Portál společnosti není spuštěná, a pak kliknutím na odkaz **Get Started Now** (Začít teď) v e-mailu o karanténě aktivujte vyhodnocení. Toto by mělo být potřeba udělat jenom při prvním povolení podmíněného přístupu.
+- Zařízení s Androidem, které je zaregistrované a vyhovující, se může i přesto zablokovat a při prvním pokusu o přístup k podnikovým prostředkům obdržet oznámení o karanténě. Pokud k tomu dojde, ujistěte se, že aplikace Portál společnosti není spuštěná, a pak kliknutím na odkaz **Get Started Now** (Začít teď) v e-mailu o karanténě aktivujte vyhodnocení. To by mělo stačit jenom udělat při prvním povolení podmíněného přístupu.
 
 ## <a name="devices-are-blocked-and-no-quarantine-email-is-received"></a>Zařízení jsou blokovaná, ale žádný e-mail o karanténě nepřišel
 
@@ -64,9 +64,9 @@ Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Po
 
 ## <a name="devices-are-noncompliant-but-users-are-not-blocked"></a>Zařízení nedodržují předpisy, ale uživatelé nejsou blokovaní
 
-- Na počítačích s Windows blokuje podmíněný přístup jenom nativní e-mailovou aplikaci, Office 2013 s moderním ověřováním nebo Office 2016. Blokování dřívějších verzí Outlooku a všech e-mailových aplikací na počítačích s Windows vyžaduje konfiguraci registrace zařízení AAD a konfiguraci AD FS (Active Directory Federation Services), jak je uvedeno v tématu [Nastavení SharePointu Online a Exchange Online pro podmíněný přístup Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
+- Podmíněný přístup pro počítače s Windows, blokuje pouze nativní e-mailové aplikace, s moderním ověřováním Office 2013 nebo Office 2016. Blokování starší verze aplikace Outlook nebo všechny e-mailové aplikace na počítačích s Windows vyžadují registrace zařízení služby AAD a konfigurace Active Directory Federation Services (AD FS), jak je uvedeno [nastavení Sharepointu Online a Exchange Online pro Azure Active Directory Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-no-modern-authentication). 
 - Pokud se zařízení z Intune selektivně vymaže nebo vyřadí, může mu několik hodin po vyřazení nadále zůstat možnost přístupu. Důvodem je skutečnost, že Exchange ukládá přístupová práva do mezipaměti na 6 hodin. Zvažte možnost použití jiných způsobů ochrany dat na vyřazených zařízení v tomto scénáři.
-- Zařízení Surface Hub podporují podmíněný přístup. Pro správné vyhodnocení je však nutné nasadit zásady dodržování předpisů pro skupiny zařízení (ne pro skupiny uživatelů).
+- Zařízení Surface Hub podporují podmíněný přístup; zásady dodržování předpisů, ale musíte nasadit do skupin zařízení (ne skupiny uživatelů) pro správné vyhodnocení.
 - Zkontrolujte přiřazení zásad dodržování předpisů a zásad podmíněného přístupu. Pokud není uživatel členem skupiny, pro kterou jsou přiřazené zásady, nebo je členem vylučované skupiny, nebude daný uživatel blokovaný. Dodržování předpisů se kontroluje jenom u zařízení uživatelů, kteří jsou v přiřazené skupině.
 
 ## <a name="noncompliant-device-is-not-blocked"></a>Zařízení nevyhovující předpisům není blokované

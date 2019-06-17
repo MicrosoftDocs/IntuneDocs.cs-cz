@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5672963c6737d51e720a8b1597dd90318f33a05
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: e3b0aff29db5402de7e91282e74cd6d69a103545
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506873"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045824"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -89,9 +89,9 @@ Budete potřebovat jednu z následujících příruček pro vývojáře, která 
 
 
 
-## <a name="enable-your-ios-or-android-app-for-app-based-conditional-access"></a>Povolení podmíněného přístupu na základě aplikace v aplikaci pro iOS nebo Android
+## <a name="enable-your-ios-or-android-app-for-app-based-conditional-access"></a>Povolit vaší aplikace pro iOS nebo Android pro podmíněný přístup na základě aplikace
  
- Aby aplikace správně fungovala s podmíněným přístupem na základě aplikace Azure Active Directory (AAD), musí být kromě povolení zásad ochrany aplikací v aplikaci splněny tyto podmínky:
+ Kromě povolení aplikace pro zásady ochrany aplikací, následuje požadované pro vaše aplikace správně, že podmíněný přístup na základě funkce pomocí aplikace Azure Active Directory (AAD):
  
  * Aplikace je vytvořená pomocí [Azure Active Directory Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) a má povolené ověřování zprostředkovatele AAD.
  

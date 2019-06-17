@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 72835ce45860eb6b10ac7967693cc50b9ceaa96f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3fccf3425222814f9493fe525033f67c734012c5
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043575"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045868"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Konektor Better Mobile Threat Defense s Intune
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Better Mobile. Je to řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Better Mobile běží.
+Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí lepší mobilní řešení Mobile Threat Defense (MTD), která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Better Mobile běží.
 
-Zásady podmíněného přístupu založené na posouzení rizika služby Better Mobile můžete nakonfigurovat prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení, která nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika lepší Mobile povolené prostřednictvím zásad dodržování předpisů zařízení Intune, které vám umožní povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Jak Intune a Better Mobile pomáhají chránit prostředky společnosti?
 

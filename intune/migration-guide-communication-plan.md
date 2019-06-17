@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/02/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 864e43bf644bf4e4f959c6ad826d9d5bade617a5
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 73cdd0f802ce3b52a566bbdddd7cf5cca2e2bef2
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804668"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044602"
 ---
 # <a name="plan-communications"></a>Plán komunikace 
 Plán komunikace je klíčovým prvkem, který migrace do Intune. Následující nástroje a šablony jsou k dispozici při vzdělávání koncovým uživatelům. Sada přechodu na Intune obsahuje e-mailové šablony, Průvodce registrací v Intune a odkazy na instruktážní videa pro registrace koncového uživatele.  
@@ -33,7 +33,7 @@ Doporučujeme následující plán komunikace s využitím e-mailů. Poskytujeme
 - **E-mailu #1**: Vysvětluje výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune. 
 
 - **E-mailu #2**: Oznamujeme, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali.  Poskytněte uživatelům časovou osu předtím, než je ovlivněn jejich přístup. Připomeňte jim výhody a strategické důvody migrace.
-Po určité době můžete začít vynucovat dodržování předpisů pomocí zásad podmíněného přístupu, které můžete použít jako kritéria pro přístup k firemním datům, jak je vysvětleno v tématu [Využití podmíněného přístupu pro účely rozsáhlejšího přijetí koncovými uživateli](migration-guide-drive-adoption.md).
+Po určité době můžete začít vynucovat dodržování předpisů pomocí zásad podmíněného přístupu a použít jako kritéria pro přístup k firemním datům, jak je vysvětleno v [podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md).
 
 ## <a name="intune-enrollment-guide"></a>Průvodce registrací pro Intune 
 Tuto přílohu PDF je možné poskytnout uživatelům jako-je, nebo může přizpůsobit verzi aplikace Word zahrnout interním prostředkům a kontaktní údaje.

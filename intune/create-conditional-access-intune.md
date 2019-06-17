@@ -1,7 +1,7 @@
 ---
 title: Nastavení podmíněného přístupu podle zařízení v Intune
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak vytvořit zásadu podmíněného přístupu podle zařízení na základě dodržování předpisů zařízení v Microsoft Intune a správy mobilních aplikací.
+description: Zjistěte, jak vytvořit na základě zařízení zásady podmíněného přístupu na základě dodržování předpisů zařízení v Microsoft Intune a správy mobilních aplikací.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,14 +16,14 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb081dd52999f203420e8a1f0b4f9c52a313f75
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043277"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045111"
 ---
-# <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu podle zařízení
+# <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu podle zařízení
 
 S Intune můžete zvýšit podmíněného přístupu v Azure Active Directory tak, že přidáte dodržování předpisů pro mobilní zařízení k řízení přístupu. Po vytvoření zásady dodržování předpisů Intune, který definuje požadavky na zařízení, aby vyhovoval předpisům, můžete použít stav dodržování předpisů zařízení povolit nebo blokovat přístup k aplikacím a službám. Můžete to provést tak, že vytvoříte zásady podmíněného přístupu, který používá nastavení **vyžadovat, aby zařízení bylo označené jako vyhovující**.  
 
@@ -74,7 +74,7 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
       ![Vytvořit novou zásadu podmíněného přístupu](media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
-      > Pokud chcete chránit i **moderní ověřování** klientů a **klientů protokolu Exchange ActiveSync**, vytvořte dva samostatné zásady podmíněného přístupu pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, je pouze podmínku, která je podporované protokolem Exchange ActiveSync platformy. Další podmínky, včetně služby Multi-Factor authentication, nejsou podporovány. Účinně chránit přístup k Exchangi Online z protokolu Exchange ActiveSync, vytvoření zásady podmíněného přístupu, který určuje cloudové aplikace Office 365 Exchange Online a klientské aplikace Exchange ActiveSync s použít zásady jenom na podporovaných platformách vybrali.
+      > Pokud chcete chránit i **moderní ověřování** klientů a **klientů protokolu Exchange ActiveSync**, vytvořte dva samostatné zásady podmíněného přístupu, jeden pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, je pouze podmínku, která je podporované protokolem Exchange ActiveSync platformy. Další podmínky, včetně služby Multi-Factor authentication, nejsou podporovány. Účinně chránit přístup k Exchangi Online z protokolu Exchange ActiveSync, vytvoření zásady podmíněného přístupu, který určuje cloudové aplikace Office 365 Exchange Online a klientské aplikace Exchange ActiveSync s použít zásady jenom na podporovaných platformách vybrali.
 
 9.  Vyberte **Done** (Hotovo).
 10. V části **Ovládací prvky přístupu** zvolte **Udělení**. Nakonfigurujte, co se stane, na základě podmínek, které jste nastavili.  Můžete vybrat jednu z následujících možností:
@@ -97,4 +97,4 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
 ## <a name="see-also"></a>Viz také:
 [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)
 
-[Řešení potíží s podmíněného přístupu v Intune](https://support.microsoft.com/help/4456106)
+[Řešení potíží s Intune podmíněný přístup](https://support.microsoft.com/help/4456106)

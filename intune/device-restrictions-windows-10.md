@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2950ddf4b130222e23fd9ea23f7c9e5793f8638a
-ms.sourcegitcommit: 229816afef86a9767eaca816d644c77ec4babed5
+ms.openlocfilehash: 357d1619fdf051d07ea47c84a79b2aebd1523460
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354228"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041121"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -430,9 +430,9 @@ Použijte tato nastavení [DeviceLock zásad CSP](https://docs.microsoft.com/win
     > [!IMPORTANT]
     > Pokud požadavek na heslo se změnilo na ploše Windows, uživatelů bylo ovlivněno při příštím přihlašování v jako, který má při, co zařízení projde z nečinnosti na aktivní. Uživatelé s heslem, které splňují tento požadavek se stále výzva ke změně hesla.
     
-  - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet povolených předtím, než bude zařízení vymazáno, od 1 – 11 neúspěšných přihlášení. `0` (nula) může zakázat funkce vymazání zařízení.
+  - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet povolených předtím, než se zařízení může být vymaže, až 11 neúspěšných přihlášení. Platné číslo, které zadáte, závisí na edici. [Zprostředkovatel kryptografických služeb DeviceLock/MaxDevicePasswordFailedAttempts](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts) obsahuje seznam podporovaných hodnot. `0` (nula) může zakázat funkce vymazání zařízení.
 
-    Toto nastavení má vliv různé v závislosti na edici. Konkrétní podrobnosti najdete v tématu [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
+    Toto nastavení má také jiný dopad, v závislosti na edici. Konkrétní podrobnosti o tomto nastavení najdete v tématu [DeviceLock/MaxDevicePasswordFailedAttempts CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-maxdevicepasswordfailedattempts).
 
   - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Zadejte dobu, kterou musí být zařízení nečinné, než se uzamkne jeho obrazovka.
   - **Vypršení platnosti hesla (dny)** : Zadejte dobu, kdy musí změnit heslo zařízení, z 1 – 365 dnů. Zadejte například `90` heslo vyprší po 90 dnech.

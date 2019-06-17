@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d258fcb7f338e4177c31a5c77b92b5941b7db212
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0a10fc54fa3aa535e6dcfd2c06124fdc5b87c6a4
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504923"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041275"
 ---
 # <a name="enable-code-integrity"></a>Povolit integritu kódu
 
@@ -34,7 +34,7 @@ Pokud váš počítač nedodržuje předpisy, protože integrita kódu je zakáz
 Pokud identifikovat pokročilé zařízení uživatele a chcete si vyzkoušet kroky sami, přečtěte si téma [opětovné povolení zabezpečeného spouštění](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 
 ## <a name="additional-resources-for-it-administrators"></a>Další zdroje informací pro správce IT  
-Pokud jste správce Intune a chcete získat další informace o nastavení dodržování předpisů stavu zařízení v Intune, přečtěte si téma [přidat zásadu dodržování předpisů pro zařízení s Windows 10 v Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows#windows-10-and-later-policy-settings). Podrobný přehled o dodržování předpisů akce, které můžete provádět v Intune, najdete v článku [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Pokud jste správce Intune a chcete získat další informace o nastavení dodržování předpisů stavu zařízení v Intune, přečtěte si téma [přidat zásadu dodržování předpisů pro zařízení s Windows 10 v Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). Podrobný přehled o dodržování předpisů akce, které můžete provádět v Intune, najdete v článku [HealthAttestation CSP](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#a-href-idtake-policy-actionastep-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Další postup  
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

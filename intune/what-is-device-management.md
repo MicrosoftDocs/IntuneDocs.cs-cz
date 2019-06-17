@@ -4,10 +4,10 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Podívejt
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 audience: ITPro
-ms.service: ''
+ms.service: microsoft-intune
 ms.technology: ''
 ms.custom: intune
 ms.assetid: 0649d310-43a7-4b01-85d2-da255d03e1da
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 452cb8e4163b82d699347a33fd8dfda9c792b6fc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5614f0657175658c1a8442d650e16c8550c1ac1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050264"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043837"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
@@ -61,7 +61,7 @@ Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a o
     - Povolit, aby [filtr SmartScreen v programu Windows Defender](https://docs.microsoft.com/intune/endpoint-protection-windows-10) hledal podezřelou aktivitu souborů a aplikací na mobilních zařízeních 
     - Použití [Windows Defender Advanced Threat Protection (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) k porušením zabezpečení na mobilních zařízeních. A pomáhají omezit dopad těchto porušení zabezpečení zákonné zodpovědnosti organizací blokováním uživatelů k podnikovým prostředkům.
 
-- **Podmíněný přístup** je funkce Azure Active Directory, která se dobře integruje s Intune. Pomocí [podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), ujistěte se, že pouze povolí zařízením dodržujícím předpisy přístup k e-mailu, SharePoint a jinými aplikacemi. 
+- **Podmíněný přístup** je funkce služby Azure Active Directory a hezky integrované ve službě Intune. Pomocí [podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access), ujistěte se, že pouze povolí zařízením dodržujícím předpisy přístup k e-mailu, SharePoint a jinými aplikacemi. 
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Výběr správného řešení pro správu zařízení
 

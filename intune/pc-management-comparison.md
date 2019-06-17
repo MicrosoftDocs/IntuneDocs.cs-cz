@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8733de6f7a452f9d06667f948dd047822dc16835
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840972"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044519"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 

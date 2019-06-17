@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e236548002f2779377e7ac57443077d48869e1f9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 57684a1f5ef94b12c8f0e52a36d8432583391b8a
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047703"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045678"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavit konektor Intune pro místní Exchange v Microsoft Intune
 Informace v tomto článku vám pomůže při instalaci a následně monitorovat místní konektor Exchange Active Sync pro Intune.  Používáte místní Exchange connector Intune s vaší [zásady podmíněného přístupu povolit nebo zablokovat přístup k Exchange v místním poštovním schránkám](conditional-access-exchange-create.md). 
@@ -184,9 +184,9 @@ Počínaje verzí Intune 1710 můžete použít [nástroje Operations Manager ma
 ## <a name="manually-force-a-quick-sync-or-full-sync"></a>Ruční vynucení rychlé synchronizace nebo úplné synchronizace
 V místním konektorem Exchange automaticky synchronizuje zařízení záznamy EAS a Intune pravidelně. Pokud se změní stav dodržování předpisů zařízením procesu automatické synchronizace pravidelně aktualizují záznamy tak, aby přístup k zařízení můžete blokované nebo povolené.
 
-   - **Rychlá synchronizace** se provádí pravidelně několikrát za den. Při rychlé synchronizaci se načítají informace o zařízeních pro uživatele s licencí Intune a cílením podmíněného přístupu pro místní Exchange, kteří se od poslední synchronizace změnily.
+   - **Rychlá synchronizace** se provádí pravidelně několikrát za den. Načte informace o zařízení pro rychlou synchronizaci licenci Intune a místním Exchange podmíněného přístupu cílené uživatele, které se změnily od poslední synchronizace.
 
-   - **Úplná synchronizace** se ve výchozím nastavení provádí jednou za den. Při úplné synchronizaci se načítají informace o zařízeních pro všechny uživatele s licencí Intune a cílením podmíněného přístupu pro místní Exchange. Při úplné synchronizaci se načítají také informace Exchange Serveru a zajišťuje se, aby se na Exchange Serveru aktualizovala konfigurace zadaná pomocí Intune na webu Azure Portal. 
+   - **Úplná synchronizace** se ve výchozím nastavení provádí jednou za den. Úplná synchronizace načte informace o zařízení pro všechny licence Intune a místním Exchange podmíněného přístupu cílené uživatele. Při úplné synchronizaci se načítají také informace Exchange Serveru a zajišťuje se, aby se na Exchange Serveru aktualizovala konfigurace zadaná pomocí Intune na webu Azure Portal. 
 
 
 Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konektor spustil synchronizaci pomocí možnosti **Rychlá synchronizace** nebo **Úplná synchronizace**:
@@ -196,4 +196,4 @@ Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konek
    3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **Rychlá synchronizace** nebo **Úplná synchronizace**.
 
 ## <a name="next-steps"></a>Další postup
-[Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)
+[Vytvoření zásad podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

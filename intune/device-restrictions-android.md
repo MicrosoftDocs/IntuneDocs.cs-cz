@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eeb70727a187a769e56a9cfd517ecd7b583ba1c1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f13b78e05b9f0b94d98677004c7059f1acaa80f9
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042473"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045722"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android a Samsung Knox Standard seznamy nastavení omezení zařízení v Intune
 
@@ -49,7 +49,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Heslo**: **Vyžadovat** koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** umožňuje uživatelům přístup k zařízení bez zadávání hesla.
 
     > [!NOTE]
-    > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení Android mohou automaticky vyžadovat kód PIN, aby vyhověla podmínkám podmíněného přístupu.
+    > Při registraci MDM zařízení Samsung Knox automaticky vyžadují 4místný číselný kód PIN. Nativní zařízení s Androidem můžou automaticky vyžadovat PIN kód kompatibilní s podmíněným přístupem.
 
 - **Minimální délka hesla**: Zadejte minimální délku hesla, které uživatel musí zadat (mezi 4 a 16 znaky).
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Zadejte maximální počet minut nečinnosti, které jsou povoleny v zařízení po kterém se zamkne obrazovka. Koncový uživatel nemůže na zařízení nastavit větší časovou hodnotu, než je nakonfigurovaná v profilu. Může ale nastavit kratší časovou hodnotu. Pokud je v profilu nastaveno třeba 15 minut, může koncový uživatel nastavit 5 minut, ale nemůže nastavit 30 minut. 

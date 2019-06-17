@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e170fe0c1b461bad140b89ac01a2ad817e2082e5
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
-ms.translationtype: MT
+ms.openlocfilehash: 188e766224dc7fdd1f529055df7f5fc585a5ae42
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744327"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041311"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -552,7 +552,7 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 | -------------   | -------------   | -------------      |
 | 0x00000000 | Úspěch  | Úspěch |
 | 0x00000400 | PKCS_Issue_CA_Unavailable  | Certifikační autorita není platná nebo není dostupná. Ověřte, že je certifikační autorita dostupná a že s ní váš server může komunikovat. |
-| 0x00000401 | Symantec_ClientAuthCertNotFound  | Certifikát ověřování klienta Symantec se v místním úložišti certifikátů nenašel. Další informace najdete v článku o [instalaci certifikátu RA Symantec](https://docs.microsoft.com/intune/certificates-symantec-configure#install-the-symantec-registration-authorization-certificate).  |
+| 0x00000401 | Symantec_ClientAuthCertNotFound  | Certifikát ověřování klienta Symantec se v místním úložišti certifikátů nenašel. Přečtěte si článek [nastavení Intune Certificate Connector pro platformu infrastruktury veřejných KLÍČŮ DigiCert](https://docs.microsoft.com/intune/certificates-digicert-configure#troubleshooting) Další informace.  |
 | 0x00000402 | RevokeCert_AccessDenied  | Zadaný účet nemá oprávnění k odvolání certifikátu z certifikační autority. V podrobnostech zprávy o události vyhledejte pole Název certifikační autority, abyste zjistili vydávající certifikační autoritu.  |
 | 0x00000403 | CertThumbprint_NotFound  | Certifikát odpovídající vašemu vstupu se nepodařilo najít. Zaregistrujte si Certificate Connector a zkuste to znovu. |
 | 0x00000404 | Certificate_NotFound  | Certifikát odpovídající zadanému vstupu se nepodařilo najít. Zaregistrujte si znovu Certificate Connector a zkuste to znovu. |

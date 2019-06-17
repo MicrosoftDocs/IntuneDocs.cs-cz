@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e717895e039e46ba7877476f67f29c1ce83b767
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b490d5ff083d344a1b39d27a2298503bdfa1f130
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041677"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044920"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
@@ -53,7 +53,7 @@ Stejně jako omezení registrace i zásady dodržování předpisů zařízením
 ![Dodržování předpisů zařízením – akce pro zařízení nesplňující požadavky](./media/os-version-actions-noncompliance.png) 
 
 ### <a name="in-practice"></a>V praxi
-Organizace využívají zásady dodržování předpisů zařízením pro stejné scénáře jako omezení registrace. Díky těmto zásadám používají uživatelé ve vaší organizaci aktuální ověřené verze operačního systému. Když zařízení koncových uživatelů přestanou předpisy dodržovat, může být přístup k prostředkům organizace zablokován prostřednictvím podmíněného přístupu, dokud nebudou koncoví uživatelé používat operační systém z podporovaného rozsahu pro vaši organizaci. Koncoví uživatelé jsou informováni, že jejich zařízení nedodržují předpisy, a dostanou k dispozici kroky, jak přístup znovu získat.   
+Organizace využívají zásady dodržování předpisů zařízením pro stejné scénáře jako omezení registrace. Díky těmto zásadám používají uživatelé ve vaší organizaci aktuální ověřené verze operačního systému. Když zařízení koncových uživatelů přestanou předpisy dodržovat, může přístup k prostředkům organizace zablokován prostřednictvím podmíněného přístupu, dokud se koncoví uživatelé spadají do rozsahu podporovaném operačním systému pro vaši organizaci. Koncoví uživatelé jsou informováni, že jejich zařízení nedodržují předpisy, a dostanou k dispozici kroky, jak přístup znovu získat.   
 
 Podrobnosti najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními v Intune](https://docs.microsoft.com/intune/device-compliance-get-started).
  

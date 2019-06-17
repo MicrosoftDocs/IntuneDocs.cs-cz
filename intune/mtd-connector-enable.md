@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1929b811a5a5320bc0ceefcef4f05ed2443ac070
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: a0a0a686d41f0f9bc7869b1b9379be7f6037c3b5
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819659"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046349"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -62,7 +62,7 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 - **Počet dní, než partner přestane reagovat**: Počet dnů neaktivity, než začne Intune považovat partnera za nereagujícího kvůli dojde ke ztrátě připojení. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.
 
 > [!IMPORTANT] 
-> Pokud je to možné, doporučujeme přidat a přiřadit aplikace MTD před vytvořením pravidel zásad dodržování předpisů zařízením a podmíněného přístupu. Díky tomu se zajistí, že aplikace MTD bude připravena a koncoví uživatelé nainstalovat, než uživatelé získají přístup k e-mailu a dalším firemním prostředkům.
+> Pokud je to možné, doporučujeme přidat a přiřadit aplikace MTD před vytvořením dodržování předpisů zařízením a pravidla zásad podmíněného přístupu. Díky tomu se zajistí, že aplikace MTD bude připravena a koncoví uživatelé nainstalovat, než uživatelé získají přístup k e-mailu a dalším firemním prostředkům.
 
 > [!TIP]
 > Z podokna Mobile Threat Defense se můžete podívat na **Stav připojení** a čas **poslední synchronizace** mezi Intune a partnerem MTD.

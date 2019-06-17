@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30c0e5af6d7ff0467383294c071d0ffdb96c5dc1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d3e74244315b7345a632a9ecd2bf631a134e5ab
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041833"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045020"
 ---
 # <a name="protect-office-365-exchange-online-without-requiring-device-management"></a>Ochrana Office 365 Exchange Online bez nutnosti správy zařízení
 
@@ -32,11 +32,11 @@ Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ 
 
 ## <a name="action-plan"></a>Akční plán
 
-1. [Prostudujte si podmíněný přístup](conditional-access.md). 
-2. [Prostudujte si podmíněný přístup na základě aplikací](app-based-conditional-access-intune.md).
-3. [Nastavte zásady podmíněného přístupu na základě aplikací pro Exchange Online](app-based-conditional-access-intune-create.md).
+1. [Další informace o podmíněném přístupu](conditional-access.md). 
+2. [Další informace o podmíněném přístupu na základě aplikace](app-based-conditional-access-intune.md).
+3. [Nastavení zásad podmíněného přístupu na základě aplikace pro Exchange Online](app-based-conditional-access-intune-create.md).
 4. [Zablokujte aplikace, které nelze spravovat](app-modern-authentication-block.md), konkrétně aplikace, které nepoužívají ADAL (Azure Active Directory Authentication Library).
-5. (Volitelné) [Nastavte zásady podmíněného přístupu na základě aplikací pro SharePoint Online](app-based-conditional-access-intune-create.md). Tyto zásady blokují přístup k firemním datům z aplikací, které nelze spravovat a zabezpečit. Tyto zásady také omezují přístup přes mobilní SharePoint. 
+5. (Volitelné) [Nastavit zásady podmíněného přístupu na základě aplikace pro SharePoint Online](app-based-conditional-access-intune-create.md). Tyto zásady blokují přístup k firemním datům z aplikací, které nelze spravovat a zabezpečit. Tyto zásady také omezují přístup přes mobilní SharePoint. 
 
 ## <a name="what-to-tell-employees-and-students"></a>Co sdělit zaměstnancům a studentům
 
@@ -45,9 +45,9 @@ Pokud se rozhodnete zavést systém pro správu zřízení, můžete. Tento typ 
 
 ## <a name="next-steps"></a>Další postup
 
-Podmíněný přístup na základě aplikací používáte k lepšímu zabezpečení firemních dat. V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
+Použili jste podmíněného přístupu na základě aplikace pro zvýšení zabezpečení dat společnosti. V dalších krocích se dozvíte o jiných způsobech, jakými můžete zlepšit ochranu firemních dat, mezi které patří: 
 
-* Nastavení [podmíněného přístupu na základě dodržování předpisů zařízením, rizika zařízení, polohy a uživatelských atributů ve službě Active Directory a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)  
+* Nastavení [podmíněného přístupu na základě dodržování předpisů zařízením, rizika zařízení, umístění a atributy uživatele v Active Directory a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).  
 * Nastavení zásad ochrany aplikací, které pomáhají chránit firemní data před úmyslným nebo neúmyslným únikem informací 
 * Využití služby Azure Information Protection k ochraně firemních dat mimo vaši síť 
 

@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5d114067402147237c0afbb4d8a3656d8bd2e77
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba12b8c8561d02a9bcf7bc7286bcbaa096d2b2ee
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049240"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045305"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Check Point SandBlast Mobile. Jedná se o řešení ochrany před mobilními hrozbami integrované ve službě Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Check Point SandBlast Mobile.
+Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu založené na posouzení rizik, které Check Point SandBlast Mobile, je řešení ochrany před mobilními hrozbami, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Check Point SandBlast Mobile.
 
-Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika služby Check Point SandBlast Mobile povolené prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení, která nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika služby Check Point SandBlast Mobile povolené prostřednictvím zásad dodržování předpisů zařízení Intune, která vám umožní povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjistil hrozby.
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Jak pomáhají služby Intune a Check Point SandBlast Mobile chránit prostředky společnosti?
 

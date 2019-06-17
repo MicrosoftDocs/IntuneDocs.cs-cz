@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df1a3fcfe0f6fd0fc2a5fbfe73935c8f47c106ff
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b945218fd1c2692bdc5ca92db5f309488a1a10bd
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041595"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044305"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Konektor Pradeo Mobile Threat Defense s Intune
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Pradeo. Je to řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Pradeo běží.
+Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí Pradeo řešení Mobile Threat Defense (MTD), která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Pradeo běží.
 
-Zásady podmíněného přístupu založené na posouzení rizika služby Pradeo můžete nakonfigurovat prostřednictvím zásad dodržování předpisů zařízení služby Intune, kterými můžete na základě odhalených hrozeb u zařízení nedodržujících předpisy povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika Pradeo prostřednictvím zásad dodržování předpisů zařízení Intune, které vám umožní povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Jak služby Intune a Pradeo pomáhají chránit prostředky společnosti?
 

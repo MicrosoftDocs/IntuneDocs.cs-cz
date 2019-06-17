@@ -1,7 +1,7 @@
 ---
 title: Zásady dodržování předpisů pro zařízení Jamf
 titleSuffix: Microsoft Intune
-description: Použijte zásady dodržování předpisů Microsoft Intune s podmíněným přístupem Azure Active Directory k lepšímu zabezpečení zařízení spravovaných pomocí Jamf.
+description: Zásady dodržování předpisů Microsoft Intune použijte s Azure Active Directory podmíněný přístup k lepšímu zabezpečení zařízení spravovaná aplikací Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 55ea6a1126ca3516854c002c5643ba667b8f306e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bc4fdaea99a0e8fb247ac6a70b853497927cdc04
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048811"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045215"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
 Platí pro: Intune na portálu Azure Portal
 
-Pomocí Azure Active Directory a zásad podmíněného přístupu pro Microsoft Intune zajistíte, aby vaši koncoví uživatelé splňovali požadavky organizace. Tyto zásady můžete použít na počítače Mac, které jsou [spravované pomocí Jamf Pro](conditional-access-integrate-jamf.md). To vyžaduje přístup ke konzolám Intune a Jamf Pro.
+Můžete použít Azure Active Directory a zásad podmíněného přístupu v Microsoft Intune zajistit, aby vaši koncoví uživatelé splňovali požadavky organizace. Tyto zásady můžete použít na počítače Mac, které jsou [spravované pomocí Jamf Pro](conditional-access-integrate-jamf.md). To vyžaduje přístup ke konzolám Intune a Jamf Pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Nastavení zásad dodržování předpisů pro zařízení v Intune
 
@@ -79,4 +79,4 @@ Získejte informace o [odebírání zařízení spravovaného prostřednictvím 
 ## <a name="next-steps"></a>Další postup
 
 - [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [Začínáme s podmíněným přístupem v adresáři Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
+- [Začínáme s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

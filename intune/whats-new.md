@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/31/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c14568a0581220cf5941984645bd0b9044e00c1
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 860d990e07fb2424adf0672e416c608b1251ae3c
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749941"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046197"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -45,6 +45,17 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-june-10-2019"></a>Týden od 10. června 2019 
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="new-sample-apps-showing-intune-sdk-integration-available-on-github----2653471---"></a>Nové vzorové aplikace zobrazuje dostupné integraci sady Intune SDK na Githubu <!-- 2653471 -->
+Složce msintuneappsdk účet GitHub bylo přidáno nové ukázkové aplikace pro iOS (Swift), Android, Xamarin.iOS, Xamarin.Android a Xamarin Forms. Tyto aplikace jsou určené doplnění stávající dokumentaci a ukázky toho, jak integrovat do mobilních aplikací Intune APP SDK. Pokud jste vývojář aplikací, které potřebuje další doprovodné materiály sady Intune SDK, přečtěte si téma následující propojené ukázky:
+- [Chatr](https://github.com/msintuneappsdk/Chatr-Sample-Intune-iOS-App) – nativní iOS (Swift) rychlých zpráv aplikace, která se používá Azure Active Directory Authentication Library (ADAL) k zprostředkovanému ověřování.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App) -aplikaci seznamu úkolů nativní Android, která využívá ADAL ke zprostředkovanému ověřování.
+- [Taskr](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps) -aplikaci seznamu úkolů A Xamarin.Android, která využívá ADAL ke zprostředkovanému ověřování, toto úložiště taky má aplikace Xamarin.Forms.
+- [Ukázkové aplikace Xamarin.iOS](https://github.com/msintuneappsdk/sample-intune-xamarin-ios) – ukázkové aplikace Xamarin.iOS nejzákladnější.
 
 ## <a name="week-of-may-27-2019"></a>Týden od 27. května 2019 
 
@@ -192,7 +203,7 @@ Teď můžete zadat, jestli je povolené výchozí podpis v Outlooku pro iOS a a
 F5 vydali aktualizaci BIG-IP 13, které umožňuje funkci NAC F5 přístup v systému iOS v Intune. Chcete používat tuto funkci:
 
 - Aktualizovat BIG-IP 13.1.1.5 aktualizovat. 14 BIG-IP se nepodporuje.
-- Integrace BIG-IP pro NAC s Intune. Kroky v [přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://support.f5.com/kb/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89).
+- Integrace BIG-IP pro NAC s Intune. Kroky v [přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://techdocs.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html).
 - Zkontrolujte, **povolit síť přístup ovládacího prvku (NAC)** nastavení v profilu sítě VPN v Intune.
 
 Pokud chcete zobrazit nastavení dostupnosti, přejděte na [nastavení konfigurace sítě VPN na zařízeních s Iosem](vpn-settings-ios.md).
@@ -560,8 +571,8 @@ Můžete přiřadit certifikát protokolu SCEP (Simple Enrollment) certifikáty 
 Platí pro: 
 - macOS
 
-#### <a name="intune-conditional-access-ui-update------2432313-----"></a>Aktualizace uživatelského rozhraní podmíněného přístupu Intune   <!-- 2432313   -->
-Vylepšili jsme v uživatelském rozhraní podmíněného přístupu v konzole Intune. Mezi ně patří:
+#### <a name="intune-conditional-access-ui-update------2432313-----"></a>Aktualizace podmíněného uživatelského přístupu k Intune   <!-- 2432313   -->
+Vylepšili jsme do uživatelského rozhraní pro podmíněný přístup v konzole Intune. Mezi ně patří:
 -  Nahradí Intune *podmíněného přístupu* okna okno ze služby Azure Active Directory. To zajistí, že budete mít přístup k široké spektrum nastavení a konfigurace pro [podmíněného přístupu](conditional-access.md) (které zůstává technologie Azure AD), z konzoly v Intune. 
 - Jsme jste přejmenovali *přístup k místnímu* okna *přístup k Exchangi*a přemístění *konektoru služby Exchange* instalační program pro toto okno byl přejmenován.  Tato změna konsoliduje, kde jste [konfigurovat a monitorovat podrobnosti související s Exchange online a místně](exchange-connector-install.md).  
 
@@ -1109,7 +1120,7 @@ U registrace mobilního zařízení Samsung Knox teď Intune podporuje registrac
 - Teď můžete nakonfigurovat restartování výzvu s upozorněním pro restartování, ke kterým dochází mimo pracovní dobu, která podporuje scénáře BYOD.
 
 #### <a name="group-windows-autopilot-enrolled-devices-by-correlator-id----2075110---"></a>Zařízení zaregistrovaná ve službě Windows Autopilot correlator ID skupiny <!-- 2075110 -->
-Intune teď podporuje seskupování zařízení s Windows podle ID korelátoru, pokud jsou zaregistrovaná pomocí [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. Intune automaticky nastaví [atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) tak, aby odpovídal nastavení OfflineAutopilotprofile-<correlator ID>. Umožní se tím, aby se pro offline registrace Autopilotu vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru prostřednictvím atributu enrollmentprofileName. Další informace najdete v tématu [Windows Autopilot pro existující zařízení](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
+Intune teď podporuje seskupování zařízení s Windows podle ID korelátoru, pokud jsou zaregistrovaná pomocí [Autopilotu pro existující zařízení](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) v nástroji Configuration Manager. ID korelátoru je parametr konfiguračního souboru Autopilotu. Intune automaticky nastaví [atribut enrollmentProfileName zařízení služby Azure AD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices) tak, aby odpovídal nastavení OfflineAutopilotprofile-<correlator ID>. Umožní se tím, aby se pro offline registrace Autopilotu vytvořily libovolné dynamické skupiny Azure AD na základě ID korelátoru prostřednictvím atributu enrollmentprofileName. Další informace najdete v tématu [Windows Autopilot pro existující zařízení](enrollment-autopilot.md#windows-autopilot-for-existing-devices).
 
 #### <a name="intune-app-protection-policies----2984657---"></a>Zásady ochrany aplikací Intune <!-- 2984657 -->
 Zásady ochrany aplikací Intune umožňují pro aplikace chráněné přes Intune (například Microsoft Outlook a Microsoft Word) nakonfigurovat různá nastavení ochrany dat. Změnili jsme vzhled těchto nastavení jak pro [iOS](app-protection-policy-settings-ios.md), tak i pro [Android](app-protection-policy-settings-android.md), abychom usnadnili vyhledání jednotlivých nastavení. Existují tři kategorie nastavení zásad:
@@ -1164,7 +1175,7 @@ Tato funkce je dostupná jen pro iOS a vyžaduje zapojení aplikací, které int
 #### <a name="access-to-key-profile-properties-using-the-company-portal-app----772203---"></a>Přístup k vlastnostem profil klíče pomocí aplikace portál společnosti <!-- 772203 -->
 Koncoví uživatelé teď mají přístup ke klíčovým vlastnostem účtu a akcím, jako je například resetování hesla, z aplikace Portál společnosti. 
 
-#### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>3. stran klávesnice může být blokováno jiným nastavení aplikace v Iosu <!-- 1248481 -->
+#### <a name="3rd-party-keyboards-can-be-blocked-by-app-settings-on-ios----1248481---"></a>3\. stran klávesnice může být blokováno jiným nastavení aplikace v Iosu <!-- 1248481 -->
 Na zařízeních s iOSem můžou správci Intune zablokovat použití klávesnic jiných výrobců pro přístup k datům organizace z aplikací chráněných zásadami. Když budou nastavené Zásady ochrany aplikací (APP) k blokování klávesnic jiných výrobců, uživatelům zařízení se při první interakci s firemními daty pomocí klávesnice jiného výrobce zobrazí zpráva. Všechny jiné možnosti než nativní klávesnice budou zablokované a uživatelům zařízení se nezobrazí. Uživatelům se dialog se zprávou zobrazí jenom jednou. 
 
 #### <a name="user-account-access-of-intune-apps-on-managed-android-and-ios-devices----1248496---"></a>Přístup k účtu uživatele z aplikací v Intune na spravovaných zařízeních s Androidem a iOS <!-- 1248496 -->

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e21eb6169acf8ae69ace94fd54007eaa4f7f90f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5ed13994576f67c7b740a2ea895db9d1a0f42289
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046754"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044351"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>Implementace plánu Microsoft Intune
 
@@ -42,7 +42,7 @@ Požadavky samotné služby Intune:
 
 -   Azure AD Connect (pro synchronizaci adresáře)
 
--   Místní konektor Intune pro Exchange (pro podmíněný přístup pro místní Exchange, pokud je potřeba)
+-   Intune On-Premises Connector pro Exchange (pro podmíněný přístup pro místní Exchange, v případě potřeby)
 
 -   Konektor certifikátu Intune (pro nasazení certifikátu SCEP, pokud je potřeba)
 
@@ -125,7 +125,7 @@ Intune podporuje zásady dodržování předpisů. Podle potřeby přidejte zás
 
 ### <a name="task-12-enable-conditional-access-policies"></a>12. úkol: Povolení zásad podmíněného přístupu
 
-Intune podporuje podmíněný přístup pro Exchange Online i pro místní Exchange, dále pro SharePoint Online, Online Skype pro firmy a Dynamics CRM Online. Podle potřeby povolte a nakonfigurujte podmíněný přístup na základě způsobu použití nasazené služby Intune a požadavků.
+Intune podporuje podmíněný přístup pro Exchange Online, v místním systému Exchange, SharePoint Online Skype pro firmy a Dynamics CRM Online. Povolte a nakonfigurujte podmíněný přístup podle potřeby na základě způsobu použití nasazené služby Intune a požadavků.
 
 -   Další informace o [podmíněném přístupu](conditional-access.md).
 

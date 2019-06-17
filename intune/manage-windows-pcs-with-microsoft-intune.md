@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e39766bc8a880c104bd5af9ff530144e2b5d2beb
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041684"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044947"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -114,7 +114,7 @@ Další informace o výše uvedených úkolech najdete v části, která se týk
 Některé možnosti správy, které je možné použít ke správě počítačů PC jako mobilních zařízení, není možné použít u počítačů PC, které se spravují pomocí klientského softwaru Intune:
 
 -   Úplné vymazání (selektivní vymazání je k dispozici)
--   podmíněný přístup
+-   Podmíněný přístup
 
 Uvědomte si také, že v konzole správce Intune se některé části, jako například **Aktualizace**, **Ochrana** a **Licence**, zobrazí jen v případě, že jsou vaše zařízení zaregistrovaná pomocí klientského softwaru Intune.
 

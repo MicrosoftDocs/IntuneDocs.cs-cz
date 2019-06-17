@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9a18bceb6b42f06464baf31a4cdd4dea21d19675
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 984b78b271d130618ec0994f76e966f1dc338706
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61500282"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044707"
 ---
 ## <a name="april-2017"></a>Duben 2017
 
@@ -26,7 +26,7 @@ Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průb
 
 #### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blokovat aplikacím přístup k Sharepointu Online <!-- 679339 -->
 
-Nyní můžete vytvořit zásadu podmíněného přístupu založeného na aplikacích, abyste aplikacím, na které nejsou aplikované zásady ochrany aplikací, zablokovali přístup k [SharePointu Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). V případě podmíněného přístupu na základě aplikací můžete pomocí portálu Azure Portal určit aplikace, které mají mít přístup k SharePointu Online.
+Nyní můžete vytvořit zásadu podmíněného přístupu na základě aplikace pro blokování aplikací, které nemají zásady ochrany aplikací k nim přístup k [Sharepointu Online](/intune-classic/deploy-use/mam-ca-for-sharepoint-online). V případě podmíněného přístupu na základě aplikace můžete určit aplikace, které chcete mít přístup k Sharepointu Online pomocí webu Azure portal.
 
 #### <a name="single-sign-in-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Jednotné přihlášení podporu z portálu společnosti pro iOS do Outlooku pro iOS <!--834012-->
 Uživatelé už se nemusí přihlašovat k aplikaci Outlook, pokud jsou na stejném zařízení pomocí stejného účtu přihlášení k aplikaci Portál společnosti pro iOS. Při spuštění aplikace Outlook budou uživatelé moct zvolit svůj účet a přihlásit se automaticky. Pracujeme také na tom, abychom tuto funkci přidali i pro další aplikace Microsoftu.
@@ -112,14 +112,14 @@ Prostřednictvím programu Apple TestFlight, který vynucuje nové požadavky na
 
 #### <a name="support-for-skycure"></a>Podpora aplikace Skycure
 
-Přístup mobilních zařízení k podnikovým prostředkům teď můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure. Je to řešení ochrany před mobilními hrozbami integrované v Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
+Můžete teď řízení mobilních zařízení přístup k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure, je řešení ochrany před mobilními hrozbami, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
 
 - Fyzická ochrana
 - Síťová ochrana
 - Ochrana aplikací
 - Ochrana chyb zabezpečení
 
-Na základě posouzení rizik aplikací Skycure, které se povoluje přes zásady dodržování předpisů v Intune, můžete nakonfigurovat zásady podmíněného přístupu EMS. Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v článku [Konektor Skycure Mobile Threat Defense](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
+Můžete nakonfigurovat zásady podmíněného přístupu EMS založené na posouzení rizika služby Skycure se povoluje přes zásady dodržování předpisů zařízeními v Intune. Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v článku [Konektor Skycure Mobile Threat Defense](/intune-classic/deploy-use/skycure-mobile-threat-defense-connector).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí aplikace portál společnosti pro Android <!--621622-->
 

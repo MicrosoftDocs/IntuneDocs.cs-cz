@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b799fd65a08646b46bf7fcce67bf4a09dc0413a6
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: bf808a9a7f5a801997f37bd2ecf4c13e3823c332
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819913"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044803"
 ---
 # <a name="automate-email-and-add-actions-for-noncompliant-devices-in-intune"></a>Automatické e-maily a přidání akcí pro zařízení nedodržující předpisy v Intune
 
@@ -27,7 +27,7 @@ Pro zařízení, která nesplňují zásady dodržování předpisů nebo pravid
 
 ## <a name="overview"></a>Přehled
 
-Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AD) pak zařízení zablokuje. Pokud zařízení nedodržuje předpisy, **akcí pro případ nedodržování předpisů** vám umožní flexibilně se rozhodnout, jak postupovat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
+Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. Azure Active Directory (AD) [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) pak zařízení zablokuje. Pokud zařízení nedodržuje předpisy, **akcí pro případ nedodržování předpisů** vám umožní flexibilně se rozhodnout, jak postupovat. Zařízení třeba nemusíte okamžitě zablokovat, ale můžete dát uživateli nějaký čas na to, aby dodržení předpisů zajistil.
 
 Existuje několik typů akcí:
 
@@ -55,7 +55,7 @@ V tomto článku se dozvíte, jak:
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows](compliance-policy-create-windows.md)
 
-- Když používáte zásady dodržování předpisů zařízením k zablokování přístupu zařízení k podnikovým prostředkům, musíte mít nastavený podmíněný přístup Azure AD. Pokyny najdete v tématu o [podmíněném přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) nebo o [běžných způsobech použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+- Při použití zásad dodržování předpisů zařízením k zablokování zařízení k podnikovým prostředkům, musíte nastavit podmíněný přístup Azure AD. Zobrazit [podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) nebo [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md) pokyny.
 
 ## <a name="create-a-notification-message-template"></a>Vytvoření šablony zprávy s oznámením
 
@@ -103,7 +103,7 @@ Další akci můžete přidat při vytváření zásad dodržování předpisů 
     
     - **Vzdálené uzamčení zařízení nedodržujícím předpisy**: Pokud zařízení nedodržuje předpisy, uzamčení zařízení. Tato akce vynutí, aby uživatel zadal kód PIN nebo hesla k odemknutí zařízení. 
     
-5. Konfigurace **plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení této poskytnuté lhůty můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
+5. Konfigurace **plán**: Zadejte počet dní (0 až 365) po nedodržení předpisů k aktivaci akce na zařízeních uživatelů. Po skončení tohoto období odkladu můžete vynutit zásady podmíněného přístupu. Pokud zadáte **0** (nula) počet dnů, pak podmíněný přístup se projeví **okamžitě**. Pokud zařízení nedodržuje předpisy, můžete například okamžitě blokovat přístup k firemním prostředkům.
 
 6. Po dokončení vyberte **Přidat** > **OK** k uložení změn.
 

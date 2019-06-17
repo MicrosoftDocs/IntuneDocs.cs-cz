@@ -1,6 +1,6 @@
 ---
 title: Integrace řešení pro řízení přístupu k síti (NAC) do Microsoft Intune – Azure | Microsoft Docs
-description: Řešení pro řízení přístupu k síti (NAC) kontrolují u zařízení s Intune stav registrace a dodržování předpisů. Řešení NAC zahrnují určitá chování a pracují s podmíněným přístupem. Prohlédněte si postup, který vám pomůže začít je využívat, a seznam partnerských řešení.
+description: Řešení pro řízení přístupu k síti (NAC) kontrolují u zařízení s Intune stav registrace a dodržování předpisů. NAC zahrnují určitá chování a pracují s podmíněným přístupem. Prohlédněte si postup, který vám pomůže začít je využívat, a seznam partnerských řešení.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e9663691053d8ecd204ad899805153d0bfb25e6f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 400de55e26076a8d612ac31388d5c5daec68d4a0
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041576"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044537"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -43,7 +43,7 @@ Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační
 
 ## <a name="nac-and-conditional-access"></a>NAC a podmíněný přístup
 
-Řízení přístupu k síti (NAC) funguje s podmíněným přístupem při rozhodování o řízení přístupu. Podrobnější informace najdete v článku o [nejčastějších způsobech použití podmíněného přístupu v Intune](conditional-access-intune-common-ways-use.md).
+NAC pracuje s podmíněným přístupem při rozhodování o řízení přístupu. Další informace najdete v tématu [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="how-the-nac-integration-works"></a>Jak funguje integrace NAC
 

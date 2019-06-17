@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 207a3f950d6fca2d6fcbe024f24fbf05487f2151
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
-ms.translationtype: MT
+ms.openlocfilehash: c38767965b085a4fbfe5cd8904d365c2fecc9eb1
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040392"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041325"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
@@ -77,7 +77,7 @@ Pokud je chcete na webu Azure Portal zobrazovat a měnit, musíte staré zásady
 ## <a name="where-did-my-compliance-policies-go"></a>Kde jsou moje zásady dodržování předpisů?
 Po migraci tenanta na web Azure Portal zůstávají zásady dodržování předpisů tenanta nadále v platnosti. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](https://docs.microsoft.com/intune/known-issues#compliance). 
+Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](https://docs.microsoft.com/intune/device-compliance-get-started). 
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
 Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:

@@ -16,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ddc58aed6e7a1efaecd8b7e7cf51a39e43d14e58
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5491e0d2dfb1aa1989fc202203d9a895823b0b73
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044331"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67043891"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
 Můžete chtít blokovat přístup k firemní síti v případě, že zařízení opustí umístění. Tuto možnost nabízí v Intune funkce **Umístění**. 
 
-Můžete vytvořit zásady dodržování předpisů založené na síťovém umístění, které se také označují jako ohraničení sítě. Tyto zásady zajišťují, že pokud mají zařízení vyhovovat, musí být připojená k pracovní síti. Tyto zásady se dají používat se zásadami podmíněného přístupu, aby zařízení měla přístup k pracovním prostředkům *jenom* v případě, že jsou připojená k pracovní síti. Když není zařízení připojené k pracovní síti, stane se nevyhovujícím a ztratí přístup k pracovním prostředkům.
+Můžete vytvořit zásady dodržování předpisů založené na síťovém umístění, které se také označují jako ohraničení sítě. Tyto zásady zajišťují, že pokud mají zařízení vyhovovat, musí být připojená k pracovní síti. Tuto zásadu lze použít spolu se zásadami podmíněného přístupu, tak zařízení mají přístup k pracovním prostředkům *pouze* při připojení zařízení k podnikové síti. Když není zařízení připojené k pracovní síti, stane se nevyhovujícím a ztratí přístup k pracovním prostředkům.
 
 Uvažte následující příklady:
 

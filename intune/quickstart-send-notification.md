@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d1153254f5e803bc0e1f933b8bdc022f241abcc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: bb175d2133cf2a7bc5b064c13afb7e252147c729
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045854"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044249"
 ---
 # <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odesílání oznámení do zařízení nesplňujících požadavky
 
 V tomto rychlém startu použijete Microsoft Intune k odeslání e-mailových oznámení zaměstnancům, kteří používají zařízení nedodržující předpisy.
 
-Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) služby Azure Active Directory (AAD) pak takové zařízení zablokuje. Když zařízení nedodržuje předpisy, umožňuje Intune přidat akce při nedodržení předpisů, což vám umožní se flexibilně rozhodnout, jak postupovat. Uživatelům můžete dát například určitou dobu odkladu, během které musí zajistit dodržování předpisů, než tato zařízení zablokujete.
+Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. Azure Active Directory (AAD) [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) pak zařízení zablokuje. Když zařízení nedodržuje předpisy, umožňuje Intune přidat akce při nedodržení předpisů, což vám umožní se flexibilně rozhodnout, jak postupovat. Uživatelům můžete dát například určitou dobu odkladu, během které musí zajistit dodržování předpisů, než tato zařízení zablokujete.
 
 Jednou z akcí, které můžete udělat, když zařízení nedodržují předpisy, je odeslání e-mailu jejich koncovým uživatelům. E-mailové oznámení můžete před odesláním koncovým uživatelům přizpůsobit. Konkrétně můžete přizpůsobit příjemce, předmět a text zprávy včetně firemního loga a kontaktních údajů. Intune do tohoto e-mailového oznámení zároveň zahrne podrobnosti o zařízení nedodržujícím předpisy.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Požadavky
-- Při použití zásad dodržování předpisů zařízením k blokování přístupu zařízení k podnikovým prostředkům musí být nastavený podmíněný přístup služby AAD. Pokud jste dokončili rychlý start věnovaný [vytvoření zásady dodržování předpisů pro zařízení](quickstart-set-password-length-android.md), službu Azure Active Directory používáte. Další informace o službě AAD najdete v článku [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) a [Běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+- Při použití zásad dodržování předpisů zařízením k zablokování zařízení k podnikovým prostředkům, musíte nastavit podmíněný přístup AAD. Pokud jste dokončili rychlý start věnovaný [vytvoření zásady dodržování předpisů pro zařízení](quickstart-set-password-length-android.md), službu Azure Active Directory používáte. Další informace o AAD najdete v tématu [podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) a [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 

@@ -373,7 +373,7 @@
               href: privacy-data-view-correct.md
             - name: 'Auditování, export, odstranění'
               href: privacy-data-audit-export-delete.md
-        - name: podmíněný přístup
+        - name: Podmíněný přístup
           href: conditional-access.md
           items:
             - name: Běžné způsoby použití podmíněného přístupu

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a10fa6983b8e8c34a1844c647d952ca8cbf0730c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1c1400b3786965ab962de01207f24b53aa3a47b1
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050173"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045987"
 ---
 # <a name="manage-and-use-different-device-management-features-on-windows-holographic-and-hololens-devices-with-intune"></a>Spravovat a využívat funkce správy různých zařízení na Windows Holographic a zařízení HoloLens s Intune
 
@@ -54,7 +54,7 @@ Pomocí aplikace Portál společnosti můžete také provádět následující a
 ## <a name="compliance-policy"></a>zásady dodržování předpisů
 **[Vytvoření zásady dodržování předpisů pro zařízení](compliance-policy-create-windows.md)**
 
-Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí zásad podmíněného přístupu můžete nevyhovujícím zařízením zablokovat přístup k prostředkům společnosti. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic for Business. Můžete třeba vytvořit zásadu, která vyžaduje zapnutý Bitlocker.
+Zásady dodržování předpisů jsou pravidla a nastavení, která musí zařízení dodržovat, aby vyhovovala. Pomocí zásad podmíněného přístupu blokovat přístup k prostředkům společnosti pro zařízení nedodržující předpisy. V Intune můžete vytvářet zásady dodržování předpisů, které povolí nebo zablokují přístup zařízením s Windows Holographic for Business. Můžete třeba vytvořit zásadu, která vyžaduje zapnutý Bitlocker.
 
 Další informace najdete v tématu **[Začínáme se zásadami dodržování předpisů](device-compliance-get-started.md)**.
 

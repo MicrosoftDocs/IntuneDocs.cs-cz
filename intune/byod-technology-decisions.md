@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba3f6fc48a68122f0a192adc8e2140bb7a603b31
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3400169aab9598624216fcbc9ef7694e1d5441cc
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043461"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045786"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -32,7 +32,7 @@ V tomto tématu prozkoumáme jednoduchý případ použití, ve kterém se povol
 * Vaše e-mailové účty jsou hostované v Exchangi Online.
 
 ## <a name="common-reasons-to-manage-the-device-mdm"></a>Běžné situace, při kterých se provádí správa zařízení (MDM)
-Nasazením zásad [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) na Exchangi Online můžete uživatele snadno přimět, aby si svoje zařízení zaregistrovali do správy zařízení. Toto jsou situace, kdy je vhodné spravovat osobní zařízení:
+Můžete snadno přimět, uživatelé museli zaregistrovat svá zařízení do správy zařízení nasazením [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) zásad v Exchangi Online. Toto jsou situace, kdy je vhodné spravovat osobní zařízení:
 
 **WiFi/VPN** – Pokud uživatelé potřebují k produktivní práci podnikový profil připojení, je možné ho bezproblémově nakonfigurovat.
 
@@ -41,7 +41,7 @@ Nasazením zásad [podmíněného přístupu](https://docs.microsoft.com/azure/a
 **Dodržování předpisů** – Některé organizace musí dodržovat zákonné nebo jiné předpisy, které vyžadují specifické prvky MDM. MDM je například potřeba k šifrování celého zařízení nebo k vytvoření sestavy obsahující všechny aplikace na zařízení.
 
 ## <a name="common-reasons-to-only-manage-the-apps-mam"></a>Běžné situace, při kterých se provádí jenom správa aplikací (MAM)
-Používání MAM bez MDM je velmi rozšířené v organizacích, které podporují vlastní zařízení uživatelů. Nasazením zásad podmíněného přístupu na Exchange Online můžete uživatele přimět, aby pro přístup k e-mailu používali Outlook Mobile (který podporuje ochranu MAM). Toto jsou situace, kdy je vhodné spravovat jenom aplikace na osobních zařízeních:
+Používání MAM bez MDM je velmi rozšířené v organizacích, které podporují vlastní zařízení uživatelů. Můžete uživatele přimět, pro přístup k e-mailu používali Outlook Mobile (který podporuje ochranu MAM) a nasadit zásady podmíněného přístupu na Exchange Online. Toto jsou situace, kdy je vhodné spravovat jenom aplikace na osobních zařízeních:
 
 **Uživatelské prostředí** – Součástí registrace MDM je řada výzev s upozorněními (vynucovaných příslušnou platformou), které často mají za následek to, že se uživatel nakonec rozhodne nepřistupovat k e-mailu na svém osobním zařízení. Prostředí MAM není pro uživatele tak znepokojující, protože se jim zobrazí jenom jedno automaticky otevírané okno s oznámením, že se používá ochrana MAM.
 
@@ -52,7 +52,7 @@ Používání MAM bez MDM je velmi rozšířené v organizacích, které podporu
 Přečtěte si další informace o [životních cyklech správy zařízení a aplikací](introduction-device-app-lifecycles.md).
 
 ## <a name="mdm-vs-mam-capability-comparison"></a>Porovnání funkcí MDM a MAM
-Jak jsme už uvedli, pomocí podmíněného přístupu lze uživatele přimět k tomu, aby si svoje zařízení zaregistroval nebo aby používal spravovanou aplikaci, jako je Outlook Mobile. V obou případech lze použít řadu dalších podmínek, například:
+Jsme už zmínili, podmíněného přístupu, které jsou už můžete jednotka uživatele k registraci jejich zařízení nebo používat spravovanou aplikaci, jako je Outlook Mobile. V obou případech lze použít řadu dalších podmínek, například:
 
 * Uživatel, který se pokouší o přístup
 * Důvěryhodnost nebo nedůvěryhodnost umístění

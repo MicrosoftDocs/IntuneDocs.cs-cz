@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 808b594e4ac47845272be2978da2463727f9807c
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f04879e88cb85eaacdb75f5645a486e3539cb13a
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040771"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044087"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Konektor Symantec Endpoint Protection Mobile
 
-Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat pomocí podmíněného přístupu na základě posouzení rizik, které provádí Symantec Endpoint Protection Mobile (SEP Mobile). Jedná se o řešení ochrany před mobilními hrozbami, které se integruje do Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží SEP Mobile. Patří do ní:
+Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí aplikace Symantec Endpoint Protection Mobile (SEP Mobile) je řešení ochrany před mobilními hrozbami, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží SEP Mobile. Patří do ní:
 
 -   Fyzická ochrana
 
@@ -36,7 +36,7 @@ Přístup mobilních zařízení k podnikovým prostředkům můžete regulovat 
 
 -   Ochrana chyb zabezpečení
 
-Můžete nakonfigurovat posouzení rizik službou SEP Mobile prostřednictvím zásad dodržování předpisů zařízení služby Intune a pak pomocí zásad podmíněného přístupu na základě odhalených hrozeb u zařízení, která nedodržují předpisy, povolit nebo zablokovat přístup k firemním prostředkům.
+Můžete povolit hodnocení rizik SEP Mobile prostřednictvím zásad dodržování předpisů zařízení služby Intune a zásady podmíněného přístupu pak můžete povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě odhalených hrozeb.
 
 ## <a name="how-do-intune-and-sep-mobile-help-protect-your-company-resources"></a>Jak Intune a SEP Mobile pomáhají chránit prostředky společnosti?
 

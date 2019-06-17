@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 51ad3b2db3a45c06c0019b6f57ac4147112807fa
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5d229972c238756598694d2e3463f22290924ccc
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049824"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045482"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -166,7 +166,7 @@ Knihovna ADAL zpravidla vyžaduje, aby se aplikace registrovaly u služby Azure 
 
 Pokud už aplikace k ověřování uživatelů používá ADAL, musí používat svoje stávající registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
 
-Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Intune App SDK v současnosti využívá zprostředkovatelskou větev ADAL, aby podporovala aplikace, které vyžadují podmíněný přístup. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
+Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Intune App SDK aktuálně využívá zprostředkovatelskou větev ADAL pro podporu aplikací, které vyžadují podmíněný přístup. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
 
 ### <a name="link-to-adal-binaries"></a>Propojení na binární soubory ADAL
 

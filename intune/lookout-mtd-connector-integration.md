@@ -1,138 +1,168 @@
 ---
 title: Nastavení integrace služby Lookout s Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si o integraci Intune se službou Lookout Mobile Threat Defense za účelem regulace přístupu mobilních zařízení k firemním prostředkům.
+description: Přečtěte si o integraci Intune se službou Lookout Mobile Endpoint Security jako řešení Mobile Threat Defense, k řízení přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/02/2019
+ms.date: 06/11/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5b0d7644-3183-45ba-a165-0d82d70cb71e
-ms.reviewer: heenamac
+ms.reviewer: davera
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffdfd203b2b67a25d5826798d89ae548e33d7756
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0d146b211c42c20b1381b238311db6a10295ef4a
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047146"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67044931"
 ---
-# <a name="set-up-your-lookout-mobile-threat-defense-integration-with-intune"></a>Nastavení integrace ochrany před mobilními hrozbami Lookout s Intune
-
-Při nastavování předplatného ochrany před mobilními hrozbami Lookout je potřeba provést tyto kroky:
-
-| #        |Krok  |
-| ------------- |:-------------|
-| 1 | [Shromáždění informací z Azure AD](#collect-azure-ad-information) |
-| 2 | [Konfigurace předplatného](#configure-your-subscription) |
-| 3 | [Konfigurace skupin pro registraci](#configure-enrollment-groups) |
-| 4 | [Konfigurace synchronizace stavu](#configure-state-sync) |
-| 5 | [Konfigurace informací o příjemci e-mailů se zprávami o chybách](#configure-error-report-email-recipient-information) |
-| 6 | [Konfigurace nastavení registrace](#configure-enrollment-settings) |
-| 7 | [Konfigurace e-mailových oznámení](#configure-email-notifications) |
-| 8 | [Konfigurace klasifikace hrozeb](#configure-threat-classification) |
-| 9 | [Sledování registrací](#watching-enrollment) |
+# <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace služby Lookout Mobile Endpoint Security se službou Intune
+V prostředí, které splňuje [požadavky](lookout-mobile-threat-defense-connector.md#prerequisites), můžete integrovat Lookout Mobile Endpoint Security se službou Intune. Informace v tomto článku se dozvíte v nastavení integrace a konfigurace důležitých nastavení ve službě Lookout pro použití s Intune.  
 
 > [!IMPORTANT]
 > Existujícího tenanta Lookout Mobile Endpoint Security, který ještě není přidružený k vašemu tenantovi Azure AD, nejde použít k integraci s Azure AD a Intune. Pokud chcete vytvořit nového tenanta Lookout Mobile Endpoint Security, obraťte se na podporu Lookoutu. Pomocí tohoto nového tenanta můžete připojit uživatele Azure AD.
 
-## <a name="collect-azure-ad-information"></a>Shromáždění informací z Azure AD
-Váš tenant Lookout Mobility Endpoint Security se přidruží k předplatnému Azure AD, aby se Lookout mohl integrovat s Intune. K tomu, aby bylo možné povolit předplatné ochrany před mobilními hrozbami Lookout, potřebuje podpora služby Lookout (enterprisesupport@lookout.com) následující informace:
+## <a name="collect-azure-ad-information"></a>Shromáždění informací z Azure AD  
+Integrované služby Lookout s Intune můžete přidružit k váš tenant Lookout Mobility Endpoint Security vaše předplatné Azure Active Directory (AD).
 
-* **ID klienta Azure AD**
-* **ID objektu skupiny Azure AD** pro **úplný** přístup ke konzole Lookout
-* **ID objektu skupiny Azure AD** pro **omezený** přístup ke konzole Lookout (volitelné)
+Aby vaše předplatné integrace Lookout Mobile Endpoint Security se službou Intune, zadejte následující informace pro podporu služby Lookout (enterprisesupport@lookout.com):  
 
-V následujícím postupu se dozvíte, jak získat informace, které je třeba sdělit týmu podpory služby Lookout.
+- **ID adresáře tenanta Azure AD**  
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com) a vyberte své předplatné. 
+- **ID objektu skupiny Azure AD** skupiny pomocí **úplné** přístup ke konzole Lookout Mobile Endpoint Security (MES).  
+  Vytvořte tuto skupinu uživatelů ve službě Azure AD obsahující uživatele, kteří mají *úplný přístup* k přihlášení **konzole Lookout**. Uživatelé musí být členy této skupiny nebo volitelné *omezený přístup* skupiny, pro přihlášení ke konzole Lookout. 
 
-2. Když vyberete název vašeho předplatného, výsledná adresa URL obsahuje ID předplatného.  Pokud máte problémy s nalezením ID vašeho předplatného, přečtěte si [článek podpory společnosti Microsoft](https://support.office.com/article/Find-your-Office-365-tenant-ID-6891b561-a52d-4ade-9f39-b492285e2c9b), který obsahuje tipy, jak toto ID najít.
+- **ID objektu skupiny Azure AD** skupiny pomocí **s omezeným přístupem** přístup ke konzole Lookout MES *(volitelnou skupinu)*. 
+  Vytvoření této skupiny volitelné uživatelů ve službě Azure AD obsahující uživatele, kteří by neměly mít přístup k týkajícím se konfigurace a registrace některým modulům konzoly Lookout. Místo toho tito uživatelé mají přístup jen pro čtení k **zásady zabezpečení** konzoly Lookout. Uživatelé musí být členy této volitelné skupinu nebo požadované *úplný přístup* skupiny, pro přihlášení ke konzole Lookout.
 
-3. Najděte ID skupiny Azure AD. Konzola Lookout podporuje dvě úrovně přístupu:  
-   * **Úplný přístup:** Správce služby Azure AD může vytvořit skupinu pro uživatele, kteří mají plný přístup a volitelně vytvořit skupinu pro uživatele, kteří budou mít omezený přístup.  Ke **konzole Lookout** se budou moct přihlásit jenom uživatelé z těchto skupin.
-   * **Omezený přístup:** Uživatelé z této skupiny nemají přístup k týkajícím se konfigurace a registrace některým modulům konzoly Lookout a mají přístup jen pro čtení k **zásady zabezpečení** konzoly Lookout.  
+ > [!TIP] 
+ > Další podrobnosti o oprávněních najdete v [tomto článku](https://personal.support.lookout.com/hc/articles/114094105653) na webu Lookout.
 
-     > [!TIP] 
-     > Další podrobnosti o oprávněních najdete v [tomto článku](https://personal.support.lookout.com/hc/articles/114094105653) na webu Lookout.
+### <a name="collect-information-from-azure-ad"></a>Shromažďování informací ze služby Azure AD 
 
-     > [!NOTE] 
-     > **ID objektu skupiny** najdete na stránce **Vlastnosti** dané skupiny v **portálu pro správu Azure AD**.
+1. Přihlaste se k [webu Azure portal](https://portal.azure.com) pomocí účtu globálního správce.
 
-4. Jakmile tyto informace získáte, obraťte se na podporu služby Lookout (e-mail: enterprisesupport@lookout.com). Podpora Lookout bude při zprovoznění vašeho předplatného a vytvoření účtu Lookout Enterprise používat váš primární kontakt (pro veškerou potřebnou komunikaci) na základě poskytnutých informací.
+2. Přejděte na **Azure Active Directory** > **vlastnosti** a vyhledejte vaši **ID adresáře**. Použití *kopírování* tlačítko pro kopírování ID adresáře a uložte ho do textového souboru.
 
-## <a name="configure-your-subscription"></a>Konfigurace předplatného
+   ![Vlastnosti služby Azure AD](./media/lookout-mtd-connector-integration/azure-ad-properties.png)  
 
-1. Poté, co podpora služby Lookout vytvoří váš účet Lookout Enterprise, se na adresu primárního kontaktu vaší firmy odešle e-mail ze služby Lookout s odkazem na přihlašovací stránku: <https://aad.lookout.com/les?action=consent>.
+3. Dále vyhledejte ID skupiny Azure AD pro účty, které používáte k Azure AD uživatelům udělit přístup ke konzole Lookout. Jedna skupina je pro *úplný přístup*a druhé skupiny pro *omezený přístup* je volitelný. Chcete-li získat *ID objektu*, pro každý účet:  
+   1. Přejděte na **Azure Active Directory** > **skupiny** otevřít *skupiny – všechny skupiny* podokně.  
 
-2. Při prvním přihlášení ke konzole Lookout je nutné použít uživatelský účet, který má v Azure AD roli globálního správce, aby bylo možné zaregistrovat tenanta Azure AD. Při dalších přihlášeních se už tato úroveň oprávnění v Azure AD nevyžaduje. Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. Po přijetí a vyjádření souhlasu budete přesměrováni na konzolu Lookout.
+   2. Vyberte skupinu, kterou jste vytvořili pro *úplný přístup* otevřete jeho *přehled* podokně.  
 
-   ![snímek obrazovky stránky prvního přihlášení do konzoly Lookout](./media/lookout_mtp_initial_login.png)
+   3. Použití *kopírování* tlačítko pro kopírování ID objektu a uložte ho do textového souboru.  
 
-3. V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Intune**.
+   4. Opakujte proces pro *omezený přístup* skupiny, pokud použijete tuto skupinu.  
 
-   ![Obrázek konzoly Lookout s Intune možností na kartě konektory](./media/lookout_mtp_setup-intune-connector.png)
+      ![ID objektu skupiny Azure AD](./media/lookout-mtd-connector-integration/azure-ad-group-id.png)  
 
-4. Přejděte na **Konektory** > **Nastavení připojení** a určete **frekvenci prezenčního signálu** v minutách.
+   Až tyto informace shromáždíte, kontaktujte podporu služby Lookout (e-mail: enterprisesupport@lookout.com). Podpora lookout bude pracovat s váš primární kontakt na základě poskytnutých vaše předplatné a vytvořit váš účet Lookout Enterprise, pomocí informací, které zadáte.  
 
-   ![Obrázek kartu Nastavení připojení nakonfigurovaná frekvence prezenčního signálu](./media/lookout-mtp-connection-settings.png)
+## <a name="configure-your-lookout-subscription"></a>Konfigurace předplatného služby Lookout  
+Jakmile vám podpora Lookout vytvoří účet Lookout Enterprise, podpora služby Lookout odešle e-mail na adresu primárního kontaktu vaší firmy s odkazem na adresu url přihlášení: https://aad.lookout.com/les?action=consent. 
 
-## <a name="configure-enrollment-groups"></a>Konfigurace skupin pro registraci
-1. Osvědčeným postupem je vytvořit na [portálu pro správu Azure AD](https://manage.windowsazure.com) skupinu zabezpečení Azure AD, která obsahuje malý počet uživatelů a umožňuje otestovat integraci se službou Lookout.
+### <a name="initial-sign-in"></a>Počáteční přihlášení  
+První přihlášení ke konzole Lookout MES zobrazí stránka pro odsouhlasení podmínek (https://aad.lookout.com/les?action=consent). Azure AD globálního správce právě přihlášení a **přijmout**. Následné přihlášení nevyžaduje, aby uživatel už tato úroveň oprávnění Azure AD. 
 
-    > [!NOTE] 
-    > Všechna identifikovaná a podporovaná zařízení uživatelů ve skupině pro registraci v Azure AD, která Lookout podporuje a jsou zaregistrovaná v Intune, se zaregistrují a bude možné je aktivovat v konzole Lookout MTD.
+ Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. 
+   ![snímek obrazovky s první přihlašovací stránku konzoly Lookout](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
-2. V [konzole Lookout](https://aad.lookout.com) zvolte v modulu **Systém** kartu **Konektory** a vyberte **Správa registrace**, abyste mohli definovat sadu uživatelů, jejichž zařízení se mají ve službě Lookout zaregistrovat. Přidejte **zobrazovaný název** skupiny zabezpečení Azure AD pro registraci.
+Při přijetí a vyjádření souhlasu budete přesměrováni do konzoly Lookout.
 
-    ![snímek obrazovky zobrazující stránku registrace konektoru Intune](./media/lookout-mtp-enrollment.png)
+Po dokončení počáteční přihlášení a vyjádření souhlasu uživatele, který přihlásit z https://aad.lookout.com přesměrováni do konzoly MES. Pokud ještě nebyl udělen souhlas, výsledkem všech pokusů o přihlášení chybný Chyba přihlášení.
 
-    >[!IMPORTANT]
-    > V **zobrazovaném názvu** se rozlišují velká a malá písmena, jak je vidět ve **vlastnostech** skupiny zabezpečení na webu Azure Portal. Na obrázku níže vidíte, že **zobrazovaný název** skupiny zabezpečení je ve stylu CamelCase, zatímco v nadpisu jsou všechna písmena malá. V konzole Lookout použijte pro **zobrazovaný název** stejnou velikost písmen jako u skupiny zabezpečení.
-    >![Obrázek webu Azure portal, službu Azure Active Directory a stránky vlastností](./media/aad-group-display-name.png)
+### <a name="configure-the-intune-connector"></a>Konfigurace konektoru Intune  
+Následující postup předpokládá, že jste předtím vytvořili skupinu uživatelů ve službě Azure AD pro účely testování nasazení aplikace Lookout. Osvědčeným postupem je začít s malou skupinou uživatelů a Povolit správcům Lookoutu a Intune a seznamte se s integrací produktu. Po jejich jste se seznámili, můžete registraci rozšířit na další skupiny uživatelů.
 
-    >[!NOTE] 
-    >Osvědčeným postupem je ponechat výchozí nastavení (5 minut) intervalu vyhledávání nových zařízení. Aktuální omezení **Lookout nedokáže ověřit zobrazované názvy skupin:** Ujistěte se, že pole **ZOBRAZOVANÝ NÁZEV** na portálu Azure Portal se přesně shoduje se skupinou zabezpečení Azure AD. **Vytváření vnořených skupin se nepodporuje:**  Skupiny zabezpečení Azure AD, které se používají ve službě Lookout, musí obsahovat jenom uživatele. Nesmí obsahovat jiné skupiny.
+1. Přihlaste se k [konzole Lookout MES](https://aad.lookout.com) a přejděte na **systému** > **konektory**a pak vyberte **konektoru přidat**.  Vyberte **Intune**.
 
-3.  Po přidání skupiny se podporované zařízení aktivuje ve službě Lookout ve chvíli, kdy na něm uživatel znovu otevře aplikaci Lookout for Work.
+   ![Obrázek konzoly Lookout s Intune možností na kartě konektory](./media/lookout-mtd-connector-integration/lookout_mtp_setup-intune-connector.png)
 
-4.  Až budete s výsledky spokojení, rozšiřte registraci na další skupiny uživatelů.
+2. Na *Microsoft Intune* vyberte **nastavení připojení** a zadejte **frekvenci prezenčního signálu** během několika minut. 
 
-## <a name="configure-state-sync"></a>Konfigurace synchronizace stavu
-V nastavení **Synchronizace stavu** určete typ dat odesílaných do Intune.  Aby integrace služeb Lookout a Intune fungovala správně, je nutné povolit stav zařízení i stav hrozby. Ve výchozím nastavení jsou tyto možnosti povolené.
+   ![Obrázek kartu Nastavení připojení nakonfigurovaná frekvence prezenčního signálu](./media/lookout-mtd-connector-integration/lookout-mtp-connection-settings.png)
 
-## <a name="configure-error-report-email-recipient-information"></a>Konfigurace informací o příjemci e-mailů se zprávami o chybách
-V nastavení **Správa chyb** zadejte e-mailovou adresu příjemce, který má dostávat zprávy o chybách.
+3. Vyberte **Správa registrace**a pro **použijte následující skupiny zabezpečení Azure AD k identifikaci zařízení, která by měla být zaregistrované v Lookout for Work**, zadejte *název skupiny*skupiny Azure AD pomocí služby Lookout, a potom vyberte **uložit změny**.
 
-![snímek obrazovky zobrazující stránku správy chyb konektoru Intune](./media/lookout-mtp-connector-error-notifications.png)
+    ![snímek obrazovky zobrazující stránku registrace konektoru Intune](./media/lookout-mtd-connector-integration/lookout-mtp-enrollment.png)  
 
-## <a name="configure-enrollment-settings"></a>Konfigurace nastavení registrace
-V modulu **Systém** zadejte na stránce **Konektory** počet dnů, po jejichž uplynutí se zařízení bude považovat za odpojené.  Odpojená zařízení se považují za nevyhovující a přístup k firemním aplikacím se jim zablokuje na základě zásad podmíněného přístupu Intune. Můžete zadat hodnotu mezi 1 a 90 dny.
+   **O skupinách použijete**:
+   - Jako osvědčený postup spusťte pomocí skupiny zabezpečení služby Azure AD, který obsahuje malý počet uživatelů k testování aplikací Lookout integration.
+   - **Název skupiny** rozlišuje velká a jak je znázorněno **vlastnosti** skupiny zabezpečení na webu Azure Portal.  
+   - U vámi určených pro skupin **Správa registrace** definovat sadu uživatelů, jejichž zařízení se zaregistrují službu lookout. Pokud je uživatel ve skupině pro registraci, jejich zařízení ve službě Azure AD se zaregistrují a nich možné aktivovat Lookout MES. Uživatel otevře poprvé *Lookout for Work* aplikace na podporovaných zařízeních, zobrazí výzva k její aktivaci.
 
-![Nastavení registrace služby lookout v modulu systému](./media/lookout-console-enrollment-settings.png)
+4. Vyberte **synchronizace stavu** a zajištění toho, aby *stav zařízení* a *hrozeb stav* jsou nastaveny na **na**.  Jsou potřeba pro integraci Lookout a Intune fungovala správně.  
 
-## <a name="configure-email-notifications"></a>Konfigurace e-mailových oznámení
-Pokud chcete e-mailem dostávat upozornění na hrozby, přihlaste se ke [konzole Lookout](https://aad.lookout.com) pomocí uživatelského účtu, na kterém chcete oznámení přijímat. Přejděte na kartu **Předvolby** v modulu **Systém**, vyberte úrovně hrozeb, při kterých by se měla posílat oznámení, a nastavte u nich hodnotu **Zapnuto**. Uložte provedené změny.
+5. Vyberte **Správa chyb**, zadejte e-mailovou adresu, která by měla přijímat zprávy o chybách a pak vyberte **uložit změny**.
+ 
+   ![snímek obrazovky zobrazující stránku správy chyb konektoru Intune](./media/lookout-mtd-connector-integration/lookout-mtp-connector-error-notifications.png)
 
-![snímek obrazovky zobrazující stránku předvoleb se zobrazeným uživatelským účtem](./media/lookout-mtp-email-notifications.png) Pokud už nechcete dostávat některá e-mailová oznámení, nastavte příslušná oznámení na **Vypnuto** a provedené změny uložte.
+6. Vyberte **vytvořit konektor** na kompletní konfigurace konektoru. Později až budete s výsledky spokojení, můžete rozšířit registraci na další skupiny uživatelů.
 
-### <a name="configure-threat-classification"></a>Konfigurace klasifikace hrozeb
-Ochrana před mobilními hrozbami Lookout klasifikuje mobilní hrozby podle různých typů. [Klasifikace hrozeb ve službě Lookout](https://personal.support.lookout.com/hc/articles/114094130693) k nim má přiřazené výchozí úrovně rizika. Ty lze kdykoli změnit tak, aby odpovídaly požadavkům vaší společnosti.
+## <a name="configure-intune-to-use-lookout-as-a-mobile-threat-defense-provider"></a>Konfigurace Intune pro používání Lookout Mobile Threat Defense zprostředkovatele
+Po dokončení konfigurace aplikace Lookout MES, musíte vytvořit připojení ke službě Lookout v Intune.  
 
-![snímek obrazovky zobrazující stránku zásad s hrozbami a klasifikací](./media/lookout-mtp-threat-classification.png)
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+
+2. Přejděte na **dodržování předpisů zařízením** > **Mobile Threat Defense** a vyberte **přidat**.
+
+3. Na *konektoru přidat* podokně, použijte rozevírací seznam a vyberte **Lookout for Work**.  
+
+4. Vyberte **Vytvořit**. Po spojnice vytvoří v kontaktu s Lookout MES *nastavení konektoru* budou k dispozici.
+
+5. Nastavte **povolit synchronizaci aplikací pro zařízení se systémem iOS** k **na**. 
+
+6. Vyberte **Uložit** a dokončete tak konfiguraci.  Intune a Lookout MES jsou teď integrované a připravené k použití.
+
+
+## <a name="additional-settings-in-the-lookout-mes-console"></a>Další nastavení v konzole Lookout MES
+Tady jsou další nastavení, která můžete nakonfigurovat v konzole Lookout MES.  
+
+### <a name="configure-enrollment-settings"></a>Konfigurace nastavení registrace
+V konzole Lookout MES vyberte **systému** > **spravovat registrace** > **nastavení registrace**.  
+
+- Pro **stav Odpojeno**, zadejte počet dní, než se zařízení s nepřipojené je označená jako odpojená.  
+
+  Odpojená zařízení se považují za nevyhovující a přístup k firemním aplikacím se jim zablokuje na základě zásad podmíněného přístupu Intune. Můžete zadat hodnotu mezi 1 a 90 dny.
+
+  ![Nastavení registrace služby lookout v modulu systému](./media/lookout-mtd-connector-integration/lookout-console-enrollment-settings.png)
+
+### <a name="configure-email-notifications"></a>Konfigurace e-mailových oznámení
+Pokud chcete dostávat e-mailová upozornění na hrozby, přihlaste se k [konzole Lookout MES](https://aad.lookout.com) pomocí uživatelského účtu, který má dostávat oznámení.  
+
+- Přejděte na **Předvolby** a nastavte oznámení budete dostávat na **ON**a potom **Uložit** změny.  
+
+- Pokud už nechcete dostávat e-mailová oznámení, nastavte u nich hodnotu **OFF** a uložte provedené změny.
+
+  ![snímek obrazovky stránku předvoleb se zobrazeným uživatelským účtem](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
+
+
+
+## <a name="configure-threat-classifications"></a>Konfigurace klasifikace hrozeb  
+Lookout Mobile Endpoint Security klasifikuje mobilní hrozby podle různých typů. Klasifikace hrozeb služby Lookout mít k nim má přiřazené výchozí úrovně rizika. Úrovně rizik lze změnit kdykoli tak, aby odpovídaly požadavkům vaší společnosti.
+
+Informace o úrovni klasifikace hrozeb a Správa úrovně rizika spojená s nimi, naleznete v tématu [odkaz před internetovými útoky Lookout](https://enterprise.support.lookout.com/hc/articles/360011812974).
 
 >[!IMPORTANT]
-> Úrovně rizik jsou důležitou součástí ochrany před mobilními hrozbami, protože integrace se službou Intune vypočítává míru dodržování předpisů u zařízení za běhu právě podle těchto úrovní rizik. Správce Intune nastaví v zásadách pravidlo, které určí, že zařízení nesplňuje předpisy, pokud pro něj existuje aktivní hrozba minimálně **vysoké**, **střední** nebo**nízké** úrovně. Zásady klasifikace hrozeb v ochraně před mobilními hrozbami Lookout přímo řídí výpočet dodržování předpisů zařízením ve službě Intune.
+> Úrovně rizik jsou důležitou součástí Mobile Endpoint Security, protože integrace s Intune vypočítává dodržování předpisů zařízením podle těchto úrovní rizik za běhu.  
+> 
+> Správce Intune nastaví v zásadách pravidlo, které určí, že zařízení nesplňuje předpisy, pokud pro něj existuje aktivní hrozba minimálně **vysoké**, **střední** nebo**nízké** úrovně. Zásady klasifikace hrozeb ve službě Lookout Mobile Endpoint Security přímo řídí výpočet dodržování předpisů zařízením v Intune.  
 
-## <a name="watching-enrollment"></a>Sledování registrací
-Po dokončení nastavení začne ochrana před mobilními hrozbami Lookout posílat do služby Azure AD dotazy na zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete v modulu Zařízení.  Počáteční stav u zařízení je čekající na vyřízení.  Stav zařízení se změní, jakmile se na zařízení nainstaluje, otevře a aktivuje aplikace Lookout for Work.  Podrobnosti o tom, jak aplikaci Lookout for Work přidat do zařízení, najdete v tématu [Přidání aplikací Lookout for Work pomocí Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
+## <a name="monitor-enrollment"></a>Sledování registrace
+Po dokončení instalace aplikace Lookout Mobile Endpoint Security spustí k dotazování služby Azure AD pro zařízení, která odpovídají určeným skupinám pro registraci.  Informace o registrovaných zařízeních najdete na webu **zařízení** v konzole Lookout MES.  
+- Počáteční stav u zařízení se *čekající*.  
+- Stav zařízení se aktualizuje po *Lookout for Work* aplikace je nainstalovaná, otevře a aktivuje na zařízení.
+
+Podrobnosti o tom, jak *Lookout for Work* aplikace nasazená na zařízení, najdete v článku [přidat aplikace Lookout for work pomocí Intune](mtd-apps-ios-app-configuration-policy-add-assign.md).
 
 ## <a name="next-steps"></a>Další postup
 

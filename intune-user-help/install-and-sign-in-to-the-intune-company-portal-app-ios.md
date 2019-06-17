@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e861348e3ba8e3caef92eac04899d48cc790262a
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: bc2173e2972e422ac629331110d3b86b787765da
+ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61498603"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040952"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>Instalace a přihlášení do aplikace Portál společnosti
 
@@ -37,6 +37,6 @@ Nainstalujte aplikaci Portál společnosti na zařízení s iOSem, abyste získa
 
 3.  Otevřete aplikaci Portál společnosti, zadejte svou pracovní nebo školní e-mailovou adresu a heslo a pak klepněte na **Přihlásit se**.
 
-    Když se do aplikace Portál společnosti přihlašujete poprvé a vaše společnost nebo škola používá Intune, zobrazí se výzva k registraci vašeho zařízení do služby Intune. Při registraci použijte postup popsaný v části věnované [registraci zařízení s iOSem v Intune](enroll-your-device-in-intune-ios.md). Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#signing-in-from-another-device).
+    Když se do aplikace Portál společnosti přihlašujete poprvé a vaše společnost nebo škola používá Intune, zobrazí se výzva k registraci vašeho zařízení do služby Intune. Při registraci použijte postup popsaný v části věnované [registraci zařízení s iOSem v Intune](enroll-your-device-in-intune-ios.md). Můžete se také [přihlásit pomocí jiného zařízení](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9955330d9f20c13b9239f900b77828d582d12bff
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0ee16e40eea4d217cd78c3a026731656bfa4ca53
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046429"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67045640"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -257,7 +257,7 @@ Vylepšili jsme další kroky na zařízeních s pracovním profilem Androidu.
 |![08](./media/android_work_cp_enroll_05_before_1710.png)| *Zkombinováno s předchozím krokem* |
 
 
-Také jsme aktualizovali obrazovku aktivace e-mailu pro podmíněný přístup.
+Také jsme aktualizovali obrazovku aktivace e-mailu podmíněného přístupu.
 
 |Dříve|Nyní|
 |---|---|
@@ -282,7 +282,7 @@ Proces registrace aplikace Portál společnosti pro Android byl zjednodušen nov
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>11 e-mailové aplikace iOS bude podporovat OAuth <!-- 1196951 -->
 
-Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s iOSem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
+Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s Iosem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
 
 ![Výběr typu účtu v nativní e-mailové aplikaci](./media/ios-11-ca-email-after-1708-01.png)
 
