@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c33f13a7768b86895b89732f1f595d2ede39b41
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
-ms.translationtype: HT
+ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031583"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046299"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží s registrací zařízení v Microsoft Intune
 
@@ -163,7 +163,7 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 - Nemůžou přijímat zásady, aplikace a vzdálené příkazy ze služby Intune.
 - V konzole pro správu se jako stav správy zobrazuje **Není v pořádku**.
-- Uživatelé chránění zásadami podmíněného přístupu můžou ztratit přístup k podnikovým prostředkům.
+- Uživatelé chránění zásadami podmíněného přístupu můžou ztratit přístup k firemním prostředkům.
 
 Software Samsung Smart Manager, který se dodává s některými zařízeními Samsung, může deaktivovat Portál společnosti Intune a jeho součásti. Když je Portál společnosti v neaktivním stavu, nemůže běžet na pozadí a nemůže kontaktovat službu Intune.
 
@@ -176,7 +176,7 @@ Software Samsung Smart Manager, který se dodává s některými zařízeními S
 
 **Řešení 2:**
 
-Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)**  > **About device (O zařízení)**  > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
+Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)** > **About device (O zařízení)** > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
 
 **Řešení 3:**
 
@@ -280,11 +280,11 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 - Nemůžou přijímat zásady, aplikace a vzdálené příkazy ze služby Intune.
 - V konzole pro správu se jako stav správy zobrazuje **Není v pořádku**.
-- Uživatelé chránění zásadami podmíněného přístupu můžou ztratit přístup k podnikovým prostředkům.
+- Uživatelé chránění zásadami podmíněného přístupu můžou ztratit přístup k firemním prostředkům.
 
 **Řešení:** Následující řešení sdílejte s koncovými uživateli k jim pomůžou znovu získat přístup k firemním prostředkům.
 
-Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...** ). ).
+Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...**). ).
 
   ![Oznámení Probíhá pokus o synchronizaci](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/06/2019
+ms.date: 06/13/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 188e766224dc7fdd1f529055df7f5fc585a5ae42
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
-ms.translationtype: HT
+ms.openlocfilehash: bd48e7c83af0a786e1b34f91c05e95a5d47f3d45
+ms.sourcegitcommit: 268f495de486718b99d9c1b60d4576030cafd17b
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041311"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141823"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -68,7 +68,7 @@ Důrazně doporučujeme publikování serveru NDES prostřednictvím reverzního
 |**Šablona certifikátu**|Tuto šablonu nakonfigurujte na své vydávající certifikační autoritě.|
 |**Certifikát pro ověřování klientů**|Tento certifikát vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte na server NDES.|
 |**Ověřovací certifikát serverů**|Tento certifikát SSL vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority nainstalujte a připojte ve službě IIS na serveru NDES. Pokud tento certifikát obsahuje sadu použití klíče pro ověřování klienta a serveru (**rozšířené použití klíče**), můžete použít stejný certifikát.|
-|**Certifikát důvěryhodné kořenové certifikační autority**|Exportujte tento certifikát jako soubor **.cer** z kořenové certifikační autority nebo jakéhokoli zařízení, které kořenové certifikační agentuře důvěřuje. Pak přiřaďte ji uživatelé, zařízení nebo pomocí profilu certifikátu důvěryhodné certifikační Autority.<br /><b>Poznámka:<b />při přiřazení profilu certifikátu SCEP, je potřeba přiřadit profil důvěryhodného certifikátu kořenové odkazuje ve vašem profilu certifikátu SCEP pro stejnou skupinu uživatelů nebo zařízení.<br /><br />Použijete jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružíte ho ke každému profilu důvěryhodného kořenového certifikátu, který vytvoříte.<br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
+|**Certifikát důvěryhodné kořenové certifikační autority**|Exportujte tento certifikát jako soubor **.cer** z kořenové certifikační autority nebo jakéhokoli zařízení, které kořenové certifikační agentuře důvěřuje. Pak přiřaďte ji uživatelé, zařízení nebo pomocí profilu certifikátu důvěryhodné certifikační Autority.<br /> **Poznámka:<br />při přiřazení profilu certifikátu SCEP, je potřeba přiřadit *kořenové profil důvěryhodného certifikátu* odkazuje ve vašem profilu certifikátu SCEP pro stejnou skupinu uživatelů nebo zařízení.  Chcete-li vytvořit tento profil, naleznete v tématu [vytvoření profilu důvěryhodného certifikátu](certficates-pfx-configure.md#create-a-trusted-certificate-profile), která je popsána v článku na profily certifikátů PKCS.** <br/><br />Použijte jeden certifikát důvěryhodné kořenové certifikační Autority každou platformu operačního systému a přidružit každý profil důvěryhodných kořenových certifikátů, které vytvoříte. <br /><br />Pokud potřebujete, můžete vytvořit další certifikáty důvěryhodné kořenové certifikační autority. Můžete to třeba udělat, abyste vytvořili vztah důvěryhodnosti k certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi.|
 
 ### <a name="accounts"></a>Účty
 
@@ -487,7 +487,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
      - **Digitální podpis**: Umožňuje výměnu klíče jenom v případě, že digitální podpis k ochraně klíče
    - **Velikost klíče (bity)** : Vyberte počet bitů v klíči
    - **Hashovací algoritmus** (Android, Windows Phone 8.1, Windows 8.1, Windows 10): Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
-   - **Kořenový certifikát**: Zvolte profil kořenové CA certifikátu dříve nakonfigurovali a přiřadili pro uživatele a/nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu. Nezapomeňte přiřadit tento profil důvěryhodného kořenového certifikátu do stejné skupiny přiřadit profil certifikátu SCEP.
+   - **Kořenový certifikát**: Zvolte [kořenové profil důvěryhodného certifikátu](certficates-pfx-configure.md#create-a-trusted-certificate-profile) jste dříve vytvořili a přiřazené uživatele a/nebo zařízení. Tento certifikát certifikační autority musí být kořenovým certifikátem pro certifikační autoritu, která vydává certifikát konfigurovaný v tomto profilu. Nezapomeňte přiřadit tento profil důvěryhodného kořenového certifikátu do stejné skupiny přiřadit profil certifikátu SCEP.
    - **Rozšířené použití klíče**: **Přidat** hodnoty pro tento certifikát zamýšlený účel. Ve většině případů certifikát vyžaduje **Ověření klienta**, aby se mohl uživatel nebo zařízení ověřit na serveru. Můžete ale přidat jakákoli další použití klíče podle potřeby.
    - **Nastavení registrace**
      - **Prahová hodnota obnovení (%)** : Zadejte procento životnosti certifikátu, který zůstává zařízení požádá o obnovení certifikátu.
