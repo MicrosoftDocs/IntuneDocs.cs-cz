@@ -17,19 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 860d990e07fb2424adf0672e416c608b1251ae3c
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d70b090d137dee4076bebdc70b8a6cfaea8c7977
+ms.sourcegitcommit: 627996c928853777954c959f70be05bf52f9bb5f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046197"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67161665"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
-Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také vyhledat [nadcházejících změnách](in-development.md), [důležitá oznámení](#notices)a informace o [minulých verzích](whats-new-archive.md). 
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také vyhledat [důležitá oznámení](#notices), [minulých verzích](whats-new-archive.md)a informace o [jak vydání aktualizací služby Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728). 
 
 > [!Note]
+> Každý [měsíčních aktualizacích](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) celý proces může trvat až tři dny zavedení a bude v následujícím pořadí:
+> - 1\. den: Asie a Tichomoří (APAC)
+> - Dne 2: Evropa, Střední východ, Afrika (EMEA)
+> - Den 3: Severní Amerika
+> 
 > Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
+>
+> Zkontrolujte [vývoj stránce](in-development.md) seznam chystaných funkcí ve vydané verzi.
 
 **Informační kanál RSS**: Nechte se informovat Tato stránka se aktualizuje zkopírováním a vložením do informačního kanálu čtečky na následující adrese URL: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us`
 
