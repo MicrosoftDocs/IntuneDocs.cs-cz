@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/17/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,20 +17,29 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0fe37deb63457fef869df0f7263970a4e53cb29
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 2246e3f6faa853f620327558a7faf4dc9d6a6e85
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402708"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197516"
 ---
 # <a name="common-issues-and-resolutions-with-email-profiles-in-microsoft-intune"></a>Běžné problémy a řešení s e-mailových profilů v Microsoft Intune
 
 Projděte si některé běžné problémy, e-mailových profilu a jak je vyřešit.
 
+## <a name="what-you-need-to-know"></a>Co je potřeba vědět
+
+- E-mailové profily se nasadí pro uživatele, který zaregistroval zařízení. Pokud chcete nakonfigurovat e-mailový profil, Intune využívá Azure Active Directory (AD) vlastnosti v e-mailový profil uživatele během registrace. [Přidat nastavení e-mailu pro zařízení](email-settings-configure.md) může být dobrým zdrojem informací je.
+- Po provedení migrace z hybridní prostředí Configuration managera na samostatnou službu Intune, e-mailový profil ze hybridní prostředí Configuration managera zůstává v zařízení po dobu 7 dní. Toto je očekávané chování. Pokud potřebujete e-mailový profil odebrat dříve, obraťte se na [podpory služby Intune](get-support.md).
+- Pro Android Enterprise nasaďte Gmail nebo devět pro práci pomocí spravovaných Store Google Play. [Přidání aplikací pro spravovaný obchod Google Play](apps-add-android-for-work.md) jsou uvedené kroky.
+- Aplikace Microsoft Outlook pro iOS a Android nepodporuje e-mailové profily. Místo toho nasaďte zásady Konfigurace aplikací. Další informace najdete v tématu [nastavení konfigurace aplikace Outlook](app-configuration-policies-outlook.md).
+- E-mailové profily cílené na skupiny zařízení (ne skupiny uživatelů) nemusí být doručit do zařízení. Pokud má zařízení primárními uživateli, by měly fungovat cílení na zařízení. Pokud e-mailový profil obsahuje uživatelské certifikáty, je nutné do cílových skupin uživatelů.
+- Uživatelé můžou opakovaně vyzváni k zadání hesla pro e-mailový profil. V tomto scénáři zkontrolujte všechny certifikáty, které jsou uvedené v e-mailový profil. Pokud jeden z certifikátů není zacílený na uživatele, pak Intune pokusí znovu nasadit e-mailový profil.
+
 ## <a name="device-already-has-an-email-profile-installed"></a>Zařízení už má nainstalovaný e-mailový profil
 
-Pokud uživatelé vytvářet e-mailový profil, před registrací v Intune, e-mailový profil Intune se nemusí fungovat podle očekávání:
+Pokud uživatelé vytvářet e-mailový profil, před registrací v Intune nebo Office 365 MDM, e-mailový profil nasadit pomocí Intune nemusí fungovat podle očekávání:
 
 - **iOS**: Intune detekuje existující duplicitní profil e-mailu, do na základě názvu hostitele a e-mailové adresy. Uživatel vytvořil e-mailový profil zablokuje nasazení profilu Intune vytvořeného. To je běžný problém jako iOS uživatelům obvykle vytvořit e-mailový profil a potom se zaregistrují. Aplikace portál společnosti hlásí, že uživatel není kompatibilní se může vyzvat uživatele k odebrání e-mailový profil.
 
@@ -50,19 +59,16 @@ Zkontrolujte konfiguraci svého profilu EAS pro zařízení Samsung KNOX a zdroj
 
 ## <a name="unable-to-send-images-from--email-account"></a>Z e-mailového účtu nelze odesílat obrázky
 
-Platí pro Intune na portálu Azure classic.
-
 Uživatelé, kteří mají e-mailové účty se automaticky nakonfiguruje nelze odesílat obrázky ze svých zařízení. V tomto scénáři může dojít, pokud **povolit odesílání e-mailů z aplikací třetí strany** není povolená.
 
 ### <a name="intune-solution"></a>Řešení Intune
 
-1. Otevřete konzolu pro správu Microsoft Intune, vyberte **zásady** úloh > **zásady konfigurace**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **konfigurace zařízení** > **profily**.
+3. Vyberte e-mailový profil > **vlastnosti** > **nastavení**.
+4. Nastavte **povolit odesílání e-mailů z aplikací třetí strany** nastavení **povolit**.
 
-2. Vyberte e-mailový profil a zvolte **Upravit**.
-
-3. Vyberte **Povolit odesílání e-mailů z aplikací třetí strany.**
-
-### <a name="configuration-manager-integrated-with-intune-solution"></a>Configuration Manager integrovaný s řešením Intune
+### <a name="configuration-manager-hybrid"></a>Hybridní prostředí Configuration managera
 
 1. Otevřete konzolu nástroje Configuration Manager > **prostředky a Kompatibilita**.
 

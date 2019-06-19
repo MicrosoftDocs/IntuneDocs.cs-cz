@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 06/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aef2db158e0572c1eec056a1d6e33b4b97aea77a
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9d6366034af09acdbecdc0cb0e670f6d57766b35
+ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047022"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197518"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-run-as-a-kiosk-in-intune"></a>Windows Holographic for Business nastavení zařízení pro spuštění jako veřejný terminál v Intune
 
@@ -59,17 +59,17 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 
   - **Automatické přihlašování**: Nepodporované na Windows Holographic for Business.
   - **Místní uživatelské účty**: **Přidat** místním (zařízení) uživatelského účtu. Zadaný účet se používá pro přihlášení k veřejnému terminálu.
-  - **Azure AD uživateli nebo skupině (Windows 10 verze 1803 nebo novější)**: Vyžaduje přihlašovací údaje uživatele pro přihlášení k zařízení. Vyberte **Přidat** a zvolte uživatele nebo skupiny Azure AD ze seznamu. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
+  - **Azure AD uživateli nebo skupině (Windows 10 verze 1803 nebo novější)** : Vyžaduje přihlašovací údaje uživatele pro přihlášení k zařízení. Vyberte **Přidat** a zvolte uživatele nebo skupiny Azure AD ze seznamu. Můžete vybrat více uživatelů a skupin. Zvolením možnosti **Vybrat** uložte změny.
   - **Návštěvník HoloLens**: Návštěvník účet je účet guest, který nevyžaduje žádné přihlašovací údaje uživatele nebo ověřování, jak je popsáno v [sdílí koncepty režimu PC](https://docs.microsoft.com/windows/configuration/set-up-shared-or-guest-pc#shared-pc-mode-concepts).
 
 - **Aplikace**: Přidání aplikací pro spuštění na zařízení beznabídkového režimu. Nezapomeňte, že můžete přidat několik aplikací.
 
-  - **Přidání aplikací pro Store**: Vybrat existující aplikaci jste přidali pomocí [klientské aplikace](apps-add.md). Pokud nejsou zobrazené žádné aplikace, můžete je získat a [přidat do Intune](store-apps-windows.md).
+  - **Přidání aplikací pro Store**: Vybrat existující aplikaci jste přidali nebo nasazení do služby Intune jako [klientské aplikace](apps-add.md), včetně obchodních aplikací. Pokud nemáte žádné aplikace, uvedená, Intune podporuje mnoho [typy aplikací](apps-add.md) , kterou jste [do Intune přidat](store-apps-windows.md).
   - **Přidat aplikaci Win32**: Nepodporované na Windows Holographic for Business.
   - **Přidejte podle AUMID**: Tuto možnost použijte k přidání aplikací pro Windows doručené pošty. Zadejte tyto vlastnosti: 
 
     - **Název aplikace**: Povinný parametr. Zadejte název aplikace.
-    - **Uživatelské ID modelu aplikace (AUMID)**: Povinný parametr. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+    - **Uživatelské ID modelu aplikace (AUMID)** : Povinný parametr. Zadejte ID modelu uživatele aplikace (AUMID) aplikace pro Windows. Pokud chcete získat toto ID, přečtěte si článek o tom, [jak u nainstalované aplikace najít ID modelu uživatele aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
     - **Dlaždici velikost**: Povinný parametr. Zvolte velikost dlaždice aplikace – malá, střední, široká nebo velká.
 
 - **Veřejný terminál, nastavení prohlížeče**: Nepodporované na Windows Holographic for Business.
