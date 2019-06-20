@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 06/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c44f18d19172498f17f2a3f78ea47bad1d0f3fa7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
+ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048113"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263688"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -56,7 +56,7 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 - **Světlo dat pomocí NFC**: Zvolte **bloku** zabránit světla dat z aplikací pomocí technologie téměř Field Communication (NFC). **Není nakonfigurováno** umožňuje pomocí NFC ke sdílení dat mezi zařízeními.
 - **Funkce ladění**: Zvolte **povolit** můžou uživatelé používat funkce ladění na zařízení. **Není nakonfigurováno** uživatelům bránit v použití funkce ladění na zařízení.
 - **Úprava mikrofonu**: Zvolte **bloku** uživatelům zrušit ztlumení mikrofonu a upravit hlasitosti mikrofonu. **Není nakonfigurováno** umožňuje uživateli používat a hlasitosti mikrofonu v zařízení.
-- **E-maily pro ochranu před resetováním do továrního nastavení**: Zvolte **e-mailové adresy účtů Google**. Zadejte e-mailové adresy správců zařízení, které můžete odemknout zařízení, poté, co se vymaže. Ujistěte se, zda jste e-mailové adresy oddělujte středníkem, třeba `admin1@gmail.com;admin2@gmail.com`. Pokud není zadán e-mailu, kdokoli odemknutí zařízení po obnovení do továrního nastavení.
+- **E-maily pro ochranu před resetováním do továrního nastavení**: Zvolte **e-mailové adresy účtů Google**. Zadejte e-mailové adresy správců zařízení, které můžete odemknout zařízení, poté, co se vymaže. Ujistěte se, zda jste e-mailové adresy oddělujte středníkem, třeba `admin1@gmail.com;admin2@gmail.com`. Pokud není zadán e-mailu, kdokoli odemknutí zařízení po obnovení do továrního nastavení. Tyto e-maily se projeví pouze v případě běžel obnovení neuživatelských továrního nastavení, jako je například spuštění obnovení továrního nastavení pomocí nabídky obnovení.
 - **Sítě únikový poklop**: Zvolte **povolit** uživatelé zapnout funkci sítě řídicí šrafování. Pokud připojení k síti není proveden, jakmile se spustí zařízení, únikový poklop vyzve k dočasnému připojení k síti a aktualizovat zásady zařízení. Po uplatnění zásad se tato dočasná síť zapomene a zařízení pokračuje ve spouštění. Pokud tuto funkci připojení zařízení k síti:
   - V posledních zásadách není vhodné síťové.
   - Zařízení se spustí do aplikace v režimu uzamčení úloh.
@@ -100,6 +100,8 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
   >   - [Přiřazené ke skupině zařízení](apps-deploy.md) vytvořené pro vyhrazená zařízení
   > 
   > **Spravované domovskou obrazovku** aplikace nemusí být v profilu konfigurace, ale je potřeba přidat jako klientská aplikace. Když **spravované domovskou obrazovku** aplikace se přidá jako klientskou aplikaci, všechny ostatní aplikace, které přidáte do konfiguračního profilu se zobrazují jako ikony na **spravované domovskou obrazovku** aplikace. 
+  >
+  > Když používáte režim veřejný terminál s více aplikacemi spravované domovskou obrazovku, telefon, telefonní aplikace možná nebude fungovat správně. 
 
   - Zvolte **přidat**a vyberte ze seznamu aplikací.
 
@@ -253,7 +255,7 @@ Pomocí těchto nastavení můžete nakonfigurovat beznabídkový – vizuální
 - **Minimální délka hesla**: Zadejte minimální počet znaků hesla musí mít, z **4**-**16**.
 - **Maximální počet minut nečinnosti, než se pracovní profil zamkne**: Vyberte dobu před tím, než se zamkne pracovní profil. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet pokusů, které může uživatel zadat nesprávné heslo před vymazáním pracovní profil ze zařízení.
-- **Vypršení platnosti hesla (dny)**: Zadejte počet dnů, po kterém se musí změnit heslo koncového uživatele (z **1**-**255**).
+- **Vypršení platnosti hesla (dny)** : Zadejte počet dnů, po kterém se musí změnit heslo koncového uživatele (z **1**-**255**).
 - **Vyžadovaný typ hesla**: Vyberte typ hesla, které musí být nastavena na zařízení. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
@@ -274,7 +276,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 - **Minimální délka hesla**: Zadejte minimální počet znaků hesla musí mít, z **4**-**14**.
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Vyberte časový úsek, než se neaktivní zařízení automaticky zamkne.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet pokusů, které může uživatel zadat nesprávné heslo před vymazáním všech dat ze zařízení
-- **Vypršení platnosti hesla (dny)**: Zadejte počet dnů, po kterém se musí změnit heslo koncového uživatele (z **1**-**255**)
+- **Vypršení platnosti hesla (dny)** : Zadejte počet dnů, po kterém se musí změnit heslo koncového uživatele (z **1**-**255**)
 - **Vyžadovaný typ hesla**: Vyberte typ hesla, které musí být nastavena na zařízení. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**

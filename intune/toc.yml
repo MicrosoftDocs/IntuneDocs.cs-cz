@@ -50,6 +50,8 @@
       href: tutorial-use-autopilot-enroll-devices.md
     - name: Registrace zařízení se systémem iOS pomocí Programu registrace zařízení
       href: tutorial-use-device-enrollment-program-enroll-ios.md
+    - name: Konfigurace Slacku na používání Intune
+      href: tutorial-configure-slack-enterprise-grid.md
 - name: Koncepty
   items:
     - name: Co je správa zařízení?
@@ -662,10 +664,6 @@
               href: troubleshoot-policies-in-microsoft-intune.md
             - name: Problémy s e-mailovými profily a jejich řešení
               href: troubleshoot-email-profiles-in-microsoft-intune.md
-            - name: Řešení potíží s aktualizacemi softwaru
-              href: troubleshoot-software-updates-in-microsoft-intune.md
-            - name: Běžné chyby ochrany koncového bodu
-              href: troubleshoot-endpoint-protection-in-microsoft-intune.md
             - name: Řešení potíží s podmíněným přístupem
               href: troubleshoot-conditional-access.md
             - name: Řešení problémů s konektorem Exchange
@@ -968,6 +966,10 @@
               href: manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md
             - name: Řešení konfliktů zásad
               href: resolve-gpo-and-microsoft-intune-policy-conflicts.md
+            - name: Řešení potíží s aktualizacemi softwaru
+              href: troubleshoot-software-updates-in-microsoft-intune.md
+            - name: Běžné chyby ochrany koncového bodu
+              href: troubleshoot-endpoint-protection-in-microsoft-intune.md
     - name: Příručky k implementaci scénářů
       items:
         - name: Ochrana Exchange Online

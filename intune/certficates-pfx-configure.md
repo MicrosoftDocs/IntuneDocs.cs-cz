@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 06/19/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c1119a5681033574ec0a114442b122990da872bf
-ms.sourcegitcommit: cb76efd3db60a422a65478ebce83d3aea7b5eeed
+ms.openlocfilehash: 985ca70dba2a5a486947bd2de08e7f8934e90d75
+ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749816"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263716"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -254,12 +254,12 @@ Aktualizace certifikátu dva konektory jsou vydávány pravidelně. Při aktuali
   Změny v této verzi:  
   - Opravili jsme problém, kde nadále být přepracován stávající certifikáty PFX to způsobí, že konektoru zastaví zpracování nových žádostí. 
 
-### <a name="may-6-2019"></a>6. května 2019  
+### <a name="may-6-2019"></a>6\. května 2019  
 - **Konektor certifikátů PFX pro Microsoft Intune – verze 6.1905.0.402**  
   Změny v této verzi:  
   - Interval dotazování pro konektor je omezený ze 5 minut na 30 sekund.
  
-### <a name="april-2-2019"></a>2. dubna 2019  
+### <a name="april-2-2019"></a>2\. dubna 2019  
 - **Intune Certificate Connector – verze 6.1904.1.0**  
   Změny v této verzi:  
   - Opravili jsme problém, kde tento konektor se nemusí podařit registrovat do Intune po přihlášení ke službě connector pomocí účtu globálního správce.  
@@ -278,8 +278,6 @@ Aktualizace certifikátu dva konektory jsou vydávány pravidelně. Při aktuali
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
 
-[Používání certifikátů SCEP](certificates-scep-configure.md), nebo [vydávání certifikátů PKCS od společnosti Symantec PKI manager webová služba](certificates-symantec-configure.md).
+[Používání certifikátů SCEP](certificates-scep-configure.md), nebo [vydávání certifikátů PKCS od Digicert infrastruktury veřejných KLÍČŮ webové služby správce](certificates-digicert-configure.md).
 
-[NavigateIntune]: ./media/certificates-pfx-configure-profile-new.png "Přechod do Intune na webu Azure Portal a vytvoření nového profilu důvěryhodného certifikátu"
-[ProfileSettings]: ./media/certificates-pfx-configure-profile-fill.png "Vytvoření profilu a nahrání důvěryhodného certifikátu"
-[ConnectorDownload]: ./media/certificates-download-connector.png "Stažení konektoru certifikátu z portálu Azure Portal"  
+

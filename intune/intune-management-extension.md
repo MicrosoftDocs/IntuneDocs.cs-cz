@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/19/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f17bdf21db61616f88cef4d257fbcd28d941dae8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 967398516cdc2f727aa517fed3c8cf65810a38a1
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373470"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251230"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů prostředí PowerShell na zařízení s Windows 10 v Intune
 
@@ -45,7 +45,7 @@ Rozšíření správy Intune má následující požadavky. Jakmile jsou splněn
 
 - Zařízení se systémem Windows 10 verze 1607 nebo novější. Pokud je zařízení zaregistrované pomocí [hromadně automatický zápis](windows-bulk-enroll.md), zařízení musí používat Windows 10 verze 1703 nebo novější. Rozšíření správy Intune se nepodporuje ve Windows 10 v režimu S, protože režim S neumožňuje spouštění aplikací mimo úložiště. 
   
-- Zařízení připojená k Azure Active Directory (AD), včetně:
+- Zařízení připojená k Azure Active Directory (AD), včetně:  
   
   - Hybridní Azure připojené k AD: Zařízení připojené k Azure Active Directory (AD) a také připojené k místní služby Active Directory (AD). Zobrazit [naplánování vaší implementace připojení k hybridní službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan) pokyny.
 
@@ -55,13 +55,16 @@ Rozšíření správy Intune má následující požadavky. Jakmile jsou splněn
   
   - Zařízení ručně zaregistrovaná v Intune, což je při:
   
-    - Uživatel přihlásí k zařízení pomocí místní uživatelský účet a ručně připojí zařízení k Azure AD (a je povolená Automatická registrace do Intune v Azure AD).
+    - [Automatická registrace do Intune](quickstart-setup-auto-enrollment.md) je povolené ve službě Azure AD. Koncový uživatel přihlásí k zařízení pomocí místní uživatelský účet, ručně připojí zařízení k Azure AD a potom se přihlásí k zařízení pomocí svého účtu Azure AD.
     
-    Nebo
+    NEBO  
     
     - Uživatel přihlásí k zařízení pomocí svého účtu Azure AD a pak zaregistruje v Intune.
 
   - Spoluspravovaná zařízení, které používají Configuration Managerem a Intune. Zobrazit [co je společná správa](https://docs.microsoft.com/sccm/comanage/overview) pokyny.
+
+> [!TIP]
+> Ujistěte se, jsou zařízení [připojený](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) do služby Azure AD. Zařízení, která jsou jenom [zaregistrovaný](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) ve službě Azure AD nebude dostávat skripty.
 
 ## <a name="create-a-script-policy"></a>Vytvoření zásad skriptů 
 
@@ -87,7 +90,7 @@ Rozšíření správy Intune má následující požadavky. Jakmile jsou splněn
 5. Vyberte **OK** > **vytvořit** skript uložte.
 
 > [!NOTE]
-> Spuštění skriptu prostředí PowerShell v rámci oprávnění správce (ve výchozím nastavení) Pokud skript je nastavena na uživatelský kontext a koncový uživatel na zařízení má oprávnění správce.
+> Když koncový uživatel má oprávnění správce ve výchozím nastavení skriptů jsou nastaveny na uživatelský kontext, skript prostředí PowerShell spouští v části oprávnění správce.
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 
@@ -156,6 +159,7 @@ Chcete-li zjistit, zda je zařízení zaregistrované automaticky, můžete:
     > [!TIP]
     > **Rozšíření pro správu Microsoft Intune** je služba, která se spustí na zařízení, stejně jako jakoukoli jinou službu v aplikaci služeb (services.msc). Po restartování zařízení se tato služba může také restartovat a vyhledat všechny přiřazené skripty prostředí PowerShell ve službě Intune. Pokud **rozšíření pro správu Microsoft Intune** služby je nastaven na ručně a restartujte službu nemusí po restartování zařízení.
 
+- Ujistěte se, jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou pouze připojená k síti na pracovišti nebo organizace ([zaregistrovaný](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) ve službě Azure AD) neobdrží skripty.
 - Klient rozšíření správy Intune kontroluje jednou za hodinu pro všechny změny ve skriptu nebo zásady v Intune.
 - Ověřte rozšíření správy Intune se stáhne do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Na Surface Huby nebo Windows 10 nejsou v režimu S spouštěny skripty.

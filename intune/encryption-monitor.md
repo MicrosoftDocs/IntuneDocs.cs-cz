@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: d90bc17d01a76c9c566210edc3bdc265511fa16d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 43dc353da9aee9e2cdf7797f39746666a72d6880
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047826"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251192"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
@@ -95,7 +95,7 @@ V tomto podokně poskytuje následující podrobnosti:
 
 ## <a name="bitlocker-recovery-keys"></a>Obnovení klíče Bitlockeru
 Intune poskytuje přístup okno Azure AD pro nástroj BitLocker, můžete zobrazit ID klíče Bitlockeru a obnovovací klíče pro zařízení s Windows 10 z portálu Intune.  Být přístupné, zařízení musí mít jeho klíče mezi do služby Azure AD. 
-1. Přihlaste se k [Intune](https://aka.ms/intuneportal), přejděte na stránku **zařízení** a potom v části *spravovat*vyberte **všechna zařízení**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), přejděte na stránku **zařízení** a potom v části *spravovat*vyberte **všechna zařízení**.
 2. Vyberte zařízení, ze seznamu a pak v části *monitorování*vyberte **obnovovací klíče**.  
   
 Když klíče jsou k dispozici ve službě Azure AD, je k dispozici následující informace:

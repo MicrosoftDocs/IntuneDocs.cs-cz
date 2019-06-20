@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b5d3754c7dd3ead9236e223fd568e58e96fe9a1
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d25012790322491a9038f0bcf9349434d5a45b8d
+ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045153"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251081"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
 
@@ -80,7 +80,7 @@ Propojení služby Intune s Jamf Pro můžete:
 
 ## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf Pro
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=20909)a přejděte na **Microsoft Intune** > **dodržování předpisů zařízením** > **Správa partnerského zařízení**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)a přejděte na **Microsoft Intune** > **dodržování předpisů zařízením** > **Správa partnerského zařízení**.
 
 2. Povolte konektor dodržování předpisů pro Jamf vložením ID aplikace, který jste uložili během předchozího postupu do **Jamf Azure Active Directory App ID** pole.
 
@@ -88,7 +88,7 @@ Propojení služby Intune s Jamf Pro můžete:
 
 ## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurace integrace Microsoft Intune v Jamf Pro
 
-1. V Jamf Pro přejděte do části **Global Management (Globální správa)** > **Conditional Access (Podmíněný přístup)**. Klikněte na tlačítko **Edit** (Upravit) na kartě **Microsoft Intune Integration** (Integrace Microsoft Intune).
+1. V Jamf Pro přejděte do části **Global Management (Globální správa)**  > **Conditional Access (Podmíněný přístup)** . Klikněte na tlačítko **Edit** (Upravit) na kartě **Microsoft Intune Integration** (Integrace Microsoft Intune).
 
 2. Zaškrtněte políčko **Enable Microsoft Intune Integration** (Povolit integraci Microsoft Intune).
 
