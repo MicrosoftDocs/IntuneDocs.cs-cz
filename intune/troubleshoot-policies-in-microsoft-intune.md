@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 06/20/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,18 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1bed0fda1c19df181dacb36c832a2a4c94e61aff
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 9314617640d0bfd7f3a7b0cd0ba572e99ede53f9
+ms.sourcegitcommit: cd451ac487c7ace18ac9722a28b9facfba41f6d3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402666"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298401"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží s zásady a profily a v Intune
 
 Microsoft Intune obsahuje některé integrované funkce řešení potíží. Tyto funkce využijete k řešení potíží se zásadami dodržování předpisů a profily konfigurace ve vašem prostředí.
 
 Tento článek uvádí některé běžné postupy řešení potíží a popisuje některé problémy, se kterými se můžete setkat.
+
+## <a name="check-tenant-status"></a>Zkontrolujte stav tenanta.
+Zkontrolujte, [stav Tenanta](tenant-status.md) a potvrďte je předplatné aktivní. Můžete také zobrazit podrobnosti pro informační zpravodaje, které může mít vliv na vaše nasazení zásady nebo profil a aktivními incidenty.
 
 ## <a name="use-built-in-troubleshooting"></a>Použít integrované řešení potíží
 
@@ -113,6 +116,13 @@ Tento článek uvádí některé běžné postupy řešení potíží a popisuje
 > [!NOTE]
 > Když použijete dvě zásady s různými úrovněmi omezení na stejné zařízení nebo uživatele, uplatní se víc omezující zásada.
 
+## <a name="policy-troubleshooting-resources"></a>Materiály pro řešení problémů zásad
+
+- [Řešení potíží s iOS nebo Android zásady není nevztahují na zařízení](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (otevře jiný web společnosti Microsoft)
+- [Řešení potíží se selháním zásad Windows 10 Intune](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures/) (otevře blogu)
+- [Řešení potíží s vlastních nastavení zprostředkovatele kryptografických služeb pro Windows 10](https://support.microsoft.com/en-us/help/4055338/troubleshoot-csp-setting-windows-10-computer-intune) (otevře jiný web společnosti Microsoft)
+- [Zásady skupiny systému Windows 10 vs Intune MDM zásad](https://blogs.technet.microsoft.com/cbernier/2018/04/02/windows-10-group-policy-vs-intune-mdm-policy-who-wins/) (otevře jiný web společnosti Microsoft)
+
 ## <a name="alert-saving-of-access-rules-to-exchange-has-failed"></a>Upozornění: Uložení pravidel přístupu do systému Exchange se nezdařilo
 
 **Problém**: Obdržíte výstrahu **uložení pravidel přístupu do systému Exchange se nezdařilo** v konzole pro správu.
@@ -125,11 +135,13 @@ Je-li vytvořit zásady v pracovním prostoru zásady pro Exchange On-Premises (
 
 Zařízení Windows Phone neumožňují zmírnění zásad zabezpečení nastavených s použitím MDM nebo EAS, jakmile je nastavíte snížení zabezpečení. Například můžete nastavit **minimální počet znaků hesla** 8 a pak pokusíte snížit na 4. Víc omezující zásada platí pro zařízení.
 
+Zařízení s Windows 10 nemusí odstranit zásady zabezpečení při zrušení přiřazení zásad (Zastavit nasazení). Budete muset nechat přiřazené zásady a poté změňte nastavení zabezpečení zpět na výchozí hodnoty.
+
 V závislosti na platformě zařízení, pokud chcete zásadu změnit na méně zabezpečenou hodnotu, vám může být potřeba resetovat zásady zabezpečení.
 
-Například ve Windows otevřete panel **ovládacích tlačítek** potáhnutím prstu z pravého okraje plochy. Zvolte **nastavení** > **ovládací panely** > **uživatelské účty**. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
+Například ve Windows 8.1, na ploše prstem zprava a otevřete **ovládací tlačítka** panelu. Zvolte **nastavení** > **ovládací panely** > **uživatelské účty**. Na levé straně vyberte odkaz **Resetovat zásady zabezpečení** a zvolte **Resetovat zásady**.
 
-Jiná zařízení MDM, jako je například Android, iOS a Windows Phone 8.1, možná muset být vyřadit a znovu zaregistrovat použít méně omezující zásadu.
+Jiné platformy, jako je například Android, iOS a Windows Phone 8.1, možná muset být vyřadit a znovu zaregistrovat použít méně omezující zásadu.
 
 [Řešení potíží s registrací](troubleshoot-device-enrollment-in-intune.md) může být dobrým zdrojem informací je.
 
@@ -160,6 +172,7 @@ Pro počítače s Windows spravované pomocí softwarového klienta Intune, chyb
 K této chybě může dojít, pokud se místní systém nesynchronizuje více než pět minut. Pokud je čas v místním počítači synchronizovaný, zabezpečené transakce se nezdaří, protože časová razítka nejsou platné.
 
 Chcete-li vyřešit tento problém, nastavte místního systémového času co nejblíže k internetovým časem. Nebo ji nastavte na čas na řadičích domény v síti.
+
 
 ## <a name="next-steps"></a>Další postup
 
