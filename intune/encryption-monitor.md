@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 43dc353da9aee9e2cdf7797f39746666a72d6880
-ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
+ms.openlocfilehash: bccfc952202ed9db5bdc5f68bbbba57c61b37b13
+ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251192"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316938"
 ---
 # <a name="monitor-bitlocker-and-device-encryption"></a>Monitorování šifrování nástroje BitLocker a zařízení  
 Intune nabízí centralizované umístění k identifikaci stav šifrování zařízení s Windows 10 a pomáhá s přístupem důležité informace pro nástroj BitLocker z vašich zařízení, jak se nachází ve službě Azure Active Directory (Azure AD).  
@@ -51,7 +51,7 @@ Sestavě se zobrazuje **název zařízení** pro zařízení s Windows 10 a zák
   - **Není připraven**: Zařízení nemá možností úplné šifrování, ale stále podporuje šifrování. Zařízení třeba může být zašifrovaný ručně, uživatelem nebo prostřednictvím zásad skupiny, které můžete nastavit tak, aby šifrování bez TMP.
   - **Není k dispozici**: Není k dispozici dostatek informací ke klasifikaci toto zařízení.  
 
-- **Stav šifrování** – ať už zašifrovaný jednotky operačního systému.  
+- **Stav šifrování** – ať už zašifrovaný jednotky operačního systému. 
 
 
 ### <a name="device-encryption-status"></a>Stav šifrování zařízení
@@ -60,7 +60,7 @@ Pokud vyberete zařízení, Intune se zobrazí **stav šifrování zařízení**
 V tomto podokně poskytuje následující podrobnosti:  
 - **Název zařízení** – název zařízení prohlížíte.  
 - **Šifrování připravenosti** – vyhodnocení připravenosti zařízení pro podporu šifrování nástrojem BitLocker. Zařízení může mít stav šifrování *šifrované* i když je šifrování připravenost *není připraven*, protože postrádá čip TPM. (Viz šifrování připravenosti v předchozí části Další podrobnosti.)
-- **Stav šifrování** – ať už zašifrovaný jednotky operačního systému.  
+- **Stav šifrování** – ať už zašifrovaný jednotky operačního systému. Může trvat až 24 hodin pro Intune, chcete-li začít vytvářet zprávy o stavu šifrování zařízení nebo změní na stav.  
 - **Profily** – seznam *konfigurace zařízení* profily, které platí pro toto zařízení a zahrnuje následující typy profilů a nastavení:  
   - Typ profilu = *Endpoint protection*  
   - Nastavení > šifrování Windows > šifrovat zařízení = *vyžaduje*  
