@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/13/2019
+ms.date: 06/24/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd48e7c83af0a786e1b34f91c05e95a5d47f3d45
-ms.sourcegitcommit: 268f495de486718b99d9c1b60d4576030cafd17b
+ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
+ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141823"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344091"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -508,6 +508,7 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
 
     > [!NOTE]
     > U iOSu byste měli počítat s tím, že se v profilu správy zobrazí více kopií certifikátu, pokud nasadíte více profilů prostředků, které používají stejný profil certifikátu.
+- Pokud používáte spolusprávy pro Intune a Configuration Manager v Configuration Manageru s[et posuvník úlohy](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pro *zásady přístupu k prostředku* k **Intune** nebo  **Pilotní Intune**. Toto nastavení umožňuje klientů s Windows 10 spustit proces žádosti o certifikát.  
 
 Informace o přiřazení profilů najdete v článku o [přiřazení profilů zařízení](device-profile-assign.md).
 
