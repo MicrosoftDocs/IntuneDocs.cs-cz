@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0a83526a2e9333c0e6a131e59cee29a4a76fffa
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 28c3da6d2e3390d20aecc3673cac38e8424ef57a
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041195"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389310"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -99,8 +99,8 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
     
     - **Skrýt možnosti změnu účtu (vyžaduje Windows 10, verze 1809 nebo novější)** : Zvolte **skrýt** zabránit změnit možnosti účet ze zobrazení na stránkách společnosti přihlašovací jméno a doména chyby. Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ uživatelského účtu**: Zvolte typ účtu uživatele (**správce** nebo **standardní** uživatele).
-    - **Povolit šetrný OOBE**: Zvolte **Ano** povolit podporu šetrnější.
-    - **Použít šablonu název zařízení**: Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
+    - **Povolit prázdný rukavice OOBE** (vyžaduje Windows 10, verze 1903 nebo novější; [další požadavky na fyzické](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove#prerequisites)): Zvolte **Ano** povolit podporu šetrnější.
+    - **Použít šablonu název zařízení** (vyžaduje Windows 10, verze 1809 nebo novější): Zvolte **Ano** k vytvoření šablony pro použití při pojmenování zařízení během registrace. Názvy musí být maximálně 15 znaků dlouhé a mohou obsahovat písmena, číslice a pomlčky. Nemohou být ale tvořené jen číslicemi. Pomocí [makra %SERIAL%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp) můžete přidat sériové číslo specifické pro určitý hardware. Nebo můžete použít [makro %RAND:x%](https://docs.microsoft.com/windows/client-management/mdm/accounts-csp), které přidá náhodný řetězec číslic (x značí počet přidaných číslic). 
     - **Jazyk (oblast)** \*: Zvolte jazyk, který chcete použít pro dané zařízení. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
     - **Automaticky nakonfigurovat klávesnici**\*: Pokud **jazyk (oblast)** je vybraná, zvolte **Ano** přeskočit stránka pro výběr klávesnice. Tato možnost je k dispozici, jen pokud jste si pro **Režim nasazení** zvolili **Nasazení sebou samým**.
 8. Vyberte **Další**.

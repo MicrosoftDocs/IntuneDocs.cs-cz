@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 06/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,18 +15,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a5918dc0574033020689b267418fb6283cd686db
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 97d656db3e828ef3377b927395a283fe995bb8a4
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373902"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389286"
 ---
 # <a name="use-custom-settings-for-windows-phone-81-devices-in-intune"></a>Použití vlastních nastavení pro zařízení s Windows Phone 8.1 v Intune
 
 V Microsoft Intune můžete vlastní profily použít k přidání nebo vytvoření vlastního nastavení u zařízení s Windows Phone 8.1. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
-Vlastní profily zařízení s Windows Phone 8.1 používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení.
+Vlastní profily zařízení s Windows Phone 8.1 používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) ke konfiguraci různých funkcí. Tato nastavení obvykle používají výrobci mobilních zařízení k řízení funkcí na zařízení. [Dokumentace k Windows Phone 8.1 MDM protokolu](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-phone/dn499787(v=technet.10)) uvádí nastavení.
 
 V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s Windows Phone 8.1. 
 
@@ -62,6 +62,16 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s W
 
 5. Vyberte **OK** uložte provedené změny. Podle potřeby přidejte další nastavení.
 6. Až to budete mít, zvolte **OK** > **Vytvořit** a vytvořte profil Intune. Hotový profil se zobrazí v seznamu **Konfigurace zařízení – Profily**.
+
+## <a name="example"></a>Příklad
+
+V následujícím příkladu se zařízení s Windows 8.1 phone bránit v cestách mimo oblasti pokrytí dopravce změna mobilní sítě.
+
+- **Název**: Povolit mobilní datový Roaming
+- **Popis**: Povolí nebo zakáže mobilní datový roaming
+- **OMA-URI** (rozlišuje velikost písmen): ./Vendor/MSFT/PolicyManager/My/Connectivity/AllowCellularDataRoaming
+- **Datový typ**: Integer
+- **Hodnota**: 0
 
 ## <a name="next-steps"></a>Další postup
 

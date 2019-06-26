@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 030467009e0fed8716a1aa622474188352c0e0b0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: cb9d1f52ccb147dc9a412f3cb7b601e3b18f214a
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050358"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389324"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -32,7 +32,7 @@ Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít I
 Úspěšně konfigurovat vaše [hybridní Azure zařízení připojených k doméně AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Nezapomeňte [ověřte registraci vašeho zařízení]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) pomocí rutiny Get-MsolDevice.
 
 Zařízení, která chcete zaregistrovat, musí:
-- Používat Windows 10 s [aktualizací z října 2018](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)
+- Běžet v1809 Windows 10 nebo vyšší.
 - Mít přístup k internetu
 - Máte přístup ke službě Active Directory (připojení k síti VPN v tuto chvíli nepodporuje).
 - Této oblasti podstupovali prostředí out-of-box (OOBE).
@@ -44,7 +44,7 @@ Zařízení, která chcete zaregistrovat, musí:
 
    ![Na webu Azure portal](./media/auto-enroll-azure-main.png)
 
-1. Vyberte **Mobilita (MDM a MAM)**.
+1. Vyberte **Mobilita (MDM a MAM)** .
 
    ![V podokně Azure Active Directory](./media/auto-enroll-mdm.png)
 
@@ -68,7 +68,7 @@ Organizační jednotky, který má oprávnění k vytvoření počítače se sho
 - Organizační jednotky, který je zadán v profilu připojení k doméně.
 - Pokud je vybrán žádný profil, název domény počítače pro vaši doménu.
 
-1. Otevřít **Active Directory Users and Computers (DSA.msc)**.
+1. Otevřít **Active Directory Users and Computers (DSA.msc)** .
 
 1. Klikněte pravým tlačítkem na organizační jednotku, která použijete k vytvoření Azure v hybridním prostředí počítače připojené k doméně AD a pak vyberte **delegovat řízení**.
 
@@ -106,7 +106,7 @@ Organizační jednotky, který má oprávnění k vytvoření počítače se sho
 Konektor Intune pro službu Active Directory musí být nainstalován na počítači, na kterém běží Windows Server 2016 nebo novější. Počítač musí mít také přístup k Internetu a služby Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme vám však nainstalovat konektor na serveru, na kterém neběží všech dalších konektorů Intune.
 
 1. Ujistěte se, že máte nainstalovaný a nakonfigurovaný podle popisu v jazykové sady [konektor Intune (Preview) jazykové požadavky](https://docs.microsoft.com/windows/deployment/windows-autopilot/intune-connector).
-2. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **konektor Intune pro Active Directory () Ve verzi Preview)** > **přidání konektoru**. 
+2. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **konektor Intune pro Active Directory () Ve verzi Preview)**  > **přidání konektoru**. 
 3. Postupujte podle pokynů ke stažení konektoru.
 4. Otevřete stažený soubor Instalační program konektoru *ODJConnectorBootstrapper.exe*, a nainstalujte konektor.
 5. Na konci instalace zaškrtněte **konfigurovat**.
@@ -176,7 +176,7 @@ Vaše Autopilot zařízení po *zaregistrovaná*, zobrazují se v čtyři místa
 - **Azure AD všechna zařízení** podokně ve službě Azure Active Directory na webu Azure Portal. Vyberte **zařízení** > **všechna zařízení**.
 - **Všechna zařízení** podokno v Intune na portálu Azure portal. Vyberte **zařízení** > **všechna zařízení**.
 
-Po registraci vašeho zařízení Autopilot jejich názvy se název hostitele zařízení. Ve výchozím nastavení, název hostitele začíná *DESKTOP -*.
+Po registraci vašeho zařízení Autopilot jejich názvy se název hostitele zařízení. Ve výchozím nastavení, název hostitele začíná *DESKTOP -* .
 
 
 ## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení Autopilotu
@@ -185,7 +185,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **profily nasazení**  >  **Vytvořit profil**.
 1. Zadejte **název** a volitelně **popis**.
 1. Pro **režim nasazení**vyberte **řízené uživatele**.
-1. V **připojit k Azure AD jako** vyberte **připojený hybridní službě Azure AD (Preview)**.
+1. V **připojit k Azure AD jako** vyberte **připojený hybridní službě Azure AD (Preview)** .
 1. Vyberte **Out-of-box zapnutí**, nakonfigurujte možnosti podle potřeby a potom vyberte **Uložit**.
 1. Volbou **Vytvořit** vytvořte profil. 
 1. V podokně profilů zvolte **přiřazení**.
@@ -209,7 +209,7 @@ Trvá přibližně 15 minut pro stav profilu zařízení změnit z *Nepřiřazen
    - **Název**: Zadejte popisný název pro nový profil.
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: Vyberte **Windows 10 a novější**.
-   - **Typ profilu**: Vyberte **připojení k doméně (Preview)**.
+   - **Typ profilu**: Vyberte **připojení k doméně (Preview)** .
 1. Vyberte **nastavení**a potom zadejte **předpona názvu počítače**, **název domény**a (volitelně) **organizační jednotka** v [Formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Vyberte **OK** > **vytvořit**.  
     Profil se vytvoří a zobrazí v seznamu.

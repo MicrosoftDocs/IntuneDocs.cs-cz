@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: ''
-ms.openlocfilehash: 55e758c8a7eddc1a5500464754448d26680ec772
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: eda0d77fc5cdb11fa4bc5b21f48ceb7616ecfb15
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819578"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389248"
 ---
 # <a name="intune-enrollment-methods-for-windows-devices"></a>Metody registrace v Intune pro zařízení s Windows
 
@@ -51,6 +51,7 @@ Správci můžou nastavit následující metody registrace, které nevyžadují 
 - [Společná Správa nástroje Configuration Manager](https://docs.microsoft.com/sccm/comanage/overview) umožňuje správcům zaregistrovat svá zařízení existující spravované Configuration Manageru do Intune, abyste získali duální výhody Intune a Configuration Managerem. 
 - [Správce registrace zařízení](device-enrollment-manager-enroll.md) (zařízení DEM) je speciální účet. Účty správce registrace zařízení mají oprávnění, která umožní oprávněným uživatelům registrovat a spravovat více zařízení vlastněných společností. Tyto typy zařízení se hodí například pro aplikace POS a jednoúčelové aplikace, ale nehodí se pro uživatele, kteří potřebují přístup k e-mailu nebo k prostředkům společnosti. Tato metoda nepovoluje použití funkce, jako je podmíněný přístup. 
 - [Hromadná registrace](windows-bulk-enroll.md) umožňuje autorizovaným uživatelům k Azure Active Directory a Intune připojit velký počet nových zařízení vlastněných společností. Vytvořte zřizovací balíček s aplikací Windows Configuration designeru (WCD). Potom přes port USB média během počáteční prvního Windows prostředí nebo z existujících Windows PC, nainstalovat zřizovací balíček automaticky registrovat zařízení do Intune. Tato metoda nepovoluje použití podmíněného přístupu. 
+- [Registraci zařízení s Windows IoT Core](https://docs.microsoft.com/en-us/windows/iot-core/manage-your-device/intunedeviceenrollment) provádí na řídicím panelu Windows IoT Core Příprava zařízení a pak vytvořte zřizovací balíček pomocí Windows Configuration Designer. Potom pomocí karty SD média během počáteční spouštění, nainstaluje zřizovací balíček automaticky registrovat zařízení do Intune.
 
 ## <a name="next-steps"></a>Další postup
 

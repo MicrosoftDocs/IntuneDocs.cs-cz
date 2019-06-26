@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62555e9b5a868b93dda08a8c784221eff570bb89
-ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
+ms.openlocfilehash: 756fafc02a6d64b1495a838ab8eee4130ee77361
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263728"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389342"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,7 +53,7 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 <!-- ########################## -->
 
-## <a name="week-of-june-10-2019"></a>Týden od 10. června 2019 
+## <a name="week-of-june-17-2019"></a>Týden od června 17. května 2019   
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -63,8 +63,11 @@ Přidali jsme nové funkce do aplikace pro Microsoft Intune (preview) pro Androi
 * Umožňuje zobrazit a spravovat zařízení, která jste zaregistrovali prostřednictvím aplikace portál společnosti Intune nebo Microsoft Intune.    
 * Požádejte o podporu jejich organizace.    
 * Posílat připomínky do Microsoftu.    
-* Zobrazit podmínky a ujednání, pokud ve své organizaci nastavení.    
+* Zobrazit podmínky a ujednání, pokud ve své organizaci nastavení.  
 
+## <a name="week-of-june-10-2019"></a>Týden od 10. června 2019 
+
+### <a name="app-management"></a>Správa aplikací  
 
 #### <a name="new-sample-apps-showing-intune-sdk-integration-available-on-github----2653471---"></a>Nové vzorové aplikace zobrazuje dostupné integraci sady Intune SDK na Githubu <!-- 2653471 -->
 Složce msintuneappsdk účet GitHub bylo přidáno nové ukázkové aplikace pro iOS (Swift), Android, Xamarin.iOS, Xamarin.Android a Xamarin Forms. Tyto aplikace jsou určené doplnění stávající dokumentaci a ukázky toho, jak integrovat do mobilních aplikací Intune APP SDK. Pokud jste vývojář aplikací, které potřebuje další doprovodné materiály sady Intune SDK, přečtěte si téma následující propojené ukázky:
