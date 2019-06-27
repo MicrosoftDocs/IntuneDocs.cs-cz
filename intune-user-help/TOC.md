@@ -10,7 +10,7 @@
 
 ## Použití zařízení s Androidem
 ### [Proč registrovat vaše zařízení s Androidem](why-enroll-android-device.md)
-### Registrace zařízení
+### Registrovat zařízení
 #### [Registrace zařízení s Androidem](enroll-device-android-company-portal.md)  
 #### [Registrace zařízení s pracovním profilem Androidu](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
 #### [Registrace pomocí aplikace Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
@@ -157,6 +157,7 @@
 ### [Resetování zařízení](reset-device-cp-app.md)
 
 ## [Použití webu Portál společnosti Intune](using-the-intune-company-portal-website.md)
+### [Správa aplikací](manage-apps-cpweb.md)  
 ### [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)  
 ### [Přejmenování zařízení](rename-your-device-cpwebsite.md)  
 ### [Odebrání zařízení](remove-your-device-cpwebsite.md)  

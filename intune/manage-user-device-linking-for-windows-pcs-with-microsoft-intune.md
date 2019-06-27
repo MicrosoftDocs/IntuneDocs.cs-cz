@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cad83daa88351749d60d0b1c72935ea47f9a14ce
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046944"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402903"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Správa propojení uživatelů se zařízeními u počítačů s Windows
 
@@ -31,6 +31,8 @@ ms.locfileid: "66046944"
 Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. 
 
 Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s počítačem. Uživatele můžete propojit s několika počítači, ale každý počítač může být propojený jenom s jedním uživatelem. Uživatelé se automaticky propojí se všemi počítači, které si přes portál společnosti zaregistrovali v Intune.
+
+Další informace o primárním uživateli zařízení, najdete v části [najít primární uživatel](find-primary-user.md).
 
 Propojení uživatele s počítačem:
 

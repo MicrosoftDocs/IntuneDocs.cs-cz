@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57a14e1e3c4caea570667096fec71cecf2d88ddf
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ba1d7669e80fd91398f41c57ca2d27ce78a06041
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045178"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403794"
 ---
 # <a name="use-role-based-access-control-rbac-and-scope-tags-for-distributed-it"></a>Použití řízení přístupu na základě role (RBAC) a značky oboru pro distribuované IT
 
@@ -38,12 +38,14 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-1. V Intune, zvolte **role** > **obor (značky)** > **vytvořit**.
+1. V Intune, zvolte **role** > **obor (značky)**  > **vytvořit**.
 
     ![Snímek obrazovky vytvořit značku oboru.](./media/scope-tags/create-scope-tag.png)
 
-2. Zadejte **Název** a **Popis**.
-3. Zvolte **Vytvořit**.
+3. Pokud chcete, aby všechna zařízení v konkrétní skupiny, zvolte **přiřadit značky oboru pro všechna zařízení ve vybraných skupinách**.
+    1. V **vybrat skupiny, které chcete zahrnout** zvolte skupiny obsahující zařízení, která chcete přiřadit tuto značku oboru.
+    2. Zvolte **Vybrat**.
+4. Zvolte **Vytvořit**.
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
@@ -52,11 +54,11 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
     ![Snímek obrazovky přiřazení k roli oboru.](./media/scope-tags/assign-scope-to-role.png)
 
 2. Poskytují **název přiřazení** a **popis**.
-3. Zvolte **členy (skupiny)** > **přidat** > vyberte skupiny, které chcete, aby jako součást tohoto přiřazení > **vyberte**  >   **OK**. mUsers do této skupiny mají oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
+3. Zvolte **členy (skupiny)**  > **přidat** > vyberte skupiny, které chcete, aby jako součást tohoto přiřazení > **vyberte**  >   **OK**. mUsers do této skupiny mají oprávnění ke správě zásad a profilů pro uživatele nebo zařízení v rozsah (skupiny).
 
     ![Snímek obrazovky vyberte člena skupiny.](./media/scope-tags/select-member-groups.png)
 
-4. Pokud chcete ke správě uživatelů a zařízení v konkrétní sadu skupin, zvolte **rozsah (skupiny)** > **vybrané skupiny** > **vybrat skupiny, které chcete zahrnout**> zvolte skupiny > **vyberte** > **OK**. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny).
+4. Pokud chcete ke správě uživatelů a zařízení v konkrétní sadu skupin, zvolte **rozsah (skupiny)**  > **vybrané skupiny** > **vybrat skupiny, které chcete zahrnout**> zvolte skupiny > **vyberte** > **OK**. Všechny uživatele nebo zařízení v této skupině mají jejich profily a zásady, které spravuje správce ve členy (skupiny).
 
     ![Snímek obrazovky vyberte oboru skupiny.](./media/scope-tags/select-scope-groups.png)
 
@@ -64,7 +66,7 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 
     ![Snímek obrazovky s další možnosti pro výběr oboru skupiny.](./media/scope-tags/scope-group-other-options.png)
     
-5. Zvolte **obor (značky)** > **přidat** > zvolte značky, které chcete přidat do této role > **vyberte** > **OK**. Uživatelé v členy (skupiny) bude mít přístup k zásady a profily, které mají stejnou značku oboru.
+5. Zvolte **obor (značky)**  > **přidat** > zvolte značky, které chcete přidat do této role > **vyberte** > **OK**. Uživatelé v členy (skupiny) bude mít přístup k zásady a profily, které mají stejnou značku oboru.
 
     ![Snímek obrazovky s tagy vyberte obor.](./media/scope-tags/select-scope-tags.png)
 
@@ -75,7 +77,7 @@ Například Řekněme, že správce regionální pobočky Seattle má přiřazen
 
     ![Snímek obrazovky vyberte profil.](./media/scope-tags/choose-profile.png)
 
-2. Zvolte **vlastnosti** > **obor (značky)** > **přidat**.
+2. Zvolte **vlastnosti** > **obor (značky)**  > **přidat**.
 
     ![Snímek obrazovky přidání značky oboru.](./media/scope-tags/add-scope-tags.png)
 

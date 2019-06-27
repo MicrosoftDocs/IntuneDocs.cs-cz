@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d229972c238756598694d2e3463f22290924ccc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 345437b728df50cded2dcbd230cb360eef98a33e
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045482"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407148"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -40,19 +40,31 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 * Stáhněte soubory pro sadu Intune App SDK pro iOS z [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-## <a name="whats-in-the-sdk"></a>Co je v sadě SDK
+## <a name="whats-in-the-sdk-repository"></a>Co je v úložišti sady SDK
 
-Intune App SDK pro iOS zahrnuje statickou knihovnu, soubory prostředků, záhlaví API, seznam vlastností (plist) s nastavením pro ladění a nástroj konfigurátoru. U většiny dodržovaných zásad můžou klientské aplikace jednoduše obsahovat soubory prostředků a statické odkazy na knihovny. Pokročilé funkce Intune APP se vynucují prostřednictvím rozhraní API.
+Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahovat žádný kód Swift, nebo jsou kompilovány verze xcode před 10.2: 
 
-Tato příručka se věnuje tomu, jak používat následující komponenty sady Intune App SDK pro iOS:
+* **IntuneMAM.framework**: Architektura sady Intune App SDK. Doporučuje se, připojte tento model k aplikaci nebo rozšíření povolit správu aplikací klienta Intune. Někteří vývojáři ale možná dáte přednost přinese zlepšení výkonu statická knihovna (viz níže).
 
-* **libIntuneMAM.a**: Statická knihovna Intune App SDK. Pokud aplikace nepoužívá rozšíření, přidejte do svého projektu odkaz na tuto knihovnu, abyste pro svou aplikaci povolili správu klientských aplikací v Intune.
+* **libIntuneMAM.a**: Statická knihovna Intune App SDK. Vývojáři můžou rozhodnout pro propojení se statickou knihovnou namísto rozhraní framework. Vzhledem k tomu statických knihoven directlty vložený do aplikace a rozšíření binární v okamžiku sestavení, existují některé výhody spuštění včasných odletech použití statické knihovny. Integrace do vaší aplikace je ale složitější. Pokud vaše aplikace obsahuje všechna rozšíření, propojení se statickou knihovnou do aplikace a rozšíření dojde větší velikost sady prostředků aplikace, jako statická knihovna bude vložena do jednotlivých binární rozšíření/aplikace. Při použití rozhraní framework, aplikací a rozšíření můžou sdílet stejnou sadu Intune SDK binární soubor, výsledkem jsou menší velikost aplikace.
 
-* **IntuneMAM.framework**: Architektura sady Intune App SDK. Přidejte do svého projektu odkaz na toto rozhraní, abyste pro svou aplikaci povolili správu klientských aplikací v Intune. Použijte ho místo statické knihovny v případě, že aplikace používá rozšíření, aby se v projektu nevytvořilo několik kopií statické knihovny.
+* **IntuneMAMResources.bundle**: Balíček prostředků obsahující prostředky, které SDK využívá. Sada prostředků se vyžaduje jenom pro aplikace, které integrují statická knihovna (libIntuneMAM.a).
 
-* **IntuneMAMResources.bundle**: Balíček prostředků obsahující prostředky, které SDK spoléhá na.
 
-* **Záhlaví**: Zpřístupňuje rozhraní API sady Intune App SDK. Pokud použijete rozhraní API, musíte zahrnout soubor hlaviček, který toto rozhraní API obsahuje. Následující soubory hlaviček obsahují rozhraní API, datové typy a protokoly, které Intune App SDK zpřístupňuje vývojářům:
+Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahují kód Swift a byly kompilovány s Xcode 10.2 +: 
+
+* **IntuneMAMSwift.framework**: Rozhraní Intune App SDK Swift. Toto rozhraní obsahuje všechna záhlaví pro rozhraní API, která bude volat aplikaci. Připojte tento model k aplikaci nebo rozšíření povolit správu aplikací klienta Intune. 
+
+* **IntuneMAMSwiftStub.framework**: Intune App SDK Swift se zakázaným inzerováním framework. Toto je požadovaná závislost IntuneMAMSwift.framework, která propojují aplikace/rozšíření.
+
+
+Následující soubory jsou relevantní pro všechny aplikace a rozšíření:
+
+* **IntuneMAMConfigurator**: Nástroj, který se používá ke konfiguraci aplikace nebo souboru Info.plist rozšíření s minimální požadované změny pro správu Intune. V závislosti na funkci vaší aplikace nebo rozšíření budete muset udělat další ruční změny do souboru Info.plist.
+
+* **Záhlaví**: Poskytuje veřejná rozhraní API sady Intune App SDK. Tyto hlavičky jsou součástí IntuneMAM/IntuneMAMSwift rozhraní, takže není potřeba ručně přidat záhlaví do svého projektu vývojáři, kteří využívají některou z rozhraní. Vývojáři, chcete propojit s statická knihovna (libIntuneMAM.a) bude nutné ručně obsahovat tato záhlaví ve svém projektu. 
+
+Následující soubory hlaviček obsahují rozhraní API, datové typy a protokoly, které Intune App SDK zpřístupňuje vývojářům:
 
     * IntuneMAMAppConfig.h
     * IntuneMAMAppConfigManager.h
@@ -82,16 +94,18 @@ Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti spr
 
 Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
-1. **Možnost 1 (doporučeno)**: Odkaz `IntuneMAM.framework` do projektu. Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
+1. **Možnost 1 – rozhraní (doporučeno)** : Pokud používáte Xcode 10.2 + a vaše aplikace a rozšíření obsahuje kód Swift, odkaz `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do cíle: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` k **vložených binárních souborů** seznam cíle projektu.
+
+V opačném případě propojit `IntuneMAM.framework` do cíle: Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
    > [!NOTE]
    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#submit-your-app-to-the-app-store), kde najdete další podrobnosti.
 
-   **Možnost 2**: Propojit `libIntuneMAM.a` knihovny. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
+   **Možnost 2 - statickou knihovnu**: Tato možnost dostupná jenom pro aplikace/rozšíření, které obsahovat žádný kód Swift, nebo byly vytvořeny s Xcode < 10.2. Propojit `libIntuneMAM.a` knihovny. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
-    ![Intune App SDK iOS: propojené architektury a knihovny](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
+    ![Intune App SDK iOS: linked frameworks and libraries](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
-    Přidejte `-force_load {PATH_TO_LIB}/libIntuneMAM.a` do následujících nastavení a nahraďte přitom `{PATH_TO_LIB}` umístěním Intune App SDK:
+    Add `-force_load {PATH_TO_LIB}/libIntuneMAM.a` to either of the following, replacing `{PATH_TO_LIB}` with the Intune App SDK location:
    * nastavení konfigurace buildu `OTHER_LDFLAGS` v projektu
    * nastavení **Další příznaky linkeru** uživatelského rozhraní Xcode
 
@@ -101,8 +115,21 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
      Přidejte do projektu sadu prostředků `IntuneMAMResources.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
 
      ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
+     
+2. Pokud je potřeba volat rozhraní API sady Intune z Swift, musíte importovat aplikaci/rozšíření požadované záhlaví sady Intune SDK prostřednictvím hlavičku přemostění jazyka Objective-C. Pokud vaše aplikace a rozšíření již neobsahuje hlavičku přemostění jazyka Objective-C, můžete určit jednu prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo uživatelského rozhraní Xcode **hlavičky přemostění jazyka Objective-C** pole. Přemostění Datacenter záhlaví by měl vypadat přibližně takto:
 
-2. Do projektu přidejte tyto modely iOS:  
+   ```objc
+      #import <IntuneMAMSwift/IntuneMAM.h>
+   ```
+   
+   To zpřístupní všechny sady Intune SDK pro rozhraní API ve všech Swift zdrojových souborech aplikace a rozšíření. 
+   
+    > [!NOTE]
+    > * Můžete pouze most konkrétní sadu Intune SDK také hlavičky pro Swift, nikoli souboru IntuneMAM.h zahrnující všechny
+    > * V závislosti na tom, jaké framework/statické knihovny jste integrovali cesta k souboru záhlaví se může lišit.
+    > * Zpřístupňuje rozhraní API sady Intune SDK ve Swiftu přes příkaz importu modulu (ex: import IntuneMAMSwift) se momentálně nepodporuje. Použití hlavičku přemostění jazyka Objective-C je doporučený postup.
+    
+3. Do projektu přidejte tyto modely iOS:  
     * MessageUI.framework  
     * Security.framework  
     * MobileCoreServices.framework  
@@ -115,7 +142,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     * QuartzCore.framework  
     * WebKit.framework
 
-3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
+4. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
    > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to ověřit tak, že soubor .mobileprovision otevřete v textovém editoru, najdete **keychain-access-groups** a ověříte, že obsahuje zástupný znak. Příklad:
@@ -126,7 +153,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    >  </array>
    >  ```
 
-4. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, je třeba dodržovat následující postup:
+5. Po povolení sdílení řetězce klíčů vytvořte následujícím postupem samostatnou přístupovou skupinu, do které sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, je třeba dodržovat následující postup:
 
     1. Pokud vaše mobilní aplikace nemá žádné libovolné řetězce klíčů přístup definované skupiny aplikací, přidejte tak aplikaci ID jako sady **první** skupiny.
     
@@ -144,11 +171,11 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
         > [!NOTE]
         > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS. Pokud vaše aplikace dříve neměla soubor nároků, při povolení sdílení řetězců klíčů (krok 3) by ho měl pro ni Xcode vygenerovat. Ujistěte se, že ID sady prostředků aplikace je první položka v seznamu.
 
-5. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
+6. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
 
-6. Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že [klíč NSFaceIDUsageDescription v souboru Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
+7. Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že [klíč NSFaceIDUsageDescription v souboru Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
 
-7. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Tento nástroj má tři parametry:
+8. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Tento nástroj má tři parametry:
 
    |Vlastnost|Jak ji použít|
    |---------------|--------------------------------|

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/14/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 78d6b8faf5c5c3ef41f3eb5007d550c869491f60
-ms.sourcegitcommit: 268f495de486718b99d9c1b60d4576030cafd17b
+ms.openlocfilehash: c6065fda71688909dd7fcbc6ef1909e3d3ab36b8
+ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141807"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67407118"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune  
 
@@ -56,6 +56,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 - [Pradeo](#configure-pradeo-apps)
 - [Better Mobile](#configure-better-mobile-apps)
 - [Sophos Mobile](#configure-sophos-apps)
+- [Wandera](#configure-wandera-apps)
 
 ### <a name="configure-lookout-for-work-apps"></a>Konfigurace aplikací Lookout for Work  
 - **Android**  
@@ -129,6 +130,14 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
 - **iOS**
   - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). Použijte tento [URL obchodu s aplikacemi ActiveShield](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) na **krok 11** pro **adresu URL obchodu**.
 
+### <a name="configure-wandera-apps"></a>Konfigurace Wandera aplikací  
+ 
+- **Android**
+  - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). Použijte tento [URL obchodu s aplikacemi Wandera Mobile](https://play.google.com/store/apps/details?id=com.wandera.android) na **kroku 7**. Pro **minimální operační systém**vyberte **Android 5.0**.
+
+- **iOS**
+  - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](https://docs.microsoft.com/intune/store-apps-ios). Použijte tento [URL obchodu s aplikacemi Wandera Mobile](https://itunes.apple.com/app/wandera/id605469330) na **krok 11** pro **adresu URL obchodu**.
+
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurace aplikací MTD k zásadám konfigurace aplikace pro iOS  
 
 ### <a name="lookout-for-work-app-configuration-policy"></a>Zásady konfigurace aplikací pro Lookout for Work  
@@ -196,6 +205,27 @@ Pradeo nepodporuje zásady Konfigurace aplikace pro iOS.  Místo toho pokud chce
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>Zásady Konfigurace Sophos mobilních aplikací  
 Jak je popsáno v vytvořte zásady Konfigurace aplikací pro iOS [pomocí zásad Konfigurace aplikace pro iOS](app-configuration-policies-use-ios.md) článku.
+
+### <a name="wandera-app-configuration-policy"></a>Zásady Konfigurace aplikací Wandera  
+Přečtěte si pokyny pro [pomocí zásad Konfigurace aplikací Microsoft Intune pro iOS](app-configuration-policies-use-ios.md) přidání zásad Konfigurace aplikace pro iOS Wandera.
+- Na **kroku 8**, použijte možnost **zadat XML data**. Přihlaste se k této možnosti taky PŘEMÝŠLÍTE Wandera portál a přejděte do **nastavení** > **EMM Integration** > **aplikací bez vyžádání**. Vyberte **Intune**a zkopírujte obsah níže a vložte ho do těla zásad konfigurace.  
+
+  ```
+  <dict><key>secretKey</key>
+  <string>SeeRADAR</string>
+  <key>apiKey</key>
+  <string> SeeRADAR </string>
+  <key>customerId</key>
+  <string> SeeRADAR </string>
+  <key>email</key>
+  <string>{{mail}}</string>
+  <key>firstName</key>
+  <string>{{username}}</string>
+  <key>lastName</key>
+  <string></string>
+  <key>activationType</key>
+  <string>PROVISION_THEN_AWP</string></dict>  
+  ```
 
 ## <a name="assign-apps-to-groups"></a>Přiřazení aplikací skupinám  
 - Tento krok platí pro všechny partnery MTD. Přečtěte si pokyny pro [přiřazení aplikací do skupin pomocí Intune](apps-deploy.md).

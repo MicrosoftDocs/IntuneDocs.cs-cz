@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19e1ec5cda5a69320820899b1cb1c5d665fd9f16
-ms.sourcegitcommit: 2f32f6d2129bc10cc4a02115732e995edceb37d6
+ms.openlocfilehash: 468eabc9acc8f0f65125f81a0f7f67eede361755
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828947"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402642"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
@@ -37,10 +37,9 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
 
     * **Domů**: Vyberte ze seznamu vybrané aplikace vaší organizace.  
     * **Zobrazit vše**: Z **domovskou stránku** > **aplikace** klikněte na tlačítko **Zobrazit vše** zobrazíte všechny dostupné aplikace.  
-    * **Všechny aplikace**: Na této stránce vyberte v navigačním podokně zobrazíte všechny dostupné aplikace, včetně, nainstalovaný a funkční.  
+    * **Všechny aplikace**: Na této stránce vyberte v navigačním podokně zobrazíte všechny dostupné aplikace, včetně, nainstalovaný a funkční. Zobrazit, řadit a filtrovat aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
     * **Kategorie aplikací**: Na této stránce vyberte v navigačním podokně zvolte aplikace založené na typu nebo funkce. Aplikace jsou seřazeny podle kategorie, jako **doporučené**, **vzdělávání**, a **produktivitu**.  
     * **Hledat aplikace**: Statické vyhledávacího nachází v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
-    * **Všechny aplikace**: Zobrazit, řadit a filtrovat všechny dostupné aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
 
 3. Vyberte aplikaci.   
 4. Na stránce s podrobnostmi aplikace klikněte na **Nainstalovat**. Jakmile se instalace dokončí, zobrazí se stav **Nainstalováno**.  
@@ -51,7 +50,7 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
 
  V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v článku [Instalace Office 365 na zařízení s Windows](./install-office-windows.md).
 
-## <a name="share-apps-with-others"></a>Sdílení aplikací s jinými  
+## <a name="share-apps"></a>Sdílení aplikací  
 Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. Následující kroky popisují, jak sdílet odkaz přímo z Portálu společnosti.
 
 1. Na Portálu společnosti klikněte pravým tlačítkem myši na některou aplikaci (nebo ji stiskněte a podržte), aby se otevřela její [kontextová nabídka](https://docs.microsoft.com//windows/uwp/design/controls-and-patterns/menus).  
@@ -65,15 +64,14 @@ Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. N�
 
 Po nasdílení příjemce obdrží odkaz a zprávu, aby si zobrazil podrobnosti o aplikaci. Odkaz otevře stránku Portálu společnosti **Detaily o aplikaci**. 
 
-## <a name="available-apps"></a>Dostupné aplikace  
+## <a name="available-and-required-apps"></a>K dispozici a požadované aplikace
+Aplikace se vám přiřadila vaše organizace a označené jako v aplikaci portál společnosti jako **dostupné** nebo **vyžaduje**. 
 
-Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.  
+* Dostupné aplikace: Tyto aplikace jsou vybrány ve vaší organizaci a jsou vhodné a užitečné pro práci nebo školu. Jsou volitelné Chcete-li nainstalovat a jsou pouze aplikace najdete na portálu společnosti k instalaci. 
 
-Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Windows, budete mít přístup k Windows, ale ne iOS aplikací.  
+* Požadované aplikace: Tyto aplikace jsou nezbytné pro pracovní a školní a se nasadí přímo do vašeho zařízení. Tyto aplikace jsou automaticky nainstalovány pro vás bez zásahu. 
 
-## <a name="required-apps"></a>Required apps  
-
-Vaše organizace může nasadit některé aplikace přímo do vašeho zařízení a označit je jako **vyžaduje**. Tyto aplikace automaticky se nainstaluje za vás bez zásahu.
+Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Windows, budete mít přístup k Windows, ale ne iOS aplikací.
 
 ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu  
 Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, si ji vyžádat. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti, na stránce Nápověda a podpora. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    

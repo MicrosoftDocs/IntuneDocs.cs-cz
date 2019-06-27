@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 756fafc02a6d64b1495a838ab8eee4130ee77361
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: dfc8d782f2d7acee0e935790378d5bedd89a1ac0
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389342"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403567"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -439,9 +439,6 @@ V aplikaci portál společnosti Windows ikony aplikace nyní zobrazí s automati
 
 #### <a name="install-available-apps-using-the-company-portal-app-after-windows-bulk-enrollment----2751523-----"></a>Instalovat dostupné aplikace pomocí aplikace portál společnosti po Windows hromadný zápis <!-- 2751523   -->
 Zařízení Windows, která zaregistrovaná v Intune pomocí [Windows hromadnou registraci](windows-bulk-enroll.md) (zřizovacích balíčků) budete moct používat aplikaci portál společnosti instalovat aplikace k dispozici. Další informace o aplikaci portál společnosti, naleznete v tématu [ručně přidat portál společnosti pro Windows 10](store-apps-company-portal-app.md) a [konfigurace aplikace portál společnosti Microsoft Intune](company-portal-app.md).
-
-> [!Note]
-> Tato funkce není dosud plně nasazená pro všechny zákazníky. Pokud nejste schopni k hromadné registraci zařízení pomocí portálu společnosti, budete muset počkat, dokud se tato změna zavádění ke svému účtu.
 
 #### <a name="the-microsoft-teams-app-can-be-selected-as-part-of-the-office-app-suite----3828932----"></a>Aplikace Microsoft Teams lze vybrat jako součást aplikace sady Office <!-- 3828932  -->
 Aplikace Microsoft Teams můžete zahrnuty nebo vyloučeny jako součást instalace sady aplikací Office Pro Plus. Tato funkce funguje pro Office Pro Plus číslo 16.0.11328.20116+ sestavení. Uživatel musí odhlásit a pak se přihlaste k zařízení pro dokončení instalace. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**. Vyberte jednu z **sada Office 365** typy aplikací a pak vyberte **konfiguraci sady aplikací**.

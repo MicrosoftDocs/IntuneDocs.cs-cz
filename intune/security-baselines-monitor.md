@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a87b54dde9afe9803d71f7cbef62f7c55375f51b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e3bf59f75d41d50cfd9280251e20964a35a149a8
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040654"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403580"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitorování standardních hodnot zabezpečení a profilů v Microsoft Intune  
 
@@ -34,7 +34,7 @@ Tento článek vás provede obou možností monitorování.
 
 Když monitorujete směrný plán, získejte přehled o stavu zabezpečení vašich zařízení, na základě doporučení služby od Microsoftu. Tyto informace z podokna přehledu standardních hodnot zabezpečení můžete zobrazit v konzole Intune.  Trvá až 24 hodin se zobrazí po prvním přiřazení směrného plánu data. Novější změny trvat až 6 hodin se zobrazí.  
 
-Chcete-li zobrazit data monitorování standardních hodnot a zařízení, přihlaste se k [portál Intune](https://go.microsoft.com/fwlink/?linkid=2090973). V dalším kroku vyberte **zabezpečení zařízení** > **směrné plány zabezpečení (preview)** vyberte směrný plán a zobrazení **přehled** podokně.
+Chcete-li zobrazit data monitorování standardních hodnot a zařízení, přihlaste se k [portál Intune](https://go.microsoft.com/fwlink/?linkid=2090973). V dalším kroku vyberte **zabezpečení zařízení** > **směrné plány zabezpečení**vyberte směrný plán a zobrazení **přehled** podokně.
 
 **Přehled** podokně nabízí dvě metody k monitorování stavu:
 - **Zobrazení zařízení** – souhrn kolik zařízení je v každé kategorii stav směrného plánu.  

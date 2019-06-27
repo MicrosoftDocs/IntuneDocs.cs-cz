@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 06/26/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,30 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e24e72951d473c2e7e49d5ae62b39df18635c16
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2c1717be830d88ed0a7d1b660b7910c8192c93c5
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040277"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403550"
 ---
 # <a name="view-hardware-and-software-inventory-for-windows-pcs"></a>Zobrazení inventáře hardwaru a softwaru u počítačů s Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
-Intune shromažďuje podrobné informace o hardwaru a softwaru počítačů, které spravujete pomocí klienta softwaru Intune. V následujících postupech se dozvíte toto:
+> [!NOTE]
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete zobrazit inventář počítačů s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [zobrazte podrobnosti o zařízení v Intune](device-inventory.md).
+
+Intune shromažďuje podrobné informace o hardwaru a softwaru pro stolní počítače, které spravujete jako počítače pomocí softwarového klienta Intune. V následujících postupech se dozvíte toto:
 
 -   Jak vytvořit sestavu s informacemi o hardwarových možnostech počítačů, které spravujete
 
 -   Jak vytvořit sestavu se seznamem softwaru nainstalovaného na jednotlivých počítačích
 
--   Jak aktualizovat inventář počítačů, abyste měli jistotu, že jsou data v sestavě aktuální
+-   Jak obnovit inventář počítačů, abyste měli jistotu, že data v sestavě aktuální.
 
 ## <a name="to-display-information-about-pcs-you-manage"></a>Zobrazení informací o počítačích, které spravujete
 
 1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
 
-2.  Na stránce **Vytvořit novou sestavu** přijměte výchozí hodnoty, případně je upravte, aby se vyfiltrovaly výsledky, které bude sestava obsahovat. Můžete třeba vybrat, aby se v sestavě zobrazily jenom počítače, na kterých běží Windows 8.1.
+2.  Na stránce **Vytvořit novou sestavu** přijměte výchozí hodnoty, případně je upravte, aby se vyfiltrovaly výsledky, které bude sestava obsahovat. Například můžete třeba vybrat, že jsou v sestavě zobrazily jenom počítače, na kterých běží Windows 8.1.
 
 3.  Kliknutím na **Zobrazit sestavu** otevřete **sestavu inventáře počítače** v novém okně.
 

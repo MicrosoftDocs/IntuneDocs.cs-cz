@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86cbea29233d792006bce68fcd2a36fb1a7ec0a6
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3e24bd79fbceba1834d02af8512e5dd52676d471
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050201"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403306"
 ---
 # <a name="add-apps-for-windows-pcs-that-run-the-intune-software-client"></a>Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune
 
@@ -77,7 +77,7 @@ Pomocí Vydavatele softwaru Microsoft Intune nakonfigurujete vlastnosti aplikace
 5. Na stránce **Pravidla detekce** můžete nakonfigurovat pravidla, která zjistí, jestli už je konfigurovaná aplikace na počítači nainstalovaná. Nebo můžete použít výchozí pravidla detekce k automatickému přepsání dříve nainstalovaných verzí aplikace. Tato možnost se týká Instalační služby systému Windows (jenom soubory .exe).
 
    Jaká pravidla můžete konfigurovat:
-   - **Soubor existuje**. Zadejte cestu k souboru, který chcete zjistit. Můžete hledat ve složce **%ProgramFiles%** (prohledá složku **Program Files**\&lt;cesta&gt; a **Program Files (x86)**\&lt;cesta&gt;) na počítači nebo ve složce **%SystemDrive%** (prohledá kořenovou jednotku počítače, většinou je to jednotka C:).
+   - **Soubor existuje**. Zadejte cestu k souboru, který chcete zjistit. Můžete hledat ve složce **%ProgramFiles%** (prohledá složku **Program Files**\&lt;cesta&gt; a **Program Files (x86)** \&lt;cesta&gt;) na počítači nebo ve složce **%SystemDrive%** (prohledá kořenovou jednotku počítače, většinou je to jednotka C:).
    - **Kód produktu MSI existuje**. Pokud chcete vybrat soubor Instalační služby systému Windows (.msi), který chcete detekovat, vyberte **Procházet**.
    - <strong>Klíč registru existuje</strong>. Zadejte klíč registru, který začíná <strong>HKEY_LOCAL_MACHINE\</strong>. Prohledají se 32bitové i 64bitové cesty registru. Pokud zadaný klíč v některém umístění existuje, pravidlo detekce je splněné.
 
@@ -103,4 +103,4 @@ Aplikace se zobrazí v uzlu **Aplikace** v pracovním prostoru **Aplikace**.
 
 Dalším krokem po vytvoření aplikace je její nasazení. Další informace najdete v článku o [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 
-Pokud chcete další informace, tipy a triky pro nasazení softwaru do počítačů s Windows, najdete v blogovém příspěvku [Tip podporu: Osvědčené postupy pro distribuci softwaru Intune do počítače](https://blogs.technet.microsoft.com/intunesupport/2016/06/13/support-tip-best-practices-for-intune-software-distribution-to-pcs/).
+Pokud chcete další informace, tipy a triky pro nasazení softwaru do počítačů s Windows, najdete v blogovém příspěvku [Tip podporu: Osvědčené postupy pro distribuci softwaru Intune do počítače](https://support.microsoft.com/en-US/help/2583929).

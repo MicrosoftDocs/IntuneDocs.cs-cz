@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9af61c89b90a7f31654cd43a3cfc457b27e9700f
-ms.sourcegitcommit: 86aa5fefcba1e71841696b1a5e3ca5bffb1a9528
+ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67234974"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403093"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -57,7 +57,16 @@ Použijte tato nastavení [ApplicationManagement zásad CSP](https://docs.micros
 - **Nainstalovat data aplikací na systémový svazek**: **Blok** zabrání aplikacím ukládat data na systémový svazek zařízení. **Není nakonfigurováno** (výchozí) umožňuje aplikacím ukládat data na svazku systémového disku.
 - **Nainstalovat aplikace na systémovou jednotku**: **Blok** aplikacím bránit instalaci na systémovou jednotku zařízení. **Není nakonfigurováno** (výchozí) umožňuje aplikace k instalaci na systémovou jednotku.
 - **Záznam ze hry** (jenom desktopové verze): **Blok** zakáže hru Windows záznam a vysílání. **Není nakonfigurováno** (výchozí) umožňuje záznam a vysílání z her.
-- **Aplikace ze storu jenom**: **Vyžadovat** vynutí koncoví uživatelé instalují jenom aplikace z App Store Windows. **Není nakonfigurováno** umožňuje koncovým uživatelům instalovat aplikace odjinud než Store aplikace Windows.
+- **Jen aplikace ze storu**: Toto nastavení určuje činnost koncového uživatele, když uživatelé nainstalují aplikace z jiných míst než Microsoft Store. Možnosti:
+
+  - **Není nakonfigurováno** (výchozí): Umožňuje koncovým uživatelům instalovat aplikace odjinud než Microsoft Store, včetně aplikací, které jsou definovány v rámci jiných nastaveních zásad.  
+  - **Kdekoli**: Vypne doporučování aplikací a umožňuje uživatelům instalovat aplikace z libovolného místa.  
+  - **Pouze Store**: Vynutí koncoví uživatelé instalují jenom aplikace z Microsoft Store.
+  - **Doporučení**: Při instalaci aplikace z webu, který je dostupný v Microsoft Store, uživatelům se zobrazí zpráva, že ho stáhnou z úložiště doporučujeme.  
+  - **Preferovat Store**: Upozorní uživatele, když se instalovat aplikace odjinud než Microsoft Store.
+
+  [SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
+
 - **Vynutit restartování aplikace při selhání aktualizace**: Při použití aplikace nemusí aktualizovat. Pomocí tohoto nastavení můžete vynutit aplikaci restartovat. **Není nakonfigurováno** (výchozí) nebude vynucené restartování. **Vyžadovat** správcům umožňuje vynutit restartování na určité datum a čas, nebo podle plánu opakování. Pokud je nastavena na **vyžadují**, také zadejte:
 
   - **Počáteční datum/čas**: Vyberte určité datum a čas k restartování aplikace.

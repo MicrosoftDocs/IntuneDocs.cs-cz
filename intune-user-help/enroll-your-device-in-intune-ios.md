@@ -18,12 +18,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bef0eb545f5f0ca0f85365a08e6bc5d726d6979e
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: 4c8dfdea552d035c036828bfd2e6695cc5e4cb7b
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196865"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402766"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -59,15 +59,15 @@ Přerušení na více než několik minut, během registrace může způsobit, �
 
 1. Otevřete portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu. 
 
-    ![Příklad snímek obrazovky aplikace portál společnosti přihlásit.](./media/ios-01-cp-enroll-1903.PNG)  
+    ![Příklad snímek obrazovky aplikace portál společnosti přihlásit.](./media/ios-01-cp-enroll-1904.PNG)  
 
 2. Po zobrazení výzvy k přijímání oznámení na portál společnosti, klepněte na **povolit.** Portál společnosti používá oznámení vás upozorní, pokud je například potřeba aktualizovat nastavení zařízení. 
 
-    ![Příklad snímek domovské stránky portálu společnosti, řádku "Oznámení".](./media/ios-04-cp-enroll-1903.PNG)  
+    ![Příklad snímek domovské stránky portálu společnosti, řádku "Oznámení".](./media/ios-02-cp-enroll-1904.PNG)  
 
 3. Na **nastavení přístupu** obrazovky, vyberte **začít.**  
 
-     ![Příklad – snímek obrazovky portálu společnosti, obrazovky "Nastavení přístupu".](./media/ios-05-cp-enroll-1903.PNG)  
+     ![Příklad – snímek obrazovky portálu společnosti, obrazovky "Nastavení přístupu".](./media/ios-03-cp-enroll-1904.PNG)  
 
 4. Přečtěte si seznam informací o zařízení vaší organizaci uvidí a neuvidí. Potom klepněte na **pokračovat**.  
 
@@ -87,7 +87,7 @@ Přerušení na více než několik minut, během registrace může způsobit, �
 
 7. iOS 12.2 a vyšší: Po zobrazení výzvy k otevření portálu společnosti, klepněte na **otevřete**. **Instalaci profilu správy** obrazovky jsou uvedené kroky k instalaci profilu.
 
-    ![Příklad – snímek obrazovky portálu společnosti, obrazovce nainstalovat profil správy.](./media/ios-1904-settings-icon.PNG)  
+    ![Příklad – snímek obrazovky portálu společnosti, obrazovce nainstalovat profil správy.](./media/ios-07-cp-enroll-1904.PNG)  
 
 8. Přejít do nastavení aplikace a klepněte na **profil stažen**.  
 
@@ -99,24 +99,24 @@ Přerušení na více než několik minut, během registrace může způsobit, �
     
 10. Zadejte heslo zařízení. Potom klepněte na **nainstalovat**.    
 
-    ![V aplikaci nastavení, instalaci profilu obrazovky, s kurzorem na snímku obrazovky s příkladem ** nainstalovat ** tlačítko.](./media/ios-1904-password-install.PNG)  
+    ![V aplikaci nastavení, instalaci profilu obrazovky, s kurzorem na snímku obrazovky s příkladem ** nainstalovat ** tlačítko.](./media/ios-10-cp-enroll-1904.PNG)  
 
 
 11. Na další obrazovce je standardní systém upozornění pro správu zařízení. Chcete-li pokračovat v instalaci, klepněte na **nainstalovat**. Pokud se zobrazí výzva k důvěřování vzdálené správě, klepněte na **důvěryhodnosti**.  
 
-    ![Příklad snímek obrazovky nastavení aplikace, obrazovka upozornění standardního systému pro správu mobilních zařízení a kořenový certifikát.](./media/ios-15-cp-enroll-1903.PNG)  
+    ![Příklad snímek obrazovky nastavení aplikace, obrazovka upozornění standardního systému pro správu mobilních zařízení a kořenový certifikát.](./media/ios-11-cp-enroll-1904.PNG)  
 
 12. Po dokončení instalace, klepněte na **provádí**. Pokud chcete ověřit, že profil byl nainstalován, přejděte na **Správa zařízení a profily** nastavení. Profil uvedený v seznamu byste měli vidět **Správa mobilních zařízení**.   
 
-    ![Příklad snímek obrazovky nastavení aplikace, Správa profilů a zařízení nastavení zobrazující profil pro správu.](./media/ios-00-cp-enroll-1903.PNG)  
+    ![Příklad snímek obrazovky nastavení aplikace, Správa profilů a zařízení nastavení zobrazující profil pro správu.](./media/ios-12-cp-enroll-1904.PNG)  
 
 13. Vraťte se do aplikace portál společnosti. Portál společnosti se začne synchronizovat, a nastavit vaše zařízení. Portál společnosti vyzve aktualizovat další nastavení zařízení. Pokud ano, klepněte na **pokračovat**.  
 
-    ![Příklad – snímek obrazovky portálu společnosti, "Nastavení přístupu" obrazovka s žlutém trojúhelníku vedle nastavení požadavek.](./media/ios-12-cp-enroll-1903.PNG)  
+    ![Příklad – snímek obrazovky portálu společnosti, "Nastavení přístupu" obrazovka s žlutém trojúhelníku vedle nastavení požadavek.](./media/ios-13-cp-enroll-1904.PNG)  
 
 14. Budete vědět, že tento instalační program je dokončen, pokud všechny položky v seznamu zobrazit zeleném kroužku. Klepněte na **Hotovo**.   
     
-    ![Ukázkovém snímku obrazovky z portálu společnosti, "všechno je nastavené!" obrazovka zobrazující všechny zelené kruzích.](./media/ios-13-cp-enroll-1903.PNG)  
+    ![Ukázkovém snímku obrazovky z portálu společnosti, "všechno je nastavené!" obrazovka zobrazující všechny zelené kruzích.](./media/ios-14-cp-enroll-1904.PNG)  
 
 > [!Note]
 > Pokud vaše organizace monitoruje omezení hlasu a dat nebo vám poskytne zařízení vlastněná společností, můžete mít několik kroků k dokončení. Pokud budete vyzváni k instalaci **Datalert** aplikace, najdete v článku [registraci zařízení do služby telecom expense management](enroll-your-device-with-telecom-expense-management-ios.md). Pokud vaše organizace je součástí programu registrace zařízení společnosti Apple, přečtěte si [způsobu registrace zařízení ve vlastnictví společnosti](enroll-your-device-dep-ios.md).  

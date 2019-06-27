@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 5/21/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,18 +16,16 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 064d11f1992d63df9dacbedb8d53e849425e9b1f
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
+ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898135"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67403439"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
-
-Jako správce můžete k Azure Active Directory a Intune připojit větší počet zařízení s Windows. Hromadnou registraci zařízení pro vašeho tenanta Azure AD zahájíte vytvořením zřizovacího balíčku pomocí aplikace Windows Configuration Designer (WCD). Při aplikování zřizovacího balíčku na zařízení ve vlastnictví firmy se tato zařízení připojí k vašemu tenantovi Azure AD a zaregistrují v systému správy pomocí Intune. Po aplikování balíčku se uživatelé Azure AD můžou přihlašovat.
+Jako správce můžete k Azure Active Directory a Intune připojit větší počet zařízení s Windows. Hromadnou registraci zařízení pro vašeho tenanta Azure AD zahájíte vytvořením zřizovacího balíčku pomocí aplikace Windows Configuration Designer (WCD). Při aplikování zřizovacího balíčku na zařízení ve vlastnictví firmy se tato zařízení připojí k vašemu tenantovi Azure AD a zaregistrují v systému správy pomocí Intune. Po použití balíčku je připravená pro vaše uživatele Azure AD pro přihlášení.
 
 Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady Intune a požadované aplikace. Zařízení Windows, která jsou zaregistrovaná v Intune pomocí hromadného zápisu Windows můžete použít k instalaci aplikace dostupné pro aplikaci portál společnosti. 
 
@@ -51,7 +48,8 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
    - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
 4. Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (% sériového portu %) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
-   ![Snímek obrazovky se zadáním názvu kódu product key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
+   
+   ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
 5. Volitelně můžete nakonfigurovat síť Wi-Fi, ke které se zařízení připojí při prvním spuštění.  Pokud síťová zařízení nejsou nakonfigurovaná, musí být při prvním spuštění zařízení připojeno ke kabelové síti.
    ![Snímek obrazovky s povolením Wi-Fi včetně SSID sítě a typu sítě v aplikaci Windows Configuration Designer](media/bulk-enroll-network.png)
@@ -92,12 +90,9 @@ Zřizování se má používat na nových zařízeních s Windows. Selhání zř
 - Zřizovací balíček snažící se připojit k doméně Active Directory nebo tenantovi Azure Active Directory, který nevytváří místní účet, může způsobit, že bude zařízení nedostupné, pokud proces připojení k doméně selže kvůli chybějícímu připojení k síti.
 - Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému. Tyto skripty mohou v zařízení libovolně měnit systém souborů i jeho konfiguraci. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jen pomocí obnovení z image nebo vymazání.
 
-### <a name="problems-with-bulk-enrollment-and-company-portal"></a>Problémy s hromadnou registrací a Portálem společnosti
-Pokud se uživatel pokouší prostřednictvím Portálu společnosti zaregistrovat zařízení, které už bylo dříve hromadně zaregistrováno, obdrží upozornění, že u jeho zařízení jsou potřeba další kroky – buď nastavení, nebo registrace. Zařízení je zaregistrované, ale aplikace nebo webová stránka Portálu společnosti registraci nerozpoznala.
-
 ### <a name="bulk-enrollment-with-wi-fi"></a>Hromadná registrace přes Wi-Fi 
 
 U hromadně registrovaných zařízení není možné použít certifikáty cílené na konkrétní uživatele ani provést nasazení přes Wi-Fi. Ke správě těchto připojení budete muset použít [certifikáty na úrovni zařízení](certificates-configure.md). 
 
-### <a name="conditional-access"></a>podmíněný přístup
-Podmíněný přístup není k dispozici u zařízení Windows zaregistrovaných pomocí hromadné registrace.
+### <a name="conditional-access"></a>Podmíněný přístup
+Podmíněný přístup není k dispozici pro zařízení Windows zaregistrovaných pomocí hromadné registrace.
