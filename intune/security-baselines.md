@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a1a48f132d199ad7b1b3e112915acd8f073cf21
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
+ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403736"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67416848"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí standardních hodnot zabezpečení
 
@@ -67,8 +67,8 @@ Směrný plán zabezpečení profilů podpory [změnit verze](#change-the-baseli
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Chcete-li zobrazit nastavení pro aktuální instanci každý směrný plán pomocí odkazů. 
 
 - **Směrný plán zabezpečení MDM**
-  - [Směrný plán zabezpečení MDM pro Spring 2019 (19 hod. 1)](security-baseline-settings-windows.md)
-  - Ve verzi Preview: Směrný plán zabezpečení MDM pro října 2018
+  - [Směrný plán zabezpečení MDM pro Spring 2019 (19 hod. 1)](security-baseline-settings-mdm.md)
+  - [Ve verzi Preview: Směrný plán zabezpečení MDM pro října 2018](security-baseline-settings-mdm-archive.md)
 
 - **Směrný plán ochrany ATP v programu Windows Defender**  
   *(Chcete-li použít tyto standardní hodnoty musí vaše prostředí splňovat požadavky pro použití [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
@@ -199,7 +199,7 @@ Přísně vzato není. Bezpečnostní tým Microsoftu consults organizacím, jak
 
 ## <a name="next-steps"></a>Další postup
 - Zobrazte nastavení v nejnovějších verzích dostupné standardní hodnoty:  
-  - [Směrný plán zabezpečení MDM](security-baseline-settings-windows.md)  
+  - [Směrný plán zabezpečení MDM](security-baseline-settings-mdm.md)  
   - [Směrný plán ochrany ATP v programu Windows Defender](security-baseline-settings-defender-atp.md)  
 
 - Zkontrolujte stav a monitorování [směrného plánu a profil](security-baselines-monitor.md).

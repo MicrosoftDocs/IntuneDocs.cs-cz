@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 468eabc9acc8f0f65125f81a0f7f67eede361755
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: f9cb8168075badda65b3cd02f8ae059119769c7c
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402642"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413900"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
@@ -48,7 +48,10 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
     
     ![Stránka s podrobnostmi aplikace zobrazující stav Nainstalováno po instalaci aplikace v aplikaci Portál společnosti pro Windows 10 Tlačítko Nainstalovat se změní na Přeinstalovat.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
- V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v článku [Instalace Office 365 na zařízení s Windows](./install-office-windows.md).
+> [!IMPORTANT]
+> Pokud se instalace nezdaří požadovanou aplikaci a vaše organizace zpřístupňuje je pro vás k ruční instalaci, vyberte **opakujte**. To může trvat až deset minut, pokud chcete zobrazit aktualizovaný stav. Pokud vyberete **opakujte** znovu během této doby a dojde k chybě, která je v pořádku. Počkejte 10 minut, než aktualizovaný stav i nadále.   
+
+V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v článku [Instalace Office 365 na zařízení s Windows](./install-office-windows.md).
 
 ## <a name="share-apps"></a>Sdílení aplikací  
 Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. Následující kroky popisují, jak sdílet odkaz přímo z Portálu společnosti.
@@ -78,5 +81,20 @@ Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti,
 
   ![Aplikace portál společnosti pro Windows 10, Nápověda a podpora stránky, zvýraznění údaje helpdesku. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
+## <a name="view-installed-apps"></a>Zobrazit nainstalované aplikace  
+Zobrazte seznam všech nainstalovaných aplikací na zařízení. **Nainstalované aplikace** stránce uvedeny následující podrobnosti o každé aplikaci:
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+* Název: Název aplikace. Dostupné aplikace obsahují odkaz **podrobností o aplikaci** stránky.
+* Typ přiřazení: Jak aplikace přiřazena a pro vás dostupné. 
+* Vydavatel: Název pro vývojáře nebo firmy, ve které distribuované aplikace. Vydavatel je obvykle dodavatele softwaru nebo organizaci.  
+* Datum publikování: Datum, které tato aplikace byla dostupná ke stažení. Publikovat data ukázat počáteční verze vaší aplikace nebo aplikace nejnovější aktualizace.
+* Stav: Aktuální stav instalace aplikace na vašem zařízení. Aplikace může zobrazit jako instalace, nainstalována a instalace se nezdařila. Požadované aplikace může trvat až 10 minut, chcete-li zobrazit aktuální stav. Přečtěte si poznámku v rámci [instalovat aplikace](#install-apps) důležité podrobnosti o instalaci požadovanou aplikaci. 
+
+Na tuto stránku Pokud chcete dostat, přejděte na nabídku navigace a vyberte **nainstalované aplikace**. 
+
+  ![Příklad snímek obrazovky aplikace portál společnosti pro Windows 10, nainstalované aplikace stránky. ](./media/installed-apps-cp-1906.png)  
+
+
+Použití **řadit** k uspořádání typ přiřazení aplikace, vydavatel, abecedně podle názvu nebo chronologicky podle datum publikování. Použití **filtrovat podle** k omezení aplikace můžete zobrazit stav instalace.  Pokud nejsou dostupné žádné aplikace, uvidíte zprávu, zda byly nainstalovány žádné aplikace společnosti.  
+
+Potřebujete další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

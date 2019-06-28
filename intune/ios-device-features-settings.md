@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/23/2019
+ms.date: 06/27/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b31c7778ea167b98468a0a9ad9e37047c30ce201
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 43b87a90f90130a014817819b87ed5946b1ba15b
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047171"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413810"
 ---
 # <a name="ios-device-settings-to-use-common-ios-features-in-intune"></a>nastavení zařízení s Iosem v Intune použít běžné funkce iOS
 
@@ -195,7 +195,7 @@ Tato funkce podporuje zařízení pod dohledem s Iosem 9.3 a novějším.
   Zařízení tokeny lze také přidat informace specifické pro zařízení s těmito poli. Chcete-li zobrazit sériové číslo, zadejte například `Serial Number: {{serialnumber}}`. Text se zobrazí na zamykací obrazovce, podobně jako `Serial Number 123456789ABC`. Při vstupu do proměnné, je potřeba použít složené závorky `{{ }}`. [Konfigurace tokenů aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahuje seznam proměnných, které lze použít. Můžete také použít `deviceName` nebo libovolné jiné hodnoty konkrétní zařízení.
 
   > [!NOTE]
-  > Proměnné pořadí úloh se neověřuje v uživatelském rozhraní. V důsledku toho se může zobrazit profily uložen s nesprávný vstup. Pokud zadáte například `{{Devicename}}` místo `{{devicename}}`, pak namísto jedinečný název zařízení se zobrazí řetězcový literál.
+  > Proměnné pořadí úloh se neověřuje v uživatelském rozhraní a jsou malá a velká písmena. V důsledku toho se může zobrazit profily uložen s nesprávný vstup. Pokud zadáte například `{{DeviceID}}` místo `{{deviceid}}`, pak řetězcový literál, který se zobrazí místo jedinečný identifikátor zařízení. Nezapomeňte zadat správné informace.
 
 Vyberte **OK** uložte provedené změny.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/24/2019
+ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6f24f2b7741beff4075b0b130441720265fa0ce
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 9c7b91e63a559c45cbbcbd7056a7f5e259e07481
+ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403996"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67416854"
 ---
 # <a name="manage-apps-from-the-company-portal-website"></a>Správa aplikací z webu portál společnosti 
 Přejděte [webu portál společnosti](https://portal.manage.microsoft.com) k zobrazení a Správa aplikací z vaší organizace. 
@@ -65,7 +65,7 @@ Tato stránka obsahuje následující podrobnosti o každé aplikaci:
 * Typ přiřazení: Jak aplikace přiřazena a pro vás dostupné. Zobrazit dostupné a požadované aplikace pro další podrobnosti. Vaše organizace může buď zpřístupnit aplikaci si můžete nainstalovat sami, nebo můžou vyžadovat a instalovat aplikaci na vašem zařízení automaticky.  
 * Vydavatel: Název pro vývojáře nebo firmy, ve které distribuované aplikace. Vydavatel je obvykle dodavatele softwaru nebo organizaci.  
 * Datum publikování: Datum, které tato aplikace byla dostupná ke stažení. Publikovat data ukázat počáteční verze vaší aplikace nebo aplikace nejnovější aktualizace.
-* Stav: Aktuální stav instalace aplikace na vašem zařízení. Aplikace může zobrazit jako instalace, nainstalována a instalace se nezdařila.  
+* Stav: Aktuální stav instalace aplikace na vašem zařízení. Aplikace může zobrazit jako instalace, nainstalována a instalace se nezdařila. Požadované aplikace může trvat až 10 minut, chcete-li zobrazit aktuální stav.  
 
 ### <a name="search-and-refine"></a>Hledání a upravit  
 

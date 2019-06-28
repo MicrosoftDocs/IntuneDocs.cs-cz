@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/08/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,24 +16,31 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: 99f51662894cac04e6ebcd821806b433dbf3117e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: de2f201e6a7d0181847db5d212625c9eed9ea698
+ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041245"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413776"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
-V Microsoft Intune můžete přidat certifikát protokolu SCEP (Simple Enrollment) a Public Key Cryptography Standards (PKCS) certifikátů do zařízení. Tyto certifikáty můžete také odebrat tím, že zařízení [vymažete](devices-wipe.md#wipe) nebo [vyřadíte](devices-wipe.md#retire). 
+Certifikát protokolu SCEP (Simple Enrollment) a Public Key Cryptography Standards (PKCS) profilů certifikátů v Microsoft Intune slouží k přidání certifikáty do zařízení. 
 
-Při některých scénářích se certifikáty odeberou automaticky. Při jiných naopak zůstanou v zařízení. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
+Tyto certifikáty se dají použít odebrány při vám [vymazat](devices-wipe.md#wipe) nebo [vyřazení](devices-wipe.md#retire) zařízení. Existují také scénáře, ve kterém se automaticky odeberou certifikáty a scénáře, ve kterém certifikáty zůstanou v zařízení. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
 
 > [!NOTE]
 > Odebrat a odvolání certifikátů pro uživatele, který je odebrán z místní služby Active Directory nebo Azure Active Directory (Azure AD), postupujte podle těchto kroků v uvedeném pořadí:
 >
 > 1. Vymazání nebo vyřazení zařízení uživatele.
 > 2. Odebrání uživatele z místní služby Active Directory nebo Azure AD.
+
+## <a name="manually-deleted-certificates"></a>Ručně odstranil certifikáty  
+
+Ruční odstranění certifikátu je tento scénář platí napříč platformami a zřídit pomocí profilů certifikátů SCEP nebo PKCS certifikáty. Uživatel může například odstranit certifikát ze zařízení, když bude zařízení dál cílí Zásady certifikátů.  
+
+V tomto scénáři po odstranění certifikátu, které se zařízení zaregistruje pomocí Intune zjistí-li být nesplňuje předpisy, protože chybí očekávaný certifikát. Intune pak vydá nový certifikát zařízení obnovíte dodržování předpisů. Chcete-li obnovit certifikát není vyžadována žádná další akce.  
+
 
 ## <a name="windows-devices"></a>Zařízení Windows
 
