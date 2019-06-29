@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/24/2019
+ms.date: 06/28/2019
 ms.topic: article
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e8e7e6c244e14e880dddb7ae76ab0c08ef5088a
-ms.sourcegitcommit: edf0f4e791138dcf589dec8b633edc6eda55ef8c
+ms.openlocfilehash: ba7bb3a12e0e634df44bb832f8f35aa166095415
+ms.sourcegitcommit: 34ff5ebe6efaa5b3a2a1db274de0a07c14944a6b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344091"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463892"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -225,7 +225,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Location                        |      Value      | Type  |      Data       |
+   |                        Location                        |      Value      | type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -507,7 +507,8 @@ Před přiřazením profilů certifikátů ke skupinám vezměte v úvahu násle
 - I když se každý profil přiřazuje samostatně, je třeba přiřadit jak důvěryhodnou kořenovou certifikační autoritu, tak profil SCEP nebo PKCS. Jinak zásady certifikátu SCEP nebo PKCS nebudou fungovat.
 
     > [!NOTE]
-    > U iOSu byste měli počítat s tím, že se v profilu správy zobrazí více kopií certifikátu, pokud nasadíte více profilů prostředků, které používají stejný profil certifikátu.
+    > Na zařízeních s Iosem když je přidružen k další profilu, jako je profil sítě Wi-Fi nebo VPN profil certifikátu SCEP zařízení obdrží certifikát pro každou z těchto dalších profilů. Výsledkem je na zařízení s iOS s více certifikáty od žádosti o certifikát SCEP.  
+
 - Pokud používáte spolusprávy pro Intune a Configuration Manager v Configuration Manageru s[et posuvník úlohy](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pro *zásady přístupu k prostředku* k **Intune** nebo  **Pilotní Intune**. Toto nastavení umožňuje klientů s Windows 10 spustit proces žádosti o certifikát.  
 
 Informace o přiřazení profilů najdete v článku o [přiřazení profilů zařízení](device-profile-assign.md).

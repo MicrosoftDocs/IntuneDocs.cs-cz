@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0ee16e40eea4d217cd78c3a026731656bfa4ca53
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 87e3b6bf1acbce88b45c9ebc78c45279d718a44c
+ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045640"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468761"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -33,6 +33,29 @@ Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Při
 Pokud jste zaměstnancem nebo studenty, nezapomeňte se podívat na více systémů snímky obrazovky a odkazy na dokumentaci nápovědy portál společnosti. Další informace o tom, jak používat aplikaci portál společnosti, najdete v článku [dokumentace nápovědy pro uživatele portálu společnosti](https://docs.microsoft.com/intune-user-help/).  
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/account-move-rom-iwp-user-1712.png)--->
+
+## <a name="week-of-june-24-2019"></a>Týden od 24. června 2019  
+
+### <a name="view-all-installed-apps-from-new-company-portal-web-page----4224326---"></a>Zobrazit všechny nainstalované aplikace z nové webové stránky portálu společnosti <!-- 4224326 -->
+Na webu portál společnosti je nový **nainstalované aplikace** stránka obsahuje seznam všech spravovaných aplikací (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Kromě typ přiřazení uživatelé uvidí vydavatele, datum publikování a aktuální stav instalace aplikace. Pokud jste neprovedli všechny aplikace požadovaných nebo dostupných pro vaše uživatele, zobrazí se zpráva s vysvětlením, že žádné společnosti, které jsou nainstalované aplikace. Pokud chcete zobrazit novou stránku na webu, přejděte na [webu portál společnosti](https://portal.manage.microsoft.com) a klikněte na tlačítko **nainstalované aplikace**.   
+
+![Web portál společnosti – snímek obrazovky, stránka nainstalované aplikace.](/intune-user-help/media/intune-installed-apps-1907.png)     
+
+### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>Nové zobrazení aplikace umožňuje zobrazit všechny spravované aplikace nainstalované v zařízení <!-- 2352913 -->
+Aplikace portál společnosti pro Windows nyní obsahuje všechny spravované aplikace (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Uživatelé mohou vidět také pokus o a čeká se na instalace aplikací a jejich aktuální stavy. Pokud jste neprovedli aplikace vyžaduje nebo jsou dostupné pro vaše uživatele, zobrazí se zpráva s vysvětlením, že žádné společnosti, které jsou nainstalované aplikace. Pokud chcete zobrazit nové zobrazení, přejděte na navigačním podokně portálu společnosti a vyberte **aplikace** > **nainstalované aplikace**.   
+
+![Příklad snímek obrazovky aplikace portál společnosti pro Windows 10, nainstalované aplikace stránky. ](/intune-user-help/media/installed-apps-cp-1906.png)  
+
+
+## <a name="week-of-june-17-2019"></a>Týden od června 17. května 2019  
+
+#### <a name="new-features-in-microsoft-intune-app"></a>Nové funkce v aplikaci Microsoft Intune
+Přidali jsme nové funkce do aplikace pro Microsoft Intune (preview) pro Android. Teď můžou uživatelé na plně spravovaná zařízení s Androidem:  
+
+* Umožňuje zobrazit a spravovat zařízení, která jste zaregistrovali prostřednictvím aplikace portál společnosti Intune nebo Microsoft Intune.    
+* Požádejte o podporu jejich organizace.    
+* Posílat připomínky do Microsoftu.    
+* Zobrazit podmínky a ujednání, pokud ve své organizaci nastavení. 
 
 ## <a name="week-of-april-15-2019"></a>Týden od 15. dubna 2019  
 

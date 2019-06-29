@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 06/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfc8d782f2d7acee0e935790378d5bedd89a1ac0
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 8c2dab0855bd0f6344584e7bbd80ce17f829fa84
+ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403567"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67468738"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -45,6 +45,7 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Device configuration
 ### Device enrollment
 ### Device management
+### Device security
 ### Intune apps
 ### Monitor and troubleshoot
 ### Role-based access control
@@ -53,7 +54,129 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 
 <!-- ########################## -->
 
-## <a name="week-of-june-17-2019"></a>Týden od června 17. května 2019   
+## <a name="week-of-june-24-2019"></a>Týden od 24. června 2019 
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="configure-which-browser-is-allowed-to-link-to-organization-data----3145939---"></a>Konfigurace webového prohlížeče může připojit k datům organizace <!-- 3145939 -->
+Intune App Protection zásady (aplikace) na zařízeních s Androidem a iOS teď vám umožní přenést organizace webové odkazy do určitého webového prohlížeče nad rámec Intune Managed Browser nebo Microsoft Edge.  Další informace o aplikaci, najdete v článku [co jsou zásady ochrany aplikací?](app-protection-policy.md).
+
+#### <a name="all-apps-page-identifies-onlineoffline-microsoft-store-for-business-apps--4089647---"></a>Všechny stránky aplikace identifikuje online i offline Microsoft Store pro obchodní aplikace<!--4089647 -->
+**Všechny aplikace** stránka nyní obsahuje popisky k identifikaci Microsoft Store pro firmy (MSFB) aplikace jako online nebo offline aplikací. Nyní zahrnuje přípona pro každou aplikaci MSFB **Online** nebo **Offline**. Na stránce podrobností aplikace také zahrnuje **typ licence** a **podporuje místní instalace zařízení** informace (pouze u offline licencované aplikace).
+
+#### <a name="company-portal-app-on-shared-devices---4393553---"></a>Aplikace portál společnosti na sdílených zařízeních <!--4393553 -->
+Uživatelé teď přístup k aplikaci portál společnosti na sdílených zařízeních. Koncoví uživatelé uvidí **Shared** popisek na dlaždici dodržování. To platí pro portál společnosti verze aplikace 10.3.45609.0 a novější.
+
+#### <a name="view-all-installed-apps-from-new-company-portal-web-page----4224326---"></a>Zobrazit všechny nainstalované aplikace z nové webové stránky portálu společnosti <!-- 4224326 -->
+Na webu portál společnosti je nový **nainstalované aplikace** stránka obsahuje seznam všech spravovaných aplikací (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Kromě typ přiřazení uživatelé uvidí vydavatele, datum publikování a aktuální stav instalace aplikace. Pokud jste neprovedli všechny aplikace požadovaných nebo dostupných pro vaše uživatele, zobrazí se zpráva s vysvětlením, že žádné společnosti, které jsou nainstalované aplikace. Pokud chcete zobrazit novou stránku na webu, přejděte na [webu portál společnosti](https://portal.manage.microsoft.com) a klikněte na tlačítko **nainstalované aplikace**.  
+
+#### <a name="new-view-lets-app-users-see-all-managed-apps-installed-on-device----2352913---"></a>Nové zobrazení aplikace umožňuje zobrazit všechny spravované aplikace nainstalované v zařízení <!-- 2352913 -->  
+Aplikace portál společnosti pro Windows nyní obsahuje všechny spravované aplikace (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Uživatelé mohou vidět také pokus o a čeká se na instalace aplikací a jejich aktuální stavy. Pokud jste neprovedli aplikace vyžaduje nebo jsou dostupné pro vaše uživatele, zobrazí se zpráva s vysvětlením, že žádné společnosti, které jsou nainstalované aplikace. Pokud chcete zobrazit nové zobrazení, přejděte na navigačním podokně portálu společnosti a vyberte **aplikace** > **nainstalované aplikace**.    
+
+### <a name="device-configuration"></a>Konfigurace zařízení
+
+#### <a name="configure-settings-for-kernel-extensions-on-macos-devices----2043024---"></a>Konfigurace nastavení pro rozšíření jádra na zařízeních s macOS <!-- 2043024 -->
+Na zařízeních s macOS, můžete vytvořit profil konfigurace zařízení (**konfigurace zařízení** > **profily** > **vytvořit profil** > Zvolte **macOS** pro platformu). Tato aktualizace zahrnuje novou skupinu nastavení, která umožňují nakonfigurovat a používat rozšíření jádra na vašich zařízeních. Můžete přidat konkrétní rozšíření nebo povolit všechna rozšíření z konkrétního partnera nebo pro vývojáře.
+
+Další informace o této funkci najdete v tématu [přehled rozšíření pro jádra](kernel-extensions-overview-macos.md) a [nastavení rozšíření jádra](kernel-extensions-settings-macos.md).
+
+Platí pro: macOS 10.13.2 a novější
+
+#### <a name="apps-from-the-store-only-setting-for-windows-10-devices-includes-more-configuration-options----2697002---"></a>Aplikace ze storu jenom nastavení pro zařízení s Windows 10 obsahuje další možnosti konfigurace <!-- 2697002 -->
+Když vytvoříte profil omezení zařízení pro zařízení s Windows, můžete použít **aplikace ze storu jenom** nastavení, takže uživatelé instalují jenom aplikace z App Store Windows (**konfigurace zařízení**  >  **Profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu > **zařízení omezení** pro typ profilu). V této aktualizaci toto nastavení je podporu rozšířenou i další možnosti. 
+
+Pokud chcete zobrazit nové nastavení, přejděte na [nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkce](device-restrictions-windows-10.md#app-store).
+
+Platí pro: Windows 10 a novější
+
+#### <a name="deploy-multiple-zebra-mobility-extensions-device-profiles-to-a-device-same-user-group-or-same-devices-group----4089955---"></a>Více Zebra mobility rozšíření zařízení profily nasadit do zařízení, stejnou skupinu uživatelů nebo stejné skupiny zařízení <!-- 4089955 -->
+V Intune můžete použít rozšíření mobility Zebra (MX) v profilu konfigurace zařízení pro přizpůsobení nastavení pro zařízení Zebra, které nejsou integrovaná do služby Intune. V současné době můžete nasadit jeden profil pro jedno zařízení. V této aktualizace můžete nasadit více profilů, můžete:
+- Stejnou skupinu uživatelů
+- Do stejné skupiny zařízení
+- Jedno zařízení
+
+[Použití a správa zařízení Zebra s příponami Zebra nastavení mobilních zařízení v Microsoft Intune](android-zebra-mx-overview.md) ukazuje způsob použití MX v Intune.
+
+Platí pro: Android
+
+#### <a name="some-kiosk-settings-on-ios-devices-are-set-using-block-replacing-allow----4404075----"></a>Některá nastavení beznabídkového režimu na zařízeních s Iosem jsou nastaveny pomocí "Blok" nahrazuje "Povolit" <!-- 4404075  -->
+Když vytvoříte profil omezení zařízení na zařízeních s Iosem (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **iOS** pro platformu > **omezení zařízení** pro typy profilů > **veřejného terminálu**), můžete nastavit **automatické zamykání**, **Vyzvánění**, **otočení obrazovky**, **tlačítko pro režim spánku obrazovky**, a **hlasitosti**. 
+
+V této aktualizaci hodnoty jsou **bloku** (zablokuje funkci) a **Nenakonfigurováno** (umožňuje funkci). Chcete-li nastavení zobrazit, přejděte na [nastavení zařízení s Iosem k povolení nebo zakázání funkce](device-restrictions-ios.md#kiosk-supervised-only). 
+
+Platí pro: iOS
+
+#### <a name="use-face-id-for-password-authentication-on-ios-devices----4490704---"></a>Pro ověřování pomocí hesla na zařízeních s Iosem pomocí Face ID. <!-- 4490704 -->
+Když vytvoříte profil omezení zařízení pro zařízení s Iosem, můžete použít otisk prstu k zadání hesla. V této aktualizaci nastavení hesla otisk prstu také povolit rozpoznávání obličeje (**konfigurace zařízení** > **profily** > **vytvořit profil**  >  **iOS** pro platformu > **omezení zařízení** pro typy profilů > **heslo**). V důsledku toho změnit následující nastavení:
+
+- **Odemknutí pomocí otisků prstů** je nyní **Touch ID a Face ID odemknout**.
+- **Otisků prstů (jenom pod dohledem)** je nyní **změny Touch ID a Face ID (jenom pod dohledem)** .
+
+Face ID je k dispozici v Iosu 11.0 a novějších. Chcete-li nastavení zobrazit, přejděte na [nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune](device-restrictions-ios.md#password).
+
+Platí pro: iOS
+
+#### <a name="restricting-gaming-and-app-store-features-on-ios-devices-is-now-dependent-on-ratings-region----4593948---"></a>Omezení hraní her a funkce úložiště aplikací na zařízeních s Iosem je teď závisí na oblast hodnocení <!-- 4593948 -->
+Na zařízeních s Iosem, můžete povolit nebo omezit funkce související s hry, app storu a zobrazování dokumentů (**konfigurace zařízení** > **profily**  >   **Vytvoření profilu** > **iOS** pro platformu > **omezení zařízení** pro typy profilů > **App Store, zobrazování dokumentů, hraní her**). Můžete také oblast hodnocení, jako jsou USA. 
+
+V této aktualizaci **aplikace** funkce je přesunuta do být podřízené **oblast hodnocení**a je závislý na **oblast hodnocení**. Chcete-li nastavení zobrazit, přejděte na [nastavení zařízení s Iosem k povolení nebo zakázání funkcí pomocí Intune](device-restrictions-ios.md#app-store-doc-viewing-gaming).
+
+Platí pro: iOS
+
+### <a name="device-enrollment"></a>Registrace zařízení
+
+#### <a name="windows-autopilot-reset-removes-the-devices-primary-user----4156123---"></a>Odebere primární uživatele zařízení Windows Autopilot resetování <!-- 4156123 -->
+Při použití na zařízení Autopilot resetování primární uživatele zařízení se odeberou. Další uživatele, který přihlásí po obnovení bude nastaven jako primární uživatele.
+
+#### <a name="windows-autopilot-supoprt-for-hybrid-azure-ad-join----4809146--"></a>Windows Autopilot supoprt pro hybridní připojení k Azure AD <!-- 4809146-->
+Windows Autopilotu pro stávající zařízení teď podporuje hybridní připojení k Azure AD (kromě stávající podporu Azure AD Join). Platí pro Windows 10 verze 1809 a vyšším. Další informace najdete v tématu [ Windows Autopilotu pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices).
+
+
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="see-the-security-patch-level-for-android-devices----4461911---"></a>Zobrazit úroveň opravy zabezpečení pro zařízení s Androidem <!-- 4461911 -->
+Nyní je vidět úroveň opravy zabezpečení pro zařízení s Androidem. Chcete-li to provést, zvolte **Intune** > **zařízení** > **všechna zařízení** > zvolte zařízení > **hardwaru**.
+Úroveň oprav je uveden v **operačního systému** oddílu.
+
+#### <a name="assign-scope-tags-to-all-managed-devices-in-a-security-group----3173810---"></a>Přiřadit značky oboru všech spravovaných zařízení ve skupině zabezpečení <!-- 3173810 -->
+Nyní můžete přiřadit značky oboru do skupiny zabezpečení a všechna zařízení ve skupině zabezpečení se také přidruží tyto značky oboru. Všechna zařízení v těchto skupinách budou také přiřadit značky oboru. Značky oboru, nastavit pomocí této funkce dojde k přepsání značky oboru, nastavte pomocí aktuální flow značky oboru zařízení. Další informace najdete v tématu [pomocí RBAC a značky oboru pro distribuované IT](scope-tags.md). (V budoucí aktualizaci, aktuální tok přiřadit značky oboru zařízení budou jen pro čtení.)
+
+### <a name="device-security"></a>Zabezpečení zařízení
+
+#### <a name="use-keyword-search-with-security-baselines----wnready---"></a>Hledání klíčových slov pomocí standardních hodnot zabezpečení <!-- WNready -->
+Při vytvoření nebo úprava [směrný plán zabezpečení profilů](security-baselines.md#create-the-profile), můžete zadat klíčových slov na novém *hledání* panel pro filtrování dostupných skupin nastavení na ty, které obsahují kritériím hledání. 
+
+#### <a name="the-security-baselines-feature-is-now-generally-available-----3785395---"></a>Základní nastavení zabezpečení funkce je teď obecně dostupná  <!-- 3785395 -->
+**Směrné plány zabezpečení** funkce je z verze preview a je teď všeobecně dostupná (GA).  To znamená, že funkce je připravená k použití v produkčním prostředí. Jednotlivé základní šablony může zůstat ve verzi preview a jsou však vyhodnocen a vydané verzi GA na své vlastní plány.
+
+#### <a name="the-mdm-security-baseline-template-is-now-generally-available------3794072-4217151--3534649---"></a>Šablona základního zabezpečení MDM je teď obecně dostupná   <!-- 3794072, 4217151,  3534649 -->
+Šablona základního zabezpečení MDM přesunula z verze preview a je teď všeobecně dostupná (GA). Šablona GA je označena jako **MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)** .  Toto je nové šablony a ne upgradu z verze preview.  Jako novou šablonu, budete muset zkontrolovat [nastavení obsahuje](security-baseline-settings-windows.md)a pak vytvořte nové profily k nasazení šablony do vašeho zařízení. Další šablony standardních hodnot zabezpečení může zůstat ve verzi preview. Seznam dostupných směrných plánů najdete v tématu [směrné plány zabezpečení k dispozici](security-baselines.md#available-security-baselines).  
+
+Kromě toho, že novou šablonu, *MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* šablona obsahuje dvě nastavení, které jsme nedávno oznámili v našich vývoje v tématu:  
+- Nad zámkem: Hlasové aktivovat aplikace na uzamčené obrazovce  
+- DeviceGuard: Použijte zabezpečení na základě virtualizace (VBS) při příštím restartování zařízení.  
+
+*MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* také zahrnuje přidání několika nová nastavení, odebrání ostatních a revizi výchozí hodnoty na jedno nastavení. Podrobný seznam změn v Preview verzi GA, najdete v tématu **co se změnilo v nové šabloně**.
+
+#### <a name="security-baseline-versioning-----3194322---"></a>Správa verzí standardních hodnot zabezpečení  <!-- 3194322 -->
+Základní nastavení zabezpečení pro Intune podporují správu verzí. Díky této podpoře jak se vydávají nové verze každý směrný plán zabezpečení, můžete aktualizovat vaše stávající profilů standardních hodnot zabezpečení pro použití novější základní verzi bez nutnosti znovu vytvořit a nasadit nový směrný plán úplně od začátku. Kromě toho můžete v konzole Intune zobrazit informace o každé standardní hodnoty, jako je počet jednotlivých profilů, máte, které používají standardní hodnoty, kolik různých základní verze pomocí vašich profilů, a když nejnovější verzi konkrétní byl směrný plán zabezpečení.  Další informace najdete v tématu **směrné plány zabezpečení**.
+
+#### <a name="the-use-security-keys-for-sign-in-setting-has-moved-----4501151---"></a>Pomocí kláves zabezpečení pro nastavení přihlášení se přesunula.  <!-- 4501151 -->
+Nastavení konfigurace zařízení pro ochranu identity s názvem **pomocí kláves se zabezpečení pro přihlášení do** se již nachází v podobě dílčího nastavení *konfigurovat Windows Hello pro firmy*. Nyní je nejvyšší úrovně nastavení, která je k dispozici, vždy i v případě, že nepovolíte použití Windows Hello pro firmy. Další informace najdete v části [Identity protection](identity-protection-windows-settings.md).
+
+### <a name="role-based-access-control"></a>Řízení přístupu na základě role
+
+#### <a name="new-permissions-for-assigned-group-admins------4504437-----"></a>Nová oprávnění pro správce přiřazené skupině   <!-- 4504437   -->
+V Intune integrované školním správcem teď má vytvořit role, čtení, aktualizace a odstranění (CRUD) oprávnění pro spravované aplikace. Aktualizace znamená, že pokud je vám přiřazena jako správce skupiny v Intune for Education, můžete teď vytvořit, zobrazit, aktualizovat a odstranit iOS MDM Push Certificate, tokeny pro iOS MDM server a tokeny VPP pro iOS spolu s [všechna stávající oprávnění máte ](https://docs.microsoft.com/intune-education/group-admin-delegate#group-admin-permissions). Chcete-li využít některou z těchto akcí, přejděte na **nastavení Tenanta** > **Správa zařízení iOS**.  
+
+#### <a name="applications-can-use-the-graph-api-to-call-read-operations-without-user-credentials----4655885---"></a>Aplikace můžete použít rozhraní Graph API k volání operací čtení bez přihlašovacích údajů uživatele <!-- 4655885 -->
+Aplikace můžou zavolat rozhraní Intune Graph API s identitou aplikace bez přihlašovacích údajů uživatele operace čtení. Další informace o přístupu k rozhraní Microsoft Graph API pro Intune najdete v tématu [práce s Intune v Microsoft Graphu](https://docs.microsoft.com/graph/api/resources/intune-graph-overview?view=graph-rest-1.0).
+
+#### <a name="apply-scope-tags-to-microsoft-store-for-business-apps----4392555---"></a>Značky oboru platí pro Microsoft Store pro obchodní aplikace <!-- 4392555 -->
+Nyní můžete použít značky oboru pro Microsoft Store pro obchodní aplikace. Další informace o značky oboru, naleznete v tématu [použití řízení přístupu na základě role (RBAC) a značky oboru pro distribuované IT](scope-tags.md).
+
+## <a name="week-of-june-17-2019"></a>Týden od června 17. května 2019 
 
 ### <a name="app-management"></a>Správa aplikací
 
@@ -63,11 +186,11 @@ Přidali jsme nové funkce do aplikace pro Microsoft Intune (preview) pro Androi
 * Umožňuje zobrazit a spravovat zařízení, která jste zaregistrovali prostřednictvím aplikace portál společnosti Intune nebo Microsoft Intune.    
 * Požádejte o podporu jejich organizace.    
 * Posílat připomínky do Microsoftu.    
-* Zobrazit podmínky a ujednání, pokud ve své organizaci nastavení.  
+* Zobrazit podmínky a ujednání, pokud ve své organizaci nastavení.    
 
 ## <a name="week-of-june-10-2019"></a>Týden od 10. června 2019 
 
-### <a name="app-management"></a>Správa aplikací  
+### <a name="app-management"></a>Správa aplikací
 
 #### <a name="new-sample-apps-showing-intune-sdk-integration-available-on-github----2653471---"></a>Nové vzorové aplikace zobrazuje dostupné integraci sady Intune SDK na Githubu <!-- 2653471 -->
 Složce msintuneappsdk účet GitHub bylo přidáno nové ukázkové aplikace pro iOS (Swift), Android, Xamarin.iOS, Xamarin.Android a Xamarin Forms. Tyto aplikace jsou určené doplnění stávající dokumentaci a ukázky toho, jak integrovat do mobilních aplikací Intune APP SDK. Pokud jste vývojář aplikací, které potřebuje další doprovodné materiály sady Intune SDK, přečtěte si téma následující propojené ukázky:
