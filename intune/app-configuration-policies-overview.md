@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 703fafec3799b1552ec275c7c88b24b42d2259b9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044008"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494061"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
@@ -64,7 +64,7 @@ K provádění úloh konfigurace aplikací můžete použít také Graph API. Po
 
 ### <a name="managed-devices"></a>Spravovaná zařízení
 
- - Přečtěte si, jak používat konfiguraci aplikací u zařízení s iOSem.  Viz [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem](app-configuration-policies-use-ios.md).
+ - Přečtěte si, jak používat konfiguraci aplikací u zařízení s iOSem.  Zobrazit [přidání zásad Konfigurace aplikací pro spravovaná zařízení s Iosem](app-configuration-policies-use-ios.md).
  - Přečtěte si, jak používat konfiguraci aplikací u zařízení s Androidem.  Viz [Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Spravované aplikace

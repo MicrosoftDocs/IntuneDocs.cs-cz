@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: e458558d488c9bbca2c2ed78255be103a5ac79f0
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804702"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494389"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -65,7 +65,7 @@ Pokud spustíte `IntuneWinAppUtil.exe` z příkazového okna bez parametrů, vá
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Help    |
 |    `-c <setup_folder>`     |    Složka pro všechny instalační soubory. Všechny soubory v této složce se zkomprimují do *.intunewin* souboru.    |
-|   ` -s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
+|    `-s <setup_file>`     |    Instalační soubor (například *setup.exe* nebo *setup.msi*)    |
 |    `-o <output_folder>`     |    Výstupní složka pro vygenerovaný soubor *.intunewin*    |
 |    `-q`       |    Tichý režim    |
 

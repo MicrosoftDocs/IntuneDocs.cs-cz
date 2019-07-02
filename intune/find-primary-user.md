@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a20ccec2ef0cbaba87637b3c44c2cc2be094ab
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322871"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500639"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Najít primární uživatele zařízení s Intune
 
@@ -60,15 +60,15 @@ Primární uživatel Intune automaticky přidá do zařízení, během nebo krá
 | Windows | Připojení k Azure AD (mimo prostředí) | Registrace uživatele | Během registrace | 
 | Windows | Připojení ke službě Azure AD (Autopilot mimo prostředí) | Registrace uživatele | Během registrace | 
 | Windows | Pouze registrace v MDM | Registrace uživatele | Během registrace | 
-| Windows | Hybridní AADJ + Automatická registrace do objektu zásad skupiny | První uživatel přihlásil | Při prvním přihlášení | 
-| Windows | Společná správa | První uživatel přihlásil | Při prvním přihlášení | 
+| Windows | Hybridní AADJ + Automatická registrace do objektu zásad skupiny | První uživatel pro přihlášení k Windows | Při prvním přihlášení k Windows| 
+| Windows | Společná správa | První uživatel pro přihlášení k Windows | Při prvním přihlášení k Windows | 
 | Windows | Připojení ke službě Azure AD (hromadný token pro zápis) | Žádné | Nelze použít | 
 | Windows | Připojení ke službě Azure AD (místním nasazení Autopilot režim) | Žádné | Nelze použít | 
 | Různé platformy | Registrace uživatele řízený testy s aplikací portál společnosti | Registrace uživatele | Během registrace |
 | Různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
 | iOS, macOS | Apple automatické registrace zařízení (DEP s přidružením uživatele | Registrace uživatele | Během registrace |
 | iOS, macOS | Apple automatické registrace zařízení (DEP bez přidružení uživatele) | Žádné | Nelze použít |
-| Android | Vlastněné podniková, vyhrazená zařízení s androidem | Žádné | Nelze použít |
+| Android | Vlastněné podniková, vyhrazená zařízení s androidem | Žádný | Nelze použít |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Primární uživatel a vlastník zařízení Azure AD
 V některých případech může být primárního uživatele Intune liší od Azure AD Device **vlastníka** vlastnosti (zobrazitelné v rámci **zařízení** > **podpora k zařízením Azure AD**). Vlastník zařízení služby Azure AD se přidá během registrace zařízení do služby Azure Active Directory.

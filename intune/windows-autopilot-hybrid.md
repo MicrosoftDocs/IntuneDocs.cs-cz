@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb9d1f52ccb147dc9a412f3cb7b601e3b18f214a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389324"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494537"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -163,7 +163,7 @@ Pokud zařízení ještě nejsou zaregistrovaná, můžete je zaregistrovat sami
 
 ### <a name="register-devices-from-an-oem"></a>Registrace zařízení od výrobce OEM
 
-Pokud kupujete nová zařízení, můžou někteří výrobci OEM zaregistrovat tato zařízení za vás. Další informace najdete na [stránce Windows Autopilot](http://aka.ms/WindowsAutopilot).
+Pokud kupujete nová zařízení, můžou někteří výrobci OEM zaregistrovat tato zařízení za vás. Další informace najdete na [stránce Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Pokud jsou vaše zařízení Autopilot *zaregistrovaný*, před jejich registraci do Intune, se zobrazí na třech místech (s názvy, nastavit jejich sériová čísla):
 - **Zařízení Autopilot** podokno v Intune na portálu Azure portal. Vyberte **registrace zařízení** > **registrace Windows** > **zařízení**.

@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: fe155c5b2a18b1931894b05694b53bbc2c497e0b
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403093"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494490"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení Windows 10 (a novějších) zařízení a povolení nebo zakázání funkcí pomocí Intune
 
@@ -525,7 +525,7 @@ Vyberte **OK** uložte provedené změny.
 
 Použijte tato nastavení [zásady ochrany osobních údajů CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy), který také obsahuje seznam podporovaných edicí Windows.
 
-- **Přizpůsobení vstupu**: **Blok** brání brání pomocí hlasu pro diktování a komunikovat s Cortanou a další aplikace používající rozpoznávání řeči založené na cloudu společnosti Microsoft. Je zakázané a uživatelům nelze povolit rozpoznávání řeči online pomocí nastavení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům zvolit. Pokud tyto služby povolíte, společnost Microsoft může shromažďovat hlasová data ke zkvalitnění služby.
+- **Přizpůsobení vstupu**: **Blok** brání pomocí hlasu pro diktování a komunikovat s Cortanou a další aplikace používající rozpoznávání řeči založené na cloudu společnosti Microsoft. Je zakázané a uživatelům nelze povolit rozpoznávání řeči online pomocí nastavení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům zvolit. Pokud tyto služby povolíte, společnost Microsoft může shromažďovat hlasová data ke zkvalitnění služby.
 - **Automatické přijetí párování a ochrana osobních údajů pokynů souhlasu uživatele**: Zvolte **povolit** tak Windows můžete automaticky přijetí párování a ochrana osobních údajů souhlas zpráv při spuštění aplikace. **Není nakonfigurováno** (výchozí) brání automatické přijetí párování a ochrana osobních údajů okno souhlasu uživatele při otevření aplikace.
 - **Publikovat aktivity uživatele**: **Blok** zabraňuje sdílení a zjišťování naposledy použitých prostředků v aktivitě kanálu. **Není nakonfigurováno** (výchozí) umožňuje tato funkce, takže aplikace můžete publikovat činnosti koncového uživatele.
 - **Jen místní aktivity**: **Blok** zabraňuje sdílení a zjišťování naposledy použitých prostředků při přepínání úloh jen na základě místní aktivity. **Není nakonfigurováno** tuto funkci povolí (výchozí).

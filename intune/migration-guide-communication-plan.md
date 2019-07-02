@@ -16,17 +16,17 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73cdd0f802ce3b52a566bbdddd7cf5cca2e2bef2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d207d1ac51da5b34f48aeffd83791bdbb40bf971
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044602"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494550"
 ---
 # <a name="plan-communications"></a>Plán komunikace 
 Plán komunikace je klíčovým prvkem, který migrace do Intune. Následující nástroje a šablony jsou k dispozici při vzdělávání koncovým uživatelům. Sada přechodu na Intune obsahuje e-mailové šablony, Průvodce registrací v Intune a odkazy na instruktážní videa pro registrace koncového uživatele.  
 
-Stažení:  [Sada přechodu na Intune](http://aka.ms/IntuneAdoptionKit)
+Stažení:  [Sada přechodu na Intune](https://aka.ms/IntuneAdoptionKit)
 
 ## <a name="email-templates"></a>E-mailové šablony 
 Doporučujeme následující plán komunikace s využitím e-mailů. Poskytujeme šablony si můžete přizpůsobit svému plánu komunikace:

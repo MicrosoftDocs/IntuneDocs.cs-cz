@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c9a225fbffda25b8d077c3b2be271e86d3e6c85e
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044876"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500597"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge v Microsoft Intune
 
@@ -166,7 +166,7 @@ Toto nastavení umožňuje nakonfigurovat domovskou stránku zástupce pro Micro
 
 Použití následující dvojici klíč/hodnota konfigurace místní domovské stránky:
 
-|    Klíč    |    Hodnota    |
+|    Klíč    |    Value    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:** `<https://www.bing.com`>
     |
@@ -182,15 +182,15 @@ Pro usnadnění přístupu můžete nakonfigurovat záložek, které chcete vaš
 
 Ke konfiguraci spravovaných záložky použijte následující dvojici klíč/hodnota:
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Oddělení název a adresu URL `|` znak.      **Příklad:**<br>`Microsoft Bing|https://www.bing.com`<p>Chcete-li nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky `||`.<p>**Příklad:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Oddělení název a adresu URL `|` znak.      **Příklad:**<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky `||`.<p>**Příklad:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="how-to-display-myapps-within-microsoft-edge-bookmarks"></a>Jak zobrazit MyApps v rámci záložek Microsoft Edge
 
 Ve výchozím nastavení se uživatelům zobrazí MyApps weby, které jsou nakonfigurované k nim v rámci složky uvnitř záložky Microsoft Edge. Složku se popisek s názvem vaší organizace.
 
-|    Klíč    |    Hodnota    |
+|    Klíč    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota TRUE** ukazuje MyApps v rámci záložek Microsoft Edge.<p>**False** skryje MyApps v rámci Microsoft Edge.    |
 
@@ -201,16 +201,17 @@ Můžete použít následující dvojice klíč/hodnota konfigurace buď seznam 
 
 |    Klíč    |    Value    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    Vybírejte z těchto možností:<p>1. Určení povolených adres URL (povolené jsou pouze tyto adresy URL; na žádné jiné weby nebudou mít uživatelé přístup):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, kterou chcete povolit nebo blokovat, jako jedinou hodnotu, která je oddělená znakem | `|` znak.<p>**Příklady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    Vybírejte z těchto možností:<p>1. Určení povolených adres URL (povolené jsou pouze tyto adresy URL; na žádné jiné weby nebudou mít uživatelé přístup):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Určení blokovaných adres URL (na všechny ostatní weby budou mít uživatelé přístup):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    Odpovídající hodnotou klíče je seznam adres URL. Zadejte všechny adresy URL, kterou chcete povolit nebo blokovat, jako jedinou hodnotu, která je oddělená znakem | `|` znak.<br>**Příklady:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Formátech adres URL pro povolené a blokované seznam webů 
 Různých formátech adres URL můžete použít k vytváření seznamů povolených/zakázaných webů. Tyto povolené modely jsou podrobně popsané v následující tabulce. Několik poznámek před zahájením práce: 
 - Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
-- V následujícím seznamu povolených vzorů můžete použít zástupný znak (*) podle pravidel.
+- Můžete použít zástupný znak (\*) podle pravidel v následujícím seznamu povolených vzorů.
+- Zástupný znak odpovídá pouze celý compoment název hostitele (oddělených tečkami) nebo celé části cesty (oddělené lomítkem). Například `http://*contoso.com` je **není** podporována.
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
     - Port 80 pro protokol HTTP
     - Port 443 pro protokol HTTPS
-- Použití zástupných znaků pro číslo portu je **není** podporována. Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou.
+- Použití zástupných znaků pro číslo portu je **není** podporována. Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
     |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -232,6 +233,7 @@ Různých formátech adres URL můžete použít k vytváření seznamů povolen
     - IP adresy
     - `https://*`
     - `http://*`
+    - `https://*contoso.com`
     - `http://www.contoso.com:*`
     - `http://www.contoso.com: /*`
   
@@ -247,13 +249,13 @@ Používá následující dvojici klíč/hodnota pro možnost nakonfigurujte, po
 
 ## <a name="directing-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Směruje uživatele do Microsoft Edge místo Intune Managed Browser 
 
-Intune Managed Browser i Microsoft Edge jsou teď může sloužit jako chráněné zásady prohlížeče. Aby bylo zajištěno, že jsou vaši uživatelé směrování k používání aplikace správný prohlížeč, směrování všech vašich aplikací spravovaných pomocí Intune (např. Outlook a OneDrive) s následujícím nastavením konfigurace:
+Intune Managed Browser i Microsoft Edge jsou teď může sloužit jako chráněné zásady prohlížeče. Aby bylo zajištěno, že jsou vaši uživatelé směrování k používání aplikace správný prohlížeč, směrování všech vašich aplikací spravovaných pomocí Intune (např. Outlook, OneDrive a SharePoint) s následujícím nastavením konfigurace:
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Hodnota `true` bude uživatele nasměrovat na téma Použití Microsoft Edge.<p>Hodnota `false` vás přesměrují uživatelé používali Intune Managed Browser.    |
+|    `com.microsoft.intune.useEdge`    |    Hodnota `true` vás přesměrují vaši uživatelé můžou stáhnout a použít Microsoft Edge.<br>Hodnota `false` umožňuje uživatelům používat Intune Managed Browser.    |
 
-Pokud tato hodnota konfigurace aplikace není nastavena, budou definovat webového prohlížeče se použije k otevření podnikové odkazů podle následujícího postupu.
+Pokud je tato hodnota konfigurace aplikace **není** nastavena, podle následujícího postupu budou definovat webového prohlížeče se použije k otevření podnikové odkazů.
 
 V Androidu:
 - Intune Managed Browser spustí, pokud má uživatel Intune Managed Browser i na svém zařízení stáhnout Microsoft Edge. 
@@ -283,7 +285,7 @@ Další požadavky na zabezpečení a ochrana osobních údajů pro Microsoft Ed
 - Microsoft Edge nespotřebovává nastavení, která uživatelům nastavit pro nativní prohlížeč na svých zařízeních, protože Microsoft Edge nemá přístup k těmto nastavením.
 - Pokud nakonfigurujete možnost **vyžadovat pro přístup jednoduchý PIN kód** nebo **vyžadovat pro přístup podnikové přihlašovací údaje** v aplikaci zásady ochrany přidružené k Microsoft Edge a uživatel vybere na odkaz Nápověda ověřování stránky mohli procházet libovolné weby bez ohledu na to, zda byly přidány do seznamu blokovaných v zásadách.
 - Microsoft Edge může blokovat přístup k webům, pouze v případě, že jsou k nim přistupuje přímo. V případě, že se k webu přistupuje přes zprostředkující služby (třeba překladatelské služby), aplikace přístup neblokuje.
-- Povolení ověřování a přístup k dokumentaci k Intune ***. microsoft.com** se vyjímá z nastavení seznamu povolených nebo blokovaných. Je vždycky povolená.
+- Povolení ověřování a přístup k dokumentaci k Intune * **. microsoft.com** se vyjímá z nastavení seznamu povolených nebo blokovaných. Je vždycky povolená.
 Vypnutí dat o využití Microsoft automaticky shromažďuje anonymní data o výkonu a využití spravovaného prohlížeče za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu. V zařízeních se systémem iOS se nedají otevřít weby, u kterých vypršela platnost certifikátu nebo které mají nedůvěryhodný certifikát.
 
 ## <a name="next-steps"></a>Další postup

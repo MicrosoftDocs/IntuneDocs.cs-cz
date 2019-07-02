@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468716"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494246"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>Při vývoji pro Microsoft Intune – červenec 2019
 
@@ -58,8 +58,6 @@ Pomáhat při vaší připravenosti a plánování, tato stránka seznamy uživa
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Správa aplikací
 
-### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Uživatelé zařízení můžete zobrazit všechny spravované aplikace, které jste nainstalovaná nebo se pokusila o instalaci <!-- 2352913 -->
-Portál společnosti pro Windows se zobrazí seznam všech spravovaných aplikací (požadovaná i dostupná), které jsou nainstalované na zařízení uživatele. Uživatelé budou moct k pokusu o zobrazení a probíhající instalace aplikací a jejich aktuální stavy. Pokud vaše organizace nemá vytvořit obdobné aplikace vyžaduje nebo jsou dostupné, uživatelům se zobrazí se zpráva s vysvětlením, že nebyly nainstalovány žádné aplikace společnosti. Uživatelé budou také moct seřadíte nebo vyfiltrujete podle stavu instalace aplikace.
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Přizpůsobená oznámení pro uživatele a skupiny    <!-- 16766574   -->
 Brzy budete moct posílat vlastní ad-hoc nabízená oznámení z aplikace portál společnosti pro uživatele na zařízení iOS a Androidem, která spravujete přes Intune. Tato vlastní oznámení se váže na konkrétní funkce Intune a můžete použít k žádnému účelu, budete potřebovat, včetně Obecné oznámení, které chcete odeslat k některým nebo všem zaměstnancům.  

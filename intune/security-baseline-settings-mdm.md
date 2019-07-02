@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3b9f69e745baffd21b55274e173bb75e8581525
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 56e1a1e07a403afa4db405d276c55be1ef8ddfd8
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67417869"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494555"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení MDM Intune  
 
@@ -32,7 +32,7 @@ Nejnovější základní verzi je **MDM standardních hodnot zabezpečení pro S
 Další informace o co se změnilo v nejnovější verzi tohoto směrného plánu z předchozí verze, najdete v článku [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> V červnu. 2019 byl směrný plán zabezpečení MDM ve verzi preview nahrazuje vydání *MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* šablonu, která je generaly (nejsou ve verzi preview) k dispozici. Profily, které byly vytvořeny před dostupnost *MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* směrného plánu neaktualizuje a neodráží skutečnost nastavení a hodnoty, které jsou v MDM základního zabezpečení pro Spring 2019 Update () 19 H 1) verze.  I když nelze vytvořit nové profily založené na šabloně ve verzi preview, můžete upravit a pokračovat v používání profilů, které jste dříve vytvořili, které jsou založeny na šabloně ve verzi preview.   
+> V červnu. 2019 byl směrný plán zabezpečení MDM ve verzi preview nahrazuje vydání *MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* šablonu, která je generaly (nejsou ve verzi preview) k dispozici. Profily, které byly vytvořeny před dostupnost *MDM standardních hodnot zabezpečení pro Spring 2019 aktualizace (19 hod. 1)* směrného plánu neaktualizuje a neodráží skutečnost nastavení a hodnoty, které jsou v MDM základního zabezpečení pro Spring 2019 aktualizace (19 hod. 1 ) verze.  I když nelze vytvořit nové profily založené na šabloně ve verzi preview, můžete upravit a pokračovat v používání profilů, které jste dříve vytvořili, které jsou založeny na šabloně ve verzi preview.   
   
 Další informace o použití standardních hodnot zabezpečení s Intune, najdete v článku [používat směrné plány zabezpečení](security-baselines.md).  
 
@@ -120,7 +120,7 @@ Další informace najdete v tématu [zásady CSP – Bitlocker](https://docs.mic
       **Výchozí**: Ano  
   
 
-## <a name="browser"></a>Prohlížeč  
+## <a name="browser"></a>Browser  
 Další informace najdete v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) v dokumentaci k Windows.  
 
 - **Vyžadovat SmartScreen pro Microsoft Edge**  
@@ -893,7 +893,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
   **Výchozí**: Zakázat  
   
 - **Možnosti přihlášení zóny Internetu aplikace Internet Explorer**  
-  Toto nastavení zásad umožňuje spravovat nastavení pro možnosti přihlášení. Pokud nastavení této zásady povolíte, můžete z následující možnosti přihlášení. Anonymní Přihlaste se k zakázání ověřování pomocí protokolu HTTP a použijte účet hosta jenom pro protokol Common Internet File System (CIFS). Vyzve k zadání uživatelského jména a hesla pro uživatele dotazu pro ID uživatele a hesla. Jakmile je uživatel vyzván, tyto hodnoty je možné tiše zbytek relace. Automatické přihlášení pouze do zóny sítě Intranet uživatelům dotazu pro ID uživatele a hesla v jiné zóně. Jakmile je uživatel vyzván, tyto hodnoty je možné bez upozornění pro ostatní relace. Automatické Přihlaste se pomocí aktuálního uživatelského jména a hesla se pokusit přihlásit pomocí odpověď výzvy systému Windows NT (označované také jako ověřování protokolem NTLM). Pokud server podporuje odpověď výzvy systému Windows NT, přihlášení používá uživatelské sítě uživatelské jméno a heslo pro přihlášení. Pokud Pokud server nepodporuje odpověď výzvy systému Windows NT, uživatel vyzván k zadání uživatelského jména a hesla. Pokud nastavení této zásady zakážete, přihlášení nastavená na automatické protokolu na pouze do zóny sítě Intranet. Pokud nastavení této zásady nenakonfigurujete, přihlášení je nastavena na automatické přihlášení do pouze do zóny sítě Intranet.  
+  Toto nastavení zásad umožňuje spravovat nastavení pro možnosti přihlášení. Pokud nastavení této zásady povolíte, můžete z následující možnosti přihlášení. Anonymní Přihlaste se k zakázání ověřování pomocí protokolu HTTP a použijte účet hosta jenom pro protokol Common Internet File System (CIFS). Vyzve k zadání uživatelského jména a hesla pro uživatele dotazu pro ID uživatele a hesla. Jakmile je uživatel vyzván, tyto hodnoty je možné tiše zbytek relace. Automatické přihlášení pouze do zóny sítě Intranet uživatelům dotazu pro ID uživatele a hesla v jiné zóně. Jakmile je uživatel vyzván, tyto hodnoty je možné bez upozornění pro ostatní relace. Automatické Přihlaste se pomocí aktuálního uživatelského jména a hesla se pokusit přihlásit pomocí odpověď výzvy systému Windows NT (označované také jako ověřování protokolem NTLM). Pokud server podporuje odpověď výzvy systému Windows NT, přihlášení používá uživatelské sítě uživatelské jméno a heslo pro přihlášení. Pokud server nepodporuje odpověď výzvy systému Windows NT, uživatel vyzván k zadání uživatelského jména a hesla. Pokud nastavení této zásady zakážete, přihlášení nastavená na automatické protokolu na pouze do zóny sítě Intranet. Pokud nastavení této zásady nenakonfigurujete, přihlášení je nastavena na automatické přihlášení do pouze do zóny sítě Intranet.  
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067194)  
   
   **Výchozí**: Výzva  
@@ -2602,7 +2602,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disable  
   
 - **Internet Explorer internet zone logon options**  
-  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
+  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
   
   **Default**: Prompt  
   
