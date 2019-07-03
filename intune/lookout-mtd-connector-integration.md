@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d146b211c42c20b1381b238311db6a10295ef4a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: be2e9371288961d0afdf7ad6e8cfec8f734087f6
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044931"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529870"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace služby Lookout Mobile Endpoint Security se službou Intune
 V prostředí, které splňuje [požadavky](lookout-mobile-threat-defense-connector.md#prerequisites), můžete integrovat Lookout Mobile Endpoint Security se službou Intune. Informace v tomto článku se dozvíte v nastavení integrace a konfigurace důležitých nastavení ve službě Lookout pro použití s Intune.  
@@ -40,7 +40,7 @@ Aby vaše předplatné integrace Lookout Mobile Endpoint Security se službou In
 - **ID objektu skupiny Azure AD** skupiny pomocí **úplné** přístup ke konzole Lookout Mobile Endpoint Security (MES).  
   Vytvořte tuto skupinu uživatelů ve službě Azure AD obsahující uživatele, kteří mají *úplný přístup* k přihlášení **konzole Lookout**. Uživatelé musí být členy této skupiny nebo volitelné *omezený přístup* skupiny, pro přihlášení ke konzole Lookout. 
 
-- **ID objektu skupiny Azure AD** skupiny pomocí **s omezeným přístupem** přístup ke konzole Lookout MES *(volitelnou skupinu)*. 
+- **ID objektu skupiny Azure AD** skupiny pomocí **s omezeným přístupem** přístup ke konzole Lookout MES *(volitelnou skupinu)* . 
   Vytvoření této skupiny volitelné uživatelů ve službě Azure AD obsahující uživatele, kteří by neměly mít přístup k týkajícím se konfigurace a registrace některým modulům konzoly Lookout. Místo toho tito uživatelé mají přístup jen pro čtení k **zásady zabezpečení** konzoly Lookout. Uživatelé musí být členy této volitelné skupinu nebo požadované *úplný přístup* skupiny, pro přihlášení ke konzole Lookout.
 
  > [!TIP] 
