@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bad416e738f1a0481c67480d9a83157a4781c71b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050341"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530770"
 ---
 # <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikace
 
@@ -66,12 +66,12 @@ Po vytvoření zásady ochrany aplikací v Intune ji můžete přiřadit ke skup
 
 K přiřazení zásady ochrany aplikací použijte následující postup:
 
-1.  V [Intune](https://aka.ms/intuneportal) vyberte **Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. 
-2.  Vyberte dříve vytvořenou zásadu ochrany aplikací. V tomto rychlém startu je to zásada **Ochrana obsahu pro Windows 10**.
-3.  Zvolte **Přiřazení**.
-4.  Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
-5.  Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
-6.  Klikněte na tlačítko **vyberte** > **Uložit**. 
+1. V [Intune](https://aka.ms/intuneportal) vyberte **Intune** > **Klientské aplikace** > **Zásady ochrany aplikací**. 
+2. Vyberte dříve vytvořenou zásadu ochrany aplikací. V tomto rychlém startu je to zásada **Ochrana obsahu pro Windows 10**.
+3. Zvolte **Přiřazení**.
+4. Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
+5. Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
+6. Klikněte na tlačítko **vyberte** > **Uložit**. 
 
 Právě jste přiřadili zásadu ochrany aplikací.
 

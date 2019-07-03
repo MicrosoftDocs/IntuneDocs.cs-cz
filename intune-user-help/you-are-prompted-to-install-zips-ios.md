@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb70d999cf43d568ad19f2ba83618f6ecfbaf7d7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 949a310b1588876cfe0c547dfa73f1510a710710
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504957"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527612"
 ---
 # <a name="install-zimperium-zips-on-your-ios-device"></a>Instalace aplikace Zimperium zIPS na zařízení s iOSem
 
@@ -29,7 +29,7 @@ Než budete moct začít pracovat, firemní podpora potřebuje, abyste nainstalo
 
 ## <a name="what-you-need-to-do"></a>Co je potřeba udělat: 
 
-1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace Zimperium zIPS do zařízení.
+1. Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace Zimperium zIPS do zařízení.
 
 2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 

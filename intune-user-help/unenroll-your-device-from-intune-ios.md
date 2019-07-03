@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d52ef6f2cf995031c25bc9065212e39235041b2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 9ce28c73ba6f63e90dcaf93d8d21d32dcc4c0dcf
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501473"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529497"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Odebrání zařízení s iOSem z Intune
 
@@ -68,11 +68,11 @@ K odebrání zařízení z Intune použijte následující postup. Můžete se t
 
 Aplikace Portál společnosti ukládá v zařízení data na třech místech.
 
--   **Protokoly s informacemi**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, třeba jak dlouho byla aplikace otevřena nebo jestli havarovala, se vymažou automaticky při odebrání zařízení z webu Portál společnosti.
+- **Protokoly s informacemi**: Standardní data o aktivitě aplikací, která shromažďuje Microsoft, třeba jak dlouho byla aplikace otevřena nebo jestli havarovala, se vymažou automaticky při odebrání zařízení z webu Portál společnosti.
 
--   **Analýza Apple**: Standardní data o havarovaných aplikacích, která shromažďuje Apple. Tyto informace můžete odebrat, jen když zařízení obnovíte zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
+- **Analýza Apple**: Standardní data o havarovaných aplikacích, která shromažďuje Apple. Tyto informace můžete odebrat, jen když zařízení obnovíte zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
 
--   **Řetězce klíčů**: Zařízení do řetězců klíčů ukládá hesla a další informace používané k přihlášení. Aplikace Microsoftu sdílejí přihlašovací údaje mezi všemi aplikacemi, které vyvíjí Microsoft a jsou na zařízení, včetně aplikací Microsoft Outlook a Microsoft Authenticator. Stejně jako analýzu Apple můžete tyto informace odebrat jenom vrácením (tj. resetováním) zařízení zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
+- **Řetězce klíčů**: Zařízení do řetězců klíčů ukládá hesla a další informace používané k přihlášení. Aplikace Microsoftu sdílejí přihlašovací údaje mezi všemi aplikacemi, které vyvíjí Microsoft a jsou na zařízení, včetně aplikací Microsoft Outlook a Microsoft Authenticator. Stejně jako analýzu Apple můžete tyto informace odebrat jenom vrácením (tj. resetováním) zařízení zpět do továrního nastavení. Tím vymažete všechny osobní informace. Pokud chcete obnovit tovární nastavení, otevřete **Nastavení** > **Obecné** > **Obnovit** > **Smazat data a nastavení**.
 
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

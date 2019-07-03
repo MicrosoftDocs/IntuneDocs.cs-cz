@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56e1a1e07a403afa4db405d276c55be1ef8ddfd8
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 9b0d069d6a65be0b51dd02858470780299690425
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494555"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528667"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Základní nastavení zabezpečení MDM Intune  
 
@@ -57,7 +57,7 @@ Další informace najdete v tématu [zásady CSP – AppRuntime](https://docs.mi
 
 - **Účty Microsoft, volitelné pro aplikace Windows Store**  
   Nastavení této zásady umožňuje řídit, zda jsou účty Microsoft volitelné pro aplikace Windows Store, které vyžadují účet pro přihlášení. Tyto zásady ovlivní pouze aplikace Windows Store, které ji podporují. Pokud povolíte toto nastavení zásad, aplikací Windows Store, které obvykle vyžadují účet Microsoft pro přihlášení vám umožní uživatelům přihlašovat se místo toho se pomocí účtu organizace. Pokud zakážete nebo není pro toto nastavení zásad, musíte se přihlásit uživatele pomocí účtu Microsoft.  
-    [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067104)  
+  [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Výchozí**: Enabled  
 
@@ -68,7 +68,7 @@ Další informace najdete v tématu [zásady CSP – ApplicationManagement](http
   Nastavení této zásady umožňuje uživatelům změnit možnosti instalace, které jsou obvykle k dispozici pouze pro správce systému. Pokud nastavení této zásady povolíte, některé funkce zabezpečení Windows Installer obejít. IT specialistovi instalace, které by jinak byly ukončeny z důvodu narušení zabezpečení. Pokud zakážete nebo nenakonfigurujete toto nastavení zásad, funkce zabezpečení Windows Installer zabrání uživatelům změnit možnosti instalace, obvykle vyhrazena pro správce systému, jako je zadání adresáře, do které jsou nainstalovány soubory. Pokud instalační služby systému Windows zjistí, že instalačního balíčku povolil uživatelům měnit chráněný možnost, instalace se zastaví a zobrazí zprávu. Tyto funkce zabezpečení fungovat, pouze když instalační program běží v kontextu zabezpečení privilegovaného, ve kterém je uživateli odepřen přístup k adresářům. Toto nastavení zásad je navržená pro méně omezující prostředí. Je možné obejít chyby v instalačním programu, který brání instalaci softwaru.  
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
-    **Výchozí**: Ano
+  **Výchozí**: Ano
 
 - **Instalace aplikací MSI bloku se zvýšenými oprávněními**  
   Nastavení této zásady instruuje Instalační služby systému Windows použít zvýšenou úroveň oprávnění při instalaci libovolné aplikace v systému.  
@@ -828,7 +828,7 @@ Další informace najdete v tématu [zásady CSP – Internet Explorer](https://
   
 - **Oprávnění pro jazyk java aplikace Internet Explorer důvěryhodné zóny**   
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety. Pokud nastavení této zásady povolíte, můžete z rozevíracího seznamu možnosti. Vlastní, řídit oprávnění nastavení jednotlivě. Nízká bezpečnosti umožňuje aplety provádět všechny operace. Střední úroveň zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru (oblast v paměti mimo který program nelze provést volání), a navíc možnosti, jako jsou pomocné místo (bezpečné a zabezpečené úložiště v klientském počítači) a soubor řízené uživatelem vstupně-výstupních operací. Vysoké zabezpečení umožňuje aplety ke spuštění v jejich izolovaného prostoru. Zakážete Java žádné aplety Zabraňte jejich spuštění. Pokud nastavení této zásady zakážete, aplety nelze spustit. Pokud nastavení této zásady nenakonfigurujete, je oprávnění nastaveno nízká bezpečnosti.  
-    [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067200)  
+  [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
   **Výchozí**: Vysoké zabezpečení  
   

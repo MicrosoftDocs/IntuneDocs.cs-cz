@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ed6259c996772817ceaa8ec827c8ac506adfd399
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045111"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530472"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu podle zařízení
 
@@ -34,12 +34,12 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
 
 ## <a name="create-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu
 
-1.  Na portálu Intune vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.
+1. Na portálu Intune vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.
    
     ![Vytvořit novou zásadu podmíněného přístupu](media/create-conditional-access-intune/create-ca.png)
  
-2.  V části **Přiřazení** vyberte **Uživatelé a skupiny**. 
-3.  Na **zahrnout** kartu, identifikovat uživatele nebo skupiny, pro které chcete použít tyto zásady podmíněného přístupu. Jakmile jste se rozhodli, kterým chcete zahrnout, můžete použít **vyloučit** kartu, pokud jsou všechny uživatele, role nebo skupiny, které chcete vyloučit z této zásady.  
+2. V části **Přiřazení** vyberte **Uživatelé a skupiny**. 
+3. Na **zahrnout** kartu, identifikovat uživatele nebo skupiny, pro které chcete použít tyto zásady podmíněného přístupu. Jakmile jste se rozhodli, kterým chcete zahrnout, můžete použít **vyloučit** kartu, pokud jsou všechny uživatele, role nebo skupiny, které chcete vyloučit z této zásady.  
     - **Všichni uživatelé**: Vyberte tuto možnost, chcete-li dané zásady používaly pro všechny uživatele a skupiny, včetně hostů a interní uživatele.
   
     - **Vyberte uživatele a skupiny**: Vyberte tuto možnost, zadejte jeden nebo více z následujících možností:
@@ -52,9 +52,9 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
      
        > [!TIP]  
        > Testování zásady s menší skupinou uživatelů zkontrolujte, zda že vše funguje podle očekávání.
-4.  Vyberte **Done** (Hotovo).
-5.  V části **Přiřazení** vyberte **Cloudové aplikace**. 
-6.  Na **– karta zahrnout**, identifikovat aplikací a služeb, které chcete chránit touto zásadou podmíněného přístupu. Můžete použít **vyloučit** kartu, pokud jsou všechny aplikace nebo služby, které chcete vyloučit z těchto zásad.
+4. Vyberte **Done** (Hotovo).
+5. V části **Přiřazení** vyberte **Cloudové aplikace**. 
+6. Na **– karta zahrnout**, identifikovat aplikací a služeb, které chcete chránit touto zásadou podmíněného přístupu. Můžete použít **vyloučit** kartu, pokud jsou všechny aplikace nebo služby, které chcete vyloučit z těchto zásad.
     - **Všechny cloudové aplikace**: Vyberte tuto možnost, chcete-li dané zásady používaly pro všemi aplikacemi.
       > [!IMPORTANT]  
       > Aplikace Microsoft Azure Management pro přístup k webu Azure portal je zahrnuta v tomto seznamu. Nezapomeňte použít **vyloučit** buď zde kartě nebo v **uživatelů a skupin** možnosti a ujistěte se, že jste (nebo uživatele nebo skupiny určíte) budete moct přihlásit k webu Azure portal. 
@@ -63,8 +63,8 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
     
       ![Vytvořit novou zásadu podmíněného přístupu](media/create-conditional-access-intune/create-ca-select-apps.png)
 
-7.  Vyberte **Done** (Hotovo).
-8.  V části **přiřazení**vyberte **podmínky**.
+7. Vyberte **Done** (Hotovo).
+8. V části **přiřazení**vyberte **podmínky**.
     - **Riziko přihlášení**: Zvolte Ano. Pokud chcete použít detekce rizik přihlašování Azure AD Identity Protection k této zásadě a klikněte na tlačítko úrovně rizika přihlášení, které mají zásady platit na.
     - **Platformy zařízení**: Na **zahrnout** kartu, identifikovat chcete tuto zásadu podmíněného přístupu platí pro platformy zařízení. Použití **vyloučit** kartu z této zásady vyloučit platformy.
     - **Umístění**: Na **zahrnout** kartu, zadejte, jestli zásady platí pro jakékoli umístění, důvěryhodný síťových umístěních, která jsou pod kontrolou vašeho oddělení IT nebo konkrétní síťová umístění. Použití **vyloučit** kartu z této zásady vyloučit umístění v síti. 
@@ -76,7 +76,7 @@ Zásady podmíněného přístupu určuje aplikace nebo služby, které chcete c
       > [!TIP]  
       > Pokud chcete chránit i **moderní ověřování** klientů a **klientů protokolu Exchange ActiveSync**, vytvořte dva samostatné zásady podmíněného přístupu, jeden pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, je pouze podmínku, která je podporované protokolem Exchange ActiveSync platformy. Další podmínky, včetně služby Multi-Factor authentication, nejsou podporovány. Účinně chránit přístup k Exchangi Online z protokolu Exchange ActiveSync, vytvoření zásady podmíněného přístupu, který určuje cloudové aplikace Office 365 Exchange Online a klientské aplikace Exchange ActiveSync s použít zásady jenom na podporovaných platformách vybrali.
 
-9.  Vyberte **Done** (Hotovo).
+9. Vyberte **Done** (Hotovo).
 10. V části **Ovládací prvky přístupu** zvolte **Udělení**. Nakonfigurujte, co se stane, na základě podmínek, které jste nastavili.  Můžete vybrat jednu z následujících možností:
     - **Blokovat přístup**: Uživatelé, kteří jsou uvedeni v těchto zásadách bude odepřen přístup k aplikacím v rámci podmínek, které jste zadali.
     - **Udělení přístupu**: Uživatelé, kteří jsou uvedeni v těchto zásadách bude udělen přístup, ale můžete vyžadovat, aby všechny následující další akce:

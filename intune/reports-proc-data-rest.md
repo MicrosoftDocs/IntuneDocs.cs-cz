@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8445c20b658cc7a41ed5b53df16274dbbeda629
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 2f638a8b3816e775c043077a7ac31b3320496744
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494615"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528399"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -110,19 +110,19 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 #### <a name="add-the-information-used-to-request-the-token"></a>Přidání informací sloužících k vyžádání tokenu
 
-1.  Stáhněte si nástroj Postman, pokud ho už nemáte nainstalovaný. Ke stažení tohoto nástroje použijte adresu [www.getpostman](https://www.getpostman.com).
-2.  Otevřete nástroj Postman. Zvolte operaci HTTP typu **GET**.
-3.  Vložte do adresy adresu URL koncového bodu. Vypadá přibližně takto:  
+1. Stáhněte si nástroj Postman, pokud ho už nemáte nainstalovaný. Ke stažení tohoto nástroje použijte adresu [www.getpostman](https://www.getpostman.com).
+2. Otevřete nástroj Postman. Zvolte operaci HTTP typu **GET**.
+3. Vložte do adresy adresu URL koncového bodu. Vypadá přibližně takto:  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4.  Zvolte kartu **Authorization** (Autorizace) a v seznamu **Type** (Typ) vyberte **OAuth 2.0**.
-5.  Vyberte **získat nový přístupový Token**.
-6.  Ověřte, že jste do své aplikace v Azure už přidali adresu URL zpětného volání. Adresa URL zpětného volání je `https://www.getpostman.com/oauth2/callback`.
-7.  Do pole **Token Name** (Název tokenu) zadejte Bearer.
-8.  Přidejte **Auth URL** (Ověřovací adresa URL). Vypadá přibližně takto:  
+4. Zvolte kartu **Authorization** (Autorizace) a v seznamu **Type** (Typ) vyberte **OAuth 2.0**.
+5. Vyberte **získat nový přístupový Token**.
+6. Ověřte, že jste do své aplikace v Azure už přidali adresu URL zpětného volání. Adresa URL zpětného volání je `https://www.getpostman.com/oauth2/callback`.
+7. Do pole **Token Name** (Název tokenu) zadejte Bearer.
+8. Přidejte **Auth URL** (Ověřovací adresa URL). Vypadá přibližně takto:  
 
     `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
-9.  Přidejte **Access Token URL** (Adresa URL přístupového tokenu). Vypadá přibližně takto:  
+9. Přidejte **Access Token URL** (Adresa URL přístupového tokenu). Vypadá přibližně takto:  
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
@@ -141,8 +141,8 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Odeslání volání koncovému bodu pomocí nástroje Postman
 
-1.  Vyberte **Poslat**.
-2.  V textu odpovědi nástroje Postman se zobrazí návratová data.
+1. Vyberte **Poslat**.
+2. V textu odpovědi nástroje Postman se zobrazí návratová data.
 
     ![Stav klienta postman se rovná 200 OK](./media/reports-postman_200OK.png)
 

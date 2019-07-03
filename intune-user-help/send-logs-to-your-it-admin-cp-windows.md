@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9ecf976ea973fdb1a9b8025fec0bf49d7f87d0c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491131"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528767"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>E-mailem podpoře společnosti o problém z portálu společnosti pro Windows
 
@@ -32,7 +32,7 @@ Vaše řešení problémů s aplikací v aplikaci portál společnosti pro Windo
 Když požádáte o pomoc, předem vyplněná e-mailu se otevře, kde můžete problém podrobně popisují. Zahrnuje také diagnostický protokol ID. Pokud váš tým podpory nelze vyřešit problém, podle popisu, že budete pomoc od společnosti Microsoft. Microsoft bude potřebovat ID diagnostiky tak, aby odkazovaly aplikačních protokolech.   
 
 
-> [!Note]       
+> [!Note]
 > Po kliknutí na **pomoc**, portál společnosti bude automaticky odesílat protokoly na tým podpory společnosti Microsoft. Tento krok je aktivní jeden, který umožňuje snadněji odstraňovat potíže a řešit problémy, které jsou eskalován na podporu Microsoftu. Jak je uvedeno výše, tým podpory společnosti Microsoft možné dotyčného protokolů k e-mailu pomocí ID diagnostiky.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Co je diagnostický protokol?

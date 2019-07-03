@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 582b4615941dae8c2fc696ce5dfc87e2bbe4b98b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0c72fb6e7ace6c603410ff0ffc9a96e4a0ff528d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505025"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527633"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Instalace Mobile Threat Defense na zařízení s iOSem
 
@@ -38,12 +38,12 @@ Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstal
 
 Ochrana před mobilními hrozbami je způsob, jak můžou společnosti zajistit, aby vaše zařízení byla chráněná před aplikacemi, které by se mohly snažit odcizit informace společnosti. Přidání této ochrany vyžaduje, aby se službě ochrany před mobilními hrozbami, kterou vaše společnost používá, hlásily další informace o aplikacích v zařízeních. Společnost nevidí data ve vašich osobních aplikacích. Když použijete službu ochrany před mobilními hrozbami, všechny aplikace ve vašem zařízení se přidají k tomu, [co vaše společnost vidí](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md). Společnost vidí tyto části aplikace:
 
-*   App name (Název aplikace)
+* App name (Název aplikace)
 * ID aplikace: jedinečný název, který aplikaci identifikuje v App Storu
-*   Verze aplikace a zkrácené číslo verze: konkrétní čísla vydané verze aplikace
+* Verze aplikace a zkrácené číslo verze: konkrétní čísla vydané verze aplikace
 * Sada prostředků aplikace a dynamická velikost: množství místa, které aplikace v zařízení využívá
 * Platnost aplikace: jestli je aplikace schválená k používání
-*   Stav správy aplikace: jestli aplikaci spravuje společnost nebo jde o osobní aplikaci
+* Stav správy aplikace: jestli aplikaci spravuje společnost nebo jde o osobní aplikaci
 
 ## <a name="if-the-installation-doesnt-work"></a>Pokud instalace nefunguje
 

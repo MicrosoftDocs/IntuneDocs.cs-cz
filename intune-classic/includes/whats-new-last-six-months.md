@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ed4319c5d6cda035d690d9ffa55e74e8dc55a45d
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 328a35b314a7372d2e4cee950496e9bcd6b4fe34
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493822"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528098"
 ---
 ## <a name="april-2017"></a>Duben 2017
 
@@ -37,9 +37,9 @@ V aplikaci Portál společnosti pro iOS se teď budou zobrazovat nové a konkré
 #### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro aplikaci portál společnosti pro Windows 10 <!--676495-->
 
 Mezi nová vylepšení instalací aplikací uvedená v aplikaci Portál společnosti ve Windows 10 patří:
--   Rychlejší generování sestav o průběhu instalace pro balíčky MSI
--   Rychlejší generování sestav o průběhu instalace pro moderní aplikace na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
--   Nový indikátor průběhu pro všechny instalace moderních aplikací na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
+- Rychlejší generování sestav o průběhu instalace pro balíčky MSI
+- Rychlejší generování sestav o průběhu instalace pro moderní aplikace na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
+- Nový indikátor průběhu pro všechny instalace moderních aplikací na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
 
 Nový indikátor průběhu najdete na stránce[Co je nového v uživatelském rozhraní aplikací Intune](/intune/whats-new-app-ui).
 

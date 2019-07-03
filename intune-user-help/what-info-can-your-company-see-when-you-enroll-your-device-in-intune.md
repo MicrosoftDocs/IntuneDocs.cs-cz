@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f47d7e238bc810db9057a4a7c86dbfa523b0e7b
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: f2b67a356a58dcbca6b396b6cd01f4d53d228134
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174206"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529359"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Jaké informace moje organizace uvidí, když zaregistruji své zařízení?
 
@@ -34,7 +34,7 @@ Při registraci zařízení do Microsoft Intune nevidí organizace vaše osobní
 - Textové a e-mailové zprávy
 - Kontakty
 - Kalendář
--   Hesla
+- Hesla
 - Obrázky, včetně těch, které jsou ve fotografických aplikacích nebo mezi obrázky z fotoaparátu
 - Soubory
 

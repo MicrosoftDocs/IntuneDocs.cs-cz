@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb6c63cacfba26b58a0de6f70c4e4b93344ca562
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f1aac6c472cda5d0d9d9c12c98f792374065da49
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61503883"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528786"
 ---
 # <a name="upload-and-email-logs"></a>Nahrávání a e-mailu protokoly  
 
@@ -48,7 +48,7 @@ Podrobnosti o chybě skutečné se ukládají na zařízení ve speciálním dok
 5. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. V textu e-mailu popište problém, která byla napříč.    
 
 
- ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailu protokoly z aplikace pro Microsoft Intune   
+## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailu protokoly z aplikace pro Microsoft Intune   
 
 1.  V aplikaci Microsoft Intune existují dva způsoby, jak inicializovat e-mailová podpora.  
     * Z domovské obrazovky: Klepněte na **nabídky** > **pomáhají** > **získat podporu**.  

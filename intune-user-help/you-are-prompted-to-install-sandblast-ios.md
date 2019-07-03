@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd8934d3318459ecc7587a9c51bba9b6f744dbc7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8d4f957af4c05a66de4ce4ae7c233eda297153f8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505501"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527611"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-ios-device"></a>Na zařízení s iOSem je potřeba nainstalovat SandBlast Mobile Protect
 
@@ -29,7 +29,7 @@ Než budete moct začít pracovat, firemní podpora potřebuje, abyste nainstalo
 
 **Co je potřeba udělat:**
 
-1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace SandBlast Mobile Protect do zařízení.
+1. Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace SandBlast Mobile Protect do zařízení.
 
 2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 

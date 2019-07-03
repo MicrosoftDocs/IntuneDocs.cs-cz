@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2fe8a765bdb11d0b94dbbb7519360c6e7a01e8ce
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cbf3f053146d7243a397d0fb802718d48300ef20
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501234"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528710"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste zaregistrovali zařízení, ale pořád nemáte přístup k pracovním nebo školním e-mailům a souborům, zkuste tyto kroky pro řešení potíží.  

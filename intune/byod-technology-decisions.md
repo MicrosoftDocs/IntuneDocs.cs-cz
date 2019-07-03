@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3400169aab9598624216fcbc9ef7694e1d5441cc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c2e8c475cd52e199519db7a3d7ea83e6dbfef1a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045786"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530651"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Rozhodnutí o technologiích, která umožní používání vlastních zařízení uživatelů (BYOD), pomocí řešení Microsoft Enterprise Mobility + Security (EMS)
 
@@ -56,7 +56,7 @@ Jsme už zmínili, podmíněného přístupu, které jsou už můžete jednotka 
 
 * Uživatel, který se pokouší o přístup
 * Důvěryhodnost nebo nedůvěryhodnost umístění
-*   Úroveň rizika přihlášení
+* Úroveň rizika přihlášení
 * Platforma zařízení
 
 Řada organizací má ještě často specifická rizika, kterými se musí zabývat.  Následující tabulka obsahuje běžné problémy a reakce MDM a MAM na tyto problémy.

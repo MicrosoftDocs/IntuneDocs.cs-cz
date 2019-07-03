@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3566d144abad563ead64c124e128c221e725a25c
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a6dfce050726cfddadc493f73c91701021dc21ea
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045702"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529809"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Konektor lookout Mobile Endpoint Security s Intune
 
@@ -98,7 +98,7 @@ Zjišťuje ohrožení vaší sítě, například útoky prostředníkem, a zabra
 
 ## <a name="next-steps"></a>Další postup
 Tady jsou hlavní kroky, které je nutné provést při implementaci tohoto řešení:
-1.  [Nastavení integrace služby Lookout](lookout-mtd-connector-integration.md)
-2.  [Povolit Mobile Endpoint Security v Intune](mtd-connector-enable.md)
-3.  [Přidání a podepsání aplikace Lookout for Work](mtd-apps-ios-app-configuration-policy-add-assign.md)
-4.  [Konfigurace zásad dodržování předpisů zařízení služby Lookout](mtd-device-compliance-policy-create.md)
+1. [Nastavení integrace služby Lookout](lookout-mtd-connector-integration.md)
+2. [Povolit Mobile Endpoint Security v Intune](mtd-connector-enable.md)
+3. [Přidání a podepsání aplikace Lookout for Work](mtd-apps-ios-app-configuration-policy-add-assign.md)
+4. [Konfigurace zásad dodržování předpisů zařízení služby Lookout](mtd-device-compliance-policy-create.md)

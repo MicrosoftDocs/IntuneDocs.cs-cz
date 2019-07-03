@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: f87256580ce3a0e31ef86f15244f49046d9dd35e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454032"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530242"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 
 Můžete nastavit aplikaci pomocí Azure Active Directory (Azure AD) a ověřit ji přes Intune Data Warehouse. Tento proces je užitečný pro weby, aplikace a procesy na pozadí, kde by aplikace neměla mít přístup k přihlašovacím údajům uživatelů. Pomocí následujících kroků autorizujete aplikaci v Azure AD pomocí OAuth 2.0.
 
-## <a name="authorization"></a>Autorizace
+## <a name="authorization"></a>Authorization
 
 Azure Active Directory (Azure AD) používá standard OAuth 2.0 za účelem umožnění autorizace přístupu k webovým aplikacím a webovým rozhraním API v tenantovi Azure AD. Tento průvodce vám ukáže, jak ověřit aplikaci pomocí jazyka C#. Tok autorizačního kódu OAuth 2.0 je popsaný v oddíle 4.1 specifikace standardu OAuth 2.0. Další informace najdete v tématu [Autorizace přístupu k webovým aplikacím pomocí OAuth 2.0 a Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code).
 
@@ -41,18 +41,18 @@ Následující proces používá ke zpracování a převodu klíče aplikace pri
 
 V této části zadáte podrobnosti o webové aplikaci, na kterou byste chtěli ukázat v Intune. Webová aplikace představuje aplikaci klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Tento typ aplikace se samostatně udržuje na webu. Přístup do Intune můžete webové aplikaci udělit pomocí Intune. Tok dat iniciuje webová aplikace. 
 
-1.  Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2.  Pomocí pole **Hledat prostředky, služby a dokumenty** v horní části portálu Azure vyhledejte **Azure Active Directory**.
-3.  V rozevírací nabídce vyberte **Azure Active Directory** pod položkou **Služby**.
-4.  Vyberte **Registrace aplikací**.
-5.  Klikněte na možnost **Registrace nové aplikace**, která zobrazí okno **Vytvořit**.
-6.  V okně **Vytvořit** přidejte podrobnosti o aplikaci:
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
+2. Pomocí pole **Hledat prostředky, služby a dokumenty** v horní části portálu Azure vyhledejte **Azure Active Directory**.
+3. V rozevírací nabídce vyberte **Azure Active Directory** pod položkou **Služby**.
+4. Vyberte **Registrace aplikací**.
+5. Klikněte na možnost **Registrace nové aplikace**, která zobrazí okno **Vytvořit**.
+6. V okně **Vytvořit** přidejte podrobnosti o aplikaci:
 
     - Název aplikace, jako například *Ověřování v Intune pro aplikace*.
     - **Typ aplikace**. Zvolte **Webová aplikace / webové rozhraní API** a přidejte aplikaci, která představuje webovou aplikaci, webové rozhraní API nebo obojí.
     - **Přihlašovací adresa URL** aplikace. Je to umístění, na které uživatelé automaticky přejdou během procesu ověřování. Budou požádáni, aby prokázali svoji totožnost. Další informace najdete v článku [Co je přístup k aplikaci a jednotné přihlašování s Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis)
 
-7.  Klikněte na **Vytvořit** v dolní části okna **Vytvořit**.
+7. Klikněte na **Vytvořit** v dolní části okna **Vytvořit**.
 
     >[!NOTE] 
     > Zkopírujte **ID aplikace** z okna **Registrovaná aplikace** pro pozdější použití.
@@ -61,12 +61,12 @@ V této části zadáte podrobnosti o webové aplikaci, na kterou byste chtěli 
 
 V této části Azure AD vygeneruje hodnotu klíče pro vaši aplikaci.
 
-1.  V okně **Registrace aplikací** vyberte nově vytvořenou aplikaci, aby se zobrazilo okno aplikace.
-2.  V horní části okna vyberte **Nastavení**, aby se zobrazilo okno **Nastavení**.
-3.  V okně **Nastavení** vyberte **Klíče**.
-4.  Přidejte **popis** klíče, **konec platnosti** a **hodnotu** klíče.
-5.  Kliknutím na **Uložit** uložte a aktualizujte klíče aplikace.
-6.  Je nutné zkopírovat vygenerovanou hodnotu klíče (v kódování base64).
+1. V okně **Registrace aplikací** vyberte nově vytvořenou aplikaci, aby se zobrazilo okno aplikace.
+2. V horní části okna vyberte **Nastavení**, aby se zobrazilo okno **Nastavení**.
+3. V okně **Nastavení** vyberte **Klíče**.
+4. Přidejte **popis** klíče, **konec platnosti** a **hodnotu** klíče.
+5. Kliknutím na **Uložit** uložte a aktualizujte klíče aplikace.
+6. Je nutné zkopírovat vygenerovanou hodnotu klíče (v kódování base64).
 
     >[!NOTE] 
     > Hodnota klíče po opuštění okna **klíče** zmizí. Klíč nemůžete z tohoto okna načíst později. Zkopírujte si ho pro pozdější použití.
@@ -75,28 +75,28 @@ V této části Azure AD vygeneruje hodnotu klíče pro vaši aplikaci.
 
 V této části udělíte aplikacím oprávnění.
 
-1.  V okně **Nastavení** vyberte **Požadovaná oprávnění**.
-2.  Klikněte na **Přidat**.
-3.  Vyberte **Přidat rozhraní API**, aby se zobrazilo okno **Vyberte rozhraní API**.
-4.  Vyberte **Microsoft Intune API (MicrosoftIntuneAPI)** a pak v okně **Vyberte rozhraní API** klikněte na **Vybrat**. Je vybraný krok **Vybrat oprávnění** a zobrazené okno **Povolit přístup**.
-5.  Zvolte možnost **Získat informace o datovém skladu z Microsoft Intune** z části **Oprávnění aplikace**.
-6.  Klikněte na **Vybrat** v okně **Povolit přístup**.
-7.  Klikněte na **Hotovo** v okně **Přidat přístup přes rozhraní API**.
-8.  Klikněte na **Udělit oprávnění** v okně **Požadovaná oprávnění** a klikněte na **Ano**, pokud se zobrazí výzva k aktualizaci stávajících oprávnění, která tato aplikace už má.
+1. V okně **Nastavení** vyberte **Požadovaná oprávnění**.
+2. Klikněte na **Přidat**.
+3. Vyberte **Přidat rozhraní API**, aby se zobrazilo okno **Vyberte rozhraní API**.
+4. Vyberte **Microsoft Intune API (MicrosoftIntuneAPI)** a pak v okně **Vyberte rozhraní API** klikněte na **Vybrat**. Je vybraný krok **Vybrat oprávnění** a zobrazené okno **Povolit přístup**.
+5. Zvolte možnost **Získat informace o datovém skladu z Microsoft Intune** z části **Oprávnění aplikace**.
+6. Klikněte na **Vybrat** v okně **Povolit přístup**.
+7. Klikněte na **Hotovo** v okně **Přidat přístup přes rozhraní API**.
+8. Klikněte na **Udělit oprávnění** v okně **Požadovaná oprávnění** a klikněte na **Ano**, pokud se zobrazí výzva k aktualizaci stávajících oprávnění, která tato aplikace už má.
 
 ## <a name="generate-token"></a>Vygenerování tokenu
 
 Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework), který podporuje .NET Framework a používá C# jako kódovací jazyk.
 
-1.  Vyberte **Soubor** > **Nový** > **Projekt**. Zobrazí se dialogové okno **Nový projekt**.
-2.  Na levé straně vyberte **Visual C#** , aby se zobrazily všechny projekty rozhraní .NET Framework.
-3.  Vyberte **Konzolová aplikace (.NET Framework)** , přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
-4.  V **Průzkumníku řešení** vyberte **Program.cs**, aby se zobrazil kód.
-5.  V Průzkumníku řešení, přidejte odkaz na sestavení `System.Configuration`.
-6.  V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
-7.  Na levé straně v části **Visual C#** vyberte **Kód**.
-8.  Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.
-9.  V rámci metody <code>Main</code> přidejte následující kód:
+1. Vyberte **Soubor** > **Nový** > **Projekt**. Zobrazí se dialogové okno **Nový projekt**.
+2. Na levé straně vyberte **Visual C#** , aby se zobrazily všechny projekty rozhraní .NET Framework.
+3. Vyberte **Konzolová aplikace (.NET Framework)** , přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
+4. V **Průzkumníku řešení** vyberte **Program.cs**, aby se zobrazil kód.
+5. V Průzkumníku řešení, přidejte odkaz na sestavení `System.Configuration`.
+6. V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
+7. Na levé straně v části **Visual C#** vyberte **Kód**.
+8. Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.
+9. V rámci metody <code>Main</code> přidejte následující kód:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();

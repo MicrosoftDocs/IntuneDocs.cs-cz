@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c89e134c70ad4fa5f97625a4dbfb3ce215a9477
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: cbd73d22c2e42f0a379ec2a97179f9e3c4dec224
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494411"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512108"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -35,7 +35,7 @@ Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udr
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Jak získat sdílený svazek clusteru pro Import do služby Intune
 
-Projděte si vysvětlující powershellovou rutinu, která vám poskytne další informace o tom, jak tuto funkci používat.
+Další infomration naleznete v tématu Principy rutiny powershellu.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 
@@ -47,8 +47,9 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 
     ![Snímek obrazovky se zařízeními Windows Autopilot](media/enrollment-autopilot/autopilot-import-device.png)
 
-2. V části **Přidat zařízení Windows AutoPilot** přejděte na soubor CSV se seznamem zařízení, která chcete přidat. Soubor CSV zveřejnit sériová čísla, volitelné ID produktu Windows, hodnoty hash hardwaru a značky volitelnou skupinu zařízení. Můžete mít až 500 řádků v seznamu. Použijte záhlaví a řádek formát je uvedeno níže: `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag`
-    `<serialNumber>,<optionalProductID>,<hardwareHash>,<optionalGroupTag>`
+2. V části **Přidat zařízení Windows AutoPilot** přejděte na soubor CSV se seznamem zařízení, která chcete přidat. Soubor CSV zveřejnit sériová čísla, ID produktu Windows, hodnoty hash hardwaru a volitelnou skupinu značky, přiřazené uživatele a pořadí identifikátory zařízení. Můžete mít až 500 řádků v seznamu. Použijte záhlaví a řádek formát je uvedeno níže:
+
+    `Device Serial Number,Windows Product ID,Hardware Hash,Group Tag,Assigned User, Order ID``<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>,<optionalOrderID>`
 
     ![Snímek obrazovky s přidáním zařízení Windows Autopilot](media/enrollment-autopilot/autopilot-import-device2.png)
 
@@ -69,7 +70,7 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
     Zařízení Autopilot, která ještě nejsou zaregistrovaná, jsou zařízení, jejichž název se rovná sériovému číslu zařízení.
 4. Pokud jste výše pro **Typ členství** zvolili **Dynamické zařízení**, potom v okně **Skupina** zvolte **Členové s dynamickými zařízeními** a do pole **Pokročilé pravidlo** zadejte některý z následujících kódů.
     - Pokud chcete vytvořit skupinu, která zahrnuje všechna zařízení Autopilot, zadejte: `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`
-    - Pole značky skupiny Intune se mapuje na atribut ID objednávky zařízení Azure AD. Pokud chcete vytvořit skupinu, která obsahuje všechna svá zařízení Autopilot tag(OrderID) konkrétní skupiny je nutné zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Pole značky skupiny Intune se mapuje na atribut ID objednávky zařízení Azure AD. Pokud chcete vytvořit skupinu, která obsahuje všechna svá zařízení Autopilot tag(OrderID) konkrétní skupiny, je nutné zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Pokud chcete vytvořit skupinu, která obsahuje všechna vaše zařízení Autopilot s konkrétním ID nákupní objednávky, zadejte: `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`
     
     Po přidání kódu do pole **Pokročilé pravidlo** zvolte **Uložit**.

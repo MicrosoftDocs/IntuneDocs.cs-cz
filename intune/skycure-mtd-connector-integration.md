@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f5eb5c6e8e454f6558aff7247f8ac10b7a5393
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1cab7957a0de1b26a6e172fc696cf887d5fe3916
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040563"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528379"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -87,7 +87,7 @@ Je potřeba přidat skupinu zabezpečení služby Azure AD, která obsahuje vše
 
 -  Zadejte a vyberte všechny skupiny zabezpečení zařízení, na kterých běží aplikace SEP Mobile a následně změny uložte.
 
-    ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)   
+    ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)
 
 Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služba ochrany před mobilními hrozbami, se skupinami zabezpečení Azure AD.
 
@@ -126,25 +126,25 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 4. Do pole **Directory ID** (ID adresáře) vložte identifikátor adresáře, který jste zkopírovali z Azure Active Directory v předchozí části, a uložte nastavení.
 
-    ![Obrázek znázorňující ID adresáře na portálu SEP Mobile](./media/symantec-portal-directory-ID.png)     
+    ![Obrázek znázorňující ID adresáře na portálu SEP Mobile](./media/symantec-portal-directory-ID.png)
 
 5. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **Basic Setup** (Základní nastavení).
 
 6. Vedle **iOS App** (Aplikace pro iOS) zvolte tlačítko **Add to Active Directory** (Přidat do AD).
 
-    ![Obrázek znázorňující přidání aplikace pro iOS do Active Directory](./media/symantec-portal-basic-add.png)   
+    ![Obrázek znázorňující přidání aplikace pro iOS do Active Directory](./media/symantec-portal-basic-add.png)
 
-7.  Přihlaste se pomocí přihlašovacích údajů Azure Active Directory pro účet Office 365, který spravuje adresář.
+7. Přihlaste se pomocí přihlašovacích údajů Azure Active Directory pro účet Office 365, který spravuje adresář.
 
-8.  Pomocí tlačítka **Accept** (Přijmout) přidejte aplikaci SEP Mobile pro iOS do Azure Active Directory.
+8. Pomocí tlačítka **Accept** (Přijmout) přidejte aplikaci SEP Mobile pro iOS do Azure Active Directory.
 
-    ![Obrázek znázorňující tlačítko Přijmout](./media/symantec-portal-basic-accept.png)     
+    ![Obrázek znázorňující tlačítko Přijmout](./media/symantec-portal-basic-accept.png)
 
-9.  Stejný postup zopakujte pro **aplikaci pro Android** a **aplikaci pro správu**.
+9. Stejný postup zopakujte pro **aplikaci pro Android** a **aplikaci pro správu**.
 
 10. Vyberte všechny skupiny uživatelů, kteří potřebují používat aplikace SEP Mobile, například skupinu zabezpečení, kterou jste vytvořili.
 
-    ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)   
+    ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)
 
 11.  SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **Full Integration** (Úplná integrace).
 

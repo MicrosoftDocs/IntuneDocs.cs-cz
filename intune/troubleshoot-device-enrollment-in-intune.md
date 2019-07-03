@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046299"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528749"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží s registrací zařízení v Microsoft Intune
 
@@ -34,10 +34,10 @@ Tento článek nabízí návrhy pro řešení potíží s [registrace zařízen�
 
 Než začnete řešit potíže, ujistěte se, že jste správně nakonfigurovali Intune pro povolení registrace. Můžete si prostudovat informace o těchto požadavcích na konfiguraci:
 
--   [Příprava registrace zařízení v Microsoft Intune](setup-steps.md)
--   [Nastavení správy zařízení s iOSem a Mac OS](ios-enroll.md)
--   [Nastavení správy pro zařízení s Windows](windows-enroll.md)
--   [Nastavení správy zařízení s Androidem](android-enroll.md) – nejsou třeba žádné další kroky
+- [Příprava registrace zařízení v Microsoft Intune](setup-steps.md)
+- [Nastavení správy zařízení s iOSem a Mac OS](ios-enroll.md)
+- [Nastavení správy pro zařízení s Windows](windows-enroll.md)
+- [Nastavení správy zařízení s Androidem](android-enroll.md) – nejsou třeba žádné další kroky
 
 Můžete také zkontrolovat správné nastavení času a data na zařízení uživatele:
 
@@ -176,7 +176,7 @@ Software Samsung Smart Manager, který se dodává s některými zařízeními S
 
 **Řešení 2:**
 
-Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)** > **About device (O zařízení)** > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
+Řekněte uživatelům, aby se pokusili upgradovat na Android 6.0. Problém s deaktivací neplatí pro zařízení s Androidem 6.0. Pokud chcete zkontrolovat, jestli je k dispozici aktualizace, přejděte na **Settings (Nastavení)**  > **About device (O zařízení)**  > **Download updates manually (Stáhnout aktualizace ručně)** a dále postupujte podle pokynů.
 
 **Řešení 3:**
 
@@ -236,15 +236,15 @@ Příčinou chyby certifikátu je, že zařízení s Androidem vyžadují zahrnu
 
 Pokud chcete problém vyřešit, naimportujte certifikáty do osobních certifikátů počítačů na serveru nebo proxy serverech AD FS následujícím způsobem:
 
-1.  Na serveru ADFS a proxy serveru klikněte pravým tlačítkem myši na **Start** > **Spustit** > **certlm.msc** a spusťte konzolu pro správu certifikátů místního počítače.
-2.  Rozbalte **Osobní** a zvolte **Certifikáty**.
-3.  Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
-4.  Zvolte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
-5.  U každého nadřazeného certifikátu zvolte **Zobrazit certifikát**.
-6.  Zvolte **Podrobnosti** > **Kopírovat do souboru**.
-7.  Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč nadřazeného certifikátu do umístění souborů podle vlastního výběru.
-8.  Klikněte pravým tlačítkem myši na **Certifikáty** > **Všechny úkoly** > **Importovat**.
-9.  Postupujte podle pokynů průvodce a naimportujte nadřazené certifikáty do **Místní počítač\Osobní\Certifikáty**.
+1. Na serveru ADFS a proxy serveru klikněte pravým tlačítkem myši na **Start** > **Spustit** > **certlm.msc** a spusťte konzolu pro správu certifikátů místního počítače.
+2. Rozbalte **Osobní** a zvolte **Certifikáty**.
+3. Najděte certifikát pro vaši komunikaci služby AD FS (veřejně podepsaný certifikát) a poklikáním zobrazte jeho vlastnosti.
+4. Zvolte kartu **Cesta k certifikátu**, kde uvidíte nadřazené certifikáty certifikátu.
+5. U každého nadřazeného certifikátu zvolte **Zobrazit certifikát**.
+6. Zvolte **Podrobnosti** > **Kopírovat do souboru**.
+7. Postupujte podle pokynů průvodce a vyexportujte nebo uložte veřejný klíč nadřazeného certifikátu do umístění souborů podle vlastního výběru.
+8. Klikněte pravým tlačítkem myši na **Certifikáty** > **Všechny úkoly** > **Importovat**.
+9. Postupujte podle pokynů průvodce a naimportujte nadřazené certifikáty do **Místní počítač\Osobní\Certifikáty**.
 10. Restartujte servery AD FS.
 11. Výše uvedené kroky zopakujte na všech serverech a proxy serverech AD FS.
 
@@ -284,7 +284,7 @@ Následující tabulka obsahuje chyby, které se můžou koncovým uživatelům 
 
 **Řešení:** Následující řešení sdílejte s koncovými uživateli k jim pomůžou znovu získat přístup k firemním prostředkům.
 
-Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...**). ).
+Když uživatel spustí aplikaci Portál společnosti v iOSu, aplikace mu sdělí, jestli zařízení ztratilo kontakt s Intune. Pokud aplikace zjistí, že zařízení nemá kontakt, pokusí se automaticky synchronizovat s Intune a znovu se připojit (uživateli se zobrazí zpráva **Probíhá pokus o synchronizaci...** ). ).
 
   ![Oznámení Probíhá pokus o synchronizaci](./media/troubleshoot-device-enrollment-in-intune/ios_cp_app_trying_to_sync_notification.png)
 

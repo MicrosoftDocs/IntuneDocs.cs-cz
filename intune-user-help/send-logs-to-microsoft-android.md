@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52f6caf8e48cd9781648acf1de0152ec107d5246
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0001175b84c2548c1fb93090f9ce6fd3193f21a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61503934"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528929"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Odeslání protokolů ze zařízení s Androidem vývojářům Portálu společnosti
 

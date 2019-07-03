@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 945e597556c7d0c43000ccf659b7b6e088661cff
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504489"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528950"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -42,7 +42,7 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Zvolte **Resetovat heslo**. Pokud se v horní části stránky možnost pro heslo nezobrazuje, vyberte **Více (…)** > **Resetovat heslo**.   
+3. Zvolte **Resetovat heslo**. Pokud se v horní části stránky možnost pro heslo nezobrazuje, vyberte **Více (…)**  > **Resetovat heslo**.   
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)   
 
@@ -79,7 +79,7 @@ V této části najdete chování při resetování hesla a vytvoření dočasn�
 **iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, je potřeba ho nastavit znovu.  
 
 **Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmena a číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
-    
+
 **Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo tvořené čísla.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

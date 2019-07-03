@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0b61771385923af05c656f04e4257176b72ee35
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6bfd8496061b4b3aba2589b73c3e98bce94a5011
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504056"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528645"
 ---
 # <a name="sign-in-to-company-portal"></a>Přihlaste se k portálu společnosti  
 
@@ -57,13 +57,13 @@ Následující kroky ukazují snímky obrazovky z portálu společnosti pro iOS.
 
 ## <a name="sign-in-with-certificate-based-authentication"></a>Přihlaste se pomocí ověřování prostřednictvím certifikátu
 
-1.  Na svém zařízení otevřete aplikaci Portál společnosti.  
+1. Na svém zařízení otevřete aplikaci Portál společnosti.  
 
-2.  Zadejte svůj **Pracovní nebo školní účet**.  
+2. Zadejte svůj **Pracovní nebo školní účet**.  
 
-3.  Klepněte na odkaz **Přihlásit se pomocí certifikátu**.  
+3. Klepněte na odkaz **Přihlásit se pomocí certifikátu**.  
 
-4.  Klepnutím na **Pokračovat** certifikát použijte.  
+4. Klepnutím na **Pokračovat** certifikát použijte.  
 
 ## <a name="sign-in-from-another-device"></a>Přihlášení z jiného zařízení
 

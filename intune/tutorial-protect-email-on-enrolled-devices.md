@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f3d51cfbacfa8ef380531f91e058717cf51d089
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044146"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530740"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních
 Informace o používání zásad dodržování předpisů zařízením s podmíněným přístupem abyste měli jistotu, že zařízení s Iosem můžete přístup k e-mailu Exchange Online pouze v případě, že jsou spravovaná přes Intune a používání aplikace schválené e-mailu. 
@@ -47,19 +47,19 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce n
 ## <a name="create-the-ios-device-compliance-policy"></a>Vytvoření zásady dodržování předpisů zařízením s iOSem
 Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro účely tohoto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s iOSem. Zásady dodržování předpisů jsou pro jednotlivé platformy specifické, a proto potřebujete samostatnou zásadu dodržování předpisů pro každou platformu zařízení, kterou chcete vyhodnotit.
 
-1.  V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
-2.  Jako **Název** zadejte **Test dodržování předpisů zařízením s iOSem**. 
-3.  Jako **Popis** zadejte **Test dodržování předpisů zařízením s iOSem**.
-4.  U možnosti **Platforma** vyberte **iOS**. 
-5.  Vyberte **Nastavení** > **E-mail**. 
+1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
+2. Jako **Název** zadejte **Test dodržování předpisů zařízením s iOSem**. 
+3. Jako **Popis** zadejte **Test dodržování předpisů zařízením s iOSem**.
+4. U možnosti **Platforma** vyberte **iOS**. 
+5. Vyberte **Nastavení** > **E-mail**. 
      
     1.  Vedle možnosti **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil** vyberte **Vyžadovat**.
     2. Vyberte **OK**.
 
     ![Nastavení zásad dodržování předpisů e-mailem, které vyžadují spravovaný e-mailový profil](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
     
-6.  Vyberte **Stav zařízení**. Vedle možnosti **Zařízení s jailbreakem** vyberte **Blokovat** a potom vyberte **OK**.
-7.  Vyberte **Zabezpečení systému** a zadejte nastavení **hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
+6. Vyberte **Stav zařízení**. Vedle možnosti **Zařízení s jailbreakem** vyberte **Blokovat** a potom vyberte **OK**.
+7. Vyberte **Zabezpečení systému** a zadejte nastavení **hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
      
     - U možnosti **Vyžadovat heslo k odemknutí mobilních zařízení** vyberte **Vyžadovat**.
     - U možnosti **Jednoduchá hesla** vyberte **Blokovat**.
@@ -71,16 +71,16 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
  
     ![Nastavení hesla pro zásady dodržování předpisů e-mailem](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-system-security.png)
 
-8.  Vyberte **OK** a potom znovu vyberte **OK**.
-9.  Vyberte **Vytvořit**.
+8. Vyberte **OK** a potom znovu vyberte **OK**.
+9. Vyberte **Vytvořit**.
 
 ## <a name="create-the-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu
 Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny platformy zařízení k registraci v Intune a dodržovat naše zásady dodržování předpisů Intune předtím, než získají přístup k Exchangi Online. Pro přístup k e-mailu budeme také vyžadovat aplikaci Outlook. Zásady podmíněného přístupu se dají konfigurovat v portálu Azure AD nebo na portálu Intune. Vzhledem k tomu, že se už nacházíme na portálu Intune, vytvoříme zásadu zde.
-1.  V Intune, vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.
+1. V Intune, vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.
 1.  Jako **Název** zadejte **Testovací zásada pro e-mail Office 365**. 
-3.  V části **Přiřazení** vyberte **Uživatelé a skupiny**. Na kartě **Zahrnout** vyberte **Všichni uživatelé** a vyberte **Hotovo**.
+3. V části **Přiřazení** vyberte **Uživatelé a skupiny**. Na kartě **Zahrnout** vyberte **Všichni uživatelé** a vyberte **Hotovo**.
 
-4.  V části **Přiřazení** vyberte **Cloudové aplikace**. Protože chceme chránit e-mail Office 365 se službou Exchange Online, vybereme ho následujícím postupem:
+4. V části **Přiřazení** vyberte **Cloudové aplikace**. Protože chceme chránit e-mail Office 365 se službou Exchange Online, vybereme ho následujícím postupem:
      
     1. Na kartě **Zahrnout** zvolte **Vybrat aplikace**.
     2. Zvolte **Vybrat**. 
@@ -89,7 +89,7 @@ Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny pl
   
     ![Výběr aplikace Office 365 se službou Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-apps.png)
 
-5.  V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
+5. V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
      
     1. V části **Konfigurovat** vyberte **Ano**.
     2. Na **zahrnout** kartu, vyberte možnost **jakékoli zařízení**a pak vyberte **provádí**. 
@@ -97,7 +97,7 @@ Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny pl
    
     ![Výběr aplikace Office 365 se službou Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-cloud-device-platforms.png)
 
-6.  V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**.
+6. V části **Přiřazení** vyberte **Podmínky** > **Klientské aplikace**.
      
     1. V části **Konfigurovat** vyberte **Ano**.
     2. Pro účely tohoto kurzu vyberte **Mobilní aplikace a desktopoví klienti** a **Klienti moderního ověřování** (týká se aplikací, jako jsou Outlook pro iOS a Outlook pro Android). Zaškrtnutí všech ostatních políček zrušte.
@@ -105,7 +105,7 @@ Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny pl
     
     ![Výběr aplikace Office 365 se službou Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-client-apps.png)
 
-7.  V části **Ovládací prvky přístupu** zvolte **Udělení**. 
+7. V části **Ovládací prvky přístupu** zvolte **Udělení**. 
      
     1. V podokně **Udělení** vyberte **Udělit přístup**.
     2. Vyberte **Vyžadovat, aby zařízení bylo označené jako vyhovující**. 
@@ -115,11 +115,11 @@ Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny pl
      
     ![Výběr aplikace Office 365 se službou Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-grant-access.png)
 
-8.  V části **Povolit zásadu** vyberte **Zapnuto**.
+8. V části **Povolit zásadu** vyberte **Zapnuto**.
      
     ![Výběr aplikace Office 365 se službou Exchange Online](media/tutorial-protect-email-on-enrolled-devices/ios-ca-policy-enable-policy.png)
 
-9.  Vyberte **Vytvořit**.
+9. Vyberte **Vytvořit**.
 
 ## <a name="try-it-out"></a>Vyzkoušet
 S vytvořenými zásadami se budou všechna zařízení s iOSem, která se pokusí o přihlášení k e-mailu Office 365, muset zaregistrovat v Intune a používat mobilní aplikaci Outlook pro iOS. Pokud chcete tento scénář otestovat na zařízení s iOSem, zkuste se přihlásit k Exchangi Online pomocí přihlašovacích údajů uživatele v testovacím tenantovi. Zobrazí se výzva k registraci zařízení a k instalaci mobilní aplikace Outlook.
@@ -133,9 +133,9 @@ S vytvořenými zásadami se budou všechna zařízení s iOSem, která se pokus
 Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 1. Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo jako správce služby Intune.
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady**.
-3. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku (**...**) a potom vyberte **Odstranit**. Vyberte **OK**. Tím akci potvrdíte.
+3. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku ( **...** ) a potom vyberte **Odstranit**. Vyberte **OK**. Tím akci potvrdíte.
 4. Vyberte **Podmíněný přístup** > **Zásady**.
-5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku (**...**) a potom vyberte **Odstranit**. Odstranění potvrďte výběrem **Ano**.
+5. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku ( **...** ) a potom vyberte **Odstranit**. Odstranění potvrďte výběrem **Ano**.
 
- ## <a name="next-steps"></a>Další postup 
+## <a name="next-steps"></a>Další postup 
 V tomto kurzu jste vytvořili zásady, které vyžadují, aby se zařízení s iOSem zaregistrovala v Intune a používala aplikaci Outlook pro přístupu k e-mailu Exchange Online. Další informace o používání služby Intune s podmíněným přístupem pro ochranu dalších aplikací a služeb, včetně klientů protokolu Exchange ActiveSync pro Office 365 Exchange Online, najdete v článku [nastavit podmíněný přístup](conditional-access.md).

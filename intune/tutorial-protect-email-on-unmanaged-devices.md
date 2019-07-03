@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046285"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528679"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Kurz: Ochrana Exchange Online e-mailu na nespravovaných zařízeních
 
@@ -74,7 +74,7 @@ Pro účely tohoto kurzu nastavíme zásady ochrany aplikací Intune pro aplikac
 
     Vyberte **OK** se vraťte do okna nastavení.  
 
-7.  V podokně nastavení vyberte **OK**a potom v podokně zásady vytvořit zvolte **vytvořit**.
+7. V podokně nastavení vyberte **OK**a potom v podokně zásady vytvořit zvolte **vytvořit**.
 
 Vytvoření zásady ochrany aplikací pro aplikaci Outlook. Budete dále nastavit podmíněný přístup k vyžaduje zařízení, aby používali aplikaci Outlook.
 
@@ -188,5 +188,5 @@ Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 4. Vyberte **Podmíněný přístup** > **Zásady**.  
 5. V **Název_zásady** seznamu, vyberte příslušnou kontextovou nabídku ( **...** ) pro každý testovací zásady, a pak vyberte **odstranit**. Odstranění potvrďte výběrem **Ano**.  
 
- ## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další postup  
 V tomto kurzu jste vytvořili zásady ochrany aplikací a omezit, co může uživatel provést s aplikací Outlook a vytvoříte zásady podmíněného přístupu a vyžadovat aplikace Outlook a vyžadovat vícefaktorové ověřování pro moderní ověřování klientů. Další informace o použití Intune k ochraně ostatním aplikacím a službám s podmíněným přístupem najdete v tématu [nastavit podmíněný přístup](conditional-access.md).

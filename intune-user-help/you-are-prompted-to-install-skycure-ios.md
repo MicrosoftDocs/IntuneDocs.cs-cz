@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daeaaac7fb554e2c29f6ac150eaff8308d670b0
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 13a12da72577edfee1d6ba23c2cd5e56d1fe397e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504940"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527576"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-ios-device"></a>Instalace aplikace Symantec Endpoint Protection Mobile na zařízení s iOSem
 
@@ -29,7 +29,7 @@ Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstal
 
 ## <a name="what-you-need-to-do"></a>Co je potřeba udělat:
 
-1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace SEP Mobile na svoje zařízení.
+1. Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** povolte instalaci aplikace SEP Mobile na svoje zařízení.
 
 2. Když se zobrazí následující zpráva, klepněte na **Nastavení**, zapněte **Polohové služby** a pak klepněte na **Pokračovat**.
 

@@ -17,21 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9a225fbffda25b8d077c3b2be271e86d3e6c85e
-ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
+ms.openlocfilehash: 50574a2d3dc4ba5731b1a90f563ddd1a08e7f833
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500597"
+ms.locfileid: "67529634"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge v Microsoft Intune
 
 Zásady ochrany aplikací pomocí Microsoft Edge můžete Ujistěte se, že firemní websites jsou vždycky přistupovat pomocí bezpečnostní opatření na místě. K dispozici jsou následující funkce enterprise Microsoft Edge povolené prostřednictvím zásad v Intune. Tyto podnikové funkce patří:
 
-1.  **Dual-Identity** – uživatelé můžou přidávat i pracovní účet, stejně jako osobní účet, pro procházení. Je zcela oddělit mezi dvěma identity, které se podobá architektuře a zkušeností v Office 365 a Outlook. Správci Intune budou moct nastavit zásady požadovaného pro chráněné procházení v rámci pracovního účtu.
-2.  **Integrace zásad ochrany aplikací Intune** – od Microsoft Edge je integrovaná se sadou Intune SDK, můžete cílit na zásady ochrany aplikací pro zajištění ochrany před ztrátou dat. Mezi tyto možnosti patří ovládací prvek operací vyjmutí, kopírování, vložení, prevenci obrazovky zachytí a zajistit, že uživatel vybral odkazy otevřít jenom v ostatních spravovaných aplikací.
-3.  **Integrace Azure Application Proxy** – můžete řídit přístup k aplikacím SaaS a webových aplikací, což pomáhá zaručit založené na prohlížeči jenom aplikace spusťte v zabezpečené prohlížeč Microsoft Edge, koncoví uživatelé připojit z podnikové sítě nebo připojení z Internetu .
-4.  **Konfigurace aplikace** – můžete využít nastavení konfigurace aplikace k posílení stavu zabezpečení organizace a konfiguraci snadné použití funkcí pro koncové uživatele. Můžete například definovat záložky, místní domovské stránky, povoleno/zablokováno servery, Proxy aplikací Azure a další.
+1. **Dual-Identity** – uživatelé můžou přidávat i pracovní účet, stejně jako osobní účet, pro procházení. Je zcela oddělit mezi dvěma identity, které se podobá architektuře a zkušeností v Office 365 a Outlook. Správci Intune budou moct nastavit zásady požadovaného pro chráněné procházení v rámci pracovního účtu.
+2. **Integrace zásad ochrany aplikací Intune** – od Microsoft Edge je integrovaná se sadou Intune SDK, můžete cílit na zásady ochrany aplikací pro zajištění ochrany před ztrátou dat. Mezi tyto možnosti patří ovládací prvek operací vyjmutí, kopírování, vložení, prevenci obrazovky zachytí a zajistit, že uživatel vybral odkazy otevřít jenom v ostatních spravovaných aplikací.
+3. **Integrace Azure Application Proxy** – můžete řídit přístup k aplikacím SaaS a webových aplikací, což pomáhá zaručit založené na prohlížeči jenom aplikace spusťte v zabezpečené prohlížeč Microsoft Edge, koncoví uživatelé připojit z podnikové sítě nebo připojení z Internetu .
+4. **Konfigurace aplikace** – můžete využít nastavení konfigurace aplikace k posílení stavu zabezpečení organizace a konfiguraci snadné použití funkcí pro koncové uživatele. Můžete například definovat záložky, místní domovské stránky, povoleno/zablokováno servery, Proxy aplikací Azure a další.
 Zásady ochrany společnosti Microsoft Intune pro Microsoft Edge pomáhají chránit data vaší organizace a prostředky. Pomocí těchto zásad Microsoft Edge zajišťuje, že prostředkům vaší společnosti chráněni nejen v rámci nativně nainstalovaných aplikací, ale také při přístupu prostřednictvím webového prohlížeče.
 
 ## <a name="getting-started"></a>Začínáme
@@ -115,8 +115,8 @@ Následující postup slouží k vytvoření konfigurace aplikace chráněné pr
     > [!NOTE]
     > Microsoft Edge používá stejné dvojice klíč-hodnota jako Managed Browser. 
 
-8.  Po dokončení klikněte na **OK**.
-9.  V okně **Přidat zásady konfigurace** zvolte **Přidat**.<br>
+8. Po dokončení klikněte na **OK**.
+9. V okně **Přidat zásady konfigurace** zvolte **Přidat**.<br>
     Nová konfigurace se vytvoří a zobrazí na **konfigurace aplikace** okno.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>Přiřazení vytvořeného nastavení aplikace 
@@ -182,7 +182,7 @@ Pro usnadnění přístupu můžete nakonfigurovat záložek, které chcete vaš
 
 Ke konfiguraci spravovaných záložky použijte následující dvojici klíč/hodnota:
 
-|    Klíč    |    Hodnota    |
+|    Klíč    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota pro tuto konfiguraci je seznam záložek. Každou záložku tvoří název záložky a adresa URL záložky. Oddělení název a adresu URL `|` znak.      **Příklad:**<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každý pár těmito dvěma znaky `||`.<p>**Příklad:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
@@ -190,7 +190,7 @@ Ke konfiguraci spravovaných záložky použijte následující dvojici klíč/h
 
 Ve výchozím nastavení se uživatelům zobrazí MyApps weby, které jsou nakonfigurované k nim v rámci složky uvnitř záložky Microsoft Edge. Složku se popisek s názvem vaší organizace.
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota TRUE** ukazuje MyApps v rámci záložek Microsoft Edge.<p>**False** skryje MyApps v rámci Microsoft Edge.    |
 

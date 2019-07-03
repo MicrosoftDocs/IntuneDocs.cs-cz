@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e8ebc708f76ed1f55f512edda75206d3ed5890a0
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043915"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530729"
 ---
 # <a name="troubleshoot-conditional-access"></a>Řešení potíží s podmíněným přístupem
 
@@ -35,8 +35,8 @@ Podmíněný přístup fungoval, musí být splněny následující požadavky:
 - Zařízení musí být zaregistrované a spravované pomocí Intune.
 - Uživatel i zařízení musí vyhovovat přiřazeným zásadám dodržování předpisů Intune.
 - Uživateli se standardně musí přiřadit zásady dodržování předpisů pro zařízení. To může záviset na konfiguraci nastavení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** v části **Dodržování předpisů zařízením** > **Nastavení zásad dodržování předpisů** na portálu pro správu Intune.
--   Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. V zařízeních se systémy iOS, Windows Phone a Android se to provede automaticky.
--   Intune Exchange Connector musí být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
+- Pokud uživatel nepoužívá Outlook, ale nativního poštovního klienta daného zařízení, musí být v zařízení aktivovaný protokol Exchange ActiveSync. V zařízeních se systémy iOS, Windows Phone a Android se to provede automaticky.
+- Intune Exchange Connector musí být správně nakonfigurovaný. Další informace najdete v tématu [Odstraňování potíží Exchange Connectoru v Microsoft Intune](troubleshoot-exchange-connector.md).
 
 Tyto podmínky si můžete prohlédnout u každého zařízení na webu Azure Portal a v inventární sestavě zařízení.
 

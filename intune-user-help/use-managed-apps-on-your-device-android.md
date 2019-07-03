@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3a477f24f2678b5b4c8830819d1410eb8525220
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: bf53266449911967ae8fb89d240274b04164fe96
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505484"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511755"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
@@ -57,12 +57,12 @@ Existují tři způsoby, jak získat spravovaných aplikací.
 * Aplikaci si nainstalujete z obchodu Google Play a pak se do ní přihlásíte pod svým pracovním nebo školním účtem.    
 * Organizace zpřístupní spravované aplikace na Portálu společnosti. Přejděte do aplikace portál společnosti nebo webu můžou vyhledávat, zobrazit a instalovat dostupné aplikace. Další informace o těchto aplikací, najdete v další části [dostupné aplikace](#available-apps).  
 
- ### <a name="available-apps"></a>Dostupné aplikace   
+### <a name="available-apps"></a>Dostupné aplikace   
  Vaše organizace můžete vybrat aplikace, které jsou vhodné a užitečné pro vás v práci nebo škole a zpřístupnit je pro vás v aplikaci portál společnosti.  
 
  Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Android, budete mít přístup do aplikace pro Android, ale ne aplikace pro iOS.   
 
- ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
+## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
  Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v jedné aplikaci **kontakt na IT** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  

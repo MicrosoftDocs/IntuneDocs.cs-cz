@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e458558d488c9bbca2c2ed78255be103a5ac79f0
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 3cfe2aef93fb8b7c420ee6513945f11bee5bd0be
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494389"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529719"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatnou službu Intune – Správa aplikací Win32
 
@@ -98,28 +98,28 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 ### <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3.  V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
-4.  V **přidat** podokno aplikace, vyberte **aplikace Windows (Win32)** ze zadané rozevíracího seznamu.
+3. V podokně **Intune** vyberte **Klientské aplikace** > **Aplikace** > **Přidat**.
+4. V **přidat** podokno aplikace, vyberte **aplikace Windows (Win32)** ze zadané rozevíracího seznamu.
 
     ![Snímek obrazovky okna Přidat aplikaci – přidat typ rozevírací seznam pole](./media/apps-win32-app-01.png)
 
 ### <a name="step-2-upload-the-app-package-file"></a>Krok 2: Nahrát soubor balíčku aplikace
 
-1.  V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace** a vyberte soubor. Zobrazí se podokno Soubor balíčku aplikace.
+1. V podokně **Přidat aplikaci** zvolte **Soubor balíčku aplikace** a vyberte soubor. Zobrazí se podokno Soubor balíčku aplikace.
 
     ![Snímek obrazovky okna soubor balíčku aplikace](./media/apps-win32-app-02.png)
 
-2.  V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou *.intunewin*.
+2. V podokně **Soubor balíčku aplikace** vyberte tlačítko Procházet. Potom vyberte instalační soubor Windows s příponou *.intunewin*.
 
     > [!IMPORTANT]
     > Nezapomeňte použít nejnovější verzi nástroje Microsoft Win32 obsahu Prep Tool. Pokud nepoužíváte nejnovější verzi, zobrazí se upozornění, že se aplikace zabalila ve starší verzi nástroje Příprava obsahu pro Microsoft Win32. 
 
-3.  Až to budete mít, vyberte **OK**.
+3. Až to budete mít, vyberte **OK**.
 
 ### <a name="step-3-configure-app-information"></a>Krok 3: Konfigurace informací o aplikaci
 
-1.  V podokně **Přidat aplikaci** zvolte **Informace o aplikaci** a nakonfigurujte aplikaci.
-2.  V podokně **Informace o aplikaci** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
+1. V podokně **Přidat aplikaci** zvolte **Informace o aplikaci** a nakonfigurujte aplikaci.
+2. V podokně **Informace o aplikaci** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
     - **Název**: Zadejte název aplikace, zobrazí se v aplikaci portál společnosti. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti všechny aplikace.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
     - **Publikování**r: Zadejte název vydavatele aplikace.
@@ -131,21 +131,22 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
     - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
     - **Logo**: Nahrajte ikonu, která je spojená s aplikací. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-3.  Až to budete mít, vyberte **OK**.
+3. Až to budete mít, vyberte **OK**.
 
 ### <a name="step-4-configure-app-installation-details"></a>Krok 4: Nakonfigurujte podrobnosti instalace aplikace
-1.  V podokně **Přidat aplikaci** vyberte **Program** a nakonfigurujte příkazy pro instalaci a odebrání aplikace.
-2.  Přidejte příkazový řádek pro dokončení aplikace, abyste mohli nainstalovat aplikaci. 
+1. V podokně **Přidat aplikaci** vyberte **Program** a nakonfigurujte příkazy pro instalaci a odebrání aplikace.
+2. Přidejte příkazový řádek pro dokončení aplikace, abyste mohli nainstalovat aplikaci. 
 
     Například, pokud je vaše aplikace filename **MyApp123**, přidejte následující:<br>
     `msiexec /p “MyApp123.msp”`<p>
     A pokud je aplikace `ApplicationName.exe`, příkaz bude název aplikace, za nímž následuje argumenty příkazu (přepínače) podporované tímto balíčkem. <br>Příklad:<br>
     `ApplicationName.exe /quiet`<br>
-    Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje `/quiet` příkaz argument.<p> Pro konkrétní argumentů podporovaných balíčku aplikace obraťte se na dodavatele aplikace.
+    Ve výše uvedeném příkazu `ApplicationName.exe` balíček podporuje `/quiet` příkaz argument.<p> 
+    Pro konkrétní argumentů podporovaných balíčku aplikace obraťte se na dodavatele aplikace.
 
-3.  Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
+3. Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
 
-    Příklad: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+    Například: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
 
     > [!NOTE]
     > Aplikaci Win32 můžete nakonfigurovat tak, aby se nainstalovala v kontextu **uživatele** nebo **systému**. Kontext **Uživatel** se vztahuje pouze k danému uživateli. Kontext **Systém** se vztahuje ke všem uživatelům zařízení s Windows 10.
@@ -154,12 +155,12 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     > 
     > Win32 aplikaci nainstalovat a odinstalovat se spustí v části oprávnění správce (ve výchozím nastavení) Pokud je aplikace nastavena k instalaci v kontextu uživatele a koncový uživatel na zařízení má oprávnění správce.
 
-4.  Až to budete mít, vyberte **OK**.
+4. Až to budete mít, vyberte **OK**.
 
 ### <a name="step-5-configure-app-requirements"></a>Krok 5: Konfigurace požadavků na aplikaci
 
-1.  V podokně **Přidat aplikaci** vyberte **Požadavky** a nakonfigurujte požadavky, které zařízení musí splnit, aby bylo možné aplikaci nainstalovat.
-2.  V **přidat pravidlo požadavku** podokno, nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
+1. V podokně **Přidat aplikaci** vyberte **Požadavky** a nakonfigurujte požadavky, které zařízení musí splnit, aby bylo možné aplikaci nainstalovat.
+2. V **přidat pravidlo požadavku** podokno, nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
     - **Architektura operačního systému**: Zvolte, že architektury potřebujete k instalaci aplikace.
     - **Minimální verzi operačního systému**: Vyberte minimální verzi operačního systému, které jsou potřebné k instalaci aplikace.
     - **Místo na disku vyžadované (MB)** : Volitelně můžete přidáte volné místo na disku potřebné k instalaci aplikace na systémovou jednotku.
@@ -184,32 +185,32 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
         - **Spusťte tento skript pomocí pověření přihlášeného**: Vyberte **Ano** ke spuštění skriptu s použitím podepsané v přihlašovací údaje zařízení **.
         - **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
         - **Vybrat výstupní datový typ**: Vyberte typ dat, které se používají při zjišťování shody pravidlo požadavku.
-4.  Až to budete mít, vyberte **OK**.
+4. Až to budete mít, vyberte **OK**.
 
 ### <a name="step-6-configure-app-detection-rules"></a>Krok 6: Konfigurace pravidel detekce aplikace
 
-1.  V podokně **Přidat aplikaci** vyberte **Pravidla detekce** a nakonfigurujte pravidla pro zjištění přítomnosti aplikace.
-2.  V poli **Formát pravidel** vyberte, jak se bude přítomnost aplikace zjišťovat. Pravidla detekce můžete nakonfigurovat ručně, ale můžete použít i vlastní skript, který zjistí přítomnost aplikace. Musíte zvolit alespoň jedno pravidlo detekce. 
+1. V podokně **Přidat aplikaci** vyberte **Pravidla detekce** a nakonfigurujte pravidla pro zjištění přítomnosti aplikace.
+2. V poli **Formát pravidel** vyberte, jak se bude přítomnost aplikace zjišťovat. Pravidla detekce můžete nakonfigurovat ručně, ale můžete použít i vlastní skript, který zjistí přítomnost aplikace. Musíte zvolit alespoň jedno pravidlo detekce. 
 
     > [!NOTE]
     > V podokně **Pravidla detekce** můžete zvolit přidání více pravidel. Podmínky **všech** pravidel se musí splnit, aby bylo možné aplikaci zjistit.
 
     - **Ručně nakonfigurovat pravidla zjišťování**: Můžete vybrat jeden z následujících typů pravidel:
-        1.  **Instalační služba MSI**: Umožňuje provést ověření na základě kontroly verze MSI. Tuto možnost je možné přidat pouze jednou. Když zvolíte tento typ pravidla, máte dvě nastavení:
+        1. **Instalační služba MSI**: Umožňuje provést ověření na základě kontroly verze MSI. Tuto možnost je možné přidat pouze jednou. Když zvolíte tento typ pravidla, máte dvě nastavení:
             - **Kód produktu Instalační služby MSI**: Přidá platný kód produktu MSI pro aplikaci.
             - **Kontrola verze produktu Instalační služby MSI**: Vyberte **Ano**, pokud chcete kromě kódu produktu MSI ověřit i verzi produktu MSI.
-        2.  **Soubor**: Umožňuje provést ověření na základě zjištění, data, verze nebo velikosti souboru nebo složky.
+        2. **Soubor**: Umožňuje provést ověření na základě zjištění, data, verze nebo velikosti souboru nebo složky.
             - **Cesta**: Úplná cesta ke složce obsahující soubor nebo složku, které se mají zjistit.
             - **Soubor nebo složka**: Soubor nebo složka, které se mají zjistit.
             - **Metoda zjišťování**: Vyberte typ metody zjišťování použité k ověření přítomnosti aplikace.
             - **Přidruženo k 32bitové aplikaci na 64bitových klientech**: Vyberte **Ano**, pokud chcete rozbalit všechny proměnné prostředí cesty ve 32bitovém kontextu na 64bitových klientech. Výchozí možnost **Ne** vyberte, pokud chcete rozbalit všechny proměnné cesty ve 64bitovém kontextu na 64bitových klientech. 32bitoví klienti budou vždy používat 32bitový kontext.
             
             **Příklady zjišťování na základě souboru**
-            1.  Zkontrolujte, zda soubor existuje.
+            1. Zkontrolujte, zda soubor existuje.
          
                 ![Snímek obrazovky s podoknem pravidla detekce – existence souboru](./media/apps-win32-app-03.png)
         
-            2.  Zkontrolujte, zda složka existuje.
+            2. Zkontrolujte, zda složka existuje.
          
                 ![Snímek obrazovky s podoknem pravidla detekce – existence složky](./media/apps-win32-app-04.png)
         
@@ -220,62 +221,62 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
             - **Přidruženo k 32bitové aplikaci na 64bitových klientech**: Vyberte **Ano**, pokud chcete vyhledat 32bitový registr na 64bitových klientech. Výchozí možnost **Ne** vyberte, pokud chcete vyhledat 64bitový registr na 64bitových klientech. 32bitoví klienti budou vždy vyhledávat 32bitový registr.
             
             **Příklady zjišťování na základě registru**
-            1.  Zkontrolujte, zda existuje klíč registru.
+            1. Zkontrolujte, zda existuje klíč registru.
             
                 ![Snímek obrazovky s podoknem pravidla detekce – existence klíče registru](./media/apps-win32-app-05.png)    
             
-            2.  Zkontrolujte, zda hodnota registru existuje.
+            2. Zkontrolujte, zda hodnota registru existuje.
         
                 ![Snímek obrazovky s podoknem pravidla detekce – existence hodnoty registru](./media/apps-win32-app-06.png)    
         
-            3.  Zkontrolujte, zda se řetězec hodnoty registru rovná.
+            3. Zkontrolujte, zda se řetězec hodnoty registru rovná.
         
                 ![Snímek obrazovky s podoknem pravidla detekce – řetězec hodnoty registru se rovná](./media/apps-win32-app-07.png)    
      
     - **Použít vlastní skript zjišťování**: Zadejte powershellový skript, který se použije ke zjištění této aplikace. 
     
-        1.  **Soubor skriptu**: Vyberte powershellový skript, který zjistí přítomnost aplikace v klientovi. Aplikace se bude považovat za zjištěnou, když skript vrátí ukončovací kód s hodnotou 0 a zapíše řetězcovou hodnotu do výstupu STDOUT.
+        1. **Soubor skriptu**: Vyberte powershellový skript, který zjistí přítomnost aplikace v klientovi. Aplikace se bude považovat za zjištěnou, když skript vrátí ukončovací kód s hodnotou 0 a zapíše řetězcovou hodnotu do výstupu STDOUT.
 
-        2.  **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** pro spuštění skriptu v procesu 32-bit v 64bitových klientech. Vyberte **ne** (výchozí) pro spuštění skriptu v procesu 64-bit v 64bitových klientech. 32bitové klienty, spusťte skript 32bitový proces.
+        2. **Spusťte skript jako 32bitový proces v 64bitových klientech** – vyberte **Ano** pro spuštění skriptu v procesu 32-bit v 64bitových klientech. Vyberte **ne** (výchozí) pro spuštění skriptu v procesu 64-bit v 64bitových klientech. 32bitové klienty, spusťte skript 32bitový proces.
 
-        3.  **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
+        3. **Vynutit kontrolu podpisu skriptu**: Vyberte **Ano**, pokud chcete ověřit, že skript je podepsán důvěryhodným vydavatelem. To skriptu umožní spouštět se bez zobrazení upozornění nebo výzev. Skript se bude spouštět odblokovaný. Výchozí možnost **Ne** vyberte, pokud chcete skript spouštět na základě potvrzení koncového uživatele bez ověření podpisu.
     
             Agenta Intune kontroluje výsledky ze skriptu. Přečte hodnoty, které skript zapsal do standardního streamu výstupu (STDOUT), standardního streamu chyb (STDERR) a do ukončovacího kódu. Pokud kód končí nenulovou hodnotu, skript selže a stav zjišťování aplikace je Nenainstalováno. Pokud ukončovací kód obsahuje nulovou hodnotu a výstup STDOUT obsahuje data, byl stav zjišťování aplikace je Nainstalováno. 
 
             > [!NOTE]
             > Společnost Microsoft doporučuje kódování skript jako UTF-8. Pokud se skript ukončí s hodnotou 0, bylo spuštění skriptu úspěšné. Sekundární výstupní kanál označuje, že aplikace byla zjištěna – data STDOUT označují, že aplikace se v klientovi našla. Konkrétnímu řetězci z výstupu STDOUT se nevěnujeme.
 
-        4.  Po přidání pravidel vyberte **Přidat** > **OK**.
+        4. Po přidání pravidel vyberte **Přidat** > **OK**.
 
 ### <a name="step-7-configure-app-return-codes"></a>Krok 7: Konfigurace aplikace návratové kódy
 
-1.  V podokně **Přidat aplikaci** vyberte **Návratové kódy** a přidejte návratové kódy, které se mají použít buď pro přidání chování při opakování instalace aplikace, nebo pro přidání chování po instalaci. Položky návratových kódů se standardně přidají při vytváření aplikace. Můžete ale přidat další nebo změnit existující návratové kódy. 
-2.  V podokně **Návratové kódy** přidejte další návratové kódy nebo změňte existující návratové kódy.
+1. V podokně **Přidat aplikaci** vyberte **Návratové kódy** a přidejte návratové kódy, které se mají použít buď pro přidání chování při opakování instalace aplikace, nebo pro přidání chování po instalaci. Položky návratových kódů se standardně přidají při vytváření aplikace. Můžete ale přidat další nebo změnit existující návratové kódy. 
+2. V podokně **Návratové kódy** přidejte další návratové kódy nebo změňte existující návratové kódy.
     - **Nepovedlo** – návratovou hodnotu, která označuje k selhání instalace aplikace.
     - **Úplné restartování**: Návratový kód pro úplné restartování nepovolí instalaci dalších aplikací Win32 do klienta bez úplného restartování. 
     - **Rychlé restartování**: Návratový kód pro rychlé restartování umožní instalaci další aplikace Win32 bez nutnosti restartovat klienta. Restartování je důležité pro instalaci aktuální aplikace.
     - **Opakovat**: Agent návratového kódu pro opakování se třikrát pokusí aplikaci nainstalovat. Mezi jednotlivými pokusy počká 5 minut. 
     - **Úspěch**: Toto je návratový kód, který označuje, že se aplikace úspěšně nainstalovala.
-3.  Jakmile přidáte nebo změníte návratové kódy, vyberte **OK**.
+3. Jakmile přidáte nebo změníte návratové kódy, vyberte **OK**.
 
 ### <a name="step-8-add-the-app"></a>Krok 8: Přidání aplikace
 
-1.  V podokně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací o aplikaci.
-2.  Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
+1. V podokně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací o aplikaci.
+2. Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
 
 ### <a name="step-9-assign-the-app"></a>Krok 9: Přiřazení aplikace
 
-1.  V podokně aplikace vyberte **Přiřazení**.
-2.  Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
-3.  Pro konkrétní aplikaci vyberte **typ přiřazení**:
+1. V podokně aplikace vyberte **Přiřazení**.
+2. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
+3. Pro konkrétní aplikaci vyberte **typ přiřazení**:
     - **K dispozici zaregistrovaným zařízením**: Uživatelé nainstalovat aplikaci z aplikace portál společnosti nebo webu portál společnosti.
     - **Vyžaduje**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
     - **Odinstalujte**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
-4.  Vyberte **Zahrnuté skupiny** a přiřaďte skupiny, které budou tuto aplikaci používat.
-5.  V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
-6.  Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
-7.  V podokně **Přidat skupinu** vyberte **OK**.
-8.  V podokně **Přiřazení** aplikace vyberte **Uložit**.
+4. Vyberte **Zahrnuté skupiny** a přiřaďte skupiny, které budou tuto aplikaci používat.
+5. V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
+6. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+7. V podokně **Přidat skupinu** vyberte **OK**.
+8. V podokně **Přiřazení** aplikace vyberte **Uložit**.
 
 V tomto okamžiku jste dokončili postup do Intune přidat aplikace Win32. Informace o přiřazení a monitorování aplikace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-deploy) a [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](https://docs.microsoft.com/intune/apps-monitor).
 

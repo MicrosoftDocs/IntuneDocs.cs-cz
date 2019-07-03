@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8581d047e76ac1734b2d6c7816facf601e397957
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 816ac1d97e7be485717905fe9d5d62b812408446
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041721"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512218"
 ---
-#  <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
+# <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
 Následující shromažďování dat do datového skladu poskytuje vlastnosti, popisy a příklady pro kolekce v1.0 entit rozhraní API datového skladu. 
 
@@ -43,7 +43,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 | VppProgramTypeKey          | Odkaz na entitu VppProgramType, která je popsaná níže.                                        | 30876                                |
 | CreationTime               | Čas vytvoření této revize                                            | 23. 11. 2016 0:00                      |
 | ModifiedTime               | Čas poslední změny nějakého prvku, který s touto revizí souvisí.                            | 23. 11. 2016 0:00                      |
-| Velikost                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
+| Size                       | Velikost binárního souboru v bytech                                                          | 120 392 000                          |
 | StartDateInclusiveUTC      | Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila.      | 23. 11. 2016 0:00                      |
 | EndDateExclusiveUTC        | Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá                        | 23. 11. 2016 0:00                      |
 | IsCurrent                  | Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální.         | True nebo False                           |
@@ -129,7 +129,7 @@ Entita **date** zastupuje kalendářní data, na která odkazují různé entity
 |     Vlastnost    |                       Popis                      |    Příklad    |
 |:---------------:|:------------------------------------------------------:|:-------------:|
 | DateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
-| FullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
+| FullDate        | Dané datum v úplném formátu data a času.        | 3\. 7. 2016 0:00 |
 | DayOfWeek       | Den týdne                                            | 1             |
 | DayOfMonth      | Den měsíce                                           | 3             |
 | DayOfYear       | Den roku                                            | 185           |
@@ -138,7 +138,7 @@ Entita **date** zastupuje kalendářní data, na která odkazují různé entity
 | CalendarQuarter | Kalendářní čtvrtletí                                       | 3             |
 | CalendarYear    | Kalendářní rok                                          | 2016          |
 | DateKey         | Jedinečný identifikátor daného kalendářního data v datovém skladu. | 20160703      |
-| FullDate        | Dané datum v úplném formátu data a času.        | 3. 7. 2016 0:00 |
+| FullDate        | Dané datum v úplném formátu data a času.        | 3\. 7. 2016 0:00 |
 | DayOfWeek       | Den týdne                                            | 1             |
 | DayOfMonth      | Den měsíce                                           | 3             |
 | DayOfYear       | Den roku                                            | 185           |
@@ -359,7 +359,7 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
-| Autorizace                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
+| Authorization                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
 | UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
 | DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
@@ -503,7 +503,7 @@ Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých by
 |----------------------------|-----------------------------------------------------------------------------------|---------------------------------------------------------|
 |        PlatformKey         |     Jedinečný identifikátor platformy v datovém skladu – náhradní klíč      |                           123                           |
 |          Platforma          | Jedinečný identifikátor platformy – podobá se vlastnosti PlatformKey, jedná se ale o přirozený klíč. |                           123                           |
-|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádný <br>Windows <br>iOS <br>Android. |
+|        PlatformName        |                                   Název platformy                                   | Není k dispozici <br>Žádné <br>Windows <br>iOS <br>Android. |
 | RowLastModifiedDateTimeUtc | Datum a čas ve standardu UTC, kdy se tato platforma v datovém skladu naposledy změnila  |                 23.11.2016 12:00:00                  |
 
 ## <a name="managementagenttypes"></a>managementAgentTypes

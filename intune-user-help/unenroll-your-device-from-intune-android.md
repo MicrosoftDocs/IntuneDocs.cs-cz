@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7d4030762e625e24fb0c72724473162a4ad98183
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b68ea31a6c5d902e66c0eda8127e0f68383910f8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61506274"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529124"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -51,8 +51,8 @@ Pokud organizace nechce zaregistrované zařízení s Androidem dále spravovat,
 
 Postup odebrání všech dat, která do zařízení uložila aplikace Portál společnosti pro Android:
 
--   Vymazat data aplikací tím, že klepnete na **aplikací** > **[*název aplikace*]** > **vymazat data**.
--   Odstraňte následující složku: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
+- Vymazat data aplikací tím, že klepnete na **aplikací** >  **[*název aplikace*]**  > **vymazat data**.
+- Odstraňte následující složku: \storage\internal storage\Android\data\com.microsoft.windowsintune.companyportal.
 
 ## <a name="uninstall-the-company-portal-app"></a>Odinstalace aplikace Portál společnosti  
 Portál společnosti je aplikace pro správu zařízení. Nelze odinstalovat, dokud se zrušení registrace zařízení od jeho správu. Jakmile registraci zrušíte, klepněte na ikonu aplikace Portál společnosti a podržte ji, dokud se nezobrazí **Odinstalovat**. Klepněte na **Odinstalovat** a aplikaci ze zařízení odeberte.  

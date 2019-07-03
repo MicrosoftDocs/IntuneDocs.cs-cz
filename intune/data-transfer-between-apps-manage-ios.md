@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9be961908920420dbb4111c2c3ba108b7e11c09f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042787"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512149"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -30,11 +30,11 @@ K ochraně firemních dat, omezte přenosy souborů jenom na aplikace, které sp
 
 -   Zabraňují úniku dat společnosti tím, že nakonfigurujete zásady ochrany aplikací pro aplikace, které označujeme jako **spravované podle zásad** aplikace. Přečtěte si téma s informacemi o [všech aplikacích spravovaných přes Intune, které je možné spravovat pomocí zásad ochrany aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
--   Nasazení a správě aplikací prostřednictvím **kanálu MDM.**, která vyžaduje zařízení k registraci v řešení správy mobilních zařízení (MDM). Je možné aplikace nasadíte **spravované podle zásad** aplikací nebo jiné spravované aplikace.
+-   Nasazení a správě aplikací prostřednictvím **kanálu MDM.** , která vyžaduje zařízení k registraci v řešení správy mobilních zařízení (MDM). Je možné aplikace nasadíte **spravované podle zásad** aplikací nebo jiné spravované aplikace.
 
 Funkce **Správa pro Open In** pro zařízení s iOSem může omezit přenosy souborů tak, aby probíhaly jenom mezi aplikacemi, které jsou nasazená prostřednictvím **kanálu MDM**. Nastavte *Správa Open in* omezení v nastavení konfigurace a potom ji nasadíte pomocí řešení pro správu.  Když uživatel nainstaluje nasazenou aplikaci, použijí se omezení, která jste nastavili.
 
-##  <a name="use-app-protection-with-ios-apps"></a>Ochrana aplikací pomocí aplikace pro iOS
+## <a name="use-app-protection-with-ios-apps"></a>Ochrana aplikací pomocí aplikace pro iOS
 Použití zásad ochrany aplikací v IOS **Správa Open in** funkce k ochraně firemních dat těmito způsoby:
 
 -   **Zařízení patřící zaměstnancům, nejsou spravována žádným řešením MDM:** Můžete nastavit ochranu aplikace nastavení zásad **povolit aplikaci přenos dat jenom aplikace spravované podle zásad**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.

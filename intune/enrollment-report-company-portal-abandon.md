@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546694409e6f87d85c5ef934b5d084b0955e0bf7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c15bd301b60481f4d8b15617512851e2cc29034a
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041853"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529754"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Sestava registrace neúplné uživatele
 
@@ -35,9 +35,9 @@ Na základě těchto informací můžete aktualizovat vaše dokumenty připojov�
 
 Neúplný zápis je, když uživatel provede některou z následujících akcí:
 
--   Explicitně zvolí akci, která zastaví registraci.
--   Zavře Portál společnosti v průběhu registrace.
--   Stráví více než 30 minut mezi částmi registrace.
+- Explicitně zvolí akci, která zastaví registraci.
+- Zavře Portál společnosti v průběhu registrace.
+- Stráví více než 30 minut mezi částmi registrace.
 
 Pokud uživatel zvolí registraci zastavit a znovu spustit několikrát, zobrazí jako více neúplné registrace i více pokusů. Pokud uživatel počká 30 minut mezi obrazovkami různých registrace, bude považován za více neúplné registrace.
 
@@ -53,18 +53,18 @@ Pomocí **filtru** můžete zvolit rozsah kalendářních dat, operační systé
 
 V horní části stránky sestavy zobrazí se počet a procento neúplné registrací ve vztahu k všechny registrace.
 
--   Registrace iniciovaná: Počet registrací se pokusili.
--   Neúplné registrace: Počet pokusů o registrací nemělo za následek plně zaregistrované a vyhovující zařízení.
--   Neúplné rychlost: Procento pokusy o registraci, které byly opuštěny (opuštěných registrace / iniciované registrací).
+- Registrace iniciovaná: Počet registrací se pokusili.
+- Neúplné registrace: Počet pokusů o registrací nemělo za následek plně zaregistrované a vyhovující zařízení.
+- Neúplné rychlost: Procento pokusy o registraci, které byly opuštěny (opuštěných registrace / iniciované registrací).
 
 ### <a name="line-graph"></a>Spojnicový graf
 
 Spojnicový graf zobrazuje denní neúplné registrace pro každý oddíl čtyři základní registrace:
 
--   Kontrolní seznam instalace
--   Obrazovky platformy
--   Podmínky použití
--   Dodržování předpisů / aktivace
+- Kontrolní seznam instalace
+- Obrazovky platformy
+- Podmínky použití
+- Dodržování předpisů / aktivace
 
 ### <a name="user-abandonment-actions"></a>Akce uživatelů, po kterých došlo k opuštění registrace
 

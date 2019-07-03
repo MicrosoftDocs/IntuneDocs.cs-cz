@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a380cc514272d10a6cfa1e9f20adeb171303523
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 524c4aebe6cdde0b0bc45f76a4675bbed8172d67
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403290"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511692"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -31,7 +31,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 > [!IMPORTANT]
 > U zařízení přijímat zásady ochrany aplikací pro zařízení s Androidem se vyžaduje aplikace portál společnosti Intune. Další informace najdete v tématu [požadavky na aplikace portál společnosti Intune přístup](end-user-mam-apps-android.md).
 
-##  <a name="data-protection"></a>Ochrana dat 
+## <a name="data-protection"></a>Ochrana dat 
 ### <a name="data-transfer"></a>Přenos dat
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
@@ -63,11 +63,11 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 |<ul><ui>**Název nespravovaný prohlížeč** | Zadejte název aplikace pro prohlížeč přidružené **nespravovaný prohlížeč ID**. Tento název se uživatelům zobrazit, pokud zadaný prohlížeč není nainstalovaný.  | **Prázdné** |
 
 
-  ## <a name="data-transfer-exemptions"></a>Výjimky přenosu dat
+## <a name="data-transfer-exemptions"></a>Výjimky přenosu dat
 
   U některých aplikací a služeb platformy, které mají výjimku, můžou zásady ochrany aplikací Intune povolit přenos dat. Všechny aplikace na Androidu spravované přes Intune například musí mít možnost přenášet data do a z Převodu textu na řeč Google, aby se mohl nahlas číst text z obrazovky mobilního zařízení. Tento seznam se může měnit. Obsahuje služby a aplikace, které se považují za užitečné pro bezpečné a produktivní použití.
 
-  ### <a name="full-exemptions"></a>Úplné výjimky
+### <a name="full-exemptions"></a>Úplné výjimky
 
   Tyto aplikace můžou bez omezení přenášet data do aplikací spravovaných službou Intune a z nich.
 
@@ -84,7 +84,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
   | com.azure.authenticator | Aplikace Azure Authenticator, která je nutná k úspěšnému ověřování v mnoha situacích |
   | com.microsoft.windowsintune.companyportal | Intune Portál společnosti|
 
-  ### <a name="conditional-exemptions"></a>Podmíněné výjimky
+### <a name="conditional-exemptions"></a>Podmíněné výjimky
   Tyto aplikace můžou přenášet data do aplikací spravovaných službou Intune a z nich za určitých podmínek.
 
   |Název aplikace nebo služby | Popis | Podmínka výjimky|
@@ -96,7 +96,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 
 Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md).
 
-##  <a name="access-requirements"></a>Požadavky na přístup
+## <a name="access-requirements"></a>Požadavky na přístup
 
 | Nastavení | Způsob použití |  
 |------|------| 

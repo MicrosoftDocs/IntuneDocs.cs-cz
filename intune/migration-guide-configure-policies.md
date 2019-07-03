@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d3e36dbeb1fb7c90dfc5cc4c18fb30140c761db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046501"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512263"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurace zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune
 
@@ -59,7 +59,7 @@ Profily přístupu k prostředkům dodají pro registrovaná zařízení certifi
 
 Je potřeba vytvořit profil konfigurace zařízení k vynucení nastavení na úrovni zařízení, například: zakázání fotoaparátu nebo obchodu s aplikacemi, konfigurace režimu jedné aplikace, nastavení domovské obrazovky apod. Přečtěte si další informace o [profilech zařízení](device-profiles.md).
 
-####  <a name="directly-import-ios-configuration-profiles-optional"></a>Přímý import profilů konfigurace iOSu (volitelné)
+#### <a name="directly-import-ios-configuration-profiles-optional"></a>Přímý import profilů konfigurace iOSu (volitelné)
 
 -   **Profily Apple Configuratoru iOS (iOS 7.1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory .mobileconfig), Intune je může přímo importovat jako vlastní zásady.
 

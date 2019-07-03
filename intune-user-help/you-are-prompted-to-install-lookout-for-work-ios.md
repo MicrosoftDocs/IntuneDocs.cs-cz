@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b59dc8599ce2dd5c99875a0032ccce5326c376cd
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8290ccbb61308fb7f001b1a7d331fd366e13d902
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505347"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527727"
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>Instalace Lookout for Work na zařízení s iOSem
 
@@ -31,7 +31,7 @@ Než budete moct začít pracovat, vaše společnost potřebuje, abyste nainstal
 
 ## <a name="what-you-need-to-do"></a>Co je potřeba udělat:
 
-1.  Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
+1. Pokud se zobrazí následující výzva, klepnutím na **Nainstalovat** umožněte nainstalování aplikace Lookout for Work do zařízení.
 
       ![Snímek obrazovky s výzvou k instalaci aplikace a tlačítky Zrušit a Nainstalovat](/intune-user-help/media/ios-mts-install-app-request-after-1804.png)
 

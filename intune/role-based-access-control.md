@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0e6ad7e46abe8da4c1b03e836eb9ba2f5991d0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044160"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528241"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
 
@@ -38,9 +38,9 @@ Role definuje sadu oprávnění udělit uživatelům, kteří k této roli při�
 Můžete použít předdefinované a vlastní role. Předdefinované role zahrnují některé běžné scénáře s Intune. Je možné [vytvořit vlastní role](create-custom-role.md) s přesnou sadu oprávnění, které potřebujete. Několik rolí Azure Active Directory nemáte oprávnění pro Intune.
 Chcete-li zobrazit roli, zvolte **Intune** > **role** > **všechny role** > zvolte roli. Zobrazí se vám na následujících stránkách:
 
--   **Vlastnosti**: Název, popis, typ, přiřazení a značky oboru role. 
--   **Oprávnění**: Obsahuje přehled dlouhé sady přepíná definování role má oprávnění.
--   **Přiřazení**: Seznam [přiřazení rolí]( assign-role.md) definující, kteří mají přístup na uživatele nebo zařízení, která. Roli můžete mít více přiřazení a uživatel může být ve více přiřazení.
+- **Vlastnosti**: Název, popis, typ, přiřazení a značky oboru role. 
+- **Oprávnění**: Obsahuje přehled dlouhé sady přepíná definování role má oprávnění.
+- **Přiřazení**: Seznam [přiřazení rolí]( assign-role.md) definující, kteří mají přístup na uživatele nebo zařízení, která. Roli můžete mít více přiřazení a uživatel může být ve více přiřazení.
 
 ### <a name="built-in-roles"></a>Vestavěné role
 Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. Nejde odstranit ani upravit název, popis, typ nebo oprávnění předdefinovaná role. Úplný seznam oprávnění pro každou předdefinovaná role, najdete v článku [Intune RBAC tabulky](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
@@ -60,12 +60,12 @@ Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další inform
 | --- | :---: | :---: |
 | Globální správce | Čtení/zápisu | Čtení/zápisu |
 | Správce služby Intune | Čtení/zápisu | Čtení/zápisu |
-| Správce podmíněného přístupu | Žádné | Žádné |
+| Správce podmíněného přístupu | Žádný | Žádný |
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
 | Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádný | Jen pro čtení |
 
 > [!TIP]
 > Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**, a **podmíněného přístupu**, řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
@@ -84,10 +84,10 @@ Definuje přiřazení role:
 Uživatelům můžete přiřadit předdefinované i vlastní role. Přiřazení Intune role, uživatel musí mít licenci pro Intune.
 Chcete-li zobrazit přiřazení role, zvolte **Intune** > **role** > **všechny role** > vyberte roli > zvolit přiřazení. Zobrazí se vám na následujících stránkách:
 
--   **Vlastnosti**: Název, popis, role, členy, obory a přiřazení značek.
--   **Členové**: Všichni uživatelé v uvedené skupiny mají oprávnění ke správě uživatelů a zařízení, které jsou uvedeny v rozsah (skupiny).
--   **Rozsah (skupiny)**: Všechny uživatele nebo zařízení v těchto skupinách může být spravován uživatelů ve členech.
--   **[Obor (značky)](scope-tags.md)**: Uživatelé v členové mohou vidět prostředky, které mají stejné značky oboru.
+- **Vlastnosti**: Název, popis, role, členy, obory a přiřazení značek.
+- **Členové**: Všichni uživatelé v uvedené skupiny mají oprávnění ke správě uživatelů a zařízení, které jsou uvedeny v rozsah (skupiny).
+- **Rozsah (skupiny)** : Všechny uživatele nebo zařízení v těchto skupinách může být spravován uživatelů ve členech.
+- **[Obor (značky)](scope-tags.md)** : Uživatelé v členové mohou vidět prostředky, které mají stejné značky oboru.
 
 ### <a name="multiple-role-assignments"></a>Více přiřazení rolí
 Pokud má uživatel více přiřazení role, oprávnění v těchto přiřazení rolí následujícím způsobem rozšířit na různé objekty:
