@@ -18,26 +18,26 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c59646045f895df11bd465269ff5df13142d5ab
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 73e9c42f69517d145c797b13ae9fa5aa779ebc5d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529408"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546507"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Co se stane, když zrušíte registraci zařízení s Androidem v Intune?
 
 Po zrušení registrace zařízení s Androidem v Intune:
 
--   Vaše firemní podpora už zařízení nespravuje.
+- Vaše firemní podpora už zařízení nespravuje.
 
--   Ztratíte přístup k firemním datům a prostředkům.
+- Ztratíte přístup k firemním datům a prostředkům.
 
--   Vaše zařízení se už nebude zobrazovat na Portálu společnosti.
+- Vaše zařízení se už nebude zobrazovat na Portálu společnosti.
 
--   Z portálu společnosti už nebudete moct instalovat aplikace.
+- Z portálu společnosti už nebudete moct instalovat aplikace.
 
--   Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).
+- Už nebudou platit nastavení, která se v zařízení změnila od jeho přidání (třeba zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla).
 
 Pokud je vaše zařízení nastavené jenom tak, aby mohlo přijímat firemní e-maily, a vy zrušíte jeho registraci, zařízení se už nebude zobrazovat na portálu společnosti.
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09e2f88168acd1bc77051df924f756a326a02b21
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041505"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548420"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
 
@@ -53,11 +53,11 @@ Nezapomeňte zahrnout plán [komunikace](planning-guide-communication-plan.md), 
 ### <a name="production-rollout"></a>Nasazení v ostrém provozu
 Po úspěšném pilotním projektu jste připraveni spustit nasazení v plném provozu, kdy se zapojí i zbývající organizační skupiny. Tady je několik příkladů různých zaváděcích skupin a fází:
 
--   **Oddělení** <br/>Fáze nasazení se může účastnit každé oddělení. Zaměříte se vždy jen na jedno oddělení. Při tomto typu nasazení je větší pravděpodobnost, že uživatelé budou v každém oddělení používat mobilní zařízení stejným způsobem a budou přistupovat ke stejným aplikacím. Uživatelé také budou mít stejné typy zásad.
+- **Oddělení** <br/>Fáze nasazení se může účastnit každé oddělení. Zaměříte se vždy jen na jedno oddělení. Při tomto typu nasazení je větší pravděpodobnost, že uživatelé budou v každém oddělení používat mobilní zařízení stejným způsobem a budou přistupovat ke stejným aplikacím. Uživatelé také budou mít stejné typy zásad.
 
--   **Zeměpisná oblast** <br/>Při tomto přístupu se řešení nasadí u všech uživatelů v určité zeměpisné oblasti. Může to být stejný kontinent, země, oblast nebo stejná firemní budova. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
+- **Zeměpisná oblast** <br/>Při tomto přístupu se řešení nasadí u všech uživatelů v určité zeměpisné oblasti. Může to být stejný kontinent, země, oblast nebo stejná firemní budova. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
 
--   **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem mohou být všechna zařízení s iOSem v prvním měsíci, po kterých budou následovat zařízení s Androidem a po nich zařízení s Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
+- **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem mohou být všechna zařízení s iOSem v prvním měsíci, po kterých budou následovat zařízení s Androidem a po nich zařízení s Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
 
 V následujícím příkladu je plán zavedení Intune, který obsahuje cílové skupiny a časové rámce:
 
@@ -65,9 +65,9 @@ V následujícím příkladu je plán zavedení Intune, který obsahuje cílové
 |:---:|:---:|:---:|:---:|:---:|
 | Omezené pilotní nasazení | IT (50 uživatelů) |  |  |  |                                                         
 | Rozšířené pilotní nasazení | IT (200 uživatelů), vedení IT (10 uživatelů) |  |  |  |                                                         
-| 1. fáze nasazení v ostrém provozu |  | Prodej a marketing (2000 uživatelů) |  |  |
-| 2. fáze nasazení v ostrém provozu |  |  | Maloobchod (1000 uživatelů) |  |
-| 3. fáze nasazení v ostrém provozu |  |  |  | Personalistika (50 uživatelů), finance (40 uživatelů), vedení (30 uživatelů) |
+| 1\. fáze nasazení v ostrém provozu |  | Prodej a marketing (2000 uživatelů) |  |  |
+| 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod (1000 uživatelů) |  |
+| 3\. fáze nasazení v ostrém provozu |  |  |  | Personalistika (50 uživatelů), finance (40 uživatelů), vedení (30 uživatelů) |
 
 K zadání fází nasazení pro svou organizaci si můžete [stáhnout šablonu předchozí tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 ## <a name="match-rollout-groups-to-enrollment-approaches"></a>Sladění skupin a přístupů při nasazení
@@ -98,11 +98,11 @@ Tady je aktualizovaný příklad plánu nasazení Intune, který zahrnuje různ�
 | Rozšířené pilotní nasazení |  |  |  |  |                                                         
 | Samoobslužný provoz | IT |  |  |  |
 | Šetrný způsob | Vedení IT |  |  |  |
-| 1. fáze nasazení v ostrém provozu |  | Prodej, marketing |  |  |
+| 1\. fáze nasazení v ostrém provozu |  | Prodej, marketing |  |  |
 | Samoobslužný provoz |  | Prodej a marketing |  |  |
-| 2. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
+| 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
 | Samoobslužný provoz |  |  |  |  |
-| 3. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
+| 3\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
 | Samoobslužný provoz |  |  |  | Personalistika, finance |
 | Šetrný způsob |  |  |  | Členové vedení |
 

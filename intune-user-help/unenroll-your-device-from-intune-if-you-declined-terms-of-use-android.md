@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf94574bd86b0e0ce7455988781250b97d87a2c2
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: fb4ac87bef7c822111e95c18f149fa8d0598c36e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529053"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546636"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Odebrání zařízení ze správy při nepřijetí podmínek použití
 
@@ -37,11 +37,11 @@ Než odinstalujete aplikaci Portál společnosti, musíte přejít na nastavení
 
 Postup odebrání zařízení z Intune a odinstalace aplikace Portál společnosti:
 
-1.  Přejděte na **Nastavení** &gt; **Zabezpečení &amp; Zamykací obrazovka** &gt; **Správci zařízení**.
+1. Přejděte na **Nastavení** &gt; **Zabezpečení &amp; Zamykací obrazovka** &gt; **Správci zařízení**.
 
     Provedením tohoto kroku okamžitě zrušíte registraci zařízení.
 
-2.  Zrušte zaškrtnutí políčka vedle položky **Portál společnosti** nebo tuto položku vypněte.
+2. Zrušte zaškrtnutí políčka vedle položky **Portál společnosti** nebo tuto položku vypněte.
 
     Teď můžete aplikaci Portál společnosti odinstalovat.
 

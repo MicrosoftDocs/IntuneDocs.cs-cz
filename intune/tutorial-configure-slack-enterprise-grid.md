@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: da6c9b544d86c9c4b09c061c0f1500ed8612a047
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e7ff4e1fd9f055268a461d1a81b8a2e31fe3d32b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530701"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548998"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace Slack chcete Intune používat pro konfigurace EMM a aplikace
 
@@ -62,8 +62,8 @@ Přidání Slack pro EMM jako spravované iOS aplikace v Intune a přiřazení u
 6. Na panelu hledání zadejte "Slack pro EMM" a vyberte aplikaci, kterou jste právě přidali.
 7. Spravovat, vyberte **přiřazení**.
 8. Vyberte **přidat skupinu**. V závislosti na tom, kdo jste se rozhodli vliv, když jste zapnuli EMM pro Slack, v části **typ přiřazení** možná budete chtít vybrat:
-    -  **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
-    -  **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
+    - **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
+    - **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
 9. Vyberte **zahrnutých skupin** a v části vytvořit tuto aplikaci k dispozici pro všechny uživatele vyberte **Ano**.
 10. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
 11. Klikněte na **Uložit**.
@@ -77,7 +77,7 @@ Přidáte zásady Konfigurace aplikací pro Slack pro EMM iOS. Zásady Konfigura
 5. Vyberte **přidružené aplikace**.
 6. Na panelu hledání zadejte "Slack pro EMM" a vyberte aplikaci.
 7. Klikněte na tlačítko **OK**a pak vyberte **nastavení konfigurace**. 
-    -   Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
+    - Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
 8. Vyberte **OK**a pak vyberte **přidat**.
 9. Na panelu hledání zadejte "test zásady Konfigurace aplikace Slack" a vyberte zásadu, kterou jste právě přidali.
 10. Spravovat, vyberte **přiřazení**.
@@ -92,13 +92,13 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 4. V části platformy, vyberte **iOS**.
 5. Vyberte **Stav zařízení**. U zařízení s Jailbreakem, vyberte **bloku**a pak vyberte **OK**.
 6. Vyberte **zabezpečení systému** a zadejte nastavení hesla. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
-    -   Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
-    -   Jednoduchá hesla, vyberte **bloku**.
-    -   Minimální délka hesla zadejte 4.
-    -   Vyžadovaný typ hesla, zvolte **alfanumerické**.
-    -   Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **okamžitě**.
-    -   Pro konec platnosti hesla (dny), zadejte 41.
-    -   Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
+    - Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
+    - Jednoduchá hesla, vyberte **bloku**.
+    - Minimální délka hesla zadejte 4.
+    - Vyžadovaný typ hesla, zvolte **alfanumerické**.
+    - Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **okamžitě**.
+    - Pro konec platnosti hesla (dny), zadejte 41.
+    - Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
 7. Klikněte na tlačítko **OK**a pak vyberte **OK** znovu.
 8. Klikněte na možnost **Vytvořit**.
 
@@ -114,8 +114,8 @@ Přidáte Slack spravované Google play aplikace v Intune a přiřazení Slack u
 5. Na panelu hledání zadejte "Slack" a vyberte aplikaci, kterou jste právě přidali.
 6. Spravovat, vyberte **přiřazení**.
 7. Vyberte **přidat skupinu**. V závislosti na tom, kdo jste se rozhodli vliv, když jste zapnuli EMM pro Slack, v části **typ přiřazení** možná budete chtít vybrat:
-    -   **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
-    -   **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
+    - **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
+    - **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
 8. Vyberte zahrnuté skupiny a v části vytvořit tuto aplikaci k dispozici pro všechny uživatele vyberte **Ano**.
 9. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
 10. Klikněte na **Uložit**.
@@ -129,7 +129,7 @@ Přidáte zásady Konfigurace aplikací pro Slack. Zásady Konfigurace aplikací
 5. Vyberte **přidružené aplikace**.
 6. Na panelu hledání zadejte "Slack" a vyberte aplikaci.
 7. Vyberte **OK**a pak vyberte **nastavení konfigurace**.
-    -   Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
+    - Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
 8. Klikněte na tlačítko **OK**a pak vyberte **přidat**.
 9. Na panelu hledání zadejte "test zásady Konfigurace aplikace Slack" a vyberte zásadu, kterou jste právě přidali.
 10. Spravovat, vyberte **přiřazení**.
@@ -145,12 +145,12 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 5. V části Typ profilu vyberte **pracovního profilu**.
 6. Vyberte **Stav zařízení**. Vedle zařízením s Rootem, vyberte **bloku**a pak vyberte **OK**.
 7. Vyberte **zabezpečení systému** a zadejte **nastavení hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
-    -   Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
-    -   Vyžadovaný typ hesla, vyberte **aspoň alfanumerické**.
-    -   Minimální délka hesla zadejte 4.
-    -   Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **15 minut**.
-    -   Pro konec platnosti hesla (dny), zadejte 41.
-    -   Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
+    - Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
+    - Vyžadovaný typ hesla, vyberte **aspoň alfanumerické**.
+    - Minimální délka hesla zadejte 4.
+    - Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **15 minut**.
+    - Pro konec platnosti hesla (dny), zadejte 41.
+    - Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
 8. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
 9. Klikněte na možnost **Vytvořit**.
 

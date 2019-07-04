@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e803eb3d47d44c8c8f3cd1b699b5ca220aeb91f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049116"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546976"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrace Better Mobile s Intune
 
@@ -32,31 +32,31 @@ Při integraci řešení Better Mobile Threat Defense do Intune je potřeba prov
 
 Před zahájením procesu integrace řešení Better Mobile a Intune zkontrolujte, že máte následující:
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
+- Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
-    -   Přihlášení a čtení profilu uživatele
+    - Přihlášení a čtení profilu uživatele
 
-    -   Přístup k adresáři jako přihlášený uživatel
+    - Přístup k adresáři jako přihlášený uživatel
 
-    -   Čtení dat z adresáře
+    - Čtení dat z adresáře
 
-    -   Odeslání informací o zařízení do Intune
+    - Odeslání informací o zařízení do Intune
 
--   Přihlašovací údaje správce pro přístup ke konzole pro správu Better Mobile
+- Přihlašovací údaje správce pro přístup ke konzole pro správu Better Mobile
 
 ### <a name="better-mobile-app-authorization"></a>Autorizace aplikace Better Mobile
 
 Postup autorizace aplikace Better Mobile:
 
--   Povolte službě Better Mobile předávání informací, které se týkají stavu zařízení, zpět do Intune.
+- Povolte službě Better Mobile předávání informací, které se týkají stavu zařízení, zpět do Intune.
 
--   Better Mobile se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
+- Better Mobile se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
 
--   Povolte u konzoly pro správu Better Mobile použití jednotného přihlašování (SSO) k Azure AD.
+- Povolte u konzoly pro správu Better Mobile použití jednotného přihlašování (SSO) k Azure AD.
 
--   Povolte aplikaci Better Mobile přihlášení pomocí jednotného přihlašování k Azure AD.
+- Povolte aplikaci Better Mobile přihlášení pomocí jednotného přihlašování k Azure AD.
 
 ## <a name="to-set-up-better-mobile-integration"></a>Nastavení integrace Better Mobile
 
@@ -75,4 +75,4 @@ Postup autorizace aplikace Better Mobile:
 
 ## <a name="next-steps"></a>Další postup
 
--   [Nastavení klientských aplikací Better](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení klientských aplikací Better](mtd-apps-ios-app-configuration-policy-add-assign.md)

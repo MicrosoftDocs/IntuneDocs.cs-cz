@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb4b90f434af9313cc567193159e94a496f86000
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511843"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549209"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>Microsoft Intune Data Warehouse API
 
 Rozhraní API datového skladu Intune umožňuje přistupovat k datům Intune ve strojově čitelném formátu pro použití ve vašem oblíbeném analytickém nástroji. Rozhraní API můžete používat k vytváření sestav poskytujících přehled o podnikovém mobilním prostředí. Rozhraní API používá protokol OData, který dodržuje standardní vzory pro:
 
-  -   Hlavičky žádostí a odpovědí
-  -   Stavové kódy
-  -   Metody HTTP
-  -   Konvence URL
-  -   Typy médií
-  -   Formáty datových částí
-  -   Možnosti dotazu
+  - Hlavičky žádostí a odpovědí
+  - Stavové kódy
+  - Metody HTTP
+  - Konvence URL
+  - Typy médií
+  - Formáty datových částí
+  - Možnosti dotazu
 
 OData (Open Data Protocol) je standard organizace OASIS (Organization for the Advancement of Structured Standards), který definuje osvědčené postupy pro vytváření a využívání rozhraní API RESTful. Datový sklad Intune používá OData verze 4.0.
 
@@ -56,8 +56,8 @@ Další informace najdete v článku [Získání dat z rozhraní API datového s
 
 Rozhraní API vyžaduje autorizaci pomocí Azure AD. Azure AD používá OAuth 2.0. Po autorizaci můžete získat data z rozhraní API pomocí příkazu HTTP GET a kontaktovat zveřejněné kolekce entit. Podrobnosti najdete v tématech:
 
- -  [Autorizace](reports-api-url.md)
- -  [Struktura adresy URL rozhraní API](reports-api-url.md)
+ - [Autorizace](reports-api-url.md)
+ - [Struktura adresy URL rozhraní API](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Datový model datového skladu Intune
 

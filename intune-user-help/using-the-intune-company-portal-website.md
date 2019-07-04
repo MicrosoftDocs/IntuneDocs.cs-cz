@@ -18,32 +18,32 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1119c9602d2577f8041ad528d012adf9652dc641
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5ebf8d43bd18629d38be24929b3df5c12a7e244b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505892"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546533"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Použití webu Portál společnosti Intune
 Prostřednictvím [webu Portál společnosti](https://portal.manage.microsoft.com) můžete prohlížet, upravovat, přidávat a odebírat spravovaná zařízení.
 
 Na webu portálu společnosti můžete provádět jakoukoli z těchto úloh:
 
--   [Přejmenování zařízení](rename-your-device-cpwebsite.md)
+- [Přejmenování zařízení](rename-your-device-cpwebsite.md)
 
--   [Odebrání zařízení](remove-your-device-cpwebsite.md)
+- [Odebrání zařízení](remove-your-device-cpwebsite.md)
 
--   [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
+- [Resetování zařízení](reset-erase-your-device-cpwebsite.md)
 
--   [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
+- [Resetování hesla zařízení](reset-your-passcode-cpwebsite.md)
 
--   [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
+- [Vzdálené uzamčení zařízení](remote-lock-your-device-cpwebsite.md)
 
--   Vyhledání kontaktních údajů na firemní podporu, pokud jste je nakonfigurovali
+- Vyhledání kontaktních údajů na firemní podporu, pokud jste je nakonfigurovali
 
--   Kontrola stavu dodržování předpisů
+- Kontrola stavu dodržování předpisů
 
--   Vzdálená správa počítače
+- Vzdálená správa počítače
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

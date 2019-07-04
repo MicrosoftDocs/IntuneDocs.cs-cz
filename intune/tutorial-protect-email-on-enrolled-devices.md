@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530740"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548048"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Kurz: Ochrana Exchange Online e-mailu na spravovaných zařízeních
 Informace o používání zásad dodržování předpisů zařízením s podmíněným přístupem abyste měli jistotu, že zařízení s Iosem můžete přístup k e-mailu Exchange Online pouze v případě, že jsou spravovaná přes Intune a používání aplikace schválené e-mailu. 
@@ -53,7 +53,7 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 4. U možnosti **Platforma** vyberte **iOS**. 
 5. Vyberte **Nastavení** > **E-mail**. 
      
-    1.  Vedle možnosti **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil** vyberte **Vyžadovat**.
+    1. Vedle možnosti **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil** vyberte **Vyžadovat**.
     2. Vyberte **OK**.
 
     ![Nastavení zásad dodržování předpisů e-mailem, které vyžadují spravovaný e-mailový profil](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
@@ -77,7 +77,7 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 ## <a name="create-the-conditional-access-policy"></a>Vytvoření zásad podmíněného přístupu
 Teď vytvoříme zásady podmíněného přístupu, která vyžaduje všechny platformy zařízení k registraci v Intune a dodržovat naše zásady dodržování předpisů Intune předtím, než získají přístup k Exchangi Online. Pro přístup k e-mailu budeme také vyžadovat aplikaci Outlook. Zásady podmíněného přístupu se dají konfigurovat v portálu Azure AD nebo na portálu Intune. Vzhledem k tomu, že se už nacházíme na portálu Intune, vytvoříme zásadu zde.
 1. V Intune, vyberte **podmíněného přístupu** > **zásady** > **nové zásady**.
-1.  Jako **Název** zadejte **Testovací zásada pro e-mail Office 365**. 
+1. Jako **Název** zadejte **Testovací zásada pro e-mail Office 365**. 
 3. V části **Přiřazení** vyberte **Uživatelé a skupiny**. Na kartě **Zahrnout** vyberte **Všichni uživatelé** a vyberte **Hotovo**.
 
 4. V části **Přiřazení** vyberte **Cloudové aplikace**. Protože chceme chránit e-mail Office 365 se službou Exchange Online, vybereme ho následujícím postupem:

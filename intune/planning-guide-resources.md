@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8e8e0f440377f40937145d78d3959318c21e6e5
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e3ed61f556cadf3ba04f7c33fbede2102c94b18f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046319"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549309"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>Další zdroje informací pro plánování nasazení Intune
 
@@ -50,12 +50,12 @@ Tady je seznam šablon tabulek pro každý oddíl.
 
 Další informace, které mohou být užitečné při plánování nasazení řešení Intune, jeho návrhu a implementaci, najdete v těchto zdrojích.
 
--   [Dokumentace k Microsoft Intune](/intune/) – kompletní sada dokumentace k Intune.
+- [Dokumentace k Microsoft Intune](/intune/) – kompletní sada dokumentace k Intune.
 
--   [Blog o Intune](https://blogs.technet.microsoft.com/enterprisemobility/) – příspěvky, ze kterých se dozvíte, jak Intune zapadá do širšího kontextu Enterprise Mobility.
+- [Blog o Intune](https://blogs.technet.microsoft.com/enterprisemobility/) – příspěvky, ze kterých se dozvíte, jak Intune zapadá do širšího kontextu Enterprise Mobility.
 
--   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
+- [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – informace o přístupu Microsoftu k zabezpečení, ochraně osobních údajů, dodržování předpisů a transparentnosti všech cloudových produktů a služeb Microsoftu.
 
--   [Intune User Voice](http://microsoftintune.uservoice.com/) – chcete požádat o funkci nebo hlasovat o funkcích s ostatními zákazníky? Napište nám své připomínky k Intune přes User Voice. Posloucháme vás.
+- [Intune User Voice](http://microsoftintune.uservoice.com/) – chcete požádat o funkci nebo hlasovat o funkcích s ostatními zákazníky? Napište nám své připomínky k Intune přes User Voice. Posloucháme vás.
 
--   [Průvodce registrací](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) – sada dokumentů, které můžete použít tak, jak jsou, nebo je můžete v rámci plánu komunikace s koncovými uživateli změnit, aby jim pomohly lépe pochopit význam registrace osobního zařízení v Intune.
+- [Průvodce registrací](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) – sada dokumentů, které můžete použít tak, jak jsou, nebo je můžete v rámci plánu komunikace s koncovými uživateli změnit, aby jim pomohly lépe pochopit význam registrace osobního zařízení v Intune.

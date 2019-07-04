@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1907ebf3d9233ca2324a4759b4f22a4c62e143c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045802"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549249"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integrace služby Pradeo s Intune
 
@@ -32,47 +32,47 @@ Při integraci řešení Pradeo Mobile Threat Defense do Intune je potřeba prov
 
 Před zahájením procesu integrace řešení Pradeo a Intune zkontrolujte, že máte následující:
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
+- Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
-    -   Přihlášení a čtení profilu uživatele
+    - Přihlášení a čtení profilu uživatele
 
-    -   Přístup k adresáři jako přihlášený uživatel
+    - Přístup k adresáři jako přihlášený uživatel
 
-    -   Čtení dat z adresáře
+    - Čtení dat z adresáře
 
-    -   Odeslání informací o zařízení do Intune
+    - Odeslání informací o zařízení do Intune
 
--   Přihlašovací údaje správce pro přístup ke konzole Pradeo Security
+- Přihlašovací údaje správce pro přístup ke konzole Pradeo Security
 
 ### <a name="pradeo-app-authorization"></a>Autorizace aplikace Pradeo Security
 
 Postup autorizace aplikace Pradeo:
 
--   Povolte službě Pradeo předávání informací, které se týkají stavu zařízení, zpět do Intune.
+- Povolte službě Pradeo předávání informací, které se týkají stavu zařízení, zpět do Intune.
 
--   Pradeo se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
+- Pradeo se synchronizuje s členstvím skupiny registrace Azure AD, aby se mohla naplnit databáze zařízení.
 
--   Povolte u konzoly pro správu Pradeo použití jednotného přihlašování (SSO) k Azure AD.
+- Povolte u konzoly pro správu Pradeo použití jednotného přihlašování (SSO) k Azure AD.
 
--   Povolte aplikaci Pradeo přihlášení pomocí jednotného přihlašování k Azure AD.
+- Povolte aplikaci Pradeo přihlášení pomocí jednotného přihlašování k Azure AD.
 
 ## <a name="to-set-up-pradeo-integration"></a>Nastavení integrace služby Pradeo
 
-1.  Přejděte do [konzoly Pradeo Security](https://www.apps-security.com) a přihlaste se pomocí přihlašovacích údajů.
+1. Přejděte do [konzoly Pradeo Security](https://www.apps-security.com) a přihlaste se pomocí přihlašovacích údajů.
 
-2.  Z nabídky vyberte **Administration – Enterprise Mobility Management**.
+2. Z nabídky vyberte **Administration – Enterprise Mobility Management**.
 
-3.  Vyberte **logo Intune**.
+3. Vyberte **logo Intune**.
 
-4.  V okně **EMM (Enterprise mobility management) – Intune** vyberte v části **Step 1** (Krok 1) tlačítko **Pradeo Connector** (konektor Pradeo). 
+4. V okně **EMM (Enterprise mobility management) – Intune** vyberte v části **Step 1** (Krok 1) tlačítko **Pradeo Connector** (konektor Pradeo). 
 
     ![Snímek obrazovky okna Pradeo EMM Intune](./media/pradeo_setup.png)
 
 5. Do okna pro připojení Microsoft Intune zadejte přihlašovací údaje Intune.
 
-5.  Otevře se webová stránka Pradeo. V části **Step 2** (Krok 2) vyberte tlačítko **Pradeo Device Health** (Stav zařízení Pradeo).
+5. Otevře se webová stránka Pradeo. V části **Step 2** (Krok 2) vyberte tlačítko **Pradeo Device Health** (Stav zařízení Pradeo).
 
 7. V okně Pradeo-Intune Connector vyberte **Accept** (Přijmout). 
 
@@ -86,4 +86,4 @@ Postup autorizace aplikace Pradeo:
 
 ## <a name="next-steps"></a>Další postup
 
--   [Nastavení aplikací Pradeo](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení aplikací Pradeo](mtd-apps-ios-app-configuration-policy-add-assign.md)

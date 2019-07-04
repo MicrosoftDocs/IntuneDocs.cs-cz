@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f04879e88cb85eaacdb75f5645a486e3539cb13a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 6480c6fb412c12e228b8bc3647045cf15da531e1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044087"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548016"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Konektor Symantec Endpoint Protection Mobile
 
 Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí aplikace Symantec Endpoint Protection Mobile (SEP Mobile) je řešení ochrany před mobilními hrozbami, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží SEP Mobile. Patří do ní:
 
--   Fyzická ochrana
+- Fyzická ochrana
 
--   Síťová ochrana
+- Síťová ochrana
 
--   Ochrana aplikací
+- Ochrana aplikací
 
--   Ochrana chyb zabezpečení
+- Ochrana chyb zabezpečení
 
 Můžete povolit hodnocení rizik SEP Mobile prostřednictvím zásad dodržování předpisů zařízení služby Intune a zásady podmíněného přístupu pak můžete povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě odhalených hrozeb.
 
@@ -48,9 +48,9 @@ Pokud se zjistí, že zařízení dané předpisy nedodržuje, zablokuje se př�
 
 Intune podporuje dva režimy integrace s SEP Mobile:
 
--   **Základní nastavení**: Umožňuje v režimu jen pro čtení službě SEP Mobile viditelnost zařízení v Intune.
+- **Základní nastavení**: Umožňuje v režimu jen pro čtení službě SEP Mobile viditelnost zařízení v Intune.
 
--   **Úplná integrace**: Umožňuje službě SEP Mobile nahlásit riziko zařízení a podrobnosti bezpečnostního incidentu službě Intune.
+- **Úplná integrace**: Umožňuje službě SEP Mobile nahlásit riziko zařízení a podrobnosti bezpečnostního incidentu službě Intune.
 
 ## <a name="sample-scenarios"></a>Ukázkové scénáře
 
@@ -60,11 +60,11 @@ Zde jsou uvedeny některé obvyklé scénáře:
 
 Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující:
 
--   Připojení k firemnímu e-mailu
+- Připojení k firemnímu e-mailu
 
--   Synchronizaci firemních souborů přes OneDrive for Work
+- Synchronizaci firemních souborů přes OneDrive for Work
 
--   Přístup k aplikacím společnosti
+- Přístup k aplikacím společnosti
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
@@ -100,17 +100,17 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
--   **Android 4.1 nebo novější**
+- **Android 4.1 nebo novější**
 
--   **iOS 8 nebo novější**
+- **iOS 8 nebo novější**
 
 ## <a name="pre-requisites"></a>Požadavky
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Předplatné Symantec Endpoint Protection Mobile
+- Předplatné Symantec Endpoint Protection Mobile
 
 Více informací najde na [webu Symantecu](https://www.skycure.com/skycure-microsoft-integration/).
 

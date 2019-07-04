@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0001175b84c2548c1fb93090f9ce6fd3193f21a3
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 20bdfcce6574d31c37442a7bad58582aa7ea2fb6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528929"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546134"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Odeslání protokolů ze zařízení s Androidem vývojářům Portálu společnosti
 
@@ -34,16 +34,16 @@ Může se stát, že se aplikace Portál společnosti nečekaně zavře. Vývoj�
 
 Protokoly odešlete do Microsoftu takto:
 
-1.  Otevřete aplikaci Portál společnosti.
+1. Otevřete aplikaci Portál společnosti.
 
-2.  Klepněte na **Nabídka** > **Nápověda** > **E-mailová podpora**.
+2. Klepněte na **Nabídka** > **Nápověda** > **E-mailová podpora**.
 
     > [!NOTE]
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
-3.  Klepněte na **Jen nahrát protokoly**.
+3. Klepněte na **Jen nahrát protokoly**.
 
-4.  Jakmile se nahrávání dokončí, zobrazí se ID incidentu. Toto ID si uložte pro svoje potřeby.
+4. Jakmile se nahrávání dokončí, zobrazí se ID incidentu. Toto ID si uložte pro svoje potřeby.
 
 Pokud chcete tým Portálu společnosti kontaktovat přímo, napište e-mail na adresu <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
 

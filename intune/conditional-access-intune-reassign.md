@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530680"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546884"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure
 
@@ -51,13 +51,13 @@ Pokud jste připravení přejít na webu Azure portal, postupujte podle kroků v
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Chcete-li ověřit na základě zařízení zásady podmíněného přístupu v klasickém portálu Intune
 
-1.  Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
+1. Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
 
-2.  Zvolte z levé nabídky možnost **Zásady**.
+2. Zvolte z levé nabídky možnost **Zásady**.
 
-3.  Zvolte **podmíněného přístupu**, a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online) jste zásady podmíněného přístupu vytvořili.
+3. Zvolte **podmíněného přístupu**, a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online) jste zásady podmíněného přístupu vytvořili.
 
-4.  Poznamenejte si nastavení podmíněného přístupu a použijte tyto při vytváření stejných zásad podmíněného přístupu na webu Azure Portal.
+4. Poznamenejte si nastavení podmíněného přístupu a použijte tyto při vytváření stejných zásad podmíněného přístupu na webu Azure Portal.
 
 ### <a name="app-and-device-based-conditional-access-policies-working-together"></a>Na základě zařízení zásady podmíněného přístupu spolupracují a aplikace
 
@@ -194,13 +194,13 @@ Po změně přiřazení zásad podmíněného přístupu na webu Azure Portal, j
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Chcete-li zakázat zásady podmíněného přístupu
 
-1.  Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
+1. Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
 
-2.  Zvolte z levé nabídky možnost **Zásady**.
+2. Zvolte z levé nabídky možnost **Zásady**.
 
-3.  Zvolte **podmíněného přístupu**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), který jste vytvořili zásadu podmíněného přístupu.
+3. Zvolte **podmíněného přístupu**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), který jste vytvořili zásadu podmíněného přístupu.
 
-4.  Zrušte zaškrtnutí možnosti **zásady podmíněného přístupu povolit**a potom klikněte na tlačítko **Uložit**.
+4. Zrušte zaškrtnutí možnosti **zásady podmíněného přístupu povolit**a potom klikněte na tlačítko **Uložit**.
 
     ![Obrázek zásady podmíněného přístupu zakázat v klasickém portálu Intune](./media/reassign-ca-18.png)
 

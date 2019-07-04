@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804428"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545242"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Pravidla chování v oblasti Open Source u Microsoftu
 
@@ -30,7 +30,7 @@ Jsme **chtějí a podporují příspěvky** z naší komunity (uživatelů, zák
     5. Vytvořte žádost o přijetí změn.
     
     **Option 2: Vyhledejte požadovaný článek v tomto úložišti a aktualizovat**  
-    1.  Většina témata jsou v `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. V této složce, vyhledejte název tématu, jako například `troubleshoot-policies-in-microsoft-intune`. 
+    1. Většina témata jsou v `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. V této složce, vyhledejte název tématu, jako například `troubleshoot-policies-in-microsoft-intune`. 
     2. Vyberte odkaz a klikněte na ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se vám **tento soubor upravit** popisu tlačítka. 
     3. Proveďte požadované změny a pak **potvrzení** provedené změny. 
     4. Vytvořte žádost o přijetí změn. 

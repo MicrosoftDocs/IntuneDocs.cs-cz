@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 22ce9ace7848ea1535b04ab6f0c0249c970e8c34
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494291"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547356"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -225,7 +225,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Location                        |      Hodnota      | type  |      Data       |
+   |                        Location                        |      Value      | type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -429,7 +429,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         >  - Ve statickém textu subjektu se složené závorky **{}** , které neuzavírají proměnnou, vyhodnotí jako chyba. 
         >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }** .
         >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
-        >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
+        >  - Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří. 
 
 
@@ -472,7 +472,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
         >  - Ve statickém textu alternativního názvu subjektu (SAN) nejdou použít složené závorky **{ }** , středníky **;** ani svislé čáry **|** . 
         >  - Když používáte proměnné certifikátu zařízení, uzavřete proměnnou do složených závorek **{ }** .
         >  - `{{FullyQualifiedDomainName}}` funguje jenom pro Windows a zařízení připojená k doméně. 
-        >  -  Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
+        >  - Když v subjektu nebo alternativním názvu subjektu (SAN) pro certifikát zařízení používáte vlastnosti zařízení, jako je IMEI, sériové číslo a plně kvalifikovaný název domény, uvědomte si, že osoba, která má k zařízení přístup, může tyto vlastnosti zfalšovat.
         >  - Pokud zadané proměnné zařízení nejsou podporované, profil se na zařízení nenainstaluje. Pokud se například v alternativním názvu subjektu profilu SCEP přiřazeného k zařízení, které nemá číslo IMEI, použije {{IMEI}}, instalace profilu se nezdaří.  
 
    - **Období platnosti certifikátu**: Pokud jste spustili `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` příkaz na vydávající CA, která umožňuje nastavit vlastní období platnosti, můžete zadat dobu zbývající do vypršení platnosti certifikátu.<br>Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA. 

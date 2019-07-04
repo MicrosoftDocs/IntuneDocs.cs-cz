@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 798ea14529c0cbf44a0530f1a9a16507b14d7397
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2c0d3484311d044842daf6718b306d45fc93edf2
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527833"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545933"
 ---
 # <a name="enroll-device-for-access-to-work-or-school-resources"></a>Registrace zařízení pro přístup k pracovním nebo školním prostředkům
 Registrace zařízení a získat přístup k e-mailu a aplikacím, budete muset nainstalovat aplikaci portál společnosti Intune nebo aplikace pro Microsoft Intune. Při registraci, základní správu zásad, které vaše organizace má nakonfigurovanou, jako jsou hesla, PIN kód a šifrování, se použijí k zařízení. Po nastavení zařízení splňovat všechny požadavky vaší organizace, budete mít bezpečný přístup pracovním informacím prakticky odkudkoli.  
@@ -53,13 +53,13 @@ Aplikace portál společnosti je k dispozici pro Windows 10, iOS, macOS a androi
 Aplikace pro Microsoft Intune je pro zařízení s Androidem vlastněných společností.  
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Jaký druh zařízení můžete zaregistrovat pomocí portálu společnosti?
--   Zařízení Apple používající iOS (například iPhone a iPad) a macOS (například MacBook a iMac)
--   Zařízení se systémem Android
--   Zařízení s Windows
-    -   Windows 10 Mobile
-    -   Windows 10 Desktop
-    -   Windows Phone 8.1
-    -   Windows 8.1
+- Zařízení Apple používající iOS (například iPhone a iPad) a macOS (například MacBook a iMac)
+- Zařízení se systémem Android
+- Zařízení s Windows
+    - Windows 10 Mobile
+    - Windows 10 Desktop
+    - Windows Phone 8.1
+    - Windows 8.1
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Jaký druh zařízení můžete zapsat pomocí aplikace pro Microsoft Intune?  
 Můžete registraci firemních zařízení s Androidem, které vaše organizace má nastavení pro použití s aplikací. Aplikace podporuje Android 6.0 nebo novější. 

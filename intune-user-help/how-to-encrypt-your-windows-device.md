@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 477aa18ebb1e079573e7962429d33a8ca4afabed
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 7e4fa124d1b3fdb765ac3da964d57ade5c1c4c65
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61494945"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545628"
 ---
 # <a name="how-to-encrypt-your-windows-device"></a>Postup zašifrování zařízení s Windows
 
@@ -31,8 +31,8 @@ K zabezpečení dat vaší společnosti nebo školy může vaše firemní podpor
 
 Pokud máte desktopové zařízení, zašifrujte ho podle pokynů níže.
 
-1.  Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker**.
+1. Vyhledejte a pak spusťte aplikaci **Správa nástroje BitLocker**.
 
-2.  Klikněte na **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
+2. Klikněte na **Zapnout nástroj BitLocker** a pak podle zobrazených pokynů zašifrujte jednotlivé jednotky.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

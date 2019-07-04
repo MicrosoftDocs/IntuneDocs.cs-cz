@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819742"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548906"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Používání Azure AD pro přístup k rozhraním Intune API v Microsoft Graphu
 
@@ -61,23 +61,23 @@ Další informace najdete v tématech:
 
 Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
-1.  Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí pověření správce.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí pověření správce.
 
     Podle potřeby můžete použít:
     - Účet správce tenanta
     - Uživatelský účet tenanta se zapnutou možností **Uživatelé můžou registrovat aplikace**
 
-2.  V nabídce zvolte **Azure Active Directory** &gt; **Registrace aplikací**.
+2. V nabídce zvolte **Azure Active Directory** &gt; **Registrace aplikací**.
 
     <img src="./media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
-3.  Zvolte **Registrace nové aplikace** a vytvořte novou aplikaci, nebo zvolte existující aplikaci.  (Pokud zvolíte existující aplikaci, přeskočte další krok.)
+3. Zvolte **Registrace nové aplikace** a vytvořte novou aplikaci, nebo zvolte existující aplikaci.  (Pokud zvolíte existující aplikaci, přeskočte další krok.)
 
-4.  V okně **Vytvořit** zadejte následující informace:
+4. V okně **Vytvořit** zadejte následující informace:
 
-    1.  **Název** pro aplikaci (zobrazuje se při přihlášení uživatele)
+    1. **Název** pro aplikaci (zobrazuje se při přihlášení uživatele)
 
-    2.  Hodnoty **Typ aplikace** a **Identifikátor URI pro přesměrování**
+    2. Hodnoty **Typ aplikace** a **Identifikátor URI pro přesměrování**
 
         Tyto hodnoty se budou lišit podle vašich požadavků. Pokud používáte například Azure AD [Authentication Library](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL), nastavte **Typ aplikace** na `Native` a **Identifikátor URI pro přesměrování** na `urn:ietf:wg:oauth:2.0:oob`.
 
@@ -85,19 +85,19 @@ Postup pro registraci aplikace k používání rozhraní Microsoft Graph API:
 
         Další informace najdete v tématu [Scénáře ověřování pro Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5.  V okně aplikace:
+5. V okně aplikace:
 
-    1.  Všimněte si hodnoty **ID aplikace**.
+    1. Všimněte si hodnoty **ID aplikace**.
 
-    2.  Zvolte **Nastavení** &gt; **Přístup přes rozhraní API** &gt; **Požadovaná oprávnění**.
+    2. Zvolte **Nastavení** &gt; **Přístup přes rozhraní API** &gt; **Požadovaná oprávnění**.
 
     <img src="media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6.  V okně **Požadovaná oprávnění** zvolte **Přidat** &gt; **Přidat přístup přes rozhraní API** &gt; **Vyberte rozhraní API**.
+6. V okně **Požadovaná oprávnění** zvolte **Přidat** &gt; **Přidat přístup přes rozhraní API** &gt; **Vyberte rozhraní API**.
 
     <img src="media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7.  V okně **Vyberte rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
+7. V okně **Vyberte rozhraní API** zvolte **Microsoft Graph** &gt; **Vybrat**.  Otevře se okno **Povolit přístup**, které obsahuje obory oprávnění dostupné pro aplikaci.
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -334,28 +334,28 @@ Pokud k tomu dojde, ověřte platnost těchto skutečností:
 
 Tento příklad ukazuje, jak pomocí C# načíst seznam zařízení přidružených k účtu Intune.
 
-1.  Spusťte Visual Studio a vytvořte nový projekt Konzolová aplikace (.NET Framework) pro Visual C#.
+1. Spusťte Visual Studio a vytvořte nový projekt Konzolová aplikace (.NET Framework) pro Visual C#.
 
-2.  Zadejte název projektu a další podrobnosti podle potřeby.
+2. Zadejte název projektu a další podrobnosti podle potřeby.
 
     <img src="media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3.  Pomocí Průzkumníka řešení do projektu přidejte balíček NuGet pro Microsoft ADAL.
+3. Pomocí Průzkumníka řešení do projektu přidejte balíček NuGet pro Microsoft ADAL.
 
-    1.  Klikněte pravým tlačítkem myši na Průzkumníka řešení.
-    2.  Zvolte **Spravovat balíčky NuGet** &gt; **Procházet**.
-    3.  Vyberte `Microsoft.IdentityModel.Clients.ActiveDirectory` a pak zvolte **Nainstalovat**.
+    1. Klikněte pravým tlačítkem myši na Průzkumníka řešení.
+    2. Zvolte **Spravovat balíčky NuGet** &gt; **Procházet**.
+    3. Vyberte `Microsoft.IdentityModel.Clients.ActiveDirectory` a pak zvolte **Nainstalovat**.
 
     <img src="media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
-4.  Přidejte do horní části **Program.cs** následující příkazy:
+4. Přidejte do horní části **Program.cs** následující příkazy:
 
     ``` csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
     using System.Net.Http;
     ```
 
-5.  Přidejte metodu pro vytvoření autorizační hlavičky:
+5. Přidejte metodu pro vytvoření autorizační hlavičky:
 
     ``` csharp
     private static async Task<string> GetAuthorizationHeader()
@@ -386,14 +386,14 @@ Tento příklad ukazuje, jak pomocí C# načíst seznam zařízení přidružen�
     }
     ```
 
-7.  Aktualizujte příkaz **Main**, aby volal funkci **GetMyManagedDevices**:
+7. Aktualizujte příkaz **Main**, aby volal funkci **GetMyManagedDevices**:
 
     ``` csharp
     string devices = GetMyManagedDevices().GetAwaiter().GetResult();
     Console.WriteLine(devices);
     ```
 
-8.  Zkompilujte aplikaci a spusťte ji.  
+8. Zkompilujte aplikaci a spusťte ji.  
 
 Při prvním spuštění aplikace by se měly zobrazit dvě výzvy.  První požádá o přihlašovací údaje a druhá udělí oprávnění pro žádost `managedDevices`.  
 
@@ -553,11 +553,11 @@ Pokud vaše organizace podporuje organizace, které mají svoje vlastní tenanty
 
 Postupujte následovně:
 
-1.  Ověřte, jestli v cílovém tenantovi Azure AD existuje účet daného klienta.
+1. Ověřte, jestli v cílovém tenantovi Azure AD existuje účet daného klienta.
 
-2.  Ověřte, jestli účet vašeho tenanta umožňuje uživatelům registraci aplikací (viz **uživatelská nastavení**).
+2. Ověřte, jestli účet vašeho tenanta umožňuje uživatelům registraci aplikací (viz **uživatelská nastavení**).
 
-3.  Vytvořte relaci mezi jednotlivými tenanty.  
+3. Vytvořte relaci mezi jednotlivými tenanty.  
 
     Můžete to udělat jedním z těchto způsobů:
 
@@ -567,15 +567,15 @@ Postupujte následovně:
 
 Pozvání uživatele, aby se stal hostem vašeho tenanta:
 
-1.  Na panelu **Rychlé úkoly** zvolte **Přidat uživatele typu host**.
+1. Na panelu **Rychlé úkoly** zvolte **Přidat uživatele typu host**.
 
     <img src="media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
 
-2.  Zadejte e-mailovou adresu klienta a (volitelně) přidejte individuální zprávu pro pozvánku.
+2. Zadejte e-mailovou adresu klienta a (volitelně) přidejte individuální zprávu pro pozvánku.
 
     <img src="media/azure-ad-guest-invite.png" width="203" height="106" alt="Inviting an external user as a guest" />
 
-3.  Zvolte **Pozvat**.
+3. Zvolte **Pozvat**.
 
 Tím se uživateli odešle pozvánka.
 

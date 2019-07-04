@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95862c006baef40bfb219e5cff50d5622c8c00b4
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 767788d702db45686d686e21018cbf0c5b038412
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505807"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546657"
 ---
 # <a name="set-your-pin-or-password"></a>Nastavení PIN kódu nebo hesla
 
@@ -31,9 +31,9 @@ Pokud Intune používáte pro přístup k pracovním nebo školním datům, mů�
 
 K nastavení kódu PIN a hesla použijte následující postup.
 
-1.  Klepněte na **Nastavení** > **Zabezpečení** > **Zamykací obrazovka** > **Heslo**.
+1. Klepněte na **Nastavení** > **Zabezpečení** > **Zamykací obrazovka** > **Heslo**.
 
-2.  Zvolte a potvrďte nové heslo.
+2. Zvolte a potvrďte nové heslo.
 
 Pro určitá zařízení musíte kromě hesla obrazovky nastavit spouštěcí kód PIN. Můžete tento problém zkusit vyřešit tak, že v aplikaci nastavení najdete umístění k povolení této možnosti. Třeba na Samsungu Galaxy S7 můžete zabezpečené spuštění povolit tak, že přejdete do **Nastavení** > **Zamykací obrazovka a zabezpečení** > **Zabezpečené spuštění**. Další informace najdete [tady](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 

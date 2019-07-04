@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5b4b6cc2cd05564f842fbf95521086a054cfac2
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f0a8b0b633f64a2ed6e3e14d5d884df80342067a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528077"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545470"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení se pracovní profil Androidu
 
@@ -33,7 +33,7 @@ Registrace osobních zařízení s Androidem, chcete-li získat přístup k fire
 
 ## <a name="create-work-profile-and-enroll-device"></a>Vytvoření pracovního profilu a registrace zařízení
 
-1.  Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu. Pokud tuto bezplatnou aplikaci ještě nemáte nainstalovanou, stáhněte a nainstalujte ji z obchodu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
+1. Na **úvodní** obrazovce aplikace Portál společnosti pro Android klepněte na **Přihlásit se** a pak se přihlaste pomocí svého pracovního nebo školního účtu. Pokud tuto bezplatnou aplikaci ještě nemáte nainstalovanou, stáhněte a nainstalujte ji z obchodu [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal).
 
     ![Úvodní obrazovka aplikace Portál společnosti pro Android](./media/and-enroll-0-welcome-screen.png)
 
@@ -41,15 +41,15 @@ Registrace osobních zařízení s Androidem, chcete-li získat přístup k fire
 
     ![Obrazovka Nastavení firemního přístupu](/intune/media/android_cp_enroll_01_1709_new.png)
 
-3.  Na obrazovce **Proč vytvořit pracovní profil** si přečtěte, co budete moct dělat, a pak klepněte na **POKRAČOVAT**.
+3. Na obrazovce **Proč vytvořit pracovní profil** si přečtěte, co budete moct dělat, a pak klepněte na **POKRAČOVAT**.
 
     ![Proč vytvořit pracovní profil](./media/andr-afw-why-create-a-work-profile.png)
 
-4.  Prohlédněte si seznam toho, co firemní podpora na vašem zařízení uvidí nebo neuvidí, a klepněte na **POKRAČOVAT**.
+4. Prohlédněte si seznam toho, co firemní podpora na vašem zařízení uvidí nebo neuvidí, a klepněte na **POKRAČOVAT**.
 
     ![Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](/intune/media/android_cp_enroll_02_after_1710.png)
 
-5.  Na obrazovce **Co dál?** si přečtěte, co probíhá během registrace, a potom klepněte na **REGISTROVAT**.
+5. Na obrazovce **Co dál?** si přečtěte, co probíhá během registrace, a potom klepněte na **REGISTROVAT**.
 
     ![Obrazovka Co dál?](/intune/media/android_work_cp_enroll_03_after_1710.png)
 

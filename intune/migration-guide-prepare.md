@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bd03075e6088b4cf06237429a723e93e87029fd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494593"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548366"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune na správu mobilních zařízení (MDM)
 
@@ -31,30 +31,30 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Jaké druhy zařízení potřebujete spravovat?
 
--   Pro které [platformy](supported-devices-browsers.md) potřebujete podporu?
+- Pro které [platformy](supported-devices-browsers.md) potřebujete podporu?
 
--   Jsou zařízení, která potřebujete podporovat, podniková nebo osobní?
+- Jsou zařízení, která potřebujete podporovat, podniková nebo osobní?
 
--   Jaký druh připojení používáte? Wi-Fi, mobilní síť nebo VPN?
+- Jaký druh připojení používáte? Wi-Fi, mobilní síť nebo VPN?
 
 ### <a name="what-do-your-users-need-to-do-on-managed-devices"></a>Co vaši uživatelé potřebují dělat na spravovaných zařízeních?
 
--   Potřebujete zřizovat aplikace pro koncové uživatele?
+- Potřebujete zřizovat aplikace pro koncové uživatele?
 
--   Používáte vlastní obchodní aplikace? Nebo pracujete jen s veřejnými aplikacemi z obchodu?
+- Používáte vlastní obchodní aplikace? Nebo pracujete jen s veřejnými aplikacemi z obchodu?
 
--   Potřebujete zřizovat e-mailové účty?
+- Potřebujete zřizovat e-mailové účty?
 
 ### <a name="what-kinds-of-users"></a>O jaký druh uživatelů se jedná?
 
--   Kolik uživatelů bude používat jedno zařízení?
+- Kolik uživatelů bude používat jedno zařízení?
 
--   Jaké podmínky použití potřebujete?
+- Jaké podmínky použití potřebujete?
 
-    -   Zapojte do plánování včas právní oddělení.
-    -   Jaké lokalizace budou potřeba?
+    - Zapojte do plánování včas právní oddělení.
+    - Jaké lokalizace budou potřeba?
 
--   Jsou uživatelé obeznámeni s technologiemi a IT obecně?
+- Jsou uživatelé obeznámeni s technologiemi a IT obecně?
 
 ### <a name="what-is-your-device-security-policy"></a>Jaké jsou zásady zabezpečení vašeho zařízení?
 
@@ -68,11 +68,11 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 
 - Jaký druh ověřování je potřeba podporovat? Pokud potřebujete ověřování na základě certifikátů, jaký druh certifikátů je potřeba poskytovat?
   - Intune můžete poskytovat certifikáty s profily přístupu k prostředkům pro zaregistrovaná zařízení.
-  -   Jaký typ infrastruktury veřejných klíčů (PKI) potřebujete podporovat?
+  - Jaký typ infrastruktury veřejných klíčů (PKI) potřebujete podporovat?
   <br></br>
 - Potřebujete podporovat virtuální privátní síť (VPN) na úrovni zařízení nebo aplikace?
 
-  -   Intune může zřídit konfigurace sítě VPN i pro poskytovatele sítí VPN třetích stran.
+  - Intune může zřídit konfigurace sítě VPN i pro poskytovatele sítí VPN třetích stran.
   <br/><br/>
 - Je možné zavést pro některé požadavky dočasné výjimky, aby se zabránilo výpadkům? Nebo musí zařízení s přístupem vždy splňovat všechny požadavky na zabezpečení?
 

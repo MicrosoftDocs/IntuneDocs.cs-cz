@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c4f5fd3f8c92d1d78ed37946663a127df440f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 7953fece6edad8a7fb3a0b46b1056c798c76c31e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530695"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547093"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
@@ -45,11 +45,11 @@ Zde jsou uvedeny některé obvyklé scénáře:
 
 Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující:
 
--   Připojení k firemnímu e-mailu
+- Připojení k firemnímu e-mailu
 
--   Synchronizaci firemních souborů přes OneDrive for Work
+- Synchronizaci firemních souborů přes OneDrive for Work
 
--   Přístup k aplikacím společnosti
+- Přístup k aplikacím společnosti
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
@@ -85,18 +85,18 @@ Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchroni
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
--   **Android 4.1 nebo novější**
+- **Android 4.1 nebo novější**
 
--   **iOS 8 nebo novější**
+- **iOS 8 nebo novější**
 
 ## <a name="pre-requisites"></a>Požadavky
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Předplatné ochrany před mobilními hrozbami Check Point SandBlast
-    -   Další informace najdete na [webu služby CheckPoint SandBlast](https://www.checkpoint.com/).
+- Předplatné ochrany před mobilními hrozbami Check Point SandBlast
+    - Další informace najdete na [webu služby CheckPoint SandBlast](https://www.checkpoint.com/).
 
 ## <a name="next-steps"></a>Další postup
 

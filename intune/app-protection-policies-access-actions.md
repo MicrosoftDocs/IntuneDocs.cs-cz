@@ -1,7 +1,7 @@
 ---
-title: Vymazání dat pomocí akce přístupu zásad ochrany aplikací
+title: Vymazání dat pomocí akce podmíněného spuštění zásad ochrany aplikací
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak můžete v Intune selektivně vymazat data pomocí akcí přístupu zásad ochrany aplikací.
+description: Zjistěte, jak selektivně vymazat data pomocí akce podmíněného spuštění zásad ochrany aplikací v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 65115f6520122cd4b3429411db67052481984617
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804681"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558435"
 ---
-# <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Selektivní vymazání dat pomocí akcí přístupu zásad ochrany aplikací v Intune
+# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí akce podmíněného spuštění zásad ochrany aplikací v Intune
 
 Pomocí zásad ochrany aplikací můžete v Intune nakonfigurovat nastavení, která koncovým uživatelům zablokují přístup k podnikové aplikaci nebo účtu. Tato nastavení se zaměřují na přemístění dat a požadavky na přístup, které vaše organizace stanovila například pro zařízení s jailbreakem a minimální verze operačního systému.
  
 S využitím těchto nastavení můžete explicitně vymazat podniková data ze zařízení koncového uživatele jako akci, která se má provést při nedodržení předpisů. U některých nastavení budete moci nakonfigurovat více akcí (například zablokování přístupu a vymazání dat) na základě různých zadaných hodnot.
 
-## <a name="create-an-app-protection-policy-using-access-actions"></a>Vytvoření zásad ochrany aplikací využívajících akce přístupu
+## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Vytvořit zásady ochrany aplikací použitím podmíněných akcích spouštění
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** vyberte **Klientské aplikace** > **Zásady ochrany aplikací**.
 4. Klikněte na **Přidat zásadu** (můžete také upravit některou existující zásadu). 
 5. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 
-6. Když se v podokně Nastavení posunete dolů, uvidíte oddíl s názvem **Akce přístupu** s tabulkou, kterou můžete upravit.
+6. V podokně nastavení se posuňte dolů, uvidíte část s názvem **podmíněného spuštění** s upravitelné tabulky.
 
     ![Snímek obrazovky akcí přístupu ochrany aplikací v Intune](./media/apps-selective-wipe-access-actions01.png)
 
@@ -52,13 +52,13 @@ Tabulka s nastavením zásad ochrany aplikací obsahuje sloupce **Nastavení**, 
 
 ### <a name="ios-policy-settings"></a>Nastavení zásad pro iOS
 Pro iOS budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigurovat akce pro následující nastavení:
--  Maximální počet pokusů o zadání PIN kódu
--  Offline období odkladu
--  Zařízení s jailbreakem nebo rootem
--  Minimální verze operačního systému
--  Minimální verze aplikace
--  Minimální verze sady SDK
--  Modely zařízení
+- Maximální počet pokusů o zadání PIN kódu
+- Offline období odkladu
+- Zařízení s jailbreakem nebo rootem
+- Minimální verze operačního systému
+- Minimální verze aplikace
+- Minimální verze sady SDK
+- Modely zařízení
 
 Pokud chcete použít nastavení **Modely zařízení**, zadejte seznam identifikátorů modelů iOS a oddělte je středníkem. Identifikátor modelu iOS najdete ve sloupci Device Type (Typ zařízení) v [ dokumentaci podpory aplikace HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Příklad zadání: *iPhone5,2;iPhone5,3*
@@ -74,15 +74,15 @@ Pokud mezi dvěma zásadami ochrany aplikací dojde ke konfliktu nakonfigurovan�
 ### <a name="android-policy-settings"></a>Nastavení zásad pro Android
 
 Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigurovat akce pro následující nastavení:
--  Maximální počet pokusů o zadání PIN kódu
--  Offline období odkladu
--  Zařízení s jailbreakem nebo rootem
--  Minimální verze operačního systému
--  Minimální verze aplikace
--  Minimální verze opravy
--  Výrobci zařízení
--  V rámci ověření zařízení SafetyNet
--  Kontrola ohrožení aplikací
+- Maximální počet pokusů o zadání PIN kódu
+- Offline období odkladu
+- Zařízení s jailbreakem nebo rootem
+- Minimální verze operačního systému
+- Minimální verze aplikace
+- Minimální verze opravy
+- Výrobci zařízení
+- V rámci ověření zařízení SafetyNet
+- Kontrola ohrožení aplikací
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
 Příklad vstupu: *Výrobce A; Výrobce B* 
@@ -105,9 +105,9 @@ Pokud má nastavení **Vyžadovat pro přístup PIN kód** hodnotu **Ano**, bude
 Pokud chcete konfigurovat některé nastavení, vyberte ho v rozevíracím seznamu ve sloupci **Nastavení**. Po výběru nastavení se na stejném řádku zpřístupní upravitelné textové pole ve sloupci **Hodnota**, pokud je potřeba nastavit hodnotu. Zároveň se zpřístupní rozevírací seznam ve sloupci **Akce** se sadou podmíněně spuštěných akcí použitelných pro dané nastavení. 
 
 Následující seznam obsahuje nejčastější akce:
--  **Blokovat přístup** – zablokuje koncovému uživateli přístup k podnikové aplikaci.
--  **Vymazat data** – vymaže ze zařízení koncového uživatele podniková data.
--  **Upozornit** – zobrazí koncovému uživateli dialogové okno s upozorněním.
+- **Blokovat přístup** – zablokuje koncovému uživateli přístup k podnikové aplikaci.
+- **Vymazat data** – vymaže ze zařízení koncového uživatele podniková data.
+- **Upozornit** – zobrazí koncovému uživateli dialogové okno s upozorněním.
 
 V některých případech, jako u nastavení **Minimální verze operačního systému**, můžete nakonfigurovat, aby se provedly všechny použitelné akce na základě různých čísel verzí. 
 

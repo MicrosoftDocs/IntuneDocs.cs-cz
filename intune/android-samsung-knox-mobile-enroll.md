@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d07d9466cda86270898d0e54e8d50b358bcb1b84
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0c962085ce61f01613bfc04ef0c80699e6f5a3e8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494102"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547433"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Automatická registrace zařízení s Androidem pomocí technologie Knox Mobile Enrollment od Samsungu
 
@@ -44,15 +44,15 @@ Seznam identifikátorů zařízení (sériová čísla a čísla IMEI) se při n
 ## <a name="prerequisites"></a>Požadavky
 
 Pokud chcete provést registraci do Intune pomocí KME, musíte nejprve zaregistrovat vaši společnost na portálu Samsung Knox pomocí tohoto postupu:
-1.  [Ujistěte se, že je ve vaší oblasti k dispozici KME](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME je dostupná ve více než 55 zemích. Ujistěte se, že se podporuje vaše země nasazení.
+1. [Ujistěte se, že je ve vaší oblasti k dispozici KME](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME je dostupná ve více než 55 zemích. Ujistěte se, že se podporuje vaše země nasazení.
 
-2.  [Podporovaná zařízení](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): KME je k dispozici na všech zařízeních se Samsung Knox 2.4 minimálně pro registrace zařízení s Androidem a minimálně Knox 2.8 pro registraci Androidu enterprise.
+2. [Podporovaná zařízení](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): KME je k dispozici na všech zařízeních se Samsung Knox 2.4 minimálně pro registrace zařízení s Androidem a minimálně Knox 2.8 pro registraci Androidu enterprise.
 
-3.  [Požadavky na síťovou](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Ujistěte se, že nezbytné brány firewall a pravidla přístupu k síti jsou povoleny ve vaší síti.
+3. [Požadavky na síťovou](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Ujistěte se, že nezbytné brány firewall a pravidla přístupu k síti jsou povoleny ve vaší síti.
 
-4.  [Zaregistrujte si účet Samsung](https://www2.samsungknox.com/en/user/register): Samsung účtu je potřeba k registraci a povolit KME a spravovat všechna oprávnění Knox organizace na jednom místě.
+4. [Zaregistrujte si účet Samsung](https://www2.samsungknox.com/en/user/register): Samsung účtu je potřeba k registraci a povolit KME a spravovat všechna oprávnění Knox organizace na jednom místě.
 
-5.  Kontrola registrace: Poté, co váš profil je dokončení a odeslání, Samsung provede kontrolu vaší aplikace a buď ho buď schválí, okamžitě nebo vloží do stavu čekající revize pro další zpracování. Po schválení účtu můžete pokračovat dalšími kroky.
+5. Kontrola registrace: Poté, co váš profil je dokončení a odeslání, Samsung provede kontrolu vaší aplikace a buď ho buď schválí, okamžitě nebo vloží do stavu čekající revize pro další zpracování. Po schválení účtu můžete pokračovat dalšími kroky.
 
 ## <a name="create-mdm-profile"></a>Vytvoření profilu MDM
 

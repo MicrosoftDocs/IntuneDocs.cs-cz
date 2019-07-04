@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 980138015cdbe063d6d4b05eb6dd8ab70be4b601
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512252"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548488"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Konektor Pradeo Mobile Threat Defense s Intune
 
@@ -41,11 +41,11 @@ Zde jsou uvedeny některé obvyklé scénáře.
 
 Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující akce:
 
--   Připojení k firemnímu e-mailu
+- Připojení k firemnímu e-mailu
 
--   Synchronizaci firemních souborů přes OneDrive for Work
+- Synchronizaci firemních souborů přes OneDrive for Work
 
--   Přístup k aplikacím společnosti
+- Přístup k aplikacím společnosti
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
@@ -81,19 +81,19 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
--   **Android 4.0.3 nebo novější**
+- **Android 4.0.3 nebo novější**
 
--   **iOS 7 nebo novější**
+- **iOS 7 nebo novější**
 
 ## <a name="prerequisites"></a>Požadavky
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Předplatné služby Pradeo Security for Mobile Threat Defense
+- Předplatné služby Pradeo Security for Mobile Threat Defense
 
-    -   Další informace naleznete na [webu Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
+    - Další informace naleznete na [webu Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
 
 ## <a name="next-steps"></a>Další postup
 

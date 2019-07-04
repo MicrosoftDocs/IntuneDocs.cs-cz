@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58217b6088669a7387ed7452f0ec81ae4a04b60c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cfc17c60412a1cfe90693216caa69ada3d2d2c9a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497171"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545248"
 ---
 # <a name="encrypting-your-android-device"></a>Šifrování zařízení s Androidem
 
@@ -38,7 +38,7 @@ Pokud aplikace portál společnosti nebo aplikace pro Microsoft Intune vás vyzv
 > [!Note]
 > Některá zařízení s Androidem od Huawei Vivo a OPPO nelze zašifrovat. Další informace najdete [tady](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1.  Nastavte zámek obrazovky zařízení.  
+1. Nastavte zámek obrazovky zařízení.  
     a. Přejděte na **nastavení** > **zamykací obrazovka a zabezpečení** > **typ zámku obrazovky**.  
     b. Vyberte buď **PIN**, **heslo**, nebo **vzor**.  
     c. Postupujte podle pokynů na obrazovce konfigurace svůj zámek obrazovky.  

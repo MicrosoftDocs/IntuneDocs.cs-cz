@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ec922d76ca08639139a7d130fb14c5e8bfa413
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046227"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548350"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
 Dobré řízení změn stojí na jasné a vstřícné komunikaci ohledně změn, které se chystají. Pokud chcete, aby zavedení služby Intune proběhlo hladce, měl by váš plán komunikace při nasazení zahrnovat čtyři oblasti:
 
--   Jaké informace je potřeba uživatelům sdělit
+- Jaké informace je potřeba uživatelům sdělit
 
--   Způsob doručování informací používaný při komunikaci
+- Způsob doručování informací používaný při komunikaci
 
--   Kdo přijímá sdělení
+- Kdo přijímá sdělení
 
--   Časová osa komunikace
+- Časová osa komunikace
 
 Pojďme se podívat na každou oblast podrobněji.
 
@@ -56,13 +56,13 @@ Pomoci vám může tento [průvodce registrací pro koncové uživatele](https:/
 
 Existují různé způsoby, jak v organizaci oznámit cílovým skupinám a uživatelům informace, které se týkají zavedení Intune. Následující seznam obsahuje příklady a také vlnu komunikace, v které můžete metodu použít:
 
--   Celé organizace osobně, nebo použít pro na úvod schůzky Microsoft Teams
+- Celé organizace osobně, nebo použít pro na úvod schůzky Microsoft Teams
 
--   E-mail se používá ve vlně předcházející registraci, v registrační vlně i ve vlně navazující na registraci.
+- E-mail se používá ve vlně předcházející registraci, v registrační vlně i ve vlně navazující na registraci.
 
--   Webové stránky organizace se používají ve všech vlnách.
+- Webové stránky organizace se používají ve všech vlnách.
 
--   Yammer a plakáty nebo letáky se používají v úvodní vlně a ve vlně, která předchází registraci.
+- Yammer a plakáty nebo letáky se používají v úvodní vlně a ve vlně, která předchází registraci.
 
 ## <a name="communications-timeline"></a>Časová osa komunikace
 
@@ -72,15 +72,15 @@ Například úvodní komunikace o zahájení projektu Intune může být cílena
 
   | **Plán komunikace** | **Červenec** | **Srpen** | **Září** | **Říjen** |
 |:---:|:---:|:---:|:---:|:---:|
-| 1. vlna  | Vše |  |  |  |                                                         
+| 1\. vlna  | Vše |  |  |  |                                                         
 | Úvodní schůzka | První týden |  |  |  |                                                         
-| 2. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 2\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail před registrací 1 | První týden | První týden | První týden | První týden |
-| 3. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 3\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail před registrací 2 | Druhý týden | Druhý týden | Druhý týden | Druhý týden |
-| 4. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
-| Registrační e-mail | 3. týden | 3. týden | 3. týden | 3. týden |
-| 5. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| 4\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
+| Registrační e-mail | 3\. týden | 3\. týden | 3\. týden | 3\. týden |
+| 5\. vlna | IT | Prodej a marketing | Maloobchod | Personalistika, finance a vedení |
 | E-mail po registraci | Čtvrtý týden | Čtvrtý týden | Čtvrtý týden | Čtvrtý týden |
 
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a použít ji k vypracování vlastního komunikačního plánu.

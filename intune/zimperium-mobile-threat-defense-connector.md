@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c0dc8d7cca42898db92412e2cec41252a9a9a4d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 7cd0e6ddba836724f525ab3d21e192214cc43cb4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046114"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547698"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
@@ -44,11 +44,11 @@ Níže najdete několik scénářů pro integraci řešení Zimperium s Intune:
 
 Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující:
 
--   Připojení k firemnímu e-mailu
+- Připojení k firemnímu e-mailu
 
--   Synchronizaci firemních souborů přes OneDrive for Work
+- Synchronizaci firemních souborů přes OneDrive for Work
 
--   Přístup k aplikacím společnosti
+- Přístup k aplikacím společnosti
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
@@ -84,19 +84,19 @@ Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchroni
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
--   **Android 4.1 nebo novější**
+- **Android 4.1 nebo novější**
 
--   **iOS 8 nebo novější**
+- **iOS 8 nebo novější**
 
 ## <a name="prerequisites"></a>Požadavky
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Předplatné služby Zimperium Mobile Threat Defense
+- Předplatné služby Zimperium Mobile Threat Defense
 
-    -   Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
+    - Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Další postup
 

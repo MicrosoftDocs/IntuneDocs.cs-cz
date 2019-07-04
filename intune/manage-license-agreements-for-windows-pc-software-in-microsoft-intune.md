@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7068bb96b72861c0647c44261edef0c3e83a120c
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.openlocfilehash: 082bd6cb680c413d13e5ed6804011daa6c929b57
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031671"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548642"
 ---
 # <a name="manage-license-agreements-for-windows-pc-software-in-microsoft-intune"></a>Správa licenčních smluv pro software počítačů s Windows v Microsoft Intune
 
@@ -37,13 +37,13 @@ Microsoft Intune umožňuje přidávat a spravovat informace o licenční smlouv
 
 Akce, které je možné provést v konzole pro správu Intune v pracovním prostoru **Licence**:
 
--   Přidávání a úprava multilicenčních smluv uzavřených s Microsoftem
+- Přidávání a úprava multilicenčních smluv uzavřených s Microsoftem
 
--   Přidávání a úprava licenčních smluv k jinému softwaru
+- Přidávání a úprava licenčních smluv k jinému softwaru
 
--   Správa licencí a skupin
+- Správa licencí a skupin
 
--   Porovnávání informací o nárocích, které Intune načte z webu Volume Licensing Service Center (VLSC), s inventářem softwaru od Microsoftu, který Intune detekuje na vámi spravovaných počítačích s Windows.
+- Porovnávání informací o nárocích, které Intune načte z webu Volume Licensing Service Center (VLSC), s inventářem softwaru od Microsoftu, který Intune detekuje na vámi spravovaných počítačích s Windows.
 
 Můžete taky generovat sestavy, které u softwarových titulů zobrazují počty instalací a licencí. Sestavy licencí vám můžou pomoct vyhodnotit vaši kompletní licenční pozici pro software Microsoftu a software jiných společností.
 
@@ -53,35 +53,35 @@ Můžete taky generovat sestavy, které u softwarových titulů zobrazují počt
 ## <a name="add-microsoft-volume-licensing-agreements"></a>Přidání multilicenčních smluv uzavřených s Microsoftem
 Multilicenční smlouvy Intune poskytují informace o licenci pro software, který je zakoupený prostřednictvím multilicenčních smluv s Microsoftem. Multilicenční smlouvy s Microsoftem můžete přidat do Intune tak, že zadáte odpovídající páry čísel smluv. Čísla smluv nebo autorizační čísla musí odpovídat správným číslům licencí nebo registrací. Páry čísel smluv získáte při nákupu vašich licenčních smluv na webu [Volume Licensing Service Center (VLSC)](http://go.microsoft.com/fwlink/?LinkID=223842).
 
-1.  V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
+1. V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
 
-2.  Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy**vyberte **Multilicenční smlouva**.
+2. Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy**vyberte **Multilicenční smlouva**.
 
-3.  V části **Přidat podrobnosti smlouvy** vyberte, zda chcete nahrát soubor, nebo zadat údaje ručně.
+3. V části **Přidat podrobnosti smlouvy** vyberte, zda chcete nahrát soubor, nebo zadat údaje ručně.
 
-    -   **Odeslání souboru CSV s podrobnostmi o smlouvě**. Klikněte na **Procházet** a vyberte soubor CSV, který chcete nahrát.
+    - **Odeslání souboru CSV s podrobnostmi o smlouvě**. Klikněte na **Procházet** a vyberte soubor CSV, který chcete nahrát.
 
-        -   Soubor může obsahovat dva nebo tři sloupce. Dva jsou pro samotné páry smluv. Tři sloupce použijte, pokud chcete přidat popisný název pro jednotlivé páry smluv.
+        - Soubor může obsahovat dva nebo tři sloupce. Dva jsou pro samotné páry smluv. Tři sloupce použijte, pokud chcete přidat popisný název pro jednotlivé páry smluv.
 
-        -   Celkový počet znaků v páru čísel smluv nesmí překročit 16 znaků ASCII.
+        - Celkový počet znaků v páru čísel smluv nesmí překročit 16 znaků ASCII.
 
-        -   Podporují se jenom znaky ASCII.
+        - Podporují se jenom znaky ASCII.
 
-        -   V názvu smlouvy nejsou povolené následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
+        - V názvu smlouvy nejsou povolené následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
-        -   Název souboru nesmí být delší než 128 znaků.
+        - Název souboru nesmí být delší než 128 znaků.
 
-        -   Soubor musí obsahovat aspoň jeden pár smluv a nesmí obsahovat víc než 5 000 párů smluv.
+        - Soubor musí obsahovat aspoň jeden pár smluv a nesmí obsahovat víc než 5 000 párů smluv.
 
         **Formát souboru**
 
         Soubor vytvoříte tak, že do obyčejného textového dokumentu přidáte páry smluv. Soubor musí být v některém z následujících formátů podle typu organizace, který jste zaregistrovali na webu VLSC. Na řádku uveďte jednu dvojici čísel smluv.
 
-        -   **Hodnota zákazníci s programem Open:** *Číslo smlouvy*, *opakujte číslo smlouvy*, *název smlouvy*
+        - **Hodnota zákazníci s programem Open:** *Číslo smlouvy*, *opakujte číslo smlouvy*, *název smlouvy*
 
-        -   **Zákazníci s programem Open:** *Autorizační číslo*, *číslo související licence*, *název smlouvy*
+        - **Zákazníci s programem Open:** *Autorizační číslo*, *číslo související licence*, *název smlouvy*
 
-        -   **Vyberte a podnikovými zákazníky:** *Číslo smlouvy*, *číslo související prováděcí*, *název smlouvy*
+        - **Vyberte a podnikovými zákazníky:** *Číslo smlouvy*, *číslo související prováděcí*, *název smlouvy*
 
         Při přidání nové smlouvy zobrazí formulář **Přidat smlouvy** výzvu k vyhledání tohoto souboru.
 
@@ -89,30 +89,30 @@ Multilicenční smlouvy Intune poskytují informace o licenci pro software, kter
 
         `01-07001, 01-07001, Office agreements`
 
-    -   **Ruční zadání údajů o smlouvě**. Zadejte následující údaje a pak do polí **Autorizační číslo nebo číslo smlouvy** a **Číslo licence, prováděcí smlouvy nebo zákazníka** zadejte páry čísel smluv. Po zadání obou čísel klikněte na ikonu **Přidat pár** a uložte vaše čísla, potom můžete případně zadat další pár.
+    - **Ruční zadání údajů o smlouvě**. Zadejte následující údaje a pak do polí **Autorizační číslo nebo číslo smlouvy** a **Číslo licence, prováděcí smlouvy nebo zákazníka** zadejte páry čísel smluv. Po zadání obou čísel klikněte na ikonu **Přidat pár** a uložte vaše čísla, potom můžete případně zadat další pár.
 
-        -   **Název smlouvy** – zadejte jedinečný název smlouvy.
+        - **Název smlouvy** – zadejte jedinečný název smlouvy.
 
             Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
-        -   **Autorizační číslo nebo číslo smlouvy** – zadejte autorizační číslo nebo číslo smlouvy, které odpovídá licenčnímu páru.
+        - **Autorizační číslo nebo číslo smlouvy** – zadejte autorizační číslo nebo číslo smlouvy, které odpovídá licenčnímu páru.
 
-        -   **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá páru licencí.
+        - **Číslo licence, prováděcí smlouvy nebo zákazníka** – zadejte číslo licence, prováděcí smlouvy nebo zákazníka, které odpovídá páru licencí.
 
         > [!NOTE]
         > Pokud přidáte několik párů čísel smluv, Intune vytvoří jednu smlouvu s vámi určeným názvem a všechny vámi přidané páry budou součástí této smlouvy.
 
     Kliknutím na **+** přidáte další dvojici čísel smlouvy. Kliknutím na **-** odeberete zadanou dvojici čísel smlouvy.
 
-4.  V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
+4. V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
-    -   **Přidání smluv do skupiny Nepřiřazené smlouvy**. Tuto možnost vyberte, když nové smlouvy nechcete přidat do skupiny licencí.
+    - **Přidání smluv do skupiny Nepřiřazené smlouvy**. Tuto možnost vyberte, když nové smlouvy nechcete přidat do skupiny licencí.
 
-    -   **Přidání smluv do nové skupiny licencí**. Zadejte název nové skupiny licencí.
+    - **Přidání smluv do nové skupiny licencí**. Zadejte název nové skupiny licencí.
 
-    -   **Přidání smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
+    - **Přidání smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
 
-5.  Zvolte **OK**.
+5. Zvolte **OK**.
 
 Zobrazí se seznam **Všechny smlouvy** a služba Intune se připojí k centru Microsoft VLSC, aby ověřila vámi zadané páry čísel smluv.
 
@@ -123,9 +123,9 @@ Pokud chcete po přidání licenčních smluv v Intune aktualizovat informace o 
 
 Jakmile informace o multilicencích aktualizujete, můžete je v pracovním prostoru **Aplikace** porovnat se zjištěným softwarem od Microsoftu. Můžete taky spustit následující licenční sestavy:
 
--   **Sestavy zakoupených licencí** – zobrazují licencovaný software ve vybraných skupinách licencí a umožňují najít mezery v pokrytí.
+- **Sestavy zakoupených licencí** – zobrazují licencovaný software ve vybraných skupinách licencí a umožňují najít mezery v pokrytí.
 
--   **Sestavy nainstalovaných licencí** – pomáhají zjistit, jestli je pokrytí licenčními smlouvami dostatečné.
+- **Sestavy nainstalovaných licencí** – pomáhají zjistit, jestli je pokrytí licenčními smlouvami dostatečné.
 
 > [!NOTE]
 > **Název produktu** zobrazený pro všechny multilicenční smlouvy s Microsoftem je **Není k dispozici**.
@@ -138,40 +138,40 @@ Kromě multilicenčních smluv uzavřených s Microsoftem můžete do Intune př
 
 ### <a name="to-add-other-software-agreements"></a>Přidání jiných smluv na software
 
-1.  V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
+1. V [konzole pro správu Microsoft Intune](https://admin.manage.microsoft.com/) vyberte **Licence**.
 
-2.  Vyberte **Přidat smlouvy** v části **Licenční smlouvy na ostatní software**.
+2. Vyberte **Přidat smlouvy** v části **Licenční smlouvy na ostatní software**.
 
-3.  Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy** vyberte **Licenční smlouva na ostatní software**.
+3. Na stránce **Přidat smlouvy** v části **Zvolit typ smlouvy** vyberte **Licenční smlouva na ostatní software**.
 
-4.  V části **Přidat podrobnosti smlouvy** zadejte toto:
+4. V části **Přidat podrobnosti smlouvy** zadejte toto:
 
-    -   **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
+    - **Agreement name** (povinné) Název smlouvy může mít maximálně 256 znaků a nesmí obsahovat následující znaky: **~ ! @ # $ ^ &amp; &#42; ( ) = + [ ] { } \ | ; : ' " &lt; &gt; /** . Název může obsahovat mezery.
 
-    -   **Vydavatel** (povinné) Když začnete psát název vydavatele, služba načte všechny názvy vydavatelů obsahující vámi zadaná písmena. Pokud třeba zadáte „soft“, služba načte všechny vydavatele, kteří mají v názvu řetězec „soft“, například „Microsoft“ a „Microsoft Research“. Názvy vydavatelů se načítají z katalogu Software Asset Catalog. Než budete moct zadat název produktu, musíte vybrat vydavatele.
+    - **Vydavatel** (povinné) Když začnete psát název vydavatele, služba načte všechny názvy vydavatelů obsahující vámi zadaná písmena. Pokud třeba zadáte „soft“, služba načte všechny vydavatele, kteří mají v názvu řetězec „soft“, například „Microsoft“ a „Microsoft Research“. Názvy vydavatelů se načítají z katalogu Software Asset Catalog. Než budete moct zadat název produktu, musíte vybrat vydavatele.
 
         > [!IMPORTANT]
         > Společnost, kterou chcete přidat, se v seznamu nemusí zobrazit. Smlouvy na software můžete přidávat jenom pro společnosti, které už figurují v katalogu Software Asset Catalog. Microsoft ale neustále pracuje na přidávání nejoblíbenějších softwarových produktů. Pokud chcete odeslat žádost o přidání určité společnosti do tohoto seznamu, můžete to udělat na webu [Intune Uservoice](https://microsoftintune.uservoice.com/).
 
-    -   **Název produktu** (povinné) Když začnete psát název produktu, služba načte všechny názvy produktů obsahující vámi zadaná písmena. Než budete moct zadat **Název produktu** , musíte určit **Vydavatele**.
+    - **Název produktu** (povinné) Když začnete psát název produktu, služba načte všechny názvy produktů obsahující vámi zadaná písmena. Než budete moct zadat **Název produktu** , musíte určit **Vydavatele**.
 
-    -   **Počet licencí** (povinné) Zadejte počet zakoupených licencí.
+    - **Počet licencí** (povinné) Zadejte počet zakoupených licencí.
 
-    -   **Počáteční datum licence** Zadejte počáteční datum platnosti licence.
+    - **Počáteční datum licence** Zadejte počáteční datum platnosti licence.
 
-    -   **Koncové datum licence** Zadejte koncové datum platnosti licence.
+    - **Koncové datum licence** Zadejte koncové datum platnosti licence.
 
-    -   **Podrobnosti smlouvy** Volitelně můžete zadat kontaktní informace, registrační kódy a další informace.
+    - **Podrobnosti smlouvy** Volitelně můžete zadat kontaktní informace, registrační kódy a další informace.
 
-5.  V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
+5. V oblasti **Vybrat skupinu licencí** proveďte některou z těchto akcí:
 
-    -   Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy**. Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
+    - Pokud nechcete přidávat nové smlouvy do nové nebo existující skupiny licencí, vyberte **Přidat smlouvy do skupiny Nepřiřazené smlouvy**. Smlouvy můžete kdykoli přidat do uživatelem definovaných skupin licencí.
 
-    -   Pokud chcete nové smlouvy přidávat do nové skupiny licencí, vyberte **Přidat smlouvy do nové skupiny licencí**. Zobrazí se výzva k zadání názvu nové skupiny licencí.
+    - Pokud chcete nové smlouvy přidávat do nové skupiny licencí, vyberte **Přidat smlouvy do nové skupiny licencí**. Zobrazí se výzva k zadání názvu nové skupiny licencí.
 
-    -   Pokud chcete nové smlouvy přidávat do existující skupiny licencí, vyberte **Přidat smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
+    - Pokud chcete nové smlouvy přidávat do existující skupiny licencí, vyberte **Přidat smlouvy do existující skupiny licencí**. V seznamu **Název skupiny** vyberte skupinu licencí, do které chcete smlouvy přidat.
 
-6.  Zvolte **OK**.
+6. Zvolte **OK**.
 
 Zobrazí se zobrazení seznamu **Všechny smlouvy**.
 

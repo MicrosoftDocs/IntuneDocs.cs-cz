@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f638a8b3816e775c043077a7ac31b3320496744
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528399"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558543"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -43,10 +43,10 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
 1. Přihlaste se k Azure Portalu svého tenanta. Zvolením možností **Azure Active Directory** > **Registrace aplikací** otevřete podokno **Registrace aplikací**.
 2. Vyberte **Registrace nové aplikace**.
 3. Zadejte podrobnosti této aplikace.
-    1.  Do pole **Název** zadejte nějaký popisný název, například Intune Data Warehouse Client.
-    2.  Jako **Typ aplikace** vyberte **Nativní**.
-    3.  Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
-4.  Vyberte **Vytvořit**.
+    1. Do pole **Název** zadejte nějaký popisný název, například Intune Data Warehouse Client.
+    2. Jako **Typ aplikace** vyberte **Nativní**.
+    3. Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
+4. Vyberte **Vytvořit**.
 
      ![Klientskou aplikaci pro datový sklad Intune](./media/reports-get_rest_data_client_overview.png)
 
@@ -56,21 +56,21 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
 
 Teď máte v Azure definovanou aplikaci. Udělte z této nativní aplikace přístup k rozhraní API Microsoft Intune.
 
-1.  Vyberte nativní aplikaci. Tuto aplikaci jste pojmenovali jako **Intune Data Warehouse Client**.
-2.  V podokně **Nastavení** vyberte **Požadovaná oprávnění**.
-3.  V podokně **Požadovaná oprávnění** vyberte **Přidat**.
-4.  Vyberte **Vyberte rozhraní API**.
-5.  Vyhledejte název webové aplikace. Její název je **Rozhraní API Microsoft Intune**.
-6.  Vyberte v seznamu tuto aplikaci.
-7.  Vyberte **vyberte**.
-8.  Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
+1. Vyberte nativní aplikaci. Tuto aplikaci jste pojmenovali jako **Intune Data Warehouse Client**.
+2. V podokně **Nastavení** vyberte **Požadovaná oprávnění**.
+3. V podokně **Požadovaná oprávnění** vyberte **Přidat**.
+4. Vyberte **Vyberte rozhraní API**.
+5. Vyhledejte název webové aplikace. Její název je **Rozhraní API Microsoft Intune**.
+6. Vyberte v seznamu tuto aplikaci.
+7. Vyberte **vyberte**.
+8. Zaškrtnutím políčka **Delegovaná oprávnění** přidejte možnost **Získat informace datového skladu z Microsoft Intune**.
 
     ![Povolení přístupu – rozhraní API Microsot Intune](./media/reports-get_rest_data_client_access.png)
 
-9.  Vyberte **vyberte**.
-10.  Vyberte **Done** (Hotovo).
-11.  V podokně Požadovaná oprávnění můžete volitelně vybrat **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
-12.  Vyberte **Ano**.
+9. Vyberte **vyberte**.
+10. Vyberte **Done** (Hotovo).
+11. V podokně Požadovaná oprávnění můžete volitelně vybrat **Udělit oprávnění**. Tím udělíte přístup všem účtům v aktuálním adresáři. Zabráníte tím tomu, aby se dialogové okno souhlasu zobrazilo pro každého uživatele v tenantovi. Další informace najdete v článku [Integrace aplikací s Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications).
+12. Vyberte **Ano**.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Získání dat z rozhraní API Microsoft Intune pomocí nástroje Postman
 

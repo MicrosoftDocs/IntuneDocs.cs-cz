@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19c02c8d4c9ece66d03b3510071bb90e7f35ad3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047519"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548765"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune
 
@@ -46,15 +46,15 @@ Jednou z vašich nejdůležitějších priorit jako správce IT je udržovat po�
 
 Pokud chcete přejít ze současné aplikace koncové ochrany na Microsoft Intune Endpoint Protection, postupujte podle následujících kroků:
 
-1.  Při nasazování klientského softwaru Intune do počítačů nechte stávající aplikaci koncové ochrany spuštěnou.
+1. Při nasazování klientského softwaru Intune do počítačů nechte stávající aplikaci koncové ochrany spuštěnou.
 
-2.  Ověřte, že je služba Microsoft Intune Endpoint Protection nainstalovaná a pomáhá zabezpečit klientské počítače.
+2. Ověřte, že je služba Microsoft Intune Endpoint Protection nainstalovaná a pomáhá zabezpečit klientské počítače.
 
-3.  Odeberte software koncové ochrany třetí strany:
+3. Odeberte software koncové ochrany třetí strany:
 
-    -   Pomocí softwarové distribuce Intune nasaďte nástroj pro odebrání softwaru, který poskytuje výrobce aplikace koncové ochrany. Další informace najdete v tématu [Nasazení aplikací pomocí Microsoft Intune](apps-deploy.md).
+    - Pomocí softwarové distribuce Intune nasaďte nástroj pro odebrání softwaru, který poskytuje výrobce aplikace koncové ochrany. Další informace najdete v tématu [Nasazení aplikací pomocí Microsoft Intune](apps-deploy.md).
 
-    -   Ručním odebráním aplikace koncové ochrany třetí strany.
+    - Ručním odebráním aplikace koncové ochrany třetí strany.
 
 > [!NOTE]
 > Intune aplikace koncové ochrany třetích stran automaticky neodinstaluje.
@@ -62,9 +62,9 @@ Pokud chcete přejít ze současné aplikace koncové ochrany na Microsoft Intun
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>Konfigurace Microsoft Intune Endpoint Protection
 Následující postup vám pomůže nakonfigurovat Endpoint Protection pro Microsoft Intune.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** > **Přidat zásadu**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** > **Přidat zásadu**.
 
-2.  Rozbalte položku **Správa počítače** a vyberte **Nastavení agenta Microsoft Intune**. Vyberte **Vytvoření a nasazení vlastních zásad**, abyste zadali zásady pro nastavení služby Endpoint Protection. Potom klikněte na tlačítko **Vytvořit zásadu**.
+2. Rozbalte položku **Správa počítače** a vyberte **Nastavení agenta Microsoft Intune**. Vyberte **Vytvoření a nasazení vlastních zásad**, abyste zadali zásady pro nastavení služby Endpoint Protection. Potom klikněte na tlačítko **Vytvořit zásadu**.
 
 Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o vytvoření a nasazení zásad, přejděte k tématu [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
@@ -168,7 +168,7 @@ Stav malwaru na počítačích se sleduje pomocí pracovního prostoru **Ochrana
   - **Počítače s malwarem vyžadující následnou akci** – kliknutím na odkaz zobrazíte všechny počítače s nevyřešenými problémy s malwarem včetně následné akce, kterou je potřeba provést k vyřešení problému.
   - **Zařízení, které nejsou chráněna** – kliknutím na odkaz zobrazíte počítače, které nejsou chráněné žádným softwarem koncové ochrany, protože žádný takový software není nainstalovaný nebo protože došlo k chybě. Vybráním počítače zobrazíte další podrobnosti.
   - **Zařízení, na kterých je spuštěna jiná aplikace ochrany koncových bodů** – kliknutím na odkaz zobrazíte počítače, na kterých je spuštěná aplikace koncové ochrany třetí strany.
-- **Veškerý malware** – zobrazí seznam veškerého aktivního malwaru nalezeného na počítačích. V tomto seznamu můžete zobrazit další podrobnosti a zobrazit tak všechny počítače, které jsou postižené konkrétním malwarem, nebo můžete vybrat některou z následujících úloh:
+- **Veškerý Malware** – zobrazí seznam veškerého aktivního malwaru nalezeného na počítačích. V tomto seznamu můžete zobrazit další podrobnosti a zobrazit tak všechny počítače, které jsou postižené konkrétním malwarem, nebo můžete vybrat některou z následujících úloh:
   - **Zobrazit vlastnosti** – otevře stránku s dalšími informacemi o vybraném malwaru.
   - **Další informace o tomto malwaru** – otevře téma z Centra společnosti Microsoft pro ochranu před škodlivým softwarem s dalšími informacemi o malwaru.
 

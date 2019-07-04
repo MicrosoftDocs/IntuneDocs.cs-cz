@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58ee82e44e8aa8d68c0fb00c4497cc0455ed21d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2315136fe277f06f6dbb11c13139a9dc193ce6f7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528635"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549372"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
@@ -37,23 +37,23 @@ V rámci nastavení ochrany před mobilními hrozbami (MTD) jste v konzole partn
 
 Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
--   Nastavení integrace MTD se službou Intune
+- Nastavení integrace MTD se službou Intune
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů zařízením pro MTD
 
-1.  Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
+1. Přejděte na portál [Azure Portal](https://portal.azure.com/) a přihlaste se pomocí svých přihlašovacích údajů k Intune.
 
-2.  Na **Řídicím panelu Azure** zvolte v nabídce vlevo **Všechny služby** a potom do filtru textového pole zadejte **Intune**.
+2. Na **Řídicím panelu Azure** zvolte v nabídce vlevo **Všechny služby** a potom do filtru textového pole zadejte **Intune**.
 
-3.  Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
+3. Zvolte **Intune** a zobrazí se **řídicí panel Intune**.
 
 4. Na **řídicím panelu Intune** zvolte **Dodržování předpisů zařízením** a potom v části **Zásady** zvolte **Mobile Threat Defense**.
 
-5.  Zvolte **Vytvořit zásadu**, zadejte **Název** a **Popis** dodržování předpisů zařízením a vyberte **Platformu**. Potom zvolte **Konfigurovat** v části **Nastavení**.
+5. Zvolte **Vytvořit zásadu**, zadejte **Název** a **Popis** dodržování předpisů zařízením a vyberte **Platformu**. Potom zvolte **Konfigurovat** v části **Nastavení**.
 
-6.  V podokně **zásad dodržování předpisů** zvolte **Stav zařízení**.
+6. V podokně **zásad dodržování předpisů** zvolte **Stav zařízení**.
 
-7.  V podokně **Stav zařízení** vyberte v části **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní** z rozevíracího seznamu úroveň mobilní hrozby.
+7. V podokně **Stav zařízení** vyberte v části **Vyžadovat, aby zařízení bylo na určité úrovni hrozby pro zařízení nebo pod ní** z rozevíracího seznamu úroveň mobilní hrozby.
 
     a.  **Zabezpečené**: Tato úroveň je nejbezpečnější úroveň. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
 
@@ -63,7 +63,7 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
     d.  **Vysoká**: Tato úroveň je nejméně bezpečná. Tato možnost povoluje všechny úrovně hrozeb, protože používá ochranu před mobilními hrozbami jenom ke generování sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
-8.  Dvakrát klikněte na **OK** a potom zvolte **Vytvořit**.
+8. Dvakrát klikněte na **OK** a potom zvolte **Vytvořit**.
 
 > [!IMPORTANT]
 > Pokud vytvoříte zásady podmíněného přístupu pro Office 365 nebo jiné služby, je použit k vyhodnocení vyhodnocení dodržování předpisů zařízením a nedodržující předpisy zařízením se zablokuje přístup k podnikovým prostředkům, dokud se hrozby nevyřeší v zařízení.

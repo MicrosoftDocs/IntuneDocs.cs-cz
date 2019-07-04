@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ebca73344b88778a4d734e0690615d0aa3a20b5
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a6390db854019bd69dbce983ff8ce20abccc8eba
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041766"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548876"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -68,34 +68,34 @@ Na počítačích, kam se bude klientský software instalovat, přejděte do slo
 
 ## <a name="deploy-the-client-software-by-using-group-policy"></a>Nasazení klientského softwaru pomocí zásad skupiny
 
-1.  Ve složce, která obsahuje soubory **Microsoft_Intune_Setup.exe** a **MicrosoftIntune.accountcert**, spusťte následující příkaz k extrakci instalačních programů založených na Instalační službě systému Windows pro 32bitové a 64bitové počítače:
+1. Ve složce, která obsahuje soubory **Microsoft_Intune_Setup.exe** a **MicrosoftIntune.accountcert**, spusťte následující příkaz k extrakci instalačních programů založených na Instalační službě systému Windows pro 32bitové a 64bitové počítače:
 
     ```
     Microsoft_Intune_Setup.exe/Extract <destination folder>
     ```
 
-2.  Zkopírujte soubory **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** a **MicrosoftIntune.accountcert** do umístění v síti, ke kterému mají přístup všechny počítače, na které se klientský software nainstaluje.
+2. Zkopírujte soubory **Microsoft_Intune_x86.msi**, **Microsoft_Intune_x64.msi** a **MicrosoftIntune.accountcert** do umístění v síti, ke kterému mají přístup všechny počítače, na které se klientský software nainstaluje.
 
     > [!IMPORTANT]
     > Soubory od sebe neoddělujte ani nepřejmenovávejte, jinak se instalace klientského softwaru nezdaří.
 
-3.  Pomocí zásad skupiny nasaďte software do počítačů v síti.
+3. Pomocí zásad skupiny nasaďte software do počítačů v síti.
 
     Další informace o tom, jak automaticky nasadit software pomocí zásad skupiny, najdete v článku [Zásady skupiny pro začátečníky](https://technet.microsoft.com/library/hh147307.aspx).
 
 ## <a name="deploy-the-client-software-as-part-of-an-image"></a>Nasazení klientského softwaru jako součásti image
 Klientský software Intune můžete do počítače nasadit jako součást image operačního systému. Jako příklad poslouží tento postup:
 
-1.  Zkopírujte instalační soubory klienta, **Microsoft_Intune_Setup.exe** a **Microsoft_Intune_Setup.exe** do složky **%Systemdrive%\Temp\Microsoft_Intune_Setup** na referenčním počítači.
+1. Zkopírujte instalační soubory klienta, **Microsoft_Intune_Setup.exe** a **Microsoft_Intune_Setup.exe** do složky **%Systemdrive%\Temp\Microsoft_Intune_Setup** na referenčním počítači.
 
-2.  Vytvořte položku registru **WindowsIntuneEnrollPending** přidáním následujícího příkazu do skriptu **SetupComplete.cmd** :
+2. Vytvořte položku registru **WindowsIntuneEnrollPending** přidáním následujícího příkazu do skriptu **SetupComplete.cmd** :
 
     ```
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
     WindowsIntuneEnrollPending /t REG_DWORD /d 1
     ```
 
-3.  Přidáním následujícího příkazu do skriptu **setupcomplete.cmd** spusťte registrační balíček s argumentem příkazového řádku /PrepareEnroll:
+3. Přidáním následujícího příkazu do skriptu **setupcomplete.cmd** spusťte registrační balíček s argumentem příkazového řádku /PrepareEnroll:
 
     ```
     %systemdrive%\temp\Microsoft_Intune_Setup\Microsoft_Intune_Setup.exe /PrepareEnroll
@@ -103,9 +103,9 @@ Klientský software Intune můžete do počítače nasadit jako součást image 
     > [!TIP]
     > Skript **SetupComplete.cmd** umožňuje, aby instalační program systému Windows provedl změny systému před přihlášením uživatele. Argument příkazového řádku **/PrepareEnroll** připraví cílový počítač, aby se po dokončení instalačního programu systému Windows automaticky zaregistroval v Intune.
 
-4.  Skript **SetupComplete.cmd** umístěte do složky **%Windir%\Setup\Scripts** na referenčním počítači.
+4. Skript **SetupComplete.cmd** umístěte do složky **%Windir%\Setup\Scripts** na referenčním počítači.
 
-5.  Vytvořte image referenčního počítače a pak ji nasaďte do cílových počítačů.
+5. Vytvořte image referenčního počítače a pak ji nasaďte do cílových počítačů.
 
     Když se cílový počítač po dokončení instalačního programu systému Windows restartuje, vytvoří se klíč registru **WindowsIntuneEnrollPending**. Registrační balíček ověří, jestli je počítač zaregistrovaný. Pokud je počítač zaregistrovaný, neprovede se žádná další akce. Pokud není počítač registrovaný, registrační balíček vytvoří úlohu automatické registrace Microsoft Intune.
 
@@ -125,7 +125,7 @@ Pokud byla uživatelům přiřazena licence Intune a Intune byla nastavena autor
 
 - Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
 
-  -  **Zaregistrovat počítač jako mobilní zařízení**: Uživatelé vybrat **zjistěte, jak zapsat** tlačítko a jsou přesměrováni na pokyny, jak na svůj počítač jako mobilní zařízení zaregistrovat. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
+  - **Zaregistrovat počítač jako mobilní zařízení**: Uživatelé vybrat **zjistěte, jak zapsat** tlačítko a jsou přesměrováni na pokyny, jak na svůj počítač jako mobilní zařízení zaregistrovat. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
   - **Zaregistrovat počítač pomocí klientského softwaru Intune**: Bude potřeba říct uživatelům k výběru **kliknutím sem ho můžete stáhnout** odkaz, který provede klientský software znova.
 
 V následující tabulce najdete souhrnný přehled možností.
@@ -171,19 +171,19 @@ Pomocí některého z následujících postupů můžete sledovat a ověřit ús
 
 ### <a name="to-verify-the-installation-of-the-client-software-from-the-microsoft-intune-administrator-console"></a>Ověření instalace klientského softwaru v konzole správce Microsoft Intune
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechny počítače**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Skupiny** &gt; **Všechna zařízení** &gt; **Všechny počítače**.
 
-2.  V seznamu vyhledejte počítače, které komunikují s Intune, nebo vyhledejte konkrétní spravovaný počítač po zadání názvu počítače (nebo libovolné části názvu) do pole **Hledat zařízení**.
+2. V seznamu vyhledejte počítače, které komunikují s Intune, nebo vyhledejte konkrétní spravovaný počítač po zadání názvu počítače (nebo libovolné části názvu) do pole **Hledat zařízení**.
 
-3.  V dolním podokně konzoly zkontrolujte stav počítače. Vyřešte všechny chyby.
+3. V dolním podokně konzoly zkontrolujte stav počítače. Vyřešte všechny chyby.
 
 ### <a name="to-create-a-computer-inventory-report-to-display-all-enrolled-computers"></a>Vytvoření sestavy inventáře počítače pro zobrazení všech zaregistrovaných počítačů
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) klikněte na **Sestavy** &gt; **Sestavy inventáře počítače**.
 
-2.  Na stránce **Vytvořit novou sestavu** nechejte ve všech polích výchozí hodnoty (pokud nechcete použít filtry) a klikněte na **Zobrazit sestavu**.
+2. Na stránce **Vytvořit novou sestavu** nechejte ve všech polích výchozí hodnoty (pokud nechcete použít filtry) a klikněte na **Zobrazit sestavu**.
 
-3.  Stránka **Sestava inventáře počítače** se otevře v novém okně s uvedením všech počítačů, které jsou úspěšně zaregistrované v Intune.
+3. Stránka **Sestava inventáře počítače** se otevře v novém okně s uvedením všech počítačů, které jsou úspěšně zaregistrované v Intune.
 
     > [!TIP]
     > Kliknutím na záhlaví libovolného sloupce v sestavě seřadíte seznam podle obsahu sloupce.

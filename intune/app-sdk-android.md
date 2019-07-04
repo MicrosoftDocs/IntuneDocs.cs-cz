@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae2318d32bebf17544d2c8c31763a6bf6360c4e9
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529257"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558420"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -111,10 +111,10 @@ apply plugin: 'com.microsoft.intune.mam'
 
 Ve výchozím nastavení bude modul plug-in fungovat **pouze** u `project` závislostí.
 Na testovací kompilaci nebude mít vliv. Můžete přidat konfiguraci, která zobrazí seznam:
-*  projektů k vyloučení,
-*  [externích závislostí k zahrnutí](#usage-of-includeexternallibraries), 
-*  konkrétních tříd k vyloučení ze zpracování,
-*  variant k vyloučení ze zpracování. Může se jednat buď o úplný název varianty, nebo o jednu příchuť. Například
+* projektů k vyloučení,
+* [externích závislostí k zahrnutí](#usage-of-includeexternallibraries), 
+* konkrétních tříd k vyloučení ze zpracování,
+* variant k vyloučení ze zpracování. Může se jednat buď o úplný název varianty, nebo o jednu příchuť. Například
      * Pokud má vaše aplikace typy sestavení `debug` a `release` s příchutěmi {`savory`, `sweet`} a {`vanilla`, `chocolate`}, můžete zadat
      * příchuť `savory` a vyloučit tak všechny varianty s příchutí „savory“, nebo zadat příchuť `savoryVanillaRelease` a vyloučit tak pouze tuto jednu přesnou variantu.
 
@@ -1187,7 +1187,7 @@ V části [Rozšíření třídy BackupAgent](https://developer.android.com/guid
 Intune App SDK ve výchozím nastavení uplatní zásady na aplikaci jako celek. Možnost používat více identit je volitelná funkce ochrany aplikací Intune, kterou můžete zapnout, pokud chcete zásady uplatňovat na úrovni jednotlivých identit. K tomu je od aplikace potřeba mnohem větší účast než u ostatních funkcí ochrany aplikací.
 
 > [!NOTE]
->  V případě nesprávného zapojení aplikace může dojít k únikům dat a dalším potížím v souvislosti se zabezpečením.
+> V případě nesprávného zapojení aplikace může dojít k únikům dat a dalším potížím v souvislosti se zabezpečením.
 
 Jakmile uživatel zařízení nebo aplikaci zaregistruje, zaregistruje tuto identitu také sada SDK a bude ji považovat za primární spravovanou identitu Intune. Ostatní uživatelé v aplikaci budou považováni za nespravované s nastavením zásad bez omezení.
 
@@ -1317,7 +1317,7 @@ Kromě schopnosti aplikace nastavit identitu se může vlákno nebo identita obj
 
   1. Pokud se aktivita spustí ze `Intent` odeslaného jinou aplikací MAM, nastaví se identita aktivity podle účinné identity v jiné aplikaci v místě odeslání `Intent`.
 
-  2.  U služeb se identita vlákna nastaví podobně po dobu volání `onStart` nebo `onBind`. Volání do třídy `Binder` vrácená z `onBind` také dočasně nastaví identitu vlákna.
+  2. U služeb se identita vlákna nastaví podobně po dobu volání `onStart` nebo `onBind`. Volání do třídy `Binder` vrácená z `onBind` také dočasně nastaví identitu vlákna.
 
   3. Volání do `ContentProvider` podobně nastaví identitu vlákna po dobu jejich trvání.
 
@@ -1742,8 +1742,8 @@ Povolte výchozí registraci pomocí následujících kroků:
 
 Omezení formátu spustitelných souborů Dalvik se stává problémem u rozsáhlých základů kódu, které běží bez [ProGuard](http://proguard.sourceforge.net/). Konkrétně může dojít k následujícím omezením:
 
-1.  Limit 65 kB pro pole
-2.  Limit 65 kB pro metody
+1. Limit 65 kB pro pole
+2. Limit 65 kB pro metody
 
 ### <a name="policy-enforcement-limitations"></a>Omezení vynucení zásad
 

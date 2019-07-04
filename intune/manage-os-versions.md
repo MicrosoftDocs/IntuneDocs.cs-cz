@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b490d5ff083d344a1b39d27a2298503bdfa1f130
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044920"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548758"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Správa verzí operačního systému pomocí Intune
 Na moderních mobilních a počítačových platformách jsou velké aktualizace, opravy a nové verze vydávány rychlým tempem. Ve Windows máte nad úplnou správou aktualizací a oprav kontrolu, ale jiné platformy jako iOS a Android vyžadují, aby se procesu účastnili koncoví uživatelé.  Microsoft Intune má možnosti, které vám pomůžou se strukturováním správy verzí operačního systému napříč různými platformami.
@@ -77,7 +77,7 @@ Možností Intune popsaných v tomto článku můžete využít k přechodu orga
 - **Krok 1**: Pomocí omezení registrace Vyžadujte operační systém verze 2 jako minimální verzi k registraci zařízení. To zajistí, aby nová zařízení koncových uživatelů v době registrace dodržovala předpisy.
 - **Krok 2a**: Zásady ochrany aplikací Intune použijte upozornit uživatele, když aplikaci spustí nebo obnoví tento operační systém verze 2 je povinný.
 - **Krok 2b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy. Pomocí **akcí** při nedodržení předpisů umožněte sedmidenní období odkladu a zašlete koncovým uživatelům oznamovací e-mail s časovým plánem a požadavky.
-  -  Tyto zásady budou koncové uživatele informovat, že stávající zařízení se musí aktualizovat, a to prostřednictvím e-mailu, Portálu společnosti Intune a při spuštění aplikace v případě aplikací, pro které jsou aktivní zásady ochrany aplikací.
+  - Tyto zásady budou koncové uživatele informovat, že stávající zařízení se musí aktualizovat, a to prostřednictvím e-mailu, Portálu společnosti Intune a při spuštění aplikace v případě aplikací, pro které jsou aktivní zásady ochrany aplikací.
   - Můžete spustit sestavu dodržování předpisů, abyste identifikovali uživatele, kteří předpisy nedodržují. 
 - **Krok 3a**: Zásady ochrany aplikací Intune použít k blokování uživatelů aplikace při spuštění nebo obnovení, pokud zařízení není spuštěný operační systém verze 2.
 - **Krok 3b**: Pomocí zásad dodržování předpisů zařízením vyžadujte operační systém verze 2 jako minimální verzi k tomu, aby zařízení dodržovalo předpisy.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f59ff42f7707ace92442bf37ddac9679e36448f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1649c6256e4df61b538e2adee87512617b677bb4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045883"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547497"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -68,9 +68,9 @@ Používané zásady ochrany aplikace jsou plně podporované v pracovním i o
 
 Podpora sítě VPN je podobná profilům Android VPN. Stejní poskytovatelé VPN i základní možnosti konfigurace jsou k dispozici pro Android Enterprise management s dva rozdíly:
 
--  **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Jenom Android Enterprise spravované aplikace můžou používat připojení k síti VPN. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu [nastavení sítě VPN v Androidu Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Jenom Android Enterprise spravované aplikace můžou používat připojení k síti VPN. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu [nastavení sítě VPN v Androidu Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
 
--  **Síť VPN specifická pro aplikaci** – tuto síť lze v Intune nakonfigurovat, pokud poskytovatel VPN podporuje:
+- **Síť VPN specifická pro aplikaci** – tuto síť lze v Intune nakonfigurovat, pokud poskytovatel VPN podporuje:
     - Konfiguraci sítě VPN specifické pro aplikaci
     - možnost konfigurace VPN pro aplikaci přes konfigurační profil aplikací Androidu Enterprise.
     Další informace najdete v tématu o [vytvoření profilu VPN pro aplikaci pro zařízení s Androidem pomocí vlastního profilu Microsoft Intune](android-pulse-secure-per-app-vpn.md).
@@ -79,9 +79,9 @@ Podpora sítě VPN je podobná profilům Android VPN. Stejní poskytovatelé VPN
 
 Stejný certifikát možnosti konfigurace profilu, které jsou k dispozici pro správy systému Android jsou dostupné na zařízeních s Androidem Enterprise pracovní profil. Android Enterprise poskytuje vylepšené certifikátu rozhraní API pro správu. Vylepšená správa certifikátů poskytuje následující funkce:
 
--  Zajišťuje uživatelům tiché a bezproblémové nasazení.
--  Zajišťuje odebrání nasazených certifikátů po vyřazení zařízení z Intune a odebrání pracovního profilu.
--  Poskytuje vylepšené zasílání zpráv uživatelům s informacemi o tom, že IT oddělení nasadilo a nakonfigurovalo prostřednictvím svojí služby správy certifikát.
+- Zajišťuje uživatelům tiché a bezproblémové nasazení.
+- Zajišťuje odebrání nasazených certifikátů po vyřazení zařízení z Intune a odebrání pracovního profilu.
+- Poskytuje vylepšené zasílání zpráv uživatelům s informacemi o tom, že IT oddělení nasadilo a nakonfigurovalo prostřednictvím svojí služby správy certifikát.
 
 Další informace najdete v tématu [Konfigurace profilu certifikátu pro zařízení v Microsoft Intune](certificates-configure.md).
 

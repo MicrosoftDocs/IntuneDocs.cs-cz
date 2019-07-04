@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4180c6d803edc8cd9d9f3948466a5ceed22ae36
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530791"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558515"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Řešení problémů s instalací aplikací
 
@@ -50,6 +50,18 @@ Podrobnosti o chybě při instalaci aplikace označí problém. Tyto podrobnosti
 
 > [!Note]  
 > Do podokna **řešení potíží** se dostanete také tak, že v prohlížeči přejdete na adresu: [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting).
+
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Instalace aplikace skupina uživatelů cílená vůbec nedostane zařízení
+Tyto akce by měl být pokud máte potíže s instalací aplikací:
+- Pokud aplikace portálu společnosti nezobrazuje, ujistěte se, že je aplikace nasazená s **dostupné** záměr a že se uživatel k aplikaci portál společnosti s typem zařízení podporovaných aplikací.
+- Pro zařízení s Windows BYOD je potřeba přidat pracovní účet do zařízení uživatele.
+- Zkontrolujte, jestli je uživatel nad limit pro registraci zařízení AAD:
+  1. Přejděte do [nastavení zařízení služby Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  2. Poznamenejte si hodnoty nastavené pro **maximální počet zařízení na uživatele**.
+  3. Přejděte do [uživatelů Azure Active Directory](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  4. Vybrat ovlivněné uživatele a klikněte na tlačítko **zařízení**.
+  5. Pokud je uživatel přes nastaveného limitu odstraňte všechny zastaralé záznamy, které už nejsou potřeba.
+- Pro zařízení s Iosem DEP, ujistěte se, že je uživatel uveden jako **zaregistrovaných uživatelem** v okně přehledu zařízení Intune. Pokud se zobrazí NA, pak nasadíte zásady Konfigurace aplikace portál společnosti Intune. Další informace najdete v tématu [konfigurace aplikace portál společnosti](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>Řešení potíží instalace aplikace Win32
 

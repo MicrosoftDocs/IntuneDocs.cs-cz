@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02a7b69245b9b6e7b8f62fdb9be8acb83d42981
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61494927"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545419"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
 
@@ -34,7 +34,7 @@ Přístup mobilních zařízení může být jste využili ke své práci nebo v
 
 Tyto kroky se zajistí, že vaše zařízení splňuje požadavky na zabezpečení vaší společnosti a, v e-mailech zůstaly zabezpečené.
 
-1.  Na zařízení, přejděte na **nastavení** a najít vašim připojeným účtům. Na zařízení s iOS 11 + například vyberte **heslo & účty**.
+1. Na zařízení, přejděte na **nastavení** a najít vašim připojeným účtům. Na zařízení s iOS 11 + například vyberte **heslo & účty**.
  
 2. Vyberte a odeberte vaši pracovní e-mailový účet.
 

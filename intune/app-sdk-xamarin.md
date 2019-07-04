@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f404fb63f64f216c3732a4378fce383591d95565
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529037"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558399"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -88,7 +88,6 @@ Pokud vaše aplikace je již nakonfigurována pro použití ADAL nebo MSAL a má
 > Pro iOS není k dispozici nástroj pro přemapování. Integrace do aplikace Xamarin.Forms by měla být stejná jako u normálního projektu Xamarin.iOS. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Povolení zásad Intune App Protection v mobilní aplikaci pro Android
-
 1. Do svého projektu Xamarin.Android přidejte [balíček NuGet Microsoft.Intune.MAM.Xamarin.Android](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android).
     1. Pro aplikaci Xamarin.Forms, přidejte [balíčku Microsoft.Intune.mam.remapper.Tasks, kvůli NuGet](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) do projektu Xamarin.Android. 
 2. Postupujte podle obecných kroků potřebných k [integraci sady Intune App SDK](app-sdk-android.md) do mobilní aplikace pro Android při odkazování na tento dokument pro další podrobnosti.
@@ -172,6 +171,14 @@ To je očekáváno, protože když Remapper změní dědičnosti tříd Xamarin,
 
 > [!NOTE]
 > Remapper přepíše závislost, kterou používá Visual Studio pro automatické dokončování IntelliSense. Proto budete muset znovu načíst a znovu sestavte projekt, když se přidá Remapper technologie IntelliSense správně rozpoznat změny.
+
+### <a name="company-portal-app"></a>Aplikace Portál společnosti
+Xamarinové vazby sady Intune SDK závisí na přítomnosti [portál společnosti](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) aplikace na zařízení pro povolení zásad ochrany aplikací pro Android. Portál společnosti načítá zásady ochrany aplikací ze služeb Intune. Při inicializaci načte aplikace z Portálu společnosti zásadu a kód, který ji vynucuje. Uživatel nemusí být přihlášeni.
+
+> [!NOTE]
+> Pokud není v aplikaci portál společnosti **Android** zařízení, aplikace spravované v Intune se chová stejně jako běžná aplikace, která nepodporuje zásady ochrany aplikací Intune.
+
+U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrovat zařízení přes aplikaci Portál společnosti.
 
 ## <a name="support"></a>Podpora
 Pokud je vaše organizace stávajícím zákazníkem Intune, prosím práci s zástupce podpory Microsoftu vytvořit lístek podpory a vytvoření problému [stránce problémů na Githubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) a pomůžeme nejdříve podíváme. 

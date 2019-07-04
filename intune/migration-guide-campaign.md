@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e409683c294b9d0321458f40c9b7f66bc3660ac
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046518"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549411"
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 
@@ -31,39 +31,39 @@ Zvolte takový postup migrace, který bude nejvíc vyhovovat potřebám organiza
 
 Klíčové předpoklady pro úspěšnou migraci od jiného poskytovatele MDM do Intune:
 
--   Výpadky koncových uživatelů a jejich nespokojenost může minimalizovat srozumitelná a užitečná komunikace.
+- Výpadky koncových uživatelů a jejich nespokojenost může minimalizovat srozumitelná a užitečná komunikace.
 
--   Poskytněte uživatelům konkrétní pokyny k migraci.
+- Poskytněte uživatelům konkrétní pokyny k migraci.
 
--   Před registrací do Intune musí být zrušena registrace všech spravovaných zařízení u vašeho stávajícího poskytovatele MDM.
+- Před registrací do Intune musí být zrušena registrace všech spravovaných zařízení u vašeho stávajícího poskytovatele MDM.
 
--   Předejte koncovým uživatelům pokyny týkající se zrušení registrace zařízení od vašeho stávajícího poskytovatele MDM.
+- Předejte koncovým uživatelům pokyny týkající se zrušení registrace zařízení od vašeho stávajícího poskytovatele MDM.
 
--   Proveďte migraci v několika fázích. Začněte s malou, zkušební skupinou uživatelů a postupně přidávejte další skupiny uživatelů, dokud nedosáhnete nasazení v plném rozsahu.
+- Proveďte migraci v několika fázích. Začněte s malou, zkušební skupinou uživatelů a postupně přidávejte další skupiny uživatelů, dokud nedosáhnete nasazení v plném rozsahu.
 
--   Monitorujte vytíženost technické podpory a úspěšnost registrace v jednotlivých cyklech. Ponechte si časovou rezervu, abyste mohli vyhodnotit kritéria úspěšnosti migrace každé skupiny, než přejdete k migraci další skupiny. Při pilotním nasazení byste měli zhodnotit následující:
+- Monitorujte vytíženost technické podpory a úspěšnost registrace v jednotlivých cyklech. Ponechte si časovou rezervu, abyste mohli vyhodnotit kritéria úspěšnosti migrace každé skupiny, než přejdete k migraci další skupiny. Při pilotním nasazení byste měli zhodnotit následující:
 
-    -   Míra úspěchu a selhání registrací je v rámci očekávání.
+    - Míra úspěchu a selhání registrací je v rámci očekávání.
 
-    -   Produktivita uživatelů:
+    - Produktivita uživatelů:
 
-        -   Firemní prostředky, například sítě VPN a Wi-Fi, e-mail a certifikáty, jsou funkční.
+        - Firemní prostředky, například sítě VPN a Wi-Fi, e-mail a certifikáty, jsou funkční.
 
-        -   Uživatelé mají přístup ke zřízeným aplikacím.
+        - Uživatelé mají přístup ke zřízeným aplikacím.
 
-    -   Zabezpečení dat:
+    - Zabezpečení dat:
 
-        -   Generují se sestavy dodržování předpisů.
+        - Generují se sestavy dodržování předpisů.
 
-        -   Vynucuje se ochrana mobilních aplikací.
+        - Vynucuje se ochrana mobilních aplikací.
 
 Pokud jste spokojení s první fází migrace, zopakujte daný [cyklus migrace](migration-guide-cycle.md) v další fázi.
 
--   Opakujte cykly migrace, dokud nebudou všichni uživatelé migrovaní do Intune.
+- Opakujte cykly migrace, dokud nebudou všichni uživatelé migrovaní do Intune.
 
--   Zajistěte připravenost týmu technické podpory pomoct během kampaně migrace koncovým uživatelům. Spusťte dobrovolnou migraci, abyste byli schopni odhadnout zátěž telefonních linek technické podpory.
+- Zajistěte připravenost týmu technické podpory pomoct během kampaně migrace koncovým uživatelům. Spusťte dobrovolnou migraci, abyste byli schopni odhadnout zátěž telefonních linek technické podpory.
 
--   Nestanovujte konečný termín registrace, dokud nebude tým technické podpory schopný zpracovat zbývající uživatele.
+- Nestanovujte konečný termín registrace, dokud nebude tým technické podpory schopný zpracovat zbývající uživatele.
 
 > [!IMPORTANT]
 > Vyhněte se tomu, abyste konfigurovali použití ovládacích prvků přístupu k prostředkům, jako je Exchange nebo SharePoint Online, současně pro Intune i vaše stávající řešení MDM. Kromě toho by měla být zařízení registrována vždy jen v jednom řešení.

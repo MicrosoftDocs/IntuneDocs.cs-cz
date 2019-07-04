@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: bc338b30996d0ca31b2dd59a6c934f680f57c0d1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403015"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547549"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
@@ -48,14 +48,14 @@ Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, k
 > [!IMPORTANT]
 > Pokud chcete spravovat bránu Windows Firewall pomocí Intune, musí být na počítačích, které spravujete, povolené tyto dvě služby:
 >
-> -   Brána Windows Firewall
-> -   Agent zásad protokolu IPsec
+> - Brána Windows Firewall
+> - Agent zásad protokolu IPsec
 
 ## <a name="configure-a-windows-firewall-policy"></a>Konfigurace zásad brány Windows Firewall
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** &gt; **Přidat zásadu**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** &gt; **Přidat zásadu**.
 
-2.  Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall**. Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Konfigurujte a nasaďte zásady **nastavení brány Windows Firewall**. Můžete použít doporučená nastavení, nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
     V následující části jsou uvedené hodnoty, které můžete v zásadách konfigurovat, a také výchozí hodnoty, které se použijí, pokud zásady neupravíte.
 

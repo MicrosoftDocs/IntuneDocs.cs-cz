@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68cec5d8594d832a405daa1228e77a51283a7c92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529516"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546650"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Odebrání zařízení s Windows ze systému správy
 
@@ -76,18 +76,18 @@ Provedením následujících kroků odeberete zařízení s Windows 10 ze systé
 ## <a name="remove-your-windows-81-computer"></a>Odebrání počítače s Windows 8.1
 Provedením následujících kroků odeberte počítač s Windows 8.1 z Intune.
 
-1.  Přejděte na **Nastavení počítače** > **Síť** > **Pracoviště**.
-2.  V části **Připojení pracovního místa** vyberte **Odejít**.
-3.  V části **Zapnout správu zařízení** vyberte **Vypnout**.
-4.  V automaticky otevíraném okně, které se otevře, vyberte **Vypnout**.
+1. Přejděte na **Nastavení počítače** > **Síť** > **Pracoviště**.
+2. V části **Připojení pracovního místa** vyberte **Odejít**.
+3. V části **Zapnout správu zařízení** vyberte **Vypnout**.
+4. V automaticky otevíraném okně, které se otevře, vyberte **Vypnout**.
 
 ## <a name="remove-your-windows-81-phone"></a>Odebrání telefonu s Windows 8.1
 Provedením následujících kroků odeberte telefon s Windows 8.1 z Intune.
 
-1.  Přejděte na **Nastavení** > **Pracoviště**.
-2.  Klepněte na pracovní účet, jehož registraci chcete zrušit.
-3.  V dolní části obrazovky klepněte na **Odstranit**.
-4.  V dialogovém okně **Odstranit účet** klepněte na **Odstranit**.  
+1. Přejděte na **Nastavení** > **Pracoviště**.
+2. Klepněte na pracovní účet, jehož registraci chcete zrušit.
+3. V dolní části obrazovky klepněte na **Odstranit**.
+4. V dialogovém okně **Odstranit účet** klepněte na **Odstranit**.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Odebrání osobních údajů po odebrání aplikace Portál společnosti  
 
 Aplikace Portál společnosti ukládá do zařízení s Windows dva druhy dat:

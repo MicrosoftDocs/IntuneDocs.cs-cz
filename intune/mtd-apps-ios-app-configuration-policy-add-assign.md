@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c6065fda71688909dd7fcbc6ef1909e3d3ab36b8
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
+ms.openlocfilehash: fdc7434616db6c06f56438fb6d8774ae3f2deca9
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407118"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548433"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune  
 
@@ -34,9 +34,9 @@ Intune můžete použít k přidání a nasazení aplikací Mobile Threat Defens
 ## <a name="before-you-begin"></a>Před zahájením    
 Níže uvedený postup musíte provést na [portálu Azure Portal](https://portal.azure.com/). Ověřte si, že jste seznámení s těmito postupy:
 
--   [Přidání aplikace do služby Intune](apps-add.md)
--   [Přidání zásad konfigurace aplikace pro iOS do služby Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)
--   [Přiřazení aplikace pomocí služby Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)
+- [Přidání aplikace do služby Intune](apps-add.md)
+- [Přidání zásad konfigurace aplikace pro iOS do služby Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)
+- [Přiřazení aplikace pomocí služby Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)
 
 > [!TIP]
 > Aplikace portál společnosti Intune funguje jako zprostředkovatel pro zařízení s Androidem aby mohla být identita uživatelů ověřit ve službě Azure AD uživatelů.

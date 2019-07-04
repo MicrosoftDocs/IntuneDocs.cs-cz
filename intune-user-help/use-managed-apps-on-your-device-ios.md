@@ -18,12 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d77c9aa739096f36f4dbf4b75a4186e55a3381
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501595"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546615"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOSem
 
@@ -38,9 +38,9 @@ Při přístupu k firemním datům ve spravované aplikaci se zobrazí zpráva p
 ## <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?  
 Spravované aplikace můžete získat několika různými způsoby:
 
--   Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje firemní podpora. Další informace o registraci najdete v tématu [Registrace zařízení s macOS do Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení s iOSem do Intune](enroll-your-device-in-intune-macos.md).
+- Při registraci zařízení v Microsoft Intune buď nainstalujete aplikaci z aplikace Portál společnosti nebo webu Portál společnosti, nebo ji na vaše zařízení nainstaluje firemní podpora. Další informace o registraci najdete v tématu [Registrace zařízení s macOS do Intune](enroll-your-device-in-intune-ios.md) nebo [Registrace zařízení s iOSem do Intune](enroll-your-device-in-intune-macos.md).
 
--   Nainstalujte aplikaci z App Storu a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
+- Nainstalujte aplikaci z App Storu a potom se přihlaste pomocí svého firemního uživatelského účtu spravovaného službou Intune.
 
 Vaše firemní podpora může někdy nakoupit pro aplikaci, kterou instalujete, více licencí. Pokud se zobrazí zpráva, že máte přijmout smlouvu Apple Volume Purchase Program, není to nic nezvyklého a můžete ji přijmout. Pokud ji nepřijmete, nebudete si moct aplikaci nainstalovat.
 
@@ -56,22 +56,22 @@ Vaše firemní podpora může někdy nakoupit pro aplikaci, kterou instalujete, 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  
 Tady jsou některé příklady možností, které může firemní podpora spravovat v aplikaci a které můžou ovlivnit vaši interakci s firemními daty na zařízení:
 
--   Přístup k určitým webům
+- Přístup k určitým webům
 
--   Přenos dat mezi aplikacemi
+- Přenos dat mezi aplikacemi
 
--   Ukládání souborů
+- Ukládání souborů
 
--   Operace kopírování a vkládání
+- Operace kopírování a vkládání
 
--   Požadavky na přístup chráněný kódem PIN
+- Požadavky na přístup chráněný kódem PIN
 
--   Vaše přihlášení pomocí přihlašovacích údajů společnosti
+- Vaše přihlášení pomocí přihlašovacích údajů společnosti
 
--   Schopnost zálohovat do cloudu
+- Schopnost zálohovat do cloudu
 
--   Schopnost pořizovat snímky obrazovky
+- Schopnost pořizovat snímky obrazovky
 
--   Požadavky na šifrování dat
+- Požadavky na šifrování dat
 
 Další informace o spravovaných aplikacích na vašem zařízení vám poskytne firemní podpora. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

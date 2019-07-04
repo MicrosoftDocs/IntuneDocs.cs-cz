@@ -17,22 +17,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: deea42bf9ef35d173761fddb16aa43eaa8876269
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a1ee376bdf2dff6dc59b6c51b20ff87c1ed81d82
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041083"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549234"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
 Kategorie **Aplikace** obsahuje entity pro mobilní zařízení, které sledují informace, například:
 
-  -  Verze aplikace
-  -  Zdroj instalace aplikace
-  -  Typ vývojářů, kteří aplikaci vytvořili
-  -  Typy spravovaného softwaru pro aplikaci, například **sidecar** nebo **desktop**
-  -  Stav VPP (Volume Purchase Program) pro aplikaci
+  - Verze aplikace
+  - Zdroj instalace aplikace
+  - Typ vývojářů, kteří aplikaci vytvořili
+  - Typy spravovaného softwaru pro aplikaci, například **sidecar** nebo **desktop**
+  - Stav VPP (Volume Purchase Program) pro aplikaci
 
 ## <a name="apprevision"></a>AppRevision
 

@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196779"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545729"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -63,7 +63,7 @@ V této části najdete postup registrace zařízení s macOS verze OS X El Capi
     * Pokud nemáte k dispozici žádná zařízení, přečte hlavičky: **Nemáte žádná spravovaná zařízení. Toto zařízení můžete přidat tak, že klepnete sem.** Přidejte zařízení kliknutím na banner.  
 
      ![Snímek obrazovky se stránkou Zařízení s červeným obdélníkem okolo banneru, který zvýrazňuje možnost, na niž má uživatel kliknout](./media/CP-enroll-MACOS-1808.png)  
-5.  Proveďte jeden z kroků níže podle toho, která zpráva se vám na Portálu společnosti zobrazuje.  
+5. Proveďte jeden z kroků níže podle toho, která zpráva se vám na Portálu společnosti zobrazuje.  
     * Pokud přidáváte zařízení poprvé, vyzve vás stránka ke stažení aplikace Portál společnosti do zařízení. Pokračujte kliknutím na **Stáhnout**.  
 
          ![Ukázkový snímek obrazovky s výzvou ke stažení aplikace Portál společnosti pro macOS. Uživatel může kliknout na modré tlačítko Stáhnout v levé dolní části, nebo na šedé tlačítko Zrušit v pravé dolní části.](./media/CP-enroll-download-macOS-1808.png)  

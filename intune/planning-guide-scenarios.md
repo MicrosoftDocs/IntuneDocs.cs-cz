@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce8d87a653e87a2b9ba91552f6857fdab6bee12
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 28e48d64ba220f75f412ef117a08b07dfd477d06
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045978"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549276"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Identifikace scénářů použití při správě mobilních zařízení
 
@@ -33,9 +33,9 @@ Pojďme se podívat na některé příklady, které organizaci pomohou identifik
 ## <a name="device-ownership"></a>Vlastnictví zařízení
 Můžete začít rekapitulací cílů a úkolů organizace při nasazení Intune, které vám pomohou identifikovat hlavní scénáře použití nasazeného řešení. Při sestavování plánu nasazení Intune si odpovězte na následující otázky:
 
--   Plánujete podporu zařízení patřících společnosti?
+- Plánujete podporu zařízení patřících společnosti?
 
--   Plánujete podporu vlastních zařízení uživatelů (BYOD)?
+- Plánujete podporu vlastních zařízení uživatelů (BYOD)?
 
 Tyto možnosti se vzájemně nevylučují. Možná zjistíte, že ke splnění cílů organizace potřebujete podporovat obě formy vlastnictví zařízení. Dílčí případy použití vám pomohou vyjasnit, kde použít různé zásady správy zařízení.
 
@@ -43,11 +43,11 @@ Tyto možnosti se vzájemně nevylučují. Možná zjistíte, že ke splnění c
 
 Zjistěte, jestli každý scénář použití také obsahuje dílčí scénáře. Organizace například identifikuje požadavky na podporu scénáře firemního použití, který zahrnuje další, dílčí případy použití založené na typu uživatele nebo roli zařízení. Příklad:
 
--   Informatik
+- Informatik
 
--   Vedení
+- Vedení
 
--   Kiosk
+- Kiosk
 
 Tady je několik příkladů scénářů použití a dílčích scénářů použití:
 

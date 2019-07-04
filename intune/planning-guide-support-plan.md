@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64349d2e4c681bf0fac8cf231085cc63e42ffc62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041469"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548334"
 ---
 # <a name="develop-a-support-plan"></a>Příprava plánu podpory
 
 Plán podpory vám pomůže účinněji identifikovat a řešit problémy spojené s Intune. Tím zase zlepšíte výsledný dojem uživatelů z Intune. Tady jsou některé otázky, které je potřeba zohlednit při přípravě plánu podpory Intune:
 
--   Jaké týmy odpovídají za poskytování podpory Intune?
+- Jaké týmy odpovídají za poskytování podpory Intune?
 
--   Jaký proces se použije k zajištění podpory Intune?
+- Jaký proces se použije k zajištění podpory Intune?
 
--   Jak plánujete, že bude podpora Intune poskytovat školení?
+- Jak plánujete, že bude podpora Intune poskytovat školení?
 
--   Jaké jsou příležitosti ke včasnému zapojení týmu podpory do procesu nasazení Intune?
+- Jaké jsou příležitosti ke včasnému zapojení týmu podpory do procesu nasazení Intune?
 
 Pojďme se podívat na každou oblast podrobněji.
 
@@ -50,23 +50,23 @@ Další informace o [podpoře Intune](/intune/get-support).
 
 V úvodních fázích zahájení ostrého provozu se mohou všechny tři vrstvy přepojit do konferenčního hovoru nebo mohou zahájit hovor přes Skype. Tady je jeden příklad implementace pracovních postupů podpory nebo helpdesku IT v organizaci:
 
-1.  Koncový uživatel kontaktuje první vrstvu podpory nebo helpdesku IT kvůli potížím s registrací.
+1. Koncový uživatel kontaktuje první vrstvu podpory nebo helpdesku IT kvůli potížím s registrací.
 
-2.  První vrstva podpory nebo helpdesku IT nedokáže zjistit hlavní příčinu problému, a proto ho postoupí do druhé vrstvy.
+2. První vrstva podpory nebo helpdesku IT nedokáže zjistit hlavní příčinu problému, a proto ho postoupí do druhé vrstvy.
 
-3.  Druhá vrstva podpory nebo helpdesku IT problém prověří, ale také ho nedokáže vyřešit, a proto ho postoupí do třetí vrstvy a přidá další informace, které mohou být užitečné při dalším šetření.
+3. Druhá vrstva podpory nebo helpdesku IT problém prověří, ale také ho nedokáže vyřešit, a proto ho postoupí do třetí vrstvy a přidá další informace, které mohou být užitečné při dalším šetření.
 
-4.  Třetí vrstva podpory nebo helpdesku IT problém dále prošetří, zjistí jeho hlavní příčinu a oznámí řešení druhé a první vrstvě.
+4. Třetí vrstva podpory nebo helpdesku IT problém dále prošetří, zjistí jeho hlavní příčinu a oznámí řešení druhé a první vrstvě.
 
-5.  První vrstva podpory/helpdesku IT kontaktuje zákazníka a problém vyřeší.
+5. První vrstva podpory/helpdesku IT kontaktuje zákazníka a problém vyřeší.
 
 Tento typ přístupu přináší, zejména v raných fázích zavádění Intune, řadu výhod, například:
 
--   Pomáhá při učení a rozjezdu technologie.
+- Pomáhá při učení a rozjezdu technologie.
 
--   Umožňuje rychle identifikovat problémy a jejich řešení.
+- Umožňuje rychle identifikovat problémy a jejich řešení.
 
--   Celkově zlepšuje činnost koncového uživatele.
+- Celkově zlepšuje činnost koncového uživatele.
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>Jak plánujete, že bude podpora Intune poskytovat školení?
 
@@ -74,15 +74,15 @@ Pracovníkům podpory nebo helpdesku IT je potřeba zajistit takové technické 
 
 V následujícím příkladu je program školení pracovníků podpory pro Intune.
 
--   Přehled plánu podpory Intune
+- Přehled plánu podpory Intune
 
--   Přehled Intune
+- Přehled Intune
 
--   Řešení nejčastějších problémů
+- Řešení nejčastějších problémů
 
--   Nástroje a prostředky
+- Nástroje a prostředky
 
--   Otázky a odpovědi
+- Otázky a odpovědi
 
 [Dokumentace k Intune](https://docs.microsoft.com/intune/) nabízí přehled o Intune, podrobný popis funkcí a některé informace o odstraňování potíží. [Fórum Intune](https://social.technet.microsoft.com/Forums/home) je komunitní informační zdroj, kde se můžete ptát a hledat odpovědi na témata, která nenajdete v dokumentaci k Intune.
 

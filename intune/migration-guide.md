@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 384b940182b86e769868e2fabce3a9674e695094
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528283"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549404"
 ---
 # <a name="intune-migration-guide"></a>Příručka k migraci do Intune
 
@@ -35,39 +35,39 @@ Tato příručka vás seznámí s různými detaily migrace od jiného poskytova
 
 Tato příručka rozděluje migraci na dvě fáze zahrnující úkoly, strategie a taktické pokyny, které vám pomůžou projít celým procesem migrace do Intune MDM.
 
--   [Fáze 1: Příprava Intune na správu mobilních zařízení](migration-guide-prepare.md)
+- [Fáze 1: Příprava Intune na správu mobilních zařízení](migration-guide-prepare.md)
 
-    -   [Vyhodnocení požadavků na migraci MDM](migration-guide-prepare.md#assess-mdm-requirements)
+    - [Vyhodnocení požadavků na migraci MDM](migration-guide-prepare.md#assess-mdm-requirements)
 
-    -   [Základní nastavení](migration-guide-setup.md)
+    - [Základní nastavení](migration-guide-setup.md)
 
-    -   [Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
+    - [Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
 
-    -   [Konfigurace zásad pro ochranu aplikací](migration-guide-app-protection-policies.md)
+    - [Konfigurace zásad pro ochranu aplikací](migration-guide-app-protection-policies.md)
 
-    -   [Speciální aspekty migrace](migration-guide-considerations.md)
+    - [Speciální aspekty migrace](migration-guide-considerations.md)
 
--   [Fáze 2: Kampaň migrace](migration-guide-campaign.md)
+- [Fáze 2: Kampaň migrace](migration-guide-campaign.md)
 
-    -   [Plán komunikace](migration-guide-communication-plan.md)
+    - [Plán komunikace](migration-guide-communication-plan.md)
 
-    -   [Podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md)
+    - [Podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md)
 
-    -   [Typický cyklus migrace](migration-guide-cycle.md)
-        -   [Monitorování migrace](migration-guide-cycle.md#monitoring-migration)
-        -   [Po dokončení migrace](migration-guide-cycle.md#post-migration)
+    - [Typický cyklus migrace](migration-guide-cycle.md)
+        - [Monitorování migrace](migration-guide-cycle.md#monitoring-migration)
+        - [Po dokončení migrace](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Předpoklady
 
--   Službu Intune jste už vyhodnotili v prostředí testování konceptu a rozhodli jste se použít ji jako řešení MDM ve vaší organizaci.
+- Službu Intune jste už vyhodnotili v prostředí testování konceptu a rozhodli jste se použít ji jako řešení MDM ve vaší organizaci.
 
--   Intune a její funkce už znáte.
+- Intune a její funkce už znáte.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 Je důležité uvědomit si, že nové nasazení Intune se může lišit od předchozího nasazení MDM. Na rozdíl od tradičních služeb MDM používá Intune řízení přístupu na základě identity, takže řízení přístupu k firemním datům z mobilních zařízení nacházejících se mimo síť organizace nevyžaduje síťová proxy zařízení. Microsoft nabízí řešení pro zabezpečení dat přímo v cloudu prostřednictvím úzce integrovaných cloudových služeb, které se souhrnně označují jako Enterprise Client + Security.
 
--   Projděte si [běžné způsoby použití Intune](common-scenarios.md).
+- Projděte si [běžné způsoby použití Intune](common-scenarios.md).
 
 ## <a name="next-steps"></a>Další postup
 

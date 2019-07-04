@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac8de734927ca139b78f57dbb486cc19ea1e27c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044947"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548781"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -42,7 +42,7 @@ S využitím tohoto softwarového klienta můžete přes Intune spravovat až 7�
 
 ## <a name="requirements-for-intune-pc-client-management"></a>Požadavky na správu počítačového klienta Intune
 
-**Hardware:**:  
+**Hardware:** :  
 Následují požadavky na minimální hardware pro instalaci klientského softwaru Intune:
 
 |Požadavek|Další informace|
@@ -70,16 +70,16 @@ Jako správce Intune můžete softwarového klienta Intune zpřístupnit uživat
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Možnosti správy počítačů pomocí klientského softwaru Intune
 Ve většině scénářů si svoje zařízení zaregistrujete v Microsoft Intune. Tato služba poskytuje větší sadu funkcí. Ke správě počítačů můžete ale také použít softwarového klienta Intune, který poskytuje následující funkce:
 
--   **[Správa aktualizací softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** – Počítače můžete udržovat stále aktuální a můžete rozhodnout, kdy se mají aktualizace instalovat.
+- **[Správa aktualizací softwaru](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** – Počítače můžete udržovat stále aktuální a můžete rozhodnout, kdy se mají aktualizace instalovat.
 
--   **[Zásady brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – Tyto zásady pomáhají zajistit, že v žádném počítači používaném ve vaší společnosti není neaktivní nebo nesprávně nakonfigurovaná brána Windows Firewall.
+- **[Zásady brány Windows Firewall](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** – Tyto zásady pomáhají zajistit, že v žádném počítači používaném ve vaší společnosti není neaktivní nebo nesprávně nakonfigurovaná brána Windows Firewall.
 
--   **[Ochrana proti malwaru](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Součástí Intune je služba Endpoint Protection, která pomáhá chránit počítače před malwarem.
+- **[Ochrana proti malwaru](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** – Součástí Intune je služba Endpoint Protection, která pomáhá chránit počítače před malwarem.
 
--   **[Vzdálená pomoc](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** – Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune (vyžaduje software TeamViewer).
+- **[Vzdálená pomoc](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** – Intune umožňuje uživatelům kontaktovat pracovníky technické podpory, kteří jim pak můžou pomoct prostřednictvím funkce vzdálené plochy, která je součástí Intune (vyžaduje software TeamViewer).
 
--   **[Správa licencí na software](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Můžete sledovat, kolik licencí softwaru je dostupných a kolik z nich se právě používá.
--   **[Nasazení aplikací](add-apps-for-windows-pcs-in-microsoft-intune.md)** – Do počítačů, které spravujete, můžete nasadit software. Pokud ke správě počítačů použijete softwarového klienta, některé funkce správy nejsou dostupné.
+- **[Správa licencí na software](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** – Můžete sledovat, kolik licencí softwaru je dostupných a kolik z nich se právě používá.
+- **[Nasazení aplikací](add-apps-for-windows-pcs-in-microsoft-intune.md)** – Do počítačů, které spravujete, můžete nasadit software. Pokud ke správě počítačů použijete softwarového klienta, některé funkce správy nejsou dostupné.
 
 <!-- - **Compliance settings reporting** -->
 
@@ -113,8 +113,8 @@ Další informace o výše uvedených úkolech najdete v části, která se týk
 
 Některé možnosti správy, které je možné použít ke správě počítačů PC jako mobilních zařízení, není možné použít u počítačů PC, které se spravují pomocí klientského softwaru Intune:
 
--   Úplné vymazání (selektivní vymazání je k dispozici)
--   Podmíněný přístup
+- Úplné vymazání (selektivní vymazání je k dispozici)
+- Podmíněný přístup
 
 Uvědomte si také, že v konzole správce Intune se některé části, jako například **Aktualizace**, **Ochrana** a **Licence**, zobrazí jen v případě, že jsou vaše zařízení zaregistrovaná pomocí klientského softwaru Intune.
 

@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f328577ba2da97595c116efc51626176a14931a
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 1ad21f9197f32f8ff06cc0537719261f3daec7cb
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505076"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545749"
 ---
 # <a name="what-happens-if-you-reset-your-ios-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s iOS pomocí Portálu společnosti?
 
@@ -31,14 +31,14 @@ Pokud ve svém zařízení iPhone nebo iPad obnovíte výchozí tovární nastav
 
 **Vaše mobilní zařízení spravuje vaše společnost**
 
--   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
+- Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
--   Zařízení se nastaví zpátky na výchozí tovární nastavení a odeberou se všechna vaše osobní data, aplikace a nastavení.
+- Zařízení se nastaví zpátky na výchozí tovární nastavení a odeberou se všechna vaše osobní data, aplikace a nastavení.
 
 **Zařízení má přístup jen k e-mailu společnosti**
 
--   Vaše zařízení se už nebude zobrazovat na portálu společnosti.
+- Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
--   Bude odstraněn e-mailový účet společnosti včetně všech neuložených e-mailů.
+- Bude odstraněn e-mailový účet společnosti včetně všech neuložených e-mailů.
 
 Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

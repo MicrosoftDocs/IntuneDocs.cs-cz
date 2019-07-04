@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8756ad134853bdd19155c3d8f50d1f07960e80f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045373"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547895"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>Datový model datového skladu Microsoft Intune
 
@@ -32,22 +32,22 @@ Datový sklad Intune denně vzorkuje data, aby mohl poskytovat historický přeh
 
 Sklad zveřejňuje data v následujících oblastech vyšší úrovně:
 
-  -  Aplikace se zapnutou ochranou aplikací a využití
-  -  Zaregistrovaná zařízení, vlastnosti a inventář
-  -  Inventář aplikací a softwaru
-  -  Konfigurace zařízení a zásady dodržování předpisů
+  - Aplikace se zapnutou ochranou aplikací a využití
+  - Zaregistrovaná zařízení, vlastnosti a inventář
+  - Inventář aplikací a softwaru
+  - Konfigurace zařízení a zásady dodržování předpisů
 
 Tyto oblasti obsahují entity, které mají smysl v daném prostředí Intune. V následujících tématech se můžete podívat na podrobnosti o sadách entit:
 
-  -  [Aplikace](reports-ref-application.md)
-  -  [Datum](reports-ref-date.md)
-  -  [Zařízení](reports-ref-devices.md)
-  -  [Intune Management Extension](reports-ref-intunemanagementextension.md)
-  -  [Zásady](reports-ref-policy.md)
-  -  [Správa mobilních aplikací (MAM)](reports-ref-mobile-app-management.md)
-  -  [User](reports-ref-user.md)
-  -  [Aktuální uživatel](reports-ref-current-user.md)
-  -  [Přidružení zařízení uživatelů](reports-ref-user-device.md)
+  - [Aplikace](reports-ref-application.md)
+  - [Datum](reports-ref-date.md)
+  - [Zařízení](reports-ref-devices.md)
+  - [Intune Management Extension](reports-ref-intunemanagementextension.md)
+  - [Zásady](reports-ref-policy.md)
+  - [Správa mobilních aplikací (MAM)](reports-ref-mobile-app-management.md)
+  - [User](reports-ref-user.md)
+  - [Aktuální uživatel](reports-ref-current-user.md)
+  - [Přidružení zařízení uživatelů](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Relace: Model hvězdicového schématu
 

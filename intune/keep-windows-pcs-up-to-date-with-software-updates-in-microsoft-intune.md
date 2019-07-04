@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3cc84d8215a841b9ff8a70a6b6307d3452696cb0
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 70818e038be915a1b756eb391129e6cdb74fb069
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403003"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548658"
 ---
 # <a name="keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune"></a>Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím v Microsoft Intune
 
@@ -49,9 +49,9 @@ Než začnete vytvářet a schvalovat aktualizace softwaru, nakonfigurujte a nas
 
 ### <a name="to-configure-update-policy-settings"></a>Konfigurace nastavení zásad aktualizací
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Zásady** &gt; **Přehled** &gt; **Přidat zásadu**.
 
-2.  Nakonfigurujte a nasaďte zásady **nastavení agenta Microsoft Intune** pro nastavení aktualizací. Můžete použít doporučená nastavení nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
+2. Nakonfigurujte a nasaďte zásady **nastavení agenta Microsoft Intune** pro nastavení aktualizací. Můžete použít doporučená nastavení nebo nastavení upravit. Pokud potřebujete více informací o postupu při vytváření a nasazování zásad, projděte si článek [Běžné úlohy správy počítačů s Windows pomocí počítačového klienta Microsoft Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md).
 
 Následující tabulka zobrazuje hodnoty, které můžete v zásadách konfigurovat, a taky doporučené hodnoty, které se použijí, pokud zásady neupravíte. Tahle nastavení najdete v části **Aktualizace**.
 
@@ -70,49 +70,49 @@ Následující tabulka zobrazuje hodnoty, které můžete v zásadách konfiguro
 ## <a name="update-software-made-by-microsoft"></a>Aktualizace softwaru od Microsoftu
 Aktualizace softwaru Microsoftu nevyžaduje ze strany uživatele příliš mnoho zásahů. Než ale začnete, měli byste nakonfigurovat tahle dvě nastavení:
 
--   **Kategorie produktů a klasifikace aktualizací** – definuje kategorie a klasifikace aktualizací, které mají být dostupné pro počítače. Můžete se třeba rozhodnout, že chcete instalovat jen důležité aktualizace Microsoft Office.
+- **Kategorie produktů a klasifikace aktualizací** – definuje kategorie a klasifikace aktualizací, které mají být dostupné pro počítače. Můžete se třeba rozhodnout, že chcete instalovat jen důležité aktualizace Microsoft Office.
 
--   **Pravidla pro automatické schválení** – tahle pravidla umožňují automaticky schválit určené typy aktualizace a snížit vaše režijní náklady na správu. Může se třeba stát, že budete chtít automaticky schvalovat všechny důležité aktualizace softwaru.
+- **Pravidla pro automatické schválení** – tahle pravidla umožňují automaticky schválit určené typy aktualizace a snížit vaše režijní náklady na správu. Může se třeba stát, že budete chtít automaticky schvalovat všechny důležité aktualizace softwaru.
 
 Použijte tyto dva postupy, které vám pomůžou s používáním aktualizací softwaru:
 
 ### <a name="configure-the-product-categories-and-update-classifications-you-want-to-make-available-to-managed-computers"></a>Konfigurace kategorií produktů a klasifikace aktualizací, které chcete zpřístupnit pro spravované počítače
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
 
-2.  Na **nastavení služby: Aktualizace** stránku, **kategorie produktů** vyberte kategorie aktualizací, které mají být dostupné pro počítače, ze seznamu. Ve výchozím nastavení jsou vybrané nejběžnější aktualizace.
+2. Na **nastavení služby: Aktualizace** stránku, **kategorie produktů** vyberte kategorie aktualizací, které mají být dostupné pro počítače, ze seznamu. Ve výchozím nastavení jsou vybrané nejběžnější aktualizace.
 
     > [!IMPORTANT]
     > Aby počítače získávaly aktualizace schválené správcem, nesmí se nastavení zásady skupiny služby Windows Server Update Services (WSUS) **Určení umístění intranetového serveru služby Microsoft Update** použít na počítače, které jsou zaregistrované v Intune.
 
-3.  V seznamu **Klasifikace aktualizací** vyberte třídy aktualizace, která má být dostupná pro spravované počítače. Ve výchozím nastavení jsou opět vybrané nejběžnější možnosti.
+3. V seznamu **Klasifikace aktualizací** vyberte třídy aktualizace, která má být dostupná pro spravované počítače. Ve výchozím nastavení jsou opět vybrané nejběžnější možnosti.
 
-4.  Požadovaný výběr uložíte kliknutím na **Uložit**.
+4. Požadovaný výběr uložíte kliknutím na **Uložit**.
 
 ### <a name="to-configure-automatic-approval-rules-for-software-updates"></a>Konfigurace pravidel automatického schvalování pro aktualizace softwaru
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
 
-2.  V **pravidla automatického schvalování** část **nastavení serveru: Aktualizace** zvolte **nový**.
+2. V **pravidla automatického schvalování** část **nastavení serveru: Aktualizace** zvolte **nový**.
 
-3.  Na stránce **Obecné** v průvodci vytvořením pravidla automatického schvalování zadejte název a volitelný popis pravidla.
+3. Na stránce **Obecné** v průvodci vytvořením pravidla automatického schvalování zadejte název a volitelný popis pravidla.
 
-4.  Na stránce **Kategorie produktů** vyberte všechny produkty, pro které chcete automaticky schvalovat aktualizace.
+4. Na stránce **Kategorie produktů** vyberte všechny produkty, pro které chcete automaticky schvalovat aktualizace.
 
-5.  Na stránce **Klasifikace aktualizací** zadejte klasifikace aktualizací, které se mají automaticky schvalovat.
+5. Na stránce **Klasifikace aktualizací** zadejte klasifikace aktualizací, které se mají automaticky schvalovat.
 
-6.  Na stránce **Nasazení** udělejte tohle:
+6. Na stránce **Nasazení** udělejte tohle:
 
-    -   Vyberte skupiny počítačů, ve kterých chcete nasadit nové pravidlo, a pak zvolte **Přidat**.
+    - Vyberte skupiny počítačů, ve kterých chcete nasadit nové pravidlo, a pak zvolte **Přidat**.
 
-    -   Pokud chcete určit termín instalace aktualizací, zaškrtněte políčko **Vynutit konečný termín instalace těchto aktualizací** a pak v seznamu **Konečný termín instalace** vyberte termín instalace.
+    - Pokud chcete určit termín instalace aktualizací, zaškrtněte políčko **Vynutit konečný termín instalace těchto aktualizací** a pak v seznamu **Konečný termín instalace** vyberte termín instalace.
 
         > [!NOTE]
         > Pokud zadáte termín instalace, je možné, že budete muset spravovaný počítač po uplynutí intervalu konečného termínu jednou nebo víckrát restartovat.
 
-    -   Po dokončení zvolte **Další**.
+    - Po dokončení zvolte **Další**.
 
-7.  Na stránce **Souhrn** zkontrolujte nastavení pro nové pravidlo a pak zvolte **Dokončit**.
+7. Na stránce **Souhrn** zkontrolujte nastavení pro nové pravidlo a pak zvolte **Dokončit**.
 
 Nové pravidlo je zobrazena ve **pravidla automatického schvalování** část **nastavení služby: Aktualizace** stránky.
 
@@ -122,15 +122,15 @@ Nové pravidlo je zobrazena ve **pravidla automatického schvalování** část 
 
 ### <a name="to-edit-run-or-delete-an-automatically-approved-update-rule"></a>Úpravy, spuštění nebo odstranění pravidla automaticky schválené aktualizace
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Správce** &gt; **Aktualizace**.
 
-2.  V části **Pravidla automatického schvalování** vyberte pravidlo a pak udělejte jednu z těchhle věcí:
+2. V části **Pravidla automatického schvalování** vyberte pravidlo a pak udělejte jednu z těchhle věcí:
 
-    -   Pokud chcete pravidlo upravit, zvolte **Upravit** a změňte parametry pravidla v **průvodci vytvořením pravidla pro schválení automatické aktualizace**.
+    - Pokud chcete pravidlo upravit, zvolte **Upravit** a změňte parametry pravidla v **průvodci vytvořením pravidla pro schválení automatické aktualizace**.
 
-    -   Pokud chcete pravidlo spustit, zvolte **Spustit vybrané**.
+    - Pokud chcete pravidlo spustit, zvolte **Spustit vybrané**.
 
-    -   Pokud chcete pravidlo odstranit, zvolte **Odstranit**.
+    - Pokud chcete pravidlo odstranit, zvolte **Odstranit**.
 
         > [!NOTE]
         > Odstranění pravidla nemá vliv na předchozí aktualizace schválené odstraněným pravidlem.
@@ -140,40 +140,40 @@ Můžete nasadit aktualizace pro software jiného výrobce než Microsoftu. K to
 
 ### <a name="to-upload-and-configure-a-third-party-update"></a>Nahrání a konfigurace aktualizace jiného výrobce
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Aktualizace** &gt; **Přehled** &gt; **Nahrát**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Aktualizace** &gt; **Přehled** &gt; **Nahrát**.
 
-2.  Na stránce **Soubory aktualizace** vyberte **Procházet** a zvolte instalační soubory potřebné k instalaci balíčku aktualizace. Tímto souborem může být soubor instalační služby Windows (.msi), soubor opravy instalační služby Windows (.msp) nebo soubor programu .exe. Dále můžete přidat libovolné soubory a složky, které jsou ve stejné složce jako instalační soubor.
+2. Na stránce **Soubory aktualizace** vyberte **Procházet** a zvolte instalační soubory potřebné k instalaci balíčku aktualizace. Tímto souborem může být soubor instalační služby Windows (.msi), soubor opravy instalační služby Windows (.msp) nebo soubor programu .exe. Dále můžete přidat libovolné soubory a složky, které jsou ve stejné složce jako instalační soubor.
 
     Zobrazí se celková velikost vybraných souborů, které chcete nahrát. Tato velikost nezahrnuje velikost nekomprimovaných nebo rozbalených instalačních souborů.
 
-3.  Po zadání instalačních souborů se na stránce **Popis aktualizace** zobrazí název, popis a klasifikace informací o softwaru, které služba Intune extrahovala z instalačních souborů softwaru. Můžete vybrat klasifikaci pro označení typu nasazované aktualizace (aktualizace, důležité aktualizace, aktualizace zabezpečení, kumulativní aktualizace nebo aktualizace Service Pack). Až budete hotoví, vyberte **Další**.
+3. Po zadání instalačních souborů se na stránce **Popis aktualizace** zobrazí název, popis a klasifikace informací o softwaru, které služba Intune extrahovala z instalačních souborů softwaru. Můžete vybrat klasifikaci pro označení typu nasazované aktualizace (aktualizace, důležité aktualizace, aktualizace zabezpečení, kumulativní aktualizace nebo aktualizace Service Pack). Až budete hotoví, vyberte **Další**.
 
-4.  Na stránce **Požadavky** v průvodci zvolte architekturu (32bitovou verzi, 64bitovou verzi nebo obě) a operační systémy spravovaných počítačů, na které se tato aktualizace použije.
+4. Na stránce **Požadavky** v průvodci zvolte architekturu (32bitovou verzi, 64bitovou verzi nebo obě) a operační systémy spravovaných počítačů, na které se tato aktualizace použije.
 
-5.  Na stránce **Pravidla detekce** nastavte, jak má Intune zjistit, jestli je už aktualizace na spravovaných počítačích dostupná. Pokud použijete výchozí možnost **Použít výchozí pravidla zjišťování**, Intune vždycky nainstaluje balíček aktualizace na každý cílový počítač jednou.
+5. Na stránce **Pravidla detekce** nastavte, jak má Intune zjistit, jestli je už aktualizace na spravovaných počítačích dostupná. Pokud použijete výchozí možnost **Použít výchozí pravidla zjišťování**, Intune vždycky nainstaluje balíček aktualizace na každý cílový počítač jednou.
 
     > [!NOTE]
     > Pokud je zadaným instalačním souborem aktualizace soubor instalační služby Windows nebo soubor .msp, stránka **Pravidla detekce** v průvodci se nezobrazí. Je to proto, že soubory instalační služby Windows a soubory .msp obsahují vlastní pokyny pro zjišťování předchozích instalací aktualizace.
 
     Výběrem jednoho nebo více pravidel určíte, jestli je aktualizace už nainstalovaná na spravovaných počítačích:
 
-    -   **Soubor existuje**.
+    - **Soubor existuje**.
 
-    -   **Kód produktu MSI existuje**.
+    - **Kód produktu MSI existuje**.
 
-    -   **Klíč registru existuje**.
+    - **Klíč registru existuje**.
 
-6.  Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
+6. Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
 
-7.  Na stránce **Požadavky** v průvodci určete software, který už musí být nainstalovaný před instalací této aktualizace. Můžete zadat **Žádný**a vybrat softwarový balíček, který jste už přidali do služby Intune, která ho spravuje, nebo můžete nastavit některé z těchto pravidel pro popis softwaru:
+7. Na stránce **Požadavky** v průvodci určete software, který už musí být nainstalovaný před instalací této aktualizace. Můžete zadat **Žádný**a vybrat softwarový balíček, který jste už přidali do služby Intune, která ho spravuje, nebo můžete nastavit některé z těchto pravidel pro popis softwaru:
 
-    -   **Soubor existuje**.
+    - **Soubor existuje**.
 
-    -   **Kód produktu MSI existuje**.
+    - **Kód produktu MSI existuje**.
 
-    -   **Klíč registru existuje**.
+    - **Klíč registru existuje**.
 
-8.  Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
+8. Zadejte veškeré další informace, které jsou třeba ke konfiguraci pravidla zjišťování, například cestu k souboru a jeho název, kód produktu instalační služby Windows nebo klíč registru, a potom zvolte **Další**.
 
 9. Na stránce **Argumenty příkazového řádku** v průvodci můžete přidáním požadovaných vlastností instalace na příkazový řádek instalace upravit chování instalačního souboru. Některý software třeba podporuje vlastnost **/q**, která umožňuje tichou instalaci. Informace o všech podporovaných argumentech příkazového řádku najdete v dokumentaci k vašemu softwarovému balíčku. Zadejte všechny potřebné argumenty příkazového řádku a pak zvolte **Další**.
 
@@ -216,48 +216,48 @@ Po výběru aktualizace ze seznamu budete moct použít další příkazy, kter�
 
 ### <a name="to-approve-updates"></a>Schválení aktualizací
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Aktualizace** &gt; **Přehled** &gt; **Nové aktualizace ke schválení**.
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Aktualizace** &gt; **Přehled** &gt; **Nové aktualizace ke schválení**.
 
     V pracovním prostoru **Aktualizace** zvolte **Přehled** &gt; **Nové aktualizace ke schválení**.
 
     > [!NOTE]
     > Odkaz **Nové aktualizace ke schválení** se zobrazí v oblasti **Stav aktualizací** , jen když máte aspoň jeden spravovaný počítač, který vyžaduje schválení aktualizace.
 
-2.  Vyberte aktualizaci, kterou chcete schválit, v dolní části stránky se podívejte na její vlastnosti, a potom vyberte možnost **Schválit**. Můžete vybrat víc aktualizací tím, že při výběru jednotlivých položek podržíte stisknutou klávesu **CTRL**.
+2. Vyberte aktualizaci, kterou chcete schválit, v dolní části stránky se podívejte na její vlastnosti, a potom vyberte možnost **Schválit**. Můžete vybrat víc aktualizací tím, že při výběru jednotlivých položek podržíte stisknutou klávesu **CTRL**.
 
-3.  Na stránce **Vybrat skupiny** vyberte skupinu, do které chcete nasadit aktualizace, a vyberte možnost **Přidat**. Až budete s určováním skupin hotoví, zvolte **Další**.
+3. Na stránce **Vybrat skupiny** vyberte skupinu, do které chcete nasadit aktualizace, a vyberte možnost **Přidat**. Až budete s určováním skupin hotoví, zvolte **Další**.
 
-4.  Na stránce **Akce nasazení** udělejte pro každou skupinu v seznamu tohle:
+4. Na stránce **Akce nasazení** udělejte pro každou skupinu v seznamu tohle:
 
-    -   V seznamu **Schválení** vyberte některou z těchto možností:
+    - V seznamu **Schválení** vyberte některou z těchto možností:
 
-        -   **Požadovaná instalace** – nainstaluje aktualizaci na počítače v určené skupině.
+        - **Požadovaná instalace** – nainstaluje aktualizaci na počítače v určené skupině.
 
-        -   **Neinstalovat** – zobrazí jenom informace o použitelnosti a aktualizaci nenainstaluje.
+        - **Neinstalovat** – zobrazí jenom informace o použitelnosti a aktualizaci nenainstaluje.
 
-        -   **Dostupná instalace** – uživatel může nainstalovat aplikaci na vyžádání z firemního portálu.
+        - **Dostupná instalace** – uživatel může nainstalovat aplikaci na vyžádání z firemního portálu.
 
-        -   **Odinstalovat** – odebere aktualizace z počítačů v cílové skupině.
+        - **Odinstalovat** – odebere aktualizace z počítačů v cílové skupině.
 
             > [!IMPORTANT]
             > Aktualizace se odebere, i když ji nenainstalovala služba Intune.
 
-    -   V seznamu **Termín** vyberte některou z těchto možností:
+    - V seznamu **Termín** vyberte některou z těchto možností:
 
-        -   **Žádný** – označuje, že pro instalaci aktualizace nebyl vynucený žádný termín a uživatelé můžou aktualizaci průběžně odmítat.
+        - **Žádný** – označuje, že pro instalaci aktualizace nebyl vynucený žádný termín a uživatelé můžou aktualizaci průběžně odmítat.
 
-        -   **Co nejdříve** – nainstaluje aktualizaci na cílové počítače při nejbližší příležitosti.
+        - **Co nejdříve** – nainstaluje aktualizaci na cílové počítače při nejbližší příležitosti.
 
-        -   **Vlastní** – určuje datum a čas instalace schválených aktualizací.
+        - **Vlastní** – určuje datum a čas instalace schválených aktualizací.
 
-        -   **Jeden týden**, **Dva týdny**, **Jeden měsíc** – nainstaluje aktualizaci během zadaného časového období.
+        - **Jeden týden**, **Dva týdny**, **Jeden měsíc** – nainstaluje aktualizaci během zadaného časového období.
 
-5.  Výběrem možnosti **Dokončit** nastavení uložíte a výběrem možnosti **Zrušit** nastavení zrušíte a vrátíte se k seznamu aktualizací.
+5. Výběrem možnosti **Dokončit** nastavení uložíte a výběrem možnosti **Zrušit** nastavení zrušíte a vrátíte se k seznamu aktualizací.
 
     > [!IMPORTANT]
     > Pokud jste pro podřízenou skupinu explicitně nenakonfigurovali akci **Neinstalovat**, **Požadovaná instalace**nebo **Odinstalovat** , zdědí všechny podřízené skupiny akci nakonfigurovanou pro nadřazenou skupinu.
 
-6.  Na panelu podrobností v dolní části stránky **Všechny aktualizace** můžete vidět zprávy s připomenutím ohledně aktualizací.
+6. Na panelu podrobností v dolní části stránky **Všechny aktualizace** můžete vidět zprávy s připomenutím ohledně aktualizací.
 
 
 ### <a name="see-also"></a>Viz také:

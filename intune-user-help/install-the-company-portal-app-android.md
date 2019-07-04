@@ -18,30 +18,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bcae8e48fd9c6558d77aced73d12b15e54b2f7
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040943"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546348"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>Instalace aplikace Portál společnosti pro Android
 
 Portál společnosti je aplikace, která umožňuje přístup k podnikovým nebo školním aplikacím, e-mailům a internetovým připojením. Tato aplikace přispívá k bezpečnosti informací organizace díky zabezpečení zařízení, například udržováním aktuálního stavu podnikových aplikací nebo zajištěním, že se zařízení po určité době samo zamkne. Další informace o funkcích aplikace portál společnosti a jeho součástí správy zařízení najdete v tématu [kdy zaregistrovat zařízení s Androidem](why-enroll-android-device.md).  
 
-1.  Klepněte na **Domů** > **Obchod Play**.
+1. Klepněte na **Domů** > **Obchod Play**.
 
-2.  V **hledání** zadejte **portál společnosti Intune**.  
+2. V **hledání** zadejte **portál společnosti Intune**.  
 
-3.  Klepněte na **Portál společnosti Intune**.
+3. Klepněte na **Portál společnosti Intune**.
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4.  Klepněte na **INSTALOVAT**.
+4. Klepněte na **INSTALOVAT**.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 
-5.  Klepněte na **PŘIJMOUT**.
+5. Klepněte na **PŘIJMOUT**.
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 86aefbfc37db7929f9748d4783db319cf97d4545
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512263"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548466"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Konfigurace zásad dodržování předpisů zařízením a správy aplikací během migrace do Microsoft Intune
 
@@ -30,13 +30,13 @@ Hlavním cílem při migraci do Intune je zajistit, aby se všechna zařízení 
 
 Každé zařízení využívá jinou platformu s jinými nastaveními. Zásady zařízení Intune ale fungují na všech těchto platformách, pro které poskytují následující možnosti správy mobilních zařízení:
 
--   Určení počtu zařízení, která si jednotliví uživatelé můžou zaregistrovat
+- Určení počtu zařízení, která si jednotliví uživatelé můžou zaregistrovat
 
--   Správa nastavení zařízení (například šifrování na úrovni zařízení, délka hesla nebo používání kamery)
+- Správa nastavení zařízení (například šifrování na úrovni zařízení, délka hesla nebo používání kamery)
 
--   Dodávání aplikací, e-mailových profilů, profilů VPN apod.
+- Dodávání aplikací, e-mailových profilů, profilů VPN apod.
 
--   Vyhodnocení kritérií pro zásady dodržování předpisů zabezpečení na úrovni zařízení
+- Vyhodnocení kritérií pro zásady dodržování předpisů zabezpečení na úrovni zařízení
 
 > [!IMPORTANT]
 > Zásady správy zařízení se nepřiřazují přímo jednotlivým zařízením nebo uživatelům, ale skupinám uživatelů. Zásady je možné použít přímo pro skupinu uživatelů a tím současně pro zařízení uživatelů, nebo je možné je použít pro skupinu zařízení a tím současně pro členy skupiny.
@@ -61,9 +61,9 @@ Je potřeba vytvořit profil konfigurace zařízení k vynucení nastavení na �
 
 #### <a name="directly-import-ios-configuration-profiles-optional"></a>Přímý import profilů konfigurace iOSu (volitelné)
 
--   **Profily Apple Configuratoru iOS (iOS 7.1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory .mobileconfig), Intune je může přímo importovat jako vlastní zásady.
+- **Profily Apple Configuratoru iOS (iOS 7.1 a novější):** Pokud vaše existující řešení MDM používá profily Apple Configuratoru (soubory .mobileconfig), Intune je může přímo importovat jako vlastní zásady.
 
--   **zásady Konfigurace mobilních aplikací pro iOS:** Pokud vaše existující řešení MDM používá zásady Konfigurace mobilních aplikací pro iOS, Intune je může přímo importovat za předpokladu, že splňují formátu XML, společností Apple pro seznamy vlastností.
+- **zásady Konfigurace mobilních aplikací pro iOS:** Pokud vaše existující řešení MDM používá zásady Konfigurace mobilních aplikací pro iOS, Intune je může přímo importovat za předpokladu, že splňují formátu XML, společností Apple pro seznamy vlastností.
 
 - Zjistěte, jak přidat vlastní zásady pro [iOS](custom-settings-ios.md).
 
@@ -71,25 +71,25 @@ Je potřeba vytvořit profil konfigurace zařízení k vynucení nastavení na �
 
 Zásady dodržování předpisů pro zařízení vyhodnocují nastavení týkající se zabezpečení a vytvářejí sestavy, které ukazují, jestli jsou zařízení v souladu s firemními standardy. Nastavení zahrnují:
 
--   Délka PIN kódu
+- Délka PIN kódu
 
--   Stav jailbreaku
+- Stav jailbreaku
 
--   Verze operačního systému
+- Verze operačního systému
 
 Podívejte se na další materiály k nastavení kompatibility zařízení:
 
--   Informace o [zásadách dodržování předpisů pro zařízení](device-compliance.md).
+- Informace o [zásadách dodržování předpisů pro zařízení](device-compliance.md).
 
--   Zjistěte, [jak vytvořit zásady dodržování předpisů pro zařízení](device-compliance-get-started.md).
+- Zjistěte, [jak vytvořit zásady dodržování předpisů pro zařízení](device-compliance-get-started.md).
 
 ### <a name="task-5-publish-and-deploy-apps"></a>Úloha 5: Publikování a nasazení aplikací
 
 Pokud používáte správu mobilních zařízení (MDM) v Intune, můžete dodat aplikace vyžádáním jejich automatické instalace nebo jejich zpřístupněním v Portálu společnosti.
 
--   [Jak přidat aplikace](apps-add.md)
+- [Jak přidat aplikace](apps-add.md)
 
--   [Jak nasadit aplikace](apps-deploy.md)
+- [Jak nasadit aplikace](apps-deploy.md)
 
 ### <a name="task-6-enable-device-enrollment"></a>Krok 6: Povolení registrace zařízení
 

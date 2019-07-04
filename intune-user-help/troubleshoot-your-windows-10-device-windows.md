@@ -18,17 +18,17 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf3f053146d7243a397d0fb802718d48300ef20
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: bbd4f8f0925aac5aada44277c4d21a71b412e0e7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528710"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546687"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Řešení potíží při registraci zařízení s Windows 10
 Pokud jste zaregistrovali zařízení, ale pořád nemáte přístup k pracovním nebo školním e-mailům a souborům, zkuste tyto kroky pro řešení potíží.  
 
-1.  Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
+1. Podívejte se na další dvě obrazovky a najděte tu, která vypadá stejně jako to, co vidíte ve svém zařízení. Použijte postup odpovídající této obrazovce.
 
     Pokud se zobrazí tato obrazovka, použijte postup v tématu [Postup řešení potíží, pokud se zobrazí Přístup do práce nebo do školy](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school).
 

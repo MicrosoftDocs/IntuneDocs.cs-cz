@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2820007f167b2f79b8dd98ca31d7e50968ac1969
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7aaeb94aad7e31c3346b088239024c14f9e190da
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046052"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549357"
 ---
 # <a name="intune-testing-and-validation"></a>Testování a ověřování Intune
 
@@ -33,17 +33,17 @@ Doporučujeme do testovací fáze zapojit pracovníky IT, kteří mají na staro
 
 Doporučujeme vytvořit následující dokumentaci:
 
--   **Testovací kritéria:** Identifikujte srovnávací testy pro měření.
+- **Testovací kritéria:** Identifikujte srovnávací testy pro měření.
 
--   **Součásti návrhu:** Musí existovat alespoň v jednom testovacím kritériu.
+- **Součásti návrhu:** Musí existovat alespoň v jednom testovacím kritériu.
 
 Pokud součást návrhu neexistuje minimálně v jednom testovacím kritériu, které odpovídá požadavku nebo scénáři, zvažte, jestli je tato součást návrhu potřeba. Nezapomeňte si také připravit následující věci:
 
--   **Účty:** Testovací účty licencované pro EMS a Office 365 a testovat všechny scénáře použití.
+- **Účty:** Testovací účty licencované pro EMS a Office 365 a testovat všechny scénáře použití.
 
--   **Zařízení:** Testovací zařízení, které je možné vymazat nebo resetovat do továrního nastavení.
+- **Zařízení:** Testovací zařízení, které je možné vymazat nebo resetovat do továrního nastavení.
 
--   **Integrační komponenty:** Všechny integrované komponenty (certificate konektory a místní konektor Intune Exchange) by měl nainstalovaný a nakonfigurovaný v případě potřeby.
+- **Integrační komponenty:** Všechny integrované komponenty (certificate konektory a místní konektor Intune Exchange) by měl nainstalovaný a nakonfigurovaný v případě potřeby.
 
 V případě nečekaných komplikací možná bude potřeba změnit návrh. Všechny změny návrhu musí být plně dokumentované, včetně důvodu každé změny. Následující příklad ilustruje, o jaký druh změn může jít:
 
@@ -51,15 +51,15 @@ V případě nečekaných komplikací možná bude potřeba změnit návrh. Vše
 
 Při testování a ověřování se mohou vyskytnout problémy, které vyžadují technickou pomoc nebo odborné řešení potíží. Pokud hledáte pomoc, doporučujeme požádat o podporu prostřednictvím kanálů podpory Microsoftu.
 
--   [Informace o tom, jak získat podporu pro Intune](get-support.md)
+- [Informace o tom, jak získat podporu pro Intune](get-support.md)
 
--   [Kontakt na odbornou telefonickou podporu Microsoft Intune](get-support.md)
+- [Kontakt na odbornou telefonickou podporu Microsoft Intune](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Ověřovací testování funkčnosti
 
 Ověřování funkčnosti spočívá v testování každé součásti a konfigurace, abyste zjistili, jestli fungují správně. Příklad testování a ověřování je v následující tabulce.
 
-![9. část – tabulka 1](./media/section-9-image-1-table.PNG)
+![9\. část – tabulka 1](./media/section-9-image-1-table.PNG)
 
 ## <a name="use-case-validation-testing"></a>Ověřovací testování případů použití
 
@@ -69,13 +69,13 @@ Ověřovací testování případů použití se provádí, aby se ověřilo, zd
 
 Ověřovací testování správce IT se provádí, aby se ověřilo správné fungování akcí při správě zařízení nebo uživatelů. Následující příklad obsahuje scénář koncového ověřování, které provádí správce IT.
 
-![9. část – tabulka 2](./media/section-9-image-2-table.PNG)
+![9\. část – tabulka 2](./media/section-9-image-2-table.PNG)
 
 ### <a name="end-user"></a>koncový uživatel
 
 Ověřovací testování koncového uživatele se provádí, aby se ověřilo, jestli pracovní prostředí koncového uživatele funguje očekávaným způsobem a je správně prezentované při veškeré komunikaci uživatele. Je důležité k ověření, jestli má uživatel k dispozici funkce, které potřebuje. Pokud se vám ověření nepodaří, může se snížit míra přijetí a zvýšit objem volání na helpdesk.
 
-![9. část – tabulka 3](./media/section-9-image-3-table.PNG)
+![9\. část – tabulka 3](./media/section-9-image-3-table.PNG)
 
 ## <a name="next-steps"></a>Další postup
 

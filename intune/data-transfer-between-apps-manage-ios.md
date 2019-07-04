@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,51 +17,48 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: d4d12f9e04d275e18c5cf36b444bf1e050560765
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512149"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558370"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
 K ochraně firemních dat, omezte přenosy souborů jenom na aplikace, které spravujete. Aplikace pro iOS můžete spravovat těmito způsoby:
 
--   Zabraňují úniku dat společnosti tím, že nakonfigurujete zásady ochrany aplikací pro aplikace, které označujeme jako **spravované podle zásad** aplikace. Přečtěte si téma s informacemi o [všech aplikacích spravovaných přes Intune, které je možné spravovat pomocí zásad ochrany aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+- Zabraňují úniku dat společnosti tím, že nakonfigurujete zásady ochrany aplikací pro aplikace, které označujeme jako **spravované podle zásad** aplikace. Přečtěte si téma s informacemi o [všech aplikacích spravovaných přes Intune, které je možné spravovat pomocí zásad ochrany aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
--   Nasazení a správě aplikací prostřednictvím **kanálu MDM.** , která vyžaduje zařízení k registraci v řešení správy mobilních zařízení (MDM). Je možné aplikace nasadíte **spravované podle zásad** aplikací nebo jiné spravované aplikace.
+- Nasazení a správě aplikací prostřednictvím **kanálu MDM.** , která vyžaduje zařízení k registraci v řešení správy mobilních zařízení (MDM). Je možné aplikace nasadíte **spravované podle zásad** aplikací nebo jiné spravované aplikace.
 
 Funkce **Správa pro Open In** pro zařízení s iOSem může omezit přenosy souborů tak, aby probíhaly jenom mezi aplikacemi, které jsou nasazená prostřednictvím **kanálu MDM**. Nastavte *Správa Open in* omezení v nastavení konfigurace a potom ji nasadíte pomocí řešení pro správu.  Když uživatel nainstaluje nasazenou aplikaci, použijí se omezení, která jste nastavili.
 
 ## <a name="use-app-protection-with-ios-apps"></a>Ochrana aplikací pomocí aplikace pro iOS
 Použití zásad ochrany aplikací v IOS **Správa Open in** funkce k ochraně firemních dat těmito způsoby:
 
--   **Zařízení patřící zaměstnancům, nejsou spravována žádným řešením MDM:** Můžete nastavit ochranu aplikace nastavení zásad **povolit aplikaci přenos dat jenom aplikace spravované podle zásad**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
+- **Zařízení patřící zaměstnancům, nejsou spravována žádným řešením MDM:** Můžete nastavit ochranu aplikace nastavení zásad **povolit aplikaci přenos dat jenom aplikace spravované podle zásad**. *Open In* chování v aplikaci spravované zásadami prezentuje jako možnosti pro sdílení jenom další aplikace spravované zásadami. Pokud se uživatel pokusí odeslat soubor chráněný zásadami jako přílohu z Onedrivu v nativním e-mailové aplikace, je tento soubor nejde přečíst.
 
--   **Zařízení spravovaná pomocí Intune:** Pro zařízení zaregistrovaná v Intune přenos dat mezi aplikacemi se zásadami ochrany aplikací a další spravované aplikace pro iOS nasazenými prostřednictvím Intune automaticky povolené. Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **povolit aplikaci posílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **povolit aplikaci přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Pomocí funkce **Správa Open In** můžete ovládat přenosy dat mezi aplikacemi nasazenými prostřednictvím Intune. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection).   
-
--   **Zařízení spravovaná řešením MDM třetí strany:** Můžete omezit přenosy dat jenom do spravovaných aplikací s použitím iOS **Správa Open in** funkce.
-Pokud chcete mít jistotu, že aplikace nasazené pomocí řešení MDM jiného výrobce byly také přidružené k pomocí zásad ochrany aplikací Intune, konfigurace nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [konfigurace nastavení hlavního názvu uživatele (UPN)](#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Při nasazení aplikace pomocí nastavení hlavního názvu uživatele (UPN), použít zásady ochrany aplikací pro aplikaci, jakmile se uživatel přihlásí pomocí svého pracovního účtu.
+- **Zařízení spravovaná pomocí řešení MDM od**: Pro zařízení zaregistrovaná v Intune nebo řešení MDM třetí strany, sdílení dat mezi aplikacemi se zásadami ochrany aplikací a další spravované aplikace pro iOS nasazenými prostřednictvím MDM řídí zásady aplikací Intune a iOS **Správa Open in** funkce. Pokud chcete mít jistotu, že aplikace nasazené pomocí řešení MDM nejsou také přidružené zásady ochrany aplikací Intune, konfigurace nastavení hlavního názvu uživatele (UPN), jak je popsáno v následující části [konfigurace nastavení hlavního názvu uživatele (UPN)](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm). Chcete-li určit, jak chcete povolit přenos dat do jiných aplikací, povolit **organizace odesílat data do jiných aplikací** a pak vyberte požadovanou úroveň sdílení. Chcete-li určit, jak chcete povolit aplikaci přijímat data z jiných aplikací, povolit **přijímat data z jiných aplikací** a pak vyberte požadovanou úroveň pro příjem dat. Další informace o přijímání a sdílení dat aplikací najdete v tématu [Nastavení přemístění dat](app-protection-policy-settings-ios.md#data-protection).
 
 ## <a name="configure-user-upn-setting-for-microsoft-intune-or-third-party-emm"></a>Konfigurace nastavení hlavního názvu uživatele (UPN) pro Microsoft Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce
 Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro zařízení spravovaná pomocí Intune nebo řešení EMM (Enterprise Mobility Management) jiného výrobce. Konfigurace hlavního názvu uživatele funguje se zásadami ochrany aplikací, které můžete nasadit z Intune. Následující postup představuje obecné kroky pro konfiguraci nastavení (UPN) a výsledného prostředí uživatele:
 
-1.  Na portálu [Azure Portal](https://portal.azure.com) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
+1. Na portálu [Azure Portal](https://portal.azure.com) [vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) pro platformu iOS. Nakonfigurujte nastavení zásad podle požadavků vaší společnosti a vyberte aplikace iOS, které by tyto zásady měly používat.
 
-2.  Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce pomocí následujících obecných kroků. Toto prostředí je také popsaná v *Příklad 1*.
+2. Nasaďte aplikace a e-mailový profil, který chcete spravovat prostřednictvím Intune nebo řešení MDM jiného výrobce pomocí následujících obecných kroků. Toto prostředí je také popsaná v *Příklad 1*.
 
-3.  Nasazení aplikace s následujícím nastavením konfigurace aplikací pro spravovaná zařízení:
+3. Nasazení aplikace s následujícím nastavením konfigurace aplikací pro spravovaná zařízení:
 
       **klíč** = IntuneMAMUPN, **hodnota** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
       
        > [!NOTE]
-       > Zásady Konfigurace aplikací v Intune, musí být pro typ registrace "Zařízení spravovaná prostřednictvím protokolu".
-       > Addicionally, aplikace musí být, že buď nainstalovat z portálu společnosti Intune, pokud jsou nastavené jako dostupné nebo vložení vložil podle potřeby do zařízení. 
+       > In Intune, the App Configuration policy has to be for enrollment type "Managed Devices".
+       > Addicionally, the App needs to be either installed from the Intune Company Portal if set as available or pushed as required to the device. 
 
-4.  Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
+4. Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 
 
 ### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>Příklad 1: Prostředí pro správu v Intune nebo konzole řešení MDM třetí strany
@@ -85,20 +82,20 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
 ### <a name="example-2-end-user-experience"></a>Příklad 2: Činnost koncového uživatele
 
-1.  Uživatel nainstaluje na zařízení aplikaci Microsoft Word.
+1. Uživatel nainstaluje na zařízení aplikaci Microsoft Word.
 
-2.  Uživatel spustí spravovanou nativní e-mailovou aplikaci pro přístup k e-mailu.
+2. Uživatel spustí spravovanou nativní e-mailovou aplikaci pro přístup k e-mailu.
 
-3.  Uživatel se pokusí otevřít dokument z nativní pošty v Microsoft Wordu.
+3. Uživatel se pokusí otevřít dokument z nativní pošty v Microsoft Wordu.
 
-4.  Při spuštění aplikace Word, bude uživatel vyzván k přihlášení pomocí svého pracovního účtu. Účet, který uživatel zadá musí odpovídat účtu, který jste zadali v nastavení konfigurace aplikace pro aplikaci Microsoft Word.
+4. Při spuštění aplikace Word, bude uživatel vyzván k přihlášení pomocí svého pracovního účtu. Účet, který uživatel zadá musí odpovídat účtu, který jste zadali v nastavení konfigurace aplikace pro aplikaci Microsoft Word.
 
     > [!NOTE]
     > Uživatele můžete přidat a používat jejich osobní účty s aplikací Word. Zásady ochrany aplikací nemůžete použít, pokud uživatel použije aplikaci Word mimo pracovní kontext. 
 
-5.  Po přihlášení platí nastavení zásad ochrany aplikací pro aplikace Word.
+5. Po přihlášení platí nastavení zásad ochrany aplikací pro aplikace Word.
 
-6.  Přenos dat bude tentokrát úspěšný a dokument se v aplikaci označí firemní identitou.  Data zpracovávají v pracovním kontextu a nastavení zásad platí. 
+6. Přenos dat bude tentokrát úspěšný a dokument se v aplikaci označí firemní identitou.  Data zpracovávají v pracovním kontextu a nastavení zásad platí. 
 
 ### <a name="validate-user-upn-setting-for-third-party-emm"></a>Ověření nastavení hlavního názvu uživatele (UPN) pro řešení MDM jiného výrobce
 

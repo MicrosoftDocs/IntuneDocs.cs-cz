@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf53266449911967ae8fb89d240274b04164fe96
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511755"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546039"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
@@ -45,11 +45,11 @@ Při prvním přístupu k pracovním nebo školním datům ve spravované aplika
 ## <a name="commonly-managed-apps"></a>Často spravované aplikace  
 Příklady často spravovaných aplikací, které jsou povinné nebo dostupné ve školách a na pracovištích:
 
--   Microsoft Edge
+- Microsoft Edge
 
--   Microsoft Outlook
+- Microsoft Outlook
 
--   Microsoft Word, Excel a PowerPoint
+- Microsoft Word, Excel a PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?
 Existují tři způsoby, jak získat spravovaných aplikací.  

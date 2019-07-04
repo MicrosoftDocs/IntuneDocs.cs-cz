@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8134b9db0e478efa69391edeb570b39c91a41c9
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511771"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547296"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Konektor Better Mobile Threat Defense s Intune
 
@@ -41,11 +41,11 @@ Zde jsou uvedeny některé obvyklé scénáře.
 
 Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující akce:
 
--   Připojení k firemnímu e-mailu
+- Připojení k firemnímu e-mailu
 
--   Synchronizaci firemních souborů přes OneDrive for Work
+- Synchronizaci firemních souborů přes OneDrive for Work
 
--   Přístup k aplikacím společnosti
+- Přístup k aplikacím společnosti
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
@@ -81,19 +81,19 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
--   **Android 4.1 nebo novější**
+- **Android 4.1 nebo novější**
 
--   **iOS 8.0 a novější**
+- **iOS 8.0 a novější**
 
 ## <a name="prerequisites"></a>Požadavky
 
--   Azure Active Directory Premium
+- Azure Active Directory Premium
 
--   Odběr služby Microsoft Intune
+- Odběr služby Microsoft Intune
 
--   Předplatné ochrany před mobilními hrozbami Better Mobile
+- Předplatné ochrany před mobilními hrozbami Better Mobile
 
-    -   Další informace najdete na [webu Better Mobile](https://www.better.mobi/).
+    - Další informace najdete na [webu Better Mobile](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Další postup
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e9042b6c7c1890cd1829f803c05fbab7ae9b44
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040210"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548826"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Zjednodušení správy počítačů s Windows pomocí zásad
 
@@ -35,13 +35,13 @@ Při správě počítačů s Windows pomocí klienta softwaru Intune můžete po
 ### <a name="manage-the-microsoft-intune-center"></a>Správa centra Microsoft Intune Center
 Klientský software Intune se uživatelům zobrazí jako **Microsoft Intune Center**. Microsoft Intune Center uživatelům umožňuje:
 
--   Získávat aplikace z portálu společnosti
+- Získávat aplikace z portálu společnosti
 
--   Kontrolovat aktualizace
+- Kontrolovat aktualizace
 
--   Spravovat Microsoft Intune Endpoint Protection
+- Spravovat Microsoft Intune Endpoint Protection
 
--  Žádat o vzdálenou pomoc
+- Žádat o vzdálenou pomoc
 
 Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V zásadách Intune můžete nakonfigurovat následující nastavení, která se uživatelům zobrazí v centru Microsoft Intune Center:
 

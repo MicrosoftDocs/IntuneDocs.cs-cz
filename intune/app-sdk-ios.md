@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4877920821b2471f752f9fdb8941e87576d937ba
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413861"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558416"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -70,6 +70,7 @@ Následující soubory hlaviček obsahují rozhraní API, datové typy a protoko
     * IntuneMAMDataProtectionInfo.h
     * IntuneMAMDataProtectionManager.h
     * IntuneMAMDefs.h
+    * IntuneMAMDiagnosticConsole.h
     * IntuneMAMEnrollmentDelegate.h
     * IntuneMAMEnrollmentManager.h
     * IntuneMAMEnrollmentStatus.h
@@ -735,6 +736,10 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 ### <a name="is-there-a-sample-app-that-demonstrates-how-to-integrate-the-sdk"></a>Je k dispozici ukázková aplikace, která demonstruje integraci sady SDK?
 
 Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
+
+### <a name="how-can-i-troubleshoot-my-app"></a>Jak je možné řešit Moje aplikace?
+
+Intune SDK pro iOS 9.0.3+ podporuje možnost přidávat konzolu diagnostiky v rámci mobilní aplikace pro testování zásad a protokolování chyb. `IntuneMAMDiagnosticConsole.h` definuje `IntuneMAMDiagnosticConsole` rozhraní třídy, mohou vývojáři použít k zobrazení diagnostických konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům průběhu testu shromažďovat a sdílet protokoly Intune pro usnadnění diagnostiky jakýkoli problém, který může mít. Toto rozhraní API je nepovinné pro doplňky.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 

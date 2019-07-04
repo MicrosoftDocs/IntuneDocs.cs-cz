@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f93416a8fd6190549a958f1b1a7e5f3bdf6df1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045307"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547919"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
 Kategorie **Zařízení** obsahuje entity pro mobilní zařízení, které sledují informace, například:
 
-  -  Typ zařízení
-  -  Stav zápisu a registrace zařízení
-  -  Vlastnictví zařízení
-  -  Stav správy zařízení
-  -  Stav členství zařízení v Azure AD
-  -  Stav zápisu
-  -  Historické informace o zařízení
-  -  Inventář aplikací na daném zařízení
+  - Typ zařízení
+  - Stav zápisu a registrace zařízení
+  - Vlastnictví zařízení
+  - Stav správy zařízení
+  - Stav členství zařízení v Azure AD
+  - Stav zápisu
+  - Historické informace o zařízení
+  - Inventář aplikací na daném zařízení
 
 ## <a name="devicetypes"></a>DeviceTypes
 
@@ -118,7 +118,7 @@ Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné enti
 | Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
-| Autorizace                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
+| Authorization                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
 | AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
 | UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
 | DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |

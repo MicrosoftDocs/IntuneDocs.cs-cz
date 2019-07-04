@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 233b093ba9c062618740fd8f14c5ea306647acdd
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050501"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549388"
 ---
 # <a name="basic-setup"></a>Základní nastavení
 
@@ -32,15 +32,15 @@ Po vyhodnocení prostředí je čas nastavit Microsoft Intune.
 
 Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba Azure Active Directory (AAD). Další informace pro:
 
--  [Požadavky na identity](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
+- [Požadavky na identity](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-overview#design-considerations-overview)
 
--   [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
+- [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
--   [Vícefaktorové ověřování (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Vícefaktorové ověřování (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
--   [Plánování skupin uživatelů a zařízení](users-add.md)
+- [Plánování skupin uživatelů a zařízení](users-add.md)
 
--   [Vytváření skupin uživatelů a zařízení](groups-get-started.md)
+- [Vytváření skupin uživatelů a zařízení](groups-get-started.md)
 
 Pokud už používá organizace Office 365, musí služba Intune používat stejné prostředí Azure Active Directory.
 
@@ -48,9 +48,9 @@ Pokud už používá organizace Office 365, musí služba Intune používat stej
 
 Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-Fi nebo e-mailových profilů pomocí certifikátů, musíte ověřit, jestli [máte infrastrukturu PKI](certificates-configure.md) a jestli je připravená k vytvoření a nasazení profilů certifikátů. Další informace o konfiguraci certifikátů v Intune:
 
--   [Jak konfigurovat infrastrukturu certifikátů pro SCEP](/intune/certificates-scep-configure)
+- [Jak konfigurovat infrastrukturu certifikátů pro SCEP](/intune/certificates-scep-configure)
 
--   [Jak konfigurovat infrastrukturu certifikátů pro PFX](/intune/certficates-pfx-configure)
+- [Jak konfigurovat infrastrukturu certifikátů pro PFX](/intune/certficates-pfx-configure)
 
 
 ## <a name="task-list-for-an-intune-setup"></a>Seznam kroků instalace Intune
@@ -59,17 +59,17 @@ Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-
 
 Ještě než začnete s migrací do Intune, potřebujete předplatné Intune.
 
--   Můžete navštívit [tuto stránku](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), kde najdete pokyny, jak:
+- Můžete navštívit [tuto stránku](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), kde najdete pokyny, jak:
 
-    -   Vytvořit nové předplatné Intune propojené s novým tenantem AAD
+    - Vytvořit nové předplatné Intune propojené s novým tenantem AAD
 
-    -   Propojit předplatné Intune přihlášením k existujícímu tenantovi AAD
+    - Propojit předplatné Intune přihlášením k existujícímu tenantovi AAD
 
 ### <a name="task-2-assign-intune-user-licenses"></a>Úloha 2: Přiřazení uživatelských licencí pro Intune
 
--   Podívejte se, [jak přiřadit uživatelské licence pro Intune](licenses-assign.md).
+- Podívejte se, [jak přiřadit uživatelské licence pro Intune](licenses-assign.md).
 
--   Pokud jste vytvořili nového tenanta Azure Active Directory, podívejte se, [jak vytvořit nové uživatele nebo synchronizovat uživatele z místní služby Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
+- Pokud jste vytvořili nového tenanta Azure Active Directory, podívejte se, [jak vytvořit nové uživatele nebo synchronizovat uživatele z místní služby Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
 ### <a name="task-3-set-your-mdm-authority-to-intune"></a>Úloha 3: Nastavte autoritu MDM na Intune
 

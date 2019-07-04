@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faceee883194dbbdcec83f282806035ffc0432d1
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: 1fda4268e66703c8bd2132c9af22fed52f1791b1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174179"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548956"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Kurz: Použití funkce registrace podnikového zařízení společnosti Apple v Apple obchodní správce (ABM) k registraci zařízení s Iosem v Intune
 Možnosti registrace zařízení v Apple obchodní ředitel usnadňuje registraci zařízení. Intune také podporuje starší portál programu registrace zařízení (DEP) společnosti Apple, ale doporučujeme vám začít pracovat s Apple manažera. S Microsoft Intune a Apple registrace podnikového zařízení jsou zařízení zaregistrovaná automaticky bezpečně okamžiku, kdy uživatel zařízení zapne. Proto můžete zaslat zařízení mnoha uživatelům bez nutnosti nastavit každé zařízení zvlášť. 
@@ -53,7 +53,7 @@ Použití portálu ABM nebo zabránění spuštění dat k vytvoření tokenu re
 
 4. Pokud chcete otevřít portál Programu registrace zařízení Apple (DEP), zvolte **Vytvořit token pro Program registrace zařízení Apple** a přihlaste se pomocí firemního Apple ID. Toto Apple ID můžete použít k obnovení tokenu DEP.
 
-5.  Na [portálu společnosti Apple pro nasazení programů](https://deploy.apple.com) vyberte **Začínáme**. Otevře se **Program registrace zařízení**. Může být mírně liší od následující kroky v procesu [Apple obchodní ředitel](https://business.apple.com).
+5. Na [portálu společnosti Apple pro nasazení programů](https://deploy.apple.com) vyberte **Začínáme**. Otevře se **Program registrace zařízení**. Může být mírně liší od následující kroky v procesu [Apple obchodní ředitel](https://business.apple.com).
 
 4. Na stránce pro **správu serverů** zvolte, že chcete **přidat server MDM**.
 

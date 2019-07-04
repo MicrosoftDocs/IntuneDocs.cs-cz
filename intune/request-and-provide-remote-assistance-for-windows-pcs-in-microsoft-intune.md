@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1a725ff5ba5a677a41fe2a89b999f1ae41b3b6f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040911"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549141"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
@@ -79,13 +79,13 @@ V nabídce **Akce** v okně **TeamViewer** zvolte **Ukončit relaci**.
 ## <a name="remotely-restart-a-windows-pc"></a>Vzdálené restartování počítače s Windows
 Při pomáhání uživatelům s problémy můžete občas potřebovat vzdáleně restartovat jejich počítač. Počítač s Windows můžete vzdáleně restartovat pomocí následujícího postupu.
 
-1.  V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete restartovat).
+1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) zvolte **Skupiny** &gt; **Všechna zařízení** (nebo jinou skupinu obsahující počítač, který chcete restartovat).
 
-2.  Vyberte jeden nebo více počítačů a zvolte **Vzdálené úlohy** &gt; **Restartovat počítač**.
+2. Vyberte jeden nebo více počítačů a zvolte **Vzdálené úlohy** &gt; **Restartovat počítač**.
 
-3.  Pokud chcete zobrazit stav úlohy, v pravém dolním rohu stránky zvolte **Vzdálené úlohy**.
+3. Pokud chcete zobrazit stav úlohy, v pravém dolním rohu stránky zvolte **Vzdálené úlohy**.
 
-4.  V dialogovém okně **Stav úlohy** se můžete podívat na aktuální vzdálené úlohy, stav úloh, název zařízení a všechny hlášené chyby.
+4. V dialogovém okně **Stav úlohy** se můžete podívat na aktuální vzdálené úlohy, stav úloh, název zařízení a všechny hlášené chyby.
 
 ### <a name="see-also"></a>Viz také:
 

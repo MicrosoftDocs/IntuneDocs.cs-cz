@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1cab7957a0de1b26a6e172fc696cf887d5fe3916
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ea084bfeebc0b6a61c4a53950d6f28a6ad0f6d4f
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528379"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558521"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -32,7 +32,7 @@ Pomocí následujících kroků integrujete řešení Symantec Endpoint Protecti
 
 ### <a name="azure-ad-account-used-to-integrate-intune-and-sep-mobile"></a>Účet Azure AD použitý k integraci Intune a SEP Mobile
 
--   Než začnete se základním nastavením SEP Mobile, ujistěte se, že máte správně nastavený účet Azure AD v [konzole pro správu Symantec Endpoint Protection Mobile](https://aad.skycure.com).
+- Než začnete se základním nastavením SEP Mobile, ujistěte se, že máte správně nastavený účet Azure AD v [konzole pro správu Symantec Endpoint Protection Mobile](https://aad.skycure.com).
 - K provedení integrace musí být účet Azure AD účtem globálního správce.
 ### <a name="network-setup"></a>Nastavení sítě
 
@@ -42,40 +42,40 @@ Jestli je vaše síť správně nakonfigurovaná pro integraci s SEP Mobile, mů
 
 SEP Mobile podporuje dva způsoby integrace s Intune:
 
--   **Integrace jen pro čtení (základní instalace):** Vytvoří pouze inventář zařízení z Azure Active Directory a naplní ho v konzole pro správu mobilní aplikace Symantec Endpoint Protection.
+- **Integrace jen pro čtení (základní instalace):** Vytvoří pouze inventář zařízení z Azure Active Directory a naplní ho v konzole pro správu mobilní aplikace Symantec Endpoint Protection.
 <br>
-    -   Pokud nejsou políčka **Report the health and risk of devices to Intune** (Hlásit stav a riziko zařízení službě Intune) a **Also report security incidents to Intune** (Hlásit službě Intune také bezpečnostní incidenty) v konzole pro správu Symantec Endpoint Protection Mobile zaškrtnutá, znamená to, že integrace je jen pro čtení, a proto se ve službě Intune nikdy nezmění stav zařízení (vyhovující nebo nevyhovující).
+    - Pokud nejsou políčka **Report the health and risk of devices to Intune** (Hlásit stav a riziko zařízení službě Intune) a **Also report security incidents to Intune** (Hlásit službě Intune také bezpečnostní incidenty) v konzole pro správu Symantec Endpoint Protection Mobile zaškrtnutá, znamená to, že integrace je jen pro čtení, a proto se ve službě Intune nikdy nezmění stav zařízení (vyhovující nebo nevyhovující).
 <br></br>
--   **Úplná integrace:** Umožňuje aplikaci SEP Mobile o rizikových a bezpečnostních incidentů podrobnosti do Intune, která vytváří obousměrnou komunikaci mezi oběma cloudovými službami.
+- **Úplná integrace:** Umožňuje aplikaci SEP Mobile o rizikových a bezpečnostních incidentů podrobnosti do Intune, která vytváří obousměrnou komunikaci mezi oběma cloudovými službami.
 
 ### <a name="how-are-the-sep-mobile-apps-used-with-azure-ad-and-intune"></a>Jak se používají aplikace SEP Mobile s Azure AD a Intune?
 
--   **aplikace pro iOS:** Umožňuje koncovým uživatelům přihlásit ke službě Azure AD pomocí aplikace pro iOS.
+- **aplikace pro iOS:** Umožňuje koncovým uživatelům přihlásit ke službě Azure AD pomocí aplikace pro iOS.
 
--   **Aplikace pro Android:** Umožňuje koncovým uživatelům přihlásit ke službě Azure AD pomocí aplikace pro Android.
+- **Aplikace pro Android:** Umožňuje koncovým uživatelům přihlásit ke službě Azure AD pomocí aplikace pro Android.
 
--   **Aplikace pro správu:** Toto je aplikace s více tenanty SEP Mobile nainstalovat Azure AD, která umožňuje komunikaci služba služba pomocí Intune.
+- **Aplikace pro správu:** Toto je aplikace s více tenanty SEP Mobile nainstalovat Azure AD, která umožňuje komunikaci služba služba pomocí Intune.
 
 ## <a name="to-set-up-the-read-only-integration-between-intune-and-sep-mobile"></a>Nastavení integrace jen pro čtení mezi Intune a SEP Mobile
 
 > [!IMPORTANT]
 > Přihlašovací údaje správce SEP Mobile se musí skládat z e-mailového účtu, který patří platnému uživateli Azure Active Directory, jinak se přihlášení nezdaří. SEP Mobile k ověření správce používá jednotné přihlašování (SSO) služby Azure Active Directory.
 
-1.  Přejděte do [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com).
+1. Přejděte do [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com).
 
-2.  Zadejte **přihlašovací údaje správce SEP Mobile** a pak zvolte **Continue** (Pokračovat).
+2. Zadejte **přihlašovací údaje správce SEP Mobile** a pak zvolte **Continue** (Pokračovat).
 
-3.  Přejděte na **Settings** (Nastavení) a v části **Intune Integration** (Integrace Intune) vyberte **Basic Setup** (Základní nastavení).
+3. Přejděte na **Settings** (Nastavení) a v části **Intune Integration** (Integrace Intune) vyberte **Basic Setup** (Základní nastavení).
 
-4.  Vedle **iOS App** (Aplikace pro iOS) zvolte **Add to Active Directory** (Přidat do AD).
+4. Vedle **iOS App** (Aplikace pro iOS) zvolte **Add to Active Directory** (Přidat do AD).
 
     ![Obrázek konzoly mobilní správy Symantec Endpoint Protection](./media/symantec-portal-basic-add.png)
 
-5.  Když se otevře přihlašovací stránka, zadejte své přihlašovací údaje Intune a pak vyberte **Accept** (Přijmout).
+5. Když se otevře přihlašovací stránka, zadejte své přihlašovací údaje Intune a pak vyberte **Accept** (Přijmout).
 
     ![Obrázek výzvy k přihlášení aplikace pro iOS do služby Intune](./media/symantec-portal-basic-accept.png)
 
-6.  Po přidání aplikace do Azure AD se zobrazí indikace, že byla aplikace úspěšně přidána.
+6. Po přidání aplikace do Azure AD se zobrazí indikace, že byla aplikace úspěšně přidána.
 
     ![Obrázek dokončení přidání aplikace pro iOS](./media/symantec-portal-basic-added.png)
 
@@ -85,7 +85,7 @@ SEP Mobile podporuje dva způsoby integrace s Intune:
 
 Je potřeba přidat skupinu zabezpečení služby Azure AD, která obsahuje všechna zařízení s SEP Mobile.
 
--  Zadejte a vyberte všechny skupiny zabezpečení zařízení, na kterých běží aplikace SEP Mobile a následně změny uložte.
+- Zadejte a vyberte všechny skupiny zabezpečení zařízení, na kterých běží aplikace SEP Mobile a následně změny uložte.
 
     ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)
 
@@ -118,11 +118,11 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
 ### <a name="set-up-the-integration-between-symantec-endpoint-protection-mobile-and-intune"></a>Nastavení integrace mezi Symantec Endpoint Protection Mobile a Intune
 
-1.  Přejděte do [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com).
+1. Přejděte do [konzoly pro správu Symantec Endpoint Protection](https://aad.skycure.com).
 
-2.  Zadejte **přihlašovací údaje správce SEP Mobile** a pak zvolte **Continue** (Pokračovat).
+2. Zadejte **přihlašovací údaje správce SEP Mobile** a pak zvolte **Continue** (Pokračovat).
 
-3.  Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **EMM Integration Selection** (Výběr integrace EMM).
+3. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **EMM Integration Selection** (Výběr integrace EMM).
 
 4. Do pole **Directory ID** (ID adresáře) vložte identifikátor adresáře, který jste zkopírovali z Azure Active Directory v předchozí části, a uložte nastavení.
 
@@ -146,7 +146,7 @@ Služba SEP Mobile sesynchronizuje zařízení, na kterých běží její služb
 
     ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)
 
-11.  SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **Full Integration** (Úplná integrace).
+11. SEP Mobile sesynchronizuje zařízení ve vybraných skupinách a začne hlásit informace do Intune. Tato data můžete zobrazit v části Úplná integrace. Přejděte na **Settings** (Nastavení) > **Integrations** (Integrace) > **Intune** > **Full Integration** (Úplná integrace).
 
      ![Obrázek znázorňující dokončenou úplnou integraci SEP Mobile](media/symantec-portal-basic-status.PNG)
 ## <a name="next-steps"></a>Další postup

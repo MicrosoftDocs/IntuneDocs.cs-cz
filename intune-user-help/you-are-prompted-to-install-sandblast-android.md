@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cc21b0d9af0073cae814ccf1d3a0f25fdeb2fbe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: a012cb7fe25b70ee260f2b3a2d49a47c3bae06a3
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527659"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558454"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-android-device"></a>Na zařízení s Androidem je potřeba nainstalovat SandBlast Mobile Protect
 
@@ -47,9 +47,9 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 8. SandBlast Mobile Protect začne okamžitě vyhledávat bezpečnostní hrozby na vašem zařízení.
 
-9.  Pokud SandBlast Mobile Protect najde na vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení problému.
+9. Pokud SandBlast Mobile Protect najde na vašem zařízení bezpečnostní hrozbu, nabídne vám pokyny k vyřešení problému.
 
-10.  Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
+10. Pokud se žádné hrozby nenajdou, zobrazí se všechny tři typy hrozeb zeleně.
 
 11. Obrazovka s **podrobnostmi o zařízení** v aplikaci Portál společnosti ukazuje, že teď už splňujete firemní požadavky na zabezpečení.
 

@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 945e597556c7d0c43000ccf659b7b6e088661cff
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528950"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546804"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -36,7 +36,7 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
 ## <a name="reset-your-passcode"></a>Postup resetování hesla
 
-1.  Otevřete [web Portál společnosti](https://portal.manage.microsoft.com) a vyberte tlačítko __nabídky__ > __Zařízení__.  
+1. Otevřete [web Portál společnosti](https://portal.manage.microsoft.com) a vyberte tlačítko __nabídky__ > __Zařízení__.  
 
 2. Vyberte zařízení, jehož heslo potřebujete resetovat.  
 

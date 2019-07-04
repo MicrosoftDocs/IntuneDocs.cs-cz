@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528749"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548093"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží s registrací zařízení v Microsoft Intune
 
@@ -84,47 +84,47 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
 **Řešení:**
 
-1.  Odeberte ze zařízení aplikaci Portál společnosti Intune.
+1. Odeberte ze zařízení aplikaci Portál společnosti Intune.
 
-2.  Otevřete na zařízení prohlížeč, přejděte na adresu [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a pokuste se přihlásit uživatele.
+2. Otevřete na zařízení prohlížeč, přejděte na adresu [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a pokuste se přihlásit uživatele.
 
-3.  Pokud se uživateli nepodaří přihlásit se, měl by zkusit jinou síť.
+3. Pokud se uživateli nepodaří přihlásit se, měl by zkusit jinou síť.
 
-4.  Pokud to nepomůže, zkontrolujte, jestli správně proběhla synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory.
+4. Pokud to nepomůže, zkontrolujte, jestli správně proběhla synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory.
 
-5.  Pokud se uživatel úspěšně přihlásí, zařízení se systémem iOS zobrazí výzvu k instalaci aplikace Portál společnosti Intune a k registraci. Na zařízení s Androidem budete muset aplikaci Portál společnosti Intune nainstalovat ručně. Potom se můžete zkusit znovu zaregistrovat.
+5. Pokud se uživatel úspěšně přihlásí, zařízení se systémem iOS zobrazí výzvu k instalaci aplikace Portál společnosti Intune a k registraci. Na zařízení s Androidem budete muset aplikaci Portál společnosti Intune nainstalovat ručně. Potom se můžete zkusit znovu zaregistrovat.
 
 ### <a name="mdm-authority-not-defined"></a>Není definována autorita MDM
 **Problém:** Uživatel obdrží **není definována autorita MDM** chyby.
 
 **Řešení:**
 
-1.  Ověřte, že je [správně nastavená](mdm-authority-set.md) autorita MDM.
+1. Ověřte, že je [správně nastavená](mdm-authority-set.md) autorita MDM.
     
-2.  Ověřte, jestli synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory proběhla správně. Můžete ověřit, že uživatele (UPN) odpovídá údajům služby Active Directory v Centru pro správu Microsoftu 365.
+2. Ověřte, jestli synchronizace přihlašovacích údajů uživatele se službou Azure Active Directory proběhla správně. Můžete ověřit, že uživatele (UPN) odpovídá údajům služby Active Directory v Centru pro správu Microsoftu 365.
     Pokud hlavní název uživatele neodpovídá údajům služby Active Directory:
 
-    1.  Vypněte na místním serveru službu DirSync.
+    1. Vypněte na místním serveru službu DirSync.
 
-    2.  Odstraňte neodpovídajícího uživatele ze seznamu uživatelů na **portálu účtů Intune** .
+    2. Odstraňte neodpovídajícího uživatele ze seznamu uživatelů na **portálu účtů Intune** .
 
-    3.  Počkejte zhruba hodinu, aby měla služba Azure dost času odebrat nesprávná data.
+    3. Počkejte zhruba hodinu, aby měla služba Azure dost času odebrat nesprávná data.
 
-    4.  Znovu zapněte službu DirSync a zkontrolujte, jestli je teď uživatel správně synchronizovaný.
+    4. Znovu zapněte službu DirSync a zkontrolujte, jestli je teď uživatel správně synchronizovaný.
 
-3.  Pokud používáte nástroj System Center Configuration Manager se službou Intune, zkontrolujte, jestli má uživatel platné ID uživatele cloudu:
+3. Pokud používáte nástroj System Center Configuration Manager se službou Intune, zkontrolujte, jestli má uživatel platné ID uživatele cloudu:
 
-    1.  Otevřete nástroj SQL Management Studio.
+    1. Otevřete nástroj SQL Management Studio.
 
-    2.  Připojte se k příslušné databázi.
+    2. Připojte se k příslušné databázi.
 
-    3.  Otevřete složku databází a vyberte a otevřete složku **CM_název_db**, kde název_db odpovídá názvu databáze zákazníka.
+    3. Otevřete složku databází a vyberte a otevřete složku **CM_název_db**, kde název_db odpovídá názvu databáze zákazníka.
 
-    4.  Nahoře zvolte **Nový dotaz** a spusťte tyto dotazy:
+    4. Nahoře zvolte **Nový dotaz** a spusťte tyto dotazy:
 
-        -   Zobrazení všech uživatelů: `select * from [CM_ DBName].[dbo].[User_DISC]`
+        - Pokud chcete zobrazit všechny uživatele:   `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Pokud chcete zobrazit konkrétní uživatele, použijte tento dotaz, kde %testuser1% zastupuje adresu username@domain.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        - Pokud chcete zobrazit konkrétní uživatele, použijte následující dotaz, kde % testuser1 % představuje username@domain.com pro uživatele, kterou chcete vyhledat:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         Po napsání dotazu zvolte **!Execute**.
         Když se vrátí výsledky, vyhledejte ID uživatele cloudu.  Pokud se žádné ID nenajde, nemá daný uživatel licenci pro používání služby Intune.
@@ -212,13 +212,13 @@ Pokud řešení 2 nefunguje, nechte uživatele provést následující postup, a
 
 **Řešení:**
 
-1.  Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
+1. Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
-2.  Zkontrolujte, jestli už zařízení není zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM).
+2. Zkontrolujte, jestli už zařízení není zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM).
 
 3. Zkontrolujte, jestli už v zařízení není nainstalovaný profil správy.
 
-4.  Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
+4. Potvrďte, že Chrome pro Android je výchozím prohlížečem a že jsou povolené soubory cookie.
 
 ### <a name="android-certificate-issues"></a>Problémy s certifikáty Androidu
 
@@ -321,15 +321,15 @@ Další informace najdete v tématu [Doporučené postupy zabezpečení služby
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Postup řešení potíží při neúspěšné instalaci profilu
 
-1.  Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
+1. Zkontrolujte, jestli má uživatel přiřazenou příslušnou licenci pro verzi služby Intune, kterou používáte.
 
-2.  Zkontrolujte, jestli už zařízení není zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM).
+2. Zkontrolujte, jestli už zařízení není zaregistrované pomocí jiného poskytovatele správy mobilních zařízení (MDM).
 
 3. Zkontrolujte, jestli už v zařízení není nainstalovaný profil správy.
 
-4.  Přejděte na [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a po zobrazení výzvy zkuste profil nainstalovat.
+4. Přejděte na [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) a po zobrazení výzvy zkuste profil nainstalovat.
 
-5.  Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
+5. Potvrďte nastavení výchozích prohlížečů Safari (pro iOS) a povolení souborů cookie.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>Zaregistrovaná zařízení s iOSem se při používání nástroje System Center Configuration Manager se službou Intune nezobrazí v konzole
 **Problém:** Uživatel registruje zařízení s Iosem ale nezobrazí v konzole pro správu nástroje Configuration Manager. Zařízení neindikuje, že je zaregistrované. Možné příčiny:
@@ -428,17 +428,17 @@ Pokud chcete ověřit a zkontrolovat, který proces nebo uživatelský účet od
 
 #### <a name="check-how-device-was-removed"></a>Zjištění způsobu odebrání zařízení
 
-1.  V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; **Stav systému** &gt; **Dotazy stavových zpráv**.
+1. V konzole pro správu nástroje Configuration Manager vyberte **Monitorování** &gt; **Stav systému** &gt; **Dotazy stavových zpráv**.
 
-2.  Klikněte pravým tlačítkem na **Manuálně odstraněné prostředky členů kolekce** a vyberte **Zobrazit zprávy**.
+2. Klikněte pravým tlačítkem na **Manuálně odstraněné prostředky členů kolekce** a vyberte **Zobrazit zprávy**.
 
-3.  Vyberte příslušný čas/datum nebo období posledních 12 hodin.
+3. Vyberte příslušný čas/datum nebo období posledních 12 hodin.
 
-4.  Najděte příslušné zařízení a podívejte se, jak došlo k jeho odebrání. Následující příklad ukazuje, že zařízení odebral účet SCCMInstall prostřednictvím neznámé aplikace.
+4. Najděte příslušné zařízení a podívejte se, jak došlo k jeho odebrání. Následující příklad ukazuje, že zařízení odebral účet SCCMInstall prostřednictvím neznámé aplikace.
 
     ![Snímek obrazovky pro diagnostiku odstranění zařízení](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Zkontrolujte, jestli nemá Configuration Manager naplánovanou úlohu, skript nebo jiný proces, který by mohl automaticky odstraňovat zařízení nepřipojená k doméně, mobilní zařízení nebo související zařízení.
+5. Zkontrolujte, jestli nemá Configuration Manager naplánovanou úlohu, skript nebo jiný proces, který by mohl automaticky odstraňovat zařízení nepřipojená k doméně, mobilní zařízení nebo související zařízení.
 
 ### <a name="other-ios-enrollment-errors"></a>Další chyby registrace zařízení s iOSem
 Seznam chyb registrace zařízení s iOSem najdete v dokumentaci v části [Řešení potíží s registrací zařízení s iOSem v Microsoft Intune](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune).

@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7265eb7b4679d72fa6ab348c17f9f4f7508482e
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f6e73b784f0e938058dcb9d6001082f86ac800ff
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504991"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545669"
 ---
 # <a name="your-computer-is-already-enrolled"></a>Váš počítač je už zaregistrovaný.
 
@@ -31,11 +31,11 @@ Pokud obdržíte chybu, že váš počítač je už zaregistrovaný, je už vá�
 
 Postup propojení počítače:
 
-1.  V počítači, který chcete propojit se svým účtem, vyberte **Start** a pak vyberte **Microsoft Intune Center**.
+1. V počítači, který chcete propojit se svým účtem, vyberte **Start** a pak vyberte **Microsoft Intune Center**.
 
-2.  Otevřete Portál společnosti.
+2. Otevřete Portál společnosti.
 
-3.  Postupujte podle pokynů k propojení počítače s uživatelským účtem.
+3. Postupujte podle pokynů k propojení počítače s uživatelským účtem.
 
 Pokud dáváte přednost zrušení registrace zařízení, použijte pokyny podle typu zařízení, které máte: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md), nebo [Windows](unenroll-your-device-from-intune-windows.md).
 

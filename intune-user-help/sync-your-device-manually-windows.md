@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc83a5dbcf4d4c8bfd2c9714da4e3a213c7752e3
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528940"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546257"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
@@ -41,9 +41,9 @@ Všechna zařízení s Windows, včetně následujících, se dají synchronizov
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Přímá synchronizace z aplikace Portál společnosti pro Windows
 Následující postup použijte k ruční synchronizaci jakéhokoli zařízení s Windows 10 a aktualizací Creators Update (verze 1703) nebo novější.
 
-1.  Na svém zařízení otevřete aplikaci Portál společnosti.
+1. Na svém zařízení otevřete aplikaci Portál společnosti.
 
-2.  Vyberte **Nastavení** > **Synchronizace**.
+2. Vyberte **Nastavení** > **Synchronizace**.
 
     ![Snímek obrazovky s domovskou stránkou aplikace Portál společnosti a zvýrazněnou možností Nastavení](./media/RS1_homePage_settings_04.png)  
     
@@ -96,7 +96,7 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
 
 #### <a name="work-access-steps"></a>Postup pro Přístup do práce
 
-1.  Klikněte na **Přístup do práce**.
+1. Klikněte na **Přístup do práce**.
 
     ![Volba účtu typu Přístup do práce](./media/win10pc-sync-3-work-access.png)
 
@@ -128,12 +128,12 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
        ![Volba ikony Synchronizovat](./media/win10m-sync-4-tap-sync.png)  
 ### <a name="microsoft-hololens"></a>Microsoft HoloLens  
 Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary Update (označovaným také jako RS1). 
-1.  Otevřete na svém zařízení aplikaci Nastavení.  
+1. Otevřete na svém zařízení aplikaci Nastavení.  
 
-2.  Vyberte **Účty** > **Přístup do práce**.  
+2. Vyberte **Účty** > **Přístup do práce**.  
     ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným odkazem Účty](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3.  Vyberte připojený účet > **Synchronizovat**. ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným tlačítkem Synchronizovat](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Vyberte připojený účet > **Synchronizovat**.  ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným tlačítkem Synchronizovat](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 

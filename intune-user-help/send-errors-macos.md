@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b90edf1f2e380790e2c725ee00c03d525c9fa1e
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e5e00e1f7d4f84f9bdc1d1a52b83095135479327
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504039"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546150"
 ---
 # <a name="submit-errors-to-the-right-people-for-your-managed-macos-device"></a>Odeslání chyb správným osobám pro vaše spravované zařízení s macOS
 
@@ -33,11 +33,11 @@ V aplikaci Portál společnosti se někdy vyskytnou nevysvětlitelné chyby. Kdy
 
 Odeslání podrobností o chybě v aplikaci Portál společnosti:
 
--   V zobrazené chybové zprávě klikněte na **Nahlásit**.
+- V zobrazené chybové zprávě klikněte na **Nahlásit**.
 
--   Klikněte na nabídku **Nápověda** > **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. Pak soubor zašlete e-mailem nebo nahrajte pracovníkovi firemní podpory.
+- Klikněte na nabídku **Nápověda** > **Uložit diagnostickou sestavu**. Vyberte umístění pro uložení tohoto souboru. Pak soubor zašlete e-mailem nebo nahrajte pracovníkovi firemní podpory.
 
--   Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete diagnostickou sestavu odeslat tak, že přejdete na **Nápověda** > **Poslat diagnostickou sestavu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
+- Pokud je vaše e-mailová aplikace nakonfigurovaná, můžete diagnostickou sestavu odeslat tak, že přejdete na **Nápověda** > **Poslat diagnostickou sestavu**. Po nahrání protokolů klikněte na **Poslat podrobnosti e-mailem**.
 
 ## <a name="send-errors-to-the-company-portal-developers-for-macos-devices"></a>Odeslání chyb vývojářům Portálu společnosti pro zařízení s macOS
 
@@ -45,8 +45,8 @@ Někdy se aplikace Portál společnosti může nečekaně zavřít. Vývojáři 
 
 Protokoly odešlete do Microsoftu takto:
 
-1.  Otevřete aplikaci Portál společnosti.
-2.  Klikněte na nabídku **Nápověda** > **Poslat diagnostickou sestavu**.  Po nahrání protokolů obdržíte identifikátor incidentu. Identifikátor si zkopírujte a uložte.
-3.  E-mail do Microsoftu posílejte pomocí <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">této šablony</a>.
+1. Otevřete aplikaci Portál společnosti.
+2. Klikněte na nabídku **Nápověda** > **Poslat diagnostickou sestavu**.  Po nahrání protokolů obdržíte identifikátor incidentu. Identifikátor si zkopírujte a uložte.
+3. E-mail do Microsoftu posílejte pomocí <a href="mailto:IntuneCPiOSfeedback@microsoft.com?subject=My Company Portal App Closed Unexpectedly&body=Paste your incident ID and describe the incident here.">této šablony</a>.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
