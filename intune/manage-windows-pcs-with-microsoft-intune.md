@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac8de734927ca139b78f57dbb486cc19ea1e27c0
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 733cb20c43b34393003f2e9f4f4466922f3f581e
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548781"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572550"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
@@ -49,7 +49,7 @@ Následují požadavky na minimální hardware pro instalaci klientského softwa
 |---------------|--------------------|
 |Síť|Klient vyžaduje, aby byl počítač připojený k Internetu.|
 |Procesor a paměť|Viz požadavky na procesor a paměť RAM pro operační systém počítače.|
-|Místo na disku|200 MB k dispozici místa na disku před instalací klientského softwaru.|
+|Místo na disku|200 MB volného místa na disku před instalací klientského softwaru.|
 
 **Software**:  
 Následují požadavky na software pro instalaci klientského softwaru:

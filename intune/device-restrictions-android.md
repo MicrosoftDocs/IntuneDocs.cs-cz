@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f13b78e05b9f0b94d98677004c7059f1acaa80f9
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9ac25a0f3305cdfac9f3eeaa75b9e2106b3571b0
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045722"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572498"
 ---
 # <a name="android-and-samsung-knox-standard-device-restriction-settings-lists-in-intune"></a>Android a Samsung Knox Standard seznamy nastavení omezení zařízení v Intune
 
@@ -32,17 +32,17 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 ## <a name="general"></a>Obecné
 
 - **Camera**: Zvolte **bloku** zabránit přístupu k fotoaparátu. **Není nakonfigurováno** umožňuje přístup k fotoaparátu zařízení.
-- **Kopírování a vkládání (jenom Samsung Knox)**: Zvolte **bloku** zabránit kopírování a vkládání. **Není nakonfigurováno** povolí v zařízení funkce kopírování a vkládání.
-- **Sdílení přes schránku mezi aplikacemi (jenom Samsung Knox)**: Zvolte **bloku** k zabránění použití clipboardu pro kopírování a vkládání mezi aplikacemi. **Není nakonfigurováno** umožňuje použití clipboardu pro kopírování a vkládání mezi aplikacemi.
-- **Odeslání diagnostických dat (jenom Samsung Knox)**: Zvolte **bloku** zastavit uživateli v odesílání diagnostických dat ze zařízení. **Není nakonfigurováno** umožňuje uživatelům odesílat data.
-- **Vymazat (jenom Samsung Knox)**: Umožňuje uživateli spustit [vymazání](devices-wipe.md) akcí na zařízení.
-- **Informace o zeměpisné poloze (jenom Samsung Knox)**: Zvolte **bloku** zakázat zařízení používat informace o poloze. **Není nakonfigurováno** umožňuje zařízení využívat informace o poloze.
-- **Vypnutí (jenom Samsung Knox)**: Zvolte **bloku** zabránit uživateli ve vypnutí zařízení. Pokud je toto nastavení zakázáno, **počet neúspěšných přihlášení před vymazáním obsahu zařízení** nastavení nelze nastavit a nebude fungovat. **Není nakonfigurováno** povolí uživateli vypnout zařízení.
-- **Snímek obrazovky (jenom Samsung Knox)**: Zvolte **bloku** zabránit snímky obrazovky. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
-- **Hlasový asistent (jenom Samsung Knox)**: Zvolte **bloku** zakázat službu S hlasu. **Není nakonfigurováno** dovoluje S hlasových služeb a aplikací na zařízení. Toto nastavení neplatí pro Bixby nebo hlasového Pomocníka pro usnadnění přístupu, které předčítá obsahu obrazovky.
-- **YouTube (jenom Samsung Knox)**: Zvolte **bloku** uživatelům zabránit v používání aplikace YouTube. **Není nakonfigurováno** umožňuje použití aplikace YouTube na zařízení.
-- **Sdílená zařízení (jenom Samsung Knox)**: Nakonfigurujte spravované zařízení Samsung Knox Standard jako sdílené. Pokud je nastavena na **povolit**, koncoví uživatelé můžou přihlásit do zařízení pomocí svých přihlašovacích údajů Azure AD. Zařízení zůstává spravované, ať už používá nebo není.</br>Při použití pomocí profilu certifikátu SCEP, tato funkce umožňuje koncovým uživatelům sdílet zařízení pomocí stejného aplikací pro všechny uživatele. Ale každý uživatel má své vlastní uživatelský certifikát SCEP. Po odhlášení uživatelů se všechna data aplikací vymažou. Tato funkce je omezená jenom na obchodní aplikace. </br>**Není nakonfigurováno** více koncovým uživatelům zabrání v přihlašování k aplikaci portál společnosti na zařízení pomocí svých přihlašovacích údajů Azure AD.
-- **Zablokovat změny data a času (Samsung Knox)**: Zvolte **bloku** uživateli zabránit ve změně data a času nastavení na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit datum a čas nastavení.
+- **Kopírování a vkládání (jenom Samsung Knox)** : Zvolte **bloku** zabránit kopírování a vkládání. **Není nakonfigurováno** povolí v zařízení funkce kopírování a vkládání.
+- **Sdílení přes schránku mezi aplikacemi (jenom Samsung Knox)** : Zvolte **bloku** k zabránění použití clipboardu pro kopírování a vkládání mezi aplikacemi. **Není nakonfigurováno** umožňuje použití clipboardu pro kopírování a vkládání mezi aplikacemi.
+- **Odeslání diagnostických dat (jenom Samsung Knox)** : Zvolte **bloku** zastavit uživateli v odesílání diagnostických dat ze zařízení. **Není nakonfigurováno** umožňuje uživatelům odesílat data.
+- **Vymazat (jenom Samsung Knox)** : Umožňuje uživateli spustit [vymazání](devices-wipe.md) akcí na zařízení.
+- **Informace o zeměpisné poloze (jenom Samsung Knox)** : Zvolte **bloku** zakázat zařízení používat informace o poloze. **Není nakonfigurováno** umožňuje zařízení využívat informace o poloze.
+- **Vypnutí (jenom Samsung Knox)** : Zvolte **bloku** zabránit uživateli ve vypnutí zařízení. Pokud je toto nastavení zakázáno, **počet neúspěšných přihlášení před vymazáním obsahu zařízení** nastavení nelze nastavit a nebude fungovat. **Není nakonfigurováno** povolí uživateli vypnout zařízení.
+- **Snímek obrazovky (jenom Samsung Knox)** : Zvolte **bloku** zabránit snímky obrazovky. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
+- **Hlasový asistent (jenom Samsung Knox)** : Zvolte **bloku** zakázat službu S hlasu. **Není nakonfigurováno** dovoluje S hlasových služeb a aplikací na zařízení. Toto nastavení neplatí pro Bixby nebo hlasového Pomocníka pro usnadnění přístupu, které předčítá obsahu obrazovky.
+- **YouTube (jenom Samsung Knox)** : Zvolte **bloku** uživatelům zabránit v používání aplikace YouTube. **Není nakonfigurováno** umožňuje použití aplikace YouTube na zařízení.
+- **Sdílená zařízení (jenom Samsung Knox)** : Nakonfigurujte spravované zařízení Samsung Knox Standard jako sdílené. Pokud je nastavena na **povolit**, koncoví uživatelé můžou přihlásit do zařízení pomocí svých přihlašovacích údajů Azure AD. Zařízení zůstává spravované, ať už používá nebo není.</br>Při použití pomocí profilu certifikátu SCEP, tato funkce umožňuje koncovým uživatelům sdílet zařízení pomocí stejného aplikací pro všechny uživatele. Ale každý uživatel má své vlastní uživatelský certifikát SCEP. Po odhlášení uživatelů se všechna data aplikací vymažou. Tato funkce je omezená jenom na obchodní aplikace. </br>**Není nakonfigurováno** více koncovým uživatelům zabrání v přihlašování k aplikaci portál společnosti na zařízení pomocí svých přihlašovacích údajů Azure AD.
+- **Zablokovat změny data a času (Samsung Knox)** : Zvolte **bloku** uživateli zabránit ve změně data a času nastavení na zařízení. **Není nakonfigurováno** umožňuje uživatelům změnit datum a čas nastavení.
 
 ## <a name="password"></a>Heslo
 
@@ -54,7 +54,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
 - **Minimální délka hesla**: Zadejte minimální délku hesla, které uživatel musí zadat (mezi 4 a 16 znaky).
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: Zadejte maximální počet minut nečinnosti, které jsou povoleny v zařízení po kterém se zamkne obrazovka. Koncový uživatel nemůže na zařízení nastavit větší časovou hodnotu, než je nakonfigurovaná v profilu. Může ale nastavit kratší časovou hodnotu. Pokud je v profilu nastaveno třeba 15 minut, může koncový uživatel nastavit 5 minut, ale nemůže nastavit 30 minut. 
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: Zadejte počet neúspěšných přihlášení povolit předtím, než se zařízení vymaže.
-- **Vypršení platnosti hesla (dny)**: Zadejte počet dní, než se musí změnit heslo zařízení.
+- **Vypršení platnosti hesla (dny)** : Zadejte počet dní, než se musí změnit heslo zařízení.
 - **Vyžadovaný typ hesla**: Zadejte požadovanou úroveň složitosti hesla a to, jestli můžou používat biometrická zařízení. Možnosti:
   - **Výchozí ze zařízení**
   - **Biometrika s nízkým zabezpečením**
@@ -64,7 +64,7 @@ Tento článek ukazuje všechna nastavení omezení zařízení v Microsoft Intu
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
 - **Zakázat opakované použití předchozích hesel**: Zakáže koncovému uživateli ve vytváření hesel, kterou jste použili dříve.
-- **Odemknutí pomocí otisků prstů (jenom Samsung Knox)**: Zvolte **bloku** zabránit k odemknutí zařízení otiskem prstu. **Není nakonfigurováno** uživatel k odemknutí zařízení otiskem prstu.
+- **Odemknutí pomocí otisků prstů (jenom Samsung Knox)** : Zvolte **bloku** zabránit k odemknutí zařízení otiskem prstu. **Není nakonfigurováno** uživatel k odemknutí zařízení otiskem prstu.
 - **Smart Lock a jiné agenty pro určování důvěryhodnosti**: Zvolte **bloku** zabránit Smart Lock a jiné agenty pro určování důvěryhodnosti úpravy nastavení zamykací obrazovky (Standard Samsung KNOX 5.0 +). Tato funkce Telefon, někdy říká agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo uzamčené obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Tuto funkci například můžete použít, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 - **Šifrování**: Zvolte **vyžadují** tak, aby soubory v zařízení byly šifrované. Šifrování nepodporují všechna zařízení. Tato funkce také použití: 
   1. Nastavte **heslo** k **vyžadují**.
@@ -83,7 +83,7 @@ Pokud nastavíte **požadovaný typ hesla** k **číselné komplexní**a pak ji 
 
 ## <a name="google-play-store"></a>Obchod Google Play
 
-- **Obchod Google Play (jenom Samsung Knox)**: Zvolte **bloku** uživatelům zabránit v používání obchodu Google Play. **Není nakonfigurováno** umožňuje uživatelům přístup do obchodu Google Play na zařízení.
+- **Obchod Google Play (jenom Samsung Knox)** : Zvolte **bloku** uživatelům zabránit v používání obchodu Google Play. **Není nakonfigurováno** umožňuje uživatelům přístup do obchodu Google Play na zařízení.
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
@@ -100,17 +100,17 @@ Chcete-li přidat aplikaci do těchto seznamů, můžete:
 > [!IMPORTANT]
 > Profily zařízení, které používají nastavení aplikace s omezeným přístupem musí přiřadit skupinám uživatelů.
 
-## <a name="browser"></a>Prohlížeč
+## <a name="browser"></a>Browser
 
-- **Webový prohlížeč (jenom Samsung Knox)**: Zvolte **bloku** zabránit se na zařízení používat výchozí webový prohlížeč. **Není nakonfigurováno** povolí webovému prohlížeči v zařízení výchozí se použije.
-- **Automatické vyplňování (jenom Samsung Knox)**: Zvolte **bloku** zabránit automatické vyplňování textu v prohlížeči. **Není nakonfigurováno** umožňuje používání funkce automatického vyplňování webového prohlížeče, který se má použít.
-- **Soubory cookie (jenom Samsung Knox)**: Zvolte, jak chcete zpracovávat soubory cookie z webů na zařízení. Možnosti:
+- **Webový prohlížeč (jenom Samsung Knox)** : Zvolte **bloku** zabránit se na zařízení používat výchozí webový prohlížeč. **Není nakonfigurováno** povolí webovému prohlížeči v zařízení výchozí se použije.
+- **Automatické vyplňování (jenom Samsung Knox)** : Zvolte **bloku** zabránit automatické vyplňování textu v prohlížeči. **Není nakonfigurováno** umožňuje používání funkce automatického vyplňování webového prohlížeče, který se má použít.
+- **Soubory cookie (jenom Samsung Knox)** : Zvolte, jak chcete zpracovávat soubory cookie z webů na zařízení. Možnosti:
   - Povolit
   - Blokovat všechny soubory cookie
   - Povolit soubory cookie z navštívených webů
   - Povolit soubory cookie z aktuálního webu
-- **JavaScript (jenom Samsung Knox)**: Zvolte **bloku** zabránit v prohlížeči spouštění skriptů Java. **Není nakonfigurováno** povolí webovému prohlížeči v zařízení spouštět skripty Java.
-- **Automaticky otevíraná okna (jenom Samsung Knox)**: Zvolte **bloku** zabránit automaticky otevíraných oken ve webovém prohlížeči. **Není nakonfigurováno** umožňuje automaticky otevíraných oken ve webovém prohlížeči.
+- **JavaScript (jenom Samsung Knox)** : Zvolte **bloku** zabránit v prohlížeči spouštění skriptů Java. **Není nakonfigurováno** povolí webovému prohlížeči v zařízení spouštět skripty Java.
+- **Automaticky otevíraná okna (jenom Samsung Knox)** : Zvolte **bloku** zabránit automaticky otevíraných oken ve webovém prohlížeči. **Není nakonfigurováno** umožňuje automaticky otevíraných oken ve webovém prohlížeči.
 
 ## <a name="allow-or-block-apps"></a>Povolení nebo blokování aplikací
 
@@ -130,21 +130,21 @@ Ke každému nastavení, přidejte seznamu aplikací. Možnosti:
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
-- **Zálohovací Služba Google (jenom Samsung Knox)**: Zvolte **bloku** zabránit zařízení synchronizují do zálohy na Googlu. **Není nakonfigurováno** povoluje použití zálohování Google.
-- **Automatická synchronizace účtu Google (jenom Samsung Knox)**: Zvolte **bloku** aby funkce Google účet automatické synchronizace v zařízení. **Není nakonfigurováno** umožňuje automatickou synchronizaci nastavení účtu Google.
-- **Vyměnitelné úložiště (jenom Samsung Knox)**: Zvolte **bloku** zabránit zařízení používat Vyměnitelné úložiště. **Není nakonfigurováno** povolí zařízení používat Vyměnitelné úložiště, třeba SD karty.
-- **Šifrování na paměťových kartách (jenom Samsung Knox)**: **Vyžadovat** vynutí, že paměťové karty musí být zašifrován. **Není nakonfigurováno** umožňuje nešifrované paměťové karty, který se má použít. Ne všechna zařízení podporují šifrování paměťové karty. Pokud chcete potvrdit, obraťte se na výrobce zařízení.
+- **Zálohovací Služba Google (jenom Samsung Knox)** : Zvolte **bloku** zabránit zařízení synchronizují do zálohy na Googlu. **Není nakonfigurováno** povoluje použití zálohování Google.
+- **Automatická synchronizace účtu Google (jenom Samsung Knox)** : Zvolte **bloku** aby funkce Google účet automatické synchronizace v zařízení. **Není nakonfigurováno** umožňuje automatickou synchronizaci nastavení účtu Google.
+- **Vyměnitelné úložiště (jenom Samsung Knox)** : Zvolte **bloku** zabránit zařízení používat Vyměnitelné úložiště. **Není nakonfigurováno** povolí zařízení používat Vyměnitelné úložiště, třeba SD karty.
+- **Šifrování na paměťových kartách (jenom Samsung Knox)** : **Vyžadovat** vynutí, že paměťové karty musí být zašifrován. **Není nakonfigurováno** umožňuje nešifrované paměťové karty, který se má použít. Ne všechna zařízení podporují šifrování paměťové karty. Pokud chcete potvrdit, obraťte se na výrobce zařízení.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
-- **Datový roaming (jenom Samsung Knox)**: Zvolte **bloku** zabránit datový roaming přes mobilní síť. **Není nakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
-- **SMS a MMS zprávy (jenom Samsung Knox)**: Zvolte **bloku** zabránit textové zprávy na zařízení. **Není nakonfigurováno** umožňuje používat zprávy SMS a MMS zprávy na zařízení.
-- **Hlasové vytáčení (jenom Samsung Knox)**: Zvolte **bloku** k zabrání uživatelům využívat funkci hlasového vytáčení na zařízení. **Není nakonfigurováno** umožňuje hlasového vytáčení na zařízení.
-- **Hlasový roaming (jenom Samsung Knox)**: Zvolte **bloku** zabránit hlasový roaming přes mobilní síť. **Není nakonfigurováno** povolí hlasový roaming, když je zařízení v mobilní síti.
-- **Bluetooth (jenom Samsung Knox)**: Zvolte **bloku** zabránit používání Bluetooth na zařízení. **Není nakonfigurováno** povolí používání Bluetooth na zařízení.
-- **NFC (jenom Samsung Knox)**: Zvolte **bloku** zastavit technologie téměř Field Communication (NFC). **Není nakonfigurováno** umožní operace, které používají bezkontaktní komunikaci na podporovaných zařízeních.
-- **Wi-Fi (jenom Samsung Knox)**: Zvolte **bloku** zabránit pomocí sítě Wi-Fi na zařízení. **Není nakonfigurováno** umožňuje používat funkce sítě Wi-Fi zařízení.
-- **Wi-Fi tethering (jenom Samsung Knox)**: Zvolte **bloku** k zabránění použití sdíleného internetového připojení přes Wi-Fi na zařízení. **Není nakonfigurováno** povolí použití sdíleného internetového připojení přes Wi-Fi na zařízení.
+- **Datový roaming (jenom Samsung Knox)** : Zvolte **bloku** zabránit datový roaming přes mobilní síť. **Není nakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
+- **SMS a MMS zprávy (jenom Samsung Knox)** : Zvolte **bloku** zabránit textové zprávy na zařízení. **Není nakonfigurováno** umožňuje používat zprávy SMS a MMS zprávy na zařízení.
+- **Hlasové vytáčení (jenom Samsung Knox)** : Zvolte **bloku** k zabrání uživatelům využívat funkci hlasového vytáčení na zařízení. **Není nakonfigurováno** umožňuje hlasového vytáčení na zařízení.
+- **Hlasový roaming (jenom Samsung Knox)** : Zvolte **bloku** zabránit hlasový roaming přes mobilní síť. **Není nakonfigurováno** povolí hlasový roaming, když je zařízení v mobilní síti.
+- **Bluetooth (jenom Samsung Knox)** : Zvolte **bloku** zabránit používání Bluetooth na zařízení. **Není nakonfigurováno** povolí používání Bluetooth na zařízení.
+- **NFC (jenom Samsung Knox)** : Zvolte **bloku** zastavit technologie téměř Field Communication (NFC). **Není nakonfigurováno** umožní operace, které používají bezkontaktní komunikaci na podporovaných zařízeních.
+- **Wi-Fi (jenom Samsung Knox)** : Zvolte **bloku** zabránit pomocí sítě Wi-Fi na zařízení. **Není nakonfigurováno** umožňuje používat funkce sítě Wi-Fi zařízení.
+- **Wi-Fi tethering (jenom Samsung Knox)** : Zvolte **bloku** k zabránění použití sdíleného internetového připojení přes Wi-Fi na zařízení. **Není nakonfigurováno** povolí použití sdíleného internetového připojení přes Wi-Fi na zařízení.
 
 ## <a name="kiosk"></a>Kiosk
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e3b6bf1acbce88b45c9ebc78c45279d718a44c
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.openlocfilehash: c8e87f8df43468428877d93be03e6f2d7316de9a
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468761"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572620"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Další informace o nejnovější aktualizace aplikací v Microsoft Intune. Přidáme pravidelně k a zlepšení aplikace portál společnosti Intune a Web. Pokud jste správce služby Intune nebo podporu osoby, tento článek obsahuje informace, které je potřeba:
@@ -246,7 +246,7 @@ Stále ještě na vyhodnocení relevance pracujeme, tak nám prosím dejte prost
 ## <a name="week-of-october-16-2017"></a>Týden od 16. října 2017
 
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>Vyhledání vylepšení pro web portál společnosti <!-- 1331697 -->
-Vylepšujeme schopnosti vyhledávání aplikací a začali jsme u [webu Portál společnosti](https://portal.manage.microsoft.com). Vyhledávání bude nyní možné provádět nejen podle polí Název a Popis, ale také na základě kategorií aplikací. Výsledky budou ve výchozím nastavení seřazeny v sestupném pořadí podle relevance. 
+Vylepšujeme schopnosti vyhledávání aplikací a začali jsme u [webu Portál společnosti](https://portal.manage.microsoft.com). Vyhledávání bude nyní možné provádět nejen podle polí Název a Popis, ale také na základě kategorií aplikací. Výsledky budou ve výchozím nastavení seřazeny v sestupném pořadí podle relevance. 
 
 Jelikož je web Portál společnosti součástí aplikace Portál společnosti pro iOS, získají tuto změnu i uživatelé systému iOS. Aplikace Portál společnosti pro Android a Windows obdrží podobné aktualizace v nadcházejících měsících.
 
@@ -260,7 +260,7 @@ Tato vydaná verze opravuje známý problém s tím, jak Portál společnosti pr
 ## <a name="week-of-october-2-2017"></a>Týden od 2. října 2017
 
 ### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Vylepšení pro pracovní postup instalace zařízení v aplikaci portál společnosti <!-- 1490692 -->
-Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro Android. Jazyk je uživatelsky přívětivější a přizpůsobenější potřebám vaší společnosti. Tam, kde to bylo možné, jsme také zkombinovali obrazovky. 
+Vylepšili jsme pracovní postup instalace zařízení v aplikaci Portál společnosti pro Android. Jazyk je uživatelsky přívětivější a přizpůsobenější potřebám vaší společnosti. Tam, kde to bylo možné, jsme také zkombinovali obrazovky. 
 
 |Dříve|Nyní|
 |---|---|
@@ -288,7 +288,7 @@ Také jsme aktualizovali obrazovku aktivace e-mailu podmíněného přístupu.
 
 ## <a name="week-of-september-11-2017"></a>Týden od 11. září 2017
 
-### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Snadněji pochopit formulace pro aplikaci portál společnosti pro Android <!-- 1396349 -->  
+### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Snadněji pochopit formulace pro aplikaci portál společnosti pro Android <!-- 1396349 -->  
 
 Proces registrace aplikace Portál společnosti pro Android byl zjednodušen novým textem, který koncovým uživatelům umožňuje jednodušší registraci. Pokud máte vlastní dokumentaci k registraci, měli byste ji aktualizovat, aby odrážela nové obrazovky. Ukázkové obrázky najdete tady:
 
@@ -305,7 +305,7 @@ Proces registrace aplikace Portál společnosti pro Android byl zjednodušen nov
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>11 e-mailové aplikace iOS bude podporovat OAuth <!-- 1196951 -->
 
-Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s Iosem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
+Podmíněný přístup s Intune podporuje zabezpečenější ověřování na zařízeních s Iosem pomocí OAuth. Pro podporu této funkce teď bude v aplikaci Portál společnosti pro iOS odlišný tok, který umožní ověřování s větším zabezpečením. Když se koncoví uživatelé pokusí v aplikaci Mail přihlásit k novému účtu Exchange, zobrazí se jim výzva ve webovém zobrazení. Při registraci v Intune se uživatelům zobrazí výzva, aby nativní aplikaci Mail povolili přístup k certifikátu. Většině koncových uživatelů se už nebudou zobrazovat žádné další e-maily v karanténě. Existující poštovní účty budou i nadále používat základní ověřovací protokol, a proto se uživatelům těchto účtů budou stále doručovat e-maily v karanténě. Prostředí pro přihlášení koncových uživatelů se podobá prostředí v mobilních aplikacích Office.
 
 ![Výběr typu účtu v nativní e-mailové aplikaci](./media/ios-11-ca-email-after-1708-01.png)
 

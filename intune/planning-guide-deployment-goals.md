@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d1cbfb7062dd897442d842a0b50b03a95a57a24
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 714a595263475da98a48c982e0ed24d691440097
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549325"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572265"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Vymezení cílů, úkolů a problémů při nasazení
 
@@ -80,7 +80,7 @@ Cíle nasazení jsou dlouhodobé výsledky, kterých chcete nasazením Intune v 
 
 Problémy při nasazení mají pro organizaci nejvyšší prioritu, protože mohou negativně ovlivnit nasazení. Někdy souvisejí s minulými problémy z předchozích projektů, kterým byste se chtěli vyhnout, nebo s novými problémy, které se týkají současného nasazení. Tady jsou příklady problémů při nasazení Intune spolu s možnostmi, jak je zmírnit.
 
-- Při úvodním stanovení rozsahu projektu se nepřihlédlo k připravenosti podpory a zkušenostem koncových uživatelů. To vede k nedostatečnému osvojení koncovými uživateli a k problémům s podporou v organizaci.
+- Při úvodním stanovení rozsahu projektu se nepřihlédlo k připravenosti podpory a zkušenostem koncových uživatelů. To vede k nedostatečnému osvojení koncovými uživateli a k problémům s podporou v organizaci.
 
     - **Omezení rizik:** Zahrnout podporu školení. Doplnit plán nasazení o ověření zkušeností koncových uživatelů prostřednictvím měřítek úspěšnosti.
 

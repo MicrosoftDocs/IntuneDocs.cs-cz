@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d8cd91d55c90fd4b4f26ee0e6b1b99d37bcce08
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: da828b162e008541cb5cb2b5d15092d0fce417c5
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547597"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572538"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavit konektor Intune pro místní Exchange v Microsoft Intune
 Informace v tomto článku vám pomůže při instalaci a následně monitorovat místní konektor Exchange Active Sync pro Intune.  Používáte místní Exchange connector Intune s vaší [zásady podmíněného přístupu povolit nebo zablokovat přístup k Exchange v místním poštovním schránkám](conditional-access-exchange-create.md). 
@@ -73,7 +73,7 @@ Vytvoření účtu uživatele služby Active Directory, který se použije míst
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního serveru Exchange a který má licenci k používání Exchange Serveru.
+1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete web [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
 
 2. Přejděte na **Intune** > **přístup k Exchangi**  
 

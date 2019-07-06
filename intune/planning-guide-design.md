@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 007c84e3bfeac79d2223ea211cbb9f9c97e80475
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548381"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572283"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -36,11 +36,11 @@ Návrh Intune vychází z informací, které shromáždíte, a rozhodnutí, kter
 
 - Informace o platformě zařízení
 
-- Závazné požadavky  
+- Závazné požadavky  
 
 Přestože jsou požadavky na místní infrastrukturu minimální, pomůže vám plán návrhu zajistit, abyste ke správě mobilních zařízení používali správné řešení, které splňuje vaše cíle, účely a požadavky.
 
-Pojďme se na každou z těchto oblastí podívat podrobněji. 
+Pojďme se na každou z těchto oblastí podívat podrobněji. 
 
 ## <a name="record-your-current-environment"></a>Popis současného prostředí
 Během fáze implementace a testování dochází často ke změnám návrhu. Použijte plán návrhu k dokumentaci těchto změn a jejich odůvodnění.

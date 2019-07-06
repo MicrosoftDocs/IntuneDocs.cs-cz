@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea084bfeebc0b6a61c4a53950d6f28a6ad0f6d4f
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: cd185a42d36de6aaf1e6d0ff0b8e34619b02c093
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558521"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572442"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>Nastavení integrace Symantec Endpoint Protection Mobile s Intune
 
@@ -85,7 +85,7 @@ SEP Mobile podporuje dva způsoby integrace s Intune:
 
 Je potřeba přidat skupinu zabezpečení služby Azure AD, která obsahuje všechna zařízení s SEP Mobile.
 
-- Zadejte a vyberte všechny skupiny zabezpečení zařízení, na kterých běží aplikace SEP Mobile a následně změny uložte.
+- Zadejte a vyberte všechny skupiny zabezpečení se zařízeními, na kterých běží SEP Mobile, a pak uložte změny.
 
     ![Obrázek znázorňující skupiny uživatelů pro SEP Mobile](./media/symantec-portal-basic-groups.png)
 

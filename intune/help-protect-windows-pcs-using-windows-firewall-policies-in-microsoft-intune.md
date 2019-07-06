@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc338b30996d0ca31b2dd59a6c934f680f57c0d1
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547549"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572518"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
@@ -43,7 +43,7 @@ Zásady brány Windows Firewall umožňují vytvářet a nasazovat nastavení, k
 > [!NOTE]
 > Pokud jsou zásady Microsoft Intune a zásady skupiny nakonfigurované pro správu stejných nastavení na počítači PC, pak má nastavení zásad skupiny přednost před zásadami Microsoft Intune. Informace o tom, jak zamezit konfliktům mezi zásadami Intune a zásadami skupiny, najdete v článku [Řešení konfliktů GPO a zásad Microsoft Intune](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Pokud chcete nasadit nastavení brány Windows Firewall do počítačů se spustit Windows Vista, je potřeba nejdřív nainstalovat [opravu Hotfix KB971800](http://support2.microsoft.com/kb/971800) na těchto počítačích.
+> Pokud chcete nasadit nastavení brány Windows Firewall do počítačů se systémem Windows Vista, musíte na tyto počítače nejdřív nainstalovat [opravu Hotfix KB971800](http://support2.microsoft.com/kb/971800).
 
 > [!IMPORTANT]
 > Pokud chcete spravovat bránu Windows Firewall pomocí Intune, musí být na počítačích, které spravujete, povolené tyto dvě služby:
@@ -84,7 +84,7 @@ Tato nastavení zásad konfigurují bránu Windows Firewall, aby blokovala pří
 Výchozí hodnota pro každé z těchto nastavení je **Ano**, což je nejbezpečnější hodnota.
 
 > [!IMPORTANT]
-> Pokud vaše prostředí zahrnuje spravovaných počítačů se systémem Windows Vista bez nainstalovaných aktualizací service Pack, musíte buď nainstalovat aktualizace, který je přidružen [článku 971800](http://go.microsoft.com/fwlink/?LinkId=188405) na bázi Microsoft Knowledge Base nebo zakázat **Blokovat všechna příchozí připojení** nastavení zásad v zásadách, které jsou nasazeny do těchto počítačů.
+> Pokud prostředí obsahuje spravované počítače, ve kterých je spuštěný systém Windows Vista bez nainstalovaných aktualizací Service Pack, musíte nainstalovat aktualizaci uvedenou ve znalostní bázi Microsoft Knowledge Base v [článku 971800](http://go.microsoft.com/fwlink/?LinkId=188405) nebo v zásadách nasazených v těchto počítačích vypnout nastavení zásady **Blokovat všechna příchozí připojení**.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>Oznámit uživatelům blokování nového programu bránou Windows Firewall
 

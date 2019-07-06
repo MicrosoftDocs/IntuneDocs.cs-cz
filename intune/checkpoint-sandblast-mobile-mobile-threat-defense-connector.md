@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7953fece6edad8a7fb3a0b46b1056c798c76c31e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547093"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572564"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Konektor Check Point SandBlast Mobile Threat Defense s Intune
 
@@ -61,7 +61,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
-Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
+Zjišťuje hrozby v síti, například **útoky prostředníkem**, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.
 
 **Zablokování přístupu k síti prostřednictvím sítě Wi-Fi:**
 
@@ -73,7 +73,7 @@ Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a chrání přístup k
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
-Detekci hrozeb, jako jsou **Man-in-the-middle** v síti a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
+Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.
 
 **Zablokování SharePointu Online v případě, že se zjistí ohrožení sítě:**
 

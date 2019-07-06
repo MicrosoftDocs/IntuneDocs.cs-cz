@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 3fb85cc2847c235f7f8079715dee6a2d924f0ac8
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494537"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572582"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
@@ -139,7 +139,7 @@ Pokud máte webový proxy server v síťovém prostředí, ujistěte se, že je 
 
 1. Pokud jste vybrali **dynamické zařízení** pro typ členství v **skupiny** vyberte **členové s dynamickými zařízeními** a pak na **rozšířené pravidlo** pole, proveďte jednu z následujících akcí:
     - Chcete-li vytvořit skupinu, která zahrnuje všechna svá zařízení Autopilot, zadejte `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Atribut ID objednávky zařízení Azure AD mapuje pole značka skupiny v Intune. Pokud chcete vytvořit skupinu, která obsahuje všechna svá zařízení Autopilot konkrétní Tag(OrderID) skupiny je nutné zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Atribut ID objednávky zařízení Azure AD mapuje pole značka skupiny v Intune. Pokud chcete vytvořit skupinu, která obsahuje všechna svá zařízení Autopilot konkrétní Tag(OrderID) skupiny je nutné zadat: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Chcete-li vytvořit skupinu, která zahrnuje všechna zařízení Autopilot s konkrétním ID nákupní objednávky, zadejte `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Vyberte **Uložit**.

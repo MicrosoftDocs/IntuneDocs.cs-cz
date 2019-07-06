@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6390db854019bd69dbce983ff8ce20abccc8eba
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548876"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572597"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
@@ -119,9 +119,9 @@ Uživatelé nainstalují klientský software Intune tak, že přejdou na [web Po
 
 Pokud nemají uživatelé přiřazenou licenci k Intune nebo nebyla na Intune nastavena autorita MDM, nezobrazí se uživatelům žádné možnosti registrace.
 
-Pokud byla uživatelům přiřazena licence Intune a Intune byla nastavena autorita MDM organizace:
+Pokud byla uživatelům přiřazena licence k Intune a na Intune byla nastavena autorita MDM organizace:
 
-- Windows 7 nebo Windows 8 PC uživatelům se zobrazí jenom možnost registrace do Intune stažením a instalací klientského počítačového softwaru, který je pro svou organizaci jedinečný.
+- Uživatelům počítačů s Windows 7 nebo Windows 8 se zobrazí JENOM možnost registrace do Intune na základě stažení a instalace klientského softwaru pro PC, který je pro svou organizaci jedinečný.
 
 - Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
 
@@ -258,7 +258,7 @@ Zkontrolujte cestu %ProgramFiles%\Microsoft\OnlineManagement a ujistěte se, že
 
 Proces zrušení registrace neodebere složku OnlineManagement. Po dokončení odinstalace počkejte 30 minut a spusťte tento příkaz. Pokud byste ho spustili příliš brzy, odinstalace by mohla zůstat v neznámém stavu. Složku odeberte spuštěním příkazového řádku se zvýšenými oprávněními a spuštěním následujícího příkazu:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>Další postup
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
