@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 80b6272c6e1f2efc1687fa25216487595a9ddd9f
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558399"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648956"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -96,11 +96,21 @@ Pokud vaše aplikace je již nakonfigurována pro použití ADAL nebo MSAL a má
 
 Úplný přehled pro integraci sady Intune App SDK najdete v [Microsoft Intune App SDK pro Android developer průvodce](app-sdk-android.md). Přečtěte si v příručce a integrace s aplikací Xamarin sady Intune App SDK v následujících částech jsou určeny zvýrazněte rozdíly mezi implementací pro nativní aplikace pro Android vyvinuté v jazyce Java a Xamarin aplikace vyvinuté v C#. Tyto části by se měla zpracovávat jako doplňkové a nemůže fungovat jako náhradu přečtete průvodce v celém rozsahu.
 
+#### <a name="remapper"></a>Remapper
+Počínaje 1.4428.1 verzi `Microsoft.Intune.MAM.Remapper` balíčku lze přidat do aplikace Xamarin.Android jako [sestavení nástrojů](app-sdk-android.md#build-tooling) k provedení nahrazení MAM třídy, metody a systémy služby. Pokud je zahrnuto Remapper, části ekvivalentní nahrazení MAM přejmenovat metody a aplikace MAM oddíly budou automaticky provedeny, pokud je aplikace sestavená.
+
+Vyloučit třídy z MAM klasifikace podle Remapper následující vlastnosti lze přidat do vašich projektů `.csproj` souboru.
+```xml
+  <PropertyGroup>
+    <ExcludeClasses>Semicolon separated list of relative class paths to exclude from MAM-ification</ExcludeClasses>
+  </PropertyGroup>
+```
+
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Přejmenované metody](app-sdk-android.md#renamed-methods)
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `OnCreate()` a volání `base.OnCreate()` přepsat `OnMAMCreate()` a volat `base.OnMAMCreate()`.
 
 #### <a name="mam-applicationapp-sdk-androidmdmamapplication"></a>[Aplikace MAM](app-sdk-android.md#mamapplication)
-Musíte definovat aplikaci `Android.App.Application` třídu odvozenou od `MAMApplication`. Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
+Musíte definovat aplikaci `Android.App.Application` třídy. Pokud ručně integraci MAM, musí dědit z `MAMApplication`. Zkontrolujte, že podtřída je správně doplněna o atribut `[Application]` a že přepisuje konstruktor `(IntPtr, JniHandleOwnership)`.
 ```csharp
     [Application]
     class TaskrApp : MAMApplication
@@ -147,7 +157,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 
 ### <a name="xamarinforms-integration"></a>Integrace Xamarin.Forms
 
-Pro `Xamarin.Forms` aplikace uvádíme `Microsoft.Intune.MAM.Remapper` balíček automaticky provádět náhradní třída MAM vložením `MAM` třídy do hierarchie tříd běžně používaných `Xamarin.Forms` třídy. 
+Pro `Xamarin.Forms` aplikací `Microsoft.Intune.MAM.Remapper` náhradní třída MAM balíček automaticky provede vložením `MAM` třídy do hierarchie tříd běžně používaných `Xamarin.Forms` třídy. 
 
 > [!NOTE]
 > Kromě toho provést integraci Xamarin.Android výše popsané je integrace Xamarin.Forms.
@@ -179,6 +189,9 @@ Xamarinové vazby sady Intune SDK závisí na přítomnosti [portál společnost
 > Pokud není v aplikaci portál společnosti **Android** zařízení, aplikace spravované v Intune se chová stejně jako běžná aplikace, která nepodporuje zásady ochrany aplikací Intune.
 
 U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrovat zařízení přes aplikaci Portál společnosti.
+
+### <a name="sample-applications"></a>Ukázkové aplikace
+Zvýraznění funkce MAM v aplikacích pro Xamarin.Android a Xamarin Forms ukázkové aplikace jsou k dispozici na [Githubu](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Podpora
 Pokud je vaše organizace stávajícím zákazníkem Intune, prosím práci s zástupce podpory Microsoftu vytvořit lístek podpory a vytvoření problému [stránce problémů na Githubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) a pomůžeme nejdříve podíváme. 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a50eb6e58c7b866af32387a85026eb87f825b15
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 89babf2eb60b7959c5c25a02b29135668efc32eb
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045904"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649071"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Aplikace s ochranou Microsoft Intune  
 
@@ -46,6 +46,7 @@ Následující tabulka obsahuje podrobnosti o podporovaných partnera a aplikace
 | **Microsoft Azure Information Protection Viewer**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Bezpečně Spolupracujte s ostatními pomocí aplikace Prohlížeč AIP. Prohlížení chráněných souborů (práva chráněné e-mailové zprávy, soubory PDF, obrázky, textové soubory), které s vámi někdo sdílí. | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.egress.switchdroid.intune), [odkaz z obchodu pro iOS](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) | 
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings je událost, plánování aplikaci, která pomáhá udržovat přehled o vaší rezervace, aby se pracovníci a vaše zákazníky. Nezmeškáte schůzku a budete mít méně no-shows.<p>Bookings aplikace vám umožňuje:<br><ul><li>Umožňuje zobrazit a spravovat vaše kalendáře</li><li>Vytvoření rezervace nebo změníte existující aplikace v go</li><li>Najdete v reálném čase dostupnost vašich zaměstnanců</li><li>Snadno a rychle reagují na zákazníky</li><li>Rychle získáte pokyny k umístění další rezervace</li><li>Správa seznamu zákazníků</li></ul> | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[odkaz z obchodu pro iOS](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Connections**<p><img alt="Microsoft app - Microsoft Connections icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-connections.png" width="100"> | Microsoft Connections pomáhá malým firmám přilákat a udržet si zákazníky s jednoduchou používat e-mailové marketingové nástroje. Snadno vytvořte profesionální e-mailové marketingové kampaně pomocí předdefinovaných šablon oznámení, bulletiny a odkazy. | [odkaz z obchodu pro iOS](https://itunes.apple.com/us/app/microsoft-connections/id1172261641?mt=8) |  
+| **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Rychlé, snadné a fun pro získání přehledu pracovní & prostřednictvím vašeho osobního asistenta Cortany. Přeneste vaše inteligentní digitální Pomocníka s nastavením na váš telefon, abychom udržovat přehled o důležitých věcí, ať jste kdekoliv napříč zařízeními. | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[odkaz z obchodu pro iOS](https://apps.apple.com/us/app/cortana/id1054501703) 
 | **Microsoft Dynamics CRM**<p><img alt="Microsoft app - Microsoft Dynamics CRM icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-dynamics-crm.png" width="100"> | Upoutejte zákazníky při zachování produktivity v práci i na cestách s Microsoft Dynamics CRM. Doručení připravené pro každou událost a aktualizace úloh, kontakty, účty, případy, poznámky a vede podrobnosti jsou stále aktuální. Umožňuje prodejci spravovat svá prodejní data podle kontextové obchodních procesů, když jste na cestách. Poskytuje agenty a správců svobody mobility pomocí úplného oboru správy případu. V modelu "nakonfigurovat jen jednou, nasaďte kdekoli" získáte integrované uživatelské prostředí. K dispozici pro iOS a Android. | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone),<br>[odkaz z obchodu pro iOS](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8) |  
 | **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | Microsoft Edge vytvoří jeden průběžného procházení pro uživatele Windows 10 na jejich zařízeních. Obsah a data synchronizace bez problémů na pozadí, takže můžou uživatelé procházet napříč zařízeními, bez přeskočí signál. Známé funkcí Microsoft Edge, jako jsou centra umožňují uživatelům k uspořádání web tak, že kusy prostřednictvím nepořádku, což usnadňuje hledání, zobrazení a správě jejich obsahu na cestách. Microsoft Edge je navržená pro uživatele Windows 10 k procházení webu, jak potřebují, ať jsou kdekoli, bez narušení jejich toku. | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US),<br>[odkaz z obchodu pro iOS](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
 | **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | Ujistěte se, podívejte se někdy na tablet a phone lépe než tabulky aplikace Excel. Mít jistotu, že když budete upravovat nebo vytvářet tabulky, se zabývat následujícími tématy přesně jak chcete napříč počítačů, počítače Mac, tabletů a telefonů. Být nahoru a s pomocí známých Office vzhled a chování, spolu s intuitivního dotykové prostředí.<p><p>Tato aplikace je možné použít jako aplikace s více identitami pro Android a iOS. | [Odkaz na Android store](https://play.google.com/store/apps/details?id=com.microsoft.office.excel),<br>[odkaz z obchodu pro iOS](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  

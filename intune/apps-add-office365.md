@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 095c2ee0aba0680de0c5fc55c1406dba41111b92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 00712b891790fbf437e9fed024f7610f37fee129
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527438"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648697"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -42,6 +42,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 - Tato metoda instalace není podporovaná na zařízeních s Windows 10 S, Windows Home, Windows Team, Windows Holographic a Windows Holographic for Business.
 - Intune nepodporuje instalaci desktopových aplikací Office 365 z Microsoft Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 pomocí Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
 - V případě vícenásobného přiřazení požadovaných nebo dostupných aplikací nemá novější přiřazení aditivní účinek. Novější přiřazení aplikací přepíše dříve existující přiřazení nainstalovaných aplikací. Pokud například první sada aplikací Office obsahuje Word a novější sada ho neobsahuje, Word se odinstaluje. To se netýká aplikací Visio a Project.
+- Nasazení je Office 365 se momentálně nepodporují. Jenom jedno nasazení bude doručen do zařízení
 - **Verze Office**: Vyberte, jestli chcete přiřadit 32bitovou nebo 64bitovou verzi Office. 32bitovou verzi můžete nainstalovat na 32bitová i 64bitová zařízení, ale 64bitovou verzi můžete nainstalovat jenom na 64bitová zařízení.
 - **Odebrat MSI ze zařízení koncových uživatelů**: Vyberte, jestli chcete ze zařízení koncových uživatelů odebrat dřívější aplikace Office .MSI. Pokud na zařízeních koncových uživatelů takové aplikace jsou, instalace se nezdaří. Aplikace k odinstalování se neomezují jen na ty, které jsou vybrané pro instalaci v nastavení **Nakonfigurovat sadu aplikací**, protože ze zařízení koncového uživatele se odeberou všechny aplikace Office (MSI). Další informace najdete v článku věnovaném [odebrání stávajících verzí služby MSI v systému Office při upgradu na Office 365 ProPlus](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Když Intune přeinstaluje Office na počítače koncových uživatelů, získají koncoví uživatelé automaticky stejné jazykové sady, které měli s předchozími instalacemi Office .MSI.
 
@@ -142,7 +143,14 @@ Pokud jste vybrali **zadat XML data** v části **formát nastavení** rozevíra
 
 Až budete hotoví, v podokně **Přidat aplikaci** zvolte **Přidat**. Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací.
 
+## <a name="troubleshooting"></a>Řešení potíží
+Intune používá [nástroj pro nasazení Office](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) ke stažení a nasazení Office 365 ProPlus v klientských počítačích pomocí [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Odkazovat na osvědčené postupy uvedené v [koncové body pro správu Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) zajistit, že konfigurace sítě umožňuje klientům přístup k CDN přímo namísto směrování CDN provoz prostřednictvím centrální proxy, aby se zabránilo Představujeme zbytečné latenci.
+
+Spustit [Microsoft Support a obnovení Pomocníka pro Office 365](https://diagnostics.office.com) na cílovém zařízení, pokud narazíte na instalaci nebo problémy za běhu.
+
 ## <a name="errors-during-installation-of-the-app-suite"></a>Chyby při instalaci sady aplikací
+
+Zobrazit [jak povolit protokolování Office 365 ProPlus ULS](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) informace o tom, jak zobrazit podrobné instalačních protokolech.
 
 V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můžete setkat, a jejich význam.
 

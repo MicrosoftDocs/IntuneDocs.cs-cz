@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494061"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649026"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
-V Microsoft Intune se zásady konfigurace aplikací používají k nastavení konfigurace aplikací pro iOS nebo Android. Nastavení konfigurace umožňuje přizpůsobit aplikaci. Tyto zásady konfigurace se nepřiřazujte přímo na uživatele nebo zařízení. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
+V Microsoft Intune se zásady konfigurace aplikací používají k nastavení konfigurace aplikací pro iOS nebo Android. Tato konfigurační nastavení umožní aplikaci přizpůsobit s využitím oborových standardní přístup k aplikaci konfigurace a správa. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
 Pokud chcete zásadu konfigurace aplikace přiřadit skupině uživatelů a zařízení, použijte kombinaci zahrnujících a vylučovacích přiřazení. Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Integrované skupiny jsou **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**.
 
@@ -52,9 +52,11 @@ K dispozici máte dvě možnosti použití konfigurací aplikací v Intune:
 
 ## <a name="apps-that-support-app-configuration"></a>Aplikace podporující konfiguraci aplikací
 
-Zásady konfigurace aplikací můžete používat u aplikací, které konfiguraci podporují. Aby bylo možné podporovat konfiguraci aplikací v Intune, musí být aplikace napsané tak, aby použití konfigurací aplikací podporovaly. Podrobnosti získáte od dodavatele aplikace.
+### <a name="managed-devices"></a>Spravovaná zařízení
+Zásady konfigurace aplikací můžete používat u aplikací, které konfiguraci podporují. Chcete-li podporovat konfiguraci aplikací v Intune, aplikace musí mít napsány tak, aby podporují použití konfigurací aplikací v souladu s definicemi [Appconfig komunity](https://www.appconfig.org/members). Podrobnosti získáte od dodavatele aplikace.
 
-Obchodní aplikace si můžete připravit buď tak, že sadu Intune App SDK začleníte přímo do aplikace, nebo po dokončení vývoje aplikaci zabalíte. Intune App SDK, k dispozici pro iOS a Android, umožňuje aplikaci pro zásady Konfigurace aplikací. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Další informace najdete v tématu [Přehled sady Intune App SDK](app-sdk.md).
+### <a name="managed-apps"></a>Spravované aplikace
+Obchodní aplikace si můžete připravit buď tak, že sadu Intune App SDK začleníte přímo do aplikace, nebo po dokončení vývoje aplikaci zabalíte. Intune App SDK, k dispozici pro iOS a Android, umožňuje aplikaci pro konfiguraci zásad ochrany aplikací Intune. Usiluje o minimalizaci nutných změn kódu, které musí vývojáře aplikace provádět. Další informace najdete v tématu [Přehled sady Intune App SDK](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Podpora Graph API pro konfiguraci aplikací
 

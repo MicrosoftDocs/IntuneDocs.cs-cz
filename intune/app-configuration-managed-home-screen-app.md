@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9a61b89f07bfacf1dc41be1412f79509e1e147d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 50ac3ff27c22bf63b73f2ae10e6909112564180f
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049941"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648733"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace Microsoft spravovaná aplikace z domovské obrazovky pro Android Enterprise
 
@@ -74,21 +74,24 @@ V následující tabulce jsou uvedeny spravované domovskou obrazovku k dispozic
 | Povolení kanálu domovské obrazovky | BOOL | FALSE | Umožňuje kanál domovské obrazovce, která můžou vidět potažením doleva na domovskou obrazovku. Tento kanál se zobrazí jiný typ obsahu, jako jsou novinky, kalendář, často uživatelským aplikacím a Cortana hlasového Pomocníka s nastavením karty atd. Pokud je povolit, bude koncový uživatel moci přejít na informační kanál potáhnutím prstem doleva na domovské obrazovce. |
 | Povolit režim – přehled | BOOL | FALSE | Umožňuje koncovým uživatelům přidávat nebo odebírat různé stránky na domovské obrazovce, který je přístupný potáhnutím pravé na výchozí obrazovce. Pokud povolíte tím, koncový uživatel budete moct přidat stránkovaného napravo od výchozí stránku na domovskou obrazovku, bude také možné změnit výchozí stránku a také budou mít přístup k nastavení na domovské obrazovce spravované. |
 | Povolit telemetrii zařízení | BOOL | FALSE | Umožňuje veškerá telemetrická data zachytávaná pro spravované domovskou obrazovku. Pokud povolíte toto, Microsoft bude možné ji zachytit zařízení telemetrických dat, jako je počet průchodů konkrétní aplikace se spustí na tomto zařízení. |
-| Nastavení seznamu povolených aplikací | bundleArray | FALSE | Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z mezi aplikacemi na zařízení nainstalovaná. Aplikace můžete definovat tak, že zadáte název balíčku aplikace z aplikace, které chcete zviditelnit, například com.android.settings s žádným nastavení přístupné na domovské obrazovce. Aplikace už musí být nainstalován tento jste seznamu povolených v této části na zařízení-li být viditelný na domovské obrazovce. |
+| Nastavení Povolit uvedených v seznamu aplikací | bundleArray | FALSE | Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z mezi aplikacemi na zařízení nainstalovaná. Aplikace můžete definovat tak, že zadáte název balíčku aplikace z aplikace, které chcete zviditelnit, například com.microsoft.emmx s žádným nastavení přístupné na domovské obrazovce. Aplikace už musí být nainstalován tento jste seznamu povolených v této části na zařízení-li být viditelný na domovské obrazovce. |
 | Sada připnuté webové odkazy | bundleArray | FALSE | Můžete připnout weby jako ikony rychlé spuštění na domovské obrazovce. Pomocí této konfigurace můžete definovat adresu URL a přidat na domovskou obrazovku pro koncového uživatele spustit v prohlížeči s jediným klepnutím. |
 | Povolit panel hledání | BOOL | FALSE | Umožňuje panelu hledání na domovské obrazovce. Pokud povolíte tím, uživatelům zařízení se zobrazí na panelu hledání na domovské obrazovce, ve kterém bude možné je zadat cokoli, co chtějí hledat na webu. |
 | Zakázat aplikaci nastavení | BOOL | FALSE | Na stránce nastavení zakáže spravované domácí obrazovky. Pokud zakážete toto, koncový uživatel zařízení nebude možné získat nastavení na spravovaných domovskou obrazovku. |
-| Povolit spořiče obrazovky | BOOL | FALSE | Pokud chcete povolit režim spořič obrazovky, nebo ne. Pokud nastavena na hodnotu true, můžete nakonfigurovat **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**, a **media_detect_ screen_saver**. |
-| Spořič obrazovky | řetězec |   | Nastavte adresu URL obrázku spořič obrazovky. Pokud je nastavena žádná adresa URL, zařízení se zobrazí na výchozí obrazovce, když se aktivuje šetřič.  |
-| Zobrazit čas spořič obrazovky | integer | 0 | Poskytuje možnost nastavit dobu v sekundách zařízení zobrazí spořič obrazovky během režimu spořič obrazovky. Pokud nastavena na hodnotu 0, spořič obrazovky se zobrazí v režimu spořiče obrazovky po neomezenou dobu, dokud se zařízení stane aktivním.  |
-| Neaktivní doba umožňující spořič obrazovky | integer | 30 | Počet sekund, po které zařízení neaktivní před aktivací spořič obrazovky. Pokud je nastaveno na 0, zařízení nikdy přejde do režimu spořič obrazovky. |
-| Média detekovat před zobrazením spořič obrazovky | BOOL | TRUE | Zvolte, jestli obrazovku zařízení by měl obsahovat spořič obrazovky Pokud je na zařízení přehrávání audio/video. Je-li nastavena hodnota true, zařízení nebude možné přehrát zvuk/video, bez ohledu na hodnotu v **inactive_time_to_show_scree_saver**. Pokud nastavena na hodnotu false, zobrazí obrazovku zařízení spořič obrazovky podle hodnotu nastavenou v **inactive_time_to_show_screen_saver**.   |
+| Povolit spořiče obrazovky | BOOL | FALSE | Chcete-li povolit při používání režimu spořiče obrazovky, nebo ne. Pokud nastavena na hodnotu true, můžete nakonfigurovat **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**, a **media_detect_ screen_saver**. |
+| Spořič obrazovky | řetězec |   | Nastavte adresu URL obrázku spořič obrazovky. Pokud je nastavena žádná adresa URL, zařízení se zobrazí výchozí obrázek spořič obrazovky když se aktivuje šetřič obrazovky. Výchozí obrázek ukazuje na ikonu aplikace spravovaná domovskou obrazovku.  |
+| Zobrazit čas spořič obrazovky | integer | 0 | Poskytuje možnost nastavit dobu v sekundách zařízení zobrazí spořič obrazovky během při používání režimu spořiče obrazovky. Pokud nastavíte hodnotu 0, spořič obrazovky se zobrazí na při používání režimu spořiče obrazovky po neomezenou dobu, dokud se zařízení stane aktivním.  |
+| Neaktivní doba umožňující spořič obrazovky | integer | 30 | Počet sekund, po které zařízení neaktivní před aktivací spořič obrazovky. Pokud je nastaveno na 0, zařízení nikdy přejde do režimu spořiče obrazovky. |
+| Média detekovat před zobrazením spořič obrazovky | BOOL | TRUE | Zvolte, zda obrazovku zařízení by měl obsahovat spořič obrazovky Pokud je na zařízení přehrávání audio/video. Je-li nastavena hodnota true, zařízení nebude možné přehrát zvuk/video, bez ohledu na hodnotu v **inactive_time_to_show_scree_saver**. Pokud nastavena na hodnotu false, zobrazí obrazovku zařízení spořič obrazovky podle hodnotu nastavenou v **inactive_time_to_show_screen_saver**.   |
 | Povolit virtuální tlačítko Domů | BOOL | FALSE | Zapnout toto nastavení `True` koncový uživatel přístup k domovské tlačítko na spravované domovské obrazovky, který vrátí uživatelem na domovskou obrazovku spravované z aktuální úlohy jsou v.  |
 | Typ virtuální tlačítko Domů | řetězec | swipe_up | Použití **swipe_up** pro přístup k domovské tlačítko s potáhnutí prstem nahoru gest. Použití **float** pro přístup k rychlé, trvalé tlačítko Domů, které koncový uživatel může přesouvat na obrazovce. |
 | Baterie a signálem řádku indikátoru | BOOL | Pravda  | Povolením tohoto nastavení `True` zobrazí panel indikátor sílu baterie a signálu. |
 | Heslo režimu uzamčení úloh ukončení | řetězec |   | Zadejte 4-6místným číselným kódem pomocí dočasně vyřadit z režimu uzamčení úloh odstraňování potíží. |
 | Zobrazit nastavení Wi-Fi | BOOL | FALSE | Povolením tohoto nastavení `True` umožňuje koncový uživatel můžete zapnout nebo vypnout Wi-Fi nebo se připojit k různým sítím Wi-Fi.  |
 | Zobrazit nastavení Bluetooth | BOOL | FALSE | Povolením tohoto nastavení `True` umožňuje koncovému uživateli zapnout nebo vypnout Bluetooth a připojovat k jiné podporující Bluetooth zařízení.   |
+| Aplikace ve složce jsou seřazené podle názvu | BOOL | TRUE | Povolením tohoto nastavení `False` umožňuje položek ve složce se zobrazí v pořadí, ve kterém jsou uvedeny. V opačném případě se zobrazí v alphbetically složky.   |
+| Aplikace – pořadí povoleno | BOOL | FALSE | Povolením tohoto nastavení `True` umožňuje umožňuje nastavit pořadí aplikace, weblinks a složek na na spravované domovskou obrazovku. Po povolení nastavení řazení s **app_order**prohlášením koncový uživatel můžete zapnout nebo vypnout Bluetooth a pro připojení k jiné podporující Bluetooth zařízení.   |
+| Aplikace – pořadí | bundleArray | FALSE | Umožňuje určit pořadí, aplikace, weblinks a složek na na spravované domovskou obrazovku. Toto nastavení chcete použít **zámek domovskou obrazovku** musí být povolena, **nastavit velikost mřížky** musí být definován a **aplikace – pořadí povolené** musí být nastaveno na `True`.   |
 
 ## <a name="enter-json-data"></a>Zadat JSON Data
 
@@ -111,10 +114,6 @@ Následuje příklad skript JSON se všemi klíči dostupné konfigurace zahrnut
     "kind": "androidenterprise#managedConfiguration",
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
-        {
-            "key": "grid_size",
-            "valueString": "Auto"
-        },
         {
             "key": "keep_page_header",
             "valueBool": true
@@ -236,6 +235,87 @@ Následuje příklad skript JSON se všemi klíči dostupné konfigurace zahrnut
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "grid_size",
+            "valueString": "4;5"
+        },
+        {
+            "key": "app_order_enabled",
+            "valueBool": true
+        },
+        {
+            "key": "apps_in_folder_ordered_by_name",
+            "valueBool": true
+        },
+        {
+            "key": "app_orders",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.Microsoft.emmx"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "folder_name",
+                            "valueString": "Work"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "managed_folder"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 2
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": "com.microsoft.launcher.launcher"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 3
+                        }
+                    ]
+                }
+            ]
         },
         {
             "key": "managed_folders",

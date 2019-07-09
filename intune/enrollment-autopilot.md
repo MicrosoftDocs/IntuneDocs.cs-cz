@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8144acb25c1ef13f7f2ed5c7deac5eb679639111
-ms.sourcegitcommit: 95f32e381d14f0a75465b6103af2665fccb2de16
+ms.openlocfilehash: 71e8760bde5f6c53f6e73d8c8dd0f795809726b2
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539040"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649115"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -35,7 +35,7 @@ Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udr
 
 ## <a name="how-to-get-the-csv-for-import-in-intune"></a>Jak získat sdílený svazek clusteru pro Import do služby Intune
 
-Další infomration naleznete v tématu Principy rutiny powershellu.
+Další informace najdete v tématu Principy rutiny powershellu.
 
 - [Get-WindowsAutoPilotInfo](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo/1.3/Content/Get-WindowsAutoPilotInfo.ps1)
 

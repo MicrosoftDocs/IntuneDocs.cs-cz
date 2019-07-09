@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fb85cc2847c235f7f8079715dee6a2d924f0ac8
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572582"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649091"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridní Azure zařízení připojených k doméně AD s použitím Intune a Windows Autopilot
 Nastavit hybridní služby Azure Active Directory (Azure AD) můžete použít Intune a Windows Autopilot – připojené zařízení. Chcete-li to provést, postupujte podle kroků v tomto článku.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Úspěšně konfigurovat vaše [hybridní Azure zařízení připojených k doméně AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Nezapomeňte [ověřte registraci vašeho zařízení]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) pomocí rutiny Get-MsolDevice.
+Úspěšně konfigurovat vaše [hybridní Azure zařízení připojených k doméně AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Nezapomeňte [ověřte registraci vašeho zařízení](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) pomocí rutiny Get-MsolDevice.
 
 Zařízení, která chcete zaregistrovat, musí:
 - Běžet v1809 Windows 10 nebo vyšší.
-- Mít přístup k internetu
-- Máte přístup ke službě Active Directory (připojení k síti VPN v tuto chvíli nepodporuje).
-- Této oblasti podstupovali prostředí out-of-box (OOBE).
+- Mít přístup k Internetu [podle zdokumentovaných požadavky na síť Windows Autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- Mít přístup k řadiči domény služby Active Directory, proto musí být připojené k síti vaší organizace (ve kterém může překlad záznamů DNS pro doménu AD a řadič domény AD a komunikovat s řadičem domény k ověření uživatele. Připojení k síti VPN v tuto chvíli nepodporuje).
 - Možné poslat příkaz ping řadič domény, který se pokoušíte připojit.
+- Pokud používáte proxy server, musí být povolena možnost WPAD Proxy nastavení a nakonfigurovaná.
+- Této oblasti podstupovali prostředí out-of-box (OOBE).
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace pro Windows 10
 

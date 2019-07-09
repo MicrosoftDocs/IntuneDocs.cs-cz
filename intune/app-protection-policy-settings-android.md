@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9c87974cd9d241340718375ab9c530b1b2f136
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: a80dd650304d99df0d2adf636fcc687444adada2
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558494"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648997"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -49,7 +49,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 ### <a name="encryption"></a>Šifrování
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
-| **Šifrování dat organizace** | Zvolte **vyžadují** povolit šifrování pracovní nebo školní data v této aplikaci. Intune používá OpenSSL, 256bitového schéma šifrování AES systém Android Keystore k zabezpečenému šifrování dat aplikace. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Sady SDK bude dále poskytovat podpora 128bitových klíčů z důvodu kompatibility s obsahem a aplikace, které používají starší verze sady SDK. <br><br> Metoda šifrování je FIPS 140-2 kompatibilní.     |  **vyžadovat**|  
+| **Šifrování dat organizace** | Zvolte **vyžadují** povolit šifrování pracovní nebo školní data v této aplikaci. Intune používá OpenSSL, 256bitového schéma šifrování AES systém Android Keystore k zabezpečenému šifrování dat aplikace. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Budou se šifrovat nové soubory s 256 bitů. Existující 128bitové šifrované soubory se procházejí migrace pokus o 256 bitů, ale není zaručeno, že proces. Soubory šifrované pomocí klíče 128-bit zůstanou čitelné. <br><br> Metoda šifrování je FIPS 140-2 kompatibilní.     |  **vyžadovat**|  
 | <ul><ui>**Šifrování dat organizace v zaregistrovaných zařízeních** | Vyberte **vyžadují** k vynucení šifrování dat organizace šifrováním vrstvy aplikace Intune na všech zařízeních. Vyberte **nevyžaduje** nedokáže vynutit šifrování organizace dat pomocí šifrování vrstvy aplikace Intune na zaregistrovaných zařízeních.| **vyžadovat** |
 
 

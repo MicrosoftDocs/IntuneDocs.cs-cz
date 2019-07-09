@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d12f9e04d275e18c5cf36b444bf1e050560765
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 623891ce84e5a413c83ca3400ccb1cc180d859e5
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558370"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648429"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -54,9 +54,9 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
 
       Příklad: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
       
-       > [!NOTE]
-       > In Intune, the App Configuration policy has to be for enrollment type "Managed Devices".
-       > Addicionally, the App needs to be either installed from the Intune Company Portal if set as available or pushed as required to the device. 
+     > [!NOTE]
+     > V Intune, musí být nastaven typ registrace zásady Konfigurace aplikací **zařízení spravovaná prostřednictvím protokolu**.
+     > Kromě toho aplikace musí být buď nainstalovat z portálu společnosti Intune (pokud to udělají) nebo přidat do zařízení podle potřeby. 
 
 4. Nasaďte **zásadu správy Open in** prostřednictvím Intune nebo jiného poskytovatele řešení MDM do zaregistrovaných zařízení.
 
@@ -78,6 +78,9 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) je **povinná** pro za�
    |MobileIron | IntuneMAMUPN | Řetězec | ${userUPN} **nebo** ${userEmailAddress} |
    |Citrix koncový bod správy | IntuneMAMUPN | Řetězec | ${user.userprincipalname} |
    |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
+
+> [!NOTE]  
+> Pro aplikaci Outlook v iOS při nasazení zásady Konfigurace aplikací s možností "Návrháře konfigurace pomocí" konfigurační klíč IntuneMAMUPN se nakonfiguruje automaticky na pozadí pro zásady. Další podrobnosti najdete v tématu Nejčastější dotazy k tématu [nové aplikace Outlook pro iOS a Android konfigurace zásad prostředí aplikací – obecné konfigurace pro aplikaci](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Příklad 2: Činnost koncového uživatele
