@@ -1,6 +1,6 @@
 ---
-title: Registrace firemních zařízení pomocí aplikace pro Microsoft Intune | Dokumentace Microsoftu
-description: Popisuje, jak zaregistrovat firemní zařízení s Androidem v Intune
+title: Registrace podnikového zařízení ve službě Microsoft Intune App | Microsoft Docs
+description: Popisuje registraci firemního zařízení s Androidem v Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,117 +18,117 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e68e404a91927192f1006626d1b865acd5eb589
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197046"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735759"
 ---
-# <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace firemních zařízení pomocí aplikace pro Microsoft Intune
+# <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace podnikového zařízení pomocí aplikace Microsoft Intune
 
-Registrace firemních zařízení s Androidem získat zabezpečený přístup k firemnímu e-mailu, aplikacím a další data, která vaší organizaci je k dispozici. Aplikace pro Microsoft Intune podporuje zařízení vlastněných společností s Androidem 6.0 a novějším. To se automaticky nainstaluje na nový a obnovení továrního nastavení zařízení během registrace. 
+Zaregistrujte svoje zařízení s Androidem vlastněné společností, abyste získali zabezpečený přístup k firemnímu e-mailu, aplikacím a dalším datům, která vaše organizace zpřístupní. Aplikace Microsoft Intune podporuje zařízení vlastněná společností se systémem Android 6,0 a novějším. Během registrace se automaticky nainstaluje do nových zařízení a zařízení pro obnovení továrního nastavení. 
 
-Existují čtyři způsoby, jak zaregistrovat. Vaše organizace by měly umožňují vědět, kterou možnost použít.
+Existují čtyři způsoby, jak se zaregistrovat. Vaše organizace by vám měla sdělit, kterou možnost použít.
  
 * Bezkontaktní komunikace (NFC)  
 * Podpisový  
 * Kód QR   
-* Automatizované Google  
+* Google Zero Touch  
 
 ## <a name="enroll-device"></a>Registrace zařízení 
-Dokončete tyto kroky pro nastavení a registrace zařízení.  
+Provedením těchto kroků nastavíte a zaregistrujete své zařízení.  
 
 > [!NOTE]
-> S Androidem výrobce zařízení nebo verzi může vyžadovat, abyste mohli provést další kroky, které nejsou zahrnuty v tomto postupu. Barvy a text, který se zobrazí na snímcích obrazovky se může zobrazit i jiné na vašem zařízení.  
+> Verze Androidu nebo výrobce zařízení můžou vyžadovat, abyste dokončili další kroky, na které se tento postup nezabývá. Barvy a text, který vidíte na snímcích obrazovky, se může zobrazit i jinak na vašem zařízení.  
 
-1. Zapněte nový nebo obnovení továrního nastavení zařízení.  
-2. Na **uvítací** obrazovce vyberte svůj jazyk.   Pokud jste jste obdržely pokyn k registraci pomocí NFC a kód QR, postupujte podle následující krok, který odpovídá metodu.  
-     * NFC: Klepněte na zařízení podporou NFC na programátorovi zařízení pro připojení k síti vaší organizace. Postupujte podle pokynů na obrazovce. Když obrazovka pro Chrome na podmínky služby, přejděte ke kroku 5.  
+1. Zapněte nové zařízení nebo zařízení pro obnovení do továrního nastavení.  
+2. Na **uvítací** obrazovce vyberte svůj jazyk.   Pokud jste dostali pokyn k registraci pomocí kódu QR nebo NFC, postupujte podle níže uvedeného kroku, který odpovídá metodě.  
+     * NFC: Klepněte na zařízení, které podporuje NFC, aby se připojilo k síti vaší organizace. Postupujte podle pokynů na obrazovce. Až se dostanete na obrazovku s podmínkami služby Chrome, pokračujte krokem 5.  
 
-      * Kód QR: Proveďte kroky v [registrace kód QR](#qr-code-enrollment).  
+     * Kód QR: Proveďte kroky v části [registrace kódu QR](#qr-code-enrollment).  
 
-      Pokud jste jste dostali pokyn použít jinou metodu, pokračujte krokem 3.    
+     Pokud jste se dostali k používání jiné metody, pokračujte krokem 3.    
 
-1. Připojení k Wi-Fi a klepněte na **Další**. Postupujte podle kroku, který odpovídá způsobu registrace. 
+1. Připojte se k Wi-Fi a klepněte na **Další**. Použijte krok, který odpovídá metodě registrace. 
 
-    * token: Když se zobrazí na přihlašovací obrazovce Google, proveďte kroky v [Token pro zápis](#token-enrollment).    
-    * Automatizované Google: Po připojení k Wi-Fi zařízení bude rozpoznán vaší organizací. Pokračujte krokem 4 a postupujte podle pokynů na obrazovce, dokud se instalace byla dokončena.    
+    * Klíčové Až se dostanete na přihlašovací obrazovku Google, proveďte kroky v části [registrace tokenu](#token-enrollment).    
+    * Google Zero Touch: Po připojení k Wi-Fi bude vaše zařízení rozpoznatelné vaší organizací. Pokračujte krokem 4 a postupujte podle pokynů na obrazovce, dokud nebude instalace dokončena.    
  
-       ![Příklad snímek obrazovky podmínky Google, který se zobrazí, pokud používáte Touch nula Google, zvýraznění tlačítko Přijmout a pokračovat.](./media/google-zero-touch-intune-app-01.png)   
+       ![Příklad obrázku obrazovky s podmínkami pro Google, který vidíte, pokud používáte Google Zero Touch, zvýrazňování tlačítka přijmout & pokračovat.](./media/google-zero-touch-intune-app-01.png)   
    
-4. Přečtěte podmínky společnosti Google. Potom klepněte na **přijmout a pokračovat**.  
+4. Zkontrolujte výrazy Google. Pak klepněte na **přijmout &AMP; pokračovat**.  
 
-      ![Příklad snímek obrazovky podmínek Google, zvýraznění tlačítko Přijmout a pokračovat.](./media/fully-managed-intune-app-04.png)   
+      ![Příklad obrázku obrazovky podmínek Google, zvýrazňování tlačítka přijmout & pokračování](./media/fully-managed-intune-app-04.png)   
 
-6. Projděte si Chrome podmínky služby. Potom klepněte na **přijmout a pokračovat**.  
+6. Kontrola podmínek služby v Chrome. Pak klepněte na **přijmout &AMP; pokračovat**.  
 
-   ![Příklad snímek obrazovky smluvních podmínkách Chrome, zvýraznění tlačítko Přijmout a pokračovat.](./media/fully-managed-intune-app-06.png)   
+   ![Příklad obrázku obrazovky s podmínkami služby Chrome, zvýraznění tlačítko přijmout & pokračovat](./media/fully-managed-intune-app-06.png)   
 
-7. Na přihlašovací obrazovky Přihlaste se pomocí svého pracovního nebo školního účtu.   
+7. Na obrazovkách přihlášení se přihlaste pomocí svého pracovního nebo školního účtu.   
 
-    a. Zadejte e-mailu a klepněte na **Další**.      
-    b. Zadejte své heslo a klepněte na **přihlášení**.  
+    a. Zadejte svůj e-mail a klepněte na **Další**.      
+    b. Zadejte heslo a klepněte na **Přihlásit se**.  
 
-8. V závislosti na požadavcích vaší organizace vám může zobrazit výzva k aktualizaci nastavení, jako je například zámek obrazovky nebo šifrování. Pokud se zobrazí tyto výzvy, klepněte na **nastavit** a postupujte podle pokynů na obrazovce.  
+8. V závislosti na požadavcích vaší organizace se může zobrazit výzva k aktualizaci nastavení, jako je třeba zámek nebo šifrování obrazovky. Pokud se zobrazí tyto výzvy, klepněte na **nastavit** a postupujte podle pokynů na obrazovce.  
 
-   ![Obrázek příkladu sady nahoru obrazovce pracovní telefon, zvýraznění tlačítko nastavit.](./media/fully-managed-intune-app-10.png)   
+   ![Příklad obrázku nastavení obrazovky pro práci s telefonem, tlačítko zvýraznění sady](./media/fully-managed-intune-app-10.png)   
 
-9. Instalace pracovních aplikací na zařízení, klepněte na **nainstalovat**. Po dokončení instalace, klepněte na **Další**.  
+9. Pokud chcete na zařízení nainstalovat pracovní aplikace, klepněte na **nainstalovat**. Po dokončení instalace klepněte na **Další**.  
 
-   ![Obrázek příkladu sady nahoru obrazovce pracovní telefon, zvýraznění tlačítko nainstalovat.](./media/fully-managed-intune-app-11.png)   
+   ![Příklad obrázku nastavení obrazovky pro práci s telefonem, zvýraznění tlačítka pro instalaci](./media/fully-managed-intune-app-11.png)   
 
-10. Až se zobrazí zpráva, že vaše zařízení je připravené, klepněte na **HOTOVO**. 
+10. Jakmile se zobrazí zpráva, že je zařízení připravené, klepněte na **Hotovo**. 
 
-11. Přejděte do své aplikace a otevřete aplikaci Microsoft Intune. Vyberte **přihlášení**. 
+11. Přejít do vašich aplikací a otevřít aplikaci Microsoft Intune. Vyberte **Přihlásit se**. 
 
-12. Na **nastavení přístupu** obrazovky, zobrazí se vám seznam čekající úlohy. Klepněte na **pokračovat**.  
+12. Na obrazovce pro **přístup k instalaci** se zobrazí seznam úkolů, které čekají na vyřízení. Klepněte na **pokračovat**.  
 
-       ![Obrázek příkladu aplikace pro Microsoft Intune, nastavení přístupu obrazovky čekající úlohy.](./media/fully-managed-intune-app-14.png)   
+       ![Příklad obrázku Microsoft Intune aplikace, nastavení obrazovky přístupu a zobrazení nevyřízených úkolů.](./media/fully-managed-intune-app-14.png)   
 
-13. Po dokončení registrace zařízení klepněte na **pokračovat**. Microsoft Intune může zobrazit výzvu k aktualizaci další nastavení zařízení.   
+13. Až se registrace zařízení dokončí, klepněte na **pokračovat**. Microsoft Intune vás může zobrazit výzva k aktualizaci dalších nastavení zařízení.   
 
-       ![Obrázek příkladu aplikace pro Microsoft Intune, obrazovky nastavení aktualizace zařízení.](./media/fully-managed-intune-app-15-2.png)   
+       ![Příklad obrázku Microsoft Intune aplikace, aktualizace obrazovky nastavení zařízení](./media/fully-managed-intune-app-15-2.png)   
 
-14. Instalace byla dokončena, když všechny položky v seznamu zobrazit zeleném kroužku. Můžete teď přístup k prostředkům společnosti.  
+14. Instalace je dokončena, když všechny položky v seznamu zobrazí zelený kroužek. Teď máte přístup k prostředkům společnosti.  
 
-       ![Obrázek příkladu aplikace pro Microsoft Intune, nastavení přístupu k obrazovce znázorňující dokončení úlohy.](./media/fully-managed-intune-app-16.png)   
+       ![Příklad obrázku Microsoft Intune aplikace, nastavení obrazovky přístupu a zobrazení dokončených úkolů](./media/fully-managed-intune-app-16.png)   
 
 
 ## <a name="qr-code-enrollment"></a>Zápis kódu QR  
-V této části naskenujete kód QR poskytované společnosti.  Jakmile budete hotovi, vás přesměrujeme zpět na postup registrace zařízení.     
+V této části provedete kontrolu kódu QR poskytovaného vaší společností.  Až budete hotovi, přesměrujeme vás zpátky na kroky registrace zařízení.     
   
-1. Na **úvodní** obrazovky, klepněte na obrazovku pětkrát na spuštění instalačního programu kód QR.  
+1. Na **úvodní** obrazovce klepněte pětkrát na obrazovku a spusťte nastavení kódu QR.  
 
-   ![Příklad obrázek úvodní obrazovky nastavení zařízení, zvýraznění pokynů a klepněte na obrazovku.](./media/qr-code-intune-app-01.png)  
+   ![Příklad obrázku úvodní obrazovky instalace zařízení, zvýraznění pokynů pro klepnutí na obrazovku](./media/qr-code-intune-app-01.png)  
 
-2. Postupujte podle pokynů na obrazovce pro připojení k Wi-Fi.  
-3. Pokud zařízení nemá skener kódů QR, obrazovek instalačního programu se zobrazí průběh jako nainstalovaní skeneru. Počkejte na dokončení instalace.  
-4. Po zobrazení výzvy, kontrolovat registrační profil kód QR, který vaše organizace zobrazila.  
-5. Vraťte se na [zapsat zařízení](#enroll-device), krok 4 pro pokračování instalačního programu.  
+2. Připojte se k Wi-Fi podle pokynů na obrazovce.  
+3. Pokud zařízení nemá skener kódu QR, obrazovky instalačního programu zobrazí průběh instalace skeneru. Počkejte na dokončení instalace.  
+4. Po zobrazení výzvy Naskenujte kód QR v registračním profilu, který vám vaše organizace poskytla.  
+5. Vraťte se k [registraci zařízení](#enroll-device), krok 4 pro pokračování v instalaci.  
 
-## <a name="token-enrollment"></a>Token pro zápis  
-V této části zadáte token poskytované společnosti. Jakmile budete hotovi, vás přesměrujeme zpět na postup registrace zařízení.  
+## <a name="token-enrollment"></a>Zápis tokenu  
+V této části zadáte svůj token poskytovaný společností. Až budete hotovi, přesměrujeme vás zpátky na kroky registrace zařízení.  
 
-1. Na přihlašovací obrazovku Google v **E-mail nebo telefon** zadejte **afw #setup**. Klepněte na **Další**. 
+1. Do přihlašovací obrazovky Google v poli **e-mail nebo telefon** zadejte **AFW # Setup**. Klepněte na **Další**. 
 
-   ![Obrázek příkladu Google přihlašovací obrazovky, že je "afw #setup" zadali do pole.](./media/token-intune-app-01.png)   
+   ![Příklad obrázku přihlašovací obrazovky Google, který ukazuje, že se do pole zadává nastavení "AFW #".](./media/token-intune-app-01.png)   
 
-2. Zvolte **nainstalovat** pro **zásad zařízení s Androidem** aplikace. Pokračujte v instalaci. V závislosti na vašem zařízení může být potřeba zkontrolovat a přijmout další podmínky.    
+2. Vyberte **nainstalovat** pro aplikaci **zásad zařízení** s Androidem. Pokračujte v instalaci. V závislosti na vašem zařízení možná budete muset zkontrolovat a přijmout další podmínky.    
 
-3. Na **zaregistrovat toto zařízení** obrazovky, vyberte **Další**.  
+3. Na obrazovce **zaregistrovat toto zařízení** vyberte **Další**.  
 
-   ![Obrázek příkladu zapsat tuto obrazovku na zařízení. Zobrazí obrázek kódu QR; Zvýrazní tlačítko Další.](./media/token-intune-app-02.png)  
+   ![Příklad obrázku registrace obrazovky zařízení Zobrazuje ilustraci kódu QR; zvýrazní tlačítko Další.](./media/token-intune-app-02.png)  
 
-4. Vyberte **zadejte kód**.
+4. Vyberte **zadat kód**.
 
-   ![Příklad snímek active skener kódů QR. Zvýrazní tlačítko Enter kód.](./media/token-intune-app-03.png)  
+   ![Příklad snímku aktivního skeneru kódu QR Zvýrazní tlačítko pro zadání kódu.](./media/token-intune-app-03.png)  
 
-5. Na **prohledávají nebo zadejte kód** obrazovky, zadejte kód, který vaše organizace zobrazila.  Pak klikněte na tlačítko **Další**.  
+5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na tlačítko **Další**.  
 
-   ![Obrázek příkladu kontroly nebo zadejte kód obrazovky, zvýraznění tlačítko Další.](./media/token-intune-app-04.png)  
+   ![Příklad obrázku skenování nebo zadání kódu obrazovky, zvýraznění tlačítka Další](./media/token-intune-app-04.png)  
 
-6. Vraťte se na [zapsat zařízení](#enroll-device), krok 4 pro pokračování instalačního programu.  
+6. Vraťte se k [registraci zařízení](#enroll-device), krok 4 pro pokračování v instalaci.  
 
 
 

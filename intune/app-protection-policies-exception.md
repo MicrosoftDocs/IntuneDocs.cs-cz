@@ -17,33 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88c95533630cdb3c96626de13a2c843ed8318671
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d599b2a03985965bd8962bcd9f24bfe7555f131c
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043903"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735599"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Vytvoření výjimek zásad přenosu dat ve správě mobilních aplikací Intune (MAM)
 
-Jako správce můžete vytvořit výjimky zásad přenosu dat ve správě mobilních aplikací Intune (MAM). Pomocí výjimky lze konkrétně vybrat nespravované aplikace, které budou moct přenášet data do spravovaných aplikací a ze spravovaných aplikací. Tým IT musí důvěřovat nespravovaných aplikacích, které zahrnete do seznamu výjimek. 
+Jako správce můžete vytvořit výjimky zásad přenosu dat ve správě mobilních aplikací Intune (MAM). Pomocí výjimky lze konkrétně vybrat nespravované aplikace, které budou moct přenášet data do spravovaných aplikací a ze spravovaných aplikací. Vaše IT oddělení musí důvěřovat nespravovaným aplikacím, které jste zahrnuli do seznamu výjimek. 
 
 >[!WARNING] 
 > Za provádění změn v zásadách výjimek přenosu dat nesete zodpovědnost. Nespravované aplikace (aplikace, které nejsou spravované pomocí Intune), které přidáte do těchto zásad, budou mít přístup k datům chráněným pomocí spravovaných aplikací. Takový přístup k chráněným datům může mít za následek porušení zabezpečení dat. Výjimky přenosu dat přidávejte jenom pro aplikace, které vaše organizace musí používat, ale které nepodporují zásady ochrany aplikací Intune. Kromě toho přidávejte výjimky jenom pro aplikace, které nepovažujete za rizikové z hlediska úniku dat.
 
-V rámci Intune zásadami ochrany aplikací, nastavení **povolit aplikaci posílat data do jiných aplikací** k **aplikace spravované podle zásad** znamená, že aplikace můžou přenášet data jenom do aplikací spravovaných pomocí Intune. Pokud je potřeba povolit data přesunou do konkrétní aplikace, které nepodporují aplikace v Intune, můžete vytvořit výjimky pro tuto zásadu pomocí **vyberte aplikace, které se mají vyloučit**. Výjimky umožňují, aby aplikace spravované Intune vyvolaly nespravované aplikace založené na protokolu URL (iOS) nebo názvu balíčku (Android). Intune přidává ve výchozím nastavení důležité nativní aplikace do seznamu výjimek. 
+V rámci zásad ochrany aplikací Intune nastavení **Allow aplikace pro přenos dat do jiných aplikací** do **aplikací spravovaných podle zásad** znamená, že aplikace může přenášet data jenom do aplikací spravovaných přes Intune. Pokud potřebujete povolit přenos dat do konkrétních aplikací, které nepodporují aplikaci Intune, můžete k této zásadě vytvořit výjimky pomocí **vybrat aplikace, které se mají vyloučit**. Výjimky umožňují, aby aplikace spravované Intune vyvolaly nespravované aplikace založené na protokolu URL (iOS) nebo názvu balíčku (Android). Intune přidává ve výchozím nastavení důležité nativní aplikace do seznamu výjimek. 
 
 > [!NOTE]
 > Změna nebo přidání aplikací do výjimek zásad přenosu dat nemá vliv na jiné zásady ochrany aplikací, jako jsou omezení vyjmutí, kopírování a vložení. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Výjimky přenosu dat pro iOS
-U zásad cílících na iOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS najdete v tématu [výjimky přenosu nastavení zásad ochrany aplikací iOS - Data](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+U zásad cílících na iOS můžete nakonfigurovat výjimky přenosu dat pomocí protokolu URL. Pokud chcete přidat výjimku, vyhledejte informace o podporovaných protokolech URL v dokumentaci od vývojáře příslušné aplikace. Další informace o výjimkách přenosu dat pro iOS najdete v tématu [nastavení zásad ochrany aplikací pro iOS – výjimky přenosu dat](app-protection-policy-settings-ios.md#data-transfer-exemptions).
 
 > [!NOTE]
 > U aplikací jiných výrobců Microsoft nenabízí metodu ručního vyhledání protokolu adresy URL pro vytváření výjimek aplikací. 
 
 ## <a name="android-data-transfer-exceptions"></a>Výjimky přenosu dat pro Android
-U zásad cílících na Android můžete nakonfigurovat výjimky přenosu dat pomocí názvu balíčku aplikace. Název balíčku aplikace můžete vyhledat na stránce obchodu **Google Play** pro aplikaci, pro kterou chcete přidat výjimku. Další informace o výjimkách přenosu dat pro Android najdete v tématu [výjimky přenosu nastavení zásad ochrany aplikací pro Android – Data](app-protection-policy-settings-android.md#data-transfer-exemptions).
+U zásad cílících na Android můžete nakonfigurovat výjimky přenosu dat pomocí názvu balíčku aplikace. Název balíčku aplikace můžete vyhledat na stránce obchodu **Google Play** pro aplikaci, pro kterou chcete přidat výjimku. Další informace o výjimkách přenosu dat pro Android najdete v tématu [nastavení zásad ochrany aplikací pro Android – výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions).
 
 
 >[!TIP]
@@ -52,13 +52,13 @@ U zásad cílících na Android můžete nakonfigurovat výjimky přenosu dat po
 ### <a name="example"></a>Příklad
 Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se budou moct odkazy Webex v e-mailové zprávě spravovaného Outlooku otevírat přímo v aplikaci Webex. V ostatních nespravovaných aplikacích bude přenos dat i nadále omezený.
 
-- iOS **Webex** příkladu:   Které se mají vyloučit **Webex** aplikaci tak, že je povolené má být volána v Intune spravovaných aplikací, je nutné přidat výjimku přenosu dat pro tento řetězec: <code>wbx</code>
+- Příklad **WebEx** pro iOS:   Pokud chcete aplikaci **WebEx** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec:<code>wbx</code>
     
- - iOS **mapy** příkladu:  Pokud chcete určit výjimku pro nativní **mapy** aplikaci tak, že je povolené má být volána v Intune spravovaných aplikací, je nutné přidat výjimku přenosu dat pro tento řetězec: <code>maps</code>
+- Příklad **map** iOS:   Aby bylo možné aplikaci nativních **map** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec:<code>maps</code>
 
-- Android **Webex** příkladu:   Které se mají vyloučit **Webex** aplikaci tak, že je povolené má být volána v Intune spravovaných aplikací, je nutné přidat výjimku přenosu dat pro tento řetězec: <code>com.cisco.webex.meetings</code>
+- Příklad **WebEx** pro Android:   Pokud chcete aplikaci **WebEx** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune, je nutné přidat výjimku přenosu dat pro následující řetězec:<code>com.cisco.webex.meetings</code>
     
-- Android **SMS** příkladu:   Pokud chcete určit výjimku pro nativní **SMS** aplikaci tak, že je povolené má být volána v Intune spravovaných aplikací v různých aplikacích zasílání zpráv a zařízení s Androidem, je nutné přidat výjimku přenosu dat pro následující řetězce: 
+- Příklad **SMS** pro Android:   Pokud chcete nativní aplikaci **SMS** vyloučit, aby ji mohly vyvolávat spravované aplikace Intune v různých aplikacích pro zasílání zpráv a zařízeních s Androidem, musíte přidat výjimky přenosu dat pro následující řetězce: 
     <code>com.google.android.apps.messaging</code>
     
     <code>com.android.mms</code>

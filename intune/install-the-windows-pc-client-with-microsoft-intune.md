@@ -15,19 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 62d30d0c404fb8393f5aa2c999cd1fc09b266350
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572597"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735885"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Instalace klientského softwaru Intune na počítače se systémem Windows
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](windows-enroll.md). Další informace najdete v části [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md) 
+> V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](windows-enroll.md). Další informace najdete v tématu [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md) . 
 
 
 Počítače se systémem Windows se dají zaregistrovat přes klientský software Intune. Klientský software Intune je možné nainstalovat následujícími způsoby:
@@ -90,16 +90,17 @@ Klientský software Intune můžete do počítače nasadit jako součást image 
 
 2. Vytvořte položku registru **WindowsIntuneEnrollPending** přidáním následujícího příkazu do skriptu **SetupComplete.cmd** :
 
-    ```
+    ```cmd
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
     WindowsIntuneEnrollPending /t REG_DWORD /d 1
     ```
 
 3. Přidáním následujícího příkazu do skriptu **setupcomplete.cmd** spusťte registrační balíček s argumentem příkazového řádku /PrepareEnroll:
 
-    ```
+    ```cmd
     %systemdrive%\temp\Microsoft_Intune_Setup\Microsoft_Intune_Setup.exe /PrepareEnroll
     ```
+
     > [!TIP]
     > Skript **SetupComplete.cmd** umožňuje, aby instalační program systému Windows provedl změny systému před přihlášením uživatele. Argument příkazového řádku **/PrepareEnroll** připraví cílový počítač, aby se po dokončení instalačního programu systému Windows automaticky zaregistroval v Intune.
 
@@ -125,8 +126,8 @@ Pokud byla uživatelům přiřazena licence k Intune a na Intune byla nastavena 
 
 - Uživatelé počítačů s Windows 8.1 a Windows 10 mají dvě možnosti registrace:
 
-  - **Zaregistrovat počítač jako mobilní zařízení**: Uživatelé vybrat **zjistěte, jak zapsat** tlačítko a jsou přesměrováni na pokyny, jak na svůj počítač jako mobilní zařízení zaregistrovat. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
-  - **Zaregistrovat počítač pomocí klientského softwaru Intune**: Bude potřeba říct uživatelům k výběru **kliknutím sem ho můžete stáhnout** odkaz, který provede klientský software znova.
+  - **Zaregistrovat počítač jako mobilní zařízení**: Uživatelé si vyberou tlačítko **zjistit, jak zaregistrovat** a jsou popsáni v pokynech k registraci počítače jako mobilního zařízení. Toto tlačítko se zobrazí v dobře viditelném umístění, protože registrace MDM se považuje za výchozí a preferovanou možnost registrace. Možnost MDM ale neplatí pro toto téma, protože to se týká jenom instalace klientského softwaru.
+  - **Registrace počítače pomocí klientského softwaru Intune**: Budete muset sdělit uživatelům, aby vybrali odkaz **kliknutím sem si můžete stáhnout** odkaz, který je přebírá prostřednictvím instalace klientského softwaru.
 
 V následující tabulce najdete souhrnný přehled možností.
 

@@ -1,7 +1,7 @@
 ---
-title: Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune
+title: Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení v Intune
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak zaregistrovat zařízení s Androidem Enterprise vyhrazené nebo plně spravovaným zařízením v Intune.
+description: Přečtěte si, jak v Intune zaregistrovat podniková vyhrazená zařízení s Androidem nebo plně spravovaná zařízení.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,33 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d81f28b03a41bcdc8b6c9f18ef58e6a42346ba7d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a4f81f29fea9008c7dd47902812141db8448bc3
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049984"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735723"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace zařízení s Androidem Enterprise vyhrazené nebo plně spravovaná zařízení (Preview)
+# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení (Preview)
 
-Po nastavení vašeho [vyhrazená zařízení s Androidem Enterprise](android-kiosk-enroll.md) nebo [plně spravovaná zařízení](android-fully-managed-enroll.md) v Intune, můžete tato zařízení zaregistrovat. Způsob registrace zařízení s Androidem Enterprise, závisí na operačním systému.
+Po nastavení podnikových vyhrazených [zařízení](android-kiosk-enroll.md) s Androidem nebo [plně spravovaných zařízení](android-fully-managed-enroll.md) v Intune můžete zařízení zaregistrovat. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
 
-| Způsob registrace | Minimální verze operačního systému Android pro vyhrazené a plně spravovaná zařízení |
+| Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |
 | Bezkontaktní komunikace (NFC) | 5.1 |
 | Zadání tokenu | 6.0 |
 | Kód QR | 7.0 |
 | Zero Touch  | 8.0\* |
 
-\* Na zúčastněných výrobci.
+\*U zúčastněných výrobců.
 
 ### <a name="enroll-by-using-near-field-communication-nfc"></a>Registrace pomocí bezkontaktní komunikace (NFC)
 
-Pro zařízení, které podporují NFC můžete zřizovat zařízení tak, že vytvoříte speciálně formátovaného značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v tématu [registrace zařízení na základě jazyka C s Androidem Enterprise v Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) a [dokumentaci rozhraní API správy systému Android od Googlu](https://developers.google.com/android/management/provision-device#nfc_method).
+Pro zařízení, která podporují NFC, můžete zařízení zřídit vytvořením speciálně formátované značky NFC. Můžete použít svou vlastní aplikaci nebo nástroj pro vytváření značek NFC. Další informace najdete v dokumentaci k [registraci zařízení se systémem Android Enterprise v jazyce C s Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) a v [dokumentaci k rozhraní API pro správu Androidu](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ### <a name="enroll-by-using-a-token"></a>Registrace pomocí tokenu
 
-U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android verze 6.1 a novější můžete taky využít naskenovat kód QR. při použití **afw #setup** metodu registrace.
+U zařízení s Androidem 6 a vyšším můžete k registraci zařízení použít token. Android 6,1 a novější verze mohou také využít kontrolu kódu QR při použití metody registrace **AFW # Setup** .
 
 1. Zapněte vymazané zařízení.
 2. Na **uvítací** obrazovce vyberte svůj jazyk.
@@ -74,23 +74,24 @@ Abyste mohli použít systém Zero Touch od Googlu, musí ho zařízení podporo
 2. V rozevíracím seznamu EMM DPC zvolte **Microsoft Intune**.
 3. V konzole Zero Touch zkopírujte a vložte následující JSON do pole DPC extras. Řetězec *YourEnrollmentToken* nahraďte registračním tokenem, který jste vytvořili jako součást registračního profilu. Nezapomeňte registrační token uzavřít do dvojitých uvozovek.
 
-```
-{ 
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
-
-    "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
-        "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
+    ```json
+    { 
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
+    
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
+    
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
+    
+        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
+            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
+        } 
     } 
-} 
-```
+    ```
+
 4. Zvolte **Použít**.
 
 
 ## <a name="next-steps"></a>Další postup
-- [Nasadit aplikace pro Android](apps-deploy.md)
-- [Přidání zásad konfigurace pro Android](device-profiles.md)
+- [Nasazení aplikací pro Android](apps-deploy.md)
+- [Přidat zásady konfigurace pro Android](device-profiles.md)
 
