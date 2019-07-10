@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416848"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713280"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí standardních hodnot zabezpečení
 
@@ -155,7 +155,7 @@ Po uložení, po dokončení převodu směrného plánu je ihned znovu nasadit d
 3. Na **změnit verzi** podokně, použijte **vyberte směrný plán zabezpečení k aktualizaci** rozevíracího seznamu a vyberte verzi instanci, kterou chcete použít.  
 
    ![Vyberte verzi](./media/security-baselines/select-instance.png)  
- 
+   
 4. Vyberte **aktualizace** stáhnout soubor CSV, který zobrazuje rozdíl mezi profily aktuální instance verzi a nová verze, které jste vybrali. Zkontrolováním tohoto souboru tak, že rozumíte nastavení, které jsou přidány, odebrány, a jaké výchozí hodnoty pro tato nastavení jsou v aktualizovaný profil.  
 
    Až to budete mít, pokračujte k dalšímu kroku.  

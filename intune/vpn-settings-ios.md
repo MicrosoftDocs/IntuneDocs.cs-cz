@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d922ecde0159603acbfbc3dc0590592592d72645
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1eee827ace5dae92b485a250e6e4e0b9b426fbe6
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046209"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713185"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Konfigurace nastavení sítě VPN na zařízeních s iOSem v Microsoft Intune
 
@@ -35,13 +35,13 @@ Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
 - **SonicWall Mobile Connect**
 - **F5 Přístup starší verze**: Platí pro verze aplikace F5 Access 2.1 a starší.
 - **F5 Access**: Platí pro verze aplikace F5 Access 3.0 nebo novější.
-- **Palo Alto Networks GlobalProtect (starší verze)**: Platí pro Palo Alto sítě GlobalProtect aplikace verze 4.1 a starší.
+- **Palo Alto Networks GlobalProtect (starší verze)** : Platí pro Palo Alto sítě GlobalProtect aplikace verze 4.1 a starší.
 - **Palo Alto Networks GlobalProtect**: Platí pro Palo Alto sítě GlobalProtect aplikace verze 5.0 a novější.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: Použití podmíněného přístupu, a umožňují uživatelům obejít Zscalerem přihlašovací obrazovka, pak musíte integrovat Zscalerem privátní přístup (ZPA) pomocí svého účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO). 
+- **Zscaler**: Použití podmíněného přístupu, a umožňují uživatelům obejít Zscalerem přihlašovací obrazovka, pak musíte integrovat Zscalerem privátní přístup (ZPA) pomocí svého účtu Azure AD. Podrobné pokyny najdete v [dokumentaci k aplikaci Zscaler](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad). 
 - **Vlastní VPN**
 
 > [!NOTE]

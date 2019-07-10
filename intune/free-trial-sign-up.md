@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 325428f99c50ac4d2eede35d4aaadd858cd8b136
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2ec03471e4ff3940f09fe4a9bef53b86e32bafa8
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047669"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713348"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Rychlý start: Bezplatné vyzkoušení Microsoft Intune 
 
@@ -61,7 +61,7 @@ Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už mát
 
 ## <a name="sign-in-to-the-azure-portal"></a>Přihlášení k webu Azure Portal
 
-1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com**. 
+1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com** . 
 2. K přihlášení použijte přihlašovací údaje, které jste získali v předchozích krocích.
 
     ![Obrázek přihlašovací stránky webu Azure Portal](./media/azure-portal-signin.png)
@@ -81,7 +81,7 @@ Po přihlášení na webu Azure Portal a výběru Intune se může zobrazit oran
 
 K nastavení autority MDM na Intune použijte následující postup:
 
-1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com**. 
+1. Otevřete nové okno prohlížeče a do adresního řádku zadejte **https://portal.azure.com** . 
 2. Zvolte **Všechny služby** > **Microsoft Intune**.
 3. Vyberte informační zprávu, že nemáte aktivovanou správu zařízení. Pokud se nezobrazuje, vyberte **Registrace zařízení**. Pokud správa zařízení není aktivovaná, zobrazí se okno **Zvolte autoritu MDM**.
 
