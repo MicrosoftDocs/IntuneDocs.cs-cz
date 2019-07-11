@@ -1,7 +1,7 @@
 ---
 title: Získání dat z rozhraní API datového skladu pomocí klienta REST
 titleSuffix: Microsoft Intune
-description: Toto téma popisuje, jak načíst data z Microsoft Intune Data Warehouse pomocí rozhraní RESTful API.
+description: Toto téma popisuje, jak načíst data z datového skladu Microsoft Intune pomocí rozhraní RESTful API.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 8090e9906cc8e3b3da25b21343093dd2f656afa6
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735804"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Získání dat z rozhraní API datového skladu Intune pomocí klienta REST
 
@@ -48,7 +48,7 @@ Vytvořte nativní aplikaci v Azure. Tato nativní aplikace představuje klients
     3. Do pole **Přihlašovací adresa URL** zadejte adresu URL. Přihlašovací adresa URL bude záviset na konkrétní situaci, pokud ale hodláte použít nástroj Postman, zadejte `https://www.getpostman.com/oauth2/callback`. Při ověřování vůči službě Azure AD použijete v kroku ověřování klienta zpětné volání.
 4. Vyberte **Vytvořit**.
 
-     ![Klientskou aplikaci pro datový sklad Intune](./media/reports-get_rest_data_client_overview.png)
+     ![Klientská aplikace datového skladu Intune](./media/reports-get_rest_data_client_overview.png)
 
 5. Poznačte si **ID aplikace** této aplikace. Toto ID použijete v další části.
 
@@ -94,11 +94,11 @@ Abyste mohli nástrojem Postman uskutečnit volání REST, budete potřebovat n�
 
 Potřebujete také koncový bod. K získání koncového bodu datového skladu budete potřebovat adresu URL vlastního kanálu. Koncový bod OData můžete získat v podokně datového skladu.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Otevřít **datový sklad Intune** výběrem odkazu datového skladu **dalších úloh** na pravé straně **Microsoft Intune – přehled** okno.
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+3. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
 4. V části **Použít služby generování sestav třetích stran** zkopírujte adresu URL vlastního kanálu. Měla by vypadat přibližně takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
-Koncový bod má tento formát: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
+Koncový bod má následující formát:`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
 Například entita **dates** vypadá takto: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
@@ -134,7 +134,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 
 12. Vyberte **Request Token** (Vyžádat token).
 
-    ![Informace o přístupový token](./media/reports-postman_getnewtoken.png)
+    ![Informace o přístupovém tokenu](./media/reports-postman_getnewtoken.png)
 
 13. Na autorizační stránku služby Azure AD zadejte svoje přihlašovací údaje. Seznam tokenů v nástroji Postman teď obsahuje token s názvem `Bearer`.
 14. Vyberte **Use Token** (Použít token). Seznam hlaviček obsahuje novou hodnotu klíče pro autorizaci a hodnotu `Bearer <your-authorization-token>`.
@@ -144,7 +144,7 @@ Abyste získali nový přístupový token pro nástroj Postman, musíte přidat 
 1. Vyberte **Poslat**.
 2. V textu odpovědi nástroje Postman se zobrazí návratová data.
 
-    ![Stav klienta postman se rovná 200 OK](./media/reports-postman_200OK.png)
+    ![Stav klienta pro dodatečnou hodnotu 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>Vytvoření klienta REST (v jazyce C#), který získá data z datového skladu Intune
 
@@ -161,9 +161,10 @@ Následující vzorový kód obsahuje jednoduchého klienta REST. V kódu se pou
 6. Výběrem možnosti **Přijímám** přijměte licenci na tento balíček NuGet.
 7. Otevřete `Program.cs` v Průzkumníkovi řešení.
 
-    ![Progam.cs a Průzkumník řešení v sadě Visual Studio](./media/reports-get_rest_data_in.png)
+    ![Program.cs a Průzkumník řešení v aplikaci Visual Studio](./media/reports-get_rest_data_in.png)
 
-8. Nahraďte kód v *Program.cs* následujícím kódem:  
+8. Nahraďte kód v *program.cs* následujícím kódem:  
+
    ```csharp
    namespace IntuneDataWarehouseSamples
    {
