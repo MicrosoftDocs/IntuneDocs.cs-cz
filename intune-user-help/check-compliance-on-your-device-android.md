@@ -18,19 +18,19 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f012b1cec67de762bbc245f249125f29d37c6930
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: c3287238900725acebefc23eb00246cd04c7a5bb
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506848"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230074"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Kontrola dodržování předpisů na zařízení s Androidem
 
-Pokud se vaše zařízení už po nějakou dobu nepřipojilo k Intune, může se stát, že nebude mít přístup ke školním nebo firemním prostředkům. Vyzkoušejte následující postup, jak opět získat přístup.  
+Pokud se vaše zařízení už po nějakou dobu nepřipojilo k Intune, může se stát, že nebude mít přístup ke školním nebo firemním prostředkům. Zkuste znovu získat přístup podle těchto kroků.  
 
-1. Otevřete aplikaci portál společnosti pro Android na vašem zařízení.  
+1. Otevřete aplikaci Portál společnosti pro Android na svém zařízení.  
 
-2. Klepněte na **zkontrolovat nastavení zařízení**.  
+2. Klepněte na **kontrolovat nastavení zařízení**.   
 
 Pokud se vám ztracené nebo ukradené zařízení nedaří resetovat, požádejte svou firemní podporu, aby to udělala za vás. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

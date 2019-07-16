@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88ca608027e6509eb56fad74a8edae405fa915fa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882882"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -58,26 +58,26 @@ Ekosystém správy mobilních zařízení se často mění. Důvodem jsou aktual
 
 - [Co je nového v Microsoft Intune](whats-new.md) Toto téma se aktualizuje nejen při měsíčních aktualizacích služeb, ale také týdně, například při vydání aplikací, jako je Portál společnosti.
 
-- Důležité aktualizace služeb také budou oznámeny v [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/) Centrum zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
+- Důležité aktualizace služby se také oznamují v centru pro [správu Microsoft 365](https://admin.microsoft.com/) centra zpráv. Pokud si nainstalujete doprovodnou [mobilní aplikaci pro správu Office 365](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), můžete přijímat oznámení na svém mobilním zařízení. Tady si můžete přečíst, jak pracovat s [centrem zpráv Office 365](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates).
 
-    Několik užitečných tipů:
+  Několik užitečných tipů:
 
-    - Zprávy v centru zpráv Office 365 jsou cílené. To znamená, že pokud vaše společnost nemá v nabídce Intune pro EDU, nebudeme vám posílat zprávy o Intune pro EDU.
+  - Zprávy v centru zpráv Office 365 jsou cílené. To znamená, že pokud vaše společnost nemá v nabídce Intune pro EDU, nebudeme vám posílat zprávy o Intune pro EDU.
 
-    - Zprávy mají časově omezenou platnost. Například platnost oznámení o aktualizaci služby s odkazem na stránku s novinkami pravděpodobně vyprší před dalším oznámením o aktualizaci služby. Jinak byste měli velký backlog příspěvků, které už nejsou relevantní.
+  - Zprávy mají časově omezenou platnost. Například platnost oznámení o aktualizaci služby s odkazem na stránku s novinkami pravděpodobně vyprší před dalším oznámením o aktualizaci služby. Jinak byste měli velký backlog příspěvků, které už nejsou relevantní.
 
-    - Mobilní aplikace pro správce Office 365 umožňuje prohledávat všechny zprávy a přeposílat oznámení, pokud je chcete sdílet se svými spolupracovníky v organizaci.
+  - Mobilní aplikace pro správce Office 365 umožňuje prohledávat všechny zprávy a přeposílat oznámení, pokud je chcete sdílet se svými spolupracovníky v organizaci.
 
-    - V úpravě předvoleb centra zpráv je přepínač **Intune**, abyste se mohli podívat na zprávy zveřejněné do předplatného Intune. Pokud vidíte Správa mobilních zařízení pro Office 365, jde o jinou službu než Intune.
+  - V úpravě předvoleb centra zpráv je přepínač **Intune**, abyste se mohli podívat na zprávy zveřejněné do předplatného Intune. Pokud vidíte Správa mobilních zařízení pro Office 365, jde o jinou službu než Intune.
 
 - Ke sdílení zpráv o Enterprise Mobility + Security (EMS) a osvědčených postupů podpory Intune používáme také dva blogy:
 
-    - [Blog Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
+  - [Blog Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/)
 
-    - [Blog podpory Intune](https://blogs.technet.microsoft.com/intunesupport/)
+  - [Blog podpory Intune](https://blogs.technet.microsoft.com/intunesupport/)
 
->[!Note]
->Můžete monitorovat stav služby Intune [centra pro správu služeb Microsoft 365](https://admin.microsoft.com). Zvolte **Stav služby** v levém podokně. K prohlížení stavu služby také můžete použít [mobilní aplikaci Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a).
+> [!Note]
+> Stav služby Intune můžete monitorovat v [centru pro správu Microsoft 365](https://admin.microsoft.com). Zvolte **Stav služby** v levém podokně. K prohlížení stavu služby také můžete použít [mobilní aplikaci Office 365 Admin](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a).
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>Typy oznámení , které Microsoft poskytuje o službě Intune
 
@@ -102,7 +102,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 - **Intune with System Center Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
 
 ## <a name="language-support"></a>Podpora jazyků
-Intune běží na webu Azure Portal, který podporuje tyto jazyky: Čínština (zjednodušená), čínština (tradiční), čeština, holandština, angličtina, němčina, maďarština, italština, japonština, portugalština (Brazílie), portugalština (Portugalsko), ruština, španělština, angličtina, francouzština, korejština, polština, švédština, turečtina.
+Intune běží v Azure Portal, který podporuje tyto jazyky: Čínština (zjednodušená), čínština (tradiční), čeština, holandština, angličtina, němčina, japonština, italština, japonština, portugalština (Brazílie), portugalština (Portugalsko), ruština, španělština, angličtina, francouzština, němčina, polština, švédština, turečtina.
 
 Konzola pro správu Intune a mobilní prostředí pro uživatele podporují kromě všech jazyků podporovaných webem Azure Portal také dánštinu, řečtinu, finštinu, norštinu a rumunštinu.
 

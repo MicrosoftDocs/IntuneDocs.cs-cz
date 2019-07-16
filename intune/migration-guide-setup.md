@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 78cf3c2ff5babbfb45dfa6a41add09ef91549e8d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885034"
 ---
 # <a name="basic-setup"></a>Základní nastavení
 
@@ -36,7 +36,7 @@ Intune vyžaduje, aby identitu a seskupování uživatelů poskytovala služba A
 
 - [Požadavky na synchronizaci adresáře](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [Vícefaktorové ověřování (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [Plánování skupin uživatelů a zařízení](users-add.md)
 
@@ -55,23 +55,23 @@ Pokud plánujete, že budete v Intune používat ověřování profilů VPN, Wi-
 
 ## <a name="task-list-for-an-intune-setup"></a>Seznam kroků instalace Intune
 
-### <a name="task-1-intune-subscription"></a>Úloha 1: Předplatné služby Intune
+### <a name="task-1-intune-subscription"></a>Úloha 1: Předplatné Intune
 
 Ještě než začnete s migrací do Intune, potřebujete předplatné Intune.
 
 - Můžete navštívit [tuto stránku](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0), kde najdete pokyny, jak:
 
-    - Vytvořit nové předplatné Intune propojené s novým tenantem AAD
+  - Vytvořit nové předplatné Intune propojené s novým tenantem AAD
 
-    - Propojit předplatné Intune přihlášením k existujícímu tenantovi AAD
+  - Propojit předplatné Intune přihlášením k existujícímu tenantovi AAD
 
-### <a name="task-2-assign-intune-user-licenses"></a>Úloha 2: Přiřazení uživatelských licencí pro Intune
+### <a name="task-2-assign-intune-user-licenses"></a>Úkol 2: Přiřazení uživatelských licencí Intune
 
 - Podívejte se, [jak přiřadit uživatelské licence pro Intune](licenses-assign.md).
 
 - Pokud jste vytvořili nového tenanta Azure Active Directory, podívejte se, [jak vytvořit nové uživatele nebo synchronizovat uživatele z místní služby Active Directory (AD).](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
-### <a name="task-3-set-your-mdm-authority-to-intune"></a>Úloha 3: Nastavte autoritu MDM na Intune
+### <a name="task-3-set-your-mdm-authority-to-intune"></a>Úloha 3: Nastavení autority MDM na Intune
 
 Ke správě Intune můžete použít portál Azure Portal nebo konzolu Current Branch Configuration Manageru. Pokud nepotřebujete integrovat Intune v nasazení Current Branch Configuration Manageru, doporučujeme spravovat Intune z [portálu Azure Portal](https://portal.azure.com).
 

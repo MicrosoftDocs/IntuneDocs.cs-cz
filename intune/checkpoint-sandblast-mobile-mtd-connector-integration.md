@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49a6e8e625a08c9ad039d3106ff5d5c7001c2cab
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: ae9bd6d6f56ec85a993ffcb2f3c1af9897a2a87f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883662"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>Integrace Check Point SandBlast Mobile a Intune
 
@@ -37,13 +37,13 @@ Před zahájením procesu integrace Check Point SandBlast Mobile a Intune zkontr
 
 - Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
-    - Přihlášení a čtení profilu uživatele
+  - Přihlášení a čtení profilu uživatele
 
-    - Přístup k adresáři jako přihlášený uživatel
+  - Přístup k adresáři jako přihlášený uživatel
 
-    - Čtení dat z adresáře
+  - Čtení dat z adresáře
 
-    - Odeslání informací o zařízení do Intune
+  - Odeslání informací o zařízení do Intune
 
 - Přihlašovací údaje správce pro přístup ke konzole Check Point SandBlast Mobile MTD
 

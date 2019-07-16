@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39c3b606033ca8575e079bef9a627b087a3d3318
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: f5c78eb01e495b87a35bed06c9800c04a7f97ba4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882020"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Konektor Zimperium Mobile Threat Defense s Intune
 
-Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu založené na posouzení rizik, které služba Zimperium Mobile Threat Defense (MTD) řešení, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
+Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí Zimperium, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Zimperium běží.
 
-Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika službou Zimperium prostřednictvím zásad dodržování předpisů zařízení služby Intune. Zásady rizik posouzení můžete povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzení rizik Zimperium povoleného prostřednictvím zásad dodržování předpisů zařízením v Intune. Zásady hodnocení rizik můžou zařízením nesplňujících požadavky dovolit nebo blokovat přístup k podnikovým prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Jak služby Intune a Zimperium pomáhají chránit prostředky společnosti?
 
@@ -52,11 +52,11 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![Koncepčního obrázku zjištění přítomnosti škodlivých aplikací](./media/Maliciousapps_blocked_Zimperium.png)
+![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/Maliciousapps_blocked_Zimperium.png)
 
 **Přístup udělený po nápravě:**
 
-![Koncepčního obrázku povoleného přístupu po nápravě](./media/maliciousapps_unblocked_Zimperium.png)
+![Koncepční bitová kopie přístupu udělená po nápravě](./media/maliciousapps_unblocked_Zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě
 
@@ -96,7 +96,7 @@ Zjišťuje hrozby v síti, například **útoky prostředníkem**, a zabraňuj
 
 - Předplatné služby Zimperium Mobile Threat Defense
 
-    - Další informace najdete v tématu [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
+  - Další informace najdete na [webu Zimperium](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>Další postup
 

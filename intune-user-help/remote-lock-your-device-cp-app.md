@@ -17,12 +17,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada708c3ea6f9e8d835b667ac8162037c1de05f9
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e8a3ee1aaf2c115d99e0eedfeb187ba23f623264
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884119"
 ---
 # <a name="lock-your-device-from-the-company-portal-app-for-windows-10"></a>Uzamčení zařízení z aplikace Portál společnosti pro Windows 10
 
@@ -32,11 +32,11 @@ Ztracené nebo odcizené zařízení můžete vzdáleně uzamknout z aplikace Po
 
 Vzdálené uzamčení se podporuje na zařízení s těmito systémy:  
 
-  * Android
-  * iOS
-  * macOS
-  * Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
-  * Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo) 
+* Android
+* iOS
+* macOS
+* Windows 10 Mobile (pokud už je pro zařízení nastaveno heslo)
+* Windows Phone 8.1 (pokud už je pro zařízení nastaveno heslo) 
   
 ## <a name="remote-lock-device"></a>Vzdálené uzamčení zařízení
 Pomocí následujícího postupu zamkněte zařízení z aplikace Portál společnosti.  

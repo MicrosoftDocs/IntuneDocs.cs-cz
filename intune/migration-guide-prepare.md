@@ -16,16 +16,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 29ae889e99a843a8569782bad2b1303c7bb4304c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882846"
 ---
-# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune na správu mobilních zařízení (MDM)
+# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>Fáze 1: Příprava Microsoft Intune pro správu mobilních zařízení (MDM)
 
-Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzení požadavků vaší organizace na správu mobilních zařízení. Může být vhodné spustit sestavy aktivních uživatelů v aktuálním zprostředkovateli MDM a identifikovat tak nejdůležitější skupiny uživatelů. Potom můžete odpovědět na otázky v [vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements) oddílu.
+Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzení požadavků vaší organizace na správu mobilních zařízení. Může být vhodné spustit sestavy aktivních uživatelů v aktuálním zprostředkovateli MDM a identifikovat tak nejdůležitější skupiny uživatelů. Pak můžete začít řešit otázky v části [vyhodnocení požadavků na MDM](migration-guide-prepare.md#assess-mdm-requirements) .
 
 ## <a name="assess-mdm-requirements"></a>Vyhodnocení požadavků na MDM
 
@@ -51,8 +51,8 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 
 - Jaké podmínky použití potřebujete?
 
-    - Zapojte do plánování včas právní oddělení.
-    - Jaké lokalizace budou potřeba?
+  - Zapojte do plánování včas právní oddělení.
+  - Jaké lokalizace budou potřeba?
 
 - Jsou uživatelé obeznámeni s technologiemi a IT obecně?
 
@@ -63,8 +63,8 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
 - Jakou délku má vaše aktuální heslo nebo PIN kód k zařízení?
 
 - Potřebujete zakázat některé funkce zařízení nebo omezit určité chování zařízení? Pomocí profilů konfigurace zařízení můžete určovat různá nastavení specifická pro platformu, například:
-    - Zakázat fotoaparát
-    - Uzamknout zařízení do režimu jedné aplikace<br/>
+  - Zakázat fotoaparát
+  - Uzamknout zařízení do režimu jedné aplikace<br/>
 
 - Jaký druh ověřování je potřeba podporovat? Pokud potřebujete ověřování na základě certifikátů, jaký druh certifikátů je potřeba poskytovat?
   - Intune můžete poskytovat certifikáty s profily přístupu k prostředkům pro zaregistrovaná zařízení.
@@ -76,7 +76,7 @@ Než začneme probírat podrobnosti nastavení Intune, zaměřme se na posouzen�
   <br/><br/>
 - Je možné zavést pro některé požadavky dočasné výjimky, aby se zabránilo výpadkům? Nebo musí zařízení s přístupem vždy splňovat všechny požadavky na zabezpečení?
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Přečtete si tyto [případové studie](https://customers.microsoft.com/story/mwh-global-now-part-of-stantec-secures-mobile-devices-with-intune) z různých oborů, abyste získali představu, jak organizace vyhodnotily svoje požadavky na správu mobilních zařízení.
 
 Zkontrolujte [základní nastavení Intune](migration-guide-setup.md).

@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b51f310d370876058b8f1a1f872dd0b0e41bd42c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884845"
 ---
 # <a name="integrate-pradeo-with-intune"></a>Integrace služby Pradeo s Intune
 
@@ -36,13 +36,13 @@ Před zahájením procesu integrace řešení Pradeo a Intune zkontrolujte, že 
 
 - Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
-    - Přihlášení a čtení profilu uživatele
+  - Přihlášení a čtení profilu uživatele
 
-    - Přístup k adresáři jako přihlášený uživatel
+  - Přístup k adresáři jako přihlášený uživatel
 
-    - Čtení dat z adresáře
+  - Čtení dat z adresáře
 
-    - Odeslání informací o zařízení do Intune
+  - Odeslání informací o zařízení do Intune
 
 - Přihlašovací údaje správce pro přístup ke konzole Pradeo Security
 
@@ -68,7 +68,7 @@ Postup autorizace aplikace Pradeo:
 
 4. V okně **EMM (Enterprise mobility management) – Intune** vyberte v části **Step 1** (Krok 1) tlačítko **Pradeo Connector** (konektor Pradeo). 
 
-    ![Snímek obrazovky okna Pradeo EMM Intune](./media/pradeo_setup.png)
+    ![Snímek obrazovky okna Intune Pradeo EMM](./media/pradeo_setup.png)
 
 5. Do okna pro připojení Microsoft Intune zadejte přihlašovací údaje Intune.
 

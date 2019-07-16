@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 6ccfe9ccd186f38a971aa6bac5d58bf61e44450d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882746"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>Konektor Pradeo Mobile Threat Defense s Intune
 
-Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí Pradeo řešení Mobile Threat Defense (MTD), která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Pradeo běží.
+Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí Pradeo, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Pradeo běží.
 
-Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika Pradeo prostřednictvím zásad dodržování předpisů zařízení Intune, které vám umožní povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě posouzení rizik Pradeo povoleného prostřednictvím zásad dodržování předpisů zařízením Intune, které můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Jak služby Intune a Pradeo pomáhají chránit prostředky společnosti?
 
@@ -49,7 +49,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![Koncepčního obrázku zjištění přítomnosti škodlivých aplikací](./media/pradeo_maliciousapps_blocked.png)
+![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/pradeo_maliciousapps_blocked.png)
 
 **Přístup udělený po nápravě:**
 
@@ -65,7 +65,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a c
 
 **Přístup udělený po nápravě:**
 
-![Přístup udělený po nápravě koncepčního obrázku](./media/pradeo_network_wifi_unblocked.png)
+![Koncepční bitová kopie přístupu udělená při nápravě](./media/pradeo_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
@@ -77,7 +77,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 **Přístup udělený po nápravě:**
 
-![Přístup udělený po nápravě Sharepointový příklad koncepčního obrázku](./media/pradeo_network_spo_unblocked.png)
+![Koncepční bitová kopie přístupu uděleného při nápravě pro SharePoint – příklad](./media/pradeo_network_spo_unblocked.png)
 
 ## <a name="supported-platforms"></a>Podporované platformy
 
@@ -93,9 +93,9 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 - Předplatné služby Pradeo Security for Mobile Threat Defense
 
-    - Další informace naleznete na [webu Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
+  - Další informace naleznete na [webu Pradeo](https://www.pradeo.com/en-US/mobile-threat-protection).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Integrace služby Pradeo s Intune](pradeo-mtd-connector-integration.md)
 

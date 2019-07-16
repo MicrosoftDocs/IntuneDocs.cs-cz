@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea1ca5f2661d51088efae79d97da40ce8737b7e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: f2548e0ff3d4406f64d2091001c38056fe585896
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883534"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení v Intune pomocí účtu správce registrace zařízení
 
@@ -32,13 +32,13 @@ Jeden účet Azure Active Directory s účtem správce registrace zařízení (D
 
 Pro uživatelské účty správce registrace zařízení a zařízení, která jsou zaregistrovaná pod účtem správce registrace zařízení, platí následující omezení:
 
-  - Uživatelský účet DEM musí mít přiřazenou licenci Intune.
-  - Zařízení nemůžete vymazat z Portálu společnosti. Zařízení zaregistrované pod účtem uživatele DEM nemůžete vymazat v Intune na webu Azure Portal.
-  - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
-  - Uživatelské účty DEM nemůžou používat aplikace z programu Apple Volume Purchase Program (VPP) s uživatelskou licencí Apple VPP, protože ke správě těchto aplikací potřebujete Apple ID jednotlivých uživatelů.
-  - Aplikace VPP je možné instalovat do zařízení, pokud tato zařízení mají licence Apple VPP.
-  - Zařízení, které jsou zablokovaná pro podmíněný přístup s výjimkou Windows 10 1803 +
-  - Všechna zařízení zaregistrovaná s účty správce registrace zařízení musí mít řádnou licenci na musí spravovat přes Intune. Licence může být uživatelskou licenci Intune nebo zařízení licenci Intune.
+- Uživateli účtu DEM musí být přiřazena licence Intune.
+- Zařízení nemůžete vymazat z Portálu společnosti. Zařízení zaregistrované pod účtem uživatele DEM nemůžete vymazat v Intune na webu Azure Portal.
+- V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
+- Uživatelské účty DEM nemůžou používat aplikace z programu Apple Volume Purchase Program (VPP) s uživatelskou licencí Apple VPP, protože ke správě těchto aplikací potřebujete Apple ID jednotlivých uživatelů.
+- Aplikace VPP je možné instalovat do zařízení, pokud tato zařízení mají licence Apple VPP.
+- Zařízení, které jsou zablokovaná pro podmíněný přístup s výjimkou Windows 10 1803 +
+- Všechna zařízení zaregistrovaná pomocí účtů DEM musí být řádně licencovaná, aby je bylo možné spravovat přes Intune. Licence může být Uživatelská licence pro Intune nebo licence k zařízení v Intune.
 
 
 

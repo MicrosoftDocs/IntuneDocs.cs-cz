@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f66cc3a10711b137e081fab98445d73108748a9
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: f9f834057e95058634020fc955ced013d32b68a9
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882543"
 ---
 # <a name="reference-for-policy-entities"></a>Referenční informace pro entity zásad
 
 Kategorie **Zásady** obsahuje entity pro mobilní zařízení, které sledují informace, například:
 
-  - Inventář konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásad dodržování předpisů  
-  - Počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den  
-  - Počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den  
-  - Kumulativní počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu  
+- Inventář konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásad dodržování předpisů  
+- Počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den  
+- Počet uživatelů v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den  
+- Kumulativní počet zařízení v úspěšném, čekajícím, neúspěšném nebo chybovém stavu  
 
 ## <a name="policy"></a>zásady
 
@@ -59,7 +59,7 @@ Entita **PolicyType** obsahuje seznam typů konfiguračních profilů zařízen�
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
-**DeviceConfigurationProfileDeviceActivity** entita uvádí počet **zařízení** v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Například pokud **zařízení** je v úspěšném stavu pro všechny své přiřazené zásady, se zvýší Čítač úspěšných zařízení o jedno pro daný den. Pokud má zařízení přiřazené dva profily, jeden je v úspěšném stavu a druhý v chybovém stavu, entita zvýší čítač úspěšných zařízení o jedno a umístí zařízení do chybového stavu. Entita uvádí, kolik zařízení je v jakém stavu v daném dni za posledních 30 dní.
+Entita **DeviceConfigurationProfileDeviceActivity** uvádí počet **zařízení** v úspěšném, nevyřízeném, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Pokud je například **zařízení** v úspěšném stavu pro všechny přiřazené zásady, zvýší se v tomto dni čítač úspěšného dokončení. Pokud má zařízení přiřazené dva profily, jeden je v úspěšném stavu a druhý v chybovém stavu, entita zvýší čítač úspěšných zařízení o jedno a umístí zařízení do chybového stavu. Entita uvádí, kolik zařízení je v jakém stavu v daném dni za posledních 30 dní.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
@@ -69,7 +69,7 @@ Entita **PolicyType** obsahuje seznam typů konfiguračních profilů zařízen�
 | Chyba |Počet jedinečných zařízení v chybovém stavu |10 |
 | Neúspěch |Počet jedinečných zařízení v neúspěšném stavu |2 |
 
-**DeviceConfigurationProfileUserActivity** entita uvádí počet **uživatelé** v úspěšném, čekajícím, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Například pokud **uživatele** je v úspěšném stavu pro všechny své přiřazené zásady, přesune se Čítač úspěšných jednou za tento den. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu.  Entita **DeviceConfigurationProfileUserActivity** uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní.
+Entita **entita deviceconfigurationprofileuseractivity** uvádí počet **uživatelů** v úspěšném, nevyřízeném, neúspěšném nebo chybovém stavu za den. Číslo odráží konfigurační profily Zařízení přiřazené entitě. Například pokud je **uživatel** v úspěšném stavu pro všechny přiřazené zásady, posune čítač úspěšného počítadla o jeden den. Pokud má uživatel přiřazené dva profily, jeden je v úspěšném stavu a druhý je v chybovém stavu, započítá se uživatel v chybovém stavu.  Entita **DeviceConfigurationProfileUserActivity** uvádí, kolik uživatelů je v jakém stavu v daném dni za posledních 30 dní.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|

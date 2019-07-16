@@ -1,7 +1,7 @@
 ---
-title: Migrace podmíněného přístupu na webu Azure portal
+title: Migrace podmíněného přístupu do Azure Portal
 titleSuffix: Microsoft Intune
-description: Změna přiřazení zásad podmíněného přístupu, kterou jste předtím vytvořili v klasickém portálu Intune na portálu Azure portal.
+description: Znovu přiřaďte zásady podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune, na Azure Portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,72 +17,72 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883793"
 ---
-# <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune do portálu Azure
+# <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune na Azure Portal
 
-Spouští se v novém portálu Azure portal, podmíněný přístup nabízí podporu pro různé zásady na aplikaci, také větší přizpůsobitelnost. Pokud jste dříve vytvořili zásady podmíněného přístupu v klasickém portálu Intune, můžete je migrovat na Azure portal. 
+Počínaje novým Azure Portal poskytuje podmíněný přístup podporu více zásad pro jednotlivé aplikace, společně s větší úpravou. Pokud jste dříve vytvořili zásady podmíněného přístupu na klasickém portálu Intune, můžete je migrovat do Azure Portal. 
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Pokud jste připravení přejít na webu Azure portal, postupujte podle kroků v tomto tématu můžete změnit přiřazení zásad podmíněného přístupu, kterou jste předtím vytvořili v klasickém portálu Intune:
+Pokud jste připraveni přejít na Azure Portal, postupujte podle kroků v tomto tématu a znovu přiřaďte zásady podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune:
 
-- Shromážděte zásady podmíněného přístupu vytvořené dříve, abyste věděli, jaká nastavení budete později potřebovat znovu přiřadit.
+- Shromážděte zásady podmíněného přístupu, které jste dříve vytvořili, abyste věděli, jaká nastavení budete později potřebovat znovu přiřadit.
 
 - Podle pokynů v tomto tématu můžete tyto zásady znovu vytvořit na portálu Azure Portal.
 
 - Až si ověříte, že nové zásady na Azure Portalu fungují podle očekávání, zakažte podmíněné zásady na klasickém portálu Intune.
 <br /><br />
-    - **Před zakázáním** zásady podmíněného přístupu na klasickém portálu Intune, naplánujte, jak přesunete uživatele nové zásady. Existují dvě metody:
+  - **Než zakážete** zásady podmíněného přístupu na klasickém portálu Intune, naplánujte, jak přesunete uživatele na nové zásady. Existují dvě metody:
 <br /><br />
-        - **Použít stejnou skupinu pro zahrnutí, na kterou použijete zásady vytvořené na portálu Azure Portal, a vytvořit novou skupinu pro vyloučení, na kterou použijete zásady z klasického portálu Intune**.
-            - Postupně některé uživatele přesunete do skupiny pro vyloučení v klasickém portálu. Tím zabráníte, aby se použily zásady, na které cílí klasický portál Intune. Zásady vytvořené pro stejnou skupinu uživatelů na portálu Azure, na kterou jsou i zacílené, se použijí společně s těmi v klasickém portálu Intune. 
+    - **Použít stejnou skupinu pro zahrnutí, na kterou použijete zásady vytvořené na portálu Azure Portal, a vytvořit novou skupinu pro vyloučení, na kterou použijete zásady z klasického portálu Intune**.
+      - Postupně některé uživatele přesunete do skupiny pro vyloučení v klasickém portálu. Tím zabráníte, aby se použily zásady, na které cílí klasický portál Intune. Zásady vytvořené pro stejnou skupinu uživatelů na portálu Azure, na kterou jsou i zacílené, se použijí společně s těmi v klasickém portálu Intune. 
 <br /><br />
-        - **Vytvořit novou skupinu na kterou cílí zásady podmíněného přístupu na webu Azure Portal**. Pokud zvolíte tuto metodu, budete muset provést následující:
-            - Postupně odeberte uživatele ze skupin zabezpečení, které mají zásady podmíněného přístupu cílí na klasickém portálu Intune.
-            - Až ověříte, že nové zásady u těchto uživatelů fungují, můžete zásady v klasickém portálu Intune vypnout. 
+    - **Vytvořte novou skupinu, do které se budou cílit zásady podmíněného přístupu v Azure Portal**. Pokud zvolíte tuto metodu, budete muset provést následující:
+      - Postupně Odeberte uživatele ze skupin zabezpečení, na kterých jsou zacíleny zásady podmíněného přístupu na klasickém portálu Intune.
+      - Až ověříte, že nové zásady u těchto uživatelů fungují, můžete zásady v klasickém portálu Intune vypnout. 
 <br /><br />
-- Pokud máte nastavení zásad podmíněného přístupu nakonfigurované pomocí protokolu Exchange ActiveSync (EAS) v klasickém portálu Intune, přečtěte si téma [pokyny v tomto tématu](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) k **změnit přiřazení nastavení zásad podmíněného přístupu EAS na webu Azure portal**.
+- Pokud máte nastavení zásad podmíněného přístupu nakonfigurovaná tak, aby na klasickém portálu Intune používala Exchange ActiveSync (EAS), přečtěte si [pokyny v tomto tématu](#reassign-intune-device-based-conditional-access-policies-for-eas-clients) , abyste změnili **přiřazení nastavení zásad podmíněného přístupu EAS v Azure Portal**.
 
-### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Chcete-li ověřit na základě zařízení zásady podmíněného přístupu v klasickém portálu Intune
+### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Ověření zásad podmíněného přístupu na základě zařízení v klasickém portálu Intune
 
 1. Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
 
 2. Zvolte z levé nabídky možnost **Zásady**.
 
-3. Zvolte **podmíněného přístupu**, a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online) jste zásady podmíněného přístupu vytvořili.
+3. Zvolte **podmíněný přístup**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), pro kterou jste vytvořili zásadu podmíněného přístupu.
 
-4. Poznamenejte si nastavení podmíněného přístupu a použijte tyto při vytváření stejných zásad podmíněného přístupu na webu Azure Portal.
+4. Poznamenejte si nastavení podmíněného přístupu a podívejte se na ně při vytváření stejných zásad podmíněného přístupu v Azure Portal.
 
-### <a name="app-and-device-based-conditional-access-policies-working-together"></a>Na základě zařízení zásady podmíněného přístupu spolupracují a aplikace
+### <a name="app-and-device-based-conditional-access-policies-working-together"></a>Společné fungování zásad podmíněného přístupu podle aplikací a zařízení
 
-Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům nastavit podmíněná pravidla podle aplikací tak, aby přístup k firemním prostředkům mohly získat jenom aplikace podporující zásady ochrany aplikací Intune. Můžete se tyto zásady podmíněného přístupu na základě aplikace s použitím zásad podmíněného přístupu na základě zařízení. Podmíněné zásady podle zařízení a aplikací můžete zkombinovat (logický operátor A) nebo poskytnout jednu z možností (logický operátor NEBO). Pokud vaše požadavky zásad podmíněného přístupu mají:
+Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům nastavit podmíněná pravidla podle aplikací tak, aby přístup k firemním prostředkům mohly získat jenom aplikace podporující zásady ochrany aplikací Intune. Tyto zásady podmíněného přístupu na základě aplikace můžete překrývat pomocí zásad podmíněného přístupu na základě zařízení. Podmíněné zásady podle zařízení a aplikací můžete zkombinovat (logický operátor A) nebo poskytnout jednu z možností (logický operátor NEBO). Pokud jsou požadavky zásad podmíněného přístupu následující:
 
 - Vyžadovat vyhovující zařízení **A** použít schválenou aplikaci
-    - Byste své zásady podmíněného přístupu nastavit pomocí [okno Azure Active Directory podmíněného přístupu](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) a [okna Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Zásady podmíněného přístupu byste měli nastavit pomocí okna [Azure Active Directory podmíněný přístup](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies) a v okně [Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 <br /><br />
 - Vyžadovat vyhovující zařízení **NEBO** použít schválenou aplikaci
-    - Byste své zásady podmíněného přístupu nastavit pomocí [klasického portálu Intune](https://manage.microsoft.com) a [okna Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
+  - Zásady podmíněného přístupu byste měli nastavit pomocí klasického [portálu Intune](https://manage.microsoft.com) a okna [Intune App Protection](https://portal.azure.com/#blade/Microsoft_Intune/SummaryBlade/0).
 
 > [!TIP] 
 > Toto téma obsahuje snímky obrazovky srovnávající činnosti koncového uživatele na klasickém portálu Intune i na portálu Azure Portal.
 
-## <a name="reassign-intune-device-based-conditional-access-policies"></a>Změna přiřazení zásad podmíněného přístupu podle zařízení
+## <a name="reassign-intune-device-based-conditional-access-policies"></a>Změna přiřazení zásad podmíněného přístupu na základě zařízení v Intune
 
-1. Přejděte na [podmíněného přístupu na webu Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)a přihlaste se pomocí svých přihlašovacích údajů.
+1. Přejděte na [podmíněný přístup v Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)a přihlaste se pomocí svých přihlašovacích údajů.
 
 2. Zvolte **Nové zásady**.
 
 3. Zadejte název pro tuto zásadu.
 
-4. V části **přiřazení**, zvolte **uživatelů a skupin** na nové zásady podmíněného přístupu zacílili.
+4. V **části přiřazení**vyberte **Uživatelé a skupiny** , pro které chcete cílit na nové zásady podmíněného přístupu.
 
-    ![Obrázek této skupiny uživatelů porovná uživatelského rozhraní mezi Intune a Azure Portal](./media/reassign-ca-1.png)
+    ![Obrázek, který porovnává uživatelské rozhraní skupiny uživatelů mezi Intune a portály Azure](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 
     > Výběr, který provedete pro portál Azure Portal, musí odpovídat výběru, který jste provedli pro portál Classic. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
@@ -93,11 +93,11 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 7. V okně **Cloudové aplikace** zvolte **Vybrat aplikace**.
 
-8. Zvolte aplikaci, kterou chcete použít nové zásady podmíněného přístupu a klikněte na tlačítko **vyberte**.
+8. Zvolte aplikaci, na kterou chcete nové zásady podmíněného přístupu použít, a klikněte na **Vybrat**.
 
 9. Klikněte na **Done** (Hotovo).
 
-    ![Obrázek porovnání uživatelského rozhraní cloudové aplikace mezi Intune a Azure Portal](./media/reassign-ca-3.png)
+    ![Obrázek porovnání uživatelského rozhraní cloudové aplikace mezi službami Intune a portály Azure](./media/reassign-ca-3.png)
 
     > [!TIP] 
     > Pokud máte více aplikací se stejnými zásadami, můžete zvážit jejich sloučení na portálu Azure Portal do jedné zásady.
@@ -108,7 +108,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 12. Až budete s výběrem platforem zařízení hotoví, dvakrát klikněte na **Hotovo**.
 
-    ![Obrázek, který porovnává platformu zařízení uživatelského rozhraní z na portálech Intune a Azure](./media/reassign-ca-4.png)
+    ![Obrázek, který porovnává uživatelské rozhraní platformy zařízení na portálech Intune a Azure Portal](./media/reassign-ca-4.png)
 
     > [!TIP] 
     > Pokud jste vybrali jednotlivé platformy na klasickém portálu Intune, vyberte jednotlivé platformy i na portálu Azure Portal.
@@ -122,7 +122,7 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 15. Až budete s výběrem klientských aplikací hotoví, dvakrát klikněte na **Hotovo**.
 
-    ![Obrázek, který porovnává klientské aplikace uživatelského rozhraní mezi Intune a Azure Portal](./media/reassign-ca-6.png)
+    ![Obrázek, který porovnává uživatelské rozhraní klientských aplikací mezi Intune a portály Azure](./media/reassign-ca-6.png)
 
 16. Pokud jste na klasickém portálu Intune zvolili nastavení prohlížeče, vyberte na portálu Azure Portal **Prohlížeč** i **Mobilní aplikace a desktopoví klienti**. V případě, že jste na klasickém portálu Intune nastavení prohlížeče nezvolili, vyberte jenom **Mobilní aplikace a desktopoví klienti**. 
 
@@ -134,23 +134,23 @@ Okno **Intune App Protection** na portálu Azure Portal umožňuje správcům na
 
 20. Pokud zařízení s Windows zaregistrovaná v Intune a vyhovující nepovolujete, vylučte zásadu pro Windows z aktuální zásady. Pak vytvořte samostatnou zásadu s **Platformou zařízení** nastavenou na **Windows**, zahrňte další výše uvedené podmínky a v části pro **Udělení ovládacích prvků přístupu** zvolte **Vyžadovat zařízení připojené k doméně**.
 
-21. Na **nový** okně zásad podmíněného přístupu, zapněte **povolit zásady** přepnout a potom klikněte na tlačítko **vytvořit**.
+21. V okně **Nová** zásada podmíněného přístupu zapněte přepínač **Povolit zásadu** a pak klikněte na **vytvořit**.
 
-    ![Porovnání zásad podmíněného přístupu povolit uživatelské rozhraní mezi Intune a Azure](./media/reassign-ca-11.png)
+    ![Porovnání povolení uživatelského rozhraní zásad podmíněného přístupu mezi Intune a Azure](./media/reassign-ca-11.png)
 
-## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Změna přiřazení zásad podmíněného přístupu na základě zařízení pro klienty EAS
+## <a name="reassign-intune-device-based-conditional-access-policies-for-eas-clients"></a>Změna přiřazení zásad podmíněného přístupu na základě zařízení v Intune pro klienty EAS
 
-Pokud nakonfigurujete nastavení Exchange ActiveSync jako součást zásady Exchange Online v klasickém portálu Intune, musíte vytvořit druhou zásadu podmíněného přístupu na webu Azure Portal.
+Pokud jste nakonfigurovali nastavení Exchange ActiveSync jako součást zásady Exchange Online na klasickém portálu Intune, musíte v Azure Portal vytvořit druhou zásadu podmíněného přístupu.
 
-1. Přejděte na [podmíněného přístupu na webu Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)a přihlaste se pomocí svých přihlašovacích údajů.
+1. Přejděte na [podmíněný přístup v Azure Portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies)a přihlaste se pomocí svých přihlašovacích údajů.
 
 2. Zvolte **Nové zásady**.
 
 3. Zadejte název pro tuto zásadu.
 
-4. V části **přiřazení** zvolte **uživatelů a skupin** na nové zásady podmíněného přístupu zacílili.
+4. V části **přiřazení** vyberte **Uživatelé a skupiny** , pro které chcete cílit na nové zásady podmíněného přístupu.
 
-    ![Obrázek ukazující srovnání uživatelského rozhraní skupina uživatelů mezi na portálech Azure a Intune](./media/reassign-ca-12.png)
+    ![Obrázek znázorňující porovnání uživatelského rozhraní skupiny uživatelů mezi portály Azure a portály Intune](./media/reassign-ca-12.png)
 
     > [!IMPORTANT] 
     > Výběr, který provedete pro Azure Portal, musí odpovídat výběru, který jste provedli pro Azure Portal. Pokud máte třeba na klasickém portálu Intune vybrané všechny uživatele, vyberte **Všichni uživatelé** na portálu Azure Portal. Pokud jste navíc na klasickém portálu Intune zvolili možnost **Vyloučené skupiny**, tyto vybrané skupiny vylučte i na portálu Azure Portal.
@@ -161,14 +161,14 @@ Pokud nakonfigurujete nastavení Exchange ActiveSync jako součást zásady Exch
 
 7. V okně **Cloudové aplikace** klikněte na **Vybrat aplikace** a zvolte **Exchange Online**. Pak klikněte na **Vybrat** a **Hotovo**.
 
-    ![Obrázek srovnání uživatelského rozhraní cloudové aplikace mezi Intune a Azure Portal](./media/reassign-ca-14.png)
+    ![Obrázek srovnání uživatelského rozhraní cloudových aplikací mezi Intune a portály Azure](./media/reassign-ca-14.png)
 
     > [!IMPORTANT] 
     > Zásady podmíněného přístupu pro klienty EAS nemohou zahrnovat žádnou další cloudovou aplikaci.
 
 8. V okně **Podmínky** zvolte **Klientské aplikace** a pak vyberte příslušné klientské aplikace. Pokud jste se rozhodli blokovat klienty, kteří nejsou podporovaní službou Intune, použijte možnost **Použít zásady jenom na podporovaných platformách**.
 
-    ![Obrázek ukazující srovnání uživatelského rozhraní aplikace mezi Azure a Intune portály klienta](./media/reassign-ca-15.png)
+    ![Obrázek znázorňující porovnání uživatelského rozhraní klientských aplikací mezi portály Azure a portály Intune](./media/reassign-ca-15.png)
 
 9. Až budete s výběrem klientských aplikací hotoví, dvakrát klikněte na **Hotovo**.
 
@@ -176,33 +176,33 @@ Pokud nakonfigurujete nastavení Exchange ActiveSync jako součást zásady Exch
 
 11. V části **Udělení ovládacích prvků přístupu** zvolte **Vyžadovat, aby zařízení bylo označené jako vyhovující** a pak klikněte na **Vybrat**.
 
-    ![Obrázek, který porovnává udělení přístupu uživatelského rozhraní mezi Intune a Azure Portal](./media/reassign-ca-16.png)
+    ![Obrázek, který porovnává uživatelské rozhraní pro udělení přístupu mezi Intune a portály Azure](./media/reassign-ca-16.png)
 
-12. Na **nový** okně zásad podmíněného přístupu, zapněte **povolit zásady** přepnout a potom klikněte na tlačítko **vytvořit**.
+12. V okně **Nová** zásada podmíněného přístupu zapněte přepínač **Povolit zásadu** a pak klikněte na **vytvořit**.
 
-    ![Porovnání zásad podmíněného přístupu povolit uživatelské rozhraní mezi Intune a Azure](./media/reassign-ca-17.png)
+    ![Porovnání povolení uživatelského rozhraní zásad podmíněného přístupu mezi Intune a Azure](./media/reassign-ca-17.png)
 
 > [!NOTE]
 > Pokud nakonfigurujete možnost **Platformy zařízení**, uložení zásad se nezdaří a zobrazí se chyba „Konfigurace zásad není podporovaná“. Exchange ActiveSync nemůže identifikovat platformu, kterou používá připojující se zařízení. Při vytváření zásad pro zařízení Exchange ActiveSync se proto konfigurace specifických platforem zařízení nepodporuje.
 
-## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Vypnutí zásad podmíněného přístupu v klasickém portálu Intune
+## <a name="disable-conditional-access-policies-in-the-intune-classic-portal"></a>Vypnutí zásad podmíněného přístupu na klasickém portálu Intune
 
-Po změně přiřazení zásad podmíněného přístupu na webu Azure Portal, je důležité postupně vypínat zásady podmíněného přístupu vytvořené dříve na klasickém portálu Intune. Kromě toho budete muset použít stejnou skupinu zabezpečení k uplatnění zásad podmíněného přístupu vytvořených na webu Azure Portal.
+Po přeřadíte zásady podmíněného přístupu v Azure Portal je důležité postupně zakázat zásady podmíněného přístupu, které jste dříve vytvořili v klasickém portálu Intune. Kromě toho může být potřeba použít stejnou skupinu zabezpečení k uplatnění zásad podmíněného přístupu vytvořených v Azure Portal.
 
 > [!NOTE]
-> Před vypnutím zásad podmíněného přístupu v klasickém portálu Intune, najdete v článku [před zahájením](#before-you-begin) části na začátku tohoto tématu.
+> Než zakážete zásady podmíněného přístupu na klasickém portálu Intune, přečtěte si část [než začnete](#before-you-begin) na začátku tohoto tématu.
 
-### <a name="to-disable-the-conditional-access-policies"></a>Chcete-li zakázat zásady podmíněného přístupu
+### <a name="to-disable-the-conditional-access-policies"></a>Zakázání zásad podmíněného přístupu
 
 1. Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
 
 2. Zvolte z levé nabídky možnost **Zásady**.
 
-3. Zvolte **podmíněného přístupu**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), který jste vytvořili zásadu podmíněného přístupu.
+3. Zvolte **podmíněný přístup**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), pro kterou jste vytvořili zásadu podmíněného přístupu.
 
-4. Zrušte zaškrtnutí možnosti **zásady podmíněného přístupu povolit**a potom klikněte na tlačítko **Uložit**.
+4. Zrušte zaškrtnuté políčko **Povolit zásady podmíněného přístupu**a pak klikněte na **Uložit**.
 
-    ![Obrázek zásady podmíněného přístupu zakázat v klasickém portálu Intune](./media/reassign-ca-18.png)
+    ![Obrázek zakázání zásad podmíněného přístupu na klasickém portálu Intune](./media/reassign-ca-18.png)
 
 ## <a name="see-also"></a>Viz také:
 

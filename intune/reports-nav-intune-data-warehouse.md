@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 7c832fd423a2486fa7c2252513202d82dc432859
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882571"
 ---
-# <a name="microsoft-intune-data-warehouse-api"></a>Microsoft Intune Data Warehouse API
+# <a name="microsoft-intune-data-warehouse-api"></a>Rozhraní API datového skladu Microsoft Intune
 
 Rozhraní API datového skladu Intune umožňuje přistupovat k datům Intune ve strojově čitelném formátu pro použití ve vašem oblíbeném analytickém nástroji. Rozhraní API můžete používat k vytváření sestav poskytujících přehled o podnikovém mobilním prostředí. Rozhraní API používá protokol OData, který dodržuje standardní vzory pro:
 
-  - Hlavičky žádostí a odpovědí
-  - Stavové kódy
-  - Metody HTTP
-  - Konvence URL
-  - Typy médií
-  - Formáty datových částí
-  - Možnosti dotazu
+- Hlavičky žádostí a odpovědí
+- Stavové kódy
+- Metody HTTP
+- Konvence URL
+- Typy médií
+- Formáty datových částí
+- Možnosti dotazu
 
 OData (Open Data Protocol) je standard organizace OASIS (Organization for the Advancement of Structured Standards), který definuje osvědčené postupy pro vytváření a využívání rozhraní API RESTful. Datový sklad Intune používá OData verze 4.0.
 
@@ -56,14 +56,14 @@ Další informace najdete v článku [Získání dat z rozhraní API datového s
 
 Rozhraní API vyžaduje autorizaci pomocí Azure AD. Azure AD používá OAuth 2.0. Po autorizaci můžete získat data z rozhraní API pomocí příkazu HTTP GET a kontaktovat zveřejněné kolekce entit. Podrobnosti najdete v tématech:
 
- - [Autorizace](reports-api-url.md)
- - [Struktura adresy URL rozhraní API](reports-api-url.md)
+- [Autorizace](reports-api-url.md)
+- [Struktura adresy URL rozhraní API](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Datový model datového skladu Intune
 
 OData definuje abstraktní datový model a protokol, který umožní jakémukoli klientovi přistupovat k informacím zveřejněným jakýmkoli zdrojem dat. Téma dokumentace týkající se datového modelu obsahuje vysvětlení oborů názvů, entit a návratových objektů v datovém modelu datového skladu Intune. Další informace najdete v tématu [Datový model datového skladu](reports-ref-data-model.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Další informace o práci s Azure AD najdete v článku o [scénářích ověřování pro Azure AD](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 

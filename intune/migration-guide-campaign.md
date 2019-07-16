@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 35c0c6e6b65350d3b27c9dc1d9ab55d375dac070
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882849"
 ---
 # <a name="phase-2-migration-campaign"></a>Fáze 2: Kampaň migrace
 
@@ -43,19 +43,19 @@ Klíčové předpoklady pro úspěšnou migraci od jiného poskytovatele MDM do 
 
 - Monitorujte vytíženost technické podpory a úspěšnost registrace v jednotlivých cyklech. Ponechte si časovou rezervu, abyste mohli vyhodnotit kritéria úspěšnosti migrace každé skupiny, než přejdete k migraci další skupiny. Při pilotním nasazení byste měli zhodnotit následující:
 
-    - Míra úspěchu a selhání registrací je v rámci očekávání.
+  - Míra úspěchu a selhání registrací je v rámci očekávání.
 
-    - Produktivita uživatelů:
+  - Produktivita uživatelů:
 
-        - Firemní prostředky, například sítě VPN a Wi-Fi, e-mail a certifikáty, jsou funkční.
+    - Firemní prostředky, například sítě VPN a Wi-Fi, e-mail a certifikáty, jsou funkční.
 
-        - Uživatelé mají přístup ke zřízeným aplikacím.
+    - Uživatelé mají přístup ke zřízeným aplikacím.
 
-    - Zabezpečení dat:
+  - Zabezpečení dat:
 
-        - Generují se sestavy dodržování předpisů.
+    - Generují se sestavy dodržování předpisů.
 
-        - Vynucuje se ochrana mobilních aplikací.
+    - Vynucuje se ochrana mobilních aplikací.
 
 Pokud jste spokojení s první fází migrace, zopakujte daný [cyklus migrace](migration-guide-cycle.md) v další fázi.
 

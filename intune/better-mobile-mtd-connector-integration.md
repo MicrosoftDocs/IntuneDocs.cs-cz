@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 861c2dd73e3a78fd833a24500728bd977d1186a2
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883745"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrace Better Mobile s Intune
 
@@ -36,13 +36,13 @@ Před zahájením procesu integrace řešení Better Mobile a Intune zkontrolujt
 
 - Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:
 
-    - Přihlášení a čtení profilu uživatele
+  - Přihlášení a čtení profilu uživatele
 
-    - Přístup k adresáři jako přihlášený uživatel
+  - Přístup k adresáři jako přihlášený uživatel
 
-    - Čtení dat z adresáře
+  - Čtení dat z adresáře
 
-    - Odeslání informací o zařízení do Intune
+  - Odeslání informací o zařízení do Intune
 
 - Přihlašovací údaje správce pro přístup ke konzole pro správu Better Mobile
 
@@ -63,7 +63,7 @@ Postup autorizace aplikace Better Mobile:
 1. Přejděte ke [konzole pro správu Better Mobile](https://aad.bmobi.net) a přihlaste se pomocí svých přihlašovacích údajů.
 2. Zvolte **Integrace** > **EMM/MDM** > **PŘIDAT ÚČET**.
 
-     ![Obrázek konzoly pro správu lepší mobilní zařízení](media/better_mobile_console.png)
+     ![Obrázek lepší konzoly pro správu mobilních zařízení](media/better_mobile_console.png)
  
 3. Zvolte **Intune**.
 4. Vedle položky **NÁZEV ÚČTU** zadejte popisovač. 

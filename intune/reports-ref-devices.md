@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: e82ef9cc8e79332665db99d29ed511918f8c77b7
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884713"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
 Kategorie **Zařízení** obsahuje entity pro mobilní zařízení, které sledují informace, například:
 
-  - Typ zařízení
-  - Stav zápisu a registrace zařízení
-  - Vlastnictví zařízení
-  - Stav správy zařízení
-  - Stav členství zařízení v Azure AD
-  - Stav zápisu
-  - Historické informace o zařízení
-  - Inventář aplikací na daném zařízení
+- Typ zařízení
+- Stav zápisu a registrace zařízení
+- Vlastnictví zařízení
+- Stav správy zařízení
+- Stav členství zařízení v Azure AD
+- Stav zápisu
+- Historické informace o zařízení
+- Inventář aplikací na daném zařízení
 
 ## <a name="devicetypes"></a>DeviceTypes
 
@@ -73,69 +73,69 @@ Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné enti
 | 255 |Neznámé |Neznámý typ zařízení |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-**EnrollmentActivity** entity indikuje aktivitu registrace zařízení.
+Entita **EnrollmentActivity** označuje aktivitu registrace zařízení.
 
 | Vlastnost                      | Popis                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
-| dateKey                       | Klíč data, když se tato aktivita registrace přihlášení.               |
+| dateKey                       | Klíč data, kdy se tato aktivita registrace nahrála.               |
 | deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
-| deviceTypeKey                 | Klíč typu zařízení.                                                |
+| deviceTypeKey                 | Klíč typu zařízení                                                |
 | enrollmentEventStatusKey      | Klíč stavu indikující úspěch nebo neúspěch registrace.    |
-| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (pokud registrace nebyla úspěšná.).        |
-| enrollmentFailureReasonKey    | Klíč důvod selhání registrace (pokud registrace nebyla úspěšná.).          |
+| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (Pokud se registrace nezdařila)        |
+| enrollmentFailureReasonKey    | Klíč důvodu selhání registrace (Pokud se registrace nezdařila)          |
 | osVersion                     | Verze operačního systému zařízení.                               |
-| count                         | Celkový počet zápisu aktivit odpovídající klasifikace výše.  |
+| count                         | Celkový počet aktivit registrace, které odpovídají klasifikacím uvedeným výše.  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-**EnrollmentEventStatus** entity označuje výsledek registrace zařízení.
+Entita **EnrollmentEventStatus** indikuje výsledek registrace zařízení.
 
 | Vlastnost                   | Popis                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
-| enrollmentEventStatusName  | Název stavu registrace. Další příklady naleznete níže.                            |
+| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentEventStatusName  | Popis                            |
 |----------------------------|----------------------------------------|
-| Úspěch                    | Registrace úspěšná zařízení         |
-| Selhalo                     | Registrace zařízení se nezdařilo             |
-| Není k dispozici              | Stav zápisu není k dispozici.  |
+| Úspěch                    | Úspěšná registrace zařízení         |
+| Selhalo                     | Neúspěšná registrace zařízení             |
+| Není k dispozici              | Stav registrace není k dispozici.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
-**EnrollmentFailureCategory** entity označuje, proč registrace zařízení se nepovedla. 
+Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení nezdařila. 
 
 | Vlastnost                       | Popis                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureCategoryName  | Název kategorie chyby registrace. Další příklady naleznete níže.                            |
+| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentFailureCategoryName   | Popis                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nelze použít                  | Kategorie chyby registrace se nedá použít.                                                            |
-| Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
+| Nelze použít                  | Kategorie selhání registrace se nedá použít.                                                            |
+| Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
-| Authorization                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
-| AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
-| UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
+| Authorization                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
+| AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
+| UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
 | DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
-| InMaintenance                   | Účet je ve stavu údržby.                                                                                    |
-| Chybného požadavku                      | Klient odešle požadavek, který není srozumitelný/podporované službou.                                        |
-| FeatureNotSupported             | Funkce používá tento zápis nejsou podporovány pro tento účet.                                        |
-| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurované správcem blokované tato registrace.                                          |
-| ClientDisconnected              | Vypršel časový limit klienta nebo registrace byla přerušena koncovým uživatelem.                                                        |
-| UserAbandonment                 | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
+| Inúdržba                   | Účet je v údržbě.                                                                                    |
+| Důvodu chybného požadavku                      | Klient odeslal požadavek, který služba nerozpoznala nebo nepodporovala.                                        |
+| FeatureNotSupported             | Funkce používané tímto zápisem nejsou pro tento účet podporovány.                                        |
+| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurovaná správcem zablokovala tuto registraci.                                          |
+| ClientDisconnected              | Vypršel časový limit klienta nebo byl zápis přerušen koncovým uživatelem.                                                        |
+| UserAbandonment                 | Zápis byl opuštěn koncovým uživatelem. (Koncový uživatel zahájil registraci, ale nedokázal ho dokončit včas)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
-**EnrollmentFailureReason** entity označuje podrobnější důvod selhání registrace zařízení v kategorii daného selhání.  
+Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání registrace zařízení v dané kategorii selhání.  
 
 | Vlastnost                     | Popis                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
-| enrollmentFailureReasonKey   | Jedinečný identifikátor důvod selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureReasonName  | Název registrace důvod selhání. Další příklady naleznete níže.                            |
+| enrollmentFailureReasonKey   | Jedinečný identifikátor důvodu selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
@@ -143,21 +143,21 @@ Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné enti
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
-| Neznámé                          | Došlo k neznámé chybě.                                                                                                                                                                                         |
-| UserNotLicensed                  | Uživatel se nenašel v Intune nebo nemá platnou licenci.                                                                                                                                     |
-| UserUnknown                      | Uživatel není znám do Intune.                                                                                                                                                                           |
-| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení už zaregistroval někdo jiný uživatel.                                                                                                                |
-| EnrollmentOnboardingIssue        | Autoritu pro správu (MDM) Intune mobilního zařízení ještě není nakonfigurovaná.                                                                                                                                 |
-| AppleChallengeIssue              | Instalace profilu správy iOS se zpozdila nebo nebyla úspěšná.                                                                                                                                         |
-| AppleOnboardingIssue             | Certifikát Apple MDM push certificate se vyžaduje k registraci do Intune.                                                                                                                                       |
-| DeviceCap                        | Uživatel se pokusil zaregistrovat víc zařízení, než maximální povolená.                                                                                                                                        |
-| AuthenticationRequirementNotMet  | Registrace služby Intune se nepodařilo autorizovat tento požadavek.                                                                                                                                            |
-| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky pro registraci v Intune.                                                                                                                                  |
-| EnrollmentCriteriaNotMet         | Toto zařízení se nepodařilo registrovat z důvodu nakonfigurované registrace omezení pravidla.                                                                                                                          |
-| BulkDeviceNotPreregistered       | Nenašel se mezinárodní identifikátor mobilního zařízení (IMEI) nebo sériové číslo tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení v osobním vlastnictví, které jsou aktuálně zablokovány.  |
-| FeatureNotSupported              | Uživatel se pokusil pro přístup k funkci, která ještě není k všem zákazníkům nebo není kompatibilní s vaší konfigurací Intune.                                                            |
-| UserAbandonment                  | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
-| APNSCertificateExpired           | Zařízení Apple nelze spravovat pomocí vypršela platnost certifikátu Apple MDM push certificate.                                                                                                                            |
+| Neznámé                          | Neznámá chyba.                                                                                                                                                                                         |
+| UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
+| UserUnknown                      | Intune nezná uživatele.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení dřív zaregistroval jiný uživatel.                                                                                                                |
+| EnrollmentOnboardingIssue        | Autorita správy mobilních zařízení (MDM) Intune ještě není nakonfigurovaná.                                                                                                                                 |
+| AppleChallengeIssue              | Instalace profilu správy iOS byla zpožděna nebo se nezdařila.                                                                                                                                         |
+| AppleOnboardingIssue             | K registraci do Intune se vyžaduje certifikát Apple MDM push Certificate.                                                                                                                                       |
+| DeviceCap                        | Uživatel se pokusil zaregistrovat více zařízení, než je povolené maximum.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Službě registrace v Intune se nepovedlo autorizovat tuto žádost.                                                                                                                                            |
+| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky na registraci v Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Registrace tohoto zařízení se nepovedla kvůli nakonfigurovanému pravidlu omezení registrace.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nenašlo se číslo IMEI (International Mobile Equipment Identifier) tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení, která jsou v tuto chvíli zablokovaná.  |
+| FeatureNotSupported              | Uživatel se pokusil o přístup k funkci, která ještě není vydaná pro všechny zákazníky nebo není kompatibilní s vaší konfigurací Intune.                                                            |
+| UserAbandonment                  | Zápis byl opuštěn koncovým uživatelem. (Koncový uživatel zahájil registraci, ale nedokázal ho dokončit včas)                                                                                           |
+| APNSCertificateExpired           | Zařízení Apple se nedají spravovat pomocí certifikátu Apple MDM push Certificate s vypršenou platností.                                                                                                                            |
 ## <a name="ownertypes"></a>OwnerTypes
 
 Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním vlastnictví nebo neznámé.
@@ -166,10 +166,10 @@ Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním v
 |---------|------------|--------|
 | ownerTypeID |Jedinečný identifikátor typu vlastníka. | |
 | ownerTypeKey |Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč. | |
-| ownerTypeName |Představuje typ vlastníka zařízení:  <br>Firemní – zařízení je ve vlastnictví společnosti. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Podnikové osobní, neznámé |
+| ownerTypeName |Představuje typ vlastníka zařízení:  <br>Podnik – zařízení je ve vlastnictví podniku. <br>Osobní – zařízení je v osobním vlastnictví (BYOD).  <br>Neznámé – žádné informace o tomto zařízení nejsou dostupné. |Firemní osobní neznámý |
 
 > [!Note]  
-> Pro `ownerTypeName` v Azure AD při vytváření dynamické skupiny zařízení, je nutné nastavit hodnotu filtru `deviceOwnership` jako `Company`. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Při vytváření dynamických skupin pro zařízení `deviceOwnership` `Company` vnástrojiAzureADjepotřebanastavit`ownerTypeName` hodnotu filtru jako. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>ManagementStates
 
