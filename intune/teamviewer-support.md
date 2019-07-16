@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c05543884e0d9a00b570fb9ed4be1cdef65ca0
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66938332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882246"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -32,10 +32,10 @@ Zařízení spravovaná pomocí Intune je možné spravovat vzdáleně pomocí [
 
 - Správce Intune musí mít na portálu Azure Portal tyto [role Intune](role-based-access-control.md):  
 
-    - **Aktualizovat vzdálenou pomoc**: Umožňuje správcům upravit nastavení konektoru pro TeamViewer
-    - **Požádat o vzdálenou pomoc**: Umožňuje správcům zahájit novou relaci vzdálené pomoci pro libovolného uživatele. Uživatele s touto rolí neomezuje žádná role Intune, která je v daném rozsahu. Uživatelé nebo skupiny zařízení, kteří mají přiřazenou roli Intune v rámci rozsahu, si také můžou vyžádat vzdálenou pomoc. 
+  - **Aktualizovat vzdálenou pomoc**: Umožňuje správcům měnit nastavení konektoru pro TeamViewer.
+  - **Požádat o vzdálenou pomoc**: Umožňuje správcům spustit novou relaci vzdálené pomoci pro každého uživatele. Uživatele s touto rolí neomezuje žádná role Intune, která je v daném rozsahu. Uživatelé nebo skupiny zařízení, kteří mají přiřazenou roli Intune v rámci rozsahu, si také můžou vyžádat vzdálenou pomoc. 
 
-- A [TeamViewer](https://www.teamviewer.com) účtu s přihlašovacími údaji. Integrace se službou Intune můžou podporovat pouze některé licence Teamvieweru. Pro konkrétní potřeby TeamViewer, naleznete v tématu [partnera integrace TeamViewer: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
+- Účet [TeamVieweru](https://www.teamviewer.com) s přihlašovacími údaji pro přihlášení. Integraci s Intune můžou podporovat jenom některé licence pro TeamViewer. Konkrétní potřeby TeamVieweru najdete v [tématu partner Integration pro TeamViewer: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune vytvářet relace TeamVieweru, číst data služby Active Directory a uložit přístupový token účtu TeamVieweru.
 
@@ -60,10 +60,10 @@ Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Pos
 
 ![Vzdálená správa zařízení s Androidem pomocí TeamVieweru – příklad](./media/android-teamviewer.png)
 
-Při spuštění vzdálené relace uživatelé uvidí na svém zařízení u ikony aplikace portál společnosti příznak oznámení. Oznámení se zobrazí také při spuštění aplikace. Uživatelé pak může přijmout žádost o vzdálenou pomoc.
+Když spustíte vzdálenou relaci, uživatelé uvidí na svém zařízení příznak oznámení na ikoně aplikace Portál společnosti. Oznámení se zobrazí také při otevření aplikace. Uživatelé pak mohou žádost o vzdálenou pomoc přijmout.
 
 > [!NOTE]
-> Zařízení Windows, která jsou zapsaná pomocí "neobdrží" metod, jako je například DEM a WCD, nezobrazovat TeamViewer oznámení v aplikaci portál společnosti. V těchto scénářích platí doporučuje se používat portál Teamvieweru ke generování relace.
+> Zařízení s Windows, která jsou zaregistrovaná pomocí metod bez uživatelů, například DEM a WCD, nezobrazují v aplikaci Portál společnosti oznámení o TeamVieweru. V těchto scénářích doporučujeme k vygenerování relace použít portál TeamViewer.
 
 V TeamVieweru můžete provést na zařízení řadu akcí, včetně převzetí řízení zařízení. Úplné podrobnosti s informacemi, co můžete dělat, najdete v tématu [Pokyny k TeamVieweru](https://www.teamviewer.com/support/documents/).
 

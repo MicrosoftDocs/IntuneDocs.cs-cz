@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68a0372180cf516f5a0111cd8fdb7cbd9535f075
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883257"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
@@ -36,7 +36,7 @@ Do Intune můžete importovat jednorázové aktivační kódy poskytnuté vaší
 
 Pokud chcete eSIM nasadit do zařízení pomocí Intune, budete potřebovat následující:
 
-- **zařízení se karty eSIM**, jako je Surface LTE: Zobrazit [Pokud vaše zařízení podporuje karty eSIM](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Nebo si zobrazte seznam [známých zařízení s podporou eSIM](#esim-capable-devices) (v tomto článku).
+- **zařízení podporující ESIM kartu**, jako je například Surface LTE: Podívejte [se, jestli vaše zařízení podporuje eSIM kartu](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data). Nebo si zobrazte seznam [známých zařízení s podporou eSIM](#esim-capable-devices) (v tomto článku).
 - **Počítač s Windows 10 Fall Creators Update** (1709 nebo novější), který je zaregistrovaný a spravovaný prostřednictvím MDM přes Intune.
 - **Aktivační kódy** poskytnuté mobilním operátorem. Tyto jednorázové aktivační kódy se přidají do Intune a nasadí se do zařízení s podporou eSIM. Pokud chcete získat aktivační kódy eSIM, obraťte se na svého mobilního operátora.
 
@@ -66,10 +66,10 @@ U následujících zařízení byla oznámena podpora eSIM a mohou už být v pr
 - Lenovo T480
 - Samsung Galaxy Book
 - Surface Pro LTE
-- HP chyby zabezpečení Spectre Folio 13
+- HP Spectre Folio 13
 - Lenovo Yoga C630
 
-## <a name="step-1-add-cellular-activation-codes"></a>Krok 1: Přidat mobilní aktivační kódy
+## <a name="step-1-add-cellular-activation-codes"></a>Krok 1: Přidat aktivační kódy pro mobilní síť
 
 Mobilní aktivační kódy poskytuje mobilní operátor v souboru CSV (textový soubor s oddělovači). Jakmile tento soubor budete mít, přidejte ho do Intune následujícím postupem:
 
@@ -103,7 +103,7 @@ Při práci se souborem CSV, který obsahuje aktivační kódy, se ujistěte, ž
 
     ![Fond mobilních předplatných pojmenovaný podle názvu ukázkového souboru CSV](./media/esim-device-configuration/subscription-pool-name-csv-file.png)
 
-## <a name="step-2-create-an-azure-ad-device-group"></a>Krok 2: Vytvořte skupinu zařízení Azure AD
+## <a name="step-2-create-an-azure-ad-device-group"></a>Krok 2: Vytvoření skupiny zařízení Azure AD
 
 Vytvořte skupinu zařízení, která obsahuje zařízení s podporou eSIM. Celý postup je uvedený v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](groups-add.md).
 
@@ -111,7 +111,7 @@ Vytvořte skupinu zařízení, která obsahuje zařízení s podporou eSIM. Cel�
 > - Skupina se zaměřuje pouze na zařízení, ne uživatele.
 > - Doporučujeme vytvořit statickou skupinu zařízení Azure AD, která obsahuje zařízení s podporou eSIM. Když použijete skupinu, budete mít jistotu, že cílíte pouze na zařízení s podporou eSIM.
 
-## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Krok 3: Přiřadit karty eSIM aktivační kódy na zařízení
+## <a name="step-3-assign-esim-activation-codes-to-devices"></a>Krok 3: Přiřazení aktivačních kódů eSIM k zařízením
 
 Přiřaďte skupině Azure AD profil, který obsahuje zařízení s podporou eSIM.
 
@@ -148,10 +148,10 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
 
     Intune zobrazuje stav doručování a instalace aktivačního kódu cíleného na zařízení.
 
-    - **Zařízení není synchronizované**: Cílové zařízení nekontaktovalo Intune, protože byla vytvořena zásada nasazení karty eSIM
-    - **Čekající aktivace**: Přechodný stav, když Intune aktivně instaluje aktivační kód v zařízení
-    - **Aktivní**: Aktivace kódu instalace proběhla úspěšně.
-    - **Navrácení služeb po aktivaci**: Aktivace kódu instalace se nezdařila – najdete v článku řešení potíží s průvodce.
+    - **Zařízení není synchronizované**: Cílové zařízení nekontaktovalo Intune, protože se vytvořila zásada nasazení eSIM.
+    - **Čeká na aktivaci**: Přechodný stav při aktivní instalaci aktivačního kódu na zařízení v Intune
+    - **Aktivní**: Instalace aktivačního kódu byla úspěšná.
+    - **Aktivace**se nezdařila: Instalace aktivačního kódu selhala – Podívejte se na Průvodce odstraňováním potíží.
 
 #### <a name="view-the-detailed-device-status"></a>Zobrazení podrobného stavu zařízení
 
@@ -160,12 +160,12 @@ Podrobný seznam zařízení můžete monitorovat nebo si ho můžete zobrazit n
 1. Vyberte **Konfigurace zařízení** > **Mobilní profily eSIM** > Vyberte existující předplatné.
 2. Vyberte **Stav zařízení**. Intune zobrazí další podrobnosti o zařízení:
 
-  - **Název zařízení**: Název zařízení, která je cílem
-  - **Uživatel**: Uživatel na zaregistrovaném zařízení
-  - **ICCID**: Jedinečný kód poskytuje mobilních provoz v rámci aktivační kód, který je nainstalovaný na zařízení
-  - **Stav aktivace**: Stav doručování a instalaci Intune aktivace kódu na zařízení
-  - **Stav mobilní sítě**: Stav poskytované mobilním operátorem. (Potíže řešte přímo s mobilním operátorem.)
-  - **Poslední vrácení se změnami**: Datum poslední adrese zařízení s Intune
+    - **Název zařízení**: Název cílového zařízení
+    - **Uživatel**: Uživatel zaregistrovaného zařízení
+    - **ICCID**: Jedinečný kód poskytovaný při mobilní práci v rámci aktivačního kódu nainstalovaného v zařízení
+    - **Stav aktivace**: Stav doručení a instalace služby Intune pro aktivační kód na zařízení
+    - **Stav mobilní**sítě: Stav poskytnutý mobilním operátorem (Potíže řešte přímo s mobilním operátorem.)
+    - **Poslední vrácení se změnami**: Datum, kdy zařízení naposledy komunikovalo s Intune
 
 #### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorování podrobností profilu eSIM na příslušném zařízení
 
@@ -193,8 +193,8 @@ Profil eSIM se také odebere, když se zařízení [vyřadí](devices-wipe.md#re
 - Zkontrolujte, že je soubor CSV správně naformátovaný. Přesvědčte se, že soubor neobsahuje duplicitní kódy, více mobilních operátorů nebo různé datové tarify. Každý soubor musí být jedinečný pro daného mobilního operátora a mobilní datový tarif.
 - Vytvořte statickou skupinu zařízení Azure AD, která obsahuje pouze vybraná zařízení eSIM.
 - Pokud se vyskytl problém se stavem nasazení, zkontrolujte následující:
-  - **Formát souboru není správné**: Zobrazit **krok 1: Přidat mobilní aktivační kódy** (v tomto článku) o tom, jak správně formátu souboru.
-  - **Mobilní sítě aktivace se nezdařila, kontaktujte mobilním operátorem**: Aktivační kód nemusí být aktivovány v jejich síti. Mohlo také selhat stažení profilu a mobilní aktivace.
+  - **Formát souboru není správný**: Viz **krok 1: Přidejte kódy** aktivace mobilních telefonů (v tomto článku), jak správně zformátovat soubor.
+  - **Chyba aktivace mobilního telefonu, kontaktujte mobilního operátora**: Aktivační kód se nemusí aktivovat v rámci své sítě. Mohlo také selhat stažení profilu a mobilní aktivace.
 
 ## <a name="next-steps"></a>Další postup
 [Konfigurace profilů zařízení](device-profiles.md)

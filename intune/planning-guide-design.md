@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884882"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -49,47 +49,47 @@ Vaše současné prostředí může ovlivnit rozhodování o návrhu a mělo by 
 
 - **Identita v cloudu**
 
-    - Používáte DirSync nebo Azure Active Directory (Azure AD) Connect?
+  - Používáte DirSync nebo Azure Active Directory (Azure AD) Connect?
 
-    - Je vaše prostředí federované?
+  - Je vaše prostředí federované?
 
-    - Je aktivní vícefaktorové ověřování?
+  - Je aktivní vícefaktorové ověřování?
 
 - **Prostředí e-mailu**
 
-    - Používáte Exchange? Jedná se o místní nebo cloudové nasazení?
+  - Používáte Exchange? Jedná se o místní nebo cloudové nasazení?
 
-    - Probíhá u vás projekt migrace Exchange do cloudu?
+  - Probíhá u vás projekt migrace Exchange do cloudu?
 
 - **Současné řešení správy mobilních zařízení (MDM)**
 
-    - Používáte v současnosti nějaká jiná řešení MDM?
+  - Používáte v současnosti nějaká jiná řešení MDM?
 
-    - Jaká řešení MDM používáte ve scénářích použití firemních zařízení a ve scénářích BYOD?
+  - Jaká řešení MDM používáte ve scénářích použití firemních zařízení a ve scénářích BYOD?
 
-    - Jaké používáte funkce (například aplikace, nastavení zařízení, konfigurace Wi-Fi)?
+  - Jaké používáte funkce (například aplikace, nastavení zařízení, konfigurace Wi-Fi)?
 
-    - Jaké platformy zařízení jsou podporované?
+  - Jaké platformy zařízení jsou podporované?
 
-    - Jaké skupiny a kolik uživatelů používá řešení MDM?
+  - Jaké skupiny a kolik uživatelů používá řešení MDM?
 
 - **Řešení pro certifikáty**
 
-    - Implementovali jste řešení pro certifikáty?
+  - Implementovali jste řešení pro certifikáty?
 
-    - Jaké typy certifikátů používáte?
+  - Jaké typy certifikátů používáte?
 
 - **Správa systémů**
 
-    - Jak spravujete počítačové a serverové prostředí?
+  - Jak spravujete počítačové a serverové prostředí?
 
-    - Používáte System Center Configuration Manager? Používáte platformu pro správu systémů od jiného výrobce?
+  - Používáte System Center Configuration Manager? Používáte platformu pro správu systémů od jiného výrobce?
 
 - **Řešení VPN**
 
-    - Jaké máte řešení VPN?
+  - Jaké máte řešení VPN?
 
-    - Používáte ho ve scénářích použití firemních zařízení i ve scénářích BYOD?
+  - Používáte ho ve scénářích použití firemních zařízení i ve scénářích BYOD?
 
 Při popisu současného prostředí MDM nezapomeňte zaznamenat všechny projekty nebo jakékoli jiné plány, které by mohly vaše prostředí ovlivnit. Následující příklad ukazuje, jak při vytváření návrhu Intune můžete popsat současné prostředí:
 
@@ -108,10 +108,10 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 ## <a name="choose-an-intune-deployment-option"></a>Volba způsobu nasazení Intune
 
-Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatné znamená, že Intune běží v cloudu, hybridní znamená integraci Intune se System Center Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatně odkazuje na službu Intune běžící v cloudu, hybrid odkazuje na integraci Intune s System Center Configuration Manager. Tato příručka je určená primárně pro možnost samostatného nasazení. [Rozhodněte, která možnost vyhovuje požadavkům vaší firmy](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
->Registrace nové zákazníky hybridní MDM je zastaralá. Další informace najdete v tématu [přesunout z hybridní správy mobilních zařízení do Intune na Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogový příspěvek.
+>Připojování nových zákazníků hybridních MDM se už nepoužívá. Další informace najdete v příspěvku na blogu o [přesunu z hybridní správy mobilních zařízení do Intune v Azure](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) .
 
 
 ## <a name="intune-tenant-location"></a>Umístění tenanta Intune
@@ -137,7 +137,7 @@ Externí závislosti jsou služby a produkty, které jsou oddělené od Intune, 
 
 - Infrastruktura veřejných klíčů (PKI)
 
-V následujícím příkladu budeme věnovat podrobněji nejčastější externí závislosti.
+V následující části podrobněji prozkoumáme tyto běžné externí závislosti.
 
 ### <a name="identity"></a>Identita
 
@@ -216,7 +216,7 @@ Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet
 
 Intune podporuje jak zařízení vlastněná firmou, tak osobní zařízení. Zařízení se považuje za vlastněné firmou, pokud ho zaregistrujete pomocí některého správce nebo programu pro registraci zařízení. Pokud je například zařízení zaregistrované pomocí Programu registrace zařízení společnosti Apple (DEP – Device Enrollment Program), označí se jako vlastněné firmou a umístí se do skupiny zařízení, která dostává cílené firemní zásady a aplikace.
 
-Odkazovat na [část 3: Určení požadavků ve scénářích použití](planning-guide-requirements.md) pro případy použití pro další informace o podnikové i model byod UMOŽNÍ.
+[Viz část 3: Určení požadavků](planning-guide-requirements.md) na scénář použití pro další informace o podnikových a BYODch případech použití.
 
 ### <a name="bulk-enrollment"></a>Hromadná registrace
 
@@ -262,8 +262,8 @@ Měli byste vytvořit alespoň jednu zásadu konfigurace pro každou platformu. 
 
 | **Název zásady** | **Platforma zařízení** | **Nastavení** | **Cílová skupina** |   
 |:---:|:---:|:---:|:---:|
-| Firemní – iOS | iOS | PIN je povinný, délka: 6, omezit zálohování do cloudu | Firemní zařízení |                                                           
-| Firemní – Android | Android | PIN je povinný, délka: 6, omezit zálohování do cloudu | Firemní zařízení |                                                           
+| Firemní – iOS | iOS | PIN je povinný, délka: 6. omezení zálohování v cloudu | Firemní zařízení |                                                           
+| Firemní – Android | Android | PIN je povinný, délka: 6. omezení zálohování v cloudu | Firemní zařízení |                                                           
 | Vlastní zařízení uživatelů – iOS  | iOS | PIN je povinný, délka: 4 | Vlastní zařízení uživatelů |
 | Vlastní zařízení uživatelů – Android  | Android | PIN je povinný, délka: 4 | Vlastní zařízení uživatelů |
 
@@ -389,7 +389,7 @@ Zásady ochrany aplikace minimalizují ztrátu dat tím, že definují, jak apli
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady ochrany aplikací.
 #### <a name="compliance-policies"></a>Zásady dodržování předpisů
 
-Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme vám navrhnout [zásady dodržování předpisů zařízením](device-compliance.md).
+Zásady dodržování předpisů určují, zda zařízení vyhovuje určitým požadavkům. Služba Intune používá zásady dodržování předpisů k tomu, aby zjistila, jestli zařízení vyhovuje nebo nevyhovuje. Stav dodržování předpisů je pak možné použít k zakázání nebo povolení přístupu k firemním prostředkům. Pokud se vyžaduje podmíněný přístup, doporučujeme navrhnout [zásadu dodržování předpisů pro zařízení](device-compliance.md).
 
 Pokud chcete zjistit, kolik zásad dodržování předpisů zařízením potřebujete a jaké skupiny uživatelů jsou cílové, přečtěte si požadavky a případy použití. Dále musíte rozhodnout, jak dlouho smí být zařízení offline bez přihlášení, než se začne považovat za nedodržující předpisy.
 
@@ -403,21 +403,21 @@ Tady je příklad návrhu zásad dodržování předpisů:
 Můžete si [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby pro vlastní zásady dodržování předpisů.
 #### <a name="conditional-access-policies"></a>Zásady podmíněného přístupu
 
-Podmíněný přístup umožňuje povolit přístup k e-mailu a dalším firemním prostředkům jenom kompatibilním zařízením. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, pokud se vyžadují podmíněný přístup, a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
+Podmíněný přístup slouží k povolení přístupu k e-mailu a dalším prostředkům společnosti jenom vyhovujícím zařízením. Při řízení přístupu k firemním prostředkům spolupracuje Intune s řešením Enterprise Mobility + Security (EMS). Rozhodněte, jestli požadujete podmíněný přístup a co musí být zabezpečené. Další informace o [podmíněném přístupu](conditional-access.md).
 
-U online přístupu rozhodněte, jaké platformy a skupiny uživatelů bude cílit zásady podmíněného přístupu. Kromě toho určete, jestli je potřeba nainstalovat nebo nakonfigurovat konektor Intune pro místní Exchange: 
+V případě online přístupu rozhodněte, které platformy a skupiny uživatelů budete cílit podle zásad podmíněného přístupu. Také určete, jestli potřebujete nainstalovat nebo nakonfigurovat konektor Intune pro místní Exchange: 
 
 - [Místní Exchange](exchange-connector-install.md)
 
-Tady je příklad toho, jak zásady podmíněného přístupu dokumentu:
+Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
 | **Služba** | **Platformy moderního ověřování** | **Základní ověřování** | **Případy použití** |   
 |:---:|:---:|:---:|:---:|
 | Exchange Online | iOS, Android | Blokování nevyhovujících zařízení na platformách podporovaných službou Intune | Firemní zařízení, vlastní zařízení uživatelů |
 | SharePoint Online | iOS, Android |  | Firemní zařízení, vlastní zařízení uživatelů |
 
-Je možné [stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby vaše zásady podmíněného přístupu.
+Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby zásad podmíněného přístupu.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Další část obsahuje pokyny k [procesu implementace Intune](planning-guide-onboarding.md).

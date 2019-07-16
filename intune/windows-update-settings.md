@@ -1,6 +1,6 @@
 ---
-title: Windows Update pro firmy nastavení pro Microsoft Intune – Azure | Dokumentace Microsoftu
-description: WUfB nastavení pro zařízení s Windows 10, které můžete nasadit pomocí Intune.
+title: Nastavení aktualizace Windows pro firmy pro Microsoft Intune – Azure | Microsoft Docs
+description: Nastavení WUfB pro zařízení s Windows 10, která můžete nasadit pomocí Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -14,235 +14,235 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c5a0ee88a24804294346888facef523f89fee816
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9e9baf3593883cf2fa2402a0b4daec638a336366
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884201"
 ---
-# <a name="windows-update-settings-for-intune"></a>Windows aktualizovat nastavení pro Intune  
+# <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
-Zobrazit nastavení aktualizace Windows 10 můžete [konfigurovat a spravovat](windows-update-for-business-configure.md) pomocí Microsoft Intune.  
+Prohlédněte si nastavení aktualizace Windows 10, která můžete [Konfigurovat a spravovat](windows-update-for-business-configure.md) pomocí Microsoft Intune.  
 
-Při konfiguraci nastavení pro aktualizační okruhy Windows 10 v Intune, konfiguraci nastavení aktualizace Windows. Pokud je aktualizace Windows nastavení má závislost na verzi Windows 10, verze závislosti je podrobně popsané nastavení.  
+Když konfigurujete nastavení pro aktualizační kanály Windows 10 v Intune, konfigurujete nastavení web Windows Update. Pokud má nastavení Windows Update závislost na verzi Windows 10, zaznamená se závislost na verzi v podrobnostech nastavení.  
 
 ## <a name="update-settings"></a>Aktualizovat nastavení  
 
-Aktualizovat správu nastavení bits, jaké budou zařízení stahovat, a kdy. Další informace o chování každé nastavení naleznete v referenční dokumentaci pro Windows.  
+Nastavení aktualizace řídí, co se bude stahovat a kdy se zařízení stáhne. Další informace o chování jednotlivých nastaveních najdete v referenční dokumentaci k systému Windows.  
 
 ### <a name="servicing-channel"></a>Kanál pro údržbu  
 
 - **Výchozí**: Půlroční kanál (cílený)  
-- **Referenční dokumentace ke službě Windows**: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
-Nastavte kanál (větve), ze kterého má zařízení přijímat aktualizace Windows. Různé kanály můžete použít různé odložení období před aktualizace jsou doručovány.  
+- **Referenční dokumentace systému Windows**: [Update/BranchReadinessLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-branchreadinesslevel)  
+Nastavte kanál (větev), ze kterého zařízení přijímá aktualizace systému Windows. Různé kanály můžou před doručením aktualizací používat odlišná období odložení.  
 
-Například *prostřednictvím půlročního kanálu* má šest měsíců odložení. Pokud používáte tento kanál se žádné další odložení z této části nastavení, zařízení nainstaluje aktualizace šest měsíců po jeho uvolnění.  
+Například *půlroční kanál* má odložení po dobu šesti měsíců. Pokud použijete tento kanál bez dalších odložení z tohoto základního nastavení, zařízení nainstaluje aktualizaci po dobu šesti měsíců po jejím vydání.  
 
-Podporované aktualizace kanály:  
+Podporované kanály pro aktualizace:  
 
 - Půlroční kanál  
 - Půlroční kanál (cílený)  
-- Windows Insider – Fast  
-- Windows Insider – pomalý  
+- Windows Insider – rychlá  
+- Windows Insider – pomalé  
 - Windows Insider – Release  
 
-Pokud vyberete kanál Insider, Intune automaticky nakonfiguruje nastavení aktualizace Windows [aktualizace/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) tak, aby pracovaly se sestavení insider.  
+Když vyberete kanál Insider, Intune automaticky nakonfiguruje nastavení služby Windows Update [Update/ManagePreviewBuilds](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-managepreviewbuilds) , aby se Build Insider mohl pracovat.  
 
 
 > [!IMPORTANT]  
-> Od systému Windows verze 1903, použití *půlroční kanál (cílený)* (SAC-T), byl vyřazen z provozu. Díky této změně SAC-T sloučí s *prostřednictvím půlročního kanálu*. Další informace o této změně a o jejím dopadu na Windows Update for Business, najdete v příspěvku blogu IT Pro Windows [Windows Update pro firmy a vyřazení SAC-T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).
+> Počínaje systémem Windows verze 1903 je použití *pololetního kanálu (cílené)* (SAC-T) vyřazeno. Při této změně se SAC – T sloučí s půlročním *kanálem*. Pokud chcete získat další informace o této změně a o tom, jak má vliv na web Windows Update pro firmy, přečtěte si Blogový příspěvek ve Windows pro IT specialisty [web Windows Update pro firmy a vyřazení konzoly SAC – T](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/Windows-Update-for-Business-and-the-retirement-of-SAC-T/ba-p/339523).
  
 
 
-### <a name="microsoft-product-updates"></a>Aktualizace produktů Microsoftu  
+### <a name="microsoft-product-updates"></a>Aktualizace produktů společnosti Microsoft  
 
-- **Výchozí**:  Povolit
-- **Referenční dokumentace ke službě Windows**: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
+- **Výchozí**:  Allow
+- **Referenční dokumentace systému Windows**: [Update/AllowMUUpdateService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowmuupdateservice)
 
-Zvolte *povolit* kontrolu aktualizace aplikací z webu Microsoft Update.    
+Vyberte možnost *umožňuje* vyhledávat aktualizace aplikací z Microsoft Update.    
 
 ### <a name="windows-drivers"></a>Ovladače Windows  
 
-- **Výchozí**:  Povolit
-- **Referenční dokumentace ke službě Windows**: [Update/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
+- **Výchozí**:  Allow
+- **Referenční dokumentace systému Windows**: [Aktualizovat/ExcludeWUDriversInQualityUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-excludewudriversinqualityupdate)
 
-Zvolte *povolit* zahrnout ovladače Windows Update během aktualizací
+V případě aktualizací vyberte možnost *Allow* include web Windows Update Drivers.
 
-### <a name="quality-update-deferral-period-days"></a>Odložení aktualizace kvality (dny)  
-
-- **Výchozí**: 0  
-- **Referenční dokumentace ke službě Windows**: [Update/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
-
-Zadejte počet dnů od 0 do 30, pro kterou budou aktualizace kvality odložené. Toto období se kromě období odkladu, který je součástí služby kanál, který jste vybrali. Doba odkladu začíná, když je zařízení přijímat zásady.  
-
-Aktualizace kvality jsou obecně opravy a vylepšení stávajících funkcí Windows.  
-
-### <a name="feature-update-deferral-period-days"></a>Odložení aktualizace funkcí (ve dnech)  
+### <a name="quality-update-deferral-period-days"></a>Doba odložení aktualizace kvality (ve dnech)  
 
 - **Výchozí**: 0  
-- **Referenční dokumentace ke službě Windows**: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+- **Referenční dokumentace systému Windows**: [Aktualizovat/DeferQualityUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays)  
 
-Zadejte počet dní, pro které budou aktualizace funkcí odložené. Toto období se kromě období odkladu, který je součástí služby kanál, který jste vybrali. Doba odkladu začíná, když je zařízení přijímat zásady.  
-Doba odkladu podporované:  
+Zadejte počet dní od 0 do 30, pro které se odložit aktualizace kvality. Toto období je kromě všech období odložení, které je součástí zvoleného kanálu služby. Doba odložení začíná, když zařízení obdrží zásady.  
 
-- *Windows verze 1709 nebo novější*: 0 až 365 dnů  
+Aktualizace kvality jsou obvykle opravy a vylepšení stávajících funkcí systému Windows.  
+
+### <a name="feature-update-deferral-period-days"></a>Doba odložení aktualizace funkcí (ve dnech)  
+
+- **Výchozí**: 0  
+- **Referenční dokumentace systému Windows**: [Update/PauseFeatureUpdatesPeriodInDays](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-deferfeatureupdatesperiodindays)  
+
+Zadejte počet dní, po které se mají odložit aktualizace funkcí. Toto období je kromě všech období odložení, které je součástí zvoleného kanálu služby. Doba odložení začíná, když zařízení obdrží zásady.  
+Podporované období odložení:  
+
+- *Windows verze 1709 nebo novější*: 0 až 365 dní  
 - *Windows verze 1703*:  0 až 180 dní  
 
 Aktualizace funkcí jsou zpravidla nové funkce pro Windows.  
 
-### <a name="set-feature-update-uninstall-period-2--60-days"></a>Odinstalace aktualizací funkcí sady období (2 – 60 dní)  
+### <a name="set-feature-update-uninstall-period-2--60-days"></a>Nastavit období odinstalace aktualizací funkcí (2 – 60 dní)  
 
 - **Výchozí**: 10  
-- **Referenční dokumentace ke službě Windows**:  [Update/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
+- **Referenční dokumentace systému Windows**:  [Aktualizovat/ConfigureFeatureUpdateUninstallPeriod](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configurefeatureupdateuninstallperiod)  
 
-Nakonfigurujte čas, po aktualizace funkcí, které není možné odinstalovat.  
+Nakonfigurujte čas, po kterém se aktualizace funkcí nedají odinstalovat.  
 
-Po vypršení tohoto limitu, předchozí bity aktualizace se odebere ze zařízení a nebudou moci odinstalujte předchozí verzi aktualizace.  
+Po uplynutí této doby se ze zařízení odeberou předchozí aktualizace a nebude už možné ji odinstalovat na předchozí verzi aktualizace.  
 
-Představte si třeba aktualizační kanál s funkcí aktualizace odinstalovat 20 dnů. Za 25 dnů rozhodnete vrátit nejnovější aktualizace funkcí a použijte možnost odinstalovat.  Zařízení s nainstalovanou aktualizací funkcí před více než 20 dny ji nelze odinstalovat, protože se odebraly nezbytné bity jako součást jejich údržbu. Zařízení, která instaluje aktualizace funkcí do 19 dny však můžete aktualizaci odinstalovat, pokud se úspěšně vrácení se změnami do zobrazí příkaz odinstalovat před překročení doby 20 dnů odinstalovat.  
+Představte si například aktualizační kanál s dobou odinstalace aktualizace funkcí o 20 dní. Po 25 dnech se rozhodnete vrátit nejnovější aktualizaci funkcí a použít možnost odinstalace.  Zařízení, na která se nainstalovala aktualizace funkcí víc než 20 dní, ji nemůžou odinstalovat, protože v rámci údržby odebrala potřebné bity. Zařízení, u kterých se tato funkce nainstalovala jenom do 19 dnů, ale můžou aktualizaci odinstalovat, jenom když se úspěšně zaregistrují, aby se před tím, než je doba odinstalace odinstalovala.  
 
 
-## <a name="user-experience-settings"></a>Nastavení činnosti koncového uživatele  
+## <a name="user-experience-settings"></a>Nastavení uživatelského prostředí  
 
-Nastavení činnosti koncového uživatele řídit činnost koncového uživatele při restartování zařízení a připomenutí. Další informace o chování každé nastavení naleznete v referenční dokumentaci pro Windows.  
+Nastavení uživatelského prostředí řídí činnost koncového uživatele při restartu a připomenutích zařízení. Další informace o chování jednotlivých nastaveních najdete v referenční dokumentaci k systému Windows.  
 
-### <a name="automatic-update-behavior"></a>Chování automatické aktualizace  
+### <a name="automatic-update-behavior"></a>Chování Automatické aktualizace  
 
 - **Výchozí**: Automaticky nainstalovat a restartovat v naplánovaném čase  
-- **Referenční dokumentace ke službě Windows**: [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+- **Referenční dokumentace systému Windows**: [Aktualizovat/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
-Zvolte způsob, jakým automatické aktualizace jsou nainstalovány a v případě potřeby, kdy se má zařízení restartovat.  
+Vyberte, jak se mají instalovat automatické aktualizace, a pokud je to nutné, když zařízení restartujete.  
 
-V dokumentaci reference Windows pro úplné informace následující podporované možnosti:  
+Kompletní informace o následujících podporovaných možnostech najdete v referenční dokumentaci Windows:  
 
-- **Oznámit stažení** – upozornit uživatele, než si stáhnete aktualizaci. Uživatelům se rozhodli stáhnout a nainstalovat aktualizace.  
+- **Odeslat zprávu pro stažení** – před stažením aktualizace upozorněte uživatele. Uživatelé si můžou stáhnout a nainstalovat aktualizace.  
 
-- **Automaticky nainstalovat v době údržby** – stahování aktualizací automaticky a potom nainstalovat během automatické údržby, pokud zařízení není používán nebo funguje na baterii. Když se vyžaduje restartování, uživatelům se výzva k restartování po dobu až sedmi dnů a potom vynucené restartování.  
+- **Automaticky nainstalovat v době údržby** – aktualizace se automaticky stahují a pak se během automatické údržby nainstalují, když se zařízení nepoužívá nebo neběží při napájení z baterie. Po restartování počítače se uživatelům zobrazí výzva k restartování po dobu až sedmi dnů a pak se restartování vynutí.  
 
-  Tuto možnost můžete restartovat zařízení automaticky po instalaci aktualizace. Použití **aktivní doby** nastavení můžete určit dobu, během které jsou blokovány, automatické restartování:  
+  Tato možnost po instalaci aktualizace může zařízení restartovat automaticky. Pomocí nastavení **aktivní hodiny** můžete definovat období, během kterého jsou automatické restartování blokované:  
 
-  - **Začátek aktivní doby**: Zadejte čas zahájení pro potlačení restartu kvůli instalaci aktualizací.  
-    **Referenční dokumentace ke službě Windows**:  [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Výchozí**: 8 AM  
+  - **Začátek aktivních hodin**: Zadejte počáteční čas pro potlačení restartování z důvodu instalace aktualizací.  
+    **Referenční dokumentace systému Windows**:  [Aktualizovat/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+    **Výchozí**: 8 DOP.  
   
-  - **Konec aktivní doby**: Zadejte čas ukončení pro potlačení restartování kvůli instalaci aktualizací.  
-    **Referenční dokumentace ke službě Windows**:  [Aktualizace/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Výchozí**: 17: 00  
+  - **Konec aktivní hodiny**: Zadejte čas ukončení pro potlačení restartování z důvodu instalace aktualizací.  
+    **Referenční dokumentace systému Windows**:  [Aktualizovat/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+    **Výchozí**: 5 ODP.  
 
-- **Automaticky nainstalovat a restartovat v době údržby** – stahování aktualizací automaticky a potom nainstalovat během automatické údržby, pokud zařízení není používán nebo funguje na baterii. Když se vyžaduje restartování, zařízení se restartuje, když se nevyužívají. (Toto je výchozí pro nespravovaná zařízení.)  
+- Automaticky **nainstalovat a restartovat v době údržby** – aktualizace se automaticky stahují a pak se nainstalují během automatické údržby, když se zařízení nepoužívá nebo se spouští při napájení z baterie. Pokud je vyžadováno restartování, zařízení se restartuje, když se nepoužívá. (Toto je výchozí nastavení pro nespravovaná zařízení.)  
 
-  Tuto možnost můžete restartovat zařízení automaticky po instalaci aktualizace. Použití **aktivní doby** nastavení nejsou popsané v nastavení služby Windows Update, ale používají Intune můžete určit dobu, během které jsou blokovány, automatické restartování:  
+  Tato možnost po instalaci aktualizace může zařízení restartovat automaticky. Použití nastavení **aktivní hodiny** není popsané v nastavení web Windows Update, ale používá se v Intune k definování období, během kterého se zablokuje automatické restartování:  
 
-  - **Začátek aktivní doby**: Zadejte čas zahájení pro potlačení restartu kvůli instalaci aktualizací.  
-    **Referenční dokumentace ke službě Windows**:  [Update/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
-    **Výchozí**: 8 AM  
+  - **Začátek aktivních hodin**: Zadejte počáteční čas pro potlačení restartování z důvodu instalace aktualizací.  
+    **Referenční dokumentace systému Windows**:  [Aktualizovat/ActiveHoursStart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursstart)  
+    **Výchozí**: 8 DOP.  
 
-  - **Konec aktivní doby**: Zadejte čas ukončení pro potlačení restartování kvůli instalaci aktualizací.  
-    **Referenční dokumentace ke službě Windows**:  [Aktualizace/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
-    **Výchozí**: 17: 00  
+  - **Konec aktivní hodiny**: Zadejte čas ukončení pro potlačení restartování z důvodu instalace aktualizací.  
+    **Referenční dokumentace systému Windows**:  [Aktualizovat/ActiveHoursEnd](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-activehoursend)  
+    **Výchozí**: 5 ODP.  
 
-- **Automaticky nainstalovat a restartovat v naplánovaném čase** – zadejte instalace den a čas. Pokud tento parametr zadán, spuštěna instalace v 3 hodin denně, následované odpočítávání 15 minut na restartování. Přihlášený používá můžete odložit odpočítávání a restartovat.  
+- **Automaticky nainstalovat a restartovat v naplánovaném čase** – zadejte den a čas instalace. Je-li tento parametr zadán, bude instalace spuštěna 3. den a následuje 15 minut odpočítávání za účelem restartu. Přihlášené používání může zpozdit odpočítávání a restartování.  
   
   Tato možnost podporuje další nastavení.  
-  **Referenční dokumentace ke službě Windows**:  [Update/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
+  **Referenční dokumentace systému Windows**:  [Aktualizovat/AllowAutoUpdate](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-allowautoupdate)  
 
   - **Frekvence automatického chování**: Pomocí něj můžete naplánovat, kdy se aktualizace nainstalují (můžete určit týden, den a čas).  
     **Výchozí**: Každý týden
 
-  - **Den plánované instalace**:  Zadejte den v týdnu, kdy se mají aktualizace instalovat.  
-    **Výchozí**: Libovolný den  
+  - **Den plánované instalace**:  Určete, ke kterému dni v týdnu chcete nainstalovat aktualizace.  
+    **Výchozí**: Každý den  
 
-  - **Čas plánované instalace**:  Zadejte čas den, kdy se mají aktualizace instalovat.  
-    **Výchozí**: 3 AM  
+  - **Čas plánované instalace**:  Zadejte denní dobu, kdy chcete nainstalovat aktualizace.  
+    **Výchozí**: 3 DOP.  
 
-- **Automaticky nainstalovat a restartovat bez ovládání koncovým uživatelem** – stahování aktualizací automaticky a potom nainstalovat během automatické údržby, pokud zařízení není používán nebo funguje na baterii. Když se vyžaduje restartování, zařízení se restartuje, když se nevyužívají. Tato možnost nastaví jen pro čtení v podokně ovládacího prvku koncovým uživatelům.  
+- Automaticky **nainstalovat a restartovat bez ovládacího prvku pro koncové uživatele** – aktualizace se automaticky stahují a pak se během automatické údržby nainstalují, když se zařízení nepoužívá nebo neběží při napájení z baterie. Pokud je vyžadováno restartování, zařízení se restartuje, když se nepoužívá. Tato možnost nastaví podokno ovládacího prvku koncoví uživatelé na jen pro čtení.  
 
-- **Obnovit výchozí** – obnovení původního nastavení automatických aktualizací na Windows 10 počítačů, které používají aktualizace z října 2018 nebo novější.  
+- **Obnovit výchozí** – obnoví původní nastavení automatické aktualizace na počítačích s Windows 10, na kterých běží aktualizace z října 2018 nebo novější.  
 
 
-### <a name="restart-checks"></a>Kontroly při restartu  
+### <a name="restart-checks"></a>Restartovat kontroly  
 
-- **Výchozí**: Povolit  
-- **Referenční dokumentace ke službě Windows**: [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
+- **Výchozí**: Allow  
+- **Referenční dokumentace systému Windows**: [Aktualizovat/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart)  
 
-Toto nastavení má odlišné výsledky v závislosti na verzi Windows, která se týká zařízení:  
+Toto nastavení má různé výsledky v závislosti na verzi Windows pro zařízení:  
 
-- 1703 a starší verze Windows: Po restartu zařízení se provádí některé kontroly, například zjišťování aktivních uživatelů, stavu baterie, spuštěných her a další. Pokud tyto kontroly chcete přeskočit, zvolte **Přeskočit**.  
-- Od systému Windows verze 1709: Během aktivní doby následující procesy nespouštět aktualizací: zkontrolovat, stáhnout, nainstalovat a restartovat. Po skenování aktivní doby aktualizace procesy spuštění a může probudit z režimu spánku, zařízení, stáhnout, nainstalovat a restartovat zařízení jako splněné kontroly baterie a napájení. Další informace najdete v tématu [aktualizace/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart).  
+- Windows verze 1703 a starší: Po restartu zařízení se provádí některé kontroly, například zjišťování aktivních uživatelů, stavu baterie, spuštěných her a další. Pokud tyto kontroly chcete přeskočit, zvolte **Přeskočit**.  
+- Počínaje systémem Windows verze 1709: Během aktivní hodiny se pro aktualizace nespouštějí následující procesy: kontrola, stažení, instalace a restartování. Po aktivní hodině se procesy aktualizace spouštějí a můžou zařízení probudit z režimu spánku, prohledávat, stahovat, instalovat a restartovat zařízení, pokud se kontrolují baterie a kontrolují napájení. Další informace najdete v tématu [Update/SetEDURestart](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setedurestart).  
 
-### <a name="block-user-from-pausing-windows-updates"></a>Brání uživateli ve pozastavení aktualizací Windows  
+### <a name="block-user-from-pausing-windows-updates"></a>Zablokovat uživateli pozastavit aktualizace Windows  
 
-- **Výchozí**: Povolit  
-- **Referenční dokumentace ke službě Windows**: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
+- **Výchozí**: Allow  
+- **Referenční dokumentace systému Windows**: [Update/SetDisablePauseUXAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisablepauseuxaccess)  
 
-Povolit nebo blokovat zařízení uživatele z pozastavení instalace aktualizace. 
+Povolí nebo zablokuje uživateli zařízení, aby pozastavil instalaci aktualizace. 
 
-### <a name="block-user-from-scanning-for-windows-updates"></a>Brání uživateli ve skenování pro aktualizace Windows  
- - **Výchozí**: Povolit
- - **Referenční dokumentace ke službě Windows**: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
+### <a name="block-user-from-scanning-for-windows-updates"></a>Zablokovat uživateli kontrolu aktualizací Windows  
+- **Výchozí**: Allow
+- **Referenční dokumentace systému Windows**: [Update/SetDisableUXWUAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-setdisableuxwuaccess) 
 
-Určuje, zda chcete povolit nebo blokovat přístup uživatelů kontrolovat aktualizace Windows. Například, pokud nakonfigurujete *bloku*, uživatelé nemají přístup k Windows Update scan, stáhněte a nainstalujte funkce.  
+Určuje, jestli se má pro kontrolu web Windows Update pro uživatele zakázat nebo blokovat přístup. Pokud například nakonfigurujete *blok*, uživatelé nebudou mít přístup k funkcím pro kontrolu web Windows Update, stahování a instalaci.  
 
-### <a name="require-users-approval-to-restart-outside-of-work-hours"></a>Vyžadovat schválení uživatele k restartování mimo pracovní dobu  
+### <a name="require-users-approval-to-restart-outside-of-work-hours"></a>Vyžadovat schválení uživatele pro restartování mimo pracovní dobu  
 
 - **Výchozí**: Není nakonfigurováno  
-- **Referenční dokumentace ke službě Windows**: [Update/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
+- **Referenční dokumentace systému Windows**: [Aktualizovat/AutoRestartRequiredNotificationDismissal](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-autorestartrequirednotificationdismissal)
   
-Vyberte *vyžaduje* tak, aby vyžadovala, že uživatel schválí restartovat zařízení mimo pracovní dobu.  
+Vyberte možnost *požadováno* , pokud požadujete, aby uživatel schválil restart zařízení mimo pracovní dobu.  
    
-### <a name="remind-user-prior-to-required-auto-restart-with-dismissible-reminder-hours"></a>Připomenout uživateli před požadované automatické restartování v dialogových připomenutí (hodiny)  
+### <a name="remind-user-prior-to-required-auto-restart-with-dismissible-reminder-hours"></a>Připomenout uživatele před vyžadováním automatického restartování s připomenutím přeskočit (hodiny)  
 
-- **Výchozí**: *Toto nastavení není nakonfigurované ve výchozím nastavení, a uživatelé nepředkládá žádná připomenutí*.  
-- **Referenční dokumentace ke službě Windows**: [Update/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
+- **Výchozí**: *Toto nastavení není ve výchozím nastavení nakonfigurované a uživatelům se nezobrazí žádné připomenutí*.  
+- **Referenční dokumentace systému Windows**: [Aktualizovat/ScheduleRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-schedulerestartwarning)  
 
-Určete, jak dlouho před automatické restartování zobrazit oznámení o který můžete přeskočit na zařízení uživatele o tomto restartování. Hodnoty **2**, **4**, **8**, **12**, nebo **24** hodiny jsou podporovány.  
+Určete, jak dlouho předem má automatické restartování zobrazovat oznámení přeskočit uživateli zařízení o tomto restartování. Jsou podporovány hodnoty **2**, **4**, **8**, **12**a **24** hodin.  
 
-### <a name="remind-user-prior-to-required-auto-restart-with-permanent-reminder-minutes"></a>Připomenout uživateli před požadované automatické restartování v trvalé připomenutí (minuty)  
+### <a name="remind-user-prior-to-required-auto-restart-with-permanent-reminder-minutes"></a>Připomenout uživatele před vyžadováním automatického restartování s trvalým připomenutím (minuty)  
 
-- **Výchozí**: *Toto nastavení není nakonfigurované ve výchozím nastavení, a uživatelé nepředkládá žádná připomenutí*.  
-- **Referenční dokumentace ke službě Windows**: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning) 
+- **Výchozí**: *Toto nastavení není ve výchozím nastavení nakonfigurované a uživatelům se nezobrazí žádné připomenutí*.  
+- **Referenční dokumentace systému Windows**: [Update/ScheduleImminentRestartWarning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-scheduleimminentrestartwarning) 
 
-Určete, jak dlouho před automatické restartování zobrazíte-dialogových upozornění na zařízení uživatele o tomto restartování. Hodnoty **15**, **30** nebo **60** minut jsou podporovány.  
+Zadejte, jak dlouho předem bude automatické restartování pro uživatele zařízení o tomto restartování zobrazovat upozornění bez přeskočit. Jsou podporovány hodnoty **15**, **30** a **60** minut.  
 
-### <a name="windows-update-notification-level"></a>Úroveň upozornění Windows Update  
-- **Výchozí**: Použít výchozí oznámení pro aktualizace Windows 
-- **Referenční dokumentace ke službě Windows**: [Update/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
+### <a name="windows-update-notification-level"></a>Web Windows Update úroveň oznámení  
+- **Výchozí**: Použít výchozí oznámení web Windows Update 
+- **Referenční dokumentace systému Windows**: [Aktualizovat/UpdateNotificationLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-updatenotificationlevel)
 
-Určete, jaké úroveň Windows Update oznámení se zobrazí uživatelům. Toto nastavení nemá pod kontrolou, jak a kdy jsou aktualizace stáhnout a nainstalovat.
+Určete, jakou úroveň oznámení web Windows Update uživatelé uvidí. Toto nastavení neurčuje, jak a kdy se aktualizace stahují a instalují.
 
-### <a name="allow-user-to-restart-engaged-restart"></a>Povolit uživatele k restartování (znamenají angažovaní restartování)  
+### <a name="allow-user-to-restart-engaged-restart"></a>Povolení restartování uživatelem (při restartování)  
 
 - **Výchozí**: Není nakonfigurováno  
-- **Referenční dokumentace ke službě Windows**: *Není k dispozici*  
-- **Verze Windows**: Podporované pro Windows 10 verze 1803 nebo novější  
+- **Referenční dokumentace systému Windows**: *Nelze použít*  
+- **Verze systému Windows**: Podporováno pro Windows 10 verze 1803 a novější  
 
   > [!NOTE]  
-  > Windows 10 verze 1809 zavádí další znamenají angažovaní restartování nastavení, umožňující samostatná nastavení pro aktualizace funkcí a kvality. Však spravuje Intune nebude platit nastavení samostatně na různé typy aktualizací. Místo toho Intune platí stejné hodnoty pro aktualizace funkcí a kvality.  
+  > Windows 10 verze 1809 zavádí další nastavení, které je potřeba restartovat, které umožňuje použít pro aktualizace funkcí a kvality samostatné nastavení. Nastavení spravovaná přes Intune ale neplatí samostatně pro různé typy aktualizací. Místo toho Intune aplikuje stejné hodnoty na aktualizace funkcí i kvality.  
 
-Pokud je nastavena na **vyžaduje**, povolit použití možnosti znamenají angažovaní restartování pro aktualizace Windows 10. Tyto možnosti zapojení uživatele zařízení ke správě při restartování zařízení po instalaci aktualizace, která vyžaduje restartování.  
+Pokud je nastavené na **požadováno**, povolíte použití možností změny pro Windows 10. Pomocí těchto možností můžete uživatele zařízení pořídit, kdy po instalaci aktualizace, která vyžaduje restart, restartovat zařízení.  
 
-Další informace o této možnosti najdete v tématu [zapojení restartování](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) v dokumentaci k Windows 10 pro nasazování aktualizací.  
+Další informace o této možnosti najdete v tématu věnovaném [restartování](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) v dokumentaci k Windows 10 pro nasazení aktualizací.  
 
-Tato nastavení slouží k řízení, když dojde k akcím znamenají angažovaní restartování.  
+Následující nastavení se používají k určení, kdy dojde k akcím v restartu.  
 
-- **Přechod uživatelům znamenají angažovaní restartování po automatické restartování (dny)**  
-  - **Výchozí**:  Ve výchozím nastavení, to není nakonfigurovaná, ale podporuje hodnotu z **2** k **30**.  
-  - **Referenční dokumentace ke službě Windows**: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-  Zadejte, jak dlouho po instalaci aktualizace, dokud se zařízení přejde do zájmu chování při restartu. Po uplynutí nakonfigurovaného počtu dnů uživatelé obdrží výzvu k restartování zařízení.  
+- **Převod uživatelů na restartování po automatickém restartování (dny)**  
+  - **Výchozí**:  Ve výchozím nastavení to není nakonfigurované, ale podporuje hodnotu od **2** do **30**.  
+  - **Referenční dokumentace systému Windows**: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
+  Určete, jak dlouho se aktualizace po instalaci nainstaluje, dokud zařízení nevstoupí do činnosti. Po nakonfigurovaném počtu dnů se uživatelům zobrazí výzva k restartování zařízení.  
 
-- **Odložit restartování znamenají angažovaní připomenutí (dny)**  
-  - **Výchozí**:  Ve výchozím nastavení, toto nastavení není nakonfigurované, ale podporuje hodnotu z **1** k **3**.  
-  - **Referenční dokumentace ke službě Windows**: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-  Zadejte, jak dlouho restartování může být připomenout znovu řádku.  Po skončení období opakovaného se výzva k restartování nabízí znovu. Uživatel může dál připomenout znovu připomenutí, dokud je dosaženo konečného termínu instalace.  
+- **Odložit připomenutí s přijatým restartováním (dny)**  
+  - **Výchozí**:  Ve výchozím nastavení není toto nastavení nakonfigurované, ale podporuje hodnotu od **1** do **3**.  
+  - **Referenční dokumentace systému Windows**: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
+  Určete, jak dlouho se výzva k restartování dá odložit.  Po uplynutí doby odložení se znovu nabídne výzva k restartování. Uživatel může pokračovat v odložení připomenutí, dokud nebude dosaženo konečného termínu instalace.  
 
-- **Sada konečný termín pro čekající restartování (dny)**  
-  - **Výchozí**:  Ve výchozím nastavení, toto nastavení není nakonfigurované, ale podporuje hodnotu z **2** k **30**.  
-  - **Referenční dokumentace ke službě Windows**: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  Zadejte maximální počet dní čekání po zájmu chování při restartu začíná předtím, než se zařízení vynutí povinné restartování. Restartování se vyzvat uživatele, aby uložili svoji práci.
+- **Nastavit konečný termín pro čekání na restartování (dny)**  
+  - **Výchozí**:  Ve výchozím nastavení není toto nastavení nakonfigurované, ale podporuje hodnotu od **2** do **30**.  
+  - **Referenční dokumentace systému Windows**: [Aktualizovat/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
+  Zadejte maximální počet dní, po který se má počkat, než se zahájí chování při restartování, než zařízení vynutilo vyžadované restartování. Tento restart vyzve uživatele, aby uložil svou práci.
 
-### <a name="delivery-optimization-download-mode"></a>Režim stahování pro optimalizaci doručení  
+### <a name="delivery-optimization-download-mode"></a>Režim stažení Optimalizace doručení  
 
-Optimalizace doručení je už nakonfigurovaný jako součást aktualizační kanál Windows 10 v rámci aktualizace softwaru. Optimalizace doručení je nyní nastaveno prostřednictvím konfigurace zařízení. Ale předchozí konfigurace zůstanou dostupné i v konzole. Tyto předchozích konfigurací můžete odebrat úpravou jejich *Nenakonfigurováno*, ale jinak nedaly změnit. 
+Optimalizace doručení již není konfigurována jako součást aktualizačního kanálu Windows 10 v části aktualizace softwaru. Optimalizace doručování se teď nastavuje prostřednictvím konfigurace zařízení. Předchozí konfigurace ale zůstanou v konzole k dispozici. Tyto předchozí konfigurace můžete odebrat tak, že je upravíte, aby *nebyly nakonfigurované*, ale nelze je jinak upravovat. 
 
-Aby nedocházelo ke konfliktům mezi původní a nové zásady, najdete v článku [přesouvat existující aktualizační okruhy optimalizace doručení](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization) a poté přesuňte nastavení do profilu optimalizace doručení.
+Aby nedocházelo ke konfliktům mezi novou a starou zásadou, přečtěte si téma [Přesun z existujících aktualizačních kanálů na optimalizaci doručování](delivery-optimization-windows.md#move-existing-update-rings-to-delivery-optimization) a přesunutí nastavení do profilu Optimalizace doručení.

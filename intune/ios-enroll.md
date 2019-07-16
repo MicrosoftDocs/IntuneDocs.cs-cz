@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94f2bd9237e92b22b9d73e4f7777dc0faf3f0fe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883033"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
 
@@ -67,9 +67,9 @@ Přečtěte si další informace o [registraci pomocí Apple Configuratoru](appl
 Zařízení nakonfigurovaná s přidružením uživatele umožňují instalaci a spuštění aplikace Portál společnosti, která slouží ke stahování aplikací a správě zařízení. Když uživatelé obdrží zařízení, musí provést určitý počet dodatečných kroků, aby dokončili postup Pomocníka s nastavením a nainstalovali aplikaci Portál společnosti.
 
 Přidružení uživatele je nezbytné pro podporu následujících funkcí:
-  - Aplikace MAM (správa mobilních aplikací)
-  - Podmíněný přístup k e-mailu a firemním datům
-  - Aplikace Portál společnosti
+- Aplikace MAM (správa mobilních aplikací)
+- Podmíněný přístup k e-mailu a datům společnosti
+- Aplikace Portál společnosti
 
 **Postup registrace zařízení s iOSem vlastněných společností s přidružením uživatele**
 1. Když uživatel zapne své zařízení, zobrazí se výzva k dokončení postupu Pomocníka s nastavením. 
@@ -86,4 +86,4 @@ Pokud je požadováno přidružení uživatele, před registrací zařízení zk
 
 ## <a name="see-also"></a>Viz také:
 
-[Řešení potíží s problémy registrace zařízení s Iosem v Microsoft Intune](https://support.microsoft.com/help/4039809)
+[Řešení potíží s registrací zařízení s iOS v Microsoft Intune](https://support.microsoft.com/help/4039809)

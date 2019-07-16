@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 97a0d9074b8617dec2fb28ed59168e08ada57fba
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882770"
 ---
 # <a name="intune-migration-guide"></a>Příručka k migraci do Intune
 
@@ -37,25 +37,25 @@ Tato příručka rozděluje migraci na dvě fáze zahrnující úkoly, strategie
 
 - [Fáze 1: Příprava Intune na správu mobilních zařízení](migration-guide-prepare.md)
 
-    - [Vyhodnocení požadavků na migraci MDM](migration-guide-prepare.md#assess-mdm-requirements)
+  - [Vyhodnocení požadavků na migraci MDM](migration-guide-prepare.md#assess-mdm-requirements)
 
-    - [Základní nastavení](migration-guide-setup.md)
+  - [Základní nastavení](migration-guide-setup.md)
 
-    - [Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
+  - [Konfigurace zásad pro správu zařízení a aplikací](migration-guide-configure-policies.md)
 
-    - [Konfigurace zásad pro ochranu aplikací](migration-guide-app-protection-policies.md)
+  - [Konfigurace zásad pro ochranu aplikací](migration-guide-app-protection-policies.md)
 
-    - [Speciální aspekty migrace](migration-guide-considerations.md)
+  - [Speciální aspekty migrace](migration-guide-considerations.md)
 
 - [Fáze 2: Kampaň migrace](migration-guide-campaign.md)
 
-    - [Plán komunikace](migration-guide-communication-plan.md)
+  - [Plán komunikace](migration-guide-communication-plan.md)
 
-    - [Podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md)
+  - [Podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md)
 
-    - [Typický cyklus migrace](migration-guide-cycle.md)
-        - [Monitorování migrace](migration-guide-cycle.md#monitoring-migration)
-        - [Po dokončení migrace](migration-guide-cycle.md#post-migration)
+  - [Typický cyklus migrace](migration-guide-cycle.md)
+    - [Monitorování migrace](migration-guide-cycle.md#monitoring-migration)
+    - [Po dokončení migrace](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Předpoklady
 

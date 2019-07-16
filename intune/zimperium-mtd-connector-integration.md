@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e78c9034058a5f60f01056711465b28deca77d83
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3eb18c45f81e427f1d14ce77086e0d7684994e82
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884161"
 ---
 # <a name="integrate-zimperium-with-intune"></a>Integrace řešení Zimperium do Intune
 
@@ -37,15 +37,15 @@ Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, 
 
 - Odběr služby Microsoft Intune
 
-- Azure Active Directory globálního správce přihlašovacích údajů správce udělit následující oprávnění:
+- Azure Active Directory přihlašovací údaje správce globálního správce pro udělení následujících oprávnění:
 
-    - Přihlášení a čtení profilu uživatele
+  - Přihlášení a čtení profilu uživatele
 
-    - Přístup k adresáři jako přihlášený uživatel
+  - Přístup k adresáři jako přihlášený uživatel
 
-    - Čtení dat z adresáře
+  - Čtení dat z adresáře
 
-    - Odeslání informací o zařízení do Intune
+  - Odeslání informací o zařízení do Intune
 
 - Přihlašovací údaje správce pro přístup ke konzole Zimperium MTD
 
@@ -53,7 +53,7 @@ Před zahájením procesu integrace řešení Zimperium do Intune zkontrolujte, 
 
 Postup autorizace aplikace Zimperium:
 
-- Udělení oprávnění služby Zimperium informací týkajících se stavu zařízení zpět do Intune. Udělení oprávnění, že je nutné použít přihlašovací údaje globálního správce. Udělení oprávnění se o jednorázovou operaci. Jakmile budou oprávnění udělena, nejsou potřebné přihlašovací údaje globálního správce pro každodenní operace.
+- Udělte službě Zimperium oprávnění ke sdělování informací týkajících se stavu zařízení zpátky do Intune. Pokud chcete udělit tato oprávnění, musíte použít přihlašovací údaje globálního správce. Udělení oprávnění je jednorázová operace. Po udělení oprávnění nejsou přihlašovací údaje globálního správce potřeba pro každodenní operaci.
 
 - Zimperium se synchronizuje s členstvím skupiny registrace Azure Active Directory (AD), aby se mohla naplnit databáze zařízení.
 
@@ -61,12 +61,12 @@ Postup autorizace aplikace Zimperium:
 
 - Povolte aplikaci Zimperium přihlášení pomocí jednotného přihlašování k Azure AD.
 
-Další informace o souhlas a aplikace Azure Active Directory najdete v tématu [požádat o oprávnění od správce adresáře](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) v Azure Active Directory článku *oprávnění a vyjádření souhlasu v Azure Active Koncový bod v2.0 Directory*.
+Další informace o souhlasu a Azure Active Directorych aplikacích najdete v tématu [vyžádání oprávnění od správce adresáře](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) v Azure Active Directory článku *oprávnění a souhlas v koncovém bodu Azure Active Directory v 2.0*.
 
 
 ## <a name="to-set-up-zimperium-integration"></a>Nastavení integrace řešení Zimperium
 
-1. Přejděte do [konzoly Zimperium MTD](https://www.zimperium.com/platform) a přihlaste se pomocí přihlašovacích údajů. K provedení instalačního procesu integrace řešení Zimperium, musíte se přihlásit pomocí Azure Active Directory uživatele, který má roli globálního správce. Tato operace jednorázová nastavení používá oprávnění globálního správce k udělení oprávnění ve vaší organizaci pro aplikace Zimperium s Intune komunikovat. 
+1. Přejděte do [konzoly Zimperium MTD](https://www.zimperium.com/platform) a přihlaste se pomocí přihlašovacích údajů. Chcete-li provést proces nastavení integrace Zimperium, musíte se přihlásit pomocí Azure Active Directory uživatele, který má roli globálního správce. Tato jednorázová operace nastavení používá globální práva správce k udělení oprávnění ve vaší organizaci, aby aplikace Zimperium komunikovaly s Intune. 
 
 2. Zvolte z levé nabídky možnost **Management** (Správa).
 
@@ -74,18 +74,18 @@ Další informace o souhlas a aplikace Azure Active Directory najdete v tématu 
 
 4. Zvolte **Add MDM** (Přidat MDM) a pak vyberte **Microsoft Intune** ze seznamu **MDM provider** (Zprostředkovatel MDM).
 
-5. Po nastavení Microsoft Intune jako služby MDM **konfigurace v Microsoft Intune** okno otevře, zvolte **přidat Azure Active Directory** jednotlivých možností: **Zimperium zConsole**, **zIPS pro iOS a Android apps** řešení zimperium komunikovalo s Intune a Azure AD prostřednictvím Azure AD jednotného přihlašování.
+5. Po nastavení Microsoft Intune jako služby MDM se zobrazí okno **Microsoft Intune konfigurace** , vyberte **Azure Active Directory přidat** pro jednotlivé možnosti: **Zimperium zConsole**, **ZIPS aplikace pro iOS a Android** k autorizaci Zimperium pro komunikaci s Intune a Azure AD prostřednictvím jednotného přihlašování Azure AD.
 
     > [!IMPORTANT]  
-    > Je nutné přidat Zimperium zConsole, zIPS pro iOS a Android k dokončení procesu integrace s Intune.
+    > Abyste mohli dokončit proces integrace s Intune, musíte přidat Zimperium zConsole, zIPS aplikace pro iOS a Android.
 
 6. Volbou **Accept** (Přijmout) povolte komunikaci aplikace Zimperium s Intune a Azure Active Directory.
 
-7. Po přidání **Zimperium zConsole** a **zIPS pro iOS a Android** aplikací do služby Azure AD přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
+7. Až do Azure AD přidáte **Zimperium zConsole** a aplikace **zIPS pro iOS a Android** , přidejte skupiny zabezpečení Azure AD. Tím umožníte, aby aplikace Zimperium mohla příslušnou skupinu zabezpečení Azure AD synchronizovat se svou službou.
 
 8. Volbou **Finish** (Dokončit) uložte konfiguraci a spusťte první synchronizaci skupiny zabezpečení Azure AD.
 
-9. Odhlaste se z konzole Zimperium MTD.
+9. Odhlaste se z konzoly Zimperium MTD.
 
 ## <a name="next-steps"></a>Další postup
 

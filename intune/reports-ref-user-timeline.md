@@ -1,7 +1,7 @@
 ---
 title: Časová osa entity uživatele datového skladu
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak Microsoft datový sklad Intune představuje uživatele na časové ose.
+description: Přečtěte si, jak Microsoft Intune datový sklad představuje uživatele na časové ose.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fa483a49ad7fa44172a83f024540a75d1d881dc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b61f4ded04d01f04727768557e6730c34fd4760c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882443"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
 
@@ -36,24 +36,24 @@ Tento scénář bude jasnější, když si projdete životnost entity.
 
 Představte si uživatele **Jan Macek**, který získá licenci na 1.6.2017. V tabulce **Uživatel** bude následující položka: 
  
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | FALSE | 1.6.2017 | 31.12.9999 | TRUE
+| Jan Macek | FALSE | 1\.6.2017 | 31.12.9999 | TRUE
  
 Jan Macek vrací licenci 25.7.2017. Tabulka **Uživatel** obsahuje následující položky. Změny v existujících záznamech jsou `marked`. 
 
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | FALSE | 1.6.2017 | `07/26/2017` | `FALSE` 
+| Jan Macek | FALSE | 1\.6.2017 | `07/26/2017` | `FALSE` 
 | Jan Macek | TRUE | 26.7.2017 | 31.12.9999 | TRUE 
 
 První řádek označuje, že Jan Macek existoval v Intune od 1.6.2017 do 25.7.2017. Druhý záznam označuje, že uživatel byl 25.7.2017 odstraněn a již není v Intune k dispozici.
 
 Nyní si představte, že uživatel Jan Macek získá novou licenci dne 31.8.2017. V tabulce Uživatel budou následující položky:
  
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
-| Jan Macek | FALSE | 1.6.2017 | 26.7.2017 | FALSE 
+| Jan Macek | FALSE | 1\.6.2017 | 26.7.2017 | FALSE 
 | Jan Macek | TRUE | 26.7.2017 | `08/31/2017` | `FALSE` 
 | Jan Macek | FALSE | 08/31/2017 | 31.12.9999 | TRUE 
  
@@ -79,5 +79,5 @@ Každý, kdo chce zobrazit pouze aktuálně existující entity dimenze, musí p
 
 ## <a name="next-steps"></a>Další postup
 
- - Další informace o entitě **Aktuální uživatel** najdete v tématu [Referenční informace o entitě aktuálního uživatele](reports-ref-current-user.md).
- - Další informace o entitě **Uživatel** najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).
+- Další informace o entitě **Aktuální uživatel** najdete v tématu [Referenční informace o entitě aktuálního uživatele](reports-ref-current-user.md).
+- Další informace o entitě **Uživatel** najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).

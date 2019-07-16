@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 2b719280c4956234512b85f32abc48f1d3b66c16
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884137"
 ---
 # <a name="metadata-and-markdown-template"></a>Šablona metadat a Markdownu
 
@@ -34,11 +34,11 @@ Kompletní blok metadat je uveden výše. Je rozdělený na povinná a voliteln�
 
 - **Musíte** mít mezeru mezi dvojtečkou (:) a hodnotou elementu metadat.
 - Pokud volitelný element metadat nemá hodnotu, odkomentujte ho křížkem (#) (nenechávejte ho prázdný ani nepoužívejte hodnotu „na“ [není k dispozici]). Pokud přidáváte hodnotu do elementu, který je odkomentovaný, nezapomeňte znak křížku (#) odebrat.
-- Použití dvojteček v hodnotě (např. pro hodnotu title) vedou k chybě analyzátoru metadat. Místo nich použijte kódování HTML &#58; (například "title: Služba Azure Rights Management&#58; základní informace | Služby Azure RMS").
-- **Název**: Tento název se zobrazí ve výsledcích vyhledávání vyhledávacího webu. Musí končit svislicí (|), za kterou následuje název služby (např. viz výše). Nemusí být (a pravděpodobně by ani neměl být) stejný jako název v nadpisu H1. Musí mít zhruba 65 znaků (včetně | NÁZEV SLUŽBY)
-- **author**, **manager**, **reviewer**: Pole author musí obsahovat **uživatelské jméno v Githubu** autora, ne jeho alias.  Pole manager a reviewer musí naopak obsahovat aliasy. ms.reviewer určuje jméno projektového manažera přidruženého k článku nebo službě.
-- **ms.assetid**: Toto je identifikátor GUID článku velkými písmeny. Při vytváření nového souboru markdownu získáte identifikátor GUID z [ https://www.guidgenerator.com ](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Možné hodnoty pro tyto elementy najdete [tady](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- Použití dvojteček v hodnotě (např. pro hodnotu title) vedou k chybě analyzátoru metadat. Místo toho použijte kódování HTML &#58; (například "title": Základy služby&#58; Azure Rights Management | Azure RMS ").
+- **název**: Tento název se zobrazí ve výsledcích vyhledávacího stroje. Musí končit svislicí (|), za kterou následuje název služby (např. viz výše). Nemusí být (a pravděpodobně by ani neměl být) stejný jako název v nadpisu H1. Musí mít zhruba 65 znaků (včetně | NÁZEV SLUŽBY)
+- **Autor**, **manažer**, **kontrolor**: Pole Author by mělo obsahovat **uživatelské jméno GitHubu** autora, nikoli jeho alias.  Pole manager a reviewer musí naopak obsahovat aliasy. ms.reviewer určuje jméno projektového manažera přidruženého k článku nebo službě.
+- **ms.assetid**: Toto je identifikátor GUID článku ze Verzálky. Při vytváření nového souboru Markdownu získat identifikátor GUID z [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Možné hodnoty pro tyto prvky lze nalézt [zde](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## <a name="basic-markdown-and-gfm"></a>Základní Markdown a GFM
 
@@ -78,7 +78,7 @@ Pokud budete chtít vytvořit odkaz na soubor markdownu ve stejném úložišti,
 
 Pokud budete chtít markdown propojit s hlavičkou ve stejném souboru s markdownem, zobrazte si zdroj publikovaného článku, vyhledejte ID hlavičky (například `id="blockquote"`) a vytvořte odkaz zadáním # + ID (například `#blockquote`).
 
-- Příklad: [Bloková citace](#blockquote)
+- Příklad: [Blockquotes](#blockquote)
 
 Pokud budete chtít vytvořit odkaz na hlavičku v souboru markdownu ve stejném úložišti, použijte relativní odkaz + hashtag odkaz.
 
@@ -129,8 +129,8 @@ Pokud bude v souboru markdownu adresa URL, transformuje se na prokliknutelný od
 - Tento 
 - seznam 
 - s odrážkami
-    - Mrs. Peacock
-    - Mr. Green
+  - Mrs. Peacock
+  - Mr. Green
 - obsahuje  
 - jiné seznamy
     1. Colonel Mustard
