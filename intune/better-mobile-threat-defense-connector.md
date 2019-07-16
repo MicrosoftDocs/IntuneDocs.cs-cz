@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 55d4e327d99c8987e6fdc0dea0ac046dd0dc167e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883814"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Konektor Better Mobile Threat Defense s Intune
 
-Můžete řídit přístup mobilních zařízení k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí lepší mobilní řešení Mobile Threat Defense (MTD), která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Better Mobile běží.
+Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí lépe mobilní, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých aplikace Better Mobile běží.
 
-Můžete nakonfigurovat zásady podmíněného přístupu založené na posouzení rizika lepší Mobile povolené prostřednictvím zásad dodržování předpisů zařízení Intune, které vám umožní povolit nebo blokovat zařízení nedodržující předpisy přístup k firemním prostředkům na základě zjištěných hrozeb.
+Zásady podmíněného přístupu můžete nakonfigurovat na základě lepšího posouzení mobilního rizika prostřednictvím zásad dodržování předpisů zařízením Intune, které můžete použít k povolení nebo blokování zařízení nesplňujících požadavky pro přístup k podnikovým prostředkům na základě zjištěných hrozeb.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Jak Intune a Better Mobile pomáhají chránit prostředky společnosti?
 
@@ -49,7 +49,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 
 **Zablokování při zjištění přítomnosti škodlivých aplikací:**
 
-![Obrázek znázorňující zjištění přítomnosti škodlivých aplikací](./media/better_mobile_maliciousapps_blocked.png)
+![Obrázek zobrazující zjištěné škodlivé aplikace](./media/better_mobile_maliciousapps_blocked.png)
 
 **Přístup udělený po nápravě:**
 
@@ -65,7 +65,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a c
 
 **Přístup udělený po nápravě:**
 
-![Obrázek znázorňující udělení přístupu nápravě](./media/better_mobile_network_wifi_unblocked.png)
+![Obrázek, který zobrazuje přístup udělený při nápravě](./media/better_mobile_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě
 
@@ -93,7 +93,7 @@ Zjišťuje ohrožení vaší sítě, například útoky **prostředníkem**, a z
 
 - Předplatné ochrany před mobilními hrozbami Better Mobile
 
-    - Další informace najdete na [webu Better Mobile](https://www.better.mobi/).
+  - Další informace najdete na [webu Better Mobile](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>Další postup
 

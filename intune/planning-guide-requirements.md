@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb08757732aa5cad08ed0a4b535fb20c0aa1df0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 703509c316a22995d26223f6c386de0a2ec66c31
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882725"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Určení požadavků na scénáře použití
 
@@ -50,21 +50,21 @@ Pokud chcete zadat požadavky na scénáře použití a dílčí scénáře pou�
 Tady jsou další příklady požadavků, které můžete použít ve sloupci Požadavky:
 
 - **Zabezpečený e-mail**
-    - Podmíněný přístup pro Exchange Online / místní
-    - Zásady ochrany aplikace Outlook
+  - Podmíněný přístup pro Exchange Online nebo místní Exchange
+  - Zásady ochrany aplikace Outlook
 
 - **Nastavení zařízení**
-    - Nastavení čtyřmístného nebo šestimístného kódu PIN
-    - Zákaz zálohování do cloudu
+  - Nastavení čtyřmístného nebo šestimístného kódu PIN
+  - Zákaz zálohování do cloudu
 
 - **Profily**
-    - Wi-Fi
-    - Síť VPN
-    - E-mail (Windows 10 Mobile)
+  - Wi-Fi
+  - Síť VPN
+  - E-mail (Windows 10 Mobile)
 
 - **Aplikace**
-    - Office 365 se zásadami ochrany aplikace
-    - Obchodní aplikace se zásadami ochrany
+  - Office 365 se zásadami ochrany aplikace
+  - Obchodní aplikace se zásadami ochrany
 
 ## <a name="next-steps"></a>Další postup
 

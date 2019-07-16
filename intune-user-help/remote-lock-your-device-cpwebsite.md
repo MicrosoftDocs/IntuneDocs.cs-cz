@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85435acffbad3117f6adbbafe60e1993b2d18bdb
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b55368f5c512ff3efd4059d420717321729450ee
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884063"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Vzdálené uzamčení zařízení z webu Portál společnosti
 
@@ -44,7 +44,7 @@ Nastavení vzdáleného uzamčení funguje v těchto systémech:
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
-3. Vyberte **Vzdálené uzamčení**. Pokud se v horní části stránky možnost pro uzamčení nezobrazuje, vyberte **Více (…)** > **Vzdálené uzamčení**.  
+3. Vyberte **Vzdálené uzamčení**. Pokud se v horní části stránky možnost pro uzamčení nezobrazuje, vyberte **Více (…)**  > **Vzdálené uzamčení**.  
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png) 
 
@@ -56,9 +56,9 @@ Po potvrzení se Portál společnosti pokusí zařízení uzamknout. Během tét
 
 Stav vzdáleného uzamčení se zobrazuje na třech místech:
 
-   * Oblast oznámení na webu.
-   * Stránka **Podrobnosti** zařízení.
-   * Dlaždice zobrazující název zařízení v části stránky **Zařízení**  
+* Oblast oznámení na webu.
+* Stránka **Podrobnosti** zařízení.
+* Dlaždice zobrazující název zařízení v části stránky **Zařízení**  
 
 > [!Note]
 > Pokud se zobrazí oznámení o selhání vzdáleného uzamčení, počkejte několik minut. Potom pokus zopakujte. Stav se změní zpět na „Vzdálené uzamčení čeká na vyřízení“. Pokud se ani opakovaný pokus nezdaří, obraťte se o pomoc na podporu ve vaší společnosti.
