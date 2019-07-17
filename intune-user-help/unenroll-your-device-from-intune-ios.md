@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2eb47240516737f03c10d1280887fea275c5ed99
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883944"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>Odebrání zařízení s iOSem z Intune
 
@@ -44,25 +44,25 @@ K odebrání zařízení z Intune použijte následující postup. Můžete se t
     |![Snímek obrazovky Zařízení v aplikaci Portál společnosti s možnostmi, které se zobrazí po kliknutí uživatele na Odebrat zařízení Tlačítko Odebrat zvýrazněné červeně a tlačítka Další informace a Zrušit zvýrazněná modře](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
-  Jakmile zrušíte registraci zařízení v Intune, stane se toto:
+    Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 
-  - Vaše zařízení se už nebude zobrazovat na portálu společnosti.
+    - Vaše zařízení se už nebude zobrazovat na portálu společnosti.
 
-  - Z portálu společnosti už nebudete moct instalovat aplikace.
+    - Z portálu společnosti už nebudete moct instalovat aplikace.
 
-  - Nastavení, která se v zařízení změnila od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, přestanou platit.
+    - Nastavení, která se v zařízení změnila od jeho přidání, například zakázání fotoaparátu/kamery nebo vyžadování určité délky hesla, přestanou platit.
 
-  - Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
+    - Je možné, že již v zařízení nebudete mít přístup k některým prostředkům společnosti, jako jsou sdílené složky nebo interní weby.
 
-  - Nebudete již moci v zařízení používat aplikace a data společnosti.
+    - Nebudete již moci v zařízení používat aplikace a data společnosti.
 
-  - Je možné, že se už nebudete moct připojovat k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
+    - Je možné, že se už nebudete moct připojovat k podnikové síti pomocí Wi-Fi nebo virtuální privátní sítě (VPN).
 
-  - E-mailové profily společnosti jsou ze zařízení odebrané.
+    - E-mailové profily společnosti jsou ze zařízení odebrané.
 
-  - V aplikaci Portál společnosti a na webu se už nebudou zobrazovat zařízení, která jsou nakonfigurovaná jenom pro použití e-mailu.
-  
-  - Odinstalují se aplikace. Odeberou se data firemních aplikací.
+    - V aplikaci Portál společnosti a na webu se už nebudou zobrazovat zařízení, která jsou nakonfigurovaná jenom pro použití e-mailu.
+
+    - Odinstalují se aplikace. Odeberou se data firemních aplikací.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>Odebrání dat shromažďovaných aplikací Portál společnosti
 
