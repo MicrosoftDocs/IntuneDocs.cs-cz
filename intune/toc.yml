@@ -998,3 +998,5 @@
           href: data-outside-protect.md
         - name: Zabránění únikům dat na nespravovaných zařízeních
           href: data-leak-prevention.md
+    - name: Dokumentace pro koncové uživatele Intune
+      href: /intune-user-help/use-managed-devices-to-get-work-done
