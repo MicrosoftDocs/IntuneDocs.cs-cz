@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ceb2b830dc7e403bd138903cf61c80291a0753f2
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: a5436de6b972e5cbe8b2b17d42f0974cb38df47e
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882586"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313815"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
@@ -34,31 +34,31 @@ Kategorie **Aplikace** obsahuje entity pro mobilní zařízení, které sledují
 - Typy spravovaného softwaru pro aplikaci, například **sidecar** nebo **desktop**
 - Stav VPP (Volume Purchase Program) pro aplikaci
 
-## <a name="apprevision"></a>AppRevision
+## <a name="apprevisions"></a>appRevisions
 
-Entita **AppRevision** obsahuje seznam všech verzí aplikací.
+Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
 | AppKey |Jedinečný identifikátor aplikace |123 |
-| ApplicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
+| applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
 | Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
-| Název |Název aplikace |Excel |
-| Vydavatel |Vydavatel aplikace |Microsoft |
+| název |Název aplikace |Excel |
+| publisher |Vydavatel aplikace |Microsoft |
 | UploadState |Stav nahrávání aplikace |1 |
 | AppTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
 | VppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
 | CreationTime |Čas vytvoření této revize |23.11.2016 12:00:00 |
 | ModifiedTime |Čas poslední změny nějakého prvku, který s touto revizí souvisí |23.11.2016 12:00:00 |
-| Velikost |Velikost binárního souboru | |
-| StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
+| size |Velikost binárního souboru | |
+| startDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
 | EndDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
-| IsCurrent |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
+| Aktuální |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
-## <a name="apptypes"></a>AppTypes
+## <a name="apptypes"></a>appTypes
 
-Entita **AppTypes** obsahuje seznam zdrojů instalace aplikace.
+Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -85,9 +85,9 @@ Entita **AppTypes** obsahuje seznam zdrojů instalace aplikace.
 | 12 |Obchodní aplikace pro Windows Phone | Obchodní aplikace pro Windows Phone |
 
 
-## <a name="vppprogramtypes"></a>VppProgramTypes
+## <a name="vppprogramtypes"></a>vppProgramTypes
 
-Entita **VppProgramTypes** obsahuje seznam možných typů programu VPP pro aplikaci.
+Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplikaci.
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -105,21 +105,21 @@ Entita **VppProgramTypes** obsahuje seznam možných typů programu VPP pro apli
 
 
 
-## <a name="applicationinventory"></a>ApplicationInventory
+## <a name="applicationinventories"></a>applicationInventories
 
-Entita **ApplicationInventory** zobrazuje seznam aplikací, které se na zařízení nacházejí v době shromažďování inventáře.
+Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, které se v zařízení našly v okamžiku shromažďování inventáře.
 
 | Vlastnost  | Popis |
 |---------|------------|
 | DeviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
-| DateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
-| ApplicationName | Název aplikace |
-| ApplicationVersion | Verze aplikace |
+| dateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
+| applicationName | Název aplikace |
+| applicationVersion | Verze aplikace |
 | BundleSize | Velikost aplikace v bajtech |
 
-## <a name="mobileappinstallstate"></a>MobileAppInstallState
+## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
-Entita **MobileAppInstallState** představuje stav instalace mobilní aplikace po jejím přiřazení do skupiny obsahující zařízení, uživatele, nebo obě tyto možnosti.
+Entita **entita mobileappinstallstate** představuje stav instalace mobilní aplikace poté, co byla přiřazena ke skupině obsahující zařízení, uživatele nebo obojímu.
 
 | Vlastnost | Popis |
 |---|---|

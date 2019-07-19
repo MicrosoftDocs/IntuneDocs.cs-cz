@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 07/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e82ef9cc8e79332665db99d29ed511918f8c77b7
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d5231daf1d28f94b6e2e1ef0c976c5b9f1877d22
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884713"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313767"
 ---
 # <a name="reference-for-devices-entities"></a>Referenční informace o entitách zařízení
 
-Kategorie **Zařízení** obsahuje entity pro mobilní zařízení, které sledují informace, například:
+Kategorie **zařízení** obsahuje entity pro mobilní zařízení, které sledují informace, jako například:
 
 - Typ zařízení
 - Stav zápisu a registrace zařízení
@@ -37,14 +37,14 @@ Kategorie **Zařízení** obsahuje entity pro mobilní zařízení, které sledu
 - Historické informace o zařízení
 - Inventář aplikací na daném zařízení
 
-## <a name="devicetypes"></a>DeviceTypes
+## <a name="devicetypes"></a>deviceTypes
 
-Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné entity datového skladu. Typ zařízení obvykle popisuje model zařízení, výrobce nebo kombinaci obou těchto možností.
+Entita **deviceTypes** představuje typ zařízení, na který odkazují jiné entity datového skladu. Typ zařízení obvykle popisuje model zařízení, výrobce nebo kombinaci obou těchto možností.
 
 | Vlastnost  | Popis |
 |---------|------------|
-| DeviceTypeID |Jedinečný identifikátor typu zařízení |
-| DeviceTypeKey |Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
+| deviceTypeID |Jedinečný identifikátor typu zařízení |
+| deviceTypeKey |Jedinečný identifikátor typu zařízení v datovém skladu – náhradní klíč |
 | DeviceTypeName |Typ zařízení |
 
 ### <a name="example"></a>Příklad
@@ -73,7 +73,7 @@ Entita **DeviceTypes** zastupuje typ zařízení, na který odkazují jiné enti
 | 255 |Neznámé |Neznámý typ zařízení |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-Entita **EnrollmentActivity** označuje aktivitu registrace zařízení.
+Entita **enrollmentActivity** označuje aktivitu registrace zařízení.
 
 | Vlastnost                      | Popis                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
@@ -87,7 +87,7 @@ Entita **EnrollmentActivity** označuje aktivitu registrace zařízení.
 | count                         | Celkový počet aktivit registrace, které odpovídají klasifikacím uvedeným výše.  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-Entita **EnrollmentEventStatus** indikuje výsledek registrace zařízení.
+Entita **enrollmentEventStatus** indikuje výsledek registrace zařízení.
 
 | Vlastnost                   | Popis                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
@@ -158,9 +158,9 @@ Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání reg
 | FeatureNotSupported              | Uživatel se pokusil o přístup k funkci, která ještě není vydaná pro všechny zákazníky nebo není kompatibilní s vaší konfigurací Intune.                                                            |
 | UserAbandonment                  | Zápis byl opuštěn koncovým uživatelem. (Koncový uživatel zahájil registraci, ale nedokázal ho dokončit včas)                                                                                           |
 | APNSCertificateExpired           | Zařízení Apple se nedají spravovat pomocí certifikátu Apple MDM push Certificate s vypršenou platností.                                                                                                                            |
-## <a name="ownertypes"></a>OwnerTypes
+## <a name="ownertypes"></a>ownerTypes
 
-Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním vlastnictví nebo neznámé.
+Entita **enrollmentType** označuje, jestli je zařízení firemní, osobně vlastněné nebo neznámé.
 
 | Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
@@ -171,9 +171,9 @@ Entita **EnrollmentTypes** určuje, jestli je zařízení firemní, v osobním v
 > [!Note]  
 > Při vytváření dynamických skupin pro zařízení `deviceOwnership` `Company` vnástrojiAzureADjepotřebanastavit`ownerTypeName` hodnotu filtru jako. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
-## <a name="managementstates"></a>ManagementStates
+## <a name="managementstates"></a>managementStates
 
-Entita **ManagementStates** poskytuje podrobné informace o stavu daného zařízení. Podrobnosti můžou být užitečné v případech, kdy se používají vzdálené akce, nebo pokud jde o zařízení s jailbreakem nebo rootem.
+Entita **managementStates** poskytuje podrobné informace o stavu zařízení. Podrobnosti můžou být užitečné v případech, kdy se používají vzdálené akce, nebo pokud jde o zařízení s jailbreakem nebo rootem.
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -198,9 +198,9 @@ Entita **ManagementStates** poskytuje podrobné informace o stavu daného zaří
 | 10 |RetireCanceled | Příkaz pro vyřazení z provozu se zrušil. |
 | 11 |Zjištěno | Zařízení je v Intune nově zjištěno, po prvním přihlášení přejde do stavu Spravováno. |
 
-## <a name="managementagenttypes"></a>ManagementAgentTypes
+## <a name="managementagenttypes"></a>managementAgentTypes
 
-Entita **ManagementAgentTypes** představuje agenty používané ke správě zařízení.
+Entita **ManagementAgentType** představuje agenty používané ke správě zařízení.
 
 | Vlastnost  | Popis |
 |---------|------------|
@@ -220,34 +220,34 @@ Entita **ManagementAgentTypes** představuje agenty používané ke správě za�
 | 8 |ConfigManagerClient | Zařízení se spravuje pomocí agenta produktu System Center Configuration Manager. |
 | 16 |Neznámé | Neznámý typ agenta správy |
 
-## <a name="devices"></a>Zařízení
+## <a name="devices"></a>devices
 
-Entita **Zařízení** obsahuje seznam všech zaregistrovaných zařízení ve správě a jejich odpovídající vlastnosti.
+Entita **zařízení** obsahuje seznam všech zaregistrovaných zařízení, která jsou pod správou, a jejich odpovídající vlastnosti.
 
 |          Vlastnost          |                                                                                       Popis                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč                                                                                                               |
-| DeviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
-| Název zařízení                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
-| DeviceTypeKey              | Klíč atributu typu zařízení pro toto zařízení                                                                                                                                    |
+| deviceId                   | Jedinečný identifikátor zařízení                                                                                                                                                     |
+| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| deviceTypeKey              | Klíč atributu typu zařízení pro toto zařízení                                                                                                                                    |
 | DeviceRegistrationState    | Klíč atributu stavu registrace klienta pro toto zařízení                                                                                                                      |
-| OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
+| ownerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                    |
 | EnrolledDateTime           | Datum a čas, kdy se zařízení zaregistrovalo.                                                                                                                                         |
-| LastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
+| lastSyncDateTime           | Poslední známé přihlášení zařízení k Intune.                                                                                                                                              |
 | ManagementAgentKey         | Klíč agenta správy, který je k tomuto zařízení přidružený.                                                                                                                             |
-| ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
+| managementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
 | AzureADDeviceId            | ID zařízení Azure pro toto zařízení                                                                                                                                                  |
 | AzureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
-| DeviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
+| deviceCategoryKey          | Klíč kategorie, která je k tomuto zařízení přidružená.                                                                                                                                     |
 | DeviceEnrollmentType       | Klíč typu registrace, který je přidružený k tomuto zařízení a který udává metodu registrace.                                                                                             |
-| ComplianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
-| OSVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
+| complianceStateKey         | Klíč stavu dodržování předpisů, který je k tomuto zařízení přidružený.                                                                                                                             |
+| osVersion                  | Verze operačního systému v zařízení                                                                                                                                                |
 | EasDeviceId                | ID protokolu Exchange ActiveSync zařízení.                                                                                                                                                  |
-| sériové číslo               | sériové číslo                                                                                                                                                                           |
-| UserId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
+| serialNumber               | sériové číslo                                                                                                                                                                           |
+| userId                     | Jedinečný identifikátor uživatele přidružený k zařízení                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se toto zařízení v datovém skladu naposledy změnilo.                                                                                                       |
-| Výrobce               | Výrobce zařízení                                                                                                                                                             |
-| Model                      | Model zařízení                                                                                                                                                                    |
+| manufacturer               | Výrobce zařízení                                                                                                                                                             |
+| model                      | Model zařízení                                                                                                                                                                    |
 | OperatingSystem            | Operační systém zařízení Windows, iOS atd.                                                                                                                                   |
 | IsDeleted                  | Binární soubor zobrazující, zda se zařízení odstranilo nebo ne.                                                                                                                                 |
 | AndroidSecurityPatchLevel  | Úroveň opravy zabezpečení Androidu                                                                                                                                                           |
@@ -261,35 +261,23 @@ Entita **Zařízení** obsahuje seznam všech zaregistrovaných zařízení ve s
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Mobilní technologie zařízení                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| ICCD                       | Identifikátor karty integrovaného okruhu                                                                                                                                                     |
 
-## <a name="devicepropertyhistory"></a>DevicePropertyHistory
+## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
-Entita **DevicePropertyHistory** obsahuje stejné vlastnosti jako tabulka zařízení a denní snímky záznamů jednotlivých zařízení za posledních 90 dnů. Sloupec DateKey označuje den pro každý řádek.
+Entita **devicePropertyHistory** má stejné vlastnosti jako tabulka zařízení a denní snímky každého záznamu zařízení za den v posledních 90 dnech. Sloupec DateKey označuje den pro každý řádek.
 
 |          Vlastnost          |                                                                                      Popis                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| DateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
+| dateKey                    | Odkaz na tabulku kalendářních dat udávající den.                                                                                                                                          |
 | DeviceKey                  | Jedinečný identifikátor zařízení v datovém skladu – náhradní klíč Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune.                               |
-| Název zařízení                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
-| DeviceRegistrationStateKey | Klíč atributu stavu registrace zařízení pro toto zařízení                                                                                                                    |
-| OwnerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                  |
-| ManagementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
+| DeviceName                 | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut nemusí být dostupný pro všechna zařízení. |
+| deviceRegistrationStateKey | Klíč atributu stavu registrace zařízení pro toto zařízení                                                                                                                    |
+| ownerTypeKey               | Klíč atributu typu vlastníka pro toto zařízení: podnikový, osobní nebo neznámý                                                                                                  |
+| managementStateKey         | Klíč stavu správy, který je přidružený k tomuto zařízení a který udává poslední stav vzdálené akce nebo informaci, jestli jde o zařízení s jailbreakem nebo rootem.                                                |
 | AzureADRegistered          | Udává, zda je zařízení zaregistrované v Azure Active Directory.                                                                                                                             |
-| ComplianceStateKey         | Klíč k vlastnosti ComplianceState                                                                                                                                                            |
+| complianceStateKey         | Klíč k vlastnosti ComplianceState                                                                                                                                                            |
 | OSVersion                  | Verze operačního systému.                                                                                                                                                                          |
-| JailBroken                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
-| DeviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení 
-
-## <a name="applicationinventory"></a>ApplicationInventory
-
-Entita **ApplicationInventory** zobrazuje seznam aplikací, které se na zařízení nacházejí v době shromažďování inventáře.
-
-
-|      Vlastnost      |                       Popis                        |
-|--------------------|----------------------------------------------------------|
-|     DeviceKey      |              Odkaz na tabulku zařízení.               |
-|   ApplicationKey   | ? (zkopírováno z ExchangeDeviceService\DeviceApplication). |
-|  ApplicationName   | ? (zkopírováno z ExchangeDeviceService\DeviceApplication). |
-| ApplicationVersion | ? (zkopírováno z ExchangeDeviceService\DeviceApplication). |
-|     BundleSize     | ? (zkopírováno z ExchangeDeviceService\DeviceApplication). |
+| Jailbreak                 | Zda má zařízení jailbreak nebo root.                                                                                                                                         |
+| deviceCategoryKey          | Klíč atributu kategorie zařízení pro toto zařízení 
 
