@@ -1,7 +1,7 @@
 ---
-title: Koncové body sítě pro US government nasazení – Microsoft Intune
+title: Koncové body sítě pro nasazení státní správy USA – Microsoft Intune
 titleSuffix: ''
-description: Projděte si koncové body státní správy USA pro Intune.
+description: Přečtěte si koncové body státní správy USA pro Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4712c2958e2beee8853ad0d2620414d823da327
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 9828b04ae30d8f35313564b93dfc9b997795bf76
+ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804495"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306723"
 ---
-# <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body státní správy USA pro Microsoft Intune
+# <a name="us-government-endpoints-for-microsoft-intune"></a>Koncové body pro státní správu USA pro Microsoft Intune
 
-Tato stránka obsahuje seznam koncových bodů státní správy USA, třeba nastavení proxy serveru v nasazení Intune.
+Tato stránka obsahuje seznam koncových bodů pro státní správu USA potřebných pro nastavení proxy serveru v nasazeních Intune.
 
-Ke správě zařízení za bránami firewall nebo proxy servery, je nutné povolit komunikaci pro Intune.
+Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
 - Proxy server musí podporovat **HTTP (80)** i **HTTPS (443)** , protože klienti Intune používají oba protokoly.
-- Pro některé úlohy (jako je stahování aktualizace softwaru), vyžaduje Intune přístup k neověřenému proxy serveru na adresu manage.microsoft.com
+- U některých úloh (například stahování aktualizací softwaru) vyžaduje Intune neověřený proxy server přístup k manage.microsoft.com.
 
-Můžete upravit nastavení proxy serveru na jednotlivých klientských počítačích. Nastavení zásad skupiny můžete také změnit nastavení pro všechny klientské počítače umístěné za zadaným proxy serverem.
+Nastavení proxy server můžete upravit na jednotlivých klientských počítačích. Nastavení Zásady skupiny můžete použít také ke změně nastavení všech klientských počítačů umístěných za zadaným proxy server.
 
 Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživatelé** měli přístup ke službám přes brány firewall.
 
@@ -44,15 +44,15 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |*.manage.microsoft.us | 52.243.26.209 <br> 52.247.173.11 <br> 52.227.183.12 <br>52.227.180.205 <br> 52.227.178.107 <br> 13.72.185.168 <br> 52.227.173.179 <br> 52.227.175.242 <br> 13.72.39.209 <br> 52.243.26.209 <br> 52.247.173.11 |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
-## <a name="us-government-customer-designated-endpoints"></a>Koncové body určené zákazníka státní správy USA:
-- Azure portal: https://portal.azure.us/ 
-- Office 365: https://portal.office365.us/ 
-- Portál společnosti Intune: https://portal.manage.microsoft.us/ 
+## <a name="us-government-customer-designated-endpoints"></a>Zákazník pro státní správu USA určil koncové body:
+- Azure Portal: https:\//Portal.Azure.us/ 
+- Office 365: https:\//Portal.office365.us/ 
+- Portál společnosti Intune: https:\//Portal.manage.Microsoft.us/ 
 
-## <a name="partner-service-endpoints-that-intune-depends-on"></a>Partner koncové body služby Intune, na kterých závisí:
-- Služba AAD Sync: https://syncservice.gov.us.microsoftonline.com/DirectoryService.svc
-- Evo STS: https://login.microsoftonline.us
-- Adresář serveru Proxy: https://directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- AAD Graph: https://directory.microsoftazure.us a https://graph.microsoftazure.us
-- MS Graphu: https://graph.microsoft.us
-- ADRS: https://enterpriseregistration.microsoftonline.us
+## <a name="partner-service-endpoints-that-intune-depends-on"></a>Koncové body partnerských služeb, na kterých závisí Intune:
+- Služba AAD Sync: https:\//SyncService.gov.us.microsoftonline.com/DirectoryService.svc
+- Evo STS: https:\//Login.microsoftonline.us
+- Proxy adresář: https:\//directoryproxy.MicrosoftAzure.us/DirectoryProxy.svc
+- Graf AAD: https:\//Directory.MicrosoftAzure.us a https:\//Graph.MicrosoftAzure.us
+- MS Graph: https:\//Graph.Microsoft.us
+- Pravidla automatického nasazení: https:\//enterpriseregistration.microsoftonline.us
