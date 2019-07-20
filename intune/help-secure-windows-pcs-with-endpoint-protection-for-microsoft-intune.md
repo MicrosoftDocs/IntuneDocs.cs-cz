@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f97b49ce893512770cd2b22583a54e20cd3fb0f8
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 61e0a7fa4fa63e17a1fa4165042d9e82a2ffacc2
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883129"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354100"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune
 
@@ -197,5 +197,5 @@ Intune může na vzdáleném spravovaném počítači, na kterém je nainstalova
 ## <a name="need-more-help"></a>Potřebujete další pomoc?
 Další pomoc a podporu najdete v tématu [Řešení potíží se službou Endpoint Protection v Microsoft Intune](troubleshoot-endpoint-protection-in-microsoft-intune.md).
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

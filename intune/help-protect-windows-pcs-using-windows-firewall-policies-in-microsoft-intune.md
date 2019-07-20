@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: b79f488fcaa221523b5833aa1cebcf872d5f9b3d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572518"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354020"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete spravovat nastavení brány firewall pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [přidání nastavení ochrany koncových bodů v Intune](endpoint-protection-configure.md).
+> Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, které spravujete jako počítače (PC) pomocí softwarového klienta Intune. Pokud chcete spravovat nastavení brány firewall pro počítače s Windows zaregistrované jako mobilní zařízení, přečtěte si téma [Přidání nastavení ochrany koncových bodů v Intune](endpoint-protection-configure.md).
 
 Microsoft Intune vám pomůže mnoha různými způsoby zabezpečit počítače s Windows, které spravujete. Jedním z těchto způsobů je poskytnutí zásad, které vám umožní nakonfigurovat nastavení brány Windows Firewall na počítačích.
 
@@ -140,5 +140,5 @@ Můžete nakonfigurovat výjimky, které povolují konkrétní typy síťového 
 |**Windows Virtual PC**<br>(Windows 7 nebo novější)|Umožňuje virtuálním počítačům komunikovat s dalšími počítači.|
 |**Bezdrátová přenosná zařízení**|Umožňuje přenos multimediálních souborů z fotoaparátu nebo multimediálního zařízení připojeného k síti do spravovaných počítačů pomocí protokolu MTP (Media Transfer Protocol). Toto nastavení používá síťové protokoly SSDP a UPnP.|
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 [Zásady ochrany počítačů se systémem Windows](policies-to-protect-windows-pcs-in-microsoft-intune.md)

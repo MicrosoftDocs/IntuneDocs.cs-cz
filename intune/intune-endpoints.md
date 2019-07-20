@@ -1,7 +1,7 @@
 ---
 title: Koncové body sítě pro Microsoft Intune
 titleSuffix: ''
-description: Projděte si koncové body pro Intune.
+description: Zkontrolujte koncové body pro Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 026536b1f0c059808220273ccffefacc28b80ae0
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.openlocfilehash: 8f95e16b9c500f9c4e0750fc0453f5ed1fcea129
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031609"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353977"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune
 
-Tato stránka obsahuje seznam IP adres a nastavení portu potřebné pro nastavení proxy serveru v nasazení Intune.
+Tato stránka obsahuje seznam IP adres a nastavení portů potřebných pro nastavení proxy serveru v nasazeních Intune.
 
-Jako čistě cloudovou službu Intune nevyžaduje místní infrastrukturu, jako jsou servery nebo brány.
+V rámci cloudové služby Intune nevyžaduje místní infrastrukturu, jako jsou servery nebo brány.
 
-Ke správě zařízení za bránami firewall nebo proxy servery, je nutné povolit komunikaci pro Intune.
+Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
-- Proxy server musí podporovat **HTTP (80)** a **HTTPS (443)** vzhledem k tomu, že klienti Intune používají oba protokoly. Windows Information Protection používá port 444.
-- Pro některé úlohy (jako je stahování aktualizací softwaru pro agenta pro klasické počítače), vyžaduje Intune přístup k neověřenému proxy serveru na adresu manage.microsoft.com
+- Proxy server musí podporovat **protokol HTTP (80)** i **https (443)** , protože klienti Intune používají oba protokoly. Information Protection Windows používá port 444.
+- U některých úloh (například stažení aktualizací softwaru pro klasického agenta počítače) Intune vyžaduje neověřený proxy server přístup k manage.microsoft.com.
 
-Můžete upravit nastavení proxy serveru na jednotlivých klientských počítačích. Nastavení zásad skupiny můžete také změnit nastavení pro všechny klientské počítače umístěné za zadaným proxy serverem.
+Nastavení proxy server můžete upravit na jednotlivých klientských počítačích. Nastavení Zásady skupiny můžete použít také ke změně nastavení všech klientských počítačů umístěných za zadaným proxy server.
 
 
 <!--
@@ -81,8 +81,8 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180|
 
 
-### <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>Požadavky na síť pro skripty prostředí Powershell a aplikace Win32
-Pokud Intune používáte k nasazení Powershellových skriptů nebo aplikací Win32, budete také muset udělit přístup ke koncovým bodům, ve kterých se aktuálně nachází vašeho tenanta.
+## <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>Požadavky na síť pro skripty prostředí PowerShell a aplikace Win32
+Pokud k nasazení skriptů PowerShellu nebo aplikací Win32 používáte Intune, musíte taky udělit přístup k koncovým bodům, ve kterých se aktuálně nachází váš tenant.
 
 |ASU | Název úložiště | CDN |
 | --- | --- |--- |
@@ -108,33 +108,33 @@ Pokud Intune používáte k nasazení Powershellových skriptů nebo aplikací W
 | AMSUC0501 | prodmsuc05data | https:\//prodmsuc05data.azureedge.net |
 | AMSUA0701 | pemsua07rcdata | https:\//pemsua07data.azureedge.net |
 
-### <a name="windows-push-notification-services-wns"></a>Služby nabízených oznámení Windows (WNS)
-Pro zařízení s Windows spravovaných pomocí Intune spravovat pomocí správy mobilních zařízení (MDM) akce zařízení a dalších okamžité aktivit vyžaduje použití sady Windows Push Notification Services (WNS). Další informace najdete v části [oznámení Windows umožňuje provoz přes brány firewall organizace](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
+## <a name="windows-push-notification-services-wns"></a>Služba nabízených oznámení Windows (WNS)
+U zařízení s Windows spravovaných pomocí Intune spravovaných pomocí správy mobilních zařízení (MDM) musí akce zařízení a další okamžité aktivity vyžadovat používání služby nabízených oznámení Windows (WNS). Další informace najdete v tématu [Povolení přenosů oznámení systému Windows prostřednictvím podnikových bran firewall](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
 
-### <a name="delivery-optimization-port-requirements"></a>Požadavky na porty optimalizace doručení
+## <a name="delivery-optimization-port-requirements"></a>Požadavky na port Optimalizace doručení
 
-#### <a name="port-requirements"></a>Požadavky na porty
-Pro provoz peer-to-peer optimalizace doručení pro protokol TCP/IP nebo 3544 pro přecházení NAT (volitelně Teredo) používá 7680. Pro komunikaci klienta služby používá protokol HTTP nebo HTTPS přes port 80 a 443.
+### <a name="port-requirements"></a>Požadavky na porty
+Pro přenosy peer-to-peer používá Optimalizace doručení 7680 pro protokol TCP/IP nebo 3544 pro procházení NAT (volitelně Teredo). Pro komunikaci mezi klientem a službou používá protokol HTTP nebo HTTPS přes port 80/443.
 
-#### <a name="proxy-requirements"></a>Požadavky na proxy serveru
-Pokud chcete používat optimalizace doručení, musíte také povolit požadavky na zjištění rozsahu bajtů. Další informace najdete v tématu [požadavky na proxy serveru pro Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+### <a name="proxy-requirements"></a>Požadavky na proxy server
+Chcete-li použít optimalizaci doručování, je nutné, abyste povolili požadavky na rozsah bajtů. Další informace najdete v tématu [požadavky na proxy serveru pro web Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
 
-#### <a name="firewall-requirements"></a>Požadavky na bránu firewall
-Povolte u následujících názvů hostitele přes bránu firewall pro podporu optimalizace doručení.
-Pro komunikaci mezi klienty a cloudové službě optimalizace doručení:
+### <a name="firewall-requirements"></a>Požadavky na bránu firewall
+Pro podporu optimalizace doručování Povolte následující názvy hostitelů přes bránu firewall.
+Pro komunikaci mezi klienty a cloudovou službou Optimalizace doručení:
 - *.do.dsp.mp.microsoft.com
 
-Pro metadata z optimalizace doručení:
+Pro metadata Optimalizace doručení:
 - *.dl.delivery.mp.microsoft.com
 - *.emdl.ws.microsoft.com
 
-### <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
+## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
 
 
-|Používá pro|Hostname (IP address/subnet)|Protocol|Port|
+|Používá se pro|Název hostitele (IP adresa/podsíť)|Protocol|Port|
 |-----|--------|------|-------|
-|Načítání a zobrazování obsahu ze serverů společnosti Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|Komunikaci se servery pro služby APN|#-courier.push.apple.com<br>"#" je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
-|Různé funkce, včetně přístupu k webu, iTunes storu, obchodu s aplikacemi s macOS, Icloudu, zasílání zpráv, atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
+|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
+|Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
+|Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
-Další informace najdete v tématu společnosti Apple [porty TCP a UDP používané softwarové produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [o macOS, iOS a iTunes připojení k serveru hostitele a iTunes pozadí procesy](https://support.apple.com/en-us/HT201999), a [Pokud vaše klienty se systémy iOS a macOS nedaří získat nabízených oznámení Apple](https://support.apple.com/en-us/HT203609).
+Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud vaši klienti MacOS a iOS nezískávají Apple Push oznámení](https://support.apple.com/en-us/HT203609).

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7775a0aec8bdba648cf809e3f797ce5606b2ca4f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fa084d2a52e23273effdfb035b218c8ee1f7f2ab
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047418"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354052"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Jak se Intune for Education liší od plnohodnotného prostředí pro správu zařízení v Intune?
 
@@ -41,7 +41,7 @@ Intune a Intune for Education umožňují:
 * Chránit informace vaší organizace určením způsobu, jak k nim vaši pracovníci přistupují a jak je sdílejí
 * Zajistit, aby zařízení a aplikace splňovaly požadavky na zabezpečení
 
-### <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 * K seznámení s produktem můžete použít [90denní bezplatnou zkušební verzi Intune](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1). Pokud máte přístup, přejděte na web (https://intuneeducation.portal.azure.com) a můžete začít.
 * Přečtěte si, jak můžete co nejrychleji [začít používat Intune for Education](/intune-education/what-is-express-configuration).
 * Podrobně se seznamte s [technickými požadavky a možnostmi](/intune/supported-devices-browsers) služby Intune.

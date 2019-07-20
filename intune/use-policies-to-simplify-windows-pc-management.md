@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eb9f7eef1f7f0e4a712bdf3e8a3706374ac002a8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548826"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353309"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>Zjednodušení správy počítačů s Windows pomocí zásad
 
@@ -32,7 +32,7 @@ Při správě počítačů s Windows pomocí klienta softwaru Intune můžete po
 
 ![Šablony zásad pro počítače s Windows](media/pc_policy_template.png)
 
-### <a name="manage-the-microsoft-intune-center"></a>Správa centra Microsoft Intune Center
+## <a name="manage-the-microsoft-intune-center"></a>Správa centra Microsoft Intune Center
 Klientský software Intune se uživatelům zobrazí jako **Microsoft Intune Center**. Microsoft Intune Center uživatelům umožňuje:
 
 - Získávat aplikace z portálu společnosti
@@ -50,7 +50,7 @@ Microsoft Intune Center se nainstaluje na všech spravovaných počítačích. V
 |**Název**|Jméno správce, který spravuje příslušný počítač<br />Maximální délka: 40 znaků|
 |**Telefonní číslo**|Telefonní číslo správce, který spravuje příslušný počítač<br />Maximální délka: 20 znaků|
 |**E-mailová adresa**|Emailová adresa správce, který spravuje příslušný počítač<br />Maximální délka: 40 znaků|
-|**Název webu**|Název vašeho webu pro podporu uživatelů<br />> maximální délka: 40 znaků|
+|**Název webu**|Název vašeho webu pro podporu uživatelů<br />Maximální délka >: 40 znaků|
 |**Adresa URL webu**|Adresa URL vašeho webu podpory<br />Maximální délka: 150 znaků|
 |**Poznámky**|Poznámka, která se zobrazuje uživatelům<br />Maximální délka: 120 znaků|
 
@@ -63,6 +63,6 @@ Informace o zásadách a nastaveních, které můžete konfigurovat pro počíta
 - [Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall v Microsoft Intune](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) – Tyto zásady zjednodušují správu nastavení brány Windows Firewall na spravovaných počítačích.
 
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

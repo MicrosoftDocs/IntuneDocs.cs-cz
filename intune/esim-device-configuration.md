@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883257"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354382"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>Konfigurace mobilních profilů eSIM v Intune – verze Public Preview
 
@@ -79,7 +79,7 @@ Mobilní aktivační kódy poskytuje mobilní operátor v souboru CSV (textový 
 4. Vyberte soubor CSV s aktivačními kódy.
 5. Vyberte **OK** uložte provedené změny.
 
-#### <a name="csv-file-requirements"></a>Požadavky na soubor CSV
+### <a name="csv-file-requirements"></a>Požadavky na soubor CSV
 
 Při práci se souborem CSV, který obsahuje aktivační kódy, se ujistěte, že se vy či váš mobilní operátor řídíte následujícími požadavky:
 
@@ -89,7 +89,7 @@ Při práci se souborem CSV, který obsahuje aktivační kódy, se ujistěte, ž
 - Každý soubor by měl být specifický pro jednoho mobilního operátora a všechny aktivační kódy v souboru by měli patřit pod stejný fakturační plán. Intune aktivační kódy distribuuje na cílová zařízení náhodně. Neexistuje žádná záruka, že konkrétní zařízení získá konkrétní aktivační kód.
 - Do jednoho souboru CSV se může importovat maximálně 1000 aktivačních kódů.
 
-#### <a name="csv-file-example"></a>Příklad souboru CSV
+### <a name="csv-file-example"></a>Příklad souboru CSV
 
 1. První řádek a první buňka souboru CSV je adresa URL aktivační služby eSIM mobilního operátora, která se nazývá SM-DP+ (server přípravy dat správce předplatného). Adresa URL by měla být plně kvalifikovaným názvem domény (FQDN) bez čárek.
 2. Druhý řádek a všechny následující řádky jsou jedinečnými jednorázovými aktivačními kódy, které obsahují dvě hodnoty:
@@ -129,7 +129,7 @@ Aktivační kódy eSIM jsou jednorázové. Jakmile Intune nainstaluje aktivačn�
 
 ## <a name="step-4-monitor-deployment"></a>Krok 4: Monitorování nasazení
 
-#### <a name="review-the-deployment-status"></a>Kontrola stavu nasazení
+### <a name="review-the-deployment-status"></a>Kontrola stavu nasazení
 
 Po přiřazení profilu můžete monitorovat stav nasazení fondu předplatných.
 
@@ -138,7 +138,7 @@ Po přiřazení profilu můžete monitorovat stav nasazení fondu předplatných
 3. Vyberte **Konfigurace zařízení** > **Mobilní profily eSIM**. Uvidíte uvedené všechny existující fondy mobilních předplatných eSIM.
 4. Vyberte předplatné a zkontrolujte jeho **Stav nasazení**.
 
-#### <a name="check-the-profile-status"></a>Kontrola stavu profilu
+### <a name="check-the-profile-status"></a>Kontrola stavu profilu
 Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují stav profilu, třeba že je úspěšně přiřazený k zařízením nebo jestli profil vykazuje konflikt.
 
 1. Vyberte **Konfigurace zařízení** > **Mobilní profily eSIM** > Vyberte existující předplatné.
@@ -167,7 +167,7 @@ Podrobný seznam zařízení můžete monitorovat nebo si ho můžete zobrazit n
     - **Stav mobilní**sítě: Stav poskytnutý mobilním operátorem (Potíže řešte přímo s mobilním operátorem.)
     - **Poslední vrácení se změnami**: Datum, kdy zařízení naposledy komunikovalo s Intune
 
-#### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorování podrobností profilu eSIM na příslušném zařízení
+### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Monitorování podrobností profilu eSIM na příslušném zařízení
 
 1. Na svém zařízení otevřete **Nastavení** > přejděte na **Síť a internet**.
 2. Vyberte **Mobilní** > **Spravovat profily eSIM karty**

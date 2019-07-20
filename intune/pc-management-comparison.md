@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: fec72636a5d76ce4eb1fa0c28978eeb70d1e61b5
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044519"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353549"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 
@@ -49,7 +49,7 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 |**Ověření stavu**|Není k dispozici|K dispozici|
 
 
-### <a name="advantages-of-mdm-windows-pc-management"></a>Výhody správy počítačů s Windows v řešení MDM
+## <a name="advantages-of-mdm-windows-pc-management"></a>Výhody správy počítačů s Windows v řešení MDM
 Správa počítačů s Windows s využitím moderní správy mobilních zařízení přináší následující výhody:
 - **Škálovatelnost** – řešení MDM je díky cloudové správě Intune škálovatelné. Softwarový klient Intune je omezený na 7000 počítačů.
 - **Jednoduchost** – používá moderní funkce správy, které jsou součástí operačního systému, bez spoléhání se na staženého softwarového klienta.

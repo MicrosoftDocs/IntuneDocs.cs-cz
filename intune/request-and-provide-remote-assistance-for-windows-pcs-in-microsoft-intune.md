@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a58339f8a956e4250064bc81e2f291a72c27c27f
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 41b6109d956272d6368ae294788a8bd54f2fb8f8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549141"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353487"
 ---
 # <a name="request-and-provide-remote-assistance-for-windows-pcs"></a>Žádost a poskytnutí vzdálené pomoci na počítačích s Windows
 
@@ -87,6 +87,6 @@ Při pomáhání uživatelům s problémy můžete občas potřebovat vzdáleně
 
 4. V dialogovém okně **Stav úlohy** se můžete podívat na aktuální vzdálené úlohy, stav úloh, název zařízení a všechny hlášené chyby.
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

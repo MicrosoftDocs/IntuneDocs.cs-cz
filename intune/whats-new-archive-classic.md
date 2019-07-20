@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29aa32b02f5ab97707ce76eb10a84a8913a9f702
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d09a996e3e1a47cae33e8a4189b4406a940acfe3
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572293"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353269"
 ---
 # <a name="whats-new-in-the-intune-classic-portal---previous-months"></a>Co je nového na klasickém portálu Intune – předchozí měsíce
 
@@ -33,31 +33,31 @@ Tato stránka obsahuje seznam nových funkcí a oznámení dříve zveřejněný
 
 ### <a name="new-capabilities"></a>Nové funkce
 
-#### <a name="myapps-available-for-managed-browser---822308-822303--"></a>MyApps k dispozici pro Managed Browser <!--822308, 822303-->
+#### <a name="myapps-available-for-managed-browser---822308-822303--"></a>Aplikace MyApp k dispozici pro Managed Browser <!--822308, 822303-->
 
 Microsoft MyApps teď mají lepší podporu v Managed Browseru. Uživatelé Managed Browseru, kteří nejsou cílem správy, budou přeneseni rovnou do služby MyApps, kde mají přístup k aplikacím SaaS, které jim zajistil správce. Uživatelé, kteří jsou cílem správy Intune, budou mít k MyApps dál přístup z integrované záložky Managed Browseru.
 
-#### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431-971473--"></a>Nové ikony pro Managed Browser a portál společnosti <!--918433, 918431, 971473-->
+#### <a name="new-icons-for-the-managed-browser-and-the-company-portal---918433-918431-971473--"></a>Nové ikony pro Managed Browser a Portál společnosti <!--918433, 918431, 971473-->
 
 Managed Browser dostal aktualizované ikony pro verze aplikace pro Android i iOS. Nová ikona bude obsahovat aktualizovaný odznak Intune, aby byla konzistentnější s ostatními aplikacemi v Enterprise Mobility + Security (EM+S). Novou ikonu pro Managed Browser uvidíte na [stránce s novinkami v uživatelském rozhraní aplikace Intune](whats-new-app-ui.md).
 
 Portál společnosti také dostal aktualizované ikony pro verze aplikace pro Android, iOS i Windows, aby byly konzistentnější s ostatními aplikacemi v EM+S. Tyto ikony se budou postupně vydávat pro všechny platformy od dubna do konce května.
 
-#### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Přihlaste se indikátor průběhu v aplikaci portál společnosti pro Android <!--953374-->
+#### <a name="sign-in-progress-indicator-in-android-company-portal---953374--"></a>Indikátor průběhu přihlašování v Androidu Portál společnosti <!--953374-->
 
 Aktualizace aplikace Portál společnosti pro Android zobrazuje indikátor průběhu přihlášení, když uživatel aplikaci spustí nebo pokračuje v jejím používání. Než uživatel získá přístup k aplikaci, indikátor postupně zobrazuje nové stavy od „Připojování...“ přes „Přihlašování...“ po „Kontrolují se požadavky na zabezpečení...“. Nové obrazovky pro aplikaci Portál společnosti pro Android uvidíte na [stránce s novinkami v uživatelském rozhraní aplikace Intune](whats-new-app-ui.md).
 
-#### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Blokovat aplikacím přístup k Sharepointu Online <!-- 679339 -->
+#### <a name="block-apps-from-accessing-sharepoint-online----679339---"></a>Zablokovat aplikacím přístup k SharePointu Online <!-- 679339 -->
 
-Nyní můžete vytvořit zásadu podmíněného přístupu na základě aplikace pro blokování aplikací, které nemají zásady ochrany aplikací k nim přístup k [Sharepointu Online](app-based-conditional-access-intune-create.md). V případě podmíněného přístupu na základě aplikace můžete určit aplikace, které chcete mít přístup k Sharepointu Online pomocí webu Azure portal.
+Teď můžete vytvořit zásadu podmíněného přístupu na základě aplikace, která bude blokovat aplikace, které pro ně nepoužívají zásady ochrany aplikací, a to od přístupu k [SharePointu Online](app-based-conditional-access-intune-create.md). V případě podmíněného přístupu založeného na aplikacích můžete určit aplikace, které mají mít přístup k SharePointu Online, pomocí Azure Portal.
 
-#### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Jednotné přihlašování podporu z portálu společnosti pro iOS do Outlooku pro iOS <!--834012-->
+#### <a name="single-sign-on-support-from-the-company-portal-for-ios-to-outlook-for-ios---834012--"></a>Podpora jednotného přihlašování z Portál společnosti pro iOS do Outlooku pro iOS <!--834012-->
 Uživatelé už se nemusí přihlašovat k aplikaci Outlook, pokud jsou na stejném zařízení pomocí stejného účtu přihlášení k aplikaci Portál společnosti pro iOS. Při spuštění aplikace Outlook budou uživatelé moct zvolit svůj účet a přihlásit se automaticky. Pracujeme také na tom, abychom tuto funkci přidali i pro další aplikace Microsoftu.
 
-#### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Vylepšené zprávy o stavu v aplikaci portál společnosti pro iOS <!--744866-->
+#### <a name="improved-status-messaging-in-the-company-portal-app-for-ios---744866--"></a>Vylepšené zasílání zpráv o stavu v aplikaci Portál společnosti pro iOS <!--744866-->
 V aplikaci Portál společnosti pro iOS se teď budou zobrazovat nové a konkrétnější chybové zprávy poskytující přístupnější informace o tom, co se děje na zařízeních. Tyto případy chyb byly dříve součástí obecné chybové zprávy s názvem „Portál společnosti dočasně nedostupný“. Kromě toho, pokud uživatel aplikaci Portál společnosti spustí v iOSu, když chybí připojení k internetu, uvidí teď na domovské stránce trvalý stavový řádek s oznámením o tom, že chybí připojení k internetu.
 
-#### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro aplikaci portál společnosti pro Windows 10 <!--676495-->
+#### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro Portál společnosti aplikaci pro Windows 10 <!--676495-->
 
 Nová vylepšení pro instalaci aplikace spuštěna v aplikaci portál společnosti pro Windows 10 patří:
 - Rychlejší generování sestav o průběhu instalace pro balíčky MSI
@@ -66,11 +66,11 @@ Nová vylepšení pro instalaci aplikace spuštěna v aplikaci portál společno
 
 Nový indikátor průběhu najdete na stránce[Co je nového v uživatelském rozhraní aplikací Intune](whats-new-app-ui.md).
 
-#### <a name="bulk-enroll-windows-10-devices----747607---"></a>Hromadná registrace Windows 10 zařízení <!-- 747607 -->
+#### <a name="bulk-enroll-windows-10-devices----747607---"></a>Hromadná registrace zařízení s Windows 10 <!-- 747607 -->
 
 K Azure Active Directory a Intune můžete teď pomocí Windows Configuration Designeru (WCD) připojit velký počet zařízení s Windows 10 Creators Updatem. Pokud chcete pro svého tenanta Azure AD povolit [hromadnou registraci MDM](windows-bulk-enroll.md), vytvořte zřizovací balíček, který zařízení k tenantovi Azure AD připojí pomocí Windows Configuration Designeru, a použijte balíček na zařízení ve vlastnictví firmy, která chcete hromadně zaregistrovat a spravovat. Po použití balíčku se zařízení připojí k Azure AD, zaregistrují v Intune a jsou připravená na přihlašování vašich uživatelů z Azure AD.  Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady a požadované aplikace. Samoobslužné scénáře a scénáře s Portálem společnosti v současnosti nejsou podporované.
 
-### <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal--736542--"></a>Co je nového ve verzi public preview služby Intune na portálu Azure portal<!--736542-->
+### <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal--736542--"></a>Co je nového ve verzi Public Preview služby Intune v Azure Portal<!--736542-->
 
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API.
 
@@ -86,7 +86,7 @@ Novinky ve verzi Intune v Azure najdete [zde](whats-new.md).
 
 U účtů Intune vytvořených po lednu 2017 umožňuje Intune přímý přístup ke scénářům registrace Apple pomocí úlohy Registrovat zařízení na portálu Azure Preview. Náhled na registraci Apple byl předtím přístupný jen přes odkazy na Azure Portalu. Zpřístupnění těchto funkcí v Azure bude u účtů Intune vytvořených před lednem 2017 vyžadovat jednorázovou migraci. Plán této migrace zatím nebyl oznámen, podrobnosti ale budou zpřístupněny co nejdříve. Pokud váš existující účet nemá k tomuto náhledu přístup, k otestování tohoto nového prostředí důrazně doporučujeme vytvořit zkušební účet.
 
-#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Co se chystá pro Appx v Intune na portálu Azure portal <!-- 1000270 -->
+#### <a name="whats-coming-for-appx-in-intune-in-the-azure-portal----1000270---"></a>Co přichází pro appx v Intune v Azure Portal <!-- 1000270 -->
 
 Součástí migrace na Intune na Azure Portalu jsou tři změny appx:
 
@@ -108,22 +108,22 @@ Existující role pro správu mobilních aplikací (MAM) (Přispěvatel, Vlastn�
 
 ### <a name="whats-coming"></a>Co připravujeme
 
-#### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování v aplikacích portál společnosti pro všechny platformy <!--User Story 1132123-->
+#### <a name="improved-sign-in-experience-across-company-portal-apps-for-all-platforms---user-story-1132123--"></a>Vylepšené přihlašování napříč Portál společnosti aplikacemi pro všechny platformy <!--User Story 1132123-->
 
 Avizujeme změnu, kterou uvedeme během několika nadcházejících měsíců a která vylepší přihlašování k aplikacím Portál společnosti Intune v systémech Android, iOS a Windows. Nové uživatelské prostředí se automaticky zobrazí na všech platformách pro aplikaci Portál společnosti, až Azure AD tuto změnu provede. Kromě toho se teď uživatelé můžou k Portálu společnosti přihlašovat z jiného zařízení pomocí vygenerovaného kódu na jedno použití. To se hodí hlavně v případech, kdy se uživatelé potřebují přihlásit bez přihlašovacích údajů.
 
 Snímky obrazovky předchozího způsobu přihlašování, nového způsobu přihlašování zadáním přihlašovacích údajů a nového způsobu přihlašování z jiného zařízení najdete na stránce [novinek v uživatelském rozhraní aplikací](whats-new-app-ui.md).
 
-#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plánovaná změna: Intune se mění prostředí portálu Intune Partner Portal <!-- 1050016 -->
+#### <a name="plan-for-change-intune-is-changing-the-intune-partner-portal-experience----1050016---"></a>Plán změny: Intune mění prostředí portálu pro partnery Intune. <!-- 1050016 -->
 
 Počínaje aktualizací služby v polovině května 2017 odstraníme stránku Intune Partner z manage.microsoft.com.  
 
 Pokud jste partnerským správcem, nebude už moct stránku Intune Partner zobrazit a provádět z ní jménem vašich zákazníků kroky, ale místo toho se budete muset přihlásit k jednomu ze dvou dalších partnerských portálů Microsoftu.
 
-Oba [Microsoft Partner Center](https://partnercenter.microsoft.com/) a [centra pro správu služeb Microsoft 365](https://admin.microsoft.com/) vám umožní přihlášení do zákaznické účty, které spravujete. V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
+[Partnerské centrum Microsoftu](https://partnercenter.microsoft.com/) i [centrum pro správu Microsoft 365](https://admin.microsoft.com/) vám umožní přihlašovat se k účtům zákazníků, které spravujete. V budoucnu jako partneři prosím ke správě svých zákazníků používejte jeden z těchto webů.
 
 
-#### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple bude vyžadovat aktualizace ATS Application Transport Security <!--748318-->
+#### <a name="apple-to-require-updates-for-application-transport-security---748318--"></a>Apple pro vyžadování aktualizací pro zabezpečení přenosu aplikací <!--748318-->
 
 Apple oznámil, že začne vynucovat specifické požadavky na ATS (Application Transport Security). ATS se používá k vynucení vyššího zabezpečení veškeré komunikace aplikací přes protokol HTTPS. Tato změna ovlivní zákazníky Intune, kteří používají aplikace Portál společnosti pro iOS.
 
@@ -135,32 +135,32 @@ Prostřednictvím programu Apple TestFlight, který vynucuje nové požadavky na
 
 #### <a name="support-for-skycure"></a>Podpora aplikace Skycure
 
-Můžete teď řízení mobilních zařízení přístup k firemním prostředkům pomocí podmíněného přístupu na základě posouzení rizik, které provádí služba Skycure, je řešení ochrany před mobilními hrozbami, která se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
+Přístup mobilních zařízení k podnikovým prostředkům teď můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí Skycure, řešení ochrany před mobilními hrozbami, které se integruje s Microsoft Intune. Riziko se posuzuje na základě telemetrie, která se shromažďuje ze zařízení, na kterých běží služba Skycure. Patří do ní:
 
 - Fyzická ochrana
 - Síťová ochrana
 - Ochrana aplikací
 - Ochrana chyb zabezpečení
 
-Můžete nakonfigurovat zásady podmíněného přístupu EMS založené na posouzení rizika Symantec Endpoint Protection Mobile (služby Skycure) prostřednictvím zásad dodržování předpisů zařízení služby Intune. Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile konektor](skycure-mobile-threat-defense-connector.md).
+Pomocí zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu EMS na základě posouzení rizik v rámci Symantec Endpoint Protection Mobile (Skycure). Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile konektor](skycure-mobile-threat-defense-connector.md).
 
-#### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí aplikace portál společnosti pro Android <!--621622-->
+#### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí pro aplikaci Portál společnosti pro Android <!--621622-->
 
 Kvůli modernějšímu vzhledu a chování a lepšímu uživatelskému prostředí bude aktualizováno uživatelské rozhraní aplikace Portál společnosti pro Android. K významným aktualizacím patří:
 
-- Barvy: Záhlaví karet aplikace portál společnosti se zobrazí v IT definované značky.
-- Aplikace: V **aplikace** karta, **vybrané aplikace** a **všechny aplikace** tlačítka se aktualizují.
-- Hledání: V **aplikace** karta, **hledání** tlačítko je plovoucí tlačítko akce.
-- Navigace mezi aplikacemi: **Všechny aplikace** zobrazení teď zobrazují s kartami **doporučené**, **všechny**, a **kategorie** zjednodušují navigaci.
-- Podpora: **Moje zařízení** a **kontakt na IT** karet jsou aktualizované pro lepší čitelnost.
+- Barvy Portál společnosti se v uživatelsky definované značce vybarvují záhlaví karet.
+- Můžou Na kartě **aplikace** se aktualizují tlačítka **vybrané aplikace** a **všechny aplikace** .
+- Nápovědě Na kartě **aplikace** je tlačítko **Hledat** plovoucí tlačítko akce.
+- Navigace v aplikacích: Zobrazení **všechny aplikace** zobrazuje seznam **nabízených**, **všech**a **kategorií** s kartami pro snazší navigaci.
+- Pracovníky Karty **Moje zařízení** a **Kontakt na IT** jsou aktualizované, aby se zlepšila čitelnost.
 
 Další podrobnosti o těchto změnách najdete v článku [Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele](whats-new-app-ui.md).
 
-#### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení můžete přístup k přiřazeným aplikacím <!--664691-->
+#### <a name="non-managed-devices-can-access-assigned-apps---664691--"></a>Nespravovaná zařízení mají přístup k přiřazeným aplikacím. <!--664691-->
 
 Jako součást změn v návrhu na webu Portál společnosti budou moci uživatelé iOSu a Androidu na svoje nespravovaná zařízení instalovat aplikace, které mají přiřazené jako dostupné bez registrace. S použitím přihlašovacích údajů pro Intune se budou moct uživatelé přihlásit na web Portál společnosti a zobrazit seznam aplikací, které mají přiřazené. Balíčky aplikací, které jsou dostupné bez registrace, jsou k dispozici ke stažení prostřednictvím webu Portál společnosti. Aplikace, které vyžadují registraci, aby je bylo možné nainstalovat, nejsou touto změnou ovlivněny, protože když budou chtít tyto aplikace uživatelé nainstalovat, zobrazí se jim výzva k registraci.
 
-#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podepisovací skript pro portál společnosti pro Windows 10 <!--941642-->
+#### <a name="signing-script-for-windows-10-company-portal---941642--"></a>Podpisový skript pro Windows 10 Portál společnosti <!--941642-->
 
 Pokud potřebujete stáhnout aplikaci Portál společnosti pro Windows 10 a nainstalovat ji bokem, můžete použít skript, který zjednoduší a zefektivní proces podepisování aplikací ve vaší organizaci.   Informace o tom, jak tento skript stáhnout, a pokyny k jeho použití najdete v článku [Microsoft Intune Signing Script for Windows 10 Company Portal](https://aka.ms/win10cpscript) (Podepisovací skript Microsoft Intune pro Portál společnosti pro Windows 10) na webu TechNet. Další podrobnosti o tomto oznámení najdete v článku [Updating your Windows 10 Company Portal app](https://blogs.technet.microsoft.com/intunesupport/2017/03/13/updating-your-windows-10-company-portal-app/) (Aktualizace aplikace Portál společnosti pro Windows 10) na blogu týmu podpory Intune.
 
@@ -173,7 +173,7 @@ Uživatelé iOSu mají k dispozici verzi iOS 10.3 od 27. března 2017. Všechny 
 
 V současnosti nejsou známy žádné problémy. Pokud se vyskytne problém s iOSem 10.3, kontaktujte prosím [tým podpory Intune](get-support.md).
 
-#### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Vylepšená podpora pro uživatele Androidu v Číně <!--720444-->
+#### <a name="improved-support-for-android-users-based-in-china---720444--"></a>Vylepšená podpora pro uživatele Androidu založená na Číně <!--720444-->
 
 Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských obchodů. Portál společnosti bude tuto situaci podporovat tím, že uživatele Androidu v Číně přesměruje na stažení aplikací Portál společnosti a Outlook z místních obchodů s aplikacemi. Tato změna vylepší uživatelské prostředí při povolených zásadách podmíněného přístupu, a to jak při správě mobilních zařízení, tak při správě mobilních aplikací. Aplikace Portál společnosti a Outlook pro Android jsou dostupné v následujících čínských obchodech s aplikacemi:
 
@@ -183,7 +183,7 @@ Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem z
 - [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
 - [Wandoujia](https://go.microsoft.com/fwlink/?linkid=836950)
 
-#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Osvědčený postup: Ujistěte se, že aplikace portál společnosti jsou aktuální <!--879465-->
+#### <a name="best-practice-make-sure-your-company-portal-apps-are-up-to-date---879465--"></a>Osvědčený postup: Ujistěte se, že jsou vaše aplikace Portál společnosti v aktuálním stavu. <!--879465-->
 
 V prosinci 2016 jsme vydali aktualizaci umožňující vynucení pro vícefaktorové ověřování (MFA) u skupiny uživatelů, když zaregistrují zařízení s iOSem, Androidem, Windows 8.1+ nebo Windows Phone 8.1+. Tato funkce nefunguje bez některých základních verzí aplikace Portál společnosti pro Android (v5.0.3419.0+) a iOS (v2.1.17+).
 
@@ -201,44 +201,44 @@ Společnost Microsoft oznámila obecnou dostupnost aplikací Microsoft Teams. Ak
 
 ### <a name="new-capabilities"></a>Nové funkce
 
-### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizace webu portál společnosti <!--753980-->
+### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizaci web Portál společnosti <!--753980-->
 Web Portál společnosti bude podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Obrázek hamburgerové nabídky, která je teď přidaná v levém horním rohu webu Portál společnosti](./media/CP_hamburger_menu.png).
 
 ### <a name="notices"></a>Sdělení
 
-#### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Migrace skupin nevyžadují žádné aktualizace skupin ani zásad pro zařízení s Iosem <!--898837-->
+#### <a name="group-migration-will-not-require-any-updates-to-groups-or-policies-for-ios-devices---898837--"></a>Migrace skupiny nebude vyžadovat žádné aktualizace skupin ani zásad pro zařízení s iOS. <!--898837-->
 Pro každou skupinu zařízení s Intune předem přiřazenou profilem registrace podnikového zařízení se během migrace do skupin zařízení Azure Active Directory vytvoří odpovídající dynamická skupina zařízení v adresáři AAD založená na názvu profilu registrace podnikového zařízení. Zajistí se tak, že se budou zařízení během registrace automaticky seskupovat a přijmou stejné zásady a aplikace jako původní skupina Intune.
 
 Jakmile tenant zahájí proces migrace pro seskupování a zacílení, vytvoří Intune automaticky dynamickou skupinu AAD tak, aby odpovídala skupině Intune, na kterou je zacílený profil registrace podnikového zařízení. Pokud správce Intune odstraní cílovou skupinu Intune, neodstraní se odpovídající dynamická skupina AAD. Smažou se členové skupiny a dynamický dotaz, ale skupina samotná zůstane, dokud ji správce IT neodebere přes portál AAD.
 
 Podobně, pokud správce IT změní to, která skupina Intune je cílem profilu registrace podnikového zařízení, vytvoří Intune novou dynamickou skupinu odrážející nové přiřazení profilu, ale neodebere se dynamická skupina vytvořená pro staré přiřazení.
 
-### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Jako výchozí se použije ke správě zařízení s Windows desktop prostřednictvím nastavení Windows <!--663050-->
+### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Výchozí nastavení pro správu stolních zařízení s Windows prostřednictvím nastavení Windows <!--663050-->
 Výchozí chování registrace stolních počítačů s Windows 10 se mění. Nové registrace se budou provádět obvyklým tokem registrace agenta MDM, nikoli přes agenta pro počítače. Web Portál společnosti bude uživatelům stolních počítačů s Windows 10 poskytovat pokyny k registraci, které je provedou procesem přidání stolních počítačů s Windows 10 jako mobilní zařízení. Tato změna nebude mít vliv na už zaregistrované počítače, a [pokud chcete](manage-windows-pcs-with-microsoft-intune.md), může stolní počítače s Windows 10 vaše organizace pořád spravovat přes agenta pro počítače.
 
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Vylepšení podpory správy mobilních aplikací pro selektivní vymazání <!--581242-->
-Koncovým uživatelům se zobrazí podrobnější pokyny o tom, jak získat přístup k pracovním nebo školním datům, pokud tato data automaticky odebrala kvůli zásadám "doba v offline režimu před data aplikací vymažou".<!--, or the removal of the Intune Company Portal on Android.-->
+Koncovým uživatelům se dostanou další doprovodné materiály, jak znovu získat přístup k pracovním nebo školním datům, když se data automaticky odeberou kvůli zásadám "interval v offline režimu před vymazáním dat aplikace".<!--, or the removal of the Intune Company Portal on Android.-->
 
-#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Otevřete portál společnosti pro iOS odkazy v aplikaci <!--665954-->
+#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Portál společnosti pro odkazy iOS otevřené v aplikaci <!--665954-->
 Odkazy v aplikaci Portálu společnosti pro iOS, včetně těch, které vedou na dokumentaci a aplikace, se budou otevírat přímo v aplikaci Portál společnosti pomocí integrovaného zobrazení Safari. Tato aktualizace se bude dodávat odděleně od aktualizace služby v lednu.
 
 #### <a name="new-mdm-server-address-for-windows-devices---893007--"></a>Nová adresa serveru MDM pro zařízení s Windows <!--893007-->
 Uživatelům Windows a Windows Phone se při pokusu o registraci zařízení zobrazí chyba, pokud zadají jako adresu serveru MDM __manage.microsoft.com__ (když se zobrazí výzva). Adresa serveru MDM se mění z __manage.microsoft.com__ na __enrollment.manage.microsoft.com__. Upozorněte uživatele, že mají jako adresu serveru MDM použít __enrollment.manage.microsoft.com__, když se jim zobrazí výzva při registraci zařízení s Windows nebo zařízení Windows Phone. Nastavení CNAME nevyžaduje žádné změny. Další informace o této změně najdete na webu [aka.ms/intuneenrollsvrchange](https://aka.ms/intuneenrollsvrchange).
 
-#### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí aplikace portál společnosti pro Android <!--621622-->
+#### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí pro aplikaci Portál společnosti pro Android <!--621622-->
 Od března bude aplikace Portál společnosti pro Android odpovídat [specifikacím Material Design](https://material.io/guidelines/material-design/introduction.html) a získá tak modernější vzhled a chování. Toto vylepšené uživatelské prostředí zahrnuje:
 
 * __Barvy__: Záhlaví karet můžou mít barvy podle vaší vlastní palety barev.
-* __Rozhraní__: Na kartě aplikace byla aktualizována tlačítka vybrané aplikace a všechny aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
-* __Navigace__: Všechny aplikace teď zobrazují karty doporučené, všechny a kategorie, které zjednodušují navigaci.
-* __Služba__: Moje zařízení a kontaktovat oddělení IT zlepšila se čitelnost karet.
+* __Rozhraní__: Vybrané aplikace a tlačítka všechny aplikace byly aktualizovány na kartě aplikace. Tlačítko Hledat je nyní plovoucí tlačítko akce.
+* __Navigace__: U všech aplikací se zobrazuje seznam doporučených, všech kategorií a pro snazší navigaci s kartami.
+* __Služba__: Vaše zařízení a kontaktní karty IT mají lepší čitelnost.
 
 Obrázky před a po najdete na [stránce s aktualizacemi uživatelského rozhraní](whats-new-app-ui.md).
 
-### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Přidružení více nástrojů pro správu Microsoft Store pro firmy <!--926135-->
+### <a name="associate-multiple-management-tools-with-the-microsoft-store-for-business---926135--"></a>Přidružení více nástrojů pro správu k Microsoft Store pro firmy <!--926135-->
 Pokud k nasazování aplikací pro Microsoft Store pro firmy používáte více nástrojů pro správu, mohli jste k Microsoft Storu pro firmy dříve přidružit jenom jeden z nich. Teď už můžete ke Storu přidružit více nástrojů pro správu, například Intune a Configuration Manager. Podrobnosti najdete v článku [Správa aplikací koupených v Microsoft Storu pro firmy v Microsoft Intune](windows-store-for-business.md).
 
-## <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal---736542--"></a>Co je nového ve verzi public preview služby Intune na portálu Azure portal <!--736542-->
+## <a name="whats-new-in-the-public-preview-of-intune-in-the-azure-portal---736542--"></a>Co je nového ve verzi Public Preview služby Intune v Azure Portal <!--736542-->
 
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API.
 
@@ -255,7 +255,7 @@ Novinky ve verzi Intune v Azure najdete [zde](whats-new.md).
 #### <a name="in-console-reports-for-mam-without-enrollment---677961--"></a>Sestavy v konzole pro MAM bez registrace <!--677961-->
 Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Další informace o tom, jak [monitorovat zásady správy mobilních aplikací v Intune](app-protection-policies-monitor.md).
 
-#### <a name="android-711-support---694397--"></a>Podpora pro Android 7.1.1 <!--694397-->
+#### <a name="android-711-support---694397--"></a>Podpora Androidu 7.1.1 <!--694397-->
 Intune teď plně podporuje a spravuje Android 7.1.1.
 
 #### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola správce komunikovat <!--unknown-->
@@ -263,21 +263,21 @@ Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli posky
 
 ### <a name="notices"></a>Sdělení
 
-#### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Jako výchozí se použije ke správě zařízení s Windows desktop prostřednictvím nastavení Windows <!--663050-->
+#### <a name="defaulting-to-managing-windows-desktop-devices-through-windows-settings---663050--"></a>Výchozí nastavení pro správu stolních zařízení s Windows prostřednictvím nastavení Windows <!--663050-->
 Výchozí chování registrace stolních počítačů s Windows 10 se mění. Nové registrace se budou provádět obvyklým tokem registrace agenta MDM, nikoli přes agenta pro počítače.
 
 Web Portál společnosti bude uživatelům stolních počítačů s Windows 10 poskytovat pokyny k registraci, které je provedou procesem přidání stolních počítačů s Windows 10 jako mobilní zařízení. Tato změna nebude mít vliv na už zaregistrované počítače, a [pokud chcete](manage-windows-pcs-with-microsoft-intune.md), může stolní počítače s Windows 10 vaše organizace pořád spravovat přes agenta pro počítače.
 
 #### <a name="improving-mobile-app-management-support-for-selective-wipe---581242--"></a>Vylepšení podpory správy mobilních aplikací pro selektivní vymazání <!--581242-->
-Koncovým uživatelům se zobrazí podrobnější pokyny o tom, jak získat přístup k pracovním nebo školním datům, pokud tato data automaticky odebrala kvůli zásadám "doba v offline režimu před data aplikací vymažou".<!--, or the removal of the Intune Company Portal on Android.-->
+Koncovým uživatelům se dostanou další doprovodné materiály, jak znovu získat přístup k pracovním nebo školním datům, když se data automaticky odeberou kvůli zásadám "interval v offline režimu před vymazáním dat aplikace".<!--, or the removal of the Intune Company Portal on Android.-->
 
-#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Otevřete portál společnosti pro iOS odkazy v aplikaci <!--665954-->
+#### <a name="company-portal-for-ios-links-open-inside-the-app---665954--"></a>Portál společnosti pro odkazy iOS otevřené v aplikaci <!--665954-->
 Odkazy v aplikaci Portálu společnosti pro iOS, včetně těch, které vedou na dokumentaci a aplikace, se budou otevírat přímo v aplikaci Portál společnosti pomocí integrovaného zobrazení Safari. Tato aktualizace se bude dodávat odděleně od aktualizace služby v lednu.
 
-#### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizace webu portál společnosti <!--753980-->
+#### <a name="modernizing-the-company-portal-website---753980--"></a>Modernizaci web Portál společnosti <!--753980-->
 Od února bude web Portál společnosti podporovat aplikace zaměřené na uživatele, kteří nemají spravovaná zařízení. Tento web bude podobně jako ostatní produkty a služby Microsoftu používat nové kontrastní barevné schéma, dynamické ilustrace a „hamburgerovou“ nabídku ![Hamburgerová nabídka na webu Portál společnosti](./media/CP_hamburger_menu.png).
 
-#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Novou dokumentaci pro zásady ochrany aplikací <!--583398-->
+#### <a name="new-documentation-for-app-protection-policies---583398--"></a>Nová dokumentace k zásadám ochrany aplikací <!--583398-->
 Aktualizovali jsme naši dokumentaci pro správce a vývojáře aplikací, kteří chtějí ve svých aplikacích pro iOS a Android zapnout zásady ochrany aplikací (známé jako zásady MAM) pomocí nástroje Intune App Wrapping Tool nebo sady Intune App SDK.
 
 Aktualizovaly se tyto články:
@@ -292,25 +292,25 @@ Následující články jsou v knihovně dokumentů nové:
 * [Modul plug-in Cordova sady Intune App SDK](app-sdk-cordova.md)
 * [Komponenta Xamarin sady Intune App SDK](app-sdk-xamarin.md)
 
-#### <a name="progress-bar-when-launching-the-company-portal-on-ios---665978--"></a>Indikátor průběhu při spuštění portálu společnosti v Iosu <!--665978-->
+#### <a name="progress-bar-when-launching-the-company-portal-on-ios---665978--"></a>Indikátor průběhu při spouštění Portál společnosti v iOS <!--665978-->
 Portál společnosti pro iOS zavádí na obrazovce spuštění indikátor průběhu, který uživateli poskytuje informace o probíhajících procesech načítání. Indikátor průběhu bude postupně nahrazovat ikonu zaneprázdnění. To znamená, že někteří uživatelé uvidí nový indikátor průběhu, zatímco jiným se bude dále zobrazovat ikona zaneprázdnění.
 
 ## <a name="december-2016"></a>Prosinec 2016
 
-### <a name="public-preview-of-intune-in-the-azure-portal--736542--"></a>Verzi Public preview služby Intune na portálu Azure portal<!--736542-->
+### <a name="public-preview-of-intune-in-the-azure-portal--736542--"></a>Verze Public Preview služby Intune v Azure Portal<!--736542-->
 Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostředí pro správu do Azure, což umožní výkonnou a integrovanou správu základních pracovních postupů EMS na moderní platformě pro služby, která je rozšiřitelná pomocí rozhraní Graph API. Před všeobecnou dostupností tohoto portálu pro všechny tenanty Intune s radostí oznamujeme, že později tento měsíc začneme vybraným tenantům zavádět verzi Preview tohoto nového prostředí pro správce.
 
 Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Zatím můžete zjistit další informace o tom, co pro Microsoft Intune na portálu Azure Portal chystáme, v naší [nové dokumentaci](/intune/what-is-intune).
 
-__Integrace se službami Telecom expense management ve verzi public preview webu Azure Portal__ <!--747605-->
+__Integrace se správou telekomunikačních výdajů ve verzi Public Preview Azure Portal__ <!--747605-->
 Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se službami TEM (Telecom Expense Management) třetích stran. Pomocí Intune můžete uplatňovat limity na využívání domácích a roamingových dat. Tyto integrace začínáme zavádět s řešením [Saaswedo](http://www.saaswedo.com/). Jestli chcete povolit tuto funkci ve zkušební verzi tenanta, [kontaktujte prosím podporu Microsoftu](get-support.md).
 
 ### <a name="new-capabilities"></a>Nové funkce
 
-__Ověřování službou Multi-Factor Authentication na všech platformách__ <!--747590-->
+__Multi-Factor Authentication napříč všemi platformami__ <!--747590-->
 Teď můžete vynutit vícefaktorové ověřování (MFA) u vybrané skupiny uživatelů při registraci jejich zařízení se systémem iOS, Android, Windows 8.1+ nebo Windows Phone 8.1+ tak, že na portálu pro správu Azure nakonfigurujete MFA v aplikaci pro registraci Microsoft Intune v Azure Active Directory.
 
-__Možnost omezení registrace mobilního zařízení__ <!--747596-->
+__Možnost omezit registraci mobilního zařízení__ <!--747596-->
 Intune přidává nová omezení registrace řídící to, které platformy mobilních zařízení se mohou zaregistrovat. Intune odděluje platformy mobilních zařízení, jako je iOS, macOS, Android, Windows a Windows Mobile.
 * Omezení registrace mobilních zařízení neomezuje registraci klienta pro počítače.
 * Pouze pro iOS existuje další možnost blokování registrace osobně vlastněných zařízení.
@@ -319,10 +319,10 @@ Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune
 
 ### <a name="notices"></a>Sdělení
 
-__Vícefaktorové ověřování při registraci se přesouvá na portál Azure Portal__ <!--VSO 750545-->
+__Multi-Factor Authentication při registraci se přesouvá do Azure Portal__ <!--VSO 750545-->
 Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). S touto aktualizovanou funkcí se teď budete pomocí přihlašovacích údajů Intune přihlašovat na [Microsoft Azure Portal](https://manage.windowsazure.com) a nakonfigurujete nastavení MFA pomocí služby Azure AD. Další informace o tom najdete [tady](https://aka.ms/mfa_ad).
 
-__Aplikace portál společnosti pro Android je teď dostupná v Číně__ <!--VSO 658093-->
+__Aplikace Portál společnosti pro Android je teď dostupná v Číně.__  <!--VSO 658093-->
 Publikujeme aplikaci Portál společnosti pro Android pro stahování v Číně. Vzhledem k absenci obchodu Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
@@ -345,10 +345,10 @@ Ke komunikaci se službou Microsoft Intune používá aplikace Portál společno
 __Firefox už nebude podporovat Silverlight__ <!--VSO TBA-->
 Mozilla ve verzi 52 [prohlížeče Firefox](https://www.mozilla.org/firefox) přestává podporovat Silverlight s účinností od března 2017. V důsledku toho se už pomocí Firefoxu ve verzi vyšší než 51 nebudete moct přihlásit ke stávající konzole Intune. Doporučujeme pro přístup ke konzole pro správce používat Internet Explorer 10 nebo 11 nebo [verzi Firefoxu starší než 52](https://ftp.mozilla.org/pub/firefox/releases/). Přechod Intune na Azure Portal umožní podporu celé řady [moderních prohlížečů](/azure/azure-preview-portal-supported-browsers-devices) bez závislosti na Silverlightu.
 
-__Odstranění zásady poštovní schránky mobilních zařízení Exchange Online__ <!--770687-->
+__Odebrání zásad poštovní schránky mobilních zařízení Exchange Online__ <!--770687-->
 Od prosince už správci nebudou moct zobrazit nebo nakonfigurovat zásady poštovní schránky mobilních zařízení Exchange Online (EAS) v konzole Intune. Tato změna se bude pro všechny tenanty Intune zavádět v průběhu prosince a ledna. Všechny stávající zásady zůstanou tak, jak jsou nakonfigurované. Ke konfiguraci nových zásad použijte prostředí Exchange Management Shell. Další informace o tom najdete [tady](https://technet.microsoft.com/library/bb123783%28v=exchg.150%29.aspx).
 
-__Aplikace Intune AV Player, Image Viewer a PDF Viewer se už nepodporují v Androidu__ <!--747553-->
+__Aplikace Intune AV Player, Image Viewer a PDF Viewer se už v Androidu nepodporují.__ <!--747553-->
 Od poloviny prosince 2016 už uživatelé nebudou moct dál používat aplikace Intune AV Player, Image Viewer a PDF Viewer. Tyto aplikace nahrazuje aplikace Azure Information Protection. Další informace o aplikaci Azure Information Protection najdete [tady](/information-protection/rms-client/mobile-app-faq).
 
 ## <a name="november-2016"></a>Listopad 2016
@@ -375,5 +375,5 @@ __Podpisový certifikát Symantec už k nahrání nevyžaduje podepsanou aplikac
 __Podpora Portálu společnosti ve Windows Phonu 8__ Podpora Portálu společnosti ve Windows Phonu 8 se přestane nabízet. Podpora pro platformy Windows Phone 8 a WinRT se přestala nabízet v říjnu 2016. Podpora pro Portál společnosti ve Windows Phonu 8 se také přestala nabízet v říjnu 2016.
 
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).
