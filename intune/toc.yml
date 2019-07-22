@@ -382,6 +382,8 @@
               href: privacy-data-view-correct.md
             - name: 'Auditování, export, odstranění'
               href: privacy-data-audit-export-delete.md
+        - name: Šifrování zařízení
+          href: encrypt-devices.md
         - name: Podmíněný přístup
           href: conditional-access.md
           items:
