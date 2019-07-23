@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0eca9dfddbf9ea2c68cf58b1da64d9b046df7e77
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402903"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353634"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Správa propojení uživatelů se zařízeními u počítačů s Windows
 
@@ -32,7 +32,7 @@ Informace v tomto tématu se vztahují jenom na desktopové systémy Windows, kt
 
 Abyste mohli nasadit software pro uživatele, musíte uživatele propojit s počítačem. Uživatele můžete propojit s několika počítači, ale každý počítač může být propojený jenom s jedním uživatelem. Uživatelé se automaticky propojí se všemi počítači, které si přes portál společnosti zaregistrovali v Intune.
 
-Další informace o primárním uživateli zařízení, najdete v části [najít primární uživatel](find-primary-user.md).
+Další informace o primárním uživateli zařízení najdete v tématu [vyhledání primárního uživatele](find-primary-user.md).
 
 Propojení uživatele s počítačem:
 
@@ -46,13 +46,13 @@ Propojení uživatele s počítačem:
 
    - Pokud chcete nechat počítač propojený s případným aktuálním uživatelem, klikněte na **Zrušit**.
 
-   - Chcete-li odebrat odkaz na aktuálním uživatelem, pokud existuje, zvolte <strong>odebrat odkaz **&gt;** OK</strong>.
+   - Pokud chcete propojení s aktuálním uživatelem odebrat, klikněte na <strong> **&gt;** odebrat odkaz ok</strong>.
 
    - Pokud chcete propojit počítač s novým uživatelem, vyberte uživatele v seznamu **Všichni uživatelé**. Potvrďte správnost údajů o uživateli a potom zvolte **OK**.
 
 > [!TIP]
 > Když chcete koncovým uživatelům omezit schopnost propojit se s počítači, povolte možnost **Omezit schopnosti uživatelů propojit s počítači vlastní účet** v zásadě **Nastavení agenta Microsoft Intune**.
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 
 [Běžné úlohy správy počítačů s Windows pomocí klientského softwaru Intune](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
