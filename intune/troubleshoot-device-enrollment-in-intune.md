@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6cac9f10abf1347964ac8379938cb146877df56
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 9b995841152ee7290e41eed7988ff2b52b6bc66c
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353382"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375236"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -69,7 +69,7 @@ Podle následujícího postupu zkontrolujte, jestli nemá uživatel přiřazeno 
 
 3. Pokud počet zaregistrovaných zařízení uživatele se už rovná počtu uvedenému v omezení limitu počtu zařízení, nemůže si daný uživatel žádná další zařízení zaregistrovat, dokud:
     - [nebudou odebrána existující zařízení](devices-wipe.md), nebo
-    - nezvýšíte limit počtu zařízení [nastavením omezení zařízení](enrollment-restrictions-set.md#set-device-limit-restrictions).
+    - nezvýšíte limit počtu zařízení [nastavením omezení zařízení](enrollment-restrictions-set.md).
 
 Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte odebírat zastaralá zařízení.
 

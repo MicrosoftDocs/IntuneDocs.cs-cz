@@ -4,7 +4,7 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Podívejt
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8525dd143a8e08f6915fa90dff0d51d6632eceea
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884270"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387317"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
@@ -73,11 +73,11 @@ Můžete také použít společně kombinaci [MDM a MAM](https://docs.microsoft.
 
 Při nastavení Intune se také rozhodujete, jestli ke správě zařízení budete používat výhradně Azure Portal, nebo společně Intune a Microsoft 365. [Migrace správy mobilních zařízení do Intune v Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) je Případová studie Microsoftu. V takovém případě si prostudujte, jak Microsoft IT zvolí moderní přístup k správě zařízení, a přečtěte si získané lekce.
 
-## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Zjednodušení úloh IT pomocí řídicího panelu Správa zařízení
+## <a name="simplify-it-tasks-using-the-device-management-specialist-workspace"></a>Zjednodušení IT úloh pomocí pracovního prostoru specialista na správu zařízení
 
-[Řídicí panel Správa zařízení](https://devicemanagement.portal.azure.com/) je univerzálním nástrojem pro správu a provádění úloh pro vaše mobilní zařízení. Součástí tohoto řídicího panelu jsou služby, které se používají ke správě zařízení, například Intune a Azure Active Directory, a také ke správě klientských aplikací. 
+[Odborník na správu zařízení](https://devicemanagement.portal.azure.com/) je jedním z důvodů, proč spravovat a provádět úlohy pro vaše mobilní zařízení. Tento pracovní prostor zahrnuje služby používané pro správu zařízení, včetně Intune a Azure Active Directory, a také správu klientských aplikací. 
 
-Na řídicím panelu Správa zařízení je možné provádět tyto činnosti:
+V pracovním prostoru specialista na správu zařízení můžete:
 
 - [Registrovat zařízení](https://docs.microsoft.com/intune/device-enrollment)
 - [Nastavení dodržování předpisů zařízením](https://docs.microsoft.com/intune/device-compliance-get-started)
