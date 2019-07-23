@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32a8fb7345a955629c3aa3073f02602fb057c99a
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: 54d9fa1016ff39fcf1e7da9c21391ce70f7acaac
+ms.sourcegitcommit: e451295ca3ee3efc31bf9ee360e599b28ef643ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794257"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863086"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Nastavení registrace Intune pro plně spravovaná zařízení s Androidem Enterprise (Preview)
 
 Zařízení se systémem Android Enterprise Standarded jsou zařízení vlastněná společností, která jsou přidružená k jednomu uživateli a používána výhradně pro práci a nikoli pro osobní použití. Správci můžou spravovat celé zařízení a vynutilit ovládací prvky zásad nedostupné pro pracovní profily, jako třeba:
-- povoluje instalaci aplikace jenom ze spravovaných Google Play.
-- blokovat odinstalaci spravovaných aplikací
+- Povolí instalaci aplikace jenom ze spravovaných Google Play.
+- Blokuje odinstalaci spravovaných aplikací.
 - Zabraňte uživatelům v obnovení továrního nastavení zařízení atd.
 
 Intune vám pomůže nasadit aplikace a nastavení na zařízení s Androidem Enterprise, včetně zařízení se systémem Android Enterprise s plnou správou. Konkrétní podrobnosti o Androidu Enterprise najdete v tématu [požadavky na Android Enterprise](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
@@ -55,7 +55,7 @@ Pokud chcete nastavit správu plně spravovaného zařízení s Androidem Enterp
 
 ### <a name="enable-corporate-owned-user-devices"></a>Povolit uživatelská zařízení ve vlastnictví firmy
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a vyberte **registrace** > zařízení registrace zařízení s**Androidem** > **ve vlastnictví firmy, plně spravovaná uživatelská zařízení (Preview)** .
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **registrace** > zařízení registrace zařízení s**Androidem** > **ve vlastnictví firmy, plně spravovaná uživatelská zařízení (Preview)** .
 2. V části **dovolit uživatelům registrovat zařízení uživatelů vlastněná společností**vyberte **Ano**.
 
 > [!NOTE]
@@ -85,7 +85,7 @@ Při použití těchto funkcí verze Preview mějte na paměti následující sk
 - Skupina zařízení cílící na jakýkoliv profil nebo aplikaci se ve verzi Preview nepodporuje. Podporuje se jenom cílení skupiny uživatelů. 
 - Pro konfiguraci e-mailu, Wi-Fi nebo VPN není k dispozici žádné rozhraní první třídy. Nakonfigurujte podporovaná nastavení konfigurace aplikací pomocí zásad konfigurace aplikací.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - [Přidat zásady konfigurace zařízení s plnou správou pro Android Enterprise](device-restrictions-android-for-work.md#device-owner-only)
 - [Konfigurace zásad konfigurace aplikací pro plně spravovaná zařízení s Androidem Enterprise](app-configuration-policies-use-android.md)
 
