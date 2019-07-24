@@ -171,6 +171,7 @@
       items:
         - name: Co je registrace zařízení?
           href: device-enrollment.md
+          displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
         - name: Možnosti správy zařízení
           href: device-management-capabilities.md
         - name: Možnosti registrace
@@ -184,6 +185,7 @@
               href: apple-mdm-push-certificate-get.md
             - name: Podnikové identifikátory
               href: corporate-identifiers-add.md
+              displayName: COD
             - name: Vícefaktorové ověřování
               href: multi-factor-authentication.md
             - name: správce registrace zařízení
@@ -273,6 +275,8 @@
           href: device-remove-user.md
         - name: Vyhledání primárního uživatele
           href: find-primary-user.md
+        - name: Odesílání oznámení
+          href: custom-notifications.md
         - name: Vymazání zařízení s macOS
           href: device-erase.md
         - name: Vzdálené řízení mobilních zařízení
@@ -559,20 +563,27 @@
               href: apps-add-built-in.md
             - name: Skripty prostředí PowerShell
               href: intune-management-extension.md
-        - name: Nasazení aplikací
-          href: apps-deploy.md
+        - name: Přiřazení aplikací
           items:
+            - name: Přiřazení aplikací skupinám
+              href: apps-deploy.md
+              displayName: app assignment; assignment
             - name: Zahrnutí a vyloučení aplikací
               href: apps-inc-exl-assignments.md
+              displayName: app assignment
             - name: Nasazení aplikací systému Windows 10
               href: apps-windows-10-app-deploy.md
             - name: Nasazení aplikací do prostředí státní správy
               href: apps-deploy-gcc-dod.md
         - name: Monitorování aplikací
           href: apps-monitor.md
+        - name: Zjištěné aplikace
+          href: app-discovered-apps.md
         - name: Konfigurace aplikací
-          href: app-configuration-policies-overview.md
           items:
+            - name: Zásady konfigurace aplikací
+              href: app-configuration-policies-overview.md
+              displayName: App configuration policy; configuration policy
             - name: iOS spravovaná zařízení
               href: app-configuration-policies-use-ios.md
             - name: Android spravovaná zařízení
