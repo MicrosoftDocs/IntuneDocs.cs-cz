@@ -1,6 +1,6 @@
 ---
-title: Profily zásad a pracovní ochrany aplikací v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Při rozhodování o použití zásad ochrany aplikací nebo pracovní profily pro osobní nebo BYOD podnikových zařízení s Androidem v Microsoft Intune, najdete v článku rozdíly a výhody a nevýhody. Porovnat rozdíly a funkce získáte pomocí zásad ochrany aplikací bez registrace (APP-jsme) a pracovní profily Androidu Enterprise.
+title: Zásady ochrany aplikací a pracovní profily v Microsoft Intune – Azure | Microsoft Docs
+description: Pokud se rozhodnete používat zásady ochrany aplikací nebo pracovní profily pro osobní nebo BYOD zařízení se systémem Android Enterprise v Microsoft Intune, podívejte se na rozdíly a specialisty a nevýhody. Porovnáním rozdílů a funkcí, které se budou používat v zásadách ochrany aplikací bez registrace (APP-WE) a Android Enterprise Working Profiles.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,123 +14,123 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3ce7ad6b0254b1c3a8e2843cfcbe70a6b718ce88
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5814a4aac064394dbd0c7f5902dc3f62459ad1d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049917"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353805"
 ---
-# <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Profily zásad a pracovní ochrany aplikací na zařízeních s Androidem Enterprise v Intune
+# <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
 
-V mnoha organizacích jsou postiženy omezeními správcům chránit prostředky a data na různých zařízeních. Problémy může vyvolávat chrání prostředky pro uživatele s osobní podnikových zařízení s Androidem, označované také jako bring-your-own-device (BYOD). Microsoft Intune podporuje dva scénáře nasazení Androidu pro používání your-own-device (BYOD):
+V mnoha organizacích jsou správci vyzváni k ochraně prostředků a dat na různých zařízeních. Jedna z těchto výzev chrání prostředky pro uživatele pomocí osobních zařízení s Androidem Enterprise, označovaných také jako vlastní zařízení (BYOD). Microsoft Intune podporuje dva scénáře nasazení Androidu pro vlastní zařízení (BYOD):
 
-- Zásady ochrany aplikací bez registrace (APP-jsme)
-- Pracovní profily androidu Enterprise
+- Zásady ochrany aplikací bez registrace (APP-WE)
+- Podnikové pracovní profily Androidu
 
-Aplikace – jsme a scénáře s pracovním profilu nasazení zahrnovat následující klíčové funkce důležité pro model BYOD prostředí:
+Scénáře nasazení v rámci aplikace a a Androidu pro nasazení pracovních profilů zahrnují následující klíčové funkce, které jsou důležité pro BYOD prostředí:
 
-1. **Ochrana a oddělení data organizace spravovaná**: Obě řešení chránit data organizace tím, že vynucuje ovládací prvky ochrany před únikem informací (DLP) ke ztrátě dat v organizaci spravovaná data. Tyto ochrany zabránit náhodnému úniku informací z chráněných dat, jako je koncový uživatel náhodnému sdílení osobní aplikace nebo účtu. Slouží také k zajištění, že je v pořádku a není ohrožené zařízení přistupuje k datům.
+1. **Ochrana a oddělení dat spravovaných organizací**: Obě řešení chrání data organizace tím, že vynucuje ovládací prvky ochrany před únikem informací (DLP) na data spravovaná organizací. Tyto ochrany zabraňují náhodnému úniku chráněných dat, jako je například koncový uživatel náhodně ho sdílí s osobní aplikací nebo účtem. Slouží také k tomu, aby se zajistilo, že zařízení, které přistupuje k datům, je v pořádku a není ohroženo.
 
-2. **Ochrana osobních údajů koncového uživatele**: Aplikace – jsme pracovní profily Androidu Enterprise oddělení obsahu koncovým uživatelům na zařízení a data spravovaná službou Správa mobilních zařízení (MDM) správce. V obou případech správce IT vynutit zásady, jako je například ověřování pouze na úrovni kódu PIN v organizaci spravovaná aplikace nebo identity. Správci IT nebudou moct číst, přístup k nebo vymazat data, která má vlastní nebo řídit koncovými uživateli.
+2. **Ochrana osobních údajů koncového uživatele**: APP-WE a Android Enterprise workické profily oddělují obsah koncových uživatelů na zařízení a data spravovaná správcem správy mobilních zařízení (MDM). V obou scénářích vynutili správci IT zásady, jako je ověřování pouze kódem PIN pro aplikace nebo identity spravované organizací. Správci IT nemohou číst, přistupovat ani mazat data, která jsou vlastněná nebo řízená koncovými uživateli.
 
-Určuje, zda zvolíte aplikace-jsme nebo pracovní profily Androidu Enterprise pro vaše nasazení modelu BYOD závisí na vašich požadavcích a obchodní potřeby. Cílem tohoto článku je poskytnout pokyny, které vám pomohou rozhodnout.
+Bez ohledu na to, jestli pro nasazení BYOD zvolíte pracovní profily APP-WE nebo Android Enterprise, záleží na vašich požadavcích a obchodních potřebách. Cílem tohoto článku je poskytnout pokyny, které vám pomůžou při rozhodování.
 
-## <a name="about-intune-app-protection-policies"></a>O zásadách ochrany aplikací Intune
+## <a name="about-intune-app-protection-policies"></a>Informace o zásadách ochrany aplikací Intune
 
-Zásady ochrany aplikací Intune (aplikace) jsou zásady ochrany dat zacílený na uživatele. Použít zásady ochrany před ztrátou dat na úrovni aplikace. Aplikace Intune vyžaduje, že vývojáři aplikací povolit funkce aplikací pro aplikace, který vytvoří.
+Zásady ochrany aplikací Intune (aplikace) jsou zásady ochrany dat cílené na uživatele. Zásady používají ochranu před únikem informací na úrovni aplikace. APLIKACE Intune vyžaduje, aby vývojáři aplikací povolili funkce aplikací v aplikacích, které vytvořili.
 
-Jednotlivé aplikace pro Android jsou povolené pro aplikaci několika způsoby:
+Jednotlivé aplikace pro Android jsou aplikacím povoleny v několika ohledech:
 
-1. **Nativně integrováno do aplikace Microsoft první strany**: Aplikace Microsoft Office pro Android a různé další aplikace od Microsoftu, jsou dostupné integrované aplikace v Intune. Tyto aplikace Office, jako je Word, OneDrive, Outlook a tak dále, není třeba žádné další přizpůsobení k uplatnění zásad. Tyto aplikace můžete instalovat koncoví uživatelé přímo z Google Play Store.
+1. **Nativně integrovaná do aplikací Microsoft First stran**: Systém Microsoft Office aplikace pro Android a výběr dalších aplikací Microsoftu, které jsou součástí integrované aplikace Intune. Tyto aplikace Office, jako jsou Word, OneDrive, Outlook atd., nevyžadují žádné další přizpůsobení, abyste mohli aplikovat zásady. Tyto aplikace můžou instalovat koncoví uživatelé přímo z Obchod Google Play.
 
-2. **Integrovaná aplikace sestavení podle vývojáře, kteří používají sadu Intune SDK**: Vývojáři aplikací můžete integrovat sadu Intune SDK jejich zdrojový kód a znovu zkompilovat svoje aplikace k podpoře funkce zásady aplikací Intune.
+2. **Integrováno do sestavení aplikací pomocí sady Intune SDK pro vývojáře**: Vývojáři aplikací mohou integrovat sadu Intune SDK do jejich zdrojového kódu a znovu kompilovat své aplikace, aby podporovaly funkce zásad aplikací Intune.
 
-3. **Zabalený pomocí nástroje Intune app wrapping**: Někteří zákazníci kompilovat aplikace pro Android (. Soubor APK) bez přístupu ke zdrojovému kódu. Bez zdrojového kódu vývojář nelze integrovat sadu Intune SDK. Bez sady SDK nelze umožňují své aplikace pro zásady aplikací. Vývojář musí změnit nebo recode aplikaci podporují zásady aplikací.
+3. **Zabalené pomocí nástroje pro zabalení aplikace Intune**: Někteří zákazníci zkompiluje aplikace pro Android (. Soubor APK) bez přístupu ke zdrojovému kódu. Bez zdrojového kódu nemůže vývojář integrovat se sadou Intune SDK. Bez SDK nemůžou povolit svoji aplikaci pro zásady aplikací. Vývojář musí aplikaci upravit nebo Recode, aby podporovala zásady aplikací.
 
-    Abychom pomohli, Intune zahrnuje **nástroj App wrapping Tool** nástroje pro existující aplikace pro Android (soubory Apk) a vytvoří aplikaci, která rozpozná zásady aplikací.
+    Intune vám umožní využít nástroj pro **zabalení aplikace** pro existující aplikace pro Android (kopírují) a vytvoří aplikaci, která rozpoznává zásady pro aplikace.
 
-    Další informace o tomto nástroji najdete v tématu [Příprava-obchodních aplikací pro zásady ochrany aplikací](apps-prepare-mobile-application-management.md).
+    Další informace o tomto nástroji najdete v tématu [Příprava obchodních aplikací na zásady ochrany aplikací](apps-prepare-mobile-application-management.md).
 
-Pokud chcete zobrazit seznam aplikací, které jsou povolené s aplikací, najdete v článku [spravované aplikace s bohatou sadou zásad ochrany mobilních aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
+Pokud chcete zobrazit seznam aplikací povolených pro aplikaci, přečtěte si téma [spravované aplikace s bohatou sadou zásad ochrany mobilních aplikací](https://www.microsoft.com/cloud-platform/microsoft-intune-apps).
 
 ## <a name="deployment-scenarios"></a>Scénáře nasazení
 
-Tato část popisuje důležité charakteristiky aplikace-jsme a Android Enterprise pracovní profil scénáře nasazení.
+Tato část popisuje důležité charakteristiky scénářů nasazení pracovních profilů pro aplikace a Android Enterprise.
 
-#### <a name="app-we"></a>APP-WE
+### <a name="app-we"></a>APP-WE
 
-Aplikace – nasazení jsme (zásady ochrany aplikací bez registrace) definuje zásady pro aplikace, nikoli zařízením. V tomto scénáři zařízení obvykle nejsou zaregistrovaná nebo spravovaná podle autority MDM, jako je například Intune. Ochrana aplikací a přístup k datům organizace, správci používat aplikaci spravovat aplikace a pro tyto aplikace použít zásady ochrany dat.
+APLIKACE – nasazení (zásady ochrany aplikací bez registrace) definuje zásady pro aplikace, ne zařízení. V tomto scénáři zařízení obvykle nejsou zaregistrovaná nebo spravovaná autoritou MDM, jako je třeba Intune. Aby mohli správci chránit aplikace a přistupovat k datům organizace, používají aplikace spravované aplikací a pro tyto aplikace platí zásady ochrany dat.
 
 Tato funkce platí pro:
 
-- Android 4.4 a novější
+- Android 4,4 a novější
 
 > [!TIP]
 > Další informace najdete v tématu [co jsou zásady ochrany aplikací?](app-protection-policy.md).
 
-Aplikace – jsme scénáře jsou pro koncové uživatele, kteří mají malé náklady organizace na svých zařízeních a nechcete, aby se zapsat do správy mobilních zařízení. Jako správce stále potřebují chránit vaše data. Tato zařízení nespravuje. Proto běžné úlohy MDM a funkce, jako je například Wi-Fi zařízení VPN a správa certifikátů, nejsou součástí tohoto scénáře nasazení.
+Scénáře pro aplikace jsou pro koncové uživatele, kteří na svých zařízeních chtějí malé organizační nároky a nechtějí se registrovat v MDM. Jako správce je stále potřeba chránit vaše data. Tato zařízení nejsou spravovaná. Běžné úlohy a funkce MDM, jako je Wi-Fi, VPN zařízení a Správa certifikátů, nejsou součástí tohoto scénáře nasazení.
 
-#### <a name="android-enterprise-work-profiles"></a>Pracovní profily androidu Enterprise
+### <a name="android-enterprise-work-profiles"></a>Podnikové pracovní profily Androidu
 
-Pracovní profily jsou základní scénář nasazení Androidu Enterprise a případy použití pouze scénář zaměřený na modelu BYOD. Pracovní profil je samostatný oddíl vytváří na úrovni operačního systému Android, která je možné spravovat pomocí Intune.
+Pracovní profily jsou základním scénářem nasazení Android Enterprise a jediným scénářem, který je zaměřený na BYOD případy použití. Pracovní profil je samostatný oddíl vytvořený na úrovni operačního systému Android, který se dá spravovat přes Intune.
 
 Tato funkce platí pro:
 
-- Zařízení s androidem 5.0 a novější s Google Mobile Services
+- Zařízení s Androidem 5,0 a novějším s Google Mobile Services
 
 Pracovní profil obsahuje následující funkce:
 
-- **Tradiční funkce MDM**: Možnosti správy mobilních zařízení klíče, jako je například Správa životního cyklu aplikací pomocí spravovaného obchodu Google Play, je k dispozici ve všech scénářích Androidu Enterprise. Spravovaný obchod Google Play poskytuje robustní možnosti instalovat a aktualizovat aplikace bez jakéhokoli zásahu uživatele. IT konfigurační nastavení aplikace můžete také odeslat do aplikace organizace. Nevyžaduje ani koncovým uživatelům povolit instalace z neznámých zdrojů. Další běžné činnosti MDM, jako je například nasazení certifikátů, konfiguraci připojení Wi-Fi/VPN a nastavení hesel zařízení jsou k dispozici s pracovními profily.
+- **Tradiční funkce MDM**: Klíčové možnosti MDM, jako je například Správa životního cyklu aplikací pomocí spravovaného Google Play, jsou k dispozici v jakémkoli scénáři Android Enterprise. Spravovaná Google Play poskytuje robustní prostředí pro instalaci a aktualizaci aplikací bez zásahu uživatele. Může taky zaručovat nastavení konfigurace aplikací do organizačních aplikací. Také nevyžaduje, aby koncoví uživatelé povolili instalace z neznámých zdrojů. Další běžné aktivity MDM, jako je například nasazení certifikátů, konfigurace Wi-Fi/VPN a nastavení hesla zařízení, jsou k dispozici v pracovních profilech.
 
-- **Ochrana před únikem informací na hranice pracovního profilu**: Jako jsou APP-WE, IT můžete vynutit zásady ochrany dat. S pracovním profilem zásady ochrany před únikem informací se vynucují na úrovni pracovní profil, ne na úrovni aplikace. Například kopírování a vkládání ochrana je vynucená v nastavení aplikace použít pro aplikaci nebo vynucuje pracovního profilu. Při nasazení aplikace do pracovního profilu, můžete správci pozastavit ochrany, kopírování a vkládání do pracovního profilu vypnutím tyto zásady na úrovni aplikace.
+- **Ochrana před únikem informací na hranici pracovního profilu**: Stejně jako u nás to může vyhovět zásadám ochrany dat. S pracovním profilem se zásady ochrany před únikem informací vynutily na úrovni pracovního profilu, ne na úrovni aplikace. Například ochrana kopírování/vkládání se vynutila nastavením aplikace použitým pro aplikaci nebo vynutil pracovní profil. Po nasazení aplikace do pracovního profilu můžou správci pozastavit ochranu kopírováním a vkládáním do pracovního profilu tím, že tuto zásadu vypíná na úrovni aplikace.
 
-## <a name="tips-to-optimize-the-work-profile-experience"></a>Tipy pro optimalizaci pracovního profilu prostředí
+## <a name="tips-to-optimize-the-work-profile-experience"></a>Tipy k optimalizaci prostředí pracovních profilů
 
-### <a name="when-to-use-app-within-work-profiles"></a>Při používání aplikace v rámci pracovních profilů
+### <a name="when-to-use-app-within-work-profiles"></a>Kdy použít aplikaci v pracovních profilech
 
-Aplikace v Intune a pracovní profily jsou doplňkové technologie, které lze použít společně nebo samostatně. Obě řešení architektonicky, vynucování zásad v různých vrstvách – aplikace ve vrstvě jednotlivých aplikací a pracovního profilu na vrstvě profilu. Nasazení aplikací spravovaných pomocí zásad aplikace do aplikace v pracovním profilu je platný a podporované scénáře. Používání aplikace, pracovních profilů nebo ke kombinaci závisí na vašich požadavcích ochrany před únikem informací.
+APLIKACE Intune a pracovní profily představují doplňkové technologie, které se dají použít společně nebo samostatně. V rámci architektury vynutila obě řešení zásady v různých vrstvách – aplikace na jednotlivých vrstvách aplikace a pracovní profil ve vrstvě profilace. Nasazení aplikací spravovaných zásadou aplikace do aplikace v pracovním profilu je platný a podporovaný scénář. Pokud chcete používat aplikaci, pracovní profily nebo kombinaci, záleží na vašich požadavcích na ochranu před únikem informací.
 
-Pracovní profily a aplikace, nastavení vzájemně doplňují tím, že poskytuje další pokrytí, pokud se jeden profil nesplňuje požadavky na ochranu dat vaší organizace. Například pracovní profily nativně neposkytují ovládacích prvků pro aplikaci zabránit ukládání do umístění nedůvěryhodné cloudové úložiště. Aplikace obsahuje tuto funkci. Můžete rozhodnout, že ochrany před únikem informací, které jsou k dispozici pouze v pracovním profilu je dostačující a zvolit nepoužívání aplikací. Nebo můžou vyžadovat ochrany z kombinace dvou.
+Pracovní profily a aplikace doplňují všechna ostatní nastavení tím, že poskytují dodatečné pokrytí v případě, že jeden profil nesplňuje požadavky vaší organizace na ochranu dat. Například pracovní profily neposkytují nativně ovládací prvky pro omezení aplikace na ukládání do nedůvěryhodného umístění úložiště v cloudu. Tato funkce zahrnuje aplikaci. Můžete se rozhodnout, že ochrana před únikem informací, která je k dispozici výhradně v pracovním profilu, je dostatečná a zvolte možnost Nepoužívat aplikaci. Případně můžete vyžadovat ochranu z kombinace těchto dvou.
 
-### <a name="suppress-app-policy-for-work-profiles"></a>Potlačit zásady aplikace pro pracovní profily
+### <a name="suppress-app-policy-for-work-profiles"></a>Potlačit zásady aplikací pro pracovní profily
 
-Budete muset podporují jednotlivé uživatele, kteří mají několik zařízení – nespravovaná zařízení v aplikaci pro – jsme scénář a spravovaných zařízeních s pracovními profily. 
+Možná budete muset podporovat jednotlivé uživatele, kteří mají více zařízení nespravovaných zařízeními ve scénáři APP-WE a spravovaná zařízení s pracovními profily.
 
-Například vyžadovat zadání kódu PIN při otevírání pracovní aplikace koncovým uživatelům. V závislosti na zařízení jsou zpracovány funkce PIN kód aplikace nebo pracovního profilu. Aplikace pro – jsme zařízení, PIN kód pro spuštění chování je vynucena aplikací. Pro pracovní profil zařízení můžete použít zařízení nebo pracovní profil PIN vynucuje operačním systémem. Chcete-li provést tento scénář, konfigurace nastavení aplikace tak, že nemůžete použít *při* aplikace je nasazená do pracovního profilu. Pokud nenakonfigurujete se tímto způsobem, koncový uživatel získá výzva k zadání kódu PIN v zařízení a znovu ve vrstvě aplikací.
+Vyžadujete například, aby koncoví uživatelé při otevírání pracovní aplikace zadali kód PIN. V závislosti na zařízení jsou funkce PIN zpracovávány aplikací nebo pracovním profilem. Pro zařízení, která jsou v aplikaci, se chování kódem PIN na spuštění vynutilo aplikací. Pro zařízení pracovních profilů můžete použít PIN kód zařízení nebo pracovního profilu, který vynutil operační systém. Pro dosažení tohoto scénáře nakonfigurujte nastavení aplikace tak, aby se nepři  nasazení aplikace do pracovního profilu neprojevila. Pokud ho nenastavíte tímto způsobem, koncový uživatel se zobrazí výzva k zadání PIN kódu zařízení a znovu ve vrstvě aplikace.
 
-### <a name="control-multi-identity-behavior-in-work-profiles"></a>Řízení chování funkce více identit v pracovních profilech
+### <a name="control-multi-identity-behavior-in-work-profiles"></a>Řízení chování více identit v pracovních profilech
 
-Aplikace Office, jako je Outlook a OneDrive, mají "více identit" chování. V rámci jedné instance aplikace koncový uživatel můžete přidat připojení k několika účtům odlišné nebo cloudových umístění úložiště. V rámci aplikace může být data načtená z těchto míst samostatné nebo sloučení. A uživatele můžete přepínat kontext mezi osobní identity (user@outlook.com) a identity organizace (user@contoso.com).
+Aplikace Office, jako je například Outlook a OneDrive, mají chování s více identitami. V rámci jedné instance aplikace může koncový uživatel přidat připojení k více jedinečným účtům nebo umístěním cloudového úložiště. V rámci aplikace lze data získaná z těchto umístění oddělit nebo sloučit. A uživatel může kontext přepnout mezi osobními identitami (user@outlook.com) a identitami organizaceuser@contoso.com().
 
-Při používání pracovních profilů, můžete chtít zakázat toto chování více identit. Když ho zakážete, je označené jako instancí aplikace v pracovním profilu nakonfigurovat pouze s identitou organizace. Pomocí nastavení konfigurace aplikace, které povolené účty pro podporu aplikací pro Office Android.
+Pokud používáte pracovní profily, možná budete chtít zakázat toto chování s více identitami. Když ho zakážete, budou se s označením instance aplikace v pracovním profilu moct konfigurovat jenom s identitou organizace. Použijte nastavení konfigurace aplikace povolených účtů pro podporu aplikací Office pro Android.
 
-Další informace najdete v tématu [nasadit Outlook pro iOS a nastavení konfigurace aplikace pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
+Další informace najdete v tématu [nasazení aplikace Outlook pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune).
 
-## <a name="when-to-use-intune-app"></a>Kdy použít pro aplikace Intune
+## <a name="when-to-use-intune-app"></a>Kdy použít aplikaci Intune
 
-Existuje několik scénářů enterprise mobility, kdy použití aplikací Intune je nejvhodnější.
+K dispozici je několik scénářů pro podnikovou mobilitu, kde je použití aplikace Intune nejlepší doporučení.
 
-#### <a name="older-devices-running-android-44-51-are-being-used"></a>Používají se starší zařízení se systémem Android 4.4 5.1
+### <a name="older-devices-running-android-44-51-are-being-used"></a>Používají se starší zařízení se systémem Android 4.4-5.1.
 
-Oficiálně, jakékoli zařízení s Androidem 5.0 nebo novější s Google Mobile Services podporuje pracovních profilů a smí být spravovány tímto způsobem. Ale některé s Androidem 5.0 a 5.1 zařízení z některých výrobci OEM nepodporují pracovních profilů.
+V oficiálním případě všechny zařízení s Androidem 5,0 nebo vyšší s Google Mobile Services podporuje pracovní profily a v takovém případě mají nárok na správu. Některá zařízení s Androidem 5,0 a 5,1 však někteří výrobci OEM nepodporují pracovní profily.
 
-Pokud používáte verze, které nepodporují pracovní profily, a k zajištění ochrany před únikem informací pro organizaci dat na zařízeních, je nutné použít funkce aplikace Intune.
+Pokud používáte verze, které nepodporují pracovní profily, a k zajištění ochrany před únikem informací organizace na zařízeních, musíte použít funkce aplikace Intune.
 
-#### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Bez správy MDM, bez registrace, Google services nejsou k dispozici
+### <a name="no-mdm-no-enrollment-google-services-are-unavailable"></a>Žádná MDM, žádné registrace, služby Google nejsou k dispozici
 
-Zákazníci, kteří nemají žádný způsob správy zařízení, včetně správy pracovních profilů, různých důvodů:
+Někteří zákazníci nepotřebují žádnou formu správy zařízení, včetně správy pracovních profilů, a to z různých důvodů:
 
-- Právní informace a odpovědnost důvodů
-- Konzistence činnost koncového uživatele
-- Je vysoce heterogenní prostředí zařízení s Androidem
-- Není k dispozici žádné připojení ke službám Google, který je potřebný pro pracovní profil správy.
+- Důvody právního a ručení
+- Pro zajištění konzistence uživatelského prostředí
+- Prostředí zařízení s Androidem je vysoce heterogenní
+- Neexistují žádné možnosti připojení ke službám Google, které se vyžadují pro správu pracovních profilů.
 
-Například zákazníků nebo uživatelů v Číně nelze použít správy zařízení s Androidem, protože jsou blokované aplikace služby Google. V takovém případě použijte aplikace Intune pro ochranu před únikem informací.
+Například zákazníci, kteří mají nebo mají uživatele v Číně, nemůžou používat správu zařízení s Androidem, protože jsou blokované služby Google. V takovém případě použijte k ochraně před únikem informací aplikaci Intune.
 
 ## <a name="summary"></a>Souhrn
 
-Pomocí Intune, obě aplikace-jsme a pracovní profily Androidu Enterprise jsou k dispozici pro aplikace Android BYOD. Zvolit aplikaci-jsme nebo pracovních profilů závisí na požadavcích vaší firmy a využití. Stručně řečeno použijte pracovních profilů, pokud potřebujete MDM aktivity na spravovaných zařízeních, jako je například nasazení certifikátu, nabídky aplikace a tak dále. Použití aplikace-jsme Pokud nechcete, aby se nebo není možné spravovat zařízení a používají pouze pro aplikace Intune povolené aplikace.
+V Intune jsou pro váš program pro Android BYOD k dispozici obě pracovní profily APP-WE i Android Enterprise. Pokud chcete zvolit APP-WE nebo pracovní profily, záleží na vašich firmách a požadavcích na použití. V souhrnu použijte pracovní profily, pokud potřebujete aktivity MDM na spravovaných zařízeních, jako je nasazení certifikátů, nabízení aplikace atd. Použijte APP-WE, pokud nechcete nebo nemůžete spravovat zařízení a používáte jenom aplikace s podporou aplikací Intune.
 
 ## <a name="next-steps"></a>Další postup
-[Začněte používat zásady ochrany aplikací](app-protection-policy.md), nebo [zaregistrovat svoje zařízení](android-enroll.md).
+[Začněte používat zásady ochrany aplikací](app-protection-policy.md)nebo [svoje zařízení zaregistrovat](android-enroll.md).

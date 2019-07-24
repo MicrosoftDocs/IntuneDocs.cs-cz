@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ec0ab28f2b32cf3c60d6d674cfac5a5b21d094d
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 673dd0cb751fcdd2a7036dc2bf52dd731a4b04ff
+ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558416"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306753"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -32,7 +32,7 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 ## <a name="prerequisites"></a>Požadavky
 
-* Musíte počítač Mac se systémem OS X 10.8.5 nebo novější a také Xcode 9 nebo novější.
+* Budete potřebovat počítač s Mac OS, na kterém běží OS X 10.8.5 nebo novější, a má nainstalované taky Xcode 9 nebo novější.
 
 * Vaše aplikace musí být určena pro iOS 10 a vyšší verzi.
 
@@ -40,28 +40,28 @@ Sada Microsoft Intune App SDK pro iOS umožňuje začlenit do vaší nativní ap
 
 * Stáhněte soubory pro sadu Intune App SDK pro iOS z [GitHubu](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios).
 
-## <a name="whats-in-the-sdk-repository"></a>Co je v úložišti sady SDK
+## <a name="whats-in-the-sdk-repository"></a>Co je v úložišti SDK
 
-Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahovat žádný kód Swift, nebo jsou kompilovány verze xcode před 10.2:
+Následující soubory jsou relevantní pro aplikace/rozšíření, které neobsahují žádný kód SWIFT nebo jsou kompilovány s verzí Xcode před 10,2:
 
-* **IntuneMAM.framework**: Architektura sady Intune App SDK. Doporučuje se, připojte tento model k aplikaci nebo rozšíření povolit správu aplikací klienta Intune. Někteří vývojáři ale možná dáte přednost přinese zlepšení výkonu statickou knihovnu. V tomto tématu.
+* **IntuneMAM.framework**: Rozhraní Intune App SDK. Doporučujeme propojit toto rozhraní s vaší aplikací nebo rozšířeními a povolit správu klientských aplikací Intune. Někteří vývojáři ale mohou preferovat výhody výkonu statické knihovny. Podívejte se na následující.
 
-* **libIntuneMAM.a**: Statická knihovna Intune App SDK. Vývojáři můžou rozhodnout pro propojení se statickou knihovnou namísto rozhraní framework. Vzhledem k tomu, že přímo do aplikace a rozšíření binární v okamžiku sestavení jsou vloženy statických knihoven, existují některé výhody spuštění včasných odletech použití statické knihovny. Integrace do vaší aplikace je ale složitější. Pokud vaše aplikace obsahuje všechna rozšíření, propojení se statickou knihovnou do aplikace a rozšíření dojde větší velikost sady prostředků aplikace, jako statická knihovna bude vložena do jednotlivých binární rozšíření/aplikace. Při použití rozhraní framework, aplikací a rozšíření můžou sdílet stejnou sadu Intune SDK binární soubor, výsledkem jsou menší velikost aplikace.
+* **libIntuneMAM.a**: Statická knihovna Intune App SDK. Vývojáři se můžou rozhodnout propojit statickou knihovnu namísto rozhraní. Vzhledem k tomu, že statické knihovny jsou vloženy přímo do binárního souboru aplikace nebo rozšíření v době sestavení, existují některé výhody pro použití statické knihovny v době spuštění. Integrace do vaší aplikace je ale složitější proces. Pokud vaše aplikace obsahuje jakákoli rozšíření, propojení statické knihovny s aplikací a rozšířeními bude mít za následek větší velikost sady prostředků aplikace, protože Statická knihovna bude vložena do každého binárního souboru aplikace nebo rozšíření. Při použití architektury můžou aplikace a rozšíření sdílet stejný binární soubor Intune SDK, což má za následek menší velikost aplikace.
 
-* **IntuneMAMResources.bundle**: Balíček prostředků obsahující prostředky, které SDK využívá. Sada prostředků se vyžaduje jenom pro aplikace, které integrují statická knihovna (libIntuneMAM.a).
+* **IntuneMAMResources.bundle**: Sada prostředků obsahující prostředky, na kterých SDK spoléhá. Sada prostředků je nutná jenom pro aplikace, které integrují statickou knihovnu (libIntuneMAM. a).
 
-Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahují kód Swift a byly kompilovány s Xcode 10.2 +:
+Následující soubory jsou relevantní pro aplikace/rozšíření, které obsahují kód SWIFT a jsou kompilovány pomocí Xcode 10.2 +:
 
-* **IntuneMAMSwift.framework**: Rozhraní Intune App SDK Swift. Toto rozhraní obsahuje všechna záhlaví pro rozhraní API, která bude volat aplikaci. Připojte tento model k aplikaci nebo rozšíření povolit správu aplikací klienta Intune.
+* **IntuneMAMSwift.framework**: Architektura SWIFT sady Intune App SDK. Toto rozhraní obsahuje všechny hlavičky rozhraní API, které vaše aplikace bude volat. Pokud chcete povolit správu klientských aplikací Intune, propojte tuto architekturu s aplikací nebo rozšířeními.
 
-* **IntuneMAMSwiftStub.framework**: Intune App SDK Swift se zakázaným inzerováním framework. Toto je požadovaná závislost IntuneMAMSwift.framework, která propojují aplikace/rozšíření.
+* **IntuneMAMSwiftStub.framework**: Rozhraní Intune App SDK SWIFT pro zástupné procedury SWIFT. Toto je požadovaná závislost IntuneMAMSwift. Framework, které musí propojit aplikace nebo rozšíření.
 
 
-Následující soubory jsou relevantní pro všechny aplikace a rozšíření:
+Následující soubory jsou relevantní pro všechny aplikace/rozsahy:
 
-* **IntuneMAMConfigurator**: Nástroj, který se používá ke konfiguraci aplikace nebo souboru Info.plist rozšíření s minimální požadované změny pro správu Intune. V závislosti na funkci vaší aplikace nebo rozšíření budete muset udělat další ruční změny do souboru Info.plist.
+* **IntuneMAMConfigurator**: Nástroj, který slouží ke konfiguraci souboru info. plist aplikace nebo rozšíření s minimálními povinnými změnami pro správu Intune. V závislosti na funkcích aplikace nebo rozšíření může být nutné provést další ruční změny v souboru info. plist.
 
-* **Záhlaví**: Poskytuje veřejná rozhraní API sady Intune App SDK. Tyto hlavičky jsou součástí IntuneMAM/IntuneMAMSwift rozhraní, takže není potřeba ručně přidat záhlaví do svého projektu vývojáři, kteří využívají některou z rozhraní. Vývojáři, chcete propojit s statická knihovna (libIntuneMAM.a) bude nutné ručně obsahovat tato záhlaví ve svém projektu.
+* **Hlavičky**: Zpřístupňuje veřejná rozhraní API sady Intune App SDK. Tato záhlaví jsou obsažena v rozhraních IntuneMAM/IntuneMAMSwift, takže vývojáři, kteří používají některé z rozhraní, nemusejí do svého projektu přidat záhlaví ručně. Vývojáři, kteří se rozhodnou propojit se statickou knihovnou (libIntuneMAM. a), budou muset tyto hlavičky do svého projektu zahrnout ručně.
 
 Následující soubory hlaviček obsahují rozhraní API, datové typy a protokoly, které Intune App SDK zpřístupňuje vývojářům:
 
@@ -70,7 +70,7 @@ Následující soubory hlaviček obsahují rozhraní API, datové typy a protoko
     * IntuneMAMDataProtectionInfo.h
     * IntuneMAMDataProtectionManager.h
     * IntuneMAMDefs.h
-    * IntuneMAMDiagnosticConsole.h
+    * IntuneMAMDiagnosticConsole. h
     * IntuneMAMEnrollmentDelegate.h
     * IntuneMAMEnrollmentManager.h
     * IntuneMAMEnrollmentStatus.h
@@ -82,32 +82,32 @@ Následující soubory hlaviček obsahují rozhraní API, datové typy a protoko
     * IntuneMAMPolicyManager.h
     * IntuneMAMVersionInfo.h
 
-Vývojářům můžete zpřístupnit obsah všech předchozích hlaviček pouhým importováním souboru IntuneMAM.h
+Vývojáři mohou vytvářet obsah všech předchozích hlaviček, které jsou k dispozici pouhým importem IntuneMAM. h.
 
 
 ## <a name="how-the-intune-app-sdk-works"></a>Jak Intune App SDK funguje
 
-Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti správy s minimálními změnami kódu. Čím méně změn kódu méně času uvedení na trh, aniž by to ovlivnilo konzistence a stabilita mobilní aplikace.
+Cílem sady Intune App SDK pro iOS je doplnit do aplikací pro iOS možnosti správy s minimálními změnami kódu. Čím méně kódu se změní na trh, ale bez vlivu na konzistenci a stabilitu mobilní aplikace.
 
 
 ## <a name="build-the-sdk-into-your-mobile-app"></a>Použití sady SDK v mobilní aplikaci
 
 Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
-1. **Možnost 1 – rozhraní (doporučeno)** : Pokud používáte Xcode 10.2 + a vaše aplikace a rozšíření obsahuje kód Swift, propojit `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` do cíle: Přetáhněte `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` k **vložených binárních souborů** seznam cíle projektu.
+1. **Možnost 1 – architektura (doporučeno)** : Pokud používáte Xcode 10.2 + a vaše aplikace/rozšíření obsahuje kód SWIFT, odkaz `IntuneMAMSwift.framework` a `IntuneMAMSwiftStub.framework` cíl: Přetáhněte `IntuneMAMSwift.framework` do seznamu **vložených binárních souborů** cíle projektu. `IntuneMAMSwiftStub.framework`
 
-    V opačném případě propojit `IntuneMAM.framework` do cíle: Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
+    Jinak se připojte `IntuneMAM.framework` k cíli: Přetáhněte `IntuneMAM.framework` do seznamu **vložených binárních souborů** cíle projektu.
 
    > [!NOTE]
    > Pokud tento model použijete, nezapomeňte z univerzálního modelu před odesláním aplikace do App Storu odstranit architektury simulátoru. Viz část [Odeslání aplikace do App Storu](#submit-your-app-to-the-app-store), kde najdete další podrobnosti.
 
-   **Možnost 2 - statickou knihovnu**: Tato možnost dostupná jenom pro aplikace/rozšíření, které obsahovat žádný kód Swift, nebo byly vytvořeny s Xcode < 10.2. Propojit `libIntuneMAM.a` knihovny. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
+   **Možnost 2 – Statická knihovna**: Tato možnost je k dispozici pouze pro aplikace a rozšíření, které neobsahují kód SWIFT nebo byly sestaveny pomocí Xcode < 10,2. Připojte se ke `libIntuneMAM.a` knihovně. Přetáhněte knihovnu `libIntuneMAM.a` do **seznamu propojených modelů a knihoven** cíle projektu.
 
     ![Intune App SDK iOS: propojené architektury a knihovny](./media/intune-app-sdk-ios-linked-frameworks-and-libraries.png)
 
     Přidejte `-force_load {PATH_TO_LIB}/libIntuneMAM.a` do následujících nastavení a nahraďte přitom `{PATH_TO_LIB}` umístěním Intune App SDK:
-   * V projektu `OTHER_LDFLAGS` nastavení konfigurace buildu.
-   * Uživatelské rozhraní Xcode **nastavení další příznaky Linkeru**.
+   * Nastavení konfigurace `OTHER_LDFLAGS` sestavení projektu.
+   * **Další příznaky linkeru**uživatelského rozhraní Xcode.
 
      > [!NOTE]
      > Pokud chcete zjistit cestu `PATH_TO_LIB`, vyberte soubor `libIntuneMAM.a` a v nabídce **Soubor** klikněte na **Získat informace**. Cestu (údaj **Kde**) zkopírujte z části **Obecné** v okně **Informace**.
@@ -116,18 +116,18 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
      ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
      
-2. Pokud je potřeba volat rozhraní API sady Intune z Swift, musíte importovat aplikaci/rozšíření požadované záhlaví sady Intune SDK prostřednictvím hlavičku přemostění jazyka Objective-C. Pokud vaše aplikace a rozšíření již neobsahuje hlavičku přemostění jazyka Objective-C, můžete určit jednu prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo uživatelského rozhraní Xcode **hlavičky přemostění jazyka Objective-C** pole. Přemostění Datacenter záhlaví by měl vypadat přibližně takto:
+2. Pokud potřebujete volat všechna rozhraní API Intune z SWIFT, musí vaše aplikace nebo rozšíření naimportovat požadované hlavičky Intune SDK přes hlavičku přemostění v cíli C. Pokud vaše aplikace nebo rozšíření ještě neobsahuje hlavičku přemostění cílové verze jazyka C, můžete ji zadat prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo pole hlavičky Xcode přemostění v uživatelském rozhraní  . Hlavička přemostění by měla vypadat přibližně takto:
 
    ```objc
       #import <IntuneMAMSwift/IntuneMAM.h>
    ```
    
-   To zpřístupní všechny sady Intune SDK pro rozhraní API ve všech Swift zdrojových souborech aplikace a rozšíření. 
+   Tím budou všechna rozhraní API sady Intune SDK dostupná napříč všemi zdrojovými soubory SWIFT, které vaše aplikace/rozšíření nabízí. 
    
     > [!NOTE]
-    > * Můžete pouze most konkrétní sadu Intune SDK také hlavičky pro Swift, nikoli souboru IntuneMAM.h zahrnující všechny
-    > * V závislosti na tom, jaké framework/statické knihovny jste integrovali cesta k souboru záhlaví se může lišit.
-    > * Zpřístupňuje rozhraní API sady Intune SDK ve Swiftu přes příkaz importu modulu (ex: import IntuneMAMSwift) se momentálně nepodporuje. Použití hlavičku přemostění jazyka Objective-C je doporučený postup.
+    > * Můžete zvolit, aby se do SWIFT místo IntuneMAM. h přemostěníly jenom konkrétní hlavičky Intune SDK.
+    > * V závislosti na tom, kterou architekturu nebo statickou knihovnu máte integrovanou, se může lišit cesta k hlavičkovým souborům.
+    > * Zpřístupnění rozhraní API sady Intune SDK v SWIFT prostřednictvím příkazu importu modulu (např.: import IntuneMAMSwift) se momentálně nepodporuje. Doporučený postup je použití hlavičky přemostění v cíli C.
     
 3. Do projektu přidejte tyto modely iOS:  
     * MessageUI.framework  
@@ -145,7 +145,8 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 4. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
-   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to ověřit tak, že soubor .mobileprovision otevřete v textovém editoru, vyhledáte **keychain-access-groups**a zajištění, že máte zástupný znak. Příklad:
+   > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
+   >
    >  ```xml
    >  <key>keychain-access-groups</key>
    >  <array>
@@ -153,23 +154,23 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    >  </array>
    >  ```
 
-5. Když povolíte sdílení řetězce klíčů, postupujte podle kroků vytvořte samostatnou přístupovou skupinu, ve kterém sada Intune App SDK uloží svoje data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny řetězce klíčů používáte uživatelské rozhraní, ujistěte se, že postupovat podle následujících kroků:
+5. Po povolení sdílení řetězce klíčů použijte postup a vytvořte samostatnou přístupovou skupinu, ve které sada Intune App SDK uloží svá data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, nezapomeňte postupovat podle těchto kroků:
 
-     a. Pokud vaše mobilní aplikace nemá žádné libovolné řetězce klíčů přístup definované skupiny aplikací, přidejte tak aplikaci ID jako sady **první** skupiny.
+     a. Pokud vaše mobilní aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako **první** skupinu ID sady aplikace.
     
     b. Přidejte sdílenou skupinu pro řetězce klíčů `com.microsoft.intune.mam` do existujících přístupových skupin. Tuto přístupovou skupinu používá Intune App SDK k ukládání dat.
     
     c. Do existujících přístupových skupin přidejte `com.microsoft.adalcache`.
     
-        ![Intune App SDK iOS: keychain sharing](./media/intune-app-sdk-ios-keychain-sharing.png)
+      ![Intune App SDK iOS: sdílení řetězců klíčů](./media/intune-app-sdk-ios-keychain-sharing.png)
     
     d. Pokud přímo upravujete soubor nároků a nepoužíváte k vytvoření přístupové skupiny pro řetězce klíčů výše popsané uživatelské rozhraní Xcode, dejte na začátek přístupové skupiny pro řetězce klíčů předponu `$(AppIdentifierPrefix)` (Xcode to dělá automaticky). Příklad:
     
-        - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
-        - `$(AppIdentifierPrefix)com.microsoft.adalcache`
+      - `$(AppIdentifierPrefix)com.microsoft.intune.mam`
+      - `$(AppIdentifierPrefix)com.microsoft.adalcache`
     
-        > [!NOTE]
-        > An entitlements file is an XML file that is unique to your mobile application. It is used to specify special permissions and capabilities in your iOS app. If your app did not previously have an entitlements file, enabling keychain sharing (step 3) should have caused Xcode to generate one for your app. Ensure the app's bundle ID is the first entry in the list.
+      > [!NOTE]
+      > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS. Pokud vaše aplikace dříve neměla soubor nároků, při povolení sdílení řetězců klíčů (krok 3) by ho měl pro ni Xcode vygenerovat. Ujistěte se, že je ID sady aplikace první položkou v seznamu.
 
 6. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
 
@@ -181,7 +182,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    |---------------|--------------------------------|
    |- i |  `<Path to the input plist>` |
    |- e | `<Path to the entitlements file>` |
-   |- o |  (Volitelné) `<Path to the output plist>` |
+   |- o |  Volitelné`<Path to the output plist>` |
 
 Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj je idempotentní a po provedení změn souboru Info.plist dané aplikace nebo nároků by se měl spustit znovu. Nejnovější verzi tohoto nástroje byste měli stáhnout a spustit také při aktualizaci Intune SDK, pokud se v nejnovější verzi změnily požadavky na konfiguraci souboru Info.plist.
 
@@ -193,7 +194,7 @@ Knihovna ADAL zpravidla vyžaduje, aby se aplikace registrovaly u služby Azure 
 
 Pokud už aplikace k ověřování uživatelů používá ADAL, musí používat svoje stávající registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
 
-Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Intune App SDK aktuálně využívá zprostředkovatelskou větev ADAL pro podporu aplikací, které vyžadují podmíněný přístup. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
+Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Sada Intune App SDK aktuálně používá k podpoře aplikací, které vyžadují podmíněný přístup, větev služby ADAL. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
 
 ### <a name="link-to-adal-binaries"></a>Propojení na binární soubory ADAL
 
@@ -229,7 +230,7 @@ Pokud už vaše aplikace používá ADAL, vyžadují se následující konfigura
 
 Dále můžou aplikace přepsat tato nastavení Azure AD za běhu. K tomu stačí nastavit vlastnosti `aadAuthorityUriOverride`, `aadClientIdOverride` a `aadRedirectUriOverride` v instanci `IntuneMAMPolicyManager`.
 
-4. Zkontrolujte, jestli jsou potom postup udělení oprávnění aplikace ke službě app protection zásad (aplikace) pro iOS. Postupujte podle pokynů v [Začínáme s Intune SDK průvodce](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "vaší aplikaci dáte přístup ke službě Intune app protection (volitelné)".  
+4. Zajistěte, aby byla dodržena oprávnění aplikace pro iOS ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)".  
 
 > [!NOTE]
 > Použití souboru Info.plist se doporučuje pro všechna nastavení, která jsou statická a nevyžadují, aby se určovala za běhu. Hodnoty přiřazené vlastnostem v instanci `IntuneMAMPolicyManager` mají přednost před odpovídajícími hodnotami zadanými v souboru Info.plist a zachovají se i po restartování aplikace. Sada SDK je bude dále používat pro kontroly zásad, dokud se registrace daného uživatele nezruší nebo se tyto hodnoty nevymažou nebo nezmění.
@@ -259,14 +260,14 @@ ContainingAppBundleId | Řetězec | Určuje ID sady rozšíření obsahující a
 DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Volitelné. Výchozí hodnota je NE.|
 MainNibFile <br> MainNibFile~ipad  | Řetězec  | Toto nastavení by mělo mít název souboru pro hlavní nib aplikace.  | Vyžaduje se, pokud aplikace v souboru Info.plist definuje MainNibFile. |
 MainStoryboardFile <br> MainStoryboardFile~ipad  | Řetězec  | Toto nastavení by mělo obsahovat název souboru pro hlavní storyboard aplikace. | Vyžaduje se, pokud aplikace v souboru Info.plist definuje UIMainStoryboardFile. |
-MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady Intune APP. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace nemůže být odeslané do App Store mampolicyrequired nastavenou na Ano. | Volitelné. Výchozí hodnota je NE.|
-MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění varuje uživatele v případě, že nebude mít zásady Intune APP. <br><br> Poznámka: Uživatelé budou stále moct používat aplikaci bez zásad po zavření upozornění. | Volitelné. Výchozí hodnota je NE. |
+MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady Intune APP. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. | Volitelné. Výchozí hodnota je NE.|
+MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění varuje uživatele v případě, že nebude mít zásady Intune APP. <br><br> Poznámka: Uživatelům bude i po chybějícím upozornění moct aplikaci používat bez zásad. | Volitelné. Výchozí hodnota je NE. |
 MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Volitelné. Výchozí hodnota je NE. |
 SplashIconFile <br> SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Volitelné. |
 SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Volitelné. |
 BackgroundColor| Řetězec| Určuje barvu pozadí úvodní obrazovky a obrazovky se zadáváním kódu PIN. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelné. Výchozí hodnota je světle šedá. |
-ForegroundColor| Řetězec| Určuje barvu popředí úvodní obrazovky a obrazovky se zadáváním kódu PIN, například barvu textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelné. Výchozí hodnota je černá. |
-AccentColor | Řetězec| Určuje barvu motivu obrazovky kódu PIN, například barvu textu tlačítka a zvýraznění pole. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Volitelné. Výchozí hodnota je systémová modrá. |
+ForegroundColor| Řetězec| Určuje barvu popředí pro úvodní obrazovky a obrazovky kódu PIN, například barvu textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelné. Výchozí hodnota je černá. |
+AccentColor | Řetězec| Určuje barvu zvýraznění obrazovky s kódem PIN, například barvu textu tlačítka a zvýraznění pole. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Volitelné. Výchozí hodnota je systémová modrá. |
 MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Volitelné. Výchozí hodnota je NE. |
 MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Volitelné. Výchozí hodnota je NE. |
 MaxFileProtectionLevel | Řetězec | Volitelné. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
@@ -322,6 +323,7 @@ Pokud se registrace nepovede, aplikace by na základě podrobností selhání m�
 Po zavolání tohoto rozhraní API může aplikace dál normálně fungovat. Pokud se registrace podaří, SDK uživateli oznámí, že se vyžaduje restartování aplikace.
 
 Příklad:
+
 ```objc
 [[IntuneMAMEnrollmentManager instance] loginAndEnrollAccount:@”user@foo.com”];
 ```
@@ -332,8 +334,8 @@ Pokud chcete, aby sada Intune SDK zpracovala veškeré ověřování pomocí ADA
 
 Nastavení  | type  | Definice |
 --       |  --   |   --       |  
-AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámka: Pokud se nenajde žádná spravovaná identita nebo není platný token identity je k dispozici v mezipaměti ADAL, pokus o registraci se bez upozornění nezdaří vás vyzve k zadání přihlašovacích údajů, pokud aplikace nemá možnost MAMPolicyRequired nastavenou na Ano. |
-MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace nemůže být odeslané do App Store mampolicyrequired nastavenou na Ano. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. |
+AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámka: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL není k dispozici žádný platný token pro identitu, pokus o registraci bude bez upozornění na přihlašovací údaje v tichém režimu selže, pokud aplikace nastavila také MAMPolicyRequired na Ano. |
+MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. |
 
 Pokud zvolíte pro aplikaci tuto možnost, nemusíte se po registraci zabývat restartováním aplikace.
 
@@ -369,6 +371,7 @@ Metoda musí být volána před odstraněním tokenů Azure AD uživatelského �
 Pokud aplikace odstraní firemní data uživatele sama, může být příznak `doWipe` nastaven na false. Jinak může aplikace přimět sadu SDK k zahájení selektivního vymazání. Výsledkem bude volání delegáta selektivního vymazání aplikace.
 
 Příklad:
+
 ```objc
 [[IntuneMAMEnrollmentManager instance] deRegisterAndUnenrollAccount:@”user@foo.com” withWipe:YES];
 ```
@@ -456,7 +459,7 @@ Z návratové hodnoty této metody sada SDK pozná, jestli požadované restarto
 
 ## <a name="customize-your-apps-behavior-with-apis"></a>Přizpůsobení chování aplikace pomocí rozhraní API
 
-Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka obsahuje informace o některé základní třídy Intune, které bude používat.
+Sada Intune App SDK má několik rozhraní API, které můžete volat, abyste získali informace o zásadách Intune APP nasazených do aplikace. Pomocí těchto dat můžete přizpůsobit chování aplikace. Následující tabulka poskytuje informace o některých základních třídách Intune, které budete používat.
 
 Třída | Popis
 ----- | -----------
@@ -571,11 +574,11 @@ SUBQUERY (
 
 Staré uživatelské rozhraní:
 
-![Sdílení dat - iOS staré uživatelské rozhraní sdílení](./media/sharing-UI-old.png)
+![Sdílení dat – uživatelské rozhraní pro sdílení iOS staré](./media/sharing-UI-old.png)
 
 Nové uživatelské rozhraní:
 
-![Sdílení dat - iOS nové uživatelské rozhraní sdílení](./media/sharing-UI-new.png)
+![Sdílení dat – uživatelské rozhraní pro nové sdílení v iOS](./media/sharing-UI-new.png)
 
 ## <a name="enable-targeted-configuration-appmam-app-config-for-your-ios-applications"></a>Povolení cílené konfigurace (konfigurace aplikací APP/MAM) aplikací pro iOS
 
@@ -599,11 +602,11 @@ Další informace o vytváření zásad konfigurace aplikací určených pro MAM
 
 Intune App SDK pro iOS ve výchozím nastavení shromažďuje telemetrii týkající se následujících typů událostí:
 
-* **Spuštění aplikace**: Pomáhá Microsoftu Intune zjistit informace o používání aplikací s mam podle typu správy (MAM s MDM), MAM bez registrace MDM atd.
+* **Spuštění aplikace**: Pokud chcete Microsoft Intune získat informace o používání aplikací s podporou MAM podle typu správy (MAM s MDM, MAM bez registrace MDM atd.).
 
-* **Volání registrace**: Chcete-li Microsoft Intune zjistit míru úspěšnosti a další metriky výkonu volání registrace ze strany klienta.
+* **Volání registrace**: Pokud chcete Microsoft Intune získat informace o míře úspěšnosti a dalších metrikách výkonu volání registrace iniciovaná na straně klienta.
 
-* **Akce Intune**: Při diagnostice problémů a že funkce Intune můžeme shromažďovat informace o akcích sady Intune SDK.
+* **Akce Intune**: Abychom vám pomohli diagnostikovat problémy a zajistit funkčnost Intune, shromažďujeme informace o akcích sady Intune SDK.
 
 > [!NOTE]
 > Pokud se rozhodnete neodesílat telemetrická data sady Intune App SDK z vaší aplikace do Microsoft Intune, musíte zakázat zachycování telemetrie sady Intune App SDK. Ve slovníku IntuneMAMSettings nastavte vlastnost `MAMTelemetryDisabled` na ANO.
@@ -620,11 +623,11 @@ Pamatujte si, že identita je definována jednoduše jako řetězec. V identitá
 
 Identita je jednoduše uživatelské jméno účtu, například user@contoso.com). Vývojáři můžou identitu aplikace nastavit na těchto úrovních:
 
-* **Identita procesu**: Stanoví identitu v rámci procesu a používá se hlavně pro aplikace s jedinou identitou. Tato identita ovlivňuje všechny úlohy a soubory a také uživatelské rozhraní.
+* **Identita procesu**: Nastaví identitu v rámci procesu a používá se hlavně pro aplikace s jedinou identitou. Tato identita ovlivňuje všechny úlohy a soubory a také uživatelské rozhraní.
 
-* **Identita uživatelského rozhraní**: Určuje, jaké zásady se uplatní u úloh uživatelského rozhraní v hlavním vlákně, jako je vyjmutí/zkopírování/vložení, PIN, ověřování a sdílení dat. Identita uživatelského rozhraní nemá vliv na úlohy se soubory jako šifrování, zálohování atd.
+* **Identita uživatelského rozhraní**: Určuje, jaké zásady se aplikují na úlohy uživatelského rozhraní v hlavním vlákně, jako je vyjmutí, kopírování, vložení, PIN, ověřování a sdílení dat. Identita uživatelského rozhraní nemá vliv na úlohy se soubory jako šifrování, zálohování atd.
 
-* **Identita vlákna**: Ovlivňuje, jaké zásady se použijí pro aktuální vlákno. Tato identita ovlivňuje všechny úlohy a soubory a také uživatelské rozhraní.
+* **Identita vlákna**: Má vliv na to, jaké zásady se uplatní na aktuálním vlákně. Tato identita ovlivňuje všechny úlohy a soubory a také uživatelské rozhraní.
 
 Bez ohledu na to, jestli je uživatel spravován, zodpovídá za vhodné nastavení identit aplikace.
 
@@ -737,9 +740,9 @@ Ano, správce IT může do aplikace poslat příkaz k selektivnímu vymazání. 
 
 Ano! Nedávno jsme přepracovali naši open-source ukázkovou aplikaci [Wagr pro iOS](https://github.com/Microsoft/Wagr-Sample-Intune-iOS-App). Aplikace Wagr teď umožňuje použít zásady ochrany aplikací pomocí sady Intune App SDK.
 
-### <a name="how-can-i-troubleshoot-my-app"></a>Jak je možné řešit Moje aplikace?
+### <a name="how-can-i-troubleshoot-my-app"></a>Jak můžu řešit potíže s aplikací?
 
-Intune SDK pro iOS 9.0.3+ podporuje možnost přidávat konzolu diagnostiky v rámci mobilní aplikace pro testování zásad a protokolování chyb. `IntuneMAMDiagnosticConsole.h` definuje `IntuneMAMDiagnosticConsole` rozhraní třídy, mohou vývojáři použít k zobrazení diagnostických konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům průběhu testu shromažďovat a sdílet protokoly Intune pro usnadnění diagnostiky jakýkoli problém, který může mít. Toto rozhraní API je nepovinné pro doplňky.
+Intune SDK pro iOS 9.0.3 + podporuje možnost Přidat diagnostické konzole v mobilní aplikaci pro testování zásad a chyb protokolování. `IntuneMAMDiagnosticConsole.h`Definuje rozhraní `IntuneMAMDiagnosticConsole` třídy, které můžou vývojáři použít k zobrazení diagnostické konzoly Intune. To umožňuje koncovým uživatelům nebo vývojářům během testování shromažďovat a sdílet protokoly Intune, které vám pomůžou diagnostikovat případné potíže. Toto rozhraní API je volitelné pro integrátory.
 
 ## <a name="submit-your-app-to-the-app-store"></a>Odeslání aplikace do App Storu
 
@@ -756,4 +759,5 @@ Buildy statické knihovny i modelu pro Intune App SDK jsou univerzální binárn
     ```bash
     cp ~/Desktop/IntuneMAM.device_only ~/Desktop/IntuneMAM.framework/IntuneMAM
     ```
+
     První příkaz odstraní architektury simulátoru ze souboru DYLIB modelu. Druhý příkaz zkopíruje soubor DYLIB jen pro zařízení zpět do adresáře modelu.

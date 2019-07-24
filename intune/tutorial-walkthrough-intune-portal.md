@@ -1,7 +1,7 @@
 ---
-title: Kurz – návod Intune na portálu Azure portal
+title: Kurz – návod Intune v Azure Portal
 titleSuffix: Microsoft Intune
-description: V tomto kurzu se prohlédnete si Microsoft Intune, abyste lépe pochopit, jak provádět úlohy.
+description: V tomto kurzu provedete Microsoft Intune, abyste lépe pochopili, jak provádět úlohy.
 keywords: ''
 author: ErikRe
 ms.author: erikre
@@ -17,130 +17,130 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a0fbddf54939a494087a7da1220f51ec77b45e7b
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882468"
 ---
-# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Kurz: Návod služby Microsoft Intune na portálu Azure portal
+# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Návodu Návod Microsoft Intune v Azure Portal
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, abychom vám s širokou škálu cloud computingu scénáře a možnosti. Microsoft Intune je jednou z několika služeb dostupných v Azure. Intune vám pomůže zajistit, že zařízení, aplikace a data společnosti splňovat požadavky na zabezpečení vaší společnosti. Budete mít kontrolu sady, které je třeba zkontrolovat požadavky a co se stane, když tyto požadavky nejsou splněny. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Princip funkce dostupné v Intune můžete provádět různé správy mobilních zařízení (MDM) a správu mobilních aplikací (MAM) úlohy.
+[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) obsahuje více než 100 služeb, které vám pomůžou s nejrůznějšími scénáři a možnostmi cloud computingu. Microsoft Intune je jedna z několika služeb dostupných v Azure. Intune vám pomůže zajistit, aby zařízení, aplikace a data vaší společnosti splňovaly požadavky na zabezpečení vaší společnosti. Máte kontrolu nad tím, které požadavky je potřeba zkontrolovat a co se stane, když tyto požadavky nebudou splněné. [Azure Portal](https://portal.azure.com) je místo, kde najdete službu Microsoft Intune. Porozumění funkcím dostupným v Intune vám pomůže dosáhnout různých úloh správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM).
 
 V tomto kurzu provedete následující:
 > [!div class="checklist"]
-> * Tour Microsoft Intune
-> * Konfigurace na webu Azure portal
+> * Microsoft Intune prohlídky
+> * Nakonfigurovat Azure Portal
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Požadavky
 Než budete nastavovat Microsoft Intune, projděte si následující požadavky:
 
-   - [Podporované operační systémy a prohlížeče](supported-devices-browsers.md) 
-   - [Požadavky týkající se konfigurace sítě a šířky pásma](network-bandwidth-use.md)
+- [Podporované operační systémy a prohlížeče](supported-devices-browsers.md) 
+- [Požadavky týkající se konfigurace sítě a šířky pásma](network-bandwidth-use.md)
 
 ## <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Registrace bezplatné zkušební verze Microsoft Intune
 
-Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho použitím a přidejte Intune k svému předplatnému. V opačném případě můžete [zaregistrovat Bezplatný zkušební účet](free-trial-sign-up.md) chcete Intune používat pro vaši organizaci.
+Intune si můžete zdarma vyzkoušet. Zkušební doba je 30 dní. Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho použitím a přidejte Intune k svému předplatnému. Jinak si můžete [zaregistrovat bezplatný zkušební účet](free-trial-sign-up.md) , abyste mohli používat Intune pro vaši organizaci.
 
 > [!IMPORTANT]
 > Když si zaregistrujete nový účet, nebude možné s ním kombinovat stávající pracovní nebo školní účet.
 
-## <a name="tour-microsoft-intune"></a>Tour Microsoft Intune
+## <a name="tour-microsoft-intune"></a>Microsoft Intune prohlídky
 
-Postupujte podle následujících kroků, abyste lépe pochopili Intune na portálu Azure portal. Až prohlídku dokončíte, budete mít lepší přehled některých hlavních oblastech služby Intune.
+Pomocí následujících kroků můžete lépe pochopit Intune v Azure Portal. Po dokončení prohlídky budete mít lepší informace o některých hlavních oblastech Intune.
 
-1. Otevřete prohlížeč a přihlaste se k [portál Intune](https://aka.ms/intuneportal). Pokud jste ještě do Intune, pomocí vašeho bezplatného zkušebního předplatného.
+1. Otevřete prohlížeč a přihlaste se k [portálu Intune](https://aka.ms/intuneportal). Pokud s Intune začínáte, použijte bezplatné zkušební předplatné.
 
-    ![Snímek obrazovky portálu Microsoft Intune](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-01.png)
+    ![Snímek obrazovky Microsoft Intuneového portálu](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-01.png)
 
-    Když v Azure otevřete Intune nebo jakoukoli jinou službu, objeví se v podokně. Některé z prvních úloh, můžete použít v Intune obsahují **zařízení**, **klientské aplikace**, **uživatelé**, a **skupiny**. Zatížení je jednoduše dílčí části služby. Při výběru úlohy se toto podokno otevře na celou stránku. Jiná podokna vysunou z pravé strany podokna při otevřít a zavřít zobrazit předchozí podokno. Podokno se také označuje jako okno. 
+    Když v Azure otevřete Intune nebo jakoukoli jinou službu, tato služba se zobrazí v podokně. Mezi první úlohy, které můžete v Intune použít, patří **zařízení**, **klientské aplikace**, **Uživatelé**a **skupiny**. Úlohou je pouze podoblast služby. Po výběru úlohy se toto podokno otevře jako plná stránka. Ostatní podokna se při otevření dostanou na pravé straně podokna a blízkoou se odhalí předchozí podokno. Podokno se také označuje jako okno. 
 
-    Ve výchozím nastavení, když otevřete Intune uvidíte **přehled** podokně. V tomto podokně poskytuje celkový vizuální snímek stavu přiřazení a dodržování předpisů zařízení a také stav instalace aplikace.
+    Ve výchozím nastavení se při otevření Intune zobrazí podokno **Přehled** . Toto podokno poskytuje celkový vizuální snímek přiřazení zařízení a stavu dodržování předpisů a také stav instalace aplikace.
 
-2. Z [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** zobrazíte podrobnosti o zaregistrovaných zařízeních ve vašem tenantovi Intune. Pokud začínáte s nového tenanta Intune, nebudete mít všechna zaregistrovaná zařízení ještě. 
+2. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** a zobrazte podrobnosti o zaregistrovaných zařízeních v tenantovi Intune. Pokud začínáte s novým klientem Intune, zatím nebudete mít žádná zaregistrovaná zařízení. 
 
-    ![Snímek obrazovky podokna registrace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-02.png)
+    ![Snímek obrazovky s podoknem registrace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-02.png)
     
-    Intune umožňuje spravovat vaši pracovníci zařízení a aplikací, včetně způsobu jejich přístup k firemním datům. K používání této služby správy mobilních zařízení, musíte zařízení nejdřív zaregistrovaná v Intune. Když je zařízení zaregistrované, vystaví se mu certifikát MDM. Tento certifikát slouží ke komunikaci se službou Intune. 
+    Intune umožňuje spravovat zařízení a aplikace vašich zaměstnanců, včetně toho, jak přistupují k firemním datům. Aby bylo možné použít tuto službu správy mobilních zařízení (MDM), musí být zařízení nejprve zaregistrovaná v Intune. Když je zařízení zaregistrované, vystaví se mu certifikát MDM. Tento certifikát slouží ke komunikaci se službou Intune. 
 
-    V Intune zaregistrovat zařízení zaměstnanců několika způsoby. Jednotlivé způsoby závisí na vlastnictví zařízení (osobní nebo firemní), typu zařízení (iOS, Windows, Android) a požadavcích na správu (resetování, spřažení, uzamčení). Ale předtím, než můžete povolit registraci zařízení, musíte vytvořit infrastruktury Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](mdm-authority-set.md). Další informace o přípravě vašeho prostředí Intune (tenant) najdete v tématu [nastavenou službu Intune](setup-steps.md). Jakmile budete mít tenanta Intune připravená, můžete zařízení zaregistrovat. Další informace o registraci zařízení najdete v článku [Co je registrace zařízení?](device-enrollment.md)
+    Existuje několik způsobů, jak zaregistrovat zařízení zaměstnanců do Intune. Jednotlivé způsoby závisí na vlastnictví zařízení (osobní nebo firemní), typu zařízení (iOS, Windows, Android) a požadavcích na správu (resetování, spřažení, uzamčení). Abyste ale mohli povolit registraci zařízení, musíte si nastavit infrastrukturu Intune. Registrace zařízení vyžaduje zejména [nastavení autority MDM](mdm-authority-set.md). Další informace o tom, jak připravit prostředí Intune (tenanta), najdete v tématu [Nastavení Intune](setup-steps.md). Jakmile budete mít tenanta Intune připravený, můžete zaregistrovat zařízení. Další informace o registraci zařízení najdete v článku [Co je registrace zařízení?](device-enrollment.md)
 
-3. Z [Intune](https://aka.ms/intuneportal)vyberte **dodržování předpisů zařízením** zobrazíte podrobnosti o dodržování předpisů pro zařízení spravovaná pomocí Intune. Zobrazí se podrobnosti podobně jako na následujícím obrázku.
+3. V [Intune](https://aka.ms/intuneportal)vyberte **dodržování předpisů zařízením** , abyste zobrazili podrobnosti o dodržování předpisů pro zařízení spravovaná pomocí Intune. Zobrazí se podrobnosti podobné následujícímu obrázku.
 
-    ![Snímek obrazovky podokna dodržování předpisů zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-03.png)
+    ![Snímek obrazovky s podoknem dodržování předpisů zařízením](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-03.png)
     
-    Požadavky na dodržování předpisů jsou v podstatě pravidla, jako je například vyžadování PIN kódu zařízení nebo šifrování zařízení. Zásady dodržování předpisů zařízeními definují pravidla a nastavení, která musí zařízení splňovat, aby bylo považováno za kompatibilní. Pokud chcete použít dodržování předpisů u zařízení, musíte mít:
-    - Intune a předplatné Azure Active Directory (Azure AD) Premium
-    - Zařízení se systémem na podporované platformě
-    - Zařízení musí být zaregistrovaná v Intune
-    - Zařízení, která jsou zaregistrovaná na jednoho uživatele nebo bez primárního uživatele.
+    Požadavky na dodržování předpisů jsou v podstatě pravidla, jako třeba vyžadování PIN kódu zařízení nebo vyžadování šifrování zařízení. Zásady dodržování předpisů pro zařízení definují pravidla a nastavení, která musí zařízení dodržovat, aby se dalo považovat za vyhovující. Pokud chcete použít dodržování předpisů zařízením, musíte mít:
+    - Předplatné Intune a Azure Active Directory (Azure AD) Premium
+    - Zařízení, na kterých běží podporovaná platforma
+    - Zařízení musí být zaregistrovaná v Intune.
+    - Zařízení, která jsou zaregistrovaná jednomu uživateli nebo žádnému primárnímu uživateli.
     
-    Další informace najdete v tématu [Začínáme se zásadami dodržování předpisů zařízeními v Intune](device-compliance-get-started.md).
+    Další informace najdete v tématu [Začínáme se zásadami dodržování předpisů zařízením v Intune](device-compliance-get-started.md).
 
-4. Z [Intune](https://aka.ms/intuneportal)vyberte **konfigurace zařízení** zobrazíte podrobnosti o profilech zařízení v Intune. 
+4. V [Intune](https://aka.ms/intuneportal)vyberte **Konfigurace zařízení** , aby se zobrazily podrobnosti o profilech zařízení v Intune. 
 
-    ![Snímek obrazovky podokna konfigurace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
+    ![Snímek obrazovky s podoknem konfigurace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
     
-    Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se přidají do "konfiguračních profily". Můžete vytvořit profily pro různá zařízení a různé platformy, včetně iOS, Android a Windows. Potom můžete Intune použít profil pro zařízení ve vaší organizaci.   
+    Intune obsahuje nastavení a funkce, které můžete různým zařízením v organizaci povolit nebo zakázat. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS, Androidu a Windows. Pak můžete použít Intune k aplikování profilu na zařízení ve vaší organizaci.   
 
-    Další informace o konfiguraci zařízení najdete v tématu [nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune](device-profiles.md).
+    Další informace o konfiguraci zařízení najdete v tématu [použití nastavení funkcí v zařízeních pomocí profilů zařízení v Microsoft Intune](device-profiles.md).
 
-5. Z [Intune](https://aka.ms/intuneportal)vyberte **zařízení** zobrazíte podrobnosti o Intune na tenanta zaregistrovaná zařízení. Pokud hodláte spustit novou zařazení Intune, nebudete mít všechna zaregistrovaná zařízení ještě. 
+5. V [Intune](https://aka.ms/intuneportal)vyberte **zařízení** a zobrazí se podrobnosti o zaregistrovaných zařízeních tenanta Intune. Pokud začínáte s novým zařazení Intune, zatím nebudete mít žádná zaregistrovaná zařízení. 
 
-    ![Snímek obrazovky podokna registrace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
+    ![Snímek obrazovky s podoknem registrace zařízení](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
     
-    **Zařízení** podokně poskytuje informace o vašem tenantovi uživatele registrovaná zařízení. Můžete kliknout na **všechna zařízení** zobrazíte seznam zařízení pro vašeho tenanta Intune. 
+    V podokně **zařízení** najdete podrobné informace o zaregistrovaných zařízeních vašeho tenanta. Kliknutím na **všechna zařízení** můžete zobrazit seznam zařízení pro vašeho tenanta Intune. 
 
-6. Z [Intune](https://aka.ms/intuneportal)vyberte **klientské aplikace** k zobrazení stavu instalace aplikace.
+6. V [Intune](https://aka.ms/intuneportal)vyberte **klientské aplikace** pro zobrazení stavu instalace aplikace.
 
-    ![Snímek obrazovky podokna klientské aplikace](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-06.png)
+    ![Snímek obrazovky s podoknem klientských aplikací](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-06.png)
     
-    Jako správce IT můžete Microsoft Intune použít ke správě klientských aplikací, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která nejsou zaregistrovaná v Intune. Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na požadovaných zařízeních byly potřebné aplikace. Další informace o přidávání a přiřazování aplikací najdete v tématu [do Microsoft Intune přidat aplikace](apps-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
+    Jako správce IT můžete Microsoft Intune použít ke správě klientských aplikací, které používají pracovníci vaší společnosti. Tato funkce doplňuje správu zařízení a ochranu dat. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. Navíc potřebujete přiřazovat a spravovat aplikace na zařízeních, která nejsou zaregistrovaná v Intune. Intune nabízí celou řadu funkcí, které vám pomůžou zajistit, aby na požadovaných zařízeních byly potřebné aplikace. Další informace o přidávání a přiřazování aplikací najdete v tématu [Přidání aplikací do Microsoft Intune](apps-add.md) a [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 
-7. Z [Intune](https://aka.ms/intuneportal)vyberte **podmíněného přístupu** zobrazíte podrobné informace o zásadách přístupu.
+7. V [Intune](https://aka.ms/intuneportal)vyberte **podmíněný přístup** , abyste zobrazili podrobnosti o zásadách přístupu.
 
-    ![Snímek obrazovky podokna podmíněného přístupu](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
+    ![Snímek obrazovky s podoknem podmíněného přístupu](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Podmíněný přístup označuje způsoby, jimiž můžete řídit zařízení a aplikací, které se můžou připojit k e-mailu a firemním prostředkům. Prostudujte si podmíněný přístup podle zařízení a na základě aplikace a najdete běžné scénáře pro použití podmíněného přístupu s Intune, přečtěte si téma [co je podmíněný přístup?](conditional-access.md)
+    Podmíněný přístup označuje způsoby, kterými můžete řídit zařízení a aplikace, které se můžou připojovat k e-mailu a prostředkům společnosti. Další informace o podmíněném přístupu založeném na zařízeních a aplikacích a o běžných scénářích použití podmíněného přístupu v Intune najdete v tématu [co je podmíněný přístup?](conditional-access.md) .
 
-8. Z [Intune](https://aka.ms/intuneportal)vyberte **uživatelé** zobrazíte podrobnosti o uživatelích, které jste zahrnuli do Intune. Tito uživatelé se pracovníci vaší společnosti. 
+8. V [Intune](https://aka.ms/intuneportal)vyberte **Uživatelé** a zobrazte si podrobnosti o uživatelích, které jste zahrnuli do Intune. Tito uživatelé jsou zaměstnanci vaší společnosti. 
  
-    ![Snímek obrazovky podokna uživatelů](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-08.png)
+    ![Snímek obrazovky s podoknem uživatelé](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-08.png)
 
-    Můžete přímo do Intune přidat uživatele nebo synchronizovat uživatele z vaší místní Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění pro přístup k Intune. Další informace najdete v tématu [přidání uživatelů a udělení oprávnění pro správu Intune](users-add.md).
+    Můžete přidat uživatele přímo do Intune nebo synchronizovat uživatele z místní služby Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Taky můžete uživatelům poskytnout další oprávnění k přístupu k Intune. Další informace najdete v tématech [Přidání uživatelů a udělení oprávnění pro správu do Intune](users-add.md).
 
-9. Z [Intune](https://aka.ms/intuneportal)vyberte **skupiny** zobrazíte podrobnosti o skupinách Azure Active Directory (Azure AD) v Intune. Jako správce Intune použití skupin pro správu zařízení a uživatelů. 
+9. V [Intune](https://aka.ms/intuneportal)vyberte **skupiny** , abyste zobrazili podrobnosti o skupinách Azure Active Directory (Azure AD), které jsou zahrnuté v Intune. Jako správce Intune můžete skupiny používat ke správě zařízení a uživatelů. 
 
-    ![Snímek obrazovky podokna skupiny](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
+    ![Snímek obrazovky s podoknem skupiny](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 
-    Můžete nastavit skupiny tak, aby odpovídaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Například můžete nastavit zásady pro mnoho uživatelů nebo nasadit aplikace do skupiny zařízení. Další informace o skupinách najdete v tématu [přidat skupiny pro uspořádání uživatelů a zařízení](groups-add.md).
+    Skupiny můžete nastavit tak, aby vyhovovaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Můžete například nastavit zásady pro mnoho uživatelů nebo nasazovat aplikace do sady zařízení. Další informace o skupinách najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](groups-add.md).
 
-10. Z [Intune](https://aka.ms/intuneportal)vyberte **Nápověda a podpora** chcete požádat o pomoc. Jako správce IT, můžete použít **Nápověda a podpora** možnost vyhledávání a podívejte se na řešení, stejně jako soubor lístek online podpory pro Intune. 
+10. V [Intune](https://aka.ms/intuneportal)zvolte pomoc **a podpora a** požádejte o pomoc. Jako správce IT můžete použít možnost **pomoc a podpora** k vyhledávání a zobrazení řešení a také k podávání lístku on-line Support pro Intune. 
 
-    ![Snímek obrazovky podokna Nápověda a podpora](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
+    ![Snímek obrazovky s podoknem pomoc a podpora](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
 
-    Pokud chcete vytvořit lístek podpory, musí váš účet přiřazenou roli správce ve službě Azure Active Directory. Role správce zahrnují, **správce Intune**, **globálního správce**, a **Správce služeb**. Další informace najdete v tématu [jak získat podporu pro Microsoft Intune](get-support.md).
+    Pokud chcete vytvořit lístek podpory, váš účet musí být přiřazený jako role správce v Azure Active Directory. Role správců zahrnují správce Intune, **globálního správce**a **Správce služeb**. Další informace najdete v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).
 
-11. Z [Intune](https://aka.ms/intuneportal)vyberte **stav Tenanta** zobrazíte podrobnosti o vašem tenantovi Intune.
+11. V [Intune](https://aka.ms/intuneportal)vyberte **stav tenanta** , abyste zobrazili podrobnosti o tenantovi Intune.
 
-    ![Snímek obrazovky podokna stav Tenanta.](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-11.png)
+    ![Snímek obrazovky s podoknem stavu tenanta](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-11.png)
 
-    Podrobnosti o stavu klienta zahrnují stav konektoru, stav služby Intune a Intune zpráv. Pokud jsou nějaké problémy s vaším tenanta nebo Intune samotného, najdete informace v **stav Tenanta** podokně. Další informace najdete v tématu [stav Tenanta Intune](tenant-status.md).
+    Podrobnosti o stavu tenanta zahrnují stav konektoru, stav služby Intune a novinky Intune. Pokud se s vaším klientem nebo Intune vlastní nějaké problémy, najdete podrobnosti v podokně **stav tenanta** . Další informace najdete v tématu [stav tenanta Intune](tenant-status.md).
 
-12. Z [Intune](https://aka.ms/intuneportal)vyberte **Poradce při potížích** kontaktovat zástupce na tipy k odstraňování problémů, žádosti o podporu nebo kontrole stavu služby Intune. Tyto informace je specifická vyberete uživatelů Intune.
+12. V [Intune](https://aka.ms/intuneportal)vyberte **řešení potíží** , abyste se mohli dostat k zástupci tipů pro odstraňování potíží, žádosti o podporu nebo kontrolu stavu Intune. Tyto informace jsou specifické pro vámi zvoleného uživatele Intune.
 
-    ![Snímek obrazovky podokna Poradce při potížích](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-12.png)
+    ![Snímek obrazovky s podoknem Poradce při potížích](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-12.png)
 
-Další informace o odstraňování potíží v Intune najdete v tématu [použít portál pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti](help-desk-operators.md).
+Další informace o řešení potíží v Intune najdete v tématu [použití portálu pro řešení potíží pro pomoc uživatelům ve vaší společnosti](help-desk-operators.md).
 
-## <a name="configure-the-azure-portal"></a>Konfigurace na webu Azure portal
+## <a name="configure-the-azure-portal"></a>Nakonfigurovat Azure Portal
 
-Azure umožňuje přizpůsobení a konfiguraci zobrazení na portálu.
+Azure umožňuje přizpůsobit a nakonfigurovat zobrazení portálu.
 
-### <a name="change-the-sidebar"></a>Změna bočního panelu
+### <a name="change-the-sidebar"></a>Změnit postranní panel
 
 **Boční panel** na levé straně portálu Azure Portal zobrazuje seznam všech dostupných služeb Azure. Výchozí zobrazení tohoto kompletního seznamu se dá změnit, abyste neustále měli na očích služby, které jsou pro vás nejdůležitější. V níže uvedeném příkladu si přidáte službu Intune na začátek seznamu.
 
@@ -167,9 +167,9 @@ Tato možnost bude užitečnější, až si do Intune přidáte další obsah, j
 
 ## <a name="next-steps"></a>Další postup
 
-Získejte rychle spuštěna v Microsoft Intune, projděte skrze rychlých startů Intune první nastavením bezplatného účtu Intune.
+Pokud chcete rychle pracovat na Microsoft Intune, přečtěte si první nastavení bezplatného účtu Intune a Projděte si rychlý Start k Intune.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Bezplatné vyzkoušení Microsoft Intune](free-trial-sign-up.md)
+> [Rychlý Start Vyzkoušet Microsoft Intune zdarma](free-trial-sign-up.md)
 
 

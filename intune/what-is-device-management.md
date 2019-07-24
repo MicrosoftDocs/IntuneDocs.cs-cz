@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8525dd143a8e08f6915fa90dff0d51d6632eceea
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387317"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427316"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
@@ -59,7 +59,7 @@ Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a o
 - **Windows Defender** obsahuje mnoho funkcí zabezpečení, které usnadňují ochranu zařízení s Windows 10. Při společném použití Intune a programu Windows Defender můžete například: 
 
   - Povolit, aby [filtr SmartScreen v programu Windows Defender](https://docs.microsoft.com/intune/endpoint-protection-windows-10) hledal podezřelou aktivitu souborů a aplikací na mobilních zařízeních 
-  - Použití [rozšířené ochrany před internetovými útoky v programu Windows Defender (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) k ochraně před narušením zabezpečení mobilních zařízení. A můžete tak omezit dopad porušení zabezpečení tím, že zablokujete uživatele z firemních prostředků.
+  - Použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) k ochraně před narušením zabezpečení mobilních zařízení. A můžete tak omezit dopad porušení zabezpečení tím, že zablokujete uživatele z firemních prostředků.
 
 - **Podmíněný přístup** je funkce Azure Active Directory a v Intune se v tomto případě integruje. Pomocí [podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access)zajistěte, aby přístup k e-mailu, SharePointu a dalším aplikacím umožňoval jenom vyhovující zařízení. 
 
@@ -73,11 +73,11 @@ Můžete také použít společně kombinaci [MDM a MAM](https://docs.microsoft.
 
 Při nastavení Intune se také rozhodujete, jestli ke správě zařízení budete používat výhradně Azure Portal, nebo společně Intune a Microsoft 365. [Migrace správy mobilních zařízení do Intune v Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) je Případová studie Microsoftu. V takovém případě si prostudujte, jak Microsoft IT zvolí moderní přístup k správě zařízení, a přečtěte si získané lekce.
 
-## <a name="simplify-it-tasks-using-the-device-management-specialist-workspace"></a>Zjednodušení IT úloh pomocí pracovního prostoru specialista na správu zařízení
+## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Zjednodušení IT úloh pomocí centra pro správu správy zařízení
 
-[Odborník na správu zařízení](https://devicemanagement.portal.azure.com/) je jedním z důvodů, proč spravovat a provádět úlohy pro vaše mobilní zařízení. Tento pracovní prostor zahrnuje služby používané pro správu zařízení, včetně Intune a Azure Active Directory, a také správu klientských aplikací. 
+Centrum pro správu [správy zařízení](https://devicemanagement.portal.azure.com/) je jedním z důvodů, jak spravovat a provádět úlohy pro vaše mobilní zařízení. Tento pracovní prostor zahrnuje služby používané pro správu zařízení, včetně Intune a Azure Active Directory, a také správu klientských aplikací. 
 
-V pracovním prostoru specialista na správu zařízení můžete:
+V centru pro správu správy zařízení můžete:
 
 - [Registrovat zařízení](https://docs.microsoft.com/intune/device-enrollment)
 - [Nastavení dodržování předpisů zařízením](https://docs.microsoft.com/intune/device-compliance-get-started)

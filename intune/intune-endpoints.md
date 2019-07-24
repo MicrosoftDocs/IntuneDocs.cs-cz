@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/30/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,18 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f95e16b9c500f9c4e0750fc0453f5ed1fcea129
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: b836e754b8c08397fccb0c74b40ba9fe0675076e
+ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353977"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411601"
 ---
-# <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune
+# <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
 Tato stránka obsahuje seznam IP adres a nastavení portů potřebných pro nastavení proxy serveru v nasazeních Intune.
 
 V rámci cloudové služby Intune nevyžaduje místní infrastrukturu, jako jsou servery nebo brány.
+
+## <a name="access-for-managed-devices"></a>Přístup pro spravovaná zařízení  
 
 Pokud chcete spravovat zařízení za branami firewall a proxy servery, musíte povolit komunikaci s Intune.
 
@@ -45,8 +47,8 @@ Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživate
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
-|**Domény**|**IP adresa**|
-|---------------------|-----------|
+|Domény    |IP adresa      |
+|-----------|----------------|
 |login.microsoftonline.com | Další informace: [Office 365 –adresy URL a rozsahy IP adres](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 |
 | sts.manage.microsoft.com | 13.93.223.241 <br>52.170.32.182 <br>52.164.224.159 <br>52.174.178.4 <br>13.75.122.143 <br>52.163.120.84|
@@ -80,8 +82,8 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 |wip.mam.manage.microsoft.com|52.187.76.84<br>13.76.5.121<br>52.165.160.237<br>40.86.82.163<br>52.233.168.142<br>168.63.101.57|
 |mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180|
 
+## <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>Požadavky na síť pro skripty prostředí PowerShell a aplikace Win32  
 
-## <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>Požadavky na síť pro skripty prostředí PowerShell a aplikace Win32
 Pokud k nasazení skriptů PowerShellu nebo aplikací Win32 používáte Intune, musíte taky udělit přístup k koncovým bodům, ve kterých se aktuálně nachází váš tenant.
 
 |ASU | Název úložiště | CDN |
@@ -108,28 +110,31 @@ Pokud k nasazení skriptů PowerShellu nebo aplikací Win32 používáte Intune,
 | AMSUC0501 | prodmsuc05data | https:\//prodmsuc05data.azureedge.net |
 | AMSUA0701 | pemsua07rcdata | https:\//pemsua07data.azureedge.net |
 
-## <a name="windows-push-notification-services-wns"></a>Služba nabízených oznámení Windows (WNS)
-U zařízení s Windows spravovaných pomocí Intune spravovaných pomocí správy mobilních zařízení (MDM) musí akce zařízení a další okamžité aktivity vyžadovat používání služby nabízených oznámení Windows (WNS). Další informace najdete v tématu [Povolení přenosů oznámení systému Windows prostřednictvím podnikových bran firewall](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
+## <a name="windows-push-notification-services-wns"></a>Služba nabízených oznámení Windows (WNS)  
 
-## <a name="delivery-optimization-port-requirements"></a>Požadavky na port Optimalizace doručení
+U zařízení s Windows spravovaných pomocí Intune spravovaných pomocí správy mobilních zařízení (MDM) musí akce zařízení a další okamžité aktivity vyžadovat používání služby nabízených oznámení Windows (WNS). Další informace najdete v tématu [Povolení přenosů oznámení systému Windows prostřednictvím podnikových bran firewall](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).  
 
-### <a name="port-requirements"></a>Požadavky na porty
+## <a name="delivery-optimization-port-requirements"></a>Požadavky na port Optimalizace doručení  
+
+### <a name="port-requirements"></a>Požadavky na porty  
+
 Pro přenosy peer-to-peer používá Optimalizace doručení 7680 pro protokol TCP/IP nebo 3544 pro procházení NAT (volitelně Teredo). Pro komunikaci mezi klientem a službou používá protokol HTTP nebo HTTPS přes port 80/443.
 
-### <a name="proxy-requirements"></a>Požadavky na proxy server
+### <a name="proxy-requirements"></a>Požadavky na proxy server  
+
 Chcete-li použít optimalizaci doručování, je nutné, abyste povolili požadavky na rozsah bajtů. Další informace najdete v tématu [požadavky na proxy serveru pro web Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
 
-### <a name="firewall-requirements"></a>Požadavky na bránu firewall
+### <a name="firewall-requirements"></a>Požadavky na bránu firewall  
+
 Pro podporu optimalizace doručování Povolte následující názvy hostitelů přes bránu firewall.
 Pro komunikaci mezi klienty a cloudovou službou Optimalizace doručení:
-- *.do.dsp.mp.microsoft.com
+- \*. do.dsp.mp.microsoft.com
 
 Pro metadata Optimalizace doručení:
-- *.dl.delivery.mp.microsoft.com
-- *.emdl.ws.microsoft.com
+- \*. dl.delivery.mp.microsoft.com
+- \*. emdl.ws.microsoft.com
 
-## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple
-
+## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple  
 
 |Používá se pro|Název hostitele (IP adresa/podsíť)|Protocol|Port|
 |-----|--------|------|-------|
@@ -137,4 +142,38 @@ Pro metadata Optimalizace doručení:
 |Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
 |Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
-Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud vaši klienti MacOS a iOS nezískávají Apple Push oznámení](https://support.apple.com/en-us/HT203609).
+Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud vaši klienti MacOS a iOS nezískávají Apple Push oznámení](https://support.apple.com/en-us/HT203609).  
+
+## <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connecnar  
+
+Server, který je hostitelem Microsoft Intune Certificate Connector, musí mít přístup pomocí portu **TCP** **443** k umístěním veřejné IP adresy, která jsou uvedena v následující tabulce.  
+
+|Domény                             |IP adresa       |
+|---------------|--------------------------------------|
+|Manage.microsoft.com <br> i.manage.microsoft.com <br> r.manage.microsoft.com <br> a.manage.microsoft.com <br> p.manage.microsoft.com <br> EnterpriseEnrollment.manage.microsoft.com <br> EnterpriseEnrollment-s.manage.microsoft.com|13.76.177.110  |
+|fef.msua06.manage.microsoft.com  |13.78.185.97  |
+|Manage.microsoft.com <br> i.manage.microsoft.com <br> r.manage.microsoft.com <br> a.manage.microsoft.com <br> p.manage.microsoft.com <br> EnterpriseEnrollment.manage.microsoft.com <br> EnterpriseEnrollment-s.manage.microsoft.com |13.82.96.212  |
+|fef.amsua0502.manage.microsoft.com |13.85.68.142   |
+| portal.manage.microsoft.com <br> m.manage.microsoft.com <br> portal.fei.msuc01.manage.microsoft.com <br> m.fei.msuc01.manage.microsoft.com <br> portal.fei.msuc02.manage.microsoft.com <br> m.fei.msuc02.manage.microsoft.com <br> portal.fei.msuc03.manage.microsoft.com <br> m.fei.msuc03.manage.microsoft.com <br> portal.fei.msuc05.manage.microsoft.com <br> m.fei.msuc05.manage.microsoft.com |20.188.107.228|
+|fef.msua04.manage.microsoft.com  |23.96.112.28  |
+|fef.amsua0402.manage.microsoft.com|40.69.157.122    |
+|Manage.microsoft.com <br> i.manage.microsoft.com <br> r.manage.microsoft.com <br> a.manage.microsoft.com <br> p.manage.microsoft.com <br> EnterpriseEnrollment.manage.microsoft.com <br> EnterpriseEnrollment-s.manage.microsoft.com |40.83.123.72    |
+|portal.manage.microsoft.com <br> m.manage.microsoft.com <br> portal.fei.msub01.manage.microsoft.com <br> m.fei.msub01.manage.microsoft.com <br> portal.fei.amsub0102.manage.microsoft.com <br> m.fei.amsub0102.manage.microsoft.com <br> fei.msub02.manage.microsoft.com <br> portal.fei.msub02.manage.microsoft.com <br> m.fei.msub02.manage.microsoft.com <br> portal.fei.msub03.manage.microsoft.com <br> m.fei.msub03.manage.microsoft.com <br> portal.fei.msub05.manage.microsoft.com <br> m.fei.msub05.manage.microsoft.com <br> portal.fei.amsub0202.manage.microsoft.com <br> m.fei.amsub0202.manage.microsoft.com <br> portal.fei.amsub0302.manage.microsoft.com <br> m.fei.amsub0302.manage.microsoft.com |51.144.161.187 |
+|portal.manage.microsoft.com <br> m.manage.microsoft.com <br> portal.fei.msub01.manage.microsoft.com <br> m.fei.msub01.manage.microsoft.com <br> portal.fei.amsub0102.manage.microsoft.com <br> m.fei.amsub0102.manage.microsoft.com <br> fei.msub02.manage.microsoft.com <br> portal.fei.msub02.manage.microsoft.com <br> m.fei.msub02.manage.microsoft.com <br> portal.fei.msub03.manage.microsoft.com <br> m.fei.msub03.manage.microsoft.com <br> portal.fei.msub05.manage.microsoft.com <br> m.fei.msub05.manage.microsoft.com <br> portal.fei.amsub0202.manage.microsoft.com <br> m.fei.amsub0202.manage.microsoft.com <br> portal.fei.amsub0302.manage.microsoft.com <br> m.fei.amsub0302.manage.microsoft.com  |52.138.193.149  |
+|portal.manage.microsoft.com <br> m.manage.microsoft.com <br> portal.fei.msua01.manage.microsoft.com <br> m.fei.msua01.manage.microsoft.com <br> portal.fei.msua02.manage.microsoft.com <br> m.fei.msua02.manage.microsoft.com <br> portal.fei.msua04.manage.microsoft.com <br> m.fei.msua04.manage.microsoft.com <br> portal.fei.msua05.manage.microsoft.com <br> m.fei.msua05.manage.microsoft.com <br> portal.fei.amsua0502.manage.microsoft.com <br> m.fei.amsua0502.manage.microsoft.com <br> portal.fei.msua06.manage.microsoft.com <br> m.fei.msua06.manage.microsoft.com <br> portal.fei.amsua0602.manage.microsoft.com <br> m.fei.amsua0602.manage.microsoft.com <br> fei.amsua0202.manage.microsoft.com <br> portal.fei.amsua0202.manage.microsoft.com <br> m.fei.amsua0202.manage.microsoft.com <br> portal.fei.amsua0402.manage.microsoft.com <br> m.fei.amsua0402.manage.microsoft.com |52.160.70.20  |
+|fef.amsua0602.manage.microsoft.com |52.161.28.64   |
+|fef.amsua0202.manage.microsoft.com |52.165.165.17   |
+|portal.manage.microsoft.com <br> m.manage.microsoft.com <br> portal.fei.msua01.manage.microsoft.com <br> m.fei.msua01.manage.microsoft.com <br> portal.fei.msua02.manage.microsoft.com <br> m.fei.msua02.manage.microsoft.com <br> portal.fei.msua04.manage.microsoft.com <br> m.fei.msua04.manage.microsoft.com <br> portal.fei.msua05.manage.microsoft.com <br> m.fei.msua05.manage.microsoft.com <br> portal.fei.amsua0502.manage.microsoft.com <br> m.fei.amsua0502.manage.microsoft.com <br> portal.fei.msua06.manage.microsoft.com <br> m.fei.msua06.manage.microsoft.com <br> portal.fei.amsua0602.manage.microsoft.com <br> m.fei.amsua0602.manage.microsoft.com <br> fei.amsua0202.manage.microsoft.com <br> portal.fei.amsua0202.manage.microsoft.com <br> m.fei.amsua0202.manage.microsoft.com <br> portal.fei.amsua0402.manage.microsoft.com <br> m.fei.amsua0402.manage.microsoft.com |52.168.54.64   |
+|r.manage.microsoft.com |52.169.9.87    |
+|. manage.microsoft.com  |52.174.26.23   |
+|portal.fei.msuc01.manage.microsoft.com <br> m.fei.msuc01.manage.microsoft.com <br> portal.fei.msuc02.manage.microsoft.com <br> m.fei.msuc02.manage.microsoft.com <br> portal.fei.msuc03.manage.microsoft.com <br> m.fei.msuc03.manage.microsoft.com <br> portal.fei.msuc05.manage.microsoft.com <br> m.fei.msuc05.manage.microsoft.com |52.175.12.209  |
+|fef.msua07.manage.microsoft.com |52.175.208.218     |
+|fef.msua02.manage.microsoft.com |52.177.194.236    |
+|sts.manage.microsoft.com        |104.40.82.191    |
+|fef.msua01.manage.microsoft.com |138.91.243.97     |
+|fef.msua05.manage.microsoft.com |138.91.244.151     |
+
+
+
+
+
