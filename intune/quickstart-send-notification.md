@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb175d2133cf2a7bc5b064c13afb7e252147c729
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 148320dc55ee044c057222a2316077396040882d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044249"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483035"
 ---
-# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý start: Odesílání oznámení do zařízení nesplňujících požadavky
+# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Rychlý Start Odesílání oznámení do zařízení nesplňujících požadavky
 
 V tomto rychlém startu použijete Microsoft Intune k odeslání e-mailových oznámení zaměstnancům, kteří používají zařízení nedodržující předpisy.
 
-Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. Azure Active Directory (AAD) [podmíněného přístupu](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) pak zařízení zablokuje. Když zařízení nedodržuje předpisy, umožňuje Intune přidat akce při nedodržení předpisů, což vám umožní se flexibilně rozhodnout, jak postupovat. Uživatelům můžete dát například určitou dobu odkladu, během které musí zajistit dodržování předpisů, než tato zařízení zablokujete.
+Když Intune ve výchozím nastavení detekuje zařízení, které nedodržuje předpisy, okamžitě ho označí jako nedodržující předpisy. [Podmíněný přístup k](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) Azure Active Directory (AAD) pak zařízení zablokuje. Když zařízení nedodržuje předpisy, umožňuje Intune přidat akce při nedodržení předpisů, což vám umožní se flexibilně rozhodnout, jak postupovat. Uživatelům můžete dát například určitou dobu odkladu, během které musí zajistit dodržování předpisů, než tato zařízení zablokujete.
 
 Jednou z akcí, které můžete udělat, když zařízení nedodržují předpisy, je odeslání e-mailu jejich koncovým uživatelům. E-mailové oznámení můžete před odesláním koncovým uživatelům přizpůsobit. Konkrétně můžete přizpůsobit příjemce, předmět a text zprávy včetně firemního loga a kontaktních údajů. Intune do tohoto e-mailového oznámení zároveň zahrne podrobnosti o zařízení nedodržujícím předpisy.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Požadavky
-- Při použití zásad dodržování předpisů zařízením k zablokování zařízení k podnikovým prostředkům, musíte nastavit podmíněný přístup AAD. Pokud jste dokončili rychlý start věnovaný [vytvoření zásady dodržování předpisů pro zařízení](quickstart-set-password-length-android.md), službu Azure Active Directory používáte. Další informace o AAD najdete v tématu [podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) a [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+- Pokud používáte zásady dodržování předpisů zařízením k blokování zařízení z firemních prostředků, musíte nastavit podmíněný přístup AAD. Pokud jste dokončili rychlý start věnovaný [vytvoření zásady dodržování předpisů pro zařízení](quickstart-set-password-length-android.md), službu Azure Active Directory používáte. Další informace o AAD najdete v tématu [podmíněný přístup v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) a [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
@@ -50,10 +50,10 @@ Pokud chcete svým uživatelům odeslat e-mail, vytvořte šablonu zprávy s ozn
 
    - **Název**: *Správce společnosti Contoso*
    - **Předmět**: *Dodržování předpisů zařízeními*
-   - **Zpráva**: *Vaše zařízení aktuálně nesplňuje požadavky na dodržování předpisů pro naši organizaci.*
-   - **Záhlaví e-mailu – připojte logo společnosti**: Nastavte na **povoleno** zobrazit logo vaší organizace.
-   - **Zápatí e-mailu – uveďte název společnosti**: Nastavte na **povoleno** zobrazíte název vaší organizace.
-   - **Zápatí e-mailu – uveďte kontaktní údaje**: Nastavte na **povoleno** zobrazit kontaktní informace vaší organizace.
+   - **Zpráva**: *Vaše zařízení aktuálně nesplňuje požadavky naší organizace na dodržování předpisů.*
+   - **Záhlaví e-mailu – uveďte logo společnosti**: Nastavte na **povoleno** , aby se zobrazilo logo vaší organizace.
+   - **Zápatí e-mailu – zadejte název společnosti**: Nastavením na **povoleno** zobrazíte název vaší organizace.
+   - **Zápatí e-mailu – uveďte kontaktní údaje**: Nastavením na **povoleno** zobrazíte kontaktní údaje vaší organizace.
 
    ![Příklad oznámení o dodržování předpisů v Intune](./media/quickstart-send-notification-01.png)
 
@@ -74,8 +74,8 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
 2. Vyberte **Zásady** > **Vytvořit zásadu**.
 3. Zadejte následující informace:
 
-   - **Název**: *Dodržování předpisů Windows 10*
-   - **Popis**: *Zásady dodržování předpisů Windows 10*
+   - **Název**: *Dodržování předpisů pro Windows 10*
+   - **Popis**: *Zásady dodržování předpisů ve Windows 10*
    - **Platforma**: Windows 10 a novější
 
 4. Výběrem možnosti **Nastavení** > **Zabezpečení systému** zobrazte nastavení související se zabezpečením zařízení.
@@ -84,11 +84,11 @@ Následující postup vytvoří zásadu dodržování předpisů pro zařízení
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Vyberte **OK** > **OK** > **vytvořit** vytvořte zásadu dodržování předpisů.
+7. Vyberte **OK** > okvytvořit > a vytvořte tak zásady dodržování předpisů.
 8. Vyberte **Vlastnosti** > **Akce při nedodržení předpisů** > **Přidat**.
 9. V rozevíracím seznamu **Akce** potvrďte, že je vybraná možnost **Odeslat e-mail koncovému uživateli**.
 10. Výběrem možnosti **Šablona zprávy** > **Správce Contoso** > **Vybrat** vyberte šablonu zprávy, kterou jste vytvořili dříve v tomto tématu.
-11. Vyberte **přidat** > **OK** > **Uložit** uložte provedené změny.
+11. Vyberte **Přidat** > okUložit > a uložte provedené změny.
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 
@@ -112,4 +112,4 @@ V tomto rychlém startu jste Intune použili k vytvoření a přiřazení zásad
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Přidání a přiřazení klientské aplikace](quickstart-add-assign-app.md)
+> [Rychlý Start Přidání a přiřazení klientské aplikace](quickstart-add-assign-app.md)

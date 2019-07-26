@@ -1,11 +1,11 @@
 ---
-title: Použití šablon pro zařízení s Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Pomocí šablony pro správu v Microsoft Intune můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Pomocí těchto nastavení v profilu konfigurace zařízení k řízení aplikace sady Office, zabezpečené funkce v aplikaci Internet Explorer, řízení přístupu k Onedrivu, pomocí funkce vzdálené plochy, povolit automatické přehrávání, nastavení řízení spotřeby, použít tisk HTTP, použijte jiný uživatel Možnosti přihlášení a řízení velikosti protokolu událostí.
+title: Použití šablon pro zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí šablon pro správu v Microsoft Intune můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení k řízení programů Office, zabezpečení funkcí v Internet Exploreru, řízení přístupu k OneDrivu, použití funkcí vzdálené plochy, povolení automatického přehrání, nastavení řízení spotřeby, používání tisku HTTP, použití různých možnosti přihlášení uživatele a řízení velikosti protokolu událostí.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/27/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,66 +15,79 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9309b110d37795f840e10f22b71b06507aea4c62
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 0bfad3feed6daef1930c235bec9c25e809da46c5
+ms.sourcegitcommit: ce9cae824a79223eab3c291fd5d5e377efac84cb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373723"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67842733"
 ---
-# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Použití šablon Windows 10 v Microsoft Intune konfigurovat nastavení zásad skupiny
+# <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
-Při správě zařízení ve vaší organizaci, můžete chtít vytvořit skupinu nastavení, která se použijí v různých skupinách zařízení. Například můžete mít několik skupin zařízení. Pro GroupA kterému chcete přiřadit určitou sadu nastavení. Pro GroupB kterému chcete přiřadit jinou sadu nastavení. Chcete také jednoduchý přehled na nastavení, která můžete nakonfigurovat.
+Při správě zařízení ve vaší organizaci chcete vytvořit skupinu nastavení, která se používají pro různé skupiny zařízení. Máte například několik skupin zařízení. Pro skupinu a chcete přiřadit konkrétní sadu nastavení. Pro GroupB chcete přiřadit jinou sadu nastavení. Potřebujete také jednoduché zobrazení nastavení, která můžete konfigurovat.
 
-Pomocí této úlohy můžete dokončit **šablony pro správu** v Microsoft Intune. Šablony pro správu zahrnují stovky nastavení, která řídí funkce v aplikaci Internet Explorer sady Microsoft Office, vzdálené plochy, přístup k Onedrivu, použití obrázkového hesla nebo PIN kód pro přihlášení a další. Tyto šablony jsou podobné nastavení skupiny zásad (objekt zásad skupiny) v Active Directory (AD) a jsou [zálohovanou ADMX nastavení](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (otevře jiný web dokumentace), které používají XML. Ale šablony v Intune jsou 100 % založené na cloudu. Nabízejí další jednoduché a přímočaré až po konfiguraci nastavení a najít nastavení chcete.
+Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, které řídí funkce v aplikaci Internet Explorer, systém Microsoft Office programy, Vzdálená plocha, OneDrive, hesla a PIN kódy a další. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
 
-**Šablony pro správu** jsou integrované do Intune a nevyžadují žádné úpravy, včetně použití OMA-URI. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení šablony jako univerzálním nástrojem pro správu zařízení s Windows 10.
+Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná v systému Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (otevře se další web společnosti Microsoft), které používá XML. Nastavení sady Office jsou ingestovaná a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030). Šablony Intune ale mají 100% cloudové. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
 
-V tomto článku jsou uvedené kroky k vytvoření šablony pro zařízení s Windows 10 a ukazuje, jak filtrovat všechna nastavení, které jsou dostupné v Microsoft Intune. Při vytváření šablony vytvoří profil konfigurace zařízení. Pak můžete přiřadit nebo tento profil nasadíte u zařízení s Windows 10 ve vaší organizaci.
+**Šablony pro správu** jsou integrované do Intune a nevyžadují žádné vlastní nastavení, včetně použití OMA-URI. Jako součást řešení pro správu mobilních zařízení (MDM) použijte při správě zařízení s Windows 10 Tato nastavení šablony jako zastávku.
+
+Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s Windows 10 a ukazuje, jak filtrovat všechna dostupná nastavení v Intune. Když vytvoříte šablonu, vytvoří se profil konfigurace zařízení. Pak můžete tento profil přiřadit nebo nasadit do zařízení s Windows 10 ve vaší organizaci.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+- Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1703 (RS2). Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1) a novější.
+
+- Nastavení systému Windows použít [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web společnosti Microsoft). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [zásady CSP pro Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře se další web Microsoftu).
 
 ## <a name="create-a-template"></a>Vytvoření šablony
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte název pro profil.
+    - **Název**: Zadejte název profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: Vyberte **Windows 10 a novější**.
-    - **Typ profilu**: Vyberte **šablony pro správu (Preview)** .
+    - **Typ profilu**: Vyberte **šablony pro správu**.
 
-4. Vyberte **Vytvořit**. V novém okně vyberte **nastavení**. Každé nastavení odpovídá a můžete použít předtím a vedle šipky zobrazíte další nastavení:
+4. Vyberte **Vytvořit**. V novém okně vyberte **Nastavení**. V seznamu je uvedeno každé nastavení a pomocí šipek před a další můžete zobrazit další nastavení:
 
-    ![Podívejte se do seznamu ukázková nastavení a tlačítky předchozí a další](./media/administrative-templates-windows/sample-settings-list-next-page.png)
+    ![Podívejte se na vzorový seznam nastavení a použijte tlačítka předchozí a další.](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
-5. Vyberte všechna nastavení. Vyberte například **povolit stahování souborů**. Podrobný popis nastavení se zobrazí. Zvolit **povolit**, **zakázat**, nebo nechte toto nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když zvolíte **povolit**, **zakázat**, nebo **Nenakonfigurováno**.
-6. Vyberte **OK** uložte provedené změny.
+    > [!TIP]
+    > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
 
-I nadále projít seznam nastavení a nakonfigurujte nastavení, které mají ve vašem prostředí. Následuje několik příkladů:
+5. Ve výchozím nastavení se v rozevíracím seznamu zobrazí **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , nebo zobrazit pouze nastavení **Office** :
 
-- Použití **nastavení oznámení – makro VBA** nastavení pro zpracování makra jazyka VBA v různých aplikacích Microsoft Office, včetně aplikace Word a Excel.
-- Použití **povolit stahování souborů** nastavení povolit nebo zakázat soubory ke stažení z aplikace Internet Explorer.
-- Použití **požadovat heslo, když počítače probudí (zapojené do elektrické zásuvky)** nastavení vyzve uživatele k zadání hesla při zařízení probuzení z režimu spánku.
-- Použití **stahování bez znaménka ovládací prvky ActiveX** nastavení k blokování uživatelů stahování bez znaménka ovládacích prvků ActiveX v Internet Exploreru.
-- Použití **obnovení systému vypnout** nastavení pro povolení nebo zabránit uživatelům ve spouštění obnovení systému v zařízení.
-- A spoustu dalších věcí...
+    ![Vyfiltruje seznam, aby se zobrazila všechna okna nebo všechna nastavení Office v šablonách pro správu v Intune.](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
-## <a name="find-some-settings"></a>Najít některé nastavení
+6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako Nenakonfigurováno (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
+7. Vyberte **OK** uložte provedené změny.
 
-Nejsou k dispozici v těchto šablon stovky nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
+Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Následuje několik příkladů:
 
-- V šabloně, vyberte **nastavení**, **stavu**, nebo **cesta** sloupce seřadíte seznam. Vyberte například **cesta** sloupec, který chcete zobrazovat všechna nastavení v `Microsoft Excel` cesta:
+- Pomocí nastavení pro **oznamování maker v jazyce VBA** můžete zpracovávat makra VBA v různých systém Microsoft Office programech, včetně Wordu a Excelu.
+- Pomocí nastavení **povolení stahování souborů** povolte nebo Zabraňte stažení z aplikace Internet Explorer.
+- Pokud se zařízení probudí z režimu spánku, použijte nastavení **vyžadovat heslo při probuzení počítače (napájení ze sítě)** a vyzvat uživatele k zadání hesla.
+- Pomocí nastavení **Stáhnout nepodepsané ovládací prvky ActiveX** zabráníte uživatelům v Stahování nepodepsaných ovládacích prvků ActiveX z Internet Exploreru.
+- Pomocí nastavení **vypnout obnovení systému** povolíte nebo zabráníte uživatelům v zařízení spouštět obnovení systému.
+- A mnohem víc...
 
-  ![Klikněte na cestu k seřadit podle abecedy](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
+## <a name="find-some-settings"></a>Najít některá nastavení
 
-- V šabloně, použijte **hledání** pole najít konkrétní nastavení. Například vyhledejte `copy`. Všechna nastavení s `copy` se zobrazí:
+V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
 
-  ![Klikněte na cestu k seřadit podle abecedy](./media/administrative-templates-windows/search-copy-settings.png)
+- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Pokud například chcete zobrazit všechna  nastavení v `Microsoft Excel` cestě, vyberte sloupec cesta:
 
-  Například vyhledejte `microsoft word`. Zobrazí všechna nastavení, můžete nastavit pro aplikace Microsoft Word. Vyhledejte `explorer` zobrazíte všechna nastavení Internet Exploreru můžete přidat do šablony.
+  ![Kliknutím na cesta zobrazíte všechna nastavení seskupená podle zásad skupiny nebo cesty k ADMX v šablonách pro správu v Intune.](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 
-Tato funkce používá [zásad Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web Docs). Poskytovatelé CSP fungovat v různých edicích Windows, jako je například Home, Professional, Enterprise a tak dále. Pokud chcete zobrazit, pokud zprostředkovatel kryptografických služeb pracuje v konkrétní verzi, přejděte na [zásad Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web Docs).
+- V šabloně vyhledejte konkrétní nastavení pomocí **vyhledávacího** pole. Můžete hledat nastavením nadpisu nebo cesty. Vyhledejte `copy`například. Zobrazí se všechna nastavení `copy` s těmito možnostmi:
+
+  ![Vyhledat kopii pro zobrazení všech nastavení systému Windows a sady Office v šablonách pro správu v Intune](./media/administrative-templates-windows/search-copy-settings.png) 
+
+  V jiném příkladu vyhledejte `microsoft word`. Zobrazí se všechna nastavení, která můžete nastavit pro program Microsoft Word. `explorer` Pokud chcete zobrazit všechna nastavení Internet Exploreru, která můžete do šablony přidat, vyhledejte.
 
 ## <a name="next-steps"></a>Další postup
 
-Vytvoření šablony, ale to není teď zrovna nic nedělá ještě. Dále [přiřadit šablonu, také nazývaný jako profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Šablona se vytvoří, ale ještě nic nedělá. Dále [přiřaďte šablonu, která se označuje také jako profil](device-profile-assign.md) a [sledujte její stav](device-profile-monitor.md).

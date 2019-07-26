@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 626c5d49c4f6bc7fef5f4f29c2397fafead50fda
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530770"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483001"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý start: Vytvoření a přiřazení zásady ochrany aplikace
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Rychlý Start Vytvoření a přiřazení zásady ochrany aplikace
 
 V tomto rychlém startu použijete Intune k vytvoření a přiřazení zásady ochrany aplikací ke klientské aplikaci na zařízení koncového uživatele. Intune používá zásady ochrany aplikací k potvrzení, že vaše aplikace splňují požadavky vaší organizace na ochranu dat.
 
@@ -40,15 +40,15 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce 
 
 ## <a name="create-an-app-protection-policy"></a>Vytvoření zásady ochrany aplikací
 
-Chcete-li vytvořit zásadu ochrany aplikací, postupujte následovně:
+Zásady ochrany aplikací vytvoříte pomocí následujících kroků:
 
 1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Zásady ochrany aplikací** > **Vytvořit zásadu**. 
 2. Zadejte následující podrobnosti: 
 
-    - **Název**: *Ochrana obsahu Windows 10*
-    - **Popis**: *Uživatelé přidružení k této zásadě se nebude možné vyjmout, kopírovat nebo vložit žádný obsah mezi přiřazené aplikace a jiné nespravované aplikace na zařízení.*
+    - **Název**: *Ochrana obsahu pro Windows 10*
+    - **Popis**: *Uživatelé přidružení k těmto zásadám nebudou moci vyjímat, kopírovat ani vkládat obsah mezi přiřazenou aplikací a jinými nespravovanými aplikacemi na zařízení.*
     - **Platforma**: *Windows 10*
-    - **Stav registrace**: *S registrací*
+    - **Stav registrace**: *Pomocí registrace*
 
 3. Vyberte **Chráněné aplikace** a zvolte aplikace, které musí tuto zásadu dodržovat.
 4. Klikněte na **Přidat aplikace**.
@@ -71,7 +71,7 @@ K přiřazení zásady ochrany aplikací použijte následující postup:
 3. Zvolte **Přiřazení**.
 4. Na kartě **Zahrnout** klikněte na **Vybrat skupiny, které se zahrnou**.
 5. Jako skupinu, která se zahrne, vyberte **Testeři Contoso**.
-6. Klikněte na tlačítko **vyberte** > **Uložit**. 
+6. Klikněte na **Vybrat** > **Uložit**. 
 
 Právě jste přiřadili zásadu ochrany aplikací.
 
@@ -85,4 +85,4 @@ V tomto rychlém startu jste vytvořili a přiřadili zásadu ochrany aplikací.
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvoření a přiřazení vlastní role](quickstart-create-custom-role.md)
+> [Rychlý Start Vytvoření a přiřazení vlastní role](quickstart-create-custom-role.md)

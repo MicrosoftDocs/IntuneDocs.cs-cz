@@ -1,7 +1,7 @@
 ---
-title: Vytvoření jádra rozšíření zařízení profilu macOS v Microsoft Intune – Azure | Dokumentace Microsoftu
+title: Vytvoření profilu zařízení rozšíření jádra macOS pomocí Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Přidejte nebo vytvořte profil zařízení s macOS a pak nakonfigurujte jádra rozšíření povolit uživateli přepsat, přidejte identifikátor týmu a identifikátoru sady prostředků a team v Microsoft Intune.
+description: Přidejte nebo vytvořte profil zařízení macOS a potom nakonfigurujte rozšíření jádra, aby bylo možné přepsat uživatele, přidat identifikátor týmu a sadu prostředků a identifikátor týmu v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,73 +15,73 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd2e03c09cb2bed49ee7607283bf63e2c3ae67da
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: eca4692189af9272d3d1fc427b4eba638d8b5b27
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67404012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882972"
 ---
-# <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra s macOS v Intune
+# <a name="add-macos-kernel-extensions-in-intune"></a>Přidání rozšíření jádra macOS v Intune
 
-Na zařízeních s macOS můžete přidat funkce na úrovni jádra. Tyto funkce přístup k součásti operačního systému, který nemá přístup k pravidelné programy. Vaše organizace může mít specifické požadavky nebo požadavky, které nejsou k dispozici v aplikaci, funkce zařízení a tak dále. 
+Na zařízeních macOS můžete přidat funkce na úrovni jádra. Tyto funkce přistupují k částem operačního systému, ke kterým nemají běžné programy přístup. Vaše organizace může mít konkrétní potřeby nebo požadavky, které nejsou k dispozici v aplikaci, funkci zařízení atd. 
 
-Chcete-li přidat rozšíření jádra, které jsou vždy moct načíst v zařízeních, přidejte "jádra rozšíření" (KEXT) v Microsoft Intune a pak tato rozšíření nasadíte do zařízení.
+Pokud chcete přidat rozšíření jádra, která se vždycky můžou v zařízeních načíst, přidejte do Microsoft Intune rozšíření jádra (KEXT) a potom tato rozšíření nasaďte do svých zařízení.
 
-Například můžete mít antivirový program, který vyhledá vaše zařízení na škodlivý obsah. Můžete přidat tento virů programu jádra rozšíření jako rozšíření povolené jádra v Intune. Potom "přiřazení" rozšíření pro zařízení s macOS.
+Máte třeba program pro kontrolu virů, který v zařízení hledá škodlivý obsah. Toto rozšíření jádra programu pro kontrolu virů můžete přidat jako povolené rozšíření jádra v Intune. Pak přiřaďte rozšíření k zařízením macOS.
 
-Pomocí této funkce mohou správci povolit uživatelům přepsat jádra rozšíření, přidat identifikátory týmu a přidání konkrétních jádra rozšíření v Intune.
+Díky této funkci můžou správci uživatelům umožnit přepsat rozšíření jádra, přidat identifikátory týmu a přidat konkrétní rozšíření jádra do Intune.
 
 Tato funkce platí pro:
 
 - macOS 10.13.2 a novější
 
-Chcete-li tuto funkci používat, musí být zařízení:
+Aby bylo možné tuto funkci používat, musí být zařízení:
 
-- Zaregistrovaná v Intune pomocí programu registrace zařízení Apple (DEP). [Automatická registrace zařízení s macOS](device-enrollment-program-enroll-macos.md) obsahuje další informace.
+- Zaregistrované v Intune pomocí Program registrace zařízeníu (DEP) společnosti Apple. [Automatická registrace zařízení MacOS](device-enrollment-program-enroll-macos.md) obsahuje další informace.
 
   NEBO
 
-- Zaregistrovaná v Intune pomocí "registrace uživatele schváleno" (termín společnosti Apple). [Příprava pro změny rozšíření jádra v systému macOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple) obsahuje další informace.
+- Zaregistrováno v Intune s "uživatelem schváleným zápisem" (termínem Apple). [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple) obsahuje další informace.
 
-Intune používá "konfiguračních profily" vytvořit a přizpůsobit nastavení pro potřeby vaší organizace. Po přidání těchto funkcí v profilu, můžete pak push nebo nasadit profil pro zařízení s macOS ve vaší organizaci.
+Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete profil vložit nebo nasadit, abyste macOS zařízení ve vaší organizaci.
 
-V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení v Intune pomocí rozšíření jádra.
+V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomocí rozšíření jádra v Intune.
 
 > [!TIP]
-> Další informace o rozšířeních jádra najdete v tématu [jádra rozšíření – přehled](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (otevře web společnosti Apple).
+> Další informace o rozšíření jádra najdete v tématu [Přehled rozšíření jádra](https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/Extend/Extend.html) (otevření webu společnosti Apple).
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
-- Rozšíření bez znaménka starší verze jádra mohou být přidány.
-- Je nutné zadat identifikátor správnému týmu a ID jádra rozšíření prostředků. Intune nepodporuje ověřit hodnoty, které zadáte. Pokud zadáte nesprávné informace, rozšíření nebudou fungovat v zařízení.
+- Je možné přidat nepodepsaná starší verze rozšíření jádra.
+- Nezapomeňte zadat správný identifikátor týmu a ID sady rozšíření jádra. Intune neověřuje hodnoty, které zadáte. Pokud zadáte chybné informace, rozšíření na zařízení nebude fungovat.
 
 > [!NOTE]
-> Apple vydala informace týkající se přihlašování a notarization pro veškerý software. V systému macOS 10.14.5 a novější, jádro rozšíření nasazenými prostřednictvím Intune nemusí splňovat zásady notarization společnosti Apple.
+> Informace společnosti Apple, které se týkají podepisování a notarization pro veškerý software. U macOS 10.14.5 a novějších rozšíření jádra nasazená přes Intune nemusí splňovat zásady notarization od společnosti Apple.
 >
-> Informace o této zásadě notarization a všechny aktualizace nebo změny najdete v článku na následujících odkazech:
+> Informace o těchto zásadách notarization a všech aktualizacích a změnách najdete v následujících zdrojích informací:
 >
->  - [Vaše aplikace před distribucí notarizing](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otevře web společnosti Apple) 
->  - [Příprava pro změny rozšíření jádra v systému macOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple)
+> - [Notarizing aplikaci před distribucí](https://developer.apple.com/documentation/security/notarizing_your_app_before_distribution) (otevře web společnosti Apple) 
+> - [Příprava na změny rozšíření jádra v MacOS High Sierra](https://support.apple.com/en-us/HT208019) (otevře web společnosti Apple)
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název pro nový profil.
+    - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: Vyberte **macOS**
+    - **Platforma**: Vybrat **MacOS**
     - **Typ profilu**: Vyberte **rozšíření**.
-    - **Nastavení**: Zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení, a co dělají naleznete v tématu:
+    - **Nastavení**: Zadejte nastavení, která chcete nakonfigurovat. Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
 
         - [macOS](kernel-extensions-settings-macos.md)
 
 4. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
-Profil se vytvoří a zobrazí v seznamu. Nezapomeňte [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil se vytvoří a zobrazí se v seznamu. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Po vytvoření profilu je připraven k přiřazení. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil je po vytvoření připravený k přiřazení. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).

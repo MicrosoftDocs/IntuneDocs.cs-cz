@@ -6,7 +6,7 @@ keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b61f4ded04d01f04727768557e6730c34fd4760c
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 01c1f891de4bb198ea40304a3d25f34c71d77cfd
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882443"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482932"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>Znázornění životnosti uživatele v datovém skladu Microsoft Intune
 
@@ -77,7 +77,7 @@ Každý sloupec metadat začínající předponou **Row**, jako například **Ro
  
 Každý, kdo chce zobrazit pouze aktuálně existující entity dimenze, musí použít filtr **IsDeleted = FALSE**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Další informace o entitě **Aktuální uživatel** najdete v tématu [Referenční informace o entitě aktuálního uživatele](reports-ref-current-user.md).
 - Další informace o entitě **Uživatel** najdete v tématu [Referenční informace pro entitu uživatele](reports-ref-user.md).

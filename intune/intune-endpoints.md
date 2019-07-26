@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836e754b8c08397fccb0c74b40ba9fe0675076e
-ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
+ms.openlocfilehash: 1dd836d8bbc4d6f32081c74fb6f9edc42aff2cac
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411601"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482963"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Koncové body sítě pro Microsoft Intune  
 
@@ -146,7 +146,7 @@ Další informace najdete v tématu [porty TCP a UDP společnosti Apple použív
 
 ## <a name="microsoft-intune-certificate-connector"></a>Microsoft Intune Certificate Connecnar  
 
-Server, který je hostitelem Microsoft Intune Certificate Connector, musí mít přístup pomocí portu **TCP** **443** k umístěním veřejné IP adresy, která jsou uvedena v následující tabulce.  
+Server, který je hostitelem Microsoft Intune Certificate Connector, musí mít přístup pomocí portu **TCP** **443** k umístěním veřejné IP adresy, která jsou uvedena v následující tabulce. Další informace o certifikátech najdete v tématu [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md) a [Konfigurace a používání certifikátů SCEP s Intune](certificates-scep-configure.md).
 
 |Domény                             |IP adresa       |
 |---------------|--------------------------------------|

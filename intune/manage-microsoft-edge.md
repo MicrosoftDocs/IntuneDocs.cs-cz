@@ -1,5 +1,5 @@
 ---
-title: Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
+title: Správa Microsoft Edge pro iOS a Android s Intune
 titleSuffix: ''
 description: Pomocí zásad ochrany aplikací Intune s Microsoft Edge zajistíte, aby se k podnikovým webům vždycky používala ochrana na pracovišti.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2deaa53486947ceeedbed56dfd7d192debc4eab
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
+ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882945"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68287221"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -133,7 +133,7 @@ Intune Managed Browser i Microsoft Edge se dají používat jako prohlížeče c
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.useEdge`    |    Hodnota `true` přesměruje uživatele na stažení a používání Microsoft Edge.<br>Tato hodnota `false` umožní uživatelům používat Intune Managed Browser.    |
 
-Pokud tato hodnota konfigurace aplikace není **** nastavená, v následující logice se určí, který prohlížeč se použije k otevření firemních odkazů.
+Pokud tato hodnota konfigurace aplikace není  nastavená, v následující logice se určí, který prohlížeč se použije k otevření firemních odkazů.
 
 V Androidu:
 - Intune Managed Browser se spustí, pokud má uživatel Intune Managed Browser a Microsoft Edge stažený na svém zařízení. 
@@ -226,19 +226,19 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 K vytvoření seznamu povolených a blokovaných webů můžete použít různé formáty adresy URL. Tyto povolené vzory jsou podrobně popsány v následující tabulce. Některé poznámky než začnete: 
 - Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
 - V souladu s pravidly v následujícím seznamu\*povolených vzorů můžete použít zástupný znak ().
-- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` není podporován. ****
+- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` není podporován.
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
   - Port 80 pro protokol HTTP
   - Port 443 pro protokol HTTPS
-- Použití zástupných znaků pro číslo portu **** není podporováno. Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
+- Použití zástupných znaků pro číslo portu  není podporováno. Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
     |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Odpovídá jediné stránce    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Odpovídá jediné stránce    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/&#42;`   |    Odpovídá všem adresám URL začínajícím na `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Vyhledá všechny subdomény pod`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |
-    |    `http://www.contoso.com/images`    |    Odpovídá jediné složce    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
+    |    `http://www.contoso.com/*;`   |    Odpovídá všem adresám URL začínajícím na `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://*.contoso.com/*`    |    Vyhledá všechny subdomény pod`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    Odpovídá všem subdoménám končícím na`contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    `http://www.contoso.com/images`    |    Odpovídá jediné složce    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Odpovídá jedné stránce s použitím čísla portu    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Odpovídá jediné zabezpečené stránce    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Odpovídá jediné složce a všem podsložkám    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
@@ -287,6 +287,6 @@ Níže jsou uvedené další požadavky na zabezpečení a ochranu osobních úd
 - Pokud chcete povolení ověřování a přístup k dokumentaci k Intune, * **. Microsoft.com** se vyloučí z nastavení povoleného a blokovaného seznamu. Je vždycky povolená.
 - Uživatelé mohou shromažďování dat vypnout. Microsoft automaticky shromažďuje anonymní informace o výkonu a využití aplikace Managed Browser za účelem zlepšení svých produktů a služeb. Uživatelé můžou shromažďování těchto dat na svých zařízeních vypnout pomocí nastavení **Data o využití**. Nad shromažďováním těchto dat nemáte žádnou kontrolu. Na zařízeních se systémem iOS se nedají otevřít weby, u kterých vypršela platnost certifikátu nebo které mají nedůvěryhodný certifikát.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Co jsou zásady ochrany aplikací?](app-protection-policy.md) 

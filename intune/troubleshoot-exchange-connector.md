@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ea3ae66a32353b4aa6c782b13e6a587ee1f4464e
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354467"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491826"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Řešení potíží s místním Intune Exchange Connectorem
 
@@ -47,9 +47,9 @@ Zkontrolujte [nastavení místního Intune Exchange Connectoru](exchange-connect
 
 
 ## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>Získání dalších dat k Exchange Connectoru pomocí PowerShellu
-- K získání seznamu všech mobilních zařízení k poštovní schránce, použijte rutinu Get-ActiveSyncDeviceStatistics -mailbox mbx.
-- K získání seznamu adres SMTP k poštovní schránce, použijte rutinu Get-Mailbox -Identity user | select emailaddresses | fl.
-- K získání podrobných informací o stavu přístupu k zařízení, použijte rutinu Get-CASMailbox <upn> | fl.
+- Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- Chcete-li získat seznam adres SMTP pro poštovní schránku, použijte`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Podrobné informace o stavu přístupu k zařízení získáte pomocí`Get-CASMailbox <upn> | fl`
 
 ## <a name="next-steps"></a>Další postup
 Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](get-support.md).

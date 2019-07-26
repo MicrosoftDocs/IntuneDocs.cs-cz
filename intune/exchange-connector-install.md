@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 0a2ebf91efb35ecd46607baffc47abbe73c5fc5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427317"
+ms.locfileid: "68467484"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavení místního Exchange Connectoru Intune v Microsoft Intune
 Informace v tomto článku vám pomůžou nainstalovat a potom monitorovat konektor Exchange Active Sync On-Premises Connector pro Intune.  Pomocí místního Exchange Connectoru v Intune se [zásadami podmíněného přístupu povolíte nebo zablokujete přístup k místním poštovním schránkám Exchange](conditional-access-exchange-create.md). 
@@ -158,7 +158,7 @@ Aby bylo možné provést převzetí služeb při selhání, poté, co konektor 
 
 Pokud podporujete 5 000 nebo více zařízení s Exchange ActiveSync, můžete nakonfigurovat volitelné nastavení pro zlepšení výkonu konektoru. Zvýšení výkonu dosáhnete tak, že zapnete Exchange k použití více instancí běhového prostředí příkazu PowerShellu. 
 
-Než tuto změnu provedete, ujistěte se, že účet, který používáte ke spuštění Exchange Connectoru, se nepoužije pro jiné účely správy Exchange. Je to proto, že Exchange má limit 18 Run-Spaces na účet, přičemž většina z nich bude konektor používat. 
+Než tuto změnu provedete, ujistěte se, že účet, který používáte ke spuštění Exchange Connectoru, se nepoužije pro jiné účely správy Exchange. Je to proto, že Exchange má omezený počet Run-Spaces na účet, který bude konektor používat. 
 
 Tato změna výkonu není vhodná pro konektory, které běží na starším nebo pomalejším hardwaru.  
 
