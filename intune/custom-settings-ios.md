@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37db7b6dcee7721f9d46af032be995029a20e2be
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: f75317678034a488e689461982550bbb0a8afad8
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375203"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533162"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s iOSem v Microsoft Intune
 
@@ -58,14 +58,14 @@ Tento článek obsahuje pokyny k používání Apple Configuratoru a Apple Profi
 - **Název vlastního konfiguračního profilu**: Zadejte název pro tuto zásadu. Tento název se zobrazí na zařízení a ve stavu Intune.
 - **Soubor konfiguračního profilu**: Přejděte do konfiguračního profilu, který jste vytvořili pomocí Apple Configuratoru nebo Apple Profile Manageru. Importovaný soubor se zobrazí v části **Obsah souboru**.
 
-  Do `.mobileconfig` souborů můžete také přidat tokeny zařízení. Tokeny zařízení se používají k přidání informací specifických pro zařízení. Chcete-li například zobrazit sériové číslo, zadejte `{{serialnumber}}`. V zařízení se text zobrazuje podobně, jako `123456789ABC` je jedinečný pro každé zařízení. Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}`. [Tokeny konfigurace aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceid` nebo libovolná jiná hodnota specifická pro zařízení.
+  Můžete také přidat tokeny zařízení do vlastních konfiguračních souborů. Tokeny zařízení se používají k přidání informací specifických pro zařízení. Chcete-li například zobrazit sériové číslo, zadejte `{{serialnumber}}`. V zařízení se text zobrazuje podobně, jako `123456789ABC` je jedinečný pro každé zařízení. Při zadávání proměnných nezapomeňte použít složené závorky `{{ }}`. [Tokeny konfigurace aplikace](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) obsahují seznam proměnných, které se dají použít. Můžete také použít `deviceid` nebo libovolná jiná hodnota specifická pro zařízení.
 
   > [!NOTE]
   > Proměnné nejsou v uživatelském rozhraní ověřeny a rozlišují se velká a malá písmena. V důsledku toho mohou být profily uloženy s nesprávným vstupem. Pokud například zadáte `{{DeviceID}}` `{{deviceid}}`místo, pak se místo jedinečného ID zařízení zobrazí literální řetězec. Nezapomeňte zadat správné informace.
 
 Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profily.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Profil je vytvořený, ale zatím se nepoužívá. V dalším kroku [profil přiřadíte](device-profile-assign.md).
 

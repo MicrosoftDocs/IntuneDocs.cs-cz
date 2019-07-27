@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d76e170627d7e08cc3da6fe4a48eb14ee839de98
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883843"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590929"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 
@@ -41,7 +41,7 @@ Obchodní aplikace pro Windows 10 jsou podepsané a nahrané v konzole správce 
 
 ## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
 
-Aplikace pro Microsoft Store pro firmy jsou moderními aplikacemi, které můžete zakoupit na portálu pro správu Microsoft Storu pro firmy a které se potom synchronizují do Microsoft Intune pro správu. Tyto aplikace mohou mít **online licenci** nebo **offline licenci**. Aktualizace aplikací z Microsoft Storu pro firmy se spravují přímo v Microsoft Storu bez nutnosti zásahu správcem. Správce může použitím vlastního identifikátoru URI (Uniform Resource Identifier) zabránit aktualizacím konkrétních aplikací. Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Koncový uživatel může na svém zařízení automatické aktualizace aplikací z Microsoft Storu pro firmy také zakázat. 
+Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené z portálu pro správu Microsoft Store pro firmy a pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít **online licenci** nebo **offline licenci**. Aktualizace Microsoft Store pro obchodní aplikace se spravují přímo pomocí Microsoft Store, a to bez další akce, kterou vám vyžaduje správce. Můžete taky zabránit aktualizacím konkrétních aplikací pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Koncový uživatel může na svém zařízení automatické aktualizace aplikací z Microsoft Storu pro firmy také zakázat. 
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Instalace aplikací na zařízeních s Windows 10
 V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 instalovat jedním ze dvou způsobů:
@@ -73,7 +73,7 @@ V případě, že u jednoho uživatele nebo zařízení dojde ke konfliktu mezi 
 
 Další informace o přiřazování aplikací pomocí Microsoft Intune najdete v tématech [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md) a [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md). Další informace o typech aplikací v Intune najdete v tématu [Přidání aplikací do Microsoft Intune](apps-add.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Další informace o přiřazení aplikací ke skupinám najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
 - Další informace o sledování přiřazení aplikací najdete v článku o [monitorování aplikací](apps-monitor.md).
