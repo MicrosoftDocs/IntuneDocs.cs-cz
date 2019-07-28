@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: eec9a275a87b3e1bcfc42e197d95b4a4b315d018
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67812538"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68591062"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune. 
 
@@ -57,13 +57,13 @@ Od července se zařízení zaregistrovaná v MDM s iOS 10 a Portál společnost
 Podívejte se do sestavy Intune, kde vidíte, která zařízení nebo uživatelé můžou být ovlivnění. Přejít na **zařízení** > **všechna zařízení** a filtrovat podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení se systémem iOS 10. Zajistěte, aby vaši koncoví uživatelé před září upgradovali svoje zařízení na podporovanou verzi operačního systému.
 
 ### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Plán změny: Podpora verze 8.1.1 a vyšší sady Intune App SDK pro iOS <!-- 3586942-->
-Od září 2019 se Intune přesune na podporu aplikací pro iOS pomocí sady Intune App SDK 8.1.1 a vyšší. Aplikace sestavené s verzemi sady SDK nižšími než 8.1.1 se už nebudou podporovat. Tato změna se projeví u vydání iOS 13 od společnosti Apple, které se očekává od září a také bylo oznámeno v MC181399.
+Od září 2019 se Intune přesune na podporu aplikací pro iOS pomocí sady Intune App SDK 8.1.1 a vyšší. Aplikace sestavené s verzemi sady SDK nižšími než 8.1.1 se už nebudou podporovat. Tato změna se projeví u verze iOS 13 od společnosti Apple, která se očekává od září a bude také oznámena v MC181399.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 Pomocí sady Intune App SDK nebo integrace se zabalením aplikací můžete chránit podniková data před neschválenými aplikacemi a uživateli prostřednictvím šifrování dat. Intune App SDK pro iOS ve výchozím nastavení použije 256 šifrovacích klíčů, pokud je šifrování povolené Intune App Protection zásady (aplikace). Po této změně nebudou moct aplikace pro iOS ve verzích SDK starších než 8.1.1, které používají 128 šifrovacích klíčů, dál sdílet data s aplikacemi integrovanými se sadou SDK 8.1.1 nebo s použitím 256 klíčů. Aby bylo možné chráněné sdílení dat, bude pro všechny aplikace pro iOS potřeba mít sadu SDK verze 8.1.1 nebo vyšší.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Kontrolovat aplikace Microsoftu, třetích stran a obchodních aplikací (LOB). Měli byste zajistit, aby všechny vaše aplikace chráněné pomocí aplikace Intune používaly sadu SDK verze 8.1.1 nebo novější.
+Kontrolovat aplikace Microsoftu, třetích stran a obchodních aplikací (LOB). Zajistěte, aby všechny vaše aplikace chráněné pomocí aplikace Intune používaly sadu SDK verze 8.1.1 nebo novější.
 
 - Pro obchodní aplikace: Možná budete muset znovu publikovat aplikace integrované se sadou SDK verze 8.1.1 nebo novější. Doporučujeme nejnovější verzi sady SDK. Informace o tom, jak připravit obchodní aplikace pro zásady ochrany aplikací, najdete v tématu [Příprava obchodních aplikací na zásady ochrany aplikací](../apps-prepare-mobile-application-management.md).
 - Pro aplikace Microsoftu a třetích stran: Ujistěte se, že nasazujete nejnovější verze těchto aplikací pro uživatele.
@@ -74,7 +74,7 @@ Měli byste také aktualizovat dokumentaci nebo pokyny pro vývojáře, pokud je
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Plán změny: Nové nastavení aktualizací Windows v Intune <!-- 4464404 -->
-Od verze Intune do služby Intune nebo 1908 přidáváme nová "nastavení termínů", která můžete nakonfigurovat, místo nastavení "Allow User to restart (v případě restartování)"). V uživatelském rozhraní v 1909 nebo září si plánujeme zakázat nastavení, které je potřeba restartovat, a pak je úplně odebrat z konzoly do konce října. 
+Od verze Intune do Intune nebo 1908 přidáváme nové "nastavení termínu", které můžete nakonfigurovat místo nastavení "Umožněte uživateli, aby se restartoval". V uživatelském rozhraní v 1909 nebo září si plánujeme zakázat nastavení, které je potřeba restartovat, a pak je úplně odebrat z konzoly do konce října. 
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 Pokud spravujete zařízení s Windows 10 ve vašem prostředí: 
@@ -83,8 +83,27 @@ Pokud spravujete zařízení s Windows 10 ve vašem prostředí:
 - Nastavení konečného termínu v konzole nástroje v aktualizaci 1910 nahradí možnost "povolení uživatele k restartování (v tomto prostředí)".
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Začněte používat nastavení konečného termínu v 1908, a to tak, že je nakonfigurujete s požadovanými hodnotami. Až to budete mít, můžete nastavit nastavení provedeného restartování na Nenakonfigurováno pro přípravu na odebrání z konzoly v říjnu.
+Začněte používat nastavení konečného termínu v 1908, a to tak, že je nakonfigurujete s požadovanými hodnotami. Jakmile to budete mít, můžete nastavit nastavení provedeného restartování na Nenakonfigurováno pro přípravu na odebrání těchto nastavení z konzoly v říjnu.
 
 V případě potřeby aktualizujte svou dokumentaci a skripty pro automatizaci. 
 
 Než odebereme nastavení provedeného restartování, budeme vás udržovat do centra zpráv, abychom vám aktualizovali a vyúčtovali připomenutí.
+
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Plán změny: Sada Intune App SDK a zásady ochrany aplikací pro Android, které se přesunou na podporu Android 5,0 a novějších v říjnu <!--4911065 -->
+Intune se v říjnu přesune na podporu Androidu 5. x (Lupa) a vyšší. Aktualizujte všechny zabalené aplikace pomocí nejnovější sady Intune App SDK a aktualizujte svá zařízení.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Pokud nepoužíváte nebo plánujete použít sadu SDK nebo aplikaci pro Android, tato změna vás nijak neovlivní. Pokud používáte sadu Intune App SDK, nezapomeňte aktualizovat na nejnovější verzi a také aktualizovat zařízení na Android 5. x a vyšší. Pokud aktualizace neaktualizujete, nebudou aplikace dostávat aktualizace a kvalita jejich prostředí se v průběhu času sníží. 
+
+Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kterých běží Android verze 4. x. Pokud máte jedno z těchto zařízení, proveďte příslušné kroky, abyste se ujistili, že toto zařízení bude podporovat Android verze 5,0 nebo vyšší nebo že bude nahrazeno zařízením, které podporuje Android verze 5,0 nebo novější. Tento seznam není vyčerpávající pro všechna zařízení, která může být potřeba vyhodnotit:
+- Samsung SM – T561  
+- Samsung SM – T365 
+- Samsung GT – I9195 
+- Samsung SM – G800F
+- Samsung SM – G357FZ
+- Společnost Motorola XT1080
+- Samsung GT – I9305
+- Samsung SM – T231
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
