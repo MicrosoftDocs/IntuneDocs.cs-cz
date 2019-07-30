@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2017
+ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,25 +18,36 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bdf97e6a36a49bc6df5a182af7676c357440f3e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529328"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625115"
 ---
-# <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Ve vašem zařízení s Androidem chybí certifikát, který vyžaduje firemní podpora
+# <a name="install-missing-certificate-required-by-your-organization"></a>Instalace chybějícího certifikátu požadovaného vaší organizací  
 
 Pokud zařízení nemáte zaregistrované v Intune a chybí mu konkrétní certifikát, který vyžaduje firemní podpora, nebudete se k aplikaci Portál společnosti moct přihlásit. Při pokusu o přihlášení se zobrazí tato zpráva:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
-Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte udělat dva hlavní kroky:
+K dispozici jsou dvě možnosti, jak si můžete zkusit stáhnout požadovaný certifikát a zaregistrovat své zařízení. 
 
-- Určit chybějící certifikát pomocí pracovního nebo školního počítače.
-- Pomocí vašeho zařízení stáhnout chybějící certifikát z internetu.
+- Povolit přístup z prohlížeče v aplikaci Portál společnosti.
+- Identifikujte chybějící certifikát na firemním nebo školním počítači. Pak na internetu vyhledejte chybějící certifikát. 
 
-## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Určení chybějícího certifikátu pomocí pracovního nebo školního počítače
+Nejprve proveďte kroky pro povolení přístupu z prohlížeče. Pokud pořád nemůžete zaregistrovat svoje zařízení, postupujte podle pokynů k vyhledání certifikátu na internetu. 
+
+## <a name="enable-browser-access"></a>Povolit přístup z prohlížeče
+Pokud chcete povolit přístup z prohlížeče, proveďte tyto kroky. Po povolení přístupu Portál společnosti nainstaluje příslušný certifikát a bude pokračovat v registraci.    
+
+1. V aplikaci Portál společnosti přejděte do pravého horního rohu a vyberte nabídku.  
+2. Vyberte **nastavení**.  
+3. V poli **Povolit přístup z prohlížeče** vyberte **Povolit**.  
+4. Na obrazovce Správce zařízení vyberte **aktivovat**. 
+
+## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>Identifikujte a stáhněte chybějící certifikát prostřednictvím vyhledávání na webu
+Provedením těchto kroků ručně identifikujte a nainstalujete certifikát do svého zařízení.  
 
 1. Na počítači otevřete aplikaci Internet Explorer. Pokud nemáte počítač, který byste k těmto účelům mohli využít, obraťte se na firemní podporu. Kontaktní informace na svou firemní podporu najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 
@@ -52,15 +63,13 @@ Pokud chcete tyto potíže vyřešit a získat požadovaný certifikát, musíte
 
     ![screenshot-internet-explorer-view-certificates-button-on-website-identification-dialog](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. V dialogovém okně **Certifikáty** vyberte kartu **Cesta k certifikátu** a potom určete certifikát, který potřebujete získat z internetu. Název certifikátu, který potřebujete, se zobrazí na stejné pozici jako název zvýrazněný na předchozím snímku obrazovky s příkladem.
+5. Zvolte kartu **cesta k certifikátu** a potom určete certifikát, který potřebujete získat z Internetu. Název certifikátu, který potřebujete, se zobrazí na stejné pozici jako název zvýrazněný na předchozím snímku obrazovky s příkladem.
 
-## <a name="download-and-install-the-missing-certificate-on-your-android-mobile-device"></a>Stažení a instalace chybějícího certifikátu na mobilním zařízení s Androidem
+6. Pomocí vyhledávacího webu jako Bing nebo Google vyhledejte název chybějícího certifikátu, který jste určili v předchozí části. Název certifikátu může mít různé přípony, třeba .crt nebo .pem.
 
-1. Pomocí vyhledávacího webu jako Bing nebo Google vyhledejte název chybějícího certifikátu, který jste určili v předchozí části. Název certifikátu může mít různé přípony, třeba .crt nebo .pem.
+7. Stáhněte si kořenový certifikát z webu.
 
-2. Stáhněte si kořenový certifikát z webu.
-
-3. Po stažení certifikátu si přetažením dolů z horní části zařízení otevřete oznámení a potom v seznamu oznámení klepněte na název požadovaného certifikátu.
+8. Po stažení certifikátu si přetažením dolů z horní části zařízení otevřete oznámení a potom v seznamu oznámení klepněte na název požadovaného certifikátu.
 
 4. V dialogovém okně **Název certifikátu** zobrazeném na následujícím snímku obrazovky přijměte výchozí název certifikátu.
 

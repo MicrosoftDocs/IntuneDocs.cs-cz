@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673dd0cb751fcdd2a7036dc2bf52dd731a4b04ff
-ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
+ms.openlocfilehash: e8f5f67661dbf33f2b0d6b44e32302a874c3f4de
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68306753"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625082"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -65,22 +65,22 @@ Následující soubory jsou relevantní pro všechny aplikace/rozsahy:
 
 Následující soubory hlaviček obsahují rozhraní API, datové typy a protokoly, které Intune App SDK zpřístupňuje vývojářům:
 
-    * IntuneMAMAppConfig.h
-    * IntuneMAMAppConfigManager.h
-    * IntuneMAMDataProtectionInfo.h
-    * IntuneMAMDataProtectionManager.h
-    * IntuneMAMDefs.h
-    * IntuneMAMDiagnosticConsole. h
-    * IntuneMAMEnrollmentDelegate.h
-    * IntuneMAMEnrollmentManager.h
-    * IntuneMAMEnrollmentStatus.h
-    * IntuneMAMFileProtectionInfo.h
-    * IntuneMAMFileProtectionManager.h
-    * IntuneMAMLogger.h
-    * IntuneMAMPolicy.h
-    * IntuneMAMPolicyDelegate.h
-    * IntuneMAMPolicyManager.h
-    * IntuneMAMVersionInfo.h
+-  IntuneMAMAppConfig.h
+-  IntuneMAMAppConfigManager.h
+-  IntuneMAMDataProtectionInfo.h
+-  IntuneMAMDataProtectionManager.h
+-  IntuneMAMDefs.h
+-  IntuneMAMDiagnosticConsole. h
+-  IntuneMAMEnrollmentDelegate.h
+-  IntuneMAMEnrollmentManager.h
+-  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFileProtectionInfo.h
+-  IntuneMAMFileProtectionManager.h
+-  IntuneMAMLogger.h
+-  IntuneMAMPolicy.h
+-  IntuneMAMPolicyDelegate.h
+-  IntuneMAMPolicyManager.h
+-  IntuneMAMVersionInfo.h
 
 Vývojáři mohou vytvářet obsah všech předchozích hlaviček, které jsou k dispozici pouhým importem IntuneMAM. h.
 
@@ -130,17 +130,17 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
     > * Zpřístupnění rozhraní API sady Intune SDK v SWIFT prostřednictvím příkazu importu modulu (např.: import IntuneMAMSwift) se momentálně nepodporuje. Doporučený postup je použití hlavičky přemostění v cíli C.
     
 3. Do projektu přidejte tyto modely iOS:  
-    * MessageUI.framework  
-    * Security.framework  
-    * MobileCoreServices.framework  
-    * SystemConfiguration.framework  
-    * libsqlite3.tbd  
-    * libc++.tbd  
-    * ImageIO.framework  
-    * LocalAuthentication.framework  
-    * AudioToolbox.framework  
-    * QuartzCore.framework  
-    * WebKit.framework
+-  MessageUI.framework  
+-  Security.framework  
+-  MobileCoreServices.framework  
+-  SystemConfiguration.framework  
+-  libsqlite3.tbd  
+-  libc++.tbd  
+-  ImageIO.framework  
+-  LocalAuthentication.framework  
+-  AudioToolbox.framework  
+-  QuartzCore.framework  
+-  WebKit.framework
 
 4. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
