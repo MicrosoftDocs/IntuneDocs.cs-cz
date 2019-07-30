@@ -1,6 +1,6 @@
 ---
-title: Windows Hello pro firmy nastavení v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zobrazit seznam všech PIN kód, biometrické a ochranu proti falšování identity nastavení v profilu ochrany identit, použití a konfigurace Windows Hello pro firmy na zařízeních s Windows 10 v Microsoft Intune.
+title: Nastavení Windows Hello pro firmy v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení PIN, biometriky a ochrany proti falšování obsahu v profilu ochrany identity, abyste mohli používat a konfigurovat Windows Hello pro firmy na zařízeních s Windows 10 v Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,124 +15,124 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: shpate
-ms.openlocfilehash: 1cbf45fc337cbe7d7a45081a3b9e05002ca126d8
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 5a8111d2542269441c7305aad0aad0b7c2162037
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402926"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735612"
 ---
-# <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení Windows 10 a povolit Windows Hello pro firmy v Intune
+# <a name="windows-10-device-settings-to-enable-windows-hello-for-business-in-intune"></a>Nastavení zařízení s Windows 10 pro povolení Windows Hello pro firmy v Intune
 
-Tento článek uvádí a popisuje ve Windows Hello pro firmy nastavení můžete řídit na zařízeních s Windows 10 v Intune. Jako správce Intune můžete nakonfigurovat a přiřadit tato nastavení pro zařízení s Windows 10 jako součást řešení správy mobilních zařízení. 
+Tento článek obsahuje seznam a popis nastavení Windows Hello pro firmy, která můžete řídit na zařízeních s Windows 10 v Intune. Jako správce služby Intune můžete nakonfigurovat a přiřadit tato nastavení zařízením s Windows 10 jako součást řešení správy mobilních zařízení (MDM). 
 
-Můžete najít další informace o těchto nastaveních [konfigurovat Windows Hello pro firmy zásady nastavení](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings), v dokumentaci Windows Hello.
+Další informace o těchto nastaveních najdete v části [Konfigurace nastavení zásad Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings)v dokumentaci k Windows Hello.
 
 
-Další informace o Windows Hello pro firmy profily v Intune, najdete v článku [konfigurovat identity protection](identity-protection-configure.md).
+Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu [Konfigurace identity Protection](identity-protection-configure.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace](identity-protection-configure.md#create-the-device-profile).
+[Vytvořte konfigurační profil](identity-protection-configure.md#create-the-device-profile).
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy
-- **Konfigurovat Windows Hello pro firmy**:
-  - **Není nakonfigurováno** – vyberte toto nastavení, pokud nechcete, aby chcete Intune používat pro ovládací prvek Windows Hello pro firmy nastavení. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
+- **Konfigurace Windows Hello pro firmy**:
+  - Nenakonfigurováno – toto nastavení vyberte, pokud nechcete použít Intune k řízení nastavení Windows Hello pro firmy. Veškerá stávající nastavení Windows Hello pro firmy v zařízeních s Windows 10 se nezmění. Žádná ostatní nastavení v podokně nejsou dostupná.
 
-  - **Zakázané** – Pokud už nechcete používat Windows Hello pro firmy, vyberte toto nastavení. Všechna ostatní nastavení na obrazovce jsou nedostupná.
-  - **Povolené** – vyberte toto nastavení, pokud chcete, nakonfigurujete Windows Hello pro firmy.  
+  - **Zakázáno** – Pokud nechcete používat Windows Hello pro firmy, vyberte toto nastavení. Všechna ostatní nastavení na obrazovce jsou nedostupná.
+  - **Povoleno** – toto nastavení vyberte, pokud chcete nakonfigurovat nastavení Windows Hello pro firmy.  
   
   **Výchozí**: Není nakonfigurováno
 
-  Pokud je nastavena na *povoleno*, jsou dostupná následující nastavení:
+  Pokud je nastaveno na *povoleno*, jsou k dispozici následující nastavení:
 
-    - **Minimální délka PIN kódu**  
-     Zadejte minimální délku PIN kódu pro zařízení, abychom zabezpečené přihlašování. Výchozí nastavení pro zařízení Windows jsou šest znaků, ale toto nastavení můžete vynutit minimálně 4 až 127 znaků. 
-  
-      **Výchozí**: *Není nakonfigurováno*
+  - **Minimální délka PIN kódu**  
+    Zadejte minimální délku PIN kódu pro zařízení, aby se usnadnilo zabezpečení přihlášení. Výchozí hodnoty zařízení s Windows jsou šest znaků, ale toto nastavení může vyhovět minimálně čtyř až 127 znaků. 
 
-    - **Maximální délka PIN kódu**  
-    Zadejte maximální délku PIN kódu pro zařízení, abychom zabezpečené přihlašování. Výchozí nastavení pro zařízení Windows jsou šest znaků, ale toto nastavení můžete vynutit minimálně 4 až 127 znaků.  
+    **Výchozí**: *Není nakonfigurováno*
 
-      **Výchozí**: *Není nakonfigurováno*  
+  - **Maximální délka kódu PIN**  
+  Zadejte maximální délku PIN kódu pro zařízení, aby se usnadnilo zabezpečení přihlášení. Výchozí hodnoty zařízení s Windows jsou šest znaků, ale toto nastavení může vyhovět minimálně čtyř až 127 znaků.  
 
-    - **Malá písmena v PIN kódu**  
-      Můžete vynutit silnější kódy PIN tím, že koncoví uživatelé vyžaduje obsahovat malá písmena. Možnosti:
+    **Výchozí**: *Není nakonfigurováno*  
 
-      - **Není povoleno** – zablokuje uživatelům možnost používat malá písmena v PIN KÓDECH. K tomuto chování dochází i když toto nastavení není nakonfigurované.
-      - **Povolené** – uživatelům povolit používání malých písmen v PIN KÓDECH, ale to není nutné.
-      - **Vyžaduje** – uživatelé musí obsahovat aspoň jedno malé písmeno v PIN KÓDECH. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
+  - **Malá písmena v PIN kódu**  
+    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat malá písmena. Možnosti:
 
-    - **Velká písmena v PIN kódu**  
-    Můžete vynutit silnější kódy PIN tím, že koncoví uživatelé vyžaduje obsahovat velká písmena. Možnosti:
+    - **Nepovoleno** – zablokuje uživatelům používání malých písmen v PIN kódu. K tomuto chování dochází také v případě, že nastavení není nakonfigurováno.
+    - **Povoleno** – povolit uživatelům používat malá písmena v PIN kódu, ale není to povinné.
+    - **Požadováno** – uživatelé musí v PIN kódu použít aspoň jedno malé písmeno. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
 
-      - **Není povoleno** – zablokuje uživatelům možnost používat velká písmena v PIN KÓDECH. K tomuto chování dochází i když toto nastavení není nakonfigurované.
-      - **Povolené** – uživatelům povolit používání velkých písmen v PIN KÓDECH, ale to není nutné.
-      - **Vyžaduje** – uživatelé musí obsahovat aspoň jedno velké písmeno v PIN KÓDECH. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
+  - **Velká písmena v PIN kódu**  
+    Můžete vynutí silnější PIN kód tím, že koncovým uživatelům zadáte velká písmena. Možnosti:
 
-    - **Speciální znaky v PIN kódu**  
-    Můžete vynutit silnější kódy PIN tím, že koncoví uživatelé vyžaduje obsahovat speciální znaky. Mezi speciální znaky patří: `! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
- 
-      Možnosti:
-      - **Není povoleno** – zablokuje uživatelům možnost používat speciální znaky v PIN KÓDECH. K tomuto chování dochází i když toto nastavení není nakonfigurované.
-      - **Povolené** – uživatelům povolit používání velkých písmen v PIN KÓDECH, ale to není nutné.
-      - **Vyžaduje** – uživatelé musí obsahovat aspoň jedno velké písmeno v PIN KÓDECH. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
+    - **Nepovoleno** – zablokuje uživatelům používání velkých písmen v PIN kódu. K tomuto chování dochází také v případě, že nastavení není nakonfigurováno.
+    - **Povoleno** – povolí uživatelům používat v PIN kódu velká písmena, ale není to povinné.
+    - **Požadováno** – uživatelé musí v PIN kódu použít aspoň jedno velké písmeno. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
 
-      **Výchozí**: Není povoleno
+  - **Speciální znaky v PIN kódu**  
+    Silnější kód PIN můžete vynutíte tak, že koncoví uživatelé budou obsahovat speciální znaky. Mezi speciální znaky patří:`! " # $ % &amp; ' ( ) &#42; + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ &#96; { &#124; } ~`  
 
-  - **Doba platnosti kódu PIN (dny)**  
-      Je dobrým zvykem zadat pro kód PIN dobu platnosti, po jejímž uplynutí ho uživatel musí změnit. Výchozí nastavení zařízení Windows je 41 dnů.
+    Možnosti:
+    - **Nepovoleno** – zablokuje uživatelům používání speciálních znaků v PIN kódu. K tomuto chování dochází také v případě, že nastavení není nakonfigurováno.
+    - **Povoleno** – povolí uživatelům používat v PIN kódu velká písmena, ale není to povinné.
+    - **Požadováno** – uživatelé musí v PIN kódu použít aspoň jedno velké písmeno. Běžnou praxí třeba je vyžadovat použití nejméně jednoho velkého písmena, jednoho malého písmena a jednoho speciálního znaku.
+
+    **Výchozí**: Není povoleno
+
+  - **Vypršení platnosti PIN kódu (dny)**  
+    Je dobrým zvykem zadat pro kód PIN dobu platnosti, po jejímž uplynutí ho uživatel musí změnit. Výchozí hodnoty pro zařízení s Windows jsou 41 dnů.
 
     **Výchozí**: Nenakonfigurováno
 
   - **Pamatovat si historii kódů PIN**  
-    Pomocí tohoto nastavení můžete zabránit opakovanému použití předchozích kódů PIN. Windows výchozí zařízení pro zabránění opětovné použití posledních pět kódů PIN.  
+    Pomocí tohoto nastavení můžete zabránit opakovanému použití předchozích kódů PIN. Zařízení s Windows se standardně zabraňují opakovanému použití posledních pěti kódů PIN.  
 
     **Výchozí**: Nenakonfigurováno  
 
-  - **Povolit obnovení kódu PIN**   
-    Umožňuje uživateli používat ve Windows Hello pro firmy obnovení služby. 
+  - **Povolit obnovení PIN kódu**   
+    Umožňuje uživateli používat službu obnovení PIN kódu pro Windows Hello pro firmy. 
     
-    - **Povolené** – kód PIN pro obnovení tajný klíč uložený na zařízení a uživatel může změnit kód PIN, v případě potřeby.  
-    - **Zakázané** -tajný kód pro obnovení není vytvořen nebo uložené.
+    - **Povoleno** – tajný klíč pro obnovení PIN kódu je uložený na zařízení a uživatel může v případě potřeby změnit PIN kód.  
+    - **Zakázáno** – tajný klíč pro obnovení není vytvořený nebo uložený.
 
     **Výchozí**: Není nakonfigurováno
 
-  - **Použít Trusted Platform Module (TPM)**    
+  - **Použít čip TPM (Trusted Platform Module)**    
     Čip TPM poskytuje další úroveň zabezpečení dat.  
 
-    - **Povolené** – pouze pro zařízení s přístupným čipem TPM můžete zřídit Windows Hello pro firmy.
-    - **Není nakonfigurováno** – zařízení se nejdřív pokusí použít čip TPM. Pokud není dostupný, můžou použít softwarové šifrování.
+    - Pro Windows Hello pro firmy můžou zřídit jenom zařízení s PŘÍSTUPNÝM čipem TPM.
+    - Nenakonfigurováno – zařízení se nejdřív pokusí použít čip TPM. Pokud není dostupný, můžou použít softwarové šifrování.
     
     **Výchozí**: Není nakonfigurováno
 
-  - **Povolit biometrické ověřování**  
+  - **Povolení biometrického ověřování**  
      Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
     - **Povolit** – Windows Hello pro firmy umožňuje biometrické ověřování.
-    - **Není nakonfigurováno** – Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
+    - Nenakonfigurováno – Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
 
     **Výchozí**: Není nakonfigurováno
 
-  - **Používat rozšířenou ochranu proti falšování identity, pokud je k dispozici**  
+  - **Používat rozšířenou ochranu proti falšování identity, pokud je dostupná**  
     Konfiguruje, jestli se v zařízení použijí funkce ochrany proti falšování identity Windows Hello, pokud je zařízení podporuje (třeba rozpoznání fotografie tváře místo skutečné tváře).  
-    - **Povolit** – Windows vyžaduje všichni uživatelé používali ochranu proti falšování identity pro funkce rozpoznávání obličeje, který je podporováno.
-    - **Není nakonfigurováno** – Windows respektuje ochranu proti falšování identity konfigurace v zařízení.
+    - **Povolit** – Windows vyžaduje, aby všichni uživatelé používali pro funkce obličeje ochranu proti falšování identity, pokud je tato možnost podporovaná.
+    - Nenakonfigurováno – Windows respektuje konfigurace ochrany proti falšování identity na zařízení.
 
     **Výchozí**: Není nakonfigurováno
 
   - **Certifikát pro místní prostředky**  
 
-    - **Povolit** – umožňuje Windows Hello pro firmy používat certifikáty k ověřování k prostředkům na pracovišti.
-    - **Není nakonfigurováno** – brání Windows Hello pro firmy používat certifikáty k ověřování k prostředkům na pracovišti. Místo toho použijte výchozí chování zařízení *ověřovací key důvěryhodnosti v místním*. Další informace najdete v tématu [uživatelský certifikát pro ověřování v místním](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) v dokumentaci Windows Hello.  
+    - **Povolit** – umožní Windows Hello pro firmy používat certifikáty k ověřování pro místní prostředky.
+    - Nenakonfigurováno – zabrání Windows Hello pro firmy v používání certifikátů k ověřování pro místní prostředky. Místo toho zařízení používají výchozí chování *místního ověřování důvěryhodného klíče*. Další informace najdete v tématu [uživatelský certifikát pro místní ověřování](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) v dokumentaci k Windows Hello.  
 
   **Výchozí**: Není nakonfigurováno
 
-- **Použití klíčů zabezpečení pro přihlášení**  
-  Toto nastavení je dostupné pro zařízení se systémem Windows 10 verze 1903 nebo novější. Použijte ho ke správě podporu pro použití klíčů zabezpečení Windows Hello pro přihlášení.  
+- **Použití bezpečnostních klíčů pro přihlášení**  
+  Toto nastavení je k dispozici pro zařízení s Windows 10 verze 1903 nebo novější. Pomocí této služby můžete spravovat podporu pro použití klíčů zabezpečení Windows Hello pro přihlášení.  
 
-  - **Povolené** – uživatelé můžou používat klíč zabezpečení Windows Hello, jak přihlašovací údaje pro počítače s cílem touto zásadou. 
-  - **Zakázané** – zabezpečení klíče jsou zakázané a uživatelé nemůžou používat k přihlášení do počítačů.   
+  - **Povoleno** – uživatelé můžou použít bezpečnostní klíč Windows Hello jako přihlašovací údaje pro počítače, na které cílí tato zásada. 
+  - **Zakázáno** – klíče zabezpečení jsou zakázané a uživatelé je nemůžou používat k přihlašování k počítačům.   
 
   **Výchozí**: Není nakonfigurováno
 

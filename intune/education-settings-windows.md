@@ -1,6 +1,6 @@
 ---
-title: Nastavení vzdělávání pro Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zobrazit seznam všech nastavení vzdělávání pro zařízení s Windows 10. Pomocí těchto nastavení v profilu konfigurace zařízení s zkuste aplikace pro testy, zvolte uživatele nebo studenty registrace v programu sledování obrazovky během testu a více v Intune.
+title: Nastavení vzdělávání pro Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení vzdělávání pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení pomocí aplikace vzít si test, vyberte, jak se uživatelé nebo studenti přihlásí, monitorovat obrazovku během testu a další v Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -16,40 +16,40 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 61d8f5f66d424c434edf119ad7fe221c35ee35ae
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d5c78f72e7ffc580cce6cfec7237a3efe3ceb3e5
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042216"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230105"
 ---
-# <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Na zařízeních s Windows 10 pomocí Intune nakonfigurovat aplikaci zkuste si Test
+# <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurace aplikace pořizovat test na zařízeních s Windows 10 pomocí Intune
 
-V tomto článku se dozvíte vše Microsoft Intune education využít testovací aplikace nastavení, která můžete konfigurovat v zařízeních s Windows 10 a novější. Použití této aplikace, studenty můžete přihlásit k zařízení a zkuste si test.
+V tomto článku se dozvíte, jak se ve Microsoft Intune vzdělávání pořídit nastavení testovací aplikace, která můžete nakonfigurovat na zařízeních s Windows 10 a novějším. Pomocí této aplikace se studenti můžou přihlásit k zařízení a provést test.
 
-Tato nastavení jsou přidány do konfiguračního profilu zařízení a potom přiřazené nebo nasazené do zařízení pomocí Microsoft Intune.
+Tato nastavení se přidají do konfiguračního profilu zařízení a pak se přiřadí nebo nasadí do zařízení pomocí Microsoft Intune.
 
-[Provést Test aplikace v Intune](education-settings-configure.md) poskytuje další informace o této funkci.
+Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovací aplikaci v Intune](education-settings-configure.md) .
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 [Vytvořit profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
 
-## <a name="take-a-test-settings"></a>Zkuste si test nastavení
+## <a name="take-a-test-settings"></a>Provést nastavení testu  
 
-- **Typ účtu**: Zvolte, jak se uživatelé přihlašují k testu. Možnosti:
+- **Typ účtu**: Vyberte způsob, jakým se uživatelé přihlásí k testu. Možnosti:
   - Účet Azure AD
   - Účet domény
   - Místní účet
-- **Uživatelské jméno účtu**: Zadejte uživatele použít název účtu se zkuste aplikaci Test. Účty můžete zadat v následujícím formátu:
+- **Uživatelské jméno účtu**: Zadejte uživatelské jméno účtu, který se používá v aplikaci pořizovat test. Účty můžete zadat v následujícím formátu:
   - `user@contoso.com`
   - `domain\username`
   - `user@contoso.com`
   - `computerName\username`
-- **Adresa URL hodnocení**: Zadejte adresu URL testu, který mají uživatelé absolvovat. Další informace o získání adresy URL, najdete v článku [trvat dokumentace k testování](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
-- **Monitorování obrazovky**: Zvolte **povolit** monitorování obrazovky, když uživatelé absolvují test. **Není nakonfigurováno** brání monitorování obrazovky během testu.
-- **Návrh textu**: Zvolte **povolit** tak uživatelům vyplňujícím testu můžete zobrazit textové návrhy. **Není nakonfigurováno** blokovat textové návrhy, zatímco uživatelé absolvují test.
+- **Adresa URL pro vyhodnocení**: Zadejte adresu URL testu, který mají uživatelé provést. Další informace o získání adresy URL najdete v dokumentaci k [provedení testu](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Sledování obrazovky**: Chcete-li monitorovat aktivitu obrazovky, zatímco uživatelé probíhají testy, vyberte možnost **povoleno** . **Není nakonfigurované** , znemožní vám monitorovat obrazovku během testu.
+- **Návrh textu**: Vyberte možnost **umožnit** , takže test uživatelé vyplňující může zobrazit návrhy textu. Nenakonfigurované návrhy textu bloků, zatímco uživatelé probíhají test.
 
 ## <a name="next-steps"></a>Další postup
 
-Vytvoření profilu, ale to nemusí být teď zrovna nic nedělá ještě. Nezapomeňte [přiřadit profil](device-profile-assign.md), a [monitorování jejího stavu](device-profile-monitor.md).
+Profil se vytvoří, ale nemusí ještě nic dělat. Nezapomeňte [profil přiřadit](device-profile-assign.md)a [monitorovat jeho stav](device-profile-monitor.md).
