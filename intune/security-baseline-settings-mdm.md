@@ -5,7 +5,7 @@ description: Základní nastavení zabezpečení Intune pro správu Windows 10
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882298"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491913"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
 
@@ -1246,7 +1246,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   
 - **Vyžadovat režim schválení správce pro správce**  
   Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:   
-  - Nenakonfigurováno – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
+  - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
   - *Ano* – režim schválení správcem je povolen. Tato zásada musí být povolená a související nastavení zásad řízení uživatelských účtů musí být nastavené tak, aby umožňovala předdefinovaný účet správce a všechny ostatní uživatele, kteří jsou členy skupiny Administrators, ke spuštění v režimu schválení správcem.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067184)  
@@ -1256,7 +1256,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Zabránit anonymnímu výčtu účtů SAM**  
   Toto nastavení zabezpečení určuje, jaká další oprávnění budou udělena anonymním připojením k počítači. Systém Windows umožňuje anonymním uživatelům provádět určité aktivity, jako je například vytváření výčtu názvů doménových účtů a síťových sdílených složek. To je užitečné, například když chce správce udělit přístup uživatelům v důvěryhodné doméně, které neudržují vzájemnou důvěryhodnost. Tato možnost zabezpečení umožňuje umístit do anonymních připojení další omezení následujícím způsobem: 
   - *Ano* – Nepovolit výčet účtů SAM. Tato možnost nahrazuje všechny ověřené uživatele v oprávnění zabezpečení pro prostředky.
-  - Nenakonfigurováno – žádná další omezení. Spoléhá se na výchozí oprávnění.  
+  - *Nenakonfigurováno* – žádná další omezení. Spoléhá se na výchozí oprávnění.  
   
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067318)  
 
@@ -1271,7 +1271,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Použít režim schválení správce**  
   Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti: 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění. 
-  - Nenakonfigurováno – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
+  - *Nenakonfigurováno* – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067186)  
 
@@ -1280,7 +1280,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Povolení přístupu aplikací uživatelského rozhraní k zabezpečeným umístěním**  
   Nastavení této zásady určuje, jestli programy pro usnadnění přístupu k uživatelskému rozhraní (UIAccess nebo UIA) můžou automaticky zakázat zabezpečenou plochu pro výzvy ke zvýšení oprávnění používané standardním uživatelem. 
   - *Ano* – UIA programy, včetně vzdálené pomoci Windows, automaticky zakažte zabezpečenou plochu pro výzvy ke zvýšení oprávnění. Pokud nezakážete řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu, zobrazí se výzvy na ploše interaktivního uživatele místo zabezpečené plochy. 
-  - Nenakonfigurováno: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
+  - *Nenakonfigurováno*: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067185)  
 
@@ -1515,7 +1515,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
 - **Zablokovat provádění neověřených souborů**  
   Zablokuje uživateli spouštění neověřených souborů. 
-  - Nenakonfigurováno – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
+  - *Nenakonfigurováno* – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
   - *Ano* – zaměstnanci nemůžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067228)  
@@ -1773,7 +1773,12 @@ Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPOE]( https://docs.micro
   **Výchozí**: Ano
 
 - **Konfigurace Windows Hello pro firmy**   
-  Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty. Pokud nastavení této zásady povolíte nebo nenakonfigurujete, zařízení zřídí Windows Hello pro firmy. Pokud nastavení této zásady zakážete, zařízení nezřídí Windows Hello pro firmy pro žádného uživatele.
+    Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
+
+  - Když nastavíte *Ano*, povolíte tuto zásadu a zřídí zařízení Windows Hello pro firmy.  
+  - Pokud je nastavené na *Nenakonfigurováno*, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený. 
+
+  Nemůžete zakázat Windows Hello pro firmy prostřednictvím tohoto směrného plánu. Windows Hello pro firmy můžete zakázat při konfiguraci [registrace systému Windows](windows-hello.md)nebo jako součást profilu konfigurace zařízení pro [ochranu identity](identity-protection-configure.md).  
 
   **Výchozí**: Ano
 
@@ -1804,7 +1809,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   Určuje, jestli má uživatel přístup k pracovnímu prostoru rukopisu. 
   - *Zakázáno* – přístup k pracovnímu prostoru Ink je zakázán. Tato funkce je vypnutá.
   - *Povoleno* – funkce pracovní prostor rukopisu je zapnutá, ale uživatel k ní nemá přístup nad zamykací obrazovkou.
-  - Nenakonfigurováno – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
+  - *Nenakonfigurováno* – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067241)  
 
@@ -1826,7 +1831,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 Následující nastavení:
 - *Novinka* v této nejnovější verzi směrného plánu.
 - *Odebral* z této nejnovější základní verze, ale byly k dispozici v předchozí verzi.
-- V některém ze způsobů, jak se nastavení objevilo v předchozí verzi. 
+- *V* některém ze způsobů, jak se nastavení objevilo v předchozí verzi. 
 
 *[Nové]* [**Nad zámkem**](#above-lock):
 - **Hlasové aktivace aplikací z uzamčené obrazovky**    

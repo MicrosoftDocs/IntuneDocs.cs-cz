@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a885abfdd7f23f453f03c63fdb0086bed40a7b1
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
-ms.translationtype: HT
+ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375032"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467418"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
 
@@ -40,7 +40,7 @@ Tento článek ukazuje nastavení ochrany koncových bodů, která můžete nako
 - **Uživatel může přepsat server gatekeeper**  
   Zabrání uživatelům přepsat nastavení serveru gatekeeper a zabránit uživatelům v řízení kliknutí na instalaci aplikace. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.  
  
-  - Nenakonfigurováno – uživatelé můžou instalovat aplikace kliknutím na tlačítko.  
+  - **Nenakonfigurováno** – uživatelé můžou instalovat aplikace kliknutím na tlačítko.  
   - **Blok** – zabraňuje uživatelům v použití řízení – kliknutím instalovat aplikace.  
 
   **Výchozí**: Není nakonfigurováno  
@@ -92,35 +92,24 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
   - **Typ obnovovacího klíče**  
     Pro zařízení se vytvoří klíče pro obnovení *osobních klíčů* . Pro osobní klíč nakonfigurujte následující nastavení.  
 
-    - **Umístění klíče pro osobní obnovení** – zadejte krátkou zprávu pro uživatele, která vysvětluje, jak mohou načíst svůj osobní obnovovací klíč. Tento text je vložen do zprávy, kterou uživatel uvidí při povolování trezoru.  
+    - **Umístění klíče pro osobní obnovení** – zadejte krátkou zprávu pro uživatele, která vysvětluje, jak a kde mohou načíst svůj osobní obnovovací klíč. Tento text se vloží do zprávy, kterou uživatel uvidí na přihlašovací obrazovce, když se zobrazí výzva k zadání osobního obnovovacího klíče, pokud je zapomenuté heslo.  
       
     - **Střídání osobních obnovovacích klíčů** – určete, jak často se má otočit osobní obnovovací klíč pro zařízení. Můžete vybrat výchozí nastavení **není nakonfigurováno**nebo hodnota **1** až **12** měsíců.  
 
-  - **Odložit trezor úložiště, dokud neproběhne odhlášení**  
-    > [!NOTE]
-    > Podpora trezoru úložišť je omezená až do chvíle, kdy se vydaná verze z července dokončí za několik dní. Pokud nakonfigurujete trezor úložiště, je třeba nastavit odložené *úložiště. až* do chvíle, kdy se zavedete k **Povolení**.   
-
-    Trezor úložišť nebude povolený, dokud se uživatel odhlásí. Uživateli místního uživatele nebo mobilního účtu se zobrazí výzva k povolení trezoru úložišť při odhlášení nebo při příštím přihlášení.  
+  - **Zakázat výzvu při odhlášení**  
+    Zabrání uživateli zobrazit výzvu, aby povolila trezor úložiště při odhlášení.  Pokud je nastavené na zakázáno, výzva při odhlášení je zakázaná a místo toho se uživateli zobrazí výzva, když se přihlásí.  
     - **Není nakonfigurováno**  
-    - **Aby**  
+    - **Dezaktivovat**  
+
     **Výchozí**: Není nakonfigurováno  
 
+  - **Počet povolených pokusů o obejití**  
+  Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit.  
 
-
-    - **Zakázat výzvu při odhlášení**  
-      Zabrání uživateli zobrazit výzvu, aby povolila trezor úložiště při odhlášení.  
-      - **Není nakonfigurováno**  
-      - **Aby**  
-
-      **Výchozí**: Není nakonfigurováno  
-
-    - **Počet povolených pokusů o obejití**  
-    Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit.  
-
-      - **Není nakonfigurováno** – před povolením dalšího přihlášení je vyžadováno šifrování zařízení.  
-      -  **1** až **10** – povolí uživateli ignorovat výzvu od 1 do 10 před tím, než se v zařízení vyžaduje šifrování.  
-      - **Bez omezení, vždy** se zobrazí výzva – uživatel bude vyzván k povolení trezoru úložišť, ale šifrování není nikdy vyžadováno.  
+    - **Není nakonfigurováno** – před povolením dalšího přihlášení je vyžadováno šifrování zařízení.  
+    - **1** až **10** – povolí uživateli ignorovat výzvu od 1 do 10 před tím, než se v zařízení vyžaduje šifrování.  
+    - **Bez omezení, vždy** se zobrazí výzva – uživatel bude vyzván k povolení trezoru úložišť, ale šifrování není nikdy vyžadováno.  
  
-      **Výchozí**: Není nakonfigurováno  
+    **Výchozí**: Není nakonfigurováno  
 
 
