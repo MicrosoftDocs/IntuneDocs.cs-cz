@@ -1,6 +1,6 @@
 ---
 title: Integrace řešení pro řízení přístupu k síti (NAC) do Microsoft Intune – Azure | Microsoft Docs
-description: Řešení pro řízení přístupu k síti (NAC) kontrolují u zařízení s Intune stav registrace a dodržování předpisů. NAC zahrnují určitá chování a pracují s podmíněným přístupem. Prohlédněte si postup, který vám pomůže začít je využívat, a seznam partnerských řešení.
+description: Řešení pro řízení přístupu k síti (NAC) kontrolují u zařízení s Intune stav registrace a dodržování předpisů. NAC zahrnuje určitá chování a pracuje s podmíněným přístupem. Prohlédněte si postup, který vám pomůže začít je využívat, a seznam partnerských řešení.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d0f155a9a4900ed10b2030af3c80c13def0bb82e
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572185"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660908"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -43,13 +43,13 @@ Pokud mají zařízení zablokovaný přístup k prostředkům, musí blokační
 
 ## <a name="nac-and-conditional-access"></a>NAC a podmíněný přístup
 
-NAC pracuje s podmíněným přístupem při rozhodování o řízení přístupu. Další informace najdete v tématu [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
+NAC pracuje s podmíněným přístupem k poskytování rozhodnutí řízení přístupu. Další informace najdete v tématu [běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md).
 
 ## <a name="how-the-nac-integration-works"></a>Jak funguje integrace NAC
 
 Následující seznam obsahuje přehled fungování řešení pro řízení přístupu k síti (NAC) při integraci do Intune. První tři kroky (1–3) vysvětlují proces připojování. Kroky 4–9 popisují další provoz řešení NAC po jeho integraci do Intune.
 
-![Koncepčního obrázku toho, jak funguje NAC s Intune](./media/ca-intune-common-ways-2.png)
+![Koncepční obrázek toho, jak NAC funguje s Intune](./media/ca-intune-common-ways-2.png)
 
 1. Partnerské řešení NAC zaregistrujte v Azure Active Directory (AAD) a přidělte rozhraní API řešení NAC integrovanému do Intune delegovaná oprávnění.
 2. U partnerského řešení NAC nakonfigurujte příslušná nastavení, včetně adresy URL Intune pro zjišťování.
@@ -61,40 +61,40 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 8. Jakmile je zařízení zaregistrované a odpovídá předpisům, dostane partnerské řešení NAC z Intune informaci o stavu.
 9. Připojení se úspěšně naváže, aby zařízení mělo přístup k firemním prostředkům.
 
-## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Pomocí NAC pro síť VPN na zařízeních s Iosem  
+## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Použití NAC pro VPN na zařízeních s iOS  
 
-- NAC je k dispozici v následujících virtuálních privátních sítí bez povolení NAC v profilu sítě VPN:
+- NAC je k dispozici na následujících sítích VPN bez povolení NAC v profilu sítě VPN:
 
   - NAC pro Cisco Legacy AnyConnect
-  - F5 Starší verze přístup
+  - Přístup k starší verzi F5
   - Citrix VPN
 
-- NAC je také k dispozici pro Citrix jednotné přihlašování a přístupu F5. Pokud chcete povolit NAC pro Citrix jednotné přihlašování:
+- NAC je k dispozici také pro přístup k Citrix SSO a F5. Povolení NAC pro Citrix SSO:
 
-  - Použití brány Citrix 12.0.59 nebo vyšší.  
-  - Uživatelé musí mít Citrix SSO 1.1.6 nebo novější.
-  - [Integrace NetScaler s Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) jak je popsáno v dokumentaci k produktu Citrix.
-  - V profilu sítě VPN vyberte **základní nastavení** > **povolit síť přístup ovládacího prvku (NAC)** > vyberte **souhlasím**.
+  - Použijte Citrix Gateway 12.0.59 nebo vyšší.  
+  - Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
+  - [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
+  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
 
-  Připojení k síti VPN se odpojí z bezpečnostních důvodů každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
+  Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
-- Pokud chcete povolit NAC F5 přístup:
+- Povolení přístupu k NAC pro F5:
 
-  - Pomocí F5 BIG-IP 13.1.1.5. 14 BIG-IP se nepodporuje.
-  - Integrace BIG-IP pro NAC s Intune. [Přehled: Konfigurací funkce APM pro stav zařízení kontroluje se koncový bod správy systémy](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 průvodce jsou uvedené kroky.
-  - V profilu sítě VPN vyberte **základní nastavení** > **povolit síť přístup ovládacího prvku (NAC)** > vyberte **souhlasím**.
+  - Použijte F5 BIG-IP 13.1.1.5. BIG-IP 14 se nepodporuje.
+  - Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) koncových bodů v systému F5 uvádí postup.
+  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
 
-  Připojení k síti VPN se odpojí z bezpečnostních důvodů každých 24 hodin. Můžete třeba okamžitě znovu síť VPN.
+  Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
-- Řízení přístupu k síti se nepodporuje pro následující klienta VPN v iOS:
+- Řízení přístupu k síti není podporované pro následujícího klienta VPN v iOS:
   - Cisco AnyConnect
 
-Pracujeme s našimi partnery uvolnit řešení NAC pro těchto novějších klientů. Při řešení je připravené, tento článek bude aktualizován společně s dalšími informacemi.
+Spolupracujeme s našimi partnery pro vydání řešení NAC pro tyto novější klienty. Až budou řešení připravena, Tento článek se aktualizuje o další informace.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Integrace řešení Cisco ISE do Intune](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
-- [Integrace řešení Citrix NetScaler do Intune](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
-- [Integrace správce zásad přístupu F5 BIG-IP do Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
+- [Integrace řešení Cisco ISE do Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
+- [Integrace řešení Citrix NetScaler do Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Integrace nástroje F5 BIG-IP Access Policy Manager s Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrace řešení HP Aruba ClearPass do Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
-- [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)
+- [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

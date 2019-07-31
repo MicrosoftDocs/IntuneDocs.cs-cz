@@ -1,7 +1,7 @@
 ---
-title: Data JAMF Pro odesílá do Intune
+title: Data JAMF pro odesílá do Intune.
 titleSuffix: Microsoft Intune
-description: Seznam dat, která odesílá Jamf Pro Microsoft Intune
+description: Projděte si seznam dat, která Jamf pro odesílá do Microsoft Intune při integraci Jamf pro pro správu počítačů Mac s Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 287ed06ddab0b98117aa4a75942087f360e4656d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 86f2f47322e668815d1ff37ce6c2de1e4d6cdc16
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048554"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670895"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>Data, která Jamf Pro odesílaná do Intune
 
-Při použití [Jamf Pro](https://www.jamf.com) spravovat vaši koncoví uživatelé Mac v Intune, Jamf Pro zaznamená informace o inventáři o spravovaných zařízeních macOS. Jamf Pro dodá do Intune následující informace:
+Pokud ke správě počítačů Mac koncových uživatelů s Intune používáte [Jamf pro](https://www.jamf.com) , zachytí Jamf pro informace o inventáři spravovaných zařízení MacOS. Jamf Pro dodá do Intune následující informace:
 
 * ID zařízení v Azure AD
 * Stav inventáře JAMF (stav inventáře počítače připojeného k Jamf Pro během posledních 24 hodin)
@@ -58,14 +58,14 @@ Při použití [Jamf Pro](https://www.jamf.com) spravovat vaši koncoví uživat
 * Rychlost síťové karty
 * Počet jader
 * Počet procesorů
-* Operační systém
+* OS
 * Platforma
 * Rychlost procesoru
 * Typ procesoru
 * Sekundární adresa MAC
 * Sériové číslo
 * Verze řadiče pro správu systému (SMC)
-* Celkové paměti RAM
+* Celková paměť RAM
 * UDID
 * E-mail uživatele
 

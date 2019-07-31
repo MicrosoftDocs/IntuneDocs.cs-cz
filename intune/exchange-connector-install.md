@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a2ebf91efb35ecd46607baffc47abbe73c5fc5c
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467484"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660949"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavení místního Exchange Connectoru Intune v Microsoft Intune
 Informace v tomto článku vám pomůžou nainstalovat a potom monitorovat konektor Exchange Active Sync On-Premises Connector pro Intune.  Pomocí místního Exchange Connectoru v Intune se [zásadami podmíněného přístupu povolíte nebo zablokujete přístup k místním poštovním schránkám Exchange](conditional-access-exchange-create.md). 
@@ -75,7 +75,7 @@ Vytvořte uživatelský účet služby Active Directory, který bude používat 
 
 1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete web [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
 
-2. Přejít na  > přístup k Intune**Exchange**  
+2. Přejít na > přístup k Intune**Exchange**  
 
 3. V části **Nastavení**zvolte **Exchange ActiveSync On-Premises Connector**a pak vyberte **Přidat**.
 
@@ -121,7 +121,7 @@ Při instalaci místního Exchange Connectoru pro Intune použijte tento postup.
 
 5. Zadejte přihlašovací údaje potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel oznámení potřebuje poštovní schránku Exchange k odesílání oznámení e-mailem. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.  
 
-       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Zkontrolujte, že je na serveru Exchange pro klientský přístup nainstalovaná služba Automatická konfigurace a Webové služby systému Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
 
 6. Do pole **Heslo** zadejte heslo pro tento účet, aby měla služba Intune přístup k systému Exchange Server.
 
@@ -209,5 +209,5 @@ Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konek
    2. Vyberte **přístup pro místní Exchange**.
    3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **Rychlá synchronizace** nebo **Úplná synchronizace**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

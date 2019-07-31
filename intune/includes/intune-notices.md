@@ -7,14 +7,35 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: eec9a275a87b3e1bcfc42e197d95b4a4b315d018
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 4423e731bc1538cd2454de32f0d50f2d08eedc69
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68591062"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670928"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune. 
+
+
+### <a name="decreasing-support-for-android-device-administrator"></a>Snížení podpory pro správce zařízení s Androidem 
+Správce zařízení s Androidem (někdy označovaný jako "starší verze" správy Androidu a vydaný s Androidem 2,2) je způsob, jak spravovat zařízení s Androidem. Vylepšené funkce správy jsou teď ale k dispozici v [Androidu Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (vydané s androidem 5,0). V úsilí o přechod na moderní, bohatou a bezpečnější správu zařízení bude Google v nových verzích Androidu snížit podporu Správce zařízení.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Vzhledem k těmto změnám od společnosti Google budou mít uživatelé Intune tyto možnosti: 
+- Intune bude moct poskytovat podporu jenom pro zařízení s Androidem spravovaná pomocí Správce zařízení s Androidem 10 nebo novějším (označovanou taky jako Android Q) až do letního 2020. Toto datum se očekává, že se má vydávat další hlavní verze Androidu.  
+- Zařízení spravovaná správcem zařízení se systémem Android 10 nebo novějším po léto 2020 již nebudou moci být zcela spravována.    
+- Zařízení s Androidem spravovaná správcem zařízení, která zůstávají ve verzích Androidu pod Androidem 10, nebudou ovlivněná a můžou se dál spravovat pomocí Správce zařízení.  
+- Pro všechna zařízení s Androidem 10 a novějším společnost Google omezila možnost pro agenty správy zařízení, jako je Portál společnosti k přístupu k informacím o identifikátoru zařízení. To má vliv na následující funkce Intune po aktualizaci zařízení na Android 10 nebo novější: 
+    - Řízení přístupu k síti pro VPN už nebude fungovat.  
+    - Identifikaci zařízení jako vlastněných společností pomocí IMEI nebo sériového čísla nebudou zařízení automaticky označovat jako ve vlastnictví firmy. 
+    - IMEI a sériové číslo se už v Intune nebudou zobrazovat správcům IT. 
+        > [!Note]
+        > To má vliv jenom na zařízení spravovaná správcem zařízení s Androidem 10 a novějším, která neovlivňují zařízení spravovaná jako Android Enterprise. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Aby se zabránilo snížení funkčnosti, které přichází v létě 2020, doporučujeme následující:
+- Nepřidávejte nová zařízení do správy Správce zařízení.
+- Pokud se očekává, že zařízení obdrží aktualizaci pro Android 10, migruje ji ze správy správců zařízení na zásady pro Android Enterprise Management a/nebo ochranu aplikací.
 
 ### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Aktualizace aplikace pro Android Portál společnosti na nejnovější verzi <!--4536963-->
 Intune pravidelně uvolňuje aktualizace aplikace Portál společnosti pro Android. V listopadu 2018 jsme vydali aktualizaci portálu společnosti, která obsahovala back-end přepínač, který vám umožní připravit se na změny Google od stávající platformy oznámení až po Firebase Cloud Messaging (FCM) od společnosti Google. Když Google pustí svou stávající platformu pro oznámení a přesune se do FCM, budou muset koncoví uživatelé aktualizovat aplikaci Portál společnosti aspoň na 2018. listopadu, aby mohli pokračovat v komunikaci s obchodem Google Play.

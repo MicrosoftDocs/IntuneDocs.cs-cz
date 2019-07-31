@@ -1,6 +1,7 @@
 ---
-title: Použití sestav dodržování předpisů pro aktualizace pro aktualizace Windows v Microsoft Intune | Dokumentace Microsoftu
-description: Chcete-li zobrazit data sestavy pro aktualizace Windows můžete nasadit pomocí Intune pomocí OMS informace o kompatibilitě.
+title: Použití sestav Update Compliance pro aktualizace Windows v Microsoft Intune
+titleSuffix: Microsoft Intune
+description: Pomocí OMS Update Compliance můžete zobrazit data sestavy pro aktualizace Windows, které nasazujete v Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -14,18 +15,18 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2b236d01cb5ffcf5a26e71ac0a9b65bb586dcb1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 09f3cafc16d8a08885731aa244a089367c6c0933
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66039669"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660396"
 ---
-# <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů Intune pro aktualizace
-Při použití Intune k nasazení Windows update pro zařízení s Windows 10, zobrazení podrobností o dodržování předpisů pro aktualizace pomocí Intune nebo pomocí bezplatného řešení volána *Update Compliance*, která je součástí sady Microsoft Operations Management Suite (OMS).
+# <a name="intune-compliance-reports-for-updates"></a>Sestavy dodržování předpisů v Intune pro aktualizace
+Když použijete Intune k nasazení služby Windows Update na zařízení s Windows 10, zobrazí se podrobnosti o kompatibilitě aktualizací pomocí Intune nebo bezplatného řešení s názvem *Update Compliance*, které je součástí Microsoft Operations Management Suite (OMS).
 
-## <a name="use-intune"></a>Pomocí Intune
-Chcete-li zkontrolovat sestavu zásad pro aktualizační okruhy Windows 10, které jste nakonfigurovali stav nasazení: 
+## <a name="use-intune"></a>Použití Intune
+Chcete-li zkontrolovat sestavu zásad pro stav nasazení pro aktualizační kanály Windows 10, které jste nakonfigurovali: 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Aktualizace softwaru** > **Přehled**. Uvidíte obecné informace o stavu všech aktualizačních kanálů, které jste přiřadili.
@@ -42,21 +43,21 @@ Chcete-li zkontrolovat sestavu zásad pro aktualizační okruhy Windows 10, kter
       - **Stav zařízení**  
       - **Stav uživatele**  
 
-## <a name="use-update-compliance"></a>Použijte informace o kompatibilitě
-Zavádění aktualizací Windows 10 můžete sledovat pomocí [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor), řešení Windows Analytics. Dodržování předpisů pro aktualizace je dostupná prostřednictvím webu Azure portal a je k dispozici zdarma pro zařízení, která splňují jeho [požadavky](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
+## <a name="use-update-compliance"></a>Použít Update Compliance
+Uvádění Windows 10 Update můžete monitorovat pomocí [Update Compliance](https://technet.microsoft.com/itpro/windows/manage/update-compliance-monitor)a řešení Windows Analytics. Update Compliance k dispozici prostřednictvím Azure Portal a jsou dostupné zdarma pro zařízení, která splňují [požadavky](https://docs.microsoft.com/windows/deployment/update/update-compliance-get-started#update-compliance-prerequisites).  
 
-Při použití tohoto řešení můžete nasadit komerční ID k některému z Intune spravovat zařízení s Windows 10 pro které chcete sestavu dodržování předpisů pro aktualizace.  
+Když použijete toto řešení, nasadíte komerční ID do libovolného zařízení s Windows 10 spravovaných pomocí Intune, pro které chcete ohlásit dodržování předpisů pro aktualizace.  
 
-V konzole Intune použít nastavení OMA-URI vlastní zásady pro konfiguraci komerčního ID. Podrobnosti najdete v článku [Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
+V konzole Intune můžete pomocí nastavení OMA-URI vlastní zásady nakonfigurovat komerční ID. Podrobnosti najdete v článku [Nastavení zásad Intune pro zařízení s Windows 10 v Microsoft Intune](https://docs.microsoft.com/intune-classic/deploy-use/windows-10-policy-settings-in-microsoft-intune).  
 
-Cesta OMA-URI (rozlišuje velikost písmen) pro konfiguraci komerčního ID je: *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*  
+Cesta OMA-URI (s rozlišováním velkých a malých písmen) pro konfiguraci komerčního ID je: *./VENDOR/MSFT/DMCLIENT/Provider/MS DM Server/CommercialID*  
 
 V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeba následující hodnoty:
-- **Název nastavení**: Komerční ID pro analýzu Windows
-- **Popis nastavení**: Konfigurace řešení pro komerční ID pro analýzu Windows
-- **OMA-URI** (rozlišuje velikost písmen): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
+- **Název nastavení**: Komerční ID Windows Analytics
+- **Popis nastavení**: Konfigurace komerčního ID pro řešení Windows Analytics
+- **OMA-URI** (rozlišuje velká a malá písmena): *./VENDOR/MSFT/DMCLIENT/Provider/MS DM Server/CommercialID*
 - **Datový typ**: Řetězec
-- **Hodnota**: \<Identifikátor GUID zobrazený na kartě Telemetrie Windows v pracovním prostoru OMS použít >
+- **Hodnota**: \<Použijte identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS >
  
 > [!NOTE]  
 > Podrobnosti o MS DM Serveru najdete v tématu [Poskytovatel konfiguračních služeb DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).

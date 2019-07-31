@@ -1,7 +1,7 @@
 ---
 title: Nastavení standardních hodnot zabezpečení Intune pro Windows 10
 titleSuffix: Microsoft Intune
-description: Základní nastavení zabezpečení Intune pro správu Windows 10
+description: Projděte si výchozí a dostupná nastavení, která najdete v základní úrovni zabezpečení Windows MDM pro zařízení s Windows 10, která spravujete v Intune.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
-ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.openlocfilehash: 0c307c7baaef77c697b486adb63a2cee089e1007
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491913"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671032"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
 
@@ -89,7 +89,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – automatické přehrávání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) .  
 
 - **Automatické přehrání výchozího chování při automatickém spuštění**  
-  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokud je tato možnost povolená, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.  
+  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokudje tato možnost povolená, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.  
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067133)       
   
   **Výchozí**: Nespouštět  
@@ -1246,7 +1246,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   
 - **Vyžadovat režim schválení správce pro správce**  
   Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:   
-  - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
+  - Nenakonfigurováno – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
   - *Ano* – režim schválení správcem je povolen. Tato zásada musí být povolená a související nastavení zásad řízení uživatelských účtů musí být nastavené tak, aby umožňovala předdefinovaný účet správce a všechny ostatní uživatele, kteří jsou členy skupiny Administrators, ke spuštění v režimu schválení správcem.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067184)  
@@ -1256,7 +1256,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Zabránit anonymnímu výčtu účtů SAM**  
   Toto nastavení zabezpečení určuje, jaká další oprávnění budou udělena anonymním připojením k počítači. Systém Windows umožňuje anonymním uživatelům provádět určité aktivity, jako je například vytváření výčtu názvů doménových účtů a síťových sdílených složek. To je užitečné, například když chce správce udělit přístup uživatelům v důvěryhodné doméně, které neudržují vzájemnou důvěryhodnost. Tato možnost zabezpečení umožňuje umístit do anonymních připojení další omezení následujícím způsobem: 
   - *Ano* – Nepovolit výčet účtů SAM. Tato možnost nahrazuje všechny ověřené uživatele v oprávnění zabezpečení pro prostředky.
-  - *Nenakonfigurováno* – žádná další omezení. Spoléhá se na výchozí oprávnění.  
+  - Nenakonfigurováno – žádná další omezení. Spoléhá se na výchozí oprávnění.  
   
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067318)  
 
@@ -1271,7 +1271,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Použít režim schválení správce**  
   Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti: 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění. 
-  - *Nenakonfigurováno* – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
+  - Nenakonfigurováno – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067186)  
 
@@ -1280,7 +1280,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Povolení přístupu aplikací uživatelského rozhraní k zabezpečeným umístěním**  
   Nastavení této zásady určuje, jestli programy pro usnadnění přístupu k uživatelskému rozhraní (UIAccess nebo UIA) můžou automaticky zakázat zabezpečenou plochu pro výzvy ke zvýšení oprávnění používané standardním uživatelem. 
   - *Ano* – UIA programy, včetně vzdálené pomoci Windows, automaticky zakažte zabezpečenou plochu pro výzvy ke zvýšení oprávnění. Pokud nezakážete řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu, zobrazí se výzvy na ploše interaktivního uživatele místo zabezpečené plochy. 
-  - *Nenakonfigurováno*: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
+  - Nenakonfigurováno: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067185)  
 
@@ -1515,7 +1515,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
 - **Zablokovat provádění neověřených souborů**  
   Zablokuje uživateli spouštění neověřených souborů. 
-  - *Nenakonfigurováno* – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
+  - Nenakonfigurováno – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
   - *Ano* – zaměstnanci nemůžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067228)  
@@ -1776,7 +1776,7 @@ Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPOE]( https://docs.micro
     Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
 
   - Když nastavíte *Ano*, povolíte tuto zásadu a zřídí zařízení Windows Hello pro firmy.  
-  - Pokud je nastavené na *Nenakonfigurováno*, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený. 
+  - Pokud je nastavené na Nenakonfigurováno, standardní hodnoty nebudou mít vliv na nastavení zásad daného zařízení. To znamená, že pokud je Windows Hello pro firmy v zařízení zakázané, zůstane zakázané. Pokud je povolená, zůstane povolený. 
 
   Nemůžete zakázat Windows Hello pro firmy prostřednictvím tohoto směrného plánu. Windows Hello pro firmy můžete zakázat při konfiguraci [registrace systému Windows](windows-hello.md)nebo jako součást profilu konfigurace zařízení pro [ochranu identity](identity-protection-configure.md).  
 
@@ -1809,7 +1809,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   Určuje, jestli má uživatel přístup k pracovnímu prostoru rukopisu. 
   - *Zakázáno* – přístup k pracovnímu prostoru Ink je zakázán. Tato funkce je vypnutá.
   - *Povoleno* – funkce pracovní prostor rukopisu je zapnutá, ale uživatel k ní nemá přístup nad zamykací obrazovkou.
-  - *Nenakonfigurováno* – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
+  - Nenakonfigurováno – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067241)  
 
@@ -1863,7 +1863,7 @@ Následující nastavení:
 - **Podpora šifrování v aplikaci Internet Explorer**  
 
 *[Opraveno]* [**Internet Explorer**](#internet-explorer):
-- **Automaticky vyzvat k stažení souborů** v Internet Exploreru internet Zone > výchozí hodnota je teď zakázaná. Ve verzi Preview byl tento stav nastavený na povoleno.
+- **Automaticky vyzvat k stažení souborů** v Internet Exploreru internet Zone > výchozí hodnota jeteď zakázaná. Ve verzi Preview byl tento stav nastavený na povoleno.
 
 *[Nové]* [**Vzdálená pomoc**](#remote-assistance):  
 - **Vyžádané vzdálené pomoci** 

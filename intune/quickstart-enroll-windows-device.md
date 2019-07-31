@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 07/30/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3c14d55201f88f5090f404ca9a79dd902c8da5e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: efd4e8d013f0205541f6fcc37bb0bb8b5ea75bac
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041329"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670850"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
+# <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý Start Registrace zařízení s Windows 10
 
-V tomto rychlém startu nejprve převezmete roli uživatele Intune a zaregistrujete své zařízení s Windows 10 v Microsoft Intune. Budete pak, vraťte se do Intune a potvrďte zařízení zaregistrované.
+V tomto rychlém startu nejprve převezmete roli uživatele Intune a zaregistrujete své zařízení s Windows 10 v Microsoft Intune. Pak se vrátíte do Intune a ověřte, jestli je zařízení zaregistrované.
 
 Registrace zařízení v Microsoft Intune umožňuje zařízením s Windows 10 získat přístup k zabezpečeným datům vaší organizace, včetně e-mailů, souborů a dalších prostředků. Platí to pro zařízení s desktopovou verzí Windows 10 i zařízení s Windows 10 Mobile. Registrace zařízení pomáhá zabezpečit přístup pro vás i vaši organizaci a udržovat pracovní data odděleně od osobních dat.
 
@@ -71,7 +71,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
     ![Vyberte možnost Nastavit pracovní nebo školní účet.](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Přihlaste se k Intune pomocí svého pracovního nebo školního účtu a vyberte **Další**. Pokud jste postupovali podle [vytvořte uživatele a přiřadit licenci](quickstart-create-user.md) rychlém startu se můžete přihlásit pomocí uživatelského účtu, který jste vytvořili.
+3. Přihlaste se k Intune pomocí svého pracovního nebo školního účtu a vyberte **Další**. Pokud jste postupovali v rychlém startu [vytvořit uživatele a přiřadit licenci](quickstart-create-user.md) , můžete se přihlásit pomocí uživatelského účtu, který jste vytvořili.
 
     > [!NOTE]
     > Pokud nastavujete „.onmicrosoft.com“, bude se jako součást adresy uživatelského účtu používat **.onmicrosoft.com**. 
@@ -91,7 +91,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potvrzení registrace zařízení v Intune
 
 1. Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo správce služby Intune.
-2. Výběrem možnosti **Zařízení** zobrazte zařízení zaregistrovaná v Intune.
+2. Vyberte **zařízení** > **všechna zařízení** a podívejte se na zaregistrovaná zařízení v Intune.
 3. Ověřte, že máte v Intune zaregistrované další zařízení.
 
    ![Snímek obrazovky zařízení zaregistrovaných v Intune](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
@@ -107,4 +107,4 @@ V tomto rychlém startu jste se naučili zaregistrovat zařízení s Windows 10 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Nastavit požadovanou délku hesla pro zařízení s Androidem](quickstart-set-password-length-android.md)
+> [Rychlý Start Nastavení požadované délky hesla pro zařízení s Androidem](quickstart-set-password-length-android.md)
