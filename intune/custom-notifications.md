@@ -1,12 +1,12 @@
 ---
 title: Odesílání vlastních oznámení uživatelům pomocí Microsoft Intune
-titleSuffix: ''
+titleSuffix: Microsoft Intune
 description: Použití Intune k vytváření a odesílání vlastních nabízených oznámení uživatelům zařízení s iOS a Androidem
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1caff820daf2e278c50d154873f569163b264315
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377084"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680101"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
@@ -38,8 +38,9 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 ## <a name="considerations-for-using-custom-notifications"></a>Předpoklady pro používání vlastních oznámení  
 
 **Konfigurace zařízení**:  
-- Aby mohli uživatelé přijímat vlastní oznámení, musí mít zařízení nainstalovanou aplikaci Portál společnosti. Musí mít taky nakonfigurovaná oprávnění, aby mohla aplikace Portál společnosti posílat nabízená oznámení. Portál společnosti vyžádá uživatele, aby povolili oznámení.  
+- Aby mohli uživatelé přijímat vlastní oznámení, musí mít zařízení nainstalovanou aplikaci Portál společnosti. Musí mít taky nakonfigurovaná oprávnění, aby mohla aplikace Portál společnosti posílat nabízená oznámení. Portál společnosti vyzve uživatele, aby povolili oznámení při každém instalaci nebo aktualizaci.  
 - V Androidu je Služby Google Play požadovaná závislost.  
+- Zařízení musí být zaregistrované v MDM.
 
 **Vytváření oznámení**:  
 - Pokud chcete vytvořit zprávu, použijte účet, ke kterému je přiřazená role Intune, která zahrnuje oprávnění **aktualizace** pro **organizaci**. Postup přiřazení oprávnění uživateli najdete v tématu [přiřazení rolí](role-based-access-control.md#role-assignments) .  
@@ -60,7 +61,7 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 
 ## <a name="send-a-custom-notification"></a>Odeslání vlastního oznámení  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a v **zařízení** > **odesílají vlastní oznámení**.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a v **zařízení** > **odesílají vlastní oznámení**.  
 
 2. Na kartě základy zadejte následující příkaz a pokračujte výběrem **Další** .  
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  
@@ -86,5 +87,5 @@ Pokud je v zařízeních se systémem iOS po přijetí oznámení otevřená apl
 
 Oznámení zůstane, dokud ho uživatel nezavře.  
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 [Správa zařízení](device-management.md)

@@ -1,6 +1,6 @@
 ---
 title: Použití standardních hodnot zabezpečení v Microsoft Intune – Azure | Microsoft Docs
-description: Přidáním nebo konfigurací doporučených nastavení zabezpečení systému Windows můžete chránit uživatele a data v zařízeních s Microsoft Intune pro správu mobilních zařízení. Zapnutí nástroje BitLocker, konfigurace rozšířené ochrany před internetovými útoky v programu Microsoft Defender, řízení aplikací Internet Explorer, použití inteligentní obrazovky, nastavení místních zásad zabezpečení, vyžadování hesla, blokování stahování Internetu a další.
+description: Pomocí doporučených nastavení zabezpečení systému Windows můžete chránit uživatele a data v zařízeních s Microsoft Intune pro správu mobilních zařízení. Povolení šifrování, konfigurace rozšířené ochrany před internetovými útoky v programu Microsoft Defender, řízení aplikací Internet Explorer, nastavení místních zásad zabezpečení, vyžadování hesla, blokování stahování na internetu a další.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bbab505d668f0e348b3b4d34fb2c39ac683f340b
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: c378fd3b208396f9d2f83b7bd56f50dbf7a7e3f7
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353592"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68679980"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -67,7 +67,7 @@ Základní profily zabezpečení podporují [změnu verze](#change-the-baseline-
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu. 
 
 - **Základní hodnoty zabezpečení MDM**
-  - [Základní hodnota zabezpečení MDM pro jarní 2019 (19H1)](security-baseline-settings-mdm.md)
+  - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm.md)
   - [Tisk Směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-archive.md)
 
 - **Základní hodnoty ATP v programu Microsoft Defender**  
@@ -92,7 +92,7 @@ Pokud používáte spoluspravovaná zařízení, musíte přepnout zatížení *
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a  > pak vyberte**základní hodnoty zabezpečení** zařízení. zobrazí se seznam dostupných směrných plánů.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a > pak vyberte**základní hodnoty zabezpečení** zařízení. zobrazí se seznam dostupných směrných plánů.
 
 
     ![Vyberte standardní hodnoty zabezpečení, které se mají nakonfigurovat.](./media/security-baselines/available-baselines.png)
@@ -149,7 +149,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 
 ### <a name="to-change-the-instance-for-a-baseline"></a>Změna instance pro směrný plán  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a  > pak vyberte**standardní hodnoty zabezpečení**zařízení zabezpečení a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a > pak vyberte**standardní hodnoty zabezpečení**zařízení zabezpečení a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.  
 
 2. V dalším kroku vyberte **profily**a potom zaškrtněte políčko u profilu, který chcete upravit, a pak vyberte **změnit verzi**.  
 

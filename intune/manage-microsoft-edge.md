@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
-ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
+ms.openlocfilehash: 7636e1914e23e7009a25f45f330fe85af2a03536
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68287221"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701019"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -57,7 +57,7 @@ Pokud Microsoft Edge necílí na zásady Intune, uživatelé ji nemůžou použ�
 Podmíněný přístup Azure AD můžete použít k přesměrování uživatelů na přístup k firemnímu obsahu jenom přes Microsoft Edge. Tím se omezí přístup k webovým aplikacím připojeným k Azure AD na Microsoft Edge s ochranou zásad v mobilním prohlížeči. Tato aplikace blokuje přístup ze všech ostatních nechráněných prohlížečů, jako je Safari nebo Chrome. Můžete použít podmíněný přístup k prostředkům Azure, jako jsou Exchange Online a SharePoint Online, centrum pro správu Microsoft 365 a dokonce i místní weby, které jste provedli na externích uživatelích přes [Azure proxy aplikací služby AD](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started).
 
 Omezení webové aplikace připojené k Azure AD na používání Microsoft Edge v iOS a Androidu:
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V uzlu Intune vyberte **podmíněný přístup** > **Nová zásada**.
 3. V okně vyberte **udělit** v části **řízení přístupu** .
 4. Vyberte **Vyžaduje se klientem schválená aplikace**.
@@ -75,9 +75,6 @@ Omezení webové aplikace připojené k Azure AD na používání Microsoft Edge
     > Pokud chcete omezit to, které nativní (neprohlížečové) aplikace mají přístup k těmto cloudovým aplikacím, můžete také vybrat **Mobilní aplikace a desktopoví klienti**.
 
 9. V části **přiřazení** vyberte **Uživatelé a skupiny**a pak zvolte uživatele nebo skupiny, kterým chcete tuto zásadu přiřadit.
-
-    > [!NOTE]
-    > Aby uživatelé mohli přijímat zásady konfigurace aplikací, musí na ně cílit také zásady ochrany aplikací Intune. Další informace o vytváření zásad Intune App Protection najdete v tématu [Co jsou zásady ochrany aplikací?](app-protection-policy.md).
 
 10. V části **Přiřazení** vyberte **Cloudové aplikace** a zvolte, které aplikace chcete chránit pomocí této zásady.
 
@@ -97,11 +94,9 @@ Jednotné přihlašování vyžaduje, aby zařízení bylo zaregistrované v apl
 
 ## <a name="create-a-protected-browser-app-configuration"></a>Vytvoření konfigurace aplikace chráněného prohlížeče
 
-Aby se konfigurace aplikací projevily, musí se v rámci [zásad ochrany aplikací Intune](app-protection-policy.md)spravovat chráněný prohlížeč uživatele nebo jiná aplikace na zařízení.
-
 Vytvoření konfigurace aplikace pro Microsoft Edge:
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **klientské aplikace** > **zásady** > konfigurace aplikace**Přidat**.
 3. V okně **Přidat zásady konfigurace** zadejte **Název** a volitelný **Popis** nastavení konfigurace aplikace.
 4. Jako typ **Registrace zařízení** zvolte **Spravované aplikace**.
@@ -133,7 +128,7 @@ Intune Managed Browser i Microsoft Edge se dají používat jako prohlížeče c
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.useEdge`    |    Hodnota `true` přesměruje uživatele na stažení a používání Microsoft Edge.<br>Tato hodnota `false` umožní uživatelům používat Intune Managed Browser.    |
 
-Pokud tato hodnota konfigurace aplikace není  nastavená, v následující logice se určí, který prohlížeč se použije k otevření firemních odkazů.
+Pokud tato hodnota konfigurace aplikace není **nastavená** , v následující logice se určí, který prohlížeč se použije k otevření firemních odkazů.
 
 V Androidu:
 - Intune Managed Browser se spustí, pokud má uživatel Intune Managed Browser a Microsoft Edge stažený na svém zařízení. 
@@ -173,7 +168,7 @@ Aby bylo možné povolit proxy aplikace pro Microsoft Edge, cílovému serveru M
 
 |    Klíč    |    Value    |
 |-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true (pravda)    |
+|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
 Další informace o tom, jak používat Microsoft Edge a Azure proxy aplikací služby AD společně pro bezproblémový (a chráněný) přístup k místním webovým aplikacím, najdete [v tématu lepší spolupráce: Intune and Azure Active Directory team up to improve user access](https://cloudblogs.microsoft.com/enterprisemobility/2017/07/06/better-together-intune-and-azure-active-directory-team-up-to-improve-user-access) (Ve dvou se to lépe táhne: Intune a Azure Active Directory společně vylepšují uživatelský přístup). Tento Blogový příspěvek odkazuje na Intune Managed Browser, ale obsah platí i pro Microsoft Edge.
 
@@ -201,7 +196,7 @@ Tady jsou některé podrobnosti:
 
 Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodnota:
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Hodnota této konfigurace je seznam záložek. Každá záložka se skládá z názvu záložky a adresy URL záložky. Název a adresu URL `|` oddělte znakem.      Příklad:<br>`Microsoft Bing|https://www.bing.com`<br>Chcete-li nakonfigurovat více záložek, oddělte každou dvojici dvojitým znakem `||`.<p>Příklad:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
@@ -209,7 +204,7 @@ Ke konfiguraci spravovaných záložek použijte následující pár klíč/hodn
 
 Ve výchozím nastavení se uživatelům zobrazí weby aplikace Mojeapl, které jsou pro ně nakonfigurované ve složce uvnitř záložek Microsoft Edge. Složka je označena názvem vaší organizace.
 
-|    Klíč    |    Value    |
+|    Klíč    |    Hodnota    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Hodnota true** zobrazí MyApp v rámci záložek Microsoft Edge.<p>**Hodnota false** skryje aplikaci MyApp v rámci Microsoft Edge.    |
 
@@ -226,11 +221,11 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 K vytvoření seznamu povolených a blokovaných webů můžete použít různé formáty adresy URL. Tyto povolené vzory jsou podrobně popsány v následující tabulce. Některé poznámky než začnete: 
 - Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
 - V souladu s pravidly v následujícím seznamu\*povolených vzorů můžete použít zástupný znak ().
-- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` není podporován.
+- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` **není podporován.**
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
   - Port 80 pro protokol HTTP
   - Port 443 pro protokol HTTPS
-- Použití zástupných znaků pro číslo portu  není podporováno. Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
+- Použití zástupných znaků pro číslo portu **není podporováno.** Například `http://www.contoso.com:*` a `http://www.contoso.com:*/` podporované nejsou. 
 
     |    URL    |    Podrobnosti    |    Odpovídá    |    Neodpovídá    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
