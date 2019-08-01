@@ -1,7 +1,7 @@
 ---
 title: Zásady dodržování předpisů pro zařízení Jamf
 titleSuffix: Microsoft Intune
-description: Zásady dodržování předpisů Microsoft Intune použijte s Azure Active Directory podmíněný přístup k lepšímu zabezpečení zařízení spravovaná aplikací Jamf.
+description: K usnadnění zabezpečení zařízení spravovaných Jamf Microsoft Intune použijte zásady dodržování předpisů Azure Active Directory podmíněný přístup.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,23 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc4fdaea99a0e8fb247ac6a70b853497927cdc04
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d23e725db965a249522f7f8fa89f8bb27bc24fd8
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045215"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68679995"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
 Platí pro: Intune na portálu Azure Portal
 
-Můžete použít Azure Active Directory a zásad podmíněného přístupu v Microsoft Intune zajistit, aby vaši koncoví uživatelé splňovali požadavky organizace. Tyto zásady můžete použít na počítače Mac, které jsou [spravované pomocí Jamf Pro](conditional-access-integrate-jamf.md). To vyžaduje přístup ke konzolám Intune a Jamf Pro.
+Pomocí Azure Active Directory a zásad podmíněného přístupu Microsoft Intune můžete zajistit, aby vaši koncoví uživatelé dodržovali požadavky organizace. Tyto zásady můžete použít na počítače Mac, které jsou [spravované pomocí Jamf Pro](conditional-access-integrate-jamf.md). To vyžaduje přístup ke konzolám Intune a Jamf Pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Nastavení zásad dodržování předpisů pro zařízení v Intune
 
-1. Otevřete Microsoft Azure a pak přejděte na **Intune** > **Dodržování předpisů zařízením** > **Zásady**. Uživatelé nedodržující předpisy a skupiny můžete vytvořit zásady pro systém macOS včetně výběru série akcí (například odesílání upozornění e-mailů).
-2. Vyhledejte požadované skupiny a pak u nich použijte zásady.
+1. Otevřete Microsoft Azure a pak přejděte na **Intune** > **Dodržování předpisů zařízením** > **Zásady**. Můžete vytvářet zásady pro macOS, včetně výběru řady akcí (například posílání e-mailů s upozorněním) pro uživatele a skupiny, které nedodržují předpisy.
+2. Vyberte zásady > přiřazení. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
+3. Zvolením možnosti vybrané skupiny zobrazíte skupiny zabezpečení služby Azure AD. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít > zvolte Uložit, aby se zásady nasadily uživatelům.
+
+Zásadu jste použili pro uživatele. U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí dodržování předpisů a označí se jako compliantfor nastavení "požadovat, aby zařízení bylo označené jako vyhovující" v Azure Active Directory.
 
 > [!Note]
 > Intune v zájmu dodržování předpisů vyžaduje úplné šifrování disků.
@@ -43,15 +46,15 @@ Můžete použít Azure Active Directory a zásad podmíněného přístupu v Mi
 Aplikaci Portál společnosti pro macOS v Jamf Pro byste měli nasadit jako instalaci na pozadí podle tohoto postupu:
 
 1. V zařízení s macOS stáhněte [aplikaci Portál společnosti pro macOS](https://go.microsoft.com/fwlink/?linkid=862280). Neinstalujte ji. Kopii aplikace potřebujete k nahrání do Jamf Pro.
-2. Spusťte aplikaci Jamf Pro a pak přejděte do části **Správa počítače (Computer management)** > **Balíčky (Packages)**.
+2. Spusťte aplikaci Jamf Pro a pak přejděte do části **Správa počítače (Computer management)**  > **Balíčky (Packages)** .
 3. Pomocí aplikace Portál společnosti pro macOS vytvořte nový balíček a pak klikněte na **Uložit**.
-4. V části **Computers (Počítače)** > **Policies (Zásady)** vyberte možnost **New (Nová)**.
+4. V části **Computers (Počítače)**  > **Policies (Zásady)** vyberte možnost **New (Nová)** .
 5. Nakonfigurujte nastavení zásad pomocí datové části **General** (Obecné). Měli byste nastavit:
    - Trigger: Vyberte **Enrollment Complete** (Registrace dokončena) a **Recurring Check-in** (Opakované vrácení se změnami).
    - Execution Frequency (Četnost spuštění): Vyberte **Once per computer** (Jednou na počítač).
-6. Vyberte datovou část **Packages (Balíčky)** klikněte na **Configure (Konfigurovat)**.
+6. Vyberte datovou část **Packages (Balíčky)** klikněte na **Configure (Konfigurovat)** .
 7. Kliknutím na **Add (Přidat)** vyberte balíček pomocí aplikace Portál společnosti.
-8. Z místní nabídky z **Action (Akce)** zvolte možnost **Install (Nainstalovat)**.
+8. Z místní nabídky z **Action (Akce)** zvolte možnost **Install (Nainstalovat)** .
 9. Nakonfigurujte nastavení balíčku.
 10. Kliknutím na kartu **Obor** určete, na které počítače se má nainstalovat aplikace Portál společnosti. Klikněte na **Uložit**. Zásady spustí vymezená zařízení při příštím výskytu vybrané aktivační události v počítači a při splnění kritérií v datové části **General**.
 
@@ -65,10 +68,10 @@ Koncoví uživatelé musí aplikaci Portál společnosti spustit prostřednictv�
 > [!WARNING]
 > Aby bylo možné zahájit registraci zařízení, musí se aplikace Portál společnosti spustit ze služby Jamf Self Service. <br><br>Když aplikaci Portál společnosti spustíte ručně (například ze složek Aplikace nebo Stažené položky), zařízení se nezaregistruje. Pokud koncový uživatel spustí Portál společnosti ručně, zobrazí se mu upozornění, že účet není připojen (AccountNotOnboarded).
 
-1. V Jamf Pro přejděte na **Počítače (Computers)** > **Zásady (Policies)** a vytvořte novou zásadu pro registraci zařízení.
+1. V Jamf Pro přejděte na **Počítače (Computers)**  > **Zásady (Policies)** a vytvořte novou zásadu pro registraci zařízení.
 2. Nakonfigurujte datovou část **Microsoft Intune Integration** (Integrace Microsoft Intune) včetně frekvence aktivační události a spouštění.
 3. Kliknutím na kartu **Scope (Obor)** nastavte obor zásad na všechna cílová zařízení.
-4. Kliknutím na kartu **Self Service (Samoobslužná služba)** zpřístupněte zásady v samoobslužné službě Jamf. Zahrňte zásadu v kategorii **Device Compliance (Dodržování předpisů zařízením)**. Klikněte na **Uložit**.
+4. Kliknutím na kartu **Self Service (Samoobslužná služba)** zpřístupněte zásady v samoobslužné službě Jamf. Zahrňte zásadu v kategorii **Device Compliance (Dodržování předpisů zařízením)** . Klikněte na **Uložit**.
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Odebrání zařízení spravovaného prostřednictvím Jamf z Intune
 
@@ -76,7 +79,7 @@ Zařízení spravované prostřednictvím Jamf můžete z konzoly Intune odebrat
 
 Získejte informace o [odebírání zařízení spravovaného prostřednictvím Jamf v dokumentaci k Jamf Pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Můžete také pomocí lístku podpory požádat o další pomoc [podporu Jamf](https://www.jamf.com/support/). 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [Začínáme s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)

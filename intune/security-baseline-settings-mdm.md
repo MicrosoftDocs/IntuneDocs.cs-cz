@@ -16,23 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c307c7baaef77c697b486adb63a2cee089e1007
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 5565ce7a355136a749d79b52e4830af91684440a
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671032"
+ms.locfileid: "68680038"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
 
 Zobrazení nastavení základní hodnoty zabezpečení MDM, která jsou Microsoft Intune podporovaná v zařízeních se systémem Windows 10 nebo novějším. Výchozí hodnoty pro nastavení v tomto směrném plánu reprezentují doporučenou konfiguraci pro příslušná zařízení a nemusí odpovídat výchozím hodnotám z jiných standardních hodnot zabezpečení.  
 
-Nejnovější základní verze je základní hodnota **zabezpečení MDM pro jarní 2019 Update (19H1)** .  
+Nejnovější základní verze je základní hodnota **zabezpečení MDM pro květen 2019**  
 
 Informace o tom, co se změnilo v nejnovější verzi tohoto směrného plánu z předchozí verze, najdete v tématu [co se změnilo v nové šabloně](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> V červnu 2019 byla verze Preview MDM Security nahrazena vydáním *směrného plánu zabezpečení MDM pro šablonu 19H1 (standardal 2019 Update* ), která je obecně dostupná (není ve verzi Preview). Profily, které byly vytvořeny před dostupností směrného *plánu zabezpečení mdm 2019 pro 19H1 (19H1)* , se neaktualizují tak, aby odrážely nastavení a hodnoty, které jsou v směrném plánu zabezpečení MDM pro verzi jarní 2019 Update ().  I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.   
+> V červnu 2019 se základní verze Preview ochrany MDM nahradila vydáním *směrného plánu zabezpečení MDM pro šablonu květen 2019* , která je obecně dostupná (není ve verzi Preview). Profily, které byly vytvořeny před dostupností směrného *plánu zabezpečení MDM pro květen 2019* , se nebudou aktualizovat tak, aby odrážely nastavení a hodnoty, které jsou v směrném plánu zabezpečení MDM pro verzi květen 2019.  I když nemůžete vytvořit nové profily založené na šabloně Preview, můžete upravit a pokračovat v používání profilů, které jste vytvořili dříve, a to na základě šablony ve verzi Preview.   
   
 Další informace o používání standardních hodnot zabezpečení s Intune najdete v tématu [použití standardních hodnot zabezpečení](security-baselines.md).  
 
@@ -1825,7 +1825,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   **Výchozí**: Enabled
 
 ## <a name="whats-changed-in-the-new-template"></a>Co se změnilo v nové šabloně
-*Směrný plán zabezpečení MDM pro šablonu 19H1 (The jaře 2019 Update)* obsahuje následující změny v šabloně *Preview* .
+Šablona *základní hodnoty zabezpečení MDM pro šablonu květen 2019* obsahuje následující změny v šabloně *Preview* .
 
 ### <a name="changes-to-the-baseline-settings"></a>Změny nastavení standardních hodnot
 Následující nastavení:

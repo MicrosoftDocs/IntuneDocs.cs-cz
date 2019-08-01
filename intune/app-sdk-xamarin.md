@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: a8d1ad3648348783306fb0bc1e61defc4197a9d9
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794372"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680046"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -114,6 +114,9 @@ Chcete-li vyloučit třídu z mam sjednocení přemapováním, lze do souboru pr
   </PropertyGroup>
 ```
 
+> [!NOTE]
+> V tuto chvíli problém s opětovným zamapováním brání ladění v aplikacích Xamarin. Android. Ruční integrace je doporučena pro ladění aplikace, dokud tento problém nebude vyřešen.
+
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Přejmenované metody](app-sdk-android.md#renamed-methods)
 V mnoha případech je metoda dostupná ve třídě Androidu označená v náhradní třídě MAM jako finální. Náhradní třída MAM pak poskytuje metodu s podobným názvem (s příponou `MAM`), kterou byste měli přepsat místo toho. Třeba při odvozování od třídy `MAMActivity` musí `Activity` místo přepsání `OnCreate()` a volání `base.OnCreate()` přepsat `OnMAMCreate()` a volat `base.OnMAMCreate()`.
 
@@ -177,7 +180,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 Pro `Xamarin.Forms` `Xamarin.Forms` aplikace balíček provádí nahrazení třídy mam automaticky vložením tříddohierarchietřídběžněpoužívanýchtříd.`MAM` `Microsoft.Intune.MAM.Remapper` 
 
 > [!NOTE]
-> Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android.
+> Integraci Xamarin. Forms je třeba provést společně s výše podrobnější integrací Xamarin. Android. Remapovače se chová jinak pro aplikace Xamarin. Forms, takže ruční MAM nahrazení bude stále potřeba provést.
 
 Po přidání remapovače do projektu budete muset provést přemístění ekvivalenty MAM. Například `FormsAppCompatActivity` a `OnMAMResume` `OnCreate` `OnMAMCreate` `OnResume` lze nadále používat ve vaší aplikaci, která poskytuje přepsání k a jsou nahrazena ekvivalenty mam a v uvedeném pořadí. `FormsApplicationActivity`
 
@@ -199,6 +202,9 @@ To je očekáváno, protože když přemapování mění dědění tříd Xamari
 
 > [!NOTE]
 > Remapper znovu zapíše závislost, kterou Visual Studio používá pro automatické dokončování IntelliSense. Proto může být nutné znovu načíst a znovu sestavit projekt při přidání nového mapování pro technologii IntelliSense, aby byly změny správně rozpoznány.
+
+#### <a name="troubleshooting"></a>Řešení potíží
+* Pokud při spuštění aplikace narazíte na prázdnou bílou obrazovku, možná budete muset vynutit, aby se volání navigace spouštěla v hlavním vlákně.
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
 Vazby Xamarin sady Intune SDK spoléhají na přítomnost [portál společnosti](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) aplikace pro Android na zařízení, aby se povolily zásady ochrany aplikací. Portál společnosti načítá zásady ochrany aplikací ze služeb Intune. Při inicializaci načte aplikace z Portálu společnosti zásadu a kód, který ji vynucuje. Uživatel nemusí být přihlášený.

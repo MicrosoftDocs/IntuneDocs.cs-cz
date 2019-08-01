@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f576edb5dd0bd4baa960adb3519fa379397fb94c
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: 128856cf4e81f1ac9fbc93cef1160662e2b5cef0
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329023"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68700969"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -35,7 +35,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 ### <a name="data-transfer"></a>Přenos dat
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
-| **Zálohování dat organizace do zálohovacích služeb pro Android** | Vyberte možnost **blokovat** , pokud chcete této aplikaci zabránit v zálohování pracovních nebo školních dat do [zálohovací služby pro Android](https://developer.android.com/google/backup/index.html).<br><br> Výběrem  této možnost povolíte této aplikaci zálohování pracovních nebo školních dat.| **Povoleno** |
+| **Zálohování dat organizace do zálohovacích služeb pro Android** | Vyberte možnost **blokovat** , pokud chcete této aplikaci zabránit v zálohování pracovních nebo školních dat do [zálohovací služby pro Android](https://developer.android.com/google/backup/index.html).<br><br> Výběrem této možnost povolíte této aplikaci zálohování pracovních nebo školních dat.| **Povoleno** |
 | **Posílání organizačních dat do jiných aplikací** | Určete, jaké aplikace můžou přijímat data z této aplikace: <ul><li> **Aplikace spravované podle zásad**: Povoluje přenos jenom do ostatních aplikací spravovaných podle zásad.</li> <li>**Všechny aplikace**: Povolí přenos do libovolné aplikace. </li> <li>**Žádný**: Nepovolujte přenos dat do žádné aplikace, včetně ostatních aplikací spravovaných podle zásad.</li></ul> <p>U některých aplikací a služeb, které mají výjimku, může být v Intune standardně povolený přenos dat. Pokud potřebujete povolit přenos dat do aplikace, která nepodporuje zásady ochrany aplikací Intune, můžete vytvořit vlastní výjimky. Další informace najdete v tématu [výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>Tato zásada může platit také pro odkazy na aplikace pro Android.  Obecné webové odkazy se spravují pomocí **odkazů otevřít aplikace v** nastavení zásad Intune Managed Browser.<p><div class="NOTE"><p>Poznámka</p><p>Intune v současné době nepodporuje funkci rychlých aplikací pro Android. Intune jakékoli datové připojení k aplikaci nebo z aplikace zablokuje. Další informace najdete v tématu [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) v dokumentaci pro vývojáře pro Android.</p><p>Pokud jsou pro **všechny aplikace**nakonfigurované **údaje pro odesílání organizačních dat do jiných aplikací** , můžou se textová data dál přenášet prostřednictvím sdílení operačního systému do schránky.</p></div> | **Všechny aplikace** | 
 |<ul><ui>**Vybrat aplikace, které se mají vyloučit** | Tato možnost je k dispozici, když pro předchozí možnost vyberete možnost *aplikace spravované zásadou* . | |
 | **Příjem dat z jiných aplikací** | Určete, jaké aplikace můžou převádět data do této aplikace: <ul><li>**Aplikace spravované podle zásad**: Povoluje přenos jenom z jiných aplikací spravovaných podle zásad.</li><li>**Všechny aplikace**: Povoluje přenos dat ze všech aplikací.</li><li>**Žádný**: Nepovolujte přenos dat z žádné aplikace, včetně ostatních aplikací spravovaných podle zásad. </li></ul> <p>Z některých aplikací a služeb, které mají výjimku, může Intune povolit přenos dat. Úplný seznam takových aplikací a služeb najdete v části [Výjimky přenosu dat](app-protection-policy-settings-android.md#data-transfer-exemptions). | **Všechny aplikace** |
@@ -93,6 +93,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
   | com.skype.raider | Skype | Aplikace Skype je povolená jenom pro určité akce, jejichž výsledkem je telefonní hovor. |
   | com.android.providers.media | Poskytovatel multimediálního obsahu pro Android | Poskytovatel multimediálního obsahu je povolený jenom pro akci výběru vyzváněcího tónu. |
   | com.google.android.gms, com.google.android.gsf | Balíčky Služeb Google Play | Tyto balíčky jsou povolené pro akce Google Cloud Messaging, například pro nabízená oznámení. |
+  | com. Google. Android. Apps. Maps | Mapy Google | Adresy jsou povoleny pro navigaci. |
 
 Další informace najdete v tématu [Výjimky zásad přenosu dat pro aplikace](app-protection-policies-exception.md).
 

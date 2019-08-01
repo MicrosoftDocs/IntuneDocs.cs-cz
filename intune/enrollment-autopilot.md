@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9ac1830bcc407431cf0a5df8e8c11baa0c27c9c
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 7e0be106b47d933c4407a02369edff3645682b1c
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625108"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68701002"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -99,7 +99,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
     - **Licenční smlouva s koncovým uživatelem (EULA)** : (Windows 10, verze 1709 nebo novější) Vyberte, zda chcete uživatelům zobrazit smlouvu EULA.
     - **Nastavení ochrany osobních údajů**: Vyberte, zda chcete uživatelům zobrazit nastavení ochrany osobních údajů.
     >[!IMPORTANT]
-    >V případě nasazení autopilotu na zařízeních s Windows 10 verze 1903 a novějších je výchozí nastavení diagnostiky automaticky nastaveno na úplné. Další informace najdete v tématu [diagnostická data Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) . <br>
+    >Výchozí hodnota pro nastavení diagnostických dat se liší mezi verzemi systému Windows. U zařízení s Windows 10 verze 1903 je výchozí hodnota nastavená na úplné během nastavování předem připraveného prostředí. Další informace najdete v tématu [diagnostická data Windows](https://docs.microsoft.com/windows/privacy/windows-diagnostic-data) . <br>
     
     - **Skrýt změnu možností účtu (vyžaduje Windows 10 verze 1809 nebo novější)** : Pokud chcete zabránit tomu, aby se možnosti změny účtu zobrazovaly na stránce pro přihlášení a na chybové stránky domény, vyberte **Skrýt** . Tato možnost vyžaduje, [aby v Azure Active Directory byla nakonfigurována funkce Branding společnosti](https://docs.microsoft.com/azure/active-directory/fundamentals/customize-branding).
     - **Typ uživatelského účtu**: Vyberte typ účtu uživatele (**správce** nebo **standardní** uživatel).

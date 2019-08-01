@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 220327c48712881e57efa1a91b9d00a64ba3e0be
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 7871fa6f8655ff02242135d04385984368d52625
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884684"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68680093"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -38,7 +38,7 @@ V případě, že se základní verze již nepodporuje pro použití, bude odebr
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Tisk Směrný plán zabezpečení MDM pro říjen 2018  
 
-*Tato standardní hodnota je nahrazena [základní hodnotou zabezpečení MDM pro jarní 2019 (19H1)](security-baseline-settings-mdm.md) .*
+*Tato standardní hodnota je nahrazena [základní hodnotou zabezpečení MDM pro květen 2019](security-baseline-settings-mdm.md)*
 
 ### <a name="above-lock"></a>Nad zámkem  
 
@@ -1438,7 +1438,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   
   **Výchozí**: Enabled
  
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 [Zobrazit aktuální základní verzi](security-baseline-settings-mdm.md)  
 [Upgrade profilů pro použití nové základní verze](security-baselines.md#change-the-baseline-instance-for-a-profile)
