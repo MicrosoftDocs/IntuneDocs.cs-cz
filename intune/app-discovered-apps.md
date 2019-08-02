@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1827375dc1905b5c881f743777a73340f0215e0c
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387813"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590901"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -30,13 +30,22 @@ Zjištěné **aplikace** v Intune jsou seznam zjištěných aplikací na zaříz
 
 ## <a name="monitor-discovered-apps-with-intune"></a>Monitorování zjištěných aplikací pomocí Intune
 
-Intune poskytuje seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
+Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
 
 1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. V podokně **Intune** vyberte **klientské aplikace** > **zjištěné aplikace**.
 
 >[!NOTE]
 >Seznam zjištěných aplikací můžete exportovat do souboru. csv výběrem možnosti **exportovat** v okně **zjištěné aplikace** .
+>
+>Pro zjištěné aplikace Win32 není aktuálně k dispozici žádný agregovaný počet. Tento typ dat se dá zobrazit jenom na jednotlivých zařízeních.
+
+Intune také nabízí seznam zjištěných aplikací pro jednotlivá zařízení ve vašem tenantovi. 
+
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+2. V podokně Intune vyberte **zařízení** > **všechna zařízení**.
+3. Vyberte zařízení.
+4. Pokud chcete zobrazit zjištěné aplikace pro toto zařízení, vyberte v části **monitorování** **zjištěné aplikace** . 
 
 ## <a name="details-of-discovered-apps"></a>Podrobnosti zjištěných aplikací
 
@@ -59,7 +68,7 @@ Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací a
 - Cílení více instancí téže aplikace v tenantovi povede k různým počtům kvůli možnému překrývání uživatelů nebo zařízení. Každá instance aplikace započítá překrývající se uživatele, ale zjištěné aplikace budou mít duplicitní počty.
 - Zjištěné aplikace a stavy aplikací se shromažďují v různých časových intervalech, což může způsobit nesoulad v počtech aplikací.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Typy aplikací v Microsoft Intune](apps-add.md#app-types-in-microsoft-intune)
 - [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md)

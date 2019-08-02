@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 5/17/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,45 +15,75 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 2bebdf712ccf325c6742e6bb326a8fb2768023b7
-ms.sourcegitcommit: 14f4e97de5699394684939e6f681062b5d4c1671
+ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67251166"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482772"
 ---
-# <a name="add-endpoint-protection-settings-in-intune"></a>Přidání nastavení ochrany koncových bodů v Intune
+# <a name="add-endpoint-protection-settings-in-intune"></a>Přidání nastavení ochrany koncových bodů v Intune  
 
-S Intune můžete použít profily konfigurace zařízení ke správě běžné funkce zabezpečení na zařízeních, včetně koncového bodu ochrany:
-- Brána firewall 
-- BitLocker
-- Povolování a blokování aplikací  
-- Program Windows Defender a šifrování
+Pomocí služby Intune můžete pomocí profilů konfigurace zařízení spravovat běžné funkce zabezpečení služby Endpoint Protection na zařízeních, včetně těchto:  
+- Brána firewall   
+- BitLocker  
+- Povolení a blokování aplikací  
+- Windows Defender a šifrování  
 
-Můžete například vytvořit profil ochrany koncových bodů, který umožní uživatelům macOS instalovat aplikace jenom z Mac App Storu. Nebo můžete při spouštění aplikací na zařízeních s Windows 10 aktivovat filtr Windows SmartScreen.
+Můžete například vytvořit profil ochrany koncových bodů, který umožní uživatelům macOS instalovat aplikace jenom z Mac App Storu. Nebo můžete při spouštění aplikací na zařízeních s Windows 10 aktivovat filtr Windows SmartScreen.  
 
-Než vytvoříte profil, že podrobnosti, které můžete spravovat nastavení ochrany koncového bodu Intune pro každou podporovanou platformu najdete v následujících článcích: 
-   - [Nastavení macOS](endpoint-protection-macos.md)
-   - [Nastavení Windows 10](endpoint-protection-windows-10.md)
-
-## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení ochrany koncových bodů
-
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-4. Zadejte **Název** a **Popis** profilu ochrany koncových bodů.
-5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
-   - **macOS**
-   - **Windows 10 a novější**
-6. V rozevíracím seznamu **Typ profilu** zvolte **Ochrana koncového bodu**. 
-7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Další informace:
-   - [Nastavení macOS](endpoint-protection-macos.md)
+Než vytvoříte profil, přečtěte si následující články, které podrobně popisují nastavení ochrany koncových bodů, které Intune může spravovat pro každou podporovanou platformu:  
+   - [Nastavení macOS](endpoint-protection-macos.md)  
    - [Nastavení Windows 10](endpoint-protection-windows-10.md)  
 
-8. Po konfiguraci příslušných nastavení, vyberte **vytvořit** na **vytvořit profil** stránky.
+## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení ochrany koncových bodů  
 
-   Profil se vytvoří a zobrazí se na stránce se seznamem profilů. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.  
+3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.  
+4. Zadejte **Název** a **Popis** profilu ochrany koncových bodů.  
+5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:  
+   - **macOS**  
+   - **Windows 10 a novější**  
+6. V rozevíracím seznamu **Typ profilu** zvolte **Ochrana koncového bodu**.  
+7. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Další informace:  
+   - [Nastavení macOS](endpoint-protection-macos.md)  
+   - [Nastavení Windows 10](endpoint-protection-windows-10.md)  
+
+8. Až nakonfigurujete příslušná nastavení, vyberte **vytvořit** na stránce **vytvořit profil** .  
+
+   Profil se vytvoří a zobrazí se na stránce se seznamem profilů. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).  
+
+## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Přidání vlastních pravidel brány firewall pro zařízení s Windows 10  
+***Vlastní pravidla brány firewall jsou v Public Preview.***  
+
+Když nakonfigurujete firewall v programu Windows Defender jako součást profilu, který zahrnuje pravidla ochrany koncových bodů pro Windows 10, můžete nakonfigurovat vlastní pravidla pro brány firewall. Vlastní pravidla umožňují rozšíření na předem definovanou sadu pravidel brány firewall, která jsou podporovaná pro Windows 10.  
+
+Při plánování profilů s vlastními pravidly brány firewall Vezměte v úvahu následující informace, které by mohly ovlivnit způsob seskupení pravidel brány firewall ve vašich profilech:  
+- Každý profil podporuje až 150 pravidel brány firewall. Když použijete víc než 150 pravidel, vytvořte další profily, z nichž každá je omezená na pravidla 150.  
+- Pokud se u každého profilu nepovede použít jedno pravidlo, všechna pravidla v tomto profilu se nezdařila a v zařízení se nepoužijí žádná pravidla.  
+- Pokud se pravidlo nepovede použít, všechna pravidla v profilu se nahlásí jako neúspěšná. Intune nemůže zjistit, které individuální pravidlo selhalo.  
+
+Pravidla brány firewall, která může Intune spravovat, jsou podrobně popsaná v části [poskytovatel konfiguračních služeb brány Windows Firewall]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) (CSP). Seznam vlastních nastavení brány firewall pro zařízení s Windows 10, která Intune podporuje, najdete v tématu [vlastní pravidla brány firewall](endpoint-protection-windows-10.md#firewall-rules).  
+
+### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Přidání vlastních pravidel brány firewall do profilu Endpoint Protection  
+
+1. V Intune přejdete do **Konfigurace** > zařízení**profily** > **vytvořit profil**.  
+
+2. V části *platforma*vyberte **Windows 10 a novější**a potom jako *typ profilu* vyberte **Endpoint Protection**.  
+
+3. Výběrem **firewallu v programu Windows Defender** otevřete stránku konfigurace a potom pro *pravidla brány firewall* vyberte **Přidat** a otevřete stránku **vytvořit pravidlo** .  
+
+4. Zadejte nastavení pro pravidlo brány firewall a pak ho uložte kliknutím na **tlačítko OK** . Pokud chcete zkontrolovat dostupné vlastní možnosti pravidla brány firewall v dokumentaci, přečtěte si téma [vlastní pravidla brány firewall](endpoint-protection-windows-10.md#firewall-rules).  
+
+5. Po uložení pravidla se zobrazí na stránce *firewall v programu Windows Defender* v seznamu pravidel.  
+
+6. Chcete-li upravit pravidlo, vyberte pravidlo ze seznamu a otevřete stránku **Upravit pravidlo** .  
+
+7. Pokud chcete pravidlo z profilu odstranit, vyberte pro pravidlo tři tečky **(...)** a pak vyberte **Odstranit**.  
+
+8. Pokud chcete změnit pořadí, v jakém jsou pravidla zobrazená, vyberte v horní části seznamu pravidel ikonu šipky *nahoru a šipka dolů* .  
 
 
 ## <a name="next-steps"></a>Další postup  
 
-Pokud chcete profil přiřadit ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
+Pokud chcete profil přiřadit ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).  

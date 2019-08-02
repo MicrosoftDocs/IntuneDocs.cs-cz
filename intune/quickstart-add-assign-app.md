@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: cd310cea29a3dac7a178d88c0f29d1a4e36ad37d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528312"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482811"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý start: Přidání a přiřazení klientské aplikace
+# <a name="quickstart-add-and-assign-a-client-app"></a>Rychlý Start Přidání a přiřazení klientské aplikace
 
 V tomto rychlém startu použijete Intune k přidání a přiřazení klientské aplikace zaměstnancům vaší firmy. Jednou z priorit správce je zajistit, aby koncoví uživatelé měli přístup k aplikacím, které potřebují ke své práci. 
 
@@ -36,36 +36,35 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Přihlaste se k [Intune](https://aka.ms/intuneportal) jako [globální správce nebo správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
+Přihlaste [](https://aka.ms/intuneportal) se k Intune jako [globální správce nebo správce služby Intune](users-add.md#types-of-administrators). Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
 ## <a name="add-the-client-app-to-intune"></a>Přidání klientské aplikace do Intune
 
 Při zahrnutí aplikace může Intune spravovat aspekty této aplikace. 
 
 Aplikaci přidáte do Intune následujícím postupem:
-
 1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Aplikace** > **Přidat**. 
 2. V oddílu **Sada Office 365** rozevíracího seznamu **Typ aplikace** vyberte **Windows 10**.
 3. Vyberte **Nakonfigurovat sadu aplikací** a vyberte aplikace Office, které se mají přiřadit uživateli Intune.
 4. Kliknutím na **OK** přijměte výchozí vybrané aplikace.
 5. Vyberte **Informace o sadě aplikací**.
 6. Jako **Název sady** zadejte **Sada aplikací Microsoft Office 365**.
-7. Zadejte **sady aplikací Microsoft Office 365** jako **popis sady**.
+7. Jako **Popis sady**zadejte **sadu aplikací systém Microsoft Office 365** .
 8. Klikněte na **Ano** vedle možnosti **Zobrazit na Portálu společnosti jako vybranou aplikaci**.
 9. Klikněte na **OK**.
 
     ![Snímek obrazovky s přidáním informací o aplikaci](media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
 
-8. Vyberte **Nastavení sady aplikací**.
-9. V rozevíracím seznamu **Aktualizační kanál** vyberte **Měsíčně**.
-10. Klikněte na **OK** > **Přidat**.
+10. Vyberte **Nastavení sady aplikací**.
+11. V rozevíracím seznamu **Aktualizační kanál** vyberte **Měsíčně**.
+12. Klikněte na **OK** > **Přidat**.
 
 ## <a name="assign-the-app-to-a-group"></a>Přiřazení aplikace ke skupině
 
 Po přidání aplikace do Microsoft Intune ji můžete přiřadit ke skupinám uživatelů a zařízení.
 
 > [!NOTE]
-> V tomto rychlém startu se navazuje na předchozí rychlé starty v této sérii. Podrobnosti najdete v části [Požadavky](quickstart-add-assign-app.md#prerequisites) tohoto rychlého startu.
+> Tento rychlý Start staví na předchozích rychlých startech v této sérii. Podrobnosti najdete v části [Požadavky](quickstart-add-assign-app.md#prerequisites) tohoto rychlého startu.
 
 Aplikaci přiřadíte ke skupině následujícím postupem:
 1. V [Intune](https://aka.ms/intuneportal) vyberte **Klientské aplikace** > **Aplikace**. 
@@ -91,17 +90,17 @@ Abyste mohli nainstalovat aplikaci **Úkoly Contoso** zpřístupněnou službou 
 4. Klikněte na aplikaci, kterou jste přidali pomocí Intune. V tomto rychlém startu jste přidali aplikaci **Sada aplikací Microsoft Office 365**.
 
     > [!NOTE]
-    > Pokud jste nepřiřadili úspěšně všechny aplikace pro uživatele Intune, zobrazí se následující zpráva: *Váš správce IT neprovedli všechny aplikace dostupné pro vás.*
+    > Pokud jste neúspěšně přiřadili žádné aplikace uživateli Intune, zobrazí se tato zpráva: *Správce IT nezpřístupňuje žádné aplikace.*
 
 5. Klikněte na tlačítko **nainstalovat**.
 
 Pokud potřeby vaší firmy vyžadují, abyste aplikaci Portál společnosti přiřadili zaměstnancům, můžete aplikaci Portál společnosti pro Windows 10 přiřadit ručně přímo z Intune. Další informace najdete v článku [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](store-apps-company-portal-app.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 V tomto rychlém startu jste do Intune přidali aplikace, přiřadili tyto aplikace ke skupině a nainstalovali je na zaregistrované zařízení s desktopovou verzí Windows 10. Další informace o správě aplikací v Intune najdete v článku [Co je správa aplikací v Microsoft Intune?](app-management.md)
 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvořte a přiřaďte zásady ochrany aplikací](quickstart-create-assign-app-policy.md)
+> [Rychlý Start Vytvoření a přiřazení zásad ochrany aplikací](quickstart-create-assign-app-policy.md)
