@@ -1,11 +1,11 @@
 ---
 title: Používání ATP v programu Microsoft Defender v Microsoft Intune – Azure | Microsoft Docs
-description: Podívejte se, jak povolit Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) v uceleném scénáři, včetně zapínání ATP Microsoft Defenderu v Intune a v Microsoft Defenderu Security Center, připojení zařízení pomocí ATP Microsoft Defenderu. konfigurační profil, vytvořte zásady dodržování předpisů zařízením v Intune, vytvořte zásady podmíněného přístupu Azure AD a sledujte dodržování předpisů zařízením.
+description: Použití rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) s Intune, včetně nastavení a konfigurace, připojování zařízení Intune s využitím ATP a pak použití hodnocení rizik ATP zařízení se zásadami dodržování předpisů a podmíněným zařízením Intune přístup k zásadám ochrany síťových prostředků.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,32 +15,39 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: af27a9b07434346a5425d0539759cb90ebf1ee6f
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 8508915f0b4711b2aa65465dd7ac79f575a8d008
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427095"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670968"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
-Rozšířená ochrana před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) a Microsoft Intune vzájemně spolupracuje, aby se zabránilo narušení zabezpečení, a pomohla omezit dopad porušení zabezpečení v rámci organizace.
+Integraci rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) můžete integrovat s Microsoft Intune jako řešením ochrany před mobilními hrozbami, abyste zabránili narušení zabezpečení a omezili dopad narušení v rámci organizace. Ochrana ATP v programu Microsoft Defender funguje na zařízeních se systémem Windows 10 nebo novějším.
 
-Tato funkce platí pro: Zařízení s Windows 10
+Chcete-li být úspěšné, použijte následující konfigurace ve vzájemné součinnosti:
+- **Navažte spojení mezi službou Intune a ATP v programu Microsoft Defender**. Toto připojení umožňuje službě Microsoft Defender ATP shromažďovat data o rizikech počítačů ze zařízení s Windows 10, která spravujete pomocí Intune.  
+- **Pomocí profilu konfigurace zařízení připojte zařízení s ATP Microsoft Defender**. Připojíte zařízení, abyste je mohli nakonfigurovat tak, aby komunikovala s ATP Microsoft Defender a poskytovali data, která vám pomůžou vyhodnotit jejich úroveň rizika.  
+ - **Pomocí zásad dodržování předpisů pro zařízení nastavte úroveň rizika, které chcete udělit**. Úrovně rizika jsou hlášeny v ochraně ATP v programu Microsoft Defender.  Zařízení, která překračují povolenou úroveň rizika, se označují jako nevyhovující.  
+- **Pomocí zásad podmíněného přístupu** můžete uživatelům zablokovat přístup k podnikovým prostředkům ze zařízení, která nedodržují předpisy.  
 
-Příklad: Někdo pošle uživateli ve vaší organizaci wordový soubor s vloženým škodlivým kódem. Uživatel přílohu otevře a povolí obsah. Spustí se útok se zvýšenými oprávněními. Útočník ho provádí ze vzdáleného počítače na napadeném zařízení, ke kterému získal oprávnění správce. Z tohoto zařízení získá vzdálený přístup i k dalším zařízením uživatele.
+Kromě toho při integraci Intune s ATP Microsoft Defenderu můžete využít výhod správy ohrožení zabezpečení ATPs Threat & (TVM) a [pomocí Intune napravit slabiny koncových bodů identifikované pomocí nástroje TVM](atp-manage-vulnerabilities.md).
 
-Toto porušení zabezpečení může mít dopad na celou organizaci.
+## <a name="example-of-using-microsoft-defender-atp-with-intune"></a>Příklad používání služby Microsoft Defender ATP s Intune  
 
-ATP v programu Microsoft Defender může vyřešit události zabezpečení, jako je tento scénář. V programu Microsoft Defender Security Center hlásí zařízení jako "vysoké riziko" a obsahuje podrobnou zprávu o podezřelé aktivitě. V našem příkladu ATP Microsoft Defender detekuje, že zařízení provedlo neobvyklý kód, narazilo na eskalaci s oprávněním procesu, vložil škodlivý kód a vystavilo podezřelé vzdálené prostředí. Ochrana ATP v programu Microsoft Defender vám pak nabídne možnosti, jak tuto hrozbu zmírnit.
+Následující příklad vám pomůže vysvětlit, jak tato řešení společně pomáhají chránit vaši organizaci. V tomto příkladu jsou služby Microsoft Defender ATP a Intune už integrované.  
 
-Pomocí Intune můžete vytvořit zásady dodržování předpisů, které stanoví přijatelnou úroveň rizika. Pokud zařízení tuto úroveň překročí, je označeno jako zařízení nedodržující předpisy. V kombinaci s podmíněným přístupem Azure Active Directory (AD) je uživateli zablokován přístup k podnikovým prostředkům.
+Vezměte v úvahu událost, kdy někdo pošle Wordovou přílohu s vloženým škodlivým kódem uživateli v rámci vaší organizace.  
+- Uživatel přílohu otevře a povolí obsah.  
+- Spustí se útok se zvýšenými oprávněními. Útočník ho provádí ze vzdáleného počítače na napadeném zařízení, ke kterému získal oprávnění správce.  
+- Z tohoto zařízení získá vzdálený přístup i k dalším zařízením uživatele. Toto porušení zabezpečení může mít dopad na celou organizaci.  
 
-V tomto článku se dozvíte, jak:
+Ochrana ATP v programu Microsoft Defender může pomáhat vyřešit události zabezpečení, jako je tento scénář.  
+- V našem příkladu ATP Microsoft Defender detekuje, že zařízení provedlo neobvyklý kód, narazilo na eskalaci s oprávněním procesu, vložil škodlivý kód a vystavilo podezřelé vzdálené prostředí.  
+- Na základě těchto akcí ze zařízení klasifikuje ATP v programu Microsoft Defender [zařízení jako vysoce rizikové](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) a obsahuje podrobnou zprávu o podezřelé aktivitě na portálu Microsoft Defender Security Center.  
 
-- Povolení Intune v programu Microsoft Defender Security Center a povolení ochrany ATP v programu Microsoft Defender v Intune. Tyto úlohy vytvoří propojení mezi službami Intune a Microsoft Defender ATP. Toto připojení umožňuje, aby ochrana ATP v programu Microsoft Defender mohla zapisovat rizika počítače pro vaše zařízení Intune.
-- Vytvořit zásady dodržování předpisů v Intune.
-- Povolte podmíněný přístup v Azure Active Directory (AD) na zařízeních na základě jejich úrovně hrozeb.
+Vzhledem k tomu, že máte zásady dodržování předpisů pro zařízení v Intune ke klasifikaci zařízení se *střední* nebo *vysokou* úrovní rizika jako nevyhovující, je ohrožené zařízení klasifikované jako nevyhovující. Tato klasifikace umožňuje zásadám podmíněného přístupu vykázat a zablokovat přístup z tohoto zařízení k firemním prostředkům.  
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -52,17 +59,10 @@ Pokud chcete používat Microsoft Defender ATP s Intune, ujistěte se, že máte
 
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Povolení ochrany ATP v Microsoft Defenderu v Intune
 
-Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení, Intune vytvoří v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, jako je [Defender ATP](advanced-threat-protection.md) nebo některé z našich dalších [MTDch partnerů](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní.  Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
+Prvním krokem je nastavení propojení mezi službou Intune a ATP v programu Microsoft Defender. To vyžaduje přístup správce k Security Center programu Microsoft Defender i k Intune.  
 
-Klasické zásady podmíněného přístupu pro aplikace MTD: 
+### <a name="to-enable-defender-atp"></a>Povolení ATP programu Defender  
 
-- Používá Intune MTD k tomu, aby vyžadovala, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
-- Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
-- Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.  
-
-Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **klasické zásady** **podmíněného přístupu** > .
-
-### <a name="to-enable-defender-atp"></a>Povolení ATP programu Defender
 1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **zařízení dodržování předpisů** > v**programu Microsoft Defender ATP**a pak pod *nastavením konektoru*vyberte **otevřít Security Center programu Microsoft Defender**.
 
@@ -79,19 +79,28 @@ Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v 
 4. Vraťte se do Intune, **dodržování předpisů** > zařízením v**programu Microsoft Defender ATP**. Nastavte **připojit zařízení s Windows verze 10.0.15063 a novější pro Microsoft Defender ATP** na **on**.
 5. Vyberte **Uložit**.
 
-Tento postup stačí obvykle provést jednou. Takže pokud je v prostředku Intune už povolené prostředí Microsoft Defender ATP, nemusíte to dělat znovu.
+Tento postup stačí obvykle provést jednou. Po povolení ochrany Microsoft Defenderu pro vašeho tenanta Intune to nemusíte dělat znovu.
 
-## <a name="onboard-devices-using-a-configuration-profile"></a>Připojení zařízení pomocí konfiguračního profilu
+> [!TIP]  
+> Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení, Intune vytvoří v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, jako je [Defender ATP](advanced-threat-protection.md) nebo některé z našich dalších [MTDch partnerů](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní.  Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
+> 
+> Klasické zásady podmíněného přístupu pro aplikace MTD: 
+> 
+> - Používá Intune MTD k tomu, aby vyžadovala, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
+> - Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
+> - Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.  
+> 
+> Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **klasické zásady** **podmíněného přístupu** > .
 
-Když se koncový uživatel zaregistruje v Intune, můžete pomocí konfiguračního profilu odesílat do zařízení různá nastavení. To platí i pro ATP v programu Microsoft Defender.
+## <a name="onboard-devices-by-using-a-configuration-profile"></a>Připojení zařízení pomocí konfiguračního profilu
 
-Microsoft Defender ATP zahrnuje konfigurační balíček, který komunikuje se [službami ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , aby kontroloval soubory, zjišťoval hrozby a nahlásila rizika pro ATP v programu Microsoft Defender.
+Po navázání připojení Service-to-Service mezi Intune a ATP Microsoft Defender se spravovaná zařízení Intune zaregistrují do ATP, aby se mohla shromažďovat a používat data o jejich úrovni rizika. K připojení zařízení použijete profil konfigurace zařízení pro Microsoft Defender ATP.  
 
-Po zprovoznění Intune získá automaticky generovaný konfigurační balíček z ochrany ATP v programu Microsoft Defender. Intune po odeslání konfiguračního profilu do zařízení doručí konfigurační balíček do zařízení, což umožňuje službě Microsoft Defender ATP monitorovat hrozby těchto zařízení.
+Po navázání připojení k Microsoft Defender ATP obdržela Intune konfigurační balíček pro připojování ATP společnosti Microsoft Defender z ochrany ATP v programu Microsoft Defender. Tento balíček se nasadí do zařízení s profilem konfigurace zařízení. Konfigurační balíček konfiguruje zařízení ke komunikaci se [službami ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) , aby kontrolovala soubory, zjišťoval hrozby a nahlásila rizika pro ATP v programu Microsoft Defender.  
 
-Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už to příště dělat nemusíte. Zařízení můžete připojit také pomocí [skupiny zásad nebo System Center Configuration Manageru (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
+Po připojení zařízení pomocí konfiguračního balíčku to nemusíte dělat znovu. Zařízení můžete připojit také pomocí [skupiny zásad nebo System Center Configuration Manageru (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
-### <a name="create-the-configuration-profile"></a>Vytvoření konfiguračního profilu
+### <a name="create-the-device-configuration-profile"></a>Vytvoření profilu konfigurace zařízení
 
 1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
@@ -100,10 +109,10 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
 5. Jako **typ profilu**vyberte **ATP Microsoft Defender (Windows 10 Desktop)** .
 6. Nakonfigurujte nastavení:
 
-    - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte  připojit a přidejte konfigurační balíček do profilu. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+   - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte **připojit** a přidejte konfigurační balíček do profilu. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
   
-    > [!NOTE]  
-    > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune se automaticky připojí ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
+     > [!NOTE]  
+     > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune **se automaticky připojí** ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
   
     - **Sdílení vzorků pro všechny soubory**: **Možnost Povolit** umožňuje shromažďovat vzorky a sdílet je s Microsoft Defender atp. Pokud se například zobrazí podezřelý soubor, můžete ho odeslat do ochrany ATP v programu Microsoft Defender pro hloubkovou analýzu. Nenakonfigurováno nesdílí žádné ukázky do ochrany ATP v programu Microsoft Defender.
     - **Urychlení generování sestav telemetrie**: U zařízení, která mají vysoké riziko, toto nastavení **Povolte** , aby se do služby ATP v programu Microsoft Defender nahlásí telemetrie častěji.
@@ -111,33 +120,35 @@ Jakmile jednou připojíte zařízení pomocí konfiguračního balíčku, už t
     Připojení [počítačů s Windows 10 pomocí System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) obsahuje další podrobnosti o těchto nastaveních ATP v programu Microsoft Defender.
 
 7. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte profil.
+8. [Přiřaďte konfigurační profil zařízení](device-profile-assign.md) k zařízením, která chcete vyhodnotit pomocí ATP programu Microsoft Defender.  
 
-## <a name="create-the-compliance-policy"></a>Vytvoření zásady dodržování předpisů
-Zásady dodržování předpisů určují přijatelnou úroveň rizika v zařízení.
+## <a name="create-and-assign-the-compliance-policy"></a>Vytvoření a přiřazení zásad dodržování předpisů  
+
+Zásady dodržování předpisů určují úroveň rizika, kterou považujete za přijatelné pro zařízení.
+
+### <a name="create-the-compliance-policy"></a>Vytvoření zásady dodržování předpisů  
 
 1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V nastavení **ATP v programu Microsoft Defender** nastavte možnost **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňovanou úroveň. Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
+5. V nastavení **ATP v programu Microsoft Defender** nastavte možnost **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňovanou úroveň. 
+   
+   Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 
    - **Vymazat**: Tato úroveň je nejbezpečnější. Zařízení nemůže mít žádné existující hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující. (Hodnota *zabezpečení*pro uživatele ATP v programu Microsoft Defender.)
    - **Nízká úroveň**: Zařízení je kompatibilní, pokud existují jenom hrozby nízké úrovně. Zařízení se středními nebo vysokou úrovní hrozeb nejsou kompatibilní.
    - **Střední**: Zařízení je kompatibilní, pokud jsou hrozby zjištěné v zařízení nízké nebo střední. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
    - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. To znamená, že zařízení s vysokou, střední nebo nízkou úrovní hrozeb se považují za vyhovující.
 
-6. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.
+6. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.  
+7. [Přiřaďte zásady dodržování předpisů zařízením](create-compliance-policy.md#assign-user-groups) k příslušným skupinám.
 
-## <a name="assign-the-policy"></a>Přiřazení zásady
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
-2. Vyberte**zásady** **dodržování předpisů** > pro zařízení > vyberte zásady dodržování předpisů v programu Microsoft Defender atp.
-3. Zvolte **Přiřazení**.
-4. Vyberte, kterým skupinám Azure AD chcete zásadu přiřadit.
-5. Když zvolíte **Uložit**, zásada se nasadí dané skupině. U uživatelských zařízení, na která zásady cílí, se vyhodnotí dodržování předpisů.
 
-## <a name="create-a-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu
-Zásada podmíněného přístupu zablokuje přístup k prostředkům, *Pokud* zařízení nedodržuje předpisy. Pokud tedy zařízení překročí úroveň hrozby, můžete zablokovat přístup k podnikovým prostředkům jako SharePoint nebo Exchange Online.  
+## <a name="create-a-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu  
+
+Zásada podmíněného přístupu blokuje přístup k prostředkům pro zařízení, která přesahují úroveň ohrožení, kterou jste v zásadách dodržování předpisů nastavili. Můžete blokovat přístup ze zařízení k firemním prostředkům, jako je SharePoint nebo Exchange Online.  
 
 > [!TIP]  
 > Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
@@ -158,18 +169,20 @@ Zásada podmíněného přístupu zablokuje přístup k prostředkům, *Pokud* z
 
 6. Zvolte **Povolit zásadu** a potom **Vytvořit**. Tím uložíte provedené změny.
 
-[Co je podmíněný přístup?](conditional-access.md) je dobrým prostředkem.
 
-## <a name="monitor-device-compliance"></a>Monitorování dodržování předpisů zařízením
+
+## <a name="monitor-device-compliance"></a>Monitorování dodržování předpisů zařízením  
+
 Dále Sledujte stav zařízení, která mají zásady dodržování předpisů ATP v programu Microsoft Defender.
 
 1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
 2. Vyberte **Dodržování předpisů zařízením** > **Dodržování zásad**.
 3. Vyhledejte v seznamu Zásady ochrany ATP v programu Microsoft Defender a podívejte se, která zařízení jsou kompatibilní nebo nekompatibilní.
 
-## <a name="more-good-stuff"></a>Další užitečné materiály
-[Podmíněný přístup Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)  
-[Řídicí panel rizik pro ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)  
+## <a name="next-steps"></a>Další postup  
 
+[Podmíněný přístup Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/conditional-access)   
+[Řídicí panel rizik pro ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/security-operations-dashboard)  
+[K nápravě problémů na zařízeních použijte úlohy zabezpečení se správou ohrožení zabezpečení ATPs](atp-manage-vulnerabilities.md).  
 [Začínáme se zásadami dodržování předpisů zařízeními](device-compliance-get-started.md)  
-[Podmíněný přístup ve službě Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+ 
