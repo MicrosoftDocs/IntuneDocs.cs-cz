@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/09/2019
+ms.date: 08/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cd4eeec59437c73500fa382a55ecabcd4b6e7f3
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 11361b65735a7ed7e724a77349e3624e0e35ecaf
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660878"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756565"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Nastavení Optimalizace doručení pro Intune
 
@@ -67,6 +67,15 @@ Pokud chcete nakonfigurovat Intune, aby používala tato nastavení, přečtěte
 | [Maximální stáří mezipaměti (ve dnech)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-age)    | 1511         | Určete, jak dlouho po úspěšném stažení každého souboru se soubor uchovává v mezipaměti Optimalizace doručení na zařízení.   <br><br>V Intune nakonfigurujete stáří mezipaměti ve dnech. Počet dní, které definujete, se převede na příslušný počet sekund, který definuje toto nastavení systémem Windows. Například konfigurace Intune o 3 dny se na zařízení převede na 259200 sekund (3 dny).  <br><br>**Výchozí**:   *Není nakonfigurovaná žádná hodnota.*     <br><br>**Doporučené**: 7   <br><br>CSP zásad: [DOMaxCacheAge](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)  <br><br>          |
 | Maximální velikost mezipaměti – typ  | *Zobrazit podrobnosti*    | Vyberte, jak spravovat množství místa na disku v zařízení, které je používáno optimalizací doručení. Pokud není nakonfigurovaný, výchozí velikost mezipaměti je 20% volného místa dostupného na disku.  <br><ul><li>**Není nakonfigurováno** Výchozí</li><br><li>**Absolutní** – určete [absolutní maximální velikost mezipaměti (v GB)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#absolute-max-cache-size) , abyste nakonfigurovali maximální množství místa na disku, které může zařízení použít pro optimalizaci doručení. Pokud je nastavena hodnota 0 (nula), velikost mezipaměti je neomezená, i když optimalizace doručování vymaže mezipaměť v případě, že zařízení nemá dostatek místa na disku. <br><br>Vyžaduje systém Windows 1607.<br><br> CSP zásad: [DOAbsoluteMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-doabsolutemaxcachesize) </li><br><li>**Procento** – zadejte [maximální velikost mezipaměti (v%)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#max-cache-size) , abyste nakonfigurovali maximální množství místa na disku, které může zařízení použít pro optimalizaci doručení. V procentech je dostupné místo na disku a optimalizace doručování neustále vyhodnocuje dostupné místo na disku a vymaže mezipaměť, aby v rámci nastaveného procenta zůstala maximální velikost mezipaměti. <br><br>Vyžaduje systém Windows 1511.<br><br>CSP zásad: [DOMaxCacheSize](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcachesize)  |
 | [Ukládání partnerských uzlů sítě VPN](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#enable-peer-caching-while-the-device-connects-via-vpn)  | 1709  | Vyberte možnost **povoleno** , pokud chcete nakonfigurovat zařízení pro účast v ukládání do sdílené mezipaměti při připojení VPN k doménové síti. Zařízení, která jsou povolená, můžou stahovat nebo nahrávat do jiných síťových zařízení v doméně, a to buď v síti VPN, nebo v podnikové doménové síti.  <br><br>**Výchozí**: Není nakonfigurováno  <br><br>CSP zásad: [DOAllowVPNPeerCaching](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-domaxcacheage)    |
+
+## <a name="local-server-caching"></a>Ukládání místních serverů do mezipaměti  
+
+|Nastavení  |Verze Windows  |Podrobnosti  |
+|---------|-----------------|---------|
+|Názvy hostitelů serveru mezipaměti | 1809  |Zadejte IP adresu nebo plně kvalifikovaný název domény serverů síťové mezipaměti, které budou vaše zařízení používat k optimalizaci doručení, a pak vyberte **Přidat** a přidejte tuto položku do seznamu.  <br><br>**Výchozí**: Není nakonfigurováno  <br><br>CSP zásad: [DOCacheHost](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost)  |
+|[Odložit zálohu serveru mezipaměti pro stažení (v sekundách)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-foreground-download-cache-server-fallback-in-secs) | 1903    |Zadejte čas v sekundách (0-2592000), který bude odložit zálohu ze serveru mezipaměti do zdroje HTTP pro stažení obsahu na popředí. Když zásada odloží stahování na popředí z http, použije se nejdřív (aby bylo možné nejprve stáhnout z partnerských uzlů). (0-2592000)    <br><br>**Výchozí**: 0  <br><br>Zásady CSP [DODelayCacheServerFallbackForeground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackforeground)  |
+|[Odložit zálohu serveru mezipaměti pro stažení na pozadí (v sekundách)](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#delay-background-download-cache-server-fallback-in-secs) | 1903    |Zadejte čas v sekundách (0-2592000), který bude odložit zálohu ze serveru mezipaměti do zdroje HTTP pro stažení obsahu pozadí. V případě, že je *Zpožděné stažení na pozadí (v sekundách)* , bude toto nastavení platit jako první, aby se povolilo stahování z partnerských uzlů. (0-2592000)   <br><br>**Výchozí**: 0 <br><br>CSP zásad: [DODelayCacheServerFallbackBackground](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dodelaycacheserverfallbackbackground)  |
+
 
 ## <a name="next-steps"></a>Další postup
 

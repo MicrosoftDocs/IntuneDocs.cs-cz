@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 794a0b7e999c8f42d075da982c7246081ce9ed7d
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548420"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756392"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
 
@@ -93,16 +93,16 @@ Tady je aktualizovaný příklad plánu nasazení Intune, který zahrnuje různ�
 
 | **Zaváděcí fáze** | **Červenec** | **Srpen** | **Září** | **Říjen** |
 |:---:|:---:|:---:|:---:|:---:|
-| Omezené pilotní nasazení |  |  |  |  |                                                         
+| Omezené pilotní nasazení |  |  |  |  |
 | Samoobslužný provoz | IT |  |  |  |
-| Rozšířené pilotní nasazení |  |  |  |  |                                                         
+| Rozšířené pilotní nasazení |  |  |  |  |
 | Samoobslužný provoz | IT |  |  |  |
 | Šetrný způsob | Vedení IT |  |  |  |
 | 1\. fáze nasazení v ostrém provozu |  | Prodej, marketing |  |  |
 | Samoobslužný provoz |  | Prodej a marketing |  |  |
 | 2\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
-| Samoobslužný provoz |  |  |  |  |
-| 3\. fáze nasazení v ostrém provozu |  |  | Maloobchod |  |
+| Samoobslužný provoz |  |  | Maloobchod |  |
+| 3\. fáze nasazení v ostrém provozu |  |  |  | Vedoucí pracovníci, personální oddělení, finance |
 | Samoobslužný provoz |  |  |  | Personalistika, finance |
 | Šetrný způsob |  |  |  | Členové vedení |
 
