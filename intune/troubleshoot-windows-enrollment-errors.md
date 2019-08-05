@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d76b9581cac6e9d74e83ce50400e14468a13d3e6
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: e3c4b1541de3500089bafc388779a3cfe97fbd29
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68664177"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756570"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -225,7 +225,7 @@ Pokud chcete tento problém vyřešit v hybridním MDM s Intune a Configuration 
 2. Přejít na **Azure Active Directory > zařízení > nastavení zařízení**.    
 3. Nastavení uživatelé můžou ke **všem** nebo vybraným uživatelům připojovat ****  **zařízení do Azure AD** .
 
-   Pokud zvolíte **vybrané** **, klikněte na**vybrat a potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
+   Pokud zvolíte **vybrané**, klikněte na **** vybrat a potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
  
 Další informace o tom, jak vytvořit zřizovací balíček pro Windows Configuration Designer, najdete v tématu [Vytvoření zřizovacího balíčku pro Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
 
@@ -268,6 +268,119 @@ Pokud je  **obor uživatele MDM**nastavený na **None (žádné**), postupujt
 3. Nastavte **obor uživatele MDM** na **vše**. Nebo nastavte **obor uživatele MDM** na **nějaké**a vyberte skupiny, které můžou automaticky registrovat svoje zařízení s Windows 10.    
 4. Nastavte **obor uživatele mam** na **žádný**.
 
+
+### <a name="an-error-occurred-while-creating-autopilot-profile"></a>Při vytváření profilu autopilotu došlo k chybě.
+
+**Způsobit** Zadaný formát pojmenování v šabloně názvu zařízení nesplňuje požadavky. Například použijete malé písmeno pro sériové makro, jako je například% sériové% místo% SÉRIOVÉho%.
+
+#### <a name="resolution"></a>Řešení
+
+Ujistěte se, že formát názvů splňuje následující požadavky:
+
+- Vytvořte jedinečný název pro vaše zařízení. Název musí mít maximálně 15 znaků a může obsahovat písmena (a-z, A – Z), číslice (0-9) a spojovníky (k).
+- Nemohou být ale tvořené jen číslicemi.
+- Názvy nesmí obsahovat prázdné znaky.
+- K přidání sériového čísla specifického pro hardware použijte makro% SERIAL%. Nebo použijte makro% RAND: < # číslice >% pro přidání náhodného řetězce čísel, řetězec obsahuje < # číslice > číslic. Například MYPC-% RAND: 6% generuje název, jako je například MYPC-123456.
+
+### <a name="something-went-wrong-oobeidps"></a>Něco se pokazilo. OOBEIDPS.
+
+**Způsobit** K tomuto problému dochází, pokud máte proxy, bránu firewall nebo jiné síťové zařízení blokující přístup k poskytovateli identity (IdP).
+
+#### <a name="resolution"></a>Řešení
+Ujistěte se, že požadovaný přístup k internetovým službám pro autopilota není blokovaný. Další informace najdete v tématu [požadavky na síť Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements-network).
+
+
+### <a name="registering-your-device-for-mobile-management-failed3-0x801c03ea"></a>Registrace zařízení pro správu mobilních zařízení (Chyba: 3, 0x801C03EA).
+
+**Způsobit** Zařízení má čip TPM, který podporuje verzi 2,0, ale ještě nebyla upgradována na verzi 2,0.
+
+#### <a name="resolution"></a>Řešení
+Upgradujte čip TPM na verzi 2,0.
+
+Pokud se problém opakuje, ověřte, jestli je stejné zařízení ve dvou přiřazených skupinách, přičemž každé skupině se přiřadí jiný profil pro autopilot. Pokud se nachází ve dvou skupinách, určete, který profil pro autopilot by se měl na zařízení použít, a pak odeberte přiřazení druhého profilu.
+
+Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+
+
+### <a name="securing-your-hardware-failed-0x800705b4"></a>Zabezpečení hardwaru (neúspěšné: 0x800705b4).
+
+Chyba 800705b4: 
+```
+Securing your hardware (Failed: 0x800705b4)
+Joining your organization's network (Previous step failed)
+Registering your device for mobile management (Previous step failed)
+```
+
+**Způsobit** Cílové zařízení s Windows nesplňuje některé z následujících požadavků:
+
+- Zařízení musí mít fyzický čip TPM 2,0. Zařízení s Virtual čipy TPM (například virtuální počítače Hyper-V) nebo čipy TPM 1,2 nefungují s režimem automatického nasazení.
+- V zařízení musí běžet jedna z následujících verzí Windows:
+    - Windows 10 Build 1703 nebo novější verze.
+    - Pokud se používá hybridní připojení k Azure AD, Windows 10 Build 1809 nebo novější verze.
+
+
+#### <a name="resolution"></a>Řešení
+Ujistěte se, že cílové zařízení splňuje obě požadavky popsané v části **Příčina** .
+
+Další informace o tom, jak nasadit zařízení s Windows v celoobrazovkovém režimu pomocí funkce autopilot, najdete v tématu [nasazení veřejného terminálu pomocí funkce Windows autopilot](https://blogs.technet.microsoft.com/mniehaus/2018/06/07/deploying-a-kiosk-using-windows-autopilot/).
+
+
+### <a name="something-went-wrong-error-code-80070774"></a>Něco se pokazilo. Kód chyby 80070774.
+
+Chyba 0x80070774: Něco se pokazilo. Potvrďte, že používáte správné přihlašovací údaje a že vaše organizace tuto funkci používá. Můžete to zkusit znovu nebo se obraťte na správce systému a sdělte mu kód chyby 80070774.
+
+K tomuto problému obvykle dochází předtím, než se zařízení restartuje v hybridním scénáři autopilotu služby Azure AD, když vyprší časový limit zařízení během úvodní obrazovky pro přihlášení. Znamená to, že řadič domény se nedá najít nebo se k němu úspěšně nedostal kvůli problémům s připojením. Nebo že zařízení zadalo stav, který se nemůže připojit k doméně.
+
+**Způsobit** Nejběžnější příčinou je, že se používá připojení k hybridní službě Azure AD a v profilu autopilotu je nakonfigurovaná funkce přiřadit uživatele. Při použití funkce přiřadit uživatele se v zařízení během úvodní obrazovky pro přihlášení provede připojení Azure AD, které zařízení umístí do stavu, ve kterém se nemůže připojit k místní doméně. Funkce přiřadit uživatele by proto měla být použita pouze ve standardních scénářích pro automatické pilotní připojení služby Azure AD.  Tato funkce by se měla používat ve scénářích připojení k hybridní službě Azure AD.
+
+#### <a name="resolution"></a>Řešení
+
+1. Přejít na zařízení registrace zařízení se**systémem Windows** > registrace**zařízení** > v Intune. >  
+2. Vyberte zařízení, u kterého dochází k problému > klikněte na tlačítko se třemi tečkami (...) na pravé straně.
+3. Vyberte zrušit **přiřazení uživatele** a počkejte na dokončení procesu.
+4. Před opakovaným pokusem o spuštění instalace ověřte, že je profil Azure AD autopilotu pro hybridní nasazení přiřazen.
+
+#### <a name="second-resolution"></a>Druhé řešení
+Pokud se problém opakuje, na serveru, který je hostitelem offline služby Intune, přejděte na server, na kterém je zaprotokolována událost s ID 30312 v protokolu služby konektoru ODJ. Událost 30312 vypadá takto:
+
+```
+Log Name:      ODJ Connector Service
+Source:        ODJ Connector Service Source
+Event ID:      30132
+Level:         Error
+Description:
+{
+          "Metric":{
+                   "Dimensions":{
+                             "RequestId":"<RequestId>",
+                             "DeviceId":"<DeviceId>",
+                             "DomainName":"contoso.com",
+                             "ErrorCode":"5",
+                             "RetryCount":"1",
+                              "ErrorDescription":"Failed to get the ODJ Blob. The ODJ connector does not have sufficient privileges to complete the operation",
+                              "InstanceId":"<InstanceId>",
+                              "DiagnosticCode":"0x00000800",
+                              "DiagnosticText":"Failed to get the ODJ Blob. The ODJ connector does not have sufficient privileges to complete the operation [Exception Message: \"DiagnosticException: 0x00000800. Failed to get the ODJ Blob. The ODJ connector does not have sufficient privileges to complete the operation\"] [Exception Message: \"Failed to call NetProvisionComputerAccount machineName=<ComputerName>\"]"
+                   },
+                   "Name":"RequestOfflineDomainJoinBlob_Failure",
+                   "Value":0
+          }
+}
+```
+
+K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění k organizační jednotce, kde se vytváří zařízení Windows autopilotu. Další informace najdete v tématu [zvýšení limitu účtu počítače v organizační jednotce](windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit).
+
+1. Otevřete položku **Uživatelé a počítače služby Active Directory (DSA. msc)** .
+2. Klikněte pravým tlačítkem na organizační jednotku, kterou použijete k vytvoření hybridních počítačů připojených k Azure AD > **delegování ovládacího prvku**.
+3. V průvodci **delegováním řízení** vyberte **Další** > **Přidat** > **typy objektů**.
+4. V podokně **typy objektů** zaškrtněte políčko **počítače** > **OK**.
+5. V podokně **Vybrat uživatele**, **počítače**nebo **skupiny** v poli **Zadejte názvy objektů k výběru** zadejte název počítače, ve kterém je konektor nainstalovaný.
+6. Vyberte **Zkontrolovat jména** a ověřte zadání > **OK** > **Next**.
+7. Vyberte **vytvořit vlastní úlohu pro delegování** > **Další**.
+8. Zaškrtněte políčko **pouze následující objekty ve složce** a potom vyberte **objekty počítače**, **vytvořte vybrané objekty v této složce**a zrušte zaškrtnutí políček **Odstranit vybrané objekty v této** složce.
+9. Vyberte **Další**.
+10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
+11. Vyberte **Další** > **Dokončit**.
 
 ## <a name="next-steps"></a>Další postup
 
