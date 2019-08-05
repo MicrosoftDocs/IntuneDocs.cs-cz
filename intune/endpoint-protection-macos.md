@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: d4aa0c47f0aa099ff469eb31b212f387836ad69b
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467418"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756513"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
 
@@ -40,7 +40,7 @@ Tento článek ukazuje nastavení ochrany koncových bodů, která můžete nako
 - **Uživatel může přepsat server gatekeeper**  
   Zabrání uživatelům přepsat nastavení serveru gatekeeper a zabránit uživatelům v řízení kliknutí na instalaci aplikace. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.  
  
-  - **Nenakonfigurováno** – uživatelé můžou instalovat aplikace kliknutím na tlačítko.  
+  - Nenakonfigurováno – uživatelé můžou instalovat aplikace kliknutím na tlačítko.  
   - **Blok** – zabraňuje uživatelům v použití řízení – kliknutím instalovat aplikace.  
 
   **Výchozí**: Není nakonfigurováno  
@@ -97,11 +97,18 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
     - **Střídání osobních obnovovacích klíčů** – určete, jak často se má otočit osobní obnovovací klíč pro zařízení. Můžete vybrat výchozí nastavení **není nakonfigurováno**nebo hodnota **1** až **12** měsíců.  
 
   - **Zakázat výzvu při odhlášení**  
-    Zabrání uživateli zobrazit výzvu, aby povolila trezor úložiště při odhlášení.  Pokud je nastavené na zakázáno, výzva při odhlášení je zakázaná a místo toho se uživateli zobrazí výzva, když se přihlásí.  
+    Zabrání uživateli zobrazit výzvu, aby povolila trezor úložiště při odhlášení.  Když je nastavená možnost povolit, výzva při odhlášení je zakázaná a místo toho se uživateli zobrazí výzva, když se přihlásí.  
     - **Není nakonfigurováno**  
-    - **Dezaktivovat**  
+    - **Povolit** – zakáže výzvu při odhlášení.
 
     **Výchozí**: Není nakonfigurováno  
+
+     > [!IMPORTANT]  
+     > K dispozici je známý problém, pokud je nastavení **Zakázat příkazový řádek při odhlášení** nastaveno na *Povolit*. Pokud je nastavena hodnota *Povolit*, nastavení pro **počet povolených pokusů o obejití** musí být nastaveno na hodnotu a nesmí být nastaven jako *není nakonfigurováno*. Pokud je nastavené na Nenakonfigurováno, profil se v zařízení nezdařil. V tomto scénáři zařízení hlásí **souhrn stavu profilu** jako **chybu** bez dalších podrobností.
+     > 
+     > Pokud je možnost **Zakázat výzvu při odhlášení** nastavena na hodnotu *není nakonfigurováno*, **počet povolených potlačení** nemůže být *nakonfigurován* nebo mít hodnotu.  
+     > 
+     > Tento problém bude vyřešen v budoucí aktualizaci. 
 
   - **Počet povolených pokusů o obejití**  
   Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit.  

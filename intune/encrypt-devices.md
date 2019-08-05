@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 08/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 09b5e59f4af534d4919574631568a7581bb3fba9
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467442"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68756544"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune  
 
@@ -68,6 +68,13 @@ Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Int
 
 6. Nakonfigurujte zbývající [Nastavení trezoru úložišť](endpoint-protection-macos.md#filevault) tak, aby splňovalo vaše obchodní potřeby, a pak vyberte **OK**.  
 
+   > [!IMPORTANT]  
+   > K dispozici je známý problém, pokud je nastavení **Zakázat příkazový řádek při odhlášení** nastaveno na *Povolit*. Pokud je nastavena hodnota *Povolit*, nastavení pro **počet povolených pokusů o obejití** musí být nastaveno na hodnotu a nesmí být nastaven jako *není nakonfigurováno*. Pokud je nastavené na Nenakonfigurováno, profil se v zařízení nezdařil. V tomto scénáři zařízení hlásí **souhrn stavu profilu** jako **chybu** bez dalších podrobností.
+   > 
+   > Pokud je možnost **Zakázat výzvu při odhlášení** nastavena na hodnotu *není nakonfigurováno*, **počet povolených potlačení** nemůže být *nakonfigurován* nebo mít hodnotu.  
+   > 
+   > Tento problém bude vyřešen v budoucí aktualizaci. 
+
 7. Dokončete konfiguraci dalšího nastavení a potom profil uložte.  
 
 ### <a name="manage-filevault"></a>Správa trezoru úložišť  
@@ -102,7 +109,7 @@ Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](dev
 
 Jakmile Intune zašifruje zařízení s Windows 10 pomocí nástroje BitLocker, můžete zobrazit a načíst klíče pro obnovení nástroje BitLocker při zobrazení [sestavy šifrování](encryption-monitor.md)Intune.  
 
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další postup  
 
 Vytvoření zásady [dodržování předpisů pro zařízení](compliance-policy-create-windows.md)  
 
