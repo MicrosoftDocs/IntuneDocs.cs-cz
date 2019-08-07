@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 969e7bc4804e1f66230c76d742bec2c67c2fa006
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 95eede7c62e728aa0dbade4478eb87f31c252558
+ms.sourcegitcommit: a6775522df49d17a4125ccb31be395f2343bdae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670918"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833547"
 ---
 # <a name="in-development-for-microsoft-intune---august-2019"></a>Ve vývoji pro Microsoft Intune – srpen 2019
 
@@ -73,7 +73,7 @@ Pro dostupná instalace aplikací na zařízeních s pracovním profilem Android
 ## <a name="device-configuration"></a>Konfigurace zařízení
 
 ### <a name="some-unsupervised-ios-device-restrictions-will-become-supervised-only-with-the-ios-130-release----4867809----"></a>Některá z nesledovaných omezení zařízení s iOS se budou pod dohledem – jenom s vydáním iOS 13,0. <!-- 4867809  -->
-Některá nastavení budou platit pro zařízení, která jsou jenom pod dohledem, pomocí verze iOS 13,0. Mezi tato nastavení patří:
+Některá nastavení budou platit pro zařízení pod dohledem počínaje verzí iOS 13,0. Mezi tato nastavení patří:
 
 - App Store, zobrazování dokumentů, hraní her
   - App Store
@@ -100,7 +100,7 @@ Platí pro:
 ### <a name="new-settings-and-changes-to-existing-settings-to-restrict-features-on-ios-and-macos-devices----4867699-4867709----"></a>Nové nastavení a změny stávajících nastavení pro omezení funkcí v zařízeních s iOS a macOS <!-- 4867699 4867709  -->
 Budete moct vytvářet profily pro omezení nastavení na zařízeních s iOS a MacOS (**Konfigurace** > zařízení**profily** > **vytvořit profil** > **iOS** nebo **MacOS** pro platformu). Zadejte > **omezení zařízení**). Budou přidány následující funkce:
 
-- V > případě**omezení**zařízení MacOS Cloud a úložiště pomocí nového nastavení pro zablokování uživatelům zablokujte spouštění práce na jednom zařízení MacOS a pokračujte v práci na jiném zařízení MacOS nebo iOS. > 
+- V > případě **omezení**zařízení MacOS Cloud a úložiště pomocí nového nastavení pro zablokování uživatelům zablokujte spouštění práce na jednom zařízení MacOS a pokračujte v práci na jiném zařízení MacOS nebo iOS. > 
   Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení zařízení MacOS a povolte nebo omezte funkce pomocí Intune](device-restrictions-macos.md).
 - V případě**omezení zařízení**s **iOS** > je k dispozici několik změn:
   - **Integrované aplikace** > **hledají můj iPhone (jenom pod dohledem)** : Nové nastavení, které tuto funkci blokuje v funkci najít aplikaci. 

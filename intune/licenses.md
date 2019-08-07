@@ -5,9 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,35 +16,40 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec97819e49bdb1564b8dd75b23302608492e183
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 38b381fca17dec66303958ee04c018967ae0d999
+ms.sourcegitcommit: a6775522df49d17a4125ccb31be395f2343bdae8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57397334"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68833527"
 ---
-# <a name="licenses-that-include-intune"></a>Licence, které zahrnují Intune
+# <a name="microsoft-intune-licensing"></a>Microsoft Intune licencování
+Microsoft Intune je k dispozici pro různé potřeby zákazníků a velikosti organizace, od jednoduchého prostředí pro správu škol a malých firem až po pokročilejší funkce, které vyžadují Podnikoví zákazníci. Většina licencí, které zahrnují Microsoft Intune, také uděluje práva k použití System Center Configuration Manager, pokud předplatné zůstane aktivní. 
 
-[!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
+## <a name="microsoft-intune"></a>Microsoft Intune
+Intune je součástí těchto licencí:
 
-Následující tabulka uvádí, jaká verze Intune je dostupná v jednotlivých licencích:
+- Microsoft 365 E5
+- Microsoft 365 E3
+- Enterprise Mobility + Security E5
+- Enterprise Mobility + Security E3
+- Microsoft 365 Business
+- Microsoft 365 F1
 
-| Licence | Zahrnutá verze Intune | Porovnání cen a funkcí |
-|-----------------------------------------------------------------------|-------------------------------------------------------------|---|
-| Intune | Intune | [Víc se uč](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Enterprise Mobility + Security E3 | Intune | [Víc se uč](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Enterprise Mobility + Security E5 | Intune | [Víc se uč](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune-pricing) |
-| Microsoft 365 Education A1 | Intune pro vzdělávání | [Víc se uč](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 Education A3 | Intune pro vzdělávání | [Víc se uč](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 Education A5 | Intune pro vzdělávání | [Víc se uč](https://www.microsoft.com/en-us/education/buy-license/microsoft365/default.aspx#) |
-| Microsoft 365 E3 | Intune | [Víc se uč](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
-| Microsoft 365 E5 | Intune | [Víc se uč](https://www.microsoft.com/en-US/microsoft-365/enterprise) |
-| Microsoft 365 F1 | Intune | [Víc se uč](https://www.microsoft.com/en-us/microsoft-365/enterprise/firstline) |
-| Microsoft 365 Business | Intune | [Víc se uč](https://www.microsoft.com/en-us/microsoft-365/business) |
 
-Intune není součástí licence nejsou v tomto seznamu.
 
-Příslušná licence se vyžaduje, pokud uživatel přímo nebo nepřímo využívá některou součást, kterou daná licence pokrývá.
+## <a name="microsoft-intune-for-education"></a>Microsoft Intune for Education
+Intune for Education je zahrnutý v následujících licencích:
 
-Pokud chcete přiřadit licenci uživateli, přečtěte si článek [Přiřazení licencí Intune uživatelským účtům](licenses-assign.md).
+- Microsoft 365 Education A5
+- Microsoft 365 Education A3
 
+## <a name="additional-information"></a>Další informace
+- Microsoft Intune předplatné uživatele a zařízení je k dispozici jako samostatné, kromě výše uvedených prostředků.
+- K dispozici je Microsoft Intune předplatné jenom pro zařízení, ve kterém se nepoužívají žádné funkce spřažení uživatele.
+- Je-li uživatel nebo zařízení přímo nebo nepřímo ze služby Microsoft Intune, včetně přístupu ke službě Microsoft Intune přes [rozhraní Microsoft API](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use), je nutné použít příslušnou licenci Microsoft Intune.
+- Intune není zahrnutý v licencích, které nejsou v předchozích tabulkách.
+
+Navštivte stránku [licencování společnosti Microsoft](https://www.microsoft.com/licensing/default) , kde najdete nejnovější informace o edicích produktů, aktualizacích licencování produktů, multilicenčních plánech a dalších informacích souvisejících s vašimi konkrétními případy použití.  
+
+Informace o tom, jak licence uživatelů a zařízení ovlivňují přístup ke službám, a jak přiřadit licenci uživateli, najdete v [článku přiřazení licencí Intune k uživatelským účtům](licenses-assign.md).

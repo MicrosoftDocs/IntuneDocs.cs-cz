@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3941c41b24d458d14acb1361bc463af657a0ca67
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511923"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783026"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
@@ -40,10 +40,10 @@ Je možné, že si vaše organizace zakoupila zařízení prostřednictvím prog
 Zařízení s macOS zaregistrujete do správy provedením následujících kroků. Pokud nepoužíváte zařízení poskytnuté organizací, ale svoje vlastní zařízení, postupujte podle pokynů k [osobním a vlastním zařízením uživatelů](enroll-your-device-in-intune-macos-cp.md).  
 
 1. Zapněte zařízení s macOS. 
-2. Vyberte svou zemi a klikněte na **Pokračovat**.  
+2. Vyberte zemi nebo oblast a klikněte na **pokračovat**.  
 
    ![Snímek uvítací obrazovky Průvodce nastavením zařízení s macOS, na které je seznam jazyků na výběr](./media/macos-dep-welcome-1808.png)   
-3. Zvolte rozložení klávesnice. Seznam obsahuje jednu nebo více možností podle toho, jakou zemi vyberete. Pokud chcete zobrazit všechny možnosti rozložení bez ohledu na vybranou zemi, klikněte na **Zobrazit vše**. Až budete hotovi, klikněte na **Pokračovat**.  
+3. Zvolte rozložení klávesnice. V seznamu se zobrazí jedna nebo více možností na základě vybrané země nebo oblasti. Chcete-li zobrazit všechny možnosti rozložení bez ohledu na zvolenou zemi nebo oblast, klikněte na tlačítko **Zobrazit vše**. Až budete hotovi, klikněte na **Pokračovat**.  
 
    ![Snímek obrazovky Průvodce nastavením zařízení s macOS s rozložením klávesnice, na které je seznam jazyků klávesnice na výběr, možnost Zobrazit vše a tlačítka Zpět a Pokračovat](./media/macos-dep-keyboard-1808.png)  
 4. Vyberte vaši síť Wi-Fi. Abyste mohli pokračovat v nastavení, musíte mít připojení k internetu. Pokud vaši síť nevidíte nebo se potřebujete připojit přes drátovou síť, klikněte na tlačítko **Další možnosti sítě**. Až budete hotovi, klikněte na **Pokračovat**.  

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8b39c9f4f875ca458817940819716e1188d36eef
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882246"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783258"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -28,7 +28,10 @@ Zařízení spravovaná pomocí Intune je možné spravovat vzdáleně pomocí [
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Používejte podporované zařízení. Vzdálenou správu podporují zařízení s Androidem, Windows, iOSem a macOS, která jsou spravovaná přes Intune. TeamViewer nemusí podporovat Windows Holographic (HoloLens), Windows Team (Surface Hub) nebo Windows 10 S. Informace týkající se aktualizací podpory najdete v části [TeamViewer](https://www.teamviewer.com).
+- Používejte podporované zařízení. Správa zařízení s Androidem spravovaná přes Intune, pracovní profil Androidu, Windows, iOS a zařízení macOS podporují vzdálenou správu. TeamViewer nemusí podporovat Windows Holographic (HoloLens), Windows Team (Surface Hub) nebo Windows 10 S. Informace týkající se aktualizací podpory najdete v části [TeamViewer](https://www.teamviewer.com).
+
+> [!NOTE]
+> Vyhrazená a plně spravovaná pro Android nejsou podporovaná.
 
 - Správce Intune musí mít na portálu Azure Portal tyto [role Intune](role-based-access-control.md):  
 

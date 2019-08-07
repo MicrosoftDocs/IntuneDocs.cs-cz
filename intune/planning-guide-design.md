@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884882"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783245"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -116,7 +116,7 @@ Intune nabízí dvě možnosti nasazení: samostatné a hybridní. Samostatně o
 
 ## <a name="intune-tenant-location"></a>Umístění tenanta Intune
 
-Pokud máte globální působnost, nezapomeňte při zřizování předplatného služby naplánovat, kde se bude nacházet tenant. Země se definuje při první registraci předplatného Intune a odpovídá následujícím oblastem ve světě:
+Pokud máte globální působnost, nezapomeňte při zřizování předplatného služby naplánovat, kde se bude nacházet tenant. Země nebo oblast se definuje při prvním přihlášení k předplatnému Intune a mapování na země nebo oblasti po celém světě, které jsou uvedené níže:
 
 - Severní Amerika
 
@@ -125,7 +125,7 @@ Pokud máte globální působnost, nezapomeňte při zřizování předplatného
 - Asie a Tichomoří
 
 >[!IMPORTANT]
-> Zemi ani umístění tenanta nemůžete později změnit.
+> Později není možné změnit zemi nebo oblast a umístění tenanta.
 
 ## <a name="external-dependencies"></a>Externí závislosti
 

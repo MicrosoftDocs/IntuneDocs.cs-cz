@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f2015bb6997861d8856c7fe89662c21be105f5b
-ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
+ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68482937"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783217"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -636,7 +636,7 @@ Následující oznámení se odesílají do aplikace a některá z nich můžou 
 > [!NOTE]
 > Aplikace by nikdy neměla zaregistrovat oznámení `WIPE_USER_DATA` i `WIPE_USER_AUXILIARY_DATA`.
 
-### <a name="managementremoved"></a>MANAGEMENT_REMOVED
+### <a name="management_removed"></a>MANAGEMENT_REMOVED
 
 `MANAGEMENT_REMOVED` Oznámení indikuje, že dřív spravovaný uživatel zásad už nebude spravovat zásada mam Intune. To nevyžaduje vymazání uživatelských dat nebo odhlášení uživatele (pokud bylo vymazávání vyžadováno, `WIPE_USER_DATA` oznámení se pošle). Mnoho aplikací nemusí toto oznámení vůbec zpracovat, ale aplikace, které by používaly `MAMDataProtectionManager` , by [si toto](#data-protection)oznámení musely poznamenat.
 
@@ -1370,7 +1370,7 @@ Metoda `onMAMIdentitySwitchRequired` se volá u všech implicitních změn ident
 
   * Pokud je přepnutí identity blokované, je výsledek stejný, jako kdyby nastavení sdílení `Receive` zakázala příchozí přenos dat.
 
-  * Pokud služba běží na hlavním vlákně, **musí** se `reportIdentitySwitchResult` volat synchronně, jinak přestane vlákno uživatelského rozhraní reagovat.
+  * Pokud služba běží na hlavním vlákně, `reportIdentitySwitchResult` **musí** se volat synchronně nebo vlákno uživatelského rozhraní přestane reagovat.
 
   * Pro **`Activity`** `onMAMCreate`vytváření se bude volat před. `onMAMIdentitySwitchRequired` Pokud musí aplikace zobrazit uživatelské rozhraní, aby určila, jestli se má povolit přepnutí identity, musí se toto uživatelské rozhraní zobrazit pomocí *jiné* aktivity.
 

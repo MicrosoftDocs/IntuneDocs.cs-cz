@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 794a0b7e999c8f42d075da982c7246081ce9ed7d
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 4a1ac47fd512323ce809d4ee13c5e98f563ce51c
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756392"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783106"
 ---
 # <a name="develop-a-rollout-plan"></a>Vývoj plánu nasazení
 
@@ -55,7 +55,7 @@ Po úspěšném pilotním projektu jste připraveni spustit nasazení v plném p
 
 - **Oddělení** <br/>Fáze nasazení se může účastnit každé oddělení. Zaměříte se vždy jen na jedno oddělení. Při tomto typu nasazení je větší pravděpodobnost, že uživatelé budou v každém oddělení používat mobilní zařízení stejným způsobem a budou přistupovat ke stejným aplikacím. Uživatelé také budou mít stejné typy zásad.
 
-- **Zeměpisná oblast** <br/>Při tomto přístupu se řešení nasadí u všech uživatelů v určité zeměpisné oblasti. Může to být stejný kontinent, země, oblast nebo stejná firemní budova. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
+- **Zeměpisná oblast** <br/>V tomto postupu nasadíte pro všechny uživatele v konkrétní zeměpisné oblasti, ať už se jedná o stejný kontinent, zemi nebo oblast nebo budova stejné společnosti. Tento typ postupného nasazení umožňuje zaměřit se na uživatele, kteří jsou na určitém místě. Takový přístup je [šetrnější](#user-assisted-enrollment), protože počet míst, kde se Intune současně nasazuje, je menší. Na jednom místě budou pravděpodobně různá oddělení nebo různé způsoby použití, a proto mohou být současně nasazovány různé způsoby použití.
 
 - **Platforma** <br/>Tento typ nasazení spočívá v současném nasazení podobných platforem. Příkladem mohou být všechna zařízení s iOSem v prvním měsíci, po kterých budou následovat zařízení s Androidem a po nich zařízení s Windows. Tento typ postupného nasazení zjednodušuje podporu helpdesku, protože se podpora týká vždy jen jedné platformy.
 

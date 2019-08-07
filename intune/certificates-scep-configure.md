@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6db255cc4c4bb8466d36e25deaf36e5c3480106
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 47c2e509c9eb032dae67dbb5a44839f88fa5de4b
+ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467501"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68783079"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>Konfigurace a používání certifikátů SCEP s Intune
 
@@ -225,7 +225,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 3. Server NDES získává dlouhé adresy URL (dotazy), které vyžadují, abyste přidali dvě položky registru:
 
 
-   |                        Location                        |      Value      | type  |      Data       |
+   |                        Location                        |      Hodnota      | type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (desítkově) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (desítkově) |
@@ -410,7 +410,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 
             **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-            V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro hodnoty Organizační jednotka (OU), Organizace (O), Umístění (L), Oblast (S) a Země (C). Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
+            V tomto příkladu jste vytvořili formát názvu subjektu, který kromě proměnných CN a E používá řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země/oblast. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
 
         **Typ certifikátu zařízení**  
 
@@ -608,7 +608,7 @@ Služba Intune Connector od verze 6.1806.x.x zaznamenává události do **Prohl�
 | 0x00000411 | CRPSCEPChallenge_Expired  | Žádost se zamítla kvůli vypršení platnosti ověřovacího testu certifikátu. Po načtení nového ověřovacího testu ze serveru pro správu může klientské zařízení pokus opakovat. |
 | 0x0FFFFFFFF | Unknown_Error  | Vaši žádost nemůžeme dokončit, protože došlo k chybě na straně serveru. Zkuste to prosím znovu. |
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Použití certifikátů PKCS](certficates-pfx-configure.md)nebo [vydávání certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md)
 - [Přidání CA třetí strany pro použití SCEP s Intune](certificate-authority-add-scep-overview.md)
