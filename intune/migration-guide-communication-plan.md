@@ -16,38 +16,46 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d207d1ac51da5b34f48aeffd83791bdbb40bf971
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: a06b40adee9c2eb66c4eafd44ce9b798a95df39f
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494550"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862352"
 ---
-# <a name="plan-communications"></a>Plán komunikace 
-Plán komunikace je klíčovým prvkem, který migrace do Intune. Následující nástroje a šablony jsou k dispozici při vzdělávání koncovým uživatelům. Sada přechodu na Intune obsahuje e-mailové šablony, Průvodce registrací v Intune a odkazy na instruktážní videa pro registrace koncového uživatele.  
+# <a name="plan-communications"></a>Plán komunikace
 
-Stažení:  [Sada přechodu na Intune](https://aka.ms/IntuneAdoptionKit)
+Plán komunikace je klíčovým prvkem migrace do Intune. K dispozici jsou následující nástroje a šablony, které vám pomůžou při informování koncových uživatelů. Sada Intune pro přijímání obsahuje e-mailové šablony, příručku pro registraci v Intune a odkazy na výuková videa pro zápis koncových uživatelů.  
 
-## <a name="email-templates"></a>E-mailové šablony 
-Doporučujeme následující plán komunikace s využitím e-mailů. Poskytujeme šablony si můžete přizpůsobit svému plánu komunikace:
-- **E-mailu #1**: Vysvětluje výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune. 
+Stáhnout  [Sada Intune pro přijetí](https://aka.ms/IntuneAdoptionKit)
 
-- **E-mailu #2**: Oznamujeme, že mají přístup ke službám v Intune. Řekněte uživatelům, aby se zaregistrovali.  Poskytněte uživatelům časovou osu předtím, než je ovlivněn jejich přístup. Připomeňte jim výhody a strategické důvody migrace.
-Po určité době můžete začít vynucovat dodržování předpisů pomocí zásad podmíněného přístupu a použít jako kritéria pro přístup k firemním datům, jak je vysvětleno v [podpora přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md).
+## <a name="email-templates"></a>E-mailové šablony
 
-## <a name="intune-enrollment-guide"></a>Průvodce registrací pro Intune 
-Tuto přílohu PDF je možné poskytnout uživatelům jako-je, nebo může přizpůsobit verzi aplikace Word zahrnout interním prostředkům a kontaktní údaje.
+Doporučujeme následující plán komunikace s využitím e-mailů. K dispozici jsou šablony, které můžete přizpůsobit vašemu plánu komunikace:
 
-## <a name="instructional-videos"></a>Instruktážní videa
-Vytvořili jsme krátký, podrobné videa, která vám pomůže se vaši uživatelé snadno registrují svoje zařízení v Intune.
+- **#1 e-mailu**: Vysvětlete výhody, očekávání a plán. Využijte této příležitosti a představte nové služby, ke kterým budou mít uživatelé přístup na zařízeních spravovaných v Intune.
+
+- **#2 e-mailu**: Oznamujeme, že služby jsou teď připravené k přístupu přes Intune. Řekněte uživatelům, aby se zaregistrovali.  Poskytněte uživatelům časovou osu před tím, než se ovlivní jejich přístup. Připomeňte jim výhody a strategické důvody migrace.
+Po určité době můžete začít vynucovat dodržování předpisů pomocí zásad podmíněného přístupu a použít je jako kritéria pro přístup k podnikovým datům, jak je vysvětleno v tématu řízení [přijetí koncovými uživateli pomocí podmíněného přístupu](migration-guide-drive-adoption.md).
+
+## <a name="intune-enrollment-guide"></a>Průvodce registrací pro Intune
+
+Tuto přílohu PDF můžete uživatelům poskytnout tak, jak jsou, nebo můžete přizpůsobit verzi Wordu tak, aby zahrnovala vaše interní prostředky a kontaktní údaje.
+
+## <a name="instructional-videos"></a>Výuková videa
+
+Vytvořili jsme krátká, podrobná videa, která pomáhají uživatelům usnadnit registraci svých zařízení v Intune.
+
 - [Registrace zařízení s Androidem](https://www.youtube.com/watch?v=k0Q_sGLSx6o&t=1s)
-- [Registrace zařízení s Androidem pracovního profilu](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
+- [Registrace zařízení s pracovním profilem Androidu](https://www.youtube.com/watch?v=9Dl8HsGk4tI&t=3s)
 - [Registrace zařízení s iOSem](https://www.youtube.com/watch?v=mJyv6YcHi7c)
 - [Registrace zařízení s macOS](https://www.youtube.com/watch?v=Pa2pfhwq_yk)
-- [Registrace vašich Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
+- [Registrace Windows](https://www.youtube.com/watch?v=TKQxEckBHiE)
 
-## <a name="next-steps"></a>Další postup
-Intune poskytuje další zdroje informací, které lze použít na podporu registrace zařízení s uživateli:
-- Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate). 
-- [Registraci zařízení v Intune pro správce IT](https://docs.microsoft.com/intune/device-enrollment) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
-- Sdílené složky [adresa URL aplikace portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli, Android, iOS a Windows. Tato adresa URL se přesměruje do odpovídající aplikaci portál společnosti na zařízení Windows, iOS a Android.
+## <a name="next-steps"></a>Další kroky
+
+Intune obsahuje další prostředky, které můžete použít ke zvýšení úrovně registrace zařízení uživateli:
+
+- Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate).
+- [Registrace zařízení v Intune pro správce IT](https://docs.microsoft.com/intune/device-enrollment) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
+- Sdílejte [adresu URL aplikace Portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli Androidu, iOS a Windows. Tato adresa URL přesměruje na příslušný seznam aplikací Portál společnosti v zařízeních se systémem Android, iOS a Windows.

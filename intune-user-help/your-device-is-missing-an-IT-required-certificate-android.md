@@ -18,16 +18,16 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625115"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862142"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Instalace chybějícího certifikátu požadovaného vaší organizací  
 
-Pokud zařízení nemáte zaregistrované v Intune a chybí mu konkrétní certifikát, který vyžaduje firemní podpora, nebudete se k aplikaci Portál společnosti moct přihlásit. Při pokusu o přihlášení se zobrazí tato zpráva:
+Pokud zařízení není zaregistrované v Intune a chybí mu požadovaný certifikát, nebudete se moct přihlásit k aplikaci Portál společnosti. Při pokusu o přihlášení se zobrazí tato zpráva:
 
 ![screenshot-error-message-about-missing-certificate](./media/andr-cert_install-1-cert_missing.png)
 
@@ -82,3 +82,7 @@ Provedením těchto kroků ručně identifikujte a nainstalujete certifikát do 
 7. Aplikaci Portál společnosti znovu otevřete. Teď už by mělo být možné se k aplikaci Portál společnosti přihlásit. Pokud potřebujete pomoc, obraťte se na firemní podporu.
 
 Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili popsaný postup, pravděpodobně je ještě další certifikát, s jehož instalací vám musí pomoct firemní podpora. Obraťte se o pomoc na firemní podporu prostřednictvím kontaktních informací, které jsou dostupné na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+
+## <a name="next-steps"></a>Další postup  
+
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

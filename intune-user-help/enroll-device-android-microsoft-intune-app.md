@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 08/07/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: ef7ec650c65206eeab69d8f666dc4fb39052bbdb
+ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735759"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862224"
 ---
 # <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Registrace podnikového zařízení pomocí aplikace Microsoft Intune
 
@@ -50,9 +50,9 @@ Provedením těchto kroků nastavíte a zaregistrujete své zařízení.
 
      Pokud jste se dostali k používání jiné metody, pokračujte krokem 3.    
 
-1. Připojte se k Wi-Fi a klepněte na **Další**. Použijte krok, který odpovídá metodě registrace. 
+3. Připojte se k Wi-Fi a klepněte na **Další**. Použijte krok, který odpovídá metodě registrace. 
 
-    * Klíčové Až se dostanete na přihlašovací obrazovku Google, proveďte kroky v části [registrace tokenu](#token-enrollment).    
+    * Klíčové Až se dostanete na přihlašovací obrazovku Google, proveďte kroky v části [registrace tokenu](#token-enrollment).  
     * Google Zero Touch: Po připojení k Wi-Fi bude vaše zařízení rozpoznatelné vaší organizací. Pokračujte krokem 4 a postupujte podle pokynů na obrazovce, dokud nebude instalace dokončena.    
  
        ![Příklad obrázku obrazovky s podmínkami pro Google, který vidíte, pokud používáte Google Zero Touch, zvýrazňování tlačítka přijmout & pokračovat.](./media/google-zero-touch-intune-app-01.png)   
@@ -78,21 +78,19 @@ Provedením těchto kroků nastavíte a zaregistrujete své zařízení.
 
    ![Příklad obrázku nastavení obrazovky pro práci s telefonem, zvýraznění tlačítka pro instalaci](./media/fully-managed-intune-app-11.png)   
 
-10. Jakmile se zobrazí zpráva, že je zařízení připravené, klepněte na **Hotovo**. 
+10. Klepnutím na **Start** otevřete aplikaci Microsoft Intune a zaregistrujete své zařízení. 
 
-11. Přejít do vašich aplikací a otevřít aplikaci Microsoft Intune. Vyberte **Přihlásit se**. 
+    ![Příklad obrázku nastavení obrazovky pro práci s telefonem, zvýraznění tlačítka Start](./media/fully-managed-intune-app-17.png)   
 
-12. Na obrazovce pro **přístup k instalaci** se zobrazí seznam úkolů, které čekají na vyřízení. Klepněte na **pokračovat**.  
+11. Klepnutím na **Přihlásit** a kliknutím na **Další** zahajte registraci. Až se zobrazí zpráva, že registrace je hotová,klepněte na Hotovo.  
 
-       ![Příklad obrázku Microsoft Intune aplikace, nastavení obrazovky přístupu a zobrazení nevyřízených úkolů.](./media/fully-managed-intune-app-14.png)   
+    ![Příklad obrázku nastavení přístupu, registrace obrazovky zařízení, zvýraznění tlačítka Hotovo.](./media/fully-managed-intune-app-19.png)   
 
-13. Až se registrace zařízení dokončí, klepněte na **pokračovat**. Microsoft Intune vás může zobrazit výzva k aktualizaci dalších nastavení zařízení.   
+10. Jakmile se zobrazí zpráva, že je zařízení připravené, klepněte na **Hotovo**.  
 
-       ![Příklad obrázku Microsoft Intune aplikace, aktualizace obrazovky nastavení zařízení](./media/fully-managed-intune-app-15-2.png)   
+    ![Příklad obrázku nastavení obrazovky pro práci s telefonem, zvýraznění tlačítka Hotovo.](./media/fully-managed-intune-app-18.png)   
 
-14. Instalace je dokončena, když všechny položky v seznamu zobrazí zelený kroužek. Teď máte přístup k prostředkům společnosti.  
-
-       ![Příklad obrázku Microsoft Intune aplikace, nastavení obrazovky přístupu a zobrazení dokončených úkolů](./media/fully-managed-intune-app-16.png)   
+Pokud máte potíže s přístupem k prostředkům organizace, možná budete muset aktualizovat další nastavení na svém zařízení. Přihlaste se k aplikaci Microsoft Intune, abyste zkontrolovali požadované aktualizace.   
 
 
 ## <a name="qr-code-enrollment"></a>Zápis kódu QR  
@@ -118,11 +116,7 @@ V této části zadáte svůj token poskytovaný společností. Až budete hotov
 
 3. Na obrazovce **zaregistrovat toto zařízení** vyberte **Další**.  
 
-   ![Příklad obrázku registrace obrazovky zařízení Zobrazuje ilustraci kódu QR; zvýrazní tlačítko Další.](./media/token-intune-app-02.png)  
-
-4. Vyberte **zadat kód**.
-
-   ![Příklad snímku aktivního skeneru kódu QR Zvýrazní tlačítko pro zadání kódu.](./media/token-intune-app-03.png)  
+4. Vyberte **zadat kód**.  
 
 5. Na obrazovce **Kontrola nebo zadání kódu** zadejte kód, který vám vaše organizace poskytla.  Pak klikněte na tlačítko **Další**.  
 
