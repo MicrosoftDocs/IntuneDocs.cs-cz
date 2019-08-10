@@ -1,6 +1,6 @@
 ---
-title: Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
-description: Zjistěte, jak RBAC umožňuje určovat, kdo může provádět akce a změny v Microsoft Intune.
+title: Řízení přístupu na základě role (RBAC) s Microsoft Intune
+description: Přečtěte si, jak vám umožňuje řídit, kdo může provádět akce a provádět změny v Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,86 +16,86 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 935d8d0803e5bcfcd25703295f84f24b664f7fce
+ms.sourcegitcommit: 02fb7ceae60d0e2cfa42fb7d017753c7437ccf59
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528241"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68913833"
 ---
-# <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě rolí (RBAC) v Microsoft Intune
+# <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
 
-Řízení přístupu na základě role (RBAC) vám pomůže spravovat, kdo má přístup k prostředkům vaší organizace a co dělají pomocí těchto prostředků.  Podle [přiřazení rolí](assign-role.md) Intune uživatelům, můžete omezit, co mohou zobrazit a změnit. Každá role má sadu oprávnění, která určují, co uživatelé s touto rolí mají přístup k a změny v rámci vaší organizace.
+Řízení přístupu na základě role (RBAC) pomáhá spravovat, kdo má přístup k prostředkům vaší organizace a co s těmito prostředky může dělat.  [Přiřazením rolí](assign-role.md) uživatelům Intune můžete omezit to, co můžou zobrazit a změnit. Každá role má sadu oprávnění, která určují, co můžou uživatelé s touto rolí používat a měnit v rámci vaší organizace.
 
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
-- **Správce služby Intune** (označované také jako **správce Intune**)
+- **Správce služby Intune** (označuje se také jako **správce Intune**)
 
-Rady a návrhy RBAC v Intune najdete v dokumentu tato série pěti videa, které prezentují příklady a názorné postupy: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
+Pokud potřebujete Rady a návrhy týkající se RBAC v Intune, můžete se podívat na tyto řady pěti videí, které prezentují příklady a návody: [1](https://www.youtube.com/watch?v=5deXLMLcnKY), [2](https://www.youtube.com/watch?v=38dnMBLuxbQ), [3](https://www.youtube.com/watch?v=6vqg9cAkMbY), [4](https://www.youtube.com/watch?v=5yOLajFFMHE), [5](https://www.youtube.com/watch?v=P5DDvsSF4Wk).
 
 ## <a name="roles"></a>Role
-Role definuje sadu oprávnění udělit uživatelům, kteří k této roli přiřazení.
-Můžete použít předdefinované a vlastní role. Předdefinované role zahrnují některé běžné scénáře s Intune. Je možné [vytvořit vlastní role](create-custom-role.md) s přesnou sadu oprávnění, které potřebujete. Několik rolí Azure Active Directory nemáte oprávnění pro Intune.
-Chcete-li zobrazit roli, zvolte **Intune** > **role** > **všechny role** > zvolte roli. Zobrazí se vám na následujících stránkách:
+Role definuje sadu oprávnění udělených uživatelům přiřazeným k této roli.
+Můžete použít jak předdefinované, tak i vlastní role. Předdefinované role se týkají některých běžných scénářů Intune. Můžete [vytvořit vlastní role](create-custom-role.md) s přesnou sadou oprávnění, která potřebujete. Několik rolí Azure Active Directory má oprávnění k Intune.
+ > Pokud chcete zobrazit roli, vyberte > role Intune**všechny role** > zvolit roli. Zobrazí se následující stránky:
 
-- **Vlastnosti**: Název, popis, typ, přiřazení a značky oboru role. 
-- **Oprávnění**: Obsahuje přehled dlouhé sady přepíná definování role má oprávnění.
-- **Přiřazení**: Seznam [přiřazení rolí]( assign-role.md) definující, kteří mají přístup na uživatele nebo zařízení, která. Roli můžete mít více přiřazení a uživatel může být ve více přiřazení.
+- **Vlastnosti**: Značky název, popis, typ, přiřazení a obor pro roli 
+- **Oprávnění**: Uvádí dlouhou sadu přepínačů definujících, jaká oprávnění role má.
+- **Přiřazení**: Seznam [přiřazení rolí]( assign-role.md) , které definují, kteří uživatelé mají přístup k jakým uživatelům nebo zařízením Role může mít více přiřazení a uživatel může být v několika přiřazeních.
 
 ### <a name="built-in-roles"></a>Vestavěné role
-Předdefinované role můžete přiřadit ke skupinám bez další konfigurace. Nejde odstranit ani upravit název, popis, typ nebo oprávnění předdefinovaná role. Úplný seznam oprávnění pro každou předdefinovaná role, najdete v článku [Intune RBAC tabulky](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Předdefinované role můžete přiřadit skupinám bez další konfigurace. Nemůžete odstranit ani upravit název, popis, typ ani oprávnění předdefinované role. Úplný seznam oprávnění pro jednotlivé předdefinované role najdete v [tabulce RBAC](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a)služby Intune.
 
-- **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
-- **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple, identifikátory podnikových zařízení a standardních hodnot zabezpečení.
-- **Operátor pouze pro čtení**: Zobrazení uživatele, zařízení, registraci, konfiguraci a informace o aplikaci. Nelze provádět změny v Intune.
-- **Správce aplikací**: Spravuje mobilní a spravované aplikace, může číst informace o zařízení a profily konfigurace zařízení můžete zobrazit.
-- **Role Správce služby Intune**: Spravuje vlastní role Intune a přidá přiřazení předdefinované role Intune. Je jediná role Intune, které můžete přiřazovat oprávnění správcům.
+- **Operátor helpdesku**: Provede vzdálené úlohy pro uživatele a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
+- **Správce zásad a profilů**: Spravuje zásady dodržování předpisů, konfigurační profily, registrace Apple, identifikátory podnikových zařízení a směrné plány zabezpečení.
+- **Operátor s oprávněními jen pro čtení**: Zobrazí informace o uživatelích, zařízeních, registraci, konfiguraci a aplikacích. Nejde dělat změny v Intune.
+- **Správce aplikací**: Spravují mobilní a spravované aplikace, umí číst informace o zařízení a můžou zobrazovat profily konfigurace zařízení.
+- **Správce role Intune**: Spravuje vlastní role Intune a přidává přiřazení pro předdefinované role Intune. Je to jediná role Intune, která může přiřazovat oprávnění správcům.
 - **Správce školy**: Spravuje zařízení s Windows 10 v [Intune for Education](introduction-intune-education.md).
 
 ### <a name="custom-roles"></a>Vlastní role
-Vlastní role můžete vytvořit pomocí vlastních oprávnění. Další informace o vlastních rolích najdete v tématu [vytvořit vlastní roli](create-custom-role.md).
+Můžete vytvořit vlastní role s vlastními oprávněními. Další informace o vlastních rolích najdete v tématu [Vytvoření vlastní role](create-custom-role.md).
 
-### <a name="azure-active-directory-roles-with-intune-access"></a>Role služby Azure Active Directory s přístupem k Intune
+### <a name="azure-active-directory-roles-with-intune-access"></a>Azure Active Directory role s přístupem k Intune
 | Role Azure Active Directory | Všechna data Intune | Data auditu Intune |
 | --- | :---: | :---: |
-| Globální správce | Čtení/zápisu | Čtení/zápisu |
-| Správce služby Intune | Čtení/zápisu | Čtení/zápisu |
-| Správce podmíněného přístupu | Žádný | Žádný |
+| Globální správce | Čtení a zápis | Čtení a zápis |
+| Správce služby Intune | Čtení a zápis | Čtení a zápis |
+| Správce podmíněného přístupu | Žádné | Žádné |
 | Správce zabezpečení | Jen pro čtení | Jen pro čtení |
 | Operátor zabezpečení | Jen pro čtení | Jen pro čtení |
-| Čtenář zabezpečení | Jen pro čtení | Jen pro čtení |
+| Čtecí modul zabezpečení | Jen pro čtení | Jen pro čtení |
 | Správce dodržování předpisů | Žádné | Jen pro čtení |
-| Správce dat dodržování předpisů | Žádný | Jen pro čtení |
+| Správce dat dodržování předpisů | Žádné | Jen pro čtení |
 
 > [!TIP]
-> Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**, a **podmíněného přístupu**, řízená prostřednictvím Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
+> Intune také ukazuje tři rozšíření Azure AD: **Uživatelé**, **skupiny**a **podmíněný přístup**, které jsou ovládány pomocí služby Azure AD RBAC. **Správce uživatelských účtů** navíc provádí jenom aktivity uživatele nebo skupiny AAD a nemá úplná oprávnění provádět všechny aktivity v Intune. Další informace najdete v tématu [RBAC s Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles).
 ### <a name="roles-created-in-the-intune-classic-portal"></a>Role vytvořené na klasickém portálu Intune
-Z klasického portálu Intune se do Intune na Azure Portalu migrují jenom **správci služeb** Intune s úplnými oprávněními. Musíte přiřadit Intune **Správci služeb** uživatelé s "Jen pro čtení" nebo "Helpdesku" přístup do role Intune na portálu Azure portal a odebrat z portálu classic.
+Z klasického portálu Intune se do Intune na Azure Portalu migrují jenom **správci služeb** Intune s úplnými oprávněními. Musíte znovu přiřadit role správců **služby** Intune s přístupem "jen pro čtení" nebo "helpdesk" do rolí Intune v Azure Portal a odebrat je z portálu Classic.
 > [!IMPORTANT]
-> Možná bude nutné zachovat přístup správce služby Intune na portálu classic, pokud vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune.
+> Pokud budou vaši správci dál potřebovat přístup ke správě počítačů pomocí Intune, může být potřeba zachovat přístup správce služby Intune na klasickém portálu.
 
 ## <a name="role-assignments"></a>Přiřazení rolí
-Definuje přiřazení role:
+Přiřazení role definuje:
 
-- kteří uživatelé jsou přiřazení k roli
-- jaké prostředky můžete zobrazit
-- jaké prostředky mohou změnit.
+- kteří uživatelé jsou přiřazeni k roli
+- prostředky, které uvidí
+- Jaké prostředky mohou změnit.
 
-Uživatelům můžete přiřadit předdefinované i vlastní role. Přiřazení Intune role, uživatel musí mít licenci pro Intune.
-Chcete-li zobrazit přiřazení role, zvolte **Intune** > **role** > **všechny role** > vyberte roli > zvolit přiřazení. Zobrazí se vám na následujících stránkách:
+Uživatelům můžete přiřadit vlastní i předdefinované role. Uživatel musí mít licenci Intune, aby mu byla přiřazena role Intune.
+Pokud > chcete zobrazit přiřazení role, vyberte > role Intune**všechny role** > vyberte roli > zvolit přiřazení. Zobrazí se následující stránky:
 
-- **Vlastnosti**: Název, popis, role, členy, obory a přiřazení značek.
-- **Členové**: Všichni uživatelé v uvedené skupiny mají oprávnění ke správě uživatelů a zařízení, které jsou uvedeny v rozsah (skupiny).
-- **Rozsah (skupiny)** : Všechny uživatele nebo zařízení v těchto skupinách může být spravován uživatelů ve členech.
-- **[Obor (značky)](scope-tags.md)** : Uživatelé v členové mohou vidět prostředky, které mají stejné značky oboru.
+- **Vlastnosti**: Název, popis, role, členy, obory a značky přiřazení.
+- **Členové**: Všichni uživatelé v uvedených skupinách zabezpečení Azure mají oprávnění ke správě uživatelů nebo zařízení, která jsou uvedená v oboru (skupiny).
+- **Rozsah (skupiny)** : Všechny uživatele nebo zařízení v těchto skupinách zabezpečení Azure je možné spravovat pomocí uživatelů v rámci členů.
+- **[Scope (značky)](scope-tags.md)** : Uživatelé v členovi mohou zobrazit prostředky, které mají stejné značky oboru.
 
-### <a name="multiple-role-assignments"></a>Více přiřazení rolí
-Pokud má uživatel více přiřazení role, oprávnění v těchto přiřazení rolí následujícím způsobem rozšířit na různé objekty:
+### <a name="multiple-role-assignments"></a>Přiřazení více rolí
+Pokud má uživatel více přiřazení rolí, oprávnění v těchto přiřazeních rolí se rozšiřuje na různé objekty následujícím způsobem:
 
-- Přiřazení oprávnění se vztahují jenom na objekty (třeba zásady nebo aplikace) v této roli přiřazení rozsah (skupiny). Přiřazení oprávnění se nevztahují na objekty v jiných přiřazení rolí není-li toto přiřazení je explicitně neudělí.
-- Pro všechny objekty stejného typu (stejně jako všechny zásady nebo všechny aplikace) se vztahují další oprávnění (jako je například vytvoření a čtení), v některém z přiřazení uživatele.
-- Oprávnění pro objekty různé typy (třeba zásady nebo aplikace), nemůžete použít k sobě navzájem. Oprávnění ke čtení pro zásady, například, neposkytuje oprávnění pro čtení k aplikacím v přiřazení uživatele.
+- Oprávnění k přiřazení platí jenom pro objekty (jako jsou zásady nebo aplikace) v oboru přiřazení této role (skupiny). Přiřazení oprávnění neplatí pro objekty v jiných přiřazeních rolí, pokud jiné přiřazení je konkrétně neuděluje.
+- Další oprávnění (například vytváření a čtení) se vztahují na všechny objekty stejného typu (jako jsou všechny zásady nebo všechny aplikace) v libovolném přiřazení uživatele.
+- Oprávnění pro objekty různých typů (jako jsou zásady nebo aplikace) se nevztahují na sebe navzájem. Oprávnění ke čtení pro zásady například neposkytuje oprávnění ke čtení pro aplikace v přiřazení uživatele.
 
 ## <a name="next-steps"></a>Další postup
 - [Přiřazení role uživateli](assign-role.md)
-- [Vytvořit vlastní roli](create-custom-role.md)
+- [Vytvoření vlastní role](create-custom-role.md)
