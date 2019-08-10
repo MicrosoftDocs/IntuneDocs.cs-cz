@@ -39,8 +39,8 @@
 ### Dotazy k operačnímu systému
 #### [Aktualizace zařízení](you-need-to-update-your-android-device.md)
 #### [Nepodporovaná verze](your-android-version-isnt-yet-supported.md)
-#### [Zařízení obsahuje root a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
-#### [Chybí požadovaný certifikát](your-device-is-missing-a-required-certificate-landing-android.md)
+#### [Zařízení je rootované a nemůže se připojit](your-device-is-rooted-and-you-cant-connect-android.md)
+#### [Chybí požadovaný certifikát](your-device-is-missing-an-IT-required-certificate-android.md)
 #### [Vypnutí neznámých zdrojů](you-need-to-turn-off-unknown-sources-android.md)
 #### [Vypnutí ladění USB](you-need-to-turn-off-usb-debugging-android.md)
 #### [Zapnutí vyhledávání bezpečnostních hrozeb](you-need-to-turn-on-scanning-for-security-threats-android.md)
