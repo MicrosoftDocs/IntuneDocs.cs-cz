@@ -42,7 +42,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 ## <a name="create-a-template"></a>Vytvoření šablony
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
@@ -78,7 +78,7 @@ Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v pros
 
 V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší najít konkrétní nastavení, použijte integrované funkce:
 
-- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Pokud například chcete zobrazit všechna  nastavení v `Microsoft Excel` cestě, vyberte sloupec cesta:
+- V šabloně pro řazení seznamu vyberte sloupce **Nastavení**, **stav**, **Typ nastavení**nebo **cesta** . Pokud například chcete zobrazit všechna nastavení v `Microsoft Excel` cestě, vyberte sloupec cesta:
 
   ![Kliknutím na cesta zobrazíte všechna nastavení seskupená podle zásad skupiny nebo cesty k ADMX v šablonách pro správu v Intune.](./media/administrative-templates-windows/path-filter-shows-excel-options.png)
 

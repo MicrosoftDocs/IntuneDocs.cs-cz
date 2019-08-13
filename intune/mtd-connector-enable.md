@@ -45,7 +45,7 @@ Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v 
 
 ## <a name="to-enable-the-mtd-connector"></a>Povolení konektoru MTD
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 4. Na **řídicím panelu Intune** zvolte **Dodržování předpisů zařízením** a potom v části **Nastavení** zvolte **Mobile Threat Defense**.
 

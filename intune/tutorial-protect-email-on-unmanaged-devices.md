@@ -44,7 +44,7 @@ Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) jako g
 ## <a name="create-the-app-protection-policy"></a>Vytvoření zásad ochrany aplikací
 V tomto kurzu nastavíme zásady ochrany aplikací Intune pro aplikaci Outlook, aby se na úrovni aplikace umístily ochrany. Pro otevření aplikace v pracovním kontextu budeme vyžadovat kód PIN. Také omezíme sdílení dat mezi aplikacemi a zabránění ukládání firemních dat do osobního umístění.
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a potom navštivte **klientské aplikace** >  > **Zásady ochrany aplikací** **vytvořit zásadu**.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a potom navštivte **klientské aplikace** >  > **Zásady ochrany aplikací** **vytvořit zásadu**.  
 2. Nakonfigurujte následující nastavení:  
    - **Název**: Zadejte **test zásad aplikací pro Outlook**.  
    - **Popis**: Zadejte **test zásad aplikací pro Outlook**.  
@@ -140,7 +140,7 @@ Vytvoří se zásada podmíněného přístupu pro klienty moderního ověřová
 5. V části **přiřazení**vyberte **cloudové aplikace nebo akce**. Vyberte e-mailovou zprávu Office 365 Exchange Online s těmito kroky:  
    1. Na kartě *Zahrnout* zvolte **Vybrat aplikace**.  
    2. Zvolte **Vybrat**.  
-   3. V seznamu *aplikací*vyberte možnost **Office 365 Exchange Online**a pak klikněte na **Vybrat**a pak na Hotovo .  
+   3. V seznamu *aplikací*vyberte možnost **Office 365 Exchange Online**a pak klikněte na **Vybrat**a pak na Hotovo.  
   
 6. V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.  
    1. V části **Konfigurovat** vyberte **Ano**.  
