@@ -5,7 +5,7 @@ keywords: Sada SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 08/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc193c80960872cc3a0e25438432195de3a7c34
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: 527d71f0e48627498b05af8ee497579c648d3156
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783217"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960554"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – Příručka pro vývojáře
 
@@ -1726,7 +1726,7 @@ Pomocí následujících kroků povolte výchozí registraci:
 
 1. Pokud vaše aplikace integruje ADAL nebo potřebujete povolit jednotné přihlašování, [nakonfigurujte knihovnu ADAL](#configure-azure-active-directory-authentication-library-adal) po [běžné konfiguraci #2 konfigurace ADAL](#common-adal-configurations) . V takovém případě tento krok můžete přeskočit.
    
-2. Povolte výchozí registraci tak, že do manifestu vložíte následující hodnotu:
+2. Povolte výchozí registraci přidáním následující hodnoty do manifestu pod `<application>` značku:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
@@ -1735,7 +1735,7 @@ Pomocí následujících kroků povolte výchozí registraci:
    > [!NOTE] 
    > Musí jít o jedinou integraci MAM-WE v dané aplikaci. Pokud existují další pokusy o volání rozhraní API instance MAMEnrollmentManager, dojde ke konfliktům.
 
-3. Povolte požadované zásady MAM tak, že do manifestu vložíte následující hodnotu:
+3. Povolte zásady MAM vyžadované přidáním následující hodnoty v manifestu pod `<application>` značku:
 
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.MAMPolicyRequired" android:value="true" />

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: cb5176189cb689c8341704440463881cb1aa7e4f
+ms.sourcegitcommit: 299d8d481f0edfa60041c5dff626e1f27bcbe252
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548350"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956569"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
@@ -50,13 +50,13 @@ Sdělované informace se liší podle toho, kdy je při zavádění Intune sděl
 
 **Po registraci**<br/> Sdělení zaměřená na konkrétní skupiny a uživatele v organizaci, u kterých byla služba Intune zavedena. Měla by obsahovat další materiály, které mohou být pro uživatele užitečné, a také shromáždit zpětnou vazbu ohledně registrace a používání.
 
-Pomoci vám může tento [průvodce registrací pro koncové uživatele](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT). Můžete ho použít v nezměněné podobě nebo ho upravit na míru vaší organizaci.
+Pomoci vám může tento [průvodce registrací pro koncové uživatele](/enterprise-mobility-security/solutions/fasttrack-intune-enduser-enrollment-instructions). Můžete ho použít v nezměněné podobě nebo ho upravit na míru vaší organizaci.
 
 ## <a name="communication-delivery-methods"></a>Způsob komunikace
 
 Existují různé způsoby, jak v organizaci oznámit cílovým skupinám a uživatelům informace, které se týkají zavedení Intune. Následující seznam obsahuje příklady a také vlnu komunikace, v které můžete metodu použít:
 
-- Celé organizace osobně, nebo použít pro na úvod schůzky Microsoft Teams
+- Schůzky v různých organizacích nebo Microsoft teams, které se používají pro úvodní Wave
 
 - E-mail se používá ve vlně předcházející registraci, v registrační vlně i ve vlně navazující na registraci.
 

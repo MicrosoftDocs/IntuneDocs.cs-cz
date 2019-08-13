@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4dd77be45c21db53dd82322049d377ced247c4c7
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: e7272ddb502075f071b03925c47993c97e447bce
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427347"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960662"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -31,11 +31,12 @@ ms.locfileid: "68427347"
 
 Při nastavení Mobile Threat Defense (MTD) jste v konzole partnera MTD nakonfigurovali zásadu pro klasifikaci hrozeb a vytvořili jste zásadu dodržování předpisů zařízením v Intune. Pokud jste už konektor Intune nakonfigurovali v konzole pro partnery MTD, můžete teď povolit připojení MTD pro partnerské aplikace MTD.
 
-Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení, Intune vytvoří v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, jako je [Defender ATP](advanced-threat-protection.md) nebo některé z našich dalších [MTDch partnerů](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní.  Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
+Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení k Intune, vytvoří Intune v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, včetně [ATP ATP](advanced-threat-protection.md) nebo kteréhokoli z našich dalších [partnerů MTD](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní. Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
 
 Klasické zásady podmíněného přístupu pro aplikace MTD: 
 
-- Používá Intune MTD k tomu, aby vyžadovala, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
+- Používají Intune MTD k tomu, aby vyžadovaly, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení před komunikací s partnery MTD. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
+- Nemusíte mít žádný vliv na žádné jiné cloudové aplikace ani prostředky.  
 - Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
 - Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.  
 

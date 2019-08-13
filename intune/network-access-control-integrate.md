@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d0f155a9a4900ed10b2030af3c80c13def0bb82e
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3ff5b29b3d417b9c3bdabfc860b46579b168fb71
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660908"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960643"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Integrace řešení pro řízení přístupu k síti (NAC) do Intune
 
@@ -74,7 +74,7 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
   - Použijte Citrix Gateway 12.0.59 nebo vyšší.  
   - Uživatelé musí mít nainstalované Citrix SSO 1.1.6 nebo novější.
   - [Integrujte NetScaler do Intune pro NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) , jak je popsáno v dokumentaci k produktu Citrix.
-  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
+  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** > vyberte Souhlasím.
 
   Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
@@ -82,7 +82,7 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 
   - Použijte F5 BIG-IP 13.1.1.5. BIG-IP 14 se nepodporuje.
   - Integrujte BIG-IP s Intune for NAC. [Přehled: Konfigurace funkce APM pro stav zařízení pomocí příručky pro správu](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) koncových bodů v systému F5 uvádí postup.
-  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** **> vyberte Souhlasím**.
+  - V profilu sítě VPN vyberte **základní nastavení** > **Povolit síťové Access Control (NAC)** > vyberte Souhlasím.
 
   Z bezpečnostních důvodů je připojení VPN odpojené každých 24 hodin. SÍŤ VPN se může okamžitě znovu připojit.
 
@@ -91,10 +91,10 @@ Následující seznam obsahuje přehled fungování řešení pro řízení př�
 
 Spolupracujeme s našimi partnery pro vydání řešení NAC pro tyto novější klienty. Až budou řešení připravena, Tento článek se aktualizuje o další informace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Integrace řešení Cisco ISE do Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
 - [Integrace řešení Citrix NetScaler do Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
 - [Integrace nástroje F5 BIG-IP Access Policy Manager s Intune](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [Integrace řešení HP Aruba ClearPass do Intune](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
-- [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)
+- [Integrace řešení secRMM (Squadra security Removable Media Manager) do Intune](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

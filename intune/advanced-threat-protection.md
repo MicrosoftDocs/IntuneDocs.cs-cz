@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8508915f0b4711b2aa65465dd7ac79f575a8d008
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670968"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68960653"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
@@ -82,11 +82,12 @@ Prvním krokem je nastavení propojení mezi službou Intune a ATP v programu Mi
 Tento postup stačí obvykle provést jednou. Po povolení ochrany Microsoft Defenderu pro vašeho tenanta Intune to nemusíte dělat znovu.
 
 > [!TIP]  
-> Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení, Intune vytvoří v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, jako je [Defender ATP](advanced-threat-protection.md) nebo některé z našich dalších [MTDch partnerů](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní.  Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
+> Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení k Intune, vytvoří Intune v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, včetně [ATP ATP](advanced-threat-protection.md) nebo kteréhokoli z našich dalších [partnerů MTD](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní. Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
 > 
 > Klasické zásady podmíněného přístupu pro aplikace MTD: 
 > 
-> - Používá Intune MTD k tomu, aby vyžadovala, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
+> - Používají Intune MTD k tomu, aby vyžadovaly, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení před komunikací s partnery MTD. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.  
+> - Nemusíte mít žádný vliv na žádné jiné cloudové aplikace ani prostředky.  
 > - Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
 > - Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.  
 > 
@@ -109,10 +110,10 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 5. Jako **typ profilu**vyberte **ATP Microsoft Defender (Windows 10 Desktop)** .
 6. Nakonfigurujte nastavení:
 
-   - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte **připojit** a přidejte konfigurační balíček do profilu. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+   - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte připojit a přidejte konfigurační balíček do profilu. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
   
      > [!NOTE]  
-     > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune **se automaticky připojí** ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
+     > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune se automaticky připojí ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
   
     - **Sdílení vzorků pro všechny soubory**: **Možnost Povolit** umožňuje shromažďovat vzorky a sdílet je s Microsoft Defender atp. Pokud se například zobrazí podezřelý soubor, můžete ho odeslat do ochrany ATP v programu Microsoft Defender pro hloubkovou analýzu. Nenakonfigurováno nesdílí žádné ukázky do ochrany ATP v programu Microsoft Defender.
     - **Urychlení generování sestav telemetrie**: U zařízení, která mají vysoké riziko, toto nastavení **Povolte** , aby se do služby ATP v programu Microsoft Defender nahlásí telemetrie častěji.
