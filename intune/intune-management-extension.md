@@ -68,7 +68,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
     - [Přepnutí úloh Configuration Manager do Intune](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads)
   
 > [!TIP]
-> Ujistěte se, že [](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) jsou zařízení připojená k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.
+> Ujistěte se, že [připojená](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network) jsou zařízení k Azure AD. Zařízení, která jsou [registrována](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) pouze ve službě Azure AD, nebudou přijímat vaše skripty.
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
@@ -174,7 +174,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
     > [!TIP]
     > **Rozšíření pro správu Microsoft Intune** je služba, která běží na zařízení stejně jako jakákoli jiná služba uvedená v aplikaci služby (Services. msc). Po restartování zařízení se tato služba může také restartovat a vyhledat všechny přiřazené skripty PowerShellu se službou Intune. Pokud je služba **rozšíření správy Microsoft Intune** nastavena na ruční, služba se po restartování zařízení nemusí restartovat.
 
-- Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti[](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) nebo organizaci (zaregistrovaná ve službě Azure AD), nebudou dostávat skripty.
+- Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti[zaregistrovaná](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) nebo organizaci ( ve službě Azure AD), nebudou dostávat skripty.
 - Klient rozšíření pro správu Intune se jednou za hodinu kontroluje v případě jakýchkoli změn ve skriptu nebo zásadách v Intune.
 - Potvrďte, že je rozšíření pro správu Intune stažené do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Skripty se nespouštějí na rozbočovačích Surface nebo Windows 10 v režimu S.

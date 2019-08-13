@@ -49,7 +49,7 @@ Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Int
 
 ### <a name="how-to-configure-macos-filevault"></a>Jak nakonfigurovat macOS trezor 
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a pokračujte na**profily** >  **Konfigurace** > zařízení**vytvořit profil**.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na**profily** >  **Konfigurace** > zařízení**vytvořit profil**.  
 
 2. Nastavte následující možnosti:  
 
@@ -93,7 +93,7 @@ Nakonfigurujte BitLocker při vytváření [profilu konfigurace zařízení](dev
 
 ### <a name="how-to-configure-windows-10-bitlocker"></a>Jak nakonfigurovat Windows 10 BitLocker  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a pokračujte v konfiguraci zařízení > Profily > vytvořit profil.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte v konfiguraci zařízení > Profily > vytvořit profil.  
 
 2. Nastavte následující možnosti:  
    - Platformy Windows 10 a novější  

@@ -27,7 +27,7 @@ ms.locfileid: "68671045"
 
 Sestava Microsoft Intuneho šifrování je centralizované umístění pro zobrazení podrobností o stavu šifrování spravovaných zařízení. Zobrazit podrobnosti o stavu šifrování zařízení a najít možnosti pro správu klíčů pro obnovení zařízení. Možnosti obnovovacího klíče, které jsou k dispozici, závisí na typu zařízení, které si prohlížíte.  
 
-Pokud chcete sestavu najít, přihlaste se [](https://go.microsoft.com/fwlink/?linkid=2090973) k Intune a pokračujte na **Konfigurace zařízení**a potom v části *monitorování*vyberte **Sestava šifrování**.  
+Pokud chcete sestavu najít, přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **Konfigurace zařízení**a potom v části *monitorování*vyberte **Sestava šifrování**.  
 
 ## <a name="view-encryption-details"></a>Zobrazit podrobnosti o šifrování  
 
@@ -180,7 +180,7 @@ Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní 
 - **Ruční rotace**: Jako správce můžete zobrazit informace o zařízení, které spravujete v Intune a který je zašifrovaný pomocí trezoru. Pak můžete zvolit ruční otočení obnovovacího klíče pro podniková zařízení. Obnovovací klíče pro osobní zařízení nemůžete otočit.  
 
   Otočení obnovovacího klíče: 
-  1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune, klikněte na **zařízení** a potom v části Spravovat vyberte **všechna zařízení**.  
+  1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), klikněte na **zařízení** a potom v části Spravovat vyberte **všechna zařízení**.  
   2. V seznamu zařízení vyberte zařízení, které je šifrované a pro které chcete otočit jeho klíč. Pak v části monitorování vyberte **klíče pro obnovení**.  
   3. V podokně klíče pro obnovení vyberte **otočit obnovovací klíč trezoru**.  
   
@@ -203,7 +203,7 @@ Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní 
 ## <a name="bitlocker-recovery-keys"></a>Obnovovací klíče nástroje BitLocker  
 
 Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže na portálu Intune můžete zobrazit ID klíčů a obnovovací klíče BitLockeru pro zařízení s Windows 10.  Aby bylo možné získat přístup k zařízení, musí mít uloží klíče ke službě Azure AD. 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune, klikněte na **zařízení** a potom v části *Spravovat*vyberte **všechna zařízení**.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), klikněte na **zařízení** a potom v části *Spravovat*vyberte **všechna zařízení**.  
 
 2. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.  
   

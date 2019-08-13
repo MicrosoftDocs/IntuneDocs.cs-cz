@@ -53,7 +53,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
 
 ## <a name="send-logs-to-azure-monitor"></a>Odeslat protokoly do Azure monitoru
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V části **monitorování**vyberte **nastavení diagnostiky**. Při prvním otevření ho zapněte:
 
     ![Zapnutím nastavení diagnostiky v Intune odešlete protokoly do Azure Monitor](media/diagnostics-settings-turn-on.png)
@@ -101,7 +101,7 @@ Protokoly auditu můžete exportovat i v jiných částech Intune, včetně regi
 
 Pokud například chcete exportovat protokoly auditu při používání dodržování předpisů zařízením:
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte > **protokoly auditu** **monitorování** >  **dodržování předpisů zařízením**:
 
     ![Výběr protokolů auditu pro směrování dat Intune do Azure Monitor úložiště, centra událostí nebo analýzy](media/audit-logs-under-monitor-in-compliance.png)

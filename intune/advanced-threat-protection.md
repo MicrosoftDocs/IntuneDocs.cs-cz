@@ -63,7 +63,7 @@ Prvním krokem je nastavení propojení mezi službou Intune a ATP v programu Mi
 
 ### <a name="to-enable-defender-atp"></a>Povolení ATP programu Defender  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **zařízení dodržování předpisů** > v**programu Microsoft Defender ATP**a pak pod *nastavením konektoru*vyberte **otevřít Security Center programu Microsoft Defender**.
 
     ![Výběrem otevřete Security Center programu Microsoft Defender.](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
@@ -103,7 +103,7 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 
 ### <a name="create-the-device-configuration-profile"></a>Vytvoření profilu konfigurace zařízení
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
@@ -129,7 +129,7 @@ Zásady dodržování předpisů určují úroveň rizika, kterou považujete za
 
 ### <a name="create-the-compliance-policy"></a>Vytvoření zásady dodržování předpisů  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
@@ -176,7 +176,7 @@ Zásada podmíněného přístupu blokuje přístup k prostředkům pro zaříze
 
 Dále Sledujte stav zařízení, která mají zásady dodržování předpisů ATP v programu Microsoft Defender.
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Dodržování zásad**.
 3. Vyhledejte v seznamu Zásady ochrany ATP v programu Microsoft Defender a podívejte se, která zařízení jsou kompatibilní nebo nekompatibilní.
 

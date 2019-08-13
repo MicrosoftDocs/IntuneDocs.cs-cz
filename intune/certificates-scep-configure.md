@@ -298,7 +298,7 @@ Konfigurace certifikační autority, aby žadateli umožňovala zadat dobu platn
 > [!IMPORTANT] 
 > Microsoft Intune Certificate Connector **musí** být nainstalovaný na samostatném serveru Windows. Nemůžete ho nainstalovat na vystavující certifikační autoritu. **Musí** být také nainstalovaný na stejném serveru jako role Služba zápisu síťových zařízení (NDES).
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace** > zařízení**certifikační konektory** > **Přidat**.
 3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupného ze serveru NDES, na který budete konektor instalovat.
 
@@ -351,7 +351,7 @@ Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadej
 
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento certifikát SCEP. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
