@@ -74,7 +74,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – filtr](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) .
 
 - **Zablokovat provádění neověřených souborů**  
-    Zablokuje uživateli spouštění neověřených souborů. Pokud je nastavení nastaveno na Nenakonfigurováno, zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. Nastavte na *Ano* , aby zaměstnanci nemohli ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.  
+    Zablokuje uživateli spouštění neověřených souborů. Pokud je nastavenínastaveno na Nenakonfigurováno, zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. Nastavte na *Ano* , aby zaměstnanci nemohli ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.  
   
     **Výchozí**: Ano
 
@@ -96,7 +96,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: Zablokovat 
 
 - **Zabránit krádeži pověření typu**  
-  Nastavením této  možnost povolíte [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Nastavením této možnost povolíte [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
 
   **Výchozí**: Povolení
 
@@ -478,7 +478,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.  
   **Výchozí**: Výchozí nastavení zařízení
 
-- **Profil brány firewall***FirewallRules/FirewallRuleName/profily*  -   
+- **Profil brány firewall** *FirewallRules/FirewallRuleName/profily*  -   
   Určuje profily, do kterých pravidlo patří: Doména, soukromý, veřejný. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
 
   Dostupná nastavení:  
