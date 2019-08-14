@@ -71,7 +71,7 @@ Příklad pracovního postupu:
 
 ## <a name="work-with-security-tasks"></a>Práce s úlohami zabezpečení  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a pokračujte na**úlohy zabezpečení** **zabezpečení** > zařízení.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na**úlohy zabezpečení** **zabezpečení** > zařízení.  
 2. Vyberte úlohu ze seznamu a otevřete tak okno prostředků, které zobrazí další podrobnosti pro tuto úlohu zabezpečení.  
 3. Při prohlížení okna prostředku úlohy zabezpečení můžete vybrat další odkazy:  
    - SPRAVOVANÉ aplikace – Prohlédněte si aplikaci, která je zranitelná. Pokud se ohrožení zabezpečení týká více aplikací, zobrazí se filtrovaný seznam aplikací.  
