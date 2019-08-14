@@ -32,7 +32,7 @@ Zjištěné **aplikace** v Intune jsou seznam zjištěných aplikací na zaříz
 
 Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zaregistrovaných v Intune ve vašem tenantovi.
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V podokně **Intune** vyberte **klientské aplikace** > **zjištěné aplikace**.
 
 >[!NOTE]
@@ -42,7 +42,7 @@ Intune poskytuje agregovaný seznam zjištěných aplikací na zařízeních zar
 
 Intune také nabízí seznam zjištěných aplikací pro jednotlivá zařízení ve vašem tenantovi. 
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V podokně Intune vyberte **zařízení** > **všechna zařízení**.
 3. Vyberte zařízení.
 4. Pokud chcete zobrazit zjištěné aplikace pro toto zařízení, vyberte v části **monitorování** **zjištěné aplikace** . 

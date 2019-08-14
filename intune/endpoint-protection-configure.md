@@ -38,7 +38,7 @@ Než vytvoříte profil, přečtěte si následující články, které podrobn�
 
 ## <a name="create-a-device-profile-containing-endpoint-protection-settings"></a>Vytvoření profilu zařízení obsahujícího nastavení ochrany koncových bodů  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.  
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).  
 3. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.  
 4. Zadejte **Název** a **Popis** profilu ochrany koncových bodů.  
 5. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:  

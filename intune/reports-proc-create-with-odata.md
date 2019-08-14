@@ -53,7 +53,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 > [!Note]  
 > Potřebujete oprávnění k **Sestavám** v Intune. Další informace najdete v sekci [Autorizace](reports-api-url.md).
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
 4. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 1. Otevřete Power BI Desktop.
@@ -106,7 +106,7 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky.
 
 
-1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a v části vizualizace vyberte **ikonu průřezu** (![mapa stromové struktury s](media/reports-create-slicer.png)datovým modelem a podporovanými vztahy).
+1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a v části vizualizace vyberte **ikonu průřezu** (![mapa stromové struktury s](media/reports-create-slicer.png)datovýmmodelem a podporovanými vztahy).
 2. Najděte tabulku **ownerTypes** a přetáhněte datové pole **ownerTypeName** do části **Filtry** na panelu **Vizualizace**.  
 
    V tabulce zařízení je datové pole s názvem **OwnerTypeKey**, které obsahuje kód, jestli je zařízení ve vlastnictví společnosti, nebo osobní. Protože v tomto filtru chcete zobrazit popisné názvy, najděte tabulku **ownerTypes** a přetáhněte **ownerTypeName**. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.

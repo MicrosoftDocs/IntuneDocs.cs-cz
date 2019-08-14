@@ -66,7 +66,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení pomoc
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 

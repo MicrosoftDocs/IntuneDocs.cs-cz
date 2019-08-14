@@ -327,7 +327,7 @@ Tato nastavení hesla platí pro osobní profilů na zařízeních používajíc
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-Pro zařízení s Androidem a [Windows 10](kiosk-settings.md) můžete [](device-restrictions-android.md#kiosk) také vytvořit profily pro celoobrazovkový terminály na vyhrazené zařízení.
+Pro zařízení s [Androidem](device-restrictions-android.md#kiosk) a [Windows 10](kiosk-settings.md) můžete  také vytvořit profily pro celoobrazovkový terminály na vyhrazené zařízení.
 
 ## <a name="see-also"></a>Viz také:
 

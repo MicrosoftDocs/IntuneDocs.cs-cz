@@ -27,7 +27,7 @@ ms.locfileid: "68374677"
 
 V Microsoft Intune můžete k přidávání certifikátů do zařízení použít profily certifikátů Simple Certificate Enrollment Protocol (SCEP) a PKCS (Public Key Cryptography Standards).
 
-Tyto certifikáty je možné odebrat, když [](devices-wipe.md#wipe) zařízení vymažete nebo vyřadíte z [provozu](devices-wipe.md#retire) . K dispozici jsou také scénáře, kdy se certifikáty automaticky odstraňují, a scénáře, kdy se certifikáty na zařízení nacházejí. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
+Tyto certifikáty můžete také odebrat tím, že zařízení [vymažete](devices-wipe.md#wipe) nebo [vyřadíte](devices-wipe.md#retire). K dispozici jsou také scénáře, kdy se certifikáty automaticky odstraňují, a scénáře, kdy se certifikáty na zařízení nacházejí. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
 
 > [!NOTE]
 > Pokud chcete odebrat a odvolat certifikáty pro uživatele, který se odebírá z místní služby Active Directory nebo Azure Active Directory (Azure AD), postupujte podle těchto kroků v uvedeném pořadí:
