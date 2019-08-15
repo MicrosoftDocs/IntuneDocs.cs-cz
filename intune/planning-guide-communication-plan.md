@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb5176189cb689c8341704440463881cb1aa7e4f
-ms.sourcegitcommit: 299d8d481f0edfa60041c5dff626e1f27bcbe252
+ms.openlocfilehash: cba8b59931bd60db0d9169af5016f01118c64cf0
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956569"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022833"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Příprava plánu komunikace při nasazení
 
@@ -50,7 +50,7 @@ Sdělované informace se liší podle toho, kdy je při zavádění Intune sděl
 
 **Po registraci**<br/> Sdělení zaměřená na konkrétní skupiny a uživatele v organizaci, u kterých byla služba Intune zavedena. Měla by obsahovat další materiály, které mohou být pro uživatele užitečné, a také shromáždit zpětnou vazbu ohledně registrace a používání.
 
-Pomoci vám může tento [průvodce registrací pro koncové uživatele](/enterprise-mobility-security/solutions/fasttrack-intune-enduser-enrollment-instructions). Můžete ho použít v nezměněné podobě nebo ho upravit na míru vaší organizaci.
+Tuto [sadu Intune pro přijetí](https://aka.ms/IntuneAdoptionKit) této služby můžete najít užitečné. Můžete ji použít tak, jak je, nebo upravit pro vaši organizaci.
 
 ## <a name="communication-delivery-methods"></a>Způsob komunikace
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/23/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f2e4870d1a2614ecccc1647db828e214a6aede8
-ms.sourcegitcommit: e9911a6bbfb8532a27e70d70402a214a8b2b6c75
+ms.openlocfilehash: 75e3f6ebf5d36777780ba77b7d503396ab808e22
+ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818794"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978567"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,17 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-august-5-2019"></a>Týden od 5. srpna 2019
+
+### <a name="zebra-technologies-is-a-supported-oem-for-oemconfig-on-android-enterprise-devices-----4843713---"></a>Technologie Zebra je podporovaným výrobcem OEM pro OEMConfig na zařízeních s Androidem Enterprise.  <!-- 4843713 -->
+
+V Intune můžete vytvořit profily konfigurace zařízení a použít nastavení pro zařízení s Androidem Enterprise pomocí OEMConfig (**Konfigurace** > zařízení**profily** > **vytvořit profil**  >   **Android Enterprise** for platform > **OEMConfig** pro typ profilu).
+
+V této aktualizaci je Zebra technologie podporovaným výrobcem OEM (Original Equipment Manufacturer) pro OEMConfig. Další informace o OEMConfig najdete v tématu [použití a Správa zařízení s Androidem Enterprise pomocí OEMConfig](android-oem-configuration-overview.md).
+
+Platí pro:  
+- Android Enterprise
 
 ## <a name="week-of-july-22-2019"></a>Týden od 22. července 2019 
 
@@ -138,7 +149,7 @@ Pomocí akce **Najít zařízení** můžete přiblížit přesnou souřadnici z
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-#### <a name="advanced-settings-for-windows-defender-firewall--public-preview-------1311949-------"></a>Rozšířená nastavení pro firewall v programu Windows Defender (Public Preview)  <!--  1311949     -->  
+#### <a name="advanced-settings-for-windows-defender-firewall--public-preview------1311949-------"></a>Rozšířená nastavení pro firewall v programu Windows Defender (Public Preview)  <!--  1311949     -->  
 Pomocí Intune můžete spravovat [vlastní pravidla brány firewall jako součást profilu konfigurace zařízení](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices) pro službu Endpoint Protection ve Windows 10. Pravidla mohou určovat příchozí a odchozí chování aplikací, síťových adres a portů. 
 
 #### <a name="updated-ui-for-managing-security-baselines------4091125-------"></a>Aktualizované uživatelské rozhraní pro správu standardních hodnot zabezpečení   <!-- 4091125     -->
@@ -235,7 +246,7 @@ Nové nastavení zobrazíte tak, že přejdete na [nastavení zařízení s Wind
 Platí pro: Windows 10 a novější
 
 #### <a name="deploy-multiple-zebra-mobility-extensions-device-profiles-to-a-device-same-user-group-or-same-devices-group----4089955---"></a>Nasazení více profilů zařízení rozšíření Zebra mobility na zařízení, stejnou skupinu uživatelů nebo stejnou skupinu zařízení <!-- 4089955 -->
-V Intune můžete použít rozšíření Zebra mobility (MX) v profilu konfigurace zařízení k přizpůsobení nastavení pro zařízení Zebra, která nejsou integrovaná do Intune. V současné době můžete nasadit jeden profil na jedno zařízení. V této aktualizaci můžete nasadit několik profilů do:
+V Intune můžete použít rozšíření Zebra mobility (MX) v profilu konfigurace zařízení k přizpůsobení nastavení pro Zebra zařízení, která nejsou integrovaná do Intune. V současné době můžete nasadit jeden profil na jedno zařízení. V této aktualizaci můžete nasadit několik profilů do:
 - Stejná skupina uživatelů
 - Stejná skupina zařízení
 - Jedno zařízení

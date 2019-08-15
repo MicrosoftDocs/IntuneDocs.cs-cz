@@ -4,7 +4,7 @@ description: Součástí Microsoft 365 Enterprise je Microsoft Intune. Podívejt
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 37a1c9fad9b77e39145f1b4183b8176fb1677613
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427316"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022870"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
@@ -75,7 +75,7 @@ Při nastavení Intune se také rozhodujete, jestli ke správě zařízení bude
 
 ## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Zjednodušení IT úloh pomocí centra pro správu správy zařízení
 
-Centrum pro správu [správy zařízení](https://devicemanagement.portal.azure.com/) je jedním z důvodů, jak spravovat a provádět úlohy pro vaše mobilní zařízení. Tento pracovní prostor zahrnuje služby používané pro správu zařízení, včetně Intune a Azure Active Directory, a také správu klientských aplikací. 
+Centrum pro správu [správy zařízení](https://devicemanagement.microsoft.com/) je jedním z důvodů, jak spravovat a provádět úlohy pro vaše mobilní zařízení. Tento pracovní prostor zahrnuje služby používané pro správu zařízení, včetně Intune a Azure Active Directory, a také správu klientských aplikací. 
 
 V centru pro správu správy zařízení můžete:
 

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c4b1541de3500089bafc388779a3cfe97fbd29
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
+ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756570"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68993702"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -60,31 +60,31 @@ Tento problém může být několik možných řešení:
 
 ##### <a name="remove-devices-that-were-enrolled"></a>Odebrat zařízení, která byla zaregistrována
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).    
-2. Přejít na **uživatele** > **Všichni uživatelé**.    
+2. Přejít na **uživatele** > **Všichni uživatelé**.    
 3. Vyberte příslušný účet uživatele a pak klikněte na **zařízení**.    
 4. Vyberte všechna nepoužívaná nebo nežádoucí zařízení a pak klikněte na **Odstranit**. 
 
-##### <a name="increase-thedevice-enrollment-limit"></a>Zvýšení limitu pro registraci zařízení
+##### <a name="increase-the-device-enrollment-limit"></a>Zvýšení limitu pro registraci zařízení
 
 > [!NOTE]
 > Tato metoda zvyšuje limit pro registraci zařízení pro všechny uživatele, nikoli jenom ovlivněného uživatele.
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
-2. Přejít na **registrace** >zařízení **omezení registrace**a pak vyberte **omezení limitů počtu zařízení**.    
+2. Přejít na **registrace** > zařízení**omezení registrace**a pak vyberte **omezení limitů počtu zařízení**.    
 3. Zvyšte hodnotu limitu počtu **zařízení**. 
 
-##### <a name="checkdevice-type-restrictions"></a>Ověřit omezení typu zařízení
-1. Přihlaste se k [portálu](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) Intune pomocí účtu globálního správce.
-2. V části **omezení typů zařízení**vyberte **výchozí** omezení registrace **zařízení** > .    
-3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .
+##### <a name="check-device-type-restrictions"></a>Ověřit omezení typu zařízení
+1. Přihlaste se k [portálu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) pomocí účtu globálního správce.
+2. V části **omezení typů zařízení**vyberte **výchozí** omezení registrace **zařízení** > .    
+3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .
 
     > [!IMPORTANT]
-    > Pokud je aktuální nastavení již **povoleno**, změňte ho na **blokovat**, uložte nastavení a pak ho změňte zpět na **povoleno** a uložte nastavení znovu. Tím se obnoví nastavení registrace.
+    > Pokud je aktuální nastavení již **povoleno**, změňte ho na **blokovat**, uložte nastavení a pak ho změňte zpět na **povoleno** a uložte nastavení znovu. Tím se obnoví nastavení registrace.
 
 4. Počkejte asi 15 minut a pak příslušné zařízení znovu zaregistrujte.    
 
 ##### <a name="upgrade-windows-10-home"></a>Upgradovat domovskou stránku Windows 10
-[Upgradujte Windows 10 Home na Windows 10 pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) nebo vyšší edici. 
+[Upgradujte Windows 10 Home na Windows 10 pro](https://support.microsoft.com/help/12384/windows-10-upgrading-home-to-pro) nebo vyšší edici. 
 
 
 
@@ -92,17 +92,17 @@ Tento problém může být několik možných řešení:
 
 Chyba 0x801c0003: "Tento uživatel není povolen k registraci. Můžete to zkusit znovu nebo se obraťte na správce systému a sdělte mu kód chyby 801c0003. "
 
-**Způsobit** **Uživatelé můžou připojovat zařízení k nastavení Azure AD** je nastavená na **žádná**. To zabrání novým uživatelům v připojení svých zařízení k Azure AD. Proto se registrace v Intune nezdařila.
+**Způsobit** **Uživatelé můžou připojovat zařízení k nastavení Azure AD** je nastavená na **žádná**. To zabrání novým uživatelům v připojení svých zařízení k Azure AD. Proto se registrace v Intune nezdařila.
 
 #### <a name="resolution"></a>Řešení
-1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
-2. Přejít na **Azure Active Directory** > **** zařízenínastavení zařízení.>     
-3. Nastavení **Uživatelé můžou připojovat zařízení ke službě Azure AD** **všem**.    
+1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
+2. Přejít na **Azure Active Directory** > **zařízení** > **nastavení zařízení**.    
+3. Nastavení **Uživatelé můžou připojovat zařízení ke službě Azure AD** **všem**.    
 4. Znovu zaregistrujte zařízení.   
 
 ### <a name="the-device-is-already-enrolled"></a>Zařízení je už zaregistrované.
 
-Chyba 8018000a: Něco se pokazilo. Zařízení je už zaregistrované.  Můžete se obrátit na správce systému s kódem chyby 8018000a. "
+Chyba 8018000a: Něco se pokazilo. Zařízení je už zaregistrované.  Můžete se obrátit na správce systému s kódem chyby 8018000a. "
 
 **Způsobit** Platí jedna z následujících podmínek:
 - Jiný uživatel už zařízení zaregistroval v Intune nebo se připojil k zařízení do Azure AD. Pokud chcete zjistit, jestli se jedná o tento případ, přejděte na **Nastavení** > **účty** > **pracovní přístup**. Vyhledejte zprávu, která bude vypadat přibližně takto: "Jiný uživatel v systému je již připojen k práci nebo škole. Odeberte prosím toto pracovní nebo školní připojení a zkuste to znovu. "    
@@ -136,7 +136,7 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 ### <a name="looks-like-the-mdm-terms-of-use-endpoint-is-not-correctly-configured"></a>Vypadá to, že koncový bod podmínek použití MDM není správně nakonfigurovaný.
 
 **Způsobit** Platí jedna z následujících podmínek: 
- - Pro Office 365 a Intune na tenantovi používáte správu mobilních zařízení (MDM) a uživatel, který se pokusí zaregistrovat zařízení, nemá platnou licenci Intune nebo licenci na Office 365.     
+ - Pro Office 365 a Intune na tenantovi používáte správu mobilních zařízení (MDM) a uživatel, který se pokusí zaregistrovat zařízení, nemá platnou licenci Intune nebo licenci na Office 365.     
 - Podmínky a ujednání MDM ve službě Azure AD jsou prázdné nebo neobsahují správnou adresu URL.    
 
 #### <a name="resolution"></a>Řešení
@@ -144,12 +144,12 @@ Přiřaďte uživateli platnou licenci Intune a pak zařízení zaregistrujte.
 Chcete-li tento problém vyřešit, použijte jednu z následujících metod: 
  
 ##### <a name="assign-a-valid-license-to-the-user"></a>Přiřadit uživateli platnou licenci
-Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home)a přiřaďte uživateli buď licenci Intune, nebo Office 365.
+Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home)a přiřaďte uživateli buď licenci Intune, nebo Office 365.
 
-##### <a name="correct-themdm-terms-of-use-url"></a>Opravte adresu URL podmínek použití MDM.
-  1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.    
-  2. Vyberte **mobilita (MDM a mam)** a pak klikněte na **Microsoft Intune**.    
-  3. Vyberte **Obnovit výchozí adresy URL MDM**a ověřte, že **Adresa URL podmínek použití MDM** je nastavená na **https://portal.manage.microsoft.com/TermsofUse.aspx** .    
+##### <a name="correct-the-mdm-terms-of-use-url"></a>Opravte adresu URL podmínek použití MDM.
+  1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.    
+  2. Vyberte **mobilita (MDM a mam)** a pak klikněte na **Microsoft Intune**.    
+  3. Vyberte **Obnovit výchozí adresy URL MDM**a ověřte, že **Adresa URL podmínek použití MDM** je nastavená na **https://portal.manage.microsoft.com/TermsofUse.aspx** .    
   4. Zvolte **Uložit**.    
 
 
@@ -164,10 +164,10 @@ Chyba 80180026: Něco se pokazilo. Potvrďte, že používáte správné přihla
 #### <a name="resolution"></a>Řešení
 K vyřešení tohoto problému použijte jednu z následujících metod:
 
-##### <a name="disablemdm-automatic-enrollment-in-azure"></a>Zakáže automatickou registraci MDM v Azure.
-1. Přihlaste se k [Azure Portal](https://portal.azure.com/).    
-2. Přejít na **Azure Active Directory** > **mobility (MDM a mam)**  > **Microsoft Intune**.    
-3. Nastavte **obor uživatele MDM** na **žádný**a pak klikněte na **Uložit**.    
+##### <a name="disable-mdm-automatic-enrollment-in-azure"></a>Zakáže automatickou registraci MDM v Azure.
+1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/).    
+2. Přejít na **Azure Active Directory** > **mobility (MDM a mam)**  > **Microsoft Intune**.    
+3. Nastavte **obor uživatele MDM** na **žádný**a pak klikněte na **Uložit**.    
      
 ##### <a name="uninstall"></a>Odinstalace
 Odinstalujte klientský počítač Intune nebo Configuration Manager klientského agenta z počítače.    
@@ -179,8 +179,8 @@ Chyba: "Software nelze nainstalovat, 0x80cf4017."
 **Způsobit** Software klienta není aktuální.
 
 #### <a name="resolution"></a>Řešení
-1. Přihlaste [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)se k.    
-2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
+1. Přihlaste se k webu [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software. 
 
 
@@ -191,22 +191,22 @@ Chyba: "Certifikát účtu není platný a pravděpodobně vypršela jeho platno
 **Způsobit** Software klienta není aktuální.
 
 #### <a name="resolution"></a>Řešení
-1. Přihlaste [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com)se k.    
-2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
+1. Přihlaste se k webu [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
+2. Přejděte na **správce** > **klientského softwaru ke stažení**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Vaše organizace nepodporuje tuto verzi Windows. 
 
-Chyba: "Došlo k problému. Vaše organizace nepodporuje tuto verzi Windows.  (0x80180014)"
+Chyba: "Došlo k problému. Vaše organizace nepodporuje tuto verzi Windows.  (0x80180014)"
 
 **Způsobit** Registrace Windows MDM je v tenantovi Intune zakázaná.
 
 #### <a name="resolution"></a>Řešení
 Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupujte takto: 
  
-1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
-2. Na levé straně vyberte Intune a pak použijte**omezení registrace** ****  > zařízení.    
-3. V nabídce **omezení typu zařízení**klikněte **na platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .    
+1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
+2. Na levé straně vyberte Intune a pak použijte**omezení registrace** > zařízení.    
+3. V nabídce **omezení typu zařízení**klikněte na **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .    
 4. Klikněte na **Uložit**.    
  
 Pokud chcete tento problém vyřešit v hybridním MDM s Intune a Configuration Manager, postupujte takto: 
@@ -221,11 +221,11 @@ Pokud chcete tento problém vyřešit v hybridním MDM s Intune a Configuration 
 **Způsobit** Uživatelské účty Azure AD v balíčku účtů (Package_GUID) pro příslušný zřizovací balíček neumožňují připojení zařízení ke službě Azure AD. Tyto účty Azure AD se automaticky vytvoří při nastavení zřizovacího balíčku pomocí nástroje Windows Configuration Designer (WCD) nebo nastavení aplikace školních počítačů. tyto účty se pak použijí pro připojení zařízení k Azure AD.
 
 #### <a name="resolution"></a>Řešení
-1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
+1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
 2. Přejít na **Azure Active Directory > zařízení > nastavení zařízení**.    
-3. Nastavení uživatelé můžou ke **všem** nebo vybraným uživatelům připojovat ****  **zařízení do Azure AD** .
+3. Nastavení uživatelé můžou ke **všem** nebo vybraným **uživatelům připojovat zařízení do Azure AD** .
 
-   Pokud zvolíte **vybrané**, klikněte na **** vybrat a potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
+   Pokud zvolíte **vybrané**, klikněte navybrat a potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
  
 Další informace o tom, jak vytvořit zřizovací balíček pro Windows Configuration Designer, najdete v tématu [Vytvoření zřizovacího balíčku pro Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
 
@@ -246,7 +246,7 @@ Při automatickém pokusu o registraci zařízení s Windows 10 pomocí Zásady 
     ```
 **Způsobit** Platí jedna z následujících podmínek: 
 - Hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné domény, například. Local (jako joe@contoso.local).    
-- **Obor uživatele MDM**je nastavený na **None (žádné**).  
+- **Obor uživatele MDM** je nastavený na **None (žádné**). 
 
 #### <a name="resolution"></a>Řešení
 Pokud hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné domény, použijte následující postup: 
@@ -261,7 +261,7 @@ Pokud hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné dom�
     Start-ADSyncSyncCycle -PolicyType Delta
     ```
 
-Pokud je  **obor uživatele MDM**nastavený na **None (žádné**), postupujte takto: 
+Pokud je **obor uživatele MDM** nastavený na **None (žádné**), postupujte takto: 
  
 1. Přihlaste se k [Azure Portal](https://portal.azure.com/)a pak vyberte **Azure Active Directory**.
 2. Vyberte **mobilita (MDM a mam)** a pak vyberte **Microsoft Intune**.    
@@ -382,7 +382,7 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
 11. Vyberte **Další** > **Dokončit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Řešení potíží s registrací zařízení v Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Zeptejte se fóra služby Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)

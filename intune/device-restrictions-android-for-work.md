@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/05/2019
+ms.date: 08/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 35676b95356df002fdd784f67110f048643e444e
+ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883432"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69022883"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -92,6 +92,9 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
   2. Zvolte **OK** > **OK** a přidejte tak aplikaci.
 
+  > [!IMPORTANT]
+  > Pokud používáte celoobrazovkový režim s jednou aplikací, aplikace Dial/Phone nemusí správně fungovat. 
+  
 - **Více aplikací**: Uživatelé mají přístup k omezené sadě aplikací na zařízení. Při spuštění zařízení, spustit pouze aplikace, které přidáte. Můžete také přidat některé webové odkazy, které uživatelé můžou otevírat. Když se zásady vztahují, uživatelé uvidí ikony pro povolené aplikace na domovské obrazovce.
 
   > [!IMPORTANT]
@@ -101,7 +104,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   > 
   > **Spravované domovskou obrazovku** aplikace nemusí být v profilu konfigurace, ale je potřeba přidat jako klientská aplikace. Když se **spravovaná** aplikace pro domovskou obrazovku přidá jako klientská aplikace, všechny ostatní aplikace, které přidáte do konfiguračního profilu, se zobrazí jako ikony v aplikaci **spravované domovské obrazovky** . 
   >
-  > Pokud používáte celoobrazovkový režim s více aplikacemi se spravovanou domovskou obrazovkou, nemusí aplikace pro telefonování a telefon fungovat správně. 
+  > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
 
   - Zvolte **přidat**a vyberte ze seznamu aplikací.
 
