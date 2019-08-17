@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35676b95356df002fdd784f67110f048643e444e
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022883"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550185"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -85,12 +85,9 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
 - **Jedna aplikace**: Uživatelé mají přístup jenom k jedné aplikaci na zařízení. Při spuštění zařízení spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
 
-  **Kroky**
-  1. Zvolte **Vyberte spravovanou aplikaci**a vyberte ze seznamu spravovaných aplikací Google Play. 
+  - **Vyberte spravovanou aplikaci**: Ze seznamu vyberte spravovanou aplikaci Google Play.
 
-      Pokud nemáte žádné aplikace, pak uvedené [přidat některé aplikace pro Android](apps-add-android-for-work.md) do zařízení. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](apps-deploy.md).
-
-  2. Zvolte **OK** > **OK** a přidejte tak aplikaci.
+    Pokud nemáte žádné aplikace, pak uvedené [přidat některé aplikace pro Android](apps-add-android-for-work.md) do zařízení. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](apps-deploy.md).
 
   > [!IMPORTANT]
   > Pokud používáte celoobrazovkový režim s jednou aplikací, aplikace Dial/Phone nemusí správně fungovat. 
@@ -106,41 +103,63 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   >
   > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
 
-  - Zvolte **přidat**a vyberte ze seznamu aplikací.
+  - **Přidat**: Vyberte své aplikace ze seznamu.
 
     Pokud **spravované domovskou obrazovku** aplikace není uvedená, pak [přidat na webu Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](apps-deploy.md) ke skupině zařízení vytvořené pro vaše vyhrazená zařízení.
 
     Můžete také přidat další [aplikace pro Android](apps-add-android-for-work.md) a [webové aplikace](web-app.md) vytvořená vaší organizací na zařízení. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](apps-deploy.md).
 
-  - **Tlačítko virtuální domů**: Výběrem možnosti **Povolit** zobrazíte na vyhrazeném zařízení tlačítko domů. Při výběru, vrátí uživatele na domovské obrazovce zařízení, uživatelé mohou snadno přepínat mezi aplikacemi. Na některých zařízeních s Androidem můžou uživatelé muset potažením prstem přejděte na obrazovce zobrazit tlačítko Domů. **Zakázat** nezobrazí tlačítko Domů, takže uživatelé musí použijte tlačítko Zpět. Chcete-li přepnout mezi aplikacemi.
-  - **Opustit celoobrazovkový režim**: Zvolením možnosti **Povolit** správcům umožníte dočasně pozastavit celoobrazovkový režim a aktualizovat zařízení. Chcete-li použít tuto funkci, správce: 
-  
-    1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko Ukončit celoobrazovkový. 
-    2. Vybere tlačítko a přejde do **režimu opuštění kódu PIN pro celoobrazovkový režim** .
-    3. Po dokončení změn, vyberte **spravované domovskou obrazovku** aplikace. Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi. 
+  - **Tlačítko virtuální domů**: Tlačítko měkkého klíče, které vrátí uživatele do spravované domovské obrazovky, aby uživatelé mohli přepínat mezi aplikacemi. Možnosti:
 
-    **Zakázat** nedává možnost pozastavit beznabídkový režim. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko Ukončit veřejný terminál, zobrazí se zpráva, že je vyžadováno heslo.
+    - **Není nakonfigurováno** (výchozí): Tlačítko domů není zobrazeno. Uživatelé musí použít tlačítko zpět k přepínání mezi aplikacemi.
+    - **Potáhnutí nahoru**: Tlačítko domů se zobrazí, když uživatel na zařízení potáhne.
+    - **Plovoucí**: Zobrazuje trvalé a plovoucí tlačítko domů na zařízení.
+
+  - **Opustit celoobrazovkový režim**: Zvolením možnosti **Povolit** správcům umožníte dočasně pozastavit celoobrazovkový režim a aktualizovat zařízení. Chcete-li použít tuto funkci, správce:
+  
+    1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko **ukončit veřejný terminál** . 
+    2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
+    3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi.
+
+      Pokud se nastavíjako nenakonfigurované, správci nemůžou pozastavit celoobrazovkový režim. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
 
     - **Ponechat kód celoobrazovkového režimu**: Zadejte číslici PIN s číslem 4-6. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
 
   - **Nastavit vlastní pozadí adresy URL**: Zadejte adresu URL pro přizpůsobení obrazovky na pozadí na vyhrazeném zařízení.
-    
+
     > [!NOTE]
     > Ve většině případů doporučujeme začít s imagemi alespoň následujících velikostí:
     >
     > - Hovor 1080x1920 px
     > - Tlačítk 1080 px
-    >    
+    >
     > Pro dosažení co nejlepších výsledků a zaostření podrobností je navrženo, že se pro jednotlivé položky obrázku zařízení vytvořily specifikace zobrazení.
     >
     > Moderní displeje mají vyšší hustotu pixelů a můžou zobrazovat ekvivalentní image definice 2K/4K.
-  - **Konfigurace Wi-Fi**: Vyberte **Povolit** , pokud chcete koncovým uživatelům povolit připojení zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. **Není nakonfigurováno** (výchozí) zabraňuje uživatelům v připojení k sítím Wi-Fi na spravované domovské obrazovce (režim uzamčení úlohy).
 
-    Další informace o [režimu uzamčení úloh](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (Otevírá web Androidu).
+  - **Konfigurace Wi-Fi**: **Možnost Povolit** zobrazí ovládací prvek Wi-Fi na spravované domovské obrazovce a koncovým uživatelům umožňuje připojit zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. **Není nakonfigurováno** (výchozí) nezobrazuje ovládací prvek Wi-Fi na spravované domovské obrazovce. Zabraňuje uživatelům v připojení k sítím Wi-Fi při použití spravované domovské obrazovky.
 
-  - **Konfigurace Bluetooth**: Výběrem možnosti **Povolit** povolte Bluetooth na zařízení a koncovým uživatelům povolte párování zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. **Není nakonfigurováno** (výchozí) zabraňuje uživatelům v konfiguraci zařízení Bluetooth a párování zařízení, když se nachází na spravované domovské obrazovce (režim uzamčení úlohy). 
+  - **Konfigurace Bluetooth**: **Možnost Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a koncovým uživatelům umožňuje párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. **Není nakonfigurováno** (výchozí) nezobrazuje ovládací prvek Bluetooth na spravované domovské obrazovce. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
 
-    Další informace o [režimu uzamčení úloh](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (Otevírá web Androidu).
+  - **Svítící přístup**: **Možnost Povolit** zobrazí ovládací prvek svítící na spravované domovské obrazovce a koncovým uživatelům umožňuje zapnout nebo vypnout svítící. **Není nakonfigurováno** (výchozí) nezobrazuje ovládací prvek svítící na spravované domovské obrazovce. Zabraňuje uživatelům v používání svítící při použití spravované domovské obrazovky.
+
+  - **Ovládací prvek hlasitost média**: **Možnost Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a koncovým uživatelům umožňuje upravit hlasitost média zařízení pomocí posuvníku. **Není nakonfigurováno** (výchozí) nezobrazuje ovládací prvek hlasitost multimédií na spravované domovské obrazovce. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují. 
+
+  - **Režim spořiče obrazovky**: Když je zařízení zamknuté nebo odcházející, zobrazí se na spravované domovské obrazovce spořič obrazovky. **Není nakonfigurováno** (výchozí) nezobrazuje spořič obrazovky na spravované domovské obrazovce.
+
+    Pokud je tato možnost povolená, nakonfigurujte taky:
+
+    - **Nastavit vlastní obrázek spořiče obrazovky**: Zadejte adresu URL vlastního obrázku. Zadejte například:
+
+      - `http://www.contoso.com/image.jpg`
+      - `www.contoso.com/image.bmp`
+      - `https://www.contoso.com/image.html`
+
+      Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image.
+
+    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: Vyberte, jak dlouho zařízení zobrazuje spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota `0` je sekund. Pokud je ponecháno prázdné nebo je nastaveno na`0`hodnotu nula (), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
+    - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: Vyberte, jak dlouho je zařízení nečinné, než se zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota `30` je sekund. Je nutné zadat číslo větší než nula (`0`).
+    - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. Nenakonfigurováno zobrazuje spořič obrazovky i v případě, že přehrávání zvuku nebo videa probíhá.
 
 ### <a name="device-password-settings"></a>Nastavení hesla zařízení
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 91440bc536869fb0559bf7be12386434f217d229
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: df090e0e942291d5430b101db378aca296466bf9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993764"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549991"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -207,14 +207,14 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     |------------------------------------------|------------------------------------------|
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vždy vyžadovat heslo pro nezabezpečená zařízení, pokud není přístup kontrolován jiným způsobem (například celoobrazovkový režim, který zařízení omezuje na jednu aplikaci). |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
-    | <strong>Obnovení</strong> | Zobrazí obrazovku **Aplikace a data**. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
-    | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého **Apple ID** a používat **iCloud**.                         |
+    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
+    | <strong>iCloud a Apple ID</strong> | Poskytněte uživateli možnosti přihlašovat se pomocí Apple ID a používat iCloud.                         |
     | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. |
     | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. |
     | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. |
     | <strong>Přiblížení</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
     | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
-    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku **Diagnostická data**. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
+    | <strong>Diagnostická data</strong> | Zobrazit obrazovku diagnostiky uživateli Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
     | <strong>Zobrazit tónový displej</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
     | <strong>Důvěrnost</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
     | <strong>Migrace pro Android</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
@@ -224,6 +224,11 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
     | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
     | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. |
+    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
+    | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
+    | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení.|
+    
 
 16. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 

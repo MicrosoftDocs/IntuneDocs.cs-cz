@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e6a003e4ab912452f278c838c600f75ddec0c1f5
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 3a51951d02d73a0d79f6246dd9502c3c7fe89759
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885129"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550087"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Správa zařízení s pracovním profilem Androidu v Intune
 
@@ -68,7 +68,7 @@ Používané zásady ochrany aplikace jsou plně podporované v pracovním i o
 
 Podpora sítě VPN je podobná profilům Android VPN. Pro správu Android Enterprise jsou k dispozici stejné poskytovatele sítě VPN a možnosti základní konfigurace se dvěma rozdíly:
 
-- **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Připojení VPN můžou používat jenom aplikace spravované pro Android firemním. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu [nastavení sítě VPN pro Android Enterprise](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **Síť VPN vymezená pro pracovní profil** – připojení VPN jsou omezená jenom na aplikace nasazené do pracovního profilu. Připojení VPN můžou používat jenom aplikace spravované pro Android firemním. Osobní aplikace na zařízení spravované připojení VPN použít nemůžou. Další informace najdete v tématu [nastavení sítě VPN pro Android Enterprise](vpn-settings-android-enterprise.md).
 
 - **Síť VPN specifická pro aplikaci** – tuto síť lze v Intune nakonfigurovat, pokud poskytovatel VPN podporuje:
   - Konfiguraci sítě VPN specifické pro aplikaci

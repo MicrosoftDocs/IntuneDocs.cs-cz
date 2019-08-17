@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e46eae92dfa145f1fc2b38379285dbb45b24590
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680078"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550064"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
 
@@ -44,6 +44,13 @@ Obchodní aplikace pro Windows 10 jsou podepsané a nahrané v konzole správce 
 ## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
 
 Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené z portálu pro správu Microsoft Store pro firmy a pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít **online licenci** nebo **offline licenci**. Aktualizace Microsoft Store pro obchodní aplikace se spravují přímo pomocí Microsoft Store, a to bez další akce, kterou vám vyžaduje správce. Můžete taky zabránit aktualizacím konkrétních aplikací pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Koncový uživatel může na svém zařízení automatické aktualizace aplikací z Microsoft Storu pro firmy také zakázat. 
+
+### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorizace Microsoft Store pro obchodní aplikace 
+K kategorizaci Microsoft Store pro obchodní aplikace použijte následující postup: 
+
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte**aplikace** **klienta** > aplikace > vyberte**kategorii**aplikace Microsoft Store pro firmy > **informace** > . 
+3. V rozevírací nabídce vyberte kategorii.
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Instalace aplikací na zařízeních s Windows 10
 V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 instalovat jedním ze dvou způsobů:

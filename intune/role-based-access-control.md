@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 935d8d0803e5bcfcd25703295f84f24b664f7fce
-ms.sourcegitcommit: 02fb7ceae60d0e2cfa42fb7d017753c7437ccf59
+ms.openlocfilehash: 83b1de6c246baaef54a31c0b3f4c5094d066c64d
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68913833"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69549963"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Řízení přístupu na základě role (RBAC) s Microsoft Intune
 
@@ -90,11 +90,11 @@ Pokud > chcete zobrazit přiřazení role, vyberte > role Intune**všechny role*
 - **[Scope (značky)](scope-tags.md)** : Uživatelé v členovi mohou zobrazit prostředky, které mají stejné značky oboru.
 
 ### <a name="multiple-role-assignments"></a>Přiřazení více rolí
-Pokud má uživatel více přiřazení rolí, oprávnění v těchto přiřazeních rolí se rozšiřuje na různé objekty následujícím způsobem:
+Pokud má uživatel více než jedno přiřazení rolí, oprávnění a značky oboru, přiřazení těchto rolí se rozšiřuje na různé objekty následujícím způsobem:
 
-- Oprávnění k přiřazení platí jenom pro objekty (jako jsou zásady nebo aplikace) v oboru přiřazení této role (skupiny). Přiřazení oprávnění neplatí pro objekty v jiných přiřazeních rolí, pokud jiné přiřazení je konkrétně neuděluje.
-- Další oprávnění (například vytváření a čtení) se vztahují na všechny objekty stejného typu (jako jsou všechny zásady nebo všechny aplikace) v libovolném přiřazení uživatele.
-- Oprávnění pro objekty různých typů (jako jsou zásady nebo aplikace) se nevztahují na sebe navzájem. Oprávnění ke čtení pro zásady například neposkytuje oprávnění ke čtení pro aplikace v přiřazení uživatele.
+- Přiřazení oprávnění a značek oboru platí jenom pro objekty (jako jsou zásady nebo aplikace) v oboru přiřazení této role (skupiny). Přiřadit oprávnění a značky oboru se nevztahují na objekty v jiných přiřazeních rolí, pokud jiné přiřazení je výslovně neudělí.
+- Další oprávnění (například vytváření, čtení, aktualizace, odstranění) a značky oboru se vztahují na všechny objekty stejného typu (jako jsou všechny zásady nebo všechny aplikace) v libovolném přiřazení uživatele.
+- Značky oprávnění a oboru pro objekty různých typů (jako jsou zásady nebo aplikace) se nevztahují na sebe navzájem. Oprávnění ke čtení pro zásady například neposkytuje oprávnění ke čtení pro aplikace v přiřazení uživatele.
 
 ## <a name="next-steps"></a>Další postup
 - [Přiřazení role uživateli](assign-role.md)

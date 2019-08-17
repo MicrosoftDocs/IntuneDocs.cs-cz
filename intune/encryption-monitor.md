@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
-ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
+ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
+ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671045"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550116"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune   
 
@@ -102,15 +102,15 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
   Následují příklady podrobností o stavu, které může Intune hlásit:  
   
   **macOS**:
-  - Profil teď nejde nainstalovat, protože čekáme na požadovanou součást.  
+  - Obnovovací klíč nebyl dosud načten a uložen. Pravděpodobně zařízení není odemknuté nebo nebylo vráceno se změnami.  
  
-    *Byste Tento výsledek nemusí nutně představovat chybový stav, ale dočasný stav, který by mohl být způsoben časováním zařízení, ve kterém se musí před odesláním požadavku na šifrování na zařízení nastavit v úschově pro obnovovací klíče. To může také znamenat, že zařízení zůstává uzamčené nebo se v nedávné době nevrátilo s Intune. Vzhledem k tomu, že šifrování trezoru se nespustí, dokud není zařízení zapojené do elektrické sítě (zpoplatněné), může uživatel obdržet obnovovací klíč pro zařízení, které ještě není*zašifrované.  
+    *Byste Tento výsledek nemusí nutně představovat chybový stav, ale dočasný stav, který by mohl být v důsledku časování na zařízení, kde musí být v úschově pro obnovovací klíče nastavené před odesláním požadavku na šifrování do zařízení. Tento stav může také indikovat, že zařízení zůstává uzamčené nebo se v nedávné době nevrátilo s Intune. Vzhledem k tomu, že šifrování trezoru se nespustí, dokud není zařízení zapojené do elektrické sítě (zpoplatněné), může uživatel obdržet obnovovací klíč pro zařízení, které ještě není*zašifrované.  
 
-  - Profil trezoru úložiště je nainstalovaný, ale na zařízení není povolený trezor.  
+  - Uživatel odvozuje šifrování nebo právě probíhá šifrování.  
  
     *Byste Buď se uživatel ještě odhlásil po přijetí požadavku na šifrování, který je nezbytný předtím, než může trezor zařízení zašifrovat zařízení, nebo uživatel zařízení ručně dešifroval. Intune nemůže zabránit uživateli v dešifrování svého zařízení.*  
 
-  - Trezor je už povolený uživatelem, takže Intune nemůže spravovat jeho obnovení.  
+  - Zařízení je už zašifrované. Aby bylo možné pokračovat, musí uživatel zařízení zařízení dešifrovat.  
  
     *Byste Intune nemůže nastavit trezor úložiště pro zařízení, které je už zašifrované. Místo toho musí uživatel ručně dešifrovat svoje zařízení, aby ho bylo možné spravovat pomocí zásad konfigurace zařízení a Intune*. 
  
@@ -118,9 +118,9 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
  
     *Byste Počínaje verzí MacOS 10,15 (Catalina) může nastavení registrace schválená uživatelem způsobit požadavek, aby uživatelé ručně schválili šifrování trezoru. Další informace najdete v dokumentaci k [registraci schválené uživatelem](macos-enroll.md) v dokumentaci*k Intune.  
 
-  - zařízení s iOS vrátilo NotNow (je uzamčené).  
+  - Neznámý.  
 
-    *Byste Zařízení je momentálně uzamčené a Intune nemůže spustit proces v úschově nebo šifrování. Po odemknutí zařízení může pokračovat*průběh.  
+    *Byste Jednou z možných příčin neznámého stavu je, že zařízení je uzamčené a Intune nemůže spustit proces v úschově nebo šifrování. Po odemknutí zařízení může pokračovat*průběh.  
 
   **Windows 10**:  
   - Zásada BitLockeru vyžaduje souhlas uživatele, aby mohl spustit Průvodce nástroj BitLocker Drive Encryption pro spuštění šifrování svazku s operačním systémem, ale uživatel nesouhlasí.  
@@ -149,7 +149,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
   
   - Prostředí Windows Recovery Environment (WinRE) není nakonfigurováno.  
   
-  - ČIP TPM není k dispozici pro BitLocker, protože není k dispozici, v registru byl nedostupný, nebo je operační systém na vyměnitelném disku.  
+  - ČIP TPM není k dispozici pro BitLocker, protože není k dispozici, je v registru nedostupný, nebo je operační systém na vyměnitelném disku.  
   
   - ČIP TPM není připravený na BitLocker.  
   
@@ -161,7 +161,7 @@ Při prohlížení podokna sestavy šifrování můžete vybrat **exportovat** a
   
 ![Exportovat podrobnosti](./media/encryption-monitor/export.png) 
  
-Tato sestava může být používána při identifikaci problémů pro skupiny zařízení. Sestavu můžete například použít k identifikaci seznamu zařízení macOS, která *už uživatel povolil*. to znamená, že zařízení, která se musí ručně dešifrovat, než může Intune začít spravovat jejich nastavení trezoru.  
+Tato sestava může být používána při identifikaci problémů pro skupiny zařízení. Můžete například použít sestavu k identifikaci seznamu zařízení macOS, která *je už povolená uživatelem*, což znamená, že zařízení, která se musí ručně dešifrovat, než může Intune spravovat jeho nastavení trezoru.  
  
 ## <a name="filevault-recovery-keys"></a>Klíče obnovení trezoru úložišť   
 Když Intune nejdřív zašifruje zařízení macOS s trezorem, vytvoří se osobní obnovovací klíč. Po zašifrování zařízení zobrazí pro koncového uživatele Tento osobní klíč jednou.  
@@ -202,7 +202,7 @@ Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní 
 
 ## <a name="bitlocker-recovery-keys"></a>Obnovovací klíče nástroje BitLocker  
 
-Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže na portálu Intune můžete zobrazit ID klíčů a obnovovací klíče BitLockeru pro zařízení s Windows 10.  Aby bylo možné získat přístup k zařízení, musí mít uloží klíče ke službě Azure AD. 
+Intune poskytuje přístup k oknu Azure AD pro BitLocker, takže můžete na portálu Intune zobrazit ID klíčů a obnovovací klíče BitLockeru pro zařízení s Windows 10.  Aby bylo možné získat přístup k zařízení, musí mít uloží klíče ke službě Azure AD. 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), klikněte na **zařízení** a potom v části *Spravovat*vyberte **všechna zařízení**.  
 
 2. V seznamu vyberte zařízení a potom v části *monitorování*vyberte **klíče pro obnovení**.  
@@ -216,6 +216,6 @@ Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nena
 
 Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.  
 
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další postup  
 
 Vytvořte zásady [dodržování předpisů pro zařízení](compliance-policy-create-windows.md) .
