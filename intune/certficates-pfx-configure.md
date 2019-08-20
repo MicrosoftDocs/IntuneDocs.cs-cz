@@ -6,7 +6,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 08/15/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cc5b26001c9ceacd5781fc8164ce141c5e42de3
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 330bfa319ca0202a5edc09d8f27e40c18ce89d39
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550153"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582946"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -223,6 +223,9 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 4. Vyberte **OK** > **Vytvořit** a profil uložte.
 5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](device-profile-assign.md).
 
+   > [!NOTE]
+   > V zařízeních s profilem podnikového systému Android nejsou v zařízení vidět certifikáty nainstalované pomocí profilu certifikátu PKCS. Pokud chcete potvrdit úspěšné nasazení certifikátu, zkontrolujte stav profilu v konzole Intune.
+
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Vytvoření importovaného profilu certifikátu PKCS
 
 Certifikáty, které se dřív vystavily pro konkrétního uživatele, můžete importovat z libovolné certifikační autority v nástroji do Intune. Importované certifikáty se nainstalují na každé zařízení, které si uživatel zaregistruje. Šifrování e-mailu pomocí S/MIME je nejběžnějším scénářem pro import existujících certifikátů PFX do Intune. Uživatel může mít k šifrování e-mailů mnoho certifikátů. Privátní klíče těchto certifikátů se musí nacházet na všech zařízeních uživatele, aby bylo možné dešifrovat dříve šifrované e-maily.
@@ -278,7 +281,7 @@ Aktualizace pro dvě konektory certifikátů jsou vydávány pravidelně. Když 
   - Opravili jsme problém, kdy se konektoru nepodaří zaregistrovat se do Intune po přihlášení ke konektoru s globálním účtem správce.  
 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 

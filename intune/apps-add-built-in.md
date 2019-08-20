@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a424655241f44125b51ef2f75cb6c537b10dd91d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2a94542311bc5ff4a25b2f9c6229898b1d891c6c
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049515"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582849"
 ---
 # <a name="add-built-in-apps-to-microsoft-intune"></a>Přidání integrovaných aplikací do Microsoft Intune
 
@@ -55,20 +55,20 @@ Informace o integrované aplikaci můžete upravit. Tyto informace vám pomůžo
 2. V části **Spravovat** vyberte možnost **Vlastnosti**.
 3. Informace o integrované aplikaci můžete upravovat výběrem možnosti **Konfigurovat**.
 4. V podokně **Informace o aplikaci** je možné upravit následující údaje:
-    - **Název**: Zadejte název integrované aplikace, který se zobrazí v aplikaci portál společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
+    - **Název**: Zadejte název integrované aplikace, který se zobrazí na portálu společnosti. Všechny používané názvy musí být jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti uživatelům jenom jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. 
-    - **Publisher**: Zadejte název vydavatele aplikace.
-    - **Kategorie**: Volitelně vyberte jednu nebo více kategorií integrovaných aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
-    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Kategorie**: Volitelně můžete vybrat jednu nebo více předdefinovaných kategorií aplikací. Nastavením této možnosti uživatelům usnadníte vyhledání aplikace při procházení portálu společnosti.
+    - **Zobrazit na portálu společnosti jako vybranou aplikaci**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace (například *Personální oddělení*).
-    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
-    - **Nahrát ikonu**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
+    - **Adresa URL ochrany osobních údajů**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně můžete zadat název vývojáře aplikace.
+    - **Vlastník**: Volitelně můžete zadat jméno vlastníka této aplikace (například *personální oddělení*).
+    - **Poznámky**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
+    - **Ikona nahrání**: Nahrajte ikonu, která se zobrazí u aplikace, když uživatelé procházejí portál společnosti.
 4. Vyberte **OK**.
 5. V podokně **Vlastnosti** vyberte **Uložit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Nyní můžete přiřadit aplikace do skupin podle vlastního výběru. Podrobnosti najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 29483c7694ef96a026942a670aa8a52cb8cc8857
-ms.sourcegitcommit: f75386986d24e7d5dd63a3f1a0a014cb52056063
+ms.openlocfilehash: 267eb630b962893d5ab32530a095fe2fd3f7102e
+ms.sourcegitcommit: cbd406e3c6ab8c9a29d58dfda4a18e34277a1594
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560129"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69620218"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -440,9 +440,6 @@ Platí pro: iOS
 
 ### <a name="device-enrollment"></a>Registrace zařízení
 
-#### <a name="windows-autopilot-reset-removes-the-devices-primary-user----4156123---"></a>Resetování Windows autopilotu odebere primárního uživatele zařízení. <!-- 4156123 -->
-Tato funkce byla zpožděna a bude vydána v nadcházejícím sprintu.    
-
 #### <a name="windows-autopilot-support-for-hybrid-azure-ad-join----4809146--"></a>Podpora Windows autopilotu pro hybridní službu Azure AD JOIN <!-- 4809146-->
 Windows autopilot pro stávající zařízení teď podporuje hybridní připojení ke službě Azure AD (kromě stávající podpory Azure AD JOIN). Platí pro zařízení s Windows 10 verze 1809 a novější. Další informace najdete v tématu věnovaném autopilotu [Windows pro existující zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices).
 
@@ -709,7 +706,7 @@ Pravidla požadavků můžete vytvořit na základě PowerShellových skriptů, 
 #### <a name="configure-your-win32-apps-to-be-installed-on-intune-enrolled-azure-ad-joined-devices----3695227----"></a>Konfigurace aplikací Win32, které se mají nainstalovat na zařízení připojená k Azure AD zaregistrovaným v Intune <!-- 3695227  -->
 Můžete přiřadit aplikace Win32, které se mají nainstalovat do zaregistrovaných zařízení připojených k Azure AD v Intune. Další informace o aplikacích Win32 v Intune najdete v tématu [Správa aplikací Win32](apps-win32-app-management.md).
 
-#### <a name="device-overview-shows-primary-user---794259----"></a>Přehled zařízení zobrazuje primárního uživatele <!--794259  -->
+#### <a name="device-overview-shows-primary-user---3794259----"></a>Přehled zařízení zobrazuje primárního uživatele <!--3794259  -->
 Na stránce s přehledem zařízení se zobrazí primární uživatel, který se taky označuje jako uživatel spřažení zařízení a uživatele (UDA). Pokud chcete zobrazit primárního uživatele pro zařízení, > vyberte > zařízení Intune**všechna zařízení** > zvolit zařízení. Primární uživatel se zobrazí v horní části stránky s **přehledem** .
 
 #### <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices----4105925----"></a>Další spravované Google Play vytváření sestav aplikací pro zařízení s Androidem Enterprise Work Profile <!-- 4105925  -->

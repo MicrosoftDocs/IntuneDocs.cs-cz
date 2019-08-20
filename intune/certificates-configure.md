@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 82d5b26071cad6ee854ae08e85b4ea0cff8d0af3
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: f13b5b92ca442f4b5ae05d3567f8385288d92909
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550134"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582921"
 ---
 # <a name="configure-a-certificate-profile-for-your-devices-in-microsoft-intune"></a>Konfigurace profilu certifikátu pro zařízení v Microsoft Intune
 
@@ -112,9 +112,9 @@ Před vytvořením profilu certifikátu SCEP nebo PKCS je potřeba vytvořit pro
 3. Vyhledejte certifikát, který jste uložili v [kroku 2: Exportujte certifikát](#step-2-export-your-trusted-root-ca-certificate)důvěryhodné kořenové certifikační autority a pak vyberte **OK**.
 4. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
 
-    - **Úložiště počítačových certifikátů – kořenové**
-    - **Úložiště počítačových certifikátů – zprostředkující**
-    - **Úložiště uživatelských certifikátů – zprostředkující**
+    - **Úložiště certifikátů počítače-kořen** SCEP
+    - **Úložiště certifikátů počítače-zprostředkující** SCEP
+    - **Úložiště certifikátů uživatele-zprostředkující** (PKCS, SCEP)
 
 5. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 

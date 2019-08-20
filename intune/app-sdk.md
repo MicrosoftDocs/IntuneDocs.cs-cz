@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,17 +17,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52235b6b4cfbca6433c5a50b8c1293faac8d657b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1a8722f5cef29dfec8b0d3eabcc6eeac0a188456
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049636"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69582875"
 ---
-# <a name="microsoft-intune-app-sdk-overview"></a>Přehled Microsoft Intune App SDK
-Intune App SDK, k dispozici pro iOS a Android, umožňuje aplikaci pro podporu Intune [zásady ochrany aplikací](app-protection-policy.md). Pokud má vaše aplikace použít zásady ochrany aplikací, je možné spravovat pomocí Intune a je rozpoznaná službou Intune jako spravovanou aplikaci. Sada SDK se snaží minimalizovat od vývojáře aplikace vyžadovat změny kódu. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Pro zlepšení koncových uživatelů a prostředí pro správce IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.
+# <a name="microsoft-intune-app-sdk-overview"></a>Přehled sady Microsoft Intune App SDK
+Sada Intune App SDK, která je dostupná pro iOS i Android, umožňuje, aby vaše aplikace podporovala [Zásady ochrany aplikací](app-protection-policy.md)Intune. Když vaše aplikace používá zásady ochrany aplikací, dá se spravovat přes Intune a jako spravovaná aplikace je rozpozná Intune. Sada SDK se snaží minimalizovat množství změn v kódu, které vyžaduje vývojář aplikace. Zjistíte, že většinu funkcí sady SDK můžete povolit bez změny chování vaší aplikace. Pro pokročilé prostředí koncových uživatelů a správců IT můžete využít rozhraní API sady SDK k přizpůsobení chování vaší aplikace pro podporu funkcí, které vyžadují zapojení vaší aplikace.
 
-Jakmile povolíte aplikaci tak, aby podporují zásady ochrany aplikací Intune, správci IT můžou nasadit tyto zásady k ochraně svých firemních dat v aplikaci.
+Jakmile povolíte aplikaci, aby podporovala zásady ochrany aplikací Intune, můžou správci IT tyto zásady nasadit, aby chránily podniková data v rámci aplikace.
 
 ## <a name="app-protection-features"></a>Funkce ochrany aplikací
 
@@ -51,7 +51,7 @@ Správce IT může vynutit, aby se webové odkazy v aplikaci otevíraly pomocí 
 ### <a name="enforce-a-pin-policy"></a>Vynucení zásady kódu PIN
 Správce IT může po koncovém uživateli vyžadovat, aby před přístupem k podnikovým datům v aplikaci zadal PIN. Tím se zajistí, že uživatel, který aplikaci používá, je tím samým uživatelem, který se původně přihlásil pomocí pracovního nebo školního účtu. Když si koncoví uživatelé nakonfigurují PIN, sada Intune App SDK použije Azure Active Directory k ověření přihlašovacích údajů koncových uživatelů podle registrovaného účtu Intune.
 
-### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Vyžadovat, aby uživatelé přihlásit pomocí pracovního nebo školního účtu pro přístup k aplikaci
+### <a name="require-users-to-sign-in-with-a-work-or-school-account-for-app-access"></a>Vyžadovat, aby se uživatelé přihlásili pomocí pracovního nebo školního účtu pro přístup k aplikaci
 Správci IT můžou vyžadovat, aby se uživatelé před přístupem k aplikaci přihlásili pomocí pracovního nebo školního účtu. Sada Intune App SDK použije Azure Active Directory k poskytnutí jednotného přihlašování, při kterém se jednou zadané přihlašovací údaje znovu použijí pro následující přihlášení. Také podporujeme ověřování řešení správy identity sdružených se službou Azure Active Directory.
 
 ### <a name="check-device-health-and-compliance"></a>Kontrola stavu zařízení a dodržování předpisů
@@ -80,4 +80,4 @@ Další informace o Citrix MDX najdete v tématech, které pojednávají o [sad�
 
 ## <a name="next-steps"></a>Další postup
 
-- [Začínáme s Microsoft Intune App SDK](app-sdk-get-started.md).
+- Začněte [se sadou Microsoft Intune App SDK](app-sdk-get-started.md).
