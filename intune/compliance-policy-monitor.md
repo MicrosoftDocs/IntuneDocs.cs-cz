@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ce117f21c1ad78c2c977466398ce6d30989cc6a
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67041289"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651200"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -57,35 +57,35 @@ Když se do těchto sestav ponoříte, najdete také specifické zásady dodržo
 
 ### <a name="device-compliance-status-report"></a>Stav dodržování předpisů pro zařízení
 
-Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy dodržování předpisů zařízením jsou uloženy ve dvou různých databázích: Intune a Azure Active Directory. 
+Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy dodržování předpisů pro zařízení jsou uchovávány ve dvou různých databázích: Intune a Azure Active Directory. 
 
 > [!IMPORTANT]
-> Intune se řídí zařízení vrácení se změnami plán pro všechna hodnocení dodržování předpisů na zařízení. [Další informace o zařízení vrácení se změnami plánu](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune sleduje u všech vyhodnocení dodržování předpisů na zařízení plán vrácení se změnami zařízení. [Přečtěte si další informace o plánu vrácení se změnami zařízení](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Podrobnosti o různých stavech zásad dodržování předpisů zařízením jsou následující:
 
-- **Kompatibilní**: Zařízení úspěšně použilo jedno nebo více nastavení zásad dodržování předpisů zařízení.
+- **Vyhovující předpisům**: Zařízení úspěšně nastavilo jedno nebo více nastavení zásad dodržování předpisů pro zařízení.
 
-- **V období odkladu:** Zařízení je cílem jednoho nebo více nastavení zásad dodržování předpisů zařízením. Koncový uživatel ale zásady ještě nepoužil. To znamená, že zařízení předpisy nedodržuje, ale je v období odkladu definovaném správcem.
+- **Poskytnutá lhůta:** Zařízení je zaměřeno na jedno nebo více nastavení zásad dodržování předpisů pro zařízení. Koncový uživatel ale zásady ještě nepoužil. To znamená, že zařízení předpisy nedodržuje, ale je v období odkladu definovaném správcem.
 
   - Přečtěte si další informace o [akcích pro zařízení nedodržující předpisy](actions-for-noncompliance.md).
 
-- **Nevyhodnoceno**: Počáteční stav pro nově registrovaná zařízení. Další možné příčiny tohoto stavu stavu:
+- Nehodnoceno: Počáteční stav nově zaregistrovaných zařízení. Mezi další možné příčiny tohoto stavu patří:
 
-  - Zařízení, které nejsou přiřazené zásady dodržování předpisů a nemáte aktivační události ke kontrole dodržování předpisů
-  - Zařízení, která nebyla vrácena se změnami od poslední aktualizace zásad dodržování předpisů
-  - Zařízení není přidružen k konkrétního uživatele, jako například:
-    - zařízení s iOS zakoupená prostřednictvím programu pro registrace zařízení společnosti Apple (DEP), které nemají přidružení uživatele
-    - Veřejný terminál s androidem nebo zařízení s Androidem Enterprise dedicated
-  - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení
+  - Zařízení, která nemají přiřazenou zásadu dodržování předpisů a nemají Trigger ke kontrole dodržování předpisů
+  - Zařízení, která nejsou zaregistrovaná od poslední aktualizace zásad dodržování předpisů
+  - Zařízení, která nejsou přidružená konkrétnímu uživateli, například:
+    - zařízení iOS zakoupená prostřednictvím programu Apple Program registrace zařízení (DEP), který nemá přidružení uživatele
+    - Zařízení s Androidem pro veřejného terminálu nebo zařízení s Androidem Enterprise
+  - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM)
 
-- **Nedodržující předpisy:** Zařízení se nepodařilo použít jednu nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
+- **Nedodržující předpisy:** Zařízení se nepovedlo použít aspoň jedno nastavení zásad dodržování předpisů pro zařízení. Případně zásady nedodržel uživatel.
 
-- **Zařízení není synchronizované:** Zařízení se nepodařilo oznámit svůj stav zásad dodržování předpisů zařízení, protože jeden z následujících důvodů:
+- **Zařízení není synchronizované:** Zařízení nehlásilo svůj stav zásad dodržování předpisů zařízením z některého z následujících důvodů:
 
-  - **Neznámý**: Zařízení je offline nebo se nepodařilo komunikovat s Intune nebo Azure AD z jiných důvodů.
+  - **Neznámý**: Zařízení je offline nebo se nepovedlo komunikovat s Intune nebo Azure AD z jiných důvodů.
 
-  - **Chyba**: Zařízení se nepodařilo komunikovat s Intune a Azure AD a obdrželo chybovou zprávu s odůvodněním.
+  - **Chyba**: Zařízení se nepovedlo komunikovat s Intune a Azure AD a obdrželo z důvodu chybovou zprávu.
 
 > [!IMPORTANT]
 > Zařízení, která jsou zaregistrovaná v Intune, ale nejsou na ně zacílené žádné zásady dodržování předpisů zařízením, jsou v této sestavě uvedená jako **Vyhovující předpisům**.
@@ -152,7 +152,9 @@ Sestava **Dodržování předpisů zařízením** > **Nastavení dodržování p
 Když některé nastavení vyberete, zobrazí se pro každé zařízení cílené tímto nastavením **stav kompatibility**, **e-mailový alias uživatele**, **model zařízení** a **poloha**.
 
 > [!NOTE]
-> Na zařízeních s Windows 10 nepřipojených ke službě Azure AD se systémový účet může zobrazit jako uživatel nevyhovující předpisům. Jedná se o očekávané chování, které neovlivňuje celkový stav dodržování předpisů zařízením. 
+> Do zařízení se dá přiřadit zásada a uživatel na tomto zařízení. V některých scénářích se může zařízení synchronizovat, než se uživatel přihlásí, například když se zařízení restartuje. Dodržování předpisů může tento uživatel vyhodnotit a Ukázat tak, že zařízení nedodržuje předpisy. Toto chování může také zobrazit systémový účet jako nevyhovující uživatel.
+>
+> Jedná se o známý problém s více uživateli zařízení s Windows 10. Jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](in-development.md) a/nebo [co je nového](whats-new.md).
 
 ## <a name="view-status-of-device-policies"></a>Zobrazení stavu zásad zařízení
 
@@ -163,11 +165,11 @@ Tato funkce je zahrnutá v sestavách stavu zařízení:
 1. Vyberte **Dodržování předpisů zařízením** > **Zásady**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
-    - Úspěšné: Zásady platí
-    - Chyba: Použití zásad se nezdařilo. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
-    - Konflikt: Dvě nastavení se použijí pro stejné zařízení a Intune nemůže zařadit konflikt. Správce by měl provést kontrolu.
-    - Čekající na vyřízení: Intune přijímat zásady ještě nějakou dobu nepřipojilo k zařízení. 
-    - Není k dispozici: Zařízení nejde získat zásady. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
+    - Úspěchu Zásada se použije
+    - Chyba: Zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
+    - Došlo Pro stejné zařízení se aplikují dvě nastavení a Intune nedokáže tento konflikt vyřadit. Správce by měl provést kontrolu.
+    - Uložené Zařízení ještě není zaregistrované ve službě Intune, aby bylo možné tyto zásady přijmout. 
+    - Nelze použít: Zařízení nemůže tuto zásadu přijmout. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
 
 3. Pokud chcete zobrazit podrobnosti o zařízeních používajících tyto zásady, vyberte některý stav. Vyberte například **Úspěšné**. V dalším okně se zobrazí podrobnosti o konkrétním zařízení včetně jeho názvu a stavu nasazení.
 

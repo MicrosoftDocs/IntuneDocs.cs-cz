@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8f5f67661dbf33f2b0d6b44e32302a874c3f4de
-ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
+ms.openlocfilehash: 9aec6ca40a1e93ebc6b2e7393177281941435b01
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68625082"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651195"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -116,7 +116,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
      ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
      
-2. Pokud potřebujete volat všechna rozhraní API Intune z SWIFT, musí vaše aplikace nebo rozšíření naimportovat požadované hlavičky Intune SDK přes hlavičku přemostění v cíli C. Pokud vaše aplikace nebo rozšíření ještě neobsahuje hlavičku přemostění cílové verze jazyka C, můžete ji zadat prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo pole hlavičky Xcode přemostění v uživatelském rozhraní  . Hlavička přemostění by měla vypadat přibližně takto:
+2. Pokud potřebujete volat všechna rozhraní API Intune z SWIFT, musí vaše aplikace nebo rozšíření naimportovat požadované hlavičky Intune SDK přes hlavičku přemostění v cíli C. Pokud vaše aplikace nebo rozšíření ještě neobsahuje hlavičku přemostění cílové verze jazyka C, můžete ji zadat prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo pole hlavičky Xcode přemostění v uživatelském rozhraní . Hlavička přemostění by měla vypadat přibližně takto:
 
    ```objc
       #import <IntuneMAMSwift/IntuneMAM.h>
@@ -253,24 +253,25 @@ ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Požadov
 ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Požadován, pokud aplikace používá ADAL. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
 ADALRedirectUri  | Řetězec  | Identifikátor URI aplikace pro přesměrování Azure AD | Pokud aplikace používá ADAL, je požadován ADALRedirectUri nebo ADALRedirectScheme.  |
 ADALRedirectScheme  | Řetězec  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | Pokud aplikace používá ADAL, je požadován ADALRedirectUri nebo ADALRedirectScheme. |
-ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL (včetně všech případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Pokud aplikace chce nastavit vlastní zpětné volání protokolu ADAL, nastaví se hodnota ANO. | Volitelné. |
-ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL místo com.microsoft.adalcache. Všimněte si, že nemá předponu app-id. Předpona se použije u zadaného řetězce za běhu. | Volitelné. |
-AppGroupIdentifiers | Pole řetězců  | Pole skupin aplikací z části com.apple.security.application-groups nároků aplikace. | Vyžaduje se, když aplikace využívá skupiny aplikací. |
+ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL (včetně všech případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Pokud aplikace chce nastavit vlastní zpětné volání protokolu ADAL, nastaví se hodnota ANO. | Volitelný parametr. |
+ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL místo com.microsoft.adalcache. Všimněte si, že nemá předponu app-id. Předpona se použije u zadaného řetězce za běhu. | Volitelný parametr. |
+AppGroupIdentifiers | pole řetězců  | Pole skupin aplikací z části com.apple.security.application-groups nároků aplikace. | Vyžaduje se, když aplikace využívá skupiny aplikací. |
 ContainingAppBundleId | Řetězec | Určuje ID sady rozšíření obsahující aplikaci. | Vyžaduje se rozšíření pro iOS. |
-DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Volitelné. Výchozí hodnota je NE.|
-MainNibFile <br> MainNibFile~ipad  | Řetězec  | Toto nastavení by mělo mít název souboru pro hlavní nib aplikace.  | Vyžaduje se, pokud aplikace v souboru Info.plist definuje MainNibFile. |
-MainStoryboardFile <br> MainStoryboardFile~ipad  | Řetězec  | Toto nastavení by mělo obsahovat název souboru pro hlavní storyboard aplikace. | Vyžaduje se, pokud aplikace v souboru Info.plist definuje UIMainStoryboardFile. |
-MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady Intune APP. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. | Volitelné. Výchozí hodnota je NE.|
-MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění varuje uživatele v případě, že nebude mít zásady Intune APP. <br><br> Poznámka: Uživatelům bude i po chybějícím upozornění moct aplikaci používat bez zásad. | Volitelné. Výchozí hodnota je NE. |
-MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Volitelné. Výchozí hodnota je NE. |
-SplashIconFile <br> SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Volitelné. |
-SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Volitelné. |
-BackgroundColor| Řetězec| Určuje barvu pozadí úvodní obrazovky a obrazovky se zadáváním kódu PIN. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelné. Výchozí hodnota je světle šedá. |
-ForegroundColor| Řetězec| Určuje barvu popředí pro úvodní obrazovky a obrazovky kódu PIN, například barvu textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelné. Výchozí hodnota je černá. |
-AccentColor | Řetězec| Určuje barvu zvýraznění obrazovky s kódem PIN, například barvu textu tlačítka a zvýraznění pole. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Volitelné. Výchozí hodnota je systémová modrá. |
-MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Volitelné. Výchozí hodnota je NE. |
-MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Volitelné. Výchozí hodnota je NE. |
-MaxFileProtectionLevel | Řetězec | Volitelné. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Volitelný parametr. Výchozí hodnota je NE. |
+MainNibFile<br>MainNibFile~ipad  | Řetězec  | Toto nastavení by mělo mít název souboru pro hlavní nib aplikace.  | Vyžaduje se, pokud aplikace v souboru Info.plist definuje MainNibFile. |
+MainStoryboardFile<br>MainStoryboardFile~ipad  | Řetězec  | Toto nastavení by mělo obsahovat název souboru pro hlavní storyboard aplikace. | Vyžaduje se, pokud aplikace v souboru Info.plist definuje UIMainStoryboardFile. |
+AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámky: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL není k dispozici žádný platný token pro identitu, pokus o registraci bude bez upozornění na přihlašovací údaje v tichém režimu selže, pokud aplikace nastavila také MAMPolicyRequired na Ano. | Volitelný parametr. Výchozí hodnota je NE. |
+MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámky: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. | Volitelný parametr. Výchozí hodnota je NE. |
+MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění upozorní uživatele v případě, že nebude mít zásady ochrany aplikací Intune. <br><br> Poznámka: Uživatelům bude i po chybějícím upozornění moct aplikaci používat bez zásad. | Volitelný parametr. Výchozí hodnota je NE. |
+MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Volitelný parametr. Výchozí hodnota je NE. |
+SplashIconFile <br>SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Volitelný parametr. |
+SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Volitelný parametr. |
+BackgroundColor| Řetězec| Určuje barvu pozadí úvodní obrazovky a obrazovky se zadáváním kódu PIN. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelný parametr. Výchozí hodnota je světle šedá. |
+ForegroundColor| Řetězec| Určuje barvu popředí pro úvodní obrazovky a obrazovky kódu PIN, například barvu textu. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.  | Volitelný parametr. Výchozí hodnota je černá. |
+AccentColor | Řetězec| Určuje barvu zvýraznění obrazovky s kódem PIN, například barvu textu tlačítka a zvýraznění pole. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.| Volitelný parametr. Výchozí hodnota je systémová modrá. |
+MAMTelemetryDisabled| Logická hodnota| Určuje, jestli SDK nebude odesílat žádná telemetrická data do back-endu.| Volitelný parametr. Výchozí hodnota je NE. |
+MAMTelemetryUsePPE | Logická hodnota | Určuje, jestli sada MAM SDK bude odesílat data do back-endu telemetrie PPE. Použijte při testování aplikací se zásadami Intune, aby se testovací telemetrická data nesmíchala se zákaznickými. | Volitelný parametr. Výchozí hodnota je NE. |
+MaxFileProtectionLevel | Řetězec | Volitelný parametr. Povoluje aplikaci určit maximální úroveň, kterou `NSFileProtectionType` může podporovat. Tato hodnota přepíše zásady odeslané službou, pokud je příslušná úroveň vyšší než ta, kterou aplikace může podporovat. Možné hodnoty: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Logická hodnota | Pro rozšíření akce Open in se nastavuje na ANO. Další informace najdete v části Sdílení dat přes UIActivityViewController. |
 WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávaná komponentami WebView vaší aplikace. | Povinný parametr, pokud aplikace používá komponenty WebView, které zpracovávají adresy URL prostřednictvím odkazů nebo JavaScriptu. |
 

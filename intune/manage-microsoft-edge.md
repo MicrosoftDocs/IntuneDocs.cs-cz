@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3740212e8023bb49c7a51e233741791ef2597b10
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: 8ec1af80d52a8331c2bef136cd0947b81beaa3ea
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582674"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651177"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -181,7 +181,22 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci zástupce domovsk
 |    Klíč    |    Value    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Případě** <`https://www.bing.com`>
-    |
+
+## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge
+
+Tato nastavení umožňují přizpůsobit novou stránku karty pro Microsoft Edge a zobrazovat logo vaší organizace a barvu značky jako pozadí stránky.
+
+Pokud chcete nahrát logo a barvu vaší organizace, nejdřív proveďte následující kroky:
+- V Azure Portal přejděte na Intune – > klientských aplikací – > branding a přizpůsobení – > branding identity společnosti.
+- Pokud chcete nastavit logo značky, vyberte v části zobrazit možnost pouze logo společnosti. Doporučují se průhledné loga na pozadí. 
+- Chcete-li nastavit barvu pozadí vaší značky, v části Zobrazit Vyberte možnost Barva motivu. Microsoft Edge použije světlejší barevný stín na nové stránce karty, což zajistí vysokou čitelnost stránky. 
+
+Pak použijte následující páry klíč/hodnota, které přidělí vaší organizaci branding do Microsoft Edge:
+
+|    Klíč    |    Value    |
+|--------------------------------------------------------------------|------------|
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandLogo    |    Pravda    |
+|    com. Microsoft. Intune. mam. managedbrowser. NewTabPage. BrandColor    |    Pravda    |
 
 ## <a name="configure-managed-bookmarks-for-microsoft-edge"></a>Konfigurace spravovaných záložek pro Microsoft Edge
 

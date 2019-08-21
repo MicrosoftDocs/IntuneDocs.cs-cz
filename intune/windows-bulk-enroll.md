@@ -16,18 +16,18 @@ ms.reviewer: damionw
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 996380a4938ca73bbf5f71c82e99814f772001a4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 1775bdf0030968cdd16d87d91794480a43a22d12
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403439"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651042"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
-Jako správce můžete k Azure Active Directory a Intune připojit větší počet zařízení s Windows. Hromadnou registraci zařízení pro vašeho tenanta Azure AD zahájíte vytvořením zřizovacího balíčku pomocí aplikace Windows Configuration Designer (WCD). Při aplikování zřizovacího balíčku na zařízení ve vlastnictví firmy se tato zařízení připojí k vašemu tenantovi Azure AD a zaregistrují v systému správy pomocí Intune. Po použití balíčku je připravená pro vaše uživatele Azure AD pro přihlášení.
+Jako správce můžete k Azure Active Directory a Intune připojit větší počet zařízení s Windows. Hromadnou registraci zařízení pro vašeho tenanta Azure AD zahájíte vytvořením zřizovacího balíčku pomocí aplikace Windows Configuration Designer (WCD). Při aplikování zřizovacího balíčku na zařízení ve vlastnictví firmy se tato zařízení připojí k vašemu tenantovi Azure AD a zaregistrují v systému správy pomocí Intune. Po použití balíčku je připraveno pro uživatele Azure AD, aby se přihlásili.
 
-Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady Intune a požadované aplikace. Zařízení Windows, která jsou zaregistrovaná v Intune pomocí hromadného zápisu Windows můžete použít k instalaci aplikace dostupné pro aplikaci portál společnosti. 
+Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a obdrží přiřazené zásady Intune a požadované aplikace. Zařízení s Windows, která jsou zaregistrovaná v Intune pomocí hromadné registrace Windows, můžou k instalaci dostupných aplikací použít aplikaci Portál společnosti. 
 
 ## <a name="prerequisites-for-windows-devices-bulk-enrollment"></a>Předpoklady pro hromadnou registraci zařízení s Windows
 
@@ -47,7 +47,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
    - **Project folder** (Složka projektu) – místo pro ukládání projektu
    - **Description** (Popis) – volitelný popis projektu ![Snímek obrazovky se zadáním názvu, složky projektu a popisu v aplikaci Windows Configuration Designer](media/bulk-enroll-name.png)
 
-4. Zadejte jedinečný název pro zařízení. Názvy můžou obsahovat sériové číslo (% sériového portu %) nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
+4. Zadejte jedinečný název pro zařízení. Názvy můžou zahrnovat sériové číslo (% SERIAL%). nebo náhodnou sadu znaků. Volitelně můžete také zadat kód Product Key, pokud provádíte upgrade edice Windows, nakonfigurovat zařízení pro sdílené používání a odebrat předinstalovaný software.
    
    ![Snímek obrazovky se zadáním názvu kódu Product Key v aplikaci Windows Configuration Designer](media/bulk-enroll-device.png)
 
@@ -73,7 +73,7 @@ Uživatelé Azure AD jsou na těchto zařízeních standardními uživateli a ob
 
 2. Zvolte, jakým způsobem zřizovací balíček do zařízení aplikujete.  Zřizovací balíček se dá do zařízení aplikovat jedním z těchto způsobů:
    - Zřizovací balíček umístěte na USB flash disk, připojte USB flash disk k zařízení, které chcete hromadně zaregistrovat, a aplikujte balíček během počáteční instalace.
-   - Zřizovací balíček umístěte do síťové složky a aplikujte na zařízení, které chcete po počáteční instalaci hromadně zaregistrovat.
+   - Zřizovací balíček umístěte do síťové složky a nainstalujte ho po počáteční instalaci.
 
    Podrobné pokyny k aplikování zřizovacího balíčku najdete v článku o [aplikování zřizovacího balíčku](https://technet.microsoft.com/itpro/windows/configure/provisioning-apply-package).
 
@@ -95,4 +95,4 @@ Zřizování se má používat na nových zařízeních s Windows. Selhání zř
 U hromadně registrovaných zařízení není možné použít certifikáty cílené na konkrétní uživatele ani provést nasazení přes Wi-Fi. Ke správě těchto připojení budete muset použít [certifikáty na úrovni zařízení](certificates-configure.md). 
 
 ### <a name="conditional-access"></a>Podmíněný přístup
-Podmíněný přístup není k dispozici pro zařízení Windows zaregistrovaných pomocí hromadné registrace.
+Podmíněný přístup není k dispozici pro zařízení s Windows zaregistrovaná pomocí hromadné registrace.

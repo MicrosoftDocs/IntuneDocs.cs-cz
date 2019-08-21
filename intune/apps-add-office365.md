@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3b532de1aa790d10efc84be314da903d86dabfd
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: eff9f965649587a929e45d0f9d59305194ffe68b
+ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582748"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69651147"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Přiřazení aplikací Office 365 k zařízením s Windows 10 pomocí Microsoft Intune
 
@@ -39,7 +39,7 @@ Než budete moct přiřadit, monitorovat, konfigurovat nebo chránit aplikace, m
 - Zařízení, na která chcete tyto aplikace nasadit, musí mít aktualizaci Windows 10 Creators Update nebo novější.
 - Intune podporuje přidání aplikací Office jenom ze sady Office 365.
 - Pokud jsou spuštěné nějaké aplikace Office, když Intune instaluje sadu aplikací, může instalace selhat a uživatelé můžou přijít o data z neuložených souborů.
-- Tato metoda instalace není podporovaná na zařízeních s Windows 10 S, Windows Home, Windows Team, Windows Holographic a Windows Holographic for Business.
+- Tato metoda instalace není podporovaná v zařízeních Windows Home, Windows Team, Windows Holografick nebo Windows holografických pro firmy.
 - Intune nepodporuje instalaci desktopových aplikací Office 365 z Microsoft Storu (označovaných jako aplikace Office Centennial) na zařízení, na která jste už nasadili aplikace Office 365 pomocí Intune. Pokud nainstalujete tuto konfiguraci, může to způsobit ztrátu nebo poškození dat.
 - V případě vícenásobného přiřazení požadovaných nebo dostupných aplikací nemá novější přiřazení aditivní účinek. Novější přiřazení aplikací přepíše dříve existující přiřazení nainstalovaných aplikací. Pokud například první sada aplikací Office obsahuje Word a novější sada ho neobsahuje, Word se odinstaluje. To se netýká aplikací Visio a Project.
 - Vícenásobná nasazení Office 365 se aktuálně nepodporují. Do zařízení se doručí jenom jedno nasazení.
@@ -182,6 +182,6 @@ V následující tabulce jsou uvedené běžné kódy chyb, se kterými se můž
 | Klienta s technologií Klikni a spusť se nepodařilo spustit (neočekávané) | 17000 | - | Klikni a spusť |
 | U klienta s technologií Klikni a spusť se nepodařilo zařadit scénář do fronty (neočekávané) | 17001 | - | Klikni a spusť |
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Pokud chcete aplikace přiřadit do vybraných skupin, přečtěte si článek [Přiřazení aplikací do skupin](/intune-azure/manage-apps/deploy-apps).
