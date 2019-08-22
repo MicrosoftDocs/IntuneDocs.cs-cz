@@ -1,12 +1,12 @@
 ---
-title: Vytvoření sestavy z datového kanálu OData pomocí Power BI
+title: Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
 titleSuffix: Microsoft Intune
 description: Vytvořte vizualizaci mapy stromové struktury pomocí Power BI Desktopu s interaktivním filtrem z rozhraní API datového skladu Intune.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 08/15/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 519ac8529737a870eb4f8ce9a3e06af5b1dcac79
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: e18279fd9cca88de5f04c57a8bcccce1c211c6de
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353660"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894326"
 ---
-# <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy z datového kanálu OData pomocí Power BI
+# <a name="create-an-intune-report-from-the-odata-feed-with-power-bi"></a>Vytvoření sestavy Intune z datového kanálu OData pomocí Power BI
 
-V tomto článku se dozvíte, jak vytvořit vizualizaci mapy stromové struktury pomocí Power BI Desktopu s interaktivním filtrem. Váš finanční ředitel může třeba chtít vědět, jak se na celkovém rozdělení zařízení podílejí zařízení ve vlastnictví společnosti a osobní zařízení. Mapa stromové struktury poskytuje podrobný přehled celkového počtu typů zařízení. Můžete zkontrolovat počet zařízení s iOSem, Androidem a Windows, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
+Tento článek vysvětluje, jak vytvořit vizualizaci stromové struktury vašich dat Intune pomocí Power BI Desktop, které uživatelé interaktivní filtrují. Například vaše finanční ŘEDITELka může chtít zjistit, jak celkové rozdělení zařízení porovnává mezi zařízeními vlastněná společností a osobními zařízeními. Mapa stromové struktury poskytuje podrobný přehled celkového počtu typů zařízení. Můžete zkontrolovat počet zařízení s iOSem, Androidem a Windows, která jsou ve vlastnictví společnosti nebo v osobním vlastnictví.
 
 ## <a name="overview-of-creating-the-chart"></a>Přehled vytvoření grafu
 
@@ -42,7 +42,7 @@ Graf vytvoříte takto:
 
 V Power BI pracujete s tabulkami. Tabulka obsahuje datová pole. Každé datové pole má datový typ. Pole může obsahovat jenom data datového typu. Datové typy jsou čísla, text, kalendářní data a tak dále. Tabulky v Power BI se při načtení modelu vyplní posledními historickými daty z vašeho tenanta. I když se konkrétní data časem mění, struktura tabulky se nezmění, dokud se základní datový model neaktualizuje.
 
-Používání pojmů _entita_ a _tabulka_ může být matoucí. Datový model je přístupný prostřednictvím datového kanálu OData. Kontejnery, které se v Power BI nazývají tabulky, se v prostředí OData nazývají entity. Oba tyto pojmy označují stejnou věc, která obsahuje vaše data.
+Používání pojmů *entita* a *tabulka* může být matoucí. Datový model je přístupný prostřednictvím informačního kanálu OData (Open Data Protocol). Kontejnery, které se v Power BI nazývají tabulky, se v prostředí OData nazývají entity. Oba tyto pojmy označují stejnou věc, která obsahuje vaše data. Další informace o OData najdete v [přehledu OData](/odata/overview).
 
 ## <a name="install-power-bi-desktop"></a>Instalace Power BI Desktopu
 
@@ -54,48 +54,48 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 > Potřebujete oprávnění k **Sestavám** v Intune. Další informace najdete v sekci [Autorizace](reports-api-url.md).
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
-4. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
-1. Otevřete Power BI Desktop.
-2. Zvolte **Načíst data** > **Datový kanál Odata**.
-3. Do pole pro adresu URL v okně **Datový kanál OData** vložte adresu URL vlastního kanálu.
-4. Vyberte **Basic**.
+2. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
+3. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
+4. Otevřete Power BI Desktop.
+5. V řádku nabídek vyberte **soubor** > **získat data datový** > **kanál OData**.
+6. Vložte adresu URL vlastního informačního kanálu, kterou jste zkopírovali v předchozím kroku, do pole Adresa URL v okně datového **kanálu OData** .
+7. Vyberte **Basic**.
 
     ![Kanál OData pro datový sklad Intune pro vašeho tenanta](media/reports-create-01-odatafeed.png)
 
-9. Vyberte **OK**.
-10. Vyberte **Účet organizace** a pak se přihlaste pomocí přihlašovacích údajů Intune.
+8. Vyberte **OK**.
+9. Vyberte **Účet organizace** a pak se přihlaste pomocí přihlašovacích údajů Intune.
 
     ![Přihlašovací údaje pro účet organizace](media/reports-create-02-org-account.png)
 
-11. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+10. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Snímek obrazovky navigátoru – seznam tabulek datového skladu](media/reports-create-02-loadentities.png)
 
-12. Vyberte **zařízení** a tabulky **ownerTypes**.  Vyberte **Načíst**. Power BI načte data do modelu.
+11. Vyberte **zařízení** a tabulky **ownerTypes**.  Vyberte **Načíst**. Power BI načte data do modelu.
 
 ## <a name="create-a-relationship"></a>Vytvoření relace
 
-Můžete importovat víc tabulek k analýze nejen dat v jedné tabulce, ale souvisejících dat mezi tabulkami.  PowerBI má funkci zvanou **automatické rozpoznávání**, která se pokusí relace najít a vytvořit za vás. Tabulky v datovém skladu jsou vytvořené tak, aby funkci automatického rozpoznání v PowerBI podporovaly. I když ale PowerBI relace automaticky nenajde, stále je spravujete.
+Můžete importovat víc tabulek k analýze nejen dat v jedné tabulce, ale souvisejících dat mezi tabulkami. Power BI má funkci s názvem automatické **rozpoznávání** , která se pokouší vyhledat a vytvořit relace za vás. Tabulky v datovém skladu byly sestaveny tak, aby fungovaly s funkcí automatického rozpoznávání v Power BI. I když ale Power BI nenaleznou relace automaticky, můžete je stále spravovat.
 
 ![Správa vztahů souvisejících dat napříč tabulkami](media/reports-create-03-managerelationships.png)
 
 1. Vyberte **Spravovat relace**.
-2. Pokud PowerBI ještě relace nerozpoznal, vyberte **Automatické rozpoznávání**.
+2. Vyberte Automatické **rozpoznávání...,** Pokud Power BI ještě nerozpoznaly relace.
 
-Relace se zobrazí ve sloupci Z do sloupce Do. V tomto příkladu datové pole **ownerTypeKey** v tabulce **zařízení** odkazuje na datové pole **ownerTypeKey** v okně **ownerTypes**. Pomocí relace vyhledejte prostý název kódu typu zařízení v tabulce **zařízení**.
+Relace se zobrazí ve sloupci Z do sloupce Do. V tomto příkladu datové pole **ownerTypeKey** v tabulce **zařízení** odkazuje na datové pole **ownerTypeKey** v okně **ownerTypes**. Pomocí relace můžete vyhledat jednoduchý název kódu typu zařízení v tabulce **zařízení** .
 
 ## <a name="create-a-treemap-visualization"></a>Vytvoření vizualizace mapy stromové struktury
 
-Graf mapy stromové struktury zobrazuje hierarchická data jako pole uvnitř polí. Každá větev hierarchie je pole, které obsahuje menší pole zobrazující nižší větve. Pomocí Power BI Desktopu můžete vytvořit mapu stromové struktury vašich dat Intune.
+Graf stromové struktury zobrazuje hierarchická data jako pole v rámečcích. Každá větev hierarchie je pole, které obsahuje menší pole zobrazující nižší větve. Pomocí Power BI plochy můžete vytvořit mapu stromové struktury dat Intune, která zobrazuje relativní množství typů výrobců zařízení.
 
 ![Power BI vizualizace stromové struktury](media/reports-create-03-treemap.png)
 
-1. Zvolte typ grafu. Vyberte **Mapa stromové struktury**.
-2. V datovém modelu najděte tabulku **zařízení**.
-3. Rozbalte **tabulku zařízení** a na panelu **Pole** vyberte datové pole **výrobce**.
-4. Přetáhněte datové pole **výrobce** do grafu Mapa stromové struktury na plátně pro sestavy.
-5. Přetáhněte datové pole **deviceKey** z tabulky **zařízení** do sekce **Hodnoty** v podokně **Vizualizace** a pusťte ho v poli označeném **Sem přetáhněte datové pole**.  
+1. V podokně **vizualizace** vyhledejte a vyberte **mapu stromové**struktury. Graf **stromové** struktury bude přidán na plátno sestavy.
+2. V podokně **pole** Najděte `devices` tabulku.
+3. Rozbalte tabulku a `manufacturer` vyberte datová pole. `devices`
+4. Přetáhněte datové pole na plátno sestavy a umístěte ho do grafu **mapy stromové** struktury. `manufacturer`
+5. `devices`Přetáhněte datové pole z tabulky do podokna vizualizace a přetáhněte je do části Values (hodnoty) v poli s názvem přidat datová pole. `deviceKey`  
 
 Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rámci vaší organizace.
 
@@ -105,20 +105,21 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky.
 
+1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a v části vizualizace vyberte **ikonu průřezu** (![mapa stromové struktury s](media/reports-create-slicer.png)datovýmmodelem a podporovanými vztahy). Na plátně se zobrazí prázdná vizualizace **průřezu** .
+2. V podokně **pole** Najděte `ownerTypes` tabulku.
+3. Rozbalte tabulku a `ownerTypeName` vyberte datová pole. `ownerTypes`
+4. `ownerTypes` Přetáhněte datové pole z tabulky do podokna **filtry** a přetáhněte ho do části **filtry na této stránce** v poli **přidat datová pole sem.** `onwerTypeName`  
 
-1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a v části vizualizace vyberte **ikonu průřezu** (![mapa stromové struktury s](media/reports-create-slicer.png)datovýmmodelem a podporovanými vztahy).
-2. Najděte tabulku **ownerTypes** a přetáhněte datové pole **ownerTypeName** do části **Filtry** na panelu **Vizualizace**.  
-
-   V tabulce zařízení je datové pole s názvem **OwnerTypeKey**, které obsahuje kód, jestli je zařízení ve vlastnictví společnosti, nebo osobní. Protože v tomto filtru chcete zobrazit popisné názvy, najděte tabulku **ownerTypes** a přetáhněte **ownerTypeName**. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
+   V tabulce je k dispozici datové pole s názvem `OwnerTypeKey`, které obsahuje data o tom, zda je zařízení ve vlastnictví společnosti nebo osobní. `OwnerTypes` Vzhledem k tomu, že byste chtěli v tomto filtru Zobrazit popisné názvy, vyhledejte `ownerTypes` tabulku a přetáhněte **ownerTypeName** do průřezu. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
 
 ![Mapa stromové struktury s filtrem – podporuje relace mezi tabulkami](media/reports-create-08_ownertype.png)
 
 Teď máte interaktivní filtr, pomocí kterého můžete přepínat mezi zařízeními ve vlastnictví společnosti a v osobním vlastnictví. Pomocí tohoto filtru uvidíte, jak se jejich rozdělení mění.
 
-1. Výběrem možnosti **Společnost** zobrazíte rozdělení zařízení ve vlastnictví společnosti.
-2. Výběrem možnosti **Osobní** zobrazíte zařízení v osobním vlastnictví.
+1. V průřezu vyberte **Společnost** , aby se zobrazila distribuce zařízení vlastněné společností.
+2. Vyberte **osobní** v průřezu, abyste viděli zařízení v osobním vlastnictví.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - Další informace o [vytváření a správě relací](https://powerbi.microsoft.com/documentation/powerbi-desktop-create-and-manage-relationships/) v Power BI Desktopu najdete v dokumentaci k Power BI.
 - Přečtěte si článek [Datový model datového skladu Intune](https://docs.microsoft.com/intune/reports-ref-data-model).

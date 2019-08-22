@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9aec6ca40a1e93ebc6b2e7393177281941435b01
-ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
+ms.openlocfilehash: ca7e7646f51331e4d24cec9b50d7afae4870ebe3
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69651195"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894364"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -186,33 +186,31 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 
 Pokud není parametr -o zadaný, upraví se vstupní soubor na místě. Nástroj je idempotentní a po provedení změn souboru Info.plist dané aplikace nebo nároků by se měl spustit znovu. Nejnovější verzi tohoto nástroje byste měli stáhnout a spustit také při aktualizaci Intune SDK, pokud se v nejnovější verzi změnily požadavky na konfiguraci souboru Info.plist.
 
-## <a name="configure-azure-active-directory-authentication-library-adal"></a>Konfigurace knihovny ADAL (Azure Active Directory Authentication Library)
+## <a name="configure-adalmsal"></a>Konfigurace ADAL/MSAL
 
-Intune App SDK využívá [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ke svému ověřování a podmíněnému spouštění. Knihovnu ADAL potřebuje taky kvůli registraci identity uživatele ve službě MAM, která slouží ke správě ve scénářích bez registrace zařízení.
+Sada Intune App SDK může pro své scénáře ověřování a podmíněného spuštění použít buď [knihovnu ověřování Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) , nebo [knihovnu Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) . Také spoléhá na knihovnu ADAL/MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení.
 
-Knihovna ADAL zpravidla vyžaduje, aby se aplikace registrovaly u služby Azure Active Directory (AAD) a získaly jedinečné ID (ID klienta) a další identifikátory. Zaručí se tak zabezpečení tokenů udělených aplikaci. Pokud není určeno jinak, Intune App SDK využívá při kontaktování Azure AD výchozí registrační hodnoty.  
+ADAL/MSAL obvykle vyžaduje, aby se aplikace registrovaly s Azure Active Directory (AAD) a vytvořily jedinečné ID klienta a identifikátor URI pro přesměrování, aby bylo zaručeno zabezpečení tokenů udělených aplikaci. Pokud už vaše aplikace používá ADAL nebo MSAL k ověřování uživatelů, musí aplikace používat své existující registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
 
-Pokud už aplikace k ověřování uživatelů používá ADAL, musí používat svoje stávající registrační hodnoty a přepsat výchozí hodnoty Intune App SDK. Tím se zajistí, že se uživatelům nebude výzva k ověřování zobrazovat dvakrát (jednou ze sady Intune App SDK a jednou z aplikace).
+Pokud vaše aplikace ještě nepoužívá ADAL ani MSAL a nepotřebujete přístup k žádnému prostředku AAD, nemusíte v AAD nastavit registraci klientské aplikace, pokud se rozhodnete integrovat ADAL. Pokud se rozhodnete integrovat MSAL, budete muset nakonfigurovat registraci aplikace a přepsat výchozí ID klienta a identifikátor URI přesměrování služby Intune.  
 
-Je doporučeno, aby se vaše aplikace propojovala na [nejnovější verzi ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) na své hlavní větvi. Sada Intune App SDK aktuálně používá k podpoře aplikací, které vyžadují podmíněný přístup, větev služby ADAL. (Tyto aplikace proto závisí na aplikaci Microsoft Authenticator.) Sada SDK je ale stále kompatibilní s hlavní větví ADAL. Používejte větev, která je vhodná pro vaši aplikaci.
+Doporučuje se, aby vaše aplikace propojuje nejnovější verzi [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-objc/releases) nebo [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
-### <a name="link-to-adal-binaries"></a>Propojení na binární soubory ADAL
+### <a name="link-to-adal-or-msal-binaries"></a>Odkaz na binární soubory ADAL nebo MSAL
 
-Propojte aplikaci s binárními soubory ADAL podle následujících pokynů:
+**Možnost 1 –** Pomocí [těchto kroků](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) propojte aplikaci s binárními soubory ADAL.
 
-1. Stáhněte si [Azure Active Directory ověřování Library (ADAL) pro Objective-C](https://github.com/AzureAD/azure-activedirectory-library-for-objc) z Githubu a postupujte podle [pokynů](https://github.com/AzureAD/azure-activedirectory-library-for-objc#download) ke stažení ADALu pomocí dílčích modulů Git nebo CocoaPods.
+**Možnost 2 –** Alternativně můžete podle [těchto pokynů](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) propojit aplikaci s binárními soubory MSAL.
 
-2. Přidejte do projektu rozhraní ADAL (možnost 1) nebo statickou knihovnu (možnost 2).
+1. Pokud aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
 
-3. Pokud aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako první skupinu ID sady prostředků aplikace.
+2. Pokud chcete povolit jednotné přihlašování (SSO) ADAL/MSAL, `com.microsoft.adalcache` přidejte je do skupin přístupu pro řetězce klíčů.
 
-4. Přidáním `com.microsoft.adalcache` do přístupových skupin řetězce klíčů povolte jednotné přihlašování (SSO) ADAL.
+3. V případě, že explicitně nastavujete skupinu pro sdílený řetězec klíčů mezipaměti ADAL, ujistěte se, že je nastavená na `<appidprefix>.com.microsoft.adalcache`. Pokud ho nepřepíšete, knihovna ADAL tohle nastavení provede za vás. Pokud chcete `com.microsoft.adalcache` nahradit vlastní skupinou řetězce klíčů, uveďte ji pomocí klíče `ADALCacheKeychainGroupOverride` v souboru Info.plist pod IntuneMAMSettings.
 
-5. V případě, že explicitně nastavujete skupinu pro sdílený řetězec klíčů mezipaměti ADAL, ujistěte se, že je nastavená na `<appidprefix>.com.microsoft.adalcache`. Pokud ho nepřepíšete, knihovna ADAL tohle nastavení provede za vás. Pokud chcete `com.microsoft.adalcache` nahradit vlastní skupinou řetězce klíčů, uveďte ji pomocí klíče `ADALCacheKeychainGroupOverride` v souboru Info.plist pod IntuneMAMSettings.
+### <a name="configure-adalmsal-settings-for-the-intune-app-sdk"></a>Konfigurace nastavení ADAL/MSAL pro sadu Intune App SDK
 
-### <a name="configure-adal-settings-for-the-intune-app-sdk"></a>Konfigurace nastavení ADALu pro Intune App SDK
-
-Pokud už vaše aplikace používá ADAL k ověřování a má své vlastní nastavení ADALu, můžete přinutit sadu App SDK Intune, aby používala stejné nastavení během ověřování vůči Azure Active Directory. To zajistí, že aplikace nebude uživatele žádat o ověření dvakrát. Přečtěte si část [Konfigurace nastavení pro sadu Intune App SDK](#configure-settings-for-the-intune-app-sdk), kde najdete informace o naplnění těchto nastavení:  
+Pokud už vaše aplikace používá ADAL nebo MSAL k ověřování a má své vlastní nastavení Azure Active Directory, můžete vynutit, aby sada Intune App SDK používala stejné nastavení během ověřování proti AAD. To zajistí, že aplikace nebude uživatele žádat o ověření dvakrát. Přečtěte si část [Konfigurace nastavení pro sadu Intune App SDK](#configure-settings-for-the-intune-app-sdk), kde najdete informace o naplnění těchto nastavení:  
 
 * ADALClientId
 * ADALAuthority
@@ -220,7 +218,7 @@ Pokud už vaše aplikace používá ADAL k ověřování a má své vlastní nas
 * ADALRedirectScheme
 * ADALCacheKeychainGroupOverride
 
-Pokud už vaše aplikace používá ADAL, vyžadují se následující konfigurace:
+Pokud už vaše aplikace používá ADAL nebo MSAL, vyžadují se následující konfigurace:
 
 1. V souboru Info.plist projektu zadejte ve slovníku **IntuneMAMSettings** s názvem klíče `ADALClientId` ID klienta, které se má použít pro volání ADALu.
 
@@ -235,9 +233,19 @@ Dále můžou aplikace přepsat tato nastavení Azure AD za běhu. K tomu stač�
 > [!NOTE]
 > Použití souboru Info.plist se doporučuje pro všechna nastavení, která jsou statická a nevyžadují, aby se určovala za běhu. Hodnoty přiřazené vlastnostem v instanci `IntuneMAMPolicyManager` mají přednost před odpovídajícími hodnotami zadanými v souboru Info.plist a zachovají se i po restartování aplikace. Sada SDK je bude dále používat pro kontroly zásad, dokud se registrace daného uživatele nezruší nebo se tyto hodnoty nevymažou nebo nezmění.
 
-### <a name="if-your-app-does-not-use-adal"></a>Pokud vaše aplikace nepoužívá ADAL
+### <a name="if-your-app-does-not-use-adal-or-msal"></a>Pokud vaše aplikace nepoužívá ADAL ani MSAL
 
-Jak jsme už zmínili dříve, Intune App SDK využívá [Azure Active Directory Authentication Library](https://github.com/AzureAD/azure-activedirectory-library-for-objc) ke svému ověřování a podmíněnému spouštění. Knihovnu ADAL potřebuje taky kvůli registraci identity uživatele ve službě MAM, která slouží ke správě ve scénářích bez registrace zařízení. Pokud **vaše aplikace nepoužívá ADAL pro vlastní mechanismus ověřování**, bude sada Intune App SDK poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD. Pro výše uvedená nastavení ADALu nemusíte zadávat žádné hodnoty. Jakýkoli mechanismus ověřování používaný vaší aplikací (pokud existuje) se zobrazí ve výzvách ADAL. 
+Jak už jsme uvedli, sada Intune App SDK může pro své scénáře ověřování a podmíněného spuštění použít buď [knihovnu ověřování Azure Active Directory](https://github.com/AzureAD/azure-activedirectory-library-for-objc) , nebo [knihovnu Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) . Také spoléhá na knihovnu ADAL/MSAL k registraci identity uživatele ve službě MAM pro správu bez scénářů registrace zařízení. Pokud **vaše aplikace pro vlastní mechanismus ověřování nepoužívá ADAL nebo MSAL**, možná budete muset nakonfigurovat vlastní nastavení AAD v závislosti na tom, která knihovna ověřování se rozhodnete integrovat:   
+
+ADAL – Intune App SDK bude poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD. Vývojáři nemusejí zadávat žádné hodnoty pro výše zmíněná nastavení ADAL. 
+
+MSAL – vývojáři potřebují vytvořit registraci aplikace v AAD s vlastním identifikátorem URI přesměrování v zadaném formátu. [](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) Vývojáři by měli nastavit `ADALClientID` výše `ADALRedirectUri` zmíněná nastavení a, nebo `IntuneMAMPolicyManager` ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti instance. Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
+
+### <a name="special-considerations-when-using-msal"></a>Zvláštní důležité důvody při použití MSAL 
+
+1. **Zkontrolujte si WebView** – doporučujeme, aby aplikace nepoužívaly SFSafariViewController, SFAuthSession nebo ASWebAuthSession jako své WebView pro všechny operace MSAL pro ověřování iniciované aplikacemi. Pokud z nějakého důvodu vaše aplikace musí použít jedno z těchto webzobrazení pro všechny interaktivní operace ověřování MSAL, pak musí být také nastavené `true` na `IntuneMAMSettings` slovník v souboru `SafariViewControllerBlockedOverride` info. plist aplikace. UPOZORNĚNÍ Tím se vypne SafariViewController zavěšení služby Intune, aby se aktivovala relace ověřování. Tím se riziková data nevrátí jinde v aplikaci, pokud aplikace používá SafariViewController k zobrazení podnikových dat, takže by aplikace neměla v žádném z těchto typů WebView zobrazovat podniková data.
+2. **Propojení ADAL a MSAL** – vývojáři musí souhlasit, pokud chtějí v tomto scénáři Intune upřednostnit MSAL přes ADAL. Ve výchozím nastavení Intune bude upřednostňovat podporované verze ADAL pro podporované verze MSAL, pokud jsou oba propojeny za běhu. Intune bude upřednostňovat jenom podporovanou verzi MSAL jenom v případě, že v době první operace `IntuneMAMUseMSALOnNextLaunch` ověřování Intune je `true` v `NSUserDefaults`. Pokud `IntuneMAMUseMSALOnNextLaunch` je`false` nebo není nastavené, Intune se vrátí k výchozímu chování. Jak název navrhuje, změna `IntuneMAMUseMSALOnNextLaunch` se projeví při příštím spuštění.
+
 
 ## <a name="configure-settings-for-the-intune-app-sdk"></a>Konfigurace nastavení pro sadu Intune App SDK
 
@@ -249,21 +257,22 @@ Některá z těchto nastavení jsou možná popsaná v předchozích částech a
 
 Nastavení  | type  | Definice | Požadováno?
 --       |  --   |   --       |  --
-ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Požadován, pokud aplikace používá ADAL. |
-ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Požadován, pokud aplikace používá ADAL. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
-ADALRedirectUri  | Řetězec  | Identifikátor URI aplikace pro přesměrování Azure AD | Pokud aplikace používá ADAL, je požadován ADALRedirectUri nebo ADALRedirectScheme.  |
-ADALRedirectScheme  | Řetězec  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | Pokud aplikace používá ADAL, je požadován ADALRedirectUri nebo ADALRedirectScheme. |
-ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL (včetně všech případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Pokud aplikace chce nastavit vlastní zpětné volání protokolu ADAL, nastaví se hodnota ANO. | Volitelný parametr. |
-ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL místo com.microsoft.adalcache. Všimněte si, že nemá předponu app-id. Předpona se použije u zadaného řetězce za běhu. | Volitelný parametr. |
+ADALClientId  | Řetězec  | Identifikátor klienta Azure AD aplikace | Vyžaduje se pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALAuthority | Řetězec | Autorita Azure AD aplikace se používá. Měli byste použít vlastní prostředí, ve kterém jsou nakonfigurované účty AAD. | Vyžaduje se, pokud aplikace používá ADAL nebo MSAL k přístupu k prostředku AAD bez Intune. Pokud tato hodnota chybí, použije se výchozí hodnota Intune.|
+ADALRedirectUri  | Řetězec  | Identifikátor URI aplikace pro přesměrování Azure AD | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune.  |
+ADALRedirectScheme  | Řetězec  | Schéma přesměrování Azure AD aplikace Dá se použít místo ADALRedirectUri, pokud má aplikace identifikátor URI pro přesměrování ve formátu `scheme://bundle_id`. | ADALRedirectUri nebo ADALRedirectScheme se vyžadují pro všechny aplikace, které používají MSAL a všechny aplikace ADAL, které přistupují k prostředku AAD bez Intune. |
+ADALLogOverrideDisabled | Logická hodnota  | Určuje, jestli SDK bude všechny protokoly ADAL/MSAL (včetně případných volání ADAL z aplikace) směrovat do vlastního souboru protokolu. Výchozí hodnota je NE. Nastavte na Ano, pokud aplikace nastaví vlastní zpětné volání protokolu ADAL/MSAL. | Volitelný parametr. |
+ADALCacheKeychainGroupOverride | Řetězec  | Určuje skupinu řetězce klíčů, která se má použít pro mezipaměť ADAL/MSAL místo com. Microsoft. adalcache. Všimněte si, že nemá předponu app-id. Předpona se použije u zadaného řetězce za běhu. | Volitelný parametr. |
 AppGroupIdentifiers | pole řetězců  | Pole skupin aplikací z části com.apple.security.application-groups nároků aplikace. | Vyžaduje se, když aplikace využívá skupiny aplikací. |
 ContainingAppBundleId | Řetězec | Určuje ID sady rozšíření obsahující aplikaci. | Vyžaduje se rozšíření pro iOS. |
 DebugSettingsEnabled| Logická hodnota | Pokud je nastaveno na ANO, dají se uplatnit testovací zásady v rámci sady Nastavení. Publikované aplikace by *neměly* mít tohle nastavení povolené. | Volitelný parametr. Výchozí hodnota je NE. |
 MainNibFile<br>MainNibFile~ipad  | Řetězec  | Toto nastavení by mělo mít název souboru pro hlavní nib aplikace.  | Vyžaduje se, pokud aplikace v souboru Info.plist definuje MainNibFile. |
 MainStoryboardFile<br>MainStoryboardFile~ipad  | Řetězec  | Toto nastavení by mělo obsahovat název souboru pro hlavní storyboard aplikace. | Vyžaduje se, pokud aplikace v souboru Info.plist definuje UIMainStoryboardFile. |
-AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámky: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL není k dispozici žádný platný token pro identitu, pokus o registraci bude bez upozornění na přihlašovací údaje v tichém režimu selže, pokud aplikace nastavila také MAMPolicyRequired na Ano. | Volitelný parametr. Výchozí hodnota je NE. |
+AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámky: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL/MSAL není k dispozici žádný platný token pro identitu, pokus o registraci selže bez výzvy k zadání přihlašovacích údajů, pokud aplikace také nenastaví MAMPolicyRequired na Ano. | Volitelný parametr. Výchozí hodnota je NE. |
 MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámky: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. | Volitelný parametr. Výchozí hodnota je NE. |
 MAMPolicyWarnAbsent | Logická hodnota| Určuje, jestli aplikace při spuštění upozorní uživatele v případě, že nebude mít zásady ochrany aplikací Intune. <br><br> Poznámka: Uživatelům bude i po chybějícím upozornění moct aplikaci používat bez zásad. | Volitelný parametr. Výchozí hodnota je NE. |
 MultiIdentity | Logická hodnota| Určuje, jestli aplikace umožňuje rozlišovat více identit. | Volitelný parametr. Výchozí hodnota je NE. |
+SafariViewControllerBlockedOverride | Logická hodnota| Zakáže SafariViewController zavěšení služby Intune, aby povolovala ověřování MSAL prostřednictvím SFSafariViewController, SFAuthSession nebo ASWebAuthSession. | Volitelný parametr. Výchozí hodnota je NE. Upozornění: při nesprávném použití může dojít k úniku dat. Povolte pouze v případě nezbytně nutného. Podrobnosti najdete v tématu [zvláštní informace o použití MSAL](#special-considerations-when-using-msal) .  |
 SplashIconFile <br>SplashIconFile~ipad | Řetězec  | Určuje soubor úvodní (spouštěcí) ikony Intune. | Volitelný parametr. |
 SplashDuration | Číslo | Minimální doba v sekundách, po kterou se při spuštění aplikace bude zobrazovat úvodní obrazovka Intune. Výchozí hodnota je 1,5. | Volitelný parametr. |
 BackgroundColor| Řetězec| Určuje barvu pozadí úvodní obrazovky a obrazovky se zadáváním kódu PIN. Zadat je možné šestnáctkový řetězec RGB ve formátu #XXXXXX, kde každé X může mít hodnotu 0–9 nebo A–F. Symbol křížku můžete vynechat.   | Volitelný parametr. Výchozí hodnota je světle šedá. |
@@ -281,9 +290,9 @@ WebViewHandledURLSchemes | Pole řetězců | Určuje schémata URL zpracovávan�
 
 Kvůli příjmu zásad ochrany aplikací Intune musí aplikace inicializovat žádost o registraci ve službě Intune MAM. Aplikace lze v konzole Intune nakonfigurovat tak, aby přijímaly zásady ochrany aplikací s registrací zařízení nebo bez registrace zařízení. Zásady ochrany aplikací bez registrace, označované také jako **APP-WE** nebo MAM-WE, umožňují správu aplikací přes Intune bez nutnosti registrace zařízení do správy mobilních zařízení Intune (MDM). V obou případech se pro příjem zásad vyžaduje registrace ve službě Intune MAM.
 
-### <a name="apps-that-use-adal"></a>Aplikace, které používají ADAL
+### <a name="apps-that-already-use-adal-or-msal"></a>Aplikace, které už používají ADAL nebo MSAL
 
-Aplikace, které už používají ADAL, by měly po úspěšném ověření uživatele zavolat metodu `registerAndEnrollAccount` v instanci `IntuneMAMEnrollmentManager`:
+Aplikace, které už používají ADAL nebo MSAL, `registerAndEnrollAccount` by měly volat metodu `IntuneMAMEnrollmentManager` na instanci po úspěšném ověření uživatele:
 
 ```objc
 /*
@@ -303,9 +312,9 @@ Po zavolání tohoto rozhraní API může aplikace dál normálně fungovat. Pok
 [[IntuneMAMEnrollmentManager instance] registerAndEnrollAccount:@”user@foo.com”];
 ```
 
-### <a name="apps-that-do-not-use-adal"></a>Aplikace, které nepoužívají knihovnu ADAL
+### <a name="apps-that-do-not-use-adal-or-msal"></a>Aplikace, které nepoužívají ADAL nebo MSAL
 
-Aplikace, které uživatele nepřihlašují pomocí knihovny ADAL, můžou od služby Intune MAM přesto přijímat zásady ochrany aplikací voláním rozhraní API, které nechá ověření vyřídit prostřednictvím sady SDK. Aplikace by tento postup měly používat, když neověřily uživatele pomocí Azure AD, ale potřebují načítat zásady ochrany aplikací na pomoc s ochranou dat. (například, když se k ověřování přihlášení aplikace používá jiná služba ověřování nebo když aplikace přihlašování vůbec nepodporuje). Aplikace to může provést zavoláním metody `loginAndEnrollAccount` v instanci `IntuneMAMEnrollmentManager`:
+Aplikace, které uživatele nepodepisují pomocí ADAL nebo MSAL, můžou dál přijímat zásady ochrany aplikací ze služby Intune MAM voláním rozhraní API, aby sada SDK zpracovala Toto ověřování. Aplikace by tento postup měly používat, když neověřily uživatele pomocí Azure AD, ale potřebují načítat zásady ochrany aplikací na pomoc s ochranou dat. (například, když se k ověřování přihlášení aplikace používá jiná služba ověřování nebo když aplikace přihlašování vůbec nepodporuje). Aplikace to může provést zavoláním metody `loginAndEnrollAccount` v instanci `IntuneMAMEnrollmentManager`:
 
 ```objc
 /**
@@ -331,11 +340,11 @@ Příklad:
 
 ### <a name="let-intune-handle-authentication-and-enrollment-at-launch"></a>Umožněte Intune zpracovat ověřování a registraci při spuštění
 
-Pokud chcete, aby sada Intune SDK zpracovala veškeré ověřování pomocí ADAL a registraci před dokončením spuštění vaší aplikace, a vaše aplikace vždycky vyžaduje zásady APP, nemusíte používat rozhraní API `loginAndEnrollAccount`. Můžete jednoduše ve slovníku IntuneMAMSettings v souboru Info.plist dané aplikace nastavit dvě níže uvedená nastavení na ANO.
+Pokud chcete, aby sada Intune SDK zpracovávala všechna ověřování pomocí knihovny ADAL/MSAL a registraci předtím, než se aplikace dokončí, a vaše aplikace vždy vyžaduje zásadu aplikace, nemusíte používat `loginAndEnrollAccount` rozhraní API. Můžete jednoduše ve slovníku IntuneMAMSettings v souboru Info.plist dané aplikace nastavit dvě níže uvedená nastavení na ANO.
 
 Nastavení  | type  | Definice |
 --       |  --   |   --       |  
-AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámka: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL není k dispozici žádný platný token pro identitu, pokus o registraci bude bez upozornění na přihlašovací údaje v tichém režimu selže, pokud aplikace nastavila také MAMPolicyRequired na Ano. |
+AutoEnrollOnLaunch| Logická hodnota| Určuje, zda se má aplikace pokusit o automatickou registraci při spuštění, pokud se zjistí existující spravovaná identita a aplikace se ještě nezaregistrovala. Výchozí hodnota je NE. <br><br> Poznámka: Pokud není nalezena žádná spravovaná identita nebo v mezipaměti ADAL/MSAL není k dispozici žádný platný token pro identitu, pokus o registraci selže bez výzvy k zadání přihlašovacích údajů, pokud aplikace také nenastaví MAMPolicyRequired na Ano. |
 MAMPolicyRequired| Logická hodnota| Určuje, jestli se aplikaci zabrání ve spuštění, pokud nebude mít zásady ochrany aplikací Intune. Výchozí hodnota je NE. <br><br> Poznámka: Aplikace se nedají odeslat do obchodu s aplikacemi s MAMPolicyRequired nastavenou na Ano. Při nastavení možnosti MAMPolicyRequired na ANO je vhodné nastavit na ANO také možnost AutoEnrollOn. |
 
 Pokud zvolíte pro aplikaci tuto možnost, nemusíte se po registraci zabývat restartováním aplikace.

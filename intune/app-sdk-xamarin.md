@@ -5,7 +5,7 @@ keywords: SDK, Xamarin, Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd2a2b73c5dc7b792e5766c3fded152eabc1f53b
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: dcfc43c3fe023d54c99a88356f9bfc2a8bdebc47
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582913"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894342"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Xamarinové vazby sady Microsoft Intune App SDK
 
@@ -55,9 +55,11 @@ Xamarinové aplikace vytvořené xamarinovými vazbami sady Intune App SDK přij
 
 Přečtěte si [licenční podmínky](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20Xamarin%20Component.pdf). Vytisknout a uchovat pro své záznamy kopii licenčních podmínek. Stažením a použitím xamarinových vazeb sady Intune App SDK přijímáte tyto licenční podmínky. Pokud je nepřijímáte, software nepoužívejte.
 
-Sada SDK se spoléhá na [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
+Intune SDK se spoléhá na [Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/) pro své scénáře [ověřování](https://azure.microsoft.com/documentation/articles/active-directory-authentication-scenarios/) a podmíněného spuštění, které vyžadují konfiguraci aplikací pomocí [Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-whatis/). 
 
 Pokud je vaše aplikace už nakonfigurovaná tak, aby používala ADAL nebo MSAL, a má vlastní ID klienta, které se používá k ověření pomocí Azure Active Directory, zajistěte, aby vaše oprávnění aplikace Xamarin poskytovala službě Intune Mobile Application Management (MAM). uplatnil. Postupujte podle pokynů v části "[poskytnutí přístupu aplikace ke službě Intune App Protection](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)" v tématu [Začínáme s Intune SDK](app-sdk-get-started.md).
+
+
 
 ## <a name="enabling-intune-app-protection-polices-in-your-ios-mobile-app"></a>Povolení zásad ochrany aplikací Intune v mobilní aplikaci pro iOS
 1. Do svého projektu Xamarin.iOS přidejte [balíček NuGet Microsoft.Intune.MAM.Xamarin.iOS](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.iOS).
@@ -83,13 +85,15 @@ Pokud je vaše aplikace už nakonfigurovaná tak, aby používala ADAL nebo MSAL
       IntuneMAMEnrollmentManager.Instance.RegisterAndEnrollAccount(string identity);
       ```
 
-      Aplikace mohou určit výsledek pokusu o registraci implementací metody EnrollmentRequestWithStatus v podtřídě IntuneMAMEnrollmentDelegate a nastavením vlastnosti Delegate třídy IntuneMAMEnrollmentManager na instanci této třídy. Příklad najdete v naší [ukázkové aplikaci Xamarin.iOS](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
+      Aplikace mohou určit výsledek pokusu o registraci implementací metody EnrollmentRequestWithStatus v podtřídě IntuneMAMEnrollmentDelegate a nastavením vlastnosti Delegate třídy IntuneMAMEnrollmentManager na instanci této třídy. 
 
       Po úspěšné registraci mohou aplikace určit hlavní název uživatele zaregistrovaného účtu (pokud předtím nebyl známý) dotazem na následující vlastnost: 
 
       ```csharp
        string enrolledAccount = IntuneMAMEnrollmentManager.Instance.EnrolledAccount;
       ```      
+### <a name="sample-applications"></a>Ukázkové aplikace
+Ukázkové aplikace zvýrazňování MAM funkcí v aplikacích Xamarin. iOS jsou k dispozici na [GitHubu](https://github.com/msintuneappsdk/sample-intune-xamarin-ios).
 
 > [!NOTE] 
 > Pro iOS není k dispozici nástroj pro přemapování. Integrace do aplikace Xamarin.Forms by měla být stejná jako u normálního projektu Xamarin.iOS. 
@@ -205,6 +209,7 @@ To je očekáváno, protože když přemapování mění dědění tříd Xamari
 
 #### <a name="troubleshooting"></a>Řešení potíží
 * Pokud při spuštění aplikace narazíte na prázdnou bílou obrazovku, možná budete muset vynutit, aby se volání navigace spouštěla v hlavním vlákně.
+* Vazby Xamarin sady Intune SDK nepodporují aplikace, které používají architekturu pro víc platforem, jako je například MvvmCross, z důvodu konfliktů mezi MvvmCross a třídami MAM Intune. I když někteří zákazníci mohou mít po přesunu svých aplikací do jednoduchých Xamarin. Forms úspěch s integrací, neposkytujeme pro vývojáře aplikací explicitní pokyny a moduly plug-in, které používají MvvmCross.
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
 Vazby Xamarin sady Intune SDK spoléhají na přítomnost [portál společnosti](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) aplikace pro Android na zařízení, aby se povolily zásady ochrany aplikací. Portál společnosti načítá zásady ochrany aplikací ze služeb Intune. Při inicializaci načte aplikace z Portálu společnosti zásadu a kód, který ji vynucuje. Uživatel nemusí být přihlášený.
@@ -215,7 +220,7 @@ Vazby Xamarin sady Intune SDK spoléhají na přítomnost [portál společnosti]
 U ochrany aplikací bez registrace zařízení _**nemusí**_ uživatel registrovat zařízení přes aplikaci Portál společnosti.
 
 ### <a name="sample-applications"></a>Ukázkové aplikace
-Ukázkové aplikace zvýrazňování MAM funkcí v Xamarin. Android a Xamarin Forms Apps jsou k dispozici na [GitHubu](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
+Ukázkové aplikace zvýrazňování MAM funkcí v aplikacích Xamarin. Android a Xamarin. Forms jsou dostupné na [GitHubu](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Podpora
-Pokud je vaše organizace stávajícím zákazníkem Intune, spolupracujte se svým zástupcem podpory Microsoftu a otevřete lístek podpory a [na stránce problémy GitHubu](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) vám pomůžeme, jakmile budeme moct. 
+Pokud je vaše organizace stávajícím zákazníkem Intune, obraťte se na svého zástupce podpory Microsoftu, aby otevřel lístek podpory a [na stránce problémů](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues)na GitHubu vytvořil problém. Pomůžeme vám, jakmile budeme. 
