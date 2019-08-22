@@ -665,6 +665,8 @@
                   href: app-protection-policies-validate.md
                 - name: Doručování zásad ochrany aplikací
                   href: app-protection-policy-delivery.md
+                - name: Ochrana rozšíření aplikací
+                  href: app-protection-policy-extensions.md
                 - name: Monitorování stavu uživatele u ochrany aplikací
                   href: app-protection-policies-monitor.md
                 - name: Příprava na zásady ochrany aplikací WIP
