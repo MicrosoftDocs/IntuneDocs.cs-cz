@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 08/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 816ac1d97e7be485717905fe9d5d62b812408446
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: b333c848368f00f005ed0febc61f67f098ee7e5e
+ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512218"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979190"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -310,73 +310,73 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 | 6                | WindowsBulkUserless                | Hromadná registrace Windows 10 prostřednictvím nástroje ICD s certifikátem                               |
 | 7                | WindowsAutoEnrollment              | Automatická registrace Windows 10   (Přidání pracovního účtu)                                    |
 | 8                | WindowsBulkAzureDomainJoin         | Hromadné připojení k Azure AD s Windows 10                                                           |
-| 9                | WindowsCoManagement                | Společná správa systému Windows 10 aktivuje AutoPilot nebo zásad skupiny.                       |
+| 9                | WindowsCoManagement                | Spoluspráva Windows 10 aktivovaná autopilotem nebo Zásady skupiny.                       |
 | 10               | WindowsAzureADJoinsUsingDeviceAuth | Připojení k Azure AD pomocí Device Auth ve Windows 10                                            |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-**EnrollmentActivity** entity indikuje aktivitu registrace zařízení.
+Entita **EnrollmentActivity** označuje aktivitu registrace zařízení.
 
 | Vlastnost                      | Popis                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
-| dateKey                       | Klíč data, když se tato aktivita registrace přihlášení.               |
+| dateKey                       | Klíč data, kdy se tato aktivita registrace nahrála.               |
 | deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
-| deviceTypeKey                 | Klíč typu zařízení.                                                |
+| deviceTypeKey                 | Klíč typu zařízení                                                |
 | enrollmentEventStatusKey      | Klíč stavu indikující úspěch nebo neúspěch registrace.    |
-| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (pokud registrace nebyla úspěšná.).        |
-| enrollmentFailureReasonKey    | Klíč důvod selhání registrace (pokud registrace nebyla úspěšná.).          |
+| enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (Pokud se registrace nezdařila)        |
+| enrollmentFailureReasonKey    | Klíč důvodu selhání registrace (Pokud se registrace nezdařila)          |
 | osVersion                     | Verze operačního systému zařízení.                               |
-| count                         | Celkový počet zápisu aktivit odpovídající klasifikace výše.  |
+| count                         | Celkový počet aktivit registrace, které odpovídají klasifikacím uvedeným výše.  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-**EnrollmentEventStatus** entity označuje výsledek registrace zařízení.
+Entita **EnrollmentEventStatus** indikuje výsledek registrace zařízení.
 
 | Vlastnost                   | Popis                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
 | enrollmentEventStatusKey   | Jedinečný identifikátor stavu registrace v datovém skladu (náhradní klíč)  |
-| enrollmentEventStatusName  | Název stavu registrace. Další příklady naleznete níže.                            |
+| enrollmentEventStatusName  | Název stavu registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentEventStatusName  | Popis                            |
 |----------------------------|----------------------------------------|
-| Úspěch                    | Registrace úspěšná zařízení         |
-| Selhalo                     | Registrace zařízení se nezdařilo             |
-| Není k dispozici              | Stav zápisu není k dispozici.  |
+| Úspěch                    | Úspěšná registrace zařízení         |
+| Selhalo                     | Neúspěšná registrace zařízení             |
+| Není k dispozici              | Stav registrace není k dispozici.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
-**EnrollmentFailureCategory** entity označuje, proč registrace zařízení se nepovedla. 
+Entita **EnrollmentFailureCategory** indikuje, proč se registrace zařízení nezdařila. 
 
 | Vlastnost                       | Popis                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
 | enrollmentFailureCategoryKey   | Jedinečný identifikátor kategorie selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureCategoryName  | Název kategorie chyby registrace. Další příklady naleznete níže.                            |
+| enrollmentFailureCategoryName  | Název kategorie selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
 | enrollmentFailureCategoryName   | Popis                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nelze použít                  | Kategorie chyby registrace se nedá použít.                                                            |
-| Není k dispozici                   | Kategorie chyby registrace není k dispozici.                                                             |
+| Nelze použít                  | Kategorie selhání registrace se nedá použít.                                                            |
+| Není k dispozici                   | Kategorie selhání registrace není k dispozici.                                                             |
 | Neznámé                         | Neznámá chyba                                                                                                |
 | Ověřování                  | Ověření se nezdařilo.                                                                                        |
-| Authorization                   | Volání byl ověřen, ale není autorizovaný k registraci.                                                         |
-| AccountValidation               | Nepovedlo se ověřit účet pro zápis. (Účet zablokovaný, není povolená registrace)                      |
-| UserValidation                  | Nebylo možné ověřit uživatele. (Uživatel neexistuje, chybí licence)                                           |
+| Authorization                   | Volání bylo ověřeno, ale není autorizováno k registraci.                                                         |
+| AccountValidation               | Nepovedlo se ověřit účet pro registraci. (Účet zablokován, registrace není povolená.)                      |
+| UserValidation                  | Uživatele nelze ověřit. (Uživatel neexistuje, chybí licence)                                           |
 | DeviceNotSupported              | Zařízení není podporováno pro správu mobilních zařízení.                                                         |
-| InMaintenance                   | Účet je ve stavu údržby.                                                                                    |
-| Chybného požadavku                      | Klient odešle požadavek, který není srozumitelný/podporované službou.                                        |
-| FeatureNotSupported             | Funkce používá tento zápis nejsou podporovány pro tento účet.                                        |
-| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurované správcem blokované tato registrace.                                          |
-| ClientDisconnected              | Vypršel časový limit klienta nebo registrace byla přerušena koncovým uživatelem.                                                        |
-| UserAbandonment                 | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)  |
+| Inúdržba                   | Účet je v údržbě.                                                                                    |
+| Důvodu chybného požadavku                      | Klient odeslal požadavek, který služba nerozpoznala nebo nepodporovala.                                        |
+| FeatureNotSupported             | Funkce používané tímto zápisem nejsou pro tento účet podporovány.                                        |
+| EnrollmentRestrictionsEnforced  | Omezení registrace nakonfigurovaná správcem zablokovala tuto registraci.                                          |
+| ClientDisconnected              | Vypršel časový limit klienta nebo byl zápis přerušen koncovým uživatelem.                                                        |
+| UserAbandonment                 | Zápis byl opuštěn koncovým uživatelem. (Koncový uživatel zahájil registraci, ale nedokázal ho dokončit včas)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
-**EnrollmentFailureReason** entity označuje podrobnější důvod selhání registrace zařízení v kategorii daného selhání.  
+Entita **EnrollmentFailureReason** označuje podrobnější důvod selhání registrace zařízení v dané kategorii selhání.  
 
 | Vlastnost                     | Popis                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
-| enrollmentFailureReasonKey   | Jedinečný identifikátor důvod selhání registrace v datovém skladu (náhradní klíč)  |
-| enrollmentFailureReasonName  | Název registrace důvod selhání. Další příklady naleznete níže.                            |
+| enrollmentFailureReasonKey   | Jedinečný identifikátor důvodu selhání registrace v datovém skladu (náhradní klíč)  |
+| enrollmentFailureReasonName  | Název důvodu selhání registrace. Podívejte se na příklady níže.                            |
 
 ### <a name="example"></a>Příklad
 
@@ -384,21 +384,21 @@ Entita **deviceEnrollmentType** určuje, jak se zařízení zaregistrovalo. Typ 
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nelze použít                   | Důvod selhání registrace se nedá použít.                                                                                                                                                       |
 | Není k dispozici                    | Důvod selhání registrace není k dispozici.                                                                                                                                                        |
-| Neznámé                          | Došlo k neznámé chybě.                                                                                                                                                                                         |
-| UserNotLicensed                  | Uživatel se nenašel v Intune nebo nemá platnou licenci.                                                                                                                                     |
-| UserUnknown                      | Uživatel není znám do Intune.                                                                                                                                                                           |
-| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení už zaregistroval někdo jiný uživatel.                                                                                                                |
-| EnrollmentOnboardingIssue        | Autoritu pro správu (MDM) Intune mobilního zařízení ještě není nakonfigurovaná.                                                                                                                                 |
-| AppleChallengeIssue              | Instalace profilu správy iOS se zpozdila nebo nebyla úspěšná.                                                                                                                                         |
-| AppleOnboardingIssue             | Certifikát Apple MDM push certificate se vyžaduje k registraci do Intune.                                                                                                                                       |
-| DeviceCap                        | Uživatel se pokusil zaregistrovat víc zařízení, než maximální povolená.                                                                                                                                        |
-| AuthenticationRequirementNotMet  | Registrace služby Intune se nepodařilo autorizovat tento požadavek.                                                                                                                                            |
-| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky pro registraci v Intune.                                                                                                                                  |
-| EnrollmentCriteriaNotMet         | Toto zařízení se nepodařilo registrovat z důvodu nakonfigurované registrace omezení pravidla.                                                                                                                          |
-| BulkDeviceNotPreregistered       | Nenašel se mezinárodní identifikátor mobilního zařízení (IMEI) nebo sériové číslo tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení v osobním vlastnictví, které jsou aktuálně zablokovány.  |
-| FeatureNotSupported              | Uživatel se pokusil pro přístup k funkci, která ještě není k všem zákazníkům nebo není kompatibilní s vaší konfigurací Intune.                                                            |
-| UserAbandonment                  | Registrace byla opuštěna koncovým uživatelem. (Koncový uživatel začít registrace, ale se nepodařilo dokončit včas)                                                                                           |
-| APNSCertificateExpired           | Zařízení Apple nelze spravovat pomocí vypršela platnost certifikátu Apple MDM push certificate.                                                                                                                            |
+| Neznámé                          | Neznámá chyba.                                                                                                                                                                                         |
+| UserNotLicensed                  | Uživatel se v Intune nenašel nebo nemá platnou licenci.                                                                                                                                     |
+| UserUnknown                      | Intune nezná uživatele.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Zařízení může zaregistrovat jenom jeden uživatel. Toto zařízení dřív zaregistroval jiný uživatel.                                                                                                                |
+| EnrollmentOnboardingIssue        | Autorita správy mobilních zařízení (MDM) Intune ještě není nakonfigurovaná.                                                                                                                                 |
+| AppleChallengeIssue              | Instalace profilu správy iOS byla zpožděna nebo se nezdařila.                                                                                                                                         |
+| AppleOnboardingIssue             | K registraci do Intune se vyžaduje certifikát Apple MDM push Certificate.                                                                                                                                       |
+| DeviceCap                        | Uživatel se pokusil zaregistrovat více zařízení, než je povolené maximum.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Službě registrace v Intune se nepovedlo autorizovat tuto žádost.                                                                                                                                            |
+| UnsupportedDeviceType            | Toto zařízení nesplňuje minimální požadavky na registraci v Intune.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Registrace tohoto zařízení se nepovedla kvůli nakonfigurovanému pravidlu omezení registrace.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nenašlo se číslo IMEI (International Mobile Equipment Identifier) tohoto zařízení.  Bez tohoto identifikátoru se zařízení rozpoznávají jako zařízení, která jsou v tuto chvíli zablokovaná.  |
+| FeatureNotSupported              | Uživatel se pokusil o přístup k funkci, která ještě není vydaná pro všechny zákazníky nebo není kompatibilní s vaší konfigurací Intune.                                                            |
+| UserAbandonment                  | Zápis byl opuštěn koncovým uživatelem. (Koncový uživatel zahájil registraci, ale nedokázal ho dokončit včas)                                                                                           |
+| APNSCertificateExpired           | Zařízení Apple se nedají spravovat pomocí certifikátu Apple MDM push Certificate s vypršenou platností.                                                                                                                            |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 **IntuneManagementExtension** uvádí seznam stavů **intuneManagementExtension** na jednotlivých zařízeních s Windows 10 za den. Uchovávají se data za posledních 60 dní.
@@ -433,9 +433,9 @@ Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spr
 
 | Vlastnost | Popis | Příklad |
 |---------|------------|--------|
-| mamApplicationKey |Jedinečný identifikátor aplikace MAM. | 432 |
-| mamApplicationName |Název aplikace MAM. |Ukázkový název aplikace MAM |
-| mamApplicationId |Id aplikace MAM. | 123 |
+| mamApplicationKey |Jedinečný identifikátor aplikace MAM | 432 |
+| mamApplicationName |Název aplikace MAM |Příklad názvu aplikace MAM |
+| mamApplicationId |ID aplikace MAM | 123 |
 | IsDeleted |Určuje, jestli je tento záznam aplikace MAM aktualizovaný. <br>True – aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto aplikaci MAM. |True nebo False |
 | StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu vytvořila |23.11.2016 12:00:00 |
 | DeletedDateUTC |Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True |23.11.2016 12:00:00 |
@@ -452,15 +452,15 @@ Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes 
 |   ApplicationInstanceKey   |                                                               Jedinečný identifikátor instance aplikace MAM v datovém skladu – náhradní klíč                                                                |                 123                  |
 |           UserId           |                                                                              ID uživatele, který má tuto aplikaci MAM nainstalovanou.                                                                              | b66bc706-ffff-7437-0340-032819502773 |
 |   ApplicationInstanceId    |                                              Jedinečný identifikátor instance aplikace MAM – podobá se vlastnosti ApplicationInstanceKey, ale tento identifikátor představuje přirozený klíč.                                              | b66bc706-ffff-7437-0340-032819502773 |
-| mamApplicationId | Id aplikace Mam, pro kterou byla vytvořena tato Instance aplikace Mam.   | 23.11.2016 12:00:00   |
+| mamApplicationId | ID aplikace mam, pro kterou se vytvořila tato instance aplikace mam   | 23.11.2016 12:00:00   |
 |     ApplicationVersion     |                                                                                     Verze aplikace pro danou aplikaci MAM                                                                                      |                  2                   |
 |        CreatedDate         |                                                                 Datum vytvoření daného záznamu instance aplikace MAM Hodnota může být null.                                                                 |        23.11.2016 12:00:00        |
 |          Platforma          |                                                                          Platforma zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                           |                  2                   |
 |      PlatformVersion       |                                                                      Verze platformy zařízení, na kterém je daná aplikace MAM nainstalovaná                                                                       |                 2.2                  |
 |         SdkVersion         |                                                                            Verze sady SDK MAM, pomocí které byla daná aplikace MAM zabalena                                                                            |                 3.2                  |
-| mamDeviceId | Id zařízení ze zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
-| mamDeviceType | Zařízení typu zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
-| mamDeviceName | Název zařízení, pomocí kterého je Instance aplikace MAM přidružené.   | 23.11.2016 12:00:00   |
+| mamDeviceId | ID zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
+| mamDeviceType | Typ zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
+| mamDeviceName | Název zařízení, ke kterému je přidružená instance aplikace MAM   | 23.11.2016 12:00:00   |
 |         IsDeleted          | Určuje, jestli je tento záznam instance aplikace MAM aktualizovaný. <br>True – tato instance aplikace MAM má v této tabulce nový záznam s aktualizovanými poli. <br>False – jedná se o nejnovější záznam pro tuto instanci aplikace MAM. |              True nebo False              |
 |   StartDateInclusiveUtc    |                                                              Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu vytvořila                                                               |        23.11.2016 12:00:00        |
 |       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
@@ -478,7 +478,7 @@ Entita **MamCheckin** představuje data shromážděná v době, kdy se instance
 | DateKey |Klíč data, kdy se přihlášení aplikace MAM v datovém skladu zaznamenalo | 20160703 |
 | ApplicationInstanceKey |Klíč instance aplikace, který je k tomuto přihlášení aplikace MAM přidružený | 123 |
 | UserKey |Klíč uživatele, který je k tomuto přihlášení aplikace MAM přidružený | 4323 |
-| mamApplicationKey |Klíč z aplikací přidružené k aplikaci MAM vrácení se změnami. | 432 |
+| mamApplicationKey |Aplikační klíč aplikace přidružený k vrácení aplikace MAM se změnami | 432 |
 | DeviceHealthKey |Klíč pro stav, který je k tomuto přihlášení aplikace MAM přidružený | 321 |
 | PlatformKey |Představuje platformu zařízení, které je k tomuto přihlášení aplikace MAM přidružené |123 |
 | LastCheckInDate |Datum a čas posledního přihlášení dané aplikace MAM Hodnota může být null. |23.11.2016 12:00:00 |
@@ -526,7 +526,7 @@ Entita **managementAgentType** představuje agenty používané ke správě zař
 | 5                     | EasIntuneClient                   | Zařízení se spravuje pomocí protokolu Exchange Active Sync i pomocí agenta Intune pro počítače. |
 | 8                     | ConfigManagerClient               | Zařízení se spravuje pomocí agenta produktu System Center Configuration Manager.     |
 | 10                    | ConfigurationManagerClientMdm     | Zařízení se spravuje pomocí Configuration Manageru a MDM.                    |
-| 11                    | ConfigurationManagerCLientMdmEas  | Zařízení se spravuje přes Configuration Manager, MDM a protokolu Exchange Active Sync.               |
+| 11                    | ConfigurationManagerCLientMdmEas  | Zařízení se spravuje pomocí Configuration Manager, MDM a Exchange Active Sync.               |
 | 16                    | Neznámé                           | Neznámý typ agenta správy                                              |
 | 32                    | Jamf                              | Atributy zařízení se načítají z Jamf.                               |
 | 64                    | GoogleCloudDevicePolicyController |  Zařízení se spravuje přes CloudDPC Googlu.                                 |
@@ -585,10 +585,10 @@ Entita **ownerType** určuje, jestli je zařízení firemní, v osobním vlastni
 |:-------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------:|
 | ownerTypeID   | Jedinečný identifikátor typu vlastníka.                                                                                                                                               |                            |
 | ownerTypeKey  | Jedinečný identifikátor typu vlastníka v datovém skladu – náhradní klíč                                                                                                       |                            |
-| ownerTypeName | Představuje typ vlastníka zařízení:  Firemní – zařízení je ve vlastnictví společnosti.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Podnikové osobní, neznámé |
+| ownerTypeName | Představuje typ vlastníka zařízení:  Podnik – zařízení je ve vlastnictví podniku.  Osobní – zařízení je v osobním vlastnictví (BYOD).   Neznámé – žádné informace o tomto zařízení nejsou dostupné. | Firemní osobní neznámý |
 
 > [!Note]  
-> Pro `ownerTypeName` filtru v Azure AD při vytváření dynamické skupiny zařízení, je potřeba nastavit hodnotu `deviceOwnership` jako `Company`. Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Pro filtr v AzureAD při vytváření dynamických skupin pro zařízení je potřeba nastavit hodnotu `deviceOwnership` jako `Company`. `ownerTypeName` Další informace najdete v tématu [pravidla pro zařízení](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="policies"></a>policies
 Entita **Policy** obsahuje seznam konfiguračních profilů zařízení, konfiguračních profilů aplikací a zásady dodržování předpisů. Zásady se správou mobilních zařízení (MDM) můžete přiřadit skupině ve vašem podniku.
@@ -677,7 +677,7 @@ Entita **termsAndConditions** představuje metadata a obsah daných zásad podm�
 ## <a name="userdeviceassociations"></a>userDeviceAssociations
 Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů ve vaší organizaci.
 
-|        Název        |                                             Popis                                            |     Příklad     |
+|        Name        |                                             Popis                                            |     Příklad     |
 |:------------------:|:--------------------------------------------------------------------------------------------------:|:---------------:|
 | UserKey            | Jedinečný identifikátor uživatele v datovém skladu   (náhradní klíč)                            | 123             |
 | DeviceKey          | Jedinečný identifikátor zařízení v datovém skladu                                             | 123             |
@@ -696,7 +696,7 @@ Kolekce entit **user** obsahuje uživatelská data. Tyto záznamy zahrnují stav
 | UserId                     | Jedinečný identifikátor uživatele – podobá se vlastnosti UserKey, jedná se ale o přirozený klíč.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
 | UserEmail                  | E-mailová adresa uživatele                                                                                                                                                                                                     | John@constoso.com                    |
 | userPrincipalName (Hlavní název uživatele)                        | Hlavní název uživatele (UPN) uživatele                                                                                                                                                                                               | John@constoso.com                    |
-| displayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
+| DisplayName                | Zobrazované jméno uživatele                                                                                                                                                                                                      | Honza                                 |
 | IntuneLicensed             | Určuje, jestli tento uživatel má licenci na službu Intune.                                                                                                                                                                              | True nebo False                           |
 | IsDeleted                  | Určuje, zda všem uživatelským licencím vypršela platnost a zda byl proto uživatel odebrán z Intune. Pro jeden záznam se tento příznak nemění. Místo toho se vytvoří nový záznam pro nový stav uživatele. | True nebo False                           |
 | RowLastModifiedDateTimeUTC | Datum a čas ve standardu UTC, kdy se tento záznam v datovém skladu naposledy změnil                                                                                                                                                 | 23. 11. 2016 0:00                      |
