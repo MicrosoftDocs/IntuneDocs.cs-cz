@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fb1111a7f660e8c59f45fb1893364dcadd34dca
-ms.sourcegitcommit: 6a8de7bb4870ea19aa08db1f188ea7b5e8a387dd
+ms.openlocfilehash: e8300e9a4faf29ada79fad2a11e2470b965b53d1
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69487756"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998896"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
 
@@ -97,6 +97,17 @@ Spustí na zařízení jenom jednu aplikaci.
   - **Přidat aplikaci ze Storu**: Vyberte **Přidat aplikaci ze Storu**a zvolte aplikaci ze seznamu.
 
     Nejsou v seznamu žádné aplikace? Přidejte aplikace pomocí postupu v části [Klientské aplikace](apps-add.md).
+    
+ - **Zadejte časový interval pro správu a údržbu pro restartování aplikace**: Výchozí hodnota: není nakonfigurováno, výběrem možnosti vyžadovat proveďte kontrolu aplikací, které vyžadují restart k dokončení instalace.
+ 
+     Pokud používáte prohlížeč veřejného terminálu nebo jinou Microsoft Store pro firmy, rozhodněte se, jak často se mají kontrolovat aktualizace aplikací, které vyžadují restart, aby se instalace aplikace mohla dokončit. Pokud není nakonfigurovaný, Microsoft Store pro podnikové aplikace se restartují v neplánovaném čase 3 dny po instalaci aktualizace aplikace.
+     
+     - **Čas spuštění časového období údržby**: Vyberte datum a čas, kdy chcete začít kontrolovat klienty pro všechny aktualizace aplikací, které vyžadují restart. Výchozí počáteční čas je půlnoc nebo nula minut.
+     
+     - **Opakování časového období údržby**: Výchozí hodnota je denně.
+         Nastavte, jak často proběhne časová období údržby pro aktualizace aplikací. Doporučení je každodenní, aby nedocházelo k neplánovanému restartování aplikace.
+
+  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 ## <a name="multi-app-kiosks"></a>Veřejné terminály s více aplikacemi
 

@@ -1,12 +1,12 @@
 ---
-title: Rychlý start – heslo zásady dodržování předpisů pro zařízení s Androidem
+title: Rychlý Start – zásada dodržování předpisů heslem pro zařízení s Androidem
 titleSuffix: Microsoft Intune
 description: V tomto rychlém startu použijete Microsoft Intune k nastavení délky hesla, která se vyžaduje pro zařízení s Androidem.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 08/23/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cdedbfc611d44b4d6acb01e5e05bf3e73ed7fbda
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 30c4d5976b7f743a12a9691878e2b7031e373b1d
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044193"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70001833"
 ---
-# <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý start: Vytvoření zásady dodržování předpisů hesla pro zařízení s Androidem
+# <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý Start Vytvoření zásad dodržování předpisů pro hesla pro zařízení s Androidem
 
 V tomto rychlém startu použijete Microsoft Intune a nastavíte, že uživatelé firemních zařízení s Androidem musí zadat heslo o určité délce, aby získali přístup k informacím na svých zařízeních s Androidem. 
 
-Zásada dodržování předpisů Intune pro zařízení určuje pravidla a nastavení, která zařízení musí splňovat, aby bylo považováno za dodržující předpisy. Zásady dodržování předpisů s podmíněným přístupem můžete povolit nebo blokovat přístup k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
+Zásada dodržování předpisů Intune pro zařízení určuje pravidla a nastavení, která zařízení musí splňovat, aby bylo považováno za dodržující předpisy. Zásady dodržování předpisů s podmíněným přístupem můžete použít k povolení nebo blokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
 
 > [!IMPORTANT]
 > Kromě nastavení hesla byste také měli zvážit další nastavení zabezpečení systému pro ochranu pracovníků. Další informace najdete v tématu [Systémové nastavení zabezpečení](compliance-policy-create-android-for-work.md).
@@ -48,7 +48,7 @@ V tomto rychlém startu použijete Intune a nastavíte, že zaměstnanci použí
 3. U možnosti **Platforma** vyberte **Android**. 
 4. Vyberte **Nastavení** > **Zabezpečení systému** a zobrazte okno **Zabezpečení systému** Androidu.
 5. Klikněte na **Vyžadovat** vedle **Vyžadovat heslo k odemknutí mobilních zařízení**.
-6. Vyberte **na úrovni aspoň číslice** vedle **požadovaný typ hesla**.
+6. V poli **požadovaný typ hesla**vyberte **aspoň číslice** .
 7. Vedle volby **Minimální délka hesla** zadejte **6**. 
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
@@ -68,4 +68,4 @@ V tomto rychlém startu jste v Intune vytvořili zásadu dodržování předpis�
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Odesílání oznámení do zařízení nedodržující předpisy](quickstart-send-notification.md)
+> [Rychlý Start Odesílání oznámení na zařízení nedodržující předpisy](quickstart-send-notification.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8353cf2f0c24c3a894fa219df9fc9a8272e17af
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: e32b40283410a53a9cbb65a27d0d614da0169d6c
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454066"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70001788"
 ---
 # <a name="include-and-exclude-app-assignments-in-microsoft-intune"></a>Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune
 
@@ -50,7 +50,7 @@ Přiřazení aplikace ke skupinám pomocí zahrnutí a vyloučení přiřazení:
 5. Vyberte aplikaci, kterou chcete přiřadit. V řídicím panelu se zobrazí informace o aplikaci. 
 6. V části nabídky **Spravovat** vyberte **Přiřazení**. 
 
-    ![Při přiřazování aplikací zahrnují přiřazení aplikací](./media/apps-inc-exl-01.png)
+    ![Zahrnout přiřazení aplikací při přiřazování aplikací](./media/apps-inc-exl-01.png)
 7. Pokud chcete přidat skupiny uživatelů, kteří jsou přiřazení k aplikaci, vyberte **Přidat skupinu**. 
 8. V podokně **Přidat skupinu** vyberte **Typ přiřazení** z dostupných typů přiřazení.
 9. Jako typ přiřazení vyberte **K dispozici s registrací i bez ní**.

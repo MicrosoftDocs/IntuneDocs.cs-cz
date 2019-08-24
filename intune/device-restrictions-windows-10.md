@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c75930f3eee35146afbc5714135ececbe7c9643
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
+ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550178"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69998942"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -66,13 +66,6 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
   - **Preferovat úložiště**: Upozorňuje uživatele, když instalují aplikace z jiných míst než z Microsoft Store.
 
   [Zprostředkovatel SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
-
-- **Vynutit restartování aplikací při selhání aktualizace**: Při použití aplikace se nemusí aktualizovat. Pomocí tohoto nastavení vynutíte restartování aplikace. **Není nakonfigurováno** (výchozí) nevynutí restartování aplikací. **Vyžadovat** , aby správci vynutili restartování pro určité datum a čas, nebo podle plánu opakování. Pokud je nastaveno na **vyžadovat**, zadejte také:
-
-  - **Datum a čas zahájení**: Vyberte konkrétní datum a čas pro restartování aplikací.
-  - **Opakování**: Vyberte denní, týdenní nebo měsíční restart.
-
-  [ApplicationManagement/ScheduleForceRestartForUpdateFailures CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-scheduleforcerestartforupdatefailures)
 
 - **Uživatelský ovládací prvek pro instalaci**: Pokud je nastavené na Nenakonfigurováno (výchozí), Instalační služba systému Windows zabránit uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace a některé z instalační služba systému Windows funkcí zabezpečení jsou vynechány.
 
@@ -799,6 +792,6 @@ Vyberte **OK** uložte provedené změny.
 
 Vyberte **OK** uložte provedené změny.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další technické podrobnosti o jednotlivých nastaveních a podporovaných edicích Windows najdete v [referenčních informacích o poskytovateli konfiguračních služeb pro zásady (CSP) pro Windows 10](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider).

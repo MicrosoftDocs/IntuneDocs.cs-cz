@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/16/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2825286c652a7229c32435a24ca816f21b8f2ff4
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: 63ab31845ba4d084c81ff33970703ec630d67daa
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993741"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70002027"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Microsoft Intune chráněné aplikace  
 
-Aplikace spravované v Intune jsou povolené s bohatou sadou zásad ochrany mobilních aplikací. Spravované aplikace umožňují:
+Aplikace uvedené v tomto tématu jsou podporované partneři a aplikace Microsoftu, které se běžně používají s Microsoft Intune. Aplikace chráněné v Intune jsou povolené s bohatou sadou zásad ochrany mobilních aplikací. Tyto aplikace vám umožňují:
 - Omezení funkcí kopírování a vložení a uložení jako
 - Konfigurace webových odkazů tak, aby se otevíraly v zabezpečeném prohlížeči Microsoftu
 - Povolení použití více identit a podmíněného přístupu na úrovni aplikace
@@ -77,7 +77,7 @@ Následující tabulky obsahují podrobné informace o podporovaných partnerech
 | Název aplikace | Popis aplikace | Odkazy na obchod s aplikacemi pro podporované platformy | 
 |-------------------------------------------------|-------------------------|---------------------------------------------|
 | **Přístup Acronis**<p><img alt="Partner app - Acronis Access icon" src="./media/apps-supported-intune-apps/icon-p-acronis-access.png" width="100"> | Přístup k firemním souborům bezpečně získáte odkudkoli a jakýmkoli zařízením s přístupem Acronis. Snadno sdílejte dokumenty se spolupracovníky, zákazníky a dodavateli a zabezpečíte soubory a data zabezpečených a privátních, kde se vám a vaší organizaci můžou dotknout jenom vy a vaše organizace. Aplikace je navržená pro extrémní snadné použití s využitím neparalelních funkcí zabezpečení, ochrany osobních údajů a správy. | [odkaz na obchod iOS](https://itunes.apple.com/us/app/acronis-access/id429704844?mt=8) |                       
-| **Adobe Acrobat Reader pro Microsoft Intune**<p><img alt="Partner app - Adobe Acrobat Reader for Microsoft Intune icon" src="./media/apps-supported-intune-apps/icon-p-adobe-acrobat-reader.png" width="100"> | Otevření, zobrazení a práce s PDF v Microsoft Intune spravovaném prostředí pomocí programu Adobe Acrobat Reader pro Intune. K dispozici pro iOS a Android. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.adobe.reader.intune)<br>[odkaz na obchod iOS](https://geo.itunes.apple.com/us/app/adobe-acrobat-reader-for-microsoft/id1051980424?mt=8) |                      
+| **Aplikace Adobe Acrobat Reader**<p><img alt="Partner app - Adobe Acrobat Reader icon" src="./media/apps-supported-intune-apps/icon-p-adobe-acrobat-reader.png" width="100"> | Otevření, zobrazení a práce s PDF v Microsoft Intune spravovaném prostředí pomocí aplikace Adobe Acrobat Reader K dispozici pro iOS a Android. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.adobe.reader)<br>[odkaz na obchod iOS](https://apps.apple.com/app/adobe-acrobat-reader-for-pdf/id469337564) |                      
 | **BlackBerry Enterprise most**<p><img alt="Partner app - Blackberry Enterprise BRIDGE icon" src="./media/apps-supported-intune-apps/icon-p-blackberry-enterprise-bridge.png" width="100"> | BlackBerry Enterprise BRIDGE vám umožní bezpečně zobrazovat, upravovat a ukládat dokumenty pomocí aplikací Microsoftu spravovaných přes Intune, jako je Microsoft Word, Microsoft PowerPoint a Microsoft Excel z BlackBerry Dynamics. Dokumenty můžete sdílet jako přílohy e-mailů a zachovat šifrování dat během procesu sdílení dokumentů mezi aplikacemi BlackBerry Dynamics a Intune spravovanými mobilními aplikacemi. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.blackberry.intune.bridge)<br>[odkaz na obchod iOS](https://itunes.apple.com/us/app/blackberry-enterprise-bridge/id1305494864?mt=8) |
 | **Box pro modul EMM**<p><img alt="Partner app - Box for EMM icon" src="./media/apps-supported-intune-apps/icon-p-box-for-emm.png" width="100"> | Udržujte své zaměstnance připojeni a spolupracujete, zatímco centrálně spravujete zabezpečení, zásady a zřizování napříč všemi mobilními zařízeními pomocí boxu pro modul EMM. | [odkaz na obchod iOS](https://itunes.apple.com/us/app/box-for-emm/id882085676?mt=8) |
 | **CellTrust SL2™ pro Microsoft Intune**<p><img alt="Partner app - CellTrust SL2 for Microsoft Intune icon" src="./media/apps-supported-intune-apps/icon-p-celltrust-sl2.png" width="100"> | CellTrust SL2™ pro Microsoft Intune je podniková aplikace, která funguje tak, že v jednom zařízení přiřadíte zabezpečené mobilní obchodní číslo (MBN) na vlastní zařízení, které zajistí, aby osobní a obchodní komunikace byly oddělené. Bezproblémová řešení zabezpečují zprávy SMS a obchodní hovory na zařízení bez použití osobního čísla. Tato funkce je nezbytná pro podniky, které vyžadují vyšší zabezpečení pro obchodní komunikaci, a také archivování pro potřeby pro eDiscovery a dodržování předpisů. <br> Microsoft Intune je cloudová služba v prostoru pro správu mobility podnikových zařízení (EMM), která pomáhá zajistit produktivitu vašich zaměstnanců a zároveň zajistit ochranu firemních dat. <br> CellTrust SL2™ pro Microsoft Intune poskytuje výkonnou platformu pro podnikovou mobilitu, která zaměstnancům umožňuje pracovat na cestách – díky snadnému přístupu k zabezpečeným obchodním aplikacím a hlasovému a textovému zasílání zpráv. Aplikace byla vyvinutá s Microsoft Intune SDK a přizpůsobenými funkcemi, které organizacím umožňují přizpůsobit je podle jejich odvětví a potřeb. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.celltrust.sl2_intune)<br>[odkaz na obchod iOS](https://itunes.apple.com/us/app/celltrust-sl2-for-intune/id1442087513?mt=8) |
@@ -95,7 +95,7 @@ Následující tabulky obsahují podrobné informace o podporovaných partnerech
 | **Pracovní prostor – jedno odeslání**<p><img alt="Partner app - Intune partner app - Workspace ONE Send icon" src="./media/apps-supported-intune-apps/icon-p-workspace-one-send-icon.png" width="100"> | Pracovní prostor ONE Send poskytuje zákazníkům bezproblémové možnosti úprav a odesílání, které používají Microsoft Intune ke správě aplikací Office 365 pomocí kancelářských aplikací VMware. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.airwatch.vmsend)<br>[odkaz na obchod iOS](https://itunes.apple.com/us/app/vmware-workspace-one-send/id1336333505?mt=8) |
 | **Přiblížení pro Intune**<p><img alt="Partner app - Zoom for Intune icon" src="./media/apps-supported-intune-apps/icon-p-zoom.png" width="100"> | Přiblížení je vaše centrum komunikace pro schůzky, webináře, chat a cloudový telefon. Zahajte nebo Zapojte schůzky s bezchybného videem, Crystal Clear Audio a Instant screen sdílení z desktopových, mobilních nebo konferenčních místností. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=us.zoom.videomeetings4intune)<br>[odkaz na obchod iOS](https://apps.apple.com/us/app/zoom-for-intune/id1462818858?mt=8) |  
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najdete tady:
 
