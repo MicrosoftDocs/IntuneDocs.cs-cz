@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 330bfa319ca0202a5edc09d8f27e40c18ce89d39
-ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
+ms.openlocfilehash: 0cda32e72956e5998d5ebc8d8bed2baea39951ec
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69582946"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021806"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -70,9 +70,10 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   Tento konektor zpracovává požadavky na soubory PFX importované do Intune pro šifrování e-mailu S/MIME pro konkrétního uživatele.  
 
   Tento konektor se může automaticky aktualizovat, jakmile budou k dispozici nové verze. Chcete-li použít možnost aktualizace, je nutné:
-  - Nainstalujte importovaný konektor PFX Certificate pro Microsoft Intune na vašem serveru.
-  - Chcete-li automaticky přijímat důležité aktualizace, zajistěte, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.  
+  - Nainstalujte importovaný konektor PFX Certificate pro Microsoft Intune na vašem serveru.  
+  - Chcete-li automaticky přijímat důležité aktualizace, zajistěte, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.   
 
+  Další informace o všech síťových koncových bodech, ke kterým musí konektor mít přístup, najdete v tématu [Microsoft Intune Certificate Connector](intune-endpoints.md#microsoft-intune-certificate-connector).
 
 - **Windows Server**:  
   Používáte Windows Server k hostování:

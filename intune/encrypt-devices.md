@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: b7c76439b734837b5a4dd7e5fdbba5d21d0681d7
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 5e97e23322150c7a030a3657b6476090d719a448
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960426"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027404"
 ---
 # <a name="use-device-encryption-with-intune"></a>Použití šifrování zařízení s Intune  
 
@@ -80,6 +80,8 @@ Podrobnosti o nastavení trezoru klíčů, které můžete spravovat pomocí Int
 ### <a name="manage-filevault"></a>Správa trezoru úložišť  
 
 Jakmile Intune zašifruje zařízení macOS s trezorem, můžete zobrazit a spravovat klíče pro obnovení trezoru úložiště, když si zobrazíte [sestavu šifrování](encryption-monitor.md)Intune.  
+
+Jakmile Intune zašifruje zařízení macOS s trezorem souborů, můžete si z webu zobrazit jeho osobní obnovovací klíč, který je Portál společnosti na jakémkoli zařízení. Jednou na webu Portál společnosti zvolte šifrované zařízení macOS a pak zvolte možnost "získat klíč pro obnovení" jako akci vzdáleného zařízení. 
 
 ## <a name="bitlocker-encryption-for-windows-10"></a>Šifrování BitLockeru pro Windows 10  
 

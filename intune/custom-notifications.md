@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a4314abec83bc31cd6fe178873ba5bce7bf1a0c
-ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
+ms.openlocfilehash: 5a75397222117b8e56cb34947363f8624b89b27b
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680101"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021757"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
@@ -51,7 +51,6 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 - Skupiny můžou obsahovat uživatele nebo zařízení, ale zprávy se odesílají jenom uživatelům a odesílají se do každého zařízení s iOS nebo Androidem, které uživatel zaregistroval.  
 
 **Doručení**:  
-- Po odeslání oznámení Intune pokusy o doručení po dobu až jedné hodiny.  
 - Intune pošle zprávy do aplikace Portál společnosti uživatelů a pak vytvoří nabízené oznámení. Aby bylo možné oznámení na zařízení přidat, nemusí být uživatelé přihlášeni do aplikace.  
 - Intune a aplikace Portál společnosti nemůžou zaručit doručení vlastního oznámení. Vlastní oznámení se můžou zobrazovat i po několika hodinách, pokud je to u všech, takže by se nemuseli používat pro naléhavé zprávy.  
 - Vlastní oznamovací zprávy z Intune se na zařízeních zobrazují jako standardní nabízená oznámení. Pokud je aplikace Portál společnosti v zařízení se systémem iOS otevřená při přijetí oznámení, zobrazí se v aplikaci oznámení místo nabízeného oznámení.  
@@ -61,7 +60,7 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 
 ## <a name="send-a-custom-notification"></a>Odeslání vlastního oznámení  
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a v **zařízení** > **odesílají vlastní oznámení**.  
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a v **zařízení** > **odesílají vlastní oznámení**.  
 
 2. Na kartě základy zadejte následující příkaz a pokračujte výběrem **Další** .  
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  

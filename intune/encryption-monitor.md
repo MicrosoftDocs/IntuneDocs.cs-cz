@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 76a0df5933127641d299a2a2f5e01d848e4d5d18
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
+ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550116"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027390"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune   
 
-Sestava Microsoft Intuneho šifrování je centralizované umístění pro zobrazení podrobností o stavu šifrování spravovaných zařízení. Zobrazit podrobnosti o stavu šifrování zařízení a najít možnosti pro správu klíčů pro obnovení zařízení. Možnosti obnovovacího klíče, které jsou k dispozici, závisí na typu zařízení, které si prohlížíte.  
+Sestava Microsoft Intuneho šifrování je centralizované umístění pro zobrazení podrobností o stavu šifrování zařízení a možnosti hledání pro správu klíčů pro obnovení zařízení. Možnosti obnovovacího klíče, které jsou k dispozici, závisí na typu zařízení, které si prohlížíte.  
 
 Pokud chcete sestavu najít, přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **Konfigurace zařízení**a potom v části *monitorování*vyberte **Sestava šifrování**.  
 
@@ -64,7 +64,7 @@ Podokno sestava šifrování zobrazuje seznam zařízení, která spravujete, s 
 
 - **Stav šifrování** – určuje, jestli je jednotka operačního systému zašifrovaná.  
 
-- Hlavní **název uživatele** – primární uživatel zařízení.  
+- **Hlavní název uživatele** – primární uživatel zařízení.  
 
 ### <a name="device-encryption-status"></a>Stav šifrování zařízení  
 
@@ -74,9 +74,11 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
 - **Připravenost na šifrování** – vyhodnocení připravenosti na zařízení pro podporu šifrování prostřednictvím zásad MDM.  
   
-  Příklad: Pokud má zařízení s Windows 10 připravenost Nepřipraveno, může i nadále podporovat šifrování. Aby bylo možné označení *připravit* , musí mít zařízení s Windows 10 čip TPM. Čipy TPM nejsou nutné k podpoře šifrování. (Další podrobnosti najdete v tématu připravenost na šifrování v předchozí části.)  
+  Příklad: Pokud má zařízení s Windows 10 připravenost Nepřipraveno, může i nadále podporovat šifrování. Aby bylo možné označení *připravit* , musí mít zařízení s Windows 10 čip TPM. Čipy TPM nejsou nutné k podpoře šifrování. (Další informace najdete v tématu *připravenost na šifrování* v předchozí části.)  
 
-- **Stav šifrování** – určuje, jestli je jednotka operačního systému zašifrovaná. Může trvat až 24 hodin, než Intune nahlásí stav šifrování zařízení nebo změní stav.  
+- **Stav šifrování** – určuje, jestli je jednotka operačního systému zašifrovaná. Může trvat až 24 hodin, než Intune nahlásí stav šifrování zařízení nebo změní stav. Tato doba zahrnuje dobu, po kterou má operační systém zašifrování, a čas, kdy se má zařízení nahlásit zpátky do Intune.  
+
+  Pokud chcete zrychlit hlášení stavu šifrování trezoru služby, než se zařízení normálně objevuje, uživatelé budou po dokončení šifrování synchronizovat svá zařízení.  
 
 - **Profily** – seznam profilů *Konfigurace zařízení* , které se vztahují k tomuto zařízení a jsou nakonfigurované s následujícími hodnotami:  
 
@@ -86,11 +88,13 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
   - Windows 10:
     - Typ profilu = *Endpoint Protection*  
-    - Nastavení > šifrování Windows > šifrovat zařízení = *požadováno*  
+    - Nastavení > šifrování Windows > šifrovat zařízení = *vyžadovat*  
 
   Seznam profilů můžete použít k identifikaci jednotlivých zásad pro kontrolu, aby *souhrn stavu profilu* označoval problémy.  
 
 - **Shrnutí stavu profilu** – souhrn profilů, které se vztahují k tomuto zařízení. Souhrn představuje nejmenší příznivou podmínku v rámci platných profilů. Pokud například výsledkem pouze jednoho z několika použitelných profilů je chyba, zobrazí se v *souhrnu stavu profilu* *Chyba*.  
+  
+  Pokud chcete zobrazit podrobnosti o stavu, přejít na**profily** **Konfigurace** > zařízení v Intune > a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.  
 
 - **Podrobnosti o stavu** – rozšířené informace o stavu šifrování zařízení.  
 
@@ -168,7 +172,7 @@ Když Intune nejdřív zašifruje zařízení macOS s trezorem, vytvoří se oso
  
 U spravovaných zařízení může Intune v úschově kopii osobního obnovovacího klíče. V úschově klíčů umožňuje správcům Intune otáčet klíče, aby lépe chránily zařízení a uživatelé obnovili ztracený nebo otočený osobní obnovovací klíč.  
  
-Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní klíče pro obnovení. Jedním z důvodů, proč je střídání klíče, je, že je v tomto případě ztracený aktuální osobní klíč.  
+Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní klíče pro obnovení. Jedním z důvodů, jak klíč otočit, je, že aktuální osobní klíč je ztracený nebo je pravděpodobně ohrožen.  
  
 > [!IMPORTANT]  
 >  Zařízení, která jsou zašifrovaná uživateli, a ne Intune, se nedají spravovat přes Intune. To znamená, že Intune nemůže v úschově osobní obnovení těchto zařízení ani spravovat rotaci obnovovacího klíče.  Aby mohla Intune spravovat trezory a obnovovací klíče pro zařízení, musí si uživatel dešifrovat svoje zařízení a pak nechat Intune šifrování zařízení.  
@@ -177,7 +181,7 @@ Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní 
 
 - **Automatické otočení**: Jako správce můžete nakonfigurovat nastavení trezoru úložiště pro automatické vygenerování nového klíče pro obnovení.  Když se pro zařízení vygeneruje nový klíč, klíč se uživateli nezobrazí. Místo toho musí uživatel získat klíč buď od správce, nebo pomocí aplikace Portál společnosti.  
 
-- **Ruční rotace**: Jako správce můžete zobrazit informace o zařízení, které spravujete v Intune a který je zašifrovaný pomocí trezoru. Pak můžete zvolit ruční otočení obnovovacího klíče pro podniková zařízení. Obnovovací klíče pro osobní zařízení nemůžete otočit.  
+- **Ruční rotace**: Jako správce můžete zobrazit informace o zařízení, které spravujete v Intune a které je zašifrované pomocí trezoru. Pak můžete zvolit ruční otočení obnovovacího klíče pro podniková zařízení. Obnovovací klíče pro osobní zařízení nemůžete otočit.  
 
   Otočení obnovovacího klíče: 
   1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973), klikněte na **zařízení** a potom v části Spravovat vyberte **všechna zařízení**.  

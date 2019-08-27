@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ca7e7646f51331e4d24cec9b50d7afae4870ebe3
-ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
+ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
+ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894364"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70021817"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -115,21 +115,8 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
      Přidejte do projektu sadu prostředků `IntuneMAMResources.bundle`. Přetáhněte ji do části **Kopírovat prostředky balíčku** v rámci položky **Fáze buildu**.
 
      ![Intune App SDK iOS: kopírování prostředků sady](./media/intune-app-sdk-ios-copy-bundle-resources.png)
-     
-2. Pokud potřebujete volat všechna rozhraní API Intune z SWIFT, musí vaše aplikace nebo rozšíření naimportovat požadované hlavičky Intune SDK přes hlavičku přemostění v cíli C. Pokud vaše aplikace nebo rozšíření ještě neobsahuje hlavičku přemostění cílové verze jazyka C, můžete ji zadat prostřednictvím `SWIFT_OBJC_BRIDGING_HEADER` nastavení konfigurace sestavení nebo pole hlavičky Xcode přemostění v uživatelském rozhraní . Hlavička přemostění by měla vypadat přibližně takto:
-
-   ```objc
-      #import <IntuneMAMSwift/IntuneMAM.h>
-   ```
-   
-   Tím budou všechna rozhraní API sady Intune SDK dostupná napříč všemi zdrojovými soubory SWIFT, které vaše aplikace/rozšíření nabízí. 
-   
-    > [!NOTE]
-    > * Můžete zvolit, aby se do SWIFT místo IntuneMAM. h přemostěníly jenom konkrétní hlavičky Intune SDK.
-    > * V závislosti na tom, kterou architekturu nebo statickou knihovnu máte integrovanou, se může lišit cesta k hlavičkovým souborům.
-    > * Zpřístupnění rozhraní API sady Intune SDK v SWIFT prostřednictvím příkazu importu modulu (např.: import IntuneMAMSwift) se momentálně nepodporuje. Doporučený postup je použití hlavičky přemostění v cíli C.
-    
-3. Do projektu přidejte tyto modely iOS:  
+         
+2. Do projektu přidejte tyto modely iOS:  
 -  MessageUI.framework  
 -  Security.framework  
 -  MobileCoreServices.framework  
@@ -142,7 +129,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
 -  QuartzCore.framework  
 -  WebKit.framework
 
-4. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
+3. Povolte sdílení řetězce klíčů (pokud ještě není povolené) tak, že v každém cíli projektu kliknete na **Možnosti** a zapnete přepínač **Sdílení řetězce klíčů**. Sdílení řetězce klíčů se vyžaduje pro přechod k dalšímu kroku.
 
    > [!NOTE]
    > Profil zřizování musí podporovat nové hodnoty sdílení řetězce klíčů. Přístupové skupiny pro řetězce klíčů by měly podporovat zástupné znaky. Můžete to zjistit tak, že otevřete soubor. mobileprovision v textovém editoru, vyhledáte klíčová slova pro **přístup do klíčů**a ověříte, že máte zástupný znak. Příklad:
@@ -154,7 +141,7 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
    >  </array>
    >  ```
 
-5. Po povolení sdílení řetězce klíčů použijte postup a vytvořte samostatnou přístupovou skupinu, ve které sada Intune App SDK uloží svá data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, nezapomeňte postupovat podle těchto kroků:
+4. Po povolení sdílení řetězce klíčů použijte postup a vytvořte samostatnou přístupovou skupinu, ve které sada Intune App SDK uloží svá data. Přístupovou skupinu pro řetězce klíčů můžete vytvořit pomocí uživatelského rozhraní nebo pomocí souboru nároků. Pokud k vytvoření přístupové skupiny pro řetězce klíčů používáte uživatelské rozhraní, nezapomeňte postupovat podle těchto kroků:
 
      a. Pokud vaše mobilní aplikace nemá definované žádné přístupové skupiny pro řetězce klíčů, přidejte jako **první** skupinu ID sady aplikace.
     
@@ -172,11 +159,11 @@ Pokud chcete povolit sadu Intune App SDK, postupujte takto:
       > [!NOTE]
       > Soubor nároků je soubor XML, který je pro vaši mobilní aplikaci jedinečný. Slouží k určení speciálních oprávnění a schopností ve vaší aplikaci pro iOS. Pokud vaše aplikace dříve neměla soubor nároků, při povolení sdílení řetězců klíčů (krok 3) by ho měl pro ni Xcode vygenerovat. Ujistěte se, že je ID sady aplikace první položkou v seznamu.
 
-6. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
+5. Zahrňte všechny protokoly, které aplikace předává do `UIApplication canOpenURL`, do pole `LSApplicationQueriesSchemes` v souboru Info.plist této aplikace. Než přejdete k dalšímu kroku, uložte změny.
 
-7. Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že [klíč NSFaceIDUsageDescription v souboru Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
+6. Pokud vaše aplikace ještě FaceID nepoužívá, přesvědčte se, že [klíč NSFaceIDUsageDescription v souboru Info.plist](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW75) má nakonfigurovanou výchozí zprávu. Je to důležité proto, aby systém iOS mohl informovat uživatele o tom, jakým způsobem chce aplikace FaceID používat. Nastavení zásad ochrany aplikací Intune umožňuje použití FaceID jako metody přístupu k aplikaci (když se nakonfiguruje správcem IT).
 
-8. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Tento nástroj má tři parametry:
+7. K dokončení konfigurace souboru Info.plist této aplikace použijte nástroj IntuneMAMConfigurator, který najdete v [úložišti SDK](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios). Tento nástroj má tři parametry:
 
    |Vlastnost|Jak ji použít|
    |---------------|--------------------------------|
@@ -228,7 +215,7 @@ Pokud už vaše aplikace používá ADAL nebo MSAL, vyžadují se následující
 
 Dále můžou aplikace přepsat tato nastavení Azure AD za běhu. K tomu stačí nastavit vlastnosti `aadAuthorityUriOverride`, `aadClientIdOverride` a `aadRedirectUriOverride` v instanci `IntuneMAMPolicyManager`.
 
-4. Zajistěte, aby byla dodržena oprávnění aplikace pro iOS ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)".  
+4. Zajistěte, aby byla dodržena oprávnění aplikace pro iOS ke službě zásady ochrany aplikací (APP). Postupujte podle pokynů v [příručce Začínáme s Intune SDK](https://docs.microsoft.com/intune/app-sdk-get-started#next-steps-after-integration) v části "[poskytnutí přístupu aplikace ke službě Intune App Protection (volitelné)](https://docs.microsoft.com/intune/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
 > Použití souboru Info.plist se doporučuje pro všechna nastavení, která jsou statická a nevyžadují, aby se určovala za běhu. Hodnoty přiřazené vlastnostem v instanci `IntuneMAMPolicyManager` mají přednost před odpovídajícími hodnotami zadanými v souboru Info.plist a zachovají se i po restartování aplikace. Sada SDK je bude dále používat pro kontroly zásad, dokud se registrace daného uživatele nezruší nebo se tyto hodnoty nevymažou nebo nezmění.
