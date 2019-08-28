@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df8922f9f7252c493b4a2119814c0001245fa8b
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550002"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062933"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -55,6 +55,9 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
     `<serialNumber>,<ProductID>,<hardwareHash>,<optionalGroupTag>,<optionalAssignedUser>`
 
     ![Snímek obrazovky s přidáním zařízení Windows Autopilot](media/enrollment-autopilot/autopilot-import-device2.png)
+
+    >[!IMPORTANT]
+    > Pokud k přiřazení uživatele použijete nahrávání sdíleného svazku clusteru, ujistěte se, že přiřadíte platné hlavní názvy uživatelů (UPN). Pokud přiřadíte neplatný hlavní název uživatele (UPN) (nesprávné uživatelské jméno), může být zařízení nedostupné, dokud neodeberete neplatné přiřazení. Během nahrávání sdíleného svazku clusteru je jediným ověřováním, které jsme provedli ve sloupci **přiřazený uživatel** , kontrola platnosti názvu domény. Nemůžeme provést individuální ověření UPN, abyste se ujistili, že přiřazujete stávajícího nebo správného uživatele.
 
 3. Pomocí **Importovat** zahajte import informací o zařízeních. Import může trvat několik minut.
 

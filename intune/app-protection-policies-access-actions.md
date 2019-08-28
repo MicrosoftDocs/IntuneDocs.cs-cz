@@ -1,12 +1,12 @@
 ---
-title: Vymazání dat pomocí akce podmíněného spuštění zásad ochrany aplikací
+title: Vymazání dat pomocí akcí podmíněného spuštění zásad ochrany aplikací
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak selektivně vymazat data pomocí akce podmíněného spuštění zásad ochrany aplikací v Microsoft Intune.
+description: Naučte se selektivně vymazat data pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/20/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 65115f6520122cd4b3429411db67052481984617
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 8cf55084951c3a423b79e4588f8814b5e73ce8e8
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558435"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063028"
 ---
-# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí akce podmíněného spuštění zásad ochrany aplikací v Intune
+# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
 Pomocí zásad ochrany aplikací můžete v Intune nakonfigurovat nastavení, která koncovým uživatelům zablokují přístup k podnikové aplikaci nebo účtu. Tato nastavení se zaměřují na přemístění dat a požadavky na přístup, které vaše organizace stanovila například pro zařízení s jailbreakem a minimální verze operačního systému.
  
 S využitím těchto nastavení můžete explicitně vymazat podniková data ze zařízení koncového uživatele jako akci, která se má provést při nedodržení předpisů. U některých nastavení budete moci nakonfigurovat více akcí (například zablokování přístupu a vymazání dat) na základě různých zadaných hodnot.
 
-## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Vytvořit zásady ochrany aplikací použitím podmíněných akcích spouštění
+## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Vytvoření zásady ochrany aplikací pomocí podmíněných spouštěcích akcí
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** vyberte **Klientské aplikace** > **Zásady ochrany aplikací**.
 4. Klikněte na **Přidat zásadu** (můžete také upravit některou existující zásadu). 
 5. Kliknutím na **Konfigurovat požadovaná nastavení** zobrazíte seznam dostupných nastavení, která se mají pro tuto zásadu konfigurovat. 
-6. V podokně nastavení se posuňte dolů, uvidíte část s názvem **podmíněného spuštění** s upravitelné tabulky.
+6. Posunutím dolů v podokně nastavení se zobrazí část s názvem **podmíněné spuštění** s upravitelnou tabulkou.
 
     ![Snímek obrazovky akcí přístupu ochrany aplikací v Intune](./media/apps-selective-wipe-access-actions01.png)
 
@@ -81,14 +81,14 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 - Minimální verze aplikace
 - Minimální verze opravy
 - Výrobci zařízení
-- V rámci ověření zařízení SafetyNet
+- Ověření zařízení SafetyNet
 - Kontrola ohrožení aplikací
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
 Příklad vstupu: *Výrobce A; Výrobce B* 
 
 >[!NOTE]
-> Toto jsou některé běžné výrobci nahlásila zařízení pomocí Intune a může sloužit jako vstup: Asus;Blackberry;Bq;Gionee;Google;Hmd global;Htc;Huawei;Infinix;Kyocera;Lemobile;Lenovo;Lge;Motorola;Oneplus;Oppo;Samsung;Sharp;Sony;Tecno;Vivo;Vodafone;Xiaomi;Zte;Zuk
+> Jedná se o některé běžné výrobce hlášené ze zařízení využívajících Intune a dají se použít jako vstup: Asus; BlackBerry BQ – Gionee; Internetového HMD globální; HTC Huawei; Infinix; Tiskárny Lemobile; Lenovo Lge; Motorola; OnePlus; OPPO; Samsung Prudk Společnosti Tecno; In Vodafone Xiaomi; Zte; Zuk
 
 Na zařízeních koncových uživatelů by klient Intune provedl akci založenou na jednoduché shodě řetězců modelu zařízení zadaných v okně Intune pro zásady ochrany aplikací. Párování zcela závisí na tom, co zařízení ohlásí. Jako správci IT vám doporučujeme toto nastavení otestovat na zařízeních od různých výrobcích a na různých modelech zařízení u malé skupiny uživatelů, abyste si ověřili, že se nastavení chová, jak má. Výchozí hodnotou je **Nenakonfigurováno**.<br>
 Nastavte jednu z následujících akcí: 
@@ -111,7 +111,7 @@ Následující seznam obsahuje nejčastější akce:
 
 V některých případech, jako u nastavení **Minimální verze operačního systému**, můžete nakonfigurovat, aby se provedly všechny použitelné akce na základě různých čísel verzí. 
 
-![Snímek obrazovky s app protection přístup akce – verze operačního systému Min](./media/apps-selective-wipe-access-actions05.png)
+![Snímek obrazovky s akcemi přístupu aplikace App Protection – minimální verze operačního systému](./media/apps-selective-wipe-access-actions05.png)
 
 Jakmile je nastavení plně nakonfigurované, objeví se řádek v zobrazení jen pro čtení a bude možné ho kdykoli upravit. Ve sloupci **Nastavení** bude u tohoto řádku dostupný rozevírací seznam pro výběr. Nastavení, která už jsou nakonfigurovaná a neumožňují více akcí, nebudou v tomto rozevíracím seznamu dostupná k výběru.
 

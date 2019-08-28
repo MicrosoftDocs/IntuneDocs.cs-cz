@@ -1,12 +1,12 @@
 ---
 title: Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 titleSuffix: Microsoft Intune
-description: Toto téma popisuje pouze na úrovni aplikace ověřování v datovém skladu pro Microsoft Intune.
+description: Toto téma popisuje ověřování pouze aplikace datového skladu pro Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/31/2019
+ms.date: 08/27/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f87256580ce3a0e31ef86f15244f49046d9dd35e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2f70ca7d8d85853c38e2e8e88d06bae966431989
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530242"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062973"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Ověřování v Intune Data Warehouse pouze na úrovni aplikace
 
@@ -92,7 +92,7 @@ Pomocí sady Visual Studio vytvořte projekt Konzolová aplikace (.NET Framework
 2. Na levé straně vyberte **Visual C#** , aby se zobrazily všechny projekty rozhraní .NET Framework.
 3. Vyberte **Konzolová aplikace (.NET Framework)** , přidejte název aplikace a pak kliknutím na **OK** aplikaci vytvořte.
 4. V **Průzkumníku řešení** vyberte **Program.cs**, aby se zobrazil kód.
-5. V Průzkumníku řešení, přidejte odkaz na sestavení `System.Configuration`.
+5. V Průzkumník řešení přidejte odkaz na sestavení `System.Configuration`.
 6. V místní nabídce vyberte **Přidat** > **Nová položka**. Zobrazí se dialogové okno **Přidat novou položku**.
 7. Na levé straně v části **Visual C#** vyberte **Kód**.
 8. Vyberte **Třída**, změňte název třídy na *IntuneDataWarehouseClass.cs* a klikněte na **Přidat**.

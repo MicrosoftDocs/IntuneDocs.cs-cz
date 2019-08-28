@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ad26fedc6fe0e44328f5c77fa5f093c1230a28
-ms.sourcegitcommit: 6f84e880411a202c5500eb460779b7ef63a7f430
+ms.openlocfilehash: b7c4cf67c93277ef4b54cdd72a6e06f64dd442e4
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978510"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063038"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -64,6 +64,12 @@ Když vytvoříte *profil*standardních hodnot zabezpečení, profil automaticky
 Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. To znamená, že když se objeví nová verze, nemusíte vytvářet nový základní profil, abyste ho mohli využít. Až budete připraveni, můžete vybrat profil standardních hodnot a potom pomocí předdefinované možnosti změnit verzi instance pro tento profil na nový.  
 
 ## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení 
+
+ V prostředí Intune můžete současně použít jeden nebo více dostupných směrných plánů. Můžete také použít více instancí stejných standardních hodnot zabezpečení, které mají různá přizpůsobení. 
+
+Pokud používáte více směrných plánů zabezpečení, Projděte si nastavení v každém z nich, abyste identifikovali, kdy různé směrné plány představují konfliktní hodnoty pro stejné nastavení. Vzhledem k tomu, že můžete nasadit standardní hodnoty zabezpečení, které jsou navrženy pro různé záměry, a nasadit více instancí stejného směrného plánu, který obsahuje vlastní nastavení, můžete vytvořit [konflikty konfigurace pro zařízení, která musí být prověřena a Vyřešeno](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Také si pamatujte na [profily konfigurace zařízení](device-profiles.md), které můžou nakonfigurovat mnoho stejných nastavení jako standardní hodnoty zabezpečení. 
+
+
 
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu. 
 
@@ -207,7 +213,7 @@ Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je n
 
 - Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 - Zobrazit nastavení v nejnovějších verzích dostupných standardních hodnot:  
   - [Základní hodnoty zabezpečení MDM](security-baseline-settings-mdm.md)  
   - [Základní hodnoty ATP v programu Microsoft Defender](security-baseline-settings-defender-atp.md)  

@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6313741af237478bc5eea0cc5b5524250b5d46ac
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
+ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68993702"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70062998"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -331,7 +331,7 @@ Chyba 0x80070774: Něco se pokazilo. Potvrďte, že používáte správné přih
 
 K tomuto problému obvykle dochází předtím, než se zařízení restartuje v hybridním scénáři autopilotu služby Azure AD, když vyprší časový limit zařízení během úvodní obrazovky pro přihlášení. Znamená to, že řadič domény se nedá najít nebo se k němu úspěšně nedostal kvůli problémům s připojením. Nebo že zařízení zadalo stav, který se nemůže připojit k doméně.
 
-**Způsobit** Nejběžnější příčinou je, že se používá připojení k hybridní službě Azure AD a v profilu autopilotu je nakonfigurovaná funkce přiřadit uživatele. Při použití funkce přiřadit uživatele se v zařízení během úvodní obrazovky pro přihlášení provede připojení Azure AD, které zařízení umístí do stavu, ve kterém se nemůže připojit k místní doméně. Funkce přiřadit uživatele by proto měla být použita pouze ve standardních scénářích pro automatické pilotní připojení služby Azure AD.  Tato funkce by se měla používat ve scénářích připojení k hybridní službě Azure AD.
+**Způsobit** Nejběžnější příčinou je, že se používá připojení k hybridní službě Azure AD a v profilu autopilotu je nakonfigurovaná funkce přiřadit uživatele. Při použití funkce přiřadit uživatele se v zařízení během úvodní obrazovky pro přihlášení provede připojení Azure AD, které zařízení umístí do stavu, ve kterém se nemůže připojit k místní doméně. Funkce přiřadit uživatele by proto měla být použita pouze ve standardních scénářích pro automatické pilotní připojení služby Azure AD.  Tato funkce by se neměla používat ve scénářích připojení k hybridní službě Azure AD.
 
 #### <a name="resolution"></a>Řešení
 
@@ -382,7 +382,7 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
 11. Vyberte **Další** > **Dokončit**.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 - [Řešení potíží s registrací zařízení v Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Zeptejte se fóra služby Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
