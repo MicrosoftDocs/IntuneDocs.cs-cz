@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 269ba2e951ccee2b0fdf2c4cd5a93a9d78aa6923
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: a3055d375c98f9a74d0e738b7e894ba038b31776
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783245"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121868"
 ---
 # <a name="create-a-design"></a>Vytvoření návrhu
 
@@ -166,7 +166,7 @@ Infrastruktura veřejných klíčů dodává certifikáty zařízením nebo uži
 
 Pokud plánujete, že budete v Intune používat certifikáty s profily VPN, Wi-Fi nebo e-mailu, ověřte, že máte podporovanou [infrastrukturu PKI](certificates-configure.md) připravenou k vytváření a nasazování profilů certifikátů.
 
-V případě vydávání certifikátů SCEP musíte také určit, jaký server bude hostovat funkci NDES (Network Device Enrollment Service) a jak bude probíhat komunikace.
+Kromě toho, pokud budou použity profily certifikátů SCEP, je nutné určit, který server bude hostovat funkci služby zápisu síťových zařízení (NDES) a jak bude provedena komunikace.
 
 Další informace pro:
 
@@ -297,7 +297,7 @@ Profily certifikátů umožňují službě Intune vydat certifikát uživateli n
 Doporučujeme, abyste zdokumentovali, jaké skupiny uživatelů potřebují certifikát, kolik profilů certifikátů potřebujete a kterým skupinám uživatelů je nasadíte.
 
 >[!NOTE]
-> Pamatujte, že certifikát SCEP vyžaduje důvěryhodný kořenový certifikát. Proto zajistěte, aby všichni uživatelé určení pro certifikát SCEP obdrželi i důvěryhodný kořenový certifikát. Pokud potřebujete certifikáty SCEP, navrhněte a zdokumentujte, které šablony certifikátů SCEP jsou zapotřebí.
+> Mějte na paměti, že důvěryhodný kořenový certifikát je vyžadován pro profil certifikátu SCEP, proto zajistěte, aby všichni uživatelé, kteří mají profil certifikátu SCEP, získali také důvěryhodný kořenový certifikát. Pokud potřebujete certifikáty SCEP, navrhněte a zdokumentujte, které šablony certifikátů SCEP jsou zapotřebí.
 
 Tady je příklad, jak při návrhu dokumentovat certifikáty:
 
@@ -418,6 +418,6 @@ Tady je příklad, jak dokumentovat zásady podmíněného přístupu:
 
 Můžete [si stáhnout šablonu výše uvedené tabulky](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a identifikovat potřeby zásad podmíněného přístupu.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 Další část obsahuje pokyny k [procesu implementace Intune](planning-guide-onboarding.md).

@@ -1,11 +1,11 @@
 ---
-title: Směrování protokolů auditu ve službě Azure monitor pomocí Microsoft Intune – Azure | Microsoft Docs
+title: Směrování protokolů k Azure Monitor pomocí Microsoft Intune-Azure | Microsoft Docs
 description: Pomocí nastavení diagnostiky můžete odesílat protokoly auditu a provozní protokoly v Microsoft Intune do účtu úložiště Azure, centra událostí nebo Log Analytics. Určete, jak dlouho chcete data uchovávat, a zobrazte si odhadované náklady pro klienty s různou velikostí.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/18/2019
+ms.date: 08/28/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,16 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d95b37d18fa609f1c4e98d4fad5cfa600333b90a
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ed32ad564f850c06b37b15e1994ac066a929ffaa
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354517"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122417"
 ---
 # <a name="send-log-data-to-storage-event-hubs-or-log-analytics-in-intune-preview"></a>Odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics v Intune (Preview)
 
-Microsoft Intune obsahuje integrované protokoly, které poskytují informace o vašem prostředí. **Protokoly auditu** zobrazují podrobnosti o různých událostech nebo úlohách, ke kterým dochází v Intune. **Operační protokoly (Preview)** zobrazují podrobnosti o uživatelích a zařízeních, která se úspěšně (nebo nezdařila) registrovat, a také podrobnosti o nevyhovujících zařízeních.
+Microsoft Intune obsahují integrované protokoly, které poskytují informace o vašem prostředí:
+
+- **Protokoly auditu** zobrazují podrobnosti o různých událostech nebo úlohách, ke kterým dochází v Intune.
+- **Operační protokoly (Preview)** zobrazují podrobnosti o uživatelích a zařízeních, která se úspěšně (nebo nezdařila) k registraci, a podrobnosti o nevyhovujících zařízeních.
+- **Protokoly organizace pro dodržování předpisů zařízením (Preview)** zobrazit sestavu organizace pro dodržování předpisů zařízením v Intune a podrobnosti o nevyhovujících zařízeních.
 
 Tyto protokoly je taky možné posílat do Azure Monitor služeb, včetně účtů úložiště, Center událostí a Log Analytics. Konkrétně můžete:
 
@@ -35,7 +39,7 @@ Tyto protokoly je taky možné posílat do Azure Monitor služeb, včetně účt
 
 Tyto funkce jsou součástí **nastavení diagnostiky** v Intune.
 
-V tomto článku se dozvíte, jak pomocí **nastavení diagnostiky** odesílat data protokolu různým službám, nabízí příklady a odhad nákladů a odpovědi na některé běžné dotazy.
+V tomto článku se dozvíte, jak pomocí **nastavení diagnostiky** odesílat data protokolu různým službám, nabízí příklady a odhad nákladů a odpovědi na některé běžné dotazy. Po povolení této funkce budou protokoly směrovány na Azure Monitor službu, kterou zvolíte.
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -54,7 +58,7 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
 ## <a name="send-logs-to-azure-monitor"></a>Odeslat protokoly do Azure monitoru
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. V části **monitorování**vyberte **nastavení diagnostiky**. Při prvním otevření ho zapněte:
+2. V části **monitorování**vyberte **nastavení diagnostiky**. Když ho otevřete poprvé, zapněte ho. V opačném případě přidejte nastavení.
 
     ![Zapnutím nastavení diagnostiky v Intune odešlete protokoly do Azure Monitor](media/diagnostics-settings-turn-on.png)
 
@@ -87,7 +91,14 @@ V závislosti na tom, kde chcete směrovat data protokolu auditu, potřebujete j
       Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
 
       > [!NOTE]
-      > Provozní protokoly jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací obsažených v provozních protokolech, přečtěte si [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback) (otevře se nový web).
+      > Provozní protokoly jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací v provozních protokolech, navštivte web [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
+
+    -  > **DeviceComplianceOrg**protokolu: Protokoly organizace pro dodržování předpisů zařízením (Preview) zobrazí sestavu organizace pro dodržování předpisů zařízením v Intune a podrobnosti o nevyhovujících zařízeních. Tuto možnost vyberte, pokud chcete odesílat protokoly dodržování předpisů do svého účtu úložiště, centra událostí nebo Log Analytics.
+
+      Pokud se rozhodnete použít účet úložiště, zadejte také počet dní, po které chcete zachovat data (uchování). Chcete-li zachovat data navždy, nastavte dobu **uchování (dny)** na `0` (nula).
+ 
+      > [!NOTE]
+      > Protokoly organizace pro dodržování předpisů zařízením jsou ve verzi Preview. Pokud chcete poskytnout zpětnou vazbu, včetně informací v sestavě, navštivte web [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas/suggestions/36613948-diagnostics-settings-feedback).
 
     Po dokončení bude vaše nastavení vypadat podobně jako u následujících nastavení: 
 

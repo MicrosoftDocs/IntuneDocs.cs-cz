@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7baa95d6719dfa3161ae6644bbc9351d3f3d9f0
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: b6daa574b983b4a03346e521c61f267e13c7de1a
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882386"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122343"
 ---
 # <a name="use-apis-to-add-third-party-cas-for-scep-to-intune"></a>Použití rozhraní API k přidání externích certifikačních autorit pro SCEP do Intune
 
@@ -304,4 +304,4 @@ Ověřování a testování správné integrace vašeho řešení s Intune je ne
 - [Přidání přehledu externích certifikačních autorit](certificate-authority-add-scep-overview.md)
 - [Nastavení Intune](setup-steps.md)
 - [Registrace zařízení](device-enrollment.md)
-- [Vytvoření profilu certifikátu SCEP](certificates-scep-configure.md#create-a-scep-certificate-profile) (v tomto scénáři se nastavení Microsoft NDES Serveru ani Connectoru nepoužívá)
+- [Vytvoření profilu certifikátu SCEP](certificates-profile-scep.md) (v tomto scénáři se nastavení Microsoft NDES Serveru ani Connectoru nepoužívá)

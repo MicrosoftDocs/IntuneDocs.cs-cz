@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3c2b5bc0091544136848bf92fc6cef7524ffa54
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 4893f3484c497ed72352b2bbb229003c2d639107
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354506"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122290"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro aplikaci pro zařízení s iOS v Intune
 
@@ -83,7 +83,7 @@ Profil důvěryhodného kořenového certifikátu umožňuje zařízení automat
 
 Pokud chcete nakonfigurovat a přiřadit certifikát pro ověřování klientů, přečtěte si jeden z následujících článků:
 
-- [Konfigurace a správa certifikátů SCEP pomocí Intune](certificates-scep-configure.md)
+- [Konfigurace infrastruktury pro podporu SCEP s Intune](certificates-scep-configure.md)
 - [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)
 
 Nezapomeňte nakonfigurovat certifikát pro ověřování klientů. Tuto možnost můžete nastavit přímo v profilech certifikátů SCEP (seznam**použití rozšířeného klíče** > **ověřování klientů**). V případě PKCS nastavte ověřování klientů v šabloně certifikátu v certifikační autoritě (CA).
@@ -107,7 +107,7 @@ Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klient
     - **Ověřovací certifikát**: Vyberte existující certifikát SCEP nebo PKCS > **OK**.      
     - **Dělené tunelové propojení**: Vyberte možnost **Zakázat** , pokud chcete vynutit, aby veškerý provoz používal tunel VPN v případě, že je připojení VPN aktivní. 
 
-      ![V profilu sítě VPN pro jednotlivé aplikace zadejte připojení, IP adresu nebo plně kvalifikovaný název domény, metodu ověřování a rozdělení s v Microsoft Intune](./media/vpn-per-app-create-vpn-profile.png)
+      ![V profilu sítě VPN pro jednotlivé aplikace zadejte připojení, IP adresu nebo plně kvalifikovaný název domény, metodu ověřování a dělené tunelové propojení v Microsoft Intune](./media/vpn-per-app-create-vpn-profile.png)
 
     Informace o dalších nastaveních najdete v tématu [nastavení sítě VPN pro iOS](vpn-settings-ios.md).
 

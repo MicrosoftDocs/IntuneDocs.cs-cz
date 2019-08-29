@@ -1,6 +1,6 @@
 ---
-title: Podepisování a šifrování e-mailu pomocí S/MIME – Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zjistěte, jak používat digitální certifikáty e-mailu v Microsoft Intune k podepisování a šifrování e-mailů v zařízeních. Tyto certifikáty S/MIME se nazývají a konfigurují pomocí profilů konfigurace zařízení. Podepisování a šifrování certifikáty PKCS nebo privátní certifikáty a použití konektoru pro import certifikátů.
+title: Podepisování a šifrování e-mailů pomocí S/MIME-Microsoft Intune – Azure | Microsoft Docs
+description: Naučte se používat e-mailové digitální certifikáty v Microsoft Intune k podepisování a šifrování e-mailů v zařízeních. Tyto certifikáty se nazývají S/MIME a konfigurují se pomocí profilů konfigurace zařízení. Podpisové a šifrovací certifikáty využívají PKCS nebo privátní certifikáty a k importu certifikátů používají konektor.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5dba3866df9ce5c779deb18cf13852b3d8af1b8d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 755073af455c1ee63fa52f435a397734d2897b47
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048895"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122226"
 ---
-# <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Přehled S/MIME k podepisování a šifrování e-mailu v Intune
+# <a name="smime-overview-to-sign-and-encrypt-email-in-intune"></a>Přehled s/MIME k podepsání a šifrování e-mailu v Intune
 
-E-mailovým certifikátům, označované také jako certifikát S/MIME poskytnout dodatečné zabezpečení e-mailovou komunikaci pomocí šifrování a dešifrování. Microsoft Intune můžete použít certifikáty S/MIME k podepisování a šifrování e-mailů do mobilních zařízení s následujícími platformami:
+E-mailové certifikáty (označované také jako certifikát S/MIME) poskytují pro vaši e-mailovou komunikaci navíc zabezpečení pomocí šifrování a dešifrování. Microsoft Intune můžou používat certifikáty S/MIME k podepisování a šifrování e-mailů na mobilních zařízeních s následujícími platformami:
 
 - Android
 - iOS
@@ -31,17 +31,17 @@ E-mailovým certifikátům, označované také jako certifikát S/MIME poskytnou
 - Windows 10 a novější
 - Windows Phone
 
-Na zařízeních s iOSem můžete vytvořit e-mailový profil spravovaný pomocí Intune, který používá S/MIME a certifikáty k podepisování a šifrování příchozích a odchozích e-mailů. Ostatní platformy mohou, ale nemusí, S/MIME podporovat. Pokud je podporovaná, nainstalujte certifikáty, které používají S/MIME podepisování a šifrování. Koncový uživatel potom umožňuje S/MIME ve svých aplikacích e-mailu.
+Na zařízeních s iOSem můžete vytvořit e-mailový profil spravovaný pomocí Intune, který používá S/MIME a certifikáty k podepisování a šifrování příchozích a odchozích e-mailů. Ostatní platformy mohou, ale nemusí, S/MIME podporovat. Pokud je tato podpora podporovaná, nainstalujte certifikáty, které používají podepisování a šifrování S/MIME. Koncový uživatel pak ve své e-mailové aplikaci povolí S/MIME.
 
-Další informace o podepisování S/MIME e-mailů a šifrování se serverem Exchange najdete v tématu [S/MIME pro zprávu podepisování a šifrování](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
+Další informace o podepisování a šifrování e-mailu S/MIME pomocí Exchange najdete v části [S/MIME pro podepisování a šifrování zpráv](https://docs.microsoft.com/Exchange/policy-and-compliance/smime).
 
-Tento článek obsahuje základní informace o použití k podepisování a šifrování e-mailů v zařízeních certifikáty S/MIME.
+Tento článek poskytuje přehled použití certifikátů S/MIME k podepisování a šifrování e-mailů v zařízeních.
 
 ## <a name="signing-certificates"></a>Podpisové certifikáty
 
 Certifikáty používané k podepisování umožňují e-mailové aplikaci klienta bezpečně komunikovat s e-mailovým serverem.
 
-Pokud chcete použít podpisové certifikáty, vytvořte šablonu ve vaší certifikační autoritě (CA), který se zaměřuje na podepisování. V článku o [konfiguraci šablony certifikátu serveru](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) najdete postup k vytvoření šablon certifikátu v certifikační autoritě Microsoft Active Directory.
+Pokud chcete používat podpisové certifikáty, vytvořte šablonu v certifikační autoritě (CA), která se zaměřuje na podepisování. V článku o [konfiguraci šablony certifikátu serveru](https://docs.microsoft.com/windows-server/networking/core-network-guide/cncg/server-certs/configure-the-server-certificate-template) najdete postup k vytvoření šablon certifikátu v certifikační autoritě Microsoft Active Directory.
 
 Podpisové certifikáty v Intune používají certifikáty PKCS. [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md) popisuje, jak certifikát PKCS v prostředí Intune nasadit a používat. K těmto krokům patří:
 
@@ -49,7 +49,7 @@ Podpisové certifikáty v Intune používají certifikáty PKCS. [Konfigurace a 
 - Vytvoření profilu důvěryhodných kořenových certifikátů pro vaše zařízení. Tento krok zahrnuje použití důvěryhodných kořenových a zprostředkujících certifikátů ve vaší certifikační autoritě a následné nasazení tohoto profilu do zařízení.
 - Vytvoření profilu certifikátu PKCS pomocí šablony certifikátu, kterou jste vytvořili. Tento profil bude zařízením vystavovat podpisové certifikáty a nasadí do nich profil certifikátu PKCS.
 
-Podpisový certifikát můžete také importovat konkrétnímu uživateli. Podpisový certifikát je nasazený na jakémkoli zařízení, která uživatel zaregistruje. Pokud chcete certifikáty importovat do Intune, použijte [rutiny PowerShellu, které jsou k dispozici na GitHubu](https://github.com/Microsoft/Intune-Resource-Access). Pokud chcete nasadit certifikát PKCS, který jste importovali do Intune k podepisování e-mailů, postupujte podle kroků v článku [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md). K těmto krokům patří:
+Podpisový certifikát můžete také importovat konkrétnímu uživateli. Podpisový certifikát se nasadí přes jakékoli zařízení, které uživatel zaregistruje. Pokud chcete certifikáty importovat do Intune, použijte [rutiny PowerShellu, které jsou k dispozici na GitHubu](https://github.com/Microsoft/Intune-Resource-Access). Pokud chcete nasadit certifikát PKCS, který jste importovali do Intune k podepisování e-mailů, postupujte podle kroků v článku [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md). K těmto krokům patří:
 
 - Stažení a instalace konektoru certifikátu PFX pro Microsoft Intune. Tento konektor dodává importované certifikáty PKCS zařízením.
 - Import podpisových certifikátů e-mailu S/MIME do Intune.
@@ -63,7 +63,7 @@ Když odesíláte šifrovaný e-mail jinému uživateli, získá se veřejný kl
 
 Certifikáty šifrování e-mailu se doporučuje nevytvářet v Intune. Přestože Intune vystavování certifikátů PKCS, které podporují šifrování, umožňuje, vytváří pro každé zařízení jedinečný certifikát. Jedinečné certifikáty pro každé zařízení nejsou u šifrování pomocí S/MIME, u kterého by se certifikát šifrování měl sdílet mezi všemi zařízeními uživatele, vhodné.
 
-Pokud chcete certifikáty S/MIME nasadit pomocí Intune, musíte všechny certifikáty šifrování uživatele importovat do Intune. Intune pak nasadí všech těchto certifikátů na všech zařízeních, která uživatel zaregistruje. Pokud chcete certifikáty importovat do Intune, použijte [rutiny PowerShellu, které jsou k dispozici na GitHubu](https://github.com/Microsoft/Intune-Resource-Access).
+Pokud chcete certifikáty S/MIME nasadit pomocí Intune, musíte všechny certifikáty šifrování uživatele importovat do Intune. Intune pak tyto certifikáty nasadí do každého zařízení, které uživatel zaregistruje. Pokud chcete certifikáty importovat do Intune, použijte [rutiny PowerShellu, které jsou k dispozici na GitHubu](https://github.com/Microsoft/Intune-Resource-Access).
 
 Pokud chcete nasadit certifikát PKCS, který jste importovali do Intune k šifrování e-mailů, postupujte podle kroků v článku [Konfigurace a používání certifikátů PKCS pomocí Intune](certficates-pfx-configure.md). K těmto krokům patří:
 
@@ -78,9 +78,9 @@ Pokud chcete nasadit certifikát PKCS, který jste importovali do Intune k šifr
 
 Jakmile profily podpisových a šifrovacích certifikátů S/MIME vytvoříte, můžete je [povolit v nativní e-mailové aplikaci pro iOS](email-settings-ios.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Používání certifikátů SCEP](certificates-scep-configure.md)
-- [Používání certifikátů PKCS](certficates-pfx-configure.md)
-- [Použití partnerský server certifikační Autority](certificate-authority-add-scep-overview.md)
-- [Vydávání certifikátů PKCS od společnosti Symantec PKI manager webové služby](certificates-symantec-configure.md)
+- [Použití protokolu SCEP pro certifikáty](certificates-scep-configure.md)
+- [Použití certifikátů PKCS](certficates-pfx-configure.md)
+- [Použití partnerské certifikační autority](certificate-authority-add-scep-overview.md)
+- [Vystavení certifikátů PKCS z webové služby správce infrastruktury veřejných klíčů Symantec](certificates-symantec-configure.md)

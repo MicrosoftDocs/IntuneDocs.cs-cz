@@ -1,11 +1,11 @@
 ---
 title: Použití šablon pro zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí šablon pro správu v Microsoft Intune můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení k řízení programů Office, zabezpečení funkcí v Internet Exploreru, řízení přístupu k OneDrivu, použití funkcí vzdálené plochy, povolení automatického přehrání, nastavení řízení spotřeby, používání tisku HTTP, použití různých možnosti přihlášení uživatele a řízení velikosti protokolu událostí.
+description: Pomocí šablon pro správu v Microsoft Intune můžete vytvořit skupiny nastavení pro zařízení s Windows 10. Tato nastavení použijte v profilu konfigurace zařízení k řízení programů Office, Microsoft Edge, zabezpečení funkcí v Internet Exploreru, řízení přístupu k OneDrivu, použití funkcí vzdálené plochy, povolení automatického přehrání, nastavení řízení spotřeby, používání HTTP tisku. Použijte různé možnosti přihlašování uživatelů a řízení velikosti protokolu událostí.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 8/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bfad3feed6daef1930c235bec9c25e809da46c5
-ms.sourcegitcommit: ce9cae824a79223eab3c291fd5d5e377efac84cb
+ms.openlocfilehash: f69ab5f4498519fd0d1dee02eca59ea6865598b7
+ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67842733"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122429"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
-Při správě zařízení ve vaší organizaci chcete vytvořit skupinu nastavení, která se používají pro různé skupiny zařízení. Máte například několik skupin zařízení. Pro skupinu a chcete přiřadit konkrétní sadu nastavení. Pro GroupB chcete přiřadit jinou sadu nastavení. Potřebujete také jednoduché zobrazení nastavení, která můžete konfigurovat.
+Při správě zařízení ve vaší organizaci chcete vytvořit skupiny nastavení, které se vztahují k různým skupinám zařízení. Máte například několik skupin zařízení. Pro skupinu a chcete přiřadit konkrétní sadu nastavení. Pro GroupB chcete přiřadit jinou sadu nastavení. Potřebujete také jednoduché zobrazení nastavení, která můžete konfigurovat.
 
-Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, které řídí funkce v aplikaci Internet Explorer, systém Microsoft Office programy, Vzdálená plocha, OneDrive, hesla a PIN kódy a další. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
+Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, které řídí funkce v Microsoft Edge, Internet Exploreru, systém Microsoft Officech programech, Vzdálená plocha, OneDrivu, heslech a PIN a dalších. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
 
-Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná v systému Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) (otevře se další web společnosti Microsoft), které používá XML. Nastavení sady Office jsou ingestovaná a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030). Šablony Intune ale mají 100% cloudové. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
+Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná ve Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) , která používají XML. Nastavení sady Office jsou ingestovaná a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030). Šablony Intune ale mají 100% cloudové. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
 
 **Šablony pro správu** jsou integrované do Intune a nevyžadují žádné vlastní nastavení, včetně použití OMA-URI. Jako součást řešení pro správu mobilních zařízení (MDM) použijte při správě zařízení s Windows 10 Tato nastavení šablony jako zastávku.
 
@@ -38,7 +38,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 - Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1703 (RS2). Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1) a novější.
 
-- Nastavení systému Windows použít [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře jiný web společnosti Microsoft). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [zásady CSP pro Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies) (otevře se další web Microsoftu).
+- Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 
 ## <a name="create-a-template"></a>Vytvoření šablony
 
@@ -58,9 +58,15 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
     > [!TIP]
     > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
 
-5. Ve výchozím nastavení se v rozevíracím seznamu zobrazí **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , nebo zobrazit pouze nastavení **Office** :
+5. Ve výchozím nastavení se v rozevíracím seznamu zobrazí **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , zobrazit pouze nastavení **Office** nebo zobrazit pouze nastavení **Microsoft Edge** :
 
     ![Vyfiltruje seznam, aby se zobrazila všechna okna nebo všechna nastavení Office v šablonách pro správu v Intune.](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
+
+    > [!NOTE]
+    > Nastavení Microsoft Edge platí pro:
+    >
+    > - Windows 10 RS4 a novější s nainstalovanou verzí [KB 4512509](https://support.microsoft.com/kb/4512509) .
+    > - Windows 10 RS5 a novější s nainstalovanou verzí [KB 4512534](https://support.microsoft.com/kb/4512534) .
 
 6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako Nenakonfigurováno (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 7. Vyberte **OK** uložte provedené změny.
@@ -69,9 +75,10 @@ Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v pros
 
 - Pomocí nastavení pro **oznamování maker v jazyce VBA** můžete zpracovávat makra VBA v různých systém Microsoft Office programech, včetně Wordu a Excelu.
 - Pomocí nastavení **povolení stahování souborů** povolte nebo Zabraňte stažení z aplikace Internet Explorer.
-- Pokud se zařízení probudí z režimu spánku, použijte nastavení **vyžadovat heslo při probuzení počítače (napájení ze sítě)** a vyzvat uživatele k zadání hesla.
+- Při **probuzení počítače (napájení ze sítě) použít příkaz vyžadovat heslo** , když se zařízení probudí z režimu spánku, vyzvat uživatele k zadání hesla.
 - Pomocí nastavení **Stáhnout nepodepsané ovládací prvky ActiveX** zabráníte uživatelům v Stahování nepodepsaných ovládacích prvků ActiveX z Internet Exploreru.
 - Pomocí nastavení **vypnout obnovení systému** povolíte nebo zabráníte uživatelům v zařízení spouštět obnovení systému.
+- Nastavení **povoluje Import oblíbených položek** použijte, když chcete uživatelům dovolit nebo zablokovat Import oblíbených položek z jiného prohlížeče do Microsoft Edge.
 - A mnohem víc...
 
 ## <a name="find-some-settings"></a>Najít některá nastavení
