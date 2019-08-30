@@ -154,7 +154,7 @@ Zásada podmíněného přístupu blokuje přístup k prostředkům pro zaříze
 > [!TIP]  
 > Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a vyberte**nové zásady** **podmíněného přístupu** > .
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte**nové zásady** **podmíněného přístupu** > .
 2. Zadejte **Název** zásady a zvolte **Uživatelé a skupiny**. Pomocí možností Zahrnout a Vyloučit vyberte požadované skupiny pro nasazení zásady a zvolte **Hotovo**.
 3. Zvolte **Cloudové aplikace** a vyberte aplikace, které chcete chránit. Zvolte například **Vybrat aplikace** a pak vyberte **Office 365 SharePoint Online** a **Office 365 Exchange Online**.
 
