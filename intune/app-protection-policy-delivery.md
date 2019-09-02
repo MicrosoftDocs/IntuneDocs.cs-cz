@@ -1,7 +1,7 @@
 ---
-title: Doručování zásad ochrany aplikací Undertastand a časování
+title: Principy doručování a časování zásad ochrany aplikací
 titleSuffix: Microsoft Intune
-description: Přečtěte si jiné nasazení systému windows pro zásady ochrany aplikací pochopit, když by se měla zobrazit změny na vašich zařízeních koncových uživatelů.
+description: Přečtěte si o různých oknech nasazení pro zásady ochrany aplikací, které vám pomohou pochopit, kdy se mají změny zobrazovat na zařízeních koncových uživatelů.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,36 +17,36 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14b4af7145e09e1af3d2a6d3a2fd3ef17319be35
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: e0dcc729eeb76dda1c2d6ddcedbedafdc7f999f0
+ms.sourcegitcommit: 7484ef8006f6b81d8976c328dd704512a31872ec
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649013"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190226"
 ---
-# <a name="understand-app-protection-policy-delivery-timing"></a>Vysvětlení zásad ochrany aplikací doručování časování
+# <a name="understand-app-protection-policy-delivery-timing"></a>Principy časování doručování zásad ochrany aplikací
 
-Přečtěte si jiné nasazení systému windows pro zásady ochrany aplikací, abyste pochopili, když změny by se měla zobrazit na zařízeních koncových uživatelů.
+Přečtěte si o různých oknech nasazení pro zásady ochrany aplikací, které vám pomohou pochopit, kdy se mají změny zobrazovat na zařízeních koncových uživatelů.
 
-## <a name="delivery-timing-summary"></a>Souhrn časování doručování
+## <a name="delivery-timing-summary"></a>Souhrn časování doručení
 
-Doručování zásad ochrany aplikací závisí na stavu licence a registrace služby Intune pro vaše uživatele.  
+Doručování zásad ochrany aplikací závisí na stavu licence a registraci služby Intune pro vaše uživatele.  
 
-|    Stav uživatele    |    Chování ochrany aplikace     |    Interval opakování (viz poznámky)    |    Proč k tomu dochází?    |
+|    Stav uživatele    |    Chování ochrany aplikace     |    Interval opakování (viz poznámku)    |    Proč k tomu dochází?    |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
-|    Tenant Nezprovoznilo.    |    Vyčkat, než intervalu příštího opakování.  Ochrana aplikací není aktivní uživatele.    |    24 hodin    |    Nastane, pokud jste nenastavili vašeho tenanta Intune.    |
-|    Není licencovaný uživatel     |    Vyčkat, než intervalu příštího opakování.  Ochrana aplikací není aktivní uživatele.     |    12 hodin – ale na zařízeních s Androidem tento interval vyžaduje sadu Intune APP SDK verze 5.6.0 nebo novější. Jinak zařízení Andriod. interval je 24 hodin.   |    Nastane, pokud uživatel ještě licenci pro Intune.    |
-|    Uživatel není přiřazený zásady ochrany aplikací    |    Vyčkat, než intervalu příštího opakování.  Ochrana aplikací není aktivní uživatele.    |    12 hodin        |    Nastane, pokud jste ještě nepřiřadili nastavení aplikace uživatele.    |
-|    Uživatel úspěšně zaregistrovaný v Intune mam    |    Podle nastavení zásad se použije ochrana aplikací.    Aktualizace se provádí na základě na interval opakování    |    Služba Intune definovány v závislosti na zatížení uživatele.    Obvykle 30 minut.     |    Nastane, pokud uživatel úspěšně zaregistrovala ve službě Intune MAM konfigurace.    |
+|    Tenant není zaregistrované.    |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.    |    24 hodin    |    Vyvolá se v případě, že jste nestavili vašeho tenanta pro Intune.    |
+|    Uživatel nemá licenci.     |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.     |    12 hodin – na zařízeních s Androidem ale tento interval vyžaduje Intune APP SDK verze 5.6.0 nebo novější. V opačném případě pro zařízení Andriod je interval 24 hodin.   |    Vyvolá se v případě, že jste nelicencovaný uživatel pro Intune.    |
+|    Uživatel nepřiřadil zásady ochrany aplikací.    |    Počkejte na další interval opakování.  Ochrana aplikací není pro tohoto uživatele aktivní.    |    12 hodin        |    Nastane, pokud jste uživateli nepřiřadili nastavení aplikace.    |
+|    Uživatel se úspěšně zaregistroval pro Intune MAM.    |    Ochrana aplikací se aplikuje na nastavení zásad.    K aktualizacím dochází na základě intervalu opakování.    |    Služba Intune definovaná na základě uživatelského zatížení.    Obvykle 30 minut.     |    Vyvolá se v případě, že se uživatel úspěšně zaregistroval ve službě Intune pro konfiguraci MAM.    |
 
 > [!NOTE]
-> Může vyžadovat využití aplikací, které aktivní pravděpodobnější, což znamená, že je aplikace spuštěná a používají se intervaly opakování.  Pokud interval opakování je 24 hodin a uživatel čeká 48 hodin aplikaci spustit, bude opakovat akci ochrany aplikace klient 48 hodin.
+> Intervaly opakování můžou vyžadovat, aby se mohlo použít aktivní aplikace, což znamená, že se aplikace spouští a používá.  Pokud je interval opakování 24 hodin a uživatel počká 48 hodiny na spuštění aplikace, bude se klient ochrany aplikací opakovat za 48 hodin.
 
-## <a name="handling-network-connectivity-issues"></a>Zpracování problémy se síťovým připojením
+## <a name="handling-network-connectivity-issues"></a>Zpracování potíží s připojením k síti
 
-Pokud se registrace uživatele nezdaří kvůli problémům se síťovým připojením interval akcelerované opakování se používá.  Ochranu aplikací bude klient opakovat pokus intervalech stále déle, dokud nedosáhne interval 60 minut nebo vytvoří úspěšné připojení.  Klient pak bude opakovat každých 60 minut, dokud vytvoří úspěšné připojení. Klient pak vrátí interval standardní opakování na základě stavu uživatele.
+Pokud se registrace uživatele z důvodu problémů s připojením k síti nezdařila, je použit akcelerovaný interval opakování.  Klient ochrany aplikací se znovu pokusí o více než delší dobu, dokud interval nedosáhne 60 minut nebo je vytvořeno úspěšné připojení.  Klient se pak bude pokračovat v intervalu 60 minut, dokud nebude provedeno úspěšné připojení. Pak se klient vrátí ke standardnímu intervalu opakování na základě stavu uživatele.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 [Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune](licenses-assign.md)
 
