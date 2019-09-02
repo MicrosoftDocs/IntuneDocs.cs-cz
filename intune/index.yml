@@ -1,149 +1,234 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Hub
 title: Dokumentace k Microsoft Intune
+summary: Oficiální dokumentace k produktu Microsoft Intune
 metadata:
-  document_id: 99e91b60-d6a5-44a8-908f-442161fbb077
-  title: Dokumentace k Microsoft Intune
-  description: 'Rychle se seznamte s Microsoft Intune. Pomocí této cloudové služby pro správu mobilních zařízení v podnicích (EMM) zajistíte, aby vaši pracovníci byli produktivní, a současně ochráníte firemní data.'
-  keywords: 'ochrana, firma, data, Azure, Intune, EMM, zařízení, aplikace, správa'
+  services: service
+  ms.service: microsoft-intune
+  ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: dougeby
-  ms.date: 07/03/2019
-  ms.topic: landing-page
-  ms.devlang: null
-  ms.service: microsoft-intune
-sections:
-  - items:
-      - type: markdown
-        text: 'Rychle se seznamte s Microsoft Intune. Pomocí této cloudové služby pro správu mobilních zařízení v podnicích (EMM) zajistíte, aby vaši pracovníci byli produktivní, a současně ochráníte firemní data. Intune se integruje se službou Azure Active Directory kvůli řízení přístupu a identit a se službou Azure Information Protection kvůli ochraně dat.'
-  - items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 2
-        items:
-          - href: introduction-intune.md
-            html: '<p>Přečtěte si, co je Intune a jak funguje.</p>'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_overview.svg'
-            title: Co je Intune?
-          - href: free-trial-sign-up.md
-            html: <p>Vyzkoušejte si Intune v tomto jednoduchém výukovém kurzu.</p>
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_get-started.svg'
-            title: Začínáme
-          - href: get-support.md
-            html: '<p>Naučte se vytvořit lístek podpory a získat pomoc, když ji budete potřebovat.</p>'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_support.svg'
-            title: Získání podpory
-          - href: whats-new.md
-            html: '<p>Zjistěte, co nového je v Intune tento týden.</p>'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_whats-new.svg'
-            title: Co je nového
-  - title: Nové články a příspěvky blogu
+  manager: mtillman
+  ms.date: 08/30/2019
+  ms.openlocfilehash: 4d33b03ecf4a83b4fb962dc3672cb4ca45bfeedb
+  ms.sourcegitcommit: ffbd1542d33810ab97a0be8faf26f8061328c228
+  ms.translationtype: HT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 08/31/2019
+  ms.locfileid: "70206445"
+highlightedContent:
+  items:
+  - title: Co je Intune?
+    itemType: overview
+    url: what-is-intune.md
+  - title: Co je nového v Intune
+    itemType: overview
+    url: whats-new.md
+  - title: Funkce ve vývoji
+    itemType: overview
+    url: in-development.md
+  - title: Vyzkoušejte si Intune zdarma
+    itemType: get-started
+    url: free-trial-sign-up.md
+  - title: Použití nastavení oblasti se značkami oboru
+    itemType: get-started
+    url: scope-tags.md
+  - title: Zabezpečení zařízení s Windows pomocí nastavení doporučených Microsoftem
+    itemType: get-started
+    url: security-baselines.md
+conceptualContent:
+  items:
+  - title: Plánování přijetí Intune
+    links:
+    - url: planning-guide.md
+      itemType: concept
+      text: Průvodce plánováním pro Intune
+    - url: migration-guide.md
+      itemType: concept
+      text: Příručka k migraci do Intune
+    - url: migration-guide-communication-plan.md
+      itemType: concept
+      text: Plán komunikace pro vaše uživatele
+  - title: Nastavení Intune
+    links:
+    - url: setup-steps.md
+      itemType: how-to-guide
+      text: Postup nastavení Intune
+    - url: supported-devices-browsers.md
+      itemType: reference
+      text: Podporované operační systémy a prohlížeče
+    - url: role-based-access-control.md
+      itemType: reference
+      text: Řízení přístupu na základě role
+    - url: licenses.md
+      itemType: concept
+      text: Licencování Intune
+  - title: Registrace zařízení
+    links:
+    - url: device-enrollment.md
+      itemType: concept
+      text: Přehled registrace zařízení
+    - url: windows-enroll.md
+      itemType: how-to-guide
+      text: Nastavení registrace pro Windows
+    - url: ios-enroll.md
+      itemType: how-to-guide
+      text: Nastavení registrace pro zařízení s iOSem
+    - url: android-enroll.md
+      itemType: how-to-guide
+      text: Nastavení registrace pro zařízení s Androidem
+  - title: Vzdálená správa zařízení
+    links:
+    - url: device-management.md
+      itemType: concept
+      text: Přehled správy zařízení
+    - url: device-management-capabilities.md
+      itemType: concept
+      text: Možnosti správy zařízení
+    - url: custom-notifications.md
+      itemType: how-to-guide
+      text: Posílání vlastních oznámení
+    - url: devices-wipe.md
+      itemType: how-to-guide
+      text: Odebrání zařízení
+  - title: Vytvoření pravidel dodržování předpisů pro uživatele a zařízení
+    links:
+    - url: device-compliance-get-started.md
+      itemType: concept
+      text: Přehled dodržování předpisů
+    - url: use-network-locations.md
+      itemType: how-to-guide
+      text: Ohraničení sítě + dodržování předpisů v Androidu
+    - url: actions-for-noncompliance.md
+      itemType: how-to-guide
+      text: Akce pro zařízení nedodržující předpisy
+  - title: Ovládání funkcí a nastavení zařízení
+    links:
+    - url: device-profiles.md
+      itemType: concept
+      text: Přehled konfigurace zařízení
+    - url: device-restrictions-configure.md
+      itemType: how-to-guide
+      text: Omezení nastavení a funkcí
+    - url: vpn-settings-configure.md
+      itemType: how-to-guide
+      text: Přidání sítě VPN k zařízením
+    - url: administrative-templates-windows.md
+      itemType: how-to-guide
+      text: Konfigurace nastavení souboru ADMX se zásadami skupiny
+  - title: Ochrana zařízení a dat
+    links:
+    - url: device-protect.md
+      itemType: concept
+      text: Přehled ochrany zařízení
+    - url: conditional-access.md
+      itemType: concept
+      text: Podmíněný přístup s Intune
+    - url: mobile-threat-defense.md
+      itemType: concept
+      text: Integrace ochrany před mobilními hrozbami do Intune
+  - title: Správa aplikací
+    links:
+    - url: app-management.md
+      itemType: concept
+      text: Přehled správy aplikací
+    - url: apps-add.md
+      itemType: how-to-guide
+      text: Přidání aplikací do Intune
+    - url: apps-deploy.md
+      itemType: how-to-guide
+      text: Přiřazení aplikací skupinám
+    - url: app-configuration-policies-overview.md
+      itemType: overview
+      text: Zásady konfigurace aplikací
+    - url: app-protection-policy.md
+      itemType: concept
+      text: Zásady ochrany aplikace
+  - title: Nápověda a podpora
+    links:
+    - url: get-support.md
+      itemType: concept
+      text: Jak získat podporu pro Microsoft Intune?
+    - url: help-desk-operators.md
+      itemType: concept
+      text: Pomoc uživatelům s řešením problémů
+    - url: monitor-audit-logs.md
+      itemType: concept
+      text: Sledování a monitorování událostí pomocí protokolů auditu
+    - url: troubleshoot-app-install.md
+      itemType: concept
+      text: Řešení problémů s instalací aplikací
+    - url: troubleshoot-policies-in-microsoft-intune.md
+      itemType: concept
+      text: Řešení potíží se zásadami a profily v Intune
+  - title: Vývojář
+    links:
+    - url: intune-graph-apis.md
+      itemType: concept
+      text: Přístup k rozhraním Intune API v Microsoft Graphu
+    - url: https://github.com/Microsoft/Intune-PowerShell-SDK/
+      itemType: concept
+      text: Automatizace akcí pomocí rutin PowerShellu
+    - url: reports-nav-create-intune-reports.md
+      itemType: concept
+      text: Použití datového skladu Microsoft Intune
+    - url: https://docs.microsoft.com/intune/app-sdk
+      itemType: overview
+      text: Přehled sady Microsoft Intune App SDK
+    - url: reports-nav-create-intune-reports.md
+      itemType: concept
+      text: Použití datového skladu Microsoft Intune
+additionalContent:
+  sections:
+  - title: Další materiály o správě zařízení
     items:
-      - type: paragraph
-        text: 'Přečtěte si nejnovější a nejlepší informace, které potřebujete vědět.'
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: what-is-intune.md
-            title: Informace o Intune na Azure Portalu
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_portal.svg'
-          - href: ui-changes.md
-            title: Kde se na Azure Portalu nacházejí funkce Intune
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_guide.svg'
-          - href: high-level-architecture.md
-            title: Architektura Intune z širší perspektivy
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_architecture.svg'
-          - href: enrollment-autopilot.md
-            title: Podpora programu Windows AutoPilot Deployment v Microsoft Intune
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_generic-database.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2018/09/12/support-tip-intune-support-for-ios-12/'
-            title: '[Blog] Tip k podpoře: Podpora Intune pro iOS 12'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_blog.svg'
-          - href: 'https://blogs.technet.microsoft.com/intunesupport/2018/09/04/coming-soon-new-intune-support-experience-for-premier-customers/'
-            title: '[Blog] Nové prostředí s podporou Intune pro zákazníky úrovně Premier'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/common/i_blog.svg'
-  - title: Videa
+    - title: Intune pro vzdělávání
+      links:
+      - text: Co je Intune for Education?
+        url: https://docs.microsoft.com/intune-education/what-is-intune-for-education
+      - text: Co je nového v Intune for Education?
+        url: https://docs.microsoft.com/intune-education/whats-new-in-edu
+      - text: Jak se Intune for Education liší od plné verze?
+        url: introduction-intune-education.md
+    - title: Intune pro státní správu
+      links:
+      - text: Popis služby Enterprise Mobility + Security for US Government
+        url: https://docs.microsoft.com/enterprise-mobility-security/solutions/ems-govt-service-description
+      - text: Koncové body Intune pro vládu USA
+        url: https://docs.microsoft.com/intune/intune-us-government-endpoints
+      - text: Web Azure Government
+        url: https://azure.microsoft.com/global-infrastructure/government/
+    - title: Microsoft 365
+      links:
+      - text: Seznamte se s Microsoftem 365, komplexním řešením zahrnujícím Intune
+        url: https://docs.microsoft.com/microsoft-365/
+      - text: Dokumentace pro Microsoft 365 Enterprise
+        url: https://docs.microsoft.com/microsoft-365/enterprise/
+      - text: Základní infrastruktura pro Microsoft 365 Enterprise
+        url: https://docs.microsoft.com/microsoft-365/enterprise/deploy-foundation-infrastructure
+    - title: Azure Active Directory
+      links:
+      - text: Dokumentace ke správě uživatelů
+        url: https://docs.microsoft.com/azure/active-directory/users-groups-roles/
+      - text: Dokumentace k ověřování
+        url: https://docs.microsoft.com/azure/active-directory/authentication/
+      - text: Dokumentace k identitám zařízení
+        url: https://docs.microsoft.com/azure/active-directory/devices/
+      - text: Dokumentace k hybridním identitám
+        url: https://docs.microsoft.com/azure/active-directory/hybrid/
+  - title: Komunitní zdroje k Intune
     items:
-      - type: markdown
-        text: '>[!VIDEO https://www.youtube.com/embed/DnmnLr2NUXk]'
-      - type: paragraph
-        text: ' '
-      - type: markdown
-        text: '>[!VIDEO https://www.youtube.com/embed/Cn29dmgDcIw]'
-  - title: Bezplatné školení k Intune
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 1
-        items:
-          - href: 'https://www.pluralsight.com/courses/windows-10-configuring-intune-creators'
-            title: 'Konfigurace Windows 10: Plánování a implementace Microsoft Intune'
-            image:
-              src: 'https://docs.microsoft.com/en-us/media/logos/logo_pluralsight.svg'
-  - title: Články o plánování
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="/intune/planning-guide">Průvodce plánováním nasazení, návrhem a implementací Intune</a>'
-          - html: <a href="/intune/migration-guide">Příručka k migraci do Intune</a>
-  - title: Články s návody
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/device-enrollment">Registrovat zařízení</a>
-          - html: <a href="/intune/device-management">Správa zařízení</a>
-          - html: <a href="/intune/app-management">Správa aplikací</a>
-          - html: <a href="/intune/device-profiles">Konfigurace zařízení</a>
-          - html: <a href="/intune/device-compliance-get-started">Nastavení dodržování předpisů zařízením</a>
-          - html: <a href="/intune/conditional-access">Nastavení podmíněného přístupu</a>
-          - html: <a href="/intune/app-protection-policy">Ochrana aplikací</a>
-          - html: <a href="/intune/mobile-threat-defense">Nastavení ochrany před mobilními hrozbami</a>
-          - html: <a href="/intune/network-access-control-integrate">Integrace řízení přístupu k síti</a>
-          - html: <a href="/intune/role-based-access-control">Správa rolí</a>
-          - html: <a href="/intune-classic/deploy-use/manage-windows-pcs-with-microsoft-intune?toc=/intune/toc.json">Správa počítačů pomocí softwarového klienta Intune</a>
-  - title: Články o řešení problémů
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/help-desk-operators">Pomoc uživatelům prostřednictvím portálu pro řešení potíží</a>
-          - html: <a href="/intune/known-issues">Známé problémy v Intune</a>
-          - html: <a href="/intune/get-support">Získání podpory</a>
-  - title: Články o vývoji a přizpůsobení
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/intune/custom-settings-configure">Konfigurace vlastních nastavení zařízení</a>
-          - html: <a href="/intune/apps-prepare-mobile-application-management">Příprava obchodních aplikací pomocí nástroje Intune App Wrapper</a>
-          - html: <a href="/intune/app-sdk">Příprava obchodních aplikací pomocí sady Intune App SDK</a>
-          - html: '<a href="https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/intune_graph_overview">Práce s Intune v Microsoft Graphu</a>'
-          - html: <a href="/intune/reports-nav-intune-data-warehouse">Rozhraní API datového skladu Intune</a>
-  - title: Další zdroje
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="https://docs.microsoft.com/enterprise-mobility-security/solutions/enterprise-mobility-fasttrack-program">Máte 150 a více licencí? Využijte výhod FastTracku</a>'
-          - html: '<a href="https://docs.microsoft.com/microsoft-365">Seznamte se s Microsoftem 365, komplexním řešením zahrnujícím Intune</a>'
-          - html: '<a href="https://blogs.technet.microsoft.com/enterprisemobility/">Přečtěte si blog věnovaný Enterprise Mobility + Security</a>'
-          - html: '<a href="https://blogs.technet.microsoft.com/intunesupport/">Získejte nápovědu v blogu podpory Intune</a>'
-          - html: '<a href="https://microsoftintune.uservoice.com/forums/291681-ideas">Sdělte svůj názor na Intune na webu UserVoice</a>'
-          - html: '<a href="https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc">Ptejte se nebo odpovídejte v diskuzním fóru Intune</a>'
+    - title: Technická fóra o Intune
+      summary: Prostor pro technické dotazy na produktových fórech
+      url: https://social.technet.microsoft.com/Forums/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc
+    - title: Poskytnutí názoru na produkt přes UserVoice
+      summary: Sdílení nápadů k produktům s technickým týmem
+      url: https://microsoftintune.uservoice.com/forums/291681-ideas
+    - title: Konverzace technické komunity o Intune
+      summary: Podívejte se na aktivní konverzace v technické komunitě.
+      url: https://techcommunity.microsoft.com/t5/Microsoft-Intune/bd-p/Microsoft-Intune
+    - title: '#<a name="intune-on-twitter"></a>Intune na Twitteru'
+      summary: Udržujte si neustálý přehled díky aktivní komunitě na Twitteru.
+      url: https://twitter.com/hashtag/msintune
+    - title: Intune Customer Success
+      summary: Získejte pomoc na webu Intune Customer Success.
+      url: https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess
