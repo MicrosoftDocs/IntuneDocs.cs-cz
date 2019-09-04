@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/28/2019
+ms.date: 09/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cdd36406dc579822324013b4a04ef66404c5d6f
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 0e553229530f826ead91be981ff446b7cb3ebbf2
+ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70129561"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214283"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
-Až nakonfigurujete [infrastrukturu](certificates-scep-configure.md) pro podporu certifikátů Simple Certificate ENROLLMENT Protocol (SCEP), můžete vytvořit a přiřadit profily certifikátů SCEP pro uživatele a zařízení v Intune.
+Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu certifikátů Simple Certificate ENROLLMENT Protocol (SCEP), můžete vytvořit a přiřadit profily certifikátů SCEP pro uživatele a zařízení v Intune.
 
 > [!IMPORTANT]  
 > Před vytvořením profilů certifikátů SCEP musí zařízení, která budou používat profil certifikátu SCEP, důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Použití *profilu důvěryhodného certifikátu* v Intune k zřízení certifikátu důvěryhodné kořenové certifikační autority pro uživatele a zařízení informace o profilu důvěryhodného certifikátu najdete v tématu [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [vytvoření důvěryhodného certifikátu. profily](certificates-configure.md#create-trusted-certificate-profiles) *používají certifikáty pro ověřování v Intune*.
@@ -37,7 +37,11 @@ Až nakonfigurujete [infrastrukturu](certificates-scep-configure.md) pro podporu
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **platforma** vyberte [podporovanou platformu zařízení](certificates-configure.md#supported-platforms-and-certificate-profiles) pro tento certifikát SCEP. 
-5. V rozevíracím seznamu **typ profilu** vyberte **certifikát SCEP**.
+5. V rozevíracím seznamu **typ profilu** vyberte **certifikát SCEP**.  
+
+   > [!NOTE]  
+   > Pro platformu **Android Enterprise** je *typ profilu* rozdělen do dvou kategorií: Pouze *vlastník zařízení* a *pracovní profil*.  Profily certifikátů SCEP se podporují jenom pro *pracovní profil*.
+
 6. Vyberte **Nastavení**a pak dokončete následující konfigurace:
 
    - **Typ certifikátu**:   
@@ -236,7 +240,7 @@ Přiřaďte profily certifikátů SCEP stejným způsobem jako [profily zaříze
 
 - Pokud chcete do zařízení po jeho registraci certifikát rychle publikovat, přiřaďte profil certifikátu ke skupině uživatelů (ne zařízení). Pokud ho přiřadíte ke skupině zařízení, budete je muset před obdržením zásad plně zaregistrovat.  
 
-- Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na Intune nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
+- Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na **Intune** nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
 
 - I když vytvoříte a přiřadíte profil důvěryhodného certifikátu a profil certifikátu SCEP samostatně, musí být přiřazeni obě. Bez nainstalovaného na zařízení se zásada certifikátu SCEP nezdařila. Zajistěte, aby všechny profily důvěryhodných kořenových certifikátů byly nasazeny taky do stejných skupin jako profil SCEP.
 
@@ -245,6 +249,6 @@ Přiřaďte profily certifikátů SCEP stejným způsobem jako [profily zaříze
 > Když je v zařízeních se systémem iOS přidružený profil certifikátu SCEP k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení s iOS má víc certifikátů dodaných žádostí o certifikát SCEP.  Pokud se požaduje jeden certifikát, musíte místo certifikátů SCEP použít certifikáty PKCS.  Je to kvůli rozdílům ve způsobu doručování certifikátů SCEP a PKCS do zařízení.
 
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 [Přiřazení profilů](device-profile-assign.md)  
