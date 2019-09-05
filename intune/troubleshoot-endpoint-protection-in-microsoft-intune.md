@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 08/26/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: c76466acb375fe49afefc542606350733970f416
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353339"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302334"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problémy s ochranou koncového bodu a možná řešení v Microsoft Intune
 
@@ -60,20 +60,20 @@ Může se zobrazit zpráva, že některé funkce jsou zakázané. K těmto zprá
 **Možná řešení**: Povolte tyto funkce. Pokyny najdete v těchto tématech:
 
 - [Přidat nastavení ochrany koncových bodů](endpoint-protection-configure.md)
-- [Antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Koncoví uživatelé: Zapnutí ochrany v reálném čase pro přístup k prostředkům společnosti](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Definice malwaru nejsou aktuální
 
 Tento stav ukazuje, kdy jsou definice malwaru na zařízení zastaraly o 14 dní nebo víc. Zpráva může například Ukázat, že zařízení je odpojené od Internetu, nebo jsou definice malwaru zastaralé.
 
-**Možná řešení**: Pokud jsou definice malwaru zastaralé, aktualizujte definice pomocí [antivirové ochrany v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Možná řešení**: Pokud jsou definice malwaru zastaralé, aktualizujte definice pomocí [antivirové ochrany v programu Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zpožděna úplná kontrola nebo zpožděna Rychlá kontrola
 
 Po dobu 14 dnů se úplná kontrola nebo Rychlá kontrola nedokončila. K tomuto scénáři může dojít, pokud se zařízení během úplné kontroly restartuje.
 
-**Možná řešení**: Pokud je kontrola zpožděná, můžete spustit jednorázovou kontrolu nebo naplánovat opakující se kontroly. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Možná řešení**: Pokud je kontrola zpožděná, můžete spustit jednorázovou kontrolu nebo naplánovat opakující se kontroly. Viz [antivirová ochrana v programu Windows Defender](device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Je spuštěna jiná aplikace ochrany koncových bodů.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/13/2019
+ms.date: 08/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b3fd474e938e2e85a0a08951a9e3f154d980411
-ms.sourcegitcommit: b64869b4be357c0741ec01b1a2f0bae13efce937
+ms.openlocfilehash: 5c9bad56a8214cd736208526865b5f9c8b23db00
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69998942"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70302282"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
-Tento článek obsahuje seznam a popis všech různých nastavení, která můžete řídit na zařízeních s Windows 10 a novějším. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, upravit zamykací obrazovku, použít program Windows Defender a další.
+Tento článek obsahuje seznam a popis všech různých nastavení, která můžete řídit na zařízeních s Windows 10 a novějším. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, přizpůsobit zamykací obrazovce, používat Microsoft Defender a další.
 
 Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s Windows 10.
 
@@ -67,19 +67,17 @@ Tato nastavení používají [zprostředkovatele CSP zásad ApplicationManagemen
 
   [Zprostředkovatel SmartScreen/EnableAppInstallControl CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen#smartscreen-enableappinstallcontrol)
 
-- **Uživatelský ovládací prvek pro instalaci**: Pokud je nastavené na Nenakonfigurováno (výchozí), Instalační služba systému Windows zabránit uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace a některé z instalační služba systému Windows funkcí zabezpečení jsou vynechány.
+- **Uživatelský ovládací prvek pro instalaci**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), instalační služba systému Windows zabránit uživatelům měnit možnosti instalace obvykle rezervované pro správce systému, jako je například zadání adresáře pro instalaci souborů. **Blok** umožňuje uživatelům změnit tyto možnosti instalace a některé z instalační služba systému Windows funkcí zabezpečení jsou vynechány.
 
   [ApplicationManagement/MSIAllowUserControlOverInstall CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msiallowusercontroloverinstall)
 
-- **Instalace aplikací se zvýšenými oprávněními**: Pokud nastavíte hodnotu Nenakonfigurováno (výchozí), systém použije oprávnění aktuálního uživatele při instalaci programů, které správce systému neinstaluje nebo nenabízí. Zablokuje Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používal zvýšené oprávnění. Tato oprávnění se rozšiřují na všechny programy.
+- **Instalace aplikací se zvýšenými oprávněními**: Pokud nastavíte hodnotu **Nenakonfigurováno** (výchozí), systém použije oprávnění aktuálního uživatele při instalaci programů, které správce systému neinstaluje nebo nenabízí. **Zablokuje** Instalační služba systému Windows, aby při instalaci jakéhokoli programu do systému používal zvýšené oprávnění. Tato oprávnění se rozšiřují na všechny programy.
 
   [CSP ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
 
 - **Aplikace po spuštění**: Zadejte seznam aplikací, které se otevřou, když se uživatel přihlásí k zařízení. Nezapomeňte použít středníkem oddělený seznam názvů (PFN) aplikací pro Windows, které jsou odděleny středníky. Aby tyto zásady fungovaly, musí manifest v aplikacích pro Windows používat úlohu po spuštění.
 
   [ApplicationManagement/LaunchAppAfterLogOn CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-launchappafterlogon)
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
@@ -114,8 +112,6 @@ Tato nastavení používají [poskytovatele zásad Bluetooth](https://docs.micro
 
   [Průvodce používáním ServicesAllowedList](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bluetooth#servicesallowedlist-usage-guide) obsahuje další informace o seznamu služeb.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
 Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-accounts); Zobrazuje se taky podporované edice Windows.
@@ -123,9 +119,7 @@ Tato nastavení používají [CSP v zásadách účtů](https://docs.microsoft.c
 - **Účet Microsoft**: **Blok** zabraňuje koncovým uživatelům v přidružení účet Microsoft k zařízení. **Není nakonfigurováno** (výchozí) umožňuje přidat a použít účet Microsoft.
 - **Bez účet Microsoft**: **Blok** zabraňuje koncovým uživatelům v přidávání účtů mimo Microsoft pomocí uživatelského rozhraní. **Není nakonfigurováno** (výchozí) umožňuje uživatelům přidávat e-mailové účty, které nejsou přidružené k účet Microsoft.
 - **Synchronizace nastavení pro účet Microsoft**: **Není nakonfigurováno** (výchozí) povolí synchronizaci nastavení zařízení a aplikací přidružených k účet Microsoft k synchronizaci mezi zařízeními. **Blok** zabraňuje této synchronizaci.
-- **Pomocník pro přihlášení k účtu Microsoft**: Pokud je nastavené na Nenakonfigurováno (výchozí), koncoví uživatelé můžou spustit a zastavit službu **Microsoft account Signing Assistant** (wlidsvc). Tato služba operačního systému umožňuje uživatelům přihlašovat se k jejich účet Microsoft. **Disable** znemožní koncovým uživatelům řídit službu pomocníka pro přihlášení k Microsoftu (wlidsvc).
-
-Vyberte **OK** uložte provedené změny.
+- **Pomocník pro přihlášení k účtu Microsoft**: Pokud je nastavené na **Nenakonfigurováno** (výchozí), koncoví uživatelé můžou spustit a zastavit službu **Microsoft account Signing Assistant** (wlidsvc). Tato služba operačního systému umožňuje uživatelům přihlašovat se k jejich účet Microsoft. **Disable** znemožní koncovým uživatelům řídit službu pomocníka pro přihlášení k Microsoftu (wlidsvc).
 
 ## <a name="cloud-printer"></a>Cloudová tiskárna
 
@@ -140,8 +134,6 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách EnterpriseClou
 
 > [!TIP]
 > Po nastavení [tisku hybridního cloudu Windows serveru](https://docs.microsoft.com/windows-server/administration/hybrid-cloud-print/hybrid-cloud-print-overview)můžete tato nastavení nakonfigurovat a pak nasadit na vaše zařízení s Windows.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
@@ -165,8 +157,6 @@ Vyberte **OK** uložte provedené změny.
   - **Ochrana osobních údajů**: **Blok** znemožní přístup k oblasti soukromí v aplikaci nastavení na zařízení. **Není nakonfigurováno** (výchozí) umožňuje přístup.
   - **Aktualizace a zabezpečení**: **Blok** zabraňuje přístupu k oblasti aktualizace & zabezpečení aplikace nastavení v zařízení. **Není nakonfigurováno** (výchozí) umožňuje přístup.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="display"></a>Zobrazit
 
 Tato nastavení používají [zprostředkovatele CSP v zásadách zobrazení](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-display). Zobrazuje se taky podporované edice Windows.
@@ -181,9 +171,7 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách zobrazení](ht
 
   Měřítko DPI GDI je vypnuto pro všechny starší aplikace v seznamu.
 
-Můžete také naimportovat soubor. CSV se seznamem aplikací.
-
-Vyberte **OK** uložte provedené změny.
+Můžete také **naimportovat** soubor. CSV se seznamem aplikací.
 
 ## <a name="general"></a>Obecné
 
@@ -203,7 +191,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 - **Sdílení internetu**: **Blok** zabraňuje sdílení internetového připojení na zařízení. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 - **Resetování telefonu**: **Blok** zabraňuje koncovým uživatelům v vymazání nebo obnovení továrního nastavení v zařízení. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 - **Připojení USB**: **Blok** zabraňuje přístupu k externímu úložnému zařízení přes připojení USB na zařízení. **Není nakonfigurováno** (výchozí) povolí tuto funkci. Toto nastavení neovlivňuje zpoplatnění přes USB.
-- **Režim** ochrany před krádeží (jenom mobilní zařízení): **Blok** znemožní koncovým uživatelům vybrat v zařízení preference režimu AntiTheft. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
+- **Režim ochrany před krádeží** (jenom mobilní zařízení): **Blok** znemožní koncovým uživatelům vybrat v zařízení preference režimu AntiTheft. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 - **Cortana**: **Blok** zakáže hlasového asistenta Cortany na zařízení. Když je Cortana vypnutá, uživatelé můžou pořád vyhledávat položky v zařízení. **Není nakonfigurováno** (výchozí) umožňuje Cortana.
 - **Záznam hlasu** (jenom mobilní zařízení): **Blok** znemožní koncovým uživatelům používat na zařízení záznam hlasu zařízení. **Není nakonfigurováno** (výchozí) umožňuje záznam hlasu pro aplikace.
 - **Úprava názvu zařízení** (jenom mobilní zařízení): **Blok** znemožní koncovým uživatelům měnit název zařízení. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
@@ -211,7 +199,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 - **Odebrat zřizovací balíčky**: **Blok** zabraňuje agentovi konfigurace běhu, který ze zařízení odebírá zřizovací balíčky. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 - **Zjišťování zařízení**: **Blok** zabraňuje tomu, aby se zařízení zjistilo jinými zařízeními. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 - **Přepínání úloh** (jenom mobilní zařízení): **Blok** zabraňuje přepínání úloh na zařízení. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
-- **Chybový dialog SIM karty** (jenom mobilní zařízení): Zablokuje zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta. **Není nakonfigurováno** (výchozí) zobrazí chybové zprávy.
+- **Chybový dialog SIM karty** (jenom mobilní zařízení): **Zablokuje** zobrazování chybových zpráv na zařízení, pokud se nezjistí žádná SIM karta. **Není nakonfigurováno** (výchozí) zobrazí chybové zprávy.
 - **Pracovní prostor rukopisu**: Vyberte, jestli a jak má uživatel přístup k pracovnímu prostoru rukopisu. Možnosti:
   - **Není nakonfigurováno** (výchozí): Zapne pracovní prostor rukopisu a uživatel ho může používat nad zamykací obrazovkou.
   - **Zakázáno na zamykací obrazovce**: Pracovní prostor rukopisu je povolen a funkce je zapnutá. Ale uživatel k němu nemá přístup nad zamykací obrazovkou.
@@ -229,8 +217,6 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
   CSP: [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess)
 
 - **Ukončit procesy ze Správce úloh**: Toto nastavení určuje, zda mohou uživatelé bez oprávnění správce použít Správce úloh k ukončení úloh. **Blok** zabraňuje standardním uživatelům (bez správců) v používání Správce úloh k ukončení procesu nebo úlohy v zařízení. **Není nakonfigurováno** (výchozí) umožňuje standardním uživatelům ukončit proces nebo úlohu pomocí Správce úloh.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
@@ -255,8 +241,6 @@ Vyberte **OK** uložte provedené změny.
 
   [CSP DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="messaging"></a>Omezován
 
 Tato nastavení používají [zásady zasílání zpráv CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-messaging); Zobrazuje se taky podporované edice Windows.
@@ -264,8 +248,6 @@ Tato nastavení používají [zásady zasílání zpráv CSP](https://docs.micro
 - **Synchronizace zpráv (jenom mobilní zařízení)** : **Blok** zakáže zálohování a obnovování textových zpráv a synchronizaci zpráv mezi zařízeními s Windows. Vypnutí pomáhá zabránit ukládání informací na serverech mimo řízení organizace. **Není nakonfigurováno** (výchozí) umožňuje uživatelům měnit tato nastavení a synchronizovat jejich zprávy.
 - **MMS (jenom mobilní zařízení)** : **Blok** zakáže na zařízení funkci posílání a přijímání MMS. V případě podniků použijte tuto zásadu k zakázání MMS na zařízeních v rámci požadavku auditování nebo správy. **Není nakonfigurováno** (výchozí) umožňuje odesílat a přijímat MMS.
 - **RCS (jenom mobilní zařízení)** : **Blokování** zakazuje na zařízení funkce pro posílání a přijímání RCS (Rich Communication Services). V případě podniků použijte tuto zásadu k zakázání RCS na zařízeních v rámci požadavku auditování nebo správy. **Není nakonfigurováno** (výchozí) umožňuje RCS Odeslat a přijmout.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
@@ -321,13 +303,13 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
 
   Toto nastavení je dostupné jenom v případě, že běží ve [veřejném procházení InPrivate (veřejný terminál s jednou aplikací)](#use-microsoft-edge-kiosk-mode).
 
-- **Povolená automaticky otevíraná okna** (jenom desktopové počítače): **Ano** (výchozí) umožňuje automaticky otevíraná okna ve webovém prohlížeči. V prohlížeči nebrání automaticky otevíraná okna.
+- **Povolená automaticky otevíraná okna** (jenom desktopové počítače): **Ano** (výchozí) umožňuje automaticky otevíraná okna ve webovém prohlížeči. V prohlížeči **nebrání automaticky** otevíraná okna.
 - **Odeslání intranetového provozu do Internet Exploreru** (Jenom desktopové počítače): **Ano** umožňuje uživatelům otevírat intranetové weby v Internet Exploreru místo Microsoft Edge. Toto nastavení je pro zpětnou kompatibilitu. **Ne** (výchozí) umožňuje uživatelům používat Microsoft Edge.
 - **Umístění seznamu webů podnikového režimu** (Jenom desktopové počítače): Zadejte adresu URL, která odkazuje na soubor XML obsahující seznam webů, které se otevřou v podnikovém režimu. Uživatelé nemůžou tento seznam měnit. Zadejte například `https://www.contoso.com/sites.xml`.
 - **Zpráva při otevírání webů v aplikaci Internet Explorer**: Pomocí tohoto nastavení můžete nastavit, aby Microsoft Edge zobrazoval oznámení předtím, než se web otevře v Internet Exploreru 11. Možnosti:
   - **Nezobrazovat zprávu**: Použije se výchozí chování operačního systému, které nemusí zobrazovat zprávu.
   - **Zobrazit zprávu, že web je otevřen v aplikaci Internet Explorer 11**: Zobrazit zprávu při otevírání webů v IE Weby otevřené v aplikaci IE. 
-  - **Zobrazit zprávu s možností otevírat weby v Microsoft Edge**: Zobrazit zprávu při otevírání webů v Edge. Tato zpráva zahrnuje i **nadále odkaz na Microsoft Edge** , takže uživatelé můžou místo IE zvolit Microsoft Edge.
+  - **Zobrazit zprávu s možností otevírat weby v Microsoft Edge**: Zobrazit zprávu při otevírání webů v Microsoft Edge. Tato zpráva zahrnuje i **nadále odkaz na Microsoft Edge** , takže uživatelé můžou místo IE zvolit Microsoft Edge.
 
   > [!IMPORTANT]
   > Toto nastavení vyžaduje, abyste používali nastavení **umístění seznamu webů podnikového režimu** , nastavení **odesílat intranetový provoz do aplikace Internet Explorer** nebo obě nastavení.
@@ -335,8 +317,6 @@ Tento profil omezení zařízení přímo souvisí s profilem veřejného termin
 - **Povolí seznam kompatibility Microsoftu**: **Ano** (výchozí) umožňuje používat seznam kompatibility Microsoftu. **Ne** zabraňuje seznamu kompatibility Microsoftu v Microsoft Edge. Tento seznam od Microsoftu pomáhá společnosti Microsoft Edge správně zobrazit lokality se známými problémy s kompatibilitou.
 - **Úvodní stránky a stránka nové karty**: **Ano** (výchozí) používá výchozí chování operačního systému, které může být pro tyto stránky předem načteno. Předběžné načtení minimalizuje čas na spuštění Microsoft Edge a načítá nové karty. **Ne** znemožní Microsoft Edge z přednačtení počátečních stránek a nové stránky karty.
 - **Úvodní stránky a stránka nové karty**: **Ano** (výchozí) používá výchozí chování operačního systému, které může být před spuštěním těchto stránek. Předběžná spuštění pomáhá s výkonem Microsoft Edge a minimalizuje dobu potřebnou ke spuštění Microsoft Edge. **Žádné** zabraňuje Microsoft Edge v předběžném spuštění stránek Start a nové karty.
-
-Vyberte **OK** uložte provedené změny.
 
 ### <a name="favorites-and-search"></a>Oblíbené položky a hledání
 
@@ -357,8 +337,6 @@ Vyberte **OK** uložte provedené změny.
 - **Povolí změny vyhledávacího modulu**: **Ano** (výchozí) umožňuje uživatelům přidávat nové vyhledávací moduly nebo měnit výchozí vyhledávací web na Microsoft Edge. Pokud chcete uživatelům zabránit v přizpůsobení vyhledávacího modulu, klikněte na **ne** .
 
   Toto nastavení je dostupné, jenom když běží v [normálním režimu (veřejný terminál s více aplikacemi)](#use-microsoft-edge-kiosk-mode).
-
-Vyberte **OK** uložte provedené změny.
 
 ### <a name="privacy-and-security"></a>Ochrana osobních údajů a zabezpečení
 
@@ -383,40 +361,34 @@ Když je vybraná možnost blokovat a povolit uživatele, může přepsat označ
 - **Povolení shromažďování dat živé dlaždice**: **Ano** (výchozí) umožňuje Microsoft Edge shromažďovat informace z živých dlaždic připnuté do nabídky Start. **Žádné** nebrání shromažďování těchto informací, což může uživatelům poskytnout omezené prostředí.
 - **Uživatel může přepsat chyby certifikátu**: **Ano** (výchozí) umožňuje uživatelům přístup k webům s chybami protokolu SSL/TLS (SSL (Secure Sockets Layer)/Transport Layer Security). **Ne** (doporučeno pro zvýšené zabezpečení) znemožní uživatelům přístup k webům s chybami SSL nebo TLS.
 
-Vyberte **OK** uložte provedené změny.
-
 ### <a name="additional"></a>Další
 
-- **Povolí prohlížeč Microsoft Edge** . (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat webový prohlížeč Microsoft Edge na mobilním zařízení. Na zařízení nebrání použití Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
-- **Rozevírací nabídka povoleného panelu Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní nezastaví zobrazení seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:
+- **Povolí prohlížeč Microsoft Edge** . (jenom mobilní zařízení): **Ano** (výchozí) umožňuje používat webový prohlížeč Microsoft Edge na mobilním zařízení. Na zařízení **nebrání použití** Microsoft Edge. Pokud zvolíte **ne**, ostatní individuální nastavení platí pouze pro plochu.
+- **Rozevírací nabídka povoleného panelu Adresa**: **Ano** (výchozí) umožňuje, aby Microsoft Edge zobrazoval rozevírací seznam s panelem Adresa se seznamem návrhů. V takovém případě se v rozevíracím seznamu při psaní **nezastaví zobrazení** seznamu návrhů v Microsoft Edge. Pokud je nastavena na **ne**, můžete:
   - Můžete minimalizovat šířku pásma sítě mezi Microsoft Edge a službami Microsoftu.
   - Zakažte možnost **Zobrazit hledání a návrhy webu při psaní** v nastavení Microsoft Edge >.
-- **Povolený režim zobrazení na celé obrazovce**: **Ano** (výchozí) umožňuje, aby Microsoft Edge používal režim celé obrazovky, který zobrazuje jenom webový obsah a skrývá uživatelské rozhraní Microsoft Edge. V Microsoft Edge znemožní režim celoobrazovkového režimu.
+- **Povolený režim zobrazení na celé obrazovce**: **Ano** (výchozí) umožňuje, aby Microsoft Edge používal režim celé obrazovky, který zobrazuje jenom webový obsah a skrývá uživatelské rozhraní Microsoft Edge. V Microsoft **Edge znemožní režim** celoobrazovkového režimu.
 - **Stránka pro povolení o příznacích**: **Ano** (výchozí) používá výchozí operační systém, který může umožňovat přístup k `about:flags` této stránce. Tato `about:flags` stránka umožňuje uživatelům změnit nastavení vývojáře a povolit experimentální funkce. **Žádné** zabrání koncovým uživatelům v `about:flags` přístupu k stránce v Microsoft Edge.
 - **Povolení vývojářských nástrojů**: **Ano** (výchozí) umožňuje uživatelům pomocí nástrojů pro vývojáře F12 sestavovat a ladit webové stránky ve výchozím nastavení. **Žádné** nebrání koncovým uživatelům v používání vývojářských nástrojů F12.
 - **Povolení JavaScriptu**: **Ano** (výchozí) umožňuje spouštění skriptů, jako je JavaScript, v prohlížeči Microsoft Edge. **Žádné** zabraňuje spuštění skriptů Java v prohlížeči.
-- **Uživatel může nainstalovat rozšíření**: **Ano** (výchozí) umožňuje koncovým uživatelům instalovat na zařízení rozšíření Microsoft Edge. Nebrání instalaci.
+- **Uživatel může nainstalovat rozšíření**: **Ano** (výchozí) umožňuje koncovým uživatelům instalovat na zařízení rozšíření Microsoft Edge. **Nebrání instalaci** .
 - **Povolení zkušebního načtení rozšíření pro vývojáře**: **Ano** (výchozí) používá výchozí operační systém, který může umožňovat zkušební načtení. Zkušební načtení nainstaluje a spustí neověřená rozšíření. Možnost **nijak** nebrání Microsoft Edge ve zkušebním načtení pomocí funkce **rozšíření zatížení** . Nebrání rozšíření zkušebního načtení jiným způsobem, jako je například PowerShell.
 - **Požadovaná rozšíření**: Vyberte, která rozšíření se koncovým uživatelům v Microsoft Edge nedají vypnout. Zadejte názvy rodin balíčků a vyberte **Přidat**. Některé doprovodné materiály poskytují [název rodiny balíčků (PFN)](https://docs.microsoft.com/sccm/protect/deploy-use/find-a-pfn-for-per-app-vpn) .
 
   Můžete také **importovat** soubor CSV, který obsahuje názvy rodin balíčků. Případně **exportujte** názvy rodin balíčků, které zadáte.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="network-proxy"></a>Síťový proxy server
 
 Tato nastavení používají [zprostředkovatele CSP zásad NetworkProxy](https://docs.microsoft.com/windows/client-management/mdm/networkproxy-csp), který obsahuje také podporované edice Windows.
 
 - **Automaticky zjišťovat nastavení proxy serveru**: **Blok** zakáže, aby zařízení automaticky rozpoznalo skript automatické konfigurace proxy serveru (PAC). **Není nakonfigurováno** (výchozí) povolí tuto funkci. Pokud je tato možnost povolena, zařízení se pokusí najít cestu ke skriptu PAC.
-- **Použít skript proxy serveru**: Chcete -li nakonfigurovat proxy server, vyberte možnost zadat cestu ke skriptu PAC. **Není nakonfigurováno** (výchozí) neumožňuje zadat adresu URL skriptu PAC.
+- **Použít skript proxy serveru**: Chcete **-li** nakonfigurovat proxy server, vyberte možnost zadat cestu ke skriptu PAC. **Není nakonfigurováno** (výchozí) neumožňuje zadat adresu URL skriptu PAC.
   - Adresa **URL instalačního skriptu**: Zadejte adresu URL skriptu PAC, který chcete použít ke konfiguraci proxy server.
-- **Použít ruční proxy server**: Vyberte možnost zadat ručně zadejte název nebo IP adresu a číslo portu TCP pro proxy server. **Není nakonfigurováno** (výchozí) neumožňuje ručně zadat podrobnosti o proxy server.
+- **Použít ruční proxy server**: Vyberte **možnost** zadat ručně zadejte název nebo IP adresu a číslo portu TCP pro proxy server. **Není nakonfigurováno** (výchozí) neumožňuje ručně zadat podrobnosti o proxy server.
   - **Adresa**: Zadejte název nebo IP adresu proxy server.
   - **Číslo portu**: Zadejte číslo portu proxy server.
   - **Výjimky proxy serveru**: Zadejte všechny adresy URL, které nesmí proxy server použít. Jednotlivé položky oddělte středníkem.
   - **Obejít proxy server pro místní adresu**: **Není nakonfigurováno** (výchozí) zabraňuje použití proxy server pro místní adresy na vašem intranetu. Možnost **Allow** používá proxy server pro místní adresy.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="password"></a>Heslo
 
@@ -425,7 +397,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
 - **Heslo**: **Vyžaduje** , aby koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** (výchozí) povolí přístup k zařízení bez hesla. Platí jenom pro místní účty. Hesla doménového účtu zůstávají nakonfigurovaná službou Active Directory (AD) a službou Azure AD.
 
   - **Požadovaný typ hesla**: Vyberte typ hesla. Možnosti:
-    - Nenakonfigurováno: Heslo může obsahovat číslice a písmena.
+    - **Nenakonfigurováno**: Heslo může obsahovat číslice a písmena.
     - **Číselná**: Heslo musí obsahovat jenom čísla.
     - **Alfanumerické znaky**: Heslo musí obsahovat kombinaci číslic a písmen.
   - **Minimální délka hesla**: Zadejte minimální požadovaný počet znaků nebo znaků od 4-16. Zadejte `6` například, pokud chcete, aby délka hesla vyžadovala alespoň šest znaků.
@@ -441,12 +413,12 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
   - **Vypršení platnosti hesla (dny)** : Zadejte dobu ve dnech, kdy musí být heslo zařízení změněno, od 1-365. Zadejte `90` například platnost hesla po 90 dnech.
   - **Zakázat opakované použití předchozích hesel**: Zadejte počet dříve použitých hesel, která se nedají použít, od 1-24. Například zadejte `5` , že uživatelé nemůžou nastavit nové heslo na aktuální heslo ani na žádná z předchozích čtyř hesel.
   - **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti** (Mobilní a holografická): Vyberte **vyžadovat** , aby museli uživatelé po nečinnosti zařízení odemknout. **Není nakonfigurováno** (výchozí) nevyžaduje PIN kód ani heslo, když se zařízení obnoví ze stavu nečinnosti.
-  - **Jednoduchá hesla**: Nastavením zablokování znemožníte uživatelům vytvářet jednoduchá hesla, například `1234` nebo `1111`. Nastavte na Nenakonfigurováno (výchozí), aby uživatelé mohli vytvářet `1234` hesla `1111`, například nebo. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
+  - **Jednoduchá hesla**: Nastavením **zablokování** znemožníte uživatelům vytvářet jednoduchá hesla, například `1234` nebo `1111`. Nastavte na **Nenakonfigurováno** (výchozí), aby uživatelé mohli vytvářet `1234` hesla `1111`, například nebo. Toto nastavení také povolí obrázková hesla Windows (nebo je zablokuje).
 - **Automatické šifrování během AADJ**: **Blok** zabraňuje automatickému šifrování zařízení bitlockerem, když je zařízení připravené k prvnímu použití, když je zařízení připojené ke službě Azure AD. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, který může šifrování povolit. Další informace o [šifrování zařízení nástrojem BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-device-encryption-overview-windows-10#bitlocker-device-encryption).
 
   [Security/PreventAutomaticDeviceEncryptionForAzureADJoinedDevices CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-security#security-preventautomaticdeviceencryptionforazureadjoineddevices)
 
-- **Zásada FIPS (Federal Information Processing Standard)** : Při použití této vlastnosti se používá zásada FIPS (Federal Information Processing Standard), což je standard pro státní správu USA pro šifrování, algoritmus hash a podepisování. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, který nepoužívá FIPS.
+- **Zásada FIPS (Federal Information Processing Standard)** : Při **použití této** vlastnosti se používá zásada FIPS (Federal Information Processing Standard), což je standard pro státní správu USA pro šifrování, algoritmus hash a podepisování. **Není nakonfigurováno** (výchozí) používá výchozí operační systém, který nepoužívá FIPS.
 
   [Cryptography/AllowFipsAlgorithmPolicy CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-cryptography#cryptography-allowfipsalgorithmpolicy)
 
@@ -465,8 +437,6 @@ Tato nastavení používají [zprostředkovatele CSP zásad DeviceLock](https://
 - **Upřednostňovaná doména tenanta Azure AD**: Zadejte existující název domény v organizaci Azure AD. Když se uživatelé v této doméně přihlásí, nemusí zadávat název domény. Zadejte například `contoso.com`. Uživatelé v `contoso.com` doméně se můžou přihlásit pomocí svého uživatelského jména, `abby`jako je místo `abby@contoso.com`.
 
   [Authentication/PreferredAadTenantDomainName CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-authentication#authentication-preferredaadtenantdomainname)
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="per-app-privacy-exceptions"></a>Výjimky ze zásad ochrany osobních údajů pro jednotlivé aplikace
 
@@ -496,23 +466,17 @@ Můžete přidat aplikace, které by měly mít jiné chování ochrany osobníc
 - **Zpětná vazba a diagnostika**: Definujte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními**: Vyberte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se zařízením explicitně nespárují.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="personalization"></a>Personalizace
 
 Tato nastavení používají [zprostředkovatele kryptografických služeb v zásadách přizpůsobení](https://docs.microsoft.com/windows/client-management/mdm/personalization-csp), který obsahuje taky podporované edice Windows.
 
 - **Adresa URL obrázku na pozadí plochy (jenom desktopové počítače)** : Zadejte adresu URL obrázku ve formátu. jpg,. jpeg nebo. png, který chcete použít jako tapetu plochy systému Windows. Uživatelé nemohou tento obrázek změnit. Zadejte například `https://contoso.com/logo.png`.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="printer"></a>Tiskárně
 
 - **Tiskárny**: Seznam místních tiskáren, které byly přidány.
 - **Výchozí tiskárna**: Nastavte výchozí tiskárnu.
 - **Přístup uživatelů k přidávání nových tiskáren**: Povolí nebo zablokuje používání místních tiskáren.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="privacy"></a>Ochrana osobních údajů
 
@@ -524,8 +488,6 @@ Tato nastavení používají [CSP zásady ochrany osobních údajů](https://doc
 - **Pouze místní aktivity**: **Blok** zabraňuje sdíleným prostředím a zjišťování naposledy použitých prostředků v přepínání úloh na základě pouze místních aktivit. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 
 Můžete nakonfigurovat informace, ke kterým mají přístup všechny aplikace na zařízení. Také definujte výjimky pro jednotlivé aplikace pomocí **výjimek ochrany osobních údajů pro jednotlivé aplikace**.
-
-Vyberte **OK** uložte provedené změny.
 
 ### <a name="exceptions"></a>Výjimky
 
@@ -548,8 +510,6 @@ Vyberte **OK** uložte provedené změny.
 - **Zpětná vazba a diagnostika**: Vyberte, jestli tato aplikace bude mít přístup k diagnostickým informacím.
 - **Synchronizovat se zařízeními** – Definujte, jestli tato aplikace může automaticky sdílet a synchronizovat informace s bezdrátovými zařízeními, která se explicitně nepárují s tímto počítačem, tabletem nebo telefonem.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="projection"></a>Promítání
 
 Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wirelessdisplay), který obsahuje také podporované edice Windows.
@@ -558,12 +518,10 @@ Tato nastavení používají [zprostředkovatele CSP zásad WirelessDisplay](htt
 - **Projekce na tento počítač**: **Blok** zabraňuje ostatním zařízením najít zařízení pro projekci. **Není nakonfigurováno** (výchozí) umožňuje, aby bylo zařízení zjistitelné a bylo možné ho promítnout do zařízení nad zamykací obrazovkou.
 - **Vyžadovat pro párování kód PIN**: Pokud se připojujete k zařízení projekce, vyberte **vyžadovat** , aby se pro PIN kód vždycky zobrazila výzva. **Není nakonfigurováno** (výchozí) nevyžaduje PIN pro spárování zařízení se zařízením projekce.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="reporting-and-telemetry"></a>Generování sestav a telemetrie
 
 - **Sdílet data o využití**: Vyberte úroveň diagnostických dat, která byla odeslána. Možnosti:
-  - Nenakonfigurováno: Nejsou sdílena žádná data.
+  - **Nenakonfigurováno**: Nejsou sdílena žádná data.
   - **Zabezpečení**: Informace, které jsou potřebné k zajištění vyššího zabezpečení systému Windows, včetně údajů o nastavení komponenty prostředí s připojeným uživatelem a Telemetriem, nástroji pro odebrání škodlivého softwaru a programu Windows Defender.
   - **Základní**: Základní informace o zařízení, včetně dat týkajících se kvality, kompatibility aplikací, dat o využití aplikací a dat z úrovně zabezpečení.
   - **Rozšířené možnosti**: Další přehledy, včetně: jak se používají Windows, Windows Server, System Center a aplikace, jak provádějí, pokročilá data o spolehlivosti a data ze základní i úrovně zabezpečení.
@@ -572,7 +530,7 @@ Vyberte **OK** uložte provedené změny.
   [CSP pro System/AllowTelemetry](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system#system-allowtelemetry)
 
 - **Odeslání dat procházení Microsoft Edge do Microsoft 365 Analytics**: Chcete-li použít tuto funkci, nastavte nastavení **sdílet data o využití** na hodnotu **Rozšířené** nebo **úplné**. Tato funkce řídí, jaká data Microsoft Edge odesílá Microsoft 365 analýze pro podniková zařízení s nakonfigurovaným komerčním ID. Možnosti:
-  - Nenakonfigurováno: Používá výchozí operační systém, který nemusí odesílat žádná data historie procházení.
+  - **Nenakonfigurováno**: Používá výchozí operační systém, který nemusí odesílat žádná data historie procházení.
   - **Posílat jenom intranetová data**: Umožňuje správci odesílat historii dat intranetu.
   - **Odesílat pouze Internetová data**: Umožňuje správci odesílat historii internetových dat.
   - **Odesílat intranetová a Internetová data**: Umožňuje správci odeslat historii intranetových a internetových dat.
@@ -603,8 +561,6 @@ Tato nastavení používají [CSP v zásadách hledání](https://docs.microsoft
   - **Střední**: Střední filtrování obsahu pro dospělé Platné výsledky hledání nejsou filtrovány.
 - **Zobrazit výsledky webu v hledání**: Když se nastaví **blokování**, uživatelé nemůžou vyhledávat a výsledky webu nejsou zobrazené ve vyhledávání. **Není nakonfigurováno** (výchozí) umožňuje uživatelům vyhledávat na webu a výsledky se zobrazí na zařízení.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="start"></a>Spustit
 
 Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-start), který také uvádí podporované edice systému Windows.  
@@ -629,7 +585,7 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
 - **Dlaždice uživatele**: **Blok** skryje dlaždici uživatele v zobrazení nabídky Start. **Není nakonfigurováno** (výchozí) zobrazí dlaždici uživatele a také nastaví následující nastavení:
   - **Zamknout**: **Blok** skryje možnost **zámku** na dlaždici uživatele v nabídce Start. **Není nakonfigurováno** (výchozí) zobrazí možnost **zámku** .
   - **Odhlásit**se: **Blok** skryje možnost **Odhlásit** se ze zobrazení na dlaždici uživatele v nabídce Start. **Není nakonfigurováno** (výchozí) zobrazí možnost **Odhlásit** se.
-- **Vypnout**: **Blok** skryje na tlačítku napájení v nabídce Start možnost možnosti **aktualizace a vypnutí** a vypnutí. **Není nakonfigurováno** (výchozí) zobrazí tyto možnosti.
+- **Vypnout**: **Blok** skryje na tlačítku napájení v nabídce **Start možnost možnosti** **aktualizace a vypnutí** a vypnutí. **Není nakonfigurováno** (výchozí) zobrazí tyto možnosti.
 - **Režim spánku**: **Blok** skryje v nabídce Start možnost **režim spánku** , než se zobrazí na tlačítku napájení. **Není nakonfigurováno** (výchozí) zobrazí tuto možnost.
 - **Režim hibernace**: **Blok** skryje možnost **Hibernace** , která se zobrazí na tlačítku napájení v nabídce Start. **Není nakonfigurováno** (výchozí) zobrazí tuto možnost.
 - **Přepnout účet**: **Blok** skryje v nabídce Start na dlaždici uživatele zobrazení **účtu přepnutí** . **Není nakonfigurováno** (výchozí) zobrazí tuto možnost.
@@ -675,8 +631,6 @@ Tato nastavení používají [zprostředkovatele CSP zásad spuštění](https:/
   - **Skrýt**: Zástupce je skrytý a v aplikaci nastavení se zakáže nastavení.
   - **Zobrazit**: Zobrazí se zástupce a v aplikaci nastavení se zakáže nastavení.
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 
 - **Filtr SmartScreen pro Microsoft Edge**: **Vyžaduje** vypínání filtru SmartScreen v programu Windows Defender a zabránění uživatelům v jeho zapnutí. **Není nakonfigurováno** (výchozí) zapne filtr SmartScreen. Pomáhá chránit uživatele před potenciálními hrozbami a zabránit uživatelům v jejich vypnutí.
@@ -693,8 +647,6 @@ Vyberte **OK** uložte provedené změny.
 
   [Browser/PreventSmartScreenPromptOverrideForFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles)
 
-Vyberte **OK** uložte provedené změny.
-
 ## <a name="windows-spotlight"></a>Windows Spotlight
 
 Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience)), který obsahuje taky podporované edice Windows.
@@ -709,45 +661,103 @@ Tato nastavení používají [zprostředkovatele kryptografických služeb (CSP]
   - **Přizpůsobení Windows Spotlightu**: **Blok** zabraňuje systému Windows používat diagnostická data k poskytování přizpůsobených prostředí uživateli. **Není nakonfigurováno** (výchozí) umožňuje Microsoftu používat diagnostická data k poskytování individuálních doporučení, tipů a nabídek k přizpůsobení Windows potřebám uživatelů.
   - **Prostředí uvítání systémem Windows**: **Blok** vypne funkci uvítání systémem Windows Spotlight Windows. Prostředí uvítání systémem Windows se nezobrazí, pokud jsou k dispozici aktualizace a změny ve Windows a jejích aplikacích. **Není nakonfigurováno** (výchozí) povolí prostředí uvítání systémem Windows, které zobrazuje informace o uživateli nových nebo aktualizovaných funkcích.
 
-Vyberte **OK** uložte provedené změny.
-
-## <a name="windows-defender-antivirus"></a>Antivirová ochrana v programu Windows Defender
+## <a name="microsoft-defender-antivirus"></a>Antivirová ochrana v programu Microsoft Defender
 
 Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender), který obsahuje také podporované edice Windows.
 
-- **Sledování v reálném čase**: **Možnost Povolit** zabrání v reálném čase vyhledávání malwaru, spywaru a dalšího nežádoucího softwaru. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
-- **Monitorování chování**: **Možnost Povolit** zabrání programu Defender kontrolovat v zařízeních určité známé vzorce podezřelé aktivity. **Není nakonfigurováno** (výchozí) umožňuje monitorování chování v programu Windows Defender.
-- **Systém kontroly sítě (NIS)** : NIS pomáhá chránit zařízení před zneužitím prostřednictvím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
-- **Kontrolovat všechna stahování**: Určuje, jestli bude Defender kontrolovat všechny soubory stahované z internetu.
-- **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru. **Možnost Povolit** zabrání této kontrole.
-- **Přístup koncového uživatele k programu Defender**: **Blok** skryje uživatelské rozhraní programu Windows Defender před koncovými uživateli. Potlačí se také všechna oznámení v programu Windows Defender. **Není nakonfigurováno** (výchozí) umožňuje uživateli přístup k uživatelskému rozhraní programu Windows Defender. Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
-- **Interval aktualizace podpisu (v hodinách)** : Zadejte interval, ve kterém Defender kontroluje nové soubory signatury, od 0-24. Možnosti:
+- **Sledování v reálném čase**: **Možnost Povolit** vypne kontrolu malwaru, spywaru a dalšího nežádoucího softwaru v reálném čase. **Není nakonfigurováno** (výchozí) povolí tuto funkci.
 
-  - **Není nakonfigurováno** výchozí
-  - **Nekontrolovat**: Defender nehledá nové soubory signatur.
+  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+- **Monitorování chování**: **Možnost Povolit** vypne v programu Defender kontrolu určitých známých vzorců podezřelých aktivit na zařízeních. **Není nakonfigurováno** (výchozí) umožňuje monitorování chování v programu Windows Defender.
+
+  [Defender/AllowBehaviorMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
+
+- **Systém kontroly sítě (NIS)** : NIS pomáhá chránit zařízení před zneužitím prostřednictvím sítě. Používá signatury známých slabých míst z Centra Microsoftu pro ochranu koncových bodů ke zjištění a blokování škodlivého síťového provozu.
+
+  **Nenakonfigurováno** (výchozí) tuto funkci zakáže. Uživatelům není blokováno připojení ke známým chybám zabezpečení. Pokud je nastavená možnost **Povolit**, bude zapnutá ochrana sítě a blokování sítě a uživatelé ji nemůžou vypnout. Uživatelům se zablokuje připojení ke známým chybám zabezpečení.
+
+  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+
+- **Kontrolovat všechna stahování**: **Není nakonfigurováno** (výchozí) aplikace Defender kontroluje všechny soubory stažené z Internetu. Pokud je tato funkce nastavená na hodnotu **Povolit**, je zakázaná. Proto Defender neprojde všechny stažené soubory v Internetu.
+
+  [Defender/AllowIOAVProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection)
+
+- **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**: **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat skripty, které se používají v Internet Exploreru. **Možnost Povolit** zabrání této kontrole.
+
+  [Defender/AllowScriptScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
+
+- **Přístup koncového uživatele k programu Defender**: **Blok** skryje uživatelské rozhraní programu Windows Defender před koncovými uživateli. Potlačí se také všechna oznámení v programu Windows Defender. **Není nakonfigurováno** (výchozí) umožňuje uživateli přístup k uživatelskému rozhraní programu Windows Defender. Když toto nastavení změníte, projeví se změna až při příštím restartování počítače koncovým uživatelem.
+
+  [Defender/AllowUserUIAccess CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
+
+- **Interval aktualizace Security Intelligence (v hodinách)** : Zadejte interval, ve kterém Defender kontroluje nové Security Intelligence, od 0-24. Možnosti:
+
+  - **Není nakonfigurováno** (výchozí): Zjišťovat aktualizace každých 8 hodin.
+  - **Nekontrolovat**: Defender nehledá nové aktualizace Security Intelligence.
   - **1-24**: `1` kontroluje každou hodinu, `2` kontroluje každé dvě hodiny `24` , kontroluje každý den atd.
-- **Sledovat aktivitu souborů a programů**: Umožňuje Defenderu monitorování aktivity souborů a programů v zařízení.
-- **Dny před odstraněním malwaru v karanténě**: Pokračovat v sledování vyřešeného malwaru po zadaný počet dní, abyste mohli ručně kontrolovat dříve ovlivněná zařízení. Pokud nastavíte počet dní na **0**, malware zůstane ve složce karanténa a automaticky se neodebere. Pokud je nastaveno `90`na, karanténní položky jsou uloženy po dobu 90 dnů v systému a poté odebrány.
-- **Limit využití procesoru při kontrole**: Omezte počet PROCESORů, které mohou být využívány pomocí kontroly od **1** do **100**.
-- **Kontrolovat archivní soubory**: **Možnost Povolit** zabrání programu Defender ve skenování archivovaných souborů, jako jsou soubory ZIP nebo CAB. **Není nakonfigurováno** (výchozí) umožňuje tuto kontrolu.
+  
+  [Defender/SignatureUpdateInterval CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-signatureupdateinterval)
+  
+- **Sledovat aktivitu souborů a programů**: Umožňuje Defenderu monitorování aktivity souborů a programů v zařízení. Možnosti:
+
+  - **Není nakonfigurováno** (výchozí): Monitoruje všechny soubory.
+  - **Monitorování zakázáno**
+  - **Monitorovat všechny soubory**
+  - **Monitorovat pouze příchozí soubory**
+  - **Monitorovat jenom odchozí soubory**
+
+  [Defender/RealTimeScanDirection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-realtimescandirection)
+
+- **Dny před odstraněním malwaru v karanténě**: Pokračovat v sledování vyřešeného malwaru po zadaný počet dní, abyste mohli ručně kontrolovat dříve ovlivněná zařízení. Pokud nastavíte počet dní na `0`, malware zůstane ve složce karanténa a automaticky se neodebere. Pokud je nastaveno `90`na, karanténní položky jsou uloženy po dobu 90 dnů v systému a poté odebrány.
+
+  [Defender/DaysToRetainCleanedMalware CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-daystoretaincleanedmalware)
+
+- **Limit využití procesoru při kontrole**: Omezte počet procesorů, které mohou kontroly využít, od `0` do. `100`
+- **Kontrolovat archivní soubory**: **Možnost Povolit** vypne Defender ze skenování souborů archivu, jako jsou soubory ZIP nebo CAB. **Není nakonfigurováno** (výchozí) umožňuje tuto kontrolu.
+
+  [Defender/AllowArchiveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
+
 - **Kontrolovat příchozí e-mailové zprávy**: **Povolit** umožňuje programu Defender kontrolovat e-mailové zprávy při jejich doručení do zařízení. **Není nakonfigurováno** (výchozí) zabrání v kontrole e-mailů.
+
+  [Defender/AllowEmailScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning)
+
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**: **Možnost Povolit** zabrání kompletním kontrolám vyměnitelných jednotek. **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat vyměnitelné jednotky, jako jsou USB hole.
+
+  Během rychlé kontroly mohou být vyměnitelné jednotky stále prohledávány.
+
+  [Defender/AllowFullScanRemovableDriveScanning CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanremovabledrivescanning)
+
 - **Při úplné kontrole kontrolovat namapované síťové jednotky**: **Povolit** umožňuje programu Defender kontrolovat soubory na namapovaných síťových jednotkách. **Není nakonfigurováno** (výchozí) zabrání úplnému prohledávání. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel.
+
+  Během rychlé kontroly mohou být namapované síťové jednotky stále prohledávány.
+
+  [Defender/AllowFullScanOnMappedNetworkDrives CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives)
+
 - **Kontrolovat soubory otevřené ze síťových složek**: **Není nakonfigurováno** (výchozí) umožňuje programu Defender kontrolovat soubory na sdílených síťových jednotkách, například k souborům přidaným z cesty UNC. **Možnost Povolit** zabrání této kontrole. Pokud jsou soubory na disku jen pro čtení, Defender nemůže odebrat žádný malware, který v nich našel.
+
+  [Defender/AllowScanningNetworkFiles CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+
 - **Ochrana cloudu**: **Není nakonfigurováno** (výchozí) umožňuje služba Microsoft Active Protection Service přijímat informace o aktivitě malwaru ze zařízení, která spravujete. **Povolit** blokování této funkce
+
+  [Defender/AllowCloudProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
 - **Dotázat se uživatele před odesláním vzorku**: Určuje, jestli jsou potenciálně škodlivé soubory, které by mohly vyžadovat další analýzu, automaticky odesílány společnosti Microsoft. Možnosti:
-  - **Není nakonfigurováno**
+
+  - **Není nakonfigurováno** (výchozí): Posílat bezpečné vzorky automaticky
   - **Vždycky se zeptat**
   - **Dotázat se před odesláním osobních údajů**
   - **Nikdy Neodesílat data**
-  - **Poslat všechna data bez zobrazení výzvy**: Data se odesílají automaticky
+  - **Poslat všechna data bez zobrazení výzvy**: Data se odesílají automaticky.
+
+  [Defender/SubmitSamplesConsent CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
 - **Čas, kdy se má provést rychlá denní kontrola**: Vyberte hodinu spuštění každodenní rychlé kontroly. **Není nakonfigurováno** spustí denní kontrolu. Pokud chcete více úprav, nakonfigurujte **typ kontroly systému na provádění** .
 
   [Defender/ScheduleQuickScanTime CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
 - **Typ Systémové kontroly, který se má provést**: Naplánujte kontrolu systému, včetně úrovně kontroly a dne a času, kdy se má kontrola spustit. Možnosti:
-  - Nenakonfigurováno: Neplánuje kontrolu systému na zařízení. Koncoví uživatelé můžou na svých zařízeních ručně spouštět kontroly podle potřeby nebo na jejich zařízení.
+  - **Nenakonfigurováno**: Neplánuje kontrolu systému na zařízení. Koncoví uživatelé můžou na svých zařízeních ručně spouštět kontroly podle potřeby nebo na jejich zařízení.
   - **Zakázat**: Zakáže v zařízení kontrolu systémových souborů. Tuto možnost vyberte, pokud používáte řešení antivirové ochrany, které provádí kontrolu zařízení.
   - **Rychlá kontrola**: Hledá na běžných místech, kde by mohlo být zaregistrované malware, jako jsou klíče registru a známé spouštěcí složky Windows.
     - **Naplánovaný den**: Vyberte den, kdy se má kontrola spustit.
@@ -756,12 +766,16 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
     - **Naplánovaný den**: Vyberte den, kdy se má kontrola spustit.
     - **Naplánovaný čas**: Vyberte hodinu spuštění kontroly.
 
-  Toto nastavení může být v konfliktu s **časem provedení denního nastavení rychlého prohledávání** . Některá doporučení:
-
-  - Pokud chcete spustit každodenní rychlé prověřování, nakonfigurujte **čas, kdy se má provést nastavení denního rychlého prohledávání** .
-  - Pokud chcete spustit každodenní rychlou kontrolu a úplnou kontrolu každý týden, nakonfigurujte **čas k provedení každodenní rychlé kontroly**. Nastavte **typ Systémové kontroly, který se má provést** pro úplnou kontrolu pomocí dne a času.
-  - Nekonfigurujte **dobu, kdy se má provést nastavení denní rychlé kontroly** současně s **typem kontroly systému, který má být proveden** pro **rychlé prohledání**. Tato nastavení mohou být v konfliktu a kontrola nemusí běžet.
-  - Chcete-li spustit rychlou kontrolu každé úterý v 9:00, nakonfigurujte **typ kontroly systému, který má být proveden** .
+  > [!TIP]
+  > Toto nastavení může být v konfliktu s **časem provedení denního nastavení rychlého prohledávání** . Některá doporučení:  
+  >
+  > - Pokud chcete naplánovat každodenní rychlou kontrolu a týdenní úplnou kontrolu, postupujte takto:
+  >   1. Nakonfigurujte **čas, kdy se má provést nastavení denního rychlého prohledávání** .
+  >   2. Nakonfigurujte **typ Systémové kontroly, který se má provést** , aby se prováděla úplná kontrola.
+  > 
+  > - Pokud chcete jenom jednu rychlou kontrolu denně (bez úplného prohledávání), použijte buď nastavení: **Čas, kdy se má provést denní Rychlá kontrola** nebo **typ Systémové kontroly, který se má provést**. Chcete-li například spustit rychlou kontrolu každé úterý v 9:00, nakonfigurujte **typ kontroly systému na hodnotu provést** .
+  > 
+  > - Nekonfigurujte **dobu, kdy se má provést nastavení denní rychlé kontroly** současně s **typem kontroly systému, který má být proveden** pro **rychlé prohledání**. Tato nastavení mohou být v konfliktu a kontrola nemusí běžet.
 
   [Defender/ScanParameter CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)  
   [Defender/ScheduleScanDay CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)  
@@ -774,7 +788,10 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
 
   Další informace o potenciálně nežádoucích aplikacích najdete v tématu [zjištění a blokování potenciálně nežádoucích aplikací](https://docs.microsoft.com/windows/threat-protection/windows-defender-antivirus/detect-block-potentially-unwanted-apps-windows-defender-antivirus).
 
-- **Akce zjištěných malwarových hrozeb**: Vyberte akce, které má Defender provést pro každou úroveň hrozby, kterou zjistí: nízká, střední, vysoká a závažná. Pokud to není možné, Windows Defender zvolí nejlepší možnost, abyste zajistili, že dojde k nápravě hrozby. Možnosti:
+  [Defender/PUAProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
+
+- **Akce zjištěných malwarových hrozeb**: Vyberte, jak chcete zpracovat vlákna malwaru. **Není nakonfigurováno** (výchozí) umožňuje programu Microsoft Defender zvolit nejlepší možnost. Pokud je nastavena možnost **Povolit**, vyberte akce, které má Defender provést pro každou úroveň hrozby, kterou zjistí: nízká, střední, vysoká a závažná. Možnosti:
+  
   - **Vyčistit**
   - **Karanténa**
   - **Odebrat**
@@ -782,15 +799,15 @@ Tato nastavení používají [zprostředkovatele CSP v zásadách Defenderu](htt
   - **Definováno uživatelem**
   - **Blokováno**
 
-Vyberte **OK** uložte provedené změny.
+  Pokud vaše akce není možná, pak Windows Defender zvolí nejlepší možnost, abyste zajistili, že dojde k nápravě hrozby. 
+
+  [Defender/ThreatSeverityDefaultAction CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-threatseveritydefaultaction)
 
 ### <a name="windows-defender-antivirus-exclusions"></a>Výjimky antivirové ochrany v programu Windows Defender
 
 - **Soubory a složky, které se mají vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat soubory a složky, například **C:\Cesta** nebo **%ProgramFiles%\Cesta\název_souboru.exe**. Tyto soubory a složky nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Přípony souborů, které se mají vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat přípony souborů, například **jpg** nebo **txt**. Všechny soubory s těmito příponami nejsou zahrnuté do kontrol probíhajících v reálném čase ani do plánovaných kontrol.
 - **Procesy, které se mají vyloučit z kontrol a ochrany v reálném čase**: Umožňuje do seznamu vyloučení přidat procesy typu **.exe**, **.com** nebo **.scr**. Tyto procesy nejsou zahrnuté do kontrol prováděných v reálném čase ani do plánovaných kontrol.
-
-Vyberte **OK** uložte provedené změny.
 
 ## <a name="next-steps"></a>Další postup
 
