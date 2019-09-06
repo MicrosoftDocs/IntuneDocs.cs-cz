@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf4559d03f7dfc8ec8c48242defa391b4b49e41a
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 25beef7e6593865b92e349163768ded5ce3b9e2d
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122405"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376941"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -73,7 +73,7 @@ Pokud chcete používat certifikáty PKCS s Intune, musíte mít následující 
   - Nainstalujte importovaný konektor PFX Certificate pro Microsoft Intune na vašem serveru.  
   - Chcete-li automaticky přijímat důležité aktualizace, zajistěte, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.   
 
-  Další informace o všech síťových koncových bodech, ke kterým musí konektor mít přístup, najdete v tématu [Microsoft Intune Certificate Connector](intune-endpoints.md#microsoft-intune-certificate-connector).
+  Další informace o všech síťových koncových bodech, ke kterým musí konektor mít přístup, najdete v tématu [Microsoft Intune Certificate Connector](intune-endpoints.md).
 
 - **Windows Server**:  
   Používáte Windows Server k hostování:
@@ -157,7 +157,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 5. Microsoft Intune Certificate Connector otevře kartu **registrace** . Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce.
 6. Na kartě **Rozšířené** doporučujeme ponechat vybranou možnost **Použít účet SYSTEM tohoto počítače (výchozí)** .
 7. **Použít** > **Zavřít**
-8. Vraťte se na portál Intune (**certifikační konektory** **Konfigurace** > zařízení v Intune > ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
+8. Vraťte se na portál Intune (**certifikační konektory** **Konfigurace** > zařízení v**Intune** > ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 9. Pokud máte webový proxy server ve vašem síťovém prostředí, možná budete potřebovat další konfigurace, aby konektor mohl fungovat. Další informace najdete v tématu [práce se stávajícími místními proxy servery](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-connectors-with-proxy-servers) v dokumentaci k Azure Active Directory.
 
 > [!NOTE]  
@@ -176,7 +176,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 
 5. Konektor certifikátu PFX pro Microsoft Intune se po instalaci otevře na kartě **Zápis**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce pro Azure nebo s oprávněním správce pro Intune.
 6. Okno zavřete.
-7. Vraťte se do Azure Portal (**certifikační konektory**pro**konfiguraci** > zařízení v Intune > ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
+7. Vraťte se do Azure Portal (**certifikační konektory**pro**konfiguraci** > zařízení v**Intune** > ). Po chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Váš server konektoru teď může komunikovat s Intune.
 
 ## <a name="create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 

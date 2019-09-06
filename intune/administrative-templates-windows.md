@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 8/28/2019
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,20 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 608f9045d676a756c4ee7440072040075e497605
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
+ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214332"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70376928"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
 Při správě zařízení ve vaší organizaci chcete vytvořit skupiny nastavení, které se vztahují k různým skupinám zařízení. Máte například několik skupin zařízení. Pro skupinu a chcete přiřadit konkrétní sadu nastavení. Pro GroupB chcete přiřadit jinou sadu nastavení. Potřebujete také jednoduché zobrazení nastavení, která můžete konfigurovat.
 
-Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, které řídí funkce v Microsoft Edge, Internet Exploreru, systém Microsoft Officech programech, Vzdálená plocha, OneDrivu, heslech a PIN a dalších. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
+Tuto úlohu můžete dokončit pomocí **šablony pro správu** v Microsoft Intune. Šablony pro správu obsahují stovky nastavení, která řídí funkce Microsoft Edge verze 77 a novější, Internet Explorer, systém Microsoft Office programů, Vzdálená plocha, OneDrive, hesla a PIN kódy a další. Tato nastavení umožňují správcům skupiny spravovat zásady skupiny pomocí cloudu.
 
-Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná ve Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) , která používají XML. Nastavení sady Office jsou ingestovaná a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030). Šablony Intune ale mají 100% cloudové. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
+Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Active Directory (AD). Tato nastavení jsou integrovaná ve Windows a jsou [Nastavení založená na ADMX](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies) , která používají XML. Nastavení Office a Microsoft Edge jsou ingestovaná v ADMX a používají nastavení ADMX v [souborech šablon pro správu Office](https://www.microsoft.com/download/details.aspx?id=49030) a v [souborech šablon pro správu Microsoft Edge](https://www.microsoftedgeinsider.com/enterprise). Šablony Intune ale mají 100% cloudové. Nabízí jednoduchý a přímo převedený způsob konfigurace nastavení a vyhledá požadovaná nastavení.
 
 **Šablony pro správu** jsou integrované do Intune a nevyžadují žádné vlastní nastavení, včetně použití OMA-URI. Jako součást řešení pro správu mobilních zařízení (MDM) použijte při správě zařízení s Windows 10 Tato nastavení šablony jako zastávku.
 
@@ -58,16 +58,17 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
     > [!TIP]
     > Nastavení Windows v Intune se koreluje s cestou k místní zásadě skupiny, kterou vidíte v Editor místních zásad skupiny (`gpedit`).
 
-5. Ve výchozím nastavení se v rozevíracím seznamu zobrazí **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , zobrazit pouze nastavení **Office** nebo zobrazit pouze nastavení **Microsoft Edge** :
+5. Ve výchozím nastavení se v rozevíracím seznamu zobrazí **všechny produkty**. V seznamu můžete také filtrovat nastavení tak, aby se zobrazila pouze nastavení **systému Windows** , zobrazit pouze nastavení **Office** nebo pouze zobrazit **Edge verze 77 nebo novější** :
 
     ![Vyfiltruje seznam, aby se zobrazila všechna okna nebo všechna nastavení Office v šablonách pro správu v Intune.](./media/administrative-templates-windows/administrative-templates-choose-windows-office-all-products.png)
 
     > [!NOTE]
     > Nastavení Microsoft Edge platí pro:
     >
-    > - Windows 10 RS4 a novější s nainstalovanou verzí [KB 4512509](https://support.microsoft.com/kb/4512509) .
-    > - Windows 10 RS5 a novější s nainstalovanou verzí [KB 4512534](https://support.microsoft.com/kb/4512534) .
-    > - Windows 10 19H1 a novější s nainstalovanou verzí [KB 4512941](https://support.microsoft.com/kb/4512941) .
+    > - Microsoft Edge verze 77 a novější. Pokud chcete nakonfigurovat Microsoft Edge verze 45 a starší, přečtěte si téma [Nastavení omezení pro zařízení v prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
+    > - Windows 10 RS4 a novější s nainstalovanou verzí [KB 4512509](https://support.microsoft.com/kb/4512509)
+    > - Windows 10 RS5 a novější s nainstalovanou verzí [KB 4512534](https://support.microsoft.com/kb/4512534)
+    > - Windows 10 19H1 a novější s nainstalovanou verzí [KB 4512941](https://support.microsoft.com/kb/4512941)
 
 6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 7. Vyberte **OK** uložte provedené změny.
