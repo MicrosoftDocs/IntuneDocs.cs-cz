@@ -1,26 +1,26 @@
 ---
 title: Používání ATP v programu Microsoft Defender v Microsoft Intune – Azure | Microsoft Docs
-description: Použití rozšířené ochrany před internetovými útoky v programu Microsoft Defender (Microsoft Defender ATP) s Intune, včetně nastavení a konfigurace, připojování zařízení Intune s využitím ATP a pak použití hodnocení rizik ATP zařízení se zásadami dodržování předpisů a podmíněným zařízením Intune přístup k zásadám ochrany síťových prostředků.
+description: Použijte Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) s Intune, včetně nastavení a konfigurace, registrace zařízení Intune s využitím ATP, a pak použijte hodnocení rizik ATP pro zařízení s dodržováním předpisů zařízením Intune a podmíněným nastavením. zásady přístupu pro ochranu síťových prostředků.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/26/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b148abfaeffaf02178e34c3e9abfe86f70fb529c
-ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
+ms.openlocfilehash: 0d9fe180e81c9e661954dd0986f05ac3b5e749ed
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68960653"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739192"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
@@ -101,6 +101,7 @@ Po navázání připojení k Microsoft Defender ATP obdržela Intune konfigurač
 
 Po připojení zařízení pomocí konfiguračního balíčku to nemusíte dělat znovu. Zařízení můžete připojit také pomocí [skupiny zásad nebo System Center Configuration Manageru (SCCM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
+
 ### <a name="create-the-device-configuration-profile"></a>Vytvoření profilu konfigurace zařízení
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
@@ -110,18 +111,19 @@ Po připojení zařízení pomocí konfiguračního balíčku to nemusíte děla
 5. Jako **typ profilu**vyberte **ATP Microsoft Defender (Windows 10 Desktop)** .
 6. Nakonfigurujte nastavení:
 
-   - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte připojit a přidejte konfigurační balíček do profilu. Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
+   - **Typ balíčku konfigurace klienta ATP v programu Microsoft Defender**: Vyberte připojit a přidejte konfigurační **balíček do profilu** . Výběrem možnosti **Zrušit zprovoznění** konfigurační balíček odeberete.
   
      > [!NOTE]  
-     > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune se automaticky připojí ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
+     > Pokud jste správně navázali připojení k ochraně ATP v programu Microsoft Defender, Intune **se automaticky připojí** ke konfiguračnímu profilu a nastavení **typu balíčku konfigurace klienta služby Microsoft Defender ATP** nebude k dispozici.
   
-    - **Sdílení vzorků pro všechny soubory**: **Možnost Povolit** umožňuje shromažďovat vzorky a sdílet je s Microsoft Defender atp. Pokud se například zobrazí podezřelý soubor, můžete ho odeslat do ochrany ATP v programu Microsoft Defender pro hloubkovou analýzu. Nenakonfigurováno nesdílí žádné ukázky do ochrany ATP v programu Microsoft Defender.
+    - **Sdílení vzorků pro všechny soubory**: **Možnost Povolit** umožňuje shromažďovat vzorky a sdílet je s Microsoft Defender atp. Pokud se například zobrazí podezřelý soubor, můžete ho odeslat do ochrany ATP v programu Microsoft Defender pro hloubkovou analýzu. **Nenakonfigurováno** nesdílí žádné ukázky do ochrany ATP v programu Microsoft Defender.
     - **Urychlení generování sestav telemetrie**: U zařízení, která mají vysoké riziko, toto nastavení **Povolte** , aby se do služby ATP v programu Microsoft Defender nahlásí telemetrie častěji.
 
     Připojení [počítačů s Windows 10 pomocí System Center Configuration Manager](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) obsahuje další podrobnosti o těchto nastaveních ATP v programu Microsoft Defender.
 
 7. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte profil.
 8. [Přiřaďte konfigurační profil zařízení](device-profile-assign.md) k zařízením, která chcete vyhodnotit pomocí ATP programu Microsoft Defender.  
+
 
 ## <a name="create-and-assign-the-compliance-policy"></a>Vytvoření a přiřazení zásad dodržování předpisů  
 
@@ -179,6 +181,9 @@ Dále Sledujte stav zařízení, která mají zásady dodržování předpisů A
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Dodržování předpisů zařízením** > **Dodržování zásad**.
 3. Vyhledejte v seznamu Zásady ochrany ATP v programu Microsoft Defender a podívejte se, která zařízení jsou kompatibilní nebo nekompatibilní.
+
+## <a name="view-onboarding-status"></a>Zobrazit stav zprovoznění
+Pokud chcete zobrazit stav připojování všech zařízení s Windows 10 spravovaných přes Intune, můžete přejít na **zařízení dodržování předpisů** > v**programu Microsoft Defender ATP**. Na této stránce můžete také zahájit vytváření konfiguračního profilu zařízení pro připojování více zařízení do ATP v programu Microsoft Defender.
 
 ## <a name="next-steps"></a>Další postup  
 

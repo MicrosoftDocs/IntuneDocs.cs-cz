@@ -17,17 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0316138451c6105f22c196d17c1f2ec3b1f2e375
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: 07f1a994f6ca7da83d7e98b339021997c506534d
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062933"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739266"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí Windows Autopilot  
 Windows Autopilot usnadňuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
 
-Existují čtyři typy nasazení autopilotu: [Režim samoobslužného nasazování](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pro veřejné terminály, digitální podpisy nebo sdílené zařízení, [bílá šetrnější](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo pracovníkům IT, aby předem zřídili počítač s Windows 10, aby byl plně nakonfigurovaný a připravený [pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) , umožní vám můžete snadno nasadit nejnovější verzi Windows 10 na stávající zařízení a [režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pro tradiční uživatele. 
+Existují čtyři typy nasazení autopilotu:
+- [Režim automatického nasazení](https://docs.microsoft.com/windows/deployment/windows-autopilot/self-deploying) pro veřejné terminály, digitální podpisy nebo sdílené zařízení
+- [Bílá šetrnější](https://docs.microsoft.com/windows/deployment/windows-autopilot/white-glove) umožňuje partnerům nebo PRACOVNÍKŮm IT, aby předem zřídily počítač s Windows 10, aby byl plně nakonfigurovaný a připraven pro přípravu na firemní[nasazení pro stávající zařízení](https://docs.microsoft.com/windows/deployment/windows-autopilot/existing-devices) vám umožní snadno nasadit nejnovější verzi Windows 10 na vaše stávající zařízení.
+- [Režim řízený uživatelem](https://docs.microsoft.com/windows/deployment/windows-autopilot/user-driven) pro tradiční uživatele. 
 
 
 ## <a name="prerequisites"></a>Požadavky
@@ -93,7 +96,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 4. Vyberte **Další**.
 5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte jednu z těchto dvou možností:
     - **Řízené uživatelem**: Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
-    - **Samoobslužné nasazování (Preview)** : (vyžaduje zařízení s Windows 10, verze 1809 nebo novější), která s tímto profilem nejsou přidružená k uživateli, který registruje zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele.
+    - **Samoobslužné nasazování (Preview)** : (vyžaduje zařízení s Windows 10, verze 1809 nebo novější), která s tímto profilem nejsou přidružená k uživateli, který registruje zařízení. Při registraci zařízení se nevyžadují přihlašovací údaje uživatele. Pokud k zařízení není přidružený žádný uživatel, zásady dodržování předpisů na základě uživatele se na něj nevztahují. Při použití režimu samostatného nasazení se použijí jenom zásady dodržování předpisů, které cílí na toto zařízení.
 
     ![Snímek obrazovky se stránkou OOBE](media/enrollment-autopilot/create-profile-outofbox.png)
 
@@ -125,7 +128,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
     ![Snímek obrazovky se stránkou Revize](media/enrollment-autopilot/create-profile-review.png)
 
 > [!NOTE]
-> Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupinách a pak začít proces přiřazování profilů těmto zařízením. Dokončení tohoto procesu může trvat několik minut. Před nasazením zařízení se ujistěte, že tento proces byl dokončen.  V části **registrace zařízení registrace** > zařízení s **Windows** > se můžete podívat, kde byste měli vidět změnu stavu profilu z "Nepřiřazeno" na "přiřazení" a konečně na "přiřazeno".
+> Intune bude pravidelně kontrolovat nová zařízení v přiřazených skupinách a pak začít proces přiřazování profilů těmto zařízením. Dokončení tohoto procesu může trvat několik minut. Před nasazením zařízení se ujistěte, že tento proces byl dokončen.  V části **registrace zařízení registrace** > zařízení s**Windows** > se můžete podívat **, kde byste** měli vidět změnu stavu profilu z "Nepřiřazeno" na "přiřazení" a konečně na "přiřazeno".
 
 ## <a name="edit-an-autopilot-deployment-profile"></a>Úprava profilu nasazení Autopilotu
 Po vytvoření profilu nasazení Autopilotu můžete některé části profilu nasazení upravit.   
@@ -178,7 +181,7 @@ Můžete odstranit zařízení Windows autopilot, která nejsou zaregistrovaná 
 
 1. Pokud jsou zařízení zaregistrovaná v Intune, musíte je nejdřív [Odstranit v okně Intune všechna zařízení](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. Odstraňte zařízení v Azure Active Directory zařízení v > zařízeních**Azure AD**.
+2. Odstraňte zařízení v Azure Active Directory **zařízení v** > zařízeních**Azure AD**.
 
 3. Odstraňte zařízení z Windows autopilotu na**zařízeních** **registrace** > zařízení registrace zařízení se**systémem Windows** > . Vyberte zařízení, která chcete odstranit, a pak zvolte **Odstranit**. Dokončení odstraňování zařízení Windows autopilotu může trvat několik minut.
 

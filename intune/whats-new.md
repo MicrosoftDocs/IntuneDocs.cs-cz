@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8d952194cedde9dc25ecb47e1c7af80035d23fb
-ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
+ms.openlocfilehash: 78ea485b88891680baa68bfcee1ce1641524d90b
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70302314"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739073"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,13 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+## <a name="week-of-september-2-2019"></a>Týden od 2. září 2019
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="intune-user-interface-update--tenant-status-dashboard-----5273210----"></a>Aktualizace uživatelského rozhraní Intune – řídicí panel stavu tenanta  <!-- 5273210  -->
+Uživatelské rozhraní pro řídicí panel stavu tenanta se aktualizovalo tak, aby bylo zarovnané na styly uživatelského rozhraní Azure. Další informace najdete v tématu [stav tenanta](tenant-status.md).
+
 
 ## <a name="week-of-august-26-2019"></a>Týden od 26. srpna 2019
 

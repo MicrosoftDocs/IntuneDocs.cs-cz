@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64a66fde0f501bf2e1e7f6b0cc98eddd871717b2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b2947969c1c07d595a0a5baa48be11ba7a941424
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050372"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739217"
 ---
 # <a name="data-storage-and-processing-in-intune"></a>Ukládání a zpracovávání údajů v Intune
 
@@ -41,13 +41,13 @@ Telemetrická data (protokoly služby, protokoly výkonu, chyby atd.) nezbytná 
 
 Microsoft nabízí a provozuje služby Intune v mnoha oblastech po celém světe. Intune respektuje volbu umístění úložiště pro zákaznická data provedenou správcem.
 
-Podrobnosti najdete v tématu [Kde jsou moje zákaznická data](For more information, see Microsoft Intune Where is my customer data?) Microsoft Intune.
+Další informace najdete v tématu [kde se nacházejí vaše data?](https://www.microsoft.com/trust-center/privacy/data-location)
 
 ### <a name="personal-data-retention"></a>Uchovávání osobních údajů
 
-Intune obecně uchovává osobní údaje po dobu třiceti dnů od odebrání uživatele ze správy Intune.
+Obecně platí, že Intune uchovává osobní údaje až po dobu 30 dnů od odebrání uživatele ze správy Intune.
 
-Telemetrická data shromážděná v rámci využívání služby Intune se uchovávají nejdéle třicet dní.
+Data telemetrie shromážděná jako součást využití Intune se uchovávají po dobu maximálně 30 dnů.
 
 Protokoly auditů se uchovávají až jeden rok.
 

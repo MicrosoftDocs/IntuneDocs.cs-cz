@@ -12,20 +12,20 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a5c9dea847ace51c7d6f06cfa43c44beead18f8
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 6df42d908169ab591150e88e03f2f419710c9e54
+ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373416"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739203"
 ---
-# <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru iOS v Intune
+# <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
 
 Zásady aktualizací softwaru vám umožňují vynutit, aby se na zařízení s iOSem, která jsou pod dohledem, automaticky instalovala nejnovější dostupná aktualizace operačního systému. Při konfiguraci zásad můžete přidat dny a časy, kdy nechcete, aby se na zařízení instalovala aktualizace. 
 
 Tato funkce platí pro:
 
-- s Iosem 10.3 a novějším (pod dohledem)
+- iOS 10,3 a novější (pod dohledem)
 
 Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je dostupná nějaká aktualizace a není to v zakázaném čase, zařízení stáhne a nainstaluje nejnovější aktualizaci operačního systému. Pro aktualizaci zařízení nemusí uživatel nic udělat. Zásady nebrání tomu, aby uživatel aktualizoval operační systém ručně.
 
@@ -35,40 +35,34 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
 2. Vyberte **Aktualizace softwaru** > **Aktualizovat zásady pro iOS** > **Vytvořit**.
 3. Zadejte následující nastavení:
 
-    - **Název**: Zadejte název pro vaše zásady aktualizace softwaru. Zadejte například `iOS restricted update times`.
+    - **Název**: Zadejte název pro zásady aktualizace softwaru. Zadejte například `iOS restricted update times`.
     - **Popis**: Zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-4. Vyberte **Nastavení > Konfigurace**. Zadejte následující nastavení:
+4. Vyberte **nastavení > nakonfigurovat**. Zadejte následující nastavení:
 
-    - **Vyberte časy, kdy chcete zakázat instalaci aktualizací**: Při aktualizace se neinstalují nuceně, zadejte omezený časový rámec. 
-      - Přes noc bloků nejsou podporovány a nemusí fungovat. Například nekonfigurujte zásadu s *počáteční čas* z 20: 00 a *čas ukončení* ze 6: 00.
-      - Zásadu, která začíná ve 12: 00 a končí 12: 00 je vyhodnocen jako 0 hodin a ne 24 hodin, výsledek bude bez omezení.
+    - **Vyberte časy, které zabrání instalaci aktualizací**: Zadejte omezený časový rámec v případě, že aktualizace nejsou vynuceně nainstalovány. 
+      - Bloky v noci nejsou podporované a nemusí fungovat. Například nekonfigurujte zásadu s *počátečním časem* 8 ODP a *koncovým časem* 6 dop.
+      - Zásada, která začíná v rozmezí od 12:00 do 12:00 a končí 12., se vyhodnocuje jako 0 hodin a ne za 24 hodin, což nevede k omezení.
 
-      Při nastavování omezený časový rámec, zadejte následující údaje:
+      Při nastavování časového rámce s omezením zadejte následující podrobnosti:
 
-      - **Dny**: Vyberte dny v týdnu, kdy aktualizace se neinstalují. Třeba zkontrolujte pondělí, středu a pátek, aby se zabránilo aktualizace instalovaly v tyto dny.
+      - **Dny**: Vyberte dny v týdnu, kdy nejsou nainstalovány aktualizace. Například pokud chcete zabránit tomu, aby se aktualizace nainstalovaly na tyto dny, podívejte se na pondělí, středu a pátek.
       - **Časové pásmo**: Vyberte časové pásmo.
-      - **Počáteční čas**: Zvolte čas zahájení omezený časový rámec. Zadejte například 5: 00, nenainstalují se aktualizace od 5: 00.
-      - **Čas ukončení**: Zvolte koncový čas s omezeným přístupem časový rámec. Například zadejte 1: 00, můžou aktualizace instalovat počínaje 1: 00.
+      - **Čas spuštění**: Vyberte čas spuštění omezeného časového rámce. Zadejte například 5 AM, takže aktualizace nejsou nainstalovány od 5.
+      - **Čas ukončení**: Vyberte čas ukončení časového rámce s omezeným časem. Zadejte například 1, aby bylo možné aktualizace instalovat od 1.
 
-    - **Zpoždění viditelnost aktualizací softwaru pro koncové uživatele myší bez nutnosti změn plánovaných aktualizací (dny)** : 
+    - **Zpoždění viditelnosti aktualizací softwaru u koncových uživatelů bez změny v naplánovaných aktualizacích (dny)** : 
 
-      **Toto nastavení přesunuta do [omezení zařízení](device-restrictions-ios.md#general). Odebere se z tohoto umístění na portálu**. Krátkou dobu můžete zde změnit existující zásady. Po přibližně jeden měsíc, toto nastavení se odebere z existujících zásad.
+      \* * Pokud chcete zpozdit viditelnost aktualizací softwaru po určitou dobu na zařízeních s iOS pod dohledem, nakonfigurujte prosím tato nastavení v části [omezení zařízení](device-restrictions-ios.md#general).
+     
+      > [! Významná  
+      > Zásada, která má *čas spuštění* a čas *ukončení* nastavenou na hodnotu 12, se vyhodnotí jako 0 hodin a ne za 24 hodin. Výsledkem není žádné omezení.  
 
-      Chcete-li omezit dopad, doporučujeme:
-        - Odeberte existující zásady z tohoto umístění na portálu.
-        - Vytvořte nový [zásadu omezení pro zařízení](device-restrictions-ios.md#general).
-        - Cílit na stejné uživatele jako původní zásadou.
-
-      Pokud dojde ke konfliktu, toto nastavení nemá žádný účinek *Pokud* dvě hodnoty jsou identické. Aby se zabránilo konfliktu, nezapomeňte změnit nebo odebrat existující zásady z tohoto umístění na portálu.
-      > [! [Důležité]  
-      > Zásadu, která má *počáteční čas* a *čas ukončení* nastavená na 12: 00 je vyhodnocen jako 0 hodin a ne za 24 hodin. Výsledkem je bez omezení.  
-
-5. Vyberte **OK** > **vytvořit** uložte provedené změny a vytvoříte zásadu.
+5. Kliknutím na **tlačítko OK** > **vytvořit** uložte změny a vytvořte zásadu.
 
 Profil se vytvoří a zobrazí se v seznamu zásad.
 
-Pokyny od týmu podpory Intune najdete v tématu [zpoždění viditelnost softwarových aktualizací v Intune pro zařízení pod dohledem](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
+Pokyny z týmu podpory pro Intune najdete v tématu [zpoždění viditelnosti aktualizací softwaru v Intune pro zařízení pod dohledem](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
 
 > [!NOTE]
 > Apple MDM neumožňuje vynutit, aby se aktualizace nainstalovaly na zařízení do určitého času nebo data.
@@ -84,7 +78,7 @@ Pokyny od týmu podpory Intune najdete v tématu [zpoždění viditelnost softwa
     3. Zadejte počáteční a koncový čas pro zakázané hodiny.
 
     > [!NOTE]
-    > Pokud **počáteční čas** a **čas ukončení** jsou obě sady do 12: 00, pak Intune nekontroluje omezení toho, kdy k instalaci aktualizací. To znamená, že než žádné konfigurace, které máte pro **vyberte časy Pokud chcete zakázat instalaci aktualizací** jsou ignorovány, a aktualizace můžete nainstalovat kdykoli.  
+    > Pokud je **čas spuštění** a **čas ukončení** nastavený na 12am, pak Intune nekontroluje omezení, kdy se mají aktualizace instalovat. To znamená, že všechny konfigurace, které máte k dispozici pro **dobu výběru** , se budou ignorovat a aktualizace se můžou nainstalovat kdykoli.  
 
 ## <a name="assign-the-policy-to-users"></a>Přiřazení zásad uživatelům
 
@@ -99,7 +93,7 @@ U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí
 
 ## <a name="monitor-device-installation-failures"></a>Monitorování chyb instalace na zařízeních
 <!-- 1352223 -->
-**Aktualizace softwaru** > **chyby instalace pro zařízení s Iosem** se zobrazí seznam objektů s Iosem pod dohledem zařízení zacílení pomocí zásad aktualizace, pokus o aktualizaci a nelze jej aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
+ > **Chyby při instalaci aktualizací softwaru pro zařízení s iOS** zobrazují seznam zařízení s iOS, která cílí na zásady aktualizace, se pokusily o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
 ## <a name="next-steps"></a>Další postup
 
