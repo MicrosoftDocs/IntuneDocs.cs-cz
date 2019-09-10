@@ -1,12 +1,12 @@
 ---
-title: Kurz – konfigurace Slack chcete Intune používat pro konfigurace EMM a aplikace
+title: Kurz – konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 titleSuffix: Microsoft Intune
-description: V tomto kurzu nakonfigurujete Slack chcete Intune používat pro konfigurace EMM a aplikace.
+description: V tomto kurzu nakonfigurujete časovou rezervu, která bude používat Intune pro modul EMM a konfiguraci aplikací.
 keywords: ''
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/11/2019
+ms.date: 09/09/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,152 +17,152 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e7ff4e1fd9f055268a461d1a81b8a2e31fe3d32b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 97bc1658dcd432bdd5e31c7100022959e96c3039
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548998"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70842081"
 ---
-# <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Kurz: Konfigurace Slack chcete Intune používat pro konfigurace EMM a aplikace
+# <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Návodu Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
-Slack je aplikace pro spolupráci, který vám pomůže s Microsoft Intune.   
+Časová rezerva je aplikace pro spolupráci, kterou můžete použít s Microsoft Intune.   
 
 V tomto kurzu provedete následující:
 > [!div class="checklist"]
-> - Nastavení Intune jako zprostředkovatel Enterprise Mobility Management (EMM) na vaší mřížkou Enterprise Slack. Budete moct omezit přístup k pracovním prostorům mřížky plánu na zařízení spravovaná pomocí Intune.
-> - Vytvoření zásady Konfigurace aplikací ke správě Slack EMM aplikace v Iosu a Slack aplikace pro zařízení s pracovním profilem.
-> - Vytvořte zásady dodržování předpisů nastavit podmínky Android zařízení v Intune a musí zařízení s Iosem splňovat, aby být považováno za dodržující předpisy.
+> - Nastavte Intune jako poskytovatele podnikové mobility (EMM) v podnikové mřížce s časovou rezervou. V zařízeních spravovaných přes Intune budete moct omezit přístup k pracovním prostorům plánu vaší mřížky.
+> - Vytvořte zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
+> - Vytvoření zásad dodržování předpisů pro zařízení v Intune pro nastavení podmínek, které musí zařízení s Androidem a iOS splňovat, aby se považovala za vyhovující.
 
 Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební účet](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Požadavky
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 - Azure Active Directory Premium ([bezplatná zkušební verze](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-- Předplatné služby Intune ([bezplatnou zkušební verzi](free-trial-sign-up.md))
+- Předplatné Intune ([bezplatná zkušební verze](free-trial-sign-up.md))
 
-Budete také potřebovat [Slack Enterprise mřížky](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plánu.
+Budete také potřebovat plán [podnikové mřížky s časovou rezervou](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) .
 
-## <a name="configure-your-slack-enterprise-grid-plan"></a>Konfigurace plánu Enterprise mřížky Slack
-Zapnout EMM pro váš plán Enterprise mřížky Slack podle [pokyny pro Slack](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) a [připojení služby Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) jako plánu mřížky zprostředkovatele identity (IDP).
+## <a name="configure-your-slack-enterprise-grid-plan"></a>Konfigurace plánu podnikové mřížky pro časové rezervy
+Pomocí [pokynů pro časovou rezervu](https://get.slack.help/hc/articles/115002579426-Enable-Enterprise-Mobility-Management-for-your-org#step-2:-turn-on-emm) zapněte modul EMM pro plán podnikové mřížky s časovou rezervou a [Připojte Azure Active Directory](https://docs.microsoft.com/azure/active-directory/saas-apps/slack-tutorial) jako zprostředkovatele identity (IDP) vašeho plánu.
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) jako globální správce nebo správce služby Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, z něhož jste toto předplatné vytvořili, je globálním správcem.
 
-## <a name="set-up-slack-for-emm-on-ios-devices"></a>Nastavení Slack pro EMM na zařízeních s Iosem
-Do svého tenanta Intune přidat aplikace pro iOS Slack pro EMM a vytvořte zásady Konfigurace aplikací iOS uživatelům vaší organizace pro přístup k Slack pomocí Intune jako zprostředkovatel EMM.
+## <a name="set-up-slack-for-emm-on-ios-devices"></a>Nastavení časové rezervy pro modul EMM na zařízeních s iOS
+Přidejte do tenanta Intune časovou rezervu aplikace pro systém iOS pro modul EMM a vytvořte zásadu konfigurace aplikace, která umožní uživatelům iOS vaší organizace povolit přístup k časové rezervě v Intune jako poskytovatel EMM.
 
-### <a name="add-slack-for-emm-to-intune"></a>Do Intune přidat Slack EMM
-Přidání Slack pro EMM jako spravované iOS aplikace v Intune a přiřazení uživatelé Slack. Aplikace jsou specifické pro platformu, takže budete muset přidat samostatné aplikace Intune pro Slack uživatele na zařízeních s Androidem.
-1. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**.
-2. V části Typ aplikace vyberte **Store app - iOS**.
-3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "Slack pro EMM" a vyberte aplikaci.
-4. Vyberte **informace o aplikaci** a konfigurovat všechny změny podle svých potřeb.
+### <a name="add-slack-for-emm-to-intune"></a>Přidání časové rezervy pro modul EMM do Intune
+Přidejte časovou rezervu pro modul EMM jako spravovanou aplikaci pro iOS v Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s Androidem.
+1. V Intune vyberte**aplikace** >  **klientské aplikace** > **Přidat**.
+2. V části Typ aplikace vyberte **Store app-iOS**.
+3. Vyberte **Hledat v App Storu**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
+4. Vyberte **informace o aplikaci** a podle potřeby nakonfigurujte libovolné změny.
 5. Vyberte **Přidat**.
-6. Na panelu hledání zadejte "Slack pro EMM" a vyberte aplikaci, kterou jste právě přidali.
-7. Spravovat, vyberte **přiřazení**.
-8. Vyberte **přidat skupinu**. V závislosti na tom, kdo jste se rozhodli vliv, když jste zapnuli EMM pro Slack, v části **typ přiřazení** možná budete chtít vybrat:
-    - **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
-    - **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
-9. Vyberte **zahrnutých skupin** a v části vytvořit tuto aplikaci k dispozici pro všechny uživatele vyberte **Ano**.
-10. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
+6. Na panelu hledání zadejte "časová rezerva pro modul EMM" a vyberte aplikaci, kterou jste právě přidali.
+7. V možnosti Spravovat vyberte **přiřazení**.
+8. Vyberte **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
+    - **K dispozici pro zaregistrovaná zařízení** , pokud jste zvolili "Všichni členové (včetně hostů)" nebo
+    - **K dispozici s registrací nebo bez registrace** , pokud jste vybrali "Všichni členové (kromě hostů)" nebo "volitelné".
+9. Vyberte **zahrnuté skupiny** a v části zpřístupnit tuto aplikaci všem uživatelům vyberte **Ano**.
+10. Klikněte na **OK**a pak znovu na **OK** .
 11. Klikněte na **Uložit**.
 
-### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidat zásady Konfigurace aplikací pro Slack pro EMM
-Přidáte zásady Konfigurace aplikací pro Slack pro EMM iOS. Zásady Konfigurace aplikací pro spravovaná zařízení jsou specifické pro platformu, takže budete muset přidat samostatné zásady pro Slack uživatele na zařízeních s Androidem.
-1. V Intune, vyberte **klientské aplikace** > **zásady Konfigurace aplikací** > **přidat**.
-2. Do pole Název zadejte test zásady Konfigurace aplikace Slack.
-3. V části Typ registrace zařízení, vyberte **spravovaných zařízeních**.
-4. V části platformy, vyberte **iOS**.
-5. Vyberte **přidružené aplikace**.
-6. Na panelu hledání zadejte "Slack pro EMM" a vyberte aplikaci.
-7. Klikněte na tlačítko **OK**a pak vyberte **nastavení konfigurace**. 
-    - Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
-8. Vyberte **OK**a pak vyberte **přidat**.
-9. Na panelu hledání zadejte "test zásady Konfigurace aplikace Slack" a vyberte zásadu, kterou jste právě přidali.
-10. Spravovat, vyberte **přiřazení**.
-11. V části přiřadit, vyberte **všichni uživatelé a všechna zařízení**.
+### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>Přidání zásad konfigurace aplikace pro časovou rezervu pro modul EMM
+Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
+1. V Intune vyberte **klientské aplikace** >  > **zásady konfigurace aplikace** **Přidat**.
+2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
+3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
+4. V části platforma vyberte **iOS**.
+5. Vyberte **přidružená aplikace**.
+6. Na panelu hledání zadejte "časová rezerva pro modul EMM" a vyberte aplikaci.
+7. Klikněte na **OK**a pak vyberte **nastavení konfigurace**. 
+    - Informace o konfiguračních klíčích a jejich hodnotách najdete v dokumentaci na [webové stránce appconfig časové rezervy](https://www.appconfig.org/company/slack/)na kartě Technical.
+8. Vyberte **OK**a pak vyberte **Přidat**.
+9. Na panelu hledání zadejte "test zásad konfigurace aplikace pro časovou rezervu" a vyberte zásadu, kterou jste právě přidali.
+10. V možnosti Spravovat vyberte **přiřazení**.
+11. V části přiřadit k vyberte **Všichni uživatelé a všechna zařízení**.
 12. Klikněte na **Uložit**.
 
-### <a name="optional-create-an-ios-device-compliance-policy"></a>(Volitelné) Vytvoření zásad dodržování předpisů pro zařízení iOS
-Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro účely tohoto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s iOSem. Zásady dodržování předpisů jsou specifické pro platformu, takže budete muset vytvořit samostatné zásady pro Slack uživatele na zařízeních s Androidem.
+### <a name="optional-create-an-ios-device-compliance-policy"></a>Volitelné Vytvoření zásady dodržování předpisů pro zařízení s iOS
+Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro účely tohoto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s iOSem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s Androidem.
 1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
-2. Do pole Název zadejte "testovací zásady dodržování předpisů iOS".
-3. Do pole Popis zadejte "testovací zásady dodržování předpisů iOS".
-4. V části platformy, vyberte **iOS**.
-5. Vyberte **Stav zařízení**. U zařízení s Jailbreakem, vyberte **bloku**a pak vyberte **OK**.
+2. Do název zadejte "test zásad dodržování předpisů pro iOS".
+3. V části Popis zadejte "test zásad dodržování předpisů pro iOS".
+4. V části platforma vyberte **iOS**.
+5. Vyberte **Stav zařízení**. V poli zařízení s jailbreakem vyberte **blokovat**a pak vyberte **OK**.
 6. Vyberte **zabezpečení systému** a zadejte nastavení hesla. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
-    - Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
-    - Jednoduchá hesla, vyberte **bloku**.
-    - Minimální délka hesla zadejte 4.
-    - Vyžadovaný typ hesla, zvolte **alfanumerické**.
-    - Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **okamžitě**.
-    - Pro konec platnosti hesla (dny), zadejte 41.
-    - Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
-7. Klikněte na tlačítko **OK**a pak vyberte **OK** znovu.
+    - Pro možnost vyžadovat heslo k odemknutí mobilních zařízení vyberte **vyžadovat**.
+    - V případě jednoduchých hesel vyberte **blokovat**.
+    - Pro minimální délku hesla zadejte 4.
+    - V případě požadovaného typu hesla vyberte možnost **alfanumerické**.
+    - Po maximálním počtu minut po uzamknutí obrazovky před zadáním hesla vyberte možnost **okamžitě**.
+    - Do vypršení platnosti hesla (dny) zadejte 41.
+    - Pokud chcete zabránit opakovanému použití, zadejte pro počet předchozích hesel 5.
+7. Klikněte na **OK**a pak znovu vyberte **OK** .
 8. Klikněte na možnost **Vytvořit**.
 
-## <a name="set-up-slack-on-android-work-profile-devices"></a>Nastavení na zařízení s pracovním profilem Slack
-Přidat do svého tenanta Intune aplikaci Slack spravovaný obchod Google Play a vytvořte zásady Konfigurace aplikací umožňují vaše organizace uživatelům zařízení s Androidem přístup s Intune jako zprostředkovatel EMM Slack.
+## <a name="set-up-slack-on-android-work-profile-devices"></a>Nastavení časové rezervy pro zařízení s pracovním profilem Androidu
+Přidejte do svého tenanta Intune spravovanou aplikaci Google Playovou časovou rezervu a vytvořte zásadu konfigurace aplikace, která uživatelům s Androidem umožní přístup k časové rezervě v Intune jako poskytovatel EMM.
 
-### <a name="add-slack-to-intune"></a>Do Intune přidat Slack
-Přidáte Slack spravované Google play aplikace v Intune a přiřazení Slack uživatelů. Aplikace jsou specifické pro platformu, takže budete muset přidat samostatné aplikace Intune pro Slack uživatele na zařízeních s Iosem.
-1. V Intune, vyberte **klientské aplikace** > **aplikace** > **přidat**.
-2. V části Typ aplikace vyberte **app Store – spravovaný obchod Google Play**.
-3. Vyberte **spravovaného obchodu Google Play – schválení**. Zadejte hledaný termín "Slack pro EMM" a vyberte aplikaci.
+### <a name="add-slack-to-intune"></a>Přidání časové rezervy do Intune
+Přidejte časovou rezervu jako spravovanou aplikaci Google Play do Intune a přiřaďte uživatele časové rezervy. Aplikace jsou specifické pro platformu, takže potřebujete přidat samostatnou aplikaci Intune pro uživatele časové rezervy na zařízeních s iOS.
+1. V Intune vyberte**aplikace** >  **klientské aplikace** > **Přidat**.
+2. V části Typ aplikace vyberte **Store app – spravovaná Google Play**.
+3. Vyberte **spravované Google Play-schvalovat**. Zadejte hledaný termín "časová rezerva pro modul EMM" a vyberte aplikaci.
 4. Vyberte **schválit**.
-5. Na panelu hledání zadejte "Slack" a vyberte aplikaci, kterou jste právě přidali.
-6. Spravovat, vyberte **přiřazení**.
-7. Vyberte **přidat skupinu**. V závislosti na tom, kdo jste se rozhodli vliv, když jste zapnuli EMM pro Slack, v části **typ přiřazení** možná budete chtít vybrat:
-    - **K dispozici zaregistrovaným zařízením** Pokud jste zvolili "Všechny členy (včetně hostů)" nebo
-    - **K dispozici s registrací i bez** Pokud jste zvolili "Všechny členy (s výjimkou Hosté)" nebo "Volitelné".
-8. Vyberte zahrnuté skupiny a v části vytvořit tuto aplikaci k dispozici pro všechny uživatele vyberte **Ano**.
-9. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
+5. Na panelu hledání zadejte "časová rezerva" a vyberte aplikaci, kterou jste právě přidali.
+6. V možnosti Spravovat vyberte **přiřazení**.
+7. Vyberte **Přidat skupinu**. V závislosti na tom, na koho jste se zapnuli, když zapnete modul EMM pro časovou rezervu, vyberte v části **Typ přiřazení** , který chcete vybrat:
+    - **K dispozici pro zaregistrovaná zařízení** , pokud jste zvolili "Všichni členové (včetně hostů)" nebo
+    - **K dispozici s registrací nebo bez registrace** , pokud jste vybrali "Všichni členové (kromě hostů)" nebo "volitelné".
+8. Vyberte zahrnuté skupiny a v části zpřístupnit tuto aplikaci všem uživatelům vyberte **Ano**.
+9. Klikněte na **OK**a pak znovu na **OK** .
 10. Klikněte na **Uložit**.
 
-### <a name="add-an-app-configuration-policy-for-slack"></a>Přidat zásady Konfigurace aplikací pro Slack
-Přidáte zásady Konfigurace aplikací pro Slack. Zásady Konfigurace aplikací pro spravovaná zařízení jsou specifické pro platformu, takže budete muset přidat samostatné zásady pro Slack uživatele na zařízeních s Iosem.
-1. V Intune, vyberte **klientské aplikace** > **zásady Konfigurace aplikací** > **přidat**.
-2. Do pole Název zadejte test zásady Konfigurace aplikace Slack.
-3. V části Typ registrace zařízení, vyberte **spravovaných zařízeních**.
-4. V části platformy, vyberte **Android**.
-5. Vyberte **přidružené aplikace**.
-6. Na panelu hledání zadejte "Slack" a vyberte aplikaci.
+### <a name="add-an-app-configuration-policy-for-slack"></a>Přidání zásad konfigurace aplikace pro časovou rezervu
+Přidejte zásady konfigurace aplikace pro časovou rezervu. Zásady konfigurace aplikací pro spravovaná zařízení jsou specifické pro konkrétní platformu, takže musíte přidat samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS.
+1. V Intune vyberte **klientské aplikace** >  > **zásady konfigurace aplikace** **Přidat**.
+2. Do název zadejte Test zásad konfigurace aplikace pro časovou rezervu.
+3. V části typ registrace zařízení vyberte **spravovaná zařízení**.
+4. V části platforma vyberte **Android**.
+5. Vyberte **přidružená aplikace**.
+6. Na panelu hledání zadejte "časová rezerva" a vyberte aplikaci.
 7. Vyberte **OK**a pak vyberte **nastavení konfigurace**.
-    - Informace o konfiguraci klíče a jejich hodnoty, najdete v dokumentaci na kartě "Technické" [webové stránky na Slack AppConfig](https://www.appconfig.org/company/slack/).
-8. Klikněte na tlačítko **OK**a pak vyberte **přidat**.
-9. Na panelu hledání zadejte "test zásady Konfigurace aplikace Slack" a vyberte zásadu, kterou jste právě přidali.
-10. Spravovat, vyberte **přiřazení**.
-11. V části přiřadit, vyberte **všichni uživatelé a všechna zařízení**.
+    - Informace o konfiguračních klíčích a jejich hodnotách najdete v dokumentaci na [webové stránce appconfig časové rezervy](https://www.appconfig.org/company/slack/)na kartě Technical.
+8. Klikněte na **OK**a pak vyberte **Přidat**.
+9. Na panelu hledání zadejte "test zásad konfigurace aplikace pro časovou rezervu" a vyberte zásadu, kterou jste právě přidali.
+10. V možnosti Spravovat vyberte **přiřazení**.
+11. V části přiřadit k vyberte **Všichni uživatelé a všechna zařízení**.
 12. Klikněte na **Uložit**.
 
-### <a name="optional-create-an-android-device-compliance-policy"></a>(Volitelné) Vytvoření zásad dodržování předpisů zařízení s Androidem
-Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. V tomto kurzu vytvoříme zásadu dodržování předpisů pro zařízení s Androidem. Zásady dodržování předpisů jsou specifické pro platformu, takže budete muset vytvořit samostatné zásady pro Slack uživatele na zařízeních s Iosem.
+### <a name="optional-create-an-android-device-compliance-policy"></a>Volitelné Vytvoření zásad dodržování předpisů pro zařízení s Androidem
+Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastavte podmínky, které zařízení musí splnit, než bude považováno za vyhovující. Pro tento kurz vytvoříme zásady dodržování předpisů pro zařízení s Androidem. Zásady dodržování předpisů jsou specifické pro konkrétní platformu, takže musíte vytvořit samostatnou zásadu pro uživatele časové rezervy na zařízeních s iOS.
 1. V Intune vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
-2. Do pole Název zadejte "testovací zásady dodržování předpisů pro Android".
-3. Do pole Popis zadejte "testovací zásady dodržování předpisů pro Android".
-4. V části platformy, vyberte **Androidu Enterprise**.
-5. V části Typ profilu vyberte **pracovního profilu**.
-6. Vyberte **Stav zařízení**. Vedle zařízením s Rootem, vyberte **bloku**a pak vyberte **OK**.
-7. Vyberte **zabezpečení systému** a zadejte **nastavení hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
-    - Pro vyžadovat heslo k odemknutí mobilních zařízení, vyberte **vyžadují**.
-    - Vyžadovaný typ hesla, vyberte **aspoň alfanumerické**.
-    - Minimální délka hesla zadejte 4.
-    - Maximální počet minut po uzamčení obrazovky, po před vyžádáním hesla, zvolte možnost **15 minut**.
-    - Pro konec platnosti hesla (dny), zadejte 41.
-    - Počet předchozích hesel, která znovu použít, zadejte hodnotu 5.
-8. Klikněte na tlačítko **OK**a potom klikněte na tlačítko **OK** znovu.
+2. Do název zadejte "test zásad dodržování předpisů pro Android".
+3. V části Popis zadejte "test zásad dodržování předpisů pro Android".
+4. V části platforma vyberte **Android Enterprise**.
+5. V části Typ profilu vyberte **pracovní profil**.
+6. Vyberte **Stav zařízení**. U zařízení s rootem vyberte **blokovat**a pak vyberte **OK**.
+7. Vyberte **zabezpečení systému** a zadejte **Nastavení hesla**. Pro účely tohoto kurzu vyberte následující doporučená nastavení:
+    - Pro možnost vyžadovat heslo k odemknutí mobilních zařízení vyberte **vyžadovat**.
+    - Pro požadovaný typ hesla vyberte **aspoň alfanumerické znaky**.
+    - Pro minimální délku hesla zadejte 4.
+    - Po maximálním počtu minut po uzamčení obrazovky, než se vyžaduje heslo, vyberte **15 minut**.
+    - Do vypršení platnosti hesla (dny) zadejte 41.
+    - Pokud chcete zabránit opakovanému použití, zadejte pro počet předchozích hesel 5.
+8. Klikněte na **OK**a pak znovu na **OK** .
 9. Klikněte na možnost **Vytvořit**.
 
-## <a name="launch-slack"></a>Spuštění Slack
+## <a name="launch-slack"></a>Časová rezerva spuštění
 
-Se zásadami, kterou jste právě vytvořili, všechny iOS nebo Android se pracovní profil zařízení, které se pokusí přihlásit k jednomu z vašich pracovních prostorů muset být zaregistrovaná v Intune. K otestování tohoto scénáře, zkuste Slack pro EMM na zařízení s Iosem zaregistrovaná v Intune nebo spouštění Slack na zařízení zaregistrovaná v Intune s pracovním profilu. 
+Díky zásadám, které jste právě vytvořili, se všechna zařízení pracovních profilů s iOS nebo Androidem, která se pokusí přihlásit k některému z vašich pracovních prostorů, musí být zaregistrovaná v Intune. K otestování tohoto scénáře zkuste spustit časovou rezervu pro modul EMM na zařízení s iOS zaregistrovaným v Intune nebo zapněte časovou rezervu na zaregistrovaném zařízení pracovního profilu Androidu v Intune. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 V tomto kurzu:
-- Nastavení Intune jako zprostředkovatel Enterprise Mobility Management (EMM) na vaší mřížkou Enterprise Slack. 
-- Můžete vytvořit zásady Konfigurace aplikací ke správě Slack EMM aplikace v Iosu a Slack aplikace pro zařízení s pracovním profilem.
-- Vytvoření zásady dodržování předpisů nastavit podmínky Android zařízení v Intune a musí zařízení s Iosem splňovat, aby být považováno za dodržující předpisy.
+- Intune nastavíte jako poskytovatele služby Enterprise mobility (EMM) v podnikové mřížce s časovou rezervou. 
+- Vytvořili jste zásady konfigurace aplikací pro správu časové rezervy pro aplikaci EMM v iOS a aplikaci časové rezervy pro zařízení s pracovním profilem Androidu.
+- Vytvořili jste zásady dodržování předpisů pro zařízení v Intune, abyste nastavili požadavky na zařízení s Androidem a iOS, aby se dalo považovat za vyhovující.
 
-Další informace o zásadách konfigurace aplikací najdete v tématu [zásad Konfigurace aplikací pro Microsoft Intune](app-configuration-policies-overview.md). Další informace o vytváření zásad dodržování předpisů zařízení, najdete v článku [nastavování pravidel pro zařízení a povolení přístupu k prostředkům ve vaší organizaci pomocí Intune](device-compliance-get-started.md).
+Další informace o zásadách konfigurace aplikací najdete v tématu [zásady konfigurace aplikací pro Microsoft Intune](app-configuration-policies-overview.md). Další informace o zásadách dodržování předpisů pro zařízení najdete v tématu [Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune](device-compliance-get-started.md).
