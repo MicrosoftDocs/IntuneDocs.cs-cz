@@ -4,7 +4,7 @@
 
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 
-## [Aktualizace mého hesla](password-does-not-meet-it-administrator-requirements.md)
+## [Požadavky na heslo zařízení](password-does-not-meet-it-administrator-requirements.md)
 
 ## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
 
