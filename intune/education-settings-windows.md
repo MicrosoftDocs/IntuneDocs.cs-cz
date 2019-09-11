@@ -5,29 +5,29 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 07/03/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6f4de4bd-3dde-4a8d-8e22-46c5d06c3eea
-ms.reviewer: heenamac
+ms.reviewer: kakyker
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5c78f72e7ffc580cce6cfec7237a3efe3ceb3e5
-ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
+ms.openlocfilehash: 07d3488d509339fc48eb8449b12725b757775eb5
+ms.sourcegitcommit: 98f2597eec28c6096985d5a1acae72430c2afb1a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68230105"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70877968"
 ---
 # <a name="configure-the-take-a-test-app-on-windows-10-devices-using-intune"></a>Konfigurace aplikace pořizovat test na zařízeních s Windows 10 pomocí Intune
 
-V tomto článku se dozvíte, jak se ve Microsoft Intune vzdělávání pořídit nastavení testovací aplikace, která můžete nakonfigurovat na zařízeních s Windows 10 a novějším. Pomocí této aplikace se studenti můžou přihlásit k zařízení a provést test.
+Aplikace převzít test vám umožní bezpečně spravovat online testy na zařízeních s Windows 10 vaší učebnou. Pokud chcete nastavit aplikaci pořizovat test, budete muset vytvořit profil konfigurace zařízení v Intune a nakonfigurovat nastavení zabezpečení pro vyhodnocení. Tento článek popisuje nastavení, která najdete pro aplikaci vyzkoušet si test. 
 
-Tato nastavení se přidají do konfiguračního profilu zařízení a pak se přiřadí nebo nasadí do zařízení pomocí Microsoft Intune.
+Po nakonfigurování profilu ho přiřaďte a nasaďte na své studenty. 
 
 Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovací aplikaci v Intune](education-settings-configure.md) .
 
@@ -35,21 +35,26 @@ Pokud chcete získat další informace o této funkci, [Vyzkoušejte si testovac
 
 [Vytvořit profil konfigurace zařízení](education-settings-configure.md#create-a-device-profile).
 
-## <a name="take-a-test-settings"></a>Provést nastavení testu  
+## <a name="take-a-test-settings"></a>Provést nastavení testu
+Po vytvoření profilu konfigurace zařízení, přejít na **typ profilu** a vyberte **zabezpečené hodnocení (vzdělávání)** . Najdete v něm následující nastavení aplikace, které si můžete vyzkoušet. 
+
 
 - **Typ účtu**: Vyberte způsob, jakým se uživatelé přihlásí k testu. Možnosti:
   - Účet Azure AD
   - Účet domény
   - Místní účet
+  - Účet místního hosta: K dispozici pouze na zařízeních se systémem Windows 10 verze 1903 a novějším.    
 - **Uživatelské jméno účtu**: Zadejte uživatelské jméno účtu, který se používá v aplikaci pořizovat test. Účty můžete zadat v následujícím formátu:
   - `user@contoso.com`
   - `domain\username`
   - `user@contoso.com`
   - `computerName\username`
+- **Název účtu**: Pokud chcete nastavit typ účtu místního hosta, zadejte název účtu, který se používá v aplikaci pořizovat test. Název účtu se zobrazí jako dlaždice na přihlašovací obrazovce. Studenty spustí test kliknutím na dlaždici.  
 - **Adresa URL pro vyhodnocení**: Zadejte adresu URL testu, který mají uživatelé provést. Další informace o získání adresy URL najdete v dokumentaci k [provedení testu](https://docs.microsoft.com/education/windows/take-tests-in-windows-10).
+- **Připojení tiskárny**: Vyberte **vyžadovat** , pokud chcete jenom přístup k aplikaci pořizovat test ze zařízení, která jsou připojená k tiskárně. Toto nastavení také zpřístupní tlačítko pro tisk aplikace pro test-uživatelé vyplňující. **Není nakonfigurované** , umožňuje studentům přístup k aplikaci ze zařízení, která nejsou připojená k tiskárně.  
 - **Sledování obrazovky**: Chcete-li monitorovat aktivitu obrazovky, zatímco uživatelé probíhají testy, vyberte možnost **povoleno** . **Není nakonfigurované** , znemožní vám monitorovat obrazovku během testu.
-- **Návrh textu**: Vyberte možnost **umožnit** , takže test uživatelé vyplňující může zobrazit návrhy textu. Nenakonfigurované návrhy textu bloků, zatímco uživatelé probíhají test.
+- **Návrhy textu**: Vyberte možnost **umožnit** , takže test uživatelé vyplňující může zobrazit návrhy textu. Nenakonfigurované návrhy textu bloků, zatímco uživatelé probíhají test.
 
 ## <a name="next-steps"></a>Další postup
 
-Profil se vytvoří, ale nemusí ještě nic dělat. Nezapomeňte [profil přiřadit](device-profile-assign.md)a [monitorovat jeho stav](device-profile-monitor.md).
+Nezapomeňte [profil přiřadit](device-profile-assign.md)a [monitorovat jeho stav](device-profile-monitor.md).

@@ -11,17 +11,18 @@ ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
+ROBOTS: NOINDEX
 ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d02bbac925381d66f05d51a2f2abccee5d890dec
-ms.sourcegitcommit: 393953dd2a15aff68b246d3633b47566dd43f7cc
+ms.openlocfilehash: 6df943fdc0105b0f32401b79434045811f065bef
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70815548"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864534"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -33,7 +34,7 @@ Když nové verze standardu zabezpečení MDM, předchozí seznam nastavení se 
 
 V případě, že se základní verze již nepodporuje pro použití, bude odebrána z tohoto článku.
 
-- Zobrazit nastavení, která jsou k dispozici v [aktuálním směrném plánu zabezpečení MDM](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019) 
+- Zobrazit nastavení, která jsou k dispozici v [aktuálním směrném plánu zabezpečení MDM](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019). 
 - Přečtěte si o [standardních hodnotách zabezpečení](security-baselines.md)a o tom, jak upgradovat základní verzi v profilech standardních hodnot zabezpečení.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Tisk Směrný plán zabezpečení MDM pro říjen 2018  
@@ -73,7 +74,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – automatické přehrávání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) .  
 
 - **Automatické přehrání výchozího chování při automatickém spuštění**  
-  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokud je tato možnost *povolená*, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.
+  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokudje tato možnost povolená, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.
   
   **Výchozí**: Nespouštět  
   
@@ -994,7 +995,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Možnosti: 
   - *Zvýšit úroveň bez zobrazení výzvy*: Umožňuje privilegovaným účtům provést operaci, která vyžaduje zvýšení oprávnění bez vyžadování souhlasu nebo přihlašovacích údajů. Poznámka: Tuto možnost použijte pouze v nejomezených prostředích. 
   - *Vyzvat k zadání přihlašovacích údajů na zabezpečené ploše*: Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva k zadání privilegovaného uživatelského jména a hesla na zabezpečené ploše. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s největším dostupným oprávněním uživatele. 
-  - *Vyzvat k vyjádření souhlasu s zabezpečenou plochou*: Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva na zabezpečené ploše a vybere možnost povolit nebo odepřít. Pokud uživatel vybere povolit, operace pokračuje s největším dostupným oprávněním uživatele. 
+  - *Vyzvat k vyjádření souhlasu*s zabezpečenou plochou: Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva na zabezpečené ploše a vybere možnost povolit nebo odepřít. Pokud uživatel vybere povolit, operace pokračuje s největším dostupným oprávněním uživatele. 
   - *Vyzvat k zadání přihlašovacích údajů*: Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva k zadání uživatelského jména a hesla pro správu. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s příslušným oprávněním. 
   - *Vyzvat k zadání souhlasu*: Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva k výběru možnost povolit nebo odepřít. Pokud uživatel vybere povolit, operace pokračuje s největším dostupným oprávněním uživatele.  
   - *Vyzvat k vyjádření souhlasu s binárními soubory, které nejsou v systému Windows*: Pokud operace pro aplikaci od jiného výrobce než od společnosti Microsoft vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva na zabezpečené ploše, aby bylo možné vybrat možnost povolit nebo odepřít. Pokud uživatel vybere povolit, operace pokračuje s největším dostupným oprávněním uživatele.   
@@ -1042,7 +1043,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   
 - **Vyžadovat režim schválení správce pro správce**  
   Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:   
-  - *Nenakonfigurováno*: Režim schválení správcem a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázané. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
+  - Nenakonfigurováno: Režim schválení správcem a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázané. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
   - *Ano*: Režim schválení správcem je povolený. Tato zásada musí být povolená a související nastavení zásad řízení uživatelských účtů musí být nastavené tak, aby umožňovala předdefinovaný účet správce a všechny ostatní uživatele, kteří jsou členy skupiny Administrators, ke spuštění v režimu schválení správcem.  
   
   **Výchozí**: Ano
@@ -1050,7 +1051,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Zabránit anonymnímu výčtu účtů SAM**  
   Toto nastavení zabezpečení určuje, jaká další oprávnění budou udělena anonymním připojením k počítači. Systém Windows umožňuje anonymním uživatelům provádět určité aktivity, jako je například vytváření výčtu názvů doménových účtů a síťových sdílených složek. To je užitečné, například když chce správce udělit přístup uživatelům v důvěryhodné doméně, které neudržují vzájemnou důvěryhodnost. Tato možnost zabezpečení umožňuje umístit do anonymních připojení další omezení následujícím způsobem: 
   - *Ano*: Nepovolujte výčet účtů SAM. Tato možnost nahrazuje všechny ověřené uživatele v oprávnění zabezpečení pro prostředky.
-  - *Nenakonfigurováno*: Žádná další omezení. Spoléhá se na výchozí oprávnění.  
+  - Nenakonfigurováno: Žádná další omezení. Spoléhá se na výchozí oprávnění.  
   
   **Výchozí**: Ano
   
@@ -1062,14 +1063,14 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Použít režim schválení správce**  
   Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti: 
   - *Ano*: Předdefinovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění. 
-  - *Nenakonfigurováno*: Předdefinovaný účet správce spouští všechny aplikace s úplným oprávněním správce.  
+  - Nenakonfigurováno: Předdefinovaný účet správce spouští všechny aplikace s úplným oprávněním správce.  
 
   **Výchozí**: Ano
   
 - **Povolení přístupu aplikací uživatelského rozhraní k zabezpečeným umístěním**  
   Nastavení této zásady určuje, jestli programy pro usnadnění přístupu k uživatelskému rozhraní (UIAccess nebo UIA) můžou automaticky zakázat zabezpečenou plochu pro výzvy ke zvýšení oprávnění používané standardním uživatelem. 
   - *Ano*: UIA programy, včetně vzdálené pomoci Windows, automaticky zakažte zabezpečenou plochu pro výzvy ke zvýšení oprávnění. Pokud nezakážete řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu, zobrazí se výzvy na ploše interaktivního uživatele místo zabezpečené plochy. 
-  - *Nenakonfigurováno*: Zabezpečenou plochu lze zakázat pouze uživateli interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
+  - Nenakonfigurováno: Zabezpečenou plochu lze zakázat pouze uživateli interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
 
   **Výchozí**: Ano
 
@@ -1225,7 +1226,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 - **Možnosti neověřeného klienta RPC**  
   Nastavení této zásady určuje, jak bude modul runtime serveru RPC zpracovávat neověřené klienty RPC připojující se k serverům RPC. Nastavení této zásady má vliv na všechny aplikace RPC. V prostředí domény použijte nastavení této zásady opatrně, protože může mít vliv na celou řadu funkcí, včetně samotného zpracování zásad skupiny. Vrácení změny nastavení této zásady může vyžadovat ruční zásah na každém dotčeném počítači. Nastavení této zásady by se nikdy nemělo použít na řadič domény. Pokud nastavení této zásady zakážete, bude modul runtime serveru RPC používat hodnotu "Ověřený" v klientovi Windows a hodnotu "žádné" ve verzích Windows serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady nenakonfigurujete, zůstane zakázané. Modul runtime serveru RPC se chová, jako by byl povolen s hodnotou "ověřené" používané pro klienta Windows, a s hodnotou "none" použitou pro skladové položky serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady povolíte, přesměruje modul runtime serveru RPC, aby omezil neověřené klienty RPC připojující se k serverům RPC běžícím v počítači. Klient se považuje za ověřeného klienta, pokud používá pojmenovaný kanál ke komunikaci se serverem nebo v případě, že používá zabezpečení RPC. Rozhraní RPC, která jsou výslovně vyžadovaná k přístupu neověřeným klientům, můžou být z tohoto omezení vyloučená v závislosti na zvolené hodnotě pro toto nastavení zásad.  
   - *Žádné* umožňuje všem klientům RPC připojit se k serverům RPC běžícím na počítači, na kterém je nastavení zásad použito. 
-  - Možnost *ověřeno* umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Výjimky jsou udělovány rozhraním, která je požaduje. 
+  - Možnost ověřeno umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Výjimky jsou udělovány rozhraním, která je požaduje. 
   - *Ověřování bez výjimek* umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Nejsou povoleny žádné výjimky. Poznámka: Nastavení této zásady nebude použito, dokud nedojde k restartu systému.  
 
   **Výchozí**: Ověřuje
@@ -1245,7 +1246,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
 - **Zablokovat provádění neověřených souborů**  
   Zablokuje uživateli spouštění neověřených souborů. 
-  - *Nenakonfigurováno* – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
+  - Nenakonfigurováno – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
   - *Ano* – zaměstnanci nemůžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.
 
   **Výchozí**: Ano
@@ -1425,7 +1426,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   Určuje, jestli má uživatel přístup k pracovnímu prostoru rukopisu. 
   - *Zakázáno* – přístup k pracovnímu prostoru Ink je zakázán. Tato funkce je vypnutá.
   - *Povoleno* – funkce pracovní prostor rukopisu je zapnutá, ale uživatel k ní nemá přístup nad zamykací obrazovkou.
-  - *Nenakonfigurováno* – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
+  - Nenakonfigurováno – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
 
   **Výchozí**: Enabled
  
@@ -1438,7 +1439,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   
   **Výchozí**: Enabled
  
-## <a name="next-steps"></a>Další kroky  
+## <a name="next-steps"></a>Další postup  
 
 [Zobrazit aktuální základní verzi](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)  
 [Upgrade profilů pro použití nové základní verze](security-baselines.md#change-the-baseline-version-for-a-profile)

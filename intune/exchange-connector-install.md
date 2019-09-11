@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 3bc5f8a3f0094c363a705b37b904435ef9e91781
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660949"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864490"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavení místního Exchange Connectoru Intune v Microsoft Intune
 Informace v tomto článku vám pomůžou nainstalovat a potom monitorovat konektor Exchange Active Sync On-Premises Connector pro Intune.  Pomocí místního Exchange Connectoru v Intune se [zásadami podmíněného přístupu povolíte nebo zablokujete přístup k místním poštovním schránkám Exchange](conditional-access-exchange-create.md). 
@@ -124,6 +124,9 @@ Při instalaci místního Exchange Connectoru pro Intune použijte tento postup.
    Zkontrolujte, že je na serveru Exchange pro klientský přístup nainstalovaná služba Automatická konfigurace a Webové služby systému Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
 
 6. Do pole **Heslo** zadejte heslo pro tento účet, aby měla služba Intune přístup k systému Exchange Server.
+
+   > [!NOTE]
+   > Aby připojení proběhlo úspěšně, musí být účet, který používáte pro přihlášení ke klientovi, aspoň Správce služby Intune. Bez toho se zobrazí chyba připojení s chybou: "Vzdálený server vrátil chybu: (400) chybný požadavek.
 
 7. Vyberte **Připojit**.
 

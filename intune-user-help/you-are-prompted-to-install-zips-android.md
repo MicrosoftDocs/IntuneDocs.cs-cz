@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2017
+ms.date: 09/10/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f83504e5d651d7f981fa605fc9157287bdb09a4
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: b12cb83485c25181bdcc015857c68da795676219
+ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529272"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864439"
 ---
 # <a name="install-zimperium-zips-on-your-android-device"></a>Instalace aplikace Zimperium zIPS na zařízení s Androidem
 
@@ -31,7 +31,7 @@ Pokud máte s instalací potíže, zkuste provést kroky k odstranění potíž�
 
 ## <a name="what-you-need-to-do"></a>Co je potřeba udělat:
 
-1. Tažením shora obrazovky otevřete panel oznámení a klepněte na **Požadovaná aplikace – Instalovat Skycure z Play Storu**. Tuto možnost najdete také v aplikaci Portál společnosti v části __Podrobnosti dodržování předpisů__.
+1. Přetažením dolů v horní části obrazovky otevřete panel oznámení a klepněte na **požadovaná aplikace – nainstalujte Zimperium z obchod Play**. Tuto možnost najdete také v aplikaci Portál společnosti v části __Podrobnosti dodržování předpisů__.
 
 2. Potom se přesunete na instalační stránku aplikace Zimperium zIPS v obchodě Play. Nainstalujte aplikaci Zimperium zIPS a potom klepněte na **PŘIJMOUT**, abyste umožnili aplikaci Zimperium zIPS přístup k vašemu zařízení.
 
