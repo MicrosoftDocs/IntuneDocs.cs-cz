@@ -857,8 +857,8 @@
                   href: custom-settings-windows-10.md
             - name: Základní nastavení zabezpečení
               items:
-                - name: Windows 10 – základní nastavení
-                  href: security-baseline-settings-mdm.md
+                - name: Windows 10 – základní nastavení MDM
+                  href: security-baseline-settings-mdm-all.md
                 - name: Microsoft Defender ATP – základní nastavení
                   href: security-baseline-settings-defender-atp.md
             - name: Nastavení služby Windows Update
@@ -1047,10 +1047,6 @@
               href: troubleshoot-software-updates-in-microsoft-intune.md
             - name: Běžné chyby ochrany koncového bodu
               href: troubleshoot-endpoint-protection-in-microsoft-intune.md
-        - name: Archiv základního nastavení zabezpečení
-          items:
-            - name: Zaarchivované základní nastavení zabezpečení správy mobilních zařízení
-              href: security-baseline-settings-mdm-archive.md
     - name: Příručky k implementaci scénářů
       items:
         - name: Ochrana Exchange Online
