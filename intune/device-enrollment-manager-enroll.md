@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd870a788ff5cac7e0aff47c5b8175c0bdfacff2
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: c3ec5bf1ed668f5775cf5a7c46a2c19d02eb227d
+ms.sourcegitcommit: 05139901411d14a85c2340c0ebae02d2c178a851
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427294"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70905031"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení v Intune pomocí účtu správce registrace zařízení
 
@@ -39,7 +39,7 @@ Pro uživatelské účty správce registrace zařízení a zařízení, která j
 - Aplikace VPP je možné instalovat do zařízení, pokud tato zařízení mají licence Apple VPP.
 - Zařízení, které jsou zablokovaná pro podmíněný přístup s výjimkou Windows 10 1803 +
 - Všechna zařízení zaregistrovaná pomocí účtů DEM musí být řádně licencovaná, aby je bylo možné spravovat přes Intune. Licence může být Uživatelská licence pro Intune nebo licence k zařízení v Intune.
-
+- Pokud [zaregistrujete zařízení se systémem Android Enterprise Work Profile](android-work-profile-enroll.md) pomocí účtu DEM, je k dispozici omezení 10 zařízení, která je možné zaregistrovat pro každý účet.
 
 
 ## <a name="add-a-device-enrollment-manager"></a>Přidání správce registrace zařízení

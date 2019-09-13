@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2254c1e83764e9b29ab6fb99c016edef75aad43e
-ms.sourcegitcommit: bc3450fc7f19006b500edf5b395c01559b483ea4
+ms.openlocfilehash: 9fbd74bef87de873013a7d16c6ccd5198b0d7578
+ms.sourcegitcommit: b10cd30f1d2c3472b376be877764ac2fafccc8ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68738279"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923256"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>Registrace zařízení s iOSem v Intune
 
@@ -39,7 +39,7 @@ Před povolením zařízení s iOSem proveďte následující kroky:
 
 ## <a name="user-owned-ios-devices-byod"></a>Zařízení se systémem iOS vlastněné uživatelem (BYOD)
 
-Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé můžou stáhnout aplikaci Portál společnosti z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat.
+Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení uživatelských licencí si uživatelé můžou stáhnout aplikaci Portál společnosti z App Storu a podle pokynů v aplikaci si zařízení zaregistrovat. Portál společnosti prohlášení o zásadách ochrany osobních údajů na zařízeních s iOS můžete přizpůsobit, jak je popsáno v [tématu přizpůsobení prohlášení o ochraně osobních údajů](company-portal-app.md#privacy-statement-customization)
 
 ## <a name="company-owned-ios-devices"></a>Zařízení s iOSem patřící společnosti
 U organizací, které svým uživatelům zařízení nakupují, Intune podporuje následující způsoby registrace zařízení s iOSem patřících společnosti:

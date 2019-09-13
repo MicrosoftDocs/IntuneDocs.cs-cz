@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 230f226cba70a7fc61efd236cc0fde0ca6b7fa68
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 9cf3a3735688d12e69dc297aa42ab2869c69bfc9
+ms.sourcegitcommit: 05139901411d14a85c2340c0ebae02d2c178a851
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68374931"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70904982"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -72,7 +72,7 @@ Rozšíření pro správu Intune má následující požadavky. Po splnění po�
 
 ## <a name="create-a-script-policy-and-assign-it"></a>Vytvoření zásady skriptu a její přiřazení
 
-1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973)se k Intune.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Powershellové skripty** > **Přidat**.
 
     ![Přidávání a používání skriptů PowerShellu v Microsoft Intune](./media/mgmt-extension-add-script.png)
@@ -194,7 +194,29 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
   - Pokud chcete otestovat spuštění skriptu bez Intune, spusťte skripty v účtu System pomocí [nástroje PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec) místně:
 
-    `psexec -i -s`
+    `psexec -i -s`  
+    
+  - Pokud spuštění skriptu ohlásí úspěch, ale výsledek se nekoná (například skript výše nevytvoří soubor), může být antivirovým programem AgentExecutor sandboxing. Následující skript by měl vždycky nahlásit chybu v Intune – Pokud se ohlásí úspěch, podívejte se na AgentExecutor. log a potvrďte výstup chyby. Pokud je skript spuštěný vůbec, musí se > 2.
+
+    ```powershell
+    Write-Error -Message "Forced Fail" -Category OperationStopped
+    mkdir "c:\temp" 
+    echo "Forced Fail" | out-file c:\temp\Fail.txt
+    ```
+    
+  - Pokud potřebujete zachytit chybu. Error a. Output, následující fragment kódu spustí skript přes AgentExecutor a PSx86 a ponechá protokoly za kolekcí (vzhledem k tomu, že rozšíření pro správu Intune vyčistí protokoly po spuštění):
+  
+    ```powershell
+    $scriptPath = read-host "Enter the path to the script file to execute"
+    $logFolder = read-host "Enter the path to a folder to output the logs to"
+    $outputPath = $logFolder+"\output.output"
+    $errorPath =  $logFolder+"\error.error"
+    $timeoutPath =  $logFolder+"\timeout.timeout"
+    $timeoutVal = 60000 
+    $PSFolder = "C:\Windows\SysWOW64\WindowsPowerShell\v1.0"
+    $AgentExec = "C:\Program Files (x86)\Microsoft Intune Management Extension\agentexecutor.exe"
+    &$AgentExec -powershell  $scriptPath $outputPath $errorPath $timeoutPath $timeoutVal $PSFolder 0 0
+    ```
 
 ## <a name="next-steps"></a>Další postup
 

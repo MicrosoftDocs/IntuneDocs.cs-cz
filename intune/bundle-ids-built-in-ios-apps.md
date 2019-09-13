@@ -1,7 +1,7 @@
 ---
-title: iOS sady ID prostředků pro integrované aplikace v Microsoft Intune – Azure | Dokumentace Microsoftu
+title: ID sady prostředků iOS pro integrované aplikace v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Podívejte se do seznamu ID sady prostředků pro integrované aplikace pro iOS. Pomocí těchto ID sady prostředků explicitně povolit aplikace v konfiguračních profilů zařízení a zásadami v Microsoft Intune.
+description: Podívejte se na seznam ID sady prostředků pro integrované aplikace pro iOS. Pomocí těchto ID sady prostředků explicitně povolte aplikace v konfiguračních profilech zařízení a zásadách v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,26 +15,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7ff5b411f14fef4ad294b0dd8b265680fd67df08
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 04cafd2cf69bbd42a35ade3ae180e8af8789c938
+ms.sourcegitcommit: e8d788d033be4320cd72c98c892b383e1bb77e18
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402768"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70912816"
 ---
-# <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS, která vám pomůže v Intune
+# <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS, které můžete použít v Intune
 
-Při konfiguraci funkcí na zařízeních s Iosem, můžete také přidat integrovaných aplikací na zařízeních s Iosem. Tento článek uvádí sady ID některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru. Zobrazit seznam společnosti Apple [iOS sady ID](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) (otevře web společnosti Apple).
+Když konfigurujete funkce na zařízeních s iOS, můžete taky přidat integrované aplikace na zařízení s iOS. Tento článek obsahuje seznam ID sady prostředků některých běžných integrovaných aplikací pro iOS. Pokud chcete najít ID sady prostředků jiných aplikací, obraťte se na dodavatele softwaru. Viz seznam [ID sad iOS](https://support.apple.com/guide/mdm/ios-bundle-ids-mdm90f60c1ce/web) společnosti Apple (otevře web společnosti Apple).
 
 ## <a name="bundle-ids"></a>ID sady prostředků
 
 | ID sady prostředků                   | Název aplikace     | Vydavatel |
 |-----------------------------|--------------|-----------|
-| com.apple.AppStore          | App Store    | Apple     |
+| com. Apple. Store             | App Store    | Apple     |
 | com.apple.calculator        | Kalkulačka   | Apple     |
 | com.apple.mobilecal         | Kalendář     | Apple     |
 | com.apple.camera            | Fotoaparát       | Apple     |
 | com.apple.mobiletimer       | Hodiny        | Apple     |
+| com. Apple. klipy             | Klip        | Apple     |
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
@@ -44,10 +45,10 @@ Při konfiguraci funkcí na zařízeních s Iosem, můžete také přidat integr
 | com.apple.gamecenter        | Herní centrum  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Stav       | Apple     |
-| com.apple.Home              | Domů         | Apple     |
+| com. Apple. Home              | Domů         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
 | com.apple.iMovie            | iMovie       | Apple     |
-| com.apple.itunesconnect.mobile | iTunes Connect | Apple |
+| com.apple.itunesconnect.mobile | Připojení iTunes | Apple |
 | com.apple.MobileStore       | iTunes Store | Apple     |
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
@@ -74,8 +75,8 @@ Při konfiguraci funkcí na zařízeních s Iosem, můžete také přidat integr
 | com.apple.VoiceMemos        | Diktafon   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |
 | com.apple.Bridge            | Sledování        | Apple     |
-| com.apple.weather           | Počasí      | Apple     |
+| com.apple.weather           | Počasí      | Apple     |      
 
 ## <a name="next-steps"></a>Další postup
 
-Pomocí těchto ID sady prostředků můžete nakonfigurovat [funkcí na zařízeních](ios-device-features-settings.md) a [povolení nebo zakázání některá nastavení](device-restrictions-ios.md) na zařízeních s Iosem.
+Tato ID sady prostředků použijte ke konfiguraci [funkcí zařízení](ios-device-features-settings.md) a k [Povolení nebo omezení některých nastavení](device-restrictions-ios.md) na zařízeních s iOS.

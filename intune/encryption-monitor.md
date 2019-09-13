@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: c64ea07cb87bc980d01864468d788229bfc58a5f
-ms.sourcegitcommit: a6385b8370c20a44d0869f7920d6b2866edaa5e2
+ms.openlocfilehash: 469bdc54385f943fd0c42ccfd921293970b03b64
+ms.sourcegitcommit: 05139901411d14a85c2340c0ebae02d2c178a851
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70027390"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70905047"
 ---
 # <a name="monitor-device-encryption-with-intune"></a>Monitorování šifrování zařízení pomocí Intune   
 
@@ -94,7 +94,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
 - **Shrnutí stavu profilu** – souhrn profilů, které se vztahují k tomuto zařízení. Souhrn představuje nejmenší příznivou podmínku v rámci platných profilů. Pokud například výsledkem pouze jednoho z několika použitelných profilů je chyba, zobrazí se v *souhrnu stavu profilu* *Chyba*.  
   
-  Pokud chcete zobrazit podrobnosti o stavu, přejít na**profily** **Konfigurace** > zařízení v Intune > a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.  
+  Pokud chcete zobrazit podrobnosti o stavu, přejít na**profily** **Konfigurace** > zařízení v **Intune** > a vybrat profil. Volitelně můžete vybrat možnost **stav zařízení** a pak vybrat zařízení.  
 
 - **Podrobnosti o stavu** – rozšířené informace o stavu šifrování zařízení.  
 
@@ -201,8 +201,7 @@ Intune podporuje několik možností, jak můžete otáčet a obnovovat osobní 
   1. Přihlaste se k webu *portál společnosti Intune* z libovolného zařízení.  
   2. Na portálu klikněte na **zařízení** a vyberte zařízení MacOS, které je šifrované pomocí trezoru.  
   3. Vyberte **získat obnovovací klíč**. Zobrazí se aktuální obnovovací klíč.  
-  
-     Na iPhonu musíte vybrat *tři* tečky, než se zobrazí možnost *získat obnovovací klíč* .  
+ 
 
 ## <a name="bitlocker-recovery-keys"></a>Obnovovací klíče nástroje BitLocker  
 
@@ -220,6 +219,6 @@ Pokud klíče nejsou v Azure AD, zobrazí se v Intune *pro toto zařízení nena
 
 Informace pro BitLocker se získávají pomocí [poskytovatele služby BitLocker Configuration Service Provider](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) (CSP). CSP nástroje BitLocker podporuje Windows 10 verze 1703 a novější a pro Windows 10 pro verze 1809 a novější.  
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 Vytvořte zásady [dodržování předpisů pro zařízení](compliance-policy-create-windows.md) .
