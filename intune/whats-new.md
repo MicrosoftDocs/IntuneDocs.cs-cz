@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3abf0b45abfe7567692f6bb653c7c2a1c3986546
-ms.sourcegitcommit: f5d216e1b8230045161bb10afbc33d9608782229
+ms.openlocfilehash: f5ea00f2e2631433ece3e9053b8f9ea9d9e359c8
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936662"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70986404"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -64,6 +64,10 @@ Microsoft Intune aplikace pro Android se aktualizovala s následujícími vylep�
 - Přidala se další stránka, která zobrazuje profil uživatele.
 - Do aplikace pro uživatele se přidalo zobrazování oznámení s možnou akcí, například nutnost aktualizovat nastavení zařízení.
 - Přidali jsme zobrazení vlastních nabízených oznámení a zarovnejte aplikaci s podporou, která byla nedávno přidaná v aplikaci Portál společnosti pro iOS a Android. Další informace najdete v tématu [odesílání vlastních oznámení v Intune](custom-notifications.md).
+
+#### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993---"></a>Pro zařízení s iOS si Přizpůsobte obrazovku ochrana osobních údajů procesu registrace Portál společnosti <!-- 4394993 -->
+Pomocí Markdownu můžete přizpůsobit obrazovku osobních údajů Portál společnosti, kterou koncoví uživatelé uvidí během registrace iOS. Konkrétně budete moct přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení. Další informace najdete v tématu [Konfigurace aplikace Portál společnosti Intune](company-portal-app.md#privacy-statement-customization).
+
 
 ## <a name="week-of-september-2-2019"></a>Týden od 2. září 2019
 

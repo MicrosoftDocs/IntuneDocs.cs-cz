@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b45dde2958535259206c6f99ca1c06a51b28b9d4
-ms.sourcegitcommit: 393953dd2a15aff68b246d3633b47566dd43f7cc
+ms.openlocfilehash: 845f798c246d1872080d26ec269662cec154eee2
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70816034"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70986371"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 Zobrazení nastavení základní hodnoty zabezpečení MDM, která jsou Microsoft Intune podporovaná v zařízeních se systémem Windows 10 nebo novějším. Výchozí hodnoty pro nastavení v tomto směrném plánu reprezentují doporučenou konfiguraci pro příslušná zařízení a nemusí odpovídat výchozím hodnotám z jiných standardních hodnot zabezpečení nebo z jiných verzí tohoto směrného plánu.
@@ -106,7 +106,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – App
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – automatické přehrávání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) .  
 
 - **Automatické přehrání výchozího chování při automatickém spuštění**  
-  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokud je tato možnost *povolená*, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.  
+  Toto nastavení má vliv na výchozí chování pro příkazy automatického spouštění. Příkazy automatického spuštění jsou uložené v souborech Autorun. inf a můžou spouštět instalační programy nebo jiné rutiny. Pokudje tato možnost povolená, můžou správci změnit výchozí chování při automatickém spouštění na zařízení, na kterém běží Windows Vista nebo novější. Chování může být nastaveno na: a) zcela zakázat příkazy Autorun nebo b) vrátit se zpátky k chování Pre-Windows Vista s automatickým spuštěním příkazu Autorun. Pokud je nastavené na *zakázáno* nebo *není nakonfigurováno*, zařízení se systémem Windows Vista nebo novějším vyzvat uživatele k zadání, zda má být spuštěn příkaz Autorun.  
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067133)       
   
   **Výchozí**: Nespouštět  
@@ -135,17 +135,28 @@ Další informace najdete v dokumentaci [k Windows v tématu](https://docs.micro
 
   - **Vyžadovat šifrování pro přístup pro zápis**  
     **Výchozí**: Ano  
+
 ::: zone-end
 ::: zone pivot="mdm-preview"
-    - **Metoda šifrování**  
-      **Výchozí**: 256bit CBC AES  
+
+- **Zásada pro vyměnitelné jednotky služby bit Lock**  
+  Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, budete moct nakonfigurovat šifrovací algoritmus a složitou složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky jednotlivě. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
+  [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067140) 
+
+  V případě zásad vyměnitelného disku pro službu bit Lock nakonfigurujte následující nastavení:
+
+  - **Vyžadovat šifrování pro přístup pro zápis**  
+    **Výchozí**: Ano  
+
+  - **Metoda šifrování**  
+    **Výchozí**: 256bit CBC AES  
 
 - **Zásada pro pevný disk pro nastavení bitových zámků**  
   Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
  
-   U zásad pevného disku pro pevný zámek nakonfigurujte následující nastavení: 
-   - 
-     **Výchozí**Metoda šifrování: 256bit XTS AES  
+  U zásad pevného disku pro pevný zámek nakonfigurujte následující nastavení: 
+  - 
+    **Výchozí**Metoda šifrování: 256bit XTS AES  
 
 - **Zásady systémových jednotek systému bitových zámků**  
   Toto nastavení zásad slouží k řízení metody šifrování a složitosti šifry. Hodnoty této zásady určují sílu šifry, kterou BitLocker používá k šifrování. Podniky můžou chtít řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.  
@@ -1244,7 +1255,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Úroveň ověřování**  
   Toto nastavení zabezpečení určuje, který ověřovací protokol pro ověření výzvou a odpovědí se používá pro přihlášení k síti. Tato volba ovlivňuje úroveň protokolu ověřování používaného klienty, úroveň vyjednané zabezpečení relace a úroveň ověřování, kterou tyto servery akceptují:  
   - *Posílání odpovědí LM a NTLM* – klienti používají ověřování LM a NTLM a nikdy nepoužívají zabezpečení relace NTLMv2; řadiče domény přijímají ověřování LM, NTLM a NTLM. 
-  - *Odeslat LM a NTLM-NTLMv2, pokud jsou vyjednáno* – klienti používají ověřování LM a NTLM a používají zabezpečení relace NTLMv2, pokud je server podporuje; řadiče domény přijímají ověřování LM, NTLM a NTLM. 
+  - *Odeslat LM a NTLM-NTLMv2, pokud* jsou vyjednáno – klienti používají ověřování LM a NTLM a používají zabezpečení relace NTLMv2, pokud je server podporuje; řadiče domény přijímají ověřování LM, NTLM a NTLM. 
   - *Poslat jenom odpovědi NTLM* – klienti používají jenom ověřování NTLM a používají zabezpečení relace NTLMv2, pokud je server podporuje. řadiče domény přijímají ověřování LM, NTLM a NTLM. 
   - *Poslat jenom odpovědi NTLMv2* – klienti používají jenom ověřování NTLMv2 a v případě, že ho Server podporuje, používá zabezpečení relace NTLMv2. řadiče domény přijímají ověřování LM, NTLM a NTLM. 
   - *Poslat jenom odpověď NTLMv2 Odmítat* LM – klienti používají pouze ověřování NTLMv2 a používají zabezpečení relace NTLMv2, pokud je server podporuje; řadiče domény odmítnou LM (přijmout pouze ověřování NTLM a NTLM). 
@@ -1328,7 +1339,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   
 - **Vyžadovat režim schválení správce pro správce**  
   Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:   
-  - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
+  - Nenakonfigurováno – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
   - *Ano* – režim schválení správcem je povolen. Tato zásada musí být povolená a související nastavení zásad řízení uživatelských účtů musí být nastavené tak, aby umožňovala předdefinovaný účet správce a všechny ostatní uživatele, kteří jsou členy skupiny Administrators, ke spuštění v režimu schválení správcem.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067184)  
@@ -1338,7 +1349,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Zabránit anonymnímu výčtu účtů SAM**  
   Toto nastavení zabezpečení určuje, jaká další oprávnění budou udělena anonymním připojením k počítači. Systém Windows umožňuje anonymním uživatelům provádět určité aktivity, jako je například vytváření výčtu názvů doménových účtů a síťových sdílených složek. To je užitečné, například když chce správce udělit přístup uživatelům v důvěryhodné doméně, které neudržují vzájemnou důvěryhodnost. Tato možnost zabezpečení umožňuje umístit do anonymních připojení další omezení následujícím způsobem: 
   - *Ano* – Nepovolit výčet účtů SAM. Tato možnost nahrazuje všechny ověřené uživatele v oprávnění zabezpečení pro prostředky.
-  - *Nenakonfigurováno* – žádná další omezení. Spoléhá se na výchozí oprávnění.  
+  - Nenakonfigurováno – žádná další omezení. Spoléhá se na výchozí oprávnění.  
   
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067318)  
 
@@ -1353,7 +1364,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Použít režim schválení správce**  
   Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti: 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění. 
-  - *Nenakonfigurováno* – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
+  - Nenakonfigurováno – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067186)  
 
@@ -1362,7 +1373,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
 - **Povolení přístupu aplikací uživatelského rozhraní k zabezpečeným umístěním**  
   Nastavení této zásady určuje, jestli programy pro usnadnění přístupu k uživatelskému rozhraní (UIAccess nebo UIA) můžou automaticky zakázat zabezpečenou plochu pro výzvy ke zvýšení oprávnění používané standardním uživatelem. 
   - *Ano* – UIA programy, včetně vzdálené pomoci Windows, automaticky zakažte zabezpečenou plochu pro výzvy ke zvýšení oprávnění. Pokud nezakážete řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu, zobrazí se výzvy na ploše interaktivního uživatele místo zabezpečené plochy. 
-  - *Nenakonfigurováno*: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
+  - Nenakonfigurováno: zabezpečená plocha může být zakázaná jenom uživatelem interaktivní plochy nebo zakázáním řízení uživatelských účtů: Po zobrazení výzvy ke zvýšení oprávnění přepněte na zabezpečenou plochu.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067185)  
 
@@ -1469,7 +1480,9 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – nap
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-## <a name="remote-assistance"></a>Vzdálená pomoc
+## <a name="remote-assistance"></a>Vzdálená pomoc   
+Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteAssistance](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteassistance#remoteassistance-solicitedremoteassistance) .  
+
 - **Vyžádané vzdálené pomoci**  
   Toto nastavení zásad umožňuje zapnout nebo vypnout funkci vyžádaná (požádat o) o vzdálenou pomoc na tomto počítači. 
   - *Pokud nastavení této zásady povolíte*, mohou uživatelé v tomto počítači použít e-mail nebo přenos souborů a požádat někoho o pomoc. Uživatelé můžou taky používat programy pro rychlé zasílání zpráv k povolení připojení k tomuto počítači a můžete nakonfigurovat další nastavení vzdálené pomoci. 
@@ -1579,7 +1592,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 - **Možnosti neověřeného klienta RPC**  
   Nastavení této zásady určuje, jak bude modul runtime serveru RPC zpracovávat neověřené klienty RPC připojující se k serverům RPC. Nastavení této zásady má vliv na všechny aplikace RPC. V prostředí domény použijte nastavení této zásady opatrně, protože může mít vliv na celou řadu funkcí, včetně samotného zpracování zásad skupiny. Vrácení změny nastavení této zásady může vyžadovat ruční zásah na každém dotčeném počítači. Nastavení této zásady by se nikdy nemělo použít na řadič domény. Pokud nastavení této zásady zakážete, bude modul runtime serveru RPC používat hodnotu "Ověřený" v klientovi Windows a hodnotu "žádné" ve verzích Windows serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady nenakonfigurujete, zůstane zakázané. Modul runtime serveru RPC se chová, jako by byl povolen s hodnotou "ověřené" používané pro klienta Windows, a s hodnotou "none" použitou pro skladové položky serveru, které podporují toto nastavení zásad. Pokud nastavení této zásady povolíte, přesměruje modul runtime serveru RPC, aby omezil neověřené klienty RPC připojující se k serverům RPC běžícím v počítači. Klient se považuje za ověřeného klienta, pokud používá pojmenovaný kanál ke komunikaci se serverem nebo v případě, že používá zabezpečení RPC. Rozhraní RPC, která jsou výslovně vyžadovaná k přístupu neověřeným klientům, můžou být z tohoto omezení vyloučená v závislosti na zvolené hodnotě pro toto nastavení zásad.  
   - *Žádné* umožňuje všem klientům RPC připojit se k serverům RPC běžícím na počítači, na kterém je nastavení zásad použito. 
-  - Možnost *ověřeno* umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Výjimky jsou udělovány rozhraním, která je požaduje. 
+  - Možnost ověřeno umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Výjimky jsou udělovány rozhraním, která je požaduje. 
   - *Ověřování bez výjimek* umožňuje připojit se k serverům RPC běžícím na počítači, na kterém je nastavená zásada, jenom ověřeným klientům RPC (podle definice výše). Nejsou povoleny žádné výjimky. Poznámka: Nastavení této zásady nebude použito, dokud nedojde k restartu systému.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067225)  
@@ -1600,7 +1613,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
 - **Zablokovat provádění neověřených souborů**  
   Zablokuje uživateli spouštění neověřených souborů. 
-  - *Nenakonfigurováno* – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
+  - Nenakonfigurováno – zaměstnanci můžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory. 
   - *Ano* – zaměstnanci nemůžou ignorovat upozornění filtru SmartScreen a spouštět škodlivé soubory.
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067228)  
@@ -1804,7 +1817,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 ## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender  
-Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.  
+Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.  
 
 - **Doména profilu brány firewall**  
   Určuje profily, do kterých pravidlo patří: Doména, soukromý, veřejný. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
@@ -1906,7 +1919,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   Určuje, jestli má uživatel přístup k pracovnímu prostoru rukopisu. 
   - *Zakázáno* – přístup k pracovnímu prostoru Ink je zakázán. Tato funkce je vypnutá.
   - *Povoleno* – funkce pracovní prostor rukopisu je zapnutá, ale uživatel k ní nemá přístup nad zamykací obrazovkou.
-  - *Nenakonfigurováno* – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
+  - Nenakonfigurováno – funkce pracovní prostor rukopisu je zapnutá a uživatel ji může použít nad zamykací obrazovkou.  
 
   [Víc se uč](https://go.microsoft.com/fwlink/?linkid=2067241)  
 
@@ -1930,7 +1943,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 Následující nastavení:
 - *Novinka* v této nejnovější verzi směrného plánu.
 - *Odebral* z této nejnovější základní verze, ale byly k dispozici v předchozí verzi.
-- *V některém ze způsobů, jak* se nastavení objevilo v předchozí verzi. 
+- V některém ze způsobů, jak se nastavení objevilo v předchozí verzi. 
 
 *[Nové]* [**Nad zámkem**](#above-lock):
 - **Hlasové aktivace aplikací z uzamčené obrazovky**    
@@ -1962,7 +1975,7 @@ Následující nastavení:
 - **Podpora šifrování v aplikaci Internet Explorer**  
 
 *[Opraveno]* [**Internet Explorer**](#internet-explorer):
-- **Automaticky vyzvat k stažení souborů** v Internet Exploreru internet Zone > výchozí hodnota je teď **zakázaná**. Ve verzi Preview byl tento stav nastavený na povoleno.
+- **Automaticky vyzvat k stažení souborů** v Internet Exploreru internet Zone > výchozí hodnota jeteď zakázaná. Ve verzi Preview byl tento stav nastavený na povoleno.
 
 *[Nové]* [**Vzdálená pomoc**](#remote-assistance):  
 - **Vyžádané vzdálené pomoci** 
