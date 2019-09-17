@@ -1,6 +1,6 @@
 # Uživatelská nápověda pro Intune
 
-## [Práce pomocí spravovaných zařízení](use-managed-devices-to-get-work-done.md)
+## [Co je registrace zařízení?](use-managed-devices-to-get-work-done.md)
 
 ## [Jaké informace může moje společnost vidět s Intune?](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)
 

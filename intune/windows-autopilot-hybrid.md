@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 399b0c6065c51343e4802d4e8aec29381c6dc468
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: fba9bc63a2ee9d68fdc1d6e41698435144676b2e
+ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68861852"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012482"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -106,14 +106,14 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení registrace** > zařízení s**Windows** > –**konektor Intune pro Active Directory (Preview)**  > **Přidat konektor**. 
+1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení registrace** > **Windows** > **Intune Connector pro Active Directory** > **Přidat**. 
 2. Podle pokynů stáhněte konektor.
 3. Otevřete stažený instalační soubor konektoru *ODJConnectorBootstrapper. exe*a nainstalujte konektor.
 4. Na konci instalace vyberte **Konfigurovat**.
 5. Vyberte **Přihlásit se**.
 6. Zadejte globální správce uživatele nebo přihlašovací údaje role správce Intune.  
    Uživatelský účet musí mít přiřazenou licenci Intune.
-7. V části **registrace zařízení registrace** > zařízení s**Windows registrace** > **Intune pro Active Directory (Preview)** a potvrďte, že je stav připojení **aktivní**.
+7. V části **registrace zařízení registrace** > zařízení s**Windows registrace** > **Intune pro Active Directory**a potvrďte, že je stav připojení **aktivní**.
 
 > [!NOTE]
 > Po přihlášení ke konektoru může trvat několik minut, než se objeví v [Intune](https://aka.ms/intuneportal). Zobrazuje se jenom v případě, že může úspěšně komunikovat se službou Intune.
@@ -166,12 +166,12 @@ Pokud zařízení ještě nejsou zaregistrovaná, můžete je zaregistrovat sami
 Pokud kupujete nová zařízení, můžou někteří výrobci OEM zaregistrovat tato zařízení za vás. Další informace najdete na [stránce Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Po *registraci*zařízení s autopilotem, než se zaregistrují do Intune, se zobrazí na třech místech (s názvy nastavenými na jejich sériová čísla):
-- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > zařízení se**systémem Windows** > .
+- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > **zařízení se** **systémem Windows** > .
 - Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení** > zařízení**Azure AD**.
 - Podokno **Azure AD všechna zařízení** v Azure Active Directory v Azure Portal tak, že vyberete **zařízení** > **všechna zařízení**.
 
 Po *registraci*zařízení autopilotu se zobrazí na čtyřech místech:
-- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > zařízení se**systémem Windows** > .
+- Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení registrace** > **zařízení se** **systémem Windows** > .
 - Podokno **zařízení Azure AD** v Intune v Azure Portal. Vyberte **zařízení** > zařízení**Azure AD**.
 - Podokno **všechna zařízení Azure AD** v Azure Active Directory v Azure Portal. Vyberte **zařízení** > **všechna zařízení**.
 - Podokno **všechna zařízení** v Intune v Azure Portal. Vyberte **zařízení** > **všechna zařízení**.
@@ -192,7 +192,7 @@ Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 1. Vyberte **Vybrat skupiny**.
 1. V podokně **Vybrat skupiny** vyberte skupinu zařízení a pak klikněte na **Vybrat**.
 
-Změna stavu profilu zařízení znepřiřazeného *přiřazení* a nakonec trvá přibližně 15 minut, než se přiřadí.
+Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec trvá přibližně 15 minut, *než se přiřadí.*
 
 ## <a name="optional-turn-on-the-enrollment-status-page"></a>Volitelné Zapnout stránku stavu registrace
 
@@ -210,7 +210,7 @@ Změna stavu profilu zařízení znepřiřazeného *přiřazení* a nakonec trv�
    - **Popis**: Zadejte popis profilu.
    - **Platforma**: Vyberte **Windows 10 a novější**.
    - **Typ profilu**: Vyberte možnost **připojení k doméně (Preview)** .
-1. Vyberte **Nastavení**a potom zadejte předponu **názvu počítače**, **název domény**a (volitelné) **organizační jednotku** ve [formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
+1. Vyberte **Nastavení**a potom zadejte **předponu názvu počítače**, **název domény**a (volitelné) **organizační jednotku** ve [formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
 1. Vyberte **OK** > **vytvořit**.  
     Profil se vytvoří a zobrazí se v seznamu.
 1. Pokud chcete profil přiřadit, postupujte podle kroků v části [přiřazení profilu zařízení](device-profile-assign.md#assign-a-device-profile) a přiřazení profilu ke stejné skupině, kterou používá tento krok [vytvořit skupinu zařízení](windows-autopilot-hybrid.md#create-a-device-group) .
@@ -218,7 +218,7 @@ Změna stavu profilu zařízení znepřiřazeného *přiřazení* a nakonec trv�
    
      a. Vytvořte dynamickou skupinu, která zahrnuje všechna vaše zařízení autopilotu s určitým profilem nasazení autopilotu, zadejte (Device. enrollmentProfileName-EQ "název profilu autopilotu"). 
      
-     b. Nahraďte název profilu autopilotu názvem a zobrazovaným názvem profilu vytvořeným v části [Vytvoření a přiřazení profilu nasazení](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile)autopilotu. 
+     b. Nahraďte název profilu autopilotu názvem a zobrazovaným názvem profilu vytvořeným v části [Vytvoření a přiřazení profilu nasazení autopilotu](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
      
      c. Vytvořte několik profilů nasazení autopilotu a přiřaďte toto zařízení k profilu zadanému v této dynamické skupině.
 

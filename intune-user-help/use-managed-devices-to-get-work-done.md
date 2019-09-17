@@ -1,11 +1,11 @@
 ---
-title: Práce pomocí spravovaných zařízení | Dokumentace Microsoftu
-description: Seznámíte se s principy registrace zařízení za účelem správy v Intune.
+title: Co je registrace zařízení | Microsoft Docs
+description: Seznamte se s tím, co znamená registraci zařízení pomocí aplikace Portál společnosti a Microsoft Intune.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 09/13/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,92 +18,97 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f698f03ed3c7523ef1d768d2a1361d6d1a55008
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 98fd937ee379d71874f61152d88ddc94fa5b7a09
+ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883874"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012424"
 ---
-# <a name="enroll-device-for-access-to-work-or-school-resources"></a>Registrace zařízení pro přístup k pracovním nebo školním prostředkům
-Pokud chcete své zařízení zaregistrovat a získat přístup k e-mailu a aplikacím, musíte nainstalovat aplikaci Portál společnosti Intune nebo aplikaci Microsoft Intune. Když se zaregistrujete, na vaše zařízení se aplikují základní zásady správy, které vaše organizace nakonfigurovala, jako je třeba heslo, PIN a šifrování. Jakmile nastavení zařízení vyhoví všem požadavkům vaší organizace, můžete k pracovním informacím bezpečně přistupovat prakticky odkudkoli.  
+# <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
+Pokud chcete získat přístup k pracovním nebo školním prostředkům ze svého zařízení, budete muset své zařízení zaregistrovat v aplikaci Portál společnosti Intune nebo Microsoft Intune. 
 
-Aplikace Portál společnosti a Microsoft Intune zajišťují zabezpečení zaregistrovaných zařízení tím, že zajistí, že nastavení zařízení odpovídají zásadám vaší organizace. 
+Při registraci zařízení:
 
-Aplikace Portál společnosti taky:  
-* Zachovává vaše osobní a pracovní informace oddělené.  
-* Umožňuje snadno najít a nainstalovat relevantní pracovní a školní aplikace.   
+* Vaše zařízení je zaregistrované ve vaší organizaci. Tento krok zajistí, že máte oprávnění pro přístup k e-mailu, aplikacím a Wi-Fi vaší organizaci. 
+* Zásady správy zařízení ve vaší organizaci se aplikují na vaše zařízení. Zásady můžou zahrnovat požadavky pro věci, jako jsou hesla zařízení a šifrování. Účelem těchto požadavků je zajistit, aby vaše zařízení a data vaší organizace byla zabezpečená před neoprávněným přístupem.
 
-## <a name="get-the-apps"></a>Získat aplikace
-Postup získání Portál společnosti:
+Jakmile aktualizujete nastavení zařízení tak, aby splňovalo požadavky vaší organizace, registrace se dokončí. K pracovnímu nebo školnímu účtu se můžete bezpečně přihlašovat prakticky odkudkoli.  
 
-- Nainstalujte aplikaci Portál společnosti z obchodu s aplikacemi pro konkrétní platformu. V některých případech vám vaše organizace nainstaluje Portál společnosti aplikaci.  
-- Přejděte na [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) , abyste měli přístup k aplikaci z prohlížeče.  
+Tento článek popisuje další aspekty registrace, například jak získat aplikace, podporovaná zařízení a odebrat nebo resetovat zařízení.  
 
-Pokud potřebujete použít aplikaci Microsoft Intune, vaše organizace je nainstaluje za vás.  
+## <a name="company-portal-and-microsoft-intune-app"></a>Aplikace Portál společnosti a Microsoft Intune
 
+Portál společnosti a aplikace Microsoft Intune upozorňují na zásady nebo nastavení změn, takže můžete provádět akce bez ztráty přístupu do práce nebo do školy. 
 
-## <a name="what-information-can-my-company-see-when-i-enroll"></a>Jaké informace může moje společnost vidět při registraci?
-Po registraci zařízení uvidí pracovníci podpory vaší organizace jenom informace, které jsou relevantní pro práci. Nevidí vaše osobní údaje. Pokud zaregistrujete osobní zařízení pro použití v práci, Seznamte se [přesně s tím, co se může a nedá zobrazit](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Aplikace Portál společnosti udržuje vaše osobní a pracovní informace oddělené, takže můžete zůstat produktivní a prioritní. Také zpřístupňuje pracovní a školní aplikace, takže můžete najít a nainstalovat ty, které jsou relevantní pro vaši práci.  
 
+### <a name="get-company-portal"></a>Získat Portál společnosti
+
+V některých případech bude vaše organizace na vaše zařízení instalovat Portál společnosti aplikaci za vás. Aplikace je také k dispozici pro instalaci z obchodů s aplikacemi, jako jsou Microsoft Store, App Store a Google Play Store. Pokud chcete získat přístup k aplikaci z webového prohlížeče, přihlaste se k [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980) pomocí svého pracovního nebo školního účtu.  
+
+### <a name="get-microsoft-intune-app"></a>Získat aplikaci Microsoft Intune
+
+Pokud potřebujete použít aplikaci Microsoft Intune, vaše organizace ji nainstaluje na vaše zařízení za vás.  
 
 ## <a name="whats-the-difference-between-the-apps-and-the-website"></a>Jaký je rozdíl mezi aplikacemi a webem?
 Aplikace Portál společnosti je dostupná pro zařízení s Windows 10, iOS, macOS a Androidem. Bez problémů se integruje s příslušnou platformou vašeho zařízení. Verze webu je přístupná z libovolného zařízení a nabízí stejné, univerzální prostředí bez ohledu na to, jaké zařízení používáte. 
 
-Aplikace Microsoft Intune je určena pro zařízení s Androidem vlastněná společností.  
+Aplikace Microsoft Intune je určena pro zařízení s Androidem vlastněná společností a nemá Web.  
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Jaký druh zařízení je možné zaregistrovat v Portál společnosti?
-- Zařízení Apple používající iOS (například iPhone a iPad) a macOS (například MacBook a iMac)
-- Zařízení se systémem Android
-- Zařízení s Windows
+Pomocí Portál společnosti můžete zaregistrovat následující zařízení:  
+
+- Zařízení Windows
   - Windows 10 Mobile
   - Windows 10 Desktop
   - Windows Phone 8.1
   - Windows 8.1
+- Zařízení Apple
+    - iOS
+    - macOS
+- Zařízení se systémem Android
+
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Jaký druh zařízení je možné zaregistrovat v aplikaci Microsoft Intune?  
 Můžete zaregistrovat zařízení s Androidem vlastněná společností, která vaše organizace nastavila pro použití s aplikací. Aplikace podporuje Android 6,0 a novější. 
 
-## <a name="can-you-remove-a-computer-or-device-from-the-company-portal"></a>Můžete z Portálu společnosti odebrat počítač nebo zařízení?
-Počítač nebo zařízení můžete z Portálu společnosti odebrat nebo obnovit. Mezi **odebráním** a **obnovením** je rozdíl.
+## <a name="can-you-remove-a-device-from-the-company-portal"></a>Můžete odebrat zařízení z Portál společnosti?
+Zařízení můžete ze Portál společnosti odebrat nebo resetovat. Mezi **odebráním** a **obnovením** je rozdíl.
 
-Když počítač nebo zařízení odeberete z Portál společnosti, zrušíte tím registraci zařízení v Intune. Při zrušení registrace se už z tohoto zařízení nedostanete na Portál společnosti a můžou se z něho odebrat některá firemní data. Informace o tom, jak odebrat zařízení z Portál společnosti, najdete na následujících odkazech:  
+Při odebrání zařízení Portál společnosti zruší registraci a zrušení registrace zařízení. Toto zařízení ztratí přístup k Portál společnosti. Můžete také odebrat pracovní nebo školní data. 
 
-- [Zrušení registrace zařízení s Androidem](unenroll-your-device-from-intune-android.md)
-- [Zrušení registrace zařízení s iOSem](unenroll-your-device-from-intune-ios.md)
-- [Zrušení registrace zařízení s macOS](unenroll-your-device-from-intune-macos.md)
-- [Zrušení registrace zařízení s Windows](unenroll-your-device-from-intune-windows.md)
+Při resetování zařízení se Portál společnosti pokusí obnovit výchozí tovární nastavení počítače nebo zařízení. Ze zařízení se odeberou všechna pracovní nebo školní data a veškerá osobní data. Resetování je užitečné, pokud například ztratíte vaše zařízení. Můžete ji vzdáleně obnovit z Portál společnosti webu.  
 
-Když počítač nebo zařízení resetujete, Portál společnosti se pokusí resetovat počítač nebo zařízení zpátky na výchozí nastavení výrobce. Po resetování zařízení se ze zařízení odeberou všechna firemní a osobní data. Pokud jste ztratili svoje zařízení, můžete ho také vzdáleně obnovit z Portál společnosti webu.  
-
-Informace o tom, jak resetovat zařízení, najdete v tématu [resetování zařízení na webu portál společnosti](reset-erase-your-device-cpwebsite.md).  
-
-## <a name="can-you-remove-a-computer-or-device-from-the-microsoft-intune-app"></a>Můžete počítač nebo zařízení odebrat z aplikace Microsoft Intune?
+## <a name="can-you-remove-a-device-from-the-microsoft-intune-app"></a>Můžete zařízení odebrat z aplikace Microsoft Intune?
 Ne, k dispozici není žádný způsob, jak odebrat zařízení vlastněná společností z aplikace Microsoft Intune.  
 
 ## <a name="what-if-i-cant-see-my-device-in-the-company-portal-or-microsoft-intune-app"></a>Co když mi moje zařízení nevidím v Portál společnosti nebo v aplikaci Microsoft Intune?
-Abyste zařízení viděli, musíte ho na Portál společnosti napřed přidat. Přejděte na Portál společnosti, který vám doporučil správce, a postupujte podle pokynů pro vaše zařízení. Neuvidíte taky zařízení vlastněná a spravovaná vaší společností.
+Chcete-li zobrazit zařízení v Portál společnosti, musí být nejprve zaregistrováno. Pokud po registraci stále nevidíte všechna vaše zařízení, zkuste synchronizovat nebo ověřit přístup prostřednictvím Portál společnosti. Neuvidíte zařízení vlastněná a spravovaná vaší společností.
 
-Pokud používáte aplikaci Microsoft Intune, zobrazí se jenom zařízení, které právě používáte. Jiná zaregistrovaná zařízení se v aplikaci nezobrazí.  
+V aplikaci Microsoft Intune se zobrazí pouze zařízení, které právě používáte. Jiná zaregistrovaná zařízení se v aplikaci nezobrazí.  
 
 ## <a name="where-else-can-i-go-for-help"></a>Kde jinde ještě můžu požádat o pomoc?  
-Pokud chcete řešit běžné problémy a otázky, podívejte se na tyto dokumentace pro konkrétní platformu:  
+Pokud chcete řešit běžné problémy, podívejte se na tyto dokumentace pro konkrétní platformu:  
 
 - [Řešení běžných problémů se zařízením s Androidem](check-compliance-on-your-device-android.md)  
 - [Řešení běžných problémů se zařízením s iOSem](troubleshoot-your-device-ios.md)
 - [Řešení běžných problémů se zařízením s macOS](troubleshoot-your-device-macos.md)
 - [Řešení běžných problémů se zařízením s Windows](troubleshoot-your-device-windows.md)
 
-Můžete se také obrátit na pracovníka podpory. Aplikace Portál společnosti a Microsoft Intune nabízejí stránky pro nápovědu a podporu, které uvádějí kontaktní informace a způsoby, jak ohlásit problém. Kontaktní informace jsou také k dispozici na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)vaší organizace.  
+Můžete se také obrátit na osobu podpory IT. Aplikace Portál společnosti a Microsoft Intune nabízejí stránky pro nápovědu a podporu, které uvádějí kontaktní informace a způsoby, jak ohlásit problém. Kontaktní informace jsou také k dispozici na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)vaší organizace.  
 
 ## <a name="next-steps"></a>Další postup  
 
-Získejte nápovědu od registrace, která je specifická pro platformu vašeho zařízení:  
+Pokud jste připraveni na přístup k pracovnímu nebo školnímu účtu, zaregistrujte své zařízení podle pokynů ve vaší organizaci. Podrobné pokyny k registraci můžete najít také v následujících článcích.
 
-- [Použití zařízení s Androidem](using-your-android-device-with-intune.md)
-- [Používání zařízení s iOSem](using-your-ios-device-with-intune.md)
-- [Používání zařízení s macOS](using-your-macos-device-with-intune.md)
-- [Použití zařízení s Windows](using-your-windows-device-with-intune.md)
-- [Použití webu Portál společnosti](using-the-intune-company-portal-website.md)
+* [Registrace zařízení s Windows 10](enroll-windows-10-device.md)
+* [Registrace zařízení s Androidem](enroll-device-android-company-portal.md)
+* [Registrace zařízení s pracovním profilem Androidu](enroll-device-android-work-profile.md)
+* [Registrace pomocí aplikace Microsoft Intune](enroll-device-android-microsoft-intune-app.md)
+* [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
+* [Registrace zařízení s iOSem poskytnutého vaší organizací](enroll-your-device-dep-ios.md)
+* [Registrace zařízení s macOS](enroll-your-device-in-intune-macos-cp.md)
+* [Registrace zařízení s macOS poskytnutého vaší organizací](enroll-company-device-macos.md)
 
 
