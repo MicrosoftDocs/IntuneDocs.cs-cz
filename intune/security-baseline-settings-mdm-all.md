@@ -272,8 +272,8 @@ Další informace najdete v dokumentaci [k Windows v tématu](https://docs.micro
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
--  
-  **výchozí nastavení**zabezpečení založené na virtualizaci: Povolit VBS s zabezpečeným spouštěním
+- **výchozí nastavení** **zabezpečení založené na virtualizaci** 
+  : Povolit VBS s zabezpečeným spouštěním
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
