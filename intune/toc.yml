@@ -519,6 +519,8 @@
             - name: PKCS
               href: certficates-pfx-configure.md
               displayName: ksp
+            - name: Importované certifikáty PKCS
+              href: certificates-imported-pfx-configure.md
             - name: Šifrování e-mailů pomocí S/MIME
               href: certificates-s-mime-encryption-sign.md
             - name: Používání certifikační autority třetí strany spolu s SCEP
@@ -744,6 +746,8 @@
               href: troubleshoot-certificate-connector-events.md
             - name: Řešení problémů s konektorem Exchange
               href: troubleshoot-exchange-connector.md
+        - name: Používání dokumentace Intune
+          href: use-docs.md
         - name: Získání podpory
           href: get-support.md
 - name: Reference
