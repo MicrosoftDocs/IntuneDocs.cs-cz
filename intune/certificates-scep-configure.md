@@ -15,16 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76cd6084815a9f63e653a63d36ba8265a7a0fbd6
-ms.sourcegitcommit: cf40f641af4746a1e34edd980dc6ec96fd040126
+ms.openlocfilehash: 909dba16e04b11989caa79112c5a89fbb7c52114
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122460"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061398"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune  
   
-Intune podporuje použití Simple Certificate Enrollment Protocol (SCEP) k [ověřování připojení k vašim aplikacím a podnikovým prostředkům](certificates-configure.md). SCEP používá certifikát certifikační autority (CA) k zabezpečení výměny zpráv pro žádost o podepsání certifikátu (CSR). Když vaše infrastruktura podporuje SCEP, můžete k nasazení certifikátů do zařízení použít profily certifikátů v Intune *SCEP* (typ profilu zařízení v Intune). Microsoft Intune Certificate Connector se vyžaduje pro použití profilů certifikátů SCEP s Intune při použití certifikační autority služby AD CS (Active Directory Certificate Services). Konektor není při používání certifikačních [autorit třetích stran](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)vyžadován.  
+Intune podporuje použití Simple Certificate Enrollment Protocol (SCEP) k [ověřování připojení k vašim aplikacím a podnikovým prostředkům](certificates-configure.md). SCEP používá certifikát certifikační autority (CA) k zabezpečení výměny zpráv pro žádost o podepsání certifikátu (CSR). Když vaše infrastruktura podporuje SCEP, můžete k nasazení certifikátů do zařízení použít profily certifikátů v Intune *SCEP* (typ profilu zařízení v Intune). Microsoft Intune Certificate Connector se vyžaduje pro použití profilů certifikátů SCEP s Intune při použití certifikační autority služby AD CS (Active Directory Certificate Services). Konektor není při používání [certifikačních autorit třetích stran](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)vyžadován.  
 
 Informace v tomto článku vám pomůžou při konfiguraci infrastruktury pro podporu protokolu SCEP při používání služby Active Directory Certificate Services. Po nakonfigurování infrastruktury můžete [vytvořit a nasadit profily certifikátů SCEP](certificates-profile-scep.md) pomocí Intune.  
 
@@ -147,7 +147,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
      ![Šablona, karta Vyřízení žádosti](./media/certificates-scep-configure/scep-ndes-request-handling.png) 
 
-   - **Požadavky**na vystavení:  
+   - **Požadavky na vystavení**:  
      Následující obrázek je příklad. Vaše konfigurace se může lišit.  
 
      ![Šablona, karta Požadavky na vystavování](./media/certificates-scep-configure/scep-ndes-issuance-reqs.jpg)  
@@ -287,7 +287,7 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
    ![Test NDES](./media/certificates-scep-configure/scep-ndes-url.png)
   
-   Pokud webová adresa vrátí nedostupnou **službu 503**, podívejte se do prohlížeče událostí počítače. K této chybě obvykle dochází v případě, že se fond aplikací zastavil z důvodu chybějícího [oprávnění pro účet služby NDES](#accounts).  
+   Pokud webová adresa vrátí **nedostupnou službu 503**, podívejte se do prohlížeče událostí počítače. K této chybě obvykle dochází v případě, že se fond aplikací zastavil z důvodu chybějícího [oprávnění pro účet služby NDES](#accounts).  
   
 ### <a name="install-and-bind-certificates-on-the-server-that-hosts-ndes"></a>Instalace a vázání certifikátů na serveru, který je hostitelem NDES  
 > [!TIP]  
@@ -355,7 +355,7 @@ Instalace Certificate Connectoru:
 8. Otevřete příkazový řádek, zadejte **services.msc** a stiskněte **Enter**. Pravým tlačítkem myši klikněte na **Služba konektoru Intune** > **Restartovat**.
 
 
-Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** :`http://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
+Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** :`https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
 
 > [!NOTE]  
 > Intune Certificate Connector podporuje TLS 1,2. Pokud server, který je hostitelem konektoru, podporuje protokol TLS 1,2, použije se protokol TLS 1,2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.

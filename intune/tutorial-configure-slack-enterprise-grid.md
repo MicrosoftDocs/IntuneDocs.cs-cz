@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97bc1658dcd432bdd5e31c7100022959e96c3039
-ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
+ms.openlocfilehash: 83b10bdfacbcf76b9f75b90d99e094b6854d525e
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70842081"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061661"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Návodu Konfigurace časové rezervy pro používání služby Intune pro modul EMM a konfiguraci aplikací
 
@@ -77,7 +77,6 @@ Přidejte zásady konfigurace aplikace pro časovou rezervu pro modul EMM iOS. Z
 5. Vyberte **přidružená aplikace**.
 6. Na panelu hledání zadejte "časová rezerva pro modul EMM" a vyberte aplikaci.
 7. Klikněte na **OK**a pak vyberte **nastavení konfigurace**. 
-    - Informace o konfiguračních klíčích a jejich hodnotách najdete v dokumentaci na [webové stránce appconfig časové rezervy](https://www.appconfig.org/company/slack/)na kartě Technical.
 8. Vyberte **OK**a pak vyberte **Přidat**.
 9. Na panelu hledání zadejte "test zásad konfigurace aplikace pro časovou rezervu" a vyberte zásadu, kterou jste právě přidali.
 10. V možnosti Spravovat vyberte **přiřazení**.
@@ -158,7 +157,7 @@ Nastavte zásadu dodržování předpisů zařízením s iOSem v Intune a nastav
 
 Díky zásadám, které jste právě vytvořili, se všechna zařízení pracovních profilů s iOS nebo Androidem, která se pokusí přihlásit k některému z vašich pracovních prostorů, musí být zaregistrovaná v Intune. K otestování tohoto scénáře zkuste spustit časovou rezervu pro modul EMM na zařízení s iOS zaregistrovaným v Intune nebo zapněte časovou rezervu na zaregistrovaném zařízení pracovního profilu Androidu v Intune. 
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 V tomto kurzu:
 - Intune nastavíte jako poskytovatele služby Enterprise mobility (EMM) v podnikové mřížce s časovou rezervou. 

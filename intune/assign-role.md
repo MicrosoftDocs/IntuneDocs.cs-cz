@@ -1,6 +1,6 @@
 ---
-title: Přiřazení role uživateli s Intune
-description: Zjistěte, jak přiřadit vestavěné i vlastní role uživatele v Microsoft Intune.
+title: Přiřazení role uživateli Intune
+description: Přečtěte si, jak přiřadit předdefinované nebo vlastní roli uživateli v Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -11,51 +11,51 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a22fef1c04ae52a8a4cc65eaadc1ef6fcd524c19
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0539e4d12173ba2c7ba8d3af3364daf69ddbbf34
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043600"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071532"
 ---
-# <a name="assign-a-role-to-an-intune-user"></a>Přiřazení role uživateli s Intune
+# <a name="assign-a-role-to-an-intune-user"></a>Přiřazení role uživateli Intune
 
-Můžete přiřadit [integrované](role-based-access-control.md#built-in-roles) nebo [vlastní](create-custom-role.md) role pro uživatele Intune.
+Uživateli Intune můžete přiřadit [integrovanou](role-based-access-control.md#built-in-roles) nebo [vlastní](create-custom-role.md) roli.
 
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
 - **Správce služby Intune**
 
-Úplný seznam oprávnění pro každou předdefinovaná role, najdete v článku [Intune RBAC tabulky](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+Úplný seznam oprávnění pro jednotlivé předdefinované role najdete v [tabulce RBAC služby Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
 2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
 
-3. Na **Intune** okně zvolte **role** > **všechny role**.
+3. V okně **Intune** vyberte **role** > **všechny role**.
 
-4. Na **role Intune – všechny role** okně zvolte předdefinovanou roli, kterou chcete přiřadit.
+4. V okně **role Intune – všechny role** vyberte předdefinovanou roli, kterou chcete přiřadit.
 
-5. Na <*název role*>- **přehled** okně zvolte **spravovat** > **přiřazení**.
+5. V okně <*název role*> – **Přehled** vyberte **Spravovat** > **přiřazení**.
 
 6. V okně vlastní role zvolte **Přiřadit**.
 
-7. Na **přiřazení rolí** okno, zadejte **název přiřazení** a volitelné **popis přiřazení** přiřazení.
+7. V okně **přiřazení rolí** zadejte **název přiřazení** a nepovinný **Popis přiřazení** .
 
-8. Pro **členy (skupiny)**, zvolte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
+8. U **členů (skupin)** vyberte skupinu, která obsahuje uživatele, kterému chcete udělit oprávnění.
 
-9. Pro **rozsah (skupiny)**, zvolte skupinu obsahující uživatele nebo zařízení, které člen výše bude moct spravovat.
+9. V poli **rozsah (skupiny)** vyberte skupinu obsahující uživatele nebo zařízení, které bude člen výše moci spravovat.
 
-10. Pro **obor (značky)**, zvolte značky, kde se budou aplikovat toto přiřazení role.
+10. V **oblasti rozsah (značky)** vyberte značky, ve kterých se bude toto přiřazení role použít.
 
 11. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
 
 ## <a name="next-steps"></a>Další postup
-- [Další informace o řízení přístupu na základě rolí v Intune](role-based-access-control.md)
-- [Vytvořit vlastní roli](create-custom-role.md)
+- [Další informace o řízení přístupu na základě role v Intune](role-based-access-control.md)
+- [Vytvoření vlastní role](create-custom-role.md)

@@ -8,19 +8,19 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3b81525034f69b43abeb60f562e4d6ee6a46b866
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e44bbf9396cd2aff3f2b2b134c72eb871f719a91
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511784"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080117"
 ---
-# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý start: Nastavení automatické registrace pro zařízení s Windows 10
+# <a name="quickstart-set-up-automatic-enrollment-for-windows-10-devices"></a>Rychlý Start Nastavení automatického zápisu pro zařízení s Windows 10
 
 V tomto rychlém startu nastavíte v Microsoft Intune automatickou registraci zařízení, když se konkrétní uživatelé přihlásí k zařízením s Windows 10.
 
@@ -39,7 +39,7 @@ Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce n
 
 V tomto příkladu použijete registraci MDM, aby byla možná automatická registrace firemních zařízení i vlastních zařízení uživatelů. Zaregistrujete si bezplatné předplatné Azure Active Directory verze Premium.
 
-1. V Azure zvolte **Azure Active Directory** > **Mobilita (MDM a MAM)**.
+1. V Azure zvolte **Azure Active Directory** > **Mobilita (MDM a MAM)** .
 2. Vyberte možnost **Abyste mohli použít tuto funkci, získejte bezplatnou zkušební verzi Premium**. Její výběr vám umožní automatickou registraci pomocí bezplatné zkušební verze Premium služby Azure Active Directory. 
 
     ![Výběr bezplatné zkušební verze Premium služby Azure Active Directory](media/quickstart-setup-auto-enrollment/quickstart-setup-auto-enrollment-01.png)
@@ -76,4 +76,4 @@ V tomto rychlém startu jste se naučili, jak nastavit automatickou registraci z
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Registrace zařízení s Windows 10](quickstart-enroll-windows-device.md)
+> [Rychlý Start Registrace zařízení s Windows 10](quickstart-enroll-windows-device.md)

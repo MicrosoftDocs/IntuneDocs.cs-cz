@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8cf55084951c3a423b79e4588f8814b5e73ce8e8
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: a038f55f6dbdd894742a8712c878e77557a77210
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063028"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061541"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -44,7 +44,7 @@ S využitím těchto nastavení můžete explicitně vymazat podniková data ze 
 8. Ve sloupci **Akce** vyberte akci, která se má provést, pokud uživatelé nesplňují požadavky. V některých případech lze pro jedno nastavení nakonfigurovat více akcí. Další informace najdete v tématu [Vytvoření a přiřazení zásad ochrany aplikací](app-protection-policies.md).
 
 >[!NOTE]
-> Pokud chcete použít nastavení **Modely zařízení nebo Výrobci zařízení**, zadejte seznam identifikátorů modelů s hodnotami oddělenými středníkem. Do seznamů s více hodnotami nevkládejte mezery. U těchto hodnot se nerozlišují velká a malá písmena. 
+> Pokud chcete použít nastavení **modelů zařízení nebo** výrobců zařízení, zadejte středníkem oddělený seznam identifikátorů modelů zařízení (iOS) nebo výrobců zařízení (Android). Do seznamů s více hodnotami nevkládejte mezery. U těchto hodnot se nerozlišují velká a malá písmena. 
 
 ## <a name="policy-settings"></a>Nastavení zásad 
 

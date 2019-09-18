@@ -1,7 +1,7 @@
 ---
-title: Najdete primární uživatele zařízení v Microsoft Intune.
+title: Najde primárního uživatele Microsoft Intune zařízení.
 titleSuffix: ''
-description: Najdete primární uživatele (nebo spřažení zařízení a uživatele) zařízení s Intune.
+description: Najděte primárního uživatele (nebo spřažení uživatelského zařízení) zařízení Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -16,62 +16,62 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
-ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
+ms.openlocfilehash: e7c0947438b42f4a2fa5ccae8e9cab07a60167ae
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500639"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071687"
 ---
-# <a name="find-the-primary-user-of-an-intune-device"></a>Najít primární uživatele zařízení s Intune
+# <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
 
-Primární uživatel, označované také jako spřažení uživatelských zařízení, je vlastnost každého zařízení v Intune. Zařízení s Intune může mít žádnou nebo jednu primární uživatele, které jsou přiřazeny k němu. Pokud neexistuje žádný primární uživatel přiřazen, zařízení se označuje jako "Sdílených zařízení".
+Primární uživatel, označovaný také jako spřažení uživatelských zařízení, je vlastnost každého zařízení Intune. K zařízení Intune může být přiřazený žádný nebo jeden primární uživatel. Když není přiřazený žádný primární uživatel, zařízení se označuje jako "sdílené zařízení".
 
-## <a name="how-to-find-a-devices-primary-user"></a>Jak najít primární uživatele zařízení
+## <a name="how-to-find-a-devices-primary-user"></a>Jak najít primárního uživatele zařízení
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Zvolte **zařízení** > zvolte zařízení.
-3. Na **přehled** zvolte **zobrazit další** a zobrazí se vám primárního uživatele uvedené.
+2. Vyberte **zařízení** > zvolit zařízení.
+3. Na stránce **Přehled** klikněte na možnost **Zobrazit další** a zobrazí se v seznamu primární uživatel.
 
-## <a name="what-is-the-primary-user"></a>Co je primárním uživatelem?
-Vlastnost primárního uživatele se používá k mapování licencovaného uživatele Intune se svými zařízeními v:
-- Aplikace portál společnosti
-- Koncový uživatel webu
-- IT pro prostředí, jako je řešení potíží s stránky na webu Azure Portal. Tyto stránky Mapování uživatelských účtů na zařízení s využitím primárního uživatele.    
+## <a name="what-is-the-primary-user"></a>Co je primární uživatel?
+Vlastnost primární uživatel slouží k mapování licencovaného uživatele Intune na jejich zařízení v nástroji:
+- Aplikace Portál společnosti
+- Web koncového uživatele
+- Prostředí pro IT specialisty, jako jsou například stránky pro řešení potíží v Azure Portal. Tyto stránky mapují uživatelské účty na zařízení pomocí primárního uživatele.    
 
 ### <a name="company-portal-app"></a>Aplikace Portál společnosti
-Aplikace portál společnosti očekává, že uživatelský účet, přihlášení k portálu společnosti je primárními uživateli tohoto zařízení. Pokud se jiný uživatel byl přiřazen jako primární uživatele na portálu společnosti se zobrazí upozornění:
+Aplikace Portál společnosti očekává, že uživatelský účet, který se přihlásil do Portál společnosti, je primárním uživatelem tohoto zařízení. Pokud byl k primárnímu uživateli přiřazen jiný uživatel, Portál společnosti zobrazí upozornění:
 
-"Toto zařízení je už přiřazený k někdo ve vaší organizaci. Kontaktujte firemní podporu o tom, jak primární zařízení uživatele. Můžete dál používat portál společnosti ale funkce budou omezené."
+"Toto zařízení je už přiřazené někomu ve vaší organizaci. Obraťte se na firemní podporu, která se stane primárním uživatelem zařízení. Můžete dál používat Portál společnosti, ale funkce budou omezené. "
 
-Pokud zařízení s Intune bez primárního uživatele přiřazeny, pak na aplikaci portál společnosti rozpozná jako sdílená zařízení. Sdílená zařízení jsou vizuálně identifikovat s popiskem "sdílené" povolí, na dlaždici dodržování. V tomto režimu portál společnosti stále umožňuje vyžádat a instalovat dostupné aplikace. Samoobslužné služby akce (obnovení a přejmenování nebo vyřazení z provozu) však nejsou k dispozici.  
+Pokud zařízení Intune nemá přiřazeného primárního uživatele, aplikace Portál společnosti ji detekuje jako sdílené zařízení. Sdílená zařízení jsou vizuálně identifikovatelná pomocí popisku "Shared", který se zobrazuje na dlaždici zařízení. V tomto režimu můžete Portál společnosti i nadále používat k vyžádání a instalaci dostupných aplikací. Akce samoobslužné služby (resetování/přejmenování/vyřazení) nejsou ale k dispozici.  
 
-Zobrazí v aplikaci portál společnosti na sdílených zařízeních, musí mít k dispozici aplikace přiřazenou pro skupinu uživatelů. Budete mít nainstalované v kontextu systému nebo v kontextu uživatele, v závislosti na konfiguraci aplikace správce IT. Další informace o kontextu aplikací, najdete v části [instalace aplikací na zařízeních s Windows 10](apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). Verze 10.3.4651.0 portál společnosti nebo novější je nutné tuto funkci používat.
+Aby se v Portál společnosti zobrazovala na sdílených zařízeních, musí být dostupné aplikace přiřazené ke skupině uživatelů. Budou nainstalovány v kontextu systému nebo v kontextu uživatele v závislosti na tom, jak byl aplikace konfigurována správcem IT. Další informace o kontextu aplikace najdete v tématu [instalace aplikací na zařízeních s Windows 10](apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). Pro použití této funkce se vyžaduje Portál společnosti verze 10.3.4651.0 nebo novější.
 
 
-## <a name="who-is-assigned-as-the-primary-user"></a>Kdo je přiřazen jako primární uživatele?
-Primární uživatel Intune automaticky přidá do zařízení, během nebo krátce po zápisu. Metodu registrace určuje při přidání primárního uživatele zařízení.
+## <a name="who-is-assigned-as-the-primary-user"></a>Kdo je přiřazen jako primární uživatel?
+Intune automaticky přidá primárního uživatele do zařízení během nebo po registraci. Metoda registrace určuje, kdy se primární uživatel přidá do zařízení.
 
-| Platforma | Způsob registrace | Primární uživatel přiřazený | Primární uživatel |
+| Platforma | Způsob registrace | Přiřazeno primárnímu uživateli | Primární uživatel je přiřazený. |
 | ---- | ---- | ---- | ---- |
-| Windows | Přidat pracovní nebo školní (user driven) | Registrace uživatele | Během registrace |   
-| Windows | Moderní aplikace přihlášení (user driven) | Registrace uživatele | Během registrace | 
-| Windows | Registrace ve správě mobilních zařízení jenom (user driven) | Registrace uživatele | Během registrace | 
-| Windows | Připojení k Azure AD (mimo prostředí) | Registrace uživatele | Během registrace | 
-| Windows | Připojení ke službě Azure AD (Autopilot mimo prostředí) | Registrace uživatele | Během registrace | 
-| Windows | Pouze registrace v MDM | Registrace uživatele | Během registrace | 
-| Windows | Hybridní AADJ + Automatická registrace do objektu zásad skupiny | První uživatel pro přihlášení k Windows | Při prvním přihlášení k Windows| 
-| Windows | Společná správa | První uživatel pro přihlášení k Windows | Při prvním přihlášení k Windows | 
-| Windows | Připojení ke službě Azure AD (hromadný token pro zápis) | Žádné | Nelze použít | 
-| Windows | Připojení ke službě Azure AD (místním nasazení Autopilot režim) | Žádné | Nelze použít | 
-| Různé platformy | Registrace uživatele řízený testy s aplikací portál společnosti | Registrace uživatele | Během registrace |
-| Různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
-| iOS, macOS | Apple automatické registrace zařízení (DEP s přidružením uživatele | Registrace uživatele | Během registrace |
-| iOS, macOS | Apple automatické registrace zařízení (DEP bez přidružení uživatele) | Žádné | Nelze použít |
-| Android | Vlastněné podniková, vyhrazená zařízení s androidem | Žádný | Nelze použít |
+| Windows | Přidat práci nebo školu (řízený uživatelem) | Registrace uživatele | Během registrace |   
+| Windows | Přihlašování moderní aplikace (řízené uživatelem) | Registrace uživatele | Během registrace | 
+| Windows | Registrovat jenom v MDM (řízený uživatelem) | Registrace uživatele | Během registrace | 
+| Windows | Připojení ke službě Azure AD (neintegrované prostředí) | Registrace uživatele | Během registrace | 
+| Windows | Připojení ke službě Azure AD (prostředí autopilot mimo box) | Registrace uživatele | Během registrace | 
+| Windows | Zaregistrovat jenom v MDM | Registrace uživatele | Během registrace | 
+| Windows | Objekt zásad skupiny Hybrid AADJ + automatický zápis | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows| 
+| Windows | Spoluspráva | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows | 
+| Windows | Připojení k Azure AD (token hromadného zápisu) | Žádné | Nelze použít | 
+| Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádné | Nelze použít | 
+| pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
+| pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
+| iOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
+| iOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Nelze použít |
+| Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádné | Nelze použít |
 
-## <a name="primary-user-and-azure-ad-device-owner"></a>Primární uživatel a vlastník zařízení Azure AD
-V některých případech může být primárního uživatele Intune liší od Azure AD Device **vlastníka** vlastnosti (zobrazitelné v rámci **zařízení** > **podpora k zařízením Azure AD**). Vlastník zařízení služby Azure AD se přidá během registrace zařízení do služby Azure Active Directory.
+## <a name="primary-user-and-azure-ad-device-owner"></a>Vlastník zařízení s primárním uživatelem a Azure AD
+V některých případech se primární uživatel Intune může lišit od vlastnosti **vlastníka** zařízení Azure AD (zobrazitelné v **zařízeních** > **Azure AD**). Vlastník zařízení Azure AD se přidá během registrace zařízení do Azure Active Directory.
 
 ## <a name="next-steps"></a>Další postup
-[Spravujte vaše zařízení v Intune.](device-management.md)
+[Spravujte zařízení Intune.](device-management.md)

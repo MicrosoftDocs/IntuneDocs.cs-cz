@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
-ms.reviewer: damionw
+ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fba9bc63a2ee9d68fdc1d6e41698435144676b2e
-ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
+ms.openlocfilehash: 0bf683aebee50b4f2172f11ce205a910a47d0845
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012482"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071150"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
@@ -183,14 +183,17 @@ Po registraci zařízení autopilotu se jejich názvy stanou názvem hostitele z
 Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace** > zařízení**profily** > nasazení > registrace**vytvořit profil**.
-1. Zadejte **název** a volitelně také **Popis**.
-1. V **režimu nasazení**vyberte možnost **řízeno uživatelem**.
-1. V poli **připojit ke službě Azure AD** vyberte možnost hybridní připojení k **Azure AD (Preview)** .
-1. Vyberte **počáteční prostředí (OOBE)** , podle potřeby nakonfigurujte možnosti a pak vyberte **Uložit**.
-1. Volbou **Vytvořit** vytvořte profil. 
-1. V podokně profil vyberte **přiřazení**.
-1. Vyberte **Vybrat skupiny**.
-1. V podokně **Vybrat skupiny** vyberte skupinu zařízení a pak klikněte na **Vybrat**.
+2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
+3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna zařízení v přiřazených skupinách bez Autopilotu se zaregistrují se službou nasazení Autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
+4. Vyberte **Další**.
+5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**.
+6. V poli **připojit ke službě Azure AD** vyberte možnost **připojené k hybridní službě Azure AD**.
+7. Podle potřeby konfigurujte zbývající možnosti na stránce s **počátečním prostředím (OOBE)** .
+8. Vyberte **Další**.
+9. Na stránce **značky oboru** vyberte [značky oboru](scope-tags.md) pro tento profil.
+10. Vyberte **Další**.
+11. Na stránce **přiřazení** vyberte **možnost vybrat skupiny, které chcete zahrnout** > hledání, a vyberte skupinu zařízení > **Vybrat**.
+12. Vyberte **Další** > **vytvořit**.
 
 Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec trvá přibližně 15 minut, *než se přiřadí.*
 

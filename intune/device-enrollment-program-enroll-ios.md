@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 7ddbf360-0c61-11e8-ba89-0ed5f89f718b
-ms.reviewer: dagerrit
+ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df090e0e942291d5430b101db378aca296466bf9
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: cd4a195af0b3be5038a34b44606abcddf02c5a1e
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69549991"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071564"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
@@ -156,7 +156,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     
     ![Snímek obrazovky s instalací portálu společnosti pomocí programu VPP](./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png)
 
-7. Pokud jste zvolili pomocníka s **nastavením** pro **Vyberte, kde se uživatelé musí ověřit**, ale také chcete použít podmíněný přístup nebo nasadit firemní aplikace na zařízení, musíte na zařízení nainstalovat portál společnosti. Pokud to chcete udělat, vyberte pro **instalaci portál společnosti** **Ano** .  Pokud chcete, aby uživatelé přijímali Portál společnosti bez nutnosti ověřování do App Storu, zvolte možnost **nainstalovat portál společnosti pomocí programu VPP** a vybrat token VPP. Ujistěte se, že platnost tokenu nevyprší a že máte dost licencí na zařízení, aby mohla aplikace Portál společnosti správně nasadit.
+7. Pokud jste zvolili **Pomocníka s nastavením** pro **Vyberte, kde se uživatelé musí ověřit**, ale také chcete použít podmíněný přístup nebo nasadit firemní aplikace na zařízení, musíte na zařízení nainstalovat portál společnosti. Pokud to chcete udělat, vyberte pro **instalaci portál společnosti** **Ano** .  Pokud chcete, aby uživatelé přijímali Portál společnosti bez nutnosti ověřování do App Storu, zvolte možnost **nainstalovat portál společnosti pomocí programu VPP** a vybrat token VPP. Ujistěte se, že platnost tokenu nevyprší a že máte dost licencí na zařízení, aby mohla aplikace Portál společnosti správně nasadit.
 
 8. Pokud jste zvolili token pro **instalaci portál společnosti pomocí programu VPP**, můžete zařízení uzamknout v režimu jedné aplikace (konkrétně portál společnosti aplikace) hned po dokončení Průvodce nastavením. Tuto možnost nastavíte volbou **Ano** u položky **Spustit Portál společnosti v režimu Jedna aplikace, dokud neproběhne ověření**. Než bude uživatel moct zařízení použít, musí se nejprve ověřit přihlášením na Portálu společnosti.
 
@@ -190,7 +190,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
 14. Klikněte **na tlačítko Další: Přizpůsobení**pomocníka s nastavením.
 
-15. Na stránce **vlastní** nastavení Pomocníka s nastavením nakonfigurujte následující nastavení profilu: ![Přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
+15. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![Přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
     | Nastavení oddělení | Popis |

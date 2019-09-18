@@ -12,17 +12,17 @@ ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
-ms.reviewer: amyros
+ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60f2368fc8c6d4f8e2713a8386ccdd7e5958ac6b
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: bab0a33eee5f4d4856fb9d01d822236d1927a4e3
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412613"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071729"
 ---
 # <a name="add-groups-to-organize-users-and-devices"></a>Přidání skupin pro uspořádání uživatelů a zařízení
 Služba Intune používá ke správě zařízení a uživatelů skupiny Azure Active Directory (AD). Jako správce Intune můžete nastavit skupiny tak, aby odpovídaly potřebám vaší organizace. Vytvořte skupiny, které uživatele nebo zařízení uspořádají podle zeměpisné polohy, oddělení nebo vlastností hardwaru. Skupiny použijte ke spravování úloh se škálováním. Například můžete nastavit zásady pro mnoho uživatelů nebo nasadit aplikace řadě zařízení.
@@ -37,11 +37,11 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Skupiny** a potom v podokně **Všechny skupiny** zvolte **Nová skupina**.
    ![Snímek obrazovky Azure Portalu s vybranou možností Nová skupina](./media/groups-add-new.png)
-4. Pro **typ skupiny**, zvolte jednu z následujících možností:
-    - **Zabezpečení**: Skupiny zabezpečení jsou dobrý prostředek pro naplňování skupin uživatelů. Vzhledem k tomu, že skupiny zabezpečení definují, kdo má přístup k jakým prostředkům, jsou dobře převeditelné i na skupiny uživatelů Intune. Skupiny zabezpečení, které jsou synchronizované z Active Directory do Azure Active Directory nebo které lze vytvořit přímo v Azure Active Directory pomocí centra pro správu služeb Microsoft 365 nebo na webu Azure portal jsou k dispozici pro použití při vytváření skupin uživatelů v Intune.
+4. Jako **typ skupiny**vyberte jednu z následujících možností:
+    - **Zabezpečení**: Skupiny zabezpečení jsou dobrý prostředek pro naplňování skupin uživatelů. Vzhledem k tomu, že skupiny zabezpečení definují, kdo má přístup k jakým prostředkům, jsou dobře převeditelné i na skupiny uživatelů Intune. Skupiny zabezpečení, které se synchronizují ze služby Active Directory do Azure Active Directory nebo které vytvoříte přímo v Azure Active Directory prostřednictvím centra pro správu Microsoft 365, nebo Azure Portal jsou k dispozici pro použití při vytváření skupin uživatelů v Intune.
     - **Office 365**
 
-5. Zadejte **název** a **popis** nové skupiny. Tyto vlastnosti se objeví jenom na portálu správy a uživatelům se nezobrazí.
+5. Zadejte **název** a **Popis** nové skupiny. Tyto vlastnosti se objeví jenom na portálu správy a uživatelům se nezobrazí.
 
 6. Zvolte **typ členství**:
    - **Přiřazené** – vytvoří skupinu z ručně přiřazených členů. Další informace o [přiřazených skupinách Azure AD](https://docs.microsoft.com/azure/active-directory/active-directory-groups-create-azure-portal).
@@ -57,7 +57,7 @@ Pomocí následujícího postupu vytvořte novou skupinu.
 
 ## <a name="groups-and-policies"></a>Skupiny a zásady
 
-Při vytváření skupin vezměte v úvahu jak použijete [zásady](device-compliance-get-started.md). Můžete mít například zásady specifické pro operační systém zařízení a zásady specifické pro různé role ve vaší organizaci nebo organizační jednotky, které už jste ve službě Active Directory definovali dříve. Může být užitečné používat oddělené skupiny zařízení pro iOS, Android a Windows a oddělené skupiny uživatelů pro jednotlivé organizační role.
+Při vytváření skupin Vezměte v úvahu, jak budete [zásady](device-compliance-get-started.md)používat. Můžete mít například zásady specifické pro operační systém zařízení a zásady specifické pro různé role ve vaší organizaci nebo organizační jednotky, které už jste ve službě Active Directory definovali dříve. Může být užitečné používat oddělené skupiny zařízení pro iOS, Android a Windows a oddělené skupiny uživatelů pro jednotlivé organizační role.
 
 Budete taky nejspíš chtít vytvořit výchozí zásady, které budou platit pro všechny skupiny a zařízení, aby se stanovily základní požadavky na dodržování předpisů vaší organizace. Poté můžete vytvořit konkrétnější zásady pro nejširší kategorie uživatelů a zařízení. Můžete například vytvořit zásady e-mailů pro každý operační systém zvlášť.
 

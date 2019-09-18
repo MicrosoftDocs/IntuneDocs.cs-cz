@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8774b5af7555462b7754e4d0f8a6f50a330854ff
-ms.sourcegitcommit: 58a22f1b4a3fffffb1f7da228f470b3b0774fc42
+ms.openlocfilehash: cde8269ca9d2ca2348fb6da377ad46150c90015a
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70021817"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061552"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>Microsoft Intune App SDK pro iOS – Příručka pro vývojáře
 
@@ -226,7 +226,7 @@ Jak už jsme uvedli, sada Intune App SDK může pro své scénáře ověřován�
 
 ADAL – Intune App SDK bude poskytovat výchozí hodnoty pro parametry ADAL a zpracovávat ověřování proti Azure AD. Vývojáři nemusejí zadávat žádné hodnoty pro výše zmíněná nastavení ADAL. 
 
-MSAL – vývojáři potřebují vytvořit registraci aplikace v AAD s vlastním identifikátorem URI přesměrování v zadaném formátu. [](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) Vývojáři by měli nastavit `ADALClientID` výše `ADALRedirectUri` zmíněná nastavení a, nebo `IntuneMAMPolicyManager` ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti instance. Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
+MSAL – vývojáři potřebují vytvořit registraci aplikace v AAD s vlastním identifikátorem URI přesměrování v zadaném [formátu.](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration) Vývojáři by měli nastavit `ADALClientID` výše `ADALRedirectUri` zmíněná nastavení a, nebo `IntuneMAMPolicyManager` ekvivalentní `aadClientIdOverride` a `aadRedirectUriOverride` vlastnosti instance. Vývojáři by se měli ujistit, že budou dodržovat krok 4 v předchozí části, aby měli přístup k registraci aplikace službě Intune App Protection.
 
 ### <a name="special-considerations-when-using-msal"></a>Zvláštní důležité důvody při použití MSAL 
 
@@ -412,9 +412,6 @@ Tyto metody delegáta vracejí objekt `IntuneMAMEnrollmentStatus`, který obsahu
 * Stavový kód označující výsledek žádosti
 * Chybový řetězec s popisem stavového kódu
 * Objekt `NSError`. Tento objekt je definovaný v souboru `IntuneMAMEnrollmentStatus.h` společně s konkrétními stavovými kódy, které můžou být vráceny.
-
-> [!NOTE]
-> Tyto informace jsou jenom pro účely ladění. Žádná obchodní logika by z těchto oznámení neměla vycházet. Tyto informace lze odesílat telemetrické službě kvůli ladění a monitorování.
 
 ### <a name="sample-code"></a>Ukázka kódu
 

@@ -8,19 +8,19 @@ ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 03/26/2019
 ms.author: erikje
-ms.reviewer: angerobe
+ms.reviewer: pjain
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cf4e365f4e68920ea5d24dc3ce2e1bd5eb9f817
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f63bbc80c055cfcb3bd52f79e7b810094107ec2a
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61511567"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71080055"
 ---
-# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý start: Vytvořit a přiřadit vlastní roli
+# <a name="quickstart-create-and-assign-a-custom-role"></a>Rychlý Start Vytvořit a přiřadit vlastní roli
 
 V tomto rychlém startu pro Intune vytvoříte vlastní roli se specifickými oprávněními pro oddělení operací zabezpečení. Potom tuto roli přiřadíte skupině příslušných operátorů. Existuje několik výchozích rolí, které se dají okamžitě použít. Vytvořením vlastních rolí, jako je tato, však můžete přesně řídit přístup ke všem částem systému pro správu mobilních zařízení.
 
@@ -56,10 +56,10 @@ Operátor zabezpečení může použít nová oprávnění až poté, co danou r
 1. V Intune zvolte **Role** > **Všechny role** > **Operace zabezpečení**.
 2. V části **Role Intune** zvolte **Přiřazení** > **Přiřadit**.
 3. Do pole **Název přiřazení** zadejte *Operace zabezpečení*.
-4. Zvolte **Členové (Skupiny)** > **Přidat**.
+4. Zvolte **Členové (Skupiny)**  > **Přidat**.
 5. Zvolte skupinu **Testeři Contoso**.
 6. Zvolte **Vybrat** > **OK**.
-7. Zvolte **Rozsah (Skupiny)** > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
+7. Zvolte **Rozsah (Skupiny)**  > **Vybrat skupiny, které se zahrnou** > **Testeři Contoso**.
 8. Zvolte **Vybrat** > **OK** > **OK**.
 
 Teď jsou všichni členové dané skupiny členy role *Operace zabezpečení* a můžou kontrolovat následující informace o zařízení: identifikátory podnikových zařízení, zásady dodržování předpisů zařízením, konfigurace zařízení a informace o organizaci.
@@ -75,4 +75,4 @@ V tomto rychlém startu jste vytvořili vlastní roli pro operace zabezpečení 
 Pokud chcete postupovat podle této série rychlých startů Intune, pokračujte k dalšímu rychlému startu.
 
 > [!div class="nextstepaction"]
-> [Rychlý start: Vytvořte profil zařízení pro iOS](quickstart-email-profile.md)
+> [Rychlý Start Vytvoření profilu e-mailového zařízení pro iOS](quickstart-email-profile.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c474ac2eccf90e829abe753c82d40bdfae9146ec
-ms.sourcegitcommit: 5bb46d3c0bf8c5595132c4200849b1c4bcfe7cdb
+ms.openlocfilehash: 8b41405e2256d6d2608b05a9c7e8a40cbb3ab349
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70376928"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071056"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -36,7 +36,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-- Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1703 (RS2). Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1) a novější.
+- Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1703 (RS2). Některá nastavení nejsou součástí všech edicí systému Windows. Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1) a novější.
 
 - Nastavení systému Windows používají [zprostředkovatele CSP v zásadách systému Windows](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies). Zprostředkovatelé CSP fungují na různých edicích Windows, jako jsou například Home, Professional, Enterprise atd. Pokud chcete zjistit, jestli zprostředkovatel kryptografických služeb funguje na konkrétní edici, přejděte na [Zásady Windows CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-configuration-service-provider#admx-backed-policies).
 
@@ -70,7 +70,7 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
     > - Windows 10 RS5 a novější s nainstalovanou verzí [KB 4512534](https://support.microsoft.com/kb/4512534)
     > - Windows 10 19H1 a novější s nainstalovanou verzí [KB 4512941](https://support.microsoft.com/kb/4512941)
 
-6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
+6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako Nenakonfigurováno (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
 7. Vyberte **OK** uložte provedené změny.
 
 Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Následuje několik příkladů:
@@ -97,6 +97,6 @@ V těchto šablonách jsou k dispozici stovky nastavení. Aby bylo snazší naj�
 
   V jiném příkladu vyhledejte `microsoft word`. Zobrazí se všechna nastavení, která můžete nastavit pro program Microsoft Word. `explorer` Pokud chcete zobrazit všechna nastavení Internet Exploreru, která můžete do šablony přidat, vyhledejte.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Šablona se vytvoří, ale ještě nic nedělá. Dále [přiřaďte šablonu, která se označuje také jako profil](device-profile-assign.md) a [sledujte její stav](device-profile-monitor.md).

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cf3a3735688d12e69dc297aa42ab2869c69bfc9
-ms.sourcegitcommit: 05139901411d14a85c2340c0ebae02d2c178a851
+ms.openlocfilehash: cbf2031a316b1f7c2e22d165363cca12cfd70291
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70904982"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061584"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -181,7 +181,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 - Zkontrolujte případné chyby v protokolech. Viz [protokoly rozšíření pro správu Intune](#intune-management-extension-logs) (v tomto článku).
 - V případě možných problémů s oprávněními zkontrolujte, jestli jsou vlastnosti skriptu PowerShellu nastavené `Run this script using the logged on credentials`na. Také ověřte, zda má přihlášený uživatel příslušná oprávnění ke spuštění skriptu.
 
-- Chcete-li izolovat problémy skriptování, proveďte následující kroky:
+- Chcete-li izolovat problémy skriptování, můžete:
 
   - Zkontrolujte konfiguraci spouštění PowerShellu na vašich zařízeních. Pokyny najdete v tématu [zásady spouštění prostředí PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-6) .
   - Spusťte ukázkový skript pomocí rozšíření pro správu Intune. Vytvořte `C:\Scripts` například adresář a poskytněte všem úplnému řízení. Spusťte tento skript:
@@ -196,15 +196,17 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
     `psexec -i -s`  
     
-  - Pokud spuštění skriptu ohlásí úspěch, ale výsledek se nekoná (například skript výše nevytvoří soubor), může být antivirovým programem AgentExecutor sandboxing. Následující skript by měl vždycky nahlásit chybu v Intune – Pokud se ohlásí úspěch, podívejte se na AgentExecutor. log a potvrďte výstup chyby. Pokud je skript spuštěný vůbec, musí se > 2.
-
+  - Pokud skript hlásí, že se úspěšně zdařil, ale neúspěšně neuspěl, je možné, že vaše antivirová služba může být AgentExecutorá do izolovaného prostoru. Následující skript vždy hlásí selhání v Intune. Jako test můžete použít tento skript:
+  
     ```powershell
     Write-Error -Message "Forced Fail" -Category OperationStopped
     mkdir "c:\temp" 
     echo "Forced Fail" | out-file c:\temp\Fail.txt
     ```
-    
-  - Pokud potřebujete zachytit chybu. Error a. Output, následující fragment kódu spustí skript přes AgentExecutor a PSx86 a ponechá protokoly za kolekcí (vzhledem k tomu, že rozšíření pro správu Intune vyčistí protokoly po spuštění):
+
+    Pokud skript ohlásí úspěch, podívejte `AgentExecutor.log` se na text pro potvrzení výstupu chyby. Pokud se skript spustí, musí být délka > 2.
+
+  - Chcete-li zachytit soubory. Error a. Output, následující fragment kódu spustí skript prostřednictvím AgentExecutor do PSx86 (`C:\Windows\SysWOW64\WindowsPowerShell\v1.0`). Udržuje protokoly pro vaši kontrolu. Mějte na paměti, že rozšíření pro správu Intune po spuštění skriptu vyčistí protokoly:
   
     ```powershell
     $scriptPath = read-host "Enter the path to the script file to execute"

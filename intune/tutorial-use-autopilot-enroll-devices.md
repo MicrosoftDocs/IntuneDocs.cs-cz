@@ -13,19 +13,19 @@ ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up Windows Autopilot so that users can enroll in Intune.
-ms.reviewer: angerobe
+ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ee353e5e6c39c3b402c0b4f039bb02efcfa4532
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 292ffb5eebd4ae0accb51212cf6f1648a090d66e
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044528"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71071680"
 ---
-# <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
+# <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Návodu Použití autopilotu k registraci zařízení s Windows v Intune
 Windows Autopilot zjednodušuje registraci zařízení. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat. 
 
 V tomto kurzu se naučíte:
@@ -54,7 +54,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
     
     *serial-number*, *windows-product-id*, *hardware-hash*, *optional-Group-Tag*
     
-    První tři položky jsou povinné, ale značka skupiny (dříve označovanou "ID objednávky") je volitelné.
+    První tři položky jsou povinné, ale značka skupiny (dříve známé "ID objednávky") je volitelná.
 
 2. Soubor CSV uložte.
 
@@ -89,20 +89,20 @@ Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, kt
 Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mohli zařízení Autopilot nakonfigurovat.
 
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
-2. Na **Základy** stránky, tor **název**, zadejte *profil Autopilot*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
+2. Na stránce **základy** zadejte **název**systému do pole *autopilot Profile*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
 3. Nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Toto nastavení zajistí, že všechna zařízení v seznamu se zaregistrují pomocí služby nasazení Autopilot. Vyřízení registrace trvá 48 hodin.
 4. Vyberte **Další**.
-5. Na **Out-of-box zapnutí** stránky, pro **režim nasazení**, zvolte **řízené uživatele**. Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
+5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**. Zařízení s tímto profilem se přidruží k uživateli, který zařízení registruje. Při registraci zařízení se musí zadat přihlašovací údaje uživatele.
 6. V poli **Připojit k Azure AD jako** zvolte **Připojeno k Azure AD**.
-7. Nakonfigurujte následující možnosti a nechte ostatní nastavení na výchozí hodnotu:
-    - **Licenční smlouva s koncovým uživatelem (EULA)**: **Skrýt**
-    - **Nastavení ochrany osobních údajů**: **Show**
+7. Nakonfigurujte následující možnosti a nechte výchozí nastavení pro ostatní:
+    - **Licenční smlouva s koncovým uživatelem (EULA)** : **Skryl**
+    - **Nastavení ochrany osobních údajů**: **Uvádí**
     - **Typ uživatelského účtu**: **Standard**
 8. Vyberte **Další**.
-9. Na **přiřazení** zvolte **vybrané skupiny** pro **přiřadit**.
-10. Zvolte **vybrat skupiny, které chcete zahrnout**, zvolte **Autopilot skupiny**.
+9. Na stránce **přiřazení** vyberte **vybrané skupiny** pro **přiřazení**.
+10. Zvolte **Vybrat skupiny, které se mají zahrnout**, a pak zvolte **Skupina autopilot**.
 11. Vyberte **Další**.
-12. Na **revize + vytvořit** zvolte **vytvořit** vytvořte profil.
+12. Na stránce **Revize + vytvořit** vyberte **vytvořit** a vytvořte profil.
 
 ## <a name="distribute-devices-to-users"></a>Distribuce zařízení uživatelům
 
@@ -110,7 +110,7 @@ Nyní můžete distribuovat zařízení s Windows uživatelům. Při prvním př
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud už nechcete používat zařízení Autopilot už, můžete je odstranit.
+Pokud už nechcete používat zařízení autopilotu, můžete je odstranit.
 
 1. Pokud jsou zařízení registrována v Intune, musíte je nejdřív [odstranit z portálu služby Azure Active Directory](devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 

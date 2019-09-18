@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f5ea00f2e2631433ece3e9053b8f9ea9d9e359c8
-ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
+ms.openlocfilehash: 7b7b4453d441d2f2367b19a6bf0505dabd8e6e48
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70986404"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061680"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,6 +53,21 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 <!-- ########################## -->
+
+## <a name="week-of-september-16-2019"></a>Týden od 16. září 2019
+
+### <a name="app-management"></a>Správa aplikací
+
+#### <a name="macos-support-for-web-apps----3174427---"></a>Podpora macOS pro webové aplikace <!-- 3174427 -->
+Webové aplikace, které umožňují přidat zástupce na adresu URL na webu, lze nainstalovat do Docku pomocí Portál společnosti macOS. Koncoví uživatelé mohou získat přístup k akci **instalace** ze stránky s podrobnostmi o aplikaci pro webovou aplikaci ve MacOS portál společnosti. Další informace o typu aplikace **webový odkaz** najdete v tématu [přidání aplikací do Microsoft Intune](apps-add.md) a [Přidání webových aplikací do Microsoft Intune](web-app.md).
+
+#### <a name="macos-support-for-vpp-apps----3173501----"></a>Podpora macOS pro aplikace VPP <!-- 3173501  -->
+aplikace macOS, zakoupené pomocí Apple Business Manageru, se v konzole zobrazí, když se tokeny programu Apple VPP synchronizují v Intune. Pomocí konzoly služby Intune můžete přiřadit, odvolat a znovu přiřadit licence na zařízení a uživatele pro skupiny. Microsoft Intune pomáhá spravovat aplikace VPP zakoupené pro použití ve vaší společnosti:
+- Vykazuje informace o licencích z App Storu.
+- Sleduje počet použitých licencí.
+- Pomoc při instalaci více kopií aplikace, než na kolik máte.
+
+Další informace o Intune a VPP najdete v tématu [Správa hromadně zakoupených aplikací a knih pomocí Microsoft Intune](vpp-apps.md).
 
 ## <a name="week-of-september-9-2019"></a>Týden od 9. září 2019
 

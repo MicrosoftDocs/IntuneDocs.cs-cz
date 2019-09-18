@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cda0453009855d96e7c13e170ba908479a0773ea
-ms.sourcegitcommit: 513e805bbea8bf652c2901dfc5460e34946077df
+ms.openlocfilehash: c0cbc2c7334675e91450b9c2d7129a098498d978
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160606"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71061595"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Zásady konfigurace aplikací v Microsoft Intune
 
 Zásady konfigurace aplikací vám pomůžou eliminovat problémy s instalací aplikací tím, že vám umožní přiřadit nastavení konfigurace k zásadě, která je přiřazená koncovým uživatelům před spuštěním aplikace. Nastavení se pak doplní automaticky, když je aplikace nakonfigurovaná na zařízeních koncových uživatelů a koncoví uživatelé nepotřebují provádět žádné akce. Nastavení konfigurace jsou pro každou aplikaci jedinečná. 
 
-Zásady konfigurace aplikací můžete vytvářet a používat k poskytování nastavení konfigurace pro aplikace pro iOS i Android. Tato nastavení konfigurace umožňují přizpůsobit aplikaci pomocí [oboru standardní úrovně přístupu](https://www.appconfig.org/) ke konfiguraci a správě aplikací. Nastavení zásad konfigurace se používají, když aplikace kontroluje tato nastavení, obvykle při prvním spuštění aplikace. 
+Zásady konfigurace aplikací můžete vytvářet a používat k poskytování nastavení konfigurace pro aplikace pro iOS i Android. Tato nastavení konfigurace umožňují přizpůsobit aplikaci pomocí konfigurace a správy aplikací. Nastavení zásad konfigurace se používají, když aplikace kontroluje tato nastavení, obvykle při prvním spuštění aplikace. 
 
 Nastavení konfigurace aplikace může například vyžadovat, abyste zadali některé z následujících údajů:
 
@@ -60,7 +60,7 @@ Zásady konfigurace aplikací se službou Intune můžete použít dvěma způso
 ## <a name="apps-that-support-app-configuration"></a>Aplikace podporující konfiguraci aplikací
 
 ### <a name="managed-devices"></a>Spravovaná zařízení
-Zásady konfigurace aplikací můžete použít pro aplikace, které ji podporují. Aby bylo možné podporovat konfiguraci aplikací v Intune, musí být aplikace napsané tak, aby podporovaly používání konfigurací aplikací definovaných [komunitou appconfig](https://www.appconfig.org/members). Podrobnosti získáte od dodavatele aplikace.
+Zásady konfigurace aplikací můžete použít pro aplikace, které ji podporují. Aby bylo možné podporovat konfiguraci aplikací v Intune, musí být aplikace napsané tak, aby podporovaly používání konfigurací aplikací definovaných operačním systémem. Podrobnosti o tom, které klíče konfigurace aplikace podporují, najdete v dodavateli vaší aplikace.
 
 ### <a name="managed-apps"></a>Spravované aplikace
 Obchodní aplikace si můžete připravit buď tak, že [sadu Intune App SDK](app-sdk.md) zařadíte do aplikace, nebo po jejím vývoji aplikaci pomocí [Nástroje pro zabalení aplikace Intune](apps-prepare-mobile-application-management.md). Sada Intune App SDK se snaží minimalizovat množství změn v kódu, které vyžaduje vývojář aplikace. Další informace najdete v tématu [Přehled sady Intune App SDK](app-sdk.md). Porovnání mezi sadou Intune App SDK a nástrojem pro zabalení aplikace Intune najdete v tématu [Příprava obchodních aplikací na zásady ochrany aplikací](apps-prepare-mobile-application-management.md#feature-comparison).
@@ -84,7 +84,7 @@ Zásady konfigurace aplikací můžete ověřit pomocí následujících tří m
 
       ![Druhý snímek stavu instalace zařízení](./media/app-configuration-policy-overview/device-install-status-2.png)
 
-      V části Intune -> **zařízení** -> **všechna zařízení** na levé straně obrazovky se navíc v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
+      V části **Intune** -> **zařízení** -> **všechna zařízení** na levé straně obrazovky se navíc v možnosti **Konfigurace aplikace** zobrazí všechny přiřazené zásady a jejich stav:
 
       ![Snímek obrazovky s konfigurací aplikace](./media/app-configuration-policy-overview/app-configuration.png)
 
@@ -97,7 +97,7 @@ K provádění úloh konfigurace aplikace můžete použít Graph API. Podrobnos
 ### <a name="using-logs-to-show-a-configuration-parameter"></a>Použití protokolů k zobrazení konfiguračního parametru
 Když se v protokolech zobrazí parametr konfigurace, u kterého se potvrdí, že se má použít, ale zdá se, že nebude fungovat, může se jednat o problém s implementací konfigurace vývojářem aplikace. Vyzkoušejte si nejprve konkrétního vývojáře aplikace nebo ověřte jeho znalostní bázi, může vám pomoci s Microsoftem. Pokud se jedná o problém s tím, jak se konfigurace zpracovává v rámci aplikace, bude nutné ji vyřešit v budoucí aktualizované verzi této aplikace.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
 ### <a name="managed-devices"></a>Spravovaná zařízení
 
