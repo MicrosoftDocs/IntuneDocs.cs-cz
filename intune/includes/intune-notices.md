@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0721c62d44234a44881cdc562376c9bb62412187
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: 1d9903de9d23532174e138709cb40c9cdf49995f
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68775854"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71107202"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune. 
 
@@ -66,7 +66,7 @@ Nemusíte provádět žádnou akci, ale v případě potřeby můžete zvážit 
 #### <a name="additional-information"></a>Další informace 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Plán změny: Intune se přesouvá na podporu iOS 11 a vyšší v září. <!-- 4665342-->
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665324--"></a>Plán změny: Intune se přesouvá na podporu iOS 11 a vyšší v září. <!-- 4665324-->
 V září očekáváme, že iOS 13 vydává společnost Apple. Registrace do Intune, Portál společnosti a Managed Browser se po vydání verze iOS 13 přesune na podporu iOS 11 a novějších.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
@@ -76,7 +76,7 @@ Za předpokladu, že jsou mobilní aplikace O365 podporované v iOS 11,0 a vyš�
 - iPhone 5c
 - iPad (4. generace)
 
-Od července se zařízení zaregistrovaná v MDM s iOS 10 a Portál společnosti zobrazí výzva k upgradu operačního systému nebo zařízení. Pokud používáte zásady ochrany aplikací (aplikace), můžete také nastavit přístup nastavení "vyžadovat minimální operační systém iOS" (pouze upozornění).
+Pokud používáte zásady ochrany aplikací (aplikace), můžete také nastavit přístup nastavení "vyžadovat minimální operační systém iOS" (pouze upozornění).
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Podívejte se do sestavy Intune, kde vidíte, která zařízení nebo uživatelé můžou být ovlivnění. Přejít na **zařízení** > **všechna zařízení** a filtrovat podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení se systémem iOS 10. Zajistěte, aby vaši koncoví uživatelé před září upgradovali svoje zařízení na podporovanou verzi operačního systému.

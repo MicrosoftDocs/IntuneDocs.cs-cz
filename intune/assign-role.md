@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0539e4d12173ba2c7ba8d3af3364daf69ddbbf34
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 83e321e932fa2214612836ec994a9a0aa8174dd7
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071532"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094681"
 ---
 # <a name="assign-a-role-to-an-intune-user"></a>Přiřazení role uživateli Intune
 
@@ -30,8 +30,6 @@ Uživateli Intune můžete přiřadit [integrovanou](role-based-access-control.m
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
 - **Správce služby Intune**
-
-Úplný seznam oprávnění pro jednotlivé předdefinované role najdete v [tabulce RBAC služby Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
 
@@ -56,6 +54,6 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 11. Po dokončení vyberte **OK**. Nové přiřazení se zobrazí v seznamu přiřazení.
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Další informace o řízení přístupu na základě role v Intune](role-based-access-control.md)
 - [Vytvoření vlastní role](create-custom-role.md)

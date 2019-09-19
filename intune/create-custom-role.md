@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 10366a41be05dbedee5cd84a1222a727a02a1b93
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 6b7e8f5077f2052a11c980ae3f5629af810a8a0b
+ms.sourcegitcommit: 49f25efb9bc0f16f587f27878cf45de5e4e6a27f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071466"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71094698"
 ---
 # <a name="create-a-custom-role-in-intune"></a>Vytvoření vlastní role v Intune
 
@@ -41,7 +41,7 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 
 4. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
 
-5. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít. Rozhodnout se, která oprávnění chcete použít, vám pomůže [tabulka Řízení správy na základě rolí s Intune](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
+5. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít.
 
 6. V okně **obor (značky)** vyberte značky pro tuto roli. Tato role má přístup k prostředkům, které mají také tyto značky.
 

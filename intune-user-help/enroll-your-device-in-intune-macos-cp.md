@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 9047dd9bbc55162eae4693d3035cb05ff4becb91
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545729"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099849"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
 
@@ -46,7 +46,7 @@ Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení 
 Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
 ## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení  
-V této části najdete postup registrace zařízení s macOS verze OS X El Capitan 10.11 a novějšími.   
+Pomocí následujících kroků zaregistrujete zařízení macOS se systémem macOS 10,12 a novějším.   
 
 
 1. Přejděte na web Portál společnosti otevřením nového okna v aplikaci __Safari__ a potom přejděte na https://portal.manage.microsoft.com.  
@@ -60,7 +60,7 @@ V této části najdete postup registrace zařízení s macOS verze OS X El Capi
 
 4. Na stránce __Zařízení__ se zobrazí buď seznam spravovaných zařízení, nebo banner. Tato možnost závisí na tom, jestli už spravované zařízení máte, nebo nikoliv. 
     * Pokud chcete přidat zařízení, které není v seznamu, vyberte banner s textem **Klepněte sem a řekněte nám, které zařízení používáte, nebo přidejte nové.**
-    * Pokud nemáte k dispozici žádná zařízení, přečte hlavičky: **Nemáte žádná spravovaná zařízení. Toto zařízení můžete přidat tak, že klepnete sem.** Přidejte zařízení kliknutím na banner.  
+    * Pokud nemáte žádná zařízení, banner si přečte: **Nemáte žádná spravovaná zařízení. Toto zařízení můžete přidat tak, že klepnete sem.** Přidejte zařízení kliknutím na banner.  
 
      ![Snímek obrazovky se stránkou Zařízení s červeným obdélníkem okolo banneru, který zvýrazňuje možnost, na niž má uživatel kliknout](./media/CP-enroll-MACOS-1808.png)  
 5. Proveďte jeden z kroků níže podle toho, která zpráva se vám na Portálu společnosti zobrazuje.  
@@ -101,6 +101,6 @@ Navíc vzhledem k tomu, že tyto ostatní profily nevyžadují jednotlivé ově�
 Aktualizace aplikace Portál společnosti se provádí stejným způsobem jako aktualizace kterékoli jiné aplikace Office, tedy přes Microsoft AutoUpdate pro Mac. Další informace o [aktualizaci aplikací Microsoftu pro macOS najdete tady](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
 
 ## <a name="next-steps"></a>Další kroky  
-Potřebujete další pomoc? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete další informace? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

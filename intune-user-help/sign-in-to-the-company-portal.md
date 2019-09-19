@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/19/2019
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,29 +18,28 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bfd8496061b4b3aba2589b73c3e98bce94a5011
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 16d7142e6dc38a177f8820f60e7335b8b23a1eeb
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528645"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099797"
 ---
-# <a name="sign-in-to-company-portal"></a>Přihlaste se k portálu společnosti  
+# <a name="sign-in-to-company-portal"></a>Přihlášení k Portál společnosti  
 
-Existují tři způsoby, jak se přihlásit k aplikaci portál společnosti:
+Existují tři způsoby, jak se přihlásit k aplikaci Portál společnosti:
 
-* Přihlaste se pomocí pracovní e-mailovou adresu a heslo.  
-* Přihlaste se pomocí ověřování prostřednictvím certifikátu.  
-* Přihlášení z jiného zařízení.    
+* Přihlaste se pomocí své pracovní e-mailové adresy a hesla.  
+* Přihlaste se pomocí ověřování založeného na certifikátech.  
+* Přihlaste se z jiného zařízení.    
 
 
-## <a name="sign-in-with-your-email-address-and-password"></a>Přihlaste se pomocí e-mailovou adresu a heslo
-Následující kroky ukazují snímky obrazovky z portálu společnosti pro iOS.  
+## <a name="sign-in-with-your-email-address-and-password"></a>Přihlaste se pomocí své e-mailové adresy a hesla.
+Následující kroky ukazují snímky obrazovky z Portál společnosti pro iOS.  
 
-1. Otevřete aplikaci na zařízení a klepněte na **Sign In**.  
+1. Otevřete aplikaci na svém zařízení a klepněte na **Přihlásit**se.  
 
-   ![Přihlašovací stránka Portálu společnosti s ikonou osoby před grafickým znázorněním webu. Pod ním je text "Získejte přístup k prostředkům společnosti a zajistěte jejich zabezpečení" a "Sign in" tlačítko. Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](/intune-user-help/media/cp_ios_aad_signin_after_1804_001.png)
-
+   [![Ukázkový snímek obrazovky portál společnosti přihlašovací stránky ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
 
 
 2. Zadejte svůj **pracovní nebo školní účet** a klepněte na **Další**.
@@ -51,11 +50,11 @@ Následující kroky ukazují snímky obrazovky z portálu společnosti pro iOS.
 
    ![Po přijetí e-mailové adresy je uživatel vyzván k zadání hesla.](/intune-user-help/media/cp_ios_aad_signin_after_1804_003.png)
 
-4. Aplikace se ověřit vaše přihlašovací údaje. Až budete hotovi, můžete přístup k prostředkům vaší organizace a instalovat dostupné aplikace.  
+4. Aplikace ověří vaše přihlašovací údaje. Po dokončení budete mít přístup k prostředkům vaší organizace a nainstalujete dostupné aplikace.  
 
-   ![Po absolvování procesu ověřování, přihlásí v aplikaci portál společnosti zobrazí pruh načítání a.](/intune-user-help/media/cp_ios_aad_signin_after_1804_004.png)
+   ![Po provedení procesu ověřování se aplikace Portál společnosti přihlásí, zobrazí pruh načítání.](/intune-user-help/media/cp_ios_aad_signin_after_1804_004.png)
 
-## <a name="sign-in-with-certificate-based-authentication"></a>Přihlaste se pomocí ověřování prostřednictvím certifikátu
+## <a name="sign-in-with-certificate-based-authentication"></a>Přihlaste se pomocí ověřování založeného na certifikátech
 
 1. Na svém zařízení otevřete aplikaci Portál společnosti.  
 
@@ -65,25 +64,25 @@ Následující kroky ukazují snímky obrazovky z portálu společnosti pro iOS.
 
 4. Klepnutím na **Pokračovat** certifikát použijte.  
 
-## <a name="sign-in-from-another-device"></a>Přihlášení z jiného zařízení
+## <a name="sign-in-from-another-device"></a>Přihlásit z jiného zařízení
 
-Pokud vaše společnost používá pro přístup k počítačům čipové karty, je pravděpodobné, že máte k ověřování přihlášení z jiného zařízení.  
+Pokud vaše společnost používá pro přístup k počítačům čipové karty, je možné, že se přihlásíte z jiného zařízení.  
 
-1. Na svém zařízení otevřete aplikaci Portál společnosti. Ujistěte se, že je na zařízení, které budete používat pro přístup k prostředkům na pracovišti.       
+1. Na svém zařízení otevřete aplikaci Portál společnosti. Ujistěte se, že se jedná o zařízení, které budete používat pro přístup k pracovním prostředkům.       
 
 1. Vyberte **přihlásit z jiného zařízení**.  
 
-   ![Přihlašovací stránka portálu společnosti vyzve uživatele k e-mailovou adresu.  Ukazuje na tlačítko "Další" a odkaz "Přihlásit z jiného zařízení." K dispozici je také odkaz „Nedaří se vám přihlásit?“ Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](/intune-user-help/media/cp_ios_aad_signin_after_1804_005.png)
+   ![Přihlašovací stránka Portál společnosti vyzve uživatele k zadání e-mailové adresy.  Zobrazuje tlačítko Další a odkaz na přihlášení z jiného zařízení. K dispozici je také odkaz „Nedaří se vám přihlásit?“ Odkaz dole vede na informace Microsoftu o ochraně osobních údajů a souborech cookie.](/intune-user-help/media/cp_ios_aad_signin_after_1804_005.png)
 
 2. Obdržíte jedinečný jednorázový kód pro přihlášení k Portálu společnosti. Zkopírujte kód.
 
    ![Zobrazí se pokyny, abyste ze svého pracovního počítače přešli na stránku https://microsoft.com/devicelogin, kde najdete jedinečný přístupový kód, a ten pak použili k přihlášení.](/intune-user-help/media/cp_ios_aad_signin_after_1804_006.png)
 
-3. Na druhém zařízení (ten, že používáte k ověřování), otevřete prohlížeč a přejděte na [ https://microsoft.com/devicelogin ](https://microsoft.com/devicelogin). Zadejte nebo vložte kód.  
+3. Na svém jiném zařízení (ten, který používáte k ověřování) otevřete prohlížeč a pokračujte na [https://microsoft.com/devicelogin](https://microsoft.com/devicelogin). Zadejte nebo vložte kód.  
 
    ![Obrázek uživatelova prohlížeče na pracovním počítači místo aplikace Portál společnosti. Zobrazená stránka „Přihlášení na zařízení“ uživatele vyzve k zadání kódu, který dostal v aplikaci Portál společnosti.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_004.png)
 
-4. Vyberte __pokračovat__ povolit z portálu společnosti k přihlášení na vašem zařízení práce.   
+4. Vyberte __pokračovat__ a umožněte portál společnosti přihlašovat se k pracovnímu zařízení.   
 
    ![Uživatel zadal svůj jedinečný kód do pole a web „Přihlášení na zařízení“ požádal o potvrzení, že je Portál společnosti Intune správnou aplikací, která má získat ověření pro přihlášení.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_005.png)
 
@@ -91,7 +90,7 @@ Pokud vaše společnost používá pro přístup k počítačům čipové karty,
 
    ![Potvrzovací stránka, která uvádí, že se uživatel na svém zařízení přihlásil k aplikaci Portál společnosti a že tuto stránku může zavřít.](/intune/media/cp_ios_aad_signin_from_another_device_after_1704_006.png)
 
-6. Aplikace portál společnosti přihlášení na vašem zařízení práce.  
+6. Aplikace Portál společnosti vás přihlásí k pracovnímu zařízení.  
 
    ![Po absolvování procesu ověřování aplikace Portál společnosti zobrazí pruh načítání a přihlásí se.](/intune-user-help/media/cp_ios_aad_signin_after_1804_007.png)
 

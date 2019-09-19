@@ -18,25 +18,26 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9c25166ed9b004cc4e43e777008e33e88983912
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 2ced8f1ec37f652b7e283328141bc591b5961587
+ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501795"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71099826"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Použití zařízení s iOS na Portálu společnosti Intune
 Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro iOS. Může vám pomoct při řešení potíží a správě zařízení s iOS. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky.
 
 ## <a name="supported-versions"></a>Podporované verze
 
-Portál společnosti pro iOS aktuálně podporuje iOS 10.0 a novější.
+Portál společnosti pro iOS aktuálně podporuje iOS 10.0 a novější.  
+
 
 ## <a name="enrolling-into-intune-and-installing-the-company-portal"></a>Registrace do Intune a instalace Portálu společnosti
 
 - [Instalace a přihlášení do aplikace Portál společnosti Intune](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 - [Registrace zařízení s iOSem v Intune](enroll-your-device-in-intune-ios.md)
-- [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)
+- [Co se stane, když nainstalujete aplikaci Portál společnosti a zaregistrujete zařízení v Intune?](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md)  
 
 ## <a name="things-you-can-do-when-your-device-is-enrolled-in-intune"></a>Kroky, které můžete provést po registraci zařízení do služby Intune
 
