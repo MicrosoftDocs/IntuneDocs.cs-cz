@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7b7b4453d441d2f2367b19a6bf0505dabd8e6e48
-ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
+ms.openlocfilehash: a39c4a5830f5ce3d724508f5e6da64767c0bcdd0
+ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061680"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71140715"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,6 +57,9 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ## <a name="week-of-september-16-2019"></a>Týden od 16. září 2019
 
 ### <a name="app-management"></a>Správa aplikací
+
+#### <a name="company-portal-experience----1473353-3598357---"></a>Prostředí Portál společnosti <!-- 1473353, 3598357 -->
+Probíhá aktualizace Portál společnosti. Na stránce aplikace v rámci Portál společnosti budete moci použít více filtrů. Stránka s podrobnostmi o zařízení se taky aktualizuje s vylepšeným uživatelským prostředím. Právě probíhá zavádění těchto aktualizací pro všechny zákazníky a očekává se dokončení na konci příštího týdne.
 
 #### <a name="macos-support-for-web-apps----3174427---"></a>Podpora macOS pro webové aplikace <!-- 3174427 -->
 Webové aplikace, které umožňují přidat zástupce na adresu URL na webu, lze nainstalovat do Docku pomocí Portál společnosti macOS. Koncoví uživatelé mohou získat přístup k akci **instalace** ze stránky s podrobnostmi o aplikaci pro webovou aplikaci ve MacOS portál společnosti. Další informace o typu aplikace **webový odkaz** najdete v tématu [přidání aplikací do Microsoft Intune](apps-add.md) a [Přidání webových aplikací do Microsoft Intune](web-app.md).
