@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b96fa9fac25f6de4180d3dcc9ee4022a2cc43fe
-ms.sourcegitcommit: 7484ef8006f6b81d8976c328dd704512a31872ec
+ms.openlocfilehash: 6ab2e258553c049223806ddf199976c84ff6bcba
+ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190249"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71140690"
 ---
 # <a name="in-development-for-microsoft-intune---september-2019"></a>Ve vývoji Microsoft Intune – září 2019
 
@@ -191,7 +191,7 @@ Možnosti Správce zařízení s Androidem jsou nahrazené Androidem Enterprise.
 
 Stávající klienti nebudou mít ve svých prostředích žádné změny. 
 
-Další informace o Správci zařízení s Androidem v Intune najdete v tématu [registrace Správce zařízení](https://docs.microsoft.com/intune/android-enroll-device-administrator)s Androidem.
+Další informace o Správci zařízení s Androidem v Intune najdete v tématu [registrace Správce zařízení s Androidem](https://docs.microsoft.com/intune/android-enroll-device-administrator).
 
 ### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>Pro zařízení s iOS si Přizpůsobte obrazovku ochrana osobních údajů procesu registrace Portál společnosti <!-- 4394993  -->
 Pomocí Markdownu budete moci přizpůsobit obrazovku ochrany osobních údajů v Portál společnosti, kterou koncoví uživatelé uvidí během registrace iOS. Konkrétně budete moct přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení.
@@ -203,7 +203,7 @@ Pomocí Markdownu budete moci přizpůsobit obrazovku ochrany osobních údajů 
 Aktualizace softwaru budete moct nasadit do skupin zařízení macOS. Tato funkce zahrnuje kritické, firmware, konfigurační soubor a další aktualizace. V příští registraci zařízení budete moct odesílat aktualizace, nebo můžete vybrat týdenní plán pro nasazení aktualizací do nebo z časového intervalu, který jste nastavili. To pomáhá při aktualizaci zařízení mimo standardní pracovní dobu nebo v případě, že je vaše Helpdesk plně přiřazená. Zobrazí se vám také podrobná sestava všech zařízení macOS s nasazenými aktualizacemi. Pokud chcete zobrazit stav konkrétních aktualizací, můžete přejít k sestavě podle jednotlivých zařízení.
 
 ### <a name="send-custom-notifications-to-a-device----4928910----"></a>Odesílání vlastních oznámení do zařízení <!-- 4928910  -->
-Budete moct odesílat vlastní oznámení na konkrétní zařízení, ve kterých je nainstalovaná Portál společnosti nebo aplikace Intune. Provedete to tak, > že přejdete na**zařízení** > Intune**všechna zařízení** > zvolit zařízení > **více** > **Odeslat vlastní oznámení**. 
+Budete moct odesílat vlastní oznámení na konkrétní zařízení, ve kterých je nainstalovaná Portál společnosti nebo aplikace Intune. Provedete to tak, že přejdete na**zařízení** >  **Intune** > **všechna zařízení** > zvolit zařízení > **více** > **Odeslat vlastní oznámení**. 
 
 ### <a name="updates-to-android-enterprise-fully-managed-features----3464667-5227935-4062195-4631425-4631440---"></a>Aktualizace funkcí pro plně spravované verze Android Enterprise <!-- 3464667, 5227935, 4062195, 4631425, 4631440 -->
 
@@ -213,7 +213,7 @@ Do zařízení s Androidem spravovaná pro Android přidáváme následující p
     - Vytvoření profilu SCEP v části DO v Androidu Enterprise
     - propojení certifikátů SCEP s profilem Wi-Fi pro ověřování
     - propojení certifikátů SCEP a provádění profilů sítě VPN pro ověřování
-    - propojení certifikátů SCEP pro ověřování e-mailových profilů (přes AppConfig)
+    - připojení certifikátů SCEP k e-mailovým profilům pro ověřování (prostřednictvím konfigurace aplikace)
 - Systémové aplikace budou podporované na zařízeních s Androidem Enterprise. V Intune přidáte aplikaci pro Android Enterprise System tak, že vyberete**aplikace** >  **klientské aplikace** > **Přidat**. V seznamu **Typ aplikace** vyberte aplikace pro **Android Enterprise System**. Další informace o přidávání aplikací do Intune najdete v článku [Přidání aplikací do Microsoft Intune](apps-add.md). <!-- 4062195 -->
 - V **části dodržování předpisů** > zařízení –**vlastník zařízení**s**Androidem Enterprise** > budete moct vytvořit zásady dodržování předpisů, které nastaví úroveň ověření Google SafetyNet.   <!-- 4631425 -->
 - Na zařízeních se systémem Android Enterprise s plnou správou se budou podporovat poskytovatelé ochrany před mobilními hrozbami. V **Možnosti dodržování předpisů** > zařízením v zařízení s**Androidem Enterprise** > **Owner**si můžete vybrat přijatelnou úroveň hrozeb. <!-- 4631440 --> [Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune](compliance-policy-create-android-for-work.md#device-owner) seznam aktuálních nastavení.
@@ -232,7 +232,7 @@ V rámci pokračujících vylepšení budeme aktualizovat prostředí podpory v 
 ## <a name="security"></a>Zabezpečení
 
 ### <a name="tamper-protection-for-windows-defender-antivirus-----4705448---------"></a>Ochrana proti úmyslné ochraně pro antivirovou ochranu v programu Windows Defender  <!-- 4705448       -->
-Do nastavení, které Intune může spravovat pro antivirovou ochranu v programu Windows Defender, přidáváme *ochranu proti falšování* . K zapnutí nebo vypnutí ochrany před zneužitím budete moct použít konfigurační profil zařízení pro Windows 10 Endpoint Protection.  Další informace o ochraně před zneužitím najdete v dokumentaci k Windows v tématu [zabránění změnám nastavení zabezpečení pomocí ochrany před](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) neoprávněnými změnami. 
+Do nastavení, které Intune může spravovat pro antivirovou ochranu v programu Windows Defender, přidáváme *ochranu proti falšování* . K zapnutí nebo vypnutí ochrany před zneužitím budete moct použít konfigurační profil zařízení pro Windows 10 Endpoint Protection.  Další informace o ochraně před zneužitím najdete v dokumentaci k Windows v tématu [zabránění změnám nastavení zabezpečení pomocí ochrany před neoprávněnými](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) změnami. 
 
 
 <!-- ***********************************************-->
