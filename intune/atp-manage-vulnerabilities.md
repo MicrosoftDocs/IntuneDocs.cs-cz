@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58b27264e2f6955ae4f16843bb3493e5fdc993e
-ms.sourcegitcommit: fe67741c62749fc9114e9191092ed8b786dd4ffa
+ms.openlocfilehash: 69f214b4fd3f3b7767e719c0f68f19e178a8e29c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68270282"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167246"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Použití Intune k nápravě ohrožení zabezpečení identifikovaných ATP v programu Microsoft Defender  
 
@@ -37,13 +37,15 @@ V konzole Security Center Microsoft Defenderu správci zabezpečení ATP kontrol
 Když se úkol přijme, správce Intune pak vymění chybu zabezpečení i přes Intune, a to pomocí pokynů uvedených v rámci úlohy zabezpečení.  
 
 Mezi běžné akce týkající se nápravy patří:  
+
 - **Blokování** spuštění aplikace  
 - **Nasazením** aktualizace operačního systému snížíte riziko ohrožení zabezpečení.  
 - **Upravte** hodnotu registru.  
 - **Zakažte** nebo **Povolte** konfiguraci, aby ovlivnila chybu zabezpečení.  
 - Pokud není k dispozici žádná vhodná doporučení, **vyžadovat pozornost** upozornění pro správce k hrozbě.  
 
-Příklad pracovního postupu:  
+Příklad pracovního postupu:
+
 - V rámci služby Microsoft Defender ATP se zjistila Chyba aplikace s názvem contoso Media Player v4 a správce vytvoří úlohu zabezpečení pro aktualizaci této aplikace. Contoso Media Player je nespravovaná aplikace, která byla nasazena s Intune.  
 
   Tato úloha zabezpečení se zobrazí v konzole Intune se stavem čeká na vyřízení:  
@@ -61,13 +63,16 @@ Příklad pracovního postupu:
 ## <a name="prerequisites"></a>Požadavky  
 
 **Předplatná**:  
+
 - Microsoft Intune  
 - Rozšířená ochrana před internetovými útoky v programu Microsoft Defender (Zaregistrujte[se k bezplatné zkušební verzi](https://www.microsoft.com/WindowsForBusiness/windows-atp?ocid=docs-wdatp-main-abovefoldlink).)  
 
 **Konfigurace Intune pro ATP**:  
+
 - Konfigurace služby pro připojení k Microsoft Defender ATP.  
 - Nasaďte zásady dodržování předpisů pro zařízení s typem profilu **ATP Microsoft Defender (Windows 10 Desktop)** do zařízení, která budou mít riziko vyhodnocené atp.
-  Informace o tom, jak nastavit Intune pro práci s ATP, najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](https://docs.microsoft.com/intune/advanced-threat-protection#enable-microsoft-defender-atp-in-intune).  
+
+  Informace o tom, jak nastavit Intune pro práci s ATP, najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](advanced-threat-protection.md#enable-microsoft-defender-atp-in-intune).  
 
 ## <a name="work-with-security-tasks"></a>Práce s úlohami zabezpečení  
 
@@ -89,6 +94,6 @@ Příklad pracovního postupu:
 Po úspěšné opravě se může skóre rizika v ATP na základě nových informací z opravených zařízení vyřadit. 
 
 ## <a name="next-steps"></a>Další kroky
-Další informace o službě Intune a [ATP Microsoft Defender](https://docs.microsoft.com/intune/advanced-threat-protection)  
-Kontrola ochrany před [mobilními hrozbami](https://docs.microsoft.com/intune/mobile-threat-defense) Intune  
+Další informace o službě Intune a [ATP Microsoft Defender](advanced-threat-protection.md)  
+Kontrola ochrany před [mobilními hrozbami](mobile-threat-defense.md) Intune  
 Projděte si [řídicí panel Správa ohrožení zabezpečení & hrozeb](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) v ochraně ATP v programu Microsoft Defender.
