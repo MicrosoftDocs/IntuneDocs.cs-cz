@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,21 +18,20 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 690fb81350c0c264677c6c75b8942e9cdcd4e8f0
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546804"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163366"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
-Pokud ztratíte kód PIN nebo heslo zařízení, můžete použít k jeho resetování [web Portál společnosti](https://portal.manage.microsoft.com).  
+Pokud ztratíte kód PIN nebo heslo zařízení, můžete použít k jeho resetování [web Portál společnosti](https://portal.manage.microsoft.com). 
 
-Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro resetování hesla zobrazovat. V takovém případě kontaktujte svou firemní podporu, aby heslo resetovala za vás.
+Možnost resetovat heslo se nemusí zobrazit pro zařízení zaregistrovaná společností. V takovém případě se obraťte na firemní podporu, aby se obnovila.  
 
-   > [!NOTE]
-   > Nelze resetovat heslo pro zařízení s Androidem 7.0 nebo novější. Pokud zapomenete své heslo, je nutné obnovit zařízení do továrního nastavení. 
+Resetování hesla není k dispozici pro zařízení se systémem Android 7,0 a novějším. Pokud zapomenete heslo na jednom z těchto zařízení, musíte ho obnovit do továrního nastavení.  
 
 ## <a name="reset-your-passcode"></a>Postup resetování hesla
 
@@ -40,15 +39,15 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
 2. Vyberte zařízení, jehož heslo potřebujete resetovat.  
 
-    ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
+    ![Snímek obrazovky se stránkou zařízení se dvěma dlaždicemi, které zobrazují neidentifikované a obecně pojmenovaná zařízení. Šedý banner se nachází přímo pod zařízením a vyzve uživatele k identifikaci zařízení, které používají, nebo přidání nového.](./media/rename-reset-device-step2-1808.png) 
 
 3. Zvolte **Resetovat heslo**. Pokud se v horní části stránky možnost pro heslo nezobrazuje, vyberte **Více (…)**  > **Resetovat heslo**.   
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)   
 
-    ![Přiblížená ikona Více zvýrazněná červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
+    ![Snímek obrazovky s ikonou, zvýrazněný červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
 
-4. Po zobrazení výzvy klikněte na **Odhlásit se**. Po zobrazení další výzvy se znovu přihlaste. Na web Portál společnosti se musíte přihlásit do pěti minut, jinak se heslo zařízení neresetuje.  
+4. Po zobrazení výzvy klikněte na **Odhlásit se**. Po zobrazení další výzvy se znovu přihlaste. Přihlaste se zpátky na web Portál společnosti během pěti minut nebo Portál společnosti heslo zařízení resetovat.  
 
    > [!NOTE]
    > Opětovné přihlášení se vyžaduje pro potvrzení identity. Slouží jako ochrana před škodlivými pokusy o resetováním hesla.
@@ -61,7 +60,7 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
    ![Ukázkový snímek obrazovky s druhou zprávou zobrazovanou při resetování hesla. Obsahuje odkaz na dokumentaci s dalšími informacemi o nastavení nového hesla a samostatná tlačítka pro resetování a zrušení.](./media/iwp-reset-passcode-popup2-1808.png) 
 
-6. Pokud resetujete heslo zařízení s iOSem, stávající heslo se odebere. Na zařízeních s Windows a Androidem se vytvoří dočasné heslo pro odemknutí zařízení a nastavení nového. 
+6. Pokud resetujete heslo zařízení s iOSem, stávající heslo se odebere. U zařízení s Windows nebo Androidem se vám bude vydávat dočasné heslo pro odemknutí zařízení a nastavení nového hesla. 
 
    > [!NOTE]
    > Dočasné heslo pro zařízení s Windows a Androidem najdete na webu Portál společnosti na stránce detailů zařízení. Pokyny pro jednotlivé operační systémy najdete v části [Nastavení nového hesla](reset-your-passcode-cpwebsite.md#set-up-a-new-passcode).  
@@ -74,12 +73,12 @@ Používáte-li zařízení zaregistrované firmou, nemusí se vám možnost pro
 
 V této části najdete chování při resetování hesla a vytvoření dočasného hesla pro jednotlivé platformy.  
 
-**Android**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmena a číslice.
+**Android**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmeny a číslicemi.
 
-**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud pro otevírání zařízení nebo nákupy používáte snímač otisku prstu Touch ID, je potřeba ho nastavit znovu.  
+**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud k otevření zařízení nebo nákupu použijete dotykové ID, musíte ho nastavit znovu.  
 
-**Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmena a číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
+**Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmeny a číslicemi. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
 
-**Windows Phone 8.1**: Odebere existující heslo a vytvoří dočasné heslo tvořené čísla.  
+**Windows Phone 8,1**: Odebere existující heslo a vytvoří dočasné heslo, které se skládá z čísel.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

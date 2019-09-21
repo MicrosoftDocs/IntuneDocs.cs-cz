@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fef4b6969680101e2e4f045bc83a8974536eaf2a
-ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
+ms.openlocfilehash: 55132570683742bd3e8dcec1c20726b9eb2c4b16
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68660955"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166820"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Přidání a přiřazení aplikací pro ochranu před mobilními hrozbami (MTD) pomocí Intune  
 
@@ -35,8 +35,8 @@ Pomocí Intune můžete přidávat a nasazovat aplikace pro ochranu před mobiln
 Níže uvedený postup musíte provést na [portálu Azure Portal](https://portal.azure.com/). Ověřte si, že jste seznámení s těmito postupy:
 
 - [Přidání aplikace do služby Intune](apps-add.md)
-- [Přidání zásad konfigurace aplikace pro iOS do služby Intune](https://docs.microsoft.com/intune/deploy-use/configure-ios-apps-with-mobile-app-configuration-policies-in-microsoft-intune)
-- [Přiřazení aplikace pomocí služby Intune](https://docs.microsoft.com/intune/deploy-use/deploy-apps-in-microsoft-intune)
+- [Přidání zásad konfigurace aplikace pro iOS do služby Intune](app-configuration-policies-use-ios.md)
+- [Přiřazení aplikace pomocí služby Intune](apps-deploy.md)
 
 > [!TIP]
 > Portál společnosti Intune funguje jako zprostředkovatel na zařízeních s Androidem, aby uživatelé mohli své identity zkontrolovat pomocí Azure AD.
@@ -136,7 +136,7 @@ Vyberte část, která odpovídá vašemu poskytovateli MTD:
   - Přečtěte si pokyny pro [přidávání aplikací z Android Storu do Microsoft Intune](store-apps-android.md). V **kroku 7**použijte tuto [adresu URL obchodu Wandera Mobile App Store](https://play.google.com/store/apps/details?id=com.wandera.android) . V případě **minimálního operačního systému**vyberte **Android 5,0**.
 
 - **iOS**
-  - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](https://docs.microsoft.com/intune/store-apps-ios). Použijte tuto [adresu URL obchodu Wandera mobilních aplikací](https://itunes.apple.com/app/wandera/id605469330) v **kroku 11** pro **adresu URL AppStore**.
+  - Přečtěte si pokyny pro [přidávání aplikací z iOS Storu do Microsoft Intune](store-apps-ios.md). Použijte tuto [adresu URL obchodu Wandera mobilních aplikací](https://itunes.apple.com/app/wandera/id605469330) v **kroku 11** pro **adresu URL AppStore**.
 
 ## <a name="configure-your-mtd-apps-with-an-ios-app-configuration-policy"></a>Konfigurace aplikací MTD k zásadám konfigurace aplikace pro iOS  
 
@@ -224,5 +224,5 @@ Pokud chcete přidat zásady konfigurace aplikace Wandera pro iOS, přečtěte s
 ## <a name="assign-apps-to-groups"></a>Přiřazení aplikací skupinám  
 - Tento krok platí pro všechny partnery MTD. Přečtěte si pokyny pro [přiřazení aplikací do skupin pomocí Intune](apps-deploy.md).
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 - [Konfigurace zásad dodržování předpisů zařízení pro MTD](mtd-device-compliance-policy-create.md)

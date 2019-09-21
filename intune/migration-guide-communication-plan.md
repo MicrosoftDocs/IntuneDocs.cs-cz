@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5688039101e7cecf5631a0ad8dee4f343e183d96
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 325a0efeff56a2bc930fa0082023202f9c2e7696
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022853"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166767"
 ---
 # <a name="plan-communications"></a>Plán komunikace
 
@@ -59,6 +59,6 @@ Vytvořili jsme krátká, podrobná videa, která pomáhají uživatelům usnadn
 
 Intune obsahuje další prostředky, které můžete použít ke zvýšení úrovně registrace zařízení uživateli:
 
-- Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](https://docs.microsoft.com/intune/end-user-educate).
-- [Registrace zařízení v Intune pro správce IT](https://docs.microsoft.com/intune/device-enrollment) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
+- Informace o postupu při registraci pro konkrétní platformu mobilního OS najdete v článku [Jaké informace mají dostat koncoví uživatelé o Microsoft Intune](end-user-educate.md).
+- [Registrace zařízení v Intune pro správce IT](device-enrollment.md) vysvětluje, jak zaregistrovat zařízení s Androidem, iOS a Mac v Intune.
 - Sdílejte [adresu URL aplikace Portál společnosti](http://go.microsoft.com/fwlink/?LinkID=396941) s uživateli Androidu, iOS a Windows. Tato adresa URL přesměruje na příslušný seznam aplikací Portál společnosti v zařízeních se systémem Android, iOS a Windows.

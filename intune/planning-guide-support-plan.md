@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c71edf84fb1ade261eefc1b3de4543e941bf0657
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548334"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166808"
 ---
 # <a name="develop-a-support-plan"></a>Příprava plánu podpory
 
@@ -82,9 +82,9 @@ V následujícím příkladu je program školení pracovníků podpory pro Intun
 
 - Nástroje a prostředky
 
-- Otázky a odpovědi
+- Dotazy a odpovědi
 
-[Dokumentace k Intune](https://docs.microsoft.com/intune/) nabízí přehled o Intune, podrobný popis funkcí a některé informace o odstraňování potíží. [Fórum Intune](https://social.technet.microsoft.com/Forums/home) je komunitní informační zdroj, kde se můžete ptát a hledat odpovědi na témata, která nenajdete v dokumentaci k Intune.
+[Dokumentace k Intune](index.yml) poskytuje přehled Intune, podrobné popisy funkcí a některé informace pro řešení potíží. [Fórum Intune](https://social.technet.microsoft.com/Forums/home) je komunitní informační zdroj, kde se můžete ptát a hledat odpovědi na témata, která nenajdete v dokumentaci k Intune.
 
 ## <a name="what-opportunities-are-there-to-involve-the-support-team-earlier"></a>Jaké existují příležitosti k dřívějšímu zapojení týmu podpory?
 

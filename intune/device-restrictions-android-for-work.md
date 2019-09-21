@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 09/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8bd537315a09c0c7cf338ac0892fc4ae3d1dc8fc
-ms.sourcegitcommit: b78793ccbef2a644a759ca3110ea73e7ed6ceb8f
+ms.openlocfilehash: 53a9c3e8b80f611bc9e293ba7e07c1aece0cfc58
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550185"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163042"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
@@ -121,7 +121,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
     2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
     3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi.
 
-      Pokud se nastavíjako nenakonfigurované, správci nemůžou pozastavit celoobrazovkový režim. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
+      Pokud se nastaví jako **nenakonfigurované**, správci nemůžou pozastavit celoobrazovkový režim. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
 
     - **Ponechat kód celoobrazovkového režimu**: Zadejte číslici PIN s číslem 4-6. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
 
@@ -145,7 +145,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
   - **Ovládací prvek hlasitost média**: **Možnost Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a koncovým uživatelům umožňuje upravit hlasitost média zařízení pomocí posuvníku. **Není nakonfigurováno** (výchozí) nezobrazuje ovládací prvek hlasitost multimédií na spravované domovské obrazovce. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují. 
 
-  - **Režim spořiče obrazovky**: Když je zařízení zamknuté nebo odcházející, zobrazí se na spravované domovské obrazovce spořič obrazovky. **Není nakonfigurováno** (výchozí) nezobrazuje spořič obrazovky na spravované domovské obrazovce.
+  - **Režim spořiče obrazovky**: Když je zařízení zamknuté nebo odcházející **, zobrazí se** na spravované domovské obrazovce spořič obrazovky. **Není nakonfigurováno** (výchozí) nezobrazuje spořič obrazovky na spravované domovské obrazovce.
 
     Pokud je tato možnost povolená, nakonfigurujte taky:
 
@@ -159,7 +159,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
     - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: Vyberte, jak dlouho zařízení zobrazuje spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota `0` je sekund. Pokud je ponecháno prázdné nebo je nastaveno na`0`hodnotu nula (), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
     - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: Vyberte, jak dlouho je zařízení nečinné, než se zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota `30` je sekund. Je nutné zadat číslo větší než nula (`0`).
-    - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. Nenakonfigurováno zobrazuje spořič obrazovky i v případě, že přehrávání zvuku nebo videa probíhá.
+    - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. **Nenakonfigurováno** zobrazuje spořič obrazovky i v případě, že přehrávání zvuku nebo videa probíhá.
 
 ### <a name="device-password-settings"></a>Nastavení hesla zařízení
 
@@ -200,6 +200,9 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 - **Přidat nové uživatele**: Vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v přidávání nových uživatelů. Každý uživatel má osobní pracovní prostor na zařízení pro vlastní domovské obrazovky, účty, aplikace a nastavení. **Není nakonfigurováno** umožňuje uživatelům přidávat ostatním uživatelům na zařízení.
 - **Odebrání uživatele**: Vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v odebírání uživatelů. **Není nakonfigurováno** umožňuje uživatelům odebírat další uživatele ze zařízení.
 - **Změny účtu**: Vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v úpravách účtů. **Není nakonfigurováno** umožňuje uživatelům aktualizovat uživatelských účtů v zařízení.
+
+  > [!NOTE]
+  > Toto nastavení se nedodržuje u zařízení vlastníka zařízení (plně spravovaná). Pokud toto nastavení nakonfigurujete, nastavení se ignoruje a nemá žádný vliv.
 
 ### <a name="applications"></a>Aplikace
 
@@ -270,6 +273,10 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 - **Hledat pracovní kontakty z osobního profilu**: Vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v hledání pracovních kontaktů v aplikacích v osobním profilu. **Není nutné** umožňuje vyhledat pracovní kontakty v osobním profilu.
 
 - **Kamera**: Vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení v pracovním profilu. Nastavení nemá vliv na kameru v osobním profilu. **Není nutné** umožňuje přístup k fotoaparátu/kamery v pracovním profilu.
+
+- **Povoluje widgety z pracovních profilů aplikace**: **Možnost Povolit** umožňuje koncovým uživatelům umístit widgety, které jsou vystavené aplikacemi na domovské obrazovce. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
+
+  Například Outlook se nainstaluje do pracovních profilů uživatelů. Když je tato možnost nastavená na **Povolit**, můžou uživatelé na domovské obrazovce zařízení umístit widget agendy.
 
 #### <a name="work-profile-password"></a>Heslo pracovního profilu
 

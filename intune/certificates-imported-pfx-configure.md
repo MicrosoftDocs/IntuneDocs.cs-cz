@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 18d01692f8c42b67605c223f59e13b1e5197a8db
-ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
+ms.openlocfilehash: f68ee794ce1fce2fbdbae8898c412309906b3f5c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71017940"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167075"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -43,7 +43,7 @@ K používání importovaných certifikátů PKCS s Intune budete potřebovat n�
 
   Tento konektor se může automaticky aktualizovat, jakmile budou k dispozici nové verze. Chcete-li použít možnost aktualizace, je nutné zajistit, aby byly brány firewall otevřené, aby konektor mohl kontaktovat **AutoUpdate.msappproxy.NET** na portu **443**.  
 
-  Další informace o všech síťových koncových bodech, ke kterým konektor přistupuje, najdete v tématu [požadavky na konfiguraci sítě Intune a šířku pásma](https://docs.microsoft.com/intune/network-bandwidth-use).
+  Další informace o všech síťových koncových bodech, ke kterým konektor přistupuje, najdete v tématu [požadavky na konfiguraci sítě Intune a šířku pásma](network-bandwidth-use.md).
 
 
 - **Windows Server**:  

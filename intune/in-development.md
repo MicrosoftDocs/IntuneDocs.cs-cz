@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ab2e258553c049223806ddf199976c84ff6bcba
-ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
+ms.openlocfilehash: 4bd5392abba3ea22127cb9bcbbb53ec4929f2d5e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71140690"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166352"
 ---
 # <a name="in-development-for-microsoft-intune---september-2019"></a>Ve vývoji Microsoft Intune – září 2019
 
@@ -90,7 +90,7 @@ Aplikace budou moci volat Graph API Intune pomocí operací čtení i zápisu po
 Zásady ochrany aplikací Intune (aplikace) na zařízeních s Androidem a iOS vám umožní řídit obsah oznámení aplikací pro účty org. Tato funkce bude vyžadovat podporu aplikací a nemusí být k dispozici pro všechny aplikace s podporou aplikací. Další informace o aplikaci najdete v tématu [co jsou zásady ochrany aplikací?](app-protection-policy.md).
 
 ### <a name="available-google-play-app-reporting-for-android-work-profiles----3041956----"></a>Dostupná Google Play vytváření sestav aplikací pro pracovní profily Androidu <!-- 3041956  -->
-Pro dostupná instalace aplikací na zařízeních s pracovním profilem Androidu můžete zobrazit stav instalace aplikace a nainstalovanou verzi spravovaných aplikací Google Play. Další informace najdete v tématu [monitorování zásad ochrany aplikací](app-protection-policies-monitor.md), [Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md) a [spravovaného Google Play typu aplikace](apps-add-android-for-work.md#managed-google-play-app-type).
+Pro dostupná instalace aplikací na zařízeních s pracovním profilem Androidu můžete zobrazit stav instalace aplikace a nainstalovanou verzi spravovaných aplikací Google Play. Další informace najdete v tématu [monitorování zásad ochrany aplikací](app-protection-policies-monitor.md), [Správa zařízení s pracovním profilem Androidu pomocí Intune](android-enterprise-overview.md) a [spravovaného Google Play typu aplikace](apps-add-android-for-work.md#managed-google-play-app-types).
 
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
@@ -132,7 +132,7 @@ V budoucí aktualizaci budou k dispozici nová nastavení, která můžete říd
 - **Ovládání hlasu**: Povolí ovládání hlasu na zařízení v celoobrazovkovém režimu.
 - **Změna ovládacího prvku hlas**: Umožňuje uživatelům změnit nastavení ovládacího prvku hlasu v zařízení v celoobrazovkovém režimu.
 
-Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení pro veřejného terminálu iOS (jenom pod dohledem)](device-restrictions-ios.md#kiosk-supervised-only).
+Pokud chcete zobrazit aktuální nastavení, přejděte na [nastavení pro veřejného terminálu iOS (jenom pod dohledem)](device-restrictions-ios.md#kiosk).
 
 Platí pro:
 
@@ -167,7 +167,7 @@ Můžete zadat adresu URL obchodu s aplikacemi iTunes, například `https://itun
 - `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8`
 - `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`
 
-Další informace o těchto nastaveních najdete v tématu [zobrazení nebo skrytí aplikací (jenom pod dohledem)](device-restrictions-ios.md#show-or-hide-apps-supervised-only).
+Další informace o těchto nastaveních najdete v tématu [zobrazení nebo skrytí aplikací](device-restrictions-ios.md#show-or-hide-apps).
 
 Platí pro:
 
@@ -191,7 +191,7 @@ Možnosti Správce zařízení s Androidem jsou nahrazené Androidem Enterprise.
 
 Stávající klienti nebudou mít ve svých prostředích žádné změny. 
 
-Další informace o Správci zařízení s Androidem v Intune najdete v tématu [registrace Správce zařízení s Androidem](https://docs.microsoft.com/intune/android-enroll-device-administrator).
+Další informace o Správci zařízení s Androidem v Intune najdete v tématu [registrace Správce zařízení s Androidem](android-enroll-device-administrator.md).
 
 ### <a name="for-ios-devices-customize-the-enrollment-process-privacy-screen-of-the-company-portal----4394993----"></a>Pro zařízení s iOS si Přizpůsobte obrazovku ochrana osobních údajů procesu registrace Portál společnosti <!-- 4394993  -->
 Pomocí Markdownu budete moci přizpůsobit obrazovku ochrany osobních údajů v Portál společnosti, kterou koncoví uživatelé uvidí během registrace iOS. Konkrétně budete moct přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení.

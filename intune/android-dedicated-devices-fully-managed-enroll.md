@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99ccc8c61aa781bdcb6ac79c76202253597b8ef6
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 4012dc4046eccf836c73e15409dae182eaf12231
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070995"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163258"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení (Preview)
+# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices"></a>Registrace vyhrazených zařízení s Androidem Enterprise nebo plně spravovaných zařízení
 
 Po nastavení podnikových vyhrazených [zařízení](android-kiosk-enroll.md) s Androidem nebo [plně spravovaných zařízení](android-fully-managed-enroll.md) v Intune můžete zařízení zaregistrovat. Způsob registrace zařízení s Androidem Enterprise závisí na operačním systému.
 
@@ -91,7 +91,7 @@ Abyste mohli použít systém Zero Touch od Googlu, musí ho zařízení podporo
 4. Zvolte **Použít**.
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Nasazení aplikací pro Android](apps-deploy.md)
 - [Přidat zásady konfigurace pro Android](device-profiles.md)
 

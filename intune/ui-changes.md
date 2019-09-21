@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 052190185159dfdee4adee94d4c43c72ce6f41d4
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac74cc547d13e92b87a8e148845ff1bc7be8efe4
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046324"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167002"
 ---
 # <a name="where-did-my-intune-feature-go-in-azure"></a>Kde v Azure najdu svoje funkce Intune?
 Při přesunu Intune do portálu Azure Portal jsme využili příležitost uspořádat některé úlohy logičtěji. Každé vylepšení ale přichází za cenu toho, že je potřeba se s novým uspořádáním seznámit. Tato referenční příručka je určena uživatelům, kteří znají dobře Intune na klasickém portálu a zajímá je, jak s Intune pracovat na webu Azure Portal. Pokud tento článek nepopisuje funkci, kterou hledáte, uveďte ji v poznámce na konci článku, abychom ho mohli aktualizovat.
@@ -51,7 +51,7 @@ Na klasickém portálu jste mohli nastavit pravidla, která řídí registraci m
 
 ![Obrázek klasických pravidel registrace mobilních zařízení](./media/01-classic-rules.png)
 
-Tato pravidla platila bez výjimky pro všechny uživatele ve vašem účtu Intune. Na webu Azure Portal teď tato pravidla zobrazují ve dvou typů různých zásad: Omezení typu zařízení a omezení limitů počtů zařízení.
+Tato pravidla platila bez výjimky pro všechny uživatele ve vašem účtu Intune. Tato pravidla se teď v Azure Portal zobrazují ve dvou různých typech zásad: Omezení typu zařízení a omezení počtu zařízení.
 
 ![Obrázek omezení registrace mobilních zařízení v Azure](./media/02-azure-enroll-restrictions.png)
 
@@ -69,15 +69,15 @@ Možnost povolit nebo blokovat zařízení v osobním vlastnictví se teď sprav
 
 Nové možnosti omezení se přidají jenom do portálu Azure Portal.
 
-## <a name="where-did-my-conditional-access-policies-go"></a>Kde najdu své zásady podmíněného přístupu?
-Po migraci vašeho tenanta na portálu Azure portal, i nadále vynutit zásady podmíněného přístupu pro vašeho tenanta. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
+## <a name="where-did-my-conditional-access-policies-go"></a>Kde se zásady podmíněného přístupu přecházejí?
+Jakmile se tenant migruje do Azure Portal, budou zásady podmíněného přístupu vašeho tenanta i nadále vynutily. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud chcete zobrazit a měnit zásady podmíněného přístupu na webu Azure portal, musíte odebrat starý zásady z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace týkající se migrace zásad podmíněného přístupu najdete v tématu [migrace klasických zásad na webu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
+Pokud chcete zobrazit a změnit zásady podmíněného přístupu z Azure Portal, bude nutné odebrat staré zásady z portálu Classic. A potom je znovu vytvořit na webu Azure Portal. Další informace o migraci zásad podmíněného přístupu najdete v tématu [migrace klasických zásad na webu Azure Portal](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-migration). 
 
 ## <a name="where-did-my-compliance-policies-go"></a>Kde jsou moje zásady dodržování předpisů?
 Po migraci tenanta na web Azure Portal zůstávají zásady dodržování předpisů tenanta nadále v platnosti. Z Intune na webu Azure Portal je ale nemůžete prohlížet ani upravovat.
 
-Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](https://docs.microsoft.com/intune/device-compliance-get-started). 
+Pokud chcete zásady dodržování předpisů zobrazovat a měnit na webu Azure Portal, musíte staré zásady odebrat z klasického portálu. A potom je znovu vytvořit na webu Azure Portal. Další informace o zásadách dodržování předpisů pro zařízení najdete v článku o tom, [jak začít používat zásady dodržování předpisů pro zařízení v Intune](device-compliance-get-started.md). 
 
 ## <a name="where-did-apple-dep-go"></a>Kde najdu Program registrace zařízení (DEP) Apple?
 Na klasickém portálu jste mohli nastavit integraci Intune s Programem registrace zařízení Apple a ručně vyžádat synchronizaci se službou společnosti Apple:

@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37a1c9fad9b77e39145f1b4183b8176fb1677613
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 99dcf53d7571dfa660ee669c1d7adcea65f0797e
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022870"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167729"
 ---
 # <a name="what-is-device-management"></a>Co je správa zařízení? 
 
@@ -28,7 +28,7 @@ Hlavní úlohou každého správce je ochrana a zabezpečení prostředků a dat
 
 Díky poskytovateli správy zařízení může organizace zajistit, aby přístup k proprietárním informacím měli jenom oprávnění lidé a zařízení. Podobně se uživatelé zařízení můžou rozpracovat na práci s pracovními daty z telefonu, protože ví, že jejich zařízení splňuje požadavky organizace na zabezpečení. Jako zástupci organizace si možná kladete otázku: **Jaký produkt máme k ochraně našich prostředků použít?**
 
-Odpověď je [Microsoft Intune](https://docs.microsoft.com/intune/introduction-intune). Intune nabízí správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). K hlavním úlohám řešení MDM nebo MAM patří:
+Odpověď je [Microsoft Intune](introduction-intune.md). Intune nabízí správu mobilních zařízení (MDM) a správu mobilních aplikací (MAM). K hlavním úlohám řešení MDM nebo MAM patří:
 
 - Podporují nejrůznější mobilní prostředí a bezpečně spravují zařízení s iOS, Androidem, Windows a macOS.
 - Ujistěte se, že zařízení a aplikace vyhovují požadavkům na zabezpečení vaší organizace.
@@ -44,7 +44,7 @@ Je běžné, že lidé mají několik zařízení, která používají různé p
 
 Pomocí Intune můžete spravovat více zařízení pro každou osobu a různé platformy, které běží na jednotlivých zařízeních, například iOS, macOS, Android a Windows. Intune odděluje zásady a nastavení podle platformy zařízení. Proto je snadné spravovat a zobrazovat zařízení konkrétní platformy.
 
-**[Typické scénáře](https://docs.microsoft.com/intune/common-scenarios)** jsou výborným zdrojem informací o tom, jak se v Intune řeší běžné situace při práci s mobilními zařízeními. Najdete zde scénáře pro tyto oblasti:  
+**[Typické scénáře](common-scenarios.md)** jsou výborným zdrojem informací o tom, jak se v Intune řeší běžné situace při práci s mobilními zařízeními. Najdete zde scénáře pro tyto oblasti:  
 - Ochrana e-mailu pomocí místního Exchange
 - Bezpečný přístup k Office 365
 - Použití osobních zařízení pro přístup k prostředkům organizace
@@ -52,16 +52,16 @@ Pomocí Intune můžete spravovat více zařízení pro každou osobu a různé 
 ## <a name="integration-with-secure-and-protect-services"></a>Integrace se službami zabezpečení a ochrany
 Hlavní úlohou řešení správy zařízení je poskytování zabezpečení a ochrany. Intune k plnění této úlohy skvěle využívá integraci s dalšími službami. Příklad:
 
-- **Microsoft 365** je hlavní komponentou pro zjednodušení běžných úloh IT. V centru pro správu Microsoft 365 vytváříte uživatele a spravujete skupiny. Získáte také přístup k dalším službám, jako je například Intune, Azure AD a další. 
+- **Microsoft 365** je hlavní komponentou pro zjednodušení běžných úloh IT. V centru pro správu Microsoft 365 vytváříte uživatele a spravujete skupiny. Získáte také přístup k dalším službám, jako je například Intune, Azure AD a další.
 
   Vytvořte například skupinu zařízení se systémem iOS v Microsoft 365. Potom pomocí Intune odešlete této skupině zařízení s iOSem zásady týkající se funkcí iOSu, jako jsou například přístup do App Storu, použití AirDropu, zálohování v iCloudu, použití webového filtru Apple a další.
 
 - **Windows Defender** obsahuje mnoho funkcí zabezpečení, které usnadňují ochranu zařízení s Windows 10. Při společném použití Intune a programu Windows Defender můžete například: 
 
-  - Povolit, aby [filtr SmartScreen v programu Windows Defender](https://docs.microsoft.com/intune/endpoint-protection-windows-10) hledal podezřelou aktivitu souborů a aplikací na mobilních zařízeních 
-  - Použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) k ochraně před narušením zabezpečení mobilních zařízení. A můžete tak omezit dopad porušení zabezpečení tím, že zablokujete uživatele z firemních prostředků.
+  - Povolit, aby [filtr SmartScreen v programu Windows Defender](endpoint-protection-windows-10.md) hledal podezřelou aktivitu souborů a aplikací na mobilních zařízeních 
+  - Použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender (ATP)](advanced-threat-protection.md) k ochraně před narušením zabezpečení mobilních zařízení. A můžete tak omezit dopad porušení zabezpečení tím, že zablokujete uživatele z firemních prostředků.
 
-- **Podmíněný přístup** je funkce Azure Active Directory a v Intune se v tomto případě integruje. Pomocí [podmíněného přístupu](https://docs.microsoft.com/intune/conditional-access)zajistěte, aby přístup k e-mailu, SharePointu a dalším aplikacím umožňoval jenom vyhovující zařízení. 
+- **Podmíněný přístup** je funkce Azure Active Directory a v Intune se v tomto případě integruje. Pomocí [podmíněného přístupu](conditional-access.md)zajistěte, aby přístup k e-mailu, SharePointu a dalším aplikacím umožňoval jenom vyhovující zařízení. 
 
 ## <a name="choose-the-device-management-solution-thats-right-for-you"></a>Výběr správného řešení pro správu zařízení
 
@@ -69,7 +69,7 @@ Existuje několik způsobů přístupu ke správě zařízení. Nejdřív může
 
 U druhého způsobu spravujete aplikace na zařízeních. Tento přístup se nazývá **Správa mobilních aplikací (MAM)** . Uživatelé můžou k přístupu k prostředkům organizace používat svoje osobní zařízení. Při otevření aplikace, jako je e-mail nebo SharePoint, se uživatelům zobrazí výzva k dalšímu ověření. Pokud dojde ke ztrátě nebo odcizení zařízení, můžete odebrat všechna data organizace ze zařízení. 
 
-Můžete také použít společně kombinaci [MDM a MAM](https://docs.microsoft.com/intune/byod-technology-decisions).
+Můžete také použít společně kombinaci [MDM a MAM](byod-technology-decisions.md).
 
 Při nastavení Intune se také rozhodujete, jestli ke správě zařízení budete používat výhradně Azure Portal, nebo společně Intune a Microsoft 365. [Migrace správy mobilních zařízení do Intune v Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) je Případová studie Microsoftu. V takovém případě si prostudujte, jak Microsoft IT zvolí moderní přístup k správě zařízení, a přečtěte si získané lekce.
 
@@ -79,20 +79,20 @@ Centrum pro správu [správy zařízení](https://devicemanagement.microsoft.com
 
 V centru pro správu správy zařízení můžete:
 
-- [Registrovat zařízení](https://docs.microsoft.com/intune/device-enrollment)
-- [Nastavení dodržování předpisů zařízením](https://docs.microsoft.com/intune/device-compliance-get-started)
-- [Správa zařízení](https://docs.microsoft.com/intune/device-management)
-- [Správa aplikací](https://docs.microsoft.com/intune/app-management)  
-- [E-knihy pro iOS](https://docs.microsoft.com/intune/vpp-ebooks-ios)  
-- [Instalace konektoru On-Premises Connector](https://docs.microsoft.com/intune/exchange-connector-install)  
-- [Správa rolí](https://docs.microsoft.com/intune/role-based-access-control)  
+- [Registrovat zařízení](device-enrollment.md)
+- [Nastavení dodržování předpisů zařízením](device-compliance-get-started.md)
+- [Správa zařízení](device-management.md)
+- [Správa aplikací](app-management.md)  
+- [E-knihy pro iOS](vpp-ebooks-ios.md)  
+- [Instalace konektoru On-Premises Connector](exchange-connector-install.md)  
+- [Správa rolí](role-based-access-control.md)  
 - Spravovat aktualizace softwaru
-  - [Správa aktualizací Windows 10](https://docs.microsoft.com/intune/windows-update-for-business-configure)  
-  - [Správa aktualizací iOSu](https://docs.microsoft.com/intune/software-updates-ios)  
+  - [Správa aktualizací Windows 10](windows-update-for-business-configure.md)  
+  - [Správa aktualizací iOSu](software-updates-ios.md)  
 - [Azure Active Directory](https://docs.microsoft.com/azure/active-directory)  
 - [Správa uživatelů](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory)
 - [Správa skupin a členů](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-manage-groups)
-- [Řešení potíží](https://docs.microsoft.com/intune/help-desk-operators)
+- [Řešení potíží](help-desk-operators.md)
 
 ## <a name="next-step"></a>Další krok
 Až budete připraveni začít s řešením MDM nebo MAM, Projděte si jednotlivé kroky k nastavení Intune, registraci zařízení a zahájení vytváření zásad. [Správa mobilních zařízení pro Microsoft 365](https://docs.microsoft.com/microsoft-365/enterprise/mobility-infrastructure) je také skvělým prostředkem.

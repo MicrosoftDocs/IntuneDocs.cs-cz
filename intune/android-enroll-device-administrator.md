@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1dc495e6356a35215943415e03a46496a72bddf1
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: c8c9375449e55d2e6cac511cb0e279355ec95294
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071050"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163276"
 ---
 # <a name="android-device-administrator-enrollment"></a>Registrace správce zařízení s Androidem
 
@@ -49,8 +49,9 @@ Další informace o funkcích pro Android Enterprise v Google najdete v těchto 
 
 Intune ve výchozím nastavení umožňuje registraci zařízení s Androidem pomocí možností Správce zařízení.
 
-1. Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato položka se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
-2. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).  
+1. Při přípravě na správu mobilních zařízení musíte nastavit autoritu pro správu mobilních zařízení (MDM) na **Microsoft Intune**. Pokyny k tomu najdete v článku [Nastavení autority MDM](mdm-authority-set.md). Tato možnost se nastavuje jenom jednou při prvním nastavování Intune pro správu mobilních zařízení.
+2. Přejít na **Intune** > **registrace** > zařízení registrace zařízení s**Androidem** > **osobní a zařízení vlastněná společností pomocí oprávnění** > pro správu zařízení**použití zařízení správce ke správě zařízení**.
+3. [Sdělte uživatelům, jak mají svá zařízení zaregistrovat](/intune-user-help/enroll-your-device-in-intune-android).  
 
 Po registraci můžete začít se správou zařízení uživatelů v Intune včetně [přiřazení zásad dodržování předpisů](compliance-policy-create-android.md), [správy aplikací](app-management.md) a dalších úloh.
 
@@ -64,6 +65,6 @@ Pokud chcete blokovat zařízení pro správce zařízení s Androidem nebo zabl
 
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - [Přiřazení zásad dodržování předpisů](compliance-policy-create-android.md)
 - [Správa aplikací](app-management.md)

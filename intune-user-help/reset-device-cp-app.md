@@ -1,6 +1,6 @@
 ---
-title: Resetování zařízení z aplikace portál společnosti Intune | Dokumentace Microsoftu
-description: Resetování zařízení do továrního nastavení z portálu společnosti pro Windows 10.
+title: Resetovat zařízení z aplikace Portál společnosti Intune | Microsoft Docs
+description: Obnovte tovární nastavení zařízení z Portál společnosti pro Windows 10.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,34 +18,35 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser; intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 882248261f4386a8191067a0e8533c4c24fc2a5b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e5aff186d3850e8f9a6081168a5adc9956504019
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504361"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163344"
 ---
-# <a name="reset-device-from-the-company-portal-app"></a>Resetování zařízení z aplikace portál společnosti  
+# <a name="reset-device-from-the-company-portal-app"></a>Resetování zařízení z aplikace Portál společnosti  
 
-Používané, ztraceného nebo odcizeného zařízení obnovíte tovární nastavení z aplikace portál společnosti.  
+Obnoví z aplikace Portál společnosti použité, ztracené nebo odcizené zařízení do továrního nastavení.  
 
-Po resetování zařízení se už zobrazí v aplikaci portál společnosti. Své stávající aplikace a soubory budou vymazány. proto se obnoví nastavení out-of-box.  
+Po resetování zařízení se už nebude zobrazovat v Portál společnosti. Stávající aplikace a soubory budou smazány a budou obnoveny do připraveného nastavení.  
 
-1. Otevřete portál společnosti.  
-2. V části **Moje zařízení**, vyberte zařízení, kterou chcete obnovit.   
 
-    ![Příklad snímek obrazovky aplikace portál společnosti, domovské obrazovce, zvýraznění sekcí Moje zařízení.](./media/1802-cp-app-windows-home.png)  
+1. Otevřete Portál společnosti.  
+2. V části **Moje zařízení**vyberte zařízení, které chcete resetovat.   
 
-3. Na **podrobnosti o zařízení** obrazovky, vyberte **zobrazit další** nabídky.  
+    ![Ukázkový snímek obrazovky aplikace Portál společnosti, Domovská obrazovka a zvýraznění oddílu moje zařízení](./media/1802-cp-app-windows-home.png)  
 
-    ![Ukázkovém snímku obrazovky aplikace portál společnosti, zařízení podrobně popisuje obrazovky, zvýraznění naleznete v další nabídce.](./media/1802-cp-app-windows-device-details.png)  
+3. Na obrazovce **Podrobnosti o zařízení** vyberte nabídku **Zobrazit další** .  
+
+    ![Příklad obrazovky Portál společnosti aplikace, obrazovka s podrobnostmi o zařízení, zvýraznění zobrazit další nabídku](./media/1802-cp-app-windows-device-details.png)  
 
 4. Vyberte **Resetovat**.  
 
-     ![Příklad snímek obrazovky aplikace portál společnosti, podrobnostmi o zařízení, zvýraznění akce Reset. ](./media/1802-cp-app-windows-device-details-reset.png)  
+     ![Příklad obrazovky Portál společnosti aplikace, obrazovky s podrobnostmi o zařízení, zvýraznění akce resetování ](./media/1802-cp-app-windows-device-details-reset.png)  
 
-5. Po zobrazení výzvy k potvrzení, vyberte **resetování**. Zařízení se resetuje samotný.  
+5. Po zobrazení výzvy k potvrzení vyberte **obnovit**. Zařízení se resetuje.  
 
-     ![Příklad snímek obrazovky aplikace portál společnosti, potvrzení resetování, zvýraznění tlačítko Obnovit. ](./media/1802-cp-app-windows-reset-confirm.png)  
+     ![Ukázkový snímek obrazovky aplikace Portál společnosti, resetování potvrzovací zprávy, tlačítko pro obnovení zvýraznění ](./media/1802-cp-app-windows-reset-confirm.png)  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

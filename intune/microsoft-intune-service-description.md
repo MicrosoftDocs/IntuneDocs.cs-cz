@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 972f58da34c73253c85f4ca6183ad6fd4ce4c2e7
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882882"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167852"
 ---
 # <a name="microsoft-intune-service-description"></a>Popis služby Microsoft Intune
 
@@ -33,7 +33,7 @@ Intune je cloudová služba pro správu mobility velkých organizací (EMM), kte
 
 Intune se úzce integruje se službou Azure Active Directory (Azure AD) kvůli řízení přístupu a identit a se službou Azure Information Protection kvůli ochraně dat. Větší možnosti správy také nabízí integrace System Center Configuration Manageru.
 
-Další informace o správě zařízení, aplikací a ochraně firemních dat v Intune najdete v [dokumentaci k Intune](https://docs.microsoft.com/intune/).
+Další informace o správě zařízení, aplikací a ochraně firemních dat v Intune najdete v [dokumentaci k Intune](index.yml).
 
 ## <a name="30-day-free-trial"></a>30denní bezplatná zkušební verze
 Můžete začít používat 30denní bezplatnou zkušební verzi Intune, která zahrnuje 100 uživatelských licencí. Jestli chcete začít používat bezplatnou zkušební verzi, [přejděte na registrační stránku Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). Jestli má organizace uzavřenou smlouvu Enterprise nebo jinou rovnocennou multilicenční smlouvu, požádejte o nastavení bezplatné zkušební verze zástupce Microsoftu.

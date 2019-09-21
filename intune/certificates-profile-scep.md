@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/03/2019
+ms.date: 09/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e553229530f826ead91be981ff446b7cb3ebbf2
-ms.sourcegitcommit: 7269abaefb2857bc8b343896bb2138bdb01bf8dc
+ms.openlocfilehash: a9091b4623e456f5b00134542282b2032ce70e6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214283"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163739"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -38,9 +38,19 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 3. Zadejte **název** a **popis** profilu certifikátu SCEP.
 4. V rozevíracím seznamu **platforma** vyberte [podporovanou platformu zařízení](certificates-configure.md#supported-platforms-and-certificate-profiles) pro tento certifikát SCEP. 
 5. V rozevíracím seznamu **typ profilu** vyberte **certifikát SCEP**.  
+   
+   Pro platformu **Android Enterprise** se *typ profilu* dělí na dvě kategorie, *jenom vlastníkem zařízení* a *pracovní profil*. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
 
-   > [!NOTE]  
-   > Pro platformu **Android Enterprise** je *typ profilu* rozdělen do dvou kategorií: Pouze *vlastník zařízení* a *pracovní profil*.  Profily certifikátů SCEP se podporují jenom pro *pracovní profil*.
+   Profily certifikátů SCEP pro profil *jenom vlastníkem zařízení* mají následující omezení:  
+
+   1. Následující proměnné nejsou podporovány:  
+
+      - CN = {{OnPrem_Distinguished_Name}}  
+      - CN = {{onPremisesSamAccountName}}  
+
+   2. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
+   
+   3. Odvolání certifikátů zřízených profily certifikátů SCEP pro vlastníka zařízení není podporováno prostřednictvím Intune, ale lze je spravovat prostřednictvím externího procesu nebo přímo s certifikační autoritou.
 
 6. Vyberte **Nastavení**a pak dokončete následující konfigurace:
 

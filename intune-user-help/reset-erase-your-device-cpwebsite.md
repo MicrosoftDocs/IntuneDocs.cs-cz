@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/28/2018
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -14,38 +14,40 @@ ms.assetid: d3182a85-328b-45b4-bf7a-9f6249984641
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: jieyang
+ms.reviewer: coferro
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6880cd679aa88896ff78a350e3b43f4568052918
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: e2a0c408868297375ea39e2c09d70740dc316864
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504243"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163307"
 ---
-# <a name="reset-your-device-from-the-company-portal-website"></a>Resetování zařízení z webu Portál společnosti
+# <a name="reset-device-from-company-portal-website"></a>Resetování zařízení z Portál společnosti webu
 
-Zjistěte, jak z webu Portál společnosti můžete použité, ztracené nebo odcizené zařízení obnovit do výchozího továrního nastavení.  
+Resetování použitého, ztraceného nebo odcizeného zařízení do výchozího továrního nastavení z Portál společnosti webu.  
 
-Po obnovení továrního nastavení se zařízení na webu Portál společnosti přestane zobrazovat. Aplikace a soubory z dřívějška se vymažou a zařízení se obnoví do výchozího továrního nastavení.
+Po obnovení továrního nastavení se zařízení na webu Portál společnosti přestane zobrazovat. Aplikace a soubory z dřívějška se vymažou a zařízení se obnoví do výchozího továrního nastavení. 
+
+Resetování zařízení v Portál společnosti není k dispozici pro všechna zařízení s iOS. Pokud jste pracovníkem podpory IT a chcete získat další informace o resetování zařízení a jeho omezeních, přečtěte si téma [odebrání zařízení pomocí vymazání, vyřazení nebo ručnímu zrušení registrace zařízení](https://docs.microsoft.com/intune/devices-wipe).  
 
 > [!Note]
-> Následující postup můžete provést i z jiného zaregistrovaného zařízení. Otevřete na daném zařízení aplikaci Portál společnosti a podobným postupem dokončete obnovení továrního nastavení zařízení.  
+> Tyto kroky můžete provést také z jiného zařízení, které jste zaregistrovali. Otevřete aplikaci Portál společnosti a proveďte kroky pro podobné možnosti obnovení. 
 
 1. Otevřete web Portál společnosti a vyberte tlačítko __nabídky__ > __Zařízení__.  
 
 2. Vyberte zařízení, které chcete obnovit do továrního nastavení.
 
-    ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png)  
+    ![Snímek obrazovky se stránkou zařízení se dvěma dlaždicemi, které zobrazují neidentifikované a obecně pojmenovaná zařízení. Šedý banner se nachází přímo pod zařízením a vyzve uživatele k identifikaci zařízení, které používají, nebo přidání nového.](./media/rename-reset-device-step2-1808.png)  
 
-3. Vyberte **Resetovat**. Pokud se v horní části stránky možnost Resetovat nezobrazuje, vyberte **Více (…)** > **Resetovat**.  
+3. Vyberte **Resetovat**. Pokud se v horní části stránky možnost Resetovat nezobrazuje, vyberte **Více (…)**  > **Resetovat**.  
 
      ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)  
 
-    ![Přiblížená ikona Více zvýrazněná červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
+    ![Snímek obrazovky s ikonou, zvýrazněný červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
 
-4. Zobrazí se zpráva, která vás upozorní, že se chystáte vymazat veškerý obsah na zařízení. Klepnutím na **Resetovat** ji potvrďte.  
+4. Zpráva vás upozorní, že se chystáte vymazat veškerý obsah na vašem zařízení. Klepnutím na **Resetovat** ji potvrďte.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

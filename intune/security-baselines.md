@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6b1b489bbc62e4f47847ad599debcecfc27e1918
-ms.sourcegitcommit: 393953dd2a15aff68b246d3633b47566dd43f7cc
+ms.openlocfilehash: 51f9dcd7a42951d42671888c9ceebcdd57458654
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70815453"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166958"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
 
@@ -74,8 +74,8 @@ Pokud používáte více směrných plánů zabezpečení, Projděte si nastaven
 Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu. 
 
 - **Základní hodnoty zabezpečení MDM**
-  - [Základní hodnota zabezpečení MDM pro květen 2019](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)
-  - [Tisk Směrný plán zabezpečení MDM pro říjen 2018](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-preview)
+  - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Tisk Směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
 - **Základní hodnoty ATP v programu Microsoft Defender**  
   *(K použití tohoto směrného plánu musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
@@ -102,7 +102,7 @@ Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patř�
 
 ### <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a > pak vyberte**základní hodnoty zabezpečení** zařízení. zobrazí se seznam dostupných směrných plánů.
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a > pak vyberte**základní hodnoty zabezpečení** zařízení. zobrazí se seznam dostupných směrných plánů.
 
 
     ![Vyberte standardní hodnoty zabezpečení, které se mají nakonfigurovat.](./media/security-baselines/available-baselines.png)
@@ -160,7 +160,7 @@ Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí 
 
 #### <a name="to-change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu  
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a > pak vyberte**standardní hodnoty zabezpečení**zařízení zabezpečení a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.  
+1. Přihlaste [](https://go.microsoft.com/fwlink/?linkid=2090973) se k Intune a > pak vyberte**standardní hodnoty zabezpečení**zařízení zabezpečení a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.  
 
 2. V dalším kroku vyberte **profily**a potom zaškrtněte políčko u profilu, který chcete upravit, a pak vyberte **změnit verzi**.  
 
@@ -213,7 +213,7 @@ Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je n
 
 - Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 - Zobrazit nastavení v nejnovějších verzích dostupných standardních hodnot:  
   - [Základní hodnoty zabezpečení MDM](security-baseline-settings-mdm-all.md)  
   - [Základní hodnoty ATP v programu Microsoft Defender](security-baseline-settings-defender-atp.md)  

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df943fdc0105b0f32401b79434045811f065bef
-ms.sourcegitcommit: 47b06bf2d32e2f84c382dec3366d6f4a31d98012
+ms.openlocfilehash: 19307f2ffc234a1eacf30b3aa43fe9c626073f6c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70864534"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167821"
 ---
 <!-- This article contains the exact baseline details for baseline versions that were previously published in security-baseline-settings-mdm.md.  -->
 
@@ -34,12 +34,12 @@ Když nové verze standardu zabezpečení MDM, předchozí seznam nastavení se 
 
 V případě, že se základní verze již nepodporuje pro použití, bude odebrána z tohoto článku.
 
-- Zobrazit nastavení, která jsou k dispozici v [aktuálním směrném plánu zabezpečení MDM](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019). 
+- Zobrazit nastavení, která jsou k dispozici v [aktuálním směrném plánu zabezpečení MDM](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019).
 - Přečtěte si o [standardních hodnotách zabezpečení](security-baselines.md)a o tom, jak upgradovat základní verzi v profilech standardních hodnot zabezpečení.
 
 ## <a name="preview-mdm-security-baseline-for-october-2018"></a>Tisk Směrný plán zabezpečení MDM pro říjen 2018  
 
-*Tato standardní hodnota je nahrazena [základní hodnotou zabezpečení MDM pro květen 2019](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)*
+*Tato standardní hodnota je nahrazena [základní hodnotou zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)*
 
 ### <a name="above-lock"></a>Nad zámkem  
 
@@ -1231,7 +1231,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 
   **Výchozí**: Ověřuje
 
-### <a name="search"></a>Hledat  
+### <a name="search"></a>Search  
 
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.  
 
@@ -1439,7 +1439,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
   
   **Výchozí**: Enabled
  
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
-[Zobrazit aktuální základní verzi](https://docs.microsoft.com/intune/security-baseline-settings-mdm-all?pivots=mdm-may-2019)  
+[Zobrazit aktuální základní verzi](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)  
 [Upgrade profilů pro použití nové základní verze](security-baselines.md#change-the-baseline-version-for-a-profile)

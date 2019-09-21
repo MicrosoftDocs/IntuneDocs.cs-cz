@@ -18,31 +18,33 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 273342f7181bcc577a44126404d145ca9b5bff3e
-ms.sourcegitcommit: e6edfbfd63dd7c2500ce1123205aa2af9a7e8e2e
+ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68783026"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166621"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
 Přečtěte si, jak začít spravovat nové zařízení s macOS v Intune.  
 
-Zařízení, která vám poskytne váš zaměstnavatel nebo škola, bývají často nakonfigurovaná předem. Když zařízení zapnete a poprvé se přihlásíte, vaše organizace do něho tato předem nakonfigurovaná nastavení pošle. Jakmile zařízení nastavení dokončí, budete mít přístup k pracovním nebo školním prostředkům. 
+Zařízení, která vám poskytne váš zaměstnavatel nebo škola, bývají často nakonfigurovaná předem. Když zařízení zapnete a poprvé se přihlásíte, vaše organizace do něho tato předem nakonfigurovaná nastavení pošle. Jakmile zařízení nastavení dokončí, budete mít přístup k pracovním nebo školním prostředkům.
 
-Aby se nastavení správy zahájilo, zapněte zařízení a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Zbytek tohoto článku popisuje kroky a obrazovky, které uvidíte při procházení Průvodce nastavením.   
+Aby se nastavení správy zahájilo, zapněte zařízení a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Zbytek tohoto článku popisuje kroky a obrazovky, které uvidíte při procházení Průvodce nastavením.
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
-## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení 
+Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+
+## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení
+
 Zařízení s macOS zaregistrujete do správy provedením následujících kroků. Pokud nepoužíváte zařízení poskytnuté organizací, ale svoje vlastní zařízení, postupujte podle pokynů k [osobním a vlastním zařízením uživatelů](enroll-your-device-in-intune-macos-cp.md).  
 
-1. Zapněte zařízení s macOS. 
+1. Zapněte zařízení s macOS.
 2. Vyberte zemi nebo oblast a klikněte na **pokračovat**.  
 
-   ![Snímek uvítací obrazovky Průvodce nastavením zařízení s macOS, na které je seznam jazyků na výběr](./media/macos-dep-welcome-1808.png)   
+   ![Snímek uvítací obrazovky Průvodce nastavením zařízení s macOS, na které je seznam jazyků na výběr](./media/macos-dep-welcome-1808.png)
 3. Zvolte rozložení klávesnice. V seznamu se zobrazí jedna nebo více možností na základě vybrané země nebo oblasti. Chcete-li zobrazit všechny možnosti rozložení bez ohledu na zvolenou zemi nebo oblast, klikněte na tlačítko **Zobrazit vše**. Až budete hotovi, klikněte na **Pokračovat**.  
 
    ![Snímek obrazovky Průvodce nastavením zařízení s macOS s rozložením klávesnice, na které je seznam jazyků klávesnice na výběr, možnost Zobrazit vše a tlačítka Zpět a Pokračovat](./media/macos-dep-keyboard-1808.png)  
@@ -62,14 +64,17 @@ Zařízení s macOS zaregistrujete do správy provedením následujících krok�
     * Vytvořit účet počítače
     * Projít expresním nastavením
     * Nastavit váš Mac  
-## <a name="get-the-company-portal-app"></a>Získání aplikace Portál společnosti      
-Stáhněte si do svého zařízení aplikaci Portál společnosti Intune pro macOS. Tato aplikace vám umožní monitorovat, synchronizovat, přidat nebo odebrat zařízení ze správy a nainstalovat aplikace. V tomto postupu je také popsané, zaregistrovat zařízení na Portálu společnosti.  
-1. Na zařízení s macOS přejděte na https://portal.manage.microsoft.com/EnrollmentRedirect.aspx.
+
+## <a name="get-the-company-portal-app"></a>Získání aplikace Portál společnosti
+
+Stáhněte si do svého zařízení aplikaci Portál společnosti Intune pro macOS. Tato aplikace vám umožní monitorovat, synchronizovat, přidat nebo odebrat zařízení ze správy a nainstalovat aplikace. V tomto postupu je také popsané, zaregistrovat zařízení na Portálu společnosti.
+
+1. Na zařízení macOS přejít na [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
 2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet. 
 3. Klikněte na **Získat aplikaci** a stáhněte si instalační program aplikace Portál společnosti pro macOS.
 4. Po zobrazení výzvy otevřete soubor .pkg a dokončete instalační kroky.
-4. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
-5. Najděte své zařízení a klikněte na **Zaregistrovat**.
-6. Klikněte na **Pokračovat** > **Hotovo**. Vaše zařízení by se mělo zobrazit v aplikaci Portál společnosti jako vyhovující firemní zařízení.
+5. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
+6. Najděte své zařízení a klikněte na **Zaregistrovat**.
+7. Klikněte na **Pokračovat** > **Hotovo**. Vaše zařízení by se mělo zobrazit v aplikaci Portál společnosti jako vyhovující firemní zařízení.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

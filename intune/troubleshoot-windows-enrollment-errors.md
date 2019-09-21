@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8af18192a3a15fee15dd2204ada572e6a67be1c
-ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
+ms.openlocfilehash: 0f78f069f46ce036752fde80519abc03dc7c424c
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70062998"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167772"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -71,11 +71,11 @@ Tento problém může být několik možných řešení:
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
 2. Přejít na **registrace** > zařízení**omezení registrace**a pak vyberte **omezení limitů počtu zařízení**.    
-3. Zvyšte hodnotu limitu počtu **zařízení**. 
+3. Zvyšte hodnotu **limitu počtu zařízení**. 
 
 ##### <a name="check-device-type-restrictions"></a>Ověřit omezení typu zařízení
 1. Přihlaste se k [portálu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) pomocí účtu globálního správce.
-2. V části **omezení typů zařízení**vyberte **výchozí** omezení registrace **zařízení** > .    
+2. V části **omezení typů zařízení**vyberte **výchozí** **omezení registrace** **zařízení** > .    
 3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -205,7 +205,7 @@ Chyba: "Došlo k problému. Vaše organizace nepodporuje tuto verzi Windows.  (0
 Pokud chcete tento problém vyřešit v samostatném prostředí Intune, postupujte takto: 
  
 1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
-2. Na levé straně vyberte Intune a pak použijte**omezení registrace** > zařízení.    
+2. Na levé straně vyberte **Intune** a pak použijte**omezení registrace** > zařízení.    
 3. V nabídce **omezení typu zařízení**klikněte na **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .    
 4. Klikněte na **Uložit**.    
  
@@ -223,9 +223,9 @@ Pokud chcete tento problém vyřešit v hybridním MDM s Intune a Configuration 
 #### <a name="resolution"></a>Řešení
 1. Přihlaste se k [Azure Portal](https://portal.azure.com/) jako správce.    
 2. Přejít na **Azure Active Directory > zařízení > nastavení zařízení**.    
-3. Nastavení uživatelé můžou ke **všem** nebo vybraným **uživatelům připojovat zařízení do Azure AD** .
+3. Nastavení uživatelé můžou ke **všem** nebo **vybraným** **uživatelům připojovat zařízení do Azure AD** .
 
-   Pokud zvolíte **vybrané**, klikněte navybrat a potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
+   Pokud zvolíte **vybrané** **, klikněte na vybrat a**potom kliknutím na **přidat členy** přidejte všechny uživatele, kteří se můžou ke svým zařízením připojit do Azure AD. Ujistěte se, že jsou přidané všechny účty Azure AD pro zřizovací balíček.
  
 Další informace o tom, jak vytvořit zřizovací balíček pro Windows Configuration Designer, najdete v tématu [Vytvoření zřizovacího balíčku pro Windows 10](https://docs.microsoft.com/windows/configuration/provisioning-packages/provisioning-create-package).
 
@@ -236,7 +236,7 @@ Další informace o tom, jak nainstalovat aplikaci školních počítačů, najd
 
 Při automatickém pokusu o registraci zařízení s Windows 10 pomocí Zásady skupiny dojde k následujícím problémům: 
 - V Plánovač úloh v části **Microsoft** > **Windows** > **EnterpriseMgmt**byl poslední výsledek spuštění **plánu vytvořeného klientem registrace pro automatické registraci v MDM z úlohy AAD** následující: **Automatická registrace MDM pro událost 76: Neúspěšné (Neznámý kód chyby Win32: 0x8018002b)**       
-- V Prohlížeč událostí se v protokolech aplikací a služeb zaprotokolují následující události **/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
+- V Prohlížeč událostí se v **protokolech aplikací a služeb zaprotokolují následující události/Microsoft/Windows/DeviceManagement-Enterprise-Diagnostics-Provider/admin**:   
     ```asciidoc
     Log Name: Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider/Admin
     Source: DeviceManagement-Enterprise-Diagnostics-Provider
@@ -254,7 +254,7 @@ Pokud hlavní název uživatele obsahuje neověřenou nebo Nesměrovatelné dom�
 1. Na serveru, na kterém Active Directory Domain Services (služba AD DS) běží na, otevřete modul **Uživatelé a počítače služby Active Directory** zadáním **DSA. msc** v dialogovém okně **Spustit** a pak klikněte na **OK**.    
 2. Klikněte na **Uživatelé** ve vaší doméně a pak postupujte takto:  
     - Pokud existuje jenom jeden ovlivněný uživatel, klikněte na něj pravým tlačítkem a pak klikněte na **vlastnosti**. Na kartě **účet** v rozevíracím seznamu PŘÍPONa UPN v části **přihlašovací jméno uživatele**vyberte platnou příponu UPN, třeba contoso.com, a pak klikněte na **OK**.    
-    - Pokud existuje více ovlivněných uživatelů, vyberte uživatele v nabídce **Akce** klikněte na možnost **vlastnosti**. Na kartě **účet** zaškrtněte políčko přípona **UPN** , v rozevíracím seznamu vyberte platnou příponu upn, jako je contoso.com, a pak klikněte na **OK**.
+    - Pokud existuje více ovlivněných uživatelů, vyberte uživatele v nabídce **Akce** klikněte na možnost **vlastnosti**. Na kartě **účet** zaškrtněte políčko **přípona UPN** , v rozevíracím seznamu vyberte platnou příponu upn, jako je contoso.com, a pak klikněte na **OK**.
 3. Počkejte na další synchronizaci nebo vynuťte rozdílovou synchronizaci z synchronizačního serveru spuštěním následujících příkazů v příkazovém řádku PowerShellu se zvýšenými oprávněními:
     ```powershell
     Import-Module ADSync
@@ -335,7 +335,7 @@ K tomuto problému obvykle dochází předtím, než se zařízení restartuje v
 
 #### <a name="resolution"></a>Řešení
 
-1. Přejít na zařízení registrace zařízení se**systémem Windows** > registrace**zařízení** > v Intune. >  
+1. Přejít na zařízení registrace**zařízení** > se**systémem Windows** > **registrace**zařízení v **Intune** >  .
 2. Vyberte zařízení, u kterého dochází k problému > klikněte na tlačítko se třemi tečkami (...) na pravé straně.
 3. Vyberte zrušit **přiřazení uživatele** a počkejte na dokončení procesu.
 4. Před opakovaným pokusem o spuštění instalace ověřte, že je profil Azure AD autopilotu pro hybridní nasazení přiřazen.
@@ -382,10 +382,10 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 10. V části **oprávnění**zaškrtněte políčko **Úplné řízení** . Tato akce vybere všechny ostatní možnosti.
 11. Vyberte **Další** > **Dokončit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Řešení potíží s registrací zařízení v Intune](troubleshoot-device-enrollment-in-intune.md)
 - [Zeptejte se fóra služby Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Podívejte se na blog týmu podpory Microsoft Intune.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Podívejte se na blog Microsoft Enterprise mobility and Security.](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
-- [Získat podporu pro Microsoft Intune](https://docs.microsoft.com/intune/get-support) 
+- [Získat podporu pro Microsoft Intune](get-support.md)

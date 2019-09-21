@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/14/2017
+ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -16,20 +16,21 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 346e6219c10cc8b90d3bf83170adffa677c6c484
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: dddcb16a0067ed6e278ff3f9032695e075a0fb6a
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61503907"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163285"
 ---
 # <a name="set-or-change-your-passcode"></a>Nastavení nebo změna vašeho přístupového kódu
 
-Pokud zařízení s iOSem není v souladu se zásadami firemní podpory pro přístupový kód, zobrazí se zpráva, která stručně popisuje problém a vysvětluje, co musíte udělat, aby přístupový kód splňoval požadavky.
+Vytvořte nové heslo nebo změňte stávající, aby splňovalo požadavky vaší organizace. Heslo znemožní neoprávněným osobám odemknout a používat vaše zařízení. 
 
-Firemní podpora může pro přístupový kód nastavit více požadavků. Přístupový kód například musí obsahovat určitý počet znaků a navíc obsahovat kombinaci číslic, písmen a znaků. Protože může být nastavených několik požadavků, vysvětlují tyto pokyny jenom to, jak jde přístupový kód nastavit nebo změnit. Nevysvětlují všechny možné kombinace požadavků. Tato hesla slouží například k přístupu k zařízení ze zamykací obrazovky.
+Vaše organizace může nastavit více než jeden požadavek na přístupový kód. Seznam běžných požadavků na heslo najdete v tématu [požadavky na heslo zařízení pro zaregistrovaná zařízení](password-does-not-meet-it-administrator-requirements.md).  
 
-Pokud se vám přístupový kód, který splňuje požadavky na přístupový kód, nedaří nastavit, požádejte o pomoc firemní podporu.
+Pokud máte potíže při vytváření nebo změně hesla, obraťte se na pracovníky podpory IT.  
+
 
 ## <a name="set-your-passcode"></a>Nastavení přístupového kódu
 

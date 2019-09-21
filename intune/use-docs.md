@@ -1,5 +1,5 @@
 ---
-title: Používání dokumentů Intune
+title: Používání dokumentace Intune
 titleSuffix: Microsoft Intune
 description: Naučte se hledat v dokumentaci k Intune, poskytovat zpětnou vazbu k dokumentům a přispívat do dokumentů.
 ms.date: 09/15/2019
@@ -10,14 +10,14 @@ author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ede8d8a55bf9573bb81daaeb9f5ac174196a8911
-ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
+ms.openlocfilehash: 278ba505bcc5acd73adcfc4a356dee07fc06d5f7
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71017936"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167738"
 ---
-# <a name="using-the-intune-docs"></a>Používání dokumentů Intune
+# <a name="using-the-intune-docs"></a>Používání dokumentace Intune
 
 Tento článek obsahuje informace, které vám pomohou při hledání informací v Microsoft Intune dokumentaci, poskytování zpětné vazby k dokumentům Intune a k tomu, jak můžete snadno a rychle přispívat k dokumentaci.
 
@@ -67,7 +67,7 @@ K odeslání následujících typů zpětné vazby použijte problémy GitHubu:
 - Identifikátor Zpětná vazba k překladu obsahu
 - Optimalizace vyhledávacích vyhledávačů (SEO): Zpětná vazba k potížím při hledání obsahu Do komentářů zahrňte vyhledávací web, klíčová slova a cílový článek.
 
-Pokud se pro témata nesouvisející s dokumentem, jako jsou například [názory na produkt](https://microsoftintune.uservoice.com/forums/291681-ideas), [dotazy](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)na produkt nebo [žádosti o podporu](https://docs.microsoft.com/intune/get-support), vyvolají problémy, budou tyto problémy uzavřeny a uživatel se přesměruje na správný kanál zpětné vazby.
+Pokud se pro témata nesouvisející s dokumentem, jako jsou například [názory na produkt](https://microsoftintune.uservoice.com/forums/291681-ideas), [dotazy](https://social.technet.microsoft.com/Forums/en-US/home?forum=microsoftintuneprod)na produkt nebo [žádosti o podporu](get-support.md), vyvolají problémy, budou tyto problémy uzavřeny a uživatel se přesměruje na správný kanál zpětné vazby.
 
 Pokud chcete sdílet názory na platformu docs.microsoft.com, přečtěte si [názory na dokumentaci](https://aka.ms/sitefeedback). Platforma zahrnuje všechny komponenty obálky, například záhlaví, obsah a pravou nabídku. Také způsob vykreslování článků v prohlížeči, například písmo, pole výstrah a kotvy stránky.
 

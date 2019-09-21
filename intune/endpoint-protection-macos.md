@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2019
+ms.date: 09/19/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97674627ac1894aa7fcf3f6a6550677b89e1a150
-ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
+ms.openlocfilehash: 80b904893f118bac1f4d0d79da0cd10498b9f2ed
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158020"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71162870"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
 
@@ -105,13 +105,6 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
     - **Zakázat** – zakáže výzvu při odhlášení.
 
     **Výchozí**: Není nakonfigurováno  
-
-     > [!IMPORTANT]  
-     > K dispozici je známý problém, pokud je nastavení **Zakázat příkazový řádek při odhlášení** nastavené na *Zakázat*. Pokud je nastavena hodnota *Zakázat*, nastavení pro **počet povolených opakování** musí být nastaveno na hodnotu a nesmí být nastaven jako *není nakonfigurováno*. Pokud je nastavené na Nenakonfigurováno, profil se v zařízení nezdařil. V tomto scénáři zařízení hlásí **souhrn stavu profilu** jako **chybu** bez dalších podrobností.
-     > 
-     > Pokud je možnost **Zakázat výzvu při odhlášení** nastavena na hodnotu *není nakonfigurováno*, **počet povolených potlačení** nemůže být *nakonfigurován* nebo mít hodnotu.  
-     > 
-     > Tento problém bude vyřešen v budoucí aktualizaci. 
 
   - **Počet povolených pokusů o obejití**  
   Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit.  

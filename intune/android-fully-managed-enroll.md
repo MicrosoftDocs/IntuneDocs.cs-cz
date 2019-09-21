@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7dff37794d6c58094749821748dcc96a4f36e28a
-ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
+ms.openlocfilehash: 0035f8d5cd67a995924f7d07a662d8c0671bf063
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71071628"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163782"
 ---
-# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Nastavení registrace Intune pro plně spravovaná zařízení s Androidem Enterprise (Preview)
+# <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices"></a>Nastavení registrace Intune pro plně spravovaná zařízení s Androidem Enterprise 
 
 Zařízení se systémem Android Enterprise Standarded jsou zařízení vlastněná společností, která jsou přidružená k jednomu uživateli a používána výhradně pro práci a nikoli pro osobní použití. Správci můžou spravovat celé zařízení a vynutilit ovládací prvky zásad nedostupné pro pracovní profily, jako třeba:
 - Povolí instalaci aplikace jenom ze spravovaných Google Play.
@@ -39,7 +39,7 @@ Abyste mohli spravovat plně spravovaná zařízení s Androidem Enterprise, mus
 
 Zařízení musí splňovat tyto požadavky, aby je bylo možné spravovat jako plně spravované zařízení s Androidem Enterprise:
 
-- Verze operačního systému Android 5.1 a vyšší
+- Operační systém Android verze 6,0 a vyšší.
 - Zařízení musí spustit sestavení Androidu, které má připojení Google Mobile Services (GMS). Zařízení musí mít dostupnou službu GMS a musí být schopna se k této službě připojit.
 
 Pokud jsou splněné výše uvedené požadavky, není na výrobci zařízení/OEM žádné omezení.
@@ -55,7 +55,7 @@ Pokud chcete nastavit správu plně spravovaného zařízení s Androidem Enterp
 
 ### <a name="enable-corporate-owned-user-devices"></a>Povolit uživatelská zařízení ve vlastnictví firmy
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **registrace** > zařízení registrace zařízení s**Androidem** > **ve vlastnictví firmy, plně spravovaná uživatelská zařízení (Preview)** .
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **registrace** > zařízení registrace zařízení s**Androidem** > **ve vlastnictví firmy, plně spravovaná uživatelská zařízení**.
 2. V části **dovolit uživatelům registrovat zařízení uživatelů vlastněná společností**vyberte **Ano**.
 
 > [!NOTE]
@@ -65,25 +65,6 @@ Pokud je toto nastavení nastaveno na **Ano**, poskytne vám token pro zápis (n
 
 ## <a name="enroll-the-fully-managed-devices"></a>Registrace plně spravovaných zařízení
 Teď můžete [svá plně spravovaná zařízení zaregistrovat](android-dedicated-devices-fully-managed-enroll.md).
-
-## <a name="considerations-for-this-preview-feature"></a>Předpoklady pro tuto funkci verze Preview
-Tato verze Public Preview obsahuje základní sadu funkcí pro sadu řešení pro plně spravovanou platformu Android Enterprise. Rádi bychom se dozvěděli o vašich zkušenostech s využitím funkcí verze Preview s využitím libovolného z vašich aktuálních komunikačních kanálů pro tým (například [UserVoice](https://microsoftintune.uservoice.com/forums/291681-ideas?category_id=210853)).
-
-Tato verze Preview podporuje následující funkce pro plně spravovaná zařízení s Androidem Enterprise:
-- Registrace zařízení pomocí NFC, položky tokenu, kódu QR a nulového dotyku
-- Konfigurace zařízení pro skupiny uživatelů
-- Distribuce aplikací a konfigurace pro skupiny uživatelů
-
-
-Při použití těchto funkcí verze Preview mějte na paměti následující skutečnosti:
-- Funkce v Preview se nedoporučují pro kritická nebo provozní nasazení. 
-- Funkce ve verzi Preview jsou implementované pro Microsoft Intune produkčních standardů. Ne všechny funkce Intune ale nejsou dostupné pro použití s plně spravovanými uživatelskými zařízeními s Androidem Enterprise. Funkce ve verzi Preview jsou v konzole Intune jasně označené jako (Preview). 
-- Funkce ve verzi Preview se plně podporují prostřednictvím běžných kanálů podpory Intune.
-- Zápis plně spravovaných zařízení s Androidem Enterprise pomocí zápisu mobilních zařízení Samsung KNOX se ve verzi Preview nepodporuje. 
-- Použití aplikace Portál společnosti Intune není podporované na zařízeních s plnou správou Androidu Enterprise. 
-- Funkce Intune, jako je podmíněný přístup, zásady ochrany aplikací a nasazení certifikátů, nejsou ve verzi Preview podporované. 
-- Skupina zařízení cílící na jakýkoliv profil nebo aplikaci se ve verzi Preview nepodporuje. Podporuje se jenom cílení skupiny uživatelů. 
-- Pro konfiguraci e-mailu, Wi-Fi nebo VPN není k dispozici žádné rozhraní první třídy. Nakonfigurujte podporovaná nastavení konfigurace aplikací pomocí zásad konfigurace aplikací.
 
 ## <a name="next-steps"></a>Další kroky
 - [Přidat zásady konfigurace zařízení s plnou správou pro Android Enterprise](device-restrictions-android-for-work.md#device-owner-only)

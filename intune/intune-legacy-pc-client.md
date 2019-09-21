@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c626bb50868e6b966eb7c8867f4c4ff7178eadcf
-ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
+ms.openlocfilehash: f3891ce150ea740baa3ba18591139c66d78d9d00
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68756533"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166364"
 ---
 # <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Konzola Intune v Azure a starší verze klienta Intune v osobním počítači
 
@@ -31,7 +31,7 @@ Při použití Intune v Azure ke správě zařízení Windows ve vaší organiza
 
 ## <a name="manage-windows-10-devices-by-using-mdm"></a>Správa zařízení s Windows 10 pomocí MDM
 
-Doporučujeme vám použít [Mobile Device Management (MDM) ke správě zařízení s Windows 10](https://docs.microsoft.com/intune/device-restrictions-windows-10) místo starší verze klienta Intune v osobním počítači. Funkce správy Windows 10 pomocí MDM je k dispozici v Intune na portálu Azure Portal. Správa Windows 10 MDM poskytuje mnoho nových funkcí správy a zabezpečení, které nejsou k dispozici ve starší verzi klienta Intune v osobním počítači.
+Doporučujeme vám použít [Mobile Device Management (MDM) ke správě zařízení s Windows 10](device-restrictions-windows-10.md) místo starší verze klienta Intune v osobním počítači. Funkce správy Windows 10 pomocí MDM je k dispozici v Intune na portálu Azure Portal. Správa Windows 10 MDM poskytuje mnoho nových funkcí správy a zabezpečení, které nejsou k dispozici ve starší verzi klienta Intune v osobním počítači.
 
 ## <a name="legacy-pc-client-features-are-only-available-in-the-silverlight-console"></a>Funkce starší verze klienta v osobním počítači jsou dostupné jenom v konzole Silverlight.
 
@@ -54,7 +54,7 @@ Pro systém Windows 7, který nelze spravovat pomocí MDM, budeme nadále podpor
 
 ## <a name="mdm-capabilities"></a>Funkce MDM
 
-Podrobné porovnání možností klienta v osobním počítači a MDM najdete v tématu [Porovnání správy počítačů s Windows jako osobních počítačů nebo jako mobilních zařízení](pc-management-comparison.md). Aktualizace MDM budou nadále přinášet nové možnosti správy zařízení s Windows 10 zaregistrovaných v MDM včetně vyhodnocení možnosti pro aplikace Win 32. V tématu [Co je nového](https://docs.microsoft.com/intune/whats-new) najdete nejnovější funkce přidané do služby.
+Podrobné porovnání možností klienta v osobním počítači a MDM najdete v tématu [Porovnání správy počítačů s Windows jako osobních počítačů nebo jako mobilních zařízení](pc-management-comparison.md). Aktualizace MDM budou nadále přinášet nové možnosti správy zařízení s Windows 10 zaregistrovaných v MDM včetně vyhodnocení možnosti pro aplikace Win 32. V tématu [Co je nového](whats-new.md) najdete nejnovější funkce přidané do služby.
 
 ## <a name="switch-from-pc-client-to-mdm"></a>Přechod z klienta v počítači na MDM
 
@@ -62,9 +62,7 @@ Pokud chcete ve správě zařízení s Windows 10 přejít z klienta Intune v os
 
 1. V konzole Silverlight proveďte **selektivní vymazání**, abyste zrušili registraci zařízení klienta v osobním počítači.
   ![Místní nabídka upozornění s vybraným přepínačem selektivního vymazání zařízení](media/intune-legacy-pc-client/image02.png)
-2. Zařízení znovu zaregistrujte pomocí [MDM (nebo Azure AD Join)](https://docs.microsoft.com/intune/windows-enroll). 
+2. Zařízení znovu zaregistrujte pomocí [MDM (nebo Azure AD Join)](windows-enroll.md).
 
 ## <a name="next-steps"></a>Další postup
-[Registrace zařízení s Windows](https://docs.microsoft.com/intune/windows-enroll)
-
- 
+[Registrace zařízení s Windows](windows-enroll.md)

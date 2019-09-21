@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1710fd315803c4b47ad3be343893f93f7d155135
-ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
+ms.openlocfilehash: c8378986b1cf405a92e34b4c5bd805b169feaf32
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71061696"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167877"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 Přečtěte si o nejnovějších aktualizacích aplikace Microsoft Intune. Pravidelně přidáváme a vylepšujeme Portál společnosti Intune aplikace a Web. Pokud jste osoba pro správu nebo podporu Intune, najdete v tomto článku informace, které potřebujete:
@@ -120,7 +120,7 @@ Přidala se nová obrazovka s názvem **kategorie aplikací** , která vylepšuj
 ## <a name="week-of-november-12-2018"></a>Týden od 12. listopadu 2018
 
 ### <a name="windows-company-portal-keyboard-shortcuts----2771518---"></a>Klávesové zkratky v Portálu společnosti pro Windows <!-- 2771518 -->
-Koncoví uživatelé teď budou moct aktivovat akce aplikace a zařízení ve Windows Portál společnosti [pomocí klávesových zkratek (akcelerátory)](https://docs.microsoft.com/intune/company-portal-app#windows-company-portal-keyboard-shortcuts).
+Koncoví uživatelé teď budou moct aktivovat akce aplikace a zařízení ve Windows Portál společnosti [pomocí klávesových zkratek (akcelerátory)](company-portal-app.md#windows-company-portal-keyboard-shortcuts).
 
 ## <a name="week-of-october-22-2018"></a>Týden od 22. října 2018
 
@@ -572,4 +572,4 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 ## <a name="see-also"></a>Viz také:
 * [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co je nového v Intune](https://docs.microsoft.com/intune/whats-new)
+* [Co je nového v Intune](whats-new.md)

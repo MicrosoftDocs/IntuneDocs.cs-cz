@@ -1,6 +1,6 @@
 ---
-title: Microsoft Intune App SDK pro testování Příručka vývojáře pro Android
-description: Microsoft Intune App SDK pro Android – příručka testování umožňuje testovat svou aplikaci s Androidem spravovaná pomocí Intune.
+title: Příručka pro vývojové testování v sadě Microsoft Intune App SDK pro Android
+description: Průvodce testováním sady Microsoft Intune App SDK pro Android vám pomůže otestovat aplikaci pro Android spravovanou v Intune.
 keywords: Sada SDK
 author: Erikre
 ms.author: erikre
@@ -16,115 +16,115 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa6b07c77b0d92ceb7bdc960d8c2fd754c277499
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 91b7fc7414c3a6d6517cd4b704cb5e99ddcf96d0
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713235"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167180"
 ---
-# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Microsoft Intune App SDK pro testování průvodce vývojáři pro Android
+# <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Průvodce testováním sady Microsoft Intune App SDK pro vývojáře v Androidu
 
-Microsoft Intune App SDK pro Android – příručka testování je určená vám pomůže otestovat aplikaci s Androidem spravovaná pomocí Intune.  
+Průvodce testováním sady Microsoft Intune App SDK pro Android je navržený tak, aby vám pomohla při testování aplikace pro Android spravované v Intune.  
 
-## <a name="prerequisite-test-accounts"></a>Požadovaný test účty
-Nové účty lze vytvořit a nemusíte předem generovaná data. Chcete-li vytvořit nový účet:
-1. Přejděte [Microsoft Demos](https://demos.microsoft.com/environments/create/tenant) lokality. 
-2. [Nastavení Intune](https://docs.microsoft.com/intune/setup-steps) povolit správu mobilních zařízení (MDM).
-3. [Vytvoření uživatelů](https://docs.microsoft.com/intune/users-add).
-4. [Vytvoření skupin](https://docs.microsoft.com/intune/groups-add).
-5. [Přiřazení licencí](https://docs.microsoft.com/intune/licenses-assign) odpovídajícím způsobem pro testování.
+## <a name="prerequisite-test-accounts"></a>Požadované zkušební účty
+Je možné vytvořit nové účty s předem generovanými daty a bez nich. Vytvoření nového účtu:
+1. Přejděte na web [ukázek ukázek společnosti Microsoft](https://demos.microsoft.com/environments/create/tenant) . 
+2. [Nastavte Intune](setup-steps.md) pro povolení správy mobilních zařízení (MDM).
+3. [Vytvořte uživatele](users-add.md).
+4. [Vytvořte skupiny](groups-add.md).
+5. [Přiřaďte licence](licenses-assign.md) podle potřeby pro vaše testování.
 
 
-## <a name="azure-portal-policy-configuration"></a>Konfigurace zásad Azure portal
-[Vytvoření a přiřazení zásad ochrany aplikací](https://docs.microsoft.com/intune/app-protection-policies) v [okno v Intune Azure portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). Vaše [zásady Konfigurace aplikací](https://docs.microsoft.com/intune/app-configuration-policies-overview) lze také vytvořit a přiřadit v okně Intune.
+## <a name="azure-portal-policy-configuration"></a>Konfigurace zásad Azure Portal
+[Vytvořte a přiřaďte zásady ochrany aplikací](app-protection-policies.md) v okně [Intune Azure Portal](https://portal.azure.com/?feature.customportal=false#blade/Microsoft_Intune_Apps/MainMenu/14/selectedMenuItem/Overview). [Zásady konfigurace aplikací](app-configuration-policies-overview.md) se taky dají vytvořit a přiřadit v okně Intune.
 
 > [!NOTE]
-> Pokud vaše aplikace není uvedená na webu Azure Portal, můžete zacílíte ho pomocí zásad tak, že vyberete **více aplikací** možnost a poskytnutí názvu balíčku v textovém poli.
+> Pokud vaše aplikace není uvedená v Azure Portal, můžete na ni cílit pomocí zásady výběrem možnosti **Další aplikace** a zadáním názvu balíčku do textového pole.
 
 > [!IMPORTANT]
-> Pro zásady Konfigurace aplikací použít, musí být cílem registraci uživatele [zásady ochrany aplikací Intune](https://docs.microsoft.com/intune/app-protection-policy).
+> Aby se zásady konfigurace aplikace projevily, musí se registrace uživatele zaměřit [zásadami ochrany aplikací Intune](app-protection-policy.md).
 
 ## <a name="test-cases"></a>Testovací případy
 
-Následující testovací případy popisuje kroky konfigurace a potvrzení hesla. Použijte tyto pokyny při řešení problémů s Androidem aplikací spravovaných v Intune.
+Následující testovací případy poskytují kroky konfigurace a potvrzení. Tyto pokyny vám pomůžou při řešení problémů s aplikacemi pro Android spravovanými přes Intune.
 
-### <a name="required-pin-and-corporate-credentials"></a>Vyžadovat kód PIN a podnikové přihlašovací údaje
+### <a name="required-pin-and-corporate-credentials"></a>Požadované PIN a firemní přihlašovací údaje
 
-Může vyžadovat kód pin pro přístup k firemním prostředkům. Můžete také vynutit podnikové ověřování předtím, než se uživatelé můžou používat spravované aplikace. Chcete-li nastavit tyto požadavky, postupujte následovně:
+Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete taky vymáhat podnikové ověřování, aby mohli uživatelé používat spravované aplikace. Pro nastavení těchto požadavků použijte následující postup:
 
-1. Konfigurace **požadovat kód PIN pro přístup k** a **vyžadovat pro přístup podnikové přihlašovací údaje** k **Ano**. Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md#access-requirements).
-2. Zkontrolujte následující podmínky:
-    - Spuštění aplikace by se měl prokázat výzvu pro PIN kód. input/nastavení a/nebo produkční uživatele použité během registrace na portálu společnosti.
-    - Selhání předložit platný výzvě přihlášení může být způsobeno není správně nakonfigurován. android manifest, konkrétně hodnoty pro integraci knihovny ADAL (SkipBroker ClientID a autorita).
-    - Selhání prezentovat libovolného řádku může být z důvodu nesprávně integrované `MAMActivity` hodnotu. Další informace o `MAMActivity`, naleznete v tématu [Microsoft Intune App SDK pro Android developer průvodce](app-sdk-android.md).
+1. Nakonfigurujte **pro přístup vyžadování PIN kódu** a pro přístup k **Ano** **vyžadovat podnikové přihlašovací údaje** . Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android v Microsoft Intune](app-protection-policy-settings-android.md#access-requirements).
+2. Potvrďte následující podmínky:
+    - Při spuštění aplikace by se měla zobrazit výzva k zadání kódu PIN pro vstup/nastavení nebo k výrobnímu uživateli, který se použil při registraci s Portál společnosti.
+    - Nepovedlo se vytvořit platnou výzvu k přihlášení kvůli nesprávně nakonfigurovanému manifestu Androidu, konkrétně hodnoty pro integraci ADAL (SkipBroker, ClientID a Authority).
+    - Nepovedlo se zobrazit výzvu kvůli nesprávné integrované `MAMActivity` hodnotě. Další informace o `MAMActivity`najdete v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
 
 > [!NOTE] 
-> Pokud výše uvedené testů nefunguje, následující testy se pravděpodobně také nezdaří. Kontrola [SDK](app-sdk-android.md##sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) integrace.
+> Pokud výše uvedený test nefunguje, testy níže budou pravděpodobně také neúspěšné. Projděte si integraci [sady SDK](app-sdk-android.md##sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) .
 
-### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Omezit přenos a přijímání dat s jinými aplikacemi
-Můžete ovládat přenosy dat mezi podnikovým spravované aplikace následujícím způsobem:
+### <a name="restrict-transferring-and-receiving-data-with-other-apps"></a>Omezení přenosu a příjem dat s jinými aplikacemi
+Přenos dat mezi podnikovými spravovanými aplikacemi můžete řídit následujícím způsobem:
 
-1. Nastavte **povolit aplikaci posílat data do jiných aplikací** k **aplikacemi spravovanými podle zásad**.
-2. Nastavte **povolit aplikaci přijímat data z jiných aplikací** k **všechny aplikace**. Tyto zásady ovlivní pomocí tříd Intent a poskytovatelů obsahu.
-3. Zkontrolujte následující podmínky:
-    - Otevření z nespravovaných aplikací do vaší aplikace funkcí správně.
-    - Je povolené sdílení obsahu mezi spravovanými aplikacemi.
-    - Sdílení ze spravovaných aplikací do nespravované aplikace (například Chrome) je blokován.
+1. Nastavte možnost **povoluje aplikaci přenášet data do jiných aplikací** do **aplikací spravovaných podle zásad**.
+2. Nastavte **možnost dovolit aplikaci, aby přijímala data z jiných aplikací** do **všech aplikací**. Používání záměrů a poskytovatelů obsahu bude mít vliv na tyto zásady.
+3. Potvrďte následující podmínky:
+    - Správné otevření z nespravované aplikace do funkce aplikace.
+    - Sdílení obsahu mezi spravovanými aplikacemi je povolené.
+    - Sdílení ze spravovaných aplikací do nespravovaných aplikací (například Chrome) je zablokované.
 
-### <a name="restrict-cut-copy-and-paste"></a>Omezit vyjmutí, zkopírování a vložení
-Můžete omezit schránky systému ke spravovaným aplikacím následujícím způsobem:
+### <a name="restrict-cut-copy-and-paste"></a>Omezit vyjmutí, kopírování a vložení
+Systémovou schránku můžete omezit na spravované aplikace následujícím způsobem:
 
-1. Nastavte **omezit vyjmutí, kopírování a vkládání v ostatních aplikacích** k **s vložením spravované podle zásad**.
-2. Zkontrolujte následující podmínky:
-    - Zkopírování textu z vaší aplikace do spravované nespravované aplikace (například zpráv) je blokován.
+1. Nastavte **Omezit vyjmutí, kopírování a vložení s jinými aplikacemi** do **zásad spravovaných pomocí vložit**.
+2. Potvrďte následující podmínky:
+    - Kopírování textu z aplikace do spravované nespravované aplikace (například zprávy) je zablokované.
 
-### <a name="prevent-save-as"></a>Zabránit **uložit jako**
-Můžete řídit **uložit jako** funkce následujícím způsobem:
+### <a name="prevent-save-as"></a>Zabránit **uložení jako**
+Funkci **Uložit jako** můžete řídit následujícím způsobem:
 
-1. Pokud vaše aplikace vyžaduje [integrované ovládací prvky "Uložit jako"](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted), nastavte **zabránit uložit jako** k **Ano**.
-2. Zkontrolujte následující podmínky:
-    - Uložte je omezen na příslušné spravované umístění.
+1. Pokud vaše aplikace vyžaduje [Integrované ovládací prvky Uložit jako](app-sdk-android.md#example-determine-if-saving-to-device-or-cloud-storage-is-permitted), nastavte možnost **zakázat možnost Uložit jako** na **Ano**.
+2. Potvrďte následující podmínky:
+    - Uložení je omezené jenom na vhodná spravovaná umístění.
 
 ### <a name="file-encryption"></a>Šifrování souborů
-Data na zařízení můžete zašifrovat následujícím způsobem:
+Data v zařízení můžete šifrovat následujícím způsobem:
 
-1. Nastavte **šifrovat data aplikace** k **Ano**.
-2. Zkontrolujte následující podmínky:
-    - Chování normální aplikace nemá žádný vliv.
+1. Nastavte **šifrovat data aplikací** na **Ano**.
+2. Potvrďte následující podmínky:
+    - Normální chování aplikace není ovlivněno.
 
-### <a name="prevent-android-backups"></a>Zabránit zálohám Androidu
-Zálohování aplikace můžete řídit následujícím způsobem:
+### <a name="prevent-android-backups"></a>Zabránit zálohování Androidu
+Zálohování aplikací můžete řídit následujícím způsobem:
 
-1. Pokud jste nastavili [integrované zálohování omezení](app-sdk-android.md#protecting-backup-data), nakonfigurujte **zálohám Androidu zabránit** k **Ano**.
-2. Zkontrolujte následující podmínky:
-    - Zálohy jsou omezeny.
+1. Pokud jste nastavili [integrovaná omezení zálohování](app-sdk-android.md#protecting-backup-data), nakonfigurujte **zabránit zálohování Androidu** na **Ano**.
+2. Potvrďte následující podmínky:
+    - Zálohy jsou omezené.
 
 ### <a name="unenrollment"></a>Zrušení registrace
-Spravované aplikace z firemního e-mailu a dokumentům a obsahuje můžou vzdáleně vymazat a osobní data se dešifrují, když je již spravován následujícím způsobem:
+Spravované aplikace můžete vzdáleně vymazat z obsahujícího podnikového e-mailu a dokumentů a osobní údaje se dešifrují, když je už nespravujete takto:
 
-1. Na webu Azure Portal [vydat vymazání](https://docs.microsoft.com/intune/apps-selective-wipe).
-2. Pokud vaše aplikace nezaregistruje pro všechny rutiny vymazání potvrďte následující podmínky:
-    - Vyvolá se v úplné vymazání aplikace.
-3. Pokud vaše aplikace je zaregistrovaná pro `WIPE_USER_DATA` nebo `WIPE_USER_AUXILARY_DATA`, zkontrolujte následující podmínky:
-    - Spravovaný obsah se odebere z aplikace. Další informace najdete v tématu [sady Intune App SDK pro Android developer Průvodce – selektivní vymazání](app-sdk-android.md#selective-wipe).
+1. Z Azure Portal [vydejte vymazání](apps-selective-wipe.md).
+2. Pokud se vaše aplikace neregistruje pro jakékoli obslužné rutiny vymazání, potvrďte následující podmínky:
+    - Dojde k úplnému vymazání aplikace.
+3. Pokud se vaše aplikace zaregistrovala `WIPE_USER_DATA` pro `WIPE_USER_AUXILARY_DATA`nebo, potvrďte následující podmínky:
+    - Spravovaný obsah se z aplikace odebere. Další informace najdete v tématu [sada Intune App SDK pro Android Developer Guide – selektivní vymazání](app-sdk-android.md#selective-wipe).
 
 ### <a name="multi-identity"></a>Více identit
-Integrace [podpora více identit](app-sdk-android.md#multi-identity-optional) je vysoce rizikových změnu, kterou je potřeba důkladně otestovat. Nejčastější problémy budou kvůli nesprávné nastavení identity (objektu context vs. úroveň hrozby) a také soubory sledování (`MAMFileProtectionManager`).
+Integrace [podpory více identit](app-sdk-android.md#multi-identity-optional) je vysoce riziková změna, kterou je třeba důkladně otestovat. Nejběžnější problémy jsou kvůli nesprávnému nastavení identity (kontext vs. úroveň ohrožení) a také sledování souborů (`MAMFileProtectionManager`).
 
-Minimálně musí ověřit následující scénáře pro více identit:
+U více identit je potřeba znovu ověřit následující scénáře:
 
-- **Uložit jako** zásady pro spravované identity pracuje správně.
-- Kopírování a vkládání, který vynutí se omezení správně z spravovat tak, aby osobní.
-- Pouze data, patří do identity spravované zašifrují a osobní soubory nezmění.
-- Selektivní vymazání při zrušení registrace pouze odebere data spravovaná identita.
-- Koncový uživatel vyzván k podmíněnému spuštění při změně z nespravovaného do spravovaného účtu (jenom prvním).
+- Zásada **Uložit jako** pro spravované identity funguje správně.
+- Omezení kopírování pro vložení se správně vynutila ze spravovaných na osobní.
+- Šifrovaná jsou jenom data patřící do spravované identity a osobní soubory se nemění.
+- Selektivní vymazání během Odregistrace odebírá jenom spravovaná data identity.
+- Koncový uživatel se při změně z nespravovaného na spravovaný účet vyzve k zadání podmíněného spuštění.
 
-### <a name="app-configuration-optional"></a>Konfigurace aplikací (volitelné)
+### <a name="app-configuration-optional"></a>Konfigurace aplikace (volitelné)
 Chování spravovaných aplikací můžete nakonfigurovat následujícím způsobem:
 
-1. Pokud vaše aplikace používá jakékoli nastavení konfigurace aplikace, měli byste otestovat, že vaše aplikace správně zpracovává všechny hodnoty, které (jako správce) můžete nastavit. [Zásady Konfigurace aplikací](https://docs.microsoft.com/intune/app-configuration-policies-overview) lze vytvořit a přiřadit pomocí Intune.
+1. Pokud vaše aplikace spotřebovává nastavení konfigurace aplikace, měli byste otestovat, jestli vaše aplikace správně zpracovává všechny hodnoty, které jste (jako správce) mohli nastavit. [Zásady konfigurace aplikací](app-configuration-policies-overview.md) se dají vytvářet a přiřazovat pomocí Intune.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Přidání – obchodní aplikace pro Android do Microsoft Intune](lob-apps-android.md).
+- [Přidejte obchodní aplikaci pro Android do Microsoft Intune](lob-apps-android.md).

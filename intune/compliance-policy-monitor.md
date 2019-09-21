@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9f8560262d8c501af4127876eaafed293fbc4041
-ms.sourcegitcommit: b1ddc7f4a3d520b7d6755c7a423a46d1e2548592
+ms.openlocfilehash: 22bee478160347256e7e2fa1422b74ccbead57b9
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69651200"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167046"
 ---
 # <a name="monitor-intune-device-compliance-policies"></a>Monitorování zásad dodržování předpisů zařízením v Intune
 
@@ -60,7 +60,7 @@ Když se do těchto sestav ponoříte, najdete také specifické zásady dodržo
 Tento graf zobrazuje stav dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy dodržování předpisů pro zařízení jsou uchovávány ve dvou různých databázích: Intune a Azure Active Directory. 
 
 > [!IMPORTANT]
-> Intune sleduje u všech vyhodnocení dodržování předpisů na zařízení plán vrácení se změnami zařízení. [Přečtěte si další informace o plánu vrácení se změnami zařízení](https://docs.microsoft.com/intune/device-profile-troubleshoot#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune sleduje u všech vyhodnocení dodržování předpisů na zařízení plán vrácení se změnami zařízení. [Přečtěte si další informace o plánu vrácení se změnami zařízení](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Podrobnosti o různých stavech zásad dodržování předpisů zařízením jsou následující:
 
@@ -70,7 +70,7 @@ Podrobnosti o různých stavech zásad dodržování předpisů zařízením jso
 
   - Přečtěte si další informace o [akcích pro zařízení nedodržující předpisy](actions-for-noncompliance.md).
 
-- Nehodnoceno: Počáteční stav nově zaregistrovaných zařízení. Mezi další možné příčiny tohoto stavu patří:
+- **Nehodnoceno**: Počáteční stav nově zaregistrovaných zařízení. Mezi další možné příčiny tohoto stavu patří:
 
   - Zařízení, která nemají přiřazenou zásadu dodržování předpisů a nemají Trigger ke kontrole dodržování předpisů
   - Zařízení, která nejsou zaregistrovaná od poslední aktualizace zásad dodržování předpisů

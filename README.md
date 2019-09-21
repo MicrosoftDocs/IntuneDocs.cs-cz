@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 8d76ff182ea4402b6a4cd3242b15288d8bea16b9
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545242"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71166461"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>Pravidla chování v oblasti Open Source u Microsoftu
 
@@ -16,30 +16,30 @@ Další informace vyhledejte v [častých otázkách k Pravidlům chování](htt
 Našli jste jedno z úložišť GitHub, které je zdrojem obsahu publikovaného na webu [https://docs.microsoft.com](https://docs.microsoft.com/.). Na tomto webu je veškerý technický obsah divizi Microsoftu specializované na cloudová a podniková řešení.
 
 ## <a name="contribute-to-your-documentation"></a>Přispívání do vaší dokumentace
-Jsme **chtějí a podporují příspěvky** z naší komunity (uživatelů, zákazníky, partnery, přáteli v ostatních Planet) a zaměstnanci Microsoftu vylepšit dokumentaci k sadě. Tady je několik tipů:
+Chceme **a povzbuzovat příspěvky** od naší komunity (uživatelů, zákazníků, partnerů, přátel na jiných planet) a zaměstnanců Microsoftu k vylepšení vaší dokumentace. Tady je několik tipů:
 
-* **Vytvořte si účet GitHub**: Registrace je zdarma v [webu GitHub.com](https://www.github.com).
+* **Vytvoření účtu GitHub**: Registrace je zdarma na adrese [GitHub.com](https://www.github.com).
 
-* **Pomocí prohlížeče**: Existují dvě možnosti: 
+* **Použijte svůj prohlížeč**: Existují dvě možnosti: 
 
-    **Option 1: Upravit přímo z webu docs.microsoft.com**  
-    1. Přechod na téma, jako například [ https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune ](https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune). 
-    2. Vyberte **upravit** (pravého horního). To ukazuje soubor markdownu v úložišti GitHub.
-    3. Vyberte ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se vám **tento soubor upravit** popisu tlačítka. 
-    4. Proveďte požadované změny a pak **potvrzení** provedené změny. 
-    5. Vytvořte žádost o přijetí změn.
+    **Možnost 1: Upravit přímo z docs.microsoft.com**  
+    1. Přejít na téma, například [https://docs.microsoft.com/intune/troubleshoot-policies-in-microsoft-intune](troubleshoot-policies-in-microsoft-intune.md). 
+    2. Vyberte **Upravit** (vpravo nahoře). Tím se zobrazí soubor Markdownu v úložišti GitHub.
+    3. Vyberte ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se popis **Upravit tento soubor** . 
+    4. Proveďte změny a **potvrďte** provedené změny. 
+    5. Vytvořte žádost o získání dat.
     
-    **Option 2: Vyhledejte požadovaný článek v tomto úložišti a aktualizovat**  
-    1. Většina témata jsou v `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. V této složce, vyhledejte název tématu, jako například `troubleshoot-policies-in-microsoft-intune`. 
-    2. Vyberte odkaz a klikněte na ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se vám **tento soubor upravit** popisu tlačítka. 
-    3. Proveďte požadované změny a pak **potvrzení** provedené změny. 
-    4. Vytvořte žádost o přijetí změn. 
+    **Možnost 2: Vyhledání článku v tomto úložišti a aktualizace**  
+    1. Většina témat se nachází `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`v. V této složce vyhledejte název tématu, například `troubleshoot-policies-in-microsoft-intune`. 
+    2. Vyberte odkaz a klikněte na ikonu tužky. Když najedete myší na ikonu tužky, zobrazí se popis **Upravit tento soubor** . 
+    3. Proveďte změny a **potvrďte** provedené změny. 
+    4. Vytvořte žádost o získání dat. 
 
   Když provedete změnu, může se vám zobrazit výzva k podepsání licenční smlouvy. Jedná se o jednorázovou úlohu. Když potom budete v budoucnu provádět jakékoli změny pod svým uživatelským jménem na GitHubu, nebudete muset licenční smlouvu znovu podepisovat. 
   
-  Hodnota v `author` metadata (v horní části každé téma) jméno autora Githubu. V `troubleshoot-policies-in-microsoft-intune` příkladu uvidíte `MandiOhlinger`. Ve vaší žádosti o přijetí změn můžete také uvést (@*authorValue*) Autor, pokud se vám líbí.
+  Hodnota v `author` metadatech (v horní části každého tématu) obsahuje seznam autorů GitHubu. V tomto `troubleshoot-policies-in-microsoft-intune` příkladu `MandiOhlinger`uvidíte. V žádosti o přijetí změn se můžete také zmínit (@*authorValue*), pokud chcete.
   
-* **MSFT zaměstnanci**: Po vytvoření účtu GitHub propojte Microsoft e-mailovou adresu. Jakmile si účet propojíte, nebudete muset podepisovat licenční smlouvu, když budete chtít provést změnu. Pomocí následujících kroků:
+* **Zaměstnanci protokolu MSFT**: Po vytvoření účtu GitHubu ho připojte k e-mailové adrese Microsoftu. Jakmile si účet propojíte, nebudete muset podepisovat licenční smlouvu, když budete chtít provést změnu. Uvedené
 
   1. Na zařízení s podnikovou sítí, přejděte na [nastavení účtu GitHub](https://review.docs.microsoft.com/en-us/help/contribute/contribute-get-started-setup-github?branch=master). Pokud nejste v podnikové síti, vrátí tento odkaz chybu 404.
   
@@ -54,5 +54,5 @@ Jsme **chtějí a podporují příspěvky** z naší komunity (uživatelů, zák
 ## <a name="use-markdown-to-format-your-topic"></a>Formátování tématu pomocí markdownu
 Všechny články v tomto úložišti využívají vlastní verzi markdownu (GitHub flavored markdown). Tady je seznam zdrojů, které vám pomůžou začít:
 
-* [Základy markdownu](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
-* [Tahák pro markdown k vytištění](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+* [Základy Markdownu](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+* [Markdownu k vytištění pro tisk](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)

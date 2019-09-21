@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d63ecdb23b107d844c37d7a805247092116618e1
-ms.sourcegitcommit: b30a2ba2b67aa2fc3421f0b2f6c5f361a0de612a
+ms.openlocfilehash: 0ec52069c4c53c464cfe5a1e17718ba6725fd0b5
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69022736"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167443"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Šifrované zařízení, ale aplikace říkají jinak
 
@@ -48,16 +48,17 @@ Tato část se týká pouze aplikace Portál společnosti. Pokud vaše zařízen
 
 ## <a name="specific-manufacturer-issues"></a>Problémy konkrétních výrobců
 
-Některá zařízení s Androidem verze 7,0 a novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tyto metody šifrování převedou informace o zařízení v nebezpečí. V důsledku toho tato zařízení nejsou podporována. 
+Některá zařízení s Androidem verze 7,0 a novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tyto metody šifrování převedou informace o zařízení v nebezpečí. V důsledku toho tato zařízení nejsou podporována.
 
-Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory. 
+Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](https://docs.microsoft.com/intune/supported-devices-browsers.md#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory.
 
 > [!Note]
-> Microsoft spolupracuje s výrobci, aby vyřešil případné problémy, které při testování vyhledáme, nebo jestli si uživatelé nahlásí. Tento článek aktualizujeme vždy, když jsou k dispozici nové informace. 
+> Microsoft spolupracuje s výrobci, aby vyřešil případné problémy, které při testování vyhledáme, nebo jestli si uživatelé nahlásí. Tento článek aktualizujeme vždy, když jsou k dispozici nové informace.
 
-## <a name="update-devices"></a>Aktualizace zařízení   
+## <a name="update-devices"></a>Aktualizace zařízení
 
 Pokud jste zařízení neaktualizovali na nejnovější verzi Androidu, přejdete do aplikace **Nastavení** vašeho zařízení a vyberte **aktualizovat**.  
 
-## <a name="next-steps"></a>Další postup   
+## <a name="next-steps"></a>Další kroky
+
 Potřebujete ještě další pomoc? Obraťte se na svou firemní podporu (kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)) nebo napište <a href="mailto:wintunedroidfbk@microsoft.com?subject=I'm having trouble with enrolling my Android device&body=Describe the issue you're experiencing here.">týmu Microsoft Android</a>.  

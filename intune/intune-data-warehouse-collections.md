@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b333c848368f00f005ed0febc61f67f098ee7e5e
-ms.sourcegitcommit: 76d59edfd5900ce33c64470ae604eb3db016c8ca
+ms.openlocfilehash: eb470885be8f09f0c99dfe26a1d982570644ac8a
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69979190"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71167614"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -427,7 +427,7 @@ Entita **IntuneManagementExtensionVersion** uvádí seznam všech verzí, které
 | ExtensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
 | ExtensionVersion    | Číslo verze tvořené 4 číslicemi                                   | 1.0.2.0 |
 
-## <a name="mamapplications"></a>MamApplications
+## <a name="mamapplications"></a>mamApplications
 
 Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spravované přes správu mobilních aplikací (MAM) bez registrace ve vašem podniku.
 
@@ -494,7 +494,7 @@ Entita **MamDeviceHealth** představuje zařízení, na kterých jsou nasazené 
 | DeviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
 | RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 
-## <a name="mamplatforms"></a>MamPlatforms
+## <a name="mamplatforms"></a>mamPlatforms
 
 Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých byla aplikace MAM nainstalována.
 
@@ -729,7 +729,6 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 | 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP   |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple               | Program VPP společnosti Apple     |
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Další informace o datovém skladu Intune najdete v článku [Datový model datového skladu](https://docs.microsoft.com/intune/reports-ref-data-model).
-
+Další informace o datovém skladu Intune najdete v článku [Datový model datového skladu](reports-ref-data-model.md).
