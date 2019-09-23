@@ -60,7 +60,7 @@
 ##### [Použití aplikace Zimperium zIPS](you-need-to-resolve-a-threat-found-by-zips-android.md)
 
 ## [Používání zařízení s iOSem](using-your-iOS-device-with-intune.md)
-### [Co se stane při registraci zařízení s iOSem?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md)
+### [Účinky obnovení továrního nastavení zařízení s iOSem](effects-of-device-reset-company-portal-ios.md)
 ### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
 ### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
 ### [Registrace zařízení s iOSem poskytnutého vaší organizací](enroll-your-device-dep-ios.md)

@@ -321,30 +321,33 @@
           href: device-profiles.md
         - name: Vytvoření profilu
           href: device-profile-create.md
-        - name: Šablony pro správu
+        - name: Šablony pro správu ve Windows
           href: administrative-templates-windows.md
-        - name: Funkce zařízení
+          displayName: 'group policy, gpo, admx'
+        - name: Funkce zařízení v systémech iOS a macOS
           href: device-features-configure.md
         - name: Omezení nastavení a funkcí zařízení
           href: device-restrictions-configure.md
           displayName: Device restrictions
-        - name: Doručování aktualizací
+        - name: Updates
           href: delivery-optimization-windows.md
-          displayName: delivery optimization; updates
+          displayName: delivery optimization; Windows update
         - name: Upgradování edicí a režim S
           href: edition-upgrade-configure-windows-10.md
-        - name: Konfigurace e-mailu
+        - name: E-mailu
           href: email-settings-configure.md
-        - name: Povolení beznabídkového režimu
+        - name: Veřejné terminály a vyhrazená zařízení
           href: kiosk-settings.md
-        - name: Přidání připojení VPN
+        - name: Sdílená zařízení s více uživateli
+          href: shared-user-device-settings.md
+        - name: Síť VPN
           href: vpn-settings-configure.md
           items:
             - name: VPN pro aplikaci pro Android
               href: android-pulse-secure-per-app-vpn.md
             - name: VPN pro aplikaci pro iOS
               href: vpn-setting-configure-per-app.md
-        - name: Přidání bezdrátové sítě Wi-Fi
+        - name: Síť Wi-Fi
           href: wi-fi-settings-configure.md
           displayName: wifi
           items:
@@ -354,8 +357,6 @@
           href: kernel-extensions-overview-macos.md
         - name: Aplikace Zkuste si test ve vzdělávacím profilu
           href: education-settings-configure.md
-        - name: Sdílená zařízení s více uživateli
-          href: shared-user-device-settings.md
         - name: Funkce Mobility Extension (MX) na zařízeních Zebra
           href: android-zebra-mx-overview.md
           displayName: mx
@@ -594,6 +595,8 @@
                   href: app-sideload-windows.md
                 - name: Obchodní aplikace pro macOS
                   href: lob-apps-macos.md
+            - name: Systémové aplikace typu Android Enterprise
+              href: apps-ae-system.md
             - name: Správa aplikací Win32
               href: apps-win32-app-management.md
             - name: Skripty prostředí PowerShell
@@ -623,12 +626,24 @@
               href: app-configuration-policies-use-ios.md
             - name: Android spravovaná zařízení
               href: app-configuration-policies-use-android.md
-            - name: Konfigurace aplikace Managed Home Screen
-              href: app-configuration-managed-home-screen-app.md
-            - name: Spravované aplikace
+            - name: Konfigurace spravovaných aplikací bez registrace
               href: app-configuration-policies-managed-app.md
             - name: Zřizovací profily aplikací pro iOS
               href: app-provisioning-profile-ios.md
+            - name: Konfigurace konkrétních aplikací
+              items:
+                - name: Konfigurace aplikace Managed Home Screen
+                  href: app-configuration-managed-home-screen-app.md
+                - name: Konfigurace Portálu společnosti
+                  href: company-portal-app.md
+                - name: Konfigurace Managed Browseru
+                  href: app-configuration-managed-browser.md
+                - name: Konfigurace Microsoft Launcheru
+                  href: configure-microsoft-launcher.md
+                - name: Konfigurace Microsoft Edge
+                  href: manage-microsoft-edge.md
+                - name: Konfigurace Outlooku
+                  href: app-configuration-policies-outlook.md
             - name: hromadně zakoupené aplikace a knihy
               items:
                 - name: Správa aplikací a knih zakoupených prostřednictvím programu VPP
@@ -640,14 +655,6 @@
                   href: windows-store-for-business.md
                 - name: E-knihy pro iOS
                   href: vpp-ebooks-ios.md
-            - name: Konfigurace Portálu společnosti
-              href: company-portal-app.md
-            - name: Konfigurace Managed Browseru
-              href: app-configuration-managed-browser.md
-            - name: Konfigurace Microsoft Edge
-              href: manage-microsoft-edge.md
-            - name: Konfigurace Outlooku
-              href: app-configuration-policies-outlook.md
         - name: Ochrana aplikací
           items:
             - name: Selektivní vymazání aplikací
