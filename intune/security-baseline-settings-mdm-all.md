@@ -217,7 +217,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: Nakonfigurujte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po splnění dalších požadavků na zabezpečení.
   
-  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC Hardended.
+  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC *Hardended.
   - **Seznam cest pro zpřísněnou cestu UNC**  
     Vyberte **Přidat** a zadejte dalších bezpečnostní příznaky a cesty na serveru.  
 
