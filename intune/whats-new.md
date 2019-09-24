@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fbdd143e25e632601ec1f8ee4b57c9b77c3b3caf
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 35d64aba1c4c9a06e295699ac862198c29d8b9b1
+ms.sourcegitcommit: 9f91d803dfc39336a954b79ccec6420e58375d31
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166898"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211563"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -92,15 +92,6 @@ Sady Intune App SDK pro iOS bude používat 256bitových šifrovacích klíčů,
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-configuration"></a>Konfigurace zařízení
-
-#### <a name="allow-or-restrict-adding-app-widgets-to-the-home-screen-on-android-enterprise-work-profile-devices----1109650--wnstaged--"></a>Povolení nebo omezení přidání widgetů aplikací na domovskou obrazovku na zařízeních s pracovními profily Android Enterprise <!-- 1109650  wnstaged--> 
-
-Na zařízeních s Androidem Enterprise můžete nakonfigurovat funkce v pracovním profilu (**Konfigurace** > zařízení**profily** > **vytvořit profil** > **Android Enterprise** for Platform >  **Pracovní profil jenom > omezení zařízení** pro typ profilu). V této aktualizaci můžete uživatelům dovolit přidávat widgety, které jsou zpřístupněny aplikacemi pracovní profil na domovské obrazovce zařízení.
-
-Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](device-restrictions-android-for-work.md).
-
-Platí pro:
-- Pracovní profil Android Enterprise
 
 #### <a name="support-for-ikev2-vpn-profiles-for-ios----1943438-----"></a>Podpora pro profily IKEv2 VPN pro iOS <!-- 1943438   -->
 V této aktualizaci můžete vytvořit profily sítě VPN pro nativního klienta VPN iOS pomocí protokolu IKEv2. IKEv2 je nový typ připojení v**profilech** >  **Konfigurace** > zařízení**vytvořit profil** > **iOS** pro Platform > **VPN** pro typ profilu > **Typ připojení**.
@@ -189,6 +180,14 @@ Platí pro:
  #### <a name="updated-ui-for-configuring-microsoft-exchange-on-premises-access-------4092920---"></a>Aktualizované uživatelské rozhraní pro konfiguraci přístupu k místnímu systému Microsoft Exchange    <!-- 4092920 -->  
 Aktualizovali jsme konzolu, kde jste [nakonfigurovali přístup k místnímu přístupu Microsoft Exchange](conditional-access-exchange-create.md). Všechny konfigurace pro přístup k místnímu Exchangi jsou teď dostupné ve stejném podokně konzoly, kde můžete *Povolit řízení přístupu k místnímu Exchangi*.  
 
+#### <a name="allow-or-restrict-adding-app-widgets-to-the-home-screen-on-android-enterprise-work-profile-devices----1109650----"></a>Povolení nebo omezení přidání widgetů aplikací na domovskou obrazovku na zařízeních s pracovními profily Android Enterprise <!-- 1109650  --> 
+Na zařízeních s Androidem Enterprise můžete nakonfigurovat funkce v pracovním profilu (**Konfigurace** > zařízení**profily** > **vytvořit profil** > **Android Enterprise** for Platform >  **Pracovní profil jenom > omezení zařízení** pro typ profilu). V této aktualizaci můžete uživatelům dovolit přidávat widgety, které jsou zpřístupněny aplikacemi pracovní profil na domovské obrazovce zařízení.
+
+Pokud chcete zobrazit nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](device-restrictions-android-for-work.md).
+
+Platí pro:
+- Pracovní profil Android Enterprise
+
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="device-enrollment"></a>Registrace zařízení
 
@@ -216,7 +215,7 @@ Přidali jsme následující podporu pro plně spravovaná zařízení s Android
 - Systémové aplikace jsou podporované na zařízeních s Androidem Enterprise. V Intune přidejte aplikaci pro Android Enterprise System tak, že**vyberete aplikace** >  **klientské aplikace** > **Přidat**. V seznamu **Typ aplikace** vyberte aplikace pro **Android Enterprise System**. Další informace najdete v tématu [Přidání aplikací pro Android Enterprise System do Microsoft Intune](apps-ae-system.md). <!-- 4062195 -->
 - V **části dodržování předpisů** > zařízení –**vlastník zařízení**s**Androidem Enterprise** > můžete vytvořit zásady dodržování předpisů, které nastaví úroveň ověřování Google SafetyNet.   <!-- 4631425 -->
 - Na zařízeních s plnou správou Androidu Enterprise se podporují poskytovatelé ochrany před mobilními hrozbami. V **Možnosti dodržování předpisů** > zařízením v zařízení s**Androidem Enterprise** > **Owner**si můžete vybrat přijatelnou úroveň hrozeb. <!-- 4631440 --> [Nastavení Androidu Enterprise k označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune](compliance-policy-create-android-for-work.md#device-owner) seznam aktuálních nastavení.
-- Na zařízeních s plnou správou Androidu Enterprise se teď dá nakonfigurovat aplikace spouštěče Microsoftu prostřednictvím zásad ochrany aplikací, které umožňují standardizované prostředí koncového uživatele na plně spravovaném zařízení. K přizpůsobení zařízení s Androidem se dá použít aplikace Microsoft spouštěče. Pomocí aplikace spolu s účet Microsoft nebo pracovním nebo školním účtem máte přístup k vašemu kalendáři, dokumentům a posledním aktivitám v přizpůsobeném kanálu. Můžete také na počítači s Windows otevřít fotky, dokumenty a webové stránky, aby byly v zařízení produktivní. <!-- 5334044 -->
+- Na zařízeních s plnou správou Androidu Enterprise se teď dá nakonfigurovat aplikace spouštěče Microsoftu prostřednictvím zásad ochrany aplikací, které umožňují standardizované prostředí koncového uživatele na plně spravovaném zařízení. K přizpůsobení zařízení s Androidem se dá použít aplikace Microsoft spouštěče. Pomocí aplikace spolu s účet Microsoft nebo pracovním nebo školním účtem máte přístup k vašemu kalendáři, dokumentům a posledním aktivitám v přizpůsobeném kanálu. <!-- 5334044 -->
 
 V této aktualizaci jsme spokojeni s oznámením, že podpora Intune pro plně spravovanou platformu Android Enterprise je teď všeobecně dostupná. 
 
