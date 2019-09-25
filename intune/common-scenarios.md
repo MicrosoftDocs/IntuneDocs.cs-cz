@@ -7,7 +7,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 11/29/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32be10340e1e77d2f994c5f038e6328ea42a6303
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: d158cb01dbd13f032916f4dc2bf443ed0f6bfaae
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394774"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "71238587"
 ---
 # <a name="common-ways-to-use-microsoft-intune"></a>Běžné způsoby použití Microsoft Intune
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Než se podíváme do úkolů implementace, je důležité sladit vaší společnosti enterprise mobility obchodních cílů pomocí Intune. Účastník zarovnání je důležité, zda jste novým uživatelem řešení enterprise mobility nebo migrujete z jiného produktu.  
+Než se začnete do úloh implementace, je důležité, aby zúčastněné strany podnikového mobility vaší společnosti byly v souladu s podnikovými cíli používání Intune. Zarovnání účastníků je důležité, ať už nejste v rámci Enterprise mobility nebo migrujete z jiného produktu.  
 
 Potřeby se z hlediska využívání mobilních zařízení v podnikovém prostředí dynamicky vyvíjejí a jejich řešení od Microsoftu se v některých případech může lišit od ostatních řešení na trhu. Nejlepším způsobem, jak zajistit soulad s obchodními cíli, je vyjádřit cíle za pomoci scénářů, které chcete pro svoje zaměstnance, partnery a IT oddělení povolit.  
 
@@ -44,7 +43,7 @@ Níže najdete krátký přehled šesti nejběžnějších scénářů, pro kter
 Většina strategií z hlediska využívání mobilních zařízení v podnicích začíná plánem zajistit zabezpečený přístup k e-mailům pro zaměstnance s mobilními zařízeními, která se připojují k internetu. Celá řada organizací ještě v dnešní době využívá místní datové a aplikační servery, jako je Microsoft Exchange, které má hostované ve své podnikové síti.
 
 
-Intune a Microsoft Enterprise Mobility + Security (EMS) poskytují jedinečně integrované [řešení podmíněného přístupu](conditional-access.md) pro Exchange Server, které zajišťuje, aby žádné mobilní aplikace neměly přístup k e-mailu, dokud zařízení není zaregistrované v Intune. Tento typ přístupu k e-mailu můžete implementovat bez nasazení dalšího počítače brány na hranici vaší podnikové síti.
+Intune a Microsoft Enterprise Mobility + Security (EMS) poskytují jedinečně integrované [řešení podmíněného přístupu](conditional-access.md) pro Exchange Server, které zajišťuje, aby k e-mailu nemohlo přistupovat žádná mobilní aplikace, dokud nebude zařízení zaregistrované v Intune. Tento typ přístupu k e-mailu můžete implementovat bez nutnosti nasazovat jiný počítač brány na hranici vaší podnikové sítě.
 
 Intune podporuje také povolení přístupu k mobilním aplikacím, které vyžadují zabezpečený přístup k místním datům, třeba serverům obchodních aplikací. Tento typ přístupu se obvykle zajišťuje pomocí [certifikátů spravovaných službou Intune](certificates-configure.md) pro řízení přístupu v kombinaci se standardní bránou sítě VPN nebo proxy serverem v hraniční síti, například Microsoft Azure Active Directory Application Proxy. 
 
@@ -56,7 +55,7 @@ V takových případech je možné k podnikovým datům získat přístup jedin�
 ## <a name="protecting-your-office-365-email-and-data-so-it-can-be-safely-accessed-by-mobile-devices"></a>Ochrana vašich e-mailů a dat Office 365, aby je mohli uživatelé bezpečně používat na mobilních zařízeních
 Ochrana podnikových dat (e-mailů, dokumentů, rychlých zpráv, kontaktů) v Office 365 je navržena tak, abyste ji mohli co nejjednodušeji nastavit a vaše uživatele nijak neomezovala v práci.
 
-Intune a Microsoft Enterprise Mobility + Security (EMS) poskytují jedinečně integrované řešení podmíněného přístupu, které zajišťuje, že žádní uživatelé, aplikace ani zařízení nebudou mít přístup k datům Office 365, pokud nebudou splňovat požadavky stanovené vaší společností (bylo provedeno [vícefaktorové ověřování](multi-factor-authentication.md), proběhla registrace do služby Intune, je používána spravovaná aplikace, používá se podporovaná verze OS, byl zadán PIN zařízení, nízký profil rizika pro uživatele atd.).
+Intune a Microsoft Enterprise Mobility + Security poskytují jedinečné integrované řešení podmíněného přístupu, které nemá přístup k datům Office 365 bez uživatelů, aplikací nebo zařízení, pokud nesplňují požadavky na dodržování předpisů vaší společnosti (provedené [ Multi-Factor Authentication](multi-factor-authentication.md), zaregistrované v Intune, pomocí spravované aplikace, podporované verze operačního systému, kódu PIN zařízení, nízkých uživatelských rizikových profilů atd.)
 
 
 Mobilní aplikace Office v příslušných obchodech s aplikacemi jsou připravené na vynucování zásad zabránění úniku dat, které můžete nakonfigurovat přes Intune. To vám umožňuje chránit data před sdílením s aplikacemi (třeba s nativními e-mailovými aplikacemi) a umístěními úložiště (třeba Dropboxem), která nespravuje IT. Tato funkce je integrovaná v Office 365 a EMS. Tuto výhodu získáte bez nutnosti nasazovat další infrastrukturu.
@@ -64,7 +63,7 @@ Mobilní aplikace Office v příslušných obchodech s aplikacemi jsou připrave
 Běžnou praxí při nasazování Office 365 je vyžadovat, aby se zařízení registrovala do systému správy, pokud je nutné jejich kompletní nastavení včetně konfigurací podnikových aplikací, certifikátů, Wi-Fi, VPN, což je běžný scénář pro zařízení ve vlastnictví společnosti.  
 
 
-Nicméně, pokud uživatel jednoduše potřebuje přístup k podnikovému e-mailu a dokumentům, což často platí pro zařízení v osobním vlastnictví, můžete vyžadovat uživatele, aby používali mobilní aplikace Office (na které jste aplikovali [zásady ochrany aplikací](app-protection-policies.md)a úplně se vynechá registrace zařízení.  
+Pokud ale uživatel potřebuje přístup k firemnímu e-mailu a dokumentům, což často platí pro zařízení v osobním vlastnictví, můžete vyžadovat, aby uživatel používal mobilní aplikace Office (na které jste nastavili [Zásady ochrany aplikací](app-protection-policies.md) a přeskočíte registraci. zařízení zcela.  
 
 
 
@@ -85,7 +84,7 @@ Z pohledu správce můžete vyžadovat, aby uživatelé pro přístup k Office 3
 ## <a name="issue-corporate-owned-phones-to-your-employees"></a>Poskytnutí podnikových telefonů zaměstnancům
 Řada zaměstnanců je v dnešní době mobilní, což s sebou přináší nutnost, aby byli na těchto mobilních zařízeních stejně produktivní. Tito zaměstnanci potřebují snadný přístup ke všem podnikovým aplikacím a datům, a to kdykoli a bez ohledu na to, kde právě jsou. Je potřeba zajistit zabezpečení podnikových dat a udržet nízké náklady na správu.  
 
-Intune nabízí [řešení hromadného zřizování a správu](device-enrollment.md) , která jsou integrovaná s platformami pro správu hlavních podnikových zařízení na trhu ještě dnes, včetně programu Apple Device Enrollment Program a mobilní Samsung Knox zabezpečení platformy. Centralizované vytváření konfigurací zařízení prostřednictvím služby Intune pomáhá zřizování podnikových zařízení do značné míry zautomatizovat.  
+Intune nabízí [řešení hromadného zřizování a správy](device-enrollment.md) , která jsou integrovaná s hlavními platformami pro správu firemních zařízení, které jsou dnes na trhu, včetně Apple program registrace zařízení a platformy Samsung KNOX pro zabezpečení mobilních zařízení. Centralizované vytváření konfigurací zařízení prostřednictvím služby Intune pomáhá zřizování podnikových zařízení do značné míry zautomatizovat.  
 
 Představte si tuto situaci: dáte zaměstnanci nerozbalenou krabičku s nových iPhonem. Zaměstnanec iPhone zapne a je proveden kroky nastavení specifickými pro vaši firmu, v rámci kterých se musí ověřit. iPhone se bez problémů nakonfiguruje pomocí [zásad zabezpečení](device-profiles.md).
 
@@ -96,11 +95,11 @@ Zaměstnanec pak spustí aplikaci Portál společnosti Intune a přes tu se dost
 ## <a name="issue-limited-use-shared-tablets-to-your-employees"></a>Poskytnutí sdílených tabletů s omezeným použitím zaměstnancům
 U zaměstnanců je stále rozšířenější používání mobilní technologií. Zaměstnanci v maloobchodech například dnes běžně využívají sdílené tablety.  Ať už se tablety využívají ke zpracování prodeje, nebo k okamžitému zjištění dostupnosti zboží na skladě, umožňují pracovníkům často daleko rychleji reagovat na požadavky zákazníků.
 
-V tomto případě je velmi důležitá jednoduchost uživatelského prostředí. Z tohoto důvodu jsou tablety obvykle poskytují zaměstnancům v režimu omezeného použití, tak, že je jediné, co zaměstnanec mohou komunikovat s jednou z obchodních aplikací. Intune umožňuje hromadně zřizovat, zabezpečit a centrálně spravovat tyto sdílené [iOS a Android](device-profiles.md) zařízení, která může být nakonfigurován pro spouštění v tomto režimu omezeného použití.
+V tomto případě je velmi důležitá jednoduchost uživatelského prostředí. Z tohoto důvodu se tablety většinou poskytují zaměstnancům v režimu omezeného použití, což znamená, že jediná obchodní aplikace je jediná věc, se kterou může zaměstnanec spolupracovat. Intune umožňuje hromadně zřizovat, zabezpečit a centrálně spravovat tato sdílená zařízení s [iOS a Androidem](device-profiles.md) , která je možné nakonfigurovat tak, aby běžela v tomto režimu omezeného použití.
 
 <!-- Learn more about how to plan and deploy Intune to support shared tablets. -->
 
 ## <a name="enable-your-employees-to-securely-access-office-365-from-an-unmanaged-public-kiosk"></a>Umožnění zabezpečeného přístupu zaměstnanců k Office 365 z nespravované veřejného terminálu
 Někdy budou muset vaši zaměstnanci použít zařízení, aplikace nebo prohlížeče, které nelze spravovat, například veřejné počítače na veletrzích nebo v hotelech.
 
-Máte z nich zaměstnancům povolit přístup k podnikovému e-mailu? S Intune a Microsoft Enterprise Mobility + Security, můžete jednoduše odpovědět "Ne" tím, že [omezení přístupu k e-mailu pro zařízení, která jsou spravována vaší organizací](conditional-access.md). Tím se zajistí, aby zaměstnanec, který prochází přísným ověřením, nenechal firemní data na nějakém nedůvěryhodném počítači.
+Máte z nich zaměstnancům povolit přístup k podnikovému e-mailu? V Intune a Microsoft Enterprise Mobility + Security může odpověď jednoduše "ne" tím, že [omezí přístup k e-mailu na zařízení spravovaná vaší organizací](conditional-access.md). Tím se zajistí, aby zaměstnanec, který prochází přísným ověřením, nenechal firemní data na nějakém nedůvěryhodném počítači.

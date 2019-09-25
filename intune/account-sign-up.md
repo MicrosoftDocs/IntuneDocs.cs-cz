@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 01/02/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 956fe061912e0eb96a18c410e1455252874d6b84
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 22e5c38be9dc5a8a09888651e471f64bf6739c72
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57459947"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71238896"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrace nebo přihlášení k Microsoft Intune
 
@@ -37,7 +36,7 @@ Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho p
 >[!WARNING]
 >Když si zaregistrujete nový účet, nebude možné s ním kombinovat stávající pracovní nebo školní účet.
 
-## <a name="how-to-sign-up-or-sign-in-to-intune"></a>Registrace nebo přihlášení k Intune
+## <a name="how-to-sign-up-for-intune"></a>Jak se zaregistrovat k Intune
 
 1. Přejděte na [stránku pro registraci k Intune](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20).
 
@@ -48,4 +47,32 @@ Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho p
 ## <a name="post-sign-up-considerations"></a>Aspekty ke zvážení po registraci
 Pokud se zaregistrujete k novému předplatnému, přijde vám na e-mailovou adresu, kterou jste zadali během procesu registrace, e-mailová zpráva s informacemi o účtu. Ta potvrzuje, že je vaše předplatné aktivní.
 
-Po dokončení procesu registrace budete přesměrováni na Centrum pro správu služeb Microsoft 365, umožňují uživatelům přidat a přiřadit jim licence. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat [vlastní název domény](custom-domain-name-configure.md) nebo [synchronizovat informace o uživatelských účtech](users-add.md#sync-active-directory-and-add-users-to-intune) s místní službou Active Directory, můžete toto okno prohlížeče zavřít.
+Po dokončení procesu registrace budete přesměrováni na centrum pro správu Microsoft 365, které se používá k přidání uživatelů a přiřazení licencí. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat [vlastní název domény](custom-domain-name-configure.md) nebo [synchronizovat informace o uživatelských účtech](users-add.md#sync-active-directory-and-add-users-to-intune) s místní službou Active Directory, můžete toto okno prohlížeče zavřít.
+
+## <a name="sign-in-to-microsoft-intune"></a>Přihlášení k Microsoft Intune
+Jakmile se zaregistrujete do služby Intune, můžete pomocí libovolného zařízení s [podporovaným prohlížečem](supported-devices-browsers.md#intune-supported-web-browsers) přihlásit se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a službu spravovat.
+
+Ve výchozím nastavení má váš účet ve službě Azure AD jedno z následujících oprávnění:
+- Globální správce
+- Správce služby Intune (označovaný také jako správce Intune)
+
+Pokud chcete udělit přístup ke správě služby pro uživatele s dalšími oprávněními, podívejte se na téma [Role Access Control](role-based-access-control.md)
+
+### <a name="intune-admin-portal-url"></a>Adresa URL portálu pro správu Intune
+
+Centrum pro správu Microsoft 365: https://devicemanagement.microsoft.com
+
+Azure Portal Intune: https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade
+
+Intune for Education: https://intuneeducation.portal.azure.com
+
+Klasický portál Intune: https://manage.microsoft.com Klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského POČÍTAČového softwaru Intune.
+
+### <a name="urls-for-intune-services-provided-by-office-365"></a>Adresy URL pro služby Intune poskytované sadou Office 365
+
+Microsoft 365 Business: https://portal.microsoft.com/adminportal
+
+Správa mobilních zařízení Office 365: https://portal.office.com/adminportal/home#/MifoDevices
+
+## <a name="see-also"></a>Viz také:
+[Nemůžete se přihlásit k Office 365, Azure nebo Intune.](https://support.microsoft.com/help/2412085)

@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64de72822ad8d2f8d9893e3428208ff1363d33e2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 732e391ad3c85c1f3f5da36b3424544cf1cdf4aa
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566042"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71238787"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -36,37 +35,37 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 ## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
 
--   Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
+- Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
 
--   Vstupní aplikace musí být platný balíček aplikace pro Android, který má příponu souboru .apk a splňuje následující požadavky:
+- Vstupní aplikace musí být platný balíček aplikace pro Android, který má příponu souboru .apk a splňuje následující požadavky:
 
-    -   Nesmí být zašifrovaný.
-    -   Nesmí být už jednou zabalený nástrojem Intune App Wrapping Tool.
-    -   Musí být napsaný pro systém Android 4.0 nebo novější.
+  - Nesmí být zašifrovaný.
+  - Nesmí být už jednou zabalený nástrojem Intune App Wrapping Tool.
+  - Musí být napsaný pro systém Android 4.0 nebo novější.
 
--   Aplikaci musí vyvinout vaše společnost nebo je tato aplikace vyvinuta pro ni. Tento nástroj se nedá používat u aplikací stažených z obchodu Google Play.
+- Aplikaci musí vyvinout vaše společnost nebo je tato aplikace vyvinuta pro ni. Tento nástroj se nedá používat u aplikací stažených z obchodu Google Play.
 
--   Pokud chcete nástroj App Wrapping Tool spustit, musíte mít nainstalovanou nejnovější verzi [prostředí Java Runtime](https://java.com/download/). Potom zkontrolujte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na C:\ProgramData\Oracle\Java\javapath. Další nápovědu najdete v [dokumentaci k Javě](https://java.com/download/help/).
+- Pokud chcete nástroj App Wrapping Tool spustit, musíte mít nainstalovanou nejnovější verzi [prostředí Java Runtime](https://java.com/download/). Potom zkontrolujte, jestli je proměnná cesty Java v proměnných prostředí Windows nastavená na C:\ProgramData\Oracle\Java\javapath. Další nápovědu najdete v [dokumentaci k Javě](https://java.com/download/help/).
 
     > [!NOTE]
     > V některých případech může 32bitová verze Javy způsobit potíže s pamětí. Proto je vhodné nainstalovat 64bitovou verzi.
 
-- Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Informace o **opětovném použití** existujících certifikátů a celkové pokyny k podpisovým certifikátům najdete v tématu [Opětovné použití podpisových certifikátů a balení aplikací](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps). Ke generování **nových** přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace se používá spustitelný soubor Java keytool.exe. Nastavená hesla musí být bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
+- Android vyžaduje, aby byly všechny balíčky aplikací (.apk) podepsané. Informace o **opětovném použití** existujících certifikátů a celkové pokyny k podpisovým certifikátům najdete v tématu [Opětovné použití podpisových certifikátů a balení aplikací](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). Ke generování **nových** přihlašovacích údajů potřebných k podpisu zabalené výstupní aplikace se používá spustitelný soubor Java keytool.exe. Nastavená hesla musí být bezpečná, ale nezapomeňte si je poznamenat, protože je budete potřebovat ke spuštění nástroje App Wrapping Tool.
 
     > [!NOTE]
     > Nástroj Intune App Wrapping Tool nepodporuje pro podepisování aplikací podpisová schémata v2 a nadcházející v3 od Googlu. Po zabalení souboru .apk pomocí nástroje Intune App Wrapping Tool se doporučuje použít [nástroj Apksigner od Googlu]( https://developer.android.com/studio/command-line/apksigner). Tím se zajistí, že když se vaše aplikace dostane na zařízení koncových uživatelů, bude ji možné spustit správně podle standardů Androidu. 
 
-- (Volitelné) Někdy aplikace narazit na omezení velikosti Dalvik Executable (DEX) z důvodu tříd sady Intune MAM SDK, které se přidávají během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. Intune App Wrapping Tool automaticky zpracovává během zabalení pro aplikace pomocí rozhraní API pro minimální úrovně 21 nebo vyšší přetečení souboru DEX (počínaje verzí [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). U aplikací s minimální úroveň rozhraní API < 21, doporučujeme je ke zvýšení minimální úroveň rozhraní API pomocí Obálka `-UseMinAPILevelForNativeMultiDex` příznak. Pro zákazníky, kteří nelze zvýšit minimální úroveň rozhraní API aplikace jsou k dispozici následujících náhradních postupů DEX přetečení. V některých organizacích to může vyžadovat spolupráci s těmi kompilují aplikaci (tj. team build aplikace):
-* Chcete-li odstranit odkazy na nevyužité třídy ze souboru DEX primární aplikace pomocí ProGuard.
-* Pro zákazníky, kteří používají v3.1.0 nebo vyšší modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+- Volitelné Někdy může aplikace dosáhnout limitu velikosti spustitelného souboru Dalvik (DEX), protože třídy sady Intune MAM SDK, které jsou přidány během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. Nástroj pro zabalení aplikace Intune automaticky zpracovává přetečení souborů DEX při zabalení pro aplikace s minimální úrovní rozhraní API 21 nebo vyšší ( [od verze v). 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Pro aplikace s minimální úrovní rozhraní API < 21 doporučujeme zvýšit minimální úroveň rozhraní API pomocí `-UseMinAPILevelForNativeMultiDex` příznaku obálky. Aby zákazníci nemohli zvýšit minimální úroveň rozhraní API aplikace, jsou k dispozici následující alternativní DEX přetečení. V některých organizacích to může vyžadovat spolupráci s tím, že aplikace kompiluje (tj. tým sestavení aplikace):
+* Pomocí ProGuard můžete eliminovat nepoužívané odkazy na třídy z primárního souboru DEX aplikace.
+* Pro zákazníky, kteří používají 3.1.0 nebo novější modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
 
 ## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
 
-1.  Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor InstallAWT.exe nástroje Intune App Wrapping Tool for Android. Otevřete instalační soubor.
+1. Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor InstallAWT.exe nástroje Intune App Wrapping Tool for Android. Otevřete instalační soubor.
 
-2.  Přijměte licenční smlouvu a dokončete instalaci.
+2. Přijměte licenční smlouvu a dokončete instalaci.
 
-Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program soubory (x86) \Microsoft Intune Mobile Application Management\Android\App nástroj pro zabalení.
+Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program Files (x86) \Microsoft Intune Mobile Application Management\Android\App – Nástroj pro zabalení.
 
 ## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
 
@@ -79,6 +78,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
    ```
 
 3. Spusťte nástroj příkazem **invoke-AppWrappingTool**, který má následující syntaxi použití:
+
    ```PowerShell
    Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
    -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
@@ -95,7 +95,7 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 |**-KeyAlias**&lt;String&gt;|Název klíče, který se má použít pro podepisování.| |
 |**-KeyPassword**&lt;SecureString&gt;|Heslo použité k dešifrování privátního klíče, který se použije pro podepisování.| |
 |**-SigAlg**&lt;SecureString&gt;| (Volitelně) Název podpisového algoritmu, který se má použít k podepsání. Algoritmus musí být kompatibilní s privátním klíčem.|Příklady: SHA256withRSA, SHA1withRSA|
-|**-UseMinAPILevelForNativeMultiDex**| (Volitelné) Pomocí tohoto příznaku zvýšit zdrojové aplikaci pro Android na minimální úroveň rozhraní API 21. Tento příznak bude výzvu k potvrzení, protože se omezit, kdo může tuto aplikaci nainstalovat. Uživatelům můžete přeskočit potvrzovací dialogové okno přidáním parametru "-potvrzení: $false" na jejich příkaz prostředí PowerShell. Příznak by měla sloužit pouze zákazníci v aplikacích s minimální rozhraní API < 21, které selhaly z důvodu chyb přetečení DEX zabalit úspěšně. | |
+|**-UseMinAPILevelForNativeMultiDex**| Volitelné Pomocí tohoto příznaku zvyšte minimální úroveň rozhraní API u zdrojové aplikace pro Android na 21. Tento příznak zobrazí výzvu k potvrzení, protože bude omezen na to, kdo může tuto aplikaci nainstalovat. Uživatelé můžou potvrzovací dialog přeskočit připojením parametru-Confirm: $false ke svému příkazu PowerShellu. Příznak by měli používat jenom zákazníci v aplikacích s minimálním rozhraním API < 21, které se nepodařilo úspěšně zabalit kvůli chybám přetečení DEX. | |
 | **&lt;CommonParameters&gt;** | (Volitelně) Příkaz podporuje běžné parametry PowerShellu, jako je verbose a debug. |
 
 
@@ -110,10 +110,13 @@ Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umíst
 **Příklad:**
 
 Naimportujte modul PowerShellu.
+
 ```PowerShell
 Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool\IntuneAppWrappingTool.psm1"
 ```
+
 Spusťte nástroj App Wrapping Tool na nativní aplikaci HelloWorld.apk.
+
 ```PowerShell
 invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
 ```
@@ -128,12 +131,12 @@ Hlavní situace, ve kterých potřebujete znovu zabalit svoje aplikace, jsou tyt
 * Nástroj Intune App Wrapping Tool for Android vydal novou verzi, která přináší důležité opravy chyb nebo nové specifické funkce zásad ochrany aplikace Intune. Pro [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) se toto děje každých 6–8 týdnů prostřednictvím úložiště GitHub.
 
 Mezi osvědčené postupy pro opětovné balení patří: 
-* Zachování podpisových certifikátů, které se používají při sestavování. Informace najdete v části [Opětovné použití podpisových certifikátů a balení aplikací](https://docs.microsoft.com/intune/app-wrapper-prepare-android#reusing-signing-certificates-and-wrapping-apps).
+* Zachování podpisových certifikátů, které se používají při sestavování. Informace najdete v části [Opětovné použití podpisových certifikátů a balení aplikací](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps).
 
 ## <a name="reusing-signing-certificates-and-wrapping-apps"></a>Opětovné použití podpisových certifikátů a balení aplikací
 Android vyžaduje, že všechny aplikace musí být podepsané platným certifikátem, aby je bylo možné nainstalovat na zařízení s Androidem.
 
-Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny). Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
+Zabalené aplikace je možné podepsat jako součást procesu zabalení nebo *po* zabalení pomocí stávajících podpisových nástrojů (veškeré podpisové informace v aplikaci budou před zabalením zahozeny). Pokud je to možné, měly by se během balení použít podpisové informace použité již během sestavování buildu. V některých organizacích to může vyžadovat spolupráci s těmi, kdo vlastní informace o úložišti klíčů (tedy s týmem, který vytvořil build aplikace). 
 
 Pokud předchozí podpisový certifikát nelze použít nebo aplikace zatím nebyla nasazena, můžete vytvořit nový podpisový certifikát podle pokynů v [Příručce pro vývojáře pro Android](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
@@ -142,17 +145,17 @@ Pokud už aplikace byla dříve nasazena s jiným podpisovým certifikátem, nen
 ## <a name="security-considerations-for-running-the-app-wrapping-tool"></a>Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool
 Pro zabránění potenciálnímu falšování identity, zpřístupnění informací a zvýšení oprávnění pro útoky zajistěte toto:
 
--   Vstupní obchodní aplikace (LOB), výstupní aplikace a úložiště klíčů Java KeyStore musí být na stejném počítači s Windows, na kterém běží nástroj App Wrapping Tool.
+- Vstupní obchodní aplikace (LOB), výstupní aplikace a úložiště klíčů Java KeyStore musí být na stejném počítači s Windows, na kterém běží nástroj App Wrapping Tool.
 
--   Výstupní aplikaci naimportujte do Intune na stejném počítači, na kterém je spuštěný tento nástroj. Další informace o nástroji Java keytool viz [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
+- Výstupní aplikaci naimportujte do Intune na stejném počítači, na kterém je spuštěný tento nástroj. Další informace o nástroji Java keytool viz [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html).
 
--   Pokud se výstupní aplikace a nástroj sice nacházejí v cestě UNC (Universal Naming Convention), ale vy nespouštíte nástroj a vstupní soubory na stejném počítači, použijte k nastavení zabezpečení prostředí podpis [protokolu IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) nebo [protokolu SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
+- Pokud se výstupní aplikace a nástroj sice nacházejí v cestě UNC (Universal Naming Convention), ale vy nespouštíte nástroj a vstupní soubory na stejném počítači, použijte k nastavení zabezpečení prostředí podpis [protokolu IPsec (Internet Protocol Security)](https://wikipedia.org/wiki/IPsec) nebo [protokolu SMB (Server Message Block)](https://support.microsoft.com/kb/887429).
 
--   Aplikace musí pocházet z důvěryhodného zdroje.
+- Aplikace musí pocházet z důvěryhodného zdroje.
 
--   Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
+- Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 - [Rozhodování o způsobu přípravy aplikací na jejich správu v Microsoft Intune](apps-prepare-mobile-application-management.md)
 
 - [Microsoft Intune App SDK pro Android – Příručka pro vývojáře](app-sdk-android.md)

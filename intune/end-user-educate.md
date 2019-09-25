@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 06/01/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f8405aceaa1fd9c00b966d03a1f7b80e5946d96
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 52f8af06fffb3643714ed318e474b73be21963ed
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898475"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239798"
 ---
 # <a name="how-to-educate-your-end-users-about-microsoft-intune"></a>Co říct koncovým uživatelům o Microsoft Intune
 
@@ -44,7 +43,7 @@ __Jakou úroveň zkušeností s technologií uživatelé mají?__ Znalosti a zku
 
 __Co znamená správa mobilních zařízení pro uživatele?__ Uživatelé možná přesně nechápou, jaký přístup máte (nebo nemáte) k jejich zařízením a informacím. Uživatelé pravděpodobně mají obavy, že oddělení IT a vedení může sledovat jejich akce. Méně zkušení uživatelé zařízení si možná myslí, že veškerá aktivita na jejich zařízeních je soukromá. 
 
-__Jaké potíže může Intune způsobit uživatelům?__  Vyhraďte a respektujte čas, který uživatelům zabere instalace aplikací, registrace zařízení a zajišťování dodržování předpisů. Zabezpečení firemních dat je hlavní prioritou každého nasazení Intune. Postoj uživatelů ke správě zařízení ale můžou negativně ovlivnit postupy, jako jsou například:  
+__Jaké potíže může Intune způsobit uživatelům?__  Vyhraďte a respektujte čas, který uživatelům zabere instalace aplikací, registrace zařízení a zajišťování dodržování předpisů. Zabezpečení firemních dat je hlavní prioritou každého nasazení Intune. Pokud zadáváte zásady, které mají, ale uživatel postojů k správě zařízení, může se negativně ovlivňovat. například:  
 * Vyžadování příliš složitých hesel pro osobní zařízení
 * Odesílání požadovaných aktualizací aplikace v průběhu důležitých hovorů  
 
@@ -58,9 +57,9 @@ Přečtěte si následující seznam tipů, jak usnadnit nasazení Intune v orga
 
 * __Buďte přístupní.__ Informujte uživatele, kde můžou najít nápovědu týkající se problémů s jejich zařízeními. Pokud si [přizpůsobujete Portál společnosti](company-portal-customize.md), nezapomeňte uvést kontaktní informace na správce IT.
 
-* __Buďte osobní.__ Nabízejte pokyny, které jsou specifické pro nasazení ve vaší organizaci. Tím dáte uživatelům najevo, že vás jejich činnost zajímá. Pomocí této [přizpůsobitelné šablony pro registraci uživatelů do Intune](https://gallery.technet.microsoft.com/office/Intune-End-User-Enrollment-3a0c9b0c) můžete pro uživatele vytvořit vlastní pokyny k registraci.
+* __Buďte osobní.__ Nabízejte pokyny, které jsou specifické pro nasazení ve vaší organizaci. Tím dáte uživatelům najevo, že vás jejich činnost zajímá. Pomocí této přizpůsobitelné [sady Intune pro přijímání](https://aka.ms/IntuneAdoptionKit) můžete vytvořit vlastní pokyny k registraci pro uživatele.
 
-* __Komunikujte různými způsoby.__ Uživatelé mají [různé způsoby učení](https://www.umassd.edu/dss/resources/facultystaff/howtoteachandaccommodate/howtoaccommodatedifferentlearningstyles/) a můžou preferovat různé způsoby získávání informací. Pro uživatele, kteří se učí vizuálně, Intune nabízí [videa věnovaná registraci na různých typech zařízení](https://channel9.msdn.com/Series/IntuneEnrollment) na webu Channel 9. Videa lze vkládat přímo na vlastní [sharepointový web](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Můžete si také stáhnout místní kopie videa nebo zvukové stopy.
+* __Komunikujte různými způsoby.__ Uživatelé mají [různé způsoby učení](https://www.umassd.edu/dss/resources/faculty--staff/how-to-teach-and-accommodate/how-to-accommodate-different-learning-styles/) a můžou preferovat různé způsoby získávání informací. Pro uživatele, kteří se učí vizuálně, Intune nabízí [videa věnovaná registraci na různých typech zařízení](https://channel9.msdn.com/Series/IntuneEnrollment) na webu Channel 9. Videa lze vkládat přímo na vlastní [sharepointový web](https://support.office.com/article/Embed-a-video-from-Office-365-Video-59e19984-c34e-4be8-889b-f6fa93910581). Můžete si také stáhnout místní kopie videa nebo zvukové stopy.
 
 * __Buďte vnímaví.__ Uživatelské prostředí Intune má dopad také na vaši produktivitu. Důkladná znalost uživatelského prostředí vám usnadní řešení problémů se zařízeními a uživateli. Můžete například zjistit a pochopit, jak uživatelé získávají svoje aplikace. Když tyto informace máte předem, usnadní a urychlí vám to diagnostiku a opravy problémů.
 

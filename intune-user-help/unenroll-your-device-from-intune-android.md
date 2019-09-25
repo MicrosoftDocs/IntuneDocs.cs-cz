@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a472e4d8c3ef7b922f02b4d2407362ba738486c
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 91aefbc8c3960100ce5e9164ce48a2b9d33c3f3e
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71167546"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238966"
 ---
 # <a name="unenroll-your-android-device-from-management"></a>Zrušení správy registrovaného zařízení s Androidem  
 
@@ -64,7 +64,7 @@ Případně klepněte na **Nastavení** > **aplikace** > portál společnostiodi
 
 Jako poslední možnost můžete aplikaci odinstalovat ze zařízení jako správce zařízení.  
 
-Pokud máte zařízení vlastněné společností, může vaše organizace vyžadovat, aby na zařízení Portál společnosti. Pokud ho odinstalujete, může dojít ke ztrátě přístupu k chráněným prostředkům společnosti, jako je e-mail, aplikace, Wi-Fi nebo VPN, až do opětovné instalace aplikace. Další informace o instalaci, aktualizaci nebo odebrání požadovaných aplikací najdete v tématu [Přidání aplikací do Microsoft Intune](https://docs.microsoft.com/intune/apps-add.md#apps-that-are-added-automatically-by-intune).  
+Pokud máte zařízení vlastněné společností, může vaše organizace vyžadovat, aby na zařízení Portál společnosti. Pokud ho odinstalujete, může dojít ke ztrátě přístupu k chráněným prostředkům společnosti, jako je e-mail, aplikace, Wi-Fi nebo VPN, až do opětovné instalace aplikace. Další informace o instalaci, aktualizaci nebo odebrání požadovaných aplikací najdete v tématu [Přidání aplikací do Microsoft Intune](https://docs.microsoft.com/intune/apps-add#apps-that-are-added-automatically-by-intune).  
 
 Tady je postup, jak zakázat Portál společnosti jako správce zařízení. Skutečné názvy jednotlivých nastavení se můžou v zařízení s Androidem lišit.  
 

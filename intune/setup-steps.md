@@ -1,5 +1,5 @@
 ---
-title: Nastavení Microsoft Intune
+title: Nastavit Microsoft Intune
 description: Požadavky a předpoklady k tomu, abyste se vaše předplatné Intune dalo začít používat
 keywords: ''
 author: ErikjeMS
@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 01/24/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5944f7bacd87e2ef1e1117dd44eb80b6fe572e6
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5dbebfee60c0c558a8d876471ddba93fb2979831
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391908"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71238285"
 ---
 # <a name="set-up-intune"></a>Nastavení Intune
 
@@ -32,7 +31,7 @@ Tento postup nastavení vám umožní povolit správu mobilních zařízení (MD
 
 Některé kroky, například nastavení předplatného Intune a nastavení autority pro správu mobilních zařízení, jsou ve většině situací povinné. Jiné kroky, například konfigurace vlastní domény nebo přidání aplikací, jsou nepovinné a závisejí na potřebách vaší firmy.
 
-Pokud aktuálně používáte Microsoft System Center Configuration Manager ke správě počítačů a serverů, můžete si [připojení nástroje Configuration Manager cloudu s spolusprávy](https://docs.microsoft.com/sccm/comanage/overview).
+Pokud při správě počítačů a serverů aktuálně používáte Microsoft System Center Configuration Manager, můžete [Configuration Manager pomocí spolusprávy připojit k cloudu](https://docs.microsoft.com/sccm/comanage/overview).
 
 >[!TIP]
 >Pokud zakoupíte aspoň 150 licencí v rámci opravňujícího plánu Intune, můžete využít *zvýhodnění centra FastTrack*. Tato služba vám poskytne spolupráci se specialisty Microsoftu na připravení prostředí pro službu Intune. Přečtěte si téma [Zvýhodnění centra FastTrack pro Enterprise Mobility + Security (EMS)](https://docs.microsoft.com/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).

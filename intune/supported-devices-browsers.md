@@ -6,9 +6,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 01/03/2018
+ms.date: 07/29/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc0cf701450e594fd4b72a8e0565246994bb8a9e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 5946f8ffb8179bb5109de45df8f89012ec706023
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57460610"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "71239567"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -33,7 +32,7 @@ Před nastavením Microsoft Intune zkontrolujte podporované operační systémy
 
 Nápovědu k instalaci Intune na zařízení, najdete v článku [práce pomocí spravovaných zařízení](/intune-user-help/company-portal-frequently-asked-questions) a [využití šířky pásma sítě Intune](network-bandwidth-use.md).
 
-Další informace o podpoře poskytovatele konfigurace služby, najdete [referencích poskytovatelů konfiguračních služeb](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
+Další informace o podpoře poskytovatele konfigurační služby najdete v referenčních informacích o [poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).
 
 ## <a name="intune-supported-operating-systems"></a>Operační systémy podporované službou Intune
 
@@ -100,7 +99,7 @@ You can manage [Exchange ActiveSync devices](device-enrollment.md#mobile-device-
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centrum pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:
@@ -115,12 +114,12 @@ Portály podporují následující prohlížeče:
 
 ### <a name="intune-classic-portal"></a>Klasický portál Intune
 
-Funkce klasického Intune, jako je softwarový počítačový klient Intune a integrace partnerů MTD (Mobile Threat Defense), jsou dostupné jen na klasickém portálu Intune (https://manage.microsoft.com). Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
+Klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského softwaru Intune pro počítače (https://manage.microsoft.com). Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
 
 Konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
 - Internet Explorer 10 nebo novější
 - Google Chrome (verze starší než verze 42)
-- Mozilla Firefox se zapnutým doplňkem Silverlight [Další informace](https://go.microsoft.com/fwlink/?linkid=836872)
+- Mozilla Firefox s povoleným programem Silverlight (verze starší než verze 56)
 
 > [!Note]
 > Klasický portál Intune nepodporuje Microsoft Edge ani mobilní prohlížeče, protože nepodporují [Microsoft Silverlight](https://msdn.microsoft.com/library/cc838158(v=vs.95).aspx).

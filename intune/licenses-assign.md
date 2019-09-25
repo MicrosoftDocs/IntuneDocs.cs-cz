@@ -7,22 +7,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/31/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: bb4314ea-88b5-44d3-92ce-4c6aff0587a4
-ms.reviewer: amyro
+ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14d5e01577100e0a66cfcf6ce935289a1dc26fab
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: dd8b35fbbff89ca7f4c259e1903f4c9f9a6e3b38
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57459896"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71238322"
 ---
 # <a name="assign-licenses-to-users-so-they-can-enroll-devices-in-intune"></a>Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune
 
@@ -30,22 +29,22 @@ ms.locfileid: "57459896"
 
 Ať už přidáváte uživatele ručně, nebo provádíte synchronizaci z místní služby Active Directory, musíte nejdřív všem uživatelům přiřadit licence Intune, aby mohli svá zařízení registrovat do Intune. Seznam licencí najdete v tématu [Licence zahrnující Intune](licenses.md).
 
-## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Přiřaďte licenci pro Intune v Centru pro správu služeb Microsoft 365
+## <a name="assign-an-intune-license-in-the-microsoft-365-admin-center"></a>Přiřazení licence Intune v centru pro správu Microsoft 365
 
-Můžete použít [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) k ručnímu přidání cloudových uživatelů a přiřazení licencí účtům cloudových uživatelů i účtům, které jsou synchronizované z vaší místní Active Directory do služby Azure AD.
+[Centrum pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) můžete použít k ručnímu přidání cloudových uživatelů a přiřazení licencí ke cloudovým uživatelským účtům a účtům synchronizovaným z vaší místní služby Active Directory do Azure AD.
 
-1. Přihlaste se k [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí svých přihlašovacích údajů správce klienta a klikněte na tlačítko **uživatelé** > **aktivní uživatelé**.
+1. Přihlaste se k [centru pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí svých přihlašovacích údajů správce tenanta a pak zvolte **Uživatelé** > **aktivní uživatelé**.
 
 2. Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci Intune, a potom vyberte **Licence na produkty** > **Upravit**.
 
 3. Přepněte **Intune** nebo **Enterprise Mobility + Security** na **Zapnuto** a vyberte **Uložit**.
 
-   ![Snímek obrazovky centra pro správu služeb Microsoft 365 produktu – část licence.](./media/office-assign-license.png)
+   ![Snímek obrazovky oddílu Microsoft 365 licence k produktu centra pro správu](./media/office-assign-license.png)
 
 4. Uživatelský účet má teď oprávnění potřebná k používání služby a registraci zařízení pro správu.
 
 > [!NOTE]
-> Uživatelé se zobrazí v konzole pro správu teprve po registraci zařízení. Můžete také vybrat skupinu uživatelů a přidat nebo odebrat licence pro všechny najednou.
+> Uživatelé se budou zobrazovat na portálu Intune Classic až po registraci zařízení pomocí POČÍTAČového klienta Intune. Můžete také vybrat skupinu uživatelů a přidat nebo odebrat licence pro všechny najednou.
 
 ## <a name="assign-an-intune-license-by-using-azure-active-directory"></a>Přiřazení licence Intune pomocí Azure Active Directory
 
@@ -63,7 +62,7 @@ Při přiřazování licence na Intune for Education ověřte, že je přiřazen
 Další informace o službě SDS najdete v článku [Přehled služby SDS (School Data Sync)](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
 
 ## <a name="how-user-and-device-licenses-affect-access-to-services"></a>Vliv licencí pro uživatele a zařízení na přístup ke službám
-* Každý **uživatel**, kterému přiřadíte softwarovou licenci pro uživatele, má přístup k online službám a souvisejícímu softwaru (včetně softwaru System Center) a může je používat ke správě aplikací a až 15 zařízení.
+* Každý **uživatel** , kterému přiřadíte softwarovou licenci pro uživatele, může získat přístup k online služby a souvisejícímu softwaru (včetně softwaru System Center) a používat ho ke správě aplikací a až 15 zařízení MDM. Intune PC Agent pro počítače umožňuje 5 fyzických a 1 virtuálních počítačů na uživatelskou licenci.
 * Licence pro libovolná zařízení si můžete koupit odděleně od uživatelských licencí. Licence zařízení nemusí být přiřazené zařízením. Každé zařízení, které přistupuje k online službám a souvisejícímu softwaru (včetně softwaru System Center) a používá je, musí mít licenci zařízení.
 * Pokud zařízení používá více než jeden uživatel, bude každý potřebovat softwarovou licenci pro zařízení nebo budou všichni uživatelé potřebovat softwarovou licenci pro uživatele.
 

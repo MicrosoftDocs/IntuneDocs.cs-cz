@@ -7,7 +7,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 02/15/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5f013ec1d40b9593e7eb8d317b5b63545c58f181
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 4039c9e3ae53d8db8ee282f802cd86149b40021e
+ms.sourcegitcommit: 18be0ccc6e51073af32c44abeba421d69a5ae21a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399095"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "71239766"
 ---
 # <a name="what-to-expect-when-your-ios-app-is-managed-by-app-protection-policies"></a>Co očekávat, když ke správě aplikace pro iOS používáte zásady ochrany aplikací
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
- Toto téma popisuje činnosti uživatelů při používání aplikací se zásadami ochrany aplikací. Zásady ochrany aplikací se použijí jen v případě, že se aplikace používají v pracovním kontextu, například když uživatel k aplikacím přistupuje pomocí pracovního účtu nebo používá soubory, které jsou uložené na firemním OneDrivu.
+ Toto téma popisuje činnost koncového uživatele při použití aplikací, které používají zásady ochrany aplikací. Zásady ochrany aplikací se použijí jen v případě, že se aplikace používají v pracovním kontextu, například když uživatel k aplikacím přistupuje pomocí pracovního účtu nebo používá soubory, které jsou uložené na firemním OneDrivu.
 
-##  <a name="access-apps"></a>Přístup k aplikacím
+## <a name="access-apps"></a>Přístup k aplikacím
 
 Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli při prvním použití aplikace výzva k jejímu restartování. Aby se pro aplikaci mohly použít zásady ochrany aplikací, je nutné restartování.
 
@@ -41,7 +40,7 @@ Pokud zařízení **není zaregistrované v Intune**, zobrazí se uživateli př
 
 Na zařízeních, která jsou **zaregistrovaná pro správu přes Intune**, se uživateli zobrazí zpráva, že jeho aplikace je teď spravovaná.
 
-##  <a name="use-apps-with-multi-identity-support"></a>Použití aplikací s podporou více identit
+## <a name="use-apps-with-multi-identity-support"></a>Použití aplikací s podporou více identit
 
 Aplikace, které podporují více identit, umožňují pro přístup ke stejným aplikacím používat různé účty (pracovní a osobní). Zásady ochrany aplikací se použijí, jen když jsou aplikace použité v pracovním kontextu.  
 
@@ -51,13 +50,13 @@ Uživateli se třeba při přístupu k pracovním datům zobrazí výzva k zadá
 
 Zásady ochrany aplikací se používají jen v pracovním kontextu. Aplikace se proto můžou chovat odlišně podle toho, jestli je kontext pracovní nebo osobní.
 
-##  <a name="manage-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení
+## <a name="manage-user-accounts-on-the-device"></a>Správa uživatelských účtů v zařízení
 
 Aplikace s podporou více identit umožňují uživatelům přidat více účtů.  Aplikace Intune podporuje jenom jeden spravovaný účet.  Aplikace Intune neomezuje počet nespravovaných účtů.
 
 Když je v aplikaci spravovaný účet:
-*   Pokud se uživatel pokusí přidat druhý spravovaný účet, zobrazí se mu výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
-*   Pokud správce IT přidá zásady pro druhý existující účet, zobrazí se uživateli výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
+* Pokud se uživatel pokusí přidat druhý spravovaný účet, zobrazí se mu výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
+* Pokud správce IT přidá zásady pro druhý existující účet, zobrazí se uživateli výzva k výběru spravovaného účtu, který se má použít.  Druhý účet se odebere.
 
 Přečtěte si následující ukázkový scénář, abyste lépe pochopili, jak se pracuje s více uživatelskými účty.
 
@@ -67,5 +66,5 @@ Uživatel A pracuje ve dvou společnostech – ve **společnosti X** a ve **spol
 
 Pokud používáte zařízení s iOSem, může se při pokusu o přidání druhého pracovního účtu na zařízení zobrazit zpráva o blokování. Účty se zobrazí a můžete zvolit účet, který chcete odebrat.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 [Co očekávat, když ke správě svojí aplikace pro Android používáte zásady ochrany aplikací](end-user-mam-apps-android.md)

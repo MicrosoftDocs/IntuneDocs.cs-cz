@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 03/09/2017
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,24 +16,27 @@ ms.reviewer: aanavath
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2168c39c80369e16284078df608bdab5f29858c6
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 1ed123bcf8c5c1a5df1a356cf8d2522caad20ea2
+ms.sourcegitcommit: c9725ddae6c0f82a491de27c87f240254d32716b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59894961"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "71239383"
 ---
 # <a name="help-end-users-understand-company-portal-app-messages"></a>Vysvětlení zpráv aplikace Portál společnosti pro koncové uživatele
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
 > [!NOTE]
-> Následující informace se vztahují jenom na zařízení s Androidem 6.0 a novějším.
+> Následující informace se vztahují jenom na zařízení s Androidem 6.0 + a iOS 10 +.
 
 Tady najdete vysvětlení různých zpráv, které se můžou koncovým uživatelům zobrazit v aplikaci Portál společnosti. Tyto zprávy aplikace se běžně zobrazují v různých okamžicích procesu registrace. Zjistěte, kde se tyto zprávy objevují, co znamenají a co se stane, když uživatel přístup zamítne. Také se dozvíte, jak zprávy nejlépe vysvětlit uživatelům.
 
 - __Povolit pro Portál společnosti telefonování a správu telefonních hovorů?__
 - __Povolit pro Portál společnosti přístup k fotkám, médiím a souborům ve vašem zařízení?__
+
+> [!NOTE]
+> Žádná data shromážděná naší službou neprodávají z jakéhokoli důvodu žádné třetí straně.
 
 ## <a name="allow-company-portal-to-make-and-manage-phone-calls"></a>Povolit pro Portál společnosti telefonování a správu telefonních hovorů?
 
@@ -110,35 +112,35 @@ Pokud jste aplikaci Portál společnosti nepřidali na seznam **Povolených apli
 
 ### <a name="what-it-means"></a>Význam
 
-Přidejte portál společnosti **povolené aplikace** nebo **aplikace s výjimkou** seznamu v zásady ochrany aplikací Windows Information Protection (WIP). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
+Přidejte Portál společnosti do seznamu **povolených aplikací** nebo **aplikací s výjimkou** v zásadách ochrany aplikací pro Windows Information Protection (NV). Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
 
-## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Schválení aplikace společnosti iOS (-obchodní aplikace) na zařízení s Iosem 
+## <a name="approve-a-ios-company-app-line-of-business-app-on-your-ios-device"></a>Schválení aplikace společnosti pro iOS (obchodní aplikace) na zařízení s iOS 
 
 ### <a name="where-it-appears"></a>Místo zobrazení
-aplikace pro iOS vyvinuté ve vaší organizaci, které nejsou k dispozici v App Store zařízení nedůvěřuje ve výchozím nastavení. Při instalaci aplikace portálu společnosti a spusťte aplikaci, zobrazí se následující zpráva:
+aplikace pro iOS vyvinuté ve vaší organizaci, které nejsou dostupné v obchodě s aplikacemi, nejsou ve výchozím nastavení důvěryhodné pro vaše zařízení. Když tyto aplikace nainstalujete pomocí Portál společnosti a spustíte aplikaci, zobrazí se následující zpráva:
 
-![zpráva aplikace iOS - nedůvěryhodném vývojáři podnikových aplikací](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+![zpráva aplikace pro iOS – nedůvěryhodný vývojář pro podniky](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
 
 ### <a name="what-it-means"></a>Význam
-Tato zpráva znamená, že budete muset upravit nastavení zařízení iOS pro schválení a instalace aplikace vyvinuté ve vaší společnosti na zařízení s Iosem.
+Tato zpráva znamená, že je potřeba upravit nastavení zařízení s iOS a schválit a nainstalovat aplikaci vyvinutou vaší společností na zařízení s iOS.
 
-Při instalaci těchto aplikací na portálu společnosti a spusťte aplikaci, schválit aplikaci po si ho stáhnout pomocí těchto kroků:
+Když tyto aplikace nainstalujete pomocí Portál společnosti a aplikaci spustíte, po stažení proveďte následující kroky, abyste aplikaci schválili:
 
-1. Při spuštění aplikace nainstalované společnosti (-obchodní aplikace), zobrazí se zpráva "Nedůvěryhodném vývojáři podnikových aplikací". <br>
-   Stisknutím klávesy **zrušit**.
-2. Přejděte do **nastavení** > **Obecné** > **správy zařízení**.
+1. Po spuštění nainstalované firemní aplikace (obchodní aplikace) se zobrazí zpráva "nedůvěryhodná verze Enterprise Developer". <br>
+   Stiskněte **Zrušit**.
+2. Přejděte na **Nastavení** > **Obecné** > **Správa zařízení**.
 
-   ![zařízení s Iosem uživatelské rozhraní – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+   ![uživatelské rozhraní zařízení s iOS – Správa zařízení](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 
-3. Vyberte **správy profilu** > **podnikové aplikace**.
-4. Vyberte název pro vývojáře.
-5. Stisknutím klávesy **důvěřovat _jména vývojáře_**.
-6. Potvrzení aplikace tak, že vyberete **důvěřovat** v automaticky otevřeném okně instalace aplikace.
+3. Vyberte možnost **profil** > správy**podniková aplikace**.
+4. Vyberte název vývojáře.
+5. Stiskněte klávesu **Trust _název vývojáře_** .
+6. Potvrďte aplikaci tak, že v místní zprávě pro instalaci aplikace vyberete **důvěřovat** .
 
-   ![zařízení s Iosem uživatelské rozhraní – vztahu důvěryhodnosti aplikace zprávy](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
+   ![uživatelské rozhraní zařízení s iOS – důvěryhodná zpráva aplikace](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)
 
-    Je třeba spustit a používat aplikace společnosti.
+    Měli byste být schopni spustit a používat podnikovou aplikaci.
 
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 [Co říct koncovým uživatelům o používání služby Intune](end-user-educate.md)

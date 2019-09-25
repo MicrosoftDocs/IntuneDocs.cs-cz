@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40fe8f1f54779d3ab0a49951ad13c0cb2d0f0ff5
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 4484dbc9a8348101c0f7409b009998baca32f8a4
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166792"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239410"
 ---
 # <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrace zařízení s iOSem poskytnutého vaší organizací do správy
 
@@ -35,7 +35,7 @@ Aby se nastavení zahájilo, zapněte zařízení a přihlaste se pomocí pracov
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios.md).  
+Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
 
 ## <a name="set-up-your-ios-device"></a>Nastavení zařízení s iOSem
 

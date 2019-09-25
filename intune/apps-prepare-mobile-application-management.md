@@ -5,9 +5,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/19/2019
+ms.date: 09/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3addd79b20c685c5643a2b99fb7120e958cdecb
-ms.sourcegitcommit: 1069b3b1ed593c94af725300aafd52610c7d8f04
+ms.openlocfilehash: e7b1ea4914b2c4593c0d4abe6396e349020d1a95
+ms.sourcegitcommit: a25cd79a33feb536d9b2fc11aa7d3e3972f1ca5a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394877"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "71239530"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -33,7 +32,7 @@ Svým aplikacím můžete umožnit použití zásad ochrany aplikací buď prost
 ## <a name="intune-app-wrapping-tool"></a>Nástroj Intune App Wrapping
 Nástroj App Wrapping se používá hlavně pro **interní** obchodní aplikace. Je to aplikace příkazového řádku, která vytvoří kolem aplikace obálku, a ta potom umožní správu aplikace pomocí zásad ochrany aplikací Intune. Při ochraně aplikace poskytované nezávislým výrobcem softwaru (ISV) je důležité objasnit, jestli bude ISV podporovat i zabalenou aplikaci.
 
-K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování. Další informace o přihlašovacích údajích k podepisování najdete v [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji App Wrapping najdete v tématech [Nástroj App Wrapping pro Android](app-wrapper-prepare-android.md) a [Nástroj App Wrapping pro iOS](app-wrapper-prepare-ios.md).
+K použití nástroje nepotřebujete zdrojový kód, ale potřebujete přihlašovací údaje k podepisování. Další informace o přihlašovacích údajích k podepisování najdete v [blogu o Intune](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). Dokumentaci k nástroji pro zabalení aplikace najdete v tématu Nástroj pro zabalení [aplikace pro Android](app-wrapper-prepare-android.md) a [Nástroj pro zabalení aplikace pro iOS](app-wrapper-prepare-ios.md).
 
 Nástroj App Wrapping **nepodporuje** aplikace v Apple App Storu nebo obchodu Google Play. Nepodporuje ani některé funkce, které vyžadují vývojářskou integraci (viz následující tabulka s porovnáním funkcí).
 
@@ -74,6 +73,9 @@ Další informace o sadě SDK najdete v tématu [Přehled](app-sdk.md). Pokud ch
 |**iOS**|Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 |**Android**| Ano – Použijte [xamarinové vazby sady Intune App SDK](app-sdk-xamarin.md).|Ne|
 
+### <a name="not-using-an-app-development-platform-listed-above"></a>Nepoužíváte platformu pro vývoj aplikací uvedenou výše? 
+Vývojový tým sady Intune SDK aktivně testuje a udržuje podporu pro aplikace vytvořené s nativními platformami Android, iOS (obj-C, SWIFT), Xamarin, Xamarin. Forms a Cordova. I když se někteří zákazníci dokončí s integrací sady Intune SDK s jinými platformami, jako je například reakce nativních a NativeScript, neposkytujeme explicitní pokyny ani moduly plug-in pro vývojáře aplikací, kteří používají jinou než naše podporované platformy. 
+
 ## <a name="feature-comparison"></a>Porovnání funkcí
 Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a nástroji App Wrapping.
 
@@ -87,12 +89,13 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Povolit aplikaci přenos dat do ostatních aplikací|X|X|
 |Povolit aplikaci, aby přijímala data z jiných aplikací|X|X|
 |Omezit operace vyjmutí, kopírování a vložení s jinými aplikacemi|X|X|
-|Zadejte počet znaků, které mohou být vyjmutých nebo zkopírovaných z spravovanou aplikaci|X|X|
+|Zadejte počet znaků, které mohou být vyjmuty nebo zkopírovány ze spravované aplikace.|X|X|
 |Požadovat jednoduchý kód PIN pro přístup|X|X|
 |Určit počet pokusů o zadání PIN kódu před jeho obnovením|X|X|
 |Povolit otisk prstu místo PIN kódu|X|X|
 |Povolit rozpoznávání obličeje místo PIN kódu (pouze iOS)|X|X|
 |Vyžadovat podnikové přihlašovací údaje pro přístup|X|X|
+|Nastavit vypršení platnosti kódu PIN|X|X|
 |Blokovat spuštění spravovaných aplikací v zařízení s jailbreakem nebo rootem|X|X|
 |Zašifrovat data aplikací|X|X|
 |Znovu zkontrolovat požadavky na přístup po zadaném počtu minut|X|X|
@@ -100,23 +103,25 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Blokovat snímek obrazovky (jenom Android)|X|X|
 |Podpora MAM bez registrace zařízení|X|X|
 |Úplné vymazání dat aplikací|X|X|
-|Selektivní vymazání dat pracovním a školním ve scénářích s více identitami <br><br>**Poznámka:** Pro iOS při odebrání profilu správy aplikace se také odebere.|X||
+|Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** V případě iOS se při odebrání profilu správy odebere i aplikace.|X||
 |Zabránit možnosti Uložit jako|X||
-|Konfigurace cílové aplikace|X||
+|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X|X|
 |Podpora víc identit|X||
 |Přizpůsobitelný styl |X|||
 |Připojení VPN aplikace na vyžádání pomocí Citrix mVPN|X|X| 
 |Zakázat synchronizaci kontaktů|X|X|
 |Zakázat tisk|X|X|
 |Vyžadovat minimální verzi aplikace|X|X|
-|Vyžadovat minimální verzi operačního systému (iOS a Android)|X|X|
+|Vyžadovat minimální operační systém|X|X|
 |Vyžadovat minimální verzi oprav zabezpečení Androidu (pouze Android)|X|X|
 |Vyžadovat minimální sadu Intune SDK pro iOS (pouze iOS)|X|X|
+|Ověření zařízení SafetyNet (jenom Android)|X|X|
+|Kontrola hrozeb u aplikací (jenom Android)|X|X|
 
 ## <a name="next-steps"></a>Další postup
 
 Další informace o zásadách ochrany aplikací a službě Intune najdete v těchto tématech:
 
-  - [Nástroj App Wrapping Tool a aplikace pro Android](app-wrapper-prepare-android.md)<br>
-  - [Nástroj App Wrapping Tool a aplikace pro iOS](app-wrapper-prepare-ios.md)<br>
-  - [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)
+- [Nástroj App Wrapping Tool a aplikace pro Android](app-wrapper-prepare-android.md)<br>
+- [Nástroj App Wrapping Tool a aplikace pro iOS](app-wrapper-prepare-ios.md)<br>
+- [Použití sady SDK k povolení správy mobilních aplikací pro aplikace](app-sdk.md)

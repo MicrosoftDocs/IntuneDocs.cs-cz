@@ -1,14 +1,13 @@
 ---
-title: Aplikace pro zkušební načtení Windows a Windows Phone
+title: Bokem aplikací pro Windows a Windows Phone
 titleSuffix: Microsoft Intune
 description: Tady je postup, jak zaregistrovat obchodní aplikace, aby je bylo možné nasadit pomocí Intune.
 keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,158 +15,83 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8652d260849537d1e0b504f5d309a3ab2708e5cd
-ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
+ms.openlocfilehash: 4d30f2f392a760701337fb17b902458ea01ed00b
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59587514"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71238881"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
 [!INCLUDE [both-portals](./includes/note-for-both-portals.md)]
 
-Jako správce Intune můžete nasazovat obchodní aplikace (včetně aplikace Portál společnosti) na mobilní zařízení s Windows a Windows 10. Pokud chcete nasadit aplikace .appx nebo .xap do Windows 10 a na mobilní zařízení s Windows 10 nebo nasadit obchodní aplikaci do Windows 8.1 nebo na zařízení s Windows Phone 8.1, budete potřebovat **Certifikát podepisování mobilního kódu Symantec Enterprise**. Pro tyto aplikace v příslušných zařízeních s Windows je důvěryhodný jenom certifikát Symantec. Pro aplikace pro Windows 10 a tzv. univerzální aplikace můžete používat svou vlastní certifikační autoritu. Tento certifikát se vyžaduje, aby se dalo:
+Jako správce Intune můžete nasazovat obchodní aplikace (LOB) do Windows 8.1 plochy nebo Windows 10 Desktop & mobilní zařízení, včetně aplikace Portál společnosti. Pokud chcete nasadit aplikace. appx pro Windows 8.1 Desktop nebo Windows 10 Desktop & mobilní zařízení, můžete použít certifikát pro podepisování kódu od veřejné certifikační autority, která už je pro vaše zařízení s Windows důvěryhodná, nebo můžete použít vlastní certifikační autoritu.
 
--   Zaregistrovat aplikaci Portál společnosti pro nasazení na počítače s Windows, mobilní zařízení s Windows 10 a zařízení Windows Phone
+Windows 8.1 Desktop vyžaduje pro povolení zkušebního načtení nebo použití klíčů pro zkušební načtení (automaticky povolených pro zařízení připojená k doméně) buď zásadu Enterprise. Další informace najdete v tématu [zkušební načtení systému Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
 
--   Zaregistrovat firemní obchodní aplikace, aby je služba Intune mohla nasadit na zařízení s Windows
+Ve Windows 10 se zkušební verze liší od verze v dřívějších verzích Windows:
 
-Následující postup vám pomůže získat požadovaný certifikát a podepsat aplikace. Bude potřeba se zaregistrovat jako vývojář Microsoftu a následně si certifikát Symantec zakoupit.
+- Zařízení můžete odemknout pro zkušební načtení pomocí podnikových zásad. Intune poskytuje zásady konfigurace zařízení s názvem "instalace důvěryhodné aplikace". Tato <allow> možnost je nutná pro zařízení, která již důvěřují certifikátu používanému k podepsání aplikace appx.
 
-
-1. **Registrace jako vývojář Microsoftu**<br>
-   [Zaregistrujte se jako vývojář Microsoftu](https://go.microsoft.com/fwlink/?LinkId=268442) pomocí informací o firemním účtu, které jste použili při přihlašování za účelem zakoupení firemního účtu. Certifikát pro podepisování kódu obdržíte až po schválení žádosti vedoucím pracovníkem společnosti.
-
-2. **Získejte pro společnost certifikát Symantec**<br>
-  Pomocí ID společnosti Symantec zakupte certifikát z [webu společnosti Symantec](https://go.microsoft.com/fwlink/?LinkId=268441) . Po zakoupení certifikátu obdrží schvalovatel, kterého jste uvedli při registraci jako vývojář Microsoftu, e-mail požadující schválení žádosti o certifikát. Další informace o požadavku na certifikát Symantec najdete v tématu [Proč Windows Phone vyžaduje certifikát Symantec?](https://technet.microsoft.com/library/dn764959.aspx#BKMK_Symantec) Nejčastější dotazy k registraci zařízení Windows
-
-3.  **Import certifikátů**<br>
-    Jakmile se žádost schválí, obdržíte e-mail s pokyny k importování certifikátů. Postupujte podle pokynů v e-mailu pro import certifikátů.
-
-4.  **Ověření importovaných certifikátů**<br>
-    Chcete-li ověřit, zda byly certifikáty správně naimportovány, přejděte k modulu snap-in **Certifikáty**, klikněte pravým tlačítkem na položku **Certifikáty** a vyberte možnost **Hledat certifikáty**. Do pole **Obsahuje** zadejte Symantec a klikněte na **Najít**. Importované certifikáty by se měly zobrazit ve výsledcích.
-
-    ![Certifikát výsledky jsou uvedeny v dialogovém okně Hledat certifikáty](./media/wit.gif)
-
-5. **Export podpisového certifikátu**<br>
-    Jakmile ověříte, že jsou certifikáty dostupné, můžete exportovat soubor .pfx a podepsat Portál společnosti. Vyberte certifikát Symantec se **zamýšleným účelem** „podepisování kódu”. Klikněte pravým tlačítkem na certifikát pro podpis kódu a vyberte **Exportovat**.
-
-    ![Export podpisového certifikátu](./media/wit-walk-cert2.gif)
-
-    V **Průvodci exportem certifikátu**vyberte **Ano, exportovat soukromý klíč** a klikněte na **Další**. Vyberte **Formát Personal Information Exchange – PKCS č. 12 (.PFX)** a zaškrtněte políčko **Zahrnout všechny certifikáty na cestě k certifikátu, pokud je to možné**. Dokončete průvodce. Další informace naleznete v tématu [Exportování certifikátu se soukromým klíčem](https://go.microsoft.com/fwlink/?LinkID=203031).
-
-6.  **Nahrání aplikace do Intune**<br>
-    Nahráním podepsaného souboru aplikace a svého certifikátu pro podpis kódu zpřístupníte aplikaci vašim koncovým uživatelům.
-
-    1.  Na Azure Portalu klikněte na **Správa** &gt; **Windows Phone**.
-
-    2.  Klikněte na **Nahrát podepsaný soubor aplikace** a přihlaste se svým ID správce pro Intune.
-
-    3.  Přidejte soubor certifikátu (.pfx), který jste exportovali do **certifikátu pro podpis kódu** a vytvořte pro tento certifikát heslo.
-
-    4.  Dokončete průvodce.
-
-## <a name="example-download-sign-and-deploy-the-company-portal-app-for-windows-devices"></a>Příklad: Stažení, podepsání a nasazení aplikace portál společnosti pro zařízení s Windows
-
-Aplikaci Portál společnosti můžete místo instalace z Microsoft Storu nasadit na zařízení s Windows, včetně zařízení Windows Phone a mobilních zařízení s Windows 10, pomocí Intune. Musíte si stáhnout aplikaci Portál společnosti a podepsat ji svým certifikátem.  To je nutné pouze v případě, že uživatelé nebudou používat Store společnosti a chcete nasadit firemní portál na zařízení Windows Phone 8.1.
+- Certifikáty Symantec Phone a licenční klíče pro zkušební načtení se nevyžadují. Pokud však není k dispozici místní certifikační autorita, může být nutné získat certifikát pro podpis kódu od veřejné certifikační autority. Další informace najdete v tématu [Úvod do podepisování kódu](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 
-1.  **Stáhněte Portál společnosti**
+## <a name="code-sign-your-app"></a>Podpis kódu vaší aplikace
 
-    Pokud chcete aplikaci Portál společnosti nasadit pomocí Intune, můžete si stáhnout [aplikaci Portál společnosti Microsoft Intune pro Windows Phone 8.1](https://go.microsoft.com/fwlink/?LinkId=615799) z webu služby Stažení softwaru a spustit samorozbalovací soubor (.exe). Tento soubor obsahuje dva soubory:
+Prvním krokem je podepsání vašeho balíčku appx pomocí kódu, viz část [podepsání balíčku aplikace pomocí nástroje SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool) .
 
-    -   CompanyPortal.appx – instalační aplikace Portálu společnosti pro Windows Phone 8.1
+## <a name="upload-your-app"></a>Nahrání aplikace
 
-    -   WinPhoneCompanyPortal.ps1 – Powershellový skript, který můžete použít k podepsání aplikace Portál společnosti, aby se dala nasadit na zařízení s Windows Phone 8.1
+V dalším kroku nahrajete podepsaný soubor appx, jak je popsáno v tématu [nahrání obchodní aplikace pro Windows](lob-apps-windows.md) .
 
-    Alternativně si můžete stáhnout Portál společnosti pro Windows Phone 8.1 (offline licencovaný balíček) nebo Portál společnosti pro Windows 10 (offline licencovaný balíček) z [Microsoft Storu pro firmy](https://businessstore.microsoft.com/). Aplikaci Portál společnosti bude nutné si pořídit s offline licencí a příslušným balíčkem staženým pro offline použití. Platformy Windows 8 a Windows Phone 8 uvedené ve výběru odkazují na své ekvivalenty 8.1. Podrobnosti o tom, jak to provést v Intune, najdete v tématu [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
+Pokud aplikaci nasadíte podle potřeby pro uživatele nebo zařízení, nepotřebujete aplikaci Inutne Portál společnosti. Pokud ale aplikaci nasadíte jako dostupnou pro uživatele, pak ji mohou použít Portál společnosti z veřejného Microsoft Store, použít aplikaci Portál společnosti z privátního Microsoft Store pro firmy nebo budete muset podepsat a ručně nasadit společnost Intune. Aplikace portálu
 
-2.  **Stažení sady Windows Phone SDK** Stáhněte sadu Windows Phone SDK 8.0 (https://go.microsoft.com/fwlink/?LinkId=615570) a nainstalujte ji na počítač. Potřebujete ji k vygenerování tokenu pro registraci aplikace.
+## <a name="upload-the-code-signing-certificate"></a>Nahrajte certifikát pro podpis kódu.
 
-3.  **Generování souboru AETX** Pomocí programu AETGenerator.exe, který je součástí sady Windows Phone SDK 8.0, vygenerujte soubor tokenu pro registraci aplikace (.aetx) ze souboru Symantec PFX. Pokyny, jak vytvořit soubor AETX, najdete v tématu [Jak vygenerovat token pro registraci aplikace pro Windows Phone](https://msdn.microsoft.com/library/windows/apps/jj735576.aspx).
+Pokud vaše zařízení s Windows 10 ještě nedůvěřuje certifikační autoritě, pak po podepsání balíčku appx a jeho nahrání do služby Intune je potřeba nahrát certifikát pro podepisování kódu na portál Intune:
+1. Klikněte na klientské aplikace.
+2. Klikněte na certifikáty Windows Enterprise.
+3. V části certifikát pro podpis kódu vyberte vybrat soubor.
+4. Vyberte soubor. cer a klikněte na nahrát.
 
-4.  **Stažení sady Windows SDK pro Windows 8.1** Stáhněte a nainstalujte sadu [Windows Phone SDK](https://go.microsoft.com/fwlink/?LinkId=613525) (https://go.microsoft.com/fwlink/?LinkId=613525). Všimněte si, že powershellový skript dodaný spolu s aplikací Portál společnosti používá výchozí umístění instalace `${env:ProgramFiles(x86)}\Windows Kits\8.1`. Pokud máte instalaci jinde, musíte její umístění zahrnout jako parametr rutiny.
+Nyní jakékoli & mobilní zařízení s Windows 10 Desktop s nasazením appx službou Intune automaticky stáhne odpovídající podnikový certifikát a aplikace se bude moct spustit po instalaci.
 
-5.  **Opatření aplikace podpisem kódu pomocí prostředí PowerShell** Jako správce otevřete na hostitelském počítači, na kterém je nainstalovaná sada Windows SDK a certifikát Symantec Enterprise Mobile Code Signing Certificate, prostředí **Windows PowerShell**, přejděte na soubor Sign-WinPhoneCompanyPortal.ps1 a spusťte skript.
-
-    **Příklad 1**
-
-    ```PowerShell
-    .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -AetxPath 'C:\signing\cert.aetx'
-    ```
-    Tento příklad podepíše CompanyPortal.appx ve složce C:\temp\ a vytvoří soubor CompanyPortalEnterpriseSigned.appx. Použije heslo PFX 1234 a přečte ID vydavatele ze souboru PFX. Kromě toho přečte i ID organizace ze souboru cert.aetx.
-
-    **Příklad 2**
-
-    ```PowerShell
-    .\Sign-WinPhoneCompanyPortal.ps1 -InputAppx 'C:\temp\CompanyPortal.appx' -OutputAppx 'C:\temp\CompanyPortalEnterpriseSigned.appx' -PfxFilePath 'C:\signing\cert.pfx' -PfxPassword '1234' -PublisherId 'OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1' -EnterpriseId 1000000001
-    ```
-    Tento příklad podepíše CompanyPortal.appx ve složce C:\temp\ a vytvoří soubor CompanyPortalEnterpriseSigned.appx. Použije heslo PFX 1234 a zadané ID vydavatele.
-
-    **Parametry:**
-
-    -   `-InputAppx` – Místní cesta k souboru CompanyPortal.appx v jednoduchých uvozovkách Například 'C:\temp\CompanyPortal.appx'.
-
-    -   `-OutputAppx` – Místní cesta a název souboru podepsané aplikace Portál společnosti v jednoduchých uvozovkách Například 'C:\temp\CompanyPortalEnterpriseSigned.appx'.
-
-    -   `-PfxFilePath` – Místní cesta a název souboru pro exportovaný soubor PFX certifikátu Symantec. Například 'C:\signing\cert.pfx'.
-
-    -   `-PfxPassword` – Heslo použité k podepsání souboru PFX v jednoduchých uvozovkách. Například '1234'.
-
-    -   `-AetxPath` – Místní cesta k souboru .aetx, který se používá k přečtení ID organizace, pokud se nedefinuje argument EnterpriseId. Zadat se musí buď tento argument, nebo EnterpriseId. Například 'C:\signing\cert.aetx'.
-
-    -   `-PublisherId` – ID vydavatele dané organizace Pokud chybí, použije se pole Subject certifikátu Symantec Enterprise Mobile Code Signing Certificate. Například OID.0.9.2342.19200300.100.1.1=1000000001, CN="Test, Inc.", OU=Test 1
-
-    -   `-SdkPath` – Cesta ke kořenové složce sady Windows SDK pro Windows 8.1 Tento argument je volitelný a jeho výchozí hodnota je ${env:ProgramFiles(x86)}\Windows Kits\8.1.
-
-    -   `-EnterpriseId` – ID organizace Musí se zadat buď tento argument, nebo AetxPath. Pokud se tento argument nezadá, ID organizace se přečte ze souboru AETX. Například 1000000001.
-
-6.  Nasazení aplikace Portál společnosti Windows Phone 8.1 (SSP.appx) Pokyny najdete v článku, který se zabývá [přidáním obchodních aplikací pro Windows Phone](lob-apps-windows-phone.md).
+Intune nasadí nejnovější soubor. CER, který se nahrál. Pokud máte více souborů appx vytvořených různými vývojáři, kteří nejsou přidruženi k vaší organizaci, budete je muset buď poskytnout nepodepsané soubory appx pro podepsání certifikátu, nebo jim poskytnout podpisový certifikát kódu, který používá. vaše organizace.
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Jak obnovit certifikát Symantec Enterprise pro podpis kódu
 
-Certifikát Symantecu, který se používá k nasazení mobilních aplikací pro Windows a Windows Phone, je potřeba pravidelně obnovovat.
+Certifikát použitý k nasazení mobilních aplikací Windows Phone 8,1 byl ukončený 28 2019 a již není k dispozici pro obnovení z Symantec. Pokud nasazujete na WIndows 10 Mobile, můžete dál používat certifikáty pro podepisování kódu Symantec Desktop Enterprise, a to podle pokynů pro Windows 10.
 
-1.  Najděte e-mail s informacemi o obnovení, který vám Symantec poslal přibližně 14 dnů před vypršením platnosti certifikátu. V tomto e-mailu jsou pokyny od Symantecu o obnovení vašeho podnikového certifikátu.
+## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Jak nainstalovat aktualizovaný certifikát pro obchodní aplikace
 
-    Další informace o certifikátech Symantec získáte na webu [www.symantec.com](https://www.symantec.com) nebo telefonním čísle 1-877-438-8776 nebo 1-650-426-3400.
+Windows Phone 8.1
 
-2.  Přejděte na web (například na [https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do](https://products.websecurity.symantec.com/orders/enrollment/microsoftCert.do)) a přihlaste se pomocí ID vydavatele od Symantecu a e-mailové adresy přidružené k certifikátu. Ke spuštění obnovení musíte použít stejný počítač, který použijete ke stažení certifikátu.
+Služba Intune už nemůže nasazovat obchodní aplikace pro tuto platformu, jakmile vyprší platnost existujícího certifikátu pro podpis kódu Symantec Mobile Enterprise. Pořád bude možné bokem nepodepsané soubory XAP/APPX pomocí karty SD nebo stažením souboru do zařízení. Další informace najdete v tématu [instalace souborů XAP na Windows Phone](https://answers.microsoft.com/en-us/mobiledevices/forum/mdlumia-mdapps/how-to-install-xap-file-in-windows-phone-8/da09ee72-51ae-407c-9b85-bc148df89280).
 
-3.  Po schválení a zaplacení obnovení si stáhněte certifikát.
+Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 
-### <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Jak nainstalovat aktualizovaný certifikát pro obchodní aplikace
-
-1.  Zaregistrujte nejnovější verzi své obchodní aplikace.
-
-2.  Otevřete Azure Portal, přejděte na **Správce** &gt; **Správa mobilních zařízení** &gt; **Windows Phone** a klikněte na **Nahrát podepsanou aplikaci**.
-
-3.  Nahrajte nově podepsaný firemní portál. Budete potřebovat nově podepsaný soubor SSP.xap a nový soubor .PFX, který jste dostali od Symantecu, nebo token pro zápis aplikace vytvořený pomocí tohoto nového souboru .PFX.
-
-4.  Po dokončení nahrávání odeberte předchozí verzi aplikace Portál společnosti v pracovním prostoru **Software**  .
-
-5.  Zaregistrujte všechny nové a aktualizované podnikové aplikace pomocí nového certifikátu. Stávající aplikace není nutné znovu podepisovat a nasazovat.
+Pokud vypršela doba platnosti certifikátu, může se stát, že se spustí spuštění souborů appx. Měli byste získat nový soubor. cer a postupovat podle pokynů pro podepsání kódu každého nasazeného souboru appx a znovu nahrát všechny soubory appx a aktualizovaný soubor. cer do oddílu Windows Enterprise Certificates na portálu Intune.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Ruční nasazení aplikace Portál společnosti pro Windows 10
-Aplikaci Portál společnosti pro Windows 10 můžete ručně nasadit přímo z Intune, i když službu Intune nemáte integrovanou s Microsoft Storem pro firmy.
+Pokud nechcete poskytnout přístup k Microsoft Store, můžete ručně nasadit aplikaci pro Windows 10 Portál společnosti přímo z Intune, i když službu Intune nemáte integrovanou s Microsoft Store for Business (MSFB). Případně, pokud máte integraci, můžete nasadit aplikaci Portál společnosti pomocí [nasazení aplikací pomocí nástroje MSFB](store-apps-windows.md).
 
  > [!NOTE]
  > Tato možnost vyžaduje, abyste ručně nasazovali aktualizace pokaždé, když je vydaná aktualizace aplikace.
 
-1. Přihlaste se ke svému účtu v [Microsoft Storu pro firmy](https://www.microsoft.com/business-store) a získejte verzi aplikace Portál společnosti s **offline licencí** .  
+1. Přihlaste se ke svému účtu v [Microsoft Store pro firmy](https://www.microsoft.com/business-store) a získejte verzi portál společnosti aplikace pro **offline licenci** .  
 2. Jakmile aplikaci získáte, vyberte ji na stránce **Inventář**.  
 3. Vyberte **Windows 10 – všechna zařízení** jako **platformu**, potom vyberte příslušnou **architekturu** a stahujte. Pro tuto aplikaci není nutné mít soubor s licencí aplikace.
-![Obrázek podrobnosti balíčku Windows 10 X86 ke stažení](./media/Win10CP-all-devices.png)
+   ![Obrázek podrobností balíčku Windows 10 x86 ke stažení](./media/Win10CP-all-devices.png)
 4. Stáhněte všechny balíčky v části Požadované platformy. To je nutné provést pro architektury x86, x64 a ARM – celkem 9 balíčků, jak je vidět na následujícím obrázku.
 
-![Obrázek souborů závislostí ke stažení ](./media/Win10CP-dependent-files.png)
+   ![Obrázek souborů závislostí ke stažení ](./media/Win10CP-dependent-files.png)
 5. Než nahrajete aplikaci Portál společnosti do Intune, vytvořte složku (například C:&#92;Portál společnosti) s balíčky strukturovanými následovně:
    1. Umístěte balíček Portálu společnosti do složky C:\Portál společnosti. V tomto umístění vytvořte také podsložku Závislosti.  
-   ![Obrázek složky Závislosti uložené se souborem APPXBUN](./media/Win10CP-Dependencies-save.png)
+      ![Obrázek složky Závislosti uložené se souborem APPXBUN](./media/Win10CP-Dependencies-save.png)
    2. Umístěte devět balíčků závislostí do složky Závislosti.  
-   Pokud nebudou závislosti umístěné v tomto formátu, Intune je při nahrávání balíčku nerozpozná a nenahraje a nahrávání se nezdaří s následující chybou.  
-   ![Chybová zpráva - musí být zadaná závislost aplikace Windows.](./media/Win10CP-error-message.png)
+      Pokud nebudou závislosti umístěné v tomto formátu, Intune je při nahrávání balíčku nerozpozná a nenahraje a nahrávání se nezdaří s následující chybou.  
+      ![Chybová zpráva – je třeba zadat závislost aplikace systému Windows.](./media/Win10CP-error-message.png)
 6. Vraťte se do Intune a nahrajte aplikaci Portál společnosti jako novou aplikaci. Nasaďte ji jako požadovanou aplikaci pro vybranou skupinu cílových uživatelů.  
 
 Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 528819452accf4a7f17e54b3c05693dee5cab74f
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884242"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239455"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novější verzí v Intune
 
@@ -58,10 +58,13 @@ Těmito nastaveními se zabývá tento článek.
   - **Otevřené (bez ověřování)** : Tuto možnost použijte pouze v případě, že síť není zabezpečená.
   - **WPA/WPA2 – osobní**: Bezpečnější možnost a často se používá pro připojení Wi-Fi. Z důvodu dalšího zvýšení zabezpečení můžete zadat také heslo předsdíleného klíče nebo síťový klíč. 
 
-    - **Předsdílený klíč** (PSK): Volitelné. Tato možnost se zobrazí, pokud jako typ zabezpečení vyberete **WPA/WPA2-osobní**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK. Zadejte řetězec, jehož délka je 8 až 64 znaků. Pokud mají vaše heslo nebo síťový klíč 64 znaků, zadejte šestnáctkové znaky.
+    - **Předsdílený klíč** (PSK): Volitelný parametr. Tato možnost se zobrazí, pokud jako typ zabezpečení vyberete **WPA/WPA2-osobní**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK. Zadejte řetězec, jehož délka je 8 až 64 znaků. Pokud mají vaše heslo nebo síťový klíč 64 znaků, zadejte šestnáctkové znaky.
     
       > [!NOTE]
       > Při uložení profilu Wi-Fi se zadaná hodnota PSK z bezpečnostních důvodů nezobrazuje. Ve vodoznaku předsdíleného klíče se pořád zobrazuje **Nenakonfigurováno**, i když je hodnota PSK uložená v profilu. Pokud chcete hodnotu PSK změnit, zadejte nový klíč a uložte profil. Když hodnotu PSK uložíte, upravíte zásadu a necháte hodnotu PSK prázdnou, bude se pořád používat existující hodnota PSK.
+      
+      > [!IMPORTANT]
+      > PSK je stejný pro všechna zařízení, na která cílíte na profule. Pokud dojde k ohrožení bezpečnosti klíče, může ho použít jakékoli zařízení pro připojení k síti Wi-Fi. Zajistěte, aby byl PSKs zabezpečený, aby nedocházelo k neoprávněn
 
 - **Nastavení proxy společnosti**: Vyberte, že se má používat nastavení proxy serveru v rámci vaší organizace. Možnosti:
   - **Žádný**: Nejsou nakonfigurovaná žádná nastavení proxy serveru.
@@ -156,7 +159,7 @@ Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí 
 
 Pro libovolné nastavení, které není v Intune k dispozici, můžete exportovat nastavení Wi-Fi z jiného zařízení s Windows. Tento export vytvoří soubor XML se všemi nastaveními. Potom tento soubor importujte do Intune a použijte ho jako profil Wi-Fi. Viz [Import nastavení Wi-Fi pro zařízení s Windows 8.1 a novější verzí v Microsoft Intune](wi-fi-settings-import-windows-8-1.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
 

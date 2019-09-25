@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9066fefccde39ccac281f3bda9008168ea28b77f
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 0de0e676e72d46bde922fd97b651cc1a9268e45e
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166621"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71239776"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
 
@@ -35,7 +35,7 @@ Aby se nastavení správy zahájilo, zapněte zařízení a přihlaste se pomoc�
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos.md).  
+Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
 
 ## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení
 

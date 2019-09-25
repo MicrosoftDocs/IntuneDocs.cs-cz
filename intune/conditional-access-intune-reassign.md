@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9a24c4b45b962f77846b4f7f7add3872daf38635
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 36e7b8468e4ee9d1f6be71a82d18f066bd7568d4
+ms.sourcegitcommit: 9110124a481160039d476cf0374a4fa0464a8509
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883793"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71256199"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Změna přiřazení zásad podmíněného přístupu z klasického portálu Intune na Azure Portal
 
@@ -194,15 +194,9 @@ Po přeřadíte zásady podmíněného přístupu v Azure Portal je důležité 
 
 ### <a name="to-disable-the-conditional-access-policies"></a>Zakázání zásad podmíněného přístupu
 
-1. Přejděte na [klasický portál Intune](https://manage.microsoft.com) a přihlaste se pomocí svých přihlašovacích údajů.
+Vzhledem k tomu, že MDM byla odebrána z klasického portálu Intune, byl k dispozici následující odkaz pro zobrazení nebo zakázání těchto klasických zásad:
 
-2. Zvolte z levé nabídky možnost **Zásady**.
-
-3. Zvolte **podmíněný přístup**a pak vyberte cloudovou službu Microsoftu (třeba Exchange Online nebo SharePoint Online), pro kterou jste vytvořili zásadu podmíněného přístupu.
-
-4. Zrušte zaškrtnuté políčko **Povolit zásady podmíněného přístupu**a pak klikněte na **Uložit**.
-
-    ![Obrázek zakázání zásad podmíněného přístupu na klasickém portálu Intune](./media/reassign-ca-18.png)
+https://portal.azure.com/?microsoft_aad_iam_classicPolicyDontHide=true#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/ClassicPolicies
 
 ## <a name="see-also"></a>Viz také:
 

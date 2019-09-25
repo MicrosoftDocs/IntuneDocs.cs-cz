@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d64aba1c4c9a06e295699ac862198c29d8b9b1
-ms.sourcegitcommit: 9f91d803dfc39336a954b79ccec6420e58375d31
+ms.openlocfilehash: 657f30748d3c4e6c4a819c5ed888c541bcb7b5c1
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211563"
+ms.locfileid: "71238230"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -62,8 +62,8 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 #### <a name="managed-google-play-private-lob-apps----1464182----"></a>Spravované Google Play soukromé obchodní aplikace <!-- 1464182  -->
 Intune teď umožňuje správcům IT publikovat soukromé obchodní aplikace pro Android do spravovaných Google Play prostřednictvím IFRAME vloženého v konzole Intune.  Dříve museli správci IT publikovat obchodní aplikace přímo do konzoly pro publikování Google, která vyžadovala několik kroků a byla časově náročná. Tato nová funkce umožňuje snadno publikovat obchodní aplikace s minimální sadou kroků, aniž byste museli opustit konzolu Intune.  Správci už nebudou muset ručně registrovat jako vývojáře s Google a nebude už muset platit poplatek za registraci Google $25.  Tato funkce může využít některý ze scénářů správy Android Enterprise, které používají spravované Google Play (pracovní profil, vyhrazená, plně spravovaná a neregistrovaná zařízení). V Intune vyberte**aplikace** >  **klientské aplikace** > **Přidat**. Pak v seznamu **Typ aplikace** vyberte **spravovaná Google Play** . Další informace o spravovaných aplikacích Google Play najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise v Intune](apps-add-android-for-work.md).
 
-#### <a name="company-portal-experience----1473353-3598357---"></a>Prostředí Portál společnosti <!-- 1473353, 3598357 -->
-Probíhá aktualizace Portál společnosti. Na stránce aplikace v rámci Portál společnosti budete moci použít více filtrů. Stránka s podrobnostmi o zařízení se taky aktualizuje s vylepšeným uživatelským prostředím. Právě probíhá zavádění těchto aktualizací pro všechny zákazníky a očekává se dokončení na konci příštího týdne.
+#### <a name="windows-company-portal-experience----1473353-3598357---"></a>Prostředí Windows Portál společnosti <!-- 1473353, 3598357 -->
+Probíhá aktualizace Windows Portál společnosti. Na stránce aplikace v rámci Windows Portál společnosti budete moct používat víc filtrů. Stránka s podrobnostmi o zařízení se taky aktualizuje s vylepšeným uživatelským prostředím. Právě probíhá zavádění těchto aktualizací pro všechny zákazníky a očekává se dokončení na konci příštího týdne.
 
 #### <a name="macos-support-for-web-apps----3174427---"></a>Podpora macOS pro webové aplikace <!-- 3174427 -->
 Webové aplikace, které umožňují přidat zástupce na adresu URL na webu, lze nainstalovat do Docku pomocí Portál společnosti macOS. Koncoví uživatelé mohou získat přístup k akci **instalace** ze stránky s podrobnostmi o aplikaci pro webovou aplikaci ve MacOS portál společnosti. Další informace o typu aplikace **webový odkaz** najdete v tématu [přidání aplikací do Microsoft Intune](apps-add.md) a [Přidání webových aplikací do Microsoft Intune](web-app.md).
@@ -237,10 +237,10 @@ Intune teď podporuje správu zařízení se systémem iOS 13 i macOS Catalina. 
 #### <a name="bitlocker-support-for-client-driven-recovery-password-rotation-------3444125---"></a>Podpora BitLockeru pro otočení hesla pro obnovení na základě klienta   <!--  3444125 -->
 Použijte nastavení Endpoint Protection Intune ke konfiguraci [rotace hesla pro obnovení](endpoint-protection-windows-10.md#windows-encryption) na zařízeních s Windows verze 1909 nebo novějším na základě klienta.
 
-Toto nastavení inicializuje obnovení hesla na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE) a odemknutí hesla pro obnovení na pevné datové jednotce. Toto nastavení aktualizuje specifické heslo pro obnovení, které bylo použito, a jiná nepoužívaná hesla na svazku zůstanou beze změny. Další informace najdete v dokumentaci k nástroji BitLocker CSP pro [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#configurerecoverypasswordrotation).
+Toto nastavení inicializuje obnovení hesla na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE) a odemknutí hesla pro obnovení na pevné datové jednotce. Toto nastavení aktualizuje specifické heslo pro obnovení, které bylo použito, a jiná nepoužívaná hesla na svazku zůstanou beze změny. Další informace najdete v dokumentaci k nástroji BitLocker CSP pro [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp).
 
 #### <a name="tamper-protection-for-windows-defender-antivirus-----4705448----------"></a>Ochrana proti úmyslné ochraně pro antivirovou ochranu v programu Windows Defender  <!-- 4705448        -->
-Použijte Intune ke správě *ochrany před zneužitím antivirové ochrany* v programu Windows Defender. Pokud použijete konfigurační profily zařízení pro Windows 10 Endpoint Protection, najdete [nastavení pro ochranu proti falšování](endpoint-protection-windows-10.md#windows-defender-security-center) ve skupině Security Center programu Microsoft Defender. Ochranu proti neoprávněným nastavením ochrany proti chybám můžete *nastavit tak, aby se* zapnulo omezení ochrany před odesláním, nastavení *zakázáno* pro jejich vypnutí, nebo nastavit, aby se zařízení*nenakonfigurovalo* jako aktuální konfigurace.  
+Použijte Intune ke správě *ochrany před zneužitím antivirové ochrany* v programu Windows Defender. Pokud použijete konfigurační profily zařízení pro Windows 10 Endpoint Protection, najdete [nastavení pro ochranu proti falšování](endpoint-protection-windows-10.md#windows-defender-security-center) ve skupině Security Center programu Microsoft Defender. Ochranu proti falšování můžete *nastavit tak, aby se* zapnula omezení ochrany proti falšování, nastavení *zakázané* , aby se zapnulo, nebo aby se zařízení*nenakonfigurovalo* tak, aby na něm zůstala aktuální konfigurace.  
 
 Další informace o ochraně před zneužitím najdete v dokumentaci k Windows v tématu [zabránění změnám nastavení zabezpečení pomocí ochrany před neoprávněnými](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection) změnami. 
 

@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/28/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4e25ab5a546f20309853346d0d4ded42fee6e8b
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: fed90635a450ed59827482d2f2c03d17a05d9673
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898750"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71239715"
 ---
 # <a name="add-users-and-grant-administrative-permission-to-intune"></a>Přidání uživatelů a udělení oprávnění pro správu v Intune
 
@@ -32,10 +31,10 @@ ms.locfileid: "59898750"
 Jako správce můžete uživatele přidat přímo nebo je synchronizovat z místní služby Active Directory. Po přidání můžou uživatelé zaregistrovat zařízení a přistupovat k prostředkům společnosti. Můžete také uživatelům udělit další oprávnění včetně oprávnění *globálního správce* a *správce služeb*.
 
 ## <a name="add-users-to-intune"></a>Přidání uživatelů do Intune
-Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) nebo [webu Azure portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Správce může upravovat uživatelské účty a přiřazovat licence Intune. Můžete přiřadit licence v Centru pro správu služeb Microsoft 365 nebo Azure portal pro Intune. Další informace o používání Centra pro správu služeb Microsoft 365, najdete v části [individuální nebo hromadné přidání uživatelů do centra pro správu služeb Microsoft 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
+Do svého předplatného Intune můžete ručně přidat uživatele pomocí [centra pro správu Microsoft 365](https://admin.microsoft.com) nebo [Azure Portal](https://portal.azure.com/#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Správce může upravovat uživatelské účty a přiřazovat licence Intune. Licence můžete přiřadit buď v centru pro správu Microsoft 365, nebo v Azure Portal Intune. Další informace o použití centra pro správu Microsoft 365 najdete v tématu [Přidání uživatelů jednotlivě nebo hromadně do centra pro správu Microsoft 365](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec).
 
-### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Přidání uživatelů Intune v Centru pro správu služeb Microsoft 365
-1. Přihlaste se k [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) účtem globálního správce nebo uživatel správy správce.
+### <a name="add-intune-users-in-the-microsoft-365-admin-center"></a>Přidání uživatelů Intune v centru pro správu Microsoft 365
+1. Přihlaste se k [Microsoft 365 centra pro správu](https://admin.microsoft.com) pomocí účtu globálního správce nebo správce správy uživatelů.
 2. V nabídce Office 365 vyberte **Správce**.
 3. V Centru pro správu vyberte **Přidat uživatele**.
 
@@ -56,7 +55,7 @@ Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [c
 6. Zvolte **Přidat** a vytvořte tak nového uživatele.
 
 ### <a name="add-intune-users-in-the-azure-portal"></a>Přidání uživatelů Intune na Azure Portalu
-1. Přihlaste se k portálu [Azure Portal](https://portal.azure.com) a přejděte na **Všechny služby** > **Monitorování a správa** > **Intune**. Můžete také *vyhledat prostředky* pro **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Uživatelé** > **Všichni uživatelé**.
 3. V Centru pro správu vyberte **Nový uživatel**.
    ![Snímek obrazovky přidání nového uživatele](media/intune-add-user.png)
@@ -65,7 +64,7 @@ Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [c
    - **Uživatelské jméno** – nové jméno na portálu Azure Active Directory ![Snímek obrazovky přidání jména a uživatelského jména](media/intune-add-user-info.png) Pokračujte výběrem **OK**.
 5. Volitelně můžete zadat následující vlastnosti uživatele:
    - **Profil** – údaje týkající se práce včetně **pracovní pozice** a **oddělení**
-   -  **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
+   - **Skupiny** – vyberte skupiny, které chcete pro uživatele přidat
    - **Role adresáře** – přidělte uživateli oprávnění správce včetně role správce služeb Intune.
 
    Vyberte **Vytvořit** a přidejte tak nového uživatele do Intune.
@@ -78,7 +77,7 @@ Můžete ručně přidat uživatele k předplatnému Intune prostřednictvím [c
 Až budete mít k předplatnému Intune přidané další uživatele, doporučujeme, abyste několika uživatelům přidělili oprávnění správce.  Oprávnění správce přidělíte takto:
 
 ### <a name="give-admin-permissions-in-office-365"></a>Udělení oprávnění správce v Office 365
-1. Přihlaste se k [centra pro správu služeb Microsoft 365](https://admin.microsoft.com) pomocí účtu globálního správce.
+1. Přihlaste se k [centru pro správu Microsoft 365](https://admin.microsoft.com) pomocí účtu globálního správce.
 2. V nabídce Office 365 vyberte **Správce**.
 3. V Centru pro správu zvolte **Aktivní uživatele** a pak vyberte uživatele, kterému chcete udělit oprávnění správce.
 
@@ -99,7 +98,7 @@ Až budete mít k předplatnému Intune přidané další uživatele, doporučuj
 
 ### <a name="types-of-administrators"></a>Typy správců
 
-Přiřazení jednoho nebo více oprávnění správce uživatelům. Tato oprávnění definují, v jakém rozsahu můžou uživatelé provádět správu a úlohy. Oprávnění správce jsou obvyklá v rámci různých cloudových služeb Microsoftu a některé služby nemusí některá oprávnění podporovat. Webu Azure portal a Microsoft 365 admin center seznam omezených rolí správce, které nejsou používány nástrojem Intune. Oprávnění správce pro Intune zahrnují tyto možnosti:
+Přiřazení jednoho nebo více oprávnění správce uživatelům. Tato oprávnění definují, v jakém rozsahu můžou uživatelé provádět správu a úlohy. Oprávnění správce jsou obvyklá v rámci různých cloudových služeb Microsoftu a některé služby nemusí některá oprávnění podporovat. V centru pro správu Azure Portal a Microsoft 365 je seznam omezených rolí správce, které Intune nepoužívá. Oprávnění správce pro Intune zahrnují tyto možnosti:
 
 - **Globální správce** – (Office 365 a Intune) má přístup ke všem funkcím pro správu v Intune. Ve výchozím nastavení se globálním správcem stane uživatel, který se k Intune zaregistruje. Globální správci jsou jediní správci, kteří můžou přiřazovat další role správců. V organizaci můžete mít více než jednoho globálního správce. Jako osvědčený postup doporučujeme, aby tuto roli mělo jenom pár lidí ve vaší společnosti, aby se minimalizovala rizika, která by mohla ohrozit vaši firmu.
 - **Správce hesel** – (Office 365 a Intune) může resetovat hesla, spravovat žádosti o služby a sledovat stav služeb. Správci hesel můžou resetovat hesla jenom uživatelům.
@@ -110,13 +109,13 @@ Přiřazení jednoho nebo více oprávnění správce uživatelům. Tato oprávn
 
 Účet, který se používá k vytvoření vašeho předplatného Microsoft Intune, je globální správce. Nedoporučujeme používat účet globálního správce k provádění každodenních úloh. Pro přístup k Intune na portálu Azure Portal sice správce nepotřebuje licenci Intune, ale k provádění určitých úloh správy, jako je třeba nastavení konektoru služby Exchange, se licence Intune vyžaduje.
 
-Pro přístup k centru pro správu služeb Microsoft 365, musí mít váš účet **přihlášení povoleno** nastavit. Na Azure Portalu nastavte v oblasti **Profil** volbu **Zablokovat přihlášení** na **Ne**, čímž povolíte přístup. Tento stav je něco jiného než vlastnictví licence k předplatnému. Ve výchozím nastavení jsou všechny uživatelské účty nastavené na **Povoleno**. Uživatelé bez oprávnění správce, můžete použít Centrum pro správu služeb Microsoft 365 k resetování hesel k Intune.
+Pokud chcete získat přístup k centru pro správu Microsoft 365, váš účet musí mít **povolenou** sadu pro přihlášení. Na Azure Portalu nastavte v oblasti **Profil** volbu **Zablokovat přihlášení** na **Ne**, čímž povolíte přístup. Tento stav je něco jiného než vlastnictví licence k předplatnému. Ve výchozím nastavení jsou všechny uživatelské účty nastavené na **Povoleno**. Uživatelé bez oprávnění správce můžou použít Centrum pro správu Microsoft 365 k resetování hesel Intune.
 
 ## <a name="sync-active-directory-and-add-users-to-intune"></a>Synchronizace služby Active Directory a přidání uživatelů do Intune
-Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
+Můžete nakonfigurovat synchronizaci adresářů, aby se importovaly uživatelské účty z vaší místní služby Active Directory do Microsoft Azure Active Directory (Azure AD), což zahrnuje uživatele Intune. Když máte místní službu Active Directory připojenou ke všem vašim službám založeným na Azure Active Directory, správa identity uživatele se tím zjednodušuje. Můžete taky nakonfigurovat funkce jednotného přihlašování, aby se prostředí ověřování pro vaše uživatele zjednodušilo a zpřehlednilo. Propojením stejného [tenanta Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect/) s více službami se uživatelské účty, které jste předtím synchronizovali, stanou dostupnými pro všechny cloudové služby.
 
 ### <a name="how-to-sync-on-premises-users-with-azure-ad"></a>Synchronizace místních uživatelů s Azure AD
 Jediný nástroj potřebný k synchronizaci uživatelských účtů s Azure AD je [Průvodce Azure AD Connectem](https://www.microsoft.com/download/details.aspx?id=47594). Průvodce Azure AD Connectem je nástroj, který vás zjednodušeně provede připojením místní infrastruktury identit ke cloudu. Vyberte topologii a potřeby (jeden nebo více adresářů, synchronizaci hodnoty hash, předávací ověřování nebo federaci). Průvodce nasadí a nakonfiguruje všechny komponenty potřebné ke zprovoznění a spuštění vašeho připojení. Včetně služeb synchronizace, Active Directory Federation Services (AD FS) a modulu Azure AD PowerShell.
 
 > [!TIP]
-> Azure AD Connect zahrnuje funkce dřív vydané jako Dirsync a Azure AD Sync. Další informace o [integraci adresáře](http://technet.microsoft.com/library/jj573653.aspx). Informace o synchronizaci uživatelských účtů z místního adresáře do Azure AD najdete v tématu [Podobnosti mezi službou Active Directory a Azure AD](http://technet.microsoft.com/library/dn518177.aspx).
+> Azure AD Connect zahrnuje funkce dřív vydané jako Dirsync a Azure AD Sync. Další informace o [integraci adresáře](https://technet.microsoft.com/library/jj573653.aspx). Informace o synchronizaci uživatelských účtů z místního adresáře do Azure AD najdete v tématu [Podobnosti mezi službou Active Directory a Azure AD](https://technet.microsoft.com/library/dn518177.aspx).
