@@ -1,14 +1,13 @@
 ---
-title: Situace podmíněného přístupu
+title: Scénáře podmíněného přístupu
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak se podmíněný přístup Intune běžně používá pro podmíněný přístup podle zařízení a aplikace.
+description: Přečtěte si, jak se podmíněný přístup Intune běžně používá pro podmíněný přístup na základě zařízení a aplikací.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,104 +16,53 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98d6bd72ba0a2660282d0c009772ceee8f9f8302
-ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
+ms.openlocfilehash: 85bba7828bc38d3b802cc0b6efad1dce956fdaec
+ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671831"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "71304089"
 ---
-# <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby používání podmíněného přístupu s Intune?
+# <a name="what-are-common-ways-to-use-conditional-access-with-intune"></a>Jaké jsou běžné způsoby použití podmíněného přístupu s Intune?
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Existují dva typy podmíněného přístupu s Intune: podmíněný přístup podle zařízení a podle aplikace. K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat související zásady dodržování předpisů. Podmíněný přístup se běžně používá k provádění akcí, jako je povolení nebo blokování přístupu k místnímu Exchangi, řízení přístupu k síti nebo integraci s řešením Mobile Threat Defense.
 
-Níže uvedené informace objasňují, jak se používají možnosti dodržování předpisů mobilními *zařízeními* Intune a možnosti správy mobilních *aplikací* (MAM) Intune. 
+Existují dva typy podmíněného přístupu s Intune: podmíněný přístup podle zařízení a podle aplikace. K zavedení dodržování předpisů podmíněného přístupu ve vaší organizaci musíte nakonfigurovat související zásady dodržování předpisů. Podmíněný přístup se často používá k provádění akcí, jako je povolení nebo blokování přístupu k Exchangi, řízení přístupu k síti nebo integrace s řešením ochrany před mobilními hrozbami.
+ 
+Informace v tomto článku vám pomohou pochopit, jak používat možnosti dodržování předpisů mobilního *zařízení* Intune a možnosti správy mobilních *aplikací* (MAM) Intune. 
 
 > [!NOTE]
-> Podmíněný přístup je funkce Azure Active Directory, která je zahrnutá v licenci pro Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
+> Podmíněný přístup je Azure Active Directory funkce, která je součástí licence Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
 
 ## <a name="device-based-conditional-access"></a>Podmíněný přístup podle zařízení
 
-Intune a Azure Active Directory spolupracují a zajišťují, aby přístup k e-mailu, službám Office 365, aplikacím softwaru jako služby (SaaS) a [místním aplikacím](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) měla jen spravovaná zařízení dodržující předpisy. Navíc můžete v Azure Active Directory nastavit zásadu, aby přístup ke službám Office 365 měly jen počítače, které jsou připojené k doméně, nebo mobilní zařízení, která jsou zaregistrovaná v Intune.
+Intune a Azure Active Directory spolupracují, aby se zajistilo, že přístup k e-mailu, službám Office 365, aplikacím softwaru jako služby (SaaS) a místním [aplikacím](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)mají jenom spravovaná a vyhovující zařízení. Kromě toho můžete nastavit zásadu v Azure Active Directory tak, aby povolovala přístup ke službám Office 365 jenom počítačům připojeným k doméně nebo mobilním zařízením, která jsou zaregistrovaná v Intune.
 
-Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje službě Azure Active Directory, která ho využívá k vynucení zásady podmíněného přístupu vytvořené v Azure Active Directory, když se uživatel pokusí získat přístup k firemním prostředkům.
+Intune poskytuje schopnosti zásad dodržování předpisů pro zařízení, které vyhodnocují stav dodržování předpisů ze strany zařízení. Stav dodržování předpisů se oznamuje Azure Active Directory, který ho používá k vymáhání zásad podmíněného přístupu vytvořených v Azure Active Directory, když se uživatel pokusí získat přístup k prostředkům společnosti.
 
-Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím portálu [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).
--   Další informace o [vyžadují spravovaná zařízení s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/require-managed-devices).
+Zásady podmíněného přístupu na základě zařízení pro Exchange Online a další produkty Office 365 se konfigurují prostřednictvím [Azure Portal](https://docs.microsoft.com/intune-azure/introduction/what-is-microsoft-intune).  
 
--   Přečtěte si další informace o [dodržování předpisů zařízením v Intune](device-compliance.md).
+- Přečtěte si další informace o [vyžadování spravovaných zařízení s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/require-managed-devices).
 
--   Další informace o [podporované prohlížeče pomocí podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/technical-reference#supported-browsers).
+- Přečtěte si další informace o [dodržování předpisů zařízením v Intune](device-compliance.md).
+
+- Přečtěte si další informace o [podporovaných prohlížečích s podmíněným přístupem v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/technical-reference#supported-browsers).
 
 > [!NOTE]
-> Na zařízeních s Androidem, při povolení přístupu podle zařízení pro Sharepoint Online nebo přístup k Exchangi Online, na základě prohlížeče uživatelů musí povolit **povolit přístup z prohlížeče** možnost v zaregistrovaném zařízení následujícím způsobem:
+> Když v zařízeních s Androidem povolíte přístup na základě zařízení pro SharePoint Online nebo přístup k Exchangi Online, uživatelé musí na zaregistrovaném zařízení povolit možnost **Povolit přístup z prohlížeče** následujícím způsobem:
 > 1. Spusťte **aplikaci Portál společnosti**.
 > 2. Přejděte na stránku **Nastavení** prostřednictvím tlačítka se třemi tečkami (...) nebo hardwarového tlačítka nabídky.
 > 3. Stiskněte tlačítko **Povolit přístup z prohlížeče**. 
 > 4. V prohlížeči Chrome se odhlaste z Office 365 a znovu spusťte Chrome.
 
-### <a name="conditional-access-for-exchange-on-premises"></a>Podmíněný přístup pro místní Exchange
-
-Pomocí podmíněného přístupu můžete na základě zásad dodržování předpisů a stavu registrace zařízení povolit nebo zablokovat přístup k **místnímu Exchangi**. Když zásady podmíněného přístupu použijete v kombinaci se zásadami dodržování předpisů zařízením, povolí se přístup k místnímu Exchangi jen zařízením dodržujícím předpisy.
-
-V podmíněném přístupu můžete nakonfigurovat upřesňující nastavení pro podrobnější řízení, třeba:
-
--   Povolit nebo zakázat určité platformy
-
--   Okamžitě zablokovat zařízení, která nespravuje Intune
-
-Při použití zásad dodržování předpisů zařízením a podmíněného přístupu se u všech zařízení používaných pro přístup k místnímu Exchangi kontroluje dodržování předpisů.
-
-Pokud zařízení nesplňuje stanovené podmínky, je koncový uživatel proveden procesem jeho registrace a vyřešení problému, kvůli kterému zařízení nedodržuje předpisy.
-
-#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Jak podmíněný přístup pro místní Exchange funguje
-
-Konektor Intune Exchange si vyžádá všechny záznamy Exchange Active Sync (EAS), které existují na serveru Exchange, aby Intune mohl tyto záznamy EAS namapovat na záznamy zařízení Intune. Tyto záznamy jsou zařízení zaregistrovaná a rozpoznaná službou Intune. Tento proces povolí nebo zablokuje přístup k e-mailu.
-
-Pokud je záznam EAS zcela nový a Intune není něm neví, vydá Intune rutin (anglicky "rutinu"), která blokuje přístup k e-mailu. Tady jsou další podrobnosti o tom, jak tento proces funguje:
-
-![Vývojový diagram místního Exchange s podmíněným přístupem](./media/ca-intune-common-ways-1.png)
-
-1.  Uživatel se pokusí o přístup k podnikovému e-mailu, který je hostovaný na místním Exchangi 2010 SP1 nebo novějším.
-
-2.  Pokud zařízení nespravuje Intune, se zablokuje přístup k e-mailu. Intune odešle oznámení o zablokování klientovi EAS.
-
-3.  EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě obsahující odkazy, aby uživatelé mohli zaregistrovat svá zařízení.
-
-4.  Provede se proces připojení k pracovišti, který je prvním krokem k tomu, aby se zařízení spravovalo pomocí Intune.
-
-5.  Zařízení se zaregistruje v Intune.
-
-6.  Intune namapuje záznam EAS na záznam zařízení a uloží stav dodržování předpisů zařízením.
-
-7.  ID klienta EAS se zaregistruje prostřednictvím procesu registrace zařízení Azure AD. Tím se vytvoří vztah mezi záznamem zařízení v Intune a ID klienta EAS.
-
-8.  Registrace zařízení Azure AD uloží informace o stavu zařízení.
-
-9.  Pokud uživatel splňuje zásady podmíněného přístupu, vydá Intune rutinu prostřednictvím konektoru Intune Exchange connector, která umožní synchronizaci poštovní schránky.
-
-10. Server Exchange odešle oznámení klientovi EAS, aby uživatel získal přístup k e-mailu.
-
-#### <a name="whats-the-intune-role"></a>Jaká je role Intune?
-
-Intune vyhodnocuje a spravuje stav zařízení.
-
-#### <a name="whats-the-exchange-server-role"></a>Jaká je role serveru Exchange?
-
-Exchange server poskytuje rozhraní API a infrastrukturu pro přesun zařízení do karantény.
-
-> [!IMPORTANT]
-> Mějte na paměti, že uživatel, který zařízení používá, musí mít přiřazený k nim, zařízení může být vyhodnocen pro dodržování předpisů profil dodržování předpisů. Pokud uživatel nemá nasazené žádné zásady dodržování předpisů, považuje se zařízení za dodržující předpisy a žádná omezení přístupu se neuplatní.
-
 ### <a name="conditional-access-based-on-network-access-control"></a>Podmíněný přístup na základě řízení přístupu k síti
 
-Intune je integrovaný s partnery jako Cisco ISE, Aruba Clear Pass a Citrix NetScaler k poskytování řízení přístupu na základě registrace v Intune a stavu dodržování předpisů zařízením.
+Intune se integruje s partnery, jako jsou Cisco ISE, Aruba Clear Pass a Citrix NetScaler, a poskytuje přístup k řízení přístupu na základě registrace v Intune a stavu dodržování předpisů zařízením.
 
-Uživatelům se může při pokusu o přístup k podnikové síti Wi-Fi nebo prostředkům VPN přístup povolit nebo odepřít v závislosti na tom, jestli je zařízení spravované a splňuje zásady Intune ohledně dodržování předpisů zařízením.
+Uživatelé můžou povolit nebo odepřít přístup k podnikovým prostředkům Wi-Fi nebo VPN na základě toho, jestli zařízení, které používáte, je spravované a dodržuje zásady dodržování předpisů zařízením Intune.
 
--   Další informace o[integraci NAC s Intune](network-access-control-integrate.md).
+- Další informace o[integraci NAC s Intune](network-access-control-integrate.md).
 
 ### <a name="conditional-access-based-on-device-risk"></a>Podmíněný přístup na základě rizika zařízení
 
@@ -122,11 +70,11 @@ Intune ve spolupráci s dodavateli služeb Mobile Threat Defense poskytuje řeš
 
 #### <a name="how-the-intune-and-mobile-threat-defense-integration-works"></a>Jak funguje integrace Intune s ochranou před mobilními hrozbami
 
-Když mají mobilní zařízení nainstalovaného agenta pro ochranu před mobilními hrozbami, může agent odesílat zprávy o stavu dodržování předpisů zpět do Intune a hlásit, jestli byla v samotném mobilním zařízení nalezena hrozba.
+Pokud mají mobilní zařízení nainstalovaného agenta ochrany před mobilními hrozbami, odešle agent zprávy o stavu dodržování předpisů zpět do Intune, když se na mobilním zařízení zjistí hrozba.
 
-Integrace Intune a ochrany před mobilními hrozbami hraje roli při rozhodování podmíněného přístupu na základě rizika zařízení.
+Integrace Intune a ochrany před mobilními hrozbami hraje faktor v rozhodnutích podmíněného přístupu na základě rizika zařízení.
 
--   Přečtěte si další informace o [Intune Mobile Threat Defense](mobile-threat-defense.md).
+- Přečtěte si další informace o [Intune Mobile Threat Defense](mobile-threat-defense.md).
 
 ### <a name="conditional-access-for-windows-pcs"></a>Podmíněný přístup pro počítače s Windows
 
@@ -134,34 +82,90 @@ Podmíněný přístup pro počítače poskytuje podobné možnosti jako pro mob
 
 #### <a name="corporate-owned"></a>Ve vlastnictví firmy
 
--   **Místně připojený k doméně AD:** Tato možnost se běžně používá organizace, kteří jsou zvyklí přiměřeným způsobem jak jsou již spravujete své počítače prostřednictvím zásad skupiny AD a/nebo System Center Configuration Manager.
+- **Připojená místní doména AD:** Tato možnost se běžně používá v organizacích, které jsou dostatečně pohodlné, jak už spravují své počítače prostřednictvím zásad skupiny služby AD nebo System Center Configuration Manager.
 
--   **Azure AD připojených k doméně a správa prostřednictvím Intune:** Tento scénář je typický pro zvolte si vlastní zařízení (CYOD) a scénáře přenosných počítačů kde jsou tato zařízení zřídka připojená k podnikové síti. Zařízení se připojí k Azure AD a zaregistruje v Intune, čímž se odeberou všechny závislosti na místním AD a řadičích domény. To se dá využít jako kritérium podmíněného přístupu při přístupu k podnikovým prostředkům.
+- **Připojené k doméně Azure AD a Správa Intune:** Tento scénář je určen pro organizace, které mají být nejprve cloudové služby (tedy primárně využívají cloudové služby, s cílem snížit využití místní infrastruktury) nebo pouze Cloud (bez místní infrastruktury). Funkce připojení k Azure AD funguje dobře v hybridním prostředí a umožňuje přístup ke cloudovým i místním aplikacím a prostředkům. Zařízení se připojí k Azure AD a zaregistruje se do Intune, které se dá použít jako kritéria podmíněného přístupu při přístupu k podnikovým prostředkům.
 
--   **AD připojených k doméně a System Center Configuration Manager:** Od aktuální větve System Center Configuration Manager poskytuje možnosti podmíněného přístupu, které můžou vyhodnocovat konkrétní kritéria dodržování předpisů, kromě toho, že počítač Připojený k doméně:
+- **Připojené k doméně služby AD a System Center Configuration Manager:** V rámci aktuální větve poskytuje System Center Configuration Manager možnosti podmíněného přístupu, které můžou vyhodnotit specifická kritéria dodržování předpisů, a to i počítač připojený k doméně:
 
-    -   Je počítač zašifrovaný?
+  - Je počítač zašifrovaný?
 
-    -   Je nainstalovaný antimalwarový? Je aktuální?
+  - Je nainstalovaná ochrana proti malwaru? Je aktuální?
 
-    -   Byl na zařízení proveden jailbreak nebo root?
+  - Byl na zařízení proveden jailbreak nebo root?
 
 #### <a name="bring-your-own-device-byod"></a>Přineste si vlastní zařízení (BYOD)
 
--   **Připojení k síti na pracovišti a správa prostřednictvím Intune:** Sem uživatel připojit svoje osobní zařízení pro přístup k firemním prostředkům a službám. Můžete použít připojení k síti na pracovišti a zaregistrovat zařízení v MDM Intune přijímat zásady na úrovni zařízení, která je také další možnost pro vyhodnocování kritérií podmíněného přístupu.
+- **Připojení k síti na pracovišti a Správa Intune:** Tady může uživatel k přístupu k firemním prostředkům a službám připojit svoje osobní zařízení. K získání zásad na úrovni zařízení, což je další možnost pro vyhodnocení kritérií podmíněného přístupu, můžete použít připojení k síti na pracovišti a registrovat zařízení do Intune MDM.
 
-Další informace o [správy zařízení ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/overview).
+Další informace o [správě zařízení najdete v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).
 
 ## <a name="app-based-conditional-access"></a>Podmíněný přístup založený na aplikacích
 
 Intune a Azure Active Directory společně zajišťují, aby přístup k podnikovému e-mailu nebo jiným službám Office 365 měly jenom spravované aplikace.
 
--   Přečtěte si další informace o [podmíněném přístupu založeném na aplikacích s Intune](app-based-conditional-access-intune.md).
+- Přečtěte si další informace o [podmíněném přístupu založeném na aplikacích s Intune](app-based-conditional-access-intune.md).
 
-## <a name="next-steps"></a>Další postup
+### <a name="intune-conditional-access-for-exchange-on-premises"></a>Podmíněný přístup Intune pro místní Exchange
 
-[Jak nakonfigurovat podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+Pomocí podmíněného přístupu můžete na základě zásad dodržování předpisů a stavu registrace zařízení povolit nebo zablokovat přístup k **místnímu Exchangi**. Když zásady podmíněného přístupu použijete v kombinaci se zásadami dodržování předpisů zařízením, povolí se přístup k místnímu Exchangi jen zařízením dodržujícím předpisy.
 
-[Jak nainstalovat místní konektor Exchange v Intune](https://docs.microsoft.com/intune/exchange-connector-install)
+V podmíněném přístupu můžete nakonfigurovat upřesňující nastavení pro podrobnější řízení, třeba:
 
-[Jak vytvořit zásadu podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)
+- Povolit nebo zakázat určité platformy
+
+- Okamžitě zablokovat zařízení, která nespravuje Intune.
+
+Při použití zásad dodržování předpisů zařízením a podmíněného přístupu se u všech zařízení používaných pro přístup k místnímu Exchangi kontroluje dodržování předpisů.
+
+Pokud zařízení nesplňuje podmínky nastavené, koncový uživatel se provede procesem registrace zařízení za účelem vyřešení problému, který zařízení nedodržuje.
+
+#### <a name="how-conditional-access-for-exchange-on-premises-works"></a>Jak podmíněný přístup pro místní Exchange funguje
+
+Podmíněný přístup pro místní Exchange funguje jinak než zásady založené na podmíněném přístupu Azure. Intune Exchange On-Premises Connector nainstalujete k přímé interakci se systémem Exchange Server. Konektor Intune Exchange si vyžádá všechny záznamy Exchange Active Sync (EAS), které existují na serveru Exchange, aby Intune mohl tyto záznamy EAS namapovat na záznamy zařízení Intune. Tyto záznamy jsou zařízení zaregistrovaná a rozpoznaná službou Intune. Tento proces povolí nebo zablokuje přístup k e-mailu.
+
+Pokud je záznam EAS nový a Intune o něm není vědět, Intune vydá rutinu (příkaz-let), která přesměruje Exchange Server, aby blokoval přístup k e-mailu. Níže najdete další podrobnosti o tom, jak tento proces funguje:
+
+![Vývojový diagram místního Exchange s podmíněným přístupem](./media/ca-intune-common-ways-1.png)
+
+1. Uživatel se pokusí o přístup k podnikovému e-mailu, který je hostovaný na místním Exchangi 2010 SP1 nebo novějším.
+
+2. Pokud zařízení nespravuje Intune, bude přístup k e-mailu blokovaný. Intune pošle klientovi EAS oznámení o blokování.
+
+3. EAS obdrží oznámení o zablokování, přesune zařízení do karantény a odešle e-mail o karanténě s kroky k nápravě, které obsahují odkazy, aby uživatelé mohli svá zařízení zaregistrovat.
+
+4. Provede se proces připojení k pracovišti, který je prvním krokem k tomu, aby se zařízení spravovalo pomocí Intune.
+
+5. Zařízení se zaregistruje v Intune.
+
+6. Intune namapuje záznam EAS na záznam zařízení a uloží stav dodržování předpisů zařízením.
+
+7. ID klienta EAS se zaregistruje prostřednictvím procesu registrace zařízení Azure AD. Tím se vytvoří vztah mezi záznamem zařízení v Intune a ID klienta EAS.
+
+8. Registrace zařízení Azure AD uloží informace o stavu zařízení.
+
+9. Pokud uživatel splňuje zásady podmíněného přístupu, Intune vydá rutinu prostřednictvím Intune Exchange Connectoru, která umožňuje synchronizaci poštovní schránky.
+
+10. Server Exchange odešle oznámení klientovi EAS, aby uživatel získal přístup k e-mailu.
+
+
+#### <a name="whats-the-intune-role"></a>Jaká je role Intune?
+
+Intune vyhodnocuje a spravuje stav zařízení.
+
+#### <a name="whats-the-exchange-server-role"></a>Jaká je role serveru Exchange?
+
+Exchange Server poskytuje rozhraní API a infrastrukturu pro přesunutí zařízení do karantény.
+
+> [!IMPORTANT]
+> Mějte na paměti, že uživatel, který zařízení používá, musí mít profil dodržování předpisů a přiřazenou licenci Intune, aby bylo možné zařízení vyhodnotit pro dodržování předpisů. Pokud uživatel nemá nasazené žádné zásady dodržování předpisů, považuje se zařízení za dodržující předpisy a žádná omezení přístupu se neuplatní.
+
+## <a name="next-steps"></a>Další kroky
+
+[Postup konfigurace podmíněného přístupu v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
+
+[Nastavení zásad podmíněného přístupu na základě aplikace](app-based-conditional-access-intune-create.md)
+
+[Jak nainstalovat místní konektor Exchange v Intune](exchange-connector-install.md)
+
+[Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

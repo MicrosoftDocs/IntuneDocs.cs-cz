@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c75923440b8b8147f7ed75a06df2435ed6eb0981
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3bcfad3937b4ab6f533cd7ac915a964f2551be45
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565277"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71302289"
 ---
 # <a name="microsoft-intune-windows-phone-81-device-restriction-settings"></a>Nastavení omezení pro zařízení Windows Phone 8.1 v Microsoft Intune
 
@@ -32,30 +31,30 @@ Tento článek ukazuje nastavení omezení zařízení v Microsoft Intune, kter�
 
 ## <a name="general"></a>Obecné
 
--   **Kamera** – Povolí nebo zablokuje fotoaparát zařízení.
--   **Kopírování a vložení** – Povolí nebo zablokuje funkci kopírování a vkládání na zařízeních.
--   **Vyměnitelné úložiště** – Povolí použití vyměnitelného úložiště v zařízení, třeba SD karty.
--   **Zeměpisná poloha** – Umožní zařízení využívat informace o poloze.
--   **Účet Microsoft** – Povolí nebo zablokuje možnost, aby uživatel propojil účet Microsoft se zařízením.
--   **Snímek obrazovky** – Povolí uživateli zachytit obsah obrazovky jako obrázek.
--   **Odeslání diagnostických dat** – Povolí zařízení odesílat diagnostické informace Microsoftu.
--   **Synchronizace vlastních e-mailových účtů** – Povolí zařízení připojit se k e-mailovým účtům jiným než Microsoftu.
+- **Kamera** – Povolí nebo zablokuje fotoaparát zařízení.
+- **Kopírování a vložení** – Povolí nebo zablokuje funkci kopírování a vkládání na zařízeních.
+- **Vyměnitelné úložiště** – Povolí použití vyměnitelného úložiště v zařízení, třeba SD karty.
+- **Zeměpisná poloha** – Umožní zařízení využívat informace o poloze.
+- **Účet Microsoft** – Povolí nebo zablokuje možnost, aby uživatel propojil účet Microsoft se zařízením.
+- **Snímek obrazovky** – Povolí uživateli zachytit obsah obrazovky jako obrázek.
+- **Odeslání diagnostických dat** – Povolí zařízení odesílat diagnostické informace Microsoftu.
+- **Synchronizace vlastních e-mailových účtů** – Povolí zařízení připojit se k e-mailovým účtům jiným než Microsoftu.
 
 ## <a name="password"></a>Heslo
 
--   **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
-    -   **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
-    -   **Minimální délka hesla** – Určuje minimální počet znaků, které heslo musí obsahovat.
-    -   **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je 0000 nebo 1234.
-    -   **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.
-    -   **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky zamkne jeho obrazovka.
-    -   **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
-    -   **Znemožnit opakované použití předchozích hesel** – Určuje, kolik dříve použitých hesel se pamatuje.
--   **Šifrování** – Vyžaduje, aby data na podporovaných mobilních zařízeních byla šifrovaná.
+- **Heslo** – Vyžaduje, aby koncový uživatel zadal heslo pro přístup k zařízení.
+  - **Požadovaný typ hesla** – Určuje typ hesla, které se bude vyžadovat, například jenom číslice nebo alfanumerické znaky.
+  - **Minimální délka hesla** – Určuje minimální počet znaků, které heslo musí obsahovat.
+  - **Jednoduchá hesla** – Umožňuje použití jednoduchých hesel, jako je 0000 nebo 1234.
+  - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení** – Určuje, kolikrát může uživatel zadat nesprávné heslo, než se zařízení vymaže.
+  - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** – Určuje dobu, po kterou musí zařízení zůstat v nečinnosti, než se automaticky zamkne jeho obrazovka.
+  - **Konec platnosti hesla (dny)** – Určuje počet dní, než bude nutné změnit heslo zařízení.
+  - **Znemožnit opakované použití předchozích hesel** – Určuje, kolik dříve použitých hesel se pamatuje.
+- **Šifrování** – Vyžaduje, aby data na podporovaných mobilních zařízeních byla šifrovaná.
 
 ## <a name="app-store"></a>App Store
 
--   **App Store** – Umožňuje uživatelům připojit se ze zařízení k obchodu s aplikacemi App Store.
+- **App Store** – Umožňuje uživatelům připojit se ze zařízení k obchodu s aplikacemi App Store.
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
@@ -74,24 +73,24 @@ Na stránce [Windows Phone Store](https://www.microsoft.com/store/apps/windows-p
 
 Otevřete stránku aplikace a zkopírujte adresu URL do schránky. Tu teď můžete použít jako adresu URL v seznamu povolených nebo blokovaných aplikací.
 
-Příklad: Vyhledání aplikace Skype ve storu. Použijete tuto adresu URL: `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
+Příklad: Vyhledejte v obchodě aplikaci Skype. Použijete tuto adresu URL: `http://www.windowsphone.com/store/app/skype/c3f8e570-68b3-4d6a-bdbb-c0a3f4360a51`.
 
 
 
 ### <a name="additional-options"></a>Další možnosti
 
-Můžete také kliknout na **Import** a naplnit seznam ze souboru csv ve formátu <*adresa url aplikace*>, <*název aplikace*><app publisher> nebo kliknout na **Export** a vytvořit si soubor csv obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
+Můžete taky kliknout na **importovat** a naplnit seznam ze souboru CSV ve formátu <*adresa URL aplikace*>, <*název aplikace*> < >*vydavatele aplikace*nebo klikněte na **exportovat** a vytvořte soubor CSV obsahující obsah s omezením. seznam aplikací ve stejném formátu
 
 
-## <a name="browser"></a>Prohlížeč
+## <a name="browser"></a>Browser
 
--   **Webový prohlížeč** – Povolí nebo zablokuje integrovaný webový prohlížeč v zařízeních.
+- **Webový prohlížeč** – Povolí nebo zablokuje integrovaný webový prohlížeč v zařízeních.
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
--   **Wi-Fi** – Povolí nebo zakáže funkce Wi-Fi v zařízení.
--   **Wi-Fi tethering** – Povolí sdílení mobilního internetového připojení (tethering) přes Wi-Fi na zařízení.
--   **Automaticky se připojovat k Wi-Fi hotspotům** – Povolí zařízení automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky přijímat jakékoli podmínky použití.
--   **Hlášení Wi-Fi hotspotů** – Umožní posílání informací o připojeních Wi-Fi, aby uživatel mohl nacházet možnosti připojení v okolí.
--   **Bezkontaktní komunikace (NFC)** – Povolí nebo zakáže operace, které používají bezkontaktní komunikaci, na zařízeních, která ji podporují.
--   **Bluetooth** – Povolí nebo zakáže funkce Bluetooth v zařízení.
+- **Wi-Fi** – Povolí nebo zakáže funkce Wi-Fi v zařízení.
+- **Wi-Fi tethering** – Povolí sdílení mobilního internetového připojení (tethering) přes Wi-Fi na zařízení.
+- **Automaticky se připojovat k Wi-Fi hotspotům** – Povolí zařízení automaticky se připojovat k bezplatným Wi-Fi hotspotům a automaticky přijímat jakékoli podmínky použití.
+- **Hlášení Wi-Fi hotspotů** – Umožní posílání informací o připojeních Wi-Fi, aby uživatel mohl nacházet možnosti připojení v okolí.
+- **Bezkontaktní komunikace (NFC)** – Povolí nebo zakáže operace, které používají bezkontaktní komunikaci, na zařízeních, která ji podporují.
+- **Bluetooth** – Povolí nebo zakáže funkce Bluetooth v zařízení.

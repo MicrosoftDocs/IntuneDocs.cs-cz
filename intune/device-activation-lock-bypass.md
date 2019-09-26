@@ -8,21 +8,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9ca3b0ba-e41c-45fb-af28-119dff47c59f
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 406a08788663603340ab4af78217a07e68e66604
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 962202b3d46d7e162f564e35fd5d58946f406358
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898407"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71303656"
 ---
 # <a name="bypass-activation-lock-on-supervised-ios-devices-with-intune"></a>Vyřazení zámku aktivace přes Intune na zařízeních s iOSem, která jsou pod dohledem
 
@@ -73,8 +73,7 @@ Než budete moct zámek aktivace na zařízeních vyřadit, musíte ho nejdřív
 
 Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zámek aktivace ze zařízení s iOSem bez vyžadování Apple ID a hesla uživatele. Po vynechání zámku aktivace ho zařízení znovu zapne při spuštění aplikace Najít iPhone. Zámek aktivace vynechejte jenom v případě, že máte k zařízení fyzický přístup.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V okně **Intune** vyberte **Zařízení**.
 4. V okně **Zařízení** vyberte **Všechna zařízení**.
 5. Na seznamu zařízení, která spravujete, vyberte vzdálenou akci zařízení **Vynechat zámek aktivace**.
@@ -83,10 +82,10 @@ Akce Intune se vzdáleným zařízením **Vynechat zámek aktivace** odebere zá
     >[!NOTE]
     >Před vymazáním zařízení si kód zkopírujte. Když nastavení zařízení obnovíte před zkopírováním kódu, kód se z Azure odebere.
 
-7.  Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
-8.  Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
+7. Přejděte do okna zařízení **Přehled** a pak vyberte **Vymazat**.
+8. Jakmile se zařízení obnoví, zobrazí se výzva k zadání *Apple ID* a *hesla*. Pole *ID* nechte prázdné a jako *heslo* zadejte **kód pro překonání zámku**. Tímto se účet odebere ze zařízení. 
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Stav požadavku na odemčení můžete zkontrolovat na stránce podrobností pro dané zařízení v úloze **Spravovat zařízení**.

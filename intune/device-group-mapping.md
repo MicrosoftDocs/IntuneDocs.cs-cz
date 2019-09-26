@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f63c5a3dbeb7c8626ec1412dbcee661b82afc88
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 2bf0d7a972aea8a82e731100931332e42cbc100f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896007"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71303575"
 ---
 # <a name="categorize-devices-into-groups"></a>Kategorizace zařízení do skupin
 
@@ -44,7 +43,7 @@ Kategorie zařízení můžete vytvořit zcela podle svých potřeb. Příklad:
 
 ## <a name="how-to-configure-device-categories"></a>Jak konfigurovat kategorie zařízení
 
-### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Krok 1: Vytvoření kategorií zařízení v okně Intune na portálu Azure Portal
+### <a name="step-1-create-device-categories-on-the-intune-blade-of-the-azure-portal"></a>Krok 1: Vytvoření kategorií zařízení v okně Intune Azure Portal
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení**.
 2. V okně **Registrace zařízení** zvolte **Kategorie zařízení**.
 3. Na stránce **Kategorie zařízení** zvolte **Vytvořit**, abyste mohli přidat novou kategorii.
@@ -64,11 +63,11 @@ Až nakonfigurujete skupiny zařízení, bude se uživatelům při registrován�
 
 ### <a name="view-the-categories-of-devices-that-you-manage"></a>Zobrazení kategorií zařízení, která spravujete
 
-1.  V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Zařízení**.
+1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Zařízení**.
 
-2.  V části **Spravovat** vyberte **Všechna zařízení**.
+2. V části **Spravovat** vyberte **Všechna zařízení**.
 
-3.  V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
+3. V seznamu zařízení zkontrolujte sloupec **Kategorie zařízení**.
 
 Pokud se sloupec **Kategorie zařízení** nezobrazuje, vyberte **Sloupce**. V seznamu zvolte **Kategorie zařízení** a vyberte **Použít**.
 

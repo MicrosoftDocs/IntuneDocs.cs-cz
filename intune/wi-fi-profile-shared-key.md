@@ -1,13 +1,12 @@
 ---
-title: Vytvoření profilu Wi-Fi s předsdíleným klíčem – Microsoft Intune – Azure | Dokumentace Microsoftu
+title: Vytvoření profilu Wi-Fi s předsdíleným klíčem – Microsoft Intune – Azure | Microsoft Docs
 description: Pokud chcete v Microsoft Intune vytvořit profil Wi-Fi s předsdíleným klíčem, použijte vlastní profil a získáte ukázkový kód XML pro profily Wi-Fi založené na Androidu, Windows a protokolu EAP.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 06/25/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7bf859075e675ef0205b24e0575fca5ab74f312c
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 632bf2c68133f80a44950f154e1b5d9092da3cab
+ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490631"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "71303263"
 ---
 # <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
@@ -38,7 +37,7 @@ Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů
 - Může být pro vás snadnější zkopírovat kód z počítače připojeného k síti, jak je popsáno dále v tomto článku.
 - Přidáním dalších nastavení OMA-URI můžete přidat více sítí a klíčů.
 - Pro iOS nastavte profil nástrojem Apple Configurator na stanici Mac.
-- PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), se nepodporují.
+- PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), nejsou podporovány.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
 Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi založený na Androidu, Windows nebo protokolu EAP. Pokud chcete vytvořit profil na portálu Azure Portal, projděte si část [Vytvoření vlastního nastavení zařízení](custom-settings-configure.md). Při vytvoření profilu zařízení zvolte jako platformu zařízení možnost **Vlastní**. Nevybírejte profil Wi-Fi. Když vyberete možnost Vlastní, nezapomeňte provést toto: 
@@ -60,7 +59,7 @@ Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi z
      > [!NOTE]
      > Nezapomeňte použít tečku na začátku.
 
-     SSID je identifikátor SSID, pro který vytváříte zásadu. Zadejte například `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+     SSID je identifikátor SSID, pro který vytváříte zásadu. Pokud je například síť Wi-Fi pojmenována `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
    e. **Hodnota pole**: Sem vkládáte svůj kód XML. Podívejte se na příklady v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 3. Vyberte **OK**, zásadu uložte a pak přiřaďte.
@@ -74,26 +73,28 @@ Pro každé zařízení, které se příště vrátí se změnami, se použijí 
 
 Následující příklad zahrnuje kód XML pro profil Wi-Fi pro Android nebo Windows: Příklad uvádíme proto, abychom ukázali správný formát a poskytli více podrobností. Je to jenom příklad a není myšlen jako doporučená konfigurace pro vaše prostředí.
 
-> [!IMPORTANT]
->
-> - `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
->
-> - `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`.
->  Zařízení s Windows 10 můžou vrátit falešnou chybu *0x87D1FDE8 Náprava se nezdařila*, nicméně zařízení přesto profil obsahuje.
->
-> - XML má speciální znaky, například `&` (znak). Pomocí speciálních znaků může zabránit XML funkční podle očekávání. 
+### <a name="important-considerations"></a>Důležité informace
 
-```
+- `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
+
+- `<hex>53534944</hex>`má být nastaveno na šestnáctkovou hodnotu `<name><SSID of wifi profile></name>`. Zařízení s Windows 10 můžou vracet falešnou `x87D1FDE8 Remediation failed` chybu, ale zařízení pořád obsahuje profil.
+
+- XML má speciální znaky, `&` jako například (ampersand). Použití speciálních znaků může zabránit tomu, aby XML fungovalo podle očekávání. 
+
+### <a name="example"></a>Příklad
+
+``` xml
 <!--
-<Name of wifi profile> = Name of profile
-<SSID of wifi profile> = Plain text of SSID. Does not need to be escaped, could be <name>Your Company's Network</name>
+<hex>53534944</hex> = The hexadecimal value of <name><SSID of wifi profile></name>
+<Name of wifi profile> = Name of profile shown to users. It could be <name>Your Company's Network</name>.
+<SSID of wifi profile> = Plain text of SSID. Does not need to be escaped. It could be <name>Your Company's Network</name>.
 <nonBroadcast><true/false></nonBroadcast>
 <Type of authentication> = Type of authentication used by the network, such as WPA2PSK.
-<Type of encryption> = Type of encryption used by the network
+<Type of encryption> = Type of encryption used by the network, such as AES.
 <protected>false</protected> do not change this value, as true could cause device to expect an encrypted password and then try to decrypt it, which may result in a failed connection.
-<password> = Password to connect to the network
-x>53534944</hex> should be set to the hexadecimal value of <name><SSID of wifi profile></name>
+<password> = Plain text of the password to connect to the network
 -->
+
 <WLANProfile
 xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
   <name><Name of wifi profile></name>
@@ -129,7 +130,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 Následující příklad zahrnuje kód XML pro profil Wi-Fi založený na protokolu EAP: Příklad uvádíme proto, abychom ukázali správný formát a poskytli více podrobností. Je to jenom příklad a není myšlen jako doporučená konfigurace pro vaše prostředí.
 
 
-```
+```xml
     <WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
       <name>testcert</name>
       <SSIDConfig>
@@ -210,18 +211,29 @@ Následující příklad zahrnuje kód XML pro profil Wi-Fi založený na protok
 ```
 
 ## <a name="create-the-xml-file-from-an-existing-wi-fi-connection"></a>Vytvoření souboru XML z existujícího připojení Wi-Fi
-Následujícím postupem můžete také vytvořit soubor XML z existujícího připojení Wi-Fi: 
 
-1. Na počítači, který je připojený nebo byl nedávno připojený k bezdrátové síti, otevřete složku `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`.
+Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počítači se systémem Windows použijte následující postup:
 
-   Nejvhodnější je použít počítač, který nebyl připojený k mnoha bezdrátovým sítím. V opačném případě byste možná museli procházet jednotlivé profily, abyste našli ten správný.
+1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi.
+2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd`  >  **Spustit jako správce**).
+3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
+4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.
 
-2. Prohledejte soubory XML a najděte ten se správným názvem.
-3. Po vyhledání správného souboru XML zkopírujte kód XML a vložte ho do pole **Data** na stránce nastavení OMA-URI.
+    - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte `key=clear` do příkazu:
+  
+      `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
+
+      `key=clear`Exportuje klíč do prostého textu, který je požadován pro úspěšné použití profilu.
+
+Až budete mít soubor XML, zkopírujte a vložte syntax XML do nastavení OMA-URI > **datový typ**. [Vytvoření vlastního profilu](#create-a-custom-profile) (v tomto článku) jsou uvedené kroky.
+
+> [!TIP]
+> `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{guid}`zahrnuje také všechny profily ve formátu XML.
 
 ## <a name="best-practices"></a>Osvědčené postupy
+
 - Než profil Wi-Fi s předsdíleným klíčem nasadíte, ověřte, jestli se zařízení může přímo připojit ke koncovému bodu.
 
-- Při obměně klíčů (hesel) počítejte s výpadky a podle toho naplánujte nasazení. Zvažte zavedení nových profilů Wi-Fi mimo pracovní dobu. Upozorněte také uživatele na možné omezení připojení.
+- Při střídání klíčů (hesla nebo hesla) očekává prostoje a naplánujte nasazení. Zvažte zavedení nových profilů Wi-Fi mimo pracovní dobu. Také upozorněte uživatele, že může být ovlivněno připojení.
 
-- Pokud chcete zajistit hladký přechod, zkontroluje, že zařízení koncového uživatele má připojení k internetu. Koncový uživatel například musí být schopný přepnout zpět na hostovanou Wi-Fi (nebo jinou síť Wi-Fi) nebo musí mít mobilní připojení, aby mohl komunikovat s Intune. Toto připojení navíc mu umožní i nadále přijímat aktualizace zásad, když dojde k aktualizaci firemního profilu Wi-Fi na zařízení.
+- Pokud chcete zajistit hladký přechod, ujistěte se, že je zařízení koncového uživatele alternativním připojením k Internetu. Koncový uživatel například může přejít zpátky na Host WiFi (nebo na jinou síť Wi-Fi) nebo mít mobilní připojení ke komunikaci s Intune. Toto připojení navíc mu umožní i nadále přijímat aktualizace zásad, když dojde k aktualizaci firemního profilu Wi-Fi na zařízení.

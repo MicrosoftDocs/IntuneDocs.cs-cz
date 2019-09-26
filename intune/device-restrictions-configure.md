@@ -1,11 +1,11 @@
 ---
-title: Konfigurace nastavení omezení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přidání profilu zařízení k omezení funkcí v zařízeních s Androidem, macOS, iOSem, Windows Phone a Windows 10 v Microsoft Intune
+title: Omezení funkcí zařízení pomocí zásad v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte profil zařízení, který omezí funkce na zařízeních s Androidem, macOS, iOS, iPadOS, Windows Phone a Windows 10 v Microsoft Intune
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/20/2018
+ms.date: 09/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -14,46 +14,56 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4cae90723c7ff92a8042f068fb49c1709506c7ff
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: 8030d3c12ca3f0eda3afef39a940cce6d53bc5e8
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412434"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302401"
 ---
 # <a name="configure-device-restriction-settings-in-microsoft-intune"></a>Konfigurace nastavení omezení zařízení v Microsoft Intune
 
-Pomocí omezení zařízení můžete ovládat širokou škálu spravovaných nastavení a funkcí v různých kategoriích, jako jsou například:
-- Zabezpečení
-- Prohlížeč
-- Hardware
-- Nastavení sdílení dat
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zabraňuje v přístupu k fotoaparátu.
+Intune zahrnuje zásady omezení zařízení, které správcům pomůžou řídit zařízení se systémem Android, iOS, macOS a Windows. Tato omezení umožňují řídit široké spektrum nastavení a funkcí pro ochranu prostředků vaší organizace. Správci můžou například:
 
-Naučte se základy o profilech omezení zařízení a pak si přečtěte další články pro jednotlivé platformy, abyste zjistili zvláštnosti zařízení.
+- Povolí nebo zablokuje fotoaparát zařízení.
+- Řízení přístupu k Google Play, obchodům s aplikacemi, zobrazování dokumentů a hraní her
+- Zablokovat integrované aplikace nebo vytvořit seznam aplikací, které jsou povolené nebo zakázané
+- Povolení nebo prevence zálohování souborů do účtů cloudu a úložiště
+- Nastavit minimální délku hesla a zablokovat jednoduchá hesla
+
+Tyto funkce jsou dostupné v Intune a správce je může nakonfigurovat. Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete profil nainstalovat nebo nasadit do zařízení ve vaší organizaci.
+
+V tomto článku se dozvíte, jak vytvořit profil omezení pro zařízení. Můžete si také prohlédnout všechna dostupná nastavení pro různé platformy.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-3. Zadejte **název** a **popis** profilu omezení zařízení.
-4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení, u které chcete vlastní nastavení použít. V současné době můžete pro nastavení omezení zařízení zvolit jednu z těchto platforem:
+3. Zadejte tyto vlastnosti:
 
-    - **Android**
-    - **Android Enterprise**
-    - **iOS**
-    - **macOS**
-    - **Windows Phone 8.1**
-    - **Windows 8.1 a novější**
-    - **Windows 10 a novější**
+    - **Název**: Zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je **například iOS: Zablokuje kameru na zařízeních**.
+    - **Popis**: Zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Platforma**: Vyberte platformu zařízení. Možnosti:  
 
-5. V rozevíracím seznamu **Typ profilu** zvolte **Omezení zařízení**. Chcete-li vytvořit zařízení omezení profilu pro zařízení s Windows 10 Team, jako je Surface Hub, a pak zvolte **omezení zařízení (Windows 10 Team)** .
-6. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Zvolte vaši platformu, pro podrobné informace o nastavení:
+        - **Android**
+        - **Android Enterprise**
+        - **iOS/iPadOS**
+        - **macOS**
+        - **Windows Phone 8.1**
+        - **Windows 8.1 a novější**
+        - **Windows 10 a novější**
+
+    - **Typ profilu**: Vyberte **omezení zařízení**.
+
+        Pokud chcete vytvořit profil omezení zařízení pro zařízení s Windows 10 Team, jako je například Surface Hub, zvolte **omezení zařízení (Windows 10 Team)** .
+
+4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Pro podrobnější nastavení vyberte platformu:
 
     - [Nastavení Androidu](device-restrictions-android.md)
-    - [Nastavení androidu enterprise](device-restrictions-android-for-work.md)
-    - [Nastavení iOSu](device-restrictions-ios.md)
+    - [Nastavení Androidu Enterprise](device-restrictions-android-for-work.md)
+    - [nastavení pro iOS/iPadOS](device-restrictions-ios.md)
     - [Nastavení macOS](device-restrictions-macos.md)
     - [Nastavení Windows Phone 8.1](device-restrictions-windows-phone-8-1.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
@@ -61,13 +71,13 @@ Naučte se základy o profilech omezení zařízení a pak si přečtěte dalš�
     - [Nastavení Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Nastavení Windows Holographic for Business](device-restrictions-windows-holographic.md)
 
-7. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
-Profil se vytvoří a zobrazí v seznamu profilů.
+Profil se vytvoří a zobrazí se v seznamu profily.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Po vytvoření profilu je připraven k přiřazení. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil je po vytvoření připravený k přiřazení. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 

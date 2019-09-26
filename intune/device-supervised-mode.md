@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/15/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5a521641c2d916f1a40679bc8d9445abaaf9872
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 1572cb154490249a8e1e9cce70eebc61235ca1ab
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57399163"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302275"
 ---
 # <a name="turn-on-ios-supervised-mode"></a>Zapnutí režimu iOSu Pod dohledem
 
@@ -37,7 +36,7 @@ Seznam ovládacích prvků Apple, které vyžadují dohled, najdete na webu spol
 
 ## <a name="turn-on-supervised-mode-during-enrollment"></a>Zapnutí režimu Pod dohledem během registrace
 
-V Intune můžete zapnout režim Pod dohledem pro zařízení při [vytvoření registračního profilu v programu DEP](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile). V části **Nastavení správy zařízení** zaškrtněte políčko **Pod dohledem**.
+V Intune můžete zapnout režim Pod dohledem pro zařízení při [vytvoření registračního profilu v programu DEP](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile). V části **Nastavení správy zařízení** zaškrtněte políčko **Pod dohledem**.
 
 ## <a name="turn-on-supervised-mode-after-enrollment"></a>Zapnutí režimu Pod dohledem po registraci
 
@@ -49,6 +48,6 @@ Pokud chcete zjistit, jestli je zařízení pod dohledem, zkontrolujte zamykací
 - Na zamykací obrazovce zařízení bude sdělení **iPhone je ve správě organizace „název společnosti“.**
 - Na zařízení bude na stránce **Informace** sdělení **iPhone je pod dohledem. Organizace „název společnosti“ může monitorovat jeho aktivitu na internetu a určit jeho polohu.**
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Další možnosti správy zařízení najdete v tématu [Co je správa zařízení v Microsoft Intune](device-management.md).

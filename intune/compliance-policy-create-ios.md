@@ -1,13 +1,12 @@
 ---
-title: nastavení dodržování předpisů zařízení s Iosem v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zobrazit seznam všech nastavení, které můžete použít při nastavení dodržování předpisů pro zařízení s Iosem v Microsoft Intune. Vyžadovat e-mailu, zkontrolujte zařízení s jailbreakem nebo rootem, nastavení povolený minimální a maximální operačního systému, nastavte žádné omezení pro heslo včetně heslo délku a doby nečinnosti zařízení, omezení aplikací a dalších.
+title: nastavení dodržování předpisů pro zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení, která můžete použít při nastavování dodržování předpisů pro zařízení s iOS v Microsoft Intune. Vyžadovat e-mail, podívejte se na zařízení s jailbreakem nebo rootem, nastavte povolený minimální a maximální operační systém, nastavte jakákoli omezení hesla, včetně délky hesla a nečinnosti zařízení, omezit aplikace a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 04/04/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,24 +16,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec071622a2e0d49068864f8bfb47954f54c8ba4
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: bde1c296abb99e8c0c81b44908e78b204c62388e
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900277"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71304134"
 ---
-# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení pro iOS se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
+# <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tento článek uvádí a popisuje nastavení různých dodržování předpisů, které můžete nakonfigurovat na zařízeních s Iosem v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení vyžadují e-mailu, začínající kořenovým adresářem (zařízení s jailbreakem) zařízení označí jako nedodržující předpisy, nastavte úroveň, nastavte hesla vyprší povolené hrozeb a další.
+Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat na zařízeních s iOS v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení pro vyžadování e-mailu, označení rootem (jailbreak) zařízení jako nevyhovující předpisům, nastavení povolené úrovně hrozby, nastavení hesel pro vypršení platnosti a další.
 
 Tato funkce platí pro:
 
 - iOS
 
-Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáhají chránit prostředky organizace. Další informace o zásadách dodržování předpisů a jaké, viz [Začínáme s dodržováním předpisů zařízeními](device-compliance-get-started.md).
+Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -42,32 +41,32 @@ Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáha
 
 ## <a name="email"></a>Email
 
-- **Vyžaduje mobilní zařízení měla spravovaný e-mailový profil**: Pokud je nastavena na **vyžadují**, zařízení, která nemají e-mailový profil spravovaná pomocí Intune je považováno za nevyhovující předpisům. Zařízení nemůže mít spravovaný e-mailový profil, když není správně zacílené nebo pokud uživatel ručně nastavil e-mailového účtu na zařízení. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
+- **Vyžadovat, aby mobilní zařízení měla spravovaný e-mailový profil**: Pokud je nastavení **vyžadováno**, zařízení, která nemají e-mailový profil spravovaná přes Intune, se považují za nevyhovující předpisům. Zařízení nemůže mít spravovaný e-mailový profil, pokud není správně cíleno nebo pokud uživatel ručně nastavil e-mailový účet na zařízení. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
 
-  Zařízení se považuje za nedodržující předpisy v následujících situacích:
+  Zařízení je považováno za nedodržující předpisy v následujících situacích:
 
-  - E-mailového profilu je přiřazena ke skupině jiný uživatel, než je skupina uživatelů cílená zásadou dodržování předpisů.
-  - Uživatel už nastavil e-mailového účtu na zařízení, která odpovídá e-mailový profil Intune nasazeným na zařízení. Intune nemůže přepsat uživatelem nakonfigurované profil a Intune ho nemůže ani spravovat. Aby vyhovovalo předpisům, musí koncový uživatel odstranit existující nastavení e-mailu. Pak Intune může nainstalovat spravovaný e-mailový profil.
+  - E-mailový profil se přiřadí jiné skupině uživatelů, než je skupina uživatelů, na kterou cílí zásady dodržování předpisů.
+  - Uživatel už na zařízení nastavil e-mailový účet, který se shoduje s e-mailovým profilem Intune nasazeným na zařízení. Intune nemůže přepsat uživatelem nakonfigurovaný profil a Intune ho nemůže spravovat. Aby bylo možné nastavit dodržování předpisů, musí koncový uživatel odebrat existující nastavení e-mailu. Pak Intune může nainstalovat spravovaný e-mailový profil.
 
-- **Vyberte e-mailový profil, který se musí spravovat přes Intune**: Pokud **e-mailový účet se musí spravovat přes Intune** je vybráno nastavení, zvolte **vyberte** k zadání e-mailový profil Intune. E-mailový profil musí existovat v zařízení.
+- **Vyberte e-mailový profil, který se musí spravovat přes Intune**: Pokud je vybraná možnost **e-mailový účet musí být spravovaný přes Intune** , zvolte **Vybrat** a zadejte e-mailový profil Intune. E-mailový profil musí existovat na zařízení.
 
-Podrobnosti o e-mailových profilech najdete v tématu [konfigurace přístupu k organizaci e-mailu pomocí e-mailové profily v Intune](email-settings-configure.md).
+Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k e-mailu organizace pomocí e-mailových profilů s Intune](email-settings-configure.md)
 
 ## <a name="device-health"></a>Device health
 
-- **Zařízení s Jailbreakem**: Zvolte **bloku** se začínající kořenovým adresářem (zařízení s jailbreakem) zařízení označí jako nedodržující předpisy. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
-- **Vyžadovat, aby zařízení bylo na nebo za úrovně hrozby pro zařízení** (iOS 8.0 a novější): Toto nastavení použijte k vyhodnocování rizik jako podmínku dodržování předpisů. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje. Pokud chcete nastavení použít, zvolte povolenou úroveň ohrožení:
-  - **Zabezpečené**: Tato možnost je nejbezpečnější a znamená, že zařízení nesmí obsahovat žádné hrozby. Pokud se zjistí, že zařízení s libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
-  - **Nízká**: Zařízení je vyhodnoceno jako vyhovující, pokud jen hrozby nízké úrovně jsou k dispozici. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  - **Střední**: Zařízení je vyhodnoceno jako vyhovující, pokud, které se nacházejí v zařízení hrozby střední nebo nízké úrovni. Pokud se zařízení zjistí hrozby vysoké úrovně, má vyhodnotí jako nevyhovující.
+- **Zařízení s jailbreakem**: Vyberte možnost **blokovat** , pokud chcete označit zařízení root (jailbreak) jako nevyhovující předpisům. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje.
+- **Vyžadovat, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod** ní (iOS 8,0 a novější): Toto nastavení použijte, pokud chcete vyhodnotit hodnocení rizik jako podmínku pro dodržování předpisů. Pokud zvolíte **Nenakonfigurováno** (výchozí), nebude se u tohoto nastavení vyhodnocovat, jestli zařízení vyhovuje. Pokud chcete nastavení použít, zvolte povolenou úroveň ohrožení:
+  - **Zabezpečeno**: Tato možnost je nejbezpečnější a to znamená, že zařízení nemůže mít žádné hrozby. Pokud se zjistí, že zařízení má žádnou úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká úroveň**: Zařízení se vyhodnotí jako vyhovující, pokud jsou přítomny jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud se v něm přítomné hrozby nacházejí v nízké nebo střední úrovni. Pokud se zjistí, že zařízení bude mít hrozby vysoké úrovně, je zjištěno, že nedodržuje předpisy.
   - **Vysoká**: Tato možnost je nejméně bezpečná, protože umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální požadovaný operační systém** (iOS 8.0 a novější): Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, uvede se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel může zvolit upgrade svého zařízení. Po tomto jejich přístup k prostředkům organizace.
-- **Maximální povolená verze operačního systému** (iOS 8.0 a novější): Pokud zařízení používá verzi operačního systému novější než verze v pravidle, přístup k prostředkům organizace, blokovaný. Koncovému uživateli se zobrazí výzva, chcete-li kontaktovat správce IT. Zařízení nemá přístup k prostředkům organizace, dokud pravidla se změní na verzi operačního systému povolí.
-- **Minimální operační systém sestavení verze** (iOS 8.0 a novější): Jakmile Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, nikoli na verzi operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení.
-- **Maximální verze operačního systému sestavení verze** (iOS 8.0 a novější): Jakmile Apple publikuje aktualizace zabezpečení, je obvykle aktualizovat číslo sestavení, nikoli na verzi operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení.
+- **Minimální požadovaný operační systém** (iOS 8,0 a novější): Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může upgradovat svoje zařízení. Pak mají přístup k prostředkům organizace.
+- **Maximální povolená verze operačního systému** (iOS 8,0 a novější): Pokud zařízení používá verzi operačního systému, která je novější než verze v pravidle, bude přístup k prostředkům organizace blokovaný. Koncovému uživateli se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
+- **Minimální verze buildu operačního systému** (iOS 8,0 a novější): Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce lze zadat číslo minimální povolenou sestavení na zařízení.
+- **Maximální verze buildu operačního systému** (iOS 8,0 a novější): Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce lze zadat maximální povolené sestavení číslo na zařízení.
 
 ## <a name="system-security"></a>Zabezpečení systému
 
@@ -76,29 +75,29 @@ Podrobnosti o e-mailových profilech najdete v tématu [konfigurace přístupu k
 > [!NOTE]
 > Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví.
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadovat** uživatelé zadat heslo, než bude moct svoje zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
-- **Jednoduchá hesla**: Nastavte na **bloku** , uživatelé nemůžou vytvářet jednoduchá hesla, jako například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
-- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Vyžadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaků, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků, jako například `&`, `#`, `%`, `!`, a tak dále, který musí být v hesle.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžaduje** , aby uživatel zadal heslo, než bude mít přístup ke svému zařízení. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
+- **Jednoduchá hesla**: Nastavte **blokování** , aby uživatelé nemohli vytvářet jednoduchá hesla, například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo obsahovat.
+- **Požadovaný typ hesla**: Vyberte, jestli má heslo obsahovat jenom **číselné** znaky, nebo jestli má být kombinace čísel a dalších znaků (**alfanumerické**).
+- **Počet nealfanumerických znaků v hesle**: Zadejte minimální počet speciálních znaků ( `&`například, `#`, `%` `!`, atd.), které musí být v hesle.
 
     Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
-- **Maximální počet minut nečinnosti před vyžádáním hesla**: Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
-- **Vypršení platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Počet předchozích hesel, která zakázat opakované použití**: Zadejte počet dříve použitých hesel, která nelze použít.
+- **Maximální počet minut nečinnosti před vyžadováním hesla**: Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
+- **Vypršení platnosti hesla (dny)** : Vyberte počet dní, po jejichž uplynutí vyprší platnost hesla, a musí vytvořit nové.
+- **Počet předchozích hesel, která zabrání opakovanému použití**: Zadejte počet dříve použitých hesel, která se nedají použít.
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-- **Omezených aplikací**: Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud má zařízení nainstalovanou aplikaci, je zařízení označeno jako nedodržující předpisy.
+- **Aplikace s omezeným přístupem**: Aplikace můžete omezit přidáním jejich ID sady prostředků do zásady. Pokud je aplikace v zařízení nainstalovaná, zařízení se označí jako nevyhovující.
 
-  - **Název aplikace**: Zadejte popisný název, abyste mohli snáze zjistit ID sady prostředků.
-  - **ID sady prostředků aplikace**: Zadejte jedinečnou sadu identifikátor přiřazený poskytovatelem aplikace. ID sady prostředků najdete v tématu [jak najít ID sady prostředků aplikace pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (otevře jiný web společnosti Microsoft).  
+  - **Název aplikace**: Zadejte uživatelsky přívětivý název, který vám usnadní identifikaci ID sady prostředků.
+  - **ID sady prostředků aplikace**: Zadejte jedinečný identifikátor sady přiřazený poskytovatelem aplikace. ID sady najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app) (otevře se další web Microsoftu).  
 
 Vyberte **OK** > **Vytvořit** a změny uložte.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [pomocí značky oboru filtru zásad](scope-tags.md).
-- [Monitorovat zásady dodržování předpisů](compliance-policy-monitor.md).
-- Zobrazit [nastavení zásad dodržování předpisů pro macOS](compliance-policy-create-mac-os.md) zařízení.
+- [Přidejte akce pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [použijte značky oboru k filtrování zásad](scope-tags.md).
+- [Monitorujte zásady dodržování předpisů](compliance-policy-monitor.md).
+- Podívejte se na [nastavení zásad dodržování předpisů pro zařízení MacOS](compliance-policy-create-mac-os.md) .

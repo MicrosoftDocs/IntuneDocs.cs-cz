@@ -1,35 +1,41 @@
 ---
-title: Připojte si účet Intune ke svému účtu spravovaný obchod Google Play.
+title: Připojte svůj účet Intune k vašemu spravovanému účtu Google Play.
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak připojit váš účet Intune ke svému účtu spravovaný obchod Google Play.
+description: Naučte se připojit svůj účet Intune ke spravovanému účtu Google Play.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 6/21/2018
+ms.date: 5/13/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: chrisbal
+ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 19efd0821deeac0e76c60ee67e6230da554391a0
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: bebf4e6fa5ed9e37937be6e7d25b6bd7a6523c23
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898009"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71303987"
 ---
-# <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Připojte si účet Intune ke svému účtu spravovaný obchod Google Play
+# <a name="connect-your-intune-account-to-your-managed-google-play-account"></a>Připojte svůj účet Intune k vašemu spravovanému účtu Google Play
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pro podporu [pracovní profil Androidu Enterprise](android-work-profile-enroll.md), [Androidu Enterprise, plně spravované](android-fully-managed-enroll.md), a [vyhrazená zařízení s Androidem Enterprise](android-kiosk-enroll.md), je nutné se připojit vaším tenantem Intune účet pro váš účet spravovaný obchod Google Play.  
+Aby bylo možné podporovat [pracovní profil pro Android Enterprise](android-work-profile-enroll.md), [plně spravovanou platformu Android Enterprise](android-fully-managed-enroll.md)a [zařízení s Androidem Enterprise](android-kiosk-enroll.md), musíte svůj účet tenanta Intune připojit ke spravovanému účtu Google Play.  
+
+Aby bylo snazší konfigurovat a používat podnikovou správu Androidu, při připojení k Google Play Intune automaticky přidá čtyři běžné aplikace pro Android Enterprise v konzole pro správu Intune. Čtyři aplikace pro Android Enterprise jsou následující:
+
+- **[Microsoft Intune](https://play.google.com/store/apps/details?id=com.microsoft.intune)** – používá se pro plně spravované scénáře pro Android Enterprise.
+- **[Microsoft Authenticator](https://play.google.com/store/apps/details?id=com.azure.authenticator)** – vám pomůže se přihlašovat k vašim účtům, pokud použijete dvojúrovňové ověřování.
+- **[Portál společnosti Intune](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)** – používá se pro scénáře zásad ochrany aplikací (App) a Android Enterprise Work Profile.
+- [Spravovaná Domovská obrazovka](https://play.google.com/store/apps/details?id=com.microsoft.launcher.enterprise) – používá se pro scénáře podnikových scénářů nebo veřejného terminálu pro Android.
 
 > [!NOTE]
 > Protože dochází k interakci mezi doménami Google a Microsoft, může tento krok vyžadovat úpravu nastavení prohlížeče.  Zkontrolujte, jestli jsou portal.azure.com a play.google.com ve vašem prohlížeči ve stejné zóně zabezpečení.
@@ -43,7 +49,7 @@ Pro podporu [pracovní profil Androidu Enterprise](android-work-profile-enroll.m
    
 4. Volbou možnosti **Pokud se chcete hned připojit, spusťte Google** otevřete web spravovaného obchodu Google Play. Web se otevře v prohlížeči na nové kartě.
   
-5. V Googlu přihlašovací stránka, zadejte účet Google, která bude spojená s všechny úlohy správy Androidu Enterprise pro tohoto tenanta. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Google Play. Můžete použít existující účet Google, nebo vytvořte nový. Zvolený účet nesmí být přidružený k doméně G-Suite.
+5. Na přihlašovací stránce Google zadejte účet Google, který bude přidružený ke všem úlohám správy Android Enterprise pro tohoto tenanta. Jedná se o účet Google, který správci IT ve vaší společnosti sdílejí a používají ke správě a publikování aplikací v konzole Google Play. Můžete použít existující účet Google, nebo vytvořte nový. Zvolený účet nesmí být přidružený k doméně G-Suite.
     
     > [!Note]
     > Pokud používáte prohlížeč Microsoft Edge, kliknutím na **Přihlásit se** v pravém horním rohu se přihlaste ke svému účtu Google.
@@ -52,14 +58,14 @@ Pro podporu [pracovní profil Androidu Enterprise](android-work-profile-enroll.m
 
 7. Vyjádřete souhlas se smlouvou pro Android a zvolte **Potvrdit**. Vaše žádost bude zpracována.
 
-## <a name="disconnect-your-android-enterprise-administrative-account"></a>Odpojit účtu správce Android Enterprise
+## <a name="disconnect-your-android-enterprise-administrative-account"></a>Odpojení účtu správce Android Enterprise
 
-Můžete vypnout registraci Androidu Enterprise a správu. Chcete-li to provést, musíte nejprve vyřadit všechna zaregistrovaná zařízení s Androidem Enterprise pracovní profil. Potom kliknutím na možnost **odpojit** ve správě Intune konzoly odebrat všechna zaregistrovaná zařízení s Androidem Enterprise pracovním profilem a vyhrazené registrace zařízení. Tím také vztah mezi účtem spravovaný obchod Google Play a Intune.
+Můžete vypnout registraci a správu Androidu Enterprise. Abyste to mohli udělat, musíte nejdřív vyřadit všechna zaregistrovaná podniková zařízení s Androidem, včetně zařízení s pracovním profilem, vyhrazených zařízení a plně spravovaných zařízení. Pak v konzole pro správu Intune zvolte **Odpojit** a odeberte všechna zaregistrovaná zařízení se systémem Android Enterprise Work Profiling, vyhrazená zařízení a plně spravovaná zařízení od registrace. Tím se taky odstraní vztah mezi spravovaným účtem Google Play a Intune.
 
-1. Jako správce Intune vyberte na portálu [Azure Portal](https://portal.azure.com) možnost **Všechny služby** > **Monitorování a správa** > **Intune**.
+1. Jako správce Intune se přihlaste k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Zvolte **Registrace zařízení** > **Registrace Androidu** > **Spravovaný obchod Google Play** > **Odpojit**.
 3. Volbou možnosti **Ano** odpojte a zrušte registraci všech zařízení s Androidem Enterprise z Intune.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Po připojení k účtu spravovaný obchod Google Play, můžete [nastavit zařízení s Androidem Enterprise pracovním profilem](android-work-profile-enroll.md) a [nastavit zařízení s Androidem Enterprise vyhrazené](android-kiosk-enroll.md).
+Po připojení ke spravovanému účtu Google Play můžete [nastavit zařízení s pracovním profilem Android Enterprise](android-work-profile-enroll.md), [nastavit vyhrazená zařízení](android-kiosk-enroll.md) s Androidem Enterprise a [nastavit zařízení s plnou správou pro Android Enterprise](android-kiosk-enroll.md) .

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 04afc9c44bc1c4898950e6f3aff5dac7cb93370f
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 3aadafbcf9c9208e7c87504c5459731de1e402b5
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "56323464"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "71302605"
 ---
 ## <a name="enable-windows-10-automatic-enrollment"></a>Povolení automatické registrace pro Windows 10
 
@@ -21,7 +21,7 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
 
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-azure-main.png)
 
-2. Vyberte **Mobilita (MDM a MAM)**.
+2. Vyberte **Mobilita (MDM a MAM)** .
 
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-mdm.png)
 
@@ -36,12 +36,12 @@ Automatická registrace umožňuje uživatelům, aby si svoje zařízení s Wind
    - **Všechna** – všichni uživatelé můžou automaticky zaregistrovat svá zařízení s Windows 10.
 
       > [!IMPORTANT]
-      > U vlastních zařízení uživatelů obor uživatele MAM má přednost, pokud obor uživatele MAM a obor uživatele MDM (automatickou registraci MDM) jsou povolené pro všechny uživatele (nebo stejné skupiny uživatelů). Zařízení bude používat zásady Windows Information Protection (WIP) (Pokud je nakonfigurovaná) namísto MDM zaregistrovaná.
+      > U zařízení BYOD má přednost obor uživatele MAM, pokud jsou povolené obory uživatelů MAM i obor uživatele MDM (Automatická registrace MDM) pro všechny uživatele (nebo stejné skupiny uživatelů). Zařízení bude používat zásady Windows Information Protection (nedokončené výroby) (Pokud je nakonfigurujete) místo registrace MDM.
       >
-      > Pro firemní zařízení má obor uživatele MDM přednost, pokud jsou povolené oba obory. Získání zařízení MDM zaregistrovaná.
+      > U podnikových zařízení má obor uživatele MDM přednost, pokud je povolený oba obory. Zařízení zaregistrovaná v MDM.
 
    > [!NOTE]
-   > Obor uživatele MAM musí být nastavena na skupiny uživatelů nebo kolekci.
+   > Obor uživatele MDM musí být nastavený na skupinu Azure AD, která obsahuje uživatelské objekty.
 
    ![Snímek obrazovky portálu Azure Portal](../media/auto-enroll-scope.png)
 

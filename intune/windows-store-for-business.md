@@ -1,14 +1,13 @@
 ---
-title: Správa hromadně zakoupených nebo bezplatných aplikací z Microsoft Store pro firmy
+title: Správa aplikací VPP z Microsoft Store pro firmy
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak můžete synchronizovat aplikace zakoupené (nebo jinou) z Microsoft Store pro firmy do Intune.
+description: Přečtěte si, jak můžete synchronizovat aplikace v Intune z Microsoft Store pro firmy.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,20 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67d99977776657219638980eb6de8a4079384185
-ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
+ms.openlocfilehash: a58136fc9e973963fbfe12efd03f92b5b8a01f9f
+ms.sourcegitcommit: ec22a186a9cfa489a8490698e387624e480892d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59587497"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "71302533"
 ---
-# <a name="how-to-manage-volume-purchased-or-free-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Správa svazku zakoupené (nebo jinou) aplikací z Microsoft Store pro firmy v Microsoft Intune
+# <a name="how-to-manage-volume-purchased-apps-from-the-microsoft-store-for-business-with-microsoft-intune"></a>Jak spravovat hromadně zakoupené aplikace z Microsoft Store pro firmy pomocí Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 [Microsoft Store pro firmy](https://www.microsoft.com/business-store) je místo, kde můžete najít a zakoupit aplikace pro svou organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat z Azure Portalu. Příklad:
-* Můžete synchronizovat seznam aplikací, které jste zakoupili (nebo které jsou zdarma) z úložiště s Intune.
+* Seznam aplikací, které jste zakoupili (nebo které jsou zdarma) můžete synchronizovat z obchodu s Intune.
 * Aplikace, které jsou synchronizované, se zobrazí v konzole pro správu Intune. Tyto aplikace můžete přiřadit stejně jako všechny ostatní aplikace.
+* Licencované verze aplikací v režimu online i offline jsou synchronizovány do Intune. Názvy aplikací budou na portálu připojeny "online" nebo "offline".
 * V konzole pro správu Intune můžete sledovat, kolik licencí je dostupných a kolik se jich právě používá.
 * Pokud není dostupný dostatečný počet licencí, blokuje Intune přiřazení a instalaci aplikací.
 * Aplikace spravované přes Microsoft Store pro firmy automaticky odvolají licence, když uživatel opustí podnik nebo když správce odebere uživatele a jeho zařízení.
@@ -54,9 +54,9 @@ Kromě toho související sady a licencované aplikace Offline, které se synchr
 
 ## <a name="associate-your-microsoft-store-for-business-account-with-intune"></a>Přidružení účtu v Microsoft Storu pro firmy k Intune
 Než povolíte synchronizaci v konzole služby Intune, musíte svůj účet ve Storu nakonfigurovat tak, aby používal Intune jako nástroj pro správu:
-1. Ujistěte se, že se přihlásíte do [Microsoft Store pro firmy](https://www.microsoft.com/business-store) pomocí stejného účtu tenanta, můžete použít k přihlášení do Intune.
-2. V Business Store, zvolte **spravovat** kartu, vyberte možnost **nastavení**a zvolte **rozmístit** kartu.
-3. Pokud nemáte konkrétně **Microsoft Intune** k dispozici jako nástroj pro správu mobilních zařízení, zvolte **přidat nástroj pro správu** přidat **Microsoft Intune**. Pokud nemáte **Microsoft Intune** aktivován jako váš nástroj pro správu mobilních zařízení, klikněte na tlačítko **aktivovat** vedle **Microsoft Intune**. Všimněte si, že by měly aktivovat **Microsoft Intune** spíše než **registrace v Microsoft Intune**.
+1. Ujistěte se, že se k [Microsoft Store pro firmy](https://www.microsoft.com/business-store) přihlašujete pomocí stejného účtu tenanta, který používáte k přihlášení do Intune.
+2. V obchodě obchodu zvolte kartu **Spravovat** , vyberte **Nastavení**a klikněte na kartu **rozmístit** .
+3. Pokud nebudete mít **Microsoft Intune** k dispozici jako nástroj pro správu mobilních zařízení, vyberte **Přidat Nástroj pro správu** a přidejte **Microsoft Intune**. Pokud nemáte **Microsoft Intune** aktivované jako nástroj pro správu mobilních zařízení, klikněte na tlačítko **aktivovat** vedle **Microsoft Intune**. Počítejte s tím, že byste měli aktivovat **Microsoft Intune** místo **registrace Microsoft Intune**.
 
 > [!NOTE]
 > Dřív bylo možné přidružit k Microsoft Storu pro firmy jenom jeden nástroj pro správu na přiřazování aplikací. Teď už jich můžete přidružit více, například Intune a Configuration Manager. 
@@ -65,8 +65,7 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 ## <a name="configure-synchronization"></a>Konfigurace synchronizace
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 1. V podokně **Klientské aplikace** zvolte **Nastavení** > **Microsoft Store pro firmy**.
 2. Klikněte na **Povolit**.
@@ -78,6 +77,9 @@ Teď můžete pokračovat a nastavit synchronizaci v konzole Intune.
 
 1. V úloze **Klientské aplikace** zvolte **Nastavení** > **Microsoft Store pro firmy**.
 2. Kliknutím na **Synchronizovat** přeneste aplikace zakoupené v Microsoft Storu do Intune.
+
+> [!NOTE]
+> Aplikace s šifrovanými balíčky aplikací se v současné době nepodporují a nebudou se synchronizovat s Intune.
 
 ## <a name="assign-apps"></a>Přiřazení aplikací
 
@@ -94,13 +96,13 @@ Když přiřadíte aplikaci z Microsoft Storu pro firmy, využije licenci každ�
 
 ## <a name="remove-apps"></a>Odebrání aplikací
 
-Pokud chcete odebrat aplikaci, která se synchronizuje s Microsoft Storem pro firmy, musíte se k Microsoft Storu pro firmy přihlásit a aplikaci vrátit. Proces je stejný, ať aplikace je zdarma, nebo ne. Pro bezplatnou aplikaci ve storu vrátí 0 USD. Následující příklad ukazuje refundaci za bezplatná aplikace. 
+Pokud chcete odebrat aplikaci, která se synchronizuje s Microsoft Storem pro firmy, musíte se k Microsoft Storu pro firmy přihlásit a aplikaci vrátit. Proces je stejný, ať už je aplikace volná, nebo ne. V případě bezplatné aplikace bude obchod vracet $0. Následující příklad ukazuje refundaci bezplatné aplikace. 
 
 ![Snímek obrazovky s podrobnostmi o odebírané aplikaci](./media/microsoft-store-for-business-01.png)
 
 > [!NOTE]
-> Odebrání viditelnost vaší aplikace v privátním úložišti nebude zabránit synchronizace aplikace Intune. Musí vracet aplikace plně tím aplikaci odeberete.
+> Odebrání viditelnosti aplikace v soukromém úložišti nezabrání v Intune synchronizaci aplikace. Abyste aplikaci mohli úplně odebrat, musíte ji vrátit.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Správa aplikací a knih zakoupených v rámci multilicenčního programu pomocí Microsoft Intune](vpp-apps.md)

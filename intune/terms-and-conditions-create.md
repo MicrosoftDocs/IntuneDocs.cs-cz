@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 10/20/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c056e86f7e768d79b4851fda327dc2e32fa349c
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 6d05b811ed371755ea61481a7b6e26f9fc43adee
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59897608"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302900"
 ---
 # <a name="terms-and-conditions-for-user-access"></a>Podmínky a ujednání pro přístup uživatelů
 
@@ -31,38 +30,46 @@ ms.locfileid: "59897608"
 
 Správce Intune může uživatele požádat, aby před použitím Portálu společnosti přijali podmínky a ujednání společnosti, aby mohli:
 - registrovat zařízení,
-- přistupovat k prostředkům, jako jsou aplikace a e-mail společnosti.    
+- přistupovat k prostředkům, jako jsou aplikace a e-mail společnosti.
+
 Konfigurace podmínek a ujednání je volitelná.
 
 Můžete vytvořit více sad podmínek a přiřadit je různým skupinám, abyste například zajistili podporu různých jazyků.
 
 Existují dva způsoby, jak vytvořit podmínky a ujednání společnosti:
 - Můžete použít Intune spolu s postupem, který je popsaný v tomto článku.
-- Nebo můžete použít [funkci podmínek použití v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou). Pokud chcete zjistit, jaká metoda je pro vás nejvhodnější, přečtěte si [blogový příspěvek o výběru správného řešení pro tvorbu podmínek vaší organizace](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
+- pomocí [funkce Azure Active Directory podmínek použití](https://docs.microsoft.com/azure/active-directory/governance/active-directory-tou)
+
+Pokud chcete zjistit, která metoda je pro vás nejvhodnější, přečtěte si [Výběr správného pojmu řešení pro váš Blogový příspěvek vaší organizace](https://go.microsoft.com/fwlink/?linkid=2010506&clcid=0x409). 
 
 ## <a name="create-terms-and-conditions"></a>Vytvoření podmínek a ujednání
 Pokud chcete vytvořit podmínky a ujednání, dokončete tento postup. Zobrazovaný název a popis jsou určené pro správu, zatímco vlastnosti podmínek se zobrazují uživatelům na Portálu společnosti.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V podokně **Intune** zvolte **Registrace zařízení** > **Podmínky**.
-2. Zvolte **Vytvořit**.
-![Snímek obrazovky Azure Portalu zobrazující tlačítko Vytvořit pro podmínky a ujednání](media/terms-create-terms.png)
-3. V rozbaleném podokně zadejte tyto informace:
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. V podokně **Intune** zvolte **Registrace zařízení** > **Podmínky**.
+3. Zvolte **Vytvořit**.
+4. Na stránce **základy** zadejte následující informace:
 
-   - **Zobrazovaný název**: Název pro podmínky na webu Azure Portal. Tento název se uživatelům nezobrazuje.
+   - **Název**: Název podmínek v Azure Portal. Tento název se uživatelům nezobrazuje.
+   - **Popis**: Volitelné podrobnosti, které vám pomůžou identifikovat tuto sadu podmínek v Azure Portal.
 
-   - **Popis**: Volitelné podrobnosti, které vám pomůžou identifikovat tuto sadu podmínek na webu Azure Portal.
+    ![Snímek obrazovky Azure Portal zobrazující stránku základy pro podmínky a ujednání](media/terms-basics-page.png)
 
-4. Když vyberete šipku vedle **definování podmínek použití**, otevře se podokno podmínek a ujednání, ve kterém zadejte tyto informace:
+5. Kliknutím na tlačítko **Další** přejdete na stránku **podmínek** a zadáte následující informace:
 
-   ![Snímek obrazovky s přijetím podmínek a ujednání koncovým uživatelem se souhrnným zněním podmínek](./media/terms-summary-create.png)
+   - **Název**: Název pro vaše výrazy, které se uživatelům zobrazí v Portál společnosti nad **souhrnem**.
+   - Podmínky **a ujednání**: Podmínky a ujednání, které uživatelé uvidí a musí buď přijmout, nebo odmítnout.
+   - **Souhrn podmínek**: Text, který vysvětluje, co znamená, když uživatelé přijmou podmínky. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.
 
-   - **Název**: Název vašich podmínek, který uživatelé uvidí na portálu společnosti nad **Souhrn**.
-   - **Souhrn podmínek**: Text, který vysvětluje význam toho, když uživatelé přijmou podmínky. Příklad: „Registrací svého zařízení souhlasíte s podmínkami použití stanovenými společností Contoso. Než budete pokračovat, pečlivě si podmínky prostudujte.
-   - **Podmínky a ujednání**: Podmínky a ujednání, které uživatelé naleznete v tématu a musí přijmout nebo odmítnout.
+6. Kliknutím na tlačítko **Další** přejdete na stránku **značky oboru** .
 
-5. Zvolte **OK** > **Vytvořit**.
+7. Zvolte **možnost vybrat značky oboru**, vyberte značky oboru, které chcete přiřadit těmto podmínkám a podmínkám, a pak zvolte **Vybrat**. 
+
+8. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** a vyberte jednu z následujících možností pro **přiřazení k**:
+    - **Všichni uživatelé**: Tuto možnost vyberte, pokud chcete všem uživatelům přiřadit tyto podmínky a ujednání.
+    - **Vybrat skupiny**: Tuto možnost vyberte, pokud chcete, aby se tyto podmínky a ujednání přiřadily všem uživatelům ve skupinách, které identifikujete výběrem možnosti **Vybrat skupiny, které se mají zahrnout**.
+
+9. Klikněte na tlačítko **Další** > **vytvořit**.
 
 ## <a name="see-how-terms-are-displayed-to-your-users"></a>Prohlížení podmínek, jak se zobrazují uživatelům
 V následujícím příkladu je vidět **Nadpis** a **Souhrn podmínek** v konzole pro správu a na Portálu společnosti.
@@ -73,34 +80,26 @@ V následujícím příkladu jsou vidět podmínky a ujednání v konzole pro sp
 
 ![Snímek obrazovky s podmínkami a ujednáními v konzole pro správu a na Portálu společnosti](./media/terms-properties-terms.png)
 
-## <a name="assign-terms-and-conditions"></a>Přiřazení podmínek a ujednání
-
-Podmínky a ujednání můžete přiřadit skupinám uživatelů, kteří je před použitím Portálu společnosti musí přijmout.
-
-1. Na Azure Portalu zvolte **Registrace zařízení** a pak zvolte **Podmínky**.
-2. V seznamu podmínek a ujednání zvolte podmínky, které chcete přiřadit > **Spravovat** > **Přiřazení**.
-![Snímek obrazovky portálu Azure Portal s podoknem Přiřadit skupinu a tlačítky Vybrat skupinu a Vybrat pro přiřazení podmínek a ujednání](media/terms-assign-groups.png)
-3. Zvolte **Vybrat skupiny, které se zahrnou** > zvolte skupiny, kterým chcete podmínky přiřadit > **Vybrat**. Podmínky a ujednání nemůžete přiřadit dynamickým skupinám.
-4. V podokně **Přiřazené skupiny** zvolte **Uložit**.  Podmínky a ujednání jsou teď přiřazené uživatelům ve vybraných skupinách. Uživatelům se při příštím přístupu k portálu společnosti zobrazí výzva k přijetí podmínek. Podmínky a ujednání stačí přijmout jen jednou. Uživatelé, kteří mají několik zařízení, je nemusejí přijímat na každém z nich.
-
 
 ## <a name="monitor-terms-and-conditions"></a>Monitorování podmínek a ujednání
 
-1. Na portálu Azure Portal zvolte **Všechny služby** > **Monitorování a správa** > **Intune**. 
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). 
 1. V podokně Intune zvolte **Registrace zařízení** > **Podmínky**.
 2. V seznamu podmínek a ujednání zvolte podmínky, u kterých chcete zobrazit jejich přijetí > **Generování sestav o přijetí**.
 
 ## <a name="work-with-multiple-versions-of-terms-and-conditions"></a>Práce s více verzemi podmínek a ujednání
 Podmínky a ujednání můžete upravit a spravovat jejich verze. Po každé významnější změně podmínek a ujednání byste měli:
 - Zvýšit číslo verze.
-- Požádat uživatele o přijetí nových podmínek a ujednání. Aktuální číslo verze můžete nechat, pokud jste třeba jenom opravili překlepy nebo změnili formátování.
+- vyžadovat, aby uživatelé přijali nové podmínky a ujednání
 
-1. Na portálu Azure Portal zvolte **Všechny služby** > **Monitorování a správa** > **Intune**.
+Aktuální číslo verze nechejte, pokud například opravujete překlepy nebo měníte formátování.
+
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. V podokně Intune zvolte **Registrace zařízení** > **Podmínky** > zvolte podmínky a ujednání, které chcete změnit > **Vlastnosti**.
 
 4. V podokně **Vlastnosti** zvolte **Podmínky** a podle potřeby změňte **Nadpis**, **Souhrn podmínek** a **Podmínky**. Pokud je potřeba, aby provedené změny uživatelé znovu přijali jako nové podmínky, zvolte **Požaduje opětovné přijetí od uživatelů a zvýší číslo verze na**.
 
-4.  Zvolte **OK** > **Uložit**.
+4. Zvolte **OK** > **Uložit**.
 
 Uživatelé musí přijmout aktualizované podmínky a ujednání jenom jednou. Uživatelé, kteří mají několik zařízení, je nemusejí přijímat na každém z nich.

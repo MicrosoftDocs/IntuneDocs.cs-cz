@@ -5,9 +5,8 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 05/10/2018
+ms.date: 07/26/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c22822f34f426897549383df5e9c71b21b497a7e
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e7b6b4525bd3374e1eac960f35c4ebd309c6cfd9
+ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391202"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "71304830"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -33,40 +32,29 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 
 ## <a name="view-the-device-details"></a>Zobrazení podrobností o zařízení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
 
-   - **Přehled** zobrazuje název zařízení a uvádí některé jeho klíčové vlastnosti, včetně toho, jestli se jedná o zařízení programu Přineste si vlastní zařízení (BYOD), kdy bylo zaregistrováno a dalších informací. Na zařízení můžete provést následující akce:
+   - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, jako je například to, jestli se jedná o zařízení s podporou vlastního zařízení (BYOD), vrácení se změnami a další. Na zařízení můžete provést následující akce:
       - [Vyřadit](devices-wipe.md#retire)
-        - [Vymazání](devices-wipe.md#wipe)
-        - [Vzdálené uzamčení](device-remote-lock.md)
-        - [Synchronizace zařízení](device-sync.md)
-        - [Resetovat heslo](device-passcode-reset.md)
-        - [Restartovat](device-restart.md) (jenom Windows)
-        - [Začít znovu](device-fresh-start.md) (jenom Windows)
-     - Spustit relaci vzdálené pomoci
+      - [Vymazání](devices-wipe.md#wipe)
+      - [Vzdálené uzamčení](device-remote-lock.md)
+      - [Synchronizace zařízení](device-sync.md)
+      - [Resetovat heslo](device-passcode-reset.md)
+      - [Restartovat](device-restart.md) (jenom Windows)
+      - [Začít znovu](device-fresh-start.md) (jenom Windows)
+      - Spustit relaci vzdálené pomoci
    - Pomocí **vlastností** můžete zařízení přiřadit [kategorii, kterou vytvoříte](device-group-mapping.md), a upravit jeho vlastnictví na osobní nebo podnikové.
-   - Část **Hardware** obsahuje řadu podrobnosti o zařízení, včetně jeho ID, operačního systému a verze, úložného prostoru, modelu a výrobce, nastavení podmíněného přístupu a další.
-   - V části **Zjištěné aplikace** se zobrazuje seznam všech nainstalovaných aplikací, které služba Intune v zařízení našla, včetně jejich verzí. Seznam aplikací můžete také **exportovat** do souboru CSV. Tento seznam se aktualizuje každých 7 dní.
+   - **Hardware** obsahuje mnoho podrobností o zařízení, jako je ID zařízení, operační systém a verze, prostor úložiště a další podrobnosti.
+   - V části **Zjištěné aplikace** se zobrazuje seznam všech nainstalovaných aplikací, které služba Intune v zařízení našla, včetně jejich verzí. Další informace najdete v tématu [zjištěné aplikace Intune](app-discovered-apps.md).
    - V části **Dodržování předpisů zařízení** najdete všechny přiřazené zásady dodržování předpisů a informaci, jestli je zařízení splňuje.
    - Část **Konfigurace zařízení** obsahuje všechny zásady konfigurace přiřazené zařízení a informaci, jestli byly zásady úspěšné.
 
-Intune shromažďuje seznam aplikací jenom na zařízeních vlastněných společností. Na osobních zařízeních se aplikace nekontrolují. V případě počítačů s Windows 10 se uvádí jenom moderní aplikace na zařízeních vlastněných společností. Intune neshromažďuje informace o aplikacích Win32 na zařízeních. V závislosti na operátorovi, kterého zařízení používají, se některé aplikace nemusí shromažďovat.
-
-|Platforma|Pro zařízení v osobním vlastnictví|Pro zařízení vlastněná společností|  
-|--------------|---------------------------------|--------------------------------|  
-|Windows 10 (bez klienta Configuration Manageru)|Jenom spravované aplikace|Jenom spravované aplikace|
-|Windows 8.1 (bez klienta Configuration Manageru)|Jenom spravované aplikace|Jenom spravované aplikace|  
-|Windows Phone 8|Jenom spravované aplikace|Jenom spravované aplikace|  
-|Windows RT|Jenom spravované aplikace|Jenom spravované aplikace|  
-|iOS|Jenom spravované aplikace|Všechny aplikace nainstalované v zařízení|
-|macOS|Všechny aplikace nainstalované v zařízení|Všechny aplikace nainstalované v zařízení|  
-|Android|Jenom spravované aplikace|Všechny aplikace nainstalované v zařízení|  
-|Android Enterprise|Jenom spravované aplikace|Jenom aplikace nainstalované v pracovním profilu|  
-
 ## <a name="hardware-device-details"></a>Podrobnosti o hardwarovém zařízení
-V závislosti na operátorovi zařízení používají mohou být shromažďovány všechny podrobnosti
+V závislosti na tom, jaký dopravce zařízení používá, se nemusí shromažďovat všechny podrobnosti.
+
+> [!Note]  
+> Inventář hardwaru a softwaru se ve službě Intune aktualizuje každých 7 dní.
 
 |Podrobnosti|Popis|Platforma| 
 |--------------|----------------------|----|  
@@ -76,10 +64,12 @@ V závislosti na operátorovi zařízení používají mohou být shromažďová
 |ID zařízení Intune|Globálně jedinečný identifikátor, který jednoznačně identifikuje zařízení|Windows, iOS|
 |Sériové číslo|Sériové číslo zařízení od výrobce|Windows, iOS|
 |Sdílené zařízení|Pokud **Ano**, je zařízení sdílené více než jedním uživatelem|Windows, iOS|
-|Registrace schválená uživatelem|Pokud **Ano**, pak má zařízení registraci schválenou uživatelem, která správcům umožňuje spravovat některá nastavení zabezpečení na zařízení|Windows, iOS|
+|Registrace schválená uživatelem|Pokud **Ano**, zařízení má k registraci schváleného uživatelem, které umožňuje správcům spravovat určitá nastavení zabezpečení na zařízení.|Windows, iOS|
 |Operační systém|Operační systém používaný v zařízení|Windows, iOS|
 |Verze operačního systému|Verze operačního systému v zařízení.|Windows, iOS|
 |Jazyk operačního systému|Jazyk nastavený pro operační systému v zařízení|Windows, iOS|
+|Číslo buildu|Číslo sestavení operačního systému.|Android|
+|Úroveň opravy zabezpečení|Úroveň opravy zabezpečení pro zařízení.|Android|
 |Celkové místo v úložišti|Celkové místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
 |Volné místo úložiště|Nevyužité místo úložiště v zařízení (v gigabajtech)|Windows, iOS|
 |IMEI|Mezinárodní identita mobilního zařízení|Windows, iOS, Android|
@@ -95,6 +85,7 @@ V závislosti na operátorovi zařízení používají mohou být shromažďová
 |Poslední kontakt|Datum a čas posledního připojení zařízení k Intune|Windows, iOS, Android|
 |Kód pro obejití zámku aktivace|Kód, který se dá použít k obejití zámku aktivace|Windows, iOS, Android|
 |Registrováno v Azure AD|Pokud **Ano**, zařízení je registrované v Azure Active Directory|Windows, iOS, Android|
+|Intune je zaregistrované.|Pokud **Ano**, zařízení je zaregistrované v Intune.|Windows, iOS, Android|
 |Dodržování předpisů|Stav dodržování předpisů zařízení|Windows, iOS, Android|
 |EAS aktivované|Pokud **Ano**, pak je zařízení synchronizované s poštovní schránkou Exchange|Windows, iOS, Android|
 |ID aktivace EAS|Identifikátor protokolu Exchange ActiveSync zařízení|Windows, iOS, Android|
@@ -103,5 +94,5 @@ V závislosti na operátorovi zařízení používají mohou být shromažďová
 
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Podívejte se, jaké další akce [správy zařízení](device-management.md) můžete provádět pomocí Intune.

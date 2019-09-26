@@ -1,14 +1,13 @@
 ---
 title: Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 titleSuffix: ''
-description: Toto téma popisuje, jak přidat aplikace Windows Phone 8.1 ze storu do Microsoft Intune.
+description: Toto téma popisuje, jak přidat aplikace Windows Phone 8,1 Storu do Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28e8f7440c6e193bf85e24963f1698659fd8f6c7
-ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
+ms.openlocfilehash: 6f749371a6fe2410386ba0cc10e043699e841d2f
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59704871"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "71302916"
 ---
 # <a name="add-windows-phone-81-store-apps-to-microsoft-intune"></a>Přidání aplikací pro Windows Phone 8.1 ze Storu do Microsoft Intune
 
@@ -34,31 +33,29 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 ## <a name="add-an-app-to-intune"></a>Přidání aplikace do Intune
 Aplikaci pro Windows Phone 8.1. ze Storu můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.  
-    Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte jako **Typ aplikace** možnost **Windows Phone 8.1** a zvolte **Informace o aplikaci**.
 7. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
-    - **Název**: Zadejte název aplikace, jak je zobrazený na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
+    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Publisher**: Zadejte název vydavatele aplikace.
-    - **Adresa URL obchodu**: Zadejte adresu URL aplikace App Store aplikace, kterou chcete vytvořit.
-    - **Kategorie**: Volitelně vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Vyberte tuto možnost, chcete-li zobrazit sadu aplikací výrazném místě na hlavní stránce portálu společnosti když uživatelé vyhledávají aplikace.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Adresa URL AppStore**: Zadejte adresu URL obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit.
+    - **Kategorie**: Volitelně můžete vybrat jednu nebo více předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
+    - **Zobrazit jako doporučenou aplikaci v portál společnosti**: Tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace, například *Personální oddělení*.
-    - **Poznámky k**: Volitelně zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
-    - **Logo**: Volitelně nahrajte ikonu, která bude spojená s aplikací. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Adresa URL ochrany osobních údajů**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně můžete zadat název vývojáře aplikace.
+    - **Vlastník**: Volitelně můžete zadat jméno vlastníka této aplikace, například *personální oddělení*.
+    - **Poznámky**: Volitelně můžete zadat všechny poznámky, které chcete k této aplikaci přidružit.
+    - **Logo**: Volitelně nahrajte ikonu, která bude přidružená k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 8. Vyberte **OK**.
 9. Vyberte **Přidat**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)

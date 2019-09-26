@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 04/18/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 89d6b21fd5bbc690d533695ead0b5b207ddeb6c0
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 9163e449737973309410aa5dca87b759d38586ee
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71303939"
 ---
 # <a name="data-google-sends-to-intune"></a>Data odesílaná Googlem do Intune
 
@@ -34,11 +33,11 @@ Pokud se na zařízení povolí správa zařízení s Androidem Enterprise, Micr
 Následující tabulka uvádí data, která Google odesílá do Intune, když je na daném zařízení povolená správa zařízení:
 
 
-| Data odesílaná Googlem do Intune | Podrobnosti | Používá pro | Příklad |
+| Data odesílaná Googlem do Intune | Podrobnosti | Používá se pro | Příklad |
 |:---:|:---:|:---:|:---:|
-| Podniková data | Identifikátory společnosti zákazníka v Googlu | Propojí informace o zákazníkovi mezi Intune a Googlem. | **enterpriseId** příkladu: LC04eik8a6.<br>**Název**. Jméno správce zadané při konfiguraci Androidu Enterprise Příklad: Jan Novák<br>**E-mail správce** YourAdmin@gmail.com, který se použil při konfiguraci Androidu Enterprise |
-| Data aplikací | Data pro spravované aplikace Obchodu Play | Cílení aplikace na dostupné nebo vyžadované uživatele nebo zařízení | **Název aplikace** příkladu: Contoso Warehouse Inventory Application.<br>Příklad **jedinečného identifikátoru reprezentujícího aplikaci**: app:com.Contoso.Warehouse.InventoryTracking |
-| Účet služby | Jedinečný interní účet služby Google pro použití s voláními konkrétního uživatele | Používá se pro uskutečňování volání do Googlu jménem zákazníka (pro zobrazení aplikací, zařízení atd.). | Příklad **názvu**: InternalAccount@InternalService.com<br>**Klíče** příkladu: ServiceAccountPassword |
+| Podniková data | Identifikátory společnosti zákazníka v Googlu | Propojí informace o zákazníkovi mezi Intune a Googlem. | Příklad **enterpriseId** : LC04eik8a6.<br>**Název**. Jméno správce zadané při konfiguraci Androidu Enterprise Příklad: Jana Smith.<br>**E-mail správce** YourAdmin@gmail.com, který se použil při konfiguraci Androidu Enterprise |
+| Data aplikací | Data pro spravované aplikace Obchodu Play | Cílení aplikace na dostupné nebo vyžadované uživatele nebo zařízení | Příklad **názvu aplikace** : Aplikace pro inventář skladu společnosti Contoso.<br>Příklad **jedinečného identifikátoru reprezentujícího aplikaci**: app:com.Contoso.Warehouse.InventoryTracking |
+| Účet služby | Jedinečný interní účet služby Google pro použití s voláními konkrétního uživatele | Používá se pro uskutečňování volání do Googlu jménem zákazníka (pro zobrazení aplikací, zařízení atd.). | Příklad **názvu**: InternalAccount@InternalService.com<br>Příklad **klíčů** : ServiceAccountPassword |
 
 
 Pokud chcete ukončit používání správy zařízení s Androidem Enterprise v Microsoft Intune a odstranit data, je nutné deaktivovat správu zařízení s Androidem Enterprise v Microsoft Intune a také odstranit váš účet Google. Vyhledejte si v účtu Google postup pro správu účtu.

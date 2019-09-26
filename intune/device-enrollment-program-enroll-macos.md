@@ -8,22 +8,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: dagerrit
+ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae1685e2d252103591ebbe775aab32f2de017594
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: f835bbf54cf1cdced759d612731aee1adc9d76bc
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900753"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71303668"
 ---
 # <a name="automatically-enroll-macos-devices-with-the-device-enrollment-program-or-apple-school-manager"></a>Automatická registrace zařízení s macOS pomocí programu registrace zařízení nebo Apple School Manageru
 
@@ -74,11 +73,11 @@ Na portálu Apple použijete k vytvoření tokenu. Použijete také na portálu 
 ### <a name="step-2-use-your-key-to-download-a-token-from-apple"></a>Krok 2. Pomocí klíče si stáhněte token od společnosti Apple.
 
 1. Zvolte **vytvořit token pro Apple Device Enrollment Program** nebo **vytvořit token prostřednictvím Apple School Manageru** otevřete příslušný portál Apple a přihlaste se pomocí firemního Apple ID. Toto Apple ID můžete použít k obnovení tokenu.
-2.  Pro zabránění spuštění dat, vyberte na portálu Apple **Začínáme** pro **Device Enrollment Program** > **spravovat servery** > **přidat MDM Server**.
-3.  Pro Apple School spravovat, vyberte na portálu Apple **servery MDM** > **přidat Server MDM**.
+2. Pro zabránění spuštění dat, vyberte na portálu Apple **Začínáme** pro **Device Enrollment Program** > **spravovat servery** > **přidat MDM Server**.
+3. Pro Apple School spravovat, vyberte na portálu Apple **servery MDM** > **přidat Server MDM**.
 4. Zadejte **název serveru MDM** a zvolte **Další**. Název serveru slouží pro vaši informaci, abyste mohli identifikovat server pro správu mobilních zařízení (MDM). Není to název serveru Microsoft Intune ani jeho URL.
 
-5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;**, ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
+5. Otevře se dialogové okno pro **přidání&lt;názvu serveru&gt;** , ve kterém se zobrazí výzva, abyste **nahráli svůj veřejný klíč**. Vyberte **Zvolit soubor**, abyste mohli nahrát soubor .pem, a pak zvolte **Další**.
 
 6. Přejděte na **Deployment Programs** (Programy nasazení) &gt; **Device Enrollment Program** (Program registrace zařízení) &gt; **Manage Devices** (Spravovat zařízení).
 7. V části se **způsobem výběru zařízení** určete způsob identifikace zařízení:
@@ -108,7 +107,7 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#using-attributes-to-create-rules-for-device-objects).
+3. V části **Vytvořit profil** zadejte **Název** a **Popis** profilu pro účely správy. Uživatelům se tyto údaje nezobrazí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-macos/createprofile.png)
 
@@ -125,36 +124,38 @@ Teď, když jste nainstalovali svůj token, můžete vytvořit registrační pro
  
 7. Zvolte **OK**.
 
-8. Vyberte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu:  ![Nastavení přizpůsobení průvodce nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
+8. Vyberte **Nastavení Průvodce nastavením** a nakonfigurujte následující nastavení profilu:  ![Přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-macos/setupassistantcustom-macos.png)
 
     | Nastavení oddělení | Popis |
     |---|---|
     | <strong>Název oddělení</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     | <strong>Telefon na oddělení</strong> | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
 
-  Můžete zvolit, jestli se různé obrazovky Průvodce nastavením mají uživateli zobrazit nebo skrýt.
-  - Pokud zvolíte **Skrýt**, obrazovka se při nastavování nezobrazí. Po nastavení zařízení může uživatel přejít do nabídky **Nastavení** a funkci nastavit tam.
-  - Pokud zvolíte **Zobrazit**, obrazovka se při nastavování zobrazí. Uživatel může obrazovku někdy přeskočit a neudělat žádnou akci. Může ale později přejít do nabídky zařízení **Nastavení** a funkci nastavit tam. 
+    Můžete zvolit, jestli se různé obrazovky Průvodce nastavením mají uživateli zobrazit nebo skrýt.
+    - Pokud zvolíte **Skrýt**, obrazovka se při nastavování nezobrazí. Po nastavení zařízení může uživatel přejít do nabídky **Nastavení** a funkci nastavit tam.
+    - Pokud zvolíte **Zobrazit**, obrazovka se při nastavování zobrazí. Uživatel může obrazovku někdy přeskočit a neudělat žádnou akci. Může ale později přejít do nabídky zařízení **Nastavení** a funkci nastavit tam. 
 
 
     | Nastavení na obrazovce Průvodce nastavením | Pokud zvolíte **Zobrazit**, zařízení při nastavování: |
     |------------------------------------------|------------------------------------------|
     | <strong>Heslo</strong> | Vyzve uživatele k zadání hesla. Vyžaduje vždy heslo, pokud zařízení nebude zabezpečené nebo nebude mít přístup kontrolovaný jiným způsobem (třeba pomocí celoobrazovkového režimu, který omezuje zařízení na jednu aplikaci). |
     | <strong>Zjišťování polohy</strong> | Vyzve uživatele k poskytnutí polohy. |
-    | <strong>Obnovení</strong> | Zobrazí obrazovku **Aplikace a data**. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
+    | <strong>Obnovení</strong> | Zobrazí obrazovku aplikace & data. Tato obrazovka nabídne uživateli při nastavování zařízení možnost obnovit nebo přenést data ze zálohy v iCloudu. |
     | <strong>iCloud a Apple ID</strong> | Umožní uživateli přihlásit se pomocí svého **Apple ID** a používat **iCloud**.                         |
     | <strong>Podmínky a ujednání</strong> | Požaduje, aby uživatel přijal podmínky a ujednání společnosti Apple. |
     | <strong>Touch ID</strong> | Umožní uživateli nastavit pro zařízení identifikaci otiskem prstu. |
     | <strong>Apple Pay</strong> | Umožní uživateli nastavit na zařízení Apple Pay. |
     | <strong>Přiblížení</strong> | Umožní uživateli zvětšit zobrazení při nastavování zařízení. |
     | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
-    | <strong>Diagnostická data</strong> | Zobrazí uživateli obrazovku **Diagnostická data**. Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
+    | <strong>Diagnostická data</strong> | Zobrazit obrazovku diagnostiky uživateli Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
     | <strong>FileVault</strong> | Umožní uživateli nastavit šifrování FileVault. |
     | <strong>Diagnostika iCloudu</strong> | Umožní uživateli poslat společnosti Apple diagnostická data iCloudu. |
-    | <strong>iCloud Storage</strong> | Dát uživateli možnost používat úložiště iCloud. |    
-    | <strong>Zobrazit tón</strong> | Umožnit uživateli zapnout tón zobrazení. |
-    | <strong>Vzhled</strong> | Vzhled obrazovky zobrazte uživateli. |
+    | <strong>Úložiště iCloud</strong> | Poskytněte uživateli možnost použít úložiště iCloud. |    
+    | <strong>Zobrazit tónový displej</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
+    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
     | <strong>Registrace</strong>| Vyžaduje, aby uživatel zařízení zaregistroval. |
+    | <strong>Důvěrnost</strong>| Zobrazit obrazovku ochrany osobních údajů uživateli. |
+    | <strong>Čas obrazovky</strong>| Zobrazit obrazovku čas obrazovky uživateli |
    
 
 10. Zvolte **OK**.

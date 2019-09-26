@@ -8,7 +8,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 04/05/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 38763d5c16d5cba36220c03e9d74b30a465d752b
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: f6eca8e2f4544255f67d3a4e0e1673e415123967
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59899597"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "71304613"
 ---
 # <a name="use-a-microsoft-intune-custom-profile-to-create-a-per-app-vpn-profile-for-android-devices"></a>K vytvoření profilu VPN pro aplikaci pro zařízení s Androidem můžete použít vlastní profil Microsoft Intune.
 
@@ -41,8 +40,7 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 ## <a name="step-1-create-a-vpn-profile"></a>Krok 1: Vytvoření profilu sítě VPN
 
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
 2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
@@ -53,10 +51,9 @@ Po přiřazení zásad pro skupiny zařízení nebo uživatelů Android by uživ
 
 Poznamenejte si hodnotu **Název připojení**, kterou zadáváte při vytváření profilu VPN. Tento název bude potřeba v dalším kroku. Příklad: **profil_VPN_pro_moje_aplikace**.
 
-## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady Konfigurace
+## <a name="step-2-create-a-custom-configuration-policy"></a>Krok 2: Vytvoření vlastní zásady konfigurace
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
 3. V podokně s profily klikněte na **Vytvořit profil**.
@@ -75,11 +72,11 @@ Poznamenejte si hodnotu **Název připojení**, kterou zadáváte při vytváře
 ### <a name="set-your-app-list-to-blacklist-or-whitelist-optional"></a>Nastavení seznamu aplikací jako zakázaných nebo povolených (volitelné)
   Pomocí hodnoty *BLACKLIST* můžete určit, že jde o seznam aplikací, pro které **není povoleno** použít připojení VPN. Všechny ostatní aplikace se připojují prostřednictvím VPN.
 Další možností je určit pomocí hodnoty **WHITELIST** aplikace, které *jediné* budou moci připojení VPN používat. Aplikace, které nejsou v seznamu, se nepřipojují prostřednictvím VPN.
-  1.    V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
-  2.    Zadejte název nastavení.
-  3.    Pro **OMA-URI** použijte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
-  4.    Jako **Datový typ** určete **String** (Řetězec).
-  5.    Do pole **Hodnota** zadejte **BLACKLIST** nebo **WHITELIST**.
+  1. V podokně **Vlastní nastavení OMA-URI** zvolte **Přidat**.
+  2. Zadejte název nastavení.
+  3. Pro **OMA-URI** použijte tento řetězec: **./Vendor/MSFT/VPN/Profile/*název*/Mode**, kde *název* je název profilu VPN, který jste si poznamenali v kroku 1. V našem příkladu by se tedy použil řetězec **./Vendor/MSFT/VPN/Profile/profil_VPN_pro_moje_aplikace/Mode**.
+  4. Jako **Datový typ** určete **String** (Řetězec).
+  5. Do pole **Hodnota** zadejte **BLACKLIST** nebo **WHITELIST**.
 
 
 

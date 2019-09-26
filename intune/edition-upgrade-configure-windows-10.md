@@ -1,13 +1,12 @@
 ---
-title: Upgrade nebo použít S režimu na zařízeních s Windows 10 – Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Pomocí Microsoft Intune pro upgrade zařízení s Windows 10 na jinou edici nebo přepnout režim S. Správci můžou profil konfigurace zařízení pro upgrade Windows 10 Professional na Windows 10 Enterprise a přepněte z režimu S. V tématu podporované cesty upgradu pro Windows 10 Pro, N Edition, Education, Cloud, Enterprise, Core, Holographic a Mobile.
+title: Upgrade nebo použití režimu S v zařízeních S Windows 10 – Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí Microsoft Intune můžete upgradovat zařízení s Windows 10 na jinou edici nebo přepnout na režim S. Správci můžou použít konfigurační profil zařízení k upgradu Windows 10 Professional na Windows 10 Enterprise a přepnutí z režimu S. Seznamte se s podporovanými způsoby upgradu pro Windows 10 pro, N Edition, školství, Cloud, Enterprise, Core, holografická a mobilní zařízení.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 04/22/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,49 +16,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f4195a2c622b68feb21a15faf23d4cca3f95b48
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
-ms.translationtype: HT
+ms.openlocfilehash: 76a1c9d646cea5f39a0e9fd1429c6c91515a0e57
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164120"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71302213"
 ---
-# <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgrade edice Windows 10 nebo přepněte z režimu S na zařízení pomocí Microsoft Intune
+# <a name="upgrade-windows-10-editions-or-switch-out-of-s-mode-on-devices-using-microsoft-intune"></a>Upgradovat edice Windows 10 nebo zapínat na zařízeních v režimu S použitím Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Jako součást řešení správy mobilních zařízení můžete upgradovat zařízení s Windows 10. Například chcete provést upgrade zařízení s Windows 10 Professional pro Windows 10 Enterprise. Nebo chcete zařízení pro přepnutí z režimu S.
+V rámci řešení pro správu mobilních zařízení (MDM) můžete chtít upgradovat zařízení s Windows 10. Například chcete upgradovat zařízení s Windows 10 Professional na Windows 10 Enterprise. Nebo chcete, aby zařízení přepnulo režim S.
 
-[Režim Windows 10 S](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (otevře jiný web společnosti Microsoft) je navržená pro výkon a zabezpečení. Můžete přepínat z režimu S Intune. Přepnutí z režimu S se nedá vrátit. Jakmile se přepnete z režimu S, nemůžete se do tohoto režimu Windows 10 vrátit.
+[Režim Windows 10 S](https://support.microsoft.com/help/4456067/windows-10-switch-out-of-s-mode) (otevře jiný web společnosti Microsoft) je navrženo pro zabezpečení a výkon. K přepnutí do režimu S můžete použít Intune. Přepnutí z režimu S se nedá vrátit. Jakmile se přepnete z režimu S, nemůžete se do tohoto režimu Windows 10 vrátit.
 
-Prohlédněte si některá [často kladené dotazy](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) o S režimu.
+Podívejte se [na nejčastější dotazy](https://support.microsoft.com/help/4020089/windows-10-in-s-mode-faq) týkající se režimu S.
 
 Tato funkce platí pro:
 
 - Windows 10 a novější
-- Windows 10 1809 nebo novější S režimu
+- Windows 10 1809 nebo novější pro režim S
 - Windows Holographic for Business
 
-Tyto funkce jsou dostupné v Intune a jsou konfigurovatelné správcem. Intune používá "konfiguračních profily" vytvořit a přizpůsobit nastavení pro potřeby vaší organizace. Po přidání těchto funkcí v profilu, můžete pak push, nebo nasadit profil pro zařízení s Windows 10 ve vaší organizaci. Při nasazení profilu Intune automaticky upgraduje zařízení nebo přepínače z režimu S.
+Tyto funkce jsou dostupné v Intune a správce je může nakonfigurovat. Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete tento profil vložit nebo nasadit do zařízení s Windows 10 ve vaší organizaci. Když nasadíte profil, Intune automaticky upgraduje zařízení nebo přepne z režimu S.
 
-Tento článek obsahuje seznam podporovaných způsobech upgradu a ukazuje, jak vytvořit profil konfigurace zařízení. Můžete také zobrazit všechny dostupné upgradu a nastavení režimu S [Windows 10](edition-upgrade-windows-settings.md).
+Tento článek obsahuje seznam podporovaných cest upgradu a ukazuje, jak vytvořit profil konfigurace zařízení. Můžete si také prohlédnout všechna dostupná nastavení upgradu a režimu S [Windows 10](edition-upgrade-windows-settings.md).
 
 > [!NOTE]
-> Pokud později přiřazení zásady odeberete, se nevrátí verze Windows na zařízení. Zařízení dál normálně fungovat.
+> Pokud přiřazení zásady odeberete později, verze Windows na zařízení se nevrátí. Zařízení bude nadále fungovat normálně.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Před upgradováním zařízení, ujistěte se, že jsou splněné následující požadavky:
+Před upgradem zařízení se ujistěte, že máte následující požadavky:
 
 - Platný kód Product Key k instalaci aktualizované verze Windows na všechna zařízení, na která touto zásadou cílíte (pro edice Windows 10 Desktop). Můžete využít klíče k vícenásobné aktivaci (MAK) nebo kódy serveru správy klíčů (KMS).
-- Pro edice Windows 10 Mobile a Windows 10 Holographic můžete použít licenční soubor od Microsoftu. Licenční soubor obsahuje licenční informace pro instalaci aktualizované verze na všech zařízeních, na která cílíte touto zásadou.
+- Pro edice Windows 10 Mobile a Windows 10 je možné použít soubor s licencí společnosti Microsoft. Soubor s licencí obsahuje licenční informace pro instalaci aktualizované edice na všechna zařízení, na která tato zásada cílíte.
 - Zařízení s Windows 10, kterým zásady přiřazujete, jsou zaregistrovaná v Microsoft Intune. Zásadu upgradu edice nemůžete použít u počítačů s klientským softwarem Intune pro počítače.
 
 ## <a name="supported-upgrade-paths"></a>Podporované možnosti upgradu
 
 V následující tabulce jsou podporované cesty upgradu pro profil upgradu edice Windows 10.
 
-| Upgrade z | Upgrade na |
+| Upgradovat z | Upgrade na |
 |---|---|
 | Windows 10 Pro | Windows 10 Education <br/>Windows 10 Enterprise <br/>Windows 10 Pro Education |
 | Edice Windows 10 Pro N | Edice Windows 10 Education N <br/>Edice Windows 10 Enterprise N <br/>Edice Windows 10 Pro Education N | 
@@ -89,35 +88,35 @@ V následující tabulce jsou podporované cesty upgradu pro profil upgradu edic
 |Cloud N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
 |Enterprise|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
 |Enterprise N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
-|Core|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)   |![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
+|Core|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
 |Core N|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|
 |Mobile|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png)|![unsupported](./media/x_blk.png)|
 |Holographic|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![unsupported](./media/x_blk.png)|![supported](./media/check_grn.png) -->
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název pro nový profil. Zadejte například vypadat `Windows 10 edition upgrade profile` nebo `Windows 10 switch off S mode`.
+    - **Název**: Zadejte popisný název nového profilu. Zadejte například něco jako `Windows 10 edition upgrade profile` nebo. `Windows 10 switch off S mode`
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: Vyberte platformu:  
 
         - **Windows 10 a novější**
 
     - **Typ profilu**: Vyberte **upgrade edice**.
-    - **Nastavení**: Zadejte nastavení, které chcete konfigurovat. Seznam všech nastavení, a co dělají naleznete v tématu:
+    - **Nastavení**: Zadejte nastavení, která chcete nakonfigurovat. Seznam všech nastavení a o tom, co dělají, najdete v těchto tématech:
 
-        - [Upgrade Windows 10 a režim S](edition-upgrade-windows-settings.md)
+        - [Upgrade a režim S Windows 10](edition-upgrade-windows-settings.md)
         - [Windows Holographic for Business](holographic-upgrade.md)
 
 4. Vyberte **OK** > **Vytvořit** a změny uložte. 
 
-Profil se vytvoří a zobrazí v seznamu. Nezapomeňte [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil se vytvoří a zobrazí se v seznamu. Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Po vytvoření profilu je připraven k přiřazení. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil je po vytvoření připravený k přiřazení. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Zobrazení upgradu a nastavení režimu S [Windows 10](edition-upgrade-windows-settings.md) a [Windows Holographic for Business](holographic-upgrade.md) zařízení.
+Zobrazit nastavení upgradu a režimu S pro zařízení S [Windows 10](edition-upgrade-windows-settings.md) a [Windows holografickým pro firmy](holographic-upgrade.md) .

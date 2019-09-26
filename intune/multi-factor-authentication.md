@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 02/22/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ROBOTS: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf5611b3b9292222582d66cae39b4f751279dcec
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 0bd4e902631b197df46ece2ea59b30f04968f56b
+ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59897676"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "71303335"
 ---
 # <a name="require-multi-factor-authentication-for-intune-device-enrollments"></a>Vyžadování vícefaktorového ověřování pro registraci zařízení v Intune
 
@@ -51,7 +50,7 @@ K vynucení vícefaktorového ověřování při registraci zařízení slouží
 >Pro registraci v Microsoft Intune nekonfigurujte **pravidla přístupu na základě zařízení**.
 
 1. Přihlaste se pomocí svých přihlašovacích údajů na [Microsoft Azure Portal](https://portal.azure.com).
-2. Na portálu přejděte na **Intune** a zvolte **podmíněného přístupu**. Uzlu podmíněný přístup k němu přistupovat z *Intune* je stejný uzel, protože k němu přistupovat z *Azure AD*.
+2. Na portálu přejděte na **Intune** a vyberte **podmíněný přístup**. Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.
 4. Zvolte **Nové zásady**.
 5. V **nové zásadě** zadejte popisný název této zásady.
 6. V části **Přiřazení** zvolte **Uživatelé a skupiny**. 
@@ -65,6 +64,6 @@ K vynucení vícefaktorového ověřování při registraci zařízení slouží
 
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Když koncoví uživatelé registrují svá zařízení, musí se teď ověřit druhou formou identifikace, jako je PIN kód, telefon nebo biometrika.

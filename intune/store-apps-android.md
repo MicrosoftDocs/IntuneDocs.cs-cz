@@ -1,14 +1,13 @@
 ---
 title: Přidání aplikací z obchodu pro Android do Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak přidat aplikace pro Android store do Microsoft Intune z obchodu Google Play.
+description: Přečtěte si, jak přidat aplikace z obchodu pro Android z Google Play Storu do Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 08/27/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fe313fb43c838e3fc41a6c911668b46f7d3dc9de
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 93ea735121432c99c93ffe35c96c344160de3e22
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388561"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "71303146"
 ---
 # <a name="add-android-store-apps-to-microsoft-intune"></a>Přidání aplikací z obchodu pro Android do Microsoft Intune
 
@@ -35,32 +34,30 @@ Před přiřazením aplikace k zařízení nebo skupině uživatelů je nejprve 
 
 Aplikaci z obchodu pro Android můžete přidat do Intune z portálu Azure Portal následujícím postupem:
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.  
-    Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. Vyberte **Přidat**.
 6. V podokně **Přidat aplikaci** vyberte v dostupných typech **aplikací pro Store** možnost **Android**.
 7. Pokud chcete nakonfigurovat informace o aplikaci, vyberte **Konfigurovat** a zadejte následující informace. U aplikací pro Android přejděte na [obchod Google Play](https://play.google.com/store) a vyhledejte aplikaci, kterou chcete nasadit. Vyberte tuto aplikaci a poznačte si její podrobnosti. V závislosti na zvolené aplikaci můžou být některé hodnoty vyplněné automaticky.
-    - **Název**: Zadejte název aplikace, jak je zobrazený na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
+    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Publisher**: Zadejte název vydavatele aplikace.
-    - **Adresa URL obchodu**: Zadejte adresu URL obchodu aplikace, kterou chcete vytvořit.
-    - **Minimální verzi operačního systému**: V seznamu vyberte nejstarší verzi operačního systému, na které můžete aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Kategorie**: Volitelně vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Vyberte tuto možnost, chcete-li zobrazit sadu aplikací výrazném místě na hlavní stránce portálu společnosti když uživatelé vyhledávají aplikace.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Adresa URL AppStore**: Zadejte adresu URL obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit.
+    - **Minimální operační systém**: V seznamu vyberte nejstarší verzi operačního systému, na kterou se dá aplikace nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
+    - **Kategorie**: Volitelně můžete vybrat jednu nebo více předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
+    - **Zobrazit jako doporučenou aplikaci v portál společnosti**: Tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace. Platí pro aplikace nasazené s dostupným záměrem.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace, například *Personální oddělení*.
-    - **Poznámky k**: Volitelně zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
-    - **Logo**: Volitelně nahrajte ikonu, která bude spojená s aplikací. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
-1. Vyberte **OK**.
-2. Vyberte **Přidat**.
+    - **Adresa URL ochrany osobních údajů**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně můžete zadat název vývojáře aplikace.
+    - **Vlastník**: Volitelně můžete zadat jméno vlastníka této aplikace, například *personální oddělení*.
+    - **Poznámky**: Volitelně můžete zadat všechny poznámky, které chcete k této aplikaci přidružit.
+    - **Logo**: Volitelně nahrajte ikonu, která bude přidružená k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+8. Vyberte **OK**.
+9. Vyberte **Přidat**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)

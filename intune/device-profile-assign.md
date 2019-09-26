@@ -1,13 +1,12 @@
 ---
 title: Přiřazení profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí portálu Azure Portal můžete uživatelům a zařízením přiřadit profily a zásady zařízení. Zjistěte, jak vyloučit skupiny z přiřazení profilu v Microsoft Intune.
+description: Pomocí portálu Azure Portal můžete uživatelům a zařízením přiřadit profily a zásady zařízení. Přečtěte si, jak vyloučit skupiny z přiřazení profilu v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,60 +16,65 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c950efdd95fd8d856ec677385712a022dead870
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 568c1e0dfe711ef95c5713854315f65ecf16607c
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898730"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71304727"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Vytvoření profilu a obsahuje všechna nastavení, které jste zadali. Dalším krokem je nasazení nebo "" profil přiřadit do skupin uživatelů nebo zařízení Azure Active Directory (Azure AD). Jakmile bude přiřazena, uživatele a zařízení, přijímat svůj profil a použijí se nastavení, které jste zadali.
+Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V dalším kroku nasadíte nebo "přiřadíte" profil k vašim skupinám uživatelů a zařízení Azure Active Directory (Azure AD). Po přiřazení uživatelé a zařízení obdrží váš profil a nastavení, které jste zadali, se použije.
 
-Tento článek ukazuje, jak přiřadit profil a zahrnuje některé informace o použití značky oboru vašich profilů.
+V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Intune**.
-2. Vyberte **Konfigurace zařízení** > **Profily**. Jsou uvedeny všechny profily.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **Konfigurace zařízení** > **Profily**. Zobrazí se všechny profily.
 3. Vyberte profil, který chcete přiřadit > **přiřazení**.
-4. Zvolit **zahrnout** skupiny nebo **vyloučit** skupiny a pak vyberte skupiny. Když skupiny vybíráte, zvolíte skupinu Azure AD. Chcete-li vybrat více skupin, podržte **Ctrl** klíče a skupiny.
+4. Zvolte **Zahrnout** skupiny nebo **vyloučit** skupiny a pak vyberte své skupiny. Když skupiny vybíráte, zvolíte skupinu Azure AD. Pokud chcete vybrat více skupin, podržte stisknutou klávesu **CTRL** a vyberte vaše skupiny.
 
     ![Snímek obrazovky s možnostmi zahrnout nebo vyloučit skupiny z přiřazení profilu](./media/group-include-exclude.png)
 
 5. **Uložte** provedené změny.
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnotit, kolik uživatelů cílí.
+### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnocení počtu cílových uživatelů
 
-Když přiřadíte profil, můžete také **vyhodnotit** kolik uživatelů se TOP týká. Tato funkce vypočítá uživatelů. nepočítá zařízení.
+Když přiřadíte profil, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
 
-1. V Intune, vyberte **konfigurace zařízení** > **profily**.
-2. Vyberte profil > **přiřazení** > **vyhodnotit**. Zpráva se zobrazí, kolik uživatelů cílí tento profil.
+1. V Intune vyberte**profily** **Konfigurace** > zařízení.
+2. Vyberte profil >**vyhodnotit** **přiřazení** > . Zobrazí se zpráva o tom, kolik uživatelů cílí na tento profil.
 
-Pokud **vyhodnotit** tlačítko nejde aktivovat, ujistěte se, profil je přiřazený k jedné nebo více skupin.
+Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profil přiřazený k jedné nebo více skupinám.
 
+## <a name="use-scope-tags-or-applicability-rules"></a>Použití značek oboru nebo pravidel použitelnosti
 
-## <a name="use-scope-tags"></a>Použití značek oboru
+Když vytváříte nebo aktualizujete profil, můžete do profilu přidat také značky oboru a pravidla použitelnosti.
 
-Při vytváření nebo aktualizaci profilu, můžete také přidat značky oboru profilu.
+**Značky oboru** jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako jsou lidské zdroje nebo všichni zaměstnanci s námi-NC. [Pro distribuci použijte značky RBAC a Scope](scope-tags.md) s více informacemi.
 
-**Značky oboru** jsou skvělý způsob, jak přiřadit a filtrovat zásady na konkrétní skupiny, jako jsou lidské zdroje nebo všechny USA síťovým Adaptérem zaměstnanci. [Použití značek RBAC a obor pro distribuované IT](scope-tags.md) obsahuje další informace.
+Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby se profil mohl vztahovat jenom na konkrétní verzi operačního systému nebo na konkrétní edici Windows. [Pravidla použitelnosti](device-profile-create.md#applicability-rules) obsahují další informace.
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Vyloučení skupin z přiřazení profilu
 
-Profily konfigurace zařízení v Intune vám umožňují vyloučit skupiny z přiřazení zásad. Například můžete profil zařízení přiřadit **všechny firemní uživatele** skupině, ale vyloučit členy **nejvyššího vedení** skupiny.
+Profily konfigurace zařízení v Intune vám umožňují vyloučit skupiny z přiřazení zásad.
 
-Při vyloučení skupin, jenom uživatelé, nebo pouze skupiny zařízení (ne směs skupin) z přiřazení, Intune nebude podívejte se na relace uživatele na zařízení. Zahrnutí skupin uživatelů a současné vyloučení skupin zařízení nemusí získat přinést očekávané výsledky. Při použití smíšené skupiny nebo vyvstanou jiné konflikty, zahrnutí má přednost před vyloučením.
+Intune se nezobrazuje v relacích skupin uživatelů a zařízení. Zahrnutí skupin uživatelů bez skupin zařízení nemusí získat očekávané výsledky. V případě scénářů skupiny uživatelů a skupin zařízení a skupin zařízení má vyloučení přednost před zařazením.
 
-Když například chcete přiřadit profil zařízení všem zařízením ve své organizaci kromě zařízení sloužících jako veřejný terminál. Zahrnete skupinu **Všichni uživatelé**, ale vyloučíte skupinu **Všechna zařízení**. V takovém případě všichni uživatelé a jejich zařízení tyto zásady získají, i když v zařízení uživatele **všechna zařízení** skupiny.
+Například přiřadíte profil zařízení skupině uživatelů **Všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** . Vzhledem k tomu, že obě skupiny jsou skupiny uživatelů, jsou ze zásad vyloučeni všichni členové **vyšších zaměstnanců správy** , i když jsou členy skupiny **Všichni podnikoví uživatelé** .
 
-Vyloučení zjistí pouze přímé členy skupiny. To nezahrnuje zařízení, která jsou přidružená k uživateli. Zařízení, která nemají uživatele, ale zásady nezískají. K tomu dojde, protože taková zařízení nemají žádný vztah ke **všichni uživatelé** skupiny.
+Zahrnutí má při použití smíšených skupin přednost před vyloučením, jako je skupina uživatelů pro zařízení nebo skupina zařízení – uživatel.
+
+Například chcete přiřadit profil zařízení všem uživatelům ve vaší organizaci, s výjimkou zařízení veřejného terminálu. Zahrnete skupinu **Všichni uživatelé**, ale vyloučíte skupinu **Všechna zařízení**. V takovém případě všichni uživatelé a jejich zařízení získají zásady, i když je zařízení uživatele ve skupině **všechna zařízení** .
+
+Vyloučení prohlíží pouze přímé členy skupiny. Nezahrnuje zařízení, která jsou přidružená k uživateli. Zařízení, která nemají uživatele, ale nezískají zásady. K tomuto chování dochází, protože zařízení bez uživatelů nemají žádný vztah ke skupině **Všichni uživatelé** .
 
 Pokud zahrnete **Všechna zařízení** a vyloučíte **Všechny uživatele**, získají zásady všechna zařízení. V tomto scénáři je cílem vyloučit ze zásad ta zařízení, která mají přidruženého uživatele. Tím se ale zařízení nevyloučí, protože funkce vyloučení porovnává jenom přímé členy skupiny.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Zobrazit [monitorovat profily zařízení](device-profile-monitor.md) pokyny k monitorování vašich profilů a zařízení s profily.
+Pokyny k monitorování profilů a zařízení, ve kterých jsou spuštěny vaše profily, najdete v tématu [monitorování profilů zařízení](device-profile-monitor.md) .

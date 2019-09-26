@@ -1,11 +1,11 @@
 ---
-title: Nastavení e-mailu pro zařízení s iOSem v Microsoft Intune – Azure | Microsoft Docs
-description: Zobrazit seznam všech nastavení e-mailu můžete nakonfigurovat a přidat do zařízení s Iosem v Microsoft Intune, včetně použití serverů Exchange a získání atributů z Azure Active Directory. Můžete také povolit protokol SSL, ověřování uživatelů pomocí certifikátů nebo uživatelského jména a hesla a synchronizace e-mailu na zařízeních s Iosem pomocí konfiguračních profilů zařízení v Microsoft Intune.
+title: Konfigurace nastavení e-mailu pro zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení e-mailu, která můžete nakonfigurovat a přidat do zařízení se systémem iOS v Microsoft Intune, včetně použití serverů Exchange a získání atributů z Azure Active Directory. Můžete taky povolit SSL, ověřovat uživatele pomocí certifikátů nebo uživatelského jména a hesla a synchronizovat e-mail na zařízeních s iOS pomocí profilů konfigurace zařízení v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/11/2018
+ms.date: 09/05/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,46 +14,51 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0faf9220b4859c41ef8c4393fe15f385eaac8cc3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8fa0a7edd1782cd3eae725e6adf0af867e0f3727
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042105"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71301929"
 ---
-# <a name="email-profile-settings-for-ios-devices-in-intune"></a>E-mailového profilu pro zařízení s Iosem v Intune
+# <a name="add-e-mail-settings-for-ios-devices-in-microsoft-intune"></a>Přidání nastavení e-mailu pro zařízení s iOS v Microsoft Intune
 
-V Microsoft Intune, můžete vytvořit a nakonfigurovat e-mailu se připojit k e-mailový server, vyberte, jak se uživatelé ověřovat, použít S/MIME pro šifrování a další.
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tento článek uvádí a popisuje všechny nastavení e-mailu pro zařízení s Iosem. Můžete vytvořit profil konfigurace zařízení pro nabízená nebo nasadit tato nastavení e-mailu pro zařízení s Iosem.
+V Microsoft Intune můžete vytvořit a nakonfigurovat e-mail pro připojení k e-mailovému serveru, zvolit způsob ověřování uživatelů, použít S/MIME pro šifrování a další.
+
+V tomto článku najdete seznam všech nastavení e-mailu, která jsou dostupná pro zařízení s iOS. Můžete vytvořit konfigurační profil zařízení, který bude nabízet nebo nasazovat tato nastavení e-mailu do zařízení s iOS.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Vytvořit profil konfigurace zařízení](email-settings-configure.md#create-a-device-profile).
+[Vytvořit profil konfigurace zařízení](email-settings-configure.md).
+
+> [!NOTE]
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu Registrace zařízení se [systémem iOS](ios-enroll.md).
 
 ## <a name="email-settings"></a>Nastavení e-mailu
 
 - **E-mailový server**: Zadejte název hostitele vašeho Exchange serveru.
-- **Název účtu**: Zadejte zobrazovaný název e-mailový účet. Tento název se zobrazuje uživatelům na jejich zařízeních.
-- **Atribut uživatelského jména z AAD**: Tento název je atribut, který Intune získá z Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
-  - **Hlavní název uživatele**: Získá název, jako například `user1` nebo `user1@contoso.com`
-  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, jako například `user1@contoso.com`
-  - **sAM název účtu**: Vyžaduje domény, jako například `domain\user1`.
+- **Název účtu**: Zadejte zobrazovaný název e-mailového účtu. Tento název se zobrazuje uživatelům na jejich zařízeních.
+- **Atribut uživatelského jména z AAD**: Tento název je atribut Intune získá z Azure Active Directory (AAD). Intune dynamicky vygeneruje uživatelské jméno, které tento profil používá. Možnosti:
+  - **Hlavní název uživatele**: Získá název, například `user1` nebo.`user1@contoso.com`
+  - **Primární adresa SMTP**: Získá název ve formátu e-mailové adresy, například`user1@contoso.com`
+  - **název účtu SAM**: Vyžaduje doménu, třeba `domain\user1`.
 
     Dále zadejte:  
-    - **Zdroj názvu domény uživatele**: Zvolte **AAD** (Azure Active Directory) nebo **vlastní**.
+    - **Zdroj názvu domény uživatele**: Vyberte **AAD** (Azure Active Directory) nebo **vlastní**.
 
       Pokud se rozhodnete získat atributy ze služby **AAD**, zadejte:
-      - **Atribut názvu domény uživatele z AAD**: Zvolte zobrazíte **úplným názvem domény** nebo **název pro rozhraní NetBIOS** atribut uživatele
+      - **Atribut názvu domény uživatele z AAD**: Vyberte, chcete-li získat **úplný název domény** nebo atribut **názvu NetBIOS** pro uživatele.
 
       Pokud se rozhodnete použít **Vlastní** atributy, zadejte:
-      - **Název vlastní domény pro použití**: Zadejte hodnotu, která Intune používá pro název domény, jako například `contoso.com` nebo `contoso`
+      - **Vlastní název domény, který se má použít**: Zadejte hodnotu, kterou Intune používá pro název domény, například `contoso.com` nebo.`contoso`
 
-- **Atribut e-mailové adresy z AAD**: Vyberte způsob generování e-mailovou adresu uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchangi použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
+- **Atribut e-mailové adresy z AAD**: Vyberte způsob generování e-mailové adresy uživatele. Pokud chcete jako e-mailovou adresu použít úplný hlavní název, vyberte **Hlavní název uživatele** (`user1@contoso.com` nebo `user1`). Pokud chcete pro přihlášení k Exchangi použít primární adresu SMTP, vyberte **Primární adresa SMTP** (`user1@contoso.com`).
 - **Metoda ověřování**: Jako metodu ověřování používanou e-mailovým profilem vyberte buď **Uživatelské jméno a heslo**, nebo **Certifikáty**. Vícefaktorové ověřování Azure není podporované.
   - Pokud jste vybrali **Certifikát**, vyberte profil klienta SCEP nebo PKCS, který jste dříve vytvořili a který se použije k ověření připojení Exchange.
-- **SSL**: **Povolit** používá komunikaci vrstvy SSL (Secure Sockets) při posílání a přijímání e-mailů a komunikaci se serverem Exchange.
-- **OAuth**: **Povolit** používá komunikaci otevřené povolení (OAuth) při posílání a přijímání e-mailů a komunikaci se serverem Exchange. Pokud server OAuth používá ověřování certifikátem, u možnosti **Metoda ověřování** zvolte **Certifikát** a zahrňte do profilu příslušný certifikát. V opačném případě u možnosti **Metoda ověřování** zvolte **Uživatelské jméno a heslo**. Při použití OAuth mějte na paměti tyto skutečnosti:
+- **SSL**: Při posílání e-mailů, přijímání e-mailů a komunikaci se serverem Exchange **umožňuje povolit** použití SSL (Secure SOCKETS Layer) (SSL).
+- **OAuth**: Při odesílání e-mailů, přijímání e-mailů a komunikaci se serverem Exchange **povoluje** použití komunikace Open Authorization (OAuth). Pokud server OAuth používá ověřování certifikátem, u možnosti **Metoda ověřování** zvolte **Certifikát** a zahrňte do profilu příslušný certifikát. V opačném případě u možnosti **Metoda ověřování** zvolte **Uživatelské jméno a heslo**. Při použití OAuth mějte na paměti tyto skutečnosti:
 
   - Před zacílením tohoto profilu na uživatele potvrďte, že vaše e-mailové řešení podporuje OAuth. Office 365 se službou Exchange Online podporuje OAuth. Místní Exchange a jiná řešení od partnerů nebo třetích stran nemusí OAuth podporovat. U místního Exchange je možné nakonfigurovat moderní ověřování (viz příspěvek blogu s [oznámením hybridního moderního ověřování pro místní Exchange](https://blogs.technet.microsoft.com/exchange/2017/12/06/announcing-hybrid-modern-authentication-for-exchange-on-premises/)).
 
@@ -70,32 +75,32 @@ Tento článek uvádí a popisuje všechny nastavení e-mailu pro zařízení s 
   > 1. Zařízením, která už jsou zacílená, se vystaví nový profil.
   > 2. Koncovým uživatelům se zobrazí výzva k opětovnému zadání přihlašovacích údajů.
 
-- **S/MIME**: **Povolení S/MIME** umožňuje uživatelům přihlášení a/nebo šifrování e-mailu v nativní e-mailové aplikace iOS. 
+- **S/MIME**: **Povolte S/MIME** , aby uživatelé mohli podepisovat a šifrovat e-mail v aplikaci iOS Native mail. 
 
-  Při použití S/MIME s e-mailovou zprávu potvrzení pravosti odesílatele, a integritu a důvěrnost zprávy.
+  Když použijete S/MIME s e-mailovou zprávou, ověříte pravost odesilatele a integritu a důvěrnost zprávy.
 
-  - **Povoleno podepisování S/MIME**: Zvolte **povolit** umožňuje uživatelům k podepsání odchozích e-mailu pro zadaný účet. Podepisování umožňuje uživatelům přijímat zprávy potřeba mít jistotu, že zpráva pochází z konkrétního odesílatele a nikoli z někdo že se maskují být odesílatele. **Zakázat** neumožňuje uživatelům podepsání zprávy.
-    - **Povolit uživateli měnit nastavení**: Zvolte **povolit** umožňuje uživatelům změnit chování podepisování S/MIME. **Zakázat** zabraňuje uživatelům možnost měnit nastavení nakonfigurované podepisování S/MIME. K dispozici v Iosu 12 a novější.
+  - **Povoleno podepisování S/MIME**: Vyberte **Povolit** , pokud chcete uživatelům povolit, aby digitálně podepsali odchozí e-maily pro účet, který jste zadali. Podepisování pomáhá uživatelům, kteří přijímají zprávy, určit, že zpráva pochází od konkrétního odesílatele, a ne od někoho, kdo má jako odesílatele. Při **vypnutí** není možné uživatelům digitálně podepsat zprávu.
+    - **Povolí uživateli změnu nastavení**: Zvolením možnosti **Povolit** uživatelům umožníte měnit chování podepisování S/MIME. Při **vypnutí** zabráníte uživatelům měnit nastavení podepisování S/MIME, které jste nakonfigurovali. K dispozici v iOS 12 a novějších.
 
-  - **Podpisový certifikát S/MIME**: Vyberte existující PKCS nebo SCEP profil certifikátu, který se používá k podepisování e-mailové zprávy.
-    - **Povolit uživateli měnit nastavení**: Zvolte **povolit** umožňuje uživatelům změnit podpisový certifikát. **Zakázat** zabraňuje uživatelům možnost měnit podpisový certifikát a vynutí uživatelům používat certifikát, který jste nakonfigurovali. K dispozici v Iosu 12 a novější.
+  - **Podpisový certifikát S/MIME**: Vyberte existující profil certifikátu PKCS nebo SCEP, který se používá k podepisování e-mailových zpráv.
+    - **Povolí uživateli změnu nastavení**: Chcete-li uživatelům povolit změnu podpisového certifikátu, vyberte možnost **Povolit** . **Disable zakáže** uživatelům měnit podpisový certifikát a vynutí, aby uživatelé používali nakonfigurovaný certifikát. K dispozici v iOS 12 a novějších.
 
-  - **Ve výchozím nastavení šifrování**: **Povolit** šifruje všechny zprávy jako výchozí chování. **Zakázat** nešifruje všechny zprávy jako výchozí chování.
-    - **Povolit uživateli měnit nastavení**: Zvolte **povolit** umožňuje uživatelům změnit výchozí chování šifrování. **Zakázat** zabrání uživatelům změnit výchozí chování šifrování a nutí uživatele pomocí nastavení, které jste nakonfigurovali. K dispozici v Iosu 12 a novější.
+  - **Šifrování ve výchozím nastavení**: **Možnost Povolit** šifruje všechny zprávy jako výchozí chování. **Disable** nešifruje všechny zprávy jako výchozí chování.
+    - **Povolí uživateli změnu nastavení**: Chcete-li uživatelům povolit změnu výchozího chování šifrování, vyberte možnost **Povolit** . Možnost **Zakázat** znemožní uživatelům měnit výchozí chování šifrování a vynutí, aby uživatelé používali nastavení, které jste nakonfigurovali. K dispozici v iOS 12 a novějších.
 
-  - **Vynutit šifrování za zprávy**: Šifrování za zpráv umožňuje uživatelům zvolit, komu chcete e-maily se před odesláním zašifrují. Zvolte **povolit** zobrazíte možnosti šifrování za zprávy při vytváření nového e-mailu. Uživatelé pak můžou zvolit vyjádřit výslovný souhlas nebo za zprávy šifrování používat nechcete. **Zakázat** brání možnost šifrování za zprávy ze zobrazení.
+  - **Vynutit šifrování podle zpráv**: Šifrování pro jednotlivé zprávy umožňuje uživatelům zvolit, které e-maily se před odesláním šifrují. Pokud chcete při vytváření nového e-mailu zobrazit možnost šifrování pro jednotlivé zprávy, vyberte **Povolit** . Uživatelé si pak můžou vybrat, jestli se chcete odhlásit nebo odhlásit šifrování podle zpráv. **Disable** znemožní zobrazování možnosti šifrování jednotlivých zpráv.
 
-    Pokud **šifrovat ve výchozím nastavení** nastavení povoleno, povolení šifrování za zprávy umožňuje uživatelům se odhlásit ze šifrování za zprávy. Pokud **šifrovat ve výchozím nastavení** je zakázáno, povolení šifrování za zprávy umožňuje uživatelům přihlásit se k šifrování za zprávy.
+    Pokud je povolené šifrování **ve výchozím** nastavení, povolení šifrování pro jednotlivé zprávy umožňuje uživatelům odsouhlasit šifrování na jednu zprávu. Pokud je nastavení **šifrování ve výchozím** nastavení zakázané, povolení šifrování pro jednotlivé zprávy umožňuje uživatelům přihlášení k šifrování na základě zprávy.
 
-  - **Certifikát šifrování S/MIME**: Vyberte existující PKCS nebo SCEP profil certifikátu, který se používá k šifrování e-mailové zprávy.
-    - **Povolit uživateli měnit nastavení**: Zvolte **povolit** umožňuje uživatelům změnit šifrovací certifikát. **Zakázat** zabraňuje uživatelům možnost měnit šifrovací certifikát a vynutí uživatelům používat certifikát, který jste nakonfigurovali. K dispozici v Iosu 12 a novější.
-- **Počet e-mailů k synchronizaci**: Zvolte počet dní e-mailu, který chcete synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
-- **Povolit přesunování na jiné e-mailové účty zpráv**: **Povolit** povolí uživatelům přesunovat e-mailové zprávy mezi různými účty, uživatelé na svých zařízeních nakonfigurovali.
-- **Povolit e-mailů z aplikací třetí strany**: **Povolit** umožňuje uživatelům, aby tento profil vybral jako výchozí účet pro posílání e-mailu. Aplikacím třetích stran umožňuje otevírat e-maily v nativní e-mailové aplikaci, například při připojení souborů k e-mailu.
-- **Synchronizovat naposledy použité e-mailové adresy**: **Povolit** umožňuje uživatelům povolíte synchronizaci seznamu e-mailové adresy, které byly nedávno použité v zařízení se serverem.
+  - **Certifikát šifrování S/MIME**: Vyberte existující profil certifikátu PKCS nebo SCEP, který se používá k šifrování e-mailových zpráv.
+    - **Povolí uživateli změnu nastavení**: Vyberte **Povolit** , pokud chcete uživatelům povolit, aby změnili certifikát šifrování. **Disable** znemožní uživatelům měnit šifrovací certifikát a vynutí, aby uživatelé používali nakonfigurovaný certifikát. K dispozici v iOS 12 a novějších.
+- **Velikost e-mailu, který se má synchronizovat**: Vyberte počet dní, po které se má e-mail synchronizovat. Nebo vyberte **Bez omezení**, pokud chcete synchronizovat všechny dostupné e-maily.
+- **Povolí přesun zpráv do jiných e-mailových účtů**: **Možnost Povolit** umožňuje uživatelům přesouvat e-mailové zprávy mezi různými účty, které uživatelé na svých zařízeních nakonfigurovali.
+- **Povolí posílání e-mailů z aplikací třetích stran**: **Možnost Povolit** umožní uživatelům vybrat tento profil jako výchozí účet pro odesílání e-mailů. Aplikacím třetích stran umožňuje otevírat e-maily v nativní e-mailové aplikaci, například při připojení souborů k e-mailu.
+- **Synchronizovat naposledy použité e-mailové adresy**: **Možnost Povolit** umožňuje uživatelům synchronizovat seznam e-mailových adres, které se nedávno používaly na zařízení se serverem.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Profil je vytvořený, ale zatím se nepoužívá. Dále [přiřadit profil](device-profile-assign.md) a [monitorování jejího stavu](device-profile-monitor.md).
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Konfigurace nastavení e-mailu na [Android](email-settings-android.md), [Windows 10](email-settings-windows-10.md), a [Windows Phone 8.1](email-settings-windows-phone-8-1.md) zařízení.
+Nakonfigurujte nastavení e-mailu na zařízeních se systémem [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [Windows 10](email-settings-windows-10.md)a [Windows Phone 8,1](email-settings-windows-phone-8-1.md) .

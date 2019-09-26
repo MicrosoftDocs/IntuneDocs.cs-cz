@@ -1,14 +1,12 @@
 ---
-title: Nastavení sítě VPN pro zařízení s macOS v Microsoft Intune
-titleSuffix: ''
-description: Přečtěte si o nastavení Intune, s jehož použitím můžete nakonfigurovat připojení VPN na zařízeních s macOS.
+title: Konfigurace nastavení sítě VPN pro zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte nebo vytvořte konfigurační profil virtuální privátní sítě (VPN), včetně podrobností o připojení, děleného tunelového propojení, vlastního nastavení sítě VPN s identifikátorem, páry klíč-hodnota, nastavení serveru proxy pomocí konfiguračního skriptu, IP adresy nebo adresy plně kvalifikovaného názvu domény a portu TCP v Microsoft Intune na zařízeních s macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 3/6/2018
+ms.date: 09/09/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -16,14 +14,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f752ec33ca7a69d698ffe2c06c726f3881cc35ce
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: ed9796a71343ce6d35e62056ece87783ea3b354b
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900583"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71303286"
 ---
-# <a name="configure-vpn-settings-in-microsoft-intune-for-devices-running-macos"></a>Nastavení sítě VPN v Microsoft Intune pro zařízení s macOS
+# <a name="add-vpn-settings-on-macos-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení macOS v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
@@ -31,21 +29,28 @@ Tento článek popisuje, jaká nastavení můžete v Intune použít ke konfigur
 
 V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím seznamu konfigurovatelné všechny hodnoty.
 
+## <a name="before-you-begin"></a>Před zahájením
+
+[Vytvořit profil konfigurace zařízení](vpn-settings-configure.md).
+
+> [!NOTE]
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu [registrace MacOS](macos-enroll.md).
+
 ## <a name="base-vpn-settings"></a>Základní nastavení sítě VPN
 
-**Název připojení** – zadejte název tohoto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
-- **IP adresa nebo plně kvalifikovaný název domény** – zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojí. Příklady: **192.168.1.1**, **vpn.contoso.com**.
-- **Metoda ověřování** – zvolte způsob, kterým se zařízení ověřují vůči serveru VPN:
-    - **Certifikáty** – v části **Ověřovací certifikát** vyberte profil certifikátu SCEP nebo PKCS, který jste vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).
-    - **Uživatelé jméno a heslo** – koncoví uživatelé musí zadat uživatelské jméno a heslo, aby se mohli přihlásit k VPN serveru.
-- **Typ připojení** – z následujícího seznamu dodavatelů vyberte typ připojení VPN:
-    - **Check Point Capsule VPN**
-    - **Cisco AnyConnect**
-    - **SonicWall Mobile Connect**
-    - **F5 Edge Client**
-    - **Pulse Secure**
-    - **Vlastní VPN**
-- **Rozdělit tunel** - tuto možnost můžete **povolit** nebo **zakázat**, aby se zařízení mohla rozhodnout, které připojení se má v závislosti na typech přenosů používat. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
+**Název připojení**: Zadejte název pro toto připojení. Tento název uživatelé vidí, když na svém zařízení procházejí seznamem dostupných připojení VPN.
+- **IP adresa nebo plně kvalifikovaný název domény**: Zadejte IP adresu nebo plně kvalifikovaný název domény serveru VPN, ke kterému se zařízení připojují. Příklady: **192.168.1.1**, **VPN.contoso.com**.
+- **Metoda ověřování**: Vyberte, jak se zařízení ověřují na serveru VPN:
+  - **Certifikáty**: V části **ověřovací certifikát**vyberte profil certifikátu SCEP nebo PKCS, který jste dříve vytvořili za účelem ověřování připojení. Další informace o profilech certifikátů najdete v článku [Konfigurace certifikátů](certificates-configure.md).
+  - **Uživatelské jméno a heslo**: Koncoví uživatelé musí zadání uživatelského jména a hesla, aby se mohli přihlásit k serveru VPN.
+- **Typ připojení**: Z následujícího seznamu dodavatelů vyberte typ připojení VPN:
+  - **Check Point Capsule VPN**
+  - **Cisco AnyConnect**
+  - **SonicWall Mobile Connect**
+  - **F5 Edge Client**
+  - **Pulse Secure**
+  - **Vlastní VPN**
+- **Dělené tunelové propojení**: **Povolí** nebo **zakáže** tuto možnost, která umožňuje zařízením rozhodnout, které připojení se má použít v závislosti na provozu. Uživatel v hotelu například pro přístup k pracovním souborům použije připojení VPN, ale pro běžné procházení webu bude používat standardní síť hotelu.
 
 <!--- **Per-app VPN** - Select this option if you want to associate this VPN connection with an iOS or macOS app so that the connection will be opened when the app is run. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](apps-deploy.md). --->
 
@@ -53,12 +58,17 @@ V závislosti na tom, jaká nastavení zvolíte, nebudou v následujícím sezna
 
 Pokud jste vybrali **Vlastní VPN**, nakonfigurujte tato další nastavení:
 
-- **Identifikátor VPN** – jedná se o identifikátor aplikace VPN, kterou používáte. Získáte ho od poskytovatele připojení VPN.
-- **Zadejte páry klíč-hodnota pro vlastní atributy VPN** – přidejte nebo naimportujte **klíče** a **hodnoty**, pomocí nichž si přizpůsobíte připojení VPN. Také tyto hodnoty vám obvykle dodá poskytovatel připojení VPN.
-
+- **Identifikátor sítě VPN**: Zadejte identifikátor aplikace VPN, kterou používáte. Tento identifikátor poskytuje poskytovatel sítě VPN.
+- **Zadejte páry klíč-hodnota pro vlastní atributy sítě VPN**: Přidejte nebo importujte **klíče** a **hodnoty** , které přizpůsobují připojení k síti VPN. Tyto hodnoty obvykle poskytuje poskytovatel sítě VPN.
 
 ## <a name="proxy-settings"></a>Nastavení proxy serveru
 
-- **Skript automatické konfigurace** – ke konfiguraci proxy serveru použijte konfigurační soubor. Zadejte **adresu URL Proxy serveru** , který se nachází konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
-- **Adresa** – zadejte adresu proxy serveru (jako IP adresu).
-- **Číslo portu** – zadejte číslo portu přidruženého k proxy serveru.
+- **Skript automatické konfigurace**: Pomocí souboru Nakonfigurujte proxy server. Zadejte **adresu URL proxy serveru** , který obsahuje konfigurační soubor. Zadejte například `http://proxy.contoso.com`.
+- **Adresa**: Zadejte adresu proxy server (jako IP adresu).
+- **Číslo portu**: Zadejte číslo portu přidruženého k proxy server.
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
+
+Nakonfigurujte nastavení sítě VPN na zařízeních se systémem [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [iOS](vpn-settings-ios.md)a [Windows 10](vpn-settings-windows-10.md) .

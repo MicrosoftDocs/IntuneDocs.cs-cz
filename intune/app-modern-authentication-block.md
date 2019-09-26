@@ -1,13 +1,12 @@
 ---
 title: Blokování aplikací bez moderního ověřování v Intune
 titleSuffix: Microsoft Intune
-description: Další informace o aplikaci a moderní ověřování (ADAL) pomocí Microsoft Intune.
+description: Přečtěte si o aplikacích a moderních ověřováních (ADAL) pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/03/2019
-ms.prod: ''
+ms.date: 08/15/2019
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -18,30 +17,30 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ca96f36f8813d80c7ebb07bfb3bd65f8aa0b392
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 37f2eec82c0d7ada146e8b17738cff577661e4af
+ms.sourcegitcommit: 5968a38c302394d4b0cf81156e7b52531cdec107
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59897302"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71304288"
 ---
-# <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Blokování aplikací, které nepoužívají moderní ověřování (ADAL)
+# <a name="block-apps-that-dont-use-modern-authentication-adal"></a>Blokovat aplikace, které nepoužívají moderní ověřování (ADAL)
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Podmíněný přístup založený na aplikaci se zásadami ochrany aplikací spoléhá na aplikace pomocí [moderní ověřování](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a), což je implementace protokolu oauth2. Většina současných mobilních a desktopových aplikací Office moderní ověřování používá. Nicméně existují aplikace třetích stran a starší aplikace Office, které používají jiné metody ověřování, například základní ověřování a ověřování pomocí formulářů.
+Podmíněný přístup na základě aplikace se zásadami ochrany aplikací spoléhá na aplikace používající [moderní ověřování](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a), což je implementace OAuth2. Většina současných mobilních a desktopových aplikací Office používá moderní ověřování. Existují však aplikace třetích stran a starší aplikace Office, které používají jiné metody ověřování, například základní ověřování a ověřování na základě formulářů.
 
-## <a name="block-access-to-apps"></a>Zablokuje přístup k aplikacím
+## <a name="block-access-to-apps"></a>Blokovat přístup k aplikacím
 
-K blokování přístupu do aplikace, které nepoužívají moderní ověřování, implementace podmínku přístup pomocí zásad ochrany aplikací Intune. Další informace najdete v tématu [podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md).
+Pokud chcete blokovat přístup k aplikacím, které nepoužívají moderní ověřování, implementujte přístup k podmínkám pomocí zásad ochrany aplikací Intune. Další informace najdete v tématu [podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md).
 
 ## <a name="additional-information"></a>Další informace
 
-Další informace o podmíněného přístupu Azure AD najdete v následujících tématech:
+Další informace o podmíněném přístupu Azure AD najdete v následujících tématech:
 - [Co je podmíněný přístup v Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)
-- [Jak funguje podmíněný přístup založený na aplikaci](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
-- [Nastavení Sharepointu Online a Exchange Online pro podmíněný přístup Azure Active Directory](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
+- [Způsob fungování podmíněného přístupu na základě aplikace](app-based-conditional-access-intune.md#how-app-based-conditional-access-works)
+- [Nastavení služby SharePoint Online a Exchange Online pro Azure Active Directory podmíněný přístup](https://docs.microsoft.com/azure/active-directory/conditional-access/conditional-access-for-exo-and-spo)
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)

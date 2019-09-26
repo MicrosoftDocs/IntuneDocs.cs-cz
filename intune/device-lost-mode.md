@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 04/25/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 66a3ba7d57d71aeb446bf86449f39c4a557eed62
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 2e327d545e64a3edca12c57e399c405a72630b9c
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57392286"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71304744"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Zapnutí režimu ztráty u zařízení s iOSem pomocí Intune
 
@@ -41,8 +40,7 @@ Tato funkce není podporovaná pro:
 
 ## <a name="enable-lost-mode"></a>Zapnutí režimu ztráty
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
 4. Ze seznamu zařízení, která spravujete, vyberte zařízení s iOSem a vyberte **...Další**. Pak zvolte vzdálenou akci **Režim ztráty**.
 5. V **režimu ztráty** zapněte tuto funkci. Pak zadejte zprávu, která se má zobrazovat, a kontaktní telefonní číslo.
@@ -57,6 +55,6 @@ Když zapnete režim ztráty, zablokujete veškeré možnosti použití zaříze
 - Údaje o poloze jsou při uložení i při přenosu zašifrované.
 - Ve zprávě, která se zobrazí na zamykací obrazovce, nezapomeňte uvést konkrétní podrobnosti o vrácení ztraceného zařízení.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Pokud se chcete podívat na stav zapnutí režimu ztráty, otevřete **Zařízení** a vyberte **Akce zařízení**.

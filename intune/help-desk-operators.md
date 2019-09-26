@@ -8,7 +8,6 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 03/11/2019
 ms.topic: troubleshooting
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.reviewer: sumitp
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df5b20be667159689aaaee9a790c0a4c5b5864fd
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 8a4e6cbf2d9edcff83ae756c2dbcf098cae0ae54
+ms.sourcegitcommit: 73fbecf7cee4fdfc37d3c30ea2007d2a9a6d2d12
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900855"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "71301864"
 ---
 # <a name="use-the-troubleshooting-portal-to-help-users-at-your-company"></a>Použití portálu pro řešení potíží k poskytování pomoci uživatelům ve vaší společnosti
 
@@ -47,8 +46,7 @@ Když uživatel kontaktuje podporu ohledně technického problému s Intune, zad
 
 Zvolením možnosti **Vybrat uživatele** v podokně pro řešení potíží zobrazíte informace o uživateli. Informace o uživateli vám mohou pomoci porozumět aktuálnímu stavu uživatelů a jejich zařízení.  
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Řešení potíží**.
 4. Klikněte na **Vybrat** a vyberte uživatele, pro kterého chcete řešit potíže.
 5. Vyberte uživatele zadáním jména nebo e-mailové adresy. Klikněte na tlačítko **vyberte**. Informace o řešení potíží pro uživatele se zobrazí v podokně Řešení potíží. Informace jsou vysvětlené v následující tabulce.
@@ -60,9 +58,9 @@ Zvolením možnosti **Vybrat uživatele** v podokně pro řešení potíží zob
 
 V podokně **Řešení potíží** můžete zkontrolovat informace o uživateli.
 
-![](/intune/media/troubleshooting-dash.png)
+![Řídicí panel pro řešení potíží s očíslovanými oblastmi popsanými v následující tabulce](/intune/media/troubleshooting-dash.png)
 
-| Oblast | Název | Popis |
+| Oblast | Name | Popis |
 | ---  | ---  | ---         |
 | 1.   | Stav účtu  | Zobrazuje stav aktuálního tenanta Intune, například **Aktivní** nebo **Neaktivní**.       |
 | 2.   | Výběr uživatele  | Jméno aktuálně vybraného uživatele. Kliknutím na **Změnit uživatele** zvolíte nového uživatele.       |
@@ -108,7 +106,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection status
 
-An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with Enterprise Mobility Solution (EMS) technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -121,7 +119,7 @@ An app protection policy is available to mobile apps that integrate with Enterpr
 
 ## App protection policies reference
 
-An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies.These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 ### Properties
 
@@ -154,7 +152,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ## Compliance policies reference
 
-Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
+Makes sure that the devices used to access company apps and data, comply with certain rules like using a PIN to access the device, and encryption of data stored on the device.
 
 ### Properties
 
@@ -186,7 +184,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection policies
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -199,7 +197,7 @@ An app protection policy is available to mobile apps that integrate with EMS tec
 
 ## Configuration policies reference
 
-An app configuration policy is available to mobile apps with vendor-specific configuration. 
+An app configuration policy is available to mobile apps with vendor-specific configuration. 
 
 ### Properties
 
@@ -232,7 +230,7 @@ Devices managed by Intune or by users managed by Intune or Azure AD.
 
 ### App protection policies
 
-An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
 
 | Property    | Description                                                                           |
 |-------------|---------------------------------------------------------------------------------------|
@@ -252,7 +250,7 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 | Sloupec tabulky | Popis |
 |-------------|----------|
 | Stav registrace | Počáteční čas, kdy uživatel poprvé zahájil registraci |
-| Operační systém | Operační systém zařízení |
+| OS | Operační systém zařízení |
 | Verze operačního systému | Verze operačního systému zařízení |
 | Chyba | Důvod chyby |
 
@@ -260,7 +258,7 @@ Tabulka Neúspěšné registrace obsahuje neúspěšné pokusy o registraci. Za�
 
 Po výběru řádku chyby se zobrazí další podrobnosti.
 
-| Sekce | Popis |
+| Section | Popis |
 |-------------|----------|
 | Podrobnosti chyby | Podrobnější vysvětlení chyby |
 | Možná náprava | Navrhovaný postup k vyřešení chyby. Pro některé chyby nemusí být náprava uvedená. |
@@ -277,15 +275,15 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 | Ověřování registrace nebylo úspěšné | Došlo k pokusu o registraci pomocí staré verze Portálu společnosti. |
 | Zařízení se nepodporuje | Zařízení nesplňuje minimální požadavky pro registraci v Intune. |
 | Nesplnila se omezení registrace | Tato registrace se zablokovala kvůli omezení registrace, které nakonfiguroval správce. |
-| Verze zařízení příliš nízká. | Správce nakonfiguroval omezení registrace vyžaduje vyšší verzi zařízení. |
-| Verze zařízení příliš vysoká. | Správce nakonfiguroval omezení registrace vyžadující nižší verzi zařízení. |
-| Není možné zaregistrovat zařízení jako osobní | Správce nakonfiguroval omezení registrace k blokování registrace osobních a nebyl předdefinované označené jako firemní zařízení se nezdařilo. |
-| Platforma zařízení blokované | Správce nakonfiguroval omezení registrace, které blokuje platformy toto zařízení. |
-| Vypršení platnosti hromadného tokenu | Hromadný token do zřizovacího balíčku vypršela platnost. |
-| Podrobnosti nebyl nalezen nebo zařízení AutoPilot | Při pokusu o registraci se nenašel zařízení Autopilot. |
-| Profil AutoPilot se nenašel nebo není přiřazen | Zařízení nemá aktivní profil Autopilot. |
-| Metodu registrace AutoPilot neočekávané | Zařízení se pokusil zaregistrovat pomocí metody není povolený. |
-| Zařízení AutoPilot se odstranilo. | Při pokusu o registraci zařízení byla odebrána z Autopilot pro tento účet. |
+| Verze zařízení je moc nízká. | Správce nakonfiguroval omezení registrace, které vyžaduje vyšší verzi zařízení. |
+| Verze zařízení je příliš vysoká. | Správce nakonfiguroval omezení registrace, které vyžaduje nižší verzi zařízení. |
+| Zařízení se nedá zaregistrovat jako osobní. | Správce nakonfiguroval omezení registrace k blokování osobních registrací a zařízení, které selhalo, nebylo předdefinované jako firemní. |
+| Platforma zařízení je blokovaná. | Správce nakonfiguroval omezení registrace, které blokuje platformu tohoto zařízení. |
+| Vypršela platnost hromadných tokenů. | V balíčku pro zřizování vypršela platnost hromadných tokenů. |
+| Nepovedlo se najít zařízení nebo podrobnosti o autopilotu. | Při pokusu o registraci se nenašlo zařízení autopilotu. |
+| Profil autopilotu se nenašel nebo není přiřazený. | Zařízení nemá aktivní profil autopilotu. |
+| Neočekávaná metoda registrace autopilotu | Zařízení se pokusilo o registraci pomocí nepovolené metody. |
+| Zařízení Autopilot se odebralo. | Zařízení, které se pokouší zaregistrovat, se odebralo z autopilotního projektu pro tento účet. |
 | Dosažení limitu zařízení | Tato registrace se zablokovala kvůli omezení počtu zařízení, které nakonfiguroval správce. |
 | Onboarding Apple | Registrace všech zařízení s iOSem se v tuto chvíli zablokovala kvůli chybějícímu nebo prošlému certifikátu Apple MDM Push Certificate v Intune. |
 | Zařízení se nezaregistrovalo předem | Zařízení se nezaregistrovalo předem jako podnikové a správce zablokoval všechny osobní registrace. |
@@ -294,13 +292,13 @@ Po výběru řádku chyby se zobrazí další podrobnosti.
 ## <a name="collect-available-data-from-mobile-device"></a>Shromažďování dostupných dat z mobilních zařízení
 
 Pokud chcete shromažďovat data ze zařízení při řešení potíží se zařízením uživatele, použijte následující zdroje informací:
-  - [Odeslání chyb registrace zařízení s iOSem správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
-  - [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
-  - [Odeslání protokolů Androidu firemní podpoře pomocí kabelu USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
-  - [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
-  - [Odeslání chyb registrace zařízení s Androidem správci IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
+- [Odeslání chyb registrace zařízení s iOSem správci IT](/intune-user-help/send-errors-to-your-it-admin-ios)
+- [Pomoc firemní podpoře s řešením problémů zařízení pomocí podrobného protokolování](/intune-user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android)
+- [Odeslání protokolů Androidu firemní podpoře pomocí kabelu USB](/intune-user-help/send-diagnostic-data-logs-to-your-it-administrator-using-a-usb-cable-android)
+- [Odeslání protokolů s diagnostickými daty ze zařízení s Androidem správci IT e-mailem](/intune-user-help/send-logs-to-your-it-admin-by-email-android)
+- [Odeslání chyb registrace zařízení s Androidem správci IT](/intune-user-help/send-enrollment-errors-to-your-it-administrator-android)
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Můžete zjistit další informace o řízení správy na základě rolí (RBAC) k definování rolí v zařízení organizace, správě mobilních aplikací a úlohách ochrany dat. Další informace najdete v článku [Řízení správy na základě rolí (RBAC) s Intune](/intune/role-based-access-control).
 

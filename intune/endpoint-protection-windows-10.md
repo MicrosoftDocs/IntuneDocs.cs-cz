@@ -1,529 +1,1645 @@
 ---
-title: Nastavení ochrany pro zařízení s Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Na zařízeních s Windows 10 můžete v Intune použít nebo nakonfigurovat nastavení ochrany koncového bodu a povolit tak na místních zařízeních funkce Windows Defender, mezi něž patří Application Guard, brána firewall, filtr SmartScreen, šifrování a BitLocker, Exploit Guard, řízení aplikací, Security Center a zabezpečení.
+title: Nastavení ochrany pro zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: V zařízeních s Windows 10 můžete použít nebo nakonfigurovat nastavení ochrany koncových bodů a povolit funkce Windows Defenderu, včetně ochrany Application Guard, brány firewall, filtru SmartScreen, šifrování a BitLockeru, zneužití ochrany, řízení aplikací, Security Center a zabezpečení na. místní zařízení v Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/04/2019
+ms.date: 09/19/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
-ms.reviewer: ilwu
+ms.reviewer: karthig
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c2df888e146a7f240530e5cbc6628dbce34cb61
-ms.sourcegitcommit: b0b1030017e741d92c508130447a8242d9ad7a51
+ms.openlocfilehash: cdd5ae83d1ef71be31ad4507b32d2d4484da58cb
+ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342993"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71301732"
 ---
-# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější), aby ochrana zařízení pomocí Intune
+# <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune  
 
-[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]  
 
-Microsoft Intune zahrnuje mnoho nastavení, která pomáhá chránit vaše zařízení. Tento článek popisuje všechna nastavení, můžete povolit a nakonfigurovat ve Windows 10 a novější zařízení. Tato nastavení se vytvoří v profil ochrany koncových bodů konfigurace v Intune pro řízení zabezpečení, včetně BitLocker nebo Windows Defender.
+Microsoft Intune obsahuje řadu nastavení, která vám pomůžou chránit vaše zařízení. Tento článek popisuje všechna nastavení, která můžete povolit a konfigurovat v zařízeních s Windows 10 a novějších. Tato nastavení se v Intune vytvoří v konfiguračním profilu Endpoint Protection pro řízení zabezpečení, včetně BitLockeru a Windows Defenderu.  
 
-Ke konfiguraci antivirové ochrany v programu Windows Defender, najdete v článku [omezení pro zařízení Windows 10](device-restrictions-windows-10.md#windows-defender-antivirus).
+Pokud chcete nakonfigurovat antivirovou ochranu v programu Windows Defender, přečtěte si téma [omezení zařízení s Windows](device-restrictions-windows-10.md#microsoft-defender-antivirus)  
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Před zahájením  
 
-[Vytvořit profil konfigurace zařízení ochrany koncových bodů](endpoint-protection-configure.md).
+[Vytvoření profilu konfigurace zařízení Endpoint Protection](endpoint-protection-configure.md).  
 
-## <a name="windows-defender-application-guard"></a>Ochrana Application Guard v programu Windows Defender
+Další informace o poskytovatelích konfiguračních služeb (CSP) najdete v tématu [Reference k poskytovateli služby konfigurace](https://docs.microsoft.com/windows/client-management/mdm/configuration-service-provider-reference).  
 
-Podporováno v následujících edicích Windows 10:
+## <a name="windows-defender-application-guard"></a>Ochrana Application Guard v programu Windows Defender  
 
-- Enterprise
-- Professional
+Když budete používat Microsoft Edge, Ochrana Application Guard v programu Windows Defender ochrání vaše prostředí před weby, kterým vaše organizace nedůvěřuje. Když uživatelé navštíví weby, které nejsou uvedené ve vaší izolované síti, lokality se otevřou v rámci virtuální relace procházení technologie Hyper-V. Důvěryhodné lokality jsou definované pomocí hranice sítě, která je nakonfigurovaná v konfiguraci zařízení.  
 
-Když budete používat Microsoft Edge, Ochrana Application Guard v programu Windows Defender ochrání vaše prostředí před weby, kterým vaše organizace nedůvěřuje. Když uživatelé navštíví weby, které nejsou uvedené v ohraničení vaší izolované sítě, weby otevřete v relaci virtuálního procházení Hyper-V. Důvěryhodné servery jsou definovány ohraničení sítě, které jsou nakonfigurované v konfiguraci zařízení.
+Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bitovou verzí). Tento profil nainstaluje součást Win32, pomocí které se aktivuje ochrana Application Guard.  
 
-Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bitovou verzí). Tento profil nainstaluje součást Win32, pomocí které se aktivuje ochrana Application Guard.
+- **Ochrana Application Guard**  
+  **Výchozí**: Není nakonfigurováno  
+   Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/AllowWindowsDefenderApplicationGuard](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)  
 
-- **Ochrana Application Guard**: **Povoleno pro Edge** zapnout tuto funkci, která se otevře nedůvěryhodné weby v technologií Hyper-V kontejneru procházení virtualizovaném pomocí. **Není nakonfigurováno** (výchozí) znamená, že žádné lokality (důvěryhodné a nedůvěryhodné) otevře v zařízení.
-- **Chování schránky**: Zvolte, které akce kopírování a vkládání jsou povolené mezi místním Počítačem a virtuálním prohlížeči ochrany Application Guard.
-- **Externí obsah na firemních webech**: **Blok** obsahu z neschválených webů načítání. **Nenakonfigurováno** (výchozí) znamená, že se na zařízení mohou otevřít nefiremní weby.
-- **Tisk z virtuálního prohlížeče**: Zvolte **povolit** tak PDF, XPS, místní a síťové tiskárny můžete tisknout obsah z virtuálního prohlížeče. **Nenakonfigurováno** (výchozí) zakáže všechny tiskové funkce.
-- **Shromažďování protokolů**: **Povolit** shromažďovat protokoly pro události, ke kterým došlo v relaci procházení ochrany Application Guard. **Nenakonfigurováno** (výchozí) žádné protokoly v relaci procházení neshromažďuje.
-- **Zachovat uživatele vygenerovaná data prohlížeče**: **Povolit** uloží uživatelská data (jako jsou hesla, Oblíbené položky a soubory cookie), který je vytvořen při relaci virtuálního procházení ochrany Application Guard. **Nenakonfigurováno** (výchozí) zahodí všechny soubory a data stažená uživatelem při restartu zařízení nebo odhlášení uživatele.
-- **Akcelerace grafiky**: Zvolte **povolit** načíst weby náročné na grafiku a video rychlejší získáním přístupu k virtuálnímu grafickému procesoru. **Nenakonfigurováno** (výchozí) použije místo virtuálního grafického procesoru CPU zařízení.
-- **Stahovat soubory do hostitelského souborového systému**: **Povolit** tak uživatelům stahovat soubory z virtualizovaného prohlížeče do operačního systému hostitele. **Nenakonfigurováno** (výchozí) nestáhne soubory do hostitelského operačního systému, ale stáhne je do místního úložiště zařízení.
+  - **Povoleno pro Edge** – zapne tuto funkci, která otevírá nedůvěryhodné weby v kontejneru procházení virtualizovaného na Hyper-V.  
+  - **Nenakonfigurováno** – na zařízení může být otevřena žádná lokalita (důvěryhodná a nedůvěryhodná).  
 
-## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender
+- **Chování schránky**  
+  **Výchozí**: Není nakonfigurováno  
+   Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardSettings](https://go.microsoft.com/fwlink/?linkid=872351)  
 
-Podporováno v následujících edicích Windows 10:
-- Domů
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+  Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  
+  - **Není nakonfigurováno**  
+  - **Povolí kopírování a vkládání jenom z počítačů do prohlížeče.**  
+  - **Povoluje kopírování a vkládání jenom z prohlížeče na počítač.**  
+  - **Povolí kopírování a vkládání mezi počítačem a prohlížečem.**  
+  - **Blokovat kopírování a vkládání mezi počítačem a prohlížečem**  
 
-### <a name="global-settings"></a>Globální nastavení
+- **Obsah schránky**  
+  Toto nastavení je k dispozici pouze v případě, že je *chování schránky* nastaveno na jedno z nastavení *povoleno* .  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/ClipboardFileType](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp#clipboardfiletype)  
 
-Tato nastavení platí pro všechny typy sítě.
+  Vyberte povolený obsah schránky.  
+  - **Není nakonfigurováno**  
+  - **text**  
+  - **Obrázky**  
+  - **Text a obrázky**  
 
-- **File Transfer Protocol**: **Blok** zakázat stavový protokol FTP. **Nenakonfigurováno** (výchozí) umožní firewallu filtrování stavového protokolu FTP, které povolí sekundární připojení.
-- **Doba nečinnosti přidružení zabezpečení před odstraněním**: Přidružení zabezpečení se odstraní po nezaznamenají žádné síťové přenosy pro *n* sekund. Zadejte čas nečinnosti v sekundách.
-- **Kódování předsdíleného klíče**: Zvolte **povolit** používat předsdílené klíče kódování pomocí kódování UTF-8. **Nenakonfigurováno** (výchozí) použije hodnotu místního úložiště.
-- **Výjimky protokolu IPsec**: Nakonfigurujte konkrétní přenosy, aby se vyjímá z protokolu IPsec, včetně:
-  - **Zjišťování kódů typu ICMP IPv6 sousedem**
-  - **Protokol ICMP**
-  - **Zjišťování kódů typu ICMP IPv6 směrovačem**
-  - **Přenosy DHCP IPv4 i IPv6**
-- **Ověření seznamu odvolaných certifikátů**: Zvolte, jak zařízení ověří seznam odvolaných certifikátů. Mezi možnosti patří **zakázat ověření seznamu CRL**, **neúspěšné ověření seznamu CRL jenom u odvolaného certifikátu**, a **neúspěšné ověření seznamu CRL při každé zjištěné chybě**.
-- **Oportunisticky přiřadit sadu ověřování na klíčovací modul**: **Povolit** tak klíčovací moduly tak musí ignorovat pouze sady ověřování, které nepodporují. **Nenakonfigurováno** nastaví klíčovací moduly tak, aby v případě, že nepodporují všechny sady ověřování v dané sadě, se celá sada ověřování ignorovala.
-- **Fronty paketů**: Zadejte, jak je software škálování na straně příjmu s povolenou šifrovaným příjmem a předáváním nešifrovaného textu pro scénář bránu tunelového propojení IPsec. Toto nastavení potvrdí, že zachování pořadí paketů.
+- **Externí obsah na podnikových webech**  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/BlockNonEnterpriseContent](https://go.microsoft.com/fwlink/?linkid=872352)  
 
-### <a name="network-settings"></a>Nastavení sítě
+  - **Blok** – zablokuje načítání obsahu z neschválených webů.  
+  - **Nenakonfigurováno** – na zařízení můžou být otevřené nepodnikové weby.  
+ 
+- **Tisk z virtuálního prohlížeče**  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/PrintingSettings](https://go.microsoft.com/fwlink/?linkid=872354)  
 
-Tato nastavení platí pro určité typy sítě, například pro typy **Doménová (firemní) síť**, **Privátní (zjistitelná) síť** a **Veřejná (nezjistitelná) síť**.
+  - **Povolit** – povolí tisk vybraného obsahu z virtuálního prohlížeče.  
+  - **Není nakonfigurováno** Zakáže všechny funkce tisku.  
+
+  Když *povolíte* tisk, můžete nakonfigurovat následující nastavení:
+  - **Typ (typy) tisku** Vyberte jednu nebo více z následujících možností:  
+    - PDF  
+    - XPS  
+    - Místní tiskárny
+    - Síťové tiskárny  
+
+- **Shromažďovat protokoly**  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Audit/AuditApplicationGuard](https://go.microsoft.com/fwlink/?linkid=872418)  
+
+  - **Povoluje** -shromažďovat protokoly pro události, ke kterým dojde v relaci procházení ochrany Application Guard.  
+  - **Nenakonfigurováno** – v rámci relace procházení nebudou shromažďovány žádné protokoly.  
+
+- **Zachovat uživatelem generovaná data prohlížeče**  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/AllowPersistence](https://go.microsoft.com/fwlink/?linkid=872419)  
+
+  - **Povolení** Ukládat data uživatelů (například hesla, oblíbené položky a soubory cookie), která se vytvoří během relace pro virtuální procházení ochrany Application Guard.  
+  - **Není nakonfigurováno** Zahodit uživatelem stažené soubory a data, když se zařízení restartuje, nebo když se uživatel odhlásí.  
+
+- **Akcelerace grafiky**  
+ **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/AllowVirtualGPU](https://go.microsoft.com/fwlink/?linkid=872420)  
+      
+  - **Umožněte** rychlejší načítání webů náročných na grafiku a videa rychleji díky získání přístupu k virtuálnímu grafickému procesoru.  
+  - **Není nakonfigurováno** Použijte procesor zařízení pro grafiku. Nepoužívejte virtuální grafický procesor.  
+
+- **Stáhnout soubory do systému souborů hostitele**  
+  **Výchozí**: Není nakonfigurováno  
+  Zprostředkovatel kryptografických služeb Application Guard: [Nastavení/SaveFilesToHost](https://go.microsoft.com/fwlink/?linkid=872421)  
+
+  - **Povolit** – uživatelé můžou stahovat soubory z virtualizovaného prohlížeče do hostitelského operačního systému.  
+  - **Nenakonfigurováno** – zachová místní soubory v zařízení a nestahují soubory do hostitelského souborového systému.  
+
+## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender  
+ 
+### <a name="global-settings"></a>Globální nastavení  
+
+Tato nastavení platí pro všechny typy sítě.  
+
+- **protokol FTP (File Transfer Protocol)**  
+  **Výchozí**: Není nakonfigurováno  
+   CSP brány firewall: [MdmStore/globální/DisableStatefulFtp](https://go.microsoft.com/fwlink/?linkid=872536)  
+
+  - **Blokování** – zakažte stavový FTP.  
+  - **Nenakonfigurováno** – brána firewall má stavové filtrování FTP, které umožňuje sekundární připojení.  
+
+- **Doba nečinnosti přidružení zabezpečení před odstraněním**  
+  **Výchozí**: *Není nakonfigurováno*  
+   CSP brány firewall: [MdmStore/globální/SaIdleTime](https://go.microsoft.com/fwlink/?linkid=872539)  
+
+   Zadejte dobu nečinnosti v sekundách, po které se přidružení zabezpečení odstraní.   
+
+- **Kódování předsdíleného klíče**  
+  **Výchozí**: Není nakonfigurováno  
+   CSP brány firewall: [MdmStore/globální/PresharedKeyEncoding](https://go.microsoft.com/fwlink/?linkid=872541)  
+
+   - **Povolit** – zakódovat předem přeformátované klíče pomocí UTF-8.  
+   - **Nenakonfigurováno – kódování předdefinovaných** klíčů pomocí hodnoty místního úložiště.  
+
+- **Výjimky protokolu IPsec**  
+  **Výchozí**: *0 vybráno*  
+   CSP brány firewall: [MdmStore/globální/IPsecExempt](https://go.microsoft.com/fwlink/?linkid=872547)
+
+   Vyberte jeden nebo více z následujících typů provozu, které mají být vyloučeny z protokolu IPsec:  
+   - **Zjišťování kódů typu ICMP IPv6 sousedem**  
+   - **Protokol ICMP**  
+   - **Zjišťování kódů typu ICMP IPv6 směrovačem**  
+   - **Přenosy DHCP IPv4 i IPv6**  
+
+- **Ověření seznamu odvolaných certifikátů**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [MdmStore/globální/CRLcheck](https://go.microsoft.com/fwlink/?linkid=872548)  
+
+  Vyberte, jak zařízení ověřuje seznam odvolaných certifikátů. Vaše možnosti jsou:  
+  - **Zakázat ověření seznamu CRL**  
+  - **Neúspěšné ověření seznamu CRL jenom u odvolaného certifikátu**  
+  - Při **ověřování seznamu CRL došlo k chybě**.  
+ 
+
+- **Oportunisticky odpovídá sadě ověřování na modul klíčů.**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [MdmStore/globální/OpportunisticallyMatchAuthSetPerKM](https://go.microsoft.com/fwlink/?linkid=872550)  
+  
+  - **Povolit** Moduly klíčů musí ignorovat pouze ověřovací sady, které nepodporují.  
+  - **Není nakonfigurováno**, moduly klíčů musí ignorovat celou sadu ověřování, pokud nepodporují všechny ověřovací sady zadané v sadě.  
+
+
+- **Řízení front paketů**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [MdmStore/globální/EnablePacketQueue](https://go.microsoft.com/fwlink/?linkid=872551)  
+
+  Určete, jak je povolené škálování softwaru na straně příjmu pro šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Toto nastavení potvrdí, že se zachová pořadí paketů. Vaše možnosti jsou:  
+  - **Není nakonfigurováno**  
+  - **Zakázat všechny služby Řízení front paketů**  
+  - **Zařadit pouze příchozí šifrované pakety do fronty**  
+  - **Queue Packets po dešifrování se provede jenom pro předávání.**  
+  - **Konfigurace příchozích i odchozích paketů**  
+
+### <a name="network-settings"></a>Nastavení sítě  
+
+Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale všechny se vztahují na tři konkrétní typy sítě:  
+- **Síť v doméně (pracovní)**  
+- **Soukromá (zjistitelná) síť**  
+- **Veřejná (nezjistitelná) síť**  
 
 #### <a name="general-settings"></a>Obecná nastavení  
-- **Firewallu v programu Windows Defender**: Zvolte **povolit** zapnutí brány firewall a pokročilým zabezpečením. **Nenakonfigurováno** (výchozí) povolí veškerý provoz bez ohledu na ostatní nastavení zásad.
-- **Neviditelný režim**: **Blok** provoz firewallu v neviditelném režimu. Blokování neviditelného režimu vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**. **Nenakonfigurováno** (výchozí) provozuje firewall v neviditelném režimu, který pomáhá předejít odpovědím na zjišťovací požadavky.
-- **Stíněné**: **Blok** vypne tuto funkci. **Nenakonfigurováno** (výchozí) toto nastavení povolí. Když je toto nastavení a Firewall v programu Windows Defender zapnutý, veškerý provoz bez ohledu na ostatní nastavení zásad se blokuje.
-- **Jednosměrové odpovědi na vícesměrová vysílání**: Pokud je nastavena na **bloku**, zakáže jednosměrové odpovědi na vícesměrová vysílání. Jednosměrové odpovědi na zprávy vícesměrového nebo všesměrového vysílání obvykle nebudete chtít přijímat. Tyto odpovědi můžou naznačovat útok DoS (DOS), nebo útočník při pokusu o sběru dat známý aktivní počítač. **Nenakonfigurováno** (výchozí) toto nastavení povolí.
-- **Příchozí upozornění**: Pokud je nastavena na **bloku**, zobrazovat oznámení uživatelům při aplikaci se blokuje naslouchání na portu. **Nenakonfigurováno** (výchozí) toto nastavení povolí, a když se blokuje naslouchání aplikace na portu, může uživatelům upozornění zobrazit.
-- **Výchozí akce pro příchozí připojení**: Pokud je nastavena na **bloku**, výchozí akce pro brány firewall není spuštěna u příchozích připojení. **Nenakonfigurováno** (výchozí) výchozí akci brány firewall u příchozích připojení provede.
 
-#### <a name="rule-merging"></a>Sloučení pravidel
+- **Firewall v programu Windows Defender**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [EnableFirewall](https://go.microsoft.com/fwlink/?linkid=872558)  
+  
+  - **Povolit** – Zapněte bránu firewall a rozšířené zabezpečení. 
+  - **Není nakonfigurováno** Povolí veškerý provoz v síti bez ohledu na nastavení dalších zásad.  
 
-- **Oprávnění aplikace pravidla firewallu v programu Windows Defender z místního úložiště**: Zvolte **povolit** použít pravidla brány firewall v místním úložišti, tak, že budete používat a vynucovat. **Nenakonfigurováno** (výchozí) bude pravidla brány firewall autorizované aplikace v místním úložišti ignorovat a nebude je vynucovat.
-- **Pravidla pro globální porty firewallu v programu Windows Defender z místního úložiště**: Zvolte **povolit** k portu globální pravidla brány firewall v místním úložišti bude používat a vynucovat. **Nenakonfigurováno** (výchozí) bude globální pravidla brány firewall portu v místním úložišti ignorovat a nebude je vynucovat.
-- **Pravidla firewallu v programu Windows Defender z místního úložiště**: Zvolte **povolit** do pravidla brány firewall v místním úložišti bude používat a vynucovat. **Nenakonfigurováno** (výchozí) bude pravidla brány firewall v místním úložišti ignorovat a nebude je vynucovat.
-- **Pravidla IPsec z místního úložiště**: Zvolte **povolit** použít pravidla zabezpečení připojení z místního úložiště bez ohledu na verze schématu nebo připojení pravidel zabezpečení. **Nenakonfigurováno** (výchozí) pravidla zabezpečení připojení z místního úložiště bude bez ohledu na verze schématu nebo pravidel zabezpečení připojení ignorovat a nebude je vynucovat.
+- **Neviditelný režim**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DisableStealthMode](https://go.microsoft.com/fwlink/?linkid=872559)  
+  - **Není nakonfigurováno**  
+  - **Blokování** – brána firewall je zablokovaná pro provoz v režimu utajení. Blokování neviditelného režimu vám umožňuje zablokovat také **výjimku zabezpečených paketů protokolu IPsec**.  
+  - **Povolení** – brána firewall funguje v režimu utajení, což pomáhá zabránit odpovědím na požadavky na zjišťování.  
 
-## <a name="windows-defender-smartscreen-settings"></a>Nastavení filtru SmartScreen v programu Windows Defender
+- **Výjimka zabezpečeného paketu protokolu IPsec s neviditelným režimem**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DisableStealthModeIpsecSecuredPacketExemption](https://go.microsoft.com/fwlink/?linkid=872560)  
 
-Podporováno v následujících edicích Windows 10 s nainstalovaným prohlížečem Microsoft Edge:
-- Domů
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+  Tato možnost je ignorována, pokud je *režim utajení* nastaven na možnost *blokovat*.  
 
-**Nastavení**:
+  - **Není nakonfigurováno**  
+  - Zabezpečené pakety protokolu IPSec nezískají výjimky.  
+  - **Povolit** – povolit výjimky. Režim utajení brány firewall nesmí bránit hostitelskému počítači v reakci na nevyžádaný síťový provoz zabezpečený protokolem IPsec.  
 
-- **Filtr SmartScreen pro aplikace a soubory**: **Povolit** filtr Windows SmartScreen pro provádění souborů a spouštění aplikací. SmartScreen je cloudová antiphisingová a antimalwarová vrstva ochrany. **Nenakonfigurováno** (výchozí) filtr SmartScreen zakáže.
-- **Neověřených souborů provádění**: **Blok** koncovým uživatelům ve spouštění souborů, které nebyly ověřeny filtrem Windows SmartScreen. **Nenakonfigurováno** (výchozí) tuto funkci vypne a umožní uživatelům spouštět i neověřené soubory.
+- **Stíněné**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [Stíněné](https://go.microsoft.com/fwlink/?linkid=872561)  
+    - **Není nakonfigurováno**  
+    - **Blokovat** – když je zapnutá brána firewall v programu Windows Defender a toto nastavení je nastavené na *blokovat*, veškerý příchozí provoz se zablokuje bez ohledu na nastavení dalších zásad. 
+    - **Povolit** – Pokud je nastavené na *Povolit*, toto nastavení je vypnuté – a na základě dalších nastavení zásad je povolený příchozí provoz.
 
-## <a name="windows-encryption"></a>Šifrování Windows
+- **Jednosměrové odpovědi na vysílání vícesměrového vysílání**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DisableUnicastResponsesToMulticastBroadcast](https://go.microsoft.com/fwlink/?linkid=872562)  
+  
+  Jednosměrové odpovědi na zprávy vícesměrového nebo všesměrového vysílání obvykle nebudete chtít přijímat. Tyto odpovědi mohou označovat útok na útok DoS (Denial of Service) nebo útočník, který se pokouší zjistit známý živý počítač.  
+  - **Není nakonfigurováno**  
+  - **Blokování** – zakažte odezvy jednosměrového vysílání na vysílání vícesměrového vysílání.  
+  - **Povolení** – povolí jednosměrové odpovědi na vysílání vícesměrového vysílání.  
 
-### <a name="windows-settings"></a>Nastavení systému Windows
+- **Příchozí oznámení**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DisableInboundNotifications](https://go.microsoft.com/fwlink/?linkid=8725630)  
 
-Podporováno v následujících edicích Windows 10:
+  - **Není nakonfigurováno**  
+  - **Blok** – skryje oznámení, která se použijí, když je aplikace blokovaná pro naslouchání na portu.  
+  - **Povolit** – povolí toto nastavení a může uživatelům zobrazovat oznámení, když je aplikace blokovaná na portu blokována.  
 
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+- **Výchozí akce pro odchozí připojení**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DefaultOutboundAction](https://aka.ms/intune-firewall-outboundaction)  
+  
+  Nakonfigurujte výchozí akci, kterou firewall provede u odchozích připojení. Toto nastavení se použije pro Windows verze 1809 a vyšší.  
 
-**Nastavení**:
+  - **Není nakonfigurováno**  
+  - **Block** – výchozí akce brány firewall neběží na odchozím provozu, pokud není explicitně zadáte blokování.  
+  - **Povoleno** – výchozí akce brány firewall jsou spouštěny u odchozích připojení.  
 
-- **Šifrovat zařízení**: **Vyžadovat** vyzve uživatele, aby povolili šifrování zařízení. V závislosti na edici Windows a konfiguraci systému se může od uživatelů vyžadovat:  
-  - Aby potvrdili, že není povolené šifrování od jiného zprostředkovatele.
-  - Aby vypnuli nástroj BitLocker Drive Encryption a potom ho znovu zapnuli.
+- **Výchozí akce pro příchozí připojení**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [DefaultInboundAction](https://go.microsoft.com/fwlink/?linkid=872564)  
+ 
+  - **Není nakonfigurováno**  
+  - **Blokovat** – výchozí akce brány firewall se nespouští u příchozích připojení.  
+  - **Povolit** – výchozí akce brány firewall se spouštějí u příchozích připojení.  
+
+#### <a name="rule-merging"></a>Sloučení pravidel  
+
+- **Pravidla firewallu v programu Windows Defender autorizovaných aplikací z místního úložiště**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [AuthAppsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872565)  
+
+  - **Není nakonfigurováno**  
+  - **Blokovat** – pravidla brány firewall autorizovaných aplikací v místním úložišti se ignorují a neuplatňují.  
+  - **Povolení** Zvolením možnosti Povolit aplikujete pravidla brány firewall v místním úložišti, aby byla rozpoznaná a vynutila. -
+     
+
+- **Globální pravidla firewallu v programu Windows Defender pro porty z místního úložiště**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [GlobalPortsAllowUserPrefMerge](https://go.microsoft.com/fwlink/?linkid=872566)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – globální pravidla brány firewall portu v místním úložišti se ignorují a neuplatňují.  
+  - **Povolení** – použít a vyhovět pravidla firewallu globálního portu v místním úložišti  
+
+- **Pravidla firewallu v programu Windows Defender z místního úložiště**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [AllowLocalPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872567)  
+
+  - **Není nakonfigurováno**  
+  - **Blokování** – pravidla firewallu z místního úložiště se ignorují a neuplatňují.
+  - **Povolí** rozpoznání a vykonání pravidel brány firewall v místním úložišti.  
+
+- **Pravidla IPsec z místního úložiště**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [AllowLocalIpsecPolicyMerge](https://go.microsoft.com/fwlink/?linkid=872568)  
+
+  - **Není nakonfigurováno**  
+  - **Blokovat** – pravidla zabezpečení připojení z místního úložiště se ignorují a neuplatňují bez ohledu na verzi schématu a verzi pravidla zabezpečení připojení.  
+  - **Povolí** – použije pravidla zabezpečení připojení z místního úložiště bez ohledu na verze schématu nebo pravidla zabezpečení připojení.  
+
+### <a name="firewall-rules"></a>Pravidla brány firewall  
+
+Můžete **Přidat** jedno nebo více vlastních pravidel brány firewall. Další informace najdete v tématu [Přidání vlastních pravidel brány firewall pro zařízení s Windows 10](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices).  
+
+Vlastní pravidla brány firewall podporují tyto možnosti:  
+
+#### <a name="general-settings"></a>Obecná nastavení:  
+
+- **Název**  
+  **Výchozí**: *Bez názvu*  
+
+  Zadejte popisný název pravidla. Tento název se zobrazí v seznamu pravidel, který vám pomůže ho identifikovat.  
+
+- **Popis**  
+  **Výchozí**: *Žádný popis*  
+
+  Zadejte popis pravidla.  
+
+- **Směr**   
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
+  
+  Určete, jestli se toto pravidlo vztahuje na **příchozí**nebo **odchozí** provoz. Pokud je nastavená jako **nenakonfigurovaná**, pravidlo se automaticky použije pro odchozí přenosy.  
+
+- **Akce**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*za akci](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#action)a [FirewallRules/*FirewallRuleName*/Action/Type](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#type)  
+
+  Vyberte z **povolených** nebo **blokovaných**. Pokud je nastavená jako **nenakonfigurovaná**, pravidlo povolí provoz.  
+
+- **Typ sítě**  
+  **Výchozí**: Vybraná 0  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Profiles](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#profiles)  
+
+  Vyberte až tři typy sítí, do kterých toto pravidlo patří. Mezi možnosti patří **doména**, **privátní**a **Veřejná**.  Pokud nejsou vybrané žádné typy sítí, pravidlo se použije na všechny tři typy sítě.  
+
+#### <a name="application-settings"></a>Nastavení aplikací  
+
+- **Aplikace (y)**  
+  **Výchozí**: Vše  
+
+  Řízení připojení aplikace nebo programu. Vyberte jednu z následujících možností a dokončete další konfiguraci:  
+  - **Název rodiny balíčků** – zadejte název rodiny balíčků. Pokud chcete najít název řady balíčků, použijte příkaz PowerShellu **Get-AppxPackage**.   
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/PackageFamilyName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#packagefamilyname)  
+ 
+  - **Cesta k souboru** – je nutné zadat cestu k souboru aplikace v klientském zařízení, což může být absolutní cesta nebo relativní cesta. Příklad:  C:\Windows\System\Notepad.exe nebo%WINDIR%\Notepad.exe.  
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/FilePath](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#filepath)  
+
+  - **Služba systému Windows** – zadejte krátký název služby systému Windows, pokud se jedná o službu, nikoli o aplikaci, která odesílá nebo přijímá provoz. Chcete-li najít krátký název služby, použijte příkaz prostředí PowerShell **Get-Service**.  
+    CSP brány firewall: [FirewallRules/*FirewallRuleName*/App/ServiceName](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#servicename)  
+
+  - **Vše**– *k dispozici není žádná další konfigurace*.  
+
+#### <a name="ip-address-settings"></a>Nastavení IP adresy  
+
+Zadejte místní a vzdálené adresy, na které se toto pravidlo vztahuje.  
+
+- **Místní adresy**    
+  **Výchozí**: Libovolná adresa  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+
+  Vyberte **libovolnou adresu** nebo **zadanou adresu**.  
+
+  Když použijete *zadanou adresu*, přidáte jednu nebo více adres jako čárkami oddělený seznam místních adres, na které se vztahuje pravidlo. Mezi platné tokeny patří:  
+  - Pro *libovolnou* místní adresu použijte hvězdičku (*). Pokud použijete hvězdičku, musí se jednat o jediný token, který používáte.  
+  - Chcete-li určit podsíť, použijte buď masku podsítě, nebo zápis předpony sítě. Pokud není Zadaná maska podsítě ani předpona sítě, je maska podsítě standardně 255.255.255.255.  
+  - Platná adresa IPv6.  
+  - Rozsah IPv4 adres ve formátu "počáteční adresa-koncová adresa", včetně nezahrnutých mezer.  
+  - Rozsah adres IPv6 ve formátu "počáteční adresa-koncová adresa" bez zahrnutých mezer.  
+
+- **Vzdálené adresy**  
+  **Výchozí**: Libovolná adresa  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/RemoteAddressRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteaddressranges)  
+ 
+  Vyberte **libovolnou adresu** nebo **zadanou adresu**.  
+
+  Když použijete *zadanou adresu*, přidáte jednu nebo více adres jako čárkami oddělený seznam vzdálených adres, na které se vztahuje pravidlo. U tokenů se nerozlišují velká a malá písmena. Mezi platné tokeny patří:  
+  - Pro *libovolnou* vzdálenou adresu použijte hvězdičku "*". Pokud použijete hvězdičku, musí se jednat o jediný token, který používáte.  
+  - "Defaultgateway"  
+  - DANÉ  
+  - NÁZV  
+  - UDÁVANÁ  
+  - Intranet (podporuje se ve verzích Windows 1809 a novějších)  
+  - "RmtIntranet" (podporováno ve verzích Windows 1809 a novějších)  
+  - Internet (podporuje se ve verzích Windows 1809 a novějších)  
+  - "Ply2Renders" (podporováno ve verzích Windows 1809 a novějších)  
+  - "LocalSubnet" označuje jakoukoli místní adresu v místní podsíti.  
+  - Chcete-li určit podsíť, použijte buď masku podsítě, nebo zápis předpony sítě. Pokud není Zadaná maska podsítě ani předpona sítě, je maska podsítě standardně 255.255.255.255.  
+  - Platná adresa IPv6.  
+  - Rozsah IPv4 adres ve formátu "počáteční adresa-koncová adresa", včetně nezahrnutých mezer.  
+  - Rozsah adres IPv6 ve formátu "počáteční adresa-koncová adresa" bez zahrnutých mezer.  
+
+#### <a name="port-and-protocol-settings"></a>Nastavení portu a protokolu  
+Zadejte místní a vzdálené porty, na které se toto pravidlo vztahuje.  
+
+- **Protokol**  
+  **Výchozí**: Any  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/Protocol](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#protocol)  
+  Vyberte některou z následujících možností a dokončete všechny požadované konfigurace:  
+  - **Vše** – k dispozici není žádná další konfigurace.  
+  - **TCP** – konfigurace místních a vzdálených portů. Obě možnosti podporují všechny porty nebo zadané porty. Zadejte zadané porty pomocí čárkami odděleného seznamu.  
+    - **Místní porty** – zprostředkovatel kryptografických služeb brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Vzdálené porty** – zprostředkovatel kryptografických služeb brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+  - **UDP** – konfigurace místních a vzdálených portů. Obě možnosti podporují všechny porty nebo zadané porty. Zadejte zadané porty pomocí čárkami odděleného seznamu.  
+    - **Místní porty** – zprostředkovatel kryptografických služeb brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
+    - **Vzdálené porty** – zprostředkovatel kryptografických služeb brány firewall: [FirewallRules/*FirewallRuleName*/RemotePortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#remoteportranges)  
+  - **Vlastní** – zadejte číslo vlastního **protokolu** od 0 do 255.  
+
+#### <a name="advanced-configuration"></a>Pokročilá konfigurace  
+- **Typy rozhraní**  
+  **Výchozí**: Vybraná 0  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/InterfaceTypes](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#interfacetypes)  
+
+  Vyberte z následujících možností:  
+  - **Vzdálený přístup**  
+  - **Síti**  
+  - **Místní síť**  
+
+- **Povolujte jenom připojení od těchto uživatelů.**  
+  **Výchozí**: Všichni uživatelé *(výchozí pro všechna použití, pokud není zadaný žádný seznam)*  
+  CSP brány firewall: [FirewallRules/*FirewallRuleName*/LocalUserAuthorizationList](https://aka.ms/intunefirewallauthorizedusers)  
+
+  Zadejte seznam autorizovaných místních uživatelů pro toto pravidlo. Pokud se toto pravidlo vztahuje na službu systému Windows, nelze zadat seznam autorizovaných uživatelů.  
+
+
+## <a name="windows-defender-smartscreen-settings"></a>Nastavení filtru SmartScreen v programu Windows Defender  
+ 
+V zařízení musí být nainstalovaný Microsoft Edge.  
+
+- **Filtr SmartScreen pro aplikace a soubory**  
+  **Výchozí**: Není nakonfigurováno  
+   Zprostředkovatel SmartScreen: [Filtr SmartScreen/EnableSmartScreenInShell](https://go.microsoft.com/fwlink/?linkid=872784)  
+
+  - **Nenakonfigurováno** – zakáže použití filtru SmartScreen.  
+  - **Povolit** – povolit Windows SmartScreen pro provádění souborů a spouštění aplikací. SmartScreen je cloudová antiphisingová a antimalwarová vrstva ochrany.  
+
+- **Provádění neověřených souborů**  
+  **Výchozí**: Není nakonfigurováno  
+   Zprostředkovatel SmartScreen: [Filtr SmartScreen/PreventOverrideForFilesInShell](https://go.microsoft.com/fwlink/?linkid=872783)
+
+  - **Nenakonfigurováno** – zakáže tuto funkci a koncovým uživatelům umožní spouštět soubory, které nebyly ověřeny.  
+  - **Blokovat** – zabrání koncovým uživatelům spouštět soubory, které nebyly ověřeny filtrem SmartScreen systému Windows.  
+
+## <a name="windows-encryption"></a>Šifrování Windows  
+ 
+### <a name="windows-settings"></a>Nastavení systému Windows  
+
+Tato nastavení šifrování platí pro všechny verze Windows 10.  
+
+- **Šifrovat zařízení**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [RequireDeviceEncryption](https://go.microsoft.com/fwlink/?linkid=872523)  
+
+  - **Vyžadovat** – vyzvat uživatele k povolení šifrování zařízení V závislosti na edici Windows a konfiguraci systému se může od uživatelů vyžadovat:  
+    - Potvrďte, že šifrování od jiného zprostředkovatele není povolené.  
+    - Je nutné vypnout nástroj BitLocker Drive Encryption a pak znovu zapnout nástroj BitLocker.  
+  - **Není nakonfigurováno**  
+  
+  Pokud je zapnuto šifrování Windows a současně je aktivní jiná metoda šifrování, mohlo by to narušit stabilitu zařízení.  
+
+- **Šifrování paměťové karty (jenom mobilní zařízení)**  
+  *Toto nastavení platí jenom pro Windows 10 Mobile.*  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [RequireStorageCardEncryption](https://go.microsoft.com/fwlink/?linkid=872524)  
+
+  - **Vyžaduje** zašifrování jakýchkoli vyměnitelných paměťových karet používaných zařízením.  
+  - **Nenakonfigurováno** – Nevyžadovat šifrování paměťové karty a nedotazovat uživatele na jeho zapnutí.  
+
+### <a name="bitlocker-base-settings"></a>Základní nastavení BitLockeru  
+
+Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy datových jednotek. Tato nastavení určují, které úkoly šifrování jednotek nebo možnosti konfigurace může koncový uživatel upravit na všech typech datových jednotek.  
+
+- **Upozornění pro jiné šifrování disku**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [AllowWarningForOtherDiskEncryption](https://go.microsoft.com/fwlink/?linkid=872525)  
+
+  - **Blokovat** – zakáže upozornění, pokud je na zařízení jiná služba šifrování disku.  
+  - **Nenakonfigurováno** – povolí zobrazení upozornění pro další šifrování disku.  
+
+  Když se nastaví *blokování*, můžete nakonfigurovat následující nastavení:  
+
+  - **Povolit Standard uživatelům povolit šifrování během připojení ke službě Azure AD**  
+    *Toto nastavení platí jenom pro zařízení s Azure Active Directory připojená (Azure ADJ) a závisí na předchozím nastavení `Warning for other disk encryption`.*  
+    **Výchozí**: Není nakonfigurováno  
+    CSP nástroje BitLocker: [AllowStandardUserEncryption](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp#allowstandarduserencryption)
+
+     - **Povolit** – standardní uživatelé (bez správců) můžou povolit šifrování BitLockeru, když se přihlásí.  
+     - **Nenakonfigurovaní** jenom správci můžou na zařízení povolit šifrování BitLockeru.  
+
+- **Konfigurace metod šifrování**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [EncryptionMethodByDriveType](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+  - **Povolit** – nakonfigurujte algoritmy šifrování pro operační systém, data a vyměnitelné jednotky.  
+  - **Nenakonfigurováno** – BitLocker používá jako výchozí metodu šifrování XTS-AES 128 nebo používá metodu šifrování určenou jakýmkoli skriptem instalace.  
+
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
+
+  - **Šifrování pro jednotky operačního systému**  
+    **Výchozí**: XTS-AES 128-bit  
+   
+    Vyberte metodu šifrování pro jednotky operačního systému. Doporučujeme použít algoritmus XTS-AES.  
+    - **AES-CBC 128-bit**  
+    - **AES-CBC 256-bit**  
+    - **XTS-AES 128-bit**  
+    - **XTS-AES 256-bit**  
+
+  - **Šifrování pevných datových jednotek**  
+    **Výchozí**: AES-CBC 128-bit  
+   
+    Vyberte metodu šifrování pro pevné (integrované) datové jednotky. Doporučujeme použít algoritmus XTS-AES.  
+    - **AES-CBC 128-bit**  
+    - **AES-CBC 256-bit**  
+    - **XTS-AES 128-bit**  
+    - **XTS-AES 256-bit**  
+
+  - **Šifrování vyměnitelných datových jednotek**  
+    **Výchozí**: AES-CBC 128-bit  
+
+    Vyberte metodu šifrování pro vyměnitelné datové jednotky. Pokud se vyměnitelná jednotka používá se zařízeními s jiným systémem než Windows 10, doporučujeme použít algoritmus AES-CBC.  
+    - **AES-CBC 128-bit**  
+    - **AES-CBC 256-bit**  
+    - **XTS-AES 128-bit**  
+    - **XTS-AES 256-bit**  
+
+### <a name="bitlocker-os-drive-settings"></a>Nastavení BitLockeru pro jednotky s operačním systémem  
+
+Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.  
+
+- **Další ověřování při spuštění**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [SystemDrivesRequireStartupAuthentication](https://go.microsoft.com/fwlink/?linkid=872527)  
+
+  - **Vyžadovat** – nakonfigurujte požadavky na ověření pro spuštění počítače, včetně použití čipu TPM (Trusted Platform Module).  
+  - **Nenakonfigurováno – umožňuje** konfigurovat jenom základní možnosti na zařízeních s čipem TPM.  
+
+  Pokud nastavíte hodnotu *vyžadovat*, můžete nakonfigurovat následující nastavení:  
+
+  - **BitLocker s nekompatibilním čipem TPM**  
+    **Výchozí**: Není nakonfigurováno  
+
+    - **Blokovat** – zakázat použití BitLockeru v případě, že zařízení nemá kompatibilní čip TPM.  
+    - **Nenakonfigurováno** – uživatelé můžou používat BitLocker bez kompatibilního čipu TPM. BitLocker může vyžadovat heslo nebo spouštěcí klíč.  
+
+  - **Kompatibilní spuštění čipu TPM**  
+    **Výchozí**: Povolení čipu TPM  
+
+    Nakonfigurujte, jestli je čip TPM povolený, povinný, nebo není povolený.  
+
+    - **Povolení čipu TPM**  
+    - **Nepovolit čip TPM**  
+    - **Vyžadovat čip TPM**  
+
+  - **Kompatibilní spouštěcí PIN kód TPM**  
+    **Výchozí**: Povolení spouštěcího PIN kódu s čipem TPM  
+
+    Vyberte možnost povolení, nepovolení nebo vyžadování použití spouštěcího PIN kódu s čipem TPM. Povolení spouštěcího PIN kódu vyžaduje interakci koncového uživatele.  
+
+    - **Povolení spouštěcího PIN kódu s čipem TPM**  
+    - **Nepovolit spouštěcí PIN kód s čipem TPM**  
+    - **Vyžadovat spouštěcí PIN kód s čipem TPM**
+
+  - **Kompatibilní spouštěcí klíč TPM**  
+    **Výchozí**: Povolení spouštěcího klíče s čipem TPM  
+
+    Vyberte možnost povolení, nepovolení nebo vyžadování použití spouštěcího klíče s čipem TPM. Povolení spouštěcího klíče vyžaduje interakci koncového uživatele.  
+
+    - **Povolení spouštěcího klíče s čipem TPM**  
+    - **Nepovolit spouštěcí klíč s čipem TPM**  
+    - **Vyžadovat spouštěcí klíč s čipem TPM**  
+
+  - **Kompatibilní spouštěcí klíč a PIN kód TPM**  
+    **Výchozí**: Povolení spouštěcího klíče a kódu PIN pomocí TPM  
+
+    Vyberte možnost povolení, nepovolení nebo vyžadování spouštěcího klíče a kódu PIN pomocí čipu TPM. Povolení spouštěcího klíče a PIN kódu vyžaduje interakci koncového uživatele.  
+    - **Povolení spouštěcího klíče a kódu PIN pomocí TPM**  
+    - **Nepovolit spouštěcí klíč a PIN kód s čipem TPM**  
+    - **Vyžadovat spouštěcí klíč a PIN kód s čipem TPM**   
+
+- **Minimální délka PIN kódu**  
+    **Výchozí**: Není nakonfigurováno  
+    CSP nástroje BitLocker: [SystemDrivesMinimumPINLength](https://go.microsoft.com/fwlink/?linkid=872528)   
+
+    - **Povolit** Nakonfigurujte minimální délku spouštěcího PIN kódu TPM.  
+    - **Nenakonfigurováno** – uživatelé můžou nakonfigurovat spouštěcí PIN kód libovolné délky mezi 6 a 20 číslicemi.  
+
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
+
+  - **Minimální znaky**  
+    **Výchozí**: *Není nakonfigurováno* CSP nástroje BitLocker: [SystemDrivesMinimumPINLength](https://go.microsoft.com/fwlink/?linkid=872528)  
+
+    Zadejte počet znaků vyžadovaných pro spouštěcí PIN kód od **4**-**20**.  
+
+- **Obnovení jednotky operačního systému**  
+  **Výchozí**: Není nakonfigurováno   
+  CSP nástroje BitLocker: [SystemDrivesRecoveryOptions](https://go.microsoft.com/fwlink/?linkid=872529)  
+
+  - **Povolit** – určuje, jak se mají obnovit jednotky operačního systému chráněné bitlockerem, když nejsou k dispozici požadované informace pro spuštění.  
+  - **Nenakonfigurováno** – výchozí možnosti obnovení jsou podporovány pro obnovení nástroje BitLocker. Ve výchozím nastavení je povolený DRA, možnosti obnovení volí uživatel, včetně hesla pro obnovení a obnovovacího klíče, a informace o obnovení nejsou zálohovány služba AD DS.  
+
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
+
+  - **Agent obnovení dat založený na certifikátech**  
+    **Výchozí**: Není nakonfigurováno  
+     
+    - **Blok** – zabraňuje použití agenta obnovování dat s disky s operačním systémem chráněnými bitlockerem.  
+    - **Nenakonfigurováno** – povolí použití agentů obnovení dat s jednotkami operačního systému chráněnými nástrojem BitLocker.  
+
+  - **Vytváření hesla pro obnovení uživatelem**  
+    **Výchozí**: Allow 48 – heslo pro obnovení číslic  
+
+    Vyberte, jestli mají uživatelé povoleno, musí nebo nemá povoleno generovat heslo pro obnovení číslice 48.  
+    - **Allow 48 – heslo pro obnovení číslic**  
+    - **Nepovolit 48 heslo pro obnovení číslic**  
+    - **Vyžadovat heslo pro obnovení číslic 48**  
+
+  - **Vytvoření obnovovacího klíče uživatelem**  
+    **Výchozí**: Povolení 256 klíče pro obnovení  
+
+    Vyberte, jestli mají uživatelé povolené, povinné nebo Nepovolit generování 256 klíče pro obnovení.  
+    - **Povolení 256 klíče pro obnovení**  
+    - **Nepovolit 256 obnovovací klíč**  
+    - **Vyžadovat 32bitový obnovovací klíč (256)**  
+
+  - **Možnosti obnovení v Průvodci nastavením BitLockeru**  
+    **Výchozí**: Není nakonfigurováno  
+
+    - **Blokovat** – uživatelé nemůžou zobrazovat a měnit možnosti obnovení. Při nastavení na 
+    - **Nenakonfigurováno** – uživatelé můžou při zapnutí BitLockeru zobrazit a změnit možnosti obnovení. 
+ 
+  - **Uložit informace pro obnovení BitLockeru do Azure Active Directory**  
+    **Výchozí**: Není nakonfigurováno  
+
+    - **Povolit** – ukládat informace pro obnovení BitLockeru do Azure Active Directory (Azure AD).  
+    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v AAD.  
+
+  - **Informace o obnovení BitLockeru uložené do Azure Active Directory**  
+    **Výchozí**: Hesla pro obnovení záloh a balíčky klíčů  
+
+    Nakonfiguruje, které části informací pro obnovení BitLockeru se ukládají do služby Azure AD. Vybírejte z těchto možností:  
+    - **Zálohovat hesla pro obnovení a sady klíčů**  
+    - **Zálohovat jenom hesla pro obnovení**  
+
+  - **Otočení hesla pro obnovení na základě klienta**  
+    **Výchozí**: Zapnuté střídání klíčů pro zařízení připojená k Azure AD  
+    CSP nástroje BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
     
-    Pokud je zapnuto šifrování Windows a současně je aktivní jiná metoda šifrování, mohlo by to narušit stabilitu zařízení. 
-- **Šifrovat paměťovou kartou (jenom mobilní verze)**: **Vyžadovat** pro šifrování případné vyměnitelné paměťové karty použité v zařízení. **Nenakonfigurováno** (výchozí) nebude požadovat šifrování paměťových karet a nebude k tomu uživatele vyzývat. Toto nastavení platí jenom pro zařízení s Windows 10 Mobile.
+    Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-### <a name="bitlocker-base-settings"></a>Základní nastavení BitLockeru
+    - Není nakonfigurováno  
+    - Zakázané střídání klíčů  
+    - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
+    - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
 
-Podporováno v následujících edicích Windows 10:
+  - **Před povolením nástroje BitLocker ukládat informace pro obnovení do Azure Active Directory**  
+    **Výchozí**: Není nakonfigurováno  
+ 
+     Zabrání uživatelům povolit nástroj BitLocker, pokud počítač úspěšně nezálohoval informace pro obnovení BitLockeru na Azure Active Directory.  
 
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
-- Professional
+    - **Vyžadovat** – zabrání uživatelům zapnout BitLocker, pokud se informace pro obnovení BitLockeru úspěšně neuloží v Azure AD.  
+    - **Nenakonfigurováno** – uživatelé můžou zapnout BitLocker, i když se informace o obnovení úspěšně neuložily do Azure AD.  
 
-Základní nastavení jsou univerzální nastavení BitLockeru pro všechny typy datových jednotek. Tato nastavení určují, které úkoly šifrování jednotek nebo možnosti konfigurace může koncový uživatel upravit na všech typech datových jednotek.
+- **Zpráva o obnovení před spuštěním a adresa URL**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [SystemDrivesRecoveryMessage](https://go.microsoft.com/fwlink/?linkid=872530)  
 
-- **Upozornění pro další šifrování disku**: Vyberte **bloku** zakázat tato výzva s upozorněním, pokud jiná služba šifrování disku je v zařízení. **Nenakonfigurováno** (výchozí) zobrazení upozornění povolí.
-    - **Standardní uživatelé k povolení šifrování během připojení ke službě Azure AD povolit**: Pokud zvolíte **povolit**, standardní uživatelé/bez oprávnění správce můžete povolit šifrování nástrojem BitLocker, pokud uživatel je přihlášený. Toto nastavení platí jenom pro Azure Active Directory zařízení připojená k (přídavné jméno Azure). **Není nakonfigurováno** pouze správcům umožňuje povolit nástroj BitLocker šifrování na zařízení.
-      
-      Toto nastavení platí jenom pro Azure Active Directory zařízení připojená k (přídavné jméno Azure). Také vyžaduje, aby **upozornění pro další šifrování disku** nastavení **bloku**.
-- **Konfigurovat metody šifrování**: **Povolit** toto nastavení umožní konfiguraci algoritmů šifrování operačního systému, dat a vyměnitelných jednotek. **Nenakonfigurováno** (výchozí) znamená, že BitLocker používá jako výchozí metodu šifrování XTS-AES 128 bit nebo používá metodu šifrování určenou skriptem instalace.
-  - **Šifrování pro operační systém jednotek**: Zvolte metodu šifrování pro jednotky s operačním systémem. Doporučujeme použít algoritmus XTS-AES.
-  - **Šifrování pevných datových jednotek**: Zvolte metodu šifrování pro pevné (vestavěné) datové jednotky. Doporučujeme použít algoritmus XTS-AES.
-  - **Šifrování pro vyměnitelné datové jednotky**: Vyberte metodu šifrování pro vyměnitelné datové jednotky. Pokud se vyměnitelná jednotka používá se zařízeními s jiným systémem než Windows 10, doporučujeme použít algoritmus AES-CBC.
+  - **Povolit** – nakonfigurujte zprávu a adresu URL, které se zobrazí na obrazovce pro obnovení klíče před spuštěním.  
+  - **Nenakonfigurováno** – zakažte tuto funkci.  
+  
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
+  - **Zpráva o obnovení před spuštěním**  
+    **Výchozí**: Použít výchozí zprávu a adresu URL pro obnovení   
+ 
+    Nakonfigurujte způsob zobrazení zprávy pro obnovení před spuštěním pro uživatele. Vybírejte z těchto možností:  
+    - **Použít výchozí zprávu a adresu URL pro obnovení**  
+    - **Použít prázdnou zprávu a adresu URL pro obnovení**  
+    - **Použít vlastní zprávu o obnovení**  
+    - **Použít vlastní adresu URL pro obnovení**  
 
-### <a name="bitlocker-os-drive-settings"></a>Nastavení BitLockeru pro jednotky s operačním systémem
-Podporováno v následujících edicích Windows 10:
+### <a name="bitlocker-fixed-data-drive-settings"></a>Nastavení nástroje BitLocker pro pevné datové jednotky  
 
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
-- Professional
+Tato nastavení platí konkrétně pro pevné datové jednotky.  
 
-Tato nastavení platí konkrétně pro datové jednotky s operačním systémem.
+- **Přístup pro zápis na pevné datové jednotky, které nechrání BitLocker**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [FixedDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872534)  
 
-- **Další ověření při spuštění**: Vyberte **vyžadují** konfigurovat požadavky na ověřování pro spuštění počítače, včetně využití čipu TPM z Trusted Platform Module (TPM). **Nenakonfigurováno** (výchozí) na zařízeních s TPM konfiguruje pouze základní možnosti.
-  - **Nástroj BitLocker pomocí čipu TPM nekompatibilní**: **Blok** (zakázat) pomocí nástroje BitLocker, pokud zařízení nemá kompatibilního čipu TPM. **Nenakonfigurováno** (výchozí) umožní uživatelům používat BitLocker bez kompatibilního čipu TPM. BitLocker může vyžadovat heslo nebo spouštěcí klíč.
-  - **Kompatibilní spouštění s čipem TPM**: Zvolte povolit, nechcete povolit nebo vyžadují čipu TPM.
-  - **Kompatibilní spouštěcí PIN kód TPM**: Zvolte povolit, nechcete povolit nebo vyžadují použití spouštěcího PIN kódu u čipu TPM. Povolení spouštěcího PIN kódu vyžaduje interakci koncového uživatele. 
-  - **Kompatibilní spouštěcí klíč TPM**: Zvolte povolit, aby nebo vyžadují použití spouštěcího klíče u čipu TPM. Povolení spouštěcího klíče vyžaduje interakci koncového uživatele. 
-  - **Kompatibilní spouštěcí klíč TPM a PIN kód**: Zvolte povolit, aby nebo vyžadují použití spouštěcího klíče a PIN kódu u čipu TPM. Povolení spouštěcího klíče a PIN kódu vyžaduje interakci koncového uživatele.
-- **Minimální délka kódu PIN**: **Povolit** tohoto nastavení můžete konfigurovat minimální délku pro spouštěcí PIN kód TPM. **Nenakonfigurováno** (výchozí) umožní uživatelům nakonfigurovat spouštěcí PIN kód s libovolnou délkou v rozmezí od 6 do 20 číslic.
-  - **Minimální počet znaků**: Zadejte počet znaků vyžadovaný pro spouštěcí PIN kód z **4**-**20**.
-- **Obnovení jednotky s operačním systémem**: **Povolit** tohoto nastavení můžete řídit operačním systémem chráněných Bitlockerem jednotek obnovení, když není k dispozici požadované informace. **Nenakonfigurováno** (výchozí) podporuje výchozí možnosti obnovení pomocí nástroje BitLocker. Ve výchozím nastavení je povolen DRA, možnosti obnovení je možné zvolit uživatelem, včetně heslo pro obnovení a obnovovací klíč, a informace pro obnovení není zálohovány do služby AD DS.
-  - **Agent obnovení dat na základě certifikátů**: Pokud je nastavena na **bloku**, agent obnovení dat nelze použít s jednotkami operačního systému chráněné nástrojem BitLocker. **Nenakonfigurováno** (výchozí) použití agentů obnovení dat u jednotek s operačním systémem chráněných BitLockerem povolí.
-  - **Vytváření hesla pro obnovení uživatelem**: Zvolte, pokud uživatelé jsou povolené, vyžaduje nebo nesmí generovat 48místné obnovení hesla.
-  - **Vytváření obnovovacího klíče uživatelem**: Zvolte, pokud uživatelé jsou povolené, vyžaduje nebo nesmí generovat 256bitový obnovovací klíč.
-  - **Možnosti obnovení v Průvodci nastavením Bitlockeru**: Nastavte na **bloku** tak uživatelů nelze zobrazit a změnit možnosti obnovení. **Nenakonfigurováno** (výchozí) umožní uživatelům po spuštění BitLockeru zobrazovat a měnit možnosti obnovení.
-  - **Ukládání informací pro obnovení Bitlockeru do služby AD DS**: Zvolte **povolit** k ukládání informací pro obnovení Bitlockeru do Azure Active Directory (AAD). **Nenakonfigurováno** (výchozí) ukládat informace pro obnovení BitLockeru do služby AAD nebude.
-  - **Uložit do služby AD DS informace Bitlockeru o obnově**: Konfigurace, které části informací Bitlockeru o obnově se ukládají ve službě Azure AD. Vybírejte z těchto možností:
-    - **Zálohovat hesla pro obnovení a sady klíčů**
-    - **Zálohovat jenom hesla pro obnovení**
-  - **Store informace o obnově v AD DS před povolením Bitlockeru**: **Vyžadovat** tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud informace Bitlockeru o obnově se úspěšně uložené v Azure Active Directory (AD). **Není nakonfigurováno** (výchozí) umožňuje uživatelům k zapnutí nástroje BitLocker, i v případě, že informace o obnovení nejsou úspěšně uloženy ve službě Azure AD.
-- **Zpráva o obnově a adresa URL před spuštěním**: **Povolit** tohoto nastavení můžete konfigurovat zprávu a adresu URL, která se zobrazí na obrazovce pro obnovení klíče před spuštěním. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
-  - **Zpráva o obnovení před spuštěním**: Nakonfigurujte, jak zprávu o obnovení před spuštěním zobrazí uživatelům. Vybírejte z těchto možností:
-    - **Použít výchozí zprávu a adresu URL pro obnovení**
-    - **Použít prázdnou zprávu a adresu URL pro obnovení**
-    - **Použít vlastní zprávu o obnovení**
-    - **Použít vlastní adresu URL pro obnovení**
+  - **Block** – udělte přístup jen pro čtení k datovým jednotkám, které nejsou chráněné bitlockerem.  
+  - **Nenakonfigurováno** – ve výchozím nastavení se jedná o přístup pro čtení a zápis k datovým jednotkám, které nejsou šifrované.  
 
-### <a name="bitlocker-fixed-data-drive-settings"></a>Nastavení nástroje BitLocker pro pevné datové jednotky
+- **Obnovení pevného disku**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [FixedDrivesRecoveryOptions](https://go.microsoft.com/fwlink/?linkid=872538)  
 
-Podporováno v následujících edicích Windows 10:
+  - **Povolit** – určuje, jak se obnovují pevné jednotky chráněné bitlockerem, když nejsou k dispozici požadované informace pro spuštění.  
+  - **Nenakonfigurováno** – zakažte tuto funkci.  
 
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
-- Professional
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
 
-**Nastavení**:
+  - **Agent obnovování dat**  
+    **Výchozí**: Není nakonfigurováno  
+ 
+    - **Blok** – zabraňuje použití agenta obnovování dat s pevnými jednotkami chráněnými nástrojem BitLocker. 
+    - **Nenakonfigurováno** – povolí použití agentů obnovení dat s pevnými jednotkami chráněnými bitlockerem.  
 
-- **Přístup pro zápis na pevné datové jednotky, které nechrání BitLocker**: Nastavte na **bloku** dát přístup jen pro čtení datové jednotky, které nejsou chráněné Bitlockerem. Když **Nenakonfigurováno** (výchozí), existuje pro čtení a zápis do datových jednotek, které nejsou chráněné Bitlockerem.
-- **Obnovení pevného disku**: **Povolit** toto nastavení, můžete řídit způsob, jakým obnovení pevných jednotek chráněných Bitlockerem, když není k dispozici požadované informace. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
-  - **Agent obnovení dat**: **Blok** použití agenta obnovení dat pomocí chráněných Bitlockerem pevných jednotek editoru zásad. **Nenakonfigurováno** (výchozí) použití agentů obnovení dat u pevných jednotek chráněných BitLockerem povolí.
-  - **Vytváření hesla pro obnovení uživatelem**: Nakonfigurujte, jestli uživatelé jsou povolené, vyžaduje nebo nesmí generovat 48místné obnovení hesla.  
-  - **Vytváření obnovovacího klíče uživatelem**: Nakonfigurujte, jestli uživatelé jsou povolené, vyžaduje nebo nesmí generovat 256bitový obnovovací klíč.
-  - **Možnosti obnovení v Průvodci nastavením Bitlockeru**: Nastavte na **bloku** tak uživatelů nelze zobrazit a změnit možnosti obnovení. **Nenakonfigurováno** (výchozí) umožní uživatelům po spuštění BitLockeru zobrazovat a měnit možnosti obnovení.
-  - **Ukládání informací pro obnovení Bitlockeru do služby Azure Active Directory**: Zvolte **povolit** k ukládání informací pro obnovení Bitlockeru ve službě Azure Active Directory (Azure AD). Když **Nenakonfigurováno** (výchozí), informace o obnovení nejsou uloženy ve službě Azure AD.
-  - **Uložit do služby Azure Active Directory informace Bitlockeru o obnově**: Konfigurace, které části informací Bitlockeru o obnově se ukládají ve službě Azure AD. Možnosti:
-    - **Zálohovat hesla pro obnovení a sady klíčů**
-    - **Zálohovat jenom hesla pro obnovení**
-  - **Store informace pro obnovení v Azure Active Directory před povolením Bitlockeru**: **Vyžadovat** tohoto nastavení zabráníte uživatelům, aby zapínali BitLocker, pokud informace Bitlockeru o obnově se úspěšně uložené ve službě Azure AD. **Není nakonfigurováno** (výchozí) umožňuje uživatelům k zapnutí nástroje BitLocker, i v případě, že informace o obnovení nejsou úspěšně uloženy ve službě Azure AD.
+  - **Vytváření hesla pro obnovení uživatelem**  
+    **Výchozí**: Allow 48 – heslo pro obnovení číslic  
 
-### <a name="bitlocker-removable-data-drive-settings"></a>Nastavení nástroje BitLocker pro vyměnitelné datové jednotky
+    Vyberte, jestli mají uživatelé povoleno, musí nebo nemá povoleno generovat heslo pro obnovení číslice 48.  
+    - **Allow 48 – heslo pro obnovení číslic**  
+    - **Nepovolit 48 heslo pro obnovení číslic**  
+    - **Vyžadovat heslo pro obnovení číslic 48**  
 
-Podporováno v následujících edicích Windows 10:
+  - **Vytvoření obnovovacího klíče uživatelem**  
+    **Výchozí**: Povolení 256 klíče pro obnovení
 
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
-- Professional
+    Vyberte, jestli mají uživatelé povolené, povinné nebo Nepovolit generování 256 klíče pro obnovení.
+    - **Povolení 256 klíče pro obnovení**  
+    - **Nepovolit 256 obnovovací klíč**  
+    - **Vyžadovat 32bitový obnovovací klíč (256)**  
 
-**Nastavení**:
+  - **Možnosti obnovení v Průvodci nastavením BitLockeru**  
+    **Výchozí**: Není nakonfigurováno  
 
-- **Přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker**: Nastavte na **bloku** dát přístup jen pro čtení datové jednotky, které nejsou chráněné Bitlockerem. Když **Nenakonfigurováno** (výchozí), existuje pro čtení a zápis do datových jednotek, které nejsou chráněné Bitlockerem.
-  - **Přístup pro zápis na zařízení nakonfigurovaná jinou organizací**: **Blok** umožňuje přístup pro zápis na zařízení nakonfigurovaná jinou organizací. **Nenakonfigurováno** (výchozí) zápis neumožní.
+    - **Blokovat** – uživatelé nemůžou zobrazovat a měnit možnosti obnovení. Při nastavení na 
+    - **Nenakonfigurováno** – uživatelé můžou při zapnutí BitLockeru zobrazit a změnit možnosti obnovení.
+ 
+  - **Uložit informace pro obnovení BitLockeru do Azure Active Directory**  
+    **Výchozí**: Není nakonfigurováno  
 
-## <a name="windows-defender-exploit-guard"></a>Ochrana Exploit Guard v programu Windows Defender
+    - **Povolit** – ukládat informace pro obnovení BitLockeru do Azure Active Directory (Azure AD).  
+    - **Nenakonfigurováno** – informace pro obnovení nástroje BitLocker nejsou uloženy v AAD.
 
-Podporováno v následujících edicích Windows 10:
+  - **Informace o obnovení BitLockeru uložené do Azure Active Directory**  
+    **Výchozí**: Hesla pro obnovení záloh a balíčky klíčů  
 
-- Domů
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+    Nakonfiguruje, které části informací pro obnovení BitLockeru se ukládají do služby Azure AD. Vybírejte z těchto možností:  
+    - **Zálohovat hesla pro obnovení a sady klíčů**  
+    - **Zálohovat jenom hesla pro obnovení**  
 
-[Ochrana Exploit Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) se používá ke správě a omezení možností útoku na aplikace, které používají vaši zaměstnanci.
+  - **Otočení hesla pro obnovení na základě klienta**  
+    **Výchozí**: Zapnuté střídání klíčů pro zařízení připojená k Azure AD  
+    CSP nástroje BitLocker: [ConfigureRecoveryPasswordRotation](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp)  
+    
+    Toto nastavení inicializuje otočení hesla pro obnovení na základě klienta po obnovení jednotky operačního systému (buď pomocí programu Bootmgr nebo WinRE).  
 
-### <a name="attack-surface-reduction"></a>Omezení možností útoku
+    - Není nakonfigurováno  
+    - Zakázané střídání klíčů  
+    - Rotace klíčů povolená pro dedivizi připojenou ke službě Azure AD  
+    - Zapnuté střídání klíčů pro Azure AD a zařízení připojená k hybridnímu připojení  
 
-- **Označit zcizování přihlašovacích údajů ze subsystému místního úřadu zabezpečení Windows**
+  - **Před povolením nástroje BitLocker ukládat informace pro obnovení do Azure Active Directory**  
+    **Výchozí**: Není nakonfigurováno  
+ 
+    Zabrání uživatelům povolit nástroj BitLocker, pokud počítač úspěšně nezálohoval informace pro obnovení BitLockeru na Azure Active Directory.  
 
-  Používejte [ochranu před akcemi a aplikacemi](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard), které obvykle využívá malware s cílem zneužití a nakažení počítačů.
+    - **Vyžadovat** – zabrání uživatelům zapnout BitLocker, pokud se informace pro obnovení BitLockeru úspěšně neuloží v Azure AD.  
+    - **Nenakonfigurováno** – uživatelé můžou zapnout BitLocker, i když se informace o obnovení úspěšně neuložily do Azure AD.  
 
-#### <a name="rules-to-prevent-office-macro-threats"></a>Pravidla pro ochranu před hrozbami od maker Office
+### <a name="bitlocker-removable-data-drive-settings"></a>Nastavení nástroje BitLocker pro vyměnitelné datové jednotky  
 
-Aplikacím Office zablokujte provádění následujících akcí:
+Tato nastavení platí konkrétně pro vyměnitelné datové jednotky.  
 
-- **Injektáž aplikací Office do jiných procesů (bez výjimek)**
-- **Aplikace a makra Office vytvářející spustitelný obsah**
-- **Aplikace Office spouštějící podřízené procesy**
-- **Importy Win32 z kódu maker v Office**
+- **Přístup pro zápis na vyměnitelné datové jednotky, které nechrání BitLocker**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP nástroje BitLocker: [RemovableDrivesRequireEncryption](https://go.microsoft.com/fwlink/?linkid=872540)  
 
-#### <a name="rules-to-prevent-script-threats"></a>Pravidla pro ochranu před hrozbami od skriptů
+  - **Block** – udělte přístup jen pro čtení k datovým jednotkám, které nejsou chráněné bitlockerem.  
+  - **Nenakonfigurováno** – ve výchozím nastavení se jedná o přístup pro čtení a zápis k datovým jednotkám, které nejsou šifrované.  
 
-Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:
+  Když nastavíte možnost *Povolit*, můžete nakonfigurovat následující nastavení:  
 
-- **Obfuskovaný kód js, vbs, ps nebo makra**
-- **Skripty js a vbs spouštějící datovou část staženou z internetu (bez výjimek)**
-- **Vytváření procesů z příkazů PSExec a WMI**
-- **Nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB**
-- **Spustitelné soubory, které nesplňují kritéria četnosti, stáří nebo seznamu důvěryhodných souborů**
+  - **Přístup pro zápis do zařízení nakonfigurovaných v jiné organizaci**  
+    **Výchozí**: Není nakonfigurováno  
 
-#### <a name="rules-to-prevent-email-threats"></a>Pravidla pro ochranu před e-mailovými hrozbami
+    - **Blok** – zablokuje přístup k zápisu do zařízení nakonfigurovaných v jiné organizaci.  
+    - **Nenakonfigurováno** – zamítnout přístup pro zápis.  
+ 
+## <a name="windows-defender-exploit-guard"></a>Ochrana Exploit Guard v programu Windows Defender  
 
-Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
+[Ochrana Exploit Guard v programu Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-exploit-guard/windows-defender-exploit-guard) se používá ke správě a omezení možností útoku na aplikace, které používají vaši zaměstnanci.  
 
-- **Spuštění spustitelného obsahu (exe, dll, ps, js, vbs atd.) doručeného v e-mailu (webová pošta/poštovní klient) (bez výjimek)**
+### <a name="attack-surface-reduction"></a>Omezení možností útoku  
 
-#### <a name="rules-to-protect-against-ransomware"></a>Pravidla, která chrání před ransomwarem
-- **Rozšířená ochrana před ransomwarem**
+Informace o pravidlech pro *omezení možností útoku* najdete v tématu [omezení možností útoku pomocí programu Windows Defender zneužití Guard](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard) v dokumentaci k ochraně před zneužitím v programu Windows Defender.  
 
-> [!TIP]
-> Více podrobností o těchto pravidlech najdete v článku [Zmenšení potenciální oblasti útoku pomocí ochrany Exploit Guard v programu Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard).
+#### <a name="attack-surface-reduction-rules"></a>Pravidla pro omezení možností útoku  
+
+- **Označit zcizování přihlašovacích údajů ze subsystému místního úřadu zabezpečení Windows**  
+  **Výchozí**: Není nakonfigurováno  
+  Ochrana před zneužitím: [Pravidla pro omezení možností útoku](https://go.microsoft.com/fwlink/?linkid=874499)
+
+  Ochrana před akcemi a aplikacemi, které se obvykle používají k navýšení malwaru pro napadení malwarem.  
+  - **Není nakonfigurováno**  
+  - **Povolit** – příznak pro krádeže přihlašovacích údajů ze subsystému místního úřadu zabezpečení systému Windows (Lsass. exe).  
+  - **Jenom audit**  
+
+- **Vytváření procesů z aplikace Adobe Reader (beta verze)**  
+  **Výchozí**: Není nakonfigurováno  
+  Ochrana před zneužitím: [Pravidla pro omezení možností útoku](https://go.microsoft.com/fwlink/?linkid=853979)  
+
+  - **Není nakonfigurováno**  
+  - **Enable** – zablokuje podřízené procesy vytvořené z aplikace Adobe Reader.  
+  - **Jenom audit**  
+
+#### <a name="rules-to-prevent-office-macro-threats"></a>Pravidla pro ochranu před hrozbami od maker Office  
+
+Aplikacím Office zablokujte provádění následujících akcí:  
+
+- **Injektáž aplikací Office do jiných procesů (bez výjimek)**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872974)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje aplikacím Office vkládání do jiných procesů.  
+  - **Jenom audit**  
+
+- **Aplikace a makra Office vytvářející spustitelný obsah**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872975)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje aplikacím Office a makrům vytváření spustitelného obsahu.  
+  - **Jenom audit**  
+
+- **Aplikace Office spouštějící podřízené procesy**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872976)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje aplikacím Office spouštění podřízených procesů.  
+  - **Jenom audit**  
+  
+- **Importy Win32 z kódu maker v Office**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872977)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje importy Win32 z kódu makra v Office.  
+  - **Jenom audit**  
+  
+- **Vytváření procesů z komunikačních produktů Office**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=874499)  
+
+  - **Není nakonfigurováno**  
+  - **Enable** – zablokuje vytváření podřízeného procesu z aplikací Office Communications.  
+  - **Jenom audit**  
+
+#### <a name="rules-to-prevent-script-threats"></a>Pravidla pro ochranu před hrozbami od skriptů  
+
+Z důvodu ochrany před hrozbami od skriptů zablokujte tyto akce:  
+
+- **Obfuskovaný kód js, vbs, ps nebo makra**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872978)    
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje všechny zakódovaná kód JS, VBS, PS nebo makra.  
+  - **Jenom audit**  
+
+- **Skripty js a vbs spouštějící datovou část staženou z internetu (bez výjimek)**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872979)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** -Block js/vbs ze spouštění datové části stažené z Internetu  
+  - **Jenom audit**  
+
+- **Vytváření procesů z příkazů PSExec a WMI**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=874500)  
+
+  - **Není nakonfigurováno**  
+  - **Blokové** vytváření procesů, které pocházejí z příkazů PsExec a WMI.  
+  
+  - **Jenom audit**  
+
+- **Nedůvěryhodné a nepodepsané procesy, které se spouštějí z USB**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=874502)    
+
+  - **Není nakonfigurováno**  
+  - **Blokuje** nedůvěryhodné a nepodepsané procesy, které se SPOUŠTĚJÍ z USB.  
+  - **Jenom audit**  
+  
+- **Spustitelné soubory, které nesplňují kritéria četnosti, stáří nebo seznamu důvěryhodných souborů**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=874503)    
+
+  - **Není nakonfigurováno**  
+  - **Blok** – zablokuje spouštění spustitelných souborů, pokud nesplňují kritéria prevalence, stáří nebo seznamu důvěryhodných souborů.  
+  - **Jenom audit**  
+
+#### <a name="rules-to-prevent-email-threats"></a>Pravidla pro ochranu před e-mailovými hrozbami  
+
+Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:  
+
+- **Spuštění spustitelného obsahu (exe, dll, ps, js, vbs atd.) doručeného v e-mailu (webová pošta/poštovní klient) (bez výjimek)**  
+  **Výchozí**: Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=872980)  
+
+  - **Není nakonfigurováno**  
+  - **Blok** -blokovat spuštění spustitelného obsahu (exe, DLL, PS, js, VBS atd.) vyřazeného z e-mailu (webová pošta/pošta – klient).  
+  - **Jenom audit**  
+
+#### <a name="rules-to-protect-against-ransomware"></a>Pravidla, která chrání před ransomwarem  
+
+- **Rozšířená ochrana před ransomwarem**  
+  Výchozí  Není nakonfigurováno  
+  [Dokumentace ochrany před zneužitím](https://go.microsoft.com/fwlink/?linkid=874504)  
+
+  - **Není nakonfigurováno**  
+  - **Povolit** – používejte agresivní ransomwarem ochranu.  
+  - **Jenom audit**  
 
 #### <a name="attack-surface-reduction-exceptions"></a>Výjimky pro omezení možností útoku
 
-- **Soubory a složky, které chcete vyloučit z útoku pravidel pro omezení možností**: Naimportovat nebo přidáte seznam umístění, které chcete vyloučit z nakonfigurovaných pravidel.
+- **Soubory a složky, které se mají vyloučit z pravidel pro omezení možností útoku**  
+  CSP pro Defender: [AttackSurfaceReductionOnlyExclusions](https://go.microsoft.com/fwlink/?linkid=872981)  
 
-> [!IMPORTANT]
-> Povolit správné instalace a spuštění aplikace LOB Win32, by měl nastavení anti-malware vyloučení se má zkontrolovat následující adresáře:<p>
-> **Na X64 klientské počítače**:<br>
-> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*<br>
-> *C:\windows\IMECache*
+  - **Importujte** soubor. csv, který obsahuje soubory a složky, které se mají vyloučit z pravidel pro omezení možností útoku.  
+  - **Přidejte** místní soubory nebo složky ručně.  
+
+> [!IMPORTANT]  
+> Aby bylo možné správně nainstalovat a spustit aplikace pro obchodní prostředí Win32, nastavení antimalwarového programu by mělo vyloučit následující adresáře, aby byly prohledávány:  
+> **Na klientských počítačích x64**:  
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*  
+> *C:\windows\IMECache*  
 >  
-> **Na X86 klientské počítače**:<br>
-> *C:\Program Files\Microsoft Intune Management Extension\Content*<br>
-> *C:\windows\IMECache*
+> **Na klientských počítačích x86**:  
+> *C:\Program Files\Microsoft Intune Management Extension\Content*  
+> *C:\windows\IMECache*  
 
-### <a name="controlled-folder-access"></a>Řízený přístup ke složkám
+### <a name="controlled-folder-access"></a>Řízený přístup ke složkám  
 
-Chraňte cenná data před škodlivými aplikacemi a hrozbami, jako je například ransomware.
+[Chraňte cenná data](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/controlled-folders-exploit-guard) před škodlivými aplikacemi a hrozbami, jako je například ransomwarem.  
 
-- **Ochrana složek**: Chraňte soubory a složky před nežádoucími změnami škodlivých aplikací. Můžete naimportovat **seznam aplikací, které mají přístup do chráněných složek**, nebo je můžete přidat ručně. Můžete také nahrát **seznam dalších složek, které mají být chráněny**, nebo je můžete přidat ručně.
+- **Ochrana složky**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP pro Defender: [EnableControlledFolderAccess](https://go.microsoft.com/fwlink/?linkid=872614)  
 
-### <a name="network-filtering"></a>Filtrování sítě
+  Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.  
 
-- **Ochrana sítě**: Odchozí připojení z libovolné aplikace chrání špatnou reputací IP adresy nebo domény. Cílem je k ochraně koncových uživatelů z aplikací s přístupem k podvodných, servery hostující zneužití a škodlivý obsah na Internetu. Také brání prohlížeče třetích stran v připojení k nebezpečné weby.
+  - **Není nakonfigurováno**  
+  - **Aby**  
+  - **Jenom audit**  
+  - **Zablokovat úpravu disku**  
+  - **Auditovat úpravu disku**  
 
-  Možnosti:
+  Když vyberete jinou konfiguraci než *nenakonfigurovanou*, můžete nakonfigurovat:  
+  - **Seznam aplikací, které mají přístup k chráněným složkám**  
+    CSP pro Defender: [ControlledFolderAccessAllowedApplications](https://go.microsoft.com/fwlink/?linkid=872616)  
 
-  - **Nenakonfigurováno** (výchozí) tuto funkci zakáže. Uživatelé a aplikace nejsou blokované bránily v připojení k doménám nebezpečné. Správci neuvidí této aktivity ve službě Windows Defender Security Center.
-  - **Povolit** zapne ochranu sítě a bloky uživatelů a aplikací v připojení k doménám nebezpečné. Správci mohou zobrazit tuto aktivitu ve službě Windows Defender Security Center.
-  - **Pouze audit**: Uživatelé a aplikace nejsou blokované bránily v připojení k doménám nebezpečné. Správci mohou zobrazit tuto aktivitu ve službě Windows Defender Security Center.
+    - **Importujte** soubor. csv, který obsahuje seznam aplikací.  
+    - Do tohoto seznamu **přidejte** aplikace ručně.  
 
-  [Defender/EnableNetworkProtection CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
+  - **Seznam dalších složek, které je třeba chránit**  
+    CSP pro Defender: [ControlledFolderAccessProtectedFolders](https://go.microsoft.com/fwlink/?linkid=872617)  
 
-### <a name="exploit-protection"></a>Ochrana Exploit Protection
+    - **Importujte** soubor. csv, který obsahuje seznam složek.  
+    - Do tohoto seznamu **přidejte** složky ručně.  
 
-Pokud chcete používat ochranu před zneužitím, vytvořte soubor XML, který obsahuje nastavení zmírňování systém a aplikace, potřebujete. Existují dvě metody:
+### <a name="network-filtering"></a>Filtrování sítě  
 
- 1. PowerShell: Pomocí jedné nebo více rutin Get-ProcessMitigation, Set-ProcessMitigation a ConvertTo-ProcessMitigationPolicy Powershellu. Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.
+Blokuje odchozí připojení z libovolné aplikace na IP adresy nebo domény s nízkými Reputacemi. Filtrování sítě je podporováno v režimu auditu i blokování.  
 
- 2. Uživatelské rozhraní centra zabezpečení Windows Defender: Ve službě Windows Defender Security Center klikněte na ovládací prvek aplikace a prohlížeč a posuňte se dolů zobrazenou obrazovku na najdete ochranu Exploit Protection. Nejprve nakonfigurujte nastavení zmírňování na kartách Nastavení systému a Nastavení programů. Pak ve spodní části obrazovky najděte odkaz Exportovat nastavení a exportujte reprezentaci daného nastavení v jazyce XML.
+- **Ochrana sítě**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP pro Defender: [EnableNetworkProtection](https://go.microsoft.com/fwlink/?linkid=872618)  
 
-Můžete zablokovat **úpravy rozhraní ochrany Exploit Protection provedené uživatelem** tak, že nahrajete soubor XML umožňující konfiguraci omezení paměti, toku řízení a zásad. Nastavení v souboru XML se dají použít k ochraně aplikace před zneužitím. **Nenakonfigurováno** (výchozí) neumožní odeslání vlastní konfigurace. 
+  Záměrem tohoto nastavení je chránit koncové uživatele před aplikacemi s přístupem k podvodným podvodům, webům pro zneužití a škodlivým obsahem na internetu. Zabraňuje také prohlížečům třetích stran v připojení k nebezpečným webům.  
 
-## <a name="windows-defender-application-control"></a>Řízení aplikací programu Windows Defender
+  - **Nenakonfigurováno** – zakažte tuto funkci. Uživatelům a aplikacím není zablokováno připojení k nebezpečným doménám. Správci nevidí tuto aktivitu v programu Windows Defender Security Center.  
+  - **Povolit** – zapnout ochranu sítě a zablokovat uživatelům a aplikacím připojení k nebezpečným doménám. Správci mohou tuto aktivitu zobrazit v Security Center programu Windows Defender.  
+  - **Jenom audit**: – uživatelé a aplikace nejsou zablokovaným připojením k nebezpečným doménám. Správci mohou tuto aktivitu zobrazit v Security Center programu Windows Defender.  
 
-Podporováno v následujících edicích Windows 10:
+### <a name="exploit-protection"></a>Ochrana Exploit Protection  
+ 
 
-**Správa mobilních zařízení (MDM)**: 
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+- **Nahrát XML**  
+  **Výchozí**: *Není nakonfigurováno*  
 
-**Správa zásad skupiny**: 
-- Enterprise
+  Pokud chcete ochranu [zařízení před zneužitím chránit](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)pomocí ochrany před zneužitím, vytvořte soubor XML, který bude obsahovat nastavení pro omezení rizik systému a aplikací. Existují dvě metody vytvoření souboru XML:  
 
-Pomocí **zásad integrity kódu pro řízení aplikací** zvolte další aplikace, které se budou auditovat pomocí Řízení aplikací v programu Windows Defender nebo které tento nástroj může považovat za důvěryhodné, aby bylo možné povolit jejich spuštění. Součásti systému Windows a všechny aplikace z obchodu Windows Store se za důvěryhodné považují automaticky.
+  - *PowerShell* – použijte jednu nebo více rutin PowerShellu *Get-ProcessMitigation*, *set-ProcessMitigation*a *ConvertTo-powershellových processmitigationpolicy* . Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.  
 
-Aplikace spuštěné v režimu **Pouze audit** nejsou blokované. Režim **Pouze audit** zapisuje všechny události do protokolů místního klienta.
+  - *Windows defender Security Center uživatelské rozhraní* : v Security Center Windows Defenderu klikněte na aplikace & řízení prohlížeče a potom se posuňte k dolnímu okraji výsledné obrazovky a najděte ochranu před zneužitím. Nejprve nakonfigurujte nastavení zmírňování na kartách Nastavení systému a Nastavení programů. Pak ve spodní části obrazovky najděte odkaz Exportovat nastavení a exportujte reprezentaci daného nastavení v jazyce XML.  
 
-Po aktivaci se dá řízení aplikací deaktivovat jenom změnou režimu z **Vynutit** na **Pouze audit**. Změna režimu z **Vynutit** na **Nenakonfigurováno** způsobí, že řízení aplikací se na přiřazených zařízeních bude dále vynucovat.
+- **Uživatel upravující rozhraní ochrany před zneužitím**  
+  **Výchozí**: Není nakonfigurováno  
+  ExploitGuard CSP: [ExploitProtectionSettings](https://go.microsoft.com/fwlink/?linkid=872887)  
 
-## <a name="windows-defender-credential-guard"></a>Ochrana Credential Guard v programu Windows Defender
 
-Podporováno v následujících edicích Windows 10:
+  - **Blokovat** – nahrání souboru XML, který umožňuje konfiguraci omezení paměti, toku řízení a zásad. Nastavení v souboru XML se dají použít k ochraně aplikace před zneužitím.  
+  - **Nenakonfigurováno** – nepoužívá se žádná vlastní konfigurace.  
 
-- Enterprise
+## <a name="windows-defender-application-control"></a>Řízení aplikací programu Windows Defender  
 
-Ochrana Credential Guard v programu Windows Defender chrání před útoky zaměřenými na krádež přihlašovacích údajů. Izoluje tajné kódy, aby k nim měl přístup jenom privilegovaný software systému.
+Vyberte další aplikace, které musí být buď auditovány, nebo mohou být důvěryhodné pro spuštění pomocí řízení aplikací v programu Windows Defender. Součásti systému Windows a všechny aplikace z obchodu Windows Store se za důvěryhodné považují automaticky.  
 
-Nastavení ochrany **Credential Guard** zahrnuje:
 
-- **Zakázat**: Credential Guard vzdáleně vypne, pokud to byla dříve zapnutá pomocí **povoleno bez zámku UEFI** možnost.
+- **Zásady integrity kódu pro řízení aplikací**  
+  **Výchozí**: Není nakonfigurováno  
+   CSP: [CSP pro AppLocker](https://go.microsoft.com/fwlink/?linkid=874543)  
 
-- **Povolit se zámkem UEFI**: Credential Guard nelze vzdáleně zakázat pomocí klíče registru nebo zásad skupiny.
+  - **Vynutilo** – vyberte zásady integrity kódu pro řízení aplikací pro vaše uživatelská zařízení.  
+  
+    Po povolení na zařízení je možné řízení aplikací zakázat jenom změnou režimu z *vyhovět* na *jenom audit*. Změna režimu z *Vynutit* na *Nenakonfigurováno* způsobí, že řízení aplikací se na přiřazených zařízeních bude dále vynucovat.  
+
+  - **Nenakonfigurováno** – řízení aplikací není přidáno do zařízení. Nastavení, která byla dříve přidána, se však budou na přiřazených zařízeních nadále vymáhat. 
+ 
+  - **Jenom audit** – aplikace nejsou blokované. Všechny události se zaznamenávají do protokolů místního klienta.  
+
+## <a name="windows-defender-credential-guard"></a>Ochrana Credential Guard v programu Windows Defender  
+
+Ochrana Credential Guard v programu Windows Defender chrání před útoky zaměřenými na krádež přihlašovacích údajů. Izoluje tajné kódy, aby k nim měl přístup jenom privilegovaný software systému.  
+
+- **Credential Guard**  
+  **Výchozí**: Zakázat  
+  [DeviceGuard CSP](https://go.microsoft.com/fwlink/?linkid=872424)  
+
+  - **Disable** – vypněte ochranu Credential Guard vzdáleně, pokud byla dříve zapnutá s možností **Povolit bez zámku UEFI** .  
+
+  - **Povolit s rozhraním UEFI Lock** – ochranu přihlašovacích údajů nelze vzdáleně zakázat pomocí klíče registru nebo zásad skupiny.  
 
     > [!NOTE]
-    > Pokud toto nastavení použijete a chcete ochranu Credential Guard později zakázat, musíte nastavit zásady skupiny na **Zakázáno**. Musíte také fyzicky vymazat informace o konfiguraci UEFI z jednotlivých počítačů. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.
+    > Pokud toto nastavení použijete a chcete ochranu Credential Guard později zakázat, musíte nastavit zásady skupiny na **Zakázáno**. Musíte také fyzicky vymazat informace o konfiguraci UEFI z jednotlivých počítačů. Dokud je uložená konfigurace UEFI, je povolená i ochrana přihlašovacích údajů Credential Guard.  
 
-- **Povolit bez zámku UEFI**: Umožňuje Credential Guard vzdálené zakázání pomocí zásad skupiny. Na zařízeních s tímto nastavením musí běžet Windows 10 verze 1511 a novější.
+  - **Povolit bez zámku UEFI** – umožní vzdálené vypnutí ochrany přihlašovacích údajů pomocí Zásady skupiny. Na zařízeních s tímto nastavením musí běžet Windows 10 verze 1511 a novější.  
 
-Pokud povolíte ochranu Credential Guard, jsou povolené také tyto požadované funkce:
+  Pokud *povolíte* ochranu Credential Guard, jsou povolené taky tyto povinné funkce:  
+  
+  - **Zabezpečení založené na virtualizaci** VBS  
+    Zapne při příštím restartování. Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.  
+  - **Zabezpečené spouštění s přístupem ke službě Directory Memory**  
+    Zapne VBS s zabezpečeným spouštěním a chráněným přímým přístupem do paměti (DMA). Ochrany DMA vyžadují hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních.  
 
-- **Zabezpečení na základě virtualizace** (VBS): Zapne se při příštím restartování počítače. Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.
-- **Zabezpečené spouštění s přístupem do paměti Directory**: Zapne VBS se zabezpečeným spouštěním a ochranu přístupu (DMA) paměti. Ochrany DMA vyžadují hardwarovou podporu a povolí se jenom na správně nakonfigurovaných zařízeních.
+## <a name="windows-defender-security-center"></a>Centrum zabezpečení v programu Windows Defender  
 
-## <a name="windows-defender-security-center"></a>Centrum zabezpečení v programu Windows Defender
+Centrum zabezpečení v programu Windows Defender funguje jako samostatná aplikace nebo proces z každé jednotlivé funkce. Zobrazuje oznámení prostřednictvím Centra akcí. Slouží jako kolekce nebo jedno místo pro zobrazení stavu a spuštění některé konfigurace pro každou z těchto funkcí. Další informace najdete v dokumentaci k programu [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).  
 
-Podporováno v následujících edicích Windows 10:
+### <a name="windows-defender-security-center-app-and-notifications"></a>Aplikace a oznámení Centra zabezpečení v programu Windows Defender  
 
-- Domů
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-- Mobilní zařízení
-- Mobile Enterprise
+Zablokujte přístup koncových uživatelů k různým oblastem aplikace Centrum zabezpečení v programu Windows Defender. Když se skryje nějaká část, zablokují se i související oznámení.  
 
-Centrum zabezpečení v programu Windows Defender funguje jako samostatná aplikace nebo proces z každé jednotlivé funkce. Zobrazuje oznámení prostřednictvím Centra akcí. Funguje jako kolektor nebo jednotné místo, kde k zobrazení stavu a spustit některé konfigurace pro každou funkci. Další informace najdete v dokumentaci k programu [Windows Defender](https://docs.microsoft.com/windows/threat-protection/windows-defender-security-center/windows-defender-security-center).
+- **Ochrana před viry a hrozbami**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableVirusUI](https://go.microsoft.com/fwlink/?linkid=873662)  
 
-#### <a name="windows-defender-security-center-app-and-notifications"></a>Aplikace a oznámení Centra zabezpečení v programu Windows Defender
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ochrany před viry a hrozbami v Security Center programu Windows Defender. Skrytím této části se taky zablokuje všechna oznámení týkající se ochrany před viry a hrozbami.  
 
-Zablokujte přístup koncových uživatelů k různým oblastem aplikace Centrum zabezpečení v programu Windows Defender. Když se skryje nějaká část, zablokují se i související oznámení.
-
-- **Ochrana před viry a hrozbami**
-- **Výkon a stav zařízení**
-- **Firewall a ochrana sítě**
-- **Řízení aplikací a prohlížečů**
-- **Možnosti pro rodinu**
-- **Oznámení ze zobrazených oblastí aplikace**: Vyberte oznámení, která se budou zobrazovat koncovým uživatelům. Mezi nezávažná oznámení patří souhrny aktivity Antivirové ochrany v programu Windows Defender, včetně oznámení o dokončení kontrol. Všechna další oznámení se považují za závažná.
-
-#### <a name="it-contact-information"></a>Informace o kontaktu IT
-
-Zadejte kontaktní informace oddělení IT, které se zobrazí v aplikaci Security Center v programu Windows Defender a v oznámeních aplikací. Můžete zvolit možnost **Zobrazovat v aplikacích a v oznámeních**, **Zobrazovat jen v aplikaci**, **Zobrazovat jen v oznámeních** nebo **Nezobrazovat**. Zadejte **Název organizace IT** a aspoň jednu z následujících možností kontaktu:
-
-- **Telefonní číslo nebo skypové jméno oddělení IT**
-- **E-mailová adresa IT oddělení**
-- **Adresa URL webu podpory IT**
-
-## <a name="local-device-security-options"></a>Možnosti místního zabezpečení zařízení
-
-Podporováno v následujících edicích Windows 10:
- 
-- Domů
-- Professional
-- Firemní
-- Enterprise
-- Vzdělávání
-
-Pomocí těchto možností můžete konfigurovat nastavení místního zabezpečení na zařízeních s Windows 10.
-
-### <a name="accounts"></a>Účty
-
-- **Přidat nové účty Microsoft**: Nastavte na **bloku** zabránit uživatelům v přidávání nových účtů Microsoft k zařízení. **Nenakonfigurováno** (výchozí) umožní uživatelům na daném zařízení účty Microsoft používat.
-- **Vzdálené přihlášení bez hesla**: **Blok** umožňuje pouze místní účty s prázdnými hesly k přihlášení pomocí klávesnice zařízení. **Nenakonfigurováno** (výchozí) umožní místním účtům, které nejsou chráněné heslem, přihlásit se z jiných umístění než z fyzického zařízení.
-
-#### <a name="admin"></a>Správce
-
-- **Místní účet správce**: Nastavte na **povoleno** povolit účet místního správce. **Nenakonfigurováno** (výchozí) místní účet správce zakáže.
-- **Přejmenovat účet správce**: Definuje název jiný účet, který přidruží k identifikátoru zabezpečení (SID) pro účet správce.
-
-#### <a name="guest"></a>Guest
-
-- **Účet Guest**: Nastavte na **povoleno** k povolení účtu guest místní. **Nenakonfigurováno** (výchozí) místní účet Guest zakáže.
-- **Přejmenovat účet hosta**: Definuje název jiný účet, který přidruží k identifikátoru zabezpečení (SID) pro účet Guest.
-
-### <a name="devices"></a>Zařízení
-
-- **Vyjmutí z dokovací stanice bez přihlášení zařízení**: Nastavte na **bloku** tak mohou uživatelé stisknout ukotvených přenosném zařízení fyzické vysunout tlačítko bezpečně vyjmout z doku zařízení. **Nenakonfigurováno** (výchozí) bude vyžadovat přihlášení k zařízení, abyste získali oprávnění zařízení vyjmout.
-- **Instalovat ovladače tiskáren pro sdílené tiskárny**: Když **povoleno**, každý uživatel může instalovat ovladače tiskáren v rámci připojování ke sdílené tiskárně. **Nenakonfigurováno** (výchozí) umožní instalaci ovladačů tiskárny v rámci připojení ke sdílené tiskárně pouze správcům.
-- **Omezit přístup k jednotce CD-ROM na místního aktivního uživatele**: Když **povoleno**, jen interaktivně přihlášený uživatel můžete použít médiím CD-ROM. Pokud je tato zásada povolená a nikdo není interaktivně přihlášený, je možné získat k jednotce CD-ROM přístup přes síť. **Nenakonfigurováno** (výchozí) umožní přístup k jednotce CD-ROM každému.
-- **Formátovat a vysouvat vyměnitelná média**: Definujte, kdo může formátovat a vysouvat vyměnitelná média NTFS:
-  - **Není nakonfigurováno**
-  - **Správci**
-  - **Správci a členové skupiny Power Users**
-  - **Správci a interaktivní uživatelé**
-
-### <a name="interactive-logon"></a>Interaktivní přihlášení
-
-- **Minut po uzamčení obrazovky nečinnosti, dokud se aktivuje šetřič obrazovky**: Zadejte maximální počet minut nečinnosti na interaktivní relace plochy přihlašovací obrazovka, dokud se spustí šetřič obrazovky.
-- **Vyžadovat CTRL + ALT + DEL přihlášení**: Nastavte na **povolit** tak stisknutím kombinace kláves CTRL + ALT + DEL není potřeba pro uživatele k přihlášení. **Nenakonfigurováno** (výchozí) bude od uživatelů před přihlášením k systému Windows vyžadovat stisknutí CTRL + ALT + DEL.
-- **Chování při vyjmutí čipové karty**: Určuje, co se stane, když se čipová karta přihlášeného uživatele se odebere ze čtečky čipových karet. Možnosti:
-
-  - **Zamknout pracovní stanici**: Pracovní stanice uzamkne při odebrání čipové karty. Tato možnost umožňuje uživatelům opustit danou oblast, vzít si svoji čipovou kartu s sebou a přesto udržovat chráněnou relaci.
-  - **Vynutit odhlášení**: Uživatel je automaticky odhlášen při odebrání čipové karty.
-  - **Odpojit, pokud relace služby Vzdálená plocha**: Odebrání čipové karty odpojí relaci bez odhlášení uživatele. Tato možnost umožňuje uživateli později vložením čipové karty obnovit danou relaci na tomto počítači nebo na jiném počítači se čtečkou čipových karet, aniž by se musel znovu přihlašovat. Pokud je relace místní, funguje tato zásada stejně jako možnost Zamknout pracovní stanici.
-
-    Další podrobnosti nabízí [možnosti LocalPoliciesSecurity](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-smartcardremovalbehavior).
-
-#### <a name="display"></a>Zobrazit
-
-- **Informace o uživateli na zamykací obrazovce**: Nakonfigurujte informace o uživateli, který se zobrazí, když je relace uzamčena. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.
   - **Není nakonfigurováno**  
-  - **Zobrazované jméno uživatele, doména a uživatelské jméno**
-  - **Jen zobrazované jméno uživatel**
-  - **Nezobrazovat informace o uživateli**
-- **Skrýt naposledy přihlášeného uživatele**: **Povolit** skryje uživatelské jméno. **Nenakonfigurováno** (výchozí) uživatelské jméno zobrazí.
-- **Skrýt uživatelské jméno při přihlašování**: **Povolit** skryje uživatelské jméno. **Nenakonfigurováno** (výchozí) uživatelské jméno zobrazí.
-- **Nadpis zprávy přihlášení**: Nastaví nadpis zprávy pro uživatele přihlášení.
-- **Text zprávy přihlášení**: Nastavte text zprávy pro uživatele přihlášení.
+  - **Skryl**  
 
+- **Ochrana ransomwarem**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [HideRansomwareDataRecovery](https://go.microsoft.com/fwlink/?linkid=873664)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ransomwarem Protection v programu Windows Defender Security Center. Skrytím této části se taky zablokuje všechna oznámení týkající se ransomwarem Protection.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Ochrana účtu**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableAccountProtectionUI](https://go.microsoft.com/fwlink/?linkid=873666)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast ochrany účtu v Security Center programu Windows Defender. Skrytím této části se taky zablokuje všechna oznámení týkající se ochrany účtů.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Firewall a ochrana sítě**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableNetworkUI](https://go.microsoft.com/fwlink/?linkid=873668)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast brána firewall a ochrana sítě v centru zabezpečení v programu Windows Defender. Skrytím této části dojde také k blokování všech oznámení souvisejících s bránou firewall a ochranou sítě.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Řízení aplikací a prohlížečů**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableAppBrowserUI](https://go.microsoft.com/fwlink/?linkid=873669)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou v centru zabezpečení v programu Windows Defender zobrazit oblast ovládacího prvku aplikace a prohlížeče. Skrytím této části dojde také k blokování všech oznámení souvisejících s ovládacím prvkem aplikace a prohlížeče.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Hardwarová ochrana**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableDeviceSecurityUI](https://go.microsoft.com/fwlink/?linkid=873670)  
+
+  Nakonfigurujte, jestli koncoví uživatelé mohou zobrazit oblast hardwarové ochrany v Security Center programu Windows Defender. Skrytím této části dojde také k blokování všech oznámení týkajících se hardwarové ochrany.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Výkon a stav zařízení**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableHealthUI](https://go.microsoft.com/fwlink/?linkid=873671)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast výkon a stav zařízení v centru zabezpečení v programu Windows Defender. Skrytím této části dojde také k blokování všech oznámení týkajících se výkonu a stavu zařízení.  
+  
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Možnosti pro rodinu**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableFamilyUI](https://go.microsoft.com/fwlink/?linkid=873673)  
+
+  Nakonfigurujte, jestli koncoví uživatelé můžou zobrazit oblast možností řady v centru zabezpečení v programu Windows Defender. Skrytím této části budou také zablokována všechna oznámení týkající se rodinných možností.  
+  
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Oznámení ze zobrazených oblastí aplikace**  
+  **Výchozí**: Není nakonfigurováno  
+  WindowsDefenderSecurityCenter CSP: [DisableNotifications](https://go.microsoft.com/fwlink/?linkid=873675)  
+
+  Vyberte, která oznámení se mají zobrazit koncovým uživatelům. Mezi nezávažná oznámení patří souhrny aktivity Antivirové ochrany v programu Windows Defender, včetně oznámení o dokončení kontrol. Všechna další oznámení se považují za závažná.  
+
+  - **Není nakonfigurováno**  
+  - **Blokovat Nekritická oznámení**  
+  - **Blokovat všechna oznámení**  
+
+- **Ikona Security Center systému Windows na hlavním panelu systému**  
+  **Výchozí**: Není nakonfigurováno  
+
+  Nakonfigurujte zobrazení ovládacího prvku oznamovací oblasti. Aby se toto nastavení projevilo, musí se uživatel odhlásit a přihlásit nebo restartovat počítač.  
+  
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Tlačítko vymazat čip TPM**  
+  **Výchozí**: Není nakonfigurováno  
+
+  Nakonfigurujte zobrazení tlačítka vymazat čip TPM.  
+  
+  - **Není nakonfigurováno**  
+  - **Dezaktivovat**  
+
+- **Upozornění na aktualizaci firmwaru TPM**  
+  **Výchozí**: Není nakonfigurováno  
+  
+  Konfigurace zobrazení firmwaru čipu TPM při zjištění ohroženého firmwaru.  
+
+  - **Není nakonfigurováno**  
+  - **Skryl**  
+
+- **Ochrana před zneužitím**  
+  **Výchozí**: Není nakonfigurováno
+
+  Zapněte nebo vypněte ochranu proti falšování na zařízeních. Pokud chcete používat ochranu před zneužitím, je potřeba [integrovat rozšířenou ochranu před internetovými útoky v programu Microsoft Defender s Intune](advanced-threat-protection.md)a mít [licence Enterprise mobility + Security E5](licenses.md).  
+  - **Nenakonfigurováno** – není provedena žádná změna v nastavení zařízení.
+  - **Povoleno** – ochrana proti falšování je zapnutá a na zařízeních se vynutila omezení.
+  - **Zakázáno** – ochrana proti falšování je vypnuta a omezení nejsou vynutila.
+
+### <a name="it-contact-information"></a>Informace o kontaktu IT  
+
+Zadejte kontaktní informace oddělení IT, které se zobrazí v aplikaci Security Center v programu Windows Defender a v oznámeních aplikací.  
+
+Můžete zvolit možnost **Zobrazovat v aplikacích a v oznámeních**, **Zobrazovat jen v aplikaci**, **Zobrazovat jen v oznámeních** nebo **Nezobrazovat**. Zadejte **Název organizace IT** a aspoň jednu z následujících možností kontaktu:  
+
+
+- **Kontaktní údaje IT**  
+  **Výchozí**: Nezobrazovat  
+  WindowsDefenderSecurityCenter CSP: [EnableCustomizedToasts](https://go.microsoft.com/fwlink/?linkid=873676)  
+  
+  Nakonfigurujte, kde se mají koncovým uživatelům zobrazovat kontaktní informace pro IT oddělení.  
+  
+  - **Zobrazit v aplikaci a v oznámeních**  
+  - **Zobrazit jenom v aplikaci**  
+  - **Zobrazit jenom v oznámeních**  
+  - **Nezobrazovat**  
+
+  Pokud je nakonfigurováno pro zobrazení, můžete nakonfigurovat následující nastavení:  
+
+  - **Název organizace IT**  
+    **Výchozí**: *Není nakonfigurováno*  
+    WindowsDefenderSecurityCenter CSP: [Společnosti](https://go.microsoft.com/fwlink/?linkid=873677)  
+
+  - **Telefonní číslo nebo skypové jméno oddělení IT**  
+    **Výchozí**: *Není nakonfigurováno*  
+    WindowsDefenderSecurityCenter CSP: [Hovor](https://go.microsoft.com/fwlink/?linkid=873678) 
+
+  - **E-mailová adresa IT oddělení**  
+    **Výchozí**: *Není nakonfigurováno*  
+    WindowsDefenderSecurityCenter CSP: [E-mailu](https://go.microsoft.com/fwlink/?linkid=873679)  
+
+  - **Adresa URL webu podpory IT**  
+    **Výchozí**: *Není nakonfigurováno*  
+    WindowsDefenderSecurityCenter CSP: [Adresa URL](https://go.microsoft.com/fwlink/?linkid=873680)  
+ 
+## <a name="local-device-security-options"></a>Možnosti místního zabezpečení zařízení  
+
+Pomocí těchto možností můžete konfigurovat nastavení místního zabezpečení na zařízeních s Windows 10.  
+
+### <a name="accounts"></a>Účty  
+
+- **Přidat nové účty Microsoft**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Accounts_BlockMicrosoftAccounts](https://go.microsoft.com/fwlink/?linkid=867916)  
+
+
+  - **Blok** Zabránit uživatelům v přidávání nových účtů Microsoft do zařízení.  
+  - **Nenakonfigurováno** – uživatelé můžou na zařízení používat účty Microsoft.  
+
+- **Vzdálené přihlášení bez hesla**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](https://go.microsoft.com/fwlink/?linkid=867890)  
+
+
+   - **Blok** – povolí pouze místní účty s prázdnými hesly pro přihlášení pomocí klávesnice zařízení.  
+   - **Nenakonfigurováno** – umožňuje místním účtům s prázdnými hesly přihlašovat se z jiných umístění, než je fyzické zařízení.  
+
+#### <a name="admin"></a>Správce  
+
+- **Účet místního správce**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly](https://go.microsoft.com/fwlink/?linkid=867850)  
+
+
+  - **Blok** Zabraňte použití místního účtu správce.  
+  - **Není nakonfigurováno**  
+
+- **Přejmenovat účet správce**  
+  **Výchozí**: *Není nakonfigurováno*  
+  LocalPoliciesSecurityOptions CSP: [Accounts_RenameAdministratorAccount](https://go.microsoft.com/fwlink/?linkid=867917)  
+ 
+
+  Definujte jiný název účtu, který se má přidružit k identifikátoru zabezpečení (SID) pro účet Administrator.  
+
+ #### <a name="guest"></a>Guest  
+
+- **Účet Guest**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [LocalPoliciesSecurityOptions](https://go.microsoft.com/fwlink/?linkid=867853)  
+
+  - **Blok** – zabraňuje použití účtu Guest.  
+  - **Není nakonfigurováno**  
+
+- **Přejmenovat účet hosta**  
+  **Výchozí**: *Není nakonfigurováno*  
+  LocalPoliciesSecurityOptions CSP: [Accounts_RenameGuestAccount](https://go.microsoft.com/fwlink/?linkid=867918)  
+  
+  Definujte jiný název účtu, který se má přidružit k identifikátoru zabezpečení (SID) pro účet Guest.  
+
+### <a name="devices"></a>Zařízení  
+
+- **Uvolnit zařízení bez přihlášení**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Devices_AllowUndockWithoutHavingToLogon](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-devices-allowundockwithouthavingtologon)  
+
+  
+  - **Blok** – uživatelé můžou k bezpečnému odložení zařízení stisknout tlačítko fyzického vysunutí přenosného zařízení.  
+  - **Nenakonfigurováno** – uživatel se musí přihlásit k zařízení a získat oprávnění k odložení zařízení.  
+
+- **Nainstalovat ovladače tiskáren pro sdílené tiskárny**  
+  **Výchozí**:  Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Devices_PreventUsersFromInstallingPrinterDriversWhenConnectingToSharedPrinters](https://go.microsoft.com/fwlink/?linkid=867921)  
+
+
+  - **Povoleno** – libovolný uživatel může nainstalovat ovladač tiskárny jako součást připojení ke sdílené tiskárně.  
+  - **Nenakonfigurovaní** – ovladač tiskárny může nainstalovat jenom správce, který je součástí připojení ke sdílené tiskárně.  
+
+- **Omezit přístup k jednotce CD-ROM na místního aktivního uživatele**  
+  **Výchozí**:  Není nakonfigurováno  
+  CSP: [Devices_RestrictCDROMAccessToLocallyLoggedOnUserOnly](https://go.microsoft.com/fwlink/?linkid=867922)  
+
+
+  - **Povoleno** – jenom interaktivně přihlášený uživatel může používat médium CD-ROM. Pokud je tato zásada povolená a nikdo není interaktivně přihlášený, je možné získat k jednotce CD-ROM přístup přes síť.  
+  - **Nenakonfigurováno** – kdokoli má přístup k jednotce CD-ROM.  
+
+- **Formátování a vysunutí vyměnitelného média**  
+  **Výchozí**: Správci  
+  CSP: [Devices_AllowedToFormatAndEjectRemovableMedia](https://go.microsoft.com/fwlink/?linkid=867920)  
+ 
+
+  Definujte, kdo má povolené formátování a vysunutí vyměnitelných médií NTFS:  
+  - **Není nakonfigurováno**  
+  - **Správci**  
+  - **Správci a členové skupiny Power Users**  
+  - **Správci a interaktivní uživatelé**  
+
+### <a name="interactive-logon"></a>Interaktivní přihlášení  
+
+- **Počet minut nečinnosti uzamčené obrazovky, než se aktivuje spořič obrazovky**  
+  **Výchozí**: *Není nakonfigurováno*  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MachineInactivityLimit](https://go.microsoft.com/fwlink/?linkid=867891)  
+
+
+  Zadejte maximální počet minut nečinnosti na přihlašovací obrazovce interaktivní plochy, dokud se nespustí spořič obrazovky. (**0** - **99999**)  
+
+- **Pro přihlášení vyžadovat kombinaci kláves CTRL + ALT + DEL**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotRequireCTRLALTDEL](https://go.microsoft.com/fwlink/?linkid=867951)  
+
+
+  - **Povolit** – stisknutím kombinace kláves CTRL + ALT + DEL se uživatelé nebudou muset přihlašovat.  
+  - **Není nakonfigurováno** Před přihlášením k systému Windows vyžadovat, aby uživatelé stiskli kombinaci kláves CTRL + ALT + DEL.  
+
+- **Chování při odebrání čipové karty**  
+  **Výchozí**: Zamknout pracovní stanici   
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_SmartCardRemovalBehavior](https://go.microsoft.com/fwlink/?linkid=868437)  
+    
+  Určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Možnosti:  
+
+  - **Zamknout pracovní stanici** – pracovní stanice je při odebrání čipové karty uzamčená. Tato možnost umožňuje uživatelům opustit danou oblast, vzít si svoji čipovou kartu s sebou a přesto udržovat chráněnou relaci.  
+  - **Žádná akce**  
+  - **Vynutit odhlášení** – při odebrání čipové karty se uživatel automaticky odhlásí.  
+  - **Odpojit, pokud relace vzdálené plochy** – odebrání čipové karty odpojí relaci bez odhlášení uživatele. Tato možnost umožňuje uživateli později vložením čipové karty obnovit danou relaci na tomto počítači nebo na jiném počítači se čtečkou čipových karet, aniž by se musel znovu přihlašovat. Pokud je relace místní, funguje tato zásada stejně jako možnost Zamknout pracovní stanici.  
+
+#### <a name="display"></a>Zobrazit  
+
+- **Informace o uživateli na zamykací obrazovce**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DisplayUserInformationWhenTheSessionIsLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions#localpoliciessecurityoptions-interactivelogon-displayuserinformationwhenthesessionislocked)  
+
+  Nakonfigurujte informace o uživateli, které se zobrazí, když je relace uzamčena. Pokud tato možnost není nakonfigurovaná, zobrazí se zobrazované jméno uživatele, doména a uživatelské jméno.  
+
+  - **Není nakonfigurováno**  
+  - **Zobrazované jméno uživatele, doména a uživatelské jméno**  
+  - **Jen zobrazované jméno uživatel**  
+  - **Nezobrazovat informace o uživateli**  
+
+- **Skrýt posledního přihlášeného uživatele**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayLastSignedIn](https://go.microsoft.com/fwlink/?linkid=868437)  
+  
+  
+  - **Povolit** – skryje uživatelské jméno.  
+  - **Nenakonfigurováno** – zobrazí poslední uživatelské jméno.  
+
+- **Skrýt uživatelské jméno při přihlášení**
+  **výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_DoNotDisplayUsernameAtSignIn](https://go.microsoft.com/fwlink/?linkid=867959)  
+
+  
+  - **Povolit** – skryje uživatelské jméno.  
+  - **Nenakonfigurováno** – zobrazí poslední uživatelské jméno.  
+
+- **Název přihlašovací zprávy**  
+  **Výchozí**: *Není nakonfigurováno*  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTitleForUsersAttemptingToLogOn](https://go.microsoft.com/fwlink/?linkid=867964)  
+
+  Nastavte název zprávy pro uživatele, kteří se přihlásí.  
+
+- **Text zprávy pro přihlášení**  
+  **Výchozí**: *Není nakonfigurováno*  
+  LocalPoliciesSecurityOptions CSP: [InteractiveLogon_MessageTextForUsersAttemptingToLogOn](https://go.microsoft.com/fwlink/?linkid=867962)  
+
+  Nastavte text zprávy pro přihlášení uživatelů.  
+  
 ### <a name="network-access-and-security"></a>Přístup k síti a zabezpečení
 
-- **Anonymní přístup k pojmenovaným kanálům a sdíleným**: **Není nakonfigurováno** (výchozí) omezuje anonymní přístup ke sdílené složce a nastavení pojmenovaného kanálu. Platí pro nastavení, ke kterým se dá přistupovat anonymně.
-- **Anonymní výčty účtů SAM**: **Povolit** anonymním uživatelům vytvořit výčet účtů SAM. Windows umožňuje anonymním uživatelům vytvořit výčet názvů účtů domén a síťových sdílených složek.
-- **Anonymní výčty účtů SAM a sdílených složek**: **Není nakonfigurováno** (výchozí) znamená, že anonymní uživatelé mohou vytvořit výčet názvů účtů domén a sdílených síťových složek. Pokud chcete zabránit anonymním výčtům účtů SAM a sdílených síťových složek, nastavte možnost **Blokovat**.
-- **Hodnoty hash LAN Manageru při změně hesla uložená**: Při příští změně hesla zvolte na **povolit** LM (LAN Manager) pro ukládání hodnoty hash pro nové heslo. Pokud je nastavená možnost **Nenakonfigurováno** (výchozí), hodnota hash se neuloží.
-- **Žádosti o ověření pku2u odeslaným**: **Blok** o ověřování pku2u odeslaným na zařízení používat online identity. Možnost **Nenakonfigurováno** (výchozí) tyto žádosti povoluje.
-- **Omezit vzdálená připojení RPC k SAM**: Nastavte na **povolit** k znemožňoval uživatelům a skupinám v provádění vzdáleného volání RPC na zabezpečení Správce účtů (SAM), který uchovává uživatelské účty a hesla. **Povolit** také umožňuje změnit výchozí řetězec zabezpečení SDDL Descriptor Definition Language () explicitně povolit nebo zakázat uživatele a skupiny pro tyto vzdálené volání. **Není nakonfigurováno** (výchozí) používá výchozí popisovač zabezpečení a může povolit uživatelům a skupinám vzdáleně volat SAM RPC.
-  - **Popisovač zabezpečení**
+- **Anonymní přístup k pojmenovaným kanálům a sdíleným složkám**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares](https://go.microsoft.com/fwlink/?linkid=868432)  
 
-### <a name="recovery-console-and-shutdown"></a>Konzola pro zotavení a vypnutí
+  - **Nenakonfigurováno** – zakáže anonymní přístup ke sdílení a nastavení pojmenovaného kanálu. Platí pro nastavení, ke kterým se dá přistupovat anonymně.  
+  - **Blokování** – zakáže tuto zásadu a zpřístupní se anonymní přístup.  
 
-- **Stránkovací soubor vymazat virtuální paměti při vypínání**: Nastavte na **povolit** Vymazat stránkovací soubor virtuální paměti, když se zařízení vypne. **Nenakonfigurováno** virtuální paměť nevymaže.
-- **Vypnutí bez protokolu v**: **Blok** skryje možnost vypnutí na přihlašovací obrazovce Windows. Uživatelé se musí k zařízení přihlásit, aby ho mohli vypnout. **Není nakonfigurováno** (výchozí) umožňuje uživateli vypnout zařízení z přihlašovací obrazovky Windows.
+- **Anonymní výčet účtů SAM**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts](https://go.microsoft.com/fwlink/?linkid=868434)  
+  
+  - **Nenakonfigurováno** – anonymní uživatelé mohou vytvořit výčet účtů SAM.  
+  - **Blok** – zabraňuje anonymnímu výčtu účtů SAM.  
 
-### <a name="user-account-control"></a>Řízení uživatelských účtů
+- **Anonymní výčet účtů SAM a sdílených složek**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares](https://go.microsoft.com/fwlink/?linkid=868435)  
 
-- **Integrita UIA bez zabezpečeného umístění**: Pokud je nastavena na **bloku**, aplikace v zabezpečeném umístění v systému souborů spusťte pouze s UIAccess integrity. **Nenakonfigurováno** (výchozí) umožní spuštění aplikací s integritou UIAccess i v nezabezpečených umístěních v systému souborů.
-- **Virtualizovat chyby zápisu souboru a registru do umístění jednotlivých uživatelů**: Pokud je nastavena na **povoleno**, aplikace, které zapsat data do chráněných místa selhání. Pokud je nastavena na **Nenakonfigurováno** (výchozí), zapsat application selhání přesměrováni na dobu běhu na umístění uživatelů definovaný pro systém souborů a registr.
-- **Zvýšit oprávnění pouze spustitelné soubory, které se podepsaly a ověřily**: Nastavte na **povoleno** k vynucení ověřování infrastruktury veřejných KLÍČŮ certifikační cesta pro spustitelný soubor, před spuštěním. **Nenakonfigurováno** (výchozí) nebude vynucovat ověření cesty certifikace infrastruktury veřejných klíčů, než se bude moct spustitelný soubor spustit.
+  - **Nenakonfigurováno** – anonymní uživatelé mohou vytvořit výčet názvů doménových účtů a síťových sdílených složek.  
+  - **Blok** – zabraňuje anonymnímu výčtu účtů SAM a sdílených složek. 
 
-#### <a name="uia-elevation-prompt-behavior-settings"></a>Nastavení chování výzvy ke zvýšení úrovně oprávnění UIA
+- **Hodnota hash správce sítě LAN uložená při změně hesla**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange](https://go.microsoft.com/fwlink/?linkid=868431)  
+   
+  Určete, jestli se při příštím změně hesla uloží hodnota hash pro hesla. 
+  - **Nenakonfigurováno** – hodnota hash není uložena.  
+  - **Blokovat** – správce LAN (LM) ukládá hodnotu hash nového hesla.  
 
-- **Výzvy ke zvýšení oprávnění pro admins**: Definuje chování výzvy ke zvýšení oprávnění pro správce v režimu schválení správce:
-  - **Zvýšit oprávnění bez dotaz**
-  - **Požádat o přihlašovací údajů na zabezpečené ploše**
-  - **Požádat o souhlas na zabezpečené ploše**
-  - **Vyzvat k zadání pověření**
-  - **Požádat o souhlas**
-  - **Není nakonfigurováno**: Požádat o souhlas pro binární soubory bez Windows
-- **Výzvy ke zvýšení oprávnění pro standardní uživatele**: Definuje chování výzvy ke zvýšení oprávnění pro standardní uživatele:
-  - **Automaticky zamítat žádosti o zvýšení oprávnění**
-  - **Požádat o přihlašovací údajů na zabezpečené ploše**
-  - **Není nakonfigurováno**: Vyzvat k zadání pověření
-- **Směrovat výzvy ke zvýšení oprávnění na interaktivní relaci plochy uživatele**: **Povolit** tak všechny požadavky na zvýšení oprávnění přejít na ploše interaktivního uživatele, ne zabezpečenou plochu. Použijí se všechna nastavení zásad chování výzev pro správce a standardní uživatele. **Nenakonfigurováno** (výchozí) vynutí přechod všech žádostí o zvýšení oprávnění na zabezpečenou plochu (bez ohledu na všechna nastavení zásad chování výzev pro správce a standardní uživatele).
-- **Řádek se zvýšenými oprávněními pro instalace aplikací**: Pokud je nastavena na **povoleno**, instalační balíčky aplikací nejsou zjištěny nebo zobrazení výzvy ke zvýšení oprávnění. **Nenakonfigurováno** (výchozí) bude uživatele vyzývat k zadání přihlašovacích údajů správce, když instalační balíček aplikace vyžaduje zvýšená oprávnění.
-- **Ke zvýšení oprávnění UIA bez zabezpečené plochy**: **Povolit** povolit aplikacím UIAccess Vyzývat ke zvýšení oprávnění, bez použití zabezpečené plochy. **Nenakonfigurováno** (výchozí) bude pro výzvy ke zvýšení úrovně oprávnění používat zabezpečenou plochu.
+- **Žádosti o ověření PKU2U**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_AllowPKU2UAuthenticationRequests](https://go.microsoft.com/fwlink/?linkid=867892)  
 
-#### <a name="admin-approval-mode-settings"></a>Nastavení režimu schválení správcem
+  - **Nenakonfigurováno**– povoluje PU2U požadavky.  
+  - **Blok** – zablokuje žádosti o ověření PKU2U na zařízení.  
 
-- **Schválení správcem pro předdefinovaný účet Administrator režimu**: **Povolené** umožňuje předdefinovaný účet správce použít režim schválení správcem. Všechny operace vyžadující zvýšení oprávnění zobrazí uživateli výzvu ke schválení operace. **Nenakonfigurováno** (výchozí) spustí všechny aplikace s plnými oprávněními správce.
-- **Spustit všechny správce v režimu schválení správcem**: Nastavte na **povoleno** zakázat režim schválení správcem a všechny související zásady nastavení nástroje Řízení uživatelských účtů. **Nenakonfigurováno** (výchozí) režim schválení správcem povolí.
+- **Omezit vzdálená připojení RPC k SAM**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM](https://go.microsoft.com/fwlink/?linkid=867893)  
+  
+  - **Nenakonfigurováno** – použijte výchozí popisovač zabezpečení, který umožňuje uživatelům a skupinám vzdálené volání RPC do Sam.
+  - **Povolit** – odepřít uživatelům a skupinám v poskytování vzdálených volání RPC do Správce zabezpečení účtů (SAM), který ukládá uživatelské účty a hesla. Možnost **Povolit** také umožňuje změnit výchozí řetězec jazyka SDDL (Security Descriptor Definition Language) tak, aby explicitně povoloval nebo odepřel uživatelům a skupinám, aby tato vzdálená volání mohla provádět.  
 
-### <a name="microsoft-network-client"></a>Microsoft Network Client
+    - **Popisovač zabezpečení**  
+      **Výchozí**: *Není nakonfigurováno*  
+    
+- **Minimální zabezpečení relace pro klienty založené na NTLM SSP**  
+  **Výchozí**: Žádné  
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients](https://aka.ms/policy-csp-localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedclients)  
+  
+  Toto nastavení zabezpečení umožňuje serveru vyžadovat vyjednávání 128ho šifrování nebo zabezpečení relace NTLMv2.  
 
-- **Digitálně podepsat komunikaci (Pokud server souhlasí)**: Určuje, pokud klient SMB vyjedná podepisování paketů SMB. Když je tato možnost **nenakonfigurovaná** nebo povolená (výchozí), klient sítě Microsoft požádá server o podepisování paketů SMB při nastavení relace. Pokud je na serveru podepisování paketů povolené, podepisování paketů se vyjedná. Když je tato možnost **zakázaná**, klient SMB podepisování paketů nikdy vyjednávat nebude.
-- **Posílat nešifrovaná hesla serverům SMB třetích stran**: Pokud je nastavena na **povolit**, přesměrovače zprávy bloku SMB (Server) posílat nešifrovaná hesla serverům SMB mimo Microsoft, které nepodporují šifrování hesel během ověřování. **Nenakonfigurováno** (výchozí) hesla šifruje.
+  - **Žádné**  
+  - **Vyžadovat zabezpečení relace NTLMv2**  
+  - **Vyžadovat 64bitové šifrování 128**  
+  - **Šifrování NTLMv2 a 128 bitů**  
+ 
+- **Minimální zabezpečení relace pro server založený na NTLM SSP**  
+  **Výchozí**: Žádné  
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers](https://aka.ms/policy-csp-localpoliciessecurityoptions-networksecurity-minimumsessionsecurityforntlmsspbasedservers)  
 
-### <a name="microsoft-network-server"></a>Server sítě Microsoft
+  Toto nastavení zabezpečení určuje, který ověřovací protokol pro ověření výzvou a odpovědí se používá pro přihlášení k síti.  
 
-- **Digitálně podepsat komunikaci (Pokud klient souhlasí)**: Určuje, pokud SMB server vyjedná podepisování paketů SMB s klienty, kteří si ji vyžádat. Když je tato možnost **povolená**, server sítě Microsoft vyjedná podepisování paketů SMB podle požadavku klienta. To znamená, že pokud je v klientovi podepisování paketů povolené, podepisování paketů se vyjedná. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), klient SMB podepisování paketů nikdy vyjednávat nebude.
-- **Digitálně podepisovat komunikaci (vždy)**: Určuje, pokud součást serveru SMB vyžaduje podepisování paketů. Když je tato možnost **povolená**, nebude server sítě Microsoft s klientem sítě Microsoft komunikovat, pokud tento klient nesouhlasí s podepisováním paketů SMB. Když je tato možnost **nenakonfigurovaná** nebo zakázaná (výchozí), podepisování paketů SMB mezi klientem a serverem se vyjedná.
+  - **Žádné**  
+  - **Vyžadovat zabezpečení relace NTLMv2**  
+  - **Vyžadovat 64bitové šifrování 128**  
+  - **Šifrování NTLMv2 a 128 bitů**  
 
-## <a name="next-steps"></a>Další postup
+- **Úroveň ověřování nástroje LAN Manager**  
+  **Výchozí**: LM a NTLM  
+  LocalPoliciesSecurityOptions CSP: [NetworkSecurity_LANManagerAuthenticationLevel](https://aka.ms/policy-csp-localpoliciessecurityoptions-lanmanagerauthenticationlevel)  
 
-Profil je vytvořený, ale zatím se nepoužívá. Dále [přiřadit profil](device-profile-assign.md), a [monitorování jejího stavu](device-profile-monitor.md).
 
-Konfigurace nastavení ochrany koncového bodu na [macOS](endpoint-protection-macos.md) zařízení.
+  - **LM a NTLM**  
+  - **LM, NTLM a NTLMv2**  
+  - **NTLM**  
+  - **Protokolu**  
+  - **NTLMv2 a ne LM**  
+  - **NTLMv2 a ne LM nebo NTLM**  
+  
+- **Nezabezpečené přihlášení hosta**  
+  **Výchozí**: Není nakonfigurováno  
+  LanmanWorkstation CSP: [LanmanWorkstation](https://aka.ms/policy-csp-lanmanworkstation-enableinsecureguestlogons)  
+
+  Pokud toto nastavení povolíte, bude klient SMB odmítat nezabezpečená přihlášení hostů.  
+
+  - **Není nakonfigurováno**  
+  - **Blok** – klient SMB odmítne nezabezpečená přihlášení hostů.  
+
+### <a name="recovery-console-and-shutdown"></a>Konzola pro zotavení a vypnutí  
+
+- **Při vypínání vymazat stránkovací soubor virtuální paměti**  
+  **Výchozí**: Není nakonfigurováno  
+   LocalPoliciesSecurityOptions CSP: [Shutdown_ClearVirtualMemoryPageFile](https://go.microsoft.com/fwlink/?linkid=867914)  
+
+
+  - **Povolit** – vymažte stránkovací soubor virtuální paměti, když je zařízení vypnuté.  
+  - **Nenakonfigurováno** – vymaže virtuální paměť.  
+
+- **Vypnout bez přihlášení**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [Shutdown_AllowSystemToBeShutDownWithoutHavingToLogOn](https://go.microsoft.com/fwlink/?linkid=867912)  
+
+  
+  - **Blokovat** – skryje možnost vypnutí na přihlašovací obrazovce Windows. Uživatelé se musí k zařízení přihlásit, aby ho mohli vypnout.  
+  - **Nenakonfigurováno** – povolí uživatelům vypnout zařízení z přihlašovací obrazovky Windows.  
+
+### <a name="user-account-control"></a>Řízení uživatelských účtů  
+
+- **UIA integrita bez zabezpečeného umístění**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](https://go.microsoft.com/fwlink/?linkid=867897)  
+  
+  - **Blok** – aplikace, které jsou v zabezpečeném umístění v systému souborů, budou spouštěny pouze s integritou UIAccess.  
+  - **Nenakonfigurováno** – povolí spouštění aplikací s integritou UIAccess, i když nejsou aplikace v zabezpečeném umístění v systému souborů.  
+
+- **Virtualizovat selhání zápisu souborů a registrů do umístění jednotlivých uživatelů**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](https://go.microsoft.com/fwlink/?linkid=867900)  
+
+  - **Povoleno** – aplikace, které zapisují data do chráněných umístění, selžou.  
+  - **Nenakonfigurováno** – chyby zápisu aplikace se přesměrují za běhu do definovaných uživatelských umístění pro systém souborů a registr.  
+
+- **Zvýšit jenom spustitelné soubory, které jsou podepsané a ověřené**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations](https://go.microsoft.com/fwlink/?linkid=867965)  
+
+  - **Povoleno** – vynutilo ověření cesty certifikace PKI pro spustitelný soubor, než bude možné ho spustit.  
+  - **Nenakonfigurováno** – před spuštěním spustitelného souboru vynutili ověření cesty certifikace PKI.  
+
+#### <a name="uia-elevation-prompt-behavior"></a>Chování výzvy ke zvýšení oprávnění UIA  
+
+- **Výzva ke zvýšení úrovně oprávnění pro správce**  
+  **Výchozí**: Vyzvat k vyjádření souhlasu s binárními soubory jiného typu než Windows  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForAdministrators](https://go.microsoft.com/fwlink/?linkid=867895)  
+
+  Definujte chování výzvy ke zvýšení oprávnění pro správce v režimu schválení správcem.  
+
+  - **Není nakonfigurováno**  
+  - **Zvýšit oprávnění bez dotaz**  
+  - **Požádat o přihlašovací údajů na zabezpečené ploše**  
+  - **Vyzvat k zadání pověření**  
+  - **Požádat o souhlas**  
+  - **Vyzvat k vyjádření souhlasu s binárními soubory jiného typu než Windows**  
+
+
+- **Výzva ke zvýšení úrovně oprávnění pro standardní uživatele**  
+  **Výchozí**: Vyzvat k zadání přihlašovacích údajů  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers](https://go.microsoft.com/fwlink/?linkid=867896)  
+
+  Definujte chování výzvy ke zvýšení oprávnění pro standardní uživatele.  
+
+  - **Není nakonfigurováno**  
+  - **Automaticky zamítat žádosti o zvýšení oprávnění**  
+  - **Požádat o přihlašovací údajů na zabezpečené ploše**  
+  - **Vyzvat k zadání pověření**  
+
+- **Výzvy ke zvýšení oprávnění tras k interaktivní ploše uživatele**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation](https://go.microsoft.com/fwlink/?linkid=867899)  
+
+
+  - **Povoleno** – všechny požadavky na zvýšení oprávnění jdou přejít na plochu interaktivního uživatele, nikoli na zabezpečenou plochu. Použijí se všechna nastavení zásad chování výzev pro správce a standardní uživatele.  
+  - **Nenakonfigurováno** – vynutí všechny žádosti o zvýšení oprávnění přejít na zabezpečenou plochu bez ohledu na nastavení zásad chování výzvy pro správce a standardní uživatele.
+
+- **Výzva se zvýšenými oprávněními pro instalace aplikací**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_DetectApplicationInstallationsAndPromptForElevation](https://go.microsoft.com/fwlink/?linkid=867901)  
+
+   - **Povoleno** – instalační balíčky aplikací nejsou zjištěny nebo se zobrazí výzva ke zvýšení oprávnění.
+   - **Nenakonfigurováno** – uživatelům se zobrazí výzva k zadání uživatelského jména a hesla, když instalační balíček aplikace vyžaduje zvýšená oprávnění.
+
+- **UIA výzvy ke zvýšení oprávnění bez zabezpečené plochy**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_AllowUIAccessApplicationsToPromptForElevation](https://go.microsoft.com/fwlink/?linkid=867894)  
+
+- **Enable** – povolí aplikacím UIAccess dotaz na zvýšení oprávnění bez použití zabezpečené plochy.  
+- **Nenakonfigurované** – výzvy zvýšení úrovně oprávnění používají zabezpečenou plochu.  
+
+#### <a name="admin-approval-mode"></a>Režim schválení správcem  
+
+- **Režim schválení správcem pro předdefinovaný správce**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_UseAdminApprovalMode](https://go.microsoft.com/fwlink/?linkid=867902)  
+
+  - **Povoleno** – povolí použití režimu schválení správce pro předdefinovaný účet správce. Všechny operace vyžadující zvýšení oprávnění zobrazí uživateli výzvu ke schválení operace.  
+  - **Nenakonfigurováno** – spustí všechny aplikace s oprávněními úplný správce.  
+
+- **Spustit všechny správce v režimu schválení správce**  
+  **Výchozí**: Nenakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [UserAccountControl_RunAllAdministratorsInAdminApprovalMode](https://go.microsoft.com/fwlink/?linkid=867898)  
+
+
+  - **Povoleno**– povolit režim schválení správcem.  
+  - **Nenakonfigurováno** – zakažte režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů.  
+
+### <a name="microsoft-network-client"></a>Microsoft Network Client  
+
+- **Digitálně podepsat komunikaci (Pokud server souhlasí)**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees](https://go.microsoft.com/fwlink/?linkid=868423)  
+
+  Určuje, zda klient SMB vyjednává podepisování paketů SMB.  
+  - **Block** – klient SMB nikdy nedohaduje podepisování paketů SMB.
+  - **Nenakonfigurováno** – klient sítě Microsoft žádá server, aby po nastavení relace spouštěl podepisování paketů SMB. Pokud je na serveru podepisování paketů povolené, podepisování paketů se vyjedná.  
+
+- **Poslat nešifrované heslo serverům SMB třetích stran**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers](https://go.microsoft.com/fwlink/?linkid=868426)  
+
+
+  - **Blokovat** – přesměrovač SMB (Server Message Block) může posílat hesla ve formátu prostého textu na servery SMB jiné než Microsoft, které při ověřování nepodporují šifrování hesla.  
+  - **Nenakonfigurováno** – zablokuje odesílání hesel ve formátu prostého textu. Hesla jsou zašifrovaná.  
+
+- **Digitálně podepsat komunikaci (vždy)**  
+  **Výchozí**: Není nakonfigurováno  
+  LocalPoliciesSecurityOptions CSP: [MicrosoftNetworkClient_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=868425)  
+
+
+  - **Povolit** – klient sítě Microsoftu nekomunikuje se serverem sítě Microsoft, pokud tento server nesouhlasí s podepisováním paketů SMB.  
+  - **Nenakonfigurováno** – vyjednávat se podepisování paketů SMB mezi klientem a serverem.  
+
+### <a name="microsoft-network-server"></a>Server sítě Microsoft  
+  
+- **Digitálně podepsat komunikaci (Pokud klient souhlasí)**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees](https://go.microsoft.com/fwlink/?linkid=868429)  
+
+  - **Povolit** – síťový server Microsoftu vyjednává podepisování paketů SMB podle požadavků klienta. To znamená, že pokud je v klientovi podepisování paketů povolené, podepisování paketů se vyjedná.  
+  - **Nenakonfigurováno** – klient SMB nikdy nedohaduje podepisování paketů SMB.  
+
+- **Digitálně podepsat komunikaci (vždy)**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP: [MicrosoftNetworkServer_DigitallySignCommunicationsAlways](https://go.microsoft.com/fwlink/?linkid=868428)  
+
+  - **Povolit** – síťový server společnosti Microsoft nekomunikuje s klientem sítě Microsoft, pokud tento klient nesouhlasí s podepisováním paketů SMB.  
+  - **Nenakonfigurováno** – vyjednávat se podepisování paketů SMB mezi klientem a serverem.  
+
+## <a name="xbox-services"></a>Služby Xbox
+
+- **Úloha uložení hry Xbox**  
+  **Výchozí**: Není nakonfigurováno  
+  CSP: [TaskScheduler/EnableXboxGameSaveTask](https://go.microsoft.com/fwlink/?linkid=875480)  
+   
+  Toto nastavení určuje, zda je úloha uložení hry Xbox povolená nebo zakázaná.  
+  - **Umožněn**
+  - **Není nakonfigurováno**
+
+- **Služba správy příslušenství pro Xbox**  
+  **Výchozí**: Ručně prováděné  
+  CSP: [SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode](https://go.microsoft.com/fwlink/?linkid=875481)  
+
+  Toto nastavení určuje typ spuštění služby pro správu doplňku.  
+  - **Zásah**
+  - **Automaticky**
+  - **Disabled** (Zakázáno)
+
+- **Služba Xbox Live auth Manager**  
+  **Výchozí**: Ručně prováděné  
+  CSP: [SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode](https://go.microsoft.com/fwlink/?linkid=875482)  
+ 
+  Toto nastavení určuje typ spuštění služby Live auth Manager.  
+  - **Zásah**
+  - **Automaticky**
+  - **Disabled** (Zakázáno)
+ 
+- **Služba Xbox Live pro uložení her**  
+  **Výchozí**: Ručně prováděné  
+  CSP: [SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode](https://go.microsoft.com/fwlink/?linkid=875483)  
+
+  Toto nastavení určuje typ spuštění služby Live Game Save.  
+  - **Zásah**
+  - **Automaticky**
+  - **Disabled** (Zakázáno)
+
+- **Síťová služba Xbox Live**  
+  **Výchozí**: Ručně prováděné  
+  CSP: [SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode](https://go.microsoft.com/fwlink/?linkid=875484)  
+
+  Toto nastavení určuje typ spuštění síťové služby.  
+  - **Zásah**
+  - **Automaticky**
+  - **Disabled** (Zakázáno)
+
+## <a name="next-steps"></a>Další kroky
+
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md)a [sledujte jeho stav](device-profile-monitor.md).  
+
+Nakonfigurujte nastavení ochrany koncových bodů na zařízeních [MacOS](endpoint-protection-macos.md) .  

@@ -1,13 +1,12 @@
 ---
-title: Nastavení dodržování předpisů Windows 10 v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Zobrazit seznam všech nastavení, které můžete použít při nastavení dodržování předpisů pro zařízení s Windows 10, Windows Holographic a Surface Hub v Microsoft Intune. Zkontrolovat dodržování předpisů na minimální a maximální verzi operačního systému, omezení pro heslo sadu a délku, vyhledat partnera řešení (AV) antivirový program, povolit šifrování na úložiště dat a další.
+title: Nastavení dodržování předpisů pro Windows 10 v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na seznam všech nastavení, která můžete použít při nastavování dodržování předpisů pro zařízení s Windows 10, Windows holografickými a Surface Hub v Microsoft Intune. Podívejte se na dodržování předpisů pro minimální a maximální operační systém, nastavte omezení a délku hesla, vyhledejte řešení partnerů pro ochranu proti virům (AV), povolte šifrování u úložiště dat a další.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2019
+ms.date: 09/12/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,18 +14,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e57b96a21904f5c6789c7ac2214e6acf46b81d16
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
-ms.translationtype: HT
+ms.openlocfilehash: cda6c5f5ffa2244376e318e81a38a1ed410a443f
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60164103"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71305050"
 ---
-# <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novější se zařízení označí jako vyhovující nebo nevyhovující předpisům pomocí Intune
+# <a name="windows-10-and-later-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 10 a novějších označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Tento článek uvádí a popisuje nastavení různých dodržování předpisů, které můžete nakonfigurovat na Windows 10 a novější zařízení v Intune. Jako součást řešení správy mobilních zařízení pomocí těchto nastavení můžete vyžadovat BitLocker, nastavte minimální a maximální operačního systému, nastavit úroveň rizika pomocí Windows Defenderu Advanced Threat Protection (ATP) a další.
+Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete konfigurovat v zařízeních s Windows 10 a novějším v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení k vyžadování nástroje BitLocker, nastavení minimálního a maximálního operačního systému, nastavení úrovně rizika pomocí rozšířené ochrany před internetovými útoky v programu Microsoft Defender (ATP) a dalších.
 
 Tato funkce platí pro:
 
@@ -34,7 +33,7 @@ Tato funkce platí pro:
 - Windows Holographic for Business
 - Surface Hub
 
-Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáhají chránit prostředky organizace. Další informace o zásadách dodržování předpisů a jaké, viz [Začínáme s dodržováním předpisů zařízeními](device-compliance-get-started.md).
+Jako správce Intune můžete pomocí těchto nastavení dodržování předpisů ochránit prostředky vaší organizace. Další informace o zásadách dodržování předpisů a o tom, co dělají, najdete v tématu [Začínáme s dodržováním předpisů pro zařízení](device-compliance-get-started.md).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -42,104 +41,133 @@ Jako správce Intune pomocí těchto nastavení dodržování předpisů pomáha
 
 ## <a name="device-health"></a>Device health
 
-- **Vyžadovat BitLocker**: Pokud je nastavena na **vyžadují**, zařízení může chránit data uložená na disku před neoprávněným přístupem, pokud je systém vypnutý nebo přejde do režimu spánku. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá k ochraně operačního systému Windows a uživatelských dat čip TPM. Pomáhá také potvrďte, že počítačem nemanipulovalo, i když levý režimu ztráty nebo odcizení. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. Klíče v důsledku toho nelze přistupovat, dokud čip TPM ověřuje stav počítače.
+- **Vyžadovat nástroj BitLocker**: Pokud nastavíte možnost **vyžadovat**, zařízení může chránit data uložená na disku před neoprávněným přístupem, když je systém vypnutý nebo je v režimu hibernace. Nástroj Windows BitLocker Drive Encryption zašifruje všechna data uložená na svazku operačního systému Windows. BitLocker používá k ochraně operačního systému Windows a uživatelských dat čip TPM. Pomáhá také ověřit, že počítač není úmyslně poškozen, a to ani v případě, že je jeho levý bezobslužný, ztracený nebo odcizený. Pokud je počítač vybavený kompatibilním čipem TPM, nástroj BitLocker pomocí čipu TPM uzamkne šifrovací klíče, které chrání data. K těmto klíčům proto nelze přistupovat, dokud čip TPM neověří stav počítače.
 
-  Pokud je nastavena na **Nenakonfigurováno** (výchozí), toto nastavení se nevyhodnotí dodržování předpisů nebo nedodržení předpisů.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), toto nastavení se nevyhodnotí pro dodržování předpisů nebo nedodržování předpisů.
 
-- **Vyžadovat, aby na zařízení povolené zabezpečené spuštění**: Pokud je nastavena na **vyžadují**, musí se systém spouštět do důvěryhodného stavu z výroby. Pokud povolená, musí mít komponenty jádra sloužící ke spuštění počítače správné kryptografické podpisy, které jsou důvěryhodné organizací, která vyrobenými zařízení. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud se všechny soubory se manipulovalo, které dojde k porušení jejich podpisu, nebude spuštění systému.
+- **Vyžadovat, aby na zařízení bylo povolené zabezpečené spouštění**: Pokud je nastavení **vyžadováno**, je nutné spustit systém do důvěryhodného stavu výroby. Pokud je tato možnost povolená, musí mít základní součásti používané k restartování počítače správné kryptografické podpisy, které jsou důvěryhodné pro organizaci, která zařízení vyrobila. Firmware UEFI nejdříve ověří podpis a až potom povolí spuštění počítače. Pokud jsou nějaké soubory úmyslně poškozeny, což přeruší svůj podpis, systém se nespustí.
 
-  Pokud je nastavena na **Nenakonfigurováno** (výchozí), toto nastavení se nevyhodnotí dodržování předpisů nebo nedodržení předpisů.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), toto nastavení se nevyhodnotí pro dodržování předpisů nebo nedodržování předpisů.
 
   > [!NOTE]
-  > **Vyžadovat zabezpečené spouštění, aby na zařízení byla povolená** nastavení je podporováno na některé TPM 1.2 a 2.0 zařízení. Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
+  > U některých zařízení s čipem TPM 1,2 a 2,0 je nastavení **vyžadovat, aby bylo povolené zabezpečené spuštění na zařízení** . Pokud zařízení nepodporují TPM 2.0 nebo novější, zobrazí se v Intune stav zásady jako **nevyhovující**. Další informace o podporovaných verzích najdete v tématu [ověření stavu zařízení](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
-- **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti. Pokud je nastavena na **vyžadují**, integrita kódu zjistí-li nepodepsaný ovladač nebo systémový soubor se načítá do jádra. Zjistí také, zda je soubor systému změny škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
+- **Vyžadovat integritu kódu**: Integrita kódu je funkce, která ověřuje integritu ovladače nebo systémového souboru pokaždé, když je načten do paměti. Pokud je nastaveno na **vyžadovat**, integrity kódu zjistí, jestli se do jádra nenačítá nepodepsaný ovladač nebo systémový soubor. Také zjistí, zda je systémový soubor změněn škodlivým softwarem spuštěným pomocí uživatelského účtu s oprávněními správce.
 
-  Pokud je nastavena na **Nenakonfigurováno** (výchozí), toto nastavení se nevyhodnotí dodržování předpisů nebo nedodržení předpisů.
+  Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), toto nastavení se nevyhodnotí pro dodržování předpisů nebo nedodržování předpisů.
 
-Další materiály:
+Další zdroje informací:
 
-- [Poskytovatel CSP služby Health Attestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) obsahuje podrobnosti o tom, jak služba HAS funguje.
-- [Tip podporu: Použití nastavení pro ověření stavu zařízení jako součást zásad dodržování předpisů Intune ](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
+- [Zprostředkovatel kryptografických služeb ověření stavu](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp) obsahuje podrobné informace o tom, jak služba funguje.
+- [Tip podpory: Použití nastavení Ověření stavu zařízení jako součást zásad dodržování předpisů v Intune](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Using-Device-Health-Attestation-Settings-as-Part-of/ba-p/282643)
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve **číslo major.minor.build.CU** formátu. Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
+- **Minimální verze operačního systému**: Zadejte minimální povolenou verzi ve formátu **čísla major.minor.Build.cu** . Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
-  Pokud má zařízení starší verze než verze operačního systému můžete zadat, uvede se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel může zvolit upgrade svého zařízení. Po upgradu, bude přístup k prostředkům společnosti.
+  Pokud má zařízení starší verzi, než je zadaná verze operačního systému, nahlásí se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může upgradovat svoje zařízení. Po upgradu budou mít přístup k prostředkům společnosti.
 
-- **Maximální verze operačního systému**: Zadejte maximální povolenou verzi ve **major.minor.build.revision číslo** formátu. Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
+- **Maximální verze OS**: Zadejte maximální povolenou verzi v **číselném formátu hlavní_verze. podverze. Build. Revision** . Správnou hodnotu získáte, když otevřete příkazový řádek a zadáte `ver`. Příkaz `ver` vrátí verzi v následujícím formátu:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
-  Když zařízení používá verzi operačního systému novější než verze zadaná, přístup k prostředkům organizace, je blokován. Koncovému uživateli se zobrazí výzva, chcete-li kontaktovat správce IT. Zařízení nemá přístup k prostředkům organizace, dokud pravidla se změní na verzi operačního systému povolí.
+  Pokud zařízení používá verzi operačního systému, která je novější než zadaná verze, bude přístup k prostředkům organizace blokovaný. Koncovému uživateli se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které umožňuje verzi operačního systému.
 
-- **Minimální požadovaný operační systém pro mobilní zařízení**: Zadejte minimální povolenou verzi ve formátu major.minor.build.
+- **Minimální požadovaný operační systém pro mobilní zařízení**: Zadejte minimální povolenou verzi ve formátu hlavní. podverze. sestavení.
 
-  Pokud má zařízení starší verzi, verze operačního systému můžete zadat, uvede se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel může zvolit upgrade svého zařízení. Po upgradu, bude přístup k prostředkům společnosti.
+  Pokud má zařízení starší verzi operačního systému, kterou zadáte, nahlásí se jako nedodržující předpisy. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může upgradovat svoje zařízení. Po upgradu budou mít přístup k prostředkům společnosti.
 
-- **Maximální verze operačního systému pro mobilní zařízení**: Zadejte maximální povolenou verzi ve formátu Major.minor.Build.
+- **Maximální požadovaný operační systém pro mobilní zařízení**: Zadejte maximální povolenou verzi v hlavní číslo. podverze. sestavení.
 
-  Když zařízení používá verzi operačního systému novější než verze zadaná, přístup k prostředkům organizace, je blokován. Koncovému uživateli se zobrazí výzva, chcete-li kontaktovat správce IT. Zařízení nemá přístup k prostředkům organizace, dokud pravidla se změní na verzi operačního systému povolí.
+  Pokud zařízení používá verzi operačního systému, která je novější než zadaná verze, bude přístup k prostředkům organizace blokovaný. Koncovému uživateli se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které umožňuje verzi operačního systému.
 
-- **Platná sestavení operačního systému**: Zadejte rozsah povolené verze operačního systému, včetně minimální a maximální. Seznam vyhovujících čísel buildů operačních systémů také můžete **exportovat** do textového souboru CSV s oddělovači.
+- **Platná sestavení operačního systému**: Zadejte rozsah pro přijatelné verze operačních systémů, včetně minimální a maximální hodnoty. Seznam vyhovujících čísel buildů operačních systémů také můžete **exportovat** do textového souboru CSV s oddělovači.
 
-## <a name="configuration-manager-compliance"></a>Dodržování předpisů v Configuration Manageru
+## <a name="configuration-manager-compliance"></a>Configuration Manager dodržování předpisů
 
-Platí pouze pro spoluspravovaná zařízení se systémem Windows 10 a novější. Není k dispozici stav vrácení zařízení jen pro Intune.
+Platí jenom pro spoluspravovaná zařízení s Windows 10 a novějším. Zařízení jenom v Intune vracejí stav není k dispozici.
 
-- **Vyžadovat dodržování předpisů zařízením ze System Center Configuration Manager**: Zvolte **vyžadují** přinutit všechna nastavení (položky konfigurace) v System Center Configuration Manager, aby vyhovovala. 
+- **Vyžadovat System Center Configuration Manager dodržování předpisů zařízením**: Vyberte **vyžadovat** , pokud chcete vynutit, aby všechna nastavení (konfigurační položky) v System Center Configuration Manager splňovala předpisy. 
 
-  Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manageru má tento požadavek stav Nainstalováno. Pokud jsou všechny programy na zařízení v neznámém stavu, je zařízení nedodržují předpisy v Intune.
+  Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manageru má tento požadavek stav Nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
   
-  Když **Nenakonfigurováno**, Intune nezkontroluje pro některé z nastavení nástroje Configuration Manager pro dodržování předpisů.
+  Pokud **není nakonfigurovaný**, Intune nekontroluje žádné nastavení Configuration Manager pro dodržování předpisů.
 
 ## <a name="system-security"></a>Zabezpečení systému
 
 ### <a name="password"></a>Heslo
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadovat** uživatelé zadat heslo, než bude moct svoje zařízení.
-- **Jednoduchá hesla**: Nastavte na **bloku** , uživatelé nemůžou vytvářet jednoduchá hesla, jako například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
-- **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaků, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
+- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžaduje** , aby uživatel zadal heslo, než bude mít přístup ke svému zařízení. Pokud **není nakonfigurovaný**, Intune zařízení nevyhodnotí pro dodržování předpisů v nastavení hesla.
+- **Jednoduchá hesla**: Nastavte **blokování** , aby uživatelé nemohli vytvářet jednoduchá hesla, například **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
+- **Typ hesla**: Vyberte požadovaný typ hesla nebo PIN kódu. Možnosti:
 
-  - **Počet nealfanumerických znaků v hesle**: Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, toto nastavení určuje nejmenší počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
-    - Malá písmena
-    - Velká písmena
-    - Symboly
-    - Numbers
+  - **Výchozí nastavení zařízení**: Vyžadovat heslo, číselný kód PIN nebo alfanumerický kód PIN
+  - **Číselná**: Vyžadovat heslo nebo číselný PIN kód
+  - **Alfanumerické znaky**: Vyžadovat heslo nebo alfanumerický kód PIN Také vyberte **složitost hesla**: 
+    
+    - **Vyžadovat číslice a malá písmena**
+    - **Vyžadovat číslice, malá písmena a velká písmena**
+    - **Vyžadovat číslice, malá písmena, Velká písmena a speciální znaky**
 
-    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
+    > [!TIP]
+    > Alfanumerické zásady hesel můžou být složité. Doporučujeme správcům, aby si přečetli CSP pro další informace:
+    >
+    > - [CSP DeviceLock/AlphanumericDevicePasswordRequired](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
+    > - [CSP DeviceLock/MinDevicePasswordComplexCharacters](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
-- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
-- **Maximální počet minut nečinnosti před vyžádáním hesla**: Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
-- **Vypršení platnosti hesla (dny)**: Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Počet předchozích hesel, která zakázat opakované použití**: Zadejte počet dříve použitých hesel, která nelze použít.
-- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (Mobile a Holographic)**: Vynutí zadání hesla při každém návratu zařízení ze stavu nečinnosti.
+- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo obsahovat.
+- **Maximální počet minut nečinnosti před vyžadováním hesla**: Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
+- **Vypršení platnosti hesla (dny)** : Zadejte počet dní do vypršení platnosti hesla a musí vytvořit nové, od 1-730.
+- **Počet předchozích hesel, která zabrání opakovanému použití**: Zadejte počet dříve použitých hesel, která se nedají použít.
+- **Vyžadovat heslo při návratu zařízení ze stavu nečinnosti (mobilní a holografická)** : Vynutí, aby uživatelé zadali heslo pokaždé, když se zařízení vrátí ze stavu nečinnosti.
+
+  > [!IMPORTANT]
+  > Když se požadavek na heslo změní na plochu Windows, uživatelé budou mít vliv na jeho příštím přihlášení, protože to znamená, že zařízení přestane být aktivní. Uživatelům s hesly, kteří splňují požadavky, se stále zobrazí výzva ke změně hesla.
 
 ### <a name="encryption"></a>Šifrování
 
-- **Šifrování datového úložiště na zařízení**: Zvolte **vyžadují** a zašifrujte úložiště dat na vašich zařízeních.
+- **Šifrování datového úložiště na zařízení**: Vyberte **vyžadovat** pro šifrování úložiště dat na vašich zařízeních.
 
   > [!NOTE]
   > Nastavení **Šifrování datového úložiště na zařízení** kontroluje obecnou přítomnost šifrování v zařízení. Pokud chcete nastavení šifrování zkontrolovat důkladněji, použijte možnost **Vyžadovat BitLocker**, která k ověření stavu BitLockeru na úrovni čipu TPM používá službu Ověření stavu zařízení s Windows.
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
-- **Antivirová ochrana v programu**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antivirových řešení, které jsou registrovány [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je například Symantec a programem Windows Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antivirová řešení nainstalovaná v zařízení.
-- **AntiSpyware**: Pokud je nastavena na **vyžadují**, můžete zkontrolovat dodržování předpisů pomocí antispywaru řešení, které jsou registrovány [Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je například Symantec a programem Windows Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antispywarová řešení nainstalovaná v zařízení.
+- **Brána firewall**: Nastavte, aby se **vyžadovalo** zapnutí firewallu v programu Microsoft Defender, a zabraňte uživatelům v jeho vypnutí. **Není nakonfigurováno** (výchozí) neřídí firewall v programu Microsoft Defender ani nemění stávající nastavení.
 
-## <a name="windows-defender-atp"></a>Ochrana ATP v programu Windows Defender
+  [Zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp)
 
-- **Vyžadovat, aby zařízení bylo na nebo za skóre rizika počítače**: Toto nastavení použijte k vyhodnocování rizika z vaší ochrany před mobilními hrozbami služby jako podmínku dodržování předpisů. Vyberte maximální povolenou úroveň hrozby:
+- **Čip TPM (Trusted Platform Module)** : Pokud je nastavené na **vyžadovat**, Intune zkontroluje verzi pro dodržování předpisů. Zařízení splňuje předpisy, pokud je verze čipu TPM větší než 0 (nula). Zařízení nedodržuje předpisy, pokud na zařízení není verze TPM. Pokud **není nakonfigurovaný**, Intune v zařízení nekontroluje verzi čipu TPM.
 
-  - **Vymazat**: Tato možnost je nejbezpečnější, protože zařízení nesmí být nijak ohroženo zabezpečení. Pokud zařízení zjistí libovolná úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
-  - **Nízká**: Zařízení je vyhodnoceno jako vyhovující, pokud jen hrozby nízké úrovně jsou k dispozici. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
-  - **Střední**: Zařízení je vyhodnoceno jako vyhovující, pokud se existující hrozby v zařízení se střední nebo nízké úrovni. Pokud se zařízení zjistí hrozby vysoké úrovně, má vyhodnotí jako nevyhovující.
+  [DeviceStatus CSP – DeviceStatus/TPM/SpecificationVersion uzel](https://docs.microsoft.com/windows/client-management/mdm/devicestatus-csp)
+  
+- **Antivirová ochrana**: Pokud nastavíte hodnotu **vyžadovat**, můžete ověřit dodržování předpisů pomocí antivirových řešení, která jsou zaregistrovaná v [systému Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), například Symantec a Microsoft Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antivirová řešení nainstalovaná v zařízení.
+- **Antispywarový**program: Pokud nastavíte možnost **vyžadovat**, můžete ověřit dodržování předpisů pomocí antispywarových řešení, která jsou zaregistrovaná v [systému Windows Security Center](https://blogs.windows.com/windowsexperience/2017/01/23/introducing-windows-defender-security-center/), jako je například Symantec a Microsoft Defender. Pokud **není nakonfigurovaná**, nezjišťuje Intune žádná antispywarová řešení nainstalovaná v zařízení.
+
+### <a name="defender"></a>Defender
+
+- **Antimalware v programu Microsoft Defender**: Nastavte, aby se **vyžadovalo** zapnutí služby anti-malware v programu Microsoft Defender a zabránění uživatelům v jejich vypnutí. **Není nakonfigurováno** (výchozí) neřídí službu ani nemění stávající nastavení.
+- **Minimální verze antimalwaru v programu Microsoft Defender**: Zadejte minimální povolenou verzi služby Microsoft Defender anti-malware. Zadejte například `4.11.0.0`. Pokud je ponecháno prázdné, bude možné použít jakoukoli verzi služby Microsoft Defender anti-malware.
+- **Microsoft Defender antimalwar Security –** přehledy v aktuálním stavu: Řídí aktualizace ochrany proti virům a hrozbám zabezpečení systému Windows na zařízeních. **Vyžadovat** , aby byly analytické údaje v programu Microsoft Defender aktuální. **Není nakonfigurováno** (výchozí) neuplatňuje žádné požadavky.
+
+  [Aktualizace Security Intelligence pro antivirovou ochranu a další antimalware Microsoftu](https://www.microsoft.com/en-us/wdsi/defenderupdates) obsahují další informace o Security Intelligence.
+
+- **Ochrana v reálném čase**: **Vyžaduje** zapnutí ochrany v reálném čase, která vyhledává malware, spyware a další nežádoucí software. **Není nakonfigurováno** (výchozí) neřídí tuto funkci ani nemění stávající nastavení.
+
+  [Defender/AllowRealtimeMonitoring CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
+
+## <a name="microsoft-defender-atp"></a>Microsoft Defender ATP
+
+- **Vyžadovat, aby zařízení bylo na nebo pod hodnocením rizika počítače**: Toto nastavení použijte, pokud chcete jako podmínku dodržování předpisů převzít vyhodnocení rizik ze služeb ochrany před hrozbami. Vyberte maximální povolenou úroveň hrozby:
+
+  - **Vymazat**: Tato možnost je nejbezpečnější, protože zařízení nemůže mít žádné hrozby. Pokud se zjistí, že zařízení má jakoukoli úroveň hrozeb, vyhodnotí se jako nedodržující předpisy.
+  - **Nízká úroveň**: Zařízení se vyhodnotí jako vyhovující, pokud jsou přítomny jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
+  - **Střední**: Zařízení se vyhodnotí jako vyhovující, pokud jsou stávající hrozby v zařízení na nízké nebo střední úrovni. Pokud se zjistí, že zařízení bude mít hrozby vysoké úrovně, je zjištěno, že nedodržuje předpisy.
   - **Vysoká**: Tato možnost je nejméně bezpečná a umožňuje všechny úrovně hrozeb. Může být užitečná, pokud toto řešení používáte jen ke generování sestav.
   
-  Pokud chcete Ochranu ATP v programu Windows Defender (rozšířenou ochranu před internetovými útoky) nastavit jako službu ochrany před hrozbami, přečtěte si téma [Povolení Ochrany ATP v programu Windows Defender s podmíněným přístupem](advanced-threat-protection.md).
+  Informace o nastavení ochrany ATP Microsoft Defenderu (Rozšířená ochrana před internetovými útoky) jako služby ochrany před hrozbami najdete v tématu [Povolení ATP Microsoft Defenderu s podmíněným přístupem](advanced-threat-protection.md).
 
 Vyberte **OK** > **Vytvořit** a změny uložte.
 
@@ -153,12 +181,12 @@ Pokud chcete ověřit šifrování u zařízení Microsoft HoloLens, přečtěte
 
 ## <a name="surface-hub"></a>Surface Hub
 
-Surface Hub používá platformu **Windows 10 a novější**. Zařízení Surface Hub podporují dodržování předpisů i podmíněný přístup. Povolení těchto funkcí pro Surface Huby, doporučujeme [povolit automatickou registraci Windows 10](windows-enroll.md) v Intune (vyžaduje Azure Active Directory (Azure AD)) a cílit na zařízení Surface Hub jako na skupiny zařízení. Zařízení Surface hub se musí být připojená k Azure AD pro dodržování předpisů a podmíněný přístup do práce.
+Surface Hub používá platformu **Windows 10 a novější**. Centra Surface jsou podporovaná pro dodržování předpisů i pro podmíněný přístup. Pokud chcete tyto funkce na Surface Hub povolit, doporučujeme [Povolit automatickou registraci Windows 10](windows-enroll.md) v Intune (vyžaduje Azure Active Directory (Azure AD)) a cílit na Surface Hub zařízení jako na skupiny zařízení. Rozbočovače Surface musí být připojená k Azure AD pro dodržování předpisů a podmíněný přístup pro práci.
 
 Pokyny najdete v článku [Nastavení registrace pro zařízení s Windows](windows-enroll.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-- [Přidání akcí pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [pomocí značky oboru filtru zásad](scope-tags.md).
-- [Monitorovat zásady dodržování předpisů](compliance-policy-monitor.md).
-- Zobrazit [nastavení zásad dodržování předpisů pro Windows 8.1](compliance-policy-create-windows-8-1.md) zařízení.
+- [Přidejte akce pro zařízení nedodržující předpisy](actions-for-noncompliance.md) a [použijte značky oboru k filtrování zásad](scope-tags.md).
+- [Monitorujte zásady dodržování předpisů](compliance-policy-monitor.md).
+- Podívejte se na [nastavení zásad dodržování předpisů pro zařízení Windows 8.1](compliance-policy-create-windows-8-1.md) .

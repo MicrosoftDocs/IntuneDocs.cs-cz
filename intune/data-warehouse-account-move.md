@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c73e4c8aa5f71fb80110d4a223b9872c8dbaff3
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 7d51d504f63e9a9c942bbcbc689c67bc63d74a2c
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59899852"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "71304931"
 ---
 # <a name="move-your-intune-data-warehouse-account-data"></a>Přesunutí dat účtu datového skladu Intune 
 
@@ -78,9 +77,9 @@ Po přesunutí účtu datového skladu uvidíte v Intune, že datový sklad byl 
 
 ## <a name="data-warehouse-move-example"></a>Příklad přesunutí datového skladu 
 
-Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpovědi na tento požadavek obdrží zákazník odkaz na dokumentaci s podrobnými kroky, které má podniknout, pokud si chce zazálohovat předchozí datový sklad. 1. 6. 2018 se datový sklad a grafy, které podporuje, resetují a data se začnou ukládat v novém datovém centru. 
+Zákazník X požaduje, aby bylo přesunutí účtu zahájeno 1. 6. 2018. V odpovědi na tento požadavek obdrží zákazník odkaz na dokumentaci s podrobnými kroky, které má podniknout, pokud si chce zazálohovat předchozí datový sklad. 1\. 6. 2018 se datový sklad a grafy, které podporuje, resetují a data se začnou ukládat v novém datovém centru. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
- - Zjistěte, [jaké novinky každý týden přináší Intune](whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
- - Přečtěte si [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).
+- Zjistěte, [jaké novinky každý týden přináší Intune](whats-new.md). Můžete také získat informace o nadcházejících změnách, důležitá oznámení o službě a informace o minulých vydaných verzích.
+- Přečtěte si [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882).

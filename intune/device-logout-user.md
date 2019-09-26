@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/27/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23af88f4d595669589b8f7104cbac0c5b695602f
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 15c2cbd80f30db73b5459d1c838ebc2fa0aab887
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59898832"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71303578"
 ---
 # <a name="logout-the-current-user-on-intune-managed-ios-devices"></a>Odhlášení aktuálního uživatele na zařízení s iOSem spravovaných pomocí Intune
 
@@ -41,12 +40,12 @@ Akce **Odhlásit aktuálního uživatele** odhlásí aktuálního uživatele na 
 
 ## <a name="how-to-log-out-the-current-user"></a>Odhlášení aktuálního uživatele
 
-1.  Přihlaste se k portálu Azure Portal.
-2.  Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
-3.  V okně **Intune** zvolte **Zařízení**.
-4.  V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
-5.  V seznamu zařízení, která spravujete, zvolte zařízení s iOSem a potom zvolte vzdálenou akci zařízení **Odhlásit aktuálního uživatele**.
+1. Přihlaste se k portálu Azure Portal.
+2. Zvolte **Další služby** > **Monitorování + správa** > **Intune**.
+3. V okně **Intune** zvolte **Zařízení**.
+4. V okně **Zařízení a skupiny** zvolte **Všechna zařízení**.
+5. V seznamu zařízení, která spravujete, zvolte zařízení s iOSem a potom zvolte vzdálenou akci zařízení **Odhlásit aktuálního uživatele**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Stav akce, kterou jste spustili, zobrazíte tak, že v okně **Zařízení a skupiny** zvolíte **Akce zařízení**.

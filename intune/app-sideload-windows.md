@@ -6,7 +6,7 @@ keywords: ''
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d30f2f392a760701337fb17b902458ea01ed00b
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: a1e952acc2fe8eafc6376b0cab9012af52b0acf4
+ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71238881"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274852"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
 
@@ -28,7 +28,10 @@ ms.locfileid: "71238881"
 
 Jako správce Intune můžete nasazovat obchodní aplikace (LOB) do Windows 8.1 plochy nebo Windows 10 Desktop & mobilní zařízení, včetně aplikace Portál společnosti. Pokud chcete nasadit aplikace. appx pro Windows 8.1 Desktop nebo Windows 10 Desktop & mobilní zařízení, můžete použít certifikát pro podepisování kódu od veřejné certifikační autority, která už je pro vaše zařízení s Windows důvěryhodná, nebo můžete použít vlastní certifikační autoritu.
 
-Windows 8.1 Desktop vyžaduje pro povolení zkušebního načtení nebo použití klíčů pro zkušební načtení (automaticky povolených pro zařízení připojená k doméně) buď zásadu Enterprise. Další informace najdete v tématu [zkušební načtení systému Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
+ > [!NOTE]
+ > Windows 8.1 Desktop vyžaduje pro povolení zkušebního načtení nebo použití klíčů pro zkušební načtení (automaticky povolených pro zařízení připojená k doméně) buď zásadu Enterprise. Další informace najdete v tématu [zkušební načtení systému Windows 8](https://blogs.technet.microsoft.com/scd-odtsp/2012/09/27/windows-8-sideloading-requirements-from-technet/).
+
+## <a name="windows-10-sideloading"></a>Zkušební načtení Windows 10
 
 Ve Windows 10 se zkušební verze liší od verze v dřívějších verzích Windows:
 
@@ -36,18 +39,17 @@ Ve Windows 10 se zkušební verze liší od verze v dřívějších verzích Win
 
 - Certifikáty Symantec Phone a licenční klíče pro zkušební načtení se nevyžadují. Pokud však není k dispozici místní certifikační autorita, může být nutné získat certifikát pro podpis kódu od veřejné certifikační autority. Další informace najdete v tématu [Úvod do podepisování kódu](https://docs.microsoft.com/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
+### <a name="code-sign-your-app"></a>Podpis kódu vaší aplikace
 
-## <a name="code-sign-your-app"></a>Podpis kódu vaší aplikace
+Prvním krokem je podepsání vašeho balíčku appx vaším kódem. Podrobnosti najdete v tématu [podepsání balíčku aplikace pomocí nástroje SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool).
 
-Prvním krokem je podepsání vašeho balíčku appx pomocí kódu, viz část [podepsání balíčku aplikace pomocí nástroje SignTool](https://docs.microsoft.com/windows/uwp/packaging/sign-app-package-using-signtool) .
+### <a name="upload-your-app"></a>Nahrání aplikace
 
-## <a name="upload-your-app"></a>Nahrání aplikace
-
-V dalším kroku nahrajete podepsaný soubor appx, jak je popsáno v tématu [nahrání obchodní aplikace pro Windows](lob-apps-windows.md) .
+Dále je nutné nahrát podepsaný soubor appx. Podrobnosti najdete v tématu [Přidání obchodní aplikace pro Windows do Microsoft Intune](lob-apps-windows.md).
 
 Pokud aplikaci nasadíte podle potřeby pro uživatele nebo zařízení, nepotřebujete aplikaci Inutne Portál společnosti. Pokud ale aplikaci nasadíte jako dostupnou pro uživatele, pak ji mohou použít Portál společnosti z veřejného Microsoft Store, použít aplikaci Portál společnosti z privátního Microsoft Store pro firmy nebo budete muset podepsat a ručně nasadit společnost Intune. Aplikace portálu
 
-## <a name="upload-the-code-signing-certificate"></a>Nahrajte certifikát pro podpis kódu.
+### <a name="upload-the-code-signing-certificate"></a>Nahrajte certifikát pro podpis kódu.
 
 Pokud vaše zařízení s Windows 10 ještě nedůvěřuje certifikační autoritě, pak po podepsání balíčku appx a jeho nahrání do služby Intune je potřeba nahrát certifikát pro podepisování kódu na portál Intune:
 1. Klikněte na klientské aplikace.
@@ -61,7 +63,7 @@ Intune nasadí nejnovější soubor. CER, který se nahrál. Pokud máte více s
 
 ## <a name="how-to-renew-the-symantec-enterprise-code-signing-certificate"></a>Jak obnovit certifikát Symantec Enterprise pro podpis kódu
 
-Certifikát použitý k nasazení mobilních aplikací Windows Phone 8,1 byl ukončený 28 2019 a již není k dispozici pro obnovení z Symantec. Pokud nasazujete na WIndows 10 Mobile, můžete dál používat certifikáty pro podepisování kódu Symantec Desktop Enterprise, a to podle pokynů pro Windows 10.
+Certifikát použitý k nasazení mobilních aplikací Windows Phone 8,1 byl ukončený 28 2019 a již není k dispozici pro obnovení z Symantec. Pokud nasazujete na WIndows 10 Mobile, můžete dál používat certifikáty pro podepisování kódu Symantec Desktop Enterprise, a to podle pokynů pro [zkušební načtení Windows 10](app-sideload-windows.md#windows-10-sideloading) .
 
 ## <a name="how-to-install-the-updated-certificate-for-line-of-business-lob-apps"></a>Jak nainstalovat aktualizovaný certifikát pro obchodní aplikace
 

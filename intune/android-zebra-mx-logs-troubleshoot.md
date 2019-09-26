@@ -1,13 +1,12 @@
 ---
-title: Použití StageNow protokoly na zařízeních s Androidem Zebra v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: Při použití StageNow na zařízeních s Androidem v Microsoft Intune, naleznete v tématu běžné problémy a jejich řešení. Také zjistěte, jak získat protokoly a podívejte se na příklady toho, jak číst protokoly úspěchu nebo chyby.
+title: Použití protokolů StageNow na zařízeních s Androidem Zebra v Microsoft Intune – Azure | Microsoft Docs
+description: Podívejte se na časté problémy a řešení při použití StageNow na zařízeních s Androidem s Microsoft Intune. Dozvíte se taky, jak získat protokoly, a podívejte se na příklady, jak číst protokoly pro úspěch nebo chyby.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: ''
 ms.technology: ''
@@ -17,63 +16,63 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 36476820805c00cefafcd9f64dd2f08a014762c0
-ms.sourcegitcommit: 44095bbd1502b02201a01604531f4105401fbb92
+ms.openlocfilehash: 6110476aace30daa27450326aea3f4abd4fb3ea0
+ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58490537"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "71303895"
 ---
-# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží a podívejte se na potenciální problémy na zařízeních s Androidem Zebra v Microsoft Intune
+# <a name="troubleshoot-and-see-potential-issues-on-android-zebra-devices-in-microsoft-intune"></a>Řešení potíží a zobrazení potenciálních problémů na zařízeních s Androidem Zebra v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-V Microsoft Intune, můžete použít [Zebra Mobility rozšíření (MX) ke správě zařízení s Androidem Zebra](android-zebra-mx-overview.md). Při použití Zebra zařízení, vytvořte profily v StageNow ke správě nastavení a jejich nahrávání do Intune. Intune používá aplikace StageNow aplikaci nastavení na zařízení. StageNow aplikace také vytvoří soubor protokolu podrobné na zařízení, která se používá k řešení.
+V Microsoft Intune můžete [ke správě zařízení se systémem Android Zebra použít rozšíření Zebra mobility (MX)](android-zebra-mx-overview.md). Při používání zařízení Zebra vytvoříte profily v StageNow pro správu nastavení a nahrajete je do Intune. Intune používá aplikaci StageNow k použití nastavení na zařízeních. Aplikace StageNow také na zařízení, které se používá k odstraňování potíží, vytvoří podrobný soubor protokolu.
 
 Tato funkce platí pro:
 
 - Android
 
-Například můžete vytvořit profil v StageNow ke konfiguraci zařízení. Při vytváření profilu StageNow poslední krok generuje soubor pro test profilu. Můžete využívat tento soubor s StageNow aplikací na zařízení.
+Můžete například vytvořit profil v StageNow a nakonfigurovat zařízení. Při vytváření profilu StageNow vygeneruje poslední krok soubor pro otestování profilu. Tento soubor spotřebujete na zařízení pomocí aplikace StageNow.
 
-Například vytvořit profil v StageNow a testování. V Intune přidat profil StageNow a pak ji přiřaďte Zebra zařízení. Při kontrole stavu přiřazeného profilu, profil, který se zobrazuje základní stav.
+V jiném příkladu vytvoříte profil v StageNow a otestujete ho. V Intune přidejte profil StageNow a přiřaďte ho k zařízením zebra. Při kontrole stavu přiřazeného profilu zobrazuje profil stav vysoké úrovně.
 
-V obou těchto případech můžete získat další podrobnosti ze souboru protokolu StageNow, který se ukládá v zařízení pokaždé, když platí StageNow profilu.
+V obou těchto případech můžete získat další podrobnosti ze souboru protokolu StageNow, který je uložený v zařízení pokaždé, když se použije profil StageNow.
 
-Některé problémy s nesouvisejí se obsah StageNow profilu a se neprojeví v protokolech.
+Některé problémy nesouvisejí s obsahem profilu StageNow a nereflektují se v protokolech.
 
-Tento článek popisuje, jak číst protokoly StageNow a uvádí některé možné problémy s Zebra zařízení, která nemusí být zobrazí v protokolech.
+V tomto článku se dozvíte, jak číst protokoly StageNow a uvádí další možné problémy se zařízeními Zebra, která se nemusí odrazit v protokolech.
 
-[Použití a správa zařízení Zebra s příponami Mobility Zebra](android-zebra-mx-overview.md) obsahuje další informace o této funkci.
+Další informace o této funkci najdete v [Zebra zařízeních s rozšířeními Zebra mobility](android-zebra-mx-overview.md) .
 
-## <a name="get-the-logs"></a>Získání protokolů
+## <a name="get-the-logs"></a>Získat protokoly
 
-### <a name="use-the-stagenow-app-on-the-device"></a>Použití StageNow aplikace na zařízení
-Při testování profilu přímo pomocí StageNow v počítači, namísto použití [nasazení profilu Intune](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow), StageNow aplikace na zařízení uloží protokoly z testu. Chcete-li získat soubor protokolu, použijte **(...)**  možnost v aplikaci StageNow na zařízení.
+### <a name="use-the-stagenow-app-on-the-device"></a>Použití aplikace StageNow na zařízení
+Když otestujete profil přímo pomocí StageNow na počítači v systému, místo použití [Intune k nasazení profilu](android-zebra-mx-overview.md#step-4-create-a-device-management-profile-in-stagenow)aplikace StageNow na zařízení uloží protokoly z testu. K získání souboru protokolu použijte možnost **Další (...)** v aplikaci StageNow na zařízení.
 
 ### <a name="get-logs-using-android-debug-bridge"></a>Získání protokolů pomocí Android Debug Bridge
-Pokud chcete získat protokoly po profil, který je už nasazená s Intune, připojte zařízení k počítači s [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb) (otevře web pro Android).
+Pokud chcete získat protokoly, až bude profil už nasazený pomocí Intune, připojte ho k počítači s [Android Debug Bridge (ADB)](https://developer.android.com/studio/command-line/adb) (otevře se web Androidu).
 
-Na zařízení protokoly se ukládají do `/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
+V zařízení se protokoly ukládají do`/sdcard/Android/data/com.microsoft.windowsintune.companyportal/files`
 
-### <a name="get-logs-from-email"></a>Získání protokolů z e-mailu
-Pokud chcete získat protokoly po profil, který je už nasazená s Intune, koncovým uživatelům může poslat e-mail přihlásí pomocí e-mailové aplikace na zařízení. Zebra zařízení otevřete aplikaci portál společnosti a [odeslat protokoly](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly také vytvoří PowerLift incidentu ID, které můžete využít, pokud se obrátíte na podporu Microsoftu.
+### <a name="get-logs-from-email"></a>Získat protokoly z e-mailu
+Aby se protokoly dostaly po nasazení profilu s Intune, můžou koncoví uživatelé odeslat e-mailem protokoly pomocí e-mailové aplikace na zařízení. Na zařízení Zebra otevřete aplikaci Portál společnosti a [odešlete protokoly](https://docs.microsoft.com/intune-user-help/send-logs-to-your-it-admin-by-email-android). Pomocí funkce Odeslat protokoly vytvoří také ID incidentu PowerLift, na které můžete odkazovat, pokud se obrátíte na podporu Microsoftu.
 
 ## <a name="read-the-logs"></a>Přečtěte si protokoly
 
-Při hledání v protokolech, dojde k chybě pokaždé, když se zobrazí `<characteristic-error>` značky. Podrobnosti o chybě jsou zapsány do `<parm-error>` značka > `desc` vlastnost.
+Při prohlížení protokolů dojde k chybě vždy, když se zobrazí `<characteristic-error>` značka. Podrobnosti o chybě se zapisují `<parm-error>` do vlastnosti `desc` Tag >.
 
 ## <a name="error-types"></a>Typy chyb
 
-Zebra zařízení zahrnují různé zpráv o chybách úrovně:
+Zařízení Zebra zahrnují různé úrovně zasílání zpráv o chybách:
 
-- Zprostředkovatel kryptografických služeb není podporován na zařízení. Například zařízení není mobilní zařízení a nemá mobilní správce.
-- MX nebo OSX verze se neshoduje. Jednotlivé CSP se systémovou správou verzí. Plná podpora matice, naleznete v tématu [dokumentaci společnosti Zebra](http://techdocs.zebra.com/mx/) (otevře web společnosti Zebra).
-- Zařízení odesílá jiný problém nebo chyba.
+- Zprostředkovatel kryptografických služeb není na zařízení podporován. Nejedná se třeba o mobilní zařízení, které nemá mobilního manažera.
+- Verze MX nebo OSX se neshodují. Každý CSP má verzi. Celou matrici podpory najdete v [dokumentaci k Zebra](http://techdocs.zebra.com/mx/) (otevření webu Zebra).
+- Zařízení nahlásí jiný problém nebo chybu.
 
 ## <a name="examples"></a>Příklady
 
-Například máte následující vstupní profil:
+Máte například následující vstupní profil:
 
 ```xml
 <wap-provisioningdoc>
@@ -86,7 +85,7 @@ Například máte následující vstupní profil:
 </wap-provisioningdoc>
 ```
 
-V protokolu je stejný jako vstupní soubor XML. Tento výstup odpovídající znamená, že profil úspěšně použila na zařízení bez chyb:
+V protokolu je kód XML totožný se vstupem. Tento shodný výstup znamená, že se profil úspěšně nastavil na zařízení bez chyb:
 
 ```xml
 <wap-provisioningdoc>
@@ -99,7 +98,7 @@ V protokolu je stejný jako vstupní soubor XML. Tento výstup odpovídající z
 </wap-provisioningdoc>
 ```
 
-Například máte následující vstup:
+V jiném příkladu máte následující vstup:
 
 ```xml
 <wap-provisioningdoc>
@@ -113,7 +112,7 @@ Například máte následující vstup:
 </wap-provisioningdoc>
 ```
 
-Protokol obsahuje chybu, protože obsahuje `<characteristic-error>` značky. V tomto scénáři profil pokusili instalovat balíček Android (APK), která neexistuje v zadané cestě:
+Protokol zobrazuje chybu, protože obsahuje `<characteristic-error>` značku. V tomto scénáři se profil pokusil nainstalovat balíček pro Android (APK), který v dané cestě neexistuje:
 
 ```xml
 <wap-provisioningdoc>
@@ -127,28 +126,28 @@ Protokol obsahuje chybu, protože obsahuje `<characteristic-error>` značky. V t
 </wap-provisioningdoc>
 ```
 
-## <a name="other-potential-issues-with-zebra-devices"></a>Ostatní potenciální potíže se zařízeními Zebra
+## <a name="other-potential-issues-with-zebra-devices"></a>Další možné problémy se zařízeními Zebra
 
-Tato část uvádí další informace o možných problémech, které se můžete setkat při používání Zebra zařízení pomocí Správce zařízení. V protokolech StageNow nezobrazují, tyto problémy.
+V této části jsou uvedené další možné problémy, se kterými se můžete setkat při používání zařízení Zebra se správcem zařízení. Tyto problémy nejsou hlášeny v protokolech StageNow.
 
-### <a name="android-system-webview-is-out-of-date"></a>Android System WebView je zastaralá
+### <a name="android-system-webview-is-out-of-date"></a>Android System WebView je zastaralá.
 
-Když starší zařízení přihlásit pomocí aplikace portál společnosti, může se zobrazit uživatele, zprávu, že součást System WebView je zastaralá a je třeba upgradovat. Pokud má zařízení Google Play nainstalována, připojení k Internetu a vyhledat aktualizace. Pokud zařízení nemá nainstalovaný Google Play, získali aktualizovanou verzi komponenty a použít ho k zařízením. Nebo aktualizovat na nejnovější vydané Zebra operačního systému zařízení.
+Když se starší zařízení přihlásí pomocí aplikace Portál společnosti, můžou se uživatelům zobrazit zpráva, že komponenta System WebView je zastaralá a potřebuje upgradovat. Pokud je zařízení nainstalované Google Play, připojte ho k Internetu a vyhledejte aktualizace. Pokud zařízení nemá nainstalované Google Play, získejte aktualizovanou verzi komponenty a použijte ji pro zařízení. Nebo aktualizujte na nejnovější operační systém zařízení vydaný nástrojem zebra.
 
-### <a name="management-actions-take-a-long-time"></a>Akce správy trvat dlouhou dobu
+### <a name="management-actions-take-a-long-time"></a>Akce správy trvají dlouhou dobu.
 
-Pokud nejsou k dispozici aplikace služby Google Play, některé úlohy trvat až 8 hodin. [Aplikace portál společnosti Intune omezení pro Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otevře jiný web společnosti Microsoft) může být dobrým zdrojem informací je.
+Pokud služby Google Play Services nejsou k dispozici, dokončení některých úloh trvá až 8 hodin. [Omezení aplikace Portál společnosti Intune pro Android](https://support.microsoft.com/help/3211588/limitations-of-intune-company-portal-app-for-android-in-china) (otevře jiný web společnosti Microsoft) může být dobrým prostředkem.
 
-### <a name="device-spoofing-suspected-shows-in-intune"></a>"Zařízení falšování podezřelý" se zobrazí v Intune
+### <a name="device-spoofing-suspected-shows-in-intune"></a>V Intune se zobrazuje "podezření na falšování zařízení"
 
-Tato chyba znamená, že Intune má podezření, že jeho model a výrobce jako Zebra zařízení hlásí bez - Zebra zařízení s Androidem.
+Tato chyba znamená, že Intune předpokládá, že zařízení s Androidem, které není Zebra, hlásí svůj model a výrobce jako zařízení zebra.
 
-### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Aplikace portál společnosti je starší než minimální požadovaná verze
+### <a name="company-portal-app-is-older-than-minimum-required-version"></a>Portál společnosti aplikace je starší než minimální požadovaná verze.
 
-Intune může aktualizovat minimální požadovaná verze aplikace portál společnosti. Pokud Google Play není nainstalovaný na zařízení, nebude automaticky aktualizovat aplikaci portál společnosti. Pokud minimální požadovaná verze je novější než nainstalovaná verze, aplikace portál společnosti přestane fungovat. Aktualizace na nejnovější aplikaci portál společnosti pomocí [zkušební načtení před prodejem na zařízeních Zebra](android-zebra-mx-overview.md#sideload-the-company-portal-app).
+Intune může aktualizovat minimální požadovanou verzi Portál společnosti aplikace. Pokud v zařízení není nainstalovaná Google Play, Portál společnosti aplikace se automaticky neaktualizuje. Pokud je minimální požadovaná verze novější než nainstalovaná verze, aplikace Portál společnosti přestane fungovat. Aktualizujte na nejnovější aplikaci Portál společnosti pomocí [zkušebního načtení na zařízeních Zebra](android-zebra-mx-overview.md#sideload-the-company-portal-app).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-[Zebra diskusní vývěsky](https://developer.zebra.com/community/home/discussions) (otevře Zebra pro web)
+[Diskuzní vývěsky Zebra](https://developer.zebra.com/community/home/discussions) (otevře web Zebra)
 
-[Použití a správa zařízení Zebra s příponami Zebra nastavení mobilních zařízení v Intune](android-zebra-mx-overview.md)
+[Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Intune](android-zebra-mx-overview.md)

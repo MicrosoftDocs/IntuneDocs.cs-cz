@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/24/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0e59fd90755911e15f9971ddf9a9943264e9012b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: aff9a4b51d28af0e88c995df80e3edb8e16a2fc5
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388230"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71304801"
 ---
 # <a name="locate-lost-or-stolen-ios-devices-with-intune"></a>Vyhledání ztracených nebo odcizených zařízení s iOSem přes Intune
 
@@ -41,21 +40,18 @@ Tato funkce není podporovaná pro tyto systémy:
 
 ## <a name="locate-a-lost-or-stolen-device"></a>Vyhledání ztraceného nebo odcizeného zařízení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
 4. Ze seznamu zařízení, která spravujete, vyberte zařízení s iOSem a vyberte **...Další**. Pak zvolte vzdálenou akci **Najít zařízení**.
 5. Po nalezení zařízení se jeho poloha zobrazí v části **Najít zařízení**.
     ![Snímek obrazovky z funkcí Najít zařízení pomocí Intune v Azure](./media/locate-device.png)
 
->[!NOTE]
->Z důvodu ochrany osobních údajů je míra zvětšení mapy omezená na poloměr 300 metrů.
 
 ## <a name="activate-lost-mode-sound-alert-on-an-ios-device"></a>Aktivace zvukového upozornění v režimu ztráty na zařízení s iOSem
 
 Pokud někdo ztratil zařízení s iOSem 9.3 nebo novějším, můžete na zařízení vzdáleně aktivovat přehrání zvuku upozornění, aby ho uživatel mohl najít. Zařízení musí být v [režimu ztráty](device-lost-mode.md).
 
-V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení s iOSem > **Přehled** > **Více** > **Přehrát zvuk režimu ztráty (jenom pod dohledem)**.
+V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení s iOSem > **Přehled** > **Více** > **Přehrát zvuk režimu ztráty (jenom pod dohledem)** .
 
 Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se zařízení neodebere z režimu ztráty.
 
@@ -67,6 +63,6 @@ Zvuk se bude přehrávat, dokud ho uživatel na zařízení nedeaktivuje nebo se
 - Údaje o poloze jsou při uložení i při přenosu zašifrované.
 - Při konfiguraci režimu ztráty můžete přizpůsobit zprávu, která se zobrazí na zamykací obrazovce. V této zprávě určené osobě, která ztracené zařízení najde, nezapomeňte uvést konkrétní podrobnosti o vrácení ztraceného zařízení.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Pokud se chcete podívat na stav povolení funkce Najít zařízení, otevřete **Zařízení** a vyberte **Akce zařízení**.

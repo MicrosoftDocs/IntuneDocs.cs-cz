@@ -8,22 +8,21 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/13/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 46429114-2e26-4ba7-aa21-b2b1a5643e01
-ms.reviewer: chrisbal
+ms.reviewer: tisilver
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c2a968334ecf3ddb90a3f97841cc191c553b39ca
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: ef8bbe90b9cc3f1b04300646c8b56676cbd23766
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59893863"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71303366"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -37,11 +36,12 @@ Jako správce Intune můžete nastavit registraci zařízení s macOS ve vlastni
 
 Před nastavením registrace zařízení s macOS zajistěte splnění následujících požadavků:
 
+- Ujistěte [se, že vaše zařízení má nárok na registraci zařízení Apple](https://support.apple.com/en-us/HT204142#eligibility).
 - [Konfigurace domén](custom-domain-name-configure.md)
 - [Nastavení autority MDM](mdm-authority-set.md)
 - [Vytvoření skupin](groups-add.md)
 - [Konfigurace aplikace Portál společnosti](company-portal-app.md)
-- Přiřazení uživatelských licencí [centra pro správu služeb Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- Přiřazení uživatelských licencí v [centru pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Zařízení se systémem macOS vlastněná uživatelem (BYOD)
@@ -49,7 +49,7 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení licencí uživatelům si uživatelé můžou zaregistrovat svoje zařízení takto:
 - přechodem na [web Portál společnosti](https://portal.manage.microsoft.com) nebo
 - stažením aplikace Portál společnosti.
-Můžete také odeslat je odkaz na postup online registrace: [Registrace zařízení s macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+Můžete jim také poslat odkaz na online kroky registrace: [Zaregistrujte zařízení MacOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
@@ -58,8 +58,8 @@ Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
 ## <a name="company-owned-macos-devices"></a>Zařízení s macOS ve vlastnictví společnosti
 U organizací, které svým uživatelům zařízení pořizují, Intune podporuje následující způsoby registrace zařízení s macOS ve vlastnictví společnosti:
-- [Program registrace zařízení Apple (DEP)](device-enrollment-program-enroll-macos.md): Organizace můžou nakupovat zařízení s macOS prostřednictvím Apple zařízení registrace programu (DEP). Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení.
-- [Správce registrace zařízení (DEM)](device-enrollment-manager-enroll.md): Můžete použít účet DEM k registraci až 1000 zařízení.
+- Program [Apple program registrace zařízení (DEP)](device-enrollment-program-enroll-macos.md): Organizace si můžou koupit zařízení macOS prostřednictvím programu Apple Program registrace zařízení (DEP). Program DEP umožňuje vzdáleně (bezdrátově) nasadit registrační profil, který umožní správu těchto zařízení.
+- [Správce registrace zařízení (DEM)](device-enrollment-manager-enroll.md): K registraci zařízení 1 000 můžete použít účet DEM.
 
 ## <a name="block-macos-enrollment"></a>Blokování registrace zařízení s macOS
 Intune ve výchozím nastavení umožňuje registraci zařízení s macOS. Pokud chcete u zařízení se systémem macOS registraci blokovat, přečtěte si téma [Nastavení omezení typu zařízení](enrollment-restrictions-set.md).
@@ -71,7 +71,7 @@ Intune ve výchozím nastavení umožňuje registraci zařízení s macOS. Pokud
 
 Virtuální počítače s macOS pro testování můžete zaregistrovat pomocí softwaru Parallels Desktop nebo VMware Fusion. 
 
-Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuálního počítače, aby ho služba Intune mohla rozpoznat. Postupujte podle pokynů softwaru Parallels k nastavení typu hardwaru a [sériové číslo](http://kb.parallels.com/123455) nastavení potřebná nastavení pro testování. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
+Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuálního počítače, aby ho služba Intune mohla rozpoznat. Podle pokynů pro rovnoběžky nastavte typ hardwaru a [sériové číslo](http://kb.parallels.com/123455) pro nastavení potřebných nastavení pro testování. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
 
 U softwaru VMware Fusion musíte [upravit soubor .vmx](https://kb.vmware.com/s/article/1014782), abyste mohli nastavit model hardwaru a sériové číslo virtuálního počítače. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
 

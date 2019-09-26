@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 041a8198f8017bff88e139e4020e3364c05be5c8
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: b4c1db48d0e61db88c3f6336e06be606cbf24462
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59899631"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "71305248"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -31,14 +30,13 @@ ms.locfileid: "59899631"
 
 Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných aplikací a spravovat stav jejich přiřazení.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V nabídce **Intune** zvolte **Klientské aplikace**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V části nabídky **Spravovat** vyberte **Aplikace**.
 5. V seznamu aplikací vyberte aplikaci, která se má monitorovat. Zobrazí se podokno aplikace s přehledem stavu zařízení a uživatele.
 
 > [!NOTE]
-> Aplikace Android Store, které jsou nasazeny jako **dostupné** a s Androidem obchodní aplikace nasazené jako **k dispozici s registrací i bez** nehlásí stav instalace.
+> Aplikace z obchodu pro Android, které jsou nasazeny jako **K dispozici**, nehlásí svůj stav instalace.
 
 ## <a name="app-overview-pane"></a>Podokno přehledu aplikace
 
@@ -51,7 +49,7 @@ V podokně aplikace si můžete zkontrolovat podrobnosti o stavu aplikace ve va�
 |------------------------|------------------------------------------------------------------|
 | **Publisher**          | Vydavatel aplikace                                            |
 | **Operační systém**   | Operační systém aplikace (Windows, iOS, Android atd.) |
-| **Vytvořeno**             | Datum a čas vytvoření této revize <b>**Poznámka:**: Tato hodnota datum aktualizuje, když správce IT změní metadata aplikace, jako je například změna kategorie aplikace nebo popis aplikace.                        |
+| **Vytvořeno**             | Datum a čas vytvoření této revize <b>**Poznámka**: Tato hodnota data se aktualizuje, když správce IT změní metadata aplikace, jako je například změna kategorie aplikace nebo popisu aplikace.                        |
 | **Přiřazeno**           | Jestli byla aplikace přiřazena (**Ano** nebo **Ne**)                  |
 
 ### <a name="device-and-user-status-graphs"></a>Grafy stavu zařízení a uživatele
@@ -66,12 +64,7 @@ Grafy zobrazují počet aplikací pro následující stav:
 | **Není k dispozici**           | Počet aplikací, u nichž není stav k dispozici            |
 
 > [!NOTE]
-> Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací aplikací. K příčinám nekonzistencí můžou patřit tyto:
->    - Změna cílení nainstalované spravované aplikace může způsobit, že se počet instalací ve stavovém okně sníží, bude ale dál hlášený mezi zjištěnými aplikacemi.
->    - Cílení více instancí téže aplikace v tenantovi povede k různým počtům kvůli možnému překrývání uživatelů nebo zařízení. Každá instance aplikace započítá překrývající se uživatele, ale zjištěné aplikace budou mít duplicitní počty.
->    - Zjištěné aplikace a stavy aplikací se shromažďují v různých časových intervalech, což může způsobit nesoulad v počtech aplikací.
-> 
-> Také, mějte na paměti, že aplikace pro Android nasadit jako **k dispozici s registrací i bez** jenom nahlásit stav instalace aplikace pro zaregistrovaná zařízení. Stav instalace aplikace není k dispozici pro zařízení, která nejsou zaregistrovaná v Intune.
+> Mějte na paměti, že aplikace pro Android LOB (. APK) nasazené jako **k dispozici s registrací nebo bez registrace** stav instalace aplikace pouze u zaregistrovaných zařízení. Pro zařízení, která nejsou zaregistrovaná v Intune, není stav instalace aplikace k dispozici.
 
 ### <a name="device-install-status"></a>Stav instalace zařízení
 
@@ -82,7 +75,7 @@ Seznam stavů zařízení se zobrazí, když v části nabídky **Monitorovat** 
 | **Název zařízení**      | Název zařízení na platformách, které umožňují pojmenování zařízení. Na ostatních platformách Intune vytvoří název z dalších vlastností. Tento atribut není k dispozici žádnému jinému zařízení.                                                                       |
 | **Uživatelské jméno**        | Jméno uživatele                                                                                                                                                                                                                                      |
 | **Platforma**         | Operační systém zařízení (Windows, iOS, Android atd.)                                                                                                                                                                                           |
-| **Verze**          | Číslo verze aplikace. Pro aplikace – obchodní (LOB) a Microsoft Store pro obchodní aplikace se zobrazí celé číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) Pro standardní Store aplikace jsou uvedeny žádné verze. |
+| **Verze**          | Číslo verze aplikace. V případě obchodních aplikací a Microsoft Store pro obchodní aplikace se zobrazí úplné číslo verze aplikace. Celé číslo verze identifikuje konkrétní vydanou verzi aplikace. Číslo se zobrazí jako _Verze_(_build_). Příklad: 2.2(2.2.17560800) V případě aplikací pro standardní úložiště nejsou zobrazeny žádné verze. |
 | **Stav**           | Stav aplikace                                                                                                                                                                                                                                     |
 | **Podrobnosti stavu**   | Podrobnosti o stavu                                                                                                                                                                                                                                     |
 | **Poslední vrácení se změnami**    | Datum, kdy se zařízení naposledy synchronizovalo s Intune                                                                                                                                                                                                                  |
@@ -101,7 +94,7 @@ Seznam stavů uživatele se zobrazí, když v části nabídky **Monitorovat** v
 | **Nenainstalováno**   | Počet aplikací, které nenainstaloval uživatel |
 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Další informace o práci s daty Intune najdete v článku [Použití datového skladu Intune](reports-nav-create-intune-reports.md).
 - Další informace o zásadách konfigurace aplikací najdete v tématu [Zásady konfigurace aplikací v Intune](app-configuration-policies-overview.md).

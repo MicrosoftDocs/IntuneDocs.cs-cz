@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 041f37e56e85b0ac26a4dd7a9dbbdb49bc0ebd9e
-ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
+ms.openlocfilehash: 90c770fec5bd9456151e601188254a3a022cd13f
+ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71166337"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71279900"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune. 
 
@@ -66,38 +66,6 @@ Nemusíte provádět žádnou akci, ale v případě potřeby můžete zvážit 
 #### <a name="additional-information"></a>Další informace 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665324--"></a>Plán změny: Intune se přesouvá na podporu iOS 11 a vyšší v září. <!-- 4665324-->
-V září očekáváme, že iOS 13 vydává společnost Apple. Registrace do Intune, Portál společnosti a Managed Browser se po vydání verze iOS 13 přesune na podporu iOS 11 a novějších.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Za předpokladu, že jsou mobilní aplikace O365 podporované v iOS 11,0 a vyšších, to vás nemusí ovlivnit. je možné, že jste už provedli upgrade operačního systému nebo zařízení. Pokud ale máte některá z níže uvedených zařízení nebo se rozhodnete zaregistrovat některá z níže uvedených zařízení, zjistěte, že níže uvedená zařízení nepodporují operační systém větší než iOS 10. Tato zařízení bude potřeba upgradovat na zařízení, které podporuje iOS 11 nebo vyšší:
-
-- iPhone 5
-- iPhone 5c
-- iPad (4. generace)
-
-Pokud používáte zásady ochrany aplikací (aplikace), můžete také nastavit přístup nastavení "vyžadovat minimální operační systém iOS" (pouze upozornění).
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Podívejte se do sestavy Intune, kde vidíte, která zařízení nebo uživatelé můžou být ovlivnění. Přejít na **zařízení** > **všechna zařízení** a filtrovat podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení se systémem iOS 10. Zajistěte, aby vaši koncoví uživatelé před září upgradovali svoje zařízení na podporovanou verzi operačního systému.
-
-### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Plán změny: Podpora verze 8.1.1 a vyšší sady Intune App SDK pro iOS <!-- 3586942-->
-Od září 2019 se Intune přesune na podporu aplikací pro iOS pomocí sady Intune App SDK 8.1.1 a vyšší. Aplikace sestavené s verzemi sady SDK nižšími než 8.1.1 se už nebudou podporovat. Tato změna se projeví u verze iOS 13 od společnosti Apple, která se očekává od září a bude také oznámena v MC181399.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pomocí sady Intune App SDK nebo integrace se zabalením aplikací můžete chránit podniková data před neschválenými aplikacemi a uživateli prostřednictvím šifrování dat. Intune App SDK pro iOS ve výchozím nastavení použije 256 šifrovacích klíčů, pokud je šifrování povolené Intune App Protection zásady (aplikace). Po této změně nebudou moct aplikace pro iOS ve verzích SDK starších než 8.1.1, které používají 128 šifrovacích klíčů, dál sdílet data s aplikacemi integrovanými se sadou SDK 8.1.1 nebo s použitím 256 klíčů. Aby bylo možné chráněné sdílení dat, bude pro všechny aplikace pro iOS potřeba mít sadu SDK verze 8.1.1 nebo vyšší.
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Kontrolovat aplikace Microsoftu, třetích stran a obchodních aplikací (LOB). Zajistěte, aby všechny vaše aplikace chráněné pomocí aplikace Intune používaly sadu SDK verze 8.1.1 nebo novější.
-
-- Pro obchodní aplikace: Možná budete muset znovu publikovat aplikace integrované se sadou SDK verze 8.1.1 nebo novější. Doporučujeme nejnovější verzi sady SDK. Informace o tom, jak připravit obchodní aplikace pro zásady ochrany aplikací, najdete v tématu [Příprava obchodních aplikací na zásady ochrany aplikací](../apps-prepare-mobile-application-management.md).
-- Pro aplikace Microsoftu a třetích stran: Ujistěte se, že nasazujete nejnovější verze těchto aplikací pro uživatele.
-
-Měli byste také aktualizovat dokumentaci nebo pokyny pro vývojáře, pokud je to možné, a zahrnout tuto změnu do podpory pro sadu SDK.
-
-#### <a name="additional-information"></a>Další informace
-[Příprava obchodních aplikací na zásady ochrany aplikací](../apps-prepare-mobile-application-management.md)
-
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Plán změny: Nové nastavení aktualizací Windows v Intune <!-- 4464404 -->
 Od verze Intune do Intune nebo 1908 přidáváme nové "nastavení termínu", které můžete nakonfigurovat místo nastavení "Umožněte uživateli, aby se restartoval". V uživatelském rozhraní v 1909 nebo září si plánujeme zakázat nastavení, které je potřeba restartovat, a pak je úplně odebrat z konzoly do konce října. 
 
@@ -132,3 +100,19 @@ Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kter
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
+
+
+### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7. <!-- 3042987 -->
+Protože jsme se poslali v MC148476, který byl vydán posledních září 2018, a znovu v MC176794 zpátky v březnu 2019, Windows 7 dosáhne konce rozšířené podpory 14. ledna 2020. V tuto chvíli Intune vyřadí podporu pro zařízení s Windows 7, takže můžeme zaměřit naši investici na podporu novějších technologií a zajistit Skvělé nové prostředí koncových uživatelů. Po tomto datu se v Intune už nebude k dispozici technická pomoc a automatické aktualizace, které vám pomůžou chránit počítač s Windows 7. Microsoft důrazně doporučuje přejít na Windows 10 před lednem 2020, aby nedocházelo k situaci, kdy potřebujete službu nebo podporu, která už není dostupná. Další informace o životním cyklu podpory pro Windows [najdete tady](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tuto zprávu dostáváte, protože aktuálně spravujete počítač se systémem Windows 7 pomocí starší verze softwarového agenta Intune pro počítače. Po kratší dobu než na konci rozšířené podpory Windows 7 doporučujeme vaší organizaci co nejdříve začít s upgradem na Windows 10. Možnosti správy počítačů se vytvářejí přímo v operačním systému Windows 10 a už nemusíte instalovat klientského agenta, jako je softwarový klient Intune pro Windows 7. Od Windows 8.1 používá společnost Microsoft architekturu správy mobilních zařízení (MDM) ke zřízení, konfiguraci, aktualizaci a správě počítačů s Windows. Jakmile nastavíte Intune, můžete zjednodušit registraci zařízení s Windows 10 tak, že [do Intune zaregistrujete počítače s Windows 10](..\windows-enroll.md) prostřednictvím kanálu MDM. Pro správu počítače s Windows 10 doporučujeme použít toto "bez agenta správy MDM".
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Doporučujeme, aby vaše organizace okamžitě zvážila tento akční plán:
+
+- Naplánujte a upgradujte loďstev Windows 7 na Windows 10 do 14. ledna 2020.
+- Pokud chcete získat další informace o tom, jak upgradovat stávající loďstvo počítače se systémem Windows 7 na Windows 10, prozkoumejte [podporu nasazení Windows 10](https://docs.microsoft.com/windows/deployment/) .
+- Seznamte se s tím, jak [aplikace pro stolní počítače](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) nabízí rychlou stopu, která vám pomůže s příslibem kompatibility aplikací Microsoftu.
+- Převeďte stávající starší verze spravovaných softwarových klientů Intune do řešení doporučených pro společnost Microsoft pro správu Windows 10 pomocí správy mobilních zařízení (MDM). Zaregistrujte všechny nové počítače s Windows 10, které používají správu MDM pro Intune v Azure Portal.
+- Další informace najdete v [blogu publikovaném tady](https://aka.ms/Windows7_Intune) .

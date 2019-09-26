@@ -1,14 +1,13 @@
 ---
 title: Přidání aplikací pro App Store (iOS) do Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro iOS. Můžete přiřadit aplikace pomocí této metody, pokud aplikace jsou zadarmo dostupné v App Store.
+description: Zjistěte, jak do Microsoft Intune přidat aplikace z obchodu pro iOS. Pomocí této metody můžete přiřadit aplikace, pokud jsou aplikace zdarma v App Storu.
 keywords: Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 08/27/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 454000ccc7ac2d6f531b5ab43bb7652541559992
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 40bb5e1b14fa0c8c9b1af4e5a07e6a855808324a
+ms.sourcegitcommit: 6c74ff568267d85fd1d44fda75e3e24ead87cb2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896112"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "71303122"
 ---
 # <a name="add-ios-store-apps-to-microsoft-intune"></a>Přidání aplikací pro App Store (iOS) do Microsoft Intune
 
@@ -41,39 +40,37 @@ Pomocí této metody můžete aplikace přiřazovat jen v případě, že jsou v
 >[!NOTE]
 >Při práci s Microsoft Intune doporučujeme používat prohlížeč Microsoft Edge nebo Google Chrome.
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**.  
-    Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
 5. V podokně **Aplikace** vyberte **Přidat**.
 6. V seznamu **Typ aplikace** vyberte z typů **Aplikace pro Store** možnost **iOS**.
 7. Vyberte **Hledat v App Storu**.
-8. V podokně **Hledat v App Storu** vyberte národní prostředí App Storu.
+8. V podokně **Hledat v App Storu** vyberte národní prostředí pro zemi nebo oblast obchodu App Store.
 9. Do **vyhledávacího** pole zadejte název (nebo část názvu) aplikace.  
     Intune prohledá Store a vrátí seznam relevantních výsledků.
 10. V seznamu výsledků vyberte požadovanou aplikaci a pak vyberte **Vybrat**.
 11. V podokně **Přidat aplikaci** zvolte **Informace o aplikaci** a nakonfigurujte aplikaci.
 12. V podokně **Informace o aplikaci** přidejte informace o aplikaci. V závislosti na zvolené aplikaci můžou být některé hodnoty v tomto podokně vyplněné automaticky:
-    - **Název**: Zadejte název aplikace, jak je zobrazený na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
+    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ujistěte se, že používaný název aplikace je jedinečný. Pokud je název aplikace duplicitní, zobrazí se uživatelům na Portálu společnosti pouze jeden název.
     - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Publisher**: Zadejte název vydavatele aplikace.
-    - **Adresa URL obchodu**: Zadejte adresu URL aplikace App Store aplikace, kterou chcete vytvořit.
-    - **Minimální verzi operačního systému**: V seznamu vyberte nejstarší verzi operačního systému, na které můžete aplikaci nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
-    - **Použitelný typ zařízení**: V seznamu vyberte zařízení, která používají aplikaci.
-    - **Kategorie**: Volitelně vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Vyberte tuto možnost, chcete-li zobrazit sadu aplikací výrazném místě na hlavní stránce portálu společnosti když uživatelé vyhledávají aplikace.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Adresa URL AppStore**: Zadejte adresu URL obchodu s aplikacemi pro aplikaci, kterou chcete vytvořit.
+    - **Minimální operační systém**: V seznamu vyberte nejstarší verzi operačního systému, na kterou se dá aplikace nainstalovat. Pokud aplikaci přiřadíte k zařízení se starším operačním systémem, nenainstaluje se.
+    - **Příslušný typ zařízení**: V seznamu vyberte zařízení, která aplikace používá.
+    - **Kategorie**: Volitelně můžete vybrat jednu nebo více předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
+    - **Zobrazit jako doporučenou aplikaci v portál společnosti**: Tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
     - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Soukromá adresa URL**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
-    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka aplikace, například *Personální oddělení*. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
-    - **Poznámky k**: Volitelně zadejte jakékoli poznámky, které chcete přidružit k této aplikaci. Toto pole vidí jenom správce a koncoví uživatelé je neuvidí.
-    - **Logo**: Volitelně nahrajte ikonu, která bude spojená s aplikací. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Adresa URL ochrany osobních údajů**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů v této aplikaci. Adresa URL se zobrazí uživatelům na portálu společnosti.
+    - **Vývojář**: Volitelně můžete zadat název vývojáře aplikace. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
+    - **Vlastník**: Volitelně můžete zadat jméno vlastníka této aplikace, například *personální oddělení*. Toto pole je viditelné jen pro správce, uživatelé ho nevidí.
+    - **Poznámky**: Volitelně můžete zadat všechny poznámky, které chcete k této aplikaci přidružit. Toto pole vidí jenom správce a koncoví uživatelé je neuvidí.
+    - **Logo**: Volitelně nahrajte ikonu, která bude přidružená k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 13. Vyberte **OK**.
 14. Vyberte **Přidat**.
 
 Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)

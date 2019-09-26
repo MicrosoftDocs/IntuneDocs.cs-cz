@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,53 +17,53 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bd57d12630d5e2c8b69963f513ef007a9023f9b
-ms.sourcegitcommit: 9e196e4a3b381f0da97ce3c163b18a3012f4aed1
+ms.openlocfilehash: 746d9b35e63e5f68ed018ff65ace129b364f18d7
+ms.sourcegitcommit: 1494ff4b33c13a87f20e0f3315da79a3567db96e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59704888"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71303799"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Tato nastavení konfigurace umožňují aplikaci přizpůsobit podle směru dodavatele aplikace. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje. Konfigurační zásady kromě toho nepřiřazujete přímo uživatelům ani zařízením. Zásadu přidružíte k aplikaci a pak přiřazujete tuto aplikaci. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
+Zásady konfigurace aplikací se v Microsoft Intune používají k nastavení vlastní konfigurace u aplikací pro iOS. Tato nastavení konfigurace umožňují přizpůsobit aplikaci na základě směru dodavatele aplikace. Tato nastavení (klíče a hodnoty) vám poskytne dodavatel aplikace. Při konfiguraci aplikace je zadáváte jako klíče a hodnoty, nebo jako XML, které je obsahuje.
+
+Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty. Nastavení zásad konfigurace se použije, když ho aplikace zjistí (obvykle při prvním spuštění aplikace).
 
 Jakmile přidáte zásady konfigurace aplikace, můžete u těchto zásad konfigurace aplikací nastavit přiřazení. Když nastavíte přiřazení zásad, můžete zahrnout a vyloučit skupiny uživatelů, na které se zásady vztahují. Když zvolíte možnost zahrnout jednu nebo více skupin, můžete zahrnout konkrétní nebo integrované skupiny. Mezi integrované skupiny patří **Všichni uživatelé**, **Všechna zařízení** a **Všichni uživatelé a všechna zařízení**. 
 
->[!NOTE]
->V Intune máte v konzole pohodlně k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení** s integrovanými optimalizacemi. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali žádné skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.<p></p>
->Jako správce Microsoft Intune můžete řídit, které uživatelské účty se přidají do aplikací Microsoft Office na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty na zaregistrovaných zařízeních. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.
+> [!NOTE]
+> V Intune máte v konzole pohodlně k dispozici předem vytvořené skupiny **Všichni uživatelé** a **Všechna zařízení** s integrovanými optimalizacemi. Důrazně doporučujeme, abyste pro cílení na všechny uživatele a zařízení používali tyto skupiny a nepoužívali žádné skupiny Všichni uživatelé nebo Všechna zařízení, které byste sami vytvořili.
 
 Když máte vybrané zahrnuté skupiny pro zásady konfigurace aplikace, můžete také konkrétní skupiny vyloučit. Podrobnosti najdete v tématu [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md).
 
 > [!TIP]
 > Tento typ zásad je nyní k dispozici pouze pro zařízení se systémem iOS 8.0 a novějším. Podporuje následující typy instalací aplikací:
 >
-> -   **Spravované aplikace pro iOS z obchodu s aplikacemi**
-> -   **Balíček aplikace pro iOS**
+> - **Spravované aplikace pro iOS z obchodu s aplikacemi**
+> - **Balíček aplikace pro iOS**
 >
-> Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](apps-add.md).
+> Další informace o typech instalace aplikací najdete v tématu [Přidání aplikace do Microsoft Intune](apps-add.md). Další informace o zahrnutí konfigurace aplikace do balíčku aplikace. IPA pro spravovaná zařízení najdete v tématu Konfigurace spravované aplikace v [dokumentaci pro vývojáře pro iOS](https://developer.apple.com/library/archive/samplecode/sc2279/Introduction/Intro.html).
 
 ## <a name="create-an-app-configuration-policy"></a>Vytvoření zásad konfigurace aplikací
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Zvolte úlohu **Klientské aplikace**.
 4. Ve skupině **Spravovat** zvolte **Zásady konfigurace aplikací** a pak **Přidat**.
 5. Zadejte tyto podrobnosti:
     - **Název**: Název profilu, který se zobrazí na portálu Azure Portal
     - **Popis**: Popis profilu, který se zobrazí na portálu Azure Portal
-    - **Typ registrace zařízení** – zvolte **spravovaných zařízeních** pro zařízení zaregistrovaná v Intune.
+    - **Typ registrace zařízení** – vyberte **spravovaná zařízení** pro zařízení, která jsou zaregistrovaná v Intune.
 6. V poli **Platforma** vyberte **iOS**.
-7.  Zvolte **Přidružená aplikace**. Pak v podokně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci, a vyberte **OK**.
-8.  V podokně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
-9. Vyberte **Formát nastavení konfigurace**. Vyberte jednu z následujících metod přidáte informace o konfiguraci:
+7. Zvolte **Přidružená aplikace**. Pak v podokně **Přidružená aplikace** zvolte spravovanou aplikaci, u které chcete použít danou konfiguraci, a vyberte **OK**.
+8. V podokně **Přidat zásady konfigurace** zvolte **Nastavení konfigurace**.
+9. Vyberte **Formát nastavení konfigurace**. Chcete-li přidat informace o konfiguraci, vyberte jednu z následujících metod:
     - **Použití návrháře konfigurace**
     - **Zadání XML dat**<br><br>
     Podrobnosti o používání návrháře konfigurace najdete v části [Použití návrháře konfigurace](#use-configuration-designer). Podrobnosti o zadávání XML dat najdete v části [Zadání XML dat](#enter-xml-data). 
-10. Po přidání konfigurační informace, zvolte **OK**a klikněte na tlačítko **přidat** chcete přidat zásady konfigurace. Zobrazí se podokno s přehledem zásad konfigurace.
+10. Po přidání informací o konfiguraci klikněte na **tlačítko OK**a potom přidejte zásadu konfigurace kliknutím na tlačítko **Přidat** . Zobrazí se podokno s přehledem zásad konfigurace.
 11. Po výběru možnosti **Přiřazení** se zobrazí možnosti zahrnutí a vyloučení. 
 
     ![Snímek obrazovky s přiřazením zásad – karta Zahrnout](./media/app-config-policy01.png)
@@ -95,21 +94,21 @@ Microsoft Intune poskytuje konfigurační nastavení jedinečná pro aplikaci. N
 
 ### <a name="delete-a-setting"></a>Odstranění nastavení
 
-1. Zvolte tři tečky (**...**) vedle příslušného nastavení.
+1. Zvolte tři tečky ( **...** ) vedle příslušného nastavení.
 2. Vyberte **Odstranit**.
 
 Znaky \{\{ a \}\} se používají jenom pro typy tokenů a nesmí se používat pro jiné účely.
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
-Pro zařízení s Iosem použijte následující dvojice klíč/hodnota:
+U zařízení se systémem iOS použijte následující páry klíč/hodnota:
 
 | **Klíč** | IntuneMAMAllowedAccountsOnly |
 |--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Hodnoty** | <ul><li>**Povolené**: Jediný účet povolený je spravované uživatelský účet, definované [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) klíč.</li><li>**Zakázané** (nebo libovolnou hodnotu, která se neshodují malá a velká písmena na **povoleno**): Každý účet je povolen.</li></ul> |.
+| **Hodnoty** | <ul><li>**Povoleno**: Jediným povoleným účtem je spravovaný uživatelský účet definovaný klíčem [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) .</li><li>**Zakázáno** (nebo libovolná hodnota, která nerozlišuje malá a velká písmena pro **povoleno**): Libovolný účet je povolený.</li></ul> |.
 
    > [!NOTE]
-   > Je nutné použít OneDrive pro iOS 10.34 nebo novější a Outlook pro iOS 2.99.0 nebo novější a musí být aplikace cílem [zásady ochrany aplikací Intune](app-protection-policy.md) při povolení nakonfigurovat jenom účty organizace s více identitami.
+   > Je potřeba použít OneDrive pro iOS 10,34 nebo novější a Outlook pro iOS 2.99.0 nebo novější a aplikace musí být zacílená na [Zásady ochrany aplikací Intune](app-protection-policy.md) , když povolíte jenom nakonfigurované účty organizace s více identitami.
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 
@@ -119,7 +118,7 @@ Intune ověří formát XML. Intune ale nekontroluje, jestli seznam vlastností 
 
 Další informace o seznamech vlastností XML:
 
-  -  Projděte si informace uvedené v článku [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně pro vývojáře aplikací pro iOS.
+- Projděte si informace uvedené v článku [Vysvětlení seznamů vlastností XML](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/PropertyLists/UnderstandXMLPlist/UnderstandXMLPlist.html) v knihovně pro vývojáře aplikací pro iOS.
 
 ### <a name="example-format-for-an-app-configuration-xml-file"></a>Příklad formátu pro soubor XML konfigurace aplikací
 
@@ -151,6 +150,7 @@ Když vytvoříte soubor konfigurace aplikací, můžete pomocí tohoto formátu
   <string>{{aaddeviceid}}</string>
 </dict>
 ```
+
 ### <a name="supported-xml-plist-data-types"></a>Podporované datové typy v seznamu vlastností XML
 
 Intune podporuje v seznamu vlastností následující typy dat:
@@ -176,9 +176,37 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 - \{\{serialnumberlast4digits\}\} – například **G5V2** (pro zařízení s iOSem)
 - \{\{aaddeviceid\}\} – například **ab0dc123-45d6-7e89-aabb-cde0a1234b56**
 
+## <a name="configure-the-company-portal-app-to-support-ios-dep-devices"></a>Konfigurace aplikace Portál společnosti pro podporu zařízení se systémem iOS DEP
+
+Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení DEP pro iOS pomocí následujících kroků.
+
+1. V Intune na Azure Portal:
+    - V případě potřeby přidejte portál společnosti Intune kliknutím na**klientské** >  > aplikace **Intune** > **Přidat**.
+    - Pokud chcete vytvořit zásadu konfigurace aplikace pro portál společnosti aplikaci, přejdete na **klientské aplikace** > **zásady konfigurace aplikace**.
+2. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md) nebo pro hybridní MDM. [nastavení aplikací pro iOS pomocí zásad konfigurace aplikací v nástroji System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
+
+    ``` xml
+    <dict>
+        <key>IntuneCompanyPortalEnrollmentAfterUDA</key>
+        <dict>
+            <key>IntuneDeviceId</key>
+            <string>{{deviceid}}</string>
+            <key>UserId</key>
+            <string>{{userid}}</string>
+        </dict>
+    </dict>
+    ```
+
+3. Nasaďte Portál společnosti do zařízení se zásadami konfigurace aplikace, které cílí na požadované skupiny. Nezapomeňte zásadu nasadit jenom do skupin zařízení, která jsou už zaregistrovaná v DEP.
+4. Sdělte koncovým uživatelům, aby se k aplikaci Portál společnosti přihlásili při automatické instalaci.
+
 ## <a name="monitor-ios--app-configuration-status-per-device"></a>Monitorování stavu konfigurace aplikací pro iOS podle zařízení 
 Po přiřazení zásad konfigurace můžete monitorovat stav konfigurace aplikací pro iOS pro každé spravované zařízení. V části **Microsoft Intune** na portálu Azure Portal vyberte **Zařízení** > **Všechna zařízení**. V seznamu spravovaných zařízení vyberte konkrétní zařízení a zobrazte tak okno pro toto zařízení. V okně zařízení vyberte **Konfigurace aplikace**.  
 
-## <a name="next-steps"></a>Další postup
+## <a name="additional-information"></a>Další informace
+
+- [Nasazení Outlooku pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+
+## <a name="next-steps"></a>Další kroky
 
 Pokračujte s [přiřazením](apps-deploy.md) a [sledováním](apps-monitor.md) aplikace.

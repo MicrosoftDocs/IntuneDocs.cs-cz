@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/18/2018
+ms.date: 09/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,18 +15,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50269e63f016c1d4f74b006d7748e5c300faac61
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 0692a8ac0bcd1fd415d0bceb7f5a269648dd5b30
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050229"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71302571"
 ---
 # <a name="add-wi-fi-settings-for-macos-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s macOS v Microsoft Intune
 
+[!INCLUDE [azure_portal](./includes/azure_portal.md)]
+
 Můžete vytvořit profil s konkrétním nastavením Wi-Fi a potom ho nasadit na zařízení s macOS. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, přidání certifikátu PKS nebo SCEP a další.
 
-Tato nastavení Wi-Fi jsou v oddělené do dvou kategorií: Základní nastavení a nastavení na podnikové úrovni.
+Tato nastavení sítě Wi-Fi jsou rozdělená do dvou kategorií: Základní nastavení a nastavení na podnikové úrovni.
 
 Těmito nastaveními se zabývá tento článek.
 
@@ -34,102 +36,89 @@ Těmito nastaveními se zabývá tento článek.
 
 [Vytvořte profil zařízení v Microsoft Intune](device-profile-create.md).
 
+> [!NOTE]
+> Tato nastavení jsou k dispozici pro všechny typy registrace. Další informace o typech registrace najdete v tématu [registrace MacOS](macos-enroll.md).
+
 ## <a name="basic-profiles"></a>Základní profily
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
 - **Název sítě**: Zadejte název pro toto připojení Wi-Fi. Tato hodnota představuje název, který uživatelé na svém zařízení uvidí při procházení seznamu dostupných připojení.
-- **SSID**: Zkratka pro **identifikátor service set**. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
-- **Připojit automaticky,**: Zvolte **povolit** automaticky se připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
-- **Skrytá síť**: Zvolte **povolit** skrýt tuto síť ze seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
-- **Typ zabezpečení**: Vyberte protokol zabezpečení pro ověřování sítě Wi-Fi. Možnosti:
+- **IDENTIFIKÁTOR SSID**: Zkratka pro **identifikátor sady služeb**je krátký. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **Připojit automaticky**: Pokud je zařízení v dosahu, vyberte **Povolit** pro automatické připojení k této síti. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
+- **Skrytá síť**: Zvolením možnosti **Povolit** skryjete tuto síť ze seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
+- **Typ zabezpečení**: Vyberte protokol zabezpečení pro ověření v síti Wi-Fi. Možnosti:
 
-  - **Otevřené (bez ověření)**: Tuto možnost použijte pouze v případě, že síť není zabezpečená.
-  - **WPA/WPA2 - osobní**: Zadejte heslo **předsdílený klíč**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK.
+  - **Otevřené (bez ověřování)** : Tuto možnost použijte pouze v případě, že síť není zabezpečená.
+  - **WPA/WPA2 – osobní**: Zadejte heslo do **předsdíleného klíče**. Po nastavení nebo konfiguraci firemní sítě se nakonfiguruje také heslo nebo síťový klíč. Toto heslo nebo síťový klíč zadejte jako hodnotu PSK.
   - **WEP**
 
 - **Nastavení proxy serveru**: Možnosti:
-  - **Žádný**: Žádné nastavení proxy serveru jsou nakonfigurované.
-  - **Ruční**: Zadejte **adresa Proxy serveru** jako IP adresu a jeho **číslo portu**.
-  - **Automatické**: Pomocí souboru konfigurace proxy serveru. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které se nachází konfigurační soubor.
+  - **Žádný**: Nejsou nakonfigurovaná žádná nastavení proxy serveru.
+  - **Ruční**: Zadejte **adresu proxy serveru** jako IP adresu a **číslo portu**.
+  - **Automaticky**: Pomocí souboru Nakonfigurujte proxy server. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které se nachází konfigurační soubor.
 
 ## <a name="enterprise-profiles"></a>Profily Enterprise
 
-- **Typ Wi-Fi**: Zvolte **Enterprise**.
-- **SSID**: Zkratka pro **identifikátor service set**. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
-- **Připojit automaticky,**: Zvolte **povolit** automaticky se připojovat k této síti, když je zařízení v rozsahu. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
-- **Skrytá síť**: Zvolte **povolit** skrýt tuto síť ze seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
+- **Typ Wi-Fi**: Vyberte **Enterprise**.
+- **IDENTIFIKÁTOR SSID**: Zkratka pro **identifikátor sady služeb**je krátký. Tato vlastnost je reálným názvem bezdrátové sítě, ke které se zařízení připojí. Název sítě, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **Připojit automaticky**: Pokud je zařízení v dosahu, vyberte **Povolit** pro automatické připojení k této síti. Zvolte **Zakázat**, pokud chcete zařízením zabránit v automatickém připojování.
+- **Skrytá síť**: Zvolením možnosti **Povolit** skryjete tuto síť ze seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 
-- **Typ protokolu EAP**: Zvolte typ protokolu EAP (Extensible Authentication) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
+- **Typ protokolu EAP**: Vyberte typ protokolu EAP (Extensible Authentication Protocol) používaný k ověřování zabezpečených bezdrátových připojení. Možnosti:
 
-  - **EAP-FAST**: Zadejte **nastavení přihlašovacích údajů (PAC) přístup k chráněné**. Tato možnost používá přihlašovací údaje chráněného přístupu k vytvoření ověřeného tunelového propojení mezi klientem a serverem ověřování. Možnosti:
+  - **EAP-FAST**: Zadejte **nastavení Protected Access Credential (PAC)** . Tato možnost používá přihlašovací údaje chráněného přístupu k vytvoření ověřeného tunelového propojení mezi klientem a serverem ověřování. Možnosti:
     - **Nepoužívat (PAC)**
-    - **Používat PAC**: Pokud existuje stávající soubor PAC, použijte ji.
-    - **Používat a zřídit PAC**: Vytvořit a přidat soubor PAC ve vašich zařízeních.
-    - **Používat a zřídit PAC anonymně**: Vytvořit a přidat soubor PAC ve vašich zařízeních bez ověřování serveru.
+    - **Použít (PAC)** : Pokud existující soubor PAC existuje, použijte ho.
+    - **Použít a ZŘÍDIT PAC**: Vytvořte soubor PAC a přidejte ho do zařízení.
+    - **Použít a ZŘÍDIT PAC anonymně**: Vytvořte a přidejte soubor PAC do zařízení bez ověřování na serveru.
 
   - **EAP-SIM**
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** - **server zvy důvěryhodných certifikátů**: **Přidat** jeden nebo více běžných názvů použitých v certifikátech vystavených vaší důvěryhodné certifikační autority (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodných kořenových certifikátů. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **Přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
-      Vyberte **OK** uložte provedené změny.
-
-    - **Ověření klienta** - **klientský certifikát pro ověření klienta (certifikát Identity)**: Zvolte profil certifikátu, který je nasazená taky pro zařízení klienta SCEP nebo PKCS. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
-
-      Vyberte **OK** uložte provedené změny.
+    - **Klientský certifikát** - **Klientský certifikát pro ověření klienta pro ověření klienta (certifikát identity)** : Vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** - **server zvy důvěryhodných certifikátů**: **Přidat** jeden nebo více běžných názvů použitých v certifikátech vystavených vaší důvěryhodné certifikační autority (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodných kořenových certifikátů. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
-
-      Vyberte **OK** uložte provedené změny.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **Přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
-      - **Uživatelské jméno a heslo**: Zobrazit výzvu uživateli pro uživatelské jméno a heslo pro ověření připojení. Dále zadejte:
-        - **Metoda bez protokolu EAP (vnitřní identita)**: Zvolte, jak se bude připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi.
+      - **Uživatelské jméno a heslo**: Pro ověření připojení vyzvat uživatele k zadání uživatelského jména a hesla. Dále zadejte:
+        - **Metoda bez protokolu EAP (vnitřní identita)** : Vyberte způsob ověřování připojení. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi.
 
-          Možnosti: **Nezašifrované heslo (PAP)**, **Challenge Handshake Authentication Protocol (CHAP)**, **Microsoft CHAP (MS-CHAP)**, nebo **2 Version Microsoft CHAP (MS-CHAP v2)**
+          Možnosti: **Nešifrované heslo (PAP)** , **protokol CHAP (Challenge Handshake Authentication Protocol)** , **Microsoft CHAP (ms-CHAP)** nebo **Microsoft CHAP verze 2 (MS-CHAP v2)**
 
-      - **Certifikáty**: Zvolte profil certifikátu, který je nasazená taky pro zařízení klienta SCEP nebo PKCS. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: Vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-        Vyberte **OK** uložte provedené změny.
-
-      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **LEAP**
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** - **server zvy důvěryhodných certifikátů**: **Přidat** jeden nebo více běžných názvů použitých v certifikátech vystavených vaší důvěryhodné certifikační autority (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
-    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodných kořenových certifikátů. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
-
-      Vyberte **OK** uložte provedené změny.
+    - **Názvy důvěryhodných** - **certifikátů**serveru: **Přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA). Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
+    - **Kořenový certifikát pro ověření serveru**: Vyberte existující profil důvěryhodného kořenového certifikátu. Tento certifikát se předloží serveru při připojení klienta k síti a slouží k ověření připojení.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
-      - **Uživatelské jméno a heslo**: Zobrazit výzvu uživateli pro uživatelské jméno a heslo pro ověření připojení. 
+      - **Uživatelské jméno a heslo**: Pro ověření připojení vyzvat uživatele k zadání uživatelského jména a hesla. 
 
-      - **Certifikáty**: Zvolte profil certifikátu, který je nasazená taky pro zařízení klienta SCEP nebo PKCS. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: Vyberte profil certifikátu klienta SCEP nebo PKCS, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
-        Vyberte **OK** uložte provedené změny.
-
-      - **Ochrana identity (vnější identita)**: Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
+      - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na požadavek identity EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
 - **Nastavení proxy serveru**: Možnosti:
-  - **Žádný**: Žádné nastavení proxy serveru jsou nakonfigurované.
-  - **Ruční**: Zadejte **adresa Proxy serveru** jako IP adresu a jeho **číslo portu**.
-  - **Automatické**: Pomocí souboru konfigurace proxy serveru. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které se nachází konfigurační soubor.
+  - **Žádný**: Nejsou nakonfigurovaná žádná nastavení proxy serveru.
+  - **Ruční**: Zadejte **adresu proxy serveru** jako IP adresu a **číslo portu**.
+  - **Automaticky**: Pomocí souboru Nakonfigurujte proxy server. Zadejte **adresu URL proxy serveru** (například `http://proxy.contoso.com`), na které se nachází konfigurační soubor.
 
-Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profilů.
+## <a name="next-steps"></a>Další kroky
 
-## <a name="next-steps"></a>Další postup
+Profil se vytvoří, ale nic nedělá. Dále [přiřaďte tento profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Profil se vytvoří, ale nic nedělá. Dále [tento profil přiřaďte](device-profile-assign.md).
-
-## <a name="more-resources"></a>Další materiály
-
-[Přehled nastavení Wi-Fi](wi-fi-settings-configure.md), včetně dalších dostupných platforem
+Konfigurace nastavení Wi-Fi na zařízeních s [Androidem](wi-fi-settings-android.md), [Androidem Enterprise](wi-fi-settings-android-enterprise.md), [iOS](wi-fi-settings-ios.md)a [Windows 10](wi-fi-settings-windows.md)

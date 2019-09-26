@@ -8,7 +8,6 @@ ms.author: brenduns
 manager: dougeby
 ms.date: 03/06/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,18 +16,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a06bcd27778885d69c2122b2b68e53eb6f319a34
-ms.sourcegitcommit: 47eb67df69f237121f5197b2ac904a177aab5400
+ms.openlocfilehash: e9f5d0bbbb215ecf89d4b547cc59ffa6e622f0a2
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671777"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "71304039"
 ---
-# <a name="whats-conditional-access"></a>Co je podmíněný přístup?
+# <a name="learn-about-conditional-access-and-intune"></a>Další informace o podmíněném přístupu a Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Podmíněný přístup označuje způsoby, jimiž můžete řídit zařízení a aplikace, které se smí připojovat k vašemu e-mailu a firemním prostředkům. V tomto tématu se dozvíte o podmíněném přístupu podle zařízení a podle aplikací a najdete běžné scénáře pro používání podmíněného přístupu v Intune.
+Podmíněný přístup označuje způsoby, kterými můžete řídit zařízení a aplikace, které se můžou připojovat k e-mailu a prostředkům společnosti. V tomto tématu se dozvíte o podmíněném přístupu založeném na zařízeních a aplikacích a najdete běžné scénáře použití podmíněného přístupu s Intune.
 
 Podmíněný přístup v rámci Enterprise Mobility + Security (EMS) není samostatný produkt, ale řešení podílející se na všech službách a produktech, které jsou součástí EMS. Nabízí podrobné řízení přístupu za účelem zabezpečení vašich podnikových dat a současně uživatelům poskytuje prostředí, které jim umožňuje co nejlépe pracovat na všech zařízeních a odkudkoli.
 
@@ -39,30 +38,30 @@ Můžete definovat podmínky, které omezují přístup k podnikovým datům pod
 
 ![Diagram architektury podmíněného přístupu](./media/ca-diagram-1.png)
 
-## <a name="conditional-access-with-intune"></a>Podmíněný přístup s Intune
+## <a name="use-conditional-access-with-intune"></a>Použití podmíněného přístupu s Intune
 
-Podmíněný přístup je funkce Azure Active Directory, která je zahrnutá v licenci pro Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
+Podmíněný přístup je Azure Active Directory funkce, která je součástí licence Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
 
-![Intune a podmíněný přístup při používání EMS](./media/intune-with-ca-1.png)
+![Intune a podmíněný přístup při použití EMS](./media/intune-with-ca-1.png)
 
-Způsoby používání podmíněného přístupu s Intune:
+Způsoby použití podmíněného přístupu s Intune:
 
--   **Podmíněný přístup podle zařízení**
+- **Podmíněný přístup podle zařízení**
 
-    -   Podmíněný přístup pro místní Exchange
+  - Podmíněný přístup pro místní Exchange
 
-    -   Podmíněný přístup na základě řízení přístupu k síti
+  - Podmíněný přístup na základě řízení přístupu k síti
 
-    -   Podmíněný přístup na základě rizika zařízení
+  - Podmíněný přístup na základě rizika zařízení
 
-    -   Podmíněný přístup pro počítače s Windows
+  - Podmíněný přístup pro počítače s Windows
 
-        -   Ve vlastnictví firmy
+    - Ve vlastnictví firmy
 
-        -   Přineste si vlastní zařízení (BYOD)
+    - Přineste si vlastní zařízení (BYOD)
 
--   **Podmíněný přístup založený na aplikacích**
+- **Podmíněný přístup na základě aplikace**
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-[Běžné způsoby používání podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
+[Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)

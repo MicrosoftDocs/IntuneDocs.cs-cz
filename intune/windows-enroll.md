@@ -6,24 +6,23 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2018
+ms.date: 08/05/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f94dbc2e-a855-487e-af6e-8d08fabe6c3d
-ms.reviewer: damionw
+ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7dd4ab5f7cecfa8a765b6dfa038b73015a0c768
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 6e90bd41a59975a85350229dc517aa03fd853f19
+ms.sourcegitcommit: d2989b9992d10d133573d9bc31479659fb7e242c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900158"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71302610"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -43,21 +42,29 @@ Způsob zjednodušení registrace zařízení s Windows určují dva faktory:
 
 ||**Azure AD Premium**|**Jiné AD**|
 |----------|---------------|---------------|  
-|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Registrace uživatele|
-|**Starší verze Windows**|Registrace uživatele|Registrace uživatele|
+|**Windows 10**|[Automatická registrace](#enable-windows-10-automatic-enrollment) |Zápis uživatele|
+|**Starší verze Windows**|Zápis uživatele|Zápis uživatele|
 
 Organizace, které mohou používat automatickou registraci, také mohou nakonfigurovat [hromadnou registraci zařízení](windows-bulk-enroll.md) v aplikaci Windows Configuration Designer.
 
+## <a name="device-enrollment-prerequisites"></a>Požadavky registrace zařízení
+
+Předtím, než může správce zaregistrovat zařízení do Intune za účelem správy, by licence již měly být přiřazeny k účtu správce. [Přečtěte si informace o přiřazování licencí pro registraci zařízení.](licenses-assign.md)
+
 ## <a name="multi-user-support"></a>Podpora více uživatelů
 
-Intune podporuje vícenásobnou správu pro zařízení s Windows 10 Creators Updatem připojená k doméně Azure Active Directory. Když standardní uživatelé použijí k přihlášení přihlašovací údaje služby Azure AD, dostanou aplikace a zásady přiřazené ke svému uživatelskému jménu. Uživatelé v současnosti nemůžou používat Portál společnosti pro samoobslužné scénáře, například instalování aplikací.
+Intune podporuje více uživatelů na zařízeních, která obě:
+- Spustit aktualizaci Windows 10 Creator 's Update
+- jsou Azure Active Directory připojeny k doméně.
+
+Když standardní uživatelé použijí k přihlášení přihlašovací údaje služby Azure AD, dostanou aplikace a zásady přiřazené ke svému uživatelskému jménu. Pouze [primární uživatel](find-primary-user.md) zařízení může použít portál společnosti pro samoobslužné scénáře, jako je instalace aplikací a provádění akcí zařízení (odebrat, obnovit). Pro sdílená zařízení s Windows 10, která nemají přiřazeného primárního uživatele, se Portál společnosti dá dál použít k instalaci dostupných aplikací.
 
 [!INCLUDE [AAD-enrollment](./includes/win10-automatic-enrollment-aad.md)]
 
 ## <a name="simplify-windows-enrollment-without-azure-ad-premium"></a>Zjednodušení registrace zařízení s Windows bez služby Azure AD Premium
 Pokud chcete uživatelům registraci zjednodušit, vytvořte alias serveru DNS (typu záznamu CNAME), který přesměruje žádosti o registraci na servery Intune. V opačném případě musí uživatelé, kteří se pokoušejí připojit k Intune, zadat během registrace název serveru Intune.
 
-**Krok 1: Vytvořit záznam CNAME** (volitelné)<br>
+**Krok 1: Vytvořit záznam** CNAME (volitelné)<br>
 Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud má třeba vaše společnost web contoso.com, vytvořili byste ve službě DNS záznam CNAME, který přesměruje adresu EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
 
 Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
@@ -79,19 +86,19 @@ Správce DNS Contosa by měl vytvořit následující záznamy CNAME:
 |----------|---------------|---------------|---|
 |CNAME|EnterpriseEnrollment.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
 |CNAME|EnterpriseEnrollment.us.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hodina|
-|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
+|CNAME|EnterpriseEnrollment.eu.contoso.com|EnterpriseEnrollment-s.manage.microsoft.com| 1 hodina|
 
 `EnterpriseEnrollment-s.manage.microsoft.com` – podporuje přesměrování do služby Intune s rozpoznáním domény z názvu domény v e-mailu.
 
 Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
 
-## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Další koncové body jsou podporované, ale nedoporučuje se
-EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifikovaný název domény pro zápis, ale existují dva další koncové body, které se používají zákazníci v minulosti a jsou podporovány. EnterpriseEnrollment.manage.microsoft.com (bez -s) a manage.microsoft.com oba fungují jako cíl pro automatické zjišťování serveru, ale uživatel se musejí dotýkat OK na potvrzovací zpráva. Pokud přejdete na EnterpriseEnrollment-s.manage.microsoft.com, uživatel nebude mít k tomu jedná se o doporučené konfiguraci dalšího kroku
+## <a name="additional-endpoints-are-supported-but-not-recommended"></a>Další koncové body jsou podporované, ale nedoporučují se.
+EnterpriseEnrollment-s.manage.microsoft.com je upřednostňovaný plně kvalifikovaný název domény pro registraci, ale podporují se dva ostatní koncové body, které zákazníci v minulosti používali. EnterpriseEnrollment.manage.microsoft.com (bez a-s) a manage.microsoft.com fungují jako cíl pro Server automatického zjišťování, ale uživatel bude muset na potvrzovací zprávě se dotknout OK. Pokud odkazujete na EnterpriseEnrollment-s.manage.microsoft.com, uživatel nebude muset provést další potvrzovací krok, takže se jedná o doporučenou konfiguraci.
 
-## <a name="alternate-methods-of-redirection-are-not-supported"></a>Nejsou podporovány alternativní metody pro přesměrování
-Pomocí jiné metody než konfigurace CNAME se nepodporuje. Například použití proxy serveru pro přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc buď enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc se nepodporuje.
+## <a name="alternate-methods-of-redirection-are-not-supported"></a>Alternativní metody přesměrování se nepodporují.
+Použití jiné metody než konfigurace CNAME není podporováno. Například použití proxy server k přesměrování enterpriseenrollment.contoso.com/EnrollmentServer/Discovery.svc na enterpriseenrollment-s.manage.microsoft.com/EnrollmentServer/Discovery.svc nebo manage.microsoft.com/EnrollmentServer/Discovery.svc není podporováno.
 
-**Krok 2: Ověření CNAME** (volitelné)<br>
+**Krok 2: Ověřit záznam** CNAME (volitelné)<br>
 1. V [Intune na webu Azure Portal](https://aka.ms/intuneportal) zvolte **Registrace zařízení** > **Registrace zařízení s Windows** > **Ověření CNAME**.
 2. Do pole **Doména** zadejte web společnosti a zvolte **Test**.
 

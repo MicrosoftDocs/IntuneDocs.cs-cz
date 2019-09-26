@@ -8,7 +8,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/17/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,18 +17,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1080ae8a73223ad16445d0d2233434faa818b04b
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: b9215dc0d814b4269c239595183e024ebb073455
+ms.sourcegitcommit: 864fdf995c2b41f104a98a7e2665088c2864774f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900005"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "71302097"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Jako správce Intune můžete vytvořit a spravovat omezení registrace definující počet a typy zařízení, u kterých můžete zaregistrovat správu přes Intune. Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
+Jako správce Intune můžete vytvořit a spravovat omezení registrace, která definují, jaká zařízení se můžou registrovat ke správě pomocí Intune, včetně těchto:
+- Počet zařízení
+- operační systémy a verze: můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
 
 >[!NOTE]
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
@@ -38,75 +39,111 @@ Mezi konkrétní omezení registrace, která můžete vytvořit, patří:
 
 - Maximální počet zaregistrovaných zařízení
 - Platformy zařízení, které se mohou zaregistrovat:
-  - Android
-  - Pracovní profil Androidu
+  - Správce zařízení s Androidem
+  - Pracovní profil Android Enterprise
   - iOS
   - macOS
   - Windows
   - Windows Mobile
-- Verze operačního systému platformy pro iOS, Android, Android pracovní profil, Windows a Windows Mobile. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
+- Verze operačního systému platformy pro iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, Windows a Windows Mobile. (Je možné použít jenom verze Windows 10. Pokud jsou povolená Windows 8.1., nechejte prázdné.)
   - Minimální verze
   - Maximální verze
-- Omezení soukromých zařízení (iOS, Android, Android pracovní profil, macOS, Windows a Windows Mobile pouze).
+- Omezte zařízení v osobním vlastnictví (jenom iOS, Správce zařízení s Androidem, pracovní profil Android Enterprise, macOS, Windows a Windows Mobile).
 
 ## <a name="default-restrictions"></a>Výchozí omezení
 
 Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytnou výchozí omezení. Možnosti výchozích omezení můžete změnit. Výchozí omezení se použijí pro všechny registrace zařízení s uživateli i bez uživatelů. Tato výchozí omezení můžete přepsat tak, že vytvoříte nová omezení s vyšší prioritou.
 
-## <a name="create-a-restriction"></a>Vytvoření omezení
+## <a name="create-a-device-type-restriction"></a>Vytvoří omezení typu zařízení.
 
 1. Přihlaste se k portálu Azure.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
-4. Zvolte **Vytvořit omezení**.
-5. Pojmenujte omezení a zadejte jeho popis.
-6. Zvolte **Typ omezení** a pak zvolte na **Vytvořit**.
-7. Pokud u omezení počtu zařízení chcete nastavit maximální počet zařízení, která uživatel může zaregistrovat, zvolte **Limit počtu zařízení**.
-8. Pokud u omezení typu zařízení chcete povolit nebo blokovat různé platformy a verze, zvolte **Platformy** a **Konfigurace platforem**.
-9. Zvolte **Přiřazení** > **+ Vybrat skupiny**.
-10. V části **Vybrat skupiny** vyberte alespoň jednu skupinu a pak zvolte **Vybrat**. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt.
-11. Vyberte **Uložit**.
-12. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
-
-## <a name="set-device-type-restrictions"></a>Nastavení omezení typů zařízení
-
-Nastavení omezení typu zařízení můžete změnit podle následujícího postupu. Tato omezení nemají vliv na zařízení, která jsou už zaregistrovaná. Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](manage-windows-pcs-with-microsoft-intune.md).
-
-1. Přihlaste se k portálu Azure.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
-4. V části **omezení typů zařízení**, zvolte omezení, které chcete přidat > **vlastnosti** > **vyberte platformy**. U každé uvedené platformy zvolte **Povolit** nebo **Blokovat**.
-    ![Obrazovka s volbami pro povolení nebo blokování platformy](media/enrollment-restrictions-set/platform-allow-block.png)
-5. Zvolte **OK**.
-6. Zvolte **Konfigurovat platformy**.
-    ![Obrazovka s volbou pro konfiguraci platforem](media/enrollment-restrictions-set/configure-platforms.png)
-7. Vyberte minimální a maximální **verze** uvedených platforem. Podporované formáty verzí:
-    - Pracovní profil Androidu podporuje major.minor.rev.build.
+3. Vyberte **registrace** > zařízení**omezení** > registracevytvořitomezení > **typu zařízení**omezení.
+    ![Zakončení obrazovky pro vytvoření omezení typu zařízení](media/enrollment-restrictions-set/create-device-type-restriction.png)
+4. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
+5. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení platformy** .
+6. V části **platforma**vyberte možnost **Povolení** pro platformy, u kterých chcete toto omezení omezit.
+    ![Zakončení obrazovky pro výběr nastavení platformy](media/enrollment-restrictions-set/choose-platform-settings.png)
+7. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Omezení verze se vztahují jenom na zařízení zaregistrovaná ve Portál společnosti.
+     Podporované formáty verzí:
+    - Správce zařízení s Androidem a pracovní profil Android Enterprise podporují hlavní. podverze. rev. Build.
     - Systém iOS podporuje major.minor.rev. Verze operačního systému se nevztahují na zařízení Apple registrovaná v Programu registrace zařízení, pomocí Apple School Manageru ani v aplikaci Apple Configurator.
     - Systém Windows podporuje jenom major.minor.rev.build pro Windows 10.
-> [!Note]
-> Windows 10 neposkytuje číslo sestavení během registrace, tak pro instanci, pokud zadáte do 10.0.17134.100 a zařízení je 10.0.17134.174 se zablokuje při registraci.
-8. U každé uvedené platformy vyberte, zda chcete **Povolit** nebo **Blokovat**  zařízení **v osobním vlastnictví**.
-9. Zvolte **OK**.
+    > [!Note]
+    > Windows 10 neposkytuje číslo sestavení během registrace, takže pokud zadáte v 10.0.17134.100 a zařízení se 10.0.17134.174, během registrace se zablokuje.
 
-### <a name="blocking-personal-android-devices"></a>Blokování osobních zařízení s Androidem
-- Když zablokujete registraci osobních zařízení s Androidem, stále půjde zaregistrovat osobní zařízení s pracovním profilem Androidu.
-- Nastavení zařízení s pracovním profilem Androidu jsou stejná jako nastavení zařízení s Androidem. Po změně nastavení pracovního profilu Androidu tomu už tak nebude.
-- Pokud zablokujete registraci pracovního profilu Androidu u osobních zařízení, budou se jako pracovní profil Androidu moci zaregistrovat jen firemní zařízení s Androidem.
+8. V části **osobní vlastnictví**vyberte **Povolit** pro platformy, které chcete povolit jako zařízení v osobním vlastnictví.
+9. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
+10. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
+    ![Zakončení obrazovky pro výběr nastavení platformy](media/enrollment-restrictions-set/select-groups.png)
+11. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
+12. Vyberte **vytvořit** a vytvořte tak omezení.
+13. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
 
-### <a name="blocking-personal-windows-devices"></a>Blokování osobních zařízení s Windows
+
+## <a name="create-a-device-limit-restriction"></a>Vytvoření omezení limitu počtu zařízení
+
+1. Přihlaste se k portálu Azure.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Vyberte registrace **zařízení** > **omezení** > registracevytvořitomezení > omezení**počtu zařízení**.
+    ![Zakončení obrazovky pro vytváření omezení limitu počtu zařízení](media/enrollment-restrictions-set/create-device-limit-restriction.png)
+4. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
+5. Kliknutím na tlačítko **Další** přejdete na stránku **omezení počtu zařízení** .
+6. V poli **limit počtu zařízení**vyberte maximální počet zařízení, která může uživatel zaregistrovat.
+    ![Zakončení obrazovky pro výběr limitu zařízení](media/enrollment-restrictions-set/choose-device-limit.png)
+7. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
+8. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
+    ![Zakončení obrazovky pro výběr skupin](media/enrollment-restrictions-set/select-groups-device-limit.png)
+11. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
+12. Vyberte **vytvořit** a vytvořte tak omezení.
+13. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
+
+Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažení limitu počtu zaregistrovaných zařízení. Například v systému iOS:
+
+![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
+
+> [!IMPORTANT]
+> Omezení limitu počtu zařízení se nevztahují na tyto typy zápisu Windows:
+> - Spoluspravované registrace
+> - Registrace objektů zásad skupiny
+> - Azure Active Directory připojené registrace
+> - Registrace do hromadné Azure Active Directory připojené
+> - Registrace autopilotu
+> - Registrace správce registrace zařízení
+>
+> Omezení limitu počtu zařízení pro tyto typy registrace se neuplatňují, protože se považují za scénáře sdíleného zařízení.
+> Můžete nastavit omezení pro tyto typy zápisu [v Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
+
+
+## <a name="change-enrollment-restrictions"></a>Změna omezení registrace
+
+Nastavení omezení registrace můžete změnit podle následujících kroků. Tato omezení neovlivňují zařízení, která jsou už zaregistrovaná. Pomocí této funkce se nedají blokovat zařízení zaregistrovaná prostřednictvím [agenta Intune pro počítače](manage-windows-pcs-with-microsoft-intune.md).
+
+1. Přihlaste se k portálu Azure.
+2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
+3. Vyberte možnost**omezení registrace** **zařízení** > > zvolte omezení, které chcete > **vlastností**změnit.
+4. Klikněte na tlačítko **Upravit** vedle nastavení, které chcete změnit.
+5. Na stránce **Upravit** proveďte požadované změny a přejděte na stránku **Revize + Uložit** a pak zvolte **Uložit**.
+
+
+## <a name="blocking-personal-android-devices"></a>Blokování osobních zařízení s Androidem
+- Pokud zablokujete registraci zařízení s osobním vlastnictvím zařízení s Androidem, můžou se zařízení s Androidem Enterprise Work profilů pořád zaregistrovat.
+- Ve výchozím nastavení jsou nastavení zařízení vašeho pracovního profilu Android Enterprise shodná s nastavením vašich zařízení pro správce zařízení s Androidem. Až změníte pracovní profil pro Android Enterprise nebo nastavení Správce zařízení s Androidem, to už neplatí.
+- Pokud zablokujete osobní registraci pracovních profilů pro Android Enterprise, můžou se registrovat jenom zařízení s Androidem ve vlastnictví firmy v Android Enterprise Working Profiles.
+
+## <a name="blocking-personal-windows-devices"></a>Blokování osobních zařízení s Windows
 Když zablokujete registraci osobních zařízení s Windows, Intune u každého nového požadavku na registraci zařízení s Windows zkontroluje, jestli se autorizoval jako firemní registrace. Neautorizované registrace se zablokují.
 
 K registraci zařízení s Windows ve společnosti jsou povoleny následující metody:
- - Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
+- Uživatel se registruje pomocí [účtu správce registrace zařízení]( device-enrollment-manager-enroll.md).
 - Zařízení se registruje prostřednictvím programu [Windows AutoPilot](enrollment-autopilot.md).
-- Zařízení je registrovaný pomocí Windows Autopilot, ale není jenom možnost registrace MDM z nastavení Windows.
-- Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** > **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)**. (Nepodporuje se ve Windows Phone 8.1.)
+- Zařízení se zaregistruje u automatického pilotního nasazení Windows, ale v nastavení Windows se nejedná o možnost jenom registrace MDM.
+- Číslo IMEI zařízení je uvedené v seznamu **Registrace zařízení** >  **[Identifikátory podnikových zařízení](corporate-identifiers-add.md)** . (Nepodporuje se ve Windows Phone 8.1.)
 - Zařízení se registruje v rámci [balíčku hromadného zřizování](windows-bulk-enroll.md).
-- Zařízení se zaregistruje prostřednictvím objektu zásad skupiny, nebo [automatickou registraci z SCCM pro spolusprávu](https://docs.microsoft.com/sccm/core/clients/manage/co-management-overview#how-to-configure-co-management.md).
+- Zařízení se registruje prostřednictvím objektu zásad skupiny nebo [automatického zápisu z SCCM pro spolusprávu](https://docs.microsoft.com/sccm/comanage/quickstart-paths#bkmk_path1).
  
-Následující registrace jsou označené jako firemní přes Intune. Ale protože nenabízejí správce Intune ovládacího prvku na zařízení, bude zablokován:
- - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
+Intune označí jako firemní tyto registrace. Protože ale nenabízí řízení Intune pro správu jednotlivých zařízení, zablokují se:
+- [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory během instalace Windows](https://docs.microsoft.com/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
 - [Automatická registrace MDM](windows-enroll.md#enable-windows-10-automatic-enrollment) s [připojením k Azure Active Directory z nastavení Windows](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network).*
  
 Zablokují se také následující metody osobní registrace:
@@ -115,33 +152,6 @@ Zablokují se také následující metody osobní registrace:
 
 \*Nezablokují se, pokud se k registraci použije Autopilot.
 
-## <a name="set-device-limit-restrictions"></a>Nastavení omezení limitů počtu zařízení
-
-Nastavení omezení počtu zařízení můžete změnit podle následujícího postupu:
-
-1. Přihlaste se k portálu Azure.
-2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
-3. Zvolte **Registrace zařízení** > **Omezení registrace**.
-4. V části **Omezení počtu zařízení** zvolte omezení, které chcete nastavit.
-5. Zvolte **Limit počtu zařízení** a pak v rozevíracím seznam vyberte maximální počet zařízení, která uživatel může zaregistrovat.
-    ![Okno Omezení limitů počtů zařízení s omezením limitu počtu zařízení](./media/device-restrictions-limit.png)
-6. Vyberte **Uložit**.
-
-
-Během registrace BYOD uživatelům se zobrazí oznámení, že se při dosažení limitu počtu zaregistrovaných zařízení. Například v systému iOS:
-
-![Oznámení o dosažení limitu počtu zařízení s iOSem](./media/enrollment-restrictions-ios-set-limit-notification.png)
-
-> [!IMPORTANT]
-> Omezení limitů počtů zařízení nemůžete použít pro následující typy registrace Windows:
-> - Spoluspravovaná registrace
-> - Objekt zásad skupiny registrací
-> - Registrace připojené služby Azure Active Directory
-> - Registrace připojené hromadné Azure Active Directory
-> - Registrace AutoPilot
->
-> Omezení limitů počtů zařízení nejsou vynucena pro tyto typy registrace, protože jsou považovány za scénáře se sdílenými zařízeními.
-> Můžete nastavit pevných limitů pro tyto typy registrace [ve službě Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ## <a name="change-enrollment-restriction-priority"></a>Změna priority omezení registrace
 

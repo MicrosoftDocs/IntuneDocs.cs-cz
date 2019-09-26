@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 888c136934deca80877d75879e270807af194a1e
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: fcc4939e5469cd69914d59af33be84beff9b2cf1
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59895749"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "71304183"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí zřizovacích profilů pro aplikace pro iOS
 
@@ -44,17 +43,16 @@ Jako správce můžete podle potřeby zahrnout nebo vyloučit skupiny zabezpeče
 
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak vytvořit mobilní zřizovací profil aplikace pro iOS
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
-1.  V úloze **Klientské aplikace** zvolte **Spravovat** > **Zřizovací profily aplikací pro iOS**.
-2.  V podokně se seznamem profilů zvolte **Vytvořit profil**.
+1. V úloze **Klientské aplikace** zvolte **Spravovat** > **Zřizovací profily aplikací pro iOS**.
+2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
 3. V podokně **Vytvořit profil** nakonfigurujte následující hodnoty:
     - **Název** – Zadejte název tohoto mobilního zřizovacího profilu.
     - **Popis** – Volitelně zadejte popis pro tuto zásadu.
-    - **Odeslat soubor profilu** – zvolte **otevřít** ikonu a potom zvolte soubor mobilního konfiguračního profilu Apple (s příponou `.mobileprovision`), který jste stáhli ze služby [webu Apple Developer](https://developer.apple.com/).
+    - **Odeslat soubor profilu** – zvolte ikonu **otevřít** a pak zvolte soubor konfiguračního profilu Apple Mobile (s rozšířením `.mobileprovision`), který jste stáhli z webu pro [vývojáře Apple](https://developer.apple.com/).
 4. Až skončíte, zvolte **Vytvořit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Přiřaďte profil k požadovaným zařízením s iOSem. Další informace najdete v postupu v článku [Přiřazení profilů zařízení](device-profile-assign.md).

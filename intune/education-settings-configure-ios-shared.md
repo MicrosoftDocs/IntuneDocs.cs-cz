@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 12/06/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e0b8230a842a7b4e3b1368388cb186defa8df72
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 8747a398447dc1f477e2b0149104c4c65d3ed741
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57566586"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "71302195"
 ---
 # <a name="configure-intune-education-settings-for-shared-ipad-devices"></a>Konfigurace nastavení vzdělávání Intune pro sdílená zařízení iPad
 
@@ -68,8 +67,7 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
 5. V podokně profilů zvolte **Vytvořit profil**.
@@ -139,8 +137,7 @@ Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="step-3---create-a-device-category"></a>Krok 3 – Vytvoření kategorie zařízení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Registrace zařízení**.
 4. V podokně **Registrace zařízení – Přehled** zvolte **Kategorie zařízení**.
 5. V podokně **Registrace zařízení – Kategorie zařízení** zvolte **Vytvořit**.
@@ -151,8 +148,7 @@ Kategorie zařízení se vytváří v podokně **Registrace – Kategorie zaří
 
 ## <a name="step-4--create-a-dynamic-group"></a>Krok 4 – Vytvoření dynamické skupiny
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Skupiny**.
 4. V podokně **Uživatelé a skupiny – Všechny skupiny** zvolte **Nová skupina**.
 5. V podokně **Skupina** vyberte **Typ skupiny** a pak zadejte **Název** a **Popis** skupiny.
@@ -169,8 +165,7 @@ Dynamická skupina se vytvoří v podokně **Uživatelé a skupiny – Všechny 
 
 ## <a name="step-5--assign-a-device-to-a-category-carts"></a>Krok 5 – Přiřazení zařízení do kategorie (Košíky)
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Zařízení**.
 4. V podokně **Zařízení** zvolte **Všechna zařízení**.
 5. V podokně **Zařízení – Všechna zařízení** zvolte zařízení.
@@ -182,14 +177,13 @@ Zařízení je teď přidružené ke kategorii zařízení. Zopakujte tento post
 
 ## <a name="step-6--create-classroom-profiles"></a>Krok 6 – Vytvoření profilů učeben
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 4. V podokně **Konfigurace zařízení** zvolte **Spravovat** > **Profily košíků**.
 5. V podokně profilů zvolte **Vytvořit profil**.
 6. V podokně **Vytvořit přiřazení** zadejte **Název** a **Popis**.
 7. Zvolte **Vyberte třídy** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
-8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
+8. Zvolte třídy, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**. 
 9. Zvolte **Vyberte košíky** > **Konfigurovat** a přiřaďte skupiny k profilu košíku.
 10. Zvolte skupiny, které chcete do profilu košíku zahrnout, a potom zvolte **Vybrat**.
 11. V podokně **Vytvořit přiřazení** vyberte **Uložit**. Profil košíku se uloží.
@@ -198,13 +192,12 @@ Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 ## <a name="step-7---assign-the-cart-profile-to-classes"></a>Krok 7 – Přiřazení profilu košíku třídám
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 4. V podokně **Konfigurace zařízení** zvolte **Monitorovat** > **Stav přiřazení**.
 5. V podokně **Stav přiřazení** vyberte **Profil košíku**, který jste vytvořili.
 6. V podokně **Profil košíku** zvolte **Přiřazení** a pak v nabídce **Zahnout** zvolte **Vybrat skupiny, které se zahrnou**.
-7. Vyberte třídy, na které se má profil košíku uplatnit (nevybírejte skupinu), a potom zvolte **Vybrat**. 
+7. Vyberte třídy, na které se má profil košíku uplatnit (nevybírejte skupinu), a potom zvolte **Vybrat**. 
 8. Po dokončení zvolte **Uložit**.
 
 Přiřazení se dokončí a Intune použije profil učebny na cílová zařízení podle přiřazení učebny.

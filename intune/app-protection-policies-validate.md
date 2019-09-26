@@ -1,13 +1,12 @@
 ---
 title: Ověření nastavení zásad ochrany aplikací
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak otestovat, že je vaše zásady ochrany aplikací nastavené a funguje správně v Microsoft Intune.
+description: Naučte se, jak otestovat, jestli jsou vaše zásady ochrany aplikací správně nastavené a fungují v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/08/2019
-ms.prod: ''
+ms.date: 08/15/2019
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.topic: conceptual
@@ -18,50 +17,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 760ff85bc31cf66e66a3bf98f7da22d5ce48eee0
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 3d191bdd4484a302caf4606a9124e26811ce8c2b
+ms.sourcegitcommit: 6b5907046f920279bbda3ee6c93e98594624c05c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896322"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "71303634"
 ---
-# <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Jak ověřit nastavení zásad ochrany aplikací v Microsoft Intune
+# <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Ověření nastavení zásad ochrany aplikací v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
 Prověřte, jestli jsou vaše zásady ochrany aplikací správně nastavené a jestli fungují. Tento návod se vztahuje k zásadám ochrany aplikací na portálu Azure Portal.
 
 ## <a name="checking-for-symptoms"></a>Zjišťování příznaků
-Není pravděpodobné, že by problém nahlásili uživatelé, protože ochrana aplikací je nástroj na ochranu dat. Pokud dojde k potížím s konfigurací ochrany aplikací, uživatel bude mít neomezený přístup, jak by měli bez ochrany aplikací, a nebude ví, že se vyskytl problém. Z tohoto důvodu doporučujeme, abyste že měli ověřit konfiguraci ochrany aplikací pomocí pilotní nasazení zásad ochrany aplikací s malou skupinou uživatelů, kteří mohou omezení ochrany aplikací cíleně vyzkoušet.
+Není pravděpodobné, že by problém nahlásili uživatelé, protože ochrana aplikací je nástroj na ochranu dat. Pokud dojde k potížím s konfigurací ochrany aplikací, bude mít uživatel neomezený přístup, protože by byl bez ochrany aplikací a nevěděl, že došlo k problému. Z tohoto důvodu doporučujeme ověřit konfiguraci ochrany aplikací tím, že provedete pilotní zásady ochrany aplikací s malou skupinou uživatelů, kteří můžou omezení ochrany aplikací záměrně otestovat.
 
 ## <a name="what-to-check"></a>Co zkontrolovat
 
-Pokud testování odhalí chování zásady ochrany vaší aplikace nefunguje podle očekávání, zkontrolujte tyto položky:
+Pokud se při testování ukáže, že chování zásad ochrany aplikací nefunguje podle očekávání, ověřte tyto položky:
 
 - Mají uživatelé licenci k ochraně aplikací?
 - Mají uživatelé licenci k O365?
-- Je stav všech uživatelů aplikace ochrany aplikací podle očekávání. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**.
+- Je stav každé aplikace ochrany aplikací uživatelů podle očekávání. Aplikace můžou být ve stavu **Zaregistrováno** a **Není zaregistrováno**.
 
 ### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. Vyberte **klientské aplikace** >  **stav ochrany aplikace**a pak vyberte **přiřazení uživatelé** dlaždici. 
-4. Na **vytváření sestav aplikace** stránce **vybrat uživatele** zobrazíte seznam uživatelů a skupin. 
-5. Vyhledejte a vyberte uživatele ze seznamu a pak zvolte **vybrat uživatele**. V horní části **vytváření sestav aplikace** podokně, zobrazí se, zda má uživatel licenci k ochraně aplikací. Uvidíte také, jestli má uživatel licenci k O365 a jaký je stav aplikace pro všechny uživatele zařízení.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. Vyberte **klientské aplikace** >  **stav ochrany aplikace**a pak vyberte dlaždici **přiřazení uživatelé** . 
+4. Na stránce **vytváření sestav aplikací** vyberte **Vybrat uživatele** a zobrazte seznam uživatelů a skupin. 
+5. Vyhledejte a vyberte uživatele ze seznamu a pak zvolte **Vybrat uživatele**. V horní části podokna **vytváření sestav aplikace** uvidíte, jestli má uživatel licenci k ochraně aplikací. Můžete také zjistit, jestli má uživatel licenci pro O365 a stav aplikace pro všechna zařízení uživatele.
 
 ## <a name="what-to-do"></a>Co dělat
 Postupujte podle stavu uživatele:
 
-- Pokud uživatel nemá licenci k ochraně aplikací, přiřaďte [licence Intune](licenses.md) uživateli.
-- Pokud uživatel nemá licenci k O365, získejte [licence](licenses.md) pro daného uživatele.
-- Pokud je aplikace uživatele uvedená jako **není zaregistrováno**, zkontrolujte, jestli jste správně nakonfigurovali [zásady ochrany aplikací](app-protection-policies-validate.md) pro tuto aplikaci.
-- Ujistěte se, že platí tyto podmínky přes všechny uživatele, u kterých chcete [zásady ochrany aplikací](app-protection-policies-monitor.md) použít.
+- Pokud uživatel nemá licenci na ochranu aplikací, přiřaďte mu [licenci Intune](licenses.md) .
+- Pokud uživatel nemá licenci pro O365, Získejte [licenci](licenses.md) pro uživatele.
+- Pokud je aplikace uživatele uvedená **v seznamu nevráceno se změnami**, ověřte, jestli jste pro tuto aplikaci správně nakonfigurovali [Zásady ochrany aplikací](app-protection-policies-validate.md) .
+- Ujistěte se, že tyto podmínky platí pro všechny uživatele, na které chcete [Zásady ochrany aplikací](app-protection-policies-monitor.md) použít.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Co jsou zásady ochrany aplikací Intune?](app-protection-policies.md)
 - [Licence, které zahrnují Intune](licenses.md)
 - [Přiřazení licencí uživatelům, aby mohli zaregistrovat zařízení v Intune](licenses-assign.md)
-- [Jak ověřit nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
+- [Ověření nastavení zásad ochrany aplikací](app-protection-policies-validate.md)
 - [Jak monitorovat zásady ochrany aplikací](app-protection-policies-monitor.md)
 

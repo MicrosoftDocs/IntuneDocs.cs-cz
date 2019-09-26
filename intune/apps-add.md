@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bd0eb13a0a65116545922ddae05f5959224fc571
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 0017981b203b93819bd06f00351816668b0198c4
+ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59897693"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71305289"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -39,10 +38,10 @@ Intune podporuje širokou škálu typů aplikací. Dostupné možnosti se pro je
 
 | Typy aplikací | Instalace | Updates |
 |---|---|---|
-| Aplikace pocházející ze Storu (aplikace ze Storu) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky.   |
-| Interně napsané aplikace (obchodní)  | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor).     | Aplikaci musíte aktualizovat sami.  |
-| Aplikace, které jsou integrované (integrované aplikace)    | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky.  |
-| Aplikace na webu (webový odkaz) | Intune vytvoří zástupce webové aplikace na domovské obrazovce zařízení.  | Aplikace se aktualizují automaticky.    |
+| Aplikace pocházející ze Storu (aplikace ze Storu) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky. |
+| Interně napsané aplikace (obchodní) | Intune nainstaluje aplikaci na zařízení (vy dodáte instalační soubor). | Aplikaci musíte aktualizovat sami. |
+| Aplikace, které jsou integrované (integrované aplikace) | Intune nainstaluje aplikaci na zařízení.  | Aplikace se aktualizují automaticky. |
+| Aplikace na webu (webový odkaz) | Intune vytvoří zástupce webové aplikace na domovské obrazovce zařízení. | Aplikace se aktualizují automaticky. |
 
 ### <a name="specific-app-type-details"></a>Podrobnosti o konkrétním typu aplikace
  
@@ -51,11 +50,11 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | **Konkrétní typ aplikace** | **Obecný typ** | **Konkrétní postupy aplikace** |
 | --- | --- | --- |
 | Aplikace pro Android Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Android** a zadejte adresu URL obchodu Google Play pro aplikaci. |
-| Aplikace Android Enterprise  | Aplikace pro Store  | Vyberte **Android** jako **typ aplikace**a zadejte adresu URL obchodu spravovaný obchod Google Play pro aplikaci. <sup>1</sup> |
+| Podnikové aplikace pro Android  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **Android** a zadejte adresu URL spravovaného Google Play Storu pro aplikaci. <sup>1</sup> |
 | Aplikace pro iOS Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **iOS**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace pro Windows Phone 8.1 Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows Phone 8.1** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
 | Aplikace pro Microsoft Store  | Aplikace pro Store  | Jako **typ aplikace** vyberte **Windows** a zadejte adresu URL obchodu Microsoft Store pro aplikaci. |
-| Spravované aplikace Google Play | Aplikace pro Store  | Vyberte **spravovaný obchod Google Play** jako **typ aplikace**, vyhledejte aplikaci a vyberte aplikaci v Intune. |
+| Spravované aplikace Google Play | Aplikace pro Store  | Jako **Typ aplikace**vyberte **spravovaná Google Play** , vyhledejte aplikaci a vyberte aplikaci v Intune. |
 | Aplikace Office 365 pro Windows 10  | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **Windows 10** a pak vyberte aplikaci Office 365, kterou chcete nainstalovat.  |
 | Aplikace Office 365 pro macOS | Aplikace pro Store (Office 365) | V části **Sada Office 365** vyberte jako **typ aplikace** možnost **macOS** a potom vyberte sadu aplikací Office 365. |
 | Obchodní aplikace (LOB) pro Android | Obchodní aplikace | Jako **typ aplikace** vyberte **Obchodní** aplikaci, vyberte **Soubor balíčku aplikace** a pak zadejte instalační soubor pro Android s příponou **.apk**.  |
@@ -65,9 +64,12 @@ Následující tabulka obsahuje konkrétní typy aplikací a popis, jak je můž
 | Integrovaná aplikace pro iOS  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Integrovaná aplikace pro Android  | Integrovaná aplikace | Jako **typ aplikace** vyberte **Integrovaná aplikace** a potom integrovanou aplikaci vyberte v seznamu poskytovaných aplikací.  |
 | Webové aplikace  | Webová aplikace  | Jako **typ aplikace** vyberte **Webový odkaz** a pak zadejte platnou adresu URL odkazující na webovou aplikaci.  |
-| Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)**, vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
+| Systémové aplikace typu Android Enterprise  | Aplikace pro Store  | Jako **Typ aplikace**vyberte **aplikace pro Android Enterprise System** a potom zadejte název aplikace, vydavatele a soubor balíčku.  |
+| Aplikace pro Windows (Win32)  | Obchodní aplikace  | Jako **typ aplikace** vyberte **aplikaci pro Windows (Win32)** , vyberte **Soubor balíčku aplikace** a pak vyberte instalační soubor s příponou **.intunewin**.  |
+| Obchodní aplikace pro macOS | Obchodní aplikace  | Jako **Typ aplikace**vyberte **obchodní** typ, vyberte **soubor balíčku aplikace**a pak vyberte instalační soubor s příponou **. intunemac**.  |
 
-<sup>1</sup> Další informace o Androidu Enterprise a pracovní profily Androidu, naleznete v tématu [Principy licencované aplikace](apps-add.md#understanding-licensed-apps) níže.
+
+<sup>1</sup> Další informace o pracovních profilech Androidu a Enterprise a Android najdete v části [Principy licencovaných aplikací](apps-add.md#understanding-licensed-apps) níže.
 
 Aplikaci můžete v Microsoft Intune přidat výběrem možností **Klientské aplikace** > **Aplikace** > **Přidat**. Zobrazí se podokno **Přidat aplikaci**, které vám umožní vybrat **Typ aplikace**. 
 
@@ -104,9 +106,9 @@ S určením, jak máte identifikovat organizační skupiny pro jednotlivé scén
 ### <a name="determine-the-type-of-app-for-your-solution"></a>Určení typu aplikace pro konkrétní řešení
 
 Vybírat můžete z těchto typů aplikací:
-- **Aplikace ze storu**: Aplikace, které se nahrály do obchodu Microsoft store, obchodu pro iOS nebo Android store jsou aplikace pro store. Poskytovatel aplikace pro Store udržuje a poskytuje aktualizace aplikace. Aplikaci si vyberete v seznamu v obchodě Store a přidáte ji pomocí Intune jako aplikaci dostupnou pro vaše uživatele.
-- **Aplikací napsaných interně (-obchodní)**: Aplikace, které jste vytvořili interně jsou – obchodní aplikace (LOB). Funkce tohoto typu aplikace se vytvářejí pro některou z platforem podporovaných Intune, například pro Windows, iOS nebo Android. Vaše organizace vytvoří a poskytuje aktualizace jako samostatný soubor. Aktualizace aplikace poskytujete uživatelům tak, že přidáte a nasadíte aktualizace přes Intune.
-- **Aplikace na webu**: Webové aplikace jsou aplikace typu klient server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Moderní webové hostingové platformy dále běžně nabízejí zabezpečení, vyrovnávání zatížení a další výhody. Tento typ aplikace se samostatně udržuje na webu. Na tento typ aplikace se odkazuje pomocí Intune. Můžete také určit, které skupiny uživatelů mají k aplikaci přístup. Všimněte si, že Android webové aplikace nepodporuje.
+- **Aplikace ze Storu**: Aplikace, které byly odeslány do obchodu Microsoft Store, iOS Storu nebo Android Store, jsou aplikace pro Store. Poskytovatel aplikace pro Store udržuje a poskytuje aktualizace aplikace. Aplikaci si vyberete v seznamu v obchodě Store a přidáte ji pomocí Intune jako aplikaci dostupnou pro vaše uživatele.
+- **Aplikace napsané interně (obchodní)** : Aplikace, které jsou vytvořené interně, jsou obchodní aplikace (LOB). Funkce tohoto typu aplikace se vytvořila pro jednu z podporovaných platforem Intune, jako je Windows, iOS, macOS nebo Android. Vaše organizace vytvoří a poskytuje aktualizace jako samostatný soubor. Aktualizace aplikace poskytujete uživatelům tak, že přidáte a nasadíte aktualizace přes Intune.
+- **Aplikace na webu**: Webové aplikace jsou aplikace klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Moderní webové hostingové platformy dále běžně nabízejí zabezpečení, vyrovnávání zatížení a další výhody. Tento typ aplikace se samostatně udržuje na webu. Na tento typ aplikace se odkazuje pomocí Intune. Můžete také určit, které skupiny uživatelů mají k aplikaci přístup. Všimněte si, že Android webové aplikace nepodporuje.
 
 Při určování aplikací potřebných pro vaši organizaci zvažte, jak se tyto aplikace integrují s cloudovými službami, k jakým datům mají aplikace přístup, jestli jsou aplikace dostupné pro uživatele, kteří používají vlastní zařízení (BYOD), a jestli aplikace vyžadují přístup k internetu.
 
@@ -117,15 +119,15 @@ Intune vám umožňuje upravit funkce nasazovaných aplikací tak, aby byly v so
 
 - Omezení funkcí kopírování a vkládání a uložení jako
 - Konfigurace webových odkazů tak, aby se otevíraly v aplikaci Intune Managed Browser
-- Povolení použití více identit a podmíněného přístupu na úrovni aplikace
+- Povolení použití více identit a podmíněného přístupu na úrovni aplikace.
 
 Aplikace spravované přes Intune můžou také povolit ochranu aplikací bez nutnosti registrace, čímž vám umožňují použít zásady ochrany před únikem informací bez správy uživatelských zařízení. Pomocí sady Intune App SDK a nástroje App Wrapping můžete dále do mobilních a obchodních aplikací začlenit i správu mobilních aplikací. Další informace o těchto nástrojích najdete v článku [Přehled sady Intune App SDK](app-sdk.md).
 
 ### <a name="understanding-licensed-apps"></a>Princip licencovaných aplikací
 Kromě pochopení webových aplikací, aplikací pro Store a obchodních aplikací byste měli také něco vědět o cíli aplikací programu Volume Purchase Program a licencovaných aplikací, jako jsou: 
-- **Apple Volume Purchasing Program for Business (iOS)**: IOS App Store umožňuje nakoupit více licencí pro aplikaci, kterou chcete spouštět ve vaší společnosti. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v článku [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu](vpp-apps-ios.md).
-- **Pracovní profil androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Pomocí Intune a vyhledejte si aplikace a schválíte je. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
-- **Microsoft Store pro firmy (Windows 10)**: Microsoft Store pro firmy vám místo, kde můžete najít a zakoupit aplikace pro svou organizaci jednotlivě nebo hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
+- **Apple Volume purchase program for Business (iOS)** : App Store pro iOS umožňuje nakoupit více licencí pro aplikaci, kterou chcete ve své firmě spustit. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti. Další informace najdete v článku [Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu](vpp-apps-ios.md).
+- **Pracovní profil Androidu**: Zařízením s pracovním profilem Androidu se aplikace přiřazují jiným způsobem než zařízením se standardním Androidem. Všechny aplikace, které instalujete pro pracovní profily Androidu, pocházejí ze spravovaného obchodu Google Play. Intune můžete použít k vyhledání aplikací, které chcete, a jejich schválení. Aplikace se pak zobrazí v uzlu **Licencované aplikace** na portálu Azure Portal a můžete spravovat přiřazení aplikace stejně jako u jakékoli jiné aplikace.
+- **Microsoft Store pro firmy (Windows 10)** : Microsoft Store pro firmy nabízí místo pro hledání a nákup aplikací pro vaši organizaci, a to jednotlivě i hromadně. Pokud Store propojíte s Microsoft Intune, můžete hromadně zakoupené aplikace spravovat na portálu Azure Portal. Další informace najdete v článku [Správa aplikací zakoupených v Microsoft Storu pro firmy](windows-store-for-business.md).
 
     > [!NOTE]
     > Mezi přípony souborů aplikací Windows patří **.msi**, **.appx**, **.appxbundle**, **.msix** a **.msixbundle**.  
@@ -148,7 +150,7 @@ Požadavky na cloudové úložiště jsou následující:
 - Maximální velikost nahrávaného souboru je 8 GB.
 
   > [!NOTE]
-  > Windows – obchodní (LOB) aplikace mají omezení maximální velikosti 8 GB na aplikaci. OBCHODNÍ aplikace pro iOS mají omezení maximální velikost 4 GB na aplikaci.
+  > Obchodní aplikace pro Windows (LOB) mají omezení maximální velikosti 8 GB na aplikaci. obchodní aplikace pro iOS mají maximální velikost 4 GB na aplikaci.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Vytvoření a úprava kategorií pro aplikace
 
@@ -156,15 +158,14 @@ Když aplikace seřadíte do kategorií, uživatelé je jednodušeji najdou na p
 
 Když přidáte aplikaci do Intune, budete mít možnost vybrat požadovanou kategorii. Informace k přidání aplikací a přiřazení kategorií získáte v tématech pro jednotlivé platformy. Pokud chcete vytvořit a upravit vlastní kategorie, postupujte podle následujících pokynů:
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V podokně úloh **Klientské aplikace** vyberte v části **Nastavení** možnost **Kategorie aplikací**.  
     V podokně **Kategorie aplikací** se zobrazí seznam aktuálních kategorií. 
 5. Proveďte jednu z těchto věcí:
     - Pokud chcete přidat kategorii, v podokně **Vytvořit kategorii** vyberte **Přidat** a zadejte název kategorie.  
     Názvy je možné zadat jenom v jednom jazyce a služba Intune je nepřekládá.
-    - Pokud chcete kategorii upravit, vyberte tři tečky (**...**) vedle kategorie a pak vyberte **Připnout na řídicí panel** nebo **Odstranit**.
+    - Pokud chcete kategorii upravit, vyberte tři tečky ( **...** ) vedle kategorie a pak vyberte **Připnout na řídicí panel** nebo **Odstranit**.
 6. Vyberte **Vytvořit**.
 
 ## <a name="apps-that-are-added-automatically-by-intune"></a>Aplikace přidané automaticky službou Intune
@@ -188,7 +189,7 @@ Intune automaticky přeinstaluje, aktualizuje nebo odebere požadovanou aplikaci
 
 Podrobnosti o chybách instalace aplikací Intune najdete v tématu [Chyby instalace aplikací](troubleshoot-app-install.md#app-installation-errors).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najdete tady:
 
@@ -196,6 +197,7 @@ Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najde
 - [Obchodní aplikace pro Android](lob-apps-android.md)
 - [Aplikace pro iOS Store](store-apps-ios.md)
 - [Obchodní aplikace pro iOS](lob-apps-ios.md)
+- [obchodní aplikace macOS](lob-apps-macos.md)
 - [Webové aplikace (pro všechny platformy)](web-app.md)
 - [Aplikace pro Windows Phone 8.1 Store](store-apps-windows-phone-8-1.md)
 - [Obchodní aplikace pro Windows Phone](lob-apps-windows-phone.md)
@@ -204,4 +206,5 @@ Informace o tom, jak přidat aplikace pro jednotlivé platformy do Intune, najde
 - [Aplikace Office 365 pro Windows 10](apps-add-office365.md)
 - [Aplikace Office 365 pro macOS](apps-add-office365-macos.md)
 - [Integrované aplikace](apps-add-built-in.md)
+- [Aplikace systému Android Enterprise](apps-ae-system.md)
 - [Aplikace Win32](apps-win32-app-management.md) 

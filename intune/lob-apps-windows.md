@@ -1,14 +1,13 @@
 ---
 title: Přidání obchodní aplikace pro Windows do Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak přidat aplikace – obchodní (LOB) s Windows pomocí Microsoft Intune.
+description: Naučte se, jak pomocí Microsoft Intune přidat obchodní aplikaci pro Windows.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0eadff455a25a22d53d58d87790a356072f9db66
-ms.sourcegitcommit: b0cf661145ccc6e3518db620af199786a623a0d9
+ms.openlocfilehash: eae10cc2a7e1965d83d2c0c59d138b44eafcddf0
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64764723"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "71303378"
 ---
 # <a name="add-a-windows-line-of-business-app-to-microsoft-intune"></a>Přidání obchodní aplikace pro Windows do Microsoft Intune
 
@@ -33,8 +32,7 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 
 ## <a name="step-1-specify-the-software-setup-file"></a>Krok 1: Určení instalačního souboru softwaru
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V úloze **Klientské aplikace** vyberte **Spravovat** > **Aplikace**.
 5. Nad seznamem aplikací vyberte **Přidat**.
@@ -55,19 +53,19 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 
 1. V podokně **Přidat aplikaci** vyberte **Informace o aplikaci**.
 2. V podokně **Informace o aplikaci** nakonfigurujte následující údaje. Některé hodnoty v tomto podokně mohou být vyplněné automaticky.
-    - **Název**: Zadejte název aplikace, zobrazí se v aplikaci portál společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
+    - **Název**: Zadejte název aplikace, který se zobrazí na portálu společnosti. Ověřte, že názvy všech používaných aplikací jsou jedinečné. Pokud stejný název aplikace existuje dvakrát, zobrazí se na portálu společnosti jen jedna z aplikací.
     - **Popis**: Zadejte popis aplikace. Popis se zobrazí na portálu společnosti.
-    - **Publisher**: Zadejte název vydavatele aplikace.
-    - **Ignorovat verzi aplikace**: Nastavte na **Ano** Pokud vývojáři aplikace automaticky aktualizuje aplikaci. Tato možnost platí jen pro mobilní aplikace .msi.
-    - **Kategorie**: Vyberte jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
-    - **Zobrazit tuto aplikaci jako doporučenou aplikaci portálu společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
-    - **Adresa URL informací**: Volitelně zadejte adresu URL webu, který obsahuje informace o aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Soukromá adresa URL**: Volitelně zadejte adresu URL webu, který obsahuje informace o ochraně osobních údajů pro aplikaci. Adresa URL se zobrazí na portálu společnosti.
-    - **Argumenty příkazového řádku**: Volitelně zadejte jakékoli argumenty příkazového řádku, které chcete použít soubor .msi spuštění.  Příkladem je **/q**. Nezahrnují program msiexec s odkazem příkaz nebo argumenty, jako například **/i** nebo **/x**, jako jsou automaticky použity. Další informace najdete v tématu [možnosti příkazového řádku](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). 
-    - **Pro vývojáře**: Volitelně zadejte jméno vývojáře aplikace.
-    - **Vlastník**: Volitelně zadejte jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
-    - **Poznámky k**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
-    - **Logo**: Nahrajte ikonu, která je spojená s aplikací. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Vydavatel**: Zadejte název vydavatele aplikace.
+    - **Ignorovat verzi aplikace**: Nastavte na **Ano** , pokud vývojář aplikace aplikaci automaticky aktualizuje. Tato možnost platí jen pro mobilní aplikace .msi.
+    - **Kategorie**: Vyberte jednu nebo více předdefinovaných kategorií aplikací nebo vyberte kategorii, kterou jste vytvořili. Díky kategoriím uživatelé aplikaci při procházení portálu společnosti snadněji najdou.
+    - **Zobrazit jako doporučenou aplikaci v portál společnosti**: Když uživatelé hledají aplikace, zobrazí se aplikace výrazně na hlavní stránce portálu společnosti.
+    - **Adresa URL informací**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Adresa URL ochrany osobních údajů**: Volitelně můžete zadat adresu URL webu, který obsahuje informace o ochraně osobních údajů pro aplikaci. Adresa URL se zobrazí na portálu společnosti.
+    - **Argumenty příkazového řádku**: Volitelně můžete zadat jakékoli argumenty příkazového řádku, které chcete použít pro soubor. msi při spuštění.  Příkladem je **/q**. Nepoužívejte příkaz nebo argumenty příkazu msiexec, například **/i** nebo **/x**, jak se používají automaticky. Další informace najdete v tématu [Možnosti příkazového řádku](https://docs.microsoft.com/windows/desktop/Msi/command-line-options). Pokud. Soubor MSI potřebuje další možnosti příkazového řádku, které se považují za použití [správy aplikací Win32](apps-win32-app-management.md).
+    - **Vývojář**: Volitelně můžete zadat název vývojáře aplikace.
+    - **Vlastník**: Volitelně můžete zadat jméno vlastníka této aplikace. Zadat můžete například **Personální oddělení**.
+    - **Poznámky**: Zadejte jakékoli poznámky, které chcete přidružit k této aplikaci.
+    - **Logo**: Nahrajte ikonu, která je přidružená k aplikaci. Ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 3. Až to budete mít, vyberte **OK**.
 
 ## <a name="step-4-finish-up"></a>Krok 4: Dokončení
@@ -75,10 +73,13 @@ Obchodní aplikace (LOB) je aplikace, kterou přidáte z instalačního souboru 
 1. V podokně **Přidat aplikaci** zkontrolujte správnost nakonfigurovaných informací o aplikaci.
 2. Pomocí možnosti **Přidat** nahrajte aplikaci do Intune.
 
-## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizace – obchodní aplikace
+## <a name="step-5-update-a-line-of-business-app"></a>Krok 5: Aktualizace obchodní aplikace
 
 [!INCLUDE [shared-proc-lob-updateapp](./includes/shared-proc-lob-updateapp.md)]
 
+   > [!NOTE]
+   > Aby služba Intune úspěšně nasadila nový soubor appx do zařízení, musíte zvýšit hodnotu `Version` řetězce v souboru appxmanifest. XML v balíčku appx.
+    
 ## <a name="configure-a-self-updating-mobile-msi-app-to-ignore-the-version-check-process"></a>Konfigurace automaticky aktualizované mobilní aplikace MSI na ignorování procesu kontroly verzí
 
 Známou automaticky aktualizovanou mobilní aplikaci MSI můžete nakonfigurovat tak, aby ignorovala proces kontroly verzí. 
@@ -87,10 +88,10 @@ Některé aplikace založené na instalační službě MSI automaticky aktualizu
 
 Tato možnost je užitečná, když chcete předejít konfliktu časování. Ke konfliktu časování může například dojít, když aplikaci automaticky aktualizuje vývojář aplikace a také Intune. Jak vývojář, tak Intune můžou vynucovat verzi aplikace na klientovi Windows, což způsobí konflikt.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací. Teď ji můžete přiřadit do požadovaných skupin. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md).
 
 - Zjistěte, jakými způsoby můžete monitorovat vlastnosti a přiřazení aplikace. Viz [Postup monitorování informací a přiřazení aplikace](apps-monitor.md).
 
-- Zjistěte více o kontextu své aplikace v Intune. Zobrazit [Přehled životního cyklu aplikací v Microsoft Intune](app-lifecycle.md).
+- Zjistěte více o kontextu své aplikace v Intune. Podívejte [se na Přehled životního cyklu aplikace v Microsoft Intune](app-lifecycle.md).

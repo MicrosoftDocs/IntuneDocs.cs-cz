@@ -1,13 +1,12 @@
 ---
-title: Přidat nebo nakonfigurovat nastavení vzdělávání v Microsoft Intune – Azure | Dokumentace Microsoftu
-description: V profilu konfigurace zařízení na Windows 10 a novější zařízení v Microsoft Intune použijte aplikaci zkuste si Test. Vytvořit profil konfigurace pomocí settiings vzdělávání a zadejte adresu URL aplikace testu, zvolte, jak uživatelé přihlásit, monitorování obrazovky během testu a povolit nebo zakázat textové návrhy během testu.
+title: Přidání nebo konfigurace nastavení vzdělávání v Microsoft Intune – Azure | Microsoft Docs
+description: Použijte aplikaci pořizovat test v profilu konfigurace zařízení v zařízení s Windows 10 a novějším v Microsoft Intune. Vytvořte konfigurační profil pomocí nastavení vzdělávání a zadejte adresu URL testovací aplikace, vyberte způsob, jakým se uživatelé přihlásí, monitorovat obrazovku během testu a při testování povolí nebo zakáže návrhy textu.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
 ms.date: 01/10/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,35 +16,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efa990e12416c292d9446428165e4bff99c7eca2
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: a64c5c6779d3fcc34f4ff120ed27e7f300bc09b0
+ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57393209"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "71301969"
 ---
-# <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Použít na zařízeních s Windows 10 v Microsoft Intune aplikaci zkuste si Test
+# <a name="use-the-take-a-test-app-on-windows-10-devices-in-microsoft-intune"></a>Použití aplikace nabrat na zařízeních s Windows 10 v Microsoft Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Vzdělávací profily v Intune jsou navržené tak, aby studenti mohli vyplňovat testu nebo zkoušku na zařízeních. Tato funkce zahrnuje **zkuste si Test** aplikace a nastavení můžete přidat adresu URL testu, zvolte, jak koncoví uživatelé přihlásit k testu a další. Tato funkce podporuje následující platformy:
+Vzdělávací profily v Intune jsou navržené pro studenty, kteří můžou na zařízeních pořizovat test nebo zkoušku. Tato funkce **zahrnuje testovací URL aplikaci a** nastavení, které umožňují přidat testovací adresu URL, zvolit způsob, jakým se koncoví uživatelé přihlásí k testu, a další. Tato funkce podporuje následující platformu:
 
 - Windows 10 a novější
 
-Když se uživatel přihlásí, aplikaci zkuste si Test se automaticky otevře v testu, které jste zadali. Žádné jiné aplikace můžete spouštět v zařízení během testu. [Používání testů ve Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) obsahuje další podrobnosti o zkuste aplikaci Test.
+Když se uživatel přihlásí, automaticky se otevře testovací aplikace se zadaným testem. V zařízení nemůžou běžet žádné jiné aplikace, zatímco probíhá test. [Pořizovat testy ve Windows 10](https://docs.microsoft.com/education/windows/take-tests-in-windows-10) poskytují další podrobnosti o aplikaci převzít test.
 
-V tomto článku jsou uvedené kroky k vytvoření profilu konfigurace zařízení v Microsoft Intune. Obsahuje také informace ke čtení a další informace o nastavení k dispozici vzdělávání pro zařízení s Windows 10.
+V tomto článku jsou uvedené kroky pro vytvoření profilu konfigurace zařízení v Microsoft Intune. Obsahuje také informace o dostupných nastaveních vzdělávání pro vaše zařízení s Windows 10.
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. V [webu Azure portal](https://portal.azure.com)vyberte **všechny služby** > vyfiltrujte **Intune** > vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte tyto vlastnosti:
 
-    - **Název**: Zadejte popisný název pro nový profil.
+    - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: Zvolte **Windows 10 a novější**.
-    - **Profil**: Zvolte **vzdělávacího profilu**.
+    - **Platforma**: Vyberte **Windows 10 a novější**.
+    - **Profil**: Vyberte **vzdělávací profil**.
 
 4. Zadejte nastavení, která chcete nakonfigurovat:
 
@@ -55,8 +54,8 @@ V tomto článku jsou uvedené kroky k vytvoření profilu konfigurace zařízen
 
 Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu profilů. Dále [tento profil přiřaďte některým skupinám](device-profile-assign.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-Podívejte se do seznamu [nastavení Windows 10 education](education-settings-windows.md) a jejich popisy.
+Podívejte se na seznam [Nastavení vzdělávání pro Windows 10](education-settings-windows.md) a jejich popis.
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

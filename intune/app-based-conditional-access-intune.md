@@ -1,14 +1,13 @@
 ---
 title: Podmíněný přístup na základě aplikace s Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak s Intune funguje podmíněný přístup založený na aplikacích.
+description: Přečtěte si, jak podmíněný přístup na základě aplikace funguje s Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/11/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4c39a1d95a10c96b8f34703f99c4d8414efbbf0
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 18f662bd733b42e2f35652d7d29c3ee6ff3556c7
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59894055"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "71304344"
 ---
 # <a name="app-based-conditional-access-with-intune"></a>Podmíněný přístup na základě aplikace s Intune
 
@@ -31,7 +30,7 @@ ms.locfileid: "59894055"
 
 [Zásady ochrany aplikací Intune](app-protection-policy.md) pomáhají chránit vaše firemní data na zařízeních, která jsou zaregistrovaná v Intune. Zásady ochrany aplikací můžete použít také u zařízení vlastněných zaměstnanci, která nejsou zaregistrovaná ke správě v Intune. V takovém případě potřebujete mít pořád jistotu, že jsou vaše firemní data a prostředky chráněné, i když tato zařízení vaše společnost nespravuje.
 
-Podmíněný přístup založený na aplikaci a správa klientských aplikací přidávají další vrstvu zabezpečení. Zajišťují, aby přístup k Exchangi Online a dalším službám Office 365 měly jenom klientské aplikace, které podporují řešení Intune s jeho zásadami ochrany aplikací.
+Podmíněný přístup na základě aplikace a Správa klientských aplikací přidávají vrstvu zabezpečení tím, že zajistí, že budou mít přístup k Exchangi Online a dalším službám Office 365 jenom klientské aplikace, které podporují zásady ochrany aplikací Intune.
 
 > [!NOTE]
 > Spravovaná aplikace je taková aplikace, která využívá zásady ochrany aplikací a která lze spravovat pomocí Intune.
@@ -39,27 +38,27 @@ Podmíněný přístup založený na aplikaci a správa klientských aplikací p
 Blokovat integrované e-mailové aplikace na zařízeních s iOSem a Androidem můžete jen tehdy, pokud aplikaci Microsoft Outlook povolíte přístup k Exchangi Online. Kromě toho můžete u aplikací, které nepoužívají zásady ochrany aplikací Intune, blokovat přístup k SharePointu Online.
 
 ## <a name="prerequisites"></a>Požadavky
-Před vytvořením zásady podmíněného přístupu na základě aplikace je potřeba mít:
+Před vytvořením zásad podmíněného přístupu na základě aplikace musíte mít:
 
 - **Řešení Enterprise Mobility + Security (EMS)** nebo **předplatné Azure Active Directory (AD) Premium**
 - Uživatelé musí mít licenci pro EMS nebo Azure AD.
 
-Další informace najdete na stránce s [cenami Enterprise Mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo [cenami Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
+Další informace najdete v tématu [ceny pro Enterprise mobility](https://www.microsoft.com/cloud-platform/enterprise-mobility-pricing) nebo [ceny Azure Active Directory](https://azure.microsoft.com/pricing/details/active-directory/).
 
 ## <a name="supported-apps"></a>Podporované aplikace
 
-Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [technické referenční dokumentaci k podmíněnému přístupu Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference).
+Seznam aplikací, které podporují podmíněný přístup na základě aplikace, najdete v [dokumentaci technické Reference k podmíněnému přístupu Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-technical-reference)
 
-Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace](app-modern-authentication-block.md). Ty ale musí využívat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
+Podmíněný přístup na základě aplikace [podporuje také obchodní aplikace (LOB)](app-modern-authentication-block.md), ale tyto aplikace potřebují používat [moderní ověřování Office 365](https://support.office.com/article/Using-Office-365-modern-authentication-with-Office-clients-776c0036-66fd-41cb-8928-5495c0f9168a). 
 
-## <a name="how-app-based-conditional-access-works"></a>Jak podmíněný přístup na základě aplikace funguje
+## <a name="how-app-based-conditional-access-works"></a>Způsob fungování podmíněného přístupu na základě aplikace
 
-V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook a následné pravidlo podmíněného přístupu. To přidá Outlook na seznam schválených aplikací, které lze využít k přístupu k firemnímu e-mailu.
+V tomto příkladu správce použil zásady ochrany aplikací pro Outlookovou aplikaci a pravidlo podmíněného přístupu, které přidá aplikaci Outlook do seznamu schválených aplikací, které se dají použít při přístupu k podnikovému e-mailu.
 
 > [!NOTE]
 > Vývojový diagram vyobrazený níže lze použít i pro další spravované aplikace.
 
-![Podmíněný přístup založený na aplikacích znázorněný ve vývojovém diagramu](./media/ca-intune-common-ways-3.png)
+![Proces podmíněného přístupu na základě aplikace znázorněný v diagramu toku](./media/ca-intune-common-ways-3.png)
 
 1. Uživatel se pokusí ověřit ve službě Azure AD z aplikace Outlook.
 
@@ -69,13 +68,13 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 3. Zprostředkující aplikace se nainstaluje na zařízení.
 
-4. Zprostředkující aplikace zahájí proces registrace Azure AD, která vytvoří záznam zařízení ve službě Azure AD. To není stejné jako proces zápisu mobilního zařízení management (MDM), ale tento záznam je nezbytné, aby zásady podmíněného přístupu je možné vynucovat na zařízení.
+4. Aplikace zprostředkovatele spustí proces registrace Azure AD, který vytvoří záznam zařízení ve službě Azure AD. To není stejné jako u procesu registrace správy mobilních zařízení (MDM), ale tento záznam je nutný, aby bylo možné na zařízení vyhovět zásadám podmíněného přístupu.
 
-5. Zprostředkující aplikace ověří identitu aplikace. Takže zprostředkující aplikaci ověřit, zda má aplikace oprávnění pro použití tímto uživatelem je vrstva zabezpečení.
+5. Zprostředkující aplikace ověří identitu aplikace. K dispozici je vrstva zabezpečení, aby aplikace zprostředkovatele mohla ověřit, jestli je aplikace autorizována pro použití uživatelem.
 
 6. Zprostředkující aplikace odešle v rámci ověřování uživatele ID klienta aplikace do Azure AD, aby zkontrolovala, že je v seznamu schválených zásad.
 
-7. Azure AD umožní ověření uživatele a použití aplikace na základě seznamu schválených zásad. Pokud aplikace v seznamu není, Azure AD uživateli zakáže přístup k aplikaci.
+7. Azure AD umožní ověření uživatele a použití aplikace na základě seznamu schválených zásad. Pokud aplikace není v seznamu, služba Azure AD odepře přístup k aplikaci.
 
 8. Aplikace Outlook komunikuje s cloudovou službou Outlooku a iniciuje tak komunikaci s Exchangem Online.
 
@@ -85,7 +84,7 @@ V tomto příkladu použil správce zásady ochrany aplikací u aplikace Outlook
 
 11. Firemní e-mail se doručí do uživatelovy poštovní schránky.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 [Vytvoření zásady podmíněného přístupu na základě aplikace](app-based-conditional-access-intune-create.md)
 
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)

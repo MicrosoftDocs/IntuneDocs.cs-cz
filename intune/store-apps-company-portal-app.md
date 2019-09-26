@@ -1,14 +1,13 @@
 ---
 title: Ruční přidání aplikace Portál společnosti pro Windows 10
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak vaši pracovníci můžete ručně přidat aplikaci portál společnosti pro Windows 10 na svůj počítač z Microsoft Store.
+description: Přečtěte si, jak vaše zaměstnanci můžou ručně přidat Portál společnosti aplikaci pro Windows 10 do svého počítače z Microsoft Store.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/19/2018
+ms.date: 07/26/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a55993e564297016c6c926c6d3be46c32fe1d86b
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 50846ae3bfdea435a24e0a387817b5b1a96cf535
+ms.sourcegitcommit: 293dfbea2b4756bb9b7df1705a2b5f752dfaa807
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57394492"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "71303152"
 ---
 # <a name="manually-add-the-windows-10-company-portal-app-by-using-microsoft-intune"></a>Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune
 
@@ -47,24 +46,25 @@ Vaši uživatelé si mohou nainstalovat aplikaci Portál společnosti sami z Mic
 3. Výběrem možnosti **Získat aplikaci** offline aplikaci Portál společnosti získejte a přidejte do svého inventáře.
 4. Na stránce aplikace **Portál společnosti** vyberte **Spravovat**.
 5. Jako **Platformu** vyberte **Windows 10 – všechna zařízení**, potom vyberte příslušné hodnoty **Minimální verze**, **Architektury** a **Stáhnout metadata aplikace**. 
-6. Výběrem možnosti **Stáhnout** uložte soubor na místní počítač.
+6. V části **Podrobnosti balíčku** vyberte **Stáhnout** a uložte soubor do místního počítače.
 
-    ![Zařízení s Windows 10, kde se architektura rovná X86, je vybrán.](./media/Win10CP-all-devices.png)
+    ![Je vybraná možnost zařízení s Windows 10, kde se používá architektura x86.](./media/Win10CP-all-devices.png)
 
 7. Vyberte **Stáhnout** a stáhněte všechny balíčky v části Požadované platformy.  
-    Tuto akci je nutné provést pro architektury x86, x64 a ARM – celkem 12 balíčků.
-8. Než nahrajete aplikaci portál společnosti do Intune, vytvořte složku (například: Portál C:\Company) s balíčky strukturovanými následovně:
-   - Umístěte balíček Portálu společnosti do složky C:\Portál společnosti. V tomto umístění vytvořte také podsložku *Závislosti*.  
 
-     ![Složka Závislosti uložená se souborem APPXBUN](./media/Win10CP-Dependencies-save.png)
+    Tuto akci je nutné provést pro architektury x86, x64 a ARM:<br> 
+    *V případě, že při výběru 1607 použijete 1507 jako minimální verzi operačního systému, 12 balíčků při výběru 1511 a 15 balíčků, jsou k dispozici 9 požadovaných balíčků rozhraní.*
 
-   - Umístěte balíčky závislostí do složky *Závislosti*. 
+8. V Microsoft Intune na portálu Azure Portal nahrajte aplikaci Portál společnosti jako novou aplikaci. Aplikaci přidáte tak, že jako **Typ aplikace** v podokně **Přidat aplikaci** vyberete obchodní aplikace. Pak vyberte soubor balíčku aplikace (přípona. AppxBundle).
+
+9. V části **Vybrat soubory aplikací závislosti** vyberte všechny závislosti, které jste stáhli v kroku 7, kliknutím na tlačítko Shift a ověřte, zda se v **přidaném** sloupci zobrazí **Ano** pro architektury, které potřebujete.
 
      > [!NOTE]
-     > Pokud nebudou závislosti umístěné ve správném formátu, Intune je při nahrávání balíčku nerozpozná a nenahraje soubory. Nahrávání se nezdaří a zobrazí se chyba.
+     > Pokud se závislosti nepřidaly, nemusí se aplikace nainstalovat na zadané typy zařízení.
 
-9. V Microsoft Intune na portálu Azure Portal nahrajte aplikaci Portál společnosti jako novou aplikaci. 
-10. Přiřaďte aplikaci Portál společnosti vybrané skupině cílových uživatelů jako požadovanou aplikaci.  
+10. Klikněte na **OK**, zadejte požadované **informace o aplikaci**a klikněte na **Přidat**.
+
+11. Přiřaďte aplikaci Portál společnosti jako požadovanou aplikaci pro vybranou skupinu uživatelů nebo zařízení.  
 
 Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  
 
@@ -106,7 +106,7 @@ Aplikaci můžete tímto způsobem podepsat a přiřadit takto:
 
 Po dokončení běhu tohoto skriptu bude jeho výstupem podepsaná verze aplikace Portál společnosti pro Windows 10. Potom můžete podepsanou verzi aplikace přiřadit jako obchodní aplikaci přes Intune. Tím se aktuálně přiřazené verze upgradují na tuto novou aplikaci.  
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Přiřazení aplikací skupinám](apps-deploy.md)
 

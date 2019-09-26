@@ -8,7 +8,6 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 05/9/2018
 ms.topic: archived
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 75628ab45d4c0d7f43f07d530a76988ca5f772b8
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 578dcf8a714197d9414e8ffeeec9a6c6e8a30311
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57461154"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "71302182"
 ---
 # <a name="how-to-configure-intune-settings-for-the-ios-classroom-app"></a>Jak nakonfigurovat nastavení Intune pro aplikaci Classroom pro iOS
 
@@ -78,15 +77,14 @@ Informace můžete do SDS naimportovat jednou z následujících metod:
 
 ### <a name="configure-general-settings"></a>Konfigurace obecných nastavení
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Konfigurace zařízení**.
 2. V podokně **Konfigurace zařízení** v části **Spravovat** zvolte **Profily**.
-5.  V podokně profilů zvolte **Vytvořit profil**.
-6.  V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
-7.  Z rozevíracího seznamu **Platforma** zvolte **iOS**.
-8.  Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
-9.  Zvolte **Nastavení** > **Konfigurovat**.
+5. V podokně profilů zvolte **Vytvořit profil**.
+6. V podokně **Vytvořit profil** zadejte **Název** a **Popis** vzdělávacího profilu iOS.
+7. Z rozevíracího seznamu **Platforma** zvolte **iOS**.
+8. Z rozevíracího seznamu **Typ profilu** zvolte **Vzdělávání**.
+9. Zvolte **Nastavení** > **Konfigurovat**.
 
 
 Teď si vytvoříte certifikáty k navázání vztahu důvěryhodnosti mezi iPady učitelů a studentů. Certifikáty se používají k bezproblémovému a bezobslužnému ověřování připojení mezi zařízeními bez nutnosti zadávání uživatelských jmen a hesel.
@@ -124,8 +122,8 @@ Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ### <a name="configure-student-certificates"></a>Konfigurace certifikátů studentů
 
-1.  V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
-2.  V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
+1. V podokně **Vzdělávání** zvolte **Certifikáty studentů**.
+2. V podokně **Certifikáty studentů** zvolte v seznamu **Typ certifikátů studentských zařízení** možnost **1:1**.
 
 #### <a name="configure-student-root-certificate"></a>Konfigurace kořenového certifikátu studenta
 
@@ -149,14 +147,14 @@ Jakmile dokončíte konfiguraci certifikátů, zvolte **OK**.
 
 ## <a name="finish-up"></a>Dokončení
 
-1.  V podokně **Vzdělávání** zvolte OK.
-2.  V podokně **Vytvořit profil** zvolte **Vytvořit**.
-    
+1. V podokně **Vzdělávání** zvolte OK.
+2. V podokně **Vytvořit profil** zvolte **Vytvořit**.
+
 Profil se vytvoří a zobrazí se v podokně se seznamem profilů.
 
 Přiřaďte profil ke studentským zařízením ve skupinách učebny, které se vytvořily při synchronizaci školních dat se službou Azure AD (viz [Přiřazení profilů zařízení](device-profile-assign.md)).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Když teď učitel použije aplikaci Classroom, bude mít plnou kontrolu nad zařízeními studentů.
 

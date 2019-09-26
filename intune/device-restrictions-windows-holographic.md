@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 01/22/2019
 ms.topic: reference
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: medium
 ms.technology: ''
@@ -15,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fed8c33bbf4ff302d08576dc5e34ce1257425090
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: bea8d6d8e3503b9ec6fba7b2eda4842b68786e54
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57565243"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71302308"
 ---
 # <a name="windows-holographic-for-business-device-settings-to-allow-or-restrict-features-using-intune"></a>Windows Holographic for Business zařízení nastavení k povolení nebo zakázání funkcí pomocí Intune
 
@@ -34,9 +33,9 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ## <a name="general"></a>Obecné
 
-- **Ruční zrušení zápisu**: Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
+- **Ruční zrušení registrace**: Umožňuje uživateli ze zařízení ručně odstranit pracovní účet.
 - **Cortana**: Povolí nebo zakáže hlasového asistenta Cortany.
-- **Informace o zeměpisné poloze**: Určuje, jestli zařízení může používat informace služeb určování polohy.
+- **Zeměpisná poloha**: Určuje, jestli zařízení může používat informace služeb určování polohy.
 
 ## <a name="password"></a>Heslo
 
@@ -45,21 +44,21 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ## <a name="app-store"></a>App Store
 
-- **Automaticky aktualizovat aplikace ze storu**: Umožňuje aplikací nainstalovaných z Microsoft Store automaticky aktualizovat.
-- **Instalace důvěryhodné aplikace**: Povolí aplikacím, které jsou podepsané důvěryhodným certifikátem instalovaly bokem.
-- **Odemčení pro vývojáře**: Povolit nastavení pro vývojáře Windows, například můžete umožnit zkušebně načtené aplikace má být upraven koncový uživatel.
+- **Automaticky aktualizovat aplikace ze Storu**: Povolí automatickou aktualizaci aplikací nainstalovaných z Microsoft Store.
+- **Instalace důvěryhodné aplikace**: Povoluje zkušebně načtené aplikací podepsaných důvěryhodným certifikátem.
+- **Odemčení pro vývojáře**: Povolí koncovým uživatelům upravovat nastavení vývojářů pro Windows, jako je například umožnění úprav aplikací zkušebně načtené.
 
 ## <a name="microsoft-edge-browser"></a>Prohlížeč Microsoft Edge
 
-- **Soubory cookie**: Umožní prohlížeči ukládat internetové soubory cookie do zařízení.
-- **Automaticky otevíraná okna**: Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 desktop).
+- **Soubory cookie**: Umožňuje prohlížeči ukládat do zařízení internetové soubory cookie.
+- **Automaticky otevíraná okna**: Blokuje automaticky otevíraná okna v prohlížeči (platí jenom pro Windows 10 Desktop).
 - **Návrhy hledání**: Umožňuje, aby vám vyhledávací web při psaní hledaného textu navrhoval weby.
-- **Správce hesel**: Povolí nebo zakáže funkci správce hesel Microsoft Edge.
-- **Odesílat hlavičky not track**: Nakonfiguruje prohlížeč Microsoft Edge odesílat hlavičky do not track na weby, které uživatelé navštíví.
+- **Správce hesel**: Povolí nebo zakáže funkci Microsoft Edge Password Manager.
+- **Odesílat hlavičky do Not Track**: Nakonfiguruje prohlížeč Microsoft Edge tak, aby odesílal hlavičky do nesledovaných webů, které uživatelé navštěvují.
 
 ## <a name="windows-defender-smart-screen"></a>Filtr SmartScreen v programu Windows Defender
 
-- **Filtr SmartScreen pro Microsoft Edge**: Povolte filtr SmartScreen Microsoft Edge pro přístup k webu a stahování souborů.
+- **Filtr SmartScreen pro Microsoft Edge**: Povolit filtr SmartScreen v Microsoft Edge pro přístup k webu a stahování souborů.
 
 ## <a name="search"></a>Search
 
@@ -71,13 +70,13 @@ Tento článek uvádí a popisuje různá nastavení, které můžete řídit na
 
 ## <a name="cellular-and-connectivity"></a>Mobilní síť a připojení
 
-- **Bluetooth**: Určuje, jestli uživatel může zapnout a konfigurovat Bluetooth na zařízení.
-- **Zjistitelnost zařízení Bluetooth**: Umožňuje zařízení být zjištěny jinými zařízeními podporujícími technologii Bluetooth.
-- **Reklama přes Bluetooth**: Umožňuje zařízení přijímat reklamu přes Bluetooth.
+- **Bluetooth**: Určuje, jestli uživatel může na zařízení povolit a nakonfigurovat Bluetooth.
+- **Zjistitelnost Bluetooth**: Umožňuje, aby zařízení zjistila jiná zařízení s podporou Bluetooth.
+- **Inzerce Bluetooth**: Umožňuje zařízení přijímat reklamy přes Bluetooth.
 
 ## <a name="control-panel-and-settings"></a>Ovládací panely a nastavení
 
-- **Změny systémového času**: Zabrání koncovému uživateli ve změně data a času.
+- **Změna systémového času**: Zabrání koncovému uživateli ve změně data a času zařízení.
 
 ## <a name="kiosk---obsolete"></a>Veřejný terminál (zastaralé)
 
@@ -85,28 +84,28 @@ Tato nastavení jsou jen pro čtení a nedají se změnit. Pokud chcete nakonfig
 
 Ve veřejných terminálech obvykle běží konkrétní aplikace. Uživatelé nemají v zařízení přístup k žádným prvkům ani funkcím mimo aplikaci veřejného terminálu.
 
-- **Celoobrazovkový režim**: Určuje typ režimu veřejného terminálu podporovaného zásadami. Vaše možnosti jsou:
+- **Celoobrazovkový režim**: Určuje typ beznabídkového režimu, který zásady podporuje. Vaše možnosti jsou:
 
-  - **Není nakonfigurováno** (výchozí): Zásady nepovolují režim veřejného terminálu. 
-  - **Veřejný terminál aplikace s jedním**: Profil povoluje v zařízení běžela jenom jedna aplikace. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
-  - **Veřejný terminál s více aplikacemi**: Profil povoluje v zařízení spouštět více aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
+  - **Není nakonfigurováno** (výchozí): Tato zásada nepovoluje celoobrazovkový režim. 
+  - Veřejný **terminál s jednou aplikací**: Profil umožňuje, aby zařízení spouštělo jenom jednu aplikaci. Jakmile se uživatel přihlásí, spustí se daná aplikace. Tento režim zároveň brání uživateli v otevírání nových aplikací nebo změně spuštěné aplikace.
+  - Veřejný **terminál s více aplikacemi**: Profil umožní, aby zařízení spouštělo víc aplikací. Uživatel má k dispozici pouze aplikace, které přidáte. Veřejný terminál s více aplikacemi, neboli zařízení s pevně stanoveným účelem, umožňuje poskytovat přehledné prostředí jednotlivým uživatelům, protože jim povoluje přístup pouze k aplikacím, které potřebují. Nezobrazuje aplikace, které nepotřebují. 
   
-    Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](https://docs.microsoft.com/hololens/hololens-kiosk#start-layout-file-for-intune) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
+    Když přidáváte aplikace pro prostředí veřejného terminálu s více aplikacemi, potřebujete také soubor rozložení nabídky Start. [Soubor rozložení nabídky Start](/hololens/hololens-kiosk#start-layout-file-for-mdm-intune-and-others) obsahuje ukázkový soubor XML, který můžete použít v Intune. 
 
-#### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
+### <a name="single-app-kiosks"></a>Veřejné terminály s jednou aplikací
 
 Zadejte následující nastavení:
 
-- **Uživatelský účet**: Zadejte místní (pro zařízení) uživatelský účet nebo účet Azure AD přihlášení přidružené k aplikaci veřejného terminálu. U účtů připojených k doménám Azure AD zadejte účet ve tvaru `domain\username@tenant.org`. 
+- **Uživatelský účet**: Zadejte místní uživatelský účet (zařízení) nebo přihlašovací jméno účtu Azure AD přidružené k aplikaci veřejného terminálu. U účtů připojených k doménám Azure AD zadejte účet ve tvaru `domain\username@tenant.org`. 
 
     U terminálů určených veřejnosti s povoleným automatickým přihlašováním je vhodné použít typ uživatele s nejnižšími oprávněními (například místní standardní uživatelský účet). Ke konfiguraci účtu Azure Active Directory (AD) pro beznabídkový režim veřejného terminálu použijte formát `AzureAD\user@contoso.com`.
 
-- **Modelu uživatele aplikace ID (AUMID) dané aplikace**: Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
+- **ID modelu uživatele aplikace (AUMID)** aplikace: Zadejte AUMID aplikace veřejného terminálu. Další informace najdete v tématu [Jak najít ID modelu uživatele aplikace (AUMID) nainstalované aplikace](https://docs.microsoft.com/windows-hardware/customize/enterprise/find-the-application-user-model-id-of-an-installed-app).
 
 ## <a name="reporting-and-telemetry"></a>Vytváření sestav a telemetrie
 
-- **Sdílet data o využití**: Vyberte úroveň odesílaných diagnostických dat.
+- **Sdílet data o využití**: Vyberte úroveň odeslání diagnostických dat.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

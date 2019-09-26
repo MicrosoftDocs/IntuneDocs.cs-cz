@@ -6,9 +6,8 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f31c623196abd4ffcdfc4f5ccded088c12d5d992
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 293c370100bcd3343c4bb3501badff203147c686
+ms.sourcegitcommit: 89a973bbfa1702b2d275af6814874e4305bdcb77
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900991"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71302662"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -53,15 +52,16 @@ Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do s
 * V současné době není možné přiřazovat ke kategoriím koncových uživatelů knihy stejně jako aplikace.
 * Po přiřazení knihy už není možné licenci vrátit zpět.
 * Když se uživatel s oprávněným zařízením pokusí poprvé o instalaci knihy VPP, musí se před tím, než si bude moct knihu nainstalovat, připojit k programu Apple Volume Purchase. Licence také můžete přiřadit ke skupinám zabezpečení se spravovanými identifikátory Apple ID. V takovém případě nebudou uživatelé po instalaci knihy vyzváni k zadání Apple ID.
+* Zařízení musí být zaregistrovaná s přidružením uživatele, protože elektronické knihy je možné přiřadit jenom skupinám uživatelů.   
+
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. V podokně **Intune** zvolte **Klientské aplikace**.
-1.  V úloze **Klientské aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
-2.  V podokně se seznamem tokenů VPP klikněte na **Vytvořit**.
-3.  V podokně **Nový token VPP** zadejte tyto informace:
+1. V úloze **Klientské aplikace** zvolte **Nastavení** > **Tokeny VPP pro iOS**.
+2. V podokně se seznamem tokenů VPP klikněte na **Vytvořit**.
+3. V podokně **Nový token VPP** zadejte tyto informace:
     - **Soubor tokenu VPP** – je potřeba se zaregistrovat v rámci programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Potom si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
@@ -82,7 +82,7 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 Jako akci přiřazení zvolte **K dispozici** nebo **Povinné**. 
 5. Až to budete mít, zvolte **Uložit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Informace, které vám pomůžou při sledování přiřazování knih, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).
 

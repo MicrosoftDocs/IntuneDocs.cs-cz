@@ -1,13 +1,13 @@
 ---
 title: Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace.
+description: Zjistěte, jak vytvořit zásadu podmíněného přístupu na základě aplikace v Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/22/2019
-ms.prod: ''
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,45 +17,45 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1514fe9dfcd09e2b77967b0fed8c36fb7a06634f
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 6bb07f1ddfcbe05f8039f934725c8122ecd96590
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59896027"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "71303870"
 ---
 # <a name="set-up-app-based-conditional-access-policies-with-intune"></a>Nastavení zásad podmíněného přístupu na základě aplikace v Intune
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Pro aplikace, které jsou na seznamu schválených aplikací, nastavte zásady podmíněného přístupu. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
+Nastavte zásady podmíněného přístupu na základě aplikací pro aplikace, které jsou součástí seznamu schválených aplikací. Na seznamu schválených aplikací jsou aplikace, které testoval Microsoft.
 
 > [!IMPORTANT]
-> Tento článek vás provede postupem přidání zásad podmíněného přístupu na základě aplikace. Stejný postup použijte, když ze seznamu schválených aplikací přidáváte aplikace, jako je SharePoint Online, Microsoft Teams nebo Microsoft Exchange Online.
+> Tento článek vás provede jednotlivými kroky přidání zásady podmíněného přístupu na základě aplikace. Stejný postup použijte, když ze seznamu schválených aplikací přidáváte aplikace, jako je SharePoint Online, Microsoft Teams nebo Microsoft Exchange Online.
 
-## <a name="create-app-based-conditional-access-policies"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
-Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*. To znamená, že nemusíte přepínat mezi Intune a Azure AD ke konfiguraci zásad.
+## <a name="create-app-based-conditional-access-policies"></a>Vytvoření zásad podmíněného přístupu na základě aplikace
+Podmíněný přístup je technologie Azure Active Directory (Azure AD). Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*. To znamená, že nemusíte pro konfiguraci zásad přepínat mezi Intune a Azure AD.
 
 > [!IMPORTANT]
-> Musíte mít licenci Azure AD Premium k vytvoření zásady podmíněného přístupu z portálu Intune.
+> Abyste mohli vytvořit zásady podmíněného přístupu na portálu Intune, musíte mít licenci Azure AD Premium.
 
 ### <a name="to-create-an-app-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě aplikace
 
 > [!IMPORTANT]
-> Než začnete využívat zásady podmíněného přístupu na základě aplikace, je potřeba použít pro vaše aplikace [zásady ochrany aplikací Intune](app-protection-policies.md).
+> Než použijete zásady podmíněného přístupu na základě aplikace, musíte mít pro vaše aplikace použité [Zásady ochrany aplikací Intune](app-protection-policies.md) .
 
-1. V **řídicí panel Intune**vyberte **podmíněného přístupu**.
+1. Na **řídicím panelu Intune**vyberte **podmíněný přístup**.
 
-2. V podokně **Zásady** vytvořte novou zásadu podmíněného přístupu na základě aplikace výběrem možnosti **Nová zásada**.
+2. V podokně **zásady** vytvořte novou zásadu podmíněného přístupu na základě aplikace výběrem možnosti **Nová zásada** .
 
 4. Zadejte název zásady a nakonfigurujte nastavení dostupná v části **Přiřazení** a potom v části **Ovládací prvky přístupu** zvolte **Přiřazení**.
 
 5. Zvolte **Vyžadovat klientem schválenou aplikaci**, klikněte na **Vybrat** a potom novou zásadu uložte kliknutím na **Vytvořit**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)
 
-### <a name="see-also"></a>Viz také:
+## <a name="see-also"></a>Viz také:
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](app-protection-policies.md)
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

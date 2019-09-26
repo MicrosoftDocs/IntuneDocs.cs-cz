@@ -1,14 +1,13 @@
 ---
-title: Správa aplikací pro iOS zakoupených v rámci multilicenčního programu v Microsoft Intune
-titleSuffix: ''
-description: Zjistěte, jak s Microsoft Intune synchronizovat aplikace zakoupené v rámci multilicenčního programu z obchodu pro iOS a jak následně spravovat a sledovat jejich používání.
+title: Správa hromadně zakoupených aplikací Apple
+titleSuffix: Microsoft Intune
+description: Přečtěte si, jak synchronizovat aplikace zakoupené v rámci multilicenčního programu z obchodu iOS a macOS App Storu do Microsoft Intune a pak můžete spravovat a sledovat jejich používání.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dca219f1593265e0bf6447c054969548d5d79351
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: c054a9a6614848ed4ad360680225f5df48b1484d
+ms.sourcegitcommit: 27e63a96d15bc4062af68c2764905631bd928e7b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59894698"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71302693"
 ---
-# <a name="how-to-manage-ios-apps-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa aplikací pro systém iOS nakoupených prostřednictvím programu hromadného nákupu pomocí Microsoft Intune
+# <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-App Store pro iOS umožňuje pro aplikace, které chcete spouštět ve vaší společnosti, nakoupit víc licencí. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti.
+Apple vám umožní nakoupit více licencí pro aplikaci, kterou chcete ve vaší firmě spustit na zařízeních s iOS a macOS. Zakoupením více kopií můžete efektivně spravovat aplikace ve vaší společnosti.
 
 Microsoft Intune pomáhá spravovat více kopií aplikací koupených prostřednictvím tohoto programu:
 
@@ -40,29 +39,29 @@ Microsoft Intune pomáhá spravovat více kopií aplikací koupených prostředn
 
 Hromadně zakoupené aplikace můžete přiřadit dvěma způsoby:
 
-### <a name="device-licensing"></a>Licencování zařízení
+## <a name="device-licensing"></a>Licencování zařízení
 
 Když aplikaci přiřadíte k zařízením, použije se jedna licence aplikace, která zůstane spojená se zařízením, jemuž jste ji přiřadili.
 
 Když k zařízení přiřadíte hromadně zakoupené aplikace, nemusí koncový uživatel zařízení zadávat Apple ID pro přístup do obchodu.
 
-### <a name="user-licensing"></a>Licencování uživatelů
+## <a name="user-licensing"></a>Licencování uživatelů
 
-Když aplikaci přiřadíte uživateli, použije se jedna licence aplikace, která bude s uživatelem spojená. Tato aplikace může být spuštěna na více zařízeních, která uživatel vlastní (s limitem, který určuje Apple).
+Když aplikaci přiřadíte uživateli, použije se jedna licence aplikace, která bude s uživatelem spojená. Aplikaci lze spustit až na 5 zařízení, která uživatel vlastní (limit zařízení je řízen společností Apple).
 
 Když uživatelům přiřadíte hromadně zakoupenou aplikaci, musí mít každý koncový uživatel platné a jedinečné Apple ID pro přístup k App Storu.
 
-V Intune také můžete synchronizovat, spravovat a přiřazovat knihy, které jste koupili v rámci programu Apple Volume Purchase Program (VPP). Další informace najdete v článku [Správa e-knih pro iOS zakoupených v rámci multilicenčního programu](vpp-ebooks-ios.md).
+Kromě toho můžete synchronizovat, spravovat a přiřazovat knihy, které jste koupili v obchodě programu Apple Volume-purchase program (VPP), s Intune a zařízeními se systémem iOS. Další informace najdete v článku [Správa e-knih pro iOS zakoupených v rámci multilicenčního programu](vpp-ebooks-ios.md).
 
-## <a name="manage-volume-purchased-apps-for-ios-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOSem
+## <a name="manage-volume-purchased-apps-for-ios-and-macos-devices"></a>Správa hromadně koupených aplikací pro zařízení s iOS a macOS
 
-### <a name="supports-apple-volume-purchase-program-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem prostřednictvím programu Apple Volume Purchase Program
+### <a name="supports-apple-volume-purchase-program-volume-purchased-apps"></a>Podporuje Apple Volume Purchase Program hromadně zakoupených aplikací.
 
-Nákup více licencí k aplikacím pro iOS je možný prostřednictvím programu [Apple Volume Purchase Program for Business](https://www.apple.com/business/vpp/) nebo [Apple Volume Purchase Program for Education](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
+Zakupte více licencí pro aplikace iOS a macOS prostřednictvím [Apple Volume purchase program pro firmy](https://www.apple.com/business/vpp/) nebo [Apple Volume purchase program pro vzdělávání](https://volume.itunes.apple.com/us/store). Součástí tohoto procesu je vytvoření účtu Apple VPP na webu Apple a odeslání tokenu Apple VPP do Intune.  Potom je možné synchronizovat informace o hromadném nákupu s Intune a sledovat využití aplikací, které jste tímto způsobem koupili.
 
-### <a name="supports-business-to-business-volume-purchased-apps-for-ios-devices"></a>Podpora hromadně zakoupených aplikací pro zařízení s iOSem v rámci spolupráce mezi firmami
+### <a name="supports-business-to-business-volume-purchased-apps"></a>Podporuje hromadně zakoupené aplikace pro firmy
 
-Vývojáři třetích stran mohou také navíc soukromě distribuovat aplikace autorizovaným členům programu Volume Purchase Program (VPP) for Business, kteří jsou uvedeni ve službě iTunes Connect. Tito členové programu VPP for Business se mohou přihlásit do zvláštního App Storu pro tento program a aplikace si zakoupit. Aplikace VPP for Business zakoupené koncovým uživatelem se potom synchronizují jeho tenantům Intune.
+Kromě toho můžou vývojáři třetích stran také soukromě distribuovat aplikace do autorizovaného programu Volume purchase program pro obchodní členy zadané v App Storu Connect. Tito členové programu VPP for Business se mohou přihlásit do zvláštního App Storu pro tento program a aplikace si zakoupit. Aplikace VPP for Business zakoupené koncovým uživatelem se potom synchronizují jeho tenantům Intune.
 
 ## <a name="before-you-start"></a>Než začnete
 Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. Měli byste se také seznámit s následujícími kritérii:
@@ -83,22 +82,21 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 
 ## <a name="to-get-and-upload-an-apple-vpp-token"></a>Získání a odeslání tokenu Apple VPP
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3.  V podokně **Intune** v části **Nastavení** zvolte **Klientské aplikace** > **Tokeny VPP pro iOS**.
-4.  V podokně s tokeny VPP vyberte **Vytvořit**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. V podokně **Intune** v části **Nastavení**vyberte **klientské aplikace** > **tokeny Apple VPP** .
+4. V podokně s tokeny VPP vyberte **Vytvořit**.
 5. V podokně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
-    - **Země/oblast** – vyberte regionální VPP Store.  Intune synchronizuje aplikace VPP pro všechna národní prostředí z určeného regionálního VPP Storu.
+    - **Země/oblast** – vyberte úložiště VPP země/oblast.  Intune synchronizuje aplikace VPP pro všechna národní prostředí ze zadaného úložiště v zemi nebo oblasti VPP.
         > [!WARNING]  
-        > Po změně země se u aplikací vytvořených pomocí tohoto tokenu při příští synchronizaci se službou Apple aktualizují metadata aplikací a adresa URL Storu. Pokud aplikace v novém regionálním Storu neexistuje, neaktualizuje se.
+        > Když se změní země nebo oblast, aktualizují se metadata aplikace a adresa URL Storu při příští synchronizaci se službou Apple pro aplikace vytvořené pomocí tohoto tokenu. Aplikace nebude aktualizována, pokud neexistuje v úložišti nové země/oblast.
 
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
-    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. Pro aplikace nasazené pomocí instalačního záměru **K dispozici** pro vás (správce) automatická aktualizace vygeneruje oznámení, že je dostupná nová verze aplikace. Uživatel musí kliknout na Nainstalovat, aby se mu nainstalovala novější verze aplikace. Kromě toho uživatel uvidí tuto aplikaci jako nenainstalovanou na Portálu společnosti, i když je nainstalovaná starší verze aplikace. V tomto případě může uživatel aplikaci přeinstalovat.
-    
+    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. Pro aplikace nasazené s **dostupným** záměrem instalace vygeneruje funkce Automatické aktualizace oznámení pro správce informující o tom, že je k dispozici nová verze aplikace. Kromě toho uživatel uvidí tuto aplikaci jako nenainstalovanou na Portálu společnosti, i když je nainstalovaná starší verze aplikace. V takovém případě může uživatel aplikaci přeinstalovat kliknutím na tlačítko **nainstalovat** na obrazovce s podrobnostmi o aplikaci v aplikaci Portál společnosti pro instalaci novější verze aplikace.
+
         > [!NOTE]
-        > Automatické aktualizace aplikací fungují u aplikací licencovaných pro zařízení i uživatele v iOSu verze 11.0 a novějších.
+        > Automatické aktualizace aplikací fungují pro aplikace i uživatele licencované pro iOS 11,0 a vyšší nebo macOS 10,12 a novější.
 6. Až to budete mít, vyberte **Vytvořit**.
 
 Token se zobrazí v podokně se seznamem tokenů.
@@ -107,17 +105,17 @@ Data ukládaná společností Apple můžete kdykoli synchronizovat s Intune vý
 
 ## <a name="to-assign-a-volume-purchased-app"></a>Přiřazení aplikace zakoupené v rámci multilicenčního programu
 
-1.  V podokně **Intune** v části **Spravovat** zvolte **Klientské aplikace** > **Aplikace**.
-2.  V podokně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
-3.  V podokně ***Název aplikace*** - **Přiřazení** zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** zvolte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
-5.  Pro každou zvolenou skupinu vyberte následující nastavení:
+1. V podokně **Intune** v části **Spravovat** zvolte **Klientské aplikace** > **Aplikace**.
+2. V podokně se seznamem aplikací zvolte aplikaci, kterou chcete přiřadit, a pak zvolte **Přiřazení**.
+3. V podokně ***Název aplikace*** - **Přiřazení** zvolte **Přidat skupinu** a pak v podokně **Přidat skupinu** zvolte **Typ přiřazení** a skupiny uživatelů nebo zařízení Azure AD, ke kterým chcete aplikaci přiřadit.
+5. Pro každou zvolenou skupinu vyberte následující nastavení:
     - **Typ** – vyberte, jestli bude aplikace **k dispozici** (koncoví uživatelé můžou aplikaci nainstalovat z Portálu společnosti), nebo **povinná** (aplikace se na zařízení koncových uživatelů nainstaluje automaticky).
     - **Typ licence** – vyberte **Licencování uživatelů** nebo **Licencování zařízení**.
-6.  Až to budete mít, zvolte **Uložit**.
+6. Až to budete mít, zvolte **Uložit**.
 
 
 >[!NOTE]
->V seznamu zobrazené aplikace jsou přidružené k tokenu. Pokud máte aplikaci, která je spojená s více tokeny VPP, zobrazí se stejná aplikace několikrát – jednou u každého tokenu.
+>Dostupný záměr nasazení není pro skupiny zařízení podporován, jsou podporovány pouze skupiny uživatelů. V seznamu zobrazené aplikace jsou přidružené k tokenu. Pokud máte aplikaci, která je spojená s více tokeny VPP, zobrazí se stejná aplikace několikrát – jednou u každého tokenu.
 
 ## <a name="end-user-prompts-for-vpp"></a>Výzvy k VPP pro koncové uživatele
 
@@ -137,15 +135,23 @@ Koncový uživatel obdrží výzvu k instalaci aplikace v rámci VPP v řadě sc
 > [!Note]  
 > Nedoporučujeme přiřazovat aplikace VPP zařízením s beznabídkovým režimem pomocí licencování uživatelů v rámci VPP.
 
-## <a name="revoking-app-licenses-and-deleting-tokens"></a>Odvolání licencí aplikací a odstranění tokenů 
+## <a name="revoking-app-licenses"></a>Odvolávání licencí aplikací
 
-Můžete odvolat všechny přidružené licence aplikací pro iOS, které byly koupené přes program VPP (volume-purchase program), a to pro dané zařízení, uživatele nebo aplikaci. Uživatele můžete upozornit, že už nemají aplikaci přiřazenou. Odvoláním licence aplikace se příslušná aplikace VPP neodinstaluje ze zařízení. Pokud chcete aplikaci VPP odinstalovat a uvolnit licenci aplikace, která byla přiřazena uživateli nebo zařízení, je nutné akci přiřazení změnit na **Odinstalovat**. Pokud odeberete aplikaci, která byla přiřazena uživateli, Intune získá zpět licenci uživatele nebo zařízení a odinstaluje aplikaci ze zařízení. Počet uvolněných licencí se v Intune projeví v uzlu **Licencované aplikace** v úloze **Aplikace**. Když se aplikace VPP odinstaluje a licence aplikace se uvolní, můžete tuto licenci aplikace přiřadit dalšímu uživateli nebo zařízení. 
+Můžete odvolat všechny přidružené licence aplikací pro iOS nebo macOS Volume-purchase program (VPP) na základě daného zařízení, uživatele nebo aplikace.  Existují však určité rozdíly mezi platformami iOS a macOS. 
+
+### <a name="revoking-app-licenses-on-ios"></a>Odvolávání licencí aplikací v iOS
+Uživatele můžete upozornit, že už nemají aplikaci přiřazenou. Pokud ale odvoláte licenci aplikace, nebude se v zařízení odinstalovat související aplikace VPP. Pokud chcete aplikaci VPP odinstalovat a uvolnit licenci aplikace, která byla přiřazena uživateli nebo zařízení, je nutné akci přiřazení změnit na **Odinstalovat**. Pokud odeberete aplikaci, která byla přiřazena uživateli, Intune získá zpět licenci uživatele nebo zařízení a odinstaluje aplikaci ze zařízení. Počet uvolněných licencí se v Intune projeví v uzlu **Licencované aplikace** v úloze **Aplikace**. Po odinstalaci aplikace VPP a opětovné žádosti o licenci aplikace se můžete rozhodnout přiřadit licenci aplikace jinému uživateli nebo zařízení.
+
+
+### <a name="revoking-app-licenses-on-macos"></a>Odvolávání licencí aplikací v macOS
+Odvolání licence k aplikaci neodinstaluje aplikaci VPP ze zařízení. Když odvoláte licenci aplikace, která byla přiřazena uživateli, Intune znovu získá licenci pro uživatele nebo zařízení. Aplikace macOS s odvolanými licencemi zůstává v zařízení použitelná, ale nedá se aktualizovat, dokud uživatel nebo zařízení nepřidá licenci. Podle Applu se takové aplikace po uplynutí 30denní lhůty odeberou. Společnost Apple ale neposkytuje způsob, jak Intune aplikaci odebrat, a to pomocí akce **odinstalovat** přiřazení. Můžete se ale rozhodnout přiřadit licenci k uvolněné aplikaci jinému uživateli nebo zařízení.
 
 >[!NOTE]
->Když zaměstnanec opustí společnost a není už členem skupin AAD, Intune odvolá všechny licence aplikací programu VPP pro iOS daného uživatele.
+>Pokud zaměstnanec odejde z firmy a už není součástí skupin AAD, Intune bude získávat licence aplikace VPP pro iOS i macOS uživatele.
 
+## <a name="deleting-vpp-tokens"></a>Odstraňují se tokeny VPP.
 <!-- 820879 -->  
-K odstranění tokenu programu Volume Purchasing Program (VPP) pro iOS můžete použít konzolu. To může být nutné v případě, že máte duplicitní instance tokenu VPP. Odstraněním tokenu se odstraní také všechny přidružené aplikace a přiřazení. Odstraněním tokenu se ale licence aplikací neodvolají ani aplikace neodinstalují. 
+Pomocí konzoly nástroje můžete odstranit token programu Apple Volume purchase program (VPP). To může být nutné v případě, že máte duplicitní instance tokenu VPP. Odstraněním tokenu se odstraní také všechny přidružené aplikace a přiřazení. Odstraněním tokenu se ale licence aplikací neodvolají ani aplikace neodinstalují. 
 
 >[!NOTE]
 >Po odstranění tokenu nemůže Intune odvolat licence aplikací. 
@@ -157,13 +163,20 @@ K odvolání licencí všech aplikací VPP pro daný token VPP je nutné nejprve
 
 Token Apple VPP můžete obnovit tak, že z portálu Apple Volume Purchase Program stáhnete nový token a aktualizujete existující token v Intune.
 
-## <a name="deleting-an-ios-vpp-app"></a>Odstranění aplikace VPP pro iOS
+## <a name="deleting-a-vpp-app"></a>Odstranění aplikace VPP
 
 V současné době nelze aplikace VPP pro iOS z Microsoft Intune odstraňovat.
 
+## <a name="assigning-custom-role-permissions-for-vpp"></a>Přiřazují se oprávnění vlastní role pro VPP
+
+Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
+
+* Pokud chcete, aby vlastní role Intune spravovala tokeny programu Apple VPP v **klientských aplikacích** > **tokeny**Apple VPP, přiřaďte oprávnění pro **spravované aplikace**.
+* Pokud chcete, aby vlastní role Intune spravovala aplikace zakoupené pomocí tokenů VPP iOS v **klientských** > **aplikacích aplikace,** přiřaďte oprávnění pro **mobilní aplikace**. 
+
 ## <a name="additional-information"></a>Další informace
 
-Když se uživatel s oprávněným zařízením poprvé pokusí do zařízení nainstalovat aplikaci programu VPP, zobrazí se výzva k účasti v programu Apple Volume Purchase Program (VPP). Aby mohla instalace pokračovat, musí uživatel potvrdit svou účast. Aby se mohl uživatel připojit do programu Apple Volume Purchase Program, musí používat na zařízení s iOSem aplikaci iTunes. Pokud jste nastavili zásadu, která zakazuje aplikace z iTunes Storu, nebude licencování založené na uživatelích pro aplikace z programu VPP fungovat. Řešením je odebrat zásady a povolit tak aplikaci iTunes nebo použít licencování na základě zařízení.
+Když se uživatel s oprávněným zařízením poprvé pokusí do zařízení nainstalovat aplikaci programu VPP, zobrazí se výzva k účasti v programu Apple Volume Purchase Program (VPP). Aby mohla instalace pokračovat, musí uživatel potvrdit svou účast. Pozvánka k připojení k programu Apple Volume purchase program vyžaduje, aby uživatel mohl použít aplikaci App Storu na zařízení se systémem iOS nebo macOS. Pokud jste nastavili zásadu pro zakázání aplikace App Storu, Licencování uživatelů pro aplikace VPP nefunguje. Řešením je buď dovolit aplikaci App Storu odebrat zásadu, nebo použít licencování na základě zařízení.
 
 Při vytváření a obnovování tokenů VPP můžete využít přímou podporu od společnosti Apple. Podrobnosti najdete v článku [Distribuce obsahu vašim uživatelům v rámci programu hromadných nákupů (VPP)](https://go.microsoft.com/fwlink/?linkid=2014661) v dokumentaci Apple. 
 
@@ -171,15 +184,15 @@ Pokud se na portálu Intune uvádí **Přiřazeno k externí správě MDM**, mů
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-#### <a name="how-long-does-the-portal-take-to-update-the-license-count-once-an-app-is-installed-or-removed-from-the-device"></a>Jak dlouho trvá, než portál po instalaci aplikace nebo jejím odebrání ze zařízení aktualizuje počet licencí?
+### <a name="how-long-does-the-portal-take-to-update-the-license-count-once-an-app-is-installed-or-removed-from-the-device"></a>Jak dlouho trvá, než portál po instalaci aplikace nebo jejím odebrání ze zařízení aktualizuje počet licencí?
 Licence by se měly aktualizovat do několika hodin od instalace nebo odinstalace aplikace. Je třeba mít na paměti, že pokud koncový uživatel odebere aplikaci ze zařízení, zůstává licence danému uživateli nebo zařízení stále přiřazená.
 
-#### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Je možné přidělit aplikaci nadměrnému počtu subjektů? A pokud ano, za jakých okolností?
+### <a name="is-it-possible-to-oversubscribe-an-app-and-if-so-in-what-circumstance"></a>Je možné přidělit aplikaci nadměrnému počtu subjektů? A pokud ano, za jakých okolností?
 Ano. Správce Intune může aplikaci přidělit nadměrnému počtu uživatelů nebo zařízení. A to například tehdy, když zakoupí sto licencí k aplikaci XYZ a potom ji zacílí na skupinu s pěti sty členy. Prvnímu stu členů (uživatelům nebo zařízením) se licence přiřadí a u zbylých členů se přiřazení licence nezdaří.
 
-#### <a name="i-understand-intune-automatically-syncs-app-licenses-each-day-with-apple-is-that-correct"></a>Chápu správně, že Intune automaticky synchronizuje licence aplikací s Apple každý den?
-Intune synchronizuje licence aplikací s Apple dvakrát denně.
+### <a name="how-frequently-does-intune-sync-vpp-tokens-with-apple"></a>Jak často Intune synchronizuje tokeny VPP s Apple?
+Intune synchronizuje tokeny a licence VPP dvakrát denně s Apple. Správce Intune může iniciovat ruční synchronizaci v rámci **klientských aplikací** > **tokenů Apple VPP**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Informace, s kterými budete moct lépe sledovat přiřazování aplikací, najdete v článku [Jak sledovat přiřazení aplikací](apps-monitor.md).

@@ -12,12 +12,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6df42d908169ab591150e88e03f2f419710c9e54
-ms.sourcegitcommit: e477e399cba673a2a9e1fa342e8303ed993801eb
+ms.openlocfilehash: eeaf3dc1e7f1dfa1cfc3ff0da554f65d416a354b
+ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739203"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274812"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
 
@@ -51,9 +51,9 @@ Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je do
       - **Čas spuštění**: Vyberte čas spuštění omezeného časového rámce. Zadejte například 5 AM, takže aktualizace nejsou nainstalovány od 5.
       - **Čas ukončení**: Vyberte čas ukončení časového rámce s omezeným časem. Zadejte například 1, aby bylo možné aktualizace instalovat od 1.
 
-    - **Zpoždění viditelnosti aktualizací softwaru u koncových uživatelů bez změny v naplánovaných aktualizacích (dny)** : 
+    - **Zpoždění viditelnosti aktualizací softwaru u koncových uživatelů bez změny v naplánovaných aktualizacích v zásadách aktualizace softwaru (dny)** : 
 
-      \* * Pokud chcete zpozdit viditelnost aktualizací softwaru po určitou dobu na zařízeních s iOS pod dohledem, nakonfigurujte prosím tato nastavení v části [omezení zařízení](device-restrictions-ios.md#general).
+      \* * Pokud chcete zpozdit viditelnost aktualizací softwaru po určitou dobu na zařízeních s iOS pod dohledem, nakonfigurujte prosím tato nastavení v části [omezení zařízení](device-restrictions-ios.md#general). Zásady aktualizace softwaru přepíšou všechna omezení zařízení. Pokud jste obě nastavili, zásada aktualizace softwaru se bude nacházet napřed pokaždé. 
      
       > [! Významná  
       > Zásada, která má *čas spuštění* a čas *ukončení* nastavenou na hodnotu 12, se vyhodnotí jako 0 hodin a ne za 24 hodin. Výsledkem není žádné omezení.  
@@ -95,6 +95,6 @@ U zařízení používaných uživateli, na které zásady cílí, se vyhodnotí
 <!-- 1352223 -->
  > **Chyby při instalaci aktualizací softwaru pro zařízení s iOS** zobrazují seznam zařízení s iOS, která cílí na zásady aktualizace, se pokusily o aktualizaci a nešlo je aktualizovat. U každého zařízení můžete zobrazit, proč se automaticky neaktualizovalo. Zařízení, která jsou v pořádku a aktuální, se v seznamu nezobrazují. „Aktuální“ zařízení obsahují nejnovější aktualizaci, kterou samotné zařízení podporuje.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).

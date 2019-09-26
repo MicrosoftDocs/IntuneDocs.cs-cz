@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 657f30748d3c4e6c4a819c5ed888c541bcb7b5c1
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 235cb317625786c1254ecf572726c66480c01b2e
+ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238230"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274845"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -51,6 +51,21 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Role-based access control
 
 -->  
+
+<!-- ########################## -->
+
+## <a name="week-of-september-23-2019"></a>Týden od 23. září 2019
+
+#### <a name="ios-user-enrollment-in-preview----4817900---"></a>Registrace uživatele pro iOS ve verzi Preview <!-- 4817900 -->
+Verze iOS 13,1 od společnosti Apple zahrnuje registraci uživatelů, novou formu zjednodušené správy pro zařízení s iOS. Dá se použít místo registrace zařízení nebo automatického zápisu zařízení (dříve Program registrace zařízení) pro osobní zařízení vlastněná společností. Intune Preview podporuje tuto sadu funkcí tím, že vám umožní:
+
+- Registrace cílového uživatele pro skupiny uživatelů.
+- Poskytněte koncovým uživatelům možnost výběru mezi jednodušším zápisem uživatele nebo silnějším zápisem zařízení při registraci svých zařízení.
+
+Od verze 9/24/2019 s vydáním iOS 31,1 jsme v procesu zavedli tyto aktualizace všem zákazníkům a očekáváme, že budou dokončeny na konci příštího týdne.
+Platí pro:
+
+iOS 13,1 a novější
 
 <!-- ########################## -->
 

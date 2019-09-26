@@ -1,14 +1,13 @@
 ---
-title: Zásady ochrany aplikací Windows Information Protection (WIP)
+title: Zásady ochrany aplikací pro Windows Information Protection (NV)
 titleSuffix: Microsoft Intune
 description: Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Microsoft Intune
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8aaa94428a5a8606a7ba05f0661e96600f24e2d4
-ms.sourcegitcommit: 8c795b041cd39e3896595f64f53ace48be0ec84c
+ms.openlocfilehash: 869491098afc9e68ea1bbcb21bf6e7720e80564c
+ms.sourcegitcommit: c8cb314256c4896e838918f015ffaefb8f00ace5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59587412"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "71303227"
 ---
 # <a name="create-and-deploy-windows-information-protection-wip-app-protection-policy-with-intune"></a>Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune
 
@@ -37,15 +36,15 @@ Musíte porozumět několika konceptům při přidání zásady WIP:
 
 ### <a name="list-of-allowed-and-exempt-apps"></a>Seznamy povolených aplikací a aplikací s výjimkou
 
--   **Chráněné aplikace:** Tyto aplikace jsou aplikace, které je potřeba tuto zásadu dodržovat.
+- **Chráněné aplikace:** Tyto aplikace jsou aplikace, které tyto zásady potřebují dodržovat.
 
--   **Aplikace s výjimkou:** Tyto aplikace mají z těchto zásad vyloučení a můžete přístup k podnikovým datům bez omezení.
+- **Aplikace s výjimkou:** Tyto aplikace jsou z těchto zásad vyloučené a mají přístup k podnikovým datům bez omezení.
 
 ### <a name="types-of-apps"></a>Typy aplikací
 
--   **Doporučené aplikace:** Předem vyplněný seznam (většinou Microsoft Office) aplikace, které vám umožní snadno importovat do zásady.
--   **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Windows storu.
--   **Aplikace klasické pracovní plochy Windows:** Můžete přidat libovolné tradiční desktopové aplikace Windows zásad (například .exe, .dll)
+- **Doporučené aplikace:** Předem vyplněný seznam aplikací (většinou systém Microsoft Office), které umožňují snadný import do zásad.
+- **Aplikace pro Store:** Do zásad můžete přidat libovolnou aplikaci z Windows Storu.
+- **Desktopové aplikace pro Windows:** Do zásad můžete přidat libovolné tradiční desktopové aplikace pro Windows (například. exe,. dll).
 
 ## <a name="prerequisites"></a>Požadavky
 
@@ -56,8 +55,8 @@ Abyste mohli vytvořit zásadu ochrany aplikací WIP, musíte nejdříve nakonfi
 
 Navíc musíte mít následující licenci a aktualizaci:
 
--   Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
--   [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
+- Licence [Azure AD Premium](https://docs.microsoft.com/azure/active-directory/active-directory-get-started-premium)
+- [Windows Creators Update](https://blogs.windows.com/windowsexperience/2017/04/11/how-to-get-the-windows-10-creators-update/#o61bC2PdrHslHG5J.97)
 
 
 
@@ -77,11 +76,11 @@ Pokud už máte v organizaci nastavenou službu Intune, můžete vytvořit zása
 4. V okně **Klientské aplikace** vyberte **Zásady ochrany aplikací**.
 5. Vyberte **Přidat zásadu**, aby se zobrazilo okno **Přidat zásadu**.
 6. Přidejte následující hodnoty:
-    - **Jméno:** Zadejte název (povinné) nové zásady.
-    - **Popis:** (Volitelné) Zadejte popis.
-    - **Platforma:** Zvolte **Windows 10** jako podporovanou platformu pro zásady ochrany aplikací.
-    - **Stav registrace:** Zvolte **bez registrace** jako stav registrace pro vaše zásady.
-7.  Zvolte **Vytvořit**. Zásada se vytvoří a objeví se v tabulce v okně **Zásady ochrany aplikací**.
+    - **Jméno:** Pro nové zásady zadejte název (povinné).
+    - **Popis:** Volitelné Zadejte popis.
+    - **Platformy** Jako podporovanou platformu pro zásady ochrany aplikací vyberte **Windows 10** .
+    - **Stav registrace:** Jako stav registrace pro zásady vyberte **bez registrace** .
+7. Zvolte **Vytvořit**. Zásada se vytvoří a objeví se v tabulce v okně **Zásady ochrany aplikací**.
 
 ## <a name="to-add-recommended-apps-to-your-protected-apps-list"></a>Přidání doporučených aplikací do seznamu chráněných aplikací
 
@@ -150,11 +149,11 @@ Když WIP vypnete, proběhne pokus o dešifrování všech souborů označených
 
 ### <a name="add-a-protection-mode"></a>Přidání režimu ochrany
 
-1.  V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Požadovaná nastavení**.
+1. V okně **Zásada aplikace** zvolte název zásady a potom zvolte **Požadovaná nastavení**.
 
-    ![Snímek obrazovky podokna výukového režimu](./media/learning-mode-sc1.png)
+    ![Snímek obrazovky s podoknem výukového režimu](./media/learning-mode-sc1.png)
 
-1.  Vyberte nastavení a potom zvolte **Uložit**.
+1. Vyberte nastavení a potom zvolte **Uložit**.
 
 ### <a name="use-wip-learning"></a>Použití Kurzů k WIP
 
@@ -188,12 +187,12 @@ Kromě nastavení možnosti **Povolit Windows Search Indexeru prohledávat šifr
 
 Když jste vytvořili zásadu ochrany aplikací WIP, potřebujete ji nasadit ve vaší organizaci s použitím MAM.
 
-1.  V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
+1. V okně **Zásada aplikace** vyberte svoji nově vytvořenou zásadu pro ochranu aplikací a zvolte **Skupiny uživatelů** > **Přidat skupinu uživatelů**.
 
     V okně **Přidat skupinu uživatelů** se otevře seznam skupin uživatelů, který obsahuje všechny skupiny zabezpečení v Azure Active Directory.
 
-2.  Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
+2. Zvolte skupinu, u které chcete zásadu použít, a kliknutím na **Vybrat** zásadu nasaďte.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Další informace o službě Windows Information Protection najdete v tématu [Ochrana podnikových dat pomocí služby Windows Information Protection (WIP)](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).

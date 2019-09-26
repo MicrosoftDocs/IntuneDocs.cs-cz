@@ -7,7 +7,6 @@ ms.author: erikje
 manager: dougeby
 ms.date: 08/09/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -16,30 +15,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 230c328c14f0da39db34c8b91ac30fe05f9b05ca
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: 291c439cb4fca353ad83546c1dfaa4eee104d671
+ms.sourcegitcommit: 74911a263944f2dbd9b754415ccda6c68dae0759
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57388198"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71304840"
 ---
 # <a name="use-fresh-start-to-reset-windows-10-devices-with-intune"></a>Resetování zařízení s Windows 10 přes Intune pomocí akce Začít znovu
 
 
 [!INCLUDE [azure_portal](./includes/azure_portal.md)]
 
-Akce zařízení **Začít znovu** odebere veškeré aplikace nainstalované na počítači s Windows 10 ve verzi 1703 nebo novější. Akce Začít znovu pomáhá odebrat předinstalované aplikace (výrobců OEM), které se obvykle instalují na nový počítač.  
+Akce zařízení **Začít znovu** odebere veškeré aplikace nainstalované na počítači s Windows 10 ve verzi 1703 nebo novější. Akce Začít znovu pomáhá odebrat předinstalované aplikace (výrobců OEM), které se obvykle instalují na nový počítač. 
 
 1. Přihlaste se k webu [Azure Portal](https://portal.azure.com) a přejděte na > **Microsoft Intune** > **Zařízení** > **Všechna zařízení**.
 2. V seznamu zařízení, která spravujete, zvolte zařízení s Windows 10 Desktop.
 3. Klikněte na **Začít znovu**. 
 4. Vyberte **Zachovat na tomto zařízení data uživatele**, pokud chcete:
    * Zachovat připojení zařízení k Azure AD
-    * Zařízení se zaregistruje ke správě mobilních zařízení znovu při obrysů službu Azure Active Directory uživatel přihlašuje k zařízení.
-    * Zachovat obsah domovské složky uživatele zařízení a odebrat aplikace a nastavení  
+   * Zařízení se znovu zaregistruje do správy mobilních zařízení, když se uživatel s povoleným Azure Active Directory přihlásí do zařízení.
+   * Zachovat obsah domovské složky uživatele zařízení a odebrat aplikace a nastavení
+
   > [!IMPORTANT]
- > Pokud data uživatele nezachováte, zařízení se obnoví do stavu při svém prvním zapnutí. VLASTNÍ zařízení uživatelů se zruší se tím registrace ze služby Azure AD a správa mobilních zařízení.
- > Podpora k zařízením Azure AD, které jsou připojené k zaregistruje se na správu mobilních zařízení znovu obrysů službu Azure Active Directory uživatel přihlašuje k zařízení.
+ > Pokud nezachováte uživatelská data, zařízení bude obnoveno na výchozí nastavení OOBE (předem připraveno), které zachová vestavěný účet správce.
+ > Zařízení BYOD budou odregistrována v Azure AD a správě mobilních zařízení.
+ > Zařízení připojená k Azure AD se znovu zaregistrují do správy mobilních zařízení, když se uživatel s povoleným Azure Active Directory přihlásí do zařízení.
  
 5. Klikněte na **OK**.   
 6. Pokud chcete zobrazit stav této akce, přejděte zpět na **Zařízení** a klikněte na **Akce zařízení**.  
+7. Zařízení se obnoví na úvodní obrazovku pro přihlášení.

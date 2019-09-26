@@ -1,14 +1,13 @@
 ---
 title: Přiřazení aplikací do skupin v Microsoft Intune
 titleSuffix: ''
-description: Zjistěte, jak přiřadit aplikaci v Intune ke skupinám uživatelů nebo zařízení pomocí Microsoft Intune.
+description: Naučte se, jak přiřadit aplikaci Intune skupinám uživatelů nebo zařízení pomocí Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -18,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1db613f93e50caa377297e3873f6817a39714fe7
-ms.sourcegitcommit: 1cae690ca2ac6cc97bbcdf656f54b31878297ae8
+ms.openlocfilehash: 13b1a8851e9e88648311f3cd12bea89bb0bc2396
+ms.sourcegitcommit: 4f3fcc6dcbfe2c4e0651d54a130907a25a4ff66e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59900617"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "71305271"
 ---
 # <a name="assign-apps-to-groups-with-microsoft-intune"></a>Přiřazení aplikací do skupin pomocí Microsoft Intune
 
@@ -32,7 +31,7 @@ ms.locfileid: "59900617"
 Po [přidání aplikace](apps-add.md) do Microsoft Intune ji můžete přiřadit uživatelům a zařízením. Je důležité si uvědomit, že aplikaci můžete zařízení přiřadit bez ohledu na to, jestli je zařízení spravované pomocí Intune.
 
 > [!NOTE]
-> Záměr nasazení k dispozici není podporována pro skupiny zařízení, jsou podporovány pouze skupiny uživatelů.
+> Dostupný záměr nasazení není pro skupiny zařízení podporován, jsou podporovány pouze skupiny uživatelů.
 
 Následující tabulka obsahuje různé možnosti pro přiřazení aplikací uživatelům a zařízením:
 
@@ -55,23 +54,26 @@ Následující tabulka obsahuje různé možnosti pro přiřazení aplikací už
 
 ## <a name="assign-an-app"></a>Přiřazení aplikace
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Zvolte **Všechny služby** > **Intune**. Intune se nachází v části **Monitorování a správa**.
-3. V nabídce **Intune** zvolte **Klientské aplikace**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+3. V podokně **Intune** zvolte **Klientské aplikace**.
 4. V části nabídky **Spravovat** vyberte **Aplikace**.
 5. V podokně **Aplikace** vyberte aplikaci, kterou chcete přiřadit.
 6. V části nabídky **Spravovat** vyberte **Přiřazení**.
 7. Vyberte **Přidat skupinu**. Tím se otevře podokno **Přidat skupinu** týkající se aplikace.
 8. Pro konkrétní aplikaci vyberte **typ přiřazení**:
-   - **K dispozici zaregistrovaným zařízením**: Aplikaci můžete přiřadíte do skupin uživatelů, kteří můžou aplikaci nainstalovat z aplikace portál společnosti nebo webu.
-   - **K dispozici s registrací i bez**: Přiřazení této aplikace do skupiny uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Uživatelé musí mít přiřazenou licenci Intune najdete v článku [licence Intune](licenses.md).
-   - **Vyžaduje**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy může mít dalších zobrazených výzev pro koncového uživatele k potvrzení před zahájením instalace aplikace.
-   - **Odinstalujte**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune předchozí instalaci aplikace na zařízení prostřednictvím "Dostupné pro zaregistrovaná zařízení" nebo "Povinné" přiřazení pomocí stejného nasazení. Webové odkazy, nelze odebrat po nasazení.
+   - **K dispozici pro zaregistrovaná zařízení**: Přiřaďte aplikaci skupinám uživatelů, kteří si tuto aplikaci můžou nainstalovat z Portál společnosti nebo z webové aplikace.
+   - **K dispozici s registrací nebo bez registrace**: Přiřaďte tuto aplikaci skupinám uživatelů, jejichž zařízení nejsou zaregistrovaná v Intune. Uživatelům musí být přiřazena licence Intune, viz [licence Intune](licenses.md).
+   - **Požadováno**: Aplikace se nainstaluje na zařízení ve vybraných skupinách. Některé platformy mohou mít další výzvy, aby koncový uživatel mohl potvrdit před zahájením instalace aplikace.
+   - **Odinstalace**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách, pokud Intune tuto aplikaci do zařízení dřív nainstaloval pomocí stejného nasazení prostřednictvím přiřazení "dostupný pro zaregistrovaná zařízení" nebo "povinné". Po nasazení nelze odebrat webové odkazy.
 
      > [!NOTE]
-     > **Jenom pro aplikace iOS**: Pokud jste vytvořili pro iOS profil VPN, který obsahuje nastavení sítě VPN pro aplikaci, můžete vybrat profil sítě VPN v rámci **VPN**. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
+     > **Jenom pro aplikace pro iOS**:
+     > - Pokud chcete nakonfigurovat, co se stane se spravovanými aplikacemi, když už zařízení nejsou spravovaná, můžete vybrat zamýšlené nastavení v části **odinstalace při odebírání zařízení**. Další informace najdete v tématu [Nastavení odinstalace aplikací pro aplikace spravované v iOS](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
+     > - Pokud jste vytvořili profil VPN pro iOS, který obsahuje nastavení sítě VPN pro jednotlivé aplikace, můžete vybrat profil sítě VPN v části **VPN**. Při spuštění aplikace se připojení VPN otevře. Další informace najdete v článku o [nastavení VPN pro zařízení s iOSem](vpn-settings-ios.md).
      >
-     > **Pro aplikace pro Android pouze**: Pokud nasadíte aplikaci pro Android jako **k dispozici s registrací i bez**, vytváření sestav stavu budou k dispozici pouze v zaregistrovaných zařízeních.
+     > **Jenom pro aplikace pro Android**: Pokud nasadíte aplikaci pro Android, která je **k dispozici s registrací nebo bez registrace**, stav hlášení bude k dispozici jenom v zaregistrovaných zařízeních.
+     >
+     > K **dispozici pro zaregistrovaná zařízení**: Tato aplikace se zobrazí, jenom když je uživatel přihlášený k Portál společnosti primární uživatel, který zařízení zaregistroval, a aplikace se vztahuje na zařízení.
 
 9. Pokud chcete vybrat skupiny uživatelů, které toto přiřazení aplikace ovlivní, vyberte **Zahrnuté skupiny**.
 10. Po vybrání jedné nebo více skupin, které se mají zahrnout, zvolte **Vybrat**.
@@ -85,7 +87,8 @@ Aplikace je teď přiřazená do skupin, které jste vybrali. Další informace 
 
 ## <a name="how-conflicts-between-app-intents-are-resolved"></a>Řešení konfliktů mezi záměry aplikace
 
-Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry. Když k tomu dojde, pomůžou vám výsledný záměr pochopit informace v následující tabulce:
+Jednu skupinu je zabráněno zacílené pro přiřazení více aplikací. Pokud je ale uživatel nebo zařízení členem více skupin, které jsou přiřazené k různým záměrům, bude výsledkem konflikt. Vytváření konfliktů přiřazení pro aplikace se nedoporučuje.
+Informace v následující tabulce vám pomohou pochopit výsledný záměr při výskytu konfliktu:
 
 | Záměr skupiny 1 | Záměr skupiny 2 | Výsledný záměr |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -123,22 +126,40 @@ Někdy je tatáž aplikace přiřazena do více skupin, ale s různými záměry
 
 > [!NOTE]
 > Jenom pro spravované aplikace pro App Store (iOS) platí, že pokud je přidáte do Microsoft Intune a přiřadíte jako **Povinné**, vytvoří se automaticky se záměry **Povinné** i **K dispozici**.<br><br>
-> Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.
+> Aplikace iOS pro App Store (nikoli aplikace iOS VPP), které jsou cílené se záměrem Povinné, se na zařízení vynutí při ohlášení zařízení a zobrazí se také v aplikaci Portál společnosti.<br><br>
+> Pokud se v nastavení **odinstalovat při odebrání zařízení** vyskytnou konflikty, aplikace se ze zařízení neodebere, když už zařízení není spravované.
 
-## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Spravovat nasazení aplikací Google Play na nespravovaných zařízeních
-Pro zařízení s Androidem v neregistrovaných ochrany zásady bez registrace aplikace (APP-jsme) scénář nasazení, můžete použít spravovaný obchod Google Play můžete uživatelům nasadit aplikace pro store a aplikace – obchodní (LOB). Spravované aplikace Google Play cílem jako **k dispozici s registrací i bez** se zobrazí v aplikaci Play Store na zařízení koncového uživatele a ne v aplikaci portál společnosti. Koncový uživatel bude procházet a instalovat aplikace nasazené tímto způsobem z Play aplikace. Vzhledem k tomu, že se nainstalují aplikace ze spravovaného obchodu Google Play, nebudete muset změnit jejich nastavení zařízení a povolit instalaci aplikací z neznámých zdrojů, což znamená, že budou bezpečnější koncového uživatele. Pokud vývojář aplikace publikuje novou verzi aplikace ve službě Play, která byla nainstalována na zařízení uživatele, aplikace se automaticky aktualizuje jejich Play. 
+## <a name="managed-google-play-app-deployment-to-unmanaged-devices"></a>Spravované Google Play nasazení aplikace na nespravovaná zařízení
+U zařízení s Androidem v neregistrovaných zásadách ochrany aplikací bez nasazení (APP-WE) můžete použít spravovaný Google Play k nasazení aplikací pro Store a obchodních aplikací (LOB) uživatelům. Spravované Google Play aplikace cílené na **k dispozici s nebo bez registrace** se zobrazí v aplikaci Obchod Play na zařízení koncového uživatele, a ne v aplikaci Portál společnosti. Koncový uživatel bude procházet a instalovat aplikace nasazené tímto způsobem z aplikace Play. Vzhledem k tomu, že se aplikace instalují ze spravovaných Google Play, nebude muset koncový uživatel měnit nastavení zařízení, aby bylo možné instalovat aplikace z neznámých zdrojů. to znamená, že zařízení budou bezpečnější. Pokud vývojář aplikace publikuje novou verzi aplikace, která je nainstalovaná na zařízení uživatele, aplikace se automaticky aktualizuje přehráním. 
 
-Postup přiřazení aplikace na spravovaný obchod Google Play na nespravovaná zařízení:
+Postup přiřazení spravované aplikace Google Play k nespravovaným zařízením:
 
-1. Propojte svého tenanta Intune do spravovaného obchodu Google Play. Pokud jste už provedli to za účelem správy pracovního profilu Androidu Enterprise, vyhrazené, nebo plně spravovaná zařízení, není potřeba udělat to znova.
-2. Přidání aplikací ze spravovaného obchodu Google Play do konzoly Intune.
-3. Cílové spravované aplikace Google Play jako **k dispozici s registrací i bez** do určeným uživatelem skupiny. **Vyžaduje** a **odinstalovat** cílení aplikace nejsou podporovány pro nezaregistrovaná zařízení.
-4. Přiřadíte zásady ochrany aplikací do skupiny uživatelů.
-5. Koncový uživatel otevře aplikaci portál společnosti, zobrazí se zpráva označující, že jsou pro ně k dispozici v aplikaci Play Store aplikace.  Uživatel může klepnout toto oznámení se přenáší přímo do aplikace Play zobrazíte podnikové aplikace, nebo můžou přejít na aplikaci Play Store samostatně.
-6. Koncový uživatel můžete rozšířit místní nabídky v rámci aplikace Play Store a přepínání mezi svým osobním účtem Google (kde se jim zobrazí jejich osobních aplikací) a svého pracovního účtu (kde uvidí store a obchodních aplikací, které cílí). Koncoví uživatelé nainstalují aplikace ze klepnutím na instalovat v aplikaci Play Store.
+1. Připojte svého tenanta Intune ke spravovaným Google Play. Pokud jste to už udělali kvůli tomu, abyste mohli spravovat pracovní profil platformy Android Enterprise, vyhrazená nebo plně spravovaná zařízení, nemusíte to dělat znovu.
+2. Do konzoly Intune přidejte aplikace ze spravovaných Google Play.
+3. Cílit na spravované Google Play aplikace jako **k dispozici s registrací nebo bez registrace** do požadované skupiny uživatelů. **Vyžadované** a **odinstalace** cílení aplikace nejsou pro neregistrovaná zařízení podporovaná.
+4. Přiřaďte zásady ochrany aplikací ke skupině uživatelů.
+5. Když koncový uživatel otevře aplikaci Portál společnosti, zobrazí se zpráva oznamující, že v aplikaci Obchod Play jsou pro ně k dispozici aplikace.  Uživatel může klepnutím na toto oznámení přejít přímo do aplikace Play, aby se zobrazily podnikové aplikace, nebo můžou na aplikaci Obchod Play přejít samostatně.
+6. Koncový uživatel může rozbalit kontextovou nabídku v aplikaci Obchod Play a přepnout mezi svým osobním účtem Google (tam, kde vidí své osobní aplikace), a jejich pracovním účtem (kde se budou zobrazovat v aplikacích pro Store a LOB). Koncoví uživatelé nainstalují aplikace klepnutím na instalovat v aplikaci Obchod Play.
 
-Při vydání selektivní vymazání aplikace v konzole Intune se pracovní účet se automaticky odebere z Play Store aplikace a koncový uživatel se z již neuvidí bodu pracovní aplikace v katalogu aplikací Play Store. Při odebrání pracovního účtu na zařízení, aplikací nainstalovaných z Play Store zůstanou na zařízení nainstalované a nedojde k odinstalování. 
+Po vydání selektivního vymazání aplikace v konzole Intune se pracovní účet automaticky odebere z aplikace Obchod Play a koncový uživatel z tohoto bodu už nebude zobrazovat pracovní aplikace v katalogu aplikací Obchod Play. Když se pracovní účet odebere ze zařízení, aplikace nainstalované z Obchod Play zůstanou nainstalované na zařízení a neodinstaluje se. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="app-uninstall-setting-for-ios-managed-apps"></a>Nastavení odinstalace aplikace pro aplikace spravované v iOS
+V případě zařízení se systémem iOS si můžete vybrat, co se stane se spravovanými aplikacemi při zrušení registrace zařízení v Intune nebo odebrání profilu správy pomocí nastavení **odinstalovat při odebrání zařízení** . Toto nastavení platí jenom pro aplikace po zaregistrování zařízení a aplikace se nainstalují jako spravované. Nastavení nelze konfigurovat pro webové aplikace ani pro webové odkazy. 
+
+Výchozí hodnoty pro nastavení jsou předem vyplněné pro nová přiřazení následujícím způsobem:
+
+|Typ aplikace pro iOS | Výchozí nastavení pro možnost odinstalovat při odebrání zařízení |
+|--------------------|----------------|
+| Obchodní aplikace | Ano |
+| Aplikace pro Store | Ne |
+| Aplikace VPP | Ne |
+| Buit – v aplikaci | Ne |
+
+>[!NOTE]
+>**Typy přiřazení "dostupné":** Pokud aktualizujete toto nastavení pro skupiny "k dispozici pro zaregistrovaná zařízení" nebo "k dispozici v rámci nebo bez registrace", uživatelé, kteří už mají spravovanou aplikaci, nebudou mít aktualizované nastavení, dokud zařízení nesynchronizují s Intune a znovu nenainstaluje aplikaci. 
+>
+>**Již existující přiřazení:** Přiřazení, která existovala před zavedením tohoto nastavení, se nezmění a všechny spravované aplikace se při odebrání zařízení ze správy odeberou.
+
+## <a name="next-steps"></a>Další kroky
 
 Další informace o sledování přiřazení aplikací najdete v článku o [monitorování aplikací](apps-monitor.md).

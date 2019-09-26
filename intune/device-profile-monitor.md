@@ -7,7 +7,6 @@ ms.author: mandia
 manager: dougeby
 ms.date: 06/25/2018
 ms.topic: conceptual
-ms.prod: ''
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
@@ -17,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 786cd6e7d0acaeb6e78035d8ec580c30d29d09e7
-ms.sourcegitcommit: 25e6aa3bfce58ce8d9f8c054bc338cc3dff4a78b
+ms.openlocfilehash: e4b95894e00ce160323a5951b30eb9621585ea85
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57391714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "71303459"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -32,8 +31,7 @@ Intune obsahuje na portálu Azure Portal některé funkce, které pomáhají sle
 
 ## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
-1. Přihlaste se k webu [Azure Portal](https://portal.azure.com).
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Vyberte **Konfigurace zařízení** > **Profily**.
 
 Vypíšou se všechny existující profily včetně podrobností jako je platforma, a zobrazí se, jestli je profil přiřazený k nějakým zařízením.
@@ -66,11 +64,11 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
     Zavřete podrobné informace **Stav uživatele**.
 
 5. V seznamu **Profily** vyberte konkrétní profil. Můžete také změnit stávající vlastnosti:
-  - **Vlastnosti**: Změnit název nebo aktualizovat stávající nastavení.
-  - **Přiřazení**: Zahrňte nebo vylučte zařízení, které mají zásady platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
-  - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
-  - **Stav uživatele**: Obsahuje seznam uživatelských jmen s zařízení vliv tento profil, a pokud profil se úspěšně nasadil. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
-  - **Stav podle nastavení**: Filtruje výstup tím, že zobrazuje jednotlivá nastavení v rámci profilu a zobrazí, pokud je toto nastavení úspěšně použito.
+    - **Vlastnosti**: Změňte název nebo aktualizujte stávající nastavení.
+    - **Přiřazení**: Zahrňte nebo vylučte zařízení, která by měla zásada platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
+    - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
+    - **Stav uživatele**: Zobrazí seznam uživatelských jmen se zařízeními, která mají vliv na tento profil, a v případě úspěšného nasazení profilu. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
+    - **Stav podle nastavení**: Filtruje výstup zobrazením individuálních nastavení v rámci profilu a ukazuje, jestli se nastavení úspěšně nastavilo.
 
 ## <a name="view-conflicts"></a>Zobrazení konfliktů
 
@@ -82,6 +80,6 @@ V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, 
 
 Teď, když znáte konfliktní nastavení a zásady, které toto nastavení obsahují, by mělo být snadnější konflikt vyřešit. 
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 [Přiřazení profilů uživatelů a zařízení](device-profile-assign.md)  
 [Běžné problémy a řešení u profilů zařízení](device-profile-troubleshoot.md)
