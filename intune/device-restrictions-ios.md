@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/24/2019
+ms.date: 09/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e31fc3b199f6437bbdd7b12e4be8b17ead689c7e
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 4b9b2db7aa58d2db519615ca2741b28c09f29096
+ms.sourcegitcommit: ec0a69c88fdb30b538df1ac4f407a62a28ddf8d1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71302375"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71320031"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -130,36 +130,51 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="password"></a>Heslo
 
+> [!NOTE]
+> V budoucí verzi se tato nastavení hesla v uživatelském rozhraní Intune aktualizují tak, aby odpovídala typu registrace.
+
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: Všechny typy registrace
 
 - **Heslo**: **Vyžaduje** , aby koncový uživatel zadal heslo pro přístup k zařízení. **Není nakonfigurováno** (výchozí) umožňuje uživatelům přístup k zařízení bez zadání hesla.
-  - **Jednoduchá hesla**: Vyberte možnost **blokovat** pro vyžadování složitějších hesel. **Nenakonfigurováno** umožňuje jednoduchá hesla, jako `0000` jsou `1234`a.
-  - **Požadovaný typ hesla**: Vyberte typ hesla, které vaše organizace vyžaduje. Možnosti:
+
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: Registrace zařízení, automatický zápis zařízení (pod dohledem)
+
+> [!IMPORTANT]
+> Pokud u zařízení zaregistrovaných uživatelem nakonfigurujete nastavení hesla, budou jednoduchá nastavení **hesla** automaticky nastavená tak, aby se **zablokovala**, a bude vynucený kód PIN s 6 číslicemi.
+>
+> Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zásadu nahrajete do zařízení zaregistrovaných uživatelem. V zařízeních dojde k následujícímu:
+>
+>  - Nastavení **vypršení platnosti hesla** je ignorováno.
+>  - Jednoduchá hesla, například `1111` nebo `1234`, nejsou povolena.
+>  - Je vynutil kód PIN pro číslice 6. 
+
+- **Jednoduchá hesla**: Vyberte možnost **blokovat** pro vyžadování složitějších hesel. **Nenakonfigurováno** umožňuje jednoduchá hesla, jako `0000` jsou `1234`a.
+
+- **Požadovaný typ hesla**: Vyberte typ hesla, které vaše organizace vyžaduje. Možnosti:
     - **Výchozí ze zařízení**
     - **Číselné**
     - **Písmena**
-  - **Počet nealfanumerických znaků v hesle**: Zadejte počet znaků symbolu, například `#` nebo `@`, které musí heslo obsahovat.
-  - **Minimální délka hesla**: Zadejte minimální délku, kterou musí uživatel zadat, a to v rozmezí 4 až 14 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.
-  
-    > [!NOTE]
-    > Pro zařízení, která jsou zaregistrovaná uživatelem:
-    >  - Pokud je existující kód PIN větší než 6 znaků, použije se pouze prvních 6 znaků. Například pokud je `12345678`váš PIN kód, pak se kód PIN zkracuje na `123456`.
-    >  - Pokud uživatelé zadají nový PIN kód, který je delší než 6 znaků, použije se jenom prvních 6 znaků. Pokud například zadáte `12345678` jako kód PIN, pak se kód PIN zkrátí na `123456`.
+- **Počet nealfanumerických znaků v hesle**: Zadejte počet znaků symbolu, například `#` nebo `@`, které musí heslo obsahovat.
 
-  - **Počet neúspěšných přihlášení před vymazáním zařízení**: Zadejte počet neúspěšných přihlášení, než se zařízení vymaže (mezi 4-11).
+- **Minimální délka hesla**: Zadejte minimální délku, kterou musí uživatel zadat, a to v rozmezí 4 až 14 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.
   
-    iOS má integrované zabezpečení, které může mít vliv na toto nastavení. IOS může například zpozdit spuštění zásad v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
+  > [!NOTE]
+  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. V zařízení se ale neuplatní více než 6 číslic. Správce například nastaví minimální délku na `8`. U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
+
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: Zadejte počet neúspěšných přihlášení, než se zařízení vymaže (mezi 4-11).
   
-  - **Maximální počet minut po uzamčení obrazovky před vyžadováním hesla** <sup>1</sup>: Zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno v zařízeních iOS 8,0 a novějších.
-  - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** <sup>1</sup>: Zadejte maximální počet minut nečinnosti, která je povolena v zařízení, dokud se nezamkne obrazovka. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Když se nastaví na hodnotu **okamžitě**, obrazovka se zamkne na základě minimálního času zařízení. Na iPhonu je 30 sekund. Na iPadu je to dvě minuty.
-  - **Vypršení platnosti hesla (dny)** : Zadejte počet dní, než bude nutné změnit heslo zařízení.
-  - **Zakázat opakované použití předchozích hesel**: Zadejte počet nových hesel, která se musí použít, až pak bude možné znovu použít starou jinou.
-  - **Dotykové ID a odemknutí ID obličeje**: Vyberte možnost **blokovat** , pokud chcete zabránit použití otisku prstu nebo obličeje k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí těchto metod.
+  iOS má integrované zabezpečení, které může mít vliv na toto nastavení. IOS může například zpozdit spuštění zásad v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
+  
+- **Maximální počet minut po uzamčení obrazovky před vyžadováním hesla** <sup>1</sup>: Zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno v zařízeních iOS 8,0 a novějších.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka** <sup>1</sup>: Zadejte maximální počet minut nečinnosti, která je povolena v zařízení, dokud se nezamkne obrazovka. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Když se nastaví na hodnotu **okamžitě**, obrazovka se zamkne na základě minimálního času zařízení. Na iPhonu je 30 sekund. Na iPadu je to dvě minuty.
+- **Vypršení platnosti hesla (dny)** : Zadejte počet dní, než bude nutné změnit heslo zařízení.
+- **Zakázat opakované použití předchozích hesel**: Zadejte počet nových hesel, která se musí použít, až pak bude možné znovu použít starou jinou.
+- **Dotykové ID a odemknutí ID obličeje**: Vyberte možnost **blokovat** , pokud chcete zabránit použití otisku prstu nebo obličeje k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí těchto metod.
 
-    Blokování tohoto nastavení také znemožňuje zařízení odemknout pomocí ověřování FaceID.
+  Blokování tohoto nastavení také znemožňuje zařízení odemknout pomocí ověřování FaceID.
 
-    ID obličeje platí pro:  
-    - iOS 11,0 a novější
+  ID obličeje platí pro:  
+  - iOS 11,0 a novější
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: Automatický zápis zařízení (pod dohledem)
 

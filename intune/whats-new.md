@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 235cb317625786c1254ecf572726c66480c01b2e
-ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
+ms.openlocfilehash: 7b7a0df354c505272ced187ead615734ae1c830f
+ms.sourcegitcommit: 022f52cb03e25d555229019599cdafc994427327
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274845"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313445"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -62,7 +62,7 @@ Verze iOS 13,1 od společnosti Apple zahrnuje registraci uživatelů, novou form
 - Registrace cílového uživatele pro skupiny uživatelů.
 - Poskytněte koncovým uživatelům možnost výběru mezi jednodušším zápisem uživatele nebo silnějším zápisem zařízení při registraci svých zařízení.
 
-Od verze 9/24/2019 s vydáním iOS 31,1 jsme v procesu zavedli tyto aktualizace všem zákazníkům a očekáváme, že budou dokončeny na konci příštího týdne.
+Od verze 9/24/2019 s vydáním iOS 13,1 jsme v procesu zavedli tyto aktualizace všem zákazníkům a očekáváme, že budou dokončeny na konci příštího týdne.
 Platí pro:
 
 iOS 13,1 a novější
