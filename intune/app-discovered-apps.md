@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1d545e5848330e8c4f34eca21a992ad05ca8c85d
-ms.sourcegitcommit: ffbd1542d33810ab97a0be8faf26f8061328c228
+ms.openlocfilehash: f2e2e203c1d592d6313591f1bea18a37b1fcfeff
+ms.sourcegitcommit: 01a4e09eb27bfed14121de1a4ad56142b7d56eb2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206397"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481932"
 ---
 # <a name="intune-discovered-apps"></a>Zjištěné aplikace Intune
 
@@ -64,14 +64,14 @@ Následující seznam poskytuje typ aplikační platformy, aplikace, které jsou
 | Android Enterprise | Jenom spravované aplikace | Jenom aplikace nainstalované v pracovním profilu | Každých 7 dnů od registrace zařízení |
 
 > [!NOTE]
->Zařízení připojená k hybridní službě Azure AD s Windows 10 s rozšířením pro správu Intune v současnosti neshromažďují inventář aplikací podle výše uvedeného plánu. Jedná se o známý problém. Jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](in-development.md) a/nebo [co je nového](whats-new.md).
+> Hybridní zařízení s Windows 10 připojená k Azure AD, jak je vidět v úlohách správy aplikací v SCCM, teď neshromažďují inventář aplikací prostřednictvím rozšíření pro správu Intune (IME) podle výše uvedeného plánu. Aby se tento problém vyřešil, měla by být úloha správy aplikací v nástroji SCCM přepnuta do Intune, aby se editor IME nainstaloval na zařízení (vyžaduje se editor IME pro inventarizaci a nasazení PowerShellu). Všimněte si, že jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](in-development.md) a/nebo [co je nového](whats-new.md).
 
 Počet zjištěných aplikací nemusí odpovídat stavovému počtu instalací aplikací. K příčinám nekonzistencí můžou patřit tyto:
 - Změna cílení nainstalované spravované aplikace může způsobit, že se počet instalací ve stavovém okně sníží, bude ale dál hlášený mezi zjištěnými aplikacemi.
 - Cílení více instancí téže aplikace v tenantovi povede k různým počtům kvůli možnému překrývání uživatelů nebo zařízení. Každá instance aplikace započítá překrývající se uživatele, ale zjištěné aplikace budou mít duplicitní počty.
 - Zjištěné aplikace a stavy aplikací se shromažďují v různých časových intervalech, což může způsobit nesoulad v počtech aplikací.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 - [Typy aplikací v Microsoft Intune](apps-add.md#app-types-in-microsoft-intune)
 - [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md)
