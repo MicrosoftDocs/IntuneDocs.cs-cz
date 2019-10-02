@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f42baa1ca6e3ac6dca3c95a0eb9e422df2506031
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.sourcegitcommit: 3f0cc80c5dbb4d04519c5aa98eae8426dad8cb30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882010"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "71729214"
 ---
 ### <a name="apple"></a>Apple
 - Apple iOS 9.0 a novější
@@ -26,6 +26,6 @@ ms.locfileid: "67882010"
 - Google Android 4.0 nebo novější (včetně Samsung KNOX Standard 4.0 a vyšších)*
 - Google Android for Work ([požadavky](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012 style="target=new_window"))
 
-\* Následující modely telefonu Samsung Galaxy ACE není možné spravovat pomocí Intune jako zařízení Samsung KNOX Standard: SM-G313HU, SM-G313HY, SM-G313M, SM-G313MY a SM-G313U. Tato zařízení jsou spravována jako standardní zařízení s Androidem. Další informace najdete na [webu Samsung KNOX](https://www.samsungknox.com/en).
+*Následující modely telefonu Samsung Galaxy Ace není možné spravovat v Intune jako zařízení Samsung KNOX Standard: SM-G313HU, SM-G313HY, SM-G313M, SM-G313MY a SM-G313U. Tato zařízení jsou spravována jako standardní zařízení s Androidem. Další informace najdete na [webu Samsung KNOX](https://www.samsungknox.com/en).
 
 Úplný seznam zařízení a metod správy najdete v části [Zařízení podporovaná pro Intune](/intune/supported-devices-browsers#intune-supported-devices).

@@ -1,6 +1,6 @@
 ---
-title: Registrace zařízení s macOS poskytnutého vaší organizací do správy | Microsoft Docs
-description: Tento článek popisuje, jak zaregistrovat v Intune zařízení s macOS, které zakoupila a poskytla vaše organizace.
+title: Registrace zařízení macOS poskytovaných vaší organizací do správy | Microsoft Docs
+description: Popisuje, jak zaregistrovat zařízení macOS v Intune zakoupené a poskytované vaší organizací.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,63 +18,63 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0de0e676e72d46bde922fd97b651cc1a9268e45e
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: f2e2ecc79cd24a68c1a5642f64474f2d31217bd7
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239776"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721023"
 ---
-# <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení s macOS poskytnutého vaší organizací do správy
+# <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení macOS poskytovaných vaší organizací do správy
 
-Přečtěte si, jak začít spravovat nové zařízení s macOS v Intune.  
+Naučte se, jak v Intune začít spravovat vaše nové zařízení macOS.  
 
-Zařízení, která vám poskytne váš zaměstnavatel nebo škola, bývají často nakonfigurovaná předem. Když zařízení zapnete a poprvé se přihlásíte, vaše organizace do něho tato předem nakonfigurovaná nastavení pošle. Jakmile zařízení nastavení dokončí, budete mít přístup k pracovním nebo školním prostředkům.
+Zařízení, která jsou k dispozici ve vaší práci nebo ve škole, jsou často předem nakonfigurovaná předtím, než se dostanou. Vaše organizace pošle Tato předem nakonfigurovaná nastavení do vašeho zařízení po jeho zapnutí a přihlášení poprvé. Až zařízení dokončí instalaci, dostanete přístup k pracovním nebo školním prostředkům.
 
-Aby se nastavení správy zahájilo, zapněte zařízení a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Zbytek tohoto článku popisuje kroky a obrazovky, které uvidíte při procházení Průvodce nastavením.
+Pokud chcete začít s nastavením správy, zapněte zařízení a přihlaste se pomocí svých pracovních nebo školních přihlašovacích údajů. Zbývající část tohoto článku popisuje kroky a obrazovky, které se zobrazí při procházení průvodce nastavením.
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s macOS do Programu registrace zařízení Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-macos).  
+Vaše organizace si mohla koupit svoje zařízení pomocí nějakého programu *Apple program registrace zařízení* (DEP). Apple DEP umožňuje organizacím koupit velké množství zařízení se systémem iOS nebo macOS. Organizace pak můžou tato zařízení nakonfigurovat a spravovat v rámci preferovaného poskytovatele správy mobilních zařízení, jako je třeba Intune. Pokud jste správce a chcete získat další informace o programu Apple DEP, přečtěte si téma [Automatická registrace zařízení MacOS pomocí program registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos.md).  
 
-## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení
+## <a name="get-your-device-managed"></a>Získání spravovaného zařízení
 
-Zařízení s macOS zaregistrujete do správy provedením následujících kroků. Pokud nepoužíváte zařízení poskytnuté organizací, ale svoje vlastní zařízení, postupujte podle pokynů k [osobním a vlastním zařízením uživatelů](enroll-your-device-in-intune-macos-cp.md).  
+Provedením následujících kroků zaregistrujete zařízení macOS ve správě. Pokud místo zařízení poskytovaného organizací používáte vlastní zařízení, postupujte podle kroků pro [osobní a vlastní zařízení](enroll-your-device-in-intune-macos-cp.md).  
 
-1. Zapněte zařízení s macOS.
+1. Zapněte zařízení macOS.
 2. Vyberte zemi nebo oblast a klikněte na **pokračovat**.  
 
-   ![Snímek uvítací obrazovky Průvodce nastavením zařízení s macOS, na které je seznam jazyků na výběr](./media/macos-dep-welcome-1808.png)
-3. Zvolte rozložení klávesnice. V seznamu se zobrazí jedna nebo více možností na základě vybrané země nebo oblasti. Chcete-li zobrazit všechny možnosti rozložení bez ohledu na zvolenou zemi nebo oblast, klikněte na tlačítko **Zobrazit vše**. Až budete hotovi, klikněte na **Pokračovat**.  
+   ![Obrazovka úvodní obrazovky pomocníka s nastavením zařízení macOS a zobrazuje seznam jazyků, ze kterých se mají vybírat](./media/macos-dep-welcome-1808.png)
+3. Vyberte rozložení klávesnice. V seznamu se zobrazí jedna nebo více možností na základě vybrané země nebo oblasti. Chcete-li zobrazit všechny možnosti rozložení bez ohledu na zvolenou zemi nebo oblast, klikněte na tlačítko **Zobrazit vše**. Až skončíte, klikněte na **pokračovat.**  
 
-   ![Snímek obrazovky Průvodce nastavením zařízení s macOS s rozložením klávesnice, na které je seznam jazyků klávesnice na výběr, možnost Zobrazit vše a tlačítka Zpět a Pokračovat](./media/macos-dep-keyboard-1808.png)  
-4. Vyberte vaši síť Wi-Fi. Abyste mohli pokračovat v nastavení, musíte mít připojení k internetu. Pokud vaši síť nevidíte nebo se potřebujete připojit přes drátovou síť, klikněte na tlačítko **Další možnosti sítě**. Až budete hotovi, klikněte na **Pokračovat**.  
+   ![Obrazovka rozložení klávesnice pomocníka s nastavením zařízení macOS, která zobrazuje seznam jazyků klávesnice, které se mají vybrat, možnost nezaškrtnuto Zobrazit vše a tlačítko zpět a pokračovat.](./media/macos-dep-keyboard-1808.png)  
+4. Vyberte síť Wi-Fi. Aby bylo možné pokračovat v instalaci, je nutné připojení k Internetu. Pokud se vaše síť nezobrazí nebo pokud se potřebujete připojit přes drátovou síť, klikněte na **Další možnosti sítě**. Až skončíte, klikněte na **pokračovat**.  
 
-   ![Snímek obrazovky Průvodce nastavením zařízení s macOS pro výběr sítě Wi-Fi, na které je seznam dostupných sítí na výběr a také tlačítka Další možnosti sítě, Zpět a Pokračovat](./media/macos-dep-wifi-1808.png)  
-5. Po připojení k síti Wi-Fi se objeví obrazovka **Vzdálená správa**. Vzdálená správa umožňuje správci organizace vzdáleně nakonfigurovat na vašem zařízení účty, nastavení, aplikace a sítě požadované společností. Přečtěte si vysvětlení vzdálené správy, abyste porozuměli, jak bude zařízení spravované. Pak klikněte na **Pokračovat**.  
+   ![Snímek obrazovky s průvodcem nastavením zařízení macOS vyberte obrazovku sítě Wi-Fi, která zobrazuje seznam dostupných sítí, ze kterých si můžete vybrat. Také se zobrazí další tlačítko Možnosti sítě, tlačítko zpět a tlačítko pokračovat.](./media/macos-dep-wifi-1808.png)  
+5. Po připojení k Wi-Fi se zobrazí obrazovka **Vzdálená správa** . Vzdálená správa umožňuje správcům vaší organizace vzdáleně nakonfigurovat vaše zařízení pomocí účtů, nastavení, aplikací a sítí vyžadovaných společností. Přečtěte si vysvětlení vzdálené správy, které vám pomůže pochopit, jak je vaše zařízení spravované. Pak klikněte na **pokračovat**.  
 
-   ![Snímek obrazovky Průvodce nastavením zařízení s macOS pro vzdálenou správu, na které je text vysvětlující vzdálenou správu a odkaz na dokumentaci s dalšími informacemi a také tlačítka Zpět a Pokračovat](./media/macos-dep-remote-management-1-1808.png)  
-6. Po zobrazení výzvy se přihlaste pomocí svého pracovního nebo školního účtu. Po ověření se do zařízení nainstaluje profil správy. Tento profil nakonfiguruje a umožní váš přístup k prostředkům organizace.  
-7. Přečtěte si o ikoně ochrany osobních údajů, abyste později poznali, když se shromažďují osobní informace. Potom klikněte na **Pokračovat**.  
+   ![Obrazovka obrazovky pro vzdálenou správu pomocníka s nastavením zařízení macOS s textem vysvětlujícím vzdálenou správu a odkazem na dokumentaci, kde najdete další informace. Také zobrazí tlačítko zpět a tlačítko pokračovat.](./media/macos-dep-remote-management-1-1808.png)  
+6. Po zobrazení výzvy se přihlaste pomocí svého pracovního nebo školního účtu. Po ověření bude zařízení instalovat profil správy. Profil konfiguruje a umožňuje přístup k prostředkům vaší organizace.  
+7. Přečtěte si o ikoně ochrany osobních údajů pro Apple data &, abyste mohli později zjistit, kdy se shromažďují osobní údaje. Pak klikněte na **pokračovat**.  
 
-   ![Snímek obrazovky Průvodce nastavením zařízení s macOS pro ochranu osobních údajů, na které je obrázek dvou lidí podávajících si ruce, popis používání osobních informací společností Apple a také tlačítka Zpět a Pokračovat](./media/macos-dep-apple-data-privacy-1808.png)  
-8. Až bude zařízení zaregistrované, může být potřeba udělat ještě další kroky. Kroky, které se vám zobrazí, závisejí na tom, jak vaše organizace přizpůsobila prostředí nastavení. Můžete být požádáni:
-    * Přihlásit se k účtu Apple
-    * Odsouhlasit podmínky a ujednání
-    * Vytvořit účet počítače
-    * Projít expresním nastavením
-    * Nastavit váš Mac  
+   ![Snímek obrazovky s obrazovkou & Průvodce nastavením zařízení macOS obrazovka ochrany osobních údajů na obrazovce, na které se zobrazuje ilustrace dvou lidí potřesící ruce a popis používání osobních údajů od společnosti Apple. Zobrazí také tlačítko zpět a pokračovat.](./media/macos-dep-apple-data-privacy-1808.png)  
+8. Po registraci zařízení je možné, že budete muset provést další kroky. Postup najdete v závislosti na tom, jak vaše organizace vlastní nastavení prostředí. Může vyžadovat:
+    * Přihlášení k účtu Apple
+    * Vyjádřit souhlas s podmínkami a ujednáními
+    * Vytvoření účtu počítače
+    * Projít si expresním nastavením
+    * Nastavení počítače Mac
 
-## <a name="get-the-company-portal-app"></a>Získání aplikace Portál společnosti
+## <a name="get-the-company-portal-app"></a>Získat aplikaci Portál společnosti
 
-Stáhněte si do svého zařízení aplikaci Portál společnosti Intune pro macOS. Tato aplikace vám umožní monitorovat, synchronizovat, přidat nebo odebrat zařízení ze správy a nainstalovat aplikace. V tomto postupu je také popsané, zaregistrovat zařízení na Portálu společnosti.
+Stáhněte si aplikaci Portál společnosti Intune pro macOS na svém zařízení. Aplikace umožňuje monitorovat, synchronizovat, přidávat a odebírat zařízení ze správy a instalovat aplikace. Tento postup také popisuje, jak zaregistrovat zařízení pomocí Portál společnosti.
 
 1. Na zařízení macOS přejít na [https://portal.manage.microsoft.com/EnrollmentRedirect.aspx](https://portal.manage.microsoft.com/EnrollmentRedirect.aspx).
-2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet. 
-3. Klikněte na **Získat aplikaci** a stáhněte si instalační program aplikace Portál společnosti pro macOS.
-4. Po zobrazení výzvy otevřete soubor .pkg a dokončete instalační kroky.
+2. Přihlaste se k webu Portál společnosti pomocí svého pracovního nebo školního účtu. 
+3. Klikněte na **získat aplikaci** a Stáhněte si instalační program portál společnosti pro MacOS.
+4. Po zobrazení výzvy otevřete soubor. pkg a dokončete kroky instalace.
 5. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.
-6. Najděte své zařízení a klikněte na **Zaregistrovat**.
-7. Klikněte na **Pokračovat** > **Hotovo**. Vaše zařízení by se mělo zobrazit v aplikaci Portál společnosti jako vyhovující firemní zařízení.
+6. Najděte své zařízení a klikněte na **zaregistrovat**.
+7. Klikněte na **pokračovat** > **Hotovo**. Vaše zařízení by se teď mělo zobrazit v aplikaci Portál společnosti jako firemní a vyhovující zařízení.
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+Ještě potřebujete pomáhat? Obraťte se na firemní podporu. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

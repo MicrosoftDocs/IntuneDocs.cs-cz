@@ -1,6 +1,6 @@
 ---
-title: Registrace zařízení s iOSem poskytnutého vaší organizací do správy | Dokumenty Microsoft
-description: Tento článek popisuje, jak zaregistrovat v Intune zařízení s iOSem, které zakoupila a poskytla vaše organizace.
+title: V rámci správy Zaregistrujte svoje zařízení s iOS poskytované vaší organizací. | Microsoft Docs
+description: Popisuje, jak zaregistrovat zařízení s iOS v Intune, které si koupil a poskytla vaše organizace.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,44 +18,44 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4484dbc9a8348101c0f7409b009998baca32f8a4
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: bca7ff55653d12d352b4fb90163f4622a9e573ab
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239410"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721009"
 ---
-# <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrace zařízení s iOSem poskytnutého vaší organizací do správy
+# <a name="enroll-your-organization-provided-ios-device-in-management"></a>Registrace zařízení s iOS poskytovaných vaší organizací v rámci správy
 
-Přečtěte si, jak začít spravovat nové zařízení s iOSem v Intune.  
+Naučte se, jak v Intune získat nové spravované zařízení s iOS.  
 
-Zařízení s iOSem, která vám poskytne váš zaměstnavatel nebo škola, bývají často nakonfigurovaná předem. Když zařízení zapnete a poprvé se přihlásíte, vaše organizace do něho tato předem nakonfigurovaná nastavení pošle. Jakmile zařízení nastavení dokončí, budete mít přístup k pracovním nebo školním prostředkům.  
+Zařízení s iOS, která máte v práci nebo ve škole, jsou často předem nakonfigurovaná předtím, než se dostanou. Vaše organizace pošle Tato předem nakonfigurovaná nastavení do vašeho zařízení po jeho zapnutí a přihlášení poprvé. Až zařízení dokončí instalaci, dostanete přístup k pracovním nebo školním prostředkům.  
 
-Aby se nastavení zahájilo, zapněte zařízení a přihlaste se pomocí pracovních nebo školních přihlašovacích údajů. Zbytek tohoto článku popisuje kroky a obrazovky, které uvidíte při procházení Průvodce nastavením. 
+Pokud chcete spustit instalační program, zapněte zařízení a přihlaste se pomocí svých pracovních nebo školních přihlašovacích údajů. Zbývající část tohoto článku popisuje kroky a obrazovky, které se zobrazí při procházení průvodce nastavením.
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Je možné, že si vaše organizace zakoupila zařízení prostřednictvím programu s názvem *Program registrace zařízení Apple* (DEP). Tento program umožňuje organizacím nakupovat velká množství zařízení s iOSem nebo macOS. Organizace pak můžou zařízení konfigurovat a spravovat v rámci svého upřednostňovaného poskytovatele správy mobilních zařízení, jako je Intune. Pokud jste správce a chcete získat o programu Apple DEP další informace, podívejte se na článek [Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/device-enrollment-program-enroll-ios).  
+Vaše organizace si mohla koupit svoje zařízení pomocí nějakého programu *Apple program registrace zařízení* (DEP). Apple DEP umožňuje organizacím koupit velké množství zařízení se systémem iOS nebo macOS. Organizace pak můžou tato zařízení nakonfigurovat a spravovat v rámci preferovaného poskytovatele správy mobilních zařízení, jako je třeba Intune. Pokud jste správce a chcete získat další informace o programu Apple DEP, přečtěte si téma [Automatická registrace zařízení s iOS pomocí program registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-ios.md).  
 
-## <a name="set-up-your-ios-device"></a>Nastavení zařízení s iOSem
+## <a name="set-up-your-ios-device"></a>Nastavení zařízení s iOS
 
-Pokud nepoužíváte zařízení s iOSem poskytnuté organizací, ale svoje vlastní zařízení, postupujte podle pokynů k [osobním a vlastním zařízením uživatelů](enroll-your-device-in-intune-ios.md).  
+Pokud používáte vlastní zařízení se systémem iOS, nikoli organizaci, postupujte podle kroků pro [osobní a vlastní zařízení](enroll-your-device-in-intune-ios.md).  
 
-1. Zapněte zařízení s iOSem.
-2. Po výběru **jazyka** připojte zařízení k Wi-Fi.
-3. Na obrazovce **Set up iOS device** (Nastavit zařízení s iOSem) zvolte, co chcete udělat:
-   - **Set Up as New device** (Nastavit jako nové zařízení)
-   - **Restore from iCloud backup** (Obnovit ze zálohy v iCloudu)
-   - **Restore from iCloud backup** (Obnovit ze zálohy v iTunes)
+1. Zapněte zařízení s iOS.
+2. Po výběru **jazyka**připojte zařízení k Wi-Fi.
+3. Na obrazovce **nastavení zařízení se systémem iOS** vyberte, zda chcete:
+   - **Nastavit jako nové zařízení**
+   - **Obnovení ze zálohy iCloud**
+   - **Obnovení ze zálohy iTunes**
 
-4. Po připojení k Wi-Fi se zobrazí obrazovka pro **konfiguraci**. Bude obsahovat informace o tom, že **[vaše společnost] automaticky nakonfiguruje vaše zařízení**.
+4. Po připojení k Wi-Fi se zobrazí obrazovka **Konfigurace** . To znamená, že **[vaše společnost] bude vaše zařízení automaticky konfigurovat.**
 
-   **Configuration allows [Your Organization] to manage this device over the air. An administrator can help you set up email and network accounts, install and configure apps, and manage settings remotely. An administrator may disable features, install and remove apps, monitor and restrict your Internet traffic and remotely erase this device.** (Konfigurace umožňuje vaší organizaci spravovat toto zařízení bezdrátově. Správce vám na dálku pomůže nastavit e-mailové a síťové účty, instalovat a konfigurovat aplikace a spravovat nastavení. Správce může zakázat funkce, instalovat a odebírat aplikace, monitorovat a omezit váš internetový provoz nebo na dálku zařízení vymazat.)
- 
-   **Configuration is provided by: [Your Company's] iOS Team [Address]** (Konfiguraci zajišťuje: iOS tým [vaší společnosti] [adresa])
+   **Konfigurace umožňuje [vaší společnosti] spravovat toto zařízení v ovzduší. Správce vám může pomáhat nastavit e-mailové a síťové účty, instalovat a konfigurovat aplikace a spravovat nastavení vzdáleně. Správce může zakázat funkce, instalovat a odebírat aplikace, monitorovat a omezovat internetový provoz a vzdáleně vymazat toto zařízení.**
 
-5. Přihlaste se svým Apple ID. Přihlášení vám umožní nainstalovat aplikaci Portál společnosti a profil správy, který vaší společnosti umožní přístup k firemním prostředkům, jako jsou e-mail a aplikace.
-6. Odsouhlaste **podmínky a ujednání** a rozhodněte se, jestli chcete posílat diagnostické informace do společnosti Apple.
-7. Po registraci může vaše zařízení zobrazit výzvu k provedení dalších akcí. Některé z těchto kroků mohou zahrnovat zadání hesla pro přístup k e-mailu nebo nastavení hesla.
+   **Konfiguraci poskytuje: [vaše společnost] tým iOS [adresa]**
 
-Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
+5. Přihlaste se pomocí Apple ID. Přihlášení vám umožní nainstalovat aplikaci Portál společnosti a nainstalovat profil správy, který vaší společnosti umožní přístup k jejich prostředkům, jako je e-mail a aplikace.
+6. Vyjádřit souhlas s **podmínkami a ujednáními** a rozhodněte se, jestli chcete odeslat diagnostické informace společnosti Apple.
+7. Po dokončení registrace vám vaše zařízení může zobrazit výzvu k provedení dalších akcí. Některé z těchto kroků můžou být zadáním hesla pro přístup k e-mailu nebo nastavením hesla.
+
+Ještě potřebujete pomáhat? Obraťte se na firemní podporu. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

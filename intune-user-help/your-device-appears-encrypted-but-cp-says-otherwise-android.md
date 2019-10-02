@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: caae22e59e8adb6952e9a69ff03c575ae4467b2d
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 13f22b66b5a0700eadda28b20e0db6edce507021
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71238982"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721171"
 ---
 # <a name="device-encrypted-but-apps-say-otherwise"></a>Šifrované zařízení, ale aplikace říkají jinak
 
@@ -31,7 +31,7 @@ Pokud Portál společnosti nebo aplikace Microsoft Intune říká, že vaše za�
 
 ## <a name="add-a-startup-pin"></a>Přidání spouštěcího kódu PIN
 
-Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přejdete na **Nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečené po spuštění**.  
+Určitá zařízení s Androidem budou vyžadovat vytvoření spouštěcího PIN kódu, který zaručí, že je zařízení zabezpečené. Umístění tohoto nastavení bude v aplikaci **Nastavení** vašeho zařízení. Název a umístění nastavení se může lišit. Například na S7 Samsung Galaxy se toto nastavení označuje jako **zabezpečené spuštění**. Pokud ho chcete povolit a vytvořit heslo, přečtěte si **nastavení** > **zamykací obrazovka a zabezpečení** > **zabezpečené spuštění**.  
 
 ## <a name="encrypt-the-entire-device"></a>Zašifrujte celé zařízení.
 
@@ -50,7 +50,7 @@ Tato část se týká pouze aplikace Portál společnosti. Pokud vaše zařízen
 
 Některá zařízení s Androidem verze 7,0 a novější šifrují data způsoby, které nejsou konzistentní s určitými standardy platformy Android. Tyto metody šifrování převedou informace o zařízení v nebezpečí. V důsledku toho tato zařízení nejsou podporována.
 
-Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](https://docs.microsoft.com/intune/supported-devices-browsers#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory.
+Nevyčerpávající seznam podporovaných zařízení s Androidem najdete v článku [podporované operační systémy a prohlížeče v Intune](https://docs.microsoft.com/intune/fundamentals/supported-devices-browsers#supported-samsung-knox-standard-devices). Pokud zařízení není v seznamu uvedeno, obraťte se na výrobce zařízení nebo se obraťte na pracovníky podpory.
 
 > [!Note]
 > Microsoft spolupracuje s výrobci, aby vyřešil případné problémy, které při testování vyhledáme, nebo jestli si uživatelé nahlásí. Tento článek aktualizujeme vždy, když jsou k dispozici nové informace.

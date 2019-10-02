@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6a545bff8624f4447ca9805aecf6d4d288fe4314
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 6f37e5c8d700d33e368966c8c3c31abd4f42d3b9
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239522"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71721190"
 ---
 # <a name="enable-code-integrity"></a>Povolit integritu kódu
 
@@ -35,7 +35,7 @@ Pokud jste identifikovali jako pokročilého uživatele zařízení a chcete si 
 
 ## <a name="additional-resources-for-it-administrators"></a>Další zdroje informací pro správce IT
 
-Pokud jste správce Intune a chcete získat další informace o nastavení dodržování předpisů pro stav zařízení v Intune, přečtěte si téma [Přidání zásad dodržování předpisů pro zařízení s Windows 10 v Intune](https://docs.microsoft.com/intune/compliance-policy-create-windows). Podrobné informace o akcích dodržování předpisů, které můžete provádět v Intune, najdete v tématu [CSP pro HealthAttestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+Pokud jste správce Intune a chcete získat další informace o nastavení dodržování předpisů pro stav zařízení v Intune, přečtěte si téma [Přidání zásad dodržování předpisů pro zařízení s Windows 10 v Intune](https://docs.microsoft.com/intune/protect/compliance-policy-create-windows.md). Podrobné informace o akcích dodržování předpisů, které můžete provádět v Intune, najdete v tématu [CSP pro HealthAttestation](https://docs.microsoft.com/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## <a name="next-steps"></a>Další kroky
 

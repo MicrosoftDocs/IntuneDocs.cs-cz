@@ -18,12 +18,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 22bdb41d8af69ed7e52ee3bcbc7775ac1d6768a6
-ms.sourcegitcommit: 6a946a055a2014e00a4ca9d71986727a4ebbc777
+ms.openlocfilehash: 24e597d6dbfbfe399422c3e1679f675c9525abcd
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71239402"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71720984"
 ---
 # <a name="get-a-recovery-key-for-a-macos-device"></a>Získání obnovovacího klíče pro zařízení macOS
 
@@ -43,14 +43,14 @@ Tato možnost je dostupná jenom pro zařízení, která byla zašifrovaná vaš
 
     Z bezpečnostních důvodů se klíč po pěti minutách ztratí. Pokud chcete klíč znovu zobrazit, vyberte **získat obnovovací klíč**.
 
-Pokud se klíč nenajde, ale vaše zařízení je správně zašifrované, obraťte se na pracovníky podpory vaší organizace. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Pokud se klíč nenajde, ale vaše zařízení je správně zašifrované, obraťte se na pracovníky podpory vaší organizace. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## <a name="it-pro-support"></a>Podpora IT pro
 
-Pokud jste pracovníkem podpory IT a chcete nakonfigurovat a spravovat šifrování trezoru pro zařízení macOS, přečtěte si téma [použití šifrování zařízení s Intune](https://docs.microsoft.com/intune/encrypt-devices).
+Pokud jste pracovníkem podpory IT a chcete nakonfigurovat a spravovat šifrování trezoru pro zařízení macOS, přečtěte si téma [použití šifrování zařízení s Intune](https://docs.microsoft.com/intune/protect/encrypt-devices.md).
 
 ## <a name="next-steps"></a>Další kroky
 
 Zjistěte, co dalšího můžete dělat na webu Portál společnosti. Seznam akcí najdete v tématu věnovaném [použití portál společnosti Intune webu](using-the-intune-company-portal-website.md) .  
 
-Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Ještě potřebujete pomáhat? Obraťte se na pracovníky podpory IT. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

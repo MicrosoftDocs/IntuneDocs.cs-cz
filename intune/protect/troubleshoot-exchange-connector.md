@@ -1,0 +1,55 @@
+---
+title: Řešení problémů s konektorem Exchange
+titleSuffix: Microsoft Intune
+description: Naučte se řešit potíže s místním Intune Exchange Connectorem.
+keywords: ''
+author: brenduns
+ms.author: brenduns
+manager: dougeby
+ms.date: 06/18/2018
+ms.topic: troubleshooting
+ms.service: microsoft-intune
+ms.localizationpriority: medium
+ms.technology: ''
+ms.assetid: a7e3c742-295b-40bb-9afa-17f243062500
+ms.reviewer: ''
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 217241ab4cead7f1087fe5bf6128cbf3dadb6ee2
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71729430"
+---
+# <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>Řešení potíží s místním Intune Exchange Connectorem
+
+V tomto článku se dozvíte, jak řešit problémy spojené s místním Intune Exchange Connectorem.
+
+## <a name="steps-for-checking-the-connector-configuration"></a>Postup kontroly konfigurace konektoru 
+
+Zkontrolujte [nastavení místního Intune Exchange Connectoru](exchange-connector-install.md), abyste ověřili jeho správnou konfiguraci. V tomto článku jsou popsané nejčastější problémy. Opravte, co je potřeba, a podívejte se, jestli se tím problém vyřešil.
+
+- V dialogovém okně Microsoft Intune Exchange Connectoru zkontrolujte, že jste zadali uživatelský účet s příslušným oprávněním ke spuštění [požadovaných rutin pro Windows PowerShell Exchange](exchange-connector-install.md#exchange-cmdlet-requirements).
+- Povolte oznámení a zadejte účet oznámení.
+- Při konfiguraci Exchange Connectoru zadejte server pro klientský přístup (CAS), který je co nejblíže serveru hostujícímu Exchange Connector. Mezi serverem pro klientský přístup (CAS) a Exchange Connectorem dochází při komunikaci k latenci, která může zpožďovat zjišťování zařízení. Platí to zejména při použití služby Exchange Online Dedicated.
+- Uživatel s nově zaregistrovaným zařízením může mít zpomalený přístup, dokud se Exchange Connector nesynchronizuje se serverem pro klientský přístup k Exchange. Úplná synchronizace probíhá jednou denně a rozdílová (rychlá) synchronizace probíhá několikrát denně.  Pokud chcete minimalizovat zpoždění, můžete [ručně vynutit rychlou synchronizaci nebo úplnou synchronizaci](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
+ 
+## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Server Exchange nezjistil zařízení s Exchange ActiveSync
+[Monitorujte aktivitu Exchange Connectoru](exchange-connector-install.md#on-premises-exchange-connector-high-availability-support), abyste zjistili, jestli se synchronizuje s Exchange serverem. Pokud od připojení zařízení proběhla úplná nebo rychlá synchronizace, podívejte se na jiné možné problémy, které jsou uvedené níže. Pokud synchronizace neproběhla, shromážděte synchronizační protokoly a připojte je k žádosti o podporu.
+
+- Ověřte, že uživatelé mají licenci Intune, jinak Exchange Connector jejich zařízení nezjistí.
+- Pokud se primární adresa SMTP uživatele liší od hlavního názvu uživatele (UPN) v Azure Active Directory (Azure AD), nezjistí Exchange Connector zařízení daného uživatele. Tento problém vyřešíte tím, že opravíte primární adresu SMTP.
+- Pokud máte ve svém prostředí jak poštovní server Exchange 2010, tak Exchange 2013, doporučujeme namířit Exchange Connector na server pro klientský přístup k Exchange 2013. Pokud je Exchange Connector nastaven na komunikaci se serverem pro klientský přístup k Exchange 2010, nezjistí Exchange Connector zařízení uživatelů Exchange 2013. 
+- V prostředích Exchange Online Dedicated musíte při počátečním nastavení nasměrovat Exchange Connector na server pro klientský přístup (CAS) k Exchange 2013 (ne na server pro klientský přístup k Exchange 2010), protože při provádění rutin PowerShell bude Exchange Connector komunikovat jenom s tímto serverem CAS.
+
+
+## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>Získání dalších dat k Exchange Connectoru pomocí PowerShellu
+- Pokud chcete získat seznam všech mobilních zařízení pro poštovní schránku, použijte `Get-ActiveSyncDeviceStatistics -mailbox mbx`.
+- Pokud chcete získat seznam adres SMTP pro poštovní schránku, použijte `Get-Mailbox -Identity user | select emailaddresses | fl`.
+- Pokud chcete získat podrobné informace o stavu přístupu zařízení, použijte `Get-CASMailbox <upn> | fl`.
+
+## <a name="next-steps"></a>Další kroky
+Pokud vám tyto informace nepomohly, můžete také [získat podporu pro Microsoft Intune](../fundamentals/get-support.md).
