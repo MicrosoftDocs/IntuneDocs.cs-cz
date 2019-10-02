@@ -7,18 +7,18 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 90c770fec5bd9456151e601188254a3a022cd13f
-ms.sourcegitcommit: 62c41976c4da43b36015b715bc255397ebb8c6ad
+ms.openlocfilehash: fa251a0edd943d566849b138af5cbab0be248a53
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71279900"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71731758"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune. 
 
 
 ### <a name="decreasing-support-for-android-device-administrator"></a>Snížení podpory pro správce zařízení s Androidem 
-Správce zařízení s Androidem (někdy označovaný jako "starší verze" správy Androidu a vydaný s Androidem 2,2) je způsob, jak spravovat zařízení s Androidem. Vylepšené funkce správy jsou teď ale k dispozici v [Androidu Enterprise](../connect-intune-android-enterprise.md) (vydané s androidem 5,0). V úsilí o přechod na moderní, bohatou a bezpečnější správu zařízení bude Google v nových verzích Androidu snížit podporu Správce zařízení.
+Správce zařízení s Androidem (někdy označovaný jako "starší verze" správy Androidu a vydaný s Androidem 2,2) je způsob, jak spravovat zařízení s Androidem. Vylepšené funkce správy jsou teď ale k dispozici v [Androidu Enterprise](../enrollment/connect-intune-android-enterprise.md) (vydané s androidem 5,0). V úsilí o přechod na moderní, bohatou a bezpečnější správu zařízení bude Google v nových verzích Androidu snížit podporu Správce zařízení.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
 Vzhledem k těmto změnám od společnosti Google budou mít uživatelé Intune tyto možnosti: 
@@ -66,11 +66,12 @@ Nemusíte provádět žádnou akci, ale v případě potřeby můžete zvážit 
 #### <a name="additional-information"></a>Další informace 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Plán změny: Nové nastavení aktualizací Windows v Intune <!-- 4464404 -->
-Od verze Intune do Intune nebo 1908 přidáváme nové "nastavení termínu", které můžete nakonfigurovat místo nastavení "Umožněte uživateli, aby se restartoval". V uživatelském rozhraní v 1909 nebo září si plánujeme zakázat nastavení, které je potřeba restartovat, a pak je úplně odebrat z konzoly do konce října. 
+### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Plánování změn: nové nastavení aktualizací Windows v Intune <!-- 4464404 -->
+Od verze Intune do Intune nebo 1908 přidáváme nové "nastavení termínu", které můžete nakonfigurovat místo nastavení "Umožněte uživateli, aby se restartoval". V uživatelském rozhraní v 1909 nebo září si plánujeme zakázat nastavení, které je potřeba restartovat, a pak je úplně odebrat z konzoly do konce října.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud spravujete zařízení s Windows 10 ve vašem prostředí: 
+Pokud spravujete zařízení s Windows 10 ve vašem prostředí:
+
 - V případě aktualizace Intune nebo 1908 se v konzole zobrazí nové nastavení termínu, kromě starého nastavení, které je potřeba restartovat.
 - Když jsou tato stará i nová nastavení nakonfigurovaná, hodnoty nastavení konečného termínu přepíšou hodnoty nastavení, které je potřeba restartovat.
 - Nastavení konečného termínu v konzole nástroje v aktualizaci 1910 nahradí možnost "povolení uživatele k restartování (v tomto prostředí)".
@@ -78,20 +79,21 @@ Pokud spravujete zařízení s Windows 10 ve vašem prostředí:
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
 Začněte používat nastavení konečného termínu v 1908, a to tak, že je nakonfigurujete s požadovanými hodnotami. Jakmile to budete mít, můžete nastavit nastavení provedeného restartování na Nenakonfigurováno pro přípravu na odebrání těchto nastavení z konzoly v říjnu.
 
-V případě potřeby aktualizujte svou dokumentaci a skripty pro automatizaci. 
+V případě potřeby aktualizujte svou dokumentaci a skripty pro automatizaci.
 
 Než odebereme nastavení provedeného restartování, budeme vás udržovat do centra zpráv, abychom vám aktualizovali a vyúčtovali připomenutí.
 
-### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Plán změny: Sada Intune App SDK a zásady ochrany aplikací pro Android, které se přesunou na podporu Android 5,0 a novějších v říjnu <!--4911065 -->
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Plánování změn: sada Intune App SDK a zásady ochrany aplikací pro Android, které se přesunou na podporu Android 5,0 a novějších v říjnu <!--4911065 -->
 Intune se v říjnu přesune na podporu Androidu 5. x (Lupa) a vyšší. Aktualizujte všechny zabalené aplikace pomocí nejnovější sady Intune App SDK a aktualizujte svá zařízení.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud nepoužíváte nebo plánujete použít sadu SDK nebo aplikaci pro Android, tato změna vás nijak neovlivní. Pokud používáte sadu Intune App SDK, nezapomeňte aktualizovat na nejnovější verzi a také aktualizovat zařízení na Android 5. x a vyšší. Pokud aktualizace neaktualizujete, nebudou aplikace dostávat aktualizace a kvalita jejich prostředí se v průběhu času sníží. 
+Pokud nepoužíváte nebo plánujete použít sadu SDK nebo aplikaci pro Android, tato změna vás nijak neovlivní. Pokud používáte sadu Intune App SDK, nezapomeňte aktualizovat na nejnovější verzi a také aktualizovat zařízení na Android 5. x a vyšší. Pokud aktualizace neaktualizujete, nebudou aplikace dostávat aktualizace a kvalita jejich prostředí se v průběhu času sníží.
 
 Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kterých běží Android verze 4. x. Pokud máte jedno z těchto zařízení, proveďte příslušné kroky, abyste se ujistili, že toto zařízení bude podporovat Android verze 5,0 nebo vyšší nebo že bude nahrazeno zařízením, které podporuje Android verze 5,0 nebo novější. Tento seznam není vyčerpávající pro všechna zařízení, která může být potřeba vyhodnotit:
+
 - Samsung SM – T561  
-- Samsung SM – T365 
-- Samsung GT – I9195 
+- Samsung SM – T365
+- Samsung GT – I9195
 - Samsung SM – G800F
 - Samsung SM – G357FZ
 - Společnost Motorola XT1080
@@ -100,7 +102,6 @@ Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kter
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
-
 
 ### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7. <!-- 3042987 -->
 Protože jsme se poslali v MC148476, který byl vydán posledních září 2018, a znovu v MC176794 zpátky v březnu 2019, Windows 7 dosáhne konce rozšířené podpory 14. ledna 2020. V tuto chvíli Intune vyřadí podporu pro zařízení s Windows 7, takže můžeme zaměřit naši investici na podporu novějších technologií a zajistit Skvělé nové prostředí koncových uživatelů. Po tomto datu se v Intune už nebude k dispozici technická pomoc a automatické aktualizace, které vám pomůžou chránit počítač s Windows 7. Microsoft důrazně doporučuje přejít na Windows 10 před lednem 2020, aby nedocházelo k situaci, kdy potřebujete službu nebo podporu, která už není dostupná. Další informace o životním cyklu podpory pro Windows [najdete tady](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).

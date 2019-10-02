@@ -1,0 +1,94 @@
+---
+title: Jak z aplikací vymazat jenom firemní data
+titleSuffix: Microsoft Intune
+description: Naučte se, jak selektivně vymazat jenom firemní data z aplikací spravovaných přes Intune pomocí Microsoft Intune.
+keywords: ''
+author: Erikre
+ms.author: erikre
+manager: dougeby
+ms.date: 07/08/2019
+ms.topic: conceptual
+ms.service: microsoft-intune
+ms.localizationpriority: high
+ms.technology: ''
+ms.assetid: 42605e6e-5b84-44ff-b86e-346ea123b53e
+ms.reviewer: mghadial
+ms.suite: ems
+search.appverid: MET150
+ms.custom: intune-azure
+ms.collection: M365-identity-device-management
+ms.openlocfilehash: 212fe3294a40ce006e4e60e4ce4f0cf8881159e4
+ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71731206"
+---
+# <a name="how-to-wipe-only-corporate-data-from-intune-managed-apps"></a>Jak z aplikací spravovaných pomocí Intune vymazat jenom firemní data
+
+[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+
+V případě ztráty nebo odcizení zařízení nebo když zaměstnanec opouští společnost, je vhodné se ujistit, že byla ze zařízení odebraná firemní data. Nemusí ale být vhodné odebrat ze zařízení osobní data, zvlášť jestli je to zařízení, které vlastní zaměstnanec.
+
+>[!NOTE]
+> Platformy iOS, Android a Windows 10 jsou jediné platformy, které jsou aktuálně podporované pro mazání podnikových dat ze spravovaných aplikací Intune. Spravované aplikace Intune jsou aplikace, které obsahují sadu Intune APP SDK a mají licencovaný uživatelský účet pro vaši organizaci. Nasazení zásad ochrany aplikací není nutné k povolení selektivního vymazání aplikace.
+
+Pokud chcete selektivně odebrat data firemních aplikací, vytvořte žádost o vymazání pomocí kroků v tomto tématu. Po dokončení žádosti se při příštím spuštění aplikace na zařízení z aplikace odeberou firemní data. Kromě vytvoření žádosti o vymazání můžete nakonfigurovat selektivní vymazání dat organizace jako novou akci, když nejsou splněny podmínky nastavení přístupu zásad ochrany aplikací. Tato funkce umožňuje automaticky chránit a odebírat citlivá data organizace z aplikací na základě předem nakonfigurovaných kritérií.
+
+>[!IMPORTANT]
+> Kontakty synchronizované přímo z aplikace do nativního adresáře se odeberou. Kontakty synchronizované z nativního adresáře do dalšího externího zdroje není možné vymazat. V současnosti to platí jen pro aplikaci Microsoft Outlook.
+
+## <a name="deployed-wip-policies-without-user-enrollment"></a>Nasazené zásady nedokončené výroby bez registrace uživatele
+Zásady Windows Information Protection (NV) se dají nasadit, aniž by uživatelé MDM museli zaregistrovat svoje zařízení s Windows 10. Tato konfigurace umožňuje společnostem chránit jejich podnikové dokumenty na základě konfigurace WIP a zároveň umožňuje uživatelům uchovat si správu svých vlastních zařízení s Windows. Jakmile jsou dokumenty chráněny zásadami WIP, mohou být chráněná data selektivně vymazána správcem služby Intune. Výběrem uživatele a zařízení a odesláním žádosti o vymazání se veškerá data chráněná prostřednictvím zásad WIP stanou nepoužitelnými. Z Intune v Azure Portal vyberte **klientská aplikace** > **selektivní vymazání aplikace**. Další informace najdete v článku [Vytvoření a nasazení zásady ochrany aplikací WIP (Windows Information Protection) u Intune](windows-information-protection-policy-create.md).
+
+## <a name="create-a-wipe-request"></a>Vytvoření žádosti o vymazání
+
+1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com).
+
+2. Zvolte **Všechny služby**, do textového pole filtru zadejte **Intune** a vyberte **Intune**. Otevře se podokno Intune. Zvolte **Klientské aplikace**.
+
+    ![Snímek obrazovky s podoknem Microsoft Intune](./media/apps-selective-wipe/apps-selective-wipe01.png)
+
+3. V podokně **Klientské aplikace** zvolte **Selektivní vymazání aplikace**.
+
+4. Zvolte **Nová žádost o vymazání**. Otevře se podokno **Nová žádost o vymazání**.
+
+    ![Snímek obrazovky s podoknem Nová žádost o vymazání](./media/apps-selective-wipe/AzurePortal_MAM_NewWipeRequest.png)
+
+5. Zvolte uživatele a potom **Vybrat**. Potom vyberte uživatele, jehož data aplikace chcete vymazat.
+
+6. Dále zvolte v podokně **Nová žádost o vymazání** možnost **Zařízení**. Tím se otevře podokno **Vybrat zařízení** se seznamem všech zařízení přidružených k vybranému uživateli. Jeho součástí jsou dva sloupce: jeden s názvem zařízení, což je popisný název definovaný uživatelem, a jeden s typem zařízení, který označuje jeho platformu. Vyberte zařízení, které chcete vymazat.
+
+7. Teď jste zpátky v podokně **Nová žádost o vymazání**. Pokud chcete vytvořit žádost o vymazání, vyberte **OK**.
+
+Služba vytvoří a sleduje samostatnou žádost o vymazání pro každou chráněnou aplikaci na zařízení a uživatele přidruženého k této žádosti o vymazání.
+
+## <a name="monitor-your-wipe-requests"></a>Monitorování žádostí o vymazání
+
+Můžete získat souhrnnou sestavu, která zobrazuje celkový stav žádostí o vymazání a také počet nevyřízených a neúspěšných žádostí. Další podrobnosti získáte tímto postupem:
+
+1. V podokně **Klientské aplikace – Selektivní vymazání aplikace** si můžete prohlédnout seznam žádostí seskupených po uživatelích. Protože systém vytvoří žádost o vymazání pro každou chráněnou aplikaci spuštěnou na zařízení, může být u uživatele více žádostí. Stav označuje, jestli je žádost o vymazání **nevyřízená**, **selhala** nebo byla **úspěšná**.
+
+    ![Snímek obrazovky se stavem žádosti o vymazání v podokně Selektivní vymazání aplikace](./media/apps-selective-wipe/wipe-request-status-1.png)
+
+Uvidíte také název zařízení a jeho typ, což vám pomůže při orientaci v sestavách.
+
+>[!IMPORTANT]
+> Aby k vymazání došlo, musí uživatel otevřít aplikaci. Po zadání požadavku může vymazání samotné trvat až 30 minut.
+
+## <a name="delete-a-wipe-request"></a>Odstranění žádosti o vymazání
+
+Vymazání v čekajícím stavu se zobrazují, dokud je ručně neodstraníte. Ruční odstranění žádosti o vymazání:
+
+1. Přejděte do podokna **Klientské aplikace – Selektivní vymazání aplikace**.
+
+2. V seznamu klikněte pravým tlačítkem na žádost o vymazání, kterou chcete odstranit, a zvolte **Odstranit žádost o vymazání**.
+
+    ![Snímek obrazovky se seznamem žádostí o vymazání v podokně Selektivní vymazání aplikace](./media/apps-selective-wipe/delete-wipe-request.png)
+
+3. Zobrazí se výzva k potvrzení odstranění. Zvolte **Ano** nebo **Ne** a klikněte na **OK**.
+
+## <a name="see-also"></a>Související témata
+[Zásady ochrany aplikací](app-protection-policy.md)
+
+[Co je správa aplikací?](app-management.md)
