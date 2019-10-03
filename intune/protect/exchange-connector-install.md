@@ -1,12 +1,12 @@
 ---
-title: Nastavení místního Exchange Connectoru pro Microsoft Intune
+title: Nastavit Microsoft Intune Exchange Connector
 titleSuffix: Microsoft Intune
-description: Pomocí místního konektor Exchange můžete spravovat přístup zařízení k poštovním schránkám Exchange na základě registrace do Intune a Exchange Active Sync (EAS).
+description: Pomocí místního Intune Exchange Connectoru můžete spravovat přístup zařízení k poštovním schránkám Exchange na základě registrace a Exchange Active Sync (EAS) služby Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2019
+ms.date: 09/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,46 +17,50 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26b6b884d2a21b15e2946e4ea591054bd478fa7b
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 12c190cad923569e15fd32fe7e5f7f6bd2a45302
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729226"
+ms.locfileid: "71814130"
 ---
-# <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Nastavení místního Exchange Connectoru Intune v Microsoft Intune
-Informace v tomto článku vám pomůžou nainstalovat a potom monitorovat konektor Exchange Active Sync On-Premises Connector pro Intune.  Pomocí místního Exchange Connectoru v Intune se [zásadami podmíněného přístupu povolíte nebo zablokujete přístup k místním poštovním schránkám Exchange](conditional-access-exchange-create.md). 
+# <a name="set-up-the-on-premises-intune-exchange-connector"></a>Nastavení místního Intune Exchange Connectoru
+V zájmu ochrany přístupu k Exchangi se Intune spoléhá na místní komponentu, která se označuje jako Microsoft Intune Exchange Connector. V některých umístěních konzoly Intune se to taky označuje jako *On-Premises Connector Exchange ActiveSync* . Informace v tomto článku vám pomůžou nainstalovat a potom monitorovat konektor Intune Exchange Connector, který používáte se [zásadami podmíněného přístupu, abyste povolili nebo zablokovali přístup k místním poštovním schránkám Exchange](conditional-access-exchange-create.md). 
+
+Konektor se nainstaluje a spustí na místním hardwaru a zodpovídá za zjišťování zařízení, která se připojují k Exchangi, předávání informací o zařízení službě Intune a povolení nebo blokování zařízení na základě toho, jestli jsou zařízení zaregistrovaná. a kompatibilní. Tato komunikace se provádí pomocí protokolu HTTPS.
 
 Když se zařízení pokusí o přístup k místnímu Exchangi, protokol Exchange Connector Maps Exchange Active Sync (EAS) záznamů v Exchange serveru na Intune, aby kontroloval registraci zařízení v Intune a dodržoval vaše zásady dodržování předpisů pro zařízení. V závislosti na zásadách podmíněného přístupu může být zařízení povolený přístup nebo blokováno. Další informace najdete v tématu [co jsou běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md) .
 
-Intune podporuje instalaci několika místních konektorů Exchange na předplatné. Pokud máte více než jednu místní organizaci Exchange, můžete pro každý z nich nastavit samostatný konektor. Je však možné nainstalovat pouze jeden konektor pro použití v jednotlivých organizacích Exchange. 
+Operace *zjišťování* i *povolování i blokování* jsou prováděny pomocí standardních rutin prostředí Exchange PowerShell. Tyto oOperations používají účet služby, který je k dispozici při počáteční instalaci softwaru Exchange Connector. 
+
+Intune podporuje instalaci více konektorů Intune Exchange pro každé předplatné. Pokud máte více než jednu místní organizaci Exchange, můžete pro každý z nich nastavit samostatný konektor. Je však možné nainstalovat pouze jeden konektor pro použití s každou jednotlivou organizací Exchange.  
 
 V následujícím seznamu najdete obecné kroky pro nastavení připojení, které Intune umožňuje komunikaci s místním Exchange serverem:
 
-1. Stáhněte si místní Exchange Connector Intune z portálu Intune.
-2. Nainstalujte a nakonfigurujte Exchange Connector na počítači v místní organizaci Exchange.
-3. Ověřte připojení k Exchangi.
+1. Stáhněte si konektor On-Premises Connector z portálu Intune.
+2. Nainstalujte a nakonfigurujte Exchange Connector na počítači v organizaci místního Exchange.
+3. Ověřte připojení k systému Exchange.
 4. Tento postup opakujte pro každou další organizaci Exchange, kterou chcete připojit k Intune.
 
-## <a name="intune-on-premises-exchange-connector-requirements"></a>Požadavky na místní Exchange Connector pro Intune
+## <a name="intune-exchange-connector-requirements"></a>Požadavky Intune Exchange Connectoru
+
 Budete potřebovat účet s licencí služby Intune, kterou může konektor použít pro připojení k Exchangi. Účet se zadává při instalaci konektoru.  
 
-V následující tabulce jsou uvedené požadavky na počítač, na který instalujete místní Exchange Connector.  
+V následující tabulce jsou uvedené požadavky na počítač, na který nainstalujete Intune Exchange Connector.  
 
 |  Požadavek  |   Další informace     |
 |---------------|------------------------|
-|  operační systémy;        | Intune podporuje místní Exchange Connector na počítači, na kterém běží kterákoli edice systému Windows Server 2008 SP2 (64bitová verze), Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporován v žádné instalaci jádra serveru.  |
-| Microsoft Exchange          | Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější, nebo starší Exchange Online Dedicated. Pokud chcete zjistit, jestli je vaše prostředí Exchange Online Dedicated v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů. |
+|  Operační systémy        | Intune podporuje Intune Exchange Connector na počítači, na kterém běží libovolná edice Windows serveru 2008 SP2 64-bit, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2 nebo Windows Server 2016.<br /><br />Konektor není podporován v žádné instalaci jádra serveru.  |
+| Microsoft Exchange          | Místní konektory vyžadují Microsoft Exchange 2010 SP3 nebo novější nebo starší Exchange Online vyhrazené. Pokud chcete zjistit, jestli je vyhrazené prostředí Exchange Online v <strong>nové</strong> nebo <strong>starší</strong> konfiguraci, kontaktujte svého správce účtů. |
 | Autorita pro správu mobilních zařízení           | [Nastavte autoritu pro správu mobilních zařízení na Intune](../fundamentals/mdm-authority-set.md). |
-| Hardware              | Počítač, na který nainstaluje konektor, musí mít minimálně 1,6GHz procesor s 2 GB paměti RAM a 10 GB volného místa na disku. |
-|  Synchronizace se službou Active Directory             | Než použijete konektor k připojení Intune ke svému Exchange Serveru, je potřeba [nastavit synchronizaci služby Active Directory](../fundamentals/users-add.md) tak, aby byli místní uživatelé a skupiny zabezpečení synchronizovaní s vaší instancí Azure Active Directory. |
-| Další software         | Počítač hostující konektor musí mít úplnou instalaci rozhraní Microsoft .NET Framework 4.5 a musí na něm být nainstalované prostředí Windows PowerShell 2.0. |
-| Síť               | Počítač, na který jste nainstalovali konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall nebo proxy servery přes porty 80 a 443. Mezi domény používané službou Intune patří tyto: manage.microsoft.com, &#42;manage.microsoft.com a &#42;.manage.microsoft.com. |
+| Hardware              | Počítač, na který konektor instalujete, vyžaduje procesor 1,6 GHz s 2 GB paměti RAM a 10 GB volného místa na disku. |
+|  Synchronizace služby Active Directory             | Než budete moct pomocí konektoru připojit Intune k Exchange serveru, musíte [nastavit synchronizaci služby Active Directory](../fundamentals/users-add.md) tak, aby místní uživatelé a skupiny zabezpečení byly synchronizované s vaší instancí Azure Active Directory. |
+| Další software         | V počítači, který je hostitelem konektoru, musí být nainstalovaná úplná instalace Microsoft .NET Framework 4,5 a prostředí Windows PowerShell 2,0. |
+| Síť               | Počítač, na který instalujete konektor, musí být v doméně, která má vztah důvěryhodnosti k doméně hostující váš Exchange Server.<br /><br />Počítač vyžaduje konfigurace, které mu umožňují přístup ke službě Intune přes brány firewall a proxy servery přes porty 80 a 443. Mezi domény používané v Intune patří: <br> **-** Manage.Microsoft.com <br> **-** &#42;Manage.Microsoft.com<br> **-** &#42;. manage.Microsoft.com <br><br> Intune Exchange Connector komunikuje s následujícími službami: <br> **-** Služba Intune: port HTTPS 443 <br> **-** Server Exchange Client Access Server (CAS): port služby WinRM 443<br> **-** Exchange pro automatické 443<br> **-** WebService Exchange (EWS) 443  |
 
-### <a name="exchange-cmdlet-requirements"></a>Požadavky rutin systému Exchange
+### <a name="exchange-cmdlet-requirements"></a>Požadavky rutin Exchange
 
-Vytvořte uživatelský účet služby Active Directory, který bude používat místní Exchange Connector. Tento účet musí mít oprávnění ke spouštění těchto požadovaných rutin prostředí Windows PowerShell:
-
+Vytvořte uživatelský účet služby Active Directory, který bude používán konektorem Intune Exchange Connector. Tento účet musí mít oprávnění ke spuštění následujících rutin Windows PowerShellu pro Exchange:  
 
 - Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
 - Get-CasMailbox, Set-CasMailbox
@@ -71,97 +75,100 @@ Vytvořte uživatelský účet služby Active Directory, který bude používat 
 - Set-ADServerSettings
 - Get-Command
 
-## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku místního Exchange Connectoru
+## <a name="download-the-intune-exchange-connector-software-installation-package"></a>Stažení instalačního balíčku softwaru Intune Exchange Connector
 
-1. V podporovaném operačním systému Windows Server pro místní Exchange Connector otevřete web [Azure Portal](https://portal.azure.com) a přihlaste se uživatelským účtem, který je správcem místního Exchange Serveru a který má licenci k používání Exchange Serveru.
+1. Na Windows serveru, který podporuje Intune Exchange Connector, se přihlaste k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí uživatelského účtu, který je správcem místního Exchange serveru a který má licenci k používání Exchange serveru.
 
 2. Přejít na **Intune**@no__t přístup k**systému Exchange** 1  
 
 3. V části **Nastavení**zvolte **Exchange ActiveSync On-Premises Connector**a pak vyberte **Přidat**.
 
-4. Na stránce **Přidat konektor** vyberte **Stáhnout konektor On-Premises Connector**. Místní Exchange Connector je v komprimované složce (. zip), která se dá otevřít nebo Uložit. V dialogovém okně **Stažení souboru** vyberte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
+4. Na stránce **Přidat konektor** vyberte **Stáhnout konektor On-Premises Connector**. Intune Exchange Connector je v komprimované složce (. zip), která se dá otevřít nebo Uložit. V dialogovém okně **Stažení souboru** klikněte na **Uložit** a uložte komprimovanou složku do zabezpečeného umístění.
 
-    > [!IMPORTANT]
-    > Soubory ve složce místního Exchange Connectoru nepřejmenovávejte ani nepřesouvejte. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace Exchange Connectoru.
 
-## <a name="install-and-configure-the-intune-on-premises-exchange-connector"></a>Instalace a konfigurace místního Exchange Connectoru pro Intune
-Při instalaci místního Exchange Connectoru pro Intune použijte tento postup. Pokud máte více organizací Exchange, opakujte tento postup pro každý další Exchange Connector, který chcete nastavit.
+## <a name="install-and-configure-the-intune-exchange-connector"></a>Instalace a konfigurace Intune Exchange Connectoru
 
-1. V podporovaném operačním systému pro místní Exchange Connector extrahujte soubory v balíčku **Exchange_Connector_Setup.zip** do zabezpečeného umístění.
+Chcete-li nainstalovat Intune Exchange Connector, proveďte následující kroky. Pokud máte více organizací Exchange, opakujte tento postup pro každý další Exchange Connector, který chcete nastavit.
 
-2. Po extrahování souborů otevřete extrahovanou složku a poklikáním na **Exchange_Connector_Setup.exe** nainstalujte místní Exchange Connector.
+1. V podporovaném operačním systému pro Intune Exchange Connector extrahujte soubory v souboru **Exchange_Connector_Setup. zip** do zabezpečeného umístění.
+   > [!IMPORTANT]
+   > Neměňte název ani Nepřesouvat soubory, které se nacházejí ve složce Exchange_Connector_Setup. Přesunutí nebo přejmenování obsahu složky způsobí selhání instalace konektoru.
+
+2. Po extrahování souborů otevřete extrahovanou složku a dvojím kliknutím na **Exchange_Connector_Setup. exe** nainstalujte konektor.
 
    > [!IMPORTANT]
-   > Pokud cílová složka není v zabezpečeném umístění, měli byste po dokončení instalace místních konektorů odstranit soubor certifikátu **MicrosoftIntune.accountcert**.
+   > Pokud cílová složka není v zabezpečeném umístění, měli byste po dokončení instalace místních konektorů odstranit soubor certifikátu **MicrosoftIntune. accountcert** .
 
-3. V dialogovém okně **Microsoft Intune Exchange Connector** vyberte **On-premises Microsoft Exchange Server** nebo **Hostovaný Microsoft Exchange Server**.
+3. V dialogovém okně **Microsoft Intune Exchange Connector** vyberte možnost **místní Microsoft Exchange Server** nebo **hostovaný Microsoft Exchange Server**.
 
-   ![Obrázek znázorňující, kde vybrat typ Exchange Serveru](./media/exchange-connector-install/intune-sa-exchange-connector-config.png)
+   ![Obrázek znázorňující, kde zvolit typ serveru Exchange](./media/exchange-connector-install/intune-sa-exchange-connector-config.png)
 
-   V případě místního serveru Exchange zadejte název serveru nebo plně kvalifikovaný název domény serveru Exchange, který je hostitelem role **Server pro klientský přístup**.
+   V případě místního serveru Exchange zadejte název serveru nebo plně kvalifikovaný název domény serveru Exchange, který je hostitelem role **serveru klientský přístup** .
 
-   U hostovaného serveru Exchange zadejte adresu serveru Exchange. Adresu URL hostovaného serveru Exchange najdete takto:
+   U hostovaného serveru Exchange zadejte adresu serveru Exchange. Vyhledání adresy URL hostovaného serveru Exchange:
 
    1. Otevřete Outlook na webu pro Office 365.
 
-   2. Zvolte ikonu **?** vlevo nahoře a pak vyberte **O aplikaci**.
+   2. Vyberte **?** v levém horním rohu a pak vyberte **o**.
 
-   3. Najděte hodnotu **Externí nastavení POP**.
+   3. Vyhledejte hodnotu **externí server POP** .
 
-   4. Vyberte **Proxy server** a zadejte nastavení proxy serveru pro svůj hostovaný server Exchange.
-       1. Vyberte **Používat proxy server při synchronizaci informací mobilních zařízení**.
+   4. Zvolte **proxy server** a zadejte proxy server nastavení pro hostovaný Exchange Server.
+       1. Vyberte možnost **při synchronizaci informací mobilních zařízení použít proxy server**.
 
-       2. Zadejte **název proxy serveru** a **číslo portu** pro přístup na server.
+       2. Zadejte **proxy server název** a **číslo portu** , který se má použít pro přístup k serveru.
 
-       3. Pokud je potřeba zadat přihlašovací údaje uživatele pro přístup na proxy server, vyberte **Použít pověření k připojení k proxy serveru**. Zadejte **doménu\uživatele** a **heslo**.
+       3. Pokud je potřeba zadat přihlašovací údaje uživatele pro přístup k proxy server, vyberte **použít přihlašovací údaje pro připojení k proxy server**. Pak zadejte **doména \ uživatel** a **heslo**.
 
-       4. Vyberte **OK**.
+       4. Zvolte **OK**.
 
-4. Do polí **Uživatel (doména\uživatel)** a **Heslo** zadejte přihlašovací údaje potřebné k připojení k Exchange serveru. Účet, který zadáte, musí mít licenci k používání Intune. 
+4. Do polí **uživatel (doména \ Uživatel)** a **heslo** zadejte přihlašovací údaje, které jsou nezbytné pro připojení k serveru Exchange. Účet, který zadáte, musí mít licenci k používání Intune. 
 
-5. Zadejte přihlašovací údaje potřebné pro odesílání oznámení do poštovní schránky Exchange Serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel oznámení potřebuje poštovní schránku Exchange k odesílání oznámení e-mailem. Tato oznámení můžete nakonfigurovat díky zásadám podmíněného přístupu v Intune.  
+5. Zadejte potřebné přihlašovací údaje pro odesílání oznámení do poštovní schránky Exchange serveru uživatele. Tento uživatel může být vyhrazený jenom pro oznámení. Uživatel oznámení potřebuje poštovní schránku Exchange k odesílání oznámení e-mailem. Tato oznámení můžete nakonfigurovat pomocí zásad podmíněného přístupu v Intune.  
 
-   Zkontrolujte, že je na serveru Exchange pro klientský přístup nainstalovaná služba Automatická konfigurace a Webové služby systému Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
+   Ujistěte se, že je na serveru Exchange Client Access nakonfigurovaná služba automatické konfigurace a webové služby Exchange. Další informace najdete v tématu [Server pro klientský přístup](https://technet.microsoft.com/library/dd298114.aspx).
 
-6. Do pole **Heslo** zadejte heslo pro tento účet, aby měla služba Intune přístup k systému Exchange Server.
+6. Do pole **heslo** zadejte heslo pro tento účet, aby měl Intune přístup k systému Exchange Server.
 
    > [!NOTE]
    > Aby připojení proběhlo úspěšně, musí být účet, který používáte pro přihlášení ke klientovi, aspoň Správce služby Intune. Bez toho se zobrazí chyba připojení s chybou: "vzdálený server vrátil chybu: (400) chybný požadavek.
 
-7. Vyberte **Připojit**.
+7. Zvolte **Připojit**.
 
    > [!NOTE]
-   > Konfigurace připojení může zabrat několik minut.
+   > Konfigurace připojení může trvat několik minut.
 
-Exchange Connector během konfigurace uloží vaše nastavení proxy serveru, aby byl zajištěný přístup na internet. Pokud se vaše nastavení proxy serveru změní, budete muset konektor Exchange Connector překonfigurovat tak, aby na konektoru Exchange Connector mohl použít aktualizované nastavení proxy serveru.
+V průběhu konfigurace konektor Exchange Connector ukládá vaše nastavení proxy serveru, aby mohl mít přístup k Internetu. Pokud se vaše nastavení proxy serveru změní, překonfigurujte Exchange Connector tak, aby na konektoru Exchange použili aktualizované nastavení proxy serveru.
 
-Až Exchange Connector připojení nastaví, mobilní zařízení přidružená k uživatelům spravovaným v Exchangi se automaticky synchronizují a přidají se do Exchange Connectoru. Dokončení této synchronizace může chvíli trvat.
+Jakmile Exchange Connector připojení nastaví, mobilní zařízení přidružená k uživatelům spravovaným v Exchangi se automaticky synchronizují a přidají do konektoru Exchange. Dokončení této synchronizace může chvíli trvat.
 
 > [!NOTE]
-> Pokud máte nainstalovaný místní Exchange Connector a odstraníte připojení k Exchangi, musíte místní Exchange Connector z počítače, na kterém je nainstalovaný, odinstalovat.
+> Pokud jste nainstalovali Intune Exchange Connector a odstraníte připojení k systému Exchange, musíte konektor z počítače, na kterém je nainstalovaný, odinstalovat.
 
 
 
-## <a name="install-connectors-for-multiple-exchange-organizations"></a>Instalace konektorů pro více organizací Exchange
-Intune podporuje více místních Exchange Connectorů pro každé předplatné. Pro tenanta s více organizacemi Exchange můžete pro každou organizaci Exchange nastavit konektor, ale jenom jeden konektor pro každou jednotlivou organizaci. 
+## <a name="install-connectors-for-multiple-exchange-organizations"></a>Instalace konektorů pro několik organizací Exchange
+
+Intune podporuje několik konektorů Intune Exchange pro každé předplatné. Pro tenanta s více organizacemi Exchange můžete pro každou organizaci Exchange nastavit konektor, ale jenom jeden konektor pro každou jednotlivou organizaci. 
 
 Pokud budete instalovat konektory pro připojení k více organizacím systému Exchange, Stáhněte složku. zip jednou a pak znovu použijte stejné stažení pro každý konektor, který nainstalujete. Pro každý další konektor použijte postup v předchozí části k extrakci a spuštění instalačního programu na serveru v organizaci Exchange.
 
 Funkce pro vysokou dostupnost, monitorování a ruční synchronizaci popsané v následujících oddílech jsou podporovány pro každou organizaci Exchange, která se připojuje k Intune.
 
-## <a name="on-premises-exchange-connector-high-availability-support"></a>Podpora vysoké dostupnosti místního konektoru Exchange 
-Vysoká dostupnost pro místní Exchange Connector znamená, že pokud se server Exchange Client Access (CAS), který konektor používá, stane nedostupným, konektor může přepnout na používání různých certifikačních autorit pro tuto organizaci Exchange. Samotný Exchange Connector nepodporuje vysokou dostupnost. Pokud konektor selhává, neexistuje žádné automatické převzetí služeb při selhání a tento konektor musíte nahradit [instalací nového konektoru](#reinstall-the-on-premises-exchange-connector). 
+## <a name="on-premises-intune-exchange-connector-high-availability-support"></a>Podpora vysoké dostupnosti místní služby Intune Exchange Connector 
+
+Vysoká dostupnost konektoru On-Premises Connector znamená, že pokud se server Exchange Client Access (CAS), který konektor používá, stane nedostupným, konektor může přepnout na používání různých certifikačních autorit pro tuto organizaci Exchange. Exchange Connector sám nepodporuje vysokou dostupnost. Pokud konektor selhává, neexistuje žádné automatické převzetí služeb při selhání a tento konektor je potřeba nahradit [instalací nového konektoru](#reinstall-the-intune-exchange-connector). 
 
 Aby bylo možné provést převzetí služeb při selhání, poté, co konektor vytvoří úspěšné připojení k Exchangi pomocí zadaných certifikačních autorit, vyhledá konektor další servery CAS pro tuto organizaci Exchange. Znalost dalších servery CAS umožňuje konektoru převzetí služeb při selhání pro jiné certifikační autority, pokud je k dispozici, dokud nebudou primární CA k dispozici. Ve výchozím nastavení je povoleno zjišťování dalších servery CAS. Převzetí služeb při selhání můžete vypnout pomocí následujícího postupu:  
 1. Na serveru, na kterém je nainstalovaný Exchange Connector, navštivte%*Složka ProgramData*% \ Microsoft\Windows Intune Exchange Connector. 
-2. V textovém editoru otevřete soubor **OnPremisesExchangeConnectorServiceConfiguration.xml**.
-3. Pokud chcete funkci vypnout, změňte parametr &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; na &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt;.  
+2. Pomocí textového editoru otevřete **soubor OnPremisesExchangeConnectorServiceConfiguration. XML**.
+3. Pokud chcete funkci zakázat, změňte &lt;IsCasFailoverEnabled @ no__t-1**true**&lt;/IsCasFailoverEnabled @ no__t-4 na &lt;IsCasFailoverEnabled @ no__t-6**false**&lt;/IsCasFailoverEnabled @ no__t-9.  
  
 ## <a name="optional-performance-tuning-for-the-exchange-connector"></a>Volitelné ladění výkonu pro Exchange Connector  
 
 Pokud podporujete 5 000 nebo více zařízení s Exchange ActiveSync, můžete nakonfigurovat volitelné nastavení pro zlepšení výkonu konektoru. Zvýšení výkonu dosáhnete tak, že zapnete Exchange k použití více instancí běhového prostředí příkazu PowerShellu. 
 
-Než tuto změnu provedete, ujistěte se, že účet, který používáte ke spuštění Exchange Connectoru, se nepoužije pro jiné účely správy Exchange. Je to proto, že Exchange má omezený počet Run-Spaces na účet, který bude konektor používat. 
+Než tuto změnu provedete, ujistěte se, že účet, který používáte ke spuštění Exchange Connectoru, se nepoužije pro jiné účely správy Exchange. Je to proto, že Exchange má omezený počet Run-Spaces na účet, přičemž většina z nich je využívána konektorem. 
 
 Tato změna výkonu není vhodná pro konektory, které běží na starším nebo pomalejším hardwaru.  
 
@@ -172,10 +179,11 @@ Tato změna výkonu není vhodná pro konektory, které běží na starším neb
    \<EnableParallelCommandSupport > true @ no__t-1/EnableParallelCommandSupport >
 4. Uložte soubor a pak restartujte službu Microsoft Intune Exchange Connector.
 
-## <a name="reinstall-the-on-premises-exchange-connector"></a>Opětovná instalace místního konektoru Exchange
-Je možné, že budete muset nainstalovat Exchange Connector. Vzhledem k tomu, že jeden konektor je podporován pro připojení ke každé organizaci Exchange, pokud nainstalujete druhý konektor pro organizaci, nový konektor, který nainstalujete, nahradí původní konektor.
+## <a name="reinstall-the-intune-exchange-connector"></a>Opětovná instalace Intune Exchange Connectoru
 
-1. Pomocí kroků v části [instalace a konfigurace místního Exchange Connectoru Intune](#install-and-configure-the-intune-on-premises-exchange-connector) spusťte instalaci nového konektoru. 
+Možná budete muset přeinstalovat konektor Intune Exchange. Vzhledem k tomu, že jeden konektor je podporován pro připojení ke každé organizaci Exchange, pokud nainstalujete druhý konektor pro organizaci, nový konektor, který nainstalujete, nahradí původní konektor.
+
+1. Pomocí kroků v části [instalace a konfigurace Intune Exchange Connectoru](#install-and-configure-the-intune-exchange-connector) spusťte instalaci nového konektoru. 
 2. Po zobrazení výzvy vyberte **nahradit** a nainstalujte nový konektor.  
    ![Configuration výzvu k nahrazení konektoru @ no__t-1
 
@@ -184,33 +192,35 @@ Je možné, že budete muset nainstalovat Exchange Connector. Vzhledem k tomu, �
    @no__t 0Complete nastavení @ no__t-1
  
 
-## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity Exchange Connectoru
+## <a name="monitor-the-exchange-connector-activity"></a>Monitorování aktivity softwaru Exchange Connector
 
 Po úspěšné konfiguraci softwaru Exchange Connector můžete zobrazit stav připojení a poslední úspěšný pokus o synchronizaci. Ověření připojení konektoru Exchange Connector:
 
 1. Na řídicím panelu Intune vyberte **přístup k Exchangi**.
 2. Vyberte možnost **přístup k místnímu Exchangi** a ověřte stav připojení jednotlivých konektorů Exchange.
 
-Můžete se taky podívat na datum a čas posledního úspěšného pokusu o synchronizaci.
+Můžete také zjistit datum a čas posledního úspěšného pokusu o synchronizaci.
 --> 
 
 ### <a name="system-center-operations-manager-management-pack"></a>System Center Operations Manager Management Pack
 
 Od verze Intune 1710 můžete použít [Management Pack Operations Manager pro Exchange Connector a Intune](https://www.microsoft.com/download/details.aspx?id=55990&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True). Použití Management Pack poskytuje různé způsoby monitorování Exchange Connectoru, pokud potřebujete řešit problémy.
 
-## <a name="manually-force-a-quick-sync-or-full-sync"></a>Ruční vynucení rychlé synchronizace nebo úplné synchronizace
-Místní Exchange Connector automaticky synchronizuje záznamy zařízení EAS a Intune. Pokud se stav dodržování předpisů změní na zařízení, proces automatické synchronizace pravidelně aktualizuje záznamy, aby bylo možné zablokovat nebo povolit přístup k zařízení.
+## <a name="manually-force-a-quick-sync-or-full-sync"></a>Ruční vynutit rychlou synchronizaci nebo úplnou synchronizaci
 
-- **Rychlá synchronizace** se provádí pravidelně několikrát za den. Rychlá synchronizace načte informace o zařízení pro uživatele s licencí pro Intune a cílené na místní Exchange, které se od poslední synchronizace změnily.
+Intune Exchange Connector automaticky synchronizuje záznamy zařízení EAS a Intune. Pokud se stav dodržování předpisů změní na zařízení, proces automatické synchronizace pravidelně aktualizuje záznamy, aby bylo možné zablokovat nebo povolit přístup k zařízení.
 
-- **Úplná synchronizace** se ve výchozím nastavení provádí jednou za den. Úplná synchronizace načte informace o zařízení pro všechny cílové uživatele Intune s oprávněním pro podmíněného přístupu a místní Exchange. Při úplné synchronizaci se načítají také informace Exchange Serveru a zajišťuje se, aby se na Exchange Serveru aktualizovala konfigurace zadaná pomocí Intune na webu Azure Portal. 
+- **Rychlá synchronizace** probíhá pravidelně, několikrát denně. Rychlá synchronizace načte informace o zařízení pro uživatele s licencí pro Intune a cílené na místní Exchange, které se od poslední synchronizace změnily.
+
+- Ve výchozím nastavení se **Úplná synchronizace** koná jednou denně. Úplná synchronizace načte informace o zařízení pro všechny cílové uživatele Intune s oprávněním pro podmíněného přístupu a místní Exchange. Úplná synchronizace taky načte informace Exchange serveru a zajistí, že se konfigurace určená službou Intune v Azure Portal aktualizace na serveru Exchange. 
 
 
-Následujícím postupem na řídicím panelu Intune můžete vynutit, aby konektor spustil synchronizaci pomocí možnosti **Rychlá synchronizace** nebo **Úplná synchronizace**:
+Konektor můžete vynutit ke spuštění synchronizace pomocí možností **rychlá synchronizace** nebo **úplné synchronizace** na řídicím panelu Intune, a to pomocí následujících kroků:
 
    1. Na řídicím panelu Intune vyberte **přístup k Exchangi**.
    2. Vyberte **přístup pro místní Exchange**.
-   3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **Rychlá synchronizace** nebo **Úplná synchronizace**.
+   3. Vyberte konektor, který chcete synchronizovat, a pak zvolte **rychlá synchronizace** nebo **Úplná synchronizace**.
 
 ## <a name="next-steps"></a>Další kroky
+
 [Vytvoření zásady podmíněného přístupu pro místní Exchange](conditional-access-exchange-create.md)

@@ -17,62 +17,68 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce9a92a9fffad13c6723504735b1b1cb9442f61f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 449e799dfc0531958c1578179cf07440d348ecf8
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729314"
+ms.locfileid: "71813941"
 ---
-# <a name="data-jamf-pro-sends-to-intune"></a>Data, která Jamf Pro odesílaná do Intune
+# <a name="data-jamf-pro-sends-to-intune"></a>Data Jamf pro odesílá do Intune.
 
 Pokud ke správě počítačů Mac koncových uživatelů s Intune používáte [Jamf pro](https://www.jamf.com) , zachytí Jamf pro informace o inventáři spravovaných zařízení MacOS. 
 
 ## <a name="data"></a>Data  
-Jamf Pro dodá do Intune následující informace:  
+Seznam dat, která Jamf pro sdílí s Intune, najdete v [příloze: informace o inventáři sdílené pomocí Microsoft Intune](https://docs.jamf.com/technical-papers/jamf-pro/microsoft-intune/10.9.0/Appendix__Inventory_Information_Shared_with_Microsoft_Intune.html) v technické dokumentaci k Jamf pro. 
 
-* ID zařízení v Azure AD
-* Stav inventáře JAMF (stav inventáře počítače připojeného k Jamf Pro během posledních 24 hodin)
-* Verze operačního systému
-* ID uživatele v Azure AD
-* Šifrované (FileVault 2)
-* Stav serveru gatekeeper
-* Heslo: minimální počet znakových sad
-* Vypršení platnosti hesla (dny)
-* Typ hesla – jednoduché, alfanumerické nebo neznámé
-* Zakázat automatické přihlášení
-* Požadovaná délka hesla
-* Heslo: počet předchozích hesel, aby se předešlo opětovnému použití
-* Ochrana Integrity systému
-* Poslední vrácení se změnami
-* Typ architektury
-* Dostupné sloty paměti RAM
-* Kapacita baterie
-* Spouštěcí paměť ROM
-* Rychlost sběrnice
-* Velikost mezipaměti
-* Název zařízení
-* Připojení k doméně
-* ID Jamf
-* Adresa MAC
-* Značka
+<!--  
+Jamf Pro reports the following information to Intune:  
+
+* Device Azure AD ID
+* JAMF Inventory State (inventory state of a computer checked in with Jamf Pro within the last 24 hours)
+* OS Version
+* User Azure AD ID
+* Encrypted (FileVault 2)
+* Gatekeeper Status
+* Password: minimum number of character sets
+* Password expiration (days)
+* Password Type - simple, alphanumeric, or unknown
+* Prevent Auto Login
+* Required Passcode Length
+* Password: number of previous passwords to prevent reuse
+* System Integrity Protection
+* Last Check-In Time
+* Architecture Type
+* Available RAM Slots
+* Battery Capacity
+* Boot ROM
+* Bus Speed
+* Cache Size
+* Device Name
+* Domain Join
+* Jamf ID
+* MAC address
+* Make
 * Model
-* Identifikátor modelu
-* Rychlost síťové karty
-* Počet jader
-* Počet procesorů
-* Operační systém
-* Platforma
-* Rychlost procesoru
-* Typ procesoru
-* Sekundární adresa MAC
-* Sériové číslo
-* Verze řadiče pro správu systému (SMC)
-* Celková paměť RAM
+* Model Identifier
+* NIC Speed
+* Number of Cores
+* Number of Processors
+* OS
+* Platform
+* Processor Speed
+* Processor Type
+* Secondary MAC Address
+* Serial Number
+* SMC Version
+* Total RAM
 * UDID
-* E-mail uživatele
+* User Email
+--> 
 
-Zařízení spravované prostřednictvím Jamf můžete z konzoly Intune odebrat výběrem možnosti **Odstranit** v zobrazení **Všechna zařízení**. Hromadné odstranění zařízení se dá povolit výběrem více zařízení a kliknutím na **Odstranit**.
+<!-- 
+You can remove a Jamf-managed device from the Intune console by selecting **Delete** in the **All devices** view. Bulk device deletion can be enabled by selecting multiple devices and clicking **Delete**.
+-->
 
 ## <a name="next-steps"></a>Další kroky
 Získejte informace o tom, jak [Odebrat Jamf zařízení spravované v dokumentaci pro Jamf pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Pro další pomoc si můžete také [poJamf podporu](https://www.jamf.com/support/) a pokaždé, když zadáte lístek podpory. 

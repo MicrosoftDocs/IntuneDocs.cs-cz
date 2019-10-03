@@ -5,7 +5,7 @@ keywords: ''
 author: ralms
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b801da3bd4245361e8c55a40c67daf2c8890fd1e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 48a7fe51c2fa6bc27ed4dda206335a3171c2500c
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729386"
+ms.locfileid: "71814154"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -32,7 +32,7 @@ Microsoft Intune podporuje použití importovaných certifikátů PKCS (Public K
 
 Další informace o použití S/MIME s Intune získáte [pomocí s/MIME k šifrování e-mailu](certificates-s-mime-encryption-sign.md).
 
-## <a name="requirements"></a>požadavky
+## <a name="requirements"></a>Požadavky
 
 K používání importovaných certifikátů PKCS s Intune budete potřebovat následující infrastrukturu:
 
@@ -71,14 +71,14 @@ Když použijete Intune k nasazení **importovaného certifikátu PFX** pro uži
 2. Postupujte podle pokynů ke stažení *Certificate Connectoru PFX pro Microsoft Intune* do umístění, které je přístupné ze serveru, na který budete konektor instalovat.
 3. Po dokončení stahování se přihlaste k serveru a spusťte instalační program (PfxCertificateConnectorBootstrapper. exe).  
    - Když přijmete výchozí umístění instalace, konektor se nainstaluje do `Program Files\Microsoft Intune\PFXCertificateConnector`.
-   - Služba konektoru běží pod místním systémovým účtem. Pokud je pro přístup k Internetu vyžadován proxy server, ověřte, že účet místní služby má přístup k nastavení proxy serveru.
+   - Služba konektoru běží pod účtem místního systému. Pokud je pro přístup k Internetu vyžadován proxy server, ověřte, že účet místní služby má přístup k nastavení proxy serveru.
 
-4. Konektor certifikátu PFX pro Microsoft Intune se po instalaci otevře na kartě **Zápis**. Pokud chcete povolit připojení k Intune, **přihlaste se** a zadejte účet s globálním oprávněním správce pro Azure nebo s oprávněním správce pro Intune.
+4. Konektor certifikátu PFX pro Microsoft Intune otevře kartu **registrace** po instalaci. Pokud chcete povolit připojení k Intune, **přihlaste**se a zadejte účet s globálním správcem Azure nebo s oprávněními správce Intune.
 
    > [!WARNING]
    > Ve výchozím nastavení je **Konfigurace rozšířeného zabezpečení** Windows serveru IE nastavená na **zapnuto** , což může způsobit problémy s přihlášením k Office 365.
 
-5. Okno zavřete.
+5. Zavřete okno.
 6. Na portálu Intune se vraťte na **Konfigurace zařízení** > **certifikační konektory**. Za chvíli se zobrazí zelená značka zaškrtnutí a **stav připojení** je **aktivní**. Server konektoru teď může komunikovat s Intune.
 
 ## <a name="import-pfx-certificates-to-intune"></a>Import certifikátů PFX do Intune
@@ -133,7 +133,7 @@ K vygenerování a uložení páru veřejného a privátního klíče můžete p
 
 Následující postup používá rutiny prostředí PowerShell jako příklad importu certifikátů PFX. V závislosti na vašich požadavcích můžete vybrat různé možnosti.
 
-Vaše možnosti jsou:  
+Mezi možnosti patří:  
 - Zamýšlený účel (skupiny certifikátů na základě značky):  
   - Nepřiřazené
   - Šifrování smimeencryption
@@ -168,30 +168,30 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 
 7. Import objektu **UserPFXCertificate** do Intune spuštěním `Import-IntuneUserPfxCertificate -AuthenticationResult $authResult -CertificateList $userPFXObject`
 
-8. Pokud chcete ověřit, že se certifikát naimportoval, spusťte `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UsertList "<UserUPN>"`.
+8. Pokud chcete ověřit, že se certifikát naimportoval, spusťte `Get-IntuneUserPfxCertificate -AuthenticationResult $authResult -UserList "<UserUPN>"`.
 
 Další informace o dalších dostupných příkazech najdete v souboru Readme v [projektu PFXImport PowerShellu na GitHubu](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## <a name="create-a-pkcs-imported-certificate-profile"></a>Vytvoření importovaného profilu certifikátu PKCS
 
-Po importování certifikátů do Intune vytvořte profil **importovaného certifikátu PKCS** a přiřaďte ho ke skupinám Azure Active Directory.
+Po importu certifikátů do Intune vytvořte profil **certifikátu importovaný přes PKCS** a přiřaďte ho do skupin Azure Active Directory.
 
 1. V portálu [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) byly obdrženy do **Konfigurace zařízení** > **profily** **vytvořit profil** > .
 2. Zadejte následující vlastnosti:
 
-   - Zadejte **Název** profilu.
+   - **Název** profilu
    - Volitelně můžete nastavit popis.
-   - Zadejte **Platformu**, na kterou se má profil nasadit.
-   - Nastavte **Typ profilu** na **Importovaný certifikát PKCS**.
+   - **Platforma** , do které se má profil nasadit
+   - Nastavte **typ profilu** na **importovaný certifikát PKCS** .
 
-3. Přejděte na **Nastavení** a zadejte tyto vlastnosti:
+3. Přejděte na **Nastavení**a zadejte následující vlastnosti:
 
-   - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (jako je ověřování, podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu odpovídá profilu certifikátu se správně importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
+   - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (jako je ověřování, podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu se shoduje s profilem certifikátů správnými importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
    - **Období platnosti certifikátu**: Pokud se v šabloně certifikátu nezměnila doba platnosti, tato možnost je ve výchozím nastavení nastavená na jeden rok.  
-   - **Zprostředkovatel úložiště klíčů (KSP):** U systému Windows vyberte, kde na zařízení se mají klíče ukládat.  
+   - **Zprostředkovatel úložiště klíčů (KSP)** : pro Windows vyberte místo, kam se mají ukládat klíče na zařízení.  
 
-4. Vyberte **OK** > **Vytvořit** a profil uložte.
-5. Informace o přiřazení nového profilu jednomu nebo více zařízením najdete v článku o [přiřazení profilů zařízení v Microsoft Intune](../configuration/device-profile-assign.md).
+4. Výběrem **OK** > **vytvořit** uložte profil.
+5. Pokud chcete přiřadit nový profil jednomu nebo více zařízením, přečtěte si téma [přiřazení Microsoft Intune profily zařízení](../configuration/device-profile-assign.md).
 
 
 

@@ -1,12 +1,12 @@
 ---
-title: Přidání webových aplikací do Microsoft Intune
+title: Přidat webové aplikace do Microsoft Intune
 titleSuffix: ''
 description: Přečtěte si, jak přidat webové aplikace (aplikace klient-server) do Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/13/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,54 +17,54 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2880d6a0028006a7122b9f9a78de6b1ef03b9f3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: a8beb8291ede1bf2fde32014fadf9f8cd52da5b6
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730978"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830575"
 ---
-# <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
+# <a name="add-web-apps-to-microsoft-intune"></a>Přidat webové aplikace do Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune podporuje různé typy aplikací, včetně webových. Webová aplikace představuje aplikaci klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Moderní webové hostingové platformy dále běžně nabízejí zabezpečení, vyrovnávání zatížení a další výhody. Webová aplikace se samostatně udržuje na webu. Na tento typ aplikace se odkazuje pomocí Microsoft Intune. Můžete také určit, které skupiny uživatelů mají k této aplikaci přístup. 
+Intune podporuje různé typy aplikací, včetně webových aplikací. Webová aplikace je aplikace typu klient-server. Server poskytuje webovou aplikaci, která zahrnuje uživatelské rozhraní, obsah a funkce. Kromě toho moderní webové platformy pro hostování běžně nabízejí zabezpečení, Vyrovnávání zatížení a další výhody. Webová aplikace se samostatně udržuje na webu. Použijete Microsoft Intune k ukázání na tento typ aplikace. Přiřadíte také skupiny uživatelů, kteří mají přístup k této aplikaci. 
 
-Abyste mohli aplikaci spravovat a přiřazovat ji uživatelům, přidejte ji do Intune. Intune vytvoří zástupce webové aplikace na domovské obrazovce uživatelova zařízení.
+Než budete moct spravovat a přiřazovat aplikaci pro vaše uživatele, přidejte aplikaci do Intune. Intune vytvoří zástupce webové aplikace na domovské obrazovce zařízení uživatele.
 
 > [!Note]
-> Na zařízeních s pracovním profilem Androidu se webové aplikace nepodporují.
+> Na zařízeních s pracovním profilem Androidu se webové aplikace nepodporují. Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč.
 
 ## <a name="add-a-web-app-to-intune"></a>Přidání webové aplikace do Intune
-Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, postupujte takto:
+Pokud chcete přidat aplikaci do Intune jako zástupce aplikace na webu, udělejte toto:
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-4. V podokně úloh **Klientské aplikace** vyberte v části **Spravovat** možnost **Aplikace**.
-5. V podokně **Aplikace** vyberte **Přidat**.
-6. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **Webový odkaz**.
+3. V podokně **Intune** vyberte **klientské aplikace**.
+4. V podokně úloh **klientské aplikace** vyberte v části **Spravovat**možnost **aplikace**.
+5. V podokně **aplikace** vyberte **Přidat**.
+6. V podokně **Přidat aplikaci** vyberte v rozevíracím seznamu **Typ aplikace** typ **webového odkazu** .
 7. Vyberte **Konfigurovat**.
-8. V podokně **Informace o aplikaci** přidejte tyto údaje:
-    - **Název**: Zadejte název aplikace, který se zobrazí na Portálu společnosti. 
+8. V podokně **informace o aplikaci** přidejte následující informace:
+    - **Název**: zadejte název aplikace, který se zobrazí na portálu společnosti. 
 
         > [!NOTE]
-        > Pokud po nasazení a instalaci aplikace změníte název aplikace pomocí Intune na portálu Azure Portal, nebude už možné na tuto aplikaci cílit příkazy.
+        > Pokud po nasazení a instalaci aplikace změníte název aplikace pomocí portálu Intune Azure Portal, aplikace už nebude moct cílit na příkazy.
 
-    - **Popis**: Zadejte popis aplikace. Tento popis se uživatelům zobrazí na Portálu společnosti.
-    - **Vydavatel**: Zadejte název vydavatele této aplikace.
-    - **Adresa URL aplikace**: Zadejte adresu URL webu hostujícího aplikaci, kterou chcete přiřadit.
-    - **Kategorie**: Volitelně můžete vybrat jednu nebo několik předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Uživatelé tak při procházení Portálu společnosti najdou aplikaci snadněji.
-    - **Zobrazit na Portálu společnosti jako vybranou aplikaci:** Vybráním této možnosti se sada aplikací zobrazí uživatelům, kteří hledají aplikace, na výrazném místě na hlavní stránce Portálu společnosti.
-    - **K otevření tohoto odkazu vyžadovat spravovaný prohlížeč**: Tuto možnost vyberte, pokud chcete uživatelům webu nebo webové aplikace přiřadit odkaz, který mohou otevřít v prohlížeči spravovaném v Intune. Tento prohlížeč musí být nainstalovaný na jejich zařízení.
-    - **Logo**: Nahrajte ikonu, která se přidruží k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
+    - **Popis**: zadejte popis aplikace. Tento popis se zobrazí uživatelům na portálu společnosti.
+    - **Vydavatel**: zadejte název vydavatele této aplikace.
+    - **Adresa URL aplikace**: zadejte adresu URL webu, který hostuje aplikaci, kterou chcete přiřadit.
+    - **Kategorie**: volitelně vyberte jednu nebo více předdefinovaných kategorií aplikací nebo kategorii, kterou jste vytvořili. Díky tomu můžou uživatelé aplikaci při procházení portálu společnosti snadněji najít.
+    - **Zobrazit jako doporučenou aplikaci v portál společnosti**: tuto možnost vyberte, pokud chcete, aby se sada aplikací zobrazovala na hlavní stránce portálu společnosti, když uživatelé vyhledávají aplikace.
+    - **Pro otevření tohoto odkazu vyžadovat spravovaný prohlížeč**: tuto možnost vyberte, pokud chcete uživatelům přiřadit odkaz na web nebo webovou aplikaci, kterou můžou otevřít v prohlížeči spravovaném přes Intune. Tento prohlížeč musí být nainstalovaný na svém zařízení.
+    - **Logo**: Nahrajte ikonu, která bude přidružená k aplikaci. Tato ikona se u aplikace zobrazí, když uživatelé procházejí portál společnosti.
 9. Vyberte **OK**.
-10. V podokně **Přidat aplikaci** zvolte **Přidat**.
+10. V podokně **Přidat aplikaci** vyberte **Přidat**.
 
 > [!Note]
-> Uživatelé si musí na domovskou obrazovku přidat widget Intune k zobrazení webových aplikací, které jsou k zařízení s Androidem přiřazené.
+> Uživatelé musí přidat widget Intune na svou domovskou obrazovku a zobrazit tak webové aplikace, které jsou přiřazené k zařízením s Androidem.
 >
-> V současnosti jsou webové aplikace nasazené do zařízení s iOS v Intune přidružené k profilu pro správu, takže nejdou odebrat ručně. Na portálu Intune můžete typ nasazení změnit na **Odinstalovat**. V tom případě můžete webovou aplikaci odebrat automaticky. Pokud byste, ještě než změníte přiřazení aplikace na **Odinstalovat**, odebrali nasazení, zůstane webová aplikace trvale v zařízení, dokud v Intune nezrušíte jeho registraci.
+> V současné době je nasazení webových aplikací Intune do zařízení se systémem iOS přidruženo k profilu správy a nelze je odebrat ručně. Typ nasazení můžete změnit na **odinstalovat** na portálu Intune, ve kterém se dá webová aplikace odebrat automaticky. Pokud ale odeberete nasazení před změnou záměru přiřazení aplikace k **Odinstalování**, bude webová aplikace na zařízení trvale na svém místě, dokud nebude zařízení neregistrované v Intune.
 
 ## <a name="next-steps"></a>Další kroky
 
-Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazovat vybraným skupinám. Nápovědu najdete v článku [Přiřazení aplikací do skupin](apps-deploy.md). 
+Aplikace, kterou jste vytvořili, se zobrazí v seznamu aplikací, kde ji můžete přiřadit ke skupinám, které vyberete. Nápovědu najdete v článku [přiřazení aplikací do skupin](apps-deploy.md). 

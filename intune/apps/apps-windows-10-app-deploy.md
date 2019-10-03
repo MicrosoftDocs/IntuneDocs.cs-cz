@@ -1,12 +1,12 @@
 ---
-title: Nasazení aplikací pro Windows 10 pomocí Intune
+title: Nasazení aplikací pro Windows 10 pomocí Microsoft Intune
 titleSuffix: ''
 description: Přečtěte si o scénářích nasazení aplikací pro Windows 10, které jsou dostupné v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,33 +17,35 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c853608f46bb01263ddd08193f729cdfb018fed9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 04e943f573fb2485a2ef7f1e3245f08d4222d142
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731190"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830560"
 ---
-# <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Intune 
+# <a name="windows-10-app-deployment-using-microsoft-intune"></a>Nasazení aplikací pro Windows 10 pomocí Microsoft Intune 
 
-Microsoft Intune aktuálně na zařízeních s Windows 10 podporuje různé typy aplikací a scénářů nasazení. Po přidání aplikace do Intune ji můžete přiřadit uživatelům a zařízením. Následující informace poskytují další podrobnosti týkající se podporovaných scénářů pro Windows 10. Kromě toho také poskytují klíčové podrobnosti, které byste při nasazování aplikací do systému Windows neměli opomenout. 
+Microsoft Intune aktuálně podporuje různé typy aplikací a scénáře nasazení na zařízeních s Windows 10. Po přidání aplikace do Intune můžete aplikaci přiřadit uživatelům a zařízením. Následující informace obsahují další podrobnosti týkající se podporovaných scénářů Windows 10. Kromě toho následující informace obsahují klíčové informace, které je třeba poznamenat při nasazování aplikací do systému Windows. 
 
-Obchodní aplikace (LOB) a aplikace pro Microsoft Store pro firmy jsou na zařízeních s Windows 10 podporované. Mezi přípony souborů aplikací pro Windows patří **.msi**, **.appx** a **.appxbundle**.  
+Obchodní aplikace (LOB) a Microsoft Store pro firmy jsou typy aplikací podporované na zařízeních s Windows 10. Mezi přípony souborů pro aplikace pro Windows patří soubory **. msi**, **. appx**a **. appxbundle**.  
 
 > [!Note]
-> Minimálními potřebnými aktualizacemi Windows 10 pro nasazování moderních aplikací jsou tyto:
-> - Pro Windows 10 1803: [KB4100403 z 23. května 2018 (číslo sestavení operačního systému 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403)
-> - Pro Windows 10 1709: [KB4284822 z 21. června 2018 (číslo sestavení operačního systému 16299.522)](https://support.microsoft.com/help/4284822)
+> Minimální potřebné aktualizace Windows 10 pro nasazení moderních aplikací jsou následující:
+> - Pro Windows 10 1803, [Květen 23, 2018 – KB4100403 (sestavení operačního systému 17134,81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
+> - Pro Windows 10 1709, [21. června 2018 – KB4284822 (Build OS 16299,522)](https://support.microsoft.com/help/4284822).
 >
 > Pouze systémy Windows 10 1803 a novější podporují instalaci aplikací, pokud není k dispozici žádný primární uživatel.
+>
+> U zařízení s Windows 10 Home Edition se nasazení aplikace LOB nepodporuje.
 
 ## <a name="windows-10-line-of-business-apps"></a>Obchodní aplikace pro Windows 10
 
-Obchodní aplikace pro Windows 10 jsou podepsané a nahrané v konzole správce Intune a mohou obsahovat jak moderní aplikace, jako jsou aplikace Univerzální platformy Windows (UWP) a balíčky aplikace systému Windows (AppX), tak i aplikace Win 32, jako jsou jednoduché soubory balíčku Microsoft Installer (MSI). Aktualizace obchodních aplikací se musí ručně nahrát a nasadit správcem. Nasazené aktualizace se automaticky nainstalují na zařízení koncových uživatelů, ve kterých je nainstalovaná aplikace bez zásahu uživatele. Uživatel nemá nad aktualizacemi žádnou kontrolu. 
+Obchodní aplikace pro Windows 10 jsou podepsané a nahrané do konzoly pro správu Intune a můžou zahrnovat moderní aplikace, jako jsou aplikace Univerzální platforma Windows (UWP) a balíčky aplikací pro Windows (AppX), a taky aplikace pro Win 32, jako jsou například jednoduché soubory balíčku Instalační služby systému Microsoft (MSI). Aktualizace obchodních aplikací se musí ručně nahrát a nasadit správcem. Nasazené aktualizace se automaticky nainstalují na zařízení koncových uživatelů, ve kterých je nainstalovaná aplikace bez zásahu uživatele. Uživatel nemá žádnou kontrolu nad aktualizacemi. 
 
-## <a name="microsoft-store-for-business-apps"></a>Aplikace pro Microsoft Store pro firmy
+## <a name="microsoft-store-for-business-apps"></a>Microsoft Store pro obchodní aplikace
 
-Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené z portálu pro správu Microsoft Store pro firmy a pak se synchronizují s Microsoft Intune pro správu. Tyto aplikace mohou mít **online licenci** nebo **offline licenci**. Aktualizace Microsoft Store pro obchodní aplikace se spravují přímo pomocí Microsoft Store, a to bez další akce, kterou vám vyžaduje správce. Můžete taky zabránit aktualizacím konkrétních aplikací pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu o [správě podnikových aplikací a zabránění jejich automatické aktualizace](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Koncový uživatel může na svém zařízení automatické aktualizace aplikací z Microsoft Storu pro firmy také zakázat. 
+Microsoft Store pro obchodní aplikace jsou moderní aplikace zakoupené z portálu pro správu Microsoft Store pro firmy a pak se synchronizují s Microsoft Intune pro správu. Aplikace můžou být buď **online licencované** , nebo **offline**. Aktualizace Microsoft Store pro obchodní aplikace se spravují přímo pomocí Microsoft Store, a to bez další akce, kterou vám vyžaduje správce. Můžete taky zabránit aktualizacím konkrétních aplikací pomocí vlastního identifikátoru URI (Uniform Resource Identifier). Další informace najdete v tématu [Správa podnikových aplikací – zabránění aplikacím v automatických aktualizacích](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Na zařízení může koncový uživatel také zakázat aktualizace pro všechny Microsoft Store pro obchodní aplikace na zařízení. 
 
 ### <a name="categorize-microsoft-store-for-business-apps"></a>Kategorizace Microsoft Store pro obchodní aplikace 
 K kategorizaci Microsoft Store pro obchodní aplikace použijte následující postup: 
@@ -52,37 +54,37 @@ K kategorizaci Microsoft Store pro obchodní aplikace použijte následující p
 2. Vyberte aplikace **klienta**@no__t **-1 >** vyberte**kategorii**Microsoft Store pro firmy > **informace o aplikaci** > . 
 3. V rozevírací nabídce vyberte kategorii.
 
-## <a name="installing-apps-on-windows-10-devices"></a>Instalace aplikací na zařízeních s Windows 10
-V závislosti na typu aplikace můžete aplikace na zařízení s Windows 10 instalovat jedním ze dvou způsobů:
+## <a name="installing-apps-on-windows-10-devices"></a>Instalace aplikací na zařízení s Windows 10
+V závislosti na typu aplikace je možné aplikaci nainstalovat na zařízení s Windows 10 jedním ze dvou způsobů:
 
-- **Kontext uživatele**: když se aplikace nasadí v kontextu uživatele, spravovaná aplikace se nainstaluje konkrétnímu uživateli na zařízení, jakmile se k němu přihlásí. Instalace aplikace úspěšné neproběhne, dokud se uživatel k zařízení nepřihlásí. 
-  - V kontextu uživatele je možné nasadit moderní obchodní aplikace a aplikace pro Microsoft Store pro firmy (online i offline) s podporou záměru Povinné i K dispozici.
-  - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **uživatelském režimu** nebo v **duálním režimu** s podporou záměru **Povinné** i **K dispozici**. 
-- **Kontext zařízení**: když se aplikace nasadí v kontextu zařízení, spravovaná aplikace se pomocí Intune nainstaluje do zařízení přímo.
+- **Kontext uživatele**: když se aplikace nasadí v uživatelském kontextu, nainstaluje se tato spravovaná aplikace pro daného uživatele na zařízení, když se uživatel přihlásí k zařízení. Všimněte si, že instalace aplikace nebude úspěšná, až se uživatel přihlásí k zařízení. 
+  - Moderní obchodní aplikace a aplikace pro Microsoft Store pro firmy (online i offline) se dají nasadit v kontextu uživatele a budou podporovat jak požadovaný, tak i dostupný záměr.
+  - Aplikace Win32 sestavené jako **uživatelský režim** nebo **duální režim** lze nasadit v kontextu uživatele a budou podporovat **požadovaný** a **dostupný** záměr. 
+- **Kontext zařízení**: při nasazení aplikace v kontextu zařízení se spravovaná aplikace nainstaluje do zařízení přímo přes Intune.
   - Pouze moderní obchodní aplikace a offline licencované Microsoft Store pro podnikové aplikace lze nasadit v kontextu zařízení a budou podporovat pouze požadovaný záměr.
-  - V kontextu uživatele je možné nasadit aplikace Win32 vytvořené v **režimu počítače** nebo v **duálním režimu** jenom s podporou záměru **Povinné**.
+  - Aplikace Win32 sestavené jako **režim počítače** nebo **duální režim** lze nasadit v kontextu uživatele a budou podporovat pouze **požadovaný** záměr.
 
 > [!NOTE]
-> U aplikací Win32 vytvořených jako aplikace **duálního režimu** budete muset vy (správce) vybrat, jestli bude příslušná aplikace pro všechna přiřazení spojená s danou instancí fungovat jako aplikace **uživatelského režimu** nebo **režimu počítače**. Kontext nasazení nelze změnit pro jednotlivé přiřazení.  
+> Pro aplikace Win32 sestavené jako aplikace s **duálním režimem** bude nutné (správce) vybrat, jestli bude aplikace fungovat jako **uživatelský režim** nebo aplikace v **režimu počítače** pro všechna přiřazení přidružená k této instanci. Kontext nasazení nelze změnit na jedno přiřazení.  
 
-Když se aplikace nasadí v kontextu zařízení, instalace proběhne úspěšně pouze v případě, že zařízení kontext zařízení podporuje. Kromě toho nasazení v kontextu zařízení obsahuje následující podmínky:
-- Pokud se aplikace nasadí v kontextu zařízení a cílí na uživatele, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:
-  - Stav: Neúspěšné.
-  - Chyba: Instalace v kontextu zařízení nemůže cílit na uživatele.
-- Pokud se aplikace nasadí v kontextu zařízení a cílí na zařízení, které kontext zařízení nepodporuje, instalace se nezdaří a v konzole pro správu se zobrazí následující stav a chyba:
-  - Stav: Neúspěšné.
-  - Chyba: Tato platforma nepodporuje instalaci v kontextu zařízení. 
+Když se aplikace nasadí v kontextu zařízení, instalace bude úspěšná jenom v případě, že se zaměří na zařízení, které podporuje kontext zařízení. Kromě toho nasazení v kontextu zařízení podporuje následující podmínky:
+- Pokud je aplikace nasazená v kontextu zařízení a zacílená na uživatele, instalace se nezdaří a v konzole pro správu se zobrazí chyba s následujícím stavem a chybou:
+  - Stav: neúspěšné.
+  - Chyba: uživatel se nemůže zaměřit na instalaci kontextu zařízení.
+- Pokud je aplikace nasazená v kontextu zařízení, ale je zaměřená na zařízení, které nepodporuje kontext zařízení, instalace selže a v konzole pro správu se zobrazí následující stav a chyba:
+  - Stav: neúspěšné.
+  - Chyba: Tato platforma nepodporuje instalaci kontextu zařízení. 
 
 > [!Note]
-> Jakmile se přiřazení aplikace uloží pod konkrétním nasazením, není možné u daného přiřazení kontext změnit (s výjimkou moderních aplikací). V případě moderních aplikací můžete kontext změnit z kontextu uživatele na kontext zařízení. 
+> Po uložení přiřazení aplikace s určitým nasazením nejde kontext pro toto přiřazení změnit, s výjimkou moderních aplikací. V případě moderní aplikace je možné kontext změnit z kontextu uživatele na kontext zařízení. 
 
-V případě, že u jednoho uživatele nebo zařízení dojde ke konfliktu mezi zásadami, určí se konečná zásada podle následujících priorit:
-- Zásady kontextu zařízení mají vyšší prioritu než zásady kontextu uživatele. 
-- Zásady instalace mají vyšší prioritu než zásady odinstalace.
+V případě konfliktu zásad na jednom uživateli nebo zařízení jsou k dispozici priority zásad, které se použijí k určení konečných zásad:
+- Zásada kontextu zařízení je vyšší Priorita než zásada kontextu uživatele. 
+- Zásada instalace má vyšší prioritu než zásada odinstalace.
 
-Další informace o přiřazování aplikací pomocí Microsoft Intune najdete v tématech [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md) a [Zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md). Další informace o typech aplikací v Intune najdete v tématu [Přidání aplikací do Microsoft Intune](apps-add.md).
+Další informace o přiřazování aplikací pomocí Microsoft Intune najdete v článku [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md) a [zahrnutí a vyloučení přiřazení aplikací v Microsoft Intune](apps-inc-exl-assignments.md). Další informace o typech aplikací v Intune najdete v tématu [Přidání aplikací do Microsoft Intune](apps-add.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-- Další informace o přiřazení aplikací ke skupinám najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
-- Další informace o sledování přiřazení aplikací najdete v článku o [monitorování aplikací](apps-monitor.md).
+- Další informace o přiřazování aplikací do skupin najdete v článku [přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md).
+- Další informace o monitorování přiřazení aplikací najdete v tématu monitorování [aplikací](apps-monitor.md).

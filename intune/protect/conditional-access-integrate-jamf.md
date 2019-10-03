@@ -1,12 +1,12 @@
 ---
-title: Integrace Jamf Pro s Microsoft Intune pro dodržování předpisů
+title: Integrace Jamf pro s Microsoft Intune pro dodržování předpisů
 titleSuffix: Microsoft Intune
 description: K usnadnění zabezpečení zařízení spravovaných Jamf Microsoft Intune použijte zásady dodržování předpisů Azure Active Directory podmíněný přístup.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 09/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,49 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b439067d06cf49a4ff83288e109d1fccd3801106
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d7a63f3ff1e2936eff0961d4a9b368b0289e2b65
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729770"
+ms.locfileid: "71813971"
 ---
-# <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf Pro s Intune pro dodržování předpisů
+# <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf pro s Intune pro dodržování předpisů
 
-Platí pro: Intune na portálu Azure Portal
+Platí pro: Intune v Azure Portal
 
-Pokud vaše organizace používá [Jamf pro](https://www.jamf.com) ke správě počítačů Mac koncových uživatelů, můžete použít Microsoft Intune zásady dodržování předpisů s Azure Active Directory podmíněný přístup, abyste zajistili, že zařízení ve vaší organizaci splňují předpisy.
+Když vaše organizace používá [Jamf pro](https://www.jamf.com) ke správě zařízení MacOS, můžete použít Microsoft Intune zásady dodržování předpisů s podmíněným přístupem Azure Active Directory (Azure AD), abyste zajistili, že zařízení ve vaší organizaci vyhovují předpisům, ke kterým budou mít přístup. prostředky společnosti. Tento článek vám pomůže nakonfigurovat integraci Jamf s Intune.
 
-## <a name="prerequisites"></a>Požadované součásti
+Když se Jamf pro integruje s Intune, můžete synchronizovat data inventáře ze zařízení macOS s Intune prostřednictvím služby Azure AD. Modul dodržování předpisů v Intune pak analyzuje data inventáře a generuje sestavu. Analýza Intune je kombinována s inteligentními informacemi o identitě Azure AD uživatele zařízení, aby bylo možné řídit vynucování prostřednictvím podmíněného přístupu. Zařízení, která jsou kompatibilní se zásadami podmíněného přístupu, můžou získat přístup k chráněným prostředkům společnosti.
 
+Až nakonfigurujete integraci, [nakonfigurujte Jamf a Intune tak, aby vynutila dodržování předpisů s podmíněným přístupem](conditional-access-assign-jamf.md) na zařízeních spravovaných pomocí Jamf.  
+
+
+## <a name="prerequisites"></a>Předpoklady
+
+### <a name="products-and-services"></a>Produkty a služby
 Abyste mohli nakonfigurovat podmíněný přístup pomocí Jamf pro, potřebujete následující:
 
-- Jamf Pro 10.1.0 nebo novější
-- [Aplikaci Portál společnosti pro macOS](https://aka.ms/macoscompanyportal)
-- Zařízení macOS se systémem OS X 10.11 Yosemite nebo novější
+- Jamf pro 10.1.0 nebo novější
+- [Aplikace Portál společnosti pro macOS](https://aka.ms/macoscompanyportal)
+- zařízení macOS s operačním systémem X 10,11 Yosemite nebo novějším
+
+### <a name="network-ports"></a>Síťové porty
+<!-- source: https://support.microsoft.com/en-us/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune -->
+Následující porty by měly být přístupné pro Jamf a Intune pro správné integraci: 
+- **Intune**: port 443
+- **Apple**: porty 2195, 2196 a 5223 (nabízená oznámení do Intune)
+- **Jamf**: porty 80 a 5223
+
+Pokud chcete povolit službě APN správné fungování služby APNS v síti, musíte taky povolit odchozí připojení k a přesměrování z:
+- blok Apple 17.0.0.0/8 přes porty TCP 5223 a 443 ze všech klientských sítí.   
+- porty 2195 a 2196 ze serverů Jamf pro.  
+
+Další informace o těchto portech najdete v následujících článcích:  
+- [Požadavky na konfiguraci sítě a šířku pásma Intune](../fundamentals/network-bandwidth-use.md).
+- [Síťové porty používané službou Jamf pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) v jamf.com.
+- [Porty TCP a UDP používané softwarovými produkty společnosti Apple](https://support.apple.com/HT202944) v support.Apple.com
+
 
 ## <a name="connect-intune-to-jamf-pro"></a>Připojení Intune k Jamf pro
 
@@ -70,7 +93,7 @@ Postup připojení Intune s Jamf pro:
 
    Pokud chcete tuto konfiguraci uložit, vyberte **Přidat oprávnění** .  
 
-8. Na stránce **oprávnění rozhraní API** vyberte **udělit souhlas správce Microsoftu**a pak vyberte **Ano**.  
+8. Na stránce **oprávnění rozhraní API** vyberte * * udělit souhlas správce pro * \<your tenant > * * * a pak vyberte **Ano**.  Po úspěšném zaregistrování aplikace by se oprávnění API měla zobrazit takto: ![Successful oprávnění @ no__t-1.
 
    Proces registrace aplikace v Azure AD je dokončený.
 
@@ -78,27 +101,28 @@ Postup připojení Intune s Jamf pro:
     > [!NOTE]
     > Pokud platnost tajného klíče klienta vyprší, musíte v Azure vytvořit nový tajný klíč klienta a potom aktualizovat data podmíněného přístupu v Jamf pro. Azure umožňuje mít aktivní jak starý tajný klíč, tak i nový klíč, aby nedošlo k přerušení služeb.
 
-## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf Pro
+## <a name="enable-intune-to-integrate-with-jamf-pro"></a>Povolení integrace Intune s Jamf pro
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)a vyhledejte **Microsoft Intune** **dodržování předpisů zařízením** >   > **Správa partnerského zařízení**.
 
 2. Povolte konektor dodržování předpisů pro Jamf vložením ID aplikace, které jste uložili během předchozího postupu do pole **ID aplikace v Jamf Azure Active Directory** .
 
-3. Vyberte **Uložit**.
+3. Vyberte **Save** (Uložit).
 
-## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurace integrace Microsoft Intune v Jamf Pro
+## <a name="configure-microsoft-intune-integration-in-jamf-pro"></a>Konfigurace integrace Microsoft Intune v Jamf pro
 
-1. V Jamf Pro přejděte do části **Global Management (Globální správa)**  > **Conditional Access (Podmíněný přístup)** . Klikněte na tlačítko **Upravit** na kartě **integrace MacOS Intune** .
+1. V Jamf pro přejděte do **globálního řízení správa** > **podmíněný přístup**. Klikněte na tlačítko **Upravit** na kartě **integrace MacOS Intune** .
 
 2. Zaškrtněte políčko **Povolit integraci Intune pro MacOS**.
 
 3. Zadejte požadované informace o vašem tenantovi Azure, včetně **umístění**, **názvu domény**, **ID aplikace**a hodnoty *tajného klíče klienta* , který jste uložili při vytváření aplikace ve službě Azure AD.  
 
-4. Vyberte **Uložit**. Jamf pro testuje vaše nastavení a ověří úspěch.
+4. Vyberte **Save** (Uložit). Jamf pro testuje vaše nastavení a ověří úspěch.
 
 ## <a name="set-up-compliance-policies-and-register-devices"></a>Nastavení zásad dodržování předpisů a registrace zařízení
 
 Po nakonfigurování integrace mezi Intune a Jamf je potřeba [použít zásady dodržování předpisů pro zařízení spravovaná Jamf](conditional-access-assign-jamf.md).
+
 
 ## <a name="disconnect-jamf-pro-and-intune"></a>Odpojení služby Jamf pro a Intune 
 
@@ -106,7 +130,7 @@ Pokud už nepoužíváte Jamf pro ke správě počítačů Mac ve vaší organiz
 
 1. V Jamf pro přejděte na **Global Management** > **podmíněný přístup**. Na kartě **integrace MacOS Intune** vyberte **Upravit**.
 2. Zrušte zaškrtnutí políčka **Povolit integraci Intune pro MacOS** .
-3. Vyberte **Uložit**. Jamf pro pošle vaši konfiguraci do Intune a integrace se ukončí.
+3. Vyberte **Save** (Uložit). Jamf pro pošle vaši konfiguraci do Intune a integrace se ukončí.
 4. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973). Přejít na **Microsoft Intune** **dodržování předpisů zařízením** >   > **Správa partnerského zařízení** , aby se ověřilo, že je stav nyní **ukončen**. 
 
    > [!NOTE]
@@ -114,5 +138,5 @@ Pokud už nepoužíváte Jamf pro ke správě počítačů Mac ve vaší organiz
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Použití zásad dodržování předpisů pro zařízení spravovaná aplikací Jamf](conditional-access-assign-jamf.md)
+- [Použití zásad dodržování předpisů pro zařízení spravovaná Jamf](conditional-access-assign-jamf.md)
 - [Data Jamf odesílají do Intune.](data-jamf-sends-to-intune.md)

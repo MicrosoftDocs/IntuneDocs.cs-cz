@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3e270fc3efcc92a138fe97cbe599f7bd2bf1e55
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 2ae9637e827330fb33c407122450deb014b3725a
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730566"
+ms.locfileid: "71816874"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -32,7 +32,7 @@ Pomocí těchto funkcí můžete řídit zařízení macOS jako součást řeše
 
 Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dělá. V této části najdete taky postup pro získání IP adresy, cesty a portu pro tiskárny pro práci na tiskárně pomocí Terminálové aplikace (emulátor). Další informace o funkcích zařízení najdete v pro [Přidání nastavení funkcí zařízení se systémem iOS nebo MacOS](device-features-configure.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení MacOS](device-features-configure.md).
 
@@ -90,7 +90,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 
 - **Zobrazit další informace v řádku nabídek**: když je vybraná časová oblast na řádku **nabídek, možnost** Zobrazit zobrazí název hostitele a verzi MacOS. **Nenakonfigurováno** (výchozí) nezobrazuje tyto informace na řádku nabídek.
 - **Banner**: zadejte zprávu, která se zobrazí na přihlašovací obrazovce zařízení. Zadejte například informace o vaší organizaci, uvítací zprávu, ztracené a zjištěné informace atd.
-- **Zvolit formát přihlášení**: Vyberte způsob, jakým se uživatelé přihlašují k zařízení. Možnosti:
+- **Zvolit formát přihlášení**: Vyberte způsob, jakým se uživatelé přihlašují k zařízení. Vaše možnosti:
   - **Vyzvat k zadání uživatelského jména a hesla** (výchozí): vyžaduje, aby uživatelé zadali uživatelské jméno a heslo.
   - **Seznam všech uživatelů, výzva k zadání hesla**: vyžaduje, aby uživatelé vybrali své uživatelské jméno ze seznamu uživatelů a pak zadali heslo. Také konfigurovat:
 
@@ -106,7 +106,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 - **Tlačítko restartovat**: **Skrýt** na přihlašovací obrazovce nezobrazuje tlačítko restartovat. **Nenakonfigurováno** (výchozí) zobrazí tlačítko restartovat.
 - **Tlačítko režimu spánku**: **Skrýt** nezobrazuje na přihlašovací obrazovce tlačítko režimu spánku. **Nenakonfigurováno** (výchozí) zobrazí tlačítko režimu spánku.
 
-#### <a name="other"></a>Jiná
+#### <a name="other"></a>Jiné
 
 - **Zakázat přihlášení uživatele z konzoly**: **Disable zakáže** a skryje příkaz MacOS, který se používá pro přihlášení. V případě typických uživatelů toto nastavení **zakažte** . **Nenakonfigurováno** (výchozí) umožňuje pokročilým uživatelům přihlašovat se pomocí příkazového řádku MacOS. Pokud chcete přejít do režimu konzoly, uživatelé zadají do pole username `>console` a v okně konzoly se musí ověřit.
 
@@ -122,13 +122,13 @@ Až se uživatelé přihlásí k zařízením, následující nastavení budou m
 
 ## <a name="single-sign-on-app-extension"></a>Rozšíření aplikace s jednotným přihlašováním
 
-Tato funkce platí pro:
+Tato funkce se týká:
 
 - macOS 10,15 a novější
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace 
 
-- **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
+- **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Když uložíte profil rozšíření aplikace jednotného přihlašování, nemůžete změnit typ rozšíření aplikace jednotného přihlašování. Vaše možnosti:
 
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace jednotného přihlašování, přepněte typ rozšíření aplikace jednotného přihlašování z **protokolu Kerberos** nebo **přihlašovací údaje** na **Nenakonfigurováno**.
   - **Přihlašovací údaje**: k použití jednotného přihlašování použijte obecné rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
@@ -150,7 +150,7 @@ Tato funkce platí pro:
 
 - **Další konfigurace** (jenom přihlašovací údaje): zadejte další data specifická pro rozšíření, která chcete předat rozšíření aplikace jednotného přihlašování:
   - **Konfigurační klíč**: zadejte název položky, kterou chcete přidat, například `user name`.
-  - **Typ hodnoty**: zadejte typ dat. Možnosti:
+  - **Typ hodnoty**: zadejte typ dat. Vaše možnosti:
 
     - Řetězec
     - Boolean: v **hodnotě konfigurace**zadejte `True` nebo `False`.
@@ -192,7 +192,7 @@ V Intune můžete:
 - Přidejte mnoho přidružení aplikace k doméně.
 - Přidružte mnoho domén ke stejné aplikaci.
 
-Tato funkce platí pro:
+Tato funkce se týká:
 
 - macOS 10,15 a novější
 
@@ -208,6 +208,8 @@ Tato funkce platí pro:
 
 - **Doména**: zadejte doménu webu, kterou chcete přidružit k aplikaci. Doména zahrnuje typ služby a plně kvalifikovaný název hostitele, například `webcredentials:www.contoso.com`.
 
+  Všechny subdomény přidružené domény můžete vyhledat zadáním `*.` (zástupný znak hvězdička a tečka) před začátkem domény. Období je povinné. Přesné domény mají vyšší prioritu než u domén se zástupnými znaky. Modely z nadřazených domén se tedy shodují, *Pokud* se shoda nenajde v plně kvalifikované subdoméně.
+
   Typ služby může být:
 
   - **authsrv**: rozšíření aplikace s jednotným přihlašováním
@@ -221,6 +223,6 @@ Tato funkce platí pro:
 
 ## <a name="next-steps"></a>Další kroky
 
-[Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
+[Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
 Můžete taky nakonfigurovat funkce zařízení v [iOS](ios-device-features-settings.md).

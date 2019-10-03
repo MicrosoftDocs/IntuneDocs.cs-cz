@@ -1,11 +1,11 @@
 ---
-title: Přidání ochrany koncových bodů s macOS v Microsoft Intune – Azure | Microsoft Docs
-description: Na zařízeních s macOS můžete použít Gatekeeper k určení aplikací, které se smí instalovat, včetně aplikací z Mac App Storu. V Microsoft Intune také můžete určitým aplikacím povolit nebo nakonfigurovat průchod bránou firewall nebo můžete určité aplikace zablokovat, použít neviditelný režim utajení, případně blokovat určité typy příchozích připojení.
+title: Přidání Endpoint Protection na macOS v Microsoft Intune – Azure | Microsoft Docs
+description: Na zařízeních macOS pomocí serveru gatekeeper určete, kam se můžou aplikace nainstalovat, včetně Mac App Storu. Taky povolte nebo nakonfigurujte bránu firewall, která povoluje konkrétní aplikace, blokuje aplikace určené pro konkrétní aplikace, používá režim utajení a dokonce blokuje určité typy příchozích připojení pomocí Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 80b904893f118bac1f4d0d79da0cd10498b9f2ed
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6090d329eee6f27da21b6133a2b7ccdc7072feb3
+ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729298"
+ms.locfileid: "71814117"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>Nastavení ochrany koncových bodů MacOS v Intune  
 
@@ -32,35 +32,35 @@ Tento článek ukazuje nastavení ochrany koncových bodů, která můžete nako
 
   - **Není nakonfigurováno**  
   - **Mac App Store**  
-  - **Mac App Store a identifikovaní vývojáři**  
-  - **Kdekoliv**  
+  - **Mac App Store a identifikování vývojáři**  
+  - **Jakékoli**  
 
   **Výchozí**: Nenakonfigurováno  
 
 - **Uživatel může přepsat server gatekeeper**  
-  Zabrání uživatelům přepsat nastavení serveru gatekeeper a zabránit uživatelům v řízení kliknutí na instalaci aplikace. Pokud tuto možnost povolíte, uživatelé mohou stisknout klávesu Control a kliknutím na libovolnou aplikaci ji nainstalovat.  
+  Zabrání uživatelům přepsat nastavení serveru gatekeeper a zabránit uživatelům v řízení kliknutí na instalaci aplikace. Když je tato možnost povolená, uživatelé můžou ovládací prvky kliknout na libovolnou aplikaci a nainstalovat ji.  
  
   - **Nenakonfigurováno** – uživatelé můžou instalovat aplikace kliknutím na tlačítko.  
   - **Blok** – zabraňuje uživatelům v použití řízení – kliknutím instalovat aplikace.  
 
   **Výchozí**: Nenakonfigurováno  
 
-## <a name="firewall"></a>Servery  
+## <a name="firewall"></a>Brána firewall  
 
-Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. Když použijete nastavení pro danou aplikaci, získáte snadno výhody ochrany branou firewall. Nežádoucím aplikacím také znemožníte převzetí kontroly nad síťovými porty otevřenými pro oprávněné aplikace.  
+Použijte bránu firewall k řízení připojení pro jednotlivé aplikace a nikoli na port. Použití nastavení pro jednotlivé aplikace usnadňuje získání výhod ochrany brány firewall. Pomáhá také zabránit nežádoucím aplikacím v převzetí kontroly nad síťovými porty otevřenými pro legitimní aplikace.  
 
-**Všeobecně**
-- **Servery**  
+**Obecné**
+- **Brána firewall**  
   Povolte bránu firewall ke konfiguraci způsobu zpracování příchozích připojení ve vašem prostředí.  
   - **Není nakonfigurováno**  
-  - **Aby**  
+  - **Povolení**  
 
   **Výchozí**: Nenakonfigurováno  
 
 - **Příchozí připojení**  
-  Blokuje všechna příchozí připojení s výjimkou připojení požadovaných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Tato funkce také zablokuje všechny služby sdílení, jako je sdílení souborů nebo sdílení obrazovky. Pokud používáte služby sdílení, toto nastavení *nekonfigurujte*.  
+  Blokuje všechna příchozí připojení s výjimkou připojení požadovaných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Tato funkce také blokuje všechny služby sdílení, jako je sdílení souborů a sdílení obrazovky. Pokud používáte služby sdílení, zachovejte toto nastavení jako *Nenakonfigurováno*.  
   - **Není nakonfigurováno**  
-  - **Blokováno**  
+  - **Blokované**  
 
   **Výchozí**: Nenakonfigurováno  
 
@@ -73,9 +73,9 @@ Firewall slouží ke kontrole připojení aplikace, nikoli připojení k portu. 
     Vyberte aplikace, které by měly blokovat příchozí připojení.  
 
   - **Neviditelný režim**  
-    Chcete-li zabránit počítači v reakci na požadavky na zjišťování, Povolte režim utajení. Oprávněným aplikacím bude zařízení dále odpovídat na příchozí žádosti. Neočekávané požadavky, jako je ICMP (ping), se ignorují.  
+    Chcete-li zabránit počítači v reakci na požadavky na zjišťování, Povolte režim utajení. Zařízení bude nadále odpovídat na příchozí požadavky na autorizované aplikace. Neočekávané žádosti, jako je například ICMP (test), jsou ignorovány.  
     - **Není nakonfigurováno**  
-    - **Aby**  
+    - **Povolení**  
 
     **Výchozí**: Nenakonfigurováno  
 
@@ -88,7 +88,7 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
 - **FileVault**  
   Pomocí XTS-AES 128 s trezorem pro zařízení, na kterých běží macOS 10,13 nebo novější, můžete *Povolit* úplné šifrování disku.  
   - **Není nakonfigurováno**  
-  - **Aby**  
+  - **Povolení**  
 
   **Výchozí**: Nenakonfigurováno  
 
@@ -107,13 +107,13 @@ Další informace o nastaveních úložišť Apple najdete v tématu [FDEFileVau
     **Výchozí**: Nenakonfigurováno  
 
   - **Počet povolených pokusů o obejití**  
-  Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit.  
+  Nastaví počet pokusů, které uživatel může ignorovat výzvy k povolení trezoru úložišť, aby se uživatel mohl přihlásit. 
 
     - **Není nakonfigurováno** – před povolením dalšího přihlášení je vyžadováno šifrování zařízení.  
     - **1** až **10** – povolí uživateli ignorovat výzvu od 1 do 10 před tím, než se v zařízení vyžaduje šifrování.  
     - **Bez omezení, vždy** se zobrazí výzva – uživatel bude vyzván k povolení trezoru úložišť, ale šifrování není nikdy vyžadováno.  
  
-    **Výchozí**: Nenakonfigurováno  
+    **Výchozí**: se *liší* – když je nastavení *Zakázat výzvu při odhlášení* nastavené na **Nenakonfigurováno**, toto nastavení se standardně **nenakonfigurovalo**. Když je možnost *Zakázat výzvu při odhlášení* nastavená na **disabled**, toto nastavení se nastaví na hodnotu **1** a hodnota **není nakonfigurovaná** .
 
 Další informace o trezoru s Intune najdete v tématu [klíče pro obnovení trezoru](encryption-monitor.md#filevault-recovery-keys).
 

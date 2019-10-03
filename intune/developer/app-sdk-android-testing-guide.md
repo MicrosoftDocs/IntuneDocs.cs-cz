@@ -1,11 +1,11 @@
 ---
 title: Příručka pro vývojové testování v sadě Microsoft Intune App SDK pro Android
 description: Průvodce testováním sady Microsoft Intune App SDK pro Android vám pomůže otestovat aplikaci pro Android spravovanou v Intune.
-keywords: Sada SDK
+keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2019
+ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8ffc81ec2dba3eac0af4eeb94e22002ec8afa87
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1484567721283ddb91f3ecebbc448e7356ceaf5a
+ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730358"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71830538"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developers-testing-guide"></a>Průvodce testováním sady Microsoft Intune App SDK pro vývojáře v Androidu
 
@@ -41,9 +41,6 @@ Je možné vytvořit nové účty s předem generovanými daty a bez nich. Vytvo
 
 > [!NOTE]
 > Pokud vaše aplikace není uvedená v Azure Portal, můžete na ni cílit pomocí zásady výběrem možnosti **Další aplikace** a zadáním názvu balíčku do textového pole.
-
-> [!IMPORTANT]
-> Aby se zásady konfigurace aplikace projevily, musí se registrace uživatele zaměřit [zásadami ochrany aplikací Intune](../apps/app-protection-policy.md).
 
 ## <a name="test-cases"></a>Testovací případy
 
