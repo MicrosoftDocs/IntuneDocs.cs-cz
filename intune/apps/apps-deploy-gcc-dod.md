@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/09/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17d94252dd957c5699b34e0b8c2cbae2eee0b66f
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4d414899b6146afbe2c5ac119193fe0e59aa719b
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731258"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71939978"
 ---
 # <a name="deploying-apps-using-intune-on-the-gcc-high-and-dod-environments"></a>Nasazení aplikací pomocí Intune pro prostředí RSZ s vysokým a DoD 
 
@@ -51,7 +51,7 @@ V komerčním prostředí (bez státní správy) může správce synchronizovat 
 
 Pokud chcete synchronizovat Intune s účtem Storu pro firmy, přečtěte si téma [Správa aplikací zakoupených v Microsoft Store pro firmy pomocí Microsoft Intune](windows-store-for-business.md).  
 
-## <a name="compliance"></a>Dodržování předpisů 
+## <a name="compliance"></a>Dodržování 
 
 Přečtěte si prohlášení o ochraně osobních údajů a dodržování předpisů v aplikacích a porovnejte je s požadavky vaší organizace na dodržování předpisů, zabezpečení a ochrany osobních údajů, a to při vyhodnocování vhodného používání těchto služeb.   
 

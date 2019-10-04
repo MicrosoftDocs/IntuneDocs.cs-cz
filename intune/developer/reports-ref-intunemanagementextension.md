@@ -1,12 +1,12 @@
 ---
-title: Entita IntuneManagementExtension
+title: IntuneManagementExtension – entita
 titleSuffix: Microsoft Intune
-description: Téma referenčních informací ke kategorii Entita IntuneManagementExtension pro kolekce entit v rozhraní API datového skladu Intune
+description: Téma reference pro kategorii entit IntuneManagementExtension kolekce entit v rozhraní API datového skladu Intune
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 10/03/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70802626c79f11748e81c39afdd8bc8c5d0622b3
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 19b63172c8901059239c44aaf56fc49f0d7a01ad
+ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730150"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940407"
 ---
 # <a name="reference-for-intune-management-extensions"></a>Referenční informace o rozšířeních pro správu Intune
 
@@ -35,31 +35,31 @@ Kategorie **intuneManagementExtensions** obsahuje entity pro mobilní zařízen�
 
 Entita **intuneManagementExtensionVersion** obsahuje všechny verze, které používá intuneManagementExtensions.
 
-| Vlastnost  | Description | Příklad |
+| Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
-| ExtensionVersionKey |Jedinečný identifikátor verze intuneManagementExtensions | 1 |
-| ExtensionVersion |Číslo verze tvořené 4 číslicemi |1.0.2.0 |
+| ExtensionVersionKey |Jedinečný identifikátor verze intuneManagementExtensions | první |
+| ExtensionVersion |Číslo verze o 4 číslice. |1.0.2.0 |
 
 ## <a name="intunemanagementextensionhealthstates"></a>intuneManagementExtensionHealthStates
 
 **IntuneManagementExtensionHealthState** obsahuje seznam všech možných stavů intuneManagementExtensions.
 
-| Vlastnost  | Description | Příklad |
+| Vlastnost  | Popis | Příklad |
 |---------|------------|--------|
-| ExtensionStateKey |Jedinečný identifikátor stavu | 2 |
-| ExtensionState |Stav IntuneManagementExtension | V pořádku |
+| ExtensionStateKey |Jedinečný identifikátor stavu | odst |
+| ExtensionState |Stav IntuneManagementExtension. | V pořádku |
 
 ## <a name="intunemanagementextensions"></a>intuneManagementExtensions
 
 **IntuneManagementExtension** uvádí stav IntuneManagementExtensions na každém zařízení s Windows 10 za den.
-Uchovávají se data za posledních 60 dní. 
+Data se uchovávají po dobu posledních 60 dní. 
 
 
-|      Vlastnost       |                         Description                         | Příklad |
+|      Vlastnost       |                         Popis                         | Příklad |
 |---------------------|-------------------------------------------------------------|---------|
-|       dateKey       |               Jedinečný identifikátor data                |   123   |
+|       DateKey       |               Jedinečný identifikátor data                |   123   |
 |      TenantKey      |              Jedinečný identifikátor tenanta               |   456   |
 |      DeviceKey      |              Jedinečný identifikátor zařízení               |   789   |
-| ExtensionVersionKey | Jedinečný identifikátor verze intuneManagementExtension |    1    |
-|  ExtensionStateKey  |             Jedinečný identifikátor stavu              |    2    |
+| ExtensionVersionKey | Jedinečný identifikátor verze intuneManagementExtension |    první    |
+|  ExtensionStateKey  |             Jedinečný identifikátor stavu              |    odst    |
 
