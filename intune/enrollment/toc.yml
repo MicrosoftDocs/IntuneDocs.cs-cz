@@ -89,6 +89,10 @@
       items:
         - name: Program DEP (Device Enrollment Program)
           href: device-enrollment-program-enroll-ios.md
+        - name: Nastavení registrace uživatele pro iOS a iPadOS
+          href: ios-user-enrollment.md
+        - name: Podporované akce a možnosti u registrace uživatele
+          href: ios-user-enrollment-supported-actions.md
         - name: Apple School Manager
           href: apple-school-manager-set-up-ios.md
         - name: Apple Configurator
