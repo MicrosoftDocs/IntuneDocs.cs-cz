@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2019
+ms.date: 10/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.technology: ''
@@ -16,20 +16,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 009b9cf22bcdd73eb563c772cc9995047f05a9c1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0e7c4e5ed45455dda941fb0c61c989c12c57135d
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731754"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999324"
 ---
 # <a name="in-development-for-microsoft-intune---october-2019"></a>Ve vývoji Microsoft Intune – říjen 2019
 
-Tato stránka vám pomůže s vaším připravenostm a plánováním vypisuje aktualizace uživatelského rozhraní Intune a funkce, které jsou ve vývoji, ale ještě nejsou vydané. Navíc platí:
+Tato stránka vám pomůže s vaším připravenostm a plánováním vypisuje aktualizace uživatelského rozhraní Intune a funkce, které jsou ve vývoji, ale ještě nejsou vydané. Další vylepšení:
 
 - Pokud předpokládáme, že před změnou budete muset provést nějakou akci, zveřejníme doplňkový příspěvek centra zpráv Office.
 - Pokud se funkce spustí v produkčním prostředí, buď jako verze Preview, nebo všeobecně dostupná, popis funkce se přesune mimo tuto stránku a na [stránku co je nového](whats-new.md).
-- Tato stránka a [Stránka co je nového](whats-new.md) se pravidelně aktualizují. Přijďte se tedy znovu podívat, jestli nejsou k dispozici nové informace.
+- Tato stránka a [Stránka co je nového](whats-new.md) se pravidelně aktualizují. Vraťte se na další aktualizace.
 - Strategické dodávky a časové osy najdete v tématu [Přehled M365](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) .
 
 > [!Note]
@@ -131,7 +131,7 @@ Platí pro:
 - Android Enterprise
 
 ### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices----4816339----"></a>Vytvoření globálního proxy serveru HTTP na zařízeních s vlastníkem zařízení s Androidem Enterprise <!-- 4816339  -->
-Na zařízeních s Androidem Enterprise můžete vytvořit profil sítě VPN s různými klienty VPN (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > **vlastníka zařízení > Omezení zařízení** pro typ profilu > **připojení**). Globální proxy server HTTP budete moct nakonfigurovat tak, aby splňoval standardy procházení webu ve vaší organizaci. Všechny aplikace, které jdou na weby HTTP, používají tento proxy server.
+Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby splňoval standardy procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** for **> omezení zařízení** > Platform pro typ profilu > **konektivita**zařízení. Po nakonfigurování bude tento proxy server používat všechny přenosy HTTP.
 
 Platí pro:
 - Vlastník zařízení se systémem Android Enterprise
@@ -139,10 +139,10 @@ Platí pro:
 ### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices----2266073----"></a>Nový profil rozhraní pro konfiguraci firmwaru zařízení pro zařízení s Windows 10 a novějším <!-- 2266073  -->
 V systému Windows 10 a novějších můžete vytvořit profil konfigurace zařízení pro řízení nastavení a funkcí (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu). Bude se jednat o nový typ profilu rozhraní pro konfiguraci firmwaru zařízení, který umožňuje Intune spravovat nastavení rozhraní UEFI (BIOS).
 
-Přehled všech nastavení, která můžete konfigurovat, najdete v tématu [použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune](../configuration/device-profiles.md).
+Přehled všech aktuálních nastavení, která můžete konfigurovat, najdete v tématu [použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune](../configuration/device-profiles.md).
 
 Platí pro:
-- Windows 10 RS5 (1809) a novější na některých Výrobcůch OEM
+- Windows 10 RS5 (1809) a novější na vybraných zařízeních
 
 ### <a name="pkcs-certificates-for-macos-----1333650------------------"></a>Certifikáty PKCS pro macOS  <!-- 1333650                -->
 Do zařízení, na kterých běží macOS, přidáváme plnou podporu certifikátů PKCS. Uživatelé budou moci nasadit certifikáty uživatelů a zařízení s poli přizpůsobení předmět a alternativní název subjektu. Také bude k dispozici nové nastavení Povolit všem aplikacím přístup, což umožňuje všem přidruženým aplikacím přístup k privátnímu klíči. Další podrobnosti o tomto nastavení najdete v následující dokumentaci k Apple: https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf.
@@ -220,12 +220,12 @@ V rámci pokračujících vylepšení budeme aktualizovat prostředí podpory v 
 
 
 <!-- ***********************************************-->
-## <a name="notices"></a>Sdělení
+## <a name="notices"></a>Hlášení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]
 
-## <a name="see-also"></a>Související témata
-Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).
+## <a name="see-also"></a>Viz také:
+Podrobnosti o nedávném vývoji najdete [v tématu Co je nového v Microsoft Intune](whats-new.md) .
 
 
 

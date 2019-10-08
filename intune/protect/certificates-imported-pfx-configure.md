@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48a7fe51c2fa6bc27ed4dda206335a3171c2500c
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: fead8b9d69f5356876c0b3a2a4ce02e9b754128e
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71814154"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999336"
 ---
 # <a name="configure-and-use-imported-pkcs-certificates-with-intune"></a>Konfigurace a používání importovaných certifikátů PKCS pomocí Intune
 
@@ -135,7 +135,7 @@ Následující postup používá rutiny prostředí PowerShell jako příklad im
 
 Mezi možnosti patří:  
 - Zamýšlený účel (skupiny certifikátů na základě značky):  
-  - Nepřiřazené
+  - nepřiřazeno
   - Šifrování smimeencryption
   - smimeSigning
 
@@ -161,7 +161,7 @@ Vyberte poskytovatele úložiště klíčů, který odpovídá poskytovateli, kt
 5. Převeďte heslo pro každý soubor PFX, který importujete, do zabezpečeného řetězce spuštěním `$SecureFilePassword = ConvertTo-SecureString -String "<PFXPassword>" -AsPlainText -Force`.  
 6. Pokud chcete vytvořit objekt **UserPFXCertificate** , spusťte `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>"`.
 
-   Příklad: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption" "pkcs1"`
+   Například: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "C:\temp\userA.pfx" $SecureFilePassword "userA@contoso.com" "Microsoft Software Key Storage Provider" "PFXEncryptionKey" "smimeEncryption" "pkcs1"`
 
    > [!NOTE]  
    > Když importujete certifikát z jiného systému, než ze serveru, na kterém je konektor nainstalovaný, použijte následující příkaz, který zahrnuje cestu k souboru klíče: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathPFXToCert>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
@@ -186,7 +186,7 @@ Po importu certifikátů do Intune vytvořte profil **certifikátu importovaný 
 
 3. Přejděte na **Nastavení**a zadejte následující vlastnosti:
 
-   - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (jako je ověřování, podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu se shoduje s profilem certifikátů správnými importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
+   - **Zamýšlený účel**: Určete zamýšlený účel certifikátů, které jsou importované pro tento profil. Správci mohou importovat certifikáty s různými zamýšlenými účely (například podepisování S/MIME nebo šifrování S/MIME). Zamýšlený účel vybraný v profilu certifikátu se shoduje s profilem certifikátů správnými importovanými certifikáty. Zamýšlený účel je značka pro seskupení importovaných certifikátů společně a nezaručuje, že certifikáty importované s touto značkou budou vyhovovat zamýšlenému účelu.  
    - **Období platnosti certifikátu**: Pokud se v šabloně certifikátu nezměnila doba platnosti, tato možnost je ve výchozím nastavení nastavená na jeden rok.  
    - **Zprostředkovatel úložiště klíčů (KSP)** : pro Windows vyberte místo, kam se mají ukládat klíče na zařízení.  
 

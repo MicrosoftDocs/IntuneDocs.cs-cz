@@ -1,12 +1,12 @@
 ---
 title: Připojení k datovému skladu pomocí Power BI
 titleSuffix: Microsoft Intune
-description: Můžete si stáhnout soubor pro použití s Microsoft Power BI, který vám umožní načíst interaktivní, dynamicky generované sestavy vašeho tenanta Microsoft Intune.
+description: Můžete si stáhnout soubor pro použití s Microsoft Power BI, který umožňuje načíst interaktivní, dynamicky generované sestavy pro vašeho tenanta Microsoft Intune.
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/14/2019
+ms.date: 10/07/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ee5cdb6bbdcce229fbc217726a1ee118f77beff
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9e8fadb625073af2a70d605d3ceabb9ba97906ae
+ms.sourcegitcommit: 46322ca7a92971e18dc0b230f436b9ca892b90c5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730202"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008334"
 ---
 # <a name="connect-to-the-data-warehouse-with-power-bi"></a>Připojení k datovému skladu pomocí Power BI
 
@@ -30,21 +30,21 @@ ms.locfileid: "71730202"
 
 Aplikaci Power BI dodržování předpisů můžete použít k načtení interaktivních a dynamicky generovaných sestav pro vašeho tenanta Intune. Kromě toho můžete načíst data tenanta v Power BI pomocí odkazu OData. Intune poskytuje vašemu tenantovi nastavení připojení, abyste mohli zobrazit následující ukázkové sestavy a grafy týkající se:  
 
-- Zařízení
-- Registrace
-- zásady ochrany aplikací
-- zásady dodržování předpisů
-- Konfigurační profily zařízení
+- Signalizac
+- Registraci
+- Zásady ochrany aplikací
+- Zásady dodržování předpisů
+- Profily konfigurace zařízení
 - Aktualizace softwaru
 - Protokoly inventáře zařízení
 
-Jsou tu také zvýrazněné trendy pro registraci, dodržování předpisů, konfigurační profil zařízení a aktualizace softwaru. Ukázkové grafy a sestavy používají uživatelsky přívětivé filtry plátna. Pokud chcete použít rozšířené filtry, podívejte se na podokno **Filtr** v aplikaci Power BI Desktop.
+K dispozici jsou také trendy zvýrazněné pro registraci, dodržování předpisů, konfigurační profil zařízení a aktualizace softwaru. Ukázkové grafy a sestavy používají uživatelsky přívětivé filtry plátna. Pokud chcete použít rozšířené filtry, podívejte se na podokno **filtru** v Power BI Desktop.
 
-Následující kroky vám ukážou, jak stáhnout soubor Power BI a jak používat odkaz OData s Power BI.
+Následující kroky ukazují, jak stáhnout soubor Power BI a jak používat odkaz OData s Power BI.
 
 [!INCLUDE [reports-credential-reqs](../includes/reports-credential-reqs.md)]
 
-## <a name="install-power-bi"></a>Instalace Power BI
+## <a name="install-power-bi"></a>Nainstalovat Power BI
 
 Nainstalujte nejnovější verzi [Power BI Desktop](https://aka.ms/intune/datawarehouseapi/installpowerbi). Další informace najdete v tématu [Power BI Desktop](https://powerbi.microsoft.com/desktop)
 
@@ -65,34 +65,35 @@ Aplikace Power BI [Intune pro dodržování předpisů (datový sklad)](https://
 
 Alternativně můžete aplikaci nainstalovat z portálu Intune:
 
-1. Přihlaste se k webu Azure Portal a zvolte **Monitorování + správa** > **Intune**. Můžete také vyhledat prostředky pro Intune.
+1. Přihlaste se k Azure Portal a vyberte **Monitorování a správa** > **Intune**. Můžete také vyhledat prostředky pro Intune.
 2. Otevřete okno **nastavit datový sklad Intune** .
 3. Vyberte **získat Power BI aplikaci** pro přístup k předem vytvořeným Power BIm sestavám pro vašeho tenanta v prohlížeči a jejich sdílení.
 4. Postupujte podle kroků 2-10 výše.
 
 ## <a name="load-the-data-in-power-bi-using-the-odata-link"></a>Načtení dat v Power BI pomocí odkazu OData
 
-S klientem ověřeným v Azure AD se adresa URL pro OData připojí ke koncovému bodu RESTful v rozhraní API datového skladu, který zveřejní datový model do klienta sestav. Pokud chcete použít aplikaci Power BI Desktop pro připojení a vytvoření vlastních sestav, postupujte podle těchto pokynů. Nejste omezeni aplikací Power BI Desktop. Můžete použít oblíbený analytický nástroj s adresou URL pro OData, za předpokladu, že klient podporuje ověřování OAUTH2.0 a standard OData v4.0.
+S klientem ověřeným pro Azure AD se adresa URL OData připojí ke koncovému bodu RESTful v rozhraní API datového skladu, které zpřístupňuje datový model klientovi sestav. Podle těchto pokynů můžete pomocí Power BI Desktop připojit a vytvořit vlastní sestavy. Nejste omezeni na Power BI Desktop, ale můžete použít svůj oblíbený analytický nástroj s adresou URL OData, pokud klient podporuje ověřování OAUTH 2.0 a Standard OData v 4.0.
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. V části **Další úkoly** na pravé straně okna Přehled klikněte na **nastavit datový sklad Intune** . Zobrazí se okno **datový sklad Intune** .
-3. V okně vytváření sestav načtěte adresu URL vlastního informačního kanálu, například: `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`.
-4. Otevřete aplikaci **Power BI Desktop**.
-5. Zvolte **Domů** > **Získat data**. Vyberte **Datový kanál OData**.
-6. Zvolte **Základní**.
-7. Do pole adresy URL zadejte nebo vložte **adresu URL pro OData**.
+3. V okně vytváření sestav načtěte adresu URL vlastního kanálu, například:<br>
+    `https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
+4. Otevřete **Power BI Desktop**.
+5. Vyberte **soubor** > **načíst data**. Vyberte **kanál OData**.
+6. Vyberte **základní**.
+7. Do pole Adresa URL zadejte nebo vložte **adresu URL OData** .
 8. Vyberte **OK**.
-9. Pokud jste se službě Azure AD pro vašeho tenanta neověřili z klienta aplikace Power BI Desktop, zadejte své přihlašovací údaje. Abyste získali přístup k datům, musíte se vůči službě Azure Active Directory (Azure AD) autorizovat protokolem OAuth 2.0.  
-    1. Vyberte **Účet organizace**.  
+9. Pokud jste neověřili službu Azure AD pro vašeho tenanta z klienta služby Power BI Desktop, zadejte své přihlašovací údaje. Abyste získali přístup k datům, musíte se pomocí protokolu OAuth 2,0 ověřit pomocí služby Azure Active Directory (Azure AD).  
+    1. Vyberte **účet organizace**.  
     2. Zadejte své uživatelské jméno a heslo.  
-    3. Vyberte **Přihlásit se**.  
+    3. Vyberte **Přihlásit se.**  
     4. Vyberte **připojit**.  
-10. Vyberte **Načíst**.
+10. Vyberte **načíst**.
 
 ## <a name="next-steps"></a>Další kroky
 
-Můžete získat odpovědi na otázky týkající se vašeho prostředí, například týkající se počtu zařízení zaregistrovaných podle dne za poslední týden. Můžete získat přehled o naplnění tenanta a klientů Intune pomocí datových skladů Intune Power BI sestav načtených z okna v Azure. Intune ale poskytuje množství dalších způsobů, jak data rozšířit a znovu použít. Power BI a rozhraní API datového skladu Intune poskytují další funkce, například:
+Můžete najít odpovědi na otázky týkající se vašeho prostředí, jako je počet zařízení zapsaných během posledního týdne za den. Můžete získat přehled o naplnění tenanta a klientů Intune pomocí datových skladů Intune Power BI sestav načtených z okna v Azure. Intune ale poskytuje řadu dalších způsobů, jak data roztáhnout nebo znovu použít. Power BI a rozhraní API datového skladu Intune poskytují další funkce, například:
 
 <!-- - You can use Power BI Desktop to create additional report types with your data. For example, you could create a custom chart representing the ratio of device manufactures in your enterprise. For more information about creating custom reports with Power BI and the Intune Data Warehouse, see `BLOG POST ON POWER BI`. -->
-- Data tenanta budou uspořádána tak, aby vám pomohla získat lepší přehled. Další informace o způsobu uspořádání dat najdete v tématu [Datový model datového skladu](reports-ref-data-model.md).
-- K datům můžete získat přístup také z rozhraní RESTful a začlenit je do své vlastní aplikace. Další informace najdete v článku [Získání dat z rozhraní API datového skladu pomocí klienta REST](../reports-proc-data-rest.md).
+- Vaše data tenanta jsou uspořádaná tak, aby vám pomohla získat přehled o vašich datech. Další informace o tom, jak jsou data uspořádaná, najdete v tématu [datový model datového skladu](reports-ref-data-model.md).
+- Můžete také přistupovat k datům z rozhraní RESTful a začlenit data do vlastní aplikace. Další informace najdete v tématu [získání dat z rozhraní API datového skladu pomocí klienta REST](../reports-proc-data-rest.md).

@@ -1,6 +1,6 @@
 ---
-title: Vytvoření profilů certifikátů v Microsoft Intune – Azure | Microsoft Docs
-description: Přidejte nebo vytvořte profil certifikátu pro zařízení pomocí konfigurace prostředí certifikátu SCEP nebo PKCS, exportujte veřejný certifikát, vytvořte profil na portálu Azure a pak přiřaďte SCEP nebo PKCS k profilům certifikátů v Microsoft Intune na portálu Azure Portal.
+title: Vytvoření profilu certifikátů v Microsoft Intune – Azure | Microsoft Docs
+description: Pro vaše zařízení přidejte nebo vytvořte profil certifikátu konfigurací prostředí certifikátů SCEP nebo PKCS, exportujte veřejný certifikát, vytvořte profil v Azure Portal a potom přiřaďte SCEP nebo PKCS k profilům certifikátů v Microsoft Intune v Azure. bran
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,22 +16,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74b920deeb5255f6f938f0c8b07eaab6d765e68e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
+ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729882"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999302"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune  
 
 Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a podnikovými prostředky prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů. Pokud používáte certifikáty k ověřování těchto připojení, koncoví uživatelé nebudou muset zadávat uživatelská jména a hesla, což pomáhá zajistit bezproblémové přístupu. Certifikáty se taky používají k podepisování a šifrování e-mailů pomocí S/MIME.
 
-Intune podporuje následující typy certifikátů:  
-
-- Protokol SCEP (Simple Certificate Enrollment Protocol)  
-- PKCS#12 (nebo PFX)  
-- Importované certifikáty PKCS
+## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
+| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
+|--|--|--|--|
+| Importovaný certifikát PKCS |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
+| PKCS # 12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
+| Simple Certificate Enrollment Protocol (SCEP)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | |
 
 K nasazení těchto certifikátů vytvoříte a přiřadíte profily certifikátů k zařízením.  
 
@@ -54,8 +55,8 @@ Každý profil každého jednotlivého certifikátu, který vytvoříte, podporu
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |   |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
-| Wvdows Phone 8.1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
-| Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Windows Phone 8,1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
+| Windows 8.1 a novější |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.  
@@ -74,29 +75,29 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu  
 
 1. Přihlaste se k [portálu Intune](https://aka.ms/intuneportal).  
-2. Vyberte **Konfigurace zařízení** > **Spravovat** > **Profily** > **Vytvořit profil**.  
+2. Vyberte **Konfigurace zařízení** > **Spravovat** **profily** >   > **vytvořit profil**.  
 3. Zadejte **název a popis** profilu důvěryhodného certifikátu.  
-4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát.  
-5. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.  
+4. V rozevíracím seznamu **platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát.  
+5. V rozevíracím seznamu **typ profilu** vyberte **důvěryhodný certifikát**.  
 6. Vyhledejte soubor. CER certifikátu důvěryhodné kořenové certifikační autority, který jste exportovali pro použití s tímto profilem certifikátu, a pak vyberte **OK**.  
-7. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:  
-   - **Úložiště počítačových certifikátů – kořenové**
-   - **Úložiště počítačových certifikátů – zprostředkující**
-   - **Úložiště uživatelských certifikátů – zprostředkující**
-8. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
+7. Pro Windows 8.1 a jenom pro zařízení s Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z:  
+   - **Úložiště certifikátů počítače-kořen**
+   - **Úložiště certifikátů počítače-zprostředkující**
+   - **Úložiště certifikátů uživatele-zprostředkující**
+8. Až skončíte, zvolte **OK**, vraťte se do podokna **vytvořit profil** a vyberte **vytvořit**.
 Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zobrazení profily* s typem profilu **důvěryhodného certifikátu**.  Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PCKS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
 
 > [!NOTE]  
 > V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.  
 
-## <a name="additional-resources"></a>Další materiály a zdroje informací  
+## <a name="additional-resources"></a>Další zdroje  
 - [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)  
-- [Podepisování a šifrování e-mailů pomocí S/MIME](certificates-s-mime-encryption-sign.md)  
+- [Pro podepisování a šifrování e-mailů použít S/MIME](certificates-s-mime-encryption-sign.md)  
 - [Použití certifikační autority třetích stran](certificate-authority-add-scep-overview.md)  
 
 ## <a name="next-steps"></a>Další kroky  
 Po vytvoření a přiřazení profilů důvěryhodných certifikátů vytvořte profily certifikátů SCEP, PKCS a PKCS pro každou platformu, kterou chcete použít. Chcete-li pokračovat, přečtěte si následující články:  
 - [Konfigurace infrastruktury pro podporu certifikátů SCEP pomocí Intune](certificates-scep-configure.md)  
-- [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
+- [Konfigurace a Správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
 - [Vytvoření importovaného profilu certifikátu PKCS](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)  
 
