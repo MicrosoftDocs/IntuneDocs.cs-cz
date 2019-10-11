@@ -5,22 +5,22 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8b3a99744f830da3c88473e79bce78c97875d73
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: ffd1e120a364be1ecaa98e01ff71ac723672b546
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729742"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237198"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
 
@@ -95,15 +95,15 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Zásada se vytvoří a zobrazí se v seznamu. Potom tyto zásady přiřaďte do skupin.
 
-## <a name="assign-user-groups"></a>Přiřazení skupin uživatelů
+## <a name="assign-the-policy"></a>Přiřazení zásady
 
 Po vytvoření zásady je dalším krokem přiřazení těchto zásad ke skupinám:
 
 1. Vyberte zásadu, kterou jste vytvořili. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
 2. Vyberte zásady > **přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
-3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Vyberte skupiny uživatelů, pro které chcete tuto zásadu použít > zvolte **Uložit** , aby se zásady nasadily uživatelům.
+3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Vyberte skupiny, které chcete použít pro tuto zásadu > klikněte na **Uložit** a zásadu nasaďte.
 
-Zásadu jste použili pro uživatele. U zařízení používaných uživateli, pro která platí nastavené zásady, se vyhodnocuje, jestli vyhovují.
+Uživatelé nebo zařízení, na které vaše zásada cílí, se vyhodnotí pro dodržování předpisů při jejich vrácení se změnami pomocí Intune.
 
 ### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnocení počtu cílových uživatelů
 
@@ -160,7 +160,7 @@ Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dv
 |---------|---------|
 |Neznámé     |1|
 |Neužívá se     |2|
-|Vyhovuje|3|
+|Kompatibilní|3|
 |V období odkladu|4|
 |Nevyhovující předpisům|5|
 |Chyba|6|

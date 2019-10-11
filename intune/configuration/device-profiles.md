@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 656a6903284be01b8afd493cdbd36afe299db02a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 3afdb365d0ed88a58028287cc7010bb334e9001e
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730786"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036444"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -29,7 +29,7 @@ ms.locfileid: "71730786"
 
 Microsoft Intune obsahuje nastavení a funkce, které můžete povolit nebo zakázat na různých zařízeních v rámci vaší organizace. Tato nastavení a funkce se přidají do části "konfigurační profily". Můžete vytvářet profily pro různá zařízení a různé platformy, včetně iOS, Androidu a Windows. Pak pomocí Intune aplikujte nebo přiřadíte profil k zařízením.
 
-Jako součást řešení správy mobilních zařízení (MDM) použijte tyto konfigurační profily k dokončení různých úloh. Například:
+Jako součást řešení správy mobilních zařízení (MDM) použijte tyto konfigurační profily k dokončení různých úloh. Mezi příklady profilů patří:
 
 - Na zařízeních s Windows 10 použijte šablonu profilu, která blokuje ovládací prvky ActiveX v Internet Exploreru.
 - V zařízeních s iOS a macOS můžou uživatelé používat tiskárny pro tisk ve vaší organizaci.
@@ -40,7 +40,7 @@ Jako součást řešení správy mobilních zařízení (MDM) použijte tyto kon
 
 Tento článek obsahuje přehled různých typů profilů, které můžete vytvořit. Pomocí těchto profilů povolíte nebo zakážete některé funkce v zařízeních.
 
-## <a name="administrative-templates-preview"></a>Šablony pro správu (Preview)
+## <a name="administrative-templates"></a>Šablony pro správu
 
 [Šablony pro správu](administrative-templates-windows.md) obsahují stovky nastavení, která můžete nakonfigurovat pro Internet Explorer, OneDrive, vzdálenou plochu, Word, Excel a další programy Office.
 
@@ -60,13 +60,13 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
-- Windows 8.1
+- Windows Phone 8,1
+- Windows 8.1
 - Windows 10 a novější
 
-## <a name="custom-profile"></a>Profil Vlastní
+## <a name="custom-profile"></a>Vlastní profil
 
-[Vlastní nastavení](../custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
+[Vlastní nastavení](../custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. V případě zařízení se systémem iOS můžete importovat konfigurační soubor, který jste vytvořili v Apple Configuratoru.
 
 Tato funkce podporuje:
 
@@ -74,7 +74,7 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
+- Windows Phone 8,1
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
@@ -97,7 +97,7 @@ Tato funkce podporuje:
 
 ## <a name="device-restrictions"></a>Omezení zařízení
 
-[Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOSem zakazuje použít fotoaparát v zařízení. 
+[Omezení zařízení](device-restrictions-configure.md) řídí zabezpečení, hardware, sdílení dat a další nastavení na zařízeních. Můžete například vytvořit profil omezení zařízení, který uživatelům zařízení s iOS zabrání v používání kamery zařízení. 
 
 Tato funkce podporuje:
 
@@ -110,7 +110,7 @@ Tato funkce podporuje:
 
 ## <a name="edition-upgrade"></a>Upgrade edice
 
-[Upgrady edice Windows 10](edition-upgrade-configure-windows-10.md) automaticky upgradují zařízení s některými verzemi Windows 10 na novější edici.
+[Upgrady edice Windows 10](edition-upgrade-configure-windows-10.md) automaticky upgradují zařízení, na kterých běží některé verze Windows 10, na novější edici.
 
 Tato funkce podporuje:
 
@@ -118,11 +118,11 @@ Tato funkce podporuje:
 
 ## <a name="education"></a>Vzdělávání
 
-[Nastavení vzdělávání – Windows 10](education-settings-configure.md) konfiguruje možnosti pro [aplikaci Windows Zkuste si test](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, žádnou jinou aplikaci nepůjde na zařízení spustit, dokud nebude test dokončen.
+[Nastavení vzdělávání – možnosti konfigurace Windows 10](education-settings-configure.md) pro [systém Windows proveďte testovací aplikaci](https://education.microsoft.com/gettrained/win10takeatest). Když tyto možnosti nakonfigurujete, na zařízení nemůžete spouštět žádné další aplikace, dokud se test nedokončí.
 
-[Nastavení vzdělávání – iOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci Classroom pro systém iOS, která umožňuje vést výuku a ovládat zařízení studentů v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
+[Nastavení vzdělávání – iOS](../fundamentals/education-settings-configure-ios-shared.md) používá aplikaci učebny iOS k seznámení s učením a řízení zařízení studenta v učebně. Můžete nakonfigurovat zařízení iPad, aby mohli několik studentů sdílet jedno zařízení.
 
-## <a name="email"></a>E-mailu
+## <a name="email"></a>E-mail
 
 [Nastavení e-mailu](email-settings-configure.md) vytvoří, přiřadí a monitoruje nastavení e-mailů Exchange ActiveSync na zařízeních. E-mailové profily vám pomůžou s konzistencí, omezit volání podpory a umožnit koncovým uživatelům přístup k firemnímu e-mailu na svých osobních zařízeních, aniž by museli nastavovat. 
 
@@ -131,12 +131,12 @@ Tato funkce podporuje:
 - Android
 - Android Enterprise
 - iOS/iPadOS
-- Wvdows Phone 8.1
+- Windows Phone 8,1
 - Windows 10 a novější
 
-## <a name="endpoint-protection"></a>Ochrana koncového bodu
+## <a name="endpoint-protection"></a>Ochrana koncových bodů
 
-[Nastavení služby Ochrana koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení pro BitLocker a Windows Defender pro zařízení s Windows 10.
+[Nastavení ochrany koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení BitLockeru a Windows Defenderu pro zařízení s Windows 10.
 
 Informace o připojení rozšířené ochrany před internetovými útoky přes Microsoft Defender (rozšířená) s Microsoft Intune najdete v tématu [Konfigurace koncových bodů pomocí nástrojů pro správu mobilních zařízení (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
@@ -144,15 +144,15 @@ Tato funkce podporuje:
 
 - Windows 10 a novější
 
-## <a name="esim-cellular---public-preview"></a>Mobilní profily eSIM ve verzi Public Preview
+## <a name="esim-cellular---public-preview"></a>mobilní síť ve vaší eSIM síti – Public Preview
 
 [mobilní profily eSIM](esim-device-configuration.md) umožňuje správcům konfigurovat mobilní datové tarify na spravovaných zařízeních pro Internet a přístup k datům. Po získání aktivačních kódů od mobilního operátoru použijte Intune k importu těchto aktivačních kódů a potom přiřaďte zařízení s technologií eSIM.
 
 Tato funkce podporuje:
 
-- Windows 10 Fall Creators Update a novější
+- Windows 10 zapadá na aktualizace Creators Update a novější
 
-## <a name="extensions"></a>SND
+## <a name="extensions"></a>Rozšíření
 
 [Rozšíření jádra](kernel-extensions-overview-macos.md) umožňují správcům přidávat funkce nebo programy na úrovni jádra na zařízeních MacOS. Nakonfigurujte tato nastavení tak, aby důvěřovala všem rozšířením z konkrétního vývojáře nebo partnera, nebo povolte specifická rozšíření jádra.
 
@@ -162,16 +162,16 @@ Tato funkce podporuje:
 
 ## <a name="identity-protection"></a>Ochrana identit
 
-[Ochrana identit](../protect/identity-protection-configure.md) řídí prostředí Windows Hello pro firmy na zařízeních s Windows 10 a Windows 10 Mobile. Konfigurací těchto nastavení můžete zpřístupnit Windows Hello pro firmy uživatelům a zařízením a specifikovat požadavky na PIN kódy a gesta zařízení.  
+[Identity Protection](../protect/identity-protection-configure.md) řídí prostředí Windows Hello pro firmy na zařízeních s Windows 10 a Windows 10 Mobile. Nakonfigurujte tato nastavení tak, aby uživatelům a zařízením byla dostupná možnost Windows Hello pro firmy a aby se určily požadavky na PIN kódy a gesta zařízení.  
 
 Tato funkce podporuje:  
 
 - Windows 10 a novější
-- Windows Holographic for Business  
+- Windows Holografick pro firmy  
 
-## <a name="kiosk"></a>Kiosk
+## <a name="kiosk"></a>Celoobrazovkového
 
-Profil [Nastavení veřejného terminálu](kiosk-settings.md) nakonfiguruje zařízení, aby spouštělo jednu aplikaci nebo spustilo spoustu aplikací. Na svém veřejném terminálu si můžete přizpůsobit i další funkce, například úvodní nabídku a webový prohlížeč.
+Profil [Nastavení veřejného terminálu](kiosk-settings.md) nakonfiguruje zařízení, aby spouštělo jednu aplikaci nebo spustilo spoustu aplikací. Můžete také přizpůsobit další funkce na terminálu, včetně nabídky Start a webového prohlížeče.
 
 Tato funkce podporuje:
 
@@ -195,7 +195,7 @@ Tato funkce podporuje:
 Tato funkce podporuje:
 
 - Windows 10 a novější
-- Windows Holographic for Business
+- Windows Holografick pro firmy
 
 ## <a name="shared-multi-user-device"></a>Sdílené zařízení s více uživateli
 
@@ -206,11 +206,11 @@ Tato sdílená nastavení zařízení s více uživateli umožňují správcům 
 Tato funkce podporuje:
 
 - Windows 10 a novější
-- Windows Holographic for Business
+- Windows Holografick pro firmy
 
-## <a name="update-policies"></a>Zásady aktualizací
+## <a name="update-policies"></a>Aktualizovat zásady
 
-[Zásady aktualizací pro iOS](../software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS k instalaci aktualizací softwaru na zařízení s iOSem. Můžete také zkontrolovat stav instalace.
+[zásady aktualizací pro iOS](../software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS pro instalaci softwarových aktualizací do zařízení s iOS. Můžete také zkontrolovat stav instalace.
 
 Zásady aktualizace na zařízeních s Windows najdete v tématu [Optimalizace doručení](../delivery-optimization-windows.md). 
 
@@ -220,9 +220,9 @@ Tato funkce podporuje:
 
 ## <a name="vpn"></a>Síť VPN
 
-[Nastavení VPN](vpn-settings-configure.md) přiřadí uživatelům a zařízením v organizaci profily sítě VPN, aby se mohli snadno a bezpečně připojit k síti. 
+[Nastavení sítě VPN](vpn-settings-configure.md) přiřadí uživatelům a zařízením ve vaší organizaci profily sítě VPN, aby se mohli snadno a bezpečně připojit k síti. 
 
-Virtuální privátní sítě (VPN) umožňují uživatelům zabezpečený vzdálený přístup k firemní síti. Zařízení používají profil připojení VPN k navázání připojení se serverem VPN. 
+Virtuální privátní sítě (VPN) poskytují uživatelům zabezpečený vzdálený přístup k podnikové síti. Zařízení používají profil připojení VPN ke spuštění připojení k serveru VPN. 
 
 Tato funkce podporuje: 
 
@@ -230,13 +230,13 @@ Tato funkce podporuje:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Wvdows Phone 8.1
-- Windows 8.1
+- Windows Phone 8,1
+- Windows 8.1
 - Windows 10 a novější
 
-## <a name="wi-fi"></a>Wi-Fi
+## <a name="wi-fi"></a>Síť Wi-Fi
 
-[Nastavení Wi-Fi](wi-fi-settings-configure.md) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Po přiřazení profilu Wi-Fi získají uživatelé přístup k vaší podnikové síti, aniž by ji museli konfigurovat sami. 
+[Nastavení Wi-Fi](wi-fi-settings-configure.md) přiřadí uživatelům a zařízením nastavení bezdrátové sítě. Když přiřadíte profil Wi-Fi, uživatelé získají přístup k podnikovému Wi-Fi, aniž by ji museli konfigurovat sami. 
 
 Tato funkce podporuje: 
 
@@ -247,9 +247,9 @@ Tato funkce podporuje:
 - Windows 8.1 (pouze import)
 - Windows 10 a novější
 
-## <a name="windows-information-protection-profile"></a>Profil Windows Information Protection
+## <a name="windows-information-protection-profile"></a>Profil Information Protection Windows
 
-[Služba Windows Information Protection](../protect/windows-information-protection-configure.md) pomáhá chránit před únikem dat, aniž by zasahovala do možností zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví podniku a na osobních zařízeních, která zaměstnanci používají v práci. Použití Windows Information Protection nevyžaduje změny v prostředí nebo jiných aplikacích.
+[Windows Information Protection](../protect/windows-information-protection-configure.md) pomáhá chránit před únikem dat bez rušivého vlivu na práci zaměstnanců. Pomáhá také chránit podnikové aplikace a data před náhodnými úniky dat na zařízeních ve vlastnictví podniku a na osobních zařízeních, která zaměstnanci používají v práci. Použití Windows Information Protection nevyžaduje změny v prostředí nebo jiných aplikacích.
 
 Tato funkce podporuje:
 
@@ -263,9 +263,9 @@ Tato funkce podporuje:
 
 - Android (rozšíření mobility)
 
-## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
+## <a name="manage-and-troubleshoot"></a>Správa a řešení potíží
 
-[Při správě profilů](../device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Také vám pomůžou vyřešit konflikty tím, že se zobrazí nastavení, které způsobuje konflikt, a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhají správcům pracovat s profily. Popisuje, co se stane při odstraňování profilu, což způsobí, že se oznámení odesílají do zařízení a další.
+[Spravujte svoje profily](../device-profile-monitor.md) a ověřte stav zařízení a přiřazené profily. Také vám pomůžou vyřešit konflikty tím, že se zobrazí nastavení, které způsobuje konflikt, a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhají správcům pracovat s profily. Popisuje, co se stane při odstraňování profilu, což způsobí, že se oznámení odesílají do zařízení a další.
 
 ## <a name="next-steps"></a>Další kroky
 

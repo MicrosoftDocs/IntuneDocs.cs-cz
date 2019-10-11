@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
+ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729502"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163492"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
@@ -53,7 +53,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
     **Výchozí**: Ano
 
   - **Chování schránky** - *Nastavení/ClipboardSettings*  
-    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Vaše možnosti jsou:
+    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Mezi možnosti patří:
     - *Není nakonfigurováno*  
     - *Blokování obou* dat: mezi počítačem a virtuálním prohlížečem nejde přenášet data.  
     - *Blokovat hostitele do kontejneru* – data nejde přenést z počítače do virtuálního prohlížeče.
@@ -86,7 +86,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 ## <a name="attack-surface-reduction"></a>Omezení možností útoku  
 
 - **Typ podřízeného procesu, který spouští aplikace Office**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Pokud je tato možnost nastavená na *blokovat*, nebudou moct aplikace Office vytvářet podřízené procesy. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access. Vytvoření podřízeného procesu je typické chování při malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je tato možnost nastavená na *blokovat*, nebudou moct aplikace Office vytvářet podřízené procesy. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access. Vytvoření podřízeného procesu je typické chování při malwaru, zejména u útoků založených na makrech, které se pokoušejí použít aplikace Office ke spouštění nebo stahování škodlivých spustitelných souborů.  
 
   **Výchozí**: blok
 
@@ -101,7 +101,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: Povolit
 
 - **Typ provedení obsahu e-mailu**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo blokuje spouštění nebo spouštění těchto typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com):  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo blokuje spouštění nebo spouštění těchto typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com):  
 
   - Spustitelné soubory (například. exe,. dll nebo. scr)  
   - Soubory skriptu (například PowerShell. PS, VisualBasic. vbs nebo JavaScript. js)  
@@ -110,17 +110,17 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: blok
 
 - **Spuštění aplikace Adobe Reader v podřízeném procesu**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – *Povolit* tomuto pravidlu blokovat vytváření podřízeného procesu aplikaci Adobe Reader. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – *Povolit* tomuto pravidlu blokovat vytváření podřízeného procesu aplikaci Adobe Reader. Prostřednictvím sociálního inženýrství nebo zneužití může malware stahovat a spouštět další datové části a přerušit z aplikace Adobe Reader.  
 
   **Výchozí**: Povolit
 
 - **Typ kódu makra zakódováného skriptu**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
     
   **Výchozí**: blok
 
 - **Nedůvěryhodný typ procesu USB**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – když se nastaví *blokování*, nepodepsané nebo nedůvěryhodné spustitelné soubory z vyměnitelných jednotek USB a karty SD nejdou spustit.
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, nepodepsané nebo nedůvěryhodné spustitelné soubory z vyměnitelných jednotek USB a karty SD nejdou spustit.
 
   Mezi spustitelné soubory patří:
   - Spustitelné soubory (například. exe,. dll nebo. scr)
@@ -129,22 +129,22 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: blok
 
 - **Typ injektáže jiného procesu aplikací Office**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – když se nastaví *blokování*, aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nejde vložit kód do jiných procesů. Vkládání kódu obvykle používá malware ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nejde vložit kód do jiných procesů. Vkládání kódu obvykle používá malware ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
 
   **Výchozí**: blok
 
 - **Kód makra Office Allow import typu Win32**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo se pokusí blokovat soubory Office, které obsahují kód makra, který může importovat knihovny DLL Win32. Soubory Office zahrnují Word, Excel, PowerPoint a OneNote. Malware může pomocí kódu makra v souborech Office importovat a načítat knihovny DLL Win32, které se pak používají k umožnění dalších infekcí v celém systému v rámci volání rozhraní API.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo se pokusí blokovat soubory Office, které obsahují kód makra, který může importovat knihovny DLL Win32. Soubory Office zahrnují Word, Excel, PowerPoint a OneNote. Malware může pomocí kódu makra v souborech Office importovat a načítat knihovny DLL Win32, které se pak používají k umožnění dalších infekcí v celém systému v rámci volání rozhraní API.  
 
   **Výchozí**: blok
 
 - **Aplikace Office Communications se spouští v podřízeném procesu**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Pokud je nastaveno na *Povolit*, toto pravidlo zabrání aplikaci Outlook v vytváření podřízených procesů. Blokováním vytvoření podřízeného procesu toto pravidlo chrání proti útokům prostřednictvím sociálního inženýrství a brání zneužití kódu v aplikaci Outlook k zneužití ohrožení zabezpečení.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *Povolit*, toto pravidlo zabrání aplikaci Outlook v vytváření podřízených procesů. Blokováním vytvoření podřízeného procesu toto pravidlo chrání proti útokům prostřednictvím sociálního inženýrství a brání zneužití kódu v aplikaci Outlook k zneužití ohrožení zabezpečení.  
 
   **Výchozí**: Povolit
 
 - **Typ vytvoření nebo spuštění obsahu aplikací Office**  
-  [Pravidlo pro omezení možností útoku](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard#attack-surface-reduction-rules) – Pokud je nastavené *blokování*, aplikace Office nemůžou vytvářet spustitelný obsah. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access.  
+  [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastavené *blokování*, aplikace Office nemůžou vytvářet spustitelný obsah. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access.  
 
   Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skripty Windows Scripting Host (soubory. WSH) ke spouštění skriptů, které automatizují určité úlohy nebo poskytují uživatelsky vytvořené funkce doplňku.
 
@@ -207,7 +207,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
   Chcete-li zkontrolovat, zda systém podporuje ochranu před režimem DMA, spusťte příkaz MSINFO32. exe v systému a na stránce Souhrn zkontrolujte pole *ochrana jádra DMA* .  
 
-  Vaše možnosti jsou: 
+  Mezi možnosti patří: 
   - *Výchozí nastavení zařízení* – po přihlášení nebo odemknutí obrazovky se můžou kdykoli zobrazit výčet zařízení s přemapováním DMA na kompatibilní ovladače. Zařízení s přemapováním DMA na nekompatibilní ovladače se zobrazí jenom poté, co uživatel odemkne obrazovku.
   - Možnost *povolení všech* externích zařízení s podporou přímého přístupu do paměti (DMA) se v každém okamžiku vyčíslí.
   - *Blokování všech* zařízení s přemapováním DMA kompatibilních ovladačů se smí kdykoli zobrazit. Zařízení s přemapováním DMA na nekompatibilní ovladače nikdy nebudou moct spouštět a používat DMA kdykoli.
@@ -273,7 +273,7 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
 ## <a name="exploit-protection"></a>Ochrana před zneužitím  
 
 - **XML ochrany před zneužitím**  
-  Další informace najdete v tématu [Import, export a nasazení konfigurací ochrany před zneužitím](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/import-export-exploit-protection-emet-xml) v dokumentaci k Windows.  
+  Další informace najdete v tématu [Import, export a nasazení konfigurací ochrany před zneužitím](/windows/security/threat-protection/microsoft-defender-atp/import-export-exploit-protection-emet-xml) v dokumentaci k Windows.  
 
   Umožňuje správci IT nabízet konfiguraci, která představuje požadované možnosti zmírnění systému a aplikace pro všechna zařízení v organizaci. Konfigurace je reprezentovaná kódem XML. 
 
@@ -288,7 +288,7 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
 - **Řízený přístup ke složkám**  
   Viz [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) a [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
   
-   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.
+   Chránit soubory a složky před neoprávněnými změnami nepřátelskými aplikacemi
 
   **Výchozí**: režim auditu
 
@@ -365,7 +365,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
   **Výchozí**: Rychlá kontrola
 
-- **Kontrolovat všechny stahované soubory**  
+- **Kontrolovat všechna stahování**  
   [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) – Pokud je tato hodnota nastavená na *Ano*, Defender zkontroluje všechny stažené soubory a přílohy.  
 
   **Výchozí**: Ano
@@ -399,13 +399,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
 
 - **Rozšířený časový limit pro Cloud Defenderu**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Windows Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba čekání programu Windows Defender je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal.  
+  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Windows Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba čekání programu Windows Defender je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožní cloudu důkladně prozkoumat podezřelé soubory.  
 
   Ve výchozím nastavení je rozšířená hodnota času 0 (zakázáno). Intune doporučuje povolit toto nastavení a zadat aspoň 20 dalších sekund.  
  
   **Výchozí hodnota**: 0
 
-- **Prohledat archivní soubory**  
+- **Kontrolovat archivní soubory**  
   [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – nastavte na *Ano* , pokud chcete, aby program Windows Defender kontroloval archivní soubory.  
 
   **Výchozí**: Ano
@@ -428,7 +428,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: Ano
 
 - **Úroveň blokování cloudu Defenderu**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Windows Defender blokuje a kontroluje podezřelé soubory. Vaše možnosti jsou:
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Windows Defender blokuje a kontroluje podezřelé soubory. Mezi možnosti patří:
 
   - Vysoce agresivní blokování neznámých souborů při optimalizaci výkonu klienta (větší šance na falešně pozitivní)
   - Vysoká plus – agresivní blokování neznámých souborů a uplatnění dalších ochranných opatření (může ovlivnit výkon klienta)

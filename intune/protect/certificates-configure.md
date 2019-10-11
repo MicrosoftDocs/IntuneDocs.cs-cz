@@ -16,19 +16,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 345d039fede2a77ba0485944cb601683bdcebfda
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: e993df5c37cfed8d5dd0481543b406dd25ad1a49
+ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999302"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251558"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune  
 
 Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a podnikovými prostředky prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů. Pokud používáte certifikáty k ověřování těchto připojení, koncoví uživatelé nebudou muset zadávat uživatelská jména a hesla, což pomáhá zajistit bezproblémové přístupu. Certifikáty se taky používají k podepisování a šifrování e-mailů pomocí S/MIME.
 
 ## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
-| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
+| Typ              | Ověření | Podepisování S/MIME | Šifrování S/MIME  |
 |--|--|--|--|
 | Importovaný certifikát PKCS |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
 | PKCS # 12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
@@ -51,11 +51,12 @@ Každý profil každého jednotlivého certifikátu, který vytvoříte, podporu
 | Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
 |--|--|--|--|---|
 | Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> – Vlastník zařízení   | ![Podporováno](./media/certificates-configure/green-check.png) |   |  |   |
+| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   |  |   |  |   |
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |   |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
-| Windows Phone 8,1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
+| Windows Phone 8,1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
 | Windows 8.1 a novější |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
@@ -90,7 +91,7 @@ Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zo
 > [!NOTE]  
 > V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.  
 
-## <a name="additional-resources"></a>Další zdroje  
+## <a name="additional-resources"></a>Další zdroje informací:  
 - [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)  
 - [Pro podepisování a šifrování e-mailů použít S/MIME](certificates-s-mime-encryption-sign.md)  
 - [Použití certifikační autority třetích stran](certificate-authority-add-scep-overview.md)  
@@ -98,6 +99,6 @@ Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zo
 ## <a name="next-steps"></a>Další kroky  
 Po vytvoření a přiřazení profilů důvěryhodných certifikátů vytvořte profily certifikátů SCEP, PKCS a PKCS pro každou platformu, kterou chcete použít. Chcete-li pokračovat, přečtěte si následující články:  
 - [Konfigurace infrastruktury pro podporu certifikátů SCEP pomocí Intune](certificates-scep-configure.md)  
-- [Konfigurace a Správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
+- [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
 - [Vytvoření importovaného profilu certifikátu PKCS](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)  
 

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aafce5cefc26f4f86540a6858249e0bdd0af2328
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: bea28afc39a693dc4d634a0ff92c8ce900ab5a22
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729946"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237182"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
@@ -145,7 +145,7 @@ Zásady dodržování předpisů určují úroveň rizika, kterou považujete za
    - **Vysoká**: Tato úroveň je nejméně bezpečná a umožňuje všechny úrovně hrozeb. To znamená, že zařízení s vysokou, střední nebo nízkou úrovní hrozeb se považují za vyhovující.
 
 6. Zvolte **OK** a pak **Vytvořit**. Tím uložíte změny a vytvoříte zásadu.  
-7. [Přiřaďte zásady dodržování předpisů zařízením](create-compliance-policy.md#assign-user-groups) k příslušným skupinám.
+7. [Přiřaďte zásady dodržování předpisů zařízením](create-compliance-policy.md#assign-the-policy) k příslušným skupinám.
 
 
 

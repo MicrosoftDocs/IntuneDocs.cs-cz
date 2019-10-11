@@ -43,18 +43,20 @@
               href: store-apps-ios.md
             - name: Aplikace pro Windows Phone 8.1 Store
               href: store-apps-windows-phone-8-1.md
-            - name: Aplikace pro Microsoft Store
-              items:
-                - name: Aplikace pro Windows
-                  href: store-apps-windows.md
-                - name: Aplikace Portál společnosti
-                  href: store-apps-company-portal-app.md
+            - name: Aplikace pro Windows
+              href: store-apps-windows.md
+            - name: Aplikace pro Microsoft Store pro firmy
+              href: windows-store-for-business.md
             - name: Spravované aplikace Google Play
               href: apps-add-android-for-work.md
+        - name: Office 365 Suite
+          items:
             - name: Aplikace Office 365 pro Windows 10
               href: apps-add-office365.md
             - name: Aplikace Office 365 pro macOS
               href: apps-add-office365-macos.md
+        - name: Systémové aplikace typu Android Enterprise
+          href: apps-ae-system.md
         - name: Webové aplikace
           href: web-app.md
           displayName: web; web link; weblink; web-link
@@ -74,10 +76,12 @@
               href: app-sideload-windows.md
             - name: Obchodní aplikace pro macOS
               href: lob-apps-macos.md
-        - name: Systémové aplikace typu Android Enterprise
-          href: apps-ae-system.md
-        - name: Správa aplikací Win32
-          href: apps-win32-app-management.md
+            - name: Správa aplikací Win32
+              href: apps-win32-app-management.md
+        - name: Přidání specifických aplikací
+          items:
+            - name: Aplikace Portál společnosti
+              href: store-apps-company-portal-app.md
         - name: Skripty prostředí PowerShell
           href: intune-management-extension.md
     - name: Přiřazení aplikací
