@@ -1,6 +1,6 @@
 ---
 title: Použití certifikačních autorit (CA) třetích stran s SCEP v Microsoft Intune – Azure | Microsoft Docs
-description: V Microsoft Intune můžete přidat dodavatele nebo certifikační autoritu (CA) třetí strany pro vydávání certifikátů do mobilních zařízení pomocí protokolu SCEP. V tomto přehledu poskytuje aplikace Azure Active Directory (Azure AD) službě Microsoft Intune oprávnění k ověření certifikátů. Potom při instalaci serveru SCEP k vystavování certifikátů použijete ID aplikace, ověřovací klíč a ID tenanta aplikace AAD.
+description: V Microsoft Intune můžete přidat dodavatele nebo certifikační autoritu (CA) třetí strany pro vydávání certifikátů do mobilních zařízení pomocí protokolu SCEP. V tomto přehledu aplikace Azure Active Directory (Azure AD) poskytuje Microsoft Intune oprávnění k ověřování certifikátů. Pak použijte ID aplikace, ověřovací klíč a ID klienta aplikace AAD v nastavení serveru SCEP k vystavování certifikátů.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,60 +15,60 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3f9b78685e2bbe40a91c80fe71403123dbfaac90
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: e8df5f46f411a6aee1c3040fa4a1a37fb49d5fb2
+ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729842"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036430"
 ---
-# <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání partnerské certifikační autority pomocí protokolu SCEP do Intune
+# <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání certifikační autority pro partnery do Intune pomocí protokolu SCEP
 
 Použijte certifikační autority (CA) třetích stran s Intune. CA třetích stran můžou zřídit mobilní zařízení s novými nebo obnovenými certifikáty pomocí Simple Certificate Enrollment Protocol (SCEP) a můžou podporovat zařízení s Windows, iOS, Androidem a macOS.
 
-K použití této funkce potřebujete dvě věci: open-source rozhraní API a úlohy správce Intune.
+Tuto funkci můžete používat dvěma částmi: Open Source API a úlohami správce Intune.
 
-**Část 1 – použití open-source rozhraní API**  
+**Část 1 – použití Open Source rozhraní API**  
 Microsoft vytvořil rozhraní API pro integraci s Intune. I když rozhraní API můžete ověřovat certifikáty, odesílat oznámení o úspěšnosti nebo neúspěchu a k komunikaci s Intune používat protokol SSL, konkrétně objekt pro vytváření soketů SSL.
 
-Rozhraní API je k dispozici ke stažení z [veřejného úložiště GitHub rozhraní Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation), abyste ho mohli použít ve svých řešeních. Pomocí tohoto rozhraní API se servery SCEP třetích stran spustíte vlastní ověřování výzvou proti Intune před tím, než SCEP zřídí certifikát pro zařízení.
+Rozhraní API je dostupné ve [veřejném úložišti GITHUB API služby Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) , které můžete stáhnout a používat ve svých řešeních. Pomocí tohoto rozhraní API se servery SCEP třetích stran spustíte vlastní ověřování výzvou proti Intune před tím, než SCEP zřídí certifikát pro zařízení.
 
-Článek o [integraci s řešením pro správu Intune SCEP](scep-libraries-apis.md) obsahuje další podrobnosti o použití tohoto rozhraní API, jeho metodách a testování sestaveného řešení.
+[Integrace s řešením správy SCEP v Intune](scep-libraries-apis.md) poskytuje podrobnější informace o používání rozhraní API, jeho metod a testování vámi sestaveného řešení.
 
 **Část 2 – Vytvoření aplikace a profilu**  
-Pomocí aplikace Azure Active Directory (Azure AD) můžete delegovat práva, aby služba Intune zpracovávala žádosti protokolu SCEP přicházející ze zařízení. Aplikace Azure AD obsahuje hodnoty ID aplikace a ověřovacího klíče, které se používají v rámci řešení rozhraní API vytvořeného vývojářem. Správci pak vytvoří a nasadí profily certifikátů SCEP pomocí Intune a můžou si zobrazit sestavy o stavu nasazení na zařízeních.
+Pomocí aplikace Azure Active Directory (Azure AD) můžete delegovat práva k Intune a zpracovávat požadavky SCEP přicházející ze zařízení. Aplikace Azure AD obsahuje ID aplikace a hodnoty ověřovacího klíče, které se používají v řešení API, které vývojář vytvoří. Správci pak vytvoří a nasadí profily certifikátů SCEP pomocí Intune a můžou si zobrazit sestavy o stavu nasazení na zařízeních.
 
-Tento článek poskytuje přehled této funkce z pohledu správce, včetně vytvoření aplikace Azure AD.
+Tento článek obsahuje přehled této funkce z pohledu správce, včetně vytvoření aplikace Azure AD.
 
-## <a name="overview"></a>Overview
+## <a name="overview"></a>Přehled
 
 Následující kroky poskytují přehled použití protokolu SCEP pro certifikáty v Intune:
 
-1. Správce v Intune vytvoří profil certifikátu SCEP a potom profil cílí na uživatele nebo zařízení.
-2. Zařízení se vrátí se změnami do Intune.
-3. Intune vytvoří jedinečnou výzvu SCEP. Zároveň přidá dodatečné informace o kontrole integrity, jako je například očekávaný předmět a alternativní název subjektu.
-4. Intune výzvu i informace o kontrole integrity zašifruje a podepíše a pak je odešle do zařízení s požadavkem SCEP.
-5. Zařízení vygeneruje žádost o podepsání certifikátu (CSR) a na základě profilu certifikátu SCEP odeslaného z Intune vygeneruje pár veřejného a privátního klíče.
-6. Žádost o podepsání certifikátu a zašifrovaná a podepsaná výzva se odešlou koncovému bodu externího serveru SCEP.
-7. Server SCEP odešle žádost o podepsání certifikátu a výzvu do Intune. Intune pak podpis ověří, dešifruje datovou část a porovná žádost o podepsání certifikátu s informacemi o kontrole integrity.
-8. Intune odešle zpět serveru SCEP odpověď a uvede, zda ověření výzvy proběhlo úspěšně, nebo ne.  
-9. Pokud se výzva úspěšně ověřila, pak server SCEP vydá zařízení certifikát.
+1. V Intune vytvoří správce profil certifikátu SCEP a pak ho nacílí na uživatele nebo zařízení.
+2. Zařízení se vrátí do Intune.
+3. Intune vytvoří jedinečnou výzvu SCEP. Přidává taky další informace o kontrole integrity, třeba to, co by měl být očekávaný předmět a síť SAN.
+4. Intune šifruje a podepisuje informace o kontrole a kontrole integrity a pak tyto informace pošle do zařízení pomocí žádosti SCEP.
+5. Zařízení na zařízení vygeneruje dvojici žádost o podepsání certifikátu (CSR) a veřejný/privátní klíč na základě profilu certifikátu SCEP, který je nabízený z Intune.
+6. ZÁSTUPCE a šifrované/podepsané výzvy se odesílají do koncového bodu serveru SCEP třetí strany.
+7. Server SCEP pošle CSR a výzvu do Intune. Intune potom ověří podpis, dešifruje datovou část a porovná ho s informacemi o kontrole integrity.
+8. Intune pošle zpět odpověď serveru SCEP a určí, jestli je ověření výzvy úspěšné.  
+9. Pokud se výzva úspěšně ověří, server SCEP vydá certifikát do zařízení.
 
-Následující diagram znázorňuje podrobný tok integrace externího serveru SCEP s Intune:
+Následující diagram znázorňuje podrobný tok integrace SCEP od třetích stran s Intune:
 
-![Způsob integrace externí certifikační autority SCEP s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
+![Jak se certifikační autorita SCEP od třetí strany integruje s Microsoft Intune](./media/certificate-authority-add-scep-overview/scep-certificate-vendor-integration.png)
 
-## <a name="set-up-third-party-ca-integration"></a>Nastavení integrace externí certifikační autority
+## <a name="set-up-third-party-ca-integration"></a>Nastavení integrace certifikační autority třetích stran
 
-### <a name="validate-third-party-certification-authority"></a>Ověření externí certifikační autority
+### <a name="validate-third-party-certification-authority"></a>Ověřit certifikační autoritu třetí strany
 
-Před provedení integrace externích certifikačních autorit s Intune zkontrolujte, že vybraná certifikační autorita podporuje Intune. Zde je seznam [partnerů externí certifikační autority](#third-party-certification-authority-partners) (v tomto článku). Další informace můžete také získat z pokynů vaší certifikační autority. Certifikační autorita může obsahovat specifické instalační pokyny pro implementaci.
+Před integrací certifikačních autorit třetích stran s Intune potvrďte, že certifikační autorita, kterou používáte, podporuje Intune. [Partneři CA třetích stran](#third-party-certification-authority-partners) (v tomto článku) obsahují seznam. Další informace najdete také v pokynech k certifikační autoritě. Certifikační autorita může obsahovat pokyny k instalaci, které jsou specifické pro jejich implementaci.
 
-### <a name="authorize-communication-between-ca-and-intune"></a>Autorizace komunikace mezi certifikační autoritou a Intune
+### <a name="authorize-communication-between-ca-and-intune"></a>Autorizovat komunikaci mezi certifikační autoritou a Intune
 
-Pokud chcete externímu serveru SCEP povolit spuštění vlastního ověření výzvy pomocí Intune, vytvořte aplikaci ve službě Azure AD. Tato aplikace poskytne Intune delegovaná práva k ověřování žádostí protokolu SCEP.
+Pokud chcete, aby server SCEP třetí strany spouštěl vlastní ověřování výzvou v Intune, vytvořte v Azure AD aplikaci. Tato aplikace poskytuje delegovaná práva k Intune, aby ověřila požadavky SCEP.
 
-Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. Viz [požadovaná oprávnění](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)v dokumentaci k Azure AD.
+Ujistěte se, že máte požadovaná oprávnění k registraci aplikace služby Azure AD. Viz [požadovaná oprávnění](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal#required-permissions)v dokumentaci k Azure AD.
 
 #### <a name="create-an-application-in-azure-active-directory"></a>Vytvoření aplikace v Azure Active Directory  
 
@@ -104,35 +104,36 @@ Ujistěte se, že máte k registraci aplikace Azure AD potřebná oprávnění. 
 
 
 ### <a name="configure-and-deploy-a-scep-certificate-profile"></a>Konfigurace a nasazení profilu certifikátu SCEP
-Vytvořte jako správce profil certifikátu SCEP, který bude cílit na uživatele nebo zařízení. Pak profil přiřaďte.
+Jako správce vytvořte profil certifikátu SCEP pro cílení na uživatele nebo zařízení. Pak přiřaďte profil.
 
 - [Vytvoření profilu certifikátu SCEP](certificates-profile-scep.md#create-a-scep-certificate-profile)
 
 - [Přiřazení profilu certifikátu](certificates-profile-scep.md#assign-the-certificate-profile)
 
-## <a name="removing-certificates"></a>Odebrání certifikátů
+## <a name="removing-certificates"></a>Odebírání certifikátů
 
-Po zrušení registrace nebo vymazání zařízení se certifikáty odeberou. Certifikátů se neodvolávají.
+Když zrušíte registraci nebo vymazání zařízení, certifikáty se odeberou. Certifikáty nejsou odvolány.
 
-## <a name="third-party-certification-authority-partners"></a>Partneři externí certifikační autority
-Následující externí certifikační autority podporují Intune:
+## <a name="third-party-certification-authority-partners"></a>Partneři certifikační autority od jiných výrobců
+Intune podporují tyto certifikační autority od jiných výrobců:
 
 - [Entrust Datacard](https://info.entrustdatacard.com/pki-eval-tool)
-- [GitHub EJBCA – verze open-source](https://github.com/agerbergt/intune-ejbca-connector)
+- [Verze open-source na GitHubu EJBCA](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [Venafi](https://www.venafi.com/platform/enterprise-mobility)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
-Pokud jste externí certifikační autoritou a máte zájem o integraci svého produktu s Intune, projděte si pokyny rozhraní API:
+Pokud jste si od jiné certifikační autority zajímá integraci produktu s Intune, přečtěte si pokyny k rozhraní API:
 
-- [Úložiště GitHub rozhraní Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
-- [Pokyny pro externí certifikační autority k rozhraní Intune SCEP API](scep-libraries-apis.md)
+- [Úložiště GitHub rozhraní API pro SCEP v Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Doprovodné materiály k rozhraní SCEP API pro Intune pro certifikační autority třetích stran](scep-libraries-apis.md)
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Další informace najdete v tématech
 
-- [Konfigurace a používání certifikátů SCEP s Intune](certificates-scep-configure.md)
-- [Úložiště GitHub rozhraní Intune SCEP API](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
-- [Pokyny pro externí certifikační autority k rozhraní Intune SCEP API](scep-libraries-apis.md)
+- [Konfigurace profilů certifikátů](certificates-scep-configure.md)
+- [Úložiště GitHub rozhraní API pro SCEP v Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Doprovodné materiály k rozhraní SCEP API pro Intune pro certifikační autority třetích stran](scep-libraries-apis.md)

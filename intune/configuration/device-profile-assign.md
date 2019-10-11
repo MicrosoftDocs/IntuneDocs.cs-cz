@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 344ffdfefd8b354c9d2ab31f2d08c2a25456f970
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: db1f0944a6725d1f361ea20c972d8ffa8f5d9035
+ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730802"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72237216"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -30,6 +30,9 @@ ms.locfileid: "71730802"
 Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V dalším kroku nasadíte nebo "přiřadíte" profil k vašim skupinám uživatelů a zařízení Azure Active Directory (Azure AD). Po přiřazení uživatelé a zařízení obdrží váš profil a nastavení, které jste zadali, se použije.
 
 V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
+
+> [!NOTE]  
+> Když zásadu odeberete nebo už není přiřazená k zařízení, nastavení může zachovat stávající hodnotu. Nastavení se nevrátí na výchozí hodnotu. Chcete-li změnit nastavení na jinou hodnotu, vytvořte novou zásadu a přiřaďte ji.
 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
