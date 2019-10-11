@@ -127,6 +127,8 @@
               href: manage-microsoft-edge.md
             - name: Konfigurace Outlooku
               href: app-configuration-policies-outlook.md
+            - name: Konfigurace Google Chromu pro Android
+              href: apps-configure-chrome-android.md
         - name: hromadně zakoupené aplikace a knihy
           items:
             - name: Správa aplikací a knih zakoupených prostřednictvím programu VPP
