@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f462b04166a2204d47f288d225e1490f8d3ea2a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 42c64c9107c08d9cd2fce7e6d6cc6cf1f6a2817b
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731974"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306740"
 ---
 # <a name="windows-mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení Windows MDM pro Intune
 Zobrazení nastavení základní hodnoty zabezpečení MDM, která jsou Microsoft Intune podporovaná v zařízeních se systémem Windows 10 nebo novějším. Výchozí hodnoty pro nastavení v tomto směrném plánu reprezentují doporučenou konfiguraci pro příslušná zařízení a nemusí odpovídat výchozím hodnotám z jiných standardních hodnot zabezpečení nebo z jiných verzí tohoto směrného plánu.
@@ -171,19 +171,19 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
-  Microsoft Edge používá filtr SmartScreen v programu Windows Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení uživatelé také nemůžou zakázat (vypnout) filtr SmartScreen v programu Windows Defender. Když tyto zásady povolíte, vypne se filtr SmartScreen v programu Windows Defender a zabrání uživatelům v jeho zapnutí. Nekonfigurujte tuto zásadu tak, aby uživatelům umožnila zvolit nebo vypnout filtr SmartScreen v programu Windows Defender.  
+  Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení uživatelé také nemůžou zakázat (vypnout) filtr SmartScreen v programu Microsoft Defender. Povolením této zásady dojde k vypnutí filtru SmartScreen v programu Microsoft Defender a zabránění uživatelům v jeho zapnutí. Nekonfigurujte tuto zásadu, aby uživatelům umožnila zvolit nebo vypnout filtr SmartScreen v programu Microsoft Defender.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **Výchozí**: Ano  
   
 - **Blokovat přístup ke škodlivému webu**  
-  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění programu Windows Defender SmartScreen na potenciálně škodlivé weby a umožnit jim tak pokračovat v lokalitě. Pomocí této zásady můžete ale nakonfigurovat Microsoft Edge, aby uživatelé nemohli obejít upozornění, a zablokovat tak, aby pokračovali na tomto webu.  
+  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých webů, což jim umožní pokračovat v lokalitě. Pomocí této zásady můžete ale nakonfigurovat Microsoft Edge, aby uživatelé nemohli obejít upozornění, a zablokovat tak, aby pokračovali na tomto webu.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067040)   
   
   **Výchozí**: Ano  
   
 - **Blokovat stahování neověřených souborů**  
-  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění programu Windows Defender SmartScreen na potenciálně škodlivé soubory a umožnit tak pokračování stahování neověřených souborů. Když se tyto zásady povolí, zabráníte tak uživatelům v obcházení upozornění a znemožníte jim stahování neověřených souborů.  
+  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých souborů, což jim umožní pokračovat v stahování neověřených souborů. Když se tyto zásady povolí, zabráníte tak uživatelům v obcházení upozornění a znemožníte jim stahování neověřených souborů.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067023)  
   
   **Výchozí**: Ano  
@@ -200,7 +200,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
   
   **Výchozí**: Ano  
 
-## <a name="connectivity"></a>Komunikační  
+## <a name="connectivity"></a>Připojení  
 Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) .  
 
 - **Blokovat stažení z Internetu pro publikování na webu a Průvodce online řazením**  
@@ -260,7 +260,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dat
   
   **Výchozí**: Ano  
 
-## <a name="device-guard"></a>Ochrana zařízení  
+## <a name="device-guard"></a>Device Guard  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) .  
 
@@ -277,7 +277,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
 - **Povolit zabezpečení na základě virtualizace**  
-  Při příštím restartování zapne zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.  
+  Při příštím restartování zapne zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace používá hypervisor Windows k poskytování podpory pro služby zabezpečení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067066)  
   
   **Výchozí**: Ano  
@@ -346,7 +346,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
     
     **Výchozí hodnota**: 3  
 
-  - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**  
+  - **Počet neúspěšných přihlášení před vymazáním zařízení**  
     Počet povolených neúspěšných ověření, než se zařízení vymaže. Hodnota 0 zakáže funkci vymazání zařízení.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067030)  
       
@@ -377,7 +377,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
     **Výchozí**: Ano  
       *Nastavení Ano zabraňuje použití jednoduchých hesel.* 
 
-  - **Znemožnit opakované použití předchozích hesel**  
+  - **Zakázat opakované použití předchozích hesel**  
     Určuje, kolik hesel může být uloženo v historii, kterou nelze použít. Hodnota zahrnuje aktuální heslo uživatele. Například když se nastaví hodnota *1* , nemůže uživatel při volbě nového hesla znovu použít svoje aktuální heslo. Nastavení *5* znamená, že uživatel nemůže nastavit nové heslo na aktuální heslo nebo předchozí čtyři hesla.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2066795)  
     
@@ -429,7 +429,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Eve
   
   **Výchozí**: 32768  
 
-## <a name="experience"></a>Prostředí  
+## <a name="experience"></a>Využij  
 Další informace najdete v dokumentaci k Windows v tématu [zásady pro poskytovatele cloudu](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) .  
 
 - **Blokování Windows Spotlightu**  
@@ -770,7 +770,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   **Výchozí**: zakázáno  
   
 - **Internet Explorer Internet Zone umožňuje spuštění jazyka VBscript**  
-  Nastavení této zásady umožňuje určit, jestli se může VBScript spouštět na stránkách v určitých zónách Internet Exploreru. Vaše možnosti jsou: 
+  Nastavení této zásady umožňuje určit, jestli se může VBScript spouštět na stránkách v určitých zónách Internet Exploreru. Mezi možnosti patří: 
   - *Enable* – jazyk VBScript běží na stránkách v určitých zónách bez jakékoli interakce. 
   - *Výzva* – zaměstnanci se zobrazí dotaz, jestli chcete, aby se v zóně spouštěl jazyk VBScript. 
   - *Disable* – v zóně není možné spouštět skripty VBScript. Pokud nastavení této zásady zakážete nebo nenakonfigurujete, VBScript se spustí bez jakékoli interakce v zadané zóně.    
@@ -1271,13 +1271,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
   
 - **Vyžadovat komunikaci s digitálním podpisem serveru vždycky**  
-  Toto nastavení zabezpečení určuje, jestli se klient SMB pokusí vyjednat podepisování paketů SMB. Protokol SMB (Server Message Block) poskytuje základ pro sdílení souborů a tiskáren společnosti Microsoft a mnoho dalších síťových operací, například vzdálenou správu systému Windows. Aby nedocházelo k útokům prostředníkem, které mění pakety SMB při přenosu, podporuje protokol SMB digitální podepisování paketů SMB. Nastavení této zásady určuje, jestli se součást klienta protokolu SMB pokusí vyjednat podepisování paketů SMB při připojení k serveru SMB. Pokud je toto nastavení povolené, bude klient sítě Microsoftu požádat server, aby při nastavení relace prováděl podepisování paketů SMB. Pokud je na serveru podepisování paketů povolené, podepisování paketů se vyjedná. Pokud je tato zásada zakázaná, klient SMB nebude nikdy vyjednávat podepisování paketů SMB.  
+  Toto nastavení zabezpečení určuje, jestli se klient SMB pokusí vyjednat podepisování paketů SMB. Protokol SMB (Server Message Block) poskytuje základ pro sdílení souborů a tiskáren společnosti Microsoft a mnoho dalších síťových operací, například vzdálenou správu systému Windows. Aby nedocházelo k útokům prostředníkem, které mění pakety SMB při přenosu, podporuje protokol SMB digitální podepisování paketů SMB. Nastavení této zásady určuje, jestli se součást klienta protokolu SMB pokusí vyjednat podepisování paketů SMB při připojení k serveru SMB. Pokud je toto nastavení povolené, bude klient sítě Microsoftu požádat server, aby při nastavení relace prováděl podepisování paketů SMB. Pokud je na serveru povolené podepisování paketů, vyjednává se podepisování paketů. Pokud je tato zásada zakázaná, klient SMB nebude nikdy vyjednávat podepisování paketů SMB.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067319)  
   
   **Výchozí**: Ano
   
 - **Chování výzvy ke zvýšení úrovně oprávnění správce**  
-  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Možnosti: 
+  Toto nastavení zásady řídí chování výzvy ke zvýšení oprávnění pro správce. Dostupné možnosti: 
   - *Zvýšení oprávnění bez výzvy* – umožňuje privilegovaným účtům provést operaci, která vyžaduje zvýšení oprávnění bez vyžadování souhlasu nebo přihlašovacích údajů. Poznámka: tuto možnost použijte jenom v nejvíc omezených prostředích. 
   - *Vyzvat k zadání přihlašovacích údajů na zabezpečené ploše* – Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva k zadání privilegovaného uživatelského jména a hesla na zabezpečené ploše. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s největším dostupným oprávněním uživatele. 
   - *Vyzvat k vyjádření souhlasu na zabezpečené ploše* – Pokud operace vyžaduje zvýšení oprávnění, zobrazí se uživateli výzva na zabezpečené ploše, aby bylo možné vybrat možnost povolit nebo odepřít. Pokud uživatel vybere povolit, operace pokračuje s největším dostupným oprávněním uživatele. 
@@ -1290,7 +1290,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyzvat k vyjádření souhlasu na zabezpečené ploše
   
 - **Minimální zabezpečení relace pro klienty založené na NTLM SSP**  
-  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128ho šifrování nebo zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Možnosti:
+  Toto nastavení zabezpečení umožňuje klientovi vyžadovat vyjednávání 128ho šifrování nebo zabezpečení relace NTLMv2. Tyto hodnoty jsou závislé na hodnotě nastavení zabezpečení na úrovni ověřování v programu LAN Manager. Dostupné možnosti:
   - *Vyžadovat zabezpečení relace NTLMv2* – Pokud není protokol NTLMv2 vyjednávat, připojení se nezdaří. 
   - *Vyžadovat 128 bitů* – připojení selže, pokud se vyjednává silné šifrování (128 bitů).
   - *Vyžadovat šifrování NTLMv2 a 128 bitů*.  
@@ -1300,11 +1300,11 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadovat šifrování NTLM v2 128
   
 - **Chování při odebrání čipové karty**  
-  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Možnosti:
+  Toto nastavení zabezpečení určuje, co se stane, když se čipová karta přihlášeného uživatele odebere z čtecího zařízení s čipovou kartou. Dostupné možnosti:
   - *Žádná akce*. 
   - *Zamknout pracovní stanici* – pracovní stanice je při odebrání čipové karty uzamčená a umožňuje uživatelům opustit oblast, přebírat jejich čipové karty a zachovat chráněnou relaci.
   - *Vynutit odhlášení* – při odebrání čipové karty se uživatel automaticky odhlásí.
-  - *Odpojit relaci vzdálené plochy* – odebrání čipové karty odpojí relaci bez odhlášení uživatele. To umožňuje uživateli vložit čipovou kartu a později pokračovat v relaci nebo na jiném počítači vybaveném čtečkou čipových karet, aniž by se museli znovu přihlašovat. Pokud je relace místní, funguje tato zásada stejně jako možnost Zamknout pracovní stanici.
+  - *Odpojit relaci vzdálené plochy* – odebrání čipové karty odpojí relaci bez odhlášení uživatele. To umožňuje uživateli vložit čipovou kartu a později pokračovat v relaci nebo na jiném počítači vybaveném čtečkou čipových karet, aniž by se museli znovu přihlašovat. Pokud je relace místní, tato zásada funguje stejně jako zámek pracovní stanice.
   
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067331) 
     
@@ -1337,7 +1337,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: automaticky zamítnout žádosti o zvýšení oprávnění
   
 - **Vyžadovat režim schválení správce pro správce**  
-  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Možnosti:   
+  Toto nastavení zásady řídí chování všech nastavení zásad řízení uživatelských účtů (UAC) v počítači. Pokud toto nastavení zásad změníte, musíte restartovat počítač. Dostupné možnosti:   
   - *Nenakonfigurováno* – režim schválení správce a všechna související nastavení zásad nástroje řízení uživatelských účtů jsou zakázaná. Poznámka: Pokud je toto nastavení zásad zakázané, Security Center vás upozorní, že celkové zabezpečení operačního systému bylo omezené. 
   - *Ano* – režim schválení správcem je povolen. Tato zásada musí být povolená a související nastavení zásad řízení uživatelských účtů musí být nastavené tak, aby umožňovala předdefinovaný účet správce a všechny ostatní uživatele, kteří jsou členy skupiny Administrators, ke spuštění v režimu schválení správcem.  
 
@@ -1361,7 +1361,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: *O:Bag: Bad: (A;; RC;;; BA)*
 
 - **Použít režim schválení správce**  
-  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Možnosti: 
+  Toto nastavení zásady řídí chování režimu schválení správcem pro předdefinovaný účet správce. Dostupné možnosti: 
   - *Ano* – integrovaný účet správce používá režim schválení správcem. Ve výchozím nastavení vyzve uživatel ke schválení operace všechny operace, které vyžadují zvýšení oprávnění. 
   - *Nenakonfigurováno* – integrovaný účet správce spouští všechny aplikace s úplnými oprávněními správce. 
 
@@ -1379,7 +1379,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: Ano
 
 - **Zjištění instalace aplikace a výzva ke zvýšení oprávnění**  
-  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Možnosti: 
+  Toto nastavení zásady řídí chování detekce instalace aplikace pro daný počítač. Dostupné možnosti: 
   - *Povoleno* – při zjištění instalačního balíčku aplikace, který vyžaduje zvýšení oprávnění, se uživateli zobrazí výzva k zadání uživatelského jména a hesla pro správu. Pokud uživatel zadá platné přihlašovací údaje, operace pokračuje s příslušným oprávněním. 
   - *Zakázané* – instalační balíčky aplikací se nerozpoznají a zobrazí se výzva ke zvýšení oprávnění. U podniků, ve kterých běží standardní stolní počítače a využívají technologie delegované instalace, například Zásady skupiny pro instalaci softwaru nebo Systems Management Server (SMS), by měli toto nastavení zásad zakázat. V takovém případě je zjišťování instalační služby zbytečné.  
   
@@ -1508,7 +1508,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
   
-## <a name="remote-desktop-services"></a>Služba Vzdálená plocha  
+## <a name="remote-desktop-services"></a>Vzdálená plocha  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .  
 
 - **Blokovat ukládání hesla**  
@@ -1602,7 +1602,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 Další informace najdete v tématu [zásady CSP – hledání](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) v dokumentaci k Windows.  
 
 - **Zakázat indexování šifrovaných položek**  
-  Tato zásada povolí nebo zakáže indexování položek. Tento přepínač je určen pro indexer služby Windows Search, který určuje, zda budou zašifrovány položky, například soubory chráněné jako Windows Information Protection (nedokončené výroby). Pokud je tato zásada povolená, chráněné položky WIP se indexují a metadata o nich se ukládají do nešifrovaného umístění. Součástí metadat jsou takové položky jako cesta k souboru a datum změny. Když je zásada zakázaná, položky chráněné při nedokončené výrobě nejsou indexované a nezobrazují se ve výsledcích v Cortana nebo v Průzkumníkovi souborů. Pokud se v zařízení nachází mnoho souborů médií chráněných WIP, může to mít také dopad na výkon fotografií a aplikací Groove.  
+  Povolí nebo zakáže indexování položek. Tento přepínač je určen pro indexer služby Windows Search, který určuje, zda budou zašifrovány položky, například soubory chráněné jako Windows Information Protection (nedokončené výroby). Pokud je zásada povolená, položky chráněné při nedokončené výrobě se indexují a jejich metadata jsou uložená v nešifrovaném umístění. Metadata zahrnují například cestu k souboru a datum změny. Když je zásada zakázaná, položky chráněné při nedokončené výrobě nejsou indexované a nezobrazují se ve výsledcích v Cortana nebo v Průzkumníkovi souborů. Pokud na zařízení existuje spousta mediálních souborů chráněných při nedokončené výrobě, může to mít také dopad na výkon pro fotky a aplikace Groove.  
   [Další informace]( https://go.microsoft.com/fwlink/?linkid=2067303)  
   
   **Výchozí**: Ano
@@ -1625,7 +1625,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-## <a name="system"></a>Systému  
+## <a name="system"></a>Systém  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
 - **Inicializace ovladače spuštění systému**  
@@ -1641,7 +1641,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – sys
   **Výchozí**: dobrý neznámý a špatný kritický
 
 
-## <a name="wi-fi"></a>Wi-Fi  
+## <a name="wi-fi"></a>Síť Wi-Fi  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – WiFi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) .  
 
 - **Blokovat sdílení internetu**  
@@ -1669,7 +1669,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
   **Výchozí**: povoleno
   
-## <a name="windows-defender"></a>Windows Defender  
+## <a name="microsoft-defender"></a>Microsoft Defender  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .  
 
 - **Kontrolovat příchozí e-mailové zprávy**  
@@ -1685,7 +1685,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Typ souhlasu pro odeslání ukázky v programu Defender**  
-  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Windows Defender odesílají data. Pokud je požadovaný souhlas již udělen, program Windows Defender je odešle. V takovém případě se uživatelské rozhraní spustí, aby požádalo o souhlas uživatele (když je povolený program Defender/AllowCloudProtection) před odesláním dat.  
+  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. V takovém případě se uživatelské rozhraní spustí, aby požádalo o souhlas uživatele (když je povolený program Defender/AllowCloudProtection) před odesláním dat.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067131)  
   
   **Výchozí**: automaticky odesílat bezpečné vzorky 
@@ -1701,7 +1701,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Výchozí**: Povolit
@@ -1720,9 +1720,9 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-- **Typ ochrany sítě**  
-  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Windows Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Windows Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu můžete zobrazit v Security Center programu Windows Defender. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v Security Center Windows Defenderu. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V Security Center programu Windows Defender se nezobrazí žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
-  [Další informace](https://go.microsoft.com/fwlink/?linkid=2067102)  
+- **Ochrana sítě**  
+  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu vidíte v programu Microsoft Defender Security Center. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v programu Microsoft Defender Security Center. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V programu Microsoft Defender Security Center neuvidíte žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
+  [Další informace](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Výchozí**: Povolit
   
@@ -1732,13 +1732,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: každý den
   
 - **Ochrana Doručená v cloudu**  
-  Aby bylo možné počítač nejlépe chránit, program Windows Defender pošle společnosti Microsoft informace o všech nalezených problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
+  Aby se Váš počítač mohl nejlépe chránit, Microsoft Defender pošle Microsoftu informace o všech zjištěných problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067039)
   
   **Výchozí**: Ano  
 
 - **Akce potenciálně nežádoucí aplikace v Defenderu**  
-  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v Antivirová ochrana v programu Windows Defender může identifikovat a blokovat PUAs stahování a instalace na koncových bodech ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
+  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
   [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)    
   
   **Výchozí**: blok  
@@ -1750,18 +1750,18 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**  
-  Umožňuje, aby Windows Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Windows Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
+  Umožňuje, aby Microsoft Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Microsoft Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067036)  
   
   **Výchozí**: Ano  
   
-- **Prohledat archivní soubory**  
+- **Kontrolovat archivní soubory**  
   Defender prohledává archivní soubory.
   
   **Výchozí**: Ano
   
 - **Monitorování chování**  
-  Povolí nebo zakáže funkci monitorování chování v programu Windows Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
+  Povolí nebo zakáže funkci monitorování chování programu Microsoft Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Výchozí**: Ano
@@ -1815,7 +1815,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
-## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender  
+## <a name="microsoft-defender-firewall"></a>Firewall v programu Microsoft Defender  
 Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.  
 
 - **Doména profilu brány firewall**  
@@ -1984,11 +1984,11 @@ Následující nastavení:
   - **Metoda pozvánky e-mailu**
 
 
-*[Novinka]* [**Windows Defender**](#windows-defender):
+*[Novinka]* [**Microsoft Defender**](#microsoft-defender):
 - **Spuštění aplikace Adobe Reader v podřízeném procesu**  
 - **Aplikace Office Communications se spouští v podřízeném procesu** 
 
-*[Novinka]* [ **firewall v programu Windows Defender**](#windows-defender-firewall)
+*[Novinka]* [ **firewall v programu Microsoft Defender**](#microsoft-defender-firewall)
 - **Doména profilu brány firewall**  
   - **Blokovaná příchozí připojení**  
   - **Vyžadují se odchozí připojení.**  

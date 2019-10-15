@@ -1,7 +1,7 @@
 ---
-title: Nastavení integrace s integrací na mobilní zařízení s Intune
+title: Použití programu Sophos Mobile s Intune
 titleSuffix: Intune on Azure
-description: Jak nastavit mobilní řešení Sophos pomocí Microsoft Intune pro řízení přístupu mobilních zařízení k firemním prostředkům.
+description: Jak používat mobilní řešení Sophos s Microsoft Intune k řízení přístupu mobilních zařízení k firemním prostředkům.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 550dfe58687806f7ead65dab2d7e15b310ae4b6e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9bacc784b9d9498196186b1fac0ef948789832b5
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729506"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306836"
 ---
 # <a name="sophos-mobile-threat-defense-connector-with-intune"></a>Nastavení konektoru ochrany před mobilními hrozbami v Intune
 Přístup mobilních zařízení k podnikovým prostředkům můžete řídit pomocí podmíněného přístupu na základě posouzení rizik, které provádí společnost Sophos Mobile, řešení ochrany před mobilními hrozbami (MTD), které se integruje s Microsoft Intune. Riziko se vyhodnocuje na základě telemetrie shromážděných ze zařízení s mobilní aplikací Sophos.
@@ -27,15 +27,15 @@ Na základě zásad dodržování předpisů zařízením v Intune můžete nako
 
 ## <a name="how-do-intune-and-sophos-mobile-help-protect-your-company-resources"></a>Jak Intune a Sophos Mobile chrání firemní prostředky?
 Mobilní aplikace Sophos pro Android a iOS zaznamenává telemetrii systému souborů, zásobníku sítě, zařízení a aplikací tam, kde je k dispozici, a poté odesílá data telemetrie do mobilní cloudové služby Sophos, aby zhodnotila riziko zařízení pro mobilní hrozby.
-Zásady dodržování předpisů pro zařízení v Intune obsahují pravidlo pro ochranu před mobilními hrozbami, které je založené na posouzení rizikového mobilního rizika pro Sophos. Když je toto pravidlo aktivní, Intune vyhodnocuje soulad zařízení se zásadami, které jste povolili. Pokud se zjistí, že zařízení nesplňuje dané předpisy, zablokuje se přístup uživatelů k podnikovým prostředkům, jako jsou Exchange Online a SharePoint Online. Uživatelé také dostanou pokyny z mobilní aplikace Sophos nainstalované ve svých zařízeních k vyřešení problému a opětovnému získání přístupu k podnikovým prostředkům.  
+Zásady dodržování předpisů pro zařízení v Intune obsahují pravidlo pro ochranu před mobilními hrozbami, které je založené na posouzení rizikového mobilního rizika pro Sophos. Když je toto pravidlo povolené, Intune vyhodnotí dodržování předpisů zařízením pomocí zásad, které jste povolili. Pokud zařízení nedodržuje předpisy, uživatelé budou mít blokovaný přístup k firemním prostředkům, jako je Exchange Online a SharePoint Online. Uživatelé také dostanou pokyny z mobilní aplikace Sophos nainstalované ve svých zařízeních k vyřešení problému a opětovnému získání přístupu k podnikovým prostředkům.  
 
 ## <a name="sample-scenarios"></a>Ukázkové scénáře
-Zde jsou uvedeny některé obvyklé scénáře.  
-### <a name="control-access-based-on-threats-from-malicious-apps"></a>Řízení přístupu na základě hrozeb od škodlivých aplikací
-Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba malwaru), můžete jim až do vyřešení problému zablokovat následující akce:
+Tady je několik běžných scénářů.  
+### <a name="control-access-based-on-threats-from-malicious-apps"></a>Řízení přístupu na základě hrozeb ze škodlivých aplikací
+Když se na zařízeních zjistí škodlivá aplikace, jako je malware, můžete zablokovat zařízení z následujících akcí, dokud se hrozby nevyřeší:
 - Připojení k firemnímu e-mailu
-- Synchronizaci firemních souborů přes OneDrive for Work
-- Přístup k aplikacím společnosti
+- Synchronizace podnikových souborů pomocí aplikace OneDrive for Work
+- Přístup k podnikovým aplikacím
 
 **Blokovat při zjištění škodlivých aplikací**:
  
@@ -44,7 +44,7 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 **Přístup udělen při nápravě**:  
 @no__t – bitová kopie přístupu udělená po nápravě @ no__t-1
 
-### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě  
+### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě hrozeb v síti  
 Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.  
 
 **Blokovat přístup k síti přes Wi-Fi**:  
@@ -66,9 +66,9 @@ Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a zabraňuje 
 - Android 5,0 a novější
 - iOS 11,0 a novější
 
-## <a name="prerequisites"></a>Požadované součásti  
+## <a name="prerequisites"></a>Předpoklady  
 - Azure Active Directory Premium
-- Odběr služby Microsoft Intune 
+- Předplatné Microsoft Intune 
 - Předplatné ochrany před mobilními hrozbami v Sophos
 
 Další informace najdete na [webu Sophos](https://www.sophos.com/products/mobile-control).  

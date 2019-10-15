@@ -210,7 +210,7 @@
     - name: Řešení problémů
       items:
         - name: Řešení potíží se zásadami a profily
-          href: troubleshoot-policies-in-microsoft-intune.md
+          href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?context=./context/pr-context.yml
         - name: Řešení potíží s podmíněným přístupem
           href: troubleshoot-conditional-access.md
         - name: Řešení potíží s Certificate Connectorem

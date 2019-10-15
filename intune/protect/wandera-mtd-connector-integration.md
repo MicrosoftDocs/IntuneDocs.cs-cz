@@ -14,26 +14,26 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3bf8fd189e50a704e96fc24d0804c5c5d6f91bb4
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 64a560dc79d3c03f52b8e9389c3e47e3e256ee58
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732510"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306661"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
 Provedením následujících kroků Integrujte řešení ochrany před mobilními hrozbami Wandera do Intune.  
 
-## <a name="before-you-begin"></a>Před zahájením  
+## <a name="before-you-begin"></a>Než začnete  
 
 Než začnete s integrací Wandera do Intune, ujistěte se, že jsou splněné následující požadavky:
-- Odběr služby Microsoft Intune  
-- Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:  
+- Předplatné Microsoft Intune  
+- Azure Active Directory přihlašovací údaje správce pro udělení následujících oprávnění:  
   - Přihlášení a čtení profilu uživatele  
   - Přístup k adresáři jako přihlášený uživatel  
-  - Čtení dat z adresáře  
-  - Odeslání informací o zařízení do Intune  
+  - Čtení dat adresáře  
+  - Odesílání informací o zařízení do Intune  
 
 - Předplatné Wandera:
   - Jeden nebo více účtů Wandera, které mají licenci pro modul EMM Connect  
@@ -72,7 +72,7 @@ Nastavení modulu *EMM Connect* for Wandera vyžaduje jednorázový proces konfi
 
 7. V konzole PAPRSKů zkopírujte název skupiny **SyncOnly** , která se zobrazuje pod **popiskem EMM**. Tento název použijete ke konfiguraci skupiny v Intune pro synchronizaci s Wandera.
 
-   ![Integrace a oprávnění](./media/wandera-mtd-connector-integration/sync-group-name.png) 
+   ![Skupina synchronizace](./media/wandera-mtd-connector-integration/sync-group-name.png) 
 
 8. Vraťte se do konzoly [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a upravte konektor Wandera MTD. Nastavte přepínač k dispozici na **zapnuto**a **uložte** konfiguraci.  
 

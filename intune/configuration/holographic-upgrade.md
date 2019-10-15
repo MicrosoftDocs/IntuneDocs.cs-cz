@@ -1,7 +1,7 @@
 ---
 title: Upgrade na Windows Holografick pro firmy
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak upgradovat v zařízení software Windows Holographic na Windows Holographic for Business.
+description: Naučte se, jak upgradováním zařízení s Windows Holografickím do okna Holografick pro firmy.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,22 +15,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8005912cdb4a5898eccf7c95500ff7bbdbe34b3c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6d569d34da1568d0e412d689d98d4a22b00e6545
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730634"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314519"
 ---
-# <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení se softwarem Windows Holographic na Windows Holographic for Business
+# <a name="upgrade-devices-running-windows-holographic-to-windows-holographic-for-business"></a>Upgrade zařízení s Windows holografickým na Windows Holografick pro firmy
 
 Microsoft Intune obsahuje mnoho nastavení, které vám pomůžou se správou a ochranou vašich zařízení. Tento článek obsahuje seznam a popis nastavení pro upgrade zařízení se systémem Windows holografick pro firmy. Tato nastavení se vytvoří v profilu konfigurace upgradu v Intune, který se předává nebo nasazuje do zařízení.
 
-Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení k upgradu holografických zařízení s Windows. V případě Microsoft HoloLens si můžete koupit komerční sadu a získat tak požadovanou licenci pro upgrade. Další informace najdete v tématu [Odblokování funkcí Windows Holographic for Business](https://docs.microsoft.com/hololens/hololens-upgrade-enterprise).
+Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení k upgradu holografických zařízení s Windows. V případě Microsoft HoloLens si můžete koupit komerční sadu a získat tak požadovanou licenci pro upgrade. Další informace najdete v tématu [odemčení funkcí Windows holografick pro firmy](https://docs.microsoft.com/hololens/hololens1-upgrade-enterprise).
 
 Další informace o této funkci najdete v tématu [upgrade edice Windows 10 nebo povolení režimu S](../edition-upgrade-configure-windows-10.md).
 
-## <a name="before-you-begin"></a>Před zahájením
+## <a name="before-you-begin"></a>Než začnete
 
 [Vytvořte profil konfigurace zařízení](edition-upgrade-configure-windows-10.md#create-the-profile).
 

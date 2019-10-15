@@ -6,8 +6,9 @@
     - name: Přehled Microsoft Intune
       href: what-is-intune.md
       displayName: ems; emm; azure ad; active directory; ad
-    - name: Jaké přínosy má Intune pro moji firmu?
-      href: get-started-evaluation.md
+    - name: Přehled správy zařízení
+      href: what-is-device-management.md
+      displayName: teamviewer
     - name: Co je nového
       href: whats-new.md
       items:
@@ -32,9 +33,6 @@
       href: tutorial-walkthrough-intune-portal.md
 - name: Koncepty
   items:
-    - name: Co je správa zařízení?
-      href: what-is-device-management.md
-      displayName: teamviewer
     - name: Co je Intune for Education?
       href: introduction-intune-education.md
     - name: Architektura z širší perspektivy

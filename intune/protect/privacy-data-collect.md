@@ -1,5 +1,6 @@
 ---
-title: Shromažďování údajů v Intune
+title: Shromažďování dat v Intune
+titleSuffix: Microsoft Intune
 description: Přečtěte si, jak se v Intune shromažďují osobní údaje.
 keywords: ''
 author: ErikjeMS
@@ -16,37 +17,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e07ee5e3f69a3fb1d4d92e771c389df340e9c012
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: cd1d0de4b1ae930ebeff07539f9cfa8848f0b7ce
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71729546"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306908"
 ---
-# <a name="data-collection-in-intune"></a>Shromažďování údajů v Intune
+# <a name="data-collection-in-intune"></a>Shromažďování dat v Intune
 
-Když si uživatelé zaregistrují svá firemní nebo osobní zařízení pomocí Intune, některé z jejich osobních údajů se shromažďují a sdílí. Intune shromažďuje osobní údaje z těchto zdrojů:
+Když uživatelé registrují svoje firemní nebo osobní zařízení pomocí Intune, Intune shromažďuje a sdílí některá osobní data. Intune shromažďuje osobní údaje z následujících zdrojů:
 
-- Využití služby Intune na portálu Azure Portal správcem
-- Zařízení koncových uživatelů (při registraci ke správě Intune a v průběhu využívání)
-- Účty zákazníků u služeb třetích stran (podle pokynů správce)
-- Diagnostické informace a informace o výkonu a použití
+- Použití Intune v Azure Portal pro správce.
+- Zařízení koncových uživatelů (při zápisu do správy Intune a při jejich používání).
+- Zákaznické účty na službách třetích stran (podle pokynů správce).
+- Informace o diagnostice, výkonu a využití.
 
-Z těchto zdrojů shromažďuje Intune informace, které spadají do těchto tří kategorií: [identifikované](#identified-data), [pseudonymizované](#pseudonymized-data) a [agregované](#aggregated-data) údaje.
+Z těchto zdrojů Intune shromažďuje informace, které spadají do následujících tří kategorií: [identifikované](#identified-data), [pseudonymované](#pseudonymized-data)a [agregované](#aggregated-data).
 
 > [!NOTE]
 > Žádná data shromážděná naší službou neprodávají z jakéhokoli důvodu žádné třetí straně.
 
-## <a name="identified-data"></a>Identifikované údaje
+## <a name="identified-data"></a>Identifikovaná data
 
-Většina osobních údajů shromážděných službou Intune představuje identifikované údaje. Tato data se vážou k uživateli, zařízení nebo aplikaci a pro správu jako takovou jsou nezbytná. Slouží ke správě zařízení a aplikací uživatele a poskytování služby Intune.
+Většina osobních údajů shromažďovaných službou Intune je identifikovaná data. Tato data jsou vázaná na uživatele, zařízení nebo aplikaci a jsou zásadní pro povahu správy. Identifikovaná data se používají ke správě zařízení a aplikací uživatele a k zajištění služby Intune.
 
-Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné: 
+Identifikovaná data shromážděná službou Intune můžou zahrnovat, ale nejsou omezená na tyto: 
 
 - Informace o uživateli
-  - Jméno vlastníka / zobrazované jméno uživatele (jméno uživatele zaregistrované v Azure, které označuje ID uživatele služby Azure)
+  - Jméno vlastníka/zobrazení uživatele (název zaregistrovaný v Azure, který identifikoval uživatel theAzureUserID)
   - Hlavní název uživatele nebo e-mailová adresa
-  - Identifikátory uživatele třetích stran (např. Apple ID)
+  - Identifikace uživatele třetí strany (například AppleID)
 - Informace o inventáři hardwaru
   - Název zařízení
   - Výrobce
@@ -57,85 +58,85 @@ Mezi identifikovaná data shromažďovaná službou Intune patří mimo jiné:
   - Wi-Fi MacAddress
   - ICCID
   - Telefonní číslo
-- Informace z protokolů auditů včetně dat o následujících aktivitách
-  - Správa služby Endpoint Protection
-  - Vytvořeny
-  - Aktualizace (úpravy)
+- Informace protokolu auditování, včetně dat o následujících činnostech
+  - Spravujte
+  - Vytváření
+  - Aktualizovat (Upravit)
   - Odstranit
-  - Řadit
+  - Přiřazení
   - Vzdálené úlohy
-- Informace o podpoře
+- Informace pro získání podpory
   - Kontaktní informace (jméno, telefonní číslo, e-mailová adresa)
-  - E-mailové diskuze s podporou Microsoftu a členy produktových týmů nebo týmů zaměřených na zkušenosti uživatelů
-- Informace o řízení přístupu (Intune tato data využívá ke správě přístupu k rolím a funkcím pro správu prostřednictvím funkcí, jako je [Řízení přístupu založené na rolích](../fundamentals/role-based-access-control.md).)
-  - Statické ověřovače (heslo zákazníka)
-  - Klíče osobních údajů pro certifikáty 
-- Informace o správci a účtu
-  - Jméno a příjmení uživatele s rolí správce
+  - E-mailová diskuze s členy týmu podpory Microsoftu, produktů a/nebo zkušeností zákazníků
+- Informace o řízení přístupu (Intune tato data používá ke správě přístupu k rolím a funkcím pro správu prostřednictvím funkcí jako [Access Control na základě rolí](../fundamentals/role-based-access-control.md).
+  - Statické ověřovatele (heslo zákazníka)
+  - Klíče ochrany osobních údajů pro certifikáty 
+- Informace o Správci a účtu
+  - Křestní jméno a příjmení uživatele správce
   - Uživatelské jméno správce
-  - Hlavní název uživatele (UPN, e-mail)
+  - Hlavní název uživatele (e-mail)
   - Telefonní číslo
   - E-mailová adresa vlastníka účtu
-  - ID služby Active Directory správce IT každého zákazníka
-  - Platební údaje pro fakturaci zákazníka
+  - ID služby Active Directory každého zákazníka, který správce IT
+  - Platební údaje pro fakturaci zákazníkovi
   - Klíč předplatného
 - Inventář aplikací, například
   - Název aplikace
-  - Verze
+  - version
   - ID aplikace
-  - Velikost
-  - Umístění instalace
-  - Data inventáře aplikací se shromažďují pouze tehdy, pokud je správce označí jako zařízení vlastněné společností nebo pokud je zapnutá funkce aplikace dodržující předpisy.  
-- Zákaznická ID tenantů třetích stran, jako je Apple ID 
+  - Hodnota
+  - umístění instalace
+  - Data inventáře aplikací se shromažďují jenom v případě, že je označí správce jako zařízení ve vlastnictví firmy nebo je zapnutá funkce kompatibilní aplikace.  
+- ID tenantů zákaznických třetích stran, jako je Apple ID. 
 
-## <a name="pseudonymized-data"></a>Pseudonymizované údaje
+## <a name="pseudonymized-data"></a>Pseudonymovaná data
 
-Pseudonymizované údaje jsou přidružené k jedinečnému identifikátoru (zpravidla systémem vygenerovanému číslu), který jako takový nedokáže identifikovat jednotlivce, ale slouží k poskytování podnikových služeb uživatelům. 
+Pseudonymovaná data jsou asociována s jedinečným identifikátorem, obvykle číslem vygenerovaným systémem, který nemůže sám o sobě identifikovat jednotlivou osobu, ale používá se k poskytování podnikových služeb uživatelům. 
 
-Mezi pseudonymizované údaje shromažďované službou Intune patří mimo jiné: 
+Pseudonymovaná data shromážděná službou Intune mohou zahrnovat, ale nejsou omezená na: 
 
-- Diagnostické informace a informace o výkonu a použití svázané s uživatelem a/nebo zařízením
-  - Počet použití funkce
-  - Příkazy zadané funkci
+- Data o diagnostice, výkonu a využití vázaná na uživatele nebo zařízení
+  - Počet, kolikrát se funkce používá
+  - Příkazy, které jsou součástí funkce
   - Doba odezvy služby
-  - Úspěšnost instalací a dalších procesů
-  - Chyby aplikace Portál společnosti Intune
-  - Identifikátory uživatele a zařízení
-  - Identifikátory pro účely reference, korelace a správy 
-- Data zařízení nesvázaná se zařízením nebo uživatelem (jsou-li svázaná se zařízením nebo uživatelem, Intune s nimi nakládá jako s identifikovanými údaji)
+  - Míry úspěšnosti instalací a dalších procesů
+  - Chyby aplikace Portál společnosti služby Intune
+  - Identifikátory uživatelů a zařízení
+  - Identifikátory pro reference, korelace, účely správy 
+- Data zařízení nejsou vázaná na zařízení nebo uživatele (pokud jsou tato data vázaná na zařízení nebo uživatele, Intune je považuje za identifikovaná data).
   - ID zařízení v Intune
-  - ID zařízení v Azure Active Directory
+  - ID zařízení Azure Active Directory
   - ID správy zařízení v Intune
   - ID tenanta
-  - ID účtu
-  - ID zařízení v EAS
-  - ID specifická pro konkrétní platformu
-  - Apple ID zařízení s iOSem
-  - Adresa MAC zařízení s macOS
-  - Windows ID zařízení s Windows
+  - Account ID
+  - ID zařízení EAS
+  - ID specifická pro platformu
+  - AppleID pro zařízení s iOS
+  - Adresa MAC pro zařízení Mac
+  - ID Windows pro zařízení s Windows
 - Informace o spravované aplikaci
   - ID spravované aplikace
   - Značka zařízení spravované aplikace
   - ID správy zařízení v Intune
-  - ID zařízení v Azure Active Directory
+  - ID zařízení Azure Active Directory
   - Šifrovací klíče
 
-## <a name="aggregated-data"></a>Agregované údaje
+## <a name="aggregated-data"></a>Agregovaná data
 
-Agregované údaje slouží k poskytování a zlepšování služby Intune. 
+Agregovaná data se používají ke zřízení a vylepšení služby Intune. 
 
-Mezi agregované údaje shromažďované službou Intune patří mimo jiné: 
+Agregovaná data shromážděná službou Intune mohou zahrnovat, ale nejsou omezená na: 
 
-- Údaje o využití správcem ze všech tenantů Intune (například ovládací prvky pro správu zvolené při interakci s konzolou správce)
-- Informace o účtu tenanta (tyto údaje jsou dostupné v okně Intune)
+- Data o využití správce ze všech tenantů Intune (například ovládací prvky pro správu vybrané při interakci s konzolou správce)
+- Informace o účtu klienta (Tato data jsou k dispozici v okně Intune)
   - Počet zaregistrovaných zařízení nebo uživatelů
   - Počet identifikovaných platforem zařízení  
   - Počet nainstalovaných zařízení
-  - installedDeviceCount: Počet zařízení, na kterých je aplikace nainstalovaná
-  - notApplicableDeviceCount: Počet zařízení, na kterých se aplikace nedá použít
-  - notInstalledDeviceCount: Počet zařízení, na kterých se aplikace dá použít, ale není nainstalovaná
-  - pendingInstallDeviceCount: Počet zařízení, na kterých se aplikace dá použít a instalace čeká na dokončení
+  - installedDeviceCount: počet zařízení, na kterých je aplikace nainstalována.
+  - notApplicableDeviceCount: počet zařízení, pro která se aplikace nedá použít.
+  - notInstalledDeviceCount: počet zařízení, pro která je aplikace platná, ale není nainstalovaná.
+  - pendingInstallDeviceCount: počet zařízení, pro která je aplikace k dispozici, a čeká na instalaci.
 
 ## <a name="next-steps"></a>Další kroky
 
-Přečtěte si další informace o tom, jak služba Intune [ukládá a zpracovává](privacy-data-store-process.md) a [sdílí](privacy-data-secure-share.md) osobní údaje. 
+Přečtěte si další informace o tom, jak Intune [ukládá a zpracovává](privacy-data-store-process.md) a [sdílí](privacy-data-secure-share.md) osobní údaje. 

@@ -5,7 +5,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 10/14/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b1d1d0c52db57ca6b41c399aeefc948735eea0af
-ms.sourcegitcommit: fc356fd69beaeb3d69982b47e2bdffb6f7127f8c
+ms.openlocfilehash: b4316c155645ad8e956cfd89c448da688ac133b3
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71830532"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314561"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>Microsoft Intune App SDK pro Android – příručka pro vývojáře
 
@@ -536,15 +536,6 @@ String toString();
 
 > [!NOTE]
 > `MAMPolicyManager.getPolicy` vždy vrátí zásadu aplikace, která není null, i když zařízení nebo aplikace nejsou v zásadách správy Intune.
-
-### <a name="example-determine-if-pin-is-required-for-the-app"></a>Příklad: určení, jestli se pro aplikaci vyžaduje PIN kód
-
-Pokud má aplikace vlastní kód PIN, můžete ji chtít zakázat, pokud správce IT nakonfiguroval sadu SDK tak, aby vyzvat k zadání kódu PIN aplikace. Pokud chcete zjistit, jestli správce IT nasadil do této aplikace zásady pro PIN kód aplikace, zavolejte pro aktuálního koncového uživatele následující metodu:
-
-```java
-
-MAMPolicyManager.getPolicy(currentActivity).getIsPinRequired();
-```
 
 ### <a name="example-determine-if-pin-is-required-for-the-app"></a>Příklad: určení, jestli se pro aplikaci vyžaduje PIN kód
 
@@ -1755,7 +1746,7 @@ enum StringQueryType {
 
 Aplikace může také vyžádat nezpracovaná data jako seznam sad párů klíč-hodnota.
 
-```
+```java
 List<Map<String, String>> getFullData()
 ```
 

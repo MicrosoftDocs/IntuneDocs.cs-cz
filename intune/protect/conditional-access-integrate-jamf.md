@@ -1,7 +1,7 @@
 ---
 title: Integrace Jamf pro s Microsoft Intune pro dodržování předpisů
 titleSuffix: Microsoft Intune
-description: K usnadnění zabezpečení zařízení spravovaných Jamf Microsoft Intune použijte zásady dodržování předpisů Azure Active Directory podmíněný přístup.
+description: Pomocí Microsoft Intune zásad dodržování předpisů s Azure Active Directory podmíněný přístup můžete zajistit integraci a zabezpečení zařízení spravovaných pomocí Jamf.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d7a63f3ff1e2936eff0961d4a9b368b0289e2b65
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 09566e314f801c0de3f371384126cf672403b6a3
+ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71813971"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306654"
 ---
 # <a name="integrate-jamf-pro-with-intune-for-compliance"></a>Integrace Jamf pro s Intune pro dodržování předpisů
 

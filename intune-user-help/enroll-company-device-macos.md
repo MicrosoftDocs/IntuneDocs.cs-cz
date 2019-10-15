@@ -18,12 +18,12 @@ ms.reviewer: japoehlm
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2e2ecc79cd24a68c1a5642f64474f2d31217bd7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 9c20ad54f71eb44f69638eacd4ae1c3796771896
+ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71721023"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314658"
 ---
 # <a name="enroll-your-organization-provided-macos-device-in-management"></a>Registrace zařízení macOS poskytovaných vaší organizací do správy
 
@@ -35,7 +35,7 @@ Pokud chcete začít s nastavením správy, zapněte zařízení a přihlaste se
 
 ## <a name="what-is-apple-dep"></a>Co je Apple DEP?
 
-Vaše organizace si mohla koupit svoje zařízení pomocí nějakého programu *Apple program registrace zařízení* (DEP). Apple DEP umožňuje organizacím koupit velké množství zařízení se systémem iOS nebo macOS. Organizace pak můžou tato zařízení nakonfigurovat a spravovat v rámci preferovaného poskytovatele správy mobilních zařízení, jako je třeba Intune. Pokud jste správce a chcete získat další informace o programu Apple DEP, přečtěte si téma [Automatická registrace zařízení MacOS pomocí program registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos.md).  
+Vaše organizace si mohla koupit svoje zařízení pomocí nějakého programu *Apple program registrace zařízení* (DEP). Apple DEP umožňuje organizacím koupit velké množství zařízení se systémem iOS nebo macOS. Organizace pak můžou tato zařízení nakonfigurovat a spravovat v rámci preferovaného poskytovatele správy mobilních zařízení, jako je třeba Intune. Pokud jste správce a chcete získat další informace o programu Apple DEP, přečtěte si téma [Automatická registrace zařízení MacOS pomocí program registrace zařízení společnosti Apple](https://docs.microsoft.com/intune/enrollment/device-enrollment-program-enroll-macos).  
 
 ## <a name="get-your-device-managed"></a>Získání spravovaného zařízení
 
@@ -51,11 +51,11 @@ Provedením následujících kroků zaregistrujete zařízení macOS ve správě
 4. Vyberte síť Wi-Fi. Aby bylo možné pokračovat v instalaci, je nutné připojení k Internetu. Pokud se vaše síť nezobrazí nebo pokud se potřebujete připojit přes drátovou síť, klikněte na **Další možnosti sítě**. Až skončíte, klikněte na **pokračovat**.  
 
    ![Snímek obrazovky s průvodcem nastavením zařízení macOS vyberte obrazovku sítě Wi-Fi, která zobrazuje seznam dostupných sítí, ze kterých si můžete vybrat. Také se zobrazí další tlačítko Možnosti sítě, tlačítko zpět a tlačítko pokračovat.](./media/macos-dep-wifi-1808.png)  
-5. Po připojení k Wi-Fi se zobrazí obrazovka **Vzdálená správa** . Vzdálená správa umožňuje správcům vaší organizace vzdáleně nakonfigurovat vaše zařízení pomocí účtů, nastavení, aplikací a sítí vyžadovaných společností. Přečtěte si vysvětlení vzdálené správy, které vám pomůže pochopit, jak je vaše zařízení spravované. Pak klikněte na **pokračovat**.  
+5. Po připojení k Wi-Fi se zobrazí obrazovka **Vzdálená správa** . Vzdálená správa umožňuje správcům vaší organizace vzdáleně nakonfigurovat vaše zařízení pomocí účtů, nastavení, aplikací a sítí vyžadovaných společností. Přečtěte si vysvětlení vzdálené správy, které vám pomůže pochopit, jak je vaše zařízení spravované. Pak klikněte na **Pokračovat**.  
 
    ![Obrazovka obrazovky pro vzdálenou správu pomocníka s nastavením zařízení macOS s textem vysvětlujícím vzdálenou správu a odkazem na dokumentaci, kde najdete další informace. Také zobrazí tlačítko zpět a tlačítko pokračovat.](./media/macos-dep-remote-management-1-1808.png)  
 6. Po zobrazení výzvy se přihlaste pomocí svého pracovního nebo školního účtu. Po ověření bude zařízení instalovat profil správy. Profil konfiguruje a umožňuje přístup k prostředkům vaší organizace.  
-7. Přečtěte si o ikoně ochrany osobních údajů pro Apple data &, abyste mohli později zjistit, kdy se shromažďují osobní údaje. Pak klikněte na **pokračovat**.  
+7. Přečtěte si o ikoně ochrany osobních údajů pro Apple data &, abyste mohli později zjistit, kdy se shromažďují osobní údaje. Pak klikněte na **Pokračovat**.  
 
    ![Snímek obrazovky s obrazovkou & Průvodce nastavením zařízení macOS obrazovka ochrany osobních údajů na obrazovce, na které se zobrazuje ilustrace dvou lidí potřesící ruce a popis používání osobních údajů od společnosti Apple. Zobrazí také tlačítko zpět a pokračovat.](./media/macos-dep-apple-data-privacy-1808.png)  
 8. Po registraci zařízení je možné, že budete muset provést další kroky. Postup najdete v závislosti na tom, jak vaše organizace vlastní nastavení prostředí. Může vyžadovat:

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8df5f46f411a6aee1c3040fa4a1a37fb49d5fb2
-ms.sourcegitcommit: fca2670142c083d7562c0a36547a6a451863e315
+ms.openlocfilehash: 4b82124fe8f6da7116c8333e293f219d7c667f9c
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036430"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310908"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Přidání certifikační autority pro partnery do Intune pomocí protokolu SCEP
 
@@ -31,7 +31,7 @@ Tuto funkci můžete používat dvěma částmi: Open Source API a úlohami spr�
 **Část 1 – použití Open Source rozhraní API**  
 Microsoft vytvořil rozhraní API pro integraci s Intune. I když rozhraní API můžete ověřovat certifikáty, odesílat oznámení o úspěšnosti nebo neúspěchu a k komunikaci s Intune používat protokol SSL, konkrétně objekt pro vytváření soketů SSL.
 
-Rozhraní API je dostupné ve [veřejném úložišti GITHUB API služby Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) , které můžete stáhnout a používat ve svých řešeních. Pomocí tohoto rozhraní API se servery SCEP třetích stran spustíte vlastní ověřování výzvou proti Intune před tím, než SCEP zřídí certifikát pro zařízení.
+Rozhraní API je dostupné ve [veřejném úložišti GITHUB API služby Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) , které můžete stáhnout a používat ve svých řešeních. Pomocí tohoto rozhraní API se servery SCEP třetích stran spustíte vlastní ověřování výzvou proti Intune před tím, než SCEP zřídí certifikát pro zařízení.
 
 [Integrace s řešením správy SCEP v Intune](scep-libraries-apis.md) poskytuje podrobnější informace o používání rozhraní API, jeho metod a testování vámi sestaveného řešení.
 
@@ -129,11 +129,11 @@ Intune podporují tyto certifikační autority od jiných výrobců:
 
 Pokud jste si od jiné certifikační autority zajímá integraci produktu s Intune, přečtěte si pokyny k rozhraní API:
 
-- [Úložiště GitHub rozhraní API pro SCEP v Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Úložiště GitHub rozhraní API pro SCEP v Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Doprovodné materiály k rozhraní SCEP API pro Intune pro certifikační autority třetích stran](scep-libraries-apis.md)
 
 ## <a name="see-also"></a>Další informace najdete v tématech
 
 - [Konfigurace profilů certifikátů](certificates-scep-configure.md)
-- [Úložiště GitHub rozhraní API pro SCEP v Intune](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
+- [Úložiště GitHub rozhraní API pro SCEP v Intune](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation)
 - [Doprovodné materiály k rozhraní SCEP API pro Intune pro certifikační autority třetích stran](scep-libraries-apis.md)

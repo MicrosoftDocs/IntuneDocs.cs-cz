@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14da6274546cbd4c1867975c08c60ece313714b1
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: 2d31df7ba639f703c89345440b737c990949ccc9
+ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71917972"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310877"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Řešení běžných problémů s Intune Exchange Connectorem
  
@@ -71,7 +71,7 @@ V následujících částech najdete řešení potíží s e-mailovými oznámen
    2. Zadejte *Autodiscover.SMTPdomain.com*. Výstup by měl vypadat podobně jako na následujícím obrázku:  
       @no__t – výsledky 0Nslookup @ no__t-1
 
-   Službu Automatická konfigurace můžete také otestovat z Internetu na adrese https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). V případě potřeby [si stáhněte nástroj Microsoft Connectivity Analyzer](http://go.microsoft.com/fwlink/?LinkID=313782).
+   Službu Automatická konfigurace můžete také otestovat z Internetu na adrese https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). V případě potřeby [si stáhněte nástroj Microsoft Connectivity Analyzer](https://go.microsoft.com/fwlink/?LinkID=313782).
 
 
 ### <a name="check-autodiscovery"></a>Ověřit automatické zjišťování  
