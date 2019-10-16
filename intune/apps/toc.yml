@@ -158,7 +158,7 @@
                   href: app-protection-policy-settings-android.md
                 - name: Nastavení iOS
                   href: app-protection-policy-settings-ios.md
-                - name: Akce přístupu
+                - name: Podmíněné spouštění
                   href: app-protection-policies-access-actions.md
                 - name: Výjimky přenosu dat
                   href: app-protection-policies-exception.md
