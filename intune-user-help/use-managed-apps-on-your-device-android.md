@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ed10a62c-b026-4ad3-ac41-641933522df2
 searchScope:
@@ -18,19 +19,19 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 24d4193b3e43b7c406a1fb6c9c8d987caa6cbeea
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546039"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501895"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Použití spravovaných aplikací na zařízení s Androidem
 Spravované aplikace jsou nakonfigurované tak, aby splňovaly požadavky organizace týkající se zabezpečení a chránily pracovní a školní data. Tyto aplikace máte k dispozici, abyste si je mohli nainstalovat na své zařízení nebo je automaticky používat. 
 
 Předtím, než spravovanou aplikaci dostanete a nainstalujete, musí organizace nakonfigurovat její oprávnění. Organizace může omezit funkce a použití aplikace, aby chránila její data před neoprávněnými osobami, které by mohli je mohli sdílet nebo prohlížet. Organizace například může uživateli, který používá aplikaci, zablokovat kopírování a vkládání dat. Nebo může omezit ukládání dat do místního úložiště zařízení.
 
-Pokud chce organizace co nejvíce chránit data, může nakonfigurovat spolupráci několika spravovaných aplikací. Příklad:
+Pokud chce organizace co nejvíce chránit data, může nakonfigurovat spolupráci několika spravovaných aplikací. Například:
 1. Připojíte se k síti organizace ve spravovaném prohlížeči, třeba v Microsoft Edge.
 2. Kliknutím na odkaz otevřete spolupracovníkův soubor s prezentací.
 3. Soubor se otevře v příslušné spravované aplikaci, třeba v Microsoft PowerPointu.
@@ -52,25 +53,25 @@ Příklady často spravovaných aplikací, které jsou povinné nebo dostupné v
 - Microsoft Word, Excel a PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Jak získám spravované aplikace?
-Existují tři způsoby, jak získat spravovaných aplikací.  
+Existují tři způsoby, jak získat spravované aplikace.  
 * Organizace nainstaluje aplikace do zařízení automaticky při jeho registraci.  
 * Aplikaci si nainstalujete z obchodu Google Play a pak se do ní přihlásíte pod svým pracovním nebo školním účtem.    
-* Organizace zpřístupní spravované aplikace na Portálu společnosti. Přejděte do aplikace portál společnosti nebo webu můžou vyhledávat, zobrazit a instalovat dostupné aplikace. Další informace o těchto aplikací, najdete v další části [dostupné aplikace](#available-apps).  
+* Organizace zpřístupní spravované aplikace na Portálu společnosti. Pokud chcete hledat, zobrazovat a instalovat dostupné aplikace, navštivte Portál společnosti aplikaci nebo Web. Další informace o těchto aplikacích najdete v další části [dostupné aplikace](#available-apps).  
 
 ### <a name="available-apps"></a>Dostupné aplikace   
- Vaše organizace můžete vybrat aplikace, které jsou vhodné a užitečné pro vás v práci nebo škole a zpřístupnit je pro vás v aplikaci portál společnosti.  
+ Vaše organizace může vybrat aplikace, které jsou vhodné a užitečné pro práci nebo školu, a zpřístupnit je v Portál společnosti.  
 
- Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Android, budete mít přístup do aplikace pro Android, ale ne aplikace pro iOS.   
+ Aplikace jsou také k dispozici na základě typu zařízení. Pokud například používáte aplikaci Portál společnosti pro Android, budete mít přístup k aplikacím pro Android, ale ne k aplikacím pro iOS.   
 
 ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
- Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v jedné aplikaci **kontakt na IT** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ Pokud máte aplikaci, kterou potřebujete, ale nevidíte ji v Portál společnosti, můžete si ji vyžádat. Vyhledejte kontaktní údaje pro **Helpdesk** na kartě **IT kontaktujte** aplikaci. Stejné kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  
 Následující seznam popisuje nastavení aplikace, které můžou pracovníci podpory ve společnosti spravovat. Tato nastavení ovlivňují, jak na zařízení zobrazujete pracovní nebo školní data, jak k nim přistupujete nebo je používáte:
 
 * Přístup k určitým webům  
 
-* Přístup k interní weby organizace pomocí Microsoft Edge a proxy Azure Active Directory  
+* Přístup k interním webům společnosti pomocí Microsoft Edge a Azure Active Directory proxy  
 
 * Minimální verze aplikace, verze operačního systému
 

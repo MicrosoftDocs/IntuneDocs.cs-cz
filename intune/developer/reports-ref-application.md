@@ -1,7 +1,7 @@
 ---
 title: Referenční informace o entitách aplikace
 titleSuffix: Microsoft Intune
-description: Téma reference pro kategorii aplikací pro kolekce entit v rozhraní API datového skladu Intune
+description: Téma referenčních informací ke kategorii Aplikace pro kolekce entit v rozhraní API datového skladu Intune
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: A92DEF30-5D01-4774-9917-E26F5F0E2E68
@@ -17,91 +18,91 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1e737f1cce594b5dd40b2f43048ba37578f5d7c9
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: ac40be5cf3d0a0a217340b3c745daf740a24e8e7
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940437"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490377"
 ---
-# <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikace
+# <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
-Kategorie **aplikace** obsahuje entity pro mobilní zařízení, které sledují informace, jako například:
+Kategorie **Aplikace** obsahuje entity pro mobilní zařízení, které sledují informace, například:
 
 - Verze aplikace
 - Zdroj instalace aplikace
 - Typ vývojářů, kteří aplikaci vytvořili
-- Spravované typy softwaru pro aplikaci, například **postranní vozík** nebo **plocha**
-- Stav programu Volume purchase program (VPP) aplikace
+- Typy spravovaného softwaru pro aplikaci, například **sidecar** nebo **desktop**
+- Stav VPP (Volume Purchase Program) pro aplikaci
 
 ## <a name="apprevisions"></a>appRevisions
 
 Entita **appRevision** obsahuje seznam všech verzí aplikací.
 
-| Vlastnost  | Popis | Příklad |
+| Vlastnost  | Description | Příklad |
 |---------|------------|--------|
-| AppKey |Jedinečný identifikátor aplikace |123 |
-| ApplicationId |Jedinečný identifikátor aplikace podobný AppKey, ale tento klíč je přirozený. |b66bc706-FFFF-7437-0340-032819502773 |
-| Revize |Verze uvedená správcem během nahrávání binárního souboru. |odst |
-| Hlava |Název aplikace |Excel |
+| appKey |Jedinečný identifikátor aplikace |123 |
+| applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
+| Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
+| title |Název aplikace |Excel |
 | Microsoft |Vydavatel aplikace |Microsoft |
-| UploadState |Odeslat stav aplikace |první |
-| AppTypeKey |Odkaz na typ aplikace popsaný v následující části. | |
-| VppProgramTypeKey |Odkaz na entitu vppprogramtype popsaný níže. | |
-| CreationTime |Čas, kdy byla tato revize vytvořena. |11/23/2016 12:00:00 DOP. |
-| ModifiedTime |Čas posledního pokusu o změnu jakékoli souvislosti s touto revizí. |11/23/2016 12:00:00 DOP. |
-| velikost |Velikost binárního souboru. | |
-| StartDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |11/23/2016 12:00:00 DOP. |
-| EndDateExclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace stala zastaralou |11/23/2016 12:00:00 DOP. |
-| Aktuální |Určuje, jestli je tato verze aplikace v datovém skladu aktuální nebo ne. |True nebo false |
-| RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |11/23/2016 12:00:00 DOP. |
+| uploadState |Stav nahrávání aplikace |1 |
+| appTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
+| vppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
+| creationTime |Čas vytvoření této revize |23.11.2016 12:00:00 |
+| modifiedTime |Čas poslední změny nějakého prvku, který s touto revizí souvisí |23.11.2016 12:00:00 |
+| Velikost |Velikost binárního souboru | |
+| startDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
+| endDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
+| Aktuální |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
+| rowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
-## <a name="apptypes"></a>AppTypes
+## <a name="apptypes"></a>appTypes
 
-Entita **Typ aplikace** obsahuje zdroj instalace aplikace.
+Entita **appType** obsahuje seznam zdrojů instalace aplikace.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
-| AppTypeID |ID pro typ |
-| AppTypeKey |Náhradní klíč pro klíč |
-| AppTypeName |Typ aplikace |
+| appTypeID |ID pro daný typ |
+| appTypeKey |Náhradní klíč pro daný klíč |
+| appTypeName |Typ aplikace |
 
 ### <a name="example"></a>Příklad
 
-| AppTypeID  | Name | Popis |
+| AppTypeID  | Název | Description |
 |---------|------------|--------|
-| 0,8 |Aplikace pro Android Store | Aplikace pro Android Store |
-| první |Obchodní aplikace pro Android | Obchodní aplikace pro Android. |
-| odst |Spravovaná aplikace pro Android Store (MAM) | Aplikace z obchodu pro Android s povolenou správou |
-| 3 |aplikace pro iOS Store | Aplikace pro iOS Store |
-| 4 |aplikace LOB pro iOS | Obchodní aplikace pro iOS. |
-| 5 |Spravovaná aplikace z obchodu pro iOS (MAM?) | Aplikace Z obchodu, která je povolená pro správu. |
-| 6 |Sada O365 pro plus | Sada Office 365 pro plus pro Windows 10. |
-| čl |Webová aplikace | Webová aplikace |
-| 8 |Aplikace Windows Phone 8,1 Store | Aplikace pro Windows Phone 8,1 Store. |
+| 0 |Aplikace z obchodu pro Android | Aplikace z obchodu pro Android |
+| 1 |Obchodní aplikace pro Android | Obchodní aplikace pro Android |
+| 2 |Spravovaná aplikace z obchodu pro Android (MAM) | Aplikace z obchodu pro Android s povolenou správou |
+| 3 |Aplikace z obchodu pro iOS | Aplikace z obchodu pro iOS |
+| 4 |Obchodní aplikace pro iOS | Obchodní aplikace pro iOS |
+| 5 |Spravovaná aplikace obchodu pro iOS (MAM) | Aplikace z obchodu pro iOS s povolenou správou |
+| 6 |Sada O365 Pro Plus | Sada Office 365 Pro Plus pro Windows 10 |
+| 7 |Webová aplikace | Webová aplikace |
+| 8 |Aplikace pro Windows Phone 8.1 Store | Aplikace pro Windows Phone 8.1 Store |
 | 9 |Aplikace pro Windows Store | Aplikace pro Windows Store |
-| 10pruhový |Aplikace LOB pro Windows | Obchodní aplikace Windows AppX. |
-| odst |Windows Mobile MSI | Obchodní aplikace MSI. |
-| 12,5 |Aplikace Windows Phone LOB | Obchodní aplikace pro Windows Phone. |
+| 10 |Obchodní aplikace pro Windows | Obchodní aplikace Windows AppX |
+| 11 |Windows Mobile MSI | Obchodní aplikace MSI |
+| 12 |Obchodní aplikace pro Windows Phone | Obchodní aplikace pro Windows Phone |
 
 
-## <a name="vppprogramtypes"></a>VppProgramTypes
+## <a name="vppprogramtypes"></a>vppProgramTypes
 
-Entita **entitu vppprogramtype** uvádí možné typy programů VPP pro aplikaci.
+Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplikaci.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
-| VppProgramTypeID | ID pro typ |
-| VppProgramTypeKey | Náhradní klíč pro klíč |
-| VppProgramTypeName | Typ programu VPP |
+| vppProgramTypeID | ID pro daný typ |
+| vppProgramTypeKey | Náhradní klíč pro daný klíč |
+| vppProgramTypeName | Typ programu VPP |
 
 ### <a name="example"></a>Příklad
 
-| VppProgramID  | Name | Popis |
+| VppProgramID  | Název | Description |
 |---------|------------|--------|
-| 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Program VPP společnosti Microsoft. |
-| 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný VPP |
-| B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Program VPP společnosti Apple. |
+| 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Program VPP společnosti Microsoft |
+| 00000000-0000-0000-0000-000000000000 | Ještě není k dispozici | Výchozí hodnota, žádný program VPP |
+| B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Program VPP společnosti Apple |
 
 
 
@@ -109,23 +110,23 @@ Entita **entitu vppprogramtype** uvádí možné typy programů VPP pro aplikaci
 
 Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, které se v zařízení našly v okamžiku shromažďování inventáře.
 
-| Vlastnost  | Popis |
+| Vlastnost  | Description |
 |---------|------------|
-| DeviceKey | Toto je odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
-| DateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
+| deviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
+| dateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
 | ApplicationName | Název aplikace |
 | applicationVersion | Verze aplikace |
-| BundleSize | Velikost aplikace v bajtech |
+| bundleSize | Velikost aplikace v bajtech |
 
 ## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
 Entita **entita mobileappinstallstate** představuje stav instalace mobilní aplikace poté, co byla přiřazena ke skupině obsahující zařízení, uživatele nebo obojímu.
 
-| Vlastnost | Popis |
+| Vlastnost | Description |
 |---|---|
-| AppInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet. |
-| AppInstallState | Hodnota výčtu stavu instalace aplikace |
-| AppInstallStateName | Název stavu instalace aplikace |
+| appInstallStateKey | Jedinečné ID stavu instalace aplikace pro váš účet |
+| appInstallState | Hodnota výčtu stavu instalace aplikace |
+| appInstallStateName | Název stavu instalace aplikace |
 
 
 

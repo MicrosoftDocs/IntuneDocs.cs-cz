@@ -9,6 +9,7 @@ ms.date: 07/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 33ffff16-0280-43bf-87b3-74ddf4439bfa
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 50e4bde49f671a7f828ddb982fa18a3e68de25f6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467315"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506274"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Registrace zařízení pomocí pracovního profilu Androidu
 
@@ -49,7 +50,7 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 
     ![Snímek obrazovky s obsahem, který je další](./media/android-wp-04-1908.png)
 
-5. Na další obrazovce se zobrazí výrazy Google pro vytvoření pracovního profilu. Přečtěte si podmínky a klepněte na **přijmout &AMP; pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
+5. Na další obrazovce se zobrazí výrazy Google pro vytvoření pracovního profilu. Přečtěte si podmínky a klepněte na **přijmout & pokračovat**. Vzhled této obrazovky se bude lišit v závislosti na verzi Androidu vašeho zařízení. 
 
     ![Snímek obrazovky s podmínkami pracovního profilu Google](./media/android-wp-05-1908.png)  
 
@@ -80,6 +81,6 @@ Přečtěte si o tom, [co se stane, když si vytvoříte pracovní profil](what-
 
 V zařízení teď můžete nainstalovat firemní aplikace. Pokud chcete najít a nainstalovat tyto aplikace, otevřete úložiště spravovaného Google Play. 
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

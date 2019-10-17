@@ -9,6 +9,7 @@ ms.date: 12/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 74c51f7b-7bd8-45cf-99bd-02d1972267cb
 searchScope:
@@ -18,32 +19,32 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c18a4a0bc5f61953dba2e0eae79e2aadf9cd8251
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545419"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506087"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Našel se existující e-mailový účet společnosti
 
-Přístup mobilních zařízení může být jste využili ke své práci nebo ve škole e-mailový účet *před* jste získali si spravovat zařízení. Pokud vaše zařízení je teď spravovaná, doporučujeme vám:
+Mohli jste mít přístup k vašemu pracovnímu nebo školnímu e-mailovému *účtu, abyste mohli zařízení* spravovat. Pokud je vaše zařízení teď spravované, doporučujeme vám:
 
-* Odpojte existující pracovní e-mailový účet od zařízení.
-* Nastavení zařízení z aplikace portál společnosti znovu.  
+* Odpojte stávající pracovní e-mailový účet od svého zařízení.
+* Opětovná synchronizace nastavení zařízení z aplikace Portál společnosti.  
 
-Tyto kroky se zajistí, že vaše zařízení splňuje požadavky na zabezpečení vaší společnosti a, v e-mailech zůstaly zabezpečené.
+Tento postup zajistí, že vaše zařízení bude splňovat požadavky na zabezpečení vaší společnosti a že vaše e-maily zůstanou zabezpečené.
 
-1. Na zařízení, přejděte na **nastavení** a najít vašim připojeným účtům. Na zařízení s iOS 11 + například vyberte **heslo & účty**.
+1. V zařízení klikněte na **Nastavení** a Najděte připojené účty. V zařízení se systémem iOS 11 + vyberte například možnost **heslo & účty**.
  
-2. Vyberte a odeberte vaši pracovní e-mailový účet.
+2. Vyberte a odstraňte pracovní e-mailový účet.
 
 3. Na svém zařízení otevřete aplikaci Portál společnosti.  
 
 4. V seznamu zařízení vyberte zařízení, které chcete aktualizovat.
 
-5. Vyberte **zkontrolujte nastavení**. Během chvilky budou zařízení synchronizovat nové nastavení e-mailu.
+5. Vyberte možnost **kontrolovat nastavení**. Během chvilky bude vaše zařízení synchronizovat vaše nové nastavení e-mailu.
 
-6. Přihlaste se k vaší pracovní nebo školní e-mailový účet.
+6. Přihlaste se ke svému pracovnímu nebo školnímu e-mailovému účtu.
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Jeho kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

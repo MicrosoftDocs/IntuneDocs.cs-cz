@@ -9,6 +9,7 @@ ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48b20381355c15c4f5df065382923789b94e8061
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 7674366cc0332afd8eba2a4f145f47e40d5472e2
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491199"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508455"
 ---
 # <a name="rename-your-device-from-the-company-portal-website"></a>Přejmenování zařízení z webu Portál společnosti
 
@@ -35,7 +36,7 @@ Přejmenujte zaregistrované spravované zařízení z webu Portál společnosti
 
     ![Snímek obrazovky stránky Zařízení se dvěma dlaždicemi, které zobrazují neznámá zařízení s obecným názvem. Šedý banner pod zařízeními vyzývá uživatele k identifikaci používaného zařízení nebo přidání nového.](./media/rename-reset-device-step2-1808.png)   
 
-3. Vyberte **Přejmenovat**. Pokud se v horní části stránky možnost Přejmenovat nezobrazuje, vyberte **Více (…)** > **Přejmenovat**.   
+3. Vyberte **Přejmenovat**. Pokud se v horní části stránky možnost Přejmenovat nezobrazuje, vyberte **Více (…)**  > **Přejmenovat**.   
 
    ![Stránka podrobností o zařízení pro vybrané zařízení na webu Portál společnosti. V horní části stránky se nacházejí odkazy Přejmenovat, Odebrat, Resetovat zařízení, Resetovat heslo a Vzdálené uzamčení. ](./media/rename-reset-device-1808.png)   
 

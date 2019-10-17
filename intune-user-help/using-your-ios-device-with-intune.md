@@ -9,6 +9,7 @@ ms.date: 10/01/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 3d648819-b866-412b-bd19-ac4505eb5eaf
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ced8f1ec37f652b7e283328141bc591b5961587
-ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
+ms.openlocfilehash: ec3f1996052e31a70ca44c40c277a7c5ff93819a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71099826"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507993"
 ---
 # <a name="using-your-ios-device-with-intune-company-portal"></a>Použití zařízení s iOS na Portálu společnosti Intune
 Tento článek obsahuje úlohy a informace týkající se Portálu společnosti pro iOS. Může vám pomoct při řešení potíží a správě zařízení s iOS. Kliknutím na jednotlivé odkazy zobrazíte další podrobnosti, postupy a snímky obrazovky.
@@ -45,7 +46,7 @@ Portál společnosti pro iOS aktuálně podporuje iOS 10.0 a novější.
 - [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)
   <!--- [Reset (erase) your lost or stolen device](reset-erase-your-lost-or-stolen-device-ios.md) -->
 - [Obnovení (vymazání) ztraceného nebo odcizeného zařízení](reset-erase-your-device-cpwebsite.md)
-- [Vypnutí shromažďování dat o využití Microsoftem](turn-off-microsoft-usage-data-collection-ios.md)
+- [Vypnutí shromažďování dat Microsoftu o využití](turn-off-microsoft-usage-data-collection-ios.md)
 - [Zrušení registrace zařízení v Intune](unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když zrušíte registraci zařízení v Intune?](what-happens-if-you-unenroll-your-device-from-intune-ios.md)
 - [Co se stane, když resetujete zařízení pomocí Portálu společnosti?](what-happens-if-you-reset-your-device-using-the-company-portal-ios.md)

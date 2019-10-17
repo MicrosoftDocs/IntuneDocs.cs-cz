@@ -1,7 +1,7 @@
 ---
-title: Co je nového v Microsoft Intune – Azure | Microsoft Docs
+title: Novinky v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Zjistěte, co je nového v Intune Azure Portal
+description: Zjistěte, jaké novinky přináší portál Intune Azure.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 791ed23f-bd13-4ef0-a3dd-cd2d7332c5cc
@@ -17,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 571974e1736fb78ae633c02fcfd6e6233056379b
-ms.sourcegitcommit: 78f9750712c254d8b123ef15b74f30ca999aa128
+ms.openlocfilehash: 70714614186ca0d8dd82c58195daedfbd8f884f7
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71920127"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509711"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
-Podívejte se, co je nového v každém týdnu v Microsoft Intune. Můžete také najít [důležitá oznámení](#notices), [Minulá vydání](whats-new-archive.md)a informace o [tom, jak jsou aktualizace služby Intune vydané](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
+Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete také najít [důležitá oznámení](#notices), [Minulá vydání](whats-new-archive.md)a informace o [tom, jak jsou aktualizace služby Intune vydané](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
 
 > [!Note]
 > Zavedení každé [měsíční aktualizace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) může trvat až tři dny a bude v tomto pořadí:
@@ -35,7 +36,7 @@ Podívejte se, co je nového v každém týdnu v Microsoft Intune. Můžete tak�
 > - Den 2: Evropa, Střední východ, Afrika (Evropa)
 > - Den 3: Severní Amerika
 >
-> Některé funkce mohou být zavedeny několik týdnů a nemusí být k dispozici všem zákazníkům v prvním týdnu.
+> Některé funkce můžou vycházet v průběhu několika týdnů a nemusí být k dispozici všem zákazníkům hned první týden.
 >
 > Seznam nadcházejících funkcí ve verzi najdete na [stránce pro vývoj na webu](in-development.md) .
 
@@ -69,7 +70,7 @@ Platí pro:
 iOS 13,1 a novější
 
 #### <a name="intune-support-for-ipados-and-ios-131-devices---5439574--"></a>Podpora Intune pro zařízení iPadOS a iOS 13,1 <!--5439574-->
-Intune teď podporuje správu zařízení iPadOS i iOS 13,1. Další informace najdete v [tomto blogovém příspěvku](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Support-for-iOS-13-1-and-iPadOS/ba-p/873094).
+Intune teď podporuje správu zařízení iPadOS i iOS 13,1. Další informace najdete v [tomto příspěvku blogu](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Support-for-iOS-13-1-and-iPadOS/ba-p/873094).
 
 <!-- ########################## -->
 
@@ -90,8 +91,8 @@ Webové aplikace, které umožňují přidat zástupce na adresu URL na webu, lz
 #### <a name="macos-support-for-vpp-apps----3173501----"></a>Podpora macOS pro aplikace VPP <!-- 3173501  -->
 aplikace macOS, zakoupené pomocí Apple Business Manageru, se v konzole zobrazí, když se tokeny programu Apple VPP synchronizují v Intune. Pomocí konzoly služby Intune můžete přiřadit, odvolat a znovu přiřadit licence na zařízení a uživatele pro skupiny. Microsoft Intune pomáhá spravovat aplikace VPP zakoupené pro použití ve vaší společnosti:
 
-- Oznamuje informace o licencích z App Storu.
-- Sledujete, kolik licencí jste už použili.
+- Vykazuje informace o licencích z App Storu.
+- Sleduje počet použitých licencí.
 - Pomůže vám zabránit instalaci více kopií aplikace, než na kolik máte licence.
 
 Další informace o Intune a VPP najdete v tématu [Správa hromadně zakoupených aplikací a knih pomocí Microsoft Intune](../apps/vpp-apps.md).
@@ -100,7 +101,7 @@ Další informace o Intune a VPP najdete v tématu [Správa hromadně zakoupený
 Intune teď poskytuje podporu pro přidávání a správu webových odkazů přímo v konzole Intune prostřednictvím spravovaného Google Play IFRAME.  To umožňuje správcům IT odeslat obrázek adresy URL a ikony a potom tyto odkazy nasadit na zařízení stejně jako běžné aplikace pro Android. Tato funkce může využít některý ze scénářů správy Android Enterprise, které používají spravované Google Play (pracovní profil, vyhrazená, plně spravovaná a neregistrovaná zařízení). V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**. Pak v seznamu **Typ aplikace** vyberte **spravovaná Google Play** . Další informace o spravovaných aplikacích Google Play najdete v tématu [Přidání spravovaných Google Play aplikací do zařízení s Androidem Enterprise v Intune](../apps/apps-add-android-for-work.md).
 
 #### <a name="silently-install-android-lob-apps-on-zebra-devices----4252734----"></a>Tichá instalace obchodních aplikací pro Android na zařízeních Zebra <!-- 4252734  -->
-Při instalaci obchodních aplikací (LOB) pro Android do [zařízení Zebra](../configuration/android-zebra-mx-overview.md)se místo výzvy ke stažení a instalaci obchodní aplikace budete moct aplikaci nainstalovat tiše. V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**. V podokně **Přidat aplikaci** vyberte **obchodní aplikace**. Další informace najdete v tématu [Přidání obchodní aplikace pro Android do Microsoft Intune](../apps/lob-apps-android.md).
+Při instalaci obchodních aplikací (LOB) pro Android do [zařízení Zebra](../configuration/android-zebra-mx-overview.md)se místo výzvy ke stažení a instalaci obchodní aplikace budete moct aplikaci nainstalovat tiše. V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat**. V podokně **Přidat aplikaci** vyberte **Obchodní aplikace**. Další informace najdete v tématu [Přidání obchodní aplikace pro Android do Microsoft Intune](../apps/lob-apps-android.md).
 
 V současné době se po stažení aplikace LOB na zařízení uživatele zobrazí oznámení o **úspěšném stažení** . Oznámení se může zrušit jenom klepnutím na **Vymazat vše** v odstínu oznámení. Tento problém s oznámením bude opraven v nadcházející verzi a instalace bude zcela tichá bez vizuálních indikátorů.
 
@@ -402,13 +403,13 @@ V této aktualizaci se některá nastavení vztahují na zařízení, která jso
 
 Mezi tato nastavení patří:
 
-- App Store, zobrazování dokumentů, hry
+- App Store, zobrazování dokumentů, hraní her
   - App Store
   - Explicitní obsah iTunes, hudba, podcast nebo zprávy
   - Přidání přátel Game Center
   - Hry pro více hráčů
 - Integrované aplikace
-  - Kamery
+  - Fotoaparát
     - FaceTime
   - Safari
     - Automatické vyplňování
@@ -779,7 +780,7 @@ Intune teď poskytuje další informace o potenciálně škodlivých aplikacích
 
 ### <a name="app-management"></a>Správa aplikací
 
-#### <a name="windows-company-portal-app----3316993---"></a>Aplikace pro Windows Portál společnosti <!-- 3316993 -->
+#### <a name="windows-company-portal-app----3316993---"></a>Aplikace Portál společnosti pro Windows <!-- 3316993 -->
 Aplikace pro Windows Portál společnosti teď bude mít novou stránku označenou jako **zařízení**. Na stránce **zařízení** se zobrazí koncoví uživatelé všechna zaregistrovaná zařízení. Uživatelům se tato změna v Portál společnosti uvidí, když používají verzi 10.3.4291.0 a novější. Informace o konfiguraci Portál společnosti naleznete v tématu [How to Configure a Microsoft Intune portál společnosti App](../apps/company-portal-app.md).
 
 ### <a name="device-enrollment"></a>Registrace zařízení
@@ -1047,7 +1048,7 @@ Další informace o této verzi Preview najdete v našem blogu [Microsoft Intune
 #### <a name="configure-profile-to-skip-some-screens-during-setup-assistant----2276470----"></a>Nakonfigurovat profil pro přeskočení některých obrazovek během Průvodce nastavením <!-- 2276470  -->
 Když vytváříte profil registrace macOS, můžete ho nakonfigurovat tak, aby po absolvování Průvodce nastavením přeskočil kteroukoli z následujících obrazovek:
 - Příznaky
-- Zobrazit tónový displej
+- Tón zobrazení
 - iCloudStorage Pokud vytvoříte nový profil nebo upravíte profil, je nutné, aby se vybrané přeskočené obrazovky synchronizovaly se serverem Apple MDM.  Uživatelé můžou vydat ruční synchronizaci zařízení, aby při vybírání změn profilu nedocházelo k žádnému zpoždění.
 Další informace najdete v tématu [Automatická registrace zařízení MacOS pomocí program registrace zařízení nebo Apple School Manageru](../enrollment/device-enrollment-program-enroll-macos.md).
 
@@ -1280,7 +1281,7 @@ Platí pro:
 - macOS
 
 #### <a name="intune-conditional-access-ui-update------2432313-----"></a>Aktualizace uživatelského rozhraní pro podmíněný přístup v Intune   <!-- 2432313   -->
-Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Zde jsou některé z nich:
+Provedli jsme vylepšení uživatelského rozhraní pro podmíněný přístup v konzole Intune. Mezi ně patří:
 - Okno *podmíněného přístupu* v Intune se nahradilo oknem z Azure Active Directory. Tím zajistíte, že v konzole Intune budete mít přístup k celé škále nastavení a konfigurací pro [podmíněný přístup](../protect/conditional-access.md) (což zůstává technologie Azure AD). 
 - Přejmenovali jsme *místní okno přístupu* na přístup k *Exchangi*a přejmenovali jste nastavení *konektoru Exchange Service Connector* na toto přejmenované okno.  Tato změna slučuje, kde [konfigurujete a sledujete podrobnosti týkající se Exchange Online a místního](../protect/exchange-connector-install.md)prostředí.  
 
@@ -1337,7 +1338,7 @@ Seznam nastavení najdete v tématu:
 - [omezení zařízení s iOS](../configuration/device-restrictions-ios.md) 
 - [aktualizace softwaru iOS](../protect/software-updates-ios.md)
 
-Tato funkce se týká: 
+Tato funkce platí pro: 
 
 - iOS
 
@@ -1425,7 +1426,7 @@ U koncových uživatelů, kteří na svých zařízeních s Androidem nastavili 
 
 #### <a name="use-microsoft-recommended-settings-with-security-baselines-public-preview----2055484-----"></a>Použít nastavení Doporučené Microsoftem se standardními hodnotami zabezpečení (Public Preview) <!-- 2055484   -->
 
-Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně ochrany ATP v programu Windows Defender a Office 365 ATP. Zákazníci žádají o společnou strategii a ucelenou sadu komplexních pracovních postupů v rámci služby Microsoft 365 Services. Naším cílem je sjednotit strategie pro sestavování řešení, která přemostění operací zabezpečení a běžných úloh správce. V Intune se zaměřujeme na dosažení tohoto cíle publikováním sady doporučených standardních hodnot zabezpečení (v Intune  > **standardní hodnoty zabezpečení**služby**Intune**).  Správce může vytvořit zásady zabezpečení přímo z těchto směrných plánů a pak je nasadit na své uživatele. Můžete také přizpůsobit doporučení osvědčených postupů pro splnění potřeb vaší organizace. Intune zajišťuje, aby zařízení zůstala v souladu s těmito směrnými plány, a upozorní správce uživatelů nebo zařízení, která nedodržují předpisy.
+Intune se integruje s dalšími službami, které se zaměřují na zabezpečení, včetně Ochrany ATP v programu Windows Defender a Ochrany ATP v Office 365. Zákazníci požadují ve službách Microsoft 365 společnou strategii a soudržnější sadu ucelených bezpečnostních pracovních postupů. Naším cílem je srovnat strategie tak, abychom mohli vytvářet řešení přemosťující operace zabezpečení a běžné úlohy správy. V Intune se snažíme tohoto cíle dosáhnout prostřednictvím publikování sady Standardních hodnot zabezpečení doporučených Microsoftem (**Intune** > **Standardní hodnoty zabezpečení**).  Správce může vytvořit zásady zabezpečení přímo z těchto směrných plánů a pak je nasadit na své uživatele. Můžete také přizpůsobit doporučení osvědčených postupů pro splnění potřeb vaší organizace. Intune zajišťuje, že zařízení zůstávají v souladu s těmito standardními hodnotami, a upozorní správce, pokud uživatelé nebo zařízení tyto hodnoty nedodržují.
 
 Tato funkce je ve verzi Public Preview, takže všechny vytvořené profily nyní nebudou přesunuty do šablon standardních hodnot zabezpečení, které jsou všeobecně dostupné (GA). Neměli byste v produkčním prostředí používat tyto šablony verze Preview.
 
@@ -1441,9 +1442,9 @@ Tato aktualizace obsahuje nové nastavení BitLockeru, které umožňuje standar
 Nastavení zobrazíte tak, že přejdete na [nastavení ochrany koncových bodů pro Windows 10](../protect/endpoint-protection-windows-10.md#windows-encryption).
 
 #### <a name="check-for-configuration-manager-compliance----2192052--eepublished----"></a>Ověřit Configuration Manager dodržování předpisů <!-- 2192052  eepublished  -->
-Tato aktualizace zahrnuje nové nastavení dodržování předpisů System Center Configuration Manager (**zásady** > **dodržování předpisů zařízením** > **vytvořit zásadu** > **Windows 10 a novější** > **Configuration Manager Dodržování předpisů**). Configuration Manager posílá signály do kompatibility Intune. Pomocí tohoto nastavení můžete vyžadovat, aby všechny signály Configuration Manager vracely "vyhovující".
+Tato aktualizace zahrnuje nové nastavení dodržování předpisů System Center Configuration Manager (**zásady** > **dodržování předpisů zařízením** > **vytvořit zásadu** > **Windows 10 a novější** > **Configuration Manager Dodržování předpisů**). Configuration Manager bude posílat signály funkci dodržování předpisů v Intune. Pomocí tohoto nastavení můžete vyžadovat, aby všechny signály Configuration Manager vracely "vyhovující".
 
-Například budete vyžadovat, aby byly všechny aktualizace softwaru nainstalovány na zařízeních. V Configuration Manager má tento požadavek stav nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
+Můžete například vyžadovat, aby v zařízeních byly nainstalované všechny aktualizace softwaru. V Configuration Manageru má tento požadavek stav Nainstalováno. Pokud jsou některé programy v zařízení v neznámém stavu, zařízení nedodržuje předpisy v Intune.
 
 [Configuration Manager dodržování předpisů](../protect/compliance-policy-create-windows.md#configuration-manager-compliance) popisuje toto nastavení.
 
@@ -1469,7 +1470,7 @@ Platí pro: vlastník zařízení se systémem Android Enterprise
 ### <a name="device-management"></a>Správa zařízení
 
 #### <a name="selective-wipe-support-for-wip-without-enrollment-devices----1434452---"></a>Podpora selektivního vymazání pro Nedokončená práce bez registračních zařízení <!-- 1434452 -->
-Windows Information Protection bez registrace (NV) umožňuje zákazníkům chránit podniková data na zařízeních s Windows 10 bez nutnosti úplné registrace MDM. Po ochraně dokumentů pomocí zásad pro nedokončené výroby může být chráněná data selektivně smazána správcem služby Intune. Když vyberete uživatele a zařízení a odešlete žádost o vymazání, všechna data, která byla chráněná prostřednictvím zásad výroby, se nedají použít. Z Intune v Azure Portal vyberte **mobilní aplikace** > **selektivní vymazání aplikace**.
+Windows Information Protection bez registrace (NV) umožňuje zákazníkům chránit podniková data na zařízeních s Windows 10 bez nutnosti úplné registrace MDM. Po ochraně dokumentů pomocí zásad pro nedokončené výroby může být chráněná data selektivně smazána správcem služby Intune. Když vyberete uživatele a zařízení a odešlete žádost o vymazání, všechna data, která byla chráněná prostřednictvím zásad výroby, se nedají použít. V Intune na portálu Azure Portal vyberte **Mobilní aplikace** > **Selektivní vymazání aplikace**.
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
 
@@ -1523,14 +1524,14 @@ Další informace o této funkci najdete v článku [šablony Windows 10, kde m�
 Platí pro: Windows 10 a novější
 
 #### <a name="use-smime-to-encrypt-and-sign-multiple-devices-for-a-user-----1333642---"></a>Použít S/MIME k šifrování a podepsání více zařízení pro uživatele  <!-- 1333642 -->
-Tato aktualizace zahrnuje šifrování e-mailu S/MIME pomocí nového importovaného profilu certifikátu (**Konfigurace zařízení** > **profily** > **vytvořit profil** > vyberte profil **certifikátu PKCS** > s platformou. typ). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může tyto certifikáty doručovat do několika zařízení zaregistrovaných jedním uživatelem. To zahrnuje i tyto:
-- Nativní e-mailový profil iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
+Tato aktualizace zahrnuje šifrování S/MIME e-mailů pomocí nového profilu importovaného certifikátu (**Konfigurace zařízení** > **Profily** > **Vytvořit profil** > vyberte platformu > typ profilu **Importovaný certifikát PKCS**). V Intune můžete importovat certifikáty ve formátu PFX. Intune pak může doručit stejné certifikáty do více zařízení zaregistrovaných jedním uživatelem. To také zahrnuje:
+- Nativní e-mailový profil v iOS podporuje povolení šifrování S/MIME pomocí importovaných certifikátů ve formátu PFX.
 - Nativní e-mailová aplikace v zařízeních Windows Phone 10 automaticky používá certifikát S/MIME.
-- Privátní certifikáty je možné doručovat na více platforem. Ale ne všechny e-mailové aplikace podporují S/MIME.
-- Na jiných platformách bude možná potřeba ručně nakonfigurovat e-mailovou aplikaci, aby povolovala S/MIME.  
-- E-mailové aplikace, které podporují šifrování S/MIME, můžou pořizovat načítání certifikátů pro šifrování e-mailu S/MIME způsobem, který MDM nepodporuje, jako je například čtení z úložiště certifikátů vydavatele.
+- Privátní certifikáty je možné doručit na různé platformy. Některé e-mailové aplikace ale S/MIME nepodporují.
+- Na jiných platformách může být nutné ručně nakonfigurovat e-mailovou aplikaci a povolit S/MIME.  
+- E-mailové aplikace, které podporují šifrování S/MIME, můžou zpracovávat načítání certifikátů pro šifrování S/MIME e-mailů způsobem, který MDM nepodporuje (například ho načítají z úložiště certifikátů svého vydavatele).
 Další informace o této funkci najdete v tématu [S/MIME – přehled pro podepsání a šifrování e-mailu](../protect/certificates-s-mime-encryption-sign.md).
-Podporováno v systému: Windows, Windows Phone 10, macOS, iOS, Android
+Podporováno v systémech: Windows, Windows Phone 10, macOS, iOS, Android
 
 #### <a name="new-options-to-automatically-connect-and-persist-rules-when-using-dns-settings-on-windows-10-and-later-devices----1333665-2999078---"></a>Nové možnosti pro automatické připojení a zachování pravidel při použití nastavení DNS v zařízeních se systémem Windows 10 nebo novějším <!-- 1333665, 2999078 -->
 V zařízeních se systémem Windows 10 a novějším můžete vytvořit konfigurační profil sítě VPN, který obsahuje seznam serverů DNS k překladu domén, například contoso.com. Tato aktualizace obsahuje nová nastavení pro překlad názvů (**Konfigurace zařízení** > **profily** > **vytvořit profil** > vyberte **Windows 10 a novější** pro platformu > vyberte možnost **VPN** pro typ profilu > **DNS. nastavení** >**Přidat**): 
@@ -1571,7 +1572,7 @@ V části **Konfigurace zařízení**@no__t-**1 profily**@no__t-**3 vytvořit pr
 #### <a name="new-notification-hints-and-keyguard-settings-to-android-enterprise-device-owner-devices----3201839-3201843---"></a>Nové oznámení, doporučení a nastavení pro ochranu zařízení pro zařízení s Androidem Enterprise Device Owner <!-- 3201839 3201843 -->
 Tato aktualizace zahrnuje několik nových funkcí na zařízeních s Androidem Enterprise, když se spouští jako vlastník zařízení. Chcete-li tyto funkce použít, klikněte na položku **Konfigurace zařízení** > **profily** > **vytvořit profil** **> v možnosti**typ profilu vyberte možnost **Android Enterprise** > v **typu profilu**, vyberte **pouze vlastník zařízení**@no__ **omezení zařízení**v t-9.
 
-Mezi nové funkce patří: 
+Obsahuje například tyto nové funkce: 
 
 - Zakažte zobrazování systémových oznámení, včetně příchozích volání, systémových výstrah, systémových chyb a dalších.
 - Navrhuje přeskočit úvodní kurzy a tipy pro aplikace, které se otevřou poprvé.
@@ -1581,7 +1582,7 @@ Mezi nové funkce patří:
 Nastavení zobrazíte tak, že přejdete na [Nastavení omezení pro zařízení s Androidem Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="android-enterprise-device-owner-devices-can-use-always-on-vpn-connections----3202194---"></a>Zařízení vlastníka zařízení s Androidem Enterprise můžou používat připojení VPN typu Always On. <!-- 3202194 -->
-V této aktualizaci můžete použít připojení VPN typu Always On na zařízeních vlastníka zařízení s Androidem Enterprise. Připojení k síti VPN Always On zůstane připojené nebo se okamžitě znovu připojí, když uživatel odemkne své zařízení, když se zařízení restartuje nebo když se změní bezdrátová síť. Připojení můžete také umístit v režimu uzamčení, což blokuje veškerý provoz v síti, dokud nebude připojení VPN aktivní.
+V této aktualizaci můžete použít připojení VPN typu Always On na zařízeních vlastníka zařízení s Androidem Enterprise. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned znovu připojí, jakmile uživatel odemkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. Připojení také můžete přepnout do „zamčeného“ režimu, který blokuje veškerý síťový provoz, dokud není připojení VPN zase aktivní.
 V **konfiguraci zařízení**můžete povolit možnost vždycky ZAPNUTOU síť VPN  > **profily** > **vytvořit profil** > **Android Enterprise** for platform > **omezení zařízení** jenom pro vlastníka zařízení > **připojení.** nastavení. Nastavení zobrazíte tak, že přejdete na [Nastavení omezení pro zařízení s Androidem Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="new-setting-to-end-processes-in-task-manager-on-windows-10-devices----3285177---"></a>Nové nastavení pro koncové procesy ve Správci úloh na zařízeních s Windows 10 <!-- 3285177 --> 
@@ -1609,13 +1610,13 @@ Nová stránka podpory & Portál společnosti pomoc pomáhá uživatelům při �
 
 #### <a name="new-help-and-support-experience-for-intune------3307080---"></a>Nové prostředí pro nápovědu a podporu pro Intune   <!-- #3307080 -->
 Zavádíme nové prostředí pro pomoc a podporu pro všechny klienty za několik dalších dní. Toto nové prostředí je dostupné pro Intune a k němu se dá získat přístup při použití oken Intune v [Azure Portal](https://portal.azure.com/).
-Nové prostředí vám umožní popište svůj problém vlastními slovy a získat přehled o řešení problémů a webový obsah pro nápravu. Tato řešení jsou nabízená pomocí algoritmu strojového učení založeného na pravidlech, která se řídí dotazy uživatelů. Kromě pokynů specifických pro vydání můžete použít pracovní postup vytvoření nového případu k otevření případu podpory e-mailem nebo telefonem. Toto nové prostředí nahrazuje předchozí pomoc a podporu pro statickou sadu předdefinovaných možností, které jsou založeny na oblasti konzoly, kterou jste v nástroji, když otevřete pomoc a podpora. Další informace najdete v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).
+Nové prostředí vám umožňuje popsat problém vlastními slovy a získat přehled možností řešení potíží a postupy z webu, jak problém opravit. Tato řešení jsou nabízená pomocí algoritmu strojového učení založeného na pravidlech, která se řídí dotazy uživatelů. Kromě pokynů specifických pro vydání můžete použít pracovní postup vytvoření nového případu k otevření případu podpory e-mailem nebo telefonem. Toto nové prostředí nahrazuje předchozí pomoc a podporu pro statickou sadu předdefinovaných možností, které jsou založeny na oblasti konzoly, kterou jste v nástroji, když otevřete pomoc a podpora. Další informace najdete v tématu [Jak získat podporu pro Microsoft Intune](get-support.md).
 
 ### <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
 #### <a name="scope-tags-for-apps----1081941---"></a>Značky oboru pro aplikace <!-- 1081941 -->
 Můžete vytvořit značky oboru pro omezení přístupu k rolím a aplikacím. Do aplikace můžete přidat značku oboru, aby k ní měl přístup jenom lidé s rolemi přiřazenými k této značce oboru. V současné době se aplikace přidané do Intune ze spravovaných Google Play nebo aplikace zakoupené pomocí Apple Volume Purchase Program (VPP) nedají přiřadit ke značkám oboru (budoucí podpora se plánuje). Další informace najdete v tématu [použití značek oboru k filtrování zásad](scope-tags.md).
 
-## <a name="notices"></a>Hlášení
+## <a name="notices"></a>Sdělení
 
 [!INCLUDE [Intune notices](../includes/intune-notices.md)]

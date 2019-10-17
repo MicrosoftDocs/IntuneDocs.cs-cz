@@ -9,6 +9,7 @@ ms.date: 10/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 0de5f03a-c288-423b-b9ea-493a39eb715a
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85856e77fc8ebbd4054ef819a9110e0fa258ced3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: c5accdf3699770444b7aafeb39d431755f9d3ba9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491018"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501820"
 ---
 # <a name="using-your-windows-device-with-intune-company-portal"></a>Použití zařízení s Windows na Portálu společnosti Intune
 
@@ -39,9 +40,9 @@ Přečtěte si téma [Přihlášení k Portálu společnosti](https://docs.micro
 Portál společnosti aktuálně podporuje zařízení, na kterých běží následující verze Windows:
 
 * Windows 10 (verze Home, Pro, Education, s režimem S a Enterprise)
-* Windows Phone 8.1 nebo novější
+* Windows Phone 8.1 a novější
 * Windows 8.1 RT
-* Windows 8.1
+* Windows 8.1
 
 Na Portálu společnosti se podporují i jiné verze Windows, například [Windows 10 Holographic](https://www.microsoft.com/hololens). Těmito verzemi se v tomto článku ale nezabýváme, protože jsou určené k velmi specifickým účelům.
 

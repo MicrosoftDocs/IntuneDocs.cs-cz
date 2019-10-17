@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: shpate
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bea28afc39a693dc4d634a0ff92c8ce900ab5a22
-ms.sourcegitcommit: a50a1ca123ecc2c5ac129f112f73838748f56476
+ms.openlocfilehash: d5234a8568911de075b1c8ee5d679ae40c6c494a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72237182"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502625"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
@@ -135,7 +136,8 @@ Zásady dodržování předpisů určují úroveň rizika, kterou považujete za
 2. Vyberte **Dodržování předpisů zařízením** > **Zásady** > **Vytvořit zásadu**.
 3. Zadejte **Název** a **Popis**.
 4. V části **Platforma** vyberte **Windows 10 a novější**.
-5. V nastavení **ATP v programu Microsoft Defender** nastavte možnost **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňovanou úroveň. 
+5. V části **Nastavení**vyberte **ATP v programu Microsoft Defender**.
+6. Nastavte **vyžadovat, aby zařízení bylo na základě skóre rizika počítače** na upřednostňované úrovni. 
    
    Klasifikace úrovně hrozeb určují služby [Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/alerts-queue).
 

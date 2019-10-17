@@ -9,6 +9,7 @@ ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: f0ba4cbb-ef0a-4335-86bf-f1d006867fa2
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16c6708fb730c459f41fec573a939bfb4fb5ddda
-ms.sourcegitcommit: 549352bdea93cc2809e3e0010bfcc10bd44dc728
+ms.openlocfilehash: 25ec84946aec9562aedce12b4199269f8de06f76
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862142"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72500018"
 ---
 # <a name="install-missing-certificate-required-by-your-organization"></a>Instalace chybějícího certifikátu požadovaného vaší organizací  
 
@@ -42,7 +43,7 @@ Nejprve proveďte kroky pro povolení přístupu z prohlížeče. Pokud pořád 
 Pokud chcete povolit přístup z prohlížeče, proveďte tyto kroky. Po povolení přístupu Portál společnosti nainstaluje příslušný certifikát a bude pokračovat v registraci.    
 
 1. V aplikaci Portál společnosti přejděte do pravého horního rohu a vyberte nabídku.  
-2. Vyberte **nastavení**.  
+2. Vyberte **Nastavení**.  
 3. V poli **Povolit přístup z prohlížeče** vyberte **Povolit**.  
 4. Na obrazovce Správce zařízení vyberte **aktivovat**. 
 
@@ -83,6 +84,6 @@ Provedením těchto kroků ručně identifikujte a nainstalujete certifikát do 
 
 Pokud se vám stejná zpráva typu Chybějící certifikát už zobrazila a už jste použili popsaný postup, pravděpodobně je ještě další certifikát, s jehož instalací vám musí pomoct firemní podpora. Obraťte se o pomoc na firemní podporu prostřednictvím kontaktních informací, které jsou dostupné na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

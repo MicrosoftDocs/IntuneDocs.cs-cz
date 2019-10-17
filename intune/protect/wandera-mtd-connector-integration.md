@@ -9,31 +9,32 @@ manager: dougeby
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64a560dc79d3c03f52b8e9389c3e47e3e256ee58
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: a548b1e1728928ca74ca7207b7e60d91ba5fc8aa
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306661"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503595"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
 Provedením následujících kroků Integrujte řešení ochrany před mobilními hrozbami Wandera do Intune.  
 
-## <a name="before-you-begin"></a>Než začnete  
+## <a name="before-you-begin"></a>Před zahájením  
 
 Než začnete s integrací Wandera do Intune, ujistěte se, že jsou splněné následující požadavky:
-- Předplatné Microsoft Intune  
-- Azure Active Directory přihlašovací údaje správce pro udělení následujících oprávnění:  
+- Odběr služby Microsoft Intune  
+- Přihlašovací údaje správce Azure Active Directory pro udělení následujících oprávnění:  
   - Přihlášení a čtení profilu uživatele  
   - Přístup k adresáři jako přihlášený uživatel  
-  - Čtení dat adresáře  
-  - Odesílání informací o zařízení do Intune  
+  - Čtení dat z adresáře  
+  - Odeslání informací o zařízení do Intune  
 
 - Předplatné Wandera:
   - Jeden nebo více účtů Wandera, které mají licenci pro modul EMM Connect  

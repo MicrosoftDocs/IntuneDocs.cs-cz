@@ -1,13 +1,14 @@
 ---
 title: Co je Microsoft Intune – Azure | Microsoft Docs
 description: Přečtěte si, jak Microsoft Intune je komponentou správy mobilních zařízení (MDM) a správy mobilních aplikací (MAM) v řešení Enterprise Mobility + Security a jak vám pomůže chránit podniková data.
-keywords: Co je Intune
+keywords: co je Intune
 author: dougeby
 ms.author: dougeby
 manager: dougeby
 ms.date: 10/14/2019
 ms.topic: overview
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 3b4e778d-ac13-4c23-974f-5122f74626bc
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56c76663330cae5cb771358542fd22ff09398118
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: c3c03c67a99b78804c999250f8d1148a4b3d1d97
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314733"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504762"
 ---
 # <a name="microsoft-intune-is-an-mdm-and-mam-provider-for-your-devices"></a>Microsoft Intune je poskytovatel MDM a MAM pro vaše zařízení.
 
@@ -31,7 +32,7 @@ Microsoft Intune je cloudová služba, která se zaměřuje na správu mobilníc
 
 Podívejte se na [větší verzi](./media/what-is-intune/intunearchitecture.svg) diagramu architektury Intune.
 
-S Intune můžete:
+Intune vám umožňuje:
 
 - Vyberte možnost 100% Cloud s Intune nebo se [spoluspravuje](https://docs.microsoft.com/sccm/comanage/overview) pomocí Configuration Manager a Intune.
 - Nastavte pravidla a nakonfigurujte nastavení na osobních zařízeních a na zařízeních vlastněných organizací pro přístup k datům a sítím.
@@ -39,7 +40,7 @@ S Intune můžete:
 - Zabezpečte informace společnosti tím, že řídíte způsob přístupu uživatelů k informacím a jejich sdílení.
 - Ujistěte se, že zařízení a aplikace vyhovují vašim požadavkům na zabezpečení.
 
-## <a name="manage-devices"></a>Správa zařízení
+## <a name="manage-devices"></a>Spravujte zařízení.
 
 V Intune můžete zařízení spravovat pomocí přístupu, který je pro vás nejvhodnější. U zařízení vlastněných organizací budete chtít mít oprávnění k úplnému řízení na zařízeních, včetně nastavení, funkcí a zabezpečení. V tomto postupu se zařízení a uživatelé těchto zařízení registrují v Intune. Po registraci obdrží vaše pravidla a nastavení prostřednictvím zásad nakonfigurovaných v Intune. Můžete například nastavit požadavky na heslo a PIN kód, vytvořit připojení k síti VPN, nastavit ochranu před hrozbami a další.
 
@@ -82,7 +83,7 @@ Uživatel se například přihlásí k zařízení pomocí svých přihlašovac�
 
 A můžete Intune použít spolu s ostatními službami v EMS. Tato funkce poskytuje vaší organizaci zabezpečení mobilních aplikací nad rámec toho, co je součástí operačního systému a všech aplikací. Aplikace spravované pomocí EMS mají přístup k širší sadě funkcí mobilní aplikace a ochrany dat.
 
-![Obrázek zobrazující úrovně zabezpečení dat správy aplikací](./media/what-is-intune/managing-mobile-apps.png)
+![Obrázek ukazující úrovně zabezpečení dat správy aplikací](./media/what-is-intune/managing-mobile-apps.png)
 
 ## <a name="compliance-and-conditional-access"></a>Dodržování předpisů a podmíněný přístup
 

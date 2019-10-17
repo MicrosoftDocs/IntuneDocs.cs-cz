@@ -1,7 +1,7 @@
 ---
-title: Ukládání a zpracování dat v Intune
+title: Ukládání a zpracovávání údajů v Intune
 titleSuffix: Microsoft Intune
-description: Zjistěte, jak jsou osobní údaje uložené a zpracovávané v Intune.
+description: Přečtěte si informace o ukládání a zpracovávání osobních údajů v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 05/18/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: edb07842-6a16-482e-8c1d-541a29e169a8
@@ -17,30 +18,30 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c9a8bd5888ab0977d1ca553d059c1e96cccda75
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: 07a9232203c7d93eb1b9e81b962d2369e77b7421
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306883"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509047"
 ---
-# <a name="data-storage-and-processing-in-intune"></a>Ukládání a zpracování dat v Intune
+# <a name="data-storage-and-processing-in-intune"></a>Ukládání a zpracovávání údajů v Intune
 
-Jakmile Intune [shromáždí data](privacy-data-collect.md), úložiště a zpracování těchto dat pokračuje podle níže uvedených pokynů.
+Jakmile Intune [shromáždí údaje](privacy-data-collect.md), následuje jejich uložení a zpracování popsané níže.
 
 ## <a name="storing-personal-data"></a>Ukládání osobních údajů
 
-Všechna shromážděná data bez telemetrie se zpracovávají prostřednictvím služby Intune a ukládají se v jednom nebo několika následujících umístěních úložiště: 
+Veškeré shromážděné údaje, které nepatří mezi telemetrická data, se zpracovávají prostřednictvím služby Intune a ukládají nejméně v jednom z následujících umístění: 
 
 - SQLAzure 
 - Spolehlivé kolekce (Service Fabric)  
-- Úložiště Azure 
+- Azure Storage 
 
-Telemetrie (protokoly služeb, protokoly výkonu, chyby atd.), které jsou klíčem k monitorování a poskytování stabilní služby se odesílají do úložišť dat telemetrie Microsoftu.
+Telemetrická data (protokoly služby, protokoly výkonu, chyby atd.) nezbytná pro monitorování a poskytování stabilní služby se odesílají do úložišť telemetrických dat Microsoftu.
 
-### <a name="storage-locations"></a>Umístění úložiště
+### <a name="storage-locations"></a>Umístění úložišť
 
-Microsoft nabízí a provozuje služby Intune v mnoha oblastech po celém světě. Intune respektuje volby umístění úložiště provedené správcem zákaznických dat.
+Microsoft nabízí a provozuje služby Intune v mnoha oblastech po celém světe. Intune respektuje volbu umístění úložiště pro zákaznická data provedenou správcem.
 
 Další informace najdete v tématu [kde se nacházejí vaše data?](https://www.microsoft.com/trust-center/privacy/data-location)
 
@@ -50,25 +51,25 @@ Obecně platí, že Intune uchovává osobní údaje až po dobu 30 dnů od odeb
 
 Data telemetrie shromážděná jako součást využití Intune se uchovávají po dobu maximálně 30 dnů.
 
-Protokoly auditu se uchovávají až po dobu jednoho roku.
+Protokoly auditů se uchovávají až jeden rok.
 
-## <a name="processing-personal-data"></a>Zpracování osobních údajů
+## <a name="processing-personal-data"></a>Zpracovávání osobních údajů
 
-Intune zpracovává osobní údaje s certifikovanými systémy ISO. Další informace najdete na [portálu vztahu důvěryhodnosti služby](https://www.microsoft.com/en-us/TrustCenter/stp).
+Intune zpracovává osobní údaje pomocí systémů s certifikací ISO. Další informace najdete na portálu [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp).
 
 ### <a name="profiling-and-marketing"></a>Profilace a marketing
 
-Microsoft Intune nepoužívá žádné osobní údaje shromážděné jako součást poskytování služby pro profilaci nebo marketingové účely. 
+Žádné osobní údaje shromážděné v rámci poskytování služeb nejsou službou Microsoft Intune využívány k profilování ani marketingovým účelům. 
 
 ### <a name="restrict-processing-of-personal-data"></a>Omezení zpracování osobních údajů
 
-Chcete-li omezit zpracování osobních údajů uživatele, můžete účet uživatele odstranit pomocí:
-1. Export elektronické kopie osobních údajů uživatele, včetně
-    - accounts
-    - data služby
-    - přidružené protokoly
-2. Odstraňuje se účet uživatele a přidružená data z Intune.
+Pokud chcete omezit zpracovávání osobních údajů uživatele, můžete jeho uživatelský účet odstranit takto:
+1. Export elektronické kopie osobních údajů uživatele, jejíž součástí jsou také:
+    - Účty
+    - Data služby
+    - Přidružené protokoly
+2. Odstranění uživatelského účtu a přidružených dat z Intune.
 
 ## <a name="next-steps"></a>Další kroky
 
-Přečtěte si další informace o tom, jak Intune [zabezpečuje a sdílí](privacy-data-secure-share.md) osobní údaje. 
+Přečtěte si další informace o tom, jak služba Intune [zabezpečuje a sdílí](privacy-data-secure-share.md) osobní údaje. 

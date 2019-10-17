@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb470885be8f09f0c99dfe26a1d982570644ac8a
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 4aad4e2295cb7b85abcb73a9c8e94ed7501348be
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730238"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490500"
 ---
 # <a name="intune-data-warehouse-collections"></a>Shromažďování dat do datového skladu
 
@@ -320,7 +321,7 @@ Entita **EnrollmentActivity** označuje aktivitu registrace zařízení.
 |-------------------------------|---------------------------------------------------------------------------|
 | dateKey                       | Klíč data, kdy se tato aktivita registrace nahrála.               |
 | deviceEnrollmentTypeKey       | Klíč typu registrace.                                        |
-| DeviceTypeKey                 | Klíč typu zařízení                                                |
+| deviceTypeKey                 | Klíč typu zařízení                                                |
 | enrollmentEventStatusKey      | Klíč stavu indikující úspěch nebo neúspěch registrace.    |
 | enrollmentFailureCategoryKey  | Klíč kategorie selhání registrace (Pokud se registrace nezdařila)        |
 | enrollmentFailureReasonKey    | Klíč důvodu selhání registrace (Pokud se registrace nezdařila)          |
@@ -427,7 +428,7 @@ Entita **IntuneManagementExtensionVersion** uvádí seznam všech verzí, které
 | ExtensionVersionKey | Jedinečný identifikátor verze IntuneManagementExtension | 1       |
 | ExtensionVersion    | Číslo verze tvořené 4 číslicemi                                   | 1.0.2.0 |
 
-## <a name="mamapplications"></a>mamApplications
+## <a name="mamapplications"></a>MamApplications
 
 Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spravované přes správu mobilních aplikací (MAM) bez registrace ve vašem podniku.
 
@@ -442,7 +443,7 @@ Entita **MamApplication** obsahuje seznam obchodních aplikací, které jsou spr
 | RowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato aplikace MAM v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
 
-## <a name="mamapplicationinstances"></a>mamApplicationInstances
+## <a name="mamapplicationinstances"></a>MamApplicationInstances
 
 Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes správu mobilních aplikací (MAM) jako jedinečné instance pro uživatele a zařízení. Všichni uživatelé a zařízení, kteří jsou v této entitě uvedení, jsou chránění, protože mají přiřazenou aspoň jednu zásadu MAM.
 
@@ -466,7 +467,7 @@ Entita **MamApplicationInstance** obsahuje seznam aplikací spravovaných přes 
 |       DeletedDateUtc       |                                                                             Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                                                              |        23.11.2016 12:00:00        |
 | RowLastModifiedDateTimeUtc |                                                           Datum a čas ve standardu UTC, kdy se tato instance aplikace MAM v datovém skladu naposledy změnila                                                            |        23.11.2016 12:00:00        |
 
-## <a name="mamcheckins"></a>mamCheckins
+## <a name="mamcheckins"></a>MamCheckins
 
 Entita **MamCheckin** představuje data shromážděná v době, kdy se instance aplikace MAM přihlásila ke službě Intune. 
 
@@ -494,7 +495,7 @@ Entita **MamDeviceHealth** představuje zařízení, na kterých jsou nasazené 
 | DeviceHealthName |Představuje stav zařízení. <br>Není k dispozici – žádné informace o tomto zařízení nejsou dostupné. <br>V pořádku – nejedná se o zařízení s jailbreakem. <br>Není v pořádku – jedná se o zařízení s jailbreakem. |Není k dispozici, V pořádku, Není v pořádku |
 | RowLastModifiedDateTimeUtc |Datum a čas ve standardu UTC, kdy se tento konkrétní stav zařízení MAM v datovém skladu naposledy změnil |23.11.2016 12:00:00 |
 
-## <a name="mamplatforms"></a>mamPlatforms
+## <a name="mamplatforms"></a>MamPlatforms
 
 Entita **MamPlatform** obsahuje seznam názvů a typů platforem, na kterých byla aplikace MAM nainstalována.
 
@@ -575,7 +576,7 @@ Představuje stav instalace mobilní aplikace pomocí správy mobilních aplikac
 | AppKey             | Klíč mobilní aplikace, který se používá k identifikaci instance AppRevision.                                                          |
 | DeviceTypeKey      | Klíč typu zařízení přidruženého k mobilní aplikaci                                                              |
 | AppInstallStateKey | Klíč stavu instalace aplikace, který se používá k identifikaci instance MobileAppInstallState.                                         |
-| errorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
+| ErrorCode          | Kód chyby, který vrací instalační program aplikace, mobilní platforma nebo služba, které se instalace aplikace týká. |
 | Výpočtu              | Celkový počet                                                                                                                  |
 
 ## <a name="ownertypes"></a>ownerTypes
@@ -685,7 +686,7 @@ Entita **UserDeviceAssociation** obsahuje přidružení zařízení uživatelů 
 | IsDeleted          | Udává, že uživatel registraci zařízení zrušil a že přidružení už není aktuální. | True nebo False      |
 | EndedDateTimeUTC   | Datum a čas ve standardu UTC, kdy došlo ke změně vlastnosti IsDeleted na hodnotu True                                               | 23. 6. 2017 0:00  |
 
-## <a name="users"></a>mohou
+## <a name="users"></a>Mohou
 Entita **user** obsahuje seznam všech uživatelů Azure Active Directory (Azure AD) s přiřazenými licencemi ve vaší společnosti.
 
 Kolekce entit **user** obsahuje uživatelská data. Tyto záznamy zahrnují stavy uživatelů za dobu shromažďování dat i v případě odebrání uživatele. Uživatel například může být přidaný do Intune a potom v průběhu posledního měsíce dojde k jeho odebrání. Přestože tento uživatel není v době vytvoření sestavy přítomný, data o něm a jeho stavu existují z předchozího měsíce. Můžete vytvořit sestavu, která ukazuje trvání historické přítomnosti uživatele ve vašich datech.

@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/12/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: joglocke
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06fdd8a6b64dfd58457b5d9b92144530aa2856cd
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: 65213dab28210ad8162a7c18fe0e733ec7964571
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71940495"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502589"
 ---
 # <a name="use-intune-to-remediate-vulnerabilities-identified-by-microsoft-defender-atp"></a>Použití Intune k nápravě ohrožení zabezpečení identifikovaných ATP v programu Microsoft Defender  
 
@@ -60,7 +61,7 @@ Příklad pracovního postupu:
 
 - Po dokončení nápravy správce Intune otevře úlohu zabezpečení a vybere **dokončit úlohu**.  Stav nápravy se aktualizuje pro Intune a ATP, kde správci zabezpečení potvrzují revidovaný stav ohrožení zabezpečení.  
 
-## <a name="prerequisites"></a>Požadavky  
+## <a name="prerequisites"></a>Požadované součásti  
 
 **Předplatná**:  
 

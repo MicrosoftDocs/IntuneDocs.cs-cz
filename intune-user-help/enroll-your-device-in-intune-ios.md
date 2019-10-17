@@ -9,6 +9,7 @@ ms.date: 09/12/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 6eeec7aa-1b07-4ce3-894c-13e09b89bdd4
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: tisilv
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f207f1f94d34e6aa1768bb5ae0f5179710839c71
-ms.sourcegitcommit: 8934b1abec96e18cee15a77107d37551766f7666
+ms.openlocfilehash: e468042ab81d563c9fa4b272661508a340d61aa9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71099868"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506250"
 ---
 # <a name="set-up-ios-device-access-to-your-company-resources"></a>Nastavení přístupu zařízení s iOSem k prostředkům společnosti  
 
@@ -80,21 +81,21 @@ Pozastavení aplikace po dobu delší než několik minut může způsobit ukon�
 > Tyto další kroky a obrazovky se budou lišit v závislosti na verzi iOS. Postupujte podle kroků pro verzi iOS. 
 
 6. Safari otevře web Portál společnosti na vašem zařízení. Po zobrazení výzvy ke stažení konfiguračního profilu klepněte na možnost **Povolení**. Pokud se nacházíte na zařízení se systémem:  
-    * iOS 12,2 a novější: Po dokončení stahování klepněte na **Hotovo.** Pokračujte krokem 7 v tomto článku.
-    * iOS 12,1 a starší: Budete automaticky přesměrováni do aplikace nastavení. Přejděte na krok 8 v tomto článku.  
+    * iOS 12,2 a novější: po dokončení stahování klepněte na **Hotovo.** Pokračujte krokem 7 v tomto článku.
+    * iOS 12,1 a starší: budete automaticky přesměrováni do aplikace nastavení. Přejděte na krok 8 v tomto článku.  
  
     Pokud omylem klepnete na **Ignorovat**, aktualizujte stránku. Zobrazí se výzva k otevření aplikace Portál společnosti. Z aplikace můžete znovu klepnout na **Stáhnout**.
 
   > [!NOTE]
   > Je nutné nainstalovat profil pro správu, jak je popsáno v následujících krocích během 8 minut od stažení. Pokud to neuděláte, profil se odebere a bude nutné restartovat registraci.  
 
-7. jenom iOS 12,2 a novější: Po zobrazení výzvy k otevření Portál společnosti klepněte na **otevřít**. Na obrazovce **Instalace profilu správy** se zobrazí seznam kroků pro instalaci profilu.
+7. jenom iOS 12,2 a novější: po zobrazení výzvy k otevření Portál společnosti klepněte na **otevřít**. Na obrazovce **Instalace profilu správy** se zobrazí seznam kroků pro instalaci profilu.
 
     ![Příklad obrazovky Portál společnosti, instalace profilu správy](./media/ios-07-cp-enroll-1904.PNG)  
 
 8. Otevřete aplikaci nastavení a klepněte na **Stáhnout profil**.  
 
-    Pokud se **profil stáhl** jako možnost, přejdete na **Obecné** > **profily**. Pokud profil stále nevidíte, možná ho budete muset stáhnout znovu.  
+    Pokud se **profil stáhl** jako možnost, přejdete na **Obecné** **profily** > . Pokud profil stále nevidíte, možná ho budete muset stáhnout znovu.  
 
     ![Ukázkový snímek obrazovky aplikace nastavení, nastavení staženého profilu](./media/ios-1904-settings-badge.PNG)  
 

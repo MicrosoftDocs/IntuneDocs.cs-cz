@@ -1,7 +1,7 @@
 ---
-title: Zabezpečení a sdílení dat v Intune
+title: Zabezpečení a sdílení údajů v Intune
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak jsou osobní údaje zabezpečené a sdílené v Intune.
+description: Přečtěte si informace o zabezpečení a sdílení osobních údajů v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 05/18/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 68921fd6-5f50-456c-a3af-83d7bc4b134b
@@ -17,63 +18,63 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53480b7a2e008af46f4f8929cc6321e10b042b33
-ms.sourcegitcommit: dd6755383ba89824d1cc128698a65fde6bb2de55
+ms.openlocfilehash: b17b87462b2c73e265f062c33a06a810e7c58bf8
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306749"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504343"
 ---
-# <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení dat v Intune
+# <a name="data-security-and-sharing-in-intune"></a>Zabezpečení a sdílení údajů v Intune
 
 
-## <a name="data-security"></a>Zabezpečení dat
+## <a name="data-security"></a>Zabezpečení údajů
 
-Microsoft Intune je klíčovou součástí nabídky Microsoft Enterprise mobility a služby Security Suite. Pro podporu [strategie správy dat](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx)se všechny cloudové služby Microsoftu vyvíjely s využitím [Microsoft ochrany osobních údajů](https://www.microsoft.com/en-us/trustcenter/privacy) a [zabezpečení Microsoftu](https://www.microsoft.com/en-us/trustcenter/security/) .  
+Microsoft Intune je klíčovou komponentou nabídky cloudových služeb Microsoft Enterprise Mobility + Security. V rámci podpory [strategie datového dozoru](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx) jsou všechny cloudové služby Microsoftu vyvíjeny v souladu s metodologiemi [Ochrana osobních údajů společnosti Microsoft](https://www.microsoft.com/en-us/trustcenter/privacy) a [Zabezpečení Microsoft](https://www.microsoft.com/en-us/trustcenter/security/).  
 
-Microsoft Intune se řídí stejnými technickými a organizačními mírami, které týmy služby Microsoft Azure využívají k zabezpečení před procesy porušení dat.
+Microsoft Intune se řídí stejnými technickými a organizačními opatřeními, jako využívají servisní týmy Microsoft Azure k zabezpečení proti úniku dat.
 
-Další informace najdete na [portálu vztahu důvěryhodnosti služby](https://www.microsoft.com/en-us/TrustCenter/stp).
+Další informace najdete na portálu [Service Trust Portal](https://www.microsoft.com/en-us/TrustCenter/stp).
 
-Intune používá techniky pro minimalizaci dat, jako např.
+Služba Intune využívá metody minimalizace dat, jako je:
 
-- agregovat
-- volitelné shromažďování dat pro některé funkce
-- data provedená méně přesná nebo citlivá
+- Agregace
+- Volitelné shromažďování dat u některých funkcí
+- Snižování přesnosti nebo citlivosti dat
 
-Intune také využívá techniky, jako je zabezpečení RBAC a JiT, pro incidenty podpory k zajištění ochrany dat ve výchozím nastavení. 
+V rámci dodržení principu „Data protection by default“ využívá Intune u incidentů podpory také techniky, jako je řízení správy na základě rolí a zabezpečení za běhu. 
 
-### <a name="data-breach-reporting"></a>Generování sestav o porušení dat
+### <a name="data-breach-reporting"></a>Ohlašování úniků dat
 
-Když se zjistí bezpečnostní incident (CRSI) zákazníka, sdělí se zákazníkům. Tento proces zahrnuje práci s týmem Microsoft O365 k oznamování oznámení o porušení pro všechny zákazníky v Microsoft O365 pomocí Intune.
+Při zjištění bezpečnostního incidentu ohlašovaného zákazníkům (CRSI) se zákazníkům zasílá oznámení. Součástí tohoto procesu je spolupráce s týmem Microsoft O365, aby oznámení o úniku dat obdrželi všichni zákazníci Office 365 využívající Intune.
 
-## <a name="data-sharing"></a>Sdílení dat
+## <a name="data-sharing"></a>Sdílení údajů
 
-Když správci tenanta zapnou určitou funkci (například Apple Program registrace zařízení), Microsoft Intune získá souhlas správce pro sdílení dat s příslušnými třetími stranami. V takových případech může Intune sdílet osobní údaje s:
+Když správci tenantů povolí některou z funkcí (například Program registrace zařízení Apple), získá Microsoft Intune souhlas správce se sdílením dat s příslušnými třetími stranami. V takovém případě může Intune sdílet osobní údaje s těmito subjekty:
 
-- Třetí strany fungují jako zástupci Microsoftu.
-- Třetí strany nefungují jako zástupci Microsoftu, ale jenom když oprávnění k tomu udělí správci tenanta explicitně.
+- Třetí strany jednající jako agenti Microsoftu
+- Třetí strany, které nejednají jako agenti Microsoftu, ale správci tenantů jim k tomu výslovně udělili oprávnění Intune
 
-Všechny třetí strany fungující jako Microsoft agenti jsou součástí [seznamu subdodavatelů služeb Online Services](https://aka.ms/Online_Serv_Subcontractor_List).
+Všechny třetí strany, které jednají jako agenti Microsoftu, jsou uvedeny v [seznamu subdodavatelů online služeb](https://aka.ms/Online_Serv_Subcontractor_List).
 
-Sdílení dat s těmito entitami se provádí v rámci podpory zákazníků a technické podpory, údržby služeb a dalších operací.
+Účelem sdílení dat s těmito entitami je pomáhat zákaznické a technické podpoře, údržbě služeb a dalším operacím.
 
-Smlouva tenanta s třetí stranou řídí osobní údaje Intune držené v rámci služby třetí strany. Také udělí Intune oprávnění k přenosu dat do služby třetí strany.  
+Smlouva tenanta se třetí stranou řídí osobní údaje Intune ve službě této třetí strany. Kromě toho uděluje službě Intune oprávnění k přenosu dat do služby třetí strany.  
 
-Informace o datech, která se sdílí s určitými třetími stranami, najdete v následujících článcích:
-- [Data Intune odesílají společnosti Apple](data-intune-sends-to-apple.md)
-- [Data Intune odesílají do Google](data-intune-sends-to-google.md)
-- [Data Apple odesílá do Intune](data-apple-sends-to-intune.md)
-- [Data, která Google odesílá do Intune](data-google-sends-to-intune.md)
+Informace o datech sdílených s některými třetími stranami najdete v následujících článcích:
+- [Data z Intune odesílaná Applu](data-intune-sends-to-apple.md)
+- [Data z Intune odesílaná Googlu](data-intune-sends-to-google.md)
+- [Data z Applu odesílaná do Intune](data-apple-sends-to-intune.md)
+- [Data z Googlu odesílaná do Intune](data-google-sends-to-intune.md)
 - [Data Jamf pro odesílá do Intune.](data-jamf-sends-to-intune.md)
 
-### <a name="system-center-configuration-manager-data-sharing"></a>Sdílení dat System Center Configuration Manager
+### <a name="system-center-configuration-manager-data-sharing"></a>Sdílení dat System Center Configuration Manageru
 
-Microsoft Intune nesdílí žádná data s System Center Configuration Manager. System Center Configuration Manager je místní produkt nasazený, spravovaný a provozovaný přímo zákazníkem. Data o využití a diagnostika shromažďovaná nástrojem Configuration Manager jsou jenom pro zlepšení prostředí pro instalaci, kvality a zabezpečení budoucích verzí.
+Microsoft Intune nesdílí žádná data se System Center Configuration Managerem. System Center Configuration Manager je místní produkt nasazený, spravovaný a provozovaný přímo zákazníkem. Diagnostická data a data o využití shromažďovaná Configuration Managerem se využívají pouze ke zlepšení instalace produktu, kvality a zabezpečení budoucích verzí.
 
-Další informace najdete v tématu [Diagnostika a data o využití pro SCCM](https://docs.microsoft.com/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+Podrobnosti najdete v tématu věnovaném [diagnostickým datům a datům o využití pro SCCM](https://docs.microsoft.com/sccm/core/plan-design/diagnostics/diagnostics-and-usage-data). 
 
 
 ## <a name="next-steps"></a>Další kroky
 
-Zjistěte [, jak zobrazit a opravit](privacy-data-view-correct.md) osobní údaje v Intune.
+Přečtěte si, jak v Intune [zobrazit a opravit](privacy-data-view-correct.md) osobní údaje.

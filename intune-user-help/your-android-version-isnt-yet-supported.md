@@ -1,7 +1,7 @@
 ---
 title: Vaše verze Androidu se ještě nepodporuje | Dokumentace Microsoftu
 titlesuffix: Microsoft Intune
-description: Verze operačního systému zařízení s Androidem zatím není podporovaná.
+description: Verze operačního systému vašeho zařízení s Androidem zatím není podporovaná.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -10,6 +10,7 @@ ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 58f2a207-88cf-446c-ac9f-ad10a124e4e2
 searchScope:
@@ -19,12 +20,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 70b76e84e1ad44136bdc9f3ab42c4314933e907b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 576bcd5f1312c05919162b2341a0ac54730560d0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501132"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507690"
 ---
 # <a name="your-android-devices-operating-system-version-isnt-yet-supported"></a>Verze operačního systému vašeho zařízení s Androidem zatím není podporovaná
 

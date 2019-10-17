@@ -8,17 +8,18 @@ manager: dougeby
 ms.date: 03/18/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d999603abc539fda4d152d15dd1ab965c465f39e
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: b4be1755a07e6ec304edb7bceba8041d5b58263e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732262"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510000"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Sledování a monitorování událostí v Microsoft Intune pomocí protokolů auditu
 
@@ -53,7 +54,7 @@ Další informace o této funkci najdete v tématu [odeslání dat protokolu do 
 
 ## <a name="review-audit-events"></a>Kontrola událostí auditu
 
-![V Intune vyberte protokoly auditu, abyste viděli akce a data, kdy se události nastaly](./media/monitor-audit-logs/monitor-audit-logs.png "protokoly auditu") .
+![V Intune vyberte protokoly auditu, kde se zobrazí akce a datum, kdy došlo k událostem.](./media/monitor-audit-logs/monitor-audit-logs.png "Protokoly auditu")
 
 Protokol událostí zobrazí výchozí seznam s následujícími položkami:
 
@@ -67,7 +68,7 @@ Protokol událostí zobrazí výchozí seznam s následujícími položkami:
 
 Chcete-li zobrazit konkrétnější informace o události, vyberte položku v seznamu:
 
-![Získejte konkrétnější informace o tom, kdo z protokolů auditu v protokolech auditu v Intune obsahoval](./media/monitor-audit-logs/monitor-audit-log-detail.png "Podrobnosti") .
+![Získat konkrétnější informace o tom, kdo z protokolů auditu v Intune pracoval](./media/monitor-audit-logs/monitor-audit-log-detail.png "Podrobnosti protokolu auditu")
 
 > [!NOTE]
 > **Iniciované uživatelem (actor)** obsahuje informace o tom, kdo úlohu spustil a kde byla spuštěna. Pokud například spustíte aktivitu v Intune v Azure Portal, **aplikace** vždy vypíše seznam **Microsoft Intune portálu** a **ID aplikace** vždy používá stejný identifikátor GUID.

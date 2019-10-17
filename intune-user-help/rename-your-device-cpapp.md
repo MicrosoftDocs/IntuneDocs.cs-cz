@@ -9,6 +9,7 @@ ms.date: 10/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 627cabb14def14494ca258fbc9ac7ebf736b10da
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 3fab7a0a544a3dafc08ff1e635e49407825fb67d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504438"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502143"
 ---
 # <a name="rename-device-from-the-company-portal-app-for-windows"></a>Přejmenování zařízení z aplikace Portál společnosti pro Windows
 Přejmenujte zařízení, aby bylo snazší ho na ostatních zařízeních rozpoznat. Aplikace Portál společnosti pro Windows vám umožňuje přejmenovat následující typy připojených zařízení:  

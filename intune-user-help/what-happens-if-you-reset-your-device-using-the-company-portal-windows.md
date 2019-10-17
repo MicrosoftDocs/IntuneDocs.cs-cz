@@ -1,5 +1,5 @@
 ---
-title: Co se stane, když si resetujete zařízení s Windows? | Dokumenty Microsoft
+title: Co se stane, když si resetujete zařízení s Windows? | Dokumentace Microsoftu
 description: ''
 keywords: ''
 author: lenewsad
@@ -9,6 +9,7 @@ ms.date: 10/25/2016
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 1ee6e275-d1ec-4da3-bbef-d5da2c61a02a
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0390be417648a5fd4ea667b6aee26731448a460f
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: fb1a5e56a0c328a1338498bd0606bb33f06486fa
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501064"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505986"
 ---
 # <a name="what-happens-if-you-reset-your-windows-device-using-the-company-portal"></a>Co se stane, když resetujete zařízení s Windows pomocí Portálu společnosti?
 
@@ -32,7 +33,7 @@ Když k resetování zařízení se systémem Windows použijete aplikaci Portá
 |Správa a konfigurace zařízení|Typ zařízení|
 |---------------------------------------|---------------|
 |Vaše mobilní zařízení spravuje vaše společnost|**Windows 10 a Windows Phone 8.1**</br>Zařízení se už nebude zobrazovat na portálu společnosti a portál společnosti se pokusí obnovit výchozí tovární nastavení zařízení. Vaše osobní data, aplikace a nastavení se při tom odeberou. <br /><br />**Windows 10 Mobile**</br>Jediným způsobem, jak zrušit registraci zařízení, je resetovat ho.|
-|Zařízení má přístup jen k e-mailu společnosti |**Windows Phone 8.1**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému, který se používá pouze pro e-mail.<br /><br />**Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.|
+|Zařízení má přístup jen k e-mailu společnosti|**Windows Phone 8.1**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému, který se používá pouze pro e-mail.<br /><br />**Windows 8.1 a Windows 8**<br />Zařízení se už nebude zobrazovat na portálu společnosti a váš firemní e-mailový účet a všechny neuložené e-maily se odstraní.|
 |Stolní a přenosné počítače|**Windows 8.1 a Windows 8**<br />Tovární nastavení lze obnovit v počítači s Windows 8 nebo Windows 8.1 jedině v případě, že se používá pouze pro e-mail.<br /><br />**Windows 7 nebo Windows Vista**<br />Tovární nastavení nelze obnovit v počítači s Windows 7 nebo s dřívější verzí systému.|
 
 Pokud máte otázky, obraťte se na svou firemní podporu. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

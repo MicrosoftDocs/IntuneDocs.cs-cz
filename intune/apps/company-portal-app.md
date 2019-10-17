@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b32d34c1878bc0355c510ca342091010af43bca7
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 37c2a85162c781db7272b6ead11fbb3320a08343
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731174"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72498016"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -165,7 +166,7 @@ Uživatelé můžou na svých místních nebo vzdálených zařízeních provád
 - **Synchronizovat** – Tato akce zahájí vrácení se změnami zařízení se službou Intune. Zobrazí se jako **stav kontroly** v portál společnosti.
 - **Remote Lock** – zablokuje zařízení a vyžaduje ho k odemknutí.
 - **Resetování hesla** – Tato akce se používá k resetování hesla zařízení. V zařízeních se systémem iOS se heslo odebere a koncový uživatel bude muset zadat nový kód v nastavení. V podporovaných zařízeních s Androidem Intune vygeneruje nové heslo a dočasně se zobrazí v Portál společnosti.
-- **Obnovení klíčů** – Tato akce se používá k obnovení šifrovacího klíče pro šifrovaná zařízení.
+- **Obnovení klíčů** – Tato akce se používá k obnovení osobního obnovovacího klíče pro šifrovaná zařízení MacOS z webu portál společnosti. 
 
 ### <a name="self-service-actions"></a>Akce samoobslužných služeb
 
@@ -174,18 +175,18 @@ Některé platformy a konfigurace neumožňují akce zařízení samoobslužné 
 |     Platforma    |    Vyřazení    |    Vymazání     |    Přejmenovat<sup>(4)</sup>    |    Brání    |    Vzdálené uzamčení    |    Resetovat heslo    |    Obnovení klíče    |
 |------------------------|--------------------|--------------------|-----------------|-----------------|--------------------------|--------------------------|--------------------|
 |    Windows 10<sup>(3)</sup>    |    K dispozici<sup>(1)</sup>    |    K dispozici    |    K dispozici    |    K dispozici    |    Pouze Windows Phone    |    Pouze Windows Phone    |    NÁ    |
-|    iOS<sup>(3)</sup>    |    K dispozici    |    K dispozici    |    K dispozici    |    K dispozici    |    K dispozici    |    K dispozici    |    NÁ    |
+|    iOS<sup>(3)</sup>    |    K dispozici    |    K dispozici<sup>(8)</sup>    |    K dispozici    |    K dispozici    |    K dispozici<sup>(8)</sup>    |    K dispozici    |    NÁ    |
 |    MacOS<sup>(3)</sup><sup>(5)</sup>    |    K dispozici    |    NÁ    |    K dispozici    |    K dispozici    |    K dispozici    |    NÁ    |    K dispozici<sup>(2)</sup>    |
 |    Android<sup>(3)</sup>    |    K dispozici<sup>(7)</sup>    |    K dispozici<sup>(7)</sup>    |    K dispozici    |    K dispozici    |    K dispozici    |    K dispozici<sup>(6)</sup>    |    NÁ    |
 
 
 <sup>(1)</sup> vyřazení je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
-<sup>(2)</sup> obnovení klíče pro MacOS je dostupné jenom přes webový portál.<br>
-<sup>(3)</sup> Pokud používáte registraci správce registrace zařízení, jsou všechny vzdálené akce zakázané.<br>
+<sup>(2)</sup> osobní obnovení klíčů pro MacOS je k dispozici pouze prostřednictvím webu portál společnosti.<br> 
+<sup>(3)</sup> všechny vzdálené akce jsou při použití registrace správce registrace zařízení zakázané.<br>
 <sup>(4)</sup> přejmenování změní jenom název zařízení v portál společnosti aplikaci nebo na webu, ne na zařízení.<br>
 <sup>(5)</sup> vzdálené vymazání není na zařízeních MacOS k dispozici.<br>
 <sup>(6)</sup> resetování hesla není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> vyřazení a vymazání není k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
+<sup>(7)</sup> vyřazení a vymazání není k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br>@no__t – 0<sup>(8)</sup> vymazání a resetování hesla nejsou k dispozici na zařízeních iOS zaregistrovaných s zápisem uživatele.<br> 
 
 ## <a name="next-steps"></a>Další kroky
 

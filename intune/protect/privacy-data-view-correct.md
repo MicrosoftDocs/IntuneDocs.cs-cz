@@ -1,5 +1,5 @@
 ---
-title: Zobrazit a opravit osobní údaje
+title: Zobrazení a oprava osobních údajů
 titleSuffix: Microsoft Intune
 description: Přečtěte si, jak zobrazit a opravit osobní údaje.
 keywords: ''
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 05/18/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 1ba77bc7-505e-4eca-a49e-dcdaa75d0043
@@ -17,40 +18,40 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b6ca291f55511be9e88b0ff898d9383691542bf
-ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
+ms.openlocfilehash: 913bf3103254abdd73913e0efc81da3a38ca991b
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72310905"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72504248"
 ---
-# <a name="view-and-correct-personal-data"></a>Zobrazit a opravit osobní údaje
+# <a name="view-and-correct-personal-data"></a>Zobrazení a oprava osobních údajů
 
-Správci Intune můžou na základě svých přístupových oprávnění zobrazit některá osobní data, ale jenom koncoví uživatelé můžou změnit svoje osobní údaje svého zařízení.
+Správci Intune mohou na základě svých přístupových oprávnění zobrazit některé osobní údaje, ale osobní údaje vlastního zařízení mohou změnit jen sami koncoví uživatelé.
 
 [!INCLUDE [GDPR-related guidance](../includes/gdpr-dsr-and-stp-note.md)]
 
 
-## <a name="view-personal-data"></a>Zobrazit osobní údaje
+## <a name="view-personal-data"></a>Zobrazení osobních údajů
 
-Správci můžou v uživatelském rozhraní Intune zobrazit osobní informace koncového uživatele v různých oknech. Následující články vysvětlují, co Správci informací dělají a nemají přístup k těmto akcím:
-- V [části Podrobnosti o zařízení](../remote-actions/device-inventory.md) v Intune se dozvíte, jak můžete zkontrolovat podrobnosti o zařízení koncového uživatele.
-- [Monitorování informací a přiřazení aplikace](../apps/apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
-- [Jaké informace může moje společnost vidět po registraci zařízení? článek](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) poskytuje koncovým uživatelům seznam dat, která jejich společnost uvidí a neuvidí. Je vhodné jasně říct uživatelům, jaký druh dat shromažďujete a proč je shromažďujete. Tento článek může být prvním krokem této transparentnosti.
+Správcům se osobní údaje koncových uživatelů zobrazují na různých listech uživatelského rozhraní služby Intune. V článcích níže se dozvíte, k jakým informacím správci mají, nebo naopak nemají přístup:
+- Článek [Zobrazení podrobností o zařízení v Intune](../remote-actions/device-inventory.md) vysvětluje, jak zobrazit podrobnosti o zařízení koncového uživatele.
+- Článek [Monitorování informací a přiřazení aplikace](../apps/apps-monitor.md) vysvětluje, jak zobrazit podrobnosti o aplikacích nainstalovaných na zařízení koncového uživatele.
+- Článek [Jaké informace moje společnost uvidí, když si zaregistruji zařízení](https://docs.microsoft.com/intune-user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune) obsahuje seznam údajů, které společnost koncového uživatele vidí nebo nevidí. Nejvhodnější je srozumitelně sdělit uživatelům, jaká data shromažďujete a proč to děláte. Prvním krokem vstříc transparentnosti může být právě tento článek.
 
-### <a name="who-can-view-the-data"></a>Kdo může data zobrazit?
+### <a name="who-can-view-the-data"></a>Kdo může zobrazit údaje?
 
-Společnost Microsoft používá přísné ovládací prvky pro řízení přístupu k zákaznickým datům. poskytuje nejnižší úroveň přístupu, která je nutná k dokončení klíčových úloh a odvolávání přístupu, pokud již nepotřebujete. 
+Microsoft využívá k určení přístupu k údajům zákazníků přísné kontrolní mechanismy, v rámci kterých se uděluje nejnižší přístupová úroveň nutná k provedení klíčových úloh, a jakmile už není přístup potřeba, odvolá se. 
 
-Přístup k osobním údajům koncových uživatelů můžete zabezpečit a řídit pomocí řízení správy na základě rolí (RBAC). Další informace najdete v tématu [RBAC s Microsoft Intune](../fundamentals/role-based-access-control.md).
+Přístup k osobním údajům koncových uživatelů můžete zabezpečit a řídit pomocí řízení přístupu na základě role. Podrobnosti najdete v článku [Řízení přístupu na základě role v Microsoft Intune](../fundamentals/role-based-access-control.md).
 
-Další informace o praxi s daty společnosti Microsoft najdete v tématu [prohlášení o zásadách ochrany osobních údajů služby Microsoft Online Services](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
+Další informace o tom, jak Microsoft pracuje s údaji, jsou k dispozici v Podmínkách služeb Microsoft Online Services a v [Prohlášení o zásadách ochrany osobních údajů služeb Microsoft Online Services](https://go.microsoft.com/fwlink/p/?linkid=131004&clcid=0x409). 
 
-## <a name="correct-end-user-personal-data"></a>Opravit osobní údaje koncového uživatele
+## <a name="correct-end-user-personal-data"></a>Oprava osobních údajů koncových uživatelů
 
-Správci nemůžou aktualizovat informace specifické pro zařízení nebo aplikace. Pokud chce koncový uživatel opravit jakákoli osobní data (například název zařízení), musí tak učinit přímo na svém zařízení. Tyto změny se synchronizují při příštím připojení k Intune.
+Správci nemohou aktualizovat informace specifické pro konkrétní zařízení nebo aplikaci. Pokud si koncový uživatel přeje opravit jakékoli osobní údaje (například název zařízení), musí to provést přímo na svém zařízení. Změny se synchronizují při příštím připojení ke službě Intune.
 
 
 ## <a name="next-steps"></a>Další kroky
 
-Zjistěte, jak v Intune [Auditovat, exportovat nebo odstraňovat](privacy-data-audit-export-delete.md) osobní údaje.
+Přečtete si, jak [auditovat, exportovat nebo odstranit](privacy-data-audit-export-delete.md) osobní data evidovaná v Intune.

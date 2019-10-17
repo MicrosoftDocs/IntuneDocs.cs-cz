@@ -5,27 +5,32 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2018
+ms.date: 10/15/2019
 ms.topic: archived
 ms.service: microsoft-intune
+ms.subservice: fundamentals
 ms.localizationpriority: medium
-ms.technology: ''
 ms.assetid: 3b8d22fe-c318-4796-b760-44f1ccf34312
 ms.reviewer: owenyen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8f481c17e6cb1285147c7f6361bfff73801b2bba
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: fb9fb439bd0bc59ae2c69ec966587d58c8c97bf4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732074"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72510096"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Správa počítačů s Windows jako počítačů prostřednictvím softwarového klienta Intune
 
-[!INCLUDE [classic-portal](../../intune-classic/includes/classic-portal.md)]
+[!INCLUDE [classic-portal](../includes/classic-portal.md)]
+
+> [!WARNING]
+> Microsoft oznámil, že [podpora Windows 7 končí 14 ledna 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). K tomuto datu přestane také Intune podporovat zařízení s Windows 7. Microsoft důrazně doporučuje přechod na Windows 10, abyste zabránili přerušení služeb a podpory.
+> 
+> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7](../fundamentals/whats-new.md#intune-plan-for-change-nearing-end-of-support-for-windows-7-).
 
 > [!NOTE]
 > V Microsoft Intune můžete spravovat počítače s Windows buď [jako mobilní zařízení prostřednictvím správy mobilních zařízení (MDM)](../enrollment/windows-enroll.md), nebo jako počítače se softwarovým klientem Intune, jak je popsáno níže. Microsoft však zákazníkům doporučuje, aby pokud možno [používali řešení pro správu MDM](../enrollment/windows-enroll.md). Další informace najdete v tématu [porovnání správy počítačů s Windows jako počítačů nebo mobilních zařízení](pc-management-comparison.md) . 
@@ -35,7 +40,6 @@ Intune poskytuje organizacím ucelené řešení pro správu mobilních zaříze
 Softwarový klient Intune je nejvhodnější pro počítače se staršími operačními systémy Windows (například Windows 7), které nelze spravovat jako mobilní zařízení. Ke správě počítačů z cloudu používá softwarový klient Intune funkce správy, jako jsou například Zásady skupiny.
 
 S využitím tohoto softwarového klienta můžete přes Intune spravovat až 7 000 počítačů s Windows jako počítače. V rozsáhlejších nasazeních spravujte počítače s Windows 10 jako mobilní zařízení. Každá verze Intune a aktualizace Windows 10 obsahuje funkce pro správu založené na architektuře pro správu mobilních zařízení. Důrazně proto doporučujeme, aby vaše organizace přešla na systém Windows 10, který se spravuje jako mobilní zařízení.
-
 
 > [!NOTE]
 > Zařízení s Windows 8.1 a novějšími systémy můžete spravovat jako počítače pomocí klientského softwaru Intune, nebo jako mobilní zařízení. Na jednom zařízení nelze použít obě metody. Pečlivě zvažte, než se rozhodnete počítače spravovat pomocí klientského softwaru Intune. Toto téma se týká jenom správy zařízení jako počítačů pomocí klientského softwaru Intune.
@@ -60,9 +64,6 @@ Níže jsou uvedené požadavky na software pro instalaci klientského softwaru:
 |Oprávnění správce|Účet, který instaluje klientský software, musí mít oprávnění místního správce pro toto zařízení.|
 |Instalační služba systému Windows verze 3.1|Na počítači musí být Instalační služba systému Windows minimálně verze 3.1.<br /><br />Pokud chcete zobrazit verzi Instalační služby systému Windows na počítači:<br /><br />  Na počítači klikněte pravým tlačítkem myši na **%windir%\System32\msiexec.exe** a potom klikněte na **Vlastnosti**.<br /><br />Nejnovější verzi Instalační služby systému Windows můžete stáhnout ze stránky [Windows Installer Redistributables](http://go.microsoft.com/fwlink/?LinkID=234258) na webu Microsoft Developer Network.|
 |Odebrání nekompatibilního klientského softwaru|Před instalací klientského softwaru Intune odinstalujte z počítače tento klientský software: Configuration Manager, Operations Manager a Service Manager.|
-
-> [!WARNING]
-> Microsoft oznámil, že [podpora Windows 7 končí 14 ledna 2020](https://support.microsoft.com/help/4057281/windows-7-support-will-end-on-january-14-2020). K tomuto datu přestane také Intune podporovat zařízení s Windows 7. Microsoft důrazně doporučuje přechod na Windows 10, abyste zabránili přerušení služeb a podpory. 
 
 ## <a name="deploying-the-intune-software-client"></a>Nasazení softwarového klienta Intune
 Jako správce Intune můžete softwarového klienta Intune zpřístupnit uživatelům různými způsoby. Pokyny najdete v článku [Instalace softwarového klienta Intune na počítače s Windows](../install-the-windows-pc-client-with-microsoft-intune.md).

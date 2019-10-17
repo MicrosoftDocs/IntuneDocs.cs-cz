@@ -6,8 +6,9 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 08/28/2019
-ms.topic: article
+ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: lacranda
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39858a74cd9503ff40de51ab3680ccf509d25c49
-ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
+ms.openlocfilehash: 82177e475c6f5a637aba9f053e64986dcd9bdadf
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72310945"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502547"
 ---
 # <a name="configure-infrastructure-to-support-scep-with-intune"></a>Konfigurace infrastruktury pro podporu SCEP s Intune  
   
@@ -37,7 +38,7 @@ Než budete pokračovat, ujistěte se, že jste [vytvořili a nasadili profil *d
 
 ### <a name="servers-and-server-roles"></a>Servery a role serveru  
 Následující místní infrastruktura musí běžet na serverech, které jsou připojené k doméně služby Active Directory, s výjimkou proxy serveru webových aplikací.  
-- **Certifikační autorita** – použijte certifikační autoritu rozlehlé sítě služby Microsoft Active Directory Certificate Services (CA), která je spuštěna v edici Enterprise systému Windows Server 2008 R2 s aktualizací Service Pack 1 nebo novější. Verze systému Windows Server, kterou používáte, musí zůstat v rámci podpory společnosti Microsoft. Samostatná certifikační autorita není podporována. Další informace najdete v tématu [instalace certifikační autority](https://technet.microsoft.com/library/jj125375.aspx). Pokud vaše certifikační autorita používá Windows Server 2008 R2 SP1, musíte [nainstalovat opravu hotfix z KB2483564](https://support.microsoft.com/kb/2483564/).  
+- **Certifikační autorita** – použijte certifikační autoritu rozlehlé sítě služby Microsoft Active Directory Certificate Services (CA), která je spuštěna v edici Enterprise systému Windows Server 2008 R2 s aktualizací Service Pack 1 nebo novější. Verze systému Windows Server, kterou používáte, musí zůstat v rámci podpory společnosti Microsoft. Samostatná certifikační autorita není podporovaná. Další informace najdete v tématu [instalace certifikační autority](https://technet.microsoft.com/library/jj125375.aspx). Pokud vaše certifikační autorita používá Windows Server 2008 R2 SP1, musíte [nainstalovat opravu hotfix z KB2483564](https://support.microsoft.com/kb/2483564/).  
 
 - **Role serveru NDES** – je nutné nakonfigurovat roli serveru služby zápisu síťových zařízení (NDES) v systému Windows Server 2012 R2 nebo novějším. V pozdější části tohoto článku Vás provedeme [instalací NDES](#set-up-ndes).  
 
@@ -57,15 +58,15 @@ Následující místní infrastruktura musí běžet na serverech, které jsou p
 Následující místní infrastruktura je volitelná:  
   Pokud chcete, aby zařízení v Internetu získala certifikáty, musíte publikovat adresu URL služby NDES mimo vaši podnikovou síť. Můžete použít buď Azure Proxy aplikací služby AD, proxy server webové aplikace, nebo jiný reverzní proxy server.
   
-- **Azure proxy aplikací služby AD** (volitelné) – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [Jak poskytnout zabezpečený vzdálený přístup k místním aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
+- **Azure proxy aplikací služby AD** (volitelné) – k publikování adresy URL služby NDES na Internet můžete použít proxy aplikací služby AD Azure místo vyhrazeného serveru proxy webových aplikací (WAP). To umožňuje intranetové i internetové zařízení získat certifikáty. Další informace najdete v tématu [Zajištění bezpečného vzdáleného přístupu k místním aplikacím](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy). 
 
 - **Proxy server webových aplikací** (volitelné) – pomocí serveru se systémem Windows Server 2012 R2 nebo novějším jako serveru proxy webové aplikace (WAP) PUBLIKUJTE adresu URL služby NDES na Internet.  To umožňuje intranetové i internetové zařízení získat certifikáty.
 
-  Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](https://support.microsoft.com/kb/3013769)nebo samostatně z [KB3011135](https://support.microsoft.com/kb/3011135).  
+  Server, který je hostitelem WAP, [musí nainstalovat aktualizaci](https://blogs.technet.com/b/ems/archive/2014/12/11/hotfix-large-uri-request-in-web-application-proxy-on-windows-server-2012-r2.aspx) umožňující podporu dlouhých adres URL, které používá služba zápisu síťových zařízení. Tato aktualizace je součástí [kumulativní aktualizace z prosince 2014](https://support.microsoft.com/kb/3013769)nebo jde instalovat jednotlivě z [KB3011135](https://support.microsoft.com/kb/3011135).  
 
   Server WAP musí mít certifikát SSL, který odpovídá názvu publikovanému na externích klientech, a důvěřovat certifikátu SSL, který se používá v počítači, který je hostitelem služby NDES. Tyto certifikáty umožňují serveru WAP ukončit připojení SSL od klientů a vytvořit nové připojení SSL ke službě NDES.  
 
-  Další informace najdete v tématu [Naplánování certifikátů pro WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) a [Obecné informace o serverech WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
+  Další informace najdete v [plánování certifikátů pro WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn383650(v=ws.11)#plan-certificates) a [obecných informacích o serverech WAP](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn584113(v=ws.11)).
 
 ### <a name="accounts"></a>Účty   
 - **Účet služby NDES** – před nastavením NDES určete účet uživatele domény, který chcete použít jako účet služby NDES. Tento účet zadáte při konfiguraci šablon ve vydávající certifikační autoritě před konfigurací NDES.  
@@ -80,7 +81,7 @@ Následující místní infrastruktura je volitelná:
 
 - **Přístup k certifikační autoritě** : budete potřebovat účet uživatele domény, který má práva ke správě vaší certifikační autority.  
 
-### <a name="network-requirements"></a>Síťové požadavky
+### <a name="network-requirements"></a>Požadavky sítě
 
 Službu NDES doporučujeme publikovat prostřednictvím reverzního proxy serveru, jako je například [proxy aplikace služby Azure AD, Web Access proxy server](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-publish/)nebo proxy třetí strany. Pokud nepoužíváte reverzní proxy server, povolte provoz TCP na portu 443 od všech hostitelů a IP adres na internetu ke službě NDES.  
 
@@ -90,11 +91,11 @@ Povolí všechny porty a protokoly, které jsou nezbytné pro komunikaci mezi sl
 
 Při použití SCEP se používají následující certifikáty a šablony.
 
-|Objekt    |Podrobnosti    |
+|Objekt    |Details    |
 |----------|-----------|
 |**Šablona certifikátu SCEP**         |Šablona, kterou nakonfigurujete ve vaší vydávající certifikační autoritě, která se používá k sestavování požadavků SCEP zařízení. |
 |**Certifikát pro ověřování klientů** |Požadováno od vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát nainstalujete do počítače, který je hostitelem služby NDES a používá ho Intune Certificate Connector.<br /> Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
-|**Certifikát ověřování serveru** |Certifikát webového serveru vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát SSL nainstalujete a navážete ve službě IIS na počítači, který je hostitelem NDES.<br />Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
+|**Ověřovací certifikát serverů** |Certifikát webového serveru vyžádaný z vaší vydávající certifikační autority nebo veřejné certifikační autority.<br /> Tento certifikát SSL nainstalujete a navážete ve službě IIS na počítači, který je hostitelem NDES.<br />Pokud má certifikát nastavené použití klíče *klienta* a *serveru* (**rozšířené použití klíčů**) na šabloně certifikační autority, kterou používáte k vystavení tohoto certifikátu. Pak můžete použít stejný certifikát pro ověřování serverů a klientů. |
 |**Certifikát důvěryhodné kořenové certifikační autority**       |Chcete-li použít profil certifikátu SCEP, musí zařízení důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Použijte *profil důvěryhodného certifikátu* v Intune a zřiďte certifikát důvěryhodné kořenové certifikační autority pro uživatele a zařízení. <br/><br/> **-**  Použijte jeden certifikát důvěryhodné kořenové certifikační autority na každou platformu operačního systému a přidružte tento certifikát ke každému profilu důvěryhodného certifikátu, který vytvoříte. <br /><br /> **-**  V případě potřeby můžete použít další certifikáty důvěryhodných kořenových certifikačních autorit. Můžete například použít další certifikáty k poskytnutí vztahu důvěryhodnosti certifikační autoritě, která podepisuje ověřovací certifikáty serverů pro vaše přístupové body Wi-Fi. Vytvořte další certifikáty důvěryhodných kořenových certifikačních autorit pro vydávání certifikačních autorit.  V profilu certifikátu SCEP, který jste vytvořili v Intune, nezapomeňte zadat profil důvěryhodné kořenové certifikační autority pro vydávající certifikační autoritu.<br/><br/> Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. |
 
 ## <a name="configure-the-certification-authority"></a>Konfigurace certifikační autority
@@ -113,7 +114,7 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
 
 ### <a name="create-the-scep-certificate-template"></a>Vytvoření šablony certifikátu SCEP
 
-1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Můžete:  
+1. Vytvořte šablonu certifikátu v2 (s kompatibilitou systému Windows 2003), která se použije jako šablona certifikátu SCEP. Můžete postupovat následovně:  
    - Pomocí modulu snap-in *šablony certifikátů* vytvořte novou vlastní šablonu.  
    - Zkopírujte existující šablonu (třeba šablonu Uživatel) a pak aktualizujte kopii, která se má použít jako šablona NDES.
  
@@ -125,32 +126,32 @@ Následující části vyžadují znalost systému Windows Server 2012 R2 nebo n
    - **Název předmětu**:  
      - **V žádosti vyberte dodat**. Zabezpečení se vynutilo modulem zásad Intune pro NDES.  
 
-     ![Šablona, karta název subjektu](./media/certificates-scep-configure/scep-ndes-subject-name.jpg)
+     ![Šablona, karta Název subjektu](./media/certificates-scep-configure/scep-ndes-subject-name.jpg)
    - **Rozšíření**:  
      - Ujistěte se, že **Popis zásad použití** obsahuje **ověření klienta**.  
        > [!IMPORTANT]  
-       > Přidejte pouze zásady pro aplikace, které požadujete. Potvrďte své volby pomocí správců zabezpečení.
+       > Přidejte pouze zásady pro aplikace, které požadujete. Správnost zadaných voleb zkontrolujte se správci zabezpečení.
  
      - V případě šablon certifikátů pro iOS a macOS také upravte **použití klíče** a ujistěte se, že není vybraná možnost **podpis je důkazem původu** .
 
-     ![Šablona, karta rozšíření](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
+     ![Šablona, karta Rozšíření](./media/certificates-scep-configure/scep-ndes-extensions.jpg)  
 
-   - **Zabezpečení:**  
+   - **Zabezpečení**:  
      - Přidejte **účet služby NDES**. Tento účet vyžaduje pro tuto šablonu oprávnění **ke čtení** a **zápisu** .
 
      - Přidejte další účty pro správce Intune, kteří budou vytvářet profily SCEP. Tyto účty vyžadují pro šablonu oprávnění **ke čtení** , aby tito správci mohli při vytváření profilů SCEP přejít k této šabloně.  
 
-     ![Šablona, karta zabezpečení](./media/certificates-scep-configure/scep-ndes-security.jpg)  
+     ![Šablona, karta Zabezpečení](./media/certificates-scep-configure/scep-ndes-security.jpg)  
 
    - **Zpracování žádosti**:  
       Následující obrázek je příklad. Vaše konfigurace se může lišit.  
 
-     ![Šablona, karta vyřízení žádosti](./media/certificates-scep-configure/scep-ndes-request-handling.png) 
+     ![Šablona, karta Vyřízení žádosti](./media/certificates-scep-configure/scep-ndes-request-handling.png) 
 
    - **Požadavky na vystavení**:  
      Následující obrázek je příklad. Vaše konfigurace se může lišit.  
 
-     ![Šablona, karta požadavky na vystavování](./media/certificates-scep-configure/scep-ndes-issuance-reqs.jpg)  
+     ![Šablona, karta Požadavky na vystavování](./media/certificates-scep-configure/scep-ndes-issuance-reqs.jpg)  
 
 3. Uložte šablonu certifikátu.  
 
@@ -197,7 +198,7 @@ Ve výchozím nastavení Intune používá hodnotu nakonfigurovanou v šabloně.
 > Pro iOS a macOS vždy použijte hodnotu nastavenou v šabloně.  
 
 #### <a name="to-configure-a-value-that-can-be-set-from-within-the-intune-console"></a>Konfigurace hodnoty, kterou je možné nastavit v konzole Intune  
-1. V certifikační autoritě spusťte následující příkazy:  
+1. V certifikační autoritě spusťte tyto příkazy:  
    -**certutil-setreg policy\EditFlags + EDITF_ATTRIBUTEENDDATE**  
    -**net stop certsvc**  
    -**net start certsvc**  
@@ -212,24 +213,24 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 ### <a name="install-the-ndes-service"></a>Instalace služby NDES  
 1. Na serveru, který bude hostovat službu NDES, se přihlaste jako **správce podnikové sítě**a potom pomocí [Průvodce přidáním rolí a funkcí](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831809(v=ws.11)) nainstalujte NDES:
 
-   1. V průvodci vyberte **Active Directory Certificate Services** , abyste získali přístup ke službám role AD CS. Vyberte **Služba zápisu síťových zařízení**, zrušte zaškrtnutí políčka **certifikační autorita**a pak dokončete průvodce.  
+   1. V průvodci vyberte možnost **Služba AD CS (Active Directory Certificate Services)** , abyste získali přístup ke službám rolí ve službě AD CS. Vyberte **Služba zápisu síťových zařízení**, zrušte zaškrtnutí políčka **certifikační autorita**a pak dokončete průvodce.  
 
       > [!TIP]  
-      > V **průběhu instalace**nevybírejte možnost **Zavřít**. Místo toho vyberte odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru** . Otevře se průvodce **konfigurací služby AD CS** , který použijete pro další postup v tomto článku, a *nakonfigurujte službu NDES*. Po otevření konfigurace služby AD CS můžete zavřít průvodce přidáním rolí a funkcí.  
+      > V **průběhu instalace**nevybírejte možnost **Zavřít**. Místo toho vyberte odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru**. Otevře se průvodce **konfigurací služby AD CS** , který použijete pro další postup v tomto článku, a *nakonfigurujte službu NDES*. Po otevření Konfigurace služby AD CS můžete zavřít Průvodce přidáním rolí a funkcí.  
 
-   2. Když se na server přidá NDES, Průvodce nainstaluje taky službu IIS. Ověřte, zda má služba IIS následující konfigurace:  
+   2. Když se na server přidá NDES, průvodce nainstaluje taky službu IIS. Ověřte, zda má služba IIS následující konfigurace:  
 
-      - **Webový Server** > **zabezpečení** > **filtrování žádostí**  
-      - **Webový Server**@no__t – 1 @no__t**vývoj aplikací**-3**ASP.NET 3,5**  
+      - **Webový server** > **Zabezpečení** > **Filtrování požadavků**  
+      - **Webový server** > **Vývoj aplikací** > **ASP.NET 3.5**  
 
-        Instalace ASP.NET 3,5 nainstaluje .NET Framework 3,5. Při instalaci .NET Framework 3,5 nainstalujte základní funkce **.NET Framework 3,5** a **aktivaci protokolem HTTP**.  
-      - **Webový Server**@no__t – 1 @no__t**vývoj aplikací**-3**ASP.NET 4,5**  
+        Instalace technologie ASP.NET 3.5 nainstaluje rozhraní .NET Framework 3.5. Při instalaci rozhraní .NET Framework 3.5 nainstalujte základní **rozhraní .NET Framework 3.5** i **Aktivaci protokolem HTTP**.  
+      - **Webový server** > **Vývoj aplikací** > **ASP.NET 4.5**  
 
-        Instalace ASP.NET 4,5 nainstaluje .NET Framework 4,5. Při instalaci .NET Framework 4,5 nainstalujte funkci Core **.NET Framework 4,5** , **ASP.NET 4,5**a funkci **služby WCF** **Aktivace protokolem HTTP**  > .  
+        Instalace technologie ASP.NET 4.5 nainstaluje rozhraní .NET Framework 4.5. Při instalaci rozhraní .NET Framework 4.5 nainstalujte základní funkci rozhraní **.NET Framework 4.5**, **ASP.NET 4.5** a funkci **Služby WCF** > **Aktivace protokolem HTTP**.  
 
       - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita metabáze služby IIS 6**  
-      - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **IIS 6 WMI Compatibility**  
-      - Na serveru přidejte účet služby NDES jako člena místní skupiny **IIS_IUSR** .  
+      - **Nástroje pro správu** > **Kompatibilita správy služby IIS 6** > **Kompatibilita rozhraní WMI služby IIS 6**  
+      - Na serveru přidejte účet služby NDES jako člena místní skupiny **IIS_IUSR**.  
 
 2. V počítači, který je hostitelem služby NDES, spusťte na příkazovém řádku se zvýšenými oprávněními následující příkaz. Následující příkaz nastaví hlavní název služby (SPN) účtu služby NDES:  
 
@@ -244,13 +245,13 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 1. V počítači, který je hostitelem služby NDES, spusťte průvodce **konfigurací služby AD CS** a proveďte následující aktualizace:  
 
    > [!TIP]  
-   > Pokud budete pokračovat od posledního postupu a kliknete na odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru** , měl by být tento průvodce už otevřený. V opačném případě otevřete Správce serveru pro přístup k konfiguraci po nasazení pro službu AD CS (Active Directory Certificate Services).  
+   > Pokud budete pokračovat od posledního postupu a kliknete na odkaz **Konfigurovat službu AD CS (Active Directory Certificate Services) na cílovém serveru** , měl by být tento průvodce už otevřený. Jinak spusťte Správce serveru, abyste získali přístup ke konfiguraci po nasazení pro službu AD CS (Active Directory Certificate Services).  
 
    - V části **služby rolí**vyberte **Služba zápisu síťových zařízení**.
    - V části **účet služby pro službu NDES**zadejte účet služby NDES.
    - V části **certifikační autorita pro NDES**klikněte na **Vybrat**a pak vyberte vydávající certifikační autoritu, kam jste nakonfigurovali šablonu certifikátu.
-   - V části **kryptografie pro službu NDES**nastavte délku klíče podle požadavků vaší společnosti.
-   - V části **potvrzení**vyberte **Konfigurovat** a dokončete průvodce.
+   - V části **Kryptografie pro službu NDES** nastavte délku klíče podle požadavků vaší společnosti.
+   - V části **Potvrzení** vyberte **Konfigurovat** a dokončete průvodce.
 
 2. Po dokončení průvodce aktualizujte následující klíč registru v počítači, který je hostitelem služby NDES:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\MSCEP\`  
@@ -259,18 +260,18 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
    Následující tabulka mapuje účel šablony certifikátu na hodnoty v registru:
    
-   |Účel šablony certifikátu (na kartě vyřízení žádosti)|Hodnota registru, která se má upravit|Hodnota zobrazená v konzole pro správu Intune pro profil SCEP|
+   |Účel šablony certifikátu (na kartě Vyřízení žádosti)|Upravovaná hodnota registru|Hodnota zobrazená v konzole pro správu Intune pro profil SCEP|
    |------------------------|-------------------------|---|
-   |Označení               |SignatureTemplate        |Digitální podpis |
-   |Šifrování              |EncryptionTemplate       |Šifrování klíče  |
+   |Podpis               |SignatureTemplate        |Digitální podpis |
+   |Encryption              |EncryptionTemplate       |Šifrování klíče  |
    |Podpis a šifrování|GeneralPurposeTemplate   |Šifrování klíče<br/>Digitální podpis |  
 
-   Pokud má například účel šablony certifikátu **šifrování**, pak upravte hodnotu **EncryptionTemplate** tak, aby byla názvem vaší šablony certifikátu.  
+   Pokud je třeba účelem šablony certifikátu **Šifrování**, pak upravte hodnotu **EncryptionTemplate** , aby byla názvem vaší šablony certifikátu.  
 
 3. Nakonfigurujte filtrování požadavků služby IIS a přidejte podporu služby IIS pro dlouhé adresy URL (dotazy), které služba NDES obdrží.
    1. Ve Správci služby IIS vyberte **výchozí webový server** > **filtrování žádostí** > **Upravit nastavení funkce** a otevřete stránku **Upravit nastavení filtrování požadavků** .  
 
-   2. Nakonfigurujte následující nastavení:  
+   2. Proveďte konfiguraci následujících nastavení:  
       - **Maximální délka adresy URL (bajty)** = 65534  
       - **Maximální délka řetězce dotazu (bajty)** = 65534  
    3. Výběrem **OK** tuto konfiguraci uložte a zavřete Správce služby IIS.  
@@ -302,11 +303,11 @@ Následující postupy vám pomůžou nakonfigurovat službu zápisu síťových
 
 2. Vytvoření vazby ověřovacího certifikátu serveru ve službě IIS:  
   
-   1. Po instalaci ověřovacího certifikátu serveru otevřete **Správce služby IIS**a vyberte **výchozí web**. V podokně **Akce** vyberte **vazby**.  
-   1. Vyberte **Přidat**, nastavte **typ** na **https**a pak potvrďte, že port je **443**.  
-   1. Pro **certifikát SSL**zadejte ověřovací certifikát serverů.  
+   1. Po instalaci ověřovacího certifikátu serveru otevřete **Správce služby IIS**a vyberte **výchozí web**. V podokně **Akce** vyberte **Vazby**.  
+   1. Vyberte **Přidat**, nastavte **Typ** na **https** a potom zkontrolujte, že port je **443**.  
+   1. Jako **Certifikát SSL**zadejte ověřovací certifikát serverů.  
  
-3. Na serveru NDES vyžádejte a nainstalujte certifikát pro **ověřování klientů** z vaší interní certifikační autority nebo veřejné certifikační autority.  
+3. Na serveru NDES vyžádejte a nainstalujte certifikát pro **ověřování klientů** z vaší interní certifikační autority nebo z veřejné certifikační autority.  
 
    Certifikát pro ověřování klientů musí mít následující vlastnosti:  
    - **Rozšířené použití klíče**: Tato hodnota musí zahrnovat **ověřování klientů**.  
@@ -320,45 +321,45 @@ Microsoft Intune Certificate Connector se nainstaluje na server, na kterém bě�
 Instalace Certificate Connectoru:  
 1. Přihlaste se k [portálu Intune](https://aka.ms/intuneportal) pomocí účtu, který má práva k Intune.  
 
-2. Vyberte **Konfigurace zařízení** > **certifikační autorita** > **Přidat**.  
+2. Vyberte **Konfigurace zařízení** > **Certifikační autorita** > **Přidat**.  
 
-3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupného ze serveru, na který budete konektor instalovat.
+3. Stáhněte a uložte konektor pro soubor SCEP. Uložte ho do umístění přístupného ze serveru, na který chcete konektor nainstalovat.
 
    ![ConnectorDownload](./media/certificates-scep-configure/download-certificates-connector.png)
 
-4. Po dokončení stahování přejdete na server, který je hostitelem role služby zápisu síťových zařízení (NDES). Potom:  
+4. Jakmile se soubor stáhne, přejděte na server hostující roli NDES (Network Device Enrollment Service). Další kroky:  
 
    1. Ověřte, že je nainstalovaná platforma .NET 4,5, jak je vyžaduje Intune Certificate Connector. Rozhraní .NET 4,5 je automaticky součástí systému Windows Server 2012 R2 a novějších verzí.  
-   2. Spusťte instalační program (**NDESConnectorSetup. exe**). Instalační program nainstaluje také modul zásad pro NDES a webovou službu bodu registrace certifikátu IIS (CRP). Webová služba CRP, *CertificateRegistrationSvc*, běží jako aplikace ve službě IIS.  
+   2. Spusťte instalační program (**NDESConnectorSetup.exe**). Instalační program nainstaluje také modul zásad pro NDES a webovou službu bodu registrace certifikátu IIS (CRP). Webová služba CRP, *CertificateRegistrationSvc*, běží jako aplikace ve službě IIS.  
 
-      - Při instalaci NDES pro samostatnou službu Intune se služba CRP automaticky nainstaluje s konektorem Certificate Connector. 
+      - Při instalaci NDES pro samostatnou službu Intune se s konektorem Certificate Connector automaticky nainstaluje služba CRP. 
       - Pokud používáte Intune s Configuration Manager, nainstalujete bod registrace certifikátu jako Configuration Manager role systému lokality.  
 5. Až se zobrazí výzva k zadání klientského certifikátu pro Certificate Connector, zvolte **Vybrat**a vyberte certifikát pro **ověřování klientů** , který jste nainstalovali na Server NDES během kroku #3 postupu [instalace a vázání certifikátů na Server, který je hostitelem NDES](#install-and-bind-certificates-on-the-server-that-hosts-ndes) z dříve v tomto článku.  
 
-   Po vybrání certifikátu pro ověřování klientů se vrátíte do **klientského certifikátu pro Microsoft Intune Certificate Connector** Surface. I když vybraný certifikát není zobrazený, kliknutím na **Další** zobrazte vlastnosti certifikátu. Vyberte **Další**a potom **nainstalovat**.
+   Po vybrání certifikátu pro ověřování klientů se vrátíte do **klientského certifikátu pro Microsoft Intune Certificate Connector** Surface. I když vybraný certifikát není zobrazený, kliknutím na **Další** zobrazte vlastnosti certifikátu. Vyberte **Další** a potom **Nainstalovat**.
 
-6. Po dokončení průvodce, ale před zavřením průvodce **Spusťte uživatelské rozhraní konektoru Certificate Connector**.  
+6. Po dokončení průvodce klikněte před jeho zavřením na **Spustit uživatelské rozhraní konektoru Certificate Connector**.  
 
    Pokud průvodce zavřete před spuštěním uživatelského rozhraní konektoru Certificate Connector, můžete ho znovu otevřít spuštěním následujícího příkazu: *< install_Path > \NDESConnectorUI\NDESConnectorUI.exe*
 
 7. V uživatelském rozhraní **Certificate Connectoru** :  
-   1. Vyberte **Přihlásit**se a zadejte svoje přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce klienta s oprávněním pro globální správu.  
+   1. Vyberte **Přihlásit** a zadejte své přihlašovací údaje správce služby Intune nebo přihlašovací údaje správce klienta s oprávněním pro globální správu.  
    2. K účtu, který použijete, se musí přiřadit platná licence Intune.  
-   3. Po přihlášení stáhne Intune Certificate Connector certifikát z Intune. Tento certifikát se používá pro ověřování mezi konektorem a Intune. Pokud účet, který jste použili, nemá licenci Intune, konektor (NDESConnectorUI. exe) se nepodaří získat certifikát z Intune.  
+   3. Po přihlášení stáhne Intune Certificate Connector certifikát z Intune. Tento certifikát se používá k ověřování mezi konektorem a Intune. Pokud účet, který jste použili, nemá licenci Intune, konektor (NDESConnectorUI. exe) se nepodaří získat certifikát z Intune.  
 
-      Pokud vaše organizace používá proxy server a je potřeba, aby server NDES měl přístup k Internetu, vyberte **použít proxy server**. Pak zadejte proxy server název, port a přihlašovací údaje účtu pro připojení.  
+      Pokud vaše organizace používá proxy server a ten je vyžadovaný pro přístup serveru NDES k internetu, vyberte **Použít proxy server**. Pak zadejte název proxy serveru, port a přihlašovací údaje účtu pro připojení.  
 
-    4. Vyberte kartu **Upřesnit** a pak zadejte přihlašovací údaje pro účet, který má oprávnění **vydávat a spravovat certifikáty** ve vaší vydávající certifikační autoritě. **Použijte** změny.  
+    4. Vyberte kartu **Upřesnit** a pak zadejte přihlašovací údaje pro účet, který má oprávnění **vydávat a spravovat certifikáty** ve vaší vydávající certifikační autoritě. Provedené změny **použijte**.  
 
-    5. Nyní můžete zavřít uživatelské rozhraní Certificate Connectoru.  
+    5. Teď můžete zavřít uživatelského rozhraní Certificate Connectoru.  
 
-8. Otevřete příkazový řádek, zadejte **Services. msc**a potom **Zadejte**. Pravým tlačítkem myši klikněte na **službu Intune Connector** > **restartování**.
+8. Otevřete příkazový řádek, zadejte **services.msc** a stiskněte **Enter**. Pravým tlačítkem myši klikněte na **Služba konektoru Intune** > **Restartovat**.
 
 
-Pokud chcete ověřit, jestli je služba spuštěná, otevřete prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** : `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
+Pokud chcete ověřit, že je služba spuštěná, spusťte prohlížeč a zadejte následující adresu URL. Měla by vrátit chybu **403** : `https://<FQDN_of_your_NDES_server>/certsrv/mscep/mscep.dll`  
 
 > [!NOTE]  
-> Intune Certificate Connector podporuje TLS 1,2. Pokud server, který je hostitelem konektoru, podporuje protokol TLS 1,2, použije se protokol TLS 1,2. Pokud server nepodporuje TLS 1,2, použije se TLS 1,1. V současné době se k ověřování mezi zařízeními a serverem používá protokol TLS 1,1.
+> Intune Certificate Connector podporuje TLS 1,2. Pokud server, který je hostitelem konektoru, podporuje protokol TLS 1,2, použije se protokol TLS 1,2. Pokud server nepodporuje TLS 1.2, použije se TLS 1.1. V současnosti se k ověřování zařízení a serveru používá protokol TLS 1.1.
 
 ## <a name="next-steps"></a>Další kroky
 

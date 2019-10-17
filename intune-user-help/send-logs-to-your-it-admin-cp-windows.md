@@ -1,6 +1,6 @@
 ---
 title: Odeslání protokolů firemní podpoře pro zařízení s Windows 10 | Dokumentace Microsoftu
-description: Podrobnosti chyb a protokolů e-mailu usnadnit firemní podpoře opravit problémy s aplikací
+description: Podrobnosti o chybě a protokolu e-mailu, které společnosti pomůžou podporovat řešení problémů s aplikacemi
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: bd428c14-7d75-42de-9322-b57323a01f06
 searchScope:
@@ -18,44 +19,44 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 4ee2a83945e4b9e6c5509abff7c32605f64ca545
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528767"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508355"
 ---
-# <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>E-mailem podpoře společnosti o problém z portálu společnosti pro Windows
+# <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>Poslat e-mail firemní podpoře o problému z Portál společnosti pro Windows
 
-Vaše řešení problémů s aplikací v aplikaci portál společnosti pro Windows 10. Pokud narazíte na problém, když jste na zařízení s Windows 10, můžete poslat e-mail týmu podpory pro nápovědu. 
+Řešení potíží s aplikacemi v aplikaci Portál společnosti pro Windows 10. Pokud narazíte na problém, který se nachází na zařízení s Windows 10, můžete vám poslat tým podpory e-mailem. 
 
-Když požádáte o pomoc, předem vyplněná e-mailu se otevře, kde můžete problém podrobně popisují. Zahrnuje také diagnostický protokol ID. Pokud váš tým podpory nelze vyřešit problém, podle popisu, že budete pomoc od společnosti Microsoft. Microsoft bude potřebovat ID diagnostiky tak, aby odkazovaly aplikačních protokolech.   
+Když si vyžádáte žádost o podporu, otevře se předem vyplněný e-mail, kde můžete podrobně popsat problém. Obsahuje také ID diagnostického protokolu. Pokud váš tým podpory nedokáže problém vyřešit na základě vašeho popisu, požádejte ho o pomoc Microsoftu. Microsoft bude potřebovat ID diagnostiky, aby odkazoval na protokoly aplikace.   
 
 
 > [!Note]
-> Po kliknutí na **pomoc**, portál společnosti bude automaticky odesílat protokoly na tým podpory společnosti Microsoft. Tento krok je aktivní jeden, který umožňuje snadněji odstraňovat potíže a řešit problémy, které jsou eskalován na podporu Microsoftu. Jak je uvedeno výše, tým podpory společnosti Microsoft možné dotyčného protokolů k e-mailu pomocí ID diagnostiky.  
+> Po kliknutí na **získat nápovědu**bude portál společnosti automaticky odesílat vaše protokoly do týmu podpory společnosti Microsoft. Tento krok je proaktivní, který usnadňuje řešení problémů a řešení problémů, které jsou přeložené podpoře Microsoftu. Jak je uvedeno výše, tým podpory Microsoftu může vyžádat si protokoly pomocí ID diagnostiky v e-mailu.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Co je diagnostický protokol?
 
-Události a chyby, ke kterým dochází v aplikaci portál společnosti se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Můžete zobrazit protokoly:  
-* Kdy k problému došlo.  
+Události a chyby, ke kterým dochází v aplikaci Portál společnosti, se uloží do vašeho zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Protokoly můžou odhalit:  
+* V případě, že došlo k potížím.  
 * Kroky vedoucí k problému.  
-* Stav aplikace, když se objevil problém.   
+* Stav aplikace v okamžiku, kdy se problém objevil.   
 
-## <a name="steps-to-get-help"></a>Postup získání nápovědy  
+## <a name="steps-to-get-help"></a>Postup získání nápovědu  
 
 1. Otevřete aplikaci **Portál společnosti**.
-2. Vyberte **Nápověda a podpora** > **pomoc**.  
+2. Vyberte **nápověda & podpora** > **získat nápovědu**.  
 
-   ![Snímek obrazovky stránky nápovědy a podpory zvýraznění části levého navigačního panelu a získání nápovědy.](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
+   ![Snímek obrazovky se stránkou podpory & pro nápovědu, zvýraznění levého navigačního panelu a získání oddílu s nápovědu](./media/1812_UCP_Help_Support_Get_Help_Logs.png)    
 
-3. Když **sdílenou složku** obrazovka se zobrazí, vyberte **e-mailu**. **E-mailu** aplikace pro vytvoření e-mailovou zprávu. Zadejte popis problému, který zaznamenal/zaznamenala jste tak, aby měl tým podpory představu, co se má hledat.  
+3. Když se zobrazí obrazovka **sdílet** , vyberte **Pošta**. E **-mailová aplikace vám** vytvoří e-mailovou zprávu. Zadejte popis problému, ke kterému došlo, aby tým podpory měl představu o tom, co se má hledat.  
 
-   ![Snímek obrazovky pro sdílení, zvýraznění na ikonu aplikace e-mailu.](./media/1811_Mail_Logs_Windows_CPapp.png)  
+   ![Snímek obrazovky sdílet se zvýrazněnou ikonou e-mailové aplikace](./media/1811_Mail_Logs_Windows_CPapp.png)  
 
 
-   ![Snímek obrazovky s předem vyplněná e-mailu, který se otevře v e-mailové aplikace.](./media/1811_Get_Help_Email_Windows_CPapp.png)  
+   ![Snímek obrazovky předem vytvořeného e-mailu, který se otevře v aplikaci Mail](./media/1811_Get_Help_Email_Windows_CPapp.png)  
 
-Pokud vaše společnost potřebuje další informace o aktivitě aplikací a zařízení, možná budete muset odeslat [protokoly z aplikace nastavení](send-logs-to-your-it-admin-settings-windows.md).  
+Pokud vaše společnost potřebuje další informace o aktivitě aplikace nebo zařízení, může být potřeba odeslat [protokoly z aplikace nastavení](send-logs-to-your-it-admin-settings-windows.md).  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

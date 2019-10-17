@@ -9,20 +9,21 @@ manager: dougeby
 ms.date: 03/04/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1b87d87017b0e1df0b649cb1e50dd6353cb0d2e9
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: c99c166713b9e3d8614ebe8f2756a586356c5b3b
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730302"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490729"
 ---
-# <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Rozhraní Graph API a odpovídajícího zprostředkovatele CSP pro Windows 10 používaného v Intune
+# <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Používání rozhraní Graph API a odpovídajících poskytovatelů konfiguračních služeb pro Windows 10 v Intune
 
 Microsoft Intune používá [entity Graph API](https://docs.microsoft.com/graph/api/resources/intune-graph-overview) (otevře další web dokumentů) ke konfiguraci zařízení (**Konfigurace zařízení**s**Intune** > ) se systémem Windows 10 nebo novějším. Graph API používá poskytovatele konfiguračních služeb (CSP) ke čtení, nastavení, změně nebo odstranění nastavení konfigurace na zařízeních.
 

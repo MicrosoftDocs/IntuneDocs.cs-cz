@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 05/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04cafd2cf69bbd42a35ade3ae180e8af8789c938
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 1eda7fef3ee9c2ca4e4a13d9b6effba2ed121b0e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730922"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506956"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS, které můžete použít v Intune
 
@@ -39,7 +40,7 @@ Když konfigurujete funkce na zařízeních s iOS, můžete taky přidat integro
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
-| com. Apple. DocumentsApp      | Spis        | Apple     |
+| com. Apple. DocumentsApp      | spis        | Apple     |
 | com.apple.mobileme.fmf1     | Najít přátele | Apple     |
 | com.apple.mobileme.fmip1    | Najít iPhone  | Apple     |
 | com.apple.gamecenter        | Herní centrum  | Apple     |

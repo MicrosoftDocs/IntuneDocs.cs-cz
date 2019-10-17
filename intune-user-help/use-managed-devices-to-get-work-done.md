@@ -9,6 +9,7 @@ ms.date: 09/13/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 523caa6b-d792-4bb6-bddb-24b2479932d8
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 98fd937ee379d71874f61152d88ddc94fa5b7a09
-ms.sourcegitcommit: 3db8af810b95c3a6ed3f8cc00f6ce79076ebb9db
+ms.openlocfilehash: ca1776915d50858c28b43a49faa7c737c825c67d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012424"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501852"
 ---
 # <a name="what-is-device-enrollment"></a>Co je registrace zařízení?
 Pokud chcete získat přístup k pracovním nebo školním prostředkům ze svého zařízení, budete muset své zařízení zaregistrovat v aplikaci Portál společnosti Intune nebo Microsoft Intune. 
@@ -59,11 +60,11 @@ Aplikace Microsoft Intune je určena pro zařízení s Androidem vlastněná spo
 ## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Jaký druh zařízení je možné zaregistrovat v Portál společnosti?
 Pomocí Portál společnosti můžete zaregistrovat následující zařízení:  
 
-- Zařízení Windows
+- Zařízení s Windows
   - Windows 10 Mobile
   - Windows 10 Desktop
-  - Windows Phone 8.1
-  - Windows 8.1
+  - Wvdows Phone 8.1
+  - Windows 8.1
 - Zařízení Apple
     - iOS
     - macOS
@@ -98,7 +99,7 @@ Pokud chcete řešit běžné problémy, podívejte se na tyto dokumentace pro k
 
 Můžete se také obrátit na osobu podpory IT. Aplikace Portál společnosti a Microsoft Intune nabízejí stránky pro nápovědu a podporu, které uvádějí kontaktní informace a způsoby, jak ohlásit problém. Kontaktní informace jsou také k dispozici na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980)vaší organizace.  
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 Pokud jste připraveni na přístup k pracovnímu nebo školnímu účtu, zaregistrujte své zařízení podle pokynů ve vaší organizaci. Podrobné pokyny k registraci můžete najít také v následujících článcích.
 

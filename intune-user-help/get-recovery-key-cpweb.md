@@ -9,6 +9,7 @@ ms.date: 09/03/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8048b29bdd456f9db8bb3d01e84bad5899e0b9a6
-ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
+ms.openlocfilehash: 822d995443ca23eac7f96f8314f9926804e0be24
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163568"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508515"
 ---
 # <a name="get-a-recovery-key-for-a-macos-device"></a>Získání obnovovacího klíče pro zařízení macOS
 
@@ -43,7 +44,7 @@ Tato možnost je dostupná jenom pro zařízení, která byla zašifrovaná vaš
 
     Z bezpečnostních důvodů se klíč po pěti minutách ztratí. Pokud chcete klíč znovu zobrazit, vyberte **získat obnovovací klíč**.
 
-Pokud se klíč nenajde, ale vaše zařízení je správně zašifrované, obraťte se na pracovníky podpory vaší organizace. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Pokud se klíč nenajde, ale vaše zařízení je správně zašifrované, obraťte se na pracovníky podpory vaší organizace. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 ## <a name="it-pro-support"></a>Podpora IT pro
 
@@ -53,4 +54,4 @@ Pokud jste pracovníkem podpory IT a chcete nakonfigurovat a spravovat šifrová
 
 Zjistěte, co dalšího můžete dělat na webu Portál společnosti. Seznam akcí najdete v tématu věnovaném [použití portál společnosti Intune webu](using-the-intune-company-portal-website.md) .  
 
-Ještě potřebujete pomáhat? Obraťte se na pracovníky podpory IT. Kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na pracovníky podpory IT. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

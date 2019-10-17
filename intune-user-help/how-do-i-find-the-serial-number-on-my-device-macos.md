@@ -1,5 +1,5 @@
 ---
-title: Jak na zařízení s iOSem najdu sériové číslo? | Dokumenty Microsoft
+title: Jak na zařízení s iOSem najdu sériové číslo? | Dokumentace Microsoftu
 description: ''
 keywords: ''
 author: lenewsad
@@ -9,6 +9,7 @@ ms.date: 12/06/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 528f2b32-6802-42f7-af30-b3d1397f689a
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e178133e23182b105a18d608ccda93f0a01efa3
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 47b6417d8aca350ee68ef64245006cca5d654e7f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497205"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505849"
 ---
 # <a name="how-do-i-find-the-serial-number-on-my-device"></a>Jak na zařízení najdu sériové číslo?
 

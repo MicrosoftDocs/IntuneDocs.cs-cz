@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.reviewer: ''
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e92e3442e1347cb1a2cd1c737078912b74f075c9
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 44733eb369e520d2d5f0ff548d4f1921abcb8758
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817555"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503576"
 ---
 # <a name="troubleshoot-integration-of-jamf-pro-with-microsoft-intune"></a>Řešení potíží s integrací Jamf pro s Microsoft Intune
 
@@ -30,7 +31,7 @@ Tento článek pomáhá správcům Intune pochopit a řešit problémy s integra
 > [!TIP]  
 > Většina informací v tomto článku se původně objevila při [řešení potíží při integraci Jamf s Microsoft Intune](https://support.microsoft.com/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune) v support.Microsoft.com.
 
-## <a name="prerequisites"></a>Předpoklady
+## <a name="prerequisites"></a>Požadované součásti
 
 Než začnete s odstraňováním potíží, shromážděte některé základní informace pro objasnění problému a zkrácení doby hledání řešení. Například pokud narazíte na problém související s integrací Jamf-Intune, vždy ověřte, že byly splněny všechny požadavky. Než začnete řešit potíže, přečtěte si následující skutečnosti:
 
@@ -41,9 +42,9 @@ Než začnete s odstraňováním potíží, shromážděte některé základní 
 
 
 Při zkoumání integrace Jamf pro s Intune Vezměte v úvahu následující informace: 
-- Jaké je přesné znění chybové zprávy?
+- Jaká je přesná chybová zpráva?
 - Kde je chybová zpráva?
-- Kdy tento problém začal?  Pracovala integrace s Jamf pro s Intune neustále?
+- Kdy problém začal?  Pracovala integrace s Jamf pro s Intune neustále?
 - Kolik uživatelů je ovlivněno? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
  
@@ -95,7 +96,7 @@ Například při otevření Microsoft Teams se zobrazí výzva s textem podobný
 **Příčina**: tyto výzvy vygeneruje Jamf pro pro každou platnou aplikaci, která vyžaduje registraci Azure AD. 
 
 **Řešení**   
-V příkazovém řádku musí uživatel pro přihlášení ke službě Azure AD zadat heslo zařízení. Mezi možnosti patří:
+V příkazovém řádku musí uživatel pro přihlášení ke službě Azure AD zadat heslo zařízení. Vaše možnosti jsou:
 - **Odepřít** – Přihlaste se a nepoužívejte aplikaci.
 - **Povolení** – jednorázové přihlášení Při příštím spuštění aplikace se zobrazí výzva k opětovnému přihlášení.
 - **Vždy povoleno** – přihlašovací údaje pro aplikaci jsou ukládány do mezipaměti. Při dalším spuštění aplikace se nezobrazí výzva k přihlášení.  
@@ -161,11 +162,11 @@ Změna zdroje registrace z Intune na Jamf:
 
 3. Po otevření portálu se zobrazí první obrazovka, která vás vyzve k přihlášení. Použití pracovního nebo školního účtu  
 
-4. Portál společnosti potvrdí informace o účtu a zobrazí vaše registrace zařízení a stav dodržování předpisů zařízením. Žluté trojúhelníky zvýrazňují akce, které je třeba provést při zabezpečení zařízení macOS pro školní nebo pracovní práci. Kliknutím na zahájit zahajte registraci.  
+4. Portál společnosti potvrdí informace o účtu a zobrazí vaše registrace zařízení a stav dodržování předpisů zařízením. Žlutými trojúhelníky jsou zvýrazněny akce, které je potřeba provést k zabezpečení zařízení s macOS pro školní nebo pracovní účely. Kliknutím na zahájit zahajte registraci.  
 
 5. Pokud se zobrazí výzva, zadejte přihlašovací údaje počítače.  
      
-Registrace zařízení ve správě může trvat několik minut. Během této doby můžete na svém zařízení provádět další věci. Po dokončení nastavení firemního přístupu se vám zobrazí zpráva s oznámením, že jste hotovi.
+Registrace zařízení do správy může trvat několik minut. Během toho ale můžete se zařízením pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.
 
 #### <a name="cause-5"></a>Příčina 5  
 

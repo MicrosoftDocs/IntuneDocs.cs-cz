@@ -9,6 +9,7 @@ ms.date: 05/23/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: fbc9c2b9-b454-4b33-86cc-650742bbf1e1
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a6b2e04e40aa12e791e34f3899686d5f5661df2
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 81f90c8022fb471ffa8783d636c88ce67a296595
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546696"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502052"
 ---
 # <a name="send-errors-to-your-company-support-for-issues-with-your-ios-device"></a>Odesílání chyb firemní podpoře při problémech se zařízením s iOSem
 Při používání aplikace Portál společnosti na zařízení s iOSem se někdy můžete setkat s chybou. Když se to stane, můžete podrobnosti o chybě poslat e-mailem pracovníkovi firemní podpory. Podrobnosti obsahují souvislosti potřebné k řešení problému.

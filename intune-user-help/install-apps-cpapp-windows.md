@@ -1,6 +1,6 @@
 ---
 title: Instalace aplikací z aplikace Portál společnosti Intune pro Windows
-description: Instalace a sdílení aplikace z aplikace portál společnosti pro Windows
+description: Instalace a sdílení aplikací z aplikace Portál společnosti pro Windows
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,28 +19,29 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9cb8168075badda65b3cd02f8ae059119769c7c
-ms.sourcegitcommit: 9c06d8071b9affeda32e367bfe85d89bc524ed0b
+ms.openlocfilehash: d8cb6976121f4c5a9ce755e8feb189ea007e7ffd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413900"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506129"
 ---
 # <a name="install-and-share-apps-on-your-device"></a>Instalace a sdílení aplikací na zařízení
+
 Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Windows.
 
 ## <a name="install-apps"></a>Instalace aplikací
 
 1. Otevřete aplikaci Portál společnosti a přihlaste se pomocí svého pracovního nebo školního účtu.  
 
-    ![Domovská stránka aplikace Portál společnosti pro Windows 10](./media/RS1_AppDetailsPage_Installed_03.png)    
+    ![Domovská stránka aplikace Portál společnosti pro Windows 10](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Vyhledejte a nainstalujte aplikace z některé z následujících částí aplikace Portál společnosti:  
 
-    * **Domů**: Vyberte ze seznamu vybrané aplikace vaší organizace.  
-    * **Zobrazit vše**: Z **domovskou stránku** > **aplikace** klikněte na tlačítko **Zobrazit vše** zobrazíte všechny dostupné aplikace.  
-    * **Všechny aplikace**: Na této stránce vyberte v navigačním podokně zobrazíte všechny dostupné aplikace, včetně, nainstalovaný a funkční. Zobrazit, řadit a filtrovat aplikace. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
-    * **Kategorie aplikací**: Na této stránce vyberte v navigačním podokně zvolte aplikace založené na typu nebo funkce. Aplikace jsou seřazeny podle kategorie, jako **doporučené**, **vzdělávání**, a **produktivitu**.  
-    * **Hledat aplikace**: Statické vyhledávacího nachází v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
+    * **Domů**: Vybírejte ze seznamu vybraných aplikací vaší organizace.  
+    * **Zobrazit vše**: V části **Domů** > **Aplikace** klikněte na **Zobrazit vše** a prohlédněte si všechny dostupné aplikace.  
+    * **Všechny aplikace**: Když vyberete tuto stránku v navigačním podokně, zobrazíte všechny dostupné aplikace, včetně nainstalovaných a vybraných. Zobrazení, řazení a filtrování aplikací Výsledky hledání jsou automaticky seřazené podle důležitosti.  
+    * **Kategorie aplikací**: Výběrem této stránky v navigačním podokně vyberte aplikace na základě typu nebo funkce. Aplikace jsou seřazené pod kategoriemi, jako jsou **Doporučené**, **vzdělávání**a **produktivita**.  
+    * **Hledat aplikace**: Statický panel hledání umístěný v navigačním podokně aplikace.  Pokud chcete vyhledat dostupné aplikace, hledejte podle názvu nebo vydavatele.  
 
 3. Vyberte aplikaci.   
 4. Na stránce s podrobnostmi aplikace klikněte na **Nainstalovat**. Jakmile se instalace dokončí, zobrazí se stav **Nainstalováno**.  
@@ -49,7 +51,7 @@ Nainstalujte si na zařízení aplikace z aplikace Portál společnosti pro Wind
     ![Stránka s podrobnostmi aplikace zobrazující stav Nainstalováno po instalaci aplikace v aplikaci Portál společnosti pro Windows 10 Tlačítko Nainstalovat se změní na Přeinstalovat.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
 > [!IMPORTANT]
-> Pokud se instalace nezdaří požadovanou aplikaci a vaše organizace zpřístupňuje je pro vás k ruční instalaci, vyberte **opakujte**. To může trvat až deset minut, pokud chcete zobrazit aktualizovaný stav. Pokud vyberete **opakujte** znovu během této doby a dojde k chybě, která je v pořádku. Počkejte 10 minut, než aktualizovaný stav i nadále.   
+> Pokud se požadovaná aplikace nedokáže nainstalovat a vaše organizace ji zpřístupní pro ruční instalaci, vyberte **Opakovat**. Zobrazení aktualizovaného stavu může trvat až deset minut. Pokud při této době vyberete znovu možnost **Opakovat** a zobrazí se chyba, je to v pořádku. Nadále čekat na aktualizovaný stav deset minut.   
 
 V závislosti na velikosti vaší společnosti můžete na Portálu společnosti vidět dostupných více verzí Office ke stažení. Konkrétní informace o sadě Office pro zařízení s Windows najdete v článku [Instalace Office 365 na zařízení s Windows](./install-office-windows.md).
 
@@ -67,34 +69,34 @@ Sdílejte a doporučujte aplikace svým pracovním nebo školním kontaktům. N�
 
 Po nasdílení příjemce obdrží odkaz a zprávu, aby si zobrazil podrobnosti o aplikaci. Odkaz otevře stránku Portálu společnosti **Detaily o aplikaci**. 
 
-## <a name="available-and-required-apps"></a>K dispozici a požadované aplikace
-Aplikace se vám přiřadila vaše organizace a označené jako v aplikaci portál společnosti jako **dostupné** nebo **vyžaduje**. 
+## <a name="available-and-required-apps"></a>Dostupné a požadované aplikace
+Aplikace vám jsou přiřazeny vaší organizací a jsou označené v Portál společnosti jako **dostupné** nebo **povinné**. 
 
-* Dostupné aplikace: Tyto aplikace jsou vybrány ve vaší organizaci a jsou vhodné a užitečné pro práci nebo školu. Jsou volitelné Chcete-li nainstalovat a jsou pouze aplikace najdete na portálu společnosti k instalaci. 
+* Dostupné aplikace: tyto aplikace jsou vybrané vaší organizací a jsou vhodné a užitečné pro práci nebo školu. Jsou nepovinné pro instalaci a jsou to jediné aplikace, které najdete v Portál společnosti k instalaci. 
 
-* Požadované aplikace: Tyto aplikace jsou nezbytné pro pracovní a školní a se nasadí přímo do vašeho zařízení. Tyto aplikace jsou automaticky nainstalovány pro vás bez zásahu. 
+* Požadované aplikace: tyto aplikace jsou nutné pro práci a školu a nasazují se přímo do vašeho zařízení. Tyto aplikace se automaticky nainstalují bez zásahu. 
 
-Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro Windows, budete mít přístup k Windows, ale ne iOS aplikací.
+Aplikace jsou také k dispozici na základě typu zařízení. Pokud například používáte aplikaci Portál společnosti pro Windows, budete mít přístup k aplikacím pro Windows, ale ne k aplikacím pro iOS.
 
 ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu  
-Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, si ji vyžádat. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti, na stránce Nápověda a podpora. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    
+Pokud máte aplikaci, kterou potřebujete, ale nevidíte ji v Portál společnosti, požádejte o ni. Podrobnosti o kontaktu pro **Helpdesk** v aplikaci Portál společnosti najdete na stránce podpory & pro nápovědu. Stejné kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).    
 
-  ![Aplikace portál společnosti pro Windows 10, Nápověda a podpora stránky, zvýraznění údaje helpdesku. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+  ![Portál společnosti aplikace pro Windows 10, stránka podpory & pro nápovědu, zvýrazňování detailů helpdesku. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
 ## <a name="view-installed-apps"></a>Zobrazit nainstalované aplikace  
-Zobrazte seznam všech nainstalovaných aplikací na zařízení. **Nainstalované aplikace** stránce uvedeny následující podrobnosti o každé aplikaci:
+Zobrazí seznam všech aplikací nainstalovaných v zařízení. Na stránce **nainstalované aplikace** jsou uvedeny následující podrobnosti o každé aplikaci:
 
-* Název: Název aplikace. Dostupné aplikace obsahují odkaz **podrobností o aplikaci** stránky.
-* Typ přiřazení: Jak aplikace přiřazena a pro vás dostupné. 
-* Vydavatel: Název pro vývojáře nebo firmy, ve které distribuované aplikace. Vydavatel je obvykle dodavatele softwaru nebo organizaci.  
-* Datum publikování: Datum, které tato aplikace byla dostupná ke stažení. Publikovat data ukázat počáteční verze vaší aplikace nebo aplikace nejnovější aktualizace.
-* Stav: Aktuální stav instalace aplikace na vašem zařízení. Aplikace může zobrazit jako instalace, nainstalována a instalace se nezdařila. Požadované aplikace může trvat až 10 minut, chcete-li zobrazit aktuální stav. Přečtěte si poznámku v rámci [instalovat aplikace](#install-apps) důležité podrobnosti o instalaci požadovanou aplikaci. 
+* Name (název): název aplikace. Dostupné aplikace zahrnují odkaz na stránku s **podrobnostmi o aplikaci** .
+* Typ přiřazení: jak se aplikace přiřadí a zpřístupní vám. 
+* Vydavatel: název vývojáře nebo společnosti, která aplikaci distribuuje. Vydavatelem je obvykle dodavatel softwaru nebo organizace.  
+* Datum publikování: datum, kdy byla aplikace zpřístupněna ke stažení. Datum publikování by mohlo Ukázat počáteční verzi aplikace nebo nejnovější aktualizaci aplikace.
+* Stav: aktuální stav instalace aplikace na vašem zařízení. Aplikace se můžou zobrazovat jako instalace, instalace a instalace se nezdařilo. Aby bylo možné zobrazit aktuální stav, můžou požadované aplikace trvat až 10 minut. Důležité informace o instalaci požadované aplikace najdete v poznámce v části [instalace aplikací](#install-apps) . 
 
-Na tuto stránku Pokud chcete dostat, přejděte na nabídku navigace a vyberte **nainstalované aplikace**. 
+Pokud se chcete dostat na tuto stránku, přejděte do navigační nabídky a vyberte **nainstalované aplikace**. 
 
-  ![Příklad snímek obrazovky aplikace portál společnosti pro Windows 10, nainstalované aplikace stránky. ](./media/installed-apps-cp-1906.png)  
+  ![Ukázkový snímek obrazovky stránky aplikace Portál společnosti pro Windows 10, nainstalované aplikace ](./media/installed-apps-cp-1906.png)  
 
 
-Použití **řadit** k uspořádání typ přiřazení aplikace, vydavatel, abecedně podle názvu nebo chronologicky podle datum publikování. Použití **filtrovat podle** k omezení aplikace můžete zobrazit stav instalace.  Pokud nejsou dostupné žádné aplikace, uvidíte zprávu, zda byly nainstalovány žádné aplikace společnosti.  
+Pomocí **Seřadit podle** můžete změnit uspořádání typu přiřazení aplikace, vydavatele, abecedně podle názvu nebo chronologicky podle data publikování. Pomocí **Filter by** můžete omezit aplikace, se kterými se zobrazuje stav instalace.  Pokud nejsou k dispozici žádné aplikace, zobrazí se zpráva, že nebyly nainstalovány žádné aplikace společnosti.  
 
-Potřebujete další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete další informace? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

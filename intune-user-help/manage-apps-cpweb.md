@@ -1,6 +1,6 @@
 ---
-title: Správa aplikací z webu portál společnosti Intune
-description: Správa a zobrazení dostupné a nainstalované aplikace
+title: Správa aplikací z Portál společnosti Intune webu
+description: Správa a zobrazování dostupných a nainstalovaných aplikací
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 06/27/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,84 +19,84 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c7b91e63a559c45cbbcbd7056a7f5e259e07481
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: edc45fb3ddab43ef77a3f072c5a1a31f8f88c957
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416854"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506108"
 ---
-# <a name="manage-apps-from-the-company-portal-website"></a>Správa aplikací z webu portál společnosti 
-Přejděte [webu portál společnosti](https://portal.manage.microsoft.com) k zobrazení a Správa aplikací z vaší organizace. 
+# <a name="manage-apps-from-the-company-portal-website"></a>Správa aplikací z Portál společnosti webu 
+Navštivte [web portál společnosti](https://portal.manage.microsoft.com) , kde můžete zobrazit a spravovat aplikace z vaší organizace. 
 
 ## <a name="view-all-apps"></a>Zobrazit všechny aplikace  
-V nabídce vyberte **aplikace** zobrazíte všechny aplikace, které ve vaší organizaci. 
+V nabídce vyberte **aplikace** , aby se zobrazily všechny aplikace, které vaše organizace zpřístupňuje. 
 
-   ![Web portál společnosti – snímek obrazovky, stránky aplikací, zobrazující upravit možnosti.](./media/intune-view-apps-1907.png)  
+   ![Snímek obrazovky Portál společnosti webu, aplikací se zobrazenými možnostmi upřesnění](./media/intune-view-apps-1907.png)  
 
 Tato stránka obsahuje následující podrobnosti o každé aplikaci:  
 
-* Název: Název aplikace s odkazem na stránku podrobností aplikace.
-* Vydavatel: Název pro vývojáře nebo firmy, ve které distribuované aplikace. Vydavatel je obvykle dodavatele softwaru nebo organizaci.  
-* Datum publikování: Datum, které tato aplikace byla dostupná ke stažení. Publikovat data ukázat počáteční verze vaší aplikace nebo aplikace nejnovější aktualizace.
-* Stav: Aktuální stav aplikace na vašem zařízení, která zahrnuje dostupných a nainstalovaných a instalaci. 
-* Kategorie: Aplikace funkce nebo účel, například funkční, inženýrství, vzdělávání a produktivitu.  
+* Name (název): název aplikace s odkazem na stránku podrobností aplikace.
+* Vydavatel: název vývojáře nebo společnosti, která aplikaci distribuuje. Vydavatelem je obvykle dodavatel softwaru nebo organizace.  
+* Datum publikování: datum, kdy byla aplikace zpřístupněna ke stažení. Datum publikování by mohlo Ukázat počáteční verzi aplikace nebo nejnovější aktualizaci aplikace.
+* Status (stav): aktuální stav aplikace na vašem zařízení, včetně dostupnosti, instalace a instalace. 
+* Kategorie: funkce nebo účel aplikace, jako je například Doporučené, strojírenství, vzdělávání a produktivita.  
 
-### <a name="search-and-refine"></a>Hledání a upravit   
+### <a name="search-and-refine"></a>Hledání a upřesnění   
 
-Aplikace můžete vyhledat pomocí panelu hledání. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
+K vyhledání aplikací použijte panel hledání. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
 
-   ![Web portál společnosti – snímek obrazovky, stránky aplikací, zobrazující upravit možnosti.](./media/intune-refine-all-apps-1907.png)  
+   ![Snímek obrazovky Portál společnosti webu, aplikací se zobrazenými možnostmi upřesnění](./media/intune-refine-all-apps-1907.png)  
 
-Vyberte **Upřesnit** zobrazíte filtrování a řazení možnosti. Filtrovat seznam, aby zobrazoval aplikací s využitím určitých kritérií, včetně **typ**, **dostupnosti**, a **vydavatelé**. Vyberte **řazení** ke změně uspořádání aplikace podle:
+Pokud chcete zobrazit možnosti filtrování a řazení, vyberte **Upřesnit** . Vyfiltrujte seznam, aby se zobrazily aplikace s konkrétními kritérii, včetně **typů**, **dostupnosti**a **vydavatelů**. Vyberte **Seřadit** pro změnu uspořádání aplikací:
 
-* Název aplikace, vzestupně nebo sestupně podle abecedy 
-* Název vydavatele, vzestupně nebo sestupně podle abecedy 
-* Publikovat data, nejstarší a nejnovější  
+* Název aplikace, vzestupně nebo sestupně abecedy 
+* Název vydavatele, vzestupně nebo sestupně abecedy 
+* Datum publikování, nejstarší nebo nejnovější  
 
 ## <a name="view-installed-apps"></a>Zobrazit nainstalované aplikace  
-V nabídce vyberte **nainstalované aplikace** zobrazíte seznam všech nainstalovaných aplikací na zařízení.  
+V nabídce vyberte **nainstalované aplikace** a zobrazte seznam všech aplikací nainstalovaných v zařízení.  
 
-   ![Web portál společnosti – snímek obrazovky, stránka nainstalované aplikace.](./media/intune-installed-apps-1907.png)  
+   ![Obrazovka stránky Portál společnosti web, nainstalované aplikace](./media/intune-installed-apps-1907.png)  
 
 
 Tato stránka obsahuje následující podrobnosti o každé aplikaci:  
 
-* Název: Název aplikace s odkazem na stránku podrobností aplikace.
-* Typ přiřazení: Jak aplikace přiřazena a pro vás dostupné. Zobrazit dostupné a požadované aplikace pro další podrobnosti. Vaše organizace může buď zpřístupnit aplikaci si můžete nainstalovat sami, nebo můžou vyžadovat a instalovat aplikaci na vašem zařízení automaticky.  
-* Vydavatel: Název pro vývojáře nebo firmy, ve které distribuované aplikace. Vydavatel je obvykle dodavatele softwaru nebo organizaci.  
-* Datum publikování: Datum, které tato aplikace byla dostupná ke stažení. Publikovat data ukázat počáteční verze vaší aplikace nebo aplikace nejnovější aktualizace.
-* Stav: Aktuální stav instalace aplikace na vašem zařízení. Aplikace může zobrazit jako instalace, nainstalována a instalace se nezdařila. Požadované aplikace může trvat až 10 minut, chcete-li zobrazit aktuální stav.  
+* Name (název): název aplikace s odkazem na stránku podrobností aplikace.
+* Typ přiřazení: jak se aplikace přiřadí a zpřístupní vám. Další podrobnosti najdete v části dostupné a požadované aplikace. Vaše organizace může aplikaci zpřístupnit, abyste ji mohli nainstalovat, nebo ji můžou požadovat a instalovat automaticky na zařízení.  
+* Vydavatel: název vývojáře nebo společnosti, která aplikaci distribuuje. Vydavatelem je obvykle dodavatel softwaru nebo organizace.  
+* Datum publikování: datum, kdy byla aplikace zpřístupněna ke stažení. Datum publikování by mohlo Ukázat počáteční verzi aplikace nebo nejnovější aktualizaci aplikace.
+* Stav: aktuální stav instalace aplikace na vašem zařízení. Aplikace se můžou zobrazovat jako instalace, instalace a instalace se nezdařilo. Aby bylo možné zobrazit aktuální stav, můžou požadované aplikace trvat až 10 minut.  
 
-### <a name="search-and-refine"></a>Hledání a upravit  
+### <a name="search-and-refine"></a>Hledání a upřesnění  
 
-Aplikace můžete vyhledat pomocí panelu hledání. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
+K vyhledání aplikací použijte panel hledání. Výsledky hledání jsou automaticky seřazené podle důležitosti.  
 
-   ![Web portál společnosti – snímek obrazovky, nainstalované aplikace Upřesnit možnosti.](./media/intune-installed-refine-1907.png)  
+   ![Snímek obrazovky Portál společnosti webu, nainstalovaných aplikací, Upřesnit možnosti](./media/intune-installed-refine-1907.png)  
 
-Vyberte **Upřesnit** zobrazíte filtrování a řazení možnosti. Filtrovat seznam, aby zobrazoval aplikací s využitím určitých kritérií, včetně **typy**, **vydavatelé**, a **stavy**. Vyberte **řazení** ke změně uspořádání aplikace podle:
+Pokud chcete zobrazit možnosti filtrování a řazení, vyberte **Upřesnit** . Vyfiltrujte seznam, aby se zobrazily aplikace s konkrétními kritérii, včetně **typů**, **vydavatelů**a **stavů**. Vyberte **Seřadit** pro změnu uspořádání aplikací:
 
-* Název aplikace, vzestupně nebo sestupně podle abecedy  
-* Název vydavatele, vzestupně nebo sestupně podle abecedy  
-* Datum, nejstarší nebo posledního publikování  
+* Název aplikace, vzestupně nebo sestupně abecedy  
+* Název vydavatele, vzestupně nebo sestupně abecedy  
+* Datum publikování, nejstarší nebo poslední  
 
-Potřebujete další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete další informace? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
-### <a name="available-and-required-apps"></a>K dispozici a požadované aplikace
-Aplikace se vám přiřadila vaše organizace a označeny jako dostupné nebo vyžadované. **Nainstalované aplikace** stránce zobrazí aplikace, které máte v rámci **typ přiřazení** sloupce. 
-
-
-* Dostupné aplikace: Tyto aplikace jsou vybrány ve vaší organizaci a jsou vhodné a užitečné pro práci nebo školu. Jsou volitelné Chcete-li nainstalovat a jsou pouze aplikace najdete na portálu společnosti k instalaci. 
-
-* Požadované aplikace: Vaše organizace může nasadit nezbytné pracovním a školním aplikacím přímo do vašeho zařízení. Tyto aplikace jsou automaticky nainstalovány pro vás bez zásahu. 
-
-Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte web portál společnosti na zařízení s Windows, budete mít přístup k Windows, ale ne iOS aplikací.  
-
-## <a name="view-app-details"></a>Zobrazit detaily aplikace  
-Vyberte aplikaci, na **aplikace** nebo **nainstalované aplikace** stránku, abyste zobrazili její podrobnosti. Budete přesměrováni na **podrobností o aplikaci**, kde najdete popis a požadavky aplikace. Pokud aplikace není nainstalovaná na vašem zařízení, můžete ji nainstalovat z této stránky. 
+### <a name="available-and-required-apps"></a>Dostupné a požadované aplikace
+Aplikace vám jsou přiřazeny vaší organizací a jsou označené jako dostupné nebo povinné. Stránka **nainstalované aplikace** zobrazuje, které aplikace máte pod sloupcem **Typ přiřazení** . 
 
 
-   ![Web portál společnosti – snímek obrazovky, stránku podrobností aplikace.](./media/intune-app-details-1907.png)  
+* Dostupné aplikace: tyto aplikace jsou vybrané vaší organizací a jsou vhodné a užitečné pro práci nebo školu. Jsou nepovinné pro instalaci a jsou to jediné aplikace, které najdete v Portál společnosti k instalaci. 
 
-## <a name="next-steps"></a>Další postup
+* Požadované aplikace: vaše organizace může nasazovat potřebné pracovní a školní aplikace přímo do vašeho zařízení. Tyto aplikace se automaticky nainstalují bez zásahu. 
+
+Aplikace jsou také k dispozici na základě typu zařízení. Pokud například používáte web Portál společnosti na zařízení s Windows, budete mít přístup k aplikacím pro Windows, ale ne k aplikacím pro iOS.  
+
+## <a name="view-app-details"></a>Zobrazit podrobnosti o aplikaci  
+Výběrem aplikace na stránce **aplikace** nebo **nainstalované aplikace** zobrazíte její podrobnosti. Zobrazí se **Podrobnosti o aplikaci**, kde najdete popis a požadavky aplikace. Pokud aplikace není v zařízení ještě nainstalovaná, můžete ji nainstalovat z této stránky. 
+
+
+   ![Snímek obrazovky Portál společnosti webu, stránky s podrobnostmi o aplikaci](./media/intune-app-details-1907.png)  
+
+## <a name="next-steps"></a>Další kroky
 Potřebujete další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

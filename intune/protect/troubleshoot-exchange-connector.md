@@ -1,7 +1,7 @@
 ---
-title: Řešení potíží s konektory Exchange
+title: Řešení problémů s konektorem Exchange
 titleSuffix: Microsoft Intune
-description: Řešení potíží souvisejících s místním Exchange Connectorem Intune
+description: Naučte se řešit potíže s místním Intune Exchange Connectorem.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: a7e3c742-295b-40bb-9afa-17f243062500
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 230ee8c1206a4d091661b51dd239a4cb0b1a1963
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: 962e66a9fdf6d8abcf6855f645775026ee4db850
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71814055"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508837"
 ---
 # <a name="troubleshoot-the-intune-exchange-connector"></a>Řešení potíží s Intune Exchange Connectorem
 
@@ -67,7 +68,7 @@ Zkontrolujte [požadavky na místní Exchange Connector](exchange-connector-inst
 - **Oprávnění účtu**: v dialogovém okně Microsoft Intune Exchange Connector se ujistěte, že jste zadali uživatelský účet, který má příslušná oprávnění ke spouštění [požadovaných rutin prostředí Windows PowerShell Exchange](exchange-connector-install.md#exchange-cmdlet-requirements).
 - **E-mailové zprávy s oznámením**: Povolit oznámení a zadat účet oznámení.
 - **Synchronizace serveru pro klientský přístup**: při konfiguraci softwaru Exchange Connector zadejte certifikační autority, které mají nejnižší možnou latenci sítě pro server, který je hostitelem konektoru Exchange. Latence komunikace mezi certifikačními autoritami a Exchange Connectorem může zpozdit zjišťování zařízení, zejména pokud používáte vyhrazené Exchange Online.
-- **Plán synchronizace**: uživatel s nově zaregistrovaným zařízením se může zpozdit o přístup, dokud se konektor Exchange nesynchronizuje s CERTIFIKAČNÍmi autoritami Exchange. Úplná synchronizace proběhne jednou denně a rozdílová (rychlá) synchronizace probíhá několikrát denně. Můžete [ručně vynutit rychlou synchronizaci nebo úplnou synchronizaci](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync) , abyste minimalizovali zpoždění.
+- **Plán synchronizace**: uživatel s nově zaregistrovaným zařízením se může zpozdit o přístup, dokud se konektor Exchange nesynchronizuje s CERTIFIKAČNÍmi autoritami Exchange. Úplná synchronizace probíhá jednou denně a rozdílová (rychlá) synchronizace probíhá několikrát denně. Pokud chcete minimalizovat zpoždění, můžete [ručně vynutit rychlou synchronizaci nebo úplnou synchronizaci](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
 
 ## <a name="next-steps"></a>Další kroky
 Následující články vám pomůžou vyřešit běžné problémy a konkrétní chyby:

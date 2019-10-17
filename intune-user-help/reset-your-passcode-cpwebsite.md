@@ -9,6 +9,7 @@ ms.date: 09/18/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 4fa3255b-9d1e-42d5-bd8b-70963dcf2d86
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 690fb81350c0c264677c6c75b8942e9cdcd4e8f0
-ms.sourcegitcommit: c19584b36448bbd4c8638d7cab552fe9b3eb3408
+ms.openlocfilehash: 2056d37b00f5e2ae7b36c6e1c02f20dc244eb290
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163366"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502131"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Resetování hesla zařízení z webu Portál společnosti
 
@@ -47,7 +48,7 @@ Resetování hesla není k dispozici pro zařízení se systémem Android 7,0 a 
 
     ![Snímek obrazovky s ikonou, zvýrazněný červenou šipkou](./media/rename-reset-device-step3-more-1808.png)  
 
-4. Po zobrazení výzvy klikněte na **Odhlásit se**. Po zobrazení další výzvy se znovu přihlaste. Přihlaste se zpátky na web Portál společnosti během pěti minut nebo Portál společnosti heslo zařízení resetovat.  
+4. Po zobrazení výzvy klikněte na **Odhlásit**se. Až se zobrazí výzva znovu, přihlaste se znovu. Přihlaste se zpátky na web Portál společnosti během pěti minut nebo Portál společnosti heslo zařízení resetovat.  
 
    > [!NOTE]
    > Opětovné přihlášení se vyžaduje pro potvrzení identity. Slouží jako ochrana před škodlivými pokusy o resetováním hesla.
@@ -73,12 +74,12 @@ Resetování hesla není k dispozici pro zařízení se systémem Android 7,0 a 
 
 V této části najdete chování při resetování hesla a vytvoření dočasného hesla pro jednotlivé platformy.  
 
-**Android**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmeny a číslicemi.
+**Android**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice.
 
-**iOS**: Odebere existující heslo a nevytvoří dočasné heslo. Pokud k otevření zařízení nebo nákupu použijete dotykové ID, musíte ho nastavit znovu.  
+**iOS**: odebere existující heslo a nevytvoří dočasné heslo. Pokud k otevření zařízení nebo nákupu použijete dotykové ID, musíte ho nastavit znovu.  
 
-**Windows 10 Mobile**: Odebere existující heslo a vytvoří dočasné heslo tvořené písmeny a číslicemi. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
+**Windows 10 Mobile**: Odebere stávající heslo a vytvoří dočasné heslo obsahující písmena i číslice. Pokud je nastaveno rozpoznávání obličeje Windows Hello, bude na zařízení i nadále fungovat.
 
-**Windows Phone 8,1**: Odebere existující heslo a vytvoří dočasné heslo, které se skládá z čísel.  
+**Windows Phone 8.1**: Odebere stávající heslo a vytvoří dočasné heslo obsahující číslice.  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  

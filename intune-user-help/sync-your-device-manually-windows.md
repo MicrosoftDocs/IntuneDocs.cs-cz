@@ -9,6 +9,7 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,16 +19,16 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 289d99603314be7c1097d54d59d4a0e90cae0bed
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546257"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508330"
 ---
 # <a name="sync-your-windows-device-manually"></a>Ruční synchronizace zařízení s Windows
 
-Pokud je rychlost instalace aplikace příliš nízká, iniciujte ruční synchronizaci zařízení. Ruční synchronizace vynutí, aby se vaše zařízení spojilo s Intune za účelem nejnovějších aktualizací a komunikací. Po dokončení synchronizace zařízení se může rychlost instalace zvýšit.
+Když je rychlost instalace aplikace menší než ideální, Iniciujte ruční synchronizaci zařízení. Ruční synchronizace vynutí, aby se zařízení připojilo k Intune o nejnovější aktualizace a komunikaci. Po dokončení synchronizace zařízení se může rychlost instalace zvýšit.
 
 Intune podporuje ruční synchronizaci z aplikace Portál společnosti, z hlavního panelu plochy, nabídky Start a z aplikace Nastavení zařízení. Funkce aplikace Portál společnosti se podporuje v zařízeních se systémem Windows 10 Creators Update (1703) nebo novějším. 
 
@@ -104,7 +105,7 @@ Následující postup použijte k ruční synchronizaci zařízení se systémem
 
     ![Volba názvu firmy pro správu zařízení](./media/win10pc-sync-4-tap-com-name.png)
 
-3. Klikněte na **Synchronizovat**. Tlačítko zůstane deaktivované, dokud se synchronizace nedokončí.
+3. Klikněte na **synchronizovat**. Tlačítko zůstane zakázané, dokud se synchronizace nedokončí.
 
     ![Volba tlačítka Synchronizovat](./media/win10pc-sync-5-tap-sync.png)  
 
@@ -133,9 +134,9 @@ Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary 
 2. Vyberte **Účty** > **Přístup do práce**.  
     ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným odkazem Účty](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3. Vyberte připojený účet > **Synchronizovat**.  ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným tlačítkem Synchronizovat](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Vyberte připojený účet > **synchronizaci**.  @no__t – aplikace nastavení 1Screenshot pro HoloLens, zvýrazněné tlačítko synchronizace @ no__t-2  
 
-### <a name="windows-phone-81"></a>Windows Phone 8.1
+### <a name="windows-phone-81"></a>Wvdows Phone 8.1
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 

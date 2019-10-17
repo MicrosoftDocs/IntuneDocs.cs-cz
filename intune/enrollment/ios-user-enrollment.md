@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/2/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57162664d6ca3a35696e56088c4e86acadf45371
-ms.sourcegitcommit: 223d64a72ec85fe222f5bb10639da729368e6d57
+ms.openlocfilehash: f201cdac0f881ce03863704dd80d8635de52074a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71955457"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72505462"
 ---
 # <a name="set-up-ios-and-ipados-user-enrollment-preview"></a>Nastavení registrace uživatele pro iOS a iPadOS (Preview)
 
@@ -33,9 +34,9 @@ Další informace o možnostech, které jsou k dispozici pro zápis uživatele, 
 > [!NOTE]
 > Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Požadované součásti
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
-- [Apple MDM push Certificate](apple-mdm-push-certificate-get.md)
+- [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
 - [Spravovaná Apple ID](https://support.apple.com/guide/apple-business-manager/mdm1c9622977/web).
 
 ## <a name="create-a-user-enrollment-profile-in-intune"></a>Vytvoření profilu registrace uživatele v Intune
@@ -46,7 +47,7 @@ Registrační profil definuje nastavení použité pro skupinu zařízení běhe
 
     ![Vytvořit registrační profil Apple](./media/ios-user-enrollment/create-profile.png)
 
-2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pomocí tohoto pole **název** můžete vytvořit dynamickou skupinu v Azure Active Directory. Pomocí názvu profilu definujte parametr enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [Azure Active Directory dynamických skupinách](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
+2. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-groups-dynamic-membership-azure-portal#rules-for-devices).
 
     ![Stránka základy](./media/ios-user-enrollment/basics-page.png)
 

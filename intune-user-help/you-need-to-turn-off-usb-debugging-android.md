@@ -1,7 +1,7 @@
 ---
 title: Potřebujete vypnout Ladění USB | Dokumentace Microsoftu
 titlesuffix: Microsoft Intune
-description: Potřebujete vypnout ladění USB na naše zařízení.
+description: Na našem zařízení je třeba vypnout ladění USB.
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -10,6 +10,7 @@ ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: f250f455-898d-46fe-93ac-2b3aec6a0b71
 searchScope:
@@ -17,12 +18,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc95e1223815a961b354b4977b6650472a3a3eb2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 397244755457e784899438d307053bdf6f754fd0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504566"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72500462"
 ---
 # <a name="you-need-to-turn-off-usb-debugging"></a>Potřebujete vypnout Ladění USB.
 

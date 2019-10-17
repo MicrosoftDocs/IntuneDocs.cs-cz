@@ -9,6 +9,7 @@ ms.date: 08/28/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 5656b3e6-e812-4264-a170-b17c9c03e4d4
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03463bebfd9279173179dff56ce8df9d80b1707b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0cc2f84ad73c86a823984e6caa11dad5d4aec8a8
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61490725"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507823"
 ---
 # <a name="resolve-a-threat-found-by-lookout-for-work"></a>Vyřešení hrozby, kterou zjistila aplikace Lookout for Work  
 
@@ -51,7 +52,7 @@ Pomocí těchto kroků získáte znovu přístup k firemním prostředkům poté
 
 Když si nainstalujete aplikaci, kterou Lookout for Work vyhodnotí jako hrozbu, zobrazí se zpráva podobná té na snímku níže.  
 
-![Ukázkový snímek obrazovky s výstrahou aplikace Lookout for Work zobrazenou přes její rozhraní. Ukazuje tři tlačítka: "Zavřít," "Další informace" a "Odinstalovat".](./media/lookout-virus-alert-android.png)  
+![Ukázkový snímek obrazovky s výstrahou aplikace Lookout for Work zobrazenou přes její rozhraní. K dispozici jsou tři tlačítka: Zavřít, Další informace a Odinstalovat.](./media/lookout-virus-alert-android.png)  
 
 Ztracený přístup k firemnímu e-mailu a datům získáte odinstalováním sporné aplikace. Dokud je aplikace na zařízení nainstalovaná, nebudete mít k prostředkům přístup.    
 

@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 08/23/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: developer
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a1e797f1ed7b0e60d0f9550eaa9e571b8701ca4
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: f9740eed3ab727d76a9af4e46642d8279b310fd9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730234"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490518"
 ---
 # <a name="change-log-for-the-intune-data-warehouse-api"></a>Protokol změn pro rozhraní API datového skladu Intune
 
@@ -37,7 +38,7 @@ _Vydáno v dubnu 2019_
 
 V následující tabulce je uveden seznam nedávných odebraných kolekcí a kolekcí nahrazení v datovém skladu Intune.
 
-|    Kolekce                          |    mění     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
+|    Kolekce                          |    Mění     |    Další informace                                                                                                                                                                                                                                                                                                                                                                 |
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    mobileAppDeviceUserInstallStatus    |    Odebrané    |    Místo toho použijte [mobileAppInstallStatusCounts](intune-data-warehouse-collections.md#mobileappinstallstatuscounts) .                                                                                                                                                                                                                                                                     |
 |    Entita enrollmenttypes                     |    Odebrané    |    Místo toho použijte [deviceEnrollmentTypes](intune-data-warehouse-collections.md#deviceenrollmenttypes) .                                                                                                                                                                                                                                                                                      |
@@ -51,15 +52,15 @@ V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kole
 
 |    Stará vlastnost                |    Změnit nebo nahradit                                                           |
 |--------------------------------|---------------------------------------------------------------------------------|
-|    CellularTechnology          |    cellularTechnology v kolekci zařízení                                     |
+|    cellularTechnology          |    cellularTechnology v kolekci zařízení                                     |
 |    deviceClientId              |    ID zařízení v kolekci                                               |
 |    deviceManufacturer          |    výrobce v kolekci zařízení                                           |
-|    DeviceModel                 |    model v kolekci zařízení                                                  |
-|    DeviceName                  |    zařízení v kolekci zařízení                                             |
+|    deviceModel                 |    model v kolekci zařízení                                                  |
+|    deviceName                  |    zařízení v kolekci zařízení                                             |
 |    deviceOsPlatform            |    deviceTypeKey v kolekci zařízení                                          |
 |    deviceOsVersion             |    osVersion v kolekci devicePropertyHistories                              |
-|    DeviceType                  |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
-|    EncryptionState             |    vlastnost encryptionState v kolekci zařízení                           |
+|    deviceType                  |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
+|    encryptionState             |    vlastnost encryptionState v kolekci zařízení                           |
 |    exchangeActiveSyncId        |    vlastnost easDeviceId v kolekci zařízení                               |
 |    exchangeDeviceId            |    easDeviceId v kolekci zařízení                                            |
 |    imei                        |    kolekce IMEI v zařízeních                                                   |
@@ -68,7 +69,7 @@ V následující tabulce jsou uvedeny staré vlastnosti dříve nalezené v kole
 |    meid                        |    vlastnost MEID v kolekci zařízení                                      |
 |    OEM                         |    výrobce v kolekci zařízení                                           |
 |    osName                      |    deviceTypeKey v kolekci zařízení, odkazování na kolekci deviceTypes    |
-|    PhoneNumber                 |    kolekce phoneNumber v zařízeních                                            |
+|    phoneNumber                 |    kolekce phoneNumber v zařízeních                                            |
 |    platformType                |    model v kolekci zařízení                                                  |
 |    produkt                     |    deviceTypeKey v kolekci zařízení                                          |
 |    productVersion              |    osVersion v kolekci devicePropertyHistories                              |
@@ -85,8 +86,8 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [de
 |    KódKategorie                    |    deviceCategoryKey, odkazování na kolekci deviceCategories       |
 |    certExpirationDate            |    Odebrané                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
-|    CreatedDate                   |    enrolledDateTime v kolekci zařízení                           |
-|    DeviceTypeKey                 |    deviceTypeKey v kolekci zařízení                              |
+|    createdDate                   |    enrolledDateTime v kolekci zařízení                           |
+|    deviceTypeKey                 |    deviceTypeKey v kolekci zařízení                              |
 |    easID                         |    easDeviceId v kolekci zařízení                                |
 |    enrolledByUser                |    kolekce userId v zařízeních                                     |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey v kolekci zařízení                    |
@@ -98,14 +99,14 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [de
 |    lastExchangeStatusUtc         |    Odebrané                                                          |
 |    lastModifiedDateTimeUTC       |    Odebrané                                                          |
 |    lastPolicyUpdateUtc           |    Odebrané                                                          |
-|    ManagementAgentKey            |    managementStateKey                                               |
+|    managementAgentKey            |    managementStateKey                                               |
 |    manufacturer                  |    výrobce v kolekci zařízení                               |
 |    mdmStatusKey                  |    complianceStateKey, odkazování na kolekci complianceStates    |
 |    model                         |    model v kolekci zařízení                                      |
 |    Atribut                      |    operatingSystem v kolekci zařízení                            |
 |    osRevisionNumber              |    kolekce osVersion v zařízeních                                  |
-|    processorArchitecture         |    Odebrané                                                          |
-|    ReferenceId                   |    azureAdDeviceId v kolekci zařízení                            |
+|    ProcessorArchitecture         |    Odebrané                                                          |
+|    referenceId                   |    azureAdDeviceId v kolekci zařízení                            |
 |    serialNumber                  |    Sériové v kolekci zařízení                               |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
@@ -116,21 +117,21 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [za
 |    KódKategorie                    |    deviceCategoryKey, odkazování na kolekci deviceCategories       |
 |    certExpirationDate            |    Odebrané                                                          |
 |    clientRegistrationStateKey    |    deviceRegistrationStateKey                                       |
-|    CreatedDate                   |    EnrolledDateTime                                                 |
-|    easId                         |    EasDeviceId                                                      |
+|    createdDate                   |    enrolledDateTime                                                 |
+|    easId                         |    easDeviceId                                                      |
 |    enrolledByUser                |    userId                                                           |
 |    enrollmentTypeKey             |    deviceEnrollmentTypeKey                                          |
 |    graphDeviceIsCompliant        |    Odebrané                                                          |
 |    graphDeviceIsManaged          |    Odebrané                                                          |
-|    lastContact                   |    LastSyncDateTime                                                 |
+|    lastContact                   |    lastSyncDateTime                                                 |
 |    lastContactNotification       |    Odebrané                                                          |
 |    lastContactWorkplaceJoin      |    Odebrané                                                          |
 |    lastExchangeStatusUtc         |    Odebrané                                                          |
 |    lastPolicyUpdateUtc           |    Odebrané                                                          |
 |    mdmStatusKey                  |    complianceStateKey, odkazování na kolekci complianceStates    |
-|    Atribut                      |    OperatingSystem                                                  |
-|    processorArchitecture         |    Odebrané                                                          |
-|    ReferenceId                   |    azureAdDeviceId                                                  |
+|    Atribut                      |    operatingSystem                                                  |
+|    ProcessorArchitecture         |    Odebrané                                                          |
+|    referenceId                   |    azureAdDeviceId                                                  |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities) : 
@@ -143,30 +144,30 @@ V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [ma
 
 |    Stará vlastnost       |    Změnit nebo nahradit    |
 |-----------------------|--------------------------|
-|    ApplicationKey     |    mamApplicationKey     |
+|    applicationKey     |    mamApplicationKey     |
 |    ApplicationName    |    mamApplicationName    |
-|    ApplicationId      |    mamApplicationId      |
+|    applicationId      |    mamApplicationId      |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamApplicationInstances](intune-data-warehouse-collections.md#mamapplicationinstances) : 
 
 |    Stará vlastnost     |    Změnit nebo nahradit    |
 |---------------------|--------------------------|
-|    ApplicationId    |    mamApplicationId      |
-|    DeviceId         |    mamDeviceId           |
-|    DeviceType       |    mamDeviceType         |
-|    DeviceName       |    mamDeviceName         |
+|    applicationId    |    mamApplicationId      |
+|    deviceId         |    mamDeviceId           |
+|    deviceType       |    mamDeviceType         |
+|    deviceName       |    mamDeviceName         |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [mamCheckins](intune-data-warehouse-collections.md#mamcheckins) : 
 
 |    Stará vlastnost      |    Změnit nebo nahradit    |
 |----------------------|--------------------------|
-|    ApplicationKey    |    mamApplicationKey     |
+|    applicationKey    |    mamApplicationKey     |
 
 V následující tabulce jsou uvedeny změny vlastností nalezené v kolekci [uživatelů](intune-data-warehouse-collections.md#users) : 
 
 |    Stará vlastnost             |    Změnit nebo nahradit    |
 |-----------------------------|--------------------------|
-|    StartDateInclusiveUtc    |    Odebrané               |
+|    startDateInclusiveUtc    |    Odebrané               |
 |    endDateInclusiveUtc      |    Odebrané               |
 |    Aktuální                |    Odebrané               |
 

@@ -9,6 +9,7 @@ ms.date: 01/23/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 28984f26-1070-4f7a-877c-669a59375c0c
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45937f54926178615cf9d84230feb63d1ef242b5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 085ec1f329eb9b423797a110ada53eb7693edf6f
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545556"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506136"
 ---
 # <a name="how-to-enroll-your-windows-81-or-windows-rt-81-device-in-intune"></a>Registrace zařízení s Windows 8.1 nebo Windows RT 8.1 v Intune  
 
@@ -36,7 +37,7 @@ Registrace zařízení s Windows 8.1 nebo Windows RT 8.1:
 
     ![nav-to-workplace](./media/W81-1-workplacejoin.png)  
 
-2. Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**. Pokud vaše ID uživatele se nevyžaduje, použije se e-mailovou adresu, kterou jste zadali při přihlašování k tomuto zařízení.  
+2. Zadejte e-mailovou adresu svého pracovního nebo školního účtu pro dané ID uživatele, pokud je to potřeba, a klepněte na **Připojit se**. Pokud vaše ID uživatele není nutné, použije se e-mailová adresa, kterou jste zadali při přihlášení k tomuto zařízení.  
 
 3. Zadejte heslo pracovního nebo školního e-mailu.  
 
