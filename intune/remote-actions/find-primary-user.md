@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 06/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: remote-actions
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 312aee3752525ab2898c6d4e4ea06da685d1cdec
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: d6f594e20abf1a507d1d4e00641a4821fe1ba9b0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71732558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509343"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Vyhledání primárního uživatele zařízení v Intune
 
@@ -46,7 +47,7 @@ Aplikace Portál společnosti očekává, že uživatelský účet, který se p�
 
 Pokud zařízení Intune nemá přiřazeného primárního uživatele, aplikace Portál společnosti ji detekuje jako sdílené zařízení. Sdílená zařízení jsou vizuálně identifikovatelná pomocí popisku "Shared", který se zobrazuje na dlaždici zařízení. V tomto režimu můžete Portál společnosti i nadále používat k vyžádání a instalaci dostupných aplikací. Akce samoobslužné služby (resetování/přejmenování/vyřazení) nejsou ale k dispozici.  
 
-Aby se v Portál společnosti zobrazovala na sdílených zařízeních, musí být dostupné aplikace přiřazené ke skupině uživatelů. Budou nainstalovány v kontextu systému nebo v kontextu uživatele v závislosti na tom, jak byl aplikace konfigurována správcem IT. Další informace o kontextu aplikace najdete v tématu [instalace aplikací na zařízeních s Windows 10](../apps/apps-windows-10-app-deploy.md#installing-apps-on-windows-10-devices). Pro použití této funkce se vyžaduje Portál společnosti verze 10.3.4651.0 nebo novější.
+Aby se v Portál společnosti zobrazovala na sdílených zařízeních, musí být dostupné aplikace přiřazené ke skupině uživatelů. Budou nainstalovány v kontextu systému nebo v kontextu uživatele v závislosti na tom, jak byl aplikace konfigurována správcem IT. Další informace o kontextu aplikace najdete v tématu [instalace aplikací na zařízeních s Windows 10](../apps/apps-windows-10-app-deploy.md). Pro použití této funkce se vyžaduje Portál společnosti verze 10.3.4651.0 nebo novější.
 
 
 ## <a name="who-is-assigned-as-the-primary-user"></a>Kdo je přiřazen jako primární uživatel?
@@ -64,8 +65,8 @@ Intune automaticky přidá primárního uživatele do zařízení během nebo po
 | Windows | Spoluspráva | První uživatel, který se přihlásí k Windows | Když se první uživatel přihlásí k Windows | 
 | Windows | Připojení k Azure AD (token hromadného zápisu) | Žádné | Není k dispozici | 
 | Windows | Připojení k Azure AD (režim automatického nasazení autopilotu) | Žádné | Není k dispozici | 
-| pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
-| pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
+| Pro různé platformy | Registrace řízená uživatelem v aplikaci Portál společnosti | Registrace uživatele | Během registrace |
+| Pro různé platformy | Správce registrace zařízení (DEM) | Registrace uživatele DEM | Během registrace |
 | iOS, macOS | Apple automatizované registrace zařízení (DEP s přidružením uživatele) | Registrace uživatele | Během registrace |
 | iOS, macOS | Apple automatizované registrace zařízení (DEP bez přidružení uživatele) | Žádné | Není k dispozici |
 | Android | Zařízení se systémem Android, která jsou ve vlastnictví společnosti, vyhrazena | Žádné | Není k dispozici |

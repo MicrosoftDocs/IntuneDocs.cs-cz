@@ -1,6 +1,6 @@
 ---
-title: Vytvoření profilu certifikátů v Microsoft Intune – Azure | Microsoft Docs
-description: Pro vaše zařízení přidejte nebo vytvořte profil certifikátu konfigurací prostředí certifikátů SCEP nebo PKCS, exportujte veřejný certifikát, vytvořte profil v Azure Portal a potom přiřaďte SCEP nebo PKCS k profilům certifikátů v Microsoft Intune v Azure. bran
+title: Vytvoření profilů certifikátů v Microsoft Intune – Azure | Microsoft Docs
+description: Přidejte nebo vytvořte profil certifikátu pro zařízení pomocí konfigurace prostředí certifikátu SCEP nebo PKCS, exportujte veřejný certifikát, vytvořte profil na portálu Azure a pak přiřaďte SCEP nebo PKCS k profilům certifikátů v Microsoft Intune na portálu Azure Portal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 5eccfa11-52ab-49eb-afef-a185b4dccde1
@@ -16,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e993df5c37cfed8d5dd0481543b406dd25ad1a49
-ms.sourcegitcommit: b1e97211db7cb949eb39be6776b3a11d434fdab0
+ms.openlocfilehash: 67ceabae543a520851de2d2f6d05281c9e1cc42c
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251558"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509567"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune  
 
 Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a podnikovými prostředky prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů. Pokud používáte certifikáty k ověřování těchto připojení, koncoví uživatelé nebudou muset zadávat uživatelská jména a hesla, což pomáhá zajistit bezproblémové přístupu. Certifikáty se taky používají k podepisování a šifrování e-mailů pomocí S/MIME.
 
 ## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
-| Typ              | Ověření | Podepisování S/MIME | Šifrování S/MIME  |
+| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
 |--|--|--|--|
 | Importovaný certifikát PKCS |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
-| PKCS # 12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
-| Simple Certificate Enrollment Protocol (SCEP)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | |
+| PKCS#12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
+| Protokol SCEP (Simple Certificate Enrollment Protocol)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | |
 
 K nasazení těchto certifikátů vytvoříte a přiřadíte profily certifikátů k zařízením.  
 
@@ -56,8 +57,8 @@ Každý profil každého jednotlivého certifikátu, který vytvoříte, podporu
 | Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |   |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
-| Windows Phone 8,1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
-| Windows 8.1 a novější |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Wvdows Phone 8.1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
+| Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
 ## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.  
@@ -76,24 +77,24 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu  
 
 1. Přihlaste se k [portálu Intune](https://aka.ms/intuneportal).  
-2. Vyberte **Konfigurace zařízení** > **Spravovat** **profily** >   > **vytvořit profil**.  
+2. Vyberte **Konfigurace zařízení** > **Spravovat** > **Profily** > **Vytvořit profil**.  
 3. Zadejte **název a popis** profilu důvěryhodného certifikátu.  
-4. V rozevíracím seznamu **platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát.  
-5. V rozevíracím seznamu **typ profilu** vyberte **důvěryhodný certifikát**.  
+4. V rozevíracím seznamu **Platforma** vyberte platformu zařízení pro tento důvěryhodný certifikát.  
+5. V rozevíracím seznamu **Typ profilu** zvolte **Důvěryhodný certifikát**.  
 6. Vyhledejte soubor. CER certifikátu důvěryhodné kořenové certifikační autority, který jste exportovali pro použití s tímto profilem certifikátu, a pak vyberte **OK**.  
-7. Pro Windows 8.1 a jenom pro zařízení s Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z:  
-   - **Úložiště certifikátů počítače-kořen**
-   - **Úložiště certifikátů počítače-zprostředkující**
-   - **Úložiště certifikátů uživatele-zprostředkující**
-8. Až skončíte, zvolte **OK**, vraťte se do podokna **vytvořit profil** a vyberte **vytvořit**.
+7. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:  
+   - **Úložiště počítačových certifikátů – kořenové**
+   - **Úložiště počítačových certifikátů – zprostředkující**
+   - **Úložiště uživatelských certifikátů – zprostředkující**
+8. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zobrazení profily* s typem profilu **důvěryhodného certifikátu**.  Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PCKS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
 
 > [!NOTE]  
 > V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.  
 
-## <a name="additional-resources"></a>Další zdroje informací:  
+## <a name="additional-resources"></a>Další materiály a zdroje informací  
 - [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)  
-- [Pro podepisování a šifrování e-mailů použít S/MIME](certificates-s-mime-encryption-sign.md)  
+- [Podepisování a šifrování e-mailů pomocí S/MIME](certificates-s-mime-encryption-sign.md)  
 - [Použití certifikační autority třetích stran](certificate-authority-add-scep-overview.md)  
 
 ## <a name="next-steps"></a>Další kroky  

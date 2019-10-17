@@ -9,6 +9,7 @@ ms.date: 01/03/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 4a120c3d-d520-4d48-ae4c-3338ca4e7bde
 searchScope:
@@ -18,21 +19,21 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd15e960b3c2802930981271cb6cd9ffea841cee
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 01b03e986cd2540c364f2b6d8d3e20412fd5b82e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545490"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506165"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Registrace zařízení s Windows Phone 8.1 v Intune  
 
-Zaregistrujte svoje zařízení získat přístup k pracovní nebo školní e-mail, soubory a další prostředky. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+Zaregistrujte svoje zařízení, abyste získali přístup k pracovnímu nebo školnímu e-mailu, souborům a dalším prostředkům. Když svoje zařízení zaregistrujete, dokáže vaše organizace uchovat firemní data v bezpečí. Další informace o registraci najdete v tématu [Co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení v Intune](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) a v tématu [Co má a nemá firemní podpora oprávnění vidět na vašem zařízení](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
-Registrace zařízení v Intune, postupujte podle sadu instrukcí, které odpovídají oprávnění nebo aktuální stav účtu.
+Pokud chcete zařízení zaregistrovat v Intune, postupujte podle pokynů, které odpovídají vašim oprávněním nebo stavu aktuálního účtu.
 
-## <a name="enroll-through-company-portal"></a>Registrace prostřednictvím portálu společnosti  
-Pokud nainstalujete aplikaci portál společnosti z Microsoft Store, postupujte podle těchto kroků. 
+## <a name="enroll-through-company-portal"></a>Registrovat prostřednictvím Portál společnosti  
+Pokud Portál společnosti aplikaci můžete z Microsoft Store nainstalovat, postupujte podle těchto kroků. 
 
 1. Klepněte na **Start** > **Store**.  
 
@@ -57,7 +58,7 @@ Zaregistrujte své zařízení:
 
 3. Potažením prstem přejděte na **Moje zařízení**.  
 
-4. Vyberte **klepněte sem a můžete zaregistrovat nebo identifikovat toto zařízení**.  
+4. Pokud **Chcete toto zařízení zaregistrovat nebo identifikovat**, vyberte klepněte.  
 
 
     ![Klepněte sem a můžete pak toto zařízení zaregistrovat nebo identifikovat](./media/WP81-enroll-1-swipe-my-devices.png)  
@@ -77,8 +78,8 @@ Zaregistrujte své zařízení:
 
     ![Obrazovka přidání účtu](./media/WP81-enroll-4-account-added.png)  
 
-## <a name="enroll-through-settings-app"></a>Registrace prostřednictvím nastavení aplikace  
-Následující postup, pokud nemá přístup k Microsoft Store ze zařízení s Windows Phone, nebo pokud nemáte Account Microsoft.
+## <a name="enroll-through-settings-app"></a>Zaregistrování v aplikaci nastavení  
+Pokud nemáte přístup k Microsoft Store ze zařízení Windows Phone nebo nemáte účet Microsoft, postupujte podle těchto kroků.
 
 1. Klepněte na **Nastavení** &gt; **Pracoviště**.  
 

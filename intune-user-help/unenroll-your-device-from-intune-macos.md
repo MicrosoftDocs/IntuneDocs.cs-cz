@@ -1,6 +1,6 @@
 ---
-title: Zrušení registrace zařízení s macOS z portálu společnosti Intune | Dokumentace Microsoftu
-description: Popisuje zrušení registrace zařízení s macOS z portálu společnosti
+title: Zrušit registraci zařízení macOS z Portál společnosti Intune | Microsoft Docs
+description: Popisuje, jak zrušit registraci zařízení macOS z Portál společnosti
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 03/20/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: dd79fc4d-6265-4dd0-87fb-8ab66b1cf692
 searchScope:
@@ -18,24 +19,24 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6e7290820134ffba2638c313adb4297d7da29c3b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d4d6ecdc84371c0f485fc1cf26065ed681f29804
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545959"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72501923"
 ---
-# <a name="unenroll-your-macos-device-from-company-portal"></a>Zrušení registrace zařízení s macOS z portálu společnosti
+# <a name="unenroll-your-macos-device-from-company-portal"></a>Zrušit registraci zařízení macOS z Portál společnosti
 
-Když zrušíte registraci zařízení s macOS v Intune, zařízení už mít přístup k prostředkům společnosti.
+Když zrušíte registraci zařízení macOS v Intune, zařízení už nebude mít přístup k prostředkům společnosti.
 
 Pokud chcete ve správě zrušit registraci zařízení s macOS, postupujte takto:
 
-1. Přihlaste se k portálu společnosti pro macOS.
-2. Přejděte na **zařízení** a vyberte zařízení, u kterého chcete zrušit registraci.
+1. Přihlaste se k Portál společnosti pro macOS.
+2. Klikněte na **zařízení** a vyberte zařízení, u kterého chcete zrušit registraci.
 
-3. Vyberte ikonu tří teček nabídky > **odebrat**.
-4. Zobrazí se potvrzovací zpráva. Vyberte **odebrat** zrušení registrace zařízení. 
+3. Vyberte ikonu nabídky se třemi tečkami > **Odebrat**.
+4. Zobrazí se potvrzovací zpráva. Výběrem **Odebrat zrušíte** registraci zařízení. 
 
 Jakmile zrušíte registraci zařízení v Intune, stane se toto:
 

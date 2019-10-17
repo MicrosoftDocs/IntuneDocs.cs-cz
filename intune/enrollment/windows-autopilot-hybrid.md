@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: enrollment
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 8518d8fa-a0de-449d-89b6-8a33fad7b3eb
@@ -17,21 +18,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dfd651550cd0959efc7b1dddc2a018d5346baa8c
-ms.sourcegitcommit: 29b1113dc04534c4c87c33c773c5a0e24266e042
+ms.openlocfilehash: ab90dc9a95e461ad8c5913131a23a0355e9d072c
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999379"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509221"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Nasazení hybridních zařízení připojených k Azure AD pomocí Intune a automatického pilotního projektu Windows
 Pomocí Intune a Windows autopilotu můžete nastavit zařízení připojená k hybridnímu Azure Active Directory (Azure AD). Pokud to chcete provést, postupujte podle kroků v tomto článku.
 
-## <a name="prerequisites"></a>Požadavky
+## <a name="prerequisites"></a>Požadované součásti
 
 [Zařízení připojená k hybridní službě Azure AD](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan)se úspěšně nakonfigurovala. Ujistěte se, že [jste ověřili registraci zařízení](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) pomocí rutiny Get-MsolDevice.
 
-Zařízení, která mají být zaregistrována, musí také:
+Zařízení, která chcete zaregistrovat, musí:
 - S Windows 10 v1809 nebo novějším.
 - Musí mít přístup k Internetu podle [dokumentovaných požadavků na síť Windows autopilot](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
 - Mít přístup k řadiči domény služby Active Directory, musí být připojený k síti organizace (kde může přeložit záznamy DNS pro doménu AD a řadič domény služby AD) a komunikovat s řadičem domény za účelem ověření uživatele. Připojení VPN se v tuto chvíli nepodporuje.
@@ -39,13 +40,13 @@ Zařízení, která mají být zaregistrována, musí také:
 - Pokud používáte proxy server, musí být povolená a nakonfigurovaná možnost nastavení proxy serveru WPAD.
 - Absolvujte integrované prostředí (OOBE).
 
-## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace Windows 10
+## <a name="set-up-windows-10-automatic-enrollment"></a>Nastavení automatické registrace pro Windows 10
 
 1. Přihlaste se k [Azure Portal](https://portal.azure.com) a v levém podokně vyberte **Azure Active Directory**.
 
    ![Azure Portal](./media/windows-autopilot-hybrid/auto-enroll-azure-main.png)
 
-1. Vyberte **mobilita (MDM a mam)** .
+1. Vyberte **Mobilita (MDM a MAM)** .
 
    ![Podokno Azure Active Directory](./media/windows-autopilot-hybrid/auto-enroll-mdm.png)
 
@@ -59,7 +60,7 @@ Zařízení, která mají být zaregistrována, musí také:
 
 1. Použijte výchozí hodnoty v polích **adresa url podmínky použití MDM**, **Adresa URL zjišťování MDM**a **Adresa URL dodržování předpisů MDM** a pak vyberte **Uložit**.
 
-## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Zvyšte limit účtu počítače v organizační jednotce.
+## <a name="increase-the-computer-account-limit-in-the-organizational-unit"></a>Zvýšení limitu pro účty počítačů v organizační jednotce
 
 Konektor Intune pro vaši službu Active Directory vytváří počítače registrované autopilotem v místní doméně služby Active Directory. Počítač, který je hostitelem konektoru Intune, musí mít práva k vytváření počítačových objektů v doméně. 
 
@@ -104,7 +105,7 @@ Organizační jednotka, která má udělena práva k vytváření počítačů, 
 
 ## <a name="install-the-intune-connector"></a>Instalace konektoru Intune
 
-Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pro zvýšení škálování a dostupnosti nebo pro podporu více domén služby Active Directory můžete do svého prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
+Konektor Intune pro službu Active Directory musí být nainstalovaný na počítači se systémem Windows Server 2016 nebo novějším. Počítač musí mít také přístup k Internetu a ke službě Active Directory. Pokud chcete zvýšit škálování a dostupnost nebo chcete podporovat více domén Active Directory, můžete do vašeho prostředí nainstalovat více konektorů. Doporučujeme nainstalovat konektor na server, na kterém neběží žádné jiné konektory Intune.
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **Windows registrace** > **konektor Intune pro Active Directory** > **Přidat**. 
 2. Podle pokynů stáhněte konektor.
@@ -135,7 +136,7 @@ Pokud máte ve svém síťovém prostředí webový proxy server, ujistěte se, 
 
     b. Zadejte **název skupiny** a **Popis skupiny**.
 
-    r. Vyberte **typ členství**.
+    c. Vyberte **typ členství**.
 
 1. Pokud jste pro typ členství vybrali možnost **Dynamická zařízení** , vyberte v podokně **Skupina** možnost **Členové dynamického zařízení** a potom v poli **Upřesnit pravidlo** proveďte jednu z následujících akcí:
     - Pokud chcete vytvořit skupinu, která zahrnuje všechna vaše zařízení autopilota, zadejte `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
@@ -144,26 +145,26 @@ Pokud máte ve svém síťovém prostředí webový proxy server, ujistěte se, 
     
 1. Vyberte **Uložit**.
 
-1. Vyberte **vytvořit**.  
+1. Vyberte **Vytvořit**.  
 
-## <a name="register-your-autopilot-devices"></a>Registrace zařízení s autopilotem
+## <a name="register-your-autopilot-devices"></a>Registrace zařízení Autopilot
 
 Vyberte jeden z následujících způsobů registrace zařízení autopilotu.
 
-### <a name="register-autopilot-devices-that-are-already-enrolled"></a>Registrace zařízení autopilotu, která jsou už zaregistrovaná
+### <a name="register-autopilot-devices-that-are-already-enrolled"></a>Registrace zařízení Autopilot, která jsou už zaregistrovaná
 
-1. Vytvořte profil nasazení autopilotu, **který převede všechna cílová zařízení na autopilot** nastavenou na **Ano**. 
+1. Vytvořte profil nasazení Autopilotu s možností **Převést všechna cílová zařízení na Autopilot** nastavenou na **Ano**. 
 2. Přiřaďte profil ke skupině obsahující členy, které chcete automaticky zaregistrovat pomocí automatického pilotního projektu.
 
-Další informace najdete v tématu [Vytvoření profilu nasazení autopilotu](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
+Další informace najdete v tématu [Vytvoření profilu nasazení Autopilotu](enrollment-autopilot.md#create-an-autopilot-deployment-profile).
 
-### <a name="register-autopilot-devices-that-arent-enrolled"></a>Registrace zařízení autopilotu, která nejsou zaregistrovaná
+### <a name="register-autopilot-devices-that-arent-enrolled"></a>Registrace zařízení Autopilot, která nejsou zaregistrovaná
 
-Pokud vaše zařízení ještě nejsou zaregistrovaná, můžete je zaregistrovat sami. Další informace najdete v tématu [Přidání zařízení](enrollment-autopilot.md#add-devices).
+Pokud zařízení ještě nejsou zaregistrovaná, můžete je zaregistrovat sami. Další informace najdete v tématu [Přidání zařízení](enrollment-autopilot.md#add-devices).
 
 ### <a name="register-devices-from-an-oem"></a>Registrace zařízení od výrobce OEM
 
-Pokud kupujete nová zařízení, můžou zařízení zaregistrovat i někteří výrobci. Další informace najdete na [stránce Windows autopilot](https://aka.ms/WindowsAutopilot).
+Pokud kupujete nová zařízení, můžou někteří výrobci OEM zaregistrovat tato zařízení za vás. Další informace najdete na [stránce Windows Autopilot](https://aka.ms/WindowsAutopilot).
 
 Po *registraci*zařízení s autopilotem, než se zaregistrují do Intune, se zobrazí na třech místech (s názvy nastavenými na jejich sériová čísla):
 - Podokno **zařízení autopilot** v Intune v Azure Portal. Vyberte **registrace zařízení**@no__t 1**zařízení**s**Windows registrace** > .
@@ -179,12 +180,12 @@ Po *registraci*zařízení autopilotu se zobrazí na čtyřech místech:
 Po registraci zařízení autopilotu se jejich názvy stanou názvem hostitele zařízení. Ve výchozím nastavení začíná název hostitele s *plochou*.
 
 
-## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení autopilotu
-Profily nasazení autopilotu slouží ke konfiguraci zařízení autopilotu.
+## <a name="create-and-assign-an-autopilot-deployment-profile"></a>Vytvoření a přiřazení profilu nasazení Autopilotu
+Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **profily nasazení** > **pro Windows** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
-3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Automatický pilot, nastavte **převést všechna cílová zařízení na autopilot** na **Ano**. Všechna vlastněná podniková zařízení, která nejsou v přiřazených skupinách, se budou registrovat v rámci služby nasazení autopilotu. Zařízení v osobním vlastnictví nebudou převedena na autopilot. Povolí zpracování registrace 48 hodin. Když je zařízení odregistrované a resetované, připíše ho autopilot. Po zaregistrování zařízení tímto způsobem zakážete tuto možnost nebo odebráním přiřazení profilu zařízení odeberete ze služby pro nasazení autopilotu. Místo toho musíte [zařízení odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
+3. Pokud chcete, aby se všechna zařízení v přiřazených skupinách automaticky převedla na Autopilot, nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Všechna vlastněná podniková zařízení, která nejsou v přiřazených skupinách, se budou registrovat v rámci služby nasazení autopilotu. Zařízení v osobním vlastnictví nebudou převedena na autopilot. Vyřízení registrace trvá 48 hodin. Jakmile bude registrace zařízení zrušena a zařízení bude resetováno, Autopilot ho zaregistruje. Jakmile se zařízení tímto způsobem zaregistruje, nedojde zakázáním této možnosti ani odebráním přiřazení profilu k odebrání zařízení ze služby nasazení Autopilot. [Zařízení musíte odebrat přímo](enrollment-autopilot.md#delete-autopilot-devices).
 4. Vyberte **Další**.
 5. Na stránce spouštěné při **prvním spuštění počítače (OOBE)** pro **režim nasazení**vyberte možnost **řízeno uživatelem**.
 6. V poli **připojit ke službě Azure AD** vyberte možnost **připojené k hybridní službě Azure AD**.
@@ -202,15 +203,15 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
 1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **Stránka stavu registrace**.
 1. V podokně **Stránka stavu registrace** vyberte **výchozí** **Nastavení** > .
 1. V poli **Zobrazit průběh instalace aplikace a profilu** vyberte **Ano**.
-1. Podle potřeby nakonfigurujte další možnosti.
+1. Nakonfiguruje další možnosti podle potřeby.
 1. Vyberte **Uložit**.
 
 ## <a name="create-and-assign-a-domain-join-profile"></a>Vytvoření a přiřazení profilu připojení k doméně
 
 1. V [Intune](https://aka.ms/intuneportal)vyberte **Konfigurace zařízení** > **profily** **vytvořit profil** > .
 1. Zadejte následující vlastnosti:
-   - **Název**: zadejte popisný název nového profilu.
-   - **Popis**: zadejte popis profilu.
+   - **Název**: Zadejte popisný název nového profilu.
+   - **Popis**: Zadejte popis profilu.
    - **Platforma**: vyberte **Windows 10 a novější**.
    - **Typ profilu**: vyberte **připojení k doméně (Preview)** .
 1. Vyberte **Nastavení**a potom zadejte **předponu názvu počítače**, **název domény**a (volitelné) **organizační jednotku** ve [formátu DN](https://docs.microsoft.com/windows/desktop/ad/object-names-and-identities#distinguished-name). 
@@ -225,11 +226,11 @@ Změna stavu profilu zařízení z *nepřiřazeného* *přiřazení* a nakonec t
      
      b. Nahraďte název profilu autopilotu názvem a zobrazovaným názvem profilu vytvořeným v části [Vytvoření a přiřazení profilu nasazení autopilotu](windows-autopilot-hybrid.md#create-and-assign-an-autopilot-deployment-profile). 
      
-     r. Vytvořte několik profilů nasazení autopilotu a přiřaďte toto zařízení k profilu zadanému v této dynamické skupině.
+     c. Vytvořte několik profilů nasazení autopilotu a přiřaďte toto zařízení k profilu zadanému v této dynamické skupině.
 
 > [!NOTE]
 > Možnosti pojmenování pro automatické pilotní služby Windows pro připojení hybridní služby Azure AD nepodporují proměnné jako% SÉRIOVÉho% a podporují pouze předpony pro název počítače.
 
 ## <a name="next-steps"></a>Další kroky
 
-Po dokončení konfigurace Windows autopilotu se dozvíte, jak tato zařízení spravovat. Další informace najdete v tématu [co je Správa zařízení Microsoft Intune?](../remote-actions/device-management.md).
+Po konfiguraci Windows Autopilotu si přečtěte, jak tato zařízení spravovat. Další informace najdete v tématu [co je Správa zařízení Microsoft Intune?](../remote-actions/device-management.md).

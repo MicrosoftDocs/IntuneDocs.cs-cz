@@ -7,8 +7,8 @@ ms.author: lanewsad
 manager: dougeby
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 0dc35efe-4fd4-4d4a-8569-d649ea704fea
 searchScope:
@@ -18,14 +18,14 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebc7a9a1e9cc355a06baa4b7134216ecc6cd0da5
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 61825741a5651daa55727c706ba683628e723c8a
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545281"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72490285"
 ---
-# <a name="installing-the-company-portal-app-for-windows-10"></a>Instalace aplikace portál společnosti pro Windows 10  
+# <a name="installing-the-company-portal-app-for-windows-10"></a>Instalace aplikace Portál společnosti pro Windows 10  
 
 Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete svoje zařízení s Windows 10 Enterprise nebo Professional do služby Intune, můžete pomocí aplikace Portál společnosti provádět tyto akce:
 
@@ -37,7 +37,7 @@ Když nainstalujete aplikaci Portál společnosti a potom v ní zaregistrujete s
 
 - Obnovení továrního nastavení telefonu v případě ztráty nebo odcizení
 
-Až budete připravení nainstalovat aplikaci portál společnosti a registraci zařízení, najdete v článku [začít s registrací Windows](windows-enrollment-company-portal.md).  
+Až budete připraveni k instalaci Portál společnosti a registraci zařízení, přečtěte si téma Začínáme s registrací [pro Windows](windows-enrollment-company-portal.md).  
 
 Když přidáte počítač:
 

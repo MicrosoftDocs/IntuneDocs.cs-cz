@@ -9,6 +9,7 @@ ms.date: 06/11/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: c002bcb2-ae37-478d-acf3-2bf51faae490
 searchScope:
@@ -16,12 +17,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 28121178e2a5a3aa7e6d16b0a5936f1cad627c09
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: d2bdc4433e48fd77c12bfd5db706f8d226bf95a6
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840960"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506057"
 ---
 # <a name="how-to-update-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
 
@@ -29,7 +30,7 @@ Tento článek popisuje, jak aktualizovat vaši verzi aplikace Portál společno
 * Je k dispozici novější verze Portálu společnosti.
 * Vaše verze Portálu společnosti už není podporovaná.
 
-Tyto kroky popisují, jak aktualizovat nebo získat nejnovější verzi aplikace na zařízeních s Androidem, iOS, macOS a Windows.    
+Tento postup popisuje, jak aktualizovat nebo získat nejnovější verzi aplikace na zařízeních s Androidem, iOS, macOS a Windows.    
 
 ## <a name="update-the-company-portal-app-on-your-android-device"></a>Aktualizace aplikace Portál společnosti na zařízení s Androidem  
 
@@ -42,15 +43,15 @@ Když je k dispozici nová verze, zobrazí se v seznamu nainstalovaných aplikac
 1. Otevřete App Store a vyhledejte řetězec **Intune**.  
 2. Až aplikaci najdete, klepněte na **Aktualizovat**.  
 
-## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizace aplikace portál společnosti na zařízení s macOS
+## <a name="update-the-company-portal-app-on-your-macos-device"></a>Aktualizace aplikace Portál společnosti na zařízení macOS
 
-Nastavení portálu společnosti můžete automaticky nainstalovat aktualizace, jakmile budou k dispozici. 
+Nastavte Portál společnosti k automatické instalaci aktualizací, jakmile budou k dispozici. 
 
-1. Otevřete portál společnosti a přejděte na **pomáhají**. 
-2. Vyberte **vyhledávat aktualizace**. 
+1. Otevřete Portál společnosti a pokračujte v **nápovědě**. 
+2. Vyberte **Vyhledat aktualizace**. 
 3. Na obrazovce Microsoft AutoUpdate vyberte **automaticky stáhnout a nainstalovat**. 
 
-Chcete-li zobrazit dostupné aktualizace, vyberte **vyhledávat aktualizace**.  
+Pokud chcete zobrazit dostupné aktualizace, vyberte **Vyhledat aktualizace**.  
 
 ## <a name="update-the-company-portal-app-on-your-windows-device"></a>Aktualizace aplikace Portál společnosti na zařízení s Windows
 Pokud chcete aktualizace získávat automaticky, jakmile jsou dostupné, otevřete Microsoft Store a přejděte na **Nastavení**. Zapněte **Aktualizace aplikací**. Pokud chcete zobrazit nejnovější aktualizace a aktualizace čekající ve frontě ke stažení, přejděte na **Položky ke stažení a aktualizace**.  

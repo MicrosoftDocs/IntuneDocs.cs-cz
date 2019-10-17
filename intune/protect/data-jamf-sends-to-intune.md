@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,14 +18,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 449e799dfc0531958c1578179cf07440d348ecf8
-ms.sourcegitcommit: f04e21ec459998922ba9c7091ab5f8efafd8a01c
+ms.openlocfilehash: e4bf6df44335f3375d58d3c2c11da7cb3f982b3e
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71813941"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72502414"
 ---
-# <a name="data-jamf-pro-sends-to-intune"></a>Data Jamf pro odesílá do Intune.
+# <a name="data-jamf-pro-sends-to-intune"></a>Data, která Jamf Pro odesílaná do Intune
 
 Pokud ke správě počítačů Mac koncových uživatelů s Intune používáte [Jamf pro](https://www.jamf.com) , zachytí Jamf pro informace o inventáři spravovaných zařízení MacOS. 
 

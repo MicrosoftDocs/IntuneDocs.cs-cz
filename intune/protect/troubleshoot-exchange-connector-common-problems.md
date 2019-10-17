@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 10/02/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d31df7ba639f703c89345440b737c990949ccc9
-ms.sourcegitcommit: a2654f3642b43b29ab0e1cbb2dfa2b56aae18d0e
+ms.openlocfilehash: e9542212e1b75d97c96c024eed20e20e610e2b5d
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72310877"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72503642"
 ---
 # <a name="resolve-common-problems-with-the-intune-exchange-connector"></a>Řešení běžných problémů s Intune Exchange Connectorem
  
@@ -35,7 +36,7 @@ Pokud se zařízení Exchange ActiveSync nezjistí ze serveru Exchange, [sledujt
 
 - Ujistěte se, že uživatelé mají licenci Intune. V takovém případě Exchange Connector nezjistí jejich zařízení.  
 
-- Pokud je primární adresa SMTP uživatele odlišná od hlavního názvu uživatele (UPN) v Azure Active Directory (Azure AD), Exchange Connector nezjistí žádná zařízení pro tohoto uživatele. Pokud chcete tento problém vyřešit, opravte primární adresu SMTP.  
+- Pokud je primární adresa SMTP uživatele odlišná od hlavního názvu uživatele (UPN) v Azure Active Directory (Azure AD), Exchange Connector nezjistí žádná zařízení pro tohoto uživatele. Tento problém vyřešíte tím, že opravíte primární adresu SMTP.  
 
 - Pokud ve vašem prostředí máte servery poštovních schránek Exchange 2010 i Exchange 2013, doporučujeme, abyste odkazovali na Exchange Connector na Exchange 2013 Server pro přístup klienta (CAS). Pokud je Exchange Connector nastavený tak, aby komunikoval s certifikačními autoritami Exchange 2010, Exchange Connector nezjistí žádná zařízení uživatele na Exchangi 2013.  
 

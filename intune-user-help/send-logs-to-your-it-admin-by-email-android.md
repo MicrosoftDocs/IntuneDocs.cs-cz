@@ -1,6 +1,6 @@
 ---
-title: Nahrání a e-mailu protokoly aplikací | Dokumentace Microsoftu
-description: Nahrávání a e-mailu protokoly z aplikací v Intune
+title: Nahrávání a e-mailové protokoly aplikací | Microsoft Docs
+description: Nahrávání a e-mailové protokoly z aplikací Intune
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -9,6 +9,7 @@ ms.date: 04/19/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 85c868e7-8d63-480c-9770-4e99614a5c94
 searchScope:
@@ -18,49 +19,49 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c03d83e6f1bfbffdc7a43d0b80d0568a44555e32
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 8eef3af9a82e7a61bc5200bf45143657072d6db7
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546018"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508366"
 ---
-# <a name="upload-and-email-logs"></a>Nahrávání a e-mailu protokoly  
+# <a name="upload-and-email-logs"></a>Nahrávání a e-mailové protokoly  
 
-Pokud dochází k problému v aplikaci portál společnosti nebo Microsoft Intune, můžete pro pracovníka podpory společnosti e-mailu podrobnosti o problému. Tyto podrobnosti je poskytnout další kontextové informace o problému.  
+Pokud dojde k potížím v aplikaci Portál společnosti nebo Microsoft Intune, můžete e-mail s podrobnostmi o problému poslat osobě firemní podpory. Tyto podrobnosti jim poskytnou další kontext tohoto problému.  
 
-Podrobnosti o chybě skutečné se ukládají na zařízení ve speciálním dokumentu s názvem _diagnostický protokol_. Když protokoly nahrajete do aplikace portál společnosti nebo Microsoft Intune, budete nejdřív odesílat vývojářům Microsoftu, kteří na aplikaci pracují. Protokoly používají k vylepšení funkčnosti aplikace a zabránění dalším chybám. Ke konkrétní chybě dostanete ID incidentu, které můžete předat pracovníkovi firemní podpory a použít pro případy podpory Microsoftu.  
+Podrobnosti o skutečných chybách se v zařízení uchovávají ve speciálním dokumentu s názvem _diagnostický protokol_. Po nahrání protokolů do Portál společnosti nebo Microsoft Intune aplikace se nejdřív odešlou vývojářům Microsoftu, kteří pracují na aplikaci. Protokoly používají k vylepšení funkčnosti aplikace a zabránění dalším chybám. Ke konkrétní chybě dostanete ID incidentu, které můžete předat pracovníkovi firemní podpory a použít pro případy podpory Microsoftu.  
 
 > [!Note]
-> Chcete-li usnadnit firemní podpoře najít příčinu problému, zapněte _podrobné protokolování_ v aplikaci portál společnosti. Pokud používáte aplikace pro Microsoft Intune, nastavte **úroveň podrobností protokolování** k **Verbose**. Podrobné protokolování zaznamenává všechny podrobnosti o chybách, které pak zahrne do zprávy. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
+> Aby mohla firemní podpora najít příčinu problému, zapněte _podrobné protokolování_ portál společnosti. Pokud používáte aplikaci Microsoft Intune, nastavte **úroveň podrobností protokolu** na **verbose**. Podrobné protokolování zaznamenává všechny podrobnosti o chybách, které pak zahrne do zprávy. Postup, jak [zapnout podrobné protokolování, najdete tady](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
 
-## <a name="upload-and-email-logs-from-company-portal"></a>Nahrávání a e-mailu protokoly z portálu společnosti  
+## <a name="upload-and-email-logs-from-company-portal"></a>Nahrávání a e-mailové protokoly z Portál společnosti  
 
-1. V aplikaci portál společnosti existují dva způsoby, jak inicializovat e-mailovou podporu.
-    * Z domovské obrazovky: Klepněte na **Nabídka** > **Nápověda** > **E-mailová podpora**.  
-    * Z chybová zpráva: Klepněte na **POMÁHAJÍ** nebo **odeslat informace**, pokud je k dispozici.  
+1. V aplikaci Portál společnosti existují dva způsoby, jak zahájit podporu e-mailu.
+    * Z obrazovky domů: klepněte na **nabídku** > **help** > **e-mailová podpora**.  
+    * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.  
 
 3. Klepněte na **Poslat e-mail a nahrát protokoly**.  
 4. Po nahrání protokolů klepněte na e-mailovou aplikaci. 
-5. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. V textu e-mailu popište problém, která byla napříč.    
+5. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. V těle e-mailu Popište problém, který jste nahlásili v rámci.    
 
 
-## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailu protokoly z aplikace pro Microsoft Intune   
+## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>Nahrávání a e-mailové protokoly z aplikace Microsoft Intune   
 
-1. V aplikaci Microsoft Intune existují dva způsoby, jak inicializovat e-mailová podpora.  
-    * Z domovské obrazovky: Klepněte na **nabídky** > **pomáhají** > **získat podporu**.  
-    * Z chybová zpráva: Klepněte na **POMÁHAJÍ** nebo **odeslat informace**, pokud je k dispozici.  
+1. V aplikaci Microsoft Intune existují dva způsoby, jak zahájit podporu e-mailu.  
+    * Z domovské obrazovky: klepněte na **nabídku** > **Nápověda** > **získat podporu**.  
+    * Z chybové zprávy: klepněte na tlačítko **help** nebo **Odeslat informace**, je-li k dispozici.  
 
     > [!NOTE]
     > Podle toho, jaké zařízení s Androidem máte, může být **Nabídka** buď softwarové, nebo hardwarové tlačítko.
 
-3. Klepněte na **NAHRÁT protokoly**.  
-4. Až se nahrávání dokončí, klepněte na **e-MAILU** a vyberte svou e-mailovou aplikaci.  
-5. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. V textu e-mailu popište problém, která byla napříč.  
+3. Klepněte na **Nahrát protokoly**.  
+4. Po dokončení nahrávání klepněte na **e-mail** a vyberte svou e-mailovou aplikaci.  
+5. Otevře se e-mailová zpráva s vyplněným ID incidentu v poli Předmět. V těle e-mailu Popište problém, který jste nahlásili v rámci.  
 
-## <a name="next-steps"></a>Další postup  
+## <a name="next-steps"></a>Další kroky  
 
 Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).

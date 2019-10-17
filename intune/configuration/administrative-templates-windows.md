@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 09/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.reviewer: ''
@@ -15,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d4bf6a52fd860695433e0020e9ec7390f98eca6
-ms.sourcegitcommit: 45d7c76e760c5117bf134fb57f7e248e5b6c4ad5
+ms.openlocfilehash: a7f5a85896a2e6e7be845b2314c4f837dcaeb7b0
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314651"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507019"
 ---
 # <a name="use-windows-10-templates-to-configure-group-policy-settings-in-microsoft-intune"></a>Pomocí šablon Windows 10 můžete nakonfigurovat nastavení zásad skupiny v Microsoft Intune
 
@@ -34,7 +35,7 @@ Nastavení Windows jsou podobná nastavení zásad skupiny (GPO) ve službě Act
 
 Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s Windows 10 a ukazuje, jak filtrovat všechna dostupná nastavení v Intune. Když vytvoříte šablonu, vytvoří se profil konfigurace zařízení. Pak můžete tento profil přiřadit nebo nasadit do zařízení s Windows 10 ve vaší organizaci.
 
-## <a name="before-you-begin"></a>Než začnete
+## <a name="before-you-begin"></a>Před zahájením
 
 - Některá z těchto nastavení jsou k dispozici počínaje verzí Windows 10 1703 (RS2). Některá nastavení nejsou součástí všech edicí systému Windows. Pro dosažení co nejlepších výsledků se doporučuje používat Windows 10 Enterprise verze 1903 (19H1) a novější.
 
@@ -43,15 +44,15 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
 ## <a name="create-a-template"></a>Vytvoření šablony
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **profily** > **vytvořit profil**.
+2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte název profilu.
-    - **Popis**: zadejte popis profilu. Toto nastavení je volitelné, ale doporučuje se.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **Windows 10 a novější**.
     - **Typ profilu**: vyberte **šablony pro správu**.
 
-4. Vyberte **Create** (Vytvořit). V novém okně vyberte **Nastavení**. V seznamu je uvedeno každé nastavení a pomocí šipek před a další můžete zobrazit další nastavení:
+4. Vyberte **Vytvořit**. V novém okně vyberte **Nastavení**. V seznamu je uvedeno každé nastavení a pomocí šipek před a další můžete zobrazit další nastavení:
 
     ![Podívejte se na vzorový seznam nastavení a použijte tlačítka předchozí a další.](./media/administrative-templates-windows/administrative-templates-sample-settings-list.png)
 
@@ -71,9 +72,9 @@ Tento článek obsahuje seznam kroků pro vytvoření šablony pro zařízení s
     > - Windows 10 19H1 a novější s nainstalovanou verzí [KB 4512941](https://support.microsoft.com/kb/4512941)
 
 6. Vyberte libovolné nastavení. Můžete například vyfiltrovat **sadu Office**a vybrat **Aktivovat prohlížení s omezeným přístupem**. Zobrazí se podrobný popis nastavení. Vyberte možnost **povoleno**, **zakázáno**nebo ponechat nastavení jako **Nenakonfigurováno** (výchozí). Podrobný popis také vysvětluje, co se stane, když vyberete možnost **povoleno**, **zakázáno**nebo **není nakonfigurováno**.
-7. Kliknutím na **OK** uložte změny.
+7. Výběrem **OK** uložte změny.
 
-Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Zde je několik příkladů:
+Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v prostředí. Tady je několik příkladů:
 
 - Pomocí nastavení pro **oznamování maker v jazyce VBA** můžete zpracovávat makra VBA v různých systém Microsoft Office programech, včetně Wordu a Excelu.
 - Pomocí nastavení **povolení stahování souborů** povolte nebo Zabraňte stažení z aplikace Internet Explorer.
@@ -81,7 +82,7 @@ Přejděte do seznamu nastavení a nakonfigurujte požadovaná nastavení v pros
 - Pomocí nastavení **Stáhnout nepodepsané ovládací prvky ActiveX** zabráníte uživatelům v Stahování nepodepsaných ovládacích prvků ActiveX z Internet Exploreru.
 - Pomocí nastavení **vypnout obnovení systému** povolíte nebo zabráníte uživatelům v zařízení spouštět obnovení systému.
 - Nastavení **povoluje Import oblíbených položek** použijte, když chcete uživatelům dovolit nebo zablokovat Import oblíbených položek z jiného prohlížeče do Microsoft Edge.
-- A spoustu dalších věcí...
+- A mnohem víc...
 
 ## <a name="find-some-settings"></a>Najít některá nastavení
 

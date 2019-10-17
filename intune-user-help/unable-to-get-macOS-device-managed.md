@@ -9,6 +9,7 @@ ms.date: 11/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: ''
 searchScope:
@@ -18,20 +19,20 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d39c065dd991fab548cd6050337379746bc28c2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 499eb015f38134a8b1ff1c41dd22d26cdd4f7324
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505535"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508145"
 ---
 # <a name="unable-to-get-macos-device-managed"></a>Zařízení s macOS nelze spravovat
 
 Pokud se při pokusu o správu zařízení s macOS zobrazí některá z následujících zpráv, obraťte se na firemní podporu.
 
-**Zpráva 1**: *Došlo k potížím při přidávání zařízení do správy. Tento problém může být způsobený tím, že používáte virtuální počítač, máte zakázané sériové číslo nebo toto zařízení už je přiřazené k někomu jinému. Zjistěte, jak tyto problémy můžete vyřešit, nebo se obraťte na firemní podporu.*
+**Zpráva 1**: máme *problémy s tím, jak vaše zařízení spravuje. K tomuto problému může dojít, pokud používáte virtuální počítač, máte omezené sériové číslo, nebo pokud je toto zařízení již přiřazeno někomu jinému. Zjistěte, jak tyto problémy vyřešit, nebo se obraťte na firemní podporu.*
 
-**Zpráva 2**: *Zdá se, že používáte virtuální počítač. Ověřte, že je virtuální počítač plně nakonfigurovaný, a to včetně sériového čísla a modelu hardwaru. Pokud nejde o virtuální počítač, kontaktujte prosím podporu.*  
+**Zpráva 2**: vypadá to, že *používáte virtuální počítač. Ujistěte se, že jste plně nakonfigurovali svůj virtuální počítač, včetně sériového čísla a hardwarového modelu. Pokud se nejedná o virtuální počítač, obraťte se prosím na podporu.*  
 
 Vaše zařízení nemusí být možné spravovat z jednoho z následujících důvodů: 
 

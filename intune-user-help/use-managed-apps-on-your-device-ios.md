@@ -9,6 +9,7 @@ ms.date: 01/09/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 3232c5c1-cb9f-45ca-806f-7e74eeb3533e
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 5daa9f6b9f50c561876818e75e56c9a948a8f955
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546615"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508079"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Použití spravovaných aplikací na zařízení s iOSem
 
@@ -45,12 +46,12 @@ Spravované aplikace můžete získat několika různými způsoby:
 Vaše firemní podpora může někdy nakoupit pro aplikaci, kterou instalujete, více licencí. Pokud se zobrazí zpráva, že máte přijmout smlouvu Apple Volume Purchase Program, není to nic nezvyklého a můžete ji přijmout. Pokud ji nepřijmete, nebudete si moct aplikaci nainstalovat.
 
 ## <a name="available-apps"></a>Dostupné aplikace   
- Vaše organizace vybere aplikace, které jsou vhodné a užitečné si v práci nebo škole. Tyto aplikace jsou pouze ty, které najdete na portálu společnosti.   
+ Vaše organizace vybere aplikace, které jsou vhodné a užitečné pro práci nebo školu. Tyto aplikace jsou pouze ty, které najdete v Portál společnosti.   
 
- Aplikace jsou také k dispozici na základě typu vašeho zařízení. Například pokud používáte aplikaci portál společnosti pro iOS, budete mít přístup do aplikace pro iOS, ale ne na Android apps.   
+ Aplikace jsou také k dispozici na základě typu zařízení. Pokud například používáte aplikaci Portál společnosti pro iOS, budete mít přístup k aplikacím pro iOS, ale ne k aplikacím pro Android.   
 
 ## <a name="request-an-app-for-work-or-school"></a>Žádost o aplikaci pro práci nebo školu   
- Pokud je aplikace potřebujete, ale nezobrazuje v aplikaci portál společnosti, můžete požádat o jeho. Najít kontaktní údaje pro váš **helpdesku** v aplikaci portál společnosti **podporu** kartu. Stejné kontaktní údaje najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
+ Pokud máte aplikaci, kterou potřebujete, ale nevidíte ji v Portál společnosti, můžete si ji vyžádat. Na kartě Podpora aplikace Portál společnosti můžete najít kontaktní údaje pro vaši **technickou** **podporu** . Stejné kontaktní informace najdete na [webu portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).   
  
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Co může firemní podpora spravovat v mé aplikaci?  

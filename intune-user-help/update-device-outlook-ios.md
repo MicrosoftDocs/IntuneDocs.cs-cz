@@ -10,6 +10,7 @@ ms.date: 01/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 48ef8e17-db03-4a1b-95a2-bc594979734c
 searchScope:
@@ -19,19 +20,19 @@ ms.reviewer: vadona
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8080b07a937b7e827ed0dca3a9fb2c3072b41c5
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 4ff648357c4a787367dc30951fdcdd0dc9203e35
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61500520"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508067"
 ---
 # <a name="you-need-to-update-your-ios-device-to-install-the-outlook-app"></a>Abyste si mohli nainstalovat aplikaci Outlook, musíte si aktualizovat zařízení s iOSem
 
 Díky aplikaci Outlook si můžou miliony uživatelů na zařízeních s [iOSem](https://itunes.apple.com/app/microsoft-outlook-email-calendar/id951937596) připojit všechny svoje e-mailové účty, kalendáře a soubory pohodlně do jednoho místa.
 
 >[!NOTE]
-> Hledáte pokyny pro zařízení s Androidem? [Další informace](update-device-outlook-android.md).
+> Hledáte pokyny pro zařízení s Androidem? [Přečtěte si další informace](update-device-outlook-android.md).
 
 Někdy se může stát, že se instalace aplikace nezdaří, třeba v případě, že zařízení není v aktuálním stavu. 
 

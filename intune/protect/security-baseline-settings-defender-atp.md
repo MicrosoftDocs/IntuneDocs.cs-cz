@@ -8,6 +8,7 @@ manager: dougeby
 ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
@@ -16,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 52420375ae5ed88ab713a1da3e927e43e433db83
-ms.sourcegitcommit: 884654da8e72a63bfaea6b5def6c7891b065f251
+ms.openlocfilehash: a2cb5d7375ae5b76a24861872d4abf786f199dfd
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163492"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72509001"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
@@ -53,7 +54,7 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
     **Výchozí**: Ano
 
   - **Chování schránky** - *Nastavení/ClipboardSettings*  
-    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Mezi možnosti patří:
+    Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Vaše možnosti jsou:
     - *Není nakonfigurováno*  
     - *Blokování obou* dat: mezi počítačem a virtuálním prohlížečem nejde přenášet data.  
     - *Blokovat hostitele do kontejneru* – data nejde přenést z počítače do virtuálního prohlížeče.
@@ -207,7 +208,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
   Chcete-li zkontrolovat, zda systém podporuje ochranu před režimem DMA, spusťte příkaz MSINFO32. exe v systému a na stránce Souhrn zkontrolujte pole *ochrana jádra DMA* .  
 
-  Mezi možnosti patří: 
+  Vaše možnosti jsou: 
   - *Výchozí nastavení zařízení* – po přihlášení nebo odemknutí obrazovky se můžou kdykoli zobrazit výčet zařízení s přemapováním DMA na kompatibilní ovladače. Zařízení s přemapováním DMA na nekompatibilní ovladače se zobrazí jenom poté, co uživatel odemkne obrazovku.
   - Možnost *povolení všech* externích zařízení s podporou přímého přístupu do paměti (DMA) se v každém okamžiku vyčíslí.
   - *Blokování všech* zařízení s přemapováním DMA kompatibilních ovladačů se smí kdykoli zobrazit. Zařízení s přemapováním DMA na nekompatibilní ovladače nikdy nebudou moct spouštět a používat DMA kdykoli.
@@ -288,7 +289,7 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
 - **Řízený přístup ke složkám**  
   Viz [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) a [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
   
-   Chránit soubory a složky před neoprávněnými změnami nepřátelskými aplikacemi
+   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.
 
   **Výchozí**: režim auditu
 
@@ -365,7 +366,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
   **Výchozí**: Rychlá kontrola
 
-- **Kontrolovat všechna stahování**  
+- **Kontrolovat všechny stahované soubory**  
   [Defender/AllowIOAVProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowioavprotection) – Pokud je tato hodnota nastavená na *Ano*, Defender zkontroluje všechny stažené soubory a přílohy.  
 
   **Výchozí**: Ano
@@ -399,13 +400,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
 
 - **Rozšířený časový limit pro Cloud Defenderu**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Windows Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba čekání programu Windows Defender je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožní cloudu důkladně prozkoumat podezřelé soubory.  
+  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Windows Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba čekání programu Windows Defender je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal.  
 
   Ve výchozím nastavení je rozšířená hodnota času 0 (zakázáno). Intune doporučuje povolit toto nastavení a zadat aspoň 20 dalších sekund.  
  
   **Výchozí hodnota**: 0
 
-- **Kontrolovat archivní soubory**  
+- **Prohledat archivní soubory**  
   [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – nastavte na *Ano* , pokud chcete, aby program Windows Defender kontroloval archivní soubory.  
 
   **Výchozí**: Ano
@@ -428,7 +429,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: Ano
 
 - **Úroveň blokování cloudu Defenderu**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Windows Defender blokuje a kontroluje podezřelé soubory. Mezi možnosti patří:
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Windows Defender blokuje a kontroluje podezřelé soubory. Vaše možnosti jsou:
 
   - Vysoce agresivní blokování neznámých souborů při optimalizaci výkonu klienta (větší šance na falešně pozitivní)
   - Vysoká plus – agresivní blokování neznámých souborů a uplatnění dalších ochranných opatření (může ovlivnit výkon klienta)

@@ -9,6 +9,7 @@ ms.date: 04/19/2017
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 6d8c6372-f2ce-4558-8886-1d7c1966699c
 searchScope:
@@ -18,18 +19,18 @@ ms.reviewer: sumitp
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 828afc63bdf1735188d921cb9dc441218564f414
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 84098d4d2152d62eda888cdcde1cf88e5081a470
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61499117"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506178"
 ---
 # <a name="enroll-your-ios-device-in-telecom-expense-management"></a>Registrace zařízení s iOSem ve službě TEM (Telecom Expense Management)
 
 Vaše organizace může používat software pro správu telekomunikačních výdajů (TEM – Telecom Expense Management), aby zajistila využívání datových a hlasových tarifů v rámci přijatelných limitů. Po dokončení registrace zařízení budete vyzváni k výběru nejvhodnější kategorie tohoto zařízení.
 
-  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOSem. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
+  ![Snímek obrazovky s výběrem nejvhodnější kategorie pro zařízení s iOS. Zobrazuje výběr firemní nebo osobní registrace.](./media/ios-enroll-10-tem-select-best-category.png)
 
 Po výběru příslušné možnosti dostanete oznámení s pokynem k instalaci aplikace [__Datalert__](https://itunes.apple.com/app/datalert/id771029268?mt=8) z App Storu. Aplikace Datalert umožňuje vaší organizaci měřit využití dat. Pokud má vaše organizace nakonfigurovanou možnost pracovní nebo školní registrace, budete se muset přihlásit pomocí pracovního nebo školního účtu. Pokud taková možnost není povolena, budete muset zadat údaje, jako je vaše telefonní číslo, a ověřit zařízení pomocí kódu, abyste se mohli z aplikace zaregistrovat ve službě Datalert.
 

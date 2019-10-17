@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 469f969b6429cc39b5a8b8d3c041b96fc773c9ec
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 0e404f6591eb042fa4d035f3377e211a219fabe4
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731186"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72497960"
 ---
 # <a name="configure-microsoft-launcher"></a>Konfigurace Microsoft Launcheru
 
@@ -59,7 +60,7 @@ V následující tabulce jsou uvedeny dostupné konfigurační klíče pro spou�
 |    Typ registrace    |    Řetězec     |    Výchozí    |    Umožňuje nastavit typ registrace, na kterou by tyto zásady měly platit. V současné době **výchozí** hodnota odkazuje na **CorporateOwnedBuisnessOnly**. K dispozici nejsou žádné další podporované typy registrace.        Název klíče JSON: management_mode_key        |
 |    Změna uživatele v pořadí aplikace domovské obrazovky povolena    |    Logická hodnota    |    True (Pravda)    |    Umožňuje určit, zda je možné změnit nastavení **pořadí aplikace domovské obrazovky** koncovým uživatelem.<ul><li>Pokud je nastavená **hodnota true**, pořadí aplikací definované v zásadě se vynutilo jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat pořadí aplikací.</li></ul><br>**Poznámka:** Pořadí aplikace domovské obrazovky lze nakonfigurovat pouze pomocí editoru JSON.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed`    |
 |    Nastavit velikost mřížky    |    Řetězec    |    Automaticky    |    Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu: `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili.<br><br>        Název klíče JSON:<br>`com.microsoft.launcher.HomeScreen.GridSize`    |
-|    Nastavit tapetu zařízení    |    Řetězec    |    Platnost    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
+|    Nastavit tapetu zařízení    |    Řetězec    |    platnost    |    Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu.<br><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL`    |
 |    Nastavit, aby se změna uživatele na tapetě zařízení povolila    |    Logická hodnota    |    True (Pravda)    |    Umožňuje určit, zda může koncový uživatel změnit nastavení tapety zařízení.<ul><li>Pokud je nastavená **hodnota true**, Tapeta v zásadách se vynutila jenom při počátečním nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavena **hodnota false**, bude při každé synchronizaci vynutila tapeta.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Wallpaper.URL.UserChangeAllowed`        |
 |    Povolení informačního kanálu    |    Logická hodnota    |    True (Pravda)    |    Umožňuje povolit informační kanál spouštěče zařízení v případě, že uživatel přetáhne přímo na domovské obrazovce.<ul><li>Pokud je nastaveno na **true**, kanál bude povolen.</li><li>Pokud je hodnota nastavena na **false**, kanál bude zakázán.</li></ul><br>Název klíče JSON:<br>`com.microsoft.launcher.Feed.Enabled`    |
 |    Povolit změnu uživatele v informačním kanálu povolen    |    Logická hodnota    |    True (Pravda)    |     Umožňuje určit, jestli může koncový uživatel změnit nastavení **Povolení kanálu** .<ul><li>Pokud je nastavená **hodnota true**, informační kanál se vynutil jenom pro počáteční nasazení. Následně se zásada neuplatní, aby se projevily změny, které uživatel mohl udělat.</li><li>Pokud je nastavená **hodnota false**, bude se při každé synchronizaci vyžadovat informační kanál.</li></ul><br>Název klíče JSON: `com.microsoft.launcher.Feed.Enabled.UserChangeAllowed`    |

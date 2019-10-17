@@ -9,18 +9,19 @@ manager: dougeby
 ms.date: 08/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: configuration
 ms.localizationpriority: medium
 ms.technology: ''
 ms.reviewer: kerimh
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 11361b65735a7ed7e724a77349e3624e0e35ecaf
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 81d0ff389acd2c7014b830bb7c24e336088c4f96
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71730842"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506888"
 ---
 # <a name="delivery-optimization-settings-for-intune"></a>Nastavení Optimalizace doručení pro Intune
 
@@ -46,7 +47,7 @@ Pokud chcete nakonfigurovat Intune, aby používala tato nastavení, přečtěte
 | [Omezit výběr druhé strany](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-a-method-to-restrict-peer-selection)          | 1803        | Je nutné, aby byl **režim stahování** nastaven na hodnotu *http Blended s partnerským vztahem za stejné NAT (1)* nebo *http Blendem s partnerským vztahem přes soukromou skupinu (2)* .<br/><br/>Omezí výběr partnerského vztahu na konkrétní skupinu zařízení.<br/><br/>**Výchozí**: Nenakonfigurováno <br/><br/>CSP zásad: [DORestrictPeerSelectionBy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dorestrictpeerselectionby)<br><br>      |
 | [Zdroj ID skupiny](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization-reference#select-the-source-of-group-ids)     | 1803        | Vyžaduje, aby byl **režim stahování** nastaven na *http Blend s partnerským vztahem přes soukromou skupinu*.<br><br>Omezí výběr partnerského vztahu na konkrétní skupinu zařízení podle zdroje.<br><br>Pokud vyberete **vlastní**, pak nakonfigurujete **ID skupiny (jako GUID)** . Identifikátor GUID použijte jako ID skupiny, pokud potřebujete vytvořit jednu skupinu pro partnerský vztah místní sítě pro větve, které jsou v různých doménách nebo nejsou ve stejné síti LAN.<br><br>**Výchozí**: Nenakonfigurováno <br><br>CSP zásad: [DOGroupId](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-dogroupid)     |
 
-## <a name="bandwidth"></a>připojení  
+## <a name="bandwidth"></a>Připojení  
 
 |Nastavení  |Verze Windows  |Details  |
 |---------|---------|---------|

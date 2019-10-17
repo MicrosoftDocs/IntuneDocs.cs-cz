@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 07/15/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: c9163693-d748-46e0-842a-d9ba113ae5a8
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 542d9c7890f9484311ca8e6400d0a75a41e13d7c
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6cee01676a98da714d7047e6a45713e8673786ea
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731422"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507494"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -108,7 +109,7 @@ U zařízení se systémem iOS použijte následující páry klíč/hodnota:
 | **Hodnota** | <ul><li>**Povolené**: Jediný povolený účet je spravovaný uživatelský účet definovaný klíčem [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).</li><li>**Zakázané** (nebo libovolná hodnota, která se neshoduje malými a velkými písmeny s **Povolené**): Je povolený libovolný účet.</li></ul> |.
 
    > [!NOTE]
-   > Je potřeba použít OneDrive pro iOS 10,34 nebo novější a Outlook pro iOS 2.99.0 nebo novější a aplikace musí být zacílená na [Zásady ochrany aplikací Intune](app-protection-policy.md) , když povolíte jenom nakonfigurované účty organizace s více identitami.
+   > Je nutné použít OneDrive pro iOS 10,34 nebo novější, Outlook pro iOS 2.99.0 nebo novější nebo Edge pro iOS 44.8.7 nebo novější a aplikace musí být cílem [zásad ochrany aplikací Intune](app-protection-policy.md) , když se povolují jenom nakonfigurované účty organizace s více identitami.
 
 ## <a name="enter-xml-data"></a>Zadání XML dat
 

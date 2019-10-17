@@ -9,6 +9,7 @@ ms.date: 10/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 018bda65-7238-41f5-b92a-e5f67b7fe085
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: e64911ea9b1b1d3c619a82eac9dc78e4e78a53e9
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546650"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72508124"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Odebrání zařízení s Windows ze systému správy
 
@@ -92,8 +93,8 @@ Provedením následujících kroků odeberte telefon s Windows 8.1 z Intune.
 
 Aplikace Portál společnosti ukládá do zařízení s Windows dva druhy dat:
 
-- **Diagnostické protokoly**: Standardní aktivity data aplikací, která shromažďuje Microsoft. Tato data se automaticky vymažou při odinstalaci aplikace Portál společnosti. Data o aktivitě aplikací jsou například data o tom, jak dlouho byla aplikace otevřena nebo jestli se chybově ukončila.
-- **Mezipaměť aplikace**: Podpora souborů, které jsou požadovány pro aplikace pro práci, jako je například ikony a nastavení.
+- **Protokoly pro diagnostiku**: Standardní data o aktivitě, která Microsoft shromažďuje. Tato data se automaticky vymažou při odinstalaci aplikace Portál společnosti. Data o aktivitě aplikací jsou například data o tom, jak dlouho byla aplikace otevřena nebo jestli se chybově ukončila.
+- **Mezipaměť aplikace**: Podpůrné soubory, které aplikace potřebuje k práci, například ikony a nastavení.
 
 Pokud chcete odstranit uložené protokoly a mezipaměť, proveďte jeden z následujících kroků:
 

@@ -9,6 +9,7 @@ ms.date: 05/21/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
+ms.subservice: end-user
 ms.technology: ''
 ms.assetid: 812e82df-76df-402b-bfe9-29302838f40e
 searchScope:
@@ -18,12 +19,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e4def9f0e4e91f7db9e0a81e2ad55852df524f7
-ms.sourcegitcommit: 0d1a02fb3d2a801a95c2244e9ef13ecf22be2eb1
+ms.openlocfilehash: ca8b24a1e8d0da4386ab185533fec38d9b34eb21
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71302467"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72506255"
 ---
 # <a name="enroll-windows-10-devices-with-intune-company-portal"></a>Registrace zařízení s Windows 10 pomocí Portál společnosti Intune
 
@@ -61,7 +62,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 7. Na stránce **, kterou jste nastavili!** vyberte **Hotovo**. Právě jste svoje zařízení zaregistrovali.  
 
-8. Pokud chcete dvakrát ověřit připojení, přejděte zpátky na **Nastavení** > **účty** > **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
+8. Pokud chcete dvakrát ověřit připojení, přejděte zpět na **nastavení** > **účty** > **přístup do práce nebo do školy**.  Váš účet by se teď měl zobrazit v seznamu.  
 
 
     ![Ověření, zda bylo připojení správně nastaveno](./media/w10-enroll-rs1-validate-successful-enrollment.png)  
@@ -75,7 +76,7 @@ Tento postup popisuje, jak zaregistrovat zařízení, které běží ve Windows 
 
 2. Otevřete aplikaci **Nastavení** . Pokud aplikace není v seznamu aplikací snadno dostupná, otevřete panel hledání a zadejte "nastavení".
 
-3. Vyberte **účty** > , které**váš účet máte**.  
+3. Vyberte **účty** > **váš účet**.  
 
 
     ![Vyberte svůj účet.](./media/W10-enroll-2-accounts-your-account.png)  

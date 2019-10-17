@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 09/16/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
+ms.subservice: apps
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
@@ -17,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59d93bed7bae2b757a4bd1e7b1dffc814629f6a1
-ms.sourcegitcommit: 88b6e6d70f5fa15708e640f6e20b97a442ef07c5
+ms.openlocfilehash: 6fecdc56e6140a939959ac92bbe8fa410d43ccc5
+ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71731434"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72507513"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -71,7 +72,7 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 | Mail | john@contoso.com |
 | Hlavní název uživatele | john@contoso.com |
 | Částečný hlavní název uživatele | Jan |
-| Doména | contoso.com |
+| Doména | Contoso.com |
 | Uživatelské jméno | Jan Karásek |
 | ID účtu | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
@@ -86,9 +87,8 @@ Pro zařízení s Androidem použijte následující dvojice klíč/hodnota:
 | **Hodnota** | <ul><li>Jeden nebo více hlavních názvů uživatele (UPN) oddělených <code>;</code>.</li><li>Jediné povolené účty jsou spravované uživatelské účty definované pomocí tohoto klíče.</li><li> Pro zařízení zaregistrovaná v Intune se může použít token <code>{{userprincipalname}}</code>, aby představoval účet zaregistrovaného uživatele.</li></ul> |
 
    > [!NOTE]
-   > Musíte použít Outlook pro Android 2.2.222 nebo novější, když budete povolovat jenom nakonfigurované účty organizace s více identitami.<p></p>
+   > Pokud chcete povolit jenom nakonfigurované účty organizace s více identitami, musíte použít Outlook pro Android 2.2.222 a novější, Word, Excel, PowerPoint pro Android 16.0.9327.1000 a novější nebo OneDrive pro Android 5,28 a novější.<p></p>
    > Jako správce Microsoft Intune můžete určit, které uživatelské účty se přidají do systém Microsoft Office aplikací na spravovaných zařízeních. Můžete omezit přístup jenom na povolené uživatelské účty organizace a zablokovat osobní účty zaregistrovaných zařízení. Podpůrné aplikace zpracují konfiguraci aplikace a odeberou a zablokují neschválené účty.<p></p>
-   > Pro Microsoft Word, Microsoft Excel a Microsoft PowerPoint musíte použít verzi aplikace 16.0.9327.1000 a novější. 
 
 ## <a name="enter-the-json-editor"></a>Použití editoru JSON
 
