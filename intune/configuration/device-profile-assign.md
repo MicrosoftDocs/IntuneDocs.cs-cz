@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6579ad9eb902bcd5ad43662115f56a10681c32ba
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
+ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506869"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72550804"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -34,6 +34,10 @@ V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé inform
 
 > [!NOTE]  
 > Když zásadu odeberete nebo už není přiřazená k zařízení, nastavení může zachovat stávající hodnotu. Nastavení se nevrátí na výchozí hodnotu. Chcete-li změnit nastavení na jinou hodnotu, vytvořte novou zásadu a přiřaďte ji.
+
+## <a name="before-you-begin"></a>Před zahájením
+
+Ujistěte se, že máte odpovídající roli pro přiřazení zásad. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 

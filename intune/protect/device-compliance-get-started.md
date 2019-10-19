@@ -11,17 +11,17 @@ ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
-ms.reviewer: joglocke
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: abbde2199873b9c3c2a53fef4a2dd85bb955ed43
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
-ms.translationtype: MT
+ms.openlocfilehash: c6ab0fd0220b252fe2361c0721ea026afcc232c0
+ms.sourcegitcommit: 62e264052738fc7fc6f22750589fb4bee7cd9d09
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504448"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72531997"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
 
@@ -116,13 +116,13 @@ Následující tabulka popisuje, jak se spravují nevyhovující nastavení při
 
 |**Nastavení zásad**| **Platforma** |
 | --- | ----|
-| **Konfigurace kódu PIN nebo hesla** | - **Android 4,0 a novější**: v karanténě</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: Opraveno</br>- **macOS 10,11 a novější**: Opraveno</br></br>- **Windows 8.1 a novější**: Opraveno</br>- **Windows Phone 8,1 a novější**: Opraveno|
-| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)</br>- **macOS 10,11 a novější**: Opraveno (nastavením PIN kódu)</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: Opraveno |
-| **Zařízení s jailbreakem nebo rootem** | - **Android 4,0 a novější**: v karanténě (nejedná se o nastavení)</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: v karanténě (nejedná se o nastavení)</br>- **Android Enterprise**: v karanténě (nejedná se o nastavení)</br></br>- **iOS 8,0 a novější**: v karanténě (nejedná se o nastavení)</br>- **macOS 10,11 a novější**: nelze použít</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: nelze použít |
-| **E-mailový profil** | - **Android 4,0 a novější**: nejde použít.</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: nejde použít.</br>- **Android Enterprise**: nejde použít.</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: nelze použít |
-| **Minimální verze operačního systému** | - **Android 4,0 a novější**: v karanténě</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: v karanténě |
-| **Maximální verze operačního systému** | - **Android 4,0 a novější**: v karanténě</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: v karanténě |
-| **Ověření stavu Windows** | - **Android 4,0 a novější**: nejde použít.</br>@no__t – 0**Samsung KNOX standard 4,0 a novější**: nejde použít.</br>- **Android Enterprise**: nejde použít.</br></br>- **iOS 8,0 a novější**: nejde použít.</br>- **macOS 10,11 a novější**: nelze použít</br></br>- **Windows 10 a Windows 10 Mobile**: v karanténě</br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **Konfigurace kódu PIN nebo hesla** | - **Android 4,0 a novější**: v karanténě</br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: Opraveno</br>- **macOS 10,11 a novější**: Opraveno</br></br>- **Windows 8.1 a novější**: Opraveno</br>- **Windows Phone 8,1 a novější**: Opraveno|
+| **Šifrování zařízení** | - **Android 4,0 a novější**: v karanténě</br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: opravené (nastavením PIN kódu)</br>- **macOS 10,11 a novější**: Opraveno (nastavením PIN kódu)</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: Opraveno |
+| **Zařízení s jailbreakem nebo rootem** | - **Android 4,0 a novější**: v karanténě (nejedná se o nastavení)</br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě (nejedná se o nastavení)</br>- **Android Enterprise**: v karanténě (nejedná se o nastavení)</br></br>- **iOS 8,0 a novější**: v karanténě (nejedná se o nastavení)</br>- **macOS 10,11 a novější**: nelze použít</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **E-mailový profil** | - **Android 4,0 a novější**: nejde použít.</br>- **Samsung KNOX Standard 4,0 a novější**: nejde použít.</br>- **Android Enterprise**: nejde použít.</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: nejde použít.</br>- **Windows Phone 8,1 a novější**: nelze použít |
+| **Minimální verze operačního systému** | - **Android 4,0 a novější**: v karanténě</br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: v karanténě |
+| **Maximální verze operačního systému** | - **Android 4,0 a novější**: v karanténě</br>- **Samsung KNOX Standard 4,0 a novější**: v karanténě</br>- **Android Enterprise**: v karanténě</br></br>- **iOS 8,0 a novější**: v karanténě</br>- **macOS 10,11 a novější**: v karanténě</br></br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: v karanténě |
+| **Ověření stavu Windows** | - **Android 4,0 a novější**: nejde použít.</br>- **Samsung KNOX Standard 4,0 a novější**: nejde použít.</br>- **Android Enterprise**: nejde použít.</br></br>- **iOS 8,0 a novější**: nejde použít.</br>- **macOS 10,11 a novější**: nelze použít</br></br>- **Windows 10 a Windows 10 Mobile**: v karanténě</br>- **Windows 8.1 a novější**: v karanténě</br>- **Windows Phone 8,1 a novější**: nelze použít |
 
 ---------------------------
 
