@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba51f3eaead4f44d3725f1939a6ece5daec5a7f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c0b5f087494e8033cb9645d0a08edd4e1c481a2c
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507367"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584927"
 ---
 # <a name="use-ios-app-provisioning-profiles-to-prevent-your-apps-from-expiring"></a>Jak zabránit vypršení platnosti aplikací pomocí zřizovacích profilů pro aplikace pro iOS
 
@@ -45,14 +45,22 @@ Jako správce můžete podle potřeby zahrnout nebo vyloučit skupiny zabezpeče
 ## <a name="how-to-create-an-ios-mobile-app-provisioning-profile"></a>Jak vytvořit mobilní zřizovací profil aplikace pro iOS
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. V podokně **Intune** zvolte **Klientské aplikace**.
-1. V úloze **Klientské aplikace** zvolte **Spravovat** > **Zřizovací profily aplikací pro iOS**.
-2. V podokně se seznamem profilů zvolte **Vytvořit profil**.
-3. V podokně **Vytvořit profil** nakonfigurujte následující hodnoty:
+2. V podokně **Intune** vyberte **klientské aplikace**  > **profily zřizování aplikací pro iOS**  > **vytvořit profil**.
+3. Na stránce **základy** přidejte následující hodnoty:
     - **Název** – Zadejte název tohoto mobilního zřizovacího profilu.
     - **Popis** – Volitelně zadejte popis pro tuto zásadu.
     - **Odeslat soubor profilu** – zvolte ikonu **otevřít** a pak zvolte soubor konfiguračního profilu Apple Mobile (s rozšířením `.mobileprovision`), který jste stáhli z [webu pro vývojáře Apple](https://developer.apple.com/).
-4. Až skončíte, zvolte **Vytvořit**.
+
+   **Datum vypršení platnosti** se naplní hodnotou v souboru konfiguračního profilu Apple Mobile, který jste přidali výše.<br>
+
+   <img alt="Create profile - Basics" src="~/apps/media/app-provisioning-profile-ios/app-provisioning-profile-ios-01.png">
+
+4. Klikněte na tlačítko **Další: značky oboru**.<br>
+   Na stránce **značky oboru** můžete volitelně nakonfigurovat značky oboru, které určují, kdo může v Intune Zobrazit profil zřizování aplikací pro iOS. Další informace o značkách oboru najdete v tématu [použití značek řízení přístupu na základě role a rozsahu pro distribuci IT](../fundamentals/scope-tags.md).
+5. Klikněte na **Další: přiřazení**.<br>
+   Stránka **přiřazení** umožňuje přiřadit profil uživatelům a zařízením. Je důležité si uvědomit, že k zařízení můžete přiřadit profil bez ohledu na to, jestli zařízení spravuje Intune.
+6. Klikněte na **Další: zkontrolovat + vytvořit** a zkontrolujte hodnoty, které jste zadali pro profil.
+7. Až skončíte, kliknutím na **vytvořit** vytvořte profil zřizování aplikace pro iOS v Intune. 
 
 ## <a name="next-steps"></a>Další kroky
 

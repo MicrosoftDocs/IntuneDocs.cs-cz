@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,12 +15,12 @@ ms.reviewer: aiwang
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9882328efa2ddc5a6c5d6924fe15176e50b7837
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3f3359bc5544b3a353271ea17083c8c3acb49742
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508699"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584472"
 ---
 # <a name="windows-update-settings-for-intune"></a>Nastavení služby Windows Update pro Intune  
 
@@ -217,45 +217,9 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   - **Vypnout všechna oznámení s výjimkou upozornění na restartování**
   - **Vypnout všechna oznámení, včetně upozornění na restartování**  
 
-- **Povolení restartování uživatelem (při restartování)**  
-  **Výchozí**: Nenakonfigurováno  
-  > [!IMPORTANT]  
-  > Nastavení připraveného *restartování* se už nedoporučuje používat. Místo toho použijte nové nastavení *termínu* , které nahradí nastavení prodaného *restartování* . Intune bude v budoucí aktualizaci [zastaralá o podporu pro nastavení *restartování* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) .
-
-  Je podporováno restartování systému Windows 10 verze 1803 a novější. 
-
-  > [!NOTE]  
-  > Windows 10 verze 1809 zavádí další nastavení, které je potřeba restartovat, které umožňuje použít pro aktualizace funkcí a kvality samostatné nastavení. Nastavení spravovaná přes Intune ale neplatí samostatně pro různé typy aktualizací. Místo toho Intune aplikuje stejné hodnoty na aktualizace funkcí i kvality.  
-  
-  - **Není nakonfigurováno**  
-  - **Požadováno** – je *nutné* nastavit, aby bylo možné povolit používání možností pro aktualizace Windows 10. Pomocí těchto možností můžete uživatele zařízení pořídit, kdy po instalaci aktualizace, která vyžaduje restart, restartovat zařízení.  
-
-  Další informace o této možnosti najdete v tématu věnovaném [restartování](https://docs.microsoft.com/windows/deployment/update/waas-restart#engaged-restart) v dokumentaci k Windows 10 pro nasazení aktualizací.  
-
-  Následující nastavení se používají k určení, kdy dojde k akcím v restartu.  
-
-  - **Převod uživatelů na restartování po automatickém restartování (dny)**  
-    **Výchozí**: není nakonfigurované web Windows Update CSP: [Update/EngagedRestartTransitionSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestarttransitionschedule)  
-    
-    Zadejte hodnotu od **2** do **30** dní pro dobu, po kterou se aktualizace nainstaluje, dokud zařízení nevstoupí do činnosti. Po nakonfigurovaném počtu dnů se uživatelům zobrazí výzva k restartování zařízení.  
-
-  - **Odložit připomenutí s přijatým restartováním (dny)**  
-    **Výchozí**: Nenakonfigurováno    
-    Web Windows Update CSP: [Update/EngagedRestartSnoozeSchedule](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartsnoozeschedule)  
-    
-    Zadejte hodnotu od **1** do **3** , pokud chcete, aby se výzva k restartování mohla odložit.  Po uplynutí doby odložení se znovu nabídne výzva k restartování. Uživatel může pokračovat v odložení připomenutí, dokud nebude dosaženo konečného termínu instalace.  
-
-  - **Nastavit konečný termín pro čekání na restartování (dny)**  
-    **Výchozí**: Nenakonfigurováno  
-    Web Windows Update CSP: [Update/EngagedRestartDeadline](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-engagedrestartdeadline)  
-  
-    Zadejte hodnotu **2** až **30** jako maximální počet dní, po který se má počkat, než se zařízení vynutilo požadovaným restartováním. Tento restart vyzve uživatele, aby uložil svou práci.
-
 - **Použít nastavení termínu**  
   **Výchozí**: Nenakonfigurováno  
-  > [!IMPORTANT]  
-  > Od aktualizace srpen pro Intune doporučujeme použít následující nastavení termínu, které nahrazuje nastavení provedených restartování. Intune bude v budoucí aktualizaci Intune [zastaralá o podporu pro nastavení *restartování* ](../fundamentals/whats-new.md#plan-for-change-new-windows-updates-settings-in-intune-) .  
-
+ 
   Umožňuje uživateli použít nastavení termínu.  
 
   - **Není nakonfigurováno**
@@ -264,21 +228,21 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
   Pokud je nastaveno na hodnotu *povoleno*, můžete pro termíny nakonfigurovat následující nastavení:
 
   - **Konečný termín pro aktualizace funkcí**  
-    **Výchozí**: 7  
+    **Výchozí**: *Nenakonfigurováno*  
     Web Windows Update CSP: [Update/ConfigureDeadlineForFeatureUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforfeatureupdates)  
 
     Určuje počet dní, po které má uživatel, než se aktualizace funkcí na svých zařízeních nainstalují automaticky (2-30).
 
   - **Konečný termín pro aktualizace kvality**  
-    **Výchozí**: 7  
+    **Výchozí**: *Nenakonfigurováno*  
     Web Windows Update CSP: [Update/ConfigureDeadlineForQualityUpdates](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlineforqualityupdates)
 
     Určuje počet dní, po které má uživatel k automatické instalaci aktualizací kvality na svých zařízeních (2-30).
 
   - **Období odkladu**  
-    **Výchozí**: 2 web Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
+    **Výchozí**: *není nakonfigurované* web Windows Update CSP: [Update/ConfigureDeadlineGracePeriod]( https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinegraceperiod)
 
-    Určuje minimální počet dnů po termínu, do kterého proběhne automatické restartování (0-7).
+    Určuje minimální počet dnů po termínu, do kterého proběhne automatické restartování (2-7).
 
   - **Automatický restart před konečným termínem**  
     **Výchozí**: Ano web Windows Update CSP: [Update/ConfigureDeadlineNoAutoReboot](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-update#update-configuredeadlinenoautoreboot)
@@ -286,9 +250,6 @@ Nastavení uživatelského prostředí řídí činnost koncového uživatele p�
     Určuje, jestli se má zařízení před konečným termínem automaticky restartovat.
     - **Ano**
     - **Ne**
-
-
-
 
 ### <a name="delivery-optimization-download-mode"></a>Režim stažení Optimalizace doručení  
 

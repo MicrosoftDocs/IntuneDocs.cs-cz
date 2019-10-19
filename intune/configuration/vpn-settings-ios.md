@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 593184ffcdaf82075eeee9a12d3d41da281c2fbd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f6d7b831899a740e722560c509c4b09c31d2a42b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506567"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593784"
 ---
 # <a name="add-vpn-settings-on-ios-devices-in-microsoft-intune"></a>Přidat nastavení sítě VPN na zařízení s iOS v Microsoft Intune
 
@@ -72,6 +72,8 @@ Nastavení, která jsou v následujícím seznamu, jsou ovlivněná zvoleným ty
 
     > [!NOTE]
     > Pokud se jako metoda ověřování pro Cicso IPsec VPN používá uživatelské jméno a heslo, musí prostřednictvím vlastního profilu Apple Configuratoru poskytovat tajný kód SharedSecret.
+
+  - **Odvozené přihlašovací údaje**: Pokud není nakonfigurovaný žádný odvozený Vystavitel přihlašovacích údajů, Intune vás vyzve k tomu, abyste to provedli.
 
 - **Vyloučené adresy URL** (jen Zscaler): Pokud jsou uvedené adresy URL připojené k síti VPN Zscaleru, jsou k dispozici i mimo cloud Zscaler. 
 

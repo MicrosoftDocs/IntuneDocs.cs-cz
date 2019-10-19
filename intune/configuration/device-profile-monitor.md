@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2018
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6110cdf76649c2f4e0f06cf14fc892d7156d34b9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 17057100f9bc762de8c679880145014cf5806432
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506846"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584847"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune obsahuje na portálu Azure Portal některé funkce, které pomáhají sledovat a spravovat konfigurační profily zařízení. Můžete třeba kontrolovat stav profilu, zjistit, která zařízení jsou přiřazená, a aktualizovat vlastnosti profilu.
+Intune obsahuje některé funkce, které vám pomůžou monitorovat a spravovat vaše konfigurační profily zařízení. Můžete třeba kontrolovat stav profilu, zjistit, která zařízení jsou přiřazená, a aktualizovat vlastnosti profilu.
 
 ## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Vyberte **Konfigurace zařízení** > **Profily**.
+2. Vyberte **Konfigurace zařízení** > **Profily**.
 
 Vypíšou se všechny existující profily včetně podrobností jako je platforma, a zobrazí se, jestli je profil přiřazený k nějakým zařízením.
 
@@ -44,13 +44,13 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
 1. Vyberte existující profil. Můžete třeba vybrat profil macOS.
 2. Vyberte kartu **Přehled**.
 
-    Horní graf znázorňuje počet zařízení přiřazených ke konkrétnímu profilu zařízení. Pokud třeba konfigurační profil zařízení platí pro zařízení s macOS, zobrazí se v grafu počet zařízení s macOS.
+    Horní grafický graf znázorňuje počet zařízení přiřazených k profilu zařízení. Pokud třeba konfigurační profil zařízení platí pro zařízení s macOS, zobrazí se v grafu počet zařízení s macOS.
 
     Ukazuje také počet zařízení pro jiné platformy, která jsou přiřazená ke stejnému profilu zařízení. Může třeba ukazovat počet zařízení bez macOS.
 
     ![Zobrazení počtu zařízení přiřazených k profilu zařízení](./media/device-profile-monitor/device-configuration-profile-graphical-chart.png)
 
-    Dolní graf znázorňuje počet uživatelů přiřazených ke konkrétnímu profilu zařízení. Pokud třeba konfigurační profil zařízení platí pro uživatele s macOS, zobrazí se v grafu počet uživatelů s macOS.
+    Dolní graf znázorňuje počet uživatelů přiřazených k profilu zařízení. Pokud třeba konfigurační profil zařízení platí pro uživatele s macOS, zobrazí se v grafu počet uživatelů s macOS.
 
 3. Vyberte kruh v horním grafu. Otevře se **Stav zařízení**.
 
@@ -68,12 +68,12 @@ Po vytvoření profilu zařízení Intune nabízí grafy. Tyto grafy zobrazují 
     - **Vlastnosti**: Můžete změnit název nebo aktualizovat libovolné existující nastavení.
     - **Přiřazení**: Můžete zahrnout nebo vyloučit zařízení, pro která mají zásady platit. Pomocí **Vybraných skupin** vyberte konkrétní skupiny.
     - **Stav zařízení**: Jsou uvedená zařízení přiřazená k profilu a zobrazuje se, jestli je profil úspěšně nasazený. Můžete vybrat konkrétní zařízení a zjistit další podrobnosti, včetně nainstalovaných aplikací.
-    - **Stav uživatele**: Uvádí uživatelská jména se zařízeními, na která má tento profil vliv, a jestli je profil úspěšně nasazený. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
+    - **Stav uživatele**: vypíše uživatelská jména se zařízeními ovlivněnými tímto profilem a v případě úspěšného nasazení profilu. Můžete vybrat konkrétního uživatele a zjistit další podrobnosti.
     - **Stav podle nastavení**: Filtruje výstup tím, že zobrazí jednotlivá nastavení v rámci profilu, a zobrazuje, jestli je toto nastavení úspěšně použité.
 
 ## <a name="view-conflicts"></a>Zobrazení konfliktů
 
-V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, která způsobují konflikt. Při existujícím konfliktu se zobrazují také všechny konfigurační profily, které toto nastavení obsahují. Správci můžou tuto funkci použít k vyřešení všech nesrovnalostí v profilech.
+V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, která způsobují konflikt. V případě konfliktu se zobrazí také všechny konfigurační profily, které obsahují toto nastavení. Správci můžou tuto funkci použít k vyřešení všech nesrovnalostí v profilech.
 
 1. V Intune vyberte **Zařízení** > **Všechna zařízení** > vyberte existující zařízení v seznamu. Koncový uživatel může název zařízení získat z aplikace Portál společnosti.
 2. Vyberte **Konfigurace zařízení**. Zobrazí se všechny zásady konfigurace uplatněné na dané zařízení.
@@ -82,5 +82,6 @@ V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, 
 Teď, když znáte konfliktní nastavení a zásady, které toto nastavení obsahují, by mělo být snadnější konflikt vyřešit. 
 
 ## <a name="next-steps"></a>Další kroky
-[Přiřazení profilů uživatelů a zařízení](../device-profile-assign.md)  
-[Běžné problémy a řešení u profilů zařízení](device-profile-troubleshoot.md)
+
+[Běžné otázky, problémy a řešení s profily zařízení](device-profile-troubleshoot.md)  
+[Řešení potíží se zásadami a profily a v Intune](troubleshoot-policies-in-microsoft-intune.md)

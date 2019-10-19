@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/17/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37c2a85162c781db7272b6ead11fbb3320a08343
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498016"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585009"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -129,6 +129,14 @@ V části **portál společnosti přizpůsobení** > **Správa zařízení a zpr
 - Přijměte **výchozí hodnotu** pro použití seznamu, jak je uvedeno níže.
 - Zvolením možnosti **vlastní** upravíte seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS. Pomocí [Markdownu](https://daringfireball.net/projects/markdown/) můžete přidat odrážky, tučné písmo, kurzívu a odkazy.
 
+## <a name="company-portal-derived-credentials-for-ios-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS
+Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení se systémem iOS, aby ověřili jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
+
+> [!NOTE]
+> Uživateli se zobrazí pokyny k odvozeným přihlašovacím údajům na základě odkazu, který jste zadali přes Intune.
+
+Další informace o odvozených přihlašovacích údajích pro zařízení s iOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](~/protect/derived-credentials.md).
+
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 
 Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Windows Portál společnosti pomocí klávesových zkratek (akcelerátory).
@@ -172,21 +180,25 @@ Uživatelé můžou na svých místních nebo vzdálených zařízeních provád
 
 Některé platformy a konfigurace neumožňují akce zařízení samoobslužné služby. V této tabulce najdete další podrobnosti o akcích samoobslužných služeb:
 
-|     Platforma    |    Vyřazení    |    Vymazání     |    Přejmenovat<sup>(4)</sup>    |    Brání    |    Vzdálené uzamčení    |    Resetovat heslo    |    Obnovení klíče    |
-|------------------------|--------------------|--------------------|-----------------|-----------------|--------------------------|--------------------------|--------------------|
-|    Windows 10<sup>(3)</sup>    |    K dispozici<sup>(1)</sup>    |    K dispozici    |    K dispozici    |    K dispozici    |    Pouze Windows Phone    |    Pouze Windows Phone    |    NÁ    |
-|    iOS<sup>(3)</sup>    |    K dispozici    |    K dispozici<sup>(8)</sup>    |    K dispozici    |    K dispozici    |    K dispozici<sup>(8)</sup>    |    K dispozici    |    NÁ    |
-|    MacOS<sup>(3)</sup><sup>(5)</sup>    |    K dispozici    |    NÁ    |    K dispozici    |    K dispozici    |    K dispozici    |    NÁ    |    K dispozici<sup>(2)</sup>    |
-|    Android<sup>(3)</sup>    |    K dispozici<sup>(7)</sup>    |    K dispozici<sup>(7)</sup>    |    K dispozici    |    K dispozici    |    K dispozici    |    K dispozici<sup>(6)</sup>    |    NÁ    |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(8)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici | NÁ | K dispozici<sup>(7)</sup> |
+| Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici<sup>(8)</sup> | K dispozici | K dispozici |
+| Brání | K dispozici | K dispozici | K dispozici | K dispozici |
+| Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
+| Resetovat heslo | Pouze Windows Phone | K dispozici | NÁ | K dispozici<sup>(6)</sup> |
+| Obnovení klíče | NÁ | NÁ | K dispozici<sup>(2)</sup> | NÁ |
+| Tmavý režim | NÁ | K dispozici | NÁ | NÁ |
 
-
-<sup>(1)</sup> vyřazení je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
-<sup>(2)</sup> osobní obnovení klíčů pro MacOS je k dispozici pouze prostřednictvím webu portál společnosti.<br> 
-<sup>(3)</sup> všechny vzdálené akce jsou při použití registrace správce registrace zařízení zakázané.<br>
-<sup>(4)</sup> přejmenování změní jenom název zařízení v portál společnosti aplikaci nebo na webu, ne na zařízení.<br>
-<sup>(5)</sup> vzdálené vymazání není na zařízeních MacOS k dispozici.<br>
-<sup>(6)</sup> resetování hesla není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> vyřazení a vymazání není k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br>@no__t – 0<sup>(8)</sup> vymazání a resetování hesla nejsou k dispozici na zařízeních iOS zaregistrovaných s zápisem uživatele.<br> 
+<sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
+<sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>
+<sup>(3)</sup> Pokud používáte registraci správce registrace zařízení, jsou všechny vzdálené akce zakázané.<br>
+<sup>(4)</sup> **přejmenování** změní jenom název zařízení v portál společnosti aplikaci nebo na webu, ne na zařízení.<br>
+<sup>(5)</sup> **vzdálené vymazání** není na zařízeních MacOS k dispozici.<br>
+<sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
+<sup>(8)</sup> **vyřazení** (odebrat zařízení) a **přejmenování** jsou k dispozici pro všechny typy registrace. Další akce se pro zápis uživatele nepodporují.<br> 
 
 ## <a name="next-steps"></a>Další kroky
 

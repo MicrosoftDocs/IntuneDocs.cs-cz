@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a3c9851cee87a19004c44dd2b57f9be9645a55de
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5f473e376278b454ca2d173c7c147137226a9fc9
+ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504678"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601513"
 ---
 # <a name="ios-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení iOS k označení zařízení jako kompatibilních nebo nekompatibilních s Intune
 
@@ -74,13 +74,13 @@ Podrobnosti o e-mailových profilech najdete v tématu [Konfigurace přístupu k
 ### <a name="password"></a>Heslo
 
 > [!NOTE]
-> Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví.
+> Po použití zásad dodržování předpisů nebo konfigurace u zařízení s iOSem se uživatelům bude každých 15 minut zobrazovat výzva k nastavení hesla. Uživatelům se výzva bude zobrazovat tak dlouho, dokud heslo nenastaví. Když je pro zařízení se systémem iOS nastavené heslo, automaticky se spustí proces šifrování. Zařízení zůstane zašifrované, dokud heslo nebude zakázané.
 
 - **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo. Zařízení s iOSem, která používají heslo, jsou zašifrovaná.
 - **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
 - **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
 - **Požadovaný typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-- **Počet nealfanumerických znaků v hesle**: zadejte minimální počet speciálních znaků (například `&`, `#`, `%`, `!` atd.), které musí být v hesle.
+- **Počet nealfanumerických znaků v hesle**: zadejte minimální počet speciálních znaků, například `&`, `#`, `%`, `!` a tak dále, které musí být v hesle.
 
     Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 10/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6fecdc56e6140a939959ac92bbe8fa410d43ccc5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 9561c50e21a9667ccec3f9de3627e7a933cf0736
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507513"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584998"
 ---
 # <a name="add-app-configuration-policies-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
 
@@ -69,14 +69,16 @@ Pokud jako typ hodnoty zvolíte proměnnou, můžete vybírat z následujících
 
 | Možnost | Příklad |
 |----|----|
-| Mail | john@contoso.com |
-| Hlavní název uživatele | john@contoso.com |
-| Částečný hlavní název uživatele | Jan |
-| Doména | Contoso.com |
-| Uživatelské jméno | Jan Karásek |
+| ID zařízení AAD | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | ID účtu | fc0dc142-71d8-4B12-bbea-bae2a8514c81 |
+| ID zařízení Intune | b9841cd9-9843-405F-be28-b2265c59ef97 |
+| Doména | Contoso.com |
+| Mail | john@contoso.com |
+| Částečný hlavní název uživatele | Jan |
 | ID uživatele | 3ec2c00f-b125-4519-acf0-302ac3761822 |
-| ID zařízení | b9841cd9-9843-405F-be28-b2265c59ef97 |
+| Uživatelské jméno | Jan Karásek |
+| Hlavní název uživatele | john@contoso.com |
+
 
 ### <a name="allow-only-configured-organization-accounts-in-multi-identity-apps"></a>Povolte jenom nakonfigurované účty organizace v aplikacích s více identitami 
 
@@ -122,7 +124,7 @@ Aplikace například používá mikrofon zařízení. Uživatel je vyzván, aby 
     - **Zeptat se**: Vyzval uživatele ke schválení nebo zamítnutí
     - **Automaticky udělit**: Automaticky schválí bez upozornění uživatele.
     - **Automaticky odepřít**: Automaticky zamítne bez upozornění uživatele.
-6. Zásady konfigurace aplikací přiřadíte tak, že vyberete zásady konfigurace aplikace **> @no__t**-1**Vybrat skupiny**. Vyberte skupiny uživatelů, které chcete přiřadit > **Vybrat**.
+6. Zásady konfigurace aplikací přiřadíte tak, že vyberete > **přiřazení** zásady konfigurace aplikace  > **Vybrat skupiny**. Vyberte skupiny uživatelů, které chcete přiřadit > **Vybrat**.
 7. Kliknutím na **Uložit** zásadu přiřaďte.
 
 ## <a name="additional-information"></a>Další informace

@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/05/2019
+ms.date: 10/18/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8139e9b266e6a3d449db29104f737bdf4bb574ae
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d88705cbce0d5045ba7f45baf80de7b6e5d383d3
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503535"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593770"
 ---
 # <a name="add-wi-fi-settings-for-ios-devices-in-microsoft-intune"></a>Přidání nastavení Wi-Fi pro zařízení s iOSem v Microsoft Intune
 
@@ -80,7 +80,13 @@ Těmito nastaveními se zabývá tento článek.
     - **Důvěryhodnost serveru** - **Názvy certifikačních serverů**: **přidejte** jeden nebo více běžných názvů používaných v certifikátech vydaných vaší důvěryhodnou certifikační autoritou (CA) na servery bezdrátového přístupu k síti. Přidejte například `mywirelessserver.contoso.com` nebo `mywirelessserver`. Když tento údaj zadáte, můžete obejít okno dynamického vztahu důvěryhodnosti, které se zobrazí na zařízeních uživatelů při připojování k Wi-Fi síti.
     - **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. Tento certifikát umožňuje klientovi, aby důvěřoval certifikátu serveru pro přístup k bezdrátové síti.
 
-    - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)** : Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klienta** Vyberte **metodu ověřování**. Možnosti:
+      
+      - **Odvozené přihlašovací údaje**: Pokud není nakonfigurovaný žádný odvozený Vystavitel přihlašovacích údajů, Intune vás vyzve k tomu, abyste to provedli.
+      
+      - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+
+    - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
@@ -89,6 +95,8 @@ Těmito nastaveními se zabývá tento článek.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
+      - **Odvozené přihlašovací údaje**: Pokud není nakonfigurovaný žádný odvozený Vystavitel přihlašovacích údajů, Intune vás vyzve k tomu, abyste to provedli.  
+      
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi.
 
@@ -107,6 +115,8 @@ Těmito nastaveními se zabývá tento článek.
 
     - **Ověřování klientů**: Zvolte **metodu ověřování**. Možnosti:
 
+      - **Odvozené přihlašovací údaje**: Pokud není nakonfigurovaný žádný odvozený Vystavitel přihlašovacích údajů, Intune vás vyzve k tomu, abyste to provedli.  
+      
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. 
 
       - **Certifikáty**: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 10/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16a6e35fd1d7b60d9abce5e2b3491fee1efb41c3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4e28db0d24101ae65ff8c5e49febd0ff5dddc6e2
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502544"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585438"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -50,7 +50,7 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
    2. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
    
-   3. Odvolání certifikátů zřízených profily certifikátů SCEP pro vlastníka zařízení není podporováno prostřednictvím Intune, ale lze je spravovat prostřednictvím externího procesu nebo přímo s certifikační autoritou.
+   3. Intune nemůžete použít k odvolání certifikátů, které se zřídily profily certifikátů SCEP pro vlastníky zařízení. Můžete spravovat odvolání prostřednictvím externího procesu nebo přímo s certifikační autoritou. 
 
 6. Vyberte **Nastavení**a pak dokončete následující konfigurace:
 
@@ -113,15 +113,13 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
         - **{{Název_zařízení}}**
         - **{{FullyQualifiedDomainName}}** *(platí jenom pro zařízení se systémem Windows a zařízení připojená k doméně)*
         - **{{MEID}}**
-        
+
         Tyto proměnné můžete zadat následovaný textem pro proměnnou v textovém poli. Například běžný název pro zařízení s názvem *zařízení1* se dá přidat jako **CN = {{název_zařízení}} zařízení1**.
 
         > [!IMPORTANT]  
         > - Když zadáte proměnnou, uveďte její název do složených závorek {}, jak je vidět v příkladu, aby nedošlo k chybě.  
         > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
         > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v názvu subjektu profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, profil se nepodaří nainstalovat.  
- 
-
 
    - **Alternativní název subjektu**:  
      Vyberte způsob, jakým Intune automaticky vytvoří alternativní název subjektu (SAN) v žádosti o certifikát. Možnosti pro síť SAN závisí na typu certifikátu, který jste vybrali. buď na **uživatele** , nebo na **zařízení**.  
@@ -198,15 +196,15 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
      Přidejte hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. Podle potřeby můžete přidat další použití klíče.
 
    - **Prahová hodnota obnovení (%)** :  
-     Zadejte procento doby životnosti certifikátu zbývající v době, kdy zařízení požádá o obnovení certifikátu. Pokud například zadáte 20, bude proveden pokus o obnovení certifikátu v případě vypršení platnosti certifikátu 80% a bude pokračovat, dokud nebude obnovení úspěšné. Obnovení vygeneruje nový certifikát, který má za následek novou dvojici veřejného a privátního klíče.
+     Zadejte procento doby životnosti certifikátu zbývající v době, kdy zařízení požádá o obnovení certifikátu. Pokud například zadáte 20, bude proveden pokus o obnovení certifikátu, pokud vypršela platnost certifikátu 80%. Pokusy o obnovení budou pokračovat, dokud nebude obnovení úspěšné. Obnovení vygeneruje nový certifikát, který má za následek novou dvojici veřejného a privátního klíče.
 
    - **Adresy URL serveru SCEP**:  
-     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Například zadejte něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že při dalších vráceních se změnami zařízení se dá žádost o certifikát provést na stejném serveru, který je mimo provoz.
+     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Například zadejte něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
 
 7. Vyberte **OK**a pak vyberte **vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
 
 ### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Vyhnout se žádostem o podepsání certifikátu pomocí řídicích speciálních znaků
-Existuje známý problém pro žádosti certifikátu SCEP, které obsahují název subjektu (CN) s jedním nebo více následujícími speciálními znaky jako řídicí znak. Názvy subjektů, které obsahují jeden ze speciálních znaků jako znak řídicího znaku, mají za následek nesprávný název subjektu, který zase vede k selhání ověřování výzvou SCEP služby Intune a nevystavuje certifikát.  
+K dispozici je známý problém pro žádosti certifikátu SCEP a PKCS, které obsahují název subjektu (CN) s jedním nebo více následujícími speciálními znaky jako řídicí znak. Názvy subjektů, které obsahují jeden ze speciálních znaků jako řídicí znak, mají za následek zástupce s nesprávným názvem subjektu. Nesprávný název předmětu má za následek selhání ověřování výzvou SCEP služby Intune a nevystavuje se certifikát.
 
 Speciální znaky jsou:
 - \+
@@ -223,7 +221,7 @@ Máte **například**název subjektu, který se zobrazí jako *testovací uživa
 - **Odebrat čárku**: *CN = testovací uživatel (TestCompany LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
  Pokusy o odložení čárky pomocí zpětného lomítka se však nezdaří s chybou v protokolech CRP:  
-- **Řídicí znak čárky**: *CN = test User (TestCompany @ no__t-2, LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
+- **Řídicí znak čárky**: *CN = test User (TESTCOMPANY \\, LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
 Tato chyba se podobá následující chybě: 
 

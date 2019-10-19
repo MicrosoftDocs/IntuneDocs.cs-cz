@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/17/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a29c5fc03285535565a4db57ea013f72a2936439
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d1d83a77d8823a05accaf1c88b57f6e380636469
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494059"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585386"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -68,7 +68,7 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
 - **Aktualizace systému**: vyberte možnost pro definování způsobu, jakým zařízení zpracovává aktualizace v ovzduší:
   - **Výchozí ze zařízení**: Použije se výchozí nastavení zařízení.
   - **Automaticky**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
-  - **Odloženo**: Aktualizace se odloží o 30 dní. Po uplynutí 30 dnů vyzve Android uživatele k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému. 
+  - **Odloženo**: Aktualizace se odloží o 30 dní. Po uplynutí 30 dnů vyzve Android uživatele k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému.
   - **Časové období údržby**: Aktualizace se instalují automaticky během časového období údržby, které nastavíte v Intune. Instalace probíhá denně po dobu 30 dnů a může selhat, pokud není dostatek místa nebo úrovně baterie. Po 30 dnech Android vyzve uživatele k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazená zařízení, jako jsou veřejné terminály, protože je možné aktualizovat aplikace v popředí vyhrazené pro jednotlivé aplikace.
 
 - **Okna oznámení**: Pokud je nastavení **zakázané**, oznámení oken, včetně informačních zpráv, příchozích volání, odchozích volání, systémových výstrah a systémových chyb, se v zařízení nezobrazují. Pokud je nastavené na **Nenakonfigurováno**, použije se výchozí operační systém, který může zobrazovat oznámení.
@@ -99,8 +99,8 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
   > U vyhrazených zařízení s více aplikacemi **musí být** [aplikace spravované domovské obrazovky](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) z Google Play:
   >   - [Přidáno jako klientská aplikace](../apps/apps-add-android-for-work.md) v Intune
   >   - [Přiřazeno ke skupině zařízení](../apps/apps-deploy.md) vytvořené pro vyhrazená zařízení
-  > 
-  > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako klientskou aplikaci. Když se **spravovaná aplikace pro domovskou obrazovku** přidá jako klientská aplikace, všechny ostatní aplikace, které přidáte do konfiguračního profilu, se zobrazí jako ikony v aplikaci **spravované domovské obrazovky** . 
+  >
+  > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako klientskou aplikaci. Když se **spravovaná aplikace pro domovskou obrazovku** přidá jako klientská aplikace, všechny ostatní aplikace, které přidáte do konfiguračního profilu, se zobrazí jako ikony v aplikaci **spravované domovské obrazovky** .
   >
   > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
 
@@ -185,7 +185,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
     - **Počet požadovaných velkých znaků**: zadejte počet velkých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
     - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
     - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3` atd.) heslo musí mít 0 až 16 znaků.
-    - **Požadovaný počet znaků symbolů**: zadejte počet znaků symbolu (`&`, `#`, `%` atd.) heslo musí mít 0 až 16 znaků.
+    - **Požadovaný počet znaků symbolu**: zadejte počet znaků symbolu (`&`, `#`, `%` atd.) heslo musí mít 0 až 16 znaků.
 
 - **Počet dní do vypršení platnosti hesla**: zadejte počet dnů (v rozmezí 1-365), do kterého se musí heslo zařízení změnit. Pokud například chcete změnit heslo po 60 dnech, zadejte `60`. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
 - **Počet hesel požadovaných před tím, než uživatel může resuse heslo**: zadejte počet nedávných hesel, která se nesmí znovu použít, mezi 1-24. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
@@ -242,7 +242,22 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
   Vyberte **Nenakonfigurováno** a povolte, aby provoz používal tunel VPN nebo mobilní síť.
 
-## <a name="work-profile-only"></a>Pouze pracovní profil 
+- **Doporučený globální proxy server**: výběrem možnosti **Povolit** přidejte do zařízení globální proxy server. Pokud je povolený přenos přes protokol HTTP a HTTPS, včetně některých aplikací v zařízení, použijte proxy, který zadáte. Tato proxy je jenom doporučení. Je možné, že některé aplikace nepoužívají proxy server. **Nenakonfigurováno** (výchozí) nepřidá doporučený globální proxy server.
+
+  Další informace o této funkci najdete v tématu [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (otevře web s Androidem).
+
+  Pokud je povoleno, zadejte také **typ** proxy serveru. Možnosti:
+
+  - **Direct**: tuto možnost vyberte, pokud chcete zadat informace o proxy server ručně, včetně:
+    - **Hostitel**: zadejte název hostitele nebo IP adresu vašeho proxy server. Zadejte například `proxy.contoso.com` nebo `127.0.0.1`.
+    - **Číslo portu**: zadejte číslo portu TCP používaného proxy server. Zadejte například `8080`.
+    - **Vyloučení hostitelé**: Zadejte seznam názvů hostitelů nebo IP adres, které nepoužívají proxy server. Tento seznam může obsahovat zástupný znak hvězdičky (`*`) a několik hostitelů oddělených středníky (`;`) bez mezer. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
+
+  - **Automatická konfigurace proxy serveru**: zadejte **adresu URL PAC** do skriptu pro automatickou konfiguraci proxy serveru. Zadejte například `https://proxy.contoso.com/proxy.pac`.
+
+    Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
+
+## <a name="work-profile-only"></a>Pouze pracovní profil
 
 ### <a name="work-profile-settings"></a>Nastavení pracovního profilu
 
@@ -250,9 +265,10 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
 - **Kopírování a vkládání mezi pracovními a osobními profily**: vyberte **blok** , abyste zabránili kopírování a vkládání mezi pracovními a osobními aplikacemi. **Nenakonfigurováno** umožňuje uživatelům sdílet data pomocí kopírování a vkládání s aplikacemi v osobním profilu. 
 - **Sdílení dat mezi pracovními a osobními profily**: vyberte, jestli aplikace v pracovním profilu můžou sdílet s aplikacemi v osobním profilu. Můžete například řídit akce sdílení v aplikacích, jako je například **sdílená složka...** v aplikaci prohlížeče Chrome. Toto nastavení se nevztahuje na chování schránky při kopírování/vkládání. Možnosti sdílení:
-  - **Výchozí omezení sdílení**: jedná se o výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neblokuje sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
+  - **Výchozí nastavení zařízení**: výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neblokuje sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
   - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu**: povoluje integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolená, žádost o sdílení z aplikace v osobním profilu může sdílet data s aplikacemi v pracovním profilu. Toto nastavení je výchozí chování zařízení s Androidem, která používají verze starší než 6.0.
-  - **Povolit sdílení přes hranice**: umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení. Proto ho používejte opatrně.
+  - **Zabránit jakémukoli sdílení přes hranice**: zabraňuje sdílení mezi pracovními a osobními profily.
+  - **Žádná omezení sdílení**: umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení. Proto ho používejte opatrně.
 
 - **Oznámení pracovního profilu, když je zařízení zamčené**: Určuje, jestli aplikace v pracovním profilu můžou zobrazovat data v oznámeních, když je zařízení zamčené. **Blok** nezobrazuje data. **Nenakonfigurováno** zobrazuje data.
 - **Výchozí oprávnění aplikace**: umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od verze Android 6 se uživateli při spuštění aplikace zobrazuje výzva k udělení určitých oprávnění, která aplikace vyžadují. Nastavení této zásady vám umožňuje určit, jestli se uživatelům zobrazí výzva k udělení oprávnění všem aplikacím v pracovním profilu. Můžete například přiřadit do pracovního profilu aplikaci, která vyžaduje přístup k poloze. Taková aplikace obvykle uživatele vyzve, aby přístup k poloze pro aplikaci schválil nebo zamítl. Tyto zásady používejte k automatickému udělování oprávnění bez výzvy, automatickému odepření oprávnění bez výzvy nebo ponechání rozhodnutí na koncovém uživateli. Vybírejte z těchto možností:
@@ -326,6 +342,13 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
 
    > [!Note]
    > Toto nastavení funguje jenom u zařízení s Androidem O a vyšším.
+
+- **Zabránění instalaci aplikací z neznámých zdrojů v osobním profilu**: podle návrhu zařízení s Androidem Enterprise Work profilování nemůžou instalovat aplikace ze zdrojů, které nejsou obchod Play. Zařízení pracovního profilu mají podle povahy možnost duální profil:
+
+  - Pracovní profil spravovaný pomocí MDM.
+  - Osobní profil, který je izolovaný od správy MDM.
+
+  Toto nastavení umožňuje správcům větší kontrolu nad instalací aplikací z neznámých zdrojů. **Nenakonfigurováno** (výchozí) umožňuje instalaci aplikací z neznámých zdrojů v osobním profilu. **Blok** zabraňuje instalaci aplikací z jiných zdrojů než obchod Play v osobním profilu.
 
 ### <a name="connectivity"></a>Komunikační
 

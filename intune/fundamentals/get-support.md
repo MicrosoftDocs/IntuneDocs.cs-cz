@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26165681195a47da0fcfeb86e4cfdbe2da942ec9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 91627a47f9dccfb436e64aaadeeb392648dff821
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510317"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585299"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune  
 
@@ -83,7 +83,7 @@ Chcete-li získat přístup k nápovědě a podpoře, použijte následující m
   4. Vyberte stránku pro pomoc a podporu Intune.
 
 > [!NOTE]  
-> Pokud je vaše instance Intune hostovaná ve službě COMPUTE COMPUTE Cloud (RSZ), označovaná také jako svrchovaná Cloud, jako je Azure Government, přečtěte si téma Podpora Intune pro státní výpočetní Cloud, dále v tomto článku. V části RSZ až do konce tohoto roku nebude k dispozici *pomoc a podpora* Intune. 
+> Pokud je vaše instance Intune hostovaná v privátním cloudu pro instituce státní správy, označované také jako svrchované cloudy, jako je Azure Government, přečtěte si téma [Podpora Intune pro privátní cloud pro státní](#intune-support-for-private-cloud-for-government)správu dále v tomto článku. *Pomoc a podpora* Intune nebudou k dispozici v privátním cloudu pro státní správu až do konce tohoto roku. 
 
 
 Když otevřete okno pro *pomoc a podporu*, na portálu se zobrazí zobrazení, které závisí na tom, jestli máte incidenty aktivní podpory a když máte Premier Support, některé další prvky a možnosti:
@@ -91,7 +91,7 @@ Když otevřete okno pro *pomoc a podporu*, na portálu se zobrazí zobrazení, 
 - **Incidenty aktivní podpory**: uvidíte stránku [lístky podpory](#view-support-cases) , která zobrazuje seznam aktivních incidentů.  
 - **Smlouva Premier Support**: vaše zkušenosti jsou stejné jako první dvě možnosti, i když se vám podíváme na tyto další prvky, které potřebujete? Page 
   - Když nadpis stránky potřebuje popřípadě **?** , zobrazí se nápis Premier Support:  
-    banner podpory ![Premier @ no__t-1
+    banner podpory ![Premier ](./media/get-support/premier-banner.png)
   - V části **získat podporu** na stránce můžete nastavit počáteční úroveň **závažnosti** při vytváření žádosti o službu telefonicky.
 
 
@@ -163,20 +163,20 @@ Výběrem tlačítka historie zobrazíte incidenty podpory, které jste vytvoři
 
 Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo použijte **?** v pravém horním rohu Azure Portal otevřete okno nápovědy a podpory pro Azure, které se liší od nápovědy a možností podpory pro Intune.  
 
-Od dubna 2019 nemůžete získat pomoc s Intune a nebudete mít přístup ke službě Azure *help + support* , pokud vaše předplatné neplatí pro službu COMPUTE COMPUTE Cloud (RSZ).  
+Od dubna 2019 nebudete moci získat pomoc s Intune, pokud se vaše předplatné nepoužívá v privátním cloudu pro státní instituce.  
 
-Pokud vaše instance Intune neběží na RSZ, navigace prostřednictvím Azure *help + support* vás přesměruje na *pomoc a možnosti podpory* Intune, abyste mohli vytvářet a spravovat incidenty podpory.  
+Pokud vaše instance Intune neběží na privátním cloudu pro státní správu, navigace prostřednictvím Azure *help + support* vás přesměruje na *nápovědu a podporu* služby Intune, kde můžete vytvářet a spravovat incidenty podpory.  
 
 
-## <a name="intune-support-for-government-compute-cloud"></a>Podpora Intune pro Cloud COMPUTE COMPUTE  
+## <a name="intune-support-for-private-cloud-for-government"></a>Podpora pro privátní cloud pro státní správu v Intune  
 
-Když se vaše předplatné Intune hostuje v rámci služby COMPUTE COMPUTE Cloud (RSZ), která se také označuje jako svrchovaná Cloud, jako je Azure Government, ještě nemáte přístup k novější nápovědě a podpoře pro Intune.  Místo toho použijte následující informace, které najdete v části získání podpory pro Intune. 
+Pokud je vaše předplatné Intune hostované v privátním cloudu pro instituce státní správy, které se taky označuje jako Azure Government z svrchovaného cloudu, jako je, ještě nemáte přístup k novější nápovědě a podpoře služby Intune.  Místo toho použijte následující informace, které najdete v části získání podpory pro Intune. 
 
 
 ### <a name="create-an-online-support-ticket"></a>Vytvoření lístku online podpory 
 
 >[!IMPORTANT]    
-> Když *pomoc a podpora* přechází do nového systému, který pro RSZ ještě není dostupný, při vytváření incidentu podpory tento portál identifikuje případ podpory, který používá identifikační číslo s 15 číslicemi. Při vytvoření případu se 15 číslicemi se vytvoří zrcadlový svazek tohoto případu pro použití v podpora Microsoftu. Tento zrcadlový případ se vytvoří v novém systému podpory, používá 8bitové ID případu a používá služby podpory ke sledování všech pracovních a komunikačních incidentů podpory. Krátce po vytvoření případu s 15 číslicemi obdržíte e-mail, který identifikuje 8bitového případu podpory, který se používá pro služby podpory.  
+> Když *pomoc a podpora* přechází do nového systému, který ještě není k dispozici pro veřejný cloud pro státní správu, při vytváření incidentu podpory tento portál identifikuje případ podpory, který používá identifikační číslo s 15 číslicemi. Při vytvoření případu se 15 číslicemi se vytvoří zrcadlový svazek tohoto případu pro použití v podpora Microsoftu. Tento zrcadlový případ se vytvoří v novém systému podpory, používá 8bitové ID případu a používá služby podpory ke sledování všech pracovních a komunikačních incidentů podpory. Krátce po vytvoření případu s 15 číslicemi obdržíte e-mail, který identifikuje 8bitového případu podpory, který se používá pro služby podpory.  
 > 
 > Podporují osobní práci a komunikují z případu podpory s 8 číslicemi a používají se jenom 8 číslic, které slouží k protokolování komunikací a sledování průběhu incidentu. Proto obdržíte e-mailem aktualizace z tohoto případu podpory s 8 číslicemi, který bude sloužit jako záznam o pracovní skladbě. K incidentu podpory na 15 číslici se nezaznamenávají žádné podrobnosti. Po ukončení podpory a velikosti případu podpory se 8 číslicemi se tento stav projeví v případě podpory 15 číslic, kterou si můžete prohlédnout na webu Azure Portal.  Pro případ podpory 15 číslic by se neměly očekávat žádné jiné aktualizace ani změny stavu.  
 > 
@@ -224,7 +224,7 @@ Když se vaše předplatné Intune hostuje v rámci služby COMPUTE COMPUTE Clou
 2. Na stránce **pomoc a podpora** si můžete prohlédnout seznam **posledních žádostí o podporu**.
 
    > [!IMPORTANT]  
-   > Zákazníci s výpočetními úřady pro státní správu můžou zobrazit jenom číslo případu podpory na 15 číslicích a stav incidentu. Všechna případná komunikace a sledování práce nebo upozornění se odesílají e-mailem a odkazují na 8bitové číslo případu podpory, které se vytvoří jako zrcadlo případu podpory otevřeného v konzole Intune.   
+   > Privátní cloud pro zákazníky státní správy může zobrazit jenom číslo případu podpory na 15 číslicích a stav incidentu. Všechna případná komunikace a sledování práce nebo upozornění se odesílají e-mailem a odkazují na 8bitové číslo případu podpory, které se vytvoří jako zrcadlo případu podpory otevřeného v konzole Intune.   
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací  
 

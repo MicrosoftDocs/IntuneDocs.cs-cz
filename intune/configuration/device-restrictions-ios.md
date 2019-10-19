@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/26/2019
+ms.date: 10/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4e39464705b0a3bac70616d49eb80681515db801
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a26af380ef00c85c681beccdcdf188c343da1b94
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72489986"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584894"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -268,6 +268,11 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
   Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
+- **Přístup k síťové jednotce v aplikaci soubory**: použití protokolu SMB (Server Message Block), zařízení mají přístup k souborům nebo jiným prostředkům na síťovém serveru. Při **vypnutí** se zabrání přístupu k souborům na síťové jednotce SMB. **Nenakonfigurováno** (výchozí) umožňuje přístup.
+
+  Tato funkce platí pro:  
+  - iOS a iPadOS 13,0 a novější
+
 ## <a name="built-in-apps"></a>Integrované aplikace
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
@@ -378,7 +383,7 @@ Platí pro zařízení se systémem iOS 9,3 nebo novějším.
 
 ### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Typ seznamu aplikací**: Vytvořte seznam aplikací, které chcete zobrazit nebo skrýt. Možnosti:
+- **Typ seznamu aplikací**: Vytvořte seznam aplikací, které chcete zobrazit nebo skrýt. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094). Možnosti:
 
   - **Skryté aplikace**: Zadejte seznam aplikací, které jsou pro uživatele skryté. Uživatelé nemůžou tyto aplikace zobrazit ani otevřít.
   - **Viditelné aplikace**: Zadejte seznam aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
@@ -433,7 +438,12 @@ Pokud chcete přidat aplikace, můžete:
   - iOS 12,2 a novější
 
 - **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů**: **vyžaduje** , aby zařízení používalo jenom sítě Wi-Fi nastavené prostřednictvím konfiguračních profilů Intune. **Nenakonfigurováno** (výchozí) umožňuje zařízení používat jiné sítě Wi-Fi.
-- **Úprava stavu Wi-Fi**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům zapnout nebo vypnout Wi-Fi na zařízení. **Blok** zabraňuje zapnutí nebo vypnutí Wi-Fi.
+- **Wi-Fi vždycky zapnuté**: Pokud je nastavené na **vyžadovat**, Wi-Fi zůstane v aplikaci nastavení. Nedá se vypnout v nastavení nebo v řídicím centru, a to ani v případě, že je zařízení v režimu v letadle. **Nenakonfigurováno** (výchozí) umožňuje uživateli řídit zapnutí nebo vypnutí Wi-Fi.
+
+  Konfigurace tohoto nastavení nezabrání uživatelům v výběru sítě Wi-Fi.
+
+  Tato funkce platí pro:  
+  - iOS a iPadOS 13,0 a novější
 
 ## <a name="connected-devices"></a>Připojená zařízení
 
@@ -459,6 +469,11 @@ Pokud chcete přidat aplikace, můžete:
 
   Tato funkce platí pro:  
   - iOS 11,0 a novější
+
+- **Přístup k souborům na jednotce USB**: zařízení se můžou připojit a otevírat soubory na USB jednotce. Pokud je zařízení USB připojené k zařízení, **zakažte zakázat** přístup zařízení k jednotce USB v aplikaci soubory. Zakázáním této funkce se taky zablokuje koncovým uživatelům přenos souborů na jednotku USB připojenou k iPadu. **Nenakonfigurováno** (výchozí) povolí přístup k jednotce USB v aplikaci Files.
+
+  Tato funkce platí pro:  
+  - iOS a iPadOS 13,0 a novější
 
 ## <a name="keyboard-and-dictionary"></a>Klávesnice a slovník
 

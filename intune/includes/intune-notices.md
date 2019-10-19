@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9e18182ff8cbddff1ae41298120928f2e2cb948a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5ebab881a524bc361e271856b6762776974cea20
+ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502756"
+ms.lasthandoff: 10/19/2019
+ms.locfileid: "72601541"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -71,22 +71,6 @@ Nemusíte provádět žádnou akci, ale v případě potřeby můžete zvážit 
 #### <a name="additional-information"></a>Další informace 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Plánování změn: nové nastavení aktualizací Windows v Intune <!-- 4464404 -->
-Od verze Intune do služby Intune nebo 1908 přidáváme nové "nastavení termínu", které můžete nakonfigurovat místo nastavení "umožní uživateli restartovat počítač". V uživatelském rozhraní v 1909 nebo září plánujeme zakázat nastavení, které je potřeba znovu spustit, a pak je úplně odebrat z konzoly do konce října.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Pokud spravujete zařízení s Windows 10 ve vašem prostředí:
-
-- V případě aktualizace Intune nebo 1908 se v konzole zobrazí nové nastavení termínu, kromě starého nastavení, které je potřeba znovu spustit.
-- Když jsou tato stará i nová nastavení nakonfigurovaná, hodnoty nastavení konečného termínu přepíšou hodnoty nastavení po restartování.
-- Nastavení konečného termínu nahradí v konzole v rámci aktualizace 1910 možnost "povolení uživatele k restartování (v tomto případě)".
-
-#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-Začněte používat nastavení konečného termínu v 1908, a to tak, že je nakonfigurujete s požadovanými hodnotami. Jakmile to budete mít, můžete nastavit, aby se nastavení při spuštění z konzoly v říjnu nastavilo na Nenakonfigurováno.
-
-V případě potřeby aktualizujte svou dokumentaci a skripty pro automatizaci.
-
-Před odebráním nastavení možnosti aktualizace jsme si musíme v centru zpráv aktualizovat a vystavit připomenutí.
 
 ### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Plánování změn: sada Intune App SDK a zásady ochrany aplikací pro Android, které se přesunou na podporu Android 5,0 a novějších v říjnu <!--4911065 -->
 Intune se v říjnu přesune na podporu Androidu 5. x (Lupa) a vyšší. Aktualizujte všechny zabalené aplikace pomocí nejnovější sady Intune App SDK a aktualizujte svá zařízení.

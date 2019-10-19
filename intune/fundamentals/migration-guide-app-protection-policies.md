@@ -17,12 +17,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fa95aca680d3aa47906cad2b31695c87964fdb7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8fab3ea722e94f2613a0fb1e474a16ecb5971569
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510078"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585265"
 ---
 # <a name="configure-app-protection-policies-optional"></a>Konfigurace zásad ochrany aplikací (volitelné)
 
@@ -52,9 +52,7 @@ Když zapnete podmíněný přístup ve starém poskytovateli MDM, můžou uživ
 
 ## <a name="task-list-for-app-protection-policies"></a>Seznam kroků pro zásady ochrany aplikací
 
-1. [Vytvoření zásady ochrany aplikace](../apps/app-protection-policies.md#create-an-app-protection-policy)
-2. [Nasazení zásady](../apps/app-protection-policies.md#deploy-a-policy-to-users)
-
+- [Vytvoření a přiřazení zásad ochrany aplikací](~/apps/app-protection-policies.md)
 
 ## <a name="next-steps"></a>Další kroky
 

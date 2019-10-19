@@ -18,20 +18,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 83a0533ee7767035ea26fa971a6dbe73470f1717
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5d70496a87f923b61cacb3da250e5f22ce5c7817
+ms.sourcegitcommit: aeb76032de216e5feb94559aeaf36c0357f1247d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503201"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587958"
 ---
 # <a name="set-enrollment-restrictions"></a>Nastavení omezení registrace
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Jako správce Intune můžete vytvořit a spravovat omezení registrace, která definují, jaká zařízení se můžou registrovat ke správě pomocí Intune, včetně těchto:
-- počet zařízení
-- operační systémy a verze: můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
+- Počet zařízení.
+- Operační systémy a verze.
+
+Můžete vytvořit více omezení a použít je u různých skupin uživatelů. Pro různá omezení můžete nastavit [pořadí priority](#change-enrollment-restriction-priority).
 
 >[!NOTE]
 >Omezení registrací nepatří k funkcím zabezpečení. Ohrožená zařízení mohou poskytovat zavádějící informace. Tato omezení jsou jen určitou bariérou pro uživatele bez zlých úmyslů.
@@ -60,23 +62,32 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Vyberte **registrace zařízení** > **omezení registrace** >  omezení**Create**a omezení**typu zařízení** > .
-    @no__t – 0Screen Cap pro vytvoření omezení typu zařízení @ no__t-1
+    ![Screen Cap pro vytváření omezení typu zařízení ](./media/enrollment-restrictions-set/create-device-type-restriction.png)
 4. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
 5. Kliknutím na tlačítko **Další** přejdete na stránku **Nastavení platformy** .
 6. V části **platforma**vyberte možnost **Povolení** pro platformy, u kterých chcete toto omezení omezit.
-    @no__t – 0Screen Cap pro výběr nastavení platformy @ no__t-1
+    ![Screen Cap pro výběr nastavení platformy ](./media/enrollment-restrictions-set/choose-platform-settings.png)
 7. V části **verze**vyberte minimální a maximální verze, které mají povolené platformy podporovat. Omezení verze se vztahují jenom na zařízení zaregistrovaná ve Portál společnosti.
      Podporované formáty verzí:
     - Správce zařízení s Androidem a pracovní profil Android Enterprise podporují hlavní. podverze. rev. Build.
     - iOS podporuje hlavní_verze. podverze. rev. Verze operačního systému se nevztahují na zařízení Apple, která se registrují pomocí Program registrace zařízení, Apple School Manageru nebo aplikace Apple Configuratoru.
     - Windows podporuje jenom hlavní_verze. podverze. Build. rev jenom pro Windows 10.
-    > [!Note]
-    > Windows 10 neposkytuje během registrace číslo rev, takže pokud zadáte v 10.0.17134.100 a zařízení bude 10.0.17134.174, bude během registrace zablokované.
+    
+    > [!IMPORTANT]
+    > Android Enterprise (pracovní profil) a platformy pro správce zařízení s Androidem mají následující chování:
+    > - Pokud jsou obě platformy pro stejnou skupinu povolené, budou se uživatelé registrovat s pracovním profilem, pokud ho jejich zařízení podporuje. v opačném případě se budou registrovat jako DA. 
+    > - Pokud jsou obě platformy pro skupinu a upřesnění pro konkrétní a překrývající se verze, budou uživatelé dostávat tok registrace definovaný pro svou verzi operačního systému. 
+    > - Pokud jsou obě platformy povolené, ale blokované pro stejné verze, budou se uživatelé na zařízeních s blokovanými verzemi považovat za tok registrace Správce zařízení s Androidem a pak se zablokuje a zobrazí se výzva k odhlášení. 
+    >
+    > Poznamenat si, že registrace pracovního profilu nebo Správce zařízení nebude fungovat, pokud se příslušné informace nedokončí při registraci Androidu. 
+    
+   > [!Note]
+   > Windows 10 neposkytuje během registrace číslo rev, takže pokud zadáte v 10.0.17134.100 a zařízení bude 10.0.17134.174, bude během registrace zablokované.
 
 8. V části **osobní vlastnictví**vyberte **Povolit** pro platformy, které chcete povolit jako zařízení v osobním vlastnictví.
 9. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
 10. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
-    @no__t – 0Screen Cap pro výběr nastavení platformy @ no__t-1
+    ![Screen Cap pro výběr nastavení platformy ](./media/enrollment-restrictions-set/select-groups.png)
 11. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 12. Vyberte **vytvořit** a vytvořte tak omezení.
 13. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).
@@ -87,14 +98,14 @@ Pro omezení registrace typu i limitu počtu zařízení se automaticky poskytno
 1. Přihlaste se k portálu Azure Portal.
 2. Zvolte **Další služby**, vyhledejte **Intune** a zvolte **Intune**.
 3. Vyberte **registrace zařízení** > **omezení registrace** >  omezení**Vytvoření**omezení**počtu zařízení** > .
-    @no__t – 0Screen Cap pro vytváření omezení limitu počtu zařízení @ no__t-1
+    ![Screen Cap pro vytváření omezení limitu počtu zařízení ](./media/enrollment-restrictions-set/create-device-limit-restriction.png)
 4. Na stránce **základy** poskytněte omezení **název** a volitelný **Popis**.
 5. Kliknutím na tlačítko **Další** přejdete na stránku **omezení počtu zařízení** .
 6. V poli **limit počtu zařízení**vyberte maximální počet zařízení, která může uživatel zaregistrovat.
-    @no__t – 0Screen Cap pro výběr limitu zařízení @ no__t-1
+    ![Screen Cap pro výběr omezení počtu zařízení ](./media/enrollment-restrictions-set/choose-device-limit.png)
 7. Kliknutím na tlačítko **Další** přejdete na stránku **přiřazení** .
 8. Zvolte **Vybrat skupiny, které chcete zahrnout** , a potom pomocí vyhledávacího pole vyhledejte skupiny, které chcete zahrnout do tohoto omezení. Omezení platí jenom u skupin, ke kterým je přiřazené. Pokud omezení nepřiřadíte alespoň k jedné skupině, nebude mít žádný efekt. Pak zvolte **Vybrat**. 
-    @no__t – 0Screen limit pro výběr skupin @ no__t-1
+    ![Screen Cap pro výběr skupin ](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 11. Kliknutím na tlačítko **Další** přejdete na stránku **Revize + vytvořit** .
 12. Vyberte **vytvořit** a vytvořte tak omezení.
 13. Priorita nově vytvořeného omezení bude o jeden stupeň vyšší než výchozí omezení. [Prioritu můžete změnit](#change-enrollment-restriction-priority).

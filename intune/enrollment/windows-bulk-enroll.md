@@ -17,12 +17,12 @@ ms.reviewer: spshumwa
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 60b38e80a8d477220c0a6cfd59b521ac815c5ae6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8b2ce91cea1fdef211a8e6a9dc1c19086f355385
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503069"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585279"
 ---
 # <a name="bulk-enrollment-for-windows-devices"></a>Hromadná registrace pro zařízení s Windows
 
@@ -90,6 +90,8 @@ Zřizování se má používat na nových zařízeních s Windows. Selhání zř
 
 - Zřizovací balíček snažící se připojit k doméně Active Directory nebo tenantovi Azure Active Directory, který nevytváří místní účet, může způsobit, že bude zařízení nedostupné, pokud proces připojení k doméně selže kvůli chybějícímu připojení k síti.
 - Skripty spouštěné zřizovacím balíčkem se spouštějí v kontextu systému. Tyto skripty mohou v zařízení libovolně měnit systém souborů i jeho konfiguraci. Škodlivý nebo chybný skript by mohl zařízení uvést do stavu, který jde obnovit jen pomocí obnovení z image nebo vymazání.
+
+Můžete zjistit, jestli je nastavení v balíčku úspěšné nebo neúspěšné, v přihlašování Správce služby **zřizování-Diagnostika – poskytovatel** Prohlížeč událostí.
 
 ### <a name="bulk-enrollment-with-wi-fi"></a>Hromadná registrace přes Wi-Fi 
 

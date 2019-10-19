@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e245ddffa91941d3b700bf1c698b33395893bb56
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3ee68392feaa59ef5207edce75250e539407273b
+ms.sourcegitcommit: 8c25aeefb7cbc6444a8596af22fccd1c5426877a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497745"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72593696"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune
 
@@ -66,7 +66,7 @@ Omezení webové aplikace připojené k Azure AD na používání Microsoft Edge
 
     ![Snímek obrazovky se zásadami podmíněného přístupu – grant](./media/manage-microsoft-edge/manage-microsoft-edge-01.png)
 
-6. V části přiřazení vyberte **podmínky**@no__t**klientských aplikacích**-1. Zobrazí se okno **klientské aplikace** .
+6. V části přiřazení vyberte **podmínky**  > **klientských aplikacích**. Zobrazí se okno **klientské aplikace** .
 7. V části **Konfigurovat**vyberte **Ano** , pokud chcete zásady použít pro konkrétní klientské aplikace.
 8. Zkontrolujte, že je jako klientská aplikace vybraná možnost **Prohlížeč**.
 
@@ -181,7 +181,7 @@ Použijte následující dvojici klíč/hodnota ke konfiguraci zástupce domovsk
 
 |    Klíč    |    Hodnota    |
 |-------------------------------------------------------------------|-------------|
-|    com. Microsoft. Intune. mam. managedbrowser. webdomove   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  < @ no__t-2 @ no__t-3
+|    com. Microsoft. Intune. mam. managedbrowser. webdomove   |    Zadejte platnou adresu URL. Nesprávné adresy URL se z bezpečnostních důvodů blokují.<br>**Příklad:**  < `https://www.bing.com` >
 
 ## <a name="configure-your-organizations-logo-and-brand-color-for-new-tab-pages-in-microsoft-edge"></a>Nakonfigurovat logo vaší organizace a barvu značky pro nové stránky karet v Microsoft Edge
 
@@ -205,7 +205,7 @@ Pro usnadnění přístupu můžete nakonfigurovat záložky, které chcete, aby
 
 Tady jsou některé podrobnosti:
 
-- Tyto záložky se zobrazí pouze uživatelům, kteří používají podnikový režim Microsoft Edge. 
+- Tyto záložky se zobrazí pouze uživatelům, kteří používají [podnikový režim](https://docs.microsoft.com/intune/apps/app-configuration-managed-browser#how-to-configure-bookmarks-for-a-protected-browser) Microsoft Edge. 
 - Tyto záložky nemohou uživatelé odstranit ani upravit.
 - Tyto záložky se zobrazí v horní části seznamu. Všechny záložky, které vytvářejí uživatelé, se zobrazí pod těmito záložkami.
 - Pokud jste povolili přesměrování proxy aplikací, můžete přidat webové aplikace proxy aplikací pomocí své interní nebo externí adresy URL.
@@ -237,7 +237,7 @@ Pomocí následujících párů klíč/hodnota můžete nakonfigurovat seznam po
 K vytvoření seznamu povolených a blokovaných webů můžete použít různé formáty adresy URL. Tyto povolené vzory jsou podrobně popsány v následující tabulce. Některé poznámky než začnete: 
 - Při zadávání adres URL do seznamu nezapomeňte u všech uvést předponu **http** nebo **https**.
 - V souladu s pravidly v následujícím seznamu povolených vzorů můžete použít zástupný symbol (\*).
-- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například @no__t- **0 se nepodporuje** .
+- Zástupný znak může odpovídat jenom celé součásti názvu hostitele (oddělené tečkami) nebo celými částmi cesty (oddělené lomítky). Například `http://*contoso.com` **není podporován.**
 - V adrese můžete specifikovat čísla portů. Pokud nezadáte číslo portu, použijí se tyto hodnoty:
   - Port 80 pro protokol HTTP
   - Port 443 pro protokol HTTPS

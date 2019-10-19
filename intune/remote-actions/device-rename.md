@@ -16,17 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fbf555f204e54a65e11c4b14f0a461213b61746
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c1c02248b3208073a3bb09cafe69cf0473eacb2b
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509366"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584539"
 ---
 # <a name="rename-a-device-in-intune"></a>Přejmenování zařízení v Intune
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Akce **Přejmenovat zařízení** umožňuje přejmenovat zařízení, které je zaregistrované v Intune. V Intune a na zařízení se změní název zařízení.
 
@@ -45,6 +42,15 @@ Tato funkce v současné době nepodporuje přejmenování hybridních zařízen
 5. Pokud chcete po přejmenování zařízení restartovat, klikněte na **tlačítko Ano** vedle možnosti **po přejmenování restartovat**.
 6. Vyberte možnost **Přejmenovat**.
 
+## <a name="windows-device-rename-rules"></a>Pravidla přejmenování zařízení Windows
+Při přejmenování zařízení s Windows musí nové jméno dodržovat tato pravidla:
+- maximálně 15 znaků (musí být menší než nebo rovno 63 bajtů, včetně koncové hodnoty NULL)
+- Není null nebo prázdný řetězec
+- Povolené znakové sady ASCII: písmena (a-z, A – Z), číslice (0-9) a spojovníky
+- Povolené kódování Unicode: znaky > = 0x80, musí být platný UTF8, musí být možné mapovat na IDN (to znamená, že RtlIdnToNameprepUnicode je úspěšných, viz RFC 3492)
+- Názvy nesmí obsahovat jenom číslice.
+- Žádné mezery v názvu
+- Nepovolené znaky: {|} ~ [\] ^ ':; < = >? & @! " # $ % ` ( ) + / , . _ *)
 
 
 ## <a name="next-steps"></a>Další kroky

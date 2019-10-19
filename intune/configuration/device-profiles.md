@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 10/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 31a55f5749b35139368b6c3543fd8ff95db6100d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 2c578cb430bd6c62c274322ea1e46b5d37d2e143
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506839"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584975"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -67,7 +67,7 @@ Tato funkce podporuje:
 
 ## <a name="custom-profile"></a>Profil Vlastní
 
-[Vlastní nastavení](../custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
+[Vlastní nastavení](custom-settings-configure.md) umožňuje správcům přiřazovat nastavení zařízení, která nejsou integrovaná do Intune. Na zařízeních s Androidem můžete zadat hodnoty OMA-URI. U zařízení s iOSem můžete naimportovat konfigurační soubor, který jste vytvořili v nástroji Apple Configurator.
 
 Tato funkce podporuje:
 
@@ -79,7 +79,7 @@ Tato funkce podporuje:
 
 ## <a name="delivery-optimization"></a>Optimalizace doručení
 
-[Optimalizace doručování](../delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují **aktualizace softwaru**@no__t nastavení-1 pro**Windows 10 Update Ring** .
+[Optimalizace doručování](delivery-optimization-windows.md) nabízí lepší možnosti doručování aktualizací softwaru. Tato nastavení nahrazují **aktualizace softwaru**  >  nastavení**Windows 10 Update Ring** .
 
 Pomocí těchto nastavení můžete řídit, jak se aktualizace softwaru stahují do zařízení ve vaší organizaci. Můžete například umožnit uživatelům získávat vlastní aktualizace nebo získávat aktualizace pomocí cloudových služeb Optimalizace doručení v profilu zařízení.
 
@@ -89,7 +89,7 @@ Tato funkce podporuje:
 
 ## <a name="device-features"></a>Funkce zařízení
 
-[Funkce zařízení](../device-features-configure.md) řídí funkce na zařízeních s iOS a MacOS, jako je například zpráva o prostředcích pro tisk, oznámení a zamykací obrazovce.
+[Funkce zařízení](device-features-configure.md) řídí funkce na zařízeních s iOS a MacOS, jako je například zpráva o prostředcích pro tisk, oznámení a zamykací obrazovce.
 
 Tato funkce podporuje:
 
@@ -211,9 +211,9 @@ Tato funkce podporuje:
 
 ## <a name="update-policies"></a>Zásady aktualizací
 
-[Zásady aktualizací pro iOS](../software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS k instalaci aktualizací softwaru na zařízení s iOSem. Můžete také zkontrolovat stav instalace.
+[Zásady aktualizací pro iOS](../protect/software-updates-ios.md) ukazují, jak vytvořit a přiřadit zásady pro iOS k instalaci aktualizací softwaru na zařízení s iOSem. Můžete také zkontrolovat stav instalace.
 
-Zásady aktualizace na zařízeních s Windows najdete v tématu [Optimalizace doručení](../delivery-optimization-windows.md). 
+Zásady aktualizace na zařízeních s Windows najdete v tématu [Optimalizace doručení](delivery-optimization-windows.md). 
 
 Tato funkce podporuje:
 
@@ -266,7 +266,7 @@ Tato funkce podporuje:
 
 ## <a name="manage-and-troubleshoot"></a>Správa a řešení problémů
 
-[Při správě profilů](../device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Také vám pomůžou vyřešit konflikty tím, že se zobrazí nastavení, které způsobuje konflikt, a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhají správcům pracovat s profily. Popisuje, co se stane při odstraňování profilu, což způsobí, že se oznámení odesílají do zařízení a další.
+[Při správě profilů](device-profile-monitor.md) můžete zjistit stav zařízení a přiřazené profily. Také vám pomůžou vyřešit konflikty tím, že se zobrazí nastavení, které způsobuje konflikt, a profily, které obsahují tato nastavení. [Běžné problémy a řešení](device-profile-troubleshoot.md) pomáhají správcům pracovat s profily. Popisuje, co se stane při odstraňování profilu, což způsobí, že se oznámení odesílají do zařízení a další.
 
 ## <a name="next-steps"></a>Další kroky
 

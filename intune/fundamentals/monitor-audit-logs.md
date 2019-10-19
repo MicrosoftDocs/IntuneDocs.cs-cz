@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b4be1755a07e6ec304edb7bceba8041d5b58263e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fd00a0ae4cb6c3b150fe40cfc6cd7b71cfa973f3
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510000"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585245"
 ---
 # <a name="use-audit-logs-to-track-and-monitor-events-in-microsoft-intune"></a>Sledování a monitorování událostí v Microsoft Intune pomocí protokolů auditu
 
@@ -50,7 +50,8 @@ Protokoly auditu a provozní protokoly je také možné směrovat na Azure Monit
 
 ![Export dat protokolu do služby Azure monitor výběrem možnosti Exportovat data v Intune](./media/monitor-audit-logs/audit-logs-export-data-settings.png)
 
-Další informace o této funkci najdete v tématu [odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics](review-logs-using-azure-monitor.md).
+> [!NOTE]
+> Další informace o této funkci a o požadavcích na jejich použití najdete v tématu [odeslání dat protokolu do úložiště, centra událostí nebo Log Analytics](review-logs-using-azure-monitor.md).
 
 ## <a name="review-audit-events"></a>Kontrola událostí auditu
 
@@ -72,7 +73,7 @@ Chcete-li zobrazit konkrétnější informace o události, vyberte položku v se
 
 > [!NOTE]
 > **Iniciované uživatelem (actor)** obsahuje informace o tom, kdo úlohu spustil a kde byla spuštěna. Pokud například spustíte aktivitu v Intune v Azure Portal, **aplikace** vždy vypíše seznam **Microsoft Intune portálu** a **ID aplikace** vždy používá stejný identifikátor GUID.
-> 
+>
 > V části **cíle (y)** je uveden seznam více cílů a vlastností, které byly změněny.  
 
 ## <a name="filter-audit-events"></a>Filtrování událostí auditu

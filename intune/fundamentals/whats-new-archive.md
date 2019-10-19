@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c5f089edd63d55f288a606de782448fa3d29b88
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 327e0d56400a2aac545d1bae92279e242aa2006a
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509722"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585227"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -69,7 +69,7 @@ Přidáváme nastavení, které vám umožní přizpůsobit vzhled aplikace spra
 Nastavení veřejného terminálu najdete v tématu [omezení pro zařízení s Androidem Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="app-protection-policy-assignment-save-and-apply----3104570---"></a>Uložení a použití přiřazení zásad ochrany aplikací <!-- 3104570 -->
-Teď máte lepší kontrolu nad [přiřazením zásad ochrany aplikací](../apps/app-protection-policies.md#deploy-a-policy-to-users). Když vyberete *přiřazení* pro nastavení nebo úpravu přiřazení zásady, musíte před použitím změny **Uložit** svou konfiguraci. Pomocí **zahození** zrušte zaškrtnutí všech změn, které provedete bez uložení změn do seznamů zahrnutí nebo vyloučení.  Když budete vyžadovat uložení nebo zahození, přiřadí se zásadám ochrany aplikací jenom uživatelé, kterým máte v úmyslu.
+Teď máte lepší kontrolu nad [přiřazením zásad ochrany aplikací](../apps/app-protection-policies.md#assign-a-windows-10-policy-to-users). Když vyberete *přiřazení* pro nastavení nebo úpravu přiřazení zásady, musíte před použitím změny **Uložit** svou konfiguraci. Pomocí **zahození** zrušte zaškrtnutí všech změn, které provedete bez uložení změn do seznamů zahrnutí nebo vyloučení.  Když budete vyžadovat uložení nebo zahození, přiřadí se zásadám ochrany aplikací jenom uživatelé, kterým máte v úmyslu.
 
 #### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later----3174639---"></a>Nové nastavení prohlížeče Microsoft Edge pro Windows 10 a novější <!-- 3174639 -->
 Tato aktualizace obsahuje nová nastavení, která vám pomůžou řídit a spravovat prohlížeč Microsoft Edge na vašich zařízeních. Seznam těchto nastavení najdete v tématu [omezení pro zařízení s Windows 10 (a novější)](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -628,7 +628,7 @@ Pokud chcete vytvořit profil, otevřete položku **Konfigurace zařízení** > 
 Platí pro Windows 10 a novější.
 
 #### <a name="kiosk---obsolete-is-grayed-out-and-cant-be-changed----2149998---"></a>Veřejný terminál – zastaralý je šedý a nedá se změnit. <!-- 2149998 -->
-Funkce veřejného terminálu (Preview) (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novějších** **omezení zařízení**@no__t 7) je zastaralá a nahrazuje se [nastavením veřejného terminálu pro Windows 10 a novější](../configuration/kiosk-settings.md). Položka **Veřejný terminál (zastaralé)** se v této aktualizaci zobrazuje šedě a uživatelské rozhraní neumožňuje změny ani aktualizace. 
+Funkce veřejného terminálu (Preview) (**Konfigurace zařízení**  > **profily**  > **vytvořit profil**  > **Windows 10 a novější**  > **omezení zařízení**) je zastaralá a nahrazuje se [nastavením veřejného terminálu pro Windows 10 a novější](../configuration/kiosk-settings.md). Položka **Veřejný terminál (zastaralé)** se v této aktualizaci zobrazuje šedě a uživatelské rozhraní neumožňuje změny ani aktualizace. 
 
 Pokud budete chtít povolit režim veřejného terminálu, podívejte se na článek[Nastavení veřejného terminálu pro Windows 10 a novější](../configuration/kiosk-settings.md).
 

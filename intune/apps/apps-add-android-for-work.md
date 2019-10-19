@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 890dc68afd11862d11effd3e2d3a160815d6ad8c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3137db9d1ab82ebb99686f8f98aa768dae222caf
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507339"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72584958"
 ---
 # <a name="add-managed-google-play-apps-to-android-enterprise-devices-with-intune"></a>Přidání spravovaných aplikací Google Play do zařízení s Androidem Enterprise pomocí Intune
 
@@ -49,9 +49,9 @@ Abychom vám usnadnili konfiguraci a používání správy Android Enterprise ma
 ## <a name="managed-google-play-app-types"></a>Spravované typy aplikací Google Play
 Existují tři typy aplikací, které jsou k dispozici se spravovanými Google Play:
 
-* **Spravované Google Play ukládají** aplikace veřejné pro aplikace, které jsou všeobecně dostupné v obchod Play. Spravujte tyto aplikace v Intune tak, že přejdete na aplikace, které chcete spravovat, schválíte je a pak je synchronizujete do Intune.
-* **Spravovaná Google Play soukromá aplikace** – jedná se o obchodní aplikace publikované do spravovaných Google Play správci Intune.  Tyto aplikace jsou soukromé a jsou k dispozici pouze pro vašeho tenanta Intune. To je způsob, jakým se spravují a nasazují obchodní aplikace se spravovanými Google Play a Androidem Enterprise.
-* **Spravované Google Play webový odkaz** – webové odkazy s ikonami definovanými správcem IT, které se nasazují na zařízení s Androidem Enterprise. Zobrazují se na zařízeních v seznamu aplikací v zařízení stejně jako běžné aplikace.
+- **Spravované Google Play ukládají** aplikace veřejné pro aplikace, které jsou všeobecně dostupné v obchod Play. Spravujte tyto aplikace v Intune tak, že přejdete na aplikace, které chcete spravovat, schválíte je a pak je synchronizujete do Intune.
+- **Spravovaná Google Play soukromá aplikace** – jedná se o obchodní aplikace publikované do spravovaných Google Play správci Intune.  Tyto aplikace jsou soukromé a jsou k dispozici pouze pro vašeho tenanta Intune. To je způsob, jakým se spravují a nasazují obchodní aplikace se spravovanými Google Play a Androidem Enterprise.
+- **Spravované Google Play webový odkaz** – webové odkazy s ikonami definovanými správcem IT, které se nasazují na zařízení s Androidem Enterprise. Zobrazují se na zařízeních v seznamu aplikací v zařízení stejně jako běžné aplikace.
 
 ## <a name="managed-google-play-store-apps"></a>Spravované aplikace Google Play Storu
 Existují dva způsoby procházení a schvalování spravovaných aplikací pro Google Play Store pomocí Intune:
@@ -210,11 +210,10 @@ Případně ale můžete obchod Google Play nastavit tak, aby automaticky schval
 
 ## <a name="additional-managed-google-play-app-reporting-for-android-enterprise-work-profile-devices"></a>Další spravované Google Play vytváření sestav aplikací pro zařízení s Androidem Enterprise Work Profile
 
-U spravovaných aplikací Google Play nasazených do zařízení se systémem Android Enterprise Work profilů můžete zobrazit konkrétní číslo verze aplikace nainstalované na zařízení. To platí jenom pro požadované aplikace. 
-
+U spravovaných aplikací Google Play nasazených do zařízení se systémem Android Enterprise Work profilů můžete zobrazit stav a číslo verze aplikace nainstalované na zařízení pomocí Intune. 
 
 ## <a name="delete-managed-google-play-apps"></a>Odstranit spravované aplikace Google Play
-V případě potřeby můžete z Microsoft Intune odstranit spravované aplikace Google Play. Pokud chcete odstranit spravovanou aplikaci Google Play, otevřete Microsoft Intune v Azure Portal a vyberte **klientské aplikace**@no__t **-1.** V seznamu aplikace vyberte tři tečky (...) napravo od spravované aplikace Google Play a pak v zobrazeném seznamu vyberte **Odstranit** . Při odstranění spravované aplikace Google Play ze seznamu aplikací se spravovaná aplikace Google Play automaticky neschválí.
+V případě potřeby můžete z Microsoft Intune odstranit spravované aplikace Google Play. Pokud chcete odstranit spravovanou aplikaci Google Play, otevřete Microsoft Intune v Azure Portal a vyberte **klientské aplikace**  > **aplikace**. V seznamu aplikace vyberte tři tečky (...) napravo od spravované aplikace Google Play a pak v zobrazeném seznamu vyberte **Odstranit** . Při odstranění spravované aplikace Google Play ze seznamu aplikací se spravovaná aplikace Google Play automaticky neschválí.
 
 ## <a name="android-enterprise-system-apps"></a>Systémové aplikace typu Android Enterprise
 

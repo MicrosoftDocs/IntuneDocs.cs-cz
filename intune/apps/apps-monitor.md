@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/10/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7836b0d08367d8b021a8ea0c7f0e06311fe972b1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ee22ee435830137a423423aa692376aabbb6cecb
+ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498569"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72585418"
 ---
 # <a name="monitor-app-information-and-assignments-with-microsoft-intune"></a>Monitorování informací a přiřazení aplikace pomocí Microsoft Intune
 
@@ -38,6 +38,8 @@ Intune poskytuje několik způsobů, jak monitorovat vlastnosti spravovaných ap
 
 > [!NOTE]
 > Aplikace z obchodu pro Android, které jsou nasazeny jako **K dispozici**, nehlásí svůj stav instalace.
+>
+> U spravovaných aplikací Google Play nasazených do zařízení se systémem Android Enterprise Work profilů můžete zobrazit stav a číslo verze aplikace nainstalované na zařízení pomocí Intune. 
 
 ## <a name="app-overview-pane"></a>Podokno přehledu aplikace
 
