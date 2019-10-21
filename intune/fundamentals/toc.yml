@@ -41,6 +41,16 @@
       href: device-lifecycle.md
     - name: Životní cyklus aplikace
       href: ../apps/app-lifecycle.md
+    - name: Související scénáře
+      items:
+        - name: Přehled souvisejících scénářů
+          href: guided-scenarios-overview.md
+        - name: Nasazení Microsoft Edge pro mobilní zařízení
+          href: guided-scenarios-edge.md
+        - name: Moderní desktopové prostředí spravované přes cloud
+          href: guided-scenarios-cloud-managed-pc.md
+        - name: Zabezpečené mobilních aplikací Microsoft Office
+          href: guided-scenarios-office-mobile.md
     - name: Typické scénáře
       href: common-scenarios.md
     - name: Rozhodnutí o technologiích pro používání vlastních zařízení uživatelů (BYOD) pomocí řešení EMS
@@ -175,6 +185,8 @@
       href: ../protect/index.yml
     - name: Správa a ochrana aplikací
       href: ../apps/index.yml
+    - name: Použití sad zásad
+      href: ~/fundamentals/policy-sets.md
     - name: Informace pro vývojáře
       href: ../developer/index.yml
     - name: Získání nápovědy a podpory

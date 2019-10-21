@@ -197,6 +197,8 @@
           displayName: ca; pkcs; pki; ra; registration authority
         - name: Odebrání certifikátů SCEP a PKCS
           href: remove-certificates.md
+    - name: Odvozené přihlašovací údaje
+      href: derived-credentials.md
     - name: Aktualizace softwaru
       items:
         - name: Aktualizace Windows
