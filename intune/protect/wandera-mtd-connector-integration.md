@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/26/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,19 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a548b1e1728928ca74ca7207b7e60d91ba5fc8aa
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f42acb38d84394a6b61fa16072de6320b84a67b5
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503595"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681296"
 ---
 # <a name="integrate-wandera-mobile-threat-protection-with-intune"></a>Integrace ochrany před mobilními hrozbami Wandera pomocí Intune  
 
 Provedením následujících kroků Integrujte řešení ochrany před mobilními hrozbami Wandera do Intune.  
+
+> [!NOTE]
+> Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
 
 ## <a name="before-you-begin"></a>Před zahájením  
 
@@ -53,7 +56,7 @@ Proces autorizace aplikace ochrany před mobilními hrozbami Wandera:
 Nastavení modulu *EMM Connect* for Wandera vyžaduje jednorázový proces konfigurace, který dokončíte v konzolách Intune a Wandera. Proces konfigurace trvá přibližně 15 minut. Konfiguraci můžete dokončit bez koordinace s technickým účtem Wandera nebo zástupcem podpory.  
 
 ### <a name="enable-support-for-wandera-in-intune"></a>Povolení podpory pro Wandera v Intune
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **dodržování předpisů zařízením**@no__t – 2 >**ochrany před mobilními hrozbami** a vyberte **Přidat**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pokračujte na **dodržování předpisů zařízením**  > **ochrany před mobilními hrozbami** > a vyberte **Přidat**.
 
 2. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte **Wandera**. A pak vyberte **vytvořit**.  
 

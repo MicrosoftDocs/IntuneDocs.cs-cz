@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/30/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,19 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f0802148884363b9b1bb83cb07824accb7abee66
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: aad6268606dfcf69c304bb5c5b270c8c4795e4b2
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508911"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681288"
 ---
 # <a name="integrate-sophos-mobile-with-intune"></a>Integrace Sophos Mobile s Intune  
 
 Provedením následujících kroků Integrujte řešení ochrany před mobilními hrozbami s Intune.  
+
+> [!NOTE]
+> Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
 
 ## <a name="before-you-begin"></a>Před zahájením  
 
@@ -49,20 +52,20 @@ Postup autorizace mobilní aplikace Sophos je následující:
 
 ## <a name="to-set-up-sophos-mobile-integration"></a>Nastavení integrace s Sophos Mobile  
 
-1. Přihlaste se [k Azure Portal]( https://portal.azure.com/), pokračujte >**ochrany před mobilními hrozbami** v in@no__t **Tune** **@no__t-** 4 a vyberte **Přidat**.  
+1. Přihlaste se k [Azure Portal]( https://portal.azure.com/), **v Intune**  > **dodržování předpisů zařízením**  > **ochrany před mobilními hrozbami** > a vyberte **Přidat**.  
 2. Na stránce **Přidat konektor** použijte rozevírací seznam a vyberte možnost **Sophos**. A pak vyberte **vytvořit**.  
 3. Vyberte odkaz a *otevřete konzolu pro správu Sophos*.  
 4. Přihlaste se ke [konzole pro správu Sophos](https://central.sophos.com/) pomocí vašich přihlašovacích údajů Sophos.  
 5. Přejít na**Nastavení** **mobilní** >   > **instalační**program  > **Sophos Setup**.  
 6. Na stránce s **instalačním programem Sophos** vyberte kartu **Intune MTD** .  
-   @no__t 0Sophos nastavení @ no__t-1 
+   nastavení ![Sophos ](./media/sophos-mtd-connector-integration/sophos-setup.png) 
  
 7. Vyberte **BIND (vazba**) a pak vyberte **Ano**. Sophos se připojí k Intune a vyžaduje, abyste se přihlásili k předplatnému Intune. 
 8. V okně Microsoft Intune ověřování zadejte svoje přihlašovací údaje Intune a **přijměte** žádost o oprávnění pro *ochranu před mobilními vlákny*pro uživatele Sophos.  
-   ověřování @no__t 0Intune @ no__t-1
+   ![Intune ověřování ](./media/sophos-mtd-connector-integration/intune-authentication.png)
 
 9. Na stránce s **instalačním programem Sophos** vyberte **Save (Uložit** ) a dokončete konfiguraci pro Intune:  
-   @no__t – 0Save Sophos Setup @ no__t-1  
+   ![Save Sophos Setup ](./media/sophos-mtd-connector-integration/save-sophos-configuration.png)  
 
 1. Jakmile se objeví zpráva **Successful Integration** (integrace proběhla úspěšně), je integrace hotová.  
 1. V konzole Intune je teď k dispozici software Sophos.  

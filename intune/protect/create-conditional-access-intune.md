@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a66f16ea681ec75a4a3aa7d85a57c4faa555ab9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b775bb09c289733cdc2837984874b7c1c7e286bc
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504523"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681371"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě zařízení
 
@@ -62,7 +62,7 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
 
     - **Vybrat aplikace**: Vyberte tuto možnost, zvolte **Vybrat**a pak pomocí seznamu aplikace vyhledejte a vyberte aplikace nebo služby, které chcete chránit.
     
-      ![Vytvořit nové zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-select-apps.png)
+      ![Konfigurace přiřazení pro zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-select-apps.png)
 
 7. Vyberte **Hotovo**.
 8. V části **přiřazení**vyberte **podmínky**.
@@ -72,7 +72,7 @@ Zásady podmíněného přístupu určují aplikace nebo služby, které chcete 
     - **Klientské aplikace**: Pokud chcete určit, jestli se má zásada vztahovat na aplikace prohlížeče, mobilní aplikace a desktopové klienty, zvolte **Ano** . Můžete také vybrat **moderní ověřovací klienty** (například Outlook pro iOS nebo Outlook pro Android) a **klienty Exchange ActiveSync**.
     - **Stav zařízení**: zásady podmíněného přístupu se použijí na všechny stavy zařízení, pokud nevyberete Ano a výslovně vyloučíte stav zařízení, připojené k hybridní službě Azure AD nebo zařízení označené jako kompatibilní (nebo obojí).
     
-      ![Vytvořit nové zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+      ![Nastavení podmínek pro zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-device-platforms.png)
 
       > [!TIP]  
       > Pokud chcete chránit oba klienty pro **moderní ověřování** i **klienty Exchange ActiveSync**, vytvořte dvě samostatné zásady podmíněného přístupu, jednu pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, jediná podmínka, kterou podporuje Exchange ActiveSync, je platforma. Další podmínky, včetně Multi-Factor Authentication, se nepodporují. Pokud chcete efektivně chránit přístup k Exchangi Online z Exchange ActiveSync, vytvořte zásadu podmíněného přístupu, která určuje cloudovou aplikaci Office 365 Exchange Online a klientskou aplikaci Exchange ActiveSync se zásadami použít jenom pro vybrané podporované platformy.

@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 530439f08906495053a3585235f5f0b67c00b08b
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: ada1f6e5292684803fbea40430cdd43d61796746
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584497"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681357"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
 
@@ -80,7 +80,7 @@ Můžete upravit existující zásadu, včetně změny časových omezení:
 1. V části **aktualizace softwaru**vyberte možnost **aktualizovat zásady pro iOS** a pak vyberte zásadu, kterou chcete upravit.
 
 2. Při prohlížení **vlastností**zásad vyberte **Upravit** pro stránku zásady, kterou chcete upravit.  
-   karta ![Basics ](./media/software-updates-ios/edit-policy.png)   
+   ![Edit ](./media/software-updates-ios/edit-policy.png) policejního typu   
 
 3. Po zavedení změny vyberte **zkontrolovat + uložit**  > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.  
  

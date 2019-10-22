@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d5234a8568911de075b1c8ee5d679ae40c6c494a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e0ef623fef49fdf43efc80375716af711bdbcb3c
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502625"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681332"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>Vymáhání dodržování předpisů pro Microsoft Defender ATP pomocí podmíněného přístupu v Intune  
 
@@ -58,6 +58,9 @@ Pokud chcete používat Microsoft Defender ATP s Intune, ujistěte se, že máte
 - Prostředí Microsoft Intune se zařízeními s Windows 10 [spravovanými v Intune](../enrollment/windows-enroll.md), která jsou zároveň připojená k Azure AD
 - Ochrana [ATP v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) a přístup k Security Center programu Microsoft Defender (portál ATP)
 
+> [!NOTE]
+> Microsoft Defender ATP není u zásad ochrany aplikací Intune podporovaná.
+
 ## <a name="enable-microsoft-defender-atp-in-intune"></a>Povolení ochrany ATP v Microsoft Defenderu v Intune
 
 Prvním krokem je nastavení propojení mezi službou Intune a ATP v programu Microsoft Defender. To vyžaduje přístup správce k Security Center programu Microsoft Defender i k Intune.  
@@ -65,7 +68,7 @@ Prvním krokem je nastavení propojení mezi službou Intune a ATP v programu Mi
 ### <a name="to-enable-defender-atp"></a>Povolení ATP programu Defender  
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **dodržování předpisů zařízením**@no__t 1**Microsoft Defender ATP**a pak pod *nastavením konektoru*vyberte **otevřít Security Center Microsoft Defenderu**.
+2. Vyberte **dodržování předpisů zařízením**  > **ATP v programu Microsoft Defender**a pak pod *nastavením konektoru*vyberte **otevřít Security Center Microsoft Defenderu**.
 
     ![Výběrem otevřete Security Center programu Microsoft Defender.](./media/advanced-threat-protection/atp-device-compliance-open-microsoft-defender.png)
 

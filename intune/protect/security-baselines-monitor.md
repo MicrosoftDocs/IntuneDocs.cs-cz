@@ -16,12 +16,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1be2ba947a5b92b6982e8c868e935460c4eaa5bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 9c4d47a11f07a2099d79f5ce4ce90795a087718b
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508939"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681482"
 ---
 # <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune  
 
@@ -60,7 +60,7 @@ Pokud má například zařízení nastavení klasifikované jako nesprávně *na
 Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Například:
 - Vyberte **Konfigurace zařízení** > vyberte profil s chybovým stavem:
 
-  ![Kontrolovat stav zařízení](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![Zobrazení stavu profilu](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
 - Vyberte chybový profil. Zobrazí se seznam všech nastavení v profilu a jejich stav. Nyní se můžete posouvat a najít nastavení způsobující chybu:
 
