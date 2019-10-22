@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2018
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,19 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 193b6693a6d2da4a13731c8356d5041162fc3f2a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 32e67ac961f2831a881bc160e19cefdb75723ff0
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509059"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681255"
 ---
 # <a name="integrate-pradeo-mobile-threat-defense-with-intune"></a>Integrace ochrany před mobilními hrozbami Pradeo pomocí Intune
 
 Při integraci řešení Pradeo Mobile Threat Defense do Intune je potřeba provést následující kroky.
+
+> [!NOTE]  
+> Tento dodavatel ochrany před mobilními hrozbami není u neregistrovaných zařízení podporován.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -87,4 +90,4 @@ Postup autorizace aplikace Pradeo:
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nastavení aplikací Pradeo](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení aplikací Pradeo pro zaregistrovaná zařízení](mtd-apps-ios-app-configuration-policy-add-assign.md)

@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c29035feeb8b35921a5837699fe0f58a3516f4a1
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
-ms.translationtype: MT
+ms.openlocfilehash: df6427f1986cd55755d2375ed00cab057e48d8c3
+ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585899"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72681443"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -96,7 +96,7 @@ Uživatel a zařízení se přidají do nových skupin zabezpečení. Budou taky
 
 ## <a name="additional-information"></a>Další informace
 
-### <a name="register-device-with-windows-auto-pilot-optional"></a>Registrace zařízení pomocí automatického pilotního projektu Windows (volitelné)
+### <a name="register-device-with-windows-autopilot-optional"></a>Registrace zařízení pomocí Windows autopilotu (volitelné)
 
 Volitelně můžete zvolit použití registrovaného autopilotního zařízení. U automatického pilotního scénáře přiřadí tento průvodce profil nasazení autopilotu a profil stránky stavu registrace. Profil nasazení autopilotu se nakonfiguruje takto:
 - Režim řízený uživatelem – tj. vyžaduje, aby koncový uživatel zadal uživatelské jméno a heslo během instalace systému Windows.
