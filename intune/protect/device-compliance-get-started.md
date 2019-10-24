@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/22/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86a1822321cb606776b69a8a7328f5a62bd85630
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 967bf9937c71ff3ca7277f43fd969291eb5af6de
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585508"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749183"
 ---
 # <a name="set-rules-on-devices-to-allow-access-to-resources-in-your-organization-using-intune"></a>Nastavení pravidel na zařízeních pro povolení přístupu k prostředkům ve vaší organizaci pomocí Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Mnoho řešení správy mobilních zařízení (MDM) umožňuje chránit data organizace tím, že vyžaduje, aby uživatelé a zařízení splnili některé požadavky. V Intune se tato funkce nazývá "zásady dodržování předpisů". Zásady dodržování předpisů definují pravidla a nastavení, která musí uživatelé a zařízení splňovat, aby vyhovovaly předpisům. V kombinaci s podmíněným přístupem můžou správci zablokovat uživatele a zařízení, která pravidla nesplňují.
 
@@ -90,7 +88,7 @@ Intune také obsahuje sadu předdefinovaných nastavení zásad dodržování p�
 
 - **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako**: Tato vlastnost má dvě hodnoty:
 
-  - **Kompatibilní**(výchozí): vypnutá funkce zabezpečení
+  - **Kompatibilní** (*výchozí*): vypnutá funkce zabezpečení
   - **Nekompatibilní**: funkce zabezpečení zapnuta
 
   Pokud zařízení nemá přiřazené zásady dodržování předpisů, považuje se toto zařízení za vyhovující ve výchozím nastavení. Pokud používáte podmíněný přístup se zásadami dodržování předpisů, doporučujeme změnit výchozí nastavení na **nekompatibilní**. Pokud koncový uživatel nedodržuje předpisy, protože zásada není přiřazená, zobrazí se v [aplikaci Portál společnosti](../apps/company-portal-app.md) `No compliance policies have been assigned`.
@@ -157,8 +155,9 @@ Pokud chcete využívat nové funkce související s dodržováním předpisů z
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
-  - [Windows 10 a novější](compliance-policy-create-windows.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 a Windows Phone 8,1](compliance-policy-create-windows-8-1.md)
+  - [Windows Phone 8.1](compliance-policy-create-windows-8-1.md)
+  - [Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
+  - [Windows 10 a novější](compliance-policy-create-windows.md)
 
 - [Referenční informace pro entity zásad](../reports-ref-policy.md) obsahují informace o entitách zásad datového skladu Intune.

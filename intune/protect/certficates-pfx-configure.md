@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3f4a8c9be4e22f3bc64288a6e3d2ec708186de6
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: b0f31add65063665da5a7961e2caf9eb30a847e2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585187"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72787874"
 ---
 # <a name="configure-and-use-pkcs-certificates-with-intune"></a>Konfigurace a používání certifikátů PKCS pomocí Intune
 
@@ -223,7 +223,7 @@ K ověření zařízení pomocí sítě VPN, Wi-Fi nebo jiných prostředků pot
 Když vytváříte profil certifikátu macOS PKCS, možnosti pro formát názvu subjektu závisí na zvoleném typu certifikátu. buď na **uživatele** , nebo na **zařízení**.  
 
 > [!NOTE]  
-> K dispozici je známý problém pro použití PCKS k získání certifikátů, [které mají stejný problém jako u protokolu SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) , když název subjektu ve výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (následovaný zpětné lomítko \\):
+> K dispozici je známý problém s používáním PKCS k získání certifikátů, [které mají stejný problém jako u protokolu SCEP](certificates-profile-scep.md#avoid-certificate-signing-requests-with-escaped-special-characters) , když název subjektu ve výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (následovaný zpětné lomítko \\):
 > - \+
 > - ;
 > - ,

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a63bf187d0774b9f50351b45e53095d994720878
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496658"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785537"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -94,7 +94,7 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
         > Když se změní země nebo oblast, aktualizují se metadata aplikace a adresa URL Storu při příští synchronizaci se službou Apple pro aplikace vytvořené pomocí tohoto tokenu. Aplikace nebude aktualizována, pokud neexistuje v úložišti nové země/oblast.
 
     - **Typ účtu VPP** – zvolte jednu z možností: **Obchodní** nebo **Vzdělávání**.
-    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. Pro aplikace nasazené s **dostupným** záměrem instalace vygeneruje funkce Automatické aktualizace oznámení pro správce informující o tom, že je k dispozici nová verze aplikace. Kromě toho uživatel uvidí tuto aplikaci jako nenainstalovanou na Portálu společnosti, i když je nainstalovaná starší verze aplikace. V takovém případě může uživatel aplikaci přeinstalovat kliknutím na tlačítko **nainstalovat** na obrazovce s podrobnostmi o aplikaci v aplikaci Portál společnosti pro instalaci novější verze aplikace.
+    - **Automatické aktualizace aplikací** – zvolte **Zapnuto** nebo **Vypnuto** podle toho, jestli chcete automatické aktualizace povolit nebo zakázat. Když je tato možnost povolená, Intune zjistí aktualizace aplikací VPP v App Storu a automaticky je odešle do zařízení, jakmile se ohlásí. Automatické aktualizace aplikací Apple VPP automaticky aktualizují jenom aplikace nasazené pomocí instalačního záměru **Povinné**. U aplikací nasazených s **dostupným** záměrem instalace vygeneruje Automatická aktualizace stavovou zprávu pro správce IT, která informuje o tom, že je k dispozici nová verze aplikace. Tato stavová zpráva se zobrazí tak, že se vybere aplikace, vyberete stav instalace zařízení a zkontrolujete podrobnosti o stavu. Kromě toho uživatel uvidí tuto aplikaci jako nenainstalovanou na Portálu společnosti, i když je nainstalovaná starší verze aplikace. V takovém případě může uživatel aplikaci přeinstalovat kliknutím na tlačítko **nainstalovat** na obrazovce s podrobnostmi o aplikaci v aplikaci Portál společnosti pro instalaci novější verze aplikace.
 
         > [!NOTE]
         > Automatické aktualizace aplikací fungují pro aplikace i uživatele licencované pro iOS 11,0 a vyšší nebo macOS 10,12 a novější.
@@ -173,7 +173,7 @@ V současné době nelze aplikace VPP pro iOS z Microsoft Intune odstraňovat.
 Přístup k tokenům Apple VPP a aplikacím VPP se dá řídit nezávisle pomocí oprávnění přiřazených k vlastním rolím Správce v Intune.
 
 * Pokud chcete, aby mohla vlastní role Intune spravovat tokeny Apple VPP v **klientských aplikacích** > **tokeny Apple VPP**, přiřaďte oprávnění pro **spravované aplikace**.
-* Pokud chcete, aby vlastní role Intune spravovala aplikace zakoupené pomocí tokenů VPP iOS v **klientských aplikacích**@no__t **-1,** přiřaďte oprávnění pro **mobilní aplikace**. 
+* Pokud chcete, aby vlastní role Intune spravovala aplikace zakoupené pomocí tokenů VPP iOS v **klientských aplikacích**  > **aplikacích**, přiřaďte oprávnění pro **mobilní aplikace**. 
 
 ## <a name="additional-information"></a>Další informace
 

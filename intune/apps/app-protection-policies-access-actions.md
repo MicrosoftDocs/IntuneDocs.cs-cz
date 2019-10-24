@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f8d516c0ebb03ce8c8202e1383afb73324305ef1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499518"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785677"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -60,6 +60,7 @@ Pro iOS budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigurovat
 - Minimální verze aplikace
 - Minimální verze sady SDK
 - Modely zařízení
+- Maximální povolená úroveň hrozby pro zařízení
 
 Pokud chcete použít nastavení **Modely zařízení**, zadejte seznam identifikátorů modelů iOS a oddělte je středníkem. Identifikátor modelu iOS najdete ve sloupci Device Type (Typ zařízení) v [ dokumentaci podpory aplikace HockeyApp](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types).<br>
 Příklad zadání: *iPhone5,2;iPhone5,3*
@@ -84,6 +85,7 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 - Výrobci zařízení
 - Ověření zařízení SafetyNet
 - Kontrola ohrožení aplikací
+- Maximální povolená úroveň hrozby pro zařízení
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
 Příklad zadání: *Výrobce A;Výrobce B* 

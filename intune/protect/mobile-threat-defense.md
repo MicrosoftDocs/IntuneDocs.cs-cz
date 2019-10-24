@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/21/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,15 +18,17 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16f5be886a1c62ac6743502207e043e1582ce5e7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4abc35b625b9aa072e38c02d2fc4160faa916fb3
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504477"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72785732"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Co je integrace služby Mobile Threat Defense s Intune?
-Intune může integrovat data od dodavatele ochrany před mobilními hrozbami jako zdroj informací pro zásady dodržování předpisů a pravidla podmíněného přístupu. Tyto informace můžete použít k ochraně firemních prostředků, jako jsou Exchange a SharePoint, blokováním přístupu z ohrožených mobilních zařízení.  
+Intune může integrovat data od dodavatele ochrany před mobilními hrozbami jako zdroj informací pro zásady dodržování předpisů zařízením a pravidla podmíněného přístupu zařízení. Tyto informace můžete použít k ochraně firemních prostředků, jako jsou Exchange a SharePoint, blokováním přístupu z ohrožených mobilních zařízení.
+
+Intune může používat stejná data jako zdroj pro neregistrovaná zařízení pomocí zásad ochrany aplikací Intune. Správci tak můžou tyto informace použít k ochraně podnikových dat v rámci [aplikace Microsoft Intune Protected](~/apps/apps-supported-intune-apps.md)a vystavení bloku nebo selektivního vymazání.
 
 ## <a name="what-problem-does-this-solve"></a>Jaký problém se tím vyřeší?
 Integrace informací od dodavatele ochrany před mobilními hrozbami vám může přispět k ochraně firemních prostředků před hrozbami, které mají vliv na mobilní platformy.  
@@ -43,7 +45,7 @@ Příklad: aplikace připojená k ochrany před mobilními hrozbami oznamuje dod
 
 Pokud je to povoleno, Intune shromažďuje informace o inventáři aplikací ze zařízení jak v osobním, tak i firemním vlastnictví, a zpřístupňuje je zprostředkovatelům služby ochrany před mobilními hrozbami, jako je třeba aplikace Lookout for Work. Inventář aplikací můžete shromažďovat od uživatelů zařízení s iOSem.
 
-Tato služba vyžaduje výslovný souhlas; žádné informace inventáře aplikací se ve výchozím nastavení nesdílí. Jako správce Intune musíte v nastavení služby povolit synchronizaci aplikací pro zařízení s iOSem, než se budou informace inventáře aplikací sdílet.
+Tato služba vyžaduje výslovný souhlas; žádné informace inventáře aplikací se ve výchozím nastavení nesdílí. Správce Intune musí povolit **synchronizaci aplikací pro zařízení s iOS** v nastavení konektoru ochrany před mobilními hrozbami předtím, než se nasdílí všechny informace o inventáři aplikace.
 
 **Inventář aplikací**  
 Pokud synchronizaci aplikací pro zařízení s iOSem povolíte, inventáře ze zařízení s iOSem v osobním i firemním vlastnictví se budou odesílat zprostředkovateli služby ochrany před mobilními hrozbami. Data v inventáři aplikací zahrnují tyto údaje:
@@ -57,7 +59,7 @@ Pokud synchronizaci aplikací pro zařízení s iOSem povolíte, inventáře ze 
 - Jestli je aplikace ověřená nebo ne
 - Jestli je aplikace spravovaná nebo ne
 
-## <a name="sample-scenarios"></a>Ukázkové scénáře
+## <a name="sample-scenarios-for-enrolled-devices-using-device-compliance-policies"></a>Ukázkové scénáře zaregistrovaných zařízení pomocí zásad dodržování předpisů pro zařízení
 
 Pokud řešení Mobile Threat Defense považuje zařízení za nakažené:
 
@@ -67,14 +69,22 @@ Přístup se udělí, když je zařízení opravené:
 
 ![Obrázek znázorňující udělení přístupu službou Mobile Threat Defense](./media/mobile-threat-defense/MTD-image-2.png)
 
+## <a name="sample-scenarios-for-unenrolled-devices-using-intune-app-protection-policies"></a>Ukázkové scénáře neregistrovaných zařízení pomocí zásad ochrany aplikací Intune
+
+Pokud řešení Mobile Threat Defense považuje zařízení za nakažené:<br>
+![Image, že se zobrazuje zařízení infikované ochranou před mobilními hrozbami ](./media/mobile-threat-defense/MTD-image-3.png)
+
+Přístup se udělí, když je zařízení opravené:<br>
+![Image, který zobrazuje přístup k obraně před mobilními hrozbami udělen ](./media/mobile-threat-defense/MTD-image-4.png)
+
 > [!NOTE] 
-> Použití více dodavatelů služby Mobile Threat Defense s Intune není podporováno. Zapnutí několika nástrojů služby MTD vynutí instalaci všech aplikací MTD a zjišťování hrozeb napříč různými zařízeními.
+> Použití více dodavatelů služby Mobile Threat Defense s Intune není podporováno. Pokud je zapnuté více konektorů MTD, vynutí instalaci všech aplikací MTD a kontrolu hrozeb v různých zařízeních.
 
 ## <a name="mobile-threat-defense-partners"></a>Partneři Mobile Threat Defense
 
 Zjistěte, jak zabezpečit přístup k prostředkům společnosti na základě rizika zařízení, sítě a aplikace s:
 
-- [Lookoutem](lookout-mobile-threat-defense-connector.md)
+- [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Symantec Endpoint Protection Mobile](skycure-mobile-threat-defense-connector.md)
 - [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)

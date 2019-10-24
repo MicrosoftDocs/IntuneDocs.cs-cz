@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17d0baeeb6b193be6acf8d6087c26a66b18642c5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506666"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776913"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -42,7 +42,7 @@ Tento článek uvádí tato nastavení a popisuje, co jednotlivé nastavení dě
 
 ## <a name="airprint"></a>AirPrint
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení 
 
 - **IP adresa**: zadejte adresu IPv4 nebo IPv6 tiskárny. Pokud k identifikaci tiskáren používáte názvy hostitelů, můžete získat IP adresu pomocí příkazového testu tiskárny v aplikaci Terminal. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
 - **Cesta**: zadejte cestu k tiskárně. Cesta je obvykle `ipp/print` pro tiskárny v síti. Další podrobnosti najdete v článku [získání IP adresy a cesty](#get-the-ip-address-and-path) (v tomto článku).
@@ -85,7 +85,7 @@ Chcete-li přidat servery s modulem pro tisk, budete potřebovat IP adresu tisk�
 
 ## <a name="login-window"></a>Přihlašovací okno
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení 
 
 #### <a name="window-layout"></a>Rozložení okna
 

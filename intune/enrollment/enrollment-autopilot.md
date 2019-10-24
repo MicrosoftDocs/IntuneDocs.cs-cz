@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8029c62aeec431c19db080ec444c02565905443f
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: f2a1d964f157f33e439f659713fe8c2e02f852b3
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585306"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749421"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí automatických pilotů Windows  
 Automatický pilotní modul Windows zjednodušuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -142,18 +142,6 @@ Po vytvoření profilu nasazení Autopilotu můžete některé části profilu n
 
 > [!NOTE]
 > Změny profilu se použijí na zařízeních, která jsou přiřazena k tomuto profilu. Aktualizovaný profil se ale nepoužije na zařízení, které je už v Intune zaregistrované, dokud se zařízení neresetuje a znovu nezaregistruje.
-
-## <a name="edit-autopilot-device-attributes"></a>Upravit atributy zařízení autopilotu
-Po nahrání zařízení s autopilotem můžete upravit určité atributy zařízení.
-
-1. V Intune v Azure Portal vyberte **registrace zařízení**.
-2. V části **registrace systému Windows**v části **Windows autopilot** vyberte možnost **zařízení**.
-3. Vyberte zařízení, které chcete upravit.
-4. V podokně na pravé straně obrazovky můžete upravit název zařízení, značku skupiny nebo popisný název uživatele (Pokud jste přiřadili uživatele).
-5. Vyberte **Uložit**.
-
-> [!NOTE]
-> Názvy zařízení je možné nakonfigurovat pro všechna zařízení, ale v hybridních nasazeních připojených k Azure AD se ignorují. Název zařízení se pořád nachází z profilu připojení k doméně pro hybridní zařízení Azure AD.
 
 ## <a name="alerts-for-windows-autopilot-unassigned-devices-----163236---"></a>Výstrahy pro zařízení s nepřiřazeným autopilotem Windows autopilot  <!-- 163236 -->  
 

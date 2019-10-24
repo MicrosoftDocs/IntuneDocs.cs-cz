@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e5334505c0692a62f7f1025d4c360073bd2d8369
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 24b69b6da846d54d4f45ede47c932574e006f99f
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498422"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786013"
 ---
 # <a name="microsoft-intune-protected-apps"></a>Microsoft Intune chráněné aplikace  
 
@@ -72,6 +72,7 @@ Následující tabulky obsahují podrobné informace o podporovaných partnerech
 | **Microsoft Visio Viewer**<p><img alt="Microsoft app - Microsoft Visio Viewer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-visio-viewer.png" width="100"> | Diagramy Visia můžete na iPhonu zobrazit a pracovat s nimi zdarma. Přihlaste se pomocí svého účtu Microsoft nebo otevřete přílohu Visia z e-mailu a využijte Skvělé zobrazení diagramů Visia na jakémkoli iPhonu se systémem iOS 9,0 nebo novějším. Diagramy můžete také sdílet s kýmkoli, kdo si pak může zobrazit diagramy Visia na svém iPhonu nebo ve webovém prohlížeči, i když nemají na desktopu Windows nainstalovanou aplikaci Visio.| [odkaz na obchod iOS](https://itunes.apple.com/us/app/microsoft-visio-viewer-flowcharts-and-diagrams/id1139787983?mt=8) |  
 | **Microsoft Word**<p><img alt="Microsoft app - Microsoft Word icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-word.png" width="100"> | Vytváření dokumentů aplikace Word je lepší než kdy dřív na tabletu a na telefonu. Máte jistotu, že při úpravách nebo vytváření dokumentů budou vypadat přesně tak, jak chcete, na počítačích Mac, tabletech a telefonech. Seznamte se se známým dojmem a chováním Office, a to společně s intuitivním dotykovým ovládáním.<p><p>Tato aplikace se dá použít jako aplikace s více identitami pro Android a iOS. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.microsoft.office.word)<br>[odkaz na obchod iOS](https://itunes.apple.com/us/app/microsoft-word/id586447913?mt=8) |  
 | **Pracovní složky Microsoftu**<p><img alt="Microsoft app - Microsoft Work Folders icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-work-folders.png" width="100"> | Umožňuje jednotlivým zaměstnancům bezpečný přístup k souborům z podnikového prostředí i mimo něj pomocí pracovních složek, funkce Windows serveru. | [odkaz na obchod iOS](https://itunes.apple.com/us/app/work-folders/id950878067?mt=8) | 
+| **Microsoft tabule**<p><img alt="Microsoft app - Microsoft Whiteboard icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-whiteboard.png" width="100"> | Aplikace Microsoft tabule poskytuje volné místo inteligentního plátna, kde týmy můžou ideate, vytvářet a spolupracovat vizuálně prostřednictvím cloudu.  Vylepšuje týmovou práci tím, že umožňuje všem členům týmu upravovat a komentovat přímo na plátně v reálném čase bez ohledu na to, kde jsou. A veškerá vaše práce v cloudu zůstane v bezpečí, připravené k jejímu vyzvednutí z libovolného zařízení. | [odkaz na obchod iOS](https://apps.apple.com/us/app/microsoft-whiteboard/id1352499399) |  
 | **Službě**<p><img alt="Microsoft app - Yammer icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-yammer.png" width="100"> | Rozdělte siloy organizace a zjednodušte týmovou spolupráci pomocí Yammeru. Připojte se ke správným lidem ve vaší organizaci, sdílejte a hledejte informace napříč týmy a uspořádejte si projekty a nápady, abyste mohli dělat víc. | [Odkaz na Android Store](https://play.google.com/store/apps/details?id=com.yammer.v1)<br>[odkaz na obchod iOS](https://itunes.apple.com/us/app/yammer/id289559439?mt=8) |  
 
 ## <a name="partner-apps"></a>Partnerské aplikace 

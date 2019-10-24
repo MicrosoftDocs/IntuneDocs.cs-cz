@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/10/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb5fe19852ffff30566cb6758e156def3b7d64a5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8b2efdc04414d29fc1d8d200525cb3a4a880ec01
+ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72494025"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72776890"
 ---
 # <a name="macos-device-settings-to-allow-or-restrict-features-using-intune"></a>macOS nastavení zařízení pro povolení nebo omezení funkcí pomocí Intune
 
@@ -40,7 +40,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="general"></a>Obecné
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Vyhledávání definic**: **blok** znemožní uživateli zvýraznit slovo a pak vyhledat jeho definici na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k funkci vyhledávání definic.
 - **Diktování**: **blok** zabrání uživateli v použití hlasového vstupu k zadání textu. **Nenakonfigurováno** (výchozí) umožňuje uživateli používat vstup diktování.
@@ -82,7 +82,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="password"></a>Heslo
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Heslo**: **vyžaduje** , aby koncový uživatel zadal heslo pro přístup k zařízení. **Nenakonfigurováno** (výchozí) nevyžaduje heslo. Také nevynucuje žádná omezení, jako je například blokování jednoduchých hesel nebo nastavení minimální délky.
   - **Vyžadovaný typ hesla**: Určuje, jestli může být jenom číselné heslo nebo jestli musí být alfanumerické (obsahovat písmena a číslice).
@@ -114,7 +114,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Blokovat automatické vyplňování prohlížeče Safari**: **blok** zakáže funkci automatického vyplňování v prohlížeči Safari na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit nastavení automatického dokončování ve webovém prohlížeči.
 - **Blokovat kameru**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
@@ -127,7 +127,7 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Typ seznamu omezených aplikací**: vytvoří seznam aplikací, které uživatelé nemůžou instalovat ani používat. Možnosti:
 
@@ -145,14 +145,14 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
 ## <a name="connected-devices"></a>Připojená zařízení
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Blokovat přetažení**: **blok** zabraňuje použití přetahování na zařízení. **Nenakonfigurováno** (výchozí) umožňuje použití funkce prohodit pro výměnu obsahu s blízkými zařízeními.
 - **Blokovat Apple Watch automatické odemknutí**: **blok** zabraňuje uživatelům v odemknutí zařízení MacOS pomocí jejich Apple Watch. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odemknout zařízení MacOS pomocí jejich Apple Watch.
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Blokovat synchronizaci řetězce klíčů iCloud**: Pokud chcete zakázat synchronizaci přihlašovacích údajů uložených v řetězci klíčů do iCloud, vyberte **blok** . **Nenakonfigurováno** (výchozí) umožňuje uživatelům synchronizovat tyto přihlašovací údaje.
 - **Blokovat synchronizaci dokumentů iCloud**: **blok** zabraňuje tomu, aby iCloud Synchronization Documents and data. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci dokumentu a klíč-hodnota do iCloud prostoru úložiště.
@@ -170,7 +170,7 @@ Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment"></a>Nastavení platí pro: registrace zařízení
+### <a name="settings-apply-to-device-enrollment-and-automated-device-enrollment"></a>Nastavení platí pro: registrace zařízení a automatický zápis zařízení
 
 - **Adresa URL e-mailové domény**: **přidejte** do seznamu jednu nebo víc adres URL. Když uživatelé dostanou e-mail z jiné domény než z toho, kterou jste nakonfigurovali, označí se v aplikaci macOS mail e-mail jako nedůvěryhodný.
 

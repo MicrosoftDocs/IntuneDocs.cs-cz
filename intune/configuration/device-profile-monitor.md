@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: 9deaed87-fb4b-4689-ba88-067bc61686d7
-ms.reviewer: heenamac
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17057100f9bc762de8c679880145014cf5806432
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: a1c68421bf7c5dea0d93d45e0cbb748204d0f66b
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584847"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749396"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -80,6 +80,33 @@ V **Zařízení** > **Všechna zařízení** se zobrazují všechna nastavení, 
 3. Vyberte zásadu. Zobrazí se všechna nastavení této zásady, která se uplatňují na dané zařízení. Pokud je zařízení v **konfliktním** stavu, vyberte tento řádek. V novém okně uvidíte všechny profily a názvy profilů obsahujících nastavení, které tento konflikt způsobuje.
 
 Teď, když znáte konfliktní nastavení a zásady, které toto nastavení obsahují, by mělo být snadnější konflikt vyřešit. 
+
+## <a name="device-firmware-configuration-interface-profile-reporting"></a>Vytváření sestav profilu rozhraní pro konfiguraci firmwaru zařízení
+
+> [!WARNING]
+> Monitorování profilů DFCI se právě vytváří. I když je DFCI ve verzi Public Preview, data monitorování mohou chybět nebo být neúplná.
+
+Profily DFCI se nastavují na základě nastavení, stejně jako u jiných profilů konfigurace zařízení. V závislosti na podpoře DFCI od výrobce se nemusí některá nastavení vztahovat.
+
+Pomocí nastavení profilu DFCI můžete zobrazit následující stavy:
+
+- **Kompatibilní**: Tento stav ukazuje, že hodnota nastavení v profilu odpovídá nastavení v zařízení. K tomuto stavu může dojít v následujících scénářích:
+
+  - Profil DFCI úspěšně nakonfiguroval nastavení v profilu.
+  - Zařízení nemá funkci hardwaru řízenou nastavením a nastavení profilu je **zakázané**.
+  - Rozhraní UEFI nepovoluje, aby DFCI funkci zakázal, a nastavení profilu je **povolené**.
+  - Zařízení nemá hardware k zakázání této funkce a nastavení profilu je **povolené**.
+
+- **Nelze použít**: Tento stav ukazuje, když je **povolená**hodnota nastavení v profilu a že se nenalezne nastavení odpovídajícího zařízení. K tomuto stavu může dojít, pokud hardware zařízení tuto funkci nemá.
+
+- **Nekompatibilní**: Tento stav ukazuje, že hodnota nastavení v profilu neodpovídá nastavení v zařízení. K tomuto stavu může dojít v následujících scénářích:
+
+  - Rozhraní UEFI nepovoluje DFCI zakázat nastavení a nastavení profilu je **zakázané**.
+  - Zařízení nemá hardware k zakázání této funkce a nastavení profilu je **zakázané**.
+  - Zařízení nemá nejnovější verzi firmwaru DFCI.
+  - DFCI byl před registrací do Intune zakázán pomocí místního ovládacího prvku "výslovný nedostatek" v nabídce UEFI.
+  - Zařízení bylo zaregistrováno do Intune mimo registraci autopilotu.
+  - Zařízení není zaregistrované na autopilotu pomocí CSP Microsoftu nebo přímo zaregistrované výrobcem OEM.
 
 ## <a name="next-steps"></a>Další kroky
 
