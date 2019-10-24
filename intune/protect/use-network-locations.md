@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc1a241d327bd98db8ae50187b1e1aed5e00e71
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503556"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749440"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
@@ -69,9 +69,8 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 ## <a name="create-the-location-compliance-policy"></a>Vytvoření zásad dodržování předpisů založených na síťovém umístění
 
-Při vytváření zásad dodržování předpisů vyberte pro položku **Platforma** možnost **Android**. V seznamu **Umístění** můžete zvolit jedno nebo více síťových umístění, která jste přidali. Tato umístění jsou součástí ohraničení sítě, které vytváříte pro vaše zařízení.
+Když [vytvoříte zásady dodržování předpisů](create-compliance-policy.md), vyberte pro tuto **platformu** **Android** . V seznamu **Umístění** můžete zvolit jedno nebo více síťových umístění, která jste přidali. Tato umístění jsou součástí ohraničení sítě, které vytváříte pro vaše zařízení. 
 
-Některé pokyny najdete v tématu o [vytvoření zásad dodržování předpisů založených na síťovém umístění](compliance-policy-create-android.md#locations).
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Konfigurace akcí při nedodržení předpisů
 

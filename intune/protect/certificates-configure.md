@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 67952532a452a91e771a66dd5a5b4229c07ac802
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 65ced1dfb0fe872129b7437e8dda3dde680b5d07
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584828"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786817"
 ---
 # <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune  
 
@@ -44,9 +44,9 @@ Každý profil každého jednotlivého certifikátu, který vytvoříte, podporu
 - Pokud používáte profily certifikátů SCEP pomocí služby Microsoft Active Directory Certificate Services, nakonfigurujete server služby zápisu síťových zařízení (NDES).
 - Pokud používáte SCEP s některým z našich partnerů pro certifikační autoritu, budete ho muset [integrovat s Intune](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration).
 - Profily certifikátů SCEP a PKCS vyžadují, abyste si Microsoft Intune Certificate Connector stáhnout, nainstalovat a nakonfigurovat. 
-- Importované certifikáty PCKS vyžadují stažení, instalaci a konfiguraci konektoru certifikátů PFX pro Microsoft Intune.
+- Importované certifikáty PKCS vyžadují, abyste si stáhli, nainstalovali a nakonfigurovali konektor certifikátů PFX pro Microsoft Intune.
 - Importované certifikáty PKCS vyžadují, abyste exportovali certifikáty od certifikační autority a importovali je do Microsoft Intune. Zobrazit [projekt prostředí PowerShell pro PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell)
-- Aby zařízení používalo profily certifikátů SCEP, PCKS nebo PKCS, musí toto zařízení důvěřovat vaší kořenové certifikační autoritě. K nasazení certifikátu důvěryhodné kořenové certifikační autority do zařízení použijete *profil důvěryhodného certifikátu* .  
+- Aby zařízení používalo profily certifikátů SCEP, PKCS nebo PKCS, musí toto zařízení důvěřovat vaší kořenové certifikační autoritě. K nasazení certifikátu důvěryhodné kořenové certifikační autority do zařízení použijete *profil důvěryhodného certifikátu* .  
 
 ## <a name="supported-platforms-and-certificate-profiles"></a>Podporované platformy a profily certifikátů  
 | Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
@@ -71,7 +71,7 @@ Tento soubor. cer budete používat při [vytváření profilů důvěryhodných
 ## <a name="create-trusted-certificate-profiles"></a>Vytvoření profilů důvěryhodných certifikátů  
 Než budete moct vytvořit profil certifikátu SCEP, PKCS nebo PKCS, vytvořte profil důvěryhodného certifikátu. Nasazení profilu důvěryhodného certifikátu zajišťuje, aby každé zařízení rozpoznalo legitimitu vaší certifikační autority. Profily certifikátů SCEP přímo odkazují na profil důvěryhodného certifikátu. Profily certifikátů PKCS přímo neodkazují na profil důvěryhodného certifikátu, ale přímo odkazují na server, který je hostitelem vaší certifikační autority. Profily certifikátů PKCS importované přímo neodkazují na profil důvěryhodného certifikátu, ale můžou ho použít na zařízení. Nasazení profilu důvěryhodného certifikátu na zařízení zajistí, že se tento vztah důvěryhodnosti naváže. Když zařízení nedůvěřuje kořenové certifikační autoritě, zásada profilu certifikátu SCEP nebo PKCS se nezdaří.  
 
-Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu zařízení, kterou chcete podporovat, stejně jako u profilů certifikátů SCEP, PCKS a PKCS.  
+Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu zařízení, kterou chcete podporovat, stejně jako u profilů certifikátů SCEP, PKCS a PKCS.  
 
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu  
@@ -87,7 +87,7 @@ Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu
    - **Úložiště počítačových certifikátů – zprostředkující**
    - **Úložiště uživatelských certifikátů – zprostředkující**
 8. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
-Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zobrazení profily* s typem profilu **důvěryhodného certifikátu**.  Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PCKS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
+Profil se zobrazí v seznamu profilů v podokně *Konfigurace zařízení – zobrazení profily* s typem profilu **důvěryhodného certifikátu**.  Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PKCS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
 
 > [!NOTE]  
 > V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.  
