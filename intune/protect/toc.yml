@@ -96,13 +96,21 @@
         - name: Mobile Threat Defense
           href: mobile-threat-defense.md
           items:
-            - name: Nastavení Intune pro MDM
+            - name: MTD na nezaregistrovaných zařízeních
               items:
-                - name: Přidání aplikací MTD
+                - name: Přidání aplikací MTD do nezaregistrovaných zařízení
+                  href: mtd-add-apps-unenrolled-devices.md
+                - name: Vytvoření zásady ochrany aplikací MTD
+                  href: mtd-app-protection-policy.md
+                - name: Povolení MTD pro nezaregistrovaná zařízení
+                  href: mtd-enable-unenrolled-devices.md
+            - name: MTD na zaregistrovaných zařízeních
+              items:
+                - name: Přidání aplikací MTD do zaregistrovaných zařízení
                   href: mtd-apps-ios-app-configuration-policy-add-assign.md
                 - name: Vytvoření zásad dodržování předpisů zařízením MTD
                   href: mtd-device-compliance-policy-create.md
-                - name: Povolení MTD v Intune
+                - name: Povolení MTD pro zaregistrovaná zařízení
                   href: mtd-connector-enable.md
             - name: Aplikace MTD
               items:
