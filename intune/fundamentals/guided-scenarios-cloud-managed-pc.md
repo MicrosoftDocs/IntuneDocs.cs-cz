@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: df6427f1986cd55755d2375ed00cab057e48d8c3
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
-ms.translationtype: HT
+ms.openlocfilehash: b3372fc83e467b08b479490b3707f2be03409156
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681443"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749333"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -66,7 +66,7 @@ Pokud chcete do této konfigurace přidat další uživatele nebo zařízení, s
 Ujistěte se, že na zařízení běží Windows 10 verze 1903 nebo novější.  Primární uživatel bude muset zařízení nastavit, když ho dostanou. Pro uživatele jsou k dispozici dvě možnosti instalace. 
 
 ### <a name="option-a--windows-autopilot"></a>Možnost A – Windows autopilot
-Windows autopiloter automatizuje konfiguraci nových zařízení, aby je uživatelé mohli nastavovat mimo jiné bez pomoci. Pokud je vaše zařízení už zaregistrované u Windows autopilotu, vyberte ho podle jeho sériového čísla. Další informace o použití automatického pilotního nasazení systému Windows najdete v tématu [registrace zařízení pomocí automatického pilotního projektu Windows (volitelné)](~/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-auto-pilot-optional).
+Windows autopiloter automatizuje konfiguraci nových zařízení, aby je uživatelé mohli nastavovat mimo jiné bez pomoci. Pokud je vaše zařízení už zaregistrované u Windows autopilotu, vyberte ho podle jeho sériového čísla. Další informace o použití automatického pilotního nasazení systému Windows najdete v tématu [registrace zařízení pomocí automatického pilotního projektu Windows (volitelné)](~/fundamentals/guided-scenarios-cloud-managed-pc.md#register-device-with-windows-autopilot-optional).
 
 ### <a name="option-b--manual-device-enrollment"></a>Možnost B – Ruční registrace zařízení
 Uživatelé ručně nastaví a zaregistrují nová zařízení ve správě mobilních zařízení. Po dokončení tohoto scénáře resetujte zařízení a poskytněte primárnímu uživateli pokyny k registraci pro zařízení s Windows. Další informace najdete v tématu [připojení zařízení s Windows 10 k Azure AD během prvního spuštění prostředí](https://docs.microsoft.com/azure/active-directory/devices/azuread-joined-devices-frx#joining-a-device).

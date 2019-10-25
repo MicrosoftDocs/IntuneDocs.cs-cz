@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/14/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: karthib
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c578cb430bd6c62c274322ea1e46b5d37d2e143
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
+ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584975"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72749344"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -49,7 +49,7 @@ Tyto šablony poskytují správcům zjednodušené zobrazení nastavení, které
 
 Tato funkce podporuje:
 
-- Windows 10 a novější
+- Windows 10 1809 a novější v podporovaném firmwaru.
 
 ## <a name="certificates"></a>Certifikáty
 
@@ -95,6 +95,14 @@ Tato funkce podporuje:
 
 - iOS/iPadOS
 - macOS
+
+## <a name="device-firmware-configuration-interface"></a>Rozhraní pro konfiguraci firmwaru zařízení
+
+[Rozhraní DFCI (Device firmware Configuration Interface](device-firmware-configuration-interface-windows.md) ) umožňuje správcům povolit nebo zakázat nastavení rozhraní UEFI (BIOS) pomocí Intune. Pomocí těchto nastavení můžete zvýšit zabezpečení na úrovni firmwaru, což je obvykle odolnější vůči škodlivým útokům.
+
+Tato funkce podporuje:
+
+- Windows 10 a novější
 
 ## <a name="device-restrictions"></a>Omezení zařízení
 

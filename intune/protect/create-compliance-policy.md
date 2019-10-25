@@ -2,10 +2,10 @@
 title: Vytvoření zásad dodržování předpisů pro zařízení v Microsoft Intune – Azure | Microsoft Docs
 description: Vytvoření zásad dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, zpracování zařízení bez přiřazené zásady a rozdíly v dodržování předpisů na portálu Azure Portal a Classic v nástroji Microsoft Intune
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,16 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 15ac42f34d440c32026d39aca577bd8e3b1f62ea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
+ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504538"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72786080"
 ---
 # <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune, která umožňuje chránit prostředky organizace. V Intune můžete vytvořit pravidla a nastavení, která musí zařízení splňovat, aby se považovala za vyhovující, jako je třeba minimální verze operačního systému. Pokud zařízení nedodržuje předpisy, můžete zablokovat přístup k datům a prostředkům pomocí [podmíněného přístupu](conditional-access.md).
 
@@ -49,10 +47,10 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 - Použití podporované platformy:
 
-  - Android
+  - Správce zařízení s Androidem
   - Android Enterprise
   - iOS
-  - macOS (preview)
+  - macOS
   - Windows 10
   - Windows 8.1
   - Wvdows Phone 8.1
@@ -73,26 +71,40 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
 
 3. Vyberte **Zásady** > **Vytvořit zásadu**. Zadejte následující vlastnosti:
 
-    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Například dobrým názvem zásady je **zařízení s jailbreakem pro iOS označena jako nevyhovující předpisům**.
-    - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte platformu zařízení. Možnosti:  
+   - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Například dobrým názvem zásady je **zařízení s jailbreakem pro iOS označena jako nevyhovující předpisům**.  
 
-       - **Androidemem**
-       - **Android Enterprise**
-       - **iOS**
-       - **macOS**
-       - **Windows Phone 8.1**
-       - **Windows 8.1 a novější**
-       - **Windows 10 a novější**
+   - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.  
 
-    - **Nastavení**: Následující seznam článků popisuje nastavení pro jednotlivé platformy:
+   - **Platforma**: vyberte platformu zařízení. Možnosti:
+     - **Správce zařízení s Androidem**
+     - **Android Enterprise**
+     - **iOS/iPadOS**
+     - **macOS**
+     - **Windows Phone 8.1**
+     - **Windows 8.1 a novější**
+     - **Windows 10 a novější**
 
-        - [Androidemem](compliance-policy-create-android.md)
-        - [Android Enterprise](compliance-policy-create-android-for-work.md)
-        - [iOS](compliance-policy-create-ios.md)
-        - [macOS](compliance-policy-create-mac-os.md)
-        - [Windows Phone 8,1, Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
-        - [Windows 10 a novější](compliance-policy-create-windows.md)
+     Pro *Android Enterprise*musíte vybrat **typ profilu**:
+     - **Vlastník zařízení**
+     - **Pracovní profil**
+
+   - **Nastavení**: Následující seznam článků popisuje nastavení pro jednotlivé platformy:
+     - [Správce zařízení s Androidem](compliance-policy-create-android.md)
+     - [Android Enterprise](compliance-policy-create-android-for-work.md)
+     - [iOS/iPadOS](compliance-policy-create-ios.md)
+     - [macOS](compliance-policy-create-mac-os.md)
+     - [Windows Phone 8,1, Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
+     - [Windows 10 a novější](compliance-policy-create-windows.md)  
+
+   - **Umístění** *(Správce zařízení s Androidem)* : v zásadách můžete vynutit dodržování předpisů podle umístění zařízení. Vyberte si z existujících umístění. Žádné umístění ještě nemáte? V Intune jsou k dispozici pokyny k [použití umístění (síťová síť)](use-network-locations.md) .  
+
+   - **Akce při nedodržení předpisů**: u zařízení, která nevyhovují zásadám dodržování předpisů, můžete přidat posloupnost akcí, které se mají použít automaticky. Pokud je zařízení označené jako nevyhovující, můžete plán třeba další den změnit. Můžete také nakonfigurovat druhou akci, která uživateli nevyhovujícího zařízení pošle e-mail.
+    
+     Další informace, včetně návodu na vytvoření e-mailu s oznámením pro uživatele, najdete v článku o [přidání akcí pro nevyhovující zařízení](actions-for-noncompliance.md).
+
+     Pokud například používáte funkci Umístění, přidáte do zásady dodržování předpisů nějaké umístění a vyberete aspoň jedno umístění, použije se pro nevyhovující zařízení výchozí akce. Pokud zařízení není připojené k vybraným umístěním, považuje se hned za nevyhovující. Uživatelům můžete dát určitou lhůtu, třeba jeden den.
+
+   - **Scope (značky)** : značky oboru jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako je například prodej, HR, všichni zaměstnanci USA-NC atd. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. [Použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md) je dobrým prostředkem.
 
 4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Zásada se vytvoří a zobrazí se v seznamu. Potom tyto zásady přiřaďte do skupin.
 
@@ -110,22 +122,23 @@ Uživatelé nebo zařízení, na které vaše zásada cílí, se vyhodnotí pro 
 
 Když přiřadíte zásady, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
 
-1. V Intune vyberte**zásady**@no__t **dodržování předpisů zařízením**– 1.
+1. V Intune vyberte **zásady** > **dodržování předpisů zařízením** .
 2. Vyberte zásadu > **přiřazení** > **vyhodnotit**. Zobrazí se zpráva o tom, kolik uživatelů cílí na tyto zásady.
 
 Pokud je tlačítko **vyhodnotit** šedé, ujistěte se, že je zásada přiřazena jedné nebo více skupinám.
 
-## <a name="actions-for-noncompliance"></a>Akce při nedodržení předpisů
+<!-- ## Actions for noncompliance
 
-U zařízení, která nevyhovují zásadám dodržování předpisů, můžete přidat posloupnost akcí, které se mají použít automaticky. Pokud je zařízení označené jako nevyhovující, můžete plán třeba další den změnit. Můžete také nakonfigurovat druhou akci, která uživateli nevyhovujícího zařízení pošle e-mail.
+For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. You can change the schedule when the device is marked non-compliant, such as after one day. You can also configure a second action that sends an email to the user when the device isn't compliant.
 
-Další informace, včetně návodu na vytvoření e-mailu s oznámením pro uživatele, najdete v článku o [přidání akcí pro nevyhovující zařízení](actions-for-noncompliance.md).
+[Add actions for noncompliant devices](actions-for-noncompliance.md) provides more information, including creating a notification email to your users.
 
-Pokud například používáte funkci Umístění, přidáte do zásady dodržování předpisů nějaké umístění a vyberete aspoň jedno umístění, použije se pro nevyhovující zařízení výchozí akce. Pokud zařízení není připojené k vybraným umístěním, považuje se hned za nevyhovující. Uživatelům můžete dát určitou lhůtu, třeba jeden den.
+For example, you're using the Locations feature, and add a location in a compliance policy. The default action for noncompliance applies when you select at least one location. If the device isn't connected to the selected locations, it's immediately considered not compliant. You can give your users a grace period, such as one day.
 
-## <a name="scope-tags"></a>Značky oboru
+## Scope tags
 
-Značky oboru jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako je například prodej, HR, všichni zaměstnanci US-NC a tak dále. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. [Použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md) je dobrým prostředkem.
+Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
+-->
 
 ## <a name="refresh-cycle-times"></a>Aktualizovat časy cyklů
 
