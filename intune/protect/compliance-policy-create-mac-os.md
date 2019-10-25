@@ -2,30 +2,28 @@
 title: nastavení dodržování předpisů pro zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
 description: Podívejte se na seznam všech nastavení, která můžete použít při nastavování dodržování předpisů pro zařízení macOS v Microsoft Intune. Vyžadovat ochranu před integritou systému od společnosti Apple, nastavit omezení hesla, vyžadovat bránu firewall, dovolit server gatekeeper a další.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
-ms.reviewer: muhosabe
+ms.reviewer: samyada
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cada774003f73f487f87ed8051115dfcaaae6a20
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 518f0b825b71a9773ed66dd480b329e998f919c4
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502490"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813501"
 ---
 # <a name="macos-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>nastavení macOS a označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat na zařízeních macOS v Intune. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete nastavit minimální nebo maximální verzi operačního systému, nastavit vypršení platnosti hesla a další.
 
@@ -41,45 +39,78 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="device-health"></a>Stav zařízení
 
-- **Vyžadování ochrany integrity systému**: **vyžaduje** , aby zařízení MacOS měla [ochranu integrity systému](https://support.apple.com/HT204899) (otevře web společnosti Apple) povoleno. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), toto nastavení se nevyhodnotí pro dodržování předpisů nebo nedodržování předpisů.
+- **Vyžadovat ochranu integrity systému**:  
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
+  - **Vyžadovat** – vyžaduje, aby zařízení MacOS měla [ochranu integrity systému](https://support.apple.com/HT204899) (otevře web společnosti Apple) povolenou.  
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální verze OS**: Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, označí se jako nekompatibilní. Zobrazí se odkaz s informacemi, jak upgradovat. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
-- **Maximální verze OS**: Pokud zařízení používá verzi operačního systému, která je novější než verze specifikovaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Dokud nedojde ke změně pravidla, které tuto verzi operačního systému povolí, nebude mít toto zařízení přístup k prostředkům společnosti.
-- **Minimální verze buildu OS**: když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat minimální povolené číslo sestavení v zařízení.
-- **Maximální verze buildu OS**: když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat maximální povolené číslo sestavení v zařízení.
+- **Minimální požadovaný operační systém**:  
+  Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel zařízení si může upgradovat svoje zařízení. Pak mají přístup k prostředkům organizace.
+
+- **Maximální povolená verze operačního systému**:  
+  Pokud zařízení používá verzi operačního systému, která je novější než verze v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
+
+- **Minimální verze buildu operačního systému**:  
+  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat minimální povolené číslo sestavení v zařízení.
+
+- **Maximální verze buildu operačního systému**:  
+  Když Apple publikuje aktualizace zabezpečení, číslo sestavení se obvykle aktualizuje, nikoli verze operačního systému. Pomocí této funkce můžete zadat maximální povolené číslo sestavení v zařízení.
 
 ## <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
 ### <a name="password"></a>Heslo
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
-- **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
-- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**:  
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Vyžadovat** Uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
+
+- **Jednoduchá hesla**:  
+  - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou vytvářet hesla, která jsou jednoduchá jako **1234** nebo **1111**.
+  - **Blok** – uživatelé nemůžou vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.
+
+- **Minimální délka hesla**:  
+  Zadejte minimální počet číslic nebo znaků, které musí heslo obsahovat.
+
 - **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-- **Počet nealfanumerických znaků v hesle**: zadejte minimální počet speciálních znaků (například `&`, `#`, `%`, `!` atd.), které musí být v hesle.
 
-    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
+- **Počet nealfanumerických znaků v hesle**:  
+  Zadejte minimální počet speciálních znaků, například `&`, `#`, `%`, `!`a tak dále, které musí být v hesle.
 
-- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
-- **Konec platnosti hesla (dny)** : Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Počet předchozích hesel, která se nedají použít znovu**: zadejte počet dříve použitých hesel, která se nedají použít.
+  Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo.
 
-    > [!IMPORTANT]
-    > Když se požadavek na heslo na zařízení s macOS změní, projeví se to až při příští změně hesla uživatelem. Pokud třeba nastavíte omezení délky hesla na osm číslic a zařízení s macOS má aktuálně šestičíselné heslo, bude zařízení dál splňovat předpisy až do doby, kdy uživatel heslo na zařízení aktualizuje.
+- **Maximální počet minut nečinnosti před vyžadováním hesla**:  
+  Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
+
+- **Vypršení platnosti hesla (dny)** :  
+  Vyberte počet dní, po jejichž uplynutí vyprší platnost hesla, a musí vytvořit nové.
+
+- **Počet předchozích hesel, která zabrání opakovanému použití**:  
+  Zadejte počet dříve použitých hesel, která se nedají použít.
+> [!IMPORTANT]
+> Když se požadavek na heslo na zařízení s macOS změní, projeví se to až při příští změně hesla uživatelem. Pokud třeba nastavíte omezení délky hesla na osm číslic a zařízení s macOS má aktuálně šestičíselné heslo, bude zařízení dál splňovat předpisy až do doby, kdy uživatel heslo na zařízení aktualizuje.
 
 ### <a name="encryption"></a>Encryption
 
-- **Šifrování úložiště dat na zařízení**: Vyberte **Vyžadovat** a zašifrujte úložiště dat na vašich zařízeních.
+- **Šifrování datového úložiště na zařízení**:  
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Vyžadovat** *– použít k* šifrování úložiště dat na vašich zařízeních.
 
 ### <a name="device-security"></a>Zabezpečení zařízení
 
 Firewall chrání zařízení před neoprávněným přístupem do sítě. Pomocí firewallu můžete ovládat připojení pro jednotlivé aplikace. 
 
-- **Firewall**: vyberte **Povolit** , pokud chcete chránit zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. Nastavení **Nenakonfigurováno** (výchozí) ponechá firewall vypnutý a síťový provoz bude povolený (neblokovaný).
-- **Příchozí připojení**: **blokuje** všechna příchozí síťová připojení s výjimkou připojení požadovaných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Toto nastavení také blokuje všechny služby sdílení, včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby v iTunes a dalších. Nastavení **Nenakonfigurováno** (výchozí) povoluje příchozí připojení a služby sdílení.
-- **Režim utajení**: **umožňuje povolit** neviditelný režim a zabránit tak tomu, aby zařízení reagovala na požadavky na zjišťování, které je možné provést v mých škodlivých uživatelích. Při aktivaci této možnosti bude zařízení oprávněným aplikacím dále odpovídat na příchozí požadavky. Nastavení **Nenakonfigurováno** (výchozí) ponechá neviditelný režim vypnutý.
+- **Brána firewall**:  
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení vypne bránu firewall a síťový provoz je povolen (není zablokovaný).
+  - **Povolit** – pomocí *Povolit* můžete chránit zařízení před neoprávněným přístupem. Aktivace této funkce vám umožní zpracovávat příchozí internetová připojení a používat neviditelný režim. 
+
+- **Příchozí připojení**:  
+  - **Nenakonfigurováno** (*výchozí*) – povolí příchozí připojení a sdílení služeb.
+  - **Blok** – zablokuje všechna příchozí síťová připojení s výjimkou připojení požadovaných pro základní internetové služby, jako jsou DHCP, Bonjour a IPSec. Toto nastavení také blokuje všechny služby sdílení, včetně sdílení obrazovky, vzdáleného přístupu, sdílení hudby v iTunes a dalších.  
+
+- **Neviditelný režim**:  
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení ponechá neviditelný režim vypnutý.
+  - **Povolit** – zapnout režim utajení, který zabrání zařízením v reakci na požadavky na zjišťování, které se dají uživatelům se zlými úmysly udělat. Při aktivaci této možnosti bude zařízení oprávněným aplikacím dále odpovídat na příchozí požadavky.  
 
 ### <a name="gatekeeper"></a>Gatekeeper
 
@@ -87,12 +118,11 @@ Další informace najdete v tématu [gatekeeper na MacOS](https://support.apple.
 
 **Povolit aplikace stažené z těchto míst**: Povolí instalaci podporovaných aplikací na vaše zařízení z různých umístění. Možnosti umístění:
 
-- **Nenakonfigurováno**: Toto je výchozí možnost. Možnost serveru gatekeeper nemá žádný vliv na dodržování předpisů nebo nedodržování předpisů. 
-- **Mac App Store**: Povolí instalaci aplikací pouze z Mac App Storu. Aplikace jiných výrobců ani identifikovaných vývojářů nelze nainstalovat. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo Mac App Store, považuje se zařízení za nevyhovující předpisům.
-- **Mac App Store a identifikovaní vývojáři**: Povolí instalaci aplikací z Mac App Storu a od identifikovaných vývojářů. macOS zkontroluje identitu vývojářů a provede několik dalších kontrol, aby ověřil integritu aplikace. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo tyto možnosti, považuje se zařízení za nevyhovující předpisům.
-- **Kdekoli**: Aplikace je možné instalovat odkudkoli a od kteréhokoli vývojáře. Jedná se o nejméně bezpečnou možnost.
-
-Vyberte **OK** > **Vytvořit** a změny uložte.
+- **Nenakonfigurováno** (*výchozí*) – možnost serveru gatekeeper nemá žádný vliv na dodržování předpisů nebo nedodržování předpisů.  
+- **Mac App Store** – nainstalujte jenom aplikace pro Mac App Store. Aplikace jiných výrobců ani identifikovaných vývojářů nelze nainstalovat. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo Mac App Store, považuje se zařízení za nevyhovující předpisům.
+- **Mac App Store a identifikování vývojáři** – nainstalujte aplikace pro Mac App Store a od identifikovaných vývojářů. macOS zkontroluje identitu vývojářů a provede několik dalších kontrol, aby ověřil integritu aplikace. Pokud uživatel vybere Gatekeeper pro instalaci aplikací z umístění mimo tyto možnosti, považuje se zařízení za nevyhovující předpisům.
+- **Odkudkoli** – aplikace můžete instalovat odkudkoli a jakýmkoli vývojářem. Jedná se o nejméně bezpečnou možnost.
+ 
 
 ## <a name="next-steps"></a>Další kroky
 

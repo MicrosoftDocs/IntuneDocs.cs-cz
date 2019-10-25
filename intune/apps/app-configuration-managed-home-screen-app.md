@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/24/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d47cee2c26960775d268b317845c118e99b85fe9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: e97e88ad78e1b914543b7fa283f47863dce185fc
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507593"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813473"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurace aplikace pro domovskou obrazovku spravované Microsoftem pro Android Enterprise
 
@@ -60,25 +60,15 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 | Konfigurační klíč | Typ hodnoty | Výchozí hodnota | Description |
 |---------------------------------------------------------------------------------------------------------------------------|-------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Nastavit velikost mřížky | řetězec | Automaticky | Umožňuje nastavit velikost mřížky pro aplikace, které mají být umístěny na spravované domovské obrazovce. Počet řádků a sloupců aplikace můžete nastavit tak, aby se definovala velikost mřížky v následujícím formátu `columns;rows`. Pokud definujete velikost mřížky, maximální počet aplikací, které se zobrazí na řádku na domovské obrazovce, bude počet řádků, které jste nastavili, a maximální počet aplikací, které se zobrazí ve sloupci na domovské obrazovce, bude počet sloupců, které jste nastavili. |
-| Povolit hlavičku obrazovky | Logick | PODMÍNKA | Umožňuje horní hlavičku pro různá zobrazení, která nabízí spravovaná Domovská obrazovka, jako jsou informační kanály nebo karty informačních kanálů. Pokud povolíte toto nastavení, zobrazí se uživatelům zařízení záhlaví. |
-| Povolit stavový řádek zařízení | Logick | PODMÍNKA | Povolí stavový řádek na domovské obrazovce (horní pruh, který zobrazuje aktuální připojení, jako je Wi-Fi, atd.). Pokud povolíte tento konfigurační klíč, bude koncový uživatel moci zobrazit ikony zobrazené na stavových řádcích, které reprezentují připojení a aktivní aplikace. |
 | Povolit oznámení | Logick | CHYBNÉ | Povolí oznamovací označení pro ikony aplikací, které zobrazují počet nových oznámení v aplikaci. Pokud povolíte toto nastavení, koncovým uživatelům se zobrazí oznámení o oznámeních v aplikacích, které mají nepřečtená oznámení. Pokud tento konfigurační klíč zachováte, koncovému uživateli se nezobrazí žádná oznámení, která by mohla obsahovat nepřečtená oznámení. |
 | Uzamknout domovskou obrazovku | Logick | PODMÍNKA | Odebere koncovému uživateli možnost pohybovat se přes ikony aplikace na domovské obrazovce. Pokud povolíte tento konfigurační klíč, ikony aplikace na domovské obrazovce budou uzamčené a koncový uživatel nebude moct přetahovat do různých pozic mřížky na domovské obrazovce. Pokud je `false`, koncoví uživatelé budou moci přejít na ikonu aplikace a Weblink na spravované domovské obrazovce.  |
 | Nastavit papír na zeď zařízení | řetězec | Výchozí | Umožňuje nastavit tapetu podle vlastního výběru zadáním adresy URL obrázku, který chcete nastavit jako tapetu. |
 | Nastavit velikost ikony aplikace | celé číslo | 2 | Umožňuje nastavit velikost ikon pro aplikace zobrazené na domovské obrazovce. V této konfiguraci můžete zvolit následující hodnoty pro různé velikosti – 0 (nejmenší), 1 (malé), 2 (Regular), 3 (Velká) a 4 (největší). |
 | Ikona nastavení složky aplikace | celé číslo | 0 | Umožňuje definovat vzhled složek aplikace na domovské obrazovce. Můžete zvolit vzhled z následujících hodnot: tmavě čtvercová (0);   Tmavý kroužek (1); Světlá čtvercová (2); Světlý kroužek (3). |
-| Povolit gesta | Logick | CHYBNÉ | Umožněte koncovému uživateli přiřadit akce různým gestům, jako je například potažení nahoru a potáhnutí dolů. Pokud tento konfigurační klíč zakážete, budou koncoví uživatelé moct potáhnutím vpravo jenom v případě, že je k dispozici druhá stránka a zpátky na domovskou stránku. |
-| Povolit svislé posouvání | Logick | CHYBNÉ | Povolí svislé posouvání na spravované domovské obrazovce. Pokud povolíte tento konfigurační klíč, bude koncový uživatel moci přejít na jiné stránky svisle, nikoli přetáhnutím vodorovně. |
-| Nastavit motiv domovské obrazovky | řetězec | Theme. Light. Blue | Umožňuje vybrat motiv pro domovskou obrazovku z předdefinované sady motivů s různými barvami. Můžete zvolit následující motivy zadáním hodnoty řetězce v následujícím formátu.   Theme. Light. zelená Kde světlá může být nahrazena tmavě pro tmavý motiv a zelenou, může být nahrazena modrou, žlutou, růžovou, červenou, oranžovou a fialovou. |
-| Povolit Dock | Logick | CHYBNÉ | Povolí oddíl Dock aplikace v dolní části domovské obrazovky se zobrazenými trvalými aplikacemi a vstupním bodem pro všechny nainstalované aplikace. Pokud povolíte tento konfigurační klíč, bude koncový uživatel moci získat přístup k aplikacím v Docku a získat přístup k části všechny aplikace, a přejít tak na seznam všech nainstalovaných aplikací na zařízeních, ať už jsou v seznamu povolených. |
 | Nastavení orientace obrazovky | celé číslo | 1 | Umožňuje nastavit orientaci obrazovky domů na režim na výšku, v režimu na šířku nebo povolit automatické otočení. Orientaci můžete nastavit tak, že zadáte hodnoty 1 (pro režim na výšku), 2 (pro režim na šířku), 3 (pro automatické otáčení). |
-| Povolit informační kanál na domovské obrazovce | Logick | CHYBNÉ | Povolí informační kanál domovské obrazovky, který se může zobrazit přetáhnutím vlevo od domovské obrazovky. Tento informační kanál zobrazuje jiný typ obsahu, jako jsou novinky, kalendář, často uživatelské aplikace a karta Cortany hlas Assistant atd. Pokud tuto možnost povolíte, bude koncový uživatel moci přejít na informační kanál přetáhnutím doleva na domovské obrazovce. |
-| Povolit režim přehledu | Logick | CHYBNÉ | Povolí koncovým uživatelům přidávat nebo odebírat různé stránky na domovské obrazovce, ke kterým má přímý odkaz přímo z výchozí obrazovky. Pokud tuto možnost povolíte, bude moct koncový uživatel přidat stránku napravo od výchozí stránky na domovské obrazovce, bude moct taky změnit výchozí stránku a bude mít přístup k nastavení na spravované domovské obrazovce. |
 | Povolit telemetrii zařízení | Logick | CHYBNÉ | Povolí veškerou telemetrii, která je zachycena pro spravovanou domovskou obrazovku. Pokud tuto možnost povolíte, Microsoft bude moct zachytit telemetrii využití zařízení, například počet, kolikrát se na tomto zařízení spustí konkrétní aplikace. |
 | Nastavit povolené aplikace v seznamu | bundleArray | CHYBNÉ | Umožňuje definovat sadu aplikací, které jsou viditelné na domovské obrazovce z aplikací nainstalovaných v zařízení. Aplikace můžete definovat tak, že zadáte název balíčku aplikace, který chcete zviditelnit, například com. Microsoft. emmx by měl přístup k nastavení na domovské obrazovce. Aplikace, které povolíte – seznam v této části, by už měly být na zařízení nainstalované, aby je bylo možné zobrazit na domovské obrazovce. |
 | Nastavit připnuté webové odkazy | bundleArray | CHYBNÉ | Umožňuje připnout weby jako ikony snadného spuštění na domovské obrazovce. Pomocí této konfigurace můžete definovat adresu URL a přidat ji na domovskou obrazovku, aby se koncový uživatel spouštěl v prohlížeči jediným klepnutím. |
-| Povolit panel hledání | Logick | CHYBNÉ | Povolí panel hledání na domovské obrazovce. Pokud tuto možnost povolíte, uživatelé zařízení uvidí panel hledání na domovské obrazovce, kde by mohli zadat cokoli, co chtějí hledat na webu. |
-| Zakázat aplikaci nastavení | Logick | CHYBNÉ | Zakáže stránku nastavení pro spravovanou domovskou obrazovku. Pokud tuto možnost zakážete, nebude se koncový uživatel zařízení moci dostat do nastavení spravované domovské obrazovky. |
 | Povolit šetřič obrazovky | Logick | CHYBNÉ | Pro povolení režimu spořiče obrazovky, nebo ne. Pokud je nastavená hodnota true, můžete nakonfigurovat **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**a **media_detect_screen_saver**. |
 | Obrázek spořiče obrazovky | řetězec |   | Nastavte adresu URL obrázku spořiče obrazovky. Pokud není nastavená žádná adresa URL, zařízení zobrazí výchozí obrázek spořiče obrazovky, když se aktivuje šetřič obrazovky. Výchozí obrázek zobrazuje ikonu spravované aplikace na domovské obrazovce.  |
 | Spořič obrazovky – zobrazit čas | celé číslo | 0 | Poskytuje možnost nastavit dobu v sekundách, po kterou zařízení zobrazí spořič obrazovky v režimu spořiče obrazovky. Pokud je nastavené na 0, spořič obrazovky se zobrazí v režimu spořiče obrazovky, dokud se zařízení neaktivuje.  |
@@ -88,7 +78,7 @@ Následující tabulka uvádí seznam dostupných konfiguračních klíčů, hod
 | Typ virtuálního tlačítka Domů | řetězec | swipe_up | Použijte **swipe_up** pro přístup k tlačítku Domů pomocí gesta pro potažení nahoru. Pomocí **typu float** získáte přístup k rychlému a trvalému domovskému tlačítku, které lze přesunout kolem obrazovky koncovým uživatelem. |
 | Indikátor síly baterie a signálu | Logick | True (Pravda)  | Zapnutím tohoto nastavení `True` se zobrazí indikátor indikátoru síly baterie a signálu. |
 | Ukončit uzamčení hesla režimu úlohy | řetězec |   | Zadejte kód 4-6, který se má použít k dočasnému vyřazení režimu uzamčení úlohy pro řešení potíží. |
-| Zobrazit nastavení Wi-Fi | Logick | CHYBNÉ | Zapnutím tohoto nastavení @no__t – 0 umožní koncovému uživateli zapnout nebo vypnout Wi-Fi nebo se připojit k jiným sítím Wi-Fi.  |
+| Zobrazit nastavení Wi-Fi | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožníte koncovému uživateli zapnout nebo vypnout Wi-Fi nebo se připojit k jiným sítím Wi-Fi.  |
 | Zobrazit nastavení Bluetooth | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` umožní koncovým uživatelům zapnout nebo vypnout Bluetooth a připojit se k různým zařízením podporujícím technologii Bluetooth.   |
 | Aplikace ve složce jsou seřazené podle názvu | Logick | PODMÍNKA | Zapnutím tohoto nastavení `False` umožníte zobrazení položek ve složce v pořadí, ve kterém jsou určeny. V opačném případě se zobrazí ve složce abecedně.   |
 | Pořadí aplikací povoleno | Logick | CHYBNÉ | Zapnutím tohoto nastavení `True` povolíte možnost nastavit pořadí aplikací, weblinks a složek na spravované domovské obrazovce. Po povolení nastavte řazení pomocí **app_order**. koncovému uživateli zapněte nebo vypněte Bluetooth a připojte se k různým zařízením podporujícím Bluetooth.   |
@@ -116,18 +106,6 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
         {
-            "key": "keep_page_header",
-            "valueBool": true
-        },
-        {
-            "key": "keep_status_bar",
-            "valueBool": true
-        },
-        {
-            "key": "show_notification_badge",
-            "valueBool": false
-        },
-        {
             "key": "lock_home_screen",
             "valueBool": true
         },
@@ -144,32 +122,8 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
             "valueInteger": 0
         },
         {
-            "key": "gesture_on",
-            "valueBool": false
-        },
-        {
-            "key": "vertical_scrolling",
-            "valueBool": false
-        },
-        {
-            "key": "theme",
-            "valueString": "Theme.Light.Blue"
-        },
-        {
-            "key": "dock_enable",
-            "valueBool": false
-        },
-        {
             "key": "screen_orientation",
             "valueInteger": 1
-        },
-        {
-            "key": "feed_enable",
-            "valueBool": false
-        },
-        {
-            "key": "allow_overview_mode",
-            "valueBool": false
         },
         {
             "key": "enable_telemetry",
@@ -204,14 +158,6 @@ Následující příklad obsahuje ukázkový skript JSON se všemi dostupnými k
                     ]
                 }
             ]
-        },
-        {
-            "key": "search_bar",
-            "valueBool": false
-        },
-        {
-            "key": "hide_settings",
-            "valueBool": false
         },
         {
             "key": "show_virtual_home",

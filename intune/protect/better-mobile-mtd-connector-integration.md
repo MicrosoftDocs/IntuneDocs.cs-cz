@@ -15,12 +15,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9faf34a9b417962e412eaa730cf91cd821ff7eb6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0528ec962165f358b35afce98f58c8b9b4efe93c
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509630"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810320"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>Integrace Better Mobile s Intune
 
@@ -28,8 +28,7 @@ Při integraci řešení Better Mobile Threat Defense do Intune je potřeba prov
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-> [!NOTE]
-> Následující kroky je potřeba provést v [konzole pro správu Better Mobile](https://aad.bmobi.net).
+Následující kroky se dokončí v [lepší konzole pro správu mobilních](https://aad.bmobi.net) zařízení a umožní připojení k lepší službě Mobile Service pro zařízení zaregistrovaná v Intune (pomocí dodržování předpisů zařízením) a neregistrovaná zařízení (pomocí zásad ochrany aplikací).
 
 Před zahájením procesu integrace řešení Better Mobile a Intune zkontrolujte, že máte následující:
 
@@ -76,4 +75,5 @@ Postup autorizace aplikace Better Mobile:
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nastavení klientských aplikací Better](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení lepších mobilních aplikací pro zaregistrovaná zařízení](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení lepších mobilních aplikací pro neregistrovaná zařízení](~/protect/mtd-add-apps-unenrolled-devices.md)

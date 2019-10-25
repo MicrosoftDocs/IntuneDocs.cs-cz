@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2019
+ms.date: 10/22/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6cee01676a98da714d7047e6a45713e8673786ea
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: c388e632f545b48a18ef6ed7b76132c290f16a9e
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507494"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813456"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -182,7 +182,7 @@ Intune dál v seznamu vlastností podporuje následující typy tokenů:
 Registrace programu DEP (Apple Program registrace zařízení) nejsou kompatibilní s verzí Portál společnosti aplikace App Storu. Aplikaci Portál společnosti můžete ale nakonfigurovat tak, aby podporovala zařízení DEP pro iOS pomocí následujících kroků.
 
 1. V Intune na Azure Portal:
-    - V případě potřeby přidejte Portál společnosti Intune, a to tak, že v aplikaci **Intune** > **klienta**aplikace  > **přidáte** **@no__t-** 5.
+    - V případě potřeby přidejte Portál společnosti Intune tak, že v **Intune** > **klientské aplikace** > **aplikace** > **Přidat**.
     - Pokud chcete vytvořit zásady konfigurace aplikace pro Portál společnosti aplikaci, přečtěte si **klientské aplikace** > **zásady konfigurace aplikací**.
 2. V níže uvedeném XML vytvořte zásadu konfigurace aplikace. Další informace o tom, jak vytvořit zásadu konfigurace aplikace a zadat data XML, najdete v tématu [Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOS](app-configuration-policies-use-ios.md) nebo pro hybridní MDM. [nastavení aplikací pro iOS pomocí zásad konfigurace aplikací v nástroji System Center Configuration Manager](https://docs.microsoft.com/sccm/mdm/deploy-use/configure-ios-apps-with-app-configuration-policies).
 

@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e53f50c42e768eeb652a8602bea49c04d29364c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504426"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810285"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -44,7 +44,7 @@ Klasické zásady podmíněného přístupu pro aplikace MTD:
 Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **podmíněný přístup** > **Classic**.
 
 
-## <a name="to-enable-the-mtd-connector"></a>Povolení konektoru MTD
+## <a name="to-enable-the-mobile-threat-defense-connector"></a>Povolení konektoru ochrany před mobilními hrozbami
 
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
@@ -58,20 +58,23 @@ Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v 
 
 7. Povolte možnosti přepínání podle požadavků vaší organizace. Viditelnost možností přepínání se bude lišit v závislosti na partnerovi MTD.
 
-## <a name="mtd-toggle-options"></a>Možnosti přepínání MTD
+## <a name="mobile-threat-defense-toggle-options"></a>Možnosti přepínání ochrany před mobilními hrozbami
 
-Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínání konektoru MTD potřebujete povolit. Tady jsou další podrobnosti:
+Můžete určit, které možnosti ochrany před mobilními hrozbami chcete povolit podle požadavků vaší organizace. Tady jsou další podrobnosti:
 
-- **Připojit zařízení s Androidem 4.1+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem Android verze 4.1 a vyšší hlásit bezpečnostní riziko zpět Intune.
-  - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
-<br></br>
-- **Připojit zařízení s iOSem 8.0+ k [název partnera MTD] for Work MTD**: Když tuto možnost povolíte, mohou zařízení se systémem iOS verze 8.0 a vyšší hlásit bezpečnostní riziko zpět Intune.
-  - **Při nepřijetí dat označit jako nedodržující předpisy**: Pokud Intune na této platformě nedostane od partnera MTD údaje o zařízení, můžete zařízení považovat za nevyhovující.
-<br></br>
+**Nastavení zásad dodržování předpisů MDM**
+- \* * Připojit zařízení s Androidem 4.1 + k *\<MTD Partner name > * * *: když tuto možnost povolíte, můžete nechat zařízení s Androidem 4.1 +, která hlásí bezpečnostní riziko zpátky do Intune.
+- \* * Připojit zařízení s iOS 8.0 + na *\<MTD název partnera > * * *: když tuto možnost povolíte, můžete mít zařízení s iOS 8.0 a vyšším hlášením rizika zabezpečení zpátky do Intune.
 - **Povolit synchronizaci aplikací pro zařízení iOS**: Povolí tomuto partnerovi Ochrany před mobilními hrozbami žádat o metadata aplikací pro iOS z Intune, která se použijí pro účely analýzy hrozeb.
-
 - **Blokovat nepodporované verze operačního systému**: Blokovat zařízení, pokud je na něm spuštěn operační systém nižší verze, než je minimálně podporovaná.
 
+**Nastavení zásad ochrany aplikací**
+- **Připojit zařízení s Androidem verze 4,1 a novější pro *\<MTD partnerský název >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně data z tohoto konektoru.
+- **Připojit zařízení s iOS verze 8,0 a novější pro *\<MTD partnerský název >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, která budou zahrnovat data. Tento konektor.
+
+Další informace o používání konektorů ochrany před mobilními hrozbami pro vyhodnocení zásad Intune App Protection najdete v tématu [nastavení ochrany před mobilními hrozbami pro neregistrovaná zařízení](~/protect/mtd-enable-unenrolled-devices.md).
+
+**Společné sdílené nastavení**
 - **Počet dnů, než partner přestane reagovat**: Počet dnů nečinnosti, než bude Intune kvůli ztrátě připojení považovat partnera za nereagujícího. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.
 
 > [!IMPORTANT] 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b61281b0e82bcb839efdc31726d398eea08c364f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b4661b151493eb68cc6f71a5a77bd023ac27b826
+ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502204"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72810226"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Nastavení integrace zabezpečení mobilních koncových bodů pomocí Intune
 S prostředím, které splňuje [požadavky](lookout-mobile-threat-defense-connector.md#prerequisites), můžete integrovat mobilní koncové body zabezpečení s Intune. Informace v tomto článku vás provedou nastavením integrace a konfigurací důležitých nastavení ve službě Intune pro použití s Intune.  
@@ -69,13 +69,16 @@ Pokud chcete povolit integraci předplatného mobilního koncového bodu zabezpe
    Po shromáždění těchto informací se obraťte na podporu vyhledávání (e-mail: enterprisesupport@lookout.com). Podpora vyhledávání bude spolupracovat s vaším primárním kontaktem k připojení vašeho předplatného a vytvoření účtu vaší organizace pro hledání pomocí informací, které zadáte.  
 
 ## <a name="configure-your-lookout-subscription"></a>Konfigurace předplatného pro hledání  
+
+Následující kroky se dokončí v konzole pro správu vyhledávání v podniku a umožní připojení ke službě vyhledávání pro zařízení zaregistrovaná v Intune (prostřednictvím dodržování předpisů zařízením) **a** neregistrovaných zařízení (prostřednictvím zásad ochrany aplikací).
+
 Když podpora vyhledávání vytvoří účet pro hledání v podnikovém účtu, požádejte o podporu hledání na primární kontakt vaší společnosti e-mail s odkazem na přihlašovací adresu URL: https://aad.lookout.com/les?action=consent. 
 
 ### <a name="initial-sign-in"></a>Počáteční přihlášení  
 Při prvním přihlášení na konzolu prohledat mimo jiné se zobrazí stránka souhlasu (https://aad.lookout.com/les?action=consent). Globální správce Azure AD stačí přihlásit a **přijmout**. Následné přihlášení nevyžaduje, aby uživatel měl tuto úroveň oprávnění Azure AD. 
 
  Zobrazí se stránka pro vyjádření souhlasu. Vyberte možnost **přijmout** a dokončete registraci. 
-   @no__t – 0screenshot přihlašovací stránky prvního času v konzole pro hledání @ no__t-1
+   ![snímku obrazovky první přihlašovací stránky v konzole pro hledání](./media/lookout-mtd-connector-integration/lookout_mtp_initial_login.png)
 
 Když souhlasíte a souhlasíte, budete přesměrováni do konzoly pro hledání.
 
@@ -110,20 +113,7 @@ Následující postup předpokládá, že jste dříve vytvořili skupinu uživa
 6. Pro dokončení konfigurace konektoru vyberte **vytvořit konektor** . Později, až budete s výsledky spokojeni, můžete registraci roztáhnout na další skupiny uživatelů.
 
 ## <a name="configure-intune-to-use-lookout-as-a-mobile-threat-defense-provider"></a>Konfigurace Intune pro použití jako poskytovatele ochrany před mobilními hrozbami
-Až nakonfigurujete Intune, musíte nastavit připojení, které se bude zobrazovat v Intune.  
-
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-
-2. Přejít na **dodržování předpisů zařízením** >  Ochrana před**mobilními hrozbami** a vyberte **Přidat**.
-
-3. V podokně *Přidat konektor* použijte rozevírací seznam a vyberte **Lookout for Work**.  
-
-4. Vyberte **Vytvořit**. Jakmile konektor vytvoří kontakt s modulem hledání softwaru, bude *Nastavení konektoru* dostupné.
-
-5. Nastavte **možnost povolit synchronizaci aplikací pro zařízení s iOS** na **zapnuto**. 
-
-6. Kliknutím na **Uložit** dokončete konfiguraci.  Intune a Intune jsou teď integrované a připravené k použití.
-
+Až nakonfigurujete Intune, musíte nastavit připojení, které se bude [zobrazovat v Intune](https://docs.microsoft.com/en-us/intune/protect/mtd-connector-enable).  
 
 ## <a name="additional-settings-in-the-lookout-mes-console"></a>Další nastavení v konzole pro hledání na netržních modulech
 Níže najdete další nastavení, která můžete konfigurovat v konzole nástroje pro vyhledávání.  
@@ -146,8 +136,6 @@ Pokud chcete dostávat e-mailová upozornění na hrozby, přihlaste se ke [konz
 
   ![snímek obrazovky se stránkou předvolby se zobrazeným uživatelským účtem](./media/lookout-mtd-connector-integration/lookout-mtp-email-notifications.png)
 
-
-
 ## <a name="configure-threat-classifications"></a>Konfigurace klasifikací hrozeb  
 Vyhledá se mobilní koncový bod zabezpečení, klasifikuje mobilní hrozby různých typů. Klasifikace hrozeb pro vyhledávání mají k sobě přidružené výchozí úrovně rizika. Úrovně rizika lze kdykoli změnit tak, aby vyhovovaly vašim požadavkům vaší společnosti.
 
@@ -167,4 +155,5 @@ Podrobnosti o tom, jak získat aplikaci *Lookout for Work* nasazenou na zaříze
 
 ## <a name="next-steps"></a>Další kroky
 
-[Nastavení aplikací Lookout](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení vyhledávacích aplikací pro zaregistrovaná zařízení](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Nastavení aplikací pro hledání neregistrovaných zařízení](~/protect/mtd-add-apps-unenrolled-devices.md)

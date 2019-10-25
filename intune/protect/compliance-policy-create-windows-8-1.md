@@ -2,10 +2,10 @@
 title: Windows 8.1 nastavení dodržování předpisů v Microsoft Intune – Azure | Microsoft Docs
 description: Podívejte se na seznam všech nastavení, která můžete použít při nastavení dodržování předpisů pro Windows 8.1 a zařízení Windows Phone 8,1 v Microsoft Intune. Ověřte kompatibilitu s minimálním a maximálním operačním systémem, nastavte omezení a délku hesla, povolte šifrování pro úložiště dat a další.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/04/2019
+ms.date: 10/22/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -15,16 +15,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 322d6f1e23464f1f75cc79346d839a9ccdbd7bc7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3e074d922078a9772ca67a6ebd99948bc3e64601
+ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504641"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72813211"
 ---
 # <a name="windows-81-settings-to-mark-devices-as-compliant-or-not-compliant-using-intune"></a>Nastavení Windows 8.1 pro označení zařízení jako kompatibilních nebo nekompatibilních s použitím Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Tento článek obsahuje seznam a popis různých nastavení dodržování předpisů, která můžete nakonfigurovat na zařízeních Windows 8.1 v Intune. Jako součást řešení správy mobilních zařízení (MDM) použijte Tato nastavení k blokování jednoduchých hesel, nastavení minimální a maximální verze operačního systému a dalších.
 
@@ -41,8 +39,21 @@ Jako správce Intune můžete pomocí těchto nastavení dodržování předpis�
 
 ## <a name="device-properties"></a>Vlastnosti zařízení
 
-- **Minimální požadovaný operační systém**: zadejte minimální povolenou verzi. Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi o postupu upgradu. Koncový uživatel si může zařízení upgradovat. Potom získá přístup k prostředkům společnosti.
-- **Maximální povolená verze operačního systému**: zadejte maximální povolenou verzi. Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům společnosti blokovaný. Uživateli se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud nezměníte pravidlo, které povoluje verzi operačního systému.
+### <a name="operating-system-version"></a>Verze operačního systému
+
+**Windows Phone 8,1 a novější**
+- **Minimální verze operačního systému pro mobilní zařízení**:  
+  Zadejte minimální povolenou verzi. Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel zařízení si může upgradovat svoje zařízení a pak získat přístup k firemním prostředkům.
+
+- **Maximální verze operačního systému pro mobilní zařízení**:  
+  Zadejte maximální povolenou verzi. Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
+
+**Windows 8.1 a novější**
+- **Minimální verze operačního systému**:  
+  Zadejte minimální povolenou verzi. Pokud zařízení nesplňuje požadavek na minimální verzi operačního systému, nahlásí se jako nevyhovující. Zobrazí se odkaz s informacemi, jak upgradovat. Uživatel zařízení si může upgradovat svoje zařízení a pak získat přístup k firemním prostředkům.
+
+- **Maximální verze OS**:  
+  Zadejte maximální povolenou verzi. Pokud zařízení používá verzi operačního systému, která je novější než verze zadaná v pravidle, bude přístup k prostředkům organizace blokovaný. Uživateli zařízení se zobrazí výzva, aby kontaktoval správce IT. Zařízení nemá přístup k prostředkům organizace, dokud se nezmění pravidlo, které povoluje verzi operačního systému.
 
 Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operačního systému pro Windows nastavené na Windows 8.1, zařízení se nahlásí jako nedodržující předpisy i v případě, že má zařízení Windows 8.1.
 
@@ -50,36 +61,59 @@ Počítače s Windows 8.1 vrací verzi **3**. Pokud je pravidlo verze operační
 
 ### <a name="password"></a>Heslo
 
-- **Vyžadovat heslo k odemknutí mobilních zařízení**: **Vyžadujte**, aby uživatelé před získáním přístupu ke svému zařízení zadali heslo.
-- **Jednoduchá hesla**: Pokud nastavíte **Blokovat**, nebudou moct uživatelé vytvořit jednoduchá hesla, jako je třeba **1234** nebo **1111**. Pokud chcete uživatelům umožnit vytváření hesel jako **1234** nebo **1111**, nastavte na **Nenakonfigurováno**.
-- **Minimální délka hesla**: Zadejte minimální počet číslic nebo znaků, které musí heslo uživatele obsahovat.
+- **Vyžadovat heslo k odemknutí mobilních zařízení**:  
+  - **Nenakonfigurováno** (*výchozí*) – Toto nastavení není vyhodnoceno pro dodržování předpisů nebo nedodržování předpisů.
+  - **Vyžadovat** – uživatelé musí zadat heslo, aby mohli získat přístup ke svému zařízení.
 
-  Pro zařízení s Windows, ke kterým uživatelé přistupují pomocí účtu Microsoft, se zásady dodržování předpisů nevyhodnotí správně:
-  - Pokud je minimální délka hesla větší než osm znaků
-  - Nebo pokud je minimální počet znakových sad větší než dvě
+- **Jednoduchá hesla**:  
+  - **Nenakonfigurováno** (*výchozí*) – uživatelé můžou vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.
+  - **Blok** – uživatelé nemůžou vytvářet jednoduchá hesla, třeba **1234** nebo **1111**.  
 
-- **Typ hesla**: Zvolte, jestli má heslo obsahovat pouze **číselné** znaky, nebo jestli má obsahovat kombinaci čísel a dalších znaků (**alfanumerické**).
-  
-  - **Počet nealfanumerických znaků v hesle**: Pokud se **Požadovaný typ hesla** nastaví na **Alfanumerické**, určuje toto nastavení minimální počet znakových sad, které musí heslo obsahovat. Jde o tyto čtyři znakové sady:
+- **Minimální délka hesla**:  
+  Zadejte minimální počet číslic nebo znaků, které musí heslo obsahovat.
+
+  U zařízení s Windows, která používají účet Microsoft, se zásada dodržování předpisů nevyhodnotí správně, pokud je splněná některá z následujících podmínek:  
+  - Minimální délka hesla je větší než osm znaků.
+  - Minimální počet znakových sad je víc než 2.
+
+- **Typ hesla**:  
+  Vyberte, jestli má heslo obsahovat jenom **číselné** znaky, nebo jestli má být kombinace čísel a dalších znaků (**alfanumerické**).
+
+  Pokud je nastaveno na *alfanumerické*, je k dispozici následující nastavení.  
+
+  - **Počet nealfanumerických znaků v hesle**:  
+    Pokud je *typ hesla* nastavený na **alfanumerické**, určete minimální počet znakových sad, které musí heslo obsahovat. Mezi možnosti patří **0** až **4** sady, výchozí hodnota je **1**.
+    
+    Jde o tyto čtyři znakové sady:
     - Malá písmena
     - Velká písmena
     - Symboly
     - Numbers
 
-    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo. U zařízení, ke kterým se používá účet Microsoft, se zásady dodržování předpisů nevyhodnotí správně:
+    Po nastavení vyššího čísla bude uživatel muset vytvořit složitější heslo. U zařízení, která jsou v účet Microsoft k dispozici, se zásada dodržování předpisů nevyhodnotí správně, pokud je splněna některá z následujících podmínek:
 
-    - Pokud je minimální délka hesla větší než osm znaků
-    - Nebo pokud je minimální počet znakových sad větší než dvě
+    - Minimální délka hesla je větší než osm znaků.
+    - Minimální počet znakových sad je víc než 2.
 
-- **Maximální počet minut nečinnosti, po kterém bude nutné zadat heslo**: Zadejte dobu nečinnosti, která musí uplynout, aby se po uživateli znovu požadovalo zadání hesla.
-- **Konec platnosti hesla (dny)** : Vyberte počet dní, za který skončí platnost hesla a uživatel bude muset vytvořit nové.
-- **Počet předchozích hesel, která se nedají použít znovu**: zadejte počet dříve použitých hesel, která se nedají použít.
+- **Maximální počet minut nečinnosti před vyžadováním hesla**:  
+  Zadejte dobu nečinnosti, než uživatel musí znovu zadat heslo.
+
+- **Vypršení platnosti hesla (dny)** :  
+  Vyberte počet dní do vypršení platnosti hesla a uživatelé musí vytvořit nové.
+
+- **Počet předchozích hesel, která zabrání opakovanému použití**:  
+  Zadejte počet dříve použitých hesel, která se nedají použít.
 
 ### <a name="encryption"></a>Encryption
 
-- **Vyžadovat šifrování u mobilního zařízení:** **Vyžaduje**, aby zařízení přistupující k prostředkům datového úložiště bylo šifrované.
+- **Šifrování datového úložiště na zařízení**:  
+  - **Nenakonfigurováno** (*výchozí*)
+  - **Vyžadovat** *– použít k* šifrování úložiště dat na vašich zařízeních.
 
-Vyberte **OK** > **Vytvořit** a změny uložte.
+
+<!-- not on phone   
+- **Require encryption on mobile device**: **Require** the device to be encrypted to connect to data storage resources.
+--> 
 
 ## <a name="next-steps"></a>Další kroky
 
