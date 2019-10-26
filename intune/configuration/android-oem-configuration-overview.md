@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2be1faa1296792d3d40de5ca0b304a287bae8e6f
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550823"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915733"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -66,7 +66,7 @@ Pokud chcete na svých zařízeních používat OEMConfig, ujistěte se, že má
 
 - Zařízení s Androidem Enterprise zaregistrované v Intune.
 - Aplikace OEMConfig vytvořená výrobcem OEM a nahraná do Google Play. Pokud se nepoužívá Google Play, obraťte se na výrobce OEM, kde najdete další informace.
-- Správce Intune má oprávnění řízení přístupu na základě role (RBAC) pro **mobilní aplikace** a **Konfigurace zařízení**. Tato oprávnění jsou povinná, protože profily OEMConfig používají konfigurace spravovaných aplikací ke správě konfigurací zařízení.
+- Správce Intune má oprávnění řízení přístupu na základě role (RBAC) pro **mobilní aplikace**, **Konfigurace zařízení**a oprávnění číst v **Androidu for Work**. Tato oprávnění jsou povinná, protože profily OEMConfig používají konfigurace spravovaných aplikací ke správě konfigurací zařízení.
 
 ## <a name="prepare-the-oemconfig-app"></a>Příprava aplikace OEMConfig
 

@@ -5,24 +5,24 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 10/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: karthib
+ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2cb5d7375ae5b76a24861872d4abf786f199dfd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
+ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509001"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923407"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
@@ -31,12 +31,6 @@ Podívejte se na základní nastavení služby Microsoft Defender Advanced Threa
 Směrný plán rozšířené ochrany před internetovými útoky v programu Microsoft Defender je dostupný, když vaše prostředí splňuje požadavky na používání [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites). 
 
 Tato standardní hodnota je optimalizovaná pro fyzická zařízení a v tuto chvíli se nedoporučuje používat na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích. Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
-
-
-> [!NOTE]  
-> Základní nastavení ATP je ve **verzi Preview**. I když je ve verzi Preview seznam dostupných nastavení a pořadí, ve kterém tento obsah prezentuje tato nastavení, nemusí odpovídat tomu, co je dostupné na portálu.  
->
-> Pokud jsou nastavení standardních hodnot mimo verzi Preview, bude se tento obsah aktualizovat tak, aby odrážel aktuální seznam nastavení standardních hodnot zabezpečení, které Intune podporuje.
 
 ## <a name="application-guard"></a>Ochrana Application Guard  
 Další informace najdete v tématu [WINDOWSDEFENDERAPPLICATIONGUARD CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsdefenderapplicationguard-csp) v dokumentaci k systému Windows.  
@@ -55,13 +49,13 @@ Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard 
 
   - **Chování schránky** - *Nastavení/ClipboardSettings*  
     Vyberte, které akce kopírování a vkládání jsou povolené mezi místním počítačem a virtuálním prohlížečem Application Guard.  Vaše možnosti jsou:
-    - *Není nakonfigurováno*  
-    - *Blokování obou* dat: mezi počítačem a virtuálním prohlížečem nejde přenášet data.  
-    - *Blokovat hostitele do kontejneru* – data nejde přenést z počítače do virtuálního prohlížeče.
-    - *Blokování kontejneru do hostitele* – data se nemůžou přenášet z virtuálního prohlížeče na hostitelský počítač.
-    - *Blokovat žádné* – žádný blok pro obsah neexistuje.  
+    - Nenakonfigurováno  
+    - Blokuje kopírování a vkládání mezi počítačem a prohlížečem – blok obojího. Data se nemůžou přenášet mezi počítačem a virtuálním prohlížečem.  
+    - Povolení kopírování a vkládání z prohlížeče pouze do počítačů – data nelze přenést z počítače do virtuálního prohlížeče.
+    - Povolení kopírování a vkládání z počítače jenom do prohlížeče – data se nemůžou přenášet z virtuálního prohlížeče na hostitelský počítač.
+    - Povoluje kopírování a vkládání mezi počítačem a prohlížečem – neexistuje žádný blok pro obsah.  
 
-    **Výchozí**: blokovat obojí  
+    **Výchozí**: blokovat kopírování a vkládání mezi počítačem a prohlížečem  
 
 - **Zásady izolace sítě Windows – názvy podnikových síťových domén**  
   Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – NetworkIsolation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-networkisolation) .
@@ -101,7 +95,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Povolit
 
-- **Typ provedení obsahu e-mailu**  
+- **Zpracování obsahu e-mailu**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo blokuje spouštění nebo spouštění těchto typů souborů z e-mailu, který se zobrazuje v aplikaci Microsoft Outlook nebo webové pošty (například Gmail.com nebo Outlook.com):  
 
   - Spustitelné soubory (například. exe,. dll nebo. scr)  
@@ -115,12 +109,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Povolit
 
-- **Typ kódu makra zakódováného skriptu**  
+- **Skript zakódováného kódu makra**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – malware a další hrozby se mohou pokusit dekódovat nebo skrýt škodlivý kód v některých souborech skriptu. Toto pravidlo zabrání spuštění skriptů, které se jeví jako nepoužívané.  
     
   **Výchozí**: blok
 
-- **Nedůvěryhodný typ procesu USB**  
+- **Nedůvěryhodný proces USB**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, nepodepsané nebo nedůvěryhodné spustitelné soubory z vyměnitelných jednotek USB a karty SD nejdou spustit.
 
   Mezi spustitelné soubory patří:
@@ -129,12 +123,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: blok
 
-- **Typ injektáže jiného procesu aplikací Office**  
+- **Vkládání dalších procesů v aplikacích Office**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – když se nastaví *blokování*, aplikace Office, včetně Wordu, Excelu, PowerPointu a OneNotu, nejde vložit kód do jiných procesů. Vkládání kódu obvykle používá malware ke spouštění škodlivého kódu při pokusu o skrytí aktivity z skenovacích modulů antivirového programu.  
 
   **Výchozí**: blok
 
-- **Kód makra Office Allow import typu Win32**  
+- **Kód makra Office Allow importy Win32**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastaveno na *blokovat*, toto pravidlo se pokusí blokovat soubory Office, které obsahují kód makra, který může importovat knihovny DLL Win32. Soubory Office zahrnují Word, Excel, PowerPoint a OneNote. Malware může pomocí kódu makra v souborech Office importovat a načítat knihovny DLL Win32, které se pak používají k umožnění dalších infekcí v celém systému v rámci volání rozhraní API.  
 
   **Výchozí**: blok
@@ -144,7 +138,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Povolit
 
-- **Typ vytvoření nebo spuštění obsahu aplikací Office**  
+- **Vytvoření nebo spuštění spustitelného obsahu aplikací Office**  
   [Pravidlo pro omezení možností útoku](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#attack-surface-reduction-rules) – Pokud je nastavené *blokování*, aplikace Office nemůžou vytvářet spustitelný obsah. Aplikace Office zahrnují Word, Excel, PowerPoint, OneNote a Access.  
 
   Toto pravidlo cílí na typické chování používané podezřelými a zlomyslnými doplňky a skripty (rozšíření), které vytvářejí nebo spouštějí spustitelné soubory. Toto je typická antimalwarová technika. Používání rozšíření je pro aplikace Office blokované. Tato rozšíření obvykle používají skripty Windows Scripting Host (soubory. WSH) ke spouštění skriptů, které automatizují určité úlohy nebo poskytují uživatelsky vytvořené funkce doplňku.
@@ -170,6 +164,10 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 
   - **Metoda šifrování**  
     **Výchozí**: AES 128bit CBC
+
+- **Šifrování paměťové karty (jenom mobilní zařízení)** Vyberete-li možnost *Ano* , bude zašifrována paměťová karta mobilního zařízení.  
+
+   **Výchozí**: Ano
 
 - **Zásada pro pevný disk pro nastavení bitových zámků**  
   Hodnoty pro tuto zásadu určují sílu šifry, kterou BitLocker používá k šifrování pevných jednotek. Podniky můžou řídit úroveň šifrování pro zvýšené zabezpečení (AES-256 je silnější než AES-128). Pokud povolíte toto nastavení, můžete nakonfigurovat šifrovací algoritmus a složitost klíče pro pevné datové jednotky, jednotky operačního systému a vyměnitelné datové jednotky. U pevných jednotek operačního systému doporučujeme použít algoritmus XTS-AES. U vyměnitelných jednotek byste měli použít algoritmus AES-CBC 128-bit nebo AES-CBC 256-bit, pokud se jednotka používá v jiných zařízeních, na kterých běží Windows 10, verze 1511 nebo novější. Změna metody šifrování nemá žádný vliv, pokud je jednotka již zašifrovaná nebo pokud probíhá šifrování. V těchto případech se nastavení této zásady ignoruje.
@@ -224,12 +222,12 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   - **Odebrat shodná hardwarová zařízení**  
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.  
 
-    **Výchozí**: *žádná výchozí konfigurace*
+    **Výchozí**: Ano
 
   - **Blokované identifikátory hardwarových zařízení**  
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*. Pokud chcete nakonfigurovat toto nastavení, rozbalte možnost, vyberte **+ Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.  
 
-    **Výchozí**: *nejsou blokovaná žádná zařízení* .  
+    **Výchozí**: PCI\CC_0C0A
 
 - **Zablokovat přímý přístup do paměti**  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) – pomocí tohoto nastavení zásad můžete zablokovat přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem dat na zařízení, dokud se uživatel nepřipojí do Windows. Jakmile se uživatel přihlásí, Windows Vypíše zařízení PCI připojená k portům plug-in hostitele PCI. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený. 
@@ -249,23 +247,23 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   - **Odebrat shodná hardwarová zařízení**  
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle instalačních tříd* nastavená tak, aby *blokovala instalaci hardwarového zařízení*.  
  
-    **Výchozí**: *žádná výchozí konfigurace*  
+    **Výchozí**: Ano  
 
   - **Blokované identifikátory hardwarových zařízení**  
     Toto nastavení je dostupné, jenom když je instalace hardwarového zařízení podle instalačních tříd nastavená tak, aby blokovala instalaci hardwarového zařízení. Pokud chcete nakonfigurovat toto nastavení, rozbalte možnost, vyberte **+ Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.  
  
-    **Výchozí**: *nejsou blokovaná žádná zařízení* .
+    **Výchozí**: {D48179BE-EC20-11D1-B6B8-00C04FA372A7}
 
 ## <a name="endpoint-detection-and-response"></a>Zjištění a odpověď koncového bodu  
 Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) v dokumentaci k systému Windows.  
 
-- **Urychlení generování sestav telemetrie** - *Konfigurace/TelemetryReportingFrequency*  
+- **Urychlení generování sestav telemetrie** - *Konfigurace/TelemetryReportingFrequency*
 
   Urychlení generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender  
 
   **Výchozí**: Ano
 
-- **Sdílení ukázky pro všechny soubory** - *Konfigurace/SampleSharing*  
+- **Sdílení ukázky pro všechny soubory** - *Konfigurace/SampleSharing* 
 
   Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
 
@@ -286,43 +284,7 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
   [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – nastavte na *hodnotu Ano* , pokud chcete uživatelům zabránit v provádění změn v oblasti nastavení ochrany před zneužitím v Security Center programu Windows Defender. Pokud toto nastavení zakážete nebo nenakonfigurujete, místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.  
   **Výchozí**: Ano  
 
-- **Řízený přístup ke složkám**  
-  Viz [Defender/ControlledFolderAccessAllowedApplications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessallowedapplications) a [Defender/ControlledFolderAccessProtectedFolders](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-controlledfolderaccessprotectedfolders) 
-  
-   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.
-
-  **Výchozí**: režim auditu
-
-## <a name="web--network-protection"></a>Ochrana webového & sítě  
-
-- **Typ ochrany sítě**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – tato zásada vám umožní zapnout nebo vypnout ochranu sítě pomocí ochrany před zneužitím v programu Windows Defender. Ochrana sítě je funkcí ochrany před zneužitím v programu Windows Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.  
-
-  Když nastavíte režim *Povolit* nebo *audit*, uživatelé nemůžou vypnout ochranu sítě a k zobrazení informací o pokusůch o připojení můžete použít Security Center programu Windows Defender.  
- 
-  - Při *Povolení* bude zablokováno uživatelům a aplikacím v připojení k nebezpečným doménám.  
-  - *Režim auditování* neblokuje uživatelům a aplikacím připojení k nebezpečným doménám.  
-
-  Když nastavíte *uživatelsky definovaného uživatele*, uživatelé a aplikace se nebudou moct připojit k nebezpečným doménám a informace o připojeních nejsou k dispozici v Security Center Windows Defenderu.  
-
-  **Výchozí**: režim auditu
-
-- **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge používá filtr SmartScreen v programu Windows Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení je tato zásada povolená (nastavená na *Ano*) a pokud je tato možnost povolená, zakáže uživatelům vypnutí filtru SmartScreen v programu Windows Defender.  Pokud jsou platné zásady pro zařízení rovny nenakonfigurovaným, můžou uživatelé vypnout filtr SmartScreen v programu Windows Defender, který zůstane bez ochrany zařízení.  
-
-  **Výchozí**: Ano
-  
-- **Blokovat přístup ke škodlivému webu**  
-  [Prohlížeč/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění programu Windows Defender SmartScreen na potenciálně škodlivé weby a umožnit tak uživatelům pokračovat v lokalitě. Když je tato zásada povolená (nastavená na *Ano*), Microsoft Edge znemožní uživatelům obejít upozornění a zablokuje jejich pokračování na webu.  
-
-  **Výchozí**: Ano
-
-- **Blokovat stahování neověřených souborů**  
-  [Prohlížeč/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění na potenciálně škodlivé soubory v programu Windows Defender SmartScreen, což jim umožní pokračovat ve stahování neověřených souborů. Když je tato zásada povolená (nastavená na *Ano*), uživatelům se zabrání v obcházení upozornění a nemůžou stahovat neověřené soubory.  
-
-  **Výchozí**: Ano
-
-## <a name="windows-defender-anti-virus----settings-review-pending-for-this-section"></a>Antivirová ochrana v programu Windows Defender – antivirová [Kontrola nastavení čeká na tuto část]
+## <a name="microsoft-defender-antivirus"></a>Antivirová ochrana v programu Microsoft Defender  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
 
@@ -336,7 +298,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
   **Výchozí**: Ano
 
-- **Typ souhlasu pro odeslání ukázky v programu Defender**  
+- **Souhlas s odesláním ukázky v programu Defender**  
   [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) -kontroluje úroveň souhlasu uživatele v programu Windows Defender, aby odesílala data. Pokud je požadovaný souhlas již udělen, program Windows Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (při nastavení ochrany před odesláním *cloudu* na *Ano*).  
 
   **Výchozí**: automaticky odesílat bezpečné vzorky
@@ -594,6 +556,35 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
 
 - **Ověření seznamu odvolaných certifikátů**  
   **Výchozí**: výchozí nastavení zařízení
+
+## <a name="web--network-protection"></a>Ochrana webového & sítě  
+
+- **Typ ochrany sítě**  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – tato zásada vám umožní zapnout nebo vypnout ochranu sítě pomocí ochrany před zneužitím v programu Windows Defender. Ochrana sítě je funkcí ochrany před zneužitím v programu Windows Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.  
+
+  Když nastavíte režim *Povolit* nebo *audit*, uživatelé nemůžou vypnout ochranu sítě a k zobrazení informací o pokusůch o připojení můžete použít Security Center programu Windows Defender.  
+ 
+  - Při *Povolení* bude zablokováno uživatelům a aplikacím v připojení k nebezpečným doménám.  
+  - *Režim auditování* neblokuje uživatelům a aplikacím připojení k nebezpečným doménám.  
+
+  Když nastavíte *uživatelsky definovaného uživatele*, uživatelé a aplikace se nebudou moct připojit k nebezpečným doménám a informace o připojeních nejsou k dispozici v Security Center Windows Defenderu.  
+
+  **Výchozí**: režim auditu
+
+- **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge používá filtr SmartScreen v programu Windows Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení je tato zásada povolená (nastavená na *Ano*) a pokud je tato možnost povolená, zakáže uživatelům vypnutí filtru SmartScreen v programu Windows Defender.  Pokud jsou platné zásady pro zařízení rovny nenakonfigurovaným, můžou uživatelé vypnout filtr SmartScreen v programu Windows Defender, který zůstane bez ochrany zařízení.  
+
+  **Výchozí**: Ano
+  
+- **Blokovat přístup ke škodlivému webu**  
+  [Prohlížeč/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění programu Windows Defender SmartScreen na potenciálně škodlivé weby a umožnit tak uživatelům pokračovat v lokalitě. Když je tato zásada povolená (nastavená na *Ano*), Microsoft Edge znemožní uživatelům obejít upozornění a zablokuje jejich pokračování na webu.  
+
+  **Výchozí**: Ano
+
+- **Blokovat stahování neověřených souborů**  
+  [Prohlížeč/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění na potenciálně škodlivé soubory v programu Windows Defender SmartScreen, což jim umožní pokračovat ve stahování neověřených souborů. Když je tato zásada povolená (nastavená na *Ano*), uživatelům se zabrání v obcházení upozornění a nemůžou stahovat neověřené soubory.  
+
+  **Výchozí**: Ano
 
 ## <a name="windows-hello-for-business"></a>Windows Hello pro firmy  
 

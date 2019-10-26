@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd48eea5ee09562590844e11ac372480c892a7af
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 5d13511948d0dbfa19b3b3f1fda7faea3e4f12b3
+ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585009"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915757"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -180,25 +180,24 @@ Uživatelé můžou na svých místních nebo vzdálených zařízeních provád
 
 Některé platformy a konfigurace neumožňují akce zařízení samoobslužné služby. V této tabulce najdete další podrobnosti o akcích samoobslužných služeb:
 
-|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup><sup>(5)</sup> | Android<sup>(3)</sup> |
+|  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici<sup>(8)</sup> | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici | NÁ | K dispozici<sup>(7)</sup> |
-| Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici<sup>(8)</sup> | K dispozici | K dispozici |
+| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
+| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | NÁ | K dispozici<sup>(7)</sup> |
+| Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
 | Brání | K dispozici | K dispozici | K dispozici | K dispozici |
 | Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
-| Resetovat heslo | Pouze Windows Phone | K dispozici | NÁ | K dispozici<sup>(6)</sup> |
+| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | NÁ | K dispozici<sup>(6)</sup> |
 | Obnovení klíče | NÁ | NÁ | K dispozici<sup>(2)</sup> | NÁ |
-| Tmavý režim | NÁ | K dispozici | NÁ | NÁ |
 
 <sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
 <sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>
 <sup>(3)</sup> Pokud používáte registraci správce registrace zařízení, jsou všechny vzdálené akce zakázané.<br>
-<sup>(4)</sup> **přejmenování** změní jenom název zařízení v portál společnosti aplikaci nebo na webu, ne na zařízení.<br>
-<sup>(5)</sup> **vzdálené vymazání** není na zařízeních MacOS k dispozici.<br>
+<sup>(4)</sup> **přejmenování** změní pouze název zařízení v portál společnosti aplikaci nebo webovém portálu, nikoli na zařízení.<br>
+<sup>(5)</sup> **vymazání** není k dispozici na uživatelem zaregistrovaných zařízeních iOS.<br>
 <sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
 <sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
-<sup>(8)</sup> **vyřazení** (odebrat zařízení) a **přejmenování** jsou k dispozici pro všechny typy registrace. Další akce se pro zápis uživatele nepodporují.<br> 
+<sup>(8)</sup> **resetování hesla** není u zaregistrovaných zařízení se systémem iOS podporované uživatelem.
 
 ## <a name="next-steps"></a>Další kroky
 

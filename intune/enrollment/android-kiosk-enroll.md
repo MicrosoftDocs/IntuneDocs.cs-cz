@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d1a1c03dc480ad66de22b4a5ee44a9b8c221980c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
+ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503390"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72923379"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
 
@@ -78,7 +78,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 4. V okně **Pravidla dynamického členství** vyplňte pole následujícím způsobem:
     - **Přidat dynamické pravidlo členství**: Jednoduché pravidlo
     - **Přidat zařízení, kde**: Název registračního profilu
-    - V prostředním poli zvolte **Shoda**.
+    - V prostředním poli vyberte **Equals (rovná**se).
     - Do posledního pole zadejte název dříve vytvořeného registračního profilu.
     Další informace o pravidlech dynamického členství najdete v tématu [Pravidla dynamického členství pro skupiny v AAD](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
 5. Zvolte **Přidat dotaz** > **Vytvořit**.
