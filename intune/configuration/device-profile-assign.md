@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/17/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: f6f5414d-0e41-42fc-b6cf-e7ad76e1e06d
-ms.reviewer: heenamac
+ms.reviewer: altsou
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 26ed23e4d9d267e37ba5088fa32234c27e3935b6
-ms.sourcegitcommit: 9a2ddcec73b37a118908b63d8e5252835f257618
+ms.openlocfilehash: a19515e859f5e78f7611bbd10088aea5f7c44650
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72550804"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892648"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
 
@@ -69,19 +69,28 @@ Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby
 
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Vyloučení skupin z přiřazení profilu
 
-Profily konfigurace zařízení v Intune vám umožňují vyloučit skupiny z přiřazení zásad.
+Profily konfigurace zařízení v Intune umožňují zahrnout a vyloučit skupiny z přiřazení zásad.
 
-Intune se nezobrazuje v relacích skupin uživatelů a zařízení. Zahrnutí skupin uživatelů bez skupin zařízení nemusí získat očekávané výsledky. V případě scénářů skupiny uživatelů a skupin zařízení a skupin zařízení má vyloučení přednost před zařazením.
+Osvědčeným postupem je vytváření a přiřazování zásad konkrétně pro vaše skupiny uživatelů. A vytvořte a přiřaďte jiné zásady konkrétně pro vaše skupiny zařízení. Další informace o skupinách najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md).
 
-Například přiřadíte profil zařízení skupině uživatelů **Všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** . Vzhledem k tomu, že obě skupiny jsou skupiny uživatelů, jsou ze zásad vyloučeni všichni členové **vyšších zaměstnanců správy** , i když jsou členy skupiny **Všichni podnikoví uživatelé** .
+Když přiřadíte zásady, použijte následující tabulku při zahrnutí a vyloučení skupin. Značka zaškrtnutí znamená, že je přiřazení podporováno:
 
-Zahrnutí má při použití smíšených skupin přednost před vyloučením, jako je skupina uživatelů pro zařízení nebo skupina zařízení – uživatel.
+![Podporované možnosti zahrnují nebo vylučují skupiny z přiřazení profilu.](./media/device-profile-assign/include-exclude-user-device-groups.png)
 
-Například chcete přiřadit profil zařízení všem uživatelům ve vaší organizaci, s výjimkou zařízení veřejného terminálu. Zahrnete skupinu **Všichni uživatelé**, ale vyloučíte skupinu **Všechna zařízení**. V takovém případě všichni uživatelé a jejich zařízení získají zásady, i když je zařízení uživatele ve skupině **všechna zařízení** .
+### <a name="what-you-should-know"></a>Co byste měli znát
 
-Vyloučení prohlíží pouze přímé členy skupiny. Nezahrnuje zařízení, která jsou přidružená k uživateli. Zařízení, která nemají uživatele, ale nezískají zásady. K tomuto chování dochází, protože zařízení bez uživatelů nemají žádný vztah ke skupině **Všichni uživatelé** .
+- Vyloučení má přednost před zahrnutím do následujících scénářů stejného typu skupiny:
 
-Pokud zahrnete **Všechna zařízení** a vyloučíte **Všechny uživatele**, získají zásady všechna zařízení. V tomto scénáři je cílem vyloučit ze zásad ta zařízení, která mají přidruženého uživatele. Tím se ale zařízení nevyloučí, protože funkce vyloučení porovnává jenom přímé členy skupiny.
+  - Zahrnutí skupin uživatelů a vyloučení skupin uživatelů
+  - Zahrnutí skupin zařízení a vyloučení skupiny zařízení
+
+  Například přiřadíte profil zařízení skupině uživatelů **Všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** . Vzhledem k tomu, že obě skupiny jsou skupiny uživatelů, získají zásady **Všichni firemní uživatelé** s výjimkou **pracovníků hlavní správy** .
+
+- Intune nevyhodnocuje vztahy mezi uživateli a zařízeními. Pokud přiřadíte zásady ke smíšeným skupinám, výsledky nemusí být to, co chcete, nebo očekávat.
+
+  Například přiřadíte profil zařízení skupině uživatelů **Všichni uživatelé** , ale vyloučíte skupinu zařízení **všechna osobní zařízení** . V tomto kombinovaném přiřazení zásad skupiny získají **Všichni uživatelé** zásadu. Vyloučení nelze použít.
+
+  V důsledku toho se nedoporučuje přiřazování zásad ke smíšeným skupinám.
 
 ## <a name="next-steps"></a>Další kroky
 

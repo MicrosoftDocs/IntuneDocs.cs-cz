@@ -17,12 +17,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1089c382a39afb5aad0456e669cb3a2434af73c1
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 5776ebf3241968cca6da537bb58b7ab2a06f00ba
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503102"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892541"
 ---
 # <a name="troubleshoot-windows-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s Windows v Microsoft Intune
 
@@ -71,12 +71,12 @@ Tento problém může být několik možných řešení:
 > Tato metoda zvyšuje limit pro registraci zařízení pro všechny uživatele, nikoli jenom ovlivněného uživatele.
 
 1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview).
-2. V případě **registrace zařízení**@no__t 1 –**omezení registrace**a pak vyberte **omezení limitu počtu zařízení**.    
+2. V případě **registrace zařízení** > **omezení registrace**a pak vyberte **omezení limitů počtu zařízení**.    
 3. Zvyšte hodnotu **limitu počtu zařízení**. 
 
 ##### <a name="check-device-type-restrictions"></a>Ověřit omezení typu zařízení
 1. Přihlaste se k [portálu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) pomocí účtu globálního správce.
-2. V části **omezení typů zařízení**vyberte **výchozí** omezení **registrace zařízení**@no__t **-1.**    
+2. V části **omezení typů zařízení**vyberte **výchozí** omezení **registrace zařízení** ** > .**    
 3. Vyberte **platformy**a pak vyberte možnost **Povolení** pro **Windows (MDM)** .
 
     > [!IMPORTANT]
@@ -181,7 +181,7 @@ Chyba: software nelze nainstalovat, 0x80cf4017.
 
 #### <a name="resolution"></a>Řešení
 1. Přihlaste se k [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Přejděte na **správce**@no__t**ke stažení klientského softwaru**1 a pak klikněte na **Stáhnout klientský software**.    
+2. Přejděte na **správce** > **stažení klientského softwaru**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software. 
 
 
@@ -193,7 +193,7 @@ Chyba: "certifikát účtu není platný a pravděpodobně vypršela jeho platno
 
 #### <a name="resolution"></a>Řešení
 1. Přihlaste se k [https://admin.manage.microsoft.com](https://admin.manage.microsoft.com).    
-2. Přejděte na **správce**@no__t**ke stažení klientského softwaru**1 a pak klikněte na **Stáhnout klientský software**.    
+2. Přejděte na **správce** > **stažení klientského softwaru**a pak klikněte na **Stáhnout klientský software**.    
 3. Uložte instalační balíček a pak nainstalujte klientský software.    
 
 ### <a name="your-organization-does-not-support-this-version-of-windows"></a>Vaše organizace nepodporuje tuto verzi Windows. 
@@ -390,3 +390,4 @@ K tomuto problému obvykle dochází, když nesprávně delegujete oprávnění 
 - [Podívejte se na blog týmu podpory Microsoft Intune.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Podívejte se na blog Microsoft Enterprise mobility and Security.](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
 - [Získat podporu pro Microsoft Intune](../fundamentals/get-support.md)
+- [Najít chyby při registraci spolusprávy](https://docs.microsoft.com/sccm/comanage/how-to-monitor#enrollment-errors)

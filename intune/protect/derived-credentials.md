@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4c42e5ef50f8a5a8514bc43670fc743f42b1b2d6
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 1716da820fd0d9a4b6d1bbc5024440cfb141c5a1
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585927"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889555"
 ---
 # <a name="use-derived-credentials-in-microsoft-intune"></a>Použití odvozených přihlašovacích údajů v Microsoft Intune
 
@@ -64,7 +64,7 @@ Intune podporuje jeden odvozený Vystavitel přihlašovacích údajů na každé
 - **Entrust Datacard**: https://www.entrustdatacard.com/
 - **Intercede**: https://www.intercede.com/
 
-Důležité informace o používání různých vystavitelů najdete v pokynech k tomuto vystaviteli, včetně pracovního postupu pro vystavitele koncového uživatele. Další informace najdete v tématu [plánování odvozených přihlašovacích údajů](#plan-for-derived-credentials) v tomto článku.
+Důležité informace o používání různých vystavitelů najdete v pokynech k tomuto vystaviteli.<!-- , including the issuers end-user workflow-->. Další informace najdete v tématu [plánování odvozených přihlašovacích údajů](#plan-for-derived-credentials) v tomto článku.
 
 > [!IMPORTANT]  
 > Pokud odstraníte odvozeného vystavitele přihlašovacích údajů z vašeho tenanta, odvozené přihlašovací údaje, které byly vytvořeny prostřednictvím tohoto vystavitele, nebudou nadále fungovat.  
@@ -101,11 +101,14 @@ Obecné informace:
 
 ### <a name="2-review-the-end-user-workflow-for-your-chosen-issuer"></a>2) Zkontrolujte pracovní postup koncového uživatele pro zvoleného vystavitele.
 
-Níže jsou uvedené klíčové důležité požadavky pro každého podporovaného partnera a odkazy na tyto vystavitele pracovní postup koncového uživatele.  Seznámení s těmito informacemi vám umožní zajistit, aby zásady a konfigurace Intune neblokovaly uživatelům a zařízením možnost úspěšného dokončení registrace pro odvozené přihlašovací údaje od tohoto vystavitele.
+Následují klíčové důležité požadavky pro každého podporovaného partnera.<!--  , and links to that issuers end-user workflow -->.  Seznámení s těmito informacemi vám umožní zajistit, aby zásady a konfigurace Intune neblokovaly uživatelům a zařízením možnost úspěšného dokončení registrace pro odvozené přihlašovací údaje od tohoto vystavitele.
 
 #### <a name="disa-purebred"></a>DISA purebred
 
-Zkontrolujte [pracovní postup uživatele pro DISA purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Mezi klíčové požadavky tohoto pracovního postupu patří:  
+Pochopte pracovní postup a požadavky na klíč pro koncové uživatele:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for DISA Purebred](https://docs.microsoft.com/intune-user-help/enroll-ios-device-disa-purebred). Key requirements for this workflow include:  
+-->
 
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele. 
 
@@ -120,8 +123,11 @@ Zkontrolujte [pracovní postup uživatele pro DISA purebred](https://docs.micros
 Informace o tom, jak získat a nakonfigurovat aplikaci DISA purebred, najdete v části [nasazení aplikace DISA purebred](#deploy-the-disa-purebred-app) dále v tomto článku.  
 
 #### <a name="entrust-datacard"></a>Entrust Datacard  
-Zkontrolujte [pracovní postup uživatele pro Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Mezi klíčové požadavky tohoto pracovního postupu patří: 
 
+Pochopte pracovní postup a požadavky na klíč pro koncové uživatele:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Entrust Datacard](https://docs.microsoft.com/intune-user-help/enroll-ios-device-entrust). Key requirements for this workflow include: 
+--> 
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele. 
 
 - Zařízení, která se budou registrovat pro odvozené přihlašovací údaje, musí nainstalovat aplikaci Portál společnosti Intune.
@@ -129,8 +135,11 @@ Zkontrolujte [pracovní postup uživatele pro Entrust Datacard](https://docs.mic
 - Použití kamery zařízení k naskenování kódu QR, který propojuje požadavek na ověření s použitím odvozené žádosti o přihlašovací údaje z mobilního zařízení.
 
 #### <a name="intercede"></a>Intercede
-Zkontrolujte [pracovní postup uživatele pro Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Mezi klíčové požadavky tohoto pracovního postupu patří: 
 
+Pochopte pracovní postup a požadavky na klíč pro koncové uživatele:  
+<!-- TEMP EDIT - preceeding line to be replaced with the following once user content is ready. 
+Review the [user workflow for Intercede](https://docs.microsoft.com/intune-user-help/enroll-ios-device-intercede). Key requirements for this workflow include: 
+-->
 - Uživatelé potřebují přístup k počítači nebo veřejnému terminálu, kde můžou používat čipovou kartu k ověření vystavitele. 
 
 - Zařízení, která se budou registrovat pro odvozené přihlašovací údaje, musí nainstalovat aplikaci Portál společnosti Intune.

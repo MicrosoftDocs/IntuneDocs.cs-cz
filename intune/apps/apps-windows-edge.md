@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/09/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 492feb3f2ef5f5bbbc1537d4c60ac12d5fd6bdcd
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 22a957e6df2c7f9126cbe9f22c4f3a96213551d3
+ms.sourcegitcommit: f12bd2ce10b6241715bae2d2857f33c474287166
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585859"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72892573"
 ---
 # <a name="add-microsoft-edge-for-windows-10-to-microsoft-intune"></a>Přidejte Microsoft Edge pro Windows 10 a Microsoft Intune
 
@@ -94,7 +94,7 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazov
 
 ## <a name="troubleshooting"></a>Odstraňování potíží
 **Microsoft Edge verze 77 a novější pro Windows 10:**<br>
-Intune používá rozšíření pro správu Intune ke stažení a nasazení instalačního programu Microsoft Edge na přiřazená zařízení s Windows 10 a pak sdělí nastavení nasazení pro instalační program Microsoft Edge, který stáhne a nainstaluje prohlížeč Microsoft Edge. přímo ze sítě CDN. Odkažte na [požadavky pro rozšíření pro správu Intune](~/apps/intune-management-extension.md#prerequisites)a osvědčené postupy, které jsou uvedené v části přístup ke službě Azure Update a CDN, aby bylo zajištěno, že konfigurace sítě umožní přístup k těmto umístěním pro zařízení s Windows 10.
+Intune používá rozšíření pro správu Intune ke stažení a nasazení instalačního programu Microsoft Edge na přiřazená zařízení s Windows 10 a pak sdělí nastavení nasazení pro instalační program Microsoft Edge, který stáhne a nainstaluje prohlížeč Microsoft Edge. přímo ze sítě CDN. Odkažte na [požadavky pro rozšíření pro správu Intune](~/apps/intune-management-extension.md#prerequisites)a osvědčené postupy, které jsou uvedené v části přístup ke službě Azure Update a CDN, aby bylo zajištěno, že konfigurace sítě umožní přístup k těmto umístěním pro zařízení s Windows 10. Chcete-li kromě toho dovolit přístup k instalačním souborům ze sítě CDN pro instalaci prohlížeče, je nutné povolený přístup k koncovým bodům web Windows Update. Další informace najdete v tématu [Správa koncových bodů připojení pro Windows 10, verze 1809 – web Windows Update](https://docs.microsoft.com/windows/privacy/manage-windows-1809-endpoints#windows-update) a [koncových bodů sítě pro Microsoft Intune](~/fundamentals/intune-endpoints.md).
 
 ## <a name="next-steps"></a>Další kroky
 - [Přiřazení aplikací skupinám](~/apps/apps-deploy.md)

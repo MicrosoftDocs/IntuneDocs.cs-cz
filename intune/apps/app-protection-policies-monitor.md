@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d82813f1292c99cf248c56a102503413d2cb8fb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 000b1d04dd3f520b55b1d33545a8803e23bf8965
+ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507457"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889590"
 ---
 # <a name="how-to-monitor-app-protection-policies"></a>Jak monitorovat zásady ochrany aplikací
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -76,7 +76,7 @@ Můžete vyhledat konkrétního uživatele a zkontrolovat u něj stav dodržová
 - **Poslední synchronizace**: čas poslední synchronizace aplikace s Intune. 
 
 >[!NOTE]
-> Sloupec **Poslední synchronizace** představuje stejnou hodnotu jak v sestavě pro stav uživatele v konzole, tak v [sestavě pro vyexportované. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities-to-csv)zásady ochrany aplikací. Rozdíl je krátké zpoždění synchronizace mezi hodnotou ve dvou sestavách. 
+> Sloupec **Poslední synchronizace** představuje stejnou hodnotu jak v sestavě pro stav uživatele v konzole, tak v [sestavě pro vyexportované. csv](https://docs.microsoft.com/intune/app-protection-policies-monitor#export-app-protection-activities)zásady ochrany aplikací. Rozdíl je krátké zpoždění synchronizace mezi hodnotou ve dvou sestavách. 
 >
 > Čas, na který se odkazuje v poslední synchronizaci, je čas, kdy se naposledy viděla instance aplikace Intune. Když uživatel spustí aplikaci, může u této doby spuštění informovat službu Intune App Protection, v závislosti na tom, kdy se naposledy vrátila. Podívejte [se na časy intervalu opakování při vrácení se změnami zásad ochrany aplikací](https://docs.microsoft.com/en-us/intune/app-protection-policy-delivery). Pokud uživatel nepoužil tuto konkrétní aplikaci v intervalu Poslední vrácení se změnami (což je obvykle 30 minut z aktivního použití) a spustí aplikaci, pak:
 >
@@ -124,7 +124,7 @@ Uživatelé se zařízeními, která jsou označená pomocí kontroly podmíněn
 Stejné sestavy můžete najít v horní části okna **stavu ochrany aplikace** .
 
 > [!NOTE]
-> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím tak, že vyberete **klientské aplikace**@no__t**stav ochrany aplikace**-1  > **Sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a minimální verzi opravy zabezpečení Androidu. 
+> Intune poskytuje další pole pro vytváření sestav zařízení, včetně ID registrace aplikace, výrobce Androidu, modelu a verze opravy zabezpečení i modelu iOS. V Intune získáte přístup k těmto polím tak, že vyberete **klientské aplikace** > **stav ochrany aplikace** > **Sestava ochrany aplikací: iOS, Android**. Kromě toho tyto parametry pomůžou nakonfigurovat seznam **povolených** pro výrobce zařízení (Android), seznam **povolených** nastavení pro model zařízení (Android a iOS) a minimální verzi opravy zabezpečení Androidu. 
 
 K dispozici jsou další sestavy, které vám pomůžou se stavem dodržování zásad MAM. Chcete-li zobrazit tyto sestavy, vyberte **klientské aplikace** > **zpráva**o**stavu ochrany aplikace** > . 
 
