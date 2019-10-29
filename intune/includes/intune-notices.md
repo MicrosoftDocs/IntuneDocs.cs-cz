@@ -7,14 +7,28 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 9965c6e85173ea9958182be43b6c93d9578d534f
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 599c92d0fc00f2475bb93cda884b40862eb38575
+ms.sourcegitcommit: 259462591835f3607392aa6b179882dbac830a89
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749385"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72999426"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Naplánování změny: nastavení ' protokolování na straně serveru pro příkazy Siri se odebere z konzoly Intune. <!-- 5468501-->
+
+Chystáme se odebrat nastavení protokolování na straně serveru pro příkazy Siri z konzoly Intune s aktualizací z listopadu na službu Intune. Tato změna se zarovnává s Apple již odebraným nastavením na jejich straně.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Až se listopadu aktualizuje nebo 1911 zaměříme v polovině listopadu, zjistíte, že toto nastavení bylo z nabídky omezení zařízení (integrované aplikace) pro konfigurační profily pro iOS v konzole Intune odebrané. Může se zobrazit ve vašich zásadách a profilu správy cílového zařízení, ale nastavení nemá na vaše zařízení žádný vliv. Nepředpokládáme, že nebudeme mít velký dopad na funkčnost, protože v zařízení aktuálně nefunguje, i když ho vidíte v profilu správy.
+
+Můžete zvolit jednu ze dvou cest:
+- Pokud chcete toto nastavení odstranit z vašich zásad, můžete přejít na profil, který obsahuje toto nastavení, udělat si menší úpravu a zásadu Uložit. Zásada se přepočítá v back-endu a nastavení se odstraní z vašich zásad.
+- Pokud se rozhodnete, že tuto akci nechcete provést, koncoví uživatelé uvidí toto nastavení v profilu správy jejich zařízení, ale toto nastavení nebude mít žádný vliv.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Můžete provést akci podle výše uvedeného oddílu nebo ponechat zásadu tak, jak je. Až se tato změna ukáže, aktualizujeme naši stránku a dokumentaci co je nového.
 
 ### <a name="end-of-support-for-legacy-pc-management"></a>Konec podpory pro správu starších počítačů
 

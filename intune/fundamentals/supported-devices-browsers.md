@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/29/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9fec08511303c15a7197014fd80834d95948191
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 2bd9fe52bcaa6295d452ade59d6c3c32e1e81a67
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504885"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999690"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -89,6 +89,15 @@ Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 
 Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](../manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
+
+> [!Note]
+> Společnost Microsoft oznámila, že podpora Windows 7 končí od ledna 14 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
+
+> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7.](https://docs.microsoft.com/en-us/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
+
+> Microsoft Intune vyřadí podporu pro konzolu Intune založenou na Silverlightu 15. října 2020. Toto vyřazení zahrnuje koncovou podporu konzoly Silverlight nakonfigurovaného POČÍTAČového softwaru klienta (označuje se také jako agent pro počítače).
+
+> Další informace najdete v tématu [Microsoft Intune ukončení podpory pro konzolu správce na bázi Silverlight](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249) .
 
 <!--  ### Exchange ActiveSync management
 

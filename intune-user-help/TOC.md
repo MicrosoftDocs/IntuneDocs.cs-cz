@@ -6,7 +6,9 @@
 
 ## [Požadavky na heslo zařízení](password-does-not-meet-it-administrator-requirements.md)
 
-## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)
+## [Přihlášení k Portálu společnosti](sign-in-to-the-company-portal.md)  
+
+## [Instalace aplikace Mobile Threat Defense](set-up-mobile-threat-defense.md)  
 
 ## Použití zařízení s Androidem
 ### [Proč registrovat vaše zařízení s Androidem](why-enroll-android-device.md)

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/07/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -16,14 +16,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ea5fae72f6e2057ef0b03a7bd295085ed1ac3bbd
-ms.sourcegitcommit: 5807f4db4a45a093ce2fd6cb0c480bec384ec1ff
+ms.openlocfilehash: 4beb9c841cb2f4a5b7198fe031caa67da9e28842
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/19/2019
-ms.locfileid: "72601522"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999435"
 ---
-# <a name="in-development-for-microsoft-intune---october-2019"></a>Ve vývoji Microsoft Intune – říjen 2019
+# <a name="in-development-for-microsoft-intune---november-2019"></a>Ve vývoji Microsoft Intune – listopad 2019
 
 Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktualizace uživatelského rozhraní Intune a funkce, které jsou ve vývoji, ale ještě nejsou vydané. Kromě informací na této stránce:
 
@@ -57,6 +57,15 @@ Tato stránka vám umožní v rámci připravenosti a plánování vypsat aktual
  
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Správa aplikací
+
+### <a name="smime-support-for-microsoft-outlook-mobile----2669398----"></a>Podpora S/MIME pro Microsoft Outlook Mobile <!-- 2669398  -->
+Intune bude podporovat doručení podpisových a šifrovacích certifikátů S/MIME, které se dají používat s Outlook Mobile v iOS a Androidem. Související informace najdete v tématu [Nastavení e-mailu pro zařízení s iOS](~/configuration/email-settings-ios.md) a [Nastavení e-mailu pro zařízení s Androidem](~/configuration/email-settings-android.md)
+
+### <a name="custom-settings-support-for-macos-applications----4736278----"></a>Podpora vlastních nastavení pro aplikace macOS <!-- 4736278  -->
+Intune bude podporovat vlastní nastavení, což vám umožní přidat konkrétní klíče a hodnoty do existujícího souboru seznamu vlastností předvoleb (. plist) a nakonfigurovat tak aplikace macOS a zařízení. Ne všechny aplikace podporují spravované předvolby a v některých případech je možné spravovat jenom specifická nastavení. Nastavení se nasazují jenom přes kanál zařízení. Měli byste nahrávat jenom soubory seznamu vlastností nebo soubory. XML, které cílí na nastavení kanálu zařízení.
+
+### <a name="assignment-type-value-in-windows-company-portal----5459950----"></a>Hodnota typu přiřazení ve Windows Portál společnosti <!-- 5459950  -->
+Zobrazí se stránka **nainstalované aplikace** v aplikaci pro Windows portál společnosti se aktualizuje. Sloupec **Typ přiřazení** stránky **nainstalovaných aplikací** byl aktualizován tak, aby byl označen jako "vyžadován vaší organizací". Možné hodnoty jsou **Ano** nebo **ne** k určení požadovaných a dostupných aplikací. Tato změna se provádí v reakci na určitou nejasnost koncového uživatele. Další informace o portálu společnosti pro Windows najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](~/apps/company-portal-app.md).
 
 ### <a name="apply-dark-mode-in-ios-company-portal----4911422----"></a>Použití tmavého režimu v iOS Portál společnosti <!-- 4911422  -->
 Pro iOS Portál společnosti se plánuje tmavý režim. Budete moct stahovat firemní aplikace, spravovat zařízení a získávat podporu v barevném schématu podle vašeho výběru. Další informace o Portál společnosti iOS najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](../apps/company-portal-app.md).
@@ -93,15 +102,6 @@ Aplikace Portál společnosti zobrazí koncovým uživatelům další zprávy o 
 - Aplikace byla úspěšně nainstalována, ale vyžaduje restart.
 - Aplikace se právě instaluje, ale vyžaduje restart, aby bylo možné pokračovat.
 
-### <a name="assign-the-microsoft-edge-beta-for-macos----4678761----"></a>Přiřadit Microsoft Edge beta pro macOS <!-- 4678761  -->
-Do Intune pro zařízení macOS budete moct přidat a přiřadit nejnovější verzi Microsoft Edge beta. 
-
-Přiřazení Microsoft Edge beta pro zařízení macOS:
-1. V Intune vyberte **klientské aplikace** > **aplikace** > **Přidat aplikaci** > **Microsoft Edge-MacOS**. 
-1. Přiřaďte Microsoft Edge beta k určeným skupinám. Microsoft AutoUpdate (MAU) udržuje Microsoft Edge v aktuálním stavu. 
- 
-Další informace o Microsoft Edge najdete v tématu [Správa webového přístupu pomocí Microsoft Edge s Microsoft Intune](../apps/manage-microsoft-edge.md).
-
 ### <a name="configure-app-notification-content-for-organization-accounts----2576686---"></a>Konfigurace obsahu oznámení aplikace pro účty organizace <!-- 2576686 -->
 APLIKACE Intune na zařízeních s Androidem a iOS vám umožní řídit obsah oznámení aplikací pro účty organizace. Tato funkce bude vyžadovat podporu aplikací a nemusí být k dispozici pro všechny aplikace s podporou aplikací. Další informace o aplikaci najdete v tématu [co jsou zásady ochrany aplikací?](../apps/app-protection-policy.md)
 
@@ -109,27 +109,55 @@ APLIKACE Intune na zařízeních s Androidem a iOS vám umožní řídit obsah o
 <!-- ***********************************************-->
 ## <a name="device-configuration"></a>Konfigurace zařízení
 
-### <a name="new-device-firmware-configuration-interface-profile-for-devices-that-run-windows-10-and-later----2266073----"></a>Nový profil rozhraní pro konfiguraci firmwaru zařízení pro zařízení se systémem Windows 10 nebo novějším <!-- 2266073  -->
-V systému Windows 10 a novějších můžete vytvořit profil konfigurace zařízení pro řízení nastavení a funkcí: 
+### <a name="use-pkcs-certificates-with-wi-fi-profiles-on-windows-10-and-later-devices----3246388----"></a>Použití certifikátů PKCS s profily sítě Wi-Fi na zařízeních s Windows 10 a novějším <!-- 3246388  -->
+V současné době můžete ověřit profily Wi-Fi pro Windows pomocí certifikátů SCEP (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu > **Wi-Fi** pro Typ profilu > **Enterprise** > **typ protokolu EAP**). Certifikáty PKCS budete moct používat se profily Wi-Fi pro Windows. Tato funkce umožňuje uživatelům ověřovat profily sítě Wi-Fi pomocí nových nebo existujících profilů certifikátů PKCS ve vašem tenantovi. 
 
-1. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
-1. Pro platformu vyberte **Windows 10 a novější**. 
- 
-Nový typ profilu rozhraní pro konfiguraci firmwaru zařízení umožní, aby Intune spravovalo nastavení rozhraní UEFI (BIOS).
+Další informace o profilech sítě Wi-Fi najdete v tématu [Přidání nastavení Wi-Fi pro zařízení s Windows 10 a novějším v Intune](../configuration/wi-fi-settings-windows.md).
 
-Informace o aktuálních nastaveních, která můžete konfigurovat, najdete v tématu [použití funkcí a nastavení na zařízeních pomocí profilů zařízení v Microsoft Intune](../configuration/device-profiles.md).
+Platí pro:
+- Windows 10 a novější
 
-Tato funkce se vztahuje na Windows 10 RS5 (1809) a novější na vybraných zařízeních.
- 
+### <a name="new-exchangeactivesync-settings-when-creating-an-email-device-configuration-profile-on-ios-devices----4892824----"></a>Nové nastavení ExchangeActiveSync při vytváření profilu konfigurace e-mailového zařízení na zařízeních s iOS <!-- 4892824  --> 
+V zařízeních se systémem iOS/iPadOS můžete nakonfigurovat připojení e-mailu v profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro **> pro** platformy. pro typ profilu). 
+
+K dispozici jsou nová nastavení ExchangeActiveSync, včetně:
+- Vyberte služby, které se mají synchronizovat (nebo blokovat synchronizaci), jako je e-mail, kalendář a kontakty.
+- Povolí (nebo zablokuje) uživatelům změnu nastavení synchronizace pro tyto služby na svých zařízeních. 
+
+Pokud chcete zobrazit aktuální nastavení, přejděte na [Nastavení e-mailového profilu pro zařízení s iOS v Intune](../configuration/email-settings-ios.md).
+
+Platí pro:
+- iOS 13,0 a novější
+- iPadOS 13,0 a novější
+
+### <a name="prevent-users-from-adding-personal-google-accounts-to-android-enterprise-device-owner-and-dedicated-devices----5353228----"></a>Zabránit uživatelům v přidávání osobních účtů Google na vlastníka zařízení s Androidem Enterprise a vyhrazená zařízení <!-- 5353228  -->
+Uživatelům budete moct zabránit v vytváření osobních účtů Google na základě vlastníka zařízení s Androidem Enterprise a vyhrazených zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise.** pro > **jenom pro vlastníka zařízení > omezení zařízení** pro typ profilu > **nastavení uživatelé a účty**).
+
+Pokud chcete zobrazit aktuální nastavení, která můžete nakonfigurovat, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
+
+Platí pro:
+- Vlastník zařízení se systémem Android Enterprise
+- Zařízení se systémem Android Enterprise vyhrazená
+
+### <a name="server-side-logging-for-siri-commands-setting-is-removed-in-ios-device-restrictions-profile----5468501----"></a>Nastavení příkazů protokolování na straně serveru pro příkazy Siri se v profilu omezení zařízení s iOS odeberou. <!-- 5468501  -->
+Na zařízeních s iOS můžete vytvořit profily omezení zařízení, které nakonfigurují protokolování na straně serveru pro příkazy Siri (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro platformu. > **Omezení zařízení** pro typ profilu > **integrovaných aplikací**). Bude odebráno nastavení **protokolování na straně serveru pro příkazy Siri** .
+
+Toto nastavení se odebere z konzoly pro správu Intune. Toto nastavení nemá na zařízení žádný vliv, i když existující zásady s nakonfigurovaným nastavením budou pokračovat v zobrazování tohoto nastavení. Pokud chcete odebrat nastavení z existujících zásad, přečtěte si zásady, udělejte dílčí úpravu, uložte ji a zásady se aktualizují.
+
+Nastavení, která můžete konfigurovat, najdete v tématu [nastavení zařízení s iOS a iPadOS, které umožňuje povolit nebo zakázat funkce využívající Intune](../configuration/device-restrictions-ios.md).
+
+Platí pro:
+- iOS
+
 
 <!-- ***********************************************-->
-## <a name="device-enrollment"></a>Registrace zařízení
-
-### <a name="for-ios-devices-customize-the-enrollment-privacy-window-of-company-portal----4394993----"></a>V případě zařízení se systémem iOS upravte okno soukromí registrace Portál společnosti <!-- 4394993  -->
-Pomocí Markdownu budete moci přizpůsobit okno ochrany osobních údajů Portál společnosti, které koncoví uživatelé uvidí během registrace iOS. Konkrétně můžete přizpůsobit seznam věcí, které vaše organizace nemůže zobrazit nebo dělat na zařízení.
+<!--## Device enrollment-->
 
 <!-- ***********************************************-->
 ## <a name="device-management"></a>Správa zařízení
+
+### <a name="edit-device-name-value-for-autopilot-devices---2640074----"></a>Upravit hodnotu názvu zařízení pro zařízení s autopilotem<!-- 2640074  -->
+Budete moct upravit hodnotu název zařízení pro zařízení autopilotu připojená k Azure AD. Provedete to tak, že přejdete na **Intune** > **registrace zařízení** > **registraci systému windows** > **Windows autopilot** > **zařízení** > vyberte zařízení > změnit hodnotu **názvu zařízení** v pravém podokně. > **Uložit**.
 
 
 ### <a name="edit-the-group-tag-value-for-autopilot-devices---4816775---"></a>Úprava hodnoty značky skupiny pro zařízení autopilotu<!-- 4816775 -->
@@ -143,25 +171,38 @@ Budete moct upravit hodnotu **značky skupiny** pro zařízení autopilotu:
 ### <a name="target-macos-user-groups-to-require-jamf-management----4061739---"></a>Cílové skupiny uživatelů macOS, které vyžadují správu Jamf <!-- 4061739 -->
 Budete moct cílit na konkrétní skupiny uživatelů, aby se zařízení macOS mohla spravovat pomocí Jamf. Tento cíl vám umožní použít integraci Jamf dodržování předpisů pro podmnožinu zařízení macOS, zatímco ostatní zařízení se budou dál spravovat přes Intune. Cílení taky vám umožní postupně migrovat zařízení uživatelů z jednoho systému správy mobilních zařízení (MDM) do druhého.
 
-### <a name="deploy-software-updates-to-macos-devices----3194876---"></a>Nasazení aktualizací softwaru do zařízení macOS <!-- 3194876 -->
-Aktualizace softwaru budete moct nasadit do skupin zařízení macOS. Tato funkce zahrnuje kritické, firmware, konfigurační soubor a další aktualizace. Aktualizace můžete odeslat při dalším vrácení se změnami zařízení. Případně můžete vybrat týdenní plán pro nasazení aktualizací do nebo z období, které jste nastavili. 
+<!-- ***********************************************-->
+## <a name="intune-apps"></a>Aplikace Intune
 
-Tato funkce pomůže, když budete chtít aktualizovat zařízení mimo standardní pracovní dobu nebo mimo pracovní dobu, kdy je vaše oddělení technické podpory plně personální. Zobrazí se také podrobná sestava všech zařízení macOS, ve kterých jsou nasazené aktualizace. Chcete-li zobrazit stav konkrétní aktualizace, můžete přejít k sestavě podle zařízení.
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349----"></a>Vylepšené možnosti registrace macOS v Portál společnosti <!-- 5074349  -->
+Portál společnosti pro registraci v macOS bude mít jednodušší proces registrace, který bude lépe zarovnávat Portál společnosti možnosti registrace zařízení s iOS. Uživatelům zařízení se zobrazí:  
+
+* Elegantní uživatelské rozhraní.  
+* Vylepšený kontrolní seznam pro registraci.  
+* Informace o tom, jak zaregistrovat svá zařízení.  
+* Vylepšené možnosti řešení potíží.  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857----"></a>Vylepšený návrh kontrolního seznamu v aplikaci Portál společnosti App pro Android<!-- 5550857  -->
+Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android se bude aktualizovat s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS.
 
 <!-- ***********************************************-->
 ## <a name="monitoring-and-troubleshooting"></a>Monitorování a řešení potíží
-
-### <a name="android-report-on-the-devices-overview-page----2984353----"></a>Sestava Android na stránce s přehledem zařízení <!-- 2984353  -->
-Přidáme novou sestavu na stránku **Přehled zařízení** . V této sestavě se zobrazuje počet zaregistrovaných zařízení s Androidem v jednotlivých řešeních pro správu zařízení. V grafu se zobrazuje počet zařízení pro pracovní profil, plně spravovaný, vyhrazený a registrovaný Správce zařízení. 
-
-Pokud chcete zobrazit sestavu, vyberte  > **zařízení** **Intune**  > **Přehled**.
 
 ### <a name="updated-support-experience-------5012398------"></a>Aktualizované prostředí podpory   <!--  5012398    -->
 V rámci pokračujících vylepšení aktualizujeme prostředí podpory v konzole pro Intune.  Vyřešíme vyhledávání v konzole a zpětnou vazbu k běžným problémům a my Zjednodušme pracovní postup, abychom kontaktovali podporu.     
 
 <!-- ***********************************************-->
-<!--## Security-->
+## <a name="role-based-access-control"></a>Řízení přístupu na základě role
 
+### <a name="duplicate-custom-or-built-in-roles----1081938---"></a>Duplicitní vlastní nebo předdefinované role <!-- 1081938 -->
+Budete moct zkopírovat předdefinované a vlastní role. Provedete to tak, že přejdete na > **role** **Intune** > **všechny role** > zvolit roli v seznamu > **Duplikovat**. Ujistěte se, že jste zadali nový název, který je jedinečný.
+
+<!-- ***********************************************-->
+
+## <a name="security"></a>Zabezpečení
+
+### <a name="bitlocker-key-rotation--------2564951--------"></a>Střídání klíčů BitLockeru     <!-- 2564951      -->
+K otočení klíčů pro obnovení BitLockeru pro spravovaná zařízení s Windows verze 1909 nebo novější budete moct použít Intune. 
 
 <!-- ***********************************************-->
 ## <a name="notices"></a>Sdělení

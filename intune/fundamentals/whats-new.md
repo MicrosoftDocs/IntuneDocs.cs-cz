@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/23/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e88aa93e3b3e21f16271049f66bbdc4b927383b
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 8d9bbe916314d5571dccf3c073f735c6448226e6
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915796"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999493"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -54,10 +54,33 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 -->  
 
 
-<!-- ########################## -->
+## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019
 
+### <a name="app-management"></a>Správa aplikací 
+
+#### <a name="dark-mode-for-ios-company-portal----4911422---"></a>Tmavý režim pro iOS Portál společnosti <!-- 4911422 -->
+Pro iOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat firemní aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim. Další informace najdete v tématu [představení tmavého režimu Microsoft Intune portál společnosti pro iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Další informace o Portál společnosti pro iOS najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](~/apps/company-portal-app.md).
+
+#### <a name="android-company-portal-enforced-minimum-app-version----2378776---"></a>Minimální verze aplikace pro Android Portál společnosti vynutila <!-- 2378776 -->
+Pomocí nastavení **Minimální verze portál společnosti** zásady ochrany aplikací můžete zadat konkrétní minimální verzi portál společnosti, která se vynutila na zařízení koncového uživatele. Toto nastavení podmíněného spuštění umožňuje **blokovat přístup**, **Vymazat data**nebo **upozorňovat** jako na možné akce, pokud není hodnota splněna. Možné formáty pro tuto hodnotu se řídí vzorem *[hlavní]. [ Vedlejší]* , *[hlavní]. [ Vedlejší]. [Build]* nebo *[hlavní]. [ Vedlejší]. [Build]. [Revize]* . 
+
+Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurováno, bude mít vliv na každého koncového uživatele, který získá 5.0.4560.0 verze portál společnosti a jakékoli budoucí verze portál společnosti. Toto nastavení nebude mít žádný vliv na uživatele, kteří používají verzi Portál společnosti, která je starší než verze, ve které byla tato funkce vydána. Koncoví uživatelé, kteří používají automatické aktualizace aplikace na jejich zařízení, nejspíš neuvidí žádná dialogová okna této funkce, protože budou pravděpodobně na nejnovější verzi Portál společnosti. Toto nastavení platí jenom pro Android s ochranou aplikací pro zapsaná a neregistrovaná zařízení. Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – podmíněné spuštění](~/apps/app-protection-policy-settings-android.md#conditional-launch).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### <a name="device-management"></a>Správa zařízení 
+#### <a name="intune-supports-ios-11-and-later----4665324-idready-wnready---"></a>Intune podporuje iOS 11 a novější. <!-- 4665324 idready wnready -->
+Registrace a Portál společnosti v Intune teď podporují iOS verze 11 a novější. Starší verze se nepodporují.
+
+### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
+
+#### <a name="updated-support-experience------5012398---"></a>Aktualizované prostředí podpory   <!-- 5012398 -->
+
+Prostředí v konzole pro [Získání pomoci a podpory pro Intune](get-support.md) se aktualizuje a zjednodušuje.  Vylepšili jsme vyhledávání v konzole a zpětnou vazbu pro běžné problémy a pracovní postup, pomocí kterého se obrátíte na podporu. Při otevírání problému podpory uvidíte odhady v reálném čase, kdy můžete očekávat zpětné volání nebo e-mailovou odpověď, a zákazníci s plánem Premier a Unified support můžou pro svůj problém snadno zadat závažnost, abyste mohli rychleji získat podporu.
+
+<!-- ########################## -->
 ## <a name="week-of-october-21-2019"></a>Týden od 21. října 2019
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="microsoft-365-device-management"></a>Správa zařízení Microsoft 365
 
 #### <a name="improved-administration-experience-in-microsoft-365-device-management"></a>Vylepšené možnosti správy v Microsoft 365 správě zařízení
@@ -70,10 +93,11 @@ Aktualizované a zjednodušené prostředí pro správu je teď všeobecně dost
 
 Další informace o těchto vylepšeních najdete v [blogovém příspěvku Enterprise mobility + Security](https://go.microsoft.com/fwlink/?linkid=2109094) na webu Microsoft Tech Community.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="add-mobile-threat-defense-apps-to-unenrolled-devices----3005337---"></a>Přidání aplikací ochrany před mobilními hrozbami do neregistrovaných zařízení <!-- 3005337 -->
-Můžete vytvořit zásady ochrany aplikací Intune, které můžou blokovat nebo selektivně vymazat podniková data uživatelů na základě stavu zařízení. Stav zařízení se určí pomocí vašeho zvoleného řešení ochrany před mobilními hrozbami (MTD). Tato funkce existuje v současnosti se zaregistrovanými zařízeními Intune jako nastavením dodržování předpisů pro zařízení. Díky této nové funkci rozšiřujeme detekci hrozeb od dodavatele ochrany před mobilními hrozbami, aby fungovalo na nezaregistrovaných zařízeních. Další informace najdete v tématu [Vytvoření zásady ochrany aplikací ochrany před mobilními hrozbami v Intune](~/protect/mtd-app-protection-policy.md).
+Můžete vytvořit zásady ochrany aplikací Intune, které můžou blokovat nebo selektivně vymazat podniková data uživatelů na základě stavu zařízení. Stav zařízení se určí pomocí vašeho zvoleného řešení ochrany před mobilními hrozbami (MTD). Tato funkce existuje v současnosti se zaregistrovanými zařízeními Intune jako nastavením dodržování předpisů pro zařízení. Díky této nové funkci rozšiřujeme detekci hrozeb od dodavatele ochrany před mobilními hrozbami, aby fungovalo na nezaregistrovaných zařízeních. V Androidu Tato funkce vyžaduje nejnovější Portál společnosti na zařízení. V systému iOS bude tato funkce dostupná pro použití v případě, že aplikace integrují nejnovější sadu Intune SDK (v 12.0.15 +). V případě, že první aplikace přijme nejnovější sadu Intune SDK, aktualizujeme téma Co je nového. Zbývající aplikace budou k dispozici na určitou bázi. Další informace najdete v tématu [Vytvoření zásady ochrany aplikací ochrany před mobilními hrozbami v Intune](~/protect/mtd-app-protection-policy.md).
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
@@ -93,6 +117,8 @@ Nyní se můžete rozhodnout, že se stránka stavu registrace zobrazí jenom na
 
 Pokud se chcete podívat na nový přepínač, vyberte > **Intune** **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace** > **vytvořit profil** > **Nastavení** ** > Zobrazit stránku se zařízeními zřízenými při prvním zapnutí prostředí (OOBE)** .
 
+
+<!-- ########################## -->
 ## <a name="week-of-october-14-2019"></a>Týden od 14. října 2019
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

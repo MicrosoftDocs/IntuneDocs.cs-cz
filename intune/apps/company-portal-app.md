@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/10/2019
+ms.date: 10/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5d13511948d0dbfa19b3b3f1fda7faea3e4f12b3
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915757"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999526"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
@@ -136,6 +136,10 @@ Intune podporuje ověřování osobních identit (PIV) a služby Common Access C
 > Uživateli se zobrazí pokyny k odvozeným přihlašovacím údajům na základě odkazu, který jste zadali přes Intune.
 
 Další informace o odvozených přihlašovacích údajích pro zařízení s iOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](~/protect/derived-credentials.md).
+
+## <a name="dark-mode-for-ios-company-portal"></a>Tmavý režim pro iOS Portál společnosti
+
+Pro iOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat firemní aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim. 
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/27/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 62a3f9ee2cec41f14e450158ab8ad02e1a3a2ea2
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 882c542d6a1d981b9924bb33eee40f03b41689f7
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785677"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "72999475"
 ---
 # <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Selektivní vymazání dat pomocí zásad ochrany aplikací s podmíněnými spouštěcími akcemi v Intune
 
@@ -84,8 +84,11 @@ Pro Android budete moci pomocí rozevíracího seznamu **Nastavení** nakonfigur
 - Minimální verze opravy
 - Výrobci zařízení
 - Ověření zařízení SafetyNet
-- Kontrola ohrožení aplikací
+- Vyžadovat kontrolu hrozeb u aplikací
+- Minimální verze Portál společnosti
 - Maximální povolená úroveň hrozby pro zařízení
+
+Pomocí **Minimální verze portál společnosti**můžete zadat konkrétní minimální verzi portál společnosti, která se vynutila na zařízení koncového uživatele. Toto nastavení podmíněného spuštění umožňuje nastavit hodnoty pro **blokování přístupu**, **vymazání dat**a **Upozornění** jako na možné akce, když se jednotlivá hodnota nesplní. Možné formáty pro tuto hodnotu se řídí vzorem *[hlavní]. [ Vedlejší]* , *[hlavní]. [ Vedlejší]. [Build]* nebo *[hlavní]. [ Vedlejší]. [Build]. [Revize]* . Vzhledem k tomu, že někteří koncoví uživatelé nemusí preferovat vynucenou aktualizaci aplikací na místě, může být při konfiguraci tohoto nastavení ideální možnost upozornění. Obchod Google Play je dobrým úkolem, který odesílá jenom rozdílové bajty pro aktualizace aplikací, ale může to být i velké množství dat, které uživatel nemusí použít, pokud se v době aktualizace data používají. Vynucení aktualizace a stažení aktualizované aplikace může vést k neočekávaným poplatkům za data v době aktualizace. Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurováno, bude mít vliv na každého koncového uživatele, který získá 5.0.4560.0 verze portál společnosti a jakékoli budoucí verze portál společnosti. Toto nastavení nebude mít žádný vliv na uživatele, kteří používají verzi Portál společnosti, která je starší než verze, ve které byla tato funkce vydána. Koncoví uživatelé, kteří používají automatické aktualizace aplikace na jejich zařízení, nejspíš neuvidí žádná dialogová okna této funkce, protože budou pravděpodobně na nejnovější verzi Portál společnosti. Toto nastavení platí jenom pro Android s ochranou aplikací pro zapsaná a neregistrovaná zařízení.
 
 Pokud chcete použít nastavení **Výrobci zařízení**, zadejte seznam výrobců zařízení s Androidem oddělených středníkem. Výrobce zařízení s Androidem najdete v nastavení zařízení.<br>
 Příklad zadání: *Výrobce A;Výrobce B* 
