@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d9bbe916314d5571dccf3c073f735c6448226e6
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 0faa7c7ec70ce7647a6a91ae732d8b15878964b7
+ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999493"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057628"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -67,8 +67,27 @@ Pomocí nastavení **Minimální verze portál společnosti** zásady ochrany ap
 Nastavení **Minimální verze portál společnosti** , pokud je nakonfigurováno, bude mít vliv na každého koncového uživatele, který získá 5.0.4560.0 verze portál společnosti a jakékoli budoucí verze portál společnosti. Toto nastavení nebude mít žádný vliv na uživatele, kteří používají verzi Portál společnosti, která je starší než verze, ve které byla tato funkce vydána. Koncoví uživatelé, kteří používají automatické aktualizace aplikace na jejich zařízení, nejspíš neuvidí žádná dialogová okna této funkce, protože budou pravděpodobně na nejnovější verzi Portál společnosti. Toto nastavení platí jenom pro Android s ochranou aplikací pro zapsaná a neregistrovaná zařízení. Další informace najdete v tématu [nastavení zásad ochrany aplikací pro Android – podmíněné spuštění](~/apps/app-protection-policy-settings-android.md#conditional-launch).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### <a name="device-management"></a>Správa zařízení 
-#### <a name="intune-supports-ios-11-and-later----4665324-idready-wnready---"></a>Intune podporuje iOS 11 a novější. <!-- 4665324 idready wnready -->
+
+### <a name="microsoft-365-device-management"></a>Správa zařízení Microsoft 365
+
+#### <a name="introducing-endpoint-security-node-in-microsoft-365-device-management-------5630102---"></a>Představujeme uzel zabezpečení koncového bodu v Microsoft 365 správě zařízení    <!-- 5630102 -->
+
+Uzel **zabezpečení koncového bodu** je teď v https://devicemanagement.microsoft.com všeobecně dostupný v Microsoft 365 pracovní prostor pro správu zařízení, který seskupuje možnosti pro zabezpečení koncových bodů, jako jsou:
+
+- Směrné plány zabezpečení: předem nakonfigurovaná skupina nastavení, která vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které Microsoft doporučuje.
+
+- Úkoly zabezpečení: Využijte výhod správy hrozeb a ohrožení zabezpečení ATPs v programu Microsoft Defender a použijte Intune k nápravě slabých míst koncových bodů.
+
+- Microsoft Defender ATP: Integrovaná Rozšířená ochrana před internetovými útoky v programu Microsoft Defender (ATP), která umožňuje zabránit narušení zabezpečení.
+
+Tato nastavení budou nadále přístupná z jiných použitelných uzlů, jako jsou zařízení, a aktuálně nakonfigurovaný stav bude stejný bez ohledu na to, kde máte přístup k těmto možnostem a tyto funkce povolíte.
+
+Další informace o těchto vylepšeních najdete v [blogovém příspěvku o úspěchu pro zákazníky v Intune](https://aka.ms/Endpoint_security_node) na webu Microsoft Tech Community.
+
+### <a name="device-management"></a>Správa zařízení
+
+#### <a name="intune-supports-ios-11-and-later----4665324----"></a>Intune podporuje iOS 11 a novější. <!-- 4665324  -->
+
 Registrace a Portál společnosti v Intune teď podporují iOS verze 11 a novější. Starší verze se nepodporují.
 
 ### <a name="monitor-and-troubleshoot"></a>Monitorování a odstraňování potíží
