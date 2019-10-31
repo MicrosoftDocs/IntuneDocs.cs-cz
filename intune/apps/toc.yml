@@ -78,6 +78,8 @@
               href: lob-apps-macos.md
             - name: Správa aplikací Win32
               href: apps-win32-app-management.md
+            - name: Aplikace Win32 – zařízení v režimu S
+              href: apps-win32-s-mode.md
         - name: Přidání specifických aplikací
           items:
             - name: Aplikace Portál společnosti
