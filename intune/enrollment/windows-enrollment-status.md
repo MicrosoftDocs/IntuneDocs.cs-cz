@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d2a6b427552e545421e329b900833c889e67bf35
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503026"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143168"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -55,7 +55,8 @@ Můžete také nastavit pořadí priority pro každý profil na účet pro konfl
 <tr><td>Dovolit uživatelům resetovat zařízení, pokud dojde k chybě instalace<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>resetovat zařízení</b> .<td>Tlačítko <b>resetovat zařízení</b> se nezobrazí, pokud dojde k chybě instalace.
 <tr><td>Povolí uživatelům používat zařízení, pokud dojde k chybě instalace.<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>pokračovat</b> .<td>Pokud dojde k chybě instalace, tlačítko <b>pokračovat</b> se nezobrazí.
 <tr><td>Zobrazit chybu časového limitu v případě, že instalace trvá déle než zadaný počet minut<td colspan="2">Zadejte počet minut, po které se má čekat na dokončení instalace. Je zadaná výchozí hodnota 60 minut.
-<tr><td>Zobrazit vlastní zprávu, když dojde k chybě<td>Je k dispozici textové pole, kde můžete zadat vlastní zprávu, která se zobrazí, pokud dojde k chybě instalace.<td>Zobrazí se výchozí zpráva: <br>@no__t – 0Installation překročil časový limit nastavený vaší organizací. Zkuste to znovu nebo se obraťte na pracovníky podpory IT a požádejte ho o pomoc. <b> @ no__t-1<tr><td>Dovolit uživatelům shromažďovat protokoly o chybách instalace<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>shromáždit protokoly</b> . <br>Pokud uživatel klikne na toto tlačítko, zobrazí se výzva k výběru umístění pro uložení souboru protokolu <b>MDMDiagReport. cab.</b><td>Pokud dojde k chybě instalace, tlačítko <b>shromáždit protokoly</b> se nezobrazí.
+<tr><td>Zobrazit vlastní zprávu, když dojde k chybě<td>Je k dispozici textové pole, kde můžete zadat vlastní zprávu, která se zobrazí, pokud dojde k chybě instalace.<td>Zobrazí se výchozí zpráva: <br>Instalace <b>překročila časový limit nastavený vaší organizací. Zkuste to znovu, nebo se obraťte na pracovníky podpory IT a požádejte ho o pomoc.<b>
+<tr><td>Dovolit uživatelům shromažďovat protokoly o chybách instalace<td>Pokud dojde k chybě instalace, zobrazí se tlačítko <b>shromáždit protokoly</b> . <br>Pokud uživatel klikne na toto tlačítko, zobrazí se výzva k výběru umístění pro uložení souboru protokolu <b>MDMDiagReport. cab.</b><td>Pokud dojde k chybě instalace, tlačítko <b>shromáždit protokoly</b> se nezobrazí.
 <tr><td>Zablokovat používání zařízení, dokud se tyto požadované aplikace neinstalují, pokud jsou přiřazené uživateli/zařízení<td colspan="2">Vyberte <b>vše</b> nebo <b>vybrané</b>. <br><br>Pokud <b>vyberete</b> tuto možnost, zobrazí se tlačítko <b>vybrat aplikace</b> , které vám umožní vybrat, které aplikace se musí nainstalovat, než zařízení povolí.
 </table>
 
@@ -190,7 +191,6 @@ Níže jsou uvedené známé problémy.
 - Když se profil ESP zakáže, neodebere se zásada protokolu ESP ze zařízení a uživatelé budou při prvním přihlášení do zařízení získat protokol ESP. Zásada není odebrána, pokud je profil protokolu ESP zakázán. Chcete-li zakázat protokol ESP, je nutné nasadit OMA-URI. Pokyny k zakázání protokolu ESP pomocí OMA-URI najdete výše. 
 - Čekání na restartování bude vždy způsobit časový limit. K vypršení časového limitu dojde, protože je nutné restartovat zařízení. Aby bylo možné dokončit položku sledovanou na stránce stavu registrace, je nutné restartovat počítač. Restartování způsobí, že se stránka stavu registrace ukončí a po restartování zařízení nevstoupí v nastavení účtu po restartování.  Zvažte nevyžadování restartování při instalaci aplikace. 
 - Restartování během instalace zařízení vynutí, aby uživatel před přechodem ke fázi nastavení účtu zadal svoje přihlašovací údaje. Přihlašovací údaje uživatele se během restartování neuchovávají. Uživatel musí zadat své přihlašovací údaje, aby mohla stránka stavu registrace pokračovat. 
-- Certifikáty SCEP se zásadami Windows Hello pro firmy způsobí vypršení časového limitu, protože uživatel nemůže dokončit konfiguraci kódu PIN Hello, aby bylo možné zajistit soutěž na instalaci certifikátu SCEP.  Žádné alternativní řešení. Oprava ETA je léto 2019. 
 - Při registraci pracovního a školního účtu ve verzích Windows 10, které jsou nižší než 1903, se na stránce Stav registrace vždycky vyprší časový limit. Stránka stavu registrace čeká na dokončení registrace Azure AD. Problém je opravený ve Windows 10 verze 1903 a novějším.  
 - Hybridní nasazení Azure AD autopilotu s protokolem ESP trvá déle, než je doba trvání definovaná v profilu ESP. V hybridních nasazeních autopilotu služby Azure AD bude protokol ESP trvat 40 minut déle než hodnota nastavená v profilu ESP. Tato prodleva udává čas, po který konektor on-Prem AD vytvoří nový záznam zařízení ve službě Azure AD. 
 - Přihlašovací stránka Windows není předem naplněná uživatelským jménem v režimu řízeného uživatelem automatického pilotního nasazení. Pokud dojde k restartování během fáze instalace zařízení v protokolu ESP:

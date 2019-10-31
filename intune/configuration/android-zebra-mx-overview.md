@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 13e5e7d49ec7e808f7cb5ba419dc881717539564
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3e5804b415d26b07944c500b0158cf84a2d4412c
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496039"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182861"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
 
@@ -30,7 +30,7 @@ ms.locfileid: "72496039"
 
 Intune obsahuje bohatou sadu funkcí, včetně správy aplikací a konfigurace nastavení zařízení. Tyto integrované funkce a nastavení spravují zařízení s Androidem vyráběná technologiemi Zebra, označovaná také jako "Zebra zařízení".
 
-V zařízeních s Androidem použijte k přizpůsobení nebo přidání dalších nastavení specifických pro Zebra profily pro **rozšíření mobility (mobility)** .
+Na zařízeních s Androidem použijte profily **MX (Zebra)** pro přizpůsobení nebo přidání dalších nastavení specifických pro zebra.
 
 V tomto článku se dozvíte, jak používat rozšíření Zebra mobility (MX) na zařízeních Zebra v Microsoft Intune.
 
@@ -52,6 +52,7 @@ Pomocí Intune můžete zaregistrovat zařízení Zebra, abyste mohli do zaříz
 - Ujistěte se, že máte nejnovější verzi aplikace StageNow Desktop z technologií zebra.
 - Ujistěte se, že jste zkontrolovali [úplnou matrici funkcí Zebra](http://techdocs.zebra.com/mx/compatibility) (otevře web Zebra), abyste potvrdili, že profily, které vytvoříte, jsou kompatibilní s verzí MX zařízení, verzí operačního systému a modelu.
 - Některá zařízení, například TC20/25 zařízení, nepodporují všechny dostupné funkce MX v StageNow. Nezapomeňte zkontrolovat [Zebraou matrici funkcí](http://techdocs.zebra.com/mx/tc2x/) (otevře web Zebra), kde najdete aktualizované informace o podpoře.
+
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Krok 1: Instalace nejnovější aplikace Portál společnosti
 
@@ -150,7 +151,7 @@ V Intune vytvořte profil konfigurace zařízení:
 
 Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
-Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete **portál společnosti aplikace**@no__t**nastavení**-1  > **synchronizace**. 
+Až zařízení příště zkontroluje aktualizace konfigurace, nasadí se do zařízení profil MX. Zařízení se po registraci zařízení synchronizují s Intune a přibližně každých 8 hodin. Můžete taky [Vynutit synchronizaci v Intune](../remote-actions/device-sync.md). Nebo na zařízení otevřete Portál společnosti > **Nastavení** **aplikace** > **synchronizace**. 
 
 ## <a name="update-a-zebra-mx-configuration-after-its-assigned"></a>Aktualizace konfigurace MX Zebra po jejím přiřazení
 

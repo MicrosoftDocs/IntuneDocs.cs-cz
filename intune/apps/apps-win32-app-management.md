@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/04/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8d6fb5a703aad09592bfac3b5a16390389059d33
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cf860056c3918f7ae90e6b9b850a98a37dcfd56e
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498030"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143213"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Samostatná verze Intune – Správa aplikací Win32
 
@@ -139,7 +139,7 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
 
 ### <a name="step-4-configure-app-installation-details"></a>Krok 4: Konfigurace podrobností instalace aplikace
 1. V podokně **Přidat aplikaci** vyberte **Program** a nakonfigurujte příkazy pro instalaci a odebrání aplikace.
-2. Přidejte příkazový řádek pro dokončení aplikace, abyste mohli nainstalovat aplikaci. 
+2. Pokud chcete nakonfigurovat **příkaz Install**, přidejte k instalaci aplikace úplný příkazový řádek instalace. 
 
     Například pokud je název vaší aplikace **MyApp123**, přidejte následující:<br>
     `msiexec /p “MyApp123.msp”`<p>
@@ -148,9 +148,11 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     V příkazu výše podporuje balíček `ApplicationName.exe` argument příkazu `/quiet`.<p> 
     Pro konkrétní argumenty podporované balíčkem aplikace se obraťte na dodavatele aplikace.
 
-3. Přidejte příkazový řádek pro dokončení odinstalace, abyste mohli aplikaci odinstalovat na základě identifikátoru GUID aplikace. 
+3. Chcete-li provést konfiguraci **příkazu Uninstall**, přidejte k odinstalaci aplikace na základě identifikátoru GUID aplikace úplný příkazový řádek pro odinstalaci. 
 
     Například: `msiexec /x “{12345A67-89B0-1234-5678-000001000000}”`
+
+4. Nastavte **chování pro instalaci** buď na **systém** , nebo na **uživatele**.
 
     > [!NOTE]
     > Aplikaci Win32 můžete nakonfigurovat tak, aby se nainstalovala v kontextu **uživatele** nebo **systému**. Kontext **Uživatel** se vztahuje pouze k danému uživateli. Kontext **Systém** se vztahuje ke všem uživatelům zařízení s Windows 10.
@@ -159,7 +161,13 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     > 
     > Instalace a odinstalace aplikace Win32 se spustí v části oprávnění správce (ve výchozím nastavení), když je aplikace nastavená tak, aby se nainstalovala v uživatelském kontextu, a koncový uživatel na zařízení má oprávnění správce.
 
-4. Až to budete mít, vyberte **OK**.
+5. Pokud chcete nakonfigurovat **chování při restartování zařízení**, vyberte jednu z následujících možností:
+    - **Určete chování na základě návratových kódů**: tuto možnost vyberte, pokud chcete zařízení restartovat podle nastavení konfigurace [návratových kódů](~/apps/apps-win32-app-management.md#step-7-configure-app-return-codes) .
+    - **Žádná konkrétní akce**: tuto možnost vyberte, pokud chcete potlačit restartování zařízení během instalace aplikace založené na MSI.
+    - **Instalace aplikace může vynutit restartování zařízení**: tuto možnost vyberte, pokud chcete, aby se instalace aplikace mohla dokončit bez potlačení restartování.
+    - **Intune vynutí povinné restartování zařízení**: tuto možnost vyberte, když chcete zařízení po úspěšné instalaci aplikace vždycky restartovat.
+
+6. Až to budete mít, vyberte **OK**.
 
 ### <a name="step-5-configure-app-requirements"></a>Krok 5: Konfigurace požadavků aplikace
 
@@ -279,10 +287,11 @@ Následující kroky obsahují pokyny k přidání aplikace pro Windows do Intun
     - **Povinné**: Aplikace se nainstaluje na zařízení ve vybraných skupinách.
     - **Odinstalovat**: Aplikace se odinstaluje ze zařízení ve vybraných skupinách.
 4. Vyberte **Zahrnuté skupiny** a přiřaďte skupiny, které budou tuto aplikaci používat.
-5. V podokně **Přiřadit** vyberte **OK**. Tím výběr zahrnutých skupin dokončíte.
-6. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
-7. V podokně **Přidat skupinu** vyberte **OK**.
-8. V podokně **Přiřazení** aplikace vyberte **Uložit**.
+5. V podokně **přiřadit** vyberte možnost přiřazení na základě uživatelů nebo zařízení. Když zvolíte přiřazení, můžete také zvolit **činnost koncového uživatele**. **Prostředí koncového uživatele** umožňuje nastavit **oznámení koncovým uživatelům**, **dobu odkladu pro restartování**, **dostupnost**a **konečný termín instalace**. Další informace najdete v tématu **Nastavení dostupnosti a oznámení aplikace Win32**.
+6. výběrem **OK** dokončete výběr zahrnutých skupin.
+7. Pokud se rozhodnete některé skupiny uživatelů vyloučit, aby nebyly přiřazením aplikace ovlivněné, klikněte na **Vyloučit skupiny**.
+8. V podokně **Přidat skupinu** vyberte **OK**.
+9. V podokně **Přiřazení** aplikace vyberte **Uložit**.
 
 V tuto chvíli jste dokončili kroky pro přidání aplikace Win32 do Intune. Informace o přiřazení a monitorování aplikace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](apps-deploy.md) a [Monitorování informací a přiřazení aplikace pomocí Microsoft Intune](apps-monitor.md).
 
@@ -329,8 +338,38 @@ Následující obrázek upozorní koncového uživatele, že se na zařízení p
 
 ![Snímek obrazovky oznamující uživateli, že probíhají změny aplikace](./media/apps-win32-app-management/apps-win32-app-09.png)    
 
+## <a name="set-win32-app-availability-and-notifications"></a>Nastavení dostupnosti a oznámení aplikace Win32
+Můžete nakonfigurovat čas zahájení a konečný termín pro aplikaci Win32. V počátečním čase rozšíření pro správu Intune spustí stažení obsahu aplikace a uloží je do mezipaměti pro požadovaný záměr. Aplikace se nainstaluje v čase konečného termínu. V případě dostupných aplikací se čas spuštění určí při zobrazení aplikace v Portál společnosti a obsah se stáhne, když koncový uživatel požádá aplikaci z Portál společnosti. Navíc můžete povolit dobu odkladu pro restartování. 
+
+Nastavte dostupnost aplikace na základě data a času požadované aplikace pomocí následujících kroků:
+
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. V okně **Intune** vyberte **klientské aplikace** > **aplikace**.
+3. Vyberte ze seznamu existující **aplikaci pro Windows (Win32)** . 
+4. V okně aplikace vyberte **přiřazení** > **Přidat skupinu**. 
+5. **Typ přiřazení** nastavte na **Povinné**. Všimněte si, že dostupnost aplikace se dá nastavit na základě typu přiřazení. **Typ přiřazení** může být **povinný**, **dostupný pro zaregistrovaná zařízení**nebo **odinstalovat**.
+6. Vyberte **zahrnuté skupiny** a určete, ke které skupině uživatelů se aplikace přiřadí. Zobrazí se okno **přiřadit** .
+7. Nastavte nastavit **tuto aplikaci jako povinnou pro všechny uživatele** na **Ano**.
+
+    > [!NOTE]
+    > Mezi možnosti **typu přiřazení** patří následující:<br>
+    > - **Požadováno**: tuto aplikaci si můžete **nastavit jako povinnou pro všechny uživatele** nebo **nastavit tuto aplikaci jako povinnou na všech zařízeních**.<br>
+    > - **K dispozici pro zaregistrovaná zařízení**: tuto aplikaci můžete nastavit tak, aby byla **dostupná pro všechny uživatele s registrovanými zařízeními**.<br>
+    > - **Odinstalace**: můžete si vybrat možnost ***odinstalovat tuto aplikaci pro všechny uživatele** nebo **odinstalovat tuto aplikaci pro všechna zařízení**.
+
+8. Chcete-li upravit možnosti **prostředí koncového uživatele** , vyberte možnost **Upravit**.
+9. V okně **Upravit přiřazení** nastavte **oznámení pro uživatele Ender** , aby se **zobrazila všechna informační oznámení**. Všimněte si, že můžete nastavit **oznámení koncových uživatelů** a **Zobrazit všechna informační oznámení**, **Zobrazit informační zprávy pro restartování počítače**nebo **Skrýt všechna informační oznámení**.
+10. Nastavte **Dostupnost aplikace** na **konkrétní datum a čas** a vyberte datum a čas. Toto datum a čas určuje, kdy se aplikace stáhne do zařízení koncových uživatelů. 
+11. Nastavte **konečný termín instalace aplikace** na **konkrétní datum a čas** a vyberte datum a čas. Toto datum a čas určuje, kdy se aplikace nainstaluje na koncové uživatele. Pokud se pro stejného uživatele nebo zařízení provede více než jedno přiřazení, bude čas konečného termínu instalace aplikace vyzvednut na základě nejdřívějšího možného času.
+12. Klikněte na **povoleno** vedle **období odkladu pro restartování**. Doba odkladu restartování se spustí hned po dokončení instalace aplikace na zařízení. Když je tato možnost zakázaná, může se zařízení bez upozornění restartovat. <br>Můžete přizpůsobit následující možnosti:
+    - **Doba odkladu pro restartování zařízení (minuty)** : hodnota deault je 1440 minut (24 hodin). Tato hodnota může být maximálně 2 týdny.
+    - **Vyberte, kdy se má zobrazit dialogové okno odpočítávání před restartováním (minuty)** : výchozí hodnota je 15 minut.
+    - **Dovolit uživateli odložit oznámení o restartování**: můžete vybrat **Ano** nebo **ne**.
+        - **Vyberte dobu opakovaného přiložení (minuty)** : výchozí hodnota je 240 minut (4 hodiny). Hodnota pro odložení nemůže být delší než doba odkladu pro restartování.
+13. Kliknutím na OK ** > ok** > **OK** > **Save (Uložit** ) přidejte přiřazení.
+
 ## <a name="toast-notifications-for-win32-apps"></a>Oznámení informačních zpráv pro aplikace Win32 
-V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **klientské aplikace**@no__t **-1 > vyberte aplikace >** **přiřazení** **skupiny zahrnutí** > . 
+V případě potřeby můžete potlačit zobrazování oznámení informační zprávy koncového uživatele na přiřazení aplikace. V Intune vyberte **klientské aplikace**  > **aplikace** > vyberte **přiřazení** > aplikací  > **Zahrnout skupiny**. 
 
 > [!NOTE]
 > Rozšíření pro správu Intune nainstalované aplikace Win32 se odinstalují na nezaregistrovaných zařízeních. Správci můžou využít vyloučení přiřazení, aby nenabízeli aplikacím Win32 možnost BYOD zařízení.

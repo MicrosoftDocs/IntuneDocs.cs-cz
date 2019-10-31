@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 48cca2c894067439943bdfff33b953463e513490
-ms.sourcegitcommit: e9cf372711ff186ed468b01a9204631a139bd8e5
+ms.openlocfilehash: 3d0cff4ad624d35843f3388535b60549d1893eeb
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776913"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143155"
 ---
 # <a name="macos-device-feature-settings-in-intune"></a>nastavení funkcí zařízení macOS v Intune
 
@@ -129,7 +129,7 @@ Tato funkce platí pro:
 
 ### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace 
 
-- **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Když uložíte profil rozšíření aplikace jednotného přihlašování, nemůžete změnit typ rozšíření aplikace jednotného přihlašování. Možnosti:
+- **Typ rozšíření aplikace jednotného přihlašování**: Vyberte typ rozšíření aplikace jednotného přihlašování. Možnosti:
 
   - **Nenakonfigurováno**: rozšíření aplikací se nepoužívají. Pokud chcete zakázat rozšíření aplikace jednotného přihlašování, přepněte typ rozšíření aplikace jednotného přihlašování z **protokolu Kerberos** nebo **přihlašovací údaje** na **Nenakonfigurováno**.
   - **Přihlašovací údaje**: k použití jednotného přihlašování použijte obecné rozšíření aplikace s přizpůsobitelnou přihlašovacími údaji. Ujistěte se, že znáte ID rozšíření a ID týmu pro rozšíření aplikace jednotného přihlašování ve vaší organizaci.  
@@ -143,7 +143,7 @@ Tato funkce platí pro:
 
   [Najděte své ID týmu](https://help.apple.com/developer-account/#/dev55c3c710c) (otevře se webová stránka společnosti Apple), kde najdete další informace.
 
-- **Sféra**: zadejte název sféry protokolu Kerberos. Název sféry by měl být velkými písmeny, například `CONTOSO.COM`. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
+- **Sféra**: zadejte název sféry ověřování. Název sféry by měl být velkými písmeny, například `CONTOSO.COM`. Název vaší sféry je typicky stejný jako název vaší domény DNS, ale jenom na velká písmena.
 - **Domény**: zadejte doménu nebo názvy hostitelů pro weby, které se dají ověřit pomocí jednotného přihlašování. Například pokud je váš web `mysite.contoso.com`, pak `mysite` je název hostitele a `contoso.com` je název domény. Když se uživatelé připojí k některé z těchto webů, aplikace App Extension zpracuje výzvu ověřování. Toto ověřování umožňuje uživatelům k přihlášení použít ID obličeje, dotykové ID nebo Apple PINCODE/přístupový kód.
 
   - Všechny domény v profilech služby Intune, které mají rozšíření pro aplikace jednotného přihlašování, musí být jedinečné. Doménu nemůžete opakovat v žádném profilu rozšíření aplikace pro přihlášení, i když používáte různé typy rozšíření aplikace jednotného přihlašování.

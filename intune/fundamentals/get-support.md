@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 10/30/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 86ea53ef2def05f622ef49fa37965d3f93d796d9
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 186ab336d90bf8f2b21d273dbec1ccde67fb0d87
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999658"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143262"
 ---
 # <a name="how-to-get-support-for-microsoft-intune"></a>Jak získat podporu pro Microsoft Intune
 
@@ -42,9 +42,16 @@ Pomoc a podpora pro Intune je k dispozici na [portálu pro správu zařízení M
 
 Prostředí pro *nápovědu a podporu* se podobá prostředí, které se zobrazuje v [centru pro správu Microsoft 365](https://admin.microsoft.com/), a nahrazuje předchozí nápovědu a *podporu*, která zůstává na místě pro ostatní služby v Azure.
 
-Chcete-li získat přístup k nápovědě a podpoře, použijte následující možnosti:
+### <a name="options-to-access-help-and-support"></a>Možnosti pro přístup k nápovědě a podpoře 
 
-- **Řídicí panel správy zařízení:**
+- **V Azure Portal:**
+
+  - Vyberte možnost **pomoc a podpora** z jakéhokoli okna nebo stránky Intune.
+
+  > [!NOTE]  
+  > Pokud je vaše instance Intune hostovaná v privátním cloudu pro státní správu, označovaná také jako svrchovaná Cloud, jako je Azure Government, přečtěte si část [Podpora služby Intune pro privátní cloud pro státní](#intune-support-for-private-cloud-for-government)správu dále v tomto článku. Prostředí pro správu *a podporu* Intune nebude k dispozici v privátním cloudu pro státní správu až do příštího roku.
+
+- **Z řídicího panelu správy zařízení:**
   - Po výběru oblasti funkcí pro Intune vyberte možnost **nápovědu a podpora**.
   - Z libovolného uzlu na portálu pro správu zařízení vyberte **?** v pravém horním rohu portálu a pak pomocí rozevírací nabídky vyberte službu, se kterou chcete získat informace. **?** ikona na portálu pro správu zařízení podporuje několik služeb a musíte vybrat konkrétní službu, pro kterou chcete pomoc.  
 
@@ -56,11 +63,7 @@ Chcete-li získat přístup k nápovědě a podpoře, použijte následující m
 
     ![Potvrzení služby](./media/get-support/confirm-your-service-selection.png)
 
-- **V Azure Portal:**
-  - Vyberte možnost **pomoc a podpora** z jakéhokoli okna nebo stránky Intune.
-
-  > [!NOTE]  
-  > Pokud je vaše instance Intune hostovaná v privátním cloudu pro státní správu, označovaná také jako svrchovaná Cloud, jako je Azure Government, přečtěte si část [Podpora služby Intune pro privátní cloud pro státní](#intune-support-for-private-cloud-for-government)správu dále v tomto článku. *Pomoc a podpora* Intune nebudou k dispozici v privátním cloudu pro státní správu až do konce tohoto roku.
+###  <a name="the-support-experience"></a>Prostředí podpory
 
   Po otevření okna pro pomoc a podporu se na portálu zobrazí okno **Potřebuji pomoc?** :
 
@@ -72,7 +75,7 @@ Chcete-li získat přístup k nápovědě a podpoře, použijte následující m
 
   *Potřebujete tuto podporu?* Otevře se podokno *najít řešení* . Pokud ale máte aktivní případ podpory, otevře se okno v podokně *žádosti o služby* , kde můžete zobrazit podrobnosti o aktivních a uzavřených případech podpory.
 
-### <a name="find-solutions"></a>Najít řešení
+#### <a name="find-solutions"></a>Najít řešení
 
 ![Vyberte podokno najít řešení.](./media/get-support/find-solutions.png)
 
@@ -84,7 +87,7 @@ Můžete například zadat **chyby synchronizace hesel**. Výsledky zahrnují po
 
 ![Zobrazit přehledy řešení potíží](./media/get-support/troubleshooting-insights.png)
 
-### <a name="contact-support"></a>Kontaktujte podporu
+#### <a name="contact-support"></a>Kontaktujte podporu
 
 ![Vyberte podokno podpora kontaktů.](./media/get-support/contact-support.png)
 
@@ -96,7 +99,7 @@ Při žádosti o pomoc uveďte popis problému s co největším množstvím pod
 
 Jakmile vyplníte požadované informace, vyberte **Kontaktní osoba** pro odeslání žádosti.
 
-### <a name="service-requests"></a>Žádosti o služby
+#### <a name="service-requests"></a>Žádosti o služby
 
 ![Vyberte podokno žádosti o služby.](./media/get-support/service-requests.png)
 
@@ -108,7 +111,7 @@ Pokud máte aktivní číslo případu podpory, můžete ho sem zadat, pokud chc
 
 Po zobrazení podrobností pro incident vyberte šipku vlevo, která se zobrazí v horní části okna žádosti o služby hned nad ikonami pro tři ikony, které *potřebujete nápovědu?* ikona podokna. Šipka zpět vrátí zobrazení na seznam incidentů podpory, které jste otevřeli.
 
-### <a name="premier-and-unified-support-customers"></a>Zákazníci s plánem Premier a Unified support
+#### <a name="premier-and-unified-support-customers"></a>Zákazníci s plánem Premier a Unified support
 
 Jako zákazník se smlouvou o podpoře **Premier** nebo **Unified** můžete určit závažnost problému a naplánovat zpětné volání podpory pro určitý čas a den. Tyto možnosti jsou k dispozici, když otevřete nebo odešlete nový problém a upravíte aktivní případ podpory.
 
@@ -123,11 +126,25 @@ Výběrem závažnosti **a** nebo **kritického** problému omezíte případ po
 
 ## <a name="azure-help--support-experience"></a>Prostředí Azure Help a podpora
 
-Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo použijte **?** v pravém horním rohu Azure Portal otevřete okno nápovědy a podpory pro Azure, které se liší od nápovědy a možností podpory pro Intune.
+Pokud se vaše předplatné nepoužívá v privátním cloudu pro státní správu, nebudete už moct získat pomoc s Intune.
+Pokud vaše instance Intune neběží na privátním cloudu pro státní správu, navigace prostřednictvím Azure *help + support* vás přesměruje na *nápovědu a podporu* služby Intune, kde můžete vytvářet a spravovat incidenty podpory:
 
-Od dubna 2019 nemůžete získat pomoc s Intune a získat přístup k *nápovědě a podpoře* Azure, pokud vaše předplatné není v privátním cloudu pro státní správu. 
+Když použijete levé navigační podokno, získáte **pomoc a podporu**, nebo použijte **?** Chcete-li otevřít podokno pro *pomoc* a pak vybrat možnost **help + podpora**, otevřete stránku Azure *help + support* . 
 
-Pokud vaše instance Intune neběží na privátním cloudu pro státní správu, navigace prostřednictvím Azure *help + support* vás přesměruje na *nápovědu a podporu* služby Intune, kde můžete vytvářet a spravovat incidenty podpory.
+
+Na této stránce vyberte **+ Nová žádost o podporu** a otevřete tak kartu *základy* na stránce *pomoc a podpora a nová žádost o podporu* .
+
+![Pomoc a podpora](./media/get-support/help-plus-support.png)
+
+Na této stránce:
+
+- Jako *typ problému*vyberte **technický**.
+- V případě *služby*vyberte **Microsoft Intune**.
+
+  Pak se zobrazí odkaz, který vás přesměruje na [stránku pomoci a podpory pro Intune](https://aka.ms/intunehelpsupport).
+  
+  ![Nová žádost o podporu](./media/get-support/new-request.png)
+
 
 ## <a name="intune-support-for-private-cloud-for-government"></a>Podpora pro privátní cloud pro státní správu v Intune
 
@@ -142,7 +159,7 @@ Když se vaše předplatné Intune hostuje v privátním cloudu pro vládu, kter
 >
 > Když se přechody mezi nástroji podpory dokončí později než tento rok, bude se podpora služby Intune hostovaná v cloudu pro státní správu podobat výchozí *nápovědě a podpoře* , která je aktuálně dostupná pro předplatná Intune hostovaná na veřejný cloud.
 
-1. Přihlaste se na portálu Azure Portal (<https://portal.azure.com>) pomocí svých přihlašovacích údajů správce Intune, vyberte ikonu **?** v pravém horním rohu portálu a pak vyberte možnost **Nápověda a podpora**, kterou přejdete na stránku [nápovědy a podpory Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+1. Přihlaste se na portálu Azure Portal (<https://portal.azure.us>) pomocí svých přihlašovacích údajů správce Intune, vyberte ikonu **?** v pravém horním rohu portálu a pak vyberte možnost **Nápověda a podpora**, kterou přejdete na stránku [nápovědy a podpory Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
 
    ![Obrázek odkazu na otazník pomocí zvýrazněného odkazu Nápověda a podpora](./media/get-support/azure-get-support.png)
 

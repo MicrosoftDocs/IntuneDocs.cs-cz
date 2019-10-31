@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/30/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec6009096ac6ed39c8a217f8832661a575d83b78
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
+ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915703"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73143043"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -42,7 +42,7 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
   - **Automaticky udělit**: Oprávnění jsou udělena automaticky.
   - **Automaticky odepřít**: Oprávnění jsou odepřena automaticky.
 - **Změny data a času**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v ručním nastavení data a času. **Není nakonfigurováno** umožňuje uživatelům nastavit datum a čas v zařízení.
-- **Změny hlasitosti**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit ve změně hlasitosti zařízení. Možnost **Nenakonfigurováno** umožňuje použít nastavení svazku na zařízení.
+- **Změny svazku**: **blok** znemožní uživatelům měnit svazek zařízení a také mutes hlavní svazek. Možnost **Nenakonfigurováno** umožňuje použít nastavení svazku na zařízení.
 - **Obnovení továrního**nastavení: Pokud chcete uživatelům zabránit v použití možnosti obnovení továrního nastavení v nastavení zařízení, vyberte **blokovat** . **Nenakonfigurováno** umožňuje uživatelům používat toto nastavení na zařízení.
 - **Bezpečné spuštění**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v restartování zařízení do nouzového režimu. **Není nakonfigurováno** umožňuje uživatelům restartovat zařízení v nouzovém režimu.
 - **Stavový řádek**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu ke stavovým řádku, včetně oznámení a rychlých nastavení. **Není nakonfigurováno** umožňuje uživatelům přístup ke stavovým řádku.

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0faa7c7ec70ce7647a6a91ae732d8b15878964b7
-ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
+ms.openlocfilehash: 591a9af597fc64509a4a7dd19d83d25948a6118e
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057628"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182941"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -57,6 +57,15 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019
 
 ### <a name="app-management"></a>Správa aplikací 
+
+#### <a name="win32-apps-on-windows-10-s-mode-devices----3747604---"></a>Aplikace Win32 na zařízeních S Windows 10 S v režimu <!-- 3747604 --> 
+Aplikace Win32 můžete instalovat a spouštět na zařízeních spravovaných v režimu Windows 10 S. K tomu můžete vytvořit jednu nebo více doplňkových zásad pro režim S pomocí nástrojů PowerShellu pro řízení aplikací v programu Windows Defender (WDAC). Přihlaste doplňkové zásady pomocí registračního portálu pro ochranu zařízení a pak tyto zásady nahrajte a distribuujte prostřednictvím Intune. V Intune tuto možnost najdete tak, že vyberete **klientské aplikace** > **doplňkové zásady Windows 10 S**. Další informace najdete v tématu [Povolení aplikací Win32 na zařízeních s režimem S](~/apps/apps-win32-s-mode.md).
+
+#### <a name="set-win32-app-availability-based-on-a-date-and-time----3510685---"></a>Nastavení dostupnosti aplikace Win32 na základě data a času <!-- 3510685 -->
+Jako správce můžete nakonfigurovat čas zahájení a konečný termín pro požadovanou aplikaci Win32. V počátečním čase rozšíření pro správu Intune spustí stažení obsahu aplikace a uloží je do mezipaměti. Aplikace se nainstaluje v čase konečného termínu. V případě dostupných aplikací se čas spuštění určí, když se aplikace zobrazí v Portál společnosti. Další informace najdete v tématu [Správa aplikací Win32 v Intune](~/apps/apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+
+#### <a name="require-device-restart-based-on-grace-period-after-win32-app-install----3136567---"></a>Vyžadovat restart zařízení na základě období odkladu po instalaci aplikace Win32 <!-- 3136567 -->
+Můžete vyžadovat, aby se zařízení po úspěšném dokončení instalace aplikace Win32 restartovalo. Další informace najdete v tématu [Správa aplikací Win32 – konfigurace podrobností instalace aplikace](~/apps/apps-win32-app-management.md#step-4-configure-app-installation-details).
 
 #### <a name="dark-mode-for-ios-company-portal----4911422---"></a>Tmavý režim pro iOS Portál společnosti <!-- 4911422 -->
 Pro iOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat firemní aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim. Další informace najdete v tématu [představení tmavého režimu Microsoft Intune portál společnosti pro iOS](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Introducing-dark-mode-on-Microsoft-Intune-Company-Portal-for-iOS/ba-p/918453). Další informace o Portál společnosti pro iOS najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](~/apps/company-portal-app.md).
@@ -148,9 +157,6 @@ Pro instalaci dostupné aplikace na firemním profilu Androidu Enterprise, vyhra
 
 #### <a name="microsoft-edge-version-77-and-later-for-windows-10-and-macos-public-preview----3872025-4678761----"></a>Microsoft Edge verze 77 a novější pro Windows 10 a macOS (Public Preview) <!-- 3872025, 4678761  -->
 Microsoft Edge verze 77 a novější bude k dispozici pro nasazení na počítačích se systémy Windows 10 a macOS. 
-
->[!NOTE]
->Zavedení této funkce bylo zpožděno až do konce tohoto měsíce.
 
 Verze Public Preview nabízí **vývoj** a **beta** kanály pro Windows 10 a **beta** kanál pro MacOS. Nasazení je pouze anglické (EN), ale koncoví uživatelé mohou změnit jazyk zobrazení v prohlížeči v části **nastavení**  > **jazyky**. Microsoft Edge je aplikace Win32 nainstalovaná v kontextu systému a jako architektury (aplikace x86 v operačním systému x86 a x64 v operačním systému x64). Automatické aktualizace prohlížeče jsou navíc ve výchozím nastavení **zapnuté** a Microsoft Edge nejde odinstalovat. Další informace najdete v tématu [Přidání Microsoft Edge pro Windows 10 do Microsoft Intune](~/apps/apps-windows-edge.md) a [dokumentace k Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2103823).
 

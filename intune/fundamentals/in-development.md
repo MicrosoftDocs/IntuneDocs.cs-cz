@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4beb9c841cb2f4a5b7198fe031caa67da9e28842
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 3720b0b9a67f0c3462993feef4162ef35f7f3f92
+ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999435"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182922"
 ---
 # <a name="in-development-for-microsoft-intune---november-2019"></a>Ve vývoji Microsoft Intune – listopad 2019
 
@@ -66,9 +66,6 @@ Intune bude podporovat vlastní nastavení, což vám umožní přidat konkrétn
 
 ### <a name="assignment-type-value-in-windows-company-portal----5459950----"></a>Hodnota typu přiřazení ve Windows Portál společnosti <!-- 5459950  -->
 Zobrazí se stránka **nainstalované aplikace** v aplikaci pro Windows portál společnosti se aktualizuje. Sloupec **Typ přiřazení** stránky **nainstalovaných aplikací** byl aktualizován tak, aby byl označen jako "vyžadován vaší organizací". Možné hodnoty jsou **Ano** nebo **ne** k určení požadovaných a dostupných aplikací. Tato změna se provádí v reakci na určitou nejasnost koncového uživatele. Další informace o portálu společnosti pro Windows najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](~/apps/company-portal-app.md).
-
-### <a name="apply-dark-mode-in-ios-company-portal----4911422----"></a>Použití tmavého režimu v iOS Portál společnosti <!-- 4911422  -->
-Pro iOS Portál společnosti se plánuje tmavý režim. Budete moct stahovat firemní aplikace, spravovat zařízení a získávat podporu v barevném schématu podle vašeho výběru. Další informace o Portál společnosti iOS najdete v tématu [Jak konfigurovat aplikaci Microsoft Intune portál společnosti](../apps/company-portal-app.md).
 
 ### <a name="run-win32-apps-on-windows-10-s-mode-devices----3747604----"></a>Spouštění aplikací Win32 v zařízeních S Windows 10 S v režimu <!-- 3747604  --> 
 Aplikace Win32 budete moct instalovat a spouštět na zařízeních spravovaných v režimu Windows 10 S. Pomocí nástrojů PowerShellu pro řízení aplikací v programu Windows Defender (WDAC) vytvořte jednu nebo více doplňkových zásad pro režim S. Pro podepsání doplňkových zásad použijte registrační portál pro ochranu zařízení. Pak tyto zásady nahrajte a distribuujte prostřednictvím Intune. 
