@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bd9fe52bcaa6295d452ade59d6c3c32e1e81a67
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 2b58cbd0aa07babd36c7a7e5aa3dcc5b8d32d58a
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999690"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415039"
 ---
 # <a name="supported-operating-systems-and-browsers-in-intune"></a>Podporované operační systémy a prohlížeče v Intune
 
@@ -37,14 +37,14 @@ Další informace o podpoře poskytovatele konfigurační služby najdete v refe
 
 Můžete spravovat zařízení, která používají následující operační systémy:
 
-[!INCLUDE [mdm-supported-devices](../../intune-classic/includes/mdm-supported-devices.md)]
+[!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
 ### <a name="supported-samsung-knox-standard-devices"></a>Podporovaná zařízení Samsung Knox Standard
 
 Aby při aktivaci Knox nedošlo k chybám, které brání registraci ke správě mobilních zařízení, pokusí se aplikace Portál společnosti o aktivaci Samsung Knox během registrace ke správě mobilních zařízení, jen pokud je zařízení uvedené v [seznamu podporovaných zařízení Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Zařízení, která nepodporují aktivaci Samsung Knox, se zaregistrují jako standardní zařízení s Androidem. Některá čísla modelů zařízení Samsung mohou podporovat Knox, některá nemusí. Než zařízení Samsung koupíte a nasadíte, ověřte si u prodejce, jestli je kompatibilní se systémem Knox.
 
 > [!NOTE]
-> Registrace zařízení Samsung Knox může vyžadovat, abyste [povolili přístup k serverům Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers). 
+> Registrace zařízení Samsung Knox může vyžadovat, abyste [povolili přístup k serverům Samsung](https://support.samsungknox.com/hc/articles/115013833108-Our-corporate-devices-are-behind-a-firewall-How-do-I-enable-Knox-Workspace-devices-to-contact-Samsung-servers).
 
 Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace Portál společnosti pro Android je zaregistruje jako nativní zařízení s Androidem:
 
@@ -85,18 +85,17 @@ Modely zařízení Samsung v následujícím seznamu nepodporují Knox. Aplikace
 | Galaxy V Plus | SM-G318HZ |
 | Galaxy Young 2 Duos | SM-G130BU |
 
-
 ### <a name="windows-pc-software-client"></a>Softwarový klient pro počítače s Windows
 
-Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](../manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
+Jako alternativní metodu registrace jde na počítače s Windows nasadit a nainstalovat [softwarového klienta Intune](manage-windows-pcs-with-microsoft-intune.md). Tato funkce je dostupná jen při používání klasického portálu Intune. Softwarového klienta Intune můžete použít ke správě počítačů s Windows 7 a novějšími s výjimkou Windows 10 Home.
 
 > [!Note]
 > Společnost Microsoft oznámila, že podpora Windows 7 končí od ledna 14 2020. K tomuto datu přestane také Intune podporovat zařízení s Windows 7.
-
-> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7.](https://docs.microsoft.com/en-us/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
-
+>
+> Další informace najdete v tématu [plán pro změny v Intune: blíží se konec podpory pro Windows 7.](https://docs.microsoft.com/intune/fundamentals/whats-new#intune-plan-for-change-nearing-end-of-support-for-windows-7)
+>
 > Microsoft Intune vyřadí podporu pro konzolu Intune založenou na Silverlightu 15. října 2020. Toto vyřazení zahrnuje koncovou podporu konzoly Silverlight nakonfigurovaného POČÍTAČového softwaru klienta (označuje se také jako agent pro počítače).
-
+>
 > Další informace najdete v tématu [Microsoft Intune ukončení podpory pro konzolu správce na bázi Silverlight](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Take-Action-Microsoft-Intune-ending-support-for-the-Silverlight/ba-p/916249) .
 
 <!--  ### Exchange ActiveSync management
@@ -107,24 +106,23 @@ You can manage [Exchange ActiveSync devices](../enrollment/device-enrollment.md#
 
 Různé úlohy správy vyžadují, abyste použili některý z následujících webů pro správu.
 
-- [Centrum pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- [Centrum pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure Portal](https://portal.azure.com/)
 
 Portály podporují následující prohlížeče:
+
 - Microsoft Edge (nejnovější verze)
 - Microsoft Internet Explorer 11
 - Safari (nejnovější verze, jen Mac)
 - Chrome (nejnovější verze)
 - Firefox (nejnovější verze)
 
-
-
-
 ### <a name="intune-classic-portal"></a>Klasický portál Intune
 
 Klasický portál Intune se používá jenom ke správě zařízení zaregistrovaných pomocí klientského softwaru Intune pro počítače (https://manage.microsoft.com). Klasický portál Intune vyžaduje, aby prohlížeč podporoval Silverlight.
 
 Konzolu Intune podporují následující prohlížeče vybavené technologií Silverlight:
+
 - Internet Explorer 10 nebo novější
 - Google Chrome (verze starší než verze 42)
 - Mozilla Firefox s povoleným programem Silverlight (verze starší než verze 56)

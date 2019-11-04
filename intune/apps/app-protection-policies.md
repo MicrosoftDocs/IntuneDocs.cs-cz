@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8e105dae43c4e7139c8e44a8c6535baebe31cc4
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 0c9fdd5e34f87c2dd02b886f97fa86c4823a318f
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585482"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414718"
 ---
 # <a name="how-to-create-and-assign-app-protection-policies"></a>Vytvoření a přiřazení zásad ochrany aplikací
 
@@ -224,7 +224,7 @@ Pro iOS se pro nastavení zásad ochrany aplikací na zařízeních zaregistrova
 - Pokud je nakonfigurované jenom **IntuneMAMDeviceID**, Intune APP bude zařízení považovat za nespravované.
 
 > [!NOTE]
-> Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state-).
+> Konkrétní informace o podpoře zásad ochrany aplikací pro iOS na základě stavu správy zařízení najdete v tématu [Zásady ochrany MAM zacílené podle stavu správy](../fundamentals/whats-new-archive.md#mam-protection-policies-targeted-based-on-management-state).
 
 ## <a name="policy-settings"></a>Nastavení zásad
 Pokud chcete zobrazit úplný seznam nastavení zásad pro iOS a Android, vyberte jeden z následujících odkazů:

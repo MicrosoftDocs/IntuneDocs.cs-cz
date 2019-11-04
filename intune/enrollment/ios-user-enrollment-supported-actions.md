@@ -18,16 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c802e76aab673aa6a9108dc0a14f553c26b96b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: fcc5dea1a3f9e6a1f2bec877688962d7be70cc7c
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505412"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445310"
 ---
 # <a name="intune-actions-and-options-supported-with-apple-user-enrollment"></a>Akce a možnosti Intune podporované při registraci uživatele Apple
 
 Zápis uživatele podporuje podmnožinu možností správy zařízení. Pokud se pro zařízení registrace uživatele použije už existující konfigurační profil, na toto zařízení se použijí jenom nastavení podporovaná zápisem uživatele.
+
+> [!NOTE]
+> Podpora registrace uživatelů společnosti Apple v Intune je momentálně ve verzi Preview.
 
 ## <a name="password-settings"></a>Nastavení hesla
 
@@ -97,6 +100,19 @@ V zařízeních zaregistrovaných pomocí zápisu uživatelů nejsou podporován
 - Řízení MDM pro aplikace mimo spravovaný svazek APFS
 - Zásady ochrany aplikací se pro tyto aplikace stále použijí. Nebudete ale moct převzít správu ani nasadit spravované verze těchto aplikací, pokud je uživatel ze zařízení neodstraní.
 - Akce, konfigurace, nastavení a příkazy vyžadující dohled. 
+
+## <a name="options-not-supported-in-preview"></a>Možnosti nejsou ve verzi Preview podporované.
+- Omezení typu zařízení registrace pro povolení nebo blokování zařízení v osobním vlastnictví 
+
+## <a name="known-issues-in-preview"></a>Známé problémy ve verzi Preview
+- Odvolání licence VPP: oznámení, že licence byla odvolána, se nezobrazí. Aktuální chování je, že odvolání je úspěšné, ale koncový uživatel není upozorněn. 
+- Vytváření sestav aplikací VPP: v sestavě umístěné v klientských aplikacích > aplikace > [název aplikace] > stav instalace zařízení, aplikace VPP nasazené do zařízení zaregistrovaných uživateli se hlásí jako neúspěšná, i když se aplikace úspěšně nasadila do zařízení. 
+- Vytváření sestav aplikací: u typů aplikací nepodporovaných při zápisu uživatelů mohou sestavy poskytnout nepodstatné chybové zprávy. 
+- Portál společnosti App Experience: uživatelům se zobrazí všechny aplikace, které jsou jí cílené, bez ohledu na to, jestli jsou tyto typy aplikací podporované pro zařízení zaregistrovaná uživatelem. 
+- Portál společnosti App Experience: uživatelům se zobrazí stejný text, který indikuje, co organizace uvidí a nevidí pro registraci uživatelů a zařízení.
+- Pokud uživatel během registrace vybere možnost Moje organizace vlastní toto zařízení, zařízení se v rámci Intune i nadále identifikuje jako osobní, pokud není v konzole pro správu nebo v grafu jinak změněno. 
+- Cílení na registraci: iPadOS není uvedeno v selektoru platformy. iPadOS je podporován ve verzi Preview, ale není výslovně uvedeno v konzole pro správu. 
+
 
 ## <a name="next-steps"></a>Další kroky
 

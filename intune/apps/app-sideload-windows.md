@@ -16,16 +16,14 @@ ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a89392dabe695cf49e989351cef822852676916
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 7500000f8a34120e69c27ce01a6cfdb85f447abe
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507379"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414704"
 ---
 # <a name="sign-line-of-business-apps-so-they-can-be-deployed-to-windows-devices-with-intune"></a>Registrace obchodních aplikací, aby je bylo možné nasadit na zařízení s Windows pomocí Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Jako správce Intune můžete nasazovat obchodní aplikace (LOB) do Windows 8.1 plochy nebo Windows 10 Desktop & mobilní zařízení, včetně aplikace Portál společnosti. Pokud chcete nasadit aplikace. appx pro Windows 8.1 Desktop nebo Windows 10 Desktop & mobilní zařízení, můžete použít certifikát pro podepisování kódu od veřejné certifikační autority, která už je pro vaše zařízení s Windows důvěryhodná, nebo můžete použít vlastní certifikační autoritu.
 
@@ -53,6 +51,7 @@ Pokud aplikaci nasadíte podle potřeby pro uživatele nebo zařízení, nepotř
 ### <a name="upload-the-code-signing-certificate"></a>Nahrajte certifikát pro podpis kódu.
 
 Pokud vaše zařízení s Windows 10 ještě nedůvěřuje certifikační autoritě, pak po podepsání balíčku appx a jeho nahrání do služby Intune je potřeba nahrát certifikát pro podepisování kódu na portál Intune:
+
 1. Klikněte na klientské aplikace.
 2. Klikněte na certifikáty Windows Enterprise.
 3. V části certifikát pro podpis kódu vyberte vybrat soubor.
@@ -77,6 +76,7 @@ Windows 8.1 Desktop/Windows 10 Desktop & Mobile
 Pokud vypršela doba platnosti certifikátu, může se stát, že se spustí spuštění souborů appx. Měli byste získat nový soubor. cer a postupovat podle pokynů pro podepsání kódu každého nasazeného souboru appx a znovu nahrát všechny soubory appx a aktualizovaný soubor. cer do oddílu Windows Enterprise Certificates na portálu Intune.
 
 ## <a name="manually-deploy-windows-10-company-portal-app"></a>Ruční nasazení aplikace Portál společnosti pro Windows 10
+
 Pokud nechcete poskytnout přístup k Microsoft Store, můžete ručně nasadit aplikaci pro Windows 10 Portál společnosti přímo z Intune, i když službu Intune nemáte integrovanou s Microsoft Store for Business (MSFB). Případně, pokud máte integraci, můžete nasadit aplikaci Portál společnosti pomocí [nasazení aplikací pomocí nástroje MSFB](store-apps-windows.md).
 
  > [!NOTE]
@@ -85,7 +85,7 @@ Pokud nechcete poskytnout přístup k Microsoft Store, můžete ručně nasadit 
 1. Přihlaste se ke svému účtu v [Microsoft Store pro firmy](https://www.microsoft.com/business-store) a získejte verzi portál společnosti aplikace pro **offline licenci** .  
 2. Jakmile aplikaci získáte, vyberte ji na stránce **Inventář**.  
 3. Vyberte **Windows 10 – všechna zařízení** jako **platformu**, potom vyberte příslušnou **architekturu** a stahujte. Pro tuto aplikaci není nutné mít soubor s licencí aplikace.
-   @no__t – 0Image podrobností balíčku Windows 10 x86 pro stažení @ no__t-1
+   ![obrázek podrobností balíčku Windows 10 x86 pro stažení](./media/app-sideload-windows/Win10CP-all-devices.png)
 4. Stáhněte všechny balíčky v části Požadované platformy. To je nutné provést pro architektury x86, x64 a ARM – celkem 9 balíčků, jak je vidět na následujícím obrázku.
 
    ![Obrázek souborů závislostí ke stažení ](./media/app-sideload-windows/Win10CP-dependent-files.png)
@@ -100,9 +100,11 @@ Pokud nechcete poskytnout přístup k Microsoft Store, můžete ručně nasadit 
 Další informace o tom, jak Intune nakládá se závislostmi pro univerzální aplikace, najdete v článku [Deploying an appxbundle with dependencies via Microsoft Intune MDM](https://blogs.technet.microsoft.com/configmgrdogs/2016/11/30/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm/) (Nasazení souboru appxbundle se závislostmi prostřednictvím Microsoft Intune MDM).  
 
 ### <a name="how-do-i-update-the-company-portal-on-my-users-devices-if-they-have-already-installed-the-older-apps-from-the-store"></a>Jak mám aktualizovat Portál společnosti na zařízeních uživatelů, pokud si už nainstalovali starší aplikace ze Storu?
-Pokud si uživatelé nainstalovali aplikace Portál společnosti pro Windows 8.1 nebo Windows Phone 8.1 ze Storu, měly by se tyto aplikace automaticky aktualizovat na novou verzi. Není tedy třeba provádět žádnou akci. Pokud k aktualizaci nedojde, požádejte uživatele, aby zkontrolovali, jestli mají na svých zařízeních povolené automatické aktualizace pro aplikace ze Storu.   
+
+Pokud si uživatelé nainstalovali aplikace Portál společnosti pro Windows 8.1 nebo Windows Phone 8.1 ze Storu, měly by se tyto aplikace automaticky aktualizovat na novou verzi. Není tedy třeba provádět žádnou akci. Pokud k aktualizaci nedojde, požádejte uživatele, aby zkontrolovali, jestli mají na svých zařízeních povolené automatické aktualizace pro aplikace ze Storu.
 
 ### <a name="how-do-i-upgrade-my-sideloaded-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak mám upgradovat aplikaci Portál společnosti pro Windows 8.1 nainstalovanou bokem na aplikaci Portál společnosti pro Windows 10?
+
 Doporučujeme následující způsob migrace – odstraňte nasazení pro aplikaci Portál společnosti pro Windows 8.1 nastavením akce nasazení na možnost Odinstalovat. Až to provedete, můžete aplikaci Portál společnosti pro Windows 10 nasadit některým z výše uvedených způsobů.  
 
 Pokud potřebujete aplikaci nainstalovat bokem a nasadili jste Portál společnosti pro Windows 8.1 bez podepisování certifikátem Symantec, postupujte podle pokynů ve výše uvedené části věnované přímému nasazení prostřednictvím Intune a proveďte upgrade.
@@ -110,6 +112,7 @@ Pokud potřebujete aplikaci nainstalovat bokem a nasadili jste Portál společno
 Pokud potřebujete aplikaci nainstalovat bokem a Portál společnosti pro Windows 8.1 jste podepsali a nasadili prostřednictvím certifikátu Symantec pro podepisování kódu, postupujte podle pokynů v níže uvedené části.  
 
 ### <a name="how-do-i-upgrade-my-signed-and-sideloaded-windows-phone-81-company-portal-app-or-windows-81-company-portal-app-to-the-windows-10-company-portal-app"></a>Jak mám upgradovat podepsanou a bokem nainstalovanou aplikaci Portál společnosti pro Windows Phone 8.1 nebo aplikaci Portál společnosti pro Windows 8.1 na aplikaci Portál společnosti pro Windows 10?
+
 Doporučujeme následující způsob migrace – odstraňte existující nasazení pro aplikaci Portál společnosti pro Windows Phone 8.1 nebo aplikaci Portál společnosti pro Windows 8.1 nastavením akce nasazení na možnost Odinstalovat. Až to provedete, můžete aplikaci Portál společnosti pro Windows 10 nasadit normálním způsobem.  
 
 Jinak musí být aplikace Portál společnosti pro Windows 10 náležitě aktualizovaná a podepsaná, abyste dodrželi patřičný způsob upgradu.  

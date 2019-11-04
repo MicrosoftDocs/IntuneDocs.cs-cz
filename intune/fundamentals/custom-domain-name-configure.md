@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8e8d0a38d385e034b948b96a96df2189666362a9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 04708842373abf296b5350d9f77e02fa08ce48ed
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505438"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414617"
 ---
 # <a name="configure-a-custom-domain-name"></a>Konfigurace vlastního názvu domény
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 V tomto tématu najdou správci informace o tom, jak vytvořit záznam DNS CNAME pro zjednodušení a přizpůsobení možností přihlašování v Microsoft Intune.
 
@@ -48,7 +46,7 @@ Tento počáteční název domény onmicrosoft.com nelze přejmenovat ani odebra
 2. V navigačním podokně zvolte **Nastavení** &gt; **Domény**.
 
 3. Zvolte **Přidat doménu** a zadejte vlastní název domény. Vyberte **Další**.
-   @no__t – 0Screenshot Microsoft 365 centra pro správu s vybraným nastavením > domény a nově přidaným názvem domény @ no__t-1
+   ![snímku obrazovky centra pro správu Microsoft 365 s vybraným nastavením > domény a přidáním nového názvu domény](./media/custom-domain-name-configure/domain-custom-add.png)
 4. Otevře se dialogové okno **Ověřit doménu** s hodnotami pro vytvoření záznamu TXT u poskytovatele hostingu DNS.
     - **GoDaddy Users**: centrum pro správu Microsoft 365 vás přesměruje na přihlašovací stránku GoDaddy. Po zadání přihlašovacích údajů a přijetí smlouvy o oprávnění ke změně domény se záznam TXT vytvoří automaticky. Případně můžete [záznam TXT vytvořit](https://support.office.com/article/Create-DNS-records-at-GoDaddy-for-Office-365-f40a9185-b6d5-4a80-bb31-aa3bb0cab48a).
     - **Uživatelé Register.com:** Postupujte podle [podrobných pokynů](https://support.office.com/article/Create-DNS-records-at-Register-com-for-Office-365-55bd8c38-3316-48ae-a368-4959b2c1684e#BKMK_verify) k vytvoření záznamu TXT.

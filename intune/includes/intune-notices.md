@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: a2675b1b601261e673923ab5e3ac41d0f3d83264
-ms.sourcegitcommit: 71b0cd7b81178e2f9e9f80830fa9a7985781628b
+ms.openlocfilehash: 0aa78ec17aba5deb0c914c3698676219f203b856
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73057314"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415088"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
@@ -105,7 +105,7 @@ Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kter
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
 Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
 
-### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7----3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7. <!-- 3042987 -->
+### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7---3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7.<!-- 3042987 -->
 Stejně jako v MC148476, který jsme odeslali v, od poslední září 2018 a znovu v MC176794 zpátky v březnu 2019, Windows 7 dosáhne konce rozšířené podpory 14. ledna 2020. V tuto chvíli Intune vyřadí podporu pro zařízení s Windows 7, takže můžeme soustředit na naši investici do podpory novějších technologií a zajistit Skvělé nové prostředí pro koncové uživatele. Po tomto datu se v Intune už nebude k dispozici technická pomoc a automatické aktualizace, které vám pomůžou chránit počítač s Windows 7. Společnost Microsoft důrazně doporučuje přejít na Windows 10 před lednem 2020, aby nedocházelo k situaci, kdy potřebujete službu nebo podporu, která už není dostupná. Další informace o životním cyklu podpory pro Windows [najdete tady](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?

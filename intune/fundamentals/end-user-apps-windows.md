@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e1cd4dd270d276969d759bc9a9dccef80b281251
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: da2f080458df360667df235ff10cc8f750b049eb
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502928"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414579"
 ---
 # <a name="how-your-windows-users-get-their-apps"></a>Jak uživatelé s Windows získávají svoje aplikace
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Tyto informace vám dají představu o tom, jak a kde uživatelé získávají aplikace, které distribuujete přes Microsoft Intune.
 
@@ -39,5 +37,6 @@ Tyto informace vám dají představu o tom, jak a kde uživatelé získávají a
 **Nespravované aplikace** jsou aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune ani sestavené pomocí sady Intune App SDK. Na tyto aplikace nejdou použít zásady ochrany aplikací.
 
 ## <a name="see-also"></a>Související témata
+
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 [Jak uživatelé systému iOS získávají svoje aplikace](end-user-apps-android.md)

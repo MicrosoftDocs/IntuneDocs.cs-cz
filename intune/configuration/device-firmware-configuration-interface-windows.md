@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2bfc49f772331113314e45bc49360b8435b88037
-ms.sourcegitcommit: 0d6f323152ec62f7d383891cce12ea0a4289cd8f
-ms.translationtype: MT
+ms.openlocfilehash: 5afe2414db063aad53a89fd8125a68a53457ca49
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889576"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414655"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
@@ -45,7 +45,7 @@ Tato funkce platí pro:
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-- Výrobce zařízení musí mít v výrobním procesu přidaný DFCI do firmwaru rozhraní UEFI nebo jako aktualizaci firmwaru, kterou nainstalujete. Spolupracujte se svými dodavateli zařízení a určete výrobce, kteří podporují DFCI, nebo verzi firmwaru, která je potřebná k použití DFCI.
+- Výrobce zařízení musí mít v výrobním procesu přidaný DFCI do firmwaru rozhraní UEFI nebo jako aktualizaci firmwaru, kterou nainstalujete. Spolupracujte se svými dodavateli zařízení a určete [výrobce, kteří podporují DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Scenarios/DfciScenarios/#oems-that-support-dfci), nebo verzi firmwaru, která je potřebná k použití DFCI.
 
 - Zařízení musí být zaregistrované pro Windows autopiloter pomocí [partnera poskytovatele řešení Microsoft Cloud (CSP)](https://partner.microsoft.com/cloud-solution-provider)nebo zaregistrovaného přímo výrobcem OEM. 
 

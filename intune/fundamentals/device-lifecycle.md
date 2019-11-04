@@ -15,25 +15,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 816ad4bb5b17f3a480fbf834280c4e9792c394a9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 46a23ca18e385fa085afb59a654290702465a0ce
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502982"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414038"
 ---
 # <a name="overview-of-the-microsoft-intune-mobile-device-management-mdm-lifecycle"></a>Přehled životního cyklu správy mobilních zařízení (MDM) v Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Všechna zařízení, která spravujete, mají *životní cyklus*. Intune vám může pomoci při správě tohoto životního cyklu od registrace přes konfiguraci a ochranu až po vyřazení zařízení, když už nebude potřeba.
 
 ![Životní cyklus zařízení](./media/device-lifecycle/device-lifecycle.png "životní cyklus zařízení v Intune")
 
 ## <a name="enroll"></a>Registrace
+
 Dnešní strategie správy mobilních zařízení (MDM) zahrnují využívání různých druhů telefonů, tabletů a počítačů (se systémy iOS, Android, Windows a Mac OS X). Pokud potřebujete mít možnost spravovat zařízení, což se často stává třeba u zařízení vlastněných společností, prvním krokem je [nastavení registrace zařízení](../enrollment/device-enrollment.md). Počítače s Windows můžete také spravovat buď tak, že je zaregistrujete v Intune (MDM), nebo do nich [nainstalujete klientský software Intune](../manage-windows-pcs-with-microsoft-intune.md).
 
 ## <a name="configure"></a>Konfigurace
+
 Registrace zařízení je jenom první krok. Pokud chcete využívat všechno, co Intune nabízí, a zajistit u zařízení zabezpečení a dodržování standardů společnosti, můžete si vybrat z široké nabídky zásad. Ty vám umožní nastavit skoro každý aspekt fungování spravovaných zařízení. Mají třeba uživatelé na zařízeních, která obsahují firemní data, používat heslo? Můžete to vyžadovat. Máte podnikovou síť Wi-Fi? Můžete ji automaticky nakonfigurovat. Tady je přehled typů dostupných možností konfigurace:
 
 - [**Konfigurace zařízení**](../configuration/device-profiles.md). Tyto zásady umožňují nastavit způsob fungování funkcí a možností zařízení, která spravujete. Můžete třeba vyžadovat použití hesla na zařízeních Windows Phone nebo zakázat použití fotoaparátu na zařízeních iPhone.
@@ -41,12 +41,15 @@ Registrace zařízení je jenom první krok. Pokud chcete využívat všechno, c
 - [**Zásady správy počítačů s Windows (s klientským softwarem Intune)** ](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md) I když vám nejvíc možností správy zařízení přinese registrace počítačů s Windows do Intune, Intune dál podporuje správu počítačů s Windows pomocí klientského softwaru Intune. Pokud potřebujete informace o některých úlohách, které můžete s počítači provádět, začněte tady.
 
 ## <a name="protect"></a>Ochrana
+
 V moderním světě informačních technologií představuje ochrana zařízení proti neoprávněnému přístupu jeden z vašich nejdůležitějších úkolů. Kromě položek v kroku **Konfigurace** životního cyklu zařízení Intune poskytuje tyto možnosti, které pomáhají chránit spravovaná zařízení proti neoprávněnému přístupu nebo nebezpečným útokům:
+
 - [**Víceúrovňové ověřování**](../enrollment/multi-factor-authentication.md). Přidáním další úrovně ověřování k přihlašování uživatelů můžete přispět k ještě lepšímu zabezpečení zařízení. Mnoho zařízení podporuje vícefaktorové ověřování, které před povolením přístupu uživatelů vyžaduje druhou úroveň ověření, například prostřednictvím telefonního hovoru nebo textové zprávy.
 - [**Nastavení Windows Hello pro firmy**](../protect/windows-hello.md) Nastavení Windows Hello pro firmy je alternativní metoda přihlašování, která umožňuje uživatelům používat k přihlášení *gesto*, třeba otisk prstu nebo Windows Hello, takže nemusí zadávat heslo.
 - [**Zásady ochrany počítačů se systémem Windows (s klientským softwarem Intune)** ](../policies-to-protect-windows-pcs-in-microsoft-intune.md). Pokud spravujete počítače s Windows pomocí klientského softwaru Intune, jsou dostupné zásady, které vám umožňují řídit na spravovaných počítačích s Windows nastavení služby Endpoint Protection, aktualizací softwaru a brány Windows Firewall.
 
 ## <a name="retire"></a>Vyřazení
+
 Když dojde ke ztrátě nebo odcizení zařízení, když je potřeba zařízení vyměnit nebo když se uživatelé přesunou na jinou pracovní pozici, je většinou vhodné zařízení [vyřadit nebo vymazat](../remote-actions/device-management.md). To můžete udělat několika způsoby, třeba zařízení resetovat, odebrat ho ze zprávy nebo z něj vymazat firemní data.
 
 ## <a name="next-steps"></a>Další kroky

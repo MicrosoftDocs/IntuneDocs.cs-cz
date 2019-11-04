@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/09/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7517a2b60c4b5a893b90b09be72ddb363f23552a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 85f9bb72c6c40c67874326b06ebd41286d2d7220
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509980"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415205"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -36,6 +36,23 @@ Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obr
 
 <!---End-user messaging for accounts 1573558, 1712; changes to be made for other platforms for 1801 Users of the Company Portal website, will be blocked from taking actions that require write access to your tenant. They will see appropriate error messaging explaining that their account is under maintenance. Similar changes are coming to the Company Portal apps for Android, iOS, macOS, and Windows soon. ![Error message that occurs during account move](./media/whats-new-app-ui/account-move-rom-iwp-user-1712.png)--->
 
+
+## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019  
+
+### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Vylepšený návrh kontrolního seznamu v aplikaci Portál společnosti App pro Android <!-- 5550857 -->  
+Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Právě probíhá zavádění aktualizací aplikace pro všechny zákazníky a očekává se, že bude dokončená na konci příštího týdne. Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
+
+Na následujících obrazovkách se zobrazuje aktualizovaný kontrolní seznam pro registraci pracovního profilu Androidu:
+
+|Aktualizuj|Předchozí|  
+|---|---|  
+|![Příklad obrázku nastavení pracovního profilu v Portál společnosti zobrazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/work-profile-checklist-1911.png)|![Příklad obrázku předchozího nastavení pracovního profilu v Portál společnosti se zobrazením kontrolního seznamu vytíženější.](./media/whats-new-app-ui/work-profile-checklist-1904.png)|   
+
+Na následujících obrazovkách je zobrazen aktualizovaný kontrolní seznam pro registraci Správce zařízení s Androidem:  
+
+|Aktualizuj|Předchozí|  
+|---|---|  
+|![Příklad obrázku nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje zjednodušený kontrolní seznam a nové ikony.](./media/whats-new-app-ui/android-checklist-1911.png)|![Příklad obrázku předchozího nastavení Správce zařízení s Androidem v Portál společnosti, který ukazuje kontrolní seznam vytíženější.](./media/whats-new-app-ui/android-checklist-1904.png)|  
 
 ## <a name="week-of-september-9-2019"></a>Týden od 9. září 2019
 
@@ -572,6 +589,6 @@ Zde najdete plánované aktualizace našeho uživatelského rozhraní, které vy
 
 
 ## <a name="see-also"></a>Související témata
-* [Blog Microsoft Intune](http://go.microsoft.com/fwlink/?LinkID=273882)
+* [Blog Microsoft Intune](https://go.microsoft.com/fwlink/?LinkID=273882)
 * [Plán cloudové platformy](https://www.microsoft.com/cloud-platform/roadmap)
-* [Co je nového v Intune](../whats-new.md)
+* [Co je nového v Intune](whats-new.md)

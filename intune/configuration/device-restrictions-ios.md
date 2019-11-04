@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/22/2019
+ms.date: 10/31/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95cf688f3727f97aedd4126e00fa4dc4939ef6bc
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: 6dbe26dba4e78e9f5f29a5adedffa3de1df662a6
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785506"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414679"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -167,7 +167,33 @@ Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a 
   iOS má integrované zabezpečení, které může mít vliv na toto nastavení. IOS může například zpozdit spuštění zásad v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
   
 - **Maximální počet minut po uzamčení obrazovky, po kterém se vyžaduje zadání hesla**<sup>1</sup>: zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno v zařízeních iOS 8,0 a novějších.
-- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup>: zadejte maximální počet minut nečinnosti, který je v zařízení povolený, dokud se nezamkne obrazovka. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Když se nastaví na hodnotu **okamžitě**, obrazovka se zamkne na základě minimálního času zařízení. Na iPhonu je 30 sekund. Na iPadu je to dvě minuty.
+
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup>: zadejte maximální počet minut nečinnosti, který je v zařízení povolený, dokud se nezamkne obrazovka.
+
+  **Možnosti iOS**:  
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
+  - **Okamžitě**: po 30 sekundách nečinnosti se zamkne obrazovka.
+  - **1**: obrazovka se zamkne po 1 minutách nečinnosti.
+  - **2**: obrazovka se zamkne po 2 minutách nečinnosti.
+  - **3**: obrazovka se zamkne po 3 minutách nečinnosti.
+  - **4**: obrazovka se zamkne po 4 minutách nečinnosti.
+  - **5**: obrazovka se zamkne po 5 minutách nečinnosti.
+    
+  **iPadOS možnosti**:  
+
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
+  - **Okamžitě**: po 2 minutách nečinnosti se zamkne obrazovka.
+  - **2**: obrazovka se zamkne po 2 minutách nečinnosti.
+  - **5**: obrazovka se zamkne po 5 minutách nečinnosti.
+  - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
+  - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
+
+  Pokud se hodnota nevztahuje na iOS nebo iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minut, zařízení iPadOS používají `2` minut. Pokud zadáte `10` minut, zařízení s iOS budou používat `5` minut. Toto je omezení Apple.
+  
+  > [!NOTE]
+  > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
+
 - **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo zařízení.
 - **Zakázat opakované použití předchozích hesel**: zadejte počet nových hesel, která se musí použít, až bude možné znovu použít starou.
 - **Dotykové ID a odemknutí ID obličeje**: vyberte **blok** , abyste zabránili použití otisku prstu nebo obličeje k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí těchto metod.

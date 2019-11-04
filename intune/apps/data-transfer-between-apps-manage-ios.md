@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: db583b1fc89edf72f329a605cc86363593eaaa9d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: cdc849405b7404203faa6e86d3fed1ea8e35ec43
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497910"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414635"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>Správa přenosu dat mezi aplikacemi pro iOS pomocí Microsoft Intune
 
@@ -51,7 +51,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
 3. Nasaďte aplikaci s následujícím nastavením konfigurace aplikace na spravované zařízení:
 
-      **Key** = IntuneMAMUPN, **Value** =  @ no__t-3
+      **Key** = IntuneMAMUPN, **Value** = <username@company.com>
 
       Příklad: [‘IntuneMAMUPN’, ‘janellecraig@contoso.com’]
       
@@ -68,7 +68,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
 
 2. V části Konfigurace aplikace zadejte tato nastavení:
 
-   **Key** = IntuneMAMUPN, **Value** =  @ no__t-3
+   **Key** = IntuneMAMUPN, **Value** = <username@company.com>
 
    Skutečná syntaxe dvojice klíč/hodnota se může lišit podle toho, jakého máte jiného poskytovatele řešení MDM. V následující tabulce jsou uvedeny příklady poskytovatelů MDM třetích stran a přesné hodnoty, které byste měli zadat pro dvojici klíč/hodnota.
 
@@ -81,7 +81,7 @@ Konfigurace nastavení hlavního názvu uživatele (UPN) se **vyžaduje** pro za
    |Správce mobilních zařízení ManageEngine | IntuneMAMUPN | Řetězec | %upn% |
 
 > [!NOTE]  
-> V případě aplikace Outlook v systému iOS když nasadíte zásadu konfigurace aplikace s možností "použití nástroje Configuration Designer", konfigurace konfiguračního klíče IntuneMAMUPN se automaticky nakonfiguruje na pozadí zásady. Další podrobnosti najdete v části Nejčastější dotazy z [nové aplikace Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
+> Pokud pro Outlook pro iOS nasadíte zásadu konfigurace aplikace spravovaná zařízení s možností "použití návrháře konfigurace" a povolíte možnost **Povolit pouze pracovní nebo školní účty**, konfigurační klíč IntuneMAMUPN se automaticky nakonfiguruje na pozadí. pro tuto zásadu. Další podrobnosti najdete v části Nejčastější dotazy v [nové aplikaci Outlook pro zásady konfigurace aplikací pro iOS a Android – konfigurace obecné aplikace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>Příklad 2: Činnost koncového uživatele

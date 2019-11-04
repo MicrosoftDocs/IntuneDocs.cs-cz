@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 797d1c66c50bed91f58eab535696b34001fcb28d
-ms.sourcegitcommit: db68056e2db17dfdeaa216c684302567742e6416
-ms.translationtype: MT
+ms.openlocfilehash: 93915e8371d3951a843d6d3131678c1744747c4f
+ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "71239585"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73415066"
 ---
 
 
 ### <a name="apple"></a>Apple
-- Apple iOS 10.0 a novější
+- Apple iOS a iPadOS 11,0 a novější
 - Mac OS X 10,12 a novější
 
 ### <a name="google"></a>Google
@@ -33,7 +33,7 @@ ms.locfileid: "71239585"
 - Windows 10 IoT Mobile Enterprise
 - Windows Holographic for Business
 
-  Další informace o správě zařízení s Windows Holographic for Business najdete v tématu [Podpora Window Holographic for Business](../windows-holographic-for-business.md).
+  Další informace o správě zařízení s Windows Holographic for Business najdete v tématu [Podpora Window Holographic for Business](../fundamentals/windows-holographic-for-business.md).
 
 - Windows 10 Teams (Surface Hub)
 
@@ -43,6 +43,6 @@ ms.locfileid: "71239585"
 > [!NOTE]
 > Ne všechny edice Windows podporují konfiguraci všech dostupných funkcí operačního systému prostřednictvím MDM. Viz [Referenční dokumentace poskytovatele služby Windows Configuration Service](https://docs.microsoft.com/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Každý CSP zvýrazňuje, které edice Windows jsou podporované.
 
-Zákazníci s Enterprise mobility + Security (EMS) můžete také použít [Azure Active Directory (Azure AD) pro registraci zařízení s Windows 10](/intune/windows-enroll).
+Zákazníci s Enterprise Management + Security (EMS) můžou [k registraci zařízení s Windows 10 používat taky Azure Active Directory (Azure AD)](/intune/windows-enroll).
 
 

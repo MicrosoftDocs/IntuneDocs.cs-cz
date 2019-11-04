@@ -18,20 +18,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a3ecf2872832af6199620863a05b4275731db5c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0507d607bfac6c084f1ce0b1f59d7474810ec8b7
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72505243"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73415112"
 ---
 # <a name="intune-network-configuration-requirements-and-bandwidth"></a>Šířka pásma a požadavky na konfiguraci sítě Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Tyto informace můžete použít k pochopení požadavků na šířku pásma pro nasazení Intune.
 
 ## <a name="average-network-traffic"></a>Průměrné zatížení sítě
+
 Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu přenášeného po síti u každého klienta.
 
 > [!NOTE]
@@ -53,9 +52,11 @@ Tabulka uvádí přibližnou velikost a četnost u nejčastějšího obsahu pře
 |Distribuce softwaru|Je to různé.<br /><br />Velikost závisí na nasazeném softwaru.|**Je to různé.**<br /><br />Závisí na tom, kdy software nasadíte.|
 
 ## <a name="ways-to-reduce-network-bandwidth-use"></a>Způsob snížení využití šířky pásma sítě
+
 Ke snížení využití šířky pásma sítě pro klienty Intune můžete použít jeden nebo více těchto způsobů.
 
 ### <a name="use-a-proxy-server-to-cache-content-requests"></a>Používání proxy serveru pro ukládání požadavků obsahu do mezipaměti
+
 Proxy server může ukládat do mezipaměti obsah a snížit tak počet duplicitních položek ke stažení a redukovat u obsahu z internetu využití šířky pásma sítě.
 
 Proxy server ukládající do mezipaměti, který dostává z klientů žádosti o obsah, může takový obsah načíst a může uložit do mezipaměti odpovědi z webu i stahované položky. Server používá data uložená v mezipaměti pro odpovědi na následné žádosti z klientských počítačů.
@@ -74,6 +75,7 @@ Tady jsou obvyklá nastavení proxy serveru, který do mezipaměti ukládá obsa
 Informace o používání proxy serveru k ukládání obsahu do mezipaměti najdete v dokumentaci k vašemu řešení proxy serveru.
 
 ### <a name="use-background-intelligent-transfer-service-bits-on-computers"></a>Použití Background Intelligent Transfer Service (BITS) na počítačích
+
 Během hodin, které nakonfigurujete, můžete k omezení šířky pásma sítě použít službu BITS na počítači s Windows. Zásady BITS můžete nakonfigurovat na stránce **Šířka pásma sítě** v zásadách agenta Intune.
 
 > [!NOTE]
@@ -82,14 +84,15 @@ Během hodin, které nakonfigurujete, můžete k omezení šířky pásma sítě
 Další informace o službě BITS a počítačích s Windows najdete v části [Služba inteligentního přenosu na pozadí](https://technet.microsoft.com/library/bb968799.aspx) v knihovně TechNet.
 
 ### <a name="delivery-optimization"></a>Optimalizace doručení
+
 Optimalizace doručení vám umožní používat Intune k omezení spotřeby šířky pásma, když zařízení s Windows 10 stahují aplikace a aktualizace. Pomocí samoobslužné distribuce distribuované mezipaměti lze soubory ke stažení načíst z tradičních serverů a alternativních zdrojů (jako jsou síťové partnery).
 
 Úplný seznam verzí a typů obsahu, které podporuje Optimalizace doručení, najdete v článku věnovaném [optimalizaci doručování pro Windows 10](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization#requirements).
 
 [Optimalizace doručování můžete nastavit](../configuration/delivery-optimization-settings.md) jako součást profilů konfigurace zařízení.
 
-
 ### <a name="use-branchcache-on-computers"></a>Používání BranchCache na počítačích
+
 Klienti Intune můžou díky BranchCache omezit přenos v síti WAN. BranchCache podporují následující operační systémy:
 
 - Windows 7

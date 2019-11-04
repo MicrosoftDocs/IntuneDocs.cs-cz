@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cc298691ea3df923d1804005be61217325f52112
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 06cc977ce8b0b892e1020436f89ada4a40bac3f2
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510267"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73413979"
 ---
 # <a name="how-your-ios-users-get-their-apps"></a>Jak uživatelé systému iOS získávají svoje aplikace
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 Tyto informace slouží k pochopení toho, jak a kde koncoví uživatelé získávají aplikace, které distribuujete pomocí Microsoft Intune.
 
@@ -48,12 +46,12 @@ Zaregistrovaní uživatelé můžou používat aplikace po klepnutí na následu
 
 - **Kategorie** odkazují na webu Portál společnosti na kartu KATEGORIE.
 
-
 ![Obrazovka aplikací na Portálu společnosti pro iOS](./media/end-user-apps-ios/ios-cp-app-main-apps-screen.png)
 
 Další informace o přidávání aplikací najdete v článku [Přidání aplikací do Microsoft Intune](../apps/apps-add.md).
 
 ## <a name="see-also"></a>Související témata
+
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 
 [Jak uživatelé s Windows získávají svoje aplikace](end-user-apps-windows.md)

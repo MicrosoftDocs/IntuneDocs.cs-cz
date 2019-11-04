@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2a1d964f157f33e439f659713fe8c2e02f852b3
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 9e2f654d9e505afba00a1a9090febe4c06ca77ff
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749421"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445334"
 ---
 # <a name="enroll-windows-devices-in-intune-by-using-the-windows-autopilot"></a>Registrace zařízení s Windows v Intune pomocí automatických pilotů Windows  
 Automatický pilotní modul Windows zjednodušuje registraci zařízení v Intune. Vytváření a udržování přizpůsobených imagí operačního systému je proces, který zabere hodně času. Další čas můžete také strávit aplikováním těchto vlastních imagí operačního systému na nová zařízení, abyste je připravili k použití, než je předáte koncovým uživatelům. S Microsoft Intune a Autopilotem můžete nová zařízení koncovým uživatelům poskytovat, aniž by bylo nutné vlastní image operačního systému vytvářet, udržovat a aplikovat na zařízení. Když zařízení s Autopilotem spravujete pomocí Intune, můžete v zařízeních po registraci spravovat zásady, profily, aplikace a mnoho dalšího. Přehled výhod, scénáře a požadavky najdete v [přehledu Windows Autopilotu](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-10-autopilot).
@@ -87,7 +87,7 @@ Zařízení Windows Autopilot můžete přidat importováním souboru CSV s jeji
 5. Zvolte **Vytvořit**.  
 
 ## <a name="create-an-autopilot-deployment-profile"></a>Vytvořit profil nasazení Autopilotu
-Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem.
+Profily nasazení Autopilotu slouží ke konfiguraci zařízení s AutoPilotem. Můžete vytvořit až 350 profilů na každého tenanta.
 1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
 2. Na stránce **základy** zadejte **název** a volitelný **Popis**.
 

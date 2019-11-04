@@ -1,6 +1,6 @@
 ---
 title: Registrace nebo přihlášení k Microsoft Intune
-description: Naučte se, jak si zaregistrovat předplatné Microsoft Intune nebo jak se přihlásit, abyste mohli své předplatné začít využívat.
+description: Jak se zaregistrovat k předplatnému Microsoft Intune nebo se přihlásit, abyste mohli začít s vaším předplatným.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2c3cf75c1b5d6984a7f922af8b969458b4e4336e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 78d38b72c9853a9eadaf71fcdff7567fc66d35ca
+ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509173"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73414671"
 ---
 # <a name="sign-up-or-sign-in-to-microsoft-intune"></a>Registrace nebo přihlášení k Microsoft Intune
-
-[!INCLUDE [both-portals](../../intune-classic/includes/note-for-both-portals.md)]
 
 V tomto tématu najdou správci systému informace o tom, jak se můžou zaregistrovat a získat účet Intune.
 
@@ -46,14 +44,17 @@ Pokud už máte svůj pracovní nebo školní účet, **přihlaste se** s jeho p
 2. Na stránce pro registraci se přihlaste nebo zaregistrujte ke správě nového předplatného služby Intune.
 
 ## <a name="post-sign-up-considerations"></a>Aspekty ke zvážení po registraci
+
 Pokud se zaregistrujete k novému předplatnému, přijde vám na e-mailovou adresu, kterou jste zadali během procesu registrace, e-mailová zpráva s informacemi o účtu. Ta potvrzuje, že je vaše předplatné aktivní.
 
 Po dokončení procesu registrace budete přesměrováni na centrum pro správu Microsoft 365, které se používá k přidání uživatelů a přiřazení licencí. Pokud budete používat jen cloudové účty ve výchozí doméně onmicrosoft.com, můžete ihned začít přidávat uživatele a přidělovat jim licence. Pokud ale budete chtít používat [vlastní název domény](custom-domain-name-configure.md) nebo [synchronizovat informace o uživatelských účtech](users-add.md#sync-active-directory-and-add-users-to-intune) s místní službou Active Directory, můžete toto okno prohlížeče zavřít.
 
 ## <a name="sign-in-to-microsoft-intune"></a>Přihlášení k Microsoft Intune
+
 Jakmile se zaregistrujete do služby Intune, můžete pomocí libovolného zařízení s [podporovaným prohlížečem](supported-devices-browsers.md#intune-supported-web-browsers) přihlásit se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a službu spravovat.
 
 Ve výchozím nastavení má váš účet ve službě Azure AD jedno z následujících oprávnění:
+
 - Globální správce
 - Správce služby Intune (označovaný také jako správce Intune)
 
@@ -76,4 +77,5 @@ Microsoft 365 Business: https://portal.microsoft.com/adminportal
 Správa mobilních zařízení Office 365: https://portal.office.com/adminportal/home#/MifoDevices
 
 ## <a name="see-also"></a>Související témata
+
 [Nemůžete se přihlásit k Office 365, Azure nebo Intune.](https://support.microsoft.com/help/2412085)
