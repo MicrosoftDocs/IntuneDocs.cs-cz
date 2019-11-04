@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 93915e8371d3951a843d6d3131678c1744747c4f
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
-ms.translationtype: HT
+ms.openlocfilehash: a20d1df2bf1e5052bcb2d3d83e919e190f8d9175
+ms.sourcegitcommit: d2d18eef64bcf16eec1a48fcb67f1362537c0245
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73415066"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445850"
 ---
 
 
@@ -13,12 +13,8 @@ ms.locfileid: "73415066"
 - Mac OS X 10,12 a novější
 
 ### <a name="google"></a>Google
-- Android 4.4 a novější (včetně řešení Samsung Knox Standard 4.4 a novějších)
-
-  Kompletní seznam ověřených zařízení se zabezpečením Samsung Knox Standard najdete v [nastavení zásad pro Android a Samsung Knox Standard](/intune/supported-devices-browsers#supported-samsung-knox-standard-devices).
-
-
-- [Požadavky](https://support.google.com/work/android/answer/6174145?hl=en) pro Android Enterprise
+- Android 5,0 a novější (včetně Samsung KNOX Standard 2,4 a vyšších: [požadavky](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
+- Android Enterprise: [požadavky](https://support.google.com/work/android/topic/9428066)
 
 ### <a name="microsoft"></a>Microsoft
 
@@ -26,7 +22,7 @@ ms.locfileid: "73415066"
 - Windows 10 (verze Home, S, Pro, Education a Enterprise)
 - Windows 10 Enterprise 2019 LTSC
 
-  Další informace o správě zařízení s Windows 10 2019 LTSC najdete v článku [Novinky ve Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/en-us/windows/whats-new/ltsc/whats-new-windows-10-2019)
+  Další informace o správě zařízení s Windows 10 2019 LTSC najdete v článku [Novinky ve Windows 10 Enterprise 2019 LTSC](https://docs.microsoft.com/windows/whats-new/ltsc/whats-new-windows-10-2019)
   
 - Windows 10 Mobile
 - Windows 10 IoT Enterprise (x86, x64)
@@ -37,7 +33,7 @@ ms.locfileid: "73415066"
 
 - Windows 10 Teams (Surface Hub)
 
-   Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](https://docs.microsoft.com/en-us/surface-hub/manage-settings-with-mdm-for-surface-hub) .
+   Další informace o správě zařízení s Windows 10 Teams najdete v tématu [správa Surface Hub s MDM](https://docs.microsoft.com/surface-hub/manage-settings-with-mdm-for-surface-hub) .
 - Windows Phone 8.1, Windows 8.1 RT, počítače s Windows 8.1 (udržovací režim)
 
 > [!NOTE]

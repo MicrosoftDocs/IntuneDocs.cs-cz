@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2019
+ms.date: 10/31/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,19 +15,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5afe2414db063aad53a89fd8125a68a53457ca49
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
-ms.translationtype: HT
+ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
+ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/01/2019
-ms.locfileid: "73414655"
+ms.locfileid: "73432524"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-> [!Note]
-> Zavedení každé [měsíční aktualizace](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) může trvat několik dní. Některé funkce můžou být delší než několik týdnů a nemusí být dostupné všem zákazníkům hned.
 
 Pokud ke správě zařízení autopilot používáte Intune, můžete po registraci spravovat nastavení rozhraní UEFI (DFCI) pomocí rozhraní pro konfiguraci firmwaru zařízení. Přehled výhod, scénářů a požadavků najdete v tématu [Přehled DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 

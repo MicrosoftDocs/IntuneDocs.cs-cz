@@ -64,8 +64,14 @@
 ## [Používání zařízení s iOSem](using-your-iOS-device-with-intune.md)
 ### [Účinky obnovení továrního nastavení zařízení s iOSem](effects-of-device-reset-company-portal-ios.md)
 ### [Instalace a přihlášení do Portálu společnosti](install-and-sign-in-to-the-intune-company-portal-app-ios.md)
-### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
-### [Registrace zařízení s iOSem poskytnutého vaší organizací](enroll-your-device-dep-ios.md)
+### Registrovat zařízení
+#### [Registrace zařízení s iOSem](enroll-your-device-in-intune-ios.md)
+#### [Registrace zařízení s iOSem poskytnutého organizací](enroll-your-device-dep-ios.md)
+#### Registrace pomocí odvozených přihlašovacích údajů
+##### [Registrace pomocí Entrust Datacard](enroll-ios-device-entrust-datacard.md)
+##### [Registrace pomocí Intercede](enroll-ios-device-intercede.md)
+##### [Registrace pomocí DISA Purebred](enroll-ios-device-disa-purebred.md)
+
 
 ### [Použití spravovaných aplikací na zařízení](use-managed-apps-on-your-device-ios.md)
 ### [Nastavení nebo změna hesla](set-or-change-your-passcode-ios.md)

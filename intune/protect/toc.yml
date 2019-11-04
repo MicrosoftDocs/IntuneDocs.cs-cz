@@ -6,7 +6,7 @@
     - name: Přehled ochrany zařízení
       href: device-protect.md
       displayName: compliant; noncompliant; mfa
-- name: Rychlý start
+- name: Rychlé starty
   items:
     - name: Vytváření zásad dodržování předpisů pro zařízení
       href: quickstart-set-password-length-android.md
@@ -217,7 +217,7 @@
               href: windows-update-compliance-reports.md
         - name: Zásady aktualizací pro iOS
           href: software-updates-ios.md
-    - name: Řešení problémů
+    - name: Odstraňování potíží
       items:
         - name: Řešení potíží se zásadami a profily
           href: ../configuration/troubleshoot-policies-in-microsoft-intune.md?toc=/intune/protect/toc.json&bc=/protect/breadcrumb/toc.json
@@ -237,7 +237,7 @@
           href: troubleshoot-bitlocker-policies.md
         - name: Řešení potíží s integrací aplikace Jamf Pro
           href: troubleshoot-jamf.md
-- name: Reference
+- name: Referenční informace
   items:
     - name: Rozhraní API pro přidání certifikační autority třetí strany
       href: scep-libraries-apis.md
@@ -249,6 +249,8 @@
               href: security-baseline-settings-mdm-all.md
             - name: Microsoft Defender ATP – základní nastavení
               href: security-baseline-settings-defender-atp.md
+            - name: Nastavení standardních hodnot zabezpečení Microsoft Edge
+              href: security-baseline-settings-edge.md
         - name: Nastavení služby Windows Update
           href: windows-update-settings.md
         - name: Nastavení zásad dodržování předpisů – Android
