@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6678b7c3519328623d9c0035c725af3877a36ba8
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 6600c75ce3e6120143b17fb863670b2eb423a09f
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507056"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592054"
 ---
 # <a name="add-web-apps-to-microsoft-intune"></a>Přidání webových aplikací do Microsoft Intune
 
@@ -36,7 +36,7 @@ Abyste mohli aplikaci spravovat a přiřazovat ji uživatelům, přidejte ji do 
 Intune vytvoří zástupce webové aplikace na zařízení uživatele. V případě zařízení se systémem iOS se na domovskou obrazovku přidá zástupce webové aplikace. V případě zařízení se systémem Android se zástupce webové aplikace přidá do widgetu portálu společnosti Intune a pomůcka musí být připnuté ručně uživatelem. V případě zařízení s Windows je zástupce webové aplikace umístěný v nabídce Start.
 
 > [!Note]
-> Na zařízeních s pracovním profilem Androidu se webové aplikace nepodporují. Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč.
+> Aby bylo možné spouštět webové aplikace, musí být na zařízení uživatele nainstalován prohlížeč.
 
 ## <a name="add-a-web-app-to-intune"></a>Přidání webové aplikace do Intune
 Pokud chcete přidat aplikaci do Intune v podobě zástupce aplikace na webu, postupujte takto:

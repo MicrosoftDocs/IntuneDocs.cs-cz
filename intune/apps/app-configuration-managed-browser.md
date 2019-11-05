@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ae1b5a51533bf14d4299fcf0248564562289f7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a3fab0b14f8ed68d13021a0e141d5997532df2ec
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507569"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592082"
 ---
 # <a name="manage-web-access-using-a-microsoft-intune-policy-protected-browser"></a>Správa webového přístupu pomocí Microsoft Intune prohlížeče chráněného zásadami
 
@@ -179,7 +179,7 @@ Pomocí výše uvedeného postupu vytvoříte konfiguraci aplikace Microsoft Edg
 > [!NOTE]
 > V zásadách ochrany aplikací, které spravují Microsoft Edge a přidružené aplikace zadané v konfiguraci aplikace, zajistěte, aby byla nastavená tato nastavení zásad ochrany dat:
 > - Posílání organizačních dat do jiných aplikací: **aplikace spravované podle zásad**
-> - Sdílení webového obsahu pomocí prohlížečů spravovaných podle zásad: **vyžadovat**
+> - Omezení přenosu webového obsahu u jiných aplikací: **prohlížeče spravované podle zásad**
 
 ## <a name="how-to-configure-application-proxy-settings-for-protected-browsers"></a>Postup konfigurace nastavení proxy aplikací pro chráněné prohlížeče
 

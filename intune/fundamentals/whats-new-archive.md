@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb7f9167602aa3f5b21e1c042aa3a049f02c952c
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 12c070ec9539e3fd1c87b4e61910a5660700e2bb
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73414902"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592029"
 ---
 # <a name="whats-new-in-the-microsoft-intune---previous-months"></a>Novinky v Microsoft Intune – předchozí měsíce
 
@@ -69,7 +69,7 @@ Přidáváme nastavení, které vám umožní přizpůsobit vzhled aplikace spra
 Nastavení veřejného terminálu najdete v tématu [omezení pro zařízení s Androidem Enterprise](../configuration/device-restrictions-android-for-work.md).
 
 #### <a name="app-protection-policy-assignment-save-and-apply---3104570---"></a>Uložení a použití přiřazení zásad ochrany aplikací<!-- 3104570 -->
-Teď máte lepší kontrolu nad [přiřazením zásad ochrany aplikací](../apps/app-protection-policies.md#assign-a-windows-10-policy-to-users). Když vyberete *přiřazení* pro nastavení nebo úpravu přiřazení zásady, musíte před použitím změny **Uložit** svou konfiguraci. Pomocí **zahození** zrušte zaškrtnutí všech změn, které provedete bez uložení změn do seznamů zahrnutí nebo vyloučení.  Když budete vyžadovat uložení nebo zahození, přiřadí se zásadám ochrany aplikací jenom uživatelé, kterým máte v úmyslu.
+Teď máte lepší kontrolu nad [přiřazením zásad ochrany aplikací](../apps/app-protection-policies.md). Když vyberete *přiřazení* pro nastavení nebo úpravu přiřazení zásady, musíte před použitím změny **Uložit** svou konfiguraci. Pomocí **zahození** zrušte zaškrtnutí všech změn, které provedete bez uložení změn do seznamů zahrnutí nebo vyloučení.  Když budete vyžadovat uložení nebo zahození, přiřadí se zásadám ochrany aplikací jenom uživatelé, kterým máte v úmyslu.
 
 #### <a name="new-microsoft-edge-browser-settings-for-windows-10-and-later---3174639---"></a>Nové nastavení prohlížeče Microsoft Edge pro Windows 10 a novější<!-- 3174639 -->
 Tato aktualizace obsahuje nová nastavení, která vám pomůžou řídit a spravovat prohlížeč Microsoft Edge na vašich zařízeních. Seznam těchto nastavení najdete v tématu [omezení pro zařízení s Windows 10 (a novější)](../configuration/device-restrictions-windows-10.md#microsoft-edge-browser).

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 783ae8bf3216c514bac183ed1945c454cbaa1708
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 98672a0f292ffd1e6c43b2b9696c345c0decb41b
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413864"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592100"
 ---
 # <a name="prepare-ios-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro iOS na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -289,26 +289,27 @@ Pokud se nástroji App Wrapping nepodaří aplikaci zabalit, zobrazí konzola n�
 |Vstupní aplikace, kterou jste zadali, už je zabalená a má nejnovější verzi šablony zásad.|Nástroj App Wrapping znovu nezabalí stávající zabalenou aplikaci do nejnovější verze šablony zásad.|
 |UPOZORNĚNÍ: Nezadali jste hash SHA1 certifikátu. Ujistěte se, že zabalená aplikace je před nasazením podepsaná.|Ověřte, že jste za příznakem příkazového řádku –c zadali platný hash SHA1. |
 
-### <a name="log-files-for-the-app-wrapping-tool"></a>Soubory protokolu pro nástroj App Wrapping
+### <a name="collecting-logs-for-your-wrapped-applications-from-the-device"></a>Shromažďování protokolů pro zabalené aplikace ze zařízení
+Následující postup vám pomůže získat protokoly zabalených aplikací, které vám pomůžou při řešení potíží.
 
-Aplikace zabalené nástrojem App Wrapping generují protokoly, které jsou zapsané do konzoly klientského zařízení s iOSem. Tyto informace jsou užitečné, pokud máte s aplikací potíže a potřebujete zjistit, jestli nesouvisí s nástrojem App Wrapping. Pro načtení těchto informací použijte následující kroky:
+1. Na zařízení přejděte do aplikace Nastavení v iOSu a vyberte podnikovou aplikaci.
+2. Přepněte **diagnostickou konzolu** na **Zapnuto**.
+3. Spusťte podnikovou aplikaci.
+4. Klikněte na odkaz „Začínáme“.
+5. Teď můžete protokoly sdílet prostřednictvím e-mailu nebo je můžete kopírovat do umístění na OneDrivu.
+
+> [!NOTE]
+> Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
+
+### <a name="collecting-crash-logs-from-the-system"></a>Shromažďování protokolů selhání ze systému
+
+Vaše aplikace může přihlašovat užitečné informace do konzoly klientského zařízení iOS. Tyto informace jsou užitečné v případě, že máte problémy s aplikací a potřebujete určit, jestli problém souvisí s nástrojem pro zabalení aplikace nebo samotným aplikací. Pro načtení těchto informací použijte následující kroky:
 
 1. Reprodukujte problém spuštěním aplikace.
 
 2. Shromážděte výstup konzoly podle pokynů společnosti Apple k [ladění nasazených aplikací iOS](https://developer.apple.com/library/ios/qa/qa1747/_index.html).
 
-3. Vyfiltrujte uložené protokoly pro výstup omezení aplikace zadáním následujícího skriptu do konzoly:
-
-    ```bash
-    grep “IntuneAppRestrictions” <text file containing console output> > <required filtered log file name>
-    ```
-
-    Filtrované protokoly můžete odeslat do Microsoftu.
-
-    > [!NOTE]
-    > Položka verze buildu v souboru protokolu označuje verzi buildu pro Xcode.
-
-    Zabalené aplikace taky uživatelům nabídnou možnost odeslat protokoly přímo ze zařízení prostřednictvím e-mailu v případě chyby aplikace. Protokoly můžou uživatelé poslat ke kontrole vám a vy je případně můžete přeposlat Microsoftu.
+Zabalené aplikace taky uživatelům nabídnou možnost odeslat protokoly přímo ze zařízení prostřednictvím e-mailu v případě chyby aplikace. Protokoly můžou uživatelé poslat ke kontrole vám a vy je případně můžete přeposlat Microsoftu.
 
 ### <a name="certificate-provisioning-profile-and-authentication-requirements"></a>Požadavky na certifikát, profil pro zřizování a ověřování
 
@@ -442,19 +443,6 @@ Jednoduše spusťte obecný příkaz pro balení aplikací s připojeným příz
 ```bash
 ./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
 ```
-
-## <a name="getting-logs-for-your-wrapped-applications"></a>Získání protokolů zabalených aplikací
-
-Následující postup vám pomůže získat protokoly zabalených aplikací, které vám pomůžou při řešení potíží.
-
-1. Na zařízení přejděte do aplikace Nastavení v iOSu a vyberte podnikovou aplikaci.
-2. Přepněte **diagnostickou konzolu** na **Zapnuto**.
-3. Spusťte podnikovou aplikaci.
-4. Klikněte na odkaz „Začínáme“.
-5. Teď můžete protokoly sdílet prostřednictvím e-mailu nebo je můžete kopírovat do umístění na OneDrivu.
-
-> [!NOTE]
-> Funkce protokolování je zapnutá pro aplikace zabalené nástrojem Intune App Wrapping Tool verze 7.1.13 nebo vyšší.
 
 ## <a name="see-also"></a>Související témata
 

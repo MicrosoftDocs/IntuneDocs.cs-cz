@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c388e632f545b48a18ef6ed7b76132c290f16a9e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 0ee3ecd64254c0e212ffc86155d677bf18ba647a
+ms.sourcegitcommit: f6b82c62af81a2643a1aaec774afa42d02eef352
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813456"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73566185"
 ---
 # <a name="add-app-configuration-policies-for-managed-ios-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s iOSem
 
@@ -166,8 +166,8 @@ Intune podporuje v seznamu vlastností následující typy dat:
 ### <a name="tokens-used-in-the-property-list"></a>Tokeny použité v seznamu vlastností
 
 Intune dál v seznamu vlastností podporuje následující typy tokenů:
-- \{\{userprincipalname\}\} – například **John@contoso.com**
-- \{\{mail\}\} – například **John@contoso.com**
+- \{\{userPrincipalName\}\}– například **jan\@contoso.com**
+- \{\{mail\}\}– například **jan\@contoso.com**
 - \{\{partialupn\}\} – například **John**
 - \{\{accountid\}\} – například **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\} – například **b9841cd9-9843-405f-be28-b2265c59ef97**

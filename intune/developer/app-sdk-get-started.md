@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6886060cce77004b107dac02ecea57f2090ac8f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 428da4581e9946b62bd6ee7c5f7d17d69f93ad9b
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503465"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592027"
 ---
 # <a name="get-started-with-the-microsoft-intune-app-sdk"></a>Začínáme s Microsoft Intune App SDK
 
@@ -63,7 +63,7 @@ E-mailové adresy, které uvedete ve svých odpovědích v dotazníku, použijem
 Pokud se v budoucnosti přímý odkaz na aplikaci změní, budete ji muset znovu zaregistrovat.
 
 > [!NOTE]
-> Informujte nás prosím v případě, že aktualizujete aplikaci novou verzí sady Intune App SDK.
+> Pokud aplikaci aktualizujete novou verzí sady Intune App SDK, musíte nás informovat.
 
 ## <a name="download-the-sdk-files"></a>Stažení souborů sady SDK
 
@@ -72,7 +72,7 @@ Sady Intune App SDK pro nativní systémy iOS a Android jsou hostované v účtu
 * [Intune App SDK pro iOS](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios)
 * [Intune App SDK pro Android](https://github.com/msintuneappsdk/ms-intune-app-sdk-android)
 
-Pokud je vaše aplikace vytvořená v Xamarinu, použijte tuto variantu sady SDK:
+Pokud máte aplikaci Xamarin, použijte tuto variantu sady SDK:
 
 * [Xamarinové vazby sady Intune App SDK](https://github.com/msintuneappsdk/intune-app-sdk-xamarin)
 
@@ -181,6 +181,9 @@ Po zaregistrování aplikace v rámci tenanta Azure a jejich zobrazení v rámci
 5. Do vyhledávacího pole zadejte **Microsoft Mobile Application Management** (Správa mobilních aplikací Microsoftu).
 6. V části **delegovaná oprávnění**vyberte **DeviceManagementManagedApps. přečte: číst a zapisovat data správy aplikací uživatele***.
 7. Klikněte na tlačítko **Přidat oprávnění**.
+
+> [!NOTE]
+> Pokud vaše aplikace neomezuje přihlášení z důvodu chyby přístupu k tomuto prostředku: https://intunemam.microsoftonline.com, musíte Odeslat poznámku, která msintuneappsdk@microsoft.com s ID klienta vaší aplikace. Toto je ruční proces schvalování ještě dnes.
 
 ### <a name="badge-your-app-optional"></a>Označte si aplikaci (volitelné)
 
