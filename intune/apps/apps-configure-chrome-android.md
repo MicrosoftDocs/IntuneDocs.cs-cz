@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5b80b0dbd8128606db9220178baf0d05af1a3800
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 2f667940cc238fe243b05c7ab6f1459f63f18faa
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498796"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635475"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
 
@@ -46,7 +46,7 @@ Pomocí zásad konfigurace aplikací Intune můžete nakonfigurovat Google Chrom
 
 Další podrobnosti o přidání spravované aplikace Google Play do Intune najdete v tématu [spravované aplikace Google Play Storu](~/apps/apps-add-android-for-work.md#managed-google-play-store-apps).
 
-## <a name="add-an-app-configuration-policy-for-managed-android-enterprise-devices"></a>Přidání zásad konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise
+## <a name="add-app-configuration-for-managed-ae-devices"></a>Přidat konfiguraci aplikace pro spravovaná zařízení s AE
 
 1. V podokně [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) vyberte **zásady konfigurace aplikací** > **Přidat**.
 2. Přidejte název zásady, vyberte **spravovaná zařízení** v části typ registrace zařízení a **Android** pod platformou.

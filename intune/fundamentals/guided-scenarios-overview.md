@@ -1,5 +1,5 @@
 ---
-title: Přehled scénářů s asistencí
+title: Přehled souvisejících scénářů
 titleSuffix: Microsoft Intune
 description: Přečtěte si informace o scénářích s asistencí pro Intune, které jsou dostupné na portálu pro správu zařízení Microsoft 365.
 keywords: ''
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 43c88366ea64182ccf8d45bc3e890a2579df20f1
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: 460cabead711e6fa4559bcec39e556448cdf2237
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585871"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635366"
 ---
 # <a name="intune-guided-scenarios-overview"></a>Přehled scénářů s asistencí pro Intune 
 
@@ -46,7 +46,7 @@ Scénáře s asistencí nabízejí konkrétní funkce. Následující podrobnost
 
 ### <a name="launching"></a>Spouštění  
 
-Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://devicemanagement.microsoft.com)**  > **řešení potíží a Nápověda**  > **scénáře**. 
+Všechny scénáře s asistencí jsou k dispozici na **[portálu pro správu zařízení](https://devicemanagement.microsoft.com)**  > **řešení potíží + podpora** **scénářů s asistencí** > . 
 
 Scénář s asistencí začíná úvodem, který vysvětluje účel scénáře a všechny nezbytné součásti potřebné k dokončení instalace. V tomto okamžiku se kontrolují vaše oprávnění správce, aby se ověřilo, že máte všechna potřebná oprávnění k dokončení tohoto scénáře.  
 

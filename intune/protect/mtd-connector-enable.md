@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f917167baecc643e045610e86e582957e535978
-ms.sourcegitcommit: 3ace4cba6e2f6fefa9120be3807387a49b200c9b
+ms.openlocfilehash: fae163cbcd97feb4f333d8ddfd44f2202dd343d6
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72810285"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627684"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune"></a>Povolení konektoru Mobile Threat Defense v Intune
 
@@ -63,8 +63,8 @@ Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v 
 Můžete určit, které možnosti ochrany před mobilními hrozbami chcete povolit podle požadavků vaší organizace. Tady jsou další podrobnosti:
 
 **Nastavení zásad dodržování předpisů MDM**
-- \* * Připojit zařízení s Androidem 4.1 + k *\<MTD Partner name > * * *: když tuto možnost povolíte, můžete nechat zařízení s Androidem 4.1 +, která hlásí bezpečnostní riziko zpátky do Intune.
-- \* * Připojit zařízení s iOS 8.0 + na *\<MTD název partnera > * * *: když tuto možnost povolíte, můžete mít zařízení s iOS 8.0 a vyšším hlášením rizika zabezpečení zpátky do Intune.
+- **Připojit zařízení s Androidem 4.1 + k _\<název partnera MTD >_** : když tuto možnost povolíte, můžete nechat zařízení s Androidem 4.1 + a hlásit bezpečnostní riziko zpátky do Intune.
+- **Připojit zařízení s iOS 8.0 + k _\<jméno partnera MTD >_** : když tuto možnost povolíte, budete moct zařízení s iOS 8.0 a vyšším ohlásit bezpečnostní riziko zpátky do Intune.
 - **Povolit synchronizaci aplikací pro zařízení iOS**: Povolí tomuto partnerovi Ochrany před mobilními hrozbami žádat o metadata aplikací pro iOS z Intune, která se použijí pro účely analýzy hrozeb.
 - **Blokovat nepodporované verze operačního systému**: Blokovat zařízení, pokud je na něm spuštěn operační systém nižší verze, než je minimálně podporovaná.
 

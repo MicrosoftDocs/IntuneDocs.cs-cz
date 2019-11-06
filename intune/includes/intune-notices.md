@@ -4,17 +4,32 @@ description: zahrnout soubor
 author: ErikjeMS
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 03/28/2019
+ms.date: 11/4/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: 0aa78ec17aba5deb0c914c3698676219f203b856
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: edef1f43caff97ab75aa3c58034ed4fc2dffd208
+ms.sourcegitcommit: ae6f2e7812e7fd36f2393b8f4b6cd8de63777b2c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73415088"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73612028"
 ---
 Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
+
+### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Plánování změn: aktualizované prostředí při registraci vyhrazených zařízení s Androidem Enterprise v Intune<!--5198878-->
+Od verze listopadu nebo 1911 do Intune přidáváme podporu nasazení certifikátu zařízení SCEP pro zařízení s Androidem Enterprise vyhrazená pro povolení přístupu k profilům Wi-Fi pomocí certifikátů. Tato změna zahrnuje také některé menší změny toku při registraci vyhrazených zařízení s Androidem Enterprise.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Pokud ve svém prostředí spravujete vyhrazená zařízení s Androidem Enterprise, začnete v listopadu zobrazovat některé změny.
+
+- Pro nové registrace zařízení se systémem Android Enterprise: koncoví uživatelé uvidí během registrace jinou sadu kroků na zařízeních. Registrace pořád spustí způsob, jakým v současné době funguje (se QR, NFC, nulou nebo identifikátorem zařízení), ale po vydání služby bude povinný krok instalace aplikace.
+- Stávající zařízení s Androidem zaregistrovaná jako vyhrazená zařízení: Intune začne automaticky instalovat aplikaci Microsoft Intune do zařízení počínaje začátkem listopadu. Nemusíte provádět žádnou akci. Aplikace se automaticky stáhne a nainstaluje na zařízení. 
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
+Měli byste naplánovat, abyste si aktualizovali pokyny pro koncové uživatele a věděli, že vám tato změna poznala helpdesk. Kliknutím na Další informace zobrazíte další podrobnosti a snímky obrazovky. Až se tato změna začne zavádět, aktualizujeme naši stránku co je nového.
+
+#### <a name="additional-information"></a>Další informace
+[https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
 ### <a name="plan-for-change-the-server-side-logging-for-siri-commands-setting-will-be-removed-from-the-intune-console----5468501--"></a>Naplánování změny: nastavení ' protokolování na straně serveru pro příkazy Siri se odebere z konzoly Intune. <!-- 5468501-->
 

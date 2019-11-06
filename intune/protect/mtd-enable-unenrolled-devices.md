@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63079757ee3610d825601921da1d33aa94f851b6
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: b2744a27a733824bab9d920f4de0b49e951c1c34
+ms.sourcegitcommit: a4c7339ec9ff5b1b846cb3cca887cf91b5cd4baa
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72795305"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627640"
 ---
 # <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Povolení konektoru ochrany před mobilními hrozbami v Intune pro neregistrovaná zařízení
 
@@ -51,8 +51,8 @@ Při instalaci ochrany před mobilními hrozbami (MTD) jste nakonfigurovali zás
 Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínání konektoru MTD potřebujete povolit. Tady jsou další podrobnosti:
 
 **Nastavení zásad ochrany aplikací**
-- **Připojit zařízení s Androidem verze 4,1 a novější pro *\<MTD partnerský název >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně data z tohoto konektoru.
-- **Připojit zařízení s iOS verze 8,0 a novější pro *\<MTD partnerský název >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, která budou zahrnovat data. Tento konektor.
+- **Připojit zařízení s Androidem verze 4,4 a novější pro *\<název partnera MTD >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně data z tohoto konektoru.
+- **Připojit zařízení s iOS verze 11 a vyšší, aby *\<MTD název partnera >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozeb pro zařízení vyhodnotí zařízení, která budou zahrnovat data z Tento konektor.
 
 **Společné sdílené nastavení**
 - **Počet dnů, než partner přestane reagovat**: Počet dnů nečinnosti, než bude Intune kvůli ztrátě připojení považovat partnera za nereagujícího. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba1ec201cdb7e44570b53ce831b4e5ae26504973
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: dbddb0fcecfd5a0b021346a3a20b3c7e4f696a49
+ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413816"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73635333"
 ---
 # <a name="prepare-line-of-business-apps-for-app-protection-policies"></a>Příprava obchodních aplikací na zásady ochrany aplikací
 
@@ -110,7 +110,7 @@ Tato tabulka obsahuje seznam nastavení, která můžete použít v sadě SDK a 
 |Úplné vymazání dat aplikací|X|X|
 |Selektivní vymazání pracovních a školních dat ve scénářích s více identitami <br><br>**Poznámka:** V iOSu platí, že při odebrání profilu pro správu se odebere taky příslušná aplikace.|X||
 |Zabránit možnosti Uložit jako|X||
-|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X|X|
+|Cílová konfigurace aplikace (nebo konfigurace aplikace prostřednictvím kanálu MAM)|X||
 |Podpora víc identit|X||
 |Přizpůsobitelný styl |X|||
 |Připojení VPN aplikace na vyžádání pomocí Citrix mVPN|X|X| 
