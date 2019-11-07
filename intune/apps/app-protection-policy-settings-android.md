@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cf2a8e55963dd3da98e20f5700a464d00c3c62a9
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: 06784a3d0e842be791286469737c4716760ea32d
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999465"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709956"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -50,7 +50,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 ### <a name="encryption"></a>Encryption
 | Nastavení | Způsob použití | Výchozí hodnota |
 |------|------|------|
-| **Šifrování dat organizace** | Vyberte **vyžadovat** , pokud chcete v této aplikaci povolit šifrování pracovních nebo školních dat. Intune používá k bezpečnému šifrování dat aplikací rozhraní OpenSSL (256) šifrování AES a systém úložiště klíčů pro Android. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Nové soubory budou šifrovány pomocí 256 bitových klíčů. Stávající 128 zašifrované soubory budou podrobeny pokusu o migraci do 256 klíčů, ale proces není zaručen. Soubory zašifrované pomocí 128 bitových klíčů budou moci být čitelné. <br><br> Metoda šifrování je kompatibilní se standardem FIPS 140-2.     |  **Žádá**|  
+| **Šifrování dat organizace** | Vyberte **vyžadovat** , pokud chcete v této aplikaci povolit šifrování pracovních nebo školních dat. Intune používá k bezpečnému šifrování dat aplikací rozhraní OpenSSL (256) šifrování AES a systém úložiště klíčů pro Android. Data jsou mezi vstupně-výstupními úlohami souborů synchronně šifrovaná. Obsah v úložišti zařízení je zašifrovaný vždycky. Nové soubory budou šifrovány pomocí 256 bitových klíčů. Stávající 128 zašifrované soubory budou podrobeny pokusu o migraci do 256 klíčů, ale proces není zaručen. Soubory zašifrované pomocí 128 bitových klíčů budou moci být čitelné. <br><br> Metoda šifrování je ověřená FIPS 140-2; Další informace najdete v tématu [Knihovna FIPS OpenSSL a příručka pro Android](https://wiki.openssl.org/images/7/76/OpenSSL_FIPS_Library_and_Android_Guide.pdf).     |  **Žádá**|  
 | <ul><ui>**šifrovat data organizace v zaregistrovaných zařízeních** | Vyberte **vyžadovat** , pokud chcete vynutit šifrování organizačních dat pomocí šifrování aplikační vrstvy Intune na všech zařízeních. Pokud nechcete vymáhat šifrování organizačních dat pomocí šifrování vrstvy aplikace Intune v zaregistrovaných zařízeních, vyberte **není nutné** .| **Žádá** |
 
 

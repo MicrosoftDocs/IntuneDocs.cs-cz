@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 445737a1b0a72e380844af6225cdb735cd3ec02c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1b2390462376c88129435de30eb98020563f3878
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509350"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713103"
 ---
 # <a name="reset-the-passcode-on-windows-devices-using-intune"></a>Resetování hesla na zařízeních s Windows pomocí Intune
 
@@ -64,11 +64,10 @@ Nastavte hodnotu pro tohoto poskytovatele konfiguračních služeb na **True**.
 
 ## <a name="reset-the-passcode"></a>Resetování hesla
 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com). 
-2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
-3. Vyberte **Zařízení** a potom **Všechna zařízení**.
-4. Vyberte zařízení, jehož heslo chcete resetovat. Ve vlastnostech zařízení vyberte **Nové heslo**.
-5. Kliknutím na **tlačítko Ano** potvrďte akci. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Vyberte **Zařízení** a potom **Všechna zařízení**.
+3. Vyberte zařízení, jehož heslo chcete resetovat. Ve vlastnostech zařízení vyberte **Nové heslo**.
+4. Kliknutím na **tlačítko Ano** potvrďte akci. Vygeneruje se heslo, které zůstane na portálu zobrazeno dalších sedm dní.
 
 ## <a name="next-step"></a>Další krok
 

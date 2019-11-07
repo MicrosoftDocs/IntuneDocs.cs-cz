@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/22/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9625243698bffc93ed969a8c2e4b06b4f3093f4d
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: e76077553d4394366ca3e4403e74f4f3c9d8b996
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72785537"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712876"
 ---
 # <a name="how-to-manage-ios-and-macos-apps-purchased-through-apple-volume-purchase-program-with-microsoft-intune"></a>Jak spravovat aplikace pro iOS a macOS zakoupené prostřednictvím Apple Volume Purchase Program s využitím Microsoft Intune
 
@@ -89,6 +89,8 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 5. V podokně **Vytvořit token VPP** zadejte následující informace:
     - **Soubor tokenu VPP** – pokud jste to ještě neudělali, zaregistrujte se do programu Volume Purchase Program for Business nebo Volume Purchase Program for Education. Po zaregistrování si stáhněte token Apple VPP pro svůj účet a vyberte ho tady.
     - **Apple ID** – zadejte Apple ID účtu přidruženého k multilicenčnímu programu.
+    - **Převzít kontrolu nad tokenem z jiné MDM** – nastavením této možnosti na **Ano** umožníte, aby se token znovu přiřadil do Intune z jiné MDM.
+    - **Název tokenu** – pole pro správu pro nastavení názvu tokenu.    
     - **Země/oblast** – vyberte úložiště VPP země/oblast.  Intune synchronizuje aplikace VPP pro všechna národní prostředí ze zadaného úložiště v zemi nebo oblasti VPP.
         > [!WARNING]  
         > Když se změní země nebo oblast, aktualizují se metadata aplikace a adresa URL Storu při příští synchronizaci se službou Apple pro aplikace vytvořené pomocí tohoto tokenu. Aplikace nebude aktualizována, pokud neexistuje v úložišti nové země/oblast.
@@ -98,6 +100,9 @@ Než začnete, potřebujete od společnosti Apple získat token VPP a nahrát ho
 
         > [!NOTE]
         > Automatické aktualizace aplikací fungují pro aplikace i uživatele licencované pro iOS 11,0 a vyšší nebo macOS 10,12 a novější.
+
+    - **Udělujem Microsoftu oprávnění odesílat informace o uživatelích i zařízeních do společnosti Apple.** – **Chcete-li pokračovat** , je nutné vybrat souhlasím. Pokud chcete zjistit, co data Microisoft odesílá do Applu, přečtěte si téma [data Intune odesílají společnosti Apple](~/protect/data-intune-sends-to-apple.md).
+
 6. Až to budete mít, vyberte **Vytvořit**.
 
 Token se zobrazí v podokně se seznamem tokenů.

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/06/2019
 ms.service: microsoft-intune
 ms.subservice: apps
 ms.localizationpriority: high
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 455f717e0e8ca4337cfef8693d5b71a0902b103f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0b9dda9a1aa1e81b46533c1c15d996807984193d
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72499221"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712944"
 ---
 # <a name="how-to-validate-your-app-protection-policy-setup-in-microsoft-intune"></a>Ověření nastavení zásad ochrany aplikací v Microsoft Intune
 
@@ -44,7 +44,7 @@ Pokud se při testování ukáže, že chování zásad ochrany aplikací nefung
 
 ### <a name="user-app-protection-status"></a>Stav uživatele ochrany aplikací
 1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Vyberte **klientské aplikace**@no__t**stav ochrany aplikací**-1 a pak vyberte dlaždici **přiřazení uživatelé** . 
+3. Vyberte **klientské aplikace** >  **stav ochrany aplikací**a pak vyberte dlaždici **přiřazení uživatelé** . 
 4. Na stránce **vytváření sestav aplikací** vyberte **Vybrat uživatele** a zobrazte seznam uživatelů a skupin. 
 5. Vyhledejte a vyberte uživatele ze seznamu a pak zvolte **Vybrat uživatele**. V horní části podokna **vytváření sestav aplikace** uvidíte, jestli má uživatel licenci k ochraně aplikací. Můžete také zjistit, jestli má uživatel licenci pro O365 a stav aplikace pro všechna zařízení uživatele.
 

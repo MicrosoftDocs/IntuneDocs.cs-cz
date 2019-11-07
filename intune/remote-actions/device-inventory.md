@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a72477351425e9230200995658cc6f73a8565fb7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 918468bf8948ce54082f3fccc0325db07e116966
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509491"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713206"
 ---
 # <a name="see-device-details-in-intune"></a>Zobrazení podrobností o zařízení v Intune
 
@@ -33,7 +33,7 @@ V tomto článku se dozvíte, jak si můžete zobrazit všechna zařízení a je
 
 ## <a name="view-the-device-details"></a>Zobrazení podrobností o zařízení
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** > **Všechna zařízení** > výběrem zařízení uvedeného v seznamu otevřete podrobné informace o něm:
 
    - **Přehled** zobrazuje název zařízení a uvádí některé klíčové vlastnosti zařízení, jako je například to, jestli se jedná o zařízení s podporou vlastního zařízení (BYOD), vrácení se změnami a další. Na zařízení můžete provést následující akce:

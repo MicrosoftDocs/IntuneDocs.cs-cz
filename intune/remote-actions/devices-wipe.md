@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbcc50d275a3d3e6a613640e96b363ce7608da81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ded91d72321257adc30d0321b5d01e74fa1d51a6
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508568"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712204"
 ---
 # <a name="remove-devices-by-using-wipe-retire-or-manually-unenrolling-the-device"></a>Odebrání zařízení vymazáním, vyřazením nebo ručním zrušením registrace
 
@@ -53,7 +53,7 @@ Vymazání je vhodné, když chcete zařízení resetovat, abyste ho mohli dát 
 
 ### <a name="wiping-a-device"></a>Vymazání zařízení
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** > **Všechna zařízení**.
 4. Zvolte název zařízení, které chcete vymazat.
 5. V podokně s názvem zařízení vyberte **Vymazání**.
@@ -146,7 +146,7 @@ Zařízení s Androidem v beznabídkovém režimu můžete jen vymazat. Vyřazen
 
 ### <a name="retire"></a>Vyřazení
 
-1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. V podokně **Zařízení** zvolte **Všechna zařízení**.
 3. Zvolte název zařízení, které chcete vyřadit.
 4. V podokně s názvem zařízení vyberte **Vyřazení**. Potvrďte zvolením **Ano**.
@@ -157,12 +157,12 @@ Pokud je zařízení zapnuté a připojené, akce **Vyřazení** se do všech ty
 
 Pokud chcete odebrat zařízení z portálu Intune, můžete je odstranit z podokna konkrétního zařízení. Při příštím přihlášení zařízení se z něj odeberou všechna firemní data.
 
-1. Přihlaste se k [Intune na webu Azure Portal](https://aka.ms/intuneportal).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte zařízení, která chcete odstranit > **Odstranit**.
 
 ### <a name="automatically-delete-devices-with-cleanup-rules"></a>Automatické odstranění zařízení pomocí pravidel čištění
 Můžete nakonfigurovat Intune tak, aby automaticky odstraňoval zařízení, která jsou neaktivní, zastaralá nebo nereagující. Tato pravidla čištění průběžně monitorují váš inventář zařízení, aby záznamy vašich zařízení byly stále aktuální. Zařízení odstraněná tímto způsobem se odeberou ze správy Intune.
-1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Zvolte **Zařízení** > **Pravidla čištění zařízení** > **Ano**.
 3. V poli **Odstranit zařízení, která se pro tento počet dnů nevrátila** , zadejte číslo mezi 30 a 270.
 4. Vyberte **Uložit**.
@@ -185,7 +185,7 @@ Kvůli komunikačním problémům nebo ztraceným zařízením můžete potřebo
 
 Pokud chcete zařízení Apple DEP zcela odebrat ze systému správy Intune, postupujte takto:
 
-1. Přihlaste se k [Intune na portálu Azure Portal](https://aka.ms/intuneportal).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Zvolte **Zařízení** > **Všechna zařízení** > vyberte požadované zařízení > **Vyřazení**.
 ![Snímek obrazovky s akcí vyřazení](./media/devices-wipe/retire.png)
 3. Přejděte na [deploy.apple.com](http://deploy.apple.com) a vyhledejte zařízení podle sériového čísla.

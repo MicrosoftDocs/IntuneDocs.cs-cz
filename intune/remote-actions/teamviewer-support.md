@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac9d22ff4b203a4e7a85121df6c021eec1bcd1e3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d03859d5775193e6bbc482c06b28942a1a5bce2f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508534"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712142"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>Vzdálená správa zařízení s Intune pomocí TeamVieweru
 
@@ -47,8 +47,8 @@ Když použijete TeamViewer, umožníte Konektoru pro TeamViewer služby Intune 
 
 Abyste mohli poskytovat vzdálenou pomoc pro zařízení, nakonfigurujte si s použitím následujícího postupu konektor pro TeamViewer a Intune:
 
-1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
-2. V **Microsoft Intune** vyberte **Zařízení** a potom vyberte **Konektor pro TeamViewer**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konektor pro TeamViewer**.
 3. Vyberte **Připojit** a přijměte podmínky licenční smlouvy.
 4. Zvolte **Přihlásit se k TeamVieweru pro autorizaci**.
 5. Otevře se webová stránka TeamVieweru. Zadejte přihlašovací údaje pro svoji licenci TeamVieweru a pak se **přihlaste**.
@@ -57,8 +57,8 @@ Abyste mohli poskytovat vzdálenou pomoc pro zařízení, nakonfigurujte si s po
 
 Po konfiguraci konektoru jste připravení vzdáleně spravovat zařízení. Postupujte podle následujících pokynů: 
 
-1. Na portálu [Azure Portal](https://portal.azure.com) vyberte **Všechny služby** a vyhledejte **Microsoft Intune**.
-2. V **Microsoft Intune** vyberte **Zařízení** a potom **Všechna zařízení**.
+1. V centru pro [správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **Zařízení** a potom **Všechna zařízení**.
 3. V seznamu vyberte zařízení, které chcete vzdáleně spravovat. Ve vlastnostech zařízení vyberte **Nová relace Vzdálené pomoci**.
 4. Až se Intune ke službě TeamViewer připojí, zobrazí se některé informace o zařízení. Ke spuštění vzdálené relace použijte možnost **Připojit**.
 

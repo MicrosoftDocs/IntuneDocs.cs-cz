@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39ea8b3859d3d2525433c4cafdf566e7a2c8d2ab
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f8e319c68abd8965b84323bc3b7a5451dee42bc2
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509195"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709186"
 ---
 # <a name="tutorial-use-autopilot-to-enroll-windows-devices-in-intune"></a>Kurz: Použití Autopilotu k registraci zařízení s Windows v Intune
 
@@ -60,7 +60,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 2. Soubor CSV uložte.
 
-3. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení** > **Importovat**.
+3. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **zařízení** > **Import**.
 
     ![Snímek obrazovky se zařízeními Windows Autopilot](./media/tutorial-use-autopilot-enroll-devices/autopilot-import-device.png)
 
@@ -78,7 +78,7 @@ Prvním krokem při nastavení Windows Autopilotu je přidání zařízení s Wi
 
 Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, která jste právě načetli.
 
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) zvolte **Skupiny** > **Nová skupina**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **skupiny** > **Nová skupina**.
 2. V okně **Skupina**:
     1. Pro **Typ skupiny** zvolte **Zabezpečení**.
     2. Jako **Název skupiny** zadejte *Skupina Autopilot*. Jako **Popis skupiny** zadejte *Testovací skupina pro zařízení Autopilot*.
@@ -90,7 +90,7 @@ Dále vytvořte skupinu zařízení a přidejte do ní zařízení Autopilot, kt
 
 Po vytvoření skupiny zařízení musíte vytvořit profil nasazení, abyste mohli zařízení Autopilot nakonfigurovat.
 
-1. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal) vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Profily nasazení** > **Vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **profily nasazení** > **registrace systému Windows** > **vytvořit profil**.
 2. Na stránce **základy** zadejte **název**systému do pole *autopilot Profile*. Jako **Popis skupiny** zadejte *Testovací profil pro zařízení Autopilot*.
 3. Nastavte možnost **Převést všechna cílová zařízení na Autopilot** na **Ano**. Toto nastavení zajistí, že všechna zařízení v seznamu se zaregistrují pomocí služby nasazení Autopilot. Vyřízení registrace trvá 48 hodin.
 4. Vyberte **Další**.
@@ -116,7 +116,7 @@ Pokud už nechcete používat zařízení autopilotu, můžete je odstranit.
 
 1. Pokud jsou zařízení registrována v Intune, musíte je nejdřív [odstranit z portálu služby Azure Active Directory](../remote-actions/devices-wipe.md#delete-devices-from-the-azure-active-directory-portal).
 
-2. V [Intune na portálu Azure Portal](https://aka.ms/intuneportal), vyberte **Registrace zařízení** > **Registrace zařízení s Windows** > **Zařízení**.
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace zařízení > **zařízení**se **systémem Windows** .
 
 3. V části **Zařízení Windows Autopilot** vyberte zařízení, která chcete odstranit, a pak vyberte **Odstranit**.
 

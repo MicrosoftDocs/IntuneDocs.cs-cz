@@ -2,7 +2,7 @@
 title: Rychlý start – registrace zařízení s desktopovou verzí Windows 10 v Microsoft Intune
 description: Rychlý start – použití Portálu společnosti k registraci zařízení s desktopovou verzí Windows 10 v Microsoft Intune
 services: microsoft-intune
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
 ms.date: 07/30/2019
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0aeeb55804a2bdd3ef1143bbb88dee968892c5c7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 91f20411f668428c8bf3af8b0bd4ae6f4b0b545f
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509285"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713510"
 ---
 # <a name="quickstart-enroll-your-windows-10-device"></a>Rychlý start: Registrace zařízení s Windows 10
 
@@ -91,7 +91,7 @@ Před registrací počítače s desktopovou verzí Windows 10 musíte potvrdit v
 
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Potvrzení registrace zařízení v Intune
 
-1. Přihlaste se k [Intune](https://aka.ms/intuneportal) jako globální správce nebo správce služby Intune.
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako globální správce nebo správce služby Intune.
 2. Vyberte **zařízení** > **všechna zařízení** , aby se mohla zobrazit zaregistrovaná zařízení v Intune.
 3. Ověřte, že máte v Intune zaregistrované další zařízení.
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 899d667ca271ae5c3edced18fab8da987c49b2ca
-ms.sourcegitcommit: 85c894cb4df34a5ff558e3b45e28a8b91054d9e6
+ms.openlocfilehash: f6d4b076b508316cdb2d3d5f2814fc5e46a014e7
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73432524"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709526"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
@@ -127,9 +127,11 @@ Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
 
 Po vytvoření profilů jsou [připravené k jejich přiřazení](../configuration/device-profile-assign.md). Nezapomeňte přiřadit profily ke skupinám zabezpečení Azure AD, které zahrnují vaše zařízení DFCI.
 
-Až se zařízení příště synchronizuje nebo se zařízení restartuje, použije se nastavení profilu DFCI. Po použití zásad restartujte zařízení.
+Když zařízení spustí automatický pilotní program Windows, během stránky stav registrace může DFCI Vynutit restartování. Tímto prvním restartováním zaregistrujete rozhraní UEFI do Intune. 
 
-Když zařízení spustí instalaci zařízení s Windows, DFCI může vynutit restartování během stránky stavu registrace. Po dokončení instalace můžete potvrdit, že je nastavení DFCI aktivní restartováním zařízení. Pak použijte pokyny výrobce zařízení k otevření nabídky UEFI.
+Pokud chcete potvrdit, že je zařízení zaregistrované, můžete znovu restartovat zařízení, ale není to nutné. Použijte pokyny výrobce zařízení k otevření nabídky UEFI a potvrďte, že je rozhraní UEFI teď spravované.
+
+Když se zařízení příště synchronizuje s Intune, Windows přijme nastavení DFCI. Restartujte zařízení. Tento třetí restart vyžaduje, aby rozhraní UEFI přijímalo nastavení DFCI ze systému Windows.
 
 ## <a name="update-existing-dfci-settings"></a>Aktualizovat existující nastavení DFCI
 

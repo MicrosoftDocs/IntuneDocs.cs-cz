@@ -19,12 +19,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f770db6927ed87786f7806e011cdc6cb9bae6b3f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 190322392909a14681a4b68a79d9a3537360206b
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509270"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713492"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>Řešení potíží při registraci zařízení v Microsoft Intune
 
@@ -64,9 +64,9 @@ K těmto problémům může docházet na všech platformách zařízení.
 
 Podle následujícího postupu zkontrolujte, jestli nemá uživatel přiřazeno více zařízení, než je maximální povolený počet:
 
-1. V Intune zvolte **Registrace zařízení** > **Omezení registrace** > **Omezení limitů počtů zařízení**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **omezení registrace** > **omezení limitu počtu zařízení**. Poznamenejte si hodnotu uvedenou ve sloupci **Limit počtu zařízení**.
 
-2. V Intune zvolte **Uživatelé** > **Všichni uživatelé** > vyberte požadovaného uživatele > **Zařízení**. Poznamenejte si počet zařízení.
+2. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zvolte **Uživatelé** > **všichni uživatelé** > vyberte **zařízení**> uživatelů. Poznamenejte si počet zařízení.
 
 3. Pokud počet zaregistrovaných zařízení uživatele se už rovná počtu uvedenému v omezení limitu počtu zařízení, nemůže si daný uživatel žádná další zařízení zaregistrovat, dokud:
     - [nebudou odebrána existující zařízení](../remote-actions/devices-wipe.md), nebo
@@ -125,7 +125,7 @@ Pokud se chcete vyhnout dosažení limitu počtu zařízení, nezapomínejte ode
 
         - Chcete-li zobrazit všechny uživatele: `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        - Chcete-li zobrazit konkrétní uživatele, použijte následující dotaz, kde% TestUser1% je zástupný symbol pro username@domain.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        - Pokud chcete zobrazit konkrétní uživatele, použijte následující dotaz, kde% TestUser1% je zástupný symbol pro username@domain.com pro uživatele, kterého chcete vyhledat: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         Po napsání dotazu zvolte **!Execute**.
         Když se vrátí výsledky, vyhledejte ID uživatele cloudu.  Pokud se žádné ID nenajde, nemá daný uživatel licenci pro používání služby Intune.

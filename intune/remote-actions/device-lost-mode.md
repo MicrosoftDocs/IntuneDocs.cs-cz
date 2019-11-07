@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 34a4c8adeef7e8b28c90ad38579f0f9ac7c4784d
-ms.sourcegitcommit: 807ab3e35f4d9ffa18655410b7d61e5e772ab348
+ms.openlocfilehash: 2956be9e32587c3bf86ce009a6927269c11ffced
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73057529"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73712236"
 ---
 # <a name="enable-lost-mode-on-ios-devices-with-intune"></a>Zapnutí režimu ztráty u zařízení s iOSem pomocí Intune
 
@@ -41,7 +41,7 @@ Tato funkce není podporovaná pro:
 
 ## <a name="enable-lost-mode"></a>Zapnutí režimu ztráty
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení** a potom **Všechna zařízení**.
 4. V seznamu zařízení, která spravujete, zvolte zařízení s iOS a pak zvolte **režim ztráty (jenom pod dohledem)** .
 5. V části **režim ztráty**vyberte **Povolit**.

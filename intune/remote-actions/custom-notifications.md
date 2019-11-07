@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 002989bd61167d6f0d20e2c5cb3fa80a4051a99c
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a8393bbc012861199bd99d97a62ab3e659c15d15
+ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508677"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73713242"
 ---
 # <a name="send-custom-notifications-in-intune"></a>Odesílání vlastních oznámení v Intune  
 
@@ -69,7 +69,7 @@ Vlastní zprávy s oznámením obsahují krátký nadpis a tělo zprávy o 500 n
 
 ## <a name="send-a-custom-notification-to-groups"></a>Odeslání vlastního oznámení do skupin  
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a přejít na **zařízení** > **odesílat vlastní oznámení**.  
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a na **zařízeních** > **odesílat vlastní oznámení**.  
 
 2. Na kartě základy zadejte následující příkaz a pokračujte výběrem **Další** .  
    - **Title** – zadejte název tohoto oznámení. Názvy jsou omezeny na 50 znaků.  
@@ -89,7 +89,7 @@ Intune nesleduje vlastní oznámení, která odesíláte, a zařízení neprotok
 
 ## <a name="send-a-custom-notification-to-a-single-device"></a>Odeslání vlastního oznámení na jedno zařízení  
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a pak na **zařízení** > **všechna zařízení**.  
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) pomocí účtu, který má oprávnění k vytváření a odesílání oznámení, a pak na **zařízení** > **všechna zařízení**.  
 
 2. Vyberte zařízení, pro které chcete odeslat oznámení.  
 

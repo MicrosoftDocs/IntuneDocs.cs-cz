@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d69bd040929da08d7d23db764c5b01f6aca6a9ea
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 5e453002493e95bd5147cca115075a17a6e7a298
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143168"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709332"
 ---
 # <a name="set-up-an-enrollment-status-page"></a>Nastavení stránky stavu registrace
  
@@ -64,14 +64,14 @@ Můžete také nastavit pořadí priority pro každý profil na účet pro konfl
 
 Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících kroků.
  
-1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **Stránka stavu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
 2. V okně **Stránka stavu registrace** zvolte **Výchozí** > **Nastavení**.
 3. U možnosti **Zobrazit průběh instalace aplikací a profilů** zvolte **Ano**.
 4. Zvolte další nastavení, která chcete zapnout, a potom zvolte **Uložit**.
 
 ## <a name="create-enrollment-status-page-profile-and-assign-to-a-group"></a>Vytvoří profil stránky stavu registrace a přiřadí se ke skupině.
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **Stránka stavu registrace** > **vytvořit profil**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > na **stránce Stav registrace** > **vytvořit profil**.
 2. Zadejte **Název** a **Popis**.
 3. Zvolte **Vytvořit**.
 4. Nový profil vyberte v seznamu **Stránka stavu registrace**.
@@ -82,7 +82,7 @@ Pokud chcete zapnout stránku Stav registrace, postupujte podle následujících
 
 Uživatel může být v mnoha skupinách a mít velký počet profilů stránek stavu registrace. Chcete-li tyto konflikty zpracovat, můžete nastavit priority pro jednotlivé profily. Pokud má někdo více než jeden profil stránky stavu registrace, použije se k registraci zařízení jenom profil s nejvyšší prioritou.
 
-1. V [Intune](https://aka.ms/intuneportal)vyberte **registrace zařízení** > **registrace Windows** > **Stránka stavu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
 2. Najeďte myší na profil v seznamu.
 3. Pomocí tří svislých teček přetáhněte profil na požadované místo v seznamu.
 
@@ -90,7 +90,7 @@ Uživatel může být v mnoha skupinách a mít velký počet profilů stránek 
 
 Můžete určit, které aplikace se musí nainstalovat, než uživatel bude moci získat přístup k ploše.
 
-1. V Intune vyberte **registrace zařízení** > **registrace Windows** > **Stránka stavu registrace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > **registrace systému Windows** > **Stránka stav registrace**.
 2. Vyberte profil > **Nastavení**.
 3. Pokud chcete **Zobrazit průběh instalace aplikací a profilů**, klikněte na **Ano** .
 4. Vyberte možnost **Ano** pro **blokování použití zařízení, dokud nebudou nainstalovány všechny aplikace a profily**.

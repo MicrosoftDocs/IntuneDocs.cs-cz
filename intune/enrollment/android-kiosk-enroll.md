@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: edc884850b70ff7621224c5b01a68d016f27504e
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: c06fe931bf17b812def3f22b3d9a5d92d9933e2b
+ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923379"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73709460"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-dedicated-devices"></a>Nastavení registrace Intune pro vyhrazená podniková zařízení s Androidem
 
@@ -59,7 +59,7 @@ Chcete-li nastavit správu vyhrazené správy zařízení s Androidem Enterprise
 
 Je nutné vytvořit registrační profil, abyste mohli zaregistrovat vyhrazená zařízení. Po vytvoření poskytne tento profil registrační token (náhodný řetězec) a kód QR. V závislosti na operačním systému Android a verzi zařízení můžete použít buď token, nebo kód QR k [registraci vyhrazeného zařízení](#enroll-the-dedicated-devices).
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **registrace zařízení** >  registrace zařízení s**Androidem** > **vyhrazená zařízení ve vlastnictví firmy**.
+1. Přihlaste se do [centra pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **registrace zařízení** > **registraci v Androidu** > **vyhrazená zařízení ve vlastnictví firmy**.
 2. Zvolte **Vytvořit** a vyplňte požadovaná pole.
     - **Název**: Zadejte název, který použijete při přiřazení tohoto profilu k dynamické skupině zařízení.
     - **Datum vypršení platnosti tokenu**: Datum, kdy vyprší platnost tokenu. Google vynucuje maximálně 90 dnů.
@@ -69,7 +69,7 @@ Je nutné vytvořit registrační profil, abyste mohli zaregistrovat vyhrazená 
 
 Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny zařízení. Následujícím postupem nakonfigurujete dynamické skupiny zařízení služby AAD tak, aby se automaticky naplnily zařízeními, která se zaregistrují s konkrétním registračním profilem:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **skupiny** > **všechny skupiny** > **Nová skupina**.
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **skupiny** > **všechny skupiny** > **nové skupiny**.
 2. V okně **Skupina** vyplňte požadovaná pole následujícím způsobem:
     - **Typ skupiny**: Zabezpečení
     - **Název skupiny**: Zadejte výstižný název (například Zařízení závodu 1).
@@ -92,7 +92,7 @@ Aplikace a zásady můžete cílit buď na přiřazené, nebo dynamické skupiny
 
 Nahrazení nebo odvolání tokenu/kódu QR nebude mít žádný vliv na zařízení, která už jsou zaregistrovaná.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **registrace zařízení** >  registrace zařízení s**Androidem** > **podnikových vlastní vyhrazená zařízení**.
+1. Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) a vyberte **registrace zařízení** > **registraci v Androidu** > **vyhrazená zařízení vlastněná společností podnikových**.
 2. Zvolte profil, se kterým chcete pracovat.
 3. Zvolte **Token**.
 4. Pokud chcete token nahradit, zvolte **Nahradit token**.
