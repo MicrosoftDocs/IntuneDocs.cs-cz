@@ -6,24 +6,24 @@ keywords: Saaswedo
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/09/2019
+ms.date: 11/05/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: b7bf5802-4b65-4aeb-ac99-8e639dd89c2a
-ms.reviewer: sumitp
+ms.reviewer: davidra
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ce9a6916cc77714a87aeac33555c0be1e59463f5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 20743d19ba101a9c400cb9f72dca59223254e6de
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506641"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755052"
 ---
 # <a name="set-up-a-telecom-expense-management-service-in-intune"></a>Nastavení služby TEM (Telecom Expense Management) v Intune
 
@@ -54,7 +54,7 @@ Pokud chcete používat službu Datalert s Intune, je k dispozici několik nasta
 
 ## <a name="prerequisites"></a>Požadované součásti
 
-- Předplatné, které se má Microsoft Intune a přístup k [Azure Portal](https://portal.azure.com)
+- Předplatné, které se má Microsoft Intune a přístup k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431)
 - Předplatné [Datalert](http://www.datalert.biz/) (otevře web Datalert)
 
 ## <a name="telecom-expense-management-providers"></a>Poskytovatelé pro správu telekomunikačních výdajů
@@ -109,9 +109,9 @@ Intune se integruje s následujícím poskytovatelem pro správu telekomunikačn
 
 Po dokončení kroku 1 se připojení automaticky povolí. V Intune se zobrazuje stav připojení **aktivní**. Pokud chcete potvrdit, že je stav aktivní, použijte následující postup:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Konfigurace zařízení** > **Správa telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
+2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **správu telekomunikačních výdajů**. Vyhledejte stav **aktivního** připojení:
 
    ![Stránka Intune zobrazující aktivní stav připojení Datalertu](./media/telecom-expenses-monitor/tem-azure-portal-enable-service.png)
 
@@ -138,7 +138,7 @@ Tyto kategorie se uživatelům zobrazí během registrace ([registrace zařízen
 
 V následujících krocích se přidá aplikace Datalert. V takovém případě se používá iOS. [Přidejte aplikace](../apps/apps-add.md) a [používejte značky oboru](../fundamentals/scope-tags.md) , které obsahují konkrétnější informace o těchto krocích.
 
-1. V **[Intune](https://go.microsoft.com/fwlink/?linkid=2090973)** vyberte **klientské aplikace** > **aplikace** > **Přidat**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace** > **Přidat**.
 
 2. Vyberte **Typ aplikace**. Například pro iOS vyberte **Store app-iOS**.
 
@@ -156,7 +156,7 @@ V následujících krocích se přidá aplikace Datalert. V takovém případě 
 
 #### <a name="assign-the-datalert-app-to-the-corporate-device-group"></a>Přiřazení aplikace Datalert ke skupině firemních zařízení
 
-1. V části **klientské aplikace – aplikace**vyberte aplikaci Datalert, kterou jste přidali v předchozím kroku.
+1. V části **aplikace** > **všechny aplikace**vyberte aplikaci Datalert, kterou jste přidali v předchozím kroku.
 
 2. Vyberte **přiřazení** > **Přidat skupinu**. Vyberte způsob přiřazení aplikace. [Přiřazení aplikací do skupin v Intune](../apps/apps-deploy.md) obsahuje další podrobnosti o těchto nastaveních.
 
@@ -183,7 +183,7 @@ Pro činnost koncového uživatele mohou následující články pomáhat:
 
 ## <a name="turn-off-the-datalert-service"></a>Vypnutí služby Datalert
 
-1. V **[Intune](https://go.microsoft.com/fwlink/?linkid=2090973)** vyberte **Konfigurace zařízení** > **modul pro správu telekomunikačních výdajů**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **Správa tenanta** > **konektory a tokeny** > **správu telekomunikačních výdajů**.
 2. Nastavte **Povolit správu telekomunikačních výdajů a zablokujte mobilní nebo roamingová data na zařízeních, která přesahují kvóty využití, které nakonfigurujete** pro **zakázání**.
 3. **Uložte** provedené změny.
 

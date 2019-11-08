@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e8961614a85992b927e31d590c7abadca75a85a6
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 75644ac4d8ccfb8a63e077f2b6625ac96364f5d7
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492860"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755189"
 ---
 # <a name="add-email-settings-to-devices-using-intune"></a>Přidání nastavení e-mailu do zařízení pomocí Intune
 
@@ -39,8 +39,8 @@ V tomto článku se dozvíte, jak vytvořit e-mailový profil v Microsoft Intune
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrý název zásady je například **Nastavení e-mailu pro všechna zařízení s Windows**.
@@ -71,7 +71,7 @@ Po zadání nastavení a vytvoření profilu se tento profil zobrazí v seznamu 
 
 E-mailové profily se nepřiřazují skupinám uživatelů, ale skupinám zařízení. Existují různé způsoby, jak ze zařízení odebrat e-mailový profil, i když je v zařízení jenom jeden profil:
 
-- **1. možnost:** Otevřete e-mailový profil (**Konfigurace zařízení** > **Profily**) a zvolte **Přiřazení**. Na kartě **Zahrnout** jsou skupiny, které jsou k profilu přiřazené. Klikněte na skupinu pravým tlačítkem > **Odebrat**. Nezapomeňte změny uložit kliknutím na **Uložit**.
+- **Možnost 1**: Otevřete e-mailový profil (**zařízení** > **konfigurační profily** > vyberte svůj profil) a zvolte **přiřazení**. Na kartě **Zahrnout** jsou skupiny, které jsou k profilu přiřazené. Klikněte na skupinu pravým tlačítkem > **Odebrat**. Nezapomeňte změny uložit kliknutím na **Uložit**.
 
 - **2. možnost:** [Vymažte zařízení nebo ho vyřaďte](../remote-actions/devices-wipe.md). Tyto akce můžete použít k selektivnímu nebo úplnému odebrání dat a nastavení.
 
@@ -103,4 +103,4 @@ Pokud provedete změny e-mailového profilu, který jste předtím přiřadili, 
 
 ## <a name="next-steps"></a>Další kroky
 
-Když je profil vytvořený, není ještě aktivní. Pak [Přiřaďte profil k některým zařízením](../device-profile-assign.md).
+Když je profil vytvořený, není ještě aktivní. V dalším kroku [profil přiřadíte](../device-profile-assign.md).

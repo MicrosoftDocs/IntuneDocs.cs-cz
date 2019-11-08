@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 11/05/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e2e7dc729879eb6d16a4ab3555d8fe319501a53e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 687505a3ca2bbdffd26e8870705971aafb4783d2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492138"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754960"
 ---
 # <a name="troubleshoot-policies-and-profiles-and-in-intune"></a>Řešení potíží se zásadami a profily a v Intune
 
@@ -32,11 +32,12 @@ Microsoft Intune obsahuje některé integrované funkce řešení potíží. Tyt
 Tento článek uvádí některé běžné techniky řešení potíží a popisuje některé problémy, se kterými se můžete setkat.
 
 ## <a name="check-tenant-status"></a>Kontrolovat stav tenanta
+
 Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že je předplatné aktivní. Můžete si také zobrazit podrobnosti o aktivních incidentech a poradcích, které mohou mít vliv na vaše zásady nebo nasazení profilu.
 
 ## <a name="use-built-in-troubleshooting"></a>Použití integrovaného řešení potíží
 
-1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **řešení potíží**:
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **řešení potíží + podpora**:
 
     ![V Intune si přečtěte pomoc a podpora a vyberte řešení potíží.](./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png)
 
@@ -102,7 +103,7 @@ Zkontrolujte [stav tenanta](../fundamentals/tenant-status.md) a potvrďte, že j
 
 ## <a name="youre-unsure-if-a-profile-is-correctly-applied"></a>Nejste si jistí, jestli se profil správně používá
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Vyberte **zařízení** > **všechna zařízení** > vyberte zařízení > **Konfigurace zařízení**. 
 
     Každé zařízení obsahuje seznam profilů. Každý profil má **stav**. Stav platí, když jsou společně zváženy všechny přiřazené profily, včetně omezení hardwaru a operačního systému a požadavků. Možné stavy zahrnují:

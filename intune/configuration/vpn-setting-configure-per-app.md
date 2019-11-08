@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/04/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e3c9e3bbdc65ae3f97e4be871cfaf638f1bafcd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ee924a8c32c3c0591f968db0655044500c8c759d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506597"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754975"
 ---
 # <a name="set-up-per-app-virtual-private-network-vpn-for-ios-devices-in-intune"></a>Nastavení virtuální privátní sítě (VPN) pro aplikaci pro zařízení s iOS v Intune
 
@@ -66,11 +66,11 @@ Vytvořte nebo vyberte existující skupinu v Azure Active Directory (Azure AD) 
 
 Kořenový certifikát serveru VPN vystavený certifikační autoritou naimportujte do profilu vytvořeného v Intune. Profil důvěryhodného certifikátu vydá pokyn zařízení s iOSem, aby automaticky důvěřovalo certifikační autoritě, kterou uvádí server VPN.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
-    - **Název**
-    - **Popis**
+    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil sítě VPN důvěryhodného certifikátu iOS pro celou firmu**.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **iOS**.
     - **Typ profilu**: vyberte **důvěryhodný certifikát**.
 4. Vyberte ikonu složky a přejděte k certifikátu sítě VPN (soubor. cer), který jste exportovali z konzoly pro správu sítě VPN. 
@@ -95,15 +95,15 @@ Nezapomeňte nakonfigurovat certifikát pro ověřování klientů. Tuto možnos
 
 Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klienta, informace o připojení k síti VPN a příznak sítě VPN pro jednotlivé aplikace, pomocí kterých aplikace pro iOS povoluje funkci VPN pro jednotlivé aplikace.
 
-1. V **Intune**vyberte **Konfigurace zařízení** > **profily** **vytvořit profil** > . 
-2. Zadejte následující vlastnosti: 
-    - **Název**
-    - **Popis**
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
+2. Zadejte následující vlastnosti:
+    - **Název**: zadejte popisný název vlastního profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil sítě VPN pro jednotlivé aplikace pro celou firmu**.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte **iOS**.
     - **Typ profilu**: vyberte **VPN**.
 3. V **typu připojení**vyberte klientská aplikace VPN.
-4. Vyberte **Základní síť VPN**. [nastavení sítě VPN pro iOS](vpn-settings-ios.md) uvádí a popisuje všechna nastavení. Při použití sítě VPN pro jednotlivé aplikace se ujistěte, že jste nastavili následující vlastnosti, jak je uvedeno níže: 
-    
+4. Vyberte **Základní síť VPN**. [nastavení sítě VPN pro iOS](vpn-settings-ios.md) uvádí a popisuje všechna nastavení. Při použití sítě VPN pro jednotlivé aplikace se ujistěte, že jste nastavili následující vlastnosti, jak je uvedeno níže:
+
     - **Metoda ověřování**: vyberte **certifikáty**. 
     - **Certifikát ověřování**: Vyberte existující certifikát SCEP nebo PKCS > **OK**.      
     - **Dělené tunelové propojení**: Pokud vyberete **Zakázat** , vynutí se použití tunelu VPN v případě, že je připojení VPN aktivní. 
@@ -122,7 +122,7 @@ Profil VPN obsahuje certifikát SCEP nebo PKCS s přihlašovacími údaji klient
 
 Po přidání profilu sítě VPN přidružte aplikaci a skupinu služby Azure AD k profilu.
 
-1. V **Intune** vyberte **Klientské aplikace** > **Aplikace**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **všechny aplikace**.
 2. Vyberte aplikaci ze seznamu > **přiřazení** > **Přidat skupinu**.
 3. V **typu přiřazení**vyberte možnost **požadováno** nebo **k dispozici pro zaregistrovaná zařízení**.
 4. Vyberte **zahrnuté skupiny** > **Vyberte skupiny, které chcete zahrnout** > vyberte skupinu [, kterou jste vytvořili](#create-a-group-for-your-vpn-users) (v tomto článku) > **Vybrat**.
@@ -161,18 +161,6 @@ Ověřte funkčnost bezdotykového prostředí – připojte se bez výběru sí
 - Zařízení vás nevyzve k důvěřování serveru VPN. To znamená, že uživatel se nezobrazí v dialogovém okně **dynamického vztahu důvěryhodnosti** .
 - Uživatel není muset zadávat přihlašovací údaje.
 - Zařízení uživatele je připojené k síti VPN, když uživatel otevře jednu z přidružených aplikací.
-
-<!-- ## Troubleshooting the per-app VPN
-
-The user experiences the feature by silently connecting to the VPN. This experience, however, can provide little information for troubleshooting. You can review the event logs crated by the iOS device.
-
-`Note -- use the Apple Configurator as the supported tool. Only runs on a mac.'
-
-To review event logs:
-
-1. Connect your iOS device to a PC
-2. Open the **iPhone Configuration Utility** (IPCU). If you do not have a copy, you can install it from [CompatCenter](http://www.microsoft.com/en-us/windows/compatibility/CompatCenter/ProductDetailsViewer?Name=iPhone%20Configuration%20Utility&vendor=Apple&Locale=1033%2C2057%2C3081%2C4105%2C16393&ModelOrVersion=3&BreadCrumbPath=iphone%20configuration%20utility&LastSearchTerm=iphone%2Bconfiguration%2Butility&Type=Software&tempOsid=Windows%208.1)
-3. Review the logs. -->
 
 ## <a name="next-steps"></a>Další kroky
 

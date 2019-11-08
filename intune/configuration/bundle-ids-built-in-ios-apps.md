@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1eda7fef3ee9c2ca4e4a13d9b6effba2ed121b0e
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 27a020f4b45ae878718bed4ee6e230c3d288f260
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506956"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755416"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS, které můžete použít v Intune
 
@@ -55,6 +55,7 @@ Když konfigurujete funkce na zařízeních s iOS, můžete taky přidat integro
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Mapy         | Apple     |
+| com. Apple. Measure           | Měrné      | Apple     |
 | com.apple.MobileSMS         | Zprávy     | Apple     |
 | com.apple.Music             | Hudba        | Apple     |
 | com.apple.news              | News         | Apple     |

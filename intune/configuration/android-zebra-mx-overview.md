@@ -5,24 +5,24 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/16/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: ''
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: ''
+ms.reviewer: jieyan
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3e5804b415d26b07944c500b0158cf84a2d4412c
-ms.sourcegitcommit: d1b36501186e867355843ddd67c795ade800b76a
+ms.openlocfilehash: 7f343ace48c917e65d9d59cd7c42c53e9b892968
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73182861"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756734"
 ---
 # <a name="use-and-manage-zebra-devices-with-zebra-mobility-extensions-in-microsoft-intune"></a>Používání a Správa zařízení Zebra s rozšířeními mobility Zebra v Microsoft Intune
 
@@ -52,7 +52,6 @@ Pomocí Intune můžete zaregistrovat zařízení Zebra, abyste mohli do zaříz
 - Ujistěte se, že máte nejnovější verzi aplikace StageNow Desktop z technologií zebra.
 - Ujistěte se, že jste zkontrolovali [úplnou matrici funkcí Zebra](http://techdocs.zebra.com/mx/compatibility) (otevře web Zebra), abyste potvrdili, že profily, které vytvoříte, jsou kompatibilní s verzí MX zařízení, verzí operačního systému a modelu.
 - Některá zařízení, například TC20/25 zařízení, nepodporují všechny dostupné funkce MX v StageNow. Nezapomeňte zkontrolovat [Zebraou matrici funkcí](http://techdocs.zebra.com/mx/tc2x/) (otevře web Zebra), kde najdete aktualizované informace o podpoře.
-
 
 ## <a name="step-1-install-the-latest-company-portal-app"></a>Krok 1: Instalace nejnovější aplikace Portál společnosti
 
@@ -134,8 +133,8 @@ Po otestování souboru je dalším krokem nasazení profilu do zařízení pomo
 
 V Intune vytvořte profil konfigurace zařízení:
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.

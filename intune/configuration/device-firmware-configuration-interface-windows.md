@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f6d4b076b508316cdb2d3d5f2814fc5e46a014e7
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: e9fe2b2174252aa1081eb311d79b4b5ba37f96f2
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709526"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755345"
 ---
 # <a name="use-device-firmware-configuration-interface-profiles-on-windows-devices-in-microsoft-intune-public-preview"></a>Použití profilů rozhraní pro konfiguraci firmwaru zařízení na zařízeních s Windows v Microsoft Intune (Public Preview)
 
@@ -77,8 +77,8 @@ Tento profil zajišťuje, aby byla zařízení ověřená a povolená pro DFCI b
 
 Tento profil obsahuje nastavení DFCI, která nakonfigurujete.
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název profilu. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **Windows: Konfigurace nastavení DFCI na zařízeních s Windows**.
@@ -158,7 +158,7 @@ Po vymazání zařízení přesuňte zařízení do skupiny přiřazené nové p
 
 Až budete připraveni zařízení vyřadit z provozu a uvolnit ho ze správy, aktualizujte profil DFCI na nastavení rozhraní UEFI (BIOS), které chcete ve stavu ukončení. Obvykle chcete povolit všechna nastavení. Například:
 
-1. Otevřete profil DFCI (**Konfigurace zařízení** > **profily**).
+1. Otevřete profil DFCI (**zařízení** > **konfigurační profily**).
 2. Změňte **nastavení nastavit místnímu uživateli, aby se změnila nastavení rozhraní UEFI (BIOS)** na **nenakonfigurovaná nastavení**.
 3. Nastavte všechna ostatní nastavení na **nenakonfigurovaná**.
 4. Uložte nastavení.

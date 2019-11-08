@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 164c34f4a46ca11e2788b72dee70bdd40c25e7f3
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 288ff693e7e46b7953cffad3d0a54b8621141373
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72493895"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755257"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Windows 10 (a novějším) pro povolení nebo omezení funkcí pomocí Intune
 
@@ -223,12 +223,12 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 - **Oznámení centra akcí (jenom mobilní)** : **blok** zabraňuje zobrazování oznámení centra akcí na zamykací obrazovce zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zvolit, které aplikace budou zobrazovat oznámení na zamykací obrazovce.
 
-  [CSP AboveLock/AllowActionCenterNotifications](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowactioncenternotifications)
+  [CSP AboveLock/AllowActionCenterNotifications](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#AboveLock_AllowActionCenterNotifications)
 
 - **Adresa URL obrázku pro zamknutou obrazovku (jenom desktopové aplikace)** : zadejte adresu URL obrázku ve formátu jpg, JPEG nebo PNG, který se používá jako tapeta zamykací obrazovky Windows. Zadejte například `https://contoso.com/image.png`. Toto nastavení zamkne obrázek a nedá se změnit.
 - **Uživatelem konfigurovatelný časový limit obrazovky (jenom mobilní)** : **Povolení** umožňuje uživatelům nakonfigurovat časový limit obrazovky. **Nenakonfigurováno** (výchozí) neuděluje uživatelům tuto možnost.
 
-  [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-allowscreentimeoutwhilelockeduserconfig)
+  [CSP DeviceLock/AllowScreenTimeoutWhileLockedUserConfig](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_AllowScreenTimeoutWhileLockedUserConfig)
 
 - **Cortana na uzamčené obrazovce** (jenom stolní počítače): **blok** zabraňuje uživatelům v interakci s Cortana, když je zařízení na zamykací obrazovce. **Nenakonfigurováno** (výchozí) umožňuje interakci s Cortana.
 
@@ -240,7 +240,7 @@ Tato nastavení používají [poskytovatele cloudových zásad](https://docs.mic
 
 - **Časový limit obrazovky (jenom mobilní zařízení)** : Nastavte dobu trvání (v sekundách) na zamykací obrazovce na obrazovku vypnutí. Podporované hodnoty jsou 11-1800. Zadejte například `300` a nastavte tento časový limit na 5 minut.
 
-  [CSP DeviceLock/ScreenTimeoutWhileLocked](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock#devicelock-screentimeoutwhilelocked)
+  [CSP DeviceLock/ScreenTimeoutWhileLocked](https://msdn.microsoft.com/ie/dn904962(v=vs.94)#DeviceLock_ScreenTimeoutWhileLocked)
 
 ## <a name="messaging"></a>Omezován
 

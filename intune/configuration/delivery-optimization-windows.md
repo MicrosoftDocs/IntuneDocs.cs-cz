@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/12/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: kerimh
-ms.openlocfilehash: 7d94a2c7e47b3cfcc9f4592faf0a4c2a09a24ac4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 908319c588fe2a1bf55a376d3f02a03db780a3ad
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72495239"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755399"
 ---
 # <a name="delivery-optimization-settings-in-microsoft-intune"></a>Nastavení Optimalizace doručení v Microsoft Intune
 
@@ -32,27 +32,25 @@ Seznam nastavení Optimalizace doručení, která Intune podporuje, najdete v t�
 
 Další informace o optimalizaci doručení ve Windows 10 najdete v tématu [aktualizace pro optimalizaci doručení](https://docs.microsoft.com/windows/deployment/update/waas-delivery-optimization) v dokumentaci k Windows.  
 
-
 > [!NOTE]
-> **Aktualizace softwaru – aktualizační kanály pro Windows 10** se nahrazují nastavením **Optimalizace doručení** . Existující aktualizační kanály můžete změnit tak, aby používaly nastavení **Optimalizace doručení** . [Přesunout existující aktualizační kanály do Optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku) 
+> **Aktualizace softwaru – aktualizační kanály pro Windows 10** se nahrazují nastavením **Optimalizace doručení** . Existující aktualizační kanály můžete změnit tak, aby používaly nastavení **Optimalizace doručení** . [Přesunout existující aktualizační kanály do Optimalizace doručení](#move-existing-update-rings-to-delivery-optimization) (v tomto článku)
+
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platforma**: vyberte platformu:  
-
-        - **Windows 10 a novější**
-
+    - **Platforma**: vyberte **Windows 10 a novější**.
     - **Typ profilu**: vyberte **Optimalizace doručení**.
-    - **Nastavení**: Nakonfigurujte nastavení, která definují, jak se mají aktualizace a aplikace stahovat. Informace o dostupných nastaveních najdete v tématu věnovaném [nastavení optimalizace doručování pro Intune](../delivery-optimization-settings.md).
 
-4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny.
+4. Vyberte **nastavení** > **Konfigurovat**a určete, jak se mají aktualizace a aplikace stahovat. Informace o dostupných nastaveních najdete v tématu věnovaném [nastavení optimalizace doručování pro Intune](../delivery-optimization-settings.md).
+
+5. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny.
 
 Profil se vytvoří a zobrazí se v seznamu. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).
 
@@ -62,7 +60,7 @@ Nastavení **Optimalizace doručení** nahrazuje **aktualizace softwaru – aktu
 
 1. Vytvořit konfigurační profil Optimalizace doručení:
 
-    1. V Intune vyberte **Konfigurace zařízení** > **profily** > **vytvořit profil**.
+    1. V centru pro správu Microsoft Endpoint Manageru vyberte **zařízení** > **konfigurační profily** > **vytvořit profil**.
     2. Zadejte následující vlastnosti:
 
         - **Název**: Zadejte popisný název nového profilu.
@@ -78,10 +76,11 @@ Nastavení **Optimalizace doručení** nahrazuje **aktualizace softwaru – aktu
             - **Jednoduchý režim stahování bez partnerských vztahů**
             - **Režim obcházení**
     3. Nakonfigurujte všechna další nastavení, která budete chtít spravovat.
-1. Přiřaďte tento nový profil ke stejným zařízením a uživatelům jako stávající kanál aktualizace softwaru. [Přiřaďte profil](device-profile-assign.md) seznamu kroků.
+
+2. Přiřaďte tento nový profil ke stejným zařízením a uživatelům jako stávající kanál aktualizace softwaru. [Přiřaďte profil](device-profile-assign.md) seznamu kroků.
 
 3. Odkonfigurujte stávající softwarový kanál:
-    1. V Intune navštivte **aktualizace softwaru** > aktualizačních kanálů Windows 10.
+    1. V centru pro správu Microsoft Endpoint Manageru, navštivte **aktualizace softwaru** > aktualizační kanály Windows 10.
     2. V seznamu vyberte aktualizační kanál.
     3. V nastavení nastavte **režim stažení optimalizace doručování** na **Nenakonfigurováno**.
     4. **OK** > **Uložit** změny.

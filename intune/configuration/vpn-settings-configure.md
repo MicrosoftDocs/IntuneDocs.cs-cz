@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5628ba39cafe38cc66827d69584d009c15326bd4
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3804409acadbfc3dfc1c7d6f3372dc939b7b3630
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72491766"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755037"
 ---
 # <a name="create-vpn-profiles-to-connect-to-vpn-servers-in-intune"></a>Vytvoření profilů sítě VPN pro připojení k serverům VPN v Intune
 
@@ -68,16 +68,17 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **Konfigurace zařízení** > **profily** **vytvořit profil** > .
-2. Zadejte následující vlastnosti:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil sítě VPN pro celou firmu**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
     - **Platforma**: vyberte platformu zařízení. Možnosti:
 
       - **Androidemem**
-      - **Android Enterprise**@no__t –**pouze vlastník zařízení**
-      - **Android Enterprise**@no__t –**pouze pracovní profil** 1
+      - Jenom **Android Enterprise** > **vlastník zařízení**
+      - **Jenom pracovní profil** pro **Android Enterprise** > 
       - **iOS/iPadOS**
       - **macOS**
       - **Windows Phone 8.1**
@@ -86,7 +87,7 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
 
     - **Typ profilu**: vyberte **VPN**.
 
-3. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobné informace o nastaveních na jednotlivých platformách najdete v následujících článcích:
+4. Nastavení, která můžete konfigurovat, se liší podle zvolené platformy. Podrobné informace o nastaveních na jednotlivých platformách najdete v následujících článcích:
 
     - [Nastavení Androidu](vpn-settings-android.md)
     - [Nastavení Androidu Enterprise](vpn-settings-android-enterprise.md)
@@ -96,7 +97,7 @@ Postup vytváření vlastních profilů VPN pomocí nastavení URI najdete v té
     - [Nastavení Windows 8.1](vpn-settings-windows-8-1.md)
     - [Nastavení Windows 10](vpn-settings-windows-10.md) (včetně Windows Holographic for Business)
 
-4. Až budete hotovi, **vytvořte** svůj profil.
+5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
 Profil se vytvoří a zobrazí se v seznamu profilů. Pokud chcete přiřadit tento profil ke skupinám, podívejte se na téma [Přiřazení profilů zařízení](device-profile-assign.md).
 

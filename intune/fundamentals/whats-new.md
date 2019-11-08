@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac6da1b15d482d20340163b0bb79e88d74e8e375
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 0d1aeea4d9fb47daeef8e44f501e1a61776b0e94
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635344"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801766"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -58,7 +58,7 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### <a name="app-management"></a>Správa aplikací
 
 #### <a name="improved-checklist-design-in-company-portal-app-for-android---5550857---"></a>Vylepšený návrh kontrolního seznamu v aplikaci Portál společnosti App pro Android<!-- 5550857 -->  
-Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Právě probíhá zavádění aktualizací aplikace pro všechny zákazníky a očekává se, že bude dokončená na konci příštího týdne. Pro souběžné porovnání změn si přečtěte téma [co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md). Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
+Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Pro souběžné porovnání změn si přečtěte téma [co je nového v uživatelském rozhraní aplikace](whats-new-app-ui.md). Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
 
 #### <a name="win32-apps-on-windows-10-s-mode-devices---3747604---"></a>Aplikace Win32 na zařízeních S Windows 10 S v režimu<!-- 3747604 --> 
 Aplikace Win32 můžete instalovat a spouštět na zařízeních spravovaných v režimu Windows 10 S. K tomu můžete vytvořit jednu nebo více doplňkových zásad pro režim S pomocí nástrojů PowerShellu pro řízení aplikací v programu Windows Defender (WDAC). Přihlaste doplňkové zásady pomocí registračního portálu pro ochranu zařízení a pak tyto zásady nahrajte a distribuujte prostřednictvím Intune. V Intune tuto možnost najdete tak, že vyberete **klientské aplikace** > **doplňkové zásady Windows 10 S**. Další informace najdete v tématu [Povolení aplikací Win32 na zařízeních s režimem S](~/apps/apps-win32-s-mode.md).
@@ -179,7 +179,7 @@ Intune teď poskytuje scénáře s asistencí, které vám pomůžou dokončit k
 Další informace najdete v článku [Přehled scénářů s asistencí pro Intune](guided-scenarios-overview.md).
 
 #### <a name="additional-app-configuration-variable-available---4969237-----"></a>Je dostupná další konfigurační proměnná aplikace.<!-- 4969237   -->
-Při vytváření zásad konfigurace aplikací můžete zahrnout proměnnou konfigurace `AAD Device ID` jako součást nastavení konfigurace. V Intune vyberte **klientské aplikace** > **zásady konfigurace aplikace** > **Přidat**. Zadejte podrobnosti zásady konfigurace a vyberte **nastavení konfigurace** . zobrazí se okno **nastavení konfigurace** . Další informace najdete v tématu [zásady konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise – použijte návrháře konfigurace](~/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
+Při vytváření zásad konfigurace aplikací můžete zahrnout proměnnou konfigurace `AAD Device ID` jako součást nastavení konfigurace. V Intune vyberte **klientské aplikace** > **zásady konfigurace aplikací** > **Přidat**. Zadejte podrobnosti zásady konfigurace a vyberte **nastavení konfigurace** . zobrazí se okno **nastavení konfigurace** . Další informace najdete v tématu [zásady konfigurace aplikací pro spravovaná zařízení s Androidem Enterprise – použijte návrháře konfigurace](~/apps/app-configuration-policies-use-android.md#use-the-configuration-designer).
 
 
 #### <a name="create-groups-of-management-objects-called-policy-sets---3762880----"></a>Vytvoření skupin objektů pro správu nazývaných sady zásad<!-- 3762880  -->
@@ -214,7 +214,7 @@ Platí pro:
 - Pracovní profil Android Enterprise
 
 #### <a name="create-a-global-http-proxy-on-android-enterprise-device-owner-devices---4816339-----"></a>Vytvoření globálního proxy serveru HTTP na zařízeních s vlastníkem zařízení s Androidem Enterprise<!-- 4816339   -->
-Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby splňoval standardy procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** for **> omezení zařízení** > Platform pro typ profilu > **konektivita**zařízení. Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
+Na zařízeních s Androidem Enterprise můžete nakonfigurovat globální proxy server HTTP tak, aby splňoval standardy procházení webu vaší organizace (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Android Enterprise** pro > pro **vlastníka zařízení > omezení zařízení** pro typ profilu > **připojení**). Po nakonfigurování budou všechny přenosy HTTP používat tento proxy server.
 
 Pokud chcete tuto funkci nakonfigurovat a zobrazit všechna nakonfigurovaná nastavení, přejděte na [nastavení zařízení s Androidem Enterprise a povolte nebo omezte funkce pomocí Intune](../configuration/device-restrictions-android-for-work.md).
 
@@ -234,7 +234,7 @@ Platí pro:
 
 
 #### <a name="new-device-configuration-settings-for-supervised-ios-and-ipados-devices---5199328-----"></a>Nové nastavení konfigurace zařízení pro zařízení s iOS a iPadOS pod dohledem<!-- 5199328   -->
-Na zařízeních s iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **iOS/iPadOS** pro > platformy.  **omezení** pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
+Na zařízeních s iOS a iPadOS můžete vytvořit profil, který omezí funkce a nastavení na zařízeních (**Konfigurace zařízení** > **profily** > **Vytvoření profilu** > **iOS/iPadOS** pro zařízení > platformy.  **omezení** pro typ profilu). V této aktualizaci můžete řídit nová nastavení: 
 - Přístup k síťové jednotce v aplikaci soubory  
 - Přístup k jednotce USB v aplikaci soubory 
 - Wi-Fi vždycky zapnuté 

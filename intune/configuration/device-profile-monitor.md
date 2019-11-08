@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1c68421bf7c5dea0d93d45e0cbb748204d0f66b
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 4dc349ef7af2683b4dafeaa1cc09f5b7a727e843
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749396"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755301"
 ---
 # <a name="monitor-device-profiles-in-microsoft-intune"></a>Sledování profilů zařízení v Microsoft Intune
 
@@ -32,8 +32,8 @@ Intune obsahuje některé funkce, které vám pomůžou monitorovat a spravovat 
 
 ## <a name="view-existing-profiles"></a>Zobrazení existujících profilů
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfigurační profily**.
 
 Vypíšou se všechny existující profily včetně podrobností jako je platforma, a zobrazí se, jestli je profil přiřazený k nějakým zařízením.
 

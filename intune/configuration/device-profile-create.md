@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97227d5ca75b3584cb4e603a16601b2a22deb919
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 51ec328a60ef2737c776bf6cf5d4b8dc1b32460c
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681462"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755307"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
@@ -39,16 +39,16 @@ V tomto článku najdete:
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Vyberte **Konfigurace zařízení**. Máte následující možnosti:
+2. Vyberte **zařízení** > **konfigurační profily**. Máte následující možnosti:
 
     - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
     - **Správa**: vytváření profilů zařízení, nahrávání vlastních [skriptů PowerShellu](../apps/intune-management-extension.md) , které se mají spustit v rámci profilu, a Přidání datových plánů do zařízení pomocí [eSIM karty](esim-device-configuration.md).
     - **Monitorování**: Zkontrolujte stav profilu pro úspěch nebo neúspěch a také si prohlédněte protokoly v profilech.
     - **Nastavení**: přidejte certifikační autoritu SCEP nebo PFX nebo povolte [správu telekomunikačních výdajů](telecom-expenses-monitor.md) v profilu.
 
-3. Vyberte **profily** > **vytvořit profil**. Zadejte následující vlastnosti:
+3. Vyberte **vytvořit profil**. Zadejte následující vlastnosti:
 
    - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **e-mailový profil WP pro celou firmu**.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.

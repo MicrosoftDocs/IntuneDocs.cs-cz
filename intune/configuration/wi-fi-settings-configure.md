@@ -5,22 +5,23 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: high
 ms.technology: ''
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a794d724fe162ad7d464760661fecb45bd874431
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 589fc32db22de02f70ba78f79ebb413a31e92f1d
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754854"
 ---
 # <a name="add-and-use-wi-fi-settings-on-your-devices-in-microsoft-intune"></a>Přidání a použití nastavení Wi-Fi na zařízeních v Microsoft Intune
 
@@ -49,8 +50,9 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
 
 ## <a name="create-a-device-profile"></a>Vytvoření profilu zařízení
 
-1. V [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)vyberte **Konfigurace zařízení** > **profily** **vytvořit profil** > .
-2. Zadejte následující vlastnosti:
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující vlastnosti:
 
     - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **profil WiFi pro celou firmu**.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
@@ -70,7 +72,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
       > - Pro zařízení s **Androidem Enterprise** spuštěná jako vyhrazené zařízení (beznabídkový režim) vyberte **pouze vlastník zařízení** > **Wi-Fi**.
       > - U **Windows 8.1 a novějších verzí** můžete zvolit **Import Wi-Fi**. Tato možnost umožňuje importovat nastavení Wi-Fi jako soubor XML, který jste předtím vyexportovali z jiného zařízení.
 
-3. Některá nastavení Wi-Fi se u jednotlivých platforem liší. Pokud chcete zobrazit nastavení pro konkrétní platformu, vyberte svou platformu:
+4. Některá nastavení Wi-Fi se u jednotlivých platforem liší. Pokud chcete zobrazit nastavení pro konkrétní platformu, vyberte svou platformu:
 
     - [Androidemem](wi-fi-settings-android.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), včetně vyhrazených zařízení
@@ -79,7 +81,7 @@ Profily Wi-Fi podporují zařízení s následujícími platformami:
     - [Windows 10 a novější](wi-fi-settings-windows.md)
     - [Windows 8.1 a novější](wi-fi-settings-import-windows-8-1.md) (včetně Windows Holographic for Business)
 
-4. Až budete hotovi, vyberte **vytvořit profil** > **vytvořit**.
+5. Až budete hotovi, vyberte **vytvořit profil** > **vytvořit**.
 
 Profil se vytvoří a zobrazí se v seznamu profilů (**Konfigurace zařízení** > **profily**).
 

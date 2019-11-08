@@ -1,11 +1,11 @@
 ---
-title: Vytvoření profilu Wi-Fi s předsdíleným klíčem – Microsoft Intune – Azure | Microsoft Docs
+title: Vytvoření profilu Wi-Fi s předsdíleným klíčem v Microsoft Intune – Azure | Microsoft Docs
 description: Pokud chcete v Microsoft Intune vytvořit profil Wi-Fi s předsdíleným klíčem, použijte vlastní profil a získáte ukázkový kód XML pro profily Wi-Fi založené na Androidu, Windows a protokolu EAP.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/25/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,21 +17,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 623c6652964ae5a4f16a9c689dda3aee99c50d31
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f7f888a5a384503393c086a27d1c2ce6410357fd
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506489"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755020"
 ---
-# <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key---intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení – Intune
+# <a name="use-a-custom-device-profile-to-create-a-wifi-profile-with-a-pre-shared-key-in-intune"></a>Vytvoření profilu Wi-Fi s předsdíleným klíčem pomocí vlastního profilu zařízení v Intune
+
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů v sítích Wi-Fi nebo bezdrátových sítích LAN. V Intune můžete vytvořit profil Wi-Fi s využitím předsdíleného klíče. Pokud chcete vytvořit profil, použijte funkci **vlastních profilů zařízení** v Intune. Tento článek také obsahuje několik příkladů vytvoření profilu Wi-Fi založeného na protokolu EAP.
+Předsdílený klíč (PSK) se obvykle používá k ověřování uživatelů v sítích Wi-Fi nebo bezdrátových sítích LAN. V Intune můžete vytvořit profil Wi-Fi s využitím předsdíleného klíče. Pokud chcete vytvořit profil, použijte funkci **vlastních profilů zařízení** v Intune. Tento článek také obsahuje několik příkladů vytvoření profilu Wi-Fi založeného na protokolu EAP.
+
+Tato funkce podporuje:
+
+- Android
+- Windows
+- Wi-Fi založený na protokolu EAP
 
 > [!IMPORTANT]
->- Při použití předsdíleného klíče ve Windows 10 se v Intune zobrazí chyba odstranění problému. Když k ní dojde, profil Wi-Fi se správně přiřadí k zařízení a profil bude fungovat podle očekávání.
->- Pokud exportujete profil Wi-Fi s předsdíleným klíčem, ověřte si, že je soubor chráněný. Klíč má formát prostého textu, takže jeho ochranu zajišťujete vy.
+> - Použití předsdíleného klíče se systémem Windows 10 způsobuje chybu opravy v Intune. Když k ní dojde, profil Wi-Fi se správně přiřadí k zařízení a profil bude fungovat podle očekávání.
+> - Pokud exportujete profil Wi-Fi s předsdíleným klíčem, ověřte si, že je soubor chráněný. Klíč má formát prostého textu, takže jeho ochranu zajišťujete vy.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
@@ -41,32 +48,37 @@ Předsdílené klíče (PSK) se obvykle používají k ověřování uživatelů
 - PSK vyžaduje řetězec 64 číslic v šestnáctkovém formátu nebo heslo o délce 8 až 63 tisknutelných znaků ASCII. Některé znaky, například hvězdička (*), nejsou podporovány.
 
 ## <a name="create-a-custom-profile"></a>Vytvoření vlastního profilu
-Můžete vytvořit vlastní profil s předsdíleným klíčem pro profil Wi-Fi založený na Androidu, Windows nebo protokolu EAP. Pokud chcete vytvořit profil na portálu Azure Portal, projděte si část [Vytvoření vlastního nastavení zařízení](custom-settings-configure.md). Při vytvoření profilu zařízení zvolte jako platformu zařízení možnost **Vlastní**. Nevybírejte profil Wi-Fi. Když vyberete možnost Vlastní, nezapomeňte provést toto: 
 
-1. Zadejte název a popis profilu.
-2. Přidejte nové nastavení OMA-URI s následujícími vlastnostmi: 
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
+3. Zadejte následující vlastnosti:
 
-   a. Zadejte název pro toto nastavení sítě Wi-Fi.
+    - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem zásad je například **vlastní nastavení profilu Wi-Fi OMA-URI pro zařízení s Androidem**.
+    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    - **Platforma**: Vyberte svou platformu.
+    - **Typ profilu**: vyberte **vlastní**.
 
-   b. (Volitelné) Zadejte popis nastavení OMA-URI nebo pole ponechte prázdné.
+4. V **Nastavení**vyberte **Přidat**. Zadejte nové nastavení OMA-URI s následujícími vlastnostmi:
 
-   c. Nastavte **Datový typ** na **String**.
+    1. **Název**: zadejte název nastavení OMA-URI.
+    2. **Popis**: zadejte popis nastavení OMA-URI. Toto nastavení není povinné, ale doporučujeme ho zadat.
+    3. **OMA-URI**: zadejte jednu z následujících možností:
 
-   d. **OMA-URI:**
+        - **Pro Android**: `./Vendor/MSFT/WiFi/Profile/SSID/Settings`
+        - **Pro Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
-   - **Pro Android**: ./Vendor/MSFT/WiFi/Profile/SSID/Settings
-   - **Pro Windows**: ./Vendor/MSFT/WiFi/Profile/SSID/WlanXml
+        > [!NOTE]
+        > Nezapomeňte použít tečku na začátku.
 
-     > [!NOTE]
-     > Nezapomeňte použít tečku na začátku.
+        SSID je identifikátor SSID, pro který vytváříte zásadu. Pokud má například síť Wi-Fi název `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
 
-     SSID je identifikátor SSID, pro který vytváříte zásadu. Pokud má například síť Wi-Fi název `Hotspot-1`, zadejte `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+    4. **Datový typ**: vyberte **řetězec**.
 
-   e. **Hodnota pole**: Sem vkládáte svůj kód XML. Podívejte se na příklady v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
-3. Vyberte **OK**, zásadu uložte a pak přiřaďte.
+    5. **Hodnota**: vložte kód XML. Podívejte se na [Příklady](#android-or-windows-wi-fi-profile-example) v tomto článku. Aktualizujte jednotlivé hodnoty tak, aby odpovídaly nastavení vaší sítě. Nějaké pokyny najdete v sekci komentáře ke kódu.
 
-    > [!NOTE]
-    > Tuto zásadu je možné přiřadit pouze skupinám uživatelů.
+5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
+
+Váš profil se zobrazí v seznamu profily. V dalším kroku [přiřaďte tento profil](../device-profile-assign.md) ke skupinám uživatelů. Tuto zásadu je možné přiřadit pouze skupinám uživatelů.
 
 Pro každé zařízení, které se příště vrátí se změnami, se použijí zásady a vytvoří se pro ně profil Wi-Fi. Zařízení se potom připojí k síti automaticky.
 
@@ -74,7 +86,7 @@ Pro každé zařízení, které se příště vrátí se změnami, se použijí 
 
 Následující příklad zahrnuje kód XML pro profil Wi-Fi pro Android nebo Windows: Příklad uvádíme proto, abychom ukázali správný formát a poskytli více podrobností. Je to jenom příklad a není myšlen jako doporučená konfigurace pro vaše prostředí.
 
-### <a name="important-considerations"></a>Důležité informace
+### <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
 - `<protected>false</protected>` je třeba nastavit na hodnotu **nepravda**. Nastavení hodnoty **pravda** by mohlo způsobit, že zařízení by očekávalo šifrované heslo, následně by se ho pokoušelo dešifrovat a to by vedlo k selhání připojení.
 
@@ -127,7 +139,7 @@ xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
 </WLANProfile>
 ```
 
-## <a name="eap-based-wi-fi-profile-example"></a>Příklad profilu Wi-Fi založeného na protokolu EAP
+### <a name="eap-based-wi-fi-profile-example"></a>Příklad profilu Wi-Fi založeného na protokolu EAP
 Následující příklad obsahuje kód XML pro profil Wi-Fi založený na protokolu EAP: Příklad uvádíme proto, abychom ukázali správný formát a poskytli více podrobností. Je to jenom příklad a není myšlen jako doporučená konfigurace pro vaše prostředí.
 
 
@@ -216,15 +228,15 @@ Následující příklad obsahuje kód XML pro profil Wi-Fi založený na protok
 Můžete také vytvořit soubor XML z existujícího připojení Wi-Fi. V počítači se systémem Windows použijte následující postup:
 
 1. Vytvořte místní složku pro exportované profily W-Fi, například c:\WiFi.
-2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem `cmd` @ no__t-1**Spustit jako správce**).
+2. Otevřete příkazový řádek jako správce (klikněte pravým tlačítkem na `cmd` > **Spustit jako správce**).
 3. Spusťte `netsh wlan show profiles`. Zobrazí se názvy všech profilů.
 4. Spusťte `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. Tento příkaz vytvoří soubor s názvem `Wi-Fi-YourProfileName.xml` v c:\Wifi.
 
     - Pokud exportujete profil Wi-Fi, který obsahuje předsdílený klíč, přidejte do příkazu `key=clear`:
   
-      `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
+        `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
-      `key=clear` exportuje klíč do prostého textu, který je požadován pro úspěšné použití profilu.
+        `key=clear` exportuje klíč do prostého textu, který je požadován pro úspěšné použití profilu.
 
 Až budete mít soubor XML, zkopírujte a vložte syntax XML do nastavení OMA-URI > **datový typ**. [Vytvoření vlastního profilu](#create-a-custom-profile) (v tomto článku) obsahuje seznam kroků.
 
@@ -238,3 +250,7 @@ Až budete mít soubor XML, zkopírujte a vložte syntax XML do nastavení OMA-U
 - Při střídání klíčů (hesla nebo hesla) očekává prostoje a naplánujte nasazení. Zvažte zavedení nových profilů Wi-Fi mimo pracovní dobu. Také upozorněte uživatele, že může být ovlivněno připojení.
 
 - Pokud chcete zajistit hladký přechod, ujistěte se, že je zařízení koncového uživatele alternativním připojením k Internetu. Koncový uživatel například může přejít zpátky na Host WiFi (nebo na jinou síť Wi-Fi) nebo mít mobilní připojení ke komunikaci s Intune. Toto připojení navíc mu umožní i nadále přijímat aktualizace zásad, když dojde k aktualizaci firemního profilu Wi-Fi na zařízení.
+
+## <a name="next-steps"></a>Další kroky
+
+Nezapomeňte [profil přiřadit](device-profile-assign.md)a [monitorovat](device-profile-monitor.md) jeho stav.

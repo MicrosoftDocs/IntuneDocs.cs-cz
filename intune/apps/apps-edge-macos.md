@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2405036535cd6aef74e417f75e22725e1c34bbfa
-ms.sourcegitcommit: 0be25b59c8e386f972a855712fc6ec3deccede86
+ms.openlocfilehash: c6726f731fba5bc41893f999ac627bff9a8aca1e
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72585919"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754837"
 ---
 # <a name="add-microsoft-edge-to-macos-devices-using-microsoft-intune"></a>Přidání Microsoft Edge do zařízení macOS pomocí Microsoft Intune
 
@@ -88,7 +88,7 @@ Vytvořená aplikace se zobrazí v seznamu aplikací, kde ji můžete přiřazov
 > V současné době Apple neposkytuje pro Intune způsob, jak odinstalovat Microsoft Edge na zařízeních macOS.
 
 ## <a name="next-steps"></a>Další kroky
-- Informace o tom, jak nakonfigurovat Microsoft Edge na zařízeních macOS, najdete v tématu [Konfigurace Microsoft Edge na zařízeních MacOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge#configure-microsoft-edge-on-mac).
+- Informace o tom, jak nakonfigurovat Microsoft Edge na zařízeních macOS, najdete v tématu [Konfigurace Microsoft Edge na zařízeních MacOS](https://docs.microsoft.com/deployedge/configure-microsoft-edge-on-mac).
 - Informace o zahrnutí a vyloučení přiřazení aplikací ze skupin uživatelů najdete v článku [Zahrnutí a vyloučení přiřazení aplikací](~/apps/apps-inc-exl-assignments.md).
 - [Přiřazení aplikací skupinám](~/apps/apps-deploy.md)
 

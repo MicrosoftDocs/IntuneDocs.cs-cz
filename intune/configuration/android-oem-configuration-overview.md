@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/18/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb992747765ea087d5ef536c2da7c444bfa2d987
-ms.sourcegitcommit: 4f979ba7030e72d820113fe23ac8521ddb2433bd
+ms.openlocfilehash: e8747f3dfa9169a4f1f2de9dcf45db0f5cccadd1
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72915733"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73756759"
 ---
 # <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
@@ -80,8 +80,8 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
 
 ## <a name="create-an-oemconfig-profile"></a>Vytvoření profilu OEMConfig
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
@@ -108,11 +108,11 @@ Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správn�
       - Mnoho nastavení má výchozí hodnoty, které dodává výrobce OEM. Pokud chcete zjistit, jestli je výchozí hodnota, najeďte myší na ikonu informace vedle nastavení. Popisek zobrazuje výchozí hodnoty pro toto nastavení (Pokud je k dispozici) a další podrobnosti poskytované výrobcem OEM.
 
       - Kliknutím na tlačítko **Vymazat** odstraníte nastavení z profilu. Pokud nastavení není v profilu, při použití profilu se jeho hodnota v zařízení nezmění.
-        
+
       - Pokud vytvoříte prázdnou (nenakonfigurovanou) sadu prostředků v Návrháři konfigurace, odstraní se při přepnutí do editoru JSON.
 
     - **Editor JSON**: Když vyberete tuto možnost, otevře se Editor JSON se šablonou pro úplné schéma konfigurace vložené do aplikace. V editoru Přizpůsobte šablonu pomocí hodnot pro různá nastavení. Použijete-li **Návrháře konfigurace** ke změně hodnot, Editor JSON přepíše šablonu hodnotami z návrháře konfigurace.
-    
+
       - Pokud aktualizujete existující profil, Editor JSON zobrazí nastavení, které bylo naposledy uloženo s profilem.
 
       - Schémata OEMConfig můžou být velká a složitá. Pokud dáváte přednost aktualizaci těchto nastavení pomocí jiného editoru, vyberte tlačítko **Stáhnout šablonu JSON** . Pomocí editoru dle vašeho výběru přidejte do šablony konfigurační hodnoty. Pak zkopírujte a vložte aktualizovaný kód JSON do vlastnosti **Editor JSON** .

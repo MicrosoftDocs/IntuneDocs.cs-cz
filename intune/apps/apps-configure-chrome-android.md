@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f667940cc238fe243b05c7ab6f1459f63f18faa
-ms.sourcegitcommit: 2c8a41ee95a3fde150667a377770e51b621ead65
+ms.openlocfilehash: 14e9aa6e82d7b3e24350de8770f02b0a08695e1a
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73635475"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801667"
 ---
 # <a name="configure-google-chrome-for-android-devices-using-intune"></a>Konfigurace Google Chrome pro zařízení s Androidem pomocí Intune 
 
@@ -63,7 +63,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
     Níže je uveden příklad běžných nastavení:
     - **Zablokovat přístup k seznamu adres URL**: `["*"]`
-    - **Povolení přístupu k seznamu adres URL**: `["baidu.com", "yahoo.com", "chrome://*"]`
+    - **Povolení přístupu k seznamu adres URL**: `["baidu.com", "youtube.com", "chromium.org", "chrome://*"]`
     - **Spravované záložky**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
     - **Dostupnost režimu anonymním**: `Incognito mode disabled`
 
@@ -71,7 +71,7 @@ Další podrobnosti o přidání spravované aplikace Google Play do Intune najd
 
     ![Společná nastavení](~/apps/media/apps-configure-chrome-android/common-settings.png)
 
-    Výše uvedená nastavení vytvoří záložky a povolí přístup ke všem webům kromě `baidu.com`, `yahoo.com` a `chrome://`.
+    Výše uvedená nastavení vytvoří záložky a zablokuje přístup ke všem adresám URL s výjimkou `baidu.com`, `yahoo.com`, `chromium.org`a `chrome://`.
 
 5. Kliknutím na **OK** a **Přidat** přidejte zásady konfigurace do Intune.
 6. Přiřaďte tyto zásady konfigurace ke skupině uživatelů. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](~/apps/apps-deploy.md). 

@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f9bb72c6c40c67874326b06ebd41286d2d7220
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: d75e75dbce2563aaf31edede8eeab7249aad8e19
+ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73415205"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801782"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -40,7 +40,7 @@ Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obr
 ## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019  
 
 ### <a name="improved-checklist-design-in-company-portal-app-for-android----5550857---"></a>Vylepšený návrh kontrolního seznamu v aplikaci Portál společnosti App pro Android <!-- 5550857 -->  
-Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Právě probíhá zavádění aktualizací aplikace pro všechny zákazníky a očekává se, že bude dokončená na konci příštího týdne. Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
+Kontrolní seznam nastavení v aplikaci Portál společnosti pro Android byl aktualizovaný s odlehčeným návrhem a novými ikonami. Změny se zarovnají s posledními aktualizacemi provedenými v aplikaci Portál společnosti pro iOS. Pokud se chcete podívat na aktualizované kroky registrace, přečtěte si téma [registrace v pracovním profilu Android](/intune-user-help/enroll-device-android-work-profile) a [registrace zařízení s Androidem](/intune-user-help/enroll-device-android-company-portal).  
 
 Na následujících obrazovkách se zobrazuje aktualizovaný kontrolní seznam pro registraci pracovního profilu Androidu:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 271b49a4c927bccb5cd967ea99b0d7bd5c2bd515
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b7d09700847eae6a43111b0a4e865522f01862b9
+ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72492352"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73755160"
 ---
 # <a name="windows-10-and-windows-holographic-for-business-device-settings-to-run-as-a-dedicated-kiosk-using-intune"></a>Nastavení zařízení s Windows 10 a Windows holografickým pro firmy, která se mají používat jako vyhrazené veřejné terminály pomocí Intune
 
@@ -39,8 +39,8 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
@@ -60,7 +60,7 @@ V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Sezn
       - [Nastavení veřejného terminálu Windows 10](kiosk-settings-windows.md)
       - [Nastavení veřejného terminálu pro Windows Holografick pro firmy](kiosk-settings-holographic.md)
 
-5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte. 
+5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
 Profil se vytvoří a zobrazí se v seznamu profily. Dále [přiřaďte](device-profile-assign.md) profil.
 
