@@ -1,7 +1,7 @@
 ---
 title: Výjimky zásad přenosu dat pro aplikace
 titleSuffix: Microsoft Intune
-description: Vytvořte výjimky zásad přenosu dat ve správě mobilních aplikací Intune (MAM).
+description: Vytvořte výjimky zásad pro přenos dat zásad Intune App Protection (APP).
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6453f5b5886c5691383bc81fb76598146e884e0e
-ms.sourcegitcommit: 25acfc88b366d2da71c37d354a0238e4f1168325
+ms.openlocfilehash: 18b1b8feda00f5c669b39bc365c637dcd3968078
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72813356"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984076"
 ---
-# <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Vytvoření výjimek zásad přenosu dat ve správě mobilních aplikací Intune (MAM)
+# <a name="how-to-create-exceptions-to-the-intune-app-protection-policy-app-data-transfer-policy"></a>Jak vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP)
 
-Jako správce můžete vytvořit výjimky zásad přenosu dat ve správě mobilních aplikací Intune (MAM). Pomocí výjimky lze konkrétně vybrat nespravované aplikace, které budou moct přenášet data do spravovaných aplikací a ze spravovaných aplikací. Vaše IT oddělení musí důvěřovat nespravovaným aplikacím, které jste zahrnuli do seznamu výjimek. 
+Jako správce můžete vytvořit výjimky zásad pro přenos dat zásad Intune App Protection (APP). Pomocí výjimky lze konkrétně vybrat nespravované aplikace, které budou moct přenášet data do spravovaných aplikací a ze spravovaných aplikací. Vaše IT oddělení musí důvěřovat nespravovaným aplikacím, které jste zahrnuli do seznamu výjimek. 
 
 >[!WARNING] 
 > Za provádění změn v zásadách výjimek přenosu dat nesete zodpovědnost. Nespravované aplikace (aplikace, které nejsou spravované pomocí Intune), které přidáte do těchto zásad, budou mít přístup k datům chráněným pomocí spravovaných aplikací. Takový přístup k chráněným datům může mít za následek porušení zabezpečení dat. Výjimky přenosu dat přidávejte jenom pro aplikace, které vaše organizace musí používat, ale které nepodporují zásady ochrany aplikací Intune. Kromě toho přidávejte výjimky jenom pro aplikace, které nepovažujete za rizikové z hlediska úniku dat.
@@ -65,6 +65,8 @@ Po přidání balíčku **Webex** jako výjimky k zásadám přenosu dat MAM se 
     <code>com.android.mms</code>
     
     <code>com.samsung.android.messaging</code>
+
+- Příklad **instalačního programu certifikátů** pro Android: Pokud chcete určit výjimku pro nativní aplikaci **instalátoru certifikátů** , aby Outlook pro Android mohl nainstalovat certifikát S/MIME (doručený jako příloha e-mailu) do úložiště klíčů Androidu, musíte přidat výjimku přenosu dat pro následující řetězec: <code>com.android.certinstaller</code>. Další informace najdete v tématu [citlivostní označování a ochrana v Outlooku pro iOS a Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/sensitive-labeling-and-protection-outlook-for-ios-android).
 
 ## <a name="next-steps"></a>Další kroky
 

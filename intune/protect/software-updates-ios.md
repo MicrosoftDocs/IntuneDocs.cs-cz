@@ -13,12 +13,12 @@ ms.localizationpriority: high
 ms.technology: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ada1f6e5292684803fbea40430cdd43d61796746
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: 0f9750603d19d9b19697c7d2660351c4586432f6
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681357"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984186"
 ---
 # <a name="add-ios-software-update-policies-in-intune"></a>Přidání zásad aktualizace softwaru pro iOS do Intune
 
@@ -28,7 +28,7 @@ Tato funkce platí pro:
 
 - iOS 10,3 a novější (pod dohledem)
 
-Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je aktualizace k dispozici, zařízení ji stáhne a nainstaluje, s výjimkou během časových omezení. Pro aktualizaci zařízení nemusí uživatel nic udělat. Zásady nebrání tomu, aby uživatel aktualizoval operační systém ručně.
+Zařízení se přihlašuje k Intune přibližně každých 8 hodin. Pokud je aktualizace k dispozici, zařízení ji stáhne a nainstaluje, s výjimkou během časových omezení. I když proces aktualizace obvykle nezahrnuje interakci s uživatelem, pokud má zařízení heslo, bude uživatel muset zadat jeho zadání, aby mohl spustit aktualizaci softwaru. To platí pro iOS 10,3 a novější verze. Zásady nebrání tomu, aby uživatel aktualizoval operační systém ručně.
 
 ## <a name="configure-the-policy"></a>Konfigurace zásad
 
@@ -80,7 +80,7 @@ Můžete upravit existující zásadu, včetně změny časových omezení:
 1. V části **aktualizace softwaru**vyberte možnost **aktualizovat zásady pro iOS** a pak vyberte zásadu, kterou chcete upravit.
 
 2. Při prohlížení **vlastností**zásad vyberte **Upravit** pro stránku zásady, kterou chcete upravit.  
-   ![Edit ](./media/software-updates-ios/edit-policy.png) policejního typu   
+   ![upravit policejní](./media/software-updates-ios/edit-policy.png)   
 
 3. Po zavedení změny vyberte **zkontrolovat + uložit**  > **Uložit** , aby se změny uložily, a vraťte se do *vlastností*zásad.  
  

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/08/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 40865dcca0b0109ae36f65b6691672c0035732b5
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a6cada91cdad6c117fddd143007e2cdf40939119
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502281"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984132"
 ---
 # <a name="windows-10-and-later-settings-to-protect-devices-using-intune"></a>Nastavení Windows 10 (a novější) pro ochranu zařízení pomocí Intune  
 
@@ -270,8 +270,8 @@ Následující nastavení jsou uvedena v tomto článku v jednom okamžiku, ale 
 
   - **Není nakonfigurováno**  
   - **Blokovat** – pravidla brány firewall autorizovaných aplikací v místním úložišti se ignorují a neuplatňují.  
-  - **Allow** -
-   Choose **Enable** aplikuje pravidla brány firewall v místním úložišti, aby je bylo možné rozpoznat a vyhovět.  
+  - **Povolit** -
+   zvolit **Povolit** použije pravidla brány firewall v místním úložišti, aby byla rozpoznaná a vynutila.  
 
 - **Globální pravidla firewallu v programu Windows Defender pro porty z místního úložiště**  
   **Výchozí**: Nenakonfigurováno  
@@ -315,7 +315,7 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
 
   Zadejte popis pravidla.  
 
-- **Směr**   
+-   **směru**  
   **Výchozí**: Nenakonfigurováno  
   CSP brány firewall: [FirewallRules/*FirewallRuleName*/Direction](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#direction)  
   
@@ -354,7 +354,7 @@ Vlastní pravidla brány firewall podporují tyto možnosti:
 
 Zadejte místní a vzdálené adresy, na které se toto pravidlo vztahuje.  
 
-- **Místní adresy**    
+-    **místních adres**  
   **Výchozí**: Libovolná adresa  
   CSP brány firewall: [FirewallRules/*FirewallRuleName*/LocalPortRanges](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp#localportranges)  
 
@@ -443,8 +443,6 @@ V zařízení musí být nainstalovaný Microsoft Edge.
 ## <a name="windows-encryption"></a>Šifrování Windows  
  
 ### <a name="windows-settings"></a>Nastavení systému Windows  
-
-Tato nastavení šifrování platí pro všechny verze Windows 10.  
 
 - **Šifrovat zařízení**  
   **Výchozí**: Nenakonfigurováno  
@@ -981,7 +979,7 @@ Blokuje odchozí připojení z libovolné aplikace na IP adresy nebo domény s n
 - **Nahrát XML**  
   **Výchozí**: *Nenakonfigurováno*  
 
-  Pokud chcete ochranu [zařízení před zneužitím chránit](https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)pomocí ochrany před zneužitím, vytvořte soubor XML, který bude obsahovat nastavení pro omezení rizik systému a aplikací. Existují dvě metody vytvoření souboru XML:  
+  Pokud chcete ochranu [zařízení před zneužitím chránit](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection)pomocí ochrany před zneužitím, vytvořte soubor XML, který bude obsahovat nastavení pro omezení rizik systému a aplikací. Existují dvě metody vytvoření souboru XML:  
 
   - *PowerShell* – použijte jednu nebo více rutin PowerShellu *Get-ProcessMitigation*, *set-ProcessMitigation*a *ConvertTo-powershellových processmitigationpolicy* . Tyto rutiny nakonfigurují nastavení zmírňování a exportují jejich reprezentaci v jazyce XML.  
 

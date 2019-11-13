@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/06/2019
+ms.date: 11/12/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 488794fdce8f6ebb074648c8e399cb2aecc73b25
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 391c5ac194d5dc7ddf492fe23907279cc4380d3d
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709748"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984128"
 ---
 # <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
@@ -447,11 +447,20 @@ Pokud chcete přidat aplikace, můžete:
 
 ### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
+Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnadnění nejasností zákazníků): Toto nastavení se nezobrazí v profilu správy cílového zařízení. Důvodem je to, že toto nastavení se považuje za akci vzdáleného zařízení a pokaždé, když se v zařízení změní stav datového roamingu, bude službou Intune zablokovaný znovu. I když není v profilu správy, funguje, pokud se zobrazuje jako úspěch z vytváření sestav v konzole pro správu. 
 - **Datový roaming**: vyberte možnost **blokovat** , pokud chcete datový roaming zabránit v mobilní síti. **Nenakonfigurováno** (výchozí) povolí datový roaming, když je zařízení v mobilní síti.
+
+  > [!IMPORTANT]
+  > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízení. Pokaždé, když se v zařízení změní stav roamingu dat, služba Intune zablokuje **datový roaming** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
+
 - **Globální načítání na pozadí při roamingu**: při roamingu v mobilní síti znemožní **blokování** použití globální funkce načítání na pozadí. **Nenakonfigurováno** (výchozí) umožňuje zařízení při roamingu v mobilní síti načíst data, například e-mailu.
 - **Hlasové vytáčení**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v používání funkce hlasového vytáčení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje hlasové vytáčení zařízení.
 - **Hlasový roaming**: vyberte **blok** , aby se zabránilo hlasovému roamingu přes mobilní síť. **Nenakonfigurováno** (výchozí) povolí hlasový roaming, když je zařízení v mobilní síti.
 - **Osobní hotspot**: **blok** vypne osobní hotspot na zařízení uživatelů při každé synchronizaci zařízení. Toto nastavení nemusí být kompatibilní s některými provozovateli. **Nenakonfigurováno** (výchozí) udržuje konfiguraci osobního hotspotu jako výchozí nastavenou uživatelem.
+
+  > [!IMPORTANT]
+  > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízení. Pokaždé, když se změní stav osobního hotspotu na zařízení, služba Intune zablokuje **osobní hotspot** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
+
 - **Pravidla pro mobilní použití (jenom spravované aplikace)** : Definujte datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Možnosti:
   - **Zablokovat používání mobilních dat**: blokuje používání mobilních dat pro **všechny spravované aplikace** nebo umožňuje **zvolit konkrétní aplikace**.
   - **Zablokovat používání mobilních dat při roamingu**: při roamingu používejte mobilní data pro **všechny spravované aplikace** nebo **vyberte konkrétní aplikace**.

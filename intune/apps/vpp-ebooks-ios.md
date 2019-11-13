@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 022df428658a3c8791a07cbd797145bfe9a392bb
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ae29d2ee5add475db89f6895b22299793a94ac36
+ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72496460"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73984085"
 ---
 # <a name="how-to-manage-ios-ebooks-you-purchased-through-a-volume-purchase-program-with-microsoft-intune"></a>Správa e-knih pro iOS zakoupených v rámci multilicenčního programu pomocí Microsoft Intune
 
@@ -42,7 +42,6 @@ Více licencí ke knihám pro iOS můžete zakoupit prostřednictvím programu [
 ## <a name="before-you-start"></a>Než začnete
 Než začnete, musíte od společnosti Apple získat token VPP a nahrát ho do svého účtu Intune. Navíc platí:
 
-* K účtu Intune můžete přiřadit až 256 tokenů VPP.
 * Pokud jste už dřív použili token VPP s jiným produktem, musíte pro Intune vygenerovat nový token.
 * Tokeny mají platnost jeden rok.
 * Ve výchozím nastavení se Intune synchronizuje se službou Apple VPP dvakrát denně. Ruční synchronizaci můžete spustit kdykoli.
