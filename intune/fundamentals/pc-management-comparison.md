@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/13/2018
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3ab16d79549a7fe7b0249c0c4af79ed56817ecec
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d8fd53e9d12dd38639d204e214aea03d733e584b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510047"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059201"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Porovnání správy počítačů s Windows jako počítačů nebo jako mobilních zařízení
 
@@ -42,8 +42,8 @@ Organizace mohou v Microsoft Intune spravovat počítače s Windows buď jako mo
 |**Správa aktualizací softwaru**| Aktualizace Windows a aplikací od Microsoftu<br>[Udržování počítačů s Windows v aktuálním stavu díky softwarovým aktualizacím](../keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)|Microsoft Store pro firmy pro aktualizace Windows 10 a aktualizace aplikací od Microsoftu<br> [Konfigurace nastavení služby Windows Update pro firmy](../protect/windows-update-for-business-configure.md) |
 |**Správa softwarových licencí**|K dispozici <br>[Správa licenčních smluv na software počítačů s Windows](../manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)|Microsoft Store pro firmy (pouze aplikace .appx)<br>[Správa aplikací koupených z Microsoft Storu pro firmy](../apps/windows-store-for-business.md)|
 |**Inventář**|K dispozici <br>[Zobrazení inventáře hardwaru a softwaru pro počítače s Windows](view-hardware-and-software-inventory-for-windows-pcs-in-microsoft-intune.md)|K dispozici <br>[Jak monitorovat informace o aplikacích](../apps/apps-monitor.md)<br>[Co je správa zařízení?](../remote-actions/device-management.md)|
-|**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |K dispozici <br>[Firewall v programu Windows Defender](../protect/endpoint-protection-windows-10.md#windows-defender-firewall)|
-|**Ochrana proti malwaru**|Endpoint Protection<br>[Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Windows Defender<br>[Povolení Windows Defenderu](../protect/advanced-threat-protection.md)|
+|**Zásady brány Windows Firewall**|K dispozici <br>[Pomoc při ochraně počítačů s Windows pomocí zásad brány Windows Firewall](../help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) |K dispozici <br>[Firewall v programu Microsoft Defender](../protect/endpoint-protection-windows-10.md#microsoft-defender-firewall)|
+|**Ochrana proti malwaru**|Endpoint Protection<br>[Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection](../help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)|Microsoft Defender<br>[Povolit Microsoft Defender](../protect/advanced-threat-protection.md)|
 |**Vzdálená pomoc** |TeamViewer<br>[Žádost o poskytnutí vzdálené pomoci na počítačích s Windows](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [Vzdálená správa zařízení s Intune pomocí TeamVieweru](../remote-actions/teamviewer-support.md) |
 |**Nasazení aplikací** | Není k dispozici pro Microsoft Store pro firmy,<br>jenom .exe, .appx a vícesouborové .msi<br>[Přidání aplikací pro počítače s Windows, na kterých běží softwarový klient Intune](add-apps-for-windows-pcs-in-microsoft-intune.md)|K dispozici pro aplikace z Microsoft Storu a pro podnikové aplikace<br>[Přidání aplikací pro Windows Store](../apps/store-apps-windows.md)<br>[Přidání obchodních aplikací (LOB) pro Windows](../apps/lob-apps-windows.md)|
 |**Ochrana aplikací**|Není k dispozici|K dispozici <br>[Co jsou zásady ochrany aplikací?](../apps/app-protection-policy.md)|

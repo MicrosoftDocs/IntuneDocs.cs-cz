@@ -2,10 +2,10 @@
 title: Vazba zařízení s Androidem na síťové umístění v Microsoft Intune – Azure | Microsoft Docs
 description: Vytvořte a nakonfigurujte síťová umístění v Microsoft Intune pro zařízení s Androidem. Zařízení můžete na základě jejich síťového umístění označovat jako nevyhovující. Pokud se zařízení octne mimo síťové umístění, můžete zablokovat přístup k prostředkům společnosti.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/21/2018
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 648ccd889714c2ee4f7ee1fa04301490ad9fd001
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 847ab759b697d402acb07d9c8d83d3a3ef9aaef2
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749440"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058151"
 ---
 # <a name="use-locations-network-fence-in-intune"></a>Použití funkce Umístění (ohraničení sítě) v Intune
 
@@ -50,7 +50,7 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 ## <a name="create-a-location"></a>Vytvoření umístění
 
-1. V Intune vyberte **Dodržování předpisů zařízením** > **Umístění** > **Vytvořit**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **zařízení** > **zásady dodržování předpisů** > **umístění** > **vytvořit**.
 
 2. Zadejte následující vlastnosti:  
 
@@ -69,8 +69,7 @@ Vytvoření zásad dodržování předpisů založených na síťovém umístěn
 
 ## <a name="create-the-location-compliance-policy"></a>Vytvoření zásad dodržování předpisů založených na síťovém umístění
 
-Když [vytvoříte zásady dodržování předpisů](create-compliance-policy.md), vyberte pro tuto **platformu** **Android** . V seznamu **Umístění** můžete zvolit jedno nebo více síťových umístění, která jste přidali. Tato umístění jsou součástí ohraničení sítě, které vytváříte pro vaše zařízení. 
-
+Když [vytvoříte zásady dodržování předpisů](create-compliance-policy.md), vyberte pro tuto **platformu** **Android** . V seznamu **Umístění** můžete zvolit jedno nebo více síťových umístění, která jste přidali. Tato umístění jsou součástí ohraničení sítě, které vytváříte pro vaše zařízení.
 
 ## <a name="configure-the-actions-for-noncompliance"></a>Konfigurace akcí při nedodržení předpisů
 
@@ -83,5 +82,6 @@ Některé pokyny najdete v tématu o [přidání akcí při nedodržení předpi
 Když je zařízení připojené k vašim umístěním, zobrazuje se v aplikaci Portál společnosti jako vyhovující. Pokud není zařízení připojené k některému z vašich umístění, zobrazuje se jako nevyhovující.
 
 ## <a name="next-steps"></a>Další kroky
+
 [Monitorování zásad dodržování předpisů zařízením](compliance-policy-monitor.md)  
 [Začínáme se zásadami dodržování předpisů](device-compliance-get-started.md)

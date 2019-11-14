@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d223fb0cac7ad7435366db70bbb5bf4117216aa0
-ms.sourcegitcommit: a7c35efb31c4efd816bd4aba29240013965aee92
+ms.openlocfilehash: b346f41f5198a4aabcb05dcdd4b35a8c56977f53
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/13/2019
-ms.locfileid: "73983966"
+ms.locfileid: "74059781"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Nastavení zásad ochrany aplikací pro Android v Microsoft Intune
 Tento článek popisuje nastavení zásad ochrany aplikací pro zařízení s Androidem. Popsané nastavení zásad se dá [nakonfigurovat](app-protection-policies.md) pro zásady ochrany aplikací v okně **Nastavení** na portálu Azure Portal.
@@ -45,7 +45,7 @@ Existují tři kategorie nastavení zásad: nastavení ochrany dat, požadavky n
 | **Omezit vyjmutí, kopírování a vkládání mezi ostatními aplikacemi** | Určete, kdy se můžou v této aplikaci použít akce vyjmutí, kopírování a vložení. Vybírejte z těchto možností: <ul><li>**Blokováno:** Nepovoluje akce vyjmutí, kopírování a vložení mezi touto a jakoukoliv jinou aplikací.</li><li>**Aplikace spravované podle zásad:** Povoluje operace vyjmutí, kopírování a vložení mezi touto aplikací a jinými aplikacemi spravovanými podle zásad.</li><li>**Aplikace s vložením spravované podle zásad:** Povoluje vyjmutí a kopírování mezi touto aplikací a jinými aplikacemi spravovanými podle zásad. Povoluje vložení dat z jakékoliv aplikace do této aplikace.</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené. | **Libovolná aplikace** |
 | <ul><ui>**vyjmutí a zkopírování limitu znaků u jakékoli aplikace** | Zadejte počet znaků, které mohou být vyjmuty nebo zkopírovány z dat a účtů organizace.  Tím umožníte sdílení zadaného počtu znaků do libovolné aplikace bez ohledu na nastavení "Omezit vyjmutí, kopírování a vložení s jinými aplikacemi".<p>Výchozí hodnota = 0<p>**Poznámka**: vyžaduje portál společnosti Intune verze 5.0.4364.0 nebo novější.  | **0** |
 | **Snímek obrazovky a pomocník Google** | Vyberte **Zakázat** , pokud chcete blokovat zachycení obrazovky a možnosti **pomocníka Google** v zařízení při použití této aplikace. Pokud tuto aplikaci použijete s pracovním nebo školním účtem, při výběru možnosti **Zakázat** se také rozostří obrázek náhledu s přepínačem aplikace.| **Aby** |
-
+| **Oznámení o datech organizace** | Určete, kolik dat organizace se sdílí pomocí oznámení operačního systému pro účty org. Nastavení této zásady ovlivní místní zařízení a veškerá připojená zařízení, například wearables a inteligentní reproduktory. Aplikace můžou poskytovat další ovládací prvky pro přizpůsobení chování oznámení nebo se můžou rozhodnout Nedodržovat všechny hodnoty. Vyberte z těchto možností: <ul><li>**Blokovat**: Nesdílet oznámení.</li><ul><li>Pokud aplikace nepodporuje, budou oznámení povolena.</li></ul><li>**Blokovat organizační data**: nesdílejte data organizace v oznámeních. Například "máte novou poštu"; "Máte schůzku"</li><UL><li>Pokud aplikace nepodporuje, budou oznámení zablokovaná.</li></ul><li>**Allow**: sdílení dat organizace v oznámeních</li><li>**Libovolná aplikace:** Operace vyjmutí, kopírování a vložení do a z této aplikace nejsou nijak omezené.</ul> <p>**Poznámka**: *Toto nastavení vyžaduje podporu aplikace. V tuto chvíli bude aplikace Outlook pro Android 4.75.0 nebo novější podporovat toto nastavení, což očekává, že vydáte týden od 16. prosince 2019.* | **Povoleno**   |
   
 ### <a name="encryption"></a>Encryption
 | Nastavení | Způsob použití | Výchozí hodnota |

@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/16/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b3372fc83e467b08b479490b3707f2be03409156
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: 4a757da6cf4f4a2a3bde907f0025d4a08a52131b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749333"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059660"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
-Moderní plocha je špičkovou produkční platformou pro informačního pracovníka. Office 365 ProPlus a Windows 10 jsou základními komponentami moderního počítače spolu s nejnovějšími směrnými plány zabezpečení pro Windows 10 a Advanced Threat Protection v programu Windows Defender. 
+Moderní plocha je špičkovou produkční platformou pro informačního pracovníka. Office 365 ProPlus a Windows 10 jsou základními komponentami moderního počítače spolu s nejnovějšími směrnými plány zabezpečení pro Windows 10 a rozšířené možnosti ochrany před internetovými útoky v programu Microsoft Defender. 
 
 Správa moderního stolního počítače z cloudu přináší přidaný přínos pro vzdálené akce v rámci Internetu. Správa cloudu využívá integrované zásady správy mobilních zařízení systému Windows a odebírá závislosti v místních zásadách skupiny služby Active Directory. 
 
@@ -118,5 +118,5 @@ Jakmile uživatel připojí zařízení k Azure Active Directory, na zařízení
 
 ## <a name="next-steps"></a>Další kroky
 
-- Pokud používáte pokročilou detekci hrozeb v programu Windows Defender, vytvořte [zásady dodržování předpisů Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
+- Pokud používáte pokročilou detekci hrozeb v programu Microsoft Defender, vytvořte [zásady dodržování předpisů Intune](~/protect/advanced-threat-protection.md#create-and-assign-the-compliance-policy) , které budou vyžadovat analýzu hrozeb v Defenderu, aby splňovaly dodržování předpisů.
 - Vytvořte [zásady podmíněného přístupu na základě zařízení](~/protect/advanced-threat-protection.md#create-a-conditional-access-policy) , které zablokují přístup, pokud zařízení nesplňuje podmínky Intune.

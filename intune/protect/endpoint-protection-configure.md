@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: 884e4211a880feb3eb533238a5e7246b2738ce46
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d17f5a749252cd8e0e0e5e5ae8babf164f8b9836
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502317"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058461"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Přidání nastavení ochrany koncových bodů v Intune  
 
@@ -29,7 +29,7 @@ Pomocí služby Intune můžete pomocí profilů konfigurace zařízení spravov
 - Servery   
 - BitLocker  
 - Povolení a blokování aplikací  
-- Windows Defender a šifrování  
+- Microsoft Defender a šifrování  
 
 Můžete například vytvořit profil ochrany koncových bodů, který umožní uživatelům macOS instalovat aplikace jenom z Mac App Storu. Nebo můžete při spouštění aplikací na zařízeních s Windows 10 aktivovat filtr Windows SmartScreen.  
 
@@ -56,7 +56,7 @@ Než vytvoříte profil, přečtěte si následující články, které podrobn�
 
 ## <a name="add-custom-firewall-rules-for-windows-10-devices"></a>Přidání vlastních pravidel brány firewall pro zařízení s Windows 10  
 
-Když nakonfigurujete firewall v programu Windows Defender jako součást profilu, který zahrnuje pravidla ochrany koncových bodů pro Windows 10, můžete nakonfigurovat vlastní pravidla pro brány firewall. Vlastní pravidla umožňují rozšíření na předem definovanou sadu pravidel brány firewall, která jsou podporovaná pro Windows 10.  
+Když nakonfigurujete firewall v programu Microsoft Defender jako součást profilu, který zahrnuje pravidla ochrany koncových bodů pro Windows 10, můžete nakonfigurovat vlastní pravidla pro brány firewall. Vlastní pravidla umožňují rozšíření na předem definovanou sadu pravidel brány firewall, která jsou podporovaná pro Windows 10.  
 
 Při plánování profilů s vlastními pravidly brány firewall Vezměte v úvahu následující informace, které by mohly ovlivnit způsob seskupení pravidel brány firewall ve vašich profilech:  
 - Každý profil podporuje až 150 pravidel brány firewall. Když použijete víc než 150 pravidel, vytvořte další profily, z nichž každá je omezená na pravidla 150.  
@@ -71,11 +71,11 @@ Pravidla brány firewall, která může Intune spravovat, jsou podrobně popsan�
 
 2. V části *platforma*vyberte **Windows 10 a novější**a potom jako *typ profilu* vyberte **Endpoint Protection**.  
 
-3. Výběrem **firewallu v programu Windows Defender** otevřete stránku konfigurace a potom pro *pravidla brány firewall* vyberte **Přidat** a otevřete stránku **vytvořit pravidlo** .  
+3. Výběrem **firewallu v programu Microsoft Defender** otevřete stránku konfigurace a potom pro *pravidla brány firewall* vyberte **Přidat** a otevřete stránku **vytvořit pravidlo** .  
 
 4. Zadejte nastavení pro pravidlo brány firewall a pak ho uložte kliknutím na **tlačítko OK** . Pokud chcete zkontrolovat dostupné vlastní možnosti pravidla brány firewall v dokumentaci, přečtěte si téma [vlastní pravidla brány firewall](endpoint-protection-windows-10.md#firewall-rules).  
 
-5. Po uložení pravidla se zobrazí na stránce *firewall v programu Windows Defender* v seznamu pravidel.  
+5. Po uložení se pravidlo zobrazí na stránce *firewall v programu Microsoft Defender* v seznamu pravidel.  
 
 6. Chcete-li upravit pravidlo, vyberte pravidlo ze seznamu a otevřete stránku **Upravit pravidlo** .  
 

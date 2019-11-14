@@ -5,7 +5,7 @@ description: Projděte si výchozí a dostupná nastavení, která najdete v zá
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 21d70bb0322ec05ceb091844827151ce746cda6f
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 0d673650a26f3917fa32babba42e5e2054c87e59
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72508959"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060026"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Nastavení standardních hodnot zabezpečení MDM pro Intune  
 
@@ -126,19 +126,19 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
-  Microsoft Edge používá filtr SmartScreen v programu Windows Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení uživatelé také nemůžou zakázat (vypnout) filtr SmartScreen v programu Windows Defender. Když tyto zásady povolíte, vypne se filtr SmartScreen v programu Windows Defender a zabrání uživatelům v jeho zapnutí. Nekonfigurujte tuto zásadu tak, aby uživatelům umožnila zvolit nebo vypnout filtr SmartScreen v programu Windows Defender.  
+  Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení uživatelé také nemůžou zakázat (vypnout) filtr SmartScreen v programu Microsoft Defender. Povolením této zásady dojde k vypnutí filtru SmartScreen v programu Microsoft Defender a zabránění uživatelům v jeho zapnutí. Nekonfigurujte tuto zásadu, aby uživatelům umožnila zvolit nebo vypnout filtr SmartScreen v programu Microsoft Defender.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **Výchozí**: Ano  
   
 - **Blokovat přístup ke škodlivému webu**  
-  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění programu Windows Defender SmartScreen na potenciálně škodlivé weby a umožnit jim tak pokračovat v lokalitě. Pomocí této zásady můžete ale nakonfigurovat Microsoft Edge, aby uživatelé nemohli obejít upozornění, a zablokovat tak, aby pokračovali na tomto webu.  
+  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých webů, což jim umožní pokračovat v lokalitě. Pomocí této zásady můžete ale nakonfigurovat Microsoft Edge, aby uživatelé nemohli obejít upozornění, a zablokovat tak, aby pokračovali na tomto webu.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067040)   
   
   **Výchozí**: Ano  
   
 - **Blokovat stahování neověřených souborů**  
-  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění programu Windows Defender SmartScreen na potenciálně škodlivé soubory a umožnit tak pokračování stahování neověřených souborů. Když se tyto zásady povolí, zabráníte tak uživatelům v obcházení upozornění a znemožníte jim stahování neověřených souborů.  
+  Ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít (Ignorovat) upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých souborů, což jim umožní pokračovat v stahování neověřených souborů. Když se tyto zásady povolí, zabráníte tak uživatelům v obcházení upozornění a znemožníte jim stahování neověřených souborů.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067023)  
   
   **Výchozí**: Ano  
@@ -219,14 +219,14 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
    
   **Výchozí**: Povolit s ZÁMKem UEFI 
 
-- **Povolit @no__t zabezpečení na základě virtualizace**-1  
+- **Povolit  zabezpečení na základě virtualizace**  
   Při příštím restartování zapne zabezpečení na základě virtualizace (VBS). Zabezpečení na základě virtualizace nabízí podporu služeb zabezpečení pomocí hypervisoru Windows.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067066)  
   
   **Výchozí**: Ano  
 
 
-- **Spustit ochranu systému**    
+- **Spustit   ochrany systému**  
   **Výchozí**: povoleno  
 
 ## <a name="device-installation"></a>Instalace zařízení  
@@ -434,7 +434,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: zakázat
 
-- **.NET Framework závislé součásti zóny s omezeným přístupem v aplikaci Internet Explorer**    
+- **Zóna s omezeným přístupem v Internet exploreru .NET Framework závislé součásti**    
   Toto nastavení zásad umožňuje spravovat, jestli .NET Framework komponenty, které nejsou podepsané pomocí technologie Authenticode, se dají spouštět z Internet Exploreru. Mezi tyto komponenty patří spravované ovládací prvky, na které se odkazuje ze značky objektu a spravované spustitelné soubory, na které odkazuje odkaz. Pokud nastavení této zásady povolíte, bude aplikace Internet Explorer spouštět nepodepsané spravované součásti. Pokud v rozevíracím seznamu vyberete možnost zobrazit výzvu, Internet Explorer vyzve uživatele, aby určil, zda mají být spuštěny nepodepsané spravované součásti. Pokud nastavení této zásady zakážete, nebude aplikace Internet Explorer spouštět nepodepsané spravované součásti. Pokud nastavení této zásady nenakonfigurujete, nebude aplikace Internet Explorer spouštět nepodepsané spravované součásti.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067077)
 
@@ -820,7 +820,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: vysoká úroveň zabezpečení 
   
-- **Blokování zazastaralých aktivních X ovládacích prvků v aplikaci Internet Explorer**   
+- **Aplikace Internet Explorer blokuje zastaralé ovládací prvky aktivní X**   
   Nastavení této zásady určuje, jestli Internet Explorer blokuje určité zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX nejsou nikdy blokované v zóně intranetu. Pokud nastavení této zásady povolíte, aplikace Internet Explorer zastaví blokování zastaralých ovládacích prvků ActiveX. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude aplikace Internet Explorer nadále blokovat určité zastaralé ovládací prvky ActiveX. Další informace najdete v tématu "zastaralé ovládací prvky ActiveX" v knihovně TechNet aplikace Internet Explorer.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067203)  
   
@@ -838,7 +838,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- **Oprávnění pro přístup k důvěryhodné zóně v Internet exploreru**   
+- **Přístupová oprávnění k důvěryhodné zóně aplikace Internet Explorer**   
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety v jazyce Java. Pokud nastavení této zásady povolíte, můžete v rozevíracím seznamu zvolit možnosti. Vlastní pro řízení nastavení oprávnění individuálně. Nízké zabezpečení umožňuje apletům provádět všechny operace. Střední zabezpečení umožňuje apletům běžet v izolovaném prostoru (sandboxu) (oblast v paměti mimo rámec toho, že program nemůže provádět volání) a navíc funkce, jako je například pomocné místo (bezpečná a zabezpečená oblast úložiště v klientském počítači) a uživatelem řízený vstup/výstup souborů. Vysoké zabezpečení umožňuje, aby se applety spouštěly v izolovaném prostoru. Zakáže Java, aby se zabránilo spuštění všech apletů. Pokud nastavení této zásady zakážete, aplety Java nepůjde spustit. Pokud nastavení této zásady nenakonfigurujete, oprávnění je nastaveno na možnost nízká úroveň zabezpečení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
@@ -850,13 +850,13 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat  
   
-- **Aplikace Internet Explorer uzamkl oprávnění pro přístup k zóně java**   
+- **Aplikace Internet Explorer byla uzamčena s omezenou zónou oprávnění java**   
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety v jazyce Java. Pokud nastavení této zásady povolíte, můžete v rozevíracím seznamu zvolit možnosti. Vlastní pro řízení nastavení oprávnění individuálně. Nízké zabezpečení umožňuje apletům provádět všechny operace. Střední zabezpečení umožňuje apletům běžet v izolovaném prostoru (sandboxu) (oblast v paměti mimo rámec toho, že program nemůže provádět volání) a navíc funkce, jako je například pomocné místo (bezpečná a zabezpečená oblast úložiště v klientském počítači) a uživatelem řízený vstup/výstup souborů. Vysoké zabezpečení umožňuje, aby se applety spouštěly v izolovaném prostoru. Zakáže Java, aby se zabránilo spuštění všech apletů. Pokud nastavení této zásady zakážete, aplety Java nepůjde spustit. Pokud nastavení této zásady nenakonfigurujete, aplety Java budou zakázané.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067181)  
   
   **Výchozí**: zakázat Java 
   
-- **Internetová zóna Internet Exploreru povoluje používat jenom schválené domény ovládací prvky ActiveX** .  
+- **Internetová zóna Internet Exploreru povoluje použití ovládacích prvků ActiveX pouze schválené domény**   
   Nastavení této zásady určuje, jestli se uživateli zobrazí výzva, aby se povolilo spouštění ovládacích prvků ActiveX na jiných webech, než na webu, který nainstaloval ovládací prvek ActiveX. Pokud nastavení této zásady povolíte, zobrazí se uživateli výzva před spuštěním ovládacích prvků ActiveX z webů v této zóně. Uživatel může zvolit, že se má ovládací prvek spouštět z aktuálního webu nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazovat výzvu ActiveX pro jednotlivé lokality a ovládací prvky ActiveX lze spouštět ze všech lokalit v této zóně.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067091)  
   
@@ -880,7 +880,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat 
   
-- **Aplikace Internet Explorer uzamčená na inteligentní obrazovku zóny s omezeným přístupem**   
+- **Aplikace Internet Explorer je uzamčena na inteligentní obrazovku zóny s omezeným přístupem**   
   Nastavení této zásady určuje, zda bude filtr SmartScreen kontrolovat stránky v této zóně na škodlivý obsah. Pokud toto nastavení zásad povolíte, vyhledá filtr SmartScreen stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady zakážete, filtr SmartScreen nebude skenovat stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, zda má filtr SmartScreen kontrolovat stránky v této zóně pro škodlivý obsah. Poznámka: v Internet Exploreru 7 Toto nastavení zásad určuje, jestli má filtr útoků phishing kontrolovat stránky v této zóně pro škodlivý obsah.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067092)  
   
@@ -946,7 +946,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázáno  
   
-- **Procesy aplikace Internet Explorer omezují omezení aktivních X**   
+- **Procesy aplikace Internet Explorer omezují aktivní instalaci X**   
   Nastavení této zásady umožňuje aplikacím, které hostují ovládací prvek webového prohlížeče, blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX. Pokud toto nastavení zásad povolíte, bude ovládací prvek webového prohlížeče blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX pro všechny procesy. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, ovládací prvek webového prohlížeče nebude blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX pro všechny procesy.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067250)  
   
@@ -1006,7 +1006,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat Java 
   
-- **Zóna s omezeným přístupem v aplikaci Internet Explorer nespouští antimalware proti ovládacím prvkům**ActiveX    
+- **Zóna s omezeným přístupem v aplikaci Internet Explorer nespouští antimalware proti ovládacím prvkům** ActiveX   
   Nastavení této zásady určuje, jestli aplikace Internet Explorer spouští antimalwarové programy proti ovládacím prvkům ActiveX, aby zkontrolovala, jestli se dají bezpečně načíst na stránkách. Pokud nastavení této zásady povolíte, aplikace Internet Explorer nebude u antimalwarového programu kontrolovat, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady zakážete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady nenakonfigurujete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Uživatelé můžou toto chování zapnout nebo vypnout pomocí nastavení zabezpečení Internet Exploreru.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067089)
   
@@ -1048,7 +1048,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- Internet **Explorer Internet Zone stahuje nepodepsané ovládací prvky ActiveX**   
+- **Internet Explorer Internet Zone stahuje nepodepsané ovládací prvky ActiveX**   
   Toto nastavení zásad umožňuje spravovat, jestli uživatelé můžou stahovat nepodepsané ovládací prvky ActiveX ze zóny. Takový kód je potenciálně škodlivý, zejména když přichází z nedůvěryhodné zóny. Pokud nastavení této zásady povolíte, můžou uživatelé spouštět nepodepsané ovládací prvky bez zásahu uživatele. Pokud v rozevíracím seznamu vyberete možnost zobrazit výzvu, zobrazí se uživatelům dotaz, zda chcete, aby bylo možné spustit nepodepsaný ovládací prvek. Pokud nastavení této zásady zakážete, uživatelé nemůžou spouštět nepodepsané ovládací prvky. Pokud nastavení této zásady nenakonfigurujete, uživatelé nemůžou spouštět nepodepsané ovládací prvky.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067325)
   
@@ -1078,7 +1078,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- **Zóna s omezeným přístupem v aplikaci Internet Explorer povoluje používat aktivní ovládací prvky X   pouze schválenými doménami**.  
+- **Zóna s omezeným přístupem v aplikaci Internet Explorer povoluje používat pouze schválené domény s ovládacími prvky** ActiveX   
   Nastavení této zásady určuje, jestli se uživateli zobrazí výzva, aby se povolilo spouštění ovládacích prvků ActiveX na jiných webech, než na webu, který nainstaloval ovládací prvek ActiveX. Pokud nastavení této zásady povolíte, zobrazí se uživateli výzva před spuštěním ovládacích prvků ActiveX z webů v této zóně. Uživatel může zvolit, že se má ovládací prvek spouštět z aktuálního webu nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazovat výzvu ActiveX pro jednotlivé lokality a ovládací prvky ActiveX lze spouštět ze všech lokalit v této zóně.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067233)  
   
@@ -1439,7 +1439,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
   
 - **Blokovat přesměrování jednotky**  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<driveletter >* v *> \<computername*. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<písmeno_jednotky >* v *\<ComputerName >* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Výchozí**: povoleno
@@ -1584,7 +1584,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Win
 
   **Výchozí**: povoleno
   
-## <a name="windows-defender"></a>Windows Defender  
+## <a name="microsoft-defender"></a>Microsoft Defender  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .  
 
 - **Kontrolovat příchozí e-mailové zprávy**  
@@ -1600,7 +1600,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Typ souhlasu pro odeslání ukázky v programu Defender**  
-  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Windows Defender odesílají data. Pokud je požadovaný souhlas již udělen, program Windows Defender je odešle. V takovém případě se uživatelské rozhraní spustí, aby požádalo o souhlas uživatele (když je povolený program Defender/AllowCloudProtection) před odesláním dat.  
+  Kontroluje, jestli se na úrovni souhlasu uživatele v programu Microsoft Defender odesílají data. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. V takovém případě se uživatelské rozhraní spustí, aby požádalo o souhlas uživatele (když je povolený program Defender/AllowCloudProtection) před odesláním dat.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067131)  
   
   **Výchozí**: automaticky odesílat bezpečné vzorky 
@@ -1616,7 +1616,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Výchozí**: Povolit
@@ -1632,7 +1632,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: Povolit
 
 - **Typ ochrany sítě**  
-  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Windows Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Windows Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu můžete zobrazit v Security Center programu Windows Defender. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v Security Center Windows Defenderu. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V Security Center programu Windows Defender se nezobrazí žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
+  Tato zásada umožňuje zapnout ochranu sítě (blokovat/audit) nebo vypnout v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům. Typ hodnoty je celé číslo. Pokud povolíte toto nastavení, bude zapnutá ochrana sítě a zaměstnanci ji nebudou moct vypnout. Jeho chování se dá řídit následujícími možnostmi: blokování a audit. Pokud povolíte tuto zásadu s možností blokovat, uživatelé a aplikace budou mít zablokovaný připojení k nebezpečným doménám. Tuto aktivitu vidíte v programu Microsoft Defender Security Center. Pokud povolíte tuto zásadu s možností audit, uživatelé nebo aplikace nebudou mít možnost se připojit k nebezpečným doménám. Tato aktivita se ale pořád zobrazuje v programu Microsoft Defender Security Center. Pokud tuto zásadu zakážete, nebudou se uživatelé nebo aplikace zablokovat z připojení k nebezpečným doménám. V programu Microsoft Defender Security Center neuvidíte žádné síťové aktivity. Pokud tuto zásadu nenakonfigurujete, blokování sítě je ve výchozím nastavení zakázané.  
   [Další informace](/windows/security/threat-protection/microsoft-defender-atp/enable-network-protection)  
   
   **Výchozí**: Povolit
@@ -1643,13 +1643,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: každý den
   
 - **Ochrana Doručená v cloudu**  
-  Aby bylo možné počítač nejlépe chránit, program Windows Defender pošle společnosti Microsoft informace o všech nalezených problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
+  Aby se Váš počítač mohl nejlépe chránit, Microsoft Defender pošle Microsoftu informace o všech zjištěných problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067039)
   
   **Výchozí**: Ano  
 
 - **Akce potenciálně nežádoucí aplikace v Defenderu**  
-  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v Antivirová ochrana v programu Windows Defender může identifikovat a blokovat PUAs stahování a instalace na koncových bodech ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
+  Funkce ochrany potenciálně nežádoucí aplikace (PUA) v antivirové ochraně v programu Microsoft Defender může identifikovat a blokovat PUAs ze stahování a instalace do koncových bodů ve vaší síti. Tyto aplikace nejsou považovány za viry, malware nebo jiné typy hrozeb, ale mohou provádět akce s koncovými body, které nepříznivě ovlivňují jejich výkon nebo použití. PUA může také odkazovat na aplikace, které se považují za nekvalitní pověst. Typické chování PUA zahrnuje různé typy softwaru, které se provedou vypsáním do ovladačů pro webové prohlížeče a optimalizace registru, které zjišťují problémy, vyžádají si platbu, aby opravila chyby, ale zůstaly na koncovém bodu a neobsahují žádné změny ani optimalizace (označované taky jako). programy neautorizovaných antivirových programů). Tyto aplikace můžou zvýšit riziko napadení vaší sítě malwarem, způsobit obtížnější nákazu malwaru a může obcházet prostředky IT při čištění aplikací.  
   [Další informace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)    
   
   **Výchozí**: blok  
@@ -1661,7 +1661,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Kontrolovat vyměnitelné jednotky během úplného prohledávání**  
-  Umožňuje, aby Windows Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Windows Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
+  Umožňuje, aby Microsoft Defender během úplného prohledávání kontroloval škodlivý a nežádoucí software v vyměnitelných jednotkách (například jednotky Flash). Antivirová ochrana v programu Microsoft Defender před spuštěním kontroluje všechny soubory na zařízeních USB.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067036)  
   
   **Výchozí**: Ano  
@@ -1672,7 +1672,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: Ano
   
 - **Monitorování chování**  
-  Povolí nebo zakáže funkci monitorování chování v programu Windows Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
+  Povolí nebo zakáže funkci monitorování chování programu Microsoft Defender. V systému Windows 10 tyto senzory shromažďují a zpracovávají signály chování z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Výchozí**: Ano
@@ -1720,7 +1720,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   
   **Výchozí**: blok
 
-## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender  
+## <a name="microsoft-defender-firewall"></a>Firewall v programu Microsoft Defender  
 Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) v dokumentaci k Windows Protocols.  
 
 - **Doména profilu brány firewall**  
@@ -1784,7 +1784,7 @@ Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPOE]( https://docs.micro
 
   **Výchozí**: Ano
 
-- **Konfigurace Windows Hello pro firmy**   
+- **Konfigurace  Windows Hello pro firmy**  
     Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
 
   - Když nastavíte *Ano*, povolíte tuto zásadu a zřídí zařízení Windows Hello pro firmy.  
@@ -1885,11 +1885,11 @@ Následující nastavení:
   - **Metoda pozvánky e-mailu**
 
 
-*[Novinka]* [**Windows Defender**](#windows-defender):
+*[Novinka]* [**Microsoft Defender**](#microsoft-defender):
 - **Spuštění aplikace Adobe Reader v podřízeném procesu**  
 - **Aplikace Office Communications se spouští v podřízeném procesu** 
 
-*[Novinka]* [ **firewall v programu Windows Defender**](#windows-defender-firewall)
+*[Novinka]* [ **firewall v programu Microsoft Defender**](#microsoft-defender-firewall)
 - **Doména profilu brány firewall**  
   - **Blokovaná příchozí připojení**  
   - **Vyžadují se odchozí připojení.**  
@@ -1997,17 +1997,17 @@ For more information, see [Policy CSP - Bitlocker](https://docs.microsoft.com/wi
 For more information, see [Policy CSP - Browser](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) in the Windows documentation.  
 
 - **Require SmartScreen for Microsoft Edge**  
-  Microsoft Edge uses Windows Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Windows Defender SmartScreen. Enabling this policy turns off Windows Defender SmartScreen and prevent users from turning it on. Don’t configure this policy to let users choose to turn Windows defender SmartScreen on or off.  
+  Microsoft Edge uses Microsoft Defender SmartScreen (turned on) to protect users from potential phishing scams and malicious software by default. Also, by default, users can't disable (turn off) Microsoft Defender SmartScreen. Enabling this policy turns off Microsoft Defender SmartScreen and prevent users from turning it on. Don’t configure this policy to let users choose to turn Microsoft defender SmartScreen on or off.  
   
   **Default**: Yes  
   
 - **Block malicious site access**  
-  By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious sites, allowing them to continue to the site. With this policy though, you can configure Microsoft Edge to prevent users from bypassing the warnings, blocking them from continuing to the site.
+  By default, Microsoft Edge allows users to bypass (ignore) the Microsoft Defender SmartScreen warnings about potentially malicious sites, allowing them to continue to the site. With this policy though, you can configure Microsoft Edge to prevent users from bypassing the warnings, blocking them from continuing to the site.
   
   **Default**: Yes  
   
 - **Block unverified file download**
-  By default, Microsoft Edge allows users to bypass (ignore) the Windows Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading the unverified file(s). Enabling this policy prevents users from bypassing the warnings, blocking them from downloading of the unverified file(s).
+  By default, Microsoft Edge allows users to bypass (ignore) the Microsoft Defender SmartScreen warnings about potentially malicious files, allowing them to continue downloading the unverified file(s). Enabling this policy prevents users from bypassing the warnings, blocking them from downloading of the unverified file(s).
   
   **Default**: Yes  
   
@@ -3159,7 +3159,7 @@ For more information, see [Policy CSP - WindowsConnectionManager](https://docs.m
 
   **Default**: Enabled
   
-## Windows Defender  
+## Microsoft Defender  
 For more information, see [Policy CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.  
 
 - **Scan incoming mail messages**  
@@ -3173,7 +3173,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Block
   
 - **Defender sample submission consent type**  
-  Checks for the user consent level in Windows Defender to send data. If the required consent has already been granted, Windows Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+  Checks for the user consent level in WinMMicrosofticrosoftdows Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
   
   **Default**: Send safe samples automatically 
   
@@ -3188,7 +3188,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Block
   
 - **Prevent credential stealing type**  
-  Windows Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Windows Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.
+  Microsoft Defender Credential Guard uses virtualization-based security to isolate secrets so that only privileged system software can access them. Unauthorized access to these secrets can lead to credential theft attacks, such as Pass-the-Hash or Pass-The-Ticket. Microsoft Defender Credential Guard prevents these attacks by protecting NTLM password hashes, Kerberos Ticket Granting Tickets, and credentials stored by applications as domain credentials.
   
   **Default**: Enable
 
@@ -3198,7 +3198,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Block
   
 - **Network protection type**  
-  This policy allows you to turn on network protection (block/audit) or off in Windows Defender Exploit Guard. Network protection is a feature of Windows Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites. Value type is integer. If you enable this setting, network protection is turned on and employees can't turn it off. Its behavior can be controlled by the following options: Block and Audit. If you enable this policy with the "Block" option, users and apps are blocked from connecting to dangerous domains. You can see this activity in Windows Defender Security Center. If you enable this policy with the "Audit" option, users/apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Windows Defender Security Center. If you disable this policy, users/apps won't be blocked from connecting to dangerous domains. You'll not see any network activity in Windows Defender Security Center. If you don't configure this policy, network blocking is disabled by default.
+  This policy allows you to turn on network protection (block/audit) or off in Microsoft Defender Exploit Guard. Network protection is a feature of Microsoft Defender Exploit Guard that protects employees using any app from accessing phishing scams, exploit-hosting sites, and malicious content on the Internet. This includes preventing third-party browsers from connecting to dangerous sites. Value type is integer. If you enable this setting, network protection is turned on and employees can't turn it off. Its behavior can be controlled by the following options: Block and Audit. If you enable this policy with the "Block" option, users and apps are blocked from connecting to dangerous domains. You can see this activity in Microsoft Defender Security Center. If you enable this policy with the "Audit" option, users/apps won't be blocked from connecting to dangerous domains. However, you'll still see this activity in Microsoft Defender Security Center. If you disable this policy, users/apps won't be blocked from connecting to dangerous domains. You'll not see any network activity in Microsoft Defender Security Center. If you don't configure this policy, network blocking is disabled by default.
   
   **Default**: Enable
   
@@ -3208,12 +3208,12 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Everyday
   
 - **Cloud-delivered protection**  
-  To best protect your PC, Windows Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
+  To best protect your PC, Microsoft Defender will send information to Microsoft about any problems it finds. Microsoft will analyze that information, learn more about problems affecting you and other customers, and offer improved solutions.
   
   **Default**:  Yes  
 
 - **Defender potentially unwanted app action**  
-  The potentially unwanted application (PUA) protection feature in Windows Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might perform actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.  
+  The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might perform actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.  
   
   **Default**: Block  
 
@@ -3223,7 +3223,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Block
   
 - **Scan removable drives during a full scan**  
-  Allows Windows Defender to scan for malicious and unwanted software in removable drives (for example, flash drives) during a full scan. Windows Defender Antivirus scans all files on USB devices before execution.
+  Allows Microsoft Defender to scan for malicious and unwanted software in removable drives (for example, flash drives) during a full scan. Microsoft Defender Antivirus scans all files on USB devices before execution.
   
   **Default**: Yes  
   
@@ -3233,7 +3233,7 @@ For more information, see [Policy CSP - Defender](https://docs.microsoft.com/win
   **Default**: Yes
   
 - **Behavior monitoring**  
-  Allows or disallows Windows Defender Behavior Monitoring functionality.Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and sends this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.
+  Allows or disallows Microsoft Defender Behavior Monitoring functionality.Embedded in Windows 10, these sensors collect and process behavioral signals from the operating system and sends this sensor data to your private, isolated, cloud instance of Microsoft Defender ATP.
   
   **Default**: Yes
 

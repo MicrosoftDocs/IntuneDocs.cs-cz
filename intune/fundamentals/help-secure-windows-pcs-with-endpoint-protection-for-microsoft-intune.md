@@ -6,7 +6,7 @@ keywords: ''
 author: dougeby
 ms.author: dougeby
 manager: dougeby
-ms.date: 01/01/2018
+ms.date: 11/12/2019
 ms.topic: archived
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 535ae4dd986940da17d247136b37185cfaa58b57
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: f00a680d8d7799e0307021926677d1e0ed1e9a12
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72510225"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059685"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Pomoc se zabezpečením počítačů s Windows pomocí služby Endpoint Protection pro Microsoft Intune
 
@@ -189,7 +189,7 @@ Intune může v zařízení zobrazit cesty až 10 naposledy zjištěných instan
 4. Klikněte pravým tlačítkem na záhlaví sloupce. Zobrazí se seznam dostupných sloupců. V seznamu zaškrtněte políčko **Nedávno kontrolované cesty**. Zobrazí se sloupec **Nedávno kontrolované cesty** , ve kterém bude uvedeno až 10 posledních instancí malwaru zjištěných na zařízení.
 
 ## <a name="run-a-malware-scan-or-update-malware-definitions-on-a-computer"></a>Spuštění kontroly malwaru nebo aktualizace definic malwaru na počítači
-Intune může na vzdáleném spravovaném počítači, na kterém je nainstalovaný klient Intune, spustit úplnou nebo rychlou kontrolu malwaru pomocí služby Endpoint Protection nebo programu Windows Defender.
+Intune může spustit úplnou nebo rychlou kontrolu malwaru pomocí Endpoint Protection nebo Microsoft Defenderu na vzdáleně spravovaném počítači s nainstalovaným klientem Intune.
 
 1. V [konzole pro správu Microsoft Intune](https://manage.microsoft.com/) přejděte na **Skupiny** > **Přehled** > **Všechna zařízení** > **Všechny počítače** a vyberte počítač, na který chcete cílit.
 

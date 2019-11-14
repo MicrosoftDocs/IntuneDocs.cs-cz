@@ -2,8 +2,8 @@
 title: Přidávání skriptů PowerShellu do zařízení s Windows 10 v Microsoft Intune – Azure | Microsoft Docs
 description: Vytvořte a spusťte skripty PowerShellu, přiřaďte zásady skriptu k Azure Active Directory skupinám, pomocí sestav můžete monitorovat skripty a Zobrazit postup odstranění skriptů přidaných do zařízení s Windows 10 v Microsoft Intune. Podívejte se také na některé běžné problémy a jejich řešení.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 09/16/2019
 ms.topic: conceptual
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 94653c51bccc59fde93fdacc16f2b83e7860346b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 1d73d28f34258bce99199731579969604c0a3d97
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72497785"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059726"
 ---
 # <a name="use-powershell-scripts-on-windows-10-devices-in-intune"></a>Použití skriptů PowerShellu na zařízeních s Windows 10 v Intune
 
@@ -177,7 +177,7 @@ Pokud chcete zjistit, jestli je zařízení automaticky zaregistrované, můžet
 
 - Ujistěte se, že jsou zařízení [připojená k Azure AD](https://docs.microsoft.com/azure/active-directory/user-help/user-help-join-device-on-network). Zařízení, která jsou připojená jenom k vašemu pracovišti nebo organizaci ([zaregistrovaná](https://docs.microsoft.com/azure/active-directory/user-help/user-help-register-device-on-network) ve službě Azure AD), nebudou dostávat skripty.
 - Klient rozšíření pro správu Intune se jednou za hodinu kontroluje v případě jakýchkoli změn ve skriptu nebo zásadách v Intune.
-- Potvrďte, že se stáhlo rozšíření pro správu Intune, `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
+- Potvrďte, že se do `%ProgramFiles(x86)%\Microsoft Intune Management Extension`stáhlo rozšíření správy Intune.
 - Skripty se nespouštějí na rozbočovačích Surface nebo Windows 10 v režimu S.
 - Zkontrolujte případné chyby v protokolech. Viz [protokoly rozšíření pro správu Intune](#intune-management-extension-logs) (v tomto článku).
 - V případě možných problémů s oprávněním se ujistěte, že vlastnosti skriptu PowerShellu jsou nastavené na `Run this script using the logged on credentials`. Také ověřte, zda má přihlášený uživatel příslušná oprávnění ke spuštění skriptu.

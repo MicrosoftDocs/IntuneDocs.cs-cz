@@ -5,7 +5,7 @@ description: Nastavení standardních hodnot zabezpečení, které Intune podpor
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/25/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: aa3cb3481de6e1fdc3790b7330ac521772e252be
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: b7363682960cff6688e9727d2b6869b6bf357084
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923407"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74060051"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>Základní nastavení pro Intune v programu Microsoft Defender Advanced Threat Protection
 
@@ -37,7 +37,7 @@ Další informace najdete v tématu [WINDOWSDEFENDERAPPLICATIONGUARD CSP](https:
 
 Při používání Microsoft Edge Aplikace Microsoft Defender Application Guard chrání vaše prostředí od webů, které nedůvěřují vaší organizaci. Když uživatelé navštíví weby, které nejsou uvedené ve vaší izolované síti, lokality se otevřou v rámci virtuální relace procházení technologie Hyper-V. Důvěryhodné lokality jsou definovány pomocí hranice sítě.  
 
-- **Ochrana Application Guard** - *Nastavení/AllowWindowsDefenderApplicationGuard*  
+- **Application Guard** - *Nastavení/AllowWindowsDefenderApplicationGuard*  
   Pokud chcete tuto funkci zapnout, vyberte *Ano* . tím se otevřou nedůvěryhodné weby v kontejneru procházení virtualizované technologie Hyper-V. Pokud je nastavená na *nenakonfigurovaná*, v zařízení se otevře libovolná lokalita (důvěryhodná a nedůvěryhodná), a ne v virtualizovaném kontejneru.  
 
   **Výchozí**: Ano
@@ -91,7 +91,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: blok 
 
 - **Zabránit krádeži pověření typu**  
-  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
 
   **Výchozí**: Povolit
 
@@ -227,7 +227,7 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
   - **Blokované identifikátory hardwarových zařízení**  
     Toto nastavení je dostupné, jenom když je *Instalace hardwarového zařízení podle identifikátorů zařízení* nastavená tak, aby *blokovala instalaci hardwarového zařízení*. Pokud chcete nakonfigurovat toto nastavení, rozbalte možnost, vyberte **+ Přidat**a pak zadejte identifikátor hardwarového zařízení, který chcete blokovat.  
 
-    **Výchozí**: PCI\CC_0C0A
+    **Výchozí**: PCI \ CC_0C0A
 
 - **Zablokovat přímý přístup do paměti**  
   [DataProtection/AllowDirectMemoryAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection#dataprotection-allowdirectmemoryaccess) – pomocí tohoto nastavení zásad můžete zablokovat přímý přístup do paměti (DMA) pro všechny horké porty PCI pro příjem dat na zařízení, dokud se uživatel nepřipojí do Windows. Jakmile se uživatel přihlásí, Windows Vypíše zařízení PCI připojená k portům plug-in hostitele PCI. Pokaždé, když uživatel zamkne počítač, je přímý přístup do zásuvky na konektorech PCI bez podřízených zařízení blokovaný, dokud se uživatel znovu nepřipojí. Zařízení, která už jsou ve výčtu, když se počítač odemkne, bude dál fungovat, dokud nebude odpojený. 
@@ -257,13 +257,13 @@ Další informace najdete v dokumentaci k Windows v části [nastavení zásady 
 ## <a name="endpoint-detection-and-response"></a>Zjištění a odpověď koncového bodu  
 Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https://docs.microsoft.com/windows/client-management/mdm/windowsadvancedthreatprotection-csp) v dokumentaci k systému Windows.  
 
-- **Urychlení generování sestav telemetrie** - *Konfigurace/TelemetryReportingFrequency*
+- **Urychlení četnosti hlášení telemetrie** - *Konfigurace/TelemetryReportingFrequency*
 
   Urychlení generování sestav telemetrie rozšířené ochrany před internetovými útoky v programu Microsoft Defender  
 
   **Výchozí**: Ano
 
-- **Sdílení ukázky pro všechny soubory** - *Konfigurace/SampleSharing* 
+- **Sdílení ukázky pro všechny soubory** - *Configuration/SampleSharing* 
 
   Vrátí nebo nastaví parametr konfigurace sdílení ukázky rozšířené ochrany před internetovými útoky v programu Microsoft Defender.  
 
@@ -281,7 +281,7 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
   Existující konfigurační soubor XML nástroje EMET můžete také převést a importovat do konfiguračního souboru XML ochrany před zneužitím.
 
 - **Přepsat ochranu před zneužitím blokování**  
-  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – nastavte na *hodnotu Ano* , pokud chcete uživatelům zabránit v provádění změn v oblasti nastavení ochrany před zneužitím v Security Center programu Windows Defender. Pokud toto nastavení zakážete nebo nenakonfigurujete, místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.  
+  [WindowsDefenderSecurityCenter/DisallowExploitProtectionOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-disallowexploitprotectionoverride) – nastavte na *hodnotu Ano* , pokud chcete uživatelům zabránit v provádění změn v oblasti nastavení ochrany před zneužitím v Security Center programu Microsoft Defender. Pokud toto nastavení zakážete nebo nenakonfigurujete, místní uživatelé mohou provádět změny v oblasti nastavení ochrany před zneužitím.  
   **Výchozí**: Ano  
 
 ## <a name="microsoft-defender-antivirus"></a>Antivirová ochrana v programu Microsoft Defender  
@@ -289,17 +289,17 @@ Další informace najdete v tématu [WINDOWSADVANCEDTHREATPROTECTION CSP](https:
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) .
 
 - **Kontrolovat skripty načtené do webových prohlížečů Microsoftu**  
-  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – nastavte na *Ano* , pokud chcete funkci prohledávání skriptů v programu Windows Defender zakázat.  
+  [Defender/AllowScriptScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning) – nastavte na *Ano* , pokud chcete, aby se povolily funkce prohledávání skriptů v programu Microsoft Defender.  
 
   **Výchozí**: Ano
 
 - **Kontrolovat příchozí e-mailové zprávy**  
-  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – nastavte na *Ano* , pokud chcete, aby Windows Defender mohl kontrolovat e-mail.  
+  [Defender/AllowEmailScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowemailscanning) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender mohl kontrolovat e-maily.  
 
   **Výchozí**: Ano
 
 - **Souhlas s odesláním ukázky v programu Defender**  
-  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) -kontroluje úroveň souhlasu uživatele v programu Windows Defender, aby odesílala data. Pokud je požadovaný souhlas již udělen, program Windows Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (při nastavení ochrany před odesláním *cloudu* na *Ano*).  
+  [Defender/SubmitSamplesConsent](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent) -kontroluje úroveň souhlasu uživatele v programu Microsoft Defender pro odesílání dat. Pokud je požadovaný souhlas již udělen, Microsoft Defender je odešle. Pokud ne (a pokud si uživatel není nikdy požádán), uživatelské rozhraní se spustí, aby požádalo o souhlas uživatele (při nastavení ochrany před odesláním *cloudu* na *Ano*).  
 
   **Výchozí**: automaticky odesílat bezpečné vzorky
 
@@ -319,7 +319,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
     **Výchozí**: Ano
 
 - **Blok aplikace Defender při ochraně přístupu**  
-  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – Pokud je nastavená hodnota *Ano*, je povolená možnost Windows Defender na ochraně přístupu.  
+  [Defender/AllowOnAccessProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowonaccessprotection) – Pokud je nastavená hodnota *Ano*, je povolená možnost Microsoft Defender on Access Protection.  
 
   **Výchozí**: Ano
 
@@ -346,30 +346,30 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: 2 dop.
 
 - **Ochrana Doručená v cloudu**  
-  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – Pokud je tato hodnota nastavená na *Ano*, Windows Defender pošle společnosti Microsoft informace o všech nalezených problémech. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.
+  [Defender/AllowCloudProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection) – Pokud je tato hodnota nastavená na *Ano*, Microsoft Defender pošle společnosti Microsoft informace o všech problémech, které najde. Microsoft bude tyto informace analyzovat, získat další informace o problémech, které mají vliv na vás a jiné zákazníky, a nabízí Vylepšená řešení.
 
   Pokud je tato zásada nastavená na *hodnotu Ano*, můžete k tomu, aby uživatelé mohli řídit odesílání informací ze svého zařízení, použít *typ souhlasu ukázka odeslání ukázky* v programu Defender.  
 
   **Výchozí**: Ano
 
 - **Akce potenciálně nežádoucí aplikace v Defenderu**  
-  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – antivirová ochrana v programu Windows Defender může identifikovat a blokovat *potenciálně nežádoucí aplikace* (PUAs) ze stahování a instalace na koncových bodech ve vaší síti. 
+  [Defender/PUAProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection) – antivirová ochrana v programu Microsoft Defender může identifikovat a blokovat *potenciálně nežádoucí aplikace* (PUAs) ze stahování a instalace na koncových bodech ve vaší síti. 
  
-  - Když se nastaví *blokování*, program Windows Defender blokuje PUAs a zobrazí je v historii spolu s dalšími hrozbami.
-  - Při nastavení *auditování*program Windows Defender detekuje PUAs, ale neblokuje je. Informace o aplikacích, které v programu Windows Defender převzaly akce, se dají najít hledáním událostí, které vytvořil program Windows Defender v Prohlížeč událostí.  
+  - Když se nastaví *blokování*, Microsoft Defender blokuje PUAs a uvádí je v historii spolu s dalšími hrozbami.
+  - Když se nastaví *audit*, Microsoft Defender detekuje PUAs, ale neblokuje je. Informace o aplikacích, které v programu Microsoft Defender převzaly, je možné najít tak, že vyhledá události, které vytvořil program Microsoft Defender, v Prohlížeč událostí.  
   - Když se nastaví na *výchozí nastavení zařízení*, ochrana PUA je vypnutá.  
  
   **Výchozí**: blok
 
 - **Rozšířený časový limit pro Cloud Defenderu**  
-  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Windows Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba čekání programu Windows Defender je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal.  
+  [Defender/CloudExtendedTimeout](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout) – určete maximální dobu, po kterou by antivirová ochrana v programu Microsoft Defender měla blokovat soubor při čekání na výsledek z cloudu. Základní doba, po kterou bude Microsoft Defender čekat, je 10 sekund. Do těchto 10 sekund se přidá každý další čas, který zde zadáte (až 50 sekund). Ve většině případů hledání trvá méně času než maximum. Prodloužení doby umožňuje, aby cloud podezřelé soubory důkladně prozkoumal.  
 
   Ve výchozím nastavení je rozšířená hodnota času 0 (zakázáno). Intune doporučuje povolit toto nastavení a zadat aspoň 20 dalších sekund.  
  
   **Výchozí hodnota**: 0
 
 - **Prohledat archivní soubory**  
-  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – nastavte na *Ano* , pokud chcete, aby program Windows Defender kontroloval archivní soubory.  
+  [Defender/AllowArchiveScanning](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning) – nastavte na *Ano* , pokud chcete, aby program Microsoft Defender kontroloval archivní soubory.  
 
   **Výchozí**: Ano
 
@@ -381,17 +381,17 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: uživatelsky definované
 
 - **Monitorování chování**  
-  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – nastavte na *Ano* , pokud chcete zapnout funkci monitorování chování v programu Windows Defender. Ve Windows 10 se v programu Windows Defender monitorují senzory, které sledují a zpracovávají signály z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
+  [Defender/AllowBehaviorMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring) – nastavte na *Ano* , pokud chcete zapnout funkci monitorování chování v programu Microsoft Defender. Ve Windows 10 se v programu Microsoft Defender monitorují senzory, které sledují a zpracovávají signály z operačního systému a odesílají tato data ze senzorů do vaší privátní a izolované cloudové instance ATP v programu Microsoft Defender.  
 
   **Výchozí**: Ano
 
 - **Kontrolovat soubory otevřené ze síťových složek**  
-  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – nastavte na *Ano* , pokud chcete, aby program Windows Defender kontroloval soubory v síti. Uživatel nebude moct odebrat zjištěný malware ze souborů jen pro čtení.  
+  [Defender/AllowScanningNetworkFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender kontroloval soubory v síti. Uživatel nebude moct odebrat zjištěný malware ze souborů jen pro čtení.  
 
   **Výchozí**: Ano
 
 - **Úroveň blokování cloudu Defenderu**  
-  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Windows Defender blokuje a kontroluje podezřelé soubory. Vaše možnosti jsou:
+  [Defender/CloudBlockLevel](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel) – pomocí této zásady můžete určit, jak agresivní antivirová ochrana v programu Microsoft Defender blokuje a kontroluje podezřelé soubory. Vaše možnosti jsou:
 
   - Vysoce agresivní blokování neznámých souborů při optimalizaci výkonu klienta (větší šance na falešně pozitivní)
   - Vysoká plus – agresivní blokování neznámých souborů a uplatnění dalších ochranných opatření (může ovlivnit výkon klienta)
@@ -400,24 +400,24 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: Nenakonfigurováno
 
 - **Sledování v reálném čase**  
-  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – nastavte na *Ano* , pokud chcete, aby monitorování v reálném čase programu Windows Defender bylo povolené.  
+  [Defender/AllowRealtimeMonitoring](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring) – nastavte na *Ano* , pokud chcete, aby monitorování v reálném čase programu Microsoft Defender bylo povolené.  
 
   **Výchozí**: Ano
 
 - **Limit využití procesoru při kontrole**  
-  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – zadejte maximální průměrné využití procesoru%, které může program Windows Defender během kontroly použít.  
+  [Defender/AvgCPULoadFactor](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-avgcpuloadfactor) – zadejte maximální průměrné využití procesoru%, které může program Microsoft Defender při kontrole použít.  
 
   **Výchozí**: 50
 
 - **Při úplné kontrole kontrolovat namapované síťové jednotky**  
-  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) – nastavte na *Ano* , pokud chcete, aby program Windows Defender kontroloval soubory v síti. Uživatel nemůže odebrat zjištěný malware ze souborů, které jsou jen pro čtení,
+  [Defender/AllowFullScanOnMappedNetworkDrives](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowfullscanonmappednetworkdrives) – nastavte na *Ano* , pokud chcete, aby Microsoft Defender kontroloval soubory v síti. Uživatel nemůže odebrat zjištěný malware ze souborů, které jsou jen pro čtení,
 
   Související nastavení v tomto seznamu: *Defender/AllowScanningNetworkFiles*
 
   **Výchozí**: Ano
 
 - **Zablokovat přístup koncovým uživatelům k programu Defender**  
-  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – nastavte na *Ano* , pokud chcete zablokovat přístup koncových uživatelů k uživatelskému rozhraní programu Windows Defender na svém zařízení.  
+  [Defender/AllowUserUIAccess](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess) – nastavte na *Ano* , pokud chcete zablokovat přístup koncových uživatelů k uživatelskému rozhraní Microsoft Defenderu na svém zařízení.  
 
   **Výchozí**: Ano
 
@@ -426,7 +426,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
 
   **Výchozí**: 2 dop.
 
-## <a name="windows-defender-firewall"></a>Firewall v programu Windows Defender
+## <a name="microsoft-defender-firewall"></a>Firewall v programu Microsoft Defender
 Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel CSP brány firewall](https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) .
 
 - **Doba nečinnosti přidružení zabezpečení před odstraněním** - *MdmStore/globální/SaIdleTime*   
@@ -437,11 +437,11 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
   Blokuje stavovou protokol FTP (File Transfer Protocol) (FTP).  
   **Výchozí**: Ano
 
-- **Řízení front paketů** - *MdmStore/globální/EnablePacketQueue*    
+- **Řízení front paketů** - *MdmStore/Global/EnablePacketQueue*    
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.  
   **Výchozí**: výchozí nastavení zařízení
 
-- **Doména profilu brány Firewall** - *FirewallRules/FirewallRuleName/profily*  
+- **Doména profilu brány Firewall** - *FirewallRules/FirewallRuleName/Profiles*  
   Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
 
   Dostupná nastavení:  
@@ -510,7 +510,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
   - **Pravidla zásad ze zásad skupiny nejsou sloučena.**  
     **Výchozí**: Ano  
 
-- **Profil brány firewall private** - *FirewallRules/FirewallRuleName/Profiles*  
+- **Profil brány firewall privátní** - *FirewallRules/FirewallRuleName/profily*  
   Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil privátních sítí.  
 
   Dostupná nastavení: 
@@ -560,29 +560,29 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
 ## <a name="web--network-protection"></a>Ochrana webového & sítě  
 
 - **Typ ochrany sítě**  
-  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – tato zásada vám umožní zapnout nebo vypnout ochranu sítě pomocí ochrany před zneužitím v programu Windows Defender. Ochrana sítě je funkcí ochrany před zneužitím v programu Windows Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.  
+  [Defender/EnableNetworkProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection) – tato zásada vám umožní zapnout nebo vypnout ochranu sítě v programu Microsoft Defender zneužití Guard. Ochrana sítě je funkcí ochrany před zneužitím v programu Microsoft Defender, která chrání zaměstnance pomocí libovolné aplikace v přístupu k podvodným podvodům, webům pro zneužití a škodlivému obsahu na internetu. To zahrnuje prevenci prohlížeče třetích stran v připojení k nebezpečným webům.  
 
-  Když nastavíte režim *Povolit* nebo *audit*, uživatelé nemůžou vypnout ochranu sítě a k zobrazení informací o pokusůch o připojení můžete použít Security Center programu Windows Defender.  
+  Když nastavíte režim *Povolit* nebo *audit*, uživatelé nemůžou vypnout ochranu sítě a k zobrazení informací o pokusůch o připojení můžete použít Security Center programu Microsoft Defender.  
  
   - Při *Povolení* bude zablokováno uživatelům a aplikacím v připojení k nebezpečným doménám.  
   - *Režim auditování* neblokuje uživatelům a aplikacím připojení k nebezpečným doménám.  
 
-  Když nastavíte *uživatelsky definovaného uživatele*, uživatelé a aplikace se nebudou moct připojit k nebezpečným doménám a informace o připojeních nejsou k dispozici v Security Center Windows Defenderu.  
+  Když nastavíte *uživatelsky definovaného uživatele*, uživatelé a aplikace se nebudou moci připojit k nebezpečným doménám a informace o připojeních nejsou k dispozici v programu Microsoft Defender Security Center.  
 
   **Výchozí**: režim auditu
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
-  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge používá filtr SmartScreen v programu Windows Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení je tato zásada povolená (nastavená na *Ano*) a pokud je tato možnost povolená, zakáže uživatelům vypnutí filtru SmartScreen v programu Windows Defender.  Pokud jsou platné zásady pro zařízení rovny nenakonfigurovaným, můžou uživatelé vypnout filtr SmartScreen v programu Windows Defender, který zůstane bez ochrany zařízení.  
+  [Browser/AllowSmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-allowsmartscreen) – Microsoft Edge používá filtr SmartScreen v programu Microsoft Defender (zapnutý) k ochraně uživatelů před potenciálními podvodnými zprávami a škodlivým softwarem ve výchozím nastavení. Ve výchozím nastavení je tato zásada povolená (nastavená na *Ano*) a pokud je tato možnost povolena, znemožní uživatelům vypnutí filtru SmartScreen v programu Microsoft Defender.  Pokud jsou platné zásady pro zařízení rovny nenakonfigurovaným, můžou uživatelé vypnout filtr SmartScreen v programu Microsoft Defender, který zůstane bez ochrany zařízení.  
 
   **Výchozí**: Ano
   
 - **Blokovat přístup ke škodlivému webu**  
-  [Prohlížeč/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění programu Windows Defender SmartScreen na potenciálně škodlivé weby a umožnit tak uživatelům pokračovat v lokalitě. Když je tato zásada povolená (nastavená na *Ano*), Microsoft Edge znemožní uživatelům obejít upozornění a zablokuje jejich pokračování na webu.  
+  [Prohlížeč/PreventSmartScreenPromptOverride](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům vynechat upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých webů a umožnit tak uživatelům pokračovat v lokalitě. Když je tato zásada povolená (nastavená na *Ano*), Microsoft Edge znemožní uživatelům obejít upozornění a zablokuje jejich pokračování na webu.  
 
   **Výchozí**: Ano
 
 - **Blokovat stahování neověřených souborů**  
-  [Prohlížeč/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům obejít upozornění na potenciálně škodlivé soubory v programu Windows Defender SmartScreen, což jim umožní pokračovat ve stahování neověřených souborů. Když je tato zásada povolená (nastavená na *Ano*), uživatelům se zabrání v obcházení upozornění a nemůžou stahovat neověřené soubory.  
+  [Prohlížeč/PreventSmartScreenPromptOverrideForFiles](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverrideforfiles) – ve výchozím nastavení umožňuje Microsoft Edge uživatelům vynechat upozornění filtru SmartScreen v programu Microsoft Defender týkající se potenciálně škodlivých souborů. to jim umožní pokračovat v stahování neověřených souborů. Když je tato zásada povolená (nastavená na *Ano*), uživatelům se zabrání v obcházení upozornění a nemůžou stahovat neověřené soubory.  
 
   **Výchozí**: Ano
 

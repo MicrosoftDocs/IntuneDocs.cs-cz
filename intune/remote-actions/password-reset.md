@@ -3,8 +3,8 @@ title: Snížení nákladů na helpdesk
 titleSuffix: Microsoft Intune
 description: Snížení nákladů na helpdesk pomocí samoobslužného resetování hesla
 keywords: Azure Active Directory SSPR resetování hesla
-author: MandiOhlinger
-ms.author: mandia
+author: ErikjeMS
+ms.author: erikje
 manager: dougeby
 ms.date: 3/6/2018
 ms.topic: archived
@@ -15,16 +15,17 @@ ms.technology: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1da1758dcc1743087191f69bd4d57bc113774d81
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 08dc14a3abed634721b39fedaae840e2b18c151b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509295"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74058120"
 ---
 # <a name="reduce-help-desk-costs-with-self-service-password-reset"></a>Snížení nákladů na helpdesk pomocí samoobslužného resetování hesla
 
 Zaměstnancům můžete umožnit, aby si resetovali hesla pracovních a školních účtů bez pomoci helpdesku. Tento typ samoobslužného resetování hesla se doporučuje v následujících situacích:
+
 * Vaše firma a škola používá pro pracovní a školní účty službu Azure Active Directory.
 * Vaši zaměstnanci a studenti mají interní přístup.
 * Chcete snížit náklady na helpdesk.
@@ -39,6 +40,7 @@ Zaměstnancům můžete umožnit, aby si resetovali hesla pracovních a školní
 ## <a name="next-steps"></a>Další kroky
 
 Přečtěte si další informace v těchto článcích:
+
 * [Osvědčené postupy pro hesla](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords) 
 * [Licencování samoobslužného resetování hesla](https://docs.microsoft.com/azure/active-directory/active-directory-secure-passwords)
 

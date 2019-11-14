@@ -1,11 +1,11 @@
 ---
 title: Běžné zprávy Endpoint Protection v Microsoft Intune – Azure | Microsoft Docs
-description: Přečtěte si téma běžné zprávy a možné řešení při používání a řešení potíží s nástrojem Endpoint Protection a programem Windows Defender v Microsoft Intune.
+description: Přečtěte si téma běžné zprávy a možné řešení při používání a řešení potíží s aplikací Endpoint Protection a programem Microsoft Defender v Microsoft Intune.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 08/26/2019
+ms.date: 11/13/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,20 +18,20 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e34e1cb30469593c8ec9e756659ad03589ae38bc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 819586a923f5c0f3a81a6d59c4a3895898182f6b
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509778"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059155"
 ---
 # <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Problémy s ochranou koncového bodu a možná řešení v Microsoft Intune
 
 Tento článek obsahuje seznam a popis potenciálních příčin a řešení některých chyb a upozornění. Tyto informace vám pomůžou při řešení problémů při použití aplikace Endpoint Protection.
 
-## <a name="windows-defender-error-codes"></a>Kódy chyb v programu Windows Defender
+## <a name="microsoft-defender-error-codes"></a>Kódy chyb programu Microsoft Defender
 
-Zkontrolujte protokoly událostí a chybové kódy, abyste mohli [řešit problémy s antivirovým programem Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Zkontrolujte protokoly událostí a chybové kódy, abyste mohli [řešit problémy s antivirovým programem Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
 
 ## <a name="common-intune-errors-and-possible-resolutions"></a>Běžné chyby služby Intune a možná řešení
 
@@ -48,7 +48,7 @@ Zkontrolujte protokoly událostí a chybové kódy, abyste mohli [řešit probl�
 
 ### <a name="features-are-disabled"></a>Funkce jsou zakázané.
 
-Může se zobrazit zpráva, že některé funkce jsou zakázané. K těmto zprávám může dojít, pokud správce nezakáže službu Intune Endpoint Protection nebo Windows Defender pomocí konfiguračního profilu. Nebo je zakázaný koncovým uživatelem na zařízení. Možné zprávy:
+Může se zobrazit zpráva, že některé funkce jsou zakázané. K těmto zprávám může dojít, pokud správce nevypne službu Intune Endpoint Protection nebo Microsoft Defender pomocí konfiguračního profilu. Nebo je zakázaný koncovým uživatelem na zařízení. Možné zprávy:
 
 `Endpoint Protection disabled`  
 `Real-time protection disabled`  
@@ -61,20 +61,20 @@ Může se zobrazit zpráva, že některé funkce jsou zakázané. K těmto zprá
 **Možná řešení**: Povolte tyto funkce. Pokyny najdete v těchto tématech:
 
 - [Přidat nastavení ochrany koncových bodů](../protect/endpoint-protection-configure.md)
-- [Antivirová ochrana v programu Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
+- [Antivirová ochrana v programu Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)
 - [Koncoví uživatelé: zapněte ochranu v reálném čase, abyste měli přístup k prostředkům společnosti.](/intune-user-help/turn-on-defender-windows)
 
 ### <a name="malware-definitions-out-of-date"></a>Definice malwaru nejsou aktuální
 
 Tento stav ukazuje, kdy jsou definice malwaru na zařízení zastaraly o 14 dní nebo víc. Zpráva může například Ukázat, že zařízení je odpojené od Internetu, nebo jsou definice malwaru zastaralé.
 
-**Možná řešení**: Pokud jsou definice malwaru zastaralé, aktualizujte definice pomocí [antivirové ochrany v programu Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Možná řešení**: Pokud jsou definice malwaru zastaralé, aktualizujte definice pomocí [antivirové ochrany v programu Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Zpožděna úplná kontrola nebo zpožděna Rychlá kontrola
 
 Po dobu 14 dnů se úplná kontrola nebo Rychlá kontrola nedokončila. K tomuto scénáři může dojít, pokud se zařízení během úplné kontroly restartuje.
 
-**Možná řešení**: Pokud je kontrola zpožděná, můžete spustit jednorázovou kontrolu nebo naplánovat opakující se kontroly. Viz [antivirová ochrana v programu Windows Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
+**Možná řešení**: Pokud je kontrola zpožděná, můžete spustit jednorázovou kontrolu nebo naplánovat opakující se kontroly. Viz [antivirová ochrana v programu Microsoft Defender](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).
 
 ### <a name="another-endpoint-protection-application-running"></a>Je spuštěna jiná aplikace ochrany koncových bodů.
 

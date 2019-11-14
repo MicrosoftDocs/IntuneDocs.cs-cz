@@ -2,8 +2,8 @@
 title: Zásady ochrany aplikací a pracovní profily v Microsoft Intune – Azure | Microsoft Docs
 description: Pokud se rozhodnete používat zásady ochrany aplikací nebo pracovní profily pro osobní nebo BYOD zařízení se systémem Android Enterprise v Microsoft Intune, podívejte se na rozdíly a specialisty a nevýhody. Porovnáním rozdílů a funkcí, které se budou používat v zásadách ochrany aplikací bez registrace (APP-WE) a Android Enterprise Working Profiles.
 keywords: ''
-author: MandiOhlinger
-ms.author: mandia
+author: Erikre
+ms.author: erikre
 manager: dougeby
 ms.date: 02/13/2019
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a2c71e04cf842fda7b16fb8ad4a05668ccbfaa84
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: d0b4f8d5124924d013e7ac131dafc947a95c7b65
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72507600"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059793"
 ---
 # <a name="application-protection-policies-and-work-profiles-on-android-enterprise-devices-in-intune"></a>Zásady ochrany aplikací a pracovní profily na zařízeních s Androidem Enterprise v Intune
 

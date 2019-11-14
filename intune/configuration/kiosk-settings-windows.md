@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2019
+ms.date: 11/13/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17dce8f7c5aa55a2044e663f724a5784cee8b375
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 42ccb1d1654ba45b63672eebf00acd10fdc56a67
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506678"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059347"
 ---
 # <a name="windows-10-and-later-device-settings-to-run-as-a-kiosk-in-intune"></a>Nastavení zařízení s Windows 10 a novějším, která se mají spustit jako veřejný terminál v Intune
 
@@ -40,6 +40,8 @@ Další informace o funkci veřejného terminálu Windows v Intune najdete v té
 
   1. Vytvořte tento profil veřejného terminálu pro spuštění zařízení v celoobrazovkovém režimu.
   2. Umožňuje vytvořit [profil omezení zařízení](device-restrictions-windows-10.md#microsoft-edge-browser)a nakonfigurovat konkrétní funkce a nastavení povolená v Microsoft Edge.
+
+- Ujistěte se, že jsou všechny soubory, skripty a zástupci v místním systému. Další informace, včetně dalších požadavků na Windows, najdete v tématu [přizpůsobení a export počátečního rozložení](https://docs.microsoft.com/windows/configuration/customize-and-export-start-layout).
 
 > [!IMPORTANT]
 > Ujistěte se, že tento profil pro terminál přiřadíte ke stejným zařízením jako váš [profil Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser).
@@ -65,7 +67,7 @@ Spustí na zařízení jenom jednu aplikaci.
     Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
     > [!NOTE]
-    > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Konfigurace nastavení specifických pro Microsoft Edge – vytvoření profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10** for Platform > **omezení zařízení** **prohlížeč Microsoft Edge**@no__t 8). Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
+    > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10** pro > **omezení zařízení** >  **Microsoft Edge**. Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
 
   - **Přidat webový prohlížeč**na veřejném terminálu: vyberte **nastavení prohlížeče veřejného terminálu**. Tato nastavení řídí aplikaci webového prohlížeče na veřejném terminálu. Ujistěte se, že jste si z obchodu získali [aplikaci celoobrazovkového prohlížeče](https://businessstore.microsoft.com/store/details/kiosk-browser/9NGB5S5XG2KP) , přidejte ji do Intune jako [klientskou aplikaci](../apps/apps-add.md). Pak aplikaci přiřaďte k veřejnému zařízení.
 
@@ -139,7 +141,7 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
       Další informace o těchto možnostech najdete v tématu [nasazení celoobrazovkového režimu Microsoft Edge](https://docs.microsoft.com/microsoft-edge/deploy/microsoft-edge-kiosk-mode-deploy#supported-configuration-types).
 
       > [!NOTE]
-      > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Konfigurace nastavení specifických pro Microsoft Edge – vytvoření profilu konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10** for Platform > **omezení zařízení** **prohlížeč Microsoft Edge**@no__t 8). Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
+      > Toto nastavení povolí prohlížeči Microsoft Edge na zařízení. Pokud chcete nakonfigurovat nastavení specifické pro Microsoft Edge, vytvořte profil konfigurace zařízení (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10** pro > **omezení zařízení** >  **Microsoft Edge**. Seznam dostupných nastavení najdete v [prohlížeči Microsoft Edge](device-restrictions-windows-10.md#microsoft-edge-browser) .
 
     - **Přidat webový prohlížeč**na veřejném terminálu: Tato nastavení ovládají aplikaci webového prohlížeče na veřejném terminálu. K nasazení aplikace webového prohlížeče do zařízení s beznabídkovým režimem použijte [klientské aplikace](../apps/apps-add.md).
 
@@ -194,3 +196,5 @@ Aplikace v tomto režimu jsou k dispozici v nabídce Start. Tyto aplikace jsou j
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
 Můžete také vytvořit profily celoobrazovkového pro zařízení s [Androidem](device-restrictions-android.md#kiosk), [Androidem Enterprise](device-restrictions-android-for-work.md#dedicated-device-settings)a [Windows holografickým pro firmy](kiosk-settings-holographic.md) .
+
+Viz také [Nastavení veřejného terminálu pro jednu aplikaci](https://docs.microsoft.com/windows/configuration/kiosk-single-app) nebo [Nastavení veřejného terminálu s více aplikacemi](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) v doprovodné příručce k Windows.

@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5a3cfcc4ac0c5125324102c55dc7bc887006df6b
-ms.sourcegitcommit: b5e719fb507b1bc4774674e76c856c435e69f68c
+ms.openlocfilehash: 9469bbe7098bf8c3d29a6357cb5ad971124bde09
+ms.sourcegitcommit: f46df983b66845bea24a90aaa2ac6cace16b9b0b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73801421"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051934"
 ---
 # <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
@@ -115,12 +115,11 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
         Možnosti formátu pro formát názvu subjektu zahrnují následující proměnné:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** nebo **{{AzureADDeviceId}}** – k identifikaci zařízení podle jeho ID Azure AD se dá použít jedna z těchto proměnných.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{Sériové}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{Název_zařízení}}**
@@ -157,12 +156,11 @@ Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu
 
         S typem certifikátu *Zařízení* můžete použít následující proměnné certifikátu zařízení pro hodnotu:
 
-        - **{{AAD_Device_ID}}**
+        - **{{AAD_Device_ID}}** nebo **{{AzureADDeviceId}}** – k identifikaci zařízení podle jeho ID Azure AD se dá použít jedna z těchto proměnných.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
         - **{{Sériové}}**
         - **{{IMEINumber}}**
-        - **{{AzureADDeviceId}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
         - **{{Název_zařízení}}**

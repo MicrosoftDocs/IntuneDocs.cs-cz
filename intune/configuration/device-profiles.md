@@ -1,11 +1,11 @@
 ---
 title: Funkce a nastavení zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradech Windows 10, BitLockeru a Windows Defenderu, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení v Azure Portal. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
+description: Přehled různých profilů zařízení Microsoft Intune. Získejte informace o funkcích, omezeních, e-mailu, Wi-Fi, VPN, vzdělávání, certifikátech, upgradech Windows 10, BitLockeru a programu Microsoft Defender, Windows Information Protection, šablonách pro správu a vlastním nastavení konfigurace zařízení v Azure Portal. Pomocí těchto profilů můžete spravovat a chránit data a zařízení ve vaší společnosti.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/13/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7c49445800f5d34fbb6ce0a845d4f29c3e587483
-ms.sourcegitcommit: c2e62f1ebdf75599c8e544287123c602f0f15f2b
+ms.openlocfilehash: f0dd9eddd986e6717e6bf706b02a7b06f712a032
+ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72749344"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74059899"
 ---
 # <a name="apply-features-and-settings-on-your-devices-using-device-profiles-in-microsoft-intune"></a>Použití funkcí a nastavení v zařízeních pomocí profilů zařízení v Microsoft Intune
 
@@ -145,7 +145,7 @@ Tato funkce podporuje:
 
 ## <a name="endpoint-protection"></a>Ochrana koncového bodu
 
-[Nastavení služby Ochrana koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení pro BitLocker a Windows Defender pro zařízení s Windows 10.
+[Nastavení ochrany koncového bodu pro Windows 10](../protect/endpoint-protection-windows-10.md) konfiguruje nastavení BitLockeru a programu Microsoft Defender pro zařízení s Windows 10.
 
 Informace o připojení rozšířené ochrany před internetovými útoky přes Microsoft Defender (rozšířená) s Microsoft Intune najdete v tématu [Konfigurace koncových bodů pomocí nástrojů pro správu mobilních zařízení (MDM)](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
