@@ -6,7 +6,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/07/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 74ef6380ed4cbc8215f4e68865e740b506f21eb4
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: a3b391bb4ab064c080083e2c31dc28483f6d419a
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059416"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098219"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Aktualizace uživatelského rozhraní pro aplikace Intune pro koncové uživatele
 
@@ -41,7 +41,15 @@ Pokud jste zaměstnancem nebo studentem, nezapomeňte se podívat na snímky obr
 #### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Webové aplikace spouštěné z aplikace Portál společnosti pro Windows<!-- 5030972 -->
 Koncoví uživatelé teď můžou spouštět webové aplikace přímo z aplikace Portál společnosti pro Windows. Koncoví uživatelé můžou webovou aplikaci vybrat a pak vybrat možnost **otevřít v prohlížeči**. Publikovaná webová adresa URL se otevře přímo ve webovém prohlížeči. Tato funkce bude zahrnuta v průběhu příštího týdne. Další informace o webových aplikacích najdete v tématu [Přidání webových aplikací do Microsoft Intune](~/apps/web-app.md).
 
-![Příklad obrázku webové aplikace spouštěné z aplikace Portál společnosti Windows](./media/whats-new-app-ui/webapp-open-in-browser.png)
+![Příklad obrázku webové aplikace spouštěné z aplikace Portál společnosti Windows](./media/whats-new-app-ui/webapp-open-in-browser.png)  
+
+### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Vylepšené možnosti registrace macOS v Portál společnosti <!-- 5074349 WNready -->  
+Portál společnosti pro zápis do macOS má jednodušší proces registrace, který se podrobněji zarovnává s Portál společnostim pro možnosti registrace v iOS. Uživatelé zařízení teď uvidí:  
+
+* Elegantní uživatelské rozhraní.  
+* Vylepšený kontrolní seznam pro registraci.  
+* Informace o tom, jak zaregistrovat svá zařízení.  
+* Vylepšené možnosti řešení potíží.  
 
 ## <a name="week-of-october-28-2019"></a>Týden od 28. října 2019  
 

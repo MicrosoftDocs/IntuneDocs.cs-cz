@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2019
+ms.date: 11/14/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a1bbf085cc5d3ffd3b37bd2c475f015be6418f6d
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: ace59f4bfad70eece9e693d4ca74094a6d5af460
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74058562"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098073"
 ---
 # <a name="whats-new-in-microsoft-intune"></a>Co je nového v Microsoft Intune
 
@@ -53,12 +53,22 @@ Zjistěte, jaké novinky každý týden přináší Microsoft Intune. Můžete t
 ### Role-based access control
 -->  
 
-## <a name="week-of-november-11-2019"></a>Týden od 11. listopadu 2019
 
-### <a name="app-management"></a>Správa aplikací
+## <a name="week-of-november-11-2019"></a>Týden od 11. listopadu 2019  
+
+### <a name="app-management"></a>Správa aplikací  
+
+#### <a name="improved-macos-enrollment-experience-in-company-portal----5074349-wnready---"></a>Vylepšené možnosti registrace macOS v Portál společnosti <!-- 5074349 WNready -->  
+Portál společnosti pro zápis do macOS má jednodušší proces registrace, který se podrobněji zarovnává s Portál společnostim pro možnosti registrace v iOS. Uživatelé zařízení teď uvidí:  
+
+* Elegantní uživatelské rozhraní.  
+* Vylepšený kontrolní seznam pro registraci.  
+* Informace o tom, jak zaregistrovat svá zařízení.  
+* Vylepšené možnosti řešení potíží.  
 
 #### <a name="web-apps-launched-from-the-windows-company-portal-app---5030972---"></a>Webové aplikace spouštěné z aplikace Portál společnosti pro Windows<!-- 5030972 -->
 Koncoví uživatelé teď můžou spouštět webové aplikace přímo z aplikace Portál společnosti pro Windows. Koncoví uživatelé můžou webovou aplikaci vybrat a pak vybrat možnost **otevřít v prohlížeči**. Publikovaná webová adresa URL se otevře přímo ve webovém prohlížeči. Tato funkce bude zahrnuta v průběhu příštího týdne. Další informace o webových aplikacích najdete v tématu [Přidání webových aplikací do Microsoft Intune](~/apps/web-app.md).
+
 
 ## <a name="week-of-november-4-2019"></a>Týden od 4. listopadu 2019
 
@@ -146,7 +156,7 @@ Můžete vytvořit zásady ochrany aplikací Intune, které můžou blokovat neb
 
 ### <a name="device-configuration"></a>Konfigurace zařízení
 
-#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices---2266073----"></a>Nový profil rozhraní pro konfiguraci firmwaru zařízení pro zařízení s Windows 10 a novějším<!-- 2266073  -->
+#### <a name="new-device-firmware-configuration-interface-profile-for-windows-10-and-later-devices-public-preview---2266073----"></a>Nový profil rozhraní pro konfiguraci firmwaru zařízení pro zařízení s Windows 10 a novější verzí (Public Preview)<!-- 2266073  -->
 
 V systému Windows 10 a novějších můžete vytvořit profil konfigurace zařízení pro řízení nastavení a funkcí (**Konfigurace zařízení** > **profily** > **vytvořit profil** > **Windows 10 a novější** pro platformu). V této aktualizaci je k dispozici nový typ profilu rozhraní konfigurace firmwaru zařízení, který umožňuje Intune spravovat nastavení rozhraní UEFI (BIOS).
 

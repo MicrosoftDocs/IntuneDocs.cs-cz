@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5eb5a8f462846afd97ae4ea84b7431ae147d918c
-ms.sourcegitcommit: 556b7ea2049014c9027f0e44affd3f301fab55fc
+ms.openlocfilehash: 30a1c9b1fddaa59d633c8dc969063b26b25097de
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73709197"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098182"
 ---
 # <a name="set-up-enrollment-for-windows-devices"></a>Nastavení registrace pro zařízení s Windows
 
@@ -117,6 +117,15 @@ Postup registrace koncových uživatelů najdete v tématu [Registrace zařízen
 > Pokud není povolená automatická registrace MDM, ale máte zařízení s Windows 10 připojená ke službě Azure AD, zobrazí se v konzole Intune po registraci dva záznamy. Tomuto chování zabráníte tak, že uživatelé se zařízeními připojenými ke službě Azure AD přejdou na **Účty** > **Přístup do práce nebo do školy** a **Připojit** pomocí stejného účtu. 
 
 Další informace o úlohách pro koncové uživatele najdete v tématu [Materiály o prostředí Microsoft Intune pro koncové uživatele](../fundamentals/end-user-educate.md).
+
+## <a name="registration-and-enrollment-cnames"></a>Registrace a zápisy CNAME
+Azure Active Directory má jiný záznam CNAME, který používá k registraci zařízení pro zařízení s iOS, Androidem a Windows. Podmíněný přístup Intune vyžaduje, aby se zařízení zaregistrovala, taky se označuje jako připojená k pracovišti. Pokud máte v úmyslu používat podmíněný přístup, měli byste také nakonfigurovat EnterpriseRegistration CNAME pro každý název společnosti, který máte.
+
+| Typ | Název hostitele | Odkazuje na | Hodnota TTL |
+| --- | --- | --- | --- |
+| Jméno | EnterpriseRegistration. company_domain. com | EnterpriseRegistration.windows.net | 1 hodina|
+
+Další informace o registraci zařízení najdete v tématu [Správa identit zařízení pomocí Azure Portal](https://docs.microsoft.com/azure/active-directory/devices/device-management-azure-portal) .
 
 ## <a name="next-steps"></a>Další kroky
 

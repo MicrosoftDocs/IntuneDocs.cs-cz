@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -19,18 +19,18 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bde7fc554496b2ecc6f13c7e1b899d7ff05bfa1
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: 2b26717e2e8beed2e92f47dca17cbea0ec47a82b
+ms.sourcegitcommit: 244a75622f9cebaaaf5b33aadd8931407a2e2e48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754995"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096742"
 ---
 # <a name="enable-code-integrity"></a>Povolit integritu kódu
 
 Vaše organizace může vyžadovat, aby byl váš počítač povolený pomocí funkce ochrany před hrozbami, která se nazývá *Integrita kódu*. Integrita kódu kontroluje u ovladačů a systémových souborů v zařízení příznaky poškození nebo škodlivého softwaru. Aby integrita kódu fungovala na vašem zařízení, musí být také povolená jiná funkce zabezpečení s názvem [*Zabezpečené spouštění*](https://docs.microsoft.com/windows/security/information-protection/secure-the-windows-10-boot-process#secure-boot) .
 
-Pokud Váš počítač nedodržuje předpisy, protože je zakázaná integrita kódu, měli byste se obrátit na tým podpory IT ve vaší organizaci. Vám pomůžou povolit zabezpečené spouštění, které aktivuje integritu kódu při příštím spuštění zařízení.
+Pokud Váš počítač nedodržuje předpisy, protože je zakázaná integrita kódu, obraťte se na pracovníky podpory IT vaší organizace. Vaše osoba podpory vám pomůže povolit zabezpečené spouštění, které aktivuje integritu kódu při příštím spuštění zařízení. 
 
 Pokud jste identifikovali jako pokročilého uživatele zařízení a chcete si vyzkoušet vlastní postup, přečtěte si téma [opětovné povolení zabezpečeného spouštění](https://docs.microsoft.com/windows-hardware/manufacture/desktop/disabling-secure-boot#re-enable-secure-boot).
 

@@ -1,11 +1,11 @@
 ---
-title: Registrace zařízení s macOS v Intune pomocí Portálu společnosti | Dokumentace Microsoftu
-description: Popisuje postup registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti.
+title: Registrace počítače Mac s Portál společnosti Intune | Microsoft Docs
+description: Naučte se, jak zaregistrovat svůj počítač Mac v Intune pomocí aplikace Portál společnosti.
 keywords: Mac OS X, macOS, OS X
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/03/2018
+ms.date: 11/14/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -15,93 +15,94 @@ ms.assetid: 3bb659cc-9b57-4d19-8631-2c26749fa71c
 searchScope:
 - User help
 ROBOTS: ''
-ms.reviewer: elocholi
+ms.reviewer: kakyker
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee725d118353e18924858569ac861992d19f839a
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ba285fc9de58b3fb739a16722e0e05e36e840e87
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72506198"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098118"
 ---
-# <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>Registrace zařízení s macOS v Intune pomocí aplikace Portál společnosti
+# <a name="enroll-your-macos-device-using-the-company-portal-app"></a>Registrace zařízení macOS pomocí aplikace Portál společnosti  
 
-Zaregistrujte si zařízení s macOS pomocí aplikace Portál společnosti v Intune a získejte zabezpečený přístup k e-mailům, souborům a aplikacím vaší organizace.
+Pokud chcete získat zabezpečený přístup k pracovnímu nebo školnímu e-mailu, souborům a aplikacím, zaregistrujte zařízení macOS pomocí aplikace Portál společnosti Intune.
 
-Organizace někdy požadují, abyste si ještě před získáním přístupu k jejich vlastnickým datům nechali své zařízení spravovat. Jakmile je zařízení spravované, mohou do něj prostřednictvím poskytovatele správy mobilních zařízení odesílat zásady a aplikace. Pokud chcete na zařízení získat nepřetržitý přístup k pracovním nebo školním datům, je nutné nakonfigurovat je tak, aby odpovídalo nastavení zásad.  
+Organizace obvykle vyžadují, abyste si zařízení zaregistrovali předtím, než budete mít přístup ke speciálním datům. Po registraci zařízení se bude *Spravovat*. Vaše organizace může k zařízení přiřadit zásady a aplikace prostřednictvím poskytovatele správy mobilních zařízení (MDM), jako je třeba Intune. Pokud chcete mít nepřetržitý přístup k pracovním nebo školním informacím na zařízení, musíte nakonfigurovat zařízení tak, aby odpovídalo nastavení zásad vaší organizace.  
 
-V tomto článku se dozvíte, jak vám může aplikace Portál společnosti Intune pro macOS pomoci při registraci, konfiguraci a údržbě zařízení, které má splňovat požadavky organizace.  
-</br>
-> [!VIDEO https://www.youtube.com/embed/Pa2pfhwq_yk?rel=0]
+Tento článek popisuje, jak používat aplikaci Portál společnosti pro macOS k registraci, konfiguraci a údržbě svého zařízení, abyste splnili požadavky vaší organizace.  
+
 
 ## <a name="what-to-expect-from-the-company-portal-app"></a>Co čekat od aplikace Portál společnosti
 
-Při počátečním nastavení vás aplikace požádá, abyste se ve vaší organizaci ověřili. Potom vás informuje o všech nastaveních, která musíte provést. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.    
+Při počáteční instalaci aplikace Portál společnosti vyžaduje, abyste se přihlásili a ověřili ve své organizaci. Portál společnosti pak informuje o všech nastaveních, která potřebujete ke konfiguraci, aby splňovala požadavky vaší organizace. Organizace si například často určují požadavky na minimální a maximální délku hesla, které musíte splnit.    
 
-Po registraci zařízení bude aplikace Portál společnosti i nadále kontrolovat, že je chráněno. Pokud si například nainstalujete aplikaci z nedůvěryhodného zdroje, upozorní vás a dokonce vám může i odvolat přístup k firemním datům. Zásady ochrany aplikací, jako je tato, jsou v organizacích běžné. Často je tak potřeba nedůvěryhodnou aplikaci odinstalovat, abyste přístup získali zpět.
+Po registraci zařízení se Portál společnosti vždycky ujistěte, že je zařízení chráněné podle požadavků vaší organizace. Pokud například nainstalujete aplikaci z nedůvěryhodného zdroje, Portál společnosti vás upozorní a může omezit přístup k prostředkům vaší organizace. Zásady ochrany aplikací, jako je tato, jsou běžné. Pokud chcete znovu získat přístup, budete pravděpodobně muset odinstalovat nedůvěryhodnou aplikaci. 
 
-Pokud po registraci vaše organizace vynucuje nový požadavek na zabezpečení (například vícefaktorové ověřování), aplikace Portál společnosti vás o něm informuje. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
+Pokud po registraci vaše organizace vynutila nový požadavek na zabezpečení, jako je například vícefaktorové ověřování, Portál společnosti vás upozorní. Budete tak mít možnost si nastavení upravit, abyste se zařízením mohli dále pracovat.  
 
 Další informace o registraci najdete v tématu s informacemi o tom, [co se stane, když nainstaluji aplikaci Portál společnosti a zaregistruji zařízení](what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).  
 
-## <a name="get-your-device-managed"></a>Nastavení spravovaného zařízení  
-Pomocí následujících kroků zaregistrujete zařízení macOS se systémem macOS 10,12 a novějším.   
+## <a name="get-your-macos-device-managed"></a>Jak spravovat zařízení macOS  
+Pomocí následujících kroků zaregistrujete zařízení macOS ve vaší organizaci. Vaše zařízení musí používat macOS 10,12 nebo novější.   
+
+> [!NOTE]
+> V průběhu tohoto procesu se může zobrazit výzva, abyste Portál společnosti mohli používat důvěrné informace, které jsou uložené v řetězci klíčů. Tyto výzvy jsou součástí zabezpečení Apple. Po zobrazení výzvy zadejte přihlašovací heslo k řetězci a vyberte možnost **vždy povoleno**. Pokud stisknete klávesu **ENTER** nebo **return** na klávesnici, místo toho se zobrazí výzva k výběru **Povolení**, což může způsobit další výzvy.  
+
+### <a name="install-company-portal-app"></a>Instalace aplikace Portál společnosti  
+1. Přejít na [zaregistrovat Mac](https://go.microsoft.com/fwlink/?linkid=853070)  
+2. Soubor instalačního programu Portál společnosti. pkg se stáhne. Spusťte instalační program a pokračujte postupem. 
+3. Vyjádřit souhlas s licenční smlouvou k softwaru. 
+4. Pro instalaci softwaru zadejte heslo zařízení nebo registrovaný otisk prstu.  
+5. Otevřete Portál společnosti. 
+
+> [!IMPORTANT]
+> Microsoft AutoUpdate se může otevřít a aktualizovat si software Microsoftu. Po instalaci všech aktualizací otevřete aplikaci Portál společnosti. Pro dosažení nejlepšího prostředí pro instalaci nainstalujte nejnovější verze Microsoft AutoUpdate a Portál společnosti.  
 
 
-1. Přejděte na web Portál společnosti otevřením nového okna v aplikaci __Safari__ a potom přejděte na https://portal.manage.microsoft.com.  
-
-2. Přihlaste se na web Portál společnosti přes svůj pracovní nebo školní účet.
-
-   [!INCLUDE [wit_nextref](includes/end-user-password-guidance.md)]
+### <a name="enroll-your-mac"></a>Registrace počítače Mac  
 
 
-3. Přejděte do levého horního rohu stránky a klikněte na **nabídku** > **Zařízení**.  
+1. Přihlaste se k Portál společnosti pomocí svého pracovního nebo školního účtu.  
+2. Po otevření aplikace vyberte **začít**.  
+3. Přečtěte si [, co vaše organizace uvidí a](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) neuvidí na zaregistrovaném zařízení. Potom vyberte **Pokračovat**.  
+4. Na obrazovce **Instalace profilu správy** vyberte **Stáhnout profil**.   
 
-4. Na stránce __Zařízení__ se zobrazí buď seznam spravovaných zařízení, nebo banner. Tato možnost závisí na tom, jestli už spravované zařízení máte, nebo nikoliv. 
-    * Pokud chcete přidat zařízení, které není v seznamu, vyberte banner s textem **Klepněte sem a řekněte nám, které zařízení používáte, nebo přidejte nové.**
-    * Pokud nemáte žádná zařízení, banner si přečte: nemáte **žádná spravovaná zařízení. Přidejte ho klepnutím sem.** Přidejte zařízení kliknutím na banner.  
+    ![Ukázkový snímek obrazovky Portál společnosti, instalace profilu správy, zvýraznění tlačítka "profil pro stažení".](./media/install-mgmt-profile-mac-1911.PNG)   
+5. Spustí se Předvolby systému vašeho zařízení. Vyberte **nainstalovat** a pak znovu vyberte **nainstalovat** . Pokud budete vyzváni k zadání hesla zařízení.  
 
-     ![Snímek obrazovky se stránkou Zařízení s červeným obdélníkem okolo banneru, který zvýrazňuje možnost, na niž má uživatel kliknout](./media/CP-enroll-MACOS-1808.png)  
-5. Proveďte jeden z kroků níže podle toho, která zpráva se vám na Portálu společnosti zobrazuje.  
-    * Pokud přidáváte zařízení poprvé, vyzve vás stránka ke stažení aplikace Portál společnosti do zařízení. Pokračujte kliknutím na **Stáhnout**.  
+    ![Ukázkový snímek obrazovky předvoleb macOS systému, výzva k instalaci a zvýraznění tlačítka "instalovat".](./media/system-preference-install-1911.PNG)  
+6. Po instalaci se profil zobrazí v seznamu profily v části **Profil správy.**  
 
-         ![Ukázkový snímek obrazovky s výzvou ke stažení aplikace Portál společnosti pro macOS. Uživatel může kliknout na modré tlačítko Stáhnout v levé dolní části, nebo na šedé tlačítko Zrušit v pravé dolní části.](./media/CP-enroll-download-macOS-1808.png)  
+   ![Příklad obrazovky Předvolby systému macOS, obrazovka profily a zvýraznění nainstalovaného profilu správy.](./media/system-preference-verify-1911.PNG)   
+7. Vraťte se na Portál společnosti.   
+8. Vaše organizace může vyžadovat, abyste aktualizovali nastavení zařízení. Po dokončení aktualizace nastavení vyberte možnost **kontrolovat nastavení**.  
 
-    * Pokud už máte spravované zařízení s macOS, zobrazí se výzva se seznamem aktuálně spravovaných zařízení. Vyberte možnost **Moje zařízení tady není uvedené** > **Stáhnout** a stáhněte si aplikaci Portál společnosti na zařízení, které přidáváte.  
+    ![Ukázkový snímek obrazovky Portál společnosti, aktualizace nastavení zařízení, zvýraznění tlačítka "kontrolovat nastavení".](./media/update-settings-mac-1911.PNG)  
+9. Po dokončení instalace vyberte **Hotovo**.  
 
-         ![Ukázkový snímek obrazovky s výzvou ke stažení aplikace Portál společnosti pro macOS. Uživatel může zvolit možnost „Moje zařízení tady není uvedené“, nebo konkrétní zařízení ze středu stránky. Modré tlačítko Stáhnout se zobrazuje v levé dolní části výzvy a šedé tlačítko Zrušit v pravé dolní části.](./media/cp-mac-os-device-isnt-here-1808.png)  
 
-6. Vaše zařízení ověří, že instalační soubor **CompanyPortal.pkg** můžete bezpečně otevřít. Po dokončení otevřete instalační program a dokončete instalaci.  
+ ## <a name="troubleshooting-and-feedback"></a>Řešení potíží a zpětná vazba   
 
-7. Po ukončení instalačního programu přejděte na **Launchpad** a otevřete **Portál společnosti**.  
+Pokud při registraci narazíte na problémy, v části **Help** > **Odeslat diagnostickou** zprávu ohlaste problém vývojářům aplikací Microsoftu. Tyto informace se používají k vylepšení aplikace. Tyto informace budou také tyto informace používat k vyřešení problému, pokud se na něj pracovník podpory IT dostane, aby vám pomohli.  
 
-8. Zařízení s macOS vás vyzve k potvrzení, že chcete otevřít aplikaci Portál společnosti. Klikněte na **Otevřít**.  
+Po nahlášení problému společnosti Microsoft můžete odeslat podrobnosti o vašem prostředí vaší osobě podpory IT. Vyberte **Podrobnosti e-mailu**. Zadejte, co jste se setkali v těle e-mailu. Pokud chcete najít e-mailovou adresu pracovníka podpory, přečtěte si v aplikaci Portál společnosti > **kontaktujte**. Nebo se podívejte na [web portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+ 
 
-   > [!TIP]
-   > Intune potřebuje přístup k počítači pro ověření, že je vaše zařízení natolik bezpečné, že může mít přístup k prostředkům ve vaší organizaci. Pokud váš počítač odmítá aplikaci Portál společnosti otevřít, [vypněte Gatekeeper](https://support.apple.com/HT202491). Potom aplikaci otevřete.
+Kromě toho tým Microsoft Intune Portál společnosti by chtěl slyšet vaši zpětnou vazbu. Přejít na **Help** > **Odeslat názor** a sdílet myšlenky a nápady.  
 
-9. První stránka, která se v aplikaci Portál společnosti zobrazí, vás vyzve k **přihlášení**. Přihlaste se stejným pracovním nebo školním účtem, jako jste použili k přihlášení na web Portál společnosti.
+## <a name="unverified-profiles"></a>Neověřené profily  
+Když zobrazíte nainstalované profily správy mobilních zařízení (MDM) v části **Předvolby systému** > **profily**, můžou některé profily zobrazovat neověřený stav. Pokud profil správy zobrazuje ověřený stav, nemusíte se zabývat.  
 
-10. Portál společnosti potvrdí informace o vašem účtu a zobrazí stav **registrace zařízení** a **dodržování předpisů zařízením**. Žlutými trojúhelníky jsou zvýrazněny akce, které je potřeba provést k zabezpečení zařízení s macOS pro školní nebo pracovní účely. Kliknutím na **Začít** spusťte registraci. 
-
-11. Pokud se zobrazí výzva, zadejte přihlašovací údaje počítače.  
-
-Registrace zařízení do správy může trvat několik minut. Během toho ale můžete se zařízením pracovat. Jakmile se dokončí nastavení přístupu společnosti, zobrazí se zpráva, že je vše hotovo.  
-
-## <a name="unverified-profiles"></a>Neověřené profily
-Když zobrazíte nainstalované profily správy mobilních zařízení (MDM) pro zařízení s macOS, můžou některé profily ukazovat stav **Neověřeno**. Pokud **Profil správy** ukazuje stav **Ověřeno**, nemusíte mít obavy.  
-
-Právě profil správy definuje připojení kanálu MDM. Pokud je profil správy ověřený, všechny ostatní profily doručené do počítače přes tento kanál dědí vlastnosti zabezpečení profilu správy.
-
-Navíc vzhledem k tomu, že tyto ostatní profily nevyžadují jednotlivé ověřování, rychleji se generují a do zařízení doručují. 
+Právě profil správy definuje připojení kanálu MDM. Dokud se profil správy ověří, všechny ostatní profily doručené počítači prostřednictvím tohoto kanálu zdědí vlastnosti zabezpečení profilu správy.  
 
 ## <a name="updating-the-company-portal-app"></a>Aktualizace aplikace Portál společnosti
 
-Aktualizace aplikace Portál společnosti se provádí stejným způsobem jako aktualizace kterékoli jiné aplikace Office, tedy přes Microsoft AutoUpdate pro Mac. Další informace o [aktualizaci aplikací Microsoftu pro macOS najdete tady](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
+Aktualizace aplikace Portál společnosti se provádí stejným způsobem jako jakákoli jiná aplikace Office, a to prostřednictvím Microsoft AutoUpdate pro macOS. Přečtěte si další informace o [aktualizaci aplikací Microsoftu pro MacOS](https://support.office.com/article/Check-for-Office-for-Mac-updates-automatically-bfd1e497-c24d-4754-92ab-910a4074d7c1).  
 
 ## <a name="next-steps"></a>Další kroky  
-Potřebujete další informace? Obraťte se na svou firemní podporu. Kontaktní informace správce najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
+Potřebujete ještě další pomoc? Obraťte se na podporu ve vaší společnosti. Kontaktní údaje najdete na [webu Portál společnosti](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 

@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/13/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbdef7cffa76beeb158c47ab3651d438de2d6ccc
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 684e9602e66842e26a7f8e233a8cee6db73f132d
+ms.sourcegitcommit: 76ae5aea5deee7a590e24c3b2bb52f88125943e5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72503168"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74098202"
 ---
 # <a name="set-up-enrollment-for-macos-devices-in-intune"></a>Nastavení registrace pro zařízení s macOSem v Intune
 
@@ -42,15 +42,16 @@ Před nastavením registrace zařízení s macOS zajistěte splnění následuj�
 - [Nastavení autority MDM](../fundamentals/mdm-authority-set.md)
 - [Vytvoření skupin](../fundamentals/groups-add.md)
 - [Konfigurace aplikace Portál společnosti](../apps/company-portal-app.md)
-- Přiřazení uživatelských licencí v [centru pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854)
+- Přiřazení uživatelských licencí v [centru pro správu Microsoft 365](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Získání certifikátu Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)
 
 ## <a name="user-owned-macos-devices-byod"></a>Zařízení se systémem macOS vlastněná uživatelem (BYOD)
 
-Uživatelům můžete umožnit, aby si zaregistrovali svoje osobní zařízení pro správu Intune. Tato možnost se označuje jako Přineste si vlastní zařízení neboli BYOD. Po splnění požadavků a přiřazení licencí uživatelům si uživatelé můžou zaregistrovat svoje zařízení takto:
+Uživatelům můžete umožnit registraci vlastních osobních zařízení do správy Intune. To se označuje jako "Přineste si vlastní zařízení" nebo BYOD. Po dokončení požadavků a přiřazení uživatelských licencí si uživatelé můžou svoje zařízení zaregistrovat:
 - přechodem na [web Portál společnosti](https://portal.manage.microsoft.com) nebo
-- stažením aplikace Portál společnosti.
-Můžete jim také poslat odkaz na postup online registrace: [Zaregistrujte svoje zařízení se systémem macOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
+- Stahuje se aplikace Portál společnosti Mac na adrese [aka.MS/EnrollMyMac](https://aka.ms/EnrollMyMac).
+
+Uživatelům můžete také poslat odkaz na postup online registrace: [registrace zařízení MacOS v Intune](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos).
 
 Informace o dalších úlohách koncových uživatelů najdete v článcích:
 
@@ -77,12 +78,17 @@ Pro Parallels Desktop musíte nastavit typ hardwaru a sériové číslo virtuál
 U softwaru VMware Fusion musíte [upravit soubor .vmx](https://kb.vmware.com/s/article/1014782), abyste mohli nastavit model hardwaru a sériové číslo virtuálního počítače. Doporučujeme, abyste nastavili stejný typ hardwaru u zařízení, na kterém běží virtuální počítače, i u samotných virtuálních počítačů, které vytváříte. Tento typ hardwaru najdete v **nabídce Apple** > **O tomto Macu** > **Systémový profil** > **Identifikátor modelu**. 
 
 ## <a name="user-approved-enrollment"></a>Registrace schválená uživatelem
-
 Registrace MDM schválená uživatelem je typ registrace macOS, kterou můžete využít ke správě určitých nastavení citlivých na zabezpečení. Další informace najdete v [dokumentaci podpory Apple](https://support.apple.com/HT208019).
 
-Aby byla registrace schválená uživatelem, musí koncový uživatel po registraci pomocí Portálu společnosti pro macOS ručně zadat schválení pomocí předvoleb systému. Pokyny k tomu poskytuje Portál společnosti pro macOS pro uživatele v macOS 10.13.2 a novějším.
+Od listopadu 2019 budou všechny nové registrace macOS vlastněné uživatelem schváleny, protože uživatel musí ručně nainstalovat profil správy, aby bylo možné úspěšně provést registraci. Během [procesu registrace](https://docs.microsoft.com/intune-user-help/enroll-your-device-in-intune-macos-cp)bude uživatel instalovat profil Apple Management do **systémových předvoleb** > **profily**.  Pokyny k instalaci profilu správy jsou k dispozici v aplikaci macOS Portál společnosti.
 
-Pokud chcete zjistit, jestli je zařízení schválené uživatelem, přejděte na portál Intune a pak zvolte **Zařízení** > **Všechna zařízení**> vyberte zařízení > **Hardware**. Zaškrtněte políčko **User Approved** (Schválené uživatelem).
+Zařízení zaregistrovaná před listopadu 2019 nemusí být schválená uživatelem, pokud uživatel ručně neschválil profil správy. Uživatelé ale můžou přejít zpátky a schválit profil správy tak, že přejde na **Předvolby systému** > **profily** > vyberte **Profil správy** > **schválit**.
+
+### <a name="find-out-if-a-device-is-user-approved"></a>Zjistit, jestli je zařízení schválené uživatelem
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **všechna zařízení**> vyberte **hardware**> zařízení.
+3. Podívejte se na pole **registrace schválená uživatelem** .
+
 
 ## <a name="next-steps"></a>Další kroky
 
