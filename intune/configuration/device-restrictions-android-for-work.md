@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 14fa330b0c158d98c96e0d151f8a4ec7d0c95b97
-ms.sourcegitcommit: c38a856725993a4473ada75e669a57f75ab376f8
+ms.openlocfilehash: 33f7c2aa6d6575dd4ebf4d3cd772bb7f02472578
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73143043"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164545"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí pomocí Intune
 
@@ -57,7 +57,7 @@ Tento článek obsahuje seznam a popisuje různá nastavení, která můžete ř
 - **Data ze nosníku pomocí NFC**: vyberte **blok** , abyste zabránili použití technologie NFC (Near Field Communication) pro světlo dat z aplikací. **Není nakonfigurováno** umožňuje pomocí technologie NFC sdílet data mezi zařízeními.
 - **Funkce ladění**: Pokud chcete, aby uživatelé mohli používat funkce ladění na zařízení, vyberte **Povolit** . **Není nakonfigurováno** , brání uživatelům v používání funkcí ladění na zařízení.
 - **Úpravy mikrofonu**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit ve zrušení ztlumení mikrofonu a nastavení hlasitosti mikrofonu. Možnost **Nenakonfigurováno** umožňuje uživateli použít a upravit hlasitost mikrofonu v zařízení.
-- E- **maily pro obnovení továrního nastavení**: zvolit **e-mailové adresy účtu Google** Zadejte e-mailové adresy správců zařízení, které můžou zařízení odemknout po jeho vymazání. Tyto e-mailové adresy oddělujte středníkem, například `admin1@gmail.com;admin2@gmail.com`. Pokud nezadáte e-mail, může kdokoli zařízení po obnovení do továrního nastavení odemknout. Tyto e-maily se použijí jenom v případě, že se spustilo obnovení uživatelem bez uživatele, jako je třeba spuštění obnovení továrního nastavení pomocí nabídky obnovení.
+- E- **maily pro obnovení továrního nastavení**: zvolit **e-mailové adresy účtu Google** Zadejte e-mailové adresy správců zařízení, které můžou zařízení odemknout po jeho vymazání. Tyto e-mailové adresy oddělte středníkem, například `admin1@gmail.com;admin2@gmail.com`. Pokud nezadáte e-mail, může kdokoli zařízení po obnovení do továrního nastavení odemknout. Tyto e-maily se použijí jenom v případě, že se spustilo obnovení uživatelem bez uživatele, jako je třeba spuštění obnovení továrního nastavení pomocí nabídky obnovení.
 - **Úniková řídicí**klávesa: Pokud chcete povolit uživatelům zapnout funkci řídicího panelu sítě, vyberte **Povolit** . Pokud se po spuštění zařízení nevytvoří síťové připojení, pak se řídicí šrafování vyzve k dočasnému připojení k síti a aktualizaci zásad zařízení. Po uplatnění zásad se tato dočasná síť zapomene a zařízení pokračuje ve spouštění. Tato funkce připojuje zařízení k síti, pokud:
   - V poslední zásadě není vhodná síť.
   - Zařízení se spustí do aplikace v režimu uzamčení úlohy.
@@ -158,7 +158,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
 
       Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image.
 
-    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné, nebo je nastaveno na hodnotu nula (`0`), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
+    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné nebo je nastaveno na hodnotu nula (`0`), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
     - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota je `30` sekund. Je nutné zadat číslo větší než nula (`0`).
     - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. **Nenakonfigurováno** zobrazuje spořič obrazovky i v případě, že přehrávání zvuku nebo videa probíhá.
 
@@ -184,7 +184,7 @@ Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného termin�
     - **Počet požadovaných malých**písmen: zadejte počet malých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
     - **Počet požadovaných velkých znaků**: zadejte počet velkých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
     - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
-    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3` atd.) heslo musí mít 0 až 16 znaků.
+    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3`atd.) heslo musí mít 0 až 16 znaků.
     - **Požadovaný počet znaků symbolu**: zadejte počet znaků symbolu (`&`, `#`, `%`atd.) heslo musí mít 0 až 16 znaků.
 
 - **Počet dní do vypršení platnosti hesla**: zadejte počet dnů (v rozmezí 1-365), do kterého se musí heslo zařízení změnit. Pokud například chcete změnit heslo po 60 dnech, zadejte `60`. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
@@ -342,7 +342,7 @@ Tato nastavení hesla platí pro osobní profily na zařízeních, která použ�
 - **Kontrola hrozeb u aplikací**: **vyžaduje** vynucení, že nastavení **ověřování aplikací** je povolené pro pracovní a osobní profily.
 
    > [!Note]
-   > Toto nastavení funguje jenom u zařízení s Androidem O a vyšším.
+   > Toto nastavení funguje jenom u zařízení s Androidem 8 (Oreo) a novějším.
 
 - **Zabránění instalaci aplikací z neznámých zdrojů v osobním profilu**: podle návrhu zařízení s Androidem Enterprise Work profilování nemůžou instalovat aplikace ze zdrojů, které nejsou obchod Play. Zařízení pracovního profilu mají podle povahy možnost duální profil:
 

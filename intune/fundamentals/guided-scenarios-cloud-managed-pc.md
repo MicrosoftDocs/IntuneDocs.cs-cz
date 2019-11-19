@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a757da6cf4f4a2a3bde907f0025d4a08a52131b
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: f78f3696827ebd50084f0e4b012c5f94427eeb35
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059660"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164554"
 ---
 # <a name="guided-scenario---cloud-managed-modern-desktop"></a>Scénář s asistencí – moderní plocha spravovaná cloudem
 
@@ -33,7 +33,7 @@ Pokud chcete vyhodnotit cloudovou moderní plochu ve vaší vlastní organizaci,
 
 ## <a name="prerequisites"></a>Požadované součásti
 - [Nastavení autority MDM na Intune](~/fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) – nastavení autority správy mobilních zařízení (MDM) určuje způsob správy zařízení. Jako správce IT musíte nastavit autoritu MDM, aby uživatelé mohli registrovat zařízení pro správu.
-- M356 E3 minimum (nebo M365 E5 pro nejlepší zabezpečení)
+- M365 E3 minimum (nebo M365 E5 pro nejlepší zabezpečení)
 - Zařízení s Windows 10 1903 (zaregistrované s Windows autopilotem pro nejvyšší prostředí pro koncové uživatele)
 - Oprávnění správce Intune potřebná k dokončení tohoto scénáře s asistencí:
   - Konfigurace zařízení – číst, vytvořit, odstranit, přiřadit a aktualizovat

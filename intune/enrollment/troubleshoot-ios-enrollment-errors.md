@@ -1,12 +1,12 @@
 ---
-title: Microsoft Intune での iOS デバイスの登録に関する問題のトラブルシューティング
+title: Řešení potíží s registrací zařízení s iOS v Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Návrhy pro řešení některých nejběžnějších problémů při registraci zařízení se systémem iOS v Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/25/2019
+ms.date: 11/18/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -17,138 +17,182 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 03ceaf5493f544dbb815146eb67c3fae8856d29e
-ms.sourcegitcommit: 5c52879f3653e22bfeba4eef65e2c86025534dab
+ms.openlocfilehash: ca0702744e19c8d09533c1c0ac38356233c1d314
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74126146"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164586"
 ---
-# <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Microsoft Intune での iOS デバイスの登録に関する問題のトラブルシューティング
+# <a name="troubleshoot-ios-device-enrollment-problems-in-microsoft-intune"></a>Řešení potíží s registrací zařízení s iOS v Microsoft Intune
 
 Tento článek pomáhá správcům Intune pochopit a řešit problémy při registraci zařízení se systémem iOS v Intune.
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Požadované součásti
 
 Než začnete řešit potíže, je důležité shromáždit některé základní informace. Tyto informace vám pomůžou lépe porozumět problému a zkrátit dobu, po kterou je možné najít řešení.
 
 Shromážděte následující informace o problému:
 
-- 正確なエラー メッセージは何ですか?
-- エラー メッセージはどこに表示されますか?
-- 問題が発生し始めたのはいつですか? Byl zápis někdy zpracován?
+- Jaká je přesná chybová zpráva?
+- Kde se zobrazí chybová zpráva?
+- Kdy problém začal? Byl zápis někdy zpracován?
 - Jakou platformu (Android, iOS, Windows) má problém?
 - Kolik uživatelů je ovlivněno? Ovlivnili všichni uživatelé nebo jen některé?
 - Kolik zařízení je ovlivněno? Jsou všechna zařízení ovlivněná nebo jenom některá?
 - Co je Autorita MDM? Pokud je System Center Configuration Manager, jakou verzi Configuration Manager používáte?
 - Jak se provádí registrace? Přináší vaše vlastní zařízení (BYOD) nebo Apple Program registrace zařízení (DEP) pomocí profilů zápisu?
 
-## <a name="error-messages"></a>エラー メッセージ
+## <a name="error-messages"></a>Chybovými zprávami
 
-### <a name="profile-installation-failed-a-network-error-has-occurred"></a>プロファイルのインストールに失敗しました。 ネットワーク エラーが発生しました。
+### <a name="profile-installation-failed-a-network-error-has-occurred"></a>Instalace profilu se nezdařila. Došlo k chybě sítě.
 
 **Příčina:** Došlo k nespecifikovanému problému se systémem iOS na zařízení.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 
 1. Aby nedošlo ke ztrátě dat v následujících krocích (obnovení iOS odstraní všechna data v zařízení), ujistěte se, že zálohujete data.
 2. Zařízení umístěte do režimu obnovení a pak ho obnovte. Ujistěte se, že jste ji nastavili jako nové zařízení. Další informace o tom, jak obnovit zařízení s iOS, najdete v tématu [https://support.apple.com/HT201263](https://support.apple.com/HT201263).
-3. デバイスを再度登録します。
+3. Zařízení znovu zaregistrujte.
 
-### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>プロファイルのインストールに失敗しました。 サーバーへの接続を確立できませんでした。
+### <a name="profile-installation-failed-connection-to-the-server-could-not-be-established"></a>Instalace profilu se nezdařila. Nepovedlo se navázat spojení se serverem.
 
 **Příčina:** Váš tenant Intune je nakonfigurovaný tak, aby povoloval jenom zařízení vlastněná společností. 
 
-#### <a name="resolution"></a>解決方法
-1. Azure ポータルにサインインします。
-2. **[その他のサービス]** を選択して、Intune を検索した後、 **[Intune]** を選択します。
-3. **[デバイスの登録]**  >  **[登録の制限]** を選択します。
-4. **[デバイスの種類の制限]** で、>**プロパティ** >  設定する制限を選択し、 **[プラットフォームの選択]** > [ **iOS**で**許可**する] の順に選択し、[ **OK]** をクリックします。
+#### <a name="resolution"></a>Řešení
+1. Přihlaste se k portálu Azure Portal.
+2. Vyberte **Další služby**, vyhledejte Intune a pak vyberte **Intune**.
+3. Zvolte **Registrace zařízení** > **Omezení registrace**.
+4. V části **omezení typů zařízení**vyberte omezení, které chcete nastavit > **vlastnosti** > **vyberte platformy** > vyberte možnost **Povolení** pro **iOS**a pak klikněte na **OK**.
 5. Vyberte **Konfigurovat platformy**, vyberte možnost **povoleno** pro zařízení s iOS v osobním vlastnictví a pak klikněte na **OK**.
-6. デバイスを再度登録します。
+6. Zařízení znovu zaregistrujte.
 
-### <a name="this-service-is-not-supported-no-enrollment-policy"></a>Tato služba se nepodporuje. 登録ポリシーがありません。
+**Příčina:** Nezbytné záznamy CNAME v DNS neexistují.
+
+#### <a name="resolution"></a>Řešení
+Vytvořte záznamy o prostředcích DNS CNAME pro doménu vaší společnosti. Pokud je například doména vaší společnosti contoso.com, vytvořte ve službě DNS záznam CNAME, který přesměruje EnterpriseEnrollment.contoso.com na EnterpriseEnrollment-s.manage.microsoft.com.
+
+Vytváření položek CNAME DNS není povinné, ale záznamy CNAME usnadňují uživatelům registraci. Pokud se nenajde žádný záznam CNAME pro registraci, zobrazí se uživatelům výzva, aby ručně zadali název serveru MDM: enrollment.manage.microsoft.com.
+
+Pokud existuje více než jedna ověřená doména, vytvořte záznam CNAME pro každou doménu. Záznamy o prostředcích CNAME musí obsahovat tyto informace:
+
+|TYP|Název hostitele|Odkazuje na|Hodnota TTL|
+|------|------|------|------|
+|CNAME|EnterpriseEnrollment.doména_společnosti.com|EnterpriseEnrollment-s.manage.microsoft.com|1 hr|
+|CNAME|EnterpriseRegistration.doména_společnosti.com|EnterpriseRegistration.windows.net|1 hr|
+
+Pokud vaše společnost používá více domén pro přihlašovací údaje uživatelů, vytvořte záznamy CNAME pro každou doménu.
+
+> [!NOTE]
+> Změny záznamů DNS se mohou projevit až po 72 hodinách. Před rozšířením záznamu DNS nemůžete v Intune ověřit změnu DNS.
+
+**Příčina:** Zaregistrujete zařízení, které bylo dříve zaregistrováno pod jiným uživatelským účtem, a předchozí uživatel nebyl ze služby Intune odpovídajícím způsobem odebrán.
+
+#### <a name="resolution"></a>Řešení
+1. Zruší všechny aktuální instalace profilu.
+2. Otevřete [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) v Safari.
+3. Zařízení znovu zaregistrujte.
+
+> [!NOTE]
+> Pokud se registrace stále nezdařila, odeberte soubory cookie v Safari (neblokovat soubory cookie) a pak zařízení znovu zaregistrujte.
+
+**Příčina:** Zařízení je už zaregistrované pomocí jiného poskytovatele MDM.
+
+#### <a name="resolution"></a>Řešení
+1. Otevřete **Nastavení** na zařízení se systémem iOS, pokračujte na **Obecné > Správa zařízení**.
+2. Odeberte všechny stávající profily správy.
+3. Zařízení znovu zaregistrujte.
+
+**Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá licenci Microsoft Intune.
+
+#### <a name="resolution"></a>Řešení
+1. Přejít do [centra pro správu Office 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé > aktivní uživatelé**.
+2. Vyberte uživatelský účet, kterému chcete přiřadit uživatelskou licenci pro Intune, a pak zvolte licence na **produkty > upravit**.
+3. Přepněte přepínač **na pozici pro** licenci, kterou chcete tomuto uživateli přiřadit, a pak zvolte **Uložit**.
+4. e – zaregistrujte zařízení.
+
+### <a name="this-service-is-not-supported-no-enrollment-policy"></a>Tato služba se nepodporuje. Žádné zásady registrace.
 
 **Příčina**: certifikát Apple MDM push Certificate není v Intune nakonfigurovaný, nebo je certifikát neplatný. 
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 
 - Pokud není nabízený certifikát MDM nakonfigurovaný, postupujte podle kroků v části [získání certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md#steps-to-get-your-certificate).
 - Pokud je certifikát MDM push Certificate neplatný, postupujte podle kroků v části [obnovení certifikátu Apple MDM push Certificate](apple-mdm-push-certificate-get.md#renew-apple-mdm-push-certificate).
 
-### <a name="company-portal-temporarily-unavailable-the-company-portal-app-encountered-a-problem-if-the-problem-persists-contact-your-system-administrator"></a>ポータル サイトは一時的に使用できません。 V aplikaci Portál společnosti došlo k problému. 問題が解決しない場合は、システム管理者に問い合わせてください。
+### <a name="company-portal-temporarily-unavailable-the-company-portal-app-encountered-a-problem-if-the-problem-persists-contact-your-system-administrator"></a>Portál společnosti dočasně nedostupné. V aplikaci Portál společnosti došlo k problému. Pokud potíže potrvají, obraťte se na správce systému.
 
 **Příčina:** Aplikace Portál společnosti není aktuální nebo je poškozená.
 
-#### <a name="resolution"></a>解決方法
-1. デバイスからポータル サイト アプリを削除します。
-2. **App Store**から **Microsoft Intune ポータル サイト** アプリをダウンロードしてインストールします。
-3. デバイスを再度登録します。
+#### <a name="resolution"></a>Řešení
+1. Odeberte ze zařízení aplikaci Portál společnosti.
+2. Stáhněte si a nainstalujte aplikaci **Microsoft Intune portál společnosti** z **App Storu**.
+3. Zařízení znovu zaregistrujte.
  > [!NOTE]
     > K této chybě může dojít také v případě, že se uživatel pokouší zaregistrovat více zařízení, než je registrace zařízení nakonfigurovaná tak, aby povolovala. Pokud tyto kroky problém nevyřeší, postupujte podle kroků v části řešení pro limit **zařízení** .
 
-### <a name="device-cap-reached"></a>デバイス キャップに達しました
+### <a name="device-cap-reached"></a>Bylo dosaženo limitu zařízení
 
 **Příčina:** Uživatel se pokusí zaregistrovat více zařízení, než je limit pro registraci zařízení.
 
-#### <a name="resolution"></a>解決方法
-1. [Intune 管理ポータル](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) >  台の**デバイス** > **すべてのデバイス** を開き、ユーザーが登録したデバイスの数を確認します。
+#### <a name="resolution"></a>Řešení
+1. Otevřete [portál pro správu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview) > **zařízení** > **všechna zařízení**a ověřte počet zařízení, která uživatel zaregistroval.
     > [!NOTE]
     > Měli byste také mít vliv na přihlášení ovlivněného uživatele na [uživatelský portál Intune](https://portal.manage.microsoft.com/) a ověřit zařízení, která jsou zaregistrovaná. Můžou existovat zařízení, která se zobrazují na [uživatelském portálu Intune](https://portal.manage.microsoft.com/) , ale ne na [portálu pro správu Intune](https://portal.azure.com/?Microsoft_Intune=1&Microsoft_Intune_DeviceSettings=true&Microsoft_Intune_Enrollment=true&Microsoft_Intune_Apps=true&Microsoft_Intune_Devices=true#blade/Microsoft_Intune_DeviceSettings/ExtensionLandingBlade/overview). Tato zařízení se také počítají do limitu registrace zařízení.
-2. Přejít na **správce** > **správa mobilních zařízení** > **pravidla registrace** > Ověřte limit registrace zařízení. 既定では、制限は 15 に設定されています。 
+2. Přejít na **správce** > **správa mobilních zařízení** > **pravidla registrace** > Ověřte limit registrace zařízení. Ve výchozím nastavení je limit nastavený na 15. 
 3. Pokud počet zaregistrovaných zařízení dosáhl limitu, odeberte nepotřebná zařízení nebo zvyšte limit pro registraci zařízení. Vzhledem k tomu, že všechna zaregistrovaná zařízení využívají licenci Intune, doporučujeme, abyste nejdřív odebrali nepotřebná zařízení.
-4. デバイスを再度登録します。
+4. Zařízení znovu zaregistrujte.
 
 ### <a name="workplace-join-failed"></a>Workplace Join se nezdařilo
 
 **Příčina:** Aplikace Portál společnosti není aktuální nebo je poškozená.  
 
-#### <a name="resolution"></a>解決方法
-1. デバイスからポータル サイト アプリを削除します。
-2. **App Store**から **Microsoft Intune ポータル サイト** アプリをダウンロードしてインストールします。
-3. デバイスを再度登録します。
+#### <a name="resolution"></a>Řešení
+1. Odeberte ze zařízení aplikaci Portál společnosti.
+2. Stáhněte si a nainstalujte aplikaci **Microsoft Intune portál společnosti** z **App Storu**.
+3. Zařízení znovu zaregistrujte.
 
 ### <a name="user-license-type-invalid"></a>Neplatný typ uživatelské licence
 
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
-#### <a name="resolution"></a>解決方法
-1. [Microsoft 365 管理センター](https://portal.office.com/adminportal/home#/homepage)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
-2. Vyberte ovlivněný uživatelský účet > **licence k produktům** >  –**Upravit**.
+#### <a name="resolution"></a>Řešení
+1. Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
+2. Vyberte ovlivněný uživatelský účet > **licence k produktům** > **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
-4. デバイスを再度登録します。
+4. Zařízení znovu zaregistrujte.
 
-### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>ユーザー名を認識できません。 Tento uživatelský účet nemá autorizaci používat Microsoft Intune. Pokud si myslíte, že jste tuto zprávu dostali omylem, obraťte se na správce systému.
+### <a name="user-name-not-recognized-this-user-account-is-not-authorized-to-use-microsoft-intune-contact-your-system-administrator-if-you-think-you-have-received-this-message-in-error"></a>Uživatelské jméno nebylo rozpoznáno. Tento uživatelský účet nemá autorizaci používat Microsoft Intune. Pokud si myslíte, že jste tuto zprávu dostali omylem, obraťte se na správce systému.
 
 **Příčina:** Uživatel, který se pokouší zaregistrovat zařízení, nemá platnou licenci Intune.
 
-1. [Microsoft 365 管理センター](https://portal.office.com/adminportal/home#/homepage)にアクセスし、 **[ユーザー]**  >  **[アクティブなユーザー]** の順に選択します。
-2. Vyberte ovlivněný uživatelský účet a pak zvolte **licence na produkty** > **Upravit**.
+1. Otevřete centrum pro [správu Microsoft 365](https://portal.office.com/adminportal/home#/homepage)a pak zvolte **Uživatelé** > **aktivní uživatelé**.
+2. Vyberte příslušný účet uživatele a pak zvolte licence na **produkty** > **Upravit**.
 3. Ověřte, jestli se tomuto uživateli přiřadí platná licence Intune.
-4. デバイスを再度登録します。
+4. Zařízení znovu zaregistrujte.
 
-### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>プロファイルのインストールに失敗しました。 Nová datová část MDM se neshoduje se starou datovou částí.
+### <a name="profile-installation-failed-the-new-mdm-payload-does-not-match-the-old-payload"></a>Instalace profilu se nezdařila. Nová datová část MDM se neshoduje se starou datovou částí.
 
 **Příčina:** V zařízení je již nainstalován profil pro správu.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 
-1. IOS デバイスの **設定** を開き、 **全般** >  **デバイス管理**> ます。
+1. Otevřete **Nastavení** na zařízení se systémem iOS > **Obecná** > **Správa zařízení**.
 2. Klepněte na existující profil pro správu a klepněte na **Odebrat správu**.
-3. デバイスを再度登録します。
+3. Zařízení znovu zaregistrujte.
 
 ### <a name="noenrollmentpolicy"></a>NoEnrollmentPolicy
 
 **Příčina:** Certifikát služby Apple Push Notification Service (APNs) chybí, je neplatný nebo vypršela jeho platnost.
 
-#### <a name="resolution"></a>解決方法
-Ověřte, že se do Intune přidal platný certifikát APNs. 詳細については、[iOS および Mac のデバイス管理の設定](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune)に関するページをご覧ください。 
+#### <a name="resolution"></a>Řešení
+Ověřte, že se do Intune přidal platný certifikát APNs. Další informace najdete v tématu [Nastavení správy zařízení s iOS a Mac](https://docs.microsoft.com/intune-classic/deploy-use/set-up-ios-and-mac-management-with-microsoft-intune). 
 
 ### <a name="accountnotonboarded"></a>AccountNotOnboarded
 
 **Příčina:** Došlo k potížím s certifikátem APNs (Apple Push Notification Service), který je nakonfigurovaný v Intune.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 Obnovte certifikát APNs a pak zařízení znovu zaregistrujte.
 
 > [!IMPORTANT]
@@ -172,33 +216,33 @@ iPhone mobileassetd[83] <Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR 
 
 **Příčina:** Mezi zařízením a službou Apple DEP dojde k problému s připojením.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 Opravte problém s připojením nebo použijte k registraci zařízení jiné síťové připojení. Pokud se problém opakuje, může se také stát, že budete muset kontaktovat společnost Apple.
 
 
-## <a name="other-issues"></a>その他の問題
+## <a name="other-issues"></a>Další problémy
 
 ### <a name="dep-enrollment-doesnt-start"></a>Registrace DEP se nespustí.
 Když zapnete zařízení spravované pomocí programu DEP, které má přiřazený profil registrace, proces registrace Intune se iniciuje.
 
 **Příčina:** Profil registrace se vytvoří před nahráním tokenu DEP do Intune.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 
 1. Upravte registrační profil. V profilu můžete provádět změny. Účelem je aktualizovat čas změny profilu.
-2. Synchronizace zařízení spravovaných programem DEP: Otevřete portál Intune > **správce** > **správa mobilních zařízení** > **iOS** > **program registrace zařízení** > **Sync Now**. 同期要求が Apple に送信されます。
+2. Synchronizace zařízení spravovaných programem DEP: Otevřete portál Intune > **správce** > **správu mobilních zařízení** > **iOS** > **program registrace zařízení** > **synchronizaci hned teď**. Žádost o synchronizaci se pošle společnosti Apple.
 
 ### <a name="dep-enrollment-stuck-at-user-login"></a>Registrace DEP zablokování při přihlášení uživatele
 Když zapnete zařízení spravované pomocí programu DEP, kterému je přiřazený profil registrace, počáteční nastavení po zadání přihlašovacích údajů.
 
 **Příčina:** Multi-Factor Authentication (MFA) je povolené. V tuto chvíli MFA nefunguje během registrace na zařízeních DEP.
 
-#### <a name="resolution"></a>解決方法
+#### <a name="resolution"></a>Řešení
 Zakažte MFA a pak zařízení znovu zaregistrujte.
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>Další kroky
 
-- [Intune のデバイス登録に関するトラブルシューティング](../troubleshoot-device-enrollment-in-intune.md)
-- [Intune フォーラムで質問する](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
+- [Řešení potíží s registrací zařízení v Intune](../troubleshoot-device-enrollment-in-intune.md)
+- [Zeptejte se fóra služby Intune](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
 - [Podívejte se na blog týmu podpory Microsoft Intune.](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
 - [Podívejte se na blog Microsoft Enterprise mobility and Security.](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)

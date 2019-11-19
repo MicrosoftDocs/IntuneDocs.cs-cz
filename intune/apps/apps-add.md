@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/23/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c8e61be086323a16a6220573874ed80ce4e9bd32
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: ecde59d81ebeba7de64f2693eecb576faac6e722
+ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72498989"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164709"
 ---
 # <a name="add-apps-to-microsoft-intune"></a>Přidání aplikací do Microsoft Intune 
 
@@ -151,7 +151,7 @@ Požadavky na cloudové úložiště jsou následující:
 - Maximální velikost nahrávaného souboru je 8 GB.
 
   > [!NOTE]
-  > Obchodní aplikace pro Windows (LOB) mají omezení maximální velikosti 8 GB na aplikaci. obchodní aplikace pro iOS mají maximální velikost 4 GB na aplikaci.
+  > Obchodní aplikace pro Windows, včetně Win32, Windows Universal AppX, sady Windows Universal AppX, Windows Universal MSI X a sady Windows Universal MSI X, mají maximální velikost 8 GB na aplikaci. Všechny ostatní obchodní aplikace, včetně obchodních aplikací pro iOS, mají omezení maximální velikosti 2 GB na aplikaci.
 
 ## <a name="create-and-edit-categories-for-apps"></a>Vytvoření a úprava kategorií pro aplikace
 

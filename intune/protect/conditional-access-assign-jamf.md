@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3552eca925865eb3278b50490a6b70ee5807e2b
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: b09b30fd32caace9ed3259350c01548d5e5fae15
+ms.sourcegitcommit: 93265c2491058afde7168134075bed77031b9311
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502445"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161590"
 ---
 # <a name="enforce-compliance-on-macs-managed-with-jamf-pro"></a>Vynucení dodržování předpisů v počítačích Mac spravovaných aplikací Jamf Pro
 
@@ -37,12 +37,11 @@ Postupy v tomto článku vyžadují přístup ke konzolám Intune i Jamf pro.
 
 ## <a name="set-up-device-compliance-policies-in-intune"></a>Nastavení zásad dodržování předpisů pro zařízení v Intune
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a Projděte si**zásady** **dodržování předpisů zařízením**@no__t – 2. 
-2. Pokud používáte dříve vytvořenou zásadu, vyberte tuto zásadu v konzole nástroje a pak se pokuste přejít k dalšímu kroku tohoto postupu.  
-   
-   Vyberte **vytvořit zásadu** a pak zadejte podrobnosti o zásadě s *platformou* **MacOS**. Nakonfigurujte *Nastavení* a *Akce při nedodržení předpisů* , aby splňovaly požadavky vaší organizace, a pak vyberte **vytvořit** a zásadu uložte.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-3. V podokně *Přehled* zásad vyberte **přiřazení**. Pomocí dostupných možností můžete nakonfigurovat, které Azure Active Directory (Azure AD) a skupiny zabezpečení obdrží tyto zásady. Integrace Jamf s Intune nepodporuje zásady dodržování předpisů, které cílí na skupiny zařízení. 
+2. Vyberte **zařízení** > **zásady dodržování předpisů**. Pokud používáte dříve vytvořenou zásadu, vyberte tuto zásadu v konzole nástroje a pak se pokuste přejít k dalšímu kroku tohoto postupu. Pokud chcete vytvořit novou zásadu, vyberte **vytvořit zásadu** a pak zadejte podrobnosti zásady s *platformou* **MacOS**. Nakonfigurujte *Nastavení* a *Akce při nedodržení předpisů* , aby splňovaly požadavky vaší organizace, a pak vyberte **vytvořit** a zásadu uložte.
+
+3. V podokně *Přehled* zásad vyberte **přiřazení**. Pomocí dostupných možností můžete nakonfigurovat, které Azure Active Directory (Azure AD) a skupiny zabezpečení obdrží tyto zásady. Integrace Jamf s Intune nepodporuje zásady dodržování předpisů, které cílí na skupiny zařízení.
 
 4. Když vyberete **Save (Uložit**), zásada se nasadí uživatelům.  
 
@@ -61,7 +60,7 @@ K provedení následujícího postupu potřebujete přístup k zařízení macOS
 
 1. Na zařízení macOS si stáhněte, ale neinstalujte aktuální verzi [aplikace Portál společnosti pro MacOS](https://go.microsoft.com/fwlink/?linkid=862280). Potřebujete jenom kopii aplikace, abyste mohli aplikaci nahrát do Jamf pro.  
 
-2. Otevřete Jamf pro a přečtěte si**balíčky**pro **správu počítače** > .
+2. Otevřete Jamf pro a přejít na > **balíčky**pro **správu počítače** .
 
 3. Vytvořte nový balíček pomocí aplikace Portál společnosti pro macOS a pak vyberte **Uložit**.
 
@@ -91,7 +90,7 @@ Registrace zařízení vyžaduje, aby uživatel zařízení v rámci samoobsluž
 
 ### <a name="to-create-the-registration-policy"></a>Vytvoření zásad registrace  
 
-1. V Jamf pro vyhledejte v **počítačích** **zásady** >  a pak vytvořte novou zásadu pro registraci zařízení.
+1. V Jamf pro vyhledejte v **počítačích** > **zásady**a pak vytvořte novou zásadu pro registraci zařízení.
 
 2. Nakonfigurujte datovou část **Microsoft Intune Integration** (Integrace Microsoft Intune) včetně frekvence aktivační události a spouštění.
 
@@ -103,7 +102,7 @@ Registrace zařízení vyžaduje, aby uživatel zařízení v rámci samoobsluž
 
 Pomocí konzoly Jamf pro potvrďte, že komunikace mezi Jamf pro a Microsoft Intune je úspěšná. 
 
-- V Jamf pro, přejít na **nastavení** > **Globální správa** > **Microsoft Intune integrace**a pak vyberte **test**. 
+- V Jamf pro, přejít na **nastavení** > **globální Správa** > **Microsoft Intune integraci**a pak vyberte **test**.
 
     Konzola zobrazí zprávu s úspěšným nebo neúspěšným připojením.  
 
@@ -112,7 +111,7 @@ Pokud selže test připojení z konzoly Jamf pro, zkontrolujte konfiguraci Jamf.
 
 ## <a name="removing-a-jamf-managed-device-from-intune"></a>Odebrání zařízení spravovaného prostřednictvím Jamf z Intune
 
-Zařízení spravované prostřednictvím Jamf můžete z konzoly Intune odebrat výběrem možnosti **Odstranit** v zobrazení **Všechna zařízení**. Hromadné odstranění zařízení se dá povolit výběrem více zařízení a kliknutím na **Odstranit**.
+Pokud chcete odebrat zařízení spravované přes Jamf, otevřete centrum pro správu Microsoft Endpoint Manageru a vyberte **zařízení** > **všechna zařízení**, vyberte zařízení a pak vyberte **Odstranit**.  Hromadné odstranění zařízení se dá povolit výběrem více zařízení a kliknutím na **Odstranit**.
 
 Získejte informace o tom, jak [Odebrat Jamf zařízení spravované v dokumentaci pro Jamf pro](https://www.jamf.com/jamf-nation/articles/80/unmanaging-computers-while-preserving-their-inventory-information). Pro další pomoc si můžete také [poJamf podporu](https://www.jamf.com/support/) a pokaždé, když zadáte lístek podpory. 
 
