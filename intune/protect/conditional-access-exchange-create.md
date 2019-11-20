@@ -1,12 +1,12 @@
 ---
-title: Vytvořit zásady podmíněného přístupu pro Exchange
+title: Create Exchange Conditional Access policy
 titleSuffix: Microsoft Intune
-description: Nakonfigurujte podmíněný přístup pro místní Exchange a starší verze Exchange Online vyhrazené v Intune.
+description: Configure Conditional Access for Exchange on-premises and legacy Exchange Online Dedicated in Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/19/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,108 +18,106 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba0b293106631634d45360e3798242ebd34198da
-ms.sourcegitcommit: f46df983b66845bea24a90aaa2ac6cace16b9b0b
+ms.openlocfilehash: 644297777e8a103d6ffdc5f025ebf8f29591fda8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052010"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188473"
 ---
-# <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Vytvoření zásady podmíněného přístupu pro místní Exchange a vyhrazenou verzi Exchange Online
+# <a name="create-a-conditional-access-policy-for-exchange-on-premises-and-legacy-exchange-online-dedicated"></a>Create a Conditional Access policy for Exchange on-premises and legacy Exchange Online Dedicated
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+This article shows you how to configure Conditional Access for Exchange on-premises based on device compliance.
 
-V tomto článku se dozvíte, jak nakonfigurovat podmíněný přístup pro místní Exchange na základě dodržování předpisů zařízením.
-
-Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se prosím na správce svého účtu. Pokud chcete řídit přístup k e-mailům v místním systému Exchange nebo ve starším vyhrazeném prostředí Exchange Online, nakonfigurujte podmíněný přístup na místní Exchange v Intune.
+Pokud máte vyhrazené prostředí Exchange Online a potřebujete zjistit, jestli má novou, nebo starší verzi konfigurace, obraťte se prosím na správce svého účtu. To control email access to Exchange on-premises or to your legacy Exchange Online Dedicated environment, configure Conditional Access to Exchange on-premises in Intune.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Než budete moct nakonfigurovat podmíněný přístup, ověřte, že existují následující konfigurace:
+Before you can configure Conditional Access, verify the following configurations exist:
 
-- Vaše verze Exchange je **exchange 2010 SP1 nebo novější**. Podporuje se pole serveru pro klientský přístup (CAS) serveru Exchange.
+- Your Exchange version is **Exchange 2010 SP1 or later**. Podporuje se pole serveru pro klientský přístup (CAS) serveru Exchange.
 
-- Nainstalovali jste a používali [Exchange Active Sync On-Premises Exchange Connector](exchange-connector-install.md), který připojí Intune k místnímu Exchangi.
+- You have installed and use the [Exchange Active Sync on-premises Exchange connector](exchange-connector-install.md), which connects Intune to on-premises Exchange.
 
     >[!IMPORTANT]  
-    >Intune podporuje více místních Exchange Connectorů pro každé předplatné.  Každý místní Exchange Connector je ale specifický pro jednoho tenanta Intune a nedá se použít s žádným jiným klientem.  Pokud máte více než jednu místní organizaci Exchange, můžete pro každou organizaci Exchange nastavit samostatný konektor.
+    >Intune podporuje více místních Exchange Connectorů pro každé předplatné.  However, each on-premises Exchange connector is specific to a single Intune tenant and cannot be used with any other tenant.  Pokud máte více než jednu místní organizaci Exchange, můžete pro každou organizaci Exchange nastavit samostatný konektor.
 
-- Konektor pro místní organizaci Exchange můžete nainstalovat na libovolný počítač, pokud tento počítač může komunikovat se serverem Exchange.
+- The connector for an on-premises Exchange organization can install on any machine as long as that machine can communicate with the Exchange server.
 
-- Tento konektor podporuje **prostředí Exchange CAS**. Intune podporuje instalaci konektoru na server Exchange CAS přímo, ale doporučujeme ho nainstalovat na jiný počítač z důvodu dalšího zatížení, které konektor vloží na server. Při konfiguraci musíte konektor nastavit tak, aby komunikoval s jedním ze serverů Exchange CAS.
+- Tento konektor podporuje **prostředí Exchange CAS**. Intune supports installing the connector on the Exchange CAS server directly. We recommend you install it on a separate computer because of the additional load the connector puts on the server. Při konfiguraci musíte konektor nastavit tak, aby komunikoval s jedním ze serverů Exchange CAS.
 
 - Protokol **Exchange ActiveSync** je potřeba nakonfigurovat s ověřováním na základě certifikátů nebo zadávání přihlašovacích údajů uživateli.
 
-- Pokud jsou zásady podmíněného přístupu nakonfigurované a cílené na uživatele, musí být předtím, než se uživatel může připojit k e-mailu, použít následující **zařízení** :
+- When Conditional Access policies are configured and targeted to a user, before a user can connect to their email, the **device** they use must be:
   - Musí být **zaregistrovaný** ve službě Intune nebo se musí jednat o počítač připojený k doméně.
   - **Je zaregistrované v Azure Active Directory**. Kromě toho musí být ve službě Azure Active Directory zaregistrované ID protokolu Exchange ActiveSync klienta.
 
-- Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Zákazníci, kteří už mají nasazenou službu AD FS Device Registration Service, nevidí registrovaná zařízení v místní službě Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
+- Pro zákazníky s Intune a Office 365 se služba Azure AD Device Registration Service (DRS) aktivuje automaticky. Customers who have already deployed the ADFS Device Registration Service don't see registered devices in their on-premises Active Directory. **To neplatí pro počítače s Windows ani zařízení Windows Phone**.
 
 - **Musí splňovat** zásady dodržování předpisů, které jsou nasazené na toto zařízení.
 
-- Pokud zařízení nesplňuje nastavení podmíněného přístupu, zobrazí se uživateli při přihlášení jedna z následujících zpráv:
-  - Pokud zařízení není zaregistrované v Intune nebo není zaregistrované v Azure Active Directory, zobrazí se zpráva s pokyny k instalaci Portál společnosti aplikace, registraci zařízení a aktivaci e-mailu. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu zařízení v Azure Active Directory.
-  - Pokud zařízení nedodržuje předpisy, zobrazí se zpráva, která uživatele přesměruje na web Portál společnosti Intune, nebo na Portál společnosti aplikaci, kde může najít informace o problému a jeho řešení.
+- If the device doesn't meet Conditional Access settings, the user is presented with one of the following messages when they sign in:
+  - If the device isn't enrolled with Intune, or isn't registered in Azure Active Directory, a message displays with instructions about how to install the Company Portal app, enroll the device, and activate email. Tento proces také přidruží ID protokolu Exchange ActiveSync zařízení k záznamu zařízení v Azure Active Directory.
+  - If the device isn't compliant, a message displays that directs the user to the Intune Company Portal website, or the Company Portal app. From the company portal, they can find information about the problem and how to remediate it.
 
 ### <a name="support-for-mobile-devices"></a>Podpora mobilních zařízení
 
 - Windows Phone 8.1 a novější
 - Nativní e-mailová aplikace v systému iOS
 - Poštovní klienti EAS, například Gmail v Androidu 4 a novějším
-- **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. Aby mohl podmíněný přístup pracovat s pracovními profily Androidu, musíte nasadit e-mailový profil pro aplikaci Gmail nebo devět Work pro Android Enterprise a tyto aplikace nasadit jako požadovanou instalaci.
+- **Zařízení s pracovním profilem Androidu** s poštovními klienty EAS: Na zařízeních s pracovním profilem Androidu jsou v **pracovním profilu** podporované jen aplikace **Gmail** a **Nine Work for Android Enterprise**. For Conditional Access to work with Android work profiles, you must deploy an email profile for the Gmail or Nine Work for Android Enterprise app, and also deploy those apps as a required installation.
 
 > [!NOTE]
-> Microsoft Outlook pro Android a iOS se nepodporuje prostřednictvím konektoru Exchange On-Premises Connector. Pokud chcete využít Azure Active Directory zásady podmíněného přístupu a zásady Intune App Protection s Outlookem pro iOS a Androidem pro místní poštovní schránky, přečtěte si téma [použití hybridního moderního ověřování v Outlooku pro iOS a Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth) . . 
+> Microsoft Outlook for Android and iOS is not supported via the Exchange on-premises connector. If you want to leverage Azure Active Directory Conditional Access policies and Intune App Protection Policies with Outlook for iOS and Android for your on-premises mailboxes, please see [Using hybrid Modern Authentication with Outlook for iOS and Android](https://docs.microsoft.com/Exchange/clients/outlook-for-ios-and-android/use-hybrid-modern-auth).
 
 ### <a name="support-for-pcs"></a>Podpora počítačů
 
-Nativní **e-mailová** aplikace v Windows 8.1 a novějších verzích (při registraci do MDM pomocí Intune)
+The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
 
 ## <a name="configure-exchange-on-premises-access"></a>Konfigurace přístupu k místnímu Exchangi
 
-Než budete moct pomocí následujícího postupu nastavit místní řízení přístupu Exchange, musíte pro místní Exchange nainstalovat a nakonfigurovat aspoň jeden místní [Exchange Connector pro Intune](exchange-connector-install.md) .
+Before you can use the following procedure to set up Exchange on-premises access control, you must install and configure at least one [Intune on-premises Exchange connector](exchange-connector-install.md) for Exchange on-premises.
 
-1. Přihlášení k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Přejděte na **přístup k Exchangi**a pak vyberte **přístup k místnímu Exchangi**. 
+2. Go to **Tenant administration** > **Exchange access**, and then select **Exchange On-premises access**.
 
-3. V podokně **přístup v místním systému Exchange** *Povolte řízení přístupu k místnímu systému Exchange*kliknutím na **Ano** .
+3. On the **Exchange on-premises access** pane, choose **Yes** to *Enable Exchange on-premises access control*.
 
-4. V části **přiřazení**zvolte **Vybrat skupiny, které se mají zahrnout**, a potom vyberte jednu nebo víc skupin pro konfiguraci přístupu. 
+4. Under **Assignment**, choose **Select groups to include**, and then select one or more groups to configure access.
 
-   Členové vybraných skupin mají zásady podmíněného přístupu pro přístup k místnímu systému Exchange, na které se vztahují. Uživatelé, kteří obdrží tuto zásadu, musí zaregistrovat svoje zařízení v Intune a splňovat profily dodržování předpisů předtím, než budou moct přistupovat k místnímu Exchangi.
+   Members of the groups you select have the Conditional Access policy for Exchange on-premises access applied to them. Users who receive this policy must enroll their devices in Intune and be compliant with the compliance profiles before they can access Exchange on-premises.
 
-5. Pokud chcete skupiny vyloučit, zvolte Vybrat skupiny, které se mají vyloučit, a potom vyberte jednu nebo víc skupin, které se před přístupem k místnímu Exchangi **vyloučí**z požadavků na registraci zařízení a musí být kompatibilní s profily dodržování předpisů. 
+5. To exclude groups, choose **Select groups to exclude**, and then select one or more groups that are exempt from requirements to enroll devices and to be compliant with the compliance profiles before accessing Exchange on-premises. 
 
-6. Dále nakonfigurujte nastavení pro místní Exchange Connector služby Intune.  V části **Nastavení** v **podokně přístup k Exchangi**vyberte **Exchange ActiveSync On-Premises Connector** a pak vyberte konektor pro organizaci Exchange, kterou chcete nakonfigurovat.
+6. Next, configure settings for the Intune on-premises Exchange connector.  Under **Setup** on the *Exchange on-premises access* window, select **Exchange ActiveSync on-premises connector** and then select the connector for the Exchange organization that you want to configure.
 
-7. V části **Nastavení**vyberte **uživatelská oznámení** a upravte výchozí e-mailovou zprávu, která se uživatelům pošle, pokud jejich zařízení nedodržuje předpisy a chtějí získat přístup k místnímu Exchangi. Šablona zprávy používá jazyk využívající značky.  V průběhu psaní se zobrazí také náhled toho, jak bude zpráva vypadat.
+7. Under **Settings**, choose **User notifications** to modify the default email message that’s sent to users if their device isn't compliant and they want to access Exchange on-premises. Šablona zprávy používá jazyk využívající značky.  V průběhu psaní se zobrazí také náhled toho, jak bude zpráva vypadat.
    > [!TIP]
    > Další informace o jazyku využívajícím značky najdete v [článku](https://en.wikipedia.org/wiki/Markup_language) na Wikipedii.
  
-   Výběrem **OK** uložte změny a dokončete konfiguraci přístupu k místnímu Exchangi.
+   Select **OK** to save your edits to complete configuration of Exchange on-premises access.
 
-8. V dalším kroku vyberte **Upřesnit nastavení přístupu Exchange Active Sync** a otevřete tak podokno *Upřesnit nastavení přístupu Exchange ActiveSync* , kde můžete nakonfigurovat pravidla přístupu k zařízení:  
+8. Next, select **Advanced Exchange Active Sync access settings** to open the *Advanced Exchange ActiveSync access settings* pane where you configure device access rules:  
 
-   - V případě **nespravovaného přístupu k zařízení**nastavte globální výchozí pravidlo pro přístup ze zařízení, která neovlivní podmíněný přístup nebo jiná pravidla:
+   - For **Unmanaged device access**, set the global default rule for access from devices that are not affected by Conditional Access or other rules:
 
-     - **Povolení přístupu** – všechna zařízení můžou hned získat přístup k místnímu Exchangi. Zařízení, která patří uživatelům ve skupinách, které jste nakonfigurovali jako zahrnutá v předchozím postupu, se zablokují, pokud se později vyhodnotí jako nevyhovující předpisům nebo nejsou zaregistrovaná v Intune.
+     - **Allow access** - All devices can access Exchange on-premises immediately. Devices that belong to the users in the groups you configured as included in the previous procedure are blocked if they're later evaluated as not compliant with the compliant policies or not enrolled in Intune.
 
-     - **Zablokovat přístup** a **umístit do karantény** – všechna zařízení hned zablokují přístup k místnímu Exchangi na začátku. Zařízení, která patří uživatelům ve skupinách, které jste nakonfigurovali tak, jak je uvedeno v předchozím postupu, získají přístup po registraci zařízení v Intune a vyhodnotí jako kompatibilní. 
+     - **Block access** and **Quarantine** – All devices are immediately blocked from accessing Exchange on-premises initially. Devices that belong to users in the groups you configured as included in the previous procedure get access after the device enrolls in Intune and is evaluated as compliant. 
 
-       Zařízení s Androidem *, která nepoužívají Samsung* Knox Standard, toto nastavení nepodporují a jsou vždycky zablokovaná.
+       Android devices that *do not* run Samsung Knox standard don’t support this setting and are always blocked.
 
-   -  V případě **výjimek platforem zařízení**vyberte **Přidat**a pak podle potřeby zadejte podrobnosti o platformě pro vaše prostředí. 
+   -  For **Device platform exceptions**, select **Add**, and then specify platform details as needed for your environment. 
    
-      Pokud je nastavení **přístupu nespravovaného zařízení** nastavené na **blokované**, jsou zařízení, která jsou zaregistrovaná a kompatibilní, povolená i v případě, že je pro ně výjimka platformy zablokovaná.  
+      If the **Unmanaged device access** setting is set to **Blocked**, devices that are enrolled and compliant are allowed even if there's a platform exception to block them.  
    
-   Výběrem **OK** uložte změny.
+   Select **OK** to save your edits.
 
-9. Výběrem **Uložit** uložte zásady podmíněného přístupu Exchange.
+9. Select **Save** to save the Exchange Conditional Access policy.
 
-V dalším kroku vytvoříte zásadu dodržování předpisů a přiřadíte ji uživatelům pro Intune, abyste mohli vyhodnotit jejich mobilní zařízení, přečtěte si téma Začínáme [s dodržováním předpisů zařízením](device-compliance-get-started.md).
+Next, create a compliance policy and assign it to the users for Intune to evaluate their mobile devices, See [Get started with device compliance](device-compliance-get-started.md).
 
-## <a name="see-also"></a>Související témata
+## <a name="next-steps"></a>Další kroky
 
-[Řešení potíží s místním Exchange Connectorem Intune v Microsoft Intune](https://support.microsoft.com/help/4471887)
+[Troubleshooting Intune on-premises Exchange connector in Microsoft Intune](https://support.microsoft.com/help/4471887)

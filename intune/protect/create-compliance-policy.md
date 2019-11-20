@@ -1,11 +1,11 @@
 ---
-title: Vytvoření zásad dodržování předpisů pro zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Vytvoření zásad dodržování předpisů pro zařízení, Přehled stavů a úrovní závažnosti, použití stavu V období odkladu, práce s podmíněným přístupem, zpracování zařízení bez přiřazené zásady a rozdíly v dodržování předpisů na portálu Azure Portal a Classic v nástroji Microsoft Intune
+title: Create device compliance policies in Microsoft Intune - Azure | Microsoft Docs
+description: Create device compliance policies, overview of status and severity levels, using the InGracePeriod status, working with Conditional Access, handling devices without an assigned policy, and the differences in compliance in the Azure portal and classic portal in Microsoft Intune
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/21/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,38 +16,38 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76998c32f09b20e624359cc8a38231e14a70399b
-ms.sourcegitcommit: 06a1fe83fd95c9773c011690e8520733e1c031e3
+ms.openlocfilehash: c8452f9b56032864380ec703bfd444dc85ef129b
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72786080"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188266"
 ---
-# <a name="create-a-compliance-policy-in-microsoft-intune"></a>Vytvoření zásady dodržování předpisů v Microsoft Intune
+# <a name="create-a-compliance-policy-in-microsoft-intune"></a>Create a compliance policy in Microsoft Intune
 
-Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune, která umožňuje chránit prostředky organizace. V Intune můžete vytvořit pravidla a nastavení, která musí zařízení splňovat, aby se považovala za vyhovující, jako je třeba minimální verze operačního systému. Pokud zařízení nedodržuje předpisy, můžete zablokovat přístup k datům a prostředkům pomocí [podmíněného přístupu](conditional-access.md).
+Zásady dodržování předpisů pro zařízení jsou klíčovou funkcí Intune, která umožňuje chránit prostředky organizace. In Intune, you can create rules and settings that devices must meet to be considered compliant, such as a minimum OS version. If the device isn't compliant, you can then block access to data and resources using [Conditional Access](conditional-access.md).
 
-Můžete také provést akce při nedodržení předpisů, jako je například odeslání e-mailu s oznámením uživateli. Základní informace o tom, jaké zásady dodržování předpisů dělají a jak se používají, najdete v tématu [Začínáme s dodržováním předpisů zařízením](device-compliance-get-started.md).
+You can also take actions for non-compliance, such as sending a notification email to the user. For an overview of what compliance policies do, and how they're used, see [get started with device compliance](device-compliance-get-started.md).
 
 V tomto článku najdete:
 
-- Obsahuje seznam požadavků a kroků pro vytvoření zásady dodržování předpisů.
-- Ukazuje, jak přiřadit zásady vašim skupinám uživatelů a zařízení.
-- V této části najdete popis dalších funkcí, včetně tagů oboru pro filtrování zásad a kroků, které můžete provést na zařízeních, která nedodržují předpisy.
-- Vypíše časy obnovení při vracení se změnami, když zařízení dostanou aktualizace zásad.
+- Lists the prerequisites and steps to create a compliancy policy.
+- Shows you how to assign the policy to your user and device groups.
+- Describes additional features, including scope tags to "filter" your policies, and steps you can take on devices that aren't compliant.
+- Lists the check-in refresh cycle times when devices receive policy updates.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte se, že jste:
+To use device compliance policies, be sure you:
 
 - Použití následujících předplatných:
 
   - Intune
-  - Pokud používáte podmíněný přístup, budete potřebovat Azure Active Directory (AD) Premium Edition. [Azure Active Directory Price](https://azure.microsoft.com/pricing/details/active-directory/) uvádí, co se vám s různými edicemi dostanou. Dodržování předpisů v Intune nevyžaduje Azure AD.
+  - If you use Conditional Access, then you need Azure Active Directory (AD) Premium edition. [Azure Active Directory pricing](https://azure.microsoft.com/pricing/details/active-directory/) lists what you get with the different editions. Intune compliance doesn't require Azure AD.
 
 - Použití podporované platformy:
 
-  - Správce zařízení s Androidem
+  - Android device administrator
   - Android Enterprise
   - iOS
   - macOS
@@ -55,28 +55,24 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
   - Windows 8.1
   - Wvdows Phone 8.1
 
-- Registrace zařízení v Intune (vyžaduje se pro zobrazení stavu dodržování předpisů)
+- Enroll devices in Intune (required to see the compliance status)
 
-- Zaregistrujte zařízení jednomu uživateli nebo se zaregistrujte bez primárního uživatele. Zařízení zaregistrovaná pro více uživatelů nejsou podporovaná.
+- Enroll devices to one user, or enroll without a primary user. Devices enrolled to multiple users aren't supported.
 
-## <a name="create-the-policy"></a>Vytvoření zásady
+## <a name="create-the-policy"></a>Create the policy
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Vyberte **Dodržování předpisů zařízením**. Máte následující možnosti:
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-    - **Přehled**: zobrazuje souhrn a počet zařízení, která jsou kompatibilní, nejsou vyhodnocena a tak dále. Obsahuje také seznam zásad a individuálních nastavení zásad. [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md) nabízí nějaké dobré informace.
-    - **Správa**: vytváření zásad zařízení, posílání [oznámení](quickstart-send-notification.md) na nevyhovujících zařízeních a povolení [síťové oplocení](use-network-locations.md).
-    - **Monitorování**: Ověřte stav dodržování předpisů vašich zařízení a na úrovni zásad nastavení a zásady. [Monitorování zásad dodržování předpisů zařízením v Intune](compliance-policy-monitor.md) je dobrým prostředkem. Podívejte se také na protokoly a zkontrolujte stav agenta hrozeb vašich zařízení.
-    - **Nastavení**: použijte [předdefinované zásady dodržování předpisů](device-compliance-get-started.md#ways-to-deploy-device-compliance-policies), povolte [Microsoft Defender Advanced Threat Protection (ATP)](advanced-threat-protection.md), přidejte [konektor ochrany před mobilními hrozbami](mobile-threat-defense.md)a použijte [Jamf](conditional-access-integrate-jamf.md).
+2. Select **Devices** > **Compliance policies** > **Create Policy**.
 
-3. Vyberte **Zásady** > **Vytvořit zásadu**. Zadejte následující vlastnosti:
+3. Specify the following properties:
 
-   - **Název**: zadejte popisný název zásady. Své zásady pojmenujte, abyste je později mohli snadno identifikovat. Například dobrým názvem zásady je **zařízení s jailbreakem pro iOS označena jako nevyhovující předpisům**.  
+   - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Mark iOS jailbroken devices as not compliant**.
 
-   - **Popis**: zadejte popis zásady. Toto nastavení není povinné, ale doporučujeme ho zadat.  
+   - **Description**: Enter a description for the policy. Toto nastavení není povinné, ale doporučujeme ho zadat.
 
-   - **Platforma**: vyberte platformu zařízení. Možnosti:
-     - **Správce zařízení s Androidem**
+   - **Platform**: Choose the platform of your devices. Možnosti:
+     - **Android device administrator**
      - **Android Enterprise**
      - **iOS/iPadOS**
      - **macOS**
@@ -84,48 +80,51 @@ Pokud chcete používat zásady dodržování předpisů zařízením, ujistěte
      - **Windows 8.1 a novější**
      - **Windows 10 a novější**
 
-     Pro *Android Enterprise*musíte vybrat **typ profilu**:
-     - **Vlastník zařízení**
-     - **Pracovní profil**
+     For *Android Enterprise*, you must then select a **Profile type**:
+     - **Device owner**
+     - **Work Profile**
 
-   - **Nastavení**: Následující seznam článků popisuje nastavení pro jednotlivé platformy:
-     - [Správce zařízení s Androidem](compliance-policy-create-android.md)
+   - **Settings**: The following articles list and describe the settings for each platform:
+     - [Android device administrator](compliance-policy-create-android.md)
      - [Android Enterprise](compliance-policy-create-android-for-work.md)
      - [iOS/iPadOS](compliance-policy-create-ios.md)
      - [macOS](compliance-policy-create-mac-os.md)
-     - [Windows Phone 8,1, Windows 8.1 a novější](compliance-policy-create-windows-8-1.md)
+     - [Windows Phone 8.1, Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
      - [Windows 10 a novější](compliance-policy-create-windows.md)  
 
-   - **Umístění** *(Správce zařízení s Androidem)* : v zásadách můžete vynutit dodržování předpisů podle umístění zařízení. Vyberte si z existujících umístění. Žádné umístění ještě nemáte? V Intune jsou k dispozici pokyny k [použití umístění (síťová síť)](use-network-locations.md) .  
+   - **Locations** *(Android device administrator)* : In your policy, you can force compliance by the location of the device. Choose from existing locations. Žádné umístění ještě nemáte? [Use Locations (network fence)](use-network-locations.md) in Intune provides some guidance.  
 
-   - **Akce při nedodržení předpisů**: u zařízení, která nevyhovují zásadám dodržování předpisů, můžete přidat posloupnost akcí, které se mají použít automaticky. Pokud je zařízení označené jako nevyhovující, můžete plán třeba další den změnit. Můžete také nakonfigurovat druhou akci, která uživateli nevyhovujícího zařízení pošle e-mail.
-    
+   - **Actions for noncompliance**: For devices that don't meet your compliance policies, you can add a sequence of actions to apply automatically. Pokud je zařízení označené jako nevyhovující, můžete plán třeba další den změnit. Můžete také nakonfigurovat druhou akci, která uživateli nevyhovujícího zařízení pošle e-mail.
+
      Další informace, včetně návodu na vytvoření e-mailu s oznámením pro uživatele, najdete v článku o [přidání akcí pro nevyhovující zařízení](actions-for-noncompliance.md).
 
      Pokud například používáte funkci Umístění, přidáte do zásady dodržování předpisů nějaké umístění a vyberete aspoň jedno umístění, použije se pro nevyhovující zařízení výchozí akce. Pokud zařízení není připojené k vybraným umístěním, považuje se hned za nevyhovující. Uživatelům můžete dát určitou lhůtu, třeba jeden den.
 
-   - **Scope (značky)** : značky oboru jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako je například prodej, HR, všichni zaměstnanci USA-NC atd. Po přidání nastavení můžete také přidat značku oboru do zásad dodržování předpisů. [Použití značek oboru k filtrování zásad](../fundamentals/scope-tags.md) je dobrým prostředkem.
+   - **Scope (Tags)** : Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
 
-4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Zásada se vytvoří a zobrazí se v seznamu. Potom tyto zásady přiřaďte do skupin.
+4. When finished, select **OK** > **Create** to save your changes. The policy is created, and shown in the list. Next, assign the policy to your groups.
 
 ## <a name="assign-the-policy"></a>Přiřazení zásady
 
-Po vytvoření zásady je dalším krokem přiřazení těchto zásad ke skupinám:
+Once a policy is created, the next step is to assign the policy to your groups:
 
-1. Vyberte zásadu, kterou jste vytvořili. Existující zásady najdete v **Dodržování předpisů zařízením** > **Zásady**.
-2. Vyberte zásady > **přiřazení**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
-3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Vyberte skupiny, které chcete použít pro tuto zásadu > klikněte na **Uložit** a zásadu nasaďte.
+1. Choose a policy you created. Existing policies are in **Devices** > **Compliance policies** > **Policies**.
 
-Uživatelé nebo zařízení, na které vaše zásada cílí, se vyhodnotí pro dodržování předpisů při jejich vrácení se změnami pomocí Intune.
+2. Select the *policy* > **Assignments**. Můžete zahrnout nebo vyloučit skupiny zabezpečení služby Azure Active Directory (AD).
 
-### <a name="evaluate-how-many-users-are-targeted"></a>Vyhodnocení počtu cílových uživatelů
+3. Vyberte **Vybrané skupiny** a zobrazte skupiny zabezpečení Azure AD. Select the groups you want this policy to apply > Choose **Save** to deploy the policy.
 
-Když přiřadíte zásady, můžete také **vyhodnotit** , kolik uživatelů je ovlivněno. Tato funkce vypočítává uživatele. nepočítá zařízení.
+The users or devices targeted by your policy are evaluated for compliance when they check-in with Intune.
 
-1. V Intune vyberte **zásady** > **dodržování předpisů zařízením** .
-2. Vyberte zásadu > **přiřazení** > **vyhodnotit**. Zobrazí se zpráva o tom, kolik uživatelů cílí na tyto zásady.
+### <a name="evaluate-how-many-users-are-targeted"></a>Evaluate how many users are targeted
 
-Pokud je tlačítko **vyhodnotit** šedé, ujistěte se, že je zásada přiřazena jedné nebo více skupinám.
+When you assign the policy, you can also **Evaluate** how many users are affected. This feature calculates users; it doesn't calculate devices.
+
+1. In Intune, select **Devices** > **Compliance policies** > **Policies**.
+
+2. Select a *policy* > **Assignments** > **Evaluate**. A message shows you how many users are targeted by this policy.
+
+If the **Evaluate** button is grayed out, make sure the policy is assigned to one or more groups.
 
 <!-- ## Actions for noncompliance
 
@@ -140,11 +139,11 @@ For example, you're using the Locations feature, and add a location in a complia
 Scope tags are a great way to assign and filter policies to specific groups, such as Sales, HR, All US-NC employees, and so on. After you add the settings, you can also add a scope tag to your compliance policies. [Use scope tags to filter policies](../fundamentals/scope-tags.md) is a good resource.
 -->
 
-## <a name="refresh-cycle-times"></a>Aktualizovat časy cyklů
+## <a name="refresh-cycle-times"></a>Refresh cycle times
 
-Intune používá ke kontrole aktualizací zásad dodržování předpisů různé aktualizační cykly. Pokud se zařízení nedávno zaregistrovalo, vrácení se změnami se spouští častěji. V [cyklech aktualizace zásad a profilů](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) se zobrazí odhadované časy aktualizace.
+Intune uses different refresh cycles to check for updates to compliance policies. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
 
-V každém okamžiku můžou uživatelé aplikaci Portál společnosti otevřít a synchronizovat zařízení, aby se aktualizace zásad hned zkontrolovaly.
+At any time, users can open the Company Portal app, and sync the device to immediately check for policy updates.
 
 ### <a name="assign-an-ingraceperiod-status"></a>Přiřazení stavu V období odkladu
 
@@ -152,9 +151,9 @@ Stav V období odkladu u zásad dodržování předpisů představuje hodnotu. T
 
 Konkrétně, pokud má zařízení pro přiřazené zásady dodržování předpisů stav Nevyhovující předpisům a:
 
-- K zařízení není přiřazené žádné období odkladu, ale přiřazená hodnota zásady dodržování předpisů není kompatibilní.
-- Zařízení má období odkladu, které vypršelo, takže přiřazená hodnota zásady dodržování předpisů není kompatibilní.
-- Zařízení má období odkladu, které je v budoucnu, takže přiřazená hodnota pro zásady dodržování předpisů je V období odkladu.
+- The device has no grace period assigned to it, then the assigned value for the compliance policy is NonCompliant
+- The device has a grace period that's expired, then the assigned value for the compliance policy is NonCompliant
+- The device has a grace period that's in the future, then the assigned value for the compliance policy is InGracePeriod
 
 V následující tabulce najdete souhrnný přehled těchto bodů:
 
@@ -181,8 +180,8 @@ Pokud má nějaké zařízení několik zásad dodržování předpisů a pro dv
 
 Pokud má zařízení více zásad dodržování předpisů, přiřadí se mu nejvyšší úroveň závažnosti ze všech zásad.
 
-Například zařízení má přiřazené tři zásady dodržování předpisů: jeden neznámý stav (závažnost = 1), jeden stav kompatibility (závažnost = 3) a jeden stav V období odkladu (závažnost = 4). Stav V období odkladu má nejvyšší úroveň závažnosti. To znamená, že všechny tři zásady mají stav dodržování předpisů V období odkladu.
+For example, a device has three compliance policies assigned to it: one Unknown status (severity = 1), one Compliant status (severity = 3), and one InGracePeriod status (severity = 4). The InGracePeriod status has the highest severity level. So, all three policies have the InGracePeriod compliance status.
 
 ## <a name="next-steps"></a>Další kroky
 
-[Monitorujte své zásady](compliance-policy-monitor.md).
+[Monitor your policies](compliance-policy-monitor.md).

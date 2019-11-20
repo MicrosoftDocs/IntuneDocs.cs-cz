@@ -1,7 +1,7 @@
 ---
 title: Konfigurace aplikace Portál společnosti
 titleSuffix: Microsoft Intune
-description: Přečtěte si, jak můžete v aplikaci Portál společnosti Intune použít branding pro konkrétní společnosti.
+description: Learn how you can apply company-specific branding to the Intune Company Portal app.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -18,28 +18,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4fcec6c264a97d710e3061c289d6898297ef61be
-ms.sourcegitcommit: 4bf23327af734a9811d555fbd566c31239e2acd6
+ms.openlocfilehash: b750c09207b1950aa27a5f2cae1267503537b6e7
+ms.sourcegitcommit: 01fb3d844958a0e66c7b87623160982868e675b0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "72999526"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74199201"
 ---
 # <a name="how-to-configure-the-microsoft-intune-company-portal-app"></a>Konfigurace aplikace Portál společnosti služby Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé přístup k firemním datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu. Kromě toho aplikace Portál společnosti umožňuje uživateli zabezpečený přístup k prostředkům společnosti. Aplikace Portál společnosti poskytuje několik různých stránek, například domů, aplikace, podrobnosti o aplikaci, zařízení a podrobnosti o zařízení. K rychlému vyhledání aplikací v rámci Portál společnosti můžete aplikace filtrovat na stránce aplikace.
+Portál společnosti v Microsoft Intune je místo, odkud mají uživatelé přístup k firemním datům a kde můžou dělat běžné úkoly, jako je registrace zařízení, instalace aplikací nebo vyhledání informací pro oddělení IT v případě žádosti o podporu. Additionally, the company portal app allows user to securely access company resources. The company portal app provides several different pages, such as Home, Apps, App details, Devices, and Device details. To quickly find apps within the Company Portal, you can filter the apps on the Apps page.
 
 > [!IMPORTANT]
-> Aby bylo možné podporovat Firebase Cloud Messaging (FCM) Google, musíte aplikaci pro Android Portál společnosti aktualizovat na nejnovější verzi. Další informace najdete v tématu Co je nového – [aktualizace aplikace pro Android portál společnosti na nejnovější verzi](../fundamentals/whats-new.md#update-your-android-company-portal-app-to-the-latest-version-).
+> To support Google’s Firebase Cloud Messaging (FCM), you must update your Android Company Portal app to the latest version.  
 
 > [!Tip]
-> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Všimněte si, že uživatelé musí mít přiřazenou licenci Intune pro přístup k webu Portál společnosti.
+> Když si portál společnosti přizpůsobíte, bude se vaše konfigurace vztahovat na web portálu společnosti i na aplikace Portál společnosti. Note that users must have an Intune license assigned to access the Company Portal website.
 
-Přizpůsobením Portál společnosti umožníte vašim koncovým uživatelům známé a užitečné možnosti. Provedete to tak, že na portálu Intune vyberete **klientské aplikace** > **branding a přizpůsobení**a pak nakonfigurujete požadovaná nastavení.
+By customizing the Company Portal, you will help provide a familiar and helpful experience for your end users. To do this, in the Intune portal, select **Client apps** > **Branding and customization**, and then configure the required settings.
 
-Když uživatel instaluje aplikaci pro iOS z Portál společnosti, zobrazí se výzva. K tomu dochází, když je aplikace pro iOS propojená s obchodem s aplikacemi, která je propojená s programem Volume purchase program (VPP), nebo propojená s obchodní aplikací (LOB). Tato výzva umožní uživatelům přijmout akci nebo povolit správu aplikace. Výzva zobrazí název vaší společnosti, nebo pokud název vaší společnosti není k dispozici, zobrazí se **portál společnosti** . 
+When a user is installing an iOS application from the Company Portal they will receive a prompt. This occurs when the iOS app is linked to the app store, linked to a volume-purchase program (VPP), or linked to a line-of-business (LOB) app. The prompt allows the users to accept the action or allow management of the app. The prompt will display your company name, or when your company name is unavailable, **Company Portal** will be displayed. 
 
 > [!Note]
 > Pokud používáte Azure Government, nabízí se protokoly aplikace koncovým uživatelům, aby se rozhodli o způsobu sdílení po inicializaci procesu získání pomoci s problémem. Pokud ale Azure Government nepoužíváte, Portál společnosti pro Windows 10 bude odesílat protokoly aplikace přímo Microsoftu, když uživatel iniciuje proces pro získání pomoci s problémem. Odesílání protokolů aplikace do Microsoftu usnadní řešení problémů. 
@@ -53,19 +53,19 @@ Název společnosti je zobrazen v záhlaví okna Portálu společnosti. Prohlá�
 | **Adresa URL prohlášení o zásadách ochrany osobních údajů** |     79     | Můžete přidat vlastní prohlášení o zásadách ochrany osobních údajů společnosti, které se uživatelům zobrazí po kliknutí na příslušné odkazy v Portálu společnosti. Musíte zadat platnou adresu URL ve formátu `<https://www.contoso.com>`. |
 
 > [!NOTE]
-> V souladu se zásadami Microsoftu a Apple nebudeme z jakéhokoli důvodu prodávat žádná data shromážděná naší službou žádným třetím stranám.
+> Consistent with Microsoft and Apple policy, we do not sell any data collected by our service to any third parties for any reason.
 
 ## <a name="support-information"></a>Informace o podpoře
-Zadejte informace o podpoře vaší společnosti a poskytněte tak vašemu zaměstnanci kontakt na otázky související s Intune.
+Enter your company's support information to provide your employee with a contact for Intune-related questions.
 
 |Název pole|Maximální délka|Další informace|
 |---|---|---|
-|**Jméno kontaktu** | 40 | Tento název se zobrazí na stránce **pomoc a podpora** . |
-|**Telefonní číslo** | 20 | Toto kontaktní číslo se zobrazí na stránce **pomoc a podpora** , aby se zaměstnanci mohli obrátit na podporu. |
-|**E-mailová adresa**| 40 | Tato kontaktní adresa se zobrazí na stránce **pomoc a podpora** . Je potřeba zadat platnou e-mailovou adresu ve formátu `alias@domainname.com`. |
-|**Název webu**| 40 | Toto je popisný název, který se zobrazí pro adresu URL webu podpory. Pokud zadáte adresu URL webu podpory bez popisného názvu, zobrazí se na stránce **pomoc a podpora** v portál společnosti adresa přejít na web IT. |
-|**Adresa URL webu**| 150 | Pokud máte web podpory, který chcete, aby uživatelé používali, zadejte jeho adresu URL sem. Adresa URL musí být ve formátu `https://www.contoso.com`. Pokud adresu URL nezadáte, nezobrazí se na stránce pomoc **a podpora** v portál společnosti žádné informace o webu podpory. |
-| **Další informace**| 120 | Zobrazí se na stránce **pomoc a podpora** . |
+|**Jméno kontaktu** | 40 | This name is displayed on the **Help and Support** page. |
+|**Telefonní číslo** | 20 | This contact number is displayed on the **Help and Support** page to enable employees to contact you for support. |
+|**E-mailová adresa**| 40 | This contact address is displayed on the **Help and Support** page. Je potřeba zadat platnou e-mailovou adresu ve formátu `alias@domainname.com`. |
+|**Název webu**| 40 | Toto je popisný název, který se zobrazí pro adresu URL webu podpory. If you specify a support website URL and no friendly name, then Go to IT website is displayed on the **Help and Support** page in the Company Portal. |
+|**Adresa URL webu**| 150 | Pokud máte web podpory, který chcete, aby uživatelé používali, zadejte jeho adresu URL sem. Adresa URL musí být ve formátu `https://www.contoso.com`. If you don't specify a URL, nothing is displayed for the support website on the **Help and Support** page in the Company Portal. |
+| **Další informace**| 120 | Displayed on the **Help and Support** page. |
 
 
 ## <a name="company-identity-branding-customization"></a>Přizpůsobení brandingu firemní identity
@@ -76,7 +76,7 @@ Přiřaďte barvu motivu pro Portál společnosti. Vyberte standardní barvu neb
 
 |Název pole|Další informace|
 |---|---|
-|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Zvolte možnost **Standard** pro vizuální výběr barvy. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
+|**Vyberte standardní barvu, nebo zadejte šestičíselný šestnáctkový kód**| Choose **Standard** to visually select a color. Zvolte **Vlastní**, pokud chcete vybrat konkrétní barvu podle hodnoty šestnáctkového kódu.|
 |**Zvolit barvu motivu**| Vyberte barvu motivu, kterou chcete použít pro Portál společnosti. Můžete ji vybrat ze standardní barvy nebo zadat konkrétní šestnáctkový kód. |
 |**Zobrazení**| Vyberte, zda chcete zobrazit **Logo a název firmy**, **Jen logo firmy** nebo **Jen název firmy**. |
 |**Nahrát firemní logo**|Tato možnost vám umožní nahrát vlastní firemní logo, které se bude zobrazovat na Portálu společnosti. Všimněte si, že barva textu se automaticky zvolí tak, aby byl zajištěn nejvyšší kontrast. Pokud chcete dosáhnout nejlepšího vzhledu, nahrajte logo s transparentním pozadím.<p><ul><li>Maximální velikost obrázku: 400 px × 400 px</li><li>Maximální velikost souboru: 750 kB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
@@ -96,66 +96,66 @@ Zobrazte si firemní logo, které odráží značku vaší společnosti. Po ulo�
 
 |Název pole|Další informace|
 |---|---|
-|**Nahrát firemní logo**| Tato možnost umožňuje zobrazit obrázek značky. Na Portál společnosti iOS se na stránce profilu uživatele zobrazuje jako obrázek na pozadí.<p><ul><li>Doporučená šířka obrázku: větší než 1125px (musí být aspoň 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
+|**Nahrát firemní logo**| This option allows you to display a brand image. On the iOS Company Portal, it shows as a background image on the user's profile page.<p><ul><li>Recommended image width: Greater than 1125px (required to be at least 650 px)</li><li>Maximální velikost obrázku: 1,3 MB</li><li>Typ souboru: PNG, JPG nebo JPEG</li></ul>|
 
 Správné firemní logo může zvýšit důvěru uživatelů v aplikaci Portál společnosti tím, že prezentuje silný smysl pro vaši firemní značku. Nabízíme vám několik tipů, nad kterými byste se mohli zamyslet při pořizování, výběru a optimalizaci loga pro Portál společnosti. 
 
-- Obraťte se na marketingové nebo kreativní oddělení. Můžou už mít schválenou sadu imagí značky. Mohli by vám také pomoci při optimalizaci obrázků. 
+- Obraťte se na marketingové nebo kreativní oddělení. They may already have an approved set of brand images. Mohli by vám také pomoci při optimalizaci obrázků. 
 
-- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. Obrázek může být oříznutý odlišně na základě velikosti zařízení, orientace a platformy. 
+- Zvažte kompozici v orientaci jak na šířku, tak i na výšku. Ústřední bod obrázku by mělo obklopovat dostatečně velké pozadí. The image may be cropped differently based on device size, orientation, and platform. 
 
 - Nepoužívejte obecné obrázky převzaté z fotobanky. Obrázek by měl odrážet vaši firemní značku a měl by být pro uživatele srozumitelný. Pokud žádný obrázek nemáte, je lepší nepoužívat žádný, než použít obecný, který pro uživatele nemá žádný význam. 
 
 - Odeberte nepotřebná metadata. Soubor obrázku může obsahovat metadata, jako jsou profil fotoaparátu, zeměpisná poloha, název, popisek a další. Pomocí nástroje pro optimalizaci obrázků tyto informace odstraňte, abyste zachovali kvalitu, ale vešli se do velikostního limitu souboru. 
 
-Po přidání nebo změně obrázku značky v Intune se koncový uživatel nemusí na zařízeních s iOS zobrazovat, dokud Portál společnosti nerozpoznal změnu při spuštění, a pak se restartoval, aby se zobrazila image značky. 
+After a brand image is added or changed in Intune, the end user may not see the change on iOS devices until the Company Portal has recognized the change on start up, and then has been restarted to display the brand image. 
 
-### <a name="brand-image-examples"></a>Příklady obrázků značky
+### <a name="brand-image-examples"></a>Brand image examples
 
-Následující obrázek ukazuje příklad obrázku na základě značky pro iPad:
+The following image shows an example iPad branding image:
 
-![Snímek obrazovky s ukázkovým obrázkem o značce iPhone](./media/company-portal-app/company-portal-app-03.png)
+![Screenshot of example iPhone branding image](./media/company-portal-app/company-portal-app-03.png)
 
-Následující obrázek ukazuje příklad obrázku iPhone s brandingem:
+The following image shows an example iPhone branding image:
 
-![Snímek obrazovky s ukázkovým obrázkem značky pro iPad](./media/company-portal-app/company-portal-app-02.png)
+![Screenshot of example iPad branding image](./media/company-portal-app/company-portal-app-02.png)
 
-## <a name="privacy-statement-customization"></a>Přizpůsobení prohlášení o zásadách ochrany osobních údajů
+## <a name="privacy-statement-customization"></a>Privacy statement customization
 
-Prohlášení o zásadách ochrany osobních údajů, které se zobrazí pro vaši organizaci, můžete přizpůsobit na spravovaných zařízeních se systémem iOS. Tato zpráva obsahuje seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS.
+You can customize the privacy statement that appears for your organization on managed iOS devices. This message lists the items that your organization can't see or do on managed iOS devices.
 
-V části **portál společnosti přizpůsobení** > **Správa zařízení a zpráva o ochraně osobních údajů**můžete:
+Under **Company Portal customization** > **Device management and privacy message**, you can:
 
-- Přijměte **výchozí hodnotu** pro použití seznamu, jak je uvedeno níže.
-- Zvolením možnosti **vlastní** upravíte seznam položek, které vaše organizace nemůže zobrazit nebo dělat na spravovaných zařízeních se systémem iOS. Pomocí [Markdownu](https://daringfireball.net/projects/markdown/) můžete přidat odrážky, tučné písmo, kurzívu a odkazy.
+- Accept the **Default** to use the list as shown, or
+- Choose **Custom** to customize the the list of items that your organization can’t see or do on managed iOS devices. You can use [markdown](https://daringfireball.net/projects/markdown/) to add bullets, bolding, italics, and links.
 
-## <a name="company-portal-derived-credentials-for-ios-devices"></a>Portál společnosti odvozené přihlašovací údaje pro zařízení s iOS
-Intune podporuje ověřování osobních identit (PIV) a služby Common Access Card (CAC) odvozené přihlašovací údaje v partnerství s poskytovateli přihlašovacích údajů DISA purebred, Entrust Datacard a Intercede. Koncoví uživatelé procházejí dalšími kroky po registraci zařízení se systémem iOS, aby ověřili jejich identitu v aplikaci Portál společnosti. Odvozená pověření budou pro uživatele povolena tím, že nejprve nastaví poskytovatele pověření pro vašeho tenanta a pak zacílíte na profil, který používá odvozená pověření pro uživatele nebo zařízení.
+## <a name="company-portal-derived-credentials-for-ios-devices"></a>Company Portal derived credentials for iOS devices
+Intune supports Personal Identity Verification (PIV) and Common Access Card (CAC) Derived Credentials in partnership with credential providers DISA Purebred, Entrust Datacard, and Intercede. End users will go through additional steps post-enrollment of their iOS device to verify their identity in the Company Portal application. Derived Credentials will be enabled for users by first setting up a credential provider for your tenant, then targeting a profile that uses Derived Credentials to users or devices.
 
 > [!NOTE]
-> Uživateli se zobrazí pokyny k odvozeným přihlašovacím údajům na základě odkazu, který jste zadali přes Intune.
+> The user will see instructions about derived credentials based on the link that you have specified via Intune.
 
-Další informace o odvozených přihlašovacích údajích pro zařízení s iOS najdete v tématu [použití odvozených přihlašovacích údajů v Microsoft Intune](~/protect/derived-credentials.md).
+For more information about derived credentials for iOS devices, see [Use derived credentials in Microsoft Intune](~/protect/derived-credentials.md).
 
-## <a name="dark-mode-for-ios-company-portal"></a>Tmavý režim pro iOS Portál společnosti
+## <a name="dark-mode-for-ios-company-portal"></a>Dark Mode for iOS Company Portal
 
-Pro iOS Portál společnosti je k dispozici tmavý režim. Uživatelé můžou stahovat firemní aplikace, spravovat jejich zařízení a získávat v nich podporu v barevném schématu podle nastavení zařízení. Portál společnosti pro iOS bude automaticky odpovídat nastavení zařízení koncového uživatele pro tmavý nebo lehký režim. 
+Dark Mode is available for the iOS Company Portal. Users can download company apps, manage their devices, and get IT support in the color scheme of their choice based on device settings. The iOS Company Portal will automatically match the end user's device settings for dark or light mode. 
 
 ## <a name="windows-company-portal-keyboard-shortcuts"></a>Klávesové zkratky v Portálu společnosti pro Windows
 
-Koncoví uživatelé mohou aktivovat akce navigace, aplikace a zařízení ve Windows Portál společnosti pomocí klávesových zkratek (akcelerátory).
+End users can trigger navigation, app, and device actions in the Windows Company Portal using keyboard shortcuts (accelerators).
 
 V aplikaci Portál společnosti pro Windows jsou k dispozici následující klávesové zkratky.
 
-| Oblast | Description | Klávesová zkratka |
+| Oblast | Description | Keyboard shortcut |
 |:------------------:|:--------------:|:-----------------:|
-| Navigační nabídka | Cházení | ALT + M |
-|  | Domů | ALT + H |
-|  | Všechny aplikace | ALT + A |
+| Navigační nabídka | Navigation | Alt+M |
+|  | Domů | Alt+H |
+|  | Všechny aplikace | Alt+A |
 |  | Nainstalované aplikace | Alt+I |
-|  | Váš názor | ALT + F |
-|  | Můj profil | ALT + U |
-|  | Nastavení | Alt + T |
+|  | Váš názor | Alt+F |
+|  | Můj profil | Alt+U |
+|  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
@@ -163,45 +163,45 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti aplikace | Install | Ctrl+I |
-| Zařízení | K dispozici | CTRL + D |
+| Zařízení | K dispozici | Ctrl+D |
 
-Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.
+End users will also be able to see the available shortcuts in the Windows Company Portal app.
 
-![Snímek obrazovky s dostupnými zástupci ve Windows Portál společnosti](./media/company-portal-app/company-portal-app-01.png)
+![Screenshot of the available shortcuts in the Windows Company Portal](./media/company-portal-app/company-portal-app-01.png)
 
-## <a name="user-self-service-device-actions-from-the-company-portal"></a>Akce zařízení Samoobslužná služba uživatele z Portál společnosti
+## <a name="user-self-service-device-actions-from-the-company-portal"></a>User self-service device actions from the Company Portal
 
-Uživatelé můžou na svých místních nebo vzdálených zařízeních provádět akce pomocí Portál společnosti aplikace nebo webu. Akce, které může uživatel provádět, se liší v závislosti na platformě a konfiguraci zařízení. Ve všech případech můžou akce se vzdáleným zařízením provádět jenom primární uživatel zařízení.
-- **Vyřadit** – odebere zařízení ze správy Intune. V aplikaci Portál společnosti a na webu se zobrazuje jako **Remove (odebrat**).
-- **Vymazat** – Tato akce zahájí resetování zařízení. Na webu portál společnosti se zobrazuje jako **resetování**nebo **obnovení továrního nastavení** v aplikaci Portál společnosti pro iOS.
-- **Přejmenovat** – Tato akce změní název zařízení, které může uživatel vidět v portál společnosti. Nemění název místního zařízení, pouze výpis v Portál společnosti.
-- **Synchronizovat** – Tato akce zahájí vrácení se změnami zařízení se službou Intune. Zobrazí se jako **stav kontroly** v portál společnosti.
-- **Remote Lock** – zablokuje zařízení a vyžaduje ho k odemknutí.
-- **Resetování hesla** – Tato akce se používá k resetování hesla zařízení. V zařízeních se systémem iOS se heslo odebere a koncový uživatel bude muset zadat nový kód v nastavení. V podporovaných zařízeních s Androidem Intune vygeneruje nové heslo a dočasně se zobrazí v Portál společnosti.
-- **Obnovení klíčů** – Tato akce se používá k obnovení osobního obnovovacího klíče pro šifrovaná zařízení MacOS z webu portál společnosti. 
+Users can perform actions on their local or remote devices via the Company Portal app or Website. The actions that a user can perform varies based on device platform and configuration. In all cases, the remote device actions can only be performed by device’s Primary User.
+- **Retire** – Removes the device from Intune Management. In the company portal app and website, this shows as **Remove**.
+- **Wipe** – This action initiates a device reset. In the company portal website this is shown as **Reset**, or **Factory Reset** in the iOS Company Portal App.
+- **Rename** – This action changes the device name that the user can see in the Company Portal. It does not change the local device name, only the listing in the Company Portal.
+- **Sync** – This action initiates a device check-in with the Intune service. This shows as **Check Status** in the Company Portal.
+- **Remote Lock** – This locks the device, requiring a PIN to unlock it.
+- **Reset Passcode** – This action is used to reset device passcode. On iOS devices the passcode will be removed and the end user will be required to enter a new code in settings. On supported Android devices, a new passcode is generated by Intune and temporarily displayed in the Company Portal.
+- **Key Recovery** – This action is used to recover a personal recovery key for encrypted macOS devices from the Company Portal website. 
 
-### <a name="self-service-actions"></a>Akce samoobslužných služeb
+### <a name="self-service-actions"></a>Self Service Actions
 
-Některé platformy a konfigurace neumožňují akce zařízení samoobslužné služby. V této tabulce najdete další podrobnosti o akcích samoobslužných služeb:
+Some platforms and configurations do not allow self-service device actions. This table below provides further details about self service actions:
 
 |  | Windows 10<sup>(3)</sup> | iOS/iPadOS<sup>(3)</sup> | MacOS<sup>(3)</sup> | Android<sup>(3)</sup> |
 |----------------------|--------------------------|-------------------|-----------------------------------|-------------------------|
-| Vyřazení | K dispozici<sup>(1)</sup> | K dispozici | K dispozici | K dispozici<sup>(7)</sup> |
-| Vymazání | K dispozici | K dispozici<sup>(5)</sup> | NÁ | K dispozici<sup>(7)</sup> |
-| Přejmenovat<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
-| Brání | K dispozici | K dispozici | K dispozici | K dispozici |
-| Vzdálené uzamčení | Pouze Windows Phone | K dispozici | K dispozici | K dispozici |
-| Resetovat heslo | Pouze Windows Phone | K dispozici<sup>(8)</sup> | NÁ | K dispozici<sup>(6)</sup> |
-| Obnovení klíče | NÁ | NÁ | K dispozici<sup>(2)</sup> | NÁ |
+| Vyřazení | Available<sup>(1)</sup> | K dispozici | K dispozici | Available<sup>(7)</sup> |
+| Vymazání | K dispozici | Available<sup>(5)</sup> | NA | Available<sup>(7)</sup> |
+| Rename<sup>(4)</sup> | K dispozici | K dispozici | K dispozici | K dispozici |
+| Sync | K dispozici | K dispozici | K dispozici | K dispozici |
+| Vzdálené uzamčení | Windows Phone only | K dispozici | K dispozici | K dispozici |
+| Reset Passcode | Windows Phone only | Available<sup>(8)</sup> | NA | Available<sup>(6)</sup> |
+| Key Recovery | NA | NA | Available<sup>(2)</sup> | NA |
 
-<sup>(1)</sup> **vyřazení** je vždycky blokované na zařízeních s Windows připojená k Azure AD.<br>
-<sup>(2)</sup> **obnovení klíče** pro MacOS je dostupné jenom přes webový portál.<br>
-<sup>(3)</sup> Pokud používáte registraci správce registrace zařízení, jsou všechny vzdálené akce zakázané.<br>
-<sup>(4)</sup> **přejmenování** změní pouze název zařízení v portál společnosti aplikaci nebo webovém portálu, nikoli na zařízení.<br>
-<sup>(5)</sup> **vymazání** není k dispozici na uživatelem zaregistrovaných zařízeních iOS.<br>
-<sup>(6)</sup> **resetování hesla** není podporované u některých konfigurací pro Android a Android Enterprise. Další informace najdete v tématu [resetování nebo odebrání hesla zařízení v Intune](../remote-actions/device-passcode-reset.md).<br>
-<sup>(7)</sup> **vyřazení** a **vymazání** nejsou k dispozici ve scénářích pro vlastníky zařízení s Androidem Enterprise (odolat, Cobo, COSU).<br> 
-<sup>(8)</sup> **resetování hesla** není u zaregistrovaných zařízení se systémem iOS podporované uživatelem.
+<sup>(1)</sup> **Retire** is always blocked on Azure AD Joined Windows devices.<br>
+<sup>(2)</sup> **Key Recovery** for MacOS is only available via the Web Portal.<br>
+<sup>(3)</sup> All remote actions are disabled if using a Device Enrollment Manager enrollment.<br>
+<sup>(4)</sup> **Rename** only changes the device name in the Company Portal app or Web Portal, not on the device.<br>
+<sup>(5)</sup> **Wipe** is not available on User Enrolled iOS devices.<br>
+<sup>(6)</sup> **Reset Passcode** is not supported on some Android and Android Enterprise configurations. For more information, see [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md).<br>
+<sup>(7)</sup> **Retire** and **Wipe** are not available on Android Enterprise Device Owner scenarios (COPE, COBO, COSU).<br> 
+<sup>(8)</sup> **Reset Passcode** is not supported on User Enrolled iOS devices.
 
 ## <a name="next-steps"></a>Další kroky
 

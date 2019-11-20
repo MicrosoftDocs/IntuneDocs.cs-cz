@@ -1,7 +1,7 @@
 ---
-title: Podmíněný přístup s Microsoft Intune
+title: Conditional Access with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Naučte se v Microsoft Intune definovat podmínky, které uživatelé, zařízení a aplikace musí splnit, aby měli přístup k firemním prostředkům.
+description: Learn how to define the conditions that users, devices, and apps must meet to access company resources in Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,52 +17,50 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fb9dd31c87d27ec7885d25269988cfd968e81e08
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 179d135ee8e216495cd7435bf38d8087e5c990e8
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72504560"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188277"
 ---
-# <a name="learn-about-conditional-access-and-intune"></a>Další informace o podmíněném přístupu a Intune
+# <a name="learn-about-conditional-access-and-intune"></a>Learn about Conditional Access and Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+With Conditional Access, you can control the devices and apps that can connect to your email and company resources. 
 
-Podmíněný přístup označuje způsoby, kterými můžete řídit zařízení a aplikace, které se můžou připojovat k e-mailu a prostředkům společnosti. V tomto tématu se dozvíte o podmíněném přístupu založeném na zařízeních a aplikacích a najdete běžné scénáře použití podmíněného přístupu s Intune.
-
-Podmíněný přístup v rámci Enterprise Mobility + Security (EMS) není samostatný produkt, ale řešení podílející se na všech službách a produktech, které jsou součástí EMS. Nabízí podrobné řízení přístupu za účelem zabezpečení vašich podnikových dat a současně uživatelům poskytuje prostředí, které jim umožňuje co nejlépe pracovat na všech zařízeních a odkudkoli.
+Enterprise Mobility + Security (EMS)  is not a standalone product. It's a solution that takes part on all services and products that are part of EMS. Conditional Access provides granular access control to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
 
 Můžete definovat podmínky, které omezují přístup k podnikovým datům podle polohy, zařízení, stavu uživatele a „choulostivosti“ aplikace.
 
-> [!NOTE] 
+> [!NOTE]
 > Podmíněný přístup také rozšiřuje své možnosti na [služby Office 365](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
 
-![Diagram architektury podmíněného přístupu](./media/conditional-access/ca-diagram-1.png)
+![Conditional Access diagram](./media/conditional-access/ca-diagram-1.png)
 
-## <a name="use-conditional-access-with-intune"></a>Použití podmíněného přístupu s Intune
+## <a name="use-conditional-access-with-intune"></a>Use Conditional Access with Intune
 
-Podmíněný přístup je Azure Active Directory funkce, která je součástí licence Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
+Conditional Access is an Azure Active Directory capability that is included with an Azure Active Directory Premium license. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
 
-![Intune a podmíněný přístup při použití EMS](./media/conditional-access/intune-with-ca-1.png)
+![Intune and Conditional Access when using EMS](./media/conditional-access/intune-with-ca-1.png)
 
-Způsoby použití podmíněného přístupu s Intune:
+Ways to use Conditional Access with Intune:
 
-- **Podmíněný přístup podle zařízení**
+- **Device-based Conditional Access**
 
-  - Podmíněný přístup pro místní Exchange
+  - Conditional Access for Exchange on-premises
 
-  - Podmíněný přístup na základě řízení přístupu k síti
+  - Conditional Access based on network access control
 
-  - Podmíněný přístup na základě rizika zařízení
+  - Conditional Access based on device risk
 
-  - Podmíněný přístup pro počítače s Windows
+  - Conditional Access for Windows PCs
 
     - Ve vlastnictví firmy
 
     - Přineste si vlastní zařízení (BYOD)
 
-- **Podmíněný přístup na základě aplikace**
+- **App-based Conditional Access**
 
 ## <a name="next-steps"></a>Další kroky
 
-[Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)
+[Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)

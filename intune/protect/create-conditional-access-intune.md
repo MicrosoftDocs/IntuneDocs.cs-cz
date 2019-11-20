@@ -1,12 +1,12 @@
 ---
-title: Nastavení podmíněného přístupu na základě zařízení s Intune
+title: Set up device-based Conditional Access with Intune
 titleSuffix: Microsoft Intune
-description: Naučte se vytvářet zásady podmíněného přístupu na základě zařízení, které jsou založené na Microsoft Intune dodržování předpisů zařízením a správu mobilních aplikací.
+description: Learn how to create a device-based Conditional Access policy based on Microsoft Intune device compliance and mobile app management.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/22/2019
+ms.date: 11/18/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,85 +17,100 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b775bb09c289733cdc2837984874b7c1c7e286bc
-ms.sourcegitcommit: 1a5b185acd27954b10b6d59409d82eb80fd71284
+ms.openlocfilehash: fde15da898a70e9557aabb9ed7a7ae8324cfb304
+ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72681371"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188351"
 ---
-# <a name="create-a-device-based-conditional-access-policy"></a>Vytvoření zásady podmíněného přístupu na základě zařízení
+# <a name="create-a-device-based-conditional-access-policy"></a>Create a device-based Conditional Access policy
 
-S Intune můžete vylepšit podmíněný přístup v Azure Active Directory tím, že do ovládacích prvků přístupu přidáte dodržování předpisů pro mobilní zařízení. Jakmile vytvoříte zásady dodržování předpisů Intune, které definují požadavky na dodržování předpisů pro zařízení, můžete použít stav dodržování předpisů zařízení, abyste povolili nebo zablokovali přístup k vašim aplikacím a službám. Můžete to udělat tak, že vytvoříte zásadu podmíněného přístupu, která používá nastavení **vyžadovat, aby zařízení bylo označené jako vyhovující**.  
+With Intune, enhance Conditional Access in Azure Active Directory by adding mobile device compliance to the access controls. With Intune compliance policy that defines requirements for devices to be compliant, you can use a device’s compliance status to either allow or block access to your apps and services. You can do this by creating a Conditional Access policy that uses the setting **Require device to be marked as compliant**.
 
-Zásady podmíněného přístupu určují aplikace nebo služby, které chcete chránit, podmínky, za kterých se mají přistupovat k aplikacím nebo službám, a uživatele, na které se zásady vztahují. Podmíněný přístup je funkce Azure AD Premium, která se dá nakonfigurovat v Azure Active Directory, ale můžete si na portálu Intune nastavit i stejné zásady. Uzel podmíněného přístupu, ke kterému se přistupuje z *Intune*, je stejný uzel, ke kterému se přistupuje z *Azure AD*.  
+A Conditional Access policy specifies the app or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to. Although Conditional Access is an Azure AD premium feature, the Conditional Access node you access from *Intune* is the same node as accessed from *Azure AD*.
 
 > [!IMPORTANT]
-> Před nastavením podmíněného přístupu budete muset nastavit zásady dodržování předpisů zařízením v Intune, které budou vyhodnocovat zařízení na základě toho, jestli splňují konkrétní požadavky. Přečtěte si téma Začínáme [se zásadami dodržování předpisů zařízeními v Intune](device-compliance-get-started.md).
+> Before you set up Conditional Access, you'll need to set up Intune device compliance policies to evaluate devices based on whether they meet specific requirements. See [Get started with device compliance policies in Intune](device-compliance-get-started.md).
 
-## <a name="create-conditional-access-policy"></a>Vytvořit zásady podmíněného přístupu
+## <a name="create-conditional-access-policy"></a>Create Conditional Access policy
 
-1. Na portálu Intune vyberte**zásady** **podmíněného přístupu** >   > **nové zásady**.
-   
-    ![Vytvořit nové zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca.png)
- 
-2. V části **Přiřazení** vyberte **Uživatelé a skupiny**. 
-3. Na kartě **Zahrnout** Určete uživatele nebo skupiny, kterým chcete uplatnit tyto zásady podmíněného přístupu. Jakmile se rozhodnete, kterou chcete zahrnout, můžete použít kartu **vyloučit** , pokud existují uživatelé, role nebo skupiny, které chcete vyloučit z těchto zásad.  
-    - **Všichni uživatelé**: tuto možnost vyberte, pokud chcete zásady použít pro všechny uživatele a skupiny, včetně interních uživatelů a uživatelů typu Host.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **Conditional Access** > **Policies** > **New policy**.
+  ![Create a new Conditional Access policy](./media/create-conditional-access-intune/create-ca.png)
+
+3. V části **Přiřazení** vyberte **Uživatelé a skupiny**.
+
+4. On the **Include** tab, identify the users or groups that this Conditional Access policy applies to. Once you’ve chosen groups or users to include, use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
+
+   - **All users**: Select this option to apply the policy to all users and groups, including internal and guest users.
+
+   - **Select users and groups**: Select this option and specify one or more of the following options:
   
-    - **Vyberte uživatelé a skupiny**: Vyberte tuto možnost a zadejte jednu nebo více z následujících možností:
-  
-      a. **Všichni uživatelé typu Host**: tuto možnost vyberte, pokud chcete zahrnout nebo vyloučit externí uživatele typu Host (například partneři, externí spolupracovníci).
-       
-      b. **Role adresáře**: vyberte jednu nebo více rolí Azure AD, chcete-li zahrnout nebo vyloučit uživatele, kteří jsou přiřazeni k těmto rolím.
-      
-      c. **Uživatelé a skupiny**: tuto možnost vyberte, pokud chcete hledat a vybrat jednotlivé uživatele nebo skupiny, které chcete zahrnout nebo vyloučit.
-     
-       > [!TIP]  
-       > Otestujte zásadu s menší skupinou uživatelů, abyste se ujistili, že funguje podle očekávání.
-4. Vyberte **Hotovo**.
-5. V části **Přiřazení** vyberte **Cloudové aplikace**. 
-6. Na **kartě zahrnout**určete aplikace a služby, které chcete chránit pomocí těchto zásad podmíněného přístupu. Pak můžete použít kartu **vyloučit** , pokud existují nějaké aplikace nebo služby, které chcete z této zásady vyloučit.
-    - **Všechny cloudové aplikace**: tuto možnost vyberte, pokud chcete zásady použít pro všechny aplikace.
-      > [!IMPORTANT]  
-      > V tomto seznamu je obsažena aplikace Microsoft Azure Management pro přístup k Azure Portal. Nezapomeňte použít kartu **vyloučit** buď zde, nebo v možnostech **uživatelů a skupin** , abyste se ujistili, že jste (nebo uživatelé nebo skupiny, které určíte), se budou moci přihlásit k Azure Portal. 
+     1. **All guest users**: Select this option to include or exclude external guest users (for example, partners, external collaborators)
 
-    - **Vybrat aplikace**: Vyberte tuto možnost, zvolte **Vybrat**a pak pomocí seznamu aplikace vyhledejte a vyberte aplikace nebo služby, které chcete chránit.
-    
-      ![Konfigurace přiřazení pro zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-select-apps.png)
+     2. **Directory roles**: Select one or more Azure AD roles to include or exclude users who are assigned these roles.
 
-7. Vyberte **Hotovo**.
-8. V části **přiřazení**vyberte **podmínky**.
-    - **Riziko přihlášení**: zvolte Ano, pokud chcete s touto zásadou Azure AD Identity Protection zjišťování rizik při přihlašování, a pak zvolte úrovně rizika přihlašování, na které se zásady mají vztahovat.
-    - **Platformy zařízení**: na kartě **Zahrnout** určete platformy zařízení, pro které chcete tyto zásady podmíněného přístupu použít. K vyloučení platforem z této zásady použijte kartu **vyloučit** .
-    - **Umístění**: na kartě **Zahrnout** určete, jestli se zásada vztahuje na jakékoli umístění, důvěryhodná síťová umístění, která jsou pod kontrolou vašeho oddělení IT, nebo specifická umístění v síti. Pomocí karty **vyloučit** z těchto zásad vylučte síťová umístění. 
-    - **Klientské aplikace**: Pokud chcete určit, jestli se má zásada vztahovat na aplikace prohlížeče, mobilní aplikace a desktopové klienty, zvolte **Ano** . Můžete také vybrat **moderní ověřovací klienty** (například Outlook pro iOS nebo Outlook pro Android) a **klienty Exchange ActiveSync**.
-    - **Stav zařízení**: zásady podmíněného přístupu se použijí na všechny stavy zařízení, pokud nevyberete Ano a výslovně vyloučíte stav zařízení, připojené k hybridní službě Azure AD nebo zařízení označené jako kompatibilní (nebo obojí).
-    
-      ![Nastavení podmínek pro zásady podmíněného přístupu](./media/create-conditional-access-intune/create-ca-device-platforms.png)
+     3. **Users and groups**: Select this option to search for and select individual users or groups you want include or exclude.
 
-      > [!TIP]  
-      > Pokud chcete chránit oba klienty pro **moderní ověřování** i **klienty Exchange ActiveSync**, vytvořte dvě samostatné zásady podmíněného přístupu, jednu pro každý typ klienta. I když Exchange ActiveSync podporuje moderní ověřování, jediná podmínka, kterou podporuje Exchange ActiveSync, je platforma. Další podmínky, včetně Multi-Factor Authentication, se nepodporují. Pokud chcete efektivně chránit přístup k Exchangi Online z Exchange ActiveSync, vytvořte zásadu podmíněného přístupu, která určuje cloudovou aplikaci Office 365 Exchange Online a klientskou aplikaci Exchange ActiveSync se zásadami použít jenom pro vybrané podporované platformy.
+        > [!TIP]
+        > Test the policy against a smaller group of users to make sure it works as expected.
+
+5. Vyberte **Hotovo**.
+
+6. Under **Assignments**, select **Cloud apps or actions**.
+
+7. On the **Include** tab, use available options to identify the apps and services you want to protect with this Conditional Access policy. Then you can use the **Exclude** tab if there are any apps or services you want to exclude from this policy.
+
+   - **All cloud apps**: Select this option to apply the policy to all apps.
+     > [!IMPORTANT]
+     > The Microsoft Azure Management app for access to the Azure portal is included in this list. Be sure to use the **Exclude** tab either here or in the **Users and groups** options to make sure you (or the users or groups you designate) will be able to sign in to the Azure portal. 
+
+   - **Select apps**: Select this option, choose **Select**, and then use the applications list to search for and select the apps or services you want to protect.
+
+   When ready, select **Done**.
+
+8. Under **Assignments**, select **Conditions**.
+
+   - **Sign-in risk**: Select *Yes* to use Azure AD Identity Protection sign-in risk detection with this policy, and then choose the sign-in risk levels the policy should apply to.
+
+   - **Device platforms**: On the **Include** tab, identify the device platforms you want to this Conditional Access policy to apply to. Use the **Exclude** tab to exclude platforms from this policy.
+
+   - **Locations**: On the **Include** tab, specify whether the policy applies to:
+     - Any location
+     - Trusted network locations that are under the control of your IT department
+     - Specific network locations.
+
+     Use the **Exclude** tab to exclude network locations from this policy.
+
+   - **Client apps**: Select *Yes* to specify if the policy should apply to browser apps, mobile apps, and desktop clients.
+
+   - **Device state**: The Conditional Access policy will apply to all device states unless you choose Yes and specifically exclude the states Device Hybrid Azure AD joined or Device marked as compliant (or both).
+
+     > [!TIP]
+     > If you want to protect both **Modern authentication** clients and **Exchange ActiveSync clients**, create two separate Conditional Access policies, one for each client type. Although Exchange ActiveSync supports modern authentication, the only condition that is supported by Exchange ActiveSync is platform. Other conditions, including multi-factor authentication, are not supported. To effectively protect access to Exchange Online from Exchange ActiveSync, create a Conditional Access policy that specifies the cloud app Office 365 Exchange Online and the client app Exchange ActiveSync with Apply policy only to supported platforms selected.
 
 9. Vyberte **Hotovo**.
-10. V části **Ovládací prvky přístupu** zvolte **Udělení**. Nakonfigurujte, co se stane na základě podmínek, které jste nastavili.  Můžete vybrat z následujících možností:
-    - **Blokovat přístup**: uživatelům zadaným v této zásadě bude odepřen přístup k aplikacím za podmínek, které jste zadali.
-    - **Udělení přístupu**: uživatelům zadaným v této zásadě se udělí přístup, ale můžete potřebovat některou z následujících akcí:
-      - **Vyžadovat vícefaktorové ověřování**: uživatel bude muset provést další požadavky na zabezpečení, jako je telefonní hovor nebo text.
-      - **Vyžadovat, aby zařízení bylo označené jako vyhovující**: zařízení musí být kompatibilní s Intune. Pokud zařízení nedodržuje předpisy, zobrazí se uživateli možnost zaregistrovat zařízení v Intune. 
-      - **Vyžadovat zařízení připojené k hybridní službě Azure AD**: zařízení musí být připojená k hybridní službě Azure AD.
-      - **Vyžadovat schválenou klientskou aplikaci**: zařízení musí používat schválené klientské aplikace. 
-      - **Pro více ovládacích prvků**: vyberte **vyžadovat všechny vybrané ovládací prvky** , aby všechny výše uvedené požadavky byly vynucené, když se zařízení pokusí o přístup k aplikaci.
-    
-      ![Nastavení udělení řízení přístupu](./media/create-conditional-access-intune/create-ca-grant-access-settings.png)
- 
+
+10. V části **Ovládací prvky přístupu** zvolte **Udělení**. Configure what happens based on the conditions you’ve set up.  You can select from the following options:
+
+    - **Block access**: The users specified in this policy will be denied access to the apps under the conditions you’ve specified.
+    - **Grant access**: The users specified in this policy will be granted access, but you can require any of the following further actions:
+      - **Require multi-factor authentication**: The user will need to complete additional security requirements, like a phone call or text.
+      - **Require device to be marked as compliant**: The device must be Intune compliant. If the device is noncompliant, the user will be given the option to enroll the device in Intune.
+      - **Require Hybrid Azure AD joined device**: Devices must be Hybrid Azure AD joined.
+      - **Require approved client app**: The device must use approved client apps. 
+      - **For multiple controls**: Select **Require all the selected controls** so that all of the requirements are enforced when a device attempts to access the app.
+
+      ![Access controls Grant settings](./media/create-conditional-access-intune/create-ca-grant-access-settings.png)
+
 11. V části **Povolit zásadu** vyberte **Zapnuto**.
-     
-     ![Povolit zásadu](./media/create-conditional-access-intune/enable-policy.png)
 
 12. Vyberte **Vytvořit**.
 
-## <a name="see-also"></a>Související témata
-[Podmíněný přístup na základě aplikace s Intune](app-based-conditional-access-intune.md)
+## <a name="next-steps"></a>Další kroky
 
-[Řešení potíží s podmíněným přístupem Intune](https://support.microsoft.com/help/4456106)
+[App-based Conditional Access with Intune](app-based-conditional-access-intune.md)
+
+[Troubleshooting Intune Conditional Access](https://support.microsoft.com/help/4456106)
