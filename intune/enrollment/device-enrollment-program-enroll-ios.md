@@ -18,20 +18,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 99d946366724b03ecdf5c47d8ba7b1d820ed3055
-ms.sourcegitcommit: 15e099a9a1e18296580bb345610aee7cc4acd126
+ms.openlocfilehash: 55fc7149d23336519af76c423862bd81f065b88f
+ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164726"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239239"
 ---
 # <a name="automatically-enroll-ios-devices-with-apples-device-enrollment-program"></a>Automatická registrace zařízení s iOSem pomocí Programu registrace zařízení společnosti Apple
 
 Můžete nastavit Intune k registraci zařízení s iOS zakoupených prostřednictvím programu Apple [program registrace zařízení (DEP)](https://deploy.apple.com). DEP umožňuje registrovat velké počty zařízení, aniž byste je museli přitýkat. Zařízení jako iPhone a iPady můžou být dodávána přímo uživatelům. Když uživatel zařízení zapne, Pomocník s nastavením provede předem nakonfigurovaná nastavení a zařízení se zaregistruje ke správě.
 
-Registraci do programu DEP můžete povolit na portálu Intune i na portálu DEP společnosti Apple. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace.
-
-Zápis DEP se způsobem nepracuje se [správcem registrace zařízení](device-enrollment-manager-enroll.md).
+Registraci do programu DEP můžete povolit na portálu Intune i na portálu DEP společnosti Apple. Abyste mohli zařízení přiřadit do Intune ke správě, potřebujete seznam sériových čísel nebo čísla nákupních objednávek. Vytvoříte registrační profily DEP obsahující nastavení aplikovaná na zařízení během registrace. Všimněte si, že registraci DEP nelze použít s účtem [správce registrace zařízení](device-enrollment-manager-enroll.md) .
 
 > [!NOTE]
 > DEP nastaví konfigurace zařízení, které nemůže koncový uživatel odebrat. Před [migrací na DEP](../fundamentals/migration-guide-considerations.md)se proto musí zařízení vymazat, aby se vrátilo do předem připraveného (nového) stavu.
@@ -56,7 +54,7 @@ Podpora zařízení registrovaných v programu DEP, která nejsou pod dohledem, 
 4. [Assign DEP profile to devices](#assign-an-enrollment-profile-to-devices)
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 - Zařízení zakoupená v [Programu registrace zařízení společnosti Apple](http://deploy.apple.com)
 - [Autorita pro správu mobilních zařízení (MDM)](../fundamentals/mdm-authority-set.md)
 - [Certifikát Apple MDM Push Certificate](apple-mdm-push-certificate-get.md)
@@ -70,7 +68,7 @@ Token DEP vytvoříte pomocí portálu DEP společnosti Apple. Pomocí portálu 
 > [!NOTE]
 > Když token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token DEP Apple. Token DEP můžete z portálu Azure Portal znovu odstranit.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > **Přidat**.
 
@@ -105,13 +103,13 @@ Token DEP vytvoříte pomocí portálu DEP společnosti Apple. Pomocí portálu 
 
    Na portálu Apple přejděte na **Programy nasazení** &gt; **Program registrace zařízení** &gt; **Zobrazit historii přiřazení**. Zobrazí se seznam zařízení s přiřazeným serverem MDM.
 
-### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3: Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
+### <a name="step-3-save-the-apple-id-used-to-create-this-token"></a>Krok 3. Uložte si Apple ID, které jste použili k vytvoření tohoto tokenu.
 
 V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)zadejte Apple ID pro budoucí referenci.
 
 ![Snímek obrazovky s Apple ID použitým k vytvoření tokenu programu registrace a přechodem na token programu registrace](./media/device-enrollment-program-enroll-ios/image03.png)
 
-### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4: Nahrajte token a vyberte značky oboru.
+### <a name="step-4-upload-your-token-and-choose-scope-tags"></a>Krok 4. Nahrajte token a vyberte značky oboru.
 
 1. V poli **token Apple** vyhledejte soubor certifikátu (. pem), vyberte **otevřít**.
 2. Pokud chcete pro tento token DEP použít [značky oboru](../fundamentals/scope-tags.md) , zvolte **rozsah (značky)** a vyberte požadované značky oboru. Značky oboru použité u tokenu budou děděny profily a zařízeními přidanými do tohoto tokenu.
@@ -132,7 +130,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     ![Snímek obrazovky pro vytvoření profilu](./media/device-enrollment-program-enroll-ios/image04.png)
 
-3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName pro přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
+3. Na stránce **základy** zadejte **název** a **Popis** profilu pro účely správy. Uživatelé tyto podrobnosti nevidí. Pole **Název** můžete využít k vytvoření dynamické skupiny v Azure Active Directory. Název profilu použijte k definování parametru enrollmentProfileName, který slouží k přiřazení zařízení s tímto registračním profilem. Přečtěte si další informace o [dynamických skupinách Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
     ![Název a popis profilu](./media/device-enrollment-program-enroll-ios/image05.png)
 
@@ -168,7 +166,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 
     Multi-Factor Authentication se nepodporuje v jednom zařízení uzamčeném v režimu jedné aplikace. Toto omezení existuje, protože zařízení nemůže přepnout na jinou aplikaci, aby bylo možné dokončit druhý faktor ověřování. Proto pokud chcete vícefaktorové ověřování na jednom zařízení v režimu aplikace, druhý faktor musí být na jiném zařízení.
 
-    Tato funkce je podporována pouze pro iOS 11.3.1 a novější.
+    Tato funkce je podporované jenom pro iOS 11.3.1 a novější.
 
    ![Snímek obrazovky režimu jedné aplikace](./media/device-enrollment-program-enroll-ios/single-app-mode.png)
 
@@ -199,7 +197,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
 15. Na stránce **vlastní nastavení Pomocníka s nastavením** nakonfigurujte následující nastavení profilu: ![přizpůsobení pomocníka s nastavením.](./media/device-enrollment-program-enroll-ios/setupassistantcustom.png)
 
 
-    | Nastavení oddělení | Description |
+    | Nastavení oddělení | Popis |
     |---|---|
     | <strong>Název oddělení</strong> | Zobrazí se, když uživatelé klepnou při aktivaci na <strong>O konfiguraci</strong>. |
     |    <strong>Telefon na oddělení</strong>     | Zobrazí se, když uživatel při aktivaci klikne na tlačítko <strong>Potřebuji nápovědu</strong>. |
@@ -222,7 +220,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Siri</strong> | Umožní uživateli nastavit Siri. |
     | <strong>Diagnostická data</strong> | Zobrazit obrazovku diagnostiky uživateli Tato obrazovka umožní uživateli poslat společnosti Apple diagnostická data. |
     | <strong>Zobrazit tónový displej</strong> | Poskytněte uživateli možnost zapnout tónový displej. |
-    | <strong>Důvěrnost</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
+    | <strong>Ochrana osobních údajů</strong> | Zobrazit obrazovku ochrany osobních údajů uživateli. |
     | <strong>Migrace pro Android</strong> | Poskytněte uživateli možnost migrovat datum ze zařízení s Androidem. |
     | <strong>iMessage a FaceTime</strong> | Poskytněte uživateli možnost nastavit iMessage a FaceTime. |
     | <strong>Registrace</strong> | Zobrazuje informační obrazovky pro vzdělávání uživatelů, jako je například titulní stránka a multitasking a řídicí centrum. |
@@ -230,7 +228,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
     | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
     | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. |
-    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení.|

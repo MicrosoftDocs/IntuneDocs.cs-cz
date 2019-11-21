@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/05/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,27 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae8bc7d5797a2ba6404331166e9d955bbb2fadf9
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 275b3961e87f0d0eda8299337fe3fb7ac89ef03b
+ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059581"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74261690"
 ---
 # <a name="assign-user-and-device-profiles-in-microsoft-intune"></a>Přiřazení profilů uživatelů a zařízení v Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Vytvoříte profil a zahrnete do něj všechna nastavení, která jste zadali. V dalším kroku nasadíte nebo "přiřadíte" profil k vašim skupinám uživatelů a zařízení Azure Active Directory (Azure AD). Po přiřazení uživatelé a zařízení obdrží váš profil a nastavení, které jste zadali, se použije.
 
 V tomto článku se dozvíte, jak přiřadit profil, a obsahuje některé informace o použití značek oboru v profilech.
 
 > [!NOTE]  
-> Když zásadu odeberete nebo už není přiřazená k zařízení, nastavení může zachovat stávající hodnotu. Nastavení se nevrátí na výchozí hodnotu. Chcete-li změnit nastavení na jinou hodnotu, vytvořte novou zásadu a přiřaďte ji.
+> Když je profil odebraný nebo už není přiřazený k zařízení, může nastavení zachovat stávající hodnotu. Nastavení se nevrátí na výchozí hodnotu. Chcete-li změnit nastavení na jinou hodnotu, vytvořte nový profil a přiřaďte ho.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-Ujistěte se, že máte odpovídající roli pro přiřazení zásad. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
+Ujistěte se, že máte odpovídající roli pro přiřazení profilů. Další informace najdete v tématu [řízení přístupu na základě role (RBAC) pomocí Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## <a name="assign-a-device-profile"></a>Přiřazení profilu zařízení
 
@@ -63,34 +61,66 @@ Pokud je tlačítko **vyhodnotit** zobrazené šedě, ujistěte se, že je profi
 
 Když vytváříte nebo aktualizujete profil, můžete do profilu přidat také značky oboru a pravidla použitelnosti.
 
-**Značky oboru** jsou skvělým způsobem, jak přiřadit a filtrovat zásady pro konkrétní skupiny, jako jsou lidské zdroje nebo všichni zaměstnanci s námi-NC. [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
+**Značky oboru** jsou skvělým způsobem, jak přiřadit a filtrovat profily pro konkrétní skupiny, jako jsou lidské zdroje nebo všichni zaměstnanci s námi-NC. [Pro distribuci použijte značky RBAC a Scope](../fundamentals/scope-tags.md) s více informacemi.
 
 Na zařízeních s Windows 10 můžete přidat **pravidla použitelnosti** , aby se profil mohl vztahovat jenom na konkrétní verzi operačního systému nebo na konkrétní edici Windows. [Pravidla použitelnosti](device-profile-create.md#applicability-rules) obsahují další informace.
 
+## <a name="user-groups-vs-device-groups"></a>Skupiny uživatelů a skupiny zařízení
+
+Mnoho uživatelů požaduje používání skupin uživatelů a kdy používat skupiny zařízení. Odpověď závisí na vašem cíli. Tady jsou některé doprovodné materiály, které vám pomohou začít.
+
+### <a name="device-groups"></a>Device groups
+
+Pokud chcete použít nastavení na zařízení bez ohledu na to, kdo je přihlášený, přiřaďte své profily ke skupině zařízení. Nastavení použitá pro skupiny zařízení vždy přecházejí na zařízení, nikoli na uživatele.
+
+Například:
+
+- Skupiny zařízení jsou užitečné ke správě zařízení, která nemají vyhrazeného uživatele. Máte například zařízení, která tisknou lístky, prohledává inventář, sdílí pracovní procesy, jsou přiřazeny k určitému skladu atd. Vložte tato zařízení do skupiny zařízení a přiřaďte své profily k této skupině zařízení.
+
+- Vytvoříte [profil Intune rozhraní DFCI (Device firmware Configuration Interface)](device-firmware-configuration-interface-windows.md) , který aktualizuje nastavení v systému BIOS. Například můžete nakonfigurovat tento profil, který zakáže fotoaparát zařízení, nebo uzamknout možnosti spouštění, aby uživatelé nemohli spustit jiný operační systém. Tento profil je dobrým scénářem, který se má přiřadit ke skupině zařízení.
+
+- Na některých specifických zařízeních s Windows vždycky chcete řídit některá nastavení Microsoft Edge bez ohledu na to, kdo zařízení používá. Například chcete blokovat všechna stahování, omezit všechny soubory cookie na aktuální relaci procházení a odstranit historii procházení. V tomto scénáři vložte tato konkrétní zařízení s Windows do skupiny zařízení. Pak vytvořte [v Intune šablonu pro správu](administrative-templates-windows.md), přidejte tato nastavení zařízení a přiřaďte tento profil ke skupině zařízení.
+
+Pokud si nejste vědomi, kdo se k zařízení přihlásil, nebo pokud je někdo přihlášený, můžete ho vytvořit pomocí skupin zařízení. Přejete si, aby na zařízení byla vždycky tato nastavení.
+
+### <a name="user-groups"></a>Skupiny uživatelů
+
+Nastavení profilu použité pro skupiny uživatelů vždycky přejdou na uživatele a při přihlášení ke svému množství zařízení se dostanete k uživateli. Pro uživatele je běžné mít mnoho zařízení, jako je například Surface pro práci, a osobní zařízení s iOS. A je normální pro uživatele, kteří mají přístup k e-mailu a jiným prostředkům organizace z těchto zařízení.
+
+Například:
+
+- Chcete umístit ikonu helpdesku pro všechny uživatele na všech svých zařízeních. V tomto scénáři vložte tyto uživatele do skupiny uživatelů a přiřaďte k této skupině uživatelů profil ikony helpdesku.
+- Uživatel dostane nové zařízení vlastněné organizací. Uživatel se k zařízení přihlásí pomocí svého doménového účtu. Zařízení se automaticky zaregistruje ve službě Azure AD a automaticky se spravuje přes Intune. Tento profil je dobrým scénářem, který se přiřadí skupině uživatelů.
+- Pokaždé, když se uživatel přihlásí k zařízení, budete chtít ovládat funkce v aplikacích, jako je třeba OneDrive nebo Office. V tomto scénáři přiřaďte nastavení profilu OneDrive nebo Office ke skupině uživatelů.
+
+  Například chcete v aplikacích Office zablokovat nedůvěryhodné ovládací prvky ActiveX. [V Intune můžete vytvořit šablonu pro správu](administrative-templates-windows.md), nakonfigurovat toto nastavení a potom tento profil přiřadit skupině uživatelů.
+
+Chcete-li vytvořit souhrn, použijte skupiny uživatelů, pokud chcete, aby nastavení a pravidla vždy přešly k uživateli bez ohledu na to, jaké zařízení používají.
+
 ## <a name="exclude-groups-from-a-profile-assignment"></a>Vyloučení skupin z přiřazení profilu
 
-Profily konfigurace zařízení v Intune umožňují zahrnout a vyloučit skupiny z přiřazení zásad.
+Profily konfigurace zařízení v Intune umožňují zahrnout a vyloučit skupiny z přiřazení profilu.
 
-Osvědčeným postupem je vytváření a přiřazování zásad konkrétně pro vaše skupiny uživatelů. A vytvořte a přiřaďte jiné zásady konkrétně pro vaše skupiny zařízení. Další informace o skupinách najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md).
+Osvědčeným postupem je vytvořit a přiřadit profily konkrétně pro vaše skupiny uživatelů. A vytvořte a přiřaďte různé profily konkrétně pro vaše skupiny zařízení. Další informace o skupinách najdete v tématu [Přidání skupin pro uspořádání uživatelů a zařízení](../fundamentals/groups-add.md).
 
-Když přiřadíte zásady, použijte následující tabulku při zahrnutí a vyloučení skupin. Značka zaškrtnutí znamená, že je přiřazení podporováno:
+Když přiřadíte profily, použijte následující tabulku při zahrnutí a vyloučení skupin. Značka zaškrtnutí znamená, že je přiřazení podporováno:
 
 ![Podporované možnosti zahrnují nebo vylučují skupiny z přiřazení profilu.](./media/device-profile-assign/include-exclude-user-device-groups.png)
 
-### <a name="what-you-should-know"></a>Co byste měli znát
+### <a name="what-you-should-know"></a>Co byste měli vědět
 
 - Vyloučení má přednost před zahrnutím do následujících scénářů stejného typu skupiny:
 
   - Zahrnutí skupin uživatelů a vyloučení skupin uživatelů
   - Zahrnutí skupin zařízení a vyloučení skupiny zařízení
 
-  Například přiřadíte profil zařízení skupině uživatelů **Všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** . Vzhledem k tomu, že obě skupiny jsou skupiny uživatelů, získají zásady **Všichni firemní uživatelé** s výjimkou **pracovníků hlavní správy** .
+  Například přiřadíte profil zařízení skupině uživatelů **Všichni firemní uživatelé** , ale vyloučíte členy ve skupině uživatelů **správce vyšších zaměstnanců** . Vzhledem k tomu, že obě skupiny jsou skupiny uživatelů, získá profil **Všichni firemní uživatelé** s výjimkou **pracovníků hlavní správy** .
 
-- Intune nevyhodnocuje vztahy mezi uživateli a zařízeními. Pokud přiřadíte zásady ke smíšeným skupinám, výsledky nemusí být to, co chcete, nebo očekávat.
+- Intune nevyhodnocuje vztahy mezi uživateli a zařízeními. Pokud přiřadíte profily ke smíšeným skupinám, výsledky nemusí být to, co chcete, nebo očekávat.
 
-  Například přiřadíte profil zařízení skupině uživatelů **Všichni uživatelé** , ale vyloučíte skupinu zařízení **všechna osobní zařízení** . V tomto kombinovaném přiřazení zásad skupiny získají **Všichni uživatelé** zásadu. Vyloučení nelze použít.
+  Například přiřadíte profil zařízení skupině uživatelů **Všichni uživatelé** , ale vyloučíte skupinu zařízení **všechna osobní zařízení** . V tomto přiřazení profilu smíšené skupiny získají **Všichni uživatelé** profil. Vyloučení nelze použít.
 
-  V důsledku toho se nedoporučuje přiřazování zásad ke smíšeným skupinám.
+  V důsledku toho se nedoporučuje přiřazovat profily ke smíšeným skupinám.
 
 ## <a name="next-steps"></a>Další kroky
 

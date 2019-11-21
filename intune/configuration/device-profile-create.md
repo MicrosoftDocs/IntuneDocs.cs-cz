@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/13/2019
+ms.date: 11/20/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -17,16 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02603651587837211d9a67d7e4bbeb90cb358dc5
-ms.sourcegitcommit: 78cebd3571fed72a3a99e9d33770ef3d932ae8ca
+ms.openlocfilehash: 694e2ae67ef2bf7795dcf63a03480fdaed8cfbc4
+ms.sourcegitcommit: 1a22b8b31424847d3c86590f00f56c5bc3de2eb5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74059563"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74261664"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Profily zařízení umožňují přidat a nakonfigurovat nastavení a potom tato nastavení nasdílet do zařízení ve vaší organizaci. Použití [funkcí a nastavení na vašich zařízeních pomocí profilů zařízení](device-profiles.md) obsahuje více podrobností, včetně toho, co můžete dělat.
 
@@ -54,7 +52,7 @@ V tomto článku najdete:
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
    - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-       - **Androidemem**
+       - **Android**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -72,7 +70,7 @@ V tomto článku najdete:
        - [Omezení zařízení](device-restrictions-configure.md)
        - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
        - [Školení](education-settings-configure.md)
-       - [Elektron](email-settings-configure.md)
+       - [E-mailu](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Ochrana identit](../protect/identity-protection-configure.md)  
        - [Veřejný terminál](kiosk-settings.md)
@@ -119,7 +117,7 @@ Chcete-li provést tuto úlohu, vytvořte **pravidlo použitelnosti**. Tato prav
 
 Pro přístup k těmto scénářům máte tyto možnosti:
 
-- Vytvořte skupinu zařízení, která zahrnuje všechna zařízení na Bellows škole. V profilu přidejte pravidlo použitelnosti, aby se naplatilo, pokud je minimální verze operačního systému `16299` a maximální verze `17134`. Přiřaďte tento profil ke skupině zařízení Bellows školy.
+- Vytvořte skupinu zařízení, která zahrnuje všechna zařízení na Bellows škole. V profilu přidejte pravidlo použitelnosti, aby se naplatilo, pokud je minimální verze operačního systému `16299` a že je `17134`maximální verze. Přiřaďte tento profil ke skupině zařízení Bellows školy.
 
   Po přiřazení se profil vztahuje na zařízení mezi minimální a maximální verzí, které zadáte. U zařízení, která nepatří mezi minimální a maximální verze, které zadáte, se jejich stav zobrazuje jako **nepoužitý**.
 
@@ -160,6 +158,32 @@ Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat j
 Intune používá ke kontrole aktualizací konfiguračních profilů různé aktualizační cykly. Pokud se zařízení nedávno zaregistrovalo, vrácení se změnami se spouští častěji. V [cyklech aktualizace zásad a profilů](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) se zobrazí odhadované časy aktualizace.
 
 Uživatelé mohou kdykoli otevřít aplikaci Portál společnosti a synchronizovat zařízení, aby ihned kontrolovala aktualizace profilu.
+
+## <a name="recommendations"></a>Doporučení
+
+Při vytváření profilů Vezměte v úvahu následující doporučení:
+
+- Pojmenujte své zásady, abyste věděli, co jsou a co dělají. Všechny [zásady dodržování předpisů](../protect/create-compliance-policy.md) a [konfigurační profily](../configuration/device-profile-create.md) mají volitelnou vlastnost **Description** . V **popisu**se jedná o konkrétní a zahrnuté informace, aby ostatní věděli, co zásady dělá.
+
+  Mezi příklady konfiguračních profilů patří:
+
+  **Název profilu**: Šablona správce – konfigurační profil OneDrivu pro všechny uživatele Windows 10  
+  **Popis profilu**: Profil šablony správce OneDrivu, který obsahuje minimální a základní nastavení pro všechny uživatele Windows 10. Vytvořeno pomocí user@contoso.com, aby uživatelé nemohli sdílet data organizace s osobními účty OneDrive.
+
+  **Název profilu**: profil VPN pro všechny uživatele iOS  
+  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS pro připojení k síti Contoso VPN. Vytvořeno pomocí user@contoso.com, aby se uživatelé k síti VPN automaticky ověřovali a místo toho byli vyzváni k zadání uživatelského jména a hesla.
+
+- Vytvořte svůj profil podle úkolu, jako je například konfigurace nastavení Microsoft Edge, povolení ochrany proti virům v programu Microsoft Defender, blokování zařízení s iOS s jailbreakem a tak dále.
+
+- Vytvářejte profily, které se vztahují na konkrétní skupiny, jako jsou marketing, prodej, správci IT nebo umístění nebo školní systém.
+
+- Samostatné zásady uživatele ze zásad zařízení.
+
+  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tato šablona ukazuje, jestli se nastavení vztahují na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
+
+  Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
+
+  ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 ## <a name="next-steps"></a>Další kroky
 

@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b3c82faab08248640e19573582ccbd232e0587d
-ms.sourcegitcommit: 5932da3ed8f52c7b0f0d71c1801f81c85952cf0c
+ms.openlocfilehash: 0012a80f0e9ea60b41c94a582e42d5f647c6bbc2
+ms.sourcegitcommit: cdb2a484b059bd8d8c3985cde1e883c24a4c1cad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72923352"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74239209"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Registrace zařízení v Intune pomocí účtu správce registrace zařízení
 
@@ -36,9 +36,10 @@ Pro uživatelské účty správce registrace zařízení a zařízení, která j
 - Uživateli účtu DEM musí být přiřazena licence Intune.
 - Zařízení nemůžete vymazat z Portálu společnosti. Zařízení zaregistrované pod účtem uživatele DEM nemůžete vymazat v Intune na webu Azure Portal.
 - V aplikaci nebo na webu Portál společnosti se zobrazí jenom místní zařízení.
-- Uživatelské účty DEM nemůžou používat aplikace z programu Apple Volume Purchase Program (VPP) s uživatelskou licencí Apple VPP, protože ke správě těchto aplikací potřebujete Apple ID jednotlivých uživatelů.
+- Uživatelské účty DEM nemůžou používat aplikace Apple Volume Purchase Program (VPP) s uživatelskými licencemi programu Apple VPP z důvodu požadavků na Apple ID pro jednotlivé uživatele pro správu aplikací.
+- Účty DEM nejde použít při registraci zařízení prostřednictvím programu Apple Program registrace zařízení (DEP).
 - Aplikace VPP je možné instalovat do zařízení, pokud tato zařízení mají licence Apple VPP.
-- Pro podmíněný přístup se zablokovala zařízení s výjimkou Windows 10 1803 +.
+- Zařízení, které jsou zablokovaná pro podmíněný přístup s výjimkou Windows 10 1803 +
 - Všechna zařízení zaregistrovaná pomocí účtů DEM musí být řádně licencovaná, aby je bylo možné spravovat přes Intune. Licence může být Uživatelská licence pro Intune nebo licence k zařízení v Intune.
 - Pokud [zaregistrujete zařízení se systémem Android Enterprise Work Profile](android-work-profile-enroll.md) pomocí účtu DEM, je k dispozici omezení 10 zařízení, která je možné zaregistrovat pro každý účet.
 
