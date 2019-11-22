@@ -1,12 +1,12 @@
 ---
-title: Referenční informace o entitách aplikace
+title: Reference for Application entities
 titleSuffix: Microsoft Intune
 description: Téma referenčních informací ke kategorii Aplikace pro kolekce entit v rozhraní API datového skladu Intune
 keywords: Datový sklad Intune
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/02/2019
+ms.date: 11/21/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -18,16 +18,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ac40be5cf3d0a0a217340b3c745daf740a24e8e7
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: a4a8fa34673340e4adca7b64707d8c79d4808460
+ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490377"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74290944"
 ---
 # <a name="reference-for-application-entities"></a>Referenční informace o entitách aplikací
 
-Kategorie **Aplikace** obsahuje entity pro mobilní zařízení, které sledují informace, například:
+The **Application** category contains entities for devices that track information such as:
 
 - Verze aplikace
 - Zdroj instalace aplikace
@@ -43,9 +43,9 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 |---------|------------|--------|
 | appKey |Jedinečný identifikátor aplikace |123 |
 | applicationId |Jedinečný identifikátor aplikace – podobá se AppKey, ale tento klíč je přirozený. |b66bc706-ffff-7437-0340-032819502773 |
-| Revize |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
+| revision |Verze, kterou uvedl správce během nahrávání binárního souboru |2 |
 | title |Název aplikace |Excel |
-| Microsoft |Vydavatel aplikace |Microsoft |
+| publisher |Vydavatel aplikace |Microsoft |
 | uploadState |Stav nahrávání aplikace |1 |
 | appTypeKey |Odkaz na entitu AppType, která je popsaná v následujícím oddílu | |
 | vppProgramTypeKey |Odkaz na entitu VppProgramType, která je popsaná níže | |
@@ -54,7 +54,7 @@ Entita **appRevision** obsahuje seznam všech verzí aplikací.
 | Velikost |Velikost binárního souboru | |
 | startDateInclusiveUTC |Datum a čas ve standardu UTC, kdy se tato revize aplikace v datovém skladu vytvořila |23.11.2016 12:00:00 |
 | endDateExclusiveUTC |Datum a čas ve standardu UTC, od kdy je tato revize aplikace zastaralá |23.11.2016 12:00:00 |
-| Aktuální |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
+| isCurrent |Určuje, jestli tato verze aplikace v datovém skladu je nebo není aktuální |True nebo False |
 | rowLastModifiedDateTimeUTC |Datum a čas ve standardu UTC, kdy se tato verze aplikace v datovém skladu naposledy změnila |23.11.2016 12:00:00 |
 
 ## <a name="apptypes"></a>appTypes
@@ -108,19 +108,19 @@ Entita **vppProgramType** obsahuje seznam možných typů programu VPP pro aplik
 
 ## <a name="applicationinventories"></a>applicationInventories
 
-Entita **entita applicationinventory zobrazuje** obsahuje seznam aplikací, které se v zařízení našly v okamžiku shromažďování inventáře.
+The **applicationInventory** entity lists the applications found on the device at the time of inventory collection.
 
 | Vlastnost  | Description |
 |---------|------------|
 | deviceKey | Jedná se o odkaz na tabulku zařízení obsahující ID zařízení v Intune. |
 | dateKey | Odkaz na tabulku kalendářních dat udávající den inventáře |
-| ApplicationName | Název aplikace |
+| applicationName | Název aplikace |
 | applicationVersion | Verze aplikace |
 | bundleSize | Velikost aplikace v bajtech |
 
 ## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
-Entita **entita mobileappinstallstate** představuje stav instalace mobilní aplikace poté, co byla přiřazena ke skupině obsahující zařízení, uživatele nebo obojímu.
+The **mobileAppInstallState** entity represents the install state for a mobile application after it has been assigned to a group containing devices, users or both.
 
 | Vlastnost | Description |
 |---|---|
