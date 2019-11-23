@@ -1,6 +1,6 @@
 ---
-title: Vytvoření vlastní role v Intune
-description: Naučte se, jak vytvořit vlastní roli v Microsoft Intune.
+title: Create a custom role in Intune
+description: Learn how to create a custom role in Microsoft Intune.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b60e4d801d09a834e11119260d3054cf43251bbd
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 3ca83287c58f8d2fb7c8eec5f8cc793e2c67b77a
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72502957"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390703"
 ---
-# <a name="create-a-custom-role-in-intune"></a>Vytvoření vlastní role v Intune
+# <a name="create-a-custom-role-in-intune"></a>Create a custom role in Intune
 
-Můžete vytvořit vlastní roli Intune, která bude obsahovat všechna oprávnění požadovaná pro konkrétní pracovní funkci. Pokud například skupina oddělení IT spravuje aplikace, zásady a profily konfigurace, můžete všechna tato oprávnění přidat společně v jedné vlastní roli. Po vytvoření vlastní role ji můžete [přiřadit](assign-role.md) všem uživatelům, kteří tato oprávnění potřebují.
+You can create a custom Intune role that includes any permissions required for a specific job function. Pokud například skupina oddělení IT spravuje aplikace, zásady a profily konfigurace, můžete všechna tato oprávnění přidat společně v jedné vlastní roli. After creating a custom role, you can [assign](assign-role.md) it to any users that need those permissions.
 
 Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí mít ve službě Azure AD jedno z těchto oprávnění:
 - **Globální správce**
@@ -38,18 +38,33 @@ Abyste mohli vytvářet, upravovat nebo přiřazovat role, váš účet musí m�
 
 2. V nabídce vlevo zvolte **Všechny služby** a do filtru textového pole pak zadejte **Intune**.
 
-3. Vyberte**role** **Intune** >   > **všechny role** > **Přidat**.
+3. Choose **Intune** > **Roles** > **All roles** > **Add**.
 
 4. V okně **Přidat vlastní roli** zadejte název a popis nové role a klikněte na **Oprávnění**.
 
 5. V okně **Oprávnění** zvolte oprávnění, která chcete v této roli použít.
 
-6. V okně **obor (značky)** vyberte značky pro tuto roli. Tato role má přístup k prostředkům, které mají také tyto značky.
+6. On the **Scope (Tags)** blade, choose the tags for this role. This role can access resources that also have these tags.
 
 7. Po dokončení vyberte **OK**.
 
-8. V okně **Přidat vlastní roli** klikněte na **Vytvořit**. Nová role se zobrazí v seznamu v okně **role Intune – všechny role** .
+8. V okně **Přidat vlastní roli** klikněte na **Vytvořit**. The new role is displayed in the list on the **Intune roles - All roles** blade.
+
+
+## <a name="copy-a-role"></a>Copy a role
+
+You can also copy an existing role.
+
+1. Sign into the [Azure portal](https://portal.azure.com) with your Intune credentials and select **Intune**.
+
+2. Select **Roles** > **All roles** > select a role in the list > **Duplicate**.
+
+3. Under **Duplicate role**, enter a name. Make sure to use a unique name.
+
+4. All the permissions and scope tags from the original role will already be selected. You can subsequently change the duplicate role's **Name**, **Description**, **Permissions**, and **Scope (Tags)** .
+
+5. Vyberte **Vytvořit**. 
 
 ## <a name="next-steps"></a>Další kroky
-- [Přiřazení role uživateli](assign-role.md)
-- [Další informace o řízení přístupu na základě role v Intune](role-based-access-control.md)
+- [Assign a role to a user](assign-role.md)
+- [Learn more about role-based access control in Intune](role-based-access-control.md)

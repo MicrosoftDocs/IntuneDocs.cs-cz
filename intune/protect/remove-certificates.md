@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/27/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,30 +17,30 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ms.reviewer: lacranda
-ms.openlocfilehash: e00600abb8327623eff4efe8509670779710ab7d
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: dbf6d95c8902a95993b972ff7639d4afb4324ac8
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72509032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74410178"
 ---
 # <a name="remove-scep-and-pkcs-certificates-in-microsoft-intune"></a>Odebrání certifikátů SCEP a PKCS v Microsoft Intune
 
-V Microsoft Intune můžete k přidávání certifikátů do zařízení použít profily certifikátů Simple Certificate Enrollment Protocol (SCEP) a PKCS (Public Key Cryptography Standards).
+In Microsoft Intune, you can use Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles to add certificates to devices.
 
-Tyto certifikáty je možné odebrat, když zařízení [vymažete](../remote-actions/devices-wipe.md#wipe) nebo vyřadíte z [provozu](../remote-actions/devices-wipe.md#retire) . K dispozici jsou také scénáře, kdy se certifikáty automaticky odstraňují, a scénáře, kdy se certifikáty na zařízení nacházejí. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
+These certificates can be removed when you [wipe](../remote-actions/devices-wipe.md#wipe) or [retire](../remote-actions/devices-wipe.md#retire) the device. There are also scenarios where certificates are automatically removed, and scenarios where certificates stay on the device. V tomto článku najdete nejčastější scénáře, které mají vliv na certifikáty PKCS a SCEP.
 
 > [!NOTE]
-> Pokud chcete odebrat a odvolat certifikáty pro uživatele, který se odebírá z místní služby Active Directory nebo Azure Active Directory (Azure AD), postupujte podle těchto kroků v uvedeném pořadí:
+> To remove and revoke certificates for a user who's being removed from on-premises Active Directory or Azure Active Directory (Azure AD), follow these steps in order:
 >
-> 1. Vymazání nebo vyřazení zařízení uživatele.
-> 2. Odeberte uživatele z místní služby Active Directory nebo Azure AD.
+> 1. Wipe or retire the user's device.
+> 2. Remove the user from on-premises Active Directory or Azure AD.
 
-## <a name="manually-deleted-certificates"></a>Ručně odstraněné certifikáty
+## <a name="manually-deleted-certificates"></a>Manually deleted certificates
 
-Ruční odstranění certifikátu je scénář, který platí pro různé platformy a certifikáty zřízené profily certifikátů SCEP nebo PKCS. Uživatel může například odstranit certifikát ze zařízení, když zařízení cílí na zásady certifikátu.
+Manual deletion of a certificate is a scenario that applies across platforms and certificates provisioned by SCEP or PKCS certificate profiles. For example, a user might delete a certificate from a device, when the device remains targeted by a certificate policy.
 
-V tomto scénáři se po odstranění certifikátu při příštím ověření zařízení v Intune zjistí, že nedodržuje předpisy, protože u něho chybí očekávaný certifikát. Intune pak vystaví nový certifikát pro obnovení kompatibility zařízení. K obnovení certifikátu není nutná žádná další akce.
+In this scenario, after the certificate is deleted, the next time the device checks in with Intune it's found to be out of compliance as it is missing the expected certificate. Intune then issues a new certificate to restore the device to compliance. No additional action is needed to restore the certificate.
 
 ## <a name="windows-devices"></a>Zařízení s Windows
 
@@ -48,165 +48,188 @@ V tomto scénáři se po odstranění certifikátu při příštím ověření z
 
 K odvoláni *a* odebrání certifikátu SCEP dojde, když:
 
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
-- Zařízení se odebere ze skupiny Azure AD.
-- Z přiřazení skupiny se odebere profil certifikátu.
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- The device is removed from an Azure AD group.
+- A certificate profile is removed from the group assignment.
 
 K odvolání certifikátu SCEP dojde, když:
-- Správce změní nebo aktualizuje profil SCEP.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- An administrator changes or updates the SCEP profile.
 
-Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani neodeberou), když:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
+A root certificate is removed when:
+
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
 
 ### <a name="pkcs-certificates"></a>Certifikáty PKCS
 
 K odvoláni *a* odebrání certifikátu PKCS dojde, když:
 
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+A root certificate is removed when:
 
-Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává nebo odeberou) v těchto případech:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
-- Správce změní nebo aktualizuje profil PKCS.
-- Z přiřazení skupiny se odebere profil certifikátu.
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+PKCS certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
+- An administrator changes or updates the PKCS profile.
+- A certificate profile is removed from the group assignment.
 
 
-## <a name="ios-devices"></a>zařízení s iOS
+## <a name="ios-devices"></a>iOS devices
 
 ### <a name="scep-certificates"></a>Certifikáty SCEP
 
 K odvoláni *a* odebrání certifikátu SCEP dojde, když:
 
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
-- Zařízení se odebere ze skupiny Azure AD.
-- Z přiřazení skupiny se odebere profil certifikátu.
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- The device is removed from the Azure AD group.
+- A certificate profile is removed from the group assignment.
 
 K odvolání certifikátu SCEP dojde, když:
-- Správce změní nebo aktualizuje profil SCEP.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- An administrator changes or updates the SCEP profile.
 
-Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani neodeberou), když:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
+A root certificate is removed when:
+
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
 
 ### <a name="pkcs-certificates"></a>Certifikáty PKCS
 
 K odvoláni *a* odebrání certifikátu PKCS dojde, když:
 
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 
 K odebrání certifikátu PKCS dojde, když:
-- Z přiřazení skupiny se odebere profil certifikátu.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- A certificate profile is removed from the group assignment.
 
-Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává nebo odeberou) v těchto případech:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
-- Správce změní nebo aktualizuje profil PKCS.
+A root certificate is removed when:
+
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+PKCS certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
+- An administrator changes or updates the PKCS profile.
 
 ## <a name="android-knox-devices"></a>Zařízení s Androidem KNOX
 
 ### <a name="scep-certificates"></a>Certifikáty SCEP
 
 K odvoláni *a* odebrání certifikátu SCEP dojde, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
+
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
 
 K odvolání certifikátu SCEP dojde, když:
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
-- Zařízení se odebere ze skupiny Azure AD.
-- Z přiřazení skupiny se odebere profil certifikátu.
-- Správce odebere uživatele nebo skupinu z Azure AD.
-- Správce změní nebo aktualizuje profil SCEP.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+- The device is removed from an Azure AD group.
+- A certificate profile is removed from the group assignment.
+- An administrator removes the user or group from Azure AD.
+- An administrator changes or updates the SCEP profile.
 
-Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani neodeberou), když:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
+A root certificate is removed when:
+
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
 
 ### <a name="pkcs-certificates"></a>Certifikáty PKCS
 
 K odvoláni *a* odebrání certifikátu PKCS dojde, když:
 
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
 
-Kořenový certifikát se odebere, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vymazání](../remote-actions/devices-wipe.md#wipe) .
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
+A root certificate is removed when:
 
-Certifikáty PKCS *zůstávají* v zařízení (certifikáty se neodvolává nebo odeberou) v těchto případech:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
-- Správce změní nebo aktualizuje profil PKCS.
-- Z přiřazení skupiny se odebere profil certifikátu.
+- A user unenrolls.
+- An administrator runs the [wipe](../remote-actions/devices-wipe.md#wipe) action.
+- An administrator runs the [retire](../remote-actions/devices-wipe.md#retire) action.
+
+PKCS certificates *stay* on the device (certificates aren't revoked or removed) when:
+- A user loses the Intune license.
+
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
+- An administrator changes or updates the PKCS profile.
+- A certificate profile is removed from the group assignment.
 
 
 > [!NOTE]
-> Zařízení s Androidem for Work nejsou ověřená pro předchozí scénáře.
-> Pro odebrání certifikátu nejsou povolena starší verze zařízení se systémem Android (zařízení nevyužívající Samsung, nepracovní profil).
+> Android for Work devices are not validated for the preceding scenarios.
+> Android legacy devices (any non-Samsung, non-work profile devices) are not enabled for certificate removal.
 
 ## <a name="macos-certificates"></a>Certifikáty macOS
 
 ### <a name="scep-certificates"></a>Certifikáty SCEP
 
 K odvoláni *a* odebrání certifikátu SCEP dojde, když:
-- Uživatel zruší registraci.
-- Správce spustí akci [vyřazení](../remote-actions/devices-wipe.md#retire) .
-- Zařízení se odebere ze skupiny Azure AD.
-- Z přiřazení skupiny se odebere profil certifikátu.
+
+- A user unenrolls.
+- An administrator runs a [retire](../remote-actions/devices-wipe.md#retire) action.
+- The device is removed from an Azure AD group.
+- A certificate profile is removed from the group assignment.
 
 K odvolání certifikátu SCEP dojde, když:
-- Správce změní nebo aktualizuje profil SCEP.
 
-Certifikáty SCEP *zůstávají* v zařízení (certifikáty se neodvolává ani neodeberou), když:
-- Uživatel ztratí licenci Intune.
-- Správce odvolá licenci Intune.
-- Správce odebere uživatele nebo skupinu z Azure AD.
+- An administrator changes or updates the SCEP profile.
+
+SCEP certificates *stay* on the device (certificates aren't revoked or removed) when:
+
+- A user loses the Intune license.
+- An administrator withdraws the Intune license.
+- An administrator removes the user or group from Azure AD.
 
 > [!NOTE]
 > U zařízení s macOS není podporované obnovení továrního nastavení akcí [vymazání](../remote-actions/devices-wipe.md#wipe).
 
 ### <a name="pkcs-certificates"></a>Certifikáty PKCS
 
-Certifikáty PKCS nejsou v macOS podporované.
+PKCS certificates aren't supported on macOS.
 
+## <a name="next-steps"></a>Další kroky
+
+[Use certificates for authentication](certificates-configure.md)

@@ -5,7 +5,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 09/19/2018
+ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8c31bbd8eb9efb2b748163223ce1b8fa555f0dc6
-ms.sourcegitcommit: 28622c5455adfbce25a404de4d0437fa2b5370be
+ms.openlocfilehash: a9937fc25ffa3dc32c1addbf0acc2516000b055b
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73713524"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390887"
 ---
 # <a name="what-is-microsoft-intune-device-management"></a>Co je správa zařízení v Microsoft Intune?
 
@@ -33,7 +33,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 
 ## <a name="get-to-your-devices"></a>Přístup k zařízením
 
-1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení**. Toto zobrazení obsahuje podrobné informace o jednotlivých zařízeních a o tom, co s nimi můžete dělat, mimo jiné:
 
    - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
@@ -41,7 +41,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 
      Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu .csv, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
 
-     Vyberte libovolné zařízení, abyste [si zobrazili další podrobnosti o zařízení](device-inventory.md), včetně podrobností o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
+     Select any device to [view additional details about that device](device-inventory.md), including hardware details, installed apps, its compliance policy status, and more.
 
    - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
    - Část **Akce zařízení** zahrnuje historii vzdálených akcí spuštěných v jednotlivých zařízeních, včetně akce, jejího stavu, iniciátora a času.
@@ -69,7 +69,8 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
   - [Vzdálené řízení pro Android](teamviewer-support.md)
   - [Synchronizace zařízení](device-sync.md)
-  - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
 
 ## <a name="next-steps"></a>Další kroky
 

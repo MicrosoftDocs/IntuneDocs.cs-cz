@@ -1,223 +1,227 @@
 ---
-title: Použití standardních hodnot zabezpečení v Microsoft Intune – Azure | Microsoft Docs
-description: Pomocí doporučených nastavení zabezpečení systému Windows můžete chránit uživatele a data v zařízeních s Microsoft Intune pro správu mobilních zařízení. Povolení šifrování, konfigurace rozšířené ochrany před internetovými útoky v programu Microsoft Defender, řízení aplikací Internet Explorer, nastavení místních zásad zabezpečení, vyžadování hesla, blokování stahování na internetu a další.
+title: Use security baselines in Microsoft Intune - Azure | Microsoft Docs
+description: Use the recommended windows security settings to protect user and data on devices with Microsoft Intune for mobile device management. Enable encryption, configure Microsoft Defender Advanced Threat Protection, control Internet Explorer, set local security policies, require a password, block internet downloads, and more.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/28/2019
+ms.date: 11/21/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
 ms.technology: ''
 ms.assetid: ''
-ms.reviewer: joglocke
+ms.reviewer: shpate
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 53014376a7e220e975878031ffd759da40db7f6b
-ms.sourcegitcommit: 60f0ff6d2efbae0f2ce14b9a9f3f9267309e209b
+ms.openlocfilehash: 1d3a2ce9e5a31e989452141a094b70b5e75cf464
+ms.sourcegitcommit: a7b479c84b3af5b85528db676594bdb3a1ff6ec6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73413843"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74409954"
 ---
-# <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Konfigurace zařízení s Windows 10 v Intune pomocí směrných plánů zabezpečení
+# <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Use security baselines to configure Windows 10 devices in Intune
 
-Pomocí standardních hodnot zabezpečení služby Intune můžete zajistit zabezpečení a ochranu vašich uživatelů a zařízení. Směrné plány zabezpečení jsou předem nakonfigurované skupiny nastavení systému Windows, které vám pomůžou použít známou skupinu nastavení a výchozí hodnoty, které jsou doporučeny pro příslušné týmy zabezpečení. Když v Intune vytvoříte profil standardních hodnot zabezpečení, vytváříte šablonu, která se skládá z několika profilů *Konfigurace zařízení* .
+Use Intune's security baselines to help you secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that help you apply a known group of settings and default values that are recommended by the relevant security teams. When you create a security baseline profile in Intune, you're creating a template that consists of multiple *device configuration* profiles.
 
 Tato funkce platí pro:
 
-- Windows 10 verze 1809 a novější
+- Windows 10 version 1809 and later
 
-Nasadíte standardní hodnoty zabezpečení do skupin uživatelů nebo zařízení v Intune a nastavení se použije na zařízení se systémem Windows 10 nebo novějším. Například *základní hodnota zabezpečení MDM* automaticky povoluje BitLocker pro vyměnitelné jednotky, automaticky vyžaduje heslo k odemknutí zařízení, automaticky zakáže základní ověřování a další. Pokud výchozí hodnota pro vaše prostředí nefunguje, upravte směrný plán tak, aby se projevila potřebná nastavení.
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or later. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn’t work for your environment, customize the baseline to apply the settings you need.
 
-Samostatné typy standardních hodnot můžou zahrnovat stejná nastavení, ale pro tato nastavení použít jiné výchozí hodnoty. Je důležité porozumět výchozím hodnotám ve standardních hodnotách, které se rozhodnete použít, a pak změnit jednotlivé standardní hodnoty tak, aby vyhovovaly potřebám vaší organizace.
+Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
 
 > [!NOTE]
-> Microsoft nedoporučuje používat verze Preview standardních hodnot zabezpečení v produkčním prostředí. Nastavení v směrném plánu Preview se může v průběhu verze Preview změnit.
+> Microsoft doesn't recommend using preview versions of security baselines in a production environment. The settings in a preview baseline might change over the course of the preview.
 
-Směrné plány zabezpečení vám můžou při práci s Microsoft 365 mít komplexní zabezpečený pracovní postup. Mezi výhody patří:
+Security baselines can help you to have an end-to-end secure workflow when working with Microsoft 365. Some of the benefits include:
 
-- Základní hodnoty zabezpečení obsahují osvědčené postupy a doporučení týkající se nastavení, která mají vliv na zabezpečení. Partneři Intune se stejným týmem zabezpečení systému Windows, který vytváří standardní hodnoty zabezpečení zásad skupiny. Tato doporučení jsou založená na pokynech a rozsáhlém prostředí.
-- Pokud s Intune začínáte a nejste si jistí, kde začít, pak vám standardní hodnoty zabezpečení poskytnou výhodu. Můžete rychle vytvořit a nasadit zabezpečený profil s vědomím, že pomáháte chránit prostředky a data vaší organizace.
-- Pokud aktuálně používáte zásady skupiny, je migrace na Intune pro správu mnohem jednodušší u těchto směrných plánů. Tyto směrné plány jsou nativně integrované do Intune a zahrnují moderní prostředí pro správu.
+- A security baseline includes the best practices and recommendations on settings that impact security. Intune partners with the same Windows security team that creates group policy security baselines. These recommendations are based on guidance and extensive experience.
+- If you're new to Intune, and not sure where to start, then security baselines gives you an advantage. You can quickly create and deploy a secure profile, knowing that you're helping protect your organization's resources and data.
+- If you currently use group policy, migrating to Intune for management is much easier with these baselines. These baselines are natively built in to Intune, and include a modern management experience.
 
-Hlavní [směry zabezpečení Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) jsou skvělým prostředkem pro další informace o této funkci. [Správa mobilních zařízení](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) je skvělým prostředkem o MDM a o tom, co můžete dělat na zařízeních s Windows.
+[Windows security baselines](https://docs.microsoft.com/windows/security/threat-protection/windows-security-baselines) is a great resource to learn more about this feature. [Mobile device management](https://docs.microsoft.com/windows/client-management/mdm/) (MDM) is a great resource about MDM, and what you can do on Windows devices.
 
-## <a name="about-baseline-versions-and-instances"></a>Základní verze a instance
+## <a name="about-baseline-versions-and-instances"></a>About baseline versions and instances
 
-Každá nová instance verze směrného plánu může přidat nebo odebrat nastavení nebo zavést další změny. Například protože nové nastavení Windows 10 bude k dispozici v nových verzích Windows 10, základní hodnota zabezpečení MDM může obdržet novou instanci verze, která bude obsahovat nejnovější nastavení.
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
-V konzole Intune se na dlaždici pro jednotlivé standardní hodnoty zobrazí název základní šablony a základní informace o tomto směrném plánu. Tyto informace zahrnují počet profilů, které používají daný typ základního typu, počet různých instancí typu standardních hodnot a datum *posledního publikování* , které určuje, kdy se tato šablona směrného plánu přidala do vašeho tenanta. Následující příklad ukazuje dlaždici pro dobře používané standardní hodnoty zabezpečení MDM:
+In the Intune console, the tile for each baseline displays the baseline template name and basic information about that baseline. The information includes how many profiles you have that use that baseline type, how many separate instances (versions) of the baseline type are available, and a *Last Published* date that identifies when that baseline template was added to your tenant. The following example shows the tile for a well-used MDM Security Baseline:
 
-![Dlaždice standardních hodnot](./media/security-baselines/baseline-tile.png)
+![Baseline tile](./media/security-baselines/baseline-tile.png)
 
-Chcete-li zobrazit další informace o základních verzích, které používáte, vyberte dlaždici základní hodnoty a otevřete její podokno *přehledu* a pak vyberte možnost **verze**. Intune zobrazí podrobnosti o verzích tohoto směrného plánu, které používají vaše profily. V podokně verze můžete vybrat jednu verzi pro zobrazení hlubších podrobností o profilech, které používají tuto verzi. Můžete také vybrat dvě různé verze a pak vybrat **Porovnat směrné plány** a stáhnout soubor CSV s podrobnostmi o těchto rozdílech.
+To view more information about the baseline versions you use, select a baseline tile to open its *Overview* pane, and then select **Versions**. Intune displays details about the versions of that baseline that are in use by your profiles. On the Versions pane, you can select a single version to view deeper details about the profiles that use that version. You can also select two different versions and then choose **Compare baselines** to download a CSV file that details those differences.
 
-![Porovnat směrné plány](./media/security-baselines/compare-baselines.png)
+![Compare baselines](./media/security-baselines/compare-baselines.png)
 
-Když vytvoříte *profil*standardních hodnot zabezpečení, profil automaticky použije naposledy vydanou instanci standardních hodnot zabezpečení.  Můžete pokračovat v používání a úpravách dříve vytvořených profilů, které používají předchozí instanci základní verze, včetně standardních hodnot vytvořených pomocí verze Preview.
+When you create a security baseline *profile*, the profile automatically uses the most recently released security baseline instance.  You can continue to use and edit profiles that you previously created that use an earlier baseline version instance, including baselines created using a Preview version.
 
-Můžete zvolit [změnu verze](#change-the-baseline-version-for-a-profile) směrného plánu, který se používá s daným profilem. To znamená, že když se objeví nová verze, nemusíte vytvářet nový základní profil, abyste ho mohli využít. Až budete připraveni, můžete vybrat profil standardních hodnot a potom pomocí předdefinované možnosti změnit verzi instance pro tento profil na nový.
+You can choose to [change of the version](#change-the-baseline-version-for-a-profile) of a baseline that’s in use with a given profile. This means when a new version comes out, you don’t have to create a new baseline profile to take advantage of it. Instead, when you’re ready, you can select a baseline profile and then use the built-in option to change the instance version for that profile to a new one.
 
-## <a name="available-security-baselines"></a>Dostupné standardní hodnoty zabezpečení
+## <a name="available-security-baselines"></a>Available security baselines
 
- V prostředí Intune můžete současně použít jeden nebo více dostupných směrných plánů. Můžete také použít více instancí stejných standardních hodnot zabezpečení, které mají různá přizpůsobení.
+ You can use one or more of the available baselines in your Intune environment at the same time. You can also use multiple instances of the same security baselines that have different customizations.
 
-Pokud používáte více směrných plánů zabezpečení, Projděte si nastavení v každém z nich, abyste identifikovali, kdy různé směrné plány představují konfliktní hodnoty pro stejné nastavení. Vzhledem k tomu, že můžete nasadit standardní hodnoty zabezpečení, které jsou navrženy pro různé záměry, a nasadit více instancí stejného směrného plánu, který obsahuje vlastní nastavení, můžete vytvořit [konflikty konfigurace pro zařízení, která musí být prověřena a Vyřešeno](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Také si pamatujte na [profily konfigurace zařízení](../configuration/device-profiles.md), které můžou nakonfigurovat mnoho stejných nastavení jako standardní hodnoty zabezpečení.
+When you use multiple security baselines, review the settings in each one to identify when different baselines introduce conflicting values for the same setting. Because you can deploy security baselines that are designed for different intents, and deploy multiple instances of the same baseline that includes customized settings, you might create configuration [conflicts for devices that must be investigated and resolved](security-baselines-monitor.md#troubleshoot-using-per-setting-status).  Also be aware of your [device configuration profiles](../configuration/device-profiles.md), which can configure many of the same settings as security baselines.
 
-Následující instance standardních hodnot zabezpečení jsou k dispozici pro použití s Intune. Pomocí odkazů můžete zobrazit nastavení nejaktuálnější instance každého směrného plánu.
+The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
 
-- **Základní hodnoty zabezpečení MDM**
-  - [Základní hodnota zabezpečení MDM pro květen 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
-  - [Preview: směrný plán zabezpečení MDM pro říjen 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+- **MDM Security Baseline**
+  - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+  - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
 
-- **Základní
-  služby Microsoft Defender ATP** *(aby se tyto standardní hodnoty používaly, musí vaše prostředí splňovat požadavky na použití [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](advanced-threat-protection.md#prerequisites))* .
-  - [Základní hodnoty ATP v programu Microsoft Defender](security-baseline-settings-defender-atp.md)
+- **Microsoft Defender ATP baseline**
+   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender Advanced Threat Protection](advanced-threat-protection.md#prerequisites))* .
+  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
 
   > [!NOTE]
-  > Základní hodnoty zabezpečení služby Microsoft Defender ATP byly optimalizované pro fyzická zařízení a v tuto chvíli se nedoporučují pro použití na virtuálních počítačích (VM) nebo koncových bodech VDI. Určitá nastavení standardních hodnot můžou mít vliv na vzdálené interaktivní relace ve virtualizovaných prostředích.  Další informace najdete v dokumentaci k Windows v tématu [zvýšení dodržování předpisů pro základní hodnoty zabezpečení služby Microsoft Defender ATP](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) .
+  > The Microsoft Defender ATP security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender ATP security baseline](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
-- **Základní hodnoty Microsoft Edge** 
-  - [Preview: směrný plán Microsoft Edge](security-baseline-settings-edge.md)
+- **Microsoft Edge Baseline**
+  - [Preview: Microsoft Edge baseline](security-baseline-settings-edge.md)
 
-Můžete dál používat a upravovat profily, které jste předtím vytvořili na základě šablony verze Preview, a to i v případě, že tato šablona Preview už není dostupná pro vytváření nových profilů.
+You can continue to use and edit profiles that you previously created based on a preview template, even when that preview template is no longer available for creating new profiles.
 
-## <a name="manage-baselines"></a>Spravovat směrné plány
+## <a name="manage-baselines"></a>Manage baselines
 
-Mezi běžné úlohy při práci se standardními hodnotami zabezpečení patří:
+Common tasks when you work with security baselines include:
 
-- [Vytvořit profil](#create-the-profile) – nakonfigurujte nastavení, která chcete použít, a přiřaďte směrný plán skupinám.
-- [Změna verze](#change-the-baseline-version-for-a-profile) – změňte základní verzi, kterou používá profil.
-- [Odebrání přiřazení standardních hodnot](#remove-a-security-baseline-assignment) – Zjistěte, co se stane, když zastavíte správu nastavení se směrným plánem zabezpečení.
+- [Create a profile](#create-the-profile) – Configure the settings you want to use and assign the baseline to groups.
+- [Change the version](#change-the-baseline-version-for-a-profile) – Change the baseline version in use by a profile.
+- [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
 
 ### <a name="prerequisites"></a>Požadované součásti
 
-- Aby bylo možné spravovat směrné plány v Intune, musí mít váš účet předdefinovanou roli [správce zásad a profilů](../fundamentals/role-based-access-control.md#built-in-roles) .
+- To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
 
-- Použití některých směrných plánů může vyžadovat, abyste měli aktivní předplatné dalších služeb, jako je ATP Microsoft Defender.
+- Use of some baselines might require you to have an active subscription to additional services, like Microsoft Defender ATP.
 
 ### <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a pak vyberte**standardní hodnoty** zabezpečení **zařízení** > . zobrazí se seznam dostupných směrných plánů.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-   ![Vyberte standardní hodnoty zabezpečení, které se mají nakonfigurovat.](./media/security-baselines/available-baselines.png)
+2. Select **Endpoint security** > **Security baselines** to view the list of available baselines.
 
-2. Vyberte standardní hodnoty, které chcete použít, a pak vyberte **vytvořit profil**.
+   ![Select a security baseline to configure](./media/security-baselines/available-baselines.png)
 
-3. Na kartě **základy** zadejte následující vlastnosti:
+3. Select the baseline you'd like to use, and then select **Create profile**.
 
-   - **Název**: zadejte název profilu standardních hodnot zabezpečení. Zadejte například *standardní profil pro ATP v programu Defender*.
+4. On the **Basics** tab, specify the following properties:
 
-   - **Popis**: Zadejte nějaký text, který popisuje, co tento směrný plán dělá. Popis je, abyste zadali libovolný text, který chcete. Je volitelný, ale doporučený.
+   - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender ATP*.
 
-   Kliknutím na tlačítko **Další** přejdete na další kartu. Po upřesnění na novou kartu můžete vybrat název karty, který se vrátí na dříve zobrazenou kartu.
+   - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional, but recommended.
 
-4. Na kartě nastavení konfigurace si prohlédněte skupiny **Nastavení** , která jsou k dispozici ve vybraných standardních hodnotách. Skupinu můžete rozbalit a zobrazit tak nastavení v dané skupině a výchozí hodnoty pro tato nastavení ve standardních hodnotách. Chcete-li najít konkrétní nastavení:
-   - Vyberte skupinu, kterou chcete rozbalit, a zkontrolujte dostupná nastavení.
-   - Použijte panel *hledání* a zadejte klíčová slova, která filtrují zobrazení, aby se zobrazily pouze ty skupiny, které obsahují vaše kritéria hledání.
+   Select **Next** to go to the next tab. After you advanced to a new tab, you can select the tab name to return to a previously viewed tab.
 
-   Každé nastavení ve směrném plánu má výchozí konfiguraci pro tuto základní verzi. Překonfigurujte výchozí nastavení tak, aby vyhovovalo vašim obchodním potřebám. Různé směrné plány můžou obsahovat stejné nastavení a pro nastavení použít jiné výchozí hodnoty, v závislosti na záměru směrného plánu.
+5. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
+   - Select a group to expand and review the available settings.
+   - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
 
-   ![Rozbalením skupiny zobrazíte nastavení pro tuto skupinu.](./media/security-baselines/sample-list-of-settings.png)
+   Each setting in a baseline has a default configuration for that baseline version. Reconfigure the default settings to meet your business needs. Different baselines might contain the same setting, and use different default values for the setting, depending on the intent of the baseline.
 
-5. Na kartě **značky oboru** vyberte **Vybrat značky oboru** a otevřete tak podokno *Vybrat značky* , abyste přiřadili značky oboru k profilu.
+   ![Expand a group to view the settings for that group](./media/security-baselines/sample-list-of-settings.png)
 
-6. Na kartě **přiřazení** vyberte **Vybrat skupiny, které se mají zahrnout** , a pak přiřaďte směrný plán k jedné nebo více skupinám. K vyřazení tohoto přiřazení použijte **možnost vybrat skupiny, které chcete vyloučit** .
+6. On the **Scope tags** tab, select **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
+
+7. On the **Assignments** tab, select **Select groups to include** and then  assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
 
    ![Přiřazení profilu](./media/security-baselines/assignments.png)
 
-7. Až budete připraveni k nasazení standardních hodnot, přejděte na kartu **Revize + vytvořit** a Prohlédněte si podrobnosti pro směrný plán. Výběrem **vytvořit** uložte a nasaďte profil.
+8. When you're ready to deploy the baseline, advance to the **Review + create** tab and review the details for the baseline. Select **Create** to save and deploy the profile.
 
-   Jakmile profil vytvoříte, bude přesunut do přiřazené skupiny a může se okamžitě uplatnit.
+   As soon as you create the profile, it's pushed to the assigned group and might apply immediately.
 
    > [!TIP]
-   > Pokud uložíte profil, aniž byste ho nejdřív přiřadíte do skupin, můžete ho později upravit.
+   > If you save a profile without first assigning it to groups, you can later edit the profile to do so.
 
-   ![Kontrola standardních hodnot](./media/security-baselines/review.png)
+   ![Review the baseline](./media/security-baselines/review.png)
 
-8. Po vytvoření profilu ho upravte tak, že kliknete na **zabezpečení zařízení** > **směrné plány zabezpečení**, vyberte typ standardních hodnot, který jste nakonfigurovali, a pak vyberte **profily**. V seznamu dostupných profilů vyberte profil a pak vyberte **vlastnosti**. Můžete upravit nastavení ze všech dostupných karet konfigurace a kliknutím na tlačítko **zkontrolovat + Uložit** změny potvrďte.
+9. After you create a profile, edit it by going to **Device security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs, and select **Review + save** to commit your changes.
 
-### <a name="change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
+### <a name="change-the-baseline-version-for-a-profile"></a>Change the baseline version for a profile
 
-Můžete změnit verzi základní instance, která se používá s profilem.  Když změníte verzi, vyberete dostupnou instanci stejného směrného plánu. Nemůžete měnit mezi dvěma různými typy standardních hodnot, jako je například změna profilu z použití směrného plánu pro ATP v programu Defender na používání standardních hodnot zabezpečení MDM.
+You can change the version of the baseline instance that in use with a profile.  When you change the version, you select an available instance of the same baseline. You can’t change between two different baseline types, such as changing a profile from using a baseline for Defender ATP to using the MDM security baseline.
 
-Když nakonfigurujete změnu základní verze, můžete si stáhnout soubor CSV, který obsahuje seznam změn mezi dvěma zahrnutými základními verzemi. Můžete také zvolit, že chcete zachovat všechna vlastní nastavení z původní základní verze, nebo implementovat novou verzi pomocí všech výchozích hodnot. Při změně verze směrného plánu pro profil nemáte možnost provádět změny v individuálním nastavení.
+While configuring a change of the baseline version, you can download a CSV file that lists the changes between the two baseline versions involved. You also have the choice to keep all your customizations from the original baseline version, or implement the new version using all of its default values. You don't have the option to make changes to individual settings when you change the version of a baseline for a profile.
 
-Po uložení se po dokončení převodu směrný plán okamžitě znovu nasadí na přiřazené skupiny.
+Upon saving, after the conversion is complete, the baseline is immediately redeployed to assigned groups.
 
-**Během převodu**:
+**During conversion**:
 
-- Nová nastavení, která neexistovala v původní verzi, kterou jste použili, se přidají a nastaví tak, aby používala výchozí hodnoty.
+- New settings that weren't in the original version you were using are added and set to use the default values.
 
-- Nastavení, která nejsou ve vybrané verzi nového směrného plánu, se odeberou a už se tímto profilem standardních hodnot zabezpečení neuplatní.
+- Settings that aren't in the new baseline version you select are removed and no longer enforced by this security baseline profile.
 
-  Pokud se nastavení už nespravuje pomocí směrného plánu, toto nastavení se na zařízení neresetuje. Místo toho zůstane nastavení v zařízení nastavené na poslední konfiguraci, dokud jiný proces nespravuje nastavení, aby ho změnil. Příklady procesů, které mohou změnit nastavení po zastavení správy, zahrnují jiný základní profil, nastavení zásad skupiny nebo ruční konfiguraci provedenou na zařízení.
+  When a setting is no longer managed by a baseline profile, that setting isn’t reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that’s made on the device.
 
-#### <a name="to-change-the-baseline-version-for-a-profile"></a>Změna základní verze profilu
+#### <a name="to-change-the-baseline-version-for-a-profile"></a>To change the baseline version for a profile
 
-1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) a vyberte **zabezpečení zařízení** > **směrné plány zabezpečení**a pak vyberte dlaždici pro typ základního typu, který má profil, který chcete změnit.
+1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). 
 
-2. V dalším kroku vyberte **profily**a potom zaškrtněte políčko u profilu, který chcete upravit, a pak vyberte **změnit verzi**.
+2. Select **Endpoint security** > **Security baselines**, and then select the tile for the baseline type that has the profile you want to change.
 
-   ![výběr standardních hodnot](./media/security-baselines/select-baseline.png)
+3. Next, select **Profiles**, and then select the check box for the profile you want to edit, and then select **Change Version**.
 
-3. V podokně **změnit verzi** použijte **možnost vybrat standardní hodnotu zabezpečení pro aktualizaci na** rozevírací seznam a vyberte instanci verze, kterou chcete použít.
+   ![select a baseline](./media/security-baselines/select-baseline.png)
 
-   ![vybrat verzi](./media/security-baselines/select-instance.png)
+4. On the **Change Version** pane, use the **Select a security baseline to update to** dropdown, and select the version instance you want to use.
 
-4. Pokud chcete stáhnout soubor CSV, který zobrazuje rozdíl mezi verzí aktuální instance a novou verzí, kterou jste vybrali, vyberte **zkontrolovat aktualizaci** . Zkontrolujte tento soubor, abyste pochopili, která nastavení jsou nová nebo odebraná, a jaké jsou výchozí hodnoty těchto nastavení v aktualizovaném profilu.
+   ![select a version](./media/security-baselines/select-instance.png)
 
-   Až budete připraveni, pokračujte k dalšímu kroku.
+5. Select **Review update** to download a CSV file that displays the difference between the profiles current instance version and the new version you’ve selected. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.
 
-5. Zvolte jednu ze dvou možností pro **možnost vybrat metodu pro aktualizaci profilu**:
-   - **Přijmout změny směrného plánu, ale zachovat existující přizpůsobení nastavení** – Tato možnost zachovává vlastní nastavení, které jste provedli v profilu standardních hodnot, a aplikuje je na novou verzi, kterou jste vybrali k použití.
-   - **Přijmout změny směrného plánu a zahodit existující přizpůsobení nastavení** – Tato možnost přepíše původní profil úplně. Aktualizovaný profil bude používat výchozí hodnoty pro všechna nastavení.
+   When ready, continue to the next step.
 
-6. Vyberte **Odeslat**. Profil se aktualizuje na vybranou základní verzi a po dokončení převodu se směrný plán hned znovu nasadí do přiřazených skupin.
+6. Choose one of the two options for **Select a method to update the profile**:
+   - **Accept baseline changes but keep my existing setting customizations** - This option keeps the customizations you made to the baseline profile and applies them to the new version you've selected to use.
+   - **Accept baseline changes and discard existing setting customizations** - This option overwrites your original profile completely. The updated profile will use the default values for all settings.
 
-### <a name="remove-a-security-baseline-assignment"></a>Odebrání přiřazení standardních hodnot zabezpečení
+7. Select **Submit**. The profile updates to the selected baseline version and after the conversion is complete, the baseline immediately redeploys to assigned groups.
 
-Pokud se nastavení standardních hodnot zabezpečení už netýká zařízení, nebo se nastavení ve standardních hodnotách nastaví na *není nakonfigurované*, nastavení se v zařízení nevrátí do předem spravované konfigurace. Místo toho předchozí spravovaná nastavení v zařízení ponechá poslední konfigurace přijatá od standardních hodnot, dokud některý jiný proces tyto nastavení v zařízení neaktualizuje.
+### <a name="remove-a-security-baseline-assignment"></a>Remove a security baseline assignment
 
-Jiné procesy, které můžou později měnit nastavení zařízení, zahrnují různé nebo nové základní hodnoty zabezpečení, konfigurační profil zařízení, konfigurace Zásady skupiny nebo ruční úpravu nastavení na zařízení.
+When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don’t revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.
 
-## <a name="co-managed-devices"></a>Společně spravovaná zařízení
+Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
-Standardní hodnoty zabezpečení na zařízeních spravovaných přes Intune se podobají spoluspravovaným zařízením s Configuration Manager. Společně spravovaná zařízení používají System Center Configuration Manager a Microsoft Intune ke správě zařízení s Windows 10 současně. Umožňuje cloudu připojit stávající Configuration Manager investic k výhodám služby Intune. [Přehled spolusprávy](https://docs.microsoft.com/sccm/comanage/overview) je skvělý prostředek, pokud používáte Configuration Manager a chcete mít i výhody cloudu.
+## <a name="co-managed-devices"></a>Co-managed devices
 
-Pokud používáte spoluspravovaná zařízení, musíte přepnout zatížení **Konfigurace zařízení** (jeho nastavení) do Intune. Další informace najdete v [úlohách konfigurace zařízení](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) .
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use System Center Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](https://docs.microsoft.com/sccm/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
+
+When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](https://docs.microsoft.com/sccm/comanage/workloads#device-configuration) provides more information.
 
 ## <a name="q--a"></a>Otázky a odpovědi
 
-### <a name="why-these-settings"></a>Proč tato nastavení?
+### <a name="why-these-settings"></a>Why these settings?
 
-Tým Microsoftu pro zabezpečení má za několik let práce přímo s vývojáři systému Windows a komunitou zabezpečení k vytváření těchto doporučení. Nastavení v těchto standardních hodnotách se považují za relevantní možnosti konfigurace související se zabezpečením. V každém novém sestavení systému Windows tým upraví doporučení na základě nově vydaných funkcí.
+The Microsoft security team has years of experience working directly with Windows developers and the security community to create these recommendations. The settings in this baseline are considered the most relevant security-related configuration options. In each new build of Windows, the team adjusts its recommendations based on newly released features.
 
-### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Existuje rozdíl v doporučeních pro základní hodnoty zabezpečení Windows pro zásady skupiny vs. Intune?
+### <a name="is-there-a-difference-in-the-recommendations-for-windows-security-baselines-for-group-policy-vs-intune"></a>Is there a difference in the recommendations for Windows security baselines for group policy vs. Intune?
 
-Stejný tým zabezpečení Microsoftu zvolil a organizoval nastavení pro jednotlivé standardní hodnoty. Intune zahrnuje všechna relevantní nastavení v základní úrovni zabezpečení Intune. Existují některá nastavení v standardních hodnotách zásad skupiny, která jsou specifická pro místní řadič domény. Tato nastavení jsou vyloučená z doporučení služby Intune. Všechna ostatní nastavení jsou stejná.
+The same Microsoft security team chose and organized the settings for each baseline. Intune includes all the relevant settings in the Intune security baseline. There are some settings in the group policy baseline that are specific to an on-premises domain controller. These settings are excluded from Intune's recommendations. All the other settings are the same.
 
-### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Jsou služby Intune Security standarded nebo institutu NSIT kompatibilní?
+### <a name="are-the-intune-security-baselines-cis-or-nsit-compliant"></a>Are the Intune security baselines CIS or NSIT compliant?
 
-Striktně řečeno, ne. Tým Microsoft Security konzultuje organizace, jako je například SNS, ke kompilaci doporučení. Nejedná se ale o mapování 1:1 mezi "kompatibilní s službami CIS" a směrnými plány společnosti Microsoft.
+Strictly speaking, no. The Microsoft security team consults organizations, such as CIS, to compile its recommendations. But, there isn't a one-to-one mapping between “CIS-compliant” and Microsoft baselines.
 
-### <a name="what-certifications-does-microsofts-security-baselines-have"></a>Jaké certifikace má standardní hodnoty zabezpečení od Microsoftu? 
+### <a name="what-certifications-does-microsofts-security-baselines-have"></a>What certifications does Microsoft’s security baselines have? 
 
-- Společnost Microsoft nadále zveřejňuje standardní hodnoty zabezpečení pro zásady skupiny (GPO) a [sadu nástrojů dodržování předpisů zabezpečení](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), protože to trvá mnoho let. Tyto směrné plány používá mnoho organizací. Doporučení v těchto směrných plánech vycházejí ze závazku týmu zabezpečení společnosti Microsoft s podnikovými zákazníky a externími úřady, včetně ministerstva obrany, National Institute of Standards and Technology (NIST) a dalších. Naše doporučení a směrné plány sdílíme s těmito organizacemi. Tyto organizace mají také svá vlastní doporučení, která pečlivě zrcadlí doporučení Microsoftu. Protože správa mobilních zařízení (MDM) se stále rozrůstá do cloudu, společnost Microsoft vytvořila ekvivalentní doporučení MDM těchto směrných plánů zásad skupiny. Tyto další směrné plány jsou integrované pro Microsoft Intune a zahrnují zprávy o dodržování předpisů pro uživatele, skupiny a zařízení, která následují (nebo nesleduje) na základě směrného plánu.
+- Microsoft continues to publish security baselines for group policies (GPOs) and the [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10), as it has for many years. These baselines are used by many organizations. The recommendations in these baselines are from the Microsoft security team’s engagement with enterprise customers and external agencies, including the Department of Defense (DoD), National Institute of Standards and Technology (NIST), and more. We share our recommendations and baselines with these organizations. These organizations also have their own recommendations that closely mirror Microsoft's recommendations. As mobile device management (MDM) continues to grow into the cloud, Microsoft created equivalent MDM recommendations of these group policy baselines. These additional baselines are built in to Microsoft Intune, and include compliance reports on users, groups, and devices that follow (or don't follow) the baseline.
 
-- Spousta zákazníků používá jako výchozí bod doporučení základní úrovně Intune a pak je přizpůsobuje tak, aby splňovala požadavky na IT a zabezpečení. **Směrný plán zabezpečení MDM** pro Windows 10 RS5 je první základ pro vydání. Tato standardní hodnota je sestavená jako obecná infrastruktura, která zákazníkům umožňuje nakonec importovat další standardní hodnoty zabezpečení založené na CIS, NIST a dalších standardech. V současné době je k dispozici pro Windows a nakonec bude zahrnovat iOS a Android.
+- Many customers are using the Intune baseline recommendations as a starting point, and then customizing it to meet their IT and security demands. Microsoft’s Windows 10 RS5 **MDM Security Baseline** is the first baseline to release. This baseline is built as a generic infrastructure that allows customers to eventually import other security baselines based on CIS, NIST, and other standards. Currently, it's available for Windows and will eventually include iOS and Android.
 
-- Migrace z místních zásad skupiny služby Active Directory do čistě cloudového řešení pomocí Azure Active Directory (AD) s Microsoft Intune je cesta. V sadě [nástrojů pro zabezpečení dodržování předpisů](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) , které vám pomůžou při správě hybridních AD a zařízení připojených k Azure AD, je potřeba, aby byly k dispozici šablony zásad skupiny. Tato zařízení můžou podle potřeby získat nastavení MDM z cloudu (Intune) a nastavení zásad skupiny z místních řadičů domény.
+- Migrating from on-premises Active Directory group policies to a pure cloud solution using Azure Active Directory (AD) with Microsoft Intune is a journey. To help, there are group policy templates included in the [Security Compliance Toolkit](https://docs.microsoft.com/windows/security/threat-protection/security-compliance-toolkit-10) that can help manage hybrid AD and Azure AD-joined devices. These devices can get MDM settings from the cloud (Intune) and group policy settings from on-premises domain controllers as needed.
 
 ## <a name="next-steps"></a>Další kroky
 
-- Zobrazit nastavení v nejnovějších verzích dostupných standardních hodnot:
-  - [Základní hodnoty zabezpečení MDM](security-baseline-settings-mdm-all.md)
-  - [Základní hodnoty ATP v programu Microsoft Defender](security-baseline-settings-defender-atp.md)
+- View the settings in the latest versions of the available baselines:
+  - [MDM security baseline](security-baseline-settings-mdm-all.md)
+  - [Microsoft Defender ATP baseline](security-baseline-settings-defender-atp.md)
 
-- Zkontroluje stav a monitoruje [základní a profil](security-baselines-monitor.md) .
+- Check the status and monitor the [baseline and profile](security-baselines-monitor.md)

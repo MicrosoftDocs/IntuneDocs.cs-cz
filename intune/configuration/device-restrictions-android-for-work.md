@@ -1,6 +1,6 @@
 ---
 title: Android Enterprise device settings in Microsoft Intune - Azure | Microsoft Docs
-description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign-in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
+description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 25af87f2bd4eaf5371a1e1a1237298a6808f4f5e
-ms.sourcegitcommit: 13fa1a4a478cb0e03c7f751958bc17d9dc70010d
+ms.openlocfilehash: b38ab611ecf6a33c8cc48fa120751af8548a7f95
+ms.sourcegitcommit: 2fddb293d37453736ffa54692d03eca642f3ab58
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188183"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74390929"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise device settings to allow or restrict features using Intune
 
@@ -71,8 +71,8 @@ This article lists and describes the different settings you can control on Andro
   - **Odloženo**: Aktualizace se odloží o 30 dní. At the end of the 30 days, Android prompts the user to install the update. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému.
   - **Časové období údržby**: Aktualizace se instalují automaticky během časového období údržby, které nastavíte v Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts the user to install. Toto okno se také používá k instalaci aktualizací aplikací Play. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
 
-- **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors are not shown on the device. When set to **Not configured**, the operating system default is used, which may be to show notifications.
-- **Skip first use hints**: Choose **Enable** to hide or skip suggestions from apps to step through tutorials or read any introductory hints when the app starts. When set to **Not configured**, the operating system default is used, which may be to show these suggestions when the app starts.
+- **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured**, the operating system default is used, which may be to show notifications.
+- **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured**, the operating system default is used, which may show these suggestions when the app starts.
 
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
@@ -202,12 +202,14 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
 ### <a name="users-and-accounts-settings"></a>Nastavení uživatelů a účtů
 
-- **Přidat nové uživatele**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v přidávání nových uživatelů. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. **Not configured** allows users to add other users to the device.
-- **Odebírání uživatelů**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v odebírání uživatelů. **Not configured** allows users to remove other users from the device.
-- **Změny účtu**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v úpravě účtů. **Not configured** allows users to update user accounts on the device.
+- **Přidat nové uživatele**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v přidávání nových uživatelů. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. **Not configured** (default) allows users to add other users to the device.
+- **Odebírání uživatelů**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v odebírání uživatelů. **Not configured** (default) allows users to remove other users from the device.
+- **Account changes** (dedicated devices only): Choose **Block** to prevent users from modifying accounts. **Not configured** (default) allows users to update user accounts on the device.
 
   > [!NOTE]
   > This setting isn't honored on device owner (fully managed) devices. If you configure this setting, then the setting is ignored, and has no impact.
+
+- **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. **Not configured** (default) allows users to add their personal Google account.
 
 ### <a name="applications"></a>Aplikací
 
@@ -257,7 +259,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
     - **Port number**: Enter the TCP port number used by the proxy server. Zadejte například `8080`.
     - **Excluded hosts**: Enter a list of host names or IP addresses that won't use the proxy. This list can include an asterisk (`*`) wildcard and multiple hosts separated by semicolons (`;`) with no spaces. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
-  - **Proxy Auto-Config**: Enter the **PAC URL** to a proxy auto-configuration script. Zadejte například `https://proxy.contoso.com/proxy.pac`.
+  - **Proxy Auto-Config**: Enter the **PAC URL** to a proxy autoconfiguration script. Zadejte například `https://proxy.contoso.com/proxy.pac`.
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
@@ -317,7 +319,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   - **Aspoň alfanumerické se symboly**
 - **Znemožnit opakované použití předchozích hesel**: zadejte počet nových hesel, které je třeba použít, než uživatel bude moct znovu použít staré heslo (**1**-**24**).
 - **Fingerprint unlock**: Choose **Block** to prevent end users from using the device fingerprint scanner to unlock the device. **Not configured** allows users to unlock devices with a fingerprint in the work profile.
-- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, sometimes known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, also known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
 ### <a name="device-password"></a>Heslo zařízení
 
@@ -338,7 +340,7 @@ These password settings apply to personal profiles on devices that use a work pr
   - **Aspoň alfanumerické se symboly**
 - **Znemožnit opakované použití předchozích hesel**: zadejte počet nových hesel, které je třeba použít, než uživatel bude moct znovu použít staré heslo (**1**-**24**).
 - **Fingerprint unlock**: Choose **Block** to prevent end user from using the device fingerprint scanner to unlock the device. **Not configured** allows the user to unlock the device using a fingerprint.
-- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, sometimes known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, also known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
 ### <a name="system-security"></a>System security
 
