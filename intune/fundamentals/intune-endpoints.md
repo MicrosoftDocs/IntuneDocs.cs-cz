@@ -47,7 +47,7 @@ Spravovaná zařízení musí být nakonfigurovaná tak, aby **všichni uživate
 
 Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje klient Intune:
 
-|Domains    |IP adresa      |
+|Domény    |IP adresa      |
 |-----------|----------------|
 |login.microsoftonline.com <br> *. officeconfig.msocdn.com <br> config.office.com <br> graph.windows.net| Další informace: [Office 365 –adresy URL a rozsahy IP adres](https://support.office.com/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) |
 |portal.manage.microsoft.com<br> m.manage.microsoft.com |52.175.12.209<br>20.188.107.228<br>52.138.193.149<br>51.144.161.187<br>52.160.70.20<br>52.168.54.64 <br>13.72.226.202<br>52.189.220.232|
@@ -93,29 +93,29 @@ Následující tabulky obsahují seznam portů a služeb, ke kterým přistupuje
 
 Pokud k nasazení skriptů PowerShellu nebo aplikací Win32 používáte Intune, musíte taky udělit přístup k koncovým bodům, ve kterých se aktuálně nachází váš tenant.
 
-|ASU | Název úložiště | ZDROJ |
+|ASU | Název úložiště | CDN |
 | --- | --- |--- |
-| AMSUA0601 | prodmsua06data | https: \//prodmsua06data. azureedge. NET |
-| AMSUA0602 | prodamsua0602data | https: \//prodamsua0602data. azureedge. NET |
-| AMSUA0101 | prodmsua01data | https: \//prodmsua01data. azureedge. NET |
-| AMSUA0201 | prodmsua02data | https: \//prodmsua02data. azureedge. NET |
-| AMSUA0202 | Prodmsua0202rcdata | https: \//prodamsua0202data. azureedge. NET/ |
-| AMSUA0401 | prodmsua04data | https: \//prodmsua04data. azureedge. NET |
-| AMSUA0402 | Prodmsua0402rcdata | https: \//prodamsua0402data. azureedge. NET/ |
-| AMSUA0501 | prodmsua05data | https: \//prodmsua05data. azureedge. NET |
-| AMSUA0502 | prodmsua0502data | https: \//prodmsua0502data. azureedge. NET |
-| AMSUB0101 | prodmsub01data | https: \//prodmsub01data. azureedge. NET |
-| AMSUB0102 | prodamsub0102data | https: \//prodamsub0102data. azureedge. NET |
-| AMSUB0201 | prodmsub02data | https: \//prodmsub02data. azureedge. NET |
-| AMSUB0202 | Prodmsub0202rcdata | https: \//prodamsub0202data. azureedge. NET |
-| AMSUB0301 | Prodmsub03data2 | https: \//prodmsub03data2. azureedge. NET |
-| AMSUB0302 | Prodmsub0302rcdata | https: \//prodamsub0302data. azureedge. NET |
-| AMSUB0501 | prodmsub05data | https: \//prodmsub05data. azureedge. NET |
-| AMSUC0101 | prodmsuc01data | https: \//prodmsuc01data. azureedge. NET |
-| AMSUC0201 | prodmsuc02data | https: \//prodmsuc02data. azureedge. NET |
-| AMSUC0301 | prodmsuc03data | https: \//prodmsuc03data. azureedge. NET |
-| AMSUC0501 | prodmsuc05data | https: \//prodmsuc05data. azureedge. NET |
-| AMSUA0701 | pemsua07rcdata | https: \//pemsua07data. azureedge. NET |
+| AMSUA0601 | prodmsua06data | https:\//prodmsua06data.azureedge.net |
+| AMSUA0602 | prodamsua0602data | https:\//prodamsua0602data.azureedge.net |
+| AMSUA0101 | prodmsua01data | https:\//prodmsua01data.azureedge.net |
+| AMSUA0201 | prodmsua02data | https:\//prodmsua02data.azureedge.net |
+| AMSUA0202 | Prodmsua0202rcdata | https:\//prodamsua0202data.azureedge.net/ |
+| AMSUA0401 | prodmsua04data | https:\//prodmsua04data.azureedge.net |
+| AMSUA0402 | Prodmsua0402rcdata | https:\//prodamsua0402data.azureedge.net/ |
+| AMSUA0501 | prodmsua05data | https:\//prodmsua05data.azureedge.net |
+| AMSUA0502 | prodmsua0502data | https:\//prodmsua0502data.azureedge.net |
+| AMSUB0101 | prodmsub01data | https:\//prodmsub01data.azureedge.net |
+| AMSUB0102 | prodamsub0102data | https:\//prodamsub0102data.azureedge.net |
+| AMSUB0201 | prodmsub02data | https:\//prodmsub02data.azureedge.net |
+| AMSUB0202 | Prodmsub0202rcdata | https:\//prodamsub0202data.azureedge.net |
+| AMSUB0301 | Prodmsub03data2 | https:\//prodmsub03data2.azureedge.net |
+| AMSUB0302 | Prodmsub0302rcdata | https:\//prodamsub0302data.azureedge.net |
+| AMSUB0501 | prodmsub05data | https:\//prodmsub05data.azureedge.net |
+| AMSUC0101 | prodmsuc01data | https:\//prodmsuc01data.azureedge.net |
+| AMSUC0201 | prodmsuc02data | https:\//prodmsuc02data.azureedge.net |
+| AMSUC0301 | prodmsuc03data | https:\//prodmsuc03data.azureedge.net |
+| AMSUC0501 | prodmsuc05data | https:\//prodmsuc05data.azureedge.net |
+| AMSUA0701 | pemsua07rcdata | https:\//pemsua07data.azureedge.net |
 
 ## <a name="windows-push-notification-services-wns"></a>Služba nabízených oznámení Windows (WNS)  
 
@@ -135,18 +135,18 @@ Chcete-li použít optimalizaci doručování, je nutné, abyste povolili požad
 
 Pro podporu optimalizace doručování Povolte následující názvy hostitelů přes bránu firewall.
 Pro komunikaci mezi klienty a cloudovou službou Optimalizace doručení:
-- @no__t – 0.do.dsp.mp.microsoft.com
+- \*. do.dsp.mp.microsoft.com
 
 Pro metadata Optimalizace doručení:
-- @no__t – 0.dl.delivery.mp.microsoft.com
-- @no__t – 0.emdl.ws.microsoft.com
+- \*. dl.delivery.mp.microsoft.com
+- \*. emdl.ws.microsoft.com
 
 ## <a name="apple-device-network-information"></a>Informace o síti pro zařízení Apple  
 
-|Používá se pro|Název hostitele (IP adresa/podsíť)|Protokol|Port|
+|Používá se pro|Název hostitele (IP adresa/podsíť)|Protocol (Protokol)|Port|
 |-----|--------|------|-------|
-|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>@no__t – 0.itunes.apple.com<br>@no__t – 0.mzstatic.com<br>@no__t – 0.phobos.apple.com<br> @no__t – 0.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|Komunikace se servery APNS|# – courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
+|Načítání a zobrazování obsahu ze serverů Apple|itunes.apple.com<br>\*.itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
+|Komunikace se servery APNS|#-courier.push.apple.com<br>' # ' je náhodné číslo od 0 do 50.|    TCP     |  5223 a 443  |
 |Různé funkce, včetně přístupu k webu, obchodu iTunes, macOS App Storu, iCloud, zasílání zpráv atd. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 nebo 443   |
 
-Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud vaši klienti MacOS a iOS nezískávají Apple Push oznámení](https://support.apple.com/en-us/HT203609).  
+Další informace najdete v tématu [porty TCP a UDP společnosti Apple používané softwarovými produkty společnosti Apple](https://support.apple.com/en-us/HT202944), [připojení hostitelů serveru MacOS, iOS a iTunes a procesy na pozadí iTunes](https://support.apple.com/en-us/HT201999)a [Pokud klienti MacOS a iOS nezískávají nabízená oznámení Apple](https://support.apple.com/en-us/HT203609).  

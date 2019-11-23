@@ -66,10 +66,10 @@ Nastavení přístupu v zásadách ochrany aplikací Intune a správě mobilníc
  
 Máte dvě různé možnosti: 
 - **Upozornit** – upozornění informuje koncového uživatele o tom, jestli se má upgradovat, když otevřou aplikaci se zásadami ochrany aplikací nebo nastavením přístupu mam na zařízení s verzí operačního systému nižším než zadaná verze. Přístup k datům aplikace a organizace je povolený.
-  @no__t – 0Image dialogového okna Upozornění aktualizace pro Android @ no__t-1 
+  ![Obrázek dialogového okna Upozornění aktualizace pro Android](./media/manage-os-versions/os-version-update-warning.png) 
 
 - **Blok bloku** informuje koncového uživatele, že se musí upgradovat, když otevřou aplikaci se zásadami ochrany aplikací nebo nastavením přístupu mam na zařízení s nižší verzí operačního systému, než je zadaná verze. Přístup k datům aplikace a organizace není povolený.
-  @no__t – 0Image dialogového okna blokovaný přístup k aplikaci @ no__t-1
+  ![Obrázek dialogového okna blokovaný přístup k aplikaci](./media/manage-os-versions/os-version-access-blocked.png)
 
 ### <a name="in-practice"></a>V praxi
 Organizace dnes nastavení zásad ochrany aplikací využívají při spuštění nebo obnovení aplikací jako způsob, jak uživatele informovat o potřebě udržovat aplikace aktuální. Příkladem konfigurace je, že koncoví uživatelé s verzí o jednu nižší než aktuální jsou upozorněni a uživatelé s verzí o dvě nižší než aktuální jsou zablokováni.

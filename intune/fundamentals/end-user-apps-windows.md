@@ -36,7 +36,7 @@ Tyto informace vám dají představu o tom, jak a kde uživatelé získávají a
 
 **Nespravované aplikace** jsou aplikace, které jde spravovat pomocí zásad a které nejsou zabalené službou Intune ani sestavené pomocí sady Intune App SDK. Na tyto aplikace nejdou použít zásady ochrany aplikací.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 
 [Jak uživatelé s Androidem získávají svoje aplikace](end-user-apps-android.md)
 [Jak uživatelé systému iOS získávají svoje aplikace](end-user-apps-android.md)

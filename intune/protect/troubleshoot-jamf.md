@@ -31,7 +31,7 @@ Tento článek pomáhá správcům Intune pochopit a řešit problémy s integra
 > [!TIP]  
 > Většina informací v tomto článku se původně objevila při [řešení potíží při integraci Jamf s Microsoft Intune](https://support.microsoft.com/help/4519171/troubleshoot-problems-when-integrating-jamf-with-microsoft-intune) v support.Microsoft.com.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Než začnete s odstraňováním potíží, shromážděte některé základní informace pro objasnění problému a zkrácení doby hledání řešení. Například pokud narazíte na problém související s integrací Jamf-Intune, vždy ověřte, že byly splněny všechny požadavky. Než začnete řešit potíže, přečtěte si následující skutečnosti:
 
@@ -57,11 +57,11 @@ Následující informace vám pomůžou identifikovat a vyřešit běžné probl
 |-----------------|--------------------------|
 | **Zařízení se v Jamf pro označí jako nereagující.**  | [Zařízení se nepodařilo zaregistrovat pomocí Jamf pro nebo pomocí Azure AD.](#devices-are-marked-as-unresponsive-in-jamf-pro) |
 | **Zařízení se systémem Mac se při spuštění přihlášení k řetězci klíčů při otevření zařízení aplikace vyzvat k chybě registrace**  | [Uživatelům se zobrazí výzva k zadání hesla, aby se aplikace mohla registrovat ve službě Azure AD](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app). |
-| **Registrace zařízení se nezdařila**  | Můžou se vztahovat následující příčiny: <br> **-** [ ***Příčina 1*** – aplikace Jamf pro v Azure má nesprávná oprávnění](#cause-1) <br> **-** [ ***Příčina 2*** – došlo k potížím s *konektorem Jamf Native MacOS* ve službě Azure AD.](#cause-2) <br> **-** [ ***Příčina 3*** – uživatel nemá platnou licenci Intune nebo Jamf](#cause-3) <br> **-** [ ***Příčina 4*** – uživatel nepoužívá samoobslužnou službu Jamf ke spuštění aplikace Portál společnosti](#cause-4) <br> **-** [ ***Příčina 5*** – integrace Intune je vypnutá](#cause-5) <br> **-** [ ***Příčina 6*** – zařízení bylo dříve zaregistrováno v Intune nebo se uživatel pokusil zaregistrovat zařízení vícekrát.](#cause-6) <br> **-** [ ***Příčina 7*** -JamfAAD žádá o přístup k klíči Microsoft Workplace JOIN z řetězce klíčů uživatele.](#cause-7) |
+| **Registrace zařízení se nezdařila**  | Můžou se vztahovat následující příčiny: <br> **-** [ ***Příčina 1*** – aplikace Jamf pro v Azure má nesprávná oprávnění](#cause-1) <br> **-** [ ***Příčina 2*** – došlo k potížím s *konektorem Jamf Native MacOS* ve službě Azure AD.](#cause-2) <br> **-** [ ***Příčina 3*** – uživatel nemá platnou licenci Intune nebo Jamf](#cause-3) <br> **-** [ ***Příčina 4*** – uživatel nepoužívá samoobslužnou službu Jamf ke spuštění aplikace Portál společnosti.](#cause-4) <br> **-** [ ***Příčina 5*** – integrace s Intune je vypnutá.](#cause-5) <br> **-** [ ***Příčina 6*** – zařízení se dřív zaregistrovalo v Intune nebo se uživatel pokusil zaregistrovat zařízení víckrát.](#cause-6) <br> **-** [ ***Příčina 7*** -JamfAAD vyžaduje přístup k klíči Microsoft Workplace JOIN z řetězce klíčů uživatele](#cause-7) |
 |  **Zařízení Mac zobrazuje vyhovující předpisy v Intune, ale nedodržuje předpisy v Azure.** | [Problémy s registrací zařízení](#mac-device-shows-compliant-in-intune-but-noncompliant-in-azure) |
 | **V konzole Intune pro zařízení Mac, které jsou zaregistrované pomocí Jamf, se zobrazí duplicitní položky.** | [Několik registrací má stejné zařízení.](#duplicate-entries-appear-in-the-intune-console-for-mac-devices-enrolled-by-using-jamf) |
 | **Zásada dodržování předpisů nedokáže vyhodnotit zařízení** | [Zásady cílí na skupiny zařízení.](#compliance-policy-fails-to-evaluate-the-device) |
-| **Nepovedlo se načíst přístupový token pro rozhraní Microsoft Graph API.** | Můžou se vztahovat následující příčiny: <br> Oprávnění -[pro aplikaci Jamf pro v Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> [Jamf nebo Intune vypršela platnost licence na](#a-license-required-for-jamf-intune-integration-has-expired) @no__t 0 <br> porty **-** nejsou [otevřeny](#the-required-ports-arent-open-on-your-network) .|
+| **Nepovedlo se načíst přístupový token pro rozhraní Microsoft Graph API.** | Můžou se vztahovat následující příčiny: <br> [oprávnění -pro aplikaci Jamf pro v Azure](#theres-a-permission-issue-with-the-jamf-pro-application-in-azure) <br> - [licenci na Jamf nebo Intune vypršela platnost](#a-license-required-for-jamf-intune-integration-has-expired) . <br> porty **-** nejsou [otevřené](#the-required-ports-arent-open-on-your-network) .|
  
 
 ### <a name="devices-are-marked-as-unresponsive-in-jamf-pro"></a>Zařízení se v Jamf pro označí jako nereagující.  
@@ -77,7 +77,7 @@ Následující informace vám pomůžou identifikovat a vyřešit běžné probl
   - Pokud se neúspěšná aktualizace tokenu na 24 hodin nebo více, Jamf pro zařízení označí jako nereagující.  
   - Pokud vyprší platnost tokenu Azure, zobrazí se uživatelům výzva, abyste se přihlásili k Azure a získali nový token. Obnovovací token pro Azure Access se vygeneruje každých 7 dní.
 
-**Rozhodnutí**  
+**Řešení**  
 Po označení *zařízení jako nereagující* Jamf pro se musí zaregistrovaný uživatel zařízení přihlásit a opravit nereagující stav. Musí to být uživatel, který má k účtu připojený pracovní vztah, protože má v přihlašovacím řetězci pro přihlášení identitu z Intune.
 
 
@@ -95,7 +95,7 @@ Například při otevření Microsoft Teams se zobrazí výzva s textem podobný
 
 **Příčina**: tyto výzvy vygeneruje Jamf pro pro každou platnou aplikaci, která vyžaduje registraci Azure AD. 
 
-**Řešení**   
+  **řešení**  
 V příkazovém řádku musí uživatel pro přihlášení ke službě Azure AD zadat heslo zařízení. Vaše možnosti jsou:
 - **Odepřít** – Přihlaste se a nepoužívejte aplikaci.
 - **Povolení** – jednorázové přihlášení Při příštím spuštění aplikace se zobrazí výzva k opětovnému přihlášení.
@@ -107,20 +107,20 @@ Výběr možnosti *vždy povolit* pro jednu aplikaci schválí pouze tuto aplika
 
 K dispozici je několik běžných příčin pro zařízení Mac, která se nepodaří zaregistrovat.  
 
-#### <a name="cause-1"></a>Příčina 1  
+#### <a name="cause-1"></a>Příčiny 1  
 
 **Podniková aplikace Jamf pro v Azure má nesprávné oprávnění nebo má více než jedno oprávnění.**  
 
-  Když vytváříte aplikaci v Azure, musíte odebrat všechna výchozí oprávnění rozhraní API a pak přiřadit Intune jedno oprávnění *update_device_attributes*. 
+  Když vytváříte aplikaci v Azure, musíte odebrat všechna výchozí oprávnění rozhraní API a potom přiřadit Intune jedno oprávnění *update_device_attributes*. 
 
-  **Rozhodnutí**  
+  **Řešení**  
   Zkontrolujte a v případě potřeby opravte oprávnění pro aplikaci Jamf, kterou jste vytvořili ve službě Azure AD. Podívejte se na postup [Vytvoření aplikace pro Jamf ve službě Azure AD](conditional-access-integrate-jamf.md#create-an-application-in-azure-active-directory). 
 
-#### <a name="cause-2"></a>Příčina 2  
+#### <a name="cause-2"></a>Příčiny 2  
 
 **V tenantovi Azure AD se nevytvořila aplikace **konektoru Jamf Native MacOS** ani se pro tento konektor podepsal účet, který nemá oprávnění globálního správce.**  
 
-  **Rozhodnutí**  
+  **Řešení**  
   Informace najdete v části *Konfigurace integrace MacOS Intune* v tématu [integrace s Microsoft Intune](https://docs.jamf.com/10.13.0/jamf-pro/administrator-guide/Integrating_with_Microsoft_Intune.html) v docs.jamf.com. 
 
 #### <a name="cause-3"></a>Příčina 3
@@ -134,7 +134,7 @@ K dispozici je několik běžných příčin pro zařízení Mac, která se nepo
     Check your Microsoft Intune Integration configuration.
   ```  
 
-  **Rozhodnutí**
+  **Řešení**
   - Jamf licence: obraťte se na Jamf s žádostí o pomoc, abyste získali novou licenci pro Jamf.  
   - Licence Intune: přiřaďte uživateli platnou licenci nebo kontaktujte společnost Microsoft nebo svého partnera, kde najdete informace o tom, jak získat aktuální licenci.
 
@@ -154,7 +154,7 @@ V aplikaci Portál společnosti se uživateli může zobrazit **`Not registered`
    WelcomeViewController.swift: 253 (startLogin()) Portal launched without WPJ only arg while account is under partner management
 ```
 
-**Rozhodnutí**  
+**Řešení**  
 Změna zdroje registrace z Intune na Jamf:
 1. Zruší [registraci zařízení MacOS v Intune](https://docs.microsoft.com/intune-user-help/unenroll-your-device-from-intune-macos). Aby nedocházelo k dalším komplikacím u zařízení, která nejsou úplně odebrána z Intune, přečtěte si část [*Příčina 6*](#cause-6) v tomto seznamu příčin.  
 
@@ -182,7 +182,7 @@ Pokud je integrace Intune vypnutá, uživatelé při pokusu o registraci zaříz
 
 Server Jamf pro pošle pulsi serverům Intune, když je vypnutá integrace, která oznamuje Intune, že integrace je zakázaná. 
 
-**Rozhodnutí**  
+**Řešení**  
 Znovu povolit integraci Intune v Jamf pro. Viz [Konfigurace integrace Microsoft Intune v Jamf pro](conditional-access-integrate-jamf.md#enable-intune-to-integrate-with-jamf-pro).
 
 
@@ -192,7 +192,7 @@ Znovu povolit integraci Intune v Jamf pro. Viz [Konfigurace integrace Microsoft 
 
 Pokud je zařízení odregistrované z Jamf, ale není správně odebrané z Intune nebo se provede několik pokusů o registraci, můžete na portálu zobrazit víc instancí stejného zařízení. To způsobí selhání registrace Jamf.
 
-**Rozhodnutí**  
+**Řešení**  
 1. Na Macu spusťte **terminál**.
 2. Spusťte **sudo JAMF removemdmprofile**.
 3. Spusťte **sudo JAMF removeFramework**.
@@ -208,8 +208,8 @@ Pokud je zařízení odregistrované z Jamf, ale není správně odebrané z Int
    - /Library/Preferences/com.microsoft.CompanyPortal.plist
    - /Library/Preferences/com.jamfsoftware.selfservice.mac.plist
    - /Library/Preferences/com.jamfsoftware.management.jamfAAD.plist
-   - /Users/@no__t – 0, knihovna/soubory cookie/com. Microsoft. CompanyPortal. binarycookies
-   - /Users/@no__t – 0, knihovna/soubory cookie/com. jamf. Management. jamfAAD. binarycookies
+   - /Users/<username>/Library/Cookies/com.microsoft.CompanyPortal.binarycookies
+   - /Users/<username>/Library/Cookies/com.jamf.management.jamfAAD.binarycookies
    - com. Microsoft. CompanyPortal
    - com. Microsoft. CompanyPortal. HockeySDK
    - enterpriseregistration.windows.net
@@ -247,7 +247,7 @@ Během registrace obdrží uživatel zařízení macOS následující výzvu, ab
    To allow this, enter the “login” keychain password
 ```
 
-**Rozhodnutí**  
+**Řešení**  
 Aby bylo možné zařízení úspěšně zaregistrovat do Azure AD, Jamf vyžaduje, aby uživatel poskytoval heslo k účtu, a vyberte možnost **udělit**.
 
 Tato žádost se podobá žádosti o [přihlášení k řetězci pro řetězce klíčů v počítačích Mac, když otevřete aplikaci](#mac-devices-prompt-for-keychain-sign-in-when-you-open-an-app), dříve v tomto článku.  
@@ -259,7 +259,7 @@ Tato žádost se podobá žádosti o [přihlášení k řetězci pro řetězce k
 - Zařízení není správně zaregistrované.  
 - Zařízení bylo zaregistrováno několikrát bez nezbytného vyčištění.
 
-**Rozhodnutí**  
+**Řešení**  
 Pokud chcete tento problém vyřešit, postupujte podle pokynů v části [*Příčina 6*](#cause-6) , aby se zařízení nepovedlo *zaregistrovat*, výše v tomto článku. 
 
 
@@ -269,14 +269,14 @@ Pokud chcete tento problém vyřešit, postupujte podle pokynů v části [*Př�
 
 Když se zařízení odebere z integrace Intune a Jamf pro, mohou být některá data ponechána za tím, že by mohlo dojít k následným registrům při vytváření duplicitních položek.  
 
-**Rozhodnutí**  
+**Řešení**  
 Pokud chcete tento problém vyřešit, postupujte podle pokynů v části [*Příčina 6*](#cause-6) , aby se zařízení nepovedlo *zaregistrovat*, výše v tomto článku. 
 
 ### <a name="compliance-policy-fails-to-evaluate-the-device"></a>Zásada dodržování předpisů nedokáže vyhodnotit zařízení  
 
 **Příčina**: integrace Jamf s Intune nepodporuje zásady dodržování předpisů, které cílí na skupiny zařízení. 
 
-**Rozhodnutí**  
+**Řešení**  
 Upravte zásady dodržování předpisů pro zařízení macOS, která se mají přiřadit ke skupinám uživatelů. 
 
 
@@ -294,9 +294,9 @@ Zdrojem této chyby může být jeden z následujících příčin:
 
 Při registraci aplikace Jamf pro v Azure došlo k jedné z následujících podmínek:  
 - Aplikace přijala více než jedno oprávnění.
-- Nebyla vybrána možnost **udělení souhlasu správce *\<your společnosti >***  .  
+- Nebyla vybrána možnost **udělit souhlas správce pro *\<vaší společnosti >***  .  
 
-**Rozhodnutí**  
+**Řešení**  
 Podívejte se na řešení příčin 1, kdy [se zařízení nepodaří zaregistrovat](#devices-fail-to-register), výše v tomto článku.
 
 #### <a name="a-license-required-for-jamf-intune-integration-has-expired"></a>Platnost licence vyžadované pro integraci Jamf-Intune vypršela.

@@ -55,7 +55,7 @@ Pro přístup k firemním prostředkům můžete vyžadovat PIN kód. Můžete t
 2. Potvrďte následující podmínky:
     - Při spuštění aplikace by se měla zobrazit výzva k zadání PIN kódu nebo výrobnímu uživateli, který se použil při registraci s Portál společnosti.
     - Nepovedlo se vytvořit platnou výzvu k přihlášení, protože je k dispozici nesprávně nakonfigurovaný manifest Androidu, konkrétně hodnoty pro integraci knihovny Azure Active Directory Authentication Library (ADAL) (SkipBroker, ClientID a Authority).
-    - Chyba při zobrazení výzvy může být způsobena chybnou integrací @no__t hodnoty 0. Další informace o `MAMActivity` najdete v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
+    - Chyba při zobrazení výzvy může být způsobena nesprávně integrovanou `MAMActivity` hodnotou. Další informace o `MAMActivity`najdete v tématu [Microsoft Intune App SDK pro Android – příručka pro vývojáře](app-sdk-android.md).
 
 > [!NOTE] 
 > Pokud předchozí test nefunguje, následující testy budou pravděpodobně také neúspěšné. Projděte si integraci [sady SDK](app-sdk-android.md##sdk-integration) a [ADAL](app-sdk-android.md#configure-azure-active-directory-authentication-library-adal) .

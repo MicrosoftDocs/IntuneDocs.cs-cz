@@ -54,22 +54,22 @@ Ne. A nemusíte zadávat pomlčky.
 ## <a name="remove-devices-action"></a>Akce odebrání zařízení
 
 ### <a name="how-do-i-tell-who-started-a-retirewipe"></a>Návody informovat, kdo zahájil vyřazení/vymazání?
-Přejít na**zařízení**@no__t- **Intune** > **Akce zařízení** > kontrole **iniciované** sloupcem
+V **Intune** > **zařízení** > **Akce zařízení** > Ověřte sloupce **iniciované ve** sloupci.
 Pokud položku nevidíte, nejpravděpodobnější osoba, která iniciovala tuto akci, je uživatel tohoto zařízení. Pravděpodobně použili Portál společnosti aplikaci nebo portal.manage.microsoft.com.
 
 ### <a name="why-wasnt-my-application-uninstalled-after-using-retire"></a>Proč se mi po použití vyřazení nenainstalovala moje aplikace?
-Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. Patří mezi ně:
+Protože není považována za spravovanou aplikaci. V tomto kontextu je spravovaná aplikace aplikace, která byla nainstalována pomocí služby Intune. To zahrnuje:
 - Aplikace se nasadila jako povinná.
 - Aplikace byla nasazená jako dostupná a pak koncovým uživatelem nainstalovaná v aplikaci Portál společnosti.
 
 ### <a name="why-is-wipe-grayed-out-for-android-enterprise-work-profile-devices"></a>Proč je pro zařízení se systémem Android Enterprise Work profilování vymazáno šedé?
-Toto chování je očekávané. Google neumožňuje obnovení továrního nastavení zařízení pracovního profilu od poskytovatele MDM.
+Toto je očekávané chování. Google neumožňuje obnovení továrního nastavení zařízení pracovního profilu od poskytovatele MDM.
 
 ### <a name="why-can-i-sign-back-into-my-office-apps-after-my-device-was-retired"></a>Proč se můžu po vyřazení zařízení do aplikací Office přihlásit zpátky?
 Protože vyřazení zařízení z provozu neodvolává přístupové tokeny. Pomocí zásad podmíněného přístupu můžete zmírnit tuto podmínku.
 
 ### <a name="how-can-i-monitor-a-retirewipe-action-after-it-was-issued"></a>Jak můžu monitorovat akci vyřazení/vymazání po jejím vydání?
-Přejít na**zařízení** **Intune** >  @no__t zařízení-3**Akce zařízení**.
+V **Intune** > **zařízení** > **Akce zařízení**.
 
 ### <a name="why-do-wipes-sometimes-show-as-pending-indefinitely"></a>Proč se vymazání někdy zobrazuje na neomezenou dobu?
 Zařízení před zahájením resetování vždy hlásí svůj stav zpět do služby Intune. Proto se akce zobrazí jako čeká na vyřízení. Pokud jste ověřili, že se akce úspěšně provedla, odstraňte zařízení ze služby.

@@ -55,7 +55,7 @@ Po vytvoření uživatele musíte použít [Centrum pro správu Microsoft 365](h
 Přiřazení licence Intune uživateli:
 
 1. Přihlaste se k [centru pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) pomocí stejných přihlašovacích údajů, které jste použili pro přihlášení k Intune.
-2. Vyberte možnost **uživatelé** > **aktivní uživatelé** > a vyberte uživatele, kterého jste právě vytvořili.
+2. Vyberte možnost **Uživatelé, kteří** > **aktivní uživatelé** > a vyberte uživatele, kterého jste právě vytvořili.
 3. Vedle možnosti **Licence na produkty** vyberte **Upravit**.
 4. V části **Umístění** zvolte umístění pro daného uživatele.
 5. Klikněte **na** vedle licence Intune (nebo jiné licence, kterou máte v Intune). Zobrazený [název produktu](https://docs.microsoft.com/azure/active-directory/users-groups-roles/licensing-service-plan-reference)** slouží jako plán služeb ve správě Azure. 
@@ -68,7 +68,7 @@ Nový aktivní uživatel Intune teď zobrazí, že používá licenci **Intune**
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
-Pokud tento uživatel již nepotřebujete, můžete uživatele odstranit tak, že přejdete do [centra pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolíte možnost **Uživatelé** > **aktivní uživatelé** > *Vyberte uživatele v seznamu* > **Odstranit uživatele** > . **Odstranit uživatele**@no__t – 10**potvrzení změn**2**Zavřít**.
+Pokud tento uživatel již nepotřebujete, můžete uživatele odstranit tak, že přejdete do [centra pro správu Microsoft 365](http://go.microsoft.com/fwlink/p/?LinkId=698854) a zvolíte **možnost Uživatelé** > **aktivní uživatelé** > *Vyberte uživatele v seznamu* > **Odstranit** uživatele > **Odstranit** uživatele > **Potvrdit změny** > **Zavřít**.
 
 ## <a name="next-steps"></a>Další kroky
 

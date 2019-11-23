@@ -91,7 +91,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
   **Výchozí**: blok 
 
 - **Zabránit krádeži pověření typu**  
-  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Nastavením této možnost *povolíte* [ochranu odvozených přihlašovacích údajů domény s ochranou přihlašovacích údajů](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard). Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
 
   **Výchozí**: Povolit
 
@@ -441,7 +441,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zprostředkovatel C
   Určete, jak se má pro daný software na straně příjmu Povolit šifrované přijímání a prostý text před scénářem brány IPsec pro tunelové připojení. Tím se zajistí zachování pořadí paketů.  
   **Výchozí**: výchozí nastavení zařízení
 
-- **Doména profilu brány Firewall** - *FirewallRules/FirewallRuleName/Profiles*  
+- **Profil brány firewall**  - FirewallRules/FirewallRuleName/profily  
   Určuje profily, do kterých pravidlo patří: doména, soukromá, veřejná. Tato hodnota představuje profil pro sítě, které jsou připojené k doménám.  
 
   Dostupná nastavení:  

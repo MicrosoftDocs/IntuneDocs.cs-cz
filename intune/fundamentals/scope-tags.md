@@ -43,7 +43,7 @@ Výchozí funkce značky oboru je podobná funkci rozsahů zabezpečení v Syste
 
 ## <a name="to-create-a-scope-tag"></a>Vytvoření značky oboru
 
-1. V Intune vyberte **role**@no__t**obor (značky)**  > **vytvořit**.
+1. V Intune vyberte **role** > **obor (značky)**  > **vytvořit**.
 
     ![Snímek obrazovky s vytvořením značky oboru](./media/scope-tags/create-scope-tag.png)
 
@@ -54,16 +54,16 @@ Výchozí funkce značky oboru je podobná funkci rozsahů zabezpečení v Syste
 
 ## <a name="to-assign-a-scope-tag-to-a-role"></a>Přiřazení značky oboru k roli
 
-1. V Intune vyberte **role** > **všechny role** > vyberte role > **přiřazení** > **přiřazení.**
+1. V Intune vyberte **role** > **všechny role** > vyberte role > **přiřazení** > **přiřadit**.
 
     ![Snímek obrazovky s přiřazením oboru k roli](./media/scope-tags/assign-scope-to-role.png)
 
 2. Zadejte název a **Popis** **přiřazení** .
-3. Zvolte **Členové (skupiny)**  > **Přidat** > vyberte skupiny, které chcete jako součást tohoto přiřazení, > **Vyberte** > **OK**. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny).
+3. Zvolte **Členové (skupiny)**  > **Přidat** > zvolte skupiny, které chcete jako součást tohoto přiřazení, > **Vyberte** > **OK**. Uživatelé v této skupině budou mít oprávnění ke správě uživatelů nebo zařízení v oboru (skupiny).
 
     ![Snímek obrazovky s vybranými skupinami členů](./media/scope-tags/select-member-groups.png)
 
-4. Pokud chcete spravovat uživatele nebo zařízení v určité sadě skupin, zvolte **rozsah (skupiny)**  > **vybrané skupiny** > **Vyberte skupiny, které chcete zahrnout** > zvolte skupiny > **Vyberte** > **OK**. Všichni uživatelé/zařízení v této skupině budou spravováni správci v členech (skupině).
+4. Pokud chcete spravovat uživatele nebo zařízení v určité sadě skupin, zvolte **rozsah (skupiny)**  > **vybrané skupiny** > **Vybrat skupiny, které chcete zahrnout** > zvolte skupiny > **Vyberte** > **OK**. Všichni uživatelé/zařízení v této skupině budou spravováni správci v členech (skupině).
 
     ![Snímek obrazovky s vybranými skupinami oborů](./media/scope-tags/select-scope-groups.png)
 
@@ -85,12 +85,12 @@ Pro objekty, které podporují značky oboru, se značky oboru obvykle zobrazuj�
 
     ![Snímek obrazovky s vybraným profilem](./media/scope-tags/choose-profile.png)
 
-2. Vyberte **vlastnosti**@no__t**obor (značky)**  > **Přidat**.
+2. Vyberte **vlastnosti** > **rozsah (značky)**  > **Přidat**.
 
     ![Snímek obrazovky s přidáním značek oboru](./media/scope-tags/add-scope-tags.png)
 
 3. V části **Vybrat značky**zvolte značky, které chcete přidat do profilu.
-4. Zvolte **vybrat** > **OK** > **Uložit**.
+4. Zvolte **možnost vybrat** > **OK** > **Uložit**.
 
 
 ## <a name="scope-tag-details"></a>Podrobnosti o značce oboru

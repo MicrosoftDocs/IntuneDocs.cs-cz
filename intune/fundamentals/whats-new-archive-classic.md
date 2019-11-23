@@ -60,7 +60,7 @@ V aplikaci Portál společnosti pro iOS se teď budou zobrazovat nové a konkré
 
 #### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Vylepšený stav instalace aplikace pro Portál společnosti aplikaci pro Windows 10 <!--676495-->
 
-Nová vylepšení pro instalaci aplikací spuštěná v aplikaci Portál společnosti Windows 10 zahrnují:
+Nová vylepšení pro instalaci aplikace spuštěna v aplikaci portál společnosti pro Windows 10 patří:
 - Rychlejší generování sestav o průběhu instalace pro balíčky MSI
 - Rychlejší generování sestav o průběhu instalace pro moderní aplikace na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
 - Nový indikátor průběhu pro všechny instalace moderních aplikací na zařízeních s Windows 10 Anniversary Update a novějšími verzemi
@@ -143,7 +143,7 @@ Přístup mobilních zařízení k podnikovým prostředkům teď můžete říd
 - Ochrana aplikací
 - Ochrana chyb zabezpečení
 
-Pomocí zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu EMS na základě posouzení rizik v rámci Symantec Endpoint Protection Mobile (Skycure). Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile Connector](../protect/skycure-mobile-threat-defense-connector.md).
+Pomocí zásad dodržování předpisů zařízením v Intune můžete nakonfigurovat zásady podmíněného přístupu EMS na základě posouzení rizik v rámci Symantec Endpoint Protection Mobile (Skycure). Tyto zásady můžete použít k povolení nebo blokování přístupu zařízení nesplňujících požadavky k podnikovým prostředkům na základě zjištěných hrozeb. Další informace najdete v tématu [Symantec Endpoint Protection Mobile konektor](../protect/skycure-mobile-threat-defense-connector.md).
 
 #### <a name="new-user-experience-for-the-company-portal-app-for-android---621622--"></a>Nové uživatelské prostředí pro aplikaci Portál společnosti pro Android <!--621622-->
 
@@ -253,13 +253,13 @@ Novinky ve verzi Intune v Azure najdete [zde](whats-new.md).
 ### <a name="new-capabilities"></a>Nové funkce
 
 #### <a name="in-console-reports-for-mam-without-enrollment---677961--"></a>Sestavy v konzole pro MAM bez registrace <!--677961-->
-Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Přečtěte si o tom, jak můžete [pomocí Intune monitorovat zásady správy mobilních aplikací](../apps/app-protection-policies-monitor.md).
+Pro registrovaná i nezaregistrovaná zařízení se přidaly nové sestavy pro ochranu aplikací. Další informace o tom, jak [monitorovat zásady správy mobilních aplikací v Intune](../apps/app-protection-policies-monitor.md).
 
 #### <a name="android-711-support---694397--"></a>Podpora Androidu 7.1.1 <!--694397-->
 Intune teď plně podporuje a spravuje Android 7.1.1.
 
-#### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat <!--unknown-->
-Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola pro správu komunikovat](../enrollment/troubleshoot-device-enrollment-in-intune.md#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
+#### <a name="resolve-issue-where-ios-devices-are-inactive-or-the-admin-console-cannot-communicate-with-them---unknown--"></a>Řešení problému, kdy zařízení s iOSem nejsou aktivní nebo s nimi nemůže konzola správce komunikovat <!--unknown-->
+Když zařízení uživatele ztratí kontakt s Intune, můžete uživateli poskytnout nový postup řešení potíží a pomoct mu tak znovu získat přístup k prostředkům společnosti. Viz [Zařízení nejsou aktivní nebo s nimi nemůže konzola správce komunikovat](../enrollment/troubleshoot-device-enrollment-in-intune.md#devices-are-inactive-or-the-admin-console-cant-communicate-with-them).
 
 ### <a name="notices"></a>Sdělení
 
@@ -303,7 +303,7 @@ Na začátku kalendářního roku 2017 provedeme migraci celého našeho prostř
 Prostředí pro správu na webu Azure Portal bude využívat nové funkce seskupování a cílení, které už byly oznámeny. Při migraci vašeho stávajícího tenanta do nového prostředí seskupování se provede také vaše migrace do verze Preview nového prostředí pro správu vašeho tenanta. Zatím můžete zjistit další informace o tom, co pro Microsoft Intune na portálu Azure Portal chystáme, v naší [nové dokumentaci](what-is-intune.md).
 
 __Integrace se správou telekomunikačních výdajů ve verzi Public Preview Azure Portal__ <!--747605-->
-Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se službami TEM (Telecom Expense Management) třetích stran. Pomocí Intune můžete uplatňovat limity na využívání domácích a roamingových dat. Tyto integrace začínáme zavádět s řešením [Saaswedo](http://www.saaswedo.com/). Jestli chcete povolit tuto funkci ve zkušební verzi tenanta, [kontaktujte prosím podporu Microsoftu](get-support.md).
+Ve verzi Preview teď začínáme na webu Azure Portal zavádět integraci se službami TEM (Telecom Expense Management) třetích stran. Pomocí Intune můžete uplatňovat limity na využívání domácích a roamingových dat. Tyto integrace začínáme zavádět s řešením [Saaswedo](http://www.saaswedo.com/). Pokud chcete povolit tuto funkci ve zkušební verzi tenanta, [obraťte se prosím na podporu Microsoftu](get-support.md).
 
 ### <a name="new-capabilities"></a>Nové funkce
 
@@ -322,7 +322,7 @@ Pokud správce IT neoznačí nová zařízení jako vlastněná podnikem, Intune
 __Multi-Factor Authentication při registraci se přesouvá do Azure Portal__ <!--VSO 750545-->
 Dříve by správci při nastavování vícefaktorového ověřování pro registrace Intune přešli do konzoly Intune nebo do konzoly Configuration Manageru (verze dřívější než z října 2016). S touto aktualizovanou funkcí se teď budete pomocí přihlašovacích údajů Intune přihlašovat na [Microsoft Azure Portal](https://manage.windowsazure.com) a nakonfigurujete nastavení MFA pomocí služby Azure AD. Další informace o tom najdete [tady](https://aka.ms/mfa_ad).
 
-__Portál společnosti aplikace pro Android je teď k dispozici v číně__ .<!--VSO 658093-->
+__Aplikace Portál společnosti pro Android je teď dostupná v číně__ <!--VSO 658093-->
 Publikujeme aplikaci Portál společnosti pro Android pro stahování v Číně. Z důvodu absence Obchod Google Play v Číně musí zařízení s Androidem získávat aplikace z čínských Marketplace aplikací. Aplikace Portál společnosti pro Android bude dostupná ke stažení v těchto obchodech:
 * [Baidu](https://go.microsoft.com/fwlink/?linkid=836946)
 * [Huawei](https://go.microsoft.com/fwlink/?linkid=836948)
@@ -337,7 +337,7 @@ Ke komunikaci se službou Microsoft Intune používá aplikace Portál společno
 |selektivní vymazání| Resetování zařízení| Resetování zařízení|
 |Nasazení nových nebo aktualizovaných aplikací| Instalace dostupných obchodních aplikací| Resetování hesla zařízení|
 |Vzdálené uzamčení|||
-|Resetování hesla|||
+|resetování hesla|||
 
 ### <a name="deprecations"></a>Vyřazení
 
@@ -374,5 +374,5 @@ __Podpisový certifikát Symantec už k nahrání nevyžaduje podepsanou aplikac
 __Podpora Portálu společnosti ve Windows Phonu 8__ Podpora Portálu společnosti ve Windows Phonu 8 se přestane nabízet. Podpora pro platformy Windows Phone 8 a WinRT se přestala nabízet v říjnu 2016. Podpora pro Portál společnosti ve Windows Phonu 8 se také přestala nabízet v říjnu 2016.
 
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 Podrobnosti o posledním vývoji najdete v tématu [Co je nového v Microsoft Intune](whats-new.md).

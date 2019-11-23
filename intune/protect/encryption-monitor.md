@@ -34,7 +34,7 @@ Sestavu můžete najít tak, že se přihlásíte do [centra pro správu Microso
 
 Sestava šifrování zobrazuje společné podrobnosti napříč podporovanými zařízeními, která spravujete. Následující části obsahují podrobné informace o informacích, které Intune prezentuje v sestavě.
 
-### <a name="prerequisites"></a>Požadované součásti
+### <a name="prerequisites"></a>Předpoklady
 
 Sestava šifrování podporuje vytváření sestav na zařízeních, na kterých běží následující verze operačního systému:
 
@@ -107,7 +107,7 @@ Když vyberete zařízení ze sestavy šifrování, Intune zobrazí podokno **st
 
   Následují příklady podrobností o stavu, které může Intune hlásit:
 
-  **MacOS**:
+  **macOS**:
   - Obnovovací klíč nebyl dosud načten a uložen. Pravděpodobně zařízení není odemknuté nebo nebylo vráceno se změnami.
 
     *Vezměte v úvahu: Tento výsledek nemusí nutně představovat chybový stav, ale dočasný stav, který může být z důvodu časování na zařízení, kde v úschově pro obnovovací klíče musí být nastavené před odesláním požadavku na šifrování do zařízení. Tento stav může také indikovat, že zařízení zůstává uzamčené nebo se v nedávné době nevrátilo s Intune. Vzhledem k tomu, že šifrování trezoru se nespustí, dokud není zařízení zapojené do elektrické sítě (zpoplatněné), může uživatel obdržet obnovovací klíč pro zařízení, které ještě není zašifrované*.

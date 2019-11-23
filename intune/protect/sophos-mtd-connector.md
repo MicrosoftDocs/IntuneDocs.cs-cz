@@ -43,31 +43,31 @@ Když se na zařízeních zjistí přítomnost škodlivých aplikací (třeba ma
 ![Zjistila se koncepční bitová kopie škodlivých aplikací.](./media/sophos-mtd-connector/sophos_malicious_apps_blocked.png)  
 
 **Přístup udělen při nápravě**:  
-@no__t – bitová kopie přístupu udělená po nápravě @ no__t-1
+![koncepční bitovou kopii přístupu uděleného po opravě](./media/sophos-mtd-connector/sophos_malicious_apps_unblocked.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Řízení přístupu na základě ohrožení sítě  
 Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a chrání přístup k sítím Wi-Fi na základě rizika zařízení.  
 
 **Blokovat přístup k síti přes Wi-Fi**:  
-přístup k síti @no__t 0Block prostřednictvím Wi-Fi @ no__t-1
+![blokovat přístup k síti přes Wi-Fi](./media/sophos-mtd-connector/sophos_network_wifi_blocked.png)
 
 **Přístup udělen při nápravě**:   
-@no__t – 0Access udělené při nápravě @ no__t-1  
+![přístup udělen při nápravě](./media/sophos-mtd-connector/sophos_network_wifi_unblocked.png)  
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Řízení přístupu k SharePointu Online na základě ohrožení sítě  
 Detekuje hrozby pro vaši síť, jako jsou útoky prostředníkem, a zabraňuje synchronizaci podnikových souborů na základě rizika zařízení.  
 
 **Zablokovat SharePoint Online, když jsou zjištěny hrozby sítě**:   
-@no__t – 0Block SharePoint Online, když se zjistí hrozby sítě @ no__t-1  
+![zablokovat SharePoint Online, když jsou zjištěny hrozby sítě](./media/sophos-mtd-connector/sophos_network_spo_blocked.png)  
 
 **Přístup udělen při nápravě**:  
-@no__t – 0Access udělené při nápravě pro SharePoint – příklad @ no__t-1  
+![přístupu uděleného při nápravě pro SharePoint – ukázka](./media/sophos-mtd-connector/sophos_network_spo_unblocked.png)  
 
 ## <a name="supported-platforms"></a>Podporované platformy  
 - Android 5,0 a novější
 - iOS 11,0 a novější
 
-## <a name="prerequisites"></a>Požadované součásti  
+## <a name="prerequisites"></a>Předpoklady  
 - Azure Active Directory Premium
 - Odběr služby Microsoft Intune 
 - Předplatné ochrany před mobilními hrozbami v Sophos

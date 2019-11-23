@@ -32,11 +32,11 @@ Po nastavení [podnikových vyhrazených zařízení s Androidem](android-kiosk-
 | Způsob registrace | Minimální verze operačního systému Android pro vyhrazená a plně spravovaná zařízení |
 | ----- | ----- |
 | Bezkontaktní komunikace (NFC) | 5.1 |
-| Zadání tokenu | 6,0 |
-| Kód QR | 7,0 |
-| Zero Touch  | 8.0 @ no__t-0 |
+| Zadání tokenu | 6.0 |
+| Kód QR | 7.0 |
+| Zero Touch  | 8,0\* |
 
-@no__t – 0 u zúčastněných výrobců.
+\* v zúčastněných výrobcích.
 
 ## <a name="enroll-by-using-near-field-communication-nfc"></a>Registrace pomocí bezkontaktní komunikace (NFC)
 

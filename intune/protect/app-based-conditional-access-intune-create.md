@@ -69,7 +69,7 @@ Než budete moct vytvořit zásady podmíněného přístupu z centra pro správ
 ## <a name="next-steps"></a>Další kroky
 [Blokování aplikací, které nepoužívají moderní ověřování](app-modern-authentication-block.md)
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 
 [Ochrana dat aplikací pomocí zásad ochrany aplikací](../apps/app-protection-policies.md)
 [Podmíněný přístup ve službě Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access)

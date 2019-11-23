@@ -37,13 +37,13 @@ Pokud potřebujete Rady a návrhy týkající se RBAC v Intune, můžete si vyzk
 ## <a name="roles"></a>Role
 Role definuje sadu oprávnění udělených uživatelům přiřazeným k této roli.
 Můžete použít jak předdefinované, tak i vlastní role. Předdefinované role se týkají některých běžných scénářů Intune. Můžete [vytvořit vlastní role](create-custom-role.md) s přesnou sadou oprávnění, která potřebujete. Několik rolí Azure Active Directory má oprávnění k Intune.
-Pokud chcete zobrazit roli, vyberte role **Intune**@no__t-**1 @no__t**-3**všechny role** > vyberte roli. Zobrazí se následující stránky:
+Pokud chcete zobrazit roli, vyberte **role > ** **Intune** > **všechny role** > vyberte roli. Zobrazí se následující stránky:
 
 - **Vlastnosti**: značky název, popis, typ, přiřazení a obor pro roli. 
 - **Oprávnění**: vypíše dlouhou sadu přepínačů definujících, jaká oprávnění role má.
 - **Přiřazení**: seznam [přiřazení rolí]( assign-role.md) definujících, kteří uživatelé mají přístup k jakým uživatelům nebo zařízením. Role může mít více přiřazení a uživatel může být v několika přiřazeních.
 
-### <a name="built-in-roles"></a>Předdefinované role
+### <a name="built-in-roles"></a>Vestavěné role
 Předdefinované role můžete přiřadit skupinám bez další konfigurace. Nemůžete odstranit ani upravit název, popis, typ ani oprávnění předdefinované role.
 
 - **Operátor helpdesku**: Provádí vzdálené úlohy u uživatelů a zařízení a může uživatelům a zařízením přiřazovat aplikace nebo zásady.
@@ -84,7 +84,7 @@ Přiřazení role definuje:
 - Jaké prostředky mohou změnit.
 
 Uživatelům můžete přiřadit vlastní i předdefinované role. Uživatel musí mít licenci Intune, aby mu byla přiřazena role Intune.
-Pokud chcete zobrazit přiřazení role, vyberte role **Intune**@no__t-**1 @no__t**-3**všechny role** > vyberte roli > vyberte přiřazení. Zobrazí se následující stránky:
+Pokud chcete zobrazit přiřazení role, vyberte **role** > **Intune** > **všechny role** > vyberte roli > vyberte přiřazení. Zobrazí se následující stránky:
 
 - **Properties (vlastnosti**): název, popis, role, členy, obory a značky přiřazení.
 - **Členové**: všichni uživatelé v uvedených skupinách zabezpečení Azure mají oprávnění ke správě uživatelů nebo zařízení, která jsou uvedená v oboru (skupiny).

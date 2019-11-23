@@ -122,7 +122,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
     **Výchozí**: Ano  
   
 
-## <a name="browser"></a>Prohlížeč  
+## <a name="browser"></a>Browser  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
@@ -155,7 +155,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
   
   **Výchozí**: Ano  
 
-## <a name="connectivity"></a>Komunikační  
+## <a name="connectivity"></a>Připojení  
 Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) .  
 
 - **Blokovat stažení z Internetu pro publikování na webu a Průvodce online řazením**  
@@ -170,7 +170,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: Nakonfigurujte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po splnění dalších požadavků na zabezpečení.
   
-  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC Hardended.
+  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC *Hardended.
   - **Seznam cest pro zpřísněnou cestu UNC**  
     Vyberte **Přidat** a zadejte dalších bezpečnostní příznaky a cesty na serveru.  
 
@@ -296,13 +296,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
       
     **Výchozí**: 10  
 
-  - **Vypršení platnosti hesla (dny)**  
+  - **Konec platnosti hesla (dny)**  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067028)  
     
     **Výchozí**: 60  
 
-  - **Požadovaný typ hesla**  
+  - **Vyžadovaný typ hesla**  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)  
     
@@ -1161,7 +1161,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadování protokolu NTLM V2 a 128 bitového šifrování  
   
 - **Počet minut nečinnosti uzamčené obrazovky, než se aktivuje spořič obrazovky**  
-  Systém Windows zaznamená nečinnost relace přihlášení, a pokud doba neaktivního času překročí limit nečinnosti, spustí se spořič obrazovky a zamkne relaci.  
+  Systém Windows zaznamená nečinnost relace přihlášení, a pokud neaktivní doba překračuje limit nečinnosti, pak se spustí šetřič obrazovky, který relaci uzamkne.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067210)  
   
   **Výchozí**: 15
@@ -1423,7 +1423,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – nap
     **Výchozí**: jednoduché rozhraní MAPI
 
   
-## <a name="remote-desktop-services"></a>Služba Vzdálená plocha  
+## <a name="remote-desktop-services"></a>Vzdálená plocha  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .  
 
 - **Blokovat ukládání hesla**  
@@ -1540,7 +1540,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-## <a name="system"></a>Systému  
+## <a name="system"></a>Systém  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
 - **Inicializace ovladače spuštění systému**  
@@ -1616,7 +1616,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Výchozí**: Povolit

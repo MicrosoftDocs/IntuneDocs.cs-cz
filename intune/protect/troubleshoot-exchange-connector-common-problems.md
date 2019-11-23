@@ -70,9 +70,10 @@ V následujících částech najdete řešení potíží s e-mailovými oznámen
    1. Na příkazovém řádku zadejte příkaz *nslookup*.  
 
    2. Zadejte *Autodiscover.SMTPdomain.com*. Výstup by měl vypadat podobně jako na následujícím obrázku:  
-      @no__t – výsledky 0Nslookup @ no__t-1
+      ![výsledků nslookup](./media/troubleshoot-exchange-connector-common-problems/nslookup-results.png
+)
 
-   Službu Automatická konfigurace můžete také otestovat z Internetu na adrese https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). V případě potřeby [si stáhněte nástroj Microsoft Connectivity Analyzer](https://go.microsoft.com/fwlink/?LinkID=313782).
+   Službu automatické konfigurace můžete také otestovat z Internetu na https://testconnectivity.microsoft.com. Nebo ho testujte z místní domény pomocí nástroje Microsoft Connectivity Analyzer. Další informace najdete v tématu [Nástroj Microsoft Connectivity Analyzer](https://docs.microsoft.com/en-us/previous-versions/office/exchange-remote-connectivity/jj851141(v=exchg.80)). V případě potřeby [si stáhněte nástroj Microsoft Connectivity Analyzer](https://go.microsoft.com/fwlink/?LinkID=313782).
 
 
 ### <a name="check-autodiscovery"></a>Ověřit automatické zjišťování  

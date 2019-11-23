@@ -58,7 +58,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 2. Otevřete podokno **datový sklad Intune** tak, že v části **Další úkoly** na pravé straně okna **Microsoft Intune-přehled** vyberete odkaz datový sklad.
 3. Zkopírujte adresu URL vlastního kanálu. Příklad: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=beta`
 4. Otevřete Power BI Desktop.
-5. V řádku nabídek vyberte **soubor** > **načíst data** >  datový**kanál OData**.
+5. V řádku nabídek vyberte **soubor** > **získat data** > datový **kanál OData**.
 6. Vložte adresu URL vlastního informačního kanálu, kterou jste zkopírovali v předchozím kroku, do pole Adresa URL v okně datového **kanálu OData** .
 7. Vyberte **Základní**.
 
@@ -69,7 +69,7 @@ Nainstalujte si nejnovější verzi aplikace Power BI Desktop. Power BI Desktop 
 
     ![Přihlašovací údaje pro účet organizace](./media/reports-proc-create-with-odata/reports-create-02-org-account.png)
 
-10. Vyberte **připojit**. Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
+10. Vyberte **Connect** (Připojit). Otevře se Navigátor se seznamem tabulek v datovém skladu Intune.
 
     ![Snímek obrazovky navigátoru – seznam tabulek datového skladu](./media/reports-proc-create-with-odata/reports-create-02-loadentities.png)
 
@@ -93,9 +93,9 @@ Graf stromové struktury zobrazuje hierarchická data jako pole v rámečcích. 
 ![Power BI vizualizace stromové struktury](./media/reports-proc-create-with-odata/reports-create-03-treemap.png)
 
 1. V podokně **vizualizace** vyhledejte a vyberte **mapu stromové**struktury. Graf **stromové** struktury bude přidán na plátno sestavy.
-2. V podokně **pole** najděte tabulku `devices`.
-3. Rozbalte tabulku `devices` a vyberte datové pole `manufacturer`.
-4. Přetáhněte datové pole `manufacturer` na plátno sestavy a umístěte ho do grafu **mapy stromové** struktury.
+2. V podokně **pole** Najděte `devices` tabulce.
+3. Rozbalte tabulku `devices` a vyberte pole `manufacturer` data.
+4. Přetáhněte datové pole `manufacturer` na plátno pro sestavy a umístěte ho do grafu **mapy stromové** struktury.
 5. Přetáhněte datové pole `deviceKey` z tabulky `devices` do podokna **vizualizace** a přetáhněte je do části **Values (hodnoty** ) v poli **přidat datová pole**.  
 
 Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rámci vaší organizace.
@@ -106,12 +106,12 @@ Teď máte vizuál, který znázorňuje rozdělení výrobců zařízení v rám
 
 Do mapy stromové struktury můžete přidat filtr, který vám pomocí vaší aplikace umožní zodpovědět další otázky.
 
-1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a vyberte **ikonu průřezu** (![Treemap s datovým modelem a podporovanými relacemi @ no__t-2) v části **vizualizace**. Na plátně se zobrazí prázdná vizualizace **průřezu** .
-2. V podokně **pole** najděte tabulku `ownerTypes`.
-3. Rozbalte tabulku `ownerTypes` a vyberte datové pole `ownerTypeName`.
-4. Přetáhněte datové pole `onwerTypeName` z tabulky `ownerTypes` do podokna **filtry** a přetáhněte ho do části **filtry na této stránce** v poli **přidat datová pole zde**.  
+1. Pokud chcete přidat filtr, vyberte plátno pro sestavy a vyberte **ikonu průřezu** (![stromovou mapu s datovým modelem a podporovanými relacemi](./media/reports-proc-create-with-odata/reports-create-slicer.png)) v části **vizualizace**. Na plátně se zobrazí prázdná vizualizace **průřezu** .
+2. V podokně **pole** Najděte `ownerTypes` tabulce.
+3. Rozbalte tabulku `ownerTypes` a vyberte pole `ownerTypeName` data.
+4. Přetáhněte datové pole `onwerTypeName` z tabulky `ownerTypes` do podokna **filtry** a přetáhněte ho do části **filtry na této stránce** v poli **přidat datová pole**.  
 
-   V tabulce `OwnerTypes` existuje datové pole s názvem @no__t-může tato obsahuje data, která mají být v případě, že je zařízení ve vlastnictví společnosti nebo osobní. Vzhledem k tomu, že byste chtěli v tomto filtru Zobrazit popisné názvy, vyhledejte tabulku `ownerTypes` a přetáhněte **ownerTypeName** do průřezu. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
+   Pod `OwnerTypes` tabulkou se nachází datové pole s názvem `OwnerTypeKey`, které obsahuje data pro to, jestli je zařízení ve vlastnictví společnosti nebo osobní. Vzhledem k tomu, že byste chtěli v tomto filtru Zobrazit popisné názvy, vyhledejte `ownerTypes` tabulku a přetáhněte **ownerTypeName** do průřezu. Tento příklad ukazuje, jak datový model podporuje relace mezi tabulkami.
 
 ![Mapa stromové struktury s filtrem – podporuje relace mezi tabulkami](./media/reports-proc-create-with-odata/reports-create-08_ownertype.png)
 

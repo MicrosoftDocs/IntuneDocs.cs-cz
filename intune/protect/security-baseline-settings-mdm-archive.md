@@ -119,7 +119,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
   - **Metoda šifrování**  
     **Výchozí**: AES 256bit XTS  
 
-### <a name="browser"></a>Prohlížeč  
+### <a name="browser"></a>Browser  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
@@ -149,7 +149,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
   
   **Výchozí**: Ano  
 
-### <a name="connectivity"></a>Komunikační  
+### <a name="connectivity"></a>Připojení  
 
 Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) .  
 
@@ -209,7 +209,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   
   **Výchozí**: Ano  
 
-- **Spustit ochranu systému**    
+- **Spustit   ochrany systému**  
   **Výchozí**: povoleno  
 
 ### <a name="device-installation"></a>Instalace zařízení  
@@ -275,12 +275,12 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
     
     **Výchozí**: 10  
   
-  - **Vypršení platnosti hesla (dny)**  
+  - **Konec platnosti hesla (dny)**  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.
     
     **Výchozí**: 60  
   
-  - **Požadovaný typ hesla**  
+  - **Vyžadovaný typ hesla**  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.
     
     **Výchozí**: alfanumerické  
@@ -963,7 +963,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadování protokolu NTLM V2 a 128 bitového šifrování  
   
 - **Počet minut nečinnosti uzamčené obrazovky, než se aktivuje spořič obrazovky**  
-  Systém Windows zaznamená nečinnost relace přihlášení, a pokud doba neaktivního času překročí limit nečinnosti, spustí se spořič obrazovky a zamkne relaci.
+  Systém Windows zaznamená nečinnost relace přihlášení, a pokud neaktivní doba překračuje limit nečinnosti, pak se spustí šetřič obrazovky, který relaci uzamkne.
   
   **Výchozí**: 15
   
@@ -1151,7 +1151,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – nap
   
   **Výchozí**: povoleno
   
-### <a name="remote-desktop-services"></a>Služba Vzdálená plocha  
+### <a name="remote-desktop-services"></a>Vzdálená plocha  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .  
 
@@ -1166,7 +1166,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
   
 - **Blokovat přesměrování jednotky**  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<driveletter >* v *> \<computername*. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<písmeno_jednotky >* v *\<ComputerName >* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.
   
   **Výchozí**: povoleno
   
@@ -1262,7 +1262,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-### <a name="system"></a>Systému  
+### <a name="system"></a>Systém  
 
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
@@ -1335,7 +1335,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.
+  Ochrana Credential Guard v programu Windows Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana Credential Guard v programu Windows Defender brání těmto útokům ochranou hodnot hash hesel protokolu NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.
   
   **Výchozí**: Povolit
 

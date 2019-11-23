@@ -108,14 +108,14 @@ Další informace o profilech Windows Hello pro firmy v Intune najdete v tématu
     **Výchozí**: Nenakonfigurováno
 
   - **Povolení biometrického ověřování**  
-     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní kód PIN pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
+     Jako alternativu ke kódu PIN pro Windows Hello pro firmy umožňuje biometrické ověřování, například rozpoznávání obličeje nebo otisků prstů. Uživatelé ale stejně musí nakonfigurovat pracovní PIN kód pro případ, že se biometrické ověření nepovede. Vybírejte z těchto možností:
 
     - **Povolit** – Windows Hello pro firmy umožňuje biometrické ověřování.
     - **Nenakonfigurováno** – Windows Hello pro firmy neumožňuje biometrické ověřování (pro všechny typy účtů).
 
     **Výchozí**: Nenakonfigurováno
 
-  - **Používat rozšířenou ochranu proti falšování identity, pokud je dostupná**  
+  - **Použít vylepšenou ochranu proti falšování identity, pokud je dostupná**  
     Konfiguruje, jestli se v zařízení použijí funkce ochrany proti falšování identity Windows Hello, pokud je zařízení podporuje (třeba rozpoznání fotografie tváře místo skutečné tváře).  
     - **Povolit** – Windows vyžaduje, aby všichni uživatelé používali pro funkce obličeje ochranu proti falšování identity, pokud je tato možnost podporovaná.
     - **Nenakonfigurováno** – Windows respektuje konfigurace ochrany proti falšování identity na zařízení.

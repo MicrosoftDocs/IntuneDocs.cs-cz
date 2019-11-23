@@ -40,7 +40,7 @@ Následující kroky ukazují snímky obrazovky z Portál společnosti pro iOS.
 
 1. Otevřete aplikaci na svém zařízení a klepněte na **Přihlásit**se.  
 
-   [@no__t 1Example snímek obrazovky Portál společnosti přihlašovací stránky. ](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
+   [![ukázkový snímek obrazovky přihlašovací stránky Portál společnosti.](/intune-user-help/media/intune-ios-cp-signin-1908.png)](/intune-user-help/media/intune-ios-cp-signin-lightbox-1908.png#lightbox)  
 
 
 2. Zadejte svůj **pracovní nebo školní účet** a klepněte na **Další**.

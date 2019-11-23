@@ -67,8 +67,8 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 
   Vyberte povolený obsah schránky.  
   - **Není nakonfigurováno**  
-  - **Textové**  
-  - **Fotografií**  
+  - **Text**  
+  - **Obrázky**  
   - **Text a obrázky**  
 
 - **Externí obsah na podnikových webech**  
@@ -87,7 +87,7 @@ Ochrana Application Guard je dostupná jenom pro zařízení s Windows 10 (64bit
 
   Když *povolíte* tisk, můžete nakonfigurovat následující nastavení:
   - **Typ (typy) tisku** Vyberte jednu nebo více z následujících možností:  
-    - FORMÁTU  
+    - PDF  
     - XPS  
     - Místní tiskárny
     - Síťové tiskárny  
@@ -921,7 +921,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
 > [!IMPORTANT]  
 > Aby bylo možné správně nainstalovat a spustit aplikace pro obchodní prostředí Win32, nastavení antimalwarového programu by mělo vyloučit následující adresáře, aby byly prohledávány:  
 > **Na klientských počítačích x64**:  
-> *C:\Program Files (x86) \Microsoft Intune Management Extension\Content*  
+> *C:\Program Files (x86)\Microsoft Intune Management Extension\Content*  
 > *C:\windows\IMECache*  
 >  
 > **Na klientských počítačích x86**:  
@@ -939,7 +939,7 @@ Z důvodu ochrany před e-mailovými hrozbami zablokujte tuto akci:
   Umožňuje chránit soubory a složky před neautorizovanými změnami od neznámých aplikací.  
 
   - **Není nakonfigurováno**  
-  - **Aby**  
+  - **Povolit**  
   - **Jenom audit**  
   - **Zablokovat úpravu disku**  
   - **Auditovat úpravu disku**  
@@ -1606,7 +1606,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby pro správu doplňku.  
   - **Zásah**
   - **Automaticky**
-  - **Zabezpečen**
+  - **Zakázané**
 
 - **Služba Xbox Live auth Manager**  
   **Výchozí**: ruční  
@@ -1615,7 +1615,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live auth Manager.  
   - **Zásah**
   - **Automaticky**
-  - **Zabezpečen**
+  - **Zakázané**
  
 - **Služba Xbox Live pro uložení her**  
   **Výchozí**: ruční  
@@ -1624,7 +1624,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění služby Live Game Save.  
   - **Zásah**
   - **Automaticky**
-  - **Zabezpečen**
+  - **Zakázané**
 
 - **Síťová služba Xbox Live**  
   **Výchozí**: ruční  
@@ -1633,7 +1633,7 @@ Pomocí těchto možností můžete konfigurovat nastavení místního zabezpeč
   Toto nastavení určuje typ spuštění síťové služby.  
   - **Zásah**
   - **Automaticky**
-  - **Zabezpečen**
+  - **Zakázané**
 
 ## <a name="user-rights"></a>Uživatelská práva
 

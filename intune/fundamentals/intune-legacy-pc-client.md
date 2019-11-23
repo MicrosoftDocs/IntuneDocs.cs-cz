@@ -1,5 +1,5 @@
 ---
-title: Starší verze klienta Intune pro počítače a Intune v Azure
+title: Starší verze klienta Intune pro počítače a služby Intune v Azure
 description: Pokyny týkající se použití Intune v Azure ke správě zařízení Windows ve vaší organizaci.
 keywords: ''
 author: ErikjeMS
@@ -23,9 +23,9 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72510183"
 ---
-# <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Intune v konzole Azure a starší verze klienta Intune pro počítače
+# <a name="intune-on-azure-console-and-legacy-intune-pc-client"></a>Konzola Intune v Azure a starší verze klienta Intune v osobním počítači
 
-Intune využívá architekturu aplikační služby SaaS založenou na Azure. Azure poskytuje významná vylepšení ve škálování, kapacitě a výkonu. Tato možnost nabízí vylepšené prostředí pro správu Intune a optimalizované pracovní postupy v Azure Portal. 
+Intune používá architekturu aplikačních služeb SaaS založenou na Azure. Azure poskytuje významná vylepšení ve škálování, kapacitě a výkonu. Tato možnost nabízí rozšířenou správu služby Intune dojde a optimalizované pracovní postupy na webu Azure Portal. 
 
 Při použití Intune v Azure ke správě zařízení Windows ve vaší organizaci zvažte následující body:
 
@@ -63,7 +63,7 @@ Podrobné porovnání možností klienta v osobním počítači a MDM najdete v 
 Pokud chcete ve správě zařízení s Windows 10 přejít z klienta Intune v osobním počítači na správu pomocí MDM, postupujte takto:
 
 1. V konzole Silverlight proveďte **selektivní vymazání**, abyste zrušili registraci zařízení klienta v osobním počítači.
-  místní nabídka ![Warning s vybraným přepínačem selektivního vymazání zařízení @ no__t-1
+  místní nabídka ![ového upozornění s vybraným přepínačem selektivního vymazání zařízení](./media/intune-legacy-pc-client/image02.png)
 2. Zařízení znovu zaregistrujte pomocí [MDM (nebo Azure AD Join)](../enrollment/windows-enroll.md).
 
 ## <a name="next-steps"></a>Další kroky

@@ -134,9 +134,9 @@ Tyto pokyny platí pro zařízení HoloLens se systémem Windows 10 Anniversary 
 2. Vyberte **Účty** > **Přístup do práce**.  
     ![Snímek obrazovky s aplikací Nastavení HoloLens a zvýrazněným odkazem Účty](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3. Vyberte připojený účet > **synchronizaci**.  @no__t – aplikace nastavení 1Screenshot pro HoloLens, zvýrazněné tlačítko synchronizace @ no__t-2  
+3. Vyberte připojený účet > **synchronizaci**.  aplikace nastavení ![obrazovky snímků obrazovky, zvýrazněné tlačítko synchronizace](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
-### <a name="windows-phone-81"></a>Wvdows Phone 8.1
+### <a name="windows-phone-81"></a>Windows Phone 8.1
 
 1. Přejděte na **Všechny aplikace** > **Nastavení** > **Pracoviště**.
 

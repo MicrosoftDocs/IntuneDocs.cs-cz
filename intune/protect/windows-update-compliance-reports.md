@@ -28,7 +28,7 @@ Když použijete Intune k nasazení služby Windows Update na zařízení s Wind
 
 ## <a name="use-intune"></a>Použití Intune
 Chcete-li zkontrolovat sestavu zásad pro stav nasazení pro aktualizační kanály Windows 10, které jste nakonfigurovali: 
-1. Přihlaste se k [portálu Azure Portal](https://portal.azure.com/).
+1. Přihlaste se k [portálu Azure](https://portal.azure.com/).
 2. Vyberte **Všechny služby**, vyfiltrujte **Intune** a vyberte **Microsoft Intune**.
 3. Vyberte **Aktualizace softwaru** > **Přehled**. Uvidíte obecné informace o stavu všech aktualizačních kanálů, které jste přiřadili.
 4. Otevřete jednu z těchto sestav:  
@@ -58,7 +58,7 @@ V nastavení **Přidat nebo upravit nastavení OMA-URI** můžete použít třeb
 - **Popis nastavení**: Konfigurace komerčního ID pro řešení pro analýzu Windows
 - **OMA-URI** (rozlišuje velká a malá písmena): *./Vendor/MSFT/DMClient/Provider/MS DM Server/CommercialID*
 - **Datový typ:** Řetězec
-- **Hodnota**: @no__t – 1USE identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS >
+- **Hodnota**: \<použít identifikátor GUID zobrazený na kartě telemetrie Windows v pracovním prostoru OMS >
  
 > [!NOTE]  
 > Podrobnosti o MS DM Serveru najdete v tématu [Poskytovatel konfiguračních služeb DMClient]( https://docs.microsoft.com/windows/client-management/mdm/dmclient-csp).

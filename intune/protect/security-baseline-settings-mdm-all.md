@@ -168,7 +168,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Bit
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
-## <a name="browser"></a>Prohlížeč  
+## <a name="browser"></a>Browser  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – prohlížeč](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) .  
 
 - **Vyžadovat filtr SmartScreen pro Microsoft Edge**  
@@ -201,7 +201,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – pro
   
   **Výchozí**: Ano  
 
-## <a name="connectivity"></a>Komunikační  
+## <a name="connectivity"></a>Připojení  
 Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) .  
 
 - **Blokovat stažení z Internetu pro publikování na webu a Průvodce online řazením**  
@@ -218,7 +218,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: Nakonfigurujte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po splnění dalších požadavků na zabezpečení.
   
-  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC Hardended.
+  Když *nastavíte systém Windows tak, aby povoloval přístup k zadaným cestám UNC jenom po výběru splnění dalších požadavků na zabezpečení* , můžete nakonfigurovat seznam cest UNC *Hardended.
   - **Seznam cest pro zpřísněnou cestu UNC**  
     Vyberte **Přidat** a zadejte dalších bezpečnostní příznaky a cesty na serveru.  
 
@@ -273,7 +273,8 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
 ::: zone-end
 ::: zone pivot="mdm-may-2019"
 
-- **zabezpečení na základě virtualizace**@no__t – 1**výchozí**: Povolit vbs s zabezpečeným spouštěním
+- **zabezpečení na základě virtualizace** 
+  **výchozí**: Povolit vbs s zabezpečeným spouštěním
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
 
@@ -283,7 +284,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
   
   **Výchozí**: Ano  
 
-- **Spustit ochranu systému**    
+- **Spustit   ochrany systému**  
   **Výchozí**: povoleno  
 
 ## <a name="device-installation"></a>Instalace zařízení  
@@ -353,13 +354,13 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Dev
       
     **Výchozí**: 10  
 
-  - **Vypršení platnosti hesla (dny)**  
+  - **Konec platnosti hesla (dny)**  
     Nastavení zásad maximální stáří hesla určuje, jak dlouho (ve dnech) se dá heslo použít, než systém vyžaduje, aby ho uživatel změnil. Můžete nastavit, aby platnost hesla vyprší po uplynutí počtu dní od 1 do 999, nebo můžete zadat, že hesla budou nikdy vypršet nastavením počtu dní na hodnotu 0. Pokud je maximální stáří hesla mezi 1 a 999 dny, minimální stáří hesla musí být kratší než maximální stáří hesla. Pokud je maximální stáří hesla nastavené na 0, minimální stáří hesla může být libovolná hodnota mezi 0 a 998 dny.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067028)  
     
     **Výchozí**: 60  
 
-  - **Požadovaný typ hesla**  
+  - **Vyžadovaný typ hesla**  
     Určuje typ kódu PIN nebo hesla, které se vyžaduje.  
     [Další informace](https://go.microsoft.com/fwlink/?linkid=2067027)  
     
@@ -497,7 +498,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
 
   **Výchozí**: zakázat
 
-- **.NET Framework závislé součásti zóny s omezeným přístupem v aplikaci Internet Explorer**    
+- **Zóna s omezeným přístupem v Internet exploreru .NET Framework závislé součásti**    
   Toto nastavení zásad umožňuje spravovat, jestli .NET Framework komponenty, které nejsou podepsané pomocí technologie Authenticode, se dají spouštět z Internet Exploreru. Mezi tyto komponenty patří spravované ovládací prvky, na které se odkazuje ze značky objektu a spravované spustitelné soubory, na které odkazuje odkaz. Pokud nastavení této zásady povolíte, bude aplikace Internet Explorer spouštět nepodepsané spravované součásti. Pokud v rozevíracím seznamu vyberete možnost zobrazit výzvu, Internet Explorer vyzve uživatele, aby určil, zda mají být spuštěny nepodepsané spravované součásti. Pokud nastavení této zásady zakážete, nebude aplikace Internet Explorer spouštět nepodepsané spravované součásti. Pokud nastavení této zásady nenakonfigurujete, nebude aplikace Internet Explorer spouštět nepodepsané spravované součásti.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067077)
 
@@ -901,7 +902,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: vysoká úroveň zabezpečení 
   
-- **Blokování zazastaralých aktivních X ovládacích prvků v aplikaci Internet Explorer**   
+- **Aplikace Internet Explorer blokuje zastaralé ovládací prvky aktivní X**   
   Nastavení této zásady určuje, jestli Internet Explorer blokuje určité zastaralé ovládací prvky ActiveX. Zastaralé ovládací prvky ActiveX nejsou nikdy blokované v zóně intranetu. Pokud nastavení této zásady povolíte, aplikace Internet Explorer zastaví blokování zastaralých ovládacích prvků ActiveX. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, bude aplikace Internet Explorer nadále blokovat určité zastaralé ovládací prvky ActiveX. Další informace najdete v tématu "zastaralé ovládací prvky ActiveX" v knihovně TechNet aplikace Internet Explorer.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067203)  
   
@@ -919,7 +920,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- **Oprávnění pro přístup k důvěryhodné zóně v Internet exploreru**   
+- **Přístupová oprávnění k důvěryhodné zóně aplikace Internet Explorer**   
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety v jazyce Java. Pokud nastavení této zásady povolíte, můžete v rozevíracím seznamu zvolit možnosti. Vlastní pro řízení nastavení oprávnění individuálně. Nízké zabezpečení umožňuje apletům provádět všechny operace. Střední zabezpečení umožňuje apletům běžet v izolovaném prostoru (sandboxu) (oblast v paměti mimo rámec toho, že program nemůže provádět volání) a navíc funkce, jako je například pomocné místo (bezpečná a zabezpečená oblast úložiště v klientském počítači) a uživatelem řízený vstup/výstup souborů. Vysoké zabezpečení umožňuje, aby se applety spouštěly v izolovaném prostoru. Zakáže Java, aby se zabránilo spuštění všech apletů. Pokud nastavení této zásady zakážete, aplety Java nepůjde spustit. Pokud nastavení této zásady nenakonfigurujete, oprávnění je nastaveno na možnost nízká úroveň zabezpečení.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
@@ -931,13 +932,13 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat  
   
-- **Aplikace Internet Explorer uzamkl oprávnění pro přístup k zóně java**   
+- **Aplikace Internet Explorer byla uzamčena s omezenou zónou oprávnění java**   
   Toto nastavení zásad umožňuje spravovat oprávnění pro aplety v jazyce Java. Pokud nastavení této zásady povolíte, můžete v rozevíracím seznamu zvolit možnosti. Vlastní pro řízení nastavení oprávnění individuálně. Nízké zabezpečení umožňuje apletům provádět všechny operace. Střední zabezpečení umožňuje apletům běžet v izolovaném prostoru (sandboxu) (oblast v paměti mimo rámec toho, že program nemůže provádět volání) a navíc funkce, jako je například pomocné místo (bezpečná a zabezpečená oblast úložiště v klientském počítači) a uživatelem řízený vstup/výstup souborů. Vysoké zabezpečení umožňuje, aby se applety spouštěly v izolovaném prostoru. Zakáže Java, aby se zabránilo spuštění všech apletů. Pokud nastavení této zásady zakážete, aplety Java nepůjde spustit. Pokud nastavení této zásady nenakonfigurujete, aplety Java budou zakázané.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067181)  
   
   **Výchozí**: zakázat Java 
   
-- **Internetová zóna Internet Exploreru povoluje používat jenom schválené domény ovládací prvky ActiveX** .  
+- **Internetová zóna Internet Exploreru povoluje použití ovládacích prvků ActiveX pouze schválené domény**   
   Nastavení této zásady určuje, jestli se uživateli zobrazí výzva, aby se povolilo spouštění ovládacích prvků ActiveX na jiných webech, než na webu, který nainstaloval ovládací prvek ActiveX. Pokud nastavení této zásady povolíte, zobrazí se uživateli výzva před spuštěním ovládacích prvků ActiveX z webů v této zóně. Uživatel může zvolit, že se má ovládací prvek spouštět z aktuálního webu nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazovat výzvu ActiveX pro jednotlivé lokality a ovládací prvky ActiveX lze spouštět ze všech lokalit v této zóně.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067091)  
   
@@ -961,7 +962,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat 
   
-- **Aplikace Internet Explorer uzamčená na inteligentní obrazovku zóny s omezeným přístupem**   
+- **Aplikace Internet Explorer je uzamčena na inteligentní obrazovku zóny s omezeným přístupem**   
   Nastavení této zásady určuje, zda bude filtr SmartScreen kontrolovat stránky v této zóně na škodlivý obsah. Pokud toto nastavení zásad povolíte, vyhledá filtr SmartScreen stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady zakážete, filtr SmartScreen nebude skenovat stránky v této zóně pro škodlivý obsah. Pokud nastavení této zásady nenakonfigurujete, uživatel může zvolit, zda má filtr SmartScreen kontrolovat stránky v této zóně pro škodlivý obsah. Poznámka: v Internet Exploreru 7 Toto nastavení zásad určuje, jestli má filtr útoků phishing kontrolovat stránky v této zóně pro škodlivý obsah.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067092)  
   
@@ -1027,7 +1028,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázáno  
   
-- **Procesy aplikace Internet Explorer omezují omezení aktivních X**   
+- **Procesy aplikace Internet Explorer omezují aktivní instalaci X**   
   Nastavení této zásady umožňuje aplikacím, které hostují ovládací prvek webového prohlížeče, blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX. Pokud toto nastavení zásad povolíte, bude ovládací prvek webového prohlížeče blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX pro všechny procesy. Pokud toto nastavení zásad zakážete nebo nenakonfigurujete, ovládací prvek webového prohlížeče nebude blokovat automatické zobrazování výzev k instalaci ovládacího prvku ActiveX pro všechny procesy.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067250)  
   
@@ -1087,7 +1088,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: zakázat Java 
   
-- **Zóna s omezeným přístupem v aplikaci Internet Explorer nespouští antimalware proti ovládacím prvkům**ActiveX    
+- **Zóna s omezeným přístupem v aplikaci Internet Explorer nespouští antimalware proti ovládacím prvkům** ActiveX   
   Nastavení této zásady určuje, jestli aplikace Internet Explorer spouští antimalwarové programy proti ovládacím prvkům ActiveX, aby zkontrolovala, jestli se dají bezpečně načíst na stránkách. Pokud nastavení této zásady povolíte, aplikace Internet Explorer nebude u antimalwarového programu kontrolovat, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady zakážete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Pokud nastavení této zásady nenakonfigurujete, bude aplikace Internet Explorer vždy kontrolovat váš Antimalwarový program, aby bylo možné zjistit, zda je bezpečné vytvořit instanci ovládacího prvku ActiveX. Uživatelé můžou toto chování zapnout nebo vypnout pomocí nastavení zabezpečení Internet Exploreru.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067089)
   
@@ -1129,7 +1130,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- Internet **Explorer Internet Zone stahuje nepodepsané ovládací prvky ActiveX**   
+- **Internet Explorer Internet Zone stahuje nepodepsané ovládací prvky ActiveX**   
   Toto nastavení zásad umožňuje spravovat, jestli uživatelé můžou stahovat nepodepsané ovládací prvky ActiveX ze zóny. Takový kód je potenciálně škodlivý, zejména když přichází z nedůvěryhodné zóny. Pokud nastavení této zásady povolíte, můžou uživatelé spouštět nepodepsané ovládací prvky bez zásahu uživatele. Pokud v rozevíracím seznamu vyberete možnost zobrazit výzvu, zobrazí se uživatelům dotaz, zda chcete, aby bylo možné spustit nepodepsaný ovládací prvek. Pokud nastavení této zásady zakážete, uživatelé nemůžou spouštět nepodepsané ovládací prvky. Pokud nastavení této zásady nenakonfigurujete, uživatelé nemůžou spouštět nepodepsané ovládací prvky.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067325)
   
@@ -1159,7 +1160,7 @@ Další informace najdete v dokumentaci k Windows v dokumentaci k [zásadě CSP]
   
   **Výchozí**: povoleno  
   
-- **Zóna s omezeným přístupem v aplikaci Internet Explorer povoluje používat aktivní ovládací prvky X   pouze schválenými doménami**.  
+- **Zóna s omezeným přístupem v aplikaci Internet Explorer povoluje používat pouze schválené domény s ovládacími prvky** ActiveX   
   Nastavení této zásady určuje, jestli se uživateli zobrazí výzva, aby se povolilo spouštění ovládacích prvků ActiveX na jiných webech, než na webu, který nainstaloval ovládací prvek ActiveX. Pokud nastavení této zásady povolíte, zobrazí se uživateli výzva před spuštěním ovládacích prvků ActiveX z webů v této zóně. Uživatel může zvolit, že se má ovládací prvek spouštět z aktuálního webu nebo ze všech lokalit. Pokud nastavení této zásady zakážete, uživatel nebude zobrazovat výzvu ActiveX pro jednotlivé lokality a ovládací prvky ActiveX lze spouštět ze všech lokalit v této zóně.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067233)  
   
@@ -1242,7 +1243,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Loc
   **Výchozí**: vyžadování protokolu NTLM V2 a 128 bitového šifrování  
   
 - **Počet minut nečinnosti uzamčené obrazovky, než se aktivuje spořič obrazovky**  
-  Systém Windows zaznamená nečinnost relace přihlášení, a pokud doba neaktivního času překročí limit nečinnosti, spustí se spořič obrazovky a zamkne relaci.  
+  Systém Windows zaznamená nečinnost relace přihlášení, a pokud neaktivní doba překračuje limit nečinnosti, pak se spustí šetřič obrazovky, který relaci uzamkne.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067210)  
   
   **Výchozí**: 15
@@ -1509,7 +1510,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
 ::: zone-end
 ::: zone pivot="mdm-preview,mdm-may-2019"
   
-## <a name="remote-desktop-services"></a>Služba Vzdálená plocha  
+## <a name="remote-desktop-services"></a>Vzdálená plocha  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) .  
 
 - **Blokovat ukládání hesla**  
@@ -1525,7 +1526,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Rem
   **Výchozí**: povoleno
   
 - **Blokovat přesměrování jednotky**  
-  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<driveletter >* v *> \<computername*. Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
+  Nastavení této zásady určuje, jestli se má zabránit mapování klientských jednotek v relaci vzdálené plochy (přesměrování jednotky). Ve výchozím nastavení server Hostitel relace VP mapuje jednotky klienta automaticky po připojení. Mapované jednotky se zobrazí ve stromu složky relace v Průzkumníkovi souborů nebo v počítači ve formátu *\<písmeno_jednotky >* v *\<ComputerName >* . Toto chování můžete přepsat pomocí tohoto nastavení zásad. Pokud toto nastavení zásad povolíte, přesměrování jednotky klienta není v relacích služby Vzdálená plocha povoleno a přesměrování kopírování souborů ve schránce není povoleno v počítačích se systémem Windows Server 2003, Windows 8 a Windows XP. Pokud nastavení této zásady zakážete, přesměrování klientské jednotky je vždycky povolené. I když je povolené přesměrování schránky, přesměrování kopírování souborů ve schránce je vždycky povolené. Pokud nastavení této zásady nenakonfigurujete, přesměrování jednotky klienta a přesměrování kopírování souborů ve schránce nejsou zadané na úrovni Zásady skupiny.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Výchozí**: povoleno
@@ -1626,7 +1627,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – fil
 
   **Výchozí**: Ano
   
-## <a name="system"></a>Systému  
+## <a name="system"></a>Systém  
 Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – systém](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) .  
 
 - **Inicializace ovladače spuštění systému**  
@@ -1702,7 +1703,7 @@ Další informace najdete v dokumentaci k Windows v tématu [zásady CSP – Def
   **Výchozí**: blok
   
 - **Zabránit krádeži pověření typu**  
-  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným klíčům může vést k útokům krádeže přihlašovacích údajů, jako je například pass-the-hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
+  Ochrana přihlašovacích údajů v programu Microsoft Defender používá zabezpečení na základě virtualizace k izolaci tajných kódů, aby k nim měli přístup jenom privilegovaný systémový software. Neoprávněný přístup k těmto tajným kódům může vést k útokům využívajícím krádež přihlašovacích údajů, jako je například Pass-the-Hash nebo Pass-The-Ticket. Ochrana přihlašovacích údajů v programu Microsoft Defender brání těmto útokům ochranou hodnot hash hesla NTLM, lístků pro udělení lístku Kerberos a přihlašovacích údajů uložených aplikacemi jako přihlašovací údaje domény.  
   [Další informace](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Výchozí**: Povolit
@@ -1880,7 +1881,7 @@ Další informace najdete v tématu [2.2.2 FW_PROFILE_TYPE]( https://docs.micros
 
   **Výchozí**: Ano
 
-- **Konfigurace Windows Hello pro firmy**   
+- **Konfigurace  Windows Hello pro firmy**  
     Windows Hello pro firmy je alternativní metoda pro přihlašování do systému Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty.  
 
   - Když nastavíte *Ano*, povolíte tuto zásadu a zřídí zařízení Windows Hello pro firmy.  

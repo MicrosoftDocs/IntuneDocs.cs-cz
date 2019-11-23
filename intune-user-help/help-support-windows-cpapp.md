@@ -40,7 +40,7 @@ Pomoc **& podpoře** vám umožní:
 
 ## <a name="get-help-with-app-problems"></a>Získat pomoc s problémy s aplikacemi
 
-Pošlete organizaci e-mail o všech problémech, se kterými se setkáte Portál společnosti. Vyberte **získat nápovědu** a začněte popisem problému. Vaše organizace použije informace, které poskytnete k řešení problému. Pokud k určení problému potřebujete další pomoc, bude vaše organizace používat ID diagnostiky @ no__t-0automatically zahrnuté v e-mailu @ no__t-1To, který je součástí týmu podpory společnosti Microsoft.  
+Pošlete organizaci e-mail o všech problémech, se kterými se setkáte Portál společnosti. Vyberte **získat nápovědu** a začněte popisem problému. Vaše organizace použije informace, které poskytnete k řešení problému. Pokud k určení problému potřebujete další pomoc, bude vaše organizace používat ID diagnostiky&ndash;automaticky zahrnutá v e-mailu&ndash;, aby se mohl obrátit na tým podpory Microsoftu.  
 
 Podrobný postup najdete v tématu [odeslání protokolů firemní podpoře z aplikace Portál společnosti pro Windows 10](send-logs-to-your-it-admin-cp-windows.md).  
 
