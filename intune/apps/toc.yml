@@ -133,6 +133,8 @@
               href: manage-microsoft-edge.md
             - name: Konfigurace Outlooku
               href: app-configuration-policies-outlook.md
+            - name: Konfigurace S/MIME pro Outlook
+              href: app-configuration-policies-outlook-smime.md
             - name: Konfigurace Google Chromu pro Android
               href: apps-configure-chrome-android.md
         - name: hromadně zakoupené aplikace a knihy
