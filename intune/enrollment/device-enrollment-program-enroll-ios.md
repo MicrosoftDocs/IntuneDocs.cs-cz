@@ -68,7 +68,7 @@ Token DEP vytvoříte pomocí portálu DEP společnosti Apple. Pomocí portálu 
 > [!NOTE]
 > Když token odstraníte z klasického portálu Intune před migrací do Azure, může Intune obnovit odstraněný token DEP Apple. Token DEP můžete z portálu Azure Portal znovu odstranit.
 
-### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1. Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
+### <a name="step-1-download-the-intune-public-key-certificate-required-to-create-the-token"></a>Krok 1: Stáhněte si certifikát veřejného klíče Intune, který je potřebný k vytvoření tokenu.
 
 1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **registrace zařízení** > registrace **Apple** > **tokeny programu registrace** > **Přidat**.
 
@@ -228,7 +228,7 @@ Po nainstalování tokenu můžete vytvořit registrační profil pro zařízen�
     | <strong>Čas obrazovky</strong> | Zobrazí obrazovku čas obrazovky. |
     | <strong>Aktualizace softwaru</strong> | Zobrazte povinnou obrazovku aktualizace softwaru. |
     | <strong>Nastavení SIM</strong> | Poskytněte uživateli možnost Přidat plán pro mobilní síť. |
-    | <strong>Vzhled</strong> | Zobrazit obrazovku vzhled pro uživatele |
+    | <strong>Příznaky</strong> | Zobrazit obrazovku vzhled pro uživatele |
     | <strong>Jazyk Express</strong>| Zobrazit obrazovku jazyka Express pro uživatele |
     | <strong>Preferovaný jazyk</strong> | Poskytněte uživateli možnost zvolit si **preferovaný jazyk**. |
     | <strong>Migrace zařízení do zařízení</strong> | Poskytněte uživateli možnost migrovat data ze starého zařízení do tohoto zařízení.|

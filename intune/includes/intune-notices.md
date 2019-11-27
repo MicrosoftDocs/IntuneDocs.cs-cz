@@ -9,156 +9,156 @@ ms.author: erikje
 ms.custom: include file
 ms.openlocfilehash: fa2b1c5c9d267b9f860da2268d03c928ebf7693b
 ms.sourcegitcommit: 1cf063c98e1caae00a6e6fab821cc3254562bca9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74309799"
 ---
-These notices provide important information that can help you prepare for future Intune changes and features.
+Tato oznámení obsahují důležité informace, které vám pomůžou připravit se na budoucí změny a funkce Intune.
 
-### <a name="end-support-for-windows-phone-81--3544909--"></a>End Support for Windows Phone 8.1<!--3544909-->
-Microsoft mainstream support for Windows Phone 8.1 ended in July 2017, and extended support ended in June 2019. The Company Portal app for Windows Phone 8.1 has been in sustain mode since October 2017. Microsoft Intune will now end support on February 20, 2020 for Windows Phone 8.1.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-After February 20, 2020 these devices will not receive any security updates, and you will not be able to enroll any new devices. Existing Windows Phone 8.1 devices will stay enrolled (policy, apps, reporting) but note any troubleshooting of an existing enrollment will not be supported after this date, as many components, such as third party certificates, have already ended support for the platform. Intune will stop compatibility testing with Intune and Windows Phone 8.1.
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-You can check your Intune reporting to see what devices or users may be affected. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. You can add in additional columns to help identify who in your organization has devices running Windows Phone 8.1. Request that your end users upgrade their devices to a supported OS version.
-
-### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Update your Intune Outlook App protection policies (APP)<!--2576686-->
-You may need to take action if you received MC195618 In your Message Center. As shared in Microsoft 365 roadmap feature IDs: 56325 and 56326, Intune and Outlook for iOS and Android are rolling out support for limiting sensitive data in mail notifications and calendar reminders. As a result of these improvements, Outlook for iOS and Android will be removing support for several data protection app configuration keys you are currently leveraging to manage notifications.
+### <a name="end-support-for-windows-phone-81--3544909--"></a>Koncová podpora pro Windows Phone 8,1<!--3544909-->
+Hlavní podpora Microsoftu pro Windows Phone 8,1 skončila v červenci 2017 a rozšířená podpora skončila v červnu 2019. Aplikace Portál společnosti pro Windows Phone 8,1 byla v režimu Sustained od října 2017. Microsoft Intune bude nyní ukončena 20. února 2020 pro Windows Phone 8,1.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-While the new features have not shipped, when they do, the following app configuration keys will no longer function in Outlook for iOS and Android:
-- com.microsoft.outlook.Mail.NotificationsEnabled
-- com.microsoft.outlook.Mail.NotificationsEnabled.UserChangeAllowed
-- com.microsoft.outlook.Calendar.NotificationsEnabled
-- com.microsoft.outlook.Calendar.NotificationsEnabled.UserChangeAllowed
+Po 20. února 2020 tato zařízení neobdrží žádné aktualizace zabezpečení a nebudete moct zaregistrovat žádná nová zařízení. Stávající zařízení Windows Phone 8,1 zůstanou zaregistrovaná (zásady, aplikace, vytváření sestav), ale Všimněte si, že po tomto datu nebude podporováno jakékoli řešení potíží s existující registrací, protože celá řada komponent, jako jsou například certifikáty třetích stran, již ukončila podporu pro platformy. Intune ukončí testování kompatibility s Intune a Windows Phone 8,1.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-We recommend you configure the Intune App Protection Policy data protection setting “Org data notifications” with a value of “Block Org Data” in preparation for this new feature. Beginning on December 16, 2019, Outlook for iOS and Android will honor the “Org data notifications” data protection setting and no longer support the aforementioned keys. Configuring this new setting will ensure sensitive data is not leaked when the above configuration keys are no longer supported. Additionally, Outlook is providing additional granularity when the data protection setting “Org data notifications” is set to “Block Org Data” with an additional app configuration setting, “Calendar notifications”. The combination of the App Protection Policy setting and this app configuration setting limits sensitive information in mail notifications, while exposing sensitive information in calendar notifications, so that users can get to their meetings by glancing quickly at the notification or notification center.
+Můžete si prohlédnout sestavy Intune a zjistit, která zařízení nebo uživatelé to mohou mít vliv. Přejděte na Zařízení > Všechna zařízení a vyfiltrujte si je podle operačního systému. Můžete přidat další sloupce, které vám pomůžou určit, kdo ve vaší organizaci má zařízení s Windows Phone 8,1. Požádejte koncové uživatele, aby svá zařízení upgradovali na podporovanou verzi operačního systému.
+
+### <a name="update-your-intune-outlook-app-protection-policies-app--2576686--"></a>Aktualizace zásad ochrany aplikací Intune Outlook (aplikace)<!--2576686-->
+Pokud jste v centru zpráv přijali MC195618, možná budete muset provést akci. Jak se sdílí v Microsoft 365 najdete ID funkcí v plánu: 56325 a 56326, Intune a Outlook pro iOS a Android vycházejí z podpory omezování citlivých dat v oznámeních e-mailů a v kalendářích. V důsledku těchto vylepšení bude Outlook pro iOS a Android odebírat podporu pro několik konfiguračních klíčů aplikace ochrany dat, které v tuto chvíli používáte ke správě oznámení.
+
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+I když se nové funkce nedodaly, následující konfigurační klíče aplikace už nebudou fungovat v Outlooku pro iOS a Android:
+- com. Microsoft. Outlook. mail. NotificationsEnabled
+- com. Microsoft. Outlook. mail. NotificationsEnabled. UserChangeAllowed
+- com. Microsoft. Outlook. Calendar. NotificationsEnabled
+- com. Microsoft. Outlook. Calendar. NotificationsEnabled. UserChangeAllowed
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Doporučujeme, abyste pro tuto novou funkci nakonfigurovali nastavení ochrany dat pro Intune App Protection zásady organizace s hodnotou "blokovat org data". Od 16. prosince 2019 budou v Outlooku pro iOS a Android začínat nastavení Ochrana dat pro data organizace a už nebude podporovat výše uvedené klíče. Konfigurace tohoto nového nastavení zajistí, že citlivá data nebudou převrácena, pokud výše uvedené konfigurační klíče již nejsou podporovány. Kromě toho Outlook poskytuje další členitost, pokud je nastavení ochrany dat "e-mailová oznámení" nastavená na "blokovat org data" s nastavením další konfigurace aplikace, "oznámení v kalendáři". Kombinace nastavení zásad ochrany aplikací a nastavení konfigurace této aplikace omezuje citlivé informace v oznámeních e-mailů, a přitom vystavuje citlivé informace v oznámeních o kalendáři, aby se uživatelé mohli dostat na své schůze na základě přehledu rychle v oznámení nebo centru oznámení.
 
 #### <a name="additional-information"></a>Další informace
-For more information on APP settings and Outlook’s settings, see:
-- [App protection policy settings, Android](../apps/app-protection-policy-settings-android.md)
-- [App protection policy settings, iOS](../apps/app-protection-policy-settings-ios.md)
-- [Deploying Outlook for iOS and Android app configuration settings](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
+Další informace o nastavení aplikace a nastavení aplikace Outlook najdete tady:
+- [Nastavení zásad ochrany aplikací, Android](../apps/app-protection-policy-settings-android.md)
+- [Nastavení zásad ochrany aplikací, iOS](../apps/app-protection-policy-settings-ios.md)
+- [Nasazení Outlooku pro iOS a nastavení konfigurace aplikací pro Android](https://docs.microsoft.com/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/outlook-for-ios-and-android-configuration-with-microsoft-intune)
 
 
-### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Intune Plan for Change: Windows 10, version 1703 Company Portal moving out of Support<!--5026679-->
-Windows 10, version 1703 (also known as Windows 10, RS2) has moved out of service on October 8, 2019 for enterprise and EDU editions. Intune will end support for the corresponding Company Portal app for RS2/RS1 starting on December 26, 2019.
+### <a name="intune-plan-for-change-windows-10-version-1703-company-portal-moving-out-of-support--5026679--"></a>Naplánování změny v Intune: Windows 10, verze 1703 Portál společnosti přesun mimo podporu<!--5026679-->
+Windows 10 verze 1703 (označované také jako Windows 10, RS2) se od 8. října 2019 pro edice Enterprise a EDU přesunula mimo službu. Intune ukončí podporu pro odpovídající aplikaci Portál společnosti pro RS2/RS1 od 26. prosince 2019.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Moving forward, you will not see new features in the specific version of the Company Portal app, although we will continue to support this version of the Company Portal app through December 26, 2019, including providing any security updates to the Company Portal app as needed. However, since Windows 10, version 1703 will not receive any security updates once it moves out of servicing, we highly recommend you update your Windows devices to a more recent Windows version and make sure you’re on the latest Company Portal app so you continue to get new features and additional functionality.
+Dál, v konkrétní verzi Portál společnosti aplikace se nezobrazí nové funkce, i když budeme dál podporovat tuto verzi aplikace Portál společnosti až do 26. prosince 2019, včetně poskytování všech aktualizací zabezpečení pro Portál společnosti aplikaci jako vyžadována. Vzhledem k tomu, že Windows 10 verze 1703 neobdrží žádné aktualizace zabezpečení po přesunutí ze údržby, důrazně doporučujeme, abyste si aktualizovali zařízení s Windows na novější verzi Windows a zajistili, že jste na nejnovější aplikaci Portál společnosti, abyste mohli dál získat nové funkce a další funkce.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-The steps you take depends on how your environment is configured. In general though, you should identify the devices that have the older version of the OS and/or the Company Portal on their device, and update. To set your Windows 10 update rings, log into Intune -> Software updates – Windows 10 update rings. The latest version of the Company Portal is version 10.3.5601.0. Please direct your users to acquire it from the Microsoft Store to stay up to date with future releases. You can also use Intune to install the latest on your Windows devices through the [Microsoft Store for Business](https://docs.microsoft.com/intune/windows-store-for-business).
+Postup závisí na tom, jak je vaše prostředí nakonfigurované. Obecně byste měli určit zařízení, která mají starší verzi operačního systému, nebo Portál společnosti na svém zařízení a aktualizovat. Pokud chcete nastavit aktualizační kanály Windows 10, přihlaste se k Intune – > aktualizace softwaru – aktualizační kanály Windows 10. Nejnovější verze Portál společnosti je 10.3.5601.0 verze. Požádejte uživatele, aby si ho získali od Microsoft Store, aby se v budoucích verzích stále dosáhlo. Intune taky můžete použít k instalaci nejnovějšího prostředí do zařízení s Windows prostřednictvím [Microsoft Store pro firmy](https://docs.microsoft.com/intune/windows-store-for-business).
 
 #### <a name="additional-information"></a>Další informace
 [Ruční přidání aplikace Portál společnosti pro Windows 10 pomocí Microsoft Intune](https://docs.microsoft.com/intune/store-apps-company-portal-app)
 
 
-### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Take Action: Use Microsoft Edge for your Protected Intune Browser Experience<!--5728447-->
-As we have been sharing over the past year, Microsoft Edge mobile supports the same set of management features as the Managed Browser, while providing a much-improved end user experience. To make way for the robust experiences provided in Microsoft Edge, we will be retiring the Intune Managed Browser. Starting on January, 27, 2020, Intune will no longer support the Intune Managed Browser.  
+### <a name="take-action-use-microsoft-edge-for-your-protected-intune-browser-experience--5728447--"></a>Provést akci: použití Microsoft Edge pro chráněné prostředí Intune Browser<!--5728447-->
+Vzhledem k tomu, že jsme provedli sdílení v průběhu minulého roku, Microsoft Edge Mobile podporuje stejnou sadu funkcí správy jako Managed Browser a přitom nabízí mnohem lepší prostředí pro koncové uživatele. Pro zajištění robustních funkcí poskytovaných Microsoft Edgeem Intune Managed Browser vyřazení z provozu. Od 27. ledna 2020 už Intune nebude podporovat Intune Managed Browser.  
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená? 
-Starting on February 1, 2020, the Intune Managed Browser will no longer be available in the Google Play Store or the iOS App Store. At this point, you will still be able to target new app protection policies to the Intune Managed Browser, though new users won't be able to download the Intune Managed Browser app. In addition, on iOS, new web clips that are pushed down to MDM-enrolled device will open in Microsoft Edge instead of the Intune Managed Browser.  
+Od 1. února 2020 už nebude Intune Managed Browser k dispozici v Obchod Google Play nebo v obchodě s aplikacemi pro iOS. V tuto chvíli budete mít i nadále na Intune Managed Browser zacílit nové zásady ochrany aplikací, i když noví uživatelé nebudou moct aplikaci Intune Managed Browser stáhnout. V systému iOS se navíc nové webové klipy, které se odešlou do zařízení zaregistrovaného na MDM, otevřou v Microsoft Edge místo Intune Managed Browser.  
 
-On March, 31 2020, the Intune Managed Browser will be removed from the Azure console. This means you will no longer be able to create new policies for the Intune Managed Browser. If you have existing Intune Managed Browser policies in place, they won't be affected. The Intune Managed Browser will show up in the console as an LOB app with no icon, and existing policies will show as targeted to the app still. At this point, we will also remove the option to redirect web content to the Intune Managed Browser within the Data Protection section of App protection policies.  
+Od března 31 2020 se Intune Managed Browser odebere z konzoly Azure. To znamená, že už nebudete moct vytvářet nové zásady pro Intune Managed Browser. Pokud jste nastavili existující zásady Intune Managed Browser, nebudou ovlivněny. Intune Managed Browser se v konzole zobrazí jako obchodní aplikace bez ikony a stávající zásady se budou zobrazovat jako cílené pro aplikaci. V tuto chvíli také odebereme možnost přesměrovat webový obsah do Intune Managed Browser v části Ochrana dat v zásadách ochrany aplikací.  
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit? 
-To ensure a smooth transition from the Intune Managed Browser to Microsoft Edge, we recommend you take the following steps proactively: 
+K zajištění hladkého přechodu z Intune Managed Browser na Microsoft Edge doporučujeme proaktivně provést následující kroky: 
 
-1. Target Microsoft Edge for iOS and Android with app protection policy (also referred to as MAM)  and app config settings. You can reuse your Intune Managed Browser policies for Microsoft Edge by targeting those existing policies to Microsoft Edge as well.  
-2. Ensure all MAM-protected apps in your environment have the app protection policy setting "Restrict web content transfer with other apps" set to "Policy managed browsers". 
-3. Target all the MAM-protected with the managed app configuration setting "com.microsoft.intune.useEdge" set to true. Starting next month with the release of 1911, you will be able to accomplish steps 2 and 3 simply by configuring the setting "Restrict web content transfer with other apps" to have "Microsoft Edge" selected in the Data Protection section of your app protection policies. 
+1. Zaměřte se na Microsoft Edge pro iOS a Android pomocí zásad ochrany aplikací (také označovaných jako MAM) a nastavení konfigurace aplikace. Můžete znovu použít zásady Intune Managed Browser pro Microsoft Edge tím, že tyto existující zásady zacílíte i na Microsoft Edge.  
+2. Zajistěte, aby všechny aplikace chráněné MAM ve vašem prostředí měly zásadu ochrany aplikací s nastavením omezit přenos webového obsahu s ostatními aplikacemi nastavenou na prohlížeče spravované zásadami. 
+3. Zaměřte se na všechna MAM chráněná nastavením konfigurace spravované aplikace "com. Microsoft. Intune. useEdge" nastavenou na hodnotu true. Počínaje dalším měsícem s vydáním 1911 budete moct provádět kroky 2 a 3 jednoduše tak, že v části Ochrana dat v zásadách ochrany aplikací nastavíte možnost omezit přenos webových obsahu na jiné aplikace. . 
 
-Support for web clips on iOS and Android is coming. When this support is released, you will need to retarget pre-existing web clips to ensure they open in in Microsoft Edge instead of the Managed Browser. 
+Připravujeme podporu pro webové klipy v iOS a Androidu. Až se tato podpora uvolní, budete muset změnit cílení na existující webové klipy, abyste se ujistili, že jsou otevřené v Microsoft Edge místo Managed Browser. 
 
 #### <a name="additional-information"></a>Další informace
-Please visit our docs on [using Microsoft Edge with app protection policies](../apps/manage-microsoft-edge.md) for more info, or view our [support blog post](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
+Další informace najdete v našich dokumentech o [používání Microsoft Edge se zásadami ochrany aplikací](../apps/manage-microsoft-edge.md) , nebo si prohlédněte náš [příspěvek blogu o podpoře](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Use-Microsoft-Edge-for-your-Protected-Intune-Browser-Experience/ba-p/1004269).
 
-### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Plan for Change: Updated experience when enrolling Android Enterprise dedicated devices in Intune<!--5198878-->
-With the November or 1911 release to Intune, we’re adding support for SCEP device certificate deployment to Android Enterprise dedicated devices to enable certificate-based access to Wi-Fi profiles. This change also involves some minor changes the flow when enrolling Android Enterprise dedicated devices.
+### <a name="plan-for-change-updated-experience-when-enrolling-android-enterprise-dedicated-devices-in-intune--5198878--"></a>Plánování změn: aktualizované prostředí při registraci vyhrazených zařízení s Androidem Enterprise v Intune<!--5198878-->
+Od verze listopadu nebo 1911 do Intune přidáváme podporu nasazení certifikátu zařízení SCEP pro zařízení s Androidem Enterprise vyhrazená pro povolení přístupu k profilům Wi-Fi pomocí certifikátů. Tato změna zahrnuje také některé menší změny toku při registraci vyhrazených zařízení s Androidem Enterprise.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-If you manage Android Enterprise dedicated devices in your environment, you will start to see some changes roll out in November.
+Pokud ve svém prostředí spravujete vyhrazená zařízení s Androidem Enterprise, začnete v listopadu zobrazovat některé změny.
 
-- For new Android Enterprise dedicated device enrollments: End users will see a different set of steps on devices during enrollment. Enrollment will still start the way it does today (with QR, NFC, Zero-touch, or device identifier) but after the November service release, there will be a mandatory app install step.
-- For existing Android devices enrolled as dedicated devices: Intune will start to automatically install the Microsoft Intune app on devices starting in early November. You don't need to take any action. The app will automatically download and install on devices. 
+- Pro nové registrace zařízení se systémem Android Enterprise: koncoví uživatelé uvidí během registrace jinou sadu kroků na zařízeních. Registrace pořád spustí způsob, jakým v současné době funguje (se QR, NFC, nulou nebo identifikátorem zařízení), ale po vydání služby bude povinný krok instalace aplikace.
+- Stávající zařízení s Androidem zaregistrovaná jako vyhrazená zařízení: Intune začne automaticky instalovat aplikaci Microsoft Intune do zařízení počínaje začátkem listopadu. Nemusíte provádět žádnou akci. Aplikace se automaticky stáhne a nainstaluje na zařízení. 
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Jak se můžu na tyto změny připravit?
-You should plan to update your end user guidance and let your helpdesk know of this change. Click Additional Information for more details and screenshots. We’ll update our What’s New page when this change starts to roll out.
+Měli byste naplánovat, abyste si aktualizovali pokyny pro koncové uživatele a věděli, že vám tato změna poznala helpdesk. Kliknutím na Další informace zobrazíte další podrobnosti a snímky obrazovky. Až se tato změna začne zavádět, aktualizujeme naši stránku co je nového.
 
 #### <a name="additional-information"></a>Další informace
 [https://aka.ms/Dedicated_devices_enrollment](https://aka.ms/Dedicated_devices_enrollment)
 
-### <a name="end-of-support-for-legacy-pc-management"></a>End of support for legacy PC management
+### <a name="end-of-support-for-legacy-pc-management"></a>Konec podpory pro správu starších počítačů
 
-Legacy PC management is going out of support on October 15, 2020. Upgrade devices to Windows 10 and reenroll them as Mobile Device Management (MDM) devices to keep them managed by Intune.
+Podpora starší verze správy počítačů od 15. října 2020. Upgradujte zařízení na Windows 10 a znovu je zaregistrujte jako zařízení pro správu mobilních zařízení (MDM), abyste je mohli spravovat přes Intune.
 
 [Další informace](https://go.microsoft.com/fwlink/?linkid=2107122)
 
-### <a name="decreasing-support-for-android-device-administrator"></a>Decreasing support for Android device administrator 
-Android device administrator (sometimes referred to "legacy" Android management and released with Android 2.2) is a way to manage Android devices. However, improved management functionality is now available with [Android Enterprise](../enrollment/connect-intune-android-enterprise.md) (released with Android 5.0). In an effort to move to modern, richer, and more secure device management, Google is decreasing device administrator support in new Android releases.
+### <a name="decreasing-support-for-android-device-administrator"></a>Snížení podpory pro správce zařízení s Androidem 
+Správce zařízení s Androidem (někdy označovaný jako "starší verze" správy Androidu a vydaný s Androidem 2,2) je způsob, jak spravovat zařízení s Androidem. Vylepšené funkce správy jsou teď ale k dispozici v [Androidu Enterprise](../enrollment/connect-intune-android-enterprise.md) (vydané s androidem 5,0). V úsilí o přechod na moderní, bohatou a bezpečnější správu zařízení bude Google v nových verzích Androidu snížit podporu Správce zařízení.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-Because of these changes by Google, Intune users will be impacted in the following ways:  
-- Intune will only be able to provide support for device administrator-managed Android devices running Android 10 and later (also known as Android Q) through the summer of 2020. This date is when the next major version of Android is expected to be released.   
-- Device administrator-managed devices that are running Android 10 or later after the summer of 2020 will no longer be able to be entirely managed.       
-- Device administrator-managed Android devices that remain on Android versions below Android 10 won't be impacted and can continue to be entirely managed with device administrator.    
-- For all devices running Android 10 and later, Google has restricted the ability for device administrator management agents like Company Portal to access device identifier information. This restriction impacts the following Intune features after a device updates to Android 10 or later:  
-    - Network access control for VPN will no longer work.   
-    - Identifying devices as corporate-owned with an IMEI or serial number won't automatically mark devices as corporate-owned.  
-    - The IMEI and serial number will no longer be visible to IT admins in Intune. 
+Vzhledem k těmto změnám od společnosti Google budou mít uživatelé Intune tyto možnosti:  
+- Intune bude moct poskytovat podporu jenom pro zařízení s Androidem spravovaná pomocí Správce zařízení s Androidem 10 nebo novějším (označovanou taky jako Android Q) až do letního 2020. Toto datum se očekává, že se má uvolnit další hlavní verze Androidu.   
+- Zařízení spravovaná správcem zařízení se systémem Android 10 nebo novějším po léto 2020 již nebudou moci být zcela spravována.       
+- Zařízení s Androidem spravovaná správcem zařízení, která zůstávají ve verzích Androidu pod Androidem 10, nebudou ovlivněná a můžou se dál spravovat pomocí Správce zařízení.    
+- Pro všechna zařízení s Androidem 10 nebo novějším má Google možnost agentů správy zařízení, jako je Portál společnosti získat přístup k informacím o identifikátoru zařízení. Toto omezení má vliv na následující funkce Intune po aktualizaci zařízení na Android 10 nebo novější:  
+    - Řízení přístupu k síti pro VPN už nebude fungovat.   
+    - Identifikace zařízení jako vlastněných společností pomocí IMEI nebo sériového čísla nebude automaticky označovat zařízení jako ve vlastnictví firmy.  
+    - IMEI a sériové číslo se už nebudou zobrazovat správcům IT v Intune. 
         > [!NOTE]
-        > This only impacts device administrator-managed devices on Android 10 and later and does not affect devices being managed as Android Enterprise. 
+        > To má vliv jenom na zařízení spravovaná správcem zařízení s Androidem 10 a novějším a nemá vliv na zařízení spravovaná jako Android Enterprise. 
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-To avoid the reduction in functionality coming in the summer of 2020, we recommend the following:
-- Don't onboard new devices into device administrator management.
-- If a device is expected to receive an update to Android 10, migrate it off of device administrator management to Android Enterprise management and/or app protection policies.
+Abyste se vyhnuli snížení funkčnosti, které přichází v létě 2020, doporučujeme následující:
+- Nepřidávejte nová zařízení do správy Správce zařízení.
+- Pokud se očekává, že zařízení obdrží aktualizaci pro Android 10, migruje ji ze správy správců zařízení na zásady pro Android Enterprise Management a/nebo ochranu aplikací.
 
 #### <a name="additional-information"></a>Další informace
-- [Google's guidance for migration from device administrator to Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
-- [Google's documentation on the plan to deprecate the device administrator API](https://developers.google.com/android/work/device-admin-deprecation)
+- [Pokyny pro migraci ze strany správce zařízení na Android Enterprise](http://static.googleusercontent.com/media/android.com/en/enterprise/static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf)
+- [Dokumentace ke službě Google v plánu pro zařazování rozhraní API pro správce zařízení](https://developers.google.com/android/work/device-admin-deprecation)
 
-### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-an-upcoming-release---4911065---"></a>Plan for change: Intune App SDK and app protection policies for Android moving to support Android 5.0 and higher in an upcoming release <!--4911065 -->
-Intune will be moving to support Android 5.x (Lollipop) and higher in an upcoming release. Update any wrapped apps with the latest Intune App SDK and update your devices.
-
-#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-If you're not using or plan to use either the SDK or APP for Android, this change won't affect you. If you are using the Intune App SDK, be sure to update to the latest version and also update your devices to Android 5.x and higher. If you don't update, apps won't receive updates, and the quality of their experience will diminish over time.
-
-Below find a list of common devices enrolled in Intune that run Android version 4.x. If you have one of these devices, take the appropriate steps to make sure that this device will support Android version 5.0 or higher or that it will be replaced with a device that supports Android version 5.0 or higher. This list is not exhaustive of all devices that may need to be evaluated:
-
-- Samsung SM-T561  
-- Samsung SM-T365
-- Samsung GT-I9195
-- Samsung SM-G800F
-- Samsung SM-G357FZ
-- Motorola XT1080
-- Samsung GT-I9305
-- Samsung SM-T231
-
-#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-Wrap your apps with the latest Intune App SDK. You may also set the "Require minimum OS version (Warning only)" conditional launch setting to notify end users on personal devices to upgrade.
-
-### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7---3042987---"></a>Intune plan for change: Nearing end of support for Windows 7<!-- 3042987 -->
-As we messaged in MC148476, posted last September 2018, and again in MC176794 back in March 2019, Windows 7 reaches its end of extended support on January 14, 2020. At that time, Intune will retire support for devices running Windows 7 so we can focus our investment on supporting newer technologies and providing great new end-user experiences. After that date, technical assistance and automatic updates that help protect your Windows 7 PC will no longer be available through Intune. Microsoft strongly recommends that you move to Windows 10 before January 2020 to avoid a scenario where you need service or support that is no longer available. Read more about the Windows support lifecycle [here](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-an-upcoming-release---4911065---"></a>Plánování změn: sada Intune App SDK a zásady ochrany aplikací pro Android, které se přesunou na podporu Android 5,0 a vyšší v nadcházející verzi <!--4911065 -->
+V nadcházející verzi se Intune přesune na podporu Androidu 5. x (Lupa) a vyšší. Aktualizujte všechny zabalené aplikace pomocí nejnovější sady Intune App SDK a aktualizujte svá zařízení.
 
 #### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
-You are receiving this message because you are currently managing Windows 7 PCs using the legacy Intune PC software agent. Because less than a year remains before the end of Windows 7 extended support, we strongly encourage your organization to begin upgrading to Windows 10 as soon as possible.  
+Pokud nepoužíváte nebo plánujete použít sadu SDK nebo aplikaci pro Android, tato změna vás nijak neovlivní. Pokud používáte sadu Intune App SDK, nezapomeňte aktualizovat na nejnovější verzi a také aktualizovat zařízení na Android 5. x a vyšší. Pokud aktualizace neaktualizujete, nebudou aplikace dostávat aktualizace a kvalita jejich prostředí se v průběhu času bude zmenšovat.
 
-PC management capabilities are built directly into the Windows 10 operating system, and you no longer need to install a client agent such as the Intune software client for Windows 7. Starting with Windows 8.1, Microsoft uses the Mobile Device Management (MDM) architecture to provision, configure, update, and manage Windows PCs. When you have set up Intune, you can simplify Windows enrollment by [enrolling Windows 10 PCs into Intune](..\windows-enroll.md) through the MDM channel. We recommend that you use this "agentless" MDM management solution to manage your Windows 10 PCs.
+Níže najdete seznam běžných zařízení zaregistrovaných v Intune, na kterých běží Android verze 4. x. Pokud máte jedno z těchto zařízení, proveďte příslušné kroky, abyste se ujistili, že toto zařízení bude podporovat Android verze 5,0 nebo vyšší nebo že bude nahrazeno zařízením, které podporuje Android verze 5,0 nebo novější. Tento seznam není vyčerpávající pro všechna zařízení, která může být potřeba vyhodnotit:
+
+- Samsung SM – T561  
+- Samsung SM – T365
+- Samsung GT – I9195
+- Samsung SM – G800F
+- Samsung SM – G357FZ
+- Společnost Motorola XT1080
+- Samsung GT – I9305
+- Samsung SM – T231
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
-We encourage your organization to immediately consider this action plan:
+Zabalte své aplikace pomocí nejnovější sady Intune App SDK. Můžete také nastavit podmíněné nastavení "vyžadovat minimální verzi operačního systému (pouze upozornění)", které upozorní koncové uživatele na osobní zařízení k upgradu.
 
-- Plan and upgrade the Windows 7 fleet to Windows 10 before January 14, 2020.
-- Explore [Windows 10 deployment support](https://docs.microsoft.com/windows/deployment/) to learn more about how to upgrade your existing fleet of Windows 7 PCs to Windows 10.
-- Review the [Desktop App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) offer through FastTrack, which will assist with the Microsoft application compatibility promise.
-- Transition existing legacy Intune software client managed devices to the Microsoft-recommended solution to manage Windows 10 using MDM management. Enroll all new Windows 10 PCs using MDM management for Intune in the Azure portal.
+### <a name="intune-plan-for-change-nearing-end-of-support-for-windows-7---3042987---"></a>Plán změny v Intune: blíží se konec podpory pro Windows 7.<!-- 3042987 -->
+Stejně jako v MC148476, který jsme odeslali v, od poslední září 2018 a znovu v MC176794 zpátky v březnu 2019, Windows 7 dosáhne konce rozšířené podpory 14. ledna 2020. V tuto chvíli Intune vyřadí podporu pro zařízení s Windows 7, takže můžeme soustředit na naši investici do podpory novějších technologií a zajistit Skvělé nové prostředí pro koncové uživatele. Po tomto datu se v Intune už nebude k dispozici technická pomoc a automatické aktualizace, které vám pomůžou chránit počítač s Windows 7. Společnost Microsoft důrazně doporučuje přejít na Windows 10 před lednem 2020, aby nedocházelo k situaci, kdy potřebujete službu nebo podporu, která už není dostupná. Další informace o životním cyklu podpory pro Windows [najdete tady](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet).
 
-See the [blog post here](https://aka.ms/Windows7_Intune) for more information.
+#### <a name="how-does-this-affect-me"></a>Co to pro mě znamená?
+Tuto zprávu dostáváte, protože aktuálně spravujete počítače se systémem Windows 7 pomocí starší verze softwarového agenta Intune pro počítače. Vzhledem k tomu, že zbývá méně než rok, než je prodloužená podpora Windows 7, důrazně doporučujeme vaší organizaci začít upgradovat na Windows 10, jakmile to bude možné.  
+
+Možnosti správy počítačů se vytvářejí přímo v operačním systému Windows 10 a už nemusíte instalovat klientského agenta, jako je softwarový klient Intune pro Windows 7. Od Windows 8.1 používá společnost Microsoft architekturu správy mobilních zařízení (MDM) ke zřízení, konfiguraci, aktualizaci a správě počítačů s Windows. Když nastavíte Intune, můžete zjednodušit registraci zařízení s Windows 10 tak, že [do Intune zaregistrujete počítače s Windows 10](..\windows-enroll.md) prostřednictvím kanálu MDM. Pro správu počítačů s Windows 10 doporučujeme použít toto řešení správy MDM bez agenta.
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Jak se mám na tuto změnu připravit?
+Doporučujeme, aby vaše organizace okamžitě zvážila tento akční plán:
+
+- Naplánujte a upgradujte loďstev Windows 7 na Windows 10 do 14. ledna 2020.
+- V článku [Podpora nasazení Windows 10](https://docs.microsoft.com/windows/deployment/) najdete další informace o tom, jak upgradovat stávající loďstvo počítačů s Windows 7 na Windows 10.
+- Seznamte se s tím, jak [desktopová aplikace](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure?rtc=1) nabízí nabídku inFastTrack, která vám pomůže s příslibem kompatibility aplikací Microsoftu.
+- Převeďte stávající starší verze spravovaných softwarových klientů Intune do řešení doporučeného společností Microsoft pro správu Windows 10 pomocí správy MDM. Zaregistrujte všechny nové počítače s Windows 10 pomocí správy MDM pro Intune v Azure Portal.
+
+Další informace najdete v tomto [blogovém příspěvku](https://aka.ms/Windows7_Intune) .
 
 

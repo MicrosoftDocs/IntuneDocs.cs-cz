@@ -1,6 +1,6 @@
 ---
-title: Use OEMConfig on Android Enterprise devices in Microsoft Intune - Azure | Microsoft Docs
-description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
+title: Použití OEMConfig na zařízeních s Androidem Enterprise v Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí Microsoft Intune můžete spravovat a používat zařízení se systémem Android Enterprise pomocí OEMConfig. Podívejte se na všechny kroky, včetně přehledu, informace o požadavcích, vytvoření konfiguračního profilu v Intune a zobrazení seznamu podporovaných aplikací OEMConfig.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -24,140 +24,140 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390840"
 ---
-# <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune
+# <a name="use-and-manage-android-enterprise-devices-with-oemconfig-in-microsoft-intune"></a>Používání a Správa zařízení s Androidem Enterprise pomocí OEMConfig v Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-In Microsoft Intune, you can use OEMConfig to add, create, and customize OEM-specific settings for Android Enterprise devices. OEMConfig is typically used to configure settings that aren't built in to Intune. Different original equipment manufacturers (OEM) include different settings. The available settings depend on what the OEM includes in their OEMConfig app.
+V Microsoft Intune můžete použít OEMConfig k přidání, vytvoření a přizpůsobení nastavení pro zařízení s Androidem Enterprise, která jsou specifická pro výrobce OEM. OEMConfig se obvykle používá ke konfiguraci nastavení, která nejsou integrovaná do Intune. Různí výrobci OEM (Original Equipment Manufacturer) zahrnují různá nastavení. Dostupná nastavení závisí na tom, co výrobce OEM zahrnuje do své aplikace OEMConfig.
 
 Tato funkce platí pro:  
 
 - Android Enterprise
 
-This article describes OEMConfig, lists the prerequisites, shows how to create a configuration profile, and lists the supported OEMConfig apps in Intune.
+Tento článek popisuje OEMConfig, seznam požadavků, ukazuje, jak vytvořit konfigurační profil a seznam podporovaných aplikací OEMConfig v Intune.
 
 ## <a name="overview"></a>Overview
 
-OEMConfig policies are a special type of device configuration policy similar to [app configuration policy](../apps/app-configuration-policies-overview.md). OEMConfig is a standard defined by Google that leverages app configuration in Android to send device settings to apps written by OEMs (original equipment manufacturers). This standard allows OEMs and EMMs (enterprise mobility management) to build and support OEM-specific features in a standardized way. [Learn more about OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
+Zásady OEMConfig jsou speciálním typem zásad konfigurace zařízení, které se podobají [zásadám konfigurace aplikací](../apps/app-configuration-policies-overview.md). OEMConfig je standard definovaný společností Google, který využívá konfiguraci aplikací v Androidu k odesílání nastavení zařízení do aplikací napsaných výrobci OEM (Original Equipment Manufacturer). Tento standard umožňuje výrobcům OEM a žádnou Emms (Enterprise Mobility Management) vytvářet a podporovat standardizované funkce specifické pro výrobce OEM. [Přečtěte si další informace o OEMConfig](https://blog.google/products/android-enterprise/oemconfig-supports-enterprise-device-features/).
 
-Historically, EMMs, such as Intune, manually build support for OEM-specific features after they're introduced by the OEM. This approach leads to duplicated efforts and slow adoption.
+V minulosti žádnou Emms, jako je třeba Intune, ruční sestavení podpory pro funkce specifické pro výrobce OEM po jejich zavedení výrobcem OEM. Tento přístup vede k duplicitnímu úsilí a pomalému přijetí.
 
-With OEMConfig, an OEM creates a schema that defines OEM-specific management features. The OEM embeds the schema into an app, and then puts this app on Google Play. The EMM reads the schema from the app, and exposes the schema in the EMM administrator console. The console allows Intune administrators to configure the settings in the schema.
+Pomocí OEMConfig vytvoří výrobce OEM schéma, které definuje funkce pro správu specifické pro výrobce OEM. Výrobce OEM vloží schéma do aplikace a pak tuto aplikaci vloží do Google Play. Modul EMM načte schéma z aplikace a zpřístupní schéma v konzole pro správu modulu EMM. Konzola umožňuje správcům Intune konfigurovat nastavení ve schématu.
 
-When the OEMConfig app installs on a device, it uses the settings configured in the EMM administrator console to manage the device. Settings on the device are executed by the OEMConfig app, instead of an MDM agent built by the EMM.
+Když se aplikace OEMConfig nainstaluje na zařízení, použije se nastavení nakonfigurovaná v konzole pro správu modulu EMM ke správě zařízení. Nastavení na zařízení spouští aplikace OEMConfig místo agenta MDM vytvořeného modulem EMM.
 
-When the OEM adds and improves management features, the OEM also updates the app in Google Play. As an administrator, you get these new features and updates (including fixes) without waiting for EMMs to include these updates.
+Když výrobce OEM přidá a vylepšuje funkce správy, výrobce OEM také aktualizuje aplikaci v Google Play. Jako správce získáte tyto nové funkce a aktualizace (včetně oprav), aniž byste čekali, až žádnou Emms tyto aktualizace zahrnou.
 
 > [!TIP]
-> You can only use OEMConfig with devices that support this feature and have a corresponding OEMConfig app. Consult your OEM for specific details.
+> OEMConfig můžete použít jenom u zařízení, která tuto funkci podporují, a mít odpovídající aplikaci OEMConfig. Konkrétní podrobnosti získáte od výrobce OEM.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-When using OEMConfig, be aware of the following information:
+Při používání OEMConfig si pamatujte na následující informace:
 
-- Intune exposes the OEMConfig app's schema so you can configure it. Intune doesn't validate or change the schema provided by the app. So if the schema is incorrect, or has inaccurate data, then this data is still sent to devices. If you find a problem that originates in the schema, contact the OEM for guidance.
-- Intune doesn't influence or control the content of the app schema. For example, Intune doesn't have any control over strings, language, the actions allowed, and so on. We recommend contacting the OEM for details and best practices for managing their devices with OEMConfig.
-- At any time, OEMs can update their supported features and schemas, and upload a new app to Google Play. Intune always syncs the latest version of the OEMConfig app from Google Play. Intune doesn't maintain older versions of the schema or the app. If you run into version conflicts, we recommend contacting the OEM for more information.
-- Assign one OEMConfig profile to a device. If multiple profiles are assigned to the same device, you may see inconsistent behavior. The OEMConfig model only supports a single policy per device.
+- Intune zpřístupňuje schéma aplikace OEMConfig, abyste ho mohli nakonfigurovat. Intune neověřuje ani nemění schéma, které poskytuje aplikace. Takže pokud je schéma nesprávné nebo obsahuje nepřesná data, jsou tato data pořád odesílána do zařízení. Pokud narazíte na problém, který pochází z schématu, obraťte se na výrobce OEM s pokyny.
+- Intune neovlivňuje ani neovládá obsah schématu aplikace. Intune například nemá žádnou kontrolu nad řetězci, jazykem, povolenými akcemi a tak dále. Doporučujeme obrátit se na výrobce OEM, kde najdete podrobnosti a osvědčené postupy pro správu jejich zařízení pomocí OEMConfig.
+- Výrobci OEM můžou kdykoli aktualizovat své podporované funkce a schémata a nahrát novou aplikaci do Google Play. Intune vždycky synchronizuje nejnovější verzi aplikace OEMConfig z Google Play. Intune neudržuje starší verze schématu nebo aplikace. Pokud narazíte na konflikty verzí, doporučujeme, abyste se obrátili na výrobce OEM, kde najdete další informace.
+- Přiřaďte zařízení jeden profil OEMConfig. Pokud je ke stejnému zařízení přiřazeno několik profilů, může se zobrazit nekonzistentní chování. Model OEMConfig podporuje pouze jednu zásadu na zařízení.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
-To use OEMConfig on your devices, be sure you have the following requirements:
+Pokud chcete na svých zařízeních používat OEMConfig, ujistěte se, že máte následující požadavky:
 
-- An Android Enterprise device enrolled in Intune.
-- An OEMConfig app built by the OEM, and uploaded to Google Play. If it's not on Google Play, contact the OEM for more information.
-- The Intune administrator has role-based access control (RBAC) permissions for **Mobile apps**, **Device Configurations**, and the "read" permission under **Android for Work**. These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations.
+- Zařízení s Androidem Enterprise zaregistrované v Intune.
+- Aplikace OEMConfig vytvořená výrobcem OEM a nahraná do Google Play. Pokud se nepoužívá Google Play, obraťte se na výrobce OEM, kde najdete další informace.
+- Správce Intune má oprávnění řízení přístupu na základě role (RBAC) pro **mobilní aplikace**, **Konfigurace zařízení**a oprávnění číst v **Androidu for Work**. Tato oprávnění jsou povinná, protože profily OEMConfig používají konfigurace spravovaných aplikací ke správě konfigurací zařízení.
 
-## <a name="prepare-the-oemconfig-app"></a>Prepare the OEMConfig app
+## <a name="prepare-the-oemconfig-app"></a>Příprava aplikace OEMConfig
 
-Be sure the device supports OEMConfig, the correct OEMConfig app is added to Intune, and the app is installed on the device. Contact the OEM for this information.
+Ujistěte se, že zařízení podporuje OEMConfig, do Intune se přidá správná aplikace OEMConfig a aplikace se nainstaluje do zařízení. Pro tyto informace se obraťte na výrobce OEM.
 
 > [!TIP] 
-> OEMConfig apps are specific to the OEM. For example, a Sony OEMConfig app installed on a Zebra Technologies device doesn't do anything.
+> Aplikace OEMConfig jsou specifické pro výrobce OEM. Například aplikace Sony OEMConfig nainstalovaná na zařízení technologie Zebra nedělá cokoli.
 
-1. Get the OEMConfig app from the Managed Google Play Store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
-2. Some OEMs may ship devices with the OEMConfig app pre-installed. If the app isn't preinstalled, use Intune to [add and deploy the app to devices](../apps/apps-deploy.md).
+1. Získejte aplikaci OEMConfig ze spravovaného Obchod Google Play. [Přidání spravovaných aplikací Google Play do zařízení se systémem Android Enterprise](../apps/apps-add-android-for-work.md) seznam kroků
+2. Někteří výrobci OEM můžou dodávat zařízení s předem nainstalovanou aplikací OEMConfig. Pokud aplikace není předinstalována, [přidejte aplikaci do zařízení](../apps/apps-deploy.md)pomocí Intune.
 
-## <a name="create-an-oemconfig-profile"></a>Create an OEMConfig profile
+## <a name="create-an-oemconfig-profile"></a>Vytvoření profilu OEMConfig
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 3. Zadejte následující vlastnosti:
 
     - **Název**: Zadejte popisný název nového profilu.
     - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-    - **Platform**: Select **Android enterprise**.
-    - **Profile type**: Select **OEMConfig**.
+    - **Platforma**: vyberte **Android Enterprise**.
+    - **Typ profilu**: vyberte **OEMConfig**.
 
-4. Select **Associated app**, select an existing OEMConfig app you previously added > **OK**. Be sure to choose the correct OEMConfig app for the devices you're assigning the policy to.
+4. Vyberte **přidružená aplikace**, vyberte existující aplikaci OEMConfig, kterou jste dříve přidali > **OK**. Ujistěte se, že jste zvolili správnou aplikaci OEMConfig pro zařízení, ke kterým přiřadíte zásadu.
 
-    If you don't see any apps listed, then set up Managed Google Play, and get apps from the Managed Google Play store. [Add Managed Google Play apps to Android enterprise devices](../apps/apps-add-android-for-work.md) lists the steps.
+    Pokud nevidíte žádné uvedené aplikace, nastavte spravované Google Play a Získejte aplikace ze spravovaného Google Play Storu. [Přidání spravovaných aplikací Google Play do zařízení se systémem Android Enterprise](../apps/apps-add-android-for-work.md) seznam kroků
 
     > [!IMPORTANT]
-    > If you added an OEMConfig app and synced it to Google Play, but it's not listed as an **Associated app**, you may have to contact Intune to onboard the app. See [adding a new app](#supported-oemconfig-apps) (in this article).
+    > Pokud jste přidali aplikaci OEMConfig a synchronizovaly ji do Google Play, ale není uvedená jako **přidružená aplikace**, možná budete muset kontaktovat Intune, aby se aplikace připojila. Viz [Přidání nové aplikace](#supported-oemconfig-apps) (v tomto článku).
 
-5. In **Configure settings with**, choose to use the **Configuration designer** or **JSON editor**:
+5. V části **Konfigurovat nastavení pomocí**vyberte možnost použití **Návrháře konfigurace** nebo **editoru JSON**:
 
     > [!TIP]
-    > Read the OEM documentation to make sure you're configuring the properties correctly. These app properties are included by the OEM, not Intune. Intune does minimal validation of the properties, or what you enter. For example, if you enter `abcd` for a port number, the profile saves as-is, and is deployed to your devices with the values you configure. Be sure you enter the correct information.
+    > Přečtěte si dokumentaci OEM a ujistěte se, že jste správně nakonfigurovali vlastnosti. Tyto vlastnosti aplikace jsou součástí výrobce OEM, nikoli Intune. Intune provede minimální ověření vlastností nebo to, co zadáte. Pokud například zadáte `abcd` pro číslo portu, profil se uloží tak, jak je, a nasadí se do vašich zařízení s hodnotami, které nakonfigurujete. Ujistěte se, že zadáváte správné informace.
 
-    - **Configuration designer**: When you select this option, the properties available within the app schema are shown for you to configure.
+    - **Návrhář konfigurace**: po výběru této možnosti se zobrazí vlastnosti dostupné v rámci schématu aplikace, které můžete nakonfigurovat.
 
-      - Context menus in the configuration designer indicate that more options are available. For example, the context menu might let you add, delete, and reorder settings. These options are included by the OEM. Be sure to read the OEM app documentation to learn how these options should be used to create profiles.
+      - Kontextové nabídky v Návrháři konfigurace označují, že jsou k dispozici další možnosti. Například místní nabídka vám může umožnit přidání, odstranění a změnu pořadí nastavení. Tyto možnosti jsou zahrnuty v výrobci OEM. Nezapomeňte si přečíst dokumentaci k aplikaci pro výrobce OEM, kde se dozvíte, jak se tyto možnosti mají použít k vytváření profilů.
 
-      - Many settings have default values supplied by the OEM. To see if there's a default value, hover over the info icon next to the setting. A tooltip shows the default values for that setting (if applicable), and more details provided by the OEM.
+      - Mnoho nastavení má výchozí hodnoty, které dodává výrobce OEM. Pokud chcete zjistit, jestli je výchozí hodnota, najeďte myší na ikonu informace vedle nastavení. Popisek zobrazuje výchozí hodnoty pro toto nastavení (Pokud je k dispozici) a další podrobnosti poskytované výrobcem OEM.
 
-      - Clicking **Clear** deletes a setting from the profile. If a setting isn't in the profile, its value on the device won't change when the profile is applied.
+      - Kliknutím na tlačítko **Vymazat** odstraníte nastavení z profilu. Pokud nastavení není v profilu, při použití profilu se jeho hodnota v zařízení nezmění.
 
-      - If you create an empty (unconfigured) bundle in the configuration designer, it's deleted when switching to the JSON editor.
+      - Pokud vytvoříte prázdnou (nenakonfigurovanou) sadu prostředků v Návrháři konfigurace, odstraní se při přepnutí do editoru JSON.
 
-    - **JSON editor**: When you select this option, a JSON editor opens with a template for the full configuration schema embedded in the app. In the editor, customize the template with values for the different settings. If you use the **Configuration designer** to change your values, the JSON editor overwrites the template with values from the configuration designer.
+    - **Editor JSON**: Když vyberete tuto možnost, otevře se Editor JSON se šablonou pro úplné schéma konfigurace vložené do aplikace. V editoru Přizpůsobte šablonu pomocí hodnot pro různá nastavení. Použijete-li **Návrháře konfigurace** ke změně hodnot, Editor JSON přepíše šablonu hodnotami z návrháře konfigurace.
 
-      - If you're updating an existing profile, the JSON editor shows the settings that were last saved with the profile.
+      - Pokud aktualizujete existující profil, Editor JSON zobrazí nastavení, které bylo naposledy uloženo s profilem.
 
-      - OEMConfig schemas can be large and complex. If you prefer to update these settings using a different editor, select the **Download JSON template** button. Use an editor of your choice to add your configuration values to the template. Then, copy and paste your updated JSON in to the **JSON editor** property.
+      - Schémata OEMConfig můžou být velká a složitá. Pokud dáváte přednost aktualizaci těchto nastavení pomocí jiného editoru, vyberte tlačítko **Stáhnout šablonu JSON** . Pomocí editoru dle vašeho výběru přidejte do šablony konfigurační hodnoty. Pak zkopírujte a vložte aktualizovaný kód JSON do vlastnosti **Editor JSON** .
 
-      - You can use the JSON editor to create a backup of your configuration. After you configure your settings, use this feature to get the JSON settings with your values. Copy and paste the JSON to a file, and save it. Now you have a backup file.
+      - K vytvoření zálohy konfigurace můžete použít Editor JSON. Po nakonfigurování nastavení použijte tuto funkci k získání nastavení JSON s hodnotami. Zkopírujte a vložte JSON do souboru a uložte ho. Nyní máte záložní soubor.
 
-    Any changes made in the configuration designer are also made automatically in the JSON editor. Likewise, any changes made in the JSON editor are automatically made in the configuration designer. If your input contains invalid values, you can't switch between the configuration designer and JSON editor until you fix the issues.
+    Všechny změny provedené v Návrháři konfigurace jsou také automaticky provedeny v editoru JSON. Podobně všechny změny provedené v editoru JSON se automaticky provedou v Návrháři konfigurace. Pokud vstup obsahuje neplatné hodnoty, nemůžete přepínat mezi návrhářem konfigurace a editorem JSON, dokud problémy neopravíte.
 
-6. Select **OK** > **Add** to save your changes. The policy is created and shown in the list.
+6. Vyberte **OK** > **Přidat** a uložte provedené změny. Zásada se vytvoří a zobrazí se v seznamu.
 
-Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Nezapomeňte [profil přiřadit](device-profile-assign.md) a [monitorovat jeho stav](device-profile-monitor.md).
 
  > [!NOTE]
- > Assign one profile to each device. The OEMConfig model only supports one policy per device.
+ > Přiřaďte každému zařízení jeden profil. Model OEMConfig podporuje pouze jednu zásadu na zařízení.
 
-The next time the device checks for configuration updates, the OEM-specific settings you configured are applied to the OEMConfig app.
+Až zařízení příště zkontroluje aktualizace konfigurace, nakonfigurované nastavení specifické pro výrobce OEM se použije na aplikaci OEMConfig.
 
 > [!NOTE]
-> The OEMConfig standard doesn't currently include status reporting. So, by default, profiles show a **Pending** status.
+> OEMConfig Standard aktuálně neobsahuje vytváření sestav o stavu. Ve výchozím nastavení profily ukazují stav čeká na **vyřízení** .
 
-## <a name="supported-oemconfig-apps"></a>Supported OEMConfig apps
+## <a name="supported-oemconfig-apps"></a>Podporované aplikace OEMConfig
 
-Compared to standard apps, OEMConfig apps expand the managed configurations privileges granted by Google to support more complex schemas. Intune currently supports the following OEMConfig apps:
+V porovnání se standardními aplikacemi aplikace OEMConfig rozšiřují oprávnění spravovaných konfigurací udělená společností Google, aby podporovala složitější schémata. Intune aktuálně podporuje tyto aplikace OEMConfig:
 
 -----------------
 
-| OEM | ID sady prostředků | OEM Documentation (if available) |
+| OEM | ID sady prostředků | Dokumentace OEM (je-li k dispozici) |
 | --- | --- | ---|
-| Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
-| Datalogic | com.datalogic.oemconfig | [User Documentation for Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
-| Honeywell | com.honeywell.oemconfig |  |
-| Kyocera | jp.kyocera.enterprisedeviceconfig |  |
-| Spectralink - Barcodes | com.spectralink.barcode.service |  |
-| Spectralink - Buttons | com.spectralink.buttons |  |
-| Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
-| Spectralink - Logging | com.spectralink.slnklogger |  |
-| Spectralink - VQO | com.spectralink.slnkvqo |  |
+| Samsung | com.samsung.android.knox.kpu | [Příručka pro správce modulů plug-in služby Knox](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
+| Zebra technologie | com. zebra. oemconfig. Common | [Zebra OEMConfig – přehled](http://techdocs.zebra.com/oemconfig ) |
+| Datalogic | com. Datalogic. oemconfig | [Dokumentace uživatele pro Datalogic OEMConfig](https://datalogic.github.io/oemconfig/) |
+| Honeywell | com. Honeywell. oemconfig |  |
+| Tiskárny | JP. Kyocera. enterprisedeviceconfig |  |
+| Spectralink – čárové kódy | com. Spectralink. čárový kód. Service |  |
+| Spectralink – tlačítka | com. Spectralink. Buttons |  |
+| Spectralink – zařízení | com. Spectralink. slnkdevicesettings  |  |
+| Spectralink – protokolování | com. Spectralink. slnklogger |  |
+| Spectralink - VQO | com. Spectralink. slnkvqo |  |
 
 -----------------
 
-If an OEMConfig application exists for your device, but it isn’t in the table above, or isn't showing up in the Intune console, please email `IntuneOEMConfig@microsoft.com`.
+Pokud aplikace OEMConfig pro vaše zařízení existuje, ale není v tabulce výše, nebo se nezobrazuje v konzole Intune, pošlete prosím e-mail `IntuneOEMConfig@microsoft.com`.
 
 > [!NOTE]
-> OEMConfig apps must on-boarded by Intune before they can be configured with OEMConfig profiles. Once an app is supported, you don't need to contact Microsoft about setting it up in your tenant. Just follow the instructions on this page.
+> Aby bylo možné nakonfigurovat aplikace OEMConfig pomocí profilů OEMConfig, musí být na zprovoznění služby Intune. Jakmile je aplikace podporovaná, nemusíte od Microsoftu kontaktovat žádné informace o jeho nastavování ve vašem tenantovi. Stačí postupovat podle pokynů na této stránce.
 
 ## <a name="next-steps"></a>Další kroky
 

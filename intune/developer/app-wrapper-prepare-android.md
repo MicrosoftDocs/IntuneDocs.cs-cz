@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 107624ac5d0c5eab423c0d5051ceca45e41de0b9
-ms.sourcegitcommit: 9013f7442bbface78feecde2922e8e546a622c16
+ms.openlocfilehash: 8fa63540afa18450f731180da3c2cee729010a65
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72490749"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465704"
 ---
 # <a name="prepare-android-apps-for-app-protection-policies-with-the-intune-app-wrapping-tool"></a>Příprava aplikací pro Android na zásady ochrany aplikací pomocí nástroje Intune App Wrapping Tool
 
@@ -32,7 +32,7 @@ Jde o nástroj příkazového řádku Windows, který běží v PowerShellu a�
 
 Před spuštěním nástroje si přečtěte část [Důležité informace o zabezpečení při spuštění nástroje App Wrapping Tool](#security-considerations-for-running-the-app-wrapping-tool). Nástroj si můžete stáhnout ze stránky [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) na GitHubu.
 
-## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků na používání nástroje App Wrapping Tool
+## <a name="fulfill-the-prerequisites-for-using-the-app-wrapping-tool"></a>Splnění požadavků používání nastroje App Wrapping
 
 - Nástroj App Wrapping Tool je možné spustit na počítači se systémem Windows 7 nebo novějším.
 
@@ -54,11 +54,12 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
     > [!NOTE]
     > Nástroj Intune App Wrapping Tool nepodporuje pro podepisování aplikací podpisová schémata v2 a nadcházející v3 od Googlu. Po zabalení souboru .apk pomocí nástroje Intune App Wrapping Tool se doporučuje použít [nástroj Apksigner od Googlu]( https://developer.android.com/studio/command-line/apksigner). Tím se zajistí, že když se vaše aplikace dostane na zařízení koncových uživatelů, bude ji možné spustit správně podle standardů Androidu. 
 
-- Volitelné Někdy může aplikace dosáhnout limitu velikosti spustitelného souboru Dalvik (DEX), protože třídy sady Intune MAM SDK, které jsou přidány během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. Nástroj pro zabalení aplikace Intune automaticky zpracovává přetečení souborů DEX při zabalení pro aplikace s minimální úrovní rozhraní API 21 nebo vyšší (jako [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Pro aplikace s minimální úrovní rozhraní API < 21 by osvědčeným postupem bylo zvýšení minimální úrovně rozhraní API pomocí příznaku `-UseMinAPILevelForNativeMultiDex` obálky. Aby zákazníci nemohli zvýšit minimální úroveň rozhraní API aplikace, jsou k dispozici následující alternativní DEX přetečení. V některých organizacích to může vyžadovat spolupráci s tím, že aplikace kompiluje (tj. tým sestavení aplikace):
-* Pomocí ProGuard můžete eliminovat nepoužívané odkazy na třídy z primárního souboru DEX aplikace.
-* Pro zákazníky, kteří používají 3.1.0 nebo novější modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+- Volitelné Někdy může aplikace dosáhnout limitu velikosti spustitelného souboru Dalvik (DEX), protože třídy sady Intune MAM SDK, které jsou přidány během zabalení. Soubory DEX jsou součástí kompilace aplikace pro Android. Nástroj pro zabalení aplikace Intune automaticky zpracovává přetečení souborů DEX při zabalení pro aplikace s minimální úrovní rozhraní API 21 nebo vyšší (jako [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). Pro aplikace s minimální úrovní rozhraní API < 21 doporučujeme zvýšit minimální úroveň rozhraní API pomocí příznaku `-UseMinAPILevelForNativeMultiDex` obálky. Aby zákazníci nemohli zvýšit minimální úroveň rozhraní API aplikace, jsou k dispozici následující alternativní DEX přetečení. V některých organizacích to může vyžadovat spolupráci s tím, že aplikace kompiluje (tj. tým sestavení aplikace):
 
-## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje App Wrapping Tool
+  - Pomocí ProGuard můžete eliminovat nepoužívané odkazy na třídy z primárního souboru DEX aplikace.
+  - Pro zákazníky, kteří používají 3.1.0 nebo novější modul plug-in Android Gradle, zakažte [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+
+## <a name="install-the-app-wrapping-tool"></a>Instalace nástroje pro zabalení aplikace
 
 1. Z [úložiště GitHubu](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android) si do počítače s Windows stáhněte instalační soubor InstallAWT.exe nástroje Intune App Wrapping Tool for Android. Otevřete instalační soubor.
 
@@ -66,7 +67,7 @@ Před spuštěním nástroje si přečtěte část [Důležité informace o zabe
 
 Poznamenejte si složku, do které jste nainstalovali nástroj. Výchozí umístění je: C:\Program Files (x86)\Microsoft Intune Mobile Application Management\Android\App Wrapping Tool.
 
-## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje App Wrapping Tool
+## <a name="run-the-app-wrapping-tool"></a>Spuštění nástroje pro zabalení aplikace
 
 1. Na počítači s Windows, na který jste nainstalovali nástroj App Wrapping Tool, otevřete okno PowerShell.
 
@@ -154,7 +155,7 @@ Pro zabránění potenciálnímu falšování identity, zpřístupnění informa
 
 - Zabezpečte výstupní adresář se zabalenou aplikací. Zvažte použití adresáře na úrovni uživatele pro výstup.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 - [Rozhodování o způsobu přípravy aplikací na správu mobilních aplikací v Microsoft Intune](../developer/apps-prepare-mobile-application-management.md)
 
 - [Microsoft Intune App SDK pro Android – Příručka pro vývojáře](../developer/app-sdk-android.md)

@@ -1,6 +1,6 @@
 ---
-title: Check the success or failure of security baselines in Microsoft Intune - Azure | Microsoft Docs
-description: Check the error, conflict, and success status when deploying security baselines to users and devices in Microsoft Intune MDM. See how to troubleshoot using client logs, and the report features in Intune.
+title: Ověření úspěšného nebo neúspěšného směrného plánu zabezpečení v Microsoft Intune – Azure | Microsoft Docs
+description: Při nasazení standardních hodnot zabezpečení pro uživatele a zařízení v Microsoft Intune MDM se podívejte na stav Chyba, konflikt a úspěch. Podívejte se, jak řešit potíže s používáním klientských protokolů a funkce sestav v Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -23,117 +23,117 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74410126"
 ---
-# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Monitor security baseline and profiles in Microsoft Intune
+# <a name="monitor-security-baseline-and-profiles-in-microsoft-intune"></a>Sledování standardních hodnot zabezpečení a profilů v Microsoft Intune
 
-Intune provides several options to monitor your security baselines. You can monitor the security baselines profile that applies to your users and devices. You can also monitor the actual baseline, and any devices that match (or don't match) the recommended values.
+Intune nabízí několik možností monitorování standardních hodnot zabezpečení. Můžete monitorovat profil standardních hodnot zabezpečení, který platí pro uživatele a zařízení. Můžete také monitorovat skutečné standardní hodnoty a všechna zařízení, která se shodují (nebo se neshodují) s doporučenými hodnotami.
 
-This article walks you through both monitoring options.
+Tento článek vás provede jednotlivými možnostmi monitorování.
 
-[Security baselines in Intune](../security-baselines.md) provides more details on the security baselines feature in Microsoft Intune.
+[Směrné plány zabezpečení v Intune](../security-baselines.md) poskytují další podrobnosti o funkci směrného plánu zabezpečení v Microsoft Intune.
 
-## <a name="monitor-the-baseline-and-your-devices"></a>Monitor the baseline and your devices
+## <a name="monitor-the-baseline-and-your-devices"></a>Monitorování standardních hodnot a zařízení
 
-When you monitor a baseline, you get insight into the security state of your devices based on Microsoft's recommendations. You can view these insights from the Overview pane of the security baseline in the Intune console.  It takes up to 24 hours for data to appear after you first assign a baseline. Later changes take up to six hours to appear.
+Při sledování směrného plánu získáte přehled o stavu zabezpečení vašich zařízení na základě doporučení Microsoftu. Tyto přehledy si můžete prohlédnout v podokně Přehled směrného plánu zabezpečení v konzole Intune.  Po prvním přiřazení směrného plánu trvá zobrazení dat až 24 hodin. Pozdější změny se projeví až po šesti hodinách.
 
-To view monitoring data for the baseline and devices, sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431). Next, select **Endpoint security** > **Security Baselines**, select a baseline, and view the **Overview** pane.
+Pokud chcete zobrazit data pro základní hodnoty a zařízení, přihlaste se do [centra pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Dále vyberte možnost **Endpoint security** > **úrovně zabezpečení**, vyberte směrný plán a zobrazte podokno **Přehled** .
 
-The **Overview** pane provides two methods to monitor status:
+V podokně **Přehled** jsou k dispozici dvě metody monitorování stavu:
 
-- **Device view** – A summary of how many devices are in each status category for the baseline.
-- **Per-category** - A view that displays each category in the baseline and includes the percentage of devices for each status group for each baseline category.
+- **Zobrazení zařízení** – souhrn toho, kolik zařízení je v každé kategorii stavů pro směrný plán.
+- **Podle kategorií** – zobrazení, které zobrazuje jednotlivé kategorie ve standardních hodnotách a zahrnuje procento zařízení pro každou skupinu stavů pro každou kategorii standardních hodnot.
 
-Each device is represented by one of the following statuses, which are used in both the *device* view, and the *per-category* views:
+Každé zařízení je reprezentované jedním z následujících stavů, které se používají v zobrazení *zařízení* , a v *jednotlivých kategoriích* zobrazení:
 
-- **Matches baseline** - All the settings in the baseline match the recommended settings.
-- **Does not match baseline** - At least one setting in the baseline doesn't match the recommended settings.
-- **Misconfigured** - At least one setting isn't properly configured. This status means the setting is in a conflict, error, or a pending state.
-- **Not applicable** - At least one setting isn't applicable, and isn't applied.
+- **Odpovídá směrnému plánu** – všechna nastavení v směrném plánu odpovídají doporučeným nastavením.
+- Neodpovídá **směrnému plánu** – nejméně jedno nastavení v směrném plánu se neshoduje s doporučeným nastavením.
+- **Nesprávně nakonfigurovaná – aspoň** jedno nastavení není správně nakonfigurované. Tento stav znamená, že je nastavení v konfliktu, chyba nebo čeká na vyřízení.
+- **Nedá se použít** – aspoň jedno nastavení se nedá použít a není použité.
 
-### <a name="device-view"></a>Device view
+### <a name="device-view"></a>Zobrazení zařízení
 
-The Overview pane displays a chart-based summary of how many devices have a specific status for the baseline; **Security baseline posture for assigned Windows 10 devices**.
+V podokně Přehled se zobrazí souhrn založený na grafu o tom, kolik zařízení má určitý stav pro směrný plán. **Zabezpečení standardních hodnot stav pro přiřazená zařízení s Windows 10**
 
-![Check the status of the devices](./media/security-baselines-monitor/overview.png)
+![Kontrolovat stav zařízení](./media/security-baselines-monitor/overview.png)
 
-When a device has different status from different categories in the baseline, the device is represented by a single status. The status that represents the device is taken from the following order of precedence: **Misconfigured**, **Does not match baseline**, **Not applicable**, **Matches baseline**.
+Pokud má zařízení různý stav z různých kategorií na základě směrného plánu, zařízení je reprezentované jediným stavem. Stav, který představuje zařízení, pochází z následujícího pořadí: nesprávně **nakonfigurované**, **neshoduje se se směrným plánem**, **není k dispozici**, **odpovídá směrnému plánu**.
 
-For example, if a device has a setting classified as *misconfigured* and one or more settings classified as *Does not match baseline*, the device is classified as *Misconfigured*.
+Pokud má například zařízení nastavení klasifikované jako nesprávně *nakonfigurované* a jedno nebo více nastavení klasifikovaných jako neodpovídá *směrnému plánu*, je zařízení klasifikované jako nesprávně *nakonfigurované*.
 
-You can click on the chart to drill through and view a list of devices with various statuses. You can then select individual devices from that list to view details about individual devices. Například:
+Kliknutím na graf můžete procházet a zobrazit seznam zařízení s různými stavy. Pak můžete vybrat jednotlivá zařízení z tohoto seznamu a zobrazit podrobnosti o jednotlivých zařízeních. Například:
 
-- Select **Device configuration** > Select the profile with an Error state:
+- Vyberte **Konfigurace zařízení** > vyberte profil s chybovým stavem:
 
-  ![View the status of a profile](./media/security-baselines-monitor/device-configuration-profile-list.png)
+  ![Zobrazení stavu profilu](./media/security-baselines-monitor/device-configuration-profile-list.png)
 
-- Select the Error profile. A list of all settings in the profile, and their state is shown. Now, you can scroll to find the setting causing the error:
+- Vyberte chybový profil. Zobrazí se seznam všech nastavení v profilu a jejich stav. Nyní se můžete posouvat a najít nastavení způsobující chybu:
 
-  ![See the setting causing the error](./media/security-baselines-monitor/profile-with-error-status.png)
+  ![Zobrazit nastavení způsobující chybu](./media/security-baselines-monitor/profile-with-error-status.png)
 
-Use this reporting to see any settings in a profile that are causing an issue. Also get more details of policies and profiles deployed to devices.
+Pomocí tohoto hlášení můžete zobrazit všechna nastavení v profilu, která způsobují problém. Získejte taky další podrobnosti o zásadách a profilech nasazených do zařízení.
 
 > [!NOTE]
-> When a property is set to **Not configured** in the baseline, the setting is ignored, and no restrictions are enforced. The property isn't shown in any reporting.
+> Pokud je vlastnost nastavena na hodnotu **není nakonfigurováno** v směrném plánu, je nastavení ignorováno a nejsou vydodržována žádná omezení. Vlastnost není zobrazená v žádné sestavě.
 
-### <a name="per-category-view"></a>Per category view
+### <a name="per-category-view"></a>Podle zobrazení kategorií
 
-The Overview pane displays a per-category chart for the baseline; **Security baseline posture by category**.  This view displays each category from the baseline and identifies the percentage of devices that fall into a status classification for each of those categories.
+Podokno přehled zobrazuje pro směrný plán graf podle kategorií; **Základní úroveň zabezpečení stav podle kategorie**.  Toto zobrazení zobrazuje jednotlivé kategorie ze standardních hodnot a určuje procento zařízení, která spadají do klasifikace stavu pro každou z těchto kategorií.
 
-![Per-Category view of status](./media/security-baselines-monitor/monitor-baseline-per-category.png)
+![Zobrazení stavu podle kategorie](./media/security-baselines-monitor/monitor-baseline-per-category.png)
 
-Status for **Matches baseline** does not display until 100% of devices report that status for the category.
+Stav pro **porovnání standardních hodnot** se nezobrazuje, dokud 100% zařízení nehlásí stav pro danou kategorii.
 
-You can sort the by-category view by each column, by selecting up-down arrow icon at the top of the column.
+Zobrazení podle kategorií můžete podle jednotlivých sloupců seřadit tak, že v horní části sloupce vyberete ikonu šipky dolů.
 
-## <a name="monitor-the-profile"></a>Monitor the profile
+## <a name="monitor-the-profile"></a>Monitorování profilu
 
-Monitoring the profile gives you insight into the deployment state of your devices, but not the security state based on the baseline recommendations.
+Monitorování profilu vám umožní získat přehled o stavu nasazení vašich zařízení, ale ne stav zabezpečení na základě standardních doporučení.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles created**.
+1. V Intune vyberte **standardní hodnoty zabezpečení** > vyberte směrné > **vytvořené profily**.
 
-2. Select a profile. In **Overview**, the image shows how many devices and users have this profile assigned:
+2. Vyberte profil. V **přehledu**se na obrázku zobrazuje, kolik zařízení a uživatelů má tento profil přiřazený:
 
-   ![See how many devices and users are assigned the security baselines profile](./media/security-baselines-monitor/existing-profile-overview.png)
+   ![Podívejte se, kolik zařízení a uživatelů má přiřazený profil standardních hodnot zabezpečení.](./media/security-baselines-monitor/existing-profile-overview.png)
 
-3. Under **Manage** > **Properties**, a list of all the settings in the baseline are shown. You can also change any of these settings:
+3. V části **spravovat** > **vlastnosti**se zobrazí seznam všech nastavení ve standardních hodnotách. Můžete také změnit kterékoli z těchto nastavení:
 
-   ![See and update settings in the security baselines profile](./media/security-baselines-monitor/manage-settings.png)
+   ![Zobrazit a aktualizovat nastavení v profilu standardních hodnot zabezpečení](./media/security-baselines-monitor/manage-settings.png)
 
-4. In **Monitor**, you can see the deployment status of the profile on individual devices, the status for each user, and the status for each setting in the baseline:
+4. V okně **monitor**můžete zobrazit stav nasazení profilu na jednotlivých zařízeních, stav pro každého uživatele a stav každého nastavení ve standardních hodnotách:
 
-   ![See the different monitor options for a security baselines profile](./media/security-baselines-monitor/monitor-status-options.png)
+   ![Zobrazit různé možnosti monitorování pro profil standardních hodnot zabezpečení](./media/security-baselines-monitor/monitor-status-options.png)
 
-## <a name="troubleshoot-using-per-setting-status"></a>Troubleshoot using per-setting status
+## <a name="troubleshoot-using-per-setting-status"></a>Řešení potíží s použitím stavu podle nastavení
 
-You deployed a security baseline, but the deployment status shows an error. The following steps give you some guidance on troubleshooting the error.
+Nasadili jste základní úroveň zabezpečení, ale stav nasazení zobrazuje chybu. Následující kroky vám poskytnou pokyny k řešení této chyby.
 
-1. In Intune, select **Security Baselines** > select a baseline > **Profiles created**.
+1. V Intune vyberte **standardní hodnoty zabezpečení** > vyberte směrné > **vytvořené profily**.
 
-2. Select a profile > Under **Monitor** > **Per-setting status**.
+2. Vyberte profil > pod položkou **Monitor** > **stav podle nastavení**.
 
-3. The table shows all the settings, and the status of each setting. Select the **Error** column or the **Conflict** column to see the setting causing the error.
+3. V tabulce jsou uvedena všechna nastavení a stav jednotlivých nastavení. Pokud chcete zobrazit nastavení, které způsobuje chybu, vyberte sloupec **Chyba** nebo sloupec **konfliktů** .
 
-### <a name="mdm-diagnostic-information"></a>MDM diagnostic information
+### <a name="mdm-diagnostic-information"></a>Diagnostické informace MDM
 
-Now you know the problematic setting. The next step is to find out why this setting is causing an error or conflict.
+Nyní znáte problematické nastavení. V dalším kroku zjistíte, proč toto nastavení způsobuje chybu nebo konflikt.
 
-On Windows 10 devices, there's a built-in MDM diagnostic information report. This report includes default values, current values, lists the policy, shows if it's deployed to the device or the user, and more. Use this report to help determine why the setting is causing a conflict or error.
+Na zařízeních s Windows 10 je k dispozici integrovaná sestava diagnostické informace MDM. Tato sestava obsahuje výchozí hodnoty, aktuální hodnoty, seznam těchto zásad, informace o tom, jestli se nasadí do zařízení nebo uživatele, a další. Tato sestava vám pomůže zjistit, proč nastavení způsobuje konflikt nebo chybu.
 
-1. On the device, go to **Settings** > **Accounts** > **Access work or school**.
+1. V zařízení přejděte na **nastavení** > **účty** > přístup do **práce nebo do školy**.
 
-2. Select the account > **Info** > **Advanced Diagnostic Report** > **Create report**.
+2. Vyberte účet > **informace** > **pokročilou diagnostickou sestavu** > **vytvořit sestavu**.
 
-3. Choose **Export**, and open the generated file.
+3. Vyberte **exportovat**a vygenerovaný soubor otevřete.
 
-4. In the report, look for the error or conflict setting in the different sections of the report.
+4. V sestavě vyhledejte nastavení chyba nebo konflikt v různých částech sestavy.
 
-  For example, look in the **Enrolled configuration sources and target resources** section or the **Unmanaged policies** section. You may get an idea of why it's causing an error or conflict.
+  Podívejte se například na oddíl **zaregistrované zdrojové konfigurace a cílové prostředky** nebo na oddíl **nespravované zásady** . Můžete získat představu o tom, proč způsobuje chybu nebo konflikt.
 
-[Diagnose MDM failures in Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) provides more information on this built-in report.
+[Diagnostika selhání MDM ve Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) poskytuje další informace o této předdefinované sestavě.
 
 > [!TIP]
-> - Some settings also list the GUID. You can search for this GUID in the local registry (regedit) for any set values.
-> - The Event Viewer logs may also include some error information on the problematic setting (**Event viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**).
+> - Některá nastavení také uvádějí identifikátor GUID. Tento identifikátor GUID můžete vyhledat v místním registru (Regedit) pro všechny hodnoty sady.
+> - Protokoly Prohlížeč událostí můžou taky zahrnovat nějaké informace o chybě v nastavení problematické (**Prohlížeč událostí** > **protokoly aplikací a služeb** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **admin**).
 
 ## <a name="next-steps"></a>Další kroky
 
-[Monitor device profiles](../configuration/device-profile-monitor.md) and [see some common issues and resolutions](../configuration/device-profile-troubleshoot.md).
+[Sledujte profily zařízení](../configuration/device-profile-monitor.md) a [Podívejte se na některé běžné problémy a jejich řešení](../configuration/device-profile-troubleshoot.md).

@@ -36,7 +36,7 @@ Sestavy dodržování předpisů slouží ke kontrole dodržování předpisů z
 
 Otevřete **řídicí panel Intune pro dodržování předpisů zařízením**:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 
 2. Vyberte **Dodržování předpisů zařízením** > **Přehled**. Otevře se **řídicí panel Dodržování předpisů zařízením**.
 
@@ -57,12 +57,12 @@ Po otevření řídicího panelu se zobrazí přehled se všemi sestavami dodrž
 
 Když se do těchto sestav ponoříte, najdete také specifické zásady dodržování předpisů a nastavení pro konkrétní zařízení, včetně stavu dodržování předpisů pro každé nastavení.
 
-### <a name="device-compliance-status"></a>Device compliance status
+### <a name="device-compliance-status"></a>Stav dodržování předpisů zařízením
 
-The **Device compliance status** chart shows the compliance states for all Intune enrolled devices. Stavy jsou uložené ve dvou různých databázích – Intune a Azure Active Directory.
+Graf **stavu dodržování předpisů zařízením** zobrazuje stavy dodržování předpisů pro všechna zařízení zaregistrovaná v Intune. Stavy jsou uložené ve dvou různých databázích – Intune a Azure Active Directory.
 
 > [!IMPORTANT]
-> Intune follows the device check-in schedule for all compliance evaluations on the device. [Learn more about the device check-in schedule](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
+> Intune sleduje u všech vyhodnocení dodržování předpisů na zařízení plán vrácení se změnami zařízení. [Přečtěte si další informace o plánu vrácení se změnami zařízení](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 Podrobnosti o různých stavech zásad dodržování předpisů zařízením jsou následující:
 
@@ -72,14 +72,14 @@ Podrobnosti o různých stavech zásad dodržování předpisů zařízením jso
 
   - Přečtěte si další informace o [akcích pro zařízení nedodržující předpisy](actions-for-noncompliance.md).
 
-- **Nevyhodnoceno**: Počáteční stav všech nově zaregistrovaných zařízení. Other possible reasons for this state include:
+- **Nevyhodnoceno**: Počáteční stav všech nově zaregistrovaných zařízení. Mezi další možné příčiny tohoto stavu patří:
 
-  - Devices that aren't assigned a compliance policy and don't have a trigger to check for compliance
-  - Devices that haven't checked in since the compliance policy was last updated
-  - Devices not associated to a specific user, such as:
-    - iOS devices purchased through Apple's Device Enrollment Program (DEP) that don't have user affinity
-    - Android kiosk or Android Enterprise dedicated devices
-  - Devices enrolled with a device enrollment manager (DEM) account
+  - Zařízení, která nemají přiřazenou zásadu dodržování předpisů a nemají Trigger ke kontrole dodržování předpisů
+  - Zařízení, která nejsou zaregistrovaná od poslední aktualizace zásad dodržování předpisů
+  - Zařízení, která nejsou přidružená konkrétnímu uživateli, například:
+    - zařízení iOS zakoupená prostřednictvím programu Apple Program registrace zařízení (DEP), který nemá přidružení uživatele
+    - Zařízení s Androidem pro veřejného terminálu nebo zařízení s Androidem Enterprise
+  - Zařízení zaregistrovaná pomocí účtu správce registrace zařízení (DEM)
 
 - **Nedodržující předpisy**: Zařízení se nepodařilo použít jedno nebo více nastavení zásad dodržování předpisů zařízením. Případně zásady nedodržel uživatel.
 
@@ -98,7 +98,7 @@ V grafu **Stav dodržování předpisů pro zařízení** vyberte některý stav
 
 ![Výběr stavu dodržování předpisů](./media/compliance-policy-monitor/select-not-compliant-status.png)
 
-That action opens the **Device compliance** window, and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more. 
+Tato akce otevře okno **dodržování předpisů zařízením** a zobrazí zařízení v grafu **stavu zařízení** . Graf zobrazuje více podrobností o zařízeních v tomto stavu, včetně platformy operačního systému, data posledního vrácení se změnami a dalších. 
 
 ![Snímek řídicího panelu s podrobnostmi o zařízeních v příslušném stavu](./media/compliance-policy-monitor/drill-down-details.png)
 
@@ -108,21 +108,21 @@ Pokud chcete zobrazit všechna zařízení vlastněná konkrétním uživatelem,
 
 ![Výběr tlačítek Filtrovat a Sloupce pro změnu výsledků zobrazených v grafu](./media/compliance-policy-monitor/filter-columns.png)
 
-When you select the **Filter** button, the filter fly-out opens with more options, including the **Compliance** state, **Jailbroken** devices, and more. Kliknutím na **Použít** výsledky aktualizujete.
+Když vyberete tlačítko **Filtr** , otevře se filtr s dalšími možnostmi, včetně stavu **dodržování předpisů** , zařízení s **jailbreakem** a dalších. Kliknutím na **Použít** výsledky aktualizujete.
 
 Pomocí vlastnosti **Sloupce** můžete ve výstupním grafu přidávat nebo odebírat sloupce. Například sloupec **Hlavní název uživatele** může zobrazovat e-mailovou adresu zaregistrovanou na zařízení. Kliknutím na **Použít** výsledky aktualizujete.
 
 #### <a name="device-details"></a>Podrobnosti o zařízení
 
-In the **Device details** chart, select a specific device, and then select **Device compliance**:
+V grafu **podrobností o zařízení** vyberte konkrétní zařízení a pak vyberte **dodržování předpisů zařízením**:
 
 ![Výběr zařízení a možnosti Dodržování předpisů zařízením pro zobrazení použitých zásad dodržování předpisů](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
 
-Intune displays more details on the device compliance policy settings applied on that device. Když některou ze zásad vyberete, zobrazí se všechna její nastavení.
+Intune zobrazí další podrobnosti o nastavení zásad dodržování předpisů zařízením použitým na tomto zařízení. Když některou ze zásad vyberete, zobrazí se všechna její nastavení.
 
-### <a name="devices-without-compliance"></a>Devices without compliance
+### <a name="devices-without-compliance"></a>Zařízení bez dodržování předpisů
 
-On the *Compliance status* page, next to the *Policy compliance* chart, you can select the **Devices without compliance policy** tile to view information about devices that don't have any compliance policies assigned:
+Na stránce *stav dodržování předpisů* můžete vedle grafu *dodržování zásad* vybrat dlaždici **zařízení bez zásad dodržování předpisů** a zobrazit informace o zařízeních, která nemají přiřazené žádné zásady dodržování předpisů:
 
 ![Zobrazení zařízení bez zásad dodržování předpisů](./media/compliance-policy-monitor/devices-without-policies.png)
 
@@ -132,7 +132,7 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 - U nastavení zabezpečení **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** je důležité určit zařízení bez zásad dodržování předpisů. Potom jim můžete přiřadit aspoň jednu zásadu dodržování předpisů.
 
-  Nastavení zabezpečení můžete konfigurovat na portálu Intune. To to **Devices** > **Compliance policies** > **Compliance policy settings**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**. 
+  Nastavení zabezpečení můžete konfigurovat na portálu Intune. Do **zařízení** > **zásady dodržování předpisů** > **nastavení zásad dodržování předpisů**. Potom nastavte možnost **Označit zařízení, která nemají přiřazené žádné zásady dodržování předpisů, jako** na **Vyhovující předpisům**, nebo **Nevyhovující předpisům**. 
 
   Další informace najdete v článku o [vylepšeních zabezpečení ve službě Intune](https://blogs.technet.microsoft.com/intunesupport/2018/02/09/updated-upcoming-security-enhancements-in-the-intune-service/).
 
@@ -140,38 +140,38 @@ Když tuto dlaždici vyberete, zobrazí se všechna zařízení bez zásad dodr�
 
 ### <a name="per-policy-device-compliance"></a>Dodržování předpisů zařízením podle zásad
 
-The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant. 
+V grafu **dodržování zásad** se zobrazují zásady a kolik zařízení dodržuje předpisy a nedodržují předpisy. 
 
 ![Snímek seznamu zásad s počtem zařízení, které je splňují a nesplňují](./media/compliance-policy-monitor/idc-8.png)
 
 ### <a name="setting-compliance"></a>Dodržování nastavení
 
-The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
+Graf **Nastavení dodržování předpisů** zobrazuje všechna nastavení zásad dodržování předpisů zařízením ze všech zásad dodržování předpisů, platformy nastavení zásad a počet zařízení nesplňujících požadavky.
 
 ![Snímek seznamu všech nastavení v různých zásadách](./media/compliance-policy-monitor/idc-10.png)
 
 > [!NOTE]
-> A policy can be assigned to a device, and a user on that same device. In some scenarios, a device may sync before the user signs in, such as when the device reboots. Compliance may evaluate this user, and show the device as non compliant. This behavior may also show the System Account as a non-compliant user.
+> Do zařízení se dá přiřadit zásada a uživatel na tomto zařízení. V některých scénářích se může zařízení synchronizovat, než se uživatel přihlásí, například když se zařízení restartuje. Dodržování předpisů může tento uživatel vyhodnotit a Ukázat tak, že zařízení nedodržuje předpisy. Toto chování může také zobrazit systémový účet jako nevyhovující uživatel.
 >
-> This is a known issue with multi-user Windows 10 devices. Any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
+> Jedná se o známý problém s více uživateli zařízení s Windows 10. Jakékoli změny nebo aktualizace tohoto chování jsou oznámeny ve [vývoji](../fundamentals/in-development.md) a/nebo [co je nového](../fundamentals/whats-new.md).
 
-## <a name="view-compliance-reports"></a>View compliance reports
+## <a name="view-compliance-reports"></a>Zobrazení sestav dodržování předpisů
 
-In addition to using the charts on *Compliance status*, you can view compliance reports from the *Monitor* page of the Admin Center.
+Kromě použití grafů na *stav dodržování předpisů*můžete sestavy o dodržování předpisů zobrazit na stránce *monitorování* v centru pro správu.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Monitor**, and then from below **Compliance** select the report you want to view. Some of the available compliance reports include:
+2. Vyberte **zařízení** > **monitorování**a pak z nižšího **dodržování předpisů** vyberte sestavu, kterou chcete zobrazit. K dispozici jsou tyto sestavy dodržování předpisů:
 
    - Dodržování předpisů zařízení
-   - Noncompliant devices
+   - Zařízení nedodržující předpisy
    - Zařízení bez zásad dodržování předpisů
    - Dodržování nastavení
-   - Policy compliance
-   - Windows health attestation report
+   - Dodržování zásad
+   - Sestava ověření stavu systému Windows
    - Stav agenta hrozeb
 
-For more information about reports, see [Intune reports](../fundamentals/reports.md)
+Další informace o sestavách najdete v tématu [sestavy Intune](../fundamentals/reports.md) .
 
 ## <a name="view-status-of-device-policies"></a>Zobrazení stavu zásad zařízení
 
@@ -179,14 +179,14 @@ Různé stavy zásad můžete zkontrolovat podle platformy. Máte například z�
 
 Tato funkce je zahrnutá v sestavách stavu zařízení:
 
-1. Select **Devices** > **Compliance policies** > **Policies**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
+1. Vyberte **zařízení** > **zásady dodržování předpisů** > **zásady**. Zobrazí se seznam zásad včetně platformy, pokud je příslušná zásada přiřazená, a další podrobnosti.
 2. Vyberte zásadu > **Přehled**. Přiřazení zásad v tomto zobrazení zahrnuje následující stavy:
 
-    - **Succeeded**: Policy is applied
-    - **Error**: The policy failed to apply. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
-    - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. Správce by měl provést kontrolu.
-    - **Pending**: The device hasn’t checked in with Intune to receive the policy yet. 
-    - **Not applicable**: The device can't receive the policy. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
+    - **Úspěch**: zásada se použije
+    - **Chyba**: zásadu se nepovedlo použít. Tato zpráva se obvykle zobrazí s chybovým kódem, který odkazuje na vysvětlení. 
+    - **Konflikt**: pro stejné zařízení se aplikují dvě nastavení a Intune ho nedokáže rozřadit do konfliktu. Správce by měl provést kontrolu.
+    - **Čeká na vyřízení**: zařízení ještě není zaregistrované v Intune, aby bylo možné tyto zásady přijmout. 
+    - **Nedá se použít**: zařízení nemůže tuto zásadu přijmout. Zásada například aktualizuje nastavení pro iOS 11.1, ale zařízení používá iOS 10. 
 
 3. Pokud chcete zobrazit podrobnosti o zařízeních používajících tyto zásady, vyberte některý stav. Vyberte například **Úspěšné**. V dalším okně se zobrazí podrobnosti o konkrétním zařízení včetně jeho názvu a stavu nasazení.
 

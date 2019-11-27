@@ -26,23 +26,23 @@ ms.locfileid: "74319831"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Použití vlastních nastavení u zařízení s Androidem Enterprise v Microsoft Intune
 
-Using Microsoft Intune, you can add or create custom settings for your Android Enterprise Work Profile devices using a "custom profile". Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
+Pomocí Microsoft Intune můžete přidat nebo vytvořit vlastní nastavení pro zařízení se systémem Android Enterprise Work Profile pomocí vlastního profilu. Vlastní profily jsou funkcí Intune. Jsou navržené tak, aby bylo možné přidat nastavení a funkce zařízení, které nejsou integrované do Intune.
 
 Vlastní profily pro Android Enterprise používají nastavení OMA-URI (Open Mobile Alliance Uniform Resource Identifier) k ovládání funkcí zařízení s Androidem Enterprise. Nastavení většinou používají výrobci mobilních zařízení k ovládání těchto funkcí.
 
-Intune supports the following limited number of Android Enterprise custom profiles:
+Intune podporuje následující omezený počet vlastních profilů pro Android Enterprise:
 
-- ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Create a Wi-Fi profile with a pre-shared key](wi-fi-profile-shared-key.md) has some examples.
-- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Create a per-app VPN profile](android-pulse-secure-per-app-vpn.md) has some examples.
-- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: See the [example](#example) in this article. This setting is also available in the user interface. For more information, see [Android Enterprise device settings to allow or restrict features](device-restrictions-android-for-work.md).
+- ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Vytvoření profilu Wi-Fi s předsdíleným klíčem](wi-fi-profile-shared-key.md) obsahuje několik příkladů.
+- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Vytvoření profilu sítě VPN pro jednotlivé aplikace](android-pulse-secure-per-app-vpn.md) obsahuje několik příkladů.
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: viz [příklad](#example) v tomto článku. Toto nastavení je také k dispozici v uživatelském rozhraní. Další informace najdete v tématu [nastavení zařízení s Androidem Enterprise pro povolení nebo omezení funkcí](device-restrictions-android-for-work.md).
 
-If you need additional settings, see [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
+Pokud potřebujete další nastavení, přečtěte si téma [OEMConfig for Android Enterprise](android-oem-configuration-overview.md).
 
 V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s Androidem Enterprise. Najdete zde také příklad na vytvoření vlastního profilu, který blokuje kopírování a vložení.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 
@@ -77,7 +77,7 @@ V tomto článku si ukážeme, jak vytvořit vlastní profil pro zařízení s A
 
 V tomto příkladu vytvoříte vlastní profil, který na zařízeních s Androidem Enterprise zakazuje kopírovat a vkládat obsah mezi pracovními a osobními aplikacemi.
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Vyberte **Konfigurace zařízení** > **Profily** > **Vytvořit profil**.
 3. Zadejte následující nastavení:
 

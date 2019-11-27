@@ -6,7 +6,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/30/2019
+ms.date: 11/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 27a020f4b45ae878718bed4ee6e230c3d288f260
-ms.sourcegitcommit: 1a7f04c80548e035be82308d2618492f6542d3c0
+ms.openlocfilehash: b7e2bd869f898bbe7f894cfd9e9c767c8b42e9c4
+ms.sourcegitcommit: ce518a5dfe62c546a77f32ef372f36efbaad473f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73755416"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74465629"
 ---
 # <a name="bundle-ids-for-built-in-ios-apps-you-can-use-in-intune"></a>ID sady prostředků pro integrované aplikace pro iOS, které můžete použít v Intune
 
@@ -40,7 +40,7 @@ Když konfigurujete funkce na zařízeních s iOS, můžete taky přidat integro
 | com.apple.compass           | Kompas      | Apple     |
 | com.apple.MobileAddressBook | Kontakty     | Apple     |
 | com.apple.facetime          | FaceTime     | Apple     |
-| com. Apple. DocumentsApp      | spis        | Apple     |
+| com.apple.DocumentsApp      | Soubory        | Apple     |
 | com.apple.mobileme.fmf1     | Najít přátele | Apple     |
 | com.apple.mobileme.fmip1    | Najít iPhone  | Apple     |
 | com.apple.gamecenter        | Herní centrum  | Apple     |
@@ -48,31 +48,32 @@ Když konfigurujete funkce na zařízeních s iOS, můžete taky přidat integro
 | com.apple.Health            | Stav       | Apple     |
 | com. Apple. Home              | Domů         | Apple     |
 | com.apple.iBooks            | iBooks       | Apple     |
-| com. Apple. iMovie            | iMovie       | Apple     |
-| com. Apple. itunesconnect. Mobile | Připojení iTunes | Apple |
+| com.apple.iMovie            | iMovie       | Apple     |
+| com.apple.itunesconnect.mobile | Připojení iTunes | Apple |
 | com.apple.MobileStore       | iTunes Store | Apple     |
 | com.apple.itunesu           | iTunes U     | Apple     |
 | com.apple.Keynote           | Keynote      | Apple     |
 | com.apple.mobilemail        | Mail         | Apple     |
 | com.apple.Maps              | Mapy         | Apple     |
-| com. Apple. Measure           | Měrné      | Apple     |
+| com. Apple. Measure           | Míra      | Apple     |
 | com.apple.MobileSMS         | Zprávy     | Apple     |
 | com.apple.Music             | Hudba        | Apple     |
 | com.apple.news              | News         | Apple     |
 | com.apple.mobilenotes       | Poznámky        | Apple     |
-| com.apple.Numbers           | Numbers      | Apple     |
+| com.apple.Numbers           | Čísla      | Apple     |
 | com.apple.Pages             | Pages        | Apple     |
-| com. Apple. mobilephone       | Hovor        | Apple     |
+| com.apple.mobilephone       | Phone        | Apple     |
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Fotky       | Apple     |
 | com.apple.podcasts          | Podcasty     | Apple     |
 | com.apple.reminders         | Připomínky    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Nastavení     | Apple     |
-| com. Apple. SiriViewService   | Siri         | Apple     |
+| com. Apple. Shortcuts         | Odkazy    | Apple     |
+| com.apple.SiriViewService   | Siri         | Apple     |
 | com.apple.stocks            | Stocks       | Apple     |
 | com.apple.tips              | Tipy         | Apple     |
-| com.apple.tv                | ŘADU           | Apple     |
+| com.apple.tv                | TV           | Apple     |
 | com.apple.videos            | Videa       | Apple     |
 | com.apple.VoiceMemos        | Diktafon   | Apple     |
 | com.apple.Passbook          | Wallet       | Apple     |

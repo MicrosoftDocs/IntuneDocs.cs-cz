@@ -1,7 +1,7 @@
 ---
-title: Create Mobile Threat Defense (MTD) app protection policy with Intune
+title: Vytvoření zásad ochrany aplikací ochrany před mobilními hrozbami (MTD) v Intune
 titleSuffix: Microsoft Intune
-description: Create Mobile Threat Defense (MTD) app protection policy with Microsoft Intune.
+description: Vytvořte zásady ochrany aplikací ochrany před mobilními hrozbami (MTD) pomocí Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -25,48 +25,48 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188497"
 ---
-# <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Create Mobile Threat Defense app protection policy with Intune
+# <a name="create-mobile-threat-defense-app-protection-policy-with-intune"></a>Vytvoření zásad ochrany aplikací ochrany před mobilními hrozbami v Intune
 
-Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk on mobile devices. You can create an Intune app protection policy that assesses risk to determine if the device is allowed to access corporate data or not.
+Intune s ochranou před mobilními hrozbami (MTD) pomáhá detekovat hrozby a hodnotit rizika na mobilních zařízeních. Můžete vytvořit zásady ochrany aplikací Intune, které posuzují riziko, aby bylo možné zjistit, jestli má zařízení povolený přístup k podnikovým datům.
 
 
 > [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies:
+> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací:
 >
-> - Better Mobile (Android)
+> - Lepší mobilní zařízení (Android)
 > - Zimperium (iOS)
 > - Lookout for Work (Android, iOS).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-V rámci nastavení ochrany před mobilními hrozbami (MTD) jste v konzole partnera MTD vytvořili zásadu, která klasifikuje různé hrozby jako vysoké, střední nebo nízké. You now need to set the Mobile Threat Defense level in the Intune app protection policy.
+V rámci nastavení ochrany před mobilními hrozbami (MTD) jste v konzole partnera MTD vytvořili zásadu, která klasifikuje různé hrozby jako vysoké, střední nebo nízké. V zásadách ochrany aplikací Intune je teď potřeba nastavit úroveň ochrany před mobilními hrozbami.
 
-Prerequisites for app protection policy with MTD:
+Předpoklady pro zásady ochrany aplikací pomocí MTD:
 
-- Set up MTD integration with Intune. Without this integration, the MTD app protection policy will have no effect.
+- Nastavte integraci MTD s Intune. Bez této integrace nebudou zásady ochrany aplikací MTD nijak ovlivněny.
 
-## <a name="to-create-an-mtd-app-protection-policy"></a>To create an MTD app protection policy
+## <a name="to-create-an-mtd-app-protection-policy"></a>Vytvoření zásady ochrany aplikací MTD
 
-Use the procedure to [create an Application protection policy for either iOS/iPadOS or Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps), and use the following information on the *Apps*, *Conditional launch*, and *Assignments* pages:
+Pomocí postupu [Vytvořte zásady ochrany aplikací pro iOS/iPadOS nebo Android](../apps/app-protection-policies.md#app-protection-policies-for-iosipados-and-android-apps)a na stránkách *aplikace*, *podmíněné spouštění*a *přiřazení* použijte následující informace:
 
-- **Apps**: Select the app for the Mobile Threat Defense partner you use.
-- **Conditional launch**:  Below *Device conditions*, use the drop-down box to select **Max allowed device threat level**.
+- **Aplikace**: vyberte aplikaci pro partnera ochrany před mobilními hrozbami, který používáte.
+- **Podmíněné spuštění**: pod *podmínkami zařízení*, v rozevíracím seznamu vyberte **maximální povolenou úroveň hrozby zařízení**.
 
-  Options for the threat level **Value**:
+  Možnosti pro **hodnotu**úrovně hrozby:
 
-  - **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. The device can't have any threats present and still access company resources. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
+  - **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže mít k dispozici žádné hrozby a bude mít přístup k prostředkům společnosti. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
   - **Nízká:** Zařízení se vyhodnotí jako vyhovující i v případě, že se v něm nachází jenom hrozby nízké úrovně. Jakákoliv vyšší úroveň zařízení zařadí do stavu nedodržující předpisy.
   - **Střední:** Zařízení vyhovuje, pokud se v něm přítomné hrozby pohybují na střední nebo nízké úrovni. Pokud se v zařízení zjistí hrozby vysoké úrovně, vyhodnotí se jako nevyhovující.
-  - **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. This allows all threat levels and uses Mobile Threat Defense for reporting purposes only. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
+  - **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. To umožňuje všechny úrovně hrozeb a používá ochranu před mobilními hrozbami jenom pro účely vytváření sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
-  Options for **Action**:
+  Možnosti pro **akci**:
 
-  - **Block access**
-  - **Wipe data**
+  - **Blokovat přístup**
+  - **Vymazat data**
 
-- **Assignments**: Assign the policy to groups of users.  The devices used by the group’s members are evaluated for access to corporate data on targeted apps via Intune app protection.
+- **Přiřazení**: přiřaďte zásady skupinám uživatelů.  Zařízení, která používají členové skupiny, se vyhodnocují pro přístup k podnikovým datům na cílových aplikacích prostřednictvím ochrany aplikací Intune.
 
 
 ## <a name="next-steps"></a>Další kroky  
 
-- Learn more about [Mobile Threat Defense](~/protect/mobile-threat-defense.md) in Microsoft Intune.
+- Přečtěte si další informace o [ochrany před mobilními hrozbami](~/protect/mobile-threat-defense.md) v Microsoft Intune.

@@ -1,6 +1,6 @@
 ---
-title: Use SCEP certificate profiles with Microsoft Intune - Azure | Microsoft Docs
-description: Create and assign Simple Certificate Enrollment Protocol (SCEP) certificate profiles with Microsoft Intune.
+title: Použití profilů certifikátů SCEP s Microsoft Intune – Azure | Microsoft Docs
+description: Vytvořte a přiřaďte profily certifikátů Simple Certificate Enrollment Protocol (SCEP) pomocí Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -23,58 +23,58 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390292"
 ---
-# <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Create and assign SCEP certificate profiles in Intune
+# <a name="create-and-assign-scep-certificate-profiles-in-intune"></a>Vytvoření a přiřazení profilů certifikátů SCEP v Intune
 
-After you [configure your infrastructure](certificates-scep-configure.md) to support Simple Certificate Enrollment Protocol (SCEP) certificates, you can create and then assign SCEP certificate profiles to users and devices in Intune.
+Až [nakonfigurujete infrastrukturu](certificates-scep-configure.md) pro podporu certifikátů Simple Certificate ENROLLMENT Protocol (SCEP), můžete vytvořit a přiřadit profily certifikátů SCEP pro uživatele a zařízení v Intune.
 
 > [!IMPORTANT]  
-> Before you create SCEP certificate profiles, devices that will use a SCEP certificate profile must trust your Trusted Root Certification Authority (CA). Use a *trusted certificate profile* in Intune to provision the Trusted Root CA certificate to users and devices For information about the trusted certificate profile, see [Export the trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*.
+> Před vytvořením profilů certifikátů SCEP musí zařízení, která budou používat profil certifikátu SCEP, důvěřovat vaší důvěryhodné kořenové certifikační autoritě (CA). Použití *profilu důvěryhodného certifikátu* v Intune k zřízení certifikátu důvěryhodné kořenové certifikační autority pro uživatele a zařízení informace o profilu důvěryhodného certifikátu najdete v [tématech Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*.
 
 
 ## <a name="create-a-scep-certificate-profile"></a>Vytvoření profilu certifikátu SCEP
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profile** > **Create profile**.
+2. Vyberte **zařízení** > **konfigurační profil** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
 
 4. Zadejte **název** a **popis** profilu certifikátu SCEP.
 
-5. From the **Platform** drop-down list, select a [supported device platform](certificates-configure.md#supported-platforms-and-certificate-profiles) for this SCEP certificate.
+5. V rozevíracím seznamu **platforma** vyberte [podporovanou platformu zařízení](certificates-configure.md#supported-platforms-and-certificate-profiles) pro tento certifikát SCEP.
 
-6. From the **Profile type** drop-down list, select **SCEP certificate**.  
+6. V rozevíracím seznamu **typ profilu** vyberte **certifikát SCEP**.  
 
-   For the **Android Enterprise** platform, *Profile type* is divided into two categories, *Device Owner Only* and *Work Profile Only*. Be sure to select the correct SCEP certificate profile for the devices you manage.  
+   Pro platformu **Android Enterprise** se *typ profilu* dělí na dvě kategorie, *jenom vlastníkem zařízení* a *pracovní profil*. Nezapomeňte vybrat správný profil certifikátu SCEP pro zařízení, která spravujete.  
 
-   SCEP certificate profiles for the *Device Owner Only* profile have the following limitations:
+   Profily certifikátů SCEP pro profil *jenom vlastníkem zařízení* mají následující omezení:
 
-   1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
+   1. V části monitorování není oznamování certifikátů k dispozici pro profily certifikátů SCEP vlastníka zařízení.
 
-   2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority. 
+   2. Intune nemůžete použít k odvolání certifikátů, které se zřídily profily certifikátů SCEP pro vlastníky zařízení. Můžete spravovat odvolání prostřednictvím externího procesu nebo přímo s certifikační autoritou. 
 
-   4. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration and authentication only.  SCEP certificate profiles on Android Enterprise dedicated devices are not supported for VPN or app authentication.   
+   4. U vyhrazených zařízení s Androidem Enterprise se profily certifikátů SCEP podporují jenom v konfiguraci sítě Wi-Fi a jenom ověřování.  Profily certifikátů SCEP na vyhrazených zařízeních s Androidem Enterprise se nepodporují pro ověřování pomocí sítě VPN nebo aplikací.   
 
    
-7. Select **Settings**, and then complete the following configurations:
+7. Vyberte **Nastavení**a pak dokončete následující konfigurace:
 
-   - **Certificate type**:
+   - **Typ certifikátu**:
 
-     *(Applies to:  Android, Android Enterprise, iOS, macOS, Windows 8.1 and later, and Windows 10 and later.)*
+     *(Platí pro: Android, Android Enterprise, iOS, macOS, Windows 8.1 a novější a Windows 10 a novější)*
 
-     Select a type depending on how you'll use the certificate profile:
+     V závislosti na způsobu použití profilu certifikátu vyberte typ:
 
-     - **User**: *User* certificates can contain both user and device attributes in the subject and SAN of the certificate.  
-     - **Device**:  *Device* certificates can only contain device attributes in the subject and SAN of the certificate.
+     - **Uživatel**: certifikáty *uživatelů* můžou v předmětu a síti SAN certifikátu obsahovat atributy uživatele i zařízení.  
+     - **Zařízení**: certifikáty *zařízení* můžou v předmětu a síti SAN certifikátu obsahovat jenom atributy zařízení.
 
-       Use **Device** for scenarios such as user-less devices, like kiosks, or for Windows devices. On Windows devices, the certificate is placed in the Local Computer certificate store.
+       Použijte **zařízení** pro scénáře, jako jsou například zařízení bez uživatele, jako jsou veřejné terminály nebo pro zařízení s Windows. Na zařízeních s Windows se certifikát nachází v úložišti certifikátů místního počítače.
 
-   - **Subject name format**:
+   - **Formát názvu subjektu**:
 
-     Select how Intune automatically creates the subject name in the certificate request. Options for the subject name format depend on the Certificate type you select, either **User** or **Device**.
+     Vyberte, jak má Intune automaticky vytvořit název subjektu v žádosti o certifikát. Možnosti pro formát názvu subjektu závisí na zvoleném typu certifikátu – buď **uživatel** , nebo **zařízení**.
 
      > [!NOTE]
-     > There is a [known issue](#avoid-certificate-signing-requests-with-escaped-special-characters) for using SCEP to get certificates when the subject name in the resulting Certificate Signing Request (CSR) includes one of the following characters as an escaped character (proceeded by a backslash \\):
+     > Existuje [známý problém](#avoid-certificate-signing-requests-with-escaped-special-characters) pro použití SCEP k získání certifikátů, když název subjektu v výsledné žádosti o podepsání certifikátu (CSR) obsahuje jeden z následujících znaků jako řídicí znak (s zpětným lomítkem \\):
      > - \+
      > - ;
      > - ,
@@ -82,7 +82,7 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
 
      - **Typ uživatelského certifikátu**
 
-       Format options for the *Subject name format* include:
+       Mezi možnosti formátu pro *Formát názvu subjektu* patří:
 
        - **Není nakonfigurováno**
        - **Běžný název**
@@ -92,164 +92,164 @@ After you [configure your infrastructure](certificates-scep-configure.md) to sup
        - **Sériové číslo**
        - **Vlastní**: Když vyberete tuto možnost, zobrazí se také textové pole **Vlastní**. V tomto poli můžete zadat vlastní formát názvu subjektu, včetně proměnných. Vlastní formát podporuje dvě proměnné: **Běžný název (CN)** a **E-mail (E)** . **Běžný název (CN)** můžete nastavit na některou z těchto proměnných:
 
-         - **CN={{UserName}}** : The user principal name of the user, such as janedoe@contoso.com.
+         - **CN = {{username}}** : hlavní název uživatele (UPN), například janedoe@contoso.com.
          - **CN={{AAD_Device_ID}}** : ID přiřazené při registraci zařízení ve službě AD (Azure Active Directory). Toto ID se obvykle používá k ověření ve službě Azure AD.
-         - **CN={{SERIALNUMBER}}** : The unique serial number (SN) typically used by the manufacturer to identify a device.
-         - **CN={{IMEINumber}}** : The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
-         - **CN={{OnPrem_Distinguished_Name}}** : A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
+         - **CN = {{sériové}}** : jedinečné sériové číslo (SN) obvykle používané výrobcem k identifikaci zařízení.
+         - **CN = {{IMEINumber}}** : jedinečné číslo IMEI (International Mobile Equipment Identity), které se používá k identifikaci mobilního telefonu.
+         - **CN = {{OnPrem_Distinguished_Name}}** : sekvence relativních rozlišujících názvů oddělená čárkou, například *CN = Jana Karásek, OU = UserAccounts, DC = Corp, DC = contoso, DC = com*.
 
-           To use the *{{OnPrem_Distinguished_Name}}* variable, be sure to sync the *onpremisesdistinguishedname* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+           Pokud chcete použít proměnnou *{{OnPrem_Distinguished_Name}}* , proveďte synchronizaci atributu uživatele *onpremisesdistinguishedname* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do služby Azure AD.
 
-         - **CN={{onPremisesSamAccountName}}** : Admins can sync the samAccountName attribute from Active Directory to Azure AD using Azure AD connect into an attribute called *onPremisesSamAccountName*. Intune can substitute that variable as part of a certificate issuance request in the subject of a certificate. The samAccountName attribute is the user sign-in name used to support clients and servers from a previous version of Windows (pre-Windows 2000). The user sign in name format is: *DomainName\testUser*, or only *testUser*.
+         - **CN = {{onPremisesSamAccountName}}** : Správci můžou synchronizovat atribut sAMAccountName ze služby Active Directory do Azure AD pomocí služby Azure AD Connect do atributu s názvem *onPremisesSamAccountName*. Intune může tuto proměnnou nahradit jako součást žádosti o vystavení certifikátu v předmětu certifikátu. Atribut samAccountName je přihlašovací jméno uživatele používané k podpoře klientů a serverů z předchozí verze Windows (Pre-Windows 2000). Formát přihlašovacího jména uživatele je: *DomainName\testUser*nebo pouze *testUser*.
 
-            To use the *{{onPremisesSamAccountName}}* variable, be sure to sync the *onPremisesSamAccountName* user attribute using [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) to your Azure AD.
+            Pokud chcete použít proměnnou *{{onPremisesSamAccountName}}* , nezapomeňte synchronizovat atribut uživatele *onPremisesSamAccountName* pomocí [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect) do Azure AD.
 
          Kombinací jedné nebo několika těchto proměnných a statických řetězců můžete vytvořit vlastní formát názvu subjektu, jako třeba:  
          - **CN={{UserName}},E={{EmailAddress}},OU=Mobile,O=Finance Group,L=Redmond,ST=Washington,C=US**
 
-         That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
+         Tento příklad zahrnuje formát názvu subjektu, který používá proměnné CN a E a řetězce pro hodnoty organizační jednotky, organizace, umístění, stav a země. Článek [Funkce CertStrToName](https://msdn.microsoft.com/library/windows/desktop/aa377160.aspx) popisuje tuto funkci a její podporované řetězce.
 
       - **Typ certifikátu zařízení**
 
-        Format options for the Subject name format include the following variables:
+        Možnosti formátu pro formát názvu subjektu zahrnují následující proměnné:
 
-        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
+        - **{{AAD_Device_ID}}** nebo **{{AzureADDeviceId}}** – k identifikaci zařízení podle jeho ID Azure AD se dá použít jedna z těchto proměnných.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
-        - **{{SerialNumber}}**
+        - **{{Sériové}}**
         - **{{IMEINumber}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
-        - **{{DeviceName}}**
-        - **{{FullyQualifiedDomainName}}** *(Only applicable for Windows and domain-joined devices)*
+        - **{{Název_zařízení}}**
+        - **{{FullyQualifiedDomainName}}** *(platí jenom pro zařízení se systémem Windows a zařízení připojená k doméně)*
         - **{{MEID}}**
 
-        You can specify these variables, followed by the text for the variable, in the textbox. For example, the common name for a device named *Device1* can be added as **CN={{DeviceName}}Device1**.
+        Tyto proměnné můžete zadat následovaný textem pro proměnnou v textovém poli. Například běžný název pro zařízení s názvem *zařízení1* se dá přidat jako **CN = {{název_zařízení}} zařízení1**.
 
         > [!IMPORTANT]
-        > - When you specify a variable, enclose the variable name in curly brackets { } as seen in the example, to avoid an error.  
-        > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the subject name of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.
+        > - Když zadáte proměnnou, uveďte její název do složených závorek {}, jak je vidět v příkladu, aby nedošlo k chybě.  
+        > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
+        > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v názvu subjektu profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, profil se nepodaří nainstalovat.
 
-   - **Subject alternative name**: Select how Intune automatically creates the subject alternative name (SAN) in the certificate request. Options for the SAN depend on the Certificate type you selected; either **User** or **Device**.
+   - **Alternativní název subjektu**: Vyberte způsob, jakým Intune automaticky vytvoří alternativní název subjektu (San) v žádosti o certifikát. Možnosti pro síť SAN závisí na typu certifikátu, který jste vybrali. buď na **uživatele** , nebo na **zařízení**.
 
       - **Typ uživatelského certifikátu**
 
-        Select from the available attributes:
+        Vyberte z dostupných atributů:
 
         - **E-mailová adresa**
-        - **User principal name (UPN)**
+        - **Hlavní název uživatele (UPN)**
 
-        For example, user certificate types can include the user principal name (UPN) in the subject alternative name. Pokud slouží klientský certifikát k ověřování na serveru NPS (Network Policy Server), nastavte pro alternativní název subjektu hodnotu UPN.
+        Typy uživatelských certifikátů můžou například zahrnovat hlavní název uživatele (UPN) v alternativním názvu subjektu. Pokud slouží klientský certifikát k ověřování na serveru NPS (Network Policy Server), nastavte pro alternativní název subjektu hodnotu UPN.
 
       - **Typ certifikátu zařízení**
 
-        Use the **Attribute** dropdown and select an attribute, assign a **Value**, and **Add** that to the certificate profile. You can add multiple values by selecting additional attributes.
+        Použijte rozevírací seznam **atributu** a vyberte atribut, přiřaďte **hodnotu**a **přidejte** ji do profilu certifikátu. Výběrem dalších atributů můžete přidat více hodnot.
 
-        Available attributes include:
+        K dispozici jsou tyto atributy:
 
         - **E-mailová adresa**
-        - **User principal name (UPN)**
+        - **Hlavní název uživatele (UPN)**
         - **DNS**
 
         S typem certifikátu *Zařízení* můžete použít následující proměnné certifikátu zařízení pro hodnotu:
 
-        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
+        - **{{AAD_Device_ID}}** nebo **{{AzureADDeviceId}}** – k identifikaci zařízení podle jeho ID Azure AD se dá použít jedna z těchto proměnných.
         - **{{Device_Serial}}**
         - **{{Device_IMEI}}**
-        - **{{SerialNumber}}**
+        - **{{Sériové}}**
         - **{{IMEINumber}}**
         - **{{WiFiMacAddress}}**
         - **{{IMEI}}**
-        - **{{DeviceName}}**
+        - **{{Název_zařízení}}**
         - **{{FullyQualifiedDomainName}}**
         - **{{MEID}}**
 
-        To specify a value for an attribute, include the variable name with curly brackets, followed by the text for that variable. For example, a value for the DNS attribute can be added **{{AzureADDeviceId}}.domain.com** where *.domain.com* is the text. For a user named *User1* an Email address might appear as {{FullyQualifiedDomainName}}User1@Contoso.com.
+        Chcete-li zadat hodnotu pro atribut, zahrňte název proměnné se složenými závorkami následovaným textem pro tuto proměnnou. Například hodnota atributu DNS může být přidána **{{AzureADDeviceId}}. domain. com** , kde *. domain.com* je text. Pro uživatele s názvem *user1* se může e-mailová adresa zobrazit jako {{FullyQualifiedDomainName}}User1@Contoso.com.
 
         > [!IMPORTANT]
-        > - When using a device certificate variable, enclose the variable name in curly brackets { }.
-        > - Don’t use curly brackets **{ }** , pipe symbols **|** , and semicolons **;** , in the text that follows the variable.
-        > - Device properties used in the *subject* or *SAN* of a device certificate, like **IMEI**, **SerialNumber**, and **FullyQualifiedDomainName**, are properties that could be spoofed by a person with access to the device.
-        > - A device must support all variables specified in a certificate profile for that profile to install on that device.  For example, if **{{IMEI}}** is used in the SAN of a SCEP profile and is assigned to a device that doesn’t have an IMEI number, the profile fails to install.
+        > - Při použití proměnné certifikátu zařízení uveďte název proměnné v složených závorkách {}.
+        > - Nepoužívejte složené závorky **{}** , symboly kanálu **|** a středníky **;** v textu, který následuje za proměnnou.
+        > - Vlastnosti zařízení používané v *předmětu* nebo *síti SAN* certifikátu zařízení, jako jsou **IMEI**, **sériové**a **FullyQualifiedDomainName**, jsou vlastnosti, které by mohly být falešné osobou, která by mohla mít přístup k zařízení.
+        > - Zařízení musí podporovat všechny proměnné určené v profilu certifikátu pro daný profil k instalaci na toto zařízení.  Pokud se například používá **{{IMEI}}** v síti SAN profilu SCEP a je přiřazeno k zařízení, které nemá číslo IMEI, nepodaří se mu nainstalovat profil.
 
-   - **Certificate validity period**:
+   - **Období platnosti certifikátu**:
 
-     Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. If you configured the certificate template to [support a custom value that can be set from within the Intune console](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), use this setting to specify the amount of remaining time before the certificate expires.
+     Zadat můžete hodnotu nižší, než je období platnosti zadané v šabloně certifikátu, ne však vyšší. Pokud jste nakonfigurovali šablonu certifikátu tak [, aby podporovala vlastní hodnotu, kterou je možné nastavit v konzole Intune](certificates-scep-configure.md#modify-the-validity-period-of-the-certificate-template), pomocí tohoto nastavení určete dobu, po kterou bude certifikát vypršet.
 
      Pokud je třeba období platnosti certifikátu v šabloně certifikátu dva roky, můžete zadat hodnotu jeden rok, ale ne pět let. Hodnota musí být zároveň nižší než zbývající doba platnosti certifikátu vydávající CA.
 
-   - **Key storage provider (KSP)** :
+   - **Zprostředkovatel úložiště klíčů (KSP)** :
 
-     *(Applies to:  Windows 8.1 and later, and Windows 10 and later)*
+     *(Platí pro: Windows 8.1 a novější a Windows 10 a novější)*
 
-     Specify where the key to the certificate is stored. Choose from the following values:
+     Určete, kam se má uložit klíč k certifikátu. Vyberte jednu z následujících hodnot:
 
      - **Zapsat do KSP na čipu TPM (Trusted Platform Module), pokud existuje, jinak zapsat do softwarového KSP**
      - **Zapsat do KSP na čipu TPM (Trusted Platform Module), jinak chyba**
      - **Zapsat do služby Passport, jinak chyba (Windows 10 a novější)**
      - **Zapsat do softwarového KSP**
 
-   - **Key usage**:
+   - **Použití klíče**:
 
-     Select key usage options for the certificate:
+     Vyberte možnosti použití klíče pro certifikát:
 
-     - **Digital signature**: Allow key exchange only when a digital signature helps protect the key.
-     - **Key encipherment**: Allow key exchange only when the key is encrypted.
+     - **Digitální podpis**: umožňuje výměnu klíče jenom v případě, že digitální podpis pomáhá chránit klíč.
+     - **Šifrování klíče**: umožňuje výměnu klíče jenom v případě, že je klíč zašifrovaný.
 
-   - **Key size (bits)** :
+   - **Velikost klíče (bity)** :
 
-     Select the number of bits contained in the key.
+     Vyberte počet bitů obsažených v klíči.
 
-   - **Hash algorithm**:
+   - **Algoritmus hash**:
 
-     *(Applies to Android, Android enterprise, Windows Phone 8.1, Windows 8.1 and later, and Windows 10 and later)*
+     *(Platí pro Android, Android Enterprise, Windows Phone 8,1, Windows 8.1 a novější a Windows 10 a novější)*
 
      Vyberte jeden z dostupných typů hashovacího algoritmu, který chcete s tímto certifikátem použít. Vyberte nejsilnější úroveň zabezpečení, kterou připojované zařízení podporuje.
 
-   - **Root Certificate**:
+   - **Kořenový certifikát**:
 
-     Select the *trusted certificate profile* you previously configured and assigned to applicable users and devices for this SCEP certificate profile. The trusted certificate profile is used to provision users and devices with the Trusted Root CA certificate. For information about the trusted certificate profile, see [Export your trusted root CA certificate](certificates-configure.md#export-the-trusted-root-ca-certificate) and [Create trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) in *Use certificates for authentication in Intune*. If you have a root Certification Authority and an issuing Certification Authority, select the Trusted Root certificate profile that is associated with the issuing Certification Authority.
+     Vyberte *profil důvěryhodného certifikátu* , který jste předtím nakonfigurovali a přiřadili k příslušným uživatelům a zařízením pro tento profil certifikátu SCEP. Profil důvěryhodného certifikátu se používá ke zřízení uživatelů a zařízení s certifikátem důvěryhodné kořenové certifikační autority. Informace o profilu důvěryhodného certifikátu najdete v tématech [Export certifikátu důvěryhodné kořenové certifikační autority](certificates-configure.md#export-the-trusted-root-ca-certificate) a [Vytvoření profilů důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) v tématu *použití certifikátů pro ověřování v Intune*. Pokud máte kořenovou certifikační autoritu a vydávající certifikační autoritu, vyberte profil důvěryhodných kořenových certifikátů, který je přidružený k vystavující certifikační autoritě.
 
-   - **Extended key usage**:
+   - **Rozšířené použití klíče**:
 
-     Add values for the certificate's intended purpose. In most cases, the certificate requires *client authentication* so that the user or device can authenticate to a server. You can add additional key usages as required.
+     Přidejte hodnoty pro zamýšlený účel certifikátu. Ve většině případů certifikát vyžaduje *ověření klienta* , aby se mohl uživatel nebo zařízení ověřit na serveru. Podle potřeby můžete přidat další použití klíče.
 
-   - **Renewal threshold (%)** :
+   - **Prahová hodnota obnovení (%)** :
 
-     Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired. Renewal attempts continue until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
+     Zadejte procento doby životnosti certifikátu zbývající v době, kdy zařízení požádá o obnovení certifikátu. Pokud například zadáte 20, bude proveden pokus o obnovení certifikátu, pokud vypršela platnost certifikátu 80%. Pokusy o obnovení budou pokračovat, dokud nebude obnovení úspěšné. Obnovení vygeneruje nový certifikát, který má za následek novou dvojici veřejného a privátního klíče.
 
-   - **SCEP Server URLs**:
+   - **Adresy URL serveru SCEP**:
 
-     Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . You can add additional SCEP URLs for load balancing as needed as URLs are randomly pushed to the device with the profile. If one of the SCEP servers isn't available, the SCEP request will fail and it's possible that on later device check-ins, the cert request could be made against the same server that is down.
+     Zadejte jednu nebo více adres URL pro servery NDES, které vystavují certifikáty prostřednictvím SCEP. Zadejte například něco jako *https://ndes.contoso.com/certsrv/mscep/mscep.dll* . V případě potřeby můžete přidat další adresy URL SCEP pro vyrovnávání zatížení, protože adresy URL se v profilu náhodně přidávají do zařízení. Pokud jeden ze serverů SCEP není dostupný, požadavek SCEP selže a je možné, že u pozdějších vrácení se změnami zařízení může být žádost o certifikát vytvořená na stejném serveru, který je mimo provoz.
 
-8. Select **OK**, and then select **Create**. The profile is created and appears on the *Device configuration - Profiles* list.
+8. Vyberte **OK**a pak vyberte **vytvořit**. Profil se vytvoří a zobrazí se v seznamu *Konfigurace zařízení – profily* .
 
-### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Avoid certificate signing requests with escaped special characters
+### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>Vyhnout se žádostem o podepsání certifikátu pomocí řídicích speciálních znaků
 
-There's a known issue for SCEP and PKCS certificate requests that include a Subject Name (CN) with one or more of the following special characters as an escaped character. Subject names that include one of the special characters as an escaped character result in a CSR with an incorrect subject name. An incorrect subject name results in the Intune SCEP challenge validation failing and no certificate issued.
+K dispozici je známý problém pro žádosti certifikátu SCEP a PKCS, které obsahují název subjektu (CN) s jedním nebo více následujícími speciálními znaky jako řídicí znak. Názvy subjektů, které obsahují jeden ze speciálních znaků jako řídicí znak, mají za následek zástupce s nesprávným názvem subjektu. Nesprávný název předmětu má za následek selhání ověřování výzvou SCEP služby Intune a nevystavuje se certifikát.
 
-The special characters are:
+Speciální znaky jsou:
 - \+
 - ,
 - ;
 - =
 
-When your subject name includes one of the special characters, use one of the following options to work around this limitation:
+Pokud název předmětu obsahuje jeden ze speciálních znaků, použijte k vyřešení tohoto omezení jednu z následujících možností:
 
-- Encapsulate the CN value that contains the special character with quotes.  
-- Remove the special character from the CN value.
+- Zapouzdří hodnotu CN, která obsahuje speciální znak, s uvozovkami.  
+- Odeberte speciální znak z hodnoty CN.
 
-**For example**, you have a Subject Name that appears as *Test user (TestCompany, LLC)* .  A CSR that includes a CN that has the comma between *TestCompany* and *LLC* presents a problem.  The problem can be avoided by placing quotes around the entire CN, or by removing of the comma from between *TestCompany* and *LLC*:
+Máte **například**název subjektu, který se zobrazí jako *testovací uživatel (TestCompany, LLC)* .  ZÁSTUPCE, který obsahuje CN s čárkou mezi *TestCompany* a *LLC* , představuje problém.  Problém se může vyhnout vložením nabídek kolem celé propojené sítě nebo odebráním čárky z *TestCompany* a *LLC*:
 
-- **Add quotes**: *CN=* ”Test User (TestCompany, LLC)”,OU=UserAccounts,DC=corp,DC=contoso,DC=com*
-- **Remove the comma**: *CN=Test User (TestCompany LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Přidat uvozovky**: *CN =* "testovací uživatel (TestCompany, LLC)", OU = UserAccounts, DC = Corp, DC = contoso, DC = com *
+- **Odebrat čárku**: *CN = testovací uživatel (TestCompany LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
- However, attempts to escape the comma by using a backslash character will fail with an error in the CRP logs:
+ Pokusy o odložení čárky pomocí zpětného lomítka se však nezdaří s chybou v protokolech CRP:
  
-- **Escaped comma**: *CN=Test User (TestCompany\\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com*
+- **Řídicí znak čárky**: *CN = test User (TESTCOMPANY\\, LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
 
-The error is similar to the following error:
+Tato chyba se podobá následující chybě:
 
 ```
 Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
@@ -265,22 +265,22 @@ Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation
 
 ## <a name="assign-the-certificate-profile"></a>Přiřazení profilu certifikátu
 
-Assign SCEP certificate profiles the same way you [deploy device profiles](../configuration/device-profile-assign.md) for other purposes. However, consider the following before you continue:
+Přiřaďte profily certifikátů SCEP stejným způsobem jako [profily zařízení](../configuration/device-profile-assign.md) pro jiné účely. Před pokračováním však zvažte následující:
 
-- When you assign SCEP certificate profiles to groups, the Trusted Root CA certificate file (as specified in the *trusted certificate profile*) is installed on the device. The device uses the SCEP certificate profile to create a certificate request for that Trusted Root CA certificate.
+- Když přiřazujete profily certifikátů SCEP ke skupinám, nainstaluje se na zařízení soubor certifikátu důvěryhodné kořenové certifikační autority (jak je zadaný v *profilu důvěryhodného certifikátu*). Zařízení používá profil certifikátu SCEP k vytvoření žádosti o certifikát pro daný certifikát důvěryhodné kořenové certifikační autority.
 
-- The SCEP certificate profile installs only on devices that run the platform you specified when you created the certificate profile.
+- Profil certifikátu SCEP se nainstaluje jenom na zařízení, na kterých je spuštěná platforma, kterou jste zadali při vytváření profilu certifikátu.
 
 - Profily certifikátů můžete přiřadit ke kolekcím uživatelů nebo ke kolekcím zařízení.
 
 - Pokud chcete do zařízení po jeho registraci certifikát rychle publikovat, přiřaďte profil certifikátu ke skupině uživatelů (ne zařízení). Pokud ho přiřadíte ke skupině zařízení, budete je muset před obdržením zásad plně zaregistrovat.
 
-- If you use co-management for Intune and Configuration Manager, in Configuration Manager [set the workload slider](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) for Resource Access Policy to **Intune** or **Pilot Intune**. This setting allows Windows 10 clients to start the process of requesting the certificate.
+- Pokud používáte spolusprávu pro Intune a Configuration Manager, v Configuration Manager [nastavte posuvník úlohy](https://docs.microsoft.com/sccm/comanage/how-to-switch-workloads) pro zásady přístupu k prostředkům na **Intune** nebo **pilotní Intune**. Toto nastavení umožňuje klientům Windows 10 zahájit proces vyžádání certifikátu.
 
-- Although you create and assign the trusted certificate profile and the SCEP certificate profile separately, both must be assigned. Without both installed on a device, the SCEP certificate policy fails. Ensure that any trusted root certificate profiles are also deployed to the same groups as the SCEP profile.
+- I když vytvoříte a přiřadíte profil důvěryhodného certifikátu a profil certifikátu SCEP samostatně, musí být přiřazeni obě. Bez nainstalovaného na zařízení se zásada certifikátu SCEP nezdařila. Zajistěte, aby všechny profily důvěryhodných kořenových certifikátů byly nasazeny taky do stejných skupin jako profil SCEP.
 
 > [!NOTE]
-> On iOS devices, when a SCEP certificate profile is associated with an additional profile, like a Wi-Fi or VPN profile, the device receives a certificate for each of those additional profiles. This results in the iOS device having multiple certificates delivered by the SCEP certificate request.  If a single certificate is desired, you must use PKCS certificates instead of SCEP certificates.  This is due to differences in how SCEP and PKCS certificates are delivered to devices.
+> Když je v zařízeních se systémem iOS přidružený profil certifikátu SCEP k dalšímu profilu, jako je například profil sítě Wi-Fi nebo VPN, zařízení obdrží certifikát pro každý z těchto dalších profilů. Výsledkem je, že zařízení s iOS má víc certifikátů dodaných žádostí o certifikát SCEP.  Pokud se požaduje jeden certifikát, musíte místo certifikátů SCEP použít certifikáty PKCS.  Je to kvůli rozdílům ve způsobu doručování certifikátů SCEP a PKCS do zařízení.
 
 ## <a name="next-steps"></a>Další kroky
 

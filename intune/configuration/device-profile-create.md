@@ -1,6 +1,6 @@
 ---
 title: Vytvoření profilů zařízení v Microsoft Intune – Azure | Microsoft Docs
-description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, add a scope tag.
+description: Přidání nebo konfigurace profilu konfigurace zařízení v Microsoft Intune. Vyberte typ platformy, nakonfigurujte nastavení, přidejte značku oboru.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -26,33 +26,33 @@ ms.locfileid: "74390868"
 ---
 # <a name="create-a-device-profile-in-microsoft-intune"></a>Vytvořte profil zařízení v Microsoft Intune
 
-Devices profiles allow you to add and configure settings, and then push these settings to devices in your organization. [Apply features and settings on your devices using device profiles](device-profiles.md) goes into more detail, including what you can do.
+Profily zařízení umožňují přidat a nakonfigurovat nastavení a potom tato nastavení nasdílet do zařízení ve vaší organizaci. Použití [funkcí a nastavení na vašich zařízeních pomocí profilů zařízení](device-profiles.md) obsahuje více podrobností, včetně toho, co můžete dělat.
 
 V tomto článku najdete:
 
-- Lists the steps to create a profile.
-- Shows you how to add a scope tag to "filter" the profile.
-- Describes applicability rules on Windows 10 devices, and shows you how to create a rule.
-- Lists the check-in refresh cycle times when devices receive profiles and any profile updates.
+- Seznam kroků pro vytvoření profilu.
+- Ukazuje, jak přidat značku oboru do "Filter" Profile.
+- Popisuje pravidla použitelnosti na zařízeních s Windows 10 a ukazuje, jak vytvořit pravidlo.
+- Vypíše časy obnovení při vracení se změnami, když zařízení obdrží profily a všechny aktualizace profilu.
 
 ## <a name="create-the-profile"></a>Vytvoření profilu
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles**. You have the following options:
+2. Vyberte **zařízení** > **konfigurační profily**. Máte následující možnosti:
 
-    - **Overview**: Lists the status of your profiles, and provides additional details on the profiles you assigned to users and devices.
-    - **Manage**: Create device profiles, upload custom [PowerShell scripts](../apps/intune-management-extension.md) to run within the profile, and add data plans to devices using [eSIM](esim-device-configuration.md).
-    - **Monitor**: Check the status of a profile for success or failure, and also view logs on your profiles.
-    - **Setup**: Add a SCEP or PFX certificate authority, or enable [Telecom Expense Management](telecom-expenses-monitor.md) in the profile.
+    - **Přehled**: zobrazuje stav profilů a poskytuje další podrobnosti o profilech, které jste přiřadili uživatelům a zařízením.
+    - **Správa**: vytváření profilů zařízení, nahrávání vlastních [skriptů PowerShellu](../apps/intune-management-extension.md) , které se mají spustit v rámci profilu, a Přidání datových plánů do zařízení pomocí [eSIM karty](esim-device-configuration.md).
+    - **Monitorování**: Zkontrolujte stav profilu pro úspěch nebo neúspěch a také si prohlédněte protokoly v profilech.
+    - **Nastavení**: přidejte certifikační autoritu SCEP nebo PFX nebo povolte [správu telekomunikačních výdajů](telecom-expenses-monitor.md) v profilu.
 
-3. Select **Create profile**. Zadejte následující vlastnosti:
+3. Vyberte **vytvořit profil**. Zadejte následující vlastnosti:
 
-   - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **WP email profile for entire company**.
+   - **Název**: zadejte popisný název profilu. Své profily pojmenujte, abyste je později mohli snadno identifikovat. Dobrým názvem profilu je například **e-mailový profil WP pro celou firmu**.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platform**: Choose the platform of your devices. Možnosti:  
+   - **Platforma**: vyberte platformu zařízení. Možnosti:  
 
-       - **Androidemem**
+       - **Android**
        - **Android Enterprise**
        - **iOS/iPadOS**
        - **macOS**
@@ -60,131 +60,131 @@ V tomto článku najdete:
        - **Windows 8.1 a novější**
        - **Windows 10 a novější**
 
-   - **Profile type**: Select the type of settings you want to create. The list shown depends on the **platform** you choose.
-   - **Settings**: The following articles describe the settings for each profile type:
+   - **Typ profilu**: Vyberte typ nastavení, které chcete vytvořit. Zobrazený seznam závisí na zvolené **platformě** .
+   - **Nastavení**: následující články popisují nastavení pro jednotlivé typy profilů:
 
-       - [Administrative templates](administrative-templates-windows.md)
+       - [Šablony pro správu](administrative-templates-windows.md)
        - [Vlastní](../custom-settings-configure.md)
-       - [Delivery optimization](../delivery-optimization-windows.md)
+       - [Optimalizace doručení](../delivery-optimization-windows.md)
        - [Funkce zařízení](../device-features-configure.md)
        - [Omezení zařízení](device-restrictions-configure.md)
-       - [Edition upgrade and mode switch](edition-upgrade-configure-windows-10.md)
-       - [Education](education-settings-configure.md)
-       - [Email](email-settings-configure.md)
+       - [Upgrade edice a přepínač režimu](edition-upgrade-configure-windows-10.md)
+       - [Školení](education-settings-configure.md)
+       - [Elektron](email-settings-configure.md)
        - [Endpoint Protection](../protect/endpoint-protection-configure.md)
        - [Ochrana identit](../protect/identity-protection-configure.md)  
-       - [Veřejný terminál](kiosk-settings.md)
-       - [PKCS certificate](../protect/certficates-pfx-configure.md)
-       - [PKCS imported certificate](../protect/certificates-imported-pfx-configure.md)
-       - [Preference file](preference-file-settings-macos.md)
-       - [SCEP certificate](../protect/certificates-scep-configure.md)
-       - [Trusted certificate](../protect/certificates-configure.md)
-       - [Update policies](../software-updates-ios.md)
+       - [Kiosk](kiosk-settings.md)
+       - [Certifikát PKCS](../protect/certficates-pfx-configure.md)
+       - [Importovaný certifikát PKCS](../protect/certificates-imported-pfx-configure.md)
+       - [Soubor předvoleb](preference-file-settings-macos.md)
+       - [Certifikát SCEP](../protect/certificates-scep-configure.md)
+       - [Důvěryhodný certifikát](../protect/certificates-configure.md)
+       - [Aktualizovat zásady](../software-updates-ios.md)
        - [VPN](vpn-settings-configure.md)
        - [Wi-Fi](wi-fi-settings-configure.md)
-       - [Microsoft Defender ATP](../protect/advanced-threat-protection.md)
+       - [ATP v programu Microsoft Defender](../protect/advanced-threat-protection.md)
        - [Windows Information Protection](../protect/windows-information-protection-configure.md)
 
-     For example, if you select **iOS/iPadOS** for the platform, your profile type options look similar to the following profile:
+     Pokud třeba pro platformu vyberete **iOS/iPadOS** , možnosti typu vašeho profilu vypadají podobně jako v následujícím profilu:
 
-     ![Create iOS profile in Intune](./media/device-profile-create/create-device-profile.png)
+     ![Vytvoření profilu iOS v Intune](./media/device-profile-create/create-device-profile.png)
 
-4. When finished, select **OK** > **Create** to save your changes. The profile is created, and shown in the list.
+4. Po dokončení vyberte **OK** > **vytvořit** a uložte provedené změny. Profil se vytvoří a zobrazí se v seznamu.
 
 ## <a name="scope-tags"></a>Značky oboru
 
-After you add the settings, you can also add a scope tag to the profile. Scope tags assign and filter policies to specific groups, such as HR or All US-NC employees.
+Po přidání nastavení můžete do profilu přidat také značku oboru. Značky oboru přiřazují a filtrují zásady pro konkrétní skupiny, jako je třeba HR nebo všichni zaměstnanci USA – NC.
 
-For more information about scope tags, and what you can do, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+Další informace o značkách oboru a o tom, co můžete dělat, najdete v tématu [použití značek RBAC a Scope pro distribuci](../fundamentals/scope-tags.md).
 
-### <a name="add-a-scope-tag"></a>Add a scope tag
+### <a name="add-a-scope-tag"></a>Přidat značku oboru
 
-1. Select **Scope (Tags)** .
-2. Select **Add** to create a new scope tag. Or, select an existing scope tag from the list.
+1. Vyberte **obor (značky)** .
+2. Vyberte **Přidat** a vytvořte novou značku oboru. Nebo vyberte ze seznamu existující značku oboru.
 3. Výběrem **OK** uložte změny.
 
-## <a name="applicability-rules"></a>Applicability rules
+## <a name="applicability-rules"></a>Pravidla použitelnosti
 
-Applies to:
+Platí pro:
 
 - Windows 10 a novější
 
-Applicability rules allow administrators to target devices in a group that meet specific criteria. For example, you create a device restrictions profile that applies to the **All Windows 10 devices** group. And, you only want the profile assigned to devices running Windows 10 Enterprise.
+Pravidla použitelnosti umožňují správcům cílit na zařízení ve skupině, která splňuje určitá kritéria. Například vytvoříte profil omezení zařízení, který se vztahuje na skupinu **všech zařízení s Windows 10** . A potřebujete jenom profil přiřazený k zařízením s Windows 10 Enterprise.
 
-To do this task, create an **applicability rule**. These rules are great for the following scenarios:
+Chcete-li provést tuto úlohu, vytvořte **pravidlo použitelnosti**. Tato pravidla jsou ideální pro následující scénáře:
 
-- You use Windows 10 Education (EDU). At Bellows College, you want to target all Windows 10 EDU devices between RS3 and RS4.
-- You want to target all users in Human Resources at Contoso, but only want Windows 10 Professional or Enterprise devices.
+- Používáte Windows 10 školství (EDU). V Bellows školy chcete cílit na všechna zařízení s Windows 10 EDU mezi RS3 a RS4.
+- Chcete cílit všechny uživatele v lidských zdrojích na společnosti Contoso, ale přejete si pouze zařízení se systémem Windows 10 Professional nebo Enterprise.
 
-To approach these scenarios, you:
+Pro přístup k těmto scénářům máte tyto možnosti:
 
-- Create a devices group that includes all devices at Bellows College. In the profile, add an applicability rule so it applies if the OS minimum version is `16299` and the maximum version is `17134`. Assign this profile to the Bellows College devices group.
+- Vytvořte skupinu zařízení, která zahrnuje všechna zařízení na Bellows škole. V profilu přidejte pravidlo použitelnosti, aby se naplatilo, pokud je minimální verze operačního systému `16299` a že je `17134`maximální verze. Přiřaďte tento profil ke skupině zařízení Bellows školy.
 
-  When it's assigned, the profile applies to devices between the minimum and maximum versions you enter. For devices that aren't between the minimum and maximum versions you enter, their status shows as **Not applicable**.
+  Po přiřazení se profil vztahuje na zařízení mezi minimální a maximální verzí, které zadáte. U zařízení, která nepatří mezi minimální a maximální verze, které zadáte, se jejich stav zobrazuje jako **nepoužitý**.
 
-- Create a users group that includes all users in Human Resources (HR) at Contoso. In the profile, add an applicability rule so it applies to devices running Windows 10 Professional or Enterprise. Assign this profile to the HR users group.
+- Vytvořte skupinu uživatelů, která bude obsahovat všechny uživatele v lidských zdrojích (HR) ve společnosti Contoso. V profilu přidejte pravidlo použitelnosti, aby se používalo pro zařízení s Windows 10 Professional nebo Enterprise. Přiřaďte tento profil skupině uživatelů personální oddělení.
 
-  When it's assigned, the profile applies to devices running Windows 10 Professional or Enterprise. For devices that aren't running these editions, their status shows as **Not applicable**.
+  Po přiřazení se profil vztahuje na zařízení s Windows 10 Professional nebo Enterprise. U zařízení, která nepoužívají tyto edice, se jejich stav zobrazuje jako **nepoužitý**.
 
-- If there are two profiles with the exact same settings, then the profile without an applicability rule is applied. 
+- Pokud existují dva profily s přesným nastavením, použije se profil bez pravidla použitelnosti. 
 
-  For example, ProfileA targets the Windows 10 devices group, enables BitLocker, and doesn’t have an applicability rule. ProfileB targets the same Windows 10 devices group, enables BitLocker, and has an applicability rule to only apply the profile to Windows 10 Enterprise.
+  Například profilace cílí na skupinu zařízení s Windows 10, povolí BitLocker a nemá pravidlo použitelnosti. ProfileB cílí na stejnou skupinu zařízení s Windows 10, umožňuje BitLocker a má pravidlo použitelnosti, které profil použije jenom na Windows 10 Enterprise.
 
-  When both profiles are assigned, ProfileA is applied because it doesn’t have an applicability rule. 
+  Při přiřazení obou profilů se použije profilace, protože nemá pravidlo použitelnosti. 
 
-When you assign the profile to the groups, the applicability rules act as a filter, and only target the devices that meet your criteria.
+Když přiřadíte profil ke skupinám, budou pravidla použitelnosti fungovat jako filtr a budou cílit jenom na zařízení, která splňují vaše kritéria.
 
-### <a name="add-a-rule"></a>Add a rule
+### <a name="add-a-rule"></a>Přidat pravidlo
 
-1. Select **Applicability Rules**. You can choose the **Rule**, **Property**, and **OS edition**:
+1. Vyberte **pravidla použitelnosti**. Můžete zvolit **pravidlo**, **vlastnost**a **edici OS**:
 
-    ![Add an applicability rule to a device configuration profile in Microsoft Intune](./media/device-profile-create/applicability-rules.png)
+    ![Přidání pravidla použitelnosti do konfiguračního profilu zařízení v Microsoft Intune](./media/device-profile-create/applicability-rules.png)
 
-2. In **Rule**, choose if you want to include or exclude users or groups. Možnosti:
+2. V možnosti **pravidlo**vyberte, jestli chcete zahrnout nebo vyloučit uživatele nebo skupiny. Možnosti:
 
-    - **Assign profile if**: Includes users or groups that meet the criteria you enter.
-    - **Don't assign profile if**: Excludes users or groups that meet the criteria you enter.
+    - **Přiřadit profil, pokud**: obsahuje uživatele nebo skupiny, které splňují zadaná kritéria.
+    - **Nepřiřazovat profil, pokud**: vyloučí uživatele nebo skupiny, které splňují zadaná kritéria.
 
-3. In **Property**, choose your filter. Možnosti: 
+3. V **vlastnosti**vyberte filtr. Možnosti: 
 
-    - **OS edition**: In the list, check the Windows 10 editions you want to include (or exclude) in your rule.
-    - **OS version**: Enter the **min** and **max** Windows 10 version numbers of you want to include (or exclude) in your rule. Both values are required.
+    - **Edice OS**: v seznamu vyhledejte edice Windows 10, které chcete zahrnout (nebo vyloučit) ve vašem pravidle.
+    - **Verze operačního systému**: zadejte **minimální** a **maximální** číslo verze Windows 10, které chcete zahrnout (nebo vyloučit) ve vašem pravidle. Obě hodnoty jsou povinné.
 
-      For example, you can enter `10.0.16299.0` (RS3 or 1709) for minimum version and `10.0.17134.0` (RS4 or 1803) for maximum version. Or, you can be more granular and enter `10.0.16299.001` for minimum version and `10.0.17134.319` for maximum version.
+      Můžete například zadat `10.0.16299.0` (RS3 nebo 1709) pro minimální verzi a `10.0.17134.0` (RS4 nebo 1803) pro maximální verzi. Nebo můžete být přesnější a zadat `10.0.16299.001` pro minimální verzi a `10.0.17134.319` pro maximální verzi.
 
-4. Select **Add** to save your changes.
+4. Pokud chcete změny uložit, vyberte **Přidat** .
 
-## <a name="refresh-cycle-times"></a>Refresh cycle times
+## <a name="refresh-cycle-times"></a>Aktualizovat časy cyklů
 
-Intune uses different refresh cycles to check for updates to configuration profiles. If the device recently enrolled, the check-in runs more frequently. [Policy and profile refresh cycles](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) lists the estimated refresh times.
+Intune používá ke kontrole aktualizací konfiguračních profilů různé aktualizační cykly. Pokud se zařízení nedávno zaregistrovalo, vrácení se změnami se spouští častěji. V [cyklech aktualizace zásad a profilů](device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) se zobrazí odhadované časy aktualizace.
 
-At any time, users can open the Company Portal app, and sync the device to immediately check for profile updates.
+Uživatelé mohou kdykoli otevřít aplikaci Portál společnosti a synchronizovat zařízení, aby ihned kontrolovala aktualizace profilu.
 
 ## <a name="recommendations"></a>Doporučení
 
-When creating profiles, consider the following recommendations:
+Při vytváření profilů Vezměte v úvahu následující doporučení:
 
-- Name your policies so you know what they are, and what they do. All [compliance policies](../protect/create-compliance-policy.md) and [configuration profiles](../configuration/device-profile-create.md) have an optional **Description** property. In **Description**, be specific and include information so others know what the policy does.
+- Pojmenujte své zásady, abyste věděli, co jsou a co dělají. Všechny [zásady dodržování předpisů](../protect/create-compliance-policy.md) a [konfigurační profily](../configuration/device-profile-create.md) mají volitelnou vlastnost **Description** . V **popisu**se jedná o konkrétní a zahrnuté informace, aby ostatní věděli, co zásady dělá.
 
-  Some configuration profile examples include:
+  Mezi příklady konfiguračních profilů patří:
 
-  **Profile name**: Admin template - OneDrive configuration profile for all Windows 10 users  
-  **Profile description**: OneDrive admin template profile that includes the minimum and base settings for all Windows 10 users. Created by user@contoso.com to prevent users from sharing organizational data to personal OneDrive accounts.
+  **Název profilu**: Šablona správce – konfigurační profil OneDrivu pro všechny uživatele Windows 10  
+  **Popis profilu**: Profil šablony správce OneDrivu, který obsahuje minimální a základní nastavení pro všechny uživatele Windows 10. Vytvořeno pomocí user@contoso.com, aby uživatelé nemohli sdílet data organizace s osobními účty OneDrive.
 
-  **Profile name**: VPN profile for all iOS users  
-  **Profile description**: VPN profile that includes the minimum and base settings for all iOS users to connect to Contoso VPN. Created by user@contoso.com so users automatically authenticate to VPN, instead of prompting users for their username and password.
+  **Název profilu**: profil VPN pro všechny uživatele iOS  
+  **Popis profilu**: profil VPN, který obsahuje minimální a základní nastavení pro všechny uživatele iOS pro připojení k síti Contoso VPN. Vytvořeno pomocí user@contoso.com, aby se uživatelé k síti VPN automaticky ověřovali a místo toho byli vyzváni k zadání uživatelského jména a hesla.
 
-- Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS jailbroken devices, and so on.
+- Vytvořte svůj profil podle úkolu, jako je například konfigurace nastavení Microsoft Edge, povolení ochrany proti virům v programu Microsoft Defender, blokování zařízení s iOS s jailbreakem a tak dále.
 
-- Create profiles that apply to specific groups, such as Marketing, Sales, IT Administrators, or by location or school system.
+- Vytvářejte profily, které se vztahují na konkrétní skupiny, jako jsou marketing, prodej, správci IT nebo umístění nebo školní systém.
 
-- Separate user policies from device policies.
+- Samostatné zásady uživatele ze zásad zařízení.
 
-  For example, [Administrative Templates in Intune](administrative-templates-windows.md) have hundreds of ADMX settings. These template shows if a settings applies to users or devices. When creating admin templates, assign your users settings to a users group, and assign your device settings to a devices group.
+  Například [šablony pro správu v Intune](administrative-templates-windows.md) mají stovky nastavení ADMX. Tato šablona ukazuje, jestli se nastavení vztahují na uživatele nebo zařízení. Při vytváření šablon pro správu přiřaďte nastavení uživatelů ke skupině uživatelů a přiřaďte nastavení zařízení ke skupině zařízení.
 
-  The following image shows an example of a setting that can apply to users and/or apply to devices:
+  Následující obrázek ukazuje příklad nastavení, které se může vztahovat na uživatele nebo použít na zařízení:
 
-  ![Intune admin template that applies to user and devices](./media/device-profile-create/setting-applies-to-user-and-device.png)
+  ![Šablona správce Intune, která se vztahuje na uživatele a zařízení](./media/device-profile-create/setting-applies-to-user-and-device.png)
 
 ## <a name="next-steps"></a>Další kroky
 

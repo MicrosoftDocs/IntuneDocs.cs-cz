@@ -1,7 +1,7 @@
 ---
-title: Enable the Mobile Threat Defense connector for unenrolled devices
+title: Povolení konektoru ochrany před mobilními hrozbami pro neregistrovaná zařízení
 titleSuffix: Microsoft Intune
-description: Enable the Mobile Threat Defense connector in Microsoft Intune for unenrolled devices.
+description: Povolte pro neregistrovaná zařízení konektor ochrany před mobilními hrozbami v Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -25,36 +25,36 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74478925"
 ---
-# <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Enable the Mobile Threat Defense connector in Intune for unenrolled devices
+# <a name="enable-the-mobile-threat-defense-connector-in-intune-for-unenrolled-devices"></a>Povolení konektoru ochrany před mobilními hrozbami v Intune pro neregistrovaná zařízení
 
-During Mobile Threat Defense (MTD) setup, you've configured a policy for classifying threats in your Mobile Threat Defense partner console and you've created the app protection policy in Intune. If you've already configured the Intune connector in the MTD partner console, you can now enable the MTD connection for MTD partner applications.
+Při instalaci ochrany před mobilními hrozbami (MTD) jste nakonfigurovali zásadu pro klasifikaci hrozeb v konzole partnerského serveru ochrany před mobilními hrozbami a v Intune jste vytvořili zásady ochrany aplikací. Pokud jste už konektor Intune nakonfigurovali v konzole pro partnery MTD, můžete teď povolit připojení MTD pro partnerské aplikace MTD.
 
 > [!NOTE]
-> This article applies to all Mobile Threat Defense partners that support app protection policies: Better Mobile (Android), Zimperium (iOS), Lookout for Work (Android/iOS).
+> Tento článek se týká všech partnerů ochrany před mobilními hrozbami, které podporují zásady ochrany aplikací: lepší mobilní zařízení (Android), Zimperium (iOS), Lookout for Work (Android/iOS).
 
-## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Classic conditional access policies for MTD apps
+## <a name="classic-conditional-access-policies-for-mtd-apps"></a>Klasické zásady podmíněného přístupu pro aplikace MTD
 
-When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Defender ATP](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
+Když integrujete novou aplikaci do ochrany před mobilními hrozbami Intune a povolíte připojení k Intune, vytvoří Intune v Azure Active Directory zásady klasického podmíněného přístupu. Každá aplikace MTD, kterou integrujete, včetně [ATP ATP](advanced-threat-protection.md) nebo kteréhokoli z našich dalších [partnerů MTD](mobile-threat-defense.md#mobile-threat-defense-partners), vytvoří nové zásady podmíněného přístupu v klasickém rozhraní. Tyto zásady je možné ignorovat, ale neměly by být upravované, odstraňující ani zakázané.
 
-If the classic policy is deleted, you'll need to delete the connection to Intune that was responsible for its creation, and then set it up again. This process recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
+Pokud se klasické zásady odstraní, budete muset odstranit připojení k Intune, které bylo zodpovědné za jeho vytvoření, a pak ho nastavit znovu. Tento proces znovu vytvoří klasické zásady. Migrace klasických zásad pro aplikace MTD na nový typ zásad pro podmíněný přístup se nepodporuje.
 
-Classic conditional access policies for MTD apps:
+Klasické zásady podmíněného přístupu pro aplikace MTD:
 
-- Are used by Intune MTD to require that devices are registered in Azure AD so that they have a device ID before communicating to MTD partners. The ID is required so that devices and can successfully report their status to Intune.
+- Používají Intune MTD k tomu, aby vyžadovaly, aby byla zařízení zaregistrovaná ve službě Azure AD, aby měla ID zařízení před komunikací s partnery MTD. IDENTIFIKÁTOR je povinný, aby zařízení a mohl úspěšně ohlásit svůj stav do Intune.
 
-- Have no effect on any other Cloud apps or Resources.
+- Nemusíte mít žádný vliv na žádné jiné cloudové aplikace ani prostředky.
 
-- Are distinct from conditional access policies you might create to help manage MTD.
+- Liší se od zásad podmíněného přístupu, které byste mohli vytvořit, abyste mohli lépe spravovat MTD.
 
-- By default, don’t interact with other conditional access policies you use for evaluation.
+- Ve výchozím nastavení nekomunikujete s dalšími zásadami podmíněného přístupu, které používáte pro vyhodnocení.
 
-To view classic conditional access policies, in [Azure](https://portal.azure.com/#home), go to **Azure Active Directory** > **Conditional Access** > **Classic policies**.
+Pokud chcete zobrazit klasické zásady podmíněného přístupu, přejděte v [Azure](https://portal.azure.com/#home)na **Azure Active Directory** > **podmíněný přístup** > **klasické zásady**.
 
 ## <a name="to-enable-the-mtd-connector"></a>Povolení konektoru MTD
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
+2. Vyberte možnost **Správa tenanta** > **konektory a tokeny** > **ochrany před mobilními hrozbami**.
 
 3. V podokně **Mobile Threat Defense** zvolte **Přidat**.
 
@@ -64,17 +64,17 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 5. Povolte možnosti přepínání podle požadavků vaší organizace. Viditelnost možností přepínání se bude lišit v závislosti na partnerovi MTD.
 
-## <a name="mobile-threat-defense-toggle-options"></a>Mobile Threat Defense toggle options
+## <a name="mobile-threat-defense-toggle-options"></a>Možnosti přepínání ochrany před mobilními hrozbami
 
 Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínání konektoru MTD potřebujete povolit. Tady jsou další podrobnosti:
 
-**App Protection Policy Settings**
+**Nastavení zásad ochrany aplikací**
 
-- **Connect Android devices of version 4.4 and above to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+- **Připojit zařízení s Androidem verze 4,4 a novější pro *\<název partnera MTD >* pro vyhodnocení zásad ochrany aplikací**: když tuto možnost povolíte, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
 
-- **Connect iOS devices version 11 and above to *\<MTD partner name>* for app protection policy evaluation**: When you enable this option, app protection policies using the Device Threat Level rule will evaluate devices including data from this connector.
+- **Připojit zařízení s iOS verze 11 a vyšší, aby *\<MTD název partnera >* pro vyhodnocení zásad ochrany aplikací**: Pokud povolíte tuto možnost, zásady ochrany aplikací pomocí pravidla úrovně hrozby zařízení vyhodnotí zařízení, včetně dat z tohoto konektoru.
 
-**Common Shared Settings**
+**Společné sdílené nastavení**
 
 - **Počet dnů, než partner přestane reagovat**: Počet dnů nečinnosti, než bude Intune kvůli ztrátě připojení považovat partnera za nereagujícího. U nereagujících partnerů MTD Intune ignoruje stav dodržování předpisů.
 
@@ -83,4 +83,4 @@ Podle požadavků organizace se můžete rozhodnout, jaké možnosti přepínán
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](~/protect/mtd-app-protection-policy.md).
+- [Vytvořte zásady ochrany aplikací ochrany před mobilními hrozbami (MTD) v Intune](~/protect/mtd-app-protection-policy.md).

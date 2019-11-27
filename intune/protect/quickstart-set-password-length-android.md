@@ -1,7 +1,7 @@
 ---
-title: Quickstart - Password compliance policy for Android devices
+title: Rychlý Start – zásada dodržování předpisů heslem pro zařízení s Androidem
 titleSuffix: Microsoft Intune
-description: In this quickstart, you will use Microsoft Intune to set the length of the password required for Android devices.
+description: V tomto rychlém startu použijete Microsoft Intune k nastavení délky hesla potřebného pro zařízení s Androidem.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -27,9 +27,9 @@ ms.locfileid: "74409784"
 ---
 # <a name="quickstart-create-a-password-compliance-policy-for-android-devices"></a>Rychlý start: Vytvoření zásady dodržování předpisů pro hesla pro zařízení s Androidem
 
-In this quickstart, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android devices.
+V tomto rychlém startu použijete Microsoft Intune k tomu, aby uživatelé Androidu od zaměstnanců mohli zadat heslo určité délky, než se udělí přístup k informacím v jejich zařízeních s Androidem.
 
-Zásada dodržování předpisů Intune pro zařízení určuje pravidla a nastavení, která zařízení musí splňovat, aby bylo považováno za dodržující předpisy. You can use compliance policies with Conditional Access to allow or block access to company resources. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
+Zásada dodržování předpisů Intune pro zařízení určuje pravidla a nastavení, která zařízení musí splňovat, aby bylo považováno za dodržující předpisy. Zásady dodržování předpisů s podmíněným přístupem můžete použít k povolení nebo blokování přístupu k prostředkům společnosti. Můžete také získat sestavy zařízení a provádět akce v případě nedodržování předpisů.
 
 > [!IMPORTANT]
 > Kromě nastavení hesla byste také měli zvážit další nastavení zabezpečení systému pro ochranu pracovníků. Další informace najdete v tématu [Systémové nastavení zabezpečení](compliance-policy-create-android-for-work.md).
@@ -38,33 +38,33 @@ Pokud nemáte předplatné Intune, [zaregistrujte si bezplatný zkušební úče
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431) as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators).
+Přihlaste se k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431) jako [globální správce](../fundamentals/users-add.md#types-of-administrators) nebo [Správce služby](../fundamentals/users-add.md#types-of-administrators)Intune.
 
 ## <a name="create-a-device-compliance-policy"></a>Vytváření zásad dodržování předpisů pro zařízení
 
-Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android devices.
+Vytvořte zásadu dodržování předpisů pro zařízení, která bude vyžadovat, aby uživatelé v Androidu mohli zadat heslo určité délky předtím, než se udělí přístup k informacím v jejich zařízeních s Androidem.
 
-1. In Intune, select **Devices** > **Compliance Policies** > **Create Policy**.
+1. V Intune vyberte **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**.
 
 2. Jako **Název** přidejte **Dodržování předpisů v Androidu**. Přidejte také **Popis**.
 
-3. For **Platform**, select **Android Enterprise**.
+3. Jako **platformu**vyberte **Android Enterprise**.
 
-4. For **Profile type**, select **Work profile**.
+4. Jako **typ profilu**vyberte **pracovní profil**.
 
 5. Vyberte **Nastavení** > **Zabezpečení systému** a zobrazte okno **Zabezpečení systému** Androidu.
 
 6. U možnosti **Vyžadovat heslo k odemknutí mobilních zařízení** vyberte **Vyžadovat**.
 
-7. For **Required password type**, select **At least numeric**.
+7. Pro **požadovaný typ hesla**vyberte **aspoň číslice**.
 
-8. For **Minimum password length**, enter **6**.
+8. Pro **minimální délku hesla**zadejte **6**.
 
     ![Snímek obrazovky s vytvořením skupiny v Microsoft Intune](./media/quickstart-set-password-length-android/quickstart-set-password-length-android-01.png)
 
-9. When done, select **OK** > **OK** > **Create** to create the policy.
+9. Až to budete mít, vyberte **ok** ** > v** > **vytvořit** vytvořte zásadu.
 
-When you've successfully created the policy, it appears in your list of device complice policies.
+Po úspěšném vytvoření zásady se zobrazí v seznamu zásad complice zařízení.
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 

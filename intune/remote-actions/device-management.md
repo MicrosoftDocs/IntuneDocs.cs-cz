@@ -33,7 +33,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 
 ## <a name="get-to-your-devices"></a>Přístup k zařízením
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Vyberte **Zařízení**. Toto zobrazení obsahuje podrobné informace o jednotlivých zařízeních a o tom, co s nimi můžete dělat, mimo jiné:
 
    - **Přehled** zobrazuje grafický snímek zaregistrovaných zařízení včetně informací, kolik zařízení používá jednotlivé platformy (Android, iOS a další).
@@ -41,7 +41,7 @@ Jako správce IT musíte zajistit, aby spravovaná zařízení poskytovala prost
 
      Pomocí funkce **Export** vytvoříte seznam všech zařízení ve formátu .csv, a to v přírůstcích po 10 000 (Internet Explorer) nebo 30 000 (Microsoft Edge, Chrome).
 
-     Select any device to [view additional details about that device](device-inventory.md), including hardware details, installed apps, its compliance policy status, and more.
+     Vyberte libovolné zařízení, abyste [si zobrazili další podrobnosti o zařízení](device-inventory.md), včetně podrobností o hardwaru, nainstalovaných aplikací, stavu zásad dodržování předpisů a dalších.
 
    - Část **Zařízení Azure AD** obsahuje seznam zařízení zaregistrovaných v Azure Active Directory (AD) nebo k této službě připojených. Přečtěte si další informace o [správě zařízení Azure AD](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
    - Část **Akce zařízení** zahrnuje historii vzdálených akcí spuštěných v jednotlivých zařízeních, včetně akce, jejího stavu, iniciátora a času.
@@ -66,11 +66,11 @@ Dostupné akce se liší podle platformy zařízení a jeho konfigurace.
   - [Režim ztráty](device-lost-mode.md) (jenom iOS)
   - [Najít zařízení](device-locate.md) (jenom iOS)
   - [Restartovat](device-restart.md) (jenom Windows)
-  - [Resetování PIN kódu ve Windows 10](device-windows-pin-reset.md)
+  - [Resetovat PIN kód ve Windows 10](device-windows-pin-reset.md)
   - [Vzdálené řízení pro Android](teamviewer-support.md)
   - [Synchronizace zařízení](device-sync.md)
-  - [Send custom notification](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
-  - [BitLocker key rotation](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (Windows only)
+  - [Poslat vlastní oznámení](custom-notifications.md#send-a-custom-notification-to-a-single-device) (Android, iOS)
+  - [Střídání klíčů BitLockeru](../protect/encrypt-devices.md#rotate-bitlocker-recovery-keys) (jenom Windows)
 
 ## <a name="next-steps"></a>Další kroky
 

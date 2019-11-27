@@ -1,5 +1,5 @@
 ---
-title: Wi-Fi settings for Android Enterprise and kiosk devices - Microsoft Intune | Microsoft Docs
+title: Nastavení Wi-Fi pro zařízení s Androidem Enterprise a veřejného terminálu – Microsoft Intune | Microsoft Docs
 description: Vytvořte nebo přidejte konfigurační profil zařízení s připojením Wi-Fi pro Android Enterprise a beznabídkový režim Androidu. Podívejte se na různá nastavení, včetně přidání certifikátů, volby typu protokolu EAP a výběru metody ověřování v Microsoft Intune. U zařízení s beznabídkovým režimem zadejte také předsdílený klíč sítě.
 keywords: ''
 author: MandiOhlinger
@@ -23,25 +23,25 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390808"
 ---
-# <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune
+# <a name="add-wi-fi-settings-for-android-enterprise-dedicated-and-fully-managed-devices-in-microsoft-intune"></a>Přidání nastavení sítě Wi-Fi pro vyhrazená a plně spravovaná zařízení s Androidem v Microsoft Intune
 
-You can create a profile with specific Wi-Fi settings, and then deploy this profile to your Android Enterprise fully managed and dedicated devices. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, použití předsdíleného klíče a další.
+Můžete vytvořit profil s konkrétními nastaveními Wi-Fi a potom tento profil nasadit do plně spravovaných a vyhrazených zařízení s Androidem Enterprise. Microsoft Intune nabízí mnoho funkcí, například ověřování v síti, použití předsdíleného klíče a další.
 
-Těmito nastaveními se zabývá tento článek. [Use Wi-Fi on your devices](wi-fi-settings-configure.md) includes more information about the Wi-Fi feature in Microsoft Intune.
+Těmito nastaveními se zabývá tento článek. [Použití Wi-Fi na vašich zařízeních](wi-fi-settings-configure.md) obsahuje další informace o funkci Wi-fi v Microsoft Intune.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
 [Vytvořte profil zařízení v Microsoft Intune](wi-fi-settings-configure.md#create-a-device-profile).
 
-## <a name="device-owner-only"></a>Device owner only
+## <a name="device-owner-only"></a>Pouze vlastník zařízení
 
-Select this option if you are deploying to an Android Enterprise dedicated or fully managed device.  Android Enterprise dedicated and fully managed devices currently support SCEP certificate deployment, but not PKCS.
+Tuto možnost vyberte, pokud nasazujete na vyhrazené nebo plně spravované zařízení s Androidem Enterprise.  Vyhrazená a plně spravovaná zařízení s Androidem Enterprise aktuálně podporují nasazení certifikátu SCEP, ale ne PKCS.
 
 ### <a name="basic"></a>Basic
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
-- **Název sítě**: Zadejte název pro toto připojení Wi-Fi. End users see this name when they browse their device for available Wi-FI connections. For example, enter **Contoso WiFi**.
-- **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **Název sítě**: Zadejte název pro toto připojení Wi-Fi. Koncoví uživatelé uvidí tento název při procházení svého zařízení k dostupným připojením Wi-FI. Zadejte například **Contoso Wi-Fi**.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ Wi-Fi**: Vyberte protokol zabezpečení, který se má použít k ověření sítě Wi-Fi. Možnosti:
 
@@ -52,23 +52,23 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
-- **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Client Authentication** - **Client certificate for client authentication (Identity certificate)** : Choose the SCEP client certificate profile that is also deployed to the device. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování** klienta - **klientský certifikát pro ověřování klientů (certifikát identity)** : vyberte profil klientského certifikátu SCEP, který je také nasazený do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Client Authentication**: Choose an **Authentication method**. Možnosti:
+    - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
@@ -77,15 +77,15 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
           - **Protokol Microsoft CHAP (MS-CHAP)**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
-      - **Certificates**: Choose the SCEP client certificate profile that is also deployed to the device. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který se taky nasadí do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Client Authentication**: Choose an **Authentication method**. Možnosti:
+    - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Ověřování metodou bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
@@ -93,7 +93,7 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
           - **Žádné**
           - **Protokol Microsoft CHAP verze 2 (MS-CHAP v2)**
 
-      - **Certificates**: Choose the SCEP client certificate profile that is also deployed to the device. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+      - **Certifikáty**: vyberte profil klientského certifikátu SCEP, který se taky nasadí do zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
       - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
@@ -102,29 +102,29 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 ### <a name="basic"></a>Basic
 
 - **Typ Wi-Fi**: Zvolte **Základní**.
-- **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 
 ### <a name="enterprise"></a>Enterprise
 
 - **Typ Wi-Fi**: Zvolte **Enterprise**.
-- **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
+- **SSID**: zadejte **identifikátor sady služeb**, což je skutečný název bezdrátové sítě, ke které se zařízení připojují. **Název sítě**, který jste nakonfigurovali, ale uživatelé uvidí jen při zvolení připojení.
 - **Skrytá síť**: Zvolte **Povolit**, pokud chcete tuto síť skrýt v seznamu dostupných sítí na zařízení. Identifikátor SSID se všesměrově nevysílá. Zvolte **Zakázat**, pokud tuto síť chcete v seznamu dostupných sítí na zařízení zobrazit.
 - **Typ EAP**: Zvolte typ protokolu EAP (Extensible Authentication Protocol) pro ověřování zabezpečených bezdrátových připojení. Možnosti:
 
   - **EAP-TLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Ověřování klientů** – **Klientský certifikát pro ověření klienta (certifikát identity)** : Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
+    - **Ověřování klientů** –  - Klientský certifikát pro ověření klienta (certifikát identity) **: Zvolte profil klientského certifikátu SCEP nebo PKCS, který je také nasazený na zařízení. Tento certifikát představuje identitu, kterou zařízení předloží serveru pro ověření připojení.
 
     - **Ochrana identity (vnější identita)** : Zadejte text odeslaný v odpovědi na žádost o identitu EAP. Tento text může být libovolná hodnota, například `anonymous`. Při ověřování se nejdřív pošle tato anonymní identita a po ní následuje skutečná identifikace poslaná přes zabezpečené tunelové propojení.
 
   - **EAP-TTLS**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Client Authentication**: Choose an **Authentication method**. Možnosti:
+    - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Metoda bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
@@ -139,9 +139,9 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 
   - **PEAP**: Dále zadejte:
 
-    - **Vztah důvěryhodnosti serveru** – **Kořenový certifikát pro ověřování serveru**: Zvolte existující profil důvěryhodného kořenového certifikátu. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+    - **Vztah důvěryhodnosti serveru** –  - Kořenový certifikát pro ověřování serveru **: Zvolte existující profil důvěryhodného kořenového certifikátu. Když se klient připojí k síti, zobrazí se tento certifikát serveru a ověří připojení.
 
-    - **Client Authentication**: Choose an **Authentication method**. Možnosti:
+    - **Ověřování klientů**: vyberte **metodu ověřování**. Možnosti:
 
       - **Uživatelské jméno a heslo**: Zobrazí uživateli výzvu k zadání uživatelského jména a hesla pro ověření připojení. Dále zadejte:
         - **Ověřování metodou bez protokolu EAP (vnitřní identita)** : Zvolte, jak chcete připojení ověřovat. Nezapomeňte vybrat stejný protokol, který je nakonfigurovaný u sítě Wi-Fi. Možnosti:
@@ -155,6 +155,6 @@ Select this option if you are deploying to an Android Enterprise dedicated or fu
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil se vytvoří, ale nic nedělá. Next, [assign this profile](device-profile-assign.md) and [monitor its status.](device-profile-monitor.md).
+Profil se vytvoří, ale nic nedělá. Pak [přiřaďte tento profil](device-profile-assign.md) a [sledujte jeho stav.](device-profile-monitor.md)..
 
-You can also create Wi-Fi profiles for [Android](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md), and [Windows 8.1](wi-fi-settings-import-windows-8-1.md) devices.
+Můžete také vytvořit profily sítě Wi-Fi pro zařízení s [Androidem](wi-fi-settings-android.md), [iOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), [Windows 10](wi-fi-settings-windows.md)a [Windows 8.1](wi-fi-settings-import-windows-8-1.md) .

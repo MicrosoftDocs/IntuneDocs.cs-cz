@@ -157,12 +157,12 @@ V aplikaci Portál společnosti pro Windows jsou k dispozici následující klá
 |  | Můj profil | Alt+U |
 |  | Nastavení | Alt+T |
 | Úvodní stránka – dlaždice Zařízení | Přejmenovat | F2 |
-|  | odebrat | Ctrl+D nebo Delete |
+|  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
 | Podrobnosti o zařízení | Přejmenovat | F2 |
-|  | odebrat | Ctrl+D nebo Delete |
+|  | Odebrat | Ctrl+D nebo Delete |
 |  | Zkontrolovat přístup | Ctrl+M nebo F9 |
-| Podrobnosti aplikace | Instalace | Ctrl+I |
+| Podrobnosti aplikace | Install | Ctrl+I |
 | Zařízení | K dispozici | Ctrl+D |
 
 Koncoví uživatelé budou také moci zobrazit dostupné zkratky v aplikaci pro Windows Portál společnosti.

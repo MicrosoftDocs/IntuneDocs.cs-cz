@@ -1,6 +1,6 @@
 ---
-title: Use a PIN to sign in to Windows 10 devices using Microsoft Intune - Azure | Microsoft Docs
-description: Use Windows Hello for Business to allow users to sign in to devices using a PIN, a fingerprint, and more. Create an identity protection configuration profile in Intune for Windows 10 devices with these settings, and assign the profile to user groups and device groups.
+title: Použití PIN kódu pro přihlášení k zařízením s Windows 10 pomocí Microsoft Intune – Azure | Microsoft Docs
+description: Pomocí Windows Hello pro firmy umožníte uživatelům přihlásit se k zařízením pomocí PIN kódu, otisku prstu a dalších údajů. Pomocí těchto nastavení vytvořte v Intune pro zařízení s Windows 10 konfigurační profil ochrany identit a přiřaďte tento profil skupinám uživatelů a skupinám zařízení.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -22,13 +22,13 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188252"
 ---
-# <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Use Windows Hello for Business on Windows 10 devices with Microsoft Intune
+# <a name="use-windows-hello-for-business-on-windows-10-devices-with-microsoft-intune"></a>Použití Windows Hello pro firmy na zařízeních s Windows 10 s Microsoft Intune
 
-Windows Hello for Business is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards. Intune includes built-in settings so Administrators can configure and use Windows Hello for Business. For example, you can use these settings to:
+Windows Hello pro firmy je metoda pro přihlašování k zařízením s Windows tím, že nahrazujete hesla, čipové karty a virtuální čipové karty. Intune obsahuje vestavěná nastavení, která správcům umožní nakonfigurovat a používat Windows Hello pro firmy. Tato nastavení můžete například použít k těmto akcím:
 
-- Enable Windows Hello for Business for devices and users
-- Set device PIN requirements, including a minimum or maximum PIN length
-- Allow gestures, such as a fingerprint, that users can (or can't use) to sign in to devices
+- Povolit Windows Hello pro firmy pro zařízení a uživatele
+- Nastavte požadavky na PIN kód zařízení, včetně minimální nebo maximální délky PIN kódu.
+- Povolení gest, jako je otisk prstu, které uživatelé můžou (nebo nemůžou použít) pro přihlášení k zařízením
 
 Tato funkce je dostupná pro zařízení s následujícími systémy:
 
@@ -36,41 +36,41 @@ Tato funkce je dostupná pro zařízení s následujícími systémy:
 - Windows 10 Mobile
 - Windows Holographic for Business
 
-Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to user and device groups in your organization.
+Intune používá konfigurační profily k vytvoření a přizpůsobení těchto nastavení potřebám vaší organizace. Po přidání těchto funkcí do profilu můžete tato nastavení vložit nebo nasadit do skupin uživatelů a zařízení ve vaší organizaci.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+V tomto článku se dozvíte, jak vytvořit profil konfigurace zařízení. Seznam všech nastavení a jejich toho, co dělají, najdete v tématu [nastavení zařízení s Windows 10 a povolení Windows Hello pro firmy](identity-protection-windows-settings.md).
 
-## <a name="create-the-device-profile"></a>Create the device profile
+## <a name="create-the-device-profile"></a>Vytvoření profilu zařízení
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 
 3. Zadejte následující vlastnosti:
 
    - **Název**: Zadejte popisný název nového profilu.
    - **Popis**: Zadejte popis profilu. Toto nastavení není povinné, ale doporučujeme ho zadat.
-   - **Platform**: Select **Windows 10 and later**. Windows Hello pro firmy se podporuje jen na zařízeních s Windows 10 a novějšími.
-   - **Profile type**: Select **Identity protection**.
+   - **Platforma**: vyberte **Windows 10 a novější**. Windows Hello pro firmy se podporuje jen na zařízeních s Windows 10 a novějšími.
+   - **Typ profilu**: vyberte **Identity Protection**.
 
-4. On the *Windows Hello for Business* pane, configure the following options:
+4. V podokně *Windows Hello pro firmy* nakonfigurujte následující možnosti:
 
-   - **Configure Windows Hello for Business**: Choose how you want to configure Windows Hello for Business:
+   - **Konfigurace Windows Hello pro firmy**: vyberte, jak chcete nakonfigurovat Windows Hello pro firmy:
 
-     - **Not configured** (default): [Provisions Windows Hello for Business](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) on the device. Pokud profily ochrany identit přiřazujete jen uživatelům, kontext zařízení nastaví výchozí hodnotu **Nenakonfigurováno**.
+     - **Nenakonfigurováno** (výchozí): zřídí na zařízení [Windows Hello pro firmy](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning) . Pokud profily ochrany identit přiřazujete jen uživatelům, kontext zařízení nastaví výchozí hodnotu **Nenakonfigurováno**.
 
-     - **Disabled**: If you don't want to use Windows Hello for Business, select this option. This option disables Windows Hello for Business for all users.
+     - **Zakázáno**: Pokud nechcete používat Windows Hello pro firmy, vyberte tuto možnost. Tato možnost zakáže Windows Hello pro firmy pro všechny uživatele.
 
-     - **Enabled**: Choose this option to [provision](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning), and configure Windows Hello for Business settings in Intune. Enter the settings you want to configure. For a list of all settings, and what they do, see - [Windows 10 device settings to enable Windows Hello for Business](identity-protection-windows-settings.md).
+     - **Povoleno**: tuto možnost vyberte, pokud chcete [zřídit](https://docs.microsoft.com/windows/security/identity-protection/hello-for-business/hello-how-it-works-provisioning)a nakonfigurovat nastavení Windows Hello pro firmy v Intune. Zadejte nastavení, která chcete nakonfigurovat. Seznam všech nastavení a jejich možnosti najdete v tématu [nastavení zařízení s Windows 10 k povolení Windows Hello pro firmy](identity-protection-windows-settings.md).
 
-   - **Use security keys for sign-in**: Enable Windows Hello security key as a logon credential for all PCs in the tenant.
+   - **Použít bezpečnostní klíče pro přihlášení**: Povolte klíč zabezpečení Windows Hello jako přihlašovací údaje pro všechny počítače v tenantovi.
 
-     - **Enable**
-     - **Not configured**  (default)
+     - **Povolit**
+     - **Nenakonfigurováno** (výchozí)
 
 5. Až to budete mít, vyberte **OK** > **Vytvořit** a změny uložte.
 
-The profile is created and appears in the profiles list. Next, [assign](../configuration/device-profile-assign.md) this profile to user and device groups to meet your needs.
+Profil se vytvoří a zobrazí se v seznamu profily. V dalším kroku [přiřaďte](../configuration/device-profile-assign.md) tento profil skupinám uživatelů a zařízení, aby vyhovovaly vašim potřebám.
 
 <!--  Removing image as part of design review; retaining source until we known the disposition.
 
@@ -84,5 +84,5 @@ In this high-level example, you'll create a device restriction policy that block
 
 ## <a name="next-steps"></a>Další kroky
 
-- See a list of all [the settings, and what they do](identity-protection-windows-settings.md).
+- Podívejte se na seznam všech [nastavení a co dělají](identity-protection-windows-settings.md).
 - [Přiřaďte profil](../configuration/device-profile-assign.md) a [monitorujte jeho stav](../configuration/device-profile-monitor.md).

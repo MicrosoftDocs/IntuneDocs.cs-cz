@@ -27,7 +27,7 @@ ms.locfileid: "74409702"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>Vytvoření zásad dodržování předpisů pro ochranu zařízení před mobilními hrozbami (MTD) v Intune
 
-Intune s MTD vám pomůže odhalit hrozby a posoudit rizika u mobilních zařízení. Můžete vytvořit pravidlo zásad dodržování předpisů zařízení služby Intune, které posuzuje rizika a zjišťuje, jestli zařízení předpisy dodržuje, nebo ne. You can then use a [Conditional Access policy](create-conditional-access-intune.md) to block access to services based on device compliance.
+Intune s MTD vám pomůže odhalit hrozby a posoudit rizika u mobilních zařízení. Můžete vytvořit pravidlo zásad dodržování předpisů zařízení služby Intune, které posuzuje rizika a zjišťuje, jestli zařízení předpisy dodržuje, nebo ne. Pak můžete pomocí [zásad podmíněného přístupu](create-conditional-access-intune.md) zablokovat přístup ke službám na základě dodržování předpisů zařízením.
 
 > [!NOTE]
 > Tyto informace se týkají všech partnerů ochrany před mobilními hrozbami.
@@ -42,15 +42,15 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>Vytvoření zásad dodržování předpisů zařízením pro MTD
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device** > **Compliance policies** > **Create policy**.
+2. Vyberte **zařízení** > **zásady dodržování předpisů** > **vytvořit zásadu**.
 
-3. Specify a device compliance policy **Name**, **Description**, select the **Platform**, then select **Configure** under the **Settings** section.
+3. Zadejte **název**zásady dodržování předpisů pro zařízení, **Popis**, vyberte **platformu**a potom v části **Nastavení** vyberte **Konfigurovat** .
 
 4. V podokně **zásad dodržování předpisů** zvolte **Stav zařízení**.
 
-5. On the **Device Health** pane, choose the Mobile Threat Level from the drop-down list for **Require the device to be at or under the Device Threat Level**.
+5. V podokně **stav zařízení** v rozevíracím seznamu vyberte úroveň mobilní hrozby, **která vyžaduje, aby zařízení bylo na úrovni hrozby pro zařízení nebo pod**ní.
 
    - **Zabezpečeno:** Tato úroveň poskytuje nejvyšší zabezpečení. Zařízení nemůže přistupovat k prostředkům společnosti, pokud je vystavené nějakým hrozbám. Pokud se najde jakákoli hrozba, zařízení se vyhodnotí jako nevyhovující.
 
@@ -60,22 +60,22 @@ Předpoklady zásad dodržování předpisů zařízením pro MTD:
 
    - **Vysoká:** Tato úroveň poskytuje nejnižší zabezpečení. Tato možnost povoluje všechny úrovně hrozeb, protože používá ochranu před mobilními hrozbami jenom ke generování sestav. Při tomto nastavení musejí mít zařízení aplikaci pro ochranu před mobilními hrozbami aktivovanou.
 
-6. Select **OK** twice, then select **Create** to create the policy.
+6. Dvakrát klikněte na **OK** a pak vyberte **vytvořit** a vytvořte zásadu.
 
 > [!IMPORTANT]
-> If you create Conditional Access policies for Office 365 or other services, the device compliance evaluation is assessed and noncompliant devices are blocked from accessing corporate resources until the threat is resolved in the device.
+> Pokud vytvoříte zásady podmíněného přístupu pro Office 365 nebo jiné služby, vyhodnotí se hodnocení dodržování předpisů zařízením a zařízení, která nedodržují předpisy, budou mít zablokovaný přístup k prostředkům společnosti, dokud se hrozby v zařízení nevyřeší.
 
 ## <a name="to-assign-an-mtd-device-compliance-policy"></a>Přiřazení zásad dodržování předpisů zařízením pro MTD
 
-To assign a device compliance policy to users:
+Postup přiřazení zásad dodržování předpisů zařízením uživatelům:
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Device** > **Compliance policies**.
+2. Vyberte **zařízení** > **zásady dodržování předpisů**.
 
-3. Select the policy you want to assign to users, and then select **Assignments**. Use the available options to *Include* and *Exclude* groups to receive this policy.  
+3. Vyberte zásadu, kterou chcete přiřadit uživatelům, a pak vyberte **přiřazení**. Pomocí dostupných možností můžete *Zahrnout* a *vyloučit* skupiny pro příjem těchto zásad.  
 
-4. Select Save to complete the assignment. When you save the assignment, the policy deploys to your selected users and their devices are evaluated for compliance.
+4. Kliknutím na Uložit dokončete přiřazení. Při uložení přiřazení se zásada nasadí vybraným uživatelům a jejich zařízení se vyhodnotí jako dodržování předpisů.
 
 ## <a name="next-steps"></a>Další kroky
 

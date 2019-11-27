@@ -1,6 +1,6 @@
 ---
-title: Configure S/MIME with Outlook for iOS in Microsoft Intune
-description: Understand S/MIME with Outlook for iOS in Microsoft Intune.
+title: Konfigurace S/MIME pomocí Outlooku pro iOS v Microsoft Intune
+description: Principy S/MIME s Outlookem pro iOS v Microsoft Intune.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -23,83 +23,83 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74412015"
 ---
-# <a name="configure-smime-with-outlook-for-ios"></a>Configure S/MIME with Outlook for iOS
+# <a name="configure-smime-with-outlook-for-ios"></a>Konfigurace S/MIME pomocí Outlooku pro iOS
 
-Secure/Multipurpose Internet Mail Extensions (S/MIME) provides an added layer of security for email sent to and from an Exchange ActiveSync (EAS) account. [Microsoft Outlook](https://aka.ms/omsmime) can utilize S/MIME to allow users to encrypt both outgoing messages and attachments, ensuring that only the intended recipient can read and access message content when using Office 365 accounts. Users can also digitally sign a message, which allows the recipients to both verify the identity of the sender and confirm that the message hasn't been tampered with. This capability is possible by utilizing certificates. For more information, see [Understanding S/MIME](https://docs.microsoft.com/previous-versions/tn-archive/aa995740(v=exchg.65)?redirectedfrom=MSDN).
+Standard S/MIME (Secure/Multipurpose Internet Mail Extensions) poskytuje úroveň zabezpečení pro odesílání e-mailů z účtu Exchange ActiveSync (EAS) a z něj. [Aplikace Microsoft Outlook](https://aka.ms/omsmime) může využívat S/MIME k šifrování odchozích zpráv i příloh, aby bylo zajištěno, že při použití účtů Office 365 může číst a přistupovat k obsahu zpráv pouze zamýšlený příjemce. Uživatelé můžou také digitálně podepsat zprávu, která příjemcům umožňuje ověřit identitu odesilatele a potvrdit, že zpráva nebyla úmyslně poškozena. Tato funkce je možná díky využití certifikátů. Další informace najdete v tématu [porozumění S/MIME](https://docs.microsoft.com/previous-versions/tn-archive/aa995740(v=exchg.65)?redirectedfrom=MSDN).
 
 > [!NOTE]
-> This topic describes how to deploy trusted root certificates via [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Microsoft Endpoint Manager is a single, integrated endpoint management platform for managing all your endpoints. This Microsoft Endpoint Manager admin center integrates ConfigMgr and Microsoft Intune.
+> Toto téma popisuje způsob nasazení důvěryhodných kořenových certifikátů přes [Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431). Microsoft Endpoint Manager je jediná integrovaná platforma pro správu koncových bodů pro správu všech vašich koncových bodů. Toto centrum pro správu Microsoft Endpoint Manageru integruje nástroj ConfigMgr a Microsoft Intune.
 
-## <a name="about-message-encryption"></a>About message encryption
-Users can send encrypted message to people in their organization and people outside their organization if they have the public portion of the encryption certificates. Private keys associated with the encryption certificates should always be protected and secured by the recipient of the encrypted message. The private key of the encryption certificate is used to decrypt the message by the recipient.
+## <a name="about-message-encryption"></a>Šifrování zpráv
+Uživatelé můžou poslat šifrovanou zprávu lidem v jejich organizaci a lidem mimo svou organizaci, pokud mají veřejnou část šifrovacích certifikátů. Privátní klíče přidružené k šifrovacím certifikátům by měly být vždy chráněné a zabezpečené příjemcem zašifrované zprávy. Privátní klíč šifrovacího certifikátu slouží k dešifrování zprávy příjemcem.
 
-Encrypted messages can be read only by recipients who have the certificate corresponding to the one that encrypted the message. If you try to send an encrypted message to recipient(s) whose encryption certificate is not available, the app will prompt you to remove these recipients before sending the email.
+Šifrované zprávy můžou číst jenom příjemci, kteří mají certifikát odpovídající zašifrované zprávě. Pokud se pokusíte odeslat šifrovanou zprávu příjemcům, jejichž šifrovací certifikát není k dispozici, aplikace vás vyzve k odebrání těchto příjemců před odesláním e-mailu.
 
-## <a name="about-digital-signatures"></a>About digital signatures
-A digitally signed message reassures the recipient that the message hasn't been tampered with and the identity of the sender is authentic. Recipients can only verify the digital signature if they’re using an email client that supports S/MIME.
+## <a name="about-digital-signatures"></a>O digitálních podpisech
+Digitálně podepsaná zpráva přeručí příjemce, že zpráva nebyla zfalšována a totožnost odesílatele je platná. Příjemci můžou digitální podpis ověřit jenom v případě, že používají e-mailového klienta, který podporuje S/MIME.
 
-## <a name="prerequisites"></a>Požadované součásti
-- Outlook for iOS only supports S/MIME on Office 365 accounts.
-- S/MIME must be configured for Office 365. For more information, see [How to configure S/MIME in Office 365](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/How-to-Configure-S-MIME-in-Office-365/ba-p/584516).
-- You must have a Certification Authority that can issue certificates that can be used for signing and encryption.
-- Deploy trusted root certificates via Endpoint Manager. For more information, see [Create trusted certificate profiles](~/protect/certificates-configure.md#create-trusted-certificate-profiles).
-- Encryption certificates must be imported into Endpoint Manager. For more information, see [Configure and use imported PKCS certificates with Intune](~/protect/certificates-imported-pfx-configure.md).
-- Install and Configure the PFX Connector for Microsoft Intune. For more information, see [Download, install, and configure the PFX Certificate Connector for Microsoft Intune](~/protect/certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
-- Devices must be MDM enrolled to receive trusted root and S/MIME certificates automatically from Endpoint Manager.
+## <a name="prerequisites"></a>Předpoklady
+- Outlook pro iOS podporuje jenom S/MIME na účtech Office 365.
+- Pro Office 365 musí být nakonfigurovaná přípona S/MIME. Další informace najdete v tématu [Postup konfigurace S/MIME v sadě Office 365](https://techcommunity.microsoft.com/t5/Exchange-Team-Blog/How-to-Configure-S-MIME-in-Office-365/ba-p/584516).
+- Musíte mít certifikační autoritu, která může vystavovat certifikáty, které se dají použít k podepisování a šifrování.
+- Nasazení důvěryhodných kořenových certifikátů prostřednictvím Správce koncových bodů. Další informace najdete v tématu [vytváření profilů důvěryhodných certifikátů](~/protect/certificates-configure.md#create-trusted-certificate-profiles).
+- Šifrovací certifikáty se musí importovat do správce koncových bodů. Další informace najdete v tématu [Konfigurace a používání importovaných certifikátů PKCS pomocí Intune](~/protect/certificates-imported-pfx-configure.md).
+- Nainstalujte a nakonfigurujte konektor PFX pro Microsoft Intune. Další informace najdete v tématech [stažení, instalace a konfigurace Certificate Connectoru PFX pro Microsoft Intune](~/protect/certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
+- Zařízení musí být zaregistrovaná v MDM pro příjem důvěryhodných kořenových certifikátů a certifikátů S/MIME z správce koncových bodů.
 
 > [!IMPORTANT]
-> You must download and install the updated PFX connector (version 6.1911.11.0 or later) for Microsoft Intune to use S/MIME encryption certificates with Outlook for iOS.
+> Aktualizovaný konektor PFX (verze 6.1911.11.0 nebo novější) je nutné stáhnout a nainstalovat, aby Microsoft Intune používal certifikáty šifrování S/MIME v aplikaci Outlook pro iOS.
 
-## <a name="smime-support-in-outlook-for-ios"></a>S/MIME Support in Outlook for iOS
-Outlook for iOS supports S/MIME signing and encryption of messages using certificates. Many customers have separate signing and encryption certificates, as opposed to having a single certificate that supports both signing and encryption. Signing certificates are generally unique across an individual user’s enrolled devices, while encryption certificates are shared across an individual user’s enrolled devices. Often, users will have used S/MIME for years and will have used different encryption certificates over time as certificates are renewed. Encryption certificate histories, including their private keys, must be present on the user’s device so that email that may have been encrypted with any of those certificates in the past can be read. It is also possible to have a single certificate that supports signing and encryption.
+## <a name="smime-support-in-outlook-for-ios"></a>Podpora S/MIME v Outlooku pro iOS
+Outlook pro iOS podporuje podepisování S/MIME a šifrování zpráv pomocí certifikátů. Mnoho zákazníků má samostatné podpisové a šifrovací certifikáty, na rozdíl od jednoho certifikátu, který podporuje podepisování i šifrování. Podpisové certifikáty jsou všeobecně jedinečné v rámci zaregistrovaných zařízení jednotlivých uživatelů, zatímco šifrovací certifikáty se sdílejí napříč registrovanými zařízeními jednotlivých uživatelů. Uživatelé budou často používat S/MIME po rocích a při obnovení certifikátů budou v průběhu času používat jiné šifrovací certifikáty. V zařízení uživatele musí být k dispozici historie šifrovacích certifikátů, včetně jejich privátních klíčů, aby bylo možné přečíst e-mail, který mohl být zašifrovaný pomocí kteréhokoli z těchto certifikátů v minulosti. Je také možné, že máte jeden certifikát, který podporuje podepisování a šifrování.
 
-Outlook for iOS supports two ways to deliver certificates to devices so that they can be used for S/MIME:
+Outlook pro iOS podporuje dva způsoby doručování certifikátů do zařízení, aby je bylo možné použít pro S/MIME:
 
-- **Users** can email S/MIME certificates to themselves and install them from attachments within Outlook for iOS on their mobile devices.
-- **Administrators** can import encryption certificate histories from any Certification Authority to Endpoint Manager. Endpoint Manager will then automatically deliver those certificates to any device that the user enrolls. Generally, Simple Certificate Enrollment Protocol (SCEP) is used for signing certificates. With SCEP, the private key is generated and stored on the enrolled device and a unique certificate is delivered to each device that a user enrolls, which can be used for non-repudiation. Administrators import encryption certificate histories for their users to Endpoint Manager, which then delivers all of the user’s encryption certs to any device they enroll. Lastly, Endpoint Manager supports derived credentials for customers who need support for the NIST 800-157 standard. On iOS, the Company Portal is used to retrieve signing and encryption certificates from Intune.
+- **Uživatelé** můžou zaregistrovat certifikáty s/MIME sami sebe a instalovat je z příloh v Outlooku pro iOS na jejich mobilních zařízeních.
+- **Správci** můžou importovat historie šifrovacích certifikátů z jakékoli certifikační autority do správce koncových bodů. Správce koncových bodů pak tyto certifikáty automaticky doručí do libovolného zařízení, které uživatel zaregistruje. K podpisovým certifikátům se obecně používá Simple Certificate Enrollment Protocol (SCEP). Pomocí protokolu SCEP se privátní klíč vygeneruje a uloží na zaregistrovaném zařízení a na každé zařízení, které uživatel zaregistruje, se doručí jedinečný certifikát, který se dá použít k Neodmítnutí. Správci naimportují historie šifrovacích certifikátů pro své uživatele do správce koncových bodů. tím se všechny šifrovací certifikáty uživatele zapisují do libovolného zařízení, které zaregistruje. A konečně správce koncových bodů podporuje odvozená pověření pro zákazníky, kteří potřebují podporu standardu NIST 800-157. V systému iOS se Portál společnosti používá k načtení podpisových a šifrovacích certifikátů z Intune.
 
-## <a name="configuring-outlook-for-ios-smime-in-endpoint-manager"></a>Configuring Outlook for iOS S/MIME in Endpoint Manager
-To configure Outlook for iOS S/MIME in Endpoint Manager, including automatically delivering S/MIME certificates that Outlook for iOS can use, use the following steps:
+## <a name="configuring-outlook-for-ios-smime-in-endpoint-manager"></a>Konfigurace Outlooku pro iOS S/MIME ve Správci koncových bodů
+Pokud chcete konfigurovat Outlook pro iOS S/MIME ve Správci koncových bodů, včetně automatického doručování certifikátů S/MIME, které může používat Outlook pro iOS, použijte následující postup:
 
-### <a name="add-the-microsoft-outlook-app"></a>Add the Microsoft Outlook app
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Add the Microsoft Outlook for iOS app from the app store to Endpoint Manager or sync Outlook for iOS from the Apple Volume Purchase Program. For more information, see [Add iOS store apps to Microsoft Intune](~/apps/store-apps-ios.md) or [How to manage iOS and macOS apps purchased through Apple Volume Purchase Program with Microsoft Intune](~/apps/vpp-apps-ios.md).
+### <a name="add-the-microsoft-outlook-app"></a>Přidat aplikaci Microsoft Outlook
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Přidejte aplikaci Microsoft Outlook pro iOS z App Storu do správce koncových bodů nebo synchronizujte Outlook pro iOS z Apple Volume Purchase Program. Další informace najdete v tématu [Přidání aplikací pro iOS Store do Microsoft Intune](~/apps/store-apps-ios.md) nebo [Správa aplikací pro iOS a MacOS zakoupených prostřednictvím Apple Volume purchase program pomocí Microsoft Intune](~/apps/vpp-apps-ios.md).
 
-### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Create the Outlook for iOS S/MIME configuration policy
+### <a name="create-the-outlook-for-ios-smime-configuration-policy"></a>Vytvoření zásady konfigurace Outlook pro iOS S/MIME
 
-The following steps allow you to create and configure the Outlook for iOS S/MIME policy in Endpoint Manager. These settings provide automated delivery of the signing and encryption certificates.
+Následující postup vám umožní vytvořit a nakonfigurovat zásadu Outlook pro iOS S/MIME ve Správci koncových bodů. Tato nastavení poskytují automatizované doručování podpisových a šifrovacích certifikátů.
 
-1. In [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Apps configuration policies** > **Add**.<br>
-The **Add configuration policy** pane will be displayed.
-2. Enter the **Name** and **Description** of the configuration policy.
-3. Select **Managed devices** as the **Device enrollment type**.
-4. Select **iOS/iPadOS** as the **Platform**.
-5. Click **Select the required app** to find and associate the Microsoft Outlook for iOS app that you added previously. 
-6. Click **Configuration settings** to add configuration settings. 
-    - Select **Use configuration designer** next to **Configuration settings format** and accept the default settings. For more information, see [Microsoft Outlook configuration settings](~/apps/app-configuration-policies-outlook.md).
-7. Click **S/MIME** to display the **Outlook S/MIME settings**.
+1. V [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)vyberte **aplikace** > **aplikace zásady konfigurace** > **Přidat**.<br>
+Zobrazí se podokno **Přidat zásady konfigurace** .
+2. Zadejte **název** a **Popis** zásady konfigurace.
+3. Jako **typ registrace zařízení**vyberte **spravovaná zařízení** .
+4. Jako **platformu**vyberte **iOS/iPadOS** .
+5. Klikněte na **vybrat požadovanou aplikaci** pro vyhledání a přidružení aplikace Microsoft Outlook pro iOS, kterou jste přidali dříve. 
+6. Kliknutím na **nastavení konfigurace** přidejte nastavení konfigurace. 
+    - Vyberte **použít návrháře konfigurace** vedle **Možnosti formát nastavení konfigurace** a přijměte výchozí nastavení. Další informace najdete v tématu [nastavení konfigurace aplikace Microsoft Outlook](~/apps/app-configuration-policies-outlook.md).
+7. Kliknutím na možnost **S/MIME** zobrazte **nastavení aplikace Outlook S/MIME**.
 
-    ![Screenshot of Outlook for iOS S/MIME settings](./media/app-configuration-policies-outlook-smime/app-configuration-policies-outlook-smime-01.png)
+    ![Snímek obrazovky s nastavením aplikace Outlook pro iOS S/MIME](./media/app-configuration-policies-outlook-smime/app-configuration-policies-outlook-smime-01.png)
 
-8. Set **Enable S/MIME** to **Yes**.
-9. Set **Deploy S/MIME certificates from Intune** to **Yes**.
-10. Under **Signing certificates** next to **Certificate profile type**, choose one of the following options:
-    - **SCEP** – Creates a certificate that is unique for the device and user that can be used by Microsoft Outlook for signing. For related information, see [Configure infrastructure to support SCEP with Intune](~/protect/certificates-scep-configure.md) and [Create a SCEP certificate profile](~/protect/certificates-profile-scep.md#create-a-scep-certificate-profile). 
-    - **PKCS imported certificates** – Uses a certificate that is unique to the user, but may be shared across devices and has been imported to Endpoint Manager by the administrator on behalf of the user. The certificate is delivered to any device that a user enrolls. Endpoint Manager will automatically pick the imported certificate that supports signing to deliver to the device the corresponds to the enrolled user.
-    - **Derived credentials** – Uses a certificate that is already on the device that can be used for signing. The certificate must be retrieved on the device using the derived credentials flows in Intune.
-11. Under **Encryption certificates** next to **Certificate profile type**, choose one of the following options:
-    - **PKCS imported certificates** – Delivers any encryption certificates that have been imported to Endpoint Manager by the administrator across any device a user enrolls Endpoint Manager will automatically pick the imported certificate or certificates that support encryption to deliver to the device that corresponds to the enrolled user.
-    - **Derived credentials** – Uses a certificate that is already on the device that can be used for signing. The certificate must be retrieved on the device using the derived credentials flows in Intune.
-12. Next to **End-user notifications**, choose notify end users by selecting **Company Portal** or **Email** to retrieve S/MIME certificates for Outlook for iOS.
+8. Nastavte **Povolit s/MIME** na **Ano**.
+9. Nastavte si **nasazení certifikátů S/MIME z Intune** na **Ano**.
+10. V části **podpisové certifikáty** vedle položky **typ profilu certifikátu**vyberte jednu z následujících možností:
+    - **SCEP** – vytvoří certifikát, který je jedinečný pro zařízení a uživatele, které může používat Microsoft Outlook k podepisování. Související informace najdete v tématu [Konfigurace infrastruktury pro podporu protokolu SCEP s Intune](~/protect/certificates-scep-configure.md) a [Vytvoření profilu certifikátu SCEP](~/protect/certificates-profile-scep.md#create-a-scep-certificate-profile). 
+    - **Importovaná certifikát PKCS** – používá certifikát, který je jedinečný pro uživatele, ale může být sdílený napříč zařízeními a byl importován do správce koncových bodů správcem jménem uživatele. Certifikát se doručuje na jakékoli zařízení, které uživatel zaregistruje. Správce koncových bodů automaticky vybere importovaný certifikát, který podporuje podepisování k doručování do zařízení, odpovídá zaregistrovanému uživateli.
+    - **Odvozené přihlašovací údaje** – používá certifikát, který je už na zařízení, který se dá použít k podepisování. Certifikát se musí na zařízení načíst pomocí odvozených toků přihlašovacích údajů v Intune.
+11. V části **šifrovací certifikáty** vedle položky **typ profilu certifikátu**vyberte jednu z následujících možností:
+    - **Importovaná certifikát PKCS** – poskytuje všechny šifrovací certifikáty, které se naimportovaly do správce koncových bodů správcem v jakémkoli zařízení, které uživatel zaregistruje. správce koncových bodů automaticky vybere importovaný certifikát nebo certifikáty, které podporují šifrování pro doručení do zařízení, které odpovídá zaregistrovanému uživateli.
+    - **Odvozené přihlašovací údaje** – používá certifikát, který je už na zařízení, který se dá použít k podepisování. Certifikát se musí na zařízení načíst pomocí odvozených toků přihlašovacích údajů v Intune.
+12. Vedle **oznámení koncových uživatelů**zvolte **portál společnosti** nebo **e-mailu** pro načtení certifikátů s/MIME pro Outlook pro iOS, a vyberte upozornění koncovým uživatelům.
 
-    On iOS, users must use the Company Portal app to retrieve their S/MIME certificates. Endpoint Manager will inform the user that they need to launch the Company Portal to retrieve their S/MIME certificates via the Notifications section of Company Portal, a push notification, and/or an email. Clicking one of the notifications will take the user to a landing page that informs them of progress retrieving the certificates. Once the certificates are retrieved, the user can use S/MIME from within Microsoft Outlook for iOS to sign and encrypt email.
+    V systému iOS musí uživatelé použít aplikaci Portál společnosti k načtení certifikátů S/MIME. Správce koncových bodů bude informovat uživatele, že musí spustit Portál společnosti pro načtení certifikátů S/MIME prostřednictvím části oznámení v Portál společnosti, nabízeného oznámení a/nebo e-mailu. Kliknutím na jedno z oznámení převezme uživatel na úvodní stránku, která je informuje o průběhu získávání certifikátů. Po načtení certifikátů může uživatel podepsat a šifrovat e-mail pomocí standardu S/MIME v aplikaci Microsoft Outlook pro iOS.
     
-    The end-user notifications include the following options:
-       - **Company Portal** – If selected, users will receive a push notification on their device, which will take them to the landing page in Company Portal where S/MIME certificates will be retrieved.
-        - **Email** – Sends an email to the end user informing them that they need to launch Company Portal to retrieve their S/MIME certificates. If the user is on their enrolled iOS device when they click the link in the email, they will be redirected to the Company Portal to retrieve their certificates.
+    Oznámení koncových uživatelů zahrnují následující možnosti:
+       - **Portál společnosti** – Pokud je tato možnost vybrána, budou uživatelé na svém zařízení dostávat nabízená oznámení, která přejdou na cílovou stránku v portál společnosti kam se budou načíst certifikáty S/MIME.
+        - **E-mail** – pošle koncovému uživateli e-mail s upozorněním, že musí spustit portál společnosti pro načtení certifikátů S/MIME. Pokud je uživatel na zaregistrovaném zařízení s iOS, když klikne na odkaz v e-mailu, přesměruje se na Portál společnosti pro načtení svých certifikátů.
     
-13. Select **Assignments** to assign the app configuration policy to the Azure AD groups. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](~/apps/apps-deploy.md).
+13. Vyberte **přiřazení** a přiřaďte zásady konfigurace aplikací ke SKUPINÁM Azure AD. Další informace najdete v článku [Přiřazení aplikací do skupin pomocí Microsoft Intune](~/apps/apps-deploy.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-- For more information, see [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md).
+- Další informace najdete v tématu [zásady konfigurace aplikací pro Microsoft Intune](app-configuration-policies-overview.md).

@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune reports
 titleSuffix: Microsoft Intune
-description: Intune provides specific report types with focused views that contain consistent and timely data.
+description: Intune poskytuje konkrétní typy sestav s podrobnými zobrazeními, která obsahují konzistentní a včasná data.
 keywords: ''
 author: erikre
 ms.author: erikre
@@ -22,134 +22,134 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390933"
 ---
-# <a name="intune-reports"></a>Intune reports
-Microsoft Intune reports allows you to more effectively and proactively monitor the health and activity of endpoints across your organization, and also provides other reporting data across Intune. For example, you will be able to see reports about device compliance, device health, and device trends. In addition, you can create custom reports to obtain more specific data. 
+# <a name="intune-reports"></a>Sestavy Intune
+Sestavy Microsoft Intune vám umožňují efektivněji a aktivně monitorovat stav a činnost koncových bodů napříč vaší organizací a také poskytuje jiná data pro vytváření sestav v rámci Intune. Budete například moci zobrazit sestavy o dodržování předpisů zařízením, stavu zařízení a trendech zařízení. Kromě toho můžete vytvořit vlastní sestavy, abyste získali konkrétnější data. 
 
 > [!NOTE]
-> The Intune reporting changes will roll out gradually over a period of time to help you prepare and adapt to the new structure.
+> Změny vytváření sestav Intune se postupně zavádějí do časového období, které vám pomůžou připravit a přizpůsobovat se k nové struktuře.
 
-The report types are organized into the following focus areas:
-- **Operational** - Provides timely, targeted data that helps you focus and take action. Admins, subject matter experts, and helpdesk will find these reports most helpful.
-- **Organizational** - Provides a broader summary of an overall view, such as device management state. Managers and admins will find these reports most helpful.
-- **Historical** - Provides patterns and trends over a period of time. Managers and admins will find these reports most helpful.
-- **Specialist** - Allows you to use raw data to create your own custom reports. Admins will find these reports most helpful.
+Typy sestav jsou uspořádány do následujících oblastí fokusu:
+- **Provozní** – poskytuje včasné a cílené údaje, které vám pomůžou se zaměřit a provést akci. Tito správci, odborníci na danou problematiku a helpdesk budou tyto sestavy Hledat nejužitečnější.
+- **Organizace** – poskytuje širší souhrn celkového zobrazení, například stav správy zařízení. Manažeři a správci tyto sestavy uvidí nejužitečnější.
+- **Historická** – poskytuje vzory a trendy v časovém intervalu. Manažeři a správci tyto sestavy uvidí nejužitečnější.
+- **Specialista** – umožňuje používat nezpracovaná data k vytváření vlastních sestav. Správci tyto sestavy pomůžou najít, což je nejužitečnější.
 
-The reporting framework provides a consistent and more comprehensive reporting experience. The available reports provide the following functionality:
-- **Search and sort** – You can search and sort across every column, no matter how large the dataset.
-- **Data paging** – You can scan your data based on paging, either page-by-page or by jumping to a specific page.
-- **Performance** - You can quickly generate and view reports created from large tenants.
-- **Export** – You can quickly export reporting data generated from large tenants.
+Rozhraní pro vytváření sestav poskytuje konzistentní a komplexnější prostředí pro vytváření sestav. Dostupné sestavy poskytují následující funkce:
+- **Hledání a řazení** – můžete hledat a řadit v každém sloupci bez ohledu na to, jak velkou datovou sadu používáte.
+- **Stránkování dat** – data můžete kontrolovat na základě stránkování, buď stránky stránky, nebo přechodem na konkrétní stránku.
+- **Výkon** – můžete rychle generovat a zobrazovat sestavy vytvořené z velkých klientů.
+- **Export** – můžete rychle exportovat data vytváření sestav vygenerovaná z velkých tenantů.
 
 ### <a name="who-can-access-the-data"></a>Kdo má k těmto datům přístup?
 
-Users with the following permissions can review logs:
+V protokolech mohou uživatelé s následujícími oprávněními zkontrolovat:
 
 - Globální správce
 - Správce služby Intune
-- Administrators assigned to an Intune role with **Read** permissions
+- Správci přiřazení k roli Intune s oprávněním **ke čtení**
 
-## <a name="non-compliant-devices-report-operational"></a>Non-compliant devices report (Operational)
-The Non-compliant devices report surfaces data typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in these reports is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the non-compliant devices report accessible without browsing away from active workflows. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+## <a name="non-compliant-devices-report-operational"></a>Sestava nevyhovujících zařízení (provozní)
+Zařízení nedodržující předpisy sestavují data Surface, která obvykle používá role helpdesku nebo správce k identifikaci problémů a k nápravě problémů. Data nalezená v těchto sestavách jsou včasná, volají neočekávané chování a mají smysl na to, aby se mohla jednat. Sestava je k dispozici společně s úlohou, takže zařízení nedodržující předpisy budou dostupná, aniž by bylo nutné procházet aktivní pracovní postupy. Tato sestava poskytuje možnosti filtrování, vyhledávání, stránkování a řazení. Můžete také přejít k podrobnostem, abyste mohli řešit problémy.
 
-You can view the **Noncompliant devices** report using the following steps:
+Sestavu **zařízení nesplňující požadavky** můžete zobrazit pomocí následujících kroků:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Device compliance** > **Noncompliant devices**.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **dodržování předpisů zařízením** > **zařízení nedodržující předpisy**.
 
-    ![Noncompliant device report](./media/intune-reports/intune-reports-02.png)
+    ![Sestava zařízení nedodržujících předpisy](./media/intune-reports/intune-reports-02.png)
 
-## <a name="device-compliance-report-organizational"></a>Device compliance report (Organizational)
-Device compliance reports are meant to be broad in nature and provide a more traditional reporting view of data to identify aggregated metrics. This report is designed to work with large datasets to get a full device compliance picture. For example, the device compliance report for device compliance shows all the compliance states for devices to give a broader view of the data, no matter how large the dataset. This report shows the full breakdown of records in addition to a convenient visualization of aggregated metrics. This report can be generated by applying filters on it and selecting the “Generate report” button. This will refresh the data to show the latest state with the ability to view the individual records that make up the aggregate data. Like most reports in the new framework, these records can be sorted and searched upon to focus on the information you need. 
+## <a name="device-compliance-report-organizational"></a>Sestava dodržování předpisů pro zařízení (organizace)
+Sestavy dodržování předpisů pro zařízení mají být široké a poskytují obecnější zobrazení pro generování sestav dat k identifikaci agregovaných metrik. Tato sestava je navržena pro práci s velkými datovými sadami, aby získala úplný obrázek o dodržování předpisů zařízením. Například zpráva o dodržování předpisů zařízením pro dodržování předpisů zařízením zobrazuje všechny stavy dodržování předpisů pro zařízení, aby poskytovaly širší pohled na data, bez ohledu na to, jak velkou datovou sadu potřebujete. Tato sestava obsahuje kromě vhodné vizualizace agregovaných metrik úplné členění záznamů. Tuto sestavu můžete vygenerovat pomocí filtrů a výběrem tlačítka generovat sestavu. Tím se aktualizují data, aby se zobrazila poslední stav s možností zobrazení jednotlivých záznamů, které tvoří agregovaná data. Podobně jako u většiny sestav v novém rozhraní se tyto záznamy dají seřadit a prohledat, abyste se mohli zaměřit na informace, které potřebujete. 
 
-To see a generated report of device state, you can use the following steps:
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Reports** to view the reports summary.
+Chcete-li zobrazit vygenerovanou sestavu stavu zařízení, můžete použít následující postup:
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **sestavy** , chcete-li zobrazit souhrn sestav.
 3. Vyberte **Dodržování předpisů zařízením**.
-4. Select the **Compliance status**, **OS**, and **Ownership** filters to refine your report.
-5. Click **Generate report** (or **Generate again**) to retrieve current data.
+4. Vyberte Filtry **stav dodržování předpisů**, **operační systém**a **vlastnictví** k upřesnění sestavy.
+5. Chcete-li načíst aktuální data, klikněte na tlačítko **Generovat sestavu** (nebo **znovu vygenerovat**).
 
-    ![Device compliance report](./media/intune-reports/intune-reports-02a.png)
+    ![Sestava dodržování předpisů pro zařízení](./media/intune-reports/intune-reports-02a.png)
 
     > [!NOTE]
-    > This **Device compliance** report provides a time stamp of when the report was last generated. 
+    > Tato sestava **dodržování předpisů zařízení** poskytuje časové razítko, kdy se sestava naposledy vygenerovala. 
 
-For related information, see [Enforce compliance for Microsoft Defender ATP with Conditional Access in Intune](~/protect/advanced-threat-protection.md).
+Související informace najdete v tématu [vymáhání dodržování předpisů pro Microsoft Defender ATP s podmíněným přístupem v Intune](~/protect/advanced-threat-protection.md).
 
-## <a name="reports-summary"></a>Reports summary 
+## <a name="reports-summary"></a>Souhrn sestav 
 
-The device compliance report is available as the summary report in the **Reports** workload. Use the following steps to view the device compliance report:
+Sestava dodržování předpisů zařízení je k dispozici jako Souhrnná sestava v úloze **sestav** . K zobrazení sestavy dodržování předpisů zařízením použijte následující postup:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Reports** to view the reports summary.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **sestavy** , chcete-li zobrazit souhrn sestav.
 
-    ![Intune Reports summary](./media/intune-reports/intune-reports-01.png)
+    ![Souhrn sestav Intune](./media/intune-reports/intune-reports-01.png)
 
-## <a name="device-compliance-trend-report-historical"></a>Device compliance trend report (Historical)
-Device compliance trend reports are more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time, and is useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
+## <a name="device-compliance-trend-report-historical"></a>Sestava trend dodržování předpisů pro zařízení (historická)
+Sestavy trendu dodržování předpisů pro zařízení jsou pravděpodobně používány správci a architekty k identifikaci dlouhodobých trendů dodržování předpisů zařízením. Agregovaná data se zobrazují v časovém intervalu a jsou užitečná pro budoucí rozhodování o investicích, řízení procesů a vyšetřování jakýchkoli anomálií. Filtry je také možné použít k zobrazení konkrétních trendů. Data poskytnutá touto sestavou jsou snímkem aktuálního stavu tenanta (téměř v reálném čase). 
 
-A device compliance trend report for device compliance trends can show the trend of device compliance states over a period of time. You can identify where compliance peaks occurred and focus your time and effort accordingly.
+Sestava trendu dodržování předpisů zařízením pro trendy dodržování předpisů zařízením může zobrazit trend stavů dodržování předpisů zařízením v časovém intervalu. Můžete určit, kde se nastaly špičky dodržování předpisů, a soustředit se na váš čas a úsilí.
 
-You can view the **Trends** report using the following steps:
+Sestavu **trendů** můžete zobrazit pomocí následujících kroků:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Reports** > **Trends** to view device compliance over a 60 day trend.
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **sestavy** > **trendy** pro zobrazení dodržování předpisů zařízením během 60 dne trendu.
 
-    ![Intune trend report](./media/intune-reports/intune-reports-03.png)
+    ![Sestava trendů Intune](./media/intune-reports/intune-reports-03.png)
 
-## <a name="azure-monitor-integration-reports-specialist"></a>Azure Monitor integration reports (Specialist)
-You can customize your own reports to get the data you want. The data in your reports will optionally be available via [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview) using [Log Analytics](reports.md#log-analytics) and [Azure Monitor workbooks](reports.md#workbooks). These solutions allow you to create custom queries, configure alerts, and make dashboards to show the device compliance data in the manner you want. Additionally, you can retain the activity logs in your Azure storage account, integrate with the reports using [security information and event management (SIEM) tools](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration), and correlate the reports to Azure AD activity logs. Azure Monitor workbooks can be used in addition to importing dashboards for custom reporting needs.
+## <a name="azure-monitor-integration-reports-specialist"></a>Sestavy Azure Monitor Integration (specialista)
+Můžete přizpůsobit vlastní sestavy a získat požadovaná data. Data v sestavách budou volitelně k dispozici prostřednictvím [Azure monitor](https://docs.microsoft.com/azure/azure-monitor/overview) v [sešitech](reports.md#workbooks) [Log Analytics](reports.md#log-analytics) a Azure monitor. Tato řešení umožňují vytvářet vlastní dotazy, konfigurovat výstrahy a vytvářet řídicí panely tak, aby se data o dodržování předpisů zařízením zobrazovala způsobem, který chcete. Kromě toho můžete uchovávat protokoly aktivit v účtu služby Azure Storage, integrovat se sestavami pomocí [nástrojů pro správu událostí a informací o zabezpečení (Siem)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)a korelovat sestavy do protokolů aktivit služby Azure AD. K importu řídicích panelů pro potřeby vlastních sestav můžete použít také sešity Azure Monitor.
 
 > [!NOTE]
-> Complex reporting functionality require an Azure subscription.
+> Komplexní funkce vytváření sestav vyžadují předplatné Azure.
 
-An example specialist report would corelate device ownership data with platform enrollment data in a custom report. Then, this custom report could be displayed on an existing dashboard in the Azure Active Directory portal.
+Ukázková sestavová sestava by mohla společně propojit data vlastnictví zařízení s daty zápisu platforem ve vlastní sestavě. Tato vlastní sestava se pak může zobrazit na existujícím řídicím panelu na portálu Azure Active Directory.
 
-You can create and view custom reports using the following steps:
+Vlastní sestavy můžete vytvářet a zobrazovat pomocí následujících kroků:
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Select **Reports** > **Diagnostic settings** add a [diagnostic setting](reports.md#diagnostic-settings).
+1. Přihlaste se k [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+2. Vyberte **sestavy** > **nastavení diagnostiky** přidat [nastavení diagnostiky](reports.md#diagnostic-settings).
 
-    ![Intune Reports summary](./media/intune-reports/intune-reports-04.png)
+    ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04.png)
 
-3. Click **Add diagnostic setting** to display the **Diagnostic settings** pane. 
-4. Add a **Name** for the diagnostic settings. 
-5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
+3. Kliknutím na **Přidat nastavení diagnostiky** zobrazíte podokno **nastavení diagnostiky** . 
+4. Přidejte **název** nastavení diagnostiky. 
+5. Vyberte nastavení **odeslat Log Analytics** a **DeviceComplianceOrg** .
 
-    ![Intune Reports summary](./media/intune-reports/intune-reports-04a.png)
+    ![Souhrn sestav Intune](./media/intune-reports/intune-reports-04a.png)
 
 6. Klikněte na **Uložit**.
-7. Next, select **Log analytics** to create and run a new log query using [Log Analytics](reports.md#log-analytics).
+7. V dalším kroku vyberte **Log Analytics** pro vytvoření a spuštění nového dotazu protokolu pomocí [Log Analytics](reports.md#log-analytics).
 
-   ![Log Analytics - Log query](./media/intune-reports/intune-reports-05.png)
+   ![Log Analytics – dotaz protokolu](./media/intune-reports/intune-reports-05.png)
 
-8. Select **Workbooks** to create or open an interactive report using [Azure Monitor workbooks](reports.md#workbooks).
+8. Vyberte **sešity** , chcete-li vytvořit nebo otevřít interaktivní sestavu pomocí [Azure monitor sešity](reports.md#workbooks).
 
-   ![Workbooks - Interactive reports](./media/intune-reports/intune-reports-07.png)
+   ![Sešity – interaktivní sestavy](./media/intune-reports/intune-reports-07.png)
 
-### <a name="diagnostic-settings"></a>Diagnostic settings
-Each Azure resource requires its own diagnostic setting. The diagnostic setting defines the following for a resource:
+### <a name="diagnostic-settings"></a>Nastavení diagnostiky
+Každý prostředek Azure vyžaduje vlastní nastavení diagnostiky. Nastavení diagnostiky definuje pro prostředek následující:
 
-- Categories of logs and metric data sent to the destinations defined in the setting. The available categories will vary for different resource types.
-- One or more destinations to send the logs. Current destinations include Log Analytics workspace, Event Hubs, and Azure Storage.
-- Retention policy for data stored in Azure Storage.
+- Kategorie protokolů a data metriky, které jsou odesílány do cílů definovaných v nastavení. Dostupné kategorie se budou lišit pro různé typy prostředků.
+- Jeden nebo více cílů pro odeslání protokolů. Aktuální cíle zahrnují Log Analytics pracovní prostor, Event Hubs a Azure Storage.
+- Zásady uchovávání informací pro data uložená v Azure Storage.
 
-A single diagnostic setting can define one of each of the destinations. If you want to send data to more than one of a particular destination type (for example, two different Log Analytics workspaces), then create multiple settings. Each resource can have up to 5 diagnostic settings.
+Jedno diagnostické nastavení může definovat jedno ze všech cílů. Pokud chcete odesílat data do více než jednoho konkrétního cílového typu (například dvou různých Log Analytics pracovních prostorů), vytvořte více nastavení. Každý prostředek může mít až 5 nastavení diagnostiky.
 
-For more information, about diagnostic settings, see [Create diagnostic setting to collect platform logs and metrics in Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
+Další informace o nastaveních diagnostiky najdete [v tématu Vytvoření nastavení diagnostiky pro shromažďování protokolů a metrik platforem v Azure](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostic-settings).
 
 ### <a name="log-analytics"></a>Log Analytics
-Log Analytics is the primary tool in the Azure portal for writing log queries and interactively analyzing the results of the queries. Even if a log query is used elsewhere in Azure Monitor, you'll typically write and test the query first using Log Analytics. For details about using Log Analytics and creating log queries, see [Overview of log queries in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
+Log Analytics je primárním nástrojem v Azure Portal pro zápis dotazů protokolu a interaktivní analýzu výsledků dotazů. I v případě, že se dotaz protokolu používá jinde v Azure Monitor, obvykle nejprve zapíšete a otestujete dotaz pomocí Log Analytics. Podrobnosti o používání Log Analytics a vytváření dotazů protokolu najdete v tématu [Přehled dotazů protokolu v Azure monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview). 
 
-### <a name="workbooks"></a>Workbooks
-Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).
+### <a name="workbooks"></a>Sešity
+Sešity kombinují text, analytické dotazy, metriky Azure a parametry do propracovaných interaktivních sestav. Sešity mohou upravovat všichni ostatní členové týmu, kteří mají přístup ke stejným prostředkům Azure. Další informace o sešitech najdete v tématu [Azure monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks). Můžete také pracovat se šablonami sešitu a přispívat do nich. Další informace najdete v tématu [Azure monitor šablon sešitu](https://go.microsoft.com/fwlink/?linkid=867045).
 
 ## <a name="next-steps"></a>Další kroky
 
-Learn more about the following technologies:
-- [Blog - Microsoft Intune reporting framework](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
+Přečtěte si další informace o těchto technologiích:
+- [Blogový Microsoft Intune – rozhraní pro vytváření sestav](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Reporting-Framework-Coming-to-Intune/ba-p/1009553)
 - [Azure Monitor](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-activity-logs-azure-monitor)
-- [What is Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
-- [Log queries](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
-- [Get started with Log Analytics in Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
-- [Azure Monitor workbooks](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
-- [Security information and event management (SIEM) tools](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)
+- [Co je Log Analytics?](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview#what-is-log-analytics)
+- [Dotazy protokolu](https://docs.microsoft.com/azure/azure-monitor/log-query/log-query-overview)
+- [Začínáme s Log Analytics v Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/log-query/get-started-portal)
+- [Azure Monitor sešity](https://docs.microsoft.com/azure/azure-monitor/app/usage-workbooks)
+- [Nástroje pro správu událostí a informací o zabezpečení (SIEM)](https://docs.microsoft.com/microsoft-365/security/office-365-security/siem-server-integration)

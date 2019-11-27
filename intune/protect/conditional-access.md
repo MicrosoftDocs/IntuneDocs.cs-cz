@@ -1,7 +1,7 @@
 ---
-title: Conditional Access with Microsoft Intune
+title: Podmíněný přístup s Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Learn how to define the conditions that users, devices, and apps must meet to access company resources in Microsoft Intune.
+description: Naučte se definovat podmínky, které uživatelé, zařízení a aplikace musí splnit, aby měli přístup k prostředkům společnosti v Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -24,43 +24,43 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188277"
 ---
-# <a name="learn-about-conditional-access-and-intune"></a>Learn about Conditional Access and Intune
+# <a name="learn-about-conditional-access-and-intune"></a>Další informace o podmíněném přístupu a Intune
 
-With Conditional Access, you can control the devices and apps that can connect to your email and company resources. 
+Pomocí podmíněného přístupu můžete řídit zařízení a aplikace, které se můžou připojit k e-mailu a prostředkům společnosti. 
 
-Enterprise Mobility + Security (EMS)  is not a standalone product. It's a solution that takes part on all services and products that are part of EMS. Conditional Access provides granular access control to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
+Enterprise Mobility + Security (EMS) není samostatný produkt. Jedná se o řešení, které se účastní všech služeb a produktů, které jsou součástí EMS. Podmíněný přístup poskytuje podrobné řízení přístupu, které zajistí zabezpečení firemních dat a současně uživatelům poskytuje prostředí, které jim umožní provádět jejich nejlepší práci z libovolného zařízení a z libovolného místa.
 
 Můžete definovat podmínky, které omezují přístup k podnikovým datům podle polohy, zařízení, stavu uživatele a „choulostivosti“ aplikace.
 
 > [!NOTE]
 > Podmíněný přístup také rozšiřuje své možnosti na [služby Office 365](https://docs.microsoft.com/office365/enterprise/office-365-client-support-conditional-access).
 
-![Conditional Access diagram](./media/conditional-access/ca-diagram-1.png)
+![Diagram podmíněného přístupu](./media/conditional-access/ca-diagram-1.png)
 
-## <a name="use-conditional-access-with-intune"></a>Use Conditional Access with Intune
+## <a name="use-conditional-access-with-intune"></a>Použití podmíněného přístupu s Intune
 
-Conditional Access is an Azure Active Directory capability that is included with an Azure Active Directory Premium license. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
+Podmíněný přístup je Azure Active Directory funkce, která je součástí licence Azure Active Directory Premium. Intune tuto funkci vylepšuje tím, že do řešení přidává dodržování předpisů pro mobilní zařízení a správu mobilních aplikací. 
 
-![Intune and Conditional Access when using EMS](./media/conditional-access/intune-with-ca-1.png)
+![Intune a podmíněný přístup při použití EMS](./media/conditional-access/intune-with-ca-1.png)
 
-Ways to use Conditional Access with Intune:
+Způsoby použití podmíněného přístupu s Intune:
 
-- **Device-based Conditional Access**
+- **Podmíněný přístup podle zařízení**
 
-  - Conditional Access for Exchange on-premises
+  - Podmíněný přístup pro místní Exchange
 
-  - Conditional Access based on network access control
+  - Podmíněný přístup na základě řízení přístupu k síti
 
-  - Conditional Access based on device risk
+  - Podmíněný přístup na základě rizika zařízení
 
-  - Conditional Access for Windows PCs
+  - Podmíněný přístup pro počítače s Windows
 
     - Ve vlastnictví firmy
 
     - Přineste si vlastní zařízení (BYOD)
 
-- **App-based Conditional Access**
+- **Podmíněný přístup na základě aplikace**
 
 ## <a name="next-steps"></a>Další kroky
 
-[Common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md)
+[Běžné způsoby použití podmíněného přístupu s Intune](conditional-access-intune-common-ways-use.md)

@@ -1,7 +1,7 @@
 ---
-title: iOS device settings in Microsoft Intune - Azure | Microsoft Docs
+title: nastavení zařízení s iOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Add, configure, or create settings on iOS devices to restrict features, including setting password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser in Microsoft Intune.
+description: Přidání, konfigurace nebo vytvoření nastavení na zařízeních s iOS k omezení funkcí, včetně nastavení požadavků na heslo, řízení uzamčené obrazovky, používání integrovaných aplikací, přidávání omezených nebo schválených aplikací, zpracování zařízení Bluetooth, připojení ke cloudu pro zálohování a ukládání, Povolit celoobrazovkový režim, přidat domény a řídit, jak uživatelé pracují s webovým prohlížečem Safari v Microsoft Intune.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -23,611 +23,611 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74465656"
 ---
-# <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>iOS and iPadOS device settings to allow or restrict features using Intune
+# <a name="ios-and-ipados-device-settings-to-allow-or-restrict-features-using-intune"></a>nastavení zařízení s iOS a iPadOS pro povolení nebo omezení funkcí pomocí Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-This article lists and describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
+Tento článek obsahuje seznam a popisuje různá nastavení, která můžete řídit na zařízeních s iOS a iPadOS. V rámci řešení pro správu mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, nastavit pravidla pro hesla, povolit nebo omezit konkrétní aplikace a další.
 
-These settings are added to a device configuration profile in Intune, and then assigned or deployed to your iOS devices.
+Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí na vaše zařízení s iOS.
 
 > [!TIP]
-> These settings use Apple's MDM settings. For more information on these settings, see [Apple's mobile device management settings](https://support.apple.com/guide/mdm/welcome/web) (opens Apple's web site).
+> Tato nastavení používají nastavení MDM od společnosti Apple. Další informace o těchto nastaveních najdete v tématu [Nastavení správy mobilních zařízení společnosti Apple](https://support.apple.com/guide/mdm/welcome/web) (otevření webu společnosti Apple).
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Create a device restrictions configuration profile](../device-restrictions-configure.md).
+[Vytvoří konfigurační profil omezení zařízení](../device-restrictions-configure.md).
 
 > [!NOTE]
-> These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS enrollment](../ios-enroll.md).
+> Tato nastavení platí pro různé typy registrace s některými nastaveními, která platí pro všechny možnosti registrace. Další informace o různých typech registrace najdete v tématu Registrace zařízení se [systémem iOS](../ios-enroll.md).
 
 ## <a name="general"></a>Obecné
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Share usage data**: Choose **Block** to prevent the device from sending diagnostic and usage data to Apple. **Not configured** (default) allows this data to be sent.
+- **Sdílet data o využití**: vyberte možnost **blokovat** , pokud chcete zabránit tomu, aby zařízení odesílalo data o diagnostice a využití do Applu. **Nenakonfigurováno** (výchozí) umožňuje odesílat tato data.
 
-- **Screen capture**: Choose **Block** to prevent screenshots or screen captures on the device. In iOS 9.0 and newer, it also blocks screen recordings. **Not configured** (default) lets the user capture the screen contents as an image or as a video.
+- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. V iOS 9,0 a novějších blokují také nahrávky obrazovky. **Nenakonfigurováno** (výchozí) umožňuje uživateli zachytit obsah obrazovky jako obrázek nebo jako video.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Untrusted TLS certificates**: Choose **Block** to prevent untrusted Transport Layer Security (TLS) certificates on the device. **Not configured** (default) allows TLS certificates.
-- **Allow over-the-air PKI updates**: **Allow** lets your users  receive software updates without connecting their devices to a computer.
-- **Limit ad tracking**: Choose **Limit** to disable the device advertising identifier. **Not configured** (default) keeps it enabled.
+- **Nedůvěryhodné certifikáty TLS**: vyberte **blok** , aby se zabránilo nedůvěryhodným certifikátům TLS (Transport Layer Security) na zařízení. **Nenakonfigurováno** (výchozí) POVOLÍ certifikáty TLS.
+- Povolení bezplatných **aktualizací PKI** **: umožňuje** uživatelům přijímat aktualizace softwaru bez připojení jejich zařízení k počítači.
+- **Omezení sledování služby AD**: volbou možnosti **omezit** zakažte identifikátor inzerce zařízení. **Není nakonfigurováno** (výchozí) udržuje povoleno.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Diagnostics submission settings modification**: **Block** prevents the user from changing the diagnostic submission and app analytics settings in **Diagnostics and Usage** (device Settings). **Not configured** (default) allows the user to change these device settings.
+- **Úprava nastavení odeslání diagnostiky**: **blok** znemožní uživateli měnit nastavení odesílání diagnostiky a analýzy aplikací v části **Diagnostika a použití** (nastavení zařízení). **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit tato nastavení zařízení.
 
-  To use this setting, set the **Share usage data** setting to **Block**.
-
-  Tato funkce platí pro:  
-  - iOS 9.3.2 and newer
-
-- **Remote screen observation by Classroom app**: Choose **Block** to prevent the Classroom app from remotely viewing the screen on the device. **Not configured** (default) allows the Apple Classroom app to view the screen.
-
-  To use this setting, set the **Screen capture** setting to **Block**.
+  Chcete-li použít toto nastavení, nastavte nastavení **sdílet data o využití** pro **blokování**.
 
   Tato funkce platí pro:  
-  - iOS 9.3 and newer
+  - iOS 9.3.2 a novější
 
-- **Unprompted screen observation by Classroom app**: If set to **Allow**, teachers can silently observe the screen of students iOS devices using the Classroom app without the students' knowledge. Student devices enrolled in a class using the Classroom app automatically give permission to that course’s teacher. **Not configured** (default) prevents this feature.
+- **Sledování vzdálené obrazovky podle aplikace učebny**: zvolit **blok** , aby aplikace učebny zabránila vzdálenému zobrazení obrazovky na zařízení. **Nenakonfigurováno** (výchozí) umožňuje aplikaci Apple učeben zobrazit obrazovku.
 
-  To use this setting, set the **Screen capture** setting to **Block**.
+  Chcete-li použít toto nastavení, nastavte nastavení **zachycení obrazovky** na **blokovat**.
 
-- **Enterprise app trust**: Choose **Block** to remove the **Trust Enterprise Developer** button in Settings > General > Profiles & Device Management on the device. **Not configured** (default) lets the user choose to trust apps that aren't downloaded from the app store.
-- **Account modification**: When set to **Block**, the user can't update the device-specific settings from the iOS settings app. For example, the user can't create new device accounts, or change the user name or password. **Not configured** (default) allows users to change these settings.
+  Tato funkce platí pro:  
+  - iOS 9,3 a novější
 
-  This feature also applies to settings accessible from the iOS settings app, such as Mail, Contacts, Calendar, Twitter, and more. This feature doesn't apply to apps with account settings that aren't configurable from the iOS settings app, such as the Microsoft Outlook app.
+- **Aplikace učebny s upozorněním na obrazovku**: Pokud je tato možnost **povolená**, můžou učitelé tiše sledovat obrazovku zařízení s iOS v iOS pomocí aplikace učebny bez vědomí vašich studentů. Studentská zařízení zaregistrovaná ve třídě pomocí aplikace učebny automaticky poskytnou oprávnění učiteli tohoto kurzu. **Nenakonfigurováno** (výchozí) zabrání této funkci.
 
-- **Screen time**: Choose **Block** to prevent users from setting their own restrictions in Screen Time (device settings). **Not configured** allows the user to configure device restrictions (such as parental controls or content, and privacy restrictions) on the device.
+  Chcete-li použít toto nastavení, nastavte nastavení **zachycení obrazovky** na **blokovat**.
 
-  This setting was renamed from **Enabling restrictions in the device settings**. Impact of this change:  
+- **Důvěryhodnost podnikových aplikací**: vyberte **blok** pro odebrání veřejného tlačítka **Enterprise Developer** v nastavení > obecných profilů > & správu zařízení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli zvolit důvěřování aplikacím, které se nestahují z App Storu.
+- **Změna účtu**: když se nastaví **blok**, uživatel nemůže v aplikaci nastavení pro iOS aktualizovat nastavení specifická pro konkrétní zařízení. Uživatel například nemůže vytvořit nové účty zařízení nebo změnit uživatelské jméno nebo heslo. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
+
+  Tato funkce se vztahuje také na nastavení přístupná z aplikace nastavení pro iOS, jako je pošta, kontakty, kalendář, Twitter a další. Tato funkce se nevztahuje na aplikace s nastavením účtu, které nemůžete konfigurovat z aplikace nastavení pro iOS, jako je například aplikace Microsoft Outlook.
+
+- **Čas obrazovky**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v nastavení vlastních omezení na obrazovce čas (nastavení zařízení). **Není nakonfigurováno** umožňuje uživateli nakonfigurovat na zařízení omezení zařízení (například Rodičovská kontrola nebo obsah a omezení ochrany osobních údajů).
+
+  Toto nastavení bylo přejmenováno z **možnosti Povolit omezení v nastavení zařízení**. Dopad této změny:  
   
-  - iOS 11.4.1 and earlier: **Block** prevents end users from setting their own restrictions in the device settings. The behavior is the same; and there are no changes for end users.
-  - iOS 12.0 and newer: **Block** prevents end users from setting their own **Screen Time** in the device settings (Settings > General > Screen Time), including content and privacy restrictions. Devices upgraded to iOS 12.0 won't see the restrictions tab in the device settings anymore (Settings > General > Device Management > Management Profile > Restrictions). These settings are in **Screen Time**.
+  - iOS 11.4.1 a starší: **blok** brání koncovým uživatelům v nastavení vlastních omezení v nastavení zařízení. Chování je stejné. a pro koncové uživatele nejsou žádné změny.
+  - iOS 12,0 a novější: **blok** znemožní koncovým uživatelům nastavit vlastní **čas na obrazovku** v nastavení zařízení (nastavení > Obecné > čas obrazovky), včetně omezení obsahu a ochrany osobních údajů. V zařízeních upgradovaných na iOS 12,0 se už v nastavení zařízení nezobrazí karta omezení (Nastavení > Obecné > Správa zařízení > > omezení profilu správy. Tato nastavení se nacházejí v **čase obrazovky**.
   
-- **Use of the erase all content and settings option on the device**: Choose **Block** so users can't use the erase all content and settings option on the device. **Not configured** (default) gives users access to these settings.
-- **Device name modification**: Choose **Block** so the device name can't be changed. **Not configured** (default) allows the user to change the name of the device.
-- **Notification settings modification**: Choose **Block** so the notification settings can't be changed. **Not configured** (default) allows the user to change the device notification settings.
-- **Wallpaper modification**: **Block** prevents the wallpaper from being changed. **Not configured** (default) allows the user to change the wallpaper on the device.
-- **Enterprise app trust settings modification**: **Block** prevents the user from changing the enterprise app trust settings on supervised devices. **Not configured** (default) allows the user to trust apps that aren't downloaded from the app store.
-- **Configuration profile changes**: **Block** prevents configuration profile changes on the device. **Not configured** (default) allows the user to install configuration profiles.
-- **Activation Lock**: Choose **Allow** to enable Activation Lock on supervised iOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated.
-- **Block app removal**: Choose **Block** to prevent users from removing apps. **Not configured** (default) allows users to remove apps from the device.
-- **Blocks USB Restricted mode**: Choose **Block** to disable USB Restricted mode on supervised devices. USB Restricted mode prevents USB accessories from exchanging data with a device that's locked for over an hour. **Not configured** (default) allows USB Restricted mode.
-- **Force automatic date and time**: **Require** forces supervised devices to set the Date & Time automatically. The device's time zone is updated when the device has cellular connections or has Wi-Fi with location services enabled.
-- **Require students to request permission to leave Classroom course**: **Require** forces students enrolled in an unmanaged course using the Classroom app to request permission from the teacher to leave the course. **Not configured** (default) doesn't force the student to ask for permission.
+- **Použití možnosti pro vymazání veškerého obsahu a nastavení na zařízení**: vyberte **blokovat** , aby uživatelé nemohli na zařízení používat možnost pro vymazání veškerého obsahu a nastavení. **Není nakonfigurováno** (výchozí) poskytuje uživatelům přístup k těmto nastavením.
+- **Úprava názvu zařízení**: vyberte **blokovat** , aby se název zařízení nemohlo změnit. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit název zařízení.
+- **Úprava nastavení oznámení**: vyberte **blok** , aby se nastavení oznámení nedaly změnit. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit nastavení oznámení o zařízení.
+- **Úprava tapety**: **blok** brání v změně tapety. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit tapetu v zařízení.
+- **Změny nastavení vztahu důvěryhodnosti pro podnikovou aplikaci**: **blok** znemožní uživateli měnit nastavení vztahu důvěryhodnosti podnikových aplikací na zařízeních pod dohledem. **Nenakonfigurováno** (výchozí) umožňuje uživateli důvěřovat aplikacím, které se nestahují z App Storu.
+- **Změny profilu konfigurace**: **blok** zabraňuje změnám konfiguračního profilu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli instalovat konfigurační profily.
+- **Zámek aktivace**: vyberte **povolit** pro povolení zámek aktivace na zařízeních s iOS pod dohledem. Zámek aktivace znemožňuje opětovné aktivaci ztraceného nebo odcizeného zařízení.
+- **Blokovat odebrání aplikace**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v odebírání aplikací. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebírat aplikace ze zařízení.
+- **Blokuje omezený režim USB**: vyberte možnost **blokovat** , pokud chcete zakázat režim omezeného portu USB na zařízeních pod dohledem. Režim omezeného USB brání příslušenství USB v výměně dat se zařízením, které je po celou hodinu uzamčené. **Není nakonfigurováno** (výchozí) umožňuje režim s omezeným přístupem USB.
+- **Vynutit automatické datum a čas**: **vyžaduje** , aby zařízení pod dohledem, aby automaticky nastavila datum &ho času. Časové pásmo zařízení se aktualizuje, když má zařízení mobilní připojení nebo má Wi-Fi s povolenými službami zjišťování polohy.
+- **Vyžadovat, aby studenti požádali o oprávnění k opuštění kurzu učebnosti**: **vyžadovat** , aby studenti zaregistrovaní v nespravovaném kurzu pomocí aplikace učeben požádali o oprávnění od učitelů k opuštění tohoto kurzu. **Nenakonfigurováno** (výchozí) nenutí studenta požádat o oprávnění.
 
   Tato funkce platí pro:  
-  - iOS 11.3 and newer
+  - iOS 11,3 a novější
 
-- **Allow Classroom to lock to an app and lock the device without prompting**: **Enable** allows teacher to lock apps or lock the device using the Classroom app without prompting the student. Locking apps means the device can only access teacher specified apps. **Not configured** (default) prevents teachers from locking apps or devices using the Classroom app without prompting the student.
-
-  Tato funkce platí pro:  
-  - iOS 11.0 and newer
-
-- **Automatically join Classroom classes without prompting**: **Enable** automatically allows students to join a class that is in the Classroom app without prompting the teacher. **Not configured** (default) prompts the teacher that students want to join a class that is in the Classroom app.
+- **Povolit učebně zamknout aplikaci a uzamknout zařízení bez zobrazení výzvy**: **Povolit** umožní učitelům uzamknout aplikace nebo zamknout zařízení pomocí aplikace učeben bez vyzvání studenta. Uzamykání aplikací znamená, že zařízení může přistupovat jenom k aplikacím určeném pro učitele. **Nenakonfigurováno** (výchozí) znemožní učitelům uzamknout aplikace nebo zařízení pomocí aplikace učebny bez vyzvání studenta.
 
   Tato funkce platí pro:  
-  - iOS 11.0 and newer
+  - iOS 11,0 a novější
 
-- **Block VPN creation**: **Block** prevents users from creating VPN configuration settings. **Not configured** (default) lets users create VPNs on the device.
-- **Modifying eSIM settings**: **Block** prevents users from removing or adding a cellular plan to the eSIM on the device. **Not configured** (default) allows users to change these settings.
+- **Automaticky připojovat třídy učeben bez výzvy k zadání**: **Povolit** automaticky umožňuje studentům připojit se ke třídě, která je v aplikaci učebny bez vyzvání k učiteli. **Nenakonfigurováno** (výchozí) vyzývá učitele, aby se studenti chtěli připojit ke třídě, která je v aplikaci učebny.
 
   Tato funkce platí pro:  
-  - iOS 12.1 and newer
+  - iOS 11,0 a novější
 
-- **Defer software updates**: When set to **Not configured** (default), software updates are shown on the device as Apple releases them. For example, if an iOS update gets released by Apple on a specific date, then that update naturally shows up on the device around the release date.
+- **Blokovat vytvoření sítě VPN**: **blok** zabraňuje uživatelům v vytváření nastavení konfigurace sítě VPN. **Nenakonfigurováno** (výchozí) umožňuje uživatelům vytvářet v zařízení sítě VPN.
+- **Úprava nastavení eSIM**: **blok** znemožní uživatelům odebrat nebo přidat plán na mobilní zařízení na kartě zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit tato nastavení.
 
-  **Enable** allows you to delay when software updates are shown on devices, from 0-90 days. This setting doesn't control when updates are or aren't installed. 
+  Tato funkce platí pro:  
+  - iOS 12,1 a novější
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. When the delay expires, users get a notification to update to the earliest version of the OS available when the delay was triggered.
+- **Odložit aktualizace softwaru**: Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), v zařízení se zobrazí aktualizace softwaru, které Apple uvolňuje. Pokud se třeba aktualizace pro iOS uvolní od společnosti Apple na konkrétní datum, pak se tato aktualizace přirozeně zobrazuje na zařízení v datu vydání verze.
 
-    For example, if iOS 12.a is available on **January 1**, and **Delay visibility** is set to **5 days**, then iOS 12.a isn't shown as an available update on end user devices. On the **sixth day** following the release, that update is available, and end users can install it.
+  **Možnost Povolit** umožňuje prodlevu při zobrazení aktualizací softwaru na zařízeních, od 0-90 dnů. Toto nastavení neřídí, kdy jsou aktualizace nebo nejsou nainstalovány. 
 
-    This setting applies to:  
-    - iOS 11.3 and newer
+  - **Zpoždění viditelnosti aktualizací softwaru**: zadejte hodnotu od 0-90 dnů. Po vypršení zpoždění budou uživatelé dostávat oznámení o aktualizaci na nejstarší verzi operačního systému, která je k dispozici při spuštění zpoždění.
+
+    Pokud je například iOS 12. a k dispozici **1. ledna**a je **zpoždění viditelnosti** nastaveno na **5 dní**, pak se iOS 12. a nezobrazí jako dostupná aktualizace na zařízeních koncových uživatelů. Po **šestém dni** od vydání je tato aktualizace dostupná a koncoví uživatelé ji můžou nainstalovat.
+
+    Toto nastavení platí pro:  
+    - iOS 11,3 a novější
 
 ## <a name="password"></a>Heslo
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Password**: **Require** the end user to enter a password to access the device. **Not configured** (default) allows users to access the device without entering a password.
+- **Heslo**: **vyžaduje** , aby koncový uživatel zadal heslo pro přístup k zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přístup k zařízení bez zadání hesla.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
 > [!IMPORTANT]
-> On user-enrolled devices, if you configure any password setting, then the **Simple passwords** settings is automatically set to **Block**, and a 6 digit PIN is enforced.
+> Pokud u zařízení zaregistrovaných uživatelem nakonfigurujete nastavení hesla, budou jednoduchá nastavení **hesla** automaticky nastavená tak, aby se **zablokovala**, a bude vynucený kód PIN s 6 číslicemi.
 >
-> For example, you configure the **Password expiration** setting, and push this policy to user-enrolled devices. On the devices, the following happens:
+> Například nakonfigurujete nastavení **vypršení platnosti hesla** a tuto zásadu nahrajete do zařízení zaregistrovaných uživatelem. V zařízeních dojde k následujícímu:
 >
-> - The **Password expiration** setting is ignored.
-> - Simple passwords, such as `1111` or `1234`, aren't allowed.
-> - A 6 digit pin is enforced.
+> - Nastavení **vypršení platnosti hesla** je ignorováno.
+> - Jednoduchá hesla, například `1111` nebo `1234`, nejsou povolena.
+> - Je vynutil kód PIN pro číslice 6.
 
-- **Simple passwords**: Choose **Block** to require more complex passwords. **Not configured** allows simple passwords, such as `0000` and `1234`.
+- **Jednoduchá hesla**: vyberte **blok** pro vyžadování složitějších hesel. **Nenakonfigurováno** umožňuje jednoduchá hesla, jako jsou `0000` a `1234`.
 
-- **Required password type**: Choose the type of password your organization require. Možnosti:
+- **Požadovaný typ hesla**: Vyberte typ hesla, které vaše organizace vyžaduje. Možnosti:
   - **Výchozí ze zařízení**
-  - **Numeric**
-  - **Alphanumeric**
-- **Number of non-alphanumeric characters in password**: Enter the number of symbol characters, such as `#` or `@`, that must be included in the password.
+  - **Číselné**
+  - **Písmena**
+- **Počet nealfanumerických znaků v hesle**: zadejte počet znaků symbolu, například `#` nebo `@`, které musí heslo obsahovat.
 
-- **Minimum password length**: Enter the minimum length a user must enter, between 4 and 14 characters. On user enrolled devices, enter a length between 4 and 6 characters.
+- **Minimální délka hesla**: zadejte minimální délku, kterou musí uživatel zadat, a to v rozmezí 4 až 14 znaků. Do zařízení zaregistrovaných uživatelem zadejte délku 4 až 6 znaků.
   
   > [!NOTE]
-  > For devices that are user enrolled, users can set a PIN greater than 6 digits. But, no more than 6 digits are enforced on the device. For example, an administrator sets the minimum length to `8`. On user-enrolled devices, users are only required to set a 6 digit PIN. Intune doesn't force a PIN greater than 6 digits on user-enrolled devices.
+  > U zařízení, která jsou zaregistrovaná uživatelem, můžou uživatelé nastavit PIN kód o více než 6 číslic. V zařízení se ale neuplatní více než 6 číslic. Správce například nastaví minimální délku `8`. U zařízení zaregistrovaných uživatelem se uživatelům vyžaduje jenom zadání kódu PIN pro 6 číslic. Intune nevynutí na uživatelem zaregistrovaná zařízení kód PIN delší než 6 číslic.
 
-- **Number of sign-in failures before wiping device**: Enter the number of failed sign-ins to allow before the device is wiped (between 4-11).
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte počet neúspěšných přihlášení, než se zařízení vymaže (mezi 4-11).
   
-  iOS has built-in security that can impact this setting. For example, iOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes.
+  iOS má integrované zabezpečení, které může mít vliv na toto nastavení. IOS může například zpozdit spuštění zásad v závislosti na počtu neúspěšných přihlášení. Může také zvážit opakované zadání stejného hesla jako jednoho pokusu. [Příručka zabezpečení iOS](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) společnosti Apple (Otevírá web společnosti Apple) je dobrým prostředkem a poskytuje konkrétnější údaje o heslech.
   
-- **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long the device stays idle before the user must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter. Supported on iOS 8.0 and newer devices.
+- **Maximální počet minut po uzamčení obrazovky, po kterém se vyžaduje zadání hesla**<sup>1</sup>: zadejte, jak dlouho zůstane zařízení nečinné, než uživatel musí znovu zadat heslo. Pokud je čas, který zadáte, delší dobu, než je aktuálně nastaveno na zařízení, zařízení bude ignorovat čas, který zadáte. Podporováno v zařízeních iOS 8,0 a novějších.
 
-- **Maximum minutes of inactivity until screen locks**<sup>1</sup>: Enter the maximum number of minutes of inactivity allowed on the device until the screen locks.
+- **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**<sup>1</sup>: zadejte maximální počet minut nečinnosti, který je v zařízení povolený, dokud se nezamkne obrazovka.
 
-  **iOS options**:  
+  **Možnosti iOS**:  
 
-  - **Not configured** (Default): Intune doesn't touch this setting.
-  - **Immediately**: Screen locks after 30 seconds of inactivity.
-  - **1**: Screen locks after 1 minute of inactivity.
-  - **2**: Screen locks after 2 minutes of inactivity.
-  - **3**: Screen locks after 3 minutes of inactivity.
-  - **4**: Screen locks after 4 minutes of inactivity.
-  - **5**: Screen locks after 5 minutes of inactivity.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
+  - **Okamžitě**: po 30 sekundách nečinnosti se zamkne obrazovka.
+  - **1**: obrazovka se zamkne po 1 minutách nečinnosti.
+  - **2**: obrazovka se zamkne po 2 minutách nečinnosti.
+  - **3**: obrazovka se zamkne po 3 minutách nečinnosti.
+  - **4**: obrazovka se zamkne po 4 minutách nečinnosti.
+  - **5**: obrazovka se zamkne po 5 minutách nečinnosti.
     
-  **iPadOS options**:  
+  **iPadOS možnosti**:  
 
-  - **Not configured** (Default): Intune doesn't touch this setting.
-  - **Immediately**: Screen locks after 2 minutes of inactivity.
-  - **2**: Screen locks after 2 minutes of inactivity.
-  - **5**: Screen locks after 5 minutes of inactivity.
-  - **10**: Screen locks after 10 minutes of inactivity.
-  - **15**: Screen locks after 15 minutes of inactivity.
+  - **Nenakonfigurováno** (výchozí): Intune toto nastavení nedotkne.
+  - **Okamžitě**: po 2 minutách nečinnosti se zamkne obrazovka.
+  - **2**: obrazovka se zamkne po 2 minutách nečinnosti.
+  - **5**: obrazovka se zamkne po 5 minutách nečinnosti.
+  - **10**: po 10 minutách nečinnosti se zamkne obrazovka.
+  - **15**: po 15 minutách nečinnosti se zamkne obrazovka.
 
-  If a value doesn't apply to iOS or iPadOS, then Apple uses the closest *lowest* value. For example, if you enter `4` minutes, then iPadOS devices use `2` minutes. If you enter `10` minutes, then iOS devices use `5` minutes. This is an Apple limitation.
+  Pokud se hodnota nevztahuje na iOS nebo iPadOS, pak Apple používá nejbližší *nejnižší* hodnotu. Pokud například zadáte `4` minut, zařízení iPadOS používají `2` minut. Pokud zadáte `10` minut, zařízení s iOS budou používat `5` minut. Toto je omezení Apple.
   
   > [!NOTE]
-  > The Intune UI for this setting doesn't separate the iOS and iPadOS supported values. The UI might be updated in a future release.
+  > Uživatelské rozhraní Intune pro toto nastavení nedělí podporované hodnoty pro iOS a iPadOS. Uživatelské rozhraní může být v budoucí verzi aktualizováno.
 
-- **Password expiration (days)** : Enter the number of days before the device password must be changed.
-- **Prevent reuse of previous passwords**: Enter the number of new passwords that must be used until an old one can be reused.
-- **Touch ID and Face ID unlock**: Choose **Block** to prevent using a fingerprint or face to unlock the device. **Not configured** allows the user to unlock the device using these methods.
+- **Vypršení platnosti hesla (dny)** : zadejte počet dní, než bude nutné změnit heslo zařízení.
+- **Zakázat opakované použití předchozích hesel**: zadejte počet nových hesel, která se musí použít, až bude možné znovu použít starou.
+- **Dotykové ID a odemknutí ID obličeje**: vyberte **blok** , abyste zabránili použití otisku prstu nebo obličeje k odemknutí zařízení. **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí těchto metod.
 
-  Blocking this setting also prevents using FaceID authentication to unlock the device.
+  Blokování tohoto nastavení také znemožňuje zařízení odemknout pomocí ověřování FaceID.
 
-  Face ID applies to:  
-  - iOS 11.0 and newer
+  ID obličeje platí pro:  
+  - iOS 11,0 a novější
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Passcode modification**: Choose **Block** to stop the passcode from being changed, added, or removed. Changes to passcode restrictions are ignored on supervised devices after blocking this feature. **Not configured** (default) allows passcodes to be added, changed, or removed.
+- **Úprava hesla**: vyberte **blok** a zastavte si změnu, přidání nebo odebrání hesla. Po blokování této funkce se změny v omezeních hesla ignorují na zařízeních pod dohledem. **Nenakonfigurováno** (výchozí) umožňuje přidávat, měnit a odebírat hesla.
 
-  - **Touch ID and Face ID modification**: **Block** stops the user from changing, adding, or removing TouchID fingerprints and Face ID. **Not configured** (default) allows the user to update the TouchID fingerprints and Face ID on the device.
+  - **Úprava Touch ID a ID obličeje**: **blok** zastaví uživateli změnu, přidání nebo odebrání otisků prstů TouchID a ID obličeje. **Nenakonfigurováno** (výchozí) umožňuje uživateli aktualizovat otisky prstů TOUCHID a ID obličeje na zařízení.
 
-    Blocking this setting also stops the user from changing, adding, or removing FaceID authentication.
+    Blokování tohoto nastavení také uživateli brání v změně, přidání nebo odebrání ověřování FaceID.
 
-    Face ID applies to:  
-    - iOS 11.0 and newer
+    ID obličeje platí pro:  
+    - iOS 11,0 a novější
 
-- **Block password AutoFill**: Choose **Block** to prevent using the AutoFill Passwords feature on iOS. Choosing **Block** also has the following impact:
+- **Blokovat automatické vyplňování hesel**: Pokud chcete zabránit použití funkce automatického vyplňování hesel v iOS, vyberte **blokovat** . Výběr **bloku** má také následující dopad:
 
-  - Users aren't prompted to use a saved password in Safari or in any apps.
-  - Automatic Strong Passwords are disabled, and strong passwords aren't suggested to users.
+  - Uživatelům se nezobrazí výzva k použití uloženého hesla v Safari nebo ve všech aplikacích.
+  - Automatická silná hesla jsou zakázaná a silná hesla se uživatelům nedoporučují.
 
-  **Not configured** (default) allows these features.
+  **Není nakonfigurováno** (výchozí) tyto funkce povolují.
 
-- **Block password proximity requests**: Choose **Block** so a user’s device doesn't request passwords from nearby devices. **Not configured** (default) allows these password requests.
-- **Block password sharing**: **Block** prevents sharing passwords between devices using AirDrop. **Not configured** (default) allows passwords to be shared.
-- **Require Touch ID or Face ID authentication for password or credit card information AutoFill**: When set to **Require**, users must authenticate using TouchID or FaceID before passwords or credit card information can be auto filled in Safari and other apps. **Not configured** (default) allows users to control this feature in the device settings.
+- **Zablokovat žádosti o blízkost hesla**: zvolit **blok** , aby zařízení uživatele nepožadovalo hesla z blízkých zařízení. **Nenakonfigurováno** (výchozí) povoluje tyto požadavky na heslo.
+- **Blokování sdílení hesel**: **blok** zabraňuje sdílení hesel mezi zařízeními pomocí přetažení. **Nenakonfigurováno** (výchozí) umožňuje sdílet hesla.
+- **Pro automatické vyplňování informací pro heslo nebo platební kartu vyžadovat ověření dotykového ID nebo ID obličeje**: Pokud je nastavené na **vyžadovat**, musí se uživatelé ověřit pomocí TouchID nebo FaceID, než se můžou v Safari a dalších aplikacích vyplňovat hesla nebo informace o kreditních kartách. **Nenakonfigurováno** (výchozí) umožňuje uživatelům řídit tuto funkci v nastavení zařízení.
 
   Tato funkce platí pro:  
-  - iOS 11.0 and newer
+  - iOS 11,0 a novější
   
-<sup>1</sup>When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, the screen turns off automatically after five minutes, and the device is locked after an additional five minutes. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. In the same example, after the user turns off the screen, the device locks five minutes later.
+<sup>1</sup> Když nakonfigurujete **maximální počet minut nečinnosti** , po kterém se zamkne obrazovka a **maximální počet minut po uzamčení obrazovky, které se budou povinně** použít, použije se v uvedeném pořadí. Pokud například nastavíte hodnotu pro obě nastavení na **5** minut, obrazovka se vypne automaticky po pěti minutách a zařízení se zamkne po dalších pět minut. Pokud ale uživatel vypne obrazovku ručně, druhé nastavení se použije okamžitě. Ve stejném příkladu potom, co uživatel vypne obrazovku, zařízení zamkne pět minut později.
 
 ## <a name="locked-screen-experience"></a>Prostředí zamknuté obrazovky
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Control Center access while device locked**: Choose **Block** to prevent access to the Control Center app while device is locked. **Not configured** (default) allows users access to the Control Center app when the device is locked.
-- **Notifications while device locked**: **Block** prevents access to notifications when the device is locked. **Not configured** (default) allows the user to access the notifications without unlocking the device.
-- **Today view while device locked**: **Block** prevents access to the Today view when the device is locked. **Not configured** (default) allows the user to see the Today view when the device is locked.
+- **Přístup k řídicímu centru při uzamčeném zařízení**: vyberte **blok** , aby se zabránilo přístupu k aplikaci řídicího centra, když je zařízení zamčené. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přístup k aplikaci řídicího centra, když je zařízení zamčené.
+- **Oznámení, když je zařízení zamknuté**: **blok** zabrání přístupu k oznámením, když je zařízení zamčené. **Nenakonfigurováno** (výchozí) umožňuje uživateli přístup k oznámením bez odemknutí zařízení.
+- **Zobrazení dnes, když je zařízení uzamčené**: **blok** zabrání přístupu k zobrazení dnes, když je zařízení uzamčené. **Nenakonfigurováno** (výchozí) umožňuje uživateli zobrazit zobrazení dnes, když je zařízení zamčené.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Wallet notifications while device locked**: **Block** prevents access to the Wallet app when the device is locked. **Not configured** (default) allows the user to access the Wallet app while the device is locked.
+- **Oznámení peněženky, když je zařízení uzamčené**: **blok** brání přístupu k aplikaci peněženky, když je zařízení zamčené. **Nenakonfigurováno** (výchozí) umožňuje uživateli přístup k aplikaci peněženky, když je zařízení zamčené.
 
 ## <a name="app-store-doc-viewing-gaming"></a>App Store, zobrazování dokumentů, hraní her
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Viewing corporate documents in unmanaged apps**: **Block** prevents viewing corporate documents in unmanaged apps. **Not configured** (default) allows corporate documents to be viewed in any app. For example, you want to prevent users from saving files from the OneDrive app to Dropbox. Configure this setting as **Block**. After the device receives the policy (for example, after a restart), it no longer allows saving.
+- **Zobrazení firemních dokumentů v nespravovaných aplikacích**: **blok** zabraňuje zobrazení firemních dokumentů v nespravovaných aplikacích. **Nenakonfigurováno** (výchozí) umožňuje zobrazení podnikových dokumentů v libovolné aplikaci. Například chcete zabránit uživatelům v ukládání souborů z aplikace OneDrive do Dropboxu. Nakonfigurujte toto nastavení jako **blok**. Jakmile zařízení obdrží zásady (například po restartování), už neumožňuje uložení.
 
 
   > [!NOTE]
-  > When this setting is blocked, third party keyboards installed from the App Store are also blocked.
+  > Pokud je toto nastavení blokované, zablokují se taky klávesnice třetích stran nainstalované z App Storu.
 
-  - **Allow unmanaged apps to read from managed contacts accounts**: When set to **Allow**, unmanaged apps, such as the built-in iOS Contacts app, can read and access contact information from managed apps, including the Outlook mobile app. **Not configured** (default) prevents reading, including removing duplicates, from the built-in Contacts app on the device.  
+  - **Povolení čtení nespravovaných aplikací ze spravovaných účtů kontaktů**: Pokud nastavíte možnost **povoleno**, nespravované aplikace, jako je integrovaná aplikace kontaktů pro iOS, můžou číst kontaktní informace a přistupovat k nim ze spravovaných aplikací, včetně mobilní aplikace Outlook. **Nenakonfigurováno** (výchozí) zabraňuje čtení, včetně odebrání duplicit, z vestavěné aplikace kontaktů na zařízení.  
   
-    This setting allows or prevents reading contact information. It doesn't control syncing contacts between the apps.
+    Toto nastavení povoluje nebo znemožňuje čtení kontaktních informací. Neřídí synchronizaci kontaktů mezi aplikacemi.
   
-    To use this setting, set the **Viewing corporate documents in unmanaged apps** setting to **Block**.
+    Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
 
-  For more information about these two settings, and their impact on Outlook for iOS contact export synchronization, see [Support Tip: Use Intune custom profile settings with the iOS Native Contacts App](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
+  Další informace o těchto dvou nastaveních a jejich dopad na Outlook pro iOS synchronizace exportů najdete v tématu [Podpora tipů: použití nastavení vlastního profilu Intune s aplikací pro nativní kontakty iOS](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Use-Intune-custom-profile-settings-with-the-iOS/ba-p/298453).
 
-- **Treat AirDrop as an unmanaged destination**: **Require** forces AirDrop to be considered an unmanaged drop target. It stops managed apps from sending data using Airdrop. 
-- **Viewing non-corporate documents in corporate apps**: **Block** prevents viewing non-corporate documents in corporate apps. **Not configured** (default) allows any document to be viewed in corporate managed apps.
+- Považovat postupné **přetažení jako nespravovaného cíle**: **vyžadovat** , aby se přetažení považovalo za nespravovaný cíl přetažení. Zastaví spravované aplikace z odesílání dat pomocí přetažení. 
+- **Zobrazení nefiremních dokumentů v podnikových aplikacích**: **blok** zabraňuje zobrazení nefiremních dokumentů v podnikových aplikacích. **Nenakonfigurováno** (výchozí) umožňuje zobrazit libovolný dokument v podnikových spravovaných aplikacích.
 
-  Setting to **Block** also prevents contact export synchronization in Outlook for iOS. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
+  Nastavení **blokování** taky brání synchronizaci exportu kontaktů v Outlooku pro iOS. Další informace najdete v tématu [Podpora tipů: povolení synchronizace kontaktů iOS v Outlooku s ovládacími prvky IOS12 MDM](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Require iTunes Store password for all purchases**: **Require** the user to enter the Apple ID password for each in-app or ITunes purchase. **Not configured** (default) allows purchases without prompting for a password every time.
-- **In-app purchases**: Choose **Block** to prevent in-app purchases from the store. **Not configured** (default) allows store purchases within a running app.
-- **Download content from iBook store flagged as 'Erotica'** : Choose **Block** to prevent stops users from downloading media from the iBook store that's tagged as erotica. **Not configured** (default) allows the user to download books with the "Erotica" category.
-- **Allow managed apps to write contacts to unmanaged contacts accounts**: When set to **Allow**, managed apps, such as the Outlook mobile app, can save or sync contact information, including business and corporate contacts, to the built-in iOS Contacts app. When set to **Not configured** (default), managed apps can't save or sync contact information to the built-in iOS Contacts app on the device.
+- **Vyžadovat heslo pro iTunes Store pro všechny nákupy**: **vyžaduje** , aby uživatel zadal heslo Apple ID pro každý nákup v aplikaci nebo iTunes. **Nenakonfigurováno** (výchozí) umožňuje nákupy bez výzvy k zadání hesla pokaždé, když.
+- **Nákupy v aplikaci**: vyberte možnost **blokovat** , aby se zabránilo nákupům v aplikaci ze Storu. **Nenakonfigurováno** (výchozí) umožňuje nákup obchodů v běžící aplikaci.
+- **Stáhnout obsah z úložiště obchodu iBooks s označením jako ' Erotika '** : vyberte možnost **blokovat** , pokud chcete zabránit uživatelům v stahování médií z obchodu iBooks úložiště, které je označeno jako erotika. **Nenakonfigurováno** (výchozí) umožňuje uživateli stahovat knihy s kategorií "Erotika".
+- **Povoluje spravovaným aplikacím psát kontakty na nespravované účty kontaktů**: Když nastavíte možnost **povoleno**, spravované aplikace, jako je například mobilní aplikace Outlook, můžou ukládat nebo synchronizovat kontaktní informace, včetně obchodních a firemních kontaktů, do integrované aplikace pro kontakty pro iOS. Pokud je nastavené na **Nenakonfigurováno** (výchozí), spravované aplikace nemůžou ukládat ani synchronizovat kontaktní informace na integrované aplikaci kontaktů pro iOS na zařízení.
   
-  To use this setting, set the **Viewing corporate documents in unmanaged apps** setting to **Block**.
+  Pokud chcete použít toto nastavení, nastavte možnost **zobrazení firemních dokumentů v nespravovaných aplikacích** na **blokovat**.
 
-- **Ratings region**: Choose the ratings region you want to use for allowed downloads. And then choose the allowed ratings for **Movies**, **TV Shows**, and **Apps**.
+- **Oblast hodnocení**: Vyberte oblast hodnocení, kterou chcete použít pro povolené soubory ke stažení. A pak zvolte povolené hodnocení **filmů**, **televizních**pořadů a **aplikací**.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **App store**: **Block** prevents access to the app store on supervised devices. **Not configured** (default) allows access.
+- **App Store**: **blok** zabrání přístupu k obchodu s aplikacemi na zařízeních pod dohledem. **Nenakonfigurováno** (výchozí) umožňuje přístup.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-  - **Installing apps from App Store**: Choose **Block** to block the app store from the device home screen. Koncoví uživatelé můžou aplikace dál instalovat pomocí iTunes nebo Apple Configuratoru. **Not configured** (default) allows the app store on the home screen.
-  - **Automatic app downloads**: Choose **Block** to prevent automatic downloading of apps bought on other devices. It doesn't affect updates to existing apps. **Not configured** (default) allows apps bought on other iOS devices to download on the device.
+  - **Instalují se aplikace z App Storu**: vyberte **blok** pro blokování obchodu s aplikacemi z domovské obrazovky zařízení. Koncoví uživatelé můžou aplikace dál instalovat pomocí iTunes nebo Apple Configuratoru. **Nenakonfigurováno** (výchozí) povolí App Storu na domovské obrazovce.
+  - **Automatické stahování aplikací**: výběrem možnosti **blokovat** zabráníte automatickému stahování aplikací zakoupených na jiných zařízeních. Nemá vliv na aktualizace existujících aplikací. **Nenakonfigurováno** (výchozí) umožňuje, aby se aplikace nakoupily na jiných zařízeních iOS ke stažení na zařízení.
 
-- **Explicit iTunes music, podcast, or news content**: Choose **Block** to prevent explicit iTunes music, podcast, or news content. **Not configured** (default) allows the device to access content rated as adult from the store. iOS 13 and newer may require supervised only devices. 
+- **Explicitní Hudba iTunes, podcast nebo obsah zpráv**: vyberte **blok** , abyste zabránili explicitnímu obsahu iTunes v hudbě, podcastech nebo zprávách. **Nenakonfigurováno** (výchozí) povolí zařízení přístup k obsahu, který je hodnocen jako dospělý ze Storu. iOS 13 a novější můžou vyžadovat jenom zařízení pod dohledem. 
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Adding Game Center friends**: **Block** prevents users from adding Game Center friends. **Not configured** (default) allows the user to add friends in Game Center.
+- **Přidání Game Center přátelé**: **blok** zabraňuje uživatelům v přidávání Game Centerch přátel. **Nenakonfigurováno** (výchozí) umožňuje uživateli přidávat přátele do Game Center.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Game Center**: **Block** the use of the Game Center app. **Not configured** (default) allows using the Game Center app on the device.
-- **Multiplayer gaming**: Choose **Block** to prevent multiplayer gaming. **Not configured** (default) allows the user to play multiplayer games on the device.
+- **Game Center**: **blokovat** použití aplikace Game Center **Nenakonfigurováno** (výchozí) umožňuje použití aplikace Game Center v zařízení.
+- **Hry pro více hráčů**: vyberte možnost **blokovat** , aby se zabránilo hraní her. **Nenakonfigurováno** (výchozí) umožňuje uživateli hrát hry s více hráči na zařízení.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Access to network drive in Files app**: Using the Server Message Block (SMB) protocol, devices can access files or other resources on a network server. **Disable** prevents accessing files on a network SMB drive. **Not configured** (default) allows access.
+- **Přístup k síťové jednotce v aplikaci soubory**: použití protokolu SMB (Server Message Block), zařízení mají přístup k souborům nebo jiným prostředkům na síťovém serveru. Při **vypnutí** se zabrání přístupu k souborům na síťové jednotce SMB. **Nenakonfigurováno** (výchozí) umožňuje přístup.
 
   Tato funkce platí pro:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS a iPadOS 13,0 a novější
 
 ## <a name="built-in-apps"></a>Integrované aplikace
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Siri**: **Block** prevents access to Siri. **Not configured** (default) allows using the Siri voice assistant on the device.
-  - **Siri while device is locked**: Choose **Block** to prevent access to Siri when the device is locked. **Not configured** (default) allows using the Siri voice assistant on the device when it's locked.
+- **Siri**: **Block** znemožní přístup k Siri. **Nenakonfigurováno** (výchozí) umožňuje použití hlasového asistenta Siri na zařízení.
+  - **Siri, když je zařízení uzamčené**: Pokud chcete zabránit přístupu k Siri, když je zařízení uzamčené, vyberte **blokovat** . **Nenakonfigurováno** (výchozí) povolí použití hlasového asistenta Siri na zařízení, když je zamčený.
 
-- **Safari fraud warnings**: **Require** fraud warnings to be shown in the web browser on the device. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
+- **Upozornění na podvod v Safari**: **vyžaduje** zobrazení upozornění na podvod ve webovém prohlížeči na zařízení. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. **Not configured** (default) allows Spotlight search connect to the Internet to provide search results.
+- **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. **Nenakonfigurováno** (výchozí) umožňuje vyhledávání Spotlightu připojit se k Internetu a poskytnout tak výsledky hledání.
 
-- **Safari cookies**: Choose how cookies are handled on the device. Možnosti:
+- **Soubory cookie prohlížeče Safari**: Vyberte způsob zpracování souborů cookie v zařízení. Možnosti:
   - Allow
-  - Block all cookies
-  - Allow cookies from visited web sites
-  - Allow cookies from current web site
+  - Blokovat všechny soubory cookie
+  - Povolení souborů cookie z navštívených webů
+  - Povoluje soubory cookie z aktuálního webu
 
-- **Safari JavaScript**: **Block** prevents Java scripts in the browser from running on the device. **Not configured** (default) allows Java scripts.
+- **Safari JavaScript**: **blok** znemožní v zařízení spouštět skripty Java v prohlížeči. **Nenakonfigurováno** (výchozí) povolí skripty Java.
 
-- **Safari Pop-ups**: **Block** to disable the pop-up blocker in the web browser. **Not configured** (default) allows the pop-up blocker.
+- **Automaticky otevíraná okna Safari**: **zakažte blokování automaticky** otevíraných oken ve webovém prohlížeči. **Nenakonfigurováno** (výchozí) povolí blokování automaticky otevíraných oken.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Camera**: Choose **Block** to prevent access to the camera on the device. **Not configured** (default) allows access to the device's camera.
+- **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k kameře zařízení.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-  - **FaceTime**: **Block** to prevent access to the FaceTime app. **Not configured** (default) allows access to the FaceTime app on the device.
+  - **FaceTime**: **blok** , aby se zabránilo přístupu k aplikaci FaceTime. **Nenakonfigurováno** (výchozí) povolí přístup k aplikaci FaceTime na zařízení.
 
-    Starting with iOS 13.0, this setting requires supervised devices.
+    Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Siri profanity filter**: **Require** prevents Siri from dictating, or speaking profane language.
+- **Filtr vulgárních výrazů v Siri**: **vyžadovat, aby** Siri nemohlo diktovat nebo diktovat vulgární jazyk.
 
-  To use this setting, set the **Siri** setting to **Block**.
+  Chcete-li použít toto nastavení, nastavte nastavení **Siri** na **blokovat**.
 
-- **Siri to query user-generated content from the internet**: **Block** prevents Siri from accessing websites to answer questions. **Not configured** (default) allows Siri to access user-generated content from the internet.
+- **Siri dotazování na uživatelem generovaný obsah z Internetu**: **blok** zabraňuje tomu, aby Siri přístup k webům, aby mohla odpovídat na otázky. **Nenakonfigurováno** (výchozí) umožňuje Siri přistupovat k obsahu generovanému uživateli z Internetu.
 
-  To use this setting, set the **Siri** setting to **Block**.
+  Chcete-li použít toto nastavení, nastavte nastavení **Siri** na **blokovat**.
 
-- **Apple News**: Choose **Block** to prevent access to the Apple News app on the device. **Not configured** (default) allows using the Apple News app.
-- **iBooks store**: **Block** prevents access to the iBooks store. **Not configured** (default) allows users to browse and buy books from the iBooks store.
-- **Messages app on the device**: **Block** prevents users from using the Messages app for iMessage. If the device supports text messaging, the user can still send and receive text messages using SMS. **Not configured** (default) allows using the Messages app to send and read messages over the internet.
-- **Podcasts**: **Block** prevents users using the Podcasts app. **Not configured** (default) allows using the Podcasts app.
-- **Music service**: **Block** reverts the Music app to classic mode and disables the Music service. **Not configured** (default) allows using the Apple Music app.
-- **iTunes Radio service**: **Block** prevents users from using the iTunes Radio app. **Not configured** (default) allows using the iTunes Radio app.
-- **iTunes store**: **Not configured** (default) allows iTunes on the devices. **Block** prevents users from using iTunes on the device. 
-
-  Tato funkce platí pro:  
-  - iOS 4.0 and newer
-
-- **Find my iPhone**: **Not configured** (default) allows using this Find My app feature to get the approximate location of the device. **Block** prevents this feature in the Find My app. 
+- **Apple News**: vyberte možnost **blokovat** , aby se zabránilo přístupu k aplikaci Apple News na zařízení. **Nenakonfigurováno** (výchozí) umožňuje použití aplikace Apple News.
+- **iBooks Store**: **blok** znemožní přístup k úložišti iBooks. **Nenakonfigurováno** (výchozí) umožňuje uživatelům procházet a kupovat knihy z iBooks Storu.
+- **Aplikace zprávy na zařízení**: **blok** zabraňuje uživatelům v používání aplikace zprávy pro iMessage. Pokud zařízení podporuje textové zasílání zpráv, může uživatel i nadále odesílat a přijímat textové zprávy pomocí serveru SMS. **Nenakonfigurováno** (výchozí) umožňuje použití aplikace zprávy k posílání a čtení zpráv přes Internet.
+- **Podcasty**: **blokování** brání uživatelům v použití aplikace Podcasty. **Nenakonfigurováno** (výchozí) umožňuje použití aplikace Podcasty.
+- **Hudební služba**: **blok** vrátí aplikaci v hudbě do klasického režimu a zakáže hudební službu. **Nenakonfigurováno** (výchozí) umožňuje použití aplikace Apple Music.
+- **služba iTunes Radio Service**: **blok** zabraňuje uživatelům v používání aplikace iTunes Radio. **Nenakonfigurováno** (výchozí) umožňuje použití aplikace iTunes Radio.
+- **iTunes Store**: **Nenakonfigurováno** (výchozí) povolí iTunes na zařízeních. **Blok** zabraňuje uživatelům v zařízení používat iTunes. 
 
   Tato funkce platí pro:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 4,0 a novější
 
-- **Find my Friends**: **Not configured** (default) allows using this Find My app feature to find family and friends from an Apple device or iCloud.com. **Block** prevents this feature in the Find My app.
+- **Najít iPhone**: **Nenakonfigurováno** (výchozí) umožňuje pomocí této funkce najít moji aplikaci získat přibližnou polohu zařízení. **Blok** zabraňuje této funkci v aplikaci najít moji. 
 
   Tato funkce platí pro:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 13,0 a iPadOS 13,0 a novější
 
-- **Changes to the Find My Friends app settings**: **Block** prevents changes to the Find My Friends app settings. **Not configured** (default) allows the user to change settings for the Find My Friends app.
+- **Najít přátele**: **Nenakonfigurováno** (výchozí) umožňuje pomocí této funkce najít moji aplikaci najít rodinu a přátele ze zařízení Apple nebo iCloud.com. **Blok** zabraňuje této funkci v aplikaci najít moji.
 
-- **Spotlight search to return results from internet**: **Block** stops Spotlight from returning any results from an Internet search. **Not configured** (default) allows Spotlight search connect to the Internet to provide search results.
+  Tato funkce platí pro:  
+  - iOS 13,0 a iPadOS 13,0 a novější
 
-- **Block removal of system apps from device**: Choosing **Block** disables the ability to remove system apps from the device. **Not configured** (default) allows users to remove system apps.
+- **Změny v nastavení aplikace Find My Friends**: **Block** zabraňuje změnám v nastavení aplikace Find My Friends. **Nenakonfigurováno** (výchozí) umožňuje uživateli měnit nastavení aplikace najít přátele.
 
-- **Safari**: **Block** using the Safari browser on the device. **Not configured** (default) allows users to use the Safari browser.
+- **Vyhledávání Spotlightu, které vrátí výsledky z Internetu**: **blok** přestane vracet žádné výsledky z internetu hledání. **Nenakonfigurováno** (výchozí) umožňuje vyhledávání Spotlightu připojit se k Internetu a poskytnout tak výsledky hledání.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+- **Blokovat odebírání systémových aplikací ze zařízení**: Volba možnosti **blokovat** zakáže možnost odebrání systémových aplikací ze zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebrat systémové aplikace.
 
-- **Safari Autofill**: **Block** disables the autofill feature in Safari on the device. **Not configured** (default) allows users to change autocomplete settings in the web browser.
+- **Safari**: **zablokujte** v zařízení použití prohlížeče Safari. **Nenakonfigurováno** (výchozí) umožňuje uživatelům používat prohlížeč Safari.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
+
+- **Safari AutoFill**: **Block** zakáže funkci automatického vyplňování v prohlížeči Safari na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům změnit nastavení automatického dokončování ve webovém prohlížeči.
+
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
 ## <a name="restricted-apps"></a>Omezené aplikace
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Možnosti:
+- **Typ seznamu omezených aplikací**: vytvoří seznam aplikací, které uživatelé nemůžou instalovat ani používat. Možnosti:
 
-  - **Not configured** (default): There are no restrictions from Intune. Users have access to apps you assign, and built-in apps.
-  - **Prohibited apps**: Apps not managed by Intune that you don't want installed on the device. Users aren't prevented from installing a prohibited app. But if a user installs an app from this list, it's reported in Intune.
-  - **Approved apps**: Apps that users are allowed to install. Users must not install apps that aren't listed. Aplikace, které spravuje Intune, jsou povolené automaticky. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
+  - **Nenakonfigurováno** (výchozí): neexistují žádná omezení z Intune. Uživatelé mají přístup k aplikacím, které přiřadíte, a k integrovaným aplikacím.
+  - **Zakázané aplikace**: aplikace nespravované přes Intune, které nechcete v zařízení nainstalovat. Uživatelům není instalace zakázané aplikace znemožněna. Pokud ale uživatel z tohoto seznamu nainstaluje aplikaci, nahlásí se v Intune.
+  - **Schválené aplikace**: aplikace, které můžou uživatelé instalovat. Uživatelé nesmí instalovat aplikace, které nejsou uvedené. Aplikace, které spravuje Intune, jsou povolené automaticky. Uživatelům není znemožněna instalace aplikace, která není na seznamu schválených. Pokud tomu tak je, nahlásí se v Intune.
 
-To add apps to these lists, you can:
+Pokud chcete do těchto seznamů přidat aplikace, můžete:
 
-- **Add** the iTunes App store URL of the app you want. For example, to add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
+- **Přidejte** adresu URL obchodu iTunes pro aplikaci, kterou chcete. Pokud například chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`.
 
-  To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL.
+  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
 
-  You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
+  K vyhledání aplikace můžete také použít iTunes a potom pomocí úlohy **Kopírovat odkaz** získat adresu URL aplikace.
 
-- **Import** a CSV file with details about the app, including the URL. Použijte formát `<app url>, <app name>, <app publisher>`. Or, **Export** an existing list that includes the restricted apps list in the same format.
+- **Importujte** soubor CSV s podrobnostmi o aplikaci, včetně adresy URL. Použijte formát `<app url>, <app name>, <app publisher>`. Případně **exportujte** existující seznam obsahující seznam aplikací s omezeným přístupem ve stejném formátu.
 
 > [!IMPORTANT]
-> Device profiles that use the restricted app settings must be assigned to groups of users.
+> Profily zařízení, které používají nastavení aplikací s omezeným přístupem, se musí přiřadit ke skupinám uživatelů.
 
 ## <a name="show-or-hide-apps"></a>Zobrazit nebo skrýt aplikace
 
-Applies to devices running iOS 9.3 or newer.
+Platí pro zařízení se systémem iOS 9,3 nebo novějším.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Type of apps list**: Create a list of apps to show or hide. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094). Možnosti:
+- **Typ seznamu aplikací**: Vytvořte seznam aplikací, které chcete zobrazit nebo skrýt. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094). Možnosti:
 
-  - **Hidden apps**: Enter a list of apps that are hidden from users. Users can't view, or open these apps.
+  - **Skryté aplikace**: Zadejte seznam aplikací, které jsou pro uživatele skryté. Uživatelé nemůžou tyto aplikace zobrazit ani otevřít.
   
-    Apple prevents hiding some native apps. For example, you can't hide the **Settings** or **Wallet** apps on the device. [Delete built-in Apple apps](https://support.apple.com/HT208094) lists the apps that can be hidden.
+    Apple znemožní skrývání některých nativních aplikací. Například nemůžete skrýt **Nastavení** nebo **kapesní** aplikace na zařízení. [Odstranění integrovaných aplikací Apple](https://support.apple.com/HT208094) zobrazí seznam aplikací, které se dají skrýt.
   
-  - **Visible apps**: Enter a list of apps that users can view and launch. Žádné jiné aplikace nebude možné zobrazit ani spustit.
+  - **Viditelné aplikace**: Zadejte seznam aplikací, které uživatelé mohou zobrazit a spustit. Žádné jiné aplikace nebude možné zobrazit ani spustit.
 
-- **App URL**: Enter the store app URL of the app you want to show or hide. Například:
+- **Adresa URL aplikace**: zadejte adresu URL aplikace pro Store aplikace, kterou chcete zobrazit nebo skrýt. Například:
 
-  - To add the Microsoft Work Folders app, enter `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` or `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
+  - Pokud chcete přidat aplikaci Microsoft work folders, zadejte `https://itunes.apple.com/us/app/work-folders/id950878067?mt=8` nebo `https://apps.apple.com/us/app/work-folders/id950878067?mt=8`. 
 
-  - To add the Microsoft Word app, enter `https://itunes.apple.com/de/app/microsoft-word/id586447913` or `https://apps.apple.com/de/app/microsoft-word/id586447913`.
+  - Chcete-li přidat aplikaci Microsoft Word, zadejte `https://itunes.apple.com/de/app/microsoft-word/id586447913` nebo `https://apps.apple.com/de/app/microsoft-word/id586447913`.
 
-  To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL.
+  Pokud chcete najít adresu URL aplikace, otevřete aplikaci iTunes App Store a vyhledejte aplikaci. Vyhledejte například `Microsoft Remote Desktop` nebo `Microsoft Word`. Vyberte aplikaci a zkopírujte adresu URL.
 
-  You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
+  K vyhledání aplikace můžete také použít iTunes a potom pomocí úlohy **Kopírovat odkaz** získat adresu URL aplikace.
   
-  For more information about locating a Bundle ID, see [How to find the bundle ID for an iOS app](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
+  Další informace o vyhledání ID sady prostředků najdete v tématu [Jak najít ID sady prostředků pro aplikaci pro iOS](https://support.microsoft.com/help/4294074/how-to-find-the-bundle-id-for-an-ios-app).
 
-- **App Bundle ID**: Enter the app [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-- **App name**: Enter the app name of the app you want. You can show or hide built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
-- **Publisher**: Enter the publisher of the app you want.
+- **ID sady prostředků aplikace**: zadejte [ID sady prostředků](bundle-ids-built-in-ios-apps.md) aplikace, kterou chcete. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094).
+- **Název aplikace**: zadejte název aplikace, kterou chcete. Můžete zobrazit nebo skrýt integrované aplikace a obchodní aplikace. Na webu společnosti Apple je seznam [integrovaných aplikací Apple](https://support.apple.com/HT208094).
+- **Vydavatel**: zadejte vydavatele aplikace, kterou chcete.
 
-To add apps, you can:
+Pokud chcete přidat aplikace, můžete:
 
-- **Add**: Select to create your list of apps.
-- **Import** a CSV file with details about the app, including the URL. Použijte formát `<app url>, <app name>, <app publisher>`. Or, **Export** to create a list of the restricted apps you added, in the same format.
+- **Přidat**: vyberte, pokud chcete vytvořit seznam aplikací.
+- **Importujte** soubor CSV s podrobnostmi o aplikaci, včetně adresy URL. Použijte formát `<app url>, <app name>, <app publisher>`. Případně můžete **exportovat** a vytvořit seznam aplikací s omezeným přístupem, které jste přidali, ve stejném formátu.
 
 ## <a name="wireless"></a>Bezdrátová síť
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-Note needed for Data Roaming (Tip or important note to help with customer confusion): This setting will not show up on the targeted device's management profile. That is because this setting is treated as a remote device action, and every time the state of data roaming is changed on the device, it will become blocked again by the Intune service. Even though it is not in the management profile, it is working if it showing as a success from the reporting in the admin console. 
-- **Data roaming**: Choose **Block** to prevent data roaming over the cellular network. **Not configured** (default) allows data roaming when the device is on a cellular network.
-
-  > [!IMPORTANT]
-  > This setting is treated as a remote device action. So, this setting isn't shown in the management profile on the device. Every time the data roaming status changes on the device, **Data roaming** is blocked by the Intune service. In Intune, if the reporting status shows a success, then know that it's working, even though the setting isn't shown in the management profile on the device.
-
-- **Global background fetch while roaming**: **Block** prevents using the global background fetch feature when roaming over the cellular network. **Not configured** (default) allows the device to fetch data, such as email, when it's roaming on a cellular network.
-- **Voice dialing**: Choose **Block** to prevent users from using the voice dialing feature on the device. **Not configured** (default) allows voice dialing on the device.
-- **Voice roaming**: Choose **Block** to prevent voice roaming over the cellular network. **Not configured** (default) allows voice roaming when the device is on a cellular network.
-- **Personal Hotspot**: **Block** turns off the personal hotspot on the users' device with every device sync. This setting might not be compatible with some carriers. **Not configured** (default) keeps the personal hotspot configuration as the default set by the user.
+Poznámka potřeba pro datový roaming (Tip nebo důležitá Poznámka pro usnadnění nejasností zákazníků): Toto nastavení se nezobrazí v profilu správy cílového zařízení. Důvodem je to, že toto nastavení se považuje za akci vzdáleného zařízení a pokaždé, když se v zařízení změní stav datového roamingu, bude službou Intune zablokovaný znovu. I když není v profilu správy, funguje, pokud se zobrazuje jako úspěch z vytváření sestav v konzole pro správu. 
+- **Datový roaming**: vyberte možnost **blokovat** , pokud chcete datový roaming zabránit v mobilní síti. **Nenakonfigurováno** (výchozí) povolí datový roaming, když je zařízení v mobilní síti.
 
   > [!IMPORTANT]
-  > This setting is treated as a remote device action. So, this setting isn't shown in the management profile on the device. Every time the personal hotspot status changes on the device, **Personal Hotspot** is blocked by the Intune service. In Intune, if the reporting status shows a success, then know that it's working, even though the setting isn't shown in the management profile on the device.
+  > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízení. Pokaždé, když se v zařízení změní stav roamingu dat, služba Intune zablokuje **datový roaming** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
 
-- **Cellular usage rules (managed apps only)** : Define the data types that managed apps can use when on cellular networks. Možnosti:
-  - **Block use of cellular data**: Block using cellular data for **All managed apps** or **Choose specific apps**.
-  - **Block use of cellular data when roaming**: Block using cellular data when roaming for **All managed apps** or **Choose specific apps**.
+- **Globální načítání na pozadí při roamingu**: při roamingu v mobilní síti znemožní **blokování** použití globální funkce načítání na pozadí. **Nenakonfigurováno** (výchozí) umožňuje zařízení při roamingu v mobilní síti načíst data, například e-mailu.
+- **Hlasové vytáčení**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v používání funkce hlasového vytáčení na zařízení. **Nenakonfigurováno** (výchozí) umožňuje hlasové vytáčení zařízení.
+- **Hlasový roaming**: vyberte **blok** , aby se zabránilo hlasovému roamingu přes mobilní síť. **Nenakonfigurováno** (výchozí) povolí hlasový roaming, když je zařízení v mobilní síti.
+- **Osobní hotspot**: **blok** vypne osobní hotspot na zařízení uživatelů při každé synchronizaci zařízení. Toto nastavení nemusí být kompatibilní s některými provozovateli. **Nenakonfigurováno** (výchozí) udržuje konfiguraci osobního hotspotu jako výchozí nastavenou uživatelem.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+  > [!IMPORTANT]
+  > Toto nastavení se považuje za akci vzdáleného zařízení. Toto nastavení se proto nezobrazí v profilu správy na zařízení. Pokaždé, když se změní stav osobního hotspotu na zařízení, služba Intune zablokuje **osobní hotspot** . Pokud se v Intune zobrazuje stav sestavy úspěch, pak víte, že funguje, i když se toto nastavení nezobrazí v profilu správy na zařízení.
 
-- **Changes to app cellular data usage settings**: Choose **Block** to prevent changes to the app cellular data usage settings. **Not configured** (default) allows the user to control which apps are allowed to use cellular data.
-- **Changes to cellular plan settings**: **Block** prevents users from changing any settings in the cellular plan. **Not configured** (default) allows users to make changes.
+- **Pravidla pro mobilní použití (jenom spravované aplikace)** : Definujte datové typy, které spravované aplikace můžou používat při použití v mobilních sítích. Možnosti:
+  - **Zablokovat používání mobilních dat**: blokuje používání mobilních dat pro **všechny spravované aplikace** nebo umožňuje **zvolit konkrétní aplikace**.
+  - **Zablokovat používání mobilních dat při roamingu**: při roamingu používejte mobilní data pro **všechny spravované aplikace** nebo **vyberte konkrétní aplikace**.
 
-  Tato funkce platí pro:  
-  - iOS 11.0 and newer
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **User modification of Personal Hotspot**: When set to **Block**, the user can't change the personal hotspot setting. **Not configured** (default) allows end users to enable or disable their personal hotspot.
-
-  If you block this setting and block the **Personal Hotspot** setting, the personal hotspot is turned off.
-
-  Tato funkce platí pro:  
-  - iOS 12.2 and newer
-
-- **Join Wi-Fi networks only using configuration profiles**: **Require** forces the device to use only Wi-Fi networks set up through Intune configuration profiles. **Not configured** (default) allows the device to use other Wi-Fi networks.
-- **Wi-Fi always turned on**: When set to **Require**, Wi-Fi stays on in the Settings app. It can't be turned off in Settings or in the Control Center, even when the device is in airplane mode. **Not configured** (default) allows the user to control turning on or turning off Wi-Fi.
-
-  Configuring this setting doesn't prevent users from selecting a Wi-Fi network.
+- **Změny nastavení využití mobilních dat v aplikaci**: vyberte možnost **blokovat** , aby se zabránilo změnám nastavení využití mobilních dat v aplikaci. **Nenakonfigurováno** (výchozí) umožňuje uživateli řídit, které aplikace můžou používat mobilní data.
+- **Změny nastavení plánu mobilní**sítě: **blok** znemožní uživatelům měnit nastavení v plánu pro mobilní síť. **Nenakonfigurováno** (výchozí) umožňuje uživatelům provádět změny.
 
   Tato funkce platí pro:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS 11,0 a novější
+
+- **Úprava osobního hotspotu**: Pokud je nastavená možnost **blokovat**, uživatel nemůže změnit nastavení osobního hotspotu. **Nenakonfigurováno** (výchozí) umožňuje koncovým uživatelům povolit nebo zakázat svůj osobní hotspot.
+
+  Pokud zablokujete toto nastavení a zablokujete nastavení **osobní hotspotu** , bude osobní hotspot vypnutý.
+
+  Tato funkce platí pro:  
+  - iOS 12,2 a novější
+
+- **Připojit se k sítím Wi-Fi jenom pomocí konfiguračních profilů**: **vyžaduje** , aby zařízení používalo jenom sítě Wi-Fi nastavené prostřednictvím konfiguračních profilů Intune. **Nenakonfigurováno** (výchozí) umožňuje zařízení používat jiné sítě Wi-Fi.
+- **Wi-Fi vždycky zapnuté**: Pokud je nastavené na **vyžadovat**, Wi-Fi zůstane v aplikaci nastavení. Nedá se vypnout v nastavení nebo v řídicím centru, a to ani v případě, že je zařízení v režimu v letadle. **Nenakonfigurováno** (výchozí) umožňuje uživateli řídit zapnutí nebo vypnutí Wi-Fi.
+
+  Konfigurace tohoto nastavení nezabrání uživatelům v výběru sítě Wi-Fi.
+
+  Tato funkce platí pro:  
+  - iOS a iPadOS 13,0 a novější
 
 ## <a name="connected-devices"></a>Připojená zařízení
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Wrist detection for paired Apple watch**: **Require** forces a paired Apple watch to use wrist detection. When required, the Apple Watch won't display notifications when it's not being worn. 
+- **Detekce zápěstí pro spárovaná Apple Watch**: **vyžaduje** , aby se u spárovaného Apple Watch použilo zjišťování zápěstí. V případě potřeby nebude Apple Watch zobrazovat oznámení, pokud se nepoužívá. 
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Require AirPlay outgoing requests pairing password**: **Require** a pairing password when the user uses AirPlay to stream content to other Apple devices. **Not configured** (default) allows the user to stream content using AirPlay without entering a password.
+- **Vyžadovat párovací heslo pro odchozí požadavky AirPlay**: **vyžaduje** párování hesla, pokud uživatel použije AirPlay ke streamování obsahu do jiných zařízení Apple. **Nenakonfigurováno** (výchozí) povolí uživateli streamování obsahu pomocí AirPlay bez zadání hesla.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **AirDrop**: **Block** prevents using AirDrop on the device. **Not configured** (default) allows using the AirDrop feature to exchange content with nearby devices.
-- **Apple Watch pairing**: **Block** prevents pairing with an Apple Watch. **Not configured** (default) allows the device to pair with an Apple Watch.
-- **Bluetooth modification**: **Block** stops the end user from changing Bluetooth settings on the device. **Not configured** (default) allows the user to change these settings.
-- **Host pairing to control the devices an iOS device can pair with**: **Not configured** (default) allows host pairing to let the administrator control which devices an iOS device can pair with. **Block** prevents host pairing.
-- **Block AirPrint**: Choose **Block** to prevent using the AirPrint feature on the device. **Not configured** (default) allows the user to use AirPrint.
-  - **Block storage of AirPrint credentials in Keychain**: **Block** prevents using Keychain storage for username and password on the device. **Not configured** (default) allows storing the AirPrint username and password in the Keychain app.
-  - **Require a trusted TLS certificate for AirPrint**: **Require** forces the device to use trusted certificates for TLS printing communication.
-  - **Block iBeacon discovery of AirPrint printers**: **Block** prevents malicious AirPrint Bluetooth beacons from phishing for network traffic. **Not configured** (default) allows advertising AirPrint printers on the device.
-- **Block setting up new nearby devices**: **Block** disables the prompt to set up new devices that are nearby. **Not configured** (default) allows prompts for users to connect to other nearby Apple devices.
-
-  Tato funkce platí pro:  
-  - iOS 11.0 and newer
-
-- **Access to files on USB drive**: Devices can connect and open files on a USB drive. **Disable** prevents device access to the USB drive in the Files app when a USB is connected to the device. Disabling this feature also blocks end users from transferring files onto a USB drive connected to an iPad. **Not configured** (default) allows access to a USB drive in the Files app.
+- **Přetažení**: **blok** zabraňuje použití přetahování na zařízení. **Nenakonfigurováno** (výchozí) umožňuje použití funkce prohodit pro výměnu obsahu s blízkými zařízeními.
+- **Apple Watch párování**: **blok** brání párování s Apple Watch. **Nenakonfigurováno** (výchozí) povolí zařízení párování s Apple Watch.
+- **Úpravy Bluetooth**: **blok** zabrání koncovému uživateli ve změně nastavení Bluetooth na zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli změnit tato nastavení.
+- **Párování hostitelů pro řízení zařízení, s nimiž se může zařízení s iOS spárovat**: **není nakonfigurovaná** (výchozí) umožňuje, aby správce mohl řídit, se kterými zařízeními se zařízení s iOS může spárovat. **Blok** zabraňuje párování hostitelů.
+- **Blokovat tisk**: vyberte možnost **blokovat** , pokud chcete zabránit použití funkce pro tisk do zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživateli používat postupné tisku.
+  - **Blokovat úložiště přihlašovacích údajů pro tisk v řetězci klíčů**: **blok** zabraňuje použití úložiště klíčů pro uživatelské jméno a heslo v zařízení. **Nenakonfigurováno** (výchozí) umožňuje ukládání uživatelského jména a hesla pro tisk do aplikace pro řetězce klíčů.
+  - **Vyžadovat důvěryhodný certifikát TLS pro spolutisk**: **vyžaduje** , aby zařízení používalo důvěryhodné certifikáty pro komunikaci tisku TLS.
+  - **Zablokovat blokovat iBeacon u rozpoznávání tiskových tiskáren**: **blok** zabraňuje škodlivým signálům přes útok Bluetooth v přenosu dat v síti. **Nenakonfigurováno** (výchozí) umožňuje reklamní tiskové tiskárny na zařízení.
+- **Blokování nastavení nových okolních zařízení**: **blok** zakáže výzvu k nastavení nových zařízení, která jsou v okolí. **Nenakonfigurováno** (výchozí) umožňuje uživatelům výzvy, aby se připojili k jiným blízkým zařízením Apple.
 
   Tato funkce platí pro:  
-  - iOS and iPadOS 13.0 and newer
+  - iOS 11,0 a novější
+
+- **Přístup k souborům na jednotce USB**: zařízení se můžou připojit a otevírat soubory na USB jednotce. Pokud je zařízení USB připojené k zařízení, **zakažte zakázat** přístup zařízení k jednotce USB v aplikaci soubory. Zakázáním této funkce se taky zablokuje koncovým uživatelům přenos souborů na jednotku USB připojenou k iPadu. **Nenakonfigurováno** (výchozí) povolí přístup k jednotce USB v aplikaci Files.
+
+  Tato funkce platí pro:  
+  - iOS a iPadOS 13,0 a novější
 
 ## <a name="keyboard-and-dictionary"></a>Klávesnice a slovník
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Word definition lookup**: **Block** prevents user from highlighting a word, and then looking up its definition on the device. **Not configured** (default) allows access to the definition lookup feature.
-- **Predictive keyboards**: **Not configured** (default) allows using predictive keyboards to suggest words the user might want. **Block** prevents this feature.
-- **Auto-correction**: **Not configured** (default) allows the device to automatically correct misspelled words. **Block** prevents using autocorrection.
-- **Keyboard spell-check**: **Not configured** (default) allows using spellchecker on the device. **Block** allows spell checker.
-- **Keyboard shortcuts**: **Not configured** (default) allows using keyboard shortcuts on the device. **Block** stops the user from using keyboard shortcuts.
-- **Dictation**: **Block** stops the user from using voice input to enter text. **Not configured** (default) allows the user to use dictation input.
-- **QuickPath**: **Not configured** (default) allows users to use QuickPath, which allows a continuous input on the device's keyboard. Users can type by swiping across the keys to create words. **Block** prevents users from using QuickPath. 
+- **Vyhledávání definic slov**: **Block** znemožní uživateli zvýraznit slovo a pak vyhledat jeho definici na zařízení. **Nenakonfigurováno** (výchozí) umožňuje přístup k funkci vyhledávání definic.
+- **Prediktivní klávesnice**: **Nenakonfigurováno** (výchozí) umožňuje pomocí prediktivních klávesnic navrhovat slova, která může chtít uživatel. **Blokování** brání této funkci.
+- **Automatické opravy**: **Nenakonfigurováno** (výchozí) umožňuje zařízení automaticky opravovat slova s překlepem. **Blok** zabraňuje použití automatických oprav.
+- **Kontrola pravopisu klávesnice**: **Nenakonfigurováno** (výchozí) umožňuje použít kontrolu pravopisu na zařízení. **Blok** umožňuje kontrolu pravopisu.
+- **Klávesové zkratky**: **Nenakonfigurováno** (výchozí) umožňuje používání klávesových zkratek na zařízení. **Blok** zabrání uživateli v používání klávesových zkratek.
+- **Diktování**: **blok** zabrání uživateli v použití hlasového vstupu k zadání textu. **Nenakonfigurováno** (výchozí) umožňuje uživateli používat vstup diktování.
+- **QuickPath**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům používat QuickPath, což umožňuje průběžné zadávání na klávesnici zařízení. Uživatelé můžou k vytváření slov psát přetáhnutím prstem přes tyto klávesy. **Blok** zabraňuje uživatelům v používání QuickPath. 
 
   Tato funkce platí pro:  
-  - iOS 13.0 and iPadOS 13.0 and newer
+  - iOS 13,0 a iPadOS 13,0 a novější
 
 ## <a name="cloud-and-storage"></a>Cloud a úložiště
 
-### <a name="settings-apply-to-all-enrollment-types"></a>Settings apply to: All enrollment types
+### <a name="settings-apply-to-all-enrollment-types"></a>Nastavení platí pro: všechny typy registrace
 
-- **Encrypted backup**: **Require** so device backups must be encrypted.
-- **Managed apps sync to cloud**: **Not configured** (default) allows your Intune-manages apps to sync data to the user's iCloud account. **Block** prevents this data sync to iCloud.
-- **Block Enterprise Book Backup**: Choose **Block** to prevent users from backing up enterprise books. **Not configured** (default) allows users to back up these books.
-- **Block enterprise book metadata sync (notes and highlights)** : **Block** prevents syncing notes and highlights in enterprise books. **Not configured** (default) allows the syncing.
+- **Šifrované zálohování**: **vyžaduje** , aby bylo zálohování zařízení nutné šifrovat.
+- **Synchronizace spravovaných aplikací do cloudu**: **Nenakonfigurováno** (výchozí) umožňuje, aby aplikace Intune spravovaly data na účet iCloud uživatele. **Blok** zabraňuje synchronizaci těchto dat s iCloud.
+- **Blokovat zálohování v podnikové knize**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v zálohování podnikových knih. **Nenakonfigurováno** (výchozí) umožňuje uživatelům zálohovat tyto knihy.
+- **Blokování synchronizace metadat v podnikovém adresáři (poznámky a zvýraznění)** : **blok** zabraňuje synchronizaci poznámek a světel v podnikových knihách. **Nenakonfigurováno** (výchozí) umožňuje synchronizaci.
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Photo stream syncing to iCloud**: **Not configured** (default) lets users enable **My Photo Stream** on their device to sync to iCloud, and have photos available on all the user's devices. **Block** prevents photo stream syncing to iCloud. Blocking this feature may cause data loss. 
-- **iCloud Photo Library**: Set to **Block** to disable using iCloud photo library to store photos and videos in the cloud. Any photos not fully downloaded from iCloud Photo Library to the device are removed from the device. **Not configured** (default) allows using the iCloud photo library.
-- **Shared photo stream**: Choose **Block** to disable **iCloud Photo Sharing** on the device. **Not configured** (default) allows shared photo streaming.
-- **Handoff**: **Not configured** (default) allows users to start work on an iOS device, and then continue the work they started on another iOS or macOS device. **Block** prevents this handoff.
+- **Synchronizace datových proudů do iCloud**: **není nakonfigurovaná** (výchozí) umožňuje uživatelům povolit, aby se **Váš fotografický Stream** na svém zařízení synchronizoval s iCloud a aby byly na všech zařízeních uživatele dostupné fotky. **Blok** zabraňuje synchronizaci streamování fotografií do iCloud. Blokování této funkce může způsobit ztrátu dat. 
+- **Knihovna fotografií iCloud**: Pokud chcete zakázat používání knihovny fotografií iCloud k ukládání fotek a videí do cloudu, nastavte **blokování** . Ze zařízení se odeberou všechny fotky, které nejsou kompletně stažené z knihovny fotografií iCloud. **Nenakonfigurováno** (výchozí) umožňuje použití knihovny fotografií iCloud.
+- **Sdílený datový proud fotek**: výběrem možnosti **blokovat** zakážete **Sdílení fotek iCloud** na zařízení. **Nenakonfigurováno** (výchozí) umožňuje sdílení fotek.
+- **Předání**: **Nenakonfigurováno** (výchozí) umožňuje uživatelům začít pracovat na zařízení se systémem iOS a potom pokračovat v práci, kterou zahájili na jiném zařízení se systémem iOS nebo MacOS. **Blok** zabraňuje tomuto předání.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Backup to iCloud**: **Not configured** (default) allows the user to back up the device to iCloud. **Block** stops the user from backing up the device to iCloud.
+- **Zálohování do iCloud**: **Nenakonfigurováno** (výchozí) umožňuje uživateli zálohovat zařízení na iCloud. **Blokování** zabrání uživateli v zálohování zařízení do iCloud.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Block iCloud Document sync**: **Not configured** (default) allows document and key-value synchronization to your iCloud storage space. **Block** prevents iCloud from syncing documents and data.
+- **Blokování synchronizace dokumentů iCloud**: **Nenakonfigurováno** (výchozí) povolí synchronizaci dokumentu a klíč-hodnota do prostoru úložiště iCloud. **Blok** zabraňuje iCloud synchronizaci dokumentů a dat.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-- **Block iCloud Keychain sync**: Choose **Block** to disable syncing credentials stored in the Keychain to iCloud. **Not configured** (default) allows users to sync these credentials.
+- **Blokovat synchronizaci řetězce klíčů iCloud**: Pokud chcete zakázat synchronizaci přihlašovacích údajů uložených v řetězci klíčů do iCloud, vyberte **blok** . **Nenakonfigurováno** (výchozí) umožňuje uživatelům synchronizovat tyto přihlašovací údaje.
 
-  Starting with iOS 13.0, this setting requires supervised devices.
+  Od iOS 13,0 Toto nastavení vyžaduje zařízení pod dohledem.
 
-## <a name="autonomous-single-app-mode"></a>Autonomous single app mode
+## <a name="autonomous-single-app-mode"></a>Autonomní režim jedné aplikace
 
-Use these settings to configure iOS devices to run specific apps in autonomous single app mode. When this mode is configured, and the app is run, the device is locked. It can only run that app. For example, add an app that lets users take a test on the device. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
+Pomocí těchto nastavení můžete nakonfigurovat zařízení s iOS tak, aby spouštěla konkrétní aplikace v autonomním režimu jedné aplikace. Když je tento režim nakonfigurovaný a aplikace se spustí, zařízení je uzamčené. Tuto aplikaci může spustit pouze. Přidejte například aplikaci, která umožní uživatelům provést test na zařízení. Když se akce aplikace dokončí nebo tuto zásadu odeberete, zařízení se vrátí do normálního stavu.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **App name**: Enter the name of the app you want.
-- **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app you want.
-- **Add**: Select to create your list of apps.
+- **Název aplikace**: zadejte název aplikace, kterou chcete.
+- **ID sady prostředků aplikace**: zadejte [ID sady prostředků](bundle-ids-built-in-ios-apps.md) aplikace, kterou chcete.
+- **Přidat**: vyberte, pokud chcete vytvořit seznam aplikací.
 
-You can also **Import** a CSV file with the list of app names and their bundle IDs. Or, **Export** an existing list that includes the apps.
+Soubor CSV můžete také **naimportovat** se seznamem názvů aplikací a jejich ID sady. Případně **exportujte** existující seznam obsahující aplikace.
 
 ## <a name="kiosk"></a>Kiosk
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **App to run in kiosk mode**: Choose the type of apps you want to run in kiosk mode. Možnosti:
-  - **Not configured** (default): Kiosk settings aren't applied. The device doesn't run in kiosk-mode.
-  - **Store App**: Enter the URL to an app in the iTunes App store.
-  - **Managed App**: Choose an app you added to Intune.
-  - **Built-In App**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the built-in app.
+- **Aplikace, která se má spustit v celoobrazovkovém režimu**: Vyberte typ aplikací, které chcete spustit v celoobrazovkovém režimu. Možnosti:
+  - **Nenakonfigurováno** (výchozí): Nastavení veřejného terminálu se nepoužijí. Zařízení neběží v celoobrazovkovém režimu.
+  - **Aplikace ze Storu**: zadejte adresu URL aplikace v iTunes App Storu.
+  - **Spravovaná aplikace**: vyberte aplikaci, kterou jste přidali do Intune.
+  - **Vestavěná aplikace**: zadejte [ID sady](bundle-ids-built-in-ios-apps.md) předdefinovaných aplikací.
 
-- **Assistive touch**: **Require** the Assistive Touch accessibility setting be on the device. This feature helps users with on-screen gestures that might be difficult for them. **Not configured** doesn't run or enable this feature in kiosk mode.
-- **Invert colors**: **Require** the Invert Colors accessibility setting so users with visual impairments can change the display screen. **Not configured** doesn't run or enable this feature in kiosk mode.
-- **Mono audio**: **Require** the Mono audio accessibility setting be on the device. **Not configured** doesn't run or enable this feature in kiosk mode.
-- **Voice control**: **Require** enables voice control on the device, and allows users to fully control the OS using Siri commands. **Not configured** disables voice control on the device.
+- **Dotykové ovládání**pro usnadnění: **vyžaduje** , aby na zařízení bylo nastavení usnadnění dotykového ovládání. Tato funkce pomáhá uživatelům s gesty na obrazovce, která by pro ně mohla být obtížná. **Není nakonfigurováno** , nespustí nebo povolí tuto funkci v celoobrazovkovém režimu.
+- **Invertování barev**: **vyžaduje** nastavení usnadnění invertování barev, aby uživatelé s zrakovým postižením mohli obrazovku pro zobrazení změnit. **Není nakonfigurováno** , nespustí nebo povolí tuto funkci v celoobrazovkovém režimu.
+- **Mono zvuk**: **vyžaduje** , aby na zařízení bylo nastavení usnadnění Mono zvuk. **Není nakonfigurováno** , nespustí nebo povolí tuto funkci v celoobrazovkovém režimu.
+- **Ovládání hlasu**: **vyžaduje** povolení ovládání hlasu na zařízení a umožňuje uživatelům plně ovládat operační systém pomocí příkazů Siri. **Nenakonfigurováno** zakáže ovládací prvek hlasu na zařízení.
 
-  This setting applies to:  
-  - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  Toto nastavení platí pro:  
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
   
   > [!TIP]
-  > If you have LOB apps available for your organization, and they're not **Voice Control** ready on day 0 when iOS 13.0 releases, then we recommend you leave this setting as **Not configured**.
+  > Pokud máte ve vaší organizaci k dispozici obchodní aplikace a nejsou v nich k dispozici **hlasové řízení** připravené na den 0 při vydání iOS 13,0, doporučujeme toto nastavení ponechat **nenakonfigurované**.
 
-- **VoiceOver**: **Require** the VoiceOver accessibility setting be on the device to read text on the screen out loud. **Not configured** doesn't run or enable this feature in kiosk mode.
-- **Zoom**: **Require** the Zoom setting be on the device to let users use touch to zoom in on the screen. **Not configured** doesn't run or enable this feature in kiosk mode.
-- **Auto lock**: **Block** prevents automatic locking of the device. **Not configured** allows this feature.
-- **Ringer switch**: **Block** disables the ringer (mute) switch on the device. **Not configured** allows this feature.
-- **Screen rotation**: **Block** prevents changing the screen orientation when the user rotates the device. **Not configured** allows this feature.
-- **Screen sleep button**: Choose **Block** to disable the screen sleep wake button on the device. **Not configured** allows this feature.
-- **Touch**: **Block** disables the touchscreen on the device. **Not configured** allows the user to use the touchscreen.
-- **Volume buttons**: **Block** prevents using the volume buttons on the device. **Not configured** allows the volume buttons.
-- **Assistive touch control**: **Allow** let users use the assistive touch function. **Not configured** disables this feature.
-- **Invert colors control**: **Allow** invert color changes to let users adjust the invert colors function. **Not configured** disables this feature.
-- **Speak on selected text**: **Allow** the Speak Selection accessibility settings be on the device. This feature reads text that the user selects out loud. **Not configured** disables this feature.
-- **Voice control modification**: **Allow** users to change the state of voice control on their devices. **Not configured** blocks users from changing the state of voice control on their devices.
+- **VoiceOver**: **vyžaduje** , aby se na zařízení načetlo nastavení usnadnění VoiceOver pro čtení textu na obrazovce. **Není nakonfigurováno** , nespustí nebo povolí tuto funkci v celoobrazovkovém režimu.
+- **Zoom**: **vyžaduje** , aby na zařízení bylo nastaveno přiblížení, aby uživatelé mohli použít dotykové ovládání k přiblížení obrazovky. **Není nakonfigurováno** , nespustí nebo povolí tuto funkci v celoobrazovkovém režimu.
+- **Auto Lock**: **Block** znemožňuje automatické uzamykání zařízení. **Nenakonfigurováno** umožňuje tuto funkci.
+- **Přepínač vyzvánění**: **Block** zakáže přepínač vyzvánění (ztlumení) na zařízení. **Nenakonfigurováno** umožňuje tuto funkci.
+- **Otočení obrazovky**: **blok** znemožňuje změnu orientace obrazovky, když uživatel otočí zařízení. **Nenakonfigurováno** umožňuje tuto funkci.
+- **Tlačítko pro režim spánku obrazovky**: vyberte možnost **blokovat** . Tím zakážete na zařízení tlačítko probuzení z režimu spánku obrazovky. **Nenakonfigurováno** umožňuje tuto funkci.
+- **Dotyk**: **Block** zakáže dotykovou obrazovku na zařízení. **Není nakonfigurováno** umožňuje uživateli používat dotykovou obrazovku.
+- **Tlačítka hlasitosti**: **blok** zabraňuje použití tlačítek hlasitosti na zařízení. **Není nakonfigurováno** , umožňuje tlačítka hlasitosti.
+- **Řízení dotykového**ovládání pro usnadnění: **umožňuje povolit** uživatelům používat funkci usnadnění dotykového ovládání. **Není nakonfigurováno** , zakáže tuto funkci.
+- **Invertování barev – ovládací prvek**: **Povolit** Invertovat změny barev, aby uživatelé mohli upravovat funkci invertování barev. **Není nakonfigurováno** , zakáže tuto funkci.
+- **Mluvit na vybraném textu**: **povolí** nastavení usnadnění výběru řeči na zařízení. Tato funkce přečte text, který uživatel vybírá nahlas. **Není nakonfigurováno** , zakáže tuto funkci.
+- **Úpravy hlasového ovládacího prvku**: **umožňuje** uživatelům změnit stav ovládacího prvku hlas na svých zařízeních. **Nenakonfigurovaní** znemožní uživatelům měnit stav ovládacího prvku hlas na svých zařízeních.
 
-  This setting applies to:  
-  - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  Toto nastavení platí pro:  
+  - iOS 13,0 a novější
+  - iPadOS 13,0 a novější
 
-- **VoiceOver control**: **Allow** voiceover changes to let users update the VoiceOver function, such as how fast on-screen text is read out loud. **Not configured** prevents voiceover changes.
-- **Zoom control**: **Allow** zoom changes by the user. **Not configured** prevents zoom changes.
+- **Ovládací prvek VoiceOver**: **Povolit** VoiceOver změny, aby uživatelé mohli aktualizovat funkci VoiceOver, jako je například způsob, jakým je rychlé čtení textu na obrazovce. **Není nakonfigurováno** , zabraňuje VoiceOver změnám.
+- **Ovládací prvek Lupa**: **povolí** změny přiblížení uživatele. **Není nakonfigurováno** , zabraňuje změnám lupy.
 
 > [!NOTE]
-> Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. See Apple's guide on using the Apple Configurator tool.
-> If the iOS app you enter is installed after you assign the profile, then the device doesn't enter kiosk mode until the device is restarted.
+> Než budete moct nakonfigurovat nastavení zařízení s iOSem pro celoobrazovkový (beznabídkový) režim, musíte převést zařízení do režimu dohledu pomocí nástroje Apple Configurator nebo Programu registrace zařízení Apple. Podívejte se na téma Příručka Apple na používání nástroje Apple Configuratoru.
+> Pokud je aplikace pro iOS, kterou zadáte, nainstalovaná po přiřazení profilu, zařízení nepřejde do celoobrazovkového režimu, dokud se zařízení nerestartuje.
 
 ## <a name="domains"></a>Domains
 
-### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### <a name="settings-apply-to-device-enrollment-automated-device-enrollment-supervised"></a>Nastavení platí pro: registrace zařízení, automatický zápis zařízení (pod dohledem)
 
-- **Unmarked email domains** > **Email Domain URL**: Add one or more URLs to the list. When end users receive an email from a domain other than the domains you enter, the email is marked as untrusted in the iOS Mail app.
+- **Neoznačená e-mailová** doména > **Adresa URL e-mailové domény**: přidejte jednu nebo více adres URL do seznamu. Když koncoví uživatelé dostanou e-mail z jiné domény než z domén, které zadáte, e-mail se v aplikaci iOS mail označí jako nedůvěryhodný.
 
-- **Managed web domains** > **Web Domain URL**; Add one or more URLs to the list. When documents are downloaded from the domains you enter, they're considered managed. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
+- **Spravované webové domény** > **Adresa URL webové domény**; Přidejte do seznamu jednu nebo více adres URL. Po stažení dokumentů z domén, které zadáte, se považují za spravované. Toto nastavení platí jenom pro dokumenty stažené prostřednictvím prohlížeče Safari.
 
-### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Settings apply to: Automated device enrollment (supervised)
+### <a name="settings-apply-to-automated-device-enrollment-supervised"></a>Nastavení platí pro: automatický zápis zařízení (pod dohledem)
 
-- **Safari password autofill domains** > **Domain URL**: Add one or more URLs to the list. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. This setting applies only to the Safari browser, and devices in supervised mode. If you don't enter any URLs, then passwords can be saved from all web sites.
+- **Domény pro automatické vyplňování hesel v Safari** > **doméně**: do seznamu přidejte jednu nebo více adres URL. Uživatelé si mohou uložit jenom webová hesla z adres URL uvedených v tomto seznamu. Toto nastavení platí jenom pro prohlížeč Safari a zařízení v režimu pod dohledem. Pokud nezadáte žádné adresy URL, bude možné ukládat hesla ze všech webů.
 
-  This setting applies to:  
-  - iOS 9.3 and newer
+  Toto nastavení platí pro:  
+  - iOS 9,3 a novější
 
-## <a name="settings-that-require-supervised-mode"></a>Settings that require supervised mode
+## <a name="settings-that-require-supervised-mode"></a>Nastavení, které vyžaduje režim pod dohledem
 
 Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavování zařízení prostřednictvím Programu registrace zařízení společnosti Apple nebo prostřednictvím Apple Configuratoru. Po povolení režimu pod dohledem může Intune v zařízení nakonfigurovat následující funkce:
 
@@ -653,7 +653,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - Uživatelské rozhraní pro omezení 
 - Instalace konfiguračních profilů uživatelským rozhraním 
 - News 
-- Keyboard shortcuts 
+- Klávesové zkratky 
 - Změny hesla 
 - Změny názvu zařízení 
 - Automatická stahování aplikací 
@@ -663,7 +663,7 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 - Spárování s Apple Watch 
 
 > [!NOTE]
-> Apple confirmed that certain settings move to supervised-only in 2019. We recommend taking this into consideration when using these settings, instead of waiting for Apple to migrate them to supervised-only:
+> Apple potvrzuje, že určitá nastavení se přesunou do režimu pod dohledem – jenom v 2019. Při použití těchto nastavení doporučujeme tuto možnost vzít v úvahu, takže nemusíte čekat, až společnost Apple je migruje do režimu pod dohledem:
 >
 > - Instalace aplikací koncovými uživateli
 > - Odebrání aplikace
@@ -672,12 +672,12 @@ Režim iOSu pod dohledem je možné povolit jenom během počátečního nastavo
 > - iTunes
 > - Explicitní obsah
 > - Dokumenty a data v iCloudu
-> - Multiplayer gaming
-> - Add Game Center friends
+> - Hry pro více hráčů
+> - Přidat Game Center přátelé
 > - Siri
 
 ## <a name="next-steps"></a>Další kroky
 
 [Přiřaďte profil](../device-profile-assign.md) a [monitorujte jeho stav](../device-profile-monitor.md).
 
-You can also restrict device features and settings on [macOS](device-restrictions-macos.md) devices.
+Na zařízeních [MacOS](device-restrictions-macos.md) můžete také omezit funkce a nastavení zařízení.

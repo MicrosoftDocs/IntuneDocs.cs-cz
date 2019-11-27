@@ -1,6 +1,6 @@
 ---
 title: Vytvoření profilů certifikátů v Microsoft Intune – Azure | Microsoft Docs
-description: Learn about using Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
+description: Přečtěte si, jak používat Simple Certificate Enrollment Protocol (SCEP) nebo certifikáty PKCS (Public Key Cryptography Standards) a profily certifikátů s Microsoft Intune.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -24,101 +24,101 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74410187"
 ---
-# <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Use certificates for authentication in Microsoft Intune
+# <a name="use-certificates-for-authentication-in-microsoft-intune"></a>Použití certifikátů pro ověřování v Microsoft Intune
 
-Use certificates with Intune to authenticate your users to applications and corporate resources through VPN, Wi-Fi, or email profiles. When you use certificates to authenticate these connections, your end users won't need to enter usernames and passwords, which can make their access seamless. Certificates are also used for signing and encryption of email using S/MIME.
+Pomocí certifikátů s Intune můžete ověřovat uživatele s aplikacemi a podnikovými prostředky prostřednictvím sítě VPN, Wi-Fi nebo e-mailových profilů. Když k ověření těchto připojení použijete certifikáty, koncoví uživatelé nebudou muset zadávat uživatelská jména a hesla, což by mohlo mít bez potíží přístup. Certifikáty se taky používají k podepisování a šifrování e-mailů pomocí S/MIME.
 
-## <a name="intune-supported-certificates-and-usage"></a>Intune supported certificates and usage
+## <a name="intune-supported-certificates-and-usage"></a>Podporované certifikáty a využití v Intune
 
-| Typ              | Ověřování | S/MIME Signing | S/MIME encryption  |
+| Typ              | Ověřování | Podepisování S/MIME | Šifrování S/MIME  |
 |--|--|--|--|
-| Public Key Cryptography Standards (PKCS) imported certificate |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
+| Importovaný certifikát PKCS (Public Key Cryptography Standards) |  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|
 | PKCS#12 (nebo PFX)    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |  |
 | Protokol SCEP (Simple Certificate Enrollment Protocol)  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | |
 
-To deploy these certificates, you’ll create and assign certificate profiles to devices.
+K nasazení těchto certifikátů vytvoříte a přiřadíte profily certifikátů k zařízením.
 
-Each individual certificate profile you create supports a single platform. For example, if you use PKCS certificates, you’ll create PKCS certificate profile for Android and a separate PKCS certificate profile for iOS. If you also use SCEP certificates for those two platforms, you’ll create a SCEP certificate profile for Android, and another for iOS.
+Každý profil každého jednotlivého certifikátu, který vytvoříte, podporuje jednu platformu. Pokud například používáte certifikáty PKCS, vytvoříte profil certifikátu PKCS pro Android a samostatný profil certifikátu PKCS pro iOS. Pokud pro tyto dvě platformy používáte také certifikáty SCEP, vytvoříte profil certifikátu SCEP pro Android a druhý pro iOS.
 
-### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>General considerations when you use a Microsoft Certification Authority
+### <a name="general-considerations-when-you-use-a-microsoft-certification-authority"></a>Obecné pokyny při používání certifikační autority Microsoftu
 
-When you use a Microsoft Certification Authority (CA):
+Když použijete certifikační autoritu (CA) Microsoftu:
 
-- To use SCEP certificate profiles, you must [set up a Network Device Enrollment Service (NDES) server](certificates-scep-configure.md#set-up-ndes) for use with Intune.
-- To use the following certificate profile types, you must [install the Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
-  - SCEP certification profile
-  - PKCS certificate profile
+- Pokud chcete používat profily certifikátů SCEP, musíte [nastavit server služby zápisu síťových zařízení (NDES)](certificates-scep-configure.md#set-up-ndes) pro použití s Intune.
+- Chcete-li použít následující typy profilů certifikátů, je nutné [nainstalovat Microsoft Intune Certificate Connector](certificates-scep-configure.md#install-the-intune-certificate-connector):
+  - Profil certifikace SCEP
+  - Profil certifikátu PKCS
 
-- To use PKCS imported certificates:
-  - [Install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
-  - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
+- Použití importovaných certifikátů PKCS:
+  - [Nainstalujte Certificate Connector PFX pro Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
+  - Exportujte certifikáty od certifikační autority a pak je importujte do Microsoft Intune. Viz [projekt prostředí PowerShell pro PFXImport](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
-- Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+- Nasaďte certifikáty pomocí následujících mechanismů:
+  - [Profily důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) pro nasazení certifikátu důvěryhodné kořenové certifikační autority z kořenové nebo zprostředkující certifikační autority do zařízení
   - Profily certifikátů SCEP
   - Profily certifikátů PKCS
-  - PKCS imported certificate profiles
+  - Profily certifikátů PKCS importovány
 
-### <a name="general-considerations-when-you-use-a-third-party-certification-authority"></a>General considerations when you use a third-party Certification Authority
+### <a name="general-considerations-when-you-use-a-third-party-certification-authority"></a>Obecné požadavky při použití certifikační autority třetí strany
 
-When you use a third-party (non-Microsoft) Certification Authority (CA):
+Používáte-li certifikační autoritu (CA) třetí strany (od společnosti Microsoft):
 
-- To use SCEP certificate profiles:
-  - Set up integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Set up includes following the instructions from the third-party CA to complete integration of their CA with Intune.
-  - [Create an application in Azure AD](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
+- Používání profilů certifikátů SCEP:
+  - Nastavte integraci s certifikační autoritou třetí strany z [některého z našich podporovaných partnerů](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Nastavení zahrnuje následující pokyny od certifikační autority třetí strany, které dokončí integraci své certifikační autority s Intune.
+  - [Vytvořte ve službě Azure AD aplikaci](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) , která deleguje práva k Intune, aby vystavoval ověření výzvy certifikátu SCEP.
 
-- PKCS imported certificates require you to [install the PFX Certificate Connector for Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
+- Importované certifikáty PKCS vyžadují, abyste [nainstalovali konektor PFX Certificate pro Microsoft Intune](certificates-imported-pfx-configure.md#download-install-and-configure-the-pfx-certificate-connector-for-microsoft-intune).
 
-- Deploy certificates by using the following mechanisms:
-  - [Trusted certificate profiles](certificates-configure.md#create-trusted-certificate-profiles) to deploy the Trusted Root CA certificate from your root or intermediate (issuing) CA to devices
+- Nasaďte certifikáty pomocí následujících mechanismů:
+  - [Profily důvěryhodných certifikátů](certificates-configure.md#create-trusted-certificate-profiles) pro nasazení certifikátu důvěryhodné kořenové certifikační autority z kořenové nebo zprostředkující certifikační autority do zařízení
   - Profily certifikátů SCEP
-  - PKCS certificate profiles *(only supported with the [Digicert PKI Platform](certificates-digicert-configure.md))*
-  - PKCS imported certificate profiles
+  - Profily certifikátů PKCS *(podporované jenom s [platformou PKI DigiCert](certificates-digicert-configure.md))*
+  - Profily certifikátů PKCS importovány
 
-## <a name="supported-platforms-and-certificate-profiles"></a>Supported platforms and certificate profiles
+## <a name="supported-platforms-and-certificate-profiles"></a>Podporované platformy a profily certifikátů
 
-| Platforma              | Trusted certificate profile | PKCS certificate profile | SCEP certificate profile | PKCS imported certificate profile  |
+| Platforma              | Profil důvěryhodného certifikátu | Profil certifikátu PKCS | Profil certifikátu SCEP | Profil certifikátu importovaného PKCS  |
 |--|--|--|--|---|
-| Android device administrator | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
-| Android Enterprise <br> - Fully Managed (Device Owner)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
-| Android Enterprise <br> - Dedicated (Device Owner)   | ![Podporováno](./media/certificates-configure/green-check.png)  |   | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
-| Android Enterprise <br> - Work Profile    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
+| Správce zařízení s Androidem | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png)|  ![Podporováno](./media/certificates-configure/green-check.png) |
+| Android Enterprise <br> – Plně spravované (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png) |   | ![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Android Enterprise <br> -Vyhrazené (vlastník zařízení)   | ![Podporováno](./media/certificates-configure/green-check.png)  |   | ![Podporováno](./media/certificates-configure/green-check.png)  |   |
+| Android Enterprise <br> – Pracovní profil    | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | iOS                   | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Podporováno](./media/certificates-configure/green-check.png) |  ![Podporováno](./media/certificates-configure/green-check.png) |![Podporováno](./media/certificates-configure/green-check.png)|![Podporováno](./media/certificates-configure/green-check.png)|
 | Wvdows Phone 8.1     |![Podporováno](./media/certificates-configure/green-check.png)  |  | ![Podporováno](./media/certificates-configure/green-check.png)| ![Podporováno](./media/certificates-configure/green-check.png) |
-| Windows 8.1 a vyšší |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
+| Windows 8.1 a novější |![Podporováno](./media/certificates-configure/green-check.png)  |  |![Podporováno](./media/certificates-configure/green-check.png) |   |
 | Windows 10 a novější  | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) | ![Podporováno](./media/certificates-configure/green-check.png) |
 
-## <a name="export-the-trusted-root-ca-certificate"></a>Export the trusted root CA certificate
+## <a name="export-the-trusted-root-ca-certificate"></a>Exportujte certifikát důvěryhodné kořenové certifikační autority.
 
-To use PKCS,  SCEP, and PKCS imported certificates, devices must trust your root Certification Authority. To establish trust, export the Trusted Root CA certificate, and any intermediate or issuing Certification Authority certificates, as a public certificate (.cer). You can get these certificates from the issuing CA, or from any device that trusts your issuing CA.
+Aby zařízení mohla používat importované certifikáty PKCS, SCEP a PKCS, musí důvěřovat vaší kořenové certifikační autoritě. Chcete-li vytvořit vztah důvěryhodnosti, exportujte certifikát důvěryhodné kořenové certifikační autority a všechny zprostředkující nebo vydávající certifikáty certifikační autority jako veřejný certifikát (. cer). Tyto certifikáty můžete získat z vydávající certifikační autority nebo z jakéhokoli zařízení, které důvěřuje vydávající certifikační autoritě.
 
-To export the certificate, refer to the documentation for your Certification Authority. You’ll need to export the public certificate as a .cer file.  Don't export the private key, a .pfx file.
+Informace o exportu certifikátu najdete v dokumentaci k vaší certifikační autoritě. Veřejný certifikát budete muset exportovat jako soubor. cer.  Neexportujte privátní klíč, soubor. pfx.
 
-You’ll use this .cer file when you [create trusted certificate profiles](#create-trusted-certificate-profiles) to deploy that certificate to your devices.
+Tento soubor. cer budete používat při [vytváření profilů důvěryhodných certifikátů](#create-trusted-certificate-profiles) k nasazení tohoto certifikátu do zařízení.
 
-## <a name="create-trusted-certificate-profiles"></a>Create trusted certificate profiles
+## <a name="create-trusted-certificate-profiles"></a>Vytvoření profilů důvěryhodných certifikátů
 
-Create a trusted certificate profile before you can create a SCEP, PKCS, or PKCS imported certificate profile. Deploying a trusted certificate profile ensures each device recognizes the legitimacy of your CA. SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don’t directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn’t trust the root CA, the SCEP or PKCS certificate profile policy will fail.
+Než budete moct vytvořit profil certifikátu SCEP, PKCS nebo PKCS, vytvořte profil důvěryhodného certifikátu. Nasazení profilu důvěryhodného certifikátu zajišťuje, aby každé zařízení rozpoznalo legitimitu vaší certifikační autority. Profily certifikátů SCEP přímo odkazují na profil důvěryhodného certifikátu. Profily certifikátů PKCS přímo neodkazují na profil důvěryhodného certifikátu, ale přímo odkazují na server, který je hostitelem vaší certifikační autority. Profily certifikátů PKCS importované přímo neodkazují na profil důvěryhodného certifikátu, ale můžou ho použít na zařízení. Nasazení profilu důvěryhodného certifikátu na zařízení zajistí, že se tento vztah důvěryhodnosti naváže. Když zařízení nedůvěřuje kořenové certifikační autoritě, zásada profilu certifikátu SCEP nebo PKCS se nezdaří.
 
-Create a separate trusted certificate profile for each device platform you want to support, just as you'll do for SCEP, PKCS, and PKCS imported certificate profiles.
+Vytvořte samostatný profil důvěryhodného certifikátu pro každou platformu zařízení, kterou chcete podporovat, stejně jako u profilů certifikátů SCEP, PKCS a PKCS.
 
 ### <a name="to-create-a-trusted-certificate-profile"></a>Vytvoření profilu důvěryhodného certifikátu
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Configuration profiles** > **Create profile**.
+2. Vyberte **zařízení** > **konfiguračních profilech** > **vytvořit profil**.
 
-   ![Navigate to Intune and create a new profile for a trusted certificate](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
+   ![Přejděte na Intune a vytvořte nový profil důvěryhodného certifikátu.](./media/certficates-pfx-configure/certificates-pfx-configure-profile-new.png)
 
 3. Zadejte následující vlastnosti:
 
    - Zadejte **Název** profilu.
-   - Optionally set a **Description**
+   - Volitelně můžete nastavit **Popis** .
    - Zadejte **Platformu**, na kterou se má profil nasadit.
    - Nastavte **Typ profilu** na **Důvěryhodný certifikát**.
 
-4. Select **Settings**, and then browse to the trusted root CA certificate .cer file you exported for use with this certificate profile, and then select **OK**.
+4. Vyberte **Nastavení**a pak vyhledejte soubor. CER certifikátu důvěryhodné kořenové certifikační autority, který jste exportovali pro použití s tímto profilem certifikátu, a pak vyberte **OK**.
 
 5. Jenom pro zařízení s Windows 8.1 a Windows 10 vyberte **cílové úložiště** pro důvěryhodný certifikát z těchto možností:
 
@@ -128,21 +128,21 @@ Create a separate trusted certificate profile for each device platform you want 
 
 6. Až to budete mít, zvolte **OK**, vraťte se zpět do podokna **Vytvořit profil** a vyberte **Vytvořit**.
 
-The profile appears in the list of profiles on the *Devices - Configuration profiles* window, with a profile type of **Trusted certificate**. Be sure to assign this profile to devices that will use SCEP or PKCS certificates. To assign the profile to groups, see [assign device profiles](../configuration/device-profile-assign.md).
+Profil se zobrazí v seznamu profilů v okně *zařízení – konfigurační profily* s typem profilu **důvěryhodného certifikátu**. Nezapomeňte tento profil přiřadit k zařízením, která budou používat certifikáty SCEP nebo PKCS. Pokud chcete přiřadit tento profil ke skupinám, přečtěte si téma [přiřazení profilů zařízení](../configuration/device-profile-assign.md).
 
 > [!NOTE]
-> Android devices might display a message that a third party has installed a trusted certificate.
+> V zařízeních s Androidem se může zobrazit zpráva, že třetí strana nainstalovala důvěryhodný certifikát.
 
 ## <a name="additional-resources"></a>Další materiály a zdroje informací
 
 - [Přiřazení profilů zařízení](../configuration/device-profile-assign.md)  
 - [Podepisování a šifrování e-mailů pomocí S/MIME](certificates-s-mime-encryption-sign.md)  
-- [Use third-party certification authority](certificate-authority-add-scep-overview.md)  
+- [Použití certifikační autority třetích stran](certificate-authority-add-scep-overview.md)  
 
 ## <a name="next-steps"></a>Další kroky
 
-Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you want to use. To continue, see the following articles:
+Pro každou platformu, kterou chcete použít, vytvořte profily certifikátů importované pomocí protokolu SCEP, PKCS nebo PKCS. Chcete-li pokračovat, přečtěte si následující články:
 
-- [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
+- [Konfigurace infrastruktury pro podporu certifikátů SCEP pomocí Intune](certificates-scep-configure.md)  
 - [Konfigurace a správa certifikátů PKCS pomocí Intune](certficates-pfx-configure.md)  
-- [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Vytvoření importovaného profilu certifikátu PKCS](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)

@@ -1,7 +1,7 @@
 ---
-title: Tutorial - Protect Exchange Online email on unmanaged devices
+title: Kurz – Ochrana e-mailů Exchange Online na nespravovaných zařízeních
 titleSuffix: Microsoft Intune
-description: Learn to secure Office 365 Exchange Online with Intune app protection policies and Azure AD Conditional Access.
+description: Naučte se zabezpečit Office 365 Exchange Online pomocí zásad ochrany aplikací Intune a podmíněného přístupu Azure AD.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -24,173 +24,173 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74465787"
 ---
-# <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Tutorial: Protect Exchange Online email on unmanaged devices
+# <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Kurz: Ochrana e-mailů Exchange Online na nespravovaných zařízeních
 
-Learn about using app protection policies with Conditional Access to protect Exchange Online, even when devices aren't enrolled in a device management solution like Intune. V tomto kurzu se naučíte:
+Přečtěte si, jak používat zásady ochrany aplikací s podmíněným přístupem k ochraně Exchange Online, i když nejsou zařízení zaregistrovaná v řešení pro správu zařízení, jako je Intune. V tomto kurzu se naučíte:
 
 > [!div class="checklist"]
-> * Create an Intune app protection policy for the Outlook app. You'll limit what the user can do with app data by preventing "Save As" and restrict cut, copy, and paste actions.
-> * Create Azure Active Directory (Azure AD) Conditional Access policies that allow only the Outlook app to access company email in Exchange Online. You'll also require multi-factor authentication (MFA) for Modern authentication clients, like Outlook for iOS and Android.
+> * Vytvořte zásady ochrany aplikací Intune pro aplikaci Outlook. Můžete omezit, co může uživatel s daty aplikace dělat, a zabránit tak akcím Uložit jako a omezit operace vyjmutí, zkopírování a vložení.
+> * Vytvoření zásad podmíněného přístupu Azure Active Directory (Azure AD), které umožní přístup k firemnímu e-mailu v Exchange Online jenom aplikaci Outlook. Pro moderní ověřování klientů budete také vyžadovat vícefaktorové ověřování (MFA), jako je Outlook pro iOS a Android.
 
-## <a name="prerequisites"></a>Požadované součásti
+## <a name="prerequisites"></a>Předpoklady
 
 Pro účely tohoto kurzu budete potřebovat testovacího tenanta s následujícími předplatnými:
 
 - Azure Active Directory Premium ([bezplatná zkušební verze](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-- Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
+- Předplatné Intune ([bezplatná zkušební verze](../fundamentals/free-trial-sign-up.md))
 - Předplatné Office 365 Business, které zahrnuje Exchange ([bezplatná zkušební verze](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Přihlášení k Intune
 
-For this tutorial, when you sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as a [Global administrator](../fundamentals/users-add.md#types-of-administrators) or an Intune [Service administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+V tomto kurzu se po přihlášení k [centru pro správu Microsoft Endpoint Manageru](https://go.microsoft.com/fwlink/?linkid=2109431)přihlaste jako [globální správce](../fundamentals/users-add.md#types-of-administrators) nebo jako [Správce služby](../fundamentals/users-add.md#types-of-administrators)Intune. Pokud jste vytvořili zkušební předplatné Intune, účet, se kterým jste předplatné vytvořili, je globální správce.
 
-## <a name="create-the-app-protection-policy"></a>Create the app protection policy
+## <a name="create-the-app-protection-policy"></a>Vytvoření zásad ochrany aplikací
 
-In this tutorial, we’ll set up an Intune app protection policy for iOS for the Outlook app to put protections in place at the app level. We'll require a PIN to open the app in a work context. We'll also limit data sharing between apps and prevent company data from being saved to a personal location.
+V tomto kurzu nastavíme zásady ochrany aplikací Intune pro iOS, aby aplikace Outlook mohla umístit ochrany na úrovni aplikace. Pro otevření aplikace v pracovním kontextu budeme vyžadovat kód PIN. Také omezíme sdílení dat mezi aplikacemi a zabránění ukládání firemních dat do osobního umístění.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Apps** > **App protection policies** > **Create policy**, and select **iOS/iPadOS** for the platform.
+2. Vyberte **aplikace** > **zásady ochrany aplikací** > **vytvořit zásadu**a pro platformu vyberte **iOS/iPadOS** .
 
-3. On the **Basics** page, configure the following settings:
+3. Na stránce **základy** nakonfigurujte následující nastavení:
 
-   - **Name**: Enter **Outlook app policy test**.
-   - **Description**: Enter **Outlook app policy test**.
+   - **Název**: zadejte **test zásad**aplikace pro Outlook.
+   - **Popis**: zadejte **test zásad**aplikace pro Outlook.
 
-   The **Platform** value is set to your previous choice.
-
-   Pokračujte kliknutím na položku **Další** .
-
-4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. Configure the following options:
-
-   - For **Target to all app types**: Select **No**, and then for **App types**, select the checkbox for **Apps on unmanaged devices**.
-   - Click **Select public apps**. In the Apps list, select **Outlook**, and then choose **Select**.  Outlook now appears under *Public apps*.
+   Hodnota **platformy** je nastavená na předchozí volbu.
 
    Pokračujte kliknutím na položku **Další** .
 
-5. The **Data protection** page provides settings that determine how users interact with data in the apps that this app protection policy applies. Configure the following options:
+4. Stránka **aplikace** umožňuje zvolit, jak chcete tyto zásady použít pro aplikace na různých zařízeních. Nakonfigurujte tyhle možnosti:
 
-   Below *Data Transfer*, configure the following settings, leaving all other settings at their default values:
-
-   - For **Send org data to other apps**, select **None**.  
-   - For **Receive data from other apps**, select **None**.  
-   - For **Save copies of org data**, select **Block**.  
-   - For **Restrict cut, copy and paste between other apps**, select **Blocked**. 
-
-   ![Select the Outlook app protection policy data relocation settings](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
-
-   Select **Next** to continue.
-
-6. The **Access requirements** page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context. Configure the following settings, leaving all other settings at their default values:
-
-   - For **PIN for access**, select **Require**.
-   - For **Work or school account credentials for access**, select **Require**.
-
-   ![Select the Outlook app protection policy access actions](./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
-
-   Select **Next** to continue.
-
-7. The **Conditional launch** page provides settings to set the sign-in security requirements for your app protection policy. For this tutorial, you don't need to configure these settings.
+   - Pro **cíl pro všechny typy aplikací**: vyberte **ne**a pak u **typů aplikací**zaškrtněte políčko pro **aplikace na nespravovaných zařízeních**.
+   - Klikněte na **Vybrat veřejné aplikace**. V seznamu aplikace vyberte možnost **Outlook**a pak zvolte **možnost vybrat**.  Outlook se teď zobrazuje v části *veřejné aplikace*.
 
    Pokračujte kliknutím na položku **Další** .
 
-8. Use the **Assignments** page to assign the app protection policy to groups of users. For this tutorial, you won't assign this policy to a group.  
- don't need to configure these settings.
+5. Stránka **Ochrana dat** poskytuje nastavení, která určují, jak uživatelé budou pracovat s daty v aplikacích, které tato zásada ochrany aplikací používá. Nakonfigurujte tyhle možnosti:
+
+   Níže *přenos dat*nakonfigurujte následující nastavení a nechte všechna ostatní nastavení na jejich výchozích hodnotách:
+
+   - Pro možnost **Odeslat organizační data do jiných aplikací**vyberte **None (žádné**).  
+   - Pro **příjem dat z jiných aplikací**vyberte **None (žádné**).  
+   - V **části uložit kopie organizačních dat**vyberte **blokovat**.  
+   - Pokud chcete **Omezit vyjmutí, zkopírování a vložení mezi ostatními aplikacemi**, vyberte **blokované**. 
+
+   ![Výběr nastavení přemístění dat v zásadách ochrany aplikací Outlook](./media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
+
+   Pokračujte výběrem **Další** .
+
+6. Stránka **požadavky na přístup** poskytuje nastavení, které vám umožní nakonfigurovat požadavky na PIN a přihlašovací údaje, které uživatelé musí splnit, aby měli přístup k aplikacím v pracovním kontextu. Nakonfigurujte následující nastavení a nechte všechna ostatní nastavení na jejich výchozích hodnotách:
+
+   - V případě **kódu PIN pro přístup**vyberte **vyžadovat**.
+   - V případě **přihlašovacích údajů pracovního nebo školního účtu pro přístup**vyberte **vyžadovat**.
+
+   ![Vybrat akce přístupu k zásadám ochrany aplikací Outlook](./media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
+
+   Pokračujte výběrem **Další** .
+
+7. **Podmíněná spouštěcí** stránka poskytuje nastavení pro nastavení požadavků zabezpečení přihlášení pro zásady ochrany aplikací. Pro tento kurz nemusíte konfigurovat tato nastavení.
 
    Pokračujte kliknutím na položku **Další** .
 
-9. On the **Next: Review + create** page, review the values and settings you entered for this app protection policy. Click **Create** to create the app protection policy in Intune.
+8. Na stránce **přiřazení** můžete přiřadit zásady ochrany aplikací skupinám uživatelů. Pro tento kurz nepřiřazujte tuto zásadu ke skupině.  
+ Toto nastavení nemusíte konfigurovat.
 
-The app protection policy for Outlook is created. Next, you'll set up Conditional Access to require devices to use the Outlook app.
+   Pokračujte kliknutím na položku **Další** .
 
-## <a name="create-conditional-access-policies"></a>Create Conditional Access policies
+9. Na stránce **Další: zkontrolovat + vytvořit** zkontrolujte hodnoty a nastavení, které jste zadali pro tyto zásady ochrany aplikací. Kliknutím na **vytvořit** vytvořte zásadu ochrany aplikací v Intune.
 
-Now we’ll create two Conditional Access policies to cover all device platforms.  
+Vytvoří se zásady ochrany aplikací pro Outlook. V dalším kroku nastavíte podmíněný přístup, který bude vyžadovat, aby zařízení používalo Outlookovou aplikaci.
 
-- The first policy will require that Modern Authentication clients use the approved Outlook app and multi-factor authentication (MFA). Modern Authentication clients include Outlook for iOS and Outlook for Android.  
+## <a name="create-conditional-access-policies"></a>Vytvoření zásad podmíněného přístupu
 
-- The second policy will require that Exchange ActiveSync clients use the approved Outlook app. (Currently, Exchange Active Sync doesn't support conditions other than device platform). You can configure Conditional Access policies in either the Azure AD portal or the Intune portal. Vzhledem k tomu, že se už nacházíme na portálu Intune, vytvoříme zásadu zde.  
+Nyní vytvoříme dvě zásady podmíněného přístupu, které pokrývají všechny platformy zařízení.  
 
-### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Create an MFA policy for Modern Authentication clients  
+- První zásada bude vyžadovat, aby klienti moderního ověřování používali schválenou aplikaci Outlook a službu Multi-Factor Authentication (MFA). Mezi klienty moderního ověřování patří Outlook pro iOS a Outlook pro Android.  
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Druhá zásada bude vyžadovat, aby klienti Exchange ActiveSync používali schválenou aplikaci Outlook. (V současné době Exchange Active Sync nepodporuje jiné podmínky než platforma zařízení). Zásady podmíněného přístupu můžete nakonfigurovat buď na portálu Azure AD, nebo na portálu Intune. Vzhledem k tomu, že se už nacházíme na portálu Intune, vytvoříme zásadu zde.  
 
-2. Select **Endpoint security** >  **Conditional access** > **New policy**.  
+### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Vytvoření zásady MFA pro klienty moderních ověřování  
 
-3. For **Name**, enter **Test policy for modern auth clients**.  
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Vyberte možnost **zabezpečení koncového bodu** >  **podmíněný přístup** > **nové zásady**.  
+
+3. Jako **název**zadejte **zásady testování pro klienty s moderním ověřováním**.  
 
 4. V části **Přiřazení** vyberte **Uživatelé a skupiny**. Na kartě **Zahrnout** vyberte **Všichni uživatelé** a vyberte **Hotovo**.
 
-5. Under **Assignments**, select **Cloud apps or actions**. Protože chceme chránit e-mail Office 365 se službou Exchange Online, vybereme ho následujícím postupem:
+5. V části **přiřazení**vyberte **cloudové aplikace nebo akce**. Protože chceme chránit e-mail Office 365 se službou Exchange Online, vybereme ho následujícím postupem:
 
    1. Na kartě **Zahrnout** zvolte **Vybrat aplikace**.
    2. Zvolte **Vybrat**.
-   3. In the Applications list, select **Office 365 Exchange Online**, and then choose **Select**.
-   4. Select **Done** to return to the New policy pane.
+   3. V seznamu aplikace vyberte možnost **Office 365 Exchange Online**a pak zvolte **možnost vybrat**.
+   4. Vyberte **Hotovo** a vraťte se do podokna nové zásady.
 
    ![Výběr aplikace Office 365 se službou Exchange Online](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png)
 
 6. V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
 
    1. V části **Konfigurovat** vyberte **Ano**.
-   2. On the **Include** tab, select **Any device**.
+   2. Na kartě **Zahrnout** vyberte **libovolné zařízení**.
    3. Vyberte **Hotovo**.
 
-7. On the **Conditions** pane, select **Client apps**.
+7. V podokně **podmínky** vyberte **klientské aplikace**.
 
    1. V části **Konfigurovat** vyberte **Ano**.
-   2. Select **Mobile apps and desktop clients** and **Modern authentication clients**.
-   3. Clear the other check boxes.
-   4. Select **Done** > **Done** to return to the New policy pane.
+   2. Vyberte **mobilní aplikace a klienti pro stolní počítače** a **moderní ověřování**.
+   3. Zrušte zaškrtnutí těchto políček.
+   4. Vyberte **hotovo** > **Hotovo** a vraťte se do podokna nové zásady.
 
-   ![Select Mobile apps and clients](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
+   ![Vybrat mobilní aplikace a klienti](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 8. V části **Ovládací prvky přístupu** zvolte **Udělení**.
 
    1. V podokně **Udělení** vyberte **Udělit přístup**.
-   2. Select **Require multi-factor authentication**.
+   2. Vyberte **vyžadovat službu Multi-Factor Authentication**.
    3. Vyberte **Vyžaduje se klientem schválená aplikace**.
    4. V části **Pro více ovládacích prvků** vyberte **Vyžadovat všechny vybrané ovládací prvky**. Toto nastavení zajistí, že se při přístupu zařízení k e-mailu oba vybrané požadavky vynutí.
    5. Zvolte **Vybrat**.
 
-   ![Select access controls](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
+   ![Výběr řízení přístupu](./media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
-9. Under **Enable policy**, select **On**, and then select **Create**.
+9. V části **Povolit zásadu**vyberte **zapnuto**a pak vyberte **vytvořit**.
 
-   ![Create policy](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
+   ![Vytvořit zásadu](./media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
-The Conditional Access policy for Modern Authentication clients is created. Now you can create a policy for Exchange Active Sync clients.
+Vytvoří se zásada podmíněného přístupu pro klienty moderního ověřování. Nyní můžete vytvořit zásadu pro klienty Exchange Active Sync.
 
-### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Create a policy for Exchange Active Sync clients
+### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Vytvoření zásady pro Exchange Active Sync klientů
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **New policy**.
+2. Vyberte možnost **zabezpečení koncového bodu** > **podmíněný přístup** > **nové zásady**.
 
-3. For **Name**, enter **Test policy for EAS clients**.
+3. Jako **název**zadejte **zásady testování pro klienty EAS**.
 
 4. V části **Přiřazení** vyberte **Uživatelé a skupiny**. Na kartě *Zahrnout* vyberte **Všichni uživatelé** a vyberte **Hotovo**.
 
-5. Under **Assignments**, select **Cloud apps or actions**. Select Office 365 Exchange Online email with these steps:
+5. V části **přiřazení**vyberte **cloudové aplikace nebo akce**. Vyberte e-mailovou zprávu Office 365 Exchange Online s těmito kroky:
 
    1. Na kartě *Zahrnout* zvolte **Vybrat aplikace**.
    2. Zvolte **Vybrat**.
-   3. From the list of *Applications*, select **Office 365 Exchange Online**, and then choose **Select**, and then **Done**.
+   3. V seznamu *aplikací*vyberte možnost **Office 365 Exchange Online**a pak klikněte na **Vybrat**a pak na **Hotovo**.
   
 6. V části **Přiřazení** vyberte **Podmínky** > **Platformy zařízení**.
 
    1. V části **Konfigurovat** vyberte **Ano**.
-   2. On the **Include** tab, select **Any device**, and then select **Done**.
+   2. Na kartě **Zahrnout** vyberte **libovolné zařízení**a potom vyberte **Hotovo**.
 
-7. On the **Conditions** pane, select **Client apps**.
+7. V podokně **podmínky** vyberte **klientské aplikace**.
 
    1. V části **Konfigurovat** vyberte **Ano**.
-   2. Select **Mobile apps and desktop clients**.
-   3. Select **Exchange ActiveSync clients** and **Apply policy only to supported platforms**.  
+   2. Vyberte **mobilní aplikace a klienti klasické pracovní plochy**.
+   3. Vyberte **klienti Exchange ActiveSync** a **použijte zásady jenom pro podporované platformy**.  
    4. Zaškrtnutí všech ostatních políček zrušte.  
    5. Vyberte **Hotovo** a potom znovu vyberte **Hotovo**.  
 
-   ![Apply to supported platforms](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
+   ![Platí pro podporované platformy](./media/tutorial-protect-email-on-unmanaged-devices/eas-client-apps.png)  
 
 8. V části **Ovládací prvky přístupu** zvolte **Udělení**.
 
@@ -198,15 +198,15 @@ The Conditional Access policy for Modern Authentication clients is created. Now 
    2. Vyberte **Vyžaduje se klientem schválená aplikace**. Zaškrtnutí všech ostatních políček zrušte.
    3. Zvolte **Vybrat**.
 
-   ![Require approved client app](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)
+   ![Vyžaduje se klientem schválená aplikace.](./media/tutorial-protect-email-on-unmanaged-devices/eas-grant-access.png)
 
-9. Under **Enable policy**, select **On**, and then select **Create**.
+9. V části **Povolit zásadu**vyberte **zapnuto**a pak vyberte **vytvořit**.
 
-Your app protection policies and Conditional Access are now in place and ready to test.
+Vaše zásady ochrany aplikací a podmíněný přístup teď fungují a jsou připravené k testování.
 
 ## <a name="try-it-out"></a>Vyzkoušejte si to
 
-With the policies you’ve created, devices will need to enroll in Intune and use the Outlook mobile app to access Office 365 email. Pokud chcete tento scénář otestovat na zařízení s iOSem, zkuste se přihlásit k Exchangi Online pomocí přihlašovacích údajů uživatele v testovacím tenantovi.
+Pomocí zásad, které jste vytvořili, se zařízení musí zaregistrovat v Intune a používat mobilní aplikaci Outlook k přístupu k e-mailu Office 365. Pokud chcete tento scénář otestovat na zařízení s iOSem, zkuste se přihlásit k Exchangi Online pomocí přihlašovacích údajů uživatele v testovacím tenantovi.
 
 1. Pokud si chcete zásady otestovat na iPhonu, přejděte na **Nastavení** > **Hesla a účty** > **Přidat účet** > **Exchange**.
 
@@ -215,29 +215,29 @@ With the policies you’ve created, devices will need to enroll in Intune and us
 
 4. Zadejte heslo testovacího uživatele a stiskněte **Přihlásit se**.
 
-5. The message **More information is required** appears, which means you're being prompted to set up MFA. Go ahead and set up an additional verification method.
+5. Zobrazí se **Další informace, které jsou požadovány** , což znamená, že se zobrazí výzva k nastavení vícefaktorového ověřování. Pokračujte a nastavte další metodu ověřování.
 
-6. Next you'll see a message that says you're trying to open this resource with an app that isn't approved by your IT department. The message means you're being blocked from using the native mail app. Cancel the sign-in.
+6. V dalším kroku se zobrazí zpráva s informacemi o tom, že se snažíte otevřít tento prostředek, pomocí aplikace, která není schválená vaším IT oddělením. Zpráva znamená, že jste zablokovali používání aplikace v nativním e-mailu. Zrušte přihlášení.
 
-7. Open the Outlook app and select **Settings** > **Add Account** > **Add Email Account**.
+7. Otevřete aplikaci Outlook a vyberte **nastavení** > **Přidat účet** > **Přidat e-mailový účet**.
 
 8. Zadejte e-mailovou adresu uživatele v testovacím tenantovi a stiskněte **Další**.
 
-9. Press **Sign in with Office 365**. You'll be prompted for additional authentication and registration. Once you've signed in, you can test actions such as cut, copy, paste, and "Save As".
+9. Stiskněte tlačítko **Přihlásit se sadou Office 365**. Zobrazí se výzva k dodatečnému ověření a registraci. Po přihlášení můžete testovat akce, jako je vyjmutí, kopírování, vložení a uložit jako.
 
 ## <a name="clean-up-resources"></a>Vyčištění prostředků
 
 Pokud už testovací zásady nepotřebujete, můžete je odebrat.
 
-1. Sign in to the [Microsoft Endpoint Manager Admin Center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Přihlaste se k [centru pro správu služby Microsoft Endpoint Manager](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** **Compliance policies**.
+2. Vyberte **zásady dodržování předpisů**pro zařízení.
 
 3. V seznamu **Název zásady** vyberte u testovací zásady místní nabídku ( **...** ) a potom vyberte **Odstranit**. Vyberte **OK**. Tím akci potvrdíte.
 
-4. Select **Endpoint security** > **Conditional access**.
+4. Vyberte možnost **zabezpečení koncového bodu** > **podmíněný přístup**.
 
-5. In the **Policy Name** list, select the context menu ( **...** ) for each of your test policies, and then select **Delete**. Select **Yes** to confirm.
+5. V seznamu **název zásady** vyberte kontextovou nabídku ( **...** ) pro každou ze svých zásad testování a pak vyberte **Odstranit**. Kliknutím na **tlačítko Ano** potvrďte akci.
 
 ## <a name="next-steps"></a>Další kroky
-In this tutorial, you created app protection policies to limit what the user can do with the Outlook app, and you created Conditional Access policies to require the Outlook app and require MFA for Modern Authentication clients. To learn about using Intune with Conditional Access to protect other apps and services, see [Set up Conditional Access](conditional-access.md).
+V tomto kurzu jste vytvořili zásady ochrany aplikací, abyste omezili to, co může uživatel dělat s aplikací Outlook, a vytvořili jste zásady podmíněného přístupu, které vyžadují aplikaci Outlook a vyžadují MFA pro klienty moderních ověřování. Další informace o používání Intune s podmíněným přístupem k ochraně dalších aplikací a služeb najdete v tématu [nastavení podmíněného přístupu](conditional-access.md).

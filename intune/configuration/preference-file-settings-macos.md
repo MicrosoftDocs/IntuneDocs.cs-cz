@@ -1,7 +1,7 @@
 ---
-title: Add preference file settings to macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Přidání nastavení souboru předvoleb do zařízení macOS v Microsoft Intune – Azure | Microsoft Docs
 titleSuffix: ''
-description: Add an xml or plist file that includes key information about your app. Use a preference file device configuration profile to change key information in the property list file, and assign it to your macOS devices.
+description: Přidejte soubor XML nebo plist, který obsahuje klíčové informace o vaší aplikaci. Pomocí konfiguračního profilu zařízení předvoleb můžete změnit klíčové informace v souboru seznamu vlastností a přiřadit je k zařízením macOS.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -23,39 +23,39 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390973"
 ---
-# <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Add a property list file to macOS devices using Microsoft Intune
+# <a name="add-a-property-list-file-to-macos-devices-using-microsoft-intune"></a>Přidání souboru se seznamem vlastností do zařízení macOS pomocí Microsoft Intune
 
-Using Microsoft Intune, you can add a property list file (.plist) for macOS devices, or apps on macOS devices.
+Pomocí Microsoft Intune můžete přidat soubor seznamu vlastností (. plist) pro zařízení macOS nebo aplikace na zařízení macOS.
 
 Tato funkce platí pro:
 
-- macOS devices running 10.7 and newer
+- zařízení macOS se systémem 10,7 a novějším
 
-Property list files typically include information about macOS applications. For more information, see [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
+Soubory seznamu vlastností obvykle obsahují informace o aplikacích macOS. Další informace najdete v tématu [informace o souborech se seznamem vlastností](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Web společnosti Apple) a [Nastavení vlastních datových částí](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1).
 
-This article lists and describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add its .plist file.
+Tento článek obsahuje seznam a popis různých nastavení souboru seznamu vlastností, které můžete přidat do zařízení macOS. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení přidejte ID sady prostředků aplikace (`com.company.application`) a přidejte jeho soubor. plist.
 
-These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
+Tato nastavení se přidají do konfiguračního profilu zařízení v Intune a pak se přiřadí nebo nasadí do zařízení macOS.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Create the profile](device-profile-create.md).
+[Vytvořte profil](device-profile-create.md).
 
 ## <a name="what-you-need-to-know"></a>Co je potřeba vědět
 
-- These settings aren't validated. Be sure to test your changes before assigning the profile to your devices.
-- If you’re not sure how to enter an app key, change the setting within the app. Then, review the app's preference file using [Xcode](https://developer.apple.com/xcode/) to see how the setting is configured. Apple recommends removing non-manageable settings using Xcode before importing the file.
-- Only some apps work with managed preferences, and might not allow you to manage all settings.
-- Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
+- Tato nastavení se neověřují. Před přiřazením profilu k zařízením Nezapomeňte své změny otestovat.
+- Pokud si nejste jistí, jak zadat klíč aplikace, změňte nastavení v rámci aplikace. Pak zkontrolujte soubor předvoleb aplikace pomocí [Xcode](https://developer.apple.com/xcode/) a podívejte se, jak je nastavení nakonfigurované. Apple doporučuje před importem souboru odebrat nespravovatelná nastavení pomocí Xcode.
+- Pouze některé aplikace pracují se spravovanými preferencemi a nemusí spravovat všechna nastavení.
+- Ujistěte se, že jste nahráli soubory seznamu vlastností, které cílí na nastavení kanálu zařízení, ne na nastavení kanálu uživatele. Soubory seznamu vlastností cílí na celé zařízení.
 
-## <a name="preference-file"></a>Preference file
+## <a name="preference-file"></a>Soubor předvoleb
 
-- **Preference domain name**: Property list files are typically used for web browsers (Microsoft Edge), [Microsoft Defender Advanced Threat Protection](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), and custom apps. When you create a preference domain, a bundle ID is also created. Enter the bundle ID, such as `com.company.application`. For example, enter `com.Contoso.applicationName`, `com.Microsoft.Edge` or `com.microsoft.wdav`.
-- **Property list file**: Select the property list file associated with your app. Be sure it's a `.plist` or `.xml` file. For example, upload a `YourApp-Manifest.plist` or `YourApp-Manifest.xml` file.
-- **File contents**: The key information in the property list file is shown. If you need to change the key information, open the list file in another editor, and then reupload the file in Intune.
+- **Název domény předvolby**: soubory seznamu vlastností se obvykle používají pro webové prohlížeče (Microsoft Edge), [rozšířené ochrany před internetovými útoky v programu Microsoft Defender](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac)a vlastní aplikace. Když vytvoříte doménu předvolby, vytvoří se také ID sady prostředků. Zadejte ID sady prostředků, například `com.company.application`. Zadejte například `com.Contoso.applicationName`, `com.Microsoft.Edge` nebo `com.microsoft.wdav`.
+- **Soubor seznamu vlastností**: vyberte soubor seznamu vlastností přidružený k vaší aplikaci. Ujistěte se, že se jedná o soubor `.plist` nebo `.xml`. Například nahrajte soubor `YourApp-Manifest.plist` nebo `YourApp-Manifest.xml`.
+- **Obsah souboru**: zobrazí se informace o klíči v souboru seznamu vlastností. Pokud potřebujete změnit klíčové informace, otevřete seznam souborů v jiném editoru a pak tento soubor znovu nahrajte do Intune.
 
-Vyberte **OK** > **Vytvořit** a změny uložte. The profile is created and shown in the profiles list.
+Vyberte **OK** > **Vytvořit** a změny uložte. Profil se vytvoří a zobrazí se v seznamu profily.
 
 ## <a name="next-steps"></a>Další kroky
 
-Profil je vytvořený, ale zatím se nepoužívá. Next, [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+Profil je vytvořený, ale zatím se nepoužívá. Dále [Přiřaďte profil](device-profile-assign.md) a [sledujte jeho stav](device-profile-monitor.md).

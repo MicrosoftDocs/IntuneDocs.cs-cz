@@ -1,6 +1,6 @@
 ---
-title: Android Enterprise device settings in Microsoft Intune - Azure | Microsoft Docs
-description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
+title: Nastavení zařízení s androidem Enterprise v Microsoft Intune – Azure | Dokumentace Microsoftu
+description: Na zařízeních s Androidem Enterprise nebo Androidem for Work můžete omezit nastavení zařízení, včetně kopírování a vkládání, zobrazování oznámení, oprávnění aplikací, sdílení dat, délky hesla, selhání přihlášení, použití otisku prstu k odemknutí, opětovnému použití hesla a povolení Bluetooth. sdílení pracovních kontaktů. Nakonfigurovat zařízení jako veřejný terminál zařízení, aby spouštěl jednu aplikaci nebo více aplikací.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -22,207 +22,207 @@ ms.contentlocale: cs-CZ
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74390929"
 ---
-# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise device settings to allow or restrict features using Intune
+# <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Nastavení zařízení s androidem Enterprise k povolení nebo zakázání funkcí pomocí Intune
 
-This article lists and describes the different settings you can control on Android Enterprise devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, run apps on dedicated devices, control security, and more.
+Tento článek uvádí a popisuje různá nastavení, které můžete řídit na zařízeních s Androidem Enterprise. Jako součást řešení správy mobilních zařízení (MDM) pomocí těchto nastavení můžete povolit nebo zakázat funkce, spouštět aplikace na vyhrazených zařízeních, zabezpečení řízení a další.
 
 ## <a name="before-you-begin"></a>Před zahájením
 
-[Create a device configuration profile](device-restrictions-configure.md).
+[Vytvořte profil konfigurace zařízení](device-restrictions-configure.md).
 
-## <a name="device-owner-only"></a>Device owner only
+## <a name="device-owner-only"></a>Pouze vlastník zařízení
 
 ### <a name="general-settings"></a>Obecná nastavení
 
-- **Screen capture**: Choose **Block** to prevent screenshots or screen captures on the device. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Not configured** lets the user capture the screen contents as an image.
-- **Camera**: Choose **Block** to prevent access to the camera on the device. **Not required** allows access to the device's camera.
+- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Není nakonfigurováno** umožňuje uživateli zachytit obsah obrazovky jako obrázek.
+- **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení. **Nepožadováno** , umožňuje přístup k kameře zařízení.
 - **Výchozí zásady oprávnění**: Toto nastavení definuje výchozí zásady oprávnění pro žádosti o oprávnění za běhu. Mezi možné hodnoty patří:
   - **Výchozí ze zařízení**: Použije se výchozí nastavení zařízení.
   - **Zeptat se**: Uživateli se zobrazí výzva ke schválení oprávnění.
   - **Automaticky udělit**: Oprávnění jsou udělena automaticky.
   - **Automaticky odepřít**: Oprávnění jsou odepřena automaticky.
-- **Date and Time changes**: Choose **Block** to prevent users from manually setting the date and time. **Not configured** allows users to the set date and time on the device.
-- **Volume changes**: **Block** prevents users from changing the device's volume, and also mutes the master volume. **Not configured** allows using the volume settings on the device.
-- **Factory reset**: Choose **Block** to prevent users from using the factory reset option in the device's settings. **Not configured** allows users to use this setting on the device.
-- **Bezpečné spuštění**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v restartování zařízení do nouzového režimu. **Not configured** allows users to reboot the device in safe mode.
-- **Status bar**: Choose **Block** to prevent access to the status bar, including notifications and quick settings. **Not configured** allows users access to the status bar.
-- **Roaming data services**: Choose **Block** to prevent data roaming over the cellular network. **Not configured** allows data roaming when the device is on a cellular network.
-- **Wi-Fi setting changes**: Choose **Block** to prevent users from changing Wi-Fi settings created by the device owner. Users can create their own Wi-Fi configurations. **Not configured** allows users to change the Wi-Fi settings on the device.
-- **Wi-Fi access point configuration**: Choose **Block** to prevent users from creating or changing any Wi-Fi configurations. **Not configured** allows users to change the Wi-Fi settings on the device.
-- **Bluetooth configuration**: Choose **Block** to prevent users from configuring Bluetooth on the device. **Not configured** allows using Bluetooth on the device.
-- **Tethering and access to hotspots**: Choose **Block** to prevent tethering and access to portable hotspots. **Not configured** allows tethering and access to portable hotspots.
-- **USB storage**: Choose **Allow** to access USB storage on the device. **Not configured** prevents access to USB storage.
-- **USB file transfer**: Choose **Block** to prevent transferring files over USB. **Not configured** allows transferring files.
-- **External media**: Choose **Block** to prevent using or connecting any external media on the device. **Not configured** allows external media on the device.
-- **Beam data using NFC**: Choose **Block** to prevent using the Near Field Communication (NFC) technology to beam data from apps. **Not configured** allows using NFC to share data between devices.
-- **Debugging features**: Choose **Allow** to let users use debugging features on the device. **Not configured** prevents users from using the debugging features on the device.
-- **Microphone adjustment**: Choose **Block** to prevent users from unmuting the microphone and adjusting the microphone volume. **Not configured** allows the user to use and adjust the volume of the microphone on the device.
-- **Factory reset protection emails**: Choose **Google account email addresses**. Enter the email addresses of device administrators that can unlock the device after it's wiped. Be sure to separate the email addresses with a semi-colon, such as `admin1@gmail.com;admin2@gmail.com`. If an email isn't entered, anyone can unlock the device after it's restored to the factory settings. These emails only apply when a non-user factory reset is ran, such as running a factory reset using the recovery menu.
-- **Network escape hatch**: Choose **Enable** to allow users to turn on the network escape hatch feature. If a network connection isn't made when the device boots, then the escape hatch asks to temporarily connect to a network and refresh the device policy. Po uplatnění zásad se tato dočasná síť zapomene a zařízení pokračuje ve spouštění. This feature connects devices to a network if:
-  - There isn't a suitable network in the last policy.
-  - The device boots into an app in lock task mode.
-  - The user is unable to reach the device settings.
+- **Změny data a času**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v ručním nastavení data a času. **Není nakonfigurováno** umožňuje uživatelům nastavit datum a čas v zařízení.
+- **Změny svazku**: **blok** znemožní uživatelům měnit svazek zařízení a také mutes hlavní svazek. Možnost **Nenakonfigurováno** umožňuje použít nastavení svazku na zařízení.
+- **Obnovení továrního**nastavení: Pokud chcete uživatelům zabránit v použití možnosti obnovení továrního nastavení v nastavení zařízení, vyberte **blokovat** . **Nenakonfigurováno** umožňuje uživatelům používat toto nastavení na zařízení.
+- **Bezpečné spuštění**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v restartování zařízení do nouzového režimu. **Není nakonfigurováno** umožňuje uživatelům restartovat zařízení v nouzovém režimu.
+- **Stavový řádek**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu ke stavovým řádku, včetně oznámení a rychlých nastavení. **Není nakonfigurováno** umožňuje uživatelům přístup ke stavovým řádku.
+- **Roamingové datové služby**: vyberte možnost **blokovat** , aby se zabránilo datovému roamingu v mobilní síti. Možnost **Nenakonfigurováno** povolí datový roaming, když je zařízení v mobilní síti.
+- **Změny nastavení sítě Wi-Fi**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit ve změně nastavení Wi-Fi vytvořeného vlastníkem zařízení. Uživatelé můžou vytvářet své vlastní konfigurace Wi-Fi. **Nenakonfigurováno** umožňuje uživatelům změnit nastavení Wi-Fi na zařízení.
+- **Konfigurace přístupového bodu sítě Wi-Fi**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v vytváření nebo změně jakýchkoli konfigurací Wi-Fi. **Nenakonfigurováno** umožňuje uživatelům změnit nastavení Wi-Fi na zařízení.
+- **Konfigurace Bluetooth**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v konfiguraci Bluetooth na zařízení. **Nenakonfigurováno** umožňuje používat Bluetooth na zařízení.
+- **Sdílení a přístup k hotspotům**: vyberte **blok** , abyste zabránili sdílení a přístup k přenosným hotspotům. **Nenakonfigurováno** umožňuje sdílení a přístup k přenosným hotspotům.
+- **Úložiště USB**: vyberte možnost **povoluje** přístup k úložišti USB na zařízení. **Není nakonfigurováno** , zabraňuje přístup k úložišti USB.
+- **Přenos souborů USB**: vyberte **blok** , aby nedošlo k přenosu souborů přes USB. **Není nakonfigurováno** , umožňuje přenášet soubory.
+- **Externí média**: vyberte možnost **blokovat** , pokud chcete zabránit použití nebo připojení jakýchkoli externích médií na zařízení. **Nenakonfigurováno** umožňuje externí média na zařízení.
+- **Data ze nosníku pomocí NFC**: vyberte **blok** , abyste zabránili použití technologie NFC (Near Field Communication) pro světlo dat z aplikací. **Není nakonfigurováno** umožňuje pomocí technologie NFC sdílet data mezi zařízeními.
+- **Funkce ladění**: Pokud chcete, aby uživatelé mohli používat funkce ladění na zařízení, vyberte **Povolit** . **Není nakonfigurováno** , brání uživatelům v používání funkcí ladění na zařízení.
+- **Úpravy mikrofonu**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit ve zrušení ztlumení mikrofonu a nastavení hlasitosti mikrofonu. Možnost **Nenakonfigurováno** umožňuje uživateli použít a upravit hlasitost mikrofonu v zařízení.
+- E- **maily pro obnovení továrního nastavení**: zvolit **e-mailové adresy účtu Google** Zadejte e-mailové adresy správců zařízení, které můžete odemknout zařízení, poté, co se vymaže. Tyto e-mailové adresy oddělte středníkem, například `admin1@gmail.com;admin2@gmail.com`. Pokud není zadán e-mailu, kdokoli odemknutí zařízení po obnovení do továrního nastavení. Tyto e-maily se použijí jenom v případě, že se spustilo obnovení uživatelem bez uživatele, jako je třeba spuštění obnovení továrního nastavení pomocí nabídky obnovení.
+- **Úniková řídicí**klávesa: Pokud chcete povolit uživatelům zapnout funkci řídicího panelu sítě, vyberte **Povolit** . Pokud připojení k síti není proveden, jakmile se spustí zařízení, únikový poklop vyzve k dočasnému připojení k síti a aktualizovat zásady zařízení. Po uplatnění zásad se tato dočasná síť zapomene a zařízení pokračuje ve spouštění. Pokud tuto funkci připojení zařízení k síti:
+  - V posledních zásadách není vhodné síťové.
+  - Zařízení se spustí do aplikace v režimu uzamčení úloh.
+  - Uživatel se nám kontaktovat nastavení zařízení.
 
-  **Not configured** prevents users from turning on the network escape hatch feature on the device.
+  Možnost **Nenakonfigurováno** znemožní uživatelům zapnout v zařízení funkci řídicího panelu sítě.
 
-- **System update**: Choose an option to define how the device handles over-the-air updates:
+- **Aktualizace systému**: vyberte možnost pro definování způsobu, jakým zařízení zpracovává aktualizace v ovzduší:
   - **Výchozí ze zařízení**: Použije se výchozí nastavení zařízení.
   - **Automaticky**: Aktualizace se instalují automaticky bez zásahu uživatele. Po nastavení této zásady se hned nainstalují všechny čekající aktualizace.
-  - **Odloženo**: Aktualizace se odloží o 30 dní. At the end of the 30 days, Android prompts the user to install the update. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému.
-  - **Časové období údržby**: Aktualizace se instalují automaticky během časového období údržby, které nastavíte v Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts the user to install. Toto okno se také používá k instalaci aktualizací aplikací Play. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
+  - **Odloženo**: Aktualizace se odloží o 30 dní. Na konci na 30 dnů Android se zobrazí výzva k instalaci aktualizace. Výrobci zařízení nebo mobilní operátoři mohou zakázat (vyloučit) odklad důležitých aktualizací zabezpečení. Vynechaná aktualizace zobrazí uživateli zařízení zprávu systému.
+  - **Časové období údržby**: Aktualizace se instalují automaticky během časového období údržby, které nastavíte v Intune. Instalace pokusí denně po dobu 30 dnů a může selhat, pokud je nedostatek místa či baterie úrovněmi. Po 30 dnech Android se zobrazí výzva k instalaci. Toto okno se také používá k instalaci aktualizací aplikací Play. Tuto možnost použijte pro vyhrazená zařízení, jako jsou veřejné terminály, protože je možné aktualizovat aplikace v popředí vyhrazené pro jednotlivé aplikace.
 
-- **Notification windows**: When set to **Disable**, window notifications, including toasts, incoming calls, outgoing calls, system alerts, and system errors aren't shown on the device. When set to **Not configured**, the operating system default is used, which may be to show notifications.
-- **Skip first use hints**: **Enable** hides or skips suggestions from apps that step through tutorials, or hints when the app starts. When set to **Not configured**, the operating system default is used, which may show these suggestions when the app starts.
+- **Okna oznámení**: Pokud je nastavení **zakázané**, oznámení oken, včetně informačních zpráv, příchozích volání, odchozích volání, systémových výstrah a systémových chyb, se na zařízení nezobrazují. Pokud je nastavené na **Nenakonfigurováno**, použije se výchozí operační systém, který může zobrazovat oznámení.
+- **Přeskočit první tipy k použití**: **Povolit** skryje nebo přeskočí návrhy z aplikací, které procházejí kurzy, nebo když se aplikace spustí. Pokud je nastavené na **Nenakonfigurováno**, použije se výchozí operační systém, který může zobrazovat tyto návrhy při spuštění aplikace.
 
 ### <a name="system-security-settings"></a>Systémové nastavení zabezpečení
 
-- **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they’re installed. If it detects a threat, it may warn the user to remove the app from the device. **Not configured** doesn't enable or run Google Play Protect to scan apps.
+- **Kontrola hrozeb v aplikacích**: **vyžadovat** (výchozí) umožňuje Google Play chránit před instalací a po jejich instalaci. Pokud zjistí hrozbu, může uživateli upozornit na odebrání aplikace ze zařízení. **Není nakonfigurováno** , nepovolí ani nespustí Google Play chránit pro kontrolu aplikací.
 
-### <a name="dedicated-device-settings"></a>Dedicated device settings
+### <a name="dedicated-device-settings"></a>Nastavení vyhrazeného zařízení
 
-Use these settings to configure a kiosk-style experience on your dedicated devices. You can configure a device to run one app, or run many apps. When a device is set with kiosk mode, only the apps you add are available. These settings apply to Android Enterprise dedicated devices. They don't apply to Android Enterprise fully managed devices.
+Pomocí těchto nastavení můžete nakonfigurovat možnosti veřejného terminálu na vyhrazených zařízeních. Můžete nakonfigurovat zařízení tak, aby spouštělo jednu aplikaci nebo spustilo spoustu aplikací. Když je zařízení nastavené s beznabídkovým režimem, k dispozici jsou jenom aplikace, které přidáte. Tato nastavení platí pro zařízení s Androidem Enterprise vyhrazená. Nevztahují se na zařízení s plně spravovaným systémem Android Enterprise.
 
-**Kiosk mode**: Choose if the device runs one app or runs multiple apps.
+**Celoobrazovkový režim**: vyberte, jestli má zařízení spuštěnou jednu aplikaci, nebo spustí víc aplikací.
 
-- **Single app**: Users can only access a single app on the device. When the device starts, only the specific app starts. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
+- **Jediná aplikace**: uživatelé mají přístup jenom k jedné aplikaci na zařízení. Při spuštění zařízení spustí jenom konkrétní aplikace. Uživatelé nemůžou otevírat nové aplikace ani měnit spuštěnou aplikaci.
 
-  - **Select a managed app**: Select the managed Google Play app from the list.
+  - **Vyberte spravovanou aplikaci**: ze seznamu vyberte spravovanou aplikaci Google Play.
 
-    If you don't have any apps listed, then [add some Android apps](../apps/apps-add-android-for-work.md) to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
-
-  > [!IMPORTANT]
-  > When using single-app kiosk mode, dialer/phone apps may not function properly. 
-  
-- **Multi-app**: Users can access a limited set of apps on the device. When the device starts, only the apps you add start. You can also add some web links that users can open. When the policy is applied, users see icons for the allowed apps on the home screen.
+    Pokud nemáte uvedené žádné aplikace, přidejte do zařízení [některé aplikace pro Android](../apps/apps-add-android-for-work.md) . Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
 
   > [!IMPORTANT]
-  > For multi-app dedicated devices, the [Managed Home Screen app](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) from Google Play **must be**:
-  >   - [Added as a client app](../apps/apps-add-android-for-work.md) in Intune
-  >   - [Assigned to the device group](../apps/apps-deploy.md) created for your dedicated devices
-  >
-  > The **Managed Home Screen** app isn't required to be in the configuration profile, but it is required to be added as a client app. When the **Managed Home Screen** app is added as a client app, any other apps you add in the configuration profile are shown as icons on the **Managed Home Screen** app.
-  >
-  > When using multi-app kiosk mode, dialer/phone apps may not function properly. 
-
-  - **Add**: Select your apps from the list.
-
-    If the **Managed Home Screen** app isn't listed, then [add it from Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Be sure to [assign the app](../apps/apps-deploy.md) to the device group created for your dedicated devices.
-
-    You can also add other [Android apps](../apps/apps-add-android-for-work.md) and [web apps](../apps/web-app.md) created by your organization to the device. Be sure to [assign the app to the device group created for your dedicated devices](../apps/apps-deploy.md).
-
-  - **Virtual home button**: A soft-key button that returns users to the Managed Home Screen so users can switch between apps. Možnosti:
-
-    - **Not configured** (default): A home button isn't shown. Users must use the back button to switch between apps.
-    - **Swipe up**: A home button shows when a user swipes up on the device.
-    - **Floating**: Shows a persistent, floating home button on the device.
-
-  - **Leave kiosk mode**: Choose **Enable** to allow Administrators to temporarily pause kiosk mode to update the device. To use this feature, the administrator:
+  > Pokud používáte celoobrazovkový režim s jednou aplikací, aplikace Dial/Phone nemusí správně fungovat. 
   
-    1. Continues to select the back button until the **Exit kiosk** button is shown. 
-    2. Selects the **Exit kiosk** button, and enters the **Leave kiosk mode code** PIN.
-    3. When finished, select the **Managed Home Screen** app. This step relocks the device into multi-app kiosk mode.
+- **Multi-aplikace**: uživatelé mají přístup k omezené sadě aplikací na zařízení. Při spuštění zařízení, spustit pouze aplikace, které přidáte. Můžete také přidat některé webové odkazy, které uživatelé můžou otevírat. Když se zásady vztahují, uživatelé uvidí ikony pro povolené aplikace na domovské obrazovce.
 
-      When set to **Not configured**, administrators can't pause kiosk mode. If the administrator continues to select the back button, and selects the **Exit kiosk** button, then a message states that a passcode is required.
+  > [!IMPORTANT]
+  > U vyhrazených zařízení s více aplikacemi **musí být** [aplikace spravované domovské obrazovky](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) z Google Play:
+  >   - [Přidáno jako klientská aplikace](../apps/apps-add-android-for-work.md) v Intune
+  >   - [Přiřazeno ke skupině zařízení](../apps/apps-deploy.md) vytvořené pro vyhrazená zařízení
+  >
+  > Aplikace **spravované domovské obrazovky** nemusí být v konfiguračním profilu, ale je nutné ji přidat jako klientskou aplikaci. Když se **spravovaná aplikace pro domovskou obrazovku** přidá jako klientská aplikace, všechny ostatní aplikace, které přidáte do konfiguračního profilu, se zobrazí jako ikony v aplikaci **spravované domovské obrazovky** .
+  >
+  > Při použití celoobrazovkového režimu s více aplikacemi nemusí aplikace Dial/Phone fungovat správně. 
 
-    - **Leave kiosk mode code**: Enter a 4-6 digit numeric PIN. The administrator uses this PIN to temporarily pause kiosk mode.
+  - **Přidat**: vyberte své aplikace ze seznamu.
 
-  - **Set custom URL background**: Enter a URL to customize the background screen on the dedicated device.
+    Pokud není uvedená aplikace **spravované na domovské obrazovce** , [přidejte ji z Google Play](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Nezapomeňte [aplikaci přiřadit](../apps/apps-deploy.md) ke skupině zařízení vytvořené pro vaše vyhrazená zařízení.
+
+    Do zařízení můžete přidat i další [aplikace pro Android](../apps/apps-add-android-for-work.md) a [webové aplikace](../apps/web-app.md) , které vytvořila vaše organizace. Nezapomeňte [aplikaci přiřadit ke skupině zařízení vytvořené pro vaše vyhrazená zařízení](../apps/apps-deploy.md).
+
+  - **Tlačítko virtuální domů**: tlačítko měkkého klíče, které vrátí uživatele do spravované domovské obrazovky, aby uživatelé mohli přepínat mezi aplikacemi. Možnosti:
+
+    - **Nenakonfigurováno** (výchozí): tlačítko domů není zobrazeno. Uživatelé musí použít tlačítko zpět k přepínání mezi aplikacemi.
+    - **Potažení nahoru**: na domovském tlačítku se zobrazí, když uživatel na zařízení potáhne.
+    - **Float**: zobrazuje na zařízení trvalé a plovoucí tlačítko domů.
+
+  - **Opustit celoobrazovkový režim**: vyberte **Povolit** , aby správci mohli dočasně pozastavit režim celoobrazovkového režimu, aby se zařízení aktualizovalo. Chcete-li použít tuto funkci, správce:
+  
+    1. Pokračuje v výběru tlačítka zpět, dokud se nezobrazí tlačítko **ukončit veřejný terminál** . 
+    2. Vybere tlačítko **ukončit veřejný terminál** a přejde do kódu PIN pro **celoobrazovkový režim** .
+    3. Po dokončení vyberte aplikaci **spravovaná domovskou obrazovku** . Tento krok relocks zařízení do režimu veřejného terminálu s více aplikacemi.
+
+      Pokud se nastaví jako **nenakonfigurované**, správci nemůžou pozastavit celoobrazovkový režim. Pokud správce pokračuje v výběru tlačítka zpět a vybere tlačítko **ukončit veřejný terminál** , pak se zobrazí zpráva, že je vyžadováno heslo.
+
+    - **Opustit beznabídkový režim**: zadejte číslici a kód PIN pro číslo 4-6. Správce používá tento PIN kód se dočasně pozastavit beznabídkový režim.
+
+  - **Nastavit vlastní adresu URL pozadí**: zadejte adresu URL pro přizpůsobení obrazovky na pozadí na vyhrazeném zařízení.
 
     > [!NOTE]
-    > For most cases, we recommend starting with images of at least the following sizes:
+    > Ve většině případů doporučujeme začít s imagemi alespoň následujících velikostí:
     >
-    > - Phone: 1080x1920 px
-    > - Tablet: 1920x1080 px
+    > - Telefon: 1080x1920 px
+    > - Tablet: 1080 px
     >
-    > For the best experience and crisp details, it’s suggested that per device image assets be created to the display specifications.
+    > Pro dosažení co nejlepších výsledků a zaostření podrobností je navrženo, že se pro jednotlivé položky obrázku zařízení vytvořily specifikace zobrazení.
     >
-    > Modern displays have higher pixel densities and can display equivalent 2K/4K definition images.
+    > Moderní displeje mají vyšší hustotu pixelů a můžou zobrazovat ekvivalentní image definice 2K/4K.
 
-  - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows end users to connect the device to different WiFi networks. Enabling this feature also turns on device location. **Not configured** (default) doesn't show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
+  - **Konfigurace Wi-Fi**: **možnost Povolit** zobrazí ovládací prvek Wi-Fi na spravované domovské obrazovce a koncovým uživatelům umožňuje připojit zařízení k různým sítím Wi-Fi. Povolením této funkce se taky zapne umístění zařízení. **Nenakonfigurováno** (výchozí): nezobrazuje ovládací prvek Wi-Fi na spravované domovské obrazovce. Zabraňuje uživatelům v připojení k sítím Wi-Fi při použití spravované domovské obrazovky.
 
-  - **Bluetooth configuration**: **Enable** shows the Bluetooth control on the Managed Home Screen, and allows end users to pair devices over Bluetooth. Enabling this feature also turns on device location. **Not configured** (default) doesn't show the Bluetooth control on the Managed Home Screen. It prevents users from configuring Bluetooth and pairing devices while using the Managed Home Screen.
+  - **Konfigurace Bluetooth**: **Povolit** zobrazí ovládací prvek Bluetooth na spravované domovské obrazovce a koncovým uživatelům umožňuje párovat zařízení přes Bluetooth. Povolením této funkce se taky zapne umístění zařízení. **Nenakonfigurováno** (výchozí): nezobrazuje ovládací prvek Bluetooth na spravované domovské obrazovce. Brání tak uživatelům v konfiguraci zařízení Bluetooth a párování zařízení při použití spravované domovské obrazovky.
 
-  - **Flashlight access**: **Enable** shows the flashlight control on the Managed Home Screen, and allows end users to turn the flashlight on or off. **Not configured** (default) doesn't show the flashlight control on Managed Home Screen. It prevents users from using the flashlight while using the Managed Home Screen.
+  - **Svítící Access**: **Enable** zobrazí ovládací prvek svítící na spravované domovské obrazovce a umožní koncovým uživatelům zapnout nebo vypnout svítící. **Nenakonfigurováno** (výchozí): nezobrazuje ovládací prvek svítící na spravované domovské obrazovce. Zabraňuje uživatelům v používání svítící při použití spravované domovské obrazovky.
 
-  - **Media volume control**: **Enable** shows the media volume control on the Managed Home Screen, and allows end users to adjust the device's media volume using a slider. **Not configured** (default) doesn't show the media volume control on Managed Home Screen. It prevents users from adjusting the device's media volume while using the Managed Home Screen, unless their hardware buttons support it. 
+  - **Ovládání hlasitosti médií**: **Povolit** zobrazí ovládací prvek hlasitost média na spravované domovské obrazovce a koncovým uživatelům umožňuje upravit hlasitost média zařízení pomocí posuvníku. **Nenakonfigurováno** (výchozí): nezobrazuje ovládací prvek hlasitost multimédií na spravované domovské obrazovce. Zabraňuje uživatelům upravovat hlasitost médií zařízení při použití spravované domovské obrazovky, pokud jim jejich hardwarová tlačítka nepodporují. 
 
-  - **Screen saver mode**: **Enable** shows a screensaver on the Managed Home Screen when the device is locked or times out. **Not configured** (default) doesn't show a screensaver on the Managed Home Screen.
+  - **Režim spořiče obrazovky**: **možnost Povolit** zobrazí na spravované domovské obrazovce spořič obrazovky, když je zařízení uzamčeno nebo vypršel časový limit. **Nenakonfigurováno** (výchozí): Nezobrazovat šetřič obrazovky na spravované domovské obrazovce.
 
-    When enabled, also configure:
+    Pokud je tato možnost povolená, nakonfigurujte taky:
 
-    - **Set custom screen saver image**: Enter the URL to a custom PNG, JPG, JPEG, GIF, BMP, WebP, or ICOimage. For example, enter:
+    - **Nastavit vlastní obrázek spořiče obrazovky**: zadejte adresu URL pro vlastní PNG, jpg, JPEG, GIF, BMP, WEBP nebo ICOimage. Zadejte například:
 
       - `http://www.contoso.com/image.jpg`
       - `www.contoso.com/image.bmp`
       - `https://www.contoso.com/image.webp`
 
-      If you don't enter a URL, then the device's default image is used, if there is a default image.
+      Pokud adresu URL nezadáte, použije se výchozí image zařízení, pokud je k dispozici výchozí image.
       
       > [!TIP]
-      > Any file resource URL that can be turned into a bitmap is supported.
+      > Je podporována jakákoli adresa URL prostředku souboru, která může být převedena do rastrového obrázku.
 
-    - **Number of seconds the device shows screen saver before turning off screen**: Choose how long the device shows the screensaver. Enter a value between 0-9999999 seconds. Default is `0` seconds. When left blank, or set to zero (`0`), the screen saver is active until a user interacts with the device.
-    - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
-    - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. **Not configured** shows the screen saver, even if audio or video is playing.
+    - **Počet sekund, po které zařízení zobrazuje spořič obrazovky před**vypnutím obrazovky: vyberte, jak dlouho zařízení zobrazí spořič obrazovky. Zadejte hodnotu v rozmezí 0-9999999 sekund. Výchozí hodnota je `0` sekund. Pokud je ponecháno prázdné nebo je nastaveno na hodnotu nula (`0`), je spořič obrazovky aktivní, dokud uživatel nekomunikuje se zařízením.
+    - **Počet sekund neaktivních zařízení před zobrazením spořiče obrazovky**: vyberte, jak dlouho bude zařízení nečinné, než se zobrazí. Zadejte hodnotu v rozmezí 1-9999999 sekund. Výchozí hodnota je `30` sekund. Je nutné zadat číslo větší než nula (`0`).
+    - **Rozpoznat médium před spuštěním spořiče obrazovky**: **Povolit** (výchozí) nezobrazuje spořič obrazovky, pokud se na zařízení přehrává zvuk nebo video. **Nenakonfigurováno** zobrazuje spořič obrazovky i v případě, že přehrávání zvuku nebo videa probíhá.
 
 ### <a name="device-password-settings"></a>Nastavení hesla zařízení
 
-- **Disable lock screen**: Choose **Disable** to prevent users from using Keyguard lock screen feature on the device. **Not configured** allows the user to use the Keyguard features.
-- **Disabled lock screen features**: When keyguard is enabled on the device, choose which features to disable. For example, when **Secure camera** is checked, the camera feature is disabled on the device. Any features not checked are enabled on the device.
+- **Zakázat zamykací obrazovku**: Pokud chcete zabránit uživatelům používat na zařízení funkci zámku zamykací obrazovky, vyberte **Zakázat** . **Není nakonfigurováno** umožňuje uživateli používat funkce ochrany před ochranou.
+- **Zakázané funkce zamykací obrazovky**: Pokud je na zařízení povolená klávesa Guard, vyberte, které funkce se mají zakázat. Pokud je například zaškrtnuto políčko **Zabezpečená kamera** , funkce kamery je na zařízení zakázaná. Na zařízení jsou povolené všechny funkce, které nejsou zaškrtnuté.
 
-  These features are available to users when the device is locked. Users won't see or access features that are checked.
+  Tyto funkce jsou uživatelům k dispozici, když je zařízení zamčené. Uživatelům se nezobrazí nebo nebudou mít přístup k vybraným funkcím.
 
 - **Požadovaný typ hesla**: Definujte typ hesla požadovaného pro zařízení. Možnosti:
   - **Výchozí ze zařízení**
-  - **Password required, no restrictions**
-  - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
-  - **Numeric**: Password must only be numbers, such as `123456789`. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Numeric complex**: Repeated or consecutive numbers, such as "1111" or "1234", aren't allowed. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Alphanumeric**: Includes uppercase letters, lowercase letters, and numeric characters. Enter the **minimum password length** a user must enter, between 4 and 16 characters.
-  - **Alphanumeric with symbols**: Includes uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. Dále zadejte:
+  - **Vyžaduje se heslo, žádná omezení.**
+  - **Slabý biometrika**: [silný vs. slabý biometrika](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (otevře web v Androidu)
+  - **Číselná**: heslo musí obsahovat pouze čísla, například `123456789`. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
+  - **Číselná složitá**: opakující se nebo po sobě jdoucí čísla, například "1111" nebo "1234", nejsou povolena. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
+  - **Abecedy**: jsou vyžadovány písmena v abecedě. Čísla a symboly nejsou požadovány. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
+  - **Alfanumerické**znaky: obsahuje velká písmena, malá písmena a číslice. Zadejte **minimální délku hesla** , kterou musí uživatel zadat, a to v rozmezí 4 až 16 znaků.
+  - **Alfanumerické znaky se symboly**: zahrnují velká písmena, malá písmena, číslice, interpunkční znaménka a symboly. Dále zadejte:
 
-    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
-    - **Number of characters required**: Enter the number of characters the password must have, between 0 and 16 characters.
-    - **Number of lowercase characters required**: Enter the number of lowercase characters the password must have, between 0 and 16 characters.
-    - **Number of uppercase characters required**: Enter the number of uppercase characters the password must have, between 0 and 16 characters.
-    - **Number of non-letter characters required**: Enter the number of non-letters (anything other than letters in the alphabet) the password must have, between 0 and 16 characters.
-    - **Number of numeric characters required**: Enter the number of numeric characters (`1`, `2`, `3`, and so on) the password must have, between 0 and 16 characters.
-    - **Number of symbol characters required**: Enter the number of symbol characters (`&`, `#`, `%`, and so on) the password must have, between 0 and 16 characters.
+    - **Minimální délka hesla**: zadejte minimální délku hesla, která musí být delší než 4 až 16 znaků.
+    - **Požadovaný počet znaků**: zadejte počet znaků, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných malých**písmen: zadejte počet malých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných velkých znaků**: zadejte počet velkých písmen, které musí heslo obsahovat, a to v rozmezí 0 až 16 znaků.
+    - **Počet požadovaných znaků bez**písmen: zadejte počet jiných než písmen (kromě písmen v abecedě), které musí heslo obsahovat, 0 až 16 znaků.
+    - **Požadovaný počet**číslic: zadejte počet číselných znaků (`1`, `2`, `3`atd.) heslo musí mít 0 až 16 znaků.
+    - **Požadovaný počet znaků symbolu**: zadejte počet znaků symbolu (`&`, `#`, `%`atd.) heslo musí mít 0 až 16 znaků.
 
-- **Number of days until password expires**: Enter the number of days, between 1-365, until the device password must be changed. For example, to change the password after 60 days, enter `60`. When the password expires, users are prompted to create a new password.
-- **Number of passwords required before user can resuse a password**: Enter the number of recent passwords that can't be reused, between 1-24. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
-- **Number of sign-in failures before wiping device**: Enter the number, between 4-11, of failed sign-ins to allow before the device is wiped.
+- **Počet dní do vypršení platnosti hesla**: zadejte počet dnů (v rozmezí 1-365), do kterého se musí heslo zařízení změnit. Pokud například chcete změnit heslo po 60 dnech, zadejte `60`. Po vypršení platnosti hesla se uživatelům zobrazí výzva k vytvoření nového hesla.
+- **Počet hesel požadovaných před tím, než uživatel může resuse heslo**: zadejte počet nedávných hesel, která se nesmí znovu použít, mezi 1-24. Toto nastavení použijte, pokud chcete uživateli zabránit ve vytváření hesel, která používal dříve.
+- **Počet neúspěšných přihlášení před vymazáním zařízení**: zadejte číslo, od 4-11 neúspěšných přihlášení, která se mají připustit, než se zařízení vymaže.
 
 ### <a name="power-settings"></a>Nastavení napájení
 
-- **Time to lock screen**: Enter the maximum time a user can set until the device locks. For example, if you set this setting to **10 minutes**, then users can set the time from 15 seconds up to 10 minutes. When set to **Not configured** (default), Intune doesn't change or control this setting.
+- **Čas na zamykací obrazovku**: zadejte maximální dobu, kterou může uživatel nastavit, dokud se zařízení nezamkne. Pokud například nastavíte toto nastavení na **10 minut**, můžou uživatelé nastavit čas z 15 sekund až na 10 minut. Pokud je nastavené na **Nenakonfigurováno** (výchozí nastavení), Intune se nezmění ani neřídí toto nastavení.
 
 - **Zapnutá obrazovka, když se zařízení napájí ze sítě**: Zvolte zdroje napájení, při jejichž použití zůstane obrazovka zařízení zapnutá.
 
 ### <a name="users-and-accounts-settings"></a>Nastavení uživatelů a účtů
 
-- **Přidat nové uživatele**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v přidávání nových uživatelů. Each user has a personal space on the device for custom Home screens, accounts, apps, and settings. **Not configured** (default) allows users to add other users to the device.
-- **Odebírání uživatelů**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v odebírání uživatelů. **Not configured** (default) allows users to remove other users from the device.
-- **Account changes** (dedicated devices only): Choose **Block** to prevent users from modifying accounts. **Not configured** (default) allows users to update user accounts on the device.
+- **Přidat nové uživatele**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v přidávání nových uživatelů. Každý uživatel má osobní pracovní prostor na zařízení pro vlastní domovské obrazovky, účty, aplikace a nastavení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přidávat do zařízení další uživatele.
+- **Odebírání uživatelů**: Zvolte **Blokovat**, pokud chcete uživatelům zabránit v odebírání uživatelů. **Nenakonfigurováno** (výchozí) umožňuje uživatelům odebrat ze zařízení další uživatele.
+- **Změny účtu** (jenom vyhrazená zařízení): Pokud chcete uživatelům zabránit v úpravách účtů, vyberte **blokovat** . **Nenakonfigurováno** (výchozí) umožňuje uživatelům aktualizovat uživatelské účty v zařízení.
 
   > [!NOTE]
-  > This setting isn't honored on device owner (fully managed) devices. If you configure this setting, then the setting is ignored, and has no impact.
+  > Toto nastavení se nedodržuje u zařízení vlastníka zařízení (plně spravovaná). Pokud toto nastavení nakonfigurujete, nastavení se ignoruje a nemá žádný vliv.
 
-- **Personal Google Accounts**: **Block** prevents users from adding their personal Google account to the device. **Not configured** (default) allows users to add their personal Google account.
+- **Osobní účty Google**: **blok** zabraňuje uživatelům v přidávání osobního účtu Google do zařízení. **Nenakonfigurováno** (výchozí) umožňuje uživatelům přidat svůj osobní účet Google.
 
 ### <a name="applications"></a>Aplikací
 
-- **Allow installation from unknown sources**: Choose **Allow** so users can turn on **Unknown sources**. This setting allows apps to install from unknown sources, including sources other than the Google Play Store. **Not configured** prevents users from turning on **Unknown sources**.
-- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They don't get access to the apps the administrator blocks in [Client Apps](../apps/apps-add-android-for-work.md). **Not configured** forces users to only access the apps the administrator makes available Google Play store, or apps required in [Client Apps](../apps/apps-add-android-for-work.md).
-- **App auto-updates**: Choose when automatic updates are installed. Možnosti:
+- **Povolit instalaci z neznámých zdrojů**: vyberte **Povolit** , aby uživatelé mohli zapnout **neznámé zdroje**. Toto nastavení umožňuje aplikacím instalovat z neznámých zdrojů, včetně jiných zdrojů než Obchod Google Play. **Není nakonfigurováno** zabraňuje uživatelům v zapnutí **neznámých zdrojů**.
+- **Povolení přístupu ke všem aplikacím v Google Play Storu**: Pokud je nastavení **povolené**, uživatelé získají přístup ke všem aplikacím v obchodě Google Play Store. Nezískají přístup k aplikacím, které správce zablokuje v [klientských aplikacích](../apps/apps-add-android-for-work.md). **Nenakonfigurováno** přinutí uživatelům přístup pouze k aplikacím, které správce zpřístupňuje Google Play Store nebo aplikace vyžadované v [klientských aplikacích](../apps/apps-add-android-for-work.md).
+- **Automatické aktualizace aplikací**: vyberte, kdy se mají nainstalovat automatické aktualizace. Možnosti:
   - **Není nakonfigurováno**
-  - **User choice**
-  - **Never**
-  - **Wi-Fi only**
-  - **Always**
+  - **Volba uživatele**
+  - **Nikdy**
+  - **Jenom Wi-Fi**
+  - **Stál**
 
-### <a name="connectivity"></a>Connectivity
+### <a name="connectivity"></a>Připojení
 
 - **Neustále aktivní připojení VPN**: výběrem možnosti **Povolit** nastavte klienta VPN tak, aby se automaticky připojoval a znovu připojoval k VPN. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned připojí, jakmile uživatel zamkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. 
 
@@ -242,26 +242,26 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   > [!IMPORTANT]
   > - Klient VPN, kterého zvolíte, musí být nainstalovaný na zařízení a musí podporovat VPN pro jednotlivé aplikace v pracovních profilech. V opačném případě dojde k chybě. 
   > - Aplikaci klienta VPN je potřeba schválit ve **spravovaném obchodu Google Play**, synchronizovat ji do Intune a nasadit ji do zařízení. Až to vše uděláte, bude aplikace nainstalovaná v pracovním profilu uživatele.
-  > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. See [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) for more information.
+  > - Může zde být známé problémy při pomocí F5 přístup pro Android 3.0.4 VPN pro jednotlivé aplikace. Další informace najdete v [poznámkách k verzi F5's pro přístup F5 pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
 
-- **Lockdown mode**: Choose **Enable** to force all network traffic to use the VPN tunnel. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
+- **Režim uzamčení**: vyberte **Povolit** , pokud chcete vynutit, aby všechny síťové přenosy používaly tunel VPN. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
 
   Vyberte **Nenakonfigurováno** a povolte, aby provoz používal tunel VPN nebo mobilní síť.
 
-- **Recommended global proxy**: Choose **Enable** to add a global proxy to the devices. When enabled, HTTP and HTTPS traffic, including some apps on the device, use the proxy you enter. This proxy is only a recommendation. It's possible some apps won't use the proxy. **Not configured** (default) doesn't add a recommended global proxy.
+- **Doporučený globální proxy server**: výběrem možnosti **Povolit** přidejte do zařízení globální proxy server. Pokud je povolený přenos přes protokol HTTP a HTTPS, včetně některých aplikací v zařízení, použijte proxy, který zadáte. Tato proxy je jenom doporučení. Je možné, že některé aplikace nepoužívají proxy server. **Nenakonfigurováno** (výchozí) nepřidá doporučený globální proxy server.
 
-  For more information on this feature, see [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (opens an Android site).
+  Další informace o této funkci najdete v tématu [setRecommendedGlobalProxy](https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#setRecommendedGlobalProxy(android.content.ComponentName,%20android.net.ProxyInfo)) (otevře web s Androidem).
 
-  When enabled, also enter the **Type** of proxy. Možnosti:
+  Pokud je povoleno, zadejte také **typ** proxy serveru. Možnosti:
 
-  - **Direct**: Choose this option to manually enter the proxy server details, including:
-    - **Host**: Enter the hostname or IP address of your proxy server. Zadejte například `proxy.contoso.com` nebo `127.0.0.1`.
-    - **Port number**: Enter the TCP port number used by the proxy server. Zadejte například `8080`.
-    - **Excluded hosts**: Enter a list of host names or IP addresses that won't use the proxy. This list can include an asterisk (`*`) wildcard and multiple hosts separated by semicolons (`;`) with no spaces. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
+  - **Direct**: tuto možnost vyberte, pokud chcete zadat informace o proxy server ručně, včetně:
+    - **Hostitel**: zadejte název hostitele nebo IP adresu vašeho proxy server. Zadejte například `proxy.contoso.com` nebo `127.0.0.1`.
+    - **Číslo portu**: zadejte číslo portu TCP používaného proxy server. Zadejte například `8080`.
+    - **Vyloučení hostitelé**: Zadejte seznam názvů hostitelů nebo IP adres, které nepoužívají proxy server. Tento seznam může obsahovat zástupný znak hvězdičky (`*`) a několik hostitelů oddělených středníky (`;`) bez mezer. Zadejte například `127.0.0.1;web.contoso.com;*.microsoft.com`.
 
-  - **Proxy Auto-Config**: Enter the **PAC URL** to a proxy autoconfiguration script. Zadejte například `https://proxy.contoso.com/proxy.pac`.
+  - **Automatická konfigurace proxy serveru**: zadejte **adresu URL PAC** do skriptu pro automatickou konfiguraci proxy serveru. Zadejte například `https://proxy.contoso.com/proxy.pac`.
 
-    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+    Další informace o souborech PAC najdete v tématu [soubor automatické konfigurace proxy serveru](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (otevře se na webu, který není Microsoft).
 
 ## <a name="work-profile-only"></a>Pouze pracovní profil
 
@@ -269,14 +269,14 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
 #### <a name="general"></a>Obecné
 
-- **Copy and paste between work and personal profiles**: Choose **Block** to prevent copy-and-paste between work and personal apps. **Not configured** allows users to share data using copy-and-paste with apps in the personal profile 
-- **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** v aplikaci prohlížeče Chrome. Toto nastavení se nevztahuje na chování schránky při kopírování/vkládání. Your sharing options:
-  - **Device default**: The default sharing behavior of the device, which varies depending on the Android version. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neblokuje sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
+- **Kopírování a vkládání mezi pracovními a osobními profily**: vyberte **blok** , abyste zabránili kopírování a vkládání mezi pracovními a osobními aplikacemi. **Nenakonfigurováno** umožňuje uživatelům sdílet data pomocí kopírování a vkládání s aplikacemi v osobním profilu. 
+- **Sdílení dat mezi pracovními a osobními profily**: vyberte, jestli aplikace v pracovním profilu můžou sdílet s aplikacemi v osobním profilu. Můžete například řídit akce sdílení v aplikacích, jako je například **sdílená složka...** v aplikaci prohlížeče Chrome. Toto nastavení se nevztahuje na chování schránky při kopírování/vkládání. Vaše možnosti sdílení:
+  - **Výchozí nastavení zařízení**: výchozí chování zařízení při sdílení, které se liší v závislosti na verzi Androidu. Ve výchozím nastavení je povolené sdílení z osobního profilu do pracovního profilu. Ve výchozím nastavení je také blokované sdílení z pracovního profilu do osobního profilu. Toto nastavení zabraňuje sdílení dat z pracovního do osobního profilu. Google neblokuje sdílení z osobního do pracovního profilu na zařízeních, která používají verze 6.0 a novější.
   - **Aplikace v pracovním profilu můžou zpracovat žádost o sdílení z osobního profilu**: povoluje integrovanou funkci Androidu, která umožňuje sdílet data z osobního do pracovního profilu. Pokud je tato možnost povolená, žádost o sdílení z aplikace v osobním profilu může sdílet data s aplikacemi v pracovním profilu. Toto nastavení je výchozí chování zařízení s Androidem, která používají verze starší než 6.0.
-  - **Prevent any sharing across boundaries**: Prevents sharing between work and personal profiles.
-  - **No restrictions on sharing**: Enables sharing across the work profile boundary in both directions. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení. Proto ho používejte opatrně.
+  - **Zabránit jakémukoli sdílení přes hranice**: zabraňuje sdílení mezi pracovními a osobními profily.
+  - **Žádná omezení sdílení**: umožňuje sdílení přes hranice pracovního profilu v obou směrech. Když vyberete toto nastavení, můžou aplikace v pracovním profilu sdílet data s neoznačenými aplikacemi v osobním profilu. Toto nastavení povoluje spravovaným aplikacím v pracovním profilu sdílení s aplikacemi v nespravované oblasti zařízení. Proto ho používejte opatrně.
 
-- **Work profile notifications while device locked**: Controls whether apps in the work profile can show data in notifications when the device is locked. **Block** doesn't show the data. **Not configured** shows the data.
+- **Oznámení pracovního profilu, když je zařízení zamčené**: Určuje, jestli aplikace v pracovním profilu můžou zobrazovat data v oznámeních, když je zařízení zamčené. **Blok** nezobrazuje data. **Nenakonfigurováno** zobrazuje data.
 - **Výchozí oprávnění aplikace**: umožňuje nastavit zásady výchozích oprávnění pro všechny aplikace v pracovním profilu. Od verze Android 6 se uživateli při spuštění aplikace zobrazuje výzva k udělení určitých oprávnění, která aplikace vyžadují. Nastavení této zásady vám umožňuje určit, jestli se uživatelům zobrazí výzva k udělení oprávnění všem aplikacím v pracovním profilu. Můžete například přiřadit do pracovního profilu aplikaci, která vyžaduje přístup k poloze. Taková aplikace obvykle uživatele vyzve, aby přístup k poloze pro aplikaci schválil nebo zamítl. Tyto zásady používejte k automatickému udělování oprávnění bez výzvy, automatickému odepření oprávnění bez výzvy nebo ponechání rozhodnutí na koncovém uživateli. Vybírejte z těchto možností:
   - **Výchozí ze zařízení**
   - **Zeptat se**
@@ -285,25 +285,25 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
   Zásady konfigurace aplikace můžete použít také k udělení oprávnění pro jednotlivé aplikace (**Klientské aplikace** > **Zásady konfigurace aplikací**).
 
-- **Add and remove accounts**: Choose **Block** to prevent end users from manually adding or removing accounts in the work profile. Když do pracovního profilu Androidu nasadíte například aplikaci Gmail, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu. **Not configured** allows adding accounts in the work profile.  
+- **Přidání a odebrání účtů**: vyberte možnost **blokovat** , pokud chcete koncovým uživatelům zabránit v ručním přidávání a odebírání účtů v pracovním profilu. Když do pracovního profilu Androidu nasadíte například aplikaci Gmail, můžete zabránit tomu, aby koncoví uživatelé přidávali nebo odebírali účty v tomto pracovním profilu. **Nenakonfigurováno** umožňuje přidávání účtů v pracovním profilu.  
 
 - **Sdílení kontaktů přes Bluetooth**: Povoluje přístup k pracovním kontaktům z jiného zařízení, například ze zařízení v autě, které je spárováno pomocí Bluetooth. Ve výchozím nastavení toto nastavení není nakonfigurováno a pracovní kontakty se nezobrazují. Vyberte **Povolit** a sdílení povolte, aby se zobrazily kontakty pracovního profilu. Toto nastavení platí pro zařízení s pracovním profilem Android v systému Android OS v6.0 a novějších. Když toto nastavení povolíte, budou určitá zařízení Bluetooth ukládat pracovní kontakty do mezipaměti při prvním připojení. V případě jejího zakázání po počátečním zpárování/synchronizaci se pracovní kontakty ze zařízení Bluetooth nemusí odstranit.
 
-- **Screen capture**: Choose **Block** to prevent screenshots or screen captures on the device in the work profile. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Not configured** allows getting screenshots.
+- **Snímek obrazovky**: vyberte možnost **blokovat** , pokud chcete zabránit snímekům obrazovky nebo snímku obrazovky na zařízení v pracovním profilu. Brání tím také zobrazení obsahu na zobrazovacích zařízeních, která nemají bezpečný výstup videa. **Není nakonfigurováno** umožňuje získat snímky obrazovky.
 
-- **Display work contact caller-id in personal profile**: When enabled (**Not configured**), the work contact caller details are displayed in the personal profile. When set to **Block**, the work contact caller number isn't displayed in the personal profile. Platí pro operační systém Android 6.0 a novější verze.
+- **Zobrazit v osobním profilu ID volajícího pracovního kontaktu**: Pokud je povolené (**není nakonfigurované**), zobrazí se v osobním profilu podrobnosti volajícího pracovního kontaktu. Když se nastaví **blok**, v osobním profilu se nezobrazuje číslo volajícího pracovního kontaktu. Platí pro operační systém Android 6.0 a novější verze.
 
-- **Search work contacts from personal profile**: Choose **Block** to prevent users from searching for work contacts in apps in the personal profile. **Not required** allows searching for work contacts in the personal profile.
+- **Hledat pracovní kontakty z osobního profilu**: vyberte možnost **blokovat** , pokud chcete uživatelům zabránit v hledání pracovních kontaktů v aplikacích v osobním profilu. **Není vyžadováno** , umožňuje vyhledávat pracovní kontakty v osobním profilu.
 
-- **Camera**: Choose **Block** to prevent access to the camera on the device in the work profile. Nastavení nemá vliv na kameru v osobním profilu. **Not required** allows access to the camera in the work profile.
+- **Kamera**: vyberte možnost **blokovat** , pokud chcete zabránit přístupu k fotoaparátu na zařízení v pracovním profilu. Nastavení nemá vliv na kameru v osobním profilu. **Není vyžadováno** , umožňuje přístup k kameře v pracovním profilu.
 
-- **Allow widgets from work profile apps**: **Enable** allows end users to put widgets exposed by apps on the home screen. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
+- **Povolit widgety z pracovních profilů aplikace**: **možnost Povolit** koncovým uživatelům umožní umístit widgety, které jsou vystavené aplikacemi na domovské obrazovce. **Nenakonfigurováno** (výchozí) tuto funkci zakáže.
 
-  For example, Outlook is installed on your users' work profiles. When set to **Enable**, users can put the agenda widget on the device home screen.
+  Například Outlook se nainstaluje do pracovních profilů uživatelů. Když je tato možnost nastavená na **Povolit**, můžou uživatelé na domovské obrazovce zařízení umístit widget agendy.
 
-#### <a name="work-profile-password"></a>Work Profile Password
+#### <a name="work-profile-password"></a>Heslo pracovního profilu
 
-- **Vyžadovat heslo pracovního profilu**: platí pro Android 7.0 a vyšší s aktivovaným pracovním profilem. Choose **Require** to enter a passcode policy that applies only to the apps in the work profile. Ve výchozím nastavení může koncový uživatel použít dva samostatně definované PIN kódy, nebo se může rozhodnout zkombinovat PIN kódy do silnějšího z nich. **Not configured** allows the user to use work apps, without entering a password.
+- **Vyžadovat heslo pracovního profilu**: platí pro Android 7.0 a vyšší s aktivovaným pracovním profilem. Vyberte **vyžadovat** , pokud chcete zadat zásady pro hesla, které se vztahují jenom na aplikace v pracovním profilu. Ve výchozím nastavení může koncový uživatel použít dva samostatně definované PIN kódy, nebo se může rozhodnout zkombinovat PIN kódy do silnějšího z nich. Možnost **Nenakonfigurováno** umožňuje uživateli používat pracovní aplikace bez zadání hesla.
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**16**.
 - **Maximální doba neaktivity v minutách, než se pracovní profil zamkne**: umožňuje vybrat dobu, po které se pracovní profil zamkne. Potom musí uživatel zadat svoje přihlašovací údaje znovu, když bude chtít získat přístup.
 - **Počet neúspěšných přihlášení před vymazáním obsahu zařízení**: zadejte, kolikrát může uživatel zadat nesprávné heslo, než se pracovní profil ze zařízení vymaže.
@@ -318,12 +318,12 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
 - **Znemožnit opakované použití předchozích hesel**: zadejte počet nových hesel, které je třeba použít, než uživatel bude moct znovu použít staré heslo (**1**-**24**).
-- **Fingerprint unlock**: Choose **Block** to prevent end users from using the device fingerprint scanner to unlock the device. **Not configured** allows users to unlock devices with a fingerprint in the work profile.
-- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, also known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+- **Odemknutí otiskem prstu**: Pokud chcete zabránit koncovým uživatelům používat skener otisků prstů zařízení k odemknutí zařízení, vyberte **blokovat** . **Nenakonfigurováno** umožňuje uživatelům odemknout zařízení pomocí otisku prstu v pracovním profilu.
+- **Smart Lock a jiní agenti**pro určování důvěryhodnosti: vyberte **blok** , aby Smart Lock nebo jiní agenti pro určování důvěryhodnosti zabránili v úpravě nastavení zamykací obrazovky na kompatibilních zařízeních. Tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
 ### <a name="device-password"></a>Heslo zařízení
 
-These password settings apply to personal profiles on devices that use a work profile.
+Tato nastavení hesla platí pro osobní profilů na zařízeních používajících pracovní profil.
 
 - **Minimální délka hesla**: zadejte minimální počet znaků, které uživatelské heslo musí obsahovat, **4**-**14**.
 - **Maximální počet minut nečinnosti, po kterém se zamkne obrazovka**: umožňuje vybrat dobu, po které neaktivní zařízení automaticky zamkne.
@@ -339,24 +339,24 @@ These password settings apply to personal profiles on devices that use a work pr
   - **Aspoň alfanumerické znaky**
   - **Aspoň alfanumerické se symboly**
 - **Znemožnit opakované použití předchozích hesel**: zadejte počet nových hesel, které je třeba použít, než uživatel bude moct znovu použít staré heslo (**1**-**24**).
-- **Fingerprint unlock**: Choose **Block** to prevent end user from using the device fingerprint scanner to unlock the device. **Not configured** allows the user to unlock the device using a fingerprint.
-- **Smart Lock and other trust agents**: Choose **Block** to prevent Smart Lock or other trust agents from adjusting lock screen settings on compatible devices. This feature, also known as a trust agent, lets you disable or bypass the device lock screen password if the device is in a trusted location. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
+- **Odemknutí otiskem prstu**: vyberte možnost **blokovat** , pokud chcete, aby koncový uživatel nepoužíval skener otisků prstů zařízení k odemknutí zařízení **Není nakonfigurováno** umožňuje uživateli odemknout zařízení pomocí otisku prstu.
+- **Smart Lock a jiní agenti**pro určování důvěryhodnosti: vyberte **blok** , aby Smart Lock nebo jiní agenti pro určování důvěryhodnosti zabránili v úpravě nastavení zamykací obrazovky na kompatibilních zařízeních. Tato funkce, označovaná také jako agent pro určování důvěryhodnosti, umožňuje zakázat nebo obejít heslo zamykací obrazovky zařízení, pokud se zařízení nachází v důvěryhodném umístění. Je možné například obejít heslo pracovního profilu, když je zařízení připojené k určitému zařízení Bluetooth nebo když se nachází blízko značky NFC. Pomocí tohoto nastavení můžete uživatelům zabránit v konfiguraci funkce Smart Lock.
 
-### <a name="system-security"></a>System security
+### <a name="system-security"></a>Zabezpečení systému
 
-- **Threat scan on apps**: **Require** enforces that the **Verify Apps** setting is enabled for work and personal profiles.
+- **Kontrola hrozeb u aplikací**: **vyžaduje** vynucení, že nastavení **ověřování aplikací** je povolené pro pracovní a osobní profily.
 
    > [!Note]
-   > This setting only works for devices that are Android 8 (Oreo) and above.
+   > Toto nastavení funguje jenom u zařízení s Androidem 8 (Oreo) a novějším.
 
-- **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise work profile devices can't install apps from sources other than the Play Store. By nature, work profile devices are intended to be dual-profile:
+- **Zabránění instalaci aplikací z neznámých zdrojů v osobním profilu**: podle návrhu zařízení s Androidem Enterprise Work profilování nemůžou instalovat aplikace ze zdrojů, které nejsou obchod Play. Zařízení pracovního profilu mají podle povahy možnost duální profil:
 
-  - A work profile managed using MDM.
-  - A personal profile that's isolated from MDM management.
+  - Pracovní profil spravovaný pomocí MDM.
+  - Osobní profil, který je izolovaný od správy MDM.
 
-  This setting allows administrators more control of app installations from unknown sources. **Not configured** (default) allows app installations from unknown sources in the personal profile. **Block** prevents app installations from sources other than the Play Store in the personal profile.
+  Toto nastavení umožňuje správcům větší kontrolu nad instalací aplikací z neznámých zdrojů. **Nenakonfigurováno** (výchozí) umožňuje instalaci aplikací z neznámých zdrojů v osobním profilu. **Blok** zabraňuje instalaci aplikací z jiných zdrojů než obchod Play v osobním profilu.
 
-### <a name="connectivity"></a>Connectivity
+### <a name="connectivity"></a>Připojení
 
 - **Neustále aktivní připojení VPN**: výběrem možnosti **Povolit** nastavte klienta VPN tak, aby se automaticky připojoval a znovu připojoval k VPN. Neustále aktivní připojení VPN zůstávají ve spojení nebo se ihned připojí, jakmile uživatel zamkne zařízení, zařízení se restartuje nebo se změní bezdrátová síť. 
 
@@ -376,9 +376,9 @@ These password settings apply to personal profiles on devices that use a work pr
   > [!IMPORTANT]
   > - Klient VPN, kterého zvolíte, musí být nainstalovaný na zařízení a musí podporovat VPN pro jednotlivé aplikace v pracovních profilech. V opačném případě dojde k chybě. 
   > - Aplikaci klienta VPN je potřeba schválit ve **spravovaném obchodu Google Play**, synchronizovat ji do Intune a nasadit ji do zařízení. Až to vše uděláte, bude aplikace nainstalovaná v pracovním profilu uživatele.
-  > - There may be known issues when using per-app VPN with F5 Access for Android 3.0.4. See [F5's release notes for F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) for more information.
+  > - Může zde být známé problémy při pomocí F5 přístup pro Android 3.0.4 VPN pro jednotlivé aplikace. Další informace najdete v [poznámkách k verzi F5's pro přístup F5 pro Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) .
 
-- **Lockdown mode**: Choose **Enable** to force all network traffic to use the VPN tunnel. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
+- **Režim uzamčení**: vyberte **Povolit** , pokud chcete vynutit, aby všechny síťové přenosy používaly tunel VPN. Pokud připojení k VPN není vytvořené, potom nebude mít zařízení přístup k síti.
 
   Vyberte **Nenakonfigurováno** a povolte, aby provoz používal tunel VPN nebo mobilní síť.
 
@@ -386,8 +386,8 @@ These password settings apply to personal profiles on devices that use a work pr
 
 [Přiřaďte profil](device-profile-assign.md) a [monitorujte jeho stav](device-profile-monitor.md).
 
-You can also create dedicated device kiosk profiles for [Android](device-restrictions-android.md#kiosk) and [Windows 10](kiosk-settings.md) devices.
+Pro zařízení s [Androidem](device-restrictions-android.md#kiosk) a [Windows 10](kiosk-settings.md) můžete také vytvořit profily pro celoobrazovkový terminály na vyhrazené zařízení.
 
-## <a name="see-also"></a>Související témata
+## <a name="see-also"></a>Viz taky
 
-[Configuring and troubleshooting Android enterprise devices in Microsoft Intune](https://support.microsoft.com/help/4476974)
+[Konfigurace a řešení potíží se zařízeními s Androidem Enterprise v Microsoft Intune](https://support.microsoft.com/help/4476974)
