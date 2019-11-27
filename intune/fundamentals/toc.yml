@@ -205,6 +205,10 @@
           href: use-docs.md
         - name: Získání podpory
           href: get-support.md
+    - name: sestavy
+      items:
+        - name: Sestavy Intune
+          href: reports.md
 - name: Reference
   items:
     - name: "Kódy a\_popisy chyb"
